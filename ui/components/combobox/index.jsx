@@ -76,7 +76,7 @@ const ComboboxFormElement = props => (
     )}
     aria-controls={props['aria-controls']}
     aria-expanded={props.isOpen ? 'true' : 'false'}
-    aria-haspopup="listbox"
+    aria-haspopup={props.resultsType}
     id={props.id}
     role="combobox"
   >
@@ -169,30 +169,31 @@ export default class Combobox extends Component {
 
   render() {
     const {
-      id,
-      label,
-      hideLabel,
-      className,
-      formClassName,
-      hasSelection,
-      isOpen,
-      placeholder,
       autocomplete,
-      value,
-      hasFocus,
       autoFocus,
-      isLoading,
-      showCloseButton,
+      className,
+      comboboxAriaControls,
+      results,
+      resultsType,
+      formClassName,
+      hasFocus,
+      hasSelection,
+      hideLabel,
+      id,
       inputContainerClassName,
       inputIconPosition,
+      isDisabled,
+      isLoading,
+      isOpen,
+      label,
       leftInputIcon,
-      rightInputIcon,
-      tabIndex,
-      listbox,
-      staticListbox,
       listboxOfSelections,
-      comboboxAriaControls,
-      isDisabled
+      placeholder,
+      rightInputIcon,
+      showCloseButton,
+      staticListbox,
+      tabIndex,
+      value
     } = this.props;
 
     return (
@@ -207,6 +208,7 @@ export default class Combobox extends Component {
             aria-controls={comboboxAriaControls}
             staticListbox={staticListbox}
             isOpen={isOpen || this.state.focused}
+            resultsType={resultsType}
           >
             <ComboboxInput
               id={id}
@@ -228,7 +230,7 @@ export default class Combobox extends Component {
               aria-activedescendant={this.props['aria-activedescendant']}
               isDisabled={isDisabled}
             />
-            {listbox}
+            {results}
           </ComboboxFormElement>
         </ComboboxContainer>
         {listboxOfSelections}
@@ -238,19 +240,15 @@ export default class Combobox extends Component {
 }
 
 Combobox.propTypes = {
-  id: PropTypes.string,
-  label: PropTypes.string,
-  hideLabel: PropTypes.bool,
-  formClassName: PropTypes.string,
-  hasSelection: PropTypes.bool,
-  isOpen: PropTypes.bool,
-  placeholder: PropTypes.string,
   autocomplete: PropTypes.bool,
-  value: PropTypes.string,
-  hasFocus: PropTypes.bool,
   autoFocus: PropTypes.bool,
-  isLoading: PropTypes.bool,
-  showCloseButton: PropTypes.bool,
+  results: PropTypes.element.isRequired,
+  resultsType: PropTypes.oneOf(['listbox', 'dialog']).isRequired,
+  formClassName: PropTypes.string,
+  hasFocus: PropTypes.bool,
+  hasSelection: PropTypes.bool,
+  hideLabel: PropTypes.bool,
+  id: PropTypes.string,
   inputContainerClassName: PropTypes.string,
   inputIconPosition: PropTypes.oneOf([
     'left',
@@ -258,13 +256,18 @@ Combobox.propTypes = {
     'left-right',
     'group-right'
   ]),
+  isDisabled: PropTypes.bool,
+  isLoading: PropTypes.bool,
+  isOpen: PropTypes.bool,
+  label: PropTypes.string,
   leftInputIcon: PropTypes.element,
-  rightInputIcon: PropTypes.element,
-  tabIndex: PropTypes.string,
-  staticListbox: PropTypes.bool,
-  listbox: PropTypes.element,
   listboxOfSelections: PropTypes.element,
-  isDisabled: PropTypes.bool
+  placeholder: PropTypes.string,
+  rightInputIcon: PropTypes.element,
+  showCloseButton: PropTypes.bool,
+  staticListbox: PropTypes.bool,
+  tabIndex: PropTypes.string,
+  value: PropTypes.string
 };
 
 export class ComboboxGroup extends Component {
@@ -288,30 +291,31 @@ export class ComboboxGroup extends Component {
 
   render() {
     const {
-      id,
-      label,
-      hideLabel,
-      formClassName,
-      inputContainerClassName,
       addon,
       addonPosition,
-      comboboxPosition,
-      hasSelection,
-      isOpen,
-      hasFocus,
-      isLoading,
-      placeholder,
-      value,
       autocomplete,
-      tabIndex,
       autoFocus,
-      showCloseButton,
+      comboboxID,
+      comboboxPosition,
+      results,
+      resultsType,
+      formClassName,
+      hasFocus,
+      hasSelection,
+      hideLabel,
+      id,
+      inputContainerClassName,
       inputIconPosition,
+      isLoading,
+      isOpen,
+      label,
       leftInputIcon,
-      rightInputIcon,
       listboxOfSelections,
-      listbox,
-      comboboxID
+      placeholder,
+      rightInputIcon,
+      showCloseButton,
+      tabIndex,
+      value
     } = this.props;
 
     return (
@@ -327,6 +331,7 @@ export class ComboboxGroup extends Component {
             <ComboboxFormElement
               isOpen={isOpen || this.state.focused}
               id={comboboxID}
+              resultsType={resultsType}
             >
               <ComboboxInput
                 id={id}
@@ -347,7 +352,7 @@ export class ComboboxGroup extends Component {
                 aria-activedescendant={this.props['aria-activedescendant']}
                 autoFocus={autoFocus}
               />
-              {listbox}
+              {results}
             </ComboboxFormElement>
           </ComboboxContainer>
           {addonPosition === 'end' && addon}
@@ -359,22 +364,18 @@ export class ComboboxGroup extends Component {
 }
 
 ComboboxGroup.propTypes = {
-  id: PropTypes.string,
-  label: PropTypes.string,
-  hideLabel: PropTypes.bool,
-  formClassName: PropTypes.string,
   addon: PropTypes.element.isRequired,
   addonPosition: PropTypes.oneOf(['start', 'end']).isRequired,
-  comboboxPosition: PropTypes.oneOf(['start', 'end']).isRequired,
-  hasSelection: PropTypes.bool,
-  isOpen: PropTypes.bool,
-  placeholder: PropTypes.string,
   autocomplete: PropTypes.bool,
-  value: PropTypes.string,
-  hasFocus: PropTypes.bool,
   autoFocus: PropTypes.bool,
-  isLoading: PropTypes.bool,
-  showCloseButton: PropTypes.bool,
+  comboboxPosition: PropTypes.oneOf(['start', 'end']).isRequired,
+  results: PropTypes.element.isRequired,
+  resultsType: PropTypes.oneOf(['listbox', 'dialog']).isRequired,
+  formClassName: PropTypes.string,
+  hasFocus: PropTypes.bool,
+  hasSelection: PropTypes.bool,
+  hideLabel: PropTypes.bool,
+  id: PropTypes.string,
   inputContainerClassName: PropTypes.string,
   inputIconPosition: PropTypes.oneOf([
     'left',
@@ -382,10 +383,15 @@ ComboboxGroup.propTypes = {
     'left-right',
     'group-right'
   ]),
+  isLoading: PropTypes.bool,
+  isOpen: PropTypes.bool,
+  label: PropTypes.string,
   leftInputIcon: PropTypes.element,
+  listboxOfSelections: PropTypes.element,
+  placeholder: PropTypes.string,
   rightInputIcon: PropTypes.element,
-  tabIndex: PropTypes.string,
+  showCloseButton: PropTypes.bool,
   staticListbox: PropTypes.bool,
-  listbox: PropTypes.element,
-  listboxOfSelections: PropTypes.element
+  tabIndex: PropTypes.string,
+  value: PropTypes.string
 };

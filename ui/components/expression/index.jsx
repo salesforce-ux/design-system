@@ -47,7 +47,7 @@ export const ExpressionOptions = props => {
             title={false}
           />
         }
-        listbox={
+        results={
           <Listbox
             id={listboxId}
             hasUniqueId
@@ -63,6 +63,7 @@ export const ExpressionOptions = props => {
             visualSelection
           />
         }
+        resultsType="listbox"
         hasInteractions
       />
     </div>
@@ -182,7 +183,7 @@ export const ExpressionRow = props => {
                   title={false}
                 />
               }
-              listbox={
+              results={
                 <Listbox
                   id={listboxId1}
                   hasUniqueId
@@ -196,6 +197,7 @@ export const ExpressionRow = props => {
                   visualSelection
                 />
               }
+              resultsType="listbox"
               hasInteractions
             />
           </ExpressionCol>
@@ -216,7 +218,7 @@ export const ExpressionRow = props => {
                   title={false}
                 />
               }
-              listbox={
+              results={
                 <Listbox
                   id={listboxId2}
                   hasUniqueId
@@ -226,6 +228,7 @@ export const ExpressionRow = props => {
                   visualSelection
                 />
               }
+              resultsType="listbox"
               hasInteractions
             />
           </ExpressionCol>

@@ -31,7 +31,7 @@ import style from './docs/index.scss';
           label="Search Salesforce"
           hideLabel
           placeholder="Search Salesforce"
-          listbox={
+          results={
             <Listbox
               id="search-listbox-id-1"
               aria-label="Recent Items"
@@ -40,6 +40,7 @@ import style from './docs/index.scss';
               count={6}
             />
           }
+          resultsType="listbox"
           addon={<ObjectSwitcher id={_.uniqueId('objectswitcher-combobox-id-')} value="Accounts" addonPosition="start" hasInteractions comboboxAriaControls="primary-search-combobox-id-1" listboxId={_.uniqueId('objectswitcher-listbox-id-')} />}
           addonPosition="start"
           comboboxPosition="end"
@@ -136,7 +137,7 @@ The global search component is used for application wide search. The form elemen
           label="Search Salesforce"
           hideLabel
           placeholder="Search Salesforce"
-          listbox={
+          results={
             <Listbox
               id="search-listbox-id-2"
               aria-label="Recent Items"
@@ -145,6 +146,7 @@ The global search component is used for application wide search. The form elemen
               count={6}
             />
           }
+          resultsType="listbox"
           addon={<ObjectSwitcher id={_.uniqueId('objectswitcher-combobox-id-')} value="Accounts" addonPosition="start" comboboxAriaControls="primary-search-combobox-id-2" listboxId={_.uniqueId('objectswitcher-listbox-id-')} />}
           addonPosition="start"
           comboboxPosition="end"
@@ -178,7 +180,7 @@ The global search component is used for application wide search. The form elemen
           label="Search Salesforce"
           hideLabel
           placeholder="Search Salesforce"
-          listbox={
+          results={
             <Listbox
               id="search-listbox-id-3"
               aria-label="Recent Items"
@@ -187,6 +189,7 @@ The global search component is used for application wide search. The form elemen
               count={6}
             />
           }
+          resultsType="listbox"
           addon={<ObjectSwitcher id={_.uniqueId('objectswitcher-combobox-id-')} value="Accounts" addonPosition="start" comboboxAriaControls="primary-search-combobox-id-3" listboxId={_.uniqueId('objectswitcher-listbox-id-')} />}
           addonPosition="start"
           comboboxPosition="end"
@@ -223,7 +226,7 @@ The global search component is used for application wide search. The form elemen
           hideLabel
           placeholder="Search Salesforce"
           value="salesforce"
-          listbox={
+          results={
             <Listbox
               id="search-listbox-id-4"
               term="salesforce"
@@ -232,6 +235,7 @@ The global search component is used for application wide search. The form elemen
               count={6}
             />
           }
+          resultsType="listbox"
           aria-activedescendant="option0"
           addon={<ObjectSwitcher id={_.uniqueId('objectswitcher-combobox-id-')} value="Accounts" addonPosition="start" comboboxAriaControls="primary-search-combobox-id-4" listboxId={_.uniqueId('objectswitcher-listbox-id-')} />}
           addonPosition="start"

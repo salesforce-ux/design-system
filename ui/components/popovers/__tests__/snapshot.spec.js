@@ -7,6 +7,9 @@ import { EinsteinHeader } from '../../einstein-header/base';
 import { FeedbackHeader, FeedbackFooter } from '../error/example';
 
 import createHelpers from '../../../../jest.helpers';
+import { Button } from '../../buttons/base/example';
+import { Fieldset } from '../../form-element';
+import { Checkbox } from '../../checkbox/base/example';
 
 const { matchesMarkup } = createHelpers(__dirname);
 const headingUniqueId = 'dialog-heading-id-01';
@@ -223,3 +226,62 @@ it('renders a large popover', () =>
       </p>
     </Popover>
   ));
+
+describe('Base popover', () => {
+  it('renders a popover at full width', () =>
+    matchesMarkup(
+      <Popover popoverId="popover-id-01" title="Language Options" isFullWidth>
+        <div>Any content can go here in this Dialog</div>
+      </Popover>
+    ));
+  it('renders a small scrolling popover', () =>
+    matchesMarkup(
+      <Popover popoverId="popover-id-01" title="Language Options" size="small">
+        <div>Any content can go here in this Dialog</div>
+      </Popover>
+    ));
+  it('renders a hidden popover', () =>
+    matchesMarkup(
+      <Popover popoverId="popover-id-01" title="Language Options" isHidden>
+        <div>Any content can go here in this Dialog</div>
+      </Popover>
+    ));
+  it('renders a popover with a footer', () =>
+    matchesMarkup(
+      <Popover
+        popoverId="popover-id-01"
+        title="Language Options"
+        hasFormFooter
+        footer={
+          <React.Fragment>
+            <Button />
+            <Button />
+          </React.Fragment>
+        }
+      >
+        <div>Any content can go here in this Dialog</div>
+      </Popover>
+    ));
+  it('renders a popover with a checkbox group', () =>
+    matchesMarkup(
+      <Popover
+        popoverId="popover-id-01"
+        title="Language Options"
+        isFullWidth
+        hasFormFooter
+        footer={
+          <React.Fragment>
+            <Button isNeutral>Cancel</Button>
+            <Button isBrand>Done</Button>
+          </React.Fragment>
+        }
+      >
+        <Fieldset label="Select up to 2">
+          <Checkbox label="English" />
+          <Checkbox label="German" />
+          <Checkbox label="Tobagonian Creole English" />
+          <Checkbox label="Spanish" />
+        </Fieldset>
+      </Popover>
+    ));
+});

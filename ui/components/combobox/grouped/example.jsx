@@ -27,7 +27,7 @@ export default (
     aria-controls={ListboxId}
     comboboxID={PrimaryComboboxId}
     autocomplete
-    listbox={
+    results={
       <Listbox
         id={ListboxId}
         snapshot={Snapshot.EntityOptions}
@@ -35,6 +35,7 @@ export default (
         count={4}
       />
     }
+    resultsType="listbox"
     addon={
       <ObjectSwitcher
         id={ObjectSwitcherComboboxId}
@@ -71,7 +72,7 @@ export let states = [
         aria-controls={ListboxId}
         comboboxID={PrimaryComboboxId}
         autocomplete
-        listbox={
+        results={
           <Listbox
             id={ListboxId}
             snapshot={Snapshot.EntityOptionsTypeahead}
@@ -80,6 +81,7 @@ export let states = [
             count={4}
           />
         }
+        resultsType="listbox"
         value="salesforce"
         isOpen
         hasFocus
@@ -116,7 +118,7 @@ export let states = [
         aria-controls={ListboxId}
         comboboxID={PrimaryComboboxId}
         autocomplete
-        listbox={
+        results={
           <Listbox
             id={ListboxId}
             snapshot={Snapshot.EntityOptionsTypeahead}
@@ -125,6 +127,7 @@ export let states = [
             count={4}
           />
         }
+        resultsType="listbox"
         value="salesforce"
         isOpen
         showCloseButton
@@ -153,7 +156,7 @@ export let states = [
         aria-controls={ListboxId}
         comboboxID={PrimaryComboboxId}
         autocomplete
-        listbox={
+        results={
           <Listbox
             id={ListboxId}
             snapshot={Snapshot.EntityOptions}
@@ -161,6 +164,7 @@ export let states = [
             count={4}
           />
         }
+        resultsType="listbox"
         addon={
           <ObjectSwitcher
             id={ObjectSwitcherComboboxId}
@@ -197,7 +201,7 @@ export let states = [
         aria-controls={ListboxId}
         comboboxID={PrimaryComboboxId}
         autocomplete
-        listbox={
+        results={
           <Listbox
             id={ListboxId}
             snapshot={Snapshot.EntityOptions}
@@ -205,6 +209,7 @@ export let states = [
             count={4}
           />
         }
+        resultsType="listbox"
         addon={
           <ObjectSwitcher
             id={ObjectSwitcherComboboxId}
@@ -241,7 +246,7 @@ export let states = [
         aria-controls={ListboxId}
         comboboxID={PrimaryComboboxId}
         autocomplete
-        listbox={
+        results={
           <Listbox
             id={ListboxId}
             snapshot={Snapshot.EntityOptions}
@@ -249,6 +254,7 @@ export let states = [
             count={4}
           />
         }
+        resultsType="listbox"
         addon={
           <ObjectSwitcher
             id={ObjectSwitcherComboboxId}
@@ -289,7 +295,7 @@ export let states = [
         aria-controls={ListboxId}
         comboboxID={PrimaryComboboxId}
         autocomplete
-        listbox={
+        results={
           <Listbox
             id={ListboxId}
             snapshot={Snapshot.EntityOptions}
@@ -297,6 +303,7 @@ export let states = [
             count={4}
           />
         }
+        resultsType="listbox"
         hasSelection
         inputIconPosition="right"
         rightInputIcon={
@@ -323,7 +330,7 @@ export let states = [
         aria-controls={ListboxId}
         comboboxID={PrimaryComboboxId}
         autocomplete
-        listbox={
+        results={
           <Listbox
             id={ListboxId}
             snapshot={Snapshot.EntityOptions}
@@ -331,6 +338,7 @@ export let states = [
             count={4}
           />
         }
+        resultsType="listbox"
         hasSelection
         inputIconPosition="right"
         rightInputIcon={

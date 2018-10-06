@@ -15,6 +15,7 @@ const IGNORE = [
   /(.*)_JAVA_OPTIONS(.*)/i, // "Travis outputs this to make this interesting"
   /(.*)role=gridcell(.*)must be contained in, or owned by, an element with(.*)role=row/, // "An element with “role=gridcell“ must be contained in, or owned by, an element with “role=row“",
   /(.*)listbox(.*)for attribute(.*)aria-haspopup/, // "Bad value “listbox“ for attribute “aria-haspopup“ on element “div“.",
+  /(.*)dialog(.*)for attribute(.*)aria-haspopup/, // "Bad value “dialog“ for attribute “aria-haspopup“ on element “div“.",
   /tree-grid(.*)tr(.*)is missing one or more of the following attributes:(.*)role/, // "Element “tr“ is missing one or more of the following attributes"
   /tree-grid(.*)tr(.*)is missing required attribute(.*)role/, // Element “tr” is missing required attribute “role”.
   /(.*)aria-expanded(.*)not allowed on element(.*)a(.*) at this point/ // Attribute “aria-expanded” not allowed on element “a” at this point.

@@ -15,6 +15,8 @@ import { UtilityIcon } from '../../icons/base/example';
 import { StandardIcon } from '../../icons/standard/example';
 import * as Snapshot from '../snapshots.data';
 import createHelpers from '../../../../jest.helpers';
+import { Popover } from '../../popovers/base/example';
+import { Button } from '../../buttons/base/example';
 
 const { matchesMarkup } = createHelpers(__dirname);
 
@@ -22,6 +24,7 @@ const listboxOptionId01 = 'listbox-option-unique-id-01';
 const comboboxId = 'combobox-id-01';
 const listboxId = 'listbox-id-01';
 const primaryComboboxId = 'primary-combobox-id-01';
+const popoverId = 'popover-id-01';
 
 /**
  * Deprecated Combobox
@@ -469,7 +472,7 @@ describe('render combobox', () => {
             title={false}
           />
         }
-        listbox={
+        results={
           <Listbox
             id={listboxId}
             snapshot={Snapshot.ObjectOptions}
@@ -478,6 +481,7 @@ describe('render combobox', () => {
             visualSelection
           />
         }
+        resultsType="listbox"
         isOpen
         hasFocus
       />
@@ -499,7 +503,7 @@ describe('render combobox', () => {
             title={false}
           />
         }
-        listbox={
+        results={
           <Listbox
             id={listboxId}
             snapshot={Snapshot.ObjectOptionsSingleSelection}
@@ -508,6 +512,7 @@ describe('render combobox', () => {
             visualSelection
           />
         }
+        resultsType="listbox"
         aria-activedescendant="option1"
         isOpen
         hasFocus
@@ -530,7 +535,7 @@ describe('render combobox', () => {
             title={false}
           />
         }
-        listbox={
+        results={
           <Listbox
             id={listboxId}
             snapshot={Snapshot.ObjectOptionsMultiSelection}
@@ -539,6 +544,7 @@ describe('render combobox', () => {
             visualSelection
           />
         }
+        resultsType="listbox"
         listboxOfSelections={
           <ListboxOfSelections
             snapshot={Snapshot.ObjectOptionsSelected}
@@ -563,7 +569,7 @@ describe('render combobox', () => {
             title={false}
           />
         }
-        listbox={
+        results={
           <ListboxWrapper
             id={listboxId}
             className="slds-dropdown slds-dropdown_fluid"
@@ -580,6 +586,7 @@ describe('render combobox', () => {
             />
           </ListboxWrapper>
         }
+        resultsType="listbox"
         isOpen
         hasFocus
       />
@@ -601,7 +608,7 @@ describe('render combobox', () => {
             title={false}
           />
         }
-        listbox={
+        results={
           <Listbox
             id={listboxId}
             snapshot={Snapshot.PlainStylingOptions}
@@ -610,6 +617,7 @@ describe('render combobox', () => {
             visualSelection
           />
         }
+        resultsType="listbox"
         isOpen
         hasFocus
       />
@@ -631,7 +639,7 @@ describe('render combobox', () => {
             title={false}
           />
         }
-        listbox={
+        results={
           <Listbox
             id={listboxId}
             snapshot={Snapshot.EntityStylingOptions}
@@ -640,6 +648,7 @@ describe('render combobox', () => {
             visualSelection
           />
         }
+        resultsType="listbox"
         isOpen
         hasFocus
       />
@@ -660,7 +669,7 @@ describe('render combobox', () => {
             title="Search"
           />
         }
-        listbox={
+        results={
           <Listbox
             id={listboxId}
             snapshot={Snapshot.PlainOptions}
@@ -668,6 +677,7 @@ describe('render combobox', () => {
             count={3}
           />
         }
+        resultsType="listbox"
         isOpen
         hasFocus
       />
@@ -689,7 +699,7 @@ describe('render combobox', () => {
           />
         }
         value="opp"
-        listbox={
+        results={
           <Listbox
             id={listboxId}
             snapshot={Snapshot.PlainOptionsTypeahead}
@@ -698,6 +708,7 @@ describe('render combobox', () => {
             count={4}
           />
         }
+        resultsType="listbox"
         aria-activedescendant="option1"
         isOpen
         hasFocus
@@ -719,7 +730,7 @@ describe('render combobox', () => {
             title="Search"
           />
         }
-        listbox={
+        results={
           <Listbox
             id={listboxId}
             snapshot={Snapshot.PlainOptions}
@@ -727,6 +738,7 @@ describe('render combobox', () => {
             count={3}
           />
         }
+        resultsType="listbox"
         value="GenePoint"
       />
     ));
@@ -746,7 +758,7 @@ describe('render combobox', () => {
             title="Search"
           />
         }
-        listbox={
+        results={
           <Listbox
             id={listboxId}
             snapshot={Snapshot.PlainOptions}
@@ -754,6 +766,7 @@ describe('render combobox', () => {
             count={3}
           />
         }
+        resultsType="listbox"
         hasSelection
         listboxOfSelections={
           <ListboxOfSelections
@@ -777,7 +790,7 @@ describe('render combobox', () => {
             containerClassName="slds-input__icon slds-input__icon_right"
           />
         }
-        listbox={
+        results={
           <Listbox
             id={listboxId}
             snapshot={Snapshot.EntityOptions}
@@ -785,6 +798,7 @@ describe('render combobox', () => {
             count={2}
           />
         }
+        resultsType="listbox"
         isOpen
         hasFocus
       />
@@ -804,7 +818,7 @@ describe('render combobox', () => {
           />
         }
         value="salesforce"
-        listbox={
+        results={
           <Listbox
             id={listboxId}
             snapshot={Snapshot.EntityOptionsTypeahead}
@@ -813,6 +827,7 @@ describe('render combobox', () => {
             count={4}
           />
         }
+        resultsType="listbox"
         aria-activedescendant="option1"
         isOpen
         hasFocus
@@ -839,7 +854,7 @@ describe('render combobox', () => {
             assistiveText="Remove selected option"
           />
         }
-        listbox={
+        results={
           <Listbox
             id={listboxId}
             snapshot={Snapshot.EntityOptions}
@@ -847,6 +862,7 @@ describe('render combobox', () => {
             count={2}
           />
         }
+        resultsType="listbox"
         hasSelection
         value="Salesforce.com, Inc."
         readonly
@@ -867,7 +883,7 @@ describe('render combobox', () => {
             containerClassName="slds-input__icon slds-input__icon_right"
           />
         }
-        listbox={
+        results={
           <Listbox
             id={listboxId}
             snapshot={Snapshot.EntityOptions}
@@ -875,6 +891,7 @@ describe('render combobox', () => {
             count={2}
           />
         }
+        resultsType="listbox"
         hasSelection
         listboxOfSelections={
           <ListboxOfSelections snapshot={Snapshot.EntitySelections} count={2} />
@@ -888,7 +905,7 @@ describe('render combobox', () => {
         aria-controls={listboxId}
         comboboxID={primaryComboboxId}
         autocomplete
-        listbox={
+        results={
           <Listbox
             id={listboxId}
             snapshot={Snapshot.EntityOptions}
@@ -896,6 +913,7 @@ describe('render combobox', () => {
             count={4}
           />
         }
+        resultsType="listbox"
         addon={
           <ObjectSwitcher
             value="Accounts"
@@ -925,7 +943,7 @@ describe('render combobox', () => {
         aria-controls={listboxId}
         comboboxID={primaryComboboxId}
         autocomplete
-        listbox={
+        results={
           <Listbox
             id={listboxId}
             snapshot={Snapshot.EntityOptionsTypeahead}
@@ -934,6 +952,7 @@ describe('render combobox', () => {
             count={4}
           />
         }
+        resultsType="listbox"
         value="salesforce"
         isOpen
         hasFocus
@@ -963,7 +982,7 @@ describe('render combobox', () => {
         aria-controls={listboxId}
         comboboxID={primaryComboboxId}
         autocomplete
-        listbox={
+        results={
           <Listbox
             id={listboxId}
             snapshot={Snapshot.EntityOptions}
@@ -971,6 +990,7 @@ describe('render combobox', () => {
             count={4}
           />
         }
+        resultsType="listbox"
         addon={
           <ObjectSwitcher
             value="Accounts"
@@ -1001,7 +1021,7 @@ describe('render combobox', () => {
         aria-controls={listboxId}
         comboboxID={primaryComboboxId}
         autocomplete
-        listbox={
+        results={
           <Listbox
             id={listboxId}
             snapshot={Snapshot.EntityOptions}
@@ -1009,6 +1029,7 @@ describe('render combobox', () => {
             count={4}
           />
         }
+        resultsType="listbox"
         hasFocus
         addon={
           <ObjectSwitcher
@@ -1034,6 +1055,88 @@ describe('render combobox', () => {
             count={8}
             isExpanded
           />
+        }
+      />
+    ));
+});
+
+/**
+ * Dialog Variant of Combobox
+ */
+describe('Combobox with a Dialog dropdown', () => {
+  it('renders a closed, readonly dialog combobox', () =>
+    matchesMarkup(
+      <Combobox
+        id={comboboxId}
+        aria-controls={popoverId}
+        label="Languages"
+        readonly
+        inputIconPosition="right"
+        rightInputIcon={
+          <UtilityIcon
+            symbol="down"
+            className="slds-icon slds-icon_x-small slds-icon-text-default"
+            containerClassName="slds-input__icon slds-input__icon_right"
+            assistiveText={false}
+            title={false}
+          />
+        }
+        resultsType="dialog"
+        results={
+          <Popover
+            popoverId={popoverId}
+            title="Language Options"
+            isFullWidth
+            isHidden
+            hasFormFooter
+            size="small"
+            footer={
+              <React.Fragment>
+                <Button />
+                <Button />
+              </React.Fragment>
+            }
+          >
+            <div>Any content can go here in this Dialog</div>
+          </Popover>
+        }
+      />
+    ));
+  it('renders an open, readonly dialog combobox', () =>
+    matchesMarkup(
+      <Combobox
+        id={comboboxId}
+        aria-controls={popoverId}
+        label="Languages"
+        readonly
+        isOpen
+        inputIconPosition="right"
+        rightInputIcon={
+          <UtilityIcon
+            symbol="down"
+            className="slds-icon slds-icon_x-small slds-icon-text-default"
+            containerClassName="slds-input__icon slds-input__icon_right"
+            assistiveText={false}
+            title={false}
+          />
+        }
+        resultsType="dialog"
+        results={
+          <Popover
+            popoverId={popoverId}
+            title="Language Options"
+            isFullWidth
+            hasFormFooter
+            size="small"
+            footer={
+              <React.Fragment>
+                <Button />
+                <Button />
+              </React.Fragment>
+            }
+          >
+            <div>Any content can go here in this Dialog</div>
+          </Popover>
         }
       />
     ));

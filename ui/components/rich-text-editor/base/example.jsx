@@ -100,7 +100,7 @@ export const RteFormula = props => {
           aria-controls={listboxId1}
           comboboxID={primaryComboboxId1}
           autocomplete
-          listbox={
+          results={
             <NewListbox
               id={listboxId1}
               snapshot={Snapshot.EntityOptions}
@@ -109,6 +109,7 @@ export const RteFormula = props => {
               hasUniqueId
             />
           }
+          resultsType="listbox"
           addon={
             <IconObjectSwitcher
               id={_.uniqueId('combobox-id-')}
@@ -143,7 +144,7 @@ export const RteFormula = props => {
           aria-controls={listboxId2}
           comboboxID={primaryComboboxId2}
           autocomplete
-          listbox={
+          results={
             <NewListbox
               id={listboxId2}
               snapshot={Snapshot.EntityOptions}
@@ -152,6 +153,7 @@ export const RteFormula = props => {
               hasUniqueId
             />
           }
+          resultsType="listbox"
           addon={
             <IconObjectSwitcher
               id={_.uniqueId('combobox-id-')}

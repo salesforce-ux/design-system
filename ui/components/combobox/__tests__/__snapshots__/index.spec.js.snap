@@ -1,5 +1,197 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Combobox with a Dialog dropdown renders a closed, readonly dialog combobox 1`] = `
+<div
+  className="slds-form-element"
+>
+  <label
+    className="slds-form-element__label"
+    htmlFor="combobox-id-01"
+  >
+    Languages
+  </label>
+  <div
+    className="slds-form-element__control"
+  >
+    <div
+      className="slds-combobox_container"
+    >
+      <div
+        aria-controls={undefined}
+        aria-expanded="false"
+        aria-haspopup="dialog"
+        className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click"
+        id={undefined}
+        role="combobox"
+      >
+        <div
+          className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
+          role="none"
+        >
+          <input
+            aria-activedescendant={undefined}
+            aria-autocomplete={null}
+            aria-controls="popover-id-01"
+            autoComplete="off"
+            autoFocus={undefined}
+            className="slds-input slds-combobox__input"
+            defaultValue={undefined}
+            disabled={undefined}
+            id="combobox-id-01"
+            onBlur={[Function]}
+            onFocus={[Function]}
+            placeholder="Select an Option"
+            readOnly={true}
+            role="textbox"
+            tabIndex={undefined}
+            type="text"
+          />
+          <span
+            className="slds-icon_container slds-icon-utility-down slds-input__icon slds-input__icon_right"
+            title={null}
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-icon slds-icon slds-icon_x-small slds-icon-text-default"
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+              />
+            </svg>
+          </span>
+        </div>
+        <section
+          aria-describedby="dialog-body-id-1"
+          aria-label="Language Options"
+          aria-labelledby={undefined}
+          className="slds-popover slds-popover_full-width slds-popover_hide"
+          id="popover-id-01"
+          role="dialog"
+          style={undefined}
+        >
+          <div
+            className="slds-popover__body slds-popover__body_small"
+            id="dialog-body-id-1"
+          >
+            <div>
+              Any content can go here in this Dialog
+            </div>
+          </div>
+          <footer
+            className="slds-popover__footer slds-popover__footer_form"
+          >
+            <button
+              className="slds-button"
+              disabled={undefined}
+            />
+            <button
+              className="slds-button"
+              disabled={undefined}
+            />
+          </footer>
+        </section>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Combobox with a Dialog dropdown renders an open, readonly dialog combobox 1`] = `
+<div
+  className="slds-form-element"
+>
+  <label
+    className="slds-form-element__label"
+    htmlFor="combobox-id-01"
+  >
+    Languages
+  </label>
+  <div
+    className="slds-form-element__control"
+  >
+    <div
+      className="slds-combobox_container"
+    >
+      <div
+        aria-controls={undefined}
+        aria-expanded="true"
+        aria-haspopup="dialog"
+        className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open"
+        id={undefined}
+        role="combobox"
+      >
+        <div
+          className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
+          role="none"
+        >
+          <input
+            aria-activedescendant={undefined}
+            aria-autocomplete={null}
+            aria-controls="popover-id-01"
+            autoComplete="off"
+            autoFocus={undefined}
+            className="slds-input slds-combobox__input"
+            defaultValue={undefined}
+            disabled={undefined}
+            id="combobox-id-01"
+            onBlur={[Function]}
+            onFocus={[Function]}
+            placeholder="Select an Option"
+            readOnly={true}
+            role="textbox"
+            tabIndex={undefined}
+            type="text"
+          />
+          <span
+            className="slds-icon_container slds-icon-utility-down slds-input__icon slds-input__icon_right"
+            title={null}
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-icon slds-icon slds-icon_x-small slds-icon-text-default"
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+              />
+            </svg>
+          </span>
+        </div>
+        <section
+          aria-describedby="dialog-body-id-2"
+          aria-label="Language Options"
+          aria-labelledby={undefined}
+          className="slds-popover slds-popover_full-width"
+          id="popover-id-01"
+          role="dialog"
+          style={undefined}
+        >
+          <div
+            className="slds-popover__body slds-popover__body_small"
+            id="dialog-body-id-2"
+          >
+            <div>
+              Any content can go here in this Dialog
+            </div>
+          </div>
+          <footer
+            className="slds-popover__footer slds-popover__footer_form"
+          >
+            <button
+              className="slds-button"
+              disabled={undefined}
+            />
+            <button
+              className="slds-button"
+              disabled={undefined}
+            />
+          </footer>
+        </section>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`render combobox render autocomplete combobox with mutliple selections 1`] = `
 <div
   className="slds-form-element"

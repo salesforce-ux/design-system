@@ -10,7 +10,8 @@ import ButtonIcon from '../button-icons/';
 import { UtilityIcon } from '../icons/base/example';
 import { StandardIcon } from '../icons/standard/example';
 import * as Snapshot from './snapshots.data';
-import _ from '../../shared/helpers';
+import * as Dialog from './dialog/example';
+import _, { getDisplayElementById } from '../../shared/helpers';
 
 <div className="lead doc">
   A widget that provides a user with an input field that is either an autocomplete or readonly, accompanied by a listbox of options.
@@ -36,7 +37,8 @@ A Base Combobox is a readonly text `input` that allows a user to select an optio
           title={false}
         />
       }
-      listbox={<Listbox id="listbox-id-1" snapshot={Snapshot.ObjectOptions} type="plain" count={8} visualSelection />}
+      results={<Listbox id="listbox-id-1" snapshot={Snapshot.ObjectOptions} type="plain" count={8} visualSelection />}
+      resultsType="listbox"
       hasInteractions
     />
   </CodeView>
@@ -90,7 +92,7 @@ It is most common to expand the `listbox` of options when a user clicks on the C
           title={false}
         />
       }
-      listbox={
+      results={
         <Listbox
           id="listbox-id-2"
           snapshot={Snapshot.ObjectOptions}
@@ -99,6 +101,7 @@ It is most common to expand the `listbox` of options when a user clicks on the C
           visualSelection
         />
       }
+      resultsType="listbox"
       isOpen
       hasFocus
     />
@@ -137,7 +140,7 @@ For layout purposes, wrap the spinner in a `<div>` with the class `slds-align_ab
           title={false}
         />
       }
-      listbox={
+      results={
         <Listbox
           id="listbox-id-222"
           snapshot={Snapshot.ObjectOptions}
@@ -147,6 +150,7 @@ For layout purposes, wrap the spinner in a `<div>` with the class `slds-align_ab
           loading
         />
       }
+      resultsType="listbox"
       isOpen
       hasFocus
     />
@@ -173,7 +177,7 @@ Options within a `listbox` can be grouped together under meaningful headings. Th
           title={false}
         />
       }
-      listbox={
+      results={
         <ListboxWrapper id="listbox-id-3" className="slds-dropdown slds-dropdown_fluid">
           <ListboxGroup
             aria-label="Group One"
@@ -187,6 +191,7 @@ Options within a `listbox` can be grouped together under meaningful headings. Th
           />
         </ListboxWrapper>
       }
+      resultsType="listbox"
       isOpen
       hasFocus
     />
@@ -237,7 +242,8 @@ A mouse or pointer device user can click on a Combobox and the `listbox` will di
           title={false}
         />
       }
-      listbox={<Listbox id="listbox-id-4" snapshot={Snapshot.ObjectOptions} type="plain" count={8} visualSelection />}
+      results={<Listbox id="listbox-id-4" snapshot={Snapshot.ObjectOptions} type="plain" count={8} visualSelection />}
+      resultsType="listbox"
       isOpen
       hasFocus
     />
@@ -264,7 +270,8 @@ If using a keyboard, placing focus into the Combobox input field _will not_ disp
           title={false}
         />
       }
-      listbox={<Listbox id="listbox-id-4" snapshot={Snapshot.ObjectOptionsFocused} type="plain" count={8} visualSelection />}
+      results={<Listbox id="listbox-id-4" snapshot={Snapshot.ObjectOptionsFocused} type="plain" count={8} visualSelection />}
+      resultsType="listbox"
       hasFocus
     />
   </CodeView>
@@ -309,7 +316,8 @@ By typing the first letter of an option name, the first matching option will hig
           title={false}
         />
       }
-      listbox={<Listbox id="listbox-id-4" snapshot={Snapshot.ObjectOptionsFocused} type="plain" count={8} visualSelection />}
+      results={<Listbox id="listbox-id-4" snapshot={Snapshot.ObjectOptionsFocused} type="plain" count={8} visualSelection />}
+      resultsType="listbox"
       aria-activedescendant="option1"
       isOpen
       hasFocus
@@ -353,7 +361,7 @@ Upon selection the Combobox collapses, only showing the `input` field. The value
             title={false}
           />
         }
-        listbox={
+        results={
           <Listbox
             id="listbox-id-5"
             snapshot={Snapshot.ObjectOptionsSingleSelection}
@@ -362,6 +370,7 @@ Upon selection the Combobox collapses, only showing the `input` field. The value
             visualSelection
           />
         }
+        resultsType="listbox"
       />
     </div>
   </div>
@@ -390,7 +399,7 @@ When an option becomes selected, the class `slds-is-selected` should be applied 
           title={false}
         />
       }
-      listbox={
+      results={
         <Listbox
           id="listbox-id-6"
           snapshot={Snapshot.ObjectOptionsSingleSelection}
@@ -399,6 +408,7 @@ When an option becomes selected, the class `slds-is-selected` should be applied 
           visualSelection
         />
       }
+      resultsType="listbox"
       aria-activedescendant="option1"
       isOpen
       hasFocus
@@ -448,7 +458,7 @@ When more than one option has been selected, the value of the `input` should be 
           title={false}
         />
       }
-      listbox={
+      results={
         <Listbox
           id="listbox-id-7"
           snapshot={Snapshot.ObjectOptionsMultiSelection}
@@ -457,6 +467,7 @@ When more than one option has been selected, the value of the `input` should be 
           visualSelection
         />
       }
+      resultsType="listbox"
       isOpen
       hasFocus
     />
@@ -486,7 +497,7 @@ The [Listbox of Pills](/components/pills?variant=listbox-of-pill-options) is pos
           title={false}
         />
       }
-      listbox={
+      results={
         <Listbox
           id="listbox-id-8"
           snapshot={Snapshot.ObjectOptionsMultiSelection}
@@ -495,6 +506,7 @@ The [Listbox of Pills](/components/pills?variant=listbox-of-pill-options) is pos
           visualSelection
         />
       }
+      resultsType="listbox"
       listboxOfSelections={
         <ListboxOfSelections
           snapshot={Snapshot.ObjectOptionsSelected}
@@ -539,7 +551,8 @@ If no option matches, the user can complete the value of the combobox by finishi
           title={false}
         />
       }
-      listbox={<Listbox id="listbox-id-9" snapshot={Snapshot.PlainOptions} type="plain" count={3} />}
+      results={<Listbox id="listbox-id-9" snapshot={Snapshot.PlainOptions} type="plain" count={3} />}
+      resultsType="listbox"
       hasInteractions
     />
   </CodeView>
@@ -569,7 +582,8 @@ When a user stops interacting with the Combobox, or selects an option, the Combo
           title={false}
         />
       }
-      listbox={<Listbox id="listbox-id-10" snapshot={Snapshot.PlainOptions} type="plain" count={3} />}
+      results={<Listbox id="listbox-id-10" snapshot={Snapshot.PlainOptions} type="plain" count={3} />}
+      resultsType="listbox"
       isOpen
       hasFocus
     />
@@ -605,7 +619,8 @@ Whilst typing, the highlighted option in the `listbox` should be the user's text
         />
       }
       value="opp"
-      listbox={<Listbox id="listbox-id-11" snapshot={Snapshot.PlainOptionsTypeahead} term="opp" type="plain" count={4} />}
+      results={<Listbox id="listbox-id-11" snapshot={Snapshot.PlainOptionsTypeahead} term="opp" type="plain" count={4} />}
+      resultsType="listbox"
       isOpen
       hasFocus
     />
@@ -650,7 +665,8 @@ The same keyboard interactions apply from the base Combobox, but with these diff
           title={false}
         />
       }
-      listbox={<Listbox id="listbox-id-12" snapshot={Snapshot.PlainOptionsFocused} type="plain" count={3} />}
+      results={<Listbox id="listbox-id-12" snapshot={Snapshot.PlainOptionsFocused} type="plain" count={3} />}
+      resultsType="listbox"
       aria-activedescendant="option1"
       isOpen
       hasFocus
@@ -683,7 +699,8 @@ To remove the selected option, simply clear the text `input`.
           assistiveText="Clear the text input"
         />
       }
-      listbox={<Listbox id="listbox-unique-id-03" snapshot={Snapshot.PlainOptions} type="entity" count={3} />}
+      results={<Listbox id="listbox-unique-id-03" snapshot={Snapshot.PlainOptions} type="entity" count={3} />}
+      resultsType="listbox"
       value="GenePoint"
     />
   </CodeView>
@@ -711,7 +728,8 @@ Multiple selection is much the same as the Base Combobox. A list of selected opt
           title={false}
         />
       }
-      listbox={<Listbox id="listbox-id-13" snapshot={Snapshot.PlainOptions} type="entity" count={3} />}
+      results={<Listbox id="listbox-id-13" snapshot={Snapshot.PlainOptions} type="entity" count={3} />}
+      resultsType="listbox"
       hasSelection
       listboxOfSelections={<ListboxOfSelections snapshot={Snapshot.PlainOptionsSelected} count={2} />}
     />
@@ -746,7 +764,8 @@ An Entity Autocomplete Combobox or Lookup, is used to search for and select Sale
           title={false}
         />
       }
-      listbox={<Listbox id="listbox-id-14" snapshot={Snapshot.EntityOptions} type="entity" count={2} />}
+      results={<Listbox id="listbox-id-14" snapshot={Snapshot.EntityOptions} type="entity" count={2} />}
+      resultsType="listbox"
       hasInteractions
     />
   </CodeView>
@@ -776,7 +795,8 @@ The options now have extra information about them, such as the type of entity an
           title={false}
         />
       }
-      listbox={<Listbox id="listbox-id-15" snapshot={Snapshot.EntityOptions} type="entity" count={2} />}
+      results={<Listbox id="listbox-id-15" snapshot={Snapshot.EntityOptions} type="entity" count={2} />}
+      resultsType="listbox"
       isOpen
       hasFocus
     />
@@ -807,7 +827,8 @@ In the resultant displayed options, we highlight the matched term by bolding it 
         />
       }
       value="salesforce"
-      listbox={<Listbox id="listbox-id-16" snapshot={Snapshot.EntityOptionsTypeahead} term="salesforce" type="entity" count={4} />}
+      results={<Listbox id="listbox-id-16" snapshot={Snapshot.EntityOptionsTypeahead} term="salesforce" type="entity" count={4} />}
+      resultsType="listbox"
       aria-activedescendant="option0"
       isOpen
       hasFocus
@@ -838,7 +859,8 @@ The same keyboard interactions apply from the base Combobox, but with these diff
           title={false}
         />
       }
-      listbox={<Listbox id="listbox-id-17" snapshot={Snapshot.EntityOptionsFocused} type="entity" count={2} />}
+      results={<Listbox id="listbox-id-17" snapshot={Snapshot.EntityOptionsFocused} type="entity" count={2} />}
+      resultsType="listbox"
       aria-activedescendant="option1"
       isOpen
       hasFocus
@@ -883,7 +905,8 @@ To remove the selected option, simply press the `Delete` key when focused inside
           assistiveText="Remove selected option"
         />
       }
-      listbox={<Listbox id="listbox-id-18" snapshot={Snapshot.EntityOptions} type="entity" count={2} />}
+      results={<Listbox id="listbox-id-18" snapshot={Snapshot.EntityOptions} type="entity" count={2} />}
+      resultsType="listbox"
       hasSelection
       value="Salesforce.com, Inc."
       readonly
@@ -913,7 +936,8 @@ Multiple selection is handled the same as the Base and Autocomplete Combobox, a 
           title={false}
         />
       }
-      listbox={<Listbox id="listbox-id-19" snapshot={Snapshot.EntityOptions} type="entity" count={2} />}
+      results={<Listbox id="listbox-id-19" snapshot={Snapshot.EntityOptions} type="entity" count={2} />}
+      resultsType="listbox"
       hasSelection
       listboxOfSelections={<ListboxOfSelections snapshot={Snapshot.EntitySelections} count={2} />}
     />
@@ -943,7 +967,8 @@ The containing `div` of the comboboxes should have the class `slds-combobox-grou
       aria-controls="listbox-id-20"
       comboboxID="primary-combobox-id-1"
       autocomplete
-      listbox={<Listbox id="listbox-id-20" snapshot={Snapshot.EntityOptions} type="entity" count={4} />}
+      results={<Listbox id="listbox-id-20" snapshot={Snapshot.EntityOptions} type="entity" count={4} />}
+      resultsType="listbox"
       addon={<ObjectSwitcher id={_.uniqueId('combobox-id-')} value="Accounts" addonPosition="start" hasInteractions comboboxAriaControls="primary-combobox-id-1" />}
       addonPosition="start"
       comboboxPosition="end"
@@ -974,7 +999,8 @@ The containing `div` of the comboboxes should have the class `slds-combobox-grou
       aria-controls="listbox-id-21"
       comboboxID="primary-combobox-id-2"
       autocomplete
-      listbox={<Listbox id="listbox-id-21" snapshot={Snapshot.EntityOptionsTypeahead} term="salesforce" type="entity" count={4} />}
+      results={<Listbox id="listbox-id-21" snapshot={Snapshot.EntityOptionsTypeahead} term="salesforce" type="entity" count={4} />}
+      resultsType="listbox"
       value="salesforce"
       isOpen
       hasFocus
@@ -1007,7 +1033,8 @@ The containing `div` of the comboboxes should have the class `slds-combobox-grou
       aria-controls="listbox-id-21"
       comboboxID="primary-combobox-id-2"
       autocomplete
-      listbox={<Listbox id="listbox-id-21" snapshot={Snapshot.EntityOptionsTypeahead} term="salesforce" type="entity" count={4} />}
+      results={<Listbox id="listbox-id-21" snapshot={Snapshot.EntityOptionsTypeahead} term="salesforce" type="entity" count={4} />}
+      resultsType="listbox"
       value="salesforce"
       isOpen
       showCloseButton
@@ -1032,7 +1059,8 @@ The containing `div` of the comboboxes should have the class `slds-combobox-grou
       aria-controls="listbox-id-22"
       comboboxID="primary-combobox-id-3"
       autocomplete
-      listbox={<Listbox id="listbox-id-22" snapshot={Snapshot.EntityOptions} type="entity" count={4} />}
+      results={<Listbox id="listbox-id-22" snapshot={Snapshot.EntityOptions} type="entity" count={4} />}
+      resultsType="listbox"
       hasFocus
       addon={ <ObjectSwitcher id={_.uniqueId('combobox-id-')} value="Accounts" addonPosition="start" comboboxAriaControls="primary-combobox-id-3" /> }
       addonPosition="start"
@@ -1064,7 +1092,8 @@ The containing `div` of the comboboxes should have the class `slds-combobox-grou
       aria-controls="listbox-id-23"
       comboboxID="primary-combobox-id-4"
       autocomplete
-      listbox={<Listbox id="listbox-id-23" snapshot={Snapshot.EntityOptions} type="entity" count={4} />}
+      results={<Listbox id="listbox-id-23" snapshot={Snapshot.EntityOptions} type="entity" count={4} />}
+      resultsType="listbox"
       isOpen
       hasFocus
       addon={ <ObjectSwitcher id={_.uniqueId('combobox-id-')} value="Accounts" addonPosition="start" comboboxAriaControls="primary-combobox-id-4" /> }
@@ -1105,7 +1134,8 @@ By default, the `slds-listbox_selection-group` is collapsed.
       aria-controls="listbox-id-24"
       comboboxID="primary-combobox-id-5"
       autocomplete
-      listbox={<Listbox id="listbox-id-24" snapshot={Snapshot.EntityOptions} type="entity" count={4} />}
+      results={<Listbox id="listbox-id-24" snapshot={Snapshot.EntityOptions} type="entity" count={4} />}
+      resultsType="listbox"
       addon={ <ObjectSwitcher id={_.uniqueId('combobox-id-')} value="Accounts" addonPosition="start" comboboxAriaControls="primary-combobox-id-5" /> }
       addonPosition="start"
       comboboxPosition="end"
@@ -1138,7 +1168,8 @@ When a user focuses on _any_ element inside of the combobox group, the class `sl
       aria-controls="listbox-id-25"
       comboboxID="primary-combobox-id-6"
       autocomplete
-      listbox={<Listbox id="listbox-id-25" snapshot={Snapshot.EntityOptions} type="entity" count={4} />}
+      results={<Listbox id="listbox-id-25" snapshot={Snapshot.EntityOptions} type="entity" count={4} />}
+      resultsType="listbox"
       hasFocus
       addon={ <ObjectSwitcher id={_.uniqueId('combobox-id-')} value="Accounts" addonPosition="start" comboboxAriaControls="primary-combobox-id-6" /> }
       addonPosition="start"
@@ -1178,8 +1209,9 @@ The containing element should receive the class `slds-combobox_object-switcher` 
       aria-controls="listbox-id-26"
       comboboxID="primary-combobox-id-7"
       autocomplete
-      listbox={<Listbox id="listbox-id-26" snapshot={Snapshot.EntityOptions} type="entity" count={2} />}
+      results={<Listbox id="listbox-id-26" snapshot={Snapshot.EntityOptions} type="entity" count={2} />}
       addon={<ObjectSwitcher id={_.uniqueId('combobox-id-')} value="Accounts" addonPosition="start" isOpen hasFocus comboboxAriaControls="primary-combobox-id-7" />}
+      resultsType="listbox"
       addonPosition="start"
       comboboxPosition="end"
       inputIconPosition="right"
@@ -1212,7 +1244,8 @@ The containing element should receive the class `slds-combobox_object-switcher` 
       aria-controls="listbox-id-28"
       comboboxID="primary-combobox-id-9"
       autocomplete
-      listbox={<Listbox id="listbox-id-28" snapshot={Snapshot.EntityOptions} type="entity" count={2} />}
+      results={<Listbox id="listbox-id-28" snapshot={Snapshot.EntityOptions} type="entity" count={2} />}
+      resultsType="listbox"
       addon={<IconObjectSwitcher id={_.uniqueId('combobox-id-')} value="Apex" filteredSymbol="apex" addonPosition="start" comboboxAriaControls="primary-combobox-id-9" />}
       addonPosition="start"
       comboboxPosition="end"
@@ -1240,7 +1273,8 @@ The containing element should receive the class `slds-combobox_object-switcher` 
       aria-controls="listbox-id-27"
       comboboxID="primary-combobox-id-8"
       autocomplete
-      listbox={<Listbox id="listbox-id-27" snapshot={Snapshot.EntityOptions} type="entity" count={2} />}
+      results={<Listbox id="listbox-id-27" snapshot={Snapshot.EntityOptions} type="entity" count={2} />}
+      resultsType="listbox"
       addon={<IconObjectSwitcher id={_.uniqueId('combobox-id-')} value="Apex" filteredSymbol="apex" addonPosition="start" isOpen hasFocus comboboxAriaControls="primary-combobox-id-8" />}
       addonPosition="start"
       comboboxPosition="end"
@@ -1258,3 +1292,104 @@ The containing element should receive the class `slds-combobox_object-switcher` 
   </CodeView>
 
 </Example>
+
+## Combobox with a Dialog
+
+If the data displayed within the dropdown of a combobox cannot be represented as a listbox (as shown above), tree, grid, or tree-grid, then the dropdown should be represented as a dialog, with `role="dialog"`.
+
+The key difference for `dialog` dropdowns lies in how they handle focus. In `listbox` dropdowns, users can enter values in the input while arrowing through the listbox options using `aria-activedescendant`. In `dialog` dropdowns, the dropdown becomes a focus trap, so users must have a way to clear or save any selections or changes made.
+
+<Blockquote type="a11y" header="Implementation Details">
+<ol>
+<li>1. The input does not have `aria-autocomplete`, it is essentially readonly</li>
+<li>2. The input for this dialog variant will also never have `aria-activedescendant`
+<li>3. The combobox `<div>` with `class="slds-combobox"` has `aria-haspopup=”dialog”`</li>
+<li>4. The dropdown is a dialog with `role="dialog"`</li>
+<li>5. The dialog should have an `aria-label` with a value for the dialog's title</li>
+<li>6. The combobox has `aria-expanded="false"` when the dialog is closed, and `aria-expanded="true"` when the dialog is open. </li>
+</ol>
+</Blockquote>
+
+<CodeView>
+  {Dialog.default}
+</CodeView>
+
+### Open Dialog
+
+To open the dialog, remove the class `slds-popover_hide` from the `<div>` with `class="slds-popover"`. Any content can go inside a `dialog` dropdown.
+
+<Blockquote type="a11y" header="Accessibility Note">
+When the dialog is open, be sure to change `aria-expanded` to **true** on the combobox `<div>` with `class="slds-combobox"`.
+</Blockquote>
+
+<CodeView>
+  {getDisplayElementById(Dialog.states, "open")}
+</CodeView>
+
+### Keyboard Interaction
+
+  - Focusing on the input does not open the dropdown
+  - Typing in the input does nothing
+  - Pressing the `down arrow` from the input opens the dialog and moves the user's focus into the dialog.
+  - The dialog dropdown is a focus trap
+      - Pressing the `Tab` key cycles the user through all UI elements in the dialog
+  - Pressing `Escape` closes the dialog and clears any changes
+  - Pressing the Cancel button closes the dialog and clears any changes
+  - Pressing the Save button updates the selected value in the input and closes the dialog
+
+### Focus Management
+
+- Clicking on the input opens and focuses the cursor inside the dialog on the first focusable element.
+- Placing focus on the input *does not* open the dialog
+- Pressing the `down arrow` whilst focused on the input opens the dialog and moves focus to the first focusable element
+
+### Examples
+
+#### Multiple Selection
+
+Below is an example of a `dialog` combobox where users can make multiple selections using checkboxes. The main difference between the **dialog variant** of a multi-select combobox and the [multi-select Entity Autocomplete](/components/combobox/#Multiple-selection-2) involves the behavior after a selection is made. A `dialog` will not close after each selection, since it is a focus trap, while the `listbox` dropdown of the Entity Autocomplete example closes after each selection made, forcing users to re-open the listbox if they need to make another selection.
+
+<Blockquote type="note" header="Dueling Picklist vs. Multi Select Combobox">
+  We recommend using the <a href="/components/dueling-picklist/"> Dueling Picklist</a> when there are many items to choose from, such as “Select Country”. Use a multiselect combobox with a dialog when you have less horizontal real estate available and fewer items to select from.
+</Blockquote>
+
+##### Open
+
+<CodeView>
+  {getDisplayElementById(Dialog.examples, "with-checkbox-group")}
+</CodeView>
+
+##### Open and Selecting
+
+If nothing has been selected yet, the input's placeholder remains "Select an Option" or something similar.
+
+<CodeView>
+  {getDisplayElementById(Dialog.examples, "selecting-options")}
+</CodeView>
+
+##### Closed with One Option Selected
+
+When only one selection has been made, the input's value takes on the value of the selection - German in this case.
+
+<CodeView>
+  {getDisplayElementById(Dialog.examples, "closed-one-option-selected")}
+</CodeView>
+
+##### Open with One Option Selected
+
+<CodeView>
+  {getDisplayElementById(Dialog.examples, "open-one-option-selected")}
+</CodeView>
+
+##### Closed with Two or More Options Selected
+
+When more then one option has been selected, the input's value reads "{# of items selected} options selected".
+
+<CodeView>
+  {getDisplayElementById(Dialog.examples, "closed-two-or-more-options-selected")}
+</CodeView>
+
+##### Open with Two or More Options Selected
+<CodeView>
+  {getDisplayElementById(Dialog.examples, "open-two-or-more-options-selected")}
+</CodeView>

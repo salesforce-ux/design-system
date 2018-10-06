@@ -1,5 +1,265 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Base popover renders a hidden popover 1`] = `
+<section
+  aria-describedby="dialog-body-id-13"
+  aria-label="Language Options"
+  aria-labelledby={undefined}
+  className="slds-popover slds-popover_hide"
+  id="popover-id-01"
+  role="dialog"
+  style={undefined}
+>
+  <div
+    className="slds-popover__body"
+    id="dialog-body-id-13"
+  >
+    <div>
+      Any content can go here in this Dialog
+    </div>
+  </div>
+</section>
+`;
+
+exports[`Base popover renders a popover at full width 1`] = `
+<section
+  aria-describedby="dialog-body-id-11"
+  aria-label="Language Options"
+  aria-labelledby={undefined}
+  className="slds-popover slds-popover_full-width"
+  id="popover-id-01"
+  role="dialog"
+  style={undefined}
+>
+  <div
+    className="slds-popover__body"
+    id="dialog-body-id-11"
+  >
+    <div>
+      Any content can go here in this Dialog
+    </div>
+  </div>
+</section>
+`;
+
+exports[`Base popover renders a popover with a checkbox group 1`] = `
+<section
+  aria-describedby="dialog-body-id-15"
+  aria-label="Language Options"
+  aria-labelledby={undefined}
+  className="slds-popover slds-popover_full-width"
+  id="popover-id-01"
+  role="dialog"
+  style={undefined}
+>
+  <div
+    className="slds-popover__body"
+    id="dialog-body-id-15"
+  >
+    <fieldset
+      className="slds-form-element"
+      id={undefined}
+    >
+      <legend
+        className="slds-form-element__legend slds-form-element__label"
+      >
+        Select up to 2
+      </legend>
+      <div
+        className="slds-form-element__control"
+      >
+        <div
+          className="slds-checkbox"
+        >
+          <input
+            aria-describedby={undefined}
+            aria-labelledby={null}
+            defaultChecked={undefined}
+            disabled={undefined}
+            id="checkbox-1"
+            name="options"
+            tabIndex={undefined}
+            type="checkbox"
+            value="checkbox-1"
+          />
+          <label
+            className="slds-checkbox__label"
+            htmlFor="checkbox-1"
+            id={undefined}
+          >
+            <span
+              className="slds-checkbox_faux"
+            />
+            <span
+              className="slds-form-element__label"
+            >
+              English
+            </span>
+          </label>
+        </div>
+        <div
+          className="slds-checkbox"
+        >
+          <input
+            aria-describedby={undefined}
+            aria-labelledby={null}
+            defaultChecked={undefined}
+            disabled={undefined}
+            id="checkbox-2"
+            name="options"
+            tabIndex={undefined}
+            type="checkbox"
+            value="checkbox-2"
+          />
+          <label
+            className="slds-checkbox__label"
+            htmlFor="checkbox-2"
+            id={undefined}
+          >
+            <span
+              className="slds-checkbox_faux"
+            />
+            <span
+              className="slds-form-element__label"
+            >
+              German
+            </span>
+          </label>
+        </div>
+        <div
+          className="slds-checkbox"
+        >
+          <input
+            aria-describedby={undefined}
+            aria-labelledby={null}
+            defaultChecked={undefined}
+            disabled={undefined}
+            id="checkbox-3"
+            name="options"
+            tabIndex={undefined}
+            type="checkbox"
+            value="checkbox-3"
+          />
+          <label
+            className="slds-checkbox__label"
+            htmlFor="checkbox-3"
+            id={undefined}
+          >
+            <span
+              className="slds-checkbox_faux"
+            />
+            <span
+              className="slds-form-element__label"
+            >
+              Tobagonian Creole English
+            </span>
+          </label>
+        </div>
+        <div
+          className="slds-checkbox"
+        >
+          <input
+            aria-describedby={undefined}
+            aria-labelledby={null}
+            defaultChecked={undefined}
+            disabled={undefined}
+            id="checkbox-4"
+            name="options"
+            tabIndex={undefined}
+            type="checkbox"
+            value="checkbox-4"
+          />
+          <label
+            className="slds-checkbox__label"
+            htmlFor="checkbox-4"
+            id={undefined}
+          >
+            <span
+              className="slds-checkbox_faux"
+            />
+            <span
+              className="slds-form-element__label"
+            >
+              Spanish
+            </span>
+          </label>
+        </div>
+      </div>
+    </fieldset>
+  </div>
+  <footer
+    className="slds-popover__footer slds-popover__footer_form"
+  >
+    <button
+      className="slds-button slds-button_neutral"
+      disabled={undefined}
+    >
+      Cancel
+    </button>
+    <button
+      className="slds-button slds-button_brand"
+      disabled={undefined}
+    >
+      Done
+    </button>
+  </footer>
+</section>
+`;
+
+exports[`Base popover renders a popover with a footer 1`] = `
+<section
+  aria-describedby="dialog-body-id-14"
+  aria-label="Language Options"
+  aria-labelledby={undefined}
+  className="slds-popover"
+  id="popover-id-01"
+  role="dialog"
+  style={undefined}
+>
+  <div
+    className="slds-popover__body"
+    id="dialog-body-id-14"
+  >
+    <div>
+      Any content can go here in this Dialog
+    </div>
+  </div>
+  <footer
+    className="slds-popover__footer slds-popover__footer_form"
+  >
+    <button
+      className="slds-button"
+      disabled={undefined}
+    />
+    <button
+      className="slds-button"
+      disabled={undefined}
+    />
+  </footer>
+</section>
+`;
+
+exports[`Base popover renders a small scrolling popover 1`] = `
+<section
+  aria-describedby="dialog-body-id-12"
+  aria-label="Language Options"
+  aria-labelledby={undefined}
+  className="slds-popover"
+  id="popover-id-01"
+  role="dialog"
+  style={undefined}
+>
+  <div
+    className="slds-popover__body slds-popover__body_small"
+    id="dialog-body-id-12"
+  >
+    <div>
+      Any content can go here in this Dialog
+    </div>
+  </div>
+</section>
+`;
+
 exports[`renders a feature popover 1`] = `
 <section
   aria-describedby="dialog-body-id-3"

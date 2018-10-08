@@ -36,7 +36,7 @@ export const CompoundForm = props => {
           </div>
         </div>
       </Fieldset>
-      <Fieldset hasCompoundFields label="Shipping Address">
+      <Fieldset hasCompoundFields label="Shipping Address" isAddress>
         <div className="slds-form-element__group">
           <div className="slds-form-element__row">
             <FormElement

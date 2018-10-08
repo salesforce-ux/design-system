@@ -3,6 +3,11 @@
 # Form Element Release Notes
 
 <!-- ## [Unreleased] -->
+## 2.7.4
+
+### Added
+- Added `slds-form-element_address` for address specific compound form elements
+
 ## 2.7.3
 
 ### Fixed

@@ -17,7 +17,6 @@
 
   .slds-form-element__row {
     display: flex;
-    align-items: flex-end;
     margin-bottom: $spacing-xx-small;
 
     + .slds-form-element__row {
@@ -32,5 +31,20 @@
     .slds-form-element__label {
       padding-top: 0;
     }
+  }
+}
+
+/**
+ * @summary Creates a form that consists of multiple form groups specific to an address form
+ *
+ * @name address
+ * @selector .slds-form-element_address
+ * @restrict .slds-form_compound
+ * @modifier
+ */
+.slds-form-element_address {
+
+  .slds-form-element__row {
+    align-items: flex-end;
   }
 }

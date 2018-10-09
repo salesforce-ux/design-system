@@ -1302,7 +1302,7 @@ The key difference for `dialog` dropdowns lies in how they handle focus. In `lis
 <Blockquote type="a11y" header="Implementation Details">
 <ol>
 <li>1. The input does not have `aria-autocomplete`, it is essentially readonly</li>
-<li>2. The input for this dialog variant will also never have `aria-activedescendant`
+<li>2. The input for this dialog variant will also never have `aria-activedescendant`</li>
 <li>3. The combobox `<div>` with `class="slds-combobox"` has `aria-haspopup=”dialog”`</li>
 <li>4. The dropdown is a dialog with `role="dialog"`</li>
 <li>5. The dialog should have an `aria-label` with a value for the dialog's title</li>
@@ -1332,7 +1332,7 @@ When the dialog is open, be sure to change `aria-expanded` to **true** on the co
   - Typing in the input does nothing
   - Pressing the `down arrow` from the input opens the dialog and moves the user's focus into the dialog.
   - The dialog dropdown is a focus trap
-      - Pressing the `Tab` key cycles the user through all UI elements in the dialog
+    - Pressing the `Tab` key cycles the user through all UI elements in the dialog
   - Pressing `Escape` closes the dialog and clears any changes
   - Pressing the Cancel button closes the dialog and clears any changes
   - Pressing the Save button updates the selected value in the input and closes the dialog

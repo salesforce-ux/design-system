@@ -692,6 +692,7 @@
   .slds-path__action {
     flex-grow: 1;
     flex-basis: 100%;
+    max-width: 100%; // IE11 flexbox fix - ensure everything stays inside the flex container
     justify-content: space-between;
     align-items: center;
     margin-top: $spacing-medium;

@@ -19,49 +19,13 @@ IndicatorUnsaved.propTypes = {
   title: PropTypes.string
 };
 
-export const IndicatorUnread = props => {
-  let assistiveTextContent;
-  if (props.tabType === 'menuItem') {
-    assistiveTextContent = 'New Activity';
-  } else if (props.tabType === 'overflow') {
-    assistiveTextContent = 'New Tab activity within More Tabs menu';
-  } else if (props.tabType === 'main') {
-    assistiveTextContent = `New activity in Tab: ${props.tabName}`;
-  }
-  return (
-    <span
-      aria-label={
-        props.tabType === 'main' || props.tabType === 'overflow'
-          ? 'New Activity'
-          : null
-      }
-      className="slds-indicator_unread"
-      role={
-        props.tabType === 'main' || props.tabType === 'overflow'
-          ? 'alert'
-          : null
-      }
-      title="New Activity"
-    >
-      <span className="slds-assistive-text">{assistiveTextContent}</span>
-    </span>
-  );
-};
-
-// If tab type is main, you must supply a tab name for the assistive text
-IndicatorUnread.propTypes = {
-  tabType: PropTypes.oneOf(['main', 'overflow', 'menuItem']),
-  tabName: function(props, propName) {
-    if (
-      props['tabType'] === 'main' &&
-      (props[propName] === undefined || typeof props[propName] !== 'string')
-    ) {
-      return new Error(
-        'Please provide a tab name as a string for any main navigation tabs!'
-      );
-    }
-  }
-};
+export const IndicatorUnread = props => (
+  <span
+    aria-label="New Activity"
+    className="slds-indicator_unread"
+    title="New Activity"
+  />
+);
 
 export const IndicatorContainer = props => (
   <span className="slds-indicator-container">{props.children}</span>

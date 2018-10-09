@@ -13,74 +13,17 @@ exports[`Global Navigation indicators render an indicator container with childre
   <span
     aria-label="New Activity"
     className="slds-indicator_unread"
-    role="alert"
     title="New Activity"
-  >
-    <span
-      className="slds-assistive-text"
-    >
-      New Tab activity within More Tabs menu
-    </span>
-  </span>
+  />
 </span>
 `;
 
 exports[`Global Navigation indicators render an unread indicator 1`] = `
 <span
-  aria-label={null}
-  className="slds-indicator_unread"
-  role={null}
-  title="New Activity"
->
-  <span
-    className="slds-assistive-text"
-  />
-</span>
-`;
-
-exports[`Global Navigation indicators render an unread indicator for main tabs 1`] = `
-<span
   aria-label="New Activity"
   className="slds-indicator_unread"
-  role="alert"
   title="New Activity"
->
-  <span
-    className="slds-assistive-text"
-  >
-    New activity in Tab: Tab Item 1
-  </span>
-</span>
-`;
-
-exports[`Global Navigation indicators render an unread indicator for menu tabs 1`] = `
-<span
-  aria-label={null}
-  className="slds-indicator_unread"
-  role={null}
-  title="New Activity"
->
-  <span
-    className="slds-assistive-text"
-  >
-    New Activity
-  </span>
-</span>
-`;
-
-exports[`Global Navigation indicators render an unread indicator for more tabs 1`] = `
-<span
-  aria-label="New Activity"
-  className="slds-indicator_unread"
-  role="alert"
-  title="New Activity"
->
-  <span
-    className="slds-assistive-text"
-  >
-    New Tab activity within More Tabs menu
-  </span>
-</span>
+/>
 `;
 
 exports[`Global Navigation indicators render an unsaved indicator 1`] = `
@@ -111,7 +54,7 @@ exports[`Navigation Tab Bar renders a context tab 1`] = `
     <span
       className="slds-indicator-container"
     />
-    <div
+    <span
       className="slds-icon_container"
       title="Case"
     >
@@ -128,7 +71,7 @@ exports[`Navigation Tab Bar renders a context tab 1`] = `
       >
         Case
       </span>
-    </div>
+    </span>
     <span
       className="slds-truncate"
       title="Tab Item 1"
@@ -175,6 +118,7 @@ exports[`Navigation Tab Bar renders a context tab 1`] = `
         >
           <a
             aria-checked={undefined}
+            className={undefined}
             href="javascript:void(0);"
             role="menuitem"
             tabIndex="-1"
@@ -203,6 +147,7 @@ exports[`Navigation Tab Bar renders a context tab 1`] = `
         >
           <a
             aria-checked={undefined}
+            className={undefined}
             href="javascript:void(0);"
             role="menuitem"
             tabIndex="-1"
@@ -231,6 +176,7 @@ exports[`Navigation Tab Bar renders a context tab 1`] = `
         >
           <a
             aria-checked={undefined}
+            className={undefined}
             href="javascript:void(0);"
             role="menuitem"
             tabIndex="-1"
@@ -259,6 +205,7 @@ exports[`Navigation Tab Bar renders a context tab 1`] = `
         >
           <a
             aria-checked={undefined}
+            className={undefined}
             href="javascript:void(0);"
             role="menuitem"
             tabIndex="-1"
@@ -334,15 +281,8 @@ exports[`Navigation Tab Bar renders an overflow tab 1`] = `
       <span
         aria-label="New Activity"
         className="slds-indicator_unread"
-        role="alert"
         title="New Activity"
-      >
-        <span
-          className="slds-assistive-text"
-        >
-          New Tab activity within More Tabs menu
-        </span>
-      </span>
+      />
     </span>
     <span
       className="slds-truncate"
@@ -379,6 +319,7 @@ exports[`Navigation Tab Bar renders an overflow tab 1`] = `
       >
         <a
           aria-checked={undefined}
+          className={undefined}
           href="javascript:void(0);"
           role="menuitem"
           tabIndex="-1"
@@ -398,26 +339,29 @@ exports[`Navigation Tab Bar renders an overflow tab 1`] = `
                 *
               </abbr>
               <span
-                aria-label={null}
+                aria-label="New Activity"
                 className="slds-indicator_unread"
-                role={null}
                 title="New Activity"
+              />
+            </span>
+            <span
+              className="slds-icon_container"
+              title="Live Chat"
+            >
+              <svg
+                aria-hidden={true}
+                className="slds-icon slds-icon_small slds-icon-text-default"
               >
-                <span
-                  className="slds-assistive-text"
-                >
-                  New Activity
-                </span>
+                <use
+                  xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#live_chat"
+                />
+              </svg>
+              <span
+                className="slds-assistive-text"
+              >
+                Live Chat
               </span>
             </span>
-            <svg
-              aria-hidden={true}
-              className="slds-icon slds-icon_small slds-icon-text-default"
-            >
-              <use
-                xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#live_chat"
-              />
-            </svg>
             <span>
               Chat - Customer
             </span>
@@ -430,6 +374,7 @@ exports[`Navigation Tab Bar renders an overflow tab 1`] = `
       >
         <a
           aria-checked={undefined}
+          className={undefined}
           href="javascript:void(0);"
           role="menuitem"
           tabIndex="-1"
@@ -441,14 +386,24 @@ exports[`Navigation Tab Bar renders an overflow tab 1`] = `
             <span
               className="slds-indicator-container"
             />
-            <svg
-              aria-hidden={true}
-              className="slds-icon slds-icon_small slds-icon-text-default"
+            <span
+              className="slds-icon_container"
+              title="Case"
             >
-              <use
-                xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#case"
-              />
-            </svg>
+              <svg
+                aria-hidden={true}
+                className="slds-icon slds-icon_small slds-icon-text-default"
+              >
+                <use
+                  xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#case"
+                />
+              </svg>
+              <span
+                className="slds-assistive-text"
+              >
+                Case
+              </span>
+            </span>
             <span>
               Overflow Tab Item
             </span>
@@ -481,17 +436,10 @@ exports[`Navigation Tab Bar renders an unread context tab 1`] = `
       <span
         aria-label="New Activity"
         className="slds-indicator_unread"
-        role="alert"
         title="New Activity"
-      >
-        <span
-          className="slds-assistive-text"
-        >
-          New activity in Tab: Tab Item 1
-        </span>
-      </span>
+      />
     </span>
-    <div
+    <span
       className="slds-icon_container"
       title="Case"
     >
@@ -508,7 +456,7 @@ exports[`Navigation Tab Bar renders an unread context tab 1`] = `
       >
         Case
       </span>
-    </div>
+    </span>
     <span
       className="slds-truncate"
       title="Tab Item 1"
@@ -555,6 +503,7 @@ exports[`Navigation Tab Bar renders an unread context tab 1`] = `
         >
           <a
             aria-checked={undefined}
+            className={undefined}
             href="javascript:void(0);"
             role="menuitem"
             tabIndex="-1"
@@ -583,6 +532,7 @@ exports[`Navigation Tab Bar renders an unread context tab 1`] = `
         >
           <a
             aria-checked={undefined}
+            className={undefined}
             href="javascript:void(0);"
             role="menuitem"
             tabIndex="-1"
@@ -611,6 +561,7 @@ exports[`Navigation Tab Bar renders an unread context tab 1`] = `
         >
           <a
             aria-checked={undefined}
+            className={undefined}
             href="javascript:void(0);"
             role="menuitem"
             tabIndex="-1"
@@ -639,6 +590,7 @@ exports[`Navigation Tab Bar renders an unread context tab 1`] = `
         >
           <a
             aria-checked={undefined}
+            className={undefined}
             href="javascript:void(0);"
             role="menuitem"
             tabIndex="-1"
@@ -718,7 +670,7 @@ exports[`Navigation Tab Bar renders an unsaved context tab 1`] = `
         *
       </abbr>
     </span>
-    <div
+    <span
       className="slds-icon_container"
       title="Case"
     >
@@ -735,7 +687,7 @@ exports[`Navigation Tab Bar renders an unsaved context tab 1`] = `
       >
         Case
       </span>
-    </div>
+    </span>
     <span
       className="slds-truncate"
       title="Tab Item 1"
@@ -782,6 +734,7 @@ exports[`Navigation Tab Bar renders an unsaved context tab 1`] = `
         >
           <a
             aria-checked={undefined}
+            className={undefined}
             href="javascript:void(0);"
             role="menuitem"
             tabIndex="-1"
@@ -810,6 +763,7 @@ exports[`Navigation Tab Bar renders an unsaved context tab 1`] = `
         >
           <a
             aria-checked={undefined}
+            className={undefined}
             href="javascript:void(0);"
             role="menuitem"
             tabIndex="-1"
@@ -838,6 +792,7 @@ exports[`Navigation Tab Bar renders an unsaved context tab 1`] = `
         >
           <a
             aria-checked={undefined}
+            className={undefined}
             href="javascript:void(0);"
             role="menuitem"
             tabIndex="-1"
@@ -866,6 +821,7 @@ exports[`Navigation Tab Bar renders an unsaved context tab 1`] = `
         >
           <a
             aria-checked={undefined}
+            className={undefined}
             href="javascript:void(0);"
             role="menuitem"
             tabIndex="-1"
@@ -1046,6 +1002,7 @@ exports[`renders a global-navigation with sub-tabs 1`] = `
             >
               <a
                 aria-checked={undefined}
+                className={undefined}
                 href="javascript:void(0);"
                 role="menuitem"
                 tabIndex="-1"
@@ -1081,6 +1038,7 @@ exports[`renders a global-navigation with sub-tabs 1`] = `
             >
               <a
                 aria-checked={undefined}
+                className={undefined}
                 href="javascript:void(0);"
                 role="menuitem"
                 tabIndex="-1"
@@ -1116,6 +1074,7 @@ exports[`renders a global-navigation with sub-tabs 1`] = `
             >
               <a
                 aria-checked={undefined}
+                className={undefined}
                 href="javascript:void(0);"
                 role="menuitem"
                 tabIndex="-1"
@@ -1204,7 +1163,7 @@ exports[`renders a global-navigation with sub-tabs 1`] = `
             <span
               className="slds-indicator-container"
             />
-            <div
+            <span
               className="slds-icon_container"
               title="Home"
             >
@@ -1221,7 +1180,7 @@ exports[`renders a global-navigation with sub-tabs 1`] = `
               >
                 Home
               </span>
-            </div>
+            </span>
             <span
               className="slds-truncate"
               title="Home"
@@ -1268,6 +1227,7 @@ exports[`renders a global-navigation with sub-tabs 1`] = `
                 >
                   <a
                     aria-checked={undefined}
+                    className={undefined}
                     href="javascript:void(0);"
                     role="menuitem"
                     tabIndex="-1"
@@ -1296,6 +1256,7 @@ exports[`renders a global-navigation with sub-tabs 1`] = `
                 >
                   <a
                     aria-checked={undefined}
+                    className={undefined}
                     href="javascript:void(0);"
                     role="menuitem"
                     tabIndex="-1"
@@ -1324,6 +1285,7 @@ exports[`renders a global-navigation with sub-tabs 1`] = `
                 >
                   <a
                     aria-checked={undefined}
+                    className={undefined}
                     href="javascript:void(0);"
                     role="menuitem"
                     tabIndex="-1"
@@ -1352,6 +1314,7 @@ exports[`renders a global-navigation with sub-tabs 1`] = `
                 >
                   <a
                     aria-checked={undefined}
+                    className={undefined}
                     href="javascript:void(0);"
                     role="menuitem"
                     tabIndex="-1"
@@ -1420,7 +1383,7 @@ exports[`renders a global-navigation with sub-tabs 1`] = `
             <span
               className="slds-indicator-container"
             />
-            <div
+            <span
               className="slds-icon_container"
               title="Case"
             >
@@ -1437,7 +1400,7 @@ exports[`renders a global-navigation with sub-tabs 1`] = `
               >
                 Case
               </span>
-            </div>
+            </span>
             <span
               className="slds-truncate"
               title="Tab Item 1"
@@ -1484,6 +1447,7 @@ exports[`renders a global-navigation with sub-tabs 1`] = `
                 >
                   <a
                     aria-checked={undefined}
+                    className={undefined}
                     href="javascript:void(0);"
                     role="menuitem"
                     tabIndex="-1"
@@ -1512,6 +1476,7 @@ exports[`renders a global-navigation with sub-tabs 1`] = `
                 >
                   <a
                     aria-checked={undefined}
+                    className={undefined}
                     href="javascript:void(0);"
                     role="menuitem"
                     tabIndex="-1"
@@ -1540,6 +1505,7 @@ exports[`renders a global-navigation with sub-tabs 1`] = `
                 >
                   <a
                     aria-checked={undefined}
+                    className={undefined}
                     href="javascript:void(0);"
                     role="menuitem"
                     tabIndex="-1"
@@ -1568,6 +1534,7 @@ exports[`renders a global-navigation with sub-tabs 1`] = `
                 >
                   <a
                     aria-checked={undefined}
+                    className={undefined}
                     href="javascript:void(0);"
                     role="menuitem"
                     tabIndex="-1"
@@ -1636,7 +1603,7 @@ exports[`renders a global-navigation with sub-tabs 1`] = `
             <span
               className="slds-indicator-container"
             />
-            <div
+            <span
               className="slds-icon_container"
               title="Case"
             >
@@ -1653,7 +1620,7 @@ exports[`renders a global-navigation with sub-tabs 1`] = `
               >
                 Case
               </span>
-            </div>
+            </span>
             <span
               className="slds-truncate"
               title="Tab Item 2"
@@ -1700,6 +1667,7 @@ exports[`renders a global-navigation with sub-tabs 1`] = `
                 >
                   <a
                     aria-checked={undefined}
+                    className={undefined}
                     href="javascript:void(0);"
                     role="menuitem"
                     tabIndex="-1"
@@ -1728,6 +1696,7 @@ exports[`renders a global-navigation with sub-tabs 1`] = `
                 >
                   <a
                     aria-checked={undefined}
+                    className={undefined}
                     href="javascript:void(0);"
                     role="menuitem"
                     tabIndex="-1"
@@ -1756,6 +1725,7 @@ exports[`renders a global-navigation with sub-tabs 1`] = `
                 >
                   <a
                     aria-checked={undefined}
+                    className={undefined}
                     href="javascript:void(0);"
                     role="menuitem"
                     tabIndex="-1"
@@ -1784,6 +1754,7 @@ exports[`renders a global-navigation with sub-tabs 1`] = `
                 >
                   <a
                     aria-checked={undefined}
+                    className={undefined}
                     href="javascript:void(0);"
                     role="menuitem"
                     tabIndex="-1"
@@ -1868,7 +1839,7 @@ exports[`renders a global-navigation with sub-tabs 1`] = `
             <span
               className="slds-indicator-container"
             />
-            <div
+            <span
               className="slds-icon_container"
               title="Case"
             >
@@ -1884,9 +1855,8 @@ exports[`renders a global-navigation with sub-tabs 1`] = `
                 className="slds-assistive-text"
               >
                 Case
-                :
               </span>
-            </div>
+            </span>
             <span
               className="slds-truncate"
               title="00071938"
@@ -1937,7 +1907,7 @@ exports[`renders a global-navigation with sub-tabs 1`] = `
             <span
               className="slds-indicator-container"
             />
-            <div
+            <span
               className="slds-icon_container"
               title="Live Chat"
             >
@@ -1953,9 +1923,8 @@ exports[`renders a global-navigation with sub-tabs 1`] = `
                 className="slds-assistive-text"
               >
                 Live Chat
-                :
               </span>
-            </div>
+            </span>
             <span
               className="slds-truncate"
               title="Chat - Customer"
@@ -2154,6 +2123,7 @@ exports[`renders an overflowed global-navigation with dropdown, unread, and unsa
             >
               <a
                 aria-checked={undefined}
+                className={undefined}
                 href="javascript:void(0);"
                 role="menuitem"
                 tabIndex="-1"
@@ -2189,6 +2159,7 @@ exports[`renders an overflowed global-navigation with dropdown, unread, and unsa
             >
               <a
                 aria-checked={undefined}
+                className={undefined}
                 href="javascript:void(0);"
                 role="menuitem"
                 tabIndex="-1"
@@ -2224,6 +2195,7 @@ exports[`renders an overflowed global-navigation with dropdown, unread, and unsa
             >
               <a
                 aria-checked={undefined}
+                className={undefined}
                 href="javascript:void(0);"
                 role="menuitem"
                 tabIndex="-1"
@@ -2312,7 +2284,7 @@ exports[`renders an overflowed global-navigation with dropdown, unread, and unsa
             <span
               className="slds-indicator-container"
             />
-            <div
+            <span
               className="slds-icon_container"
               title="Home"
             >
@@ -2329,7 +2301,7 @@ exports[`renders an overflowed global-navigation with dropdown, unread, and unsa
               >
                 Home
               </span>
-            </div>
+            </span>
             <span
               className="slds-truncate"
               title="Home"
@@ -2376,6 +2348,7 @@ exports[`renders an overflowed global-navigation with dropdown, unread, and unsa
                 >
                   <a
                     aria-checked={undefined}
+                    className={undefined}
                     href="javascript:void(0);"
                     role="menuitem"
                     tabIndex="-1"
@@ -2404,6 +2377,7 @@ exports[`renders an overflowed global-navigation with dropdown, unread, and unsa
                 >
                   <a
                     aria-checked={undefined}
+                    className={undefined}
                     href="javascript:void(0);"
                     role="menuitem"
                     tabIndex="-1"
@@ -2432,6 +2406,7 @@ exports[`renders an overflowed global-navigation with dropdown, unread, and unsa
                 >
                   <a
                     aria-checked={undefined}
+                    className={undefined}
                     href="javascript:void(0);"
                     role="menuitem"
                     tabIndex="-1"
@@ -2460,6 +2435,7 @@ exports[`renders an overflowed global-navigation with dropdown, unread, and unsa
                 >
                   <a
                     aria-checked={undefined}
+                    className={undefined}
                     href="javascript:void(0);"
                     role="menuitem"
                     tabIndex="-1"
@@ -2528,7 +2504,7 @@ exports[`renders an overflowed global-navigation with dropdown, unread, and unsa
             <span
               className="slds-indicator-container"
             />
-            <div
+            <span
               className="slds-icon_container"
               title="Case"
             >
@@ -2545,7 +2521,7 @@ exports[`renders an overflowed global-navigation with dropdown, unread, and unsa
               >
                 Case
               </span>
-            </div>
+            </span>
             <span
               className="slds-truncate"
               title="Tab Item 1"
@@ -2592,6 +2568,7 @@ exports[`renders an overflowed global-navigation with dropdown, unread, and unsa
                 >
                   <a
                     aria-checked={undefined}
+                    className={undefined}
                     href="javascript:void(0);"
                     role="menuitem"
                     tabIndex="-1"
@@ -2620,6 +2597,7 @@ exports[`renders an overflowed global-navigation with dropdown, unread, and unsa
                 >
                   <a
                     aria-checked={undefined}
+                    className={undefined}
                     href="javascript:void(0);"
                     role="menuitem"
                     tabIndex="-1"
@@ -2648,6 +2626,7 @@ exports[`renders an overflowed global-navigation with dropdown, unread, and unsa
                 >
                   <a
                     aria-checked={undefined}
+                    className={undefined}
                     href="javascript:void(0);"
                     role="menuitem"
                     tabIndex="-1"
@@ -2676,6 +2655,7 @@ exports[`renders an overflowed global-navigation with dropdown, unread, and unsa
                 >
                   <a
                     aria-checked={undefined}
+                    className={undefined}
                     href="javascript:void(0);"
                     role="menuitem"
                     tabIndex="-1"
@@ -2744,7 +2724,7 @@ exports[`renders an overflowed global-navigation with dropdown, unread, and unsa
             <span
               className="slds-indicator-container"
             />
-            <div
+            <span
               className="slds-icon_container"
               title="Case"
             >
@@ -2761,7 +2741,7 @@ exports[`renders an overflowed global-navigation with dropdown, unread, and unsa
               >
                 Case
               </span>
-            </div>
+            </span>
             <span
               className="slds-truncate"
               title="Tab Item 2"
@@ -2808,6 +2788,7 @@ exports[`renders an overflowed global-navigation with dropdown, unread, and unsa
                 >
                   <a
                     aria-checked={undefined}
+                    className={undefined}
                     href="javascript:void(0);"
                     role="menuitem"
                     tabIndex="-1"
@@ -2836,6 +2817,7 @@ exports[`renders an overflowed global-navigation with dropdown, unread, and unsa
                 >
                   <a
                     aria-checked={undefined}
+                    className={undefined}
                     href="javascript:void(0);"
                     role="menuitem"
                     tabIndex="-1"
@@ -2864,6 +2846,7 @@ exports[`renders an overflowed global-navigation with dropdown, unread, and unsa
                 >
                   <a
                     aria-checked={undefined}
+                    className={undefined}
                     href="javascript:void(0);"
                     role="menuitem"
                     tabIndex="-1"
@@ -2892,6 +2875,7 @@ exports[`renders an overflowed global-navigation with dropdown, unread, and unsa
                 >
                   <a
                     aria-checked={undefined}
+                    className={undefined}
                     href="javascript:void(0);"
                     role="menuitem"
                     tabIndex="-1"
@@ -2964,15 +2948,8 @@ exports[`renders an overflowed global-navigation with dropdown, unread, and unsa
               <span
                 aria-label="New Activity"
                 className="slds-indicator_unread"
-                role="alert"
                 title="New Activity"
-              >
-                <span
-                  className="slds-assistive-text"
-                >
-                  New Tab activity within More Tabs menu
-                </span>
-              </span>
+              />
             </span>
             <span
               className="slds-truncate"
@@ -3009,6 +2986,7 @@ exports[`renders an overflowed global-navigation with dropdown, unread, and unsa
               >
                 <a
                   aria-checked={undefined}
+                  className={undefined}
                   href="javascript:void(0);"
                   role="menuitem"
                   tabIndex="-1"
@@ -3028,26 +3006,29 @@ exports[`renders an overflowed global-navigation with dropdown, unread, and unsa
                         *
                       </abbr>
                       <span
-                        aria-label={null}
+                        aria-label="New Activity"
                         className="slds-indicator_unread"
-                        role={null}
                         title="New Activity"
+                      />
+                    </span>
+                    <span
+                      className="slds-icon_container"
+                      title="Live Chat"
+                    >
+                      <svg
+                        aria-hidden={true}
+                        className="slds-icon slds-icon_small slds-icon-text-default"
                       >
-                        <span
-                          className="slds-assistive-text"
-                        >
-                          New Activity
-                        </span>
+                        <use
+                          xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#live_chat"
+                        />
+                      </svg>
+                      <span
+                        className="slds-assistive-text"
+                      >
+                        Live Chat
                       </span>
                     </span>
-                    <svg
-                      aria-hidden={true}
-                      className="slds-icon slds-icon_small slds-icon-text-default"
-                    >
-                      <use
-                        xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#live_chat"
-                      />
-                    </svg>
                     <span>
                       Chat - Customer
                     </span>
@@ -3060,6 +3041,7 @@ exports[`renders an overflowed global-navigation with dropdown, unread, and unsa
               >
                 <a
                   aria-checked={undefined}
+                  className={undefined}
                   href="javascript:void(0);"
                   role="menuitem"
                   tabIndex="-1"
@@ -3071,14 +3053,24 @@ exports[`renders an overflowed global-navigation with dropdown, unread, and unsa
                     <span
                       className="slds-indicator-container"
                     />
-                    <svg
-                      aria-hidden={true}
-                      className="slds-icon slds-icon_small slds-icon-text-default"
+                    <span
+                      className="slds-icon_container"
+                      title="Case"
                     >
-                      <use
-                        xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#case"
-                      />
-                    </svg>
+                      <svg
+                        aria-hidden={true}
+                        className="slds-icon slds-icon_small slds-icon-text-default"
+                      >
+                        <use
+                          xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#case"
+                        />
+                      </svg>
+                      <span
+                        className="slds-assistive-text"
+                      >
+                        Case
+                      </span>
+                    </span>
                     <span>
                       Overflow Tab Item
                     </span>

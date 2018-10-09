@@ -1,0 +1,51 @@
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+@mixin tab-notification-before($color) {
+
+  &:before {
+    animation: pulse 1s linear;
+    animation-iteration-count: 3;
+    background-color: $color;
+    bottom: 0;
+    content: '';
+    height: auto;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  &:hover {
+
+    &:before {
+      height: auto;
+    }
+  }
+}
+
+@mixin tab-notification-pulsing-animation() {
+  @keyframes pulse {
+
+    0%,
+    100% {
+      opacity: 1;
+    }
+
+    50% {
+      opacity: 0.7;
+    }
+  }
+
+  @keyframes pulse-lighter {
+
+    0%,
+    100% {
+      opacity: 1;
+    }
+
+    50% {
+      opacity: 0.6;
+    }
+  }
+}

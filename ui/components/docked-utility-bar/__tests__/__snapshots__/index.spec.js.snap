@@ -1,0 +1,408 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Base Docked Utility Bar  renders a base docked utility bar 1`] = `
+<footer
+  aria-label="Utility Bar"
+  className="slds-utility-bar_container"
+>
+  <h2
+    className="slds-assistive-text"
+  >
+    Utility Bar
+  </h2>
+  <ul
+    className="slds-utility-bar"
+  />
+</footer>
+`;
+
+exports[`Base Docked Utility Bar  renders a base docked utility bar with closed panel 1`] = `
+<footer
+  aria-label="Utility Bar"
+  className="slds-utility-bar_container"
+>
+  <h2
+    className="slds-assistive-text"
+  >
+    Utility Bar
+  </h2>
+  <ul
+    className="slds-utility-bar"
+  />
+  <div
+    aria-labelledby="panel-heading-01"
+    className="slds-utility-panel slds-grid slds-grid_vertical"
+    role="dialog"
+  >
+    <div
+      className="slds-utility-panel__header slds-grid slds-shrink-none"
+    >
+      <div
+        className="slds-media slds-media_center"
+      >
+        <div
+          className="slds-media__figure slds-m-right_x-small"
+        >
+          <span
+            className="slds-icon_container"
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-icon slds-icon_small slds-icon-text-default"
+            >
+              <use
+                xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#call"
+              />
+            </svg>
+          </span>
+        </div>
+        <div
+          className="slds-media__body"
+        >
+          <h2
+            id="panel-heading-01"
+          >
+            Call
+          </h2>
+        </div>
+      </div>
+      <div
+        className="slds-col_bump-left slds-shrink-none"
+      >
+        <button
+          aria-haspopup={undefined}
+          className="slds-button slds-button_icon slds-button_icon"
+          id={undefined}
+          title="Close Panel"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#minimize_window"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            Close Panel
+          </span>
+        </button>
+      </div>
+    </div>
+    <div
+      className="slds-utility-panel__body"
+    />
+  </div>
+</footer>
+`;
+
+exports[`Base Docked Utility Bar  renders a base docked utility bar with opened panel 1`] = `
+<footer
+  aria-label="Utility Bar"
+  className="slds-utility-bar_container"
+>
+  <h2
+    className="slds-assistive-text"
+  >
+    Utility Bar
+  </h2>
+  <ul
+    className="slds-utility-bar"
+  />
+  <div
+    aria-labelledby="panel-heading-01"
+    className="slds-utility-panel slds-grid slds-grid_vertical slds-is-open"
+    role="dialog"
+  >
+    <div
+      className="slds-utility-panel__header slds-grid slds-shrink-none"
+    >
+      <div
+        className="slds-media slds-media_center"
+      >
+        <div
+          className="slds-media__figure slds-m-right_x-small"
+        >
+          <span
+            className="slds-icon_container"
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-icon slds-icon_small slds-icon-text-default"
+            >
+              <use
+                xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#call"
+              />
+            </svg>
+          </span>
+        </div>
+        <div
+          className="slds-media__body"
+        >
+          <h2
+            id="panel-heading-01"
+          >
+            Call
+          </h2>
+        </div>
+      </div>
+      <div
+        className="slds-col_bump-left slds-shrink-none"
+      >
+        <button
+          aria-haspopup={undefined}
+          className="slds-button slds-button_icon slds-button_icon"
+          id={undefined}
+          title="Close Panel"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#minimize_window"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            Close Panel
+          </span>
+        </button>
+      </div>
+    </div>
+    <div
+      className="slds-utility-panel__body"
+    />
+  </div>
+</footer>
+`;
+
+exports[`Base Docked Utility Bar - Utility Bar Item renders a default utility bar item 1`] = `
+<li
+  className="slds-utility-bar__item"
+>
+  <button
+    aria-pressed={false}
+    className="slds-button slds-utility-bar__action"
+  >
+    <svg
+      aria-hidden={true}
+      className="slds-button__icon slds-button__icon_left"
+    >
+      <use
+        xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#call"
+      />
+    </svg>
+    <span
+      className="slds-utility-bar__text"
+    >
+      Call
+    </span>
+  </button>
+</li>
+`;
+
+exports[`Base Docked Utility Bar - Utility Bar Item renders a utility bar item with notification 1`] = `
+<li
+  className="slds-utility-bar__item slds-has-notification"
+>
+  <button
+    aria-pressed={false}
+    className="slds-button slds-utility-bar__action"
+  >
+    <abbr
+      aria-label="Unread Item"
+      className="slds-indicator_unread"
+      title="Unread Item"
+    >
+      <span
+        className="slds-assistive-text"
+      >
+        ●
+      </span>
+    </abbr>
+    <svg
+      aria-hidden={true}
+      className="slds-button__icon slds-button__icon_left"
+    >
+      <use
+        xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#omni_channel"
+      />
+    </svg>
+    <span
+      className="slds-utility-bar__text"
+    />
+  </button>
+</li>
+`;
+
+exports[`Base Docked Utility Bar - Utility Bar Item renders a utility bar item with pop out 1`] = `
+<li
+  className="slds-utility-bar__item slds-utility-bar__item_pop-out"
+>
+  <button
+    aria-pressed={false}
+    className="slds-button slds-utility-bar__action"
+  >
+    <span
+      className="slds-assistive-text"
+    >
+      : is popped out in new window
+    </span>
+    <svg
+      aria-hidden={true}
+      className="slds-button__icon slds-button__icon_left"
+    >
+      <use
+        xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#clock"
+      />
+    </svg>
+    <span
+      className="slds-utility-bar__text"
+    >
+      History
+    </span>
+  </button>
+</li>
+`;
+
+exports[`Base Docked Utility Bar - Utility Bar Panel renders a default utility bar panel 1`] = `
+<div
+  aria-labelledby="panel-heading-01"
+  className="slds-utility-panel slds-grid slds-grid_vertical"
+  role="dialog"
+>
+  <div
+    className="slds-utility-panel__header slds-grid slds-shrink-none"
+  >
+    <div
+      className="slds-media slds-media_center"
+    >
+      <div
+        className="slds-media__figure slds-m-right_x-small"
+      >
+        <span
+          className="slds-icon_container"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-icon slds-icon_small slds-icon-text-default"
+          >
+            <use
+              xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#call"
+            />
+          </svg>
+        </span>
+      </div>
+      <div
+        className="slds-media__body"
+      >
+        <h2
+          id="panel-heading-01"
+        >
+          Call
+        </h2>
+      </div>
+    </div>
+    <div
+      className="slds-col_bump-left slds-shrink-none"
+    >
+      <button
+        aria-haspopup={undefined}
+        className="slds-button slds-button_icon slds-button_icon"
+        id={undefined}
+        title="Close Panel"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#minimize_window"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          Close Panel
+        </span>
+      </button>
+    </div>
+  </div>
+  <div
+    className="slds-utility-panel__body"
+  />
+</div>
+`;
+
+exports[`Base Docked Utility Bar - Utility Bar Panel renders an open utility bar panel 1`] = `
+<div
+  aria-labelledby="panel-heading-01"
+  className="slds-utility-panel slds-grid slds-grid_vertical slds-is-open"
+  role="dialog"
+>
+  <div
+    className="slds-utility-panel__header slds-grid slds-shrink-none"
+  >
+    <div
+      className="slds-media slds-media_center"
+    >
+      <div
+        className="slds-media__figure slds-m-right_x-small"
+      >
+        <span
+          className="slds-icon_container"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-icon slds-icon_small slds-icon-text-default"
+          >
+            <use
+              xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#call"
+            />
+          </svg>
+        </span>
+      </div>
+      <div
+        className="slds-media__body"
+      >
+        <h2
+          id="panel-heading-01"
+        >
+          Call
+        </h2>
+      </div>
+    </div>
+    <div
+      className="slds-col_bump-left slds-shrink-none"
+    >
+      <button
+        aria-haspopup={undefined}
+        className="slds-button slds-button_icon slds-button_icon"
+        id={undefined}
+        title="Close Panel"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#minimize_window"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          Close Panel
+        </span>
+      </button>
+    </div>
+  </div>
+  <div
+    className="slds-utility-panel__body"
+  />
+</div>
+`;

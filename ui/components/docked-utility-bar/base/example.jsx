@@ -51,7 +51,10 @@ export let UtilityBarItem = props => (
   <li
     className={classNames(
       'slds-utility-bar__item',
-      { 'slds-has-notification': props.notification },
+      {
+        'slds-has-notification': props.notification,
+        'slds-utility-bar__item_pop-out': props.hasPopOut
+      },
       props.className
     )}
   >
@@ -70,6 +73,11 @@ export let UtilityBarItem = props => (
           <span className="slds-assistive-text">●</span>
         </abbr>
       ) : null}
+      {props.hasPopOut && (
+        <span className="slds-assistive-text">
+          : is popped out in new window
+        </span>
+      )}
       <SvgIcon
         className="slds-button__icon slds-button__icon_left"
         sprite="utility"
@@ -149,6 +157,23 @@ export let states = [
         <UtilityBarItem symbol="clock">History</UtilityBarItem>
         <UtilityBarItem symbol="note">Notes</UtilityBarItem>
         <UtilityBarItem symbol="omni_channel" notification>
+          <span className="slds-m-bottom_xxx-small">Online</span>
+          <span>Omni-Channel</span>
+        </UtilityBarItem>
+      </UtilityBar>
+    )
+  },
+  {
+    id: 'pop-out',
+    label: 'Item has popout',
+    element: (
+      <UtilityBar>
+        <UtilityBarItem symbol="call">Call</UtilityBarItem>
+        <UtilityBarItem hasPopOut symbol="clock">
+          History
+        </UtilityBarItem>
+        <UtilityBarItem symbol="note">Notes</UtilityBarItem>
+        <UtilityBarItem symbol="omni_channel">
           <span className="slds-m-bottom_xxx-small">Online</span>
           <span>Omni-Channel</span>
         </UtilityBarItem>

@@ -56,6 +56,40 @@
 }
 
 /**
+ * @name pop-out
+ * @summary Modifier to add pop out element
+ * @selector .slds-utility-bar__item_pop-out
+ * @restrict .slds-utility-bar__item
+ * @modifier
+ * @group feedback
+ */
+.slds-utility-bar__item_pop-out {
+  position: relative;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    height: 4px;
+    width: 4px;
+    border-top: $border-width-thin solid $color-text-default;
+    border-right: $border-width-thin solid $color-text-default;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 2px;
+    right: 6px;
+    height: 7px;
+    width: 7px;
+    border-right: $border-width-thin solid $color-text-default;
+    transform: rotate(45deg);
+  }
+}
+
+/**
  * Button that invokes utility panel
  *
  * @selector .slds-utility-bar__action

@@ -3,6 +3,11 @@
 # Button Groups Release Notes
 
 <!-- ## [Unreleased] -->
+## 2.8.0
+
+### Added
+
+- Added the classes `slds-button_first`, `slds-button_middle`, and `slds-button_last` that targets the position of each button inside of a button group
 
 ## 2.7.0
 

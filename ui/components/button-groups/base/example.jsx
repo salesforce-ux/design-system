@@ -319,6 +319,29 @@ export let examples = [
           </Button>
         </div>
         <div>
+          <Button isNeutral isMiddle>
+            Middle
+          </Button>
+        </div>
+        <div>
+          <Button isNeutral isLast>
+            Last
+          </Button>
+        </div>
+      </ButtonGroup>
+    )
+  },
+  {
+    id: 'style-encapsulated-button-group-2-button',
+    label: 'Button Group with Style Encapsulation - First/Last',
+    element: (
+      <ButtonGroup>
+        <div>
+          <Button isNeutral isFirst>
+            First
+          </Button>
+        </div>
+        <div>
           <Button isNeutral isLast>
             Last
           </Button>
@@ -349,6 +372,43 @@ export let examples = [
             title="Filter List"
             aria-pressed="false"
             isMiddle
+          />
+        </div>
+        <div>
+          <ButtonIcon
+            className="slds-button_icon-border-filled"
+            symbol="comments"
+            assistiveText="Collaborate"
+            title="Collaborate"
+            aria-pressed="false"
+            isMiddle
+          />
+        </div>
+        <div>
+          <ButtonIcon
+            className="slds-button_icon-more"
+            hasDropdown
+            assistiveText="More Actions"
+            title="More Actions"
+            isLast
+          />
+        </div>
+      </ButtonGroup>
+    )
+  },
+  {
+    id: 'style-encapsulated-button-icon-group-2-button',
+    label: 'Button Icon Group with Style Encapsulation - First/Last',
+    element: (
+      <ButtonGroup>
+        <div>
+          <ButtonIcon
+            className="slds-button_icon-border-filled"
+            symbol="chart"
+            assistiveText="Charts"
+            title="Charts"
+            aria-pressed="false"
+            isFirst
           />
         </div>
         <div>

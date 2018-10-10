@@ -85,6 +85,7 @@
  */
 .slds-button.slds-button_middle.slds-button_middle {
   border-radius: 0;
+  margin-left: ($border-width-thin * -1); // Prevent double borders
 }
 
 /**
@@ -93,8 +94,8 @@
  * @restrict .slds-button
  */
 .slds-button.slds-button_last.slds-button_last {
-  border-left: 0;
   border-radius: 0 $button-border-radius $button-border-radius 0;
+  margin-left: ($border-width-thin * -1); // Prevent double borders when only 2 buttons exist in a button group
 }
 
 .slds-button-group + .slds-button-group,

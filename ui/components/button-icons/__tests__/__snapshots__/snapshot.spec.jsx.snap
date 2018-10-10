@@ -329,3 +329,103 @@ exports[`button menu icon for dropdowns renders a button menu icon on inversed b
   </span>
 </button>
 `;
+
+exports[`stateful button icon renders a disabled stateful button icon 1`] = `
+<button
+  aria-haspopup={undefined}
+  aria-pressed="true"
+  className="slds-button slds-button_icon slds-button_icon-border-filled"
+  disabled={true}
+  id={undefined}
+  title="Pin"
+>
+  <svg
+    aria-hidden={true}
+    className="slds-button__icon"
+  >
+    <use
+      xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#pin"
+    />
+  </svg>
+  <span
+    className="slds-assistive-text"
+  >
+    Pin
+  </span>
+</button>
+`;
+
+exports[`stateful button icon renders a selected disabled stateful button icon 1`] = `
+<button
+  aria-haspopup={undefined}
+  aria-pressed="true"
+  className="slds-button slds-button_icon slds-is-selected slds-button_icon-border-filled"
+  disabled={true}
+  id={undefined}
+  title="Pin"
+>
+  <svg
+    aria-hidden={true}
+    className="slds-button__icon"
+  >
+    <use
+      xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#pinned"
+    />
+  </svg>
+  <span
+    className="slds-assistive-text"
+  >
+    Pin
+  </span>
+</button>
+`;
+
+exports[`stateful button icon renders a selected stateful button icon 1`] = `
+<button
+  aria-haspopup={undefined}
+  aria-pressed="true"
+  className="slds-button slds-button_icon slds-is-selected slds-button_icon-border-filled"
+  disabled={false}
+  id={undefined}
+  title="Like"
+>
+  <svg
+    aria-hidden={true}
+    className="slds-button__icon"
+  >
+    <use
+      xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#like"
+    />
+  </svg>
+  <span
+    className="slds-assistive-text"
+  >
+    Like
+  </span>
+</button>
+`;
+
+exports[`stateful button icon renders the stateful button icon 1`] = `
+<button
+  aria-haspopup={undefined}
+  aria-pressed="false"
+  className="slds-button slds-button_icon slds-button_icon-border-filled"
+  disabled={false}
+  id={undefined}
+  title="Like"
+>
+  <svg
+    aria-hidden={true}
+    className="slds-button__icon"
+  >
+    <use
+      xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#like"
+    />
+  </svg>
+  <span
+    className="slds-assistive-text"
+  >
+    Like
+  </span>
+</button>
+`;

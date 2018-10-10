@@ -1,7 +1,9 @@
 /* eslint-env jest */
 import React from 'react';
-import ButtonIcon from '../';
 import createHelpers from '../../../../jest.helpers';
+
+import ButtonIcon from '../';
+import { ButtonIconStateful } from '../stateful/example';
 
 const { matchesMarkup } = createHelpers(__dirname);
 
@@ -71,4 +73,58 @@ describe('button menu icon for dropdowns', () => {
         theme="transparent"
       />
     ));
+});
+
+// Stateful
+describe('stateful button icon', () => {
+  it('renders the stateful button icon', () =>
+    matchesMarkup(
+      <ButtonIconStateful
+        aria-pressed="false"
+        assistiveText="Like"
+        symbol="like"
+        theme="neutral"
+        title="Like"
+      />
+    ));
+
+  it('renders a selected stateful button icon', () => {
+    matchesMarkup(
+      <ButtonIconStateful
+        title="Like"
+        symbol="like"
+        theme="neutral"
+        assistiveText="Like"
+        aria-pressed="true"
+        selected
+      />
+    );
+  });
+
+  it('renders a disabled stateful button icon', () => {
+    matchesMarkup(
+      <ButtonIconStateful
+        title="Pin"
+        symbol="pin"
+        theme="neutral"
+        assistiveText="Pin"
+        aria-pressed="true"
+        disabled
+      />
+    );
+  });
+
+  it('renders a selected disabled stateful button icon', () => {
+    matchesMarkup(
+      <ButtonIconStateful
+        title="Pin"
+        symbol="pinned"
+        theme="neutral"
+        assistiveText="Pin"
+        aria-pressed="true"
+        selected
+        disabled
+      />
+    );
+  });
 });

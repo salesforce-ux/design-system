@@ -40,4 +40,11 @@
       fill: $color-text-button-brand;
     }
   }
+
+  &[disabled],
+  &:disabled {
+    background: $brand-disabled;
+    border-color: $brand-disabled;
+    color: $color-text-button-brand-disabled;
+  }
 }

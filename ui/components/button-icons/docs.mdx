@@ -1,3 +1,4 @@
+import { Fragment } from 'react';
 import CodeView from '../../../shared/components/CodeView';
 import CodeBlock from '../../../shared/components/CodeBlock';
 import Blockquote from '../../../shared/components/Blockquote';
@@ -115,6 +116,17 @@ Stateful icons can be toggled on and off and will retain their state. JavaScript
 
 <CodeView toggleCode={true}>
   {getDisplayElementById(Stateful.states, "button-icon-stateful-selected")}
+</CodeView>
+
+#### Disabled
+
+You can disable a stateful button icon by applying the `disabled` attribute to the `.slds-button_icon`. This will apply our disabled UI to the button icon, and freeze the button icon either in its selected or unselected state.
+
+<CodeView toggleCode={true}>
+  <Fragment>
+    {getDisplayElementById(Stateful.states, "button-icon-stateful-disabled")}
+    {getDisplayElementById(Stateful.states, "button-icon-stateful-selected-disabled")}
+  </Fragment>
 </CodeView>
 
 ## Sizes

@@ -1,0 +1,17 @@
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * @summary Creates a form that consists of multiple form groups specific to an address form
+ *
+ * @name address
+ * @selector .slds-form-element_address
+ * @restrict .slds-form-element_compound, .slds-form_compound
+ * @variant
+ */
+.slds-form-element_address {
+
+  .slds-form-element__row {
+    align-items: flex-end;
+  }
+}

@@ -7,31 +7,7 @@ import classNames from 'classnames';
 import ButtonIcon from '../button-icons/';
 import { Input } from '../input/base/example';
 import { Spinner } from '../spinners/base/example';
-
-/**
- * Form Element
- */
-const FormElement = props => (
-  <div className={classNames('slds-form-element', props.formClassName)}>
-    <Label id={props.id} label={props.label} hideLabel={props.hideLabel} />
-    <div className="slds-form-element__control">{props.children}</div>
-  </div>
-);
-
-/**
- * Form Label
- */
-const Label = props => (
-  <label
-    className={classNames(
-      'slds-form-element__label',
-      props.hideLabel && 'slds-assistive-text'
-    )}
-    htmlFor={props.id}
-  >
-    {props.label || 'Relate to'}
-  </label>
-);
+import { FormElement } from '../form-element/';
 
 /**
  * Combobox Container
@@ -192,16 +168,26 @@ export default class Combobox extends Component {
       rightInputIcon,
       showCloseButton,
       staticListbox,
+      isStacked,
+      isHorizontal,
+      isRequired,
+      isEditing,
+      column,
       tabIndex,
       value
     } = this.props;
 
     return (
       <FormElement
-        id={id}
-        label={label}
-        hideLabel={hideLabel}
+        inputId={id}
+        labelContent={label}
+        hasHiddenLabel={hideLabel}
+        isRequired={isRequired}
+        isEditing={isEditing}
         className={formClassName}
+        isHorizontal={isHorizontal}
+        isStacked={isStacked}
+        column={column}
       >
         <ComboboxContainer className={className} hasSelection={hasSelection}>
           <ComboboxFormElement
@@ -239,6 +225,10 @@ export default class Combobox extends Component {
   }
 }
 
+Combobox.defaultProps = {
+  label: 'Relate to'
+};
+
 Combobox.propTypes = {
   autocomplete: PropTypes.bool,
   autoFocus: PropTypes.bool,
@@ -266,6 +256,12 @@ Combobox.propTypes = {
   rightInputIcon: PropTypes.element,
   showCloseButton: PropTypes.bool,
   staticListbox: PropTypes.bool,
+  listbox: PropTypes.element,
+  isStacked: PropTypes.bool,
+  isHorizontal: PropTypes.bool,
+  isRequired: PropTypes.bool,
+  isEditing: PropTypes.bool,
+  column: PropTypes.number,
   tabIndex: PropTypes.string,
   value: PropTypes.string
 };
@@ -311,6 +307,11 @@ export class ComboboxGroup extends Component {
       label,
       leftInputIcon,
       listboxOfSelections,
+      isStacked,
+      isHorizontal,
+      isRequired,
+      isEditing,
+      column,
       placeholder,
       rightInputIcon,
       showCloseButton,
@@ -320,10 +321,15 @@ export class ComboboxGroup extends Component {
 
     return (
       <FormElement
-        id={id}
-        label={label}
-        hideLabel={hideLabel}
+        inputId={id}
+        labelContent={label}
+        hasHiddenLabel={hideLabel}
+        isRequired={isRequired}
+        isEditing={isEditing}
         className={formClassName}
+        isHorizontal={isHorizontal}
+        isStacked={isStacked}
+        column={column}
       >
         <ComboboxGroupContainer hasSelection={hasSelection}>
           {addonPosition === 'start' && addon}
@@ -363,6 +369,10 @@ export class ComboboxGroup extends Component {
   }
 }
 
+ComboboxGroup.defaultProps = {
+  label: 'Relate to'
+};
+
 ComboboxGroup.propTypes = {
   addon: PropTypes.element.isRequired,
   addonPosition: PropTypes.oneOf(['start', 'end']).isRequired,
@@ -392,6 +402,11 @@ ComboboxGroup.propTypes = {
   rightInputIcon: PropTypes.element,
   showCloseButton: PropTypes.bool,
   staticListbox: PropTypes.bool,
+  isStacked: PropTypes.bool,
+  isHorizontal: PropTypes.bool,
+  isRequired: PropTypes.bool,
+  isEditing: PropTypes.bool,
+  column: PropTypes.number,
   tabIndex: PropTypes.string,
   value: PropTypes.string
 };

@@ -2,26 +2,32 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import ButtonIcon from '../../button-icons/';
 import { FormElement, FormElementStatic } from '../';
 import { Avatar } from '../../avatar/base/example';
 import classNames from 'classnames';
 import _ from '../../../shared/helpers';
 
-const RecordDetailRow = props => (
-  <div className="slds-grid slds-gutters_small">{props.children}</div>
+export const RecordDetailRow = props => (
+  <div className="slds-form__row">{props.children}</div>
 );
 
-const RecordDetailItem = props => (
-  <div
-    className={classNames('slds-col', 'slds-has-flexi-truncate', 'slds-grid')}
-    role="listitem"
-  >
+RecordDetailRow.propTypes = {
+  children: PropTypes.node
+};
+
+export const RecordDetailItem = props => (
+  <div className="slds-form__item" role="listitem">
     {props.children}
   </div>
 );
 
-const RecordDetailField = props => {
+RecordDetailItem.propTypes = {
+  children: PropTypes.node
+};
+
+export const RecordDetailField = props => {
   const {
     isRequired,
     hasTooltip,
@@ -31,7 +37,10 @@ const RecordDetailField = props => {
     avatar,
     link,
     timestamp,
-    hasInlineEdit
+    hasInlineEdit,
+    isHorizontal,
+    isStacked,
+    column
   } = props;
 
   return (
@@ -42,7 +51,9 @@ const RecordDetailField = props => {
       hasHint
       isRequired={isRequired}
       hasTooltip={hasTooltip}
-      isStacked={type === 'textarea'}
+      isHorizontal={isHorizontal}
+      isStacked={isStacked}
+      column={column}
     >
       <FormElementStatic isLongform={type === 'textarea'}>
         {avatar && (
@@ -85,19 +96,35 @@ const RecordDetailField = props => {
   );
 };
 
+RecordDetailField.propTypes = {
+  isRequired: PropTypes.bool,
+  hasTooltip: PropTypes.bool,
+  type: PropTypes.string,
+  label: PropTypes.string,
+  avatar: PropTypes.string,
+  link: PropTypes.bool,
+  timestamp: PropTypes.string,
+  hasInlineEdit: PropTypes.bool,
+  isHorizontal: PropTypes.bool,
+  isStacked: PropTypes.bool,
+  column: PropTypes.number
+};
+
 class RecordDetail extends Component {
   render() {
     const {
-      className,
       snapshot,
       isViewMode,
       direction,
-      hasInlineEdit
+      hasInlineEdit,
+      isDeprecated
     } = this.props;
-
     return (
       <div
-        className={classNames('slds-form', `slds-form_${direction}`, className)}
+        className={classNames(
+          'slds-form',
+          isDeprecated && `slds-form_${direction}`
+        )}
         role="list"
       >
         {isViewMode
@@ -116,6 +143,11 @@ class RecordDetail extends Component {
                         link={row.fields[field].link}
                         timestamp={row.fields[field].timestamp}
                         hasInlineEdit={hasInlineEdit}
+                        isHorizontal={
+                          !isDeprecated && direction === 'horizontal'
+                        }
+                        isStacked={!isDeprecated && direction === 'stacked'}
+                        column={row.fields[field].column}
                       />
                     )}
                   </RecordDetailItem>
@@ -135,5 +167,13 @@ class RecordDetail extends Component {
     );
   }
 }
+
+RecordDetail.propTypes = {
+  snapshot: PropTypes.object,
+  isViewMode: PropTypes.bool,
+  direction: PropTypes.string,
+  hasInlineEdit: PropTypes.bool,
+  isDeprecated: PropTypes.bool
+};
 
 export default RecordDetail;

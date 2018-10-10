@@ -8,7 +8,7 @@
  *
  * @name compound
  * @selector .slds-form_compound
- * @restrict .slds-form, .slds-form-element
+ * @restrict div, fieldset
  * @variant
  */
 .slds-form_compound,
@@ -21,6 +21,10 @@
 
     + .slds-form-element__row {
       clear: both;
+    }
+
+    .slds-form-element {
+      margin-bottom: 0;
     }
 
     .slds-form-element + .slds-form-element {

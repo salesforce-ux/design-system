@@ -21,6 +21,10 @@ export const MultiSelect = props => {
     <SimpleFormElementWrapper
       role="group"
       aria-labelledby="picklist-group-label"
+      isHorizontal={props.isHorizontal}
+      isStacked={props.isStacked}
+      isEditing={props.isEditing}
+      column={props.column}
     >
       <MultiSelectLabel isRequired={props.isRequired}>
         Select Options

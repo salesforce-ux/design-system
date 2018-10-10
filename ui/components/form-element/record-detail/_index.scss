@@ -1,0 +1,61 @@
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * @summary Creates layout for a form
+ * @name record-detail
+ * @selector .slds-form
+ * @restrict div, form
+ * @variant
+ */
+
+/**
+ * @summary Each row inside of a record form
+ * @selector .slds-form__row
+ * @restrict .slds-form div
+ */
+.slds-form__row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: ($spacing-small * -1);
+  margin-right: ($spacing-small * -1);
+}
+
+/**
+ * @summary Each item inside of a record form row
+ * @selector .slds-form__item
+ * @restrict .slds-form__row div
+ */
+.slds-form__item {
+  display: flex;
+  flex: 1 1 0%;
+  min-width: 280px; // Since container is set to wrap, we'll use flexbox to mimic container query
+  padding-left: $spacing-small;
+  padding-right: $spacing-small;
+}
+
+/**
+ * @summary Inidicates if a form element has been edited, but unsaved
+ * @selector .slds-is-edited
+ * @restrict .slds-form div
+ */
+.slds-is-edited {
+  background: $color-background-highlight;
+
+  // Move undo button icon to align with form elements
+  .slds-form-element__undo {
+    top: ($square-icon-utility-medium * -1);
+    right: $spacing-xx-small;
+  }
+}
+
+/**
+ * @summary Container for the undo button icon found inside of slds-form-element
+ * @selector .slds-form-element__undo
+ * @restrict .slds-form-element div
+ */
+.slds-form-element__undo {
+  position: absolute;
+  top: 0;
+  right: 0;
+}

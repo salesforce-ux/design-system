@@ -1,0 +1,119 @@
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * @summary Horizontal form elements with label left-aligned to the control
+ * @name horizontal
+ * @selector .slds-form-element_horizontal
+ * @restrict .slds-form-element
+ * @variant
+ */
+.slds-form-element_horizontal,
+.slds-form_horizontal .slds-form-element,
+.slds-form_stacked .slds-form-element_horizontal {
+  display: block;
+
+  &:not(.slds-form-element_readonly) {
+    margin-bottom: $spacing-x-small;
+  }
+
+  // If form element doesn't have a size modifier, make sure it takes up 100% of the parents width
+  &:not([class*="slds-size"]) {
+    width: 100%;
+    flex-basis: 100%;
+  }
+
+  // When not editing, view mode, add some buffer to the form element
+  &:not(.slds-is-editing) {
+    padding: $var-spacing-xx-small $spacing-xx-small;
+  }
+
+  // Handle nested form elements due to slotting
+  .slds-form-element {
+    padding: 0;
+    margin-bottom: 0;
+  }
+
+  // Need to give space for undo button if in horizontal mode
+  &.slds-is-edited {
+    padding-top: $square-icon-utility-medium;
+  }
+
+  // When form element is in 1 column when other form elements are 2 columns, re-align the label and controls
+  &.slds-form-element_1-col {
+    @include mq-medium-min {
+
+      .slds-form-element__label {
+        // Calculation - 33% of 50% minus help text icon size
+        max-width: calc((50% - 33.333%) - #{$square-icon-utility-medium});
+      }
+
+      .slds-form-element__control {
+        // Calculation - 33% of 50% minus form element horizontal padding
+        padding-left: calc((50% - 33.333%) - (#{$spacing-xx-small} * 2));
+      }
+    }
+  }
+
+  @include mq-medium-min {
+
+    // Handle label - default behavior
+    .slds-form-element__label {
+      float: left;
+      max-width: calc(33% - #{$square-icon-utility-medium}); // Removing the width of the icon for when the help-text icon is present
+      flex-basis: calc(33% - #{$square-icon-utility-medium}); // Some form element controls are set to display:flex
+      margin-bottom: 0;
+      position: relative;
+      z-index: 1;
+    }
+
+    // Handle control - default behavior
+    .slds-form-element__control {
+      padding-left: 33%;
+      clear: none; // Reset clear: left when switching to horizontal form layout
+
+      .slds-form-element__control {
+        padding-left: 0; // Remove left padding on nested form controls, due to issues related to lightning-form components
+      }
+    }
+
+    // Help text button icon
+    .slds-form-element__icon {
+      float: left;
+      padding-top: $spacing-xx-small;
+    }
+
+    // Handle checkbox
+    .slds-checkbox_standalone {
+      padding: $spacing-xx-small 0;
+    }
+
+    // Since the HTML differs for checkbox and radio groups, adjust the display behavior
+    .slds-checkbox:not(.slds-checkbox_stacked),
+    .slds-radio {
+
+      .slds-form-element__label {
+        position: relative;
+        float: none;
+        width: auto;
+      }
+    }
+
+    // Reset label and control inside of compound fields
+    .slds-form-element__row .slds-form-element__label,
+    .slds-form-element__row .slds-form-element__control,
+    .slds-dueling-list__column .slds-form-element__label {
+      width: auto;
+      max-width: 100%;
+      flex-basis: auto;
+      float: none;
+      position: relative;
+      padding-left: 0;
+      margin-bottom: 0;
+    }
+
+    .slds-dueling-list {
+      clear: none; // Remove backward compatible support
+    }
+  }
+}

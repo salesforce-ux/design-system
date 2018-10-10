@@ -3,10 +3,12 @@
 exports[`Combobox with a Dialog dropdown renders a closed, readonly dialog combobox 1`] = `
 <div
   className="slds-form-element"
+  role={undefined}
 >
   <label
     className="slds-form-element__label"
     htmlFor="combobox-id-01"
+    id={undefined}
   >
     Languages
   </label>
@@ -99,10 +101,12 @@ exports[`Combobox with a Dialog dropdown renders a closed, readonly dialog combo
 exports[`Combobox with a Dialog dropdown renders an open, readonly dialog combobox 1`] = `
 <div
   className="slds-form-element"
+  role={undefined}
 >
   <label
     className="slds-form-element__label"
     htmlFor="combobox-id-01"
+    id={undefined}
   >
     Languages
   </label>
@@ -195,10 +199,12 @@ exports[`Combobox with a Dialog dropdown renders an open, readonly dialog combob
 exports[`render combobox render autocomplete combobox with mutliple selections 1`] = `
 <div
   className="slds-form-element"
+  role={undefined}
 >
   <label
     className="slds-form-element__label"
     htmlFor="combobox-id-01"
+    id={undefined}
   >
     Relate to
   </label>
@@ -476,10 +482,12 @@ exports[`render combobox render autocomplete combobox with mutliple selections 1
 exports[`render combobox render autocomplete combobox with single selection 1`] = `
 <div
   className="slds-form-element"
+  role={undefined}
 >
   <label
     className="slds-form-element__label"
     htmlFor="combobox-id-01"
+    id={undefined}
   >
     Relate to
   </label>
@@ -672,10 +680,12 @@ exports[`render combobox render autocomplete combobox with single selection 1`] 
 exports[`render combobox render autocomplete entity combobox 1`] = `
 <div
   className="slds-form-element"
+  role={undefined}
 >
   <label
     className="slds-form-element__label"
     htmlFor="combobox-id-01"
+    id={undefined}
   >
     Relate to
   </label>
@@ -850,10 +860,12 @@ exports[`render combobox render autocomplete entity combobox 1`] = `
 exports[`render combobox render autocomplete entity combobox displaying options based on user input 1`] = `
 <div
   className="slds-form-element"
+  role={undefined}
 >
   <label
     className="slds-form-element__label"
     htmlFor="combobox-id-01"
+    id={undefined}
   >
     Relate to
   </label>
@@ -1137,10 +1149,12 @@ exports[`render combobox render autocomplete entity combobox displaying options 
 exports[`render combobox render autocomplete entity combobox with mutliple selections 1`] = `
 <div
   className="slds-form-element"
+  role={undefined}
 >
   <label
     className="slds-form-element__label"
     htmlFor="combobox-id-01"
+    id={undefined}
   >
     Relate to
   </label>
@@ -1436,10 +1450,12 @@ exports[`render combobox render autocomplete entity combobox with mutliple selec
 exports[`render combobox render autocomplete entity combobox with single selection 1`] = `
 <div
   className="slds-form-element"
+  role={undefined}
 >
   <label
     className="slds-form-element__label"
     htmlFor="combobox-id-01"
+    id={undefined}
   >
     Relate to
   </label>
@@ -1634,10 +1650,12 @@ exports[`render combobox render autocomplete entity combobox with single selecti
 exports[`render combobox render base combobox 1`] = `
 <div
   className="slds-form-element"
+  role={undefined}
 >
   <label
     className="slds-form-element__label"
     htmlFor="combobox-id-01"
+    id={undefined}
   >
     Relate to
   </label>
@@ -1929,10 +1947,12 @@ exports[`render combobox render base combobox 1`] = `
 exports[`render combobox render combobox with displaying options based on user input 1`] = `
 <div
   className="slds-form-element"
+  role={undefined}
 >
   <label
     className="slds-form-element__label"
     htmlFor="combobox-id-01"
+    id={undefined}
   >
     Relate to
   </label>
@@ -2107,10 +2127,12 @@ exports[`render combobox render combobox with displaying options based on user i
 exports[`render combobox render grouped combobox 1`] = `
 <div
   className="slds-form-element"
+  role={undefined}
 >
   <label
     className="slds-form-element__label"
     htmlFor="combobox-id-01"
+    id={undefined}
   >
     Relate to
   </label>
@@ -2125,10 +2147,12 @@ exports[`render combobox render grouped combobox 1`] = `
       >
         <div
           className="slds-form-element"
+          role={undefined}
         >
           <label
             className="slds-form-element__label slds-assistive-text"
             htmlFor={undefined}
+            id={undefined}
           >
             Filter Search by:
           </label>
@@ -2690,10 +2714,12 @@ exports[`render combobox render grouped combobox 1`] = `
 exports[`render combobox render grouped combobox displaying options based on user input 1`] = `
 <div
   className="slds-form-element"
+  role={undefined}
 >
   <label
     className="slds-form-element__label"
     htmlFor="combobox-id-01"
+    id={undefined}
   >
     Relate to
   </label>
@@ -2708,10 +2734,12 @@ exports[`render combobox render grouped combobox displaying options based on use
       >
         <div
           className="slds-form-element"
+          role={undefined}
         >
           <label
             className="slds-form-element__label slds-assistive-text"
             htmlFor={undefined}
+            id={undefined}
           >
             Filter Search by:
           </label>
@@ -3288,10 +3316,12 @@ exports[`render combobox render grouped combobox displaying options based on use
 exports[`render combobox render grouped combobox with selections made in collapsed state 1`] = `
 <div
   className="slds-form-element"
+  role={undefined}
 >
   <label
     className="slds-form-element__label"
     htmlFor="combobox-id-01"
+    id={undefined}
   >
     Relate to
   </label>
@@ -3306,10 +3336,12 @@ exports[`render combobox render grouped combobox with selections made in collaps
       >
         <div
           className="slds-form-element"
+          role={undefined}
         >
           <label
             className="slds-form-element__label slds-assistive-text"
             htmlFor={undefined}
+            id={undefined}
           >
             Filter Search by:
           </label>
@@ -4333,10 +4365,12 @@ exports[`render combobox render grouped combobox with selections made in collaps
 exports[`render combobox render grouped combobox with selections made in expanded state 1`] = `
 <div
   className="slds-form-element"
+  role={undefined}
 >
   <label
     className="slds-form-element__label"
     htmlFor="combobox-id-01"
+    id={undefined}
   >
     Relate to
   </label>
@@ -4351,10 +4385,12 @@ exports[`render combobox render grouped combobox with selections made in expande
       >
         <div
           className="slds-form-element"
+          role={undefined}
         >
           <label
             className="slds-form-element__label slds-assistive-text"
             htmlFor={undefined}
+            id={undefined}
           >
             Filter Search by:
           </label>
@@ -5367,10 +5403,12 @@ exports[`render combobox render grouped combobox with selections made in expande
 exports[`render combobox render multiple selections in a closed combobox 1`] = `
 <div
   className="slds-form-element"
+  role={undefined}
 >
   <label
     className="slds-form-element__label"
     htmlFor="combobox-id-01"
+    id={undefined}
   >
     Relate to
   </label>
@@ -5785,10 +5823,12 @@ exports[`render combobox render multiple selections in a closed combobox 1`] = `
 exports[`render combobox render single selection in an open combobox 1`] = `
 <div
   className="slds-form-element"
+  role={undefined}
 >
   <label
     className="slds-form-element__label"
     htmlFor="combobox-id-01"
+    id={undefined}
   >
     Relate to
   </label>
@@ -6099,10 +6139,12 @@ exports[`render combobox render single selection in an open combobox 1`] = `
 exports[`render combobox renders autocomplete combobox 1`] = `
 <div
   className="slds-form-element"
+  role={undefined}
 >
   <label
     className="slds-form-element__label"
     htmlFor="combobox-id-01"
+    id={undefined}
   >
     Relate to
   </label>
@@ -6259,10 +6301,12 @@ exports[`render combobox renders autocomplete combobox 1`] = `
 exports[`render combobox renders different styles of options in the listbox 1`] = `
 <div
   className="slds-form-element"
+  role={undefined}
 >
   <label
     className="slds-form-element__label"
     htmlFor="combobox-id-01"
+    id={undefined}
   >
     Relate to
   </label>
@@ -6494,10 +6538,12 @@ exports[`render combobox renders different styles of options in the listbox 1`] 
 exports[`render combobox renders different styles of options in the listbox with drill in 1`] = `
 <div
   className="slds-form-element"
+  role={undefined}
 >
   <label
     className="slds-form-element__label"
     htmlFor="combobox-id-01"
+    id={undefined}
   >
     Relate to
   </label>
@@ -6724,10 +6770,12 @@ exports[`render combobox renders different styles of options in the listbox with
 exports[`render combobox renders groups in a listbox 1`] = `
 <div
   className="slds-form-element"
+  role={undefined}
 >
   <label
     className="slds-form-element__label"
     htmlFor="combobox-id-01"
+    id={undefined}
   >
     Relate to
   </label>

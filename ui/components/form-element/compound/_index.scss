@@ -1,0 +1,29 @@
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * @summary Creates a form that consists of multiple form groups
+ *
+ * @name compound
+ * @selector .slds-form-element_compound
+ * @restrict .slds-form-element
+ * @variant
+ */
+.slds-form-element_compound {
+
+  .slds-form-element__row {
+    display: flex;
+    margin-bottom: $spacing-xx-small;
+    margin-left: ($spacing-xx-small * -1);
+    margin-right: ($spacing-xx-small * -1);
+
+    .slds-form-element__label {
+      padding-top: 0;
+    }
+  }
+
+  .slds-form-element {
+    padding-left: $spacing-xx-small;
+    padding-right: $spacing-xx-small;
+  }
+}

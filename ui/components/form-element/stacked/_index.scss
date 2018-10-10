@@ -1,0 +1,59 @@
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * @summary Vertical form elements with label stacked on top of control
+ * @name stacked
+ * @selector .slds-form-element_stacked
+ * @restrict .slds-form-element
+ * @variant
+ */
+.slds-form-element_stacked,
+.slds-form_stacked .slds-form-element,
+.slds-form_horizontal .slds-form-element_stacked {
+  display: block;
+
+  &:not(.slds-form-element_readonly) {
+    margin-bottom: $spacing-x-small;
+  }
+
+  // When not editing, view mode, add some buffer to the form element
+  &:not(.slds-is-editing) {
+    padding: 0 $spacing-xx-small;
+  }
+
+  // Handle nested form elements due to slotting
+  .slds-form-element {
+    padding: 0;
+    margin-bottom: 0;
+  }
+
+  // If form element doesn't have a size modifier, make sure it takes up 100% of the parents width
+  &:not([class*="slds-size"]) {
+    width: 100%;
+    flex-basis: 100%;
+  }
+
+  // Make sure checkbox and radio elements always stacked in fieldsets
+  .slds-checkbox,
+  .slds-radio {
+    display: block; // Override display: inline-block found on checkbox/radio
+  }
+
+  .slds-form-element__label,
+  .slds-form-element__control {
+    border-bottom: 0; // Remove border when using legacy version of slds-form-element
+    padding-left: 0;
+  }
+
+  .slds-form-element__control {
+    width: 100%;
+    flex-basis: 100%;
+    clear: left;
+  }
+
+  .slds-form-element__icon {
+    float: none;
+    padding-top: $spacing-xx-small;
+  }
+}

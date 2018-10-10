@@ -14,22 +14,29 @@ export const SimpleFormElementWrapper = props => {
     hasHint,
     hasError,
     isStacked,
+    isHorizontal,
     isEditing,
+    isEdited,
+    column,
     role,
     className,
     children,
     ...rest
   } = props;
+
   let formElementClassNames = classNames(
     'slds-form-element',
     {
       'slds-form-element_edit': isEditable,
       'slds-form-element_readonly': isViewMode,
       'slds-form-element_stacked': isStacked,
+      'slds-form-element_horizontal': isHorizontal,
       'slds-hint-parent': hasHint,
       'slds-has-error': hasError,
-      'slds-is-editing': isEditing
+      'slds-is-editing': isEditing,
+      'slds-is-edited': isEdited
     },
+    column && `slds-form-element_${column}-col`,
     className
   );
 
@@ -41,13 +48,17 @@ export const SimpleFormElementWrapper = props => {
 };
 
 SimpleFormElementWrapper.propTypes = {
-  children: PropTypes.node.isRequired,
+  children: PropTypes.node,
   role: PropTypes.string,
   isEditable: PropTypes.bool,
+  isEditing: PropTypes.bool,
+  isEdited: PropTypes.bool,
   isViewMode: PropTypes.bool,
   isStacked: PropTypes.bool,
+  isHorizontal: PropTypes.bool,
   hasHint: PropTypes.bool,
-  hasError: PropTypes.bool
+  hasError: PropTypes.bool,
+  column: PropTypes.number
 };
 
 export const FormElementControl = props => {
@@ -199,22 +210,33 @@ export const FieldsetWrapper = props => {
     hasError,
     isRequired,
     isEditing,
+    isEdited,
     isStacked,
+    isHorizontal,
     isAddress,
+    isDeprecated,
+    column,
     children
   } = props;
 
   return (
     <fieldset
       id={id}
-      className={classNames('slds-form-element', {
-        'slds-form_compound': hasCompoundFields,
-        'slds-form-element_address': isAddress,
-        'slds-has-error': hasError,
-        'slds-is-required': isRequired,
-        'slds-is-editing': isEditing,
-        'slds-form-element_stacked': isStacked
-      })}
+      className={classNames(
+        'slds-form-element',
+        {
+          'slds-form-element_compound': hasCompoundFields && !isDeprecated,
+          'slds-form_compound': hasCompoundFields && isDeprecated,
+          'slds-form-element_address': isAddress,
+          'slds-has-error': hasError,
+          'slds-is-required': isRequired,
+          'slds-is-editing': isEditing,
+          'slds-is-edited': isEdited,
+          'slds-form-element_stacked': isStacked,
+          'slds-form-element_horizontal': isHorizontal
+        },
+        column && `slds-form-element_${column}-col`
+      )}
     >
       {children}
     </fieldset>
@@ -227,7 +249,13 @@ FieldsetWrapper.propTypes = {
   children: PropTypes.node,
   hasError: PropTypes.bool,
   isRequired: PropTypes.bool,
-  isAddress: PropTypes.bool
+  isStacked: PropTypes.bool,
+  isHorizontal: PropTypes.bool,
+  isEditing: PropTypes.bool,
+  isEdited: PropTypes.bool,
+  isAddress: PropTypes.bool,
+  isDeprecated: PropTypes.bool,
+  column: PropTypes.number
 };
 
 export const Legend = props => {
@@ -258,7 +286,7 @@ export const Legend = props => {
 };
 
 Legend.propTypes = {
-  children: PropTypes.node.isRequired,
+  children: PropTypes.node,
   isRequired: PropTypes.bool,
   hasHiddenLabel: PropTypes.bool,
   hasTooltip: PropTypes.bool
@@ -292,7 +320,9 @@ export const FormElement = props => {
     isEditable,
     isViewMode,
     isStacked,
+    isHorizontal,
     isEditing,
+    isEdited,
     hasHint,
     hasError,
     hasFauxLabel,
@@ -308,6 +338,7 @@ export const FormElement = props => {
     hasTooltip,
     showTooltip,
     inlineMessage,
+    column,
     role,
     dropdown,
     children,
@@ -337,8 +368,11 @@ export const FormElement = props => {
       isViewMode={isViewMode}
       isEditable={isEditable}
       isStacked={isStacked}
+      isHorizontal={isHorizontal}
       isEditing={isEditing}
+      isEdited={isEdited}
       role={role}
+      column={column}
     >
       {labelContent &&
         (isViewMode || hasFauxLabel ? (
@@ -363,6 +397,11 @@ export const FormElement = props => {
       <FormElementControl
         className={classNames(inputIconPositionClasses, formControlClassName)}
       >
+        {isEdited && (
+          <div className="slds-form-element__undo">
+            <ButtonIcon symbol="undo" assistiveText={`Undo ${labelContent}`} />
+          </div>
+        )}
         {children}
       </FormElementControl>
       {inlineMessage && (
@@ -376,13 +415,17 @@ export const FormElement = props => {
 };
 
 FormElement.propTypes = {
-  children: PropTypes.node.isRequired,
+  children: PropTypes.node,
   labelId: PropTypes.string,
   inputId: PropTypes.string,
   errorId: PropTypes.string,
   labelContent: PropTypes.node,
   isRequired: PropTypes.bool,
+  isEditable: PropTypes.bool,
   isEditing: PropTypes.bool,
+  isEdited: PropTypes.bool,
+  isStacked: PropTypes.bool,
+  isHorizontal: PropTypes.bool,
   hasHiddenLabel: PropTypes.bool,
   hasLeftIcon: PropTypes.bool,
   hasRightIcon: PropTypes.bool,
@@ -394,7 +437,8 @@ FormElement.propTypes = {
   dropdown: PropTypes.node,
   inlineMessage: PropTypes.string,
   formElementClassName: PropTypes.string,
-  formControlClassName: PropTypes.string
+  formControlClassName: PropTypes.string,
+  column: PropTypes.number
 };
 
 export const Fieldset = props => {
@@ -404,11 +448,16 @@ export const Fieldset = props => {
     isRequired,
     isEditing,
     isStacked,
+    isHorizontal,
     isAddress,
+    isDeprecated,
+    column,
     hasError,
     hasCompoundFields,
     hasTooltip,
     hasHiddenLabel,
+    errorId,
+    inlineMessage,
     children
   } = props;
 
@@ -418,9 +467,12 @@ export const Fieldset = props => {
       isRequired={isRequired}
       isEditing={isEditing}
       isStacked={isStacked}
+      isHorizontal={isHorizontal}
       isAddress={isAddress}
       hasError={hasError}
       hasCompoundFields={hasCompoundFields}
+      column={column}
+      isDeprecated={isDeprecated}
     >
       <Legend
         isRequired={isRequired}
@@ -430,20 +482,30 @@ export const Fieldset = props => {
         {label}
       </Legend>
       <FormElementControl>{children}</FormElementControl>
+      {inlineMessage && (
+        <FormElementHelpMessage errorId={errorId}>
+          {inlineMessage}
+        </FormElementHelpMessage>
+      )}
     </FieldsetWrapper>
   );
 };
 
 Fieldset.propTypes = {
   id: PropTypes.string,
-  children: PropTypes.node.isRequired,
-  label: PropTypes.string.isRequired,
+  children: PropTypes.node,
+  label: PropTypes.string,
   isRequired: PropTypes.bool,
   isEditing: PropTypes.bool,
   isStacked: PropTypes.bool,
+  isHorizontal: PropTypes.bool,
   isAddress: PropTypes.bool,
+  isDeprecated: PropTypes.bool,
   hasHiddenLabel: PropTypes.bool,
   hasCompoundFields: PropTypes.bool,
   hasTooltip: PropTypes.bool,
-  hasError: PropTypes.bool
+  hasError: PropTypes.bool,
+  errorId: PropTypes.string,
+  inlineMessage: PropTypes.string,
+  column: PropTypes.number
 };

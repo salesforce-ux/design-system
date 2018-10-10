@@ -1,5 +1,467 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Compound Form Element render address compound form element 1`] = `
+<div
+  className="slds-form-element__row"
+>
+  content
+</div>
+`;
+
+exports[`Compound Form Element render compound form element row 1`] = `
+<div
+  className="slds-form-element__row"
+>
+  content
+</div>
+`;
+
+exports[`Compound Form Element render compound form element wrapper 1`] = `
+<fieldset
+  className="slds-form-element slds-form-element_compound"
+  id={undefined}
+>
+  <legend
+    className="slds-form-element__legend slds-form-element__label"
+  />
+  <div
+    className="slds-form-element__control"
+  >
+    content
+  </div>
+</fieldset>
+`;
+
+exports[`Compound Form Element render compound form element wrapper with horizontal form elements 1`] = `
+<fieldset
+  className="slds-form-element slds-form-element_compound slds-form-element_horizontal"
+  id={undefined}
+>
+  <legend
+    className="slds-form-element__legend slds-form-element__label"
+  />
+  <div
+    className="slds-form-element__control"
+  >
+    content
+  </div>
+</fieldset>
+`;
+
+exports[`Compound Form Element render compound form element wrapper with legend 1`] = `
+<fieldset
+  className="slds-form-element slds-form-element_compound"
+  id={undefined}
+>
+  <legend
+    className="slds-form-element__legend slds-form-element__label"
+  >
+    label
+  </legend>
+  <div
+    className="slds-form-element__control"
+  >
+    content
+  </div>
+</fieldset>
+`;
+
+exports[`Compound Form Element render compound form element wrapper with legend 2`] = `
+<fieldset
+  className="slds-form-element slds-form-element_compound"
+  id={undefined}
+>
+  <legend
+    className="slds-form-element__legend slds-form-element__label"
+  >
+    label
+  </legend>
+  <div
+    className="slds-form-element__control"
+  >
+    content
+  </div>
+</fieldset>
+`;
+
+exports[`Compound Form Element render compound form element wrapper with required form elements 1`] = `
+<fieldset
+  className="slds-form-element slds-form-element_compound slds-is-required"
+  id={undefined}
+>
+  <legend
+    className="slds-form-element__legend slds-form-element__label"
+  >
+    <abbr
+      className="slds-required"
+      title="required"
+    >
+      * 
+       
+    </abbr>
+  </legend>
+  <div
+    className="slds-form-element__control"
+  >
+    content
+  </div>
+</fieldset>
+`;
+
+exports[`Compound Form Element render compound form element wrapper with stacked form elements 1`] = `
+<fieldset
+  className="slds-form-element slds-form-element_compound slds-form-element_stacked"
+  id={undefined}
+>
+  <legend
+    className="slds-form-element__legend slds-form-element__label"
+  />
+  <div
+    className="slds-form-element__control"
+  >
+    content
+  </div>
+</fieldset>
+`;
+
+exports[`Compound Form Element render compound form element wrapper with stacked form elements 2`] = `
+<fieldset
+  className="slds-form-element slds-form-element_compound slds-form-element_stacked"
+  id={undefined}
+>
+  <legend
+    className="slds-form-element__legend slds-form-element__label"
+  />
+  <div
+    className="slds-form-element__control"
+  >
+    content
+  </div>
+</fieldset>
+`;
+
+exports[`Compound Form Element render deprecated compound form element 1`] = `
+<fieldset
+  className="slds-form-element slds-form_compound"
+  id={undefined}
+>
+  <legend
+    className="slds-form-element__legend slds-form-element__label"
+  >
+    Location
+  </legend>
+  <div
+    className="slds-form-element__control"
+  >
+    <div
+      className="slds-form-element__group"
+    >
+      <div
+        className="slds-form-element__row"
+      >
+        <div
+          className="slds-form-element slds-size_1-of-2"
+          role={undefined}
+        >
+          <label
+            className="slds-form-element__label"
+            htmlFor="location-longitude-01"
+            id={undefined}
+          >
+            Longitude
+          </label>
+          <div
+            className="slds-form-element__control"
+          >
+            <input
+              className="slds-input"
+              defaultValue="10.283"
+              id="location-longitude-01"
+              placeholder={undefined}
+              readOnly={undefined}
+              type="text"
+            />
+          </div>
+        </div>
+        <div
+          className="slds-form-element slds-size_1-of-2"
+          role={undefined}
+        >
+          <label
+            className="slds-form-element__label"
+            htmlFor="location-latitude-01"
+            id={undefined}
+          >
+            Latitude
+          </label>
+          <div
+            className="slds-form-element__control"
+          >
+            <input
+              className="slds-input"
+              defaultValue="54.293"
+              id="location-latitude-01"
+              placeholder={undefined}
+              readOnly={undefined}
+              type="text"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</fieldset>
+`;
+
+exports[`Compound Form Element renders address compound form element 1`] = `
+<fieldset
+  className="slds-form-element slds-form-element_compound slds-form-element_address"
+  id={undefined}
+>
+  <legend
+    className="slds-form-element__legend slds-form-element__label"
+  >
+    Billing Address
+  </legend>
+  <div
+    className="slds-form-element__control"
+  >
+    <div
+      className="slds-form-element__row"
+    >
+      <div
+        className="slds-size_1-of-1"
+      >
+        <div
+          className="slds-form-element"
+          role={undefined}
+        >
+          <label
+            className="slds-form-element__label"
+            htmlFor="form-element-id-04"
+            id={undefined}
+          >
+            Billing Street
+          </label>
+          <div
+            className="slds-form-element__control"
+          >
+            <textarea
+              className="slds-textarea"
+              defaultValue="525 S. Lexington Ave"
+              id="form-element-id-04"
+              placeholder="Placeholder Text"
+              required={true}
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="slds-form-element__row"
+    >
+      <div
+        className="slds-size_4-of-6"
+      >
+        <div
+          className="slds-form-element"
+          role={undefined}
+        >
+          <label
+            className="slds-form-element__label"
+            htmlFor="form-element-id-05"
+            id={undefined}
+          >
+            Billing City
+          </label>
+          <div
+            className="slds-form-element__control"
+          >
+            <input
+              className="slds-input"
+              defaultValue="Burlington"
+              id="form-element-id-05"
+              placeholder={undefined}
+              readOnly={undefined}
+              required={true}
+              type="text"
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        className="slds-size_2-of-6"
+      >
+        <div
+          className="slds-form-element"
+          role={undefined}
+        >
+          <label
+            className="slds-form-element__label"
+            htmlFor="form-element-id-06"
+            id={undefined}
+          >
+            Billing State/Province
+          </label>
+          <div
+            className="slds-form-element__control"
+          >
+            <input
+              className="slds-input"
+              defaultValue="NC"
+              id="form-element-id-06"
+              placeholder={undefined}
+              readOnly={undefined}
+              required={true}
+              type="text"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="slds-form-element__row"
+    >
+      <div
+        className="slds-size_4-of-6"
+      >
+        <div
+          className="slds-form-element"
+          role={undefined}
+        >
+          <label
+            className="slds-form-element__label"
+            htmlFor="form-element-id-07"
+            id={undefined}
+          >
+            Billing Zip/Postal Code
+          </label>
+          <div
+            className="slds-form-element__control"
+          >
+            <input
+              className="slds-input"
+              defaultValue="27215"
+              id="form-element-id-07"
+              placeholder={undefined}
+              readOnly={undefined}
+              required={true}
+              type="text"
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        className="slds-size_2-of-6"
+      >
+        <div
+          className="slds-form-element"
+          role={undefined}
+        >
+          <label
+            className="slds-form-element__label"
+            htmlFor="form-element-id-08"
+            id={undefined}
+          >
+            Billing Country
+          </label>
+          <div
+            className="slds-form-element__control"
+          >
+            <input
+              className="slds-input"
+              defaultValue="USA"
+              id="form-element-id-08"
+              placeholder={undefined}
+              readOnly={undefined}
+              required={true}
+              type="text"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</fieldset>
+`;
+
+exports[`Compound Form Element renders simple compound form element 1`] = `
+<fieldset
+  className="slds-form-element slds-form-element_compound"
+  id={undefined}
+>
+  <legend
+    className="slds-form-element__legend slds-form-element__label"
+  >
+    Location
+  </legend>
+  <div
+    className="slds-form-element__control"
+  >
+    <div
+      className="slds-form-element__row"
+    >
+      <div
+        className="slds-size_1-of-2"
+      >
+        <div
+          className="slds-form-element"
+          role={undefined}
+        >
+          <label
+            className="slds-form-element__label"
+            htmlFor="input-01"
+            id={undefined}
+          >
+            Latitude
+          </label>
+          <div
+            className="slds-form-element__control"
+          >
+            <input
+              className="slds-input"
+              defaultValue={undefined}
+              id="input-01"
+              placeholder={undefined}
+              readOnly={undefined}
+              type="text"
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        className="slds-size_1-of-2"
+      >
+        <div
+          className="slds-form-element"
+          role={undefined}
+        >
+          <label
+            className="slds-form-element__label"
+            htmlFor="input-02"
+            id={undefined}
+          >
+            Longitude
+          </label>
+          <div
+            className="slds-form-element__control"
+          >
+            <input
+              className="slds-input"
+              defaultValue={undefined}
+              id="input-02"
+              placeholder={undefined}
+              readOnly={undefined}
+              type="text"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</fieldset>
+`;
+
 exports[`Form Element Composition renders form element with input 1`] = `
 <div
   className="slds-form-element"
@@ -167,7 +629,7 @@ exports[`Form Element renders form element as a fieldset 1`] = `
 
 exports[`Form Element renders form element as a fieldset with compound field classname 1`] = `
 <fieldset
-  className="slds-form-element slds-form_compound"
+  className="slds-form-element slds-form-element_compound"
   id={undefined}
 >
   <legend
@@ -376,7 +838,7 @@ exports[`Form Element renders form element fieldset wrapper 1`] = `
 
 exports[`Form Element renders form element fieldset wrapper with compound fields 1`] = `
 <fieldset
-  className="slds-form-element slds-form_compound"
+  className="slds-form-element slds-form-element_compound"
   id={undefined}
 >
   content
@@ -639,5 +1101,3645 @@ exports[`Form Element renders form element wrapper with view mode classname 1`] 
   role={undefined}
 >
   content
+</div>
+`;
+
+exports[`Horizontal Form Element renders deprecated horizontal form elements - edit mode 1`] = `
+<div
+  className="slds-form slds-form_horizontal"
+  role="list"
+>
+  <div
+    className="slds-form__row"
+  >
+    <div
+      className="slds-form__item"
+      role="listitem"
+    >
+      <div
+        className="slds-form-element slds-is-editing"
+        role={undefined}
+      >
+        <label
+          className="slds-form-element__label"
+          htmlFor="form-element-id-01"
+          id={undefined}
+        >
+          <abbr
+            className="slds-required"
+            title="required"
+          >
+            * 
+             
+          </abbr>
+          Assigned To
+        </label>
+        <div
+          className="slds-form-element__control"
+        >
+          <input
+            className="slds-input"
+            defaultValue="Jack Rogers"
+            id="form-element-id-01"
+            placeholder={undefined}
+            readOnly={true}
+            required={true}
+            type="text"
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      className="slds-form__item"
+      role="listitem"
+    >
+      <div
+        className="slds-form-element slds-is-editing"
+        role={undefined}
+      >
+        <label
+          className="slds-form-element__label"
+          htmlFor="combobox-id-01"
+          id={undefined}
+        >
+          Team Name
+        </label>
+        <div
+          className="slds-form-element__control"
+        >
+          <div
+            className="slds-combobox_container"
+          >
+            <div
+              aria-controls={undefined}
+              aria-expanded="false"
+              aria-haspopup="listbox"
+              className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click"
+              id={undefined}
+              role="combobox"
+            >
+              <div
+                className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
+                role="none"
+              >
+                <input
+                  aria-activedescendant={undefined}
+                  aria-autocomplete="list"
+                  aria-controls="listbox-id-01"
+                  autoComplete="off"
+                  autoFocus={undefined}
+                  className="slds-input slds-combobox__input slds-combobox__input-value"
+                  defaultValue="Salesforce Lightning Design System"
+                  disabled={undefined}
+                  id="combobox-id-01"
+                  onBlur={[Function]}
+                  onFocus={[Function]}
+                  placeholder="Search..."
+                  readOnly={undefined}
+                  role="textbox"
+                  tabIndex={undefined}
+                  type="text"
+                />
+                <button
+                  aria-haspopup={undefined}
+                  className="slds-button slds-button_icon slds-input__icon slds-input__icon_right"
+                  id={undefined}
+                  title="Clear the text input"
+                >
+                  <svg
+                    aria-hidden={true}
+                    className="slds-button__icon"
+                  >
+                    <use
+                      xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#clear"
+                    />
+                  </svg>
+                  <span
+                    className="slds-assistive-text"
+                  >
+                    Clear the text input
+                  </span>
+                </button>
+              </div>
+              <div
+                aria-orientation={null}
+                className="slds-dropdown slds-dropdown_length-with-icon-7 slds-dropdown_fluid"
+                id="listbox-id-01"
+                role="listbox"
+              >
+                <ul
+                  aria-label={undefined}
+                  className="slds-listbox slds-listbox_vertical"
+                  role="presentation"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="slds-form__row"
+  >
+    <div
+      className="slds-form__item"
+      role="listitem"
+    >
+      <div
+        className="slds-form-element slds-is-editing"
+        role={undefined}
+      >
+        <label
+          className="slds-form-element__label"
+          htmlFor="checkbox-id-01"
+          id={undefined}
+        >
+          Security Assessment Required?
+        </label>
+        <div
+          className="slds-form-element__control"
+        >
+          <span
+            className="slds-checkbox slds-checkbox_standalone"
+          >
+            <input
+              aria-describedby={undefined}
+              defaultChecked={undefined}
+              disabled={undefined}
+              id="checkbox-id-01"
+              name="label"
+              required={undefined}
+              type="checkbox"
+              value="option"
+            />
+            <span
+              className="slds-checkbox_faux"
+            />
+          </span>
+        </div>
+      </div>
+    </div>
+    <div
+      className="slds-form__item"
+      role="listitem"
+    >
+      <div
+        className="slds-form-element slds-is-editing"
+        role={undefined}
+      >
+        <label
+          className="slds-form-element__label"
+          htmlFor="combobox-id-02"
+          id={undefined}
+        >
+          Status
+        </label>
+        <div
+          className="slds-form-element__control"
+        >
+          <div
+            className="slds-combobox_container"
+          >
+            <div
+              aria-controls={undefined}
+              aria-expanded="false"
+              aria-haspopup="listbox"
+              className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click"
+              id={undefined}
+              role="combobox"
+            >
+              <div
+                className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
+                role="none"
+              >
+                <input
+                  aria-activedescendant={undefined}
+                  aria-autocomplete={null}
+                  aria-controls="listbox-id-02"
+                  autoComplete="off"
+                  autoFocus={undefined}
+                  className="slds-input slds-combobox__input slds-combobox__input-value"
+                  defaultValue="In Progress"
+                  disabled={undefined}
+                  id="combobox-id-02"
+                  onBlur={[Function]}
+                  onFocus={[Function]}
+                  placeholder="Select an Option"
+                  readOnly={true}
+                  role="textbox"
+                  tabIndex={undefined}
+                  type="text"
+                />
+                <span
+                  className="slds-icon_container slds-icon-utility-down slds-input__icon slds-input__icon_right"
+                  title={null}
+                >
+                  <svg
+                    aria-hidden={true}
+                    className="slds-icon slds-icon slds-icon_x-small slds-icon-text-default"
+                  >
+                    <use
+                      xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+                    />
+                  </svg>
+                </span>
+              </div>
+              <div
+                aria-orientation={null}
+                className="slds-dropdown slds-dropdown_length-5 slds-dropdown_fluid"
+                id="listbox-id-02"
+                role="listbox"
+              >
+                <ul
+                  aria-label={undefined}
+                  className="slds-listbox slds-listbox_vertical"
+                  role="presentation"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="slds-form__row"
+  >
+    <div
+      className="slds-form__item"
+      role="listitem"
+    >
+      <fieldset
+        className="slds-form-element slds-is-editing"
+        id={undefined}
+      >
+        <legend
+          className="slds-form-element__legend slds-form-element__label"
+        >
+          App Personalization Settings
+        </legend>
+        <div
+          className="slds-form-element__control"
+        >
+          <div
+            className="slds-checkbox"
+          >
+            <input
+              aria-describedby={undefined}
+              aria-labelledby={null}
+              defaultChecked={true}
+              disabled={undefined}
+              id="checkbox-5"
+              name="default"
+              tabIndex={undefined}
+              type="checkbox"
+              value="checkbox-5"
+            />
+            <label
+              className="slds-checkbox__label"
+              htmlFor="checkbox-5"
+              id={undefined}
+            >
+              <span
+                className="slds-checkbox_faux"
+              />
+              <span
+                className="slds-form-element__label"
+              >
+                Disable end user personalization
+              </span>
+            </label>
+          </div>
+          <div
+            className="slds-checkbox"
+          >
+            <input
+              aria-describedby={undefined}
+              aria-labelledby={null}
+              defaultChecked={undefined}
+              disabled={undefined}
+              id="checkbox-6"
+              name="default"
+              tabIndex={undefined}
+              type="checkbox"
+              value="checkbox-6"
+            />
+            <label
+              className="slds-checkbox__label"
+              htmlFor="checkbox-6"
+              id={undefined}
+            >
+              <span
+                className="slds-checkbox_faux"
+              />
+              <span
+                className="slds-form-element__label"
+              >
+                Don't automatically create temporary tabs
+              </span>
+            </label>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+    <div
+      className="slds-form__item"
+      role="listitem"
+    />
+  </div>
+  <div
+    className="slds-form__row"
+  >
+    <div
+      className="slds-form__item"
+      role="listitem"
+    >
+      <div
+        className="slds-form-element slds-is-editing"
+        role={undefined}
+      >
+        <label
+          className="slds-form-element__label"
+          htmlFor="form-element-id-02"
+          id={undefined}
+        >
+          SLA Serial Number
+        </label>
+        <div
+          className="slds-form-element__icon"
+        >
+          <button
+            aria-describedby={undefined}
+            aria-haspopup={undefined}
+            className="slds-button slds-button_icon"
+            id={undefined}
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-button__icon"
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#info"
+              />
+            </svg>
+            <span
+              className="slds-assistive-text"
+            >
+              Help
+            </span>
+          </button>
+        </div>
+        <div
+          className="slds-form-element__control"
+        >
+          <input
+            className="slds-input"
+            defaultValue="5367"
+            id="form-element-id-02"
+            placeholder={undefined}
+            readOnly={undefined}
+            type="text"
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      className="slds-form__item"
+      role="listitem"
+    >
+      <div
+        className="slds-form-element slds-is-editing slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open"
+        role={undefined}
+      >
+        <label
+          className="slds-form-element__label"
+          htmlFor="form-element-id-03"
+          id={undefined}
+        >
+          Date
+        </label>
+        <div
+          className="slds-form-element__control slds-input-has-icon slds-input-has-icon_right"
+        >
+          <input
+            className="slds-input"
+            defaultValue="1/1/2018"
+            id="form-element-id-03"
+            placeholder={undefined}
+            readOnly={undefined}
+            type="text"
+          />
+          <button
+            aria-haspopup={undefined}
+            className="slds-button slds-button_icon slds-input__icon slds-input__icon_right"
+            id={undefined}
+            title="Select a date"
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-button__icon"
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#event"
+              />
+            </svg>
+            <span
+              className="slds-assistive-text"
+            >
+              Select a date
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="slds-form__row"
+  >
+    <div
+      className="slds-form__item"
+      role="listitem"
+    >
+      <fieldset
+        className="slds-form-element slds-form_compound slds-is-editing"
+        id={undefined}
+      >
+        <legend
+          className="slds-form-element__legend slds-form-element__label"
+        >
+          Location
+        </legend>
+        <div
+          className="slds-form-element__control"
+        >
+          <div
+            className="slds-form-element__group"
+          >
+            <div
+              className="slds-form-element__row"
+            >
+              <div
+                className="slds-form-element slds-size_1-of-2"
+                role={undefined}
+              >
+                <label
+                  className="slds-form-element__label"
+                  htmlFor="location-longitude-01"
+                  id={undefined}
+                >
+                  Longitude
+                </label>
+                <div
+                  className="slds-form-element__control"
+                >
+                  <input
+                    className="slds-input"
+                    defaultValue="10.283"
+                    id="location-longitude-01"
+                    placeholder={undefined}
+                    readOnly={undefined}
+                    type="text"
+                  />
+                </div>
+              </div>
+              <div
+                className="slds-form-element slds-size_1-of-2"
+                role={undefined}
+              >
+                <label
+                  className="slds-form-element__label"
+                  htmlFor="location-latitude-01"
+                  id={undefined}
+                >
+                  Latitude
+                </label>
+                <div
+                  className="slds-form-element__control"
+                >
+                  <input
+                    className="slds-input"
+                    defaultValue="54.293"
+                    id="location-latitude-01"
+                    placeholder={undefined}
+                    readOnly={undefined}
+                    type="text"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+    <div
+      className="slds-form__item"
+      role="listitem"
+    >
+      <div
+        aria-labelledby="picklist-group-label"
+        className="slds-form-element slds-form-element_stacked slds-is-editing"
+        role="group"
+      >
+        <span
+          className="slds-form-element__label slds-form-element__legend"
+          id="picklist-group-label"
+        >
+          Select Options
+        </span>
+        <div
+          className="slds-form-element__control"
+        >
+          <div
+            className="slds-dueling-list"
+          >
+            <div
+              aria-live="assertive"
+              className="slds-assistive-text"
+              id="drag-live-region"
+            >
+              
+            </div>
+            <div
+              className="slds-assistive-text"
+              id="option-drag-label"
+            >
+              Press space bar when on an item, to move it within the list. CMD plus left and right arrow keys, to move items between lists.
+            </div>
+            <div
+              className="slds-dueling-list__column slds-dueling-list__column_responsive"
+            >
+              <span
+                className="slds-form-element__label"
+                id="label-1"
+              >
+                First Category
+              </span>
+              <div
+                className="slds-dueling-list__options"
+              >
+                <ul
+                  aria-describedby="option-drag-label"
+                  aria-disabled={undefined}
+                  aria-labelledby="label-1"
+                  aria-multiselectable="true"
+                  className="slds-listbox slds-listbox_vertical"
+                  role="listbox"
+                >
+                  <li
+                    className="slds-listbox__item"
+                    role="presentation"
+                  >
+                    <div
+                      aria-selected={false}
+                      className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
+                      draggable="true"
+                      role="option"
+                      tabIndex={0}
+                    >
+                      <span
+                        className="slds-media__body"
+                      >
+                        <span
+                          className="slds-truncate"
+                          title="Option 1"
+                        >
+                          Option 1
+                        </span>
+                      </span>
+                    </div>
+                  </li>
+                  <li
+                    className="slds-listbox__item"
+                    role="presentation"
+                  >
+                    <div
+                      aria-selected={false}
+                      className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
+                      draggable="true"
+                      role="option"
+                      tabIndex={-1}
+                    >
+                      <span
+                        className="slds-media__body"
+                      >
+                        <span
+                          className="slds-truncate"
+                          title="Option 2"
+                        >
+                          Option 2
+                        </span>
+                      </span>
+                    </div>
+                  </li>
+                  <li
+                    className="slds-listbox__item"
+                    role="presentation"
+                  >
+                    <div
+                      aria-selected={false}
+                      className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
+                      draggable="true"
+                      role="option"
+                      tabIndex={-1}
+                    >
+                      <span
+                        className="slds-media__body"
+                      >
+                        <span
+                          className="slds-truncate"
+                          title="Option 3"
+                        >
+                          Option 3
+                        </span>
+                      </span>
+                    </div>
+                  </li>
+                  <li
+                    className="slds-listbox__item"
+                    role="presentation"
+                  >
+                    <div
+                      aria-selected={false}
+                      className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
+                      draggable="true"
+                      role="option"
+                      tabIndex={-1}
+                    >
+                      <span
+                        className="slds-media__body"
+                      >
+                        <span
+                          className="slds-truncate"
+                          title="Option 6"
+                        >
+                          Option 6
+                        </span>
+                      </span>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div
+              className="slds-dueling-list__column"
+            >
+              <button
+                className="slds-button slds-button_icon slds-button_icon-container"
+                disabled={undefined}
+                title="Move Selection to Second Category"
+              >
+                <svg
+                  aria-hidden={true}
+                  className="slds-button__icon"
+                >
+                  <use
+                    xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#right"
+                  />
+                </svg>
+                <span
+                  className="slds-assistive-text"
+                >
+                  Move Selection to Second Category
+                </span>
+              </button>
+              <button
+                className="slds-button slds-button_icon slds-button_icon-container"
+                disabled={undefined}
+                title="Move Selection to First Category"
+              >
+                <svg
+                  aria-hidden={true}
+                  className="slds-button__icon"
+                >
+                  <use
+                    xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#left"
+                  />
+                </svg>
+                <span
+                  className="slds-assistive-text"
+                >
+                  Move Selection to First Category
+                </span>
+              </button>
+            </div>
+            <div
+              className="slds-dueling-list__column slds-dueling-list__column_responsive"
+            >
+              <span
+                className="slds-form-element__label"
+                id="label-2"
+              >
+                Second Category
+              </span>
+              <div
+                className="slds-dueling-list__options"
+              >
+                <ul
+                  aria-describedby="option-drag-label"
+                  aria-disabled={undefined}
+                  aria-labelledby="label-2"
+                  aria-multiselectable="true"
+                  className="slds-listbox slds-listbox_vertical"
+                  role="listbox"
+                >
+                  <li
+                    className="slds-listbox__item"
+                    role="presentation"
+                  >
+                    <div
+                      aria-selected={false}
+                      className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
+                      draggable="true"
+                      role="option"
+                      tabIndex={0}
+                    >
+                      <span
+                        className="slds-media__body"
+                      >
+                        <span
+                          className="slds-truncate"
+                          title="Option 4"
+                        >
+                          Option 4
+                        </span>
+                      </span>
+                    </div>
+                  </li>
+                  <li
+                    className="slds-listbox__item"
+                    role="presentation"
+                  >
+                    <div
+                      aria-selected={false}
+                      className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
+                      draggable="true"
+                      role="option"
+                      tabIndex={-1}
+                    >
+                      <span
+                        className="slds-media__body"
+                      >
+                        <span
+                          className="slds-truncate"
+                          title="Option 5"
+                        >
+                          Option 5
+                        </span>
+                      </span>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div
+              className="slds-dueling-list__column"
+            >
+              <button
+                className="slds-button slds-button_icon slds-button_icon-container"
+                disabled={undefined}
+                title="Move Selection Up"
+              >
+                <svg
+                  aria-hidden={true}
+                  className="slds-button__icon"
+                >
+                  <use
+                    xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#up"
+                  />
+                </svg>
+                <span
+                  className="slds-assistive-text"
+                >
+                  Move Selection Up
+                </span>
+              </button>
+              <button
+                className="slds-button slds-button_icon slds-button_icon-container"
+                disabled={undefined}
+                title="Move Selection Down"
+              >
+                <svg
+                  aria-hidden={true}
+                  className="slds-button__icon"
+                >
+                  <use
+                    xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+                  />
+                </svg>
+                <span
+                  className="slds-assistive-text"
+                >
+                  Move Selection Down
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="slds-form__row"
+  >
+    <div
+      className="slds-form__item"
+      role="listitem"
+    >
+      <fieldset
+        className="slds-form-element slds-form_compound slds-form-element_address slds-is-required slds-is-editing slds-form-element_stacked"
+        id={undefined}
+      >
+        <legend
+          className="slds-form-element__legend slds-form-element__label"
+        >
+          <abbr
+            className="slds-required"
+            title="required"
+          >
+            * 
+             
+          </abbr>
+          Billing Address
+        </legend>
+        <div
+          className="slds-form-element__icon"
+        >
+          <button
+            aria-haspopup={undefined}
+            className="slds-button slds-button_icon"
+            id={undefined}
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-button__icon"
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#info"
+              />
+            </svg>
+            <span
+              className="slds-assistive-text"
+            >
+              Help
+            </span>
+          </button>
+        </div>
+        <div
+          className="slds-form-element__control"
+        >
+          <div
+            className="slds-form-element__group"
+          >
+            <div
+              className="slds-form-element__row"
+            >
+              <div
+                className="slds-form-element slds-size_1-of-1"
+                role={undefined}
+              >
+                <label
+                  className="slds-form-element__label"
+                  htmlFor="form-element-id-04"
+                  id={undefined}
+                >
+                  Billing Street
+                </label>
+                <div
+                  className="slds-form-element__control"
+                >
+                  <textarea
+                    className="slds-textarea"
+                    defaultValue="525 S. Lexington Ave"
+                    id="form-element-id-04"
+                    placeholder="Placeholder Text"
+                    required={true}
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              className="slds-form-element__row"
+            >
+              <div
+                className="slds-form-element slds-size_4-of-6"
+                role={undefined}
+              >
+                <label
+                  className="slds-form-element__label"
+                  htmlFor="form-element-id-05"
+                  id={undefined}
+                >
+                  Billing City
+                </label>
+                <div
+                  className="slds-form-element__control"
+                >
+                  <input
+                    className="slds-input"
+                    defaultValue="Burlington"
+                    id="form-element-id-05"
+                    placeholder={undefined}
+                    readOnly={undefined}
+                    required={true}
+                    type="text"
+                  />
+                </div>
+              </div>
+              <div
+                className="slds-form-element slds-size_2-of-6"
+                role={undefined}
+              >
+                <label
+                  className="slds-form-element__label"
+                  htmlFor="form-element-id-06"
+                  id={undefined}
+                >
+                  Billing State/Province
+                </label>
+                <div
+                  className="slds-form-element__control"
+                >
+                  <input
+                    className="slds-input"
+                    defaultValue="NC"
+                    id="form-element-id-06"
+                    placeholder={undefined}
+                    readOnly={undefined}
+                    required={true}
+                    type="text"
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              className="slds-form-element__row"
+            >
+              <div
+                className="slds-form-element slds-size_4-of-6"
+                role={undefined}
+              >
+                <label
+                  className="slds-form-element__label"
+                  htmlFor="form-element-id-07"
+                  id={undefined}
+                >
+                  Billing Zip/Postal Code
+                </label>
+                <div
+                  className="slds-form-element__control"
+                >
+                  <input
+                    className="slds-input"
+                    defaultValue="27215"
+                    id="form-element-id-07"
+                    placeholder={undefined}
+                    readOnly={undefined}
+                    required={true}
+                    type="text"
+                  />
+                </div>
+              </div>
+              <div
+                className="slds-form-element slds-size_2-of-6"
+                role={undefined}
+              >
+                <label
+                  className="slds-form-element__label"
+                  htmlFor="form-element-id-08"
+                  id={undefined}
+                >
+                  Billing Country
+                </label>
+                <div
+                  className="slds-form-element__control"
+                >
+                  <input
+                    className="slds-input"
+                    defaultValue="USA"
+                    id="form-element-id-08"
+                    placeholder={undefined}
+                    readOnly={undefined}
+                    required={true}
+                    type="text"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+    <div
+      className="slds-form__item"
+      role="listitem"
+    >
+      <fieldset
+        className="slds-form-element slds-form_compound slds-form-element_address slds-is-editing slds-form-element_stacked"
+        id={undefined}
+      >
+        <legend
+          className="slds-form-element__legend slds-form-element__label"
+        >
+          Shipping Address
+        </legend>
+        <div
+          className="slds-form-element__control"
+        >
+          <div
+            className="slds-form-element__group"
+          >
+            <div
+              className="slds-form-element__row"
+            >
+              <div
+                className="slds-form-element slds-size_1-of-1"
+                role={undefined}
+              >
+                <label
+                  className="slds-form-element__label"
+                  htmlFor="form-element-id-09"
+                  id={undefined}
+                >
+                  Shipping Street
+                </label>
+                <div
+                  className="slds-form-element__control"
+                >
+                  <textarea
+                    className="slds-textarea"
+                    defaultValue="312 Constitution Place"
+                    id="form-element-id-09"
+                    placeholder="Placeholder Text"
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              className="slds-form-element__row"
+            >
+              <div
+                className="slds-form-element slds-size_4-of-6"
+                role={undefined}
+              >
+                <label
+                  className="slds-form-element__label"
+                  htmlFor="form-element-id-10"
+                  id={undefined}
+                >
+                  Shipping City
+                </label>
+                <div
+                  className="slds-form-element__control"
+                >
+                  <input
+                    className="slds-input"
+                    defaultValue="Austin"
+                    id="form-element-id-10"
+                    placeholder={undefined}
+                    readOnly={undefined}
+                    type="text"
+                  />
+                </div>
+              </div>
+              <div
+                className="slds-form-element slds-size_2-of-6"
+                role={undefined}
+              >
+                <label
+                  className="slds-form-element__label"
+                  htmlFor="form-element-id-11"
+                  id={undefined}
+                >
+                  Shipping State/Province
+                </label>
+                <div
+                  className="slds-form-element__control"
+                >
+                  <input
+                    className="slds-input"
+                    defaultValue="TX"
+                    id="form-element-id-11"
+                    placeholder={undefined}
+                    readOnly={undefined}
+                    type="text"
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              className="slds-form-element__row"
+            >
+              <div
+                className="slds-form-element slds-size_4-of-6"
+                role={undefined}
+              >
+                <label
+                  className="slds-form-element__label"
+                  htmlFor="form-element-id-12"
+                  id={undefined}
+                >
+                  Shipping Zip/Postal Code
+                </label>
+                <div
+                  className="slds-form-element__control"
+                >
+                  <input
+                    className="slds-input"
+                    defaultValue="78767"
+                    id="form-element-id-12"
+                    placeholder={undefined}
+                    readOnly={undefined}
+                    type="text"
+                  />
+                </div>
+              </div>
+              <div
+                className="slds-form-element slds-size_2-of-6"
+                role={undefined}
+              >
+                <label
+                  className="slds-form-element__label"
+                  htmlFor="form-element-id-13"
+                  id={undefined}
+                >
+                  Shipping Country
+                </label>
+                <div
+                  className="slds-form-element__control"
+                >
+                  <input
+                    className="slds-input"
+                    defaultValue="USA"
+                    id="form-element-id-13"
+                    placeholder={undefined}
+                    readOnly={undefined}
+                    type="text"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+  </div>
+  <div
+    className="slds-form__row"
+  >
+    <div
+      className="slds-form__item"
+      role="listitem"
+    >
+      <div
+        className="slds-form-element slds-form-element_stacked slds-is-editing slds-form-element_1-col"
+        role={undefined}
+      >
+        <label
+          className="slds-form-element__label"
+          htmlFor="form-element-id-14"
+          id={undefined}
+        >
+          Description
+        </label>
+        <div
+          className="slds-form-element__control"
+        >
+          <textarea
+            className="slds-textarea"
+            defaultValue="Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Etiam porta sem malesuada magna mollis euismod."
+            id="form-element-id-14"
+            placeholder="Placeholder Text"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Horizontal Form Element renders deprecated horizontal form elements - view mode 1`] = `
+<div
+  className="slds-form slds-form_horizontal"
+  role="list"
+>
+  <div
+    className="slds-form__row"
+  >
+    <div
+      className="slds-form__item"
+      role="listitem"
+    >
+      <div
+        className="slds-form-element slds-form-element_edit slds-form-element_readonly slds-hint-parent"
+        role={undefined}
+      >
+        <span
+          className="slds-form-element__label"
+          id={undefined}
+        >
+          <abbr
+            className="slds-required"
+            title="required"
+          >
+            * 
+             
+          </abbr>
+          Assigned To
+        </span>
+        <div
+          className="slds-form-element__control"
+        >
+          <div
+            className="slds-form-element__static"
+          >
+            <span
+              className="slds-avatar slds-avatar_x-small slds-avatar_circle slds-m-right_xx-small"
+            >
+              <img
+                alt="Jack Rogers"
+                src="/assets/images/avatar1.jpg"
+                title="Jack Rogers"
+              />
+            </span>
+            <a
+              href="javascript:void(0);"
+            >
+              Jack Rogers
+            </a>
+          </div>
+          <button
+            aria-haspopup={undefined}
+            className="slds-button slds-button_icon"
+            id={undefined}
+            title="Edit: Assigned To"
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-button__icon slds-button__icon_hint"
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#edit"
+              />
+            </svg>
+            <span
+              className="slds-assistive-text"
+            >
+              Edit: Assigned To
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div
+      className="slds-form__item"
+      role="listitem"
+    >
+      <div
+        className="slds-form-element slds-form-element_edit slds-form-element_readonly slds-hint-parent"
+        role={undefined}
+      >
+        <span
+          className="slds-form-element__label"
+          id={undefined}
+        >
+          Team Name
+        </span>
+        <div
+          className="slds-form-element__control"
+        >
+          <div
+            className="slds-form-element__static"
+          >
+            <a
+              href="javascript:void(0);"
+            >
+              Salesforce Lightning Design System
+            </a>
+          </div>
+          <button
+            aria-haspopup={undefined}
+            className="slds-button slds-button_icon"
+            id={undefined}
+            title="Edit: Team Name"
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-button__icon slds-button__icon_hint"
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#edit"
+              />
+            </svg>
+            <span
+              className="slds-assistive-text"
+            >
+              Edit: Team Name
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="slds-form__row"
+  >
+    <div
+      className="slds-form__item"
+      role="listitem"
+    >
+      <div
+        className="slds-form-element slds-form-element_edit slds-form-element_readonly slds-hint-parent"
+        role={undefined}
+      >
+        <span
+          className="slds-form-element__label"
+          id={undefined}
+        >
+          Security Assessment Required?
+        </span>
+        <div
+          className="slds-form-element__control"
+        >
+          <div
+            className="slds-form-element__static"
+          >
+            False
+          </div>
+          <button
+            aria-haspopup={undefined}
+            className="slds-button slds-button_icon"
+            id={undefined}
+            title="Edit: Security Assessment Required?"
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-button__icon slds-button__icon_hint"
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#edit"
+              />
+            </svg>
+            <span
+              className="slds-assistive-text"
+            >
+              Edit: Security Assessment Required?
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div
+      className="slds-form__item"
+      role="listitem"
+    >
+      <div
+        className="slds-form-element slds-form-element_edit slds-form-element_readonly slds-hint-parent"
+        role={undefined}
+      >
+        <span
+          className="slds-form-element__label"
+          id={undefined}
+        >
+          Status
+        </span>
+        <div
+          className="slds-form-element__control"
+        >
+          <div
+            className="slds-form-element__static"
+          />
+          <button
+            aria-haspopup={undefined}
+            className="slds-button slds-button_icon"
+            id={undefined}
+            title="Edit: Status"
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-button__icon slds-button__icon_hint"
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#edit"
+              />
+            </svg>
+            <span
+              className="slds-assistive-text"
+            >
+              Edit: Status
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="slds-form__row"
+  >
+    <div
+      className="slds-form__item"
+      role="listitem"
+    >
+      <div
+        className="slds-form-element slds-form-element_edit slds-form-element_readonly slds-hint-parent"
+        role={undefined}
+      >
+        <span
+          className="slds-form-element__label"
+          id={undefined}
+        >
+          Personalization Settings
+        </span>
+        <div
+          className="slds-form-element__control"
+        >
+          <div
+            className="slds-form-element__static"
+          >
+            Disable end user personalization
+          </div>
+          <button
+            aria-haspopup={undefined}
+            className="slds-button slds-button_icon"
+            id={undefined}
+            title="Edit: Personalization Settings"
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-button__icon slds-button__icon_hint"
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#edit"
+              />
+            </svg>
+            <span
+              className="slds-assistive-text"
+            >
+              Edit: Personalization Settings
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div
+      className="slds-form__item"
+      role="listitem"
+    >
+      
+    </div>
+  </div>
+  <div
+    className="slds-form__row"
+  >
+    <div
+      className="slds-form__item"
+      role="listitem"
+    >
+      <div
+        className="slds-form-element slds-form-element_edit slds-form-element_readonly slds-hint-parent"
+        role={undefined}
+      >
+        <span
+          className="slds-form-element__label"
+          id={undefined}
+        >
+          SLA Serial Number
+        </span>
+        <div
+          className="slds-form-element__icon"
+        >
+          <button
+            aria-describedby={undefined}
+            aria-haspopup={undefined}
+            className="slds-button slds-button_icon"
+            id={undefined}
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-button__icon"
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#info"
+              />
+            </svg>
+            <span
+              className="slds-assistive-text"
+            >
+              Help
+            </span>
+          </button>
+        </div>
+        <div
+          className="slds-form-element__control"
+        >
+          <div
+            className="slds-form-element__static"
+          >
+            5367
+          </div>
+          <button
+            aria-haspopup={undefined}
+            className="slds-button slds-button_icon"
+            id={undefined}
+            title="Edit: SLA Serial Number"
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-button__icon slds-button__icon_hint"
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#edit"
+              />
+            </svg>
+            <span
+              className="slds-assistive-text"
+            >
+              Edit: SLA Serial Number
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div
+      className="slds-form__item"
+      role="listitem"
+    >
+      <div
+        className="slds-form-element slds-form-element_edit slds-form-element_readonly slds-hint-parent"
+        role={undefined}
+      >
+        <span
+          className="slds-form-element__label"
+          id={undefined}
+        >
+          SLA Expiration Date
+        </span>
+        <div
+          className="slds-form-element__control"
+        >
+          <div
+            className="slds-form-element__static"
+          >
+            1/1/2018
+          </div>
+          <button
+            aria-haspopup={undefined}
+            className="slds-button slds-button_icon"
+            id={undefined}
+            title="Edit: SLA Expiration Date"
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-button__icon slds-button__icon_hint"
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#edit"
+              />
+            </svg>
+            <span
+              className="slds-assistive-text"
+            >
+              Edit: SLA Expiration Date
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="slds-form__row"
+  >
+    <div
+      className="slds-form__item"
+      role="listitem"
+    >
+      <div
+        className="slds-form-element slds-form-element_edit slds-form-element_readonly slds-hint-parent"
+        role={undefined}
+      >
+        <span
+          className="slds-form-element__label"
+          id={undefined}
+        >
+          Location
+        </span>
+        <div
+          className="slds-form-element__control"
+        >
+          <div
+            className="slds-form-element__static"
+          >
+            10.283, 54.293
+          </div>
+          <button
+            aria-haspopup={undefined}
+            className="slds-button slds-button_icon"
+            id={undefined}
+            title="Edit: Location"
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-button__icon slds-button__icon_hint"
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#edit"
+              />
+            </svg>
+            <span
+              className="slds-assistive-text"
+            >
+              Edit: Location
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div
+      className="slds-form__item"
+      role="listitem"
+    >
+      <div
+        className="slds-form-element slds-form-element_edit slds-form-element_readonly slds-hint-parent"
+        role={undefined}
+      >
+        <span
+          className="slds-form-element__label"
+          id={undefined}
+        >
+          Selected Languages
+        </span>
+        <div
+          className="slds-form-element__control"
+        >
+          <div
+            className="slds-form-element__static"
+          >
+            Arabic, Chinese, English, German
+          </div>
+          <button
+            aria-haspopup={undefined}
+            className="slds-button slds-button_icon"
+            id={undefined}
+            title="Edit: Selected Languages"
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-button__icon slds-button__icon_hint"
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#edit"
+              />
+            </svg>
+            <span
+              className="slds-assistive-text"
+            >
+              Edit: Selected Languages
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="slds-form__row"
+  >
+    <div
+      className="slds-form__item"
+      role="listitem"
+    >
+      <div
+        className="slds-form-element slds-form-element_edit slds-form-element_readonly slds-hint-parent"
+        role={undefined}
+      >
+        <span
+          className="slds-form-element__label"
+          id={undefined}
+        >
+          <abbr
+            className="slds-required"
+            title="required"
+          >
+            * 
+             
+          </abbr>
+          Billing Address
+        </span>
+        <div
+          className="slds-form-element__icon"
+        >
+          <button
+            aria-describedby={undefined}
+            aria-haspopup={undefined}
+            className="slds-button slds-button_icon"
+            id={undefined}
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-button__icon"
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#info"
+              />
+            </svg>
+            <span
+              className="slds-assistive-text"
+            >
+              Help
+            </span>
+          </button>
+        </div>
+        <div
+          className="slds-form-element__control"
+        >
+          <div
+            className="slds-form-element__static"
+          >
+            <a
+              href="javascript:void(0);"
+            >
+              525 S. Lexington Ave
+              <br />
+              Burlington, NC 27215
+              <br />
+              USA
+              <br />
+            </a>
+          </div>
+          <button
+            aria-haspopup={undefined}
+            className="slds-button slds-button_icon"
+            id={undefined}
+            title="Edit: Billing Address"
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-button__icon slds-button__icon_hint"
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#edit"
+              />
+            </svg>
+            <span
+              className="slds-assistive-text"
+            >
+              Edit: Billing Address
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div
+      className="slds-form__item"
+      role="listitem"
+    >
+      <div
+        className="slds-form-element slds-form-element_edit slds-form-element_readonly slds-hint-parent"
+        role={undefined}
+      >
+        <span
+          className="slds-form-element__label"
+          id={undefined}
+        >
+          Shipping Address
+        </span>
+        <div
+          className="slds-form-element__control"
+        >
+          <div
+            className="slds-form-element__static"
+          >
+            <a
+              href="javascript:void(0);"
+            >
+              312 Constitution Place
+              <br />
+              Austin, TX 78767
+              <br />
+              USA
+              <br />
+            </a>
+          </div>
+          <button
+            aria-haspopup={undefined}
+            className="slds-button slds-button_icon"
+            id={undefined}
+            title="Edit: Shipping Address"
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-button__icon slds-button__icon_hint"
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#edit"
+              />
+            </svg>
+            <span
+              className="slds-assistive-text"
+            >
+              Edit: Shipping Address
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="slds-form__row"
+  >
+    <div
+      className="slds-form__item"
+      role="listitem"
+    >
+      <div
+        className="slds-form-element slds-form-element_edit slds-form-element_readonly slds-hint-parent slds-form-element_1-col"
+        role={undefined}
+      >
+        <span
+          className="slds-form-element__label"
+          id={undefined}
+        >
+          Description
+        </span>
+        <div
+          className="slds-form-element__control"
+        >
+          <div
+            className="slds-form-element__static slds-text-longform"
+          >
+            Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Etiam porta sem malesuada magna mollis euismod.
+            <br />
+          </div>
+          <button
+            aria-haspopup={undefined}
+            className="slds-button slds-button_icon"
+            id={undefined}
+            title="Edit: Description"
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-button__icon slds-button__icon_hint"
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#edit"
+              />
+            </svg>
+            <span
+              className="slds-assistive-text"
+            >
+              Edit: Description
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Horizontal Form Element renders simple horizontal form elements 1`] = `
+<div
+  className="slds-form"
+>
+  <div
+    className="slds-form-element slds-form-element_horizontal"
+    role={undefined}
+  >
+    <label
+      className="slds-form-element__label"
+      htmlFor="input-id-01"
+      id={undefined}
+    >
+      Text Input
+    </label>
+    <div
+      className="slds-form-element__control"
+    >
+      <input
+        className="slds-input"
+        defaultValue={undefined}
+        id="input-id-01"
+        placeholder={undefined}
+        readOnly={undefined}
+        type="text"
+      />
+    </div>
+  </div>
+  <div
+    className="slds-form-element slds-form-element_horizontal"
+    role={undefined}
+  >
+    <label
+      className="slds-form-element__label"
+      htmlFor="input-id-02"
+      id={undefined}
+    >
+      Textarea Input
+    </label>
+    <div
+      className="slds-form-element__control"
+    >
+      <textarea
+        className="slds-textarea"
+        id="input-id-02"
+        placeholder="Placeholder Text"
+      />
+    </div>
+  </div>
+  <fieldset
+    className="slds-form-element slds-form-element_horizontal"
+    id={undefined}
+  >
+    <legend
+      className="slds-form-element__legend slds-form-element__label"
+    >
+      Checkbox Group label
+    </legend>
+    <div
+      className="slds-form-element__control"
+    >
+      <div
+        className="slds-checkbox"
+      >
+        <input
+          aria-describedby={undefined}
+          aria-labelledby={null}
+          defaultChecked={undefined}
+          disabled={undefined}
+          id="checkbox-3"
+          name="default"
+          tabIndex={undefined}
+          type="checkbox"
+          value="checkbox-3"
+        />
+        <label
+          className="slds-checkbox__label"
+          htmlFor="checkbox-3"
+          id={undefined}
+        >
+          <span
+            className="slds-checkbox_faux"
+          />
+          <span
+            className="slds-form-element__label"
+          >
+            All opportunities owned by you
+          </span>
+        </label>
+      </div>
+      <div
+        className="slds-checkbox"
+      >
+        <input
+          aria-describedby={undefined}
+          aria-labelledby={null}
+          defaultChecked={undefined}
+          disabled={undefined}
+          id="checkbox-4"
+          name="default"
+          tabIndex={undefined}
+          type="checkbox"
+          value="checkbox-4"
+        />
+        <label
+          className="slds-checkbox__label"
+          htmlFor="checkbox-4"
+          id={undefined}
+        >
+          <span
+            className="slds-checkbox_faux"
+          />
+          <span
+            className="slds-form-element__label"
+          >
+            All contacts in the account owned by you
+          </span>
+        </label>
+      </div>
+    </div>
+  </fieldset>
+  <fieldset
+    className="slds-form-element slds-form-element_horizontal"
+    id={undefined}
+  >
+    <legend
+      className="slds-form-element__legend slds-form-element__label"
+    >
+      Radio Group label
+    </legend>
+    <div
+      className="slds-form-element__control"
+    >
+      <span
+        className="slds-radio"
+      >
+        <input
+          aria-describedby={undefined}
+          aria-labelledby={null}
+          defaultChecked={undefined}
+          disabled={undefined}
+          id="radio-3"
+          name="options"
+          tabIndex={undefined}
+          type="radio"
+          value="radio-3"
+        />
+        <label
+          className="slds-radio__label"
+          htmlFor="radio-3"
+          id={undefined}
+        >
+          <span
+            className="slds-radio_faux"
+          />
+          <span
+            className="slds-form-element__label"
+          >
+            Lead Generation
+          </span>
+        </label>
+      </span>
+      <span
+        className="slds-radio"
+      >
+        <input
+          aria-describedby={undefined}
+          aria-labelledby={null}
+          defaultChecked={undefined}
+          disabled={undefined}
+          id="radio-4"
+          name="options"
+          tabIndex={undefined}
+          type="radio"
+          value="radio-4"
+        />
+        <label
+          className="slds-radio__label"
+          htmlFor="radio-4"
+          id={undefined}
+        >
+          <span
+            className="slds-radio_faux"
+          />
+          <span
+            className="slds-form-element__label"
+          >
+            Education Leads
+          </span>
+        </label>
+      </span>
+    </div>
+  </fieldset>
+</div>
+`;
+
+exports[`Stacked Form Element renders deprecated stacked form elements - edit mode 1`] = `
+<div
+  className="slds-form slds-form_stacked"
+  role="list"
+>
+  <div
+    className="slds-form__row"
+  >
+    <div
+      className="slds-form__item"
+      role="listitem"
+    >
+      <div
+        className="slds-form-element slds-form-element_edit slds-form-element_readonly slds-hint-parent"
+        role={undefined}
+      >
+        <span
+          className="slds-form-element__label"
+          id={undefined}
+        >
+          <abbr
+            className="slds-required"
+            title="required"
+          >
+            * 
+             
+          </abbr>
+          Assigned To
+        </span>
+        <div
+          className="slds-form-element__control"
+        >
+          <div
+            className="slds-form-element__static"
+          >
+            <span
+              className="slds-avatar slds-avatar_x-small slds-avatar_circle slds-m-right_xx-small"
+            >
+              <img
+                alt="Jack Rogers"
+                src="/assets/images/avatar1.jpg"
+                title="Jack Rogers"
+              />
+            </span>
+            <a
+              href="javascript:void(0);"
+            >
+              Jack Rogers
+            </a>
+          </div>
+          <button
+            aria-haspopup={undefined}
+            className="slds-button slds-button_icon"
+            id={undefined}
+            title="Edit: Assigned To"
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-button__icon slds-button__icon_hint"
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#edit"
+              />
+            </svg>
+            <span
+              className="slds-assistive-text"
+            >
+              Edit: Assigned To
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div
+      className="slds-form__item"
+      role="listitem"
+    >
+      <div
+        className="slds-form-element slds-form-element_edit slds-form-element_readonly slds-hint-parent"
+        role={undefined}
+      >
+        <span
+          className="slds-form-element__label"
+          id={undefined}
+        >
+          Team Name
+        </span>
+        <div
+          className="slds-form-element__control"
+        >
+          <div
+            className="slds-form-element__static"
+          >
+            <a
+              href="javascript:void(0);"
+            >
+              Salesforce Lightning Design System
+            </a>
+          </div>
+          <button
+            aria-haspopup={undefined}
+            className="slds-button slds-button_icon"
+            id={undefined}
+            title="Edit: Team Name"
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-button__icon slds-button__icon_hint"
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#edit"
+              />
+            </svg>
+            <span
+              className="slds-assistive-text"
+            >
+              Edit: Team Name
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="slds-form__row"
+  >
+    <div
+      className="slds-form__item"
+      role="listitem"
+    >
+      <div
+        className="slds-form-element slds-form-element_edit slds-form-element_readonly slds-hint-parent"
+        role={undefined}
+      >
+        <span
+          className="slds-form-element__label"
+          id={undefined}
+        >
+          Security Assessment Required?
+        </span>
+        <div
+          className="slds-form-element__control"
+        >
+          <div
+            className="slds-form-element__static"
+          >
+            False
+          </div>
+          <button
+            aria-haspopup={undefined}
+            className="slds-button slds-button_icon"
+            id={undefined}
+            title="Edit: Security Assessment Required?"
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-button__icon slds-button__icon_hint"
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#edit"
+              />
+            </svg>
+            <span
+              className="slds-assistive-text"
+            >
+              Edit: Security Assessment Required?
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div
+      className="slds-form__item"
+      role="listitem"
+    >
+      <div
+        className="slds-form-element slds-form-element_edit slds-form-element_readonly slds-hint-parent"
+        role={undefined}
+      >
+        <span
+          className="slds-form-element__label"
+          id={undefined}
+        >
+          Status
+        </span>
+        <div
+          className="slds-form-element__control"
+        >
+          <div
+            className="slds-form-element__static"
+          />
+          <button
+            aria-haspopup={undefined}
+            className="slds-button slds-button_icon"
+            id={undefined}
+            title="Edit: Status"
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-button__icon slds-button__icon_hint"
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#edit"
+              />
+            </svg>
+            <span
+              className="slds-assistive-text"
+            >
+              Edit: Status
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="slds-form__row"
+  >
+    <div
+      className="slds-form__item"
+      role="listitem"
+    >
+      <div
+        className="slds-form-element slds-form-element_edit slds-form-element_readonly slds-hint-parent"
+        role={undefined}
+      >
+        <span
+          className="slds-form-element__label"
+          id={undefined}
+        >
+          Personalization Settings
+        </span>
+        <div
+          className="slds-form-element__control"
+        >
+          <div
+            className="slds-form-element__static"
+          >
+            Disable end user personalization
+          </div>
+          <button
+            aria-haspopup={undefined}
+            className="slds-button slds-button_icon"
+            id={undefined}
+            title="Edit: Personalization Settings"
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-button__icon slds-button__icon_hint"
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#edit"
+              />
+            </svg>
+            <span
+              className="slds-assistive-text"
+            >
+              Edit: Personalization Settings
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div
+      className="slds-form__item"
+      role="listitem"
+    >
+      
+    </div>
+  </div>
+  <div
+    className="slds-form__row"
+  >
+    <div
+      className="slds-form__item"
+      role="listitem"
+    >
+      <div
+        className="slds-form-element slds-form-element_edit slds-form-element_readonly slds-hint-parent"
+        role={undefined}
+      >
+        <span
+          className="slds-form-element__label"
+          id={undefined}
+        >
+          SLA Serial Number
+        </span>
+        <div
+          className="slds-form-element__icon"
+        >
+          <button
+            aria-describedby={undefined}
+            aria-haspopup={undefined}
+            className="slds-button slds-button_icon"
+            id={undefined}
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-button__icon"
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#info"
+              />
+            </svg>
+            <span
+              className="slds-assistive-text"
+            >
+              Help
+            </span>
+          </button>
+        </div>
+        <div
+          className="slds-form-element__control"
+        >
+          <div
+            className="slds-form-element__static"
+          >
+            5367
+          </div>
+          <button
+            aria-haspopup={undefined}
+            className="slds-button slds-button_icon"
+            id={undefined}
+            title="Edit: SLA Serial Number"
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-button__icon slds-button__icon_hint"
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#edit"
+              />
+            </svg>
+            <span
+              className="slds-assistive-text"
+            >
+              Edit: SLA Serial Number
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div
+      className="slds-form__item"
+      role="listitem"
+    >
+      <div
+        className="slds-form-element slds-form-element_edit slds-form-element_readonly slds-hint-parent"
+        role={undefined}
+      >
+        <span
+          className="slds-form-element__label"
+          id={undefined}
+        >
+          SLA Expiration Date
+        </span>
+        <div
+          className="slds-form-element__control"
+        >
+          <div
+            className="slds-form-element__static"
+          >
+            1/1/2018
+          </div>
+          <button
+            aria-haspopup={undefined}
+            className="slds-button slds-button_icon"
+            id={undefined}
+            title="Edit: SLA Expiration Date"
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-button__icon slds-button__icon_hint"
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#edit"
+              />
+            </svg>
+            <span
+              className="slds-assistive-text"
+            >
+              Edit: SLA Expiration Date
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="slds-form__row"
+  >
+    <div
+      className="slds-form__item"
+      role="listitem"
+    >
+      <div
+        className="slds-form-element slds-form-element_edit slds-form-element_readonly slds-hint-parent"
+        role={undefined}
+      >
+        <span
+          className="slds-form-element__label"
+          id={undefined}
+        >
+          Location
+        </span>
+        <div
+          className="slds-form-element__control"
+        >
+          <div
+            className="slds-form-element__static"
+          >
+            10.283, 54.293
+          </div>
+          <button
+            aria-haspopup={undefined}
+            className="slds-button slds-button_icon"
+            id={undefined}
+            title="Edit: Location"
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-button__icon slds-button__icon_hint"
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#edit"
+              />
+            </svg>
+            <span
+              className="slds-assistive-text"
+            >
+              Edit: Location
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div
+      className="slds-form__item"
+      role="listitem"
+    >
+      <div
+        className="slds-form-element slds-form-element_edit slds-form-element_readonly slds-hint-parent"
+        role={undefined}
+      >
+        <span
+          className="slds-form-element__label"
+          id={undefined}
+        >
+          Selected Languages
+        </span>
+        <div
+          className="slds-form-element__control"
+        >
+          <div
+            className="slds-form-element__static"
+          >
+            Arabic, Chinese, English, German
+          </div>
+          <button
+            aria-haspopup={undefined}
+            className="slds-button slds-button_icon"
+            id={undefined}
+            title="Edit: Selected Languages"
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-button__icon slds-button__icon_hint"
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#edit"
+              />
+            </svg>
+            <span
+              className="slds-assistive-text"
+            >
+              Edit: Selected Languages
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="slds-form__row"
+  >
+    <div
+      className="slds-form__item"
+      role="listitem"
+    >
+      <div
+        className="slds-form-element slds-form-element_edit slds-form-element_readonly slds-hint-parent"
+        role={undefined}
+      >
+        <span
+          className="slds-form-element__label"
+          id={undefined}
+        >
+          <abbr
+            className="slds-required"
+            title="required"
+          >
+            * 
+             
+          </abbr>
+          Billing Address
+        </span>
+        <div
+          className="slds-form-element__icon"
+        >
+          <button
+            aria-describedby={undefined}
+            aria-haspopup={undefined}
+            className="slds-button slds-button_icon"
+            id={undefined}
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-button__icon"
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#info"
+              />
+            </svg>
+            <span
+              className="slds-assistive-text"
+            >
+              Help
+            </span>
+          </button>
+        </div>
+        <div
+          className="slds-form-element__control"
+        >
+          <div
+            className="slds-form-element__static"
+          >
+            <a
+              href="javascript:void(0);"
+            >
+              525 S. Lexington Ave
+              <br />
+              Burlington, NC 27215
+              <br />
+              USA
+              <br />
+            </a>
+          </div>
+          <button
+            aria-haspopup={undefined}
+            className="slds-button slds-button_icon"
+            id={undefined}
+            title="Edit: Billing Address"
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-button__icon slds-button__icon_hint"
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#edit"
+              />
+            </svg>
+            <span
+              className="slds-assistive-text"
+            >
+              Edit: Billing Address
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div
+      className="slds-form__item"
+      role="listitem"
+    >
+      <div
+        className="slds-form-element slds-form-element_edit slds-form-element_readonly slds-hint-parent"
+        role={undefined}
+      >
+        <span
+          className="slds-form-element__label"
+          id={undefined}
+        >
+          Shipping Address
+        </span>
+        <div
+          className="slds-form-element__control"
+        >
+          <div
+            className="slds-form-element__static"
+          >
+            <a
+              href="javascript:void(0);"
+            >
+              312 Constitution Place
+              <br />
+              Austin, TX 78767
+              <br />
+              USA
+              <br />
+            </a>
+          </div>
+          <button
+            aria-haspopup={undefined}
+            className="slds-button slds-button_icon"
+            id={undefined}
+            title="Edit: Shipping Address"
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-button__icon slds-button__icon_hint"
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#edit"
+              />
+            </svg>
+            <span
+              className="slds-assistive-text"
+            >
+              Edit: Shipping Address
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="slds-form__row"
+  >
+    <div
+      className="slds-form__item"
+      role="listitem"
+    >
+      <div
+        className="slds-form-element slds-form-element_edit slds-form-element_readonly slds-hint-parent slds-form-element_1-col"
+        role={undefined}
+      >
+        <span
+          className="slds-form-element__label"
+          id={undefined}
+        >
+          Description
+        </span>
+        <div
+          className="slds-form-element__control"
+        >
+          <div
+            className="slds-form-element__static slds-text-longform"
+          >
+            Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Etiam porta sem malesuada magna mollis euismod.
+            <br />
+          </div>
+          <button
+            aria-haspopup={undefined}
+            className="slds-button slds-button_icon"
+            id={undefined}
+            title="Edit: Description"
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-button__icon slds-button__icon_hint"
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#edit"
+              />
+            </svg>
+            <span
+              className="slds-assistive-text"
+            >
+              Edit: Description
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Stacked Form Element renders deprecated stacked form elements - view mode 1`] = `
+<div
+  className="slds-form slds-form_stacked"
+  role="list"
+>
+  <div
+    className="slds-form__row"
+  >
+    <div
+      className="slds-form__item"
+      role="listitem"
+    >
+      <div
+        className="slds-form-element slds-form-element_edit slds-form-element_readonly slds-hint-parent"
+        role={undefined}
+      >
+        <span
+          className="slds-form-element__label"
+          id={undefined}
+        >
+          <abbr
+            className="slds-required"
+            title="required"
+          >
+            * 
+             
+          </abbr>
+          Assigned To
+        </span>
+        <div
+          className="slds-form-element__control"
+        >
+          <div
+            className="slds-form-element__static"
+          >
+            <span
+              className="slds-avatar slds-avatar_x-small slds-avatar_circle slds-m-right_xx-small"
+            >
+              <img
+                alt="Jack Rogers"
+                src="/assets/images/avatar1.jpg"
+                title="Jack Rogers"
+              />
+            </span>
+            <a
+              href="javascript:void(0);"
+            >
+              Jack Rogers
+            </a>
+          </div>
+          <button
+            aria-haspopup={undefined}
+            className="slds-button slds-button_icon"
+            id={undefined}
+            title="Edit: Assigned To"
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-button__icon slds-button__icon_hint"
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#edit"
+              />
+            </svg>
+            <span
+              className="slds-assistive-text"
+            >
+              Edit: Assigned To
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div
+      className="slds-form__item"
+      role="listitem"
+    >
+      <div
+        className="slds-form-element slds-form-element_edit slds-form-element_readonly slds-hint-parent"
+        role={undefined}
+      >
+        <span
+          className="slds-form-element__label"
+          id={undefined}
+        >
+          Team Name
+        </span>
+        <div
+          className="slds-form-element__control"
+        >
+          <div
+            className="slds-form-element__static"
+          >
+            <a
+              href="javascript:void(0);"
+            >
+              Salesforce Lightning Design System
+            </a>
+          </div>
+          <button
+            aria-haspopup={undefined}
+            className="slds-button slds-button_icon"
+            id={undefined}
+            title="Edit: Team Name"
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-button__icon slds-button__icon_hint"
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#edit"
+              />
+            </svg>
+            <span
+              className="slds-assistive-text"
+            >
+              Edit: Team Name
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="slds-form__row"
+  >
+    <div
+      className="slds-form__item"
+      role="listitem"
+    >
+      <div
+        className="slds-form-element slds-form-element_edit slds-form-element_readonly slds-hint-parent"
+        role={undefined}
+      >
+        <span
+          className="slds-form-element__label"
+          id={undefined}
+        >
+          Security Assessment Required?
+        </span>
+        <div
+          className="slds-form-element__control"
+        >
+          <div
+            className="slds-form-element__static"
+          >
+            False
+          </div>
+          <button
+            aria-haspopup={undefined}
+            className="slds-button slds-button_icon"
+            id={undefined}
+            title="Edit: Security Assessment Required?"
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-button__icon slds-button__icon_hint"
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#edit"
+              />
+            </svg>
+            <span
+              className="slds-assistive-text"
+            >
+              Edit: Security Assessment Required?
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div
+      className="slds-form__item"
+      role="listitem"
+    >
+      <div
+        className="slds-form-element slds-form-element_edit slds-form-element_readonly slds-hint-parent"
+        role={undefined}
+      >
+        <span
+          className="slds-form-element__label"
+          id={undefined}
+        >
+          Status
+        </span>
+        <div
+          className="slds-form-element__control"
+        >
+          <div
+            className="slds-form-element__static"
+          />
+          <button
+            aria-haspopup={undefined}
+            className="slds-button slds-button_icon"
+            id={undefined}
+            title="Edit: Status"
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-button__icon slds-button__icon_hint"
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#edit"
+              />
+            </svg>
+            <span
+              className="slds-assistive-text"
+            >
+              Edit: Status
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="slds-form__row"
+  >
+    <div
+      className="slds-form__item"
+      role="listitem"
+    >
+      <div
+        className="slds-form-element slds-form-element_edit slds-form-element_readonly slds-hint-parent"
+        role={undefined}
+      >
+        <span
+          className="slds-form-element__label"
+          id={undefined}
+        >
+          Personalization Settings
+        </span>
+        <div
+          className="slds-form-element__control"
+        >
+          <div
+            className="slds-form-element__static"
+          >
+            Disable end user personalization
+          </div>
+          <button
+            aria-haspopup={undefined}
+            className="slds-button slds-button_icon"
+            id={undefined}
+            title="Edit: Personalization Settings"
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-button__icon slds-button__icon_hint"
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#edit"
+              />
+            </svg>
+            <span
+              className="slds-assistive-text"
+            >
+              Edit: Personalization Settings
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div
+      className="slds-form__item"
+      role="listitem"
+    >
+      
+    </div>
+  </div>
+  <div
+    className="slds-form__row"
+  >
+    <div
+      className="slds-form__item"
+      role="listitem"
+    >
+      <div
+        className="slds-form-element slds-form-element_edit slds-form-element_readonly slds-hint-parent"
+        role={undefined}
+      >
+        <span
+          className="slds-form-element__label"
+          id={undefined}
+        >
+          SLA Serial Number
+        </span>
+        <div
+          className="slds-form-element__icon"
+        >
+          <button
+            aria-describedby={undefined}
+            aria-haspopup={undefined}
+            className="slds-button slds-button_icon"
+            id={undefined}
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-button__icon"
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#info"
+              />
+            </svg>
+            <span
+              className="slds-assistive-text"
+            >
+              Help
+            </span>
+          </button>
+        </div>
+        <div
+          className="slds-form-element__control"
+        >
+          <div
+            className="slds-form-element__static"
+          >
+            5367
+          </div>
+          <button
+            aria-haspopup={undefined}
+            className="slds-button slds-button_icon"
+            id={undefined}
+            title="Edit: SLA Serial Number"
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-button__icon slds-button__icon_hint"
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#edit"
+              />
+            </svg>
+            <span
+              className="slds-assistive-text"
+            >
+              Edit: SLA Serial Number
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div
+      className="slds-form__item"
+      role="listitem"
+    >
+      <div
+        className="slds-form-element slds-form-element_edit slds-form-element_readonly slds-hint-parent"
+        role={undefined}
+      >
+        <span
+          className="slds-form-element__label"
+          id={undefined}
+        >
+          SLA Expiration Date
+        </span>
+        <div
+          className="slds-form-element__control"
+        >
+          <div
+            className="slds-form-element__static"
+          >
+            1/1/2018
+          </div>
+          <button
+            aria-haspopup={undefined}
+            className="slds-button slds-button_icon"
+            id={undefined}
+            title="Edit: SLA Expiration Date"
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-button__icon slds-button__icon_hint"
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#edit"
+              />
+            </svg>
+            <span
+              className="slds-assistive-text"
+            >
+              Edit: SLA Expiration Date
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="slds-form__row"
+  >
+    <div
+      className="slds-form__item"
+      role="listitem"
+    >
+      <div
+        className="slds-form-element slds-form-element_edit slds-form-element_readonly slds-hint-parent"
+        role={undefined}
+      >
+        <span
+          className="slds-form-element__label"
+          id={undefined}
+        >
+          Location
+        </span>
+        <div
+          className="slds-form-element__control"
+        >
+          <div
+            className="slds-form-element__static"
+          >
+            10.283, 54.293
+          </div>
+          <button
+            aria-haspopup={undefined}
+            className="slds-button slds-button_icon"
+            id={undefined}
+            title="Edit: Location"
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-button__icon slds-button__icon_hint"
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#edit"
+              />
+            </svg>
+            <span
+              className="slds-assistive-text"
+            >
+              Edit: Location
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div
+      className="slds-form__item"
+      role="listitem"
+    >
+      <div
+        className="slds-form-element slds-form-element_edit slds-form-element_readonly slds-hint-parent"
+        role={undefined}
+      >
+        <span
+          className="slds-form-element__label"
+          id={undefined}
+        >
+          Selected Languages
+        </span>
+        <div
+          className="slds-form-element__control"
+        >
+          <div
+            className="slds-form-element__static"
+          >
+            Arabic, Chinese, English, German
+          </div>
+          <button
+            aria-haspopup={undefined}
+            className="slds-button slds-button_icon"
+            id={undefined}
+            title="Edit: Selected Languages"
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-button__icon slds-button__icon_hint"
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#edit"
+              />
+            </svg>
+            <span
+              className="slds-assistive-text"
+            >
+              Edit: Selected Languages
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="slds-form__row"
+  >
+    <div
+      className="slds-form__item"
+      role="listitem"
+    >
+      <div
+        className="slds-form-element slds-form-element_edit slds-form-element_readonly slds-hint-parent"
+        role={undefined}
+      >
+        <span
+          className="slds-form-element__label"
+          id={undefined}
+        >
+          <abbr
+            className="slds-required"
+            title="required"
+          >
+            * 
+             
+          </abbr>
+          Billing Address
+        </span>
+        <div
+          className="slds-form-element__icon"
+        >
+          <button
+            aria-describedby={undefined}
+            aria-haspopup={undefined}
+            className="slds-button slds-button_icon"
+            id={undefined}
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-button__icon"
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#info"
+              />
+            </svg>
+            <span
+              className="slds-assistive-text"
+            >
+              Help
+            </span>
+          </button>
+        </div>
+        <div
+          className="slds-form-element__control"
+        >
+          <div
+            className="slds-form-element__static"
+          >
+            <a
+              href="javascript:void(0);"
+            >
+              525 S. Lexington Ave
+              <br />
+              Burlington, NC 27215
+              <br />
+              USA
+              <br />
+            </a>
+          </div>
+          <button
+            aria-haspopup={undefined}
+            className="slds-button slds-button_icon"
+            id={undefined}
+            title="Edit: Billing Address"
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-button__icon slds-button__icon_hint"
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#edit"
+              />
+            </svg>
+            <span
+              className="slds-assistive-text"
+            >
+              Edit: Billing Address
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div
+      className="slds-form__item"
+      role="listitem"
+    >
+      <div
+        className="slds-form-element slds-form-element_edit slds-form-element_readonly slds-hint-parent"
+        role={undefined}
+      >
+        <span
+          className="slds-form-element__label"
+          id={undefined}
+        >
+          Shipping Address
+        </span>
+        <div
+          className="slds-form-element__control"
+        >
+          <div
+            className="slds-form-element__static"
+          >
+            <a
+              href="javascript:void(0);"
+            >
+              312 Constitution Place
+              <br />
+              Austin, TX 78767
+              <br />
+              USA
+              <br />
+            </a>
+          </div>
+          <button
+            aria-haspopup={undefined}
+            className="slds-button slds-button_icon"
+            id={undefined}
+            title="Edit: Shipping Address"
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-button__icon slds-button__icon_hint"
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#edit"
+              />
+            </svg>
+            <span
+              className="slds-assistive-text"
+            >
+              Edit: Shipping Address
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="slds-form__row"
+  >
+    <div
+      className="slds-form__item"
+      role="listitem"
+    >
+      <div
+        className="slds-form-element slds-form-element_edit slds-form-element_readonly slds-hint-parent slds-form-element_1-col"
+        role={undefined}
+      >
+        <span
+          className="slds-form-element__label"
+          id={undefined}
+        >
+          Description
+        </span>
+        <div
+          className="slds-form-element__control"
+        >
+          <div
+            className="slds-form-element__static slds-text-longform"
+          >
+            Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Etiam porta sem malesuada magna mollis euismod.
+            <br />
+          </div>
+          <button
+            aria-haspopup={undefined}
+            className="slds-button slds-button_icon"
+            id={undefined}
+            title="Edit: Description"
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-button__icon slds-button__icon_hint"
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#edit"
+              />
+            </svg>
+            <span
+              className="slds-assistive-text"
+            >
+              Edit: Description
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Stacked Form Element renders simple stacked form elements 1`] = `
+<div
+  className="slds-form"
+>
+  <div
+    className="slds-form-element slds-form-element_stacked"
+    role={undefined}
+  >
+    <label
+      className="slds-form-element__label"
+      htmlFor="input-id-01"
+      id={undefined}
+    >
+      Text Input
+    </label>
+    <div
+      className="slds-form-element__control"
+    >
+      <input
+        className="slds-input"
+        defaultValue={undefined}
+        id="input-id-01"
+        placeholder={undefined}
+        readOnly={undefined}
+        type="text"
+      />
+    </div>
+  </div>
+  <div
+    className="slds-form-element slds-form-element_stacked"
+    role={undefined}
+  >
+    <label
+      className="slds-form-element__label"
+      htmlFor="input-id-02"
+      id={undefined}
+    >
+      Textarea Input
+    </label>
+    <div
+      className="slds-form-element__control"
+    >
+      <textarea
+        className="slds-textarea"
+        id="input-id-02"
+        placeholder="Placeholder Text"
+      />
+    </div>
+  </div>
+  <fieldset
+    className="slds-form-element slds-form-element_stacked"
+    id={undefined}
+  >
+    <legend
+      className="slds-form-element__legend slds-form-element__label"
+    >
+      Checkbox Group label
+    </legend>
+    <div
+      className="slds-form-element__control"
+    >
+      <div
+        className="slds-checkbox"
+      >
+        <input
+          aria-describedby={undefined}
+          aria-labelledby={null}
+          defaultChecked={undefined}
+          disabled={undefined}
+          id="checkbox-1"
+          name="default"
+          tabIndex={undefined}
+          type="checkbox"
+          value="checkbox-1"
+        />
+        <label
+          className="slds-checkbox__label"
+          htmlFor="checkbox-1"
+          id={undefined}
+        >
+          <span
+            className="slds-checkbox_faux"
+          />
+          <span
+            className="slds-form-element__label"
+          >
+            All opportunities owned by you
+          </span>
+        </label>
+      </div>
+      <div
+        className="slds-checkbox"
+      >
+        <input
+          aria-describedby={undefined}
+          aria-labelledby={null}
+          defaultChecked={undefined}
+          disabled={undefined}
+          id="checkbox-2"
+          name="default"
+          tabIndex={undefined}
+          type="checkbox"
+          value="checkbox-2"
+        />
+        <label
+          className="slds-checkbox__label"
+          htmlFor="checkbox-2"
+          id={undefined}
+        >
+          <span
+            className="slds-checkbox_faux"
+          />
+          <span
+            className="slds-form-element__label"
+          >
+            All contacts in the account owned by you
+          </span>
+        </label>
+      </div>
+    </div>
+  </fieldset>
+  <fieldset
+    className="slds-form-element slds-form-element_stacked"
+    id={undefined}
+  >
+    <legend
+      className="slds-form-element__legend slds-form-element__label"
+    >
+      Radio Group label
+    </legend>
+    <div
+      className="slds-form-element__control"
+    >
+      <span
+        className="slds-radio"
+      >
+        <input
+          aria-describedby={undefined}
+          aria-labelledby={null}
+          defaultChecked={undefined}
+          disabled={undefined}
+          id="radio-1"
+          name="options"
+          tabIndex={undefined}
+          type="radio"
+          value="radio-1"
+        />
+        <label
+          className="slds-radio__label"
+          htmlFor="radio-1"
+          id={undefined}
+        >
+          <span
+            className="slds-radio_faux"
+          />
+          <span
+            className="slds-form-element__label"
+          >
+            Lead Generation
+          </span>
+        </label>
+      </span>
+      <span
+        className="slds-radio"
+      >
+        <input
+          aria-describedby={undefined}
+          aria-labelledby={null}
+          defaultChecked={undefined}
+          disabled={undefined}
+          id="radio-2"
+          name="options"
+          tabIndex={undefined}
+          type="radio"
+          value="radio-2"
+        />
+        <label
+          className="slds-radio__label"
+          htmlFor="radio-2"
+          id={undefined}
+        >
+          <span
+            className="slds-radio_faux"
+          />
+          <span
+            className="slds-form-element__label"
+          >
+            Education Leads
+          </span>
+        </label>
+      </span>
+    </div>
+  </fieldset>
 </div>
 `;

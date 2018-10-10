@@ -22,9 +22,13 @@
   display: inline-block;
   color: $color-text-label;
   font-size: $form-label-font-size;
-  margin-right: $spacing-x-small;
+  padding-right: $spacing-x-small;
   padding-top: $spacing-xx-small;
   margin-bottom: $spacing-xxx-small;
+  // IE11 fallback
+  word-break: break-all; // stylelint-disable declaration-block-no-duplicate-properties
+  // Modern browsers
+  word-break: break-word;
 
   &:empty {
     margin: 0;
@@ -39,6 +43,7 @@
 .slds-form-element__control {
   // This clear:left is due to the label of the form element being set to float: left since we don't know if the help-text icon is present in the DOM. Since legend elements can only be floated to modifiy layout to accomodate the help-text icon, we need to make sure the control stacks below the label by default
   clear: left;
+  position: relative;
 
   // Force radios and checkboxes to be on own line when there are multiples in a group
   .slds-radio,
@@ -98,6 +103,7 @@
 .slds-form-element_readonly {
   flex-basis: 0%;
   border-bottom: $border-width-thin solid $color-border;
+  margin-bottom: 0;
 
   .slds-form-element__control {
     padding-top: $spacing-xxx-small;
@@ -150,7 +156,7 @@
   }
 
   &:empty {
-    min-height: calc(#{$var-font-size-7} + 1px); // 20px|22px + 1px
+    min-height: calc(#{$var-font-size-7} + 1px); // 22px|20px + 1px
     vertical-align: bottom;
   }
 

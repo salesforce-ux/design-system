@@ -17,8 +17,14 @@ import {
   Legend,
   FormElement
 } from '../';
+import { CompoundFormElement, CompoundFormRow } from '../compound/';
 import { Input } from '../../input/base/example';
 import ButtonIcon from '../../button-icons/';
+import * as StackedExamples from '../stacked/example';
+import * as HorizontalExamples from '../horizontal/example';
+import * as CompoundExamples from '../compound/example';
+import * as AddressExamples from '../address/example';
+import { getDisplayElementById } from '../../../shared/helpers';
 
 const { matchesMarkup } = createHelpers(__dirname);
 
@@ -176,5 +182,82 @@ describe('Form Element Composition', () => {
           title="Edit: Status"
         />
       </FormElement>
+    ));
+});
+
+describe('Stacked Form Element', () => {
+  it('renders simple stacked form elements', () =>
+    matchesMarkup(
+      getDisplayElementById(StackedExamples.examples, 'simple-stacked')
+    ));
+  it('renders deprecated stacked form elements - view mode', () =>
+    matchesMarkup(
+      getDisplayElementById(StackedExamples.examples, 'deprecated-view-stacked')
+    ));
+  it('renders deprecated stacked form elements - edit mode', () =>
+    matchesMarkup(
+      getDisplayElementById(StackedExamples.examples, 'deprecated-view-stacked')
+    ));
+});
+
+describe('Horizontal Form Element', () => {
+  it('renders simple horizontal form elements', () =>
+    matchesMarkup(
+      getDisplayElementById(HorizontalExamples.examples, 'simple-horizontal')
+    ));
+  it('renders deprecated horizontal form elements - view mode', () =>
+    matchesMarkup(
+      getDisplayElementById(
+        HorizontalExamples.examples,
+        'deprecated-view-horizontal'
+      )
+    ));
+  it('renders deprecated horizontal form elements - edit mode', () =>
+    matchesMarkup(
+      getDisplayElementById(
+        HorizontalExamples.examples,
+        'deprecated-edit-horizontal'
+      )
+    ));
+});
+
+describe('Compound Form Element', () => {
+  it('renders simple compound form element', () =>
+    matchesMarkup(CompoundExamples.default));
+  it('renders address compound form element', () =>
+    matchesMarkup(AddressExamples.default));
+  it('render compound form element wrapper', () =>
+    matchesMarkup(<CompoundFormElement>content</CompoundFormElement>));
+  it('render compound form element wrapper with legend', () =>
+    matchesMarkup(
+      <CompoundFormElement labelContent="label">content</CompoundFormElement>
+    ));
+  it('render compound form element wrapper with legend', () =>
+    matchesMarkup(
+      <CompoundFormElement labelContent="label">content</CompoundFormElement>
+    ));
+  it('render compound form element wrapper with stacked form elements', () =>
+    matchesMarkup(
+      <CompoundFormElement isStacked>content</CompoundFormElement>
+    ));
+  it('render compound form element wrapper with stacked form elements', () =>
+    matchesMarkup(
+      <CompoundFormElement isStacked>content</CompoundFormElement>
+    ));
+  it('render compound form element wrapper with horizontal form elements', () =>
+    matchesMarkup(
+      <CompoundFormElement isHorizontal>content</CompoundFormElement>
+    ));
+  it('render compound form element wrapper with required form elements', () =>
+    matchesMarkup(
+      <CompoundFormElement isRequired>content</CompoundFormElement>
+    ));
+  it('render compound form element row', () =>
+    matchesMarkup(<CompoundFormRow isRequired>content</CompoundFormRow>));
+  it('render address compound form element', () =>
+    matchesMarkup(<CompoundFormRow isAddress>content</CompoundFormRow>));
+  it('render deprecated compound form element', () =>
+    matchesMarkup(
+      getDisplayElementById(CompoundExamples.examples, 'deprecated-stacked')
     ));
 });

@@ -3,6 +3,26 @@
 # Form Element Release Notes
 
 <!-- ## [Unreleased] -->
+## 2.8.0
+
+### Added
+- Added form classes for rows and columns, `slds-form__row` and `slds-form__item`
+- Added `slds-form-element_stacked` to manage stacked form elements
+- Added `slds-form-element_horizontal` to manage horizontal form elements
+- Added `slds-is-edited` class to indicate if a form element has been edited but not saved
+- Added `slds-form-element_undo` to wrap the undo button icon when a form element has been edited but not saved
+- Added support for single column horizontal form elements with `slds-form-element_1-col`, used to re-distribute the ratio of label to control
+- Added `slds-form-element_compound` to manage compound form elements
+- Added `slds-form-element_address` for address specific compound form elements
+
+### Changed
+- Added spacing around `slds-form-element` depending on densification settings
+
+### Deprecated
+- Deprecated `slds-form_stacked` for `slds-form-element_stacked`
+- Deprecated `slds-form_horizontal` for `slds-form-element_horizontal`
+- Deprecated `slds-form_compound` for `slds-form-element_compound`
+
 ## 2.7.4
 
 ### Added

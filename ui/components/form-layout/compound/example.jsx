@@ -15,6 +15,7 @@ export const CompoundForm = props => {
         hasCompoundFields
         hasTooltip={hasTooltip}
         isRequired={isRequired}
+        isDeprecated
         label="Location"
       >
         <div className="slds-form-element__group">
@@ -36,7 +37,12 @@ export const CompoundForm = props => {
           </div>
         </div>
       </Fieldset>
-      <Fieldset hasCompoundFields label="Shipping Address" isAddress>
+      <Fieldset
+        hasCompoundFields
+        label="Shipping Address"
+        isAddress
+        isDeprecated
+      >
         <div className="slds-form-element__group">
           <div className="slds-form-element__row">
             <FormElement

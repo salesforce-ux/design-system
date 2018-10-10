@@ -286,7 +286,7 @@ export let examples = [
     element: (
       <RecordDetail
         direction="horizontal"
-        snapshot={Snapshot.ObjectFieldTypes}
+        snapshot={Snapshot.ObjectFieldTypesHorizontal}
         isViewMode
         hasInlineEdit
       />
@@ -298,7 +298,7 @@ export let examples = [
     element: (
       <RecordDetail
         direction="horizontal"
-        snapshot={Snapshot.ObjectFieldTypes}
+        snapshot={Snapshot.ObjectFieldTypesHorizontal}
       />
     )
   }

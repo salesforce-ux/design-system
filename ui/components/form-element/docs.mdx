@@ -9,9 +9,15 @@ import { Checkbox } from '../checkbox/base/example';
 import { Textarea } from '../textarea/base/example';
 import { Avatar } from '../avatar/base/example';
 import { Form } from '../form-layout/base/example';
-import { CompoundForm } from '../form-layout/compound/example';
+import { CompoundFormElement, CompoundFormRow } from './compound/';
+import { RecordDetailRow, RecordDetailItem } from './record-detail/';
 import RecordDetail from './record-detail/';
 import * as Snapshot from './record-detail/snapshots.data';
+import * as StackedExamples from './stacked/example';
+import * as HorizontalExamples from './horizontal/example';
+import * as CompoundExamples from './compound/example';
+import * as AddressExamples from './address/example';
+import { getDisplayElementById } from '../../shared/helpers';
 
 <div className="lead doc">
   An HTML form element contains a HTML label and element
@@ -193,25 +199,95 @@ If an error has occurred while submitting a form, the form element with an error
 
 ## Layout
 
-If your form has more than one form element, you can switch the direction of `slds-form-element__label` and `slds-form-element__control` by applying `slds-form_stacked` for stacked labels and `slds-form_horizontal` for left-aligned labels. For optimal spacing and layout, ensure the `slds-form-element` class is present on each element within the form.
+If your form has more than one form element, you can switch the direction of `slds-form-element__label` and `slds-form-element__control` by applying `slds-form-element_stacked` for stacked labels and `slds-form-element_horizontal` for left-aligned labels. For optimal spacing and layout, ensure the `slds-form-element` class is present on each element within the form.
 
 ### Stacked
 
-To vertically stack `<label>` and `<input>` pairs, place `slds-form_stacked` on the wrapper of the form for optimal spacing.
+To vertically stack `<label>` and `<input>` pairs, place `slds-form-element_stacked` on the `div` with the class of `slds-form-element` for optimal spacing.
 
 <Example title="Form Layout - Stacked">
   <CodeView>
-    <Form isStacked/>
+    {getDisplayElementById(StackedExamples.examples, "simple-stacked")}
   </CodeView>
 </Example>
 
 ### Horizontal
 
-To horizontally align a `<label>` and `<input>`, use the `slds-form_horizontal` class on the wrapper around the form elements. The `slds-form-element__label` takes up 33% of the width, and the `slds-form-element__control` uses the remaining 66%.
+To horizontally align a `<label>` and `<input>`, use the `slds-form-element_horizontal` class on the `div` with the class of `slds-form-element`. The `slds-form-element__label` takes up 33% of the width, and the `slds-form-element__control` uses the remaining 66%.
 
 <Example title="Form Layout - Horizontal">
   <CodeView>
-    <Form isHorizontal/>
+    {getDisplayElementById(HorizontalExamples.examples, "simple-horizontal")}
+  </CodeView>
+</Example>
+
+#### Single Column Support
+
+When using `slds-form-element_horizontal`, you might find that the 33/66% distribution of the label to control might be too much in a single column form when displayed in a larger region. Another scenario where single column support would be useful is when a form element spans 100% while the other form elements in your form are 50/50 split. To reduce the distribution and/or align with 50/50 split form elements, adding the class `slds-form-element_1-col` to `slds-form-element` will re-distribute the layout.
+
+##### Standalone
+
+<Example title="Form Layout - Horizontal - Single Column standalone">
+  <CodeView>
+    <FormElement
+      isHorizontal
+      labelContent="Description"
+      inputId="single-form-element-id-01"
+      isEditing
+      column={1}
+    >
+      <Textarea
+        id="single-form-element-id-01"
+        defaultValue="Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Etiam porta sem malesuada magna mollis euismod."
+      />
+    </FormElement>
+  </CodeView>
+</Example>
+
+##### With 50/50 split
+
+<Example title="Form Layout - Horizontal - Single Column combo">
+  <CodeView>
+    <div className="slds-form" role="list">
+      <RecordDetailRow>
+        <RecordDetailItem>
+          <FormElement
+            isHorizontal
+            labelContent="Label"
+            inputId="single-form-element-id-02"
+            isEditing
+          >
+            <Input id="single-form-element-id-02" />
+          </FormElement>
+        </RecordDetailItem>
+        <RecordDetailItem>
+          <FormElement
+            isHorizontal
+            labelContent="Label"
+            inputId="single-form-element-id-03"
+            isEditing
+          >
+            <Input id="single-form-element-id-03" />
+          </FormElement>
+        </RecordDetailItem>
+      </RecordDetailRow>
+      <RecordDetailRow>
+        <RecordDetailItem>
+          <FormElement
+            isHorizontal
+            labelContent="Description"
+            inputId="single-form-element-id-04"
+            isEditing
+            column={1}
+          >
+            <Textarea
+              id="single-form-element-id-04"
+              defaultValue="Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Etiam porta sem malesuada magna mollis euismod."
+            />
+          </FormElement>
+        </RecordDetailItem>
+      </RecordDetailRow>
+    </div>
   </CodeView>
 </Example>
 
@@ -219,7 +295,7 @@ To horizontally align a `<label>` and `<input>`, use the `slds-form_horizontal` 
 
 A compound form is a grouping of several form elements described by a label/title. The compound form should be implemented as a `<fieldset>`, where the label/title is implemented as a `<legend>` element.
 
-The `<fieldset>` **_requires_** the class `slds-form_compound`. This class handles the layout and wrapping of the form elements that are grouped together.
+The `<fieldset>` **_requires_** the class `slds-form-element_compound`. This class handles the layout and wrapping of the form elements that are grouped together.
 
 The `<legend>` element **_requires_** the class `slds-form-element__legend`. Legend elements can only accept a limited amount of CSS properties so this class is there to help manage its layout.
 
@@ -239,30 +315,46 @@ Each row of a compound field should be wrapped in a `<div>` with the class `slds
 Each field inside of a compound row can be explicitly sized by using a sizing class, e.g. `slds-size_1-of-2`.
 
 <CodeBlock toggleCode={false}>
-  <div class="slds-form-element slds-size_1-of-2">...</div>
+  <CompoundFormRow>
+    <div class="slds-size_1-of-2">...</div>
+  </CompoundFormRow>
 </CodeBlock>
 
 <Example title="Form Layout - Compound">
   <CodeView style={{maxWidth:'400px'}}>
-    <CompoundForm />
+    {CompoundExamples.default}
+  </CodeView>
+</Example>
+
+#### Address
+
+Though an address form is utilizing the `slds-form-element_compound` class, we need to also add the `slds-form-element_address` class to the component. We modify some of the behavior of an address form with this class.
+
+<Example title="Form Layout - Compound - Address">
+  <CodeView style={{maxWidth:'400px'}}>
+    {AddressExamples.default}
   </CodeView>
 </Example>
 
 ## Usage Examples
 
-### Record Detail
+### Record Form
 
-A record detail is a series of rows created by `slds-grid`. Inside of each row contains up to 2 inline-editable form element.
+A record form is a series of rows created by `slds-form__row`. Inside of each row contains up to 2 inline-editable form element. Each item inside of `slds-form__row` is required to be wrapped in a `<div>` with the class `slds-form__item`.
 
 <Blockquote type="a11y" header="Accessibility Requirement">
-  Due to the nature of how the record details form is composed, we need to notify screen readers that this is a list by adding <code className="doc">role="list"</code> to the <code className="doc">slds-form</code> element. Every column inside of each row should get <code className="doc">role="listitem"</code> to identify itself as items of the list.
+  Due to the nature of how the record form is composed, we need to notify screen readers that this is a list by adding <code className="doc">role="list"</code> to the <code className="doc">slds-form</code> element. Every column inside of each row should get <code className="doc">role="listitem"</code> to identify itself as items of the list.
 </Blockquote>
 
 #### View Mode
 
 When in view/readonly mode, it is *required* to have the class `slds-form-element_readonly` on the `slds-form-element` element. This class will provide styles for scanability and spacing.
 
+If inline-edit mode is enabled, you will also need to add `slds-form-element_edit` to the `slds-form-element` to accommodate the space for the edit button icon.
+
 ##### Stacked Alignment
+
+When you want the form elements inside of your record form to be stacked. Each `slds-form-element` should also get the class `slds-form-element_stacked`.
 
 <Example title="Form Element - Record Detail - View Mode">
   <CodeView>
@@ -272,11 +364,11 @@ When in view/readonly mode, it is *required* to have the class `slds-form-elemen
 
 ##### Horizontal Alignment
 
-By adding the class `slds-form_horizontal` to the top level `slds-form` element, your form can switch from stacked to left-aligned, horizontal labels in order to reduce vertical space.
+By adding the class `slds-form-element_horizontal` to every `slds-form-element`, your form can switch from stacked to left-aligned, horizontal labels in order to reduce vertical space.
 
 <Example title="Form Element - Record Detail - View Mode - Horizontal">
   <CodeView>
-    <RecordDetail snapshot={Snapshot.ObjectFieldTypes} isViewMode hasInlineEdit direction="horizontal" />
+    <RecordDetail snapshot={Snapshot.ObjectFieldTypesHorizontal} isViewMode hasInlineEdit direction="horizontal" />
   </CodeView>
 </Example>
 
@@ -302,6 +394,6 @@ The form content found inside of `slds-form-element__control` should be replaced
 
 <Example title="Form Element - Record Detail - Edit Mode - Horizontal">
   <CodeView>
-    <RecordDetail snapshot={Snapshot.ObjectFieldTypes} direction="horizontal" />
+    <RecordDetail snapshot={Snapshot.ObjectFieldTypesHorizontal} direction="horizontal" />
   </CodeView>
 </Example>

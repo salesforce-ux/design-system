@@ -14,10 +14,12 @@ exports[`Expression Base renders the default expression 1`] = `
   >
     <div
       className="slds-form-element"
+      role={undefined}
     >
       <label
         className="slds-form-element__label"
         htmlFor="combobox-id-1"
+        id={undefined}
       >
         Take Action When
       </label>
@@ -246,10 +248,12 @@ exports[`Expression Base renders the default expression 1`] = `
           >
             <div
               className="slds-form-element"
+              role={undefined}
             >
               <label
                 className="slds-form-element__label"
                 htmlFor="combobox-id-2"
+                id={undefined}
               >
                 Resource
               </label>
@@ -434,10 +438,12 @@ exports[`Expression Base renders the default expression 1`] = `
           >
             <div
               className="slds-form-element"
+              role={undefined}
             >
               <label
                 className="slds-form-element__label"
                 htmlFor="combobox-id-3"
+                id={undefined}
               >
                 Operator
               </label>
@@ -740,10 +746,12 @@ exports[`Expression Base renders the disabled initial state 1`] = `
   >
     <div
       className="slds-form-element"
+      role={undefined}
     >
       <label
         className="slds-form-element__label"
         htmlFor="combobox-id-4"
+        id={undefined}
       >
         Take Action When
       </label>
@@ -972,10 +980,12 @@ exports[`Expression Base renders the disabled initial state 1`] = `
           >
             <div
               className="slds-form-element"
+              role={undefined}
             >
               <label
                 className="slds-form-element__label"
                 htmlFor="combobox-id-5"
+                id={undefined}
               >
                 Resource
               </label>
@@ -1160,10 +1170,12 @@ exports[`Expression Base renders the disabled initial state 1`] = `
           >
             <div
               className="slds-form-element"
+              role={undefined}
             >
               <label
                 className="slds-form-element__label"
                 htmlFor="combobox-id-6"
+                id={undefined}
               >
                 Operator
               </label>
@@ -1466,10 +1478,12 @@ exports[`Expression Base renders with a custom logic value 1`] = `
   >
     <div
       className="slds-form-element"
+      role={undefined}
     >
       <label
         className="slds-form-element__label"
         htmlFor="combobox-id-31"
+        id={undefined}
       >
         Take Action When
       </label>
@@ -1698,10 +1712,12 @@ exports[`Expression Base renders with a custom logic value 1`] = `
           >
             <div
               className="slds-form-element"
+              role={undefined}
             >
               <label
                 className="slds-form-element__label"
                 htmlFor="combobox-id-32"
+                id={undefined}
               >
                 Resource
               </label>
@@ -1886,10 +1902,12 @@ exports[`Expression Base renders with a custom logic value 1`] = `
           >
             <div
               className="slds-form-element"
+              role={undefined}
             >
               <label
                 className="slds-form-element__label"
                 htmlFor="combobox-id-33"
+                id={undefined}
               >
                 Operator
               </label>
@@ -2192,10 +2210,12 @@ exports[`Expression Base renders with a resource selected 1`] = `
   >
     <div
       className="slds-form-element"
+      role={undefined}
     >
       <label
         className="slds-form-element__label"
         htmlFor="combobox-id-28"
+        id={undefined}
       >
         Take Action When
       </label>
@@ -2424,10 +2444,12 @@ exports[`Expression Base renders with a resource selected 1`] = `
           >
             <div
               className="slds-form-element"
+              role={undefined}
             >
               <label
                 className="slds-form-element__label"
                 htmlFor="combobox-id-29"
+                id={undefined}
               >
                 Resource
               </label>
@@ -2631,10 +2653,12 @@ exports[`Expression Base renders with a resource selected 1`] = `
           >
             <div
               className="slds-form-element"
+              role={undefined}
             >
               <label
                 className="slds-form-element__label"
                 htmlFor="combobox-id-30"
+                id={undefined}
               >
                 Operator
               </label>
@@ -2937,10 +2961,12 @@ exports[`Expression Base renders with all option selected 1`] = `
   >
     <div
       className="slds-form-element"
+      role={undefined}
     >
       <label
         className="slds-form-element__label"
         htmlFor="combobox-id-16"
+        id={undefined}
       >
         Take Action When
       </label>
@@ -3188,10 +3214,12 @@ exports[`Expression Base renders with all option selected 1`] = `
           >
             <div
               className="slds-form-element"
+              role={undefined}
             >
               <label
                 className="slds-form-element__label"
                 htmlFor="combobox-id-17"
+                id={undefined}
               >
                 Resource
               </label>
@@ -3376,10 +3404,12 @@ exports[`Expression Base renders with all option selected 1`] = `
           >
             <div
               className="slds-form-element"
+              role={undefined}
             >
               <label
                 className="slds-form-element__label"
                 htmlFor="combobox-id-18"
+                id={undefined}
               >
                 Operator
               </label>
@@ -3682,10 +3712,12 @@ exports[`Expression Base renders with always option selected 1`] = `
   >
     <div
       className="slds-form-element"
+      role={undefined}
     >
       <label
         className="slds-form-element__label"
         htmlFor="combobox-id-22"
+        id={undefined}
       >
         Take Action When
       </label>
@@ -3933,10 +3965,12 @@ exports[`Expression Base renders with always option selected 1`] = `
           >
             <div
               className="slds-form-element"
+              role={undefined}
             >
               <label
                 className="slds-form-element__label"
                 htmlFor="combobox-id-23"
+                id={undefined}
               >
                 Resource
               </label>
@@ -4121,10 +4155,12 @@ exports[`Expression Base renders with always option selected 1`] = `
           >
             <div
               className="slds-form-element"
+              role={undefined}
             >
               <label
                 className="slds-form-element__label"
                 htmlFor="combobox-id-24"
+                id={undefined}
               >
                 Operator
               </label>
@@ -4427,10 +4463,12 @@ exports[`Expression Base renders with any option selected 1`] = `
   >
     <div
       className="slds-form-element"
+      role={undefined}
     >
       <label
         className="slds-form-element__label"
         htmlFor="combobox-id-13"
+        id={undefined}
       >
         Take Action When
       </label>
@@ -4678,10 +4716,12 @@ exports[`Expression Base renders with any option selected 1`] = `
           >
             <div
               className="slds-form-element"
+              role={undefined}
             >
               <label
                 className="slds-form-element__label"
                 htmlFor="combobox-id-14"
+                id={undefined}
               >
                 Resource
               </label>
@@ -4866,10 +4906,12 @@ exports[`Expression Base renders with any option selected 1`] = `
           >
             <div
               className="slds-form-element"
+              role={undefined}
             >
               <label
                 className="slds-form-element__label"
                 htmlFor="combobox-id-15"
+                id={undefined}
               >
                 Operator
               </label>
@@ -5172,10 +5214,12 @@ exports[`Expression Base renders with custom logic 1`] = `
   >
     <div
       className="slds-form-element"
+      role={undefined}
     >
       <label
         className="slds-form-element__label"
         htmlFor="combobox-id-7"
+        id={undefined}
       >
         Take Action When
       </label>
@@ -5432,10 +5476,12 @@ exports[`Expression Base renders with custom logic 1`] = `
           >
             <div
               className="slds-form-element"
+              role={undefined}
             >
               <label
                 className="slds-form-element__label"
                 htmlFor="combobox-id-8"
+                id={undefined}
               >
                 Resource
               </label>
@@ -5620,10 +5666,12 @@ exports[`Expression Base renders with custom logic 1`] = `
           >
             <div
               className="slds-form-element"
+              role={undefined}
             >
               <label
                 className="slds-form-element__label"
                 htmlFor="combobox-id-9"
+                id={undefined}
               >
                 Operator
               </label>
@@ -5926,10 +5974,12 @@ exports[`Expression Base renders with custom option selected 1`] = `
   >
     <div
       className="slds-form-element"
+      role={undefined}
     >
       <label
         className="slds-form-element__label"
         htmlFor="combobox-id-19"
+        id={undefined}
       >
         Take Action When
       </label>
@@ -6177,10 +6227,12 @@ exports[`Expression Base renders with custom option selected 1`] = `
           >
             <div
               className="slds-form-element"
+              role={undefined}
             >
               <label
                 className="slds-form-element__label"
                 htmlFor="combobox-id-20"
+                id={undefined}
               >
                 Resource
               </label>
@@ -6365,10 +6417,12 @@ exports[`Expression Base renders with custom option selected 1`] = `
           >
             <div
               className="slds-form-element"
+              role={undefined}
             >
               <label
                 className="slds-form-element__label"
                 htmlFor="combobox-id-21"
+                id={undefined}
               >
                 Operator
               </label>
@@ -6671,10 +6725,12 @@ exports[`Expression Base renders with formula option selected 1`] = `
   >
     <div
       className="slds-form-element"
+      role={undefined}
     >
       <label
         className="slds-form-element__label"
         htmlFor="combobox-id-25"
+        id={undefined}
       >
         Take Action When
       </label>
@@ -6922,10 +6978,12 @@ exports[`Expression Base renders with formula option selected 1`] = `
           >
             <div
               className="slds-form-element"
+              role={undefined}
             >
               <label
                 className="slds-form-element__label"
                 htmlFor="combobox-id-26"
+                id={undefined}
               >
                 Resource
               </label>
@@ -7110,10 +7168,12 @@ exports[`Expression Base renders with formula option selected 1`] = `
           >
             <div
               className="slds-form-element"
+              role={undefined}
             >
               <label
                 className="slds-form-element__label"
                 htmlFor="combobox-id-27"
+                id={undefined}
               >
                 Operator
               </label>
@@ -7416,10 +7476,12 @@ exports[`Expression Base renders with legend text 1`] = `
   >
     <div
       className="slds-form-element"
+      role={undefined}
     >
       <label
         className="slds-form-element__label"
         htmlFor="combobox-id-10"
+        id={undefined}
       >
         Take Action When
       </label>
@@ -7651,10 +7713,12 @@ exports[`Expression Base renders with legend text 1`] = `
           >
             <div
               className="slds-form-element"
+              role={undefined}
             >
               <label
                 className="slds-form-element__label"
                 htmlFor="combobox-id-11"
+                id={undefined}
               >
                 Resource
               </label>
@@ -7839,10 +7903,12 @@ exports[`Expression Base renders with legend text 1`] = `
           >
             <div
               className="slds-form-element"
+              role={undefined}
             >
               <label
                 className="slds-form-element__label"
                 htmlFor="combobox-id-12"
+                id={undefined}
               >
                 Operator
               </label>
@@ -8270,10 +8336,12 @@ exports[`Expression Formula renders the default expression formula variant 1`] =
   >
     <div
       className="slds-form-element"
+      role={undefined}
     >
       <label
         className="slds-form-element__label"
         htmlFor="combobox-id-67"
+        id={undefined}
       >
         Take Action When
       </label>
@@ -8509,10 +8577,12 @@ exports[`Expression Formula renders the default expression formula variant 1`] =
             >
               <div
                 className="slds-form-element"
+                role={undefined}
               >
                 <label
                   className="slds-form-element__label slds-assistive-text"
                   htmlFor="combobox-id-68"
+                  id={undefined}
                 >
                   Insert a Resource
                 </label>
@@ -8527,10 +8597,12 @@ exports[`Expression Formula renders the default expression formula variant 1`] =
                     >
                       <div
                         className="slds-form-element"
+                        role={undefined}
                       >
                         <label
                           className="slds-form-element__label slds-assistive-text"
                           htmlFor="combobox-id-69"
+                          id={undefined}
                         >
                           Filter resources by:
                         </label>
@@ -8954,10 +9026,12 @@ exports[`Expression Formula renders the default expression formula variant 1`] =
             >
               <div
                 className="slds-form-element"
+                role={undefined}
               >
                 <label
                   className="slds-form-element__label slds-assistive-text"
                   htmlFor="combobox-id-70"
+                  id={undefined}
                 >
                   Insert a function
                 </label>
@@ -8972,10 +9046,12 @@ exports[`Expression Formula renders the default expression formula variant 1`] =
                     >
                       <div
                         className="slds-form-element"
+                        role={undefined}
                       >
                         <label
                           className="slds-form-element__label slds-assistive-text"
                           htmlFor="combobox-id-71"
+                          id={undefined}
                         >
                           Filter functions by:
                         </label>
@@ -9487,10 +9563,12 @@ exports[`Expression Formula renders the default expression formula with an optio
   >
     <div
       className="slds-form-element"
+      role={undefined}
     >
       <label
         className="slds-form-element__label"
         htmlFor="combobox-id-72"
+        id={undefined}
       >
         Take Action When
       </label>
@@ -9745,10 +9823,12 @@ exports[`Expression Formula renders the default expression formula with an optio
             >
               <div
                 className="slds-form-element"
+                role={undefined}
               >
                 <label
                   className="slds-form-element__label slds-assistive-text"
                   htmlFor="combobox-id-73"
+                  id={undefined}
                 >
                   Insert a Resource
                 </label>
@@ -9763,10 +9843,12 @@ exports[`Expression Formula renders the default expression formula with an optio
                     >
                       <div
                         className="slds-form-element"
+                        role={undefined}
                       >
                         <label
                           className="slds-form-element__label slds-assistive-text"
                           htmlFor="combobox-id-74"
+                          id={undefined}
                         >
                           Filter resources by:
                         </label>
@@ -10190,10 +10272,12 @@ exports[`Expression Formula renders the default expression formula with an optio
             >
               <div
                 className="slds-form-element"
+                role={undefined}
               >
                 <label
                   className="slds-form-element__label slds-assistive-text"
                   htmlFor="combobox-id-75"
+                  id={undefined}
                 >
                   Insert a function
                 </label>
@@ -10208,10 +10292,12 @@ exports[`Expression Formula renders the default expression formula with an optio
                     >
                       <div
                         className="slds-form-element"
+                        role={undefined}
                       >
                         <label
                           className="slds-form-element__label slds-assistive-text"
                           htmlFor="combobox-id-76"
+                          id={undefined}
                         >
                           Filter functions by:
                         </label>
@@ -10733,10 +10819,12 @@ exports[`Expression Group renders the default expression group 1`] = `
     >
       <div
         className="slds-form-element"
+        role={undefined}
       >
         <label
           className="slds-form-element__label"
           htmlFor="combobox-id-56"
+          id={undefined}
         >
           Take Action When
         </label>
@@ -10985,10 +11073,12 @@ exports[`Expression Group renders the default expression group with a row 1`] = 
     >
       <div
         className="slds-form-element"
+        role={undefined}
       >
         <label
           className="slds-form-element__label"
           htmlFor="combobox-id-64"
+          id={undefined}
         >
           Take Action When
         </label>
@@ -11220,10 +11310,12 @@ exports[`Expression Group renders the default expression group with a row 1`] = 
             >
               <div
                 className="slds-form-element"
+                role={undefined}
               >
                 <label
                   className="slds-form-element__label"
                   htmlFor="combobox-id-65"
+                  id={undefined}
                 >
                   Resource
                 </label>
@@ -11408,10 +11500,12 @@ exports[`Expression Group renders the default expression group with a row 1`] = 
             >
               <div
                 className="slds-form-element"
+                role={undefined}
               >
                 <label
                   className="slds-form-element__label"
                   htmlFor="combobox-id-66"
+                  id={undefined}
                 >
                   Operator
                 </label>
@@ -11706,10 +11800,12 @@ exports[`Expression Group renders the default expression group with all option s
     >
       <div
         className="slds-form-element"
+        role={undefined}
       >
         <label
           className="slds-form-element__label"
           htmlFor="combobox-id-59"
+          id={undefined}
         >
           Take Action When
         </label>
@@ -11977,10 +12073,12 @@ exports[`Expression Group renders the default expression group with always optio
     >
       <div
         className="slds-form-element"
+        role={undefined}
       >
         <label
           className="slds-form-element__label"
           htmlFor="combobox-id-60"
+          id={undefined}
         >
           Take Action When
         </label>
@@ -12248,10 +12346,12 @@ exports[`Expression Group renders the default expression group with any option s
     >
       <div
         className="slds-form-element"
+        role={undefined}
       >
         <label
           className="slds-form-element__label"
           htmlFor="combobox-id-58"
+          id={undefined}
         >
           Take Action When
         </label>
@@ -12519,10 +12619,12 @@ exports[`Expression Group renders the default expression group with custom optio
     >
       <div
         className="slds-form-element"
+        role={undefined}
       >
         <label
           className="slds-form-element__label"
           htmlFor="combobox-id-61"
+          id={undefined}
         >
           Take Action When
         </label>
@@ -12790,10 +12892,12 @@ exports[`Expression Group renders the default expression group with formula opti
     >
       <div
         className="slds-form-element"
+        role={undefined}
       >
         <label
           className="slds-form-element__label"
           htmlFor="combobox-id-62"
+          id={undefined}
         >
           Take Action When
         </label>
@@ -13061,10 +13165,12 @@ exports[`Expression Group renders the default expression group with group option
     >
       <div
         className="slds-form-element"
+        role={undefined}
       >
         <label
           className="slds-form-element__label"
           htmlFor="combobox-id-63"
+          id={undefined}
         >
           Take Action When
         </label>
@@ -13335,10 +13441,12 @@ exports[`Expression Group renders the default expression group with legend text 
     >
       <div
         className="slds-form-element"
+        role={undefined}
       >
         <label
           className="slds-form-element__label"
           htmlFor="combobox-id-57"
+          id={undefined}
         >
           Take Action When
         </label>
@@ -13639,10 +13747,12 @@ exports[`Expression List renders the default expression list 1`] = `
         >
           <div
             className="slds-form-element"
+            role={undefined}
           >
             <label
               className="slds-form-element__label"
               htmlFor="combobox-id-54"
+              id={undefined}
             >
               Resource
             </label>
@@ -13827,10 +13937,12 @@ exports[`Expression List renders the default expression list 1`] = `
         >
           <div
             className="slds-form-element"
+            role={undefined}
           >
             <label
               className="slds-form-element__label"
               htmlFor="combobox-id-55"
+              id={undefined}
             >
               Operator
             </label>
@@ -14185,10 +14297,12 @@ exports[`Expression Narrow Group renders the default expression narrow group 1`]
   >
     <div
       className="slds-form-element"
+      role={undefined}
     >
       <label
         className="slds-form-element__label"
         htmlFor="combobox-id-79"
+        id={undefined}
       >
         Take Action When
       </label>
@@ -14510,10 +14624,12 @@ exports[`Expression Narrow Group renders the default expression narrow with opti
   >
     <div
       className="slds-form-element"
+      role={undefined}
     >
       <label
         className="slds-form-element__label"
         htmlFor="combobox-id-80"
+        id={undefined}
       >
         Take Action When
       </label>
@@ -14837,10 +14953,12 @@ exports[`Expression Narrow renders the default expression narrow variant 1`] = `
       >
         <div
           className="slds-form-element"
+          role={undefined}
         >
           <label
             className="slds-form-element__label"
             htmlFor="combobox-id-77"
+            id={undefined}
           >
             Take Action When
           </label>
@@ -15163,10 +15281,12 @@ exports[`Expression Narrow renders the default expression narrow with option sel
       >
         <div
           className="slds-form-element"
+          role={undefined}
         >
           <label
             className="slds-form-element__label"
             htmlFor="combobox-id-78"
+            id={undefined}
           >
             Take Action When
           </label>
@@ -15488,10 +15608,12 @@ exports[`Expression Options renders the default expression options 1`] = `
 >
   <div
     className="slds-form-element"
+    role={undefined}
   >
     <label
       className="slds-form-element__label"
       htmlFor="combobox-id-50"
+      id={undefined}
     >
       Take Action When
     </label>
@@ -15706,10 +15828,12 @@ exports[`Expression Options renders the default expression options in a filter 1
 >
   <div
     className="slds-form-element"
+    role={undefined}
   >
     <label
       className="slds-form-element__label"
       htmlFor="combobox-id-52"
+      id={undefined}
     >
       Take Action When
     </label>
@@ -15924,10 +16048,12 @@ exports[`Expression Options renders the default expression options with a label 
 >
   <div
     className="slds-form-element"
+    role={undefined}
   >
     <label
       className="slds-form-element__label"
       htmlFor="combobox-id-51"
+      id={undefined}
     >
       When
     </label>
@@ -16142,10 +16268,12 @@ exports[`Expression Options renders the default expression options with an optio
 >
   <div
     className="slds-form-element"
+    role={undefined}
   >
     <label
       className="slds-form-element__label"
       htmlFor="combobox-id-53"
+      id={undefined}
     >
       Take Action When
     </label>
@@ -16395,10 +16523,12 @@ exports[`Expression Row renders the default row 1`] = `
       >
         <div
           className="slds-form-element"
+          role={undefined}
         >
           <label
             className="slds-form-element__label"
             htmlFor="combobox-id-34"
+            id={undefined}
           >
             Resource
           </label>
@@ -16583,10 +16713,12 @@ exports[`Expression Row renders the default row 1`] = `
       >
         <div
           className="slds-form-element"
+          role={undefined}
         >
           <label
             className="slds-form-element__label"
             htmlFor="combobox-id-35"
+            id={undefined}
           >
             Operator
           </label>
@@ -16863,10 +16995,12 @@ exports[`Expression Row renders the default row in a group 1`] = `
       >
         <div
           className="slds-form-element"
+          role={undefined}
         >
           <label
             className="slds-form-element__label"
             htmlFor="combobox-id-38"
+            id={undefined}
           >
             Resource
           </label>
@@ -17051,10 +17185,12 @@ exports[`Expression Row renders the default row in a group 1`] = `
       >
         <div
           className="slds-form-element"
+          role={undefined}
         >
           <label
             className="slds-form-element__label"
             htmlFor="combobox-id-39"
+            id={undefined}
           >
             Operator
           </label>
@@ -17331,10 +17467,12 @@ exports[`Expression Row renders the default row with a resource selected 1`] = `
       >
         <div
           className="slds-form-element"
+          role={undefined}
         >
           <label
             className="slds-form-element__label"
             htmlFor="combobox-id-46"
+            id={undefined}
           >
             Resource
           </label>
@@ -17538,10 +17676,12 @@ exports[`Expression Row renders the default row with a resource selected 1`] = `
       >
         <div
           className="slds-form-element"
+          role={undefined}
         >
           <label
             className="slds-form-element__label"
             htmlFor="combobox-id-47"
+            id={undefined}
           >
             Operator
           </label>
@@ -17818,10 +17958,12 @@ exports[`Expression Row renders the default row with an error 1`] = `
       >
         <div
           className="slds-form-element"
+          role={undefined}
         >
           <label
             className="slds-form-element__label"
             htmlFor="combobox-id-48"
+            id={undefined}
           >
             Resource
           </label>
@@ -18006,10 +18148,12 @@ exports[`Expression Row renders the default row with an error 1`] = `
       >
         <div
           className="slds-form-element"
+          role={undefined}
         >
           <label
             className="slds-form-element__label"
             htmlFor="combobox-id-49"
+            id={undefined}
           >
             Operator
           </label>
@@ -18292,10 +18436,12 @@ exports[`Expression Row renders the default row with button disabled 1`] = `
       >
         <div
           className="slds-form-element"
+          role={undefined}
         >
           <label
             className="slds-form-element__label"
             htmlFor="combobox-id-42"
+            id={undefined}
           >
             Resource
           </label>
@@ -18480,10 +18626,12 @@ exports[`Expression Row renders the default row with button disabled 1`] = `
       >
         <div
           className="slds-form-element"
+          role={undefined}
         >
           <label
             className="slds-form-element__label"
             htmlFor="combobox-id-43"
+            id={undefined}
           >
             Operator
           </label>
@@ -18760,10 +18908,12 @@ exports[`Expression Row renders the default row with input disabled 1`] = `
       >
         <div
           className="slds-form-element"
+          role={undefined}
         >
           <label
             className="slds-form-element__label"
             htmlFor="combobox-id-40"
+            id={undefined}
           >
             Resource
           </label>
@@ -18948,10 +19098,12 @@ exports[`Expression Row renders the default row with input disabled 1`] = `
       >
         <div
           className="slds-form-element"
+          role={undefined}
         >
           <label
             className="slds-form-element__label"
             htmlFor="combobox-id-41"
+            id={undefined}
           >
             Operator
           </label>
@@ -19228,10 +19380,12 @@ exports[`Expression Row renders the default row with inputs and button disabled 
       >
         <div
           className="slds-form-element"
+          role={undefined}
         >
           <label
             className="slds-form-element__label"
             htmlFor="combobox-id-44"
+            id={undefined}
           >
             Resource
           </label>
@@ -19416,10 +19570,12 @@ exports[`Expression Row renders the default row with inputs and button disabled 
       >
         <div
           className="slds-form-element"
+          role={undefined}
         >
           <label
             className="slds-form-element__label"
             htmlFor="combobox-id-45"
+            id={undefined}
           >
             Operator
           </label>
@@ -19699,10 +19855,12 @@ exports[`Expression Row renders the default row with legend text and sassistive 
       >
         <div
           className="slds-form-element"
+          role={undefined}
         >
           <label
             className="slds-form-element__label"
             htmlFor="combobox-id-36"
+            id={undefined}
           >
             Resource
           </label>
@@ -19887,10 +20045,12 @@ exports[`Expression Row renders the default row with legend text and sassistive 
       >
         <div
           className="slds-form-element"
+          role={undefined}
         >
           <label
             className="slds-form-element__label"
             htmlFor="combobox-id-37"
+            id={undefined}
           >
             Operator
           </label>

@@ -1,6 +1,20 @@
 <!-- Release notes authoring guidelines: http://keepachangelog.com/ -->
 
 <!-- ## [Unreleased] -->
+## **Release 2.7.4 - October 11, 2018**
+
+### Components
+
+#### [Form Elements](https://www.lightningdesignsystem.com/components/form-elements/)
+
+##### Added
+
+- Added `slds-form-element_address` for address specific compound form elements
+
+##### Fixed
+
+- Resolved issue where empty form elements would collapse in view mode
+
 ## **Release 2.7.3 - October 4, 2018**
 
 ### Components

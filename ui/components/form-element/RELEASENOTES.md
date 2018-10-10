@@ -8,6 +8,9 @@
 ### Added
 - Added `slds-form-element_address` for address specific compound form elements
 
+### Fixed
+- Resolved issue where empty form elements would collapse in view mode
+
 ## 2.7.3
 
 ### Fixed

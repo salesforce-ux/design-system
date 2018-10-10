@@ -244,8 +244,8 @@ exports[`Base Docked Utility Bar - Utility Bar Item renders a utility bar item w
   className="slds-utility-bar__item slds-utility-bar__item_pop-out"
 >
   <button
-    aria-pressed={false}
-    className="slds-button slds-utility-bar__action"
+    aria-pressed={true}
+    className="slds-button slds-utility-bar__action slds-is-active"
   >
     <span
       className="slds-assistive-text"

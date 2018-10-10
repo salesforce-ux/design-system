@@ -169,7 +169,7 @@ export let states = [
     element: (
       <UtilityBar>
         <UtilityBarItem symbol="call">Call</UtilityBarItem>
-        <UtilityBarItem hasPopOut symbol="clock">
+        <UtilityBarItem hasPopOut active symbol="clock">
           History
         </UtilityBarItem>
         <UtilityBarItem symbol="note">Notes</UtilityBarItem>

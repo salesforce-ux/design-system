@@ -2,8 +2,12 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 /**
- * Fixed bar at the bottom of viewport, contains items
+ * Fixed bar at the bottom of viewport, that contains items.
  *
+ * If the utility bar item is active and its panel is popped open in a new window, use `.slds-utility-bar__item_pop-out` on the
+ * `.slds-utility-bar__item`. This will add a visual indicator to communicate that the panel is opened in a new window.
+ *
+ * @summary Fixed bar at the bottom of viewport, that contains items
  * @name base
  * @selector .slds-utility-bar_container
  * @restrict footer

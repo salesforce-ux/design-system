@@ -25,7 +25,7 @@ describe('Base Docked Utility Bar - Utility Bar Item', () => {
     matchesMarkup(<UtilityBarItem symbol="omni_channel" notification />));
   it('renders a utility bar item with pop out', () =>
     matchesMarkup(
-      <UtilityBarItem hasPopOut symbol="clock">
+      <UtilityBarItem hasPopOut active symbol="clock">
         History
       </UtilityBarItem>
     ));

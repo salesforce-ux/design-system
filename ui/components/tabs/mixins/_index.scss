@@ -1,0 +1,17 @@
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+@mixin sub-tab-notification-before($color) {
+
+  &:before {
+    animation: pulse 1s linear;
+    animation-iteration-count: 3;
+    background-color: $color;
+    bottom: 0;
+    content: " ";
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+}

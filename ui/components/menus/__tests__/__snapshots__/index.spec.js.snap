@@ -39,6 +39,7 @@ exports[`Base Menu renders a base menu to the bottom 1`] = `
       >
         <a
           aria-checked={undefined}
+          className={undefined}
           href="javascript:void(0);"
           role="menuitem"
           tabIndex="0"
@@ -57,6 +58,7 @@ exports[`Base Menu renders a base menu to the bottom 1`] = `
       >
         <a
           aria-checked={undefined}
+          className={undefined}
           href="javascript:void(0);"
           role="menuitem"
           tabIndex="-1"
@@ -75,6 +77,7 @@ exports[`Base Menu renders a base menu to the bottom 1`] = `
       >
         <a
           aria-checked={undefined}
+          className={undefined}
           href="javascript:void(0);"
           role="menuitem"
           tabIndex="-1"
@@ -97,6 +100,7 @@ exports[`Base Menu renders a base menu to the bottom 1`] = `
       >
         <a
           aria-checked={undefined}
+          className={undefined}
           href="javascript:void(0);"
           role="menuitem"
           tabIndex="-1"
@@ -153,6 +157,7 @@ exports[`Base Menu renders a base menu to the left 1`] = `
       >
         <a
           aria-checked={undefined}
+          className={undefined}
           href="javascript:void(0);"
           role="menuitem"
           tabIndex="0"
@@ -171,6 +176,7 @@ exports[`Base Menu renders a base menu to the left 1`] = `
       >
         <a
           aria-checked={undefined}
+          className={undefined}
           href="javascript:void(0);"
           role="menuitem"
           tabIndex="-1"
@@ -189,6 +195,7 @@ exports[`Base Menu renders a base menu to the left 1`] = `
       >
         <a
           aria-checked={undefined}
+          className={undefined}
           href="javascript:void(0);"
           role="menuitem"
           tabIndex="-1"
@@ -211,6 +218,7 @@ exports[`Base Menu renders a base menu to the left 1`] = `
       >
         <a
           aria-checked={undefined}
+          className={undefined}
           href="javascript:void(0);"
           role="menuitem"
           tabIndex="-1"
@@ -267,6 +275,7 @@ exports[`Base Menu renders a base menu to the right 1`] = `
       >
         <a
           aria-checked={undefined}
+          className={undefined}
           href="javascript:void(0);"
           role="menuitem"
           tabIndex="0"
@@ -285,6 +294,7 @@ exports[`Base Menu renders a base menu to the right 1`] = `
       >
         <a
           aria-checked={undefined}
+          className={undefined}
           href="javascript:void(0);"
           role="menuitem"
           tabIndex="-1"
@@ -303,6 +313,7 @@ exports[`Base Menu renders a base menu to the right 1`] = `
       >
         <a
           aria-checked={undefined}
+          className={undefined}
           href="javascript:void(0);"
           role="menuitem"
           tabIndex="-1"
@@ -325,6 +336,7 @@ exports[`Base Menu renders a base menu to the right 1`] = `
       >
         <a
           aria-checked={undefined}
+          className={undefined}
           href="javascript:void(0);"
           role="menuitem"
           tabIndex="-1"
@@ -381,6 +393,7 @@ exports[`Menu with submenu renders a closed submenu 1`] = `
       >
         <a
           aria-checked={undefined}
+          className={undefined}
           href="javascript:void(0);"
           role="menuitem"
           tabIndex="0"
@@ -399,6 +412,7 @@ exports[`Menu with submenu renders a closed submenu 1`] = `
       >
         <a
           aria-checked={undefined}
+          className={undefined}
           href="javascript:void(0);"
           role="menuitem"
           tabIndex="-1"
@@ -452,6 +466,7 @@ exports[`Menu with submenu renders a closed submenu 1`] = `
             >
               <a
                 aria-checked={undefined}
+                className={undefined}
                 href="javascript:void(0);"
                 role="menuitem"
                 tabIndex="0"
@@ -470,6 +485,7 @@ exports[`Menu with submenu renders a closed submenu 1`] = `
             >
               <a
                 aria-checked={undefined}
+                className={undefined}
                 href="javascript:void(0);"
                 role="menuitem"
                 tabIndex="-1"
@@ -488,6 +504,7 @@ exports[`Menu with submenu renders a closed submenu 1`] = `
             >
               <a
                 aria-checked={undefined}
+                className={undefined}
                 href="javascript:void(0);"
                 role="menuitem"
                 tabIndex="-1"
@@ -510,6 +527,7 @@ exports[`Menu with submenu renders a closed submenu 1`] = `
             >
               <a
                 aria-checked={undefined}
+                className={undefined}
                 href="javascript:void(0);"
                 role="menuitem"
                 tabIndex="-1"
@@ -569,6 +587,7 @@ exports[`Menu with submenu renders an open submenu 1`] = `
       >
         <a
           aria-checked={undefined}
+          className={undefined}
           href="javascript:void(0);"
           role="menuitem"
           tabIndex="0"
@@ -587,6 +606,7 @@ exports[`Menu with submenu renders an open submenu 1`] = `
       >
         <a
           aria-checked={undefined}
+          className={undefined}
           href="javascript:void(0);"
           role="menuitem"
           tabIndex="-1"
@@ -640,6 +660,7 @@ exports[`Menu with submenu renders an open submenu 1`] = `
             >
               <a
                 aria-checked={undefined}
+                className={undefined}
                 href="javascript:void(0);"
                 role="menuitem"
                 tabIndex="0"
@@ -658,6 +679,7 @@ exports[`Menu with submenu renders an open submenu 1`] = `
             >
               <a
                 aria-checked={undefined}
+                className={undefined}
                 href="javascript:void(0);"
                 role="menuitem"
                 tabIndex="-1"
@@ -676,6 +698,7 @@ exports[`Menu with submenu renders an open submenu 1`] = `
             >
               <a
                 aria-checked={undefined}
+                className={undefined}
                 href="javascript:void(0);"
                 role="menuitem"
                 tabIndex="-1"
@@ -698,6 +721,7 @@ exports[`Menu with submenu renders an open submenu 1`] = `
             >
               <a
                 aria-checked={undefined}
+                className={undefined}
                 href="javascript:void(0);"
                 role="menuitem"
                 tabIndex="-1"

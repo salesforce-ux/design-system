@@ -5,6 +5,7 @@ import React from 'react';
 import ButtonIcon from '../../button-icons/';
 import SvgIcon from '../../../shared/svg-icon';
 import classNames from 'classnames';
+import { UtilityIcon } from '../../icons/base/example';
 
 /// ////////////////////////////////////////
 // Partial(s)
@@ -39,6 +40,9 @@ export let Trigger = props => (
   <div
     className={classNames(
       'slds-dropdown-trigger slds-dropdown-trigger_click',
+      {
+        'slds-is-open': props.isOpen
+      },
       props.className
     )}
   >
@@ -90,6 +94,9 @@ export let MenuItem = props => {
     iconRight,
     tabIndex,
     title,
+    hasSuccess,
+    hasError,
+    hasWarning,
     ...rest
   } = props;
   let ariaChecked;
@@ -97,6 +104,13 @@ export let MenuItem = props => {
   if (isSelectable) {
     ariaChecked = isSelected ? 'true' : 'false';
   }
+
+  const getComputedClassnames = () =>
+    classNames({
+      'slds-has-error': hasError,
+      'slds-has-success': hasSuccess,
+      'slds-has-warning': hasWarning
+    }) || undefined;
 
   return (
     <li
@@ -109,9 +123,10 @@ export let MenuItem = props => {
       role="presentation"
     >
       <a
+        aria-checked={ariaChecked}
+        className={getComputedClassnames()}
         href="javascript:void(0);"
         role={isSelectable ? 'menuitemcheckbox' : 'menuitem'}
-        aria-checked={ariaChecked}
         tabIndex={tabIndex || '-1'}
       >
         <span className="slds-truncate" title={title || children}>
@@ -309,6 +324,89 @@ export const ActionOverflow = props => (
   </Trigger>
 );
 
+export const NotificationsMenu = props => (
+  <Trigger isOpen>
+    <Menu className="slds-dropdown_left">
+      <MenuList>
+        <MenuItem hasSuccess title="Success Item">
+          <span className="slds-m-horizontal_xx-small">
+            <UtilityIcon
+              assistiveText="success"
+              size="x-small"
+              symbol="success"
+              title="success"
+            />
+          </span>
+          <span>Success Item</span>
+        </MenuItem>
+        <MenuItem
+          iconLeft={
+            <SvgIcon
+              className="slds-icon slds-icon_x-small slds-icon-text-default slds-m-right_x-small"
+              sprite="utility"
+              symbol="user"
+            />
+          }
+          title="Overflow Tab Item"
+        >
+          <span>Overflow Tab Item</span>
+        </MenuItem>
+      </MenuList>
+      <MenuList>
+        <MenuItem hasWarning title="Warning item">
+          <span className="slds-m-horizontal_xx-small">
+            <UtilityIcon
+              assistiveText="warning"
+              size="x-small"
+              symbol="warning"
+              title="warning"
+              useCurrentColor
+            />
+          </span>
+          <span>Warning Item</span>
+        </MenuItem>
+        <MenuItem
+          iconLeft={
+            <SvgIcon
+              className="slds-icon slds-icon_x-small slds-icon-text-default slds-m-right_x-small"
+              sprite="utility"
+              symbol="user"
+            />
+          }
+          title="Overflow Tab Item"
+        >
+          <span>Overflow Tab Item</span>
+        </MenuItem>
+      </MenuList>
+      <MenuList>
+        <MenuItem hasError title="Error Item">
+          <span className="slds-m-horizontal_xx-small">
+            <UtilityIcon
+              assistiveText="error"
+              size="x-small"
+              symbol="error"
+              title="error"
+            />
+          </span>
+          <span>Error Item</span>
+        </MenuItem>
+        <MenuItem
+          iconLeft={
+            <SvgIcon
+              className="slds-icon slds-icon_x-small slds-icon-text-default slds-m-right_x-small"
+              sprite="utility"
+              symbol="user"
+            />
+          }
+          title="Overflow Tab Item"
+        >
+          <span>Overflow Tab Item</span>
+        </MenuItem>
+      </MenuList>
+    </Menu>
+  </Trigger>
+);
+
 /// ///////////////////////////////////////////
 // Export
 /// ///////////////////////////////////////////
@@ -358,5 +456,10 @@ export let examples = [
     id: 'action-overflow',
     label: 'Overflow menu with actions',
     element: <ActionOverflow />
+  },
+  {
+    id: 'notifications-menu',
+    label: 'Menu with alert notifications',
+    element: <NotificationsMenu />
   }
 ];

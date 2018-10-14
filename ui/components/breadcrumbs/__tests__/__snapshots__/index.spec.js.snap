@@ -79,6 +79,7 @@ exports[`renders a overflow menu as the first breadcrumb 1`] = `
             >
               <a
                 aria-checked={undefined}
+                className={undefined}
                 href="javascript:void(0);"
                 role="menuitem"
                 tabIndex="0"
@@ -97,6 +98,7 @@ exports[`renders a overflow menu as the first breadcrumb 1`] = `
             >
               <a
                 aria-checked={undefined}
+                className={undefined}
                 href="javascript:void(0);"
                 role="menuitem"
                 tabIndex="-1"
@@ -115,6 +117,7 @@ exports[`renders a overflow menu as the first breadcrumb 1`] = `
             >
               <a
                 aria-checked={undefined}
+                className={undefined}
                 href="javascript:void(0);"
                 role="menuitem"
                 tabIndex="-1"

@@ -52,8 +52,6 @@
    *
    * @selector .slds-has-success
    * @restrict .slds-sub-tabs__item
-   * @modifier
-   * @group notification
    */
   &.slds-has-success {
     @include sub-tab-notification-before($color-background-success-darker);
@@ -64,8 +62,6 @@
    *
    * @selector .slds-has-error
    * @restrict .slds-sub-tabs__item
-   * @modifier
-   * @group notification
    */
   &.slds-has-error {
     @include sub-tab-notification-before($color-background-destructive-active);
@@ -89,8 +85,6 @@
    *
    * @selector .slds-has-warning
    * @restrict .slds-sub-tabs__item
-   * @modifier
-   * @group notification
    */
   &.slds-has-warning {
     @include sub-tab-notification-before($color-background-warning);

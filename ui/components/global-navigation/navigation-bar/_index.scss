@@ -1,6 +1,8 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
+@import "../mixins/index";
+
 /**
  * @summary Navigation bar wrapper
  *
@@ -125,7 +127,7 @@
 
       &:before {
         content: '';
-        height: 3px;
+        height: $globalnavigation-item-height-accent-active;
         display: block;
         background: $brand-primary;
         position: absolute;
@@ -172,7 +174,7 @@
 
       &:before,
       &:after {
-        height: 4px;
+        height: $globalnavigation-item-height-accent-focus;
       }
     }
 
@@ -180,6 +182,92 @@
     &.slds-has-notification {
       background: $brand-primary-transparent-10;
     }
+
+    @include tab-notification-pulsing-animation;
+
+    /**
+     * @summary Success notification on a tab
+     *
+     * @selector .slds-has-success
+     * @restrict .slds-context-bar__item
+     */
+    &.slds-has-success {
+      @include tab-notification-before($color-background-success-darker);
+    }
+
+    /**
+     * @summary Error notification on a tab
+     *
+     * @selector .slds-has-error
+     * @restrict .slds-context-bar__item
+     */
+    &.slds-has-error {
+      @include tab-notification-before($color-background-destructive-active);
+    }
+
+    &.slds-has-success,
+    &.slds-has-error {
+
+      .slds-context-bar__label-action {
+        color: $color-gray-1;
+      }
+
+      .slds-indicator_unread {
+        background-color: $color-gray-1;
+      }
+
+      .slds-indicator_unsaved {
+        color: $color-gray-1;
+      }
+    }
+
+    /**
+     * @summary Warning notification on a tab
+     *
+     * @selector .slds-has-warning
+     * @restrict .slds-context-bar__item
+     */
+    &.slds-has-warning {
+      @include tab-notification-before($color-background-warning);
+
+      &:before {
+        animation-name: pulse-lighter;
+      }
+
+      .slds-indicator_unread {
+        background-color: currentColor;
+      }
+
+      .slds-indicator_unsaved {
+        color: currentColor;
+      }
+    }
+
+    &.slds-has-success.slds-is-active,
+    &.slds-has-warning.slds-is-active,
+    &.slds-has-error.slds-is-active {
+
+      &:after {
+        content: '';
+        background: $color-gray-1;
+        position: absolute;
+        height: $globalnavigation-item-height-accent-active;
+        top: 0;
+        right: 0;
+        left: 0;
+      }
+    }
+
+    &.slds-has-success.slds-has-focus,
+    &.slds-has-warning.slds-has-focus,
+    &.slds-has-error.slds-has-focus {
+
+      &:after {
+        height: $globalnavigation-item-height-accent-focus;
+      }
+    }
+
+
 
     /**
      * Add a left border to a context bar item
@@ -220,6 +308,7 @@
     min-width: 0%;
     color: inherit;
     font-size: $font-size-medium;
+    z-index: 1;
 
     &:focus,
     &:focus:hover {
@@ -308,6 +397,43 @@
 
 
   /**
+   *
+   * #### Accessibility
+   *
+   * **Communicating Status to Screen Readers**
+   *
+   * When communitcatin tab status updates to the user, unread, warning, error and success notifications should  all employ the same technique to communicate that update to users of assistive technology, who would be otherwise unaware of that status change.
+   *
+   * You should use a single hidden ARIA live region for the entire sub tabs block, the contents of which gets updated each time a sub tab changes its status. The contents should contain a description of the status level and the name of the tab the status change event occured in. The markup would look something like:
+   *
+   * `<div className="slds-assistive-text" aria-live="polite">...</div>`
+   *
+   * Upon clearing the status on a given tab, you should clear the message from the live region.
+
+   * **Unread status**
+   *
+   * In order to inform screen readers of new activity in a tab, 2 things should occur.
+   *
+   * 1. The `title` attribute and `aria-label` on the element that displays the red dot should read **"New Activity"**. This will update the text content of the tab to include the "New Activity" text: "New Activity Chat - Customer".
+   *
+   * 2. The hidden live region as described above, should have its content updated to **"New Activity in Tab: [Tab Name Here]"** to alert the user of new activity in that particular sub tab.
+   *
+   * `<span aria-label="New Activity" className="slds-indicator_unread" title="New Activity"></span>`
+   *
+   * `<div className="slds-assistive-text" aria-live="polite">New activity in Tab: Chat - Customer</div>`
+   *
+   * **Warning, Error and Success Tabs**
+   *
+   * When you wish to draw attention to a particular tab because something has occurred in that tab that corresponds to an alert level, you can use the `slds-has-warning`, `slds-has-error` or `slds-has-success` class to change the background color and introduce a short pulsing animation to draw attention from the user.
+   *
+   * The icon is updated to match the corresponding alert level, to give an extra way to communicate the level of the status without relying on the use of color alone.
+   *
+   * In this example we show that something inside the tab is about to break a service level agreement in 30 seconds, and we wish to draw the users attention to it to take action.
+   *
+   * Update the hidden live region with a message that informs the user of the status level, the message and the offending sub tab **[level]: [message] in tab: [tab_name]**.
+   *
+   * `<div className="slds-assistive-text" aria-live="polite">Warning: SLA agreement in 30 seconds in tab: Chat - Customer</div>`
+   *
    * @summary Tab modifier when using a tabset
    *
    * @name navigation-tab-bar
@@ -321,13 +447,7 @@
   }
 
   /**
-   *
-   * #### Accessibility
-   *
-   * On the Split View Toggle button, `aria-expanded` is set to `false` by default.
-   * Set `aria-expanded` to `true` when  Split View is active. When Split View is active,
-   * set the value of `aria-controls` on the Split View Toggle button, to the `ID` of the
-   * wrapper element that contains the Split View List.
+   * @summary Context bar tab items
    *
    * @selector .slds-context-bar__item_tab
    * @restrict .slds-context-bar_tabs .slds-context-bar__item
@@ -345,8 +465,7 @@
     }
 
     /**
-     * Pinned state
-     * Toggles visibility of elements inside of tab
+     * @summary Pinned state - toggles visibility of elements inside of tab
      *
      * @selector .slds-is-pinned
      * @restrict .slds-context-bar__item_tab

@@ -430,6 +430,7 @@ exports[`Default Tabs renders default tabs with overflowing tab items 1`] = `
               >
                 <a
                   aria-checked={undefined}
+                  className={undefined}
                   href="javascript:void(0);"
                   role="menuitem"
                   tabIndex="-1"
@@ -478,6 +479,7 @@ exports[`Default Tabs renders default tabs with overflowing tab items 1`] = `
               >
                 <a
                   aria-checked={undefined}
+                  className={undefined}
                   href="javascript:void(0);"
                   role="menuitem"
                   tabIndex="-1"
@@ -526,6 +528,7 @@ exports[`Default Tabs renders default tabs with overflowing tab items 1`] = `
               >
                 <a
                   aria-checked={undefined}
+                  className={undefined}
                   href="javascript:void(0);"
                   role="menuitem"
                   tabIndex="-1"
@@ -2622,7 +2625,7 @@ exports[`Subtabs renders dirty overflowed subtab 1`] = `
           <span
             className="slds-indicator-container"
           />
-          <div
+          <span
             className="slds-icon_container"
             title="Case"
           >
@@ -2638,9 +2641,8 @@ exports[`Subtabs renders dirty overflowed subtab 1`] = `
               className="slds-assistive-text"
             >
               Case
-              :
             </span>
-          </div>
+          </span>
           <span
             className="slds-truncate"
             title="00071938"
@@ -2691,7 +2693,7 @@ exports[`Subtabs renders dirty overflowed subtab 1`] = `
           <span
             className="slds-indicator-container"
           />
-          <div
+          <span
             className="slds-icon_container"
             title="Case"
           >
@@ -2707,9 +2709,8 @@ exports[`Subtabs renders dirty overflowed subtab 1`] = `
               className="slds-assistive-text"
             >
               Case
-              :
             </span>
-          </div>
+          </span>
           <span
             className="slds-truncate"
             title="00071939"
@@ -2801,6 +2802,7 @@ exports[`Subtabs renders dirty overflowed subtab 1`] = `
               >
                 <a
                   aria-checked={undefined}
+                  className={undefined}
                   href="javascript:void(0);"
                   role="menuitem"
                   tabIndex="-1"
@@ -2820,14 +2822,24 @@ exports[`Subtabs renders dirty overflowed subtab 1`] = `
                         *
                       </abbr>
                     </span>
-                    <svg
-                      aria-hidden={true}
-                      className="slds-icon slds-icon_small slds-icon-text-default"
+                    <span
+                      className="slds-icon_container"
+                      title="Live Chat"
                     >
-                      <use
-                        xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#live_chat"
-                      />
-                    </svg>
+                      <svg
+                        aria-hidden={true}
+                        className="slds-icon slds-icon_small slds-icon-text-default"
+                      >
+                        <use
+                          xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#live_chat"
+                        />
+                      </svg>
+                      <span
+                        className="slds-assistive-text"
+                      >
+                        Live Chat
+                      </span>
+                    </span>
                     <span>
                       Chat - Customer
                     </span>
@@ -2840,6 +2852,7 @@ exports[`Subtabs renders dirty overflowed subtab 1`] = `
               >
                 <a
                   aria-checked={undefined}
+                  className={undefined}
                   href="javascript:void(0);"
                   role="menuitem"
                   tabIndex="-1"
@@ -2851,14 +2864,24 @@ exports[`Subtabs renders dirty overflowed subtab 1`] = `
                     <span
                       className="slds-indicator-container"
                     />
-                    <svg
-                      aria-hidden={true}
-                      className="slds-icon slds-icon_small slds-icon-text-default"
+                    <span
+                      className="slds-icon_container"
+                      title="Case"
                     >
-                      <use
-                        xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#case"
-                      />
-                    </svg>
+                      <svg
+                        aria-hidden={true}
+                        className="slds-icon slds-icon_small slds-icon-text-default"
+                      >
+                        <use
+                          xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#case"
+                        />
+                      </svg>
+                      <span
+                        className="slds-assistive-text"
+                      >
+                        Case
+                      </span>
+                    </span>
                     <span>
                       Overflow Tab Item
                     </span>
@@ -2924,7 +2947,7 @@ exports[`Subtabs renders dirty overflowed subtab with notification 1`] = `
           <span
             className="slds-indicator-container"
           />
-          <div
+          <span
             className="slds-icon_container"
             title="Case"
           >
@@ -2940,9 +2963,8 @@ exports[`Subtabs renders dirty overflowed subtab with notification 1`] = `
               className="slds-assistive-text"
             >
               Case
-              :
             </span>
-          </div>
+          </span>
           <span
             className="slds-truncate"
             title="00071938"
@@ -2993,7 +3015,7 @@ exports[`Subtabs renders dirty overflowed subtab with notification 1`] = `
           <span
             className="slds-indicator-container"
           />
-          <div
+          <span
             className="slds-icon_container"
             title="Case"
           >
@@ -3009,9 +3031,8 @@ exports[`Subtabs renders dirty overflowed subtab with notification 1`] = `
               className="slds-assistive-text"
             >
               Case
-              :
             </span>
-          </div>
+          </span>
           <span
             className="slds-truncate"
             title="00071939"
@@ -3070,15 +3091,8 @@ exports[`Subtabs renders dirty overflowed subtab with notification 1`] = `
               <span
                 aria-label="New Activity"
                 className="slds-indicator_unread"
-                role="alert"
                 title="New Activity"
-              >
-                <span
-                  className="slds-assistive-text"
-                >
-                  New Tab activity within More Tabs menu
-                </span>
-              </span>
+              />
             </span>
             <span
               className="slds-truncate"
@@ -3115,6 +3129,7 @@ exports[`Subtabs renders dirty overflowed subtab with notification 1`] = `
               >
                 <a
                   aria-checked={undefined}
+                  className={undefined}
                   href="javascript:void(0);"
                   role="menuitem"
                   tabIndex="-1"
@@ -3134,26 +3149,29 @@ exports[`Subtabs renders dirty overflowed subtab with notification 1`] = `
                         *
                       </abbr>
                       <span
-                        aria-label={null}
+                        aria-label="New Activity"
                         className="slds-indicator_unread"
-                        role={null}
                         title="New Activity"
+                      />
+                    </span>
+                    <span
+                      className="slds-icon_container"
+                      title="Live Chat"
+                    >
+                      <svg
+                        aria-hidden={true}
+                        className="slds-icon slds-icon_small slds-icon-text-default"
                       >
-                        <span
-                          className="slds-assistive-text"
-                        >
-                          New Activity
-                        </span>
+                        <use
+                          xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#live_chat"
+                        />
+                      </svg>
+                      <span
+                        className="slds-assistive-text"
+                      >
+                        Live Chat
                       </span>
                     </span>
-                    <svg
-                      aria-hidden={true}
-                      className="slds-icon slds-icon_small slds-icon-text-default"
-                    >
-                      <use
-                        xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#live_chat"
-                      />
-                    </svg>
                     <span>
                       Chat - Customer
                     </span>
@@ -3166,6 +3184,7 @@ exports[`Subtabs renders dirty overflowed subtab with notification 1`] = `
               >
                 <a
                   aria-checked={undefined}
+                  className={undefined}
                   href="javascript:void(0);"
                   role="menuitem"
                   tabIndex="-1"
@@ -3177,14 +3196,24 @@ exports[`Subtabs renders dirty overflowed subtab with notification 1`] = `
                     <span
                       className="slds-indicator-container"
                     />
-                    <svg
-                      aria-hidden={true}
-                      className="slds-icon slds-icon_small slds-icon-text-default"
+                    <span
+                      className="slds-icon_container"
+                      title="Case"
                     >
-                      <use
-                        xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#case"
-                      />
-                    </svg>
+                      <svg
+                        aria-hidden={true}
+                        className="slds-icon slds-icon_small slds-icon-text-default"
+                      >
+                        <use
+                          xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#case"
+                        />
+                      </svg>
+                      <span
+                        className="slds-assistive-text"
+                      >
+                        Case
+                      </span>
+                    </span>
                     <span>
                       Overflow Tab Item
                     </span>
@@ -3250,7 +3279,7 @@ exports[`Subtabs renders overflowed subtab 1`] = `
           <span
             className="slds-indicator-container"
           />
-          <div
+          <span
             className="slds-icon_container"
             title="Case"
           >
@@ -3266,9 +3295,8 @@ exports[`Subtabs renders overflowed subtab 1`] = `
               className="slds-assistive-text"
             >
               Case
-              :
             </span>
-          </div>
+          </span>
           <span
             className="slds-truncate"
             title="00071938"
@@ -3319,7 +3347,7 @@ exports[`Subtabs renders overflowed subtab 1`] = `
           <span
             className="slds-indicator-container"
           />
-          <div
+          <span
             className="slds-icon_container"
             title="Case"
           >
@@ -3335,9 +3363,8 @@ exports[`Subtabs renders overflowed subtab 1`] = `
               className="slds-assistive-text"
             >
               Case
-              :
             </span>
-          </div>
+          </span>
           <span
             className="slds-truncate"
             title="00071939"
@@ -3421,6 +3448,7 @@ exports[`Subtabs renders overflowed subtab 1`] = `
               >
                 <a
                   aria-checked={undefined}
+                  className={undefined}
                   href="javascript:void(0);"
                   role="menuitem"
                   tabIndex="-1"
@@ -3432,14 +3460,24 @@ exports[`Subtabs renders overflowed subtab 1`] = `
                     <span
                       className="slds-indicator-container"
                     />
-                    <svg
-                      aria-hidden={true}
-                      className="slds-icon slds-icon_small slds-icon-text-default"
+                    <span
+                      className="slds-icon_container"
+                      title="Live Chat"
                     >
-                      <use
-                        xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#live_chat"
-                      />
-                    </svg>
+                      <svg
+                        aria-hidden={true}
+                        className="slds-icon slds-icon_small slds-icon-text-default"
+                      >
+                        <use
+                          xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#live_chat"
+                        />
+                      </svg>
+                      <span
+                        className="slds-assistive-text"
+                      >
+                        Live Chat
+                      </span>
+                    </span>
                     <span>
                       Chat - Customer
                     </span>
@@ -3452,6 +3490,7 @@ exports[`Subtabs renders overflowed subtab 1`] = `
               >
                 <a
                   aria-checked={undefined}
+                  className={undefined}
                   href="javascript:void(0);"
                   role="menuitem"
                   tabIndex="-1"
@@ -3463,14 +3502,24 @@ exports[`Subtabs renders overflowed subtab 1`] = `
                     <span
                       className="slds-indicator-container"
                     />
-                    <svg
-                      aria-hidden={true}
-                      className="slds-icon slds-icon_small slds-icon-text-default"
+                    <span
+                      className="slds-icon_container"
+                      title="Case"
                     >
-                      <use
-                        xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#case"
-                      />
-                    </svg>
+                      <svg
+                        aria-hidden={true}
+                        className="slds-icon slds-icon_small slds-icon-text-default"
+                      >
+                        <use
+                          xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#case"
+                        />
+                      </svg>
+                      <span
+                        className="slds-assistive-text"
+                      >
+                        Case
+                      </span>
+                    </span>
                     <span>
                       Overflow Tab Item
                     </span>
@@ -3536,7 +3585,7 @@ exports[`Subtabs renders overflowed subtab with notification 1`] = `
           <span
             className="slds-indicator-container"
           />
-          <div
+          <span
             className="slds-icon_container"
             title="Case"
           >
@@ -3552,9 +3601,8 @@ exports[`Subtabs renders overflowed subtab with notification 1`] = `
               className="slds-assistive-text"
             >
               Case
-              :
             </span>
-          </div>
+          </span>
           <span
             className="slds-truncate"
             title="00071938"
@@ -3605,7 +3653,7 @@ exports[`Subtabs renders overflowed subtab with notification 1`] = `
           <span
             className="slds-indicator-container"
           />
-          <div
+          <span
             className="slds-icon_container"
             title="Case"
           >
@@ -3621,9 +3669,8 @@ exports[`Subtabs renders overflowed subtab with notification 1`] = `
               className="slds-assistive-text"
             >
               Case
-              :
             </span>
-          </div>
+          </span>
           <span
             className="slds-truncate"
             title="00071939"
@@ -3675,15 +3722,8 @@ exports[`Subtabs renders overflowed subtab with notification 1`] = `
               <span
                 aria-label="New Activity"
                 className="slds-indicator_unread"
-                role="alert"
                 title="New Activity"
-              >
-                <span
-                  className="slds-assistive-text"
-                >
-                  New Tab activity within More Tabs menu
-                </span>
-              </span>
+              />
             </span>
             <span
               className="slds-truncate"
@@ -3720,6 +3760,7 @@ exports[`Subtabs renders overflowed subtab with notification 1`] = `
               >
                 <a
                   aria-checked={undefined}
+                  className={undefined}
                   href="javascript:void(0);"
                   role="menuitem"
                   tabIndex="-1"
@@ -3732,26 +3773,29 @@ exports[`Subtabs renders overflowed subtab with notification 1`] = `
                       className="slds-indicator-container"
                     >
                       <span
-                        aria-label={null}
+                        aria-label="New Activity"
                         className="slds-indicator_unread"
-                        role={null}
                         title="New Activity"
+                      />
+                    </span>
+                    <span
+                      className="slds-icon_container"
+                      title="Live Chat"
+                    >
+                      <svg
+                        aria-hidden={true}
+                        className="slds-icon slds-icon_small slds-icon-text-default"
                       >
-                        <span
-                          className="slds-assistive-text"
-                        >
-                          New Activity
-                        </span>
+                        <use
+                          xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#live_chat"
+                        />
+                      </svg>
+                      <span
+                        className="slds-assistive-text"
+                      >
+                        Live Chat
                       </span>
                     </span>
-                    <svg
-                      aria-hidden={true}
-                      className="slds-icon slds-icon_small slds-icon-text-default"
-                    >
-                      <use
-                        xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#live_chat"
-                      />
-                    </svg>
                     <span>
                       Chat - Customer
                     </span>
@@ -3764,6 +3808,7 @@ exports[`Subtabs renders overflowed subtab with notification 1`] = `
               >
                 <a
                   aria-checked={undefined}
+                  className={undefined}
                   href="javascript:void(0);"
                   role="menuitem"
                   tabIndex="-1"
@@ -3775,14 +3820,24 @@ exports[`Subtabs renders overflowed subtab with notification 1`] = `
                     <span
                       className="slds-indicator-container"
                     />
-                    <svg
-                      aria-hidden={true}
-                      className="slds-icon slds-icon_small slds-icon-text-default"
+                    <span
+                      className="slds-icon_container"
+                      title="Case"
                     >
-                      <use
-                        xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#case"
-                      />
-                    </svg>
+                      <svg
+                        aria-hidden={true}
+                        className="slds-icon slds-icon_small slds-icon-text-default"
+                      >
+                        <use
+                          xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#case"
+                        />
+                      </svg>
+                      <span
+                        className="slds-assistive-text"
+                      >
+                        Case
+                      </span>
+                    </span>
                     <span>
                       Overflow Tab Item
                     </span>
@@ -3839,7 +3894,7 @@ exports[`Subtabs renders subtab with notification and dirty 1`] = `
         <span
           className="slds-indicator-container"
         />
-        <div
+        <span
           className="slds-icon_container"
           title="Case"
         >
@@ -3855,9 +3910,8 @@ exports[`Subtabs renders subtab with notification and dirty 1`] = `
             className="slds-assistive-text"
           >
             Case
-            :
           </span>
-        </div>
+        </span>
         <span
           className="slds-truncate"
           title="00071938"
@@ -3918,17 +3972,10 @@ exports[`Subtabs renders subtab with notification and dirty 1`] = `
           <span
             aria-label="New Activity"
             className="slds-indicator_unread"
-            role="alert"
             title="New Activity"
-          >
-            <span
-              className="slds-assistive-text"
-            >
-              New activity in Tab: Chat - Customer
-            </span>
-          </span>
+          />
         </span>
-        <div
+        <span
           className="slds-icon_container"
           title="Live Chat"
         >
@@ -3944,9 +3991,8 @@ exports[`Subtabs renders subtab with notification and dirty 1`] = `
             className="slds-assistive-text"
           >
             Live Chat
-            :
           </span>
-        </div>
+        </span>
         <span
           className="slds-truncate"
           title="Chat - Customer"

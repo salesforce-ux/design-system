@@ -2,7 +2,7 @@ import CodeView from '../../../shared/components/CodeView';
 import CodeBlock from '../../../shared/components/CodeBlock';
 import Example from '../../../shared/components/Example';
 import Blockquote from '../../../shared/components/Blockquote';
-import { BaseMenu, SubHeader, IconLeft, DoubleIcon, IconRight, ActionOverflow, OverflowMenu } from '../menus/dropdown/example';
+import { BaseMenu, SubHeader, IconLeft, DoubleIcon, IconRight, ActionOverflow, OverflowMenu, NotificationsMenu } from '../menus/dropdown/example';
 import { Submenu } from '../menus/submenu/example';
 import { DoctypeIcon } from '../icons/doctype/example';
 
@@ -120,6 +120,28 @@ When creating a menu with selectable items:
     <IconLeft isSelectable/>
   </CodeView>
 </Example>
+
+## With Status Notifications
+
+<CodeView style={{height: '250px'}}>
+  <NotificationsMenu />
+</CodeView>
+
+To enable menu items to reflect status level notifications like Error, Success and Warning, place a modifier class onto the `menuitem` that has the offending notification.
+
+The class is based on the `slds-has-${level}` pattern, where `${level}` corresponds to the level you wish to set.
+
+- `slds-has-error`
+- `slds-has-success`
+- `slds-has-warning`
+
+<CodeBlock toggleCode={false}>
+  <a class="slds-has-warning" href="javascript:void(0);" role="menuitem" tabindex="-1">...</a>
+</CodeBlock>
+
+<Blockquote type="note" header="Warning Icon">
+  For warning level menu items it is required that you switch the icon to use the `currentColor` variant for icons.
+</Blockquote>
 
 ## With Overflow Scrolling
 

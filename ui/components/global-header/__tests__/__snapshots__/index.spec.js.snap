@@ -843,6 +843,7 @@ exports[`Global Actions Bar renders task item with dialog menu 1`] = `
       >
         <a
           aria-checked={undefined}
+          className={undefined}
           href="javascript:void(0);"
           role="menuitem"
           tabIndex="0"
@@ -879,6 +880,7 @@ exports[`Global Actions Bar renders task item with dialog menu 1`] = `
       >
         <a
           aria-checked={undefined}
+          className={undefined}
           href="javascript:void(0);"
           role="menuitem"
           tabIndex="0"
@@ -915,6 +917,7 @@ exports[`Global Actions Bar renders task item with dialog menu 1`] = `
       >
         <a
           aria-checked={undefined}
+          className={undefined}
           href="javascript:void(0);"
           role="menuitem"
           tabIndex="0"

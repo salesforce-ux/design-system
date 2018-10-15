@@ -279,6 +279,7 @@ exports[`Scoped Tabs render scoped tabs with overflowing items 1`] = `
               >
                 <a
                   aria-checked={undefined}
+                  className={undefined}
                   href="javascript:void(0);"
                   role="menuitem"
                   tabIndex="-1"
@@ -297,6 +298,7 @@ exports[`Scoped Tabs render scoped tabs with overflowing items 1`] = `
               >
                 <a
                   aria-checked={undefined}
+                  className={undefined}
                   href="javascript:void(0);"
                   role="menuitem"
                   tabIndex="-1"
@@ -315,6 +317,7 @@ exports[`Scoped Tabs render scoped tabs with overflowing items 1`] = `
               >
                 <a
                   aria-checked={undefined}
+                  className={undefined}
                   href="javascript:void(0);"
                   role="menuitem"
                   tabIndex="-1"

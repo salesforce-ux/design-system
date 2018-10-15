@@ -11,7 +11,7 @@ import {
 
 import {
   Subtab,
-  Subtabs,
+  SubtabsContainer,
   SubtabList,
   SubtabPanel,
   SubtabOverflow
@@ -50,8 +50,8 @@ describe('Default Tabs', () => {
 describe('Subtabs', () => {
   it('renders subtab with notification and dirty', () =>
     matchesMarkup(
-      <div className="slds-tabs_default slds-sub-tabs">
-        <ul className="slds-tabs_default__nav" role="tablist">
+      <SubtabsContainer>
+        <SubtabList>
           <Subtab
             title="00071938"
             active
@@ -66,24 +66,18 @@ describe('Subtabs', () => {
             tabPanelId="subtab-tabpanel-02"
             symbol="live_chat"
           />
-        </ul>
-        <div
-          className="slds-tabs_default__content slds-show"
+        </SubtabList>
+        <SubtabPanel
+          tabId="subtab-tabitem-01"
           id="subtab-tabpanel-01"
-          role="tabpanel"
-          aria-labelledby="subtab-tabitem-01"
+          isVisible
         >
           Item One Content
-        </div>
-        <div
-          className="slds-tabs_default__content slds-hide"
-          id="subtab-tabpanel-02"
-          role="tabpanel"
-          aria-labelledby="subtab-tabitem-02"
-        >
+        </SubtabPanel>
+        <SubtabPanel tabId="subtab-tabitem-02" id="subtab-tabpanel-02">
           Item Two Content
-        </div>
-      </div>
+        </SubtabPanel>
+      </SubtabsContainer>
     ));
 
   it('renders overflowed subtab', () =>
@@ -92,7 +86,7 @@ describe('Subtabs', () => {
         className="demo-only"
         style={{ height: '8rem', overflow: 'visible' }}
       >
-        <Subtabs>
+        <SubtabsContainer>
           <SubtabList>
             <Subtab
               title="00071938"
@@ -116,7 +110,7 @@ describe('Subtabs', () => {
           <SubtabPanel tabId="subtab-tabitem-02" id="subtab-tabpanel-02">
             Item Two Content
           </SubtabPanel>
-        </Subtabs>
+        </SubtabsContainer>
       </div>
     ));
 
@@ -126,7 +120,7 @@ describe('Subtabs', () => {
         className="demo-only"
         style={{ height: '8rem', overflow: 'visible' }}
       >
-        <Subtabs>
+        <SubtabsContainer>
           <SubtabList>
             <Subtab
               title="00071938"
@@ -150,7 +144,7 @@ describe('Subtabs', () => {
           <SubtabPanel tabId="subtab-tabitem-02" id="subtab-tabpanel-02">
             Item Two Content
           </SubtabPanel>
-        </Subtabs>
+        </SubtabsContainer>
       </div>
     ));
 
@@ -160,7 +154,7 @@ describe('Subtabs', () => {
         className="demo-only"
         style={{ height: '8rem', overflow: 'visible' }}
       >
-        <Subtabs>
+        <SubtabsContainer>
           <SubtabList>
             <Subtab
               title="00071938"
@@ -184,7 +178,7 @@ describe('Subtabs', () => {
           <SubtabPanel tabId="subtab-tabitem-02" id="subtab-tabpanel-02">
             Item Two Content
           </SubtabPanel>
-        </Subtabs>
+        </SubtabsContainer>
       </div>
     ));
 
@@ -194,7 +188,7 @@ describe('Subtabs', () => {
         className="demo-only"
         style={{ height: '8rem', overflow: 'visible' }}
       >
-        <Subtabs>
+        <SubtabsContainer>
           <SubtabList>
             <Subtab
               title="00071938"
@@ -218,7 +212,7 @@ describe('Subtabs', () => {
           <SubtabPanel tabId="subtab-tabitem-02" id="subtab-tabpanel-02">
             Item Two Content
           </SubtabPanel>
-        </Subtabs>
+        </SubtabsContainer>
       </div>
     ));
 });

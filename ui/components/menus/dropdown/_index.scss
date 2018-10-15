@@ -412,6 +412,55 @@
           fill: $color-text-button-default-disabled;
         }
       }
+
+      /**
+       * @summary Places a menu item into an errored state
+       *
+       * @selector .slds-has-error
+       * @restrict .slds-dropdown__item > a
+       * @modifier
+       * @group notification
+       */
+      &.slds-has-error {
+        background: $color-background-destructive-active;
+      }
+
+      /**
+       * @summary Places a menu item into a success state
+       *
+       * @selector .slds-has-success
+       * @restrict .slds-dropdown__item > a
+       * @modifier
+       * @group notification
+       */
+      &.slds-has-success {
+        background: $color-background-success-darker;
+      }
+
+      &.slds-has-error,
+      &.slds-has-success {
+        color: $color-gray-1;
+      }
+
+      /**
+       * @summary Places a menu item into a warning state
+       *
+       * @selector .slds-has-warning
+       * @restrict .slds-dropdown__item > a
+       * @modifier
+       * @group notification
+       */
+      &.slds-has-warning {
+        background: $color-background-warning;
+
+        .slds-indicator_unread {
+          background-color: currentColor;
+        }
+
+        .slds-indicator_unsaved {
+          color: currentColor;
+        }
+      }
     }
 
     /**

@@ -127,6 +127,9 @@ props:
   COLOR_BACKGROUND_SUCCESS_DARK:
     value: '{!SALEM}'
     comment: Dark color for UI elements that have to do with success. Accessible with white text.
+  COLOR_BACKGROUND_SUCCESS_DARKER:
+    value: '{!KAITOKE_GREEN}'
+    comment: Darker color for UI elements that have to do with success. Accessible with white text.
   COLOR_BACKGROUND_WARNING:
     value: '{!KOROMIKO}'
     comment: Color for UI elements that have to do with warning.

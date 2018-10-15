@@ -10,7 +10,7 @@ import {
 
 import {
   Subtab,
-  Subtabs,
+  SubtabsContainer,
   SubtabList,
   SubtabPanel
 } from '../../tabs/sub-tabs/example';
@@ -44,7 +44,7 @@ it('renders a global-navigation with sub-tabs', () =>
         />
       </ContextTabBar>
       <ContextTabPanel show id="context-tab-panel-1" tabId="context-tab-id-1">
-        <Subtabs>
+        <SubtabsContainer>
           <SubtabList>
             <Subtab
               active
@@ -69,7 +69,7 @@ it('renders a global-navigation with sub-tabs', () =>
           <SubtabPanel tabId="subtab-tabitem-02" id="subtab-tabpanel-02">
             Item Two Content
           </SubtabPanel>
-        </Subtabs>
+        </SubtabsContainer>
       </ContextTabPanel>
       <ContextTabPanel id="context-tab-panel-2" tabId="context-tab-id-2">
         Tab One Content
@@ -149,15 +149,6 @@ describe('Navigation Tab Bar', () => {
 describe('Global Navigation indicators', () => {
   it('render an unread indicator', () => matchesMarkup(<IndicatorUnread />));
 
-  it('render an unread indicator for more tabs', () =>
-    matchesMarkup(<IndicatorUnread tabType="overflow" />));
-
-  it('render an unread indicator for menu tabs', () =>
-    matchesMarkup(<IndicatorUnread tabType="menuItem" />));
-
-  it('render an unread indicator for main tabs', () =>
-    matchesMarkup(<IndicatorUnread tabType="main" tabName="Tab Item 1" />));
-
   it('render an unsaved indicator', () =>
     matchesMarkup(<IndicatorUnsaved title="Tab Item 1" />));
 
@@ -167,7 +158,7 @@ describe('Global Navigation indicators', () => {
   it('render an indicator container with children', () =>
     matchesMarkup(
       <IndicatorContainer>
-        <IndicatorUnread tabType="overflow" />
+        <IndicatorUnread />
       </IndicatorContainer>
     ));
 });

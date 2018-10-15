@@ -4,8 +4,9 @@ import Example from '../../../shared/components/Example';
 import Blockquote from '../../../shared/components/Blockquote';
 import MobileTabs, { MobileTabGroup, NestedMobileStacked } from './mobile-stack/';
 import { TabsDefault, TabsOverflow, TabsWithNestedScopedTabs, TabsWithCards, TabsMedium, TabsLarge } from '../tabs/base/example';
-import { SubTabSet, TabWithFocus, TabsWithBorders, TabActionOverflow, StatusTab, OverflowSubtabs } from '../tabs/sub-tabs/example';
+import * as SubTabs from '../tabs/sub-tabs/example';
 import VerticalTabs from '../vertical-tabs/base/example';
+import { getDisplayElementById } from '../../shared/helpers';
 
 <div className="doc lead">
   Tabs keeps related content in a single container that is shown and hidden through navigation.
@@ -99,11 +100,9 @@ Tabs come with three size modifiers: default, medium, and large. Each size step 
 
 Subtabs are used to provide an additional level of navigation below the Global Navigation Tab Bar. Use these tabs when users need to work across multiple sub-pages within a single navigation item.
 
-<Example title="Tabs with Subtabs">
-  <CodeView style={{height: '100px'}}>
-    <SubTabSet />
-  </CodeView>
-</Example>
+<CodeView style={{height: '100px'}}>
+  {SubTabs.default}
+</CodeView>
 
 ### Expected Behavior
 
@@ -115,40 +114,32 @@ Subtabs are used to provide an additional level of navigation below the Global N
 
 ### With Focus
 
-<Example title="Subtabs on Focus">
-  <CodeView style={{height: '100px'}}>
-    <TabWithFocus />
-  </CodeView>
-</Example>
+<CodeView style={{height: '100px'}}>
+  {getDisplayElementById(SubTabs.states, "subtabs-has-focus")}
+</CodeView>
 
 ### With Borders
 
 To add borders on either side of the subtab, add the classes `slds-border_right` and `slds-border_left`, as needed, to the `<li>` with class `slds-sub-tabs__item`.
 
-<Example title="Subtabs with Borders">
-  <CodeView style={{height: '100px'}}>
-    <TabsWithBorders />
-  </CodeView>
-</Example>
+<CodeView style={{height: '100px'}}>
+  {getDisplayElementById(SubTabs.states, "subtabs-borders")}
+</CodeView>
 
 ### With Tab Actions
 
-<Example title="Subtabs with Actions">
-  <CodeView style={{height: '100px'}}>
-    <TabActionOverflow />
-  </CodeView>
-</Example>
+<CodeView style={{height: '100px'}}>
+  {getDisplayElementById(SubTabs.states, "subtabs-menu")}
+</CodeView>
 
 ### Status Options
 #### Unsaved Tab
 
 Unsaved tabs receive a blue asterisk on the tab.
 
-<Example title="Subtab Unsaved">
-  <CodeView style={{height: '100px'}}>
-    <StatusTab itemUnsaved/>
-  </CodeView>
-</Example>
+<CodeView style={{height: '100px'}}>
+  {getDisplayElementById(SubTabs.states, "subtabs-unsaved")}
+</CodeView>
 
 <Blockquote header="Additional Tag for Accessibility" type="a11y">
   In order to inform screen readers of the unsaved state, an `<abbr>` tag is used to render the asterisk. The `title` attribute and `aria-label` should read <b>"Tab Not Saved"</b>.
@@ -158,80 +149,223 @@ Unsaved tabs receive a blue asterisk on the tab.
   <abbr className="slds-indicator_unsaved" title="Tab Not Saved" aria-label="Tab Not Saved">*</abbr>
 </CodeBlock>
 
+#### Communicating Status to Screen Readers
+
+The following examples of sub tab status updates should all employ the same technique to communicate that update to users of assistive technology, who would be otherwise unaware of that status change.
+
+You should use a single hidden ARIA live region for the entire sub tabs block, the contents of which gets updated each time a sub tab changes its status. The contents should contain a description of the status level and the name of the tab the status change event occured in. The markup would look something like:
+
+<CodeBlock toggleCode={false}>
+  <div className="slds-assistive-text" aria-live="polite">...</div>
+</CodeBlock>
+
+Upon clearing the status on a given tab, you should clear the message from the live region.
 
 #### Unread Tab
 
 Unread tabs receive a red dot on the tab.
 
-<Example title="Subtab Unread">
-  <CodeView style={{height: '100px'}}>
-    <StatusTab hasNotification/>
-  </CodeView>
-</Example>
+<CodeView style={{height: '100px'}}>
+  {getDisplayElementById(SubTabs.states, "unread")}
+</CodeView>
 
-<Blockquote header="Additional Span for Accessibility" type="a11y">
-  In order to inform screen readers of new activity in a tab, an extra `<span>` is added before the tab's icon. The `title` attribute and `aria-label` should read <b>"New Activity"</b>, and the `role="alert"` is needed to make the screen reader alert the user of the new activity immediately. The nested assistive text `<span>` should read <b>"New Activity in Tab: [Tab Name Here]"</b>.
+<Blockquote header="Accessibility" type="a11y">
+  In order to inform screen readers of new activity in a tab, 2 things should occur.
   <br/><br/>
-  The difference in the text for the `title` and `aria-label` attributes ("New Activity") and the inner assistive text span ("New Activity in Tab: [Tab Name]") prevents repetition while maintaining clarity about activity happening in tabs that the user is not currently working in. When working in another tab, the screen reader informs the user of both the new activity *and* the location of the new activity by reading the verbose text. However, when navigating with a keyboard and coming upon the unread symbol, the user only needs to be informed of the new activity since they are already in proximal context of the tab name.
+  1. The `title` attribute and `aria-label` on the element that displays the red dot should read <b>"New Activity"</b>. This will update the text content of the tab to include the "New Activity" text: "New Activity Chat - Customer".
+  <br/><br/>
+  2. The hidden live region as described above, should have its content updated to <b>"New Activity in Tab: [Tab Name Here]"</b> to alert the user of new activity in that particular sub tab.
 </Blockquote>
 
 <CodeBlock toggleCode={false}>
-  <span aria-label="New Activity" className="slds-indicator_unread" role="alert" title="New Activity">
-    <span className="slds-assistive-text">New activity in Tab: Chat - Customer</span>
-  </span>
+  <span aria-label="New Activity" className="slds-indicator_unread" title="New Activity"></span>
+</CodeBlock>
+
+<CodeBlock toggleCode={false}>
+  <div className="slds-assistive-text" aria-live="polite">
+    New activity in Tab: Chat - Customer
+  </div>
 </CodeBlock>
 
 #### Unread and Unsaved Tab
 
 Unread and unsaved tabs receive a blue asterisk with a red dot underneath. Be sure to check out the individual sections above for the Accessibility requirements.
 
-<Example title="Subtab unread and unsaved">
-  <CodeView style={{height: '100px'}}>
-    <StatusTab itemUnsaved hasNotification/>
-  </CodeView>
-</Example>
+<CodeView style={{height: '100px'}}>
+  {getDisplayElementById(SubTabs.states, "unsaved")}
+</CodeView>
+
+<Blockquote header="Accessibility" type="a11y">
+  Don't forget to update the hidden live region with which sub tab has new activity
+</Blockquote>
+
+#### Warning Tab
+
+When you wish to draw attention to a particular sub tab because a warning about that tab has occured, you can use the `slds-has-warning` class to change the background color and introduce a short pulsing animation to draw attention from the user.
+
+The icon is updated to be the warning icon, to give an extra way to communicate the level of the status without relying on the use of color alone.
+
+In this example we show that something inside the sub tab is about to break a service level agreement in 30 seconds, and we wish to draw the users attention to it to take action.
+
+<CodeView style={{height: '100px'}}>
+  {getDisplayElementById(SubTabs.states, "warning")}
+</CodeView>
+
+<Blockquote header="Accessibility" type="a11y">
+  Update the hidden live region with a message that informs the user of the status level, the warning and the offending sub tab <b>[level]: [message] in tab: [tab_name]</b>
+</Blockquote>
+
+<CodeBlock toggleCode={false}>
+  <div className="slds-assistive-text" aria-live="polite">
+    Warning: SLA agreement in 30 seconds in tab: Chat - Customer
+  </div>
+</CodeBlock>
+
+##### Unsaved Warning Tab
+
+<CodeView style={{height: '100px'}}>
+  {getDisplayElementById(SubTabs.states, "warning-unsaved")}
+</CodeView>
+
+##### Unread Warning Tab
+
+<CodeView style={{height: '100px'}}>
+  {getDisplayElementById(SubTabs.states, "warning-unread")}
+</CodeView>
+
+#### Error Tab
+
+When you wish to draw attention to a particular sub tab because an error or violation has occured in that tab, you can use the `slds-has-error` class to change the background color and introduce a short pulsing animation to draw attention from the user.
+
+The icon is updated to be the error icon, to give an extra way to communicate the level of the status without relying on the use of color alone.
+
+In this example we show that something inside the sub tab has broken an SLA agreement, and we wish to draw the users attention to it to take action.
+
+<CodeView style={{height: '100px'}}>
+  {getDisplayElementById(SubTabs.states, "error")}
+</CodeView>
+
+<Blockquote header="Accessibility" type="a11y">
+  Update the hidden live region with a message that informs the user of the status level, the error or violation and the offending sub tab <b>[level]: [message] in tab: [tab_name]</b>
+</Blockquote>
+
+<CodeBlock toggleCode={false}>
+  <div className="slds-assistive-text" aria-live="polite">
+    Violation: SLA agreement in tab: Chat - Customer
+  </div>
+</CodeBlock>
+
+##### Unsaved Error Tab
+
+<CodeView style={{height: '100px'}}>
+  {getDisplayElementById(SubTabs.states, "error-unsaved")}
+</CodeView>
+
+##### Unread Error Tab
+
+<CodeView style={{height: '100px'}}>
+  {getDisplayElementById(SubTabs.states, "error-unread")}
+</CodeView>
+
+#### Success Tab
+
+When you wish to draw attention to a particular sub tab because a warning or violation has been cleared in the sub tab, you can use the `slds-has-success` class to change the background color and introduce a short pulsing animation to draw attention from the user.
+
+The icon is updated to be the success icon, to give an extra way to communicate the level of the status without relying on the use of color alone.
+
+<CodeView style={{height: '100px'}}>
+  {getDisplayElementById(SubTabs.states, "success")}
+</CodeView>
+
+<Blockquote header="Accessibility" type="a11y">
+  Update the hidden live region with a message that informs the user that the status level has been successfully cleared and the sub tab it was cleared from <b>[level]: [message] in tab: [tab_name]</b>
+</Blockquote>
+
+<CodeBlock toggleCode={false}>
+  <div className="slds-assistive-text" aria-live="polite">
+    Success: SLA agreement warning cleared in tab: Chat - Customer
+  </div>
+</CodeBlock>
+
+##### Unsaved Success Tab
+
+<CodeView style={{height: '100px'}}>
+  {getDisplayElementById(SubTabs.states, "success-unsaved")}
+</CodeView>
+
+##### Unread Success Tab
+
+<CodeView style={{height: '100px'}}>
+  {getDisplayElementById(SubTabs.states, "success-unread")}
+</CodeView>
 
 ### With Overflow Tab
 
 Overflowing subtabs are contained in a More dropdown.
 
-<Example title="Subtab with Overflow">
-  <CodeView style={{height: '100px'}}>
-    <OverflowSubtabs />
-  </CodeView>
-</Example>
+<CodeView style={{height: '100px'}}>
+  {getDisplayElementById(SubTabs.states, "overflow-tabs")}
+</CodeView>
 
 #### Overflow Tab Open
 
-<Example title="Subtabs with Overflow Open">
-  <CodeView style={{height: '200px'}}>
-    <OverflowSubtabs isOpen />
-  </CodeView>
-</Example>
+<CodeView style={{height: '200px'}}>
+  {getDisplayElementById(SubTabs.states, "overflow-tabs-open")}
+</CodeView>
 
 #### Unread Overflow Tab
 
-<Example title="Subtab with Unread Overflow">
-  <CodeView style={{height: '200px'}}>
-    <OverflowSubtabs isOpen itemUnread/>
-  </CodeView>
-</Example>
+<CodeView style={{height: '200px'}}>
+  {getDisplayElementById(SubTabs.states, "unread-overflow-tabs-open")}
+</CodeView>
 
 #### Unsaved Overflow Tab
 
-<Example title="Subtab with Unsaved Overflow">
-  <CodeView style={{height: '200px'}}>
-    <OverflowSubtabs isOpen itemUnsaved/>
-  </CodeView>
-</Example>
+<CodeView style={{height: '200px'}}>
+  {getDisplayElementById(SubTabs.states, "unsaved-overflow-tabs-open")}
+</CodeView>
 
 #### Unread and Unsaved Overflow Tab
 
-<Example title="Subtab with Unread and Unsaved Overflow">
-  <CodeView style={{height: '200px'}}>
-    <OverflowSubtabs isOpen itemUnread itemUnsaved/>
-  </CodeView>
-</Example>
+<CodeView style={{height: '200px'}}>
+  {getDisplayElementById(SubTabs.states, "unsaved-unread-overflow-tabs-open")}
+</CodeView>
+
+#### Success Overflow Tab
+
+<CodeView style={{height: '200px'}}>
+  {getDisplayElementById(SubTabs.states, "overflow-tabs-success")}
+</CodeView>
+
+#### Unread and Unsaved Success Overflow Tab
+
+<CodeView style={{height: '200px'}}>
+  {getDisplayElementById(SubTabs.states, "overflow-tabs-success-unread-unsaved")}
+</CodeView>
+
+#### Warning Overflow Tab
+
+<CodeView style={{height: '200px'}}>
+  {getDisplayElementById(SubTabs.states, "overflow-tabs-warning")}
+</CodeView>
+
+#### Unread and Unsaved Warning Overflow Tab
+
+<CodeView style={{height: '200px'}}>
+  {getDisplayElementById(SubTabs.states, "overflow-tabs-warning-unread-unsaved")}
+</CodeView>
+
+#### Error Overflow Tab
+
+<CodeView style={{height: '200px'}}>
+  {getDisplayElementById(SubTabs.states, "overflow-tabs-error")}
+</CodeView>
+
+#### Unread and Unsaved Error Overflow Tab
+
+<CodeView style={{height: '200px'}}>
+  {getDisplayElementById(SubTabs.states, "overflow-tabs-error-unread-unsaved")}
+</CodeView>
 
 ## Vertical
 

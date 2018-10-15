@@ -2,6 +2,7 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 import React from 'react';
+import PropTypes from 'prop-types';
 import SvgIcon from '../../../shared/svg-icon';
 import classNames from 'classnames';
 
@@ -11,6 +12,7 @@ export let UtilityIcon = props => {
     <span
       className={classNames(
         'slds-icon_container slds-icon-utility-' + symbol,
+        { 'slds-current-color': props.useCurrentColor },
         props.containerClassName
       )}
       title={
@@ -20,7 +22,16 @@ export let UtilityIcon = props => {
       }
     >
       <SvgIcon
-        className={classNames('slds-icon', props.className)}
+        className={classNames(
+          'slds-icon',
+          {
+            'slds-icon_xx-small': props.size === 'xx-small',
+            'slds-icon_x-small': props.size === 'x-small',
+            'slds-icon_small': props.size === 'small',
+            'slds-icon_large': props.size === 'large'
+          },
+          props.className
+        )}
         sprite="utility"
         symbol={symbol}
       />
@@ -31,6 +42,13 @@ export let UtilityIcon = props => {
       ) : null}
     </span>
   );
+};
+UtilityIcon.displayName = 'UtilityIcon';
+UtilityIcon.propTypes = {
+  /** Controls the size of the icon */
+  size: PropTypes.oneOf(['large', 'small', 'x-small', 'xx-small']),
+  /** Sets the slds-current-color class on the container */
+  useCurrentColor: PropTypes.bool
 };
 
 /// ///////////////////////////////////////////

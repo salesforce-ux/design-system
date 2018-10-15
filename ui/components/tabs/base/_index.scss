@@ -194,6 +194,7 @@
   color: currentColor;
   border: 0;
   text-transform: inherit; // For button menu to inherit the parents text-transform
+  z-index: 1; // For sub tab notification background coloring
 
   &:hover,
   &:focus {
@@ -224,6 +225,14 @@
 
     &:focus {
       text-decoration: underline;
+    }
+  }
+
+  &.slds-has-error,
+  &.slds-has-success {
+
+    .slds-button {
+      color: $color-gray-1;
     }
   }
 }

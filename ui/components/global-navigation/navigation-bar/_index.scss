@@ -190,8 +190,6 @@
      *
      * @selector .slds-has-success
      * @restrict .slds-context-bar__item
-     * @modifier
-     * @group notification
      */
     &.slds-has-success {
       @include tab-notification-before($color-background-success-darker);
@@ -202,8 +200,6 @@
      *
      * @selector .slds-has-error
      * @restrict .slds-context-bar__item
-     * @modifier
-     * @group notification
      */
     &.slds-has-error {
       @include tab-notification-before($color-background-destructive-active);
@@ -230,8 +226,6 @@
      *
      * @selector .slds-has-warning
      * @restrict .slds-context-bar__item
-     * @modifier
-     * @group notification
      */
     &.slds-has-warning {
       @include tab-notification-before($color-background-warning);

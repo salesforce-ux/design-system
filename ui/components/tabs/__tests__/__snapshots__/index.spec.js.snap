@@ -87,6 +87,566 @@ exports[`Default Tabs renders default tabs 1`] = `
 </div>
 `;
 
+exports[`Default Tabs renders default tabs with error 1`] = `
+<div
+  className="demo-only"
+  style={
+    Object {
+      "height": "12rem",
+    }
+  }
+>
+  <div
+    className="slds-tabs_default"
+  >
+    <ul
+      className="slds-tabs_default__nav"
+      role="tablist"
+    >
+      <li
+        className="slds-tabs_default__item slds-is-active"
+        role="presentation"
+        title="Item One"
+      >
+        <a
+          aria-controls="tab-default-1"
+          aria-selected={true}
+          className="slds-tabs_default__link"
+          href="javascript:void(0);"
+          id="tab-default-1__item"
+          role="tab"
+          tabIndex={0}
+        >
+          Item One
+        </a>
+      </li>
+      <li
+        className="slds-tabs_default__item"
+        role="presentation"
+        title="Item Two"
+      >
+        <a
+          aria-controls="tab-default-2"
+          aria-selected={false}
+          className="slds-tabs_default__link"
+          href="javascript:void(0);"
+          id="tab-default-2__item"
+          role="tab"
+          tabIndex={-1}
+        >
+          Item Two
+          <span
+            className="slds-tabs__right-icon"
+          >
+            <span
+              className="slds-icon_container slds-icon-utility-error"
+              title="This item has an error"
+            >
+              <svg
+                aria-hidden={true}
+                className="slds-icon slds-icon_x-small slds-icon-text-error"
+              >
+                <use
+                  xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#error"
+                />
+              </svg>
+              <span
+                className="slds-assistive-text"
+              >
+                This item has an error
+              </span>
+            </span>
+          </span>
+        </a>
+      </li>
+      <li
+        className="slds-tabs_default__item"
+        role="presentation"
+        title="Item Three"
+      >
+        <a
+          aria-controls="tab-default-3"
+          aria-selected={false}
+          className="slds-tabs_default__link"
+          href="javascript:void(0);"
+          id="tab-default-3__item"
+          role="tab"
+          tabIndex={-1}
+        >
+          Item Three
+        </a>
+      </li>
+      <li
+        className="slds-tabs_default__item"
+        role="presentation"
+        title="Item Four"
+      >
+        <a
+          aria-controls="tab-default-4"
+          aria-selected={false}
+          className="slds-tabs_default__link"
+          href="javascript:void(0);"
+          id="tab-default-4__item"
+          role="tab"
+          tabIndex={-1}
+        >
+          Item Four
+        </a>
+      </li>
+    </ul>
+    <div
+      aria-labelledby="tab-default-1__item"
+      className="slds-tabs_default__content slds-show"
+      id="tab-default-1"
+      role="tabpanel"
+    >
+      <h2>
+        Item One Content
+      </h2>
+    </div>
+    <div
+      aria-labelledby="tab-default-2__item"
+      className="slds-tabs_default__content slds-hide"
+      id="tab-default-2"
+      role="tabpanel"
+    >
+      <h2>
+        Item Two Content - Has Error
+      </h2>
+    </div>
+    <div
+      aria-labelledby="tab-default-3__item"
+      className="slds-tabs_default__content slds-hide"
+      id="tab-default-3"
+      role="tabpanel"
+    >
+      <h2>
+        Item Three Content
+      </h2>
+    </div>
+    <div
+      aria-labelledby="tab-default-4__item"
+      className="slds-tabs_default__content slds-hide"
+      id="tab-default-4"
+      role="tabpanel"
+    >
+      <h2>
+        Item Four Content
+      </h2>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Default Tabs renders default tabs with icons 1`] = `
+<div
+  className="demo-only"
+  style={
+    Object {
+      "height": "12rem",
+    }
+  }
+>
+  <div
+    className="slds-tabs_default"
+  >
+    <ul
+      className="slds-tabs_default__nav"
+      role="tablist"
+    >
+      <li
+        className="slds-tabs_default__item slds-is-active"
+        role="presentation"
+        title="Opportunities"
+      >
+        <a
+          aria-controls="tab-default-1"
+          aria-selected={true}
+          className="slds-tabs_default__link"
+          href="javascript:void(0);"
+          id="tab-default-1__item"
+          role="tab"
+          tabIndex={0}
+        >
+          <span
+            className="slds-tabs__left-icon"
+          >
+            <span
+              className="slds-icon_container slds-icon-standard-opportunity"
+              title="Opportunities"
+            >
+              <svg
+                aria-hidden={true}
+                className="slds-icon slds-icon_small"
+              >
+                <use
+                  xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#opportunity"
+                />
+              </svg>
+            </span>
+          </span>
+          Opportunities
+        </a>
+      </li>
+      <li
+        className="slds-tabs_default__item"
+        role="presentation"
+        title="Cases"
+      >
+        <a
+          aria-controls="tab-default-2"
+          aria-selected={false}
+          className="slds-tabs_default__link"
+          href="javascript:void(0);"
+          id="tab-default-2__item"
+          role="tab"
+          tabIndex={-1}
+        >
+          <span
+            className="slds-tabs__left-icon"
+          >
+            <span
+              className="slds-icon_container slds-icon-standard-case"
+              title="Cases"
+            >
+              <svg
+                aria-hidden={true}
+                className="slds-icon slds-icon_small"
+              >
+                <use
+                  xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#case"
+                />
+              </svg>
+            </span>
+          </span>
+          Cases
+        </a>
+      </li>
+      <li
+        className="slds-tabs_default__item"
+        role="presentation"
+        title="Products"
+      >
+        <a
+          aria-controls="tab-default-3"
+          aria-selected={false}
+          className="slds-tabs_default__link"
+          href="javascript:void(0);"
+          id="tab-default-3__item"
+          role="tab"
+          tabIndex={-1}
+        >
+          <span
+            className="slds-tabs__left-icon"
+          >
+            <span
+              className="slds-icon_container slds-icon-standard-product"
+              title="Products"
+            >
+              <svg
+                aria-hidden={true}
+                className="slds-icon slds-icon_small"
+              >
+                <use
+                  xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#product"
+                />
+              </svg>
+            </span>
+          </span>
+          Products
+        </a>
+      </li>
+      <li
+        className="slds-tabs_default__item"
+        role="presentation"
+        title="Price Books"
+      >
+        <a
+          aria-controls="tab-default-4"
+          aria-selected={false}
+          className="slds-tabs_default__link"
+          href="javascript:void(0);"
+          id="tab-default-4__item"
+          role="tab"
+          tabIndex={-1}
+        >
+          <span
+            className="slds-tabs__left-icon"
+          >
+            <span
+              className="slds-icon_container slds-icon-standard-pricebook"
+              title="Price Books"
+            >
+              <svg
+                aria-hidden={true}
+                className="slds-icon slds-icon_small"
+              >
+                <use
+                  xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#pricebook"
+                />
+              </svg>
+            </span>
+          </span>
+          Price Books
+        </a>
+      </li>
+      <li
+        className="slds-tabs_default__item"
+        role="presentation"
+        title="Contacts"
+      >
+        <a
+          aria-controls="tab-default-5"
+          aria-selected={false}
+          className="slds-tabs_default__link"
+          href="javascript:void(0);"
+          id="tab-default-5__item"
+          role="tab"
+          tabIndex={-1}
+        >
+          <span
+            className="slds-tabs__left-icon"
+          >
+            <span
+              className="slds-icon_container slds-icon-standard-contact"
+              title="Contacts"
+            >
+              <svg
+                aria-hidden={true}
+                className="slds-icon slds-icon_small"
+              >
+                <use
+                  xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#contact"
+                />
+              </svg>
+            </span>
+          </span>
+          Contacts
+        </a>
+      </li>
+      <li
+        className="slds-tabs_default__item slds-tabs_default__overflow-button"
+        role="presentation"
+        title="More Tabs"
+      >
+        <div
+          className="slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open"
+        >
+          <button
+            aria-haspopup={true}
+            className="slds-button"
+            disabled={undefined}
+          >
+            More
+            <svg
+              aria-hidden={true}
+              className="slds-button__icon slds-button__icon_x-small slds-button__icon_right"
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+              />
+            </svg>
+          </button>
+          <div
+            className="slds-dropdown slds-dropdown_right"
+            style={undefined}
+          >
+            <ul
+              aria-label={undefined}
+              className="slds-dropdown__list slds-dropdown_length-with-icon-10"
+              role="menu"
+            >
+              <li
+                className="slds-dropdown__item"
+                role="presentation"
+              >
+                <a
+                  aria-checked={undefined}
+                  className={undefined}
+                  href="javascript:void(0);"
+                  role="menuitem"
+                  tabIndex="-1"
+                >
+                  <span
+                    className="slds-truncate"
+                    title="Accounts"
+                  >
+                    <span
+                      className="slds-media slds-media_center"
+                    >
+                      <span
+                        className="slds-media__figure"
+                      >
+                        <span
+                          className="slds-icon_container slds-icon-standard-account"
+                          title="Description of icon when needed"
+                        >
+                          <svg
+                            aria-hidden={true}
+                            className="slds-icon slds-icon_small"
+                          >
+                            <use
+                              xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#account"
+                            />
+                          </svg>
+                        </span>
+                      </span>
+                      <span
+                        className="slds-media__body"
+                      >
+                        Accounts
+                      </span>
+                    </span>
+                  </span>
+                </a>
+              </li>
+              <li
+                className="slds-dropdown__item"
+                role="presentation"
+              >
+                <a
+                  aria-checked={undefined}
+                  className={undefined}
+                  href="javascript:void(0);"
+                  role="menuitem"
+                  tabIndex="-1"
+                >
+                  <span
+                    className="slds-truncate"
+                    title="Approvals"
+                  >
+                    <span
+                      className="slds-media slds-media_center"
+                    >
+                      <span
+                        className="slds-media__figure"
+                      >
+                        <span
+                          className="slds-icon_container slds-icon-standard-approval"
+                          title="Description of icon when needed"
+                        >
+                          <svg
+                            aria-hidden={true}
+                            className="slds-icon slds-icon_small"
+                          >
+                            <use
+                              xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#approval"
+                            />
+                          </svg>
+                        </span>
+                      </span>
+                      <span
+                        className="slds-media__body"
+                      >
+                        Approvals
+                      </span>
+                    </span>
+                  </span>
+                </a>
+              </li>
+              <li
+                className="slds-dropdown__item"
+                role="presentation"
+              >
+                <a
+                  aria-checked={undefined}
+                  className={undefined}
+                  href="javascript:void(0);"
+                  role="menuitem"
+                  tabIndex="-1"
+                >
+                  <span
+                    className="slds-truncate"
+                    title="Lead"
+                  >
+                    <span
+                      className="slds-media slds-media_center"
+                    >
+                      <span
+                        className="slds-media__figure"
+                      >
+                        <span
+                          className="slds-icon_container slds-icon-standard-lead"
+                          title="Description of icon when needed"
+                        >
+                          <svg
+                            aria-hidden={true}
+                            className="slds-icon slds-icon_small"
+                          >
+                            <use
+                              xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#lead"
+                            />
+                          </svg>
+                        </span>
+                      </span>
+                      <span
+                        className="slds-media__body"
+                      >
+                        Leads
+                      </span>
+                    </span>
+                  </span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </li>
+    </ul>
+    <div
+      aria-labelledby="tab-default-1__item"
+      className="slds-tabs_default__content slds-show"
+      id="tab-default-1"
+      role="tabpanel"
+    >
+      <h2>
+        Item One Content
+      </h2>
+    </div>
+    <div
+      aria-labelledby="tab-default-2__item"
+      className="slds-tabs_default__content slds-hide"
+      id="tab-default-2"
+      role="tabpanel"
+    >
+      <h2>
+        Item Two Content
+      </h2>
+    </div>
+    <div
+      aria-labelledby="tab-default-3__item"
+      className="slds-tabs_default__content slds-hide"
+      id="tab-default-3"
+      role="tabpanel"
+    >
+      <h2>
+        Item Three Content
+      </h2>
+    </div>
+    <div
+      aria-labelledby="tab-default-4__item"
+      className="slds-tabs_default__content slds-hide"
+      id="tab-default-4"
+      role="tabpanel"
+    >
+      <h2>
+        Item Four Content
+      </h2>
+    </div>
+    <div
+      aria-labelledby="tab-default-5__item"
+      className="slds-tabs_default__content slds-hide"
+      id="tab-default-5"
+      role="tabpanel"
+    >
+      <h2>
+        Item Five Content
+      </h2>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Default Tabs renders default tabs with nested scoped tabs 1`] = `
 <div
   className="slds-tabs_default"
@@ -359,40 +919,6 @@ exports[`Default Tabs renders default tabs with overflowing tab items 1`] = `
         </a>
       </li>
       <li
-        className="slds-tabs_default__item"
-        role="presentation"
-        title="Item Six"
-      >
-        <a
-          aria-controls="tab-default-6"
-          aria-selected={false}
-          className="slds-tabs_default__link"
-          href="javascript:void(0);"
-          id="tab-default-6__item"
-          role="tab"
-          tabIndex={-1}
-        >
-          Item Six
-        </a>
-      </li>
-      <li
-        className="slds-tabs_default__item"
-        role="presentation"
-        title="Item Seven"
-      >
-        <a
-          aria-controls="tab-default-7"
-          aria-selected={false}
-          className="slds-tabs_default__link"
-          href="javascript:void(0);"
-          id="tab-default-7__item"
-          role="tab"
-          tabIndex={-1}
-        >
-          Item Seven
-        </a>
-      </li>
-      <li
         className="slds-tabs_default__item slds-tabs_default__overflow-button"
         role="presentation"
         title="More Tabs"
@@ -439,37 +965,7 @@ exports[`Default Tabs renders default tabs with overflowing tab items 1`] = `
                     className="slds-truncate"
                     title="Accounts"
                   >
-                    <span
-                      className="slds-media slds-media_center"
-                    >
-                      <span
-                        className="slds-media__figure"
-                      >
-                        <span
-                          className="slds-icon_container slds-icon-standard-account"
-                          title="Description of icon when needed"
-                        >
-                          <svg
-                            aria-hidden={true}
-                            className="slds-icon slds-icon_small"
-                          >
-                            <use
-                              xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#account"
-                            />
-                          </svg>
-                          <span
-                            className="slds-assistive-text"
-                          >
-                            Description of icon when needed
-                          </span>
-                        </span>
-                      </span>
-                      <span
-                        className="slds-media__body"
-                      >
-                        Accounts
-                      </span>
-                    </span>
+                    Accounts
                   </span>
                 </a>
               </li>
@@ -488,37 +984,7 @@ exports[`Default Tabs renders default tabs with overflowing tab items 1`] = `
                     className="slds-truncate"
                     title="Approvals"
                   >
-                    <span
-                      className="slds-media slds-media_center"
-                    >
-                      <span
-                        className="slds-media__figure"
-                      >
-                        <span
-                          className="slds-icon_container slds-icon-standard-approval"
-                          title="Description of icon when needed"
-                        >
-                          <svg
-                            aria-hidden={true}
-                            className="slds-icon slds-icon_small"
-                          >
-                            <use
-                              xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#approval"
-                            />
-                          </svg>
-                          <span
-                            className="slds-assistive-text"
-                          >
-                            Description of icon when needed
-                          </span>
-                        </span>
-                      </span>
-                      <span
-                        className="slds-media__body"
-                      >
-                        Approvals
-                      </span>
-                    </span>
+                    Approvals
                   </span>
                 </a>
               </li>
@@ -537,37 +1003,7 @@ exports[`Default Tabs renders default tabs with overflowing tab items 1`] = `
                     className="slds-truncate"
                     title="Lead"
                   >
-                    <span
-                      className="slds-media slds-media_center"
-                    >
-                      <span
-                        className="slds-media__figure"
-                      >
-                        <span
-                          className="slds-icon_container slds-icon-standard-lead"
-                          title="Description of icon when needed"
-                        >
-                          <svg
-                            aria-hidden={true}
-                            className="slds-icon slds-icon_small"
-                          >
-                            <use
-                              xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#lead"
-                            />
-                          </svg>
-                          <span
-                            className="slds-assistive-text"
-                          >
-                            Description of icon when needed
-                          </span>
-                        </span>
-                      </span>
-                      <span
-                        className="slds-media__body"
-                      >
-                        Leads
-                      </span>
-                    </span>
+                    Leads
                   </span>
                 </a>
               </li>
@@ -582,7 +1018,9 @@ exports[`Default Tabs renders default tabs with overflowing tab items 1`] = `
       id="tab-default-1"
       role="tabpanel"
     >
-      Item One Content
+      <h2>
+        Item One Content
+      </h2>
     </div>
     <div
       aria-labelledby="tab-default-2__item"
@@ -590,7 +1028,9 @@ exports[`Default Tabs renders default tabs with overflowing tab items 1`] = `
       id="tab-default-2"
       role="tabpanel"
     >
-      Item Two Content
+      <h2>
+        Item Two Content
+      </h2>
     </div>
     <div
       aria-labelledby="tab-default-3__item"
@@ -598,7 +1038,9 @@ exports[`Default Tabs renders default tabs with overflowing tab items 1`] = `
       id="tab-default-3"
       role="tabpanel"
     >
-      Item Three Content
+      <h2>
+        Item Three Content
+      </h2>
     </div>
     <div
       aria-labelledby="tab-default-4__item"
@@ -618,26 +1060,6 @@ exports[`Default Tabs renders default tabs with overflowing tab items 1`] = `
     >
       <h2>
         Item Five Content
-      </h2>
-    </div>
-    <div
-      aria-labelledby="tab-default-6__item"
-      className="slds-tabs_default__content slds-hide"
-      id="tab-default-6"
-      role="tabpanel"
-    >
-      <h2>
-        Item Six Content
-      </h2>
-    </div>
-    <div
-      aria-labelledby="tab-default-7__item"
-      className="slds-tabs_default__content slds-hide"
-      id="tab-default-7"
-      role="tabpanel"
-    >
-      <h2>
-        Item Seven Content
       </h2>
     </div>
   </div>

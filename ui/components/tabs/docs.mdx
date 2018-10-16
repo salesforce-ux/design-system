@@ -3,7 +3,8 @@ import CodeBlock from '../../../shared/components/CodeBlock';
 import Example from '../../../shared/components/Example';
 import Blockquote from '../../../shared/components/Blockquote';
 import MobileTabs, { MobileTabGroup, NestedMobileStacked } from './mobile-stack/';
-import { TabsDefault, TabsOverflow, TabsWithNestedScopedTabs, TabsWithCards, TabsMedium, TabsLarge } from '../tabs/base/example';
+import { TabsDefault, TabsOverflow, TabsOverflowIcons, TabsWithNestedScopedTabs, TabsWithCards, TabsMedium, TabsLarge, TabsWithError } from '../tabs/base/example';
+import { SubTabSet, TabWithFocus, TabsWithBorders, TabActionOverflow, StatusTab, OverflowSubtabs } from '../tabs/sub-tabs/example';
 import * as SubTabs from '../tabs/sub-tabs/example';
 import VerticalTabs from '../vertical-tabs/base/example';
 import { getDisplayElementById } from '../../shared/helpers';
@@ -54,6 +55,7 @@ Inactive `.slds-tabs_{variant}__content` containers receive `.slds-hide`.
 When the user clicks a different tab, move the `.slds-active` class and toggle the `.slds-hide`/`.slds-show` classes.
 
 ## With Overflow
+
 The overflow tab style is provided as a tab item type that acts as a menu component and appears as a tab item. It could contain those tab items that don't all fit in a horizontal orientation.
 
 <Example title="Tabs Overflowing">
@@ -65,6 +67,26 @@ The overflow tab style is provided as a tab item type that acts as a menu compon
 <Blockquote type="note" header="Implementation Guidelines">
   The `slds-dropdown__list` element requires a `slds-dropdown_length-with-icon-10` class, where 10 is the maximum number of items that will be visible before having to scroll.
 </Blockquote>
+
+## With Icon
+
+Icons can be used with tabs to help users differentiate among them.
+
+<Example title="Tabs With Icons">
+  <CodeView style={{height: '200px'}}>
+    <TabsOverflowIcons />
+  </CodeView>
+</Example>
+
+## With Error
+
+An icon can be used to communicate when a tab contains a validation error that needs attention.
+
+<Example title="Tabs With Icons">
+  <CodeView style={{height: '200px'}}>
+    <TabsWithError />
+  </CodeView>
+</Example>
 
 ## With Nested Scoped Tabs
 

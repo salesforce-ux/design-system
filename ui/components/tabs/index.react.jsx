@@ -46,7 +46,7 @@ class TabItem extends React.Component {
       'aria-controls': this.props['aria-controls'] || this.props.id
     });
   }
-  renderDefault(tabIndex) {
+  renderDefault(tabIndex, leftIcon, rightIcon) {
     const { flavor, current, id, title } = this.props;
     return (
       <a
@@ -58,7 +58,11 @@ class TabItem extends React.Component {
         aria-controls={id}
         id={`${id}__item`}
       >
+        {leftIcon && <span className="slds-tabs__left-icon">{leftIcon}</span>}
         {title}
+        {rightIcon && (
+          <span className="slds-tabs__right-icon">{rightIcon}</span>
+        )}
       </a>
     );
   }
@@ -71,6 +75,8 @@ class TabItem extends React.Component {
       flavor,
       content,
       size,
+      leftIcon,
+      rightIcon,
       ...rest
     } = this.props;
     const classNameComputed = classNames(
@@ -82,7 +88,9 @@ class TabItem extends React.Component {
     const tabIndex = current ? 0 : -1;
     return (
       <li className={classNameComputed} {...rest} role="presentation">
-        {content ? this.renderCustom(tabIndex) : this.renderDefault(tabIndex)}
+        {content
+          ? this.renderCustom(tabIndex)
+          : this.renderDefault(tabIndex, leftIcon, rightIcon)}
       </li>
     );
   }

@@ -3,6 +3,10 @@
 # Tabs Release Notes
 
 <!-- ## [Unreleased] -->
+## 2.8.0
+
+### Added
+- Added examples of icon use in default tabs
 
 ## 2.8.0
 

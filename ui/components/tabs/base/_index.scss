@@ -276,3 +276,25 @@
     font-size: $var-font-size-7;
   }
 }
+
+/**
+ * @summary
+ * @selector .slds-tabs__left-icon
+ * @restrict .slds-tabs_default__item span
+ */
+.slds-tabs__left-icon {
+  margin-right: $spacing-x-small;
+
+  &:empty {
+    margin-right: 0;
+  }
+}
+
+/**
+ * @summary
+ * @selector .slds-tabs__right-icon
+ * @restrict .slds-tabs_default__item span
+ */
+.slds-tabs__right-icon {
+  margin-left: $spacing-x-small;
+}

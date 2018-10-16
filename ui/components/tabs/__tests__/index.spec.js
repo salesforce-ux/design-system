@@ -5,6 +5,8 @@ import {
   TabsDefault,
   TabsWithNestedScopedTabs,
   TabsOverflow,
+  TabsOverflowIcons,
+  TabsWithError,
   TabsMedium,
   TabsLarge
 } from '../base/example';
@@ -43,6 +45,9 @@ describe('Default Tabs', () => {
     matchesMarkup(<TabsWithNestedScopedTabs />));
   it('renders default tabs with overflowing tab items', () =>
     matchesMarkup(<TabsOverflow />));
+  it('renders default tabs with icons', () =>
+    matchesMarkup(<TabsOverflowIcons />));
+  it('renders default tabs with error', () => matchesMarkup(<TabsWithError />));
   it('renders medium sized default tabs', () => matchesMarkup(<TabsMedium />));
   it('renders large sized default tabs', () => matchesMarkup(<TabsLarge />));
 });

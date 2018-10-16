@@ -1,0 +1,41 @@
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * @summary Creates Welcome Mat Info Only
+ * @name info-only
+ * @selector .slds-welcome-mat_info-only
+ * @restrict .slds-welcome-mat
+ * @variant
+ */
+.slds-welcome-mat_info-only {
+
+  .slds-welcome-mat__content {
+    height: $welcome-mat-max-height;
+  }
+
+  .slds-welcome-mat__info-title {
+    font-size: rem(32px);
+  }
+}
+
+/**
+ * @summary Sets tile area of Welcome Mat to read only
+ * @selector .slds-welcome-mat__tiles_info-only
+ * @restrict .slds-welcome-mat__tiles
+ */
+.slds-welcome-mat__tiles_info-only {
+  background-color: $color-background-alt;
+}
+
+/**
+ * @summary Welcome Mat Tile with only info item. Shows informational content. Based on a SLDS Media Object.
+ * @selector .slds-welcome-mat__tile_info-only
+ * @restrict .slds-welcome-mat_info-only li
+ */
+.slds-welcome-mat__tile_info-only {
+
+  .slds-welcome-mat__tile-body {
+    border-left: 0;
+  }
+}

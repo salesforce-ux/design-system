@@ -1,53 +1,44 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
+@import 'deprecate';
+
 /**
  * @summary Welcome Mat component
  * @name base
  * @selector .slds-welcome-mat
- * @restrict section
+ * @restrict div
  * @variant
  */
 .slds-welcome-mat {
+  position: relative;
+}
 
-  .slds-modal__container {
-    width: $welcome-mat-width;
-    max-width: none;
-  }
 
-  .slds-welcome-mat__tile {
-    margin: $spacing-medium 0;
-  }
+/**
+ * @summary Content container for the whole Welcome Mat
+ * @selector .slds-welcome-mat__content
+ * @restrict .slds-welcome-mat div
+ */
+.slds-welcome-mat__content {
+  min-height: $welcome-mat-min-height;
+  max-height: $welcome-mat-max-height;
 
-  .slds-welcome-mat__tile:not(.slds-welcome-mat__tile_complete) {
-    box-shadow: 0 2px 2px $welcome-mat-color-action-shadow;
-    background: $color-background-alt;
-
-    &:hover {
-      box-shadow: 0 0 0 1px $color-border-selection-hover inset,
-        0 2px 2px $welcome-mat-color-action-shadow;
-    }
-  }
-
+  /**
+   * @summary Progress bar inside Welcome Mat
+   */
   .slds-progress-bar {
     display: inline-block;
     width: $welcome-mat-width-progress-bar;
     background: $welcome-mat-color-background-progress-bar;
   }
 
+  /**
+   * @summary Progress bar value inside Welcome Mat
+   */
   .slds-progress-bar__value {
     background: $progress-bar-color-background-fill-success;
   }
-}
-
-/**
- * @summary Content container for the whole Welcome Mat
- * @selector .slds-welcome-mat__content
- * @restrict .slds-welcome-mat .slds-modal__content
- */
-.slds-welcome-mat__content {
-  min-height: $welcome-mat-min-height;
-  max-height: $welcome-mat-max-height;
 }
 
 /**
@@ -115,6 +106,7 @@
 .slds-welcome-mat__tiles {
   background: $color-background;
   overflow: auto;
+  padding: $spacing-medium;
 }
 
 /**
@@ -123,6 +115,22 @@
  * @restrict .slds-welcome-mat__tiles li
  */
 .slds-welcome-mat__tile {
+  margin: $spacing-medium 0;
+
+  .slds-media {
+    padding: $spacing_x-small;
+  }
+
+  &:not(.slds-welcome-mat__tile_complete):not(.slds-welcome-mat__tile_info-only) {
+    box-shadow: 0 2px 2px $welcome-mat-color-action-shadow;
+    border-radius: $border-radius-medium;
+    background: $color-background-alt;
+
+    &:hover {
+      box-shadow: 0 0 0 1px $color-border-selection-hover inset,
+        0 2px 2px $welcome-mat-color-action-shadow;
+    }
+  }
 
   &:not(.slds-welcome-mat__tile_complete) .slds-icon-action-check {
     display: none;
@@ -138,12 +146,31 @@
 }
 
 /**
+* @summary Figure element for Welcome Mat Tile item, based on SLDS Media Object figure.
+* @selector .slds-welcome-mat__tile-figure
+* @restrict .slds-welcome-mat__tile .slds-media__figure div
+*/
+.slds-welcome-mat__tile-figure {
+  margin-left: $spacing-xx-small;
+}
+
+/**
  * @summary Title element for Welcome Mat Tile item.
  * @selector .slds-welcome-mat__tile-title
  * @restrict .slds-welcome-mat__tile h3
  */
 .slds-welcome-mat__tile-title {
   font-weight: $font-weight-bold;
+}
+
+/**
+ * @summary Body element for Welcome Mat Tile item, based on SLDS Media Object body.
+ * @selector .slds-welcome-mat__tile-body
+ * @restrict .slds-welcome-mat__tile .slds-media__body div
+ */
+.slds-welcome-mat__tile-body {
+  padding: $spacing-small;
+  border-left: $border-width-thin solid $color-border;
 }
 
 /**

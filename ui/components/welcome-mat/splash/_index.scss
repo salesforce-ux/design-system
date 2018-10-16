@@ -1,0 +1,24 @@
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * @summary Creates Welcome Mat Full Width
+ * @name splash
+ * @selector .slds-welcome-mat_splash
+ * @restrict .slds-welcome-mat
+ * @variant
+ */
+.slds-welcome-mat_splash {
+
+  .slds-welcome-mat__content {
+    height: $welcome-mat-max-height;
+  }
+
+  .slds-welcome-mat__info-content {
+    max-width: rem(600px);
+  }
+
+  .slds-welcome-mat__info-title {
+    font-size: rem(32px);
+  }
+}

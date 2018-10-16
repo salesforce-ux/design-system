@@ -3,92 +3,90 @@
 
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import _ from '../../shared/helpers';
+import classNames from 'classnames';
 
-// component imports
+// local helpers and components
+import _ from '../../shared/helpers';
 import { Modal, ModalHeader, ModalContent } from '../modals/base/example';
+
+// component helpers and compositional pieces
+import { sampleTiles } from './helpers';
 import WelcomeMatTile from './WelcomeMatTile';
 import WelcomeMatContent from './WelcomeMatContent';
 
-export const sampleTiles = () => [
-  {
-    symbol: 'animal_and_nature',
-    title: 'Welcome to Salesforce!',
-    description: 'Lorem ipsum dolor sit amet, lorem ipsum dolor sit amet.'
-  },
-  {
-    symbol: 'call',
-    title: 'Learn About OpenCTI',
-    description: 'Lorem ipsum dolor sit amet, lorem ipsum dolor sit amet.'
-  },
-  {
-    symbol: 'upload',
-    title: 'Power Up the Utility Bar',
-    description:
-      'Tap into case history or share notes with fellow agents—it all happens on the utility bar.'
-  },
-  {
-    symbol: 'magicwand',
-    title: 'Customize your view',
-    description:
-      "Tailor your cases to your team's workflow with custom list views."
-  },
-  {
-    symbol: 'knowledge_base',
-    title: 'Share the Knowledge',
-    description:
-      "Harness your team's collective know-how with our powerful knowledge base."
-  }
-];
-
 class WelcomeMat extends Component {
   renderTiles(isCompleted) {
-    const { tiles } = this.props;
+    const { tiles, isInfoOnly } = this.props;
 
     return tiles
       .filter(tile => (tile.completed || false) === isCompleted)
-      .map((tile, i) => <WelcomeMatTile key={i} tile={tile} />);
+      .map((tile, i) => (
+        <WelcomeMatTile
+          key={`${_.uniqueId('welcome-mat-')}-${i}`}
+          tile={tile}
+          isInfoOnly={isInfoOnly}
+        />
+      ));
   }
 
   completeTileCount() {
-    return this.props.tiles.filter(tile => tile.completed === true).length;
+    const { tiles } = this.props;
+    return tiles ? tiles.filter(tile => tile.completed === true).length : 0;
   }
 
   totalTileCount() {
-    return this.props.tiles.length;
+    const { tiles } = this.props;
+    return tiles ? tiles.length : 0;
   }
 
   render() {
-    const { content } = this.props;
+    const { content, isInfoOnly, tiles } = this.props;
     const uniqueId = _.uniqueId('welcome-mat-');
     const welcomeMatLabelId = `${uniqueId}-label`;
-    const welcomeMatDescipId = `${uniqueId}-content`;
+    const welcomeMatDescripId = `${uniqueId}-content`;
+    const welcomeMatClass = classNames('slds-welcome-mat', {
+      'slds-welcome-mat_info-only': isInfoOnly,
+      'slds-welcome-mat_splash': !tiles
+    });
+    const welcomeMatInfoClass = classNames('slds-welcome-mat__info', {
+      'slds-size_1-of-2': !!tiles,
+      'slds-size_1-of-1': !tiles
+    });
+    const tileContainerClasses = classNames(
+      'slds-welcome-mat__tiles slds-size_1-of-2',
+      {
+        'slds-welcome-mat__tiles_info-only': isInfoOnly
+      }
+    );
 
     return (
       <Modal
-        className="slds-welcome-mat"
+        className="slds-modal_small"
         aria-labelledby={welcomeMatLabelId}
-        aria-describedby={welcomeMatDescipId}
+        aria-describedby={welcomeMatDescripId}
       >
         <ModalHeader className="slds-modal__header_empty" />
-        <ModalContent
-          className="slds-welcome-mat__content slds-grid"
-          aria-describedby={welcomeMatDescipId}
-        >
-          <div className="slds-welcome-mat__info slds-size_1-of-2">
-            <div className="slds-welcome-mat__info-content">
-              {content({
-                complete: this.completeTileCount(),
-                total: this.totalTileCount(),
-                labelId: welcomeMatLabelId
-              })}
+        <ModalContent id={welcomeMatDescripId}>
+          <div className={welcomeMatClass}>
+            <div className="slds-welcome-mat__content slds-grid">
+              <div className={welcomeMatInfoClass}>
+                <div className="slds-welcome-mat__info-content">
+                  {content({
+                    complete: this.completeTileCount(),
+                    total: this.totalTileCount(),
+                    labelId: welcomeMatLabelId
+                  })}
+                </div>
+              </div>
+
+              {tiles && tiles.length > 0 ? (
+                <ul className={tileContainerClasses}>
+                  {this.renderTiles(true)}
+                  {this.renderTiles(false)}
+                </ul>
+              ) : null}
             </div>
           </div>
-
-          <ul className="slds-welcome-mat__tiles slds-size_1-of-2 slds-p-around_medium">
-            {this.renderTiles(true)}
-            {this.renderTiles(false)}
-          </ul>
         </ModalContent>
       </Modal>
     );
@@ -103,8 +101,9 @@ WelcomeMat.propTypes = {
       description: PropTypes.string.isRequired,
       completed: PropTypes.bool
     })
-  ).isRequired,
-  content: PropTypes.func.isRequired
+  ),
+  content: PropTypes.func.isRequired,
+  isInfoOnly: PropTypes.bool
 };
 
 WelcomeMat.defaultProps = {

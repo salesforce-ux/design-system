@@ -5,20 +5,19 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { ProgressBar } from '../progress-bar';
 
-import { WelcomeMatInfoTitle, WelcomeMatInfoDesc } from './helpers';
-
-class WelcomeMatContent extends React.Component {
+class WelcomeMatContentDeprecated extends React.Component {
   render() {
     const { complete, total, labelId, description } = this.props;
     const completePercent = complete / total * 100;
 
     return (
       <React.Fragment>
-        <WelcomeMatInfoTitle labelId={labelId}>
+        <h2 id={labelId} className="slds-welcome-mat__info-title">
           The Lightning Experience is here!
-        </WelcomeMatInfoTitle>
-
-        <WelcomeMatInfoDesc>{description}</WelcomeMatInfoDesc>
+        </h2>
+        <div className="slds-welcome-mat__info-description slds-text-longform">
+          {description}
+        </div>
 
         <div className="slds-welcome-mat__info-progress">
           <p>
@@ -36,14 +35,14 @@ class WelcomeMatContent extends React.Component {
   }
 }
 
-WelcomeMatContent.propTypes = {
+WelcomeMatContentDeprecated.propTypes = {
   complete: PropTypes.number.isRequired,
   total: PropTypes.number.isRequired,
   labelId: PropTypes.string.isRequired,
   description: PropTypes.element.isRequired
 };
 
-WelcomeMatContent.defaultProps = {
+WelcomeMatContentDeprecated.defaultProps = {
   complete: 0,
   total: 5,
   labelId: 'welcome-mat-label-1',
@@ -57,4 +56,4 @@ WelcomeMatContent.defaultProps = {
   )
 };
 
-export default WelcomeMatContent;
+export default WelcomeMatContentDeprecated;

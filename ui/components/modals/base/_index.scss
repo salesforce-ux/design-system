@@ -242,8 +242,26 @@
 }
 
 /**
- * Widens the modal to take more horizontal space
- *
+ * @summary Widens the modal to take more horizontal space than default
+ * @name small
+ * @selector .slds-modal_small
+ * @restrict .slds-modal
+ * @modifier
+ * @group size
+ */
+.slds-modal_small {
+
+  .slds-modal__container {
+    @include mq-medium-min {
+      width: 52.0625rem; // These values taken from welcome mat modal
+      max-width: none;
+    }
+  }
+}
+
+/**
+ * @summary Widens the modal to take more horizontal space than small
+ * @name medium
  * @selector .slds-modal_medium
  * @restrict .slds-modal
  * @modifier
@@ -261,8 +279,8 @@
 }
 
 /**
- * Widens the modal to take more horizontal space
- *
+ * @summary Widens the modal to take more horizontal space than large
+ * @name large
  * @selector .slds-modal_large
  * @restrict .slds-modal
  * @modifier

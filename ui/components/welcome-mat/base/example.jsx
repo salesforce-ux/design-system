@@ -2,7 +2,8 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 import React from 'react';
-import WelcomeMat, { sampleTiles } from '../';
+import { sampleTiles } from '../helpers';
+import WelcomeMat from '../';
 import WelcomeMatContent from '../WelcomeMatContent';
 
 const tiles = sampleTiles();

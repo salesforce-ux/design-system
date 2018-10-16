@@ -1,0 +1,641 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Vertical Tabs renders base vertical tab items 1`] = `
+<div
+  className="slds-vertical-tabs"
+>
+  <ul
+    aria-orientation="vertical"
+    className="slds-vertical-tabs__nav"
+    role="tablist"
+  >
+    <li
+      className="slds-vertical-tabs__nav-item slds-is-active"
+      role="presentation"
+      title="Tab 1"
+    >
+      <a
+        aria-controls="slds-vertical-tabs-0"
+        aria-selected="true"
+        className="slds-vertical-tabs__link"
+        href="javascript:void(0)"
+        id="slds-vertical-tabs-0__nav"
+        onClick={undefined}
+        role="tab"
+        tabIndex={0}
+      >
+        <span
+          className="slds-vertical-tabs__left-icon"
+        />
+        <span
+          className="slds-truncate"
+          title="Tab 1"
+        >
+          Tab 1
+        </span>
+        <span
+          className="slds-vertical-tabs__right-icon"
+        />
+      </a>
+    </li>
+    <li
+      className="slds-vertical-tabs__nav-item"
+      role="presentation"
+      title="Tab 2"
+    >
+      <a
+        aria-controls="slds-vertical-tabs-1"
+        aria-selected="false"
+        className="slds-vertical-tabs__link"
+        href="javascript:void(0)"
+        id="slds-vertical-tabs-1__nav"
+        onClick={undefined}
+        role="tab"
+        tabIndex={-1}
+      >
+        <span
+          className="slds-vertical-tabs__left-icon"
+        />
+        <span
+          className="slds-truncate"
+          title="Tab 2"
+        >
+          Tab 2
+        </span>
+        <span
+          className="slds-vertical-tabs__right-icon"
+        />
+      </a>
+    </li>
+    <li
+      className="slds-vertical-tabs__nav-item"
+      role="presentation"
+      title="Tab 3 has a really long label and can wrap or truncate"
+    >
+      <a
+        aria-controls="slds-vertical-tabs-2"
+        aria-selected="false"
+        className="slds-vertical-tabs__link"
+        href="javascript:void(0)"
+        id="slds-vertical-tabs-2__nav"
+        onClick={undefined}
+        role="tab"
+        tabIndex={-1}
+      >
+        <span
+          className="slds-vertical-tabs__left-icon"
+        />
+        <span
+          className="slds-truncate"
+          title="Tab 3 has a really long label and can wrap or truncate"
+        >
+          Tab 3 has a really long label and can wrap or truncate
+        </span>
+        <span
+          className="slds-vertical-tabs__right-icon"
+        />
+      </a>
+    </li>
+  </ul>
+  <div
+    aria-labelledby="slds-vertical-tabs-0__nav"
+    className="slds-vertical-tabs__content slds-show"
+    id="slds-vertical-tabs-0"
+    role="tabpanel"
+  >
+    <div
+      className="slds-text-longform"
+    >
+      <h3
+        className="slds-text-heading_medium"
+      >
+        Tab Title
+      </h3>
+      <p>
+        Content for Tab 1
+      </p>
+      <p>
+        Lorem ipsum dolor...
+      </p>
+      <p>
+        Lorem ipsum dolor...
+      </p>
+    </div>
+  </div>
+  <div
+    aria-labelledby="slds-vertical-tabs-1__nav"
+    className="slds-vertical-tabs__content slds-hide"
+    id="slds-vertical-tabs-1"
+    role="tabpanel"
+  >
+    <div
+      className="slds-text-longform"
+    >
+      <h3
+        className="slds-text-heading_medium"
+      >
+        Tab Title
+      </h3>
+      <p>
+        Content for Tab 1
+      </p>
+      <p>
+        Lorem ipsum dolor...
+      </p>
+      <p>
+        Lorem ipsum dolor...
+      </p>
+    </div>
+  </div>
+  <div
+    aria-labelledby="slds-vertical-tabs-2__nav"
+    className="slds-vertical-tabs__content slds-hide"
+    id="slds-vertical-tabs-2"
+    role="tabpanel"
+  >
+    <div
+      className="slds-text-longform"
+    >
+      <h3
+        className="slds-text-heading_medium"
+      >
+        Tab Title
+      </h3>
+      <p>
+        Content for Tab 1
+      </p>
+      <p>
+        Lorem ipsum dolor...
+      </p>
+      <p>
+        Lorem ipsum dolor...
+      </p>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Vertical Tabs renders base vertical tab items with badges 1`] = `
+<div
+  className="slds-vertical-tabs"
+>
+  <ul
+    aria-orientation="vertical"
+    className="slds-vertical-tabs__nav"
+    role="tablist"
+  >
+    <li
+      className="slds-vertical-tabs__nav-item slds-is-active"
+      role="presentation"
+      title="Opportunities"
+    >
+      <a
+        aria-controls="slds-vertical-tabs-0"
+        aria-selected="true"
+        className="slds-vertical-tabs__link"
+        href="javascript:void(0)"
+        id="slds-vertical-tabs-0__nav"
+        onClick={undefined}
+        role="tab"
+        tabIndex={0}
+      >
+        <span
+          className="slds-vertical-tabs__left-icon"
+        >
+          <span
+            className="slds-icon_container slds-icon-standard-opportunity"
+            title="Description of icon when needed"
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-icon slds-icon_small"
+            >
+              <use
+                xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#opportunity"
+              />
+            </svg>
+          </span>
+        </span>
+        <span
+          className="slds-truncate"
+          title="Opportunities"
+        >
+          Opportunities
+        </span>
+        <span
+          className="slds-vertical-tabs__right-icon"
+        >
+          <span
+            className="slds-badge slds-badge_inverse"
+          >
+            New
+          </span>
+        </span>
+      </a>
+    </li>
+    <li
+      className="slds-vertical-tabs__nav-item"
+      role="presentation"
+      title="Cases"
+    >
+      <a
+        aria-controls="slds-vertical-tabs-1"
+        aria-selected="false"
+        className="slds-vertical-tabs__link"
+        href="javascript:void(0)"
+        id="slds-vertical-tabs-1__nav"
+        onClick={undefined}
+        role="tab"
+        tabIndex={-1}
+      >
+        <span
+          className="slds-vertical-tabs__left-icon"
+        >
+          <span
+            className="slds-icon_container slds-icon-standard-case"
+            title="Description of icon when needed"
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-icon slds-icon_small"
+            >
+              <use
+                xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#case"
+              />
+            </svg>
+          </span>
+        </span>
+        <span
+          className="slds-truncate"
+          title="Cases"
+        >
+          Cases
+        </span>
+        <span
+          className="slds-vertical-tabs__right-icon"
+        >
+          <span
+            className="slds-badge slds-badge_inverse"
+          >
+            New
+          </span>
+        </span>
+      </a>
+    </li>
+    <li
+      className="slds-vertical-tabs__nav-item"
+      role="presentation"
+      title="Accounts"
+    >
+      <a
+        aria-controls="slds-vertical-tabs-2"
+        aria-selected="false"
+        className="slds-vertical-tabs__link"
+        href="javascript:void(0)"
+        id="slds-vertical-tabs-2__nav"
+        onClick={undefined}
+        role="tab"
+        tabIndex={-1}
+      >
+        <span
+          className="slds-vertical-tabs__left-icon"
+        >
+          <span
+            className="slds-icon_container slds-icon-standard-account"
+            title="Description of icon when needed"
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-icon slds-icon_small"
+            >
+              <use
+                xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#account"
+              />
+            </svg>
+          </span>
+        </span>
+        <span
+          className="slds-truncate"
+          title="Accounts"
+        >
+          Accounts
+        </span>
+        <span
+          className="slds-vertical-tabs__right-icon"
+        />
+      </a>
+    </li>
+  </ul>
+  <div
+    aria-labelledby="slds-vertical-tabs-0__nav"
+    className="slds-vertical-tabs__content slds-show"
+    id="slds-vertical-tabs-0"
+    role="tabpanel"
+  >
+    <div
+      className="slds-text-longform"
+    >
+      <h3
+        className="slds-text-heading_medium"
+      >
+        Tab Title
+      </h3>
+      <p>
+        Content for Tab 1
+      </p>
+      <p>
+        Lorem ipsum dolor...
+      </p>
+      <p>
+        Lorem ipsum dolor...
+      </p>
+    </div>
+  </div>
+  <div
+    aria-labelledby="slds-vertical-tabs-1__nav"
+    className="slds-vertical-tabs__content slds-hide"
+    id="slds-vertical-tabs-1"
+    role="tabpanel"
+  >
+    <div
+      className="slds-text-longform"
+    >
+      <h3
+        className="slds-text-heading_medium"
+      >
+        Tab Title
+      </h3>
+      <p>
+        Content for Tab 1
+      </p>
+      <p>
+        Lorem ipsum dolor...
+      </p>
+      <p>
+        Lorem ipsum dolor...
+      </p>
+    </div>
+  </div>
+  <div
+    aria-labelledby="slds-vertical-tabs-2__nav"
+    className="slds-vertical-tabs__content slds-hide"
+    id="slds-vertical-tabs-2"
+    role="tabpanel"
+  >
+    <div
+      className="slds-text-longform"
+    >
+      <h3
+        className="slds-text-heading_medium"
+      >
+        Tab Title
+      </h3>
+      <p>
+        Content for Tab 1
+      </p>
+      <p>
+        Lorem ipsum dolor...
+      </p>
+      <p>
+        Lorem ipsum dolor...
+      </p>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Vertical Tabs renders base vertical tab items with icons 1`] = `
+<div
+  className="slds-vertical-tabs"
+>
+  <ul
+    aria-orientation="vertical"
+    className="slds-vertical-tabs__nav"
+    role="tablist"
+  >
+    <li
+      className="slds-vertical-tabs__nav-item slds-is-active"
+      role="presentation"
+      title="Opportunities"
+    >
+      <a
+        aria-controls="slds-vertical-tabs-0"
+        aria-selected="true"
+        className="slds-vertical-tabs__link"
+        href="javascript:void(0)"
+        id="slds-vertical-tabs-0__nav"
+        onClick={undefined}
+        role="tab"
+        tabIndex={0}
+      >
+        <span
+          className="slds-vertical-tabs__left-icon"
+        >
+          <span
+            className="slds-icon_container slds-icon-standard-opportunity"
+            title="Description of icon when needed"
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-icon slds-icon_small"
+            >
+              <use
+                xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#opportunity"
+              />
+            </svg>
+          </span>
+        </span>
+        <span
+          className="slds-truncate"
+          title="Opportunities"
+        >
+          Opportunities
+        </span>
+        <span
+          className="slds-vertical-tabs__right-icon"
+        />
+      </a>
+    </li>
+    <li
+      className="slds-vertical-tabs__nav-item"
+      role="presentation"
+      title="Cases"
+    >
+      <a
+        aria-controls="slds-vertical-tabs-1"
+        aria-selected="false"
+        className="slds-vertical-tabs__link"
+        href="javascript:void(0)"
+        id="slds-vertical-tabs-1__nav"
+        onClick={undefined}
+        role="tab"
+        tabIndex={-1}
+      >
+        <span
+          className="slds-vertical-tabs__left-icon"
+        >
+          <span
+            className="slds-icon_container slds-icon-standard-case"
+            title="Description of icon when needed"
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-icon slds-icon_small"
+            >
+              <use
+                xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#case"
+              />
+            </svg>
+          </span>
+        </span>
+        <span
+          className="slds-truncate"
+          title="Cases"
+        >
+          Cases
+        </span>
+        <span
+          className="slds-vertical-tabs__right-icon"
+        >
+          <span
+            className="slds-icon_container slds-icon-utility-error"
+            title="This tab has an error"
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-icon slds-icon_x-small slds-icon-text-error"
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#error"
+              />
+            </svg>
+            <span
+              className="slds-assistive-text"
+            >
+              This tab has an error
+            </span>
+          </span>
+        </span>
+      </a>
+    </li>
+    <li
+      className="slds-vertical-tabs__nav-item"
+      role="presentation"
+      title="Accounts"
+    >
+      <a
+        aria-controls="slds-vertical-tabs-2"
+        aria-selected="false"
+        className="slds-vertical-tabs__link"
+        href="javascript:void(0)"
+        id="slds-vertical-tabs-2__nav"
+        onClick={undefined}
+        role="tab"
+        tabIndex={-1}
+      >
+        <span
+          className="slds-vertical-tabs__left-icon"
+        >
+          <span
+            className="slds-icon_container slds-icon-standard-account"
+            title="Description of icon when needed"
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-icon slds-icon_small"
+            >
+              <use
+                xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#account"
+              />
+            </svg>
+          </span>
+        </span>
+        <span
+          className="slds-truncate"
+          title="Accounts"
+        >
+          Accounts
+        </span>
+        <span
+          className="slds-vertical-tabs__right-icon"
+        />
+      </a>
+    </li>
+  </ul>
+  <div
+    aria-labelledby="slds-vertical-tabs-0__nav"
+    className="slds-vertical-tabs__content slds-show"
+    id="slds-vertical-tabs-0"
+    role="tabpanel"
+  >
+    <div
+      className="slds-text-longform"
+    >
+      <h3
+        className="slds-text-heading_medium"
+      >
+        Tab Title
+      </h3>
+      <p>
+        Content for Tab 1
+      </p>
+      <p>
+        Lorem ipsum dolor...
+      </p>
+      <p>
+        Lorem ipsum dolor...
+      </p>
+    </div>
+  </div>
+  <div
+    aria-labelledby="slds-vertical-tabs-1__nav"
+    className="slds-vertical-tabs__content slds-hide"
+    id="slds-vertical-tabs-1"
+    role="tabpanel"
+  >
+    <div
+      className="slds-text-longform"
+    >
+      <h3
+        className="slds-text-heading_medium"
+      >
+        Tab Title
+      </h3>
+      <p>
+        Content for Tab 1
+      </p>
+      <p>
+        Lorem ipsum dolor...
+      </p>
+      <p>
+        Lorem ipsum dolor...
+      </p>
+    </div>
+  </div>
+  <div
+    aria-labelledby="slds-vertical-tabs-2__nav"
+    className="slds-vertical-tabs__content slds-hide"
+    id="slds-vertical-tabs-2"
+    role="tabpanel"
+  >
+    <div
+      className="slds-text-longform"
+    >
+      <h3
+        className="slds-text-heading_medium"
+      >
+        Tab Title
+      </h3>
+      <p>
+        Content for Tab 1
+      </p>
+      <p>
+        Lorem ipsum dolor...
+      </p>
+      <p>
+        Lorem ipsum dolor...
+      </p>
+    </div>
+  </div>
+</div>
+`;

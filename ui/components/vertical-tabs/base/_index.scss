@@ -36,6 +36,8 @@
  * @restrict .slds-vertical-tabs__nav li
  */
 .slds-vertical-tabs__nav-item {
+  display: flex;
+  align-items: center;
   overflow: hidden;
   border-bottom: $border-width-thin solid $color-border;
   color: $color-text-action-label;
@@ -51,7 +53,10 @@
  * @restrict .slds-vertical-tabs__nav-item a
  */
 .slds-vertical-tabs__link {
-  display: block;
+  display: flex;
+  flex: 1 1 0%;
+  align-items: center;
+  min-width: 0;
   padding: $spacing-small;
   color: currentColor;
 
@@ -64,6 +69,28 @@
   &:focus {
     outline: 0;
   }
+}
+
+/**
+ * @summary Left icon inside of vertical tabs nav item
+ * @selector .slds-vertical-tabs__left-icon
+ * @restrict .slds-vertical-tabs__nav-item span
+ */
+.slds-vertical-tabs__left-icon {
+  margin-right: $spacing-x-small;
+
+  &:empty {
+    margin-right: 0;
+  }
+}
+
+/**
+ * @summary Right icon inside of vertical tabs nav item
+ * @selector .slds-vertical-tabs__right-icon
+ * @restrict .slds-vertical-tabs__nav-item span
+ */
+.slds-vertical-tabs__right-icon {
+  margin-left: auto;
 }
 
 /**

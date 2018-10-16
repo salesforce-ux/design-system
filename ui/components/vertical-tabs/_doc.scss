@@ -17,7 +17,7 @@
  * - The `.slds-has-focus` modifier class is required on the `.slds-vertical-tabs__nav-item` element that has focus.
  * - The `.slds-show` modifier class is required on the `.slds-vertical-tabs__content` element that is being shown (their tab label is selected).
  * - The `.slds-hide` modifier class is required on all `.slds-vertical-tabs__content` elements that are not being shown (their tab label is not selected).
- * - The `.slds-truncate` modifier class is optional on `.slds-vertical-tabs__link` elements if single-line truncation is desired for the tab labels.
+ * - If an icon or badge is to be used in combination with a tab nav item label, you can wrap an icon on the left of the label in a `span` with the class `slds-vertical-tabs__left-icon`. If you require an icon or badge to the right of the label, you can wrap the element in a `span` with the class `slds-vertical-tabs__right-icon`.
  *
  * #### Accessibility
  *

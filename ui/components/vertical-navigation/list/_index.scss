@@ -39,6 +39,10 @@
  */
 .slds-nav-vertical_shade {
 
+  .slds-nav-vertical__item:before {
+    background: $color-background-alt;
+  }
+
   .slds-is-active .slds-nav-vertical__action {
     border-color: $color-border;
   }

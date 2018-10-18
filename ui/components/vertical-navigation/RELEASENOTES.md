@@ -10,6 +10,7 @@
 
 - Increased font size to 16px and applied bold font weight to `slds-nav-vertical__title`.
 - Increased left padding in `slds-nav-vertical__action`.
+- Changed background color of the selected `slds-nav-vertical__item` element in the shaded background example to be white.
 
 ### Removed
 

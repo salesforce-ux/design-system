@@ -44,7 +44,7 @@
  */
 .slds-page-header__detail-row {
   display: flex;
-  margin: $var-spacing-vertical-small ($var-spacing-horizontal-medium * -1) ($var-spacing-horizontal-medium * -1);
+  margin: $var-spacing-vertical-small ($var-spacing-horizontal-medium * -1) ($var-spacing-vertical-medium * -1);
   padding: $var-spacing-horizontal-medium;
   border-radius: 0 0 $page-header-border-radius $page-header-border-radius;
   background-color: $page-header-color-background-alt;

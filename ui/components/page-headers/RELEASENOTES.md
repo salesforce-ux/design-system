@@ -3,6 +3,14 @@
 # Page Headers Release Notes
 
 <!-- ## [Unreleased] -->
+
+## 2.8.0
+
+### Changed
+
+- Update padding for `slds-page-header` to use directionally aware variable spacing tokens.
+- Update Record Home margins on `slds-page-header__detail-row` to correctly use directionally aware variable spacing tokens.
+
 ## 2.7.1
 
 ### Changed

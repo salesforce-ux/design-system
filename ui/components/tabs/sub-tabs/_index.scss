@@ -54,7 +54,11 @@
    * @restrict .slds-sub-tabs__item
    */
   &.slds-has-success {
-    @include sub-tab-notification-before($color-background-success-darker);
+    @include sub-tab-notification-before($color-background-success-dark, $color-background-success-darker);
+
+    &:before {
+      animation-name: success-pulse;
+    }
   }
 
   /**
@@ -64,7 +68,11 @@
    * @restrict .slds-sub-tabs__item
    */
   &.slds-has-error {
-    @include sub-tab-notification-before($color-background-destructive-active);
+    @include sub-tab-notification-before($color-background-destructive, $color-background-destructive-active);
+
+    &:before {
+      animation-name: error-pulse;
+    }
   }
 
   &.slds-has-success,
@@ -87,10 +95,14 @@
    * @restrict .slds-sub-tabs__item
    */
   &.slds-has-warning {
-    @include sub-tab-notification-before($color-background-warning);
+    @include sub-tab-notification-before($color-background-warning, $color-background-warning);
 
     &:before {
-      animation-name: pulse-lighter;
+      animation-name: warning-pulse;
+    }
+
+    &:hover:before {
+      opacity: 0.7;
     }
 
     .slds-indicator_unread {

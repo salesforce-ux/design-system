@@ -192,7 +192,11 @@
      * @restrict .slds-context-bar__item
      */
     &.slds-has-success {
-      @include tab-notification-before($color-background-success-darker);
+      @include tab-notification-before($color-background-success-dark, $color-background-success-darker);
+
+      &:before {
+        animation-name: success-pulse;
+      }
     }
 
     /**
@@ -202,7 +206,11 @@
      * @restrict .slds-context-bar__item
      */
     &.slds-has-error {
-      @include tab-notification-before($color-background-destructive-active);
+      @include tab-notification-before($color-background-destructive, $color-background-destructive-active);
+
+      &:before {
+        animation-name: error-pulse;
+      }
     }
 
     &.slds-has-success,
@@ -228,10 +236,14 @@
      * @restrict .slds-context-bar__item
      */
     &.slds-has-warning {
-      @include tab-notification-before($color-background-warning);
+      @include tab-notification-before($color-background-warning, $color-background-warning);
 
       &:before {
-        animation-name: pulse-lighter;
+        animation-name: warning-pulse;
+      }
+
+      &:hover:before {
+        opacity: 0.7;
       }
 
       .slds-indicator_unread {
@@ -249,9 +261,10 @@
 
       &:after {
         content: '';
-        background: $color-gray-1;
+        background: $color-gray-11;
         position: absolute;
         height: $globalnavigation-item-height-accent-active;
+        opacity: 0.4;
         top: 0;
         right: 0;
         left: 0;

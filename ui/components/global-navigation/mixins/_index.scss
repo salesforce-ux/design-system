@@ -1,11 +1,13 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-@mixin tab-notification-before($color) {
+@mixin tab-notification-before($color, $hover-color) {
 
   &:before {
-    animation: pulse 1s linear;
+    animation: none;
+    animation-duration: 1s;
     animation-iteration-count: 3;
+    animation-timing-function: linear;
     background-color: $color;
     bottom: 0;
     content: '';
@@ -14,18 +16,44 @@
     position: absolute;
     right: 0;
     top: 0;
+    transition: background-color 0.25s cubic-bezier(0.39, 0.575, 0.565, 1);
   }
 
   &:hover {
 
     &:before {
+      background-color: $hover-color;
       height: auto;
     }
   }
 }
 
 @mixin tab-notification-pulsing-animation() {
-  @keyframes pulse {
+  @keyframes error-pulse {
+
+    0%,
+    100% {
+      background-color: $color-background-destructive;
+    }
+
+    50% {
+      background-color: $color-background-destructive-active;
+    }
+  }
+
+  @keyframes success-pulse {
+
+    0%,
+    100% {
+      background-color: $color-background-success-dark;
+    }
+
+    50% {
+      background-color: $color-background-success-darker;
+    }
+  }
+
+  @keyframes warning-pulse {
 
     0%,
     100% {
@@ -34,18 +62,6 @@
 
     50% {
       opacity: 0.7;
-    }
-  }
-
-  @keyframes pulse-lighter {
-
-    0%,
-    100% {
-      opacity: 1;
-    }
-
-    50% {
-      opacity: 0.6;
     }
   }
 }

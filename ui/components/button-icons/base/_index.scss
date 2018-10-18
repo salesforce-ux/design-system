@@ -163,6 +163,15 @@
 }
 
 /**
+ * @summary Apply the current color to the icon contained within
+ * @selector .slds-button_icon-current-color
+ * @restrict .slds-button_icon
+ */
+.slds-button_icon-current-color {
+  color: currentColor;
+}
+
+/**
  * @summary Changes a button icon container to be 24x24px
  * @name small
  * @selector .slds-button_icon-small

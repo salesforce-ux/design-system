@@ -4,8 +4,10 @@ import Example from '../../../shared/components/Example';
 import Blockquote from '../../../shared/components/Blockquote';
 import { Button } from './base/example';
 import { StatefulButton } from './stateful/example';
+import { DualStatefulButton, DefaultText, PressedText } from './dual-stateful/example';
 import SvgIcon from '../../shared/svg-icon';
-
+import * as DualStatefulExamples from './dual-stateful/example';
+import { getDisplayElementById } from '../../shared/helpers';
 
 <div className="doc lead">
   Buttons are clickable items used to perform an action.
@@ -231,7 +233,7 @@ The SVG, element, or icon inside the button receives the `slds-button__icon` cla
 
 ## Stateful
 
-Stateful buttons have two binary states. Like a toggle, they can be on or off.
+Stateful buttons have three states: not selected (default), selected and focused, and selected with hover state.
 
 The stateful button requires the `slds-button_stateful` class and the `slds-button_neutral` class in addition to the `slds-button` class. Stateful buttons are only used with the neutral variation.
 
@@ -274,3 +276,33 @@ Once selected and blurred (user moved focus away from the button), stateful butt
     <StatefulButton isSelected />
   </CodeView>
 </Example>
+
+## Dual Stateful Button
+
+Dual Stateful buttons have two states, similar to a [Toggle Button](/accessibility/patterns/togglebutton/#site-main-content): not pressed (default), and pressed.
+
+The Dual Stateful button requires the `slds-button_dual-stateful` class, along with a combination of the `slds-button` and `slds-button_neutral` classes. While Dual Stateful buttons are only used with the neutral Button variation, the pressed state changes the button _style_ to that of the Brand variation.
+
+The button contains two spans—each contains display text and a corresponding SVG icon with the class `slds-button__icon-left`—and have classes that hide or show the contents. By default, the first span with the class `slds-text-is-not-pressed` is displayed; when the class `slds-is-pressed` is applied to the parent button, the span with the class `slds-text-is-pressed` is displayed.
+
+<Blockquote type="a11y" header="Accessibility Requirement">
+  Be sure to include the attribute `aria-live="assertive"` on the button. The `aria-live="assertive"` attribute means the value of the `<span>` inside the button will be spoken whenever it changes.
+</Blockquote>
+
+<Blockquote type="note" header="JavaScript Requirement">
+  When the user clicks the button, use JavaScript to toggle the <code className="doc">slds-is-pressed</code> class on or off, depending on the previous state. Remember, only the pressed state requires this class.
+</Blockquote>
+
+### Not Pressed
+
+<CodeView>
+  {DualStatefulExamples.default}
+</CodeView>
+
+### Pressed
+
+To display the pressed state, use the class `slds-is-pressed` on the `<button>` element.
+
+<CodeView>
+  {getDisplayElementById(DualStatefulExamples.examples, 'pressed')}
+</CodeView>

@@ -81,6 +81,111 @@ exports[`Button  renders an outline brand button 1`] = `
 </button>
 `;
 
+exports[`Dual Stateful Button renders a disabled dual stateful button 1`] = `
+<button
+  aria-live="assertive"
+  className="slds-button slds-button_neutral slds-button_dual-stateful"
+  disabled={true}
+>
+  <span
+    className="slds-text-not-pressed"
+  >
+    <svg
+      aria-hidden={true}
+      className="slds-button__icon slds-button__icon_small slds-button__icon_left"
+    >
+      <use
+        xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#add"
+      />
+    </svg>
+    Follow
+  </span>
+  <span
+    className="slds-text-pressed"
+  >
+    <svg
+      aria-hidden={true}
+      className="slds-button__icon slds-button__icon_small slds-button__icon_left"
+    >
+      <use
+        xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#check"
+      />
+    </svg>
+    Following
+  </span>
+</button>
+`;
+
+exports[`Dual Stateful Button renders a not-pressed dual stateful button 1`] = `
+<button
+  aria-live="assertive"
+  className="slds-button slds-button_neutral slds-button_dual-stateful"
+  disabled={undefined}
+>
+  <span
+    className="slds-text-not-pressed"
+  >
+    <svg
+      aria-hidden={true}
+      className="slds-button__icon slds-button__icon_small slds-button__icon_left"
+    >
+      <use
+        xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#add"
+      />
+    </svg>
+    Follow
+  </span>
+  <span
+    className="slds-text-pressed"
+  >
+    <svg
+      aria-hidden={true}
+      className="slds-button__icon slds-button__icon_small slds-button__icon_left"
+    >
+      <use
+        xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#check"
+      />
+    </svg>
+    Following
+  </span>
+</button>
+`;
+
+exports[`Dual Stateful Button renders a pressed dual stateful button 1`] = `
+<button
+  aria-live="assertive"
+  className="slds-button slds-button_neutral slds-button_dual-stateful slds-is-pressed"
+  disabled={undefined}
+>
+  <span
+    className="slds-text-not-pressed"
+  >
+    <svg
+      aria-hidden={true}
+      className="slds-button__icon slds-button__icon_small slds-button__icon_left"
+    >
+      <use
+        xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#add"
+      />
+    </svg>
+    Follow
+  </span>
+  <span
+    className="slds-text-pressed"
+  >
+    <svg
+      aria-hidden={true}
+      className="slds-button__icon slds-button__icon_small slds-button__icon_left"
+    >
+      <use
+        xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#check"
+      />
+    </svg>
+    Following
+  </span>
+</button>
+`;
+
 exports[`Stateful Button  renders a not-selected stateful button 1`] = `
 <button
   aria-live="assertive"

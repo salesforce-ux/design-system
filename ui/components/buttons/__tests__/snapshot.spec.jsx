@@ -2,6 +2,11 @@
 import React from 'react';
 import { Button } from '../base/example';
 import { StatefulButton } from '../stateful/example';
+import {
+  DualStatefulButton,
+  DefaultText,
+  PressedText
+} from '../dual-stateful/example';
 import createHelpers from '../../../../jest.helpers';
 
 const { matchesMarkup } = createHelpers(__dirname);
@@ -43,4 +48,30 @@ describe('Stateful Button ', () => {
 
   it('renders a selected stateful button', () =>
     matchesMarkup(<StatefulButton isSelected>Button</StatefulButton>));
+});
+
+describe('Dual Stateful Button', () => {
+  it('renders a not-pressed dual stateful button', () =>
+    matchesMarkup(
+      <DualStatefulButton>
+        <DefaultText>Follow</DefaultText>
+        <PressedText>Following</PressedText>
+      </DualStatefulButton>
+    ));
+
+  it('renders a pressed dual stateful button', () =>
+    matchesMarkup(
+      <DualStatefulButton isPressed>
+        <DefaultText>Follow</DefaultText>
+        <PressedText>Following</PressedText>
+      </DualStatefulButton>
+    ));
+
+  it('renders a disabled dual stateful button', () =>
+    matchesMarkup(
+      <DualStatefulButton isDisabled>
+        <DefaultText>Follow</DefaultText>
+        <PressedText>Following</PressedText>
+      </DualStatefulButton>
+    ));
 });

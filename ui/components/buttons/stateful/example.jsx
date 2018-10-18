@@ -2,6 +2,7 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 import React from 'react';
+import PropTypes from 'prop-types';
 import SvgIcon from '../../../shared/svg-icon';
 import classNames from 'classnames';
 import { Button } from '../base/example';
@@ -54,8 +55,24 @@ export let StatefulButton = props => {
   );
 };
 
+StatefulButton.propTypes = {
+  className: PropTypes.string,
+  disabled: PropTypes.bool,
+  isNotSelected: PropTypes.bool,
+  isSelected: PropTypes.bool,
+  isSelectedClicked: PropTypes.bool
+};
+
 /// ////////////////////////////////////////
 // Export
 /// ////////////////////////////////////////
 
 export default <StatefulButton isNeutral isNotSelected />;
+
+export const states = [
+  {
+    id: 'disabled',
+    label: 'disabled',
+    element: <StatefulButton isNotSelected disabled />
+  }
+];

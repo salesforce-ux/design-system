@@ -4,6 +4,13 @@
 
 <!-- ## [Unreleased] -->
 
+## 2.8.0
+
+### Added
+
+- New Dual Stateful variation, which acts similar to a [Toggle Button](/accessibility/patterns/togglebutton/#site-main-content), by using the `slds-button_dual-stateful` class.
+  - This variation toggles between the styling of a neutral button and a brand button.
+
 ## 2.7.0
 
 ### Added

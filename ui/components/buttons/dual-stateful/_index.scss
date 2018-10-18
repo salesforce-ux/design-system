@@ -1,0 +1,57 @@
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * @summary Initiates a dual stateful button
+ * @name dual-stateful
+ * @selector .slds-button_dual-stateful
+ * @restrict button
+ * @variant
+ */
+.slds-button_dual-stateful {
+  /**
+   * @summary Shown text when button is not pressed - default state
+   * @selector .slds-text-not-pressed
+   * @restrict .slds-button_dual-stateful span
+   */
+  .slds-text-not-pressed {
+    display: block;
+  }
+
+  /**
+   * @summary Shown text when button is pressed
+   * @selector .slds-text-pressed
+   * @restrict .slds-button_dual-stateful span
+   */
+  .slds-text-pressed {
+    display: none;
+  }
+}
+
+/**
+ * @summary When button is in pressed state
+ * @selector .slds-is-pressed
+ * @restrict .slds-button_dual-stateful
+ * @notes This class should be toggled with JavaScript
+ * @modifier
+ * @group interaction
+ */
+.slds-button_dual-stateful.slds-is-pressed {
+  @include button;
+  @include button-brand;
+
+  &[disabled],
+  &:disabled {
+    background: $brand-disabled;
+    border-color: $brand-disabled;
+    color: $color-text-button-brand-disabled;
+  }
+
+  .slds-text-not-pressed {
+    display: none;
+  }
+
+  .slds-text-pressed {
+    display: block;
+  }
+}

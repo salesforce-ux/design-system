@@ -309,8 +309,6 @@ props:
     value: '#88C651'
   LEAD_INSIGHTS:
     value: '#22B0E6'
-  QUIP:
-    value: '#25B4E9'
   TOPIC2:
     value: '#56AAD0'
   MACROS:
@@ -533,3 +531,19 @@ props:
     value: '#7E8BE4'
   BOT_TRAINING:
     value: '#5876A3'
+  AGENT_SESSION:
+    value: '#F88960'
+  USER_ROLE:
+    value: '#8FC96E'
+  BRANCH_MERGE:
+    value: '#E9696E'
+  FILTER:
+    value: '#1539EE'
+  FIRST_NON_EMPTY:
+    value: '#E9696E'
+  OUTPUT:
+    value: '#439CBA'
+  SORT:
+    value: '#1539EE'
+  QUIP:
+    value: '#D3451D'

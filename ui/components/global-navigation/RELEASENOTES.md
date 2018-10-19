@@ -5,6 +5,10 @@
 <!-- ## [Unreleased] -->
 ## 2.8.0
 
+### Added
+
+- Tabbed Navigation Bar can now show 3 different statuses to alert users - error, success, and warning
+
 ### Removed
 
 - Removed `slds-text-title_caps` from menu headers.

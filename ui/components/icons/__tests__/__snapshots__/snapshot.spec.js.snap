@@ -41,3 +41,129 @@ exports[`Icon Action renders an xx-small action icon 1`] = `
   </span>
 </span>
 `;
+
+exports[`Utility Icon should render a utility icon 1`] = `
+<span
+  className="slds-icon_container slds-icon-utility-announcement"
+  title="Description of icon when needed"
+>
+  <svg
+    aria-hidden={true}
+    className="slds-icon"
+  >
+    <use
+      xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#announcement"
+    />
+  </svg>
+  <span
+    className="slds-assistive-text"
+  >
+    Description of icon when needed
+  </span>
+</span>
+`;
+
+exports[`Utility Icon should render a utility icon with currentColor 1`] = `
+<span
+  className="slds-icon_container slds-icon-utility-announcement slds-current-color"
+  title="Description of icon when needed"
+>
+  <svg
+    aria-hidden={true}
+    className="slds-icon"
+  >
+    <use
+      xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#announcement"
+    />
+  </svg>
+  <span
+    className="slds-assistive-text"
+  >
+    Description of icon when needed
+  </span>
+</span>
+`;
+
+exports[`Utility Icon should render a utility large icon 1`] = `
+<span
+  className="slds-icon_container slds-icon-utility-announcement"
+  title="Description of icon when needed"
+>
+  <svg
+    aria-hidden={true}
+    className="slds-icon slds-icon_large"
+  >
+    <use
+      xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#announcement"
+    />
+  </svg>
+  <span
+    className="slds-assistive-text"
+  >
+    Description of icon when needed
+  </span>
+</span>
+`;
+
+exports[`Utility Icon should render a utility small icon 1`] = `
+<span
+  className="slds-icon_container slds-icon-utility-announcement"
+  title="Description of icon when needed"
+>
+  <svg
+    aria-hidden={true}
+    className="slds-icon slds-icon_small"
+  >
+    <use
+      xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#announcement"
+    />
+  </svg>
+  <span
+    className="slds-assistive-text"
+  >
+    Description of icon when needed
+  </span>
+</span>
+`;
+
+exports[`Utility Icon should render a utility x-small icon 1`] = `
+<span
+  className="slds-icon_container slds-icon-utility-announcement"
+  title="Description of icon when needed"
+>
+  <svg
+    aria-hidden={true}
+    className="slds-icon slds-icon_x-small"
+  >
+    <use
+      xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#announcement"
+    />
+  </svg>
+  <span
+    className="slds-assistive-text"
+  >
+    Description of icon when needed
+  </span>
+</span>
+`;
+
+exports[`Utility Icon should render a utility xx-small icon 1`] = `
+<span
+  className="slds-icon_container slds-icon-utility-announcement"
+  title="Description of icon when needed"
+>
+  <svg
+    aria-hidden={true}
+    className="slds-icon slds-icon_xx-small"
+  >
+    <use
+      xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#announcement"
+    />
+  </svg>
+  <span
+    className="slds-assistive-text"
+  >
+    Description of icon when needed
+  </span>
+</span>
+`;

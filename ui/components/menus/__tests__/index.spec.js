@@ -5,7 +5,7 @@
 import React from 'react';
 import createHelpers from '../../../../jest.helpers';
 import { Submenu } from '../submenu/example';
-import { BaseMenu } from '../dropdown/example';
+import { BaseMenu, MenuItem } from '../dropdown/example';
 
 const { matchesMarkup } = createHelpers(__dirname);
 
@@ -24,4 +24,22 @@ describe('Menu with submenu', () => {
   it('renders a closed submenu', () => matchesMarkup(<Submenu />));
 
   it('renders an open submenu', () => matchesMarkup(<Submenu ariaExpanded />));
+});
+
+describe('MenuItem', () => {
+  it('should render a menu item', () => {
+    matchesMarkup(<MenuItem>menu item</MenuItem>);
+  });
+
+  it('should render an error menu item', () => {
+    matchesMarkup(<MenuItem statusLevel="error">menu item</MenuItem>);
+  });
+
+  it('should render an success menu item', () => {
+    matchesMarkup(<MenuItem statusLevel="success">menu item</MenuItem>);
+  });
+
+  it('should render an warning menu item', () => {
+    matchesMarkup(<MenuItem statusLevel="warning">menu item</MenuItem>);
+  });
 });

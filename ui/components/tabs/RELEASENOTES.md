@@ -6,9 +6,9 @@
 ## 2.8.0
 
 ### Added
-- Added examples of icon use in default tabs
 
-## 2.8.0
+- Added examples of icon use in default tabs
+- Sub Tabs can now show 3 different statuses to alert users - error, success, and warning
 
 ### Removed
 

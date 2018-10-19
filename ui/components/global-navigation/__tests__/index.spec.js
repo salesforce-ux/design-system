@@ -16,7 +16,14 @@ import {
 } from '../../tabs/sub-tabs/example';
 
 import createHelpers from '../../../../jest.helpers';
-import { IndicatorUnread, IndicatorUnsaved, IndicatorContainer } from '..';
+import {
+  IndicatorUnread,
+  IndicatorUnsaved,
+  IndicatorContainer,
+  TabObjectIcon,
+  TabStatusLevelIcon,
+  TabItemIconContainer
+} from '..';
 
 const { matchesMarkup } = createHelpers(__dirname);
 
@@ -161,4 +168,92 @@ describe('Global Navigation indicators', () => {
         <IndicatorUnread />
       </IndicatorContainer>
     ));
+});
+
+describe('TabObjectIcon', () => {
+  it('should render the object icon with the default case icon', () => {
+    matchesMarkup(<TabObjectIcon />);
+  });
+  it('should render the object icon with a passed in symbol', () => {
+    matchesMarkup(<TabObjectIcon symbol="live_chat" />);
+  });
+});
+
+describe('TabStatusLevelIcon', () => {
+  it('should render a success tab icon', () => {
+    matchesMarkup(<TabStatusLevelIcon level="success" />);
+  });
+
+  it('should render a warning tab icon', () => {
+    matchesMarkup(<TabStatusLevelIcon level="warning" />);
+  });
+
+  it('should render a error tab icon', () => {
+    matchesMarkup(<TabStatusLevelIcon level="error" />);
+  });
+});
+
+describe('TabItemIconContainer', () => {
+  it('should render an icon by default', () => {
+    matchesMarkup(<TabItemIconContainer symbol="case" />);
+  });
+  it('should render a status level icon instead of a default icon when a status level is passed in', () => {
+    matchesMarkup(<TabItemIconContainer statusLevel="success" />);
+  });
+});
+
+describe('ContextTab', () => {
+  it('should render a default ContextTab', () => {
+    matchesMarkup(<ContextTab id="tab-id" tabPanelId="tabpanel-id" />);
+  });
+
+  it('should render an active ContextTab', () => {
+    matchesMarkup(
+      <ContextTab id="tab-id" itemActive tabPanelId="tabpanel-id" />
+    );
+  });
+
+  it('should render a ContextTab with an unsaved indicator', () => {
+    matchesMarkup(
+      <ContextTab id="tab-id" itemUnsaved tabPanelId="tabpanel-id" />
+    );
+  });
+
+  it('should render a ContextTab with an unread indicator', () => {
+    matchesMarkup(
+      <ContextTab id="tab-id" itemUnread tabPanelId="tabpanel-id" />
+    );
+  });
+
+  it('should render a ContextTab without an icon', () => {
+    matchesMarkup(
+      <ContextTab hasIcon={false} id="tab-id" tabPanelId="tabpanel-id" />
+    );
+  });
+
+  it('should render a ContextTab with a set icon icon', () => {
+    matchesMarkup(
+      <ContextTab id="tab-id" symbol="opportunity" tabPanelId="tabpanel-id" />
+    );
+  });
+
+  it('should render a ContextTab with status level', () => {
+    matchesMarkup(
+      <ContextTab id="tab-id" statusLevel="error" tabPanelId="tabpanel-id" />
+    );
+  });
+});
+
+describe('ContextTabBarOverflow', () => {
+  it('should render a ContextTabBarOverflow', () => {
+    matchesMarkup(<ContextTabBarOverflow />);
+  });
+
+  it('should render a ContextTabBarOverflow with a status level of error', () => {
+    matchesMarkup(<ContextTabBarOverflow statusLevel="error" />);
+  });
+
+  it('should render a ContextTabBarOverflow with a status level of warning', () => {
+    matchesMarkup(<ContextTabBarOverflow statusLevel="warning" />);
+  });
 });

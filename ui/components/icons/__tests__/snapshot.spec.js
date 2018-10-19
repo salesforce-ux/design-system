@@ -5,6 +5,7 @@
 import React from 'react';
 import createHelpers from '../../../../jest.helpers';
 import { ActionIcon } from '../action/example';
+import { UtilityIcon } from '../base/example';
 const { matchesMarkup } = createHelpers(__dirname);
 
 describe('Icon Action', () => {
@@ -12,4 +13,30 @@ describe('Icon Action', () => {
     matchesMarkup(<ActionIcon className="slds-icon_x-small" />));
   it('renders an xx-small action icon', () =>
     matchesMarkup(<ActionIcon className="slds-icon_xx-small" />));
+});
+
+describe('Utility Icon', () => {
+  it('should render a utility icon', () => {
+    matchesMarkup(<UtilityIcon />);
+  });
+
+  it('should render a utility xx-small icon', () => {
+    matchesMarkup(<UtilityIcon size="xx-small" />);
+  });
+
+  it('should render a utility x-small icon', () => {
+    matchesMarkup(<UtilityIcon size="x-small" />);
+  });
+
+  it('should render a utility small icon', () => {
+    matchesMarkup(<UtilityIcon size="small" />);
+  });
+
+  it('should render a utility large icon', () => {
+    matchesMarkup(<UtilityIcon size="large" />);
+  });
+
+  it('should render a utility icon with currentColor', () => {
+    matchesMarkup(<UtilityIcon useCurrentColor />);
+  });
 });

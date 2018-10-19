@@ -53,6 +53,36 @@ describe('Default Tabs', () => {
 });
 
 describe('Subtabs', () => {
+  it('should render a subtab', () => {
+    matchesMarkup(<Subtab tabItemId="tab-id" tabPanelId="tabpanel-id" />);
+  });
+
+  it('should render a success subtab', () => {
+    matchesMarkup(
+      <Subtab
+        statusLevel="success"
+        tabItemId="tab-id"
+        tabPanelId="tabpanel-id"
+      />
+    );
+  });
+
+  it('should render an error subtab', () => {
+    matchesMarkup(
+      <Subtab statusLevel="error" tabItemId="tab-id" tabPanelId="tabpanel-id" />
+    );
+  });
+
+  it('should render a warning subtab', () => {
+    matchesMarkup(
+      <Subtab
+        statusLevel="warning"
+        tabItemId="tab-id"
+        tabPanelId="tabpanel-id"
+      />
+    );
+  });
+
   it('renders subtab with notification and dirty', () =>
     matchesMarkup(
       <SubtabsContainer>
@@ -273,4 +303,30 @@ describe('Mobile stacked tabs', () => {
 
   it('renders a deprecated adjacent tab stack', () =>
     matchesMarkup(<DeprecatedAdjacentMobileStacked />));
+});
+
+describe('SubtabOverflow', () => {
+  it('should render a SubtabOverflow', () => {
+    matchesMarkup(<SubtabOverflow />);
+  });
+
+  it('should render an open SubtabOverflow', () => {
+    matchesMarkup(<SubtabOverflow isopen />);
+  });
+
+  it('should render an open SubtabOverflow with no icon on the first menu item', () => {
+    matchesMarkup(<SubtabOverflow isOpen itemHasIcon={false} />);
+  });
+
+  it('should render a success SubtabOverflow', () => {
+    matchesMarkup(<SubtabOverflow isOpen statusLevel="success" />);
+  });
+
+  it('should render a error SubtabOverflow', () => {
+    matchesMarkup(<SubtabOverflow isOpen statusLevel="error" />);
+  });
+
+  it('should render a warning SubtabOverflow', () => {
+    matchesMarkup(<SubtabOverflow isOpen statusLevel="warning" />);
+  });
 });

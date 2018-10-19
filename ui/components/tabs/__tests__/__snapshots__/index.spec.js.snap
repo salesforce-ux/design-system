@@ -3013,6 +3013,810 @@ exports[`Mobile stacked tabs renders nested mobile tabs 1`] = `
 </div>
 `;
 
+exports[`SubtabOverflow should render a SubtabOverflow 1`] = `
+<li
+  className="slds-tabs_default__item slds-sub-tabs__item slds-tabs_default__overflow-button"
+>
+  <div
+    className="slds-dropdown-trigger slds-dropdown-trigger_click"
+  >
+    <button
+      aria-haspopup="true"
+      className="slds-button"
+      disabled={undefined}
+      title="More Tab Items"
+    >
+      <span
+        className="slds-indicator-container"
+      />
+      <span
+        className="slds-truncate"
+        title="More Tabs"
+      >
+        More 
+        <span
+          className="slds-assistive-text"
+        >
+          Tabs
+        </span>
+      </span>
+      <svg
+        aria-hidden={true}
+        className="slds-button__icon slds-button__icon_small slds-button__icon_right"
+      >
+        <use
+          xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#chevrondown"
+        />
+      </svg>
+    </button>
+    <div
+      className="slds-dropdown slds-dropdown_right"
+      style={undefined}
+    >
+      <ul
+        aria-label={undefined}
+        className="slds-dropdown__list"
+        role="menu"
+      >
+        <li
+          className="slds-dropdown__item slds-has-notification"
+          role="presentation"
+        >
+          <a
+            aria-checked={undefined}
+            className={undefined}
+            href="javascript:void(0);"
+            role="menuitem"
+            tabIndex="-1"
+          >
+            <span
+              className="slds-truncate"
+              title="Chat - Customer"
+            >
+              <span
+                className="slds-indicator-container"
+              />
+              <span
+                className="slds-icon_container"
+                title="Live Chat"
+              >
+                <svg
+                  aria-hidden={true}
+                  className="slds-icon slds-icon_small slds-icon-text-default"
+                >
+                  <use
+                    xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#live_chat"
+                  />
+                </svg>
+                <span
+                  className="slds-assistive-text"
+                >
+                  Live Chat
+                </span>
+              </span>
+              <span>
+                Chat - Customer
+              </span>
+            </span>
+          </a>
+        </li>
+        <li
+          className="slds-dropdown__item"
+          role="presentation"
+        >
+          <a
+            aria-checked={undefined}
+            className={undefined}
+            href="javascript:void(0);"
+            role="menuitem"
+            tabIndex="-1"
+          >
+            <span
+              className="slds-truncate"
+              title="Overflow Tab Item"
+            >
+              <span
+                className="slds-indicator-container"
+              />
+              <span
+                className="slds-icon_container"
+                title="Case"
+              >
+                <svg
+                  aria-hidden={true}
+                  className="slds-icon slds-icon_small slds-icon-text-default"
+                >
+                  <use
+                    xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#case"
+                  />
+                </svg>
+                <span
+                  className="slds-assistive-text"
+                >
+                  Case
+                </span>
+              </span>
+              <span>
+                Overflow Tab Item
+              </span>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</li>
+`;
+
+exports[`SubtabOverflow should render a error SubtabOverflow 1`] = `
+<li
+  className="slds-tabs_default__item slds-sub-tabs__item slds-tabs_default__overflow-button slds-has-error"
+>
+  <div
+    className="slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open"
+  >
+    <button
+      aria-haspopup="true"
+      className="slds-button"
+      disabled={undefined}
+      title="More Tab Items"
+    >
+      <span
+        className="slds-indicator-container"
+      />
+      <span
+        className="slds-truncate"
+        title="More Tabs"
+      >
+        More 
+        <span
+          className="slds-assistive-text"
+        >
+          Tabs
+        </span>
+      </span>
+      <svg
+        aria-hidden={true}
+        className="slds-button__icon slds-button__icon_small slds-button__icon_right"
+      >
+        <use
+          xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#chevrondown"
+        />
+      </svg>
+    </button>
+    <div
+      className="slds-dropdown slds-dropdown_right"
+      style={undefined}
+    >
+      <ul
+        aria-label={undefined}
+        className="slds-dropdown__list"
+        role="menu"
+      >
+        <li
+          className="slds-dropdown__item slds-has-notification"
+          role="presentation"
+        >
+          <a
+            aria-checked={undefined}
+            className="slds-has-error"
+            href="javascript:void(0);"
+            role="menuitem"
+            tabIndex="-1"
+          >
+            <span
+              className="slds-truncate"
+              title="Chat - Customer"
+            >
+              <span
+                className="slds-indicator-container"
+              />
+              <span
+                className="slds-m-horizontal_xx-small"
+              >
+                <span
+                  className="slds-icon_container slds-icon-utility-error"
+                  title="error"
+                >
+                  <svg
+                    aria-hidden={true}
+                    className="slds-icon slds-icon_x-small"
+                  >
+                    <use
+                      xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#error"
+                    />
+                  </svg>
+                  <span
+                    className="slds-assistive-text"
+                  >
+                    error
+                  </span>
+                </span>
+              </span>
+              <span>
+                SLA Violation
+              </span>
+            </span>
+          </a>
+        </li>
+        <li
+          className="slds-dropdown__item"
+          role="presentation"
+        >
+          <a
+            aria-checked={undefined}
+            className={undefined}
+            href="javascript:void(0);"
+            role="menuitem"
+            tabIndex="-1"
+          >
+            <span
+              className="slds-truncate"
+              title="Overflow Tab Item"
+            >
+              <span
+                className="slds-indicator-container"
+              />
+              <span
+                className="slds-icon_container"
+                title="Case"
+              >
+                <svg
+                  aria-hidden={true}
+                  className="slds-icon slds-icon_small slds-icon-text-default"
+                >
+                  <use
+                    xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#case"
+                  />
+                </svg>
+                <span
+                  className="slds-assistive-text"
+                >
+                  Case
+                </span>
+              </span>
+              <span>
+                Overflow Tab Item
+              </span>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</li>
+`;
+
+exports[`SubtabOverflow should render a success SubtabOverflow 1`] = `
+<li
+  className="slds-tabs_default__item slds-sub-tabs__item slds-tabs_default__overflow-button slds-has-success"
+>
+  <div
+    className="slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open"
+  >
+    <button
+      aria-haspopup="true"
+      className="slds-button"
+      disabled={undefined}
+      title="More Tab Items"
+    >
+      <span
+        className="slds-indicator-container"
+      />
+      <span
+        className="slds-truncate"
+        title="More Tabs"
+      >
+        More 
+        <span
+          className="slds-assistive-text"
+        >
+          Tabs
+        </span>
+      </span>
+      <svg
+        aria-hidden={true}
+        className="slds-button__icon slds-button__icon_small slds-button__icon_right"
+      >
+        <use
+          xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#chevrondown"
+        />
+      </svg>
+    </button>
+    <div
+      className="slds-dropdown slds-dropdown_right"
+      style={undefined}
+    >
+      <ul
+        aria-label={undefined}
+        className="slds-dropdown__list"
+        role="menu"
+      >
+        <li
+          className="slds-dropdown__item slds-has-notification"
+          role="presentation"
+        >
+          <a
+            aria-checked={undefined}
+            className="slds-has-success"
+            href="javascript:void(0);"
+            role="menuitem"
+            tabIndex="-1"
+          >
+            <span
+              className="slds-truncate"
+              title="Chat - Customer"
+            >
+              <span
+                className="slds-indicator-container"
+              />
+              <span
+                className="slds-m-horizontal_xx-small"
+              >
+                <span
+                  className="slds-icon_container slds-icon-utility-success"
+                  title="success"
+                >
+                  <svg
+                    aria-hidden={true}
+                    className="slds-icon slds-icon_x-small"
+                  >
+                    <use
+                      xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#success"
+                    />
+                  </svg>
+                  <span
+                    className="slds-assistive-text"
+                  >
+                    success
+                  </span>
+                </span>
+              </span>
+              <span>
+                Chat - Customer
+              </span>
+            </span>
+          </a>
+        </li>
+        <li
+          className="slds-dropdown__item"
+          role="presentation"
+        >
+          <a
+            aria-checked={undefined}
+            className={undefined}
+            href="javascript:void(0);"
+            role="menuitem"
+            tabIndex="-1"
+          >
+            <span
+              className="slds-truncate"
+              title="Overflow Tab Item"
+            >
+              <span
+                className="slds-indicator-container"
+              />
+              <span
+                className="slds-icon_container"
+                title="Case"
+              >
+                <svg
+                  aria-hidden={true}
+                  className="slds-icon slds-icon_small slds-icon-text-default"
+                >
+                  <use
+                    xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#case"
+                  />
+                </svg>
+                <span
+                  className="slds-assistive-text"
+                >
+                  Case
+                </span>
+              </span>
+              <span>
+                Overflow Tab Item
+              </span>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</li>
+`;
+
+exports[`SubtabOverflow should render a warning SubtabOverflow 1`] = `
+<li
+  className="slds-tabs_default__item slds-sub-tabs__item slds-tabs_default__overflow-button slds-has-warning"
+>
+  <div
+    className="slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open"
+  >
+    <button
+      aria-haspopup="true"
+      className="slds-button"
+      disabled={undefined}
+      title="More Tab Items"
+    >
+      <span
+        className="slds-indicator-container"
+      />
+      <span
+        className="slds-truncate"
+        title="More Tabs"
+      >
+        More 
+        <span
+          className="slds-assistive-text"
+        >
+          Tabs
+        </span>
+      </span>
+      <svg
+        aria-hidden={true}
+        className="slds-button__icon slds-button__icon_small slds-button__icon_right"
+      >
+        <use
+          xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#chevrondown"
+        />
+      </svg>
+    </button>
+    <div
+      className="slds-dropdown slds-dropdown_right"
+      style={undefined}
+    >
+      <ul
+        aria-label={undefined}
+        className="slds-dropdown__list"
+        role="menu"
+      >
+        <li
+          className="slds-dropdown__item slds-has-notification"
+          role="presentation"
+        >
+          <a
+            aria-checked={undefined}
+            className="slds-has-warning"
+            href="javascript:void(0);"
+            role="menuitem"
+            tabIndex="-1"
+          >
+            <span
+              className="slds-truncate"
+              title="Chat - Customer"
+            >
+              <span
+                className="slds-indicator-container"
+              />
+              <span
+                className="slds-m-horizontal_xx-small"
+              >
+                <span
+                  className="slds-icon_container slds-icon-utility-warning slds-current-color"
+                  title="warning"
+                >
+                  <svg
+                    aria-hidden={true}
+                    className="slds-icon slds-icon_x-small"
+                  >
+                    <use
+                      xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#warning"
+                    />
+                  </svg>
+                  <span
+                    className="slds-assistive-text"
+                  >
+                    warning
+                  </span>
+                </span>
+              </span>
+              <span>
+                SLA 0.30
+              </span>
+            </span>
+          </a>
+        </li>
+        <li
+          className="slds-dropdown__item"
+          role="presentation"
+        >
+          <a
+            aria-checked={undefined}
+            className={undefined}
+            href="javascript:void(0);"
+            role="menuitem"
+            tabIndex="-1"
+          >
+            <span
+              className="slds-truncate"
+              title="Overflow Tab Item"
+            >
+              <span
+                className="slds-indicator-container"
+              />
+              <span
+                className="slds-icon_container"
+                title="Case"
+              >
+                <svg
+                  aria-hidden={true}
+                  className="slds-icon slds-icon_small slds-icon-text-default"
+                >
+                  <use
+                    xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#case"
+                  />
+                </svg>
+                <span
+                  className="slds-assistive-text"
+                >
+                  Case
+                </span>
+              </span>
+              <span>
+                Overflow Tab Item
+              </span>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</li>
+`;
+
+exports[`SubtabOverflow should render an open SubtabOverflow 1`] = `
+<li
+  className="slds-tabs_default__item slds-sub-tabs__item slds-tabs_default__overflow-button"
+>
+  <div
+    className="slds-dropdown-trigger slds-dropdown-trigger_click"
+  >
+    <button
+      aria-haspopup="true"
+      className="slds-button"
+      disabled={undefined}
+      title="More Tab Items"
+    >
+      <span
+        className="slds-indicator-container"
+      />
+      <span
+        className="slds-truncate"
+        title="More Tabs"
+      >
+        More 
+        <span
+          className="slds-assistive-text"
+        >
+          Tabs
+        </span>
+      </span>
+      <svg
+        aria-hidden={true}
+        className="slds-button__icon slds-button__icon_small slds-button__icon_right"
+      >
+        <use
+          xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#chevrondown"
+        />
+      </svg>
+    </button>
+    <div
+      className="slds-dropdown slds-dropdown_right"
+      style={undefined}
+    >
+      <ul
+        aria-label={undefined}
+        className="slds-dropdown__list"
+        role="menu"
+      >
+        <li
+          className="slds-dropdown__item slds-has-notification"
+          role="presentation"
+        >
+          <a
+            aria-checked={undefined}
+            className={undefined}
+            href="javascript:void(0);"
+            role="menuitem"
+            tabIndex="-1"
+          >
+            <span
+              className="slds-truncate"
+              title="Chat - Customer"
+            >
+              <span
+                className="slds-indicator-container"
+              />
+              <span
+                className="slds-icon_container"
+                title="Live Chat"
+              >
+                <svg
+                  aria-hidden={true}
+                  className="slds-icon slds-icon_small slds-icon-text-default"
+                >
+                  <use
+                    xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#live_chat"
+                  />
+                </svg>
+                <span
+                  className="slds-assistive-text"
+                >
+                  Live Chat
+                </span>
+              </span>
+              <span>
+                Chat - Customer
+              </span>
+            </span>
+          </a>
+        </li>
+        <li
+          className="slds-dropdown__item"
+          role="presentation"
+        >
+          <a
+            aria-checked={undefined}
+            className={undefined}
+            href="javascript:void(0);"
+            role="menuitem"
+            tabIndex="-1"
+          >
+            <span
+              className="slds-truncate"
+              title="Overflow Tab Item"
+            >
+              <span
+                className="slds-indicator-container"
+              />
+              <span
+                className="slds-icon_container"
+                title="Case"
+              >
+                <svg
+                  aria-hidden={true}
+                  className="slds-icon slds-icon_small slds-icon-text-default"
+                >
+                  <use
+                    xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#case"
+                  />
+                </svg>
+                <span
+                  className="slds-assistive-text"
+                >
+                  Case
+                </span>
+              </span>
+              <span>
+                Overflow Tab Item
+              </span>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</li>
+`;
+
+exports[`SubtabOverflow should render an open SubtabOverflow with no icon on the first menu item 1`] = `
+<li
+  className="slds-tabs_default__item slds-sub-tabs__item slds-tabs_default__overflow-button"
+>
+  <div
+    className="slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open"
+  >
+    <button
+      aria-haspopup="true"
+      className="slds-button"
+      disabled={undefined}
+      title="More Tab Items"
+    >
+      <span
+        className="slds-indicator-container"
+      />
+      <span
+        className="slds-truncate"
+        title="More Tabs"
+      >
+        More 
+        <span
+          className="slds-assistive-text"
+        >
+          Tabs
+        </span>
+      </span>
+      <svg
+        aria-hidden={true}
+        className="slds-button__icon slds-button__icon_small slds-button__icon_right"
+      >
+        <use
+          xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#chevrondown"
+        />
+      </svg>
+    </button>
+    <div
+      className="slds-dropdown slds-dropdown_right"
+      style={undefined}
+    >
+      <ul
+        aria-label={undefined}
+        className="slds-dropdown__list"
+        role="menu"
+      >
+        <li
+          className="slds-dropdown__item slds-has-notification"
+          role="presentation"
+        >
+          <a
+            aria-checked={undefined}
+            className={undefined}
+            href="javascript:void(0);"
+            role="menuitem"
+            tabIndex="-1"
+          >
+            <span
+              className="slds-truncate"
+              title="Chat - Customer"
+            >
+              <span
+                className="slds-indicator-container"
+              />
+              <span>
+                Chat - Customer
+              </span>
+            </span>
+          </a>
+        </li>
+        <li
+          className="slds-dropdown__item"
+          role="presentation"
+        >
+          <a
+            aria-checked={undefined}
+            className={undefined}
+            href="javascript:void(0);"
+            role="menuitem"
+            tabIndex="-1"
+          >
+            <span
+              className="slds-truncate"
+              title="Overflow Tab Item"
+            >
+              <span
+                className="slds-indicator-container"
+              />
+              <span
+                className="slds-icon_container"
+                title="Case"
+              >
+                <svg
+                  aria-hidden={true}
+                  className="slds-icon slds-icon_small slds-icon-text-default"
+                >
+                  <use
+                    xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#case"
+                  />
+                </svg>
+                <span
+                  className="slds-assistive-text"
+                >
+                  Case
+                </span>
+              </span>
+              <span>
+                Overflow Tab Item
+              </span>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</li>
+`;
+
 exports[`Subtabs renders dirty overflowed subtab 1`] = `
 <div
   className="demo-only"
@@ -4466,4 +5270,300 @@ exports[`Subtabs renders subtab with notification and dirty 1`] = `
     Item Two Content
   </div>
 </div>
+`;
+
+exports[`Subtabs should render a subtab 1`] = `
+<li
+  className="slds-tabs_default__item slds-sub-tabs__item slds-grid slds-grid_vertical-align-center"
+  role="presentation"
+>
+  <a
+    aria-controls="tabpanel-id"
+    aria-selected="false"
+    className="slds-tabs_default__link slds-p-horizontal_xx-small"
+    href="javascript:void(0);"
+    id="tab-id"
+    role="tab"
+    tabIndex="-1"
+    title="Subtab Name"
+  >
+    <span
+      className="slds-indicator-container"
+    />
+    <span
+      className="slds-icon_container"
+      title="Case"
+    >
+      <svg
+        aria-hidden={true}
+        className="slds-icon slds-icon_small slds-icon-text-default"
+      >
+        <use
+          xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#case"
+        />
+      </svg>
+      <span
+        className="slds-assistive-text"
+      >
+        Case
+      </span>
+    </span>
+    <span
+      className="slds-truncate"
+      title="Subtab Name"
+    >
+      Subtab Name
+    </span>
+  </a>
+  <div
+    className="slds-col_bump-left slds-p-left_none slds-p-right_none"
+  >
+    <button
+      aria-haspopup={undefined}
+      className="slds-button slds-button_icon slds-button_icon-container slds-button_icon-x-small"
+      id={undefined}
+      tabIndex="-1"
+      title="Close Subtab Name"
+    >
+      <svg
+        aria-hidden={true}
+        className="slds-button__icon"
+      >
+        <use
+          xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#close"
+        />
+      </svg>
+      <span
+        className="slds-assistive-text"
+      >
+        Close Subtab Name
+      </span>
+    </button>
+  </div>
+</li>
+`;
+
+exports[`Subtabs should render a success subtab 1`] = `
+<li
+  className="slds-tabs_default__item slds-sub-tabs__item slds-grid slds-grid_vertical-align-center slds-has-success"
+  role="presentation"
+>
+  <a
+    aria-controls="tabpanel-id"
+    aria-selected="false"
+    className="slds-tabs_default__link slds-p-horizontal_xx-small"
+    href="javascript:void(0);"
+    id="tab-id"
+    role="tab"
+    tabIndex="-1"
+    title="Subtab Name"
+  >
+    <span
+      className="slds-indicator-container"
+    />
+    <span
+      className="slds-m-horizontal_xx-small"
+    >
+      <span
+        className="slds-icon_container slds-icon-utility-success"
+        title="success"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-icon slds-icon_x-small"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#success"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          success
+        </span>
+      </span>
+    </span>
+    <span
+      className="slds-truncate"
+      title="Subtab Name"
+    >
+      Subtab Name
+    </span>
+  </a>
+  <div
+    className="slds-col_bump-left slds-p-left_none slds-p-right_none"
+  >
+    <button
+      aria-haspopup={undefined}
+      className="slds-button slds-button_icon slds-button_icon-inverse slds-button_icon-container slds-button_icon-x-small"
+      id={undefined}
+      tabIndex="-1"
+      title="Close Subtab Name"
+    >
+      <svg
+        aria-hidden={true}
+        className="slds-button__icon"
+      >
+        <use
+          xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#close"
+        />
+      </svg>
+      <span
+        className="slds-assistive-text"
+      >
+        Close Subtab Name
+      </span>
+    </button>
+  </div>
+</li>
+`;
+
+exports[`Subtabs should render a warning subtab 1`] = `
+<li
+  className="slds-tabs_default__item slds-sub-tabs__item slds-grid slds-grid_vertical-align-center slds-has-warning"
+  role="presentation"
+>
+  <a
+    aria-controls="tabpanel-id"
+    aria-selected="false"
+    className="slds-tabs_default__link slds-p-horizontal_xx-small"
+    href="javascript:void(0);"
+    id="tab-id"
+    role="tab"
+    tabIndex="-1"
+    title="Subtab Name"
+  >
+    <span
+      className="slds-indicator-container"
+    />
+    <span
+      className="slds-m-horizontal_xx-small"
+    >
+      <span
+        className="slds-icon_container slds-icon-utility-warning slds-current-color"
+        title="warning"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-icon slds-icon_x-small"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#warning"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          warning
+        </span>
+      </span>
+    </span>
+    <span
+      className="slds-truncate"
+      title="Subtab Name"
+    >
+      Subtab Name
+    </span>
+  </a>
+  <div
+    className="slds-col_bump-left slds-p-left_none slds-p-right_none"
+  >
+    <button
+      aria-haspopup={undefined}
+      className="slds-button slds-button_icon slds-button_icon-container slds-button_icon-x-small"
+      id={undefined}
+      tabIndex="-1"
+      title="Close Subtab Name"
+    >
+      <svg
+        aria-hidden={true}
+        className="slds-button__icon"
+      >
+        <use
+          xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#close"
+        />
+      </svg>
+      <span
+        className="slds-assistive-text"
+      >
+        Close Subtab Name
+      </span>
+    </button>
+  </div>
+</li>
+`;
+
+exports[`Subtabs should render an error subtab 1`] = `
+<li
+  className="slds-tabs_default__item slds-sub-tabs__item slds-grid slds-grid_vertical-align-center slds-has-error"
+  role="presentation"
+>
+  <a
+    aria-controls="tabpanel-id"
+    aria-selected="false"
+    className="slds-tabs_default__link slds-p-horizontal_xx-small"
+    href="javascript:void(0);"
+    id="tab-id"
+    role="tab"
+    tabIndex="-1"
+    title="Subtab Name"
+  >
+    <span
+      className="slds-indicator-container"
+    />
+    <span
+      className="slds-m-horizontal_xx-small"
+    >
+      <span
+        className="slds-icon_container slds-icon-utility-error"
+        title="error"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-icon slds-icon_x-small"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#error"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          error
+        </span>
+      </span>
+    </span>
+    <span
+      className="slds-truncate"
+      title="Subtab Name"
+    >
+      Subtab Name
+    </span>
+  </a>
+  <div
+    className="slds-col_bump-left slds-p-left_none slds-p-right_none"
+  >
+    <button
+      aria-haspopup={undefined}
+      className="slds-button slds-button_icon slds-button_icon-inverse slds-button_icon-container slds-button_icon-x-small"
+      id={undefined}
+      tabIndex="-1"
+      title="Close Subtab Name"
+    >
+      <svg
+        aria-hidden={true}
+        className="slds-button__icon"
+      >
+        <use
+          xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#close"
+        />
+      </svg>
+      <span
+        className="slds-assistive-text"
+      >
+        Close Subtab Name
+      </span>
+    </button>
+  </div>
+</li>
 `;

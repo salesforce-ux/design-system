@@ -13,7 +13,7 @@ import {
   IndicatorUnsaved
 } from '../../global-navigation/';
 import { Menu, MenuList, MenuItem } from '../../menus/dropdown/example';
-import { TabItemIconContainer } from '../../global-navigation/navigation-tab-bar/example';
+import { TabItemIconContainer } from '../../global-navigation';
 
 /* -----------------------------------------------------------------------------
     Elements
@@ -25,11 +25,11 @@ export const Subtab = props => (
       'slds-tabs_default__item slds-sub-tabs__item slds-grid slds-grid_vertical-align-center',
       {
         'slds-active': props.active,
-        'slds-has-error': props.hasError,
+        'slds-has-error': props.statusLevel === 'error',
         'slds-has-focus': props.hasFocus,
         'slds-has-notification': props.hasNotification,
-        'slds-has-success': props.hasSuccess,
-        'slds-has-warning': props.hasWarning,
+        'slds-has-success': props.statusLevel === 'success',
+        'slds-has-warning': props.statusLevel === 'warning',
         'slds-is-unsaved': props.itemUnsaved
       },
       props.className
@@ -44,27 +44,26 @@ export const Subtab = props => (
       id={props.tabItemId}
       role="tab"
       tabIndex={props.active ? '0' : '-1'}
-      title={props.title || 'Subtab Name'}
+      title={props.title}
     >
       <IndicatorContainer>
         {props.itemUnsaved && <IndicatorUnsaved />}
         {props.hasNotification && <IndicatorUnread />}
       </IndicatorContainer>
-      <TabItemIconContainer
-        hasError={props.hasError}
-        hasIcon={props.hasIcon}
-        hasSuccess={props.hasSuccess}
-        hasWarning={props.hasWarning}
-        symbol={props.symbol}
-      />
+      {props.hasIcon && (
+        <TabItemIconContainer
+          statusLevel={props.statusLevel}
+          symbol={props.symbol}
+        />
+      )}
       <span
         className={classNames(
           'slds-truncate',
           props.pinned ? 'slds-assistive-text' : null
         )}
-        title={props.title || 'Subtab Name'}
+        title={props.title}
       >
-        {props.title || 'Subtab Name'}
+        {props.title}
       </span>
     </a>
     {props.menuIcon ? (
@@ -75,12 +74,16 @@ export const Subtab = props => (
         )}
       >
         <ButtonIcon
-          className="slds-button_icon-container slds-button_icon-x-small"
-          tabIndex={props.active ? '0' : '-1'}
-          symbol="chevrondown"
           aria-haspopup="true"
           assistiveText={'Actions for ' + props.title}
-          theme={props.hasError || props.hasSuccess ? 'inverse' : null}
+          className="slds-button_icon-container slds-button_icon-x-small"
+          symbol="chevrondown"
+          tabIndex={props.active ? '0' : '-1'}
+          theme={
+            props.statusLevel === 'error' || props.statusLevel === 'success'
+              ? 'inverse'
+              : null
+          }
           title={'Actions for ' + props.title}
         />
       </div>
@@ -92,11 +95,15 @@ export const Subtab = props => (
       )}
     >
       <ButtonIcon
-        className="slds-button_icon-container slds-button_icon-x-small"
-        tabIndex={props.active ? '0' : '-1'}
-        symbol="close"
         assistiveText={'Close ' + props.title}
-        theme={props.hasError || props.hasSuccess ? 'inverse' : null}
+        className="slds-button_icon-container slds-button_icon-x-small"
+        symbol="close"
+        tabIndex={props.active ? '0' : '-1'}
+        theme={
+          props.statusLevel === 'error' || props.statusLevel === 'success'
+            ? 'inverse'
+            : null
+        }
         title={'Close ' + props.title}
       />
     </div>
@@ -106,23 +113,22 @@ Subtab.displayName = 'Subtab';
 Subtab.propTypes = {
   actionOverflow: PropTypes.string,
   active: PropTypes.bool,
+  statusLevel: PropTypes.oneOf(['error', 'success', 'warning']),
   className: PropTypes.string,
-  hasError: PropTypes.bool,
   hasFocus: PropTypes.bool,
   hasIcon: PropTypes.bool,
   hasNotification: PropTypes.bool,
-  hasSuccess: PropTypes.bool,
-  hasWarning: PropTypes.bool,
   itemUnsaved: PropTypes.bool,
   menuIcon: PropTypes.bool,
   pinned: PropTypes.bool,
   symbol: PropTypes.string,
-  tabItemId: PropTypes.string,
-  tabPanelId: PropTypes.string,
+  tabItemId: PropTypes.string.isRequired,
+  tabPanelId: PropTypes.string.isRequired,
   title: PropTypes.string
 };
 Subtab.defaultProps = {
-  hasIcon: true
+  hasIcon: true,
+  title: 'Subtab Name'
 };
 
 export const SubtabsContainer = props => (
@@ -145,13 +151,13 @@ SubtabList.propTypes = {
 
 export const SubtabPanel = props => (
   <div
+    aria-labelledby={props.tabId}
     className={classNames('slds-tabs_default__content', {
       'slds-show': props.isVisible,
       'slds-hide': !props.isVisible
     })}
     id={props.id}
     role="tabpanel"
-    aria-labelledby={props.tabId}
   >
     {props.children}
   </div>
@@ -166,9 +172,9 @@ SubtabPanel.propTypes = {
 
 export const SubtabOverflow = props => {
   const getComputedMenuTitle = () => {
-    if (props.hasError) {
+    if (props.statusLevel === 'error') {
       return 'SLA Violation';
-    } else if (props.hasWarning) {
+    } else if (props.statusLevel === 'warning') {
       return 'SLA 0.30';
     } else {
       return 'Chat - Customer';
@@ -182,10 +188,10 @@ export const SubtabOverflow = props => {
         'slds-sub-tabs__item',
         'slds-tabs_default__overflow-button',
         {
-          'slds-has-error': props.hasError,
+          'slds-has-error': props.statusLevel === 'error',
           'slds-has-notification': props.itemUnread,
-          'slds-has-success': props.hasSuccess,
-          'slds-has-warning': props.hasWarning,
+          'slds-has-success': props.statusLevel === 'success',
+          'slds-has-warning': props.statusLevel === 'warning',
           'slds-is-unsaved': props.itemUnsaved
         }
       )}
@@ -196,7 +202,7 @@ export const SubtabOverflow = props => {
           props.isOpen && 'slds-is-open'
         )}
       >
-        <Button title="More Tab Items" aria-haspopup="true">
+        <Button aria-haspopup="true" title="More Tab Items">
           <IndicatorContainer>
             {props.itemUnsaved && (
               <IndicatorUnsaved title="Tab(s) within menu not saved" />
@@ -216,27 +222,24 @@ export const SubtabOverflow = props => {
           <MenuList>
             <MenuItem
               className="slds-has-notification"
-              hasError={props.hasError}
-              hasSuccess={props.hasSuccess}
-              hasWarning={props.hasWarning}
+              statusLevel={props.statusLevel}
               title="Chat - Customer"
             >
               <IndicatorContainer>
                 {props.itemUnsaved && <IndicatorUnsaved />}
                 {props.itemUnread && <IndicatorUnread />}
               </IndicatorContainer>
-              <TabItemIconContainer
-                hasError={props.hasError}
-                hasIcon={props.itemHasIcon}
-                hasSuccess={props.hasSuccess}
-                hasWarning={props.hasWarning}
-                symbol="live_chat"
-              />
+              {props.itemHasIcon && (
+                <TabItemIconContainer
+                  statusLevel={props.statusLevel}
+                  symbol="live_chat"
+                />
+              )}
               <span>{getComputedMenuTitle()}</span>
             </MenuItem>
             <MenuItem title="Overflow Tab Item">
               <IndicatorContainer />
-              <TabItemIconContainer hasIcon />
+              <TabItemIconContainer />
               <span>Overflow Tab Item</span>
             </MenuItem>
           </MenuList>
@@ -247,9 +250,7 @@ export const SubtabOverflow = props => {
 };
 SubtabOverflow.displayName = 'SubtabOverflow';
 SubtabOverflow.propTypes = {
-  hasError: PropTypes.bool,
-  hasSuccess: PropTypes.bool,
-  hasWarning: PropTypes.bool,
+  statusLevel: PropTypes.oneOf(['error', 'success', 'warning']),
   isOpen: PropTypes.bool,
   itemHasIcon: PropTypes.bool,
   itemUnread: PropTypes.bool,
@@ -517,7 +518,7 @@ export let states = [
             title="00071938"
           />
           <Subtab
-            hasSuccess
+            statusLevel="success"
             symbol="live_chat"
             tabItemId="subtab-tabitem-02"
             tabPanelId="subtab-tabpanel-02"
@@ -553,7 +554,7 @@ export let states = [
             title="00071938"
           />
           <Subtab
-            hasSuccess
+            statusLevel="success"
             itemUnsaved
             symbol="live_chat"
             tabItemId="subtab-tabitem-02"
@@ -590,8 +591,8 @@ export let states = [
             title="00071938"
           />
           <Subtab
+            statusLevel="success"
             hasNotification
-            hasSuccess
             symbol="live_chat"
             tabItemId="subtab-tabitem-02"
             tabPanelId="subtab-tabpanel-02"
@@ -627,8 +628,8 @@ export let states = [
             title="00071938"
           />
           <Subtab
+            statusLevel="success"
             hasNotification
-            hasSuccess
             itemUnsaved
             symbol="live_chat"
             tabItemId="subtab-tabitem-02"
@@ -665,7 +666,7 @@ export let states = [
             title="00071938"
           />
           <Subtab
-            hasWarning
+            statusLevel="warning"
             symbol="live_chat"
             tabItemId="subtab-tabitem-02"
             tabPanelId="subtab-tabpanel-02"
@@ -701,7 +702,7 @@ export let states = [
             title="00071938"
           />
           <Subtab
-            hasWarning
+            statusLevel="warning"
             itemUnsaved
             symbol="live_chat"
             tabItemId="subtab-tabitem-02"
@@ -738,8 +739,8 @@ export let states = [
             title="00071938"
           />
           <Subtab
+            statusLevel="warning"
             hasNotification
-            hasWarning
             symbol="live_chat"
             tabItemId="subtab-tabitem-02"
             tabPanelId="subtab-tabpanel-02"
@@ -775,8 +776,8 @@ export let states = [
             title="00071938"
           />
           <Subtab
+            statusLevel="warning"
             hasNotification
-            hasWarning
             itemUnsaved
             symbol="live_chat"
             tabItemId="subtab-tabitem-02"
@@ -813,7 +814,7 @@ export let states = [
             title="00071938"
           />
           <Subtab
-            hasError
+            statusLevel="error"
             symbol="live_chat"
             tabItemId="subtab-tabitem-02"
             tabPanelId="subtab-tabpanel-02"
@@ -849,7 +850,7 @@ export let states = [
             title="00071938"
           />
           <Subtab
-            hasError
+            statusLevel="error"
             itemUnsaved
             symbol="live_chat"
             tabItemId="subtab-tabitem-02"
@@ -886,7 +887,7 @@ export let states = [
             title="00071938"
           />
           <Subtab
-            hasError
+            statusLevel="error"
             hasNotification
             symbol="live_chat"
             tabItemId="subtab-tabitem-02"
@@ -923,7 +924,7 @@ export let states = [
             title="00071938"
           />
           <Subtab
-            hasError
+            statusLevel="error"
             hasNotification
             itemUnsaved
             symbol="live_chat"
@@ -1153,7 +1154,7 @@ export let states = [
             tabPanelId="subtab-tabpanel-02"
             title="00071939"
           />
-          <SubtabOverflow hasSuccess isOpen />
+          <SubtabOverflow statusLevel="success" isOpen />
         </SubtabList>
         <SubtabPanel
           id="subtab-tabpanel-01"
@@ -1187,7 +1188,7 @@ export let states = [
             tabPanelId="subtab-tabpanel-02"
             title="00071939"
           />
-          <SubtabOverflow hasSuccess isOpen itemUnread itemUnsaved />
+          <SubtabOverflow statusLevel="success" isOpen itemUnread itemUnsaved />
         </SubtabList>
         <SubtabPanel
           id="subtab-tabpanel-01"
@@ -1221,7 +1222,7 @@ export let states = [
             tabPanelId="subtab-tabpanel-02"
             title="00071939"
           />
-          <SubtabOverflow hasWarning isOpen />
+          <SubtabOverflow statusLevel="warning" isOpen />
         </SubtabList>
         <SubtabPanel
           id="subtab-tabpanel-01"
@@ -1255,7 +1256,7 @@ export let states = [
             tabPanelId="subtab-tabpanel-02"
             title="00071939"
           />
-          <SubtabOverflow hasWarning isOpen itemUnread itemUnsaved />
+          <SubtabOverflow statusLevel="warning" isOpen itemUnread itemUnsaved />
         </SubtabList>
         <SubtabPanel
           id="subtab-tabpanel-01"
@@ -1289,7 +1290,7 @@ export let states = [
             tabPanelId="subtab-tabpanel-02"
             title="00071939"
           />
-          <SubtabOverflow hasError isOpen />
+          <SubtabOverflow statusLevel="error" isOpen />
         </SubtabList>
         <SubtabPanel
           id="subtab-tabpanel-01"
@@ -1323,7 +1324,7 @@ export let states = [
             tabPanelId="subtab-tabpanel-02"
             title="00071939"
           />
-          <SubtabOverflow hasError isOpen itemUnread itemUnsaved />
+          <SubtabOverflow statusLevel="error" isOpen itemUnread itemUnsaved />
         </SubtabList>
         <SubtabPanel
           id="subtab-tabpanel-01"

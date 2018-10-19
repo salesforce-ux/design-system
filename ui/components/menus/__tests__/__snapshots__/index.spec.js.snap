@@ -741,3 +741,91 @@ exports[`Menu with submenu renders an open submenu 1`] = `
   </div>
 </div>
 `;
+
+exports[`MenuItem should render a menu item 1`] = `
+<li
+  className="slds-dropdown__item"
+  role="presentation"
+>
+  <a
+    aria-checked={undefined}
+    className={undefined}
+    href="javascript:void(0);"
+    role="menuitem"
+    tabIndex="-1"
+  >
+    <span
+      className="slds-truncate"
+      title="menu item"
+    >
+      menu item
+    </span>
+  </a>
+</li>
+`;
+
+exports[`MenuItem should render an error menu item 1`] = `
+<li
+  className="slds-dropdown__item"
+  role="presentation"
+>
+  <a
+    aria-checked={undefined}
+    className="slds-has-error"
+    href="javascript:void(0);"
+    role="menuitem"
+    tabIndex="-1"
+  >
+    <span
+      className="slds-truncate"
+      title="menu item"
+    >
+      menu item
+    </span>
+  </a>
+</li>
+`;
+
+exports[`MenuItem should render an success menu item 1`] = `
+<li
+  className="slds-dropdown__item"
+  role="presentation"
+>
+  <a
+    aria-checked={undefined}
+    className="slds-has-success"
+    href="javascript:void(0);"
+    role="menuitem"
+    tabIndex="-1"
+  >
+    <span
+      className="slds-truncate"
+      title="menu item"
+    >
+      menu item
+    </span>
+  </a>
+</li>
+`;
+
+exports[`MenuItem should render an warning menu item 1`] = `
+<li
+  className="slds-dropdown__item"
+  role="presentation"
+>
+  <a
+    aria-checked={undefined}
+    className="slds-has-warning"
+    href="javascript:void(0);"
+    role="menuitem"
+    tabIndex="-1"
+  >
+    <span
+      className="slds-truncate"
+      title="menu item"
+    >
+      menu item
+    </span>
+  </a>
+</li>
+`;

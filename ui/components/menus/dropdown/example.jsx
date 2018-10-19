@@ -2,6 +2,7 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 import React from 'react';
+import PropTypes from 'prop-types';
 import ButtonIcon from '../../button-icons/';
 import SvgIcon from '../../../shared/svg-icon';
 import classNames from 'classnames';
@@ -94,9 +95,7 @@ export let MenuItem = props => {
     iconRight,
     tabIndex,
     title,
-    hasSuccess,
-    hasError,
-    hasWarning,
+    statusLevel,
     ...rest
   } = props;
   let ariaChecked;
@@ -107,9 +106,9 @@ export let MenuItem = props => {
 
   const getComputedClassnames = () =>
     classNames({
-      'slds-has-error': hasError,
-      'slds-has-success': hasSuccess,
-      'slds-has-warning': hasWarning
+      'slds-has-error': statusLevel === 'error',
+      'slds-has-success': statusLevel === 'success',
+      'slds-has-warning': statusLevel === 'warning'
     }) || undefined;
 
   return (
@@ -145,6 +144,11 @@ export let MenuItem = props => {
       </a>
     </li>
   );
+};
+MenuItem.displayName = 'MenuItem';
+MenuItem.propTypes = {
+  children: PropTypes.node.isRequired,
+  statusLevel: PropTypes.oneOf(['error', 'success', 'warning'])
 };
 
 /// ///////////////////////////////////////////
@@ -328,7 +332,7 @@ export const NotificationsMenu = props => (
   <Trigger isOpen>
     <Menu className="slds-dropdown_left">
       <MenuList>
-        <MenuItem hasSuccess title="Success Item">
+        <MenuItem statusLevel="success" title="Success Item">
           <span className="slds-m-horizontal_xx-small">
             <UtilityIcon
               assistiveText="success"
@@ -353,7 +357,7 @@ export const NotificationsMenu = props => (
         </MenuItem>
       </MenuList>
       <MenuList>
-        <MenuItem hasWarning title="Warning item">
+        <MenuItem statusLevel="warning" title="Warning item">
           <span className="slds-m-horizontal_xx-small">
             <UtilityIcon
               assistiveText="warning"
@@ -379,7 +383,7 @@ export const NotificationsMenu = props => (
         </MenuItem>
       </MenuList>
       <MenuList>
-        <MenuItem hasError title="Error Item">
+        <MenuItem statusLevel="error" title="Error Item">
           <span className="slds-m-horizontal_xx-small">
             <UtilityIcon
               assistiveText="error"

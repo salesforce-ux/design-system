@@ -13,10 +13,13 @@ import {
   SubtabList,
   SubtabPanel
 } from '../../tabs/sub-tabs/example';
-import { IndicatorContainer, IndicatorUnread, IndicatorUnsaved } from '../';
+import {
+  IndicatorContainer,
+  IndicatorUnread,
+  IndicatorUnsaved,
+  TabItemIconContainer
+} from '../';
 import classNames from 'classnames';
-import _ from '../../../shared/helpers';
-import { UtilityIcon } from '../../icons/base/example';
 
 const tabPanelId01 = 'context-tab-panel-1';
 const tabPanelId02 = 'context-tab-panel-2';
@@ -36,71 +39,6 @@ const ShortCutKey = props => (
   </span>
 );
 
-export const TabObjectIcon = props => (
-  <span className="slds-icon_container" title={_.startCase(props.symbol)}>
-    <SvgIcon
-      className="slds-icon slds-icon_small slds-icon-text-default"
-      sprite="standard"
-      symbol={props.symbol}
-    />
-    <span className="slds-assistive-text">{_.startCase(props.symbol)}</span>
-  </span>
-);
-TabObjectIcon.displayName = 'TabObjectIcon';
-TabObjectIcon.propTypes = {
-  symbol: PropTypes.string.isRequired
-};
-TabObjectIcon.defaultProps = {
-  symbol: 'case'
-};
-
-export const TabWarningIcon = props => (
-  <span className="slds-m-horizontal_xx-small">
-    <UtilityIcon
-      assistiveText={props.level}
-      size="x-small"
-      symbol={props.level}
-      title={props.level}
-      useCurrentColor={props.level === 'warning'}
-    />
-  </span>
-);
-TabWarningIcon.displayName = 'TabWarningIcon';
-TabWarningIcon.propTypes = {
-  level: PropTypes.string.isRequired
-};
-
-export const TabItemIconContainer = props => {
-  const getComputedLevel = () => {
-    if (props.hasSuccess) {
-      return 'success';
-    } else if (props.hasError) {
-      return 'error';
-    } else if (props.hasWarning) {
-      return 'warning';
-    }
-  };
-  return (
-    <React.Fragment>
-      {props.hasIcon ? (
-        props.hasError || props.hasSuccess || props.hasWarning ? (
-          <TabWarningIcon level={getComputedLevel()} />
-        ) : (
-          <TabObjectIcon symbol={props.symbol} />
-        )
-      ) : null}
-    </React.Fragment>
-  );
-};
-
-TabItemIconContainer.propTypes = {
-  hasError: PropTypes.bool,
-  hasIcon: PropTypes.bool,
-  hasSuccess: PropTypes.bool,
-  hasWarning: PropTypes.bool,
-  symbol: PropTypes.string
-};
-
 export let ContextTab = props => (
   <li
     className={classNames(
@@ -113,9 +51,9 @@ export let ContextTab = props => (
         'slds-has-focus': props.hasFocus,
         'slds-has-notification': props.itemUnread,
         'slds-has-sub-tabs': props.hasSubtabs,
-        'slds-has-success': props.hasSuccess,
-        'slds-has-warning': props.hasWarning,
-        'slds-has-error': props.hasError
+        'slds-has-success': props.statusLevel === 'success',
+        'slds-has-warning': props.statusLevel === 'warning',
+        'slds-has-error': props.statusLevel === 'error'
       }
     )}
     role="presentation"
@@ -124,7 +62,7 @@ export let ContextTab = props => (
       href="javascript:void(0);"
       className="slds-context-bar__label-action"
       role="tab"
-      title={props.title || 'tab name'}
+      title={props.title}
       aria-selected={props.itemActive ? 'true' : 'false'}
       tabIndex={props.itemActive ? '0' : '-1'}
       aria-controls={props.tabPanelId}
@@ -134,21 +72,20 @@ export let ContextTab = props => (
         {props.itemUnsaved && <IndicatorUnsaved title="Tab Not Saved" />}
         {props.itemUnread && <IndicatorUnread />}
       </IndicatorContainer>
-      <TabItemIconContainer
-        hasError={props.hasError}
-        hasIcon={props.hasIcon}
-        hasSuccess={props.hasSuccess}
-        hasWarning={props.hasWarning}
-        symbol={props.symbol}
-      />
+      {props.hasIcon && (
+        <TabItemIconContainer
+          statusLevel={props.statusLevel}
+          symbol={props.symbol}
+        />
+      )}
       <span
         className={classNames(
           'slds-truncate',
           props.pinned ? 'slds-assistive-text' : null
         )}
-        title={props.title || 'tab name'}
+        title={props.title}
       >
-        {props.title || 'tab name'}
+        {props.title}
       </span>
     </a>
     <div
@@ -164,7 +101,11 @@ export let ContextTab = props => (
         aria-haspopup="true"
         assistiveText={'Actions for ' + props.title}
         title={'Actions for ' + props.title}
-        theme={props.hasError || props.hasSuccess ? 'inverse' : null}
+        theme={
+          props.statusLevel === 'error' || props.statusLevel === 'success'
+            ? 'inverse'
+            : null
+        }
       />
       <Menu className="slds-dropdown_right">
         <MenuList>
@@ -189,7 +130,11 @@ export let ContextTab = props => (
           symbol="close"
           assistiveText={'Close ' + props.title}
           title={'Close ' + props.title}
-          theme={props.hasError || props.hasSuccess ? 'inverse' : null}
+          theme={
+            props.statusLevel === 'error' || props.statusLevel === 'success'
+              ? 'inverse'
+              : null
+          }
         />
       </div>
     ) : null}
@@ -197,14 +142,22 @@ export let ContextTab = props => (
 );
 
 ContextTab.propTypes = {
-  hasError: PropTypes.bool,
+  className: PropTypes.string,
   hasFocus: PropTypes.bool,
-  hasSuccess: PropTypes.bool,
-  hasWarning: PropTypes.bool
+  hasSubtabs: PropTypes.bool,
+  id: PropTypes.string.isRequired,
+  itemActive: PropTypes.bool,
+  itemUnread: PropTypes.bool,
+  itemUnsaved: PropTypes.bool,
+  pinned: PropTypes.bool,
+  statusLevel: PropTypes.oneOf(['error', 'success', 'warning']),
+  tabPanelId: PropTypes.string.isRequired,
+  title: PropTypes.string
 };
 
 ContextTab.defaultProps = {
-  hasIcon: true
+  hasIcon: true,
+  title: 'Tab Name'
 };
 
 export let ContextTabPanel = props => (
@@ -365,9 +318,9 @@ export const ContextTabBarOverflow = props => (
         'slds-is-open': props.isOpen,
         'slds-has-notification': props.itemUnread,
         'slds-is-unsaved': props.itemUnsaved,
-        'slds-has-success': props.hasSuccess,
-        'slds-has-warning': props.hasWarning,
-        'slds-has-error': props.hasError
+        'slds-has-success': props.statusLevel === 'success',
+        'slds-has-warning': props.statusLevel === 'warning',
+        'slds-has-error': props.statusLevel === 'error'
       }
     )}
   >
@@ -396,9 +349,7 @@ export const ContextTabBarOverflow = props => (
             'slds-has-notification': props.itemUnread,
             'slds-is-unsaved': props.itemUnsaved
           })}
-          hasError={props.hasError}
-          hasSuccess={props.hasSuccess}
-          hasWarning={props.hasWarning}
+          statusLevel={props.statusLevel}
           title="Chat - Customer"
         >
           <IndicatorContainer>
@@ -407,18 +358,17 @@ export const ContextTabBarOverflow = props => (
             )}
             {props.itemUnread && <IndicatorUnread />}
           </IndicatorContainer>
-          <TabItemIconContainer
-            hasError={props.hasError}
-            hasIcon={props.itemHasIcon}
-            hasSuccess={props.hasSuccess}
-            hasWarning={props.hasWarning}
-            symbol="live_chat"
-          />
+          {props.itemHasIcon && (
+            <TabItemIconContainer
+              statusLevel={props.statusLevel}
+              symbol="live_chat"
+            />
+          )}
           <span>Chat - Customer</span>
         </MenuItem>
         <MenuItem title="Overflow Tab Item">
           <IndicatorContainer />
-          <TabItemIconContainer hasIcon={props.itemHasIcon} />
+          {props.itemHasIcon && <TabItemIconContainer />}
           <span>Overflow Tab Item</span>
         </MenuItem>
       </MenuList>
@@ -427,9 +377,7 @@ export const ContextTabBarOverflow = props => (
 );
 
 ContextTabBarOverflow.propTypes = {
-  hasError: PropTypes.bool,
-  hasSuccess: PropTypes.bool,
-  hasWarning: PropTypes.bool
+  statusLevel: PropTypes.oneOf(['error', 'success', 'warning'])
 };
 
 ContextTabBarOverflow.defaultProps = {
@@ -721,7 +669,7 @@ export let states = [
             title="Tab Item 1"
           />
           <ContextTab
-            hasSuccess
+            statusLevel="success"
             id={tabId03}
             symbol="live_chat"
             tabPanelId={tabPanelId03}
@@ -761,7 +709,7 @@ export let states = [
             title="Tab Item 1"
           />
           <ContextTab
-            hasSuccess
+            statusLevel="success"
             id={tabId03}
             itemActive
             symbol="live_chat"
@@ -802,8 +750,8 @@ export let states = [
             title="Tab Item 1"
           />
           <ContextTab
+            statusLevel="success"
             hasFocus
-            hasSuccess
             id={tabId03}
             itemActive
             symbol="live_chat"
@@ -845,7 +793,7 @@ export let states = [
             title="Tab Item 1"
           />
           <ContextTab
-            hasSuccess
+            statusLevel="success"
             id={tabId03}
             itemUnread
             symbol="live_chat"
@@ -887,7 +835,7 @@ export let states = [
             title="Tab Item 1"
           />
           <ContextTab
-            hasSuccess
+            statusLevel="success"
             id={tabId03}
             itemUnsaved
             symbol="live_chat"
@@ -929,7 +877,7 @@ export let states = [
             title="Tab Item 1"
           />
           <ContextTab
-            hasSuccess
+            statusLevel="success"
             id={tabId03}
             itemUnread
             itemUnsaved
@@ -972,7 +920,7 @@ export let states = [
             title="Tab Item 1"
           />
           <ContextTab
-            hasWarning
+            statusLevel="warning"
             id={tabId03}
             symbol="live_chat"
             tabPanelId={tabPanelId03}
@@ -1012,7 +960,7 @@ export let states = [
             title="Tab Item 1"
           />
           <ContextTab
-            hasWarning
+            statusLevel="warning"
             id={tabId03}
             itemActive
             symbol="live_chat"
@@ -1053,8 +1001,8 @@ export let states = [
             title="Tab Item 1"
           />
           <ContextTab
+            statusLevel="warning"
             hasFocus
-            hasWarning
             id={tabId03}
             itemActive
             symbol="live_chat"
@@ -1096,7 +1044,7 @@ export let states = [
             title="Tab Item 1"
           />
           <ContextTab
-            hasWarning
+            statusLevel="warning"
             id={tabId03}
             itemUnread
             symbol="live_chat"
@@ -1138,7 +1086,7 @@ export let states = [
             title="Tab Item 1"
           />
           <ContextTab
-            hasWarning
+            statusLevel="warning"
             id={tabId03}
             itemUnsaved
             symbol="live_chat"
@@ -1180,7 +1128,7 @@ export let states = [
             title="Tab Item 1"
           />
           <ContextTab
-            hasWarning
+            statusLevel="warning"
             id={tabId03}
             itemUnread
             itemUnsaved
@@ -1223,7 +1171,7 @@ export let states = [
             title="Tab Item 1"
           />
           <ContextTab
-            hasError
+            statusLevel="error"
             id={tabId03}
             symbol="live_chat"
             tabPanelId={tabPanelId03}
@@ -1263,7 +1211,7 @@ export let states = [
             title="Tab Item 1"
           />
           <ContextTab
-            hasError
+            statusLevel="error"
             id={tabId03}
             itemActive
             symbol="live_chat"
@@ -1304,7 +1252,7 @@ export let states = [
             title="Tab Item 1"
           />
           <ContextTab
-            hasError
+            statusLevel="error"
             hasFocus
             id={tabId03}
             itemActive
@@ -1347,7 +1295,7 @@ export let states = [
             title="Tab Item 1"
           />
           <ContextTab
-            hasError
+            statusLevel="error"
             id={tabId03}
             itemUnread
             symbol="live_chat"
@@ -1389,7 +1337,7 @@ export let states = [
             title="Tab Item 1"
           />
           <ContextTab
-            hasError
+            statusLevel="error"
             id={tabId03}
             itemUnsaved
             symbol="live_chat"
@@ -1431,7 +1379,7 @@ export let states = [
             title="Tab Item 1"
           />
           <ContextTab
-            hasError
+            statusLevel="error"
             id={tabId03}
             itemUnread
             itemUnsaved
@@ -1653,7 +1601,7 @@ export let states = [
         </span>
         <ContextTabBar>
           <ContextTab
-            hasSuccess
+            statusLevel="success"
             id={tabId01}
             pinned
             symbol="live_chat"
@@ -1694,7 +1642,7 @@ export let states = [
         </span>
         <ContextTabBar>
           <ContextTab
-            hasSuccess
+            statusLevel="success"
             id={tabId01}
             itemActive
             pinned
@@ -1735,8 +1683,8 @@ export let states = [
         </span>
         <ContextTabBar>
           <ContextTab
+            statusLevel="success"
             hasFocus
-            hasSuccess
             id={tabId01}
             itemActive
             pinned
@@ -1777,7 +1725,7 @@ export let states = [
         </span>
         <ContextTabBar>
           <ContextTab
-            hasSuccess
+            statusLevel="success"
             id={tabId01}
             itemUnread
             pinned
@@ -1819,7 +1767,7 @@ export let states = [
         </span>
         <ContextTabBar>
           <ContextTab
-            hasSuccess
+            statusLevel="success"
             id={tabId01}
             itemUnsaved
             pinned
@@ -1861,7 +1809,7 @@ export let states = [
         </span>
         <ContextTabBar>
           <ContextTab
-            hasWarning
+            statusLevel="warning"
             id={tabId01}
             pinned
             symbol="live_chat"
@@ -1902,7 +1850,7 @@ export let states = [
         </span>
         <ContextTabBar>
           <ContextTab
-            hasWarning
+            statusLevel="warning"
             id={tabId01}
             itemActive
             pinned
@@ -1943,8 +1891,8 @@ export let states = [
         </span>
         <ContextTabBar>
           <ContextTab
+            statusLevel="warning"
             hasFocus
-            hasWarning
             id={tabId01}
             itemActive
             pinned
@@ -1985,7 +1933,7 @@ export let states = [
         </span>
         <ContextTabBar>
           <ContextTab
-            hasWarning
+            statusLevel="warning"
             id={tabId01}
             itemUnread
             pinned
@@ -2027,7 +1975,7 @@ export let states = [
         </span>
         <ContextTabBar>
           <ContextTab
-            hasWarning
+            statusLevel="warning"
             id={tabId01}
             itemUnsaved
             pinned
@@ -2069,7 +2017,7 @@ export let states = [
         </span>
         <ContextTabBar>
           <ContextTab
-            hasError
+            statusLevel="error"
             id={tabId01}
             pinned
             symbol="live_chat"
@@ -2110,7 +2058,7 @@ export let states = [
         </span>
         <ContextTabBar>
           <ContextTab
-            hasError
+            statusLevel="error"
             id={tabId01}
             itemActive
             pinned
@@ -2151,7 +2099,7 @@ export let states = [
         </span>
         <ContextTabBar>
           <ContextTab
-            hasError
+            statusLevel="error"
             id={tabId01}
             itemActive
             pinned
@@ -2192,7 +2140,7 @@ export let states = [
         </span>
         <ContextTabBar>
           <ContextTab
-            hasError
+            statusLevel="error"
             id={tabId01}
             itemUnread
             pinned
@@ -2234,7 +2182,7 @@ export let states = [
         </span>
         <ContextTabBar>
           <ContextTab
-            hasError
+            statusLevel="error"
             id={tabId01}
             itemUnsaved
             pinned
@@ -2608,7 +2556,7 @@ export let states = [
             tabPanelId={tabPanelId03}
             title="Tab Item 2"
           />
-          <ContextTabBarOverflow hasSuccess isOpen />
+          <ContextTabBarOverflow statusLevel="success" isOpen />
         </ContextTabBar>
         <ContextTabPanel id={tabPanelId01} show tabId={tabId01}>
           Tab Home Content
@@ -2648,7 +2596,12 @@ export let states = [
             tabPanelId={tabPanelId03}
             title="Tab Item 2"
           />
-          <ContextTabBarOverflow hasSuccess isOpen itemUnread itemUnsaved />
+          <ContextTabBarOverflow
+            statusLevel="success"
+            isOpen
+            itemUnread
+            itemUnsaved
+          />
         </ContextTabBar>
         <ContextTabPanel id={tabPanelId01} show tabId={tabId01}>
           Tab Home Content
@@ -2688,7 +2641,7 @@ export let states = [
             tabPanelId={tabPanelId03}
             title="Tab Item 2"
           />
-          <ContextTabBarOverflow hasWarning isOpen />
+          <ContextTabBarOverflow statusLevel="warning" isOpen />
         </ContextTabBar>
         <ContextTabPanel id={tabPanelId01} show tabId={tabId01}>
           Tab Home Content
@@ -2728,7 +2681,12 @@ export let states = [
             tabPanelId={tabPanelId03}
             title="Tab Item 2"
           />
-          <ContextTabBarOverflow hasWarning isOpen itemUnread itemUnsaved />
+          <ContextTabBarOverflow
+            statusLevel="warning"
+            isOpen
+            itemUnread
+            itemUnsaved
+          />
         </ContextTabBar>
         <ContextTabPanel id={tabPanelId01} show tabId={tabId01}>
           Tab Home Content
@@ -2768,7 +2726,7 @@ export let states = [
             tabPanelId={tabPanelId03}
             title="Tab Item 2"
           />
-          <ContextTabBarOverflow hasError isOpen />
+          <ContextTabBarOverflow statusLevel="error" isOpen />
         </ContextTabBar>
         <ContextTabPanel id={tabPanelId01} show tabId={tabId01}>
           Tab Home Content
@@ -2808,7 +2766,12 @@ export let states = [
             tabPanelId={tabPanelId03}
             title="Tab Item 2"
           />
-          <ContextTabBarOverflow hasError isOpen itemUnread itemUnsaved />
+          <ContextTabBarOverflow
+            statusLevel="error"
+            isOpen
+            itemUnread
+            itemUnsaved
+          />
         </ContextTabBar>
         <ContextTabPanel id={tabPanelId01} show tabId={tabId01}>
           Tab Home Content

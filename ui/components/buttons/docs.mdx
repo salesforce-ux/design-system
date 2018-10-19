@@ -1,13 +1,12 @@
 import CodeView from '../../../shared/components/CodeView';
 import CodeBlock from '../../../shared/components/CodeBlock';
-import Example from '../../../shared/components/Example';
 import Blockquote from '../../../shared/components/Blockquote';
-import { Button } from './base/example';
-import { StatefulButton } from './stateful/example';
-import { DualStatefulButton, DefaultText, PressedText } from './dual-stateful/example';
-import SvgIcon from '../../shared/svg-icon';
+import * as ButtonExamples from './base/example';
+import * as IconExamples from './with-icon/example';
+import * as StatefulExamples from './stateful/example';
 import * as DualStatefulExamples from './dual-stateful/example';
 import { getDisplayElementById } from '../../shared/helpers';
+import SvgIcon from '../../shared/svg-icon';
 
 <div className="doc lead">
   Buttons are clickable items used to perform an action.
@@ -20,33 +19,17 @@ Buttons should be used in situations where users might need to:
 - trigger a new UI element to appear on the page
 - specify a new or next step in a process
 
-<Example title="Button All Examples">
-  <CodeView>
-    <React.Fragment>
-      <Button>
-        Button Base
-      </Button>
-      <Button isNeutral>
-        Button Neutral
-      </Button>
-      <Button isBrand>
-        Button Brand
-      </Button>
-      <Button isOutlineBrand>
-        Button Outline Brand
-      </Button>
-      <Button isDestructive>
-        Button Destructive
-      </Button>
-      <Button isTextDestructive>
-        Button Text Destructive
-      </Button>
-      <Button isSuccess>
-        Button Success
-      </Button>
-    </React.Fragment>
-  </CodeView>
-</Example>
+<CodeView>
+  <React.Fragment>
+    {ButtonExamples.default}
+    {getDisplayElementById(ButtonExamples.examples, 'neutral')}
+    {getDisplayElementById(ButtonExamples.examples, 'brand')}
+    {getDisplayElementById(ButtonExamples.examples, 'outline-brand')}
+    {getDisplayElementById(ButtonExamples.examples, 'destructive')}
+    {getDisplayElementById(ButtonExamples.examples, 'text-destructive')}
+    {getDisplayElementById(ButtonExamples.examples, 'success')}
+  </React.Fragment>
+</CodeView>
 
 ## Button vs. Link
 
@@ -79,21 +62,17 @@ The base `slds-button` looks like a plain text link. It removes all the styling 
 
 The base and neutral buttons are used most frequently and can be used multiple times per feature. Use these buttons when the actions are of secondary importance to the content surrounding it, such as in the actions ribbon in a page header.
 
-<Example title="Button Base">
-  <CodeView toggleCode={false}>
-    <Button>Button</Button>
-  </CodeView>
-</Example>
+<CodeView toggleCode={false}>
+  {ButtonExamples.default}
+</CodeView>
 
 ### Neutral
 
 Add the `slds-button_neutral` class to create a neutral button.
 
-<Example title="Button Neutral">
-  <CodeView toggleCode={false}>
-    <Button isNeutral>Button</Button>
-  </CodeView>
-</Example>
+<CodeView toggleCode={false}>
+  {getDisplayElementById(ButtonExamples.examples, 'neutral')}
+</CodeView>
 
 ### Brand
 
@@ -103,33 +82,25 @@ The Brand button generally should only be used once per component screen at any 
 
 Not all features need to have primary actions, sometimes the actions are secondary to the content and are all of equal importance.
 
-<Example title="Button Brand">
-  <CodeView toggleCode={false}>
-    <Button isBrand>Button</Button>
-  </CodeView>
-</Example>
+<CodeView toggleCode={false}>
+  {getDisplayElementById(ButtonExamples.examples, 'brand')}
+</CodeView>
 
 ### Outline Brand
 
 To create the outline brand button, add the `slds-button_outline-brand` class to the `slds-button` class. The brand color tokens can be overridden for theme specific usage.
 
-<Example title="Button Outline Brand">
-  <CodeView toggleCode={false}>
-    <Button isOutlineBrand>Button</Button>
-  </CodeView>
-</Example>
+<CodeView toggleCode={false}>
+  {getDisplayElementById(ButtonExamples.examples, 'outline-brand')}
+</CodeView>
 
 ### Inverse
 
 Use the inverse button on dark backgrounds. Add the `slds-button_inverse` class to the `slds-button` class.
 
-<Example title="Button Inverse">
-  <CodeView style={{ backgroundColor: '#16325c', padding: '1rem' }} toggleCode={false}>
-    <div style={{ backgroundColor: '#16325c' }}>
-      <Button isInverse>Button</Button>
-    </div>
-  </CodeView>
-</Example>
+<CodeView style={{ backgroundColor: '#16325c', padding: '0.5rem' }} toggleCode={false}>
+  {getDisplayElementById(ButtonExamples.examples, 'inverse')}
+</CodeView>
 
 ### Destructive
 
@@ -137,11 +108,9 @@ To create the destructive button, add the `slds-button_destructive` class to the
 
 This button is used to indicate a destructive action to the user, like permanently erasing data.
 
-<Example title="Button Destructive">
-  <CodeView toggleCode={false}>
-    <Button isDestructive>Button</Button>
-  </CodeView>
-</Example>
+<CodeView toggleCode={false}>
+  {getDisplayElementById(ButtonExamples.examples, 'destructive')}
+</CodeView>
 
 ### Text Destructive
 
@@ -149,53 +118,33 @@ To create the text destructive button, add the `slds-button_text-destructive` cl
 
 This button is used to indicate a destructive action to the user, like permanently erasing data. Use this version when the [Destructive](#Destructive) button would be too distracting to the experience.
 
-<Example title="Button Text Destructive">
-  <CodeView toggleCode={false}>
-    <Button isTextDestructive>Button</Button>
-  </CodeView>
-</Example>
+<CodeView toggleCode={false}>
+  {getDisplayElementById(ButtonExamples.examples, 'text-destructive')}
+</CodeView>
 
 ### Success
 
 To create the success button, add the `slds-button_success` class to the `slds-button` class.
 
-<Example title="Button Success">
-  <CodeView toggleCode={false}>
-    <Button isSuccess>Button</Button>
-  </CodeView>
-</Example>
+<CodeView toggleCode={false}>
+  {getDisplayElementById(ButtonExamples.examples, 'success')}
+</CodeView>
 
 ## Disabled
 
 Use a disabled attribute when a button can’t be clicked. To create a disabled button, append the `disabled` attribute to the button.
 
-<Example title="Button Disabled Examples">
-  <CodeView>
-    <React.Fragment>
-      <Button disabled>
-        Button Base
-      </Button>
-      <Button isNeutral disabled>
-        Button Neutral
-      </Button>
-      <Button isBrand disabled>
-        Button Brand
-      </Button>
-      <Button isOutlineBrand disabled>
-        Button Outline Brand
-      </Button>
-      <Button isDestructive disabled>
-        Button Destructive
-      </Button>
-      <Button isTextDestructive disabled>
-        Button Text Destructive
-      </Button>
-      <Button isSuccess disabled>
-        Button Success
-      </Button>
-    </React.Fragment>
-  </CodeView>
-</Example>
+<CodeView>
+  <React.Fragment>
+    {getDisplayElementById(ButtonExamples.states, 'disabled')}
+    {getDisplayElementById(ButtonExamples.states, 'neutral-disabled')}
+    {getDisplayElementById(ButtonExamples.states, 'brand-disabled')}
+    {getDisplayElementById(ButtonExamples.states, 'outline-brand-disabled')}
+    {getDisplayElementById(ButtonExamples.states, 'destructive-disabled')}
+    {getDisplayElementById(ButtonExamples.states, 'text-destructive-disabled')}
+    {getDisplayElementById(ButtonExamples.states, 'success-disabled')}
+  </React.Fragment>
+</CodeView>
 
 ## With Icons
 
@@ -203,33 +152,15 @@ The SVG, element, or icon inside the button receives the `slds-button__icon` cla
 
 ### Left Icon
 
-<Example title="Button Left Icon">
-  <CodeView>
-    <Button isNeutral>
-      <SvgIcon
-        className="slds-button__icon slds-button__icon_left"
-        sprite="utility"
-        symbol="download"
-      />
-      Button Neutral
-    </Button>
-  </CodeView>
-</Example>
+<CodeView>
+  {IconExamples.default}
+</CodeView>
 
 ### Right Icon
 
-<Example title="Button Right Icon">
-  <CodeView>
-    <Button isNeutral>
-      Button Neutral
-      <SvgIcon
-        className="slds-button__icon slds-button__icon_right"
-        sprite="utility"
-        symbol="download"
-      />
-    </Button>
-  </CodeView>
-</Example>
+<CodeView>
+  {getDisplayElementById(IconExamples.examples, 'with-icon-right')}
+</CodeView>
 
 ## Stateful
 
@@ -251,31 +182,25 @@ The button contains three spans with classes that hide or show the content of th
 
 Stateful button uses the class `slds-not-selected` in its initial state.
 
-<Example title="Button Stateful Not Selected">
-  <CodeView>
-    <StatefulButton isNotSelected />
-  </CodeView>
-</Example>
+<CodeView>
+  {StatefulExamples.default}
+</CodeView>
 
 ### Selected and Focused
 
 When selected and still focused, stateful button uses the class `slds-is-selected-clicked`.
 
-<Example title="Button Stateful Selected and Clicked">
-  <CodeView>
-    <StatefulButton isSelectedClicked />
-  </CodeView>
-</Example>
+<CodeView>
+  {getDisplayElementById(StatefulExamples.states, 'selected-clicked')}
+</CodeView>
 
 ### Selected with Hover State
 
 Once selected and blurred (user moved focus away from the button), stateful button uses the class `slds-is-selected`.
 
-<Example title="Button Stateful Selected">
-  <CodeView>
-    <StatefulButton isSelected />
-  </CodeView>
-</Example>
+<CodeView>
+  {getDisplayElementById(StatefulExamples.states, 'selected')}
+</CodeView>
 
 ## Dual Stateful Button
 
@@ -283,7 +208,7 @@ Dual Stateful buttons have two states, similar to a [Toggle Button](/accessibili
 
 The Dual Stateful button requires the `slds-button_dual-stateful` class, along with a combination of the `slds-button` and `slds-button_neutral` classes. While Dual Stateful buttons are only used with the neutral Button variation, the pressed state changes the button _style_ to that of the Brand variation.
 
-The button contains two spans—each contains display text and a corresponding SVG icon with the class `slds-button__icon-left`—and have classes that hide or show the contents. By default, the first span with the class `slds-text-is-not-pressed` is displayed; when the class `slds-is-pressed` is applied to the parent button, the span with the class `slds-text-is-pressed` is displayed.
+The button contains two spans. Each span contains display text and a corresponding SVG icon with the class `slds-button__icon-left` and has classes that hide or show the contents. By default, the first span with the class `slds-text-is-not-pressed` is displayed; when the class `slds-is-pressed` is applied to the parent button, the span with the class `slds-text-is-pressed` is displayed.
 
 <Blockquote type="a11y" header="Accessibility Requirement">
   Be sure to include the attribute `aria-live="assertive"` on the button. The `aria-live="assertive"` attribute means the value of the `<span>` inside the button will be spoken whenever it changes.
@@ -305,4 +230,12 @@ To display the pressed state, use the class `slds-is-pressed` on the `<button>` 
 
 <CodeView>
   {getDisplayElementById(DualStatefulExamples.examples, 'pressed')}
+</CodeView>
+
+## Sizing
+
+To allow the button's width to take up the entire width available, apply the `slds-button_stretch` class to the button.
+
+<CodeView toggleCode={false}>
+  {getDisplayElementById(ButtonExamples.examples, 'stretch')}
 </CodeView>

@@ -358,7 +358,7 @@ a.slds-button--inverse:focus {
 }
 
 /**
- * @summary Creates a button style for full width
+ * @summary Creates a button style for full width that resets styling
  * @selector .slds-button_full-width
  * @restrict .slds-button
  * @modifier
@@ -375,4 +375,15 @@ a.slds-button--inverse:focus {
   &:focus {
     box-shadow: none;
   }
+}
+
+/**
+ * @summary Creates a button style for 100% width that maintains current styling
+ * @selector .slds-button_stretch
+ * @restrict .slds-button
+ * @modifier
+ * @group size
+ */
+.slds-button_stretch {
+  width: 100%;
 }

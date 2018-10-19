@@ -74,5 +74,15 @@ export const states = [
     id: 'disabled',
     label: 'disabled',
     element: <StatefulButton isNotSelected disabled />
+  },
+  {
+    id: 'selected',
+    label: 'Selected',
+    element: <StatefulButton isNeutral isSelected />
+  },
+  {
+    id: 'selected-clicked',
+    label: 'Selected and Clicked',
+    element: <StatefulButton isNeutral isSelectedClicked />
   }
 ];

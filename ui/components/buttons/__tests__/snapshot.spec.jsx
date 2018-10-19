@@ -37,6 +37,16 @@ describe('Button ', () => {
 
   it('renders a success button', () =>
     matchesMarkup(<Button isSuccess>Button</Button>));
+
+  it('renders a full width, reset button', () =>
+    matchesMarkup(<Button isFullWidth>Button</Button>));
+
+  it('renders a stretched button', () =>
+    matchesMarkup(
+      <Button isSuccess isStretch>
+        Button
+      </Button>
+    ));
 });
 
 describe('Stateful Button ', () => {

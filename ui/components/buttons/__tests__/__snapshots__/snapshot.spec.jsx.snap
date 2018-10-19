@@ -36,9 +36,27 @@ exports[`Button  renders a disabled base button 1`] = `
 </button>
 `;
 
+exports[`Button  renders a full width, reset button 1`] = `
+<button
+  className="slds-button slds-button_full-width"
+  disabled={undefined}
+>
+  Button
+</button>
+`;
+
 exports[`Button  renders a neutral button 1`] = `
 <button
   className="slds-button slds-button_neutral"
+  disabled={undefined}
+>
+  Button
+</button>
+`;
+
+exports[`Button  renders a stretched button 1`] = `
+<button
+  className="slds-button slds-button_success slds-button_stretch"
   disabled={undefined}
 >
   Button

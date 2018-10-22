@@ -27,6 +27,7 @@ class ButtonIcon extends Component {
       isFirst,
       isMiddle,
       isLast,
+      useCurrentColor,
       ...rest
     } = this.props;
 
@@ -84,7 +85,8 @@ class ButtonIcon extends Component {
           {
             'slds-button_icon-more': hasDropdown && theme === 'neutral',
             'slds-button_icon-container-more':
-              hasDropdown && theme === 'transparent'
+              hasDropdown && theme === 'transparent',
+            'slds-button_icon-current-color': useCurrentColor
           },
           {
             'slds-button_icon-container': size === 'medium',
@@ -131,6 +133,7 @@ ButtonIcon.propTypes = {
   symbol: PropTypes.string,
   theme: PropTypes.string,
   assistiveText: PropTypes.string,
+  useCurrentColor: PropTypes.bool,
   title: PropTypes.string
 };
 

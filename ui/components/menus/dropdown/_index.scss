@@ -422,7 +422,7 @@
        * @group notification
        */
       &.slds-has-error {
-        background: $color-background-destructive-active;
+        background: $color-background-destructive;
       }
 
       /**
@@ -434,7 +434,7 @@
        * @group notification
        */
       &.slds-has-success {
-        background: $color-background-success-darker;
+        background: $color-background-success-dark;
       }
 
       &.slds-has-error,
@@ -459,6 +459,16 @@
 
         .slds-indicator_unsaved {
           color: currentColor;
+        }
+      }
+
+      &.slds-has-error,
+      &.slds-has-success,
+      &.slds-has-warning {
+
+        &:hover,
+        &:focus {
+          text-decoration: underline;
         }
       }
     }

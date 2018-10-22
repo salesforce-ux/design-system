@@ -106,6 +106,9 @@ export let ContextTab = props => (
             ? 'inverse'
             : null
         }
+        useCurrentColor={
+          props.statusLevel !== 'error' && props.statusLevel !== 'success'
+        }
       />
       <Menu className="slds-dropdown_right">
         <MenuList>
@@ -134,6 +137,9 @@ export let ContextTab = props => (
             props.statusLevel === 'error' || props.statusLevel === 'success'
               ? 'inverse'
               : null
+          }
+          useCurrentColor={
+            props.statusLevel !== 'error' && props.statusLevel !== 'success'
           }
         />
       </div>

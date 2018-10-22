@@ -4,4 +4,7 @@
 
 <!-- ## [Unreleased] -->
 
-<!-- ## [VERSION] -->
+## 2.8.0
+
+### Added
+- Added examples for tooltip triggered by links, buttons, and inputs

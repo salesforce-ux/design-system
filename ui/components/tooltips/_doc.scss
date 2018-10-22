@@ -10,6 +10,8 @@
  *
  * Showing the tooltip on hover or on keyboard focus of a focusable element ensures that all users can access it, even if they aren’t using a mouse. Examples of focusable elements include links, buttons, and inputs. Give the tooltip an ID and use that as the value of the `aria-describedby` attribute of the DOM element it describes. This helps users of assistive technology read the tooltip content.
  *
+ * When using a link as the focusable element to show a tooltip, add a `<div>` at the bottom of the tooltip bubble that includes a description of where the link will take the user. Add `aria-hidden='true'` to this element, and ensure that the link text itself matches the text within this `<div>`.
+ *
  * @summary A Tooltip is a small piece of contextual information about an element on the screen, which is displayed when a user hovers or focuses on the element it is describing. It is not focusable and cannot contain focusable content.
  *
  * @base

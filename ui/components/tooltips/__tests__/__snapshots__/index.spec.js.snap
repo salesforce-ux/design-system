@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Base Tooltip renders a base tooltip 1`] = `
+<div
+  className="slds-popover slds-popover_tooltip slds-nubbin_bottom-left"
+  id={undefined}
+  role="tooltip"
+  style={undefined}
+>
+  <div
+    className="slds-popover__body"
+  />
+</div>
+`;
+
+exports[`Base Tooltip renders a base tooltip with learn more 1`] = `
+<div
+  className="slds-popover slds-popover_tooltip slds-nubbin_bottom-left"
+  id={undefined}
+  role="tooltip"
+  style={undefined}
+>
+  <div
+    className="slds-popover__body"
+  >
+    <div
+      aria-hidden="true"
+      className="slds-m-top_x-small"
+    >
+      Click
+       
+      <span
+        className="slds-icon_container slds-icon-utility-info"
+        title="Help"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-icon slds-icon slds-icon_xx-small"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#info"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          Help
+        </span>
+      </span>
+       
+      to learn more.
+    </div>
+  </div>
+</div>
+`;

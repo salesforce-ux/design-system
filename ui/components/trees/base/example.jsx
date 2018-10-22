@@ -93,7 +93,7 @@ export const examples = [
     label: 'Fliterable Tree',
     element: (
       <div>
-        <div class="slds-m-bottom_small">
+        <div className="slds-m-bottom_small">
           <FormElement
             hasHiddenLabel
             hasLeftIcon
@@ -189,7 +189,7 @@ export const examples = [
     label: 'Flitered Tree',
     element: (
       <div>
-        <div class="slds-m-bottom_small">
+        <div className="slds-m-bottom_small">
           <FormElement
             hasHiddenLabel
             hasLeftIcon

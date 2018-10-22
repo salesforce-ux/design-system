@@ -4,6 +4,7 @@
 import React from 'react';
 import { CheckboxStandalone } from '..';
 import { FormElement } from '../../form-element/';
+import { UtilityIcon } from '../../icons/base/example';
 
 export default (
   <FormElement labelContent="Form Element Label" inputId="checkbox-id-01">
@@ -69,6 +70,36 @@ export let states = [
         isRequired
       >
         <CheckboxStandalone id="checkbox-id-01" isRequired />
+      </FormElement>
+    )
+  },
+  {
+    id: 'view-mode-unchecked',
+    label: 'View mode - Unchecked',
+    element: (
+      <FormElement labelContent="Form Element Label" isViewMode>
+        <UtilityIcon
+          symbol="steps"
+          size="x-small"
+          useCurrentColor
+          assistiveText="False"
+          title="False"
+        />
+      </FormElement>
+    )
+  },
+  {
+    id: 'view-mode-checked',
+    label: 'View mode - Checked',
+    element: (
+      <FormElement labelContent="Form Element Label" isViewMode>
+        <UtilityIcon
+          symbol="check"
+          size="x-small"
+          useCurrentColor
+          assistiveText="True"
+          title="True"
+        />
       </FormElement>
     )
   }

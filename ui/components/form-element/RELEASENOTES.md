@@ -14,6 +14,7 @@
 - Added support for single column horizontal form elements with `slds-form-element_1-col`, used to re-distribute the ratio of label to control
 - Added `slds-form-element_compound` to manage compound form elements
 - Added `slds-form-element_address` for address specific compound form elements
+- Added image based checkbox to record form
 
 ### Changed
 - Added spacing around `slds-form-element` depending on densification settings

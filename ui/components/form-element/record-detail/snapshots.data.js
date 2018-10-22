@@ -84,7 +84,15 @@ export const ObjectFieldTypes = {
         {
           type: 'checkbox',
           label: 'Security Assessment Required?',
-          value: 'False',
+          value: (
+            <UtilityIcon
+              symbol="steps"
+              size="x-small"
+              useCurrentColor
+              assistiveText="False"
+              title="False"
+            />
+          ),
           component: (
             <FormElement
               labelContent="Security Assessment Required?"
@@ -495,7 +503,15 @@ export const ObjectFieldTypesHorizontal = {
         {
           type: 'checkbox',
           label: 'Security Assessment Required?',
-          value: 'False',
+          value: (
+            <UtilityIcon
+              symbol="steps"
+              size="x-small"
+              useCurrentColor
+              assistiveText="False"
+              title="False"
+            />
+          ),
           component: (
             <FormElement
               isHorizontal
@@ -913,7 +929,15 @@ export const ObjectFieldTypesSingleColumn = {
         {
           type: 'checkbox',
           label: 'Security Assessment Required?',
-          value: 'False',
+          value: (
+            <UtilityIcon
+              symbol="steps"
+              size="x-small"
+              useCurrentColor
+              assistiveText="False"
+              title="False"
+            />
+          ),
           column: 1,
           component: (
             <FormElement

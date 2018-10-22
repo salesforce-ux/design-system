@@ -1,0 +1,156 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders a default avatar group 1`] = `
+<span
+  className="slds-avatar-group"
+>
+  <span
+    className="slds-avatar slds-avatar-grouped slds-avatar-grouped__primary"
+  >
+    <img
+      alt="Person 2 name"
+      src="/assets/images/avatar2.jpg"
+      title="User 2 avatar"
+    />
+  </span>
+  <span
+    className="slds-avatar slds-avatar-grouped slds-avatar-grouped__secondary"
+  >
+    <img
+      alt="Person 2 name"
+      src="/assets/images/avatar2.jpg"
+      title="User 2 avatar"
+    />
+  </span>
+</span>
+`;
+
+exports[`renders a large avatar group with image and icon 1`] = `
+<span
+  className="slds-avatar-group slds-avatar-group_large"
+>
+  <span
+    className="slds-avatar slds-avatar-grouped slds-avatar-grouped__primary"
+  >
+    <img
+      alt="Person 1 name"
+      src="/assets/images/avatar1.jpg"
+      title="User 1 avatar"
+    />
+  </span>
+  <span
+    className="slds-avatar slds-avatar-grouped slds-avatar-grouped__secondary"
+  >
+    <span
+      className="slds-icon_container slds-icon-standard-user slds-avatar-grouped__icon"
+      title="Description of icon when needed"
+    >
+      <svg
+        aria-hidden={true}
+        className="slds-icon"
+      >
+        <use
+          xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#user"
+        />
+      </svg>
+      <span
+        className="slds-assistive-text"
+      >
+        Description of icon when needed
+      </span>
+    </span>
+  </span>
+</span>
+`;
+
+exports[`renders a small avatar group with icon and initials 1`] = `
+<span
+  className="slds-avatar-group slds-avatar-group_small"
+>
+  <span
+    className="slds-avatar slds-avatar-grouped slds-avatar-grouped__primary"
+  >
+    <span
+      className="slds-icon_container slds-icon-standard-user slds-avatar-grouped__icon"
+      title="Description of icon when needed"
+    >
+      <svg
+        aria-hidden={true}
+        className="slds-icon"
+      >
+        <use
+          xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#user"
+        />
+      </svg>
+      <span
+        className="slds-assistive-text"
+      >
+        Description of icon when needed
+      </span>
+    </span>
+  </span>
+  <span
+    className="slds-avatar slds-avatar-grouped slds-avatar-grouped__secondary"
+  >
+    <abbr
+      className="slds-avatar__initials slds-avatar-grouped__initials"
+      title="person name"
+    >
+      WW
+    </abbr>
+  </span>
+</span>
+`;
+
+exports[`renders an avatar group with inversed user initials 1`] = `
+<span
+  className="slds-avatar-group"
+>
+  <span
+    className="slds-avatar slds-avatar-grouped slds-avatar-grouped__primary slds-avatar-grouped_inverse"
+  >
+    <abbr
+      className="slds-avatar__initials slds-avatar__initials_inverse slds-avatar-grouped__initials"
+      title="person name"
+    >
+      WW
+    </abbr>
+  </span>
+  <span
+    className="slds-avatar slds-avatar-grouped slds-avatar-grouped__secondary slds-avatar-grouped_inverse"
+  >
+    <abbr
+      className="slds-avatar__initials slds-avatar__initials_inverse slds-avatar-grouped__initials"
+      title="person name"
+    >
+      WW
+    </abbr>
+  </span>
+</span>
+`;
+
+exports[`renders an x-small avatar group with initials and icon 1`] = `
+<span
+  className="slds-avatar-group slds-avatar-group_x-small"
+>
+  <span
+    className="slds-avatar slds-avatar-grouped slds-avatar-grouped__primary"
+  >
+    <abbr
+      className="slds-avatar__initials slds-avatar-grouped__initials"
+      title="person name"
+    >
+      WW
+    </abbr>
+  </span>
+  <span
+    className="slds-avatar slds-avatar-grouped slds-avatar-grouped__secondary"
+  >
+    <img
+      alt="Person 1 name"
+      src="/assets/images/avatar1.jpg"
+      title="User 1 avatar"
+    />
+  </span>
+</span>
+`;

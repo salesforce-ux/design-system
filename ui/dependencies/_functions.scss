@@ -43,3 +43,21 @@
 @function fix-ie-rounding($width, $base-font-size: 16) {
   @return calc(#{$width * 1rem} / #{$base-font-size});
 }
+
+/// Remove the unit of a value with units, similar to JavaScript parseInt()
+///
+/// When a value of a calculation is needed without units (e.g. rem, px).
+/// Helpful when determining the value of `transform: scale()`, and the
+/// calculation involves a size token.
+/// Example: transform: scale( 1 / strip-unit($font-size-heading-small) );
+/// More info: https://css-tricks.com/snippets/sass/strip-unit-function/
+///
+/// @param {Number} $number - Number to remove unit from
+/// @return {Number} - Unitless number
+@function strip-unit($number) {
+  @if type-of($number) == 'number' and not unitless($number) {
+    @return $number / ($number * 0 + 1);
+  }
+
+  @return $number;
+}

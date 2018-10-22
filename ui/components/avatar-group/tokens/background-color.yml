@@ -1,0 +1,17 @@
+global:
+  scope: component
+  type: color
+  category: background-color
+  cssProperties:
+  - 'background*'
+  - 'border*'
+  - box-shadow
+imports:
+- "../../../../design-tokens/aliases/color-palettes.yml"
+props:
+  AVATAR_GROUP_COLOR_BACKGROUND_LIGHTEST:
+    value: '{!PALETTE_GRAY_1}'
+    comment: White avatar group background color.
+  AVATAR_GROUP_COLOR_BACKGROUND_INVERSE:
+    value: '{!PALETTE_GRAY_9}'
+    comment: Dark gray avatar group background color.

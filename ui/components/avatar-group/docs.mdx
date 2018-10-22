@@ -1,0 +1,151 @@
+import { Fragment } from 'react';
+import { AvatarGroup, AvatarImage } from './index';
+import { Avatar } from '../avatar/base/example';
+import Blockquote from '../../../shared/components/Blockquote';
+import Example from '../../../shared/components/Example';
+import CodeView from '../../../shared/components/CodeView';
+import CodeBlock from '../../../shared/components/CodeBlock';
+import { StandardIcon } from '../icons/standard/example';
+import * as Base from './base/example';
+import DisplayColumn from '../../../shared/components/DisplayColumn';
+import DisplayGrid from '../../../shared/components/DisplayGrid';
+import { getDisplayElementById } from '../../shared/helpers';
+
+<div className="lead">
+  An avatar group is an element that communicates to the user that there is more than 1 person associated to an item.
+</div>
+
+## Base
+The Avatar Group contains two Avatar components with modifying classes. Both Avatars in the group get `slds-avatar-grouped` applied to them. Then, `slds-avatar-grouped__primary` is applied to the first Avatar and `slds-avatar-grouped__secondary` on the second. Avatars of the image variety are preferred within an Avatar Group.
+
+<Blockquote type="note" header="Design Guidelines">
+  Avatar Groups should only be used to represent people and NOT groups of salesforce objects.
+</Blockquote>
+
+<CodeView>
+  {Base.default}
+</CodeView>
+
+### With Icon
+Icon Avatars can be put into a group. In this case, on the `slds-icon_container` apply the `slds-avatar-grouped__icon` class.
+
+<CodeView>
+  {getDisplayElementById(Base.examples, 'with-icons')}
+</CodeView>
+
+### With User Initials
+User Initials Avatars can be put into a group. In this case, on the `<abbr>` apply the `slds-avatar-grouped__initials` class.
+
+<CodeView>
+  {getDisplayElementById(Base.examples, 'with-user-initials')}
+</CodeView>
+
+#### Inversed
+Inversed User Initials Avatars can also be used in a group when on a dark background. To achieve the lighter background for the Avatar, additionally apply the `slds-avatar-grouped_inverse` class along with the `slds-avatar-grouped` class.
+
+<CodeView>
+  <Base.ContextInversed>
+    {getDisplayElementById(Base.examples, 'with-user-initials-inversed')}
+  </Base.ContextInversed>
+</CodeView>
+
+### With Mixed Avatar types
+Avatars of type image, icon, or initials can be used in combination with each other in a group.
+
+<CodeView>
+  <Fragment>
+    {getDisplayElementById(Base.examples, 'with-image-and-icon')}
+    {getDisplayElementById(Base.examples, 'with-icon-and-user-initials')}
+    {getDisplayElementById(Base.examples, 'with-user-initials-and-image')}
+  </Fragment>
+</CodeView>
+
+## Sizes
+Avatar Groups come in 4 different sizes: `x-small`, `small`, `medium`, and `large` by applying a `slds-avatar-group_{size}` modifier class on `slds-avatar-group`. If the size modifer class is not used, `medium` is also the default size.
+
+### With Images
+
+<DisplayGrid>
+  <DisplayColumn>
+    <strong>X-Small</strong>
+    <CodeView toggleCode={false}>
+      {getDisplayElementById(Base.examples, 'x-small-image')}
+    </CodeView>
+  </DisplayColumn>
+  <DisplayColumn>
+    <strong>Small</strong>
+    <CodeView toggleCode={false}>
+      {getDisplayElementById(Base.examples, 'small-image')}
+    </CodeView>
+  </DisplayColumn>
+  <DisplayColumn>
+    <strong>Medium</strong>
+    <CodeView toggleCode={false}>
+      {getDisplayElementById(Base.examples, 'medium-image')}
+    </CodeView>
+  </DisplayColumn>
+  <DisplayColumn>
+    <strong>Large</strong>
+    <CodeView toggleCode={false}>
+      {getDisplayElementById(Base.examples, 'large-image')}
+    </CodeView>
+  </DisplayColumn>
+</DisplayGrid>
+
+### With Icons
+
+<DisplayGrid>
+  <DisplayColumn>
+    <strong>X-Small</strong>
+    <CodeView toggleCode={false}>
+      {getDisplayElementById(Base.examples, 'x-small-icon')}
+    </CodeView>
+  </DisplayColumn>
+  <DisplayColumn>
+    <strong>Small</strong>
+    <CodeView toggleCode={false}>
+      {getDisplayElementById(Base.examples, 'small-icon')}
+    </CodeView>
+  </DisplayColumn>
+  <DisplayColumn>
+    <strong>Medium</strong>
+    <CodeView toggleCode={false}>
+      {getDisplayElementById(Base.examples, 'medium-icon')}
+    </CodeView>
+  </DisplayColumn>
+  <DisplayColumn>
+    <strong>Large</strong>
+    <CodeView toggleCode={false}>
+      {getDisplayElementById(Base.examples, 'large-icon')}
+    </CodeView>
+  </DisplayColumn>
+</DisplayGrid>
+
+### With User Initials
+
+<DisplayGrid>
+  <DisplayColumn>
+    <strong>X-Small</strong>
+    <CodeView toggleCode={false}>
+      {getDisplayElementById(Base.examples, 'x-small-user-initials')}
+    </CodeView>
+  </DisplayColumn>
+  <DisplayColumn>
+    <strong>Small</strong>
+    <CodeView toggleCode={false}>
+      {getDisplayElementById(Base.examples, 'small-user-initials')}
+    </CodeView>
+  </DisplayColumn>
+  <DisplayColumn>
+    <strong>Medium</strong>
+    <CodeView toggleCode={false}>
+      {getDisplayElementById(Base.examples, 'medium-user-initials')}
+    </CodeView>
+  </DisplayColumn>
+  <DisplayColumn>
+    <strong>Large</strong>
+    <CodeView toggleCode={false}>
+      {getDisplayElementById(Base.examples, 'large-user-initials')}
+    </CodeView>
+  </DisplayColumn>
+</DisplayGrid>

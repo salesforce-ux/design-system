@@ -1,0 +1,224 @@
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+@import "../mixins/index";
+
+/**
+ * An image is the preferred format for an avatar
+ *
+ * @summary Creates an Avatar Group
+ * @name base
+ * @selector .slds-avatar-group
+ * @restrict div, span
+ * @variant
+ */
+.slds-avatar-group {
+  @include square(2rem);
+  position: relative;
+  display: inline-block;
+}
+
+/**
+* @summary Variant of an Avatar in an Avatar Group
+* @name grouped
+* @selector .slds-avatar-grouped
+* @restrict .slds-avatar
+* @variant
+*/
+.slds-avatar-grouped {
+  border: $border-width-thin solid $color-gray-1;
+  line-height: 0; // NOTE: If this isn't set to zero, images in those avatars that are smaller than the default line height will stop filling the container
+  border-radius: $border-radius-circle;
+  background: $user;
+}
+
+/**
+* @summary Variant of an Avatar with inverse background in an Avatar Group
+* @name grouped
+* @selector .slds-avatar-grouped_inverse
+* @restrict .slds-avatar-grouped
+* @variant
+*/
+.slds-avatar-grouped_inverse {
+  background-color: $color-background;
+}
+
+/**
+* @summary Modifier for the primary Avatar in an Avatar Group
+* @name grouped-primary
+* @selector .slds-avatar-grouped__primary
+* @restrict .slds-avatar-grouped
+* @modifier
+*/
+.slds-avatar-grouped__primary {
+  @include square(1.5rem);
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 1;
+
+  /**
+  * @summary Modifier for the Avatar that contains User Initials in an Avatar Group
+  * @name initials
+  * @selector .slds-avatar-grouped__initials
+  * @restrict .slds-avatar-grouped
+  * @modifier
+  */
+  .slds-avatar-grouped__initials {
+    @include avatar-grouped-user-initials(0.5625); // ~9px
+  }
+}
+
+/**
+* @summary Modifier for the secondary Avatar in an Avatar Group
+* @name grouped-secondary
+* @selector .slds-avatar-grouped__secondary
+* @restrict .slds-avatar-grouped
+* @modifier
+*/
+.slds-avatar-grouped__secondary {
+  @include square(1.25rem);
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  .slds-avatar-grouped__initials {
+    @include avatar-grouped-user-initials(0.4375); // ~7px
+  }
+}
+
+/**
+* @summary Modifier for the icon Avatar in an Avatar Group
+* @name icon
+* @selector .slds-avatar-grouped__icon
+* @restrict .slds-icon_container
+* @modifier
+*/
+.slds-avatar-grouped__icon {
+  height: 100%;
+  line-height: 0;
+
+  .slds-icon {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+/**
+* @summary Creates an extra small Avatar Group
+* @name x-small
+* @selector .slds-avatar-group_x-small
+* @restrict .slds-avatar-group
+* @modifier
+* @group sizing
+*/
+.slds-avatar-group_x-small {
+  @include square(1.25rem);
+
+  .slds-avatar-grouped__primary {
+    @include square(1rem);
+
+    /**
+    * @summary Modifier for the initials Avatar in an Avatar Group
+    * @name initials
+    * @selector .slds-avatar-grouped__initials
+    * @restrict .slds-avatar__initials
+    * @modifier
+    */
+    .slds-avatar-grouped__initials {
+      @include avatar-grouped-user-initials(0.3125); // ~5px
+    }
+  }
+
+  .slds-avatar-grouped__secondary {
+    @include square(0.75rem);
+
+    .slds-avatar-grouped__initials {
+      @include avatar-grouped-user-initials(0.1875); // ~3px
+    }
+  }
+}
+
+/**
+* @summary Creates a small Avatar Group
+* @name small
+* @selector .slds-avatar-group_small
+* @restrict .slds-avatar-group
+* @modifier
+* @group sizing
+*/
+.slds-avatar-group_small {
+  @include square(1.5rem);
+
+  .slds-avatar-grouped__primary {
+    @include square(1.25rem);
+
+    .slds-avatar-grouped__initials {
+      @include avatar-grouped-user-initials(0.4125); // ~7px
+    }
+  }
+
+  .slds-avatar-grouped__secondary {
+    @include square(1rem);
+
+    .slds-avatar-grouped__initials {
+      @include avatar-grouped-user-initials(0.3125); // ~5px
+    }
+  }
+}
+
+/**
+* @summary Creates a medium Avatar Group
+* @name medium
+* @selector .slds-avatar-group_medium
+* @restrict .slds-avatar-group
+* @modifier
+* @group sizing
+*/
+.slds-avatar-group_medium {
+  @include square(2rem);
+
+  .slds-avatar-grouped__primary {
+    @include square(1.5rem);
+
+    .slds-avatar-grouped__initials {
+      @include avatar-grouped-user-initials(0.5625); // ~9px
+    }
+  }
+
+  .slds-avatar-grouped__secondary {
+    @include square(1.25rem);
+
+    .slds-avatar-grouped__initials {
+      @include avatar-grouped-user-initials(0.4375); // ~7px
+    }
+  }
+}
+
+/**
+* @summary Creates a large Avatar Group
+* @name large
+* @selector .slds-avatar-group_large
+* @restrict .slds-avatar-group
+* @modifier
+* @group sizing
+*/
+.slds-avatar-group_large {
+  @include square(3rem);
+
+  .slds-avatar-grouped__primary {
+    @include square(2.5rem);
+
+    .slds-avatar-grouped__initials {
+      @include avatar-grouped-user-initials(0.875); // ~14px
+    }
+  }
+
+  .slds-avatar-grouped__secondary {
+    @include square(1.5rem);
+
+    .slds-avatar-grouped__initials {
+      @include avatar-grouped-user-initials(0.5); // ~9px
+    }
+  }
+}

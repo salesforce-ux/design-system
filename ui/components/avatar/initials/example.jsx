@@ -3,15 +3,15 @@
 
 import React from 'react';
 import { Avatar } from '../base/example';
+import { AvatarInitials } from '../';
 
 export default (
   <Avatar>
-    <abbr
-      className="slds-avatar__initials slds-icon-standard-account"
+    <AvatarInitials
+      iconClassName="slds-icon-standard-account"
       title="company name"
-    >
-      Ac
-    </abbr>
+      initials="Ac"
+    />
   </Avatar>
 );
 
@@ -22,12 +22,11 @@ export let examples = [
     element: (
       <a href="javascript:void(0);">
         <Avatar>
-          <abbr
-            className="slds-avatar__initials slds-icon-standard-account"
+          <AvatarInitials
+            iconClassName="slds-icon-standard-account"
             title="company name"
-          >
-            Ac
-          </abbr>
+            initials="Ac"
+          />
         </Avatar>
       </a>
     )

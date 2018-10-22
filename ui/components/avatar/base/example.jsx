@@ -2,22 +2,13 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 import React from 'react';
-import { StandardIcon } from '../../icons/standard/example';
-import classNames from 'classnames';
-
-/// ////////////////////////////////////////
-// Partial(s)
-/// ////////////////////////////////////////
-
-export let Avatar = props => (
-  <span className={classNames('slds-avatar', props.className)}>
-    {props.children}
-  </span>
-);
+import { Avatar, AvatarIcon, AvatarInitials } from '../';
 
 /// ///////////////////////////////////////////
 // Export
 /// ///////////////////////////////////////////
+
+export { Avatar };
 
 export default (
   <Avatar>
@@ -53,12 +44,11 @@ export let examples = [
     label: 'Fallback - User initials',
     element: (
       <Avatar className="slds-avatar_circle">
-        <abbr
-          className="slds-avatar__initials slds-icon-standard-user"
+        <AvatarInitials
+          iconClassName="slds-icon-standard-user"
           title="person name"
-        >
-          AB
-        </abbr>
+          initials="AB"
+        />
       </Avatar>
     )
   },
@@ -67,7 +57,7 @@ export let examples = [
     label: 'Fallback - User icon',
     element: (
       <Avatar className="slds-avatar_circle">
-        <StandardIcon symbol="user" />
+        <AvatarIcon symbol="user" />
       </Avatar>
     )
   },
@@ -76,12 +66,11 @@ export let examples = [
     label: 'Fallback - Entity Initials',
     element: (
       <Avatar>
-        <abbr
-          className="slds-avatar__initials slds-icon-standard-account"
+        <AvatarInitials
+          iconClassName="slds-icon-standard-account"
           title="company name"
-        >
-          Ac
-        </abbr>
+          initials="Ac"
+        />
       </Avatar>
     )
   },
@@ -90,7 +79,7 @@ export let examples = [
     label: 'Fallback - Entity Icon',
     element: (
       <Avatar>
-        <StandardIcon />
+        <AvatarIcon />
       </Avatar>
     )
   },
@@ -99,12 +88,7 @@ export let examples = [
     label: 'Fallback - User Initials Inversed',
     element: (
       <Avatar className="slds-avatar_circle">
-        <abbr
-          className="slds-avatar__initials slds-avatar__initials_inverse"
-          title="person name"
-        >
-          AB
-        </abbr>
+        <AvatarInitials title="person name" initials="AB" isInverse />
       </Avatar>
     )
   },

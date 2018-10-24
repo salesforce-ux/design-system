@@ -2996,6 +2996,41 @@ exports[`Horizontal Form Element renders deprecated horizontal form elements - v
 </div>
 `;
 
+exports[`Horizontal Form Element renders horizontal form element with input and icons 1`] = `
+<div
+  className="slds-form-element slds-form-element_horizontal"
+  role={undefined}
+>
+  <label
+    className="slds-form-element__label"
+    htmlFor="input-1"
+    id={undefined}
+  >
+    Input label
+  </label>
+  <div
+    className="slds-form-element__control slds-input-has-icon slds-input-has-icon_left"
+  >
+    <svg
+      aria-hidden={true}
+      className="slds-icon slds-input__icon slds-input__icon_left slds-icon-text-default"
+    >
+      <use
+        xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#search"
+      />
+    </svg>
+    <input
+      className="slds-input"
+      defaultValue={undefined}
+      id="input-1"
+      placeholder={undefined}
+      readOnly={undefined}
+      type="text"
+    />
+  </div>
+</div>
+`;
+
 exports[`Horizontal Form Element renders simple horizontal form elements 1`] = `
 <div
   className="slds-form"

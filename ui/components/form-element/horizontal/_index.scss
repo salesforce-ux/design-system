@@ -115,5 +115,20 @@
     .slds-dueling-list {
       clear: none; // Remove backward compatible support
     }
+
+    // Handle inputs with left icon
+    .slds-input-has-icon_left {
+
+      .slds-input__icon {
+        left: calc(33% + #{$spacing-small});
+      }
+    }
+
+    .slds-input-has-icon_left-right {
+
+      .slds-input__icon_left {
+        left: calc(33% + #{$spacing-small});
+      }
+    }
   }
 }

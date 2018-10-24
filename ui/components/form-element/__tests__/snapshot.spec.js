@@ -20,6 +20,7 @@ import {
 import { CompoundFormElement, CompoundFormRow } from '../compound/';
 import { Input } from '../../input/base/example';
 import ButtonIcon from '../../button-icons/';
+import SvgIcon from '../../../shared/svg-icon';
 import * as StackedExamples from '../stacked/example';
 import * as HorizontalExamples from '../horizontal/example';
 import * as CompoundExamples from '../compound/example';
@@ -204,6 +205,22 @@ describe('Horizontal Form Element', () => {
   it('renders simple horizontal form elements', () =>
     matchesMarkup(
       getDisplayElementById(HorizontalExamples.examples, 'simple-horizontal')
+    ));
+  it('renders horizontal form element with input and icons', () =>
+    matchesMarkup(
+      <FormElement
+        labelContent="Input label"
+        inputId="input-1"
+        isHorizontal
+        hasLeftIcon
+      >
+        <SvgIcon
+          className="slds-icon slds-input__icon slds-input__icon_left slds-icon-text-default"
+          sprite="utility"
+          symbol="search"
+        />
+        <Input id="input-1" />
+      </FormElement>
     ));
   it('renders deprecated horizontal form elements - view mode', () =>
     matchesMarkup(

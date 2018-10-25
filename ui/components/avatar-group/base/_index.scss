@@ -22,7 +22,7 @@
 * @summary Variant of an Avatar in an Avatar Group
 * @name grouped
 * @selector .slds-avatar-grouped
-* @restrict .slds-avatar
+* @restrict .slds-avatar-group span
 * @variant
 */
 .slds-avatar-grouped {
@@ -34,10 +34,10 @@
 
 /**
 * @summary Variant of an Avatar with inverse background in an Avatar Group
-* @name grouped
+* @name grouped-inverse
 * @selector .slds-avatar-grouped_inverse
 * @restrict .slds-avatar-grouped
-* @variant
+* @modifier
 */
 .slds-avatar-grouped_inverse {
   background-color: $color-background;

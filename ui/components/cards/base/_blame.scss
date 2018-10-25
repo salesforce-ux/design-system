@@ -50,6 +50,11 @@
   border: $border-width-thin solid $card-color-border;
   border-radius: $border-radius-medium;
 
+  .slds-tabs--default__content,
+  .slds-tabs_default__content {
+    padding: 0;
+  }
+
   // This removes the padding for the plain cards when inside a padded tabset
   .slds-card,
   .slds-card-wrapper {

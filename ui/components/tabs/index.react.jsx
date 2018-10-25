@@ -160,10 +160,11 @@ class Tabs extends React.Component {
     });
   }
   render() {
-    const { flavor, panel, size, selectedIndex, ...rest } = this.props;
+    const { flavor, panel, size, isCard, selectedIndex, ...rest } = this.props;
     const composedClassName = classNames(`slds-tabs_${flavor}`, {
       'slds-tabs_medium': size === 'medium',
-      'slds-tabs_large': size === 'large'
+      'slds-tabs_large': size === 'large',
+      'slds-tabs_card': isCard
     });
     return (
       <div {...rest} className={composedClassName}>
@@ -179,7 +180,8 @@ class Tabs extends React.Component {
 Tabs.propTypes = {
   selectedIndex: PT.number,
   flavor: PT.oneOf(['scoped', 'default', 'path']),
-  size: PT.oneOf(['medium', 'large'])
+  size: PT.oneOf(['medium', 'large']),
+  isCard: PT.bool
 };
 
 Tabs.defaultProps = {

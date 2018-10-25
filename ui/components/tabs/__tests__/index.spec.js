@@ -8,7 +8,8 @@ import {
   TabsOverflowIcons,
   TabsWithError,
   TabsMedium,
-  TabsLarge
+  TabsLarge,
+  TabsWithCards
 } from '../base/example';
 
 import {
@@ -50,6 +51,7 @@ describe('Default Tabs', () => {
   it('renders default tabs with error', () => matchesMarkup(<TabsWithError />));
   it('renders medium sized default tabs', () => matchesMarkup(<TabsMedium />));
   it('renders large sized default tabs', () => matchesMarkup(<TabsLarge />));
+  it('renders tabs as a card', () => matchesMarkup(<TabsWithCards />));
 });
 
 describe('Subtabs', () => {

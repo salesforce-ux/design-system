@@ -1240,6 +1240,362 @@ exports[`Default Tabs renders medium sized default tabs 1`] = `
 </div>
 `;
 
+exports[`Default Tabs renders tabs as a card 1`] = `
+<div
+  className="slds-tabs_default slds-tabs_card"
+>
+  <ul
+    className="slds-tabs_default__nav"
+    role="tablist"
+  >
+    <li
+      className="slds-tabs_default__item slds-is-active"
+      role="presentation"
+      title="Item One"
+    >
+      <a
+        aria-controls="tab-default-1"
+        aria-selected={true}
+        className="slds-tabs_default__link"
+        href="javascript:void(0);"
+        id="tab-default-1__item"
+        role="tab"
+        tabIndex={0}
+      >
+        Item One
+      </a>
+    </li>
+    <li
+      className="slds-tabs_default__item"
+      role="presentation"
+      title="Item Two"
+    >
+      <a
+        aria-controls="tab-default-2"
+        aria-selected={false}
+        className="slds-tabs_default__link"
+        href="javascript:void(0);"
+        id="tab-default-2__item"
+        role="tab"
+        tabIndex={-1}
+      >
+        Item Two
+      </a>
+    </li>
+    <li
+      className="slds-tabs_default__item"
+      role="presentation"
+      title="Item Three"
+    >
+      <a
+        aria-controls="tab-default-3"
+        aria-selected={false}
+        className="slds-tabs_default__link"
+        href="javascript:void(0);"
+        id="tab-default-3__item"
+        role="tab"
+        tabIndex={-1}
+      >
+        Item Three
+      </a>
+    </li>
+  </ul>
+  <div
+    aria-labelledby="tab-default-1__item"
+    className="slds-tabs_default__content slds-show"
+    id="tab-default-1"
+    role="tabpanel"
+  >
+    <article
+      className="slds-card"
+    >
+      <div
+        className="slds-card__header slds-grid"
+      >
+        <header
+          className="slds-media slds-media_center slds-has-flexi-truncate"
+        >
+          <div
+            className="slds-media__figure"
+          >
+            <span
+              className="slds-icon_container slds-icon-standard-contact"
+              title="contact"
+            >
+              <svg
+                aria-hidden={true}
+                className="slds-icon slds-icon_small"
+              >
+                <use
+                  xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#contact"
+                />
+              </svg>
+              <span
+                className="slds-assistive-text"
+              >
+                contact
+              </span>
+            </span>
+          </div>
+          <div
+            className="slds-media__body"
+          >
+            <h2
+              className="slds-card__header-title"
+            >
+              <a
+                className="slds-card__header-link slds-truncate"
+                href="javascript:void(0);"
+                title="Card Header"
+              >
+                <span>
+                  Card Header
+                </span>
+              </a>
+            </h2>
+          </div>
+          <div
+            className="slds-no-flex"
+          >
+            <button
+              className="slds-button slds-button_neutral"
+            >
+              New
+            </button>
+          </div>
+        </header>
+      </div>
+      <div
+        className="slds-card__body slds-card__body_inner"
+      >
+        This is a card inside an 
+        <code
+          className="doc"
+        >
+          .slds-tabs_card
+        </code>
+         
+        to show how styling is removed when cards are nested inside.
+      </div>
+      <footer
+        className="slds-card__footer"
+      >
+        <a
+          className="slds-card__footer-action"
+          href="javascript:void(0);"
+          tabIndex={undefined}
+        >
+          View All 
+          <span
+            className="slds-assistive-text"
+          >
+            Contacts
+          </span>
+        </a>
+      </footer>
+    </article>
+    <article
+      className="slds-card"
+    >
+      <div
+        className="slds-card__header slds-grid"
+      >
+        <header
+          className="slds-media slds-media_center slds-has-flexi-truncate"
+        >
+          <div
+            className="slds-media__figure"
+          >
+            <span
+              className="slds-icon_container slds-icon-standard-contact"
+              title="contact"
+            >
+              <svg
+                aria-hidden={true}
+                className="slds-icon slds-icon_small"
+              >
+                <use
+                  xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#contact"
+                />
+              </svg>
+              <span
+                className="slds-assistive-text"
+              >
+                contact
+              </span>
+            </span>
+          </div>
+          <div
+            className="slds-media__body"
+          >
+            <h2
+              className="slds-card__header-title"
+            >
+              <a
+                className="slds-card__header-link slds-truncate"
+                href="javascript:void(0);"
+                title="Card Header"
+              >
+                <span>
+                  Card Header
+                </span>
+              </a>
+            </h2>
+          </div>
+          <div
+            className="slds-no-flex"
+          >
+            <button
+              className="slds-button slds-button_neutral"
+            >
+              New
+            </button>
+          </div>
+        </header>
+      </div>
+      <div
+        className="slds-card__body slds-card__body_inner"
+      >
+        This is a card inside an 
+        <code
+          className="doc"
+        >
+          .slds-tabs_card
+        </code>
+         
+        to show how styling is removed when cards are nested inside.
+      </div>
+      <footer
+        className="slds-card__footer"
+      >
+        <a
+          className="slds-card__footer-action"
+          href="javascript:void(0);"
+          tabIndex={undefined}
+        >
+          View All 
+          <span
+            className="slds-assistive-text"
+          >
+            Contacts
+          </span>
+        </a>
+      </footer>
+    </article>
+    <article
+      className="slds-card slds-card_boundary"
+    >
+      <div
+        className="slds-card__header slds-grid"
+      >
+        <header
+          className="slds-media slds-media_center slds-has-flexi-truncate"
+        >
+          <div
+            className="slds-media__figure"
+          >
+            <span
+              className="slds-icon_container slds-icon-standard-contact"
+              title="contact"
+            >
+              <svg
+                aria-hidden={true}
+                className="slds-icon slds-icon_small"
+              >
+                <use
+                  xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#contact"
+                />
+              </svg>
+              <span
+                className="slds-assistive-text"
+              >
+                contact
+              </span>
+            </span>
+          </div>
+          <div
+            className="slds-media__body"
+          >
+            <h2
+              className="slds-card__header-title"
+            >
+              <a
+                className="slds-card__header-link slds-truncate"
+                href="javascript:void(0);"
+                title="Card Header"
+              >
+                <span>
+                  Card Header
+                </span>
+              </a>
+            </h2>
+          </div>
+          <div
+            className="slds-no-flex"
+          >
+            <button
+              className="slds-button slds-button_neutral"
+            >
+              New
+            </button>
+          </div>
+        </header>
+      </div>
+      <div
+        className="slds-card__body slds-card__body_inner"
+      >
+        This is a card inside an 
+        <code
+          className="doc"
+        >
+          .slds-tabs_card
+        </code>
+         
+        to illustrate how
+        <code
+          className="doc"
+        >
+          .slds-card_boundary
+        </code>
+         adds a rounded border when desired.
+      </div>
+      <footer
+        className="slds-card__footer"
+      >
+        <a
+          className="slds-card__footer-action"
+          href="javascript:void(0);"
+          tabIndex={undefined}
+        >
+          View All 
+          <span
+            className="slds-assistive-text"
+          >
+            Contacts
+          </span>
+        </a>
+      </footer>
+    </article>
+  </div>
+  <div
+    aria-labelledby="tab-default-2__item"
+    className="slds-tabs_default__content slds-hide"
+    id="tab-default-2"
+    role="tabpanel"
+  >
+    Item Two Content
+  </div>
+  <div
+    aria-labelledby="tab-default-3__item"
+    className="slds-tabs_default__content slds-hide"
+    id="tab-default-3"
+    role="tabpanel"
+  >
+    Item Three Content
+  </div>
+</div>
+`;
+
 exports[`Mobile stacked tabs renders a deprecated adjacent tab stack 1`] = `
 <div>
   <ul

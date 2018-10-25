@@ -202,7 +202,7 @@ const TabsOverflowMenuIcons = () => (
 );
 
 export const TabsWithCards = () => (
-  <Tabs className="slds-tabs_card" selectedIndex={0}>
+  <Tabs isCard selectedIndex={0}>
     <Tabs.Item title="Item One" id="tab-default-1">
       <Card>
         <CardHeader

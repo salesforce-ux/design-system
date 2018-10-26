@@ -547,3 +547,5 @@ props:
     value: '#1539EE'
   QUIP:
     value: '#D3451D'
+  SALES_CADENCE:
+    value: '#54698D'

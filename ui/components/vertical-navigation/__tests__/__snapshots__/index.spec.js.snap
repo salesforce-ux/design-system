@@ -1,5 +1,158 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Vertical Nav List Group renders a collapsed list section 1`] = `
+<div
+  className="slds-nav-vertical__overflow"
+>
+  <button
+    aria-controls="list1"
+    aria-expanded="false"
+    className="slds-button slds-button_reset slds-nav-vertical__action slds-nav-vertical__action_overflow"
+    disabled={undefined}
+  >
+    <svg
+      aria-hidden={true}
+      className="slds-button__icon slds-button__icon_left"
+    >
+      <use
+        xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#chevronright"
+      />
+    </svg>
+    <span
+      className="slds-nav-vertical__action-text"
+    >
+      Show More
+      <span
+        className="slds-assistive-text"
+      >
+        Folders
+      </span>
+    </span>
+  </button>
+  <div
+    className="slds-hide"
+    id="list1"
+  >
+    <ul
+      aria-describedby="header1"
+    />
+  </div>
+</div>
+`;
+
+exports[`Vertical Nav List Group renders a compact nav wrapper 1`] = `
+<nav
+  aria-label="Sub page"
+  className="slds-nav-vertical slds-nav-vertical_compact"
+/>
+`;
+
+exports[`Vertical Nav List Group renders a div instead of a list for radio sets 1`] = `
+<div
+  className="slds-nav-vertical__section"
+>
+  <div />
+</div>
+`;
+
+exports[`Vertical Nav List Group renders a list item 1`] = `
+<li
+  className="slds-nav-vertical__item"
+>
+  <a
+    aria-current={null}
+    className="slds-nav-vertical__action"
+    href="javascript:void(0);"
+  >
+    Item One
+  </a>
+</li>
+`;
+
+exports[`Vertical Nav List Group renders a list section 1`] = `
+<div
+  className="slds-nav-vertical__section"
+>
+  <h2
+    className="slds-nav-vertical__title"
+    id="header1"
+  >
+    Folders
+  </h2>
+  <ul
+    aria-describedby="header1"
+  />
+</div>
+`;
+
+exports[`Vertical Nav List Group renders a nav wrapper 1`] = `
+<nav
+  aria-label="Sub page"
+  className="slds-nav-vertical"
+/>
+`;
+
+exports[`Vertical Nav List Group renders a shaded nav wrapper 1`] = `
+<nav
+  aria-label="Sub page"
+  className="slds-nav-vertical slds-nav-vertical_shade"
+/>
+`;
+
+exports[`Vertical Nav List Group renders an active list item 1`] = `
+<li
+  className="slds-nav-vertical__item slds-is-active"
+>
+  <a
+    aria-current="page"
+    className="slds-nav-vertical__action"
+    href="javascript:void(0);"
+  >
+     Item One
+  </a>
+</li>
+`;
+
+exports[`Vertical Nav List Group renders an expanded list section 1`] = `
+<div
+  className="slds-nav-vertical__overflow"
+>
+  <button
+    aria-controls="list1"
+    aria-expanded="true"
+    className="slds-button slds-button_reset slds-nav-vertical__action slds-nav-vertical__action_overflow"
+    disabled={undefined}
+  >
+    <svg
+      aria-hidden={true}
+      className="slds-button__icon slds-button__icon_left"
+    >
+      <use
+        xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#chevronright"
+      />
+    </svg>
+    <span
+      className="slds-nav-vertical__action-text"
+    >
+      Show Less
+      <span
+        className="slds-assistive-text"
+      >
+        Folders
+      </span>
+    </span>
+  </button>
+  <div
+    className="slds-show"
+    id="list1"
+  >
+    <ul
+      aria-describedby="header1"
+    />
+  </div>
+</div>
+`;
+
 exports[`Vertical Nav Radio Group renders a checked radio button 1`] = `
 <span
   className="slds-nav-vertical__item"
@@ -88,10 +241,6 @@ exports[`Vertical Nav Radio Group renders a fieldset 1`] = `
 </fieldset>
 `;
 
-exports[`Vertical Nav Radio Group renders a focus state 1`] = `"<span class=\\"slds-nav-vertical__item\\"><input type=\\"radio\\" id=\\"recent\\" value=\\"recent\\" name=\\"example\\"><label class=\\"slds-nav-vertical__action\\" for=\\"recent\\"><span class=\\"slds-nav-vertical_radio-faux\\">Recent</span></label></span>"`;
-
-exports[`Vertical Nav Radio Group renders a hover state 1`] = `"<span class=\\"slds-nav-vertical__item\\"><input type=\\"radio\\" id=\\"recent\\" value=\\"recent\\" name=\\"example\\"><label class=\\"slds-nav-vertical__action\\" for=\\"recent\\"><span class=\\"slds-nav-vertical_radio-faux\\">Recent</span></label></span>"`;
-
 exports[`Vertical Nav Radio Group renders a radio button 1`] = `
 <span
   className="slds-nav-vertical__item"
@@ -128,6 +277,39 @@ exports[`Vertical Nav Radio Group renders a shaded fieldset 1`] = `
   >
     <input
       defaultChecked={undefined}
+      id="test1"
+      name="example"
+      type="radio"
+      value="test1"
+    />
+    <label
+      className="slds-nav-vertical__action"
+      htmlFor="test1"
+    >
+      <span
+        className="slds-nav-vertical_radio-faux"
+      >
+        test1
+      </span>
+    </label>
+  </span>
+</fieldset>
+`;
+
+exports[`Vertical Nav Radio Group renders a shaded fieldset with a checked item 1`] = `
+<fieldset
+  className="slds-nav-vertical slds-nav-vertical_shade"
+>
+  <legend
+    className="slds-nav-vertical__title"
+  >
+    Reports
+  </legend>
+  <span
+    className="slds-nav-vertical__item"
+  >
+    <input
+      defaultChecked={true}
       id="test1"
       name="example"
       type="radio"

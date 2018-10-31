@@ -50,7 +50,11 @@ export const Context = props => (
 );
 
 export const NavVerticalRadioSet = props => (
-  <NavVerticalSection id={sectionId01} title="Reports" isNavVerticalRadioSet>
+  <NavVerticalSection
+    headerId={sectionId01}
+    title="Reports"
+    isNavVerticalRadioSet
+  >
     <NavVerticalFieldset>
       <NavVerticalItemRadio checked id="recent">
         Recent
@@ -77,7 +81,7 @@ export let examples = [
     label: 'Compact',
     element: (
       <NavVerticalSection
-        id={sectionId01}
+        headerId={sectionId01}
         title="Reports"
         isNavVerticalRadioSet
       >
@@ -107,7 +111,7 @@ export let examples = [
     element: (
       <div className="demo-only" style={{ backgroundColor: '#FAFAFB' }}>
         <NavVerticalSection
-          id={sectionId01}
+          headerId={sectionId01}
           title="Reports"
           isNavVerticalRadioSet
         >

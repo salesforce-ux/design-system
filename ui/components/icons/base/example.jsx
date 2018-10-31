@@ -45,8 +45,10 @@ export let UtilityIcon = props => {
 };
 UtilityIcon.displayName = 'UtilityIcon';
 UtilityIcon.propTypes = {
+  assistiveText: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
   /** Controls the size of the icon */
   size: PropTypes.oneOf(['large', 'small', 'x-small', 'xx-small']),
+  title: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
   /** Sets the slds-current-color class on the container */
   useCurrentColor: PropTypes.bool
 };

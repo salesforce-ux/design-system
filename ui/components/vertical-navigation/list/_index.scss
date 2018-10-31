@@ -39,7 +39,11 @@
  */
 .slds-nav-vertical_shade {
 
-  .slds-nav-vertical__item:before {
+  .slds-is-active.slds-nav-vertical__item:before {
+    background: $color-background-alt;
+  }
+
+  .slds-nav-vertical__item:hover:before {
     background: $color-background-alt;
   }
 
@@ -82,16 +86,12 @@
     right: 0;
     bottom: 0;
     left: 0;
-    background: $color-background-selection;
-    transform: scaleX(0);
-    transform-origin: 0 center;
-    transition: background 0.3s, transform 0.3s;
     content: '';
   }
 
   &:hover:before,
   &.slds-is-active:before {
-    transform: scaleX(1);
+    background: $color-background-selection;
   }
 }
 
@@ -112,7 +112,6 @@
   border-radius: 0;
   box-shadow: inset 0 0 0 $brand-primary;
   cursor: pointer;
-  transition: box-shadow 0.3s;
 
   &:active,
   &:hover,

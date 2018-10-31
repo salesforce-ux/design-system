@@ -45,5 +45,6 @@
 
   .slds-nav-vertical__item [type="radio"]:checked + .slds-nav-vertical__action {
     border-color: $color-border;
+    background-color: $color-background-alt;
   }
 }

@@ -30,11 +30,6 @@
   .slds-icon_container {
     vertical-align: middle;
   }
-
-  // Only inline or inline-block are supported as children of a badge
-  > * {
-    vertical-align: bottom;
-  }
 }
 
 /**

@@ -33,7 +33,7 @@ export let examples = [
     label: 'With Child Element',
     element: (
       <Badge>
-        Component In: <strong>Lightning</strong>
+        Component In: <em>Lightning</em>
       </Badge>
     )
   }

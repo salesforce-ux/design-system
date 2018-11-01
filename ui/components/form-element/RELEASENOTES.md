@@ -18,6 +18,7 @@
 
 ### Changed
 - Added spacing around `slds-form-element` depending on densification settings
+- Form labels will now hyphenate when a word with no spaces exceeds the available space of the label container
 
 ### Deprecated
 - Deprecated `slds-form_stacked` for `slds-form-element_stacked`

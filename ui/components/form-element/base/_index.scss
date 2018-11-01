@@ -19,16 +19,13 @@
  * @restrict .slds-form-element label, .slds-form-element span, .slds-form-element legend, .slds-form-element div, [class*='slds-checkbox'] span, [class*='slds-radio'] span
  */
 .slds-form-element__label {
+  @include hyphenate;
   display: inline-block;
   color: $color-text-label;
   font-size: $form-label-font-size;
   padding-right: $spacing-x-small;
   padding-top: $spacing-xx-small;
   margin-bottom: $spacing-xxx-small;
-  // IE11 fallback
-  word-break: break-all; // stylelint-disable declaration-block-no-duplicate-properties
-  // Modern browsers
-  word-break: break-word;
 
   &:empty {
     margin: 0;

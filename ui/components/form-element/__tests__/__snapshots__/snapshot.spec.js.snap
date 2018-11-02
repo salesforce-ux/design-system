@@ -66,24 +66,6 @@ exports[`Compound Form Element render compound form element wrapper with legend 
 </fieldset>
 `;
 
-exports[`Compound Form Element render compound form element wrapper with legend 2`] = `
-<fieldset
-  className="slds-form-element slds-form-element_compound"
-  id={undefined}
->
-  <legend
-    className="slds-form-element__legend slds-form-element__label"
-  >
-    label
-  </legend>
-  <div
-    className="slds-form-element__control"
-  >
-    content
-  </div>
-</fieldset>
-`;
-
 exports[`Compound Form Element render compound form element wrapper with required form elements 1`] = `
 <fieldset
   className="slds-form-element slds-form-element_compound slds-is-required"
@@ -109,22 +91,6 @@ exports[`Compound Form Element render compound form element wrapper with require
 `;
 
 exports[`Compound Form Element render compound form element wrapper with stacked form elements 1`] = `
-<fieldset
-  className="slds-form-element slds-form-element_compound slds-form-element_stacked"
-  id={undefined}
->
-  <legend
-    className="slds-form-element__legend slds-form-element__label"
-  />
-  <div
-    className="slds-form-element__control"
-  >
-    content
-  </div>
-</fieldset>
-`;
-
-exports[`Compound Form Element render compound form element wrapper with stacked form elements 2`] = `
 <fieldset
   className="slds-form-element slds-form-element_compound slds-form-element_stacked"
   id={undefined}
@@ -3053,7 +3019,7 @@ exports[`Horizontal Form Element renders simple horizontal form elements 1`] = `
         className="slds-input"
         defaultValue={undefined}
         id="input-id-01"
-        placeholder={undefined}
+        placeholder="Placeholder Text"
         readOnly={undefined}
         type="text"
       />
@@ -4605,7 +4571,7 @@ exports[`Stacked Form Element renders simple stacked form elements 1`] = `
         className="slds-input"
         defaultValue={undefined}
         id="input-id-01"
-        placeholder={undefined}
+        placeholder="Placeholder Text"
         readOnly={undefined}
         type="text"
       />

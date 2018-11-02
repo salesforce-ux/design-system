@@ -2,6 +2,7 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 import React from 'react';
+import PropTypes from 'prop-types';
 import SvgIcon from '../../../shared/svg-icon';
 import ButtonIcon from '../../button-icons/';
 import classNames from 'classnames';
@@ -15,6 +16,7 @@ import {
 const inputLabel = 'Input Label';
 const inputId = 'text-input-id-1';
 const errorId = 'error-message-unique-id';
+const placeholderText = 'Placeholder Text';
 
 /// ////////////////////////////////////////
 // Partial(s)
@@ -34,13 +36,17 @@ export let Input = props => {
   );
 };
 
+Input.propTypes = {
+  placeholder: PropTypes.string
+};
+
 /// ///////////////////////////////////////////
 // State Constructor(s)
 /// ///////////////////////////////////////////
 
 let Required = props => (
   <FormElement labelContent={inputLabel} inputId={inputId} isRequired>
-    <Input id={inputId} required />
+    <Input id={inputId} placeholder={placeholderText} required />
   </FormElement>
 );
 
@@ -53,7 +59,12 @@ let ErrorState = props => (
     isRequired
     inlineMessage="This field is required"
   >
-    <Input id={inputId} required aria-describedby={props.errorId} />
+    <Input
+      id={inputId}
+      placeholder={placeholderText}
+      required
+      aria-describedby={props.errorId}
+    />
   </FormElement>
 );
 
@@ -68,13 +79,18 @@ let ErrorIcon = props => (
     inlineMessage="This field is required"
   >
     <SvgIcon className="slds-input__icon" sprite="utility" symbol="error" />
-    <Input id={inputId} required aria-describedby={props.errorId} />
+    <Input
+      id={inputId}
+      required
+      placeholder={placeholderText}
+      aria-describedby={props.errorId}
+    />
   </FormElement>
 );
 
 let Disabled = props => (
   <FormElement labelContent={inputLabel} inputId={inputId}>
-    <Input id={inputId} disabled />
+    <Input id={inputId} placeholder={placeholderText} disabled />
   </FormElement>
 );
 
@@ -90,7 +106,7 @@ let Readonly = props => (
 
 export default (
   <FormElement labelContent={inputLabel} inputId={inputId}>
-    <Input id={inputId} />
+    <Input id={inputId} placeholder={placeholderText} />
   </FormElement>
 );
 
@@ -145,7 +161,7 @@ export let examples = [
           sprite="utility"
           symbol="search"
         />
-        <Input id={inputId} />
+        <Input id={inputId} placeholder={placeholderText} />
       </FormElement>
     )
   },
@@ -159,7 +175,7 @@ export let examples = [
           sprite="utility"
           symbol="search"
         />
-        <Input id={inputId} />
+        <Input id={inputId} placeholder={placeholderText} />
       </FormElement>
     )
   },
@@ -178,7 +194,7 @@ export let examples = [
           sprite="utility"
           symbol="search"
         />
-        <Input id={inputId} />
+        <Input id={inputId} placeholder={placeholderText} />
         <ButtonIcon
           symbol="clear"
           className="slds-input__icon slds-input__icon_right"
@@ -205,7 +221,7 @@ export let examples = [
           sprite="utility"
           symbol="search"
         />
-        <Input id={inputId} />
+        <Input id={inputId} placeholder={placeholderText} />
         <div className="slds-input__icon-group slds-input__icon-group_right">
           <Spinner className="slds-spinner_brand slds-spinner_x-small slds-input__spinner" />
           <ButtonIcon
@@ -234,6 +250,7 @@ export let examples = [
         </span>
         <Input
           id={inputId}
+          placeholder={placeholderText}
           aria-labelledby="fixed-text-label fixed-text-addon-pre fixed-text-addon-post"
         />
         <span className="slds-form-element__addon" id="fixed-text-addon-post">
@@ -251,7 +268,11 @@ export let examples = [
         labelContent={inputLabel}
         inputId={inputId}
       >
-        <Input id={inputId} aria-labelledby="inline-text-label" />
+        <Input
+          id={inputId}
+          placeholder={placeholderText}
+          aria-labelledby="inline-text-label"
+        />
         <div className="slds-form-element__help">ex: (415)111-2222</div>
       </FormElement>
     )
@@ -272,7 +293,7 @@ export let examples = [
           hasTooltip
           showTooltip
         >
-          <Input id={inputId} />
+          <Input id={inputId} placeholder={placeholderText} />
         </FormElement>
       </div>
     )
@@ -297,7 +318,7 @@ export let examples = [
           className="slds-input_counter"
           id={inputId}
           type="number"
-          placeholder={1}
+          placeholder={'1'}
         />
         <ButtonIcon
           className="slds-button_icon-small slds-input__button_increment"

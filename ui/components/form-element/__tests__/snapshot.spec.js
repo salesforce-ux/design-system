@@ -249,14 +249,6 @@ describe('Compound Form Element', () => {
     matchesMarkup(
       <CompoundFormElement labelContent="label">content</CompoundFormElement>
     ));
-  it('render compound form element wrapper with legend', () =>
-    matchesMarkup(
-      <CompoundFormElement labelContent="label">content</CompoundFormElement>
-    ));
-  it('render compound form element wrapper with stacked form elements', () =>
-    matchesMarkup(
-      <CompoundFormElement isStacked>content</CompoundFormElement>
-    ));
   it('render compound form element wrapper with stacked form elements', () =>
     matchesMarkup(
       <CompoundFormElement isStacked>content</CompoundFormElement>

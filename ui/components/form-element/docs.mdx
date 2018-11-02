@@ -34,7 +34,7 @@ A form element is made up of three primary elements, the label (`slds-form-eleme
 <Example title="Form Element - Base">
   <CodeView>
     <FormElement labelContent="Form Label" inputId="form-element-01">
-      <Input id="form-element-01" />
+      <Input id="form-element-01" placeholder="Placeholder Text" />
     </FormElement>
   </CodeView>
 </Example>
@@ -127,7 +127,7 @@ The button icon is **_required_** to be wrapped in a `<div>` with the class `sld
       inputId="form-element-help-01"
       hasTooltip
     >
-      <Input id="form-element-help-01" />
+      <Input id="form-element-help-01" placeholder="Placeholder Text" />
     </FormElement>
   </CodeView>
 
@@ -146,7 +146,7 @@ The help text icon uses a tooltip to show the help text information. Please see 
       hasTooltip
       showTooltip
     >
-      <Input id="form-element-help-01" />
+      <Input id="form-element-help-01" placeholder="Placeholder Text" />
     </FormElement>
   </CodeView>
 
@@ -166,7 +166,7 @@ The `<input>` element should also have the HTML attribute required or required="
 
   <CodeView>
     <FormElement labelContent="Form Label" inputId="form-element-03" isRequired>
-      <Input id="form-element-03" required />
+      <Input id="form-element-03" placeholder="Placeholder Text" required />
     </FormElement>
   </CodeView>
 
@@ -191,7 +191,7 @@ If an error has occurred while submitting a form, the form element with an error
       isRequired
       inlineMessage="This field is required"
     >
-      <Input id="form-element-05" required aria-describedby="form-error-01" />
+      <Input id="form-element-05" placeholder="Placeholder Text" required aria-describedby="form-error-01" />
     </FormElement>
   </CodeView>
 
@@ -257,7 +257,7 @@ When using `slds-form-element_horizontal`, you might find that the 33/66% distri
             inputId="single-form-element-id-02"
             isEditing
           >
-            <Input id="single-form-element-id-02" />
+            <Input id="single-form-element-id-02" placeholder="Placeholder Text" />
           </FormElement>
         </RecordDetailItem>
         <RecordDetailItem>
@@ -267,7 +267,7 @@ When using `slds-form-element_horizontal`, you might find that the 33/66% distri
             inputId="single-form-element-id-03"
             isEditing
           >
-            <Input id="single-form-element-id-03" />
+            <Input id="single-form-element-id-03" placeholder="Placeholder Text" />
           </FormElement>
         </RecordDetailItem>
       </RecordDetailRow>
@@ -282,6 +282,7 @@ When using `slds-form-element_horizontal`, you might find that the 33/66% distri
           >
             <Textarea
               id="single-form-element-id-04"
+              placeholder="Placeholder Text"
               defaultValue="Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Etiam porta sem malesuada magna mollis euismod."
             />
           </FormElement>
@@ -316,7 +317,7 @@ Each field inside of a compound row can be explicitly sized by using a sizing cl
 
 <CodeBlock toggleCode={false}>
   <CompoundFormRow>
-    <div class="slds-size_1-of-2">...</div>
+    <div className="slds-size_1-of-2">...</div>
   </CompoundFormRow>
 </CodeBlock>
 

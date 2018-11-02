@@ -78,14 +78,14 @@ export let examples = [
           inputId="input-id-01"
           isHorizontal
         >
-          <Input id="input-id-01" />
+          <Input id="input-id-01" placeholder="Placeholder Text" />
         </FormElement>
         <FormElement
           labelContent="Textarea Input"
           inputId="input-id-02"
           isHorizontal
         >
-          <Textarea id="input-id-02" />
+          <Textarea id="input-id-02" placeholder="Placeholder Text" />
         </FormElement>
         <Fieldset label="Checkbox Group label" isHorizontal>
           <Checkbox label="All opportunities owned by you" name="default" />

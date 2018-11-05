@@ -13,6 +13,7 @@
 ### Added
 
 - Added `slds-popover_panel__label` to increase panel label font size to 14px and apply bold font weight.
+- Added `slds-popover__footer_form` to center align content and add a background for footers of form popovers.
 
 ### Removed
 
@@ -28,4 +29,4 @@
 - Fixed a bug where long strings of text would overflow the popover boundary. Popover body, header, and footer now include `word-wrap: break-word`.
 - Increased the contrast for focused links and buttons in our inversed popovers, Walkthrough and Feature.
 - Fixed a bug that allowed `slds-popover_small` to grow larger than its expected width.
-- Buttons with the new BEM syntax used within an inverse themed component no longer have their text color overridden
+- Buttons with the new BEM syntax used within an inverse themed component no longer have their text color overridden.

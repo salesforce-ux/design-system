@@ -31,10 +31,10 @@
    * @required
    */
   &__item {
-    padding: $var-spacing-x-small 0;
+    padding: $var-spacing-vertical-x-small 0;
 
     @include mq-medium-min {
-      padding: $var-spacing-small 0;
+      padding: $var-spacing-vertical-small 0;
     }
   }
 }

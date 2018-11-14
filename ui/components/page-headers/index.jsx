@@ -92,7 +92,8 @@ export const PageHeaderTitle = props => (
           <span
             className={classNames(
               'slds-page-header__title',
-              !props.isVertical && 'slds-truncate'
+              !props.isVertical && 'slds-truncate',
+              props.isVertical && 'slds-hyphenate'
             )}
             title={props.titleText}
           >

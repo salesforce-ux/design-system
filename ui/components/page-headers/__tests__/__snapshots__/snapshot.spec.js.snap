@@ -2431,7 +2431,7 @@ exports[`Renders a page header renders vertical record home page header 1`] = `
           >
             <h1>
               <span
-                className="slds-page-header__title"
+                className="slds-page-header__title slds-hyphenate"
                 title="Burlington Textile Weaving Plant Generator"
               >
                 Burlington Textile Weaving Plant Generator

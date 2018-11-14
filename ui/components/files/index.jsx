@@ -1,7 +1,7 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import SvgIcon from '../../shared/svg-icon';
@@ -127,24 +127,33 @@ export class File extends Component {
       return <Spinner className="slds-spinner_medium" />;
     } else if (hasImage) {
       return (
-        <img
-          src="/assets/images/placeholder-img@16x9.jpg"
-          alt="Description of the image"
-        />
+        <Fragment>
+          <span className="slds-assistive-text">Preview:</span>
+          <img
+            src="/assets/images/placeholder-img@16x9.jpg"
+            alt="Description of the image"
+          />
+        </Fragment>
       );
     } else if (hasImagePortrait) {
       return (
-        <img
-          src="/assets/images/placeholder-img@9x16.jpg"
-          alt="Description of the image"
-        />
+        <Fragment>
+          <span className="slds-assistive-text">Preview:</span>
+          <img
+            src="/assets/images/placeholder-img@9x16.jpg"
+            alt="Description of the image"
+          />
+        </Fragment>
       );
     } else {
       return (
-        <span className="slds-file__icon slds-icon_container" title={symbol}>
-          <SvgIcon className="slds-icon" sprite={sprite} symbol={symbol} />
-          <span className="slds-assistive-text">{title}</span>
-        </span>
+        <Fragment>
+          <span className="slds-assistive-text">Preview:</span>
+          <span className="slds-file__icon slds-icon_container" title={symbol}>
+            <SvgIcon className="slds-icon" sprite={sprite} symbol={symbol} />
+            <span className="slds-assistive-text">{title}</span>
+          </span>
+        </Fragment>
       );
     }
   }
@@ -192,11 +201,7 @@ export class File extends Component {
           {/*
             aXe is reporting an a11y violation where it says the <a> does not detect any discernible text when using <Spinner>, despite this not being the case (Spinner has "Loading" in .slds-assistive-text). To prevent this from breaking the build, we're excluding `.slds-file figure > a` from aXe linting. Tread carefully.
           */}
-          <a
-            href="javascript:void(0);"
-            className={figureClasses}
-            onClick={e => console.log(e.target)}
-          >
+          <a href="javascript:void(0);" className={figureClasses}>
             {hasOverlay && <div className="slds-file_overlay" />}
 
             {this.fileContents()}

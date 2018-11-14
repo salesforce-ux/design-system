@@ -4,6 +4,13 @@
 
 <!-- ## [Unreleased] -->
 
+## 2.8.0
+
+### Fixed
+
+- Aligned `hover` and `focus` states to have matching styles
+  - Added "Preview:" as accessible text via the `slds-assistive-text` utility.
+
 ## 2.7.0
 
 ### Added

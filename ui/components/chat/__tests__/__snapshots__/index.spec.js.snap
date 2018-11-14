@@ -62,7 +62,6 @@ exports[`Chat Images and Files renders a loading inbound chat message item with 
             <a
               className="slds-file__crop slds-file__crop_4-by-3"
               href="javascript:void(0);"
-              onClick={[Function]}
             >
               <div
                 className="slds-spinner slds-spinner_medium"
@@ -167,7 +166,6 @@ exports[`Chat Images and Files renders a loading inbound chat message item with 
             <a
               className="slds-file__crop slds-file__crop_4-by-3"
               href="javascript:void(0);"
-              onClick={[Function]}
             >
               <div
                 className="slds-spinner slds-spinner_medium"
@@ -278,8 +276,12 @@ exports[`Chat Images and Files renders an inbound chat message item with file an
             <a
               className="slds-file__crop slds-file__crop_4-by-3"
               href="javascript:void(0);"
-              onClick={[Function]}
             >
+              <span
+                className="slds-assistive-text"
+              >
+                Preview:
+              </span>
               <img
                 alt="Description of the image"
                 src="/assets/images/placeholder-img@16x9.jpg"
@@ -420,8 +422,12 @@ exports[`Chat Images and Files renders an inbound chat message item with image a
             <a
               className="slds-file__figure"
               href="javascript:void(0);"
-              onClick={[Function]}
             >
+              <span
+                className="slds-assistive-text"
+              >
+                Preview:
+              </span>
               <img
                 alt="Description of the image"
                 src="/assets/images/placeholder-img@16x9.jpg"
@@ -522,8 +528,12 @@ exports[`Chat Images and Files renders an inbound chat message item with portrai
             <a
               className="slds-file__figure slds-file__figure_portrait"
               href="javascript:void(0);"
-              onClick={[Function]}
             >
+              <span
+                className="slds-assistive-text"
+              >
+                Preview:
+              </span>
               <img
                 alt="Description of the image"
                 src="/assets/images/placeholder-img@9x16.jpg"
@@ -624,8 +634,12 @@ exports[`Chat Images and Files renders an inbound chat message item with portrai
             <a
               className="slds-file__figure"
               href="javascript:void(0);"
-              onClick={[Function]}
             >
+              <span
+                className="slds-assistive-text"
+              >
+                Preview:
+              </span>
               <img
                 alt="Description of the image"
                 src="/assets/images/placeholder-img@16x9.jpg"
@@ -756,8 +770,12 @@ exports[`Chat Images and Files renders an outbound chat message item with file a
             <a
               className="slds-file__crop slds-file__crop_4-by-3"
               href="javascript:void(0);"
-              onClick={[Function]}
             >
+              <span
+                className="slds-assistive-text"
+              >
+                Preview:
+              </span>
               <img
                 alt="Description of the image"
                 src="/assets/images/placeholder-img@16x9.jpg"
@@ -888,8 +906,12 @@ exports[`Chat Images and Files renders an outbound chat message item with image 
             <a
               className="slds-file__figure"
               href="javascript:void(0);"
-              onClick={[Function]}
             >
+              <span
+                className="slds-assistive-text"
+              >
+                Preview:
+              </span>
               <img
                 alt="Description of the image"
                 src="/assets/images/placeholder-img@16x9.jpg"
@@ -980,8 +1002,12 @@ exports[`Chat Images and Files renders an outbound chat message item with portra
             <a
               className="slds-file__figure slds-file__figure_portrait"
               href="javascript:void(0);"
-              onClick={[Function]}
             >
+              <span
+                className="slds-assistive-text"
+              >
+                Preview:
+              </span>
               <img
                 alt="Description of the image"
                 src="/assets/images/placeholder-img@9x16.jpg"
@@ -1072,8 +1098,12 @@ exports[`Chat Images and Files renders an outbound chat message item with portra
             <a
               className="slds-file__figure"
               href="javascript:void(0);"
-              onClick={[Function]}
             >
+              <span
+                className="slds-assistive-text"
+              >
+                Preview:
+              </span>
               <img
                 alt="Description of the image"
                 src="/assets/images/placeholder-img@16x9.jpg"

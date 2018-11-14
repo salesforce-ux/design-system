@@ -56,8 +56,12 @@ exports[`File Component renders base component 1`] = `
       <a
         className="slds-file__crop"
         href="javascript:void(0);"
-        onClick={[Function]}
       >
+        <span
+          className="slds-assistive-text"
+        >
+          Preview:
+        </span>
         <img
           alt="Description of the image"
           src="/assets/images/placeholder-img@16x9.jpg"
@@ -122,8 +126,12 @@ exports[`File Component renders fewer than 3 file attachments 1`] = `
         <a
           className="slds-file__crop"
           href="javascript:void(0);"
-          onClick={[Function]}
         >
+          <span
+            className="slds-assistive-text"
+          >
+            Preview:
+          </span>
           <img
             alt="Description of the image"
             src="/assets/images/placeholder-img@16x9.jpg"
@@ -182,8 +190,12 @@ exports[`File Component renders fewer than 3 file attachments 1`] = `
         <a
           className="slds-file__crop"
           href="javascript:void(0);"
-          onClick={[Function]}
         >
+          <span
+            className="slds-assistive-text"
+          >
+            Preview:
+          </span>
           <span
             className="slds-file__icon slds-icon_container"
             title="pdf"
@@ -264,7 +276,6 @@ exports[`File Component renders file in loading state with title 1`] = `
       <a
         className="slds-file__crop"
         href="javascript:void(0);"
-        onClick={[Function]}
       >
         <div
           className="slds-spinner slds-spinner_medium"
@@ -343,7 +354,6 @@ exports[`File Component renders file in loding state without title 1`] = `
       <a
         className="slds-file__crop"
         href="javascript:void(0);"
-        onClick={[Function]}
       >
         <div
           className="slds-spinner slds-spinner_medium"
@@ -382,8 +392,12 @@ exports[`File Component renders file with external icon 1`] = `
       <a
         className="slds-file__crop"
         href="javascript:void(0);"
-        onClick={[Function]}
       >
+        <span
+          className="slds-assistive-text"
+        >
+          Preview:
+        </span>
         <span
           className="slds-file__icon slds-icon_container"
           title="pdf"
@@ -485,8 +499,12 @@ exports[`File Component renders icon (no image) with title 1`] = `
       <a
         className="slds-file__crop"
         href="javascript:void(0);"
-        onClick={[Function]}
       >
+        <span
+          className="slds-assistive-text"
+        >
+          Preview:
+        </span>
         <span
           className="slds-file__icon slds-icon_container"
           title="image"
@@ -566,8 +584,12 @@ exports[`File Component renders image with actions and no title 1`] = `
       <a
         className="slds-file__crop"
         href="javascript:void(0);"
-        onClick={[Function]}
       >
+        <span
+          className="slds-assistive-text"
+        >
+          Preview:
+        </span>
         <img
           alt="Description of the image"
           src="/assets/images/placeholder-img@16x9.jpg"
@@ -646,8 +668,12 @@ exports[`File Component renders image with no title 1`] = `
       <a
         className="slds-file__crop"
         href="javascript:void(0);"
-        onClick={[Function]}
       >
+        <span
+          className="slds-assistive-text"
+        >
+          Preview:
+        </span>
         <img
           alt="Description of the image"
           src="/assets/images/placeholder-img@16x9.jpg"
@@ -673,8 +699,12 @@ exports[`File Component renders image with title and actions 1`] = `
       <a
         className="slds-file__crop"
         href="javascript:void(0);"
-        onClick={[Function]}
       >
+        <span
+          className="slds-assistive-text"
+        >
+          Preview:
+        </span>
         <img
           alt="Description of the image"
           src="/assets/images/placeholder-img@16x9.jpg"
@@ -788,8 +818,12 @@ exports[`File Component renders more than 3 file attachments 1`] = `
         <a
           className="slds-file__crop"
           href="javascript:void(0);"
-          onClick={[Function]}
         >
+          <span
+            className="slds-assistive-text"
+          >
+            Preview:
+          </span>
           <img
             alt="Description of the image"
             src="/assets/images/placeholder-img@16x9.jpg"
@@ -848,8 +882,12 @@ exports[`File Component renders more than 3 file attachments 1`] = `
         <a
           className="slds-file__crop"
           href="javascript:void(0);"
-          onClick={[Function]}
         >
+          <span
+            className="slds-assistive-text"
+          >
+            Preview:
+          </span>
           <span
             className="slds-file__icon slds-icon_container"
             title="pdf"
@@ -922,11 +960,15 @@ exports[`File Component renders more than 3 file attachments 1`] = `
         <a
           className="slds-file__crop"
           href="javascript:void(0);"
-          onClick={[Function]}
         >
           <div
             className="slds-file_overlay"
           />
+          <span
+            className="slds-assistive-text"
+          >
+            Preview:
+          </span>
           <img
             alt="Description of the image"
             src="/assets/images/placeholder-img@16x9.jpg"

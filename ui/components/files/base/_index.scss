@@ -24,17 +24,19 @@
    */
 
   // Hover state
-  &:not(.slds-file_loading):hover:before,
-  &:not(.slds-file_loading):hover:after {
+  &:not(.slds-file_loading) a:hover:before,
+  &:not(.slds-file_loading) a:hover:after,
+  &:not(.slds-file_loading) a:focus:before,
+  &:not(.slds-file_loading) a:focus:after {
     position: absolute;
     z-index: $z-index-overlay;
     cursor: pointer;
-    pointer-events: none;
     content: '';
   }
 
   // Adds overlay background to Files
-  &:not(.slds-file_loading):hover:before {
+  &:not(.slds-file_loading) a:hover:before,
+  &:not(.slds-file_loading) a:focus:before {
     top: 0;
     right: 0;
     bottom: 0;
@@ -43,7 +45,8 @@
   }
 
   // Adds and vertically centers "preview" icon via base64
-  &:not(.slds-file_loading):hover:after {
+  &:not(.slds-file_loading) a:hover:after,
+  &:not(.slds-file_loading) a:focus:after {
     top: 50%;
     left: 50%;
     width: $square-icon-large-content;
@@ -58,15 +61,17 @@
   // Remove hover state for devices with any available input mechanism can hover over elements
   @media (any-hover:none) {
 
-    &:not(.slds-file_loading):hover:before,
-    &:not(.slds-file_loading):hover:after {
+    &:not(.slds-file_loading) a:hover:before,
+    &:not(.slds-file_loading) a:hover:after,
+    &:not(.slds-file_loading) a:focus:before,
+    &:not(.slds-file_loading) a:focus:after {
       display: none;
     }
   }
 
   // Puts title bar and actions menu at the same z-index as the overlay, so they remain clickable
-  &:not(.slds-file_loading):hover .slds-file__title,
-  &:not(.slds-file_loading):hover .slds-file__actions-menu {
+  &:not(.slds-file_loading) a:hover + .slds-file__title,
+  &:not(.slds-file_loading) a:focus + .slds-file__title {
     z-index: $z-index-overlay;
   }
 
@@ -78,7 +83,8 @@
    */
 
   // When a title card is present, take its height into account when centering the "preview" icon
-  &.slds-has-title:hover:after {
+  &.slds-has-title a:hover:after,
+  &.slds-has-title a:focus:after {
     transform: translate(-50%, calc(-50% - (#{$square-icon-large-content} / 2)));
   }
 
@@ -194,6 +200,7 @@
    */
   &__title {
     display: flex;
+    z-index: $z-index-overlay;
     align-items: center;
     padding: $spacing-x-small;
 
@@ -315,6 +322,7 @@
    */
   &__actions-menu {
     position: absolute;
+    z-index: $z-index-overlay;
     bottom: $spacing-x-small;
     right: $spacing-xx-small;
   }

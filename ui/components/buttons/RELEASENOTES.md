@@ -12,6 +12,14 @@
   - This variation toggles between the styling of a neutral button and a brand button.
 - Added `slds-button_stretch` modifier for adjusting any style button to take 100% width of its container
 
+### Changed
+
+- Changed disabled success buttons styling
+
+### Fixed
+
+- Prevented hover styling on success buttons when disabled
+
 ## 2.7.0
 
 ### Added

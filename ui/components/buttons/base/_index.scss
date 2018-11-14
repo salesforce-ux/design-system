@@ -284,6 +284,13 @@ a.slds-button--inverse:focus {
 .slds-button--success {
   @include button;
   @include button-success;
+
+  &[disabled],
+  &:disabled {
+    background: $brand-disabled;
+    border-color: $brand-disabled;
+    color: $color-text-button-brand-disabled;
+  }
 }
 
 /**

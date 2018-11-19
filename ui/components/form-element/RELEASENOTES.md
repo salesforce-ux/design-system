@@ -3,6 +3,11 @@
 # Form Element Release Notes
 
 <!-- ## [Unreleased] -->
+## 2.7.5
+
+### Changed
+- Form labels will now hyphenate when a word with no spaces exceeds the available space of the label container
+
 ## 2.7.4
 
 ### Added

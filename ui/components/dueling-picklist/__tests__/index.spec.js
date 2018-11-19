@@ -16,58 +16,56 @@ import {
 
 import createHelpers from '../../../../jest.helpers';
 
-const { matchesMarkupAndStyle } = createHelpers(__dirname);
+const { matchesMarkup } = createHelpers(__dirname);
 
 it('renders a default dueling picklist', () =>
-  matchesMarkupAndStyle(<MultiSelect dataSet={DefaultSnapShot} />));
+  matchesMarkup(<MultiSelect dataSet={DefaultSnapShot} />));
 
 it('renders a default dueling picklist with no reordering', () =>
-  matchesMarkupAndStyle(<MultiSelect dataSet={DefaultSnapShot} noReorder />));
+  matchesMarkup(<MultiSelect dataSet={DefaultSnapShot} noReorder />));
 
 it('renders a dueling picklist with a required option', () =>
-  matchesMarkupAndStyle(<MultiSelect dataSet={LockedSnapShot} />));
+  matchesMarkup(<MultiSelect dataSet={LockedSnapShot} />));
 
 it('renders a disabled dueling picklist', () =>
-  matchesMarkupAndStyle(<MultiSelect dataSet={DisabledSnapShot} disabled />));
+  matchesMarkup(<MultiSelect dataSet={DisabledSnapShot} disabled />));
 
 it('renders a dueling picklist with a selected option', () =>
-  matchesMarkupAndStyle(<MultiSelect dataSet={SelectedSnapShot} />));
+  matchesMarkup(<MultiSelect dataSet={SelectedSnapShot} />));
 
 it('renders a dueling picklist with multiple selected options', () =>
-  matchesMarkupAndStyle(<MultiSelect dataSet={MultiSelectedSnapShot} />));
+  matchesMarkup(<MultiSelect dataSet={MultiSelectedSnapShot} />));
 
 it('renders a dueling picklist with a grabbed option', () =>
-  matchesMarkupAndStyle(<MultiSelect dataSet={GrabbedSnapShot} />));
+  matchesMarkup(<MultiSelect dataSet={GrabbedSnapShot} />));
 
 it('renders a dueling picklist with an option that was moved', () =>
-  matchesMarkupAndStyle(<MultiSelect dataSet={MovedInSnapShot} />));
+  matchesMarkup(<MultiSelect dataSet={MovedInSnapShot} />));
 
 it('renders a dueling picklist with a dropped option', () =>
-  matchesMarkupAndStyle(<MultiSelect dataSet={DroppedSnapShot} />));
+  matchesMarkup(<MultiSelect dataSet={DroppedSnapShot} />));
 
 it('renders a dueling picklist with an option that was moved to another list', () =>
-  matchesMarkupAndStyle(<MultiSelect dataSet={MovedInSnapShot} />));
+  matchesMarkup(<MultiSelect dataSet={MovedInSnapShot} />));
 
 it('renders a responsive dueling picklist', () =>
-  matchesMarkupAndStyle(
-    <MultiSelect dataSet={DefaultSnapShot} isResponsive />
-  ));
+  matchesMarkup(<MultiSelect dataSet={DefaultSnapShot} isResponsive />));
 
 it('renders a responsive non-reorderable dueling picklist', () =>
-  matchesMarkupAndStyle(
+  matchesMarkup(
     <MultiSelect dataSet={DefaultSnapShot} noReorder isResponsive />
   ));
 
 it('renders a view mode of dueling picklist', () =>
-  matchesMarkupAndStyle(<MultiSelectViewMode />));
+  matchesMarkup(<MultiSelectViewMode />));
 
 it('renders a required dueling picklist', () =>
-  matchesMarkupAndStyle(<MultiSelect dataSet={DefaultSnapShot} isRequired />));
+  matchesMarkup(<MultiSelect dataSet={DefaultSnapShot} isRequired />));
 
 it('renders a dueling picklist with tooltip', () =>
-  matchesMarkupAndStyle(<MultiSelect dataSet={DefaultSnapShot} hasTooltip />));
+  matchesMarkup(<MultiSelect dataSet={DefaultSnapShot} hasTooltip />));
 
 it('renders a required dueling picklist with tooltip', () =>
-  matchesMarkupAndStyle(
+  matchesMarkup(
     <MultiSelect dataSet={DefaultSnapShot} isRequired hasTooltip />
   ));

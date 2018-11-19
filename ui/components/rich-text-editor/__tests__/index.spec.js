@@ -19,7 +19,7 @@ import {
 } from '../base/example';
 import { ComboboxContainer } from '../../combobox/base/example';
 
-const { matchesMarkupAndStyle } = createHelpers(__dirname);
+const { matchesMarkup } = createHelpers(__dirname);
 
 const IndentedOutputText = props => (
   <ol>
@@ -53,7 +53,7 @@ const ComboboxNonReadOnly = props => (
 );
 
 it('renders an RTE toolbar in a narrow space', () =>
-  matchesMarkupAndStyle(
+  matchesMarkup(
     <div className="slds-region_narrow">
       <RichTextEditor>
         <RteToolbar>
@@ -72,18 +72,18 @@ it('renders an RTE toolbar in a narrow space', () =>
   ));
 
 it('renders a RTE output with indentation', () =>
-  matchesMarkupAndStyle(<RteTextarea text={<IndentedOutputText />} />));
+  matchesMarkup(<RteTextarea text={<IndentedOutputText />} />));
 
 it('renders a RTE textarea with aria-label when no label is present', () =>
-  matchesMarkupAndStyle(<RteTextarea placeholder="Compose text..." />));
+  matchesMarkup(<RteTextarea placeholder="Compose text..." />));
 
 it('renders a RTE textarea with aria-labelledby', () =>
-  matchesMarkupAndStyle(
+  matchesMarkup(
     <RteTextarea placeholder="Compose text..." labelId="rte-label-id-01" />
   ));
 
 it('renders a RTE editor with a label', () =>
-  matchesMarkupAndStyle(
+  matchesMarkup(
     <RichTextEditor
       label="Details and Steps to Reproduce"
       labelId="rte-label-id-02"
@@ -98,7 +98,7 @@ it('renders a RTE editor with a label', () =>
   ));
 
 it('renders a RTE editor with an error', () =>
-  matchesMarkupAndStyle(
+  matchesMarkup(
     <RichTextEditor className="slds-has-error">
       <RteToolbar>
         <RteFormatText tabIndexSetting="0" />
@@ -119,7 +119,7 @@ it('renders a RTE editor with an error', () =>
   ));
 
 it('renders a RTE editor with an error and non-readonly combobox', () =>
-  matchesMarkupAndStyle(
+  matchesMarkup(
     <RichTextEditor className="slds-has-error">
       <RteToolbar>
         <RteFormatFont />

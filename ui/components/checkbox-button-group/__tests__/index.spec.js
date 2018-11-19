@@ -4,10 +4,10 @@ import { Checkbox, CheckboxGroup, Fieldset } from '../base/example';
 
 import createHelpers from '../../../../jest.helpers';
 
-const { matchesMarkupAndStyle } = createHelpers(__dirname);
+const { matchesMarkup } = createHelpers(__dirname);
 
 xit('renders a default checkbox button group', () =>
-  matchesMarkupAndStyle(
+  matchesMarkup(
     <Fieldset>
       <CheckboxGroup>
         <Checkbox id="monday">Mon</Checkbox>
@@ -20,7 +20,7 @@ xit('renders a default checkbox button group', () =>
   ));
 
 xit('renders a default checkbox button group with error', () =>
-  matchesMarkupAndStyle(
+  matchesMarkup(
     <Fieldset className="slds-has-error">
       <CheckboxGroup>
         <Checkbox errorId="error_01" id="monday">
@@ -46,7 +46,7 @@ xit('renders a default checkbox button group with error', () =>
   ));
 
 xit('renders a disabled checkbox button group', () =>
-  matchesMarkupAndStyle(
+  matchesMarkup(
     <Fieldset>
       <CheckboxGroup>
         <Checkbox id="monday" disabled="true">

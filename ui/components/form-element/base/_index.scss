@@ -19,6 +19,7 @@
  * @restrict .slds-form-element label, .slds-form-element span, .slds-form-element legend, .slds-form-element div, [class*='slds-checkbox'] span, [class*='slds-radio'] span
  */
 .slds-form-element__label {
+  @include hyphenate;
   display: inline-block;
   color: $color-text-label;
   font-size: $form-label-font-size;

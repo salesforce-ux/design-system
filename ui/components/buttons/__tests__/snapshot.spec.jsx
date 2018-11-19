@@ -47,6 +47,13 @@ describe('Button ', () => {
         Button
       </Button>
     ));
+
+  it('renders a link that looks like a button', () =>
+    matchesMarkup(
+      <Button use="a" isSuccess>
+        Link as a Button
+      </Button>
+    ));
 });
 
 describe('Stateful Button ', () => {

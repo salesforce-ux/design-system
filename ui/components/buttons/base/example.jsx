@@ -2,7 +2,10 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 import React from 'react';
+import PropTypes from 'prop-types';
 import classNames from 'classnames';
+
+import { CannotBeSetWith } from '../../../shared/helpers';
 
 export let Button = props => {
   const {
@@ -20,35 +23,62 @@ export let Button = props => {
     isFirst,
     isMiddle,
     isLast,
+    use,
     ...rest
   } = props;
 
-  return (
-    <button
-      className={classNames(
-        'slds-button',
-        {
-          'slds-button_brand': isBrand,
-          'slds-button_neutral': isNeutral,
-          'slds-button_outline-brand': isOutlineBrand,
-          'slds-button_inverse': isInverse,
-          'slds-button_destructive': isDestructive,
-          'slds-button_text-destructive': isTextDestructive,
-          'slds-button_success': isSuccess,
-          'slds-button_full-width': isFullWidth,
-          'slds-button_stretch': isStretch,
-          'slds-button_first': isFirst,
-          'slds-button_middle': isMiddle,
-          'slds-button_last': isLast
-        },
-        className
-      )}
-      disabled={disabled}
-      {...rest}
-    >
-      {props.children}
-    </button>
+  var classNameList = classNames(
+    'slds-button',
+    {
+      'slds-button_brand': isBrand,
+      'slds-button_neutral': isNeutral,
+      'slds-button_outline-brand': isOutlineBrand,
+      'slds-button_inverse': isInverse,
+      'slds-button_destructive': isDestructive,
+      'slds-button_text-destructive': isTextDestructive,
+      'slds-button_success': isSuccess,
+      'slds-button_full-width': isFullWidth,
+      'slds-button_stretch': isStretch,
+      'slds-button_first': isFirst,
+      'slds-button_middle': isMiddle,
+      'slds-button_last': isLast
+    },
+    className
   );
+
+  return (
+    <React.Fragment>
+      {use === 'a' ? (
+        <a className={classNameList} {...rest} href="javascript:void(0);">
+          {props.children}
+        </a>
+      ) : (
+        <button className={classNameList} disabled={disabled} {...rest}>
+          {props.children}
+        </button>
+      )}
+    </React.Fragment>
+  );
+};
+
+Button.displayName = 'Button';
+
+Button.propTypes = {
+  className: PropTypes.string,
+  disabled: PropTypes.bool,
+  isBrand: PropTypes.bool,
+  isNeutral: PropTypes.bool,
+  isOutlineBrand: PropTypes.bool,
+  isInverse: PropTypes.bool,
+  isDestructive: PropTypes.bool,
+  isTextDestructive: PropTypes.bool,
+  isSuccess: PropTypes.bool,
+  isFullWidth: PropTypes.bool,
+  isStretch: PropTypes.bool,
+  isFirst: PropTypes.bool,
+  isMiddle: PropTypes.bool,
+  isLast: PropTypes.bool,
+  use: CannotBeSetWith('disabled', PropTypes.oneOf(['a']))
 };
 
 /// ////////////////////////////////////////
@@ -103,6 +133,85 @@ export let examples = [
     element: (
       <Button isStretch isNeutral>
         Stretched Neutral Button
+      </Button>
+    )
+  },
+  {
+    id: 'base-link',
+    label: 'Base as a Link',
+    element: <Button use="a">Base Link</Button>
+  },
+  {
+    id: 'neutral-link',
+    label: 'Neutral as a Link',
+    element: (
+      <Button use="a" isNeutral>
+        Neutral Link
+      </Button>
+    )
+  },
+  {
+    id: 'brand-link',
+    label: 'Brand as a Link',
+    element: (
+      <Button use="a" isBrand>
+        Brand Link
+      </Button>
+    )
+  },
+  {
+    id: 'outline-brand-link',
+    label: 'Outline Brand as a Link',
+    element: (
+      <Button use="a" isOutlineBrand>
+        Outline Brand Link
+      </Button>
+    )
+  },
+  {
+    id: 'inverse-link',
+    label: 'Inverse as a Link',
+    element: (
+      <div style={{ backgroundColor: '#16325c', padding: '0.5rem' }}>
+        <Button use="a" isInverse>
+          Inverse Link
+        </Button>
+      </div>
+    )
+  },
+  {
+    id: 'destructive-link',
+    label: 'Destructive as a Link',
+    element: (
+      <Button use="a" isDestructive>
+        Destructive Link
+      </Button>
+    )
+  },
+  {
+    id: 'text-destructive-link',
+    label: 'Text Destructive as a Link',
+    element: (
+      <Button use="a" isTextDestructive>
+        Text Destructive Link
+      </Button>
+    )
+  },
+  {
+    id: 'success-link',
+    label: 'Success as a Link',
+    element: (
+      <Button use="a" isSuccess>
+        Success Link
+      </Button>
+    )
+  },
+  {
+    id: 'stretch-link',
+    label: 'Stretch as a Link',
+    element: (
+      <Button use="a" isStretch isNeutral>
+        Stretched Neutral Link
       </Button>
     )
   }

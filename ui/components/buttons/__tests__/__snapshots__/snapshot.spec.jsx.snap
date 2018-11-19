@@ -45,6 +45,15 @@ exports[`Button  renders a full width, reset button 1`] = `
 </button>
 `;
 
+exports[`Button  renders a link that looks like a button 1`] = `
+<a
+  className="slds-button slds-button_success"
+  href="javascript:void(0);"
+>
+  Link as a Button
+</a>
+`;
+
 exports[`Button  renders a neutral button 1`] = `
 <button
   className="slds-button slds-button_neutral"

@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import { UtilityIcon } from '../icons/base/example';
 
 export const Badge = props => (
   <span
@@ -31,4 +32,33 @@ export const LightestBadge = props => (
 
 LightestBadge.propTypes = {
   children: PropTypes.node.isRequired
+};
+
+export const BadgeIcon = props => {
+  const { assistiveText, align, isInverse, symbol } = props;
+  return (
+    <span
+      className={classNames('slds-badge__icon', `slds-badge__icon_${align}`, {
+        'slds-badge__icon_inverse': isInverse
+      })}
+    >
+      <UtilityIcon
+        className="slds-icon_xx-small"
+        useCurrentColor
+        assistiveText={assistiveText || false}
+        symbol={symbol}
+      />
+    </span>
+  );
+};
+
+BadgeIcon.propTypes = {
+  symbol: PropTypes.string,
+  align: PropTypes.oneOf(['left', 'right']),
+  isInverse: PropTypes.bool,
+  assistiveText: PropTypes.oneOfType([PropTypes.string, PropTypes.bool])
+};
+
+BadgeIcon.defaultProps = {
+  align: 'left'
 };

@@ -26,10 +26,6 @@
   &:empty {
     padding: 0;
   }
-
-  .slds-icon_container {
-    vertical-align: middle;
-  }
 }
 
 /**
@@ -59,4 +55,55 @@
   font-size: $font-size-text-x-small;
   text-transform: none;
   letter-spacing: normal;
+}
+
+/**
+ * @summary Adds an icon to badge
+ * @name icon-container
+ * @selector .slds-badge__icon
+ * @restrict .slds-badge span
+ * @modifier
+ */
+.slds-badge__icon {
+  color: $color-text-icon-default;
+  vertical-align: middle;
+  display: inline-flex;
+  align-items: center;
+  line-height: 1;
+
+  /**
+   * @summary Change badge icon fill color to inverse
+   * @name icon-inverse
+   * @selector .slds-badge__icon_inverse
+   * @restrict .slds-badge__icon
+   * @modifier
+   * @group color
+   */
+  &.slds-badge__icon_inverse {
+    color: currentColor;
+  }
+}
+
+/**
+ * @summary Adds an icon to the left of the badge text
+ * @name icon-left
+ * @selector .slds-badge__icon_left
+ * @restrict .slds-badge__icon
+ * @modifier
+ * @group spacing
+ */
+.slds-badge__icon_left {
+  margin-right: $spacing-xx-small;
+}
+
+/**
+ * @summary Adds an icon to the right of the badge text
+ * @name icon-right
+ * @selector .slds-badge__icon_right
+ * @restrict .slds-badge__icon
+ * @modifier
+ * @group spacing
+ */
+.slds-badge__icon_right {
+  margin-left: $spacing-xx-small;
 }

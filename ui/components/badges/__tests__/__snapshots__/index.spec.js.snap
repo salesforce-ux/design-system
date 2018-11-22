@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders a default badge 1`] = `
+exports[`Badge colors renders a default badge 1`] = `
 <span
   className="slds-badge"
 >
@@ -8,7 +8,15 @@ exports[`renders a default badge 1`] = `
 </span>
 `;
 
-exports[`renders a light badge renders badge 1`] = `
+exports[`Badge colors renders an inverse badge 1`] = `
+<span
+  className="slds-badge slds-badge_inverse"
+>
+  Lovely badge
+</span>
+`;
+
+exports[`Badge colors renders badge 1`] = `
 <span
   className="slds-badge slds-badge_lightest"
 >
@@ -16,7 +24,86 @@ exports[`renders a light badge renders badge 1`] = `
 </span>
 `;
 
-exports[`renders a light badge renders badge with icon only 1`] = `
+exports[`Badge with icons renders badge with icon only 1`] = `
+<span
+  className="slds-badge slds-badge_lightest"
+>
+  <span
+    className="slds-badge__icon slds-badge__icon_left"
+  >
+    <span
+      className="slds-icon_container slds-icon-utility-world slds-current-color"
+      title="Description of icon when needed"
+    >
+      <svg
+        aria-hidden={true}
+        className="slds-icon slds-icon_xx-small"
+      >
+        <use
+          xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#world"
+        />
+      </svg>
+      <span
+        className="slds-assistive-text"
+      >
+        assistive text goes here, do it!
+      </span>
+    </span>
+  </span>
+</span>
+`;
+
+exports[`Badge with icons renders badge with left icon 1`] = `
+<span
+  className="slds-badge slds-badge_lightest"
+>
+  <span
+    className="slds-badge__icon slds-badge__icon_left"
+  >
+    <span
+      className="slds-icon_container slds-icon-utility-world slds-current-color"
+      title="Description of icon when needed"
+    >
+      <svg
+        aria-hidden={true}
+        className="slds-icon slds-icon_xx-small"
+      >
+        <use
+          xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#world"
+        />
+      </svg>
+    </span>
+  </span>
+  Icon on the left
+</span>
+`;
+
+exports[`Badge with icons renders badge with right icon 1`] = `
+<span
+  className="slds-badge slds-badge_lightest"
+>
+  Icon on the right
+  <span
+    className="slds-badge__icon slds-badge__icon_left"
+  >
+    <span
+      className="slds-icon_container slds-icon-utility-world slds-current-color"
+      title="Description of icon when needed"
+    >
+      <svg
+        aria-hidden={true}
+        className="slds-icon slds-icon_xx-small"
+      >
+        <use
+          xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#world"
+        />
+      </svg>
+    </span>
+  </span>
+</span>
+`;
+
+exports[`Badge with icons renders deprecated badge with icon only 1`] = `
 <span
   className="slds-badge slds-badge_lightest"
 >
@@ -41,52 +128,23 @@ exports[`renders a light badge renders badge with icon only 1`] = `
 </span>
 `;
 
-exports[`renders a light badge renders badge with left icon 1`] = `
+exports[`Badge with icons renders deprecated badge with right icon 1`] = `
 <span
   className="slds-badge slds-badge_lightest"
 >
-  <span
-    className="slds-icon_container slds-icon-utility-world slds-m-right_xx-small"
-    title="Description of icon when needed"
-  >
-    <svg
-      aria-hidden={true}
-      className="slds-icon slds-icon_xx-small slds-icon-text-default"
-    >
-      <use
-        xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#world"
-      />
-    </svg>
-  </span>
-  Icon on the left
-</span>
-`;
-
-exports[`renders a light badge renders badge with right icon 1`] = `
-<span
-  className="slds-badge slds-badge_lightest"
->
-  <span
-    className="slds-icon_container slds-icon-utility-world slds-m-right_xx-small"
-    title="Description of icon when needed"
-  >
-    <svg
-      aria-hidden={true}
-      className="slds-icon slds-icon_xx-small slds-icon-text-default"
-    >
-      <use
-        xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#world"
-      />
-    </svg>
-  </span>
   Icon on the right
-</span>
-`;
-
-exports[`renders an inverse badge 1`] = `
-<span
-  className="slds-badge slds-badge_inverse"
->
-  Lovely badge
+  <span
+    className="slds-icon_container slds-icon-utility-world slds-m-left_xx-small"
+    title="Description of icon when needed"
+  >
+    <svg
+      aria-hidden={true}
+      className="slds-icon slds-icon_xx-small slds-icon-text-default"
+    >
+      <use
+        xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#world"
+      />
+    </svg>
+  </span>
 </span>
 `;

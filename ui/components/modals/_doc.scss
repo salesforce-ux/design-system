@@ -34,6 +34,8 @@
  * on the left and right, rather than all on the right. These can either be
  * within a large or default modal, depending on the use case.
  *
+ * If you're using a Modal for a system alert that the user must acknowledge,
+ * consider using a [Prompt](/components/prompt).
  * #### Accessibility
  *
  * Modals, by definition, trap focus. This means that if a user presses Tab or

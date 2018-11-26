@@ -65,6 +65,7 @@
     "eslint-plugin-promise": "4.0.1",
     "eslint-plugin-react": "7.11.1",
     "eslint-plugin-standard": "4.0.0",
+    "event-stream": "3.3.4",
     "express": "4.15.4",
     "fs-extra": "2.1.2",
     "futurize": "1.2.0",
@@ -211,6 +212,5 @@
   "@std/esm": {
     "cjs": true,
     "esm": "js"
-  },
-  "dependencies": {}
+  }
 }

@@ -106,6 +106,7 @@ export let examples = [
           className="slds-button slds-button_icon"
           symbol="info"
           aria-describedby="help"
+          aria-disabled="true"
           assistiveText="Help"
           title="Help"
         />

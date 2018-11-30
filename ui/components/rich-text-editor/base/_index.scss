@@ -609,6 +609,7 @@
   }
 
   table {
+    @include normal-wrap;
     width: auto;
 
     caption {

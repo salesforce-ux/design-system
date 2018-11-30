@@ -78,8 +78,8 @@ exports[`Compound Form Element render compound form element wrapper with require
       className="slds-required"
       title="required"
     >
-      * 
-       
+      *
+
     </abbr>
   </legend>
   <div
@@ -469,8 +469,8 @@ exports[`Form Element Composition renders form element with input that has an er
       className="slds-required"
       title="required"
     >
-      * 
-       
+      *
+
     </abbr>
     Form label
   </label>
@@ -511,8 +511,8 @@ exports[`Form Element Composition renders form element with input that is requir
       className="slds-required"
       title="required"
     >
-      * 
-       
+      *
+
     </abbr>
     Form label
   </label>
@@ -700,8 +700,8 @@ exports[`Form Element renders form element as a fieldset with required asterisk 
       className="slds-required"
       title="required"
     >
-      * 
-       
+      *
+
     </abbr>
     Fieldset legend
   </legend>
@@ -786,8 +786,8 @@ exports[`Form Element renders form element fieldset legend with required asteris
     className="slds-required"
     title="required"
   >
-    * 
-     
+    *
+
   </abbr>
   content
 </legend>
@@ -985,8 +985,8 @@ exports[`Form Element renders form element label with required asterisk 1`] = `
     className="slds-required"
     title="required"
   >
-    * 
-     
+    *
+
   </abbr>
   Form label
 </label>
@@ -1002,8 +1002,8 @@ exports[`Form Element renders form element label with required asterisk 2`] = `
     className="slds-required"
     title="required"
   >
-    * 
-     
+    *
+
   </abbr>
   Form label
 </label>
@@ -1095,8 +1095,8 @@ exports[`Horizontal Form Element renders deprecated horizontal form elements - e
             className="slds-required"
             title="required"
           >
-            * 
-             
+            *
+
           </abbr>
           Assigned To
         </label>
@@ -1624,7 +1624,7 @@ exports[`Horizontal Form Element renders deprecated horizontal form elements - e
               className="slds-assistive-text"
               id="drag-live-region"
             >
-              
+
             </div>
             <div
               className="slds-assistive-text"
@@ -1923,8 +1923,8 @@ exports[`Horizontal Form Element renders deprecated horizontal form elements - e
             className="slds-required"
             title="required"
           >
-            * 
-             
+            *
+
           </abbr>
           Billing Address
         </legend>
@@ -2308,8 +2308,8 @@ exports[`Horizontal Form Element renders deprecated horizontal form elements - v
             className="slds-required"
             title="required"
           >
-            * 
-             
+            *
+
           </abbr>
           Assigned To
         </span>
@@ -2551,7 +2551,7 @@ exports[`Horizontal Form Element renders deprecated horizontal form elements - v
       className="slds-form__item"
       role="listitem"
     >
-      
+
     </div>
   </div>
   <div
@@ -2785,8 +2785,8 @@ exports[`Horizontal Form Element renders deprecated horizontal form elements - v
             className="slds-required"
             title="required"
           >
-            * 
-             
+            *
+
           </abbr>
           Billing Address
         </span>
@@ -3217,8 +3217,8 @@ exports[`Stacked Form Element renders deprecated stacked form elements - edit mo
             className="slds-required"
             title="required"
           >
-            * 
-             
+            *
+
           </abbr>
           Assigned To
         </span>
@@ -3460,7 +3460,7 @@ exports[`Stacked Form Element renders deprecated stacked form elements - edit mo
       className="slds-form__item"
       role="listitem"
     >
-      
+
     </div>
   </div>
   <div
@@ -3694,8 +3694,8 @@ exports[`Stacked Form Element renders deprecated stacked form elements - edit mo
             className="slds-required"
             title="required"
           >
-            * 
-             
+            *
+
           </abbr>
           Billing Address
         </span>
@@ -3895,8 +3895,8 @@ exports[`Stacked Form Element renders deprecated stacked form elements - view mo
             className="slds-required"
             title="required"
           >
-            * 
-             
+            *
+
           </abbr>
           Assigned To
         </span>
@@ -4138,7 +4138,7 @@ exports[`Stacked Form Element renders deprecated stacked form elements - view mo
       className="slds-form__item"
       role="listitem"
     >
-      
+
     </div>
   </div>
   <div
@@ -4372,8 +4372,8 @@ exports[`Stacked Form Element renders deprecated stacked form elements - view mo
             className="slds-required"
             title="required"
           >
-            * 
-             
+            *
+
           </abbr>
           Billing Address
         </span>

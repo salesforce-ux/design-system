@@ -3,6 +3,11 @@
 # Rich Text Editor Release Notes
 
 <!-- ## [Unreleased] -->
+## 2.7.5
+
+### Fixed
+
+- Resolved issue where table elements within a rich text editor output would improperly wrap
 
 ## 2.7.0
 

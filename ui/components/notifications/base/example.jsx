@@ -32,14 +32,14 @@ let Notification = props => {
         >
           <StandardIcon
             containerClassName="slds-media__figure"
-            className="slds-icon--small"
+            className="slds-icon_small"
             assistiveText={false}
             symbol={props.type}
             title={props.type}
           />
           <div className="slds-media__body">
             <h2
-              className="slds-text-heading--small slds-m-bottom--xx-small"
+              className="slds-text-heading_small slds-m-bottom_xx-small"
               id={props.headingID}
             >
               <span className="slds-assistive-text">
@@ -51,7 +51,7 @@ let Notification = props => {
           </div>
         </a>
         <ButtonIcon
-          className="slds-button--icon-container slds-notification__close"
+          className="slds-button_icon-container slds-notification__close"
           symbol="close"
           assistiveText={'Dismiss ' + props.title + ' notification'}
           title={'Dismiss ' + props.title + ' notification'}

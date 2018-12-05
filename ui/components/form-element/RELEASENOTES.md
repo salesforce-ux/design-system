@@ -25,10 +25,18 @@
 - Deprecated `slds-form_horizontal` for `slds-form-element_horizontal`
 - Deprecated `slds-form_compound` for `slds-form-element_compound`
 
+## 2.7.5
+
+### Changed
+- Form labels will now hyphenate when a word with no spaces exceeds the available space of the label container
+
 ## 2.7.4
 
 ### Added
 - Added `slds-form-element_address` for address specific compound form elements
+
+### Fixed
+- Resolved issue where empty form elements would collapse in view mode
 
 ## 2.7.3
 

@@ -185,7 +185,12 @@
   word-break: break-word;
 }
 
-
+// normal-wrap
+@mixin normal-wrap {
+  overflow-wrap: normal;
+  word-wrap: normal;
+  word-break: normal;
+}
 
 // Clearfix
 @mixin clearfix {

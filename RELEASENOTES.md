@@ -1,6 +1,36 @@
 <!-- Release notes authoring guidelines: http://keepachangelog.com/ -->
 
 <!-- ## [Unreleased] -->
+## **Release 2.7.5 - November 19, 2018**
+
+### Components
+
+#### [Form Elements](https://www.lightningdesignsystem.com/components/form-elements/)
+
+##### Changed
+
+- Form labels will now hyphenate when a word with no spaces exceeds the available space of the label container
+
+#### [Rich Text Editor](https://lightningdesignsystem.com/components/rich-text-editor)
+
+##### Fixed
+
+- Resolved issue where table elements within a rich text editor output would improperly wrap
+
+## **Release 2.7.4 - October 11, 2018**
+
+### Components
+
+#### [Form Elements](https://www.lightningdesignsystem.com/components/form-elements/)
+
+##### Added
+
+- Added `slds-form-element_address` for address specific compound form elements
+
+##### Fixed
+
+- Resolved issue where empty form elements would collapse in view mode
+
 ## **Release 2.7.3 - October 4, 2018**
 
 ### Components

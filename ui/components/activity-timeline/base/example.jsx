@@ -189,7 +189,7 @@ export const TimelineItem = props => (
 );
 
 export let FieldInfoListItem = props => (
-  <li className="slds-grid slds-grid--vertical slds-size_1-of-2 slds-p-bottom_small">
+  <li className="slds-grid slds-grid_vertical slds-size_1-of-2 slds-p-bottom_small">
     <span className="slds-text-title slds-p-bottom_x-small">{props.label}</span>
     <span className="slds-text-body_medium slds-truncate" title={props.content}>
       <a href="javascript:void(0);">{props.content}</a>

@@ -42,7 +42,7 @@ export default (
             >
               <Input id={dateRangeInputId01} placeholder=" " />
               <ButtonIcon
-                className="slds-input__icon slds-input__icon--right"
+                className="slds-input__icon slds-input__icon_right"
                 symbol="event"
                 assistiveText="Select a date"
                 title="Select a date"
@@ -56,7 +56,7 @@ export default (
             >
               <Input id={dateRangeInputId02} placeholder=" " />
               <ButtonIcon
-                className="slds-input__icon slds-input__icon--right"
+                className="slds-input__icon slds-input__icon_right"
                 symbol="event"
                 assistiveText="Select a date"
                 title="Select a date"
@@ -101,7 +101,7 @@ export let states = [
                     defaultValue="06/24/2014"
                   />
                   <ButtonIcon
-                    className="slds-input__icon slds-input__icon--right"
+                    className="slds-input__icon slds-input__icon_right"
                     symbol="event"
                     assistiveText="Select a date"
                     title="Select a date"
@@ -115,7 +115,7 @@ export let states = [
                 >
                   <Input id={dateRangeInputId02} placeholder=" " />
                   <ButtonIcon
-                    className="slds-input__icon slds-input__icon--right"
+                    className="slds-input__icon slds-input__icon_right"
                     symbol="event"
                     assistiveText="Select a date"
                     title="Select a date"
@@ -152,7 +152,7 @@ export let states = [
                     defaultValue="06/24/2014"
                   />
                   <ButtonIcon
-                    className="slds-input__icon slds-input__icon--right"
+                    className="slds-input__icon slds-input__icon_right"
                     symbol="event"
                     assistiveText="Select a date"
                     title="Select a date"
@@ -173,7 +173,7 @@ export let states = [
                     defaultValue="06/27/2014"
                   />
                   <ButtonIcon
-                    className="slds-input__icon slds-input__icon--right"
+                    className="slds-input__icon slds-input__icon_right"
                     symbol="event"
                     assistiveText="Select a date"
                     title="Select a date"
@@ -210,7 +210,7 @@ export let states = [
                     defaultValue="06/24/2014"
                   />
                   <ButtonIcon
-                    className="slds-input__icon slds-input__icon--right"
+                    className="slds-input__icon slds-input__icon_right"
                     symbol="event"
                     assistiveText="Select a date"
                     title="Select a date"
@@ -236,7 +236,7 @@ export let states = [
                     defaultValue="06/29/2014"
                   />
                   <ButtonIcon
-                    className="slds-input__icon slds-input__icon--right"
+                    className="slds-input__icon slds-input__icon_right"
                     symbol="event"
                     assistiveText="Select a date"
                     title="Select a date"
@@ -273,7 +273,7 @@ export let states = [
                     defaultValue="06/24/2014"
                   />
                   <ButtonIcon
-                    className="slds-input__icon slds-input__icon--right"
+                    className="slds-input__icon slds-input__icon_right"
                     symbol="event"
                     assistiveText="Select a date"
                     title="Select a date"
@@ -299,7 +299,7 @@ export let states = [
                     defaultValue="06/30/2014"
                   />
                   <ButtonIcon
-                    className="slds-input__icon slds-input__icon--right"
+                    className="slds-input__icon slds-input__icon_right"
                     symbol="event"
                     assistiveText="Select a date"
                     title="Select a date"
@@ -336,7 +336,7 @@ export let states = [
                     defaultValue="06/24/2014"
                   />
                   <ButtonIcon
-                    className="slds-input__icon slds-input__icon--right"
+                    className="slds-input__icon slds-input__icon_right"
                     symbol="event"
                     assistiveText="Select a date"
                     title="Select a date"
@@ -355,7 +355,7 @@ export let states = [
                     defaultValue="06/30/2014"
                   />
                   <ButtonIcon
-                    className="slds-input__icon slds-input__icon--right"
+                    className="slds-input__icon slds-input__icon_right"
                     symbol="event"
                     assistiveText="Select a date"
                     title="Select a date"

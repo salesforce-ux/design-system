@@ -273,9 +273,9 @@ export let ComboboxContainer = props => {
               {/* If loading, show buttonIcon and spinner here */}
               {props.loading ? (
                 <div className="slds-input__icon-group slds-input__icon-group_right">
-                  <Spinner className="slds-spinner_brand slds-spinner--x-small slds-input__spinner" />
+                  <Spinner className="slds-spinner_brand slds-spinner_x-small slds-input__spinner" />
                   <ButtonIcon
-                    className="slds-input__icon slds-input__icon--right"
+                    className="slds-input__icon slds-input__icon_right"
                     symbol={props.inputIconRightSymbol || 'close'}
                     title="Remove selected option"
                     assistiveText="Remove selected option"

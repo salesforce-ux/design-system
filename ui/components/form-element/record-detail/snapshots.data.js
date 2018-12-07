@@ -27,14 +27,14 @@ export const ObjectFieldTypes = {
           link: true,
           component: (
             <FormElement
-              inputId="form-element-id-01"
+              inputId="stacked-form-element-id-01"
               labelContent="Assigned To"
               isRequired
               isEditing
               isStacked
             >
               <Input
-                id="form-element-id-01"
+                id="stacked-form-element-id-01"
                 readOnly
                 defaultValue="Jack Rogers"
                 required
@@ -49,9 +49,9 @@ export const ObjectFieldTypes = {
           link: true,
           component: (
             <Combobox
-              id="combobox-id-01"
+              id="stacked-combobox-id-01"
               label="Team Name"
-              aria-controls="listbox-id-01"
+              aria-controls="stacked-listbox-id-01"
               autocomplete
               isEditing
               isStacked
@@ -66,7 +66,7 @@ export const ObjectFieldTypes = {
               }
               results={
                 <Listbox
-                  id="listbox-id-01"
+                  id="stacked-listbox-id-01"
                   snapshot={{}}
                   type="entity"
                   count={2}
@@ -96,11 +96,11 @@ export const ObjectFieldTypes = {
           component: (
             <FormElement
               labelContent="Security Assessment Required?"
-              inputId="checkbox-id-01"
+              inputId="stacked-checkbox-id-01"
               isEditing
               isStacked
             >
-              <CheckboxStandalone id="checkbox-id-01" />
+              <CheckboxStandalone id="stacked-checkbox-id-01" />
             </FormElement>
           )
         },
@@ -109,9 +109,9 @@ export const ObjectFieldTypes = {
           label: 'Status',
           component: (
             <Combobox
-              id="combobox-id-02"
+              id="stacked-combobox-id-02"
               label="Status"
-              aria-controls="listbox-id-02"
+              aria-controls="stacked-listbox-id-02"
               readonly
               isEditing
               isStacked
@@ -127,7 +127,7 @@ export const ObjectFieldTypes = {
               }
               results={
                 <Listbox
-                  id="listbox-id-02"
+                  id="stacked-listbox-id-02"
                   snapshot={{}}
                   type="plain"
                   count={2}
@@ -177,12 +177,12 @@ export const ObjectFieldTypes = {
           component: (
             <FormElement
               labelContent="SLA Serial Number"
-              inputId="form-element-id-02"
+              inputId="stacked-form-element-id-02"
               hasTooltip
               isEditing
               isStacked
             >
-              <Input id="form-element-id-02" defaultValue="5367" />
+              <Input id="stacked-form-element-id-02" defaultValue="5367" />
             </FormElement>
           )
         },
@@ -194,12 +194,12 @@ export const ObjectFieldTypes = {
             <FormElement
               formElementClassName="slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open"
               labelContent="Date"
-              inputId="form-element-id-03"
+              inputId="stacked-form-element-id-03"
               hasRightIcon
               isEditing
               isStacked
             >
-              <Input id="form-element-id-03" defaultValue="1/1/2018" />
+              <Input id="stacked-form-element-id-03" defaultValue="1/1/2018" />
               <ButtonIcon
                 className="slds-input__icon slds-input__icon_right"
                 symbol="event"
@@ -223,17 +223,23 @@ export const ObjectFieldTypes = {
                 <div className="slds-size_1-of-2">
                   <FormElement
                     labelContent="Longitude"
-                    inputId="location-longitude-01"
+                    inputId="stacked-location-longitude-01"
                   >
-                    <Input id="location-longitude-01" defaultValue="10.283" />
+                    <Input
+                      id="stacked-location-longitude-01"
+                      defaultValue="10.283"
+                    />
                   </FormElement>
                 </div>
                 <div className="slds-size_1-of-2">
                   <FormElement
                     labelContent="Latitude"
-                    inputId="location-latitude-01"
+                    inputId="stacked-location-latitude-01"
                   >
-                    <Input id="location-latitude-01" defaultValue="54.293" />
+                    <Input
+                      id="stacked-location-latitude-01"
+                      defaultValue="54.293"
+                    />
                   </FormElement>
                 </div>
               </CompoundFormRow>
@@ -277,10 +283,10 @@ export const ObjectFieldTypes = {
                 <div className="slds-size_1-of-1">
                   <FormElement
                     labelContent="Billing Street"
-                    inputId="form-element-id-04"
+                    inputId="stacked-form-element-id-04"
                   >
                     <Textarea
-                      id="form-element-id-04"
+                      id="stacked-form-element-id-04"
                       defaultValue="525 S. Lexington Ave"
                       required
                     />
@@ -291,10 +297,10 @@ export const ObjectFieldTypes = {
                 <div className="slds-size_4-of-6">
                   <FormElement
                     labelContent="Billing City"
-                    inputId="form-element-id-05"
+                    inputId="stacked-form-element-id-05"
                   >
                     <Input
-                      id="form-element-id-05"
+                      id="stacked-form-element-id-05"
                       defaultValue="Burlington"
                       required
                     />
@@ -303,9 +309,13 @@ export const ObjectFieldTypes = {
                 <div className="slds-size_2-of-6">
                   <FormElement
                     labelContent="Billing State/Province"
-                    inputId="form-element-id-06"
+                    inputId="stacked-form-element-id-06"
                   >
-                    <Input id="form-element-id-06" defaultValue="NC" required />
+                    <Input
+                      id="stacked-form-element-id-06"
+                      defaultValue="NC"
+                      required
+                    />
                   </FormElement>
                 </div>
               </CompoundFormRow>
@@ -313,10 +323,10 @@ export const ObjectFieldTypes = {
                 <div className="slds-size_4-of-6">
                   <FormElement
                     labelContent="Billing Zip/Postal Code"
-                    inputId="form-element-id-07"
+                    inputId="stacked-form-element-id-07"
                   >
                     <Input
-                      id="form-element-id-07"
+                      id="stacked-form-element-id-07"
                       defaultValue="27215"
                       required
                     />
@@ -325,10 +335,10 @@ export const ObjectFieldTypes = {
                 <div className="slds-size_2-of-6">
                   <FormElement
                     labelContent="Billing Country"
-                    inputId="form-element-id-08"
+                    inputId="stacked-form-element-id-08"
                   >
                     <Input
-                      id="form-element-id-08"
+                      id="stacked-form-element-id-08"
                       defaultValue="USA"
                       required
                     />
@@ -354,10 +364,10 @@ export const ObjectFieldTypes = {
                 <div className="slds-size_1-of-1">
                   <FormElement
                     labelContent="Shipping Street"
-                    inputId="form-element-id-09"
+                    inputId="stacked-form-element-id-09"
                   >
                     <Textarea
-                      id="form-element-id-09"
+                      id="stacked-form-element-id-09"
                       defaultValue="312 Constitution Place"
                     />
                   </FormElement>
@@ -367,17 +377,20 @@ export const ObjectFieldTypes = {
                 <div className="slds-size_4-of-6">
                   <FormElement
                     labelContent="Shipping City"
-                    inputId="form-element-id-10"
+                    inputId="stacked-form-element-id-10"
                   >
-                    <Input id="form-element-id-10" defaultValue="Austin" />
+                    <Input
+                      id="stacked-form-element-id-10"
+                      defaultValue="Austin"
+                    />
                   </FormElement>
                 </div>
                 <div className="slds-size_2-of-6">
                   <FormElement
                     labelContent="Shipping State/Province"
-                    inputId="form-element-id-11"
+                    inputId="stacked-form-element-id-11"
                   >
-                    <Input id="form-element-id-11" defaultValue="TX" />
+                    <Input id="stacked-form-element-id-11" defaultValue="TX" />
                   </FormElement>
                 </div>
               </CompoundFormRow>
@@ -385,17 +398,20 @@ export const ObjectFieldTypes = {
                 <div className="slds-size_4-of-6">
                   <FormElement
                     labelContent="Shipping Zip/Postal Code"
-                    inputId="form-element-id-12"
+                    inputId="stacked-form-element-id-12"
                   >
-                    <Input id="form-element-id-12" defaultValue="78767" />
+                    <Input
+                      id="stacked-form-element-id-12"
+                      defaultValue="78767"
+                    />
                   </FormElement>
                 </div>
                 <div className="slds-size_2-of-6">
                   <FormElement
                     labelContent="Shipping Country"
-                    inputId="form-element-id-13"
+                    inputId="stacked-form-element-id-13"
                   >
-                    <Input id="form-element-id-13" defaultValue="USA" />
+                    <Input id="stacked-form-element-id-13" defaultValue="USA" />
                   </FormElement>
                 </div>
               </CompoundFormRow>
@@ -416,13 +432,13 @@ export const ObjectFieldTypes = {
           component: (
             <FormElement
               labelContent="Description"
-              inputId="form-element-id-14"
+              inputId="stacked-form-element-id-14"
               isStacked
               isEditing
               column={1}
             >
               <Textarea
-                id="form-element-id-14"
+                id="stacked-form-element-id-14"
                 defaultValue="Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Etiam porta sem malesuada magna mollis euismod."
               />
             </FormElement>
@@ -447,13 +463,13 @@ export const ObjectFieldTypesHorizontal = {
           component: (
             <FormElement
               isHorizontal
-              inputId="form-element-id-01"
+              inputId="horizontal-form-element-id-01"
               labelContent="Assigned To"
               isRequired
               isEditing
             >
               <Input
-                id="form-element-id-01"
+                id="horizontal-form-element-id-01"
                 readOnly
                 defaultValue="Jack Rogers"
                 required
@@ -469,9 +485,9 @@ export const ObjectFieldTypesHorizontal = {
           component: (
             <Combobox
               isHorizontal
-              id="combobox-id-01"
+              id="horizontal-combobox-id-01"
               label="Team Name"
-              aria-controls="listbox-id-01"
+              aria-controls="horizontal-listbox-id-01"
               isEditing
               autocomplete
               inputIconPosition="right"
@@ -485,7 +501,7 @@ export const ObjectFieldTypesHorizontal = {
               }
               results={
                 <Listbox
-                  id="listbox-id-01"
+                  id="horizontal-listbox-id-01"
                   snapshot={{}}
                   type="entity"
                   count={2}
@@ -516,10 +532,10 @@ export const ObjectFieldTypesHorizontal = {
             <FormElement
               isHorizontal
               labelContent="Security Assessment Required?"
-              inputId="checkbox-id-01"
+              inputId="horizontal-checkbox-id-01"
               isEditing
             >
-              <CheckboxStandalone id="checkbox-id-01" />
+              <CheckboxStandalone id="horizontal-checkbox-id-01" />
             </FormElement>
           )
         },
@@ -529,9 +545,9 @@ export const ObjectFieldTypesHorizontal = {
           component: (
             <Combobox
               isHorizontal
-              id="combobox-id-02"
+              id="horizontal-combobox-id-02"
               label="Status"
-              aria-controls="listbox-id-02"
+              aria-controls="horizontal-listbox-id-02"
               readonly
               isEditing
               inputIconPosition="right"
@@ -546,7 +562,7 @@ export const ObjectFieldTypesHorizontal = {
               }
               results={
                 <Listbox
-                  id="listbox-id-02"
+                  id="horizontal-listbox-id-02"
                   snapshot={{}}
                   type="plain"
                   count={2}
@@ -601,11 +617,11 @@ export const ObjectFieldTypesHorizontal = {
             <FormElement
               isHorizontal
               labelContent="SLA Serial Number"
-              inputId="form-element-id-02"
+              inputId="horizontal-form-element-id-02"
               hasTooltip
               isEditing
             >
-              <Input id="form-element-id-02" defaultValue="5367" />
+              <Input id="horizontal-form-element-id-02" defaultValue="5367" />
             </FormElement>
           )
         },
@@ -619,10 +635,13 @@ export const ObjectFieldTypesHorizontal = {
               isEditing
               formElementClassName="slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open"
               labelContent="Date"
-              inputId="form-element-id-03"
+              inputId="horizontal-form-element-id-03"
               hasRightIcon
             >
-              <Input id="form-element-id-03" defaultValue="1/1/2018" />
+              <Input
+                id="horizontal-form-element-id-03"
+                defaultValue="1/1/2018"
+              />
               <ButtonIcon
                 className="slds-input__icon slds-input__icon_right"
                 symbol="event"
@@ -647,12 +666,12 @@ export const ObjectFieldTypesHorizontal = {
             <FormElement
               isHorizontal
               labelContent="Description"
-              inputId="form-element-id-14"
+              inputId="horizontal-form-element-id-14"
               isEditing
               column={1}
             >
               <Textarea
-                id="form-element-id-14"
+                id="horizontal-form-element-id-14"
                 defaultValue="Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Etiam porta sem malesuada magna mollis euismod."
               />
             </FormElement>
@@ -672,17 +691,23 @@ export const ObjectFieldTypesHorizontal = {
                 <div className="slds-size_1-of-2">
                   <FormElement
                     labelContent="Longitude"
-                    inputId="location-longitude-01"
+                    inputId="horizontal-location-longitude-01"
                   >
-                    <Input id="location-longitude-01" defaultValue="10.283" />
+                    <Input
+                      id="horizontal-location-longitude-01"
+                      defaultValue="10.283"
+                    />
                   </FormElement>
                 </div>
                 <div className="slds-size_1-of-2">
                   <FormElement
                     labelContent="Latitude"
-                    inputId="location-latitude-01"
+                    inputId="horizontal-location-latitude-01"
                   >
-                    <Input id="location-latitude-01" defaultValue="54.293" />
+                    <Input
+                      id="horizontal-location-latitude-01"
+                      defaultValue="54.293"
+                    />
                   </FormElement>
                 </div>
               </CompoundFormRow>
@@ -726,10 +751,10 @@ export const ObjectFieldTypesHorizontal = {
                 <div className="slds-size_1-of-1">
                   <FormElement
                     labelContent="Billing Street"
-                    inputId="form-element-id-04"
+                    inputId="horizontal-form-element-id-04"
                   >
                     <Textarea
-                      id="form-element-id-04"
+                      id="horizontal-form-element-id-04"
                       defaultValue="525 S. Lexington Ave"
                       required
                     />
@@ -740,10 +765,10 @@ export const ObjectFieldTypesHorizontal = {
                 <div className="slds-size_4-of-6">
                   <FormElement
                     labelContent="Billing City"
-                    inputId="form-element-id-05"
+                    inputId="horizontal-form-element-id-05"
                   >
                     <Input
-                      id="form-element-id-05"
+                      id="horizontal-form-element-id-05"
                       defaultValue="Burlington"
                       required
                     />
@@ -752,9 +777,13 @@ export const ObjectFieldTypesHorizontal = {
                 <div className="slds-size_2-of-6">
                   <FormElement
                     labelContent="Billing State/Province"
-                    inputId="form-element-id-06"
+                    inputId="horizontal-form-element-id-06"
                   >
-                    <Input id="form-element-id-06" defaultValue="NC" required />
+                    <Input
+                      id="horizontal-form-element-id-06"
+                      defaultValue="NC"
+                      required
+                    />
                   </FormElement>
                 </div>
               </CompoundFormRow>
@@ -762,10 +791,10 @@ export const ObjectFieldTypesHorizontal = {
                 <div className="slds-size_4-of-6">
                   <FormElement
                     labelContent="Billing Zip/Postal Code"
-                    inputId="form-element-id-07"
+                    inputId="horizontal-form-element-id-07"
                   >
                     <Input
-                      id="form-element-id-07"
+                      id="horizontal-form-element-id-07"
                       defaultValue="27215"
                       required
                     />
@@ -774,10 +803,10 @@ export const ObjectFieldTypesHorizontal = {
                 <div className="slds-size_2-of-6">
                   <FormElement
                     labelContent="Billing Country"
-                    inputId="form-element-id-08"
+                    inputId="horizontal-form-element-id-08"
                   >
                     <Input
-                      id="form-element-id-08"
+                      id="horizontal-form-element-id-08"
                       defaultValue="USA"
                       required
                     />
@@ -803,10 +832,10 @@ export const ObjectFieldTypesHorizontal = {
                 <div className="slds-size_1-of-1">
                   <FormElement
                     labelContent="Shipping Street"
-                    inputId="form-element-id-09"
+                    inputId="horizontal-form-element-id-09"
                   >
                     <Textarea
-                      id="form-element-id-09"
+                      id="horizontal-form-element-id-09"
                       defaultValue="312 Constitution Place"
                     />
                   </FormElement>
@@ -816,17 +845,23 @@ export const ObjectFieldTypesHorizontal = {
                 <div className="slds-size_4-of-6">
                   <FormElement
                     labelContent="Shipping City"
-                    inputId="form-element-id-10"
+                    inputId="horizontal-form-element-id-10"
                   >
-                    <Input id="form-element-id-10" defaultValue="Austin" />
+                    <Input
+                      id="horizontal-form-element-id-10"
+                      defaultValue="Austin"
+                    />
                   </FormElement>
                 </div>
                 <div className="slds-size_2-of-6">
                   <FormElement
                     labelContent="Shipping State/Province"
-                    inputId="form-element-id-11"
+                    inputId="horizontal-form-element-id-11"
                   >
-                    <Input id="form-element-id-11" defaultValue="TX" />
+                    <Input
+                      id="horizontal-form-element-id-11"
+                      defaultValue="TX"
+                    />
                   </FormElement>
                 </div>
               </CompoundFormRow>
@@ -834,17 +869,23 @@ export const ObjectFieldTypesHorizontal = {
                 <div className="slds-size_4-of-6">
                   <FormElement
                     labelContent="Shipping Zip/Postal Code"
-                    inputId="form-element-id-12"
+                    inputId="horizontal-form-element-id-12"
                   >
-                    <Input id="form-element-id-12" defaultValue="78767" />
+                    <Input
+                      id="horizontal-form-element-id-12"
+                      defaultValue="78767"
+                    />
                   </FormElement>
                 </div>
                 <div className="slds-size_2-of-6">
                   <FormElement
                     labelContent="Shipping Country"
-                    inputId="form-element-id-13"
+                    inputId="horizontal-form-element-id-13"
                   >
-                    <Input id="form-element-id-13" defaultValue="USA" />
+                    <Input
+                      id="horizontal-form-element-id-13"
+                      defaultValue="USA"
+                    />
                   </FormElement>
                 </div>
               </CompoundFormRow>

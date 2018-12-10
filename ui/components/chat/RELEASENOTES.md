@@ -8,7 +8,6 @@
 
 ### Added
 
-- Component-level `RELEASENOTES.md` file.
 - File component (image and file content types) is now natively supported within an inbound and outbound message.
 
 ### Fixed

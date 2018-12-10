@@ -15,7 +15,6 @@
 
 ### Added
 
-- Component-level `RELEASENOTES.md` file.
 - New class `sld-file_loading` for loading state.
   - In effort to prevent the hover styles from applying to the loading state, `slds-file_loading` is now added to `slds-file`.
 - Class `slds-has-title` for when Files have a title applied.

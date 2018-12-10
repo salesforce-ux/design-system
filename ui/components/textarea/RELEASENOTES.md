@@ -6,10 +6,6 @@
 
 ## 2.7.0
 
-### Added
-
-- Component-level `RELEASENOTES.md` file.
-
 ### Fixed
 
 - Removed `box-shadow` added by Firefox for all required fields.

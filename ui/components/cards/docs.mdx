@@ -27,7 +27,7 @@ To initialize a card, apply the `slds-card` class to an `<article>` element.
 A card is made up of 3 sections, a header, a body, and a footer. The header and footer have limitations, but the body section can accommodate any layout of related information.
 
 <Example title="Cards Base">
-  <CodeView>
+  <CodeView hasDensityRadioButtons>
     <Card>
       <CardHeader
         title="Accounts"
@@ -50,7 +50,7 @@ A card is made up of 3 sections, a header, a body, and a footer. The header and 
 The card header can have an icon, a title and actions. The icon and title are located on the left, while the actions row is located on the right side of the card header.
 
 <Example title="Cards Header">
-  <CodeView>
+  <CodeView hasDensityRadioButtons>
     <Card>
       <CardHeader
         title="Accounts"
@@ -68,7 +68,7 @@ The actions row of a card header typically accommodates a single action for the 
 ##### Single action
 
 <Example title="Cards Single Action">
-  <CodeView>
+  <CodeView hasDensityRadioButtons>
     <Card>
       <CardHeader
         title="Accounts"
@@ -83,7 +83,7 @@ The actions row of a card header typically accommodates a single action for the 
 ##### Multiple actions
 
 <Example title="Cards Multiple Actions">
-  <CodeView style={{height: '10rem'}}>
+  <CodeView style={{height: '10rem'}} hasDensityRadioButtons>
     <Card>
       <CardHeader
         title="Accounts"
@@ -108,7 +108,7 @@ The card body accommodates any layout or design, as long as its a grouping of re
 For an example of when to use the default behavior, see the [Data Table example](/components/cards/#With-a-Data-Table).
 
 <Example title="Cards Body No Padding">
-  <CodeView>
+  <CodeView hasDensityRadioButtons>
     <Card>
       <CardHeader
         title="Accounts"
@@ -127,7 +127,7 @@ For an example of when to use the default behavior, see the [Data Table example]
 For an example of when to use the `slds-card__body_inner` class, see the [Tiles example](/components/cards/#With-Tiles).
 
 <Example title="Cards Body With Padding">
-  <CodeView>
+  <CodeView hasDensityRadioButtons>
     <Card>
       <CardHeader
         title="Accounts"
@@ -156,7 +156,7 @@ The card footer is optional and should _**only**_ have a "View All" link that ta
 #### With no footer
 
 <Example title="Cards No Footer" >
-  <CodeView>
+  <CodeView hasDensityRadioButtons>
     <Card>
       <CardHeader
         title="Accounts"
@@ -175,7 +175,7 @@ The card footer is optional and should _**only**_ have a "View All" link that ta
 #### With a footer
 
 <Example title="Cards with Footer" >
-  <CodeView>
+  <CodeView hasDensityRadioButtons>
     <Card>
       <CardHeader
         title="Accounts"
@@ -202,7 +202,7 @@ When a card doesn't have any data, it is represented with the body and footer co
 #### Collapsed
 
 <Example title="Cards Collapsed" >
-  <CodeView>
+  <CodeView hasDensityRadioButtons>
     <Card>
       <CardHeader
         title="Card Header"
@@ -221,7 +221,7 @@ When a card doesn't have any data, it is represented with the body and footer co
 Alternatively, a card can be represented with no data by using an [illustration](/components/illustration) in the card body.
 
 <Example title="Cards With illustration" >
-  <CodeView>
+  <CodeView hasDensityRadioButtons>
     <Card>
       <CardHeader
         title="Tasks"
@@ -246,7 +246,7 @@ Alternatively, a card can be represented with no data by using an [illustration]
 When a card instantiates and is loading, we want to provide feedback to the user by display a spinner. Once the data has loaded, the spinner can be removed from the card component.
 
 <Example title="Cards Loading" >
-  <CodeView>
+  <CodeView hasDensityRadioButtons>
     <Card>
       <CardHeader
         title="Tasks"
@@ -265,7 +265,7 @@ When a card instantiates and is loading, we want to provide feedback to the user
 Placing a data table inside of an `slds-card__body` is an example of when to utilize the default behavior of a card body, since no padding is applied.
 
 <Example title="Cards With Data Table" >
-  <CodeView>
+  <CodeView hasDensityRadioButtons>
     <CardWithDataTable/>
   </CodeView>
 </Example>
@@ -275,7 +275,7 @@ Placing a data table inside of an `slds-card__body` is an example of when to uti
 Placing contact tiles inside of an `slds-card__body` is an example of using `slds-card__body_inner` to apply additional padding to the card body content.
 
 <Example title="Cards with Title">
-  <CodeView>
+  <CodeView hasDensityRadioButtons>
     <CardWithTiles/>
   </CodeView>
 </Example>
@@ -289,7 +289,7 @@ When a card is located inside of another card body, we remove the dropshadow and
 #### No styling
 
 <Example title="Cards Nested with No Styling">
-  <CodeView>
+  <CodeView hasDensityRadioButtons>
     <Card>
       <CardHeader
         title="Outer Card Header"
@@ -323,7 +323,7 @@ When a card is located inside of another card body, we remove the dropshadow and
 Adding `slds-card_boundary` to the `slds-card` element will give you back the card styling.
 
 <Example title="Cards Nested With Styling" >
-  <CodeView>
+  <CodeView hasDensityRadioButtons>
     <Card>
       <CardHeader
         title="Outer Card Header"
@@ -357,7 +357,7 @@ Adding `slds-card_boundary` to the `slds-card` element will give you back the ca
 To combine several cards into a single card look, wrap the cards using `slds-card-wrapper`. Similar to the nested cards, adding `slds-card_boundary` to the `slds-card` element will give you back the card styling.
 
 <Example title="Cards Wrapped" >
-  <CodeView>
+  <CodeView hasDensityRadioButtons>
     <WrappedCards/>
   </CodeView>
 </Example>
@@ -367,7 +367,7 @@ To combine several cards into a single card look, wrap the cards using `slds-car
 For cards that contain Einstein related information, you can include an Einstein themed card header.
 
 <Example title="Cards Einstein Theme" >
-  <CodeView>
+  <CodeView hasDensityRadioButtons>
     <EinsteinCard/>
   </CodeView>
 </Example>
@@ -375,7 +375,7 @@ For cards that contain Einstein related information, you can include an Einstein
 ### With an Icon
 
 <Example title="Cards Einstein Theme with Icon" >
-  <CodeView>
+  <CodeView hasDensityRadioButtons>
     <EinsteinCard hasIcon/>
   </CodeView>
 </Example>
@@ -383,7 +383,7 @@ For cards that contain Einstein related information, you can include an Einstein
 ### With Actions
 
 <Example title="Cards Einstein Theme with Icon and Actions" >
-  <CodeView>
+  <CodeView hasDensityRadioButtons>
     <EinsteinCard hasIcon hasActions/>
   </CodeView>
 </Example>

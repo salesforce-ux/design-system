@@ -1,12 +1,14 @@
 // stylelint-disable selector-class-pattern
 // CodeView
+$light-gray-border-color: #f2f2f2;
+
 .docs-codeblock {
   margin-bottom: 2rem;
 }
 
 .docs-codeblock-example,
 .docs-codeblock-source {
-  border: solid 3px #f2f2f2;
+  border: solid 3px $light-gray-border-color;
   padding: 1rem;
   position: relative;
 }
@@ -56,17 +58,31 @@
   right: 1rem;
   top: 0;
   z-index: 1;
-  border-left: 1px solid #f2f2f2;
-  border-right: 1px solid #f2f2f2;
-  border-bottom: 1px solid #f2f2f2;
+  border-left: 1px solid $light-gray-border-color;
+  border-right: 1px solid $light-gray-border-color;
+  border-bottom: 1px solid $light-gray-border-color;
   background: #fff;
+}
+
+.docs-codeview__density-bar {
+  display: flex;
+  justify-content: flex-end;
+  background: $light-gray-border-color;
+  margin: -1rem -1rem 1rem -1rem;
+  padding: 0.25rem 0.5rem;
+}
+
+.docs-codeview__density-bar-form {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
 }
 
 .docs-codeblock__action-bar li {
   padding: 0 0.5rem;
 
   + li {
-    border-right: 1px solid #f2f2f2;
+    border-right: 1px solid $light-gray-border-color;
   }
 }
 
@@ -159,7 +175,7 @@ blockquote.doc {
   font-weight: 300;
   padding: 1rem;
   margin: 0 0 1.5rem 0;
-  border: 1px solid #f2f2f2;
+  border: 1px solid $light-gray-border-color;
   border-left-width: 0.125rem;
 
   .doc {
@@ -231,7 +247,7 @@ ul.doc > li.doc >  ol.doc {
 
 table.doc {
   background: #fff;
-  border: 1px solid #f2f2f2;
+  border: 1px solid $light-gray-border-color;
   margin-bottom: 1.5rem;
 }
 
@@ -247,12 +263,12 @@ thead.doc td.doc {
 
 tr.doc td.doc,
 tr.doc th.doc {
-  border-top: 1px solid #f2f2f2;
+  border-top: 1px solid $light-gray-border-color;
 }
 
 tr.doc td:not(:first-child),
 tr.doc th:not(:first-child) {
-  border-left: 1px solid #f2f2f2;
+  border-left: 1px solid $light-gray-border-color;
 }
 
 code.doc {

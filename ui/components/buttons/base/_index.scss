@@ -172,9 +172,9 @@ a.slds-button--inverse:focus {
 
   &[disabled],
   &:disabled {
-    background: $brand-disabled;
-    border-color: $brand-disabled;
-    color: $color-text-button-brand-disabled;
+    border-color: $color-border-primary;
+    color: $color-text-button-default-disabled;
+    background-color: $color-background-button-default-disabled;
   }
 }
 
@@ -242,8 +242,8 @@ a.slds-button--inverse:focus {
 
   &[disabled],
   &:disabled {
-    background: $color-background-button-brand-disabled;
-    border-color: $color-border-button-brand-disabled;
+    background: $brand-disabled;
+    border-color: $brand-disabled;
     color: $color-text-button-brand-disabled;
   }
 }

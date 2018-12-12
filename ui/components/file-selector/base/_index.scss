@@ -5,6 +5,7 @@
  * @name base
  * @selector .slds-file-selector
  * @restrict div
+ * @support dev-ready
  * @variant
  */
 .slds-file-selector {
@@ -128,7 +129,7 @@
  * @name image
  * @selector .slds-file-selector_images
  * @restrict .slds-file-selector
- * @required
+ * @support dev-ready
  * @variant
  */
 .slds-file-selector_images,
@@ -158,7 +159,7 @@
  * @name integrated
  * @selector .slds-file-selector_integrated
  * @restrict .slds-file-selector
- * @required
+ * @support dev-ready
  * @variant
  */
 .slds-file-selector_integrated,

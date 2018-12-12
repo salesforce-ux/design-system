@@ -8,6 +8,7 @@
  * @name base
  * @selector .slds-avatar
  * @restrict div, span, a
+ * @support dev-ready
  * @variant
  */
 .slds-avatar {
@@ -192,6 +193,7 @@
  * @summary Used for initials inside an avatar
  * @selector .slds-avatar__initials
  * @restrict .slds-avatar abbr
+ * @support dev-ready
  * @variant
  */
 .slds-avatar__initials {

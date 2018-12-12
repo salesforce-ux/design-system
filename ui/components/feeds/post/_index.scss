@@ -7,7 +7,6 @@
  * @selector .slds-feed__item-comments
  * @restrict .slds-feed__item div
  * @notes Contains comment replies and publisher
- * @required
  */
 .slds-feed__item-comments {
   background: $color-background-post;
@@ -23,6 +22,7 @@
  * @name post
  * @selector .slds-post
  * @restrict .slds-feed article
+ * @support dev-ready
  * @variant
  */
 .slds-post {

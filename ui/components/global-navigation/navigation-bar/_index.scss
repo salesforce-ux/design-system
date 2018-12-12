@@ -9,6 +9,7 @@
  * @name navigation-bar
  * @selector .slds-context-bar
  * @restrict div
+ * @support dev-ready
  * @variant
  */
 .slds-context-bar {
@@ -452,6 +453,7 @@
    * @name navigation-tab-bar
    * @selector .slds-context-bar_tabs
    * @restrict .slds-context-bar
+   * @support dev-ready
    * @variant
    */
   &_tabs,

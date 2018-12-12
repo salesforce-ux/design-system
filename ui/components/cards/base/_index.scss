@@ -8,6 +8,7 @@
 * @name base
 * @selector .slds-card
 * @restrict article, div, section
+* @support dev-ready
 * @variant
 */
 .slds-card {
@@ -139,6 +140,7 @@
  * @summary Removes the card look from nested cards and pulls them to the boundary of the card wrapper, making the nested cards look like they are inside of one card
  * @selector .slds-card-wrapper
  * @restrict div
+ * @support dev-ready
  * @variant
  */
 .slds-card-wrapper {

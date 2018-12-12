@@ -549,3 +549,9 @@ props:
     value: '#D3451D'
   SALES_CADENCE:
     value: '#54698D'
+  CODE_PLAYGROUND:
+    value: '#54698D'
+  PLANOGRAM:
+    value: '#3C97DD'
+  VISITS:
+    value: '#3C97DD'

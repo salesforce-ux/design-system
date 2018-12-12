@@ -5,7 +5,6 @@ exports[`renders a checked and disabled checkbox button 1`] = `
   className="slds-checkbox_add-button"
 >
   <input
-    className="slds-assistive-text"
     defaultChecked={true}
     disabled={true}
     id="add-checkbox-4"
@@ -31,7 +30,6 @@ exports[`renders a checked checkbox button 1`] = `
   className="slds-checkbox_add-button"
 >
   <input
-    className="slds-assistive-text"
     defaultChecked={true}
     disabled={undefined}
     id="add-checkbox-2"
@@ -57,7 +55,6 @@ exports[`renders a default checkbox button 1`] = `
   className="slds-checkbox_add-button"
 >
   <input
-    className="slds-assistive-text"
     defaultChecked={undefined}
     disabled={undefined}
     id="add-checkbox-1"
@@ -83,7 +80,6 @@ exports[`renders a disabled checkbox button 1`] = `
   className="slds-checkbox_add-button"
 >
   <input
-    className="slds-assistive-text"
     defaultChecked={undefined}
     disabled={true}
     id="add-checkbox-3"

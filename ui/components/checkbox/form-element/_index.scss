@@ -15,7 +15,6 @@
   [type="checkbox"] {
     @include square(1rem); // Increase dimensions since the pointer-event is being passed to this element
     margin: 0;
-    clip: auto; // This allows element to be available but since visibily hidden
   }
 
   .slds-checkbox_faux {

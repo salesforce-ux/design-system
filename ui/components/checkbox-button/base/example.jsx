@@ -14,7 +14,6 @@ export let CheckboxAddButton = props => {
   return (
     <div className="slds-checkbox_add-button">
       <input
-        className="slds-assistive-text"
         type="checkbox"
         id={uniqueId}
         value={uniqueId}

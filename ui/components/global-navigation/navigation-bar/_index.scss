@@ -112,6 +112,18 @@
       }
     }
 
+    &:before {
+      background: #fff;
+      bottom: 0;
+      content: '';
+      height: auto;
+      left: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+      transition-property: top, background-color;
+    }
+
     &.slds-is-active {
       animation: bkAnim 0.135s cubic-bezier(0.39, 0.575, 0.565, 1) both;
 
@@ -237,14 +249,10 @@
      * @restrict .slds-context-bar__item
      */
     &.slds-has-warning {
-      @include tab-notification-before($color-background-warning, $color-background-warning);
+      @include tab-notification-before($color-background-warning, $color-background-warning-dark);
 
       &:before {
         animation-name: warning-pulse;
-      }
-
-      &:hover:before {
-        opacity: 0.7;
       }
 
       .slds-indicator_unread {

@@ -50,7 +50,7 @@ class CodeView extends React.Component {
         {hasDensityRadioButtons && (
           <fieldset className="slds-form-element docs-codeview__density-bar">
             <legend className="slds-assistive-text slds-form-element__legend slds-form-element__label">
-              Radio Group Label
+              UI Variable Density Setting
             </legend>
             <div className="slds-form-element__control docs-codeview__density-bar-form">
               <span className="slds-radio">

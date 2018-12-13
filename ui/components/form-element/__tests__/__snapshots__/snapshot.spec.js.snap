@@ -2320,6 +2320,7 @@ exports[`Horizontal Form Element renders deprecated horizontal form elements - v
             className="slds-form-element__static"
           >
             <span
+              aria-hidden={undefined}
               className="slds-avatar slds-avatar_x-small slds-avatar_circle slds-m-right_xx-small"
             >
               <img
@@ -3229,6 +3230,7 @@ exports[`Stacked Form Element renders deprecated stacked form elements - edit mo
             className="slds-form-element__static"
           >
             <span
+              aria-hidden={undefined}
               className="slds-avatar slds-avatar_x-small slds-avatar_circle slds-m-right_xx-small"
             >
               <img
@@ -3907,6 +3909,7 @@ exports[`Stacked Form Element renders deprecated stacked form elements - view mo
             className="slds-form-element__static"
           >
             <span
+              aria-hidden={undefined}
               className="slds-avatar slds-avatar_x-small slds-avatar_circle slds-m-right_xx-small"
             >
               <img

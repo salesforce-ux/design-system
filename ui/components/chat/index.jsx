@@ -3,7 +3,7 @@
 
 import React from 'react';
 import classNames from 'classnames';
-import { Avatar } from '../avatar/base/example';
+import { Avatar } from '../avatar';
 import { UtilityIcon } from '../icons/base/example';
 import { TypingIcon } from '../dynamic-icons/typing/example';
 
@@ -188,7 +188,10 @@ const ChatMessageAction = props => (
 );
 
 export const ChatAvatar = props => (
-  <Avatar className="slds-avatar_circle slds-chat-avatar">
+  <Avatar
+    className="slds-avatar_circle slds-chat-avatar"
+    ariaHidden={props.ariaHidden}
+  >
     <abbr
       className="slds-avatar__initials slds-avatar__initials_inverse"
       title={props.name}

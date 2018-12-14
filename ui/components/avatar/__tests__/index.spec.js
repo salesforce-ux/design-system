@@ -13,7 +13,7 @@ it('renders a default avatar launcher', () =>
       <img
         alt="Person name"
         src="/assets/images/avatar2.jpg"
-        title="User avatar"
+        title="Person name"
       />
     </Avatar>
   ));
@@ -23,7 +23,7 @@ it('renders a avatar fallback with user initials', () =>
     <Avatar className="slds-avatar_circle">
       <abbr
         className="slds-avatar__initials slds-icon-standard-user"
-        title="person name"
+        title="Person name"
       >
         AB
       </abbr>
@@ -35,7 +35,7 @@ it('renders an inversed avatar fallback with user initials', () =>
     <Avatar className="slds-avatar_circle">
       <abbr
         className="slds-avatar__initials slds-avatar__initials_inverse"
-        title="person name"
+        title="Person name"
       >
         AB
       </abbr>

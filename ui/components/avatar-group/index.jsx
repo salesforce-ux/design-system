@@ -75,11 +75,12 @@ AvatarGrouped.propTypes = {
 
 export const AvatarImage = props => {
   const { imgType } = props;
+  const assistiveText = `Person ${imgType} name`;
   return (
     <img
-      alt={`Person ${imgType} name`}
+      alt={assistiveText}
       src={`/assets/images/avatar${imgType}.jpg`}
-      title={`User ${imgType} avatar`}
+      title={assistiveText}
     />
   );
 };
@@ -100,7 +101,7 @@ export const AvatarGroupedUserInitials = props => (
   <AvatarInitials
     isGrouped
     isInverse={props.isInverse}
-    title="person name"
+    title="Person name"
     initials="WW"
   />
 );

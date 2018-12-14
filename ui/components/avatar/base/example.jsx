@@ -15,7 +15,7 @@ export default (
     <img
       alt="Person name"
       src="/assets/images/avatar2.jpg"
-      title="User avatar"
+      title="Person name"
     />
   </Avatar>
 );
@@ -68,7 +68,7 @@ export let examples = [
       <Avatar>
         <AvatarInitials
           iconClassName="slds-icon-standard-account"
-          title="company name"
+          title="Company name"
           initials="Ac"
         />
       </Avatar>
@@ -88,7 +88,7 @@ export let examples = [
     label: 'Fallback - User Initials Inversed',
     element: (
       <Avatar className="slds-avatar_circle">
-        <AvatarInitials title="person name" initials="AB" isInverse />
+        <AvatarInitials title="Person name" initials="AB" isInverse />
       </Avatar>
     )
   },

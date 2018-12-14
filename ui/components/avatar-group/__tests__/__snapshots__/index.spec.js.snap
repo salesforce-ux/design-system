@@ -11,7 +11,7 @@ exports[`renders a default avatar group 1`] = `
     <img
       alt="Person 2 name"
       src="/assets/images/avatar2.jpg"
-      title="User 2 avatar"
+      title="Person 2 name"
     />
   </span>
   <span
@@ -21,7 +21,7 @@ exports[`renders a default avatar group 1`] = `
     <img
       alt="Person 2 name"
       src="/assets/images/avatar2.jpg"
-      title="User 2 avatar"
+      title="Person 2 name"
     />
   </span>
 </span>
@@ -38,7 +38,7 @@ exports[`renders a large avatar group with image and icon 1`] = `
     <img
       alt="Person 1 name"
       src="/assets/images/avatar1.jpg"
-      title="User 1 avatar"
+      title="Person 1 name"
     />
   </span>
   <span
@@ -100,7 +100,7 @@ exports[`renders a small avatar group with icon and initials 1`] = `
   >
     <abbr
       className="slds-avatar__initials slds-avatar-grouped__initials"
-      title="person name"
+      title="Person name"
     >
       WW
     </abbr>
@@ -118,7 +118,7 @@ exports[`renders an avatar group with inversed user initials 1`] = `
   >
     <abbr
       className="slds-avatar__initials slds-avatar__initials_inverse slds-avatar-grouped__initials"
-      title="person name"
+      title="Person name"
     >
       WW
     </abbr>
@@ -129,7 +129,7 @@ exports[`renders an avatar group with inversed user initials 1`] = `
   >
     <abbr
       className="slds-avatar__initials slds-avatar__initials_inverse slds-avatar-grouped__initials"
-      title="person name"
+      title="Person name"
     >
       WW
     </abbr>
@@ -147,7 +147,7 @@ exports[`renders an x-small avatar group with initials and icon 1`] = `
   >
     <abbr
       className="slds-avatar__initials slds-avatar-grouped__initials"
-      title="person name"
+      title="Person name"
     >
       WW
     </abbr>
@@ -159,7 +159,7 @@ exports[`renders an x-small avatar group with initials and icon 1`] = `
     <img
       alt="Person 1 name"
       src="/assets/images/avatar1.jpg"
-      title="User 1 avatar"
+      title="Person 1 name"
     />
   </span>
 </span>

@@ -73,7 +73,7 @@ exports[`renders a avatar fallback with user initials 1`] = `
 >
   <abbr
     className="slds-avatar__initials slds-icon-standard-user"
-    title="person name"
+    title="Person name"
   >
     AB
   </abbr>
@@ -88,7 +88,7 @@ exports[`renders a default avatar launcher 1`] = `
   <img
     alt="Person name"
     src="/assets/images/avatar2.jpg"
-    title="User avatar"
+    title="Person name"
   />
 </span>
 `;
@@ -100,7 +100,7 @@ exports[`renders an inversed avatar fallback with user initials 1`] = `
 >
   <abbr
     className="slds-avatar__initials slds-avatar__initials_inverse"
-    title="person name"
+    title="Person name"
   >
     AB
   </abbr>

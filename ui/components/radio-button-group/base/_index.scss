@@ -70,8 +70,13 @@
 
   // Hide input and style radio--faux
   [type="radio"] {
+    @include square(1px);
+    border: 0;
+    clip: rect(0 0 0 0);
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
     position: absolute;
-    opacity: 0;
 
     // Checked State with Interactions
     // +/~ slds-radio--faux selector are for legacy support

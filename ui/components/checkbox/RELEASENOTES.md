@@ -8,9 +8,6 @@
 - Added unchecked image based checkbox example [view mode checkbox - unchecked](components/checkbox/?state=view-mode-unchecked&variant=form-element)
 - Added checked image based checkbox example [view mode checkbox - checked](components/checkbox/?state=view-mode-checked&variant=form-element)
 
-### Fixed
-- Switched to using opacity as a means of visually hiding the checkbox input, so that Dragon Naturally Speaking will recognise the controls
-
 ## 2.7.0
 
 ### Added

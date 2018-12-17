@@ -4,7 +4,4 @@
 
 <!-- ## [Unreleased] -->
 
-## 2.8.0
-
-### Fixed
-- Switched to using opacity as a means of visually hiding the radio input, so that Dragon Naturally Speaking will recognise the controls
+<!-- ## [VERSION] -->

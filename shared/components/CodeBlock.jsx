@@ -60,12 +60,7 @@ class CodeBlock extends Component {
   render() {
     const { language, toggleCode = true } = this.props;
     return (
-      <div
-        className={classNames(
-          'docs-codeblock-source',
-          toggleCode && (this.state.open ? 'code-expanded' : 'code-collapsed')
-        )}
-      >
+      <div className="docs-codeblock-source">
         <ul className="docs-codeblock__action-bar">
           {toggleCode && (
             <li>
@@ -79,14 +74,21 @@ class CodeBlock extends Component {
             <Copy key="copy" className="site-code_copy" text={this.getCode()} />
           </li>
         </ul>
-        <pre className={`language-${language}`}>
-          <code
-            className={`language-${language}`}
-            dangerouslySetInnerHTML={{
-              __html: this.getHighlightedCode()
-            }}
-          />
-        </pre>
+        <div
+          className={classNames(
+            'docs-codeblock-source__code',
+            toggleCode && (this.state.open ? 'code-expanded' : 'code-collapsed')
+          )}
+        >
+          <pre className={`language-${language}`}>
+            <code
+              className={`language-${language}`}
+              dangerouslySetInnerHTML={{
+                __html: this.getHighlightedCode()
+              }}
+            />
+          </pre>
+        </div>
       </div>
     );
   }

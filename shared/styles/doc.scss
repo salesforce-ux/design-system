@@ -335,3 +335,34 @@ h2.doc-toc-header {
   box-shadow: rgba(43, 40, 38, 0.1) 0 0 0 1px inset;
   border-radius: 4px;
 }
+
+.doc-spacing {
+  display: inline-flex;
+  outline: 1px dashed rgba(43, 40, 38, 0.35);
+}
+
+.doc-padding {
+  width: 8rem;
+  height: 8rem;
+}
+
+.doc-padding::before{
+  content: '';
+  display: block;
+  background: #1589ee;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+.doc-margin {
+  width: 3rem;
+  height: 3rem;
+}
+
+.doc-margin_content {
+  background: #1589ee;
+  border-radius: 4px;
+}

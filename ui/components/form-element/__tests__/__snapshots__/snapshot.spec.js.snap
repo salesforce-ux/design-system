@@ -2320,6 +2320,7 @@ exports[`Horizontal Form Element renders deprecated horizontal form elements - v
             className="slds-form-element__static"
           >
             <span
+              aria-hidden={undefined}
               className="slds-avatar slds-avatar_x-small slds-avatar_circle slds-m-right_xx-small"
             >
               <img
@@ -3007,7 +3008,7 @@ exports[`Horizontal Form Element renders simple horizontal form elements 1`] = `
   >
     <label
       className="slds-form-element__label"
-      htmlFor="input-id-01"
+      htmlFor="horizontal-input-id-01"
       id={undefined}
     >
       Text Input
@@ -3018,7 +3019,7 @@ exports[`Horizontal Form Element renders simple horizontal form elements 1`] = `
       <input
         className="slds-input"
         defaultValue={undefined}
-        id="input-id-01"
+        id="horizontal-input-id-01"
         placeholder="Placeholder Text"
         readOnly={undefined}
         type="text"
@@ -3031,7 +3032,7 @@ exports[`Horizontal Form Element renders simple horizontal form elements 1`] = `
   >
     <label
       className="slds-form-element__label"
-      htmlFor="input-id-02"
+      htmlFor="horizontal-input-id-02"
       id={undefined}
     >
       Textarea Input
@@ -3041,7 +3042,7 @@ exports[`Horizontal Form Element renders simple horizontal form elements 1`] = `
     >
       <textarea
         className="slds-textarea"
-        id="input-id-02"
+        id="horizontal-input-id-02"
         placeholder="Placeholder Text"
       />
     </div>
@@ -3229,6 +3230,7 @@ exports[`Stacked Form Element renders deprecated stacked form elements - edit mo
             className="slds-form-element__static"
           >
             <span
+              aria-hidden={undefined}
               className="slds-avatar slds-avatar_x-small slds-avatar_circle slds-m-right_xx-small"
             >
               <img
@@ -3907,6 +3909,7 @@ exports[`Stacked Form Element renders deprecated stacked form elements - view mo
             className="slds-form-element__static"
           >
             <span
+              aria-hidden={undefined}
               className="slds-avatar slds-avatar_x-small slds-avatar_circle slds-m-right_xx-small"
             >
               <img
@@ -4559,7 +4562,7 @@ exports[`Stacked Form Element renders simple stacked form elements 1`] = `
   >
     <label
       className="slds-form-element__label"
-      htmlFor="input-id-01"
+      htmlFor="stacked-input-id-01"
       id={undefined}
     >
       Text Input
@@ -4570,7 +4573,7 @@ exports[`Stacked Form Element renders simple stacked form elements 1`] = `
       <input
         className="slds-input"
         defaultValue={undefined}
-        id="input-id-01"
+        id="stacked-input-id-01"
         placeholder="Placeholder Text"
         readOnly={undefined}
         type="text"
@@ -4583,7 +4586,7 @@ exports[`Stacked Form Element renders simple stacked form elements 1`] = `
   >
     <label
       className="slds-form-element__label"
-      htmlFor="input-id-02"
+      htmlFor="stacked-input-id-02"
       id={undefined}
     >
       Textarea Input
@@ -4593,7 +4596,7 @@ exports[`Stacked Form Element renders simple stacked form elements 1`] = `
     >
       <textarea
         className="slds-textarea"
-        id="input-id-02"
+        id="stacked-input-id-02"
         placeholder="Placeholder Text"
       />
     </div>

@@ -70,15 +70,19 @@ export let examples = [
     label: 'Simple - Stacked form layout',
     element: (
       <div className="slds-form">
-        <FormElement labelContent="Text Input" inputId="input-id-01" isStacked>
-          <Input id="input-id-01" placeholder="Placeholder Text" />
+        <FormElement
+          labelContent="Text Input"
+          inputId="stacked-input-id-01"
+          isStacked
+        >
+          <Input id="stacked-input-id-01" placeholder="Placeholder Text" />
         </FormElement>
         <FormElement
           labelContent="Textarea Input"
-          inputId="input-id-02"
+          inputId="stacked-input-id-02"
           isStacked
         >
-          <Textarea id="input-id-02" placeholder="Placeholder Text" />
+          <Textarea id="stacked-input-id-02" placeholder="Placeholder Text" />
         </FormElement>
         <Fieldset label="Checkbox Group label" isStacked>
           <Checkbox label="All opportunities owned by you" name="default" />

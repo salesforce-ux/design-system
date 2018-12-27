@@ -60,6 +60,10 @@ describe('Chat list', () => {
 describe('Chat avatar', () => {
   it('renders a chat avatar', () =>
     matchesMarkup(<ChatAvatar name="Simon Taggart" initials="ST" />));
+  it('renders a chat avatar with aria hidden equals true', () =>
+    matchesMarkup(
+      <ChatAvatar name="Simon Taggart" initials="ST" ariaHidden="true" />
+    ));
 });
 
 describe('Chat message', () => {

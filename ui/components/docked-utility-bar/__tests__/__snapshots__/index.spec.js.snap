@@ -247,11 +247,6 @@ exports[`Base Docked Utility Bar - Utility Bar Item renders a utility bar item w
     aria-pressed={true}
     className="slds-button slds-utility-bar__action slds-is-active"
   >
-    <span
-      className="slds-assistive-text"
-    >
-      : is popped out in new window
-    </span>
     <svg
       aria-hidden={true}
       className="slds-button__icon slds-button__icon_left"
@@ -264,6 +259,11 @@ exports[`Base Docked Utility Bar - Utility Bar Item renders a utility bar item w
       className="slds-utility-bar__text"
     >
       History
+    </span>
+    <span
+      className="slds-assistive-text"
+    >
+      : is popped out in new window
     </span>
   </button>
 </li>

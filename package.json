@@ -28,7 +28,7 @@
     "@salesforce-ux/design-system-markup": "2.0.2",
     "@salesforce-ux/design-system-parser": "1.0.1",
     "@salesforce-ux/design-system-previewer": "3.2.0",
-    "@salesforce-ux/icons": "9.21.0",
+    "@salesforce-ux/icons": "9.24.0",
     "@salesforce-ux/instant-vrt": "2.0.0",
     "@salesforce-ux/scss-parser-aura": "3.0.4",
     "@std/esm": "0.23.2",
@@ -141,6 +141,7 @@
     "react-test-renderer": "16.4.1",
     "rimraf": "2.6.1",
     "sass-loader": "6.0.6",
+    "semver": "5.5.1",
     "scss-inline-imports": "1.0.5",
     "scss-parser": "1.0.0",
     "strip-indent": "2.0.0",
@@ -185,7 +186,8 @@
     "precommit": "lint-staged",
     "pr-checks": "npm run gulp -- pr-checks",
     "compile-aura-tokens-map": "npm run gulp -- generate:auraTokensMap",
-    "compile-token-component-map": "npm run gulp -- generate:tokenComponentMap"
+    "compile-token-component-map": "npm run gulp -- generate:tokenComponentMap",
+    "releasenotes": "node ./scripts/release-notes/index.js"
   },
   "lint-staged": {
     "linters": {

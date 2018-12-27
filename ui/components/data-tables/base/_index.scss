@@ -7,7 +7,7 @@
  * @name base
  * @selector .slds-table
  * @restrict table
- * @required
+ * @support dev-ready
  * @variant
  */
 .slds-table {
@@ -272,6 +272,7 @@
  * @name advanced
  * @selector .slds-table_fixed-layout
  * @restrict .slds-table
+ * @support dev-ready
  * @variant
  */
 .slds-table_fixed-layout,

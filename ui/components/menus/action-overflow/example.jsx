@@ -2,6 +2,7 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 import React from 'react';
+import PropTypes from 'prop-types';
 import ButtonIcon from '../../button-icons/';
 import { Trigger, Menu, MenuList, MenuItem } from '../dropdown/example';
 import classNames from 'classnames';
@@ -26,9 +27,9 @@ const moreIcon = (
 );
 
 export const ActionOverflow = props => {
-  const position = props.position || 'left';
+  const { position, dropdownIsOpen } = props;
   return (
-    <Trigger className="slds-is-open" triggerIcon={moreIcon}>
+    <Trigger isOpen={dropdownIsOpen} triggerIcon={moreIcon}>
       <Menu
         className={classNames(
           'slds-dropdown_actions',
@@ -43,6 +44,16 @@ export const ActionOverflow = props => {
       </Menu>
     </Trigger>
   );
+};
+
+ActionOverflow.defaultProps = {
+  dropdownIsOpen: true,
+  position: 'left'
+};
+
+ActionOverflow.propTypes = {
+  position: PropTypes.oneOf(['left', 'right']),
+  dropdownIsOpen: PropTypes.bool
 };
 
 /// ///////////////////////////////////////////

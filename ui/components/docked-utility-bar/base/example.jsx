@@ -73,17 +73,17 @@ export let UtilityBarItem = props => (
           <span className="slds-assistive-text">●</span>
         </abbr>
       ) : null}
-      {props.hasPopOut && (
-        <span className="slds-assistive-text">
-          : is popped out in new window
-        </span>
-      )}
       <SvgIcon
         className="slds-button__icon slds-button__icon_left"
         sprite="utility"
         symbol={props.symbol}
       />
       <span className="slds-utility-bar__text">{props.children}</span>
+      {props.hasPopOut && (
+        <span className="slds-assistive-text">
+          : is popped out in new window
+        </span>
+      )}
     </button>
   </li>
 );

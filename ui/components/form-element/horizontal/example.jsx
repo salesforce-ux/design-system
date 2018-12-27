@@ -75,17 +75,20 @@ export let examples = [
       <div className="slds-form">
         <FormElement
           labelContent="Text Input"
-          inputId="input-id-01"
+          inputId="horizontal-input-id-01"
           isHorizontal
         >
-          <Input id="input-id-01" placeholder="Placeholder Text" />
+          <Input id="horizontal-input-id-01" placeholder="Placeholder Text" />
         </FormElement>
         <FormElement
           labelContent="Textarea Input"
-          inputId="input-id-02"
+          inputId="horizontal-input-id-02"
           isHorizontal
         >
-          <Textarea id="input-id-02" placeholder="Placeholder Text" />
+          <Textarea
+            id="horizontal-input-id-02"
+            placeholder="Placeholder Text"
+          />
         </FormElement>
         <Fieldset label="Checkbox Group label" isHorizontal>
           <Checkbox label="All opportunities owned by you" name="default" />

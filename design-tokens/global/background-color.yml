@@ -133,3 +133,6 @@ props:
   COLOR_BACKGROUND_WARNING:
     value: '{!KOROMIKO}'
     comment: Color for UI elements that have to do with warning.
+  COLOR_BACKGROUND_WARNING_DARK:
+    value: '{!SUNSHADE}'
+    comment: Dark Color for UI elements that have to do with warning.

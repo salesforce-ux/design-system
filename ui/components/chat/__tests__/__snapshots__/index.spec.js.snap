@@ -40,6 +40,7 @@ exports[`Chat Images and Files renders a loading inbound chat message item with 
     className="slds-chat-message"
   >
     <span
+      aria-hidden={undefined}
       className="slds-avatar slds-avatar_circle slds-chat-avatar"
     >
       <abbr
@@ -144,6 +145,7 @@ exports[`Chat Images and Files renders a loading inbound chat message item with 
     className="slds-chat-message"
   >
     <span
+      aria-hidden={undefined}
       className="slds-avatar slds-avatar_circle slds-chat-avatar"
     >
       <abbr
@@ -254,6 +256,7 @@ exports[`Chat Images and Files renders an inbound chat message item with file an
     className="slds-chat-message"
   >
     <span
+      aria-hidden={undefined}
       className="slds-avatar slds-avatar_circle slds-chat-avatar"
     >
       <abbr
@@ -400,6 +403,7 @@ exports[`Chat Images and Files renders an inbound chat message item with image a
     className="slds-chat-message"
   >
     <span
+      aria-hidden={undefined}
       className="slds-avatar slds-avatar_circle slds-chat-avatar"
     >
       <abbr
@@ -506,6 +510,7 @@ exports[`Chat Images and Files renders an inbound chat message item with portrai
     className="slds-chat-message"
   >
     <span
+      aria-hidden={undefined}
       className="slds-avatar slds-avatar_circle slds-chat-avatar"
     >
       <abbr
@@ -612,6 +617,7 @@ exports[`Chat Images and Files renders an inbound chat message item with portrai
     className="slds-chat-message"
   >
     <span
+      aria-hidden={undefined}
       className="slds-avatar slds-avatar_circle slds-chat-avatar"
     >
       <abbr
@@ -1216,6 +1222,21 @@ exports[`Chat Images and Files renders an outbound chat message item with portra
 
 exports[`Chat avatar renders a chat avatar 1`] = `
 <span
+  aria-hidden={undefined}
+  className="slds-avatar slds-avatar_circle slds-chat-avatar"
+>
+  <abbr
+    className="slds-avatar__initials slds-avatar__initials_inverse"
+    title="Simon Taggart"
+  >
+    ST
+  </abbr>
+</span>
+`;
+
+exports[`Chat avatar renders a chat avatar with aria hidden equals true 1`] = `
+<span
+  aria-hidden="true"
   className="slds-avatar slds-avatar_circle slds-chat-avatar"
 >
   <abbr

@@ -9,6 +9,7 @@
  * @name base
  * @selector .slds-button
  * @restrict button, a, span
+ * @support dev-ready
  * @variant
  */
 .slds-button {
@@ -171,9 +172,9 @@ a.slds-button--inverse:focus {
 
   &[disabled],
   &:disabled {
-    background: $brand-disabled;
-    border-color: $brand-disabled;
-    color: $color-text-button-brand-disabled;
+    border-color: $color-border-primary;
+    color: $color-text-button-default-disabled;
+    background-color: $color-background-button-default-disabled;
   }
 }
 
@@ -241,8 +242,8 @@ a.slds-button--inverse:focus {
 
   &[disabled],
   &:disabled {
-    background: $color-background-button-brand-disabled;
-    border-color: $color-border-button-brand-disabled;
+    background: $brand-disabled;
+    border-color: $brand-disabled;
     color: $color-text-button-brand-disabled;
   }
 }
@@ -298,6 +299,7 @@ a.slds-button--inverse:focus {
  * @summary Sizing for icon that sits inside button__icon
  * @selector .slds-button__icon
  * @restrict .slds-button svg
+ * @support dev-ready
  * @variant
  */
 .slds-button__icon {

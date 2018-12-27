@@ -15,7 +15,7 @@
 
 ### Changed
 
-- Changed disabled success buttons styling
+- Updated the disabled styling for the success, destructive, and outline brand buttons to be consistent across variants
 
 ### Fixed
 

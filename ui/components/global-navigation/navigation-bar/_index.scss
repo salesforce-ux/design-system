@@ -9,6 +9,7 @@
  * @name navigation-bar
  * @selector .slds-context-bar
  * @restrict div
+ * @support dev-ready
  * @variant
  */
 .slds-context-bar {
@@ -109,6 +110,18 @@
         background: rgba(0, 0, 0, 0.75);
         mix-blend-mode: soft-light;
       }
+    }
+
+    &:before {
+      background: #fff;
+      bottom: 0;
+      content: '';
+      height: auto;
+      left: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+      transition-property: top, background-color;
     }
 
     &.slds-is-active {
@@ -236,14 +249,10 @@
      * @restrict .slds-context-bar__item
      */
     &.slds-has-warning {
-      @include tab-notification-before($color-background-warning, $color-background-warning);
+      @include tab-notification-before($color-background-warning, $color-background-warning-dark);
 
       &:before {
         animation-name: warning-pulse;
-      }
-
-      &:hover:before {
-        opacity: 0.7;
       }
 
       .slds-indicator_unread {
@@ -452,6 +461,7 @@
    * @name navigation-tab-bar
    * @selector .slds-context-bar_tabs
    * @restrict .slds-context-bar
+   * @support dev-ready
    * @variant
    */
   &_tabs,

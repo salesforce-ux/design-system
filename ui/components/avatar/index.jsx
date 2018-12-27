@@ -4,9 +4,17 @@ import classNames from 'classnames';
 import { StandardIcon } from '../icons/standard/example';
 
 export const Avatar = props => {
-  const { children, className, isGrouped, isInverse, isPrimary } = props;
+  const {
+    children,
+    className,
+    isGrouped,
+    isInverse,
+    isPrimary,
+    ariaHidden
+  } = props;
   return (
     <span
+      aria-hidden={ariaHidden}
       className={classNames('slds-avatar', className, {
         'slds-avatar-grouped': isGrouped,
         'slds-avatar-grouped__primary': isGrouped && isPrimary,
@@ -20,7 +28,9 @@ export const Avatar = props => {
 };
 
 Avatar.propTypes = {
+  ariaHidden: PropTypes.string,
   children: PropTypes.node.isRequired,
+  className: PropTypes.string,
   isGrouped: PropTypes.bool,
   isInverse: PropTypes.bool,
   isPrimary: PropTypes.bool

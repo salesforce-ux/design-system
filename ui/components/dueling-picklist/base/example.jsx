@@ -25,7 +25,7 @@ export default <MultiSelect dataSet={DefaultSnapShot} />;
 
 export let states = [
   {
-    id: 'required-dueling-picklist',
+    id: 'locked-item-dueling-picklist',
     label: 'Locked',
     element: <MultiSelect dataSet={LockedSnapShot} />
   },

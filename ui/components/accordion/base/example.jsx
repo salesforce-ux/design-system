@@ -4,6 +4,7 @@
 import React from 'react';
 import SvgIcon from '../../../shared/svg-icon';
 import classNames from 'classnames';
+import { ActionOverflow } from '../../menus/action-overflow/example';
 
 const referenceId01 = 'accordion-details-01';
 const referenceId02 = 'accordion-details-02';
@@ -47,17 +48,7 @@ export let AccordionSection = props => (
             </span>
           </button>
         </h3>
-        <button
-          className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small slds-shrink-none"
-          aria-haspopup="true"
-        >
-          <SvgIcon
-            className="slds-button__icon"
-            sprite="utility"
-            symbol="down"
-          />
-          <span className="slds-assistive-text">More Options</span>
-        </button>
+        <ActionOverflow position="right" dropdownIsOpen={false} />
       </div>
       <div
         aria-hidden={!props.isOpen}

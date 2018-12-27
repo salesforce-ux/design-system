@@ -46,7 +46,11 @@ export const states = [
         <ChatList>
           <ChatListItem type="inbound">
             <ChatMessage>
-              <ChatAvatar initials="TW" name="Taylor Watson-Rice" />
+              <ChatAvatar
+                initials="TW"
+                name="Taylor Watson-Rice"
+                ariaHidden="true"
+              />
               <ChatMessageBody
                 type="inbound"
                 name="Taylor Watson-Rice"
@@ -72,7 +76,11 @@ export const states = [
         <ChatList>
           <ChatListItem type="inbound">
             <ChatMessage>
-              <ChatAvatar initials="TW" name="Taylor Watson-Rice" />
+              <ChatAvatar
+                initials="TW"
+                name="Taylor Watson-Rice"
+                ariaHidden="true"
+              />
               <ChatMessageBody isTyping type="inbound" />
             </ChatMessage>
           </ChatListItem>
@@ -88,7 +96,11 @@ export const states = [
         <ChatList>
           <ChatListItem type="inbound">
             <ChatMessage>
-              <ChatAvatar initials="TW" name="Taylor Watson-Rice" />
+              <ChatAvatar
+                initials="TW"
+                name="Taylor Watson-Rice"
+                ariaHidden="true"
+              />
               <ChatMessageBody isTyping hasSneakPeek type="inbound">
                 Hi, my CloudWidget only speaks French and I'm having a lot of
                 trouble trying to make i
@@ -107,7 +119,11 @@ export const states = [
         <ChatList>
           <ChatListItem type="inbound">
             <ChatMessage>
-              <ChatAvatar initials="TW" name="Taylor Watson-Rice" />
+              <ChatAvatar
+                initials="TW"
+                name="Taylor Watson-Rice"
+                ariaHidden="true"
+              />
               <ChatMessageBody
                 type="inbound"
                 name="Taylor Watson-Rice"
@@ -136,7 +152,11 @@ export const states = [
         <ChatList>
           <ChatListItem type="inbound">
             <ChatMessage>
-              <ChatAvatar initials="TW" name="Taylor Watson-Rice" />
+              <ChatAvatar
+                initials="TW"
+                name="Taylor Watson-Rice"
+                ariaHidden="true"
+              />
               <ChatMessageBody
                 type="inbound"
                 messageType="image"
@@ -160,7 +180,11 @@ export const states = [
         <ChatList>
           <ChatListItem type="inbound">
             <ChatMessage>
-              <ChatAvatar initials="TW" name="Taylor Watson-Rice" />
+              <ChatAvatar
+                initials="TW"
+                name="Taylor Watson-Rice"
+                ariaHidden="true"
+              />
               <ChatMessageBody
                 type="inbound"
                 messageType="file"
@@ -235,7 +259,7 @@ export const states = [
         <ChatList>
           <ChatListItem type="inbound">
             <ChatMessage>
-              <ChatAvatar initials="JD" name="Jason Dewar" />
+              <ChatAvatar initials="JD" name="Jason Dewar" ariaHidden="true" />
               <ChatMessageBody
                 type="unsupported-type"
                 name="Jason Dewar"
@@ -370,7 +394,11 @@ export const examples = [
         <ChatList>
           <ChatListItem type="inbound">
             <ChatMessage>
-              <ChatAvatar initials="TW" name="Taylor Watson-Rice" />
+              <ChatAvatar
+                initials="TW"
+                name="Taylor Watson-Rice"
+                ariaHidden="true"
+              />
               <ChatMessageBody type="inbound">
                 Hi, my CloudWidget only speaks French
               </ChatMessageBody>
@@ -429,7 +457,11 @@ export const examples = [
         <ChatList>
           <ChatListItem type="inbound">
             <ChatMessage>
-              <ChatAvatar initials="TW" name="Taylor Watson-Rice" />
+              <ChatAvatar
+                initials="TW"
+                name="Taylor Watson-Rice"
+                ariaHidden="true"
+              />
               <ChatMessageBody
                 type="inbound"
                 name="Taylor Watson-Rice"
@@ -469,7 +501,11 @@ export const examples = [
           </ChatListItem>
           <ChatListItem type="inbound">
             <ChatMessage>
-              <ChatAvatar initials="AM" name="Andy Martinez" />
+              <ChatAvatar
+                initials="AM"
+                name="Andy Martinez"
+                ariaHidden="true"
+              />
               <ChatMessageBody
                 type="inbound"
                 name="Andy Martinez"
@@ -501,7 +537,11 @@ export const examples = [
           </ChatListItem>
           <ChatListItem type="inbound">
             <ChatMessage>
-              <ChatAvatar initials="AM" name="Andy Martinez" />
+              <ChatAvatar
+                initials="AM"
+                name="Andy Martinez"
+                ariaHidden="true"
+              />
               <ChatMessageBody
                 type="inbound"
                 name="Andy Martinez"
@@ -556,7 +596,11 @@ export const examples = [
           </ChatListItem>
           <ChatListItem type="inbound">
             <ChatMessage>
-              <ChatAvatar initials="AM" name="Andy Martinez" />
+              <ChatAvatar
+                initials="AM"
+                name="Andy Martinez"
+                ariaHidden="true"
+              />
               <ChatMessageBody
                 type="inbound"
                 name="Andy Martinez"
@@ -581,7 +625,11 @@ export const examples = [
         <ChatList>
           <ChatListItem type="inbound">
             <ChatMessage>
-              <ChatAvatar initials="TW" name="Taylor Watson-Rice" />
+              <ChatAvatar
+                initials="TW"
+                name="Taylor Watson-Rice"
+                ariaHidden="true"
+              />
               <ChatMessageBody
                 type="inbound"
                 messageType="image"
@@ -612,7 +660,11 @@ export const examples = [
           </ChatListItem>
           <ChatListItem type="inbound">
             <ChatMessage>
-              <ChatAvatar initials="TW" name="Taylor Watson-Rice" />
+              <ChatAvatar
+                initials="TW"
+                name="Taylor Watson-Rice"
+                ariaHidden="true"
+              />
               <ChatMessageBody
                 type="inbound"
                 messageType="file"

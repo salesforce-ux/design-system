@@ -52,7 +52,7 @@ exports[`Activity Timeline Expandable renders a full expanded details section wi
     className="slds-list_horizontal slds-wrap"
   >
     <li
-      className="slds-grid slds-grid--vertical slds-size_1-of-2 slds-p-bottom_small"
+      className="slds-grid slds-grid_vertical slds-size_1-of-2 slds-p-bottom_small"
     >
       <span
         className="slds-text-title slds-p-bottom_x-small"
@@ -71,7 +71,7 @@ exports[`Activity Timeline Expandable renders a full expanded details section wi
       </span>
     </li>
     <li
-      className="slds-grid slds-grid--vertical slds-size_1-of-2 slds-p-bottom_small"
+      className="slds-grid slds-grid_vertical slds-size_1-of-2 slds-p-bottom_small"
     >
       <span
         className="slds-text-title slds-p-bottom_x-small"
@@ -129,7 +129,7 @@ exports[`Activity Timeline Expandable renders a full expanded details section wi
     className="slds-list_horizontal slds-wrap"
   >
     <li
-      className="slds-grid slds-grid--vertical slds-size_1-of-2 slds-p-bottom_small"
+      className="slds-grid slds-grid_vertical slds-size_1-of-2 slds-p-bottom_small"
     >
       <span
         className="slds-text-title slds-p-bottom_x-small"
@@ -148,7 +148,7 @@ exports[`Activity Timeline Expandable renders a full expanded details section wi
       </span>
     </li>
     <li
-      className="slds-grid slds-grid--vertical slds-size_1-of-2 slds-p-bottom_small"
+      className="slds-grid slds-grid_vertical slds-size_1-of-2 slds-p-bottom_small"
     >
       <span
         className="slds-text-title slds-p-bottom_x-small"
@@ -314,7 +314,7 @@ exports[`Activity Timeline Expandable renders a narrow timeline item 1`] = `
           className="slds-list_horizontal slds-wrap"
         >
           <li
-            className="slds-grid slds-grid--vertical slds-size_1-of-2 slds-p-bottom_small"
+            className="slds-grid slds-grid_vertical slds-size_1-of-2 slds-p-bottom_small"
           >
             <span
               className="slds-text-title slds-p-bottom_x-small"
@@ -333,7 +333,7 @@ exports[`Activity Timeline Expandable renders a narrow timeline item 1`] = `
             </span>
           </li>
           <li
-            className="slds-grid slds-grid--vertical slds-size_1-of-2 slds-p-bottom_small"
+            className="slds-grid slds-grid_vertical slds-size_1-of-2 slds-p-bottom_small"
           >
             <span
               className="slds-text-title slds-p-bottom_x-small"
@@ -529,7 +529,7 @@ exports[`Activity Timeline Expandable renders a task timeline item 1`] = `
           className="slds-list_horizontal slds-wrap"
         >
           <li
-            className="slds-grid slds-grid--vertical slds-size_1-of-2 slds-p-bottom_small"
+            className="slds-grid slds-grid_vertical slds-size_1-of-2 slds-p-bottom_small"
           >
             <span
               className="slds-text-title slds-p-bottom_x-small"
@@ -548,7 +548,7 @@ exports[`Activity Timeline Expandable renders a task timeline item 1`] = `
             </span>
           </li>
           <li
-            className="slds-grid slds-grid--vertical slds-size_1-of-2 slds-p-bottom_small"
+            className="slds-grid slds-grid_vertical slds-size_1-of-2 slds-p-bottom_small"
           >
             <span
               className="slds-text-title slds-p-bottom_x-small"
@@ -731,7 +731,7 @@ exports[`Activity Timeline Expandable renders a timeline item 1`] = `
           className="slds-list_horizontal slds-wrap"
         >
           <li
-            className="slds-grid slds-grid--vertical slds-size_1-of-2 slds-p-bottom_small"
+            className="slds-grid slds-grid_vertical slds-size_1-of-2 slds-p-bottom_small"
           >
             <span
               className="slds-text-title slds-p-bottom_x-small"
@@ -750,7 +750,7 @@ exports[`Activity Timeline Expandable renders a timeline item 1`] = `
             </span>
           </li>
           <li
-            className="slds-grid slds-grid--vertical slds-size_1-of-2 slds-p-bottom_small"
+            className="slds-grid slds-grid_vertical slds-size_1-of-2 slds-p-bottom_small"
           >
             <span
               className="slds-text-title slds-p-bottom_x-small"
@@ -1240,7 +1240,7 @@ exports[`Activity Timeline Expandable renders a timeline item with icons 1`] = `
           className="slds-list_horizontal slds-wrap"
         >
           <li
-            className="slds-grid slds-grid--vertical slds-size_1-of-2 slds-p-bottom_small"
+            className="slds-grid slds-grid_vertical slds-size_1-of-2 slds-p-bottom_small"
           >
             <span
               className="slds-text-title slds-p-bottom_x-small"
@@ -1259,7 +1259,7 @@ exports[`Activity Timeline Expandable renders a timeline item with icons 1`] = `
             </span>
           </li>
           <li
-            className="slds-grid slds-grid--vertical slds-size_1-of-2 slds-p-bottom_small"
+            className="slds-grid slds-grid_vertical slds-size_1-of-2 slds-p-bottom_small"
           >
             <span
               className="slds-text-title slds-p-bottom_x-small"
@@ -1516,7 +1516,7 @@ exports[`Activity Timeline Expandable renders an expanded timeline item 1`] = `
           className="slds-list_horizontal slds-wrap"
         >
           <li
-            className="slds-grid slds-grid--vertical slds-size_1-of-2 slds-p-bottom_small"
+            className="slds-grid slds-grid_vertical slds-size_1-of-2 slds-p-bottom_small"
           >
             <span
               className="slds-text-title slds-p-bottom_x-small"
@@ -1535,7 +1535,7 @@ exports[`Activity Timeline Expandable renders an expanded timeline item 1`] = `
             </span>
           </li>
           <li
-            className="slds-grid slds-grid--vertical slds-size_1-of-2 slds-p-bottom_small"
+            className="slds-grid slds-grid_vertical slds-size_1-of-2 slds-p-bottom_small"
           >
             <span
               className="slds-text-title slds-p-bottom_x-small"

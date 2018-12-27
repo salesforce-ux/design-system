@@ -2,6 +2,7 @@
 
 exports[`renders a avatar fallback with entity icon 1`] = `
 <span
+  aria-hidden={undefined}
   className="slds-avatar"
 >
   <span
@@ -27,6 +28,7 @@ exports[`renders a avatar fallback with entity icon 1`] = `
 
 exports[`renders a avatar fallback with entity initials 1`] = `
 <span
+  aria-hidden={undefined}
   className="slds-avatar"
 >
   <abbr
@@ -40,6 +42,7 @@ exports[`renders a avatar fallback with entity initials 1`] = `
 
 exports[`renders a avatar fallback with user icon 1`] = `
 <span
+  aria-hidden={undefined}
   className="slds-avatar slds-avatar_circle"
 >
   <span
@@ -65,11 +68,12 @@ exports[`renders a avatar fallback with user icon 1`] = `
 
 exports[`renders a avatar fallback with user initials 1`] = `
 <span
+  aria-hidden={undefined}
   className="slds-avatar slds-avatar_circle"
 >
   <abbr
     className="slds-avatar__initials slds-icon-standard-user"
-    title="person name"
+    title="Person name"
   >
     AB
   </abbr>
@@ -78,23 +82,25 @@ exports[`renders a avatar fallback with user initials 1`] = `
 
 exports[`renders a default avatar launcher 1`] = `
 <span
+  aria-hidden={undefined}
   className="slds-avatar"
 >
   <img
     alt="Person name"
     src="/assets/images/avatar2.jpg"
-    title="User avatar"
+    title="Person name"
   />
 </span>
 `;
 
 exports[`renders an inversed avatar fallback with user initials 1`] = `
 <span
+  aria-hidden={undefined}
   className="slds-avatar slds-avatar_circle"
 >
   <abbr
     className="slds-avatar__initials slds-avatar__initials_inverse"
-    title="person name"
+    title="Person name"
   >
     AB
   </abbr>

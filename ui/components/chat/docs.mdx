@@ -188,13 +188,17 @@ Consecutive messages only display name and time meta data once
 
 Inbound messages can optionally display the customers avatar. When displaying an avatar in inbound messages, be sure to apply the `slds-chat-message_faux-avatar` modifier to any consecutive `slds-chat-message` containers, to ensure correct alignment where the avatar is missing.
 
+<Blockquote header="Aria Hidden Avatars" type="a11y">
+  Because every inbound message already includes the user's name, the user's avatar is redundant and therefore should be treated as decorative. For this reason, we hide the avatar using `aria-hidden="true"` on the `<span>` with `class="slds-avatar"` to avoid redundancy for screen reader users.
+</Blockquote>
+
 <Example title="Chat Inbound message with avatar">
   <CodeView>
     <Chat>
       <ChatList>
         <ChatListItem type="inbound">
           <ChatMessage>
-            <ChatAvatar initials="TW" name="Taylor Watson-Rice" />
+            <ChatAvatar initials="TW" name="Taylor Watson-Rice" ariaHidden="true"/>
             <ChatMessageBody type="inbound">
               Hi, my CloudWidget only speaks French
             </ChatMessageBody>
@@ -226,7 +230,7 @@ During a chat an agent can request the customer upload a file attachment to be s
       <ChatList>
         <ChatListItem type="inbound">
           <ChatMessage>
-            <ChatAvatar initials="TW" name="Taylor Watson-Rice" />
+            <ChatAvatar initials="TW" name="Taylor Watson-Rice" ariaHidden="true"/>
             <ChatMessageBody
               type="inbound"
               name="Taylor Watson-Rice"
@@ -263,7 +267,7 @@ It is also possible to display an image preview when sending a supported file fo
       <ChatList>
         <ChatListItem type="inbound">
           <ChatMessage>
-            <ChatAvatar initials="TW" name="Taylor Watson-Rice" />
+            <ChatAvatar initials="TW" name="Taylor Watson-Rice" ariaHidden="true"/>
             <ChatMessageBody
               type="inbound"
               messageType="image"
@@ -293,7 +297,7 @@ Non-image file formats are also supported by using the File component.
       <ChatList>
         <ChatListItem type="inbound">
           <ChatMessage>
-            <ChatAvatar initials="TW" name="Taylor Watson-Rice" />
+            <ChatAvatar initials="TW" name="Taylor Watson-Rice" ariaHidden="true"/>
             <ChatMessageBody
               type="inbound"
               messageType="file"
@@ -324,7 +328,7 @@ Both file and image transfers support messages with and without titles; however,
       <ChatList>
         <ChatListItem type="inbound">
           <ChatMessage>
-            <ChatAvatar initials="TW" name="Taylor Watson-Rice" />
+            <ChatAvatar initials="TW" name="Taylor Watson-Rice" ariaHidden="true"/>
             <ChatMessageBody type="inbound" messageType="image">
               <File
                 hasActions
@@ -404,7 +408,7 @@ Whilst chatting with customers, agents can see when a customer is typing a respo
     <ChatList>
       <ChatListItem type="inbound">
         <ChatMessage>
-          <ChatAvatar initials="TW" name="Taylor Watson-Rice" />
+          <ChatAvatar initials="TW" name="Taylor Watson-Rice" ariaHidden="true"/>
           <ChatMessageBody isTyping type="inbound" />
         </ChatMessage>
       </ChatListItem>
@@ -428,7 +432,7 @@ We can take that experience one step further when the sneak peek feature is enab
     <ChatList>
       <ChatListItem type="inbound">
         <ChatMessage>
-          <ChatAvatar initials="TW" name="Taylor Watson-Rice" />
+          <ChatAvatar initials="TW" name="Taylor Watson-Rice" ariaHidden="true"/>
           <ChatMessageBody isTyping hasSneakPeek type="inbound">
             Hi, my CloudWidget only spe
           </ChatMessageBody>
@@ -530,7 +534,7 @@ If a customer tries sending a message that is not supported, it will appear as a
       <ChatList>
         <ChatListItem type="inbound">
           <ChatMessage>
-            <ChatAvatar initials="TW" name="Taylor Watson-Rice" />
+            <ChatAvatar initials="TW" name="Taylor Watson-Rice" ariaHidden="true"/>
             <ChatMessageBody
               type="unsupported-type"
               name="Taylor Watson-Rice"
@@ -752,7 +756,7 @@ In the event of an error occurring during the chat, an error event can be displa
         </ChatListItem>
         <ChatListItem type="inbound">
           <ChatMessage>
-            <ChatAvatar initials="AM" name="Andy Martinez" />
+            <ChatAvatar initials="AM" name="Andy Martinez" ariaHidden="true"/>
             <ChatMessageBody
               type="inbound"
               name="Andy Martinez"
@@ -782,7 +786,7 @@ In the event of an error occurring during the chat, an error event can be displa
         </ChatListItem>
         <ChatListItem type="inbound">
           <ChatMessage>
-            <ChatAvatar initials="AM" name="Andy Martinez" />
+            <ChatAvatar initials="AM" name="Andy Martinez" ariaHidden="true"/>
             <ChatMessageBody
               type="inbound"
               name="Andy Martinez"
@@ -835,7 +839,7 @@ In the event of an error occurring during the chat, an error event can be displa
         </ChatListItem>
         <ChatListItem type="inbound">
           <ChatMessage>
-            <ChatAvatar initials="AM" name="Andy Martinez" />
+            <ChatAvatar initials="AM" name="Andy Martinez" ariaHidden="true"/>
             <ChatMessageBody
               type="inbound"
               name="Andy Martinez"

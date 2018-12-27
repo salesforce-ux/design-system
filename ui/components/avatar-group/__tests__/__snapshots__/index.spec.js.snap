@@ -5,21 +5,23 @@ exports[`renders a default avatar group 1`] = `
   className="slds-avatar-group"
 >
   <span
+    aria-hidden={undefined}
     className="slds-avatar slds-avatar-grouped slds-avatar-grouped__primary"
   >
     <img
       alt="Person 2 name"
       src="/assets/images/avatar2.jpg"
-      title="User 2 avatar"
+      title="Person 2 name"
     />
   </span>
   <span
+    aria-hidden={undefined}
     className="slds-avatar slds-avatar-grouped slds-avatar-grouped__secondary"
   >
     <img
       alt="Person 2 name"
       src="/assets/images/avatar2.jpg"
-      title="User 2 avatar"
+      title="Person 2 name"
     />
   </span>
 </span>
@@ -30,15 +32,17 @@ exports[`renders a large avatar group with image and icon 1`] = `
   className="slds-avatar-group slds-avatar-group_large"
 >
   <span
+    aria-hidden={undefined}
     className="slds-avatar slds-avatar-grouped slds-avatar-grouped__primary"
   >
     <img
       alt="Person 1 name"
       src="/assets/images/avatar1.jpg"
-      title="User 1 avatar"
+      title="Person 1 name"
     />
   </span>
   <span
+    aria-hidden={undefined}
     className="slds-avatar slds-avatar-grouped slds-avatar-grouped__secondary"
   >
     <span
@@ -68,6 +72,7 @@ exports[`renders a small avatar group with icon and initials 1`] = `
   className="slds-avatar-group slds-avatar-group_small"
 >
   <span
+    aria-hidden={undefined}
     className="slds-avatar slds-avatar-grouped slds-avatar-grouped__primary"
   >
     <span
@@ -90,11 +95,12 @@ exports[`renders a small avatar group with icon and initials 1`] = `
     </span>
   </span>
   <span
+    aria-hidden={undefined}
     className="slds-avatar slds-avatar-grouped slds-avatar-grouped__secondary"
   >
     <abbr
       className="slds-avatar__initials slds-avatar-grouped__initials"
-      title="person name"
+      title="Person name"
     >
       WW
     </abbr>
@@ -107,21 +113,23 @@ exports[`renders an avatar group with inversed user initials 1`] = `
   className="slds-avatar-group"
 >
   <span
+    aria-hidden={undefined}
     className="slds-avatar slds-avatar-grouped slds-avatar-grouped__primary slds-avatar-grouped_inverse"
   >
     <abbr
       className="slds-avatar__initials slds-avatar__initials_inverse slds-avatar-grouped__initials"
-      title="person name"
+      title="Person name"
     >
       WW
     </abbr>
   </span>
   <span
+    aria-hidden={undefined}
     className="slds-avatar slds-avatar-grouped slds-avatar-grouped__secondary slds-avatar-grouped_inverse"
   >
     <abbr
       className="slds-avatar__initials slds-avatar__initials_inverse slds-avatar-grouped__initials"
-      title="person name"
+      title="Person name"
     >
       WW
     </abbr>
@@ -134,22 +142,24 @@ exports[`renders an x-small avatar group with initials and icon 1`] = `
   className="slds-avatar-group slds-avatar-group_x-small"
 >
   <span
+    aria-hidden={undefined}
     className="slds-avatar slds-avatar-grouped slds-avatar-grouped__primary"
   >
     <abbr
       className="slds-avatar__initials slds-avatar-grouped__initials"
-      title="person name"
+      title="Person name"
     >
       WW
     </abbr>
   </span>
   <span
+    aria-hidden={undefined}
     className="slds-avatar slds-avatar-grouped slds-avatar-grouped__secondary"
   >
     <img
       alt="Person 1 name"
       src="/assets/images/avatar1.jpg"
-      title="User 1 avatar"
+      title="Person 1 name"
     />
   </span>
 </span>

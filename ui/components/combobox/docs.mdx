@@ -1303,7 +1303,7 @@ The key difference for `dialog` dropdowns lies in how they handle focus. In `lis
 <ol>
 <li>1. The input does not have `aria-autocomplete`, it is essentially readonly</li>
 <li>2. The input for this dialog variant will also never have `aria-activedescendant`</li>
-<li>3. The combobox `<div>` with `class="slds-combobox"` has `aria-haspopup=”dialog”`</li>
+<li>3. The combobox `<div />` with `class="slds-combobox"` has `aria-haspopup=”dialog”`</li>
 <li>4. The dropdown is a dialog with `role="dialog"`</li>
 <li>5. The dialog should have an `aria-label` with a value for the dialog's title</li>
 <li>6. The combobox has `aria-expanded="false"` when the dialog is closed, and `aria-expanded="true"` when the dialog is open. </li>
@@ -1319,7 +1319,7 @@ The key difference for `dialog` dropdowns lies in how they handle focus. In `lis
 To open the dialog, remove the class `slds-popover_hide` from the `<div>` with `class="slds-popover"`. Any content can go inside a `dialog` dropdown.
 
 <Blockquote type="a11y" header="Accessibility Note">
-When the dialog is open, be sure to change `aria-expanded` to **true** on the combobox `<div>` with `class="slds-combobox"`.
+When the dialog is open, be sure to change `aria-expanded` to **true** on the combobox `<div />` with `class="slds-combobox"`.
 </Blockquote>
 
 <CodeView>

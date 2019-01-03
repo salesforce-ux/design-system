@@ -25,7 +25,7 @@ The default tab set style encapsulates everything that is underneath it without 
   Tabbed UIs have three parts with specific ARIA role requirements:
   <ul>
     <li>- The tab list, which should have `role="tablist"`</li>
-    <li>- The tabs in that list, which should each be an `<a role="tab">` anchor wrapped in a `<li role="presentation">` list item</li>
+    <li>- The tabs in that list, which should each be an `<a role="tab" />` anchor wrapped in a `<li role="presentation" />` list item</li>
     <li>- The tab panels, which display each tab’s content and should each have `role="tabpanel"`</li>
   </ul>
 </Blockquote>
@@ -164,7 +164,7 @@ Unsaved tabs receive a blue asterisk on the tab.
 </CodeView>
 
 <Blockquote header="Additional Tag for Accessibility" type="a11y">
-  In order to inform screen readers of the unsaved state, an `<abbr>` tag is used to render the asterisk. The `title` attribute and `aria-label` should read <b>"Tab Not Saved"</b>.
+  In order to inform screen readers of the unsaved state, an `<abbr />` tag is used to render the asterisk. The `title` attribute and `aria-label` should read <b>"Tab Not Saved"</b>.
 </Blockquote>
 
 <CodeBlock toggleCode={false}>

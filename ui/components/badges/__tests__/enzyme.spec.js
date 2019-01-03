@@ -49,7 +49,7 @@ describe('light badge with icon', () => {
       wrapper
         .find('.slds-badge__icon')
         .childAt(0)
-        .exists('.slds-icon-container')
+        .exists('.slds-icon_container')
     ).toEqual(true);
   });
 

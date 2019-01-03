@@ -48,7 +48,7 @@ Includes all the features of Setup Assistant Base + Progress, but also includes 
 Clicking on the icon toggle or the primary step's title will open and close that step's details. If a primary step's substeps have been started, the primary step's progress ring turns blue to indicate the amount of progress made on the substeps.
 
 <Blockquote type="a11y" header="Accessibility Note">
-  Since both the chevron toggle and the step's title act as a trigger to open and close the step's detail, ensure both the icon button and the title include `aria-controls=[uniqueId]` where the `uniqueId` matches the `id` on the `<div>` with `class="slds-summary-detail__content".`
+  Since both the chevron toggle and the step's title act as a trigger to open and close the step's detail, ensure both the icon button and the title include `aria-controls=[uniqueId]` where the `uniqueId` matches the `id` on the `<div />` with `class="slds-summary-detail__content".`
 </Blockquote>
 
 <Example title="Setup Assistant Hub Expandable">

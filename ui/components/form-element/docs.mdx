@@ -44,7 +44,7 @@ A form element is made up of three primary elements, the label (`slds-form-eleme
 A form label should use the `<label>` element or `<legend>` element with the class `slds-form-element__label`. Use a `<legend>` when you have a [compound form](/components/form-element/#Compound)
 
 <Blockquote type="a11y" header="Accessibility requirement">
-  Labels must have the <code className="doc">for</code> attribute applied, and its value must match the ID of the associated form element, like <code className="doc"><input id="unique-id-of-input"></code>. This association ensures that assistive technology informs users about what information to enter where.
+  Labels must have the <code className="doc">for</code> attribute applied, and its value must match the ID of the associated form element, like <code className="doc"><input id="unique-id-of-input"  /></code>. This association ensures that assistive technology informs users about what information to enter where.
 </Blockquote>
 
 <CodeBlock toggleCode={false}>
@@ -177,7 +177,7 @@ The `<input>` element should also have the HTML attribute required or required="
 If an error has occurred while submitting a form, the form element with an error should provide feedback. The `slds-has-error` class is placed on the `<div class="slds-form-element">` element. Then, the error message for the user is placed in a `<div>` with the `slds-form-element__help` class.
 
 <Blockquote type="a11y" header="Accessibility requirement">
-  When a form element displays feedback notifying the user of an error, the error string should be linked to the element by adding the <code className="doc">aria-describedby</code> attribute to the <code className="doc"><input></code>. The `aria-describedby` attribute must reference the id of the error message. This configuration allows screen readers to read the associated error message when the invalid field is focused.
+  When a form element displays feedback notifying the user of an error, the error string should be linked to the element by adding the <code className="doc">aria-describedby</code> attribute to the <code className="doc"><input /></code>. The `aria-describedby` attribute must reference the id of the error message. This configuration allows screen readers to read the associated error message when the invalid field is focused.
 </Blockquote>
 
 <Example title="Form Element - Error">

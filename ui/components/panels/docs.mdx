@@ -75,7 +75,7 @@ To center the header title, add the class `slds-panel__header_align-center` to t
 If a panel header requires additional elements outside of a title and close button, The panel header needs to have the class `slds-panel__header_custom` added to `slds-panel__header`. This notifies the component that it has a custom layout in the header.
 
 <CodeBlock toggleCode={false}>
-  <div className="slds-panel__header slds-panel__header_custom">...</div>
+  <div className="slds-panel__header slds-panel__header_custom">{'...'}</div>
 </CodeBlock>
 
 The `<h2>` which contains the title of the panel requires the class `slds-panel__header-title`.
@@ -191,18 +191,16 @@ A panel causes reflow by being in the flow of the layout rather than overlayed o
 Filtering lists or reports can be done by using a Filtering expressions inside of a Panel. Check out the [Filtering expression](/components/expression/#filtering) component for different states and accessibility requirements.
 
 <Blockquote type="a11y" header="Accessibility Requirement">
-  Make sure to use assistive text to improve the clarity of what you might be editing, for example, add <code className="doc">&lt;span className="slds-assistive-text"&gt;Edit filter:</span></code> to the button element inside each filterable object.
+  Make sure to use assistive text to improve the clarity of what you might be editing, for example, add <code className="doc">&lt;span className="slds-assistive-text"&gt;Edit filter:&lt;/span&gt;</code> to the button element inside each filterable object.
 </Blockquote>
 
 <CodeView style={{backgroundColor: '#fafaf9', position: 'relative', height: '600px', overflow: 'hidden'}}>
-<Panel
-size="medium"
-title="Filter"
-docked="right"
-invoke="toggle"
-
->
-
+  <Panel
+    size="medium"
+    title="Filter"
+    docked="right"
+    invoke="toggle"
+  >
     <Filters>
       <ol className="slds-list_vertical slds-list_vertical-space">
         <FilterObject type="Show Me">All Products</FilterObject>

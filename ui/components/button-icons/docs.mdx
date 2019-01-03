@@ -137,21 +137,18 @@ The bare variant can be displayed in three other sizes—`large`, `small`, `x-sm
 <CodeBlock toggleCode={false}>
   <button>
     <svg className="...slds-button__icon_{size}">
-      ...
+      {'...'}
     </svg>
-    ...
+    {'...'}
   </button>
 </CodeBlock>
 
 <Example title="Sizes">
   <CodeView toggleCode={true}>
     <React.Fragment>
-      <ButtonIcon iconClassName="slds-button__icon_large" assistiveText="More options" title="More Options"/>
-
-      <ButtonIcon iconClassName="slds-button__icon_small" assistiveText="More options" title="More Options"/>
-
-      <ButtonIcon iconClassName="slds-button__icon_x-small" assistiveText="More options" title="More Options"/>
-
+      <ButtonIcon iconClassName="slds-button__icon_large" assistiveText="More options" title="More Options" />
+      <ButtonIcon iconClassName="slds-button__icon_small" assistiveText="More options" title="More Options" />
+      <ButtonIcon iconClassName="slds-button__icon_x-small" assistiveText="More options" title="More Options" />
     </React.Fragment>
   </CodeView>
 </Example>
@@ -161,16 +158,14 @@ The bare variant can be displayed in three other sizes—`large`, `small`, `x-sm
 Contained variants can be displayed in three smaller sizes—`small`, `x-small`, `xx-small`—by adding a sizing class on the `<button>`.
 
 <CodeBlock toggleCode={false}>
-  <button className="...slds-button_icon-{size}">...</button>
+  <button className="...slds-button_icon-{size}">{'...'}</button>
 </CodeBlock>
 
 <Example title="Sizes">
   <CodeView toggleCode={true}>
     <React.Fragment>
       <ButtonIcon className="slds-button_icon-border slds-button_icon-small" assistiveText="More options" title="More Options"/>
-
       <ButtonIcon className="slds-button_icon-border slds-button_icon-x-small" assistiveText="More options" title="More Options"/>
-
       <ButtonIcon className="slds-button_icon-border slds-button_icon-xx-small" assistiveText="More options" title="More Options"/>
     </React.Fragment>
   </CodeView>

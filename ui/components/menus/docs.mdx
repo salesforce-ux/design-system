@@ -22,7 +22,7 @@ The target HTML element and dropdown need to be wrapped in the class `.slds-drop
 
 <Blockquote type="a11y" header="Key Accessibility Markup">
   <ul>
-    <li>- The menu trigger is a focusable element (`<a>` or `<button>`) with `aria-haspopup="true"`</li>
+    <li>- The menu trigger is a focusable element (`<a />` or `<button />`) with `aria-haspopup="true"`</li>
     <li>- The menu has `role="menu"` and an `aria-label` attribute whose value is the name of the menu trigger</li>
     <li>- The menu items have `role="menuitem"`, `role="menuitemcheckbox"`, or `role="menuitemradio"`, depending on the selection options</li>
   </ul>
@@ -42,7 +42,7 @@ The main thing that distinguishes menus from other popover blocks is keyboard na
 ## With Subheaders
 
 <Blockquote type="a11y" header="Accessible Role">
-  A subheading must have `role="separator"` on the `<li>` and the content inside the `<li>` should be in a `<span>`.
+  A subheading must have `role="separator"` on the `<li />` and the content inside the `<li />` should be in a `<span />`.
 </Blockquote>
 
 <CodeBlock toggleCode={false}>
@@ -104,7 +104,7 @@ When creating a menu with selectable items:
 - Items that have been selected need `aria-checked="true"` on the `<a>` element
 
 <Blockquote type="a11y" header="Revealing Icons for Selected Items">
-  A selected item reveals its icon when the class `slds-is-selected` is applied to the `<li>` and `aria-checked="true"` is applied to its `menuitemcheckbox` or `menuitemradio` child.
+  A selected item reveals its icon when the class `slds-is-selected` is applied to the `<li />` and `aria-checked="true"` is applied to its `menuitemcheckbox` or `menuitemradio` child.
 </Blockquote>
 
 <CodeBlock toggleCode={false}>
@@ -170,7 +170,7 @@ To force overflow scrolling after either 5, 7, or 10 items with icons, add the m
 To create a menu with a submenu, add the `slds-has-submenu` class to the list item, `<li>`, that will open the submenu.
 
 <Blockquote type="a11y" header="Accessibility Note">
-Any menu item that opens a submenu must have `aria-haspop="true"` on the `<a>` within the `<li>`. In order to open the submenu, set `aria-expanded` to `true` on that `<a>` when the user clicks or hovers over the list item, or presses enter while focused on the list item. Additionally, the submenu should have `role="menu"` and an `aria-label` attribute whose value matches the name of the `<li>` that opened the submenu.
+Any menu item that opens a submenu must have `aria-haspop="true"` on the `<a />` within the `<li />`. In order to open the submenu, set `aria-expanded` to `true` on that `<a />` when the user clicks or hovers over the list item, or presses enter while focused on the list item. Additionally, the submenu should have `role="menu"` and an `aria-label` attribute whose value matches the name of the `<li />` that opened the submenu.
 </Blockquote>
 
 <CodeBlock toggleCode={false}>
@@ -249,13 +249,13 @@ To position the dropdown to sit on top of the dropdown trigger, use `slds-dropdo
 To adjust the width of the menu dropdown add modifier `slds-dropdown_*` to the `<div>` with class `slds-dropdown` where the `*` is `xx-small`, `x-small`, `small`, `medium`, or `large`.
 
 <CodeBlock toggleCode={false}>
-  <div className="slds-dropdown slds-dropdown_left slds-dropdown_medium">...</div>
+  <div className="slds-dropdown slds-dropdown_left slds-dropdown_medium">{'...'}</div>
 </CodeBlock>
 
 | Modifier                                     | Example                                                                                                                 |
 | -------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
-| `.slds-dropdown_xx-small` <br/> 6rem / 96px  | <div style={{height: '200px', width: '320px'}}><BaseMenu className="slds-dropdown_left slds-dropdown_xx-small" /></div> |
-| `.slds-dropdown_x-small` <br/> 12rem / 192px | <div style={{height: '200px', width: '320px'}}><BaseMenu className="slds-dropdown_left slds-dropdown_x-small" /></div>  |
-| `.slds-dropdown_small` <br/> 15rem / 240px   | <div style={{height: '200px', width: '320px'}}><BaseMenu className="slds-dropdown_left slds-dropdown_small" /></div>    |
-| `.slds-dropdown_medium` <br/> 20rem / 320px  | <div style={{height: '200px', width: '320px'}}><BaseMenu className="slds-dropdown_left slds-dropdown_medium" /></div>   |
-| `.slds-dropdown_large` <br/> 25rem / 400px   | <div style={{height: '200px', width: '320px'}}><BaseMenu className="slds-dropdown_left slds-dropdown_large" /></div>    |
+| `.slds-dropdown_xx-small` <br /> 6rem / 96px  | <div style="height:'200px'; width:320px"><BaseMenu className="slds-dropdown_left slds-dropdown_xx-small" /></div> |
+| `.slds-dropdown_x-small` <br /> 12rem / 192px | <div style="height:'200px'; width:320px"><BaseMenu className="slds-dropdown_left slds-dropdown_x-small" /></div>  |
+| `.slds-dropdown_small` <br /> 15rem / 240px   | <div style="height:'200px'; width:320px"><BaseMenu className="slds-dropdown_left slds-dropdown_small" /></div>    |
+| `.slds-dropdown_medium` <br /> 20rem / 320px  | <div style="height:'200px'; width:320px"><BaseMenu className="slds-dropdown_left slds-dropdown_medium" /></div>   |
+| `.slds-dropdown_large` <br /> 25rem / 400px   | <div style="height:'200px'; width:320px"><BaseMenu className="slds-dropdown_left slds-dropdown_large" /></div>    |

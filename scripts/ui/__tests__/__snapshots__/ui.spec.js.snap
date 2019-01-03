@@ -807,6 +807,122 @@ representative of Navigation mode, all other states are assumed to be in Actiona
       "showcasePath": null,
     },
   },
+  "modules": Object {
+    "buttons": Object {
+      "annotations": Object {
+        "category": "base",
+        "layout": "responsive",
+        "module": true,
+        "name": "buttons",
+        "role": "button",
+        "selector": ".dsm-button",
+        "summary": "Buttons are used to invoke an event",
+        "support": "dev-ready",
+        "type": "action",
+      },
+      "description": "Create a button with a \`button\` or \`a\` element to retain the native click
+function.
+
+Use a disabled attribute when a button can’t be clicked.",
+      "docPath": "./ui/modules/buttons/docs.mdx",
+      "id": "buttons",
+      "restrictees": Array [
+        Object {
+          "annotations": Object {
+            "name": "base",
+            "restrict": "button, a",
+            "selector": ".dsm-button",
+            "summary": "This neutralizes all the base styles making it look like a text link",
+            "variant": true,
+          },
+          "description": "# The button module
+
+Something soemthing",
+          "docPath": null,
+          "id": "base",
+          "restrictees": Array [
+            Object {
+              "annotations": Object {
+                "name": "stateful",
+                "restrict": ".dsm-button",
+                "selector": ".dsm-button_stateful",
+                "summary": "This neutralizes all the base styles making it look like a text link",
+                "variant": true,
+              },
+              "description": "# The button module
+
+Something soemthing",
+              "docPath": null,
+              "id": "stateful",
+              "restrictees": Array [
+                Object {
+                  "annotations": Object {
+                    "group": "interaction",
+                    "modifier": true,
+                    "notes": "This class should be toggled with JavaScript",
+                    "restrict": ".dsm-button_stateful",
+                    "selector": ".dsm-not-selected",
+                  },
+                  "description": "Default state of a stateful button",
+                  "docPath": null,
+                  "id": ".dsm-not-selected",
+                  "restrictees": Array [],
+                  "showcase": Array [],
+                  "showcasePath": null,
+                },
+              ],
+              "showcase": Array [],
+              "showcasePath": "./ui/modules/buttons/stateful/example.jsx",
+            },
+          ],
+          "showcase": Array [],
+          "showcasePath": "./ui/modules/buttons/base/example.jsx",
+        },
+      ],
+      "showcase": Array [],
+      "showcasePath": null,
+    },
+    "zigzag": Object {
+      "annotations": Object {
+        "category": "base",
+        "layout": "responsive",
+        "module": true,
+        "name": "zigzag",
+        "role": "div",
+        "selector": ".dsm-zigzag",
+        "summary": "Buttons are used to invoke an event",
+        "support": "dev-ready",
+        "type": "action",
+      },
+      "description": "Create a button with a \`button\` or \`a\` element to retain the native click
+function.
+
+Use a disabled attribute when a button can’t be clicked.",
+      "docPath": "./ui/modules/zigzag/docs.mdx",
+      "id": "zigzag",
+      "restrictees": Array [
+        Object {
+          "annotations": Object {
+            "name": "base",
+            "restrict": "div",
+            "selector": ".dsm-zigzag",
+            "summary": "This neutralizes all the base styles making it look like a text link",
+            "variant": true,
+          },
+          "description": "# The zigzag
+
+Something something",
+          "docPath": null,
+          "id": "base",
+          "restrictees": Array [],
+          "showcase": Array [],
+          "showcasePath": "./ui/modules/zigzag/base/example.jsx",
+        },
+      ],
+      "showcase": Array [],
+      "showcasePath": null,
+    },
+  },
   "utilities": Object {
     "alignment": Object {
       "annotations": Object {

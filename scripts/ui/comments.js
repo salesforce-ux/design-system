@@ -7,6 +7,10 @@ const fs = require('fs');
 const path = require('path');
 const paths = require('../helpers/paths');
 
+/**
+ * getComments - grab all the scss files and concatenate them together into a single string
+ * @returns {string} all the scss including the comments in the files as a string
+ */
 module.exports = () =>
   new Task((rej, res) =>
     res(

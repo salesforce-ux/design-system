@@ -155,6 +155,7 @@ gulp.task(
 // /////////////////////////////////////////////////////////
 
 gulp.task('styles:sass', styles.sass);
+gulp.task('styles:sass:components', styles.componentSass);
 gulp.task('styles:test', styles.sassTest);
 gulp.task(
   'styles',
@@ -219,6 +220,7 @@ gulp.task(
       withName('dist:copyComponentDesignTokens')(dist.copyComponentDesignTokens)
     ),
     withName('dist:sass')(dist.sass),
+    withName('dist:componentSass')(dist.componentSass),
     withName('dist:minifyCss')(dist.minifyCss),
     gulp.parallel(
       withName('dist:versionBlock')(dist.versionBlock),

@@ -57,25 +57,71 @@ describe('scripts/lib.js', () => {
     expect(variant.get('restrictees').count()).toBeGreaterThan(0);
   });
 
+  it('returns a list of modules', () => {
+    const comps = SLDS.moduleComponents();
+    expect(comps.count()).toBeGreaterThan(0);
+    expect(comps.first()).toEqual('buttons');
+  });
+
+  it('returns a module', () => {
+    const comp = SLDS.moduleComponent('buttons').getOrElse(null);
+    expect(comp.get('id')).toEqual('buttons');
+    expect(comp.get('restrictees').count()).toBeGreaterThan(0);
+  });
+
+  it('finds a module variant', () => {
+    const comp = SLDS.moduleComponent('buttons').getOrElse(null);
+    const variant = SLDS.findVariant(comp, 'stateful').getOrElse(null);
+    expect(variant.get('id')).toEqual('stateful');
+    expect(variant.get('restrictees').count()).toBeGreaterThan(0);
+  });
+
   it('gets every example in the system', () => {
-    const allMarkup = uiJson.flatMap((group, name) =>
-      group.map(item =>
-        SLDS.variants(item).flatMap(variant =>
-          showcase(item.get('showcasePath'), true).flatMap(section =>
-            section
-              .get('items')
-              .map(
-                i =>
-                  React.isValidElement(i.get('element'))
-                    ? ReactDOM.renderToStaticMarkup(i.get('element'))
-                    : `FAILED: ${item.get('id')}/${variant.get('id')}/${i.get(
-                        'id'
-                      )}`
-              )
-          )
-        )
-      )
-    );
+    // return an object of types of components, by component id, with an array of html snippets it exports
+    // {
+    //   "components": {
+    //     "${component_id}": ["${element}", ...],
+    //     ...
+    //   },
+    //   "modules": {
+    //     "${component_id}": ["${element}", ...],
+    //     ...
+    //   },
+    //   "utilities": {
+    //     "${component_id}": ["${element}", ...],
+    //     ...
+    //   },
+    // }
+    const allMarkup = uiJson.flatMap((group, name) => {
+      // for each top level type in uiJSON
+      return {
+        // create a key for each type
+        [name]: group.map(item => {
+          // for each item in each name group, grab it's variants
+          return SLDS.variants(item).flatMap(variant => {
+            // components|modules and utilities have showcase paths is different locations
+            // components have a path on the variant and utilities have a path on the item
+            // So which ever one it is, use that to get the example.jsx file for showcase
+            const showcasePath =
+              item.get('showcasePath') || variant.get('showcasePath');
+
+            // for each variant, grab the showcase based on each variants showcasePath to the example.jsx
+            return showcase(showcasePath, true).flatMap(section => {
+              // for each item in the showcase
+              return section.get('items').map(i => {
+                // grab the element and check to see if it's valid according to React
+                // if it is render to static markup, else return a failed string.
+                return React.isValidElement(i.get('element'))
+                  ? ReactDOM.renderToStaticMarkup(i.get('element'))
+                  : `FAILED: ${item.get('id')}/${variant.get('id')}/${i.get(
+                      'id'
+                    )}`;
+              });
+            });
+          });
+        })
+      };
+    });
     expect(allMarkup.toJS()).toMatchSnapshot();
   });
 });

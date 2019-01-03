@@ -1,0 +1,35 @@
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+@import '../../../init';
+@import '../mixins/index';
+
+/**
+ * # The button module
+ *
+ * Something soemthing
+ *
+ * @summary This neutralizes all the base styles making it look like a text link
+ * @name stateful
+ * @selector .dsm-button_stateful
+ * @restrict .dsm-button
+ * @variant
+ */
+.dsm-button_stateful {
+  @include button-reset;
+  @include button-normalize;
+}
+
+
+/**
+ * Default state of a stateful button
+ *
+ * @selector .dsm-not-selected
+ * @restrict .dsm-button_stateful
+ * @notes This class should be toggled with JavaScript
+ * @modifier
+ * @group interaction
+ */
+.dsm-not-selected {
+  background: red;
+}

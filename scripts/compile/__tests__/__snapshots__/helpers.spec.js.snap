@@ -9,6 +9,11 @@ Object {
   "./ui/components/data-tables/advanced/example.jsx": "__internal/chunked/showcase/ui/components/data-tables/advanced/example.jsx.js",
   "./ui/components/data-tables/base/example.jsx": "__internal/chunked/showcase/ui/components/data-tables/base/example.jsx.js",
   "./ui/components/data-tables/inline-edit/example.jsx": "__internal/chunked/showcase/ui/components/data-tables/inline-edit/example.jsx.js",
+  "./ui/modules/buttons/base/example.jsx": "__internal/chunked/showcase/ui/modules/buttons/base/example.jsx.js",
+  "./ui/modules/buttons/docs.mdx": "__internal/chunked/docs/ui/modules/buttons/docs.mdx.js",
+  "./ui/modules/buttons/stateful/example.jsx": "__internal/chunked/showcase/ui/modules/buttons/stateful/example.jsx.js",
+  "./ui/modules/zigzag/base/example.jsx": "__internal/chunked/showcase/ui/modules/zigzag/base/example.jsx.js",
+  "./ui/modules/zigzag/docs.mdx": "__internal/chunked/docs/ui/modules/zigzag/docs.mdx.js",
   "./ui/utilities/alignment/example.jsx": "__internal/chunked/showcase/ui/utilities/alignment/example.jsx.js",
   "./ui/utilities/floats/example.jsx": "__internal/chunked/showcase/ui/utilities/floats/example.jsx.js",
   "docs/common": "__internal/chunked/docs/common.js",
@@ -20,6 +25,8 @@ exports[`creates an entry 1`] = `
 Object {
   "__internal/chunked/docs": Object {
     "__internal/chunked/docs/ui/components/buttons/docs.mdx.js": "./ui/components/buttons/docs.mdx",
+    "__internal/chunked/docs/ui/modules/buttons/docs.mdx.js": "./ui/modules/buttons/docs.mdx",
+    "__internal/chunked/docs/ui/modules/zigzag/docs.mdx.js": "./ui/modules/zigzag/docs.mdx",
   },
   "__internal/chunked/showcase": Object {
     "__internal/chunked/showcase/ui/components/buttons/base/example.jsx.js": "./ui/components/buttons/base/example.jsx",
@@ -28,6 +35,9 @@ Object {
     "__internal/chunked/showcase/ui/components/data-tables/advanced/example.jsx.js": "./ui/components/data-tables/advanced/example.jsx",
     "__internal/chunked/showcase/ui/components/data-tables/base/example.jsx.js": "./ui/components/data-tables/base/example.jsx",
     "__internal/chunked/showcase/ui/components/data-tables/inline-edit/example.jsx.js": "./ui/components/data-tables/inline-edit/example.jsx",
+    "__internal/chunked/showcase/ui/modules/buttons/base/example.jsx.js": "./ui/modules/buttons/base/example.jsx",
+    "__internal/chunked/showcase/ui/modules/buttons/stateful/example.jsx.js": "./ui/modules/buttons/stateful/example.jsx",
+    "__internal/chunked/showcase/ui/modules/zigzag/base/example.jsx.js": "./ui/modules/zigzag/base/example.jsx",
     "__internal/chunked/showcase/ui/utilities/alignment/example.jsx.js": "./ui/utilities/alignment/example.jsx",
     "__internal/chunked/showcase/ui/utilities/floats/example.jsx.js": "./ui/utilities/floats/example.jsx",
   },

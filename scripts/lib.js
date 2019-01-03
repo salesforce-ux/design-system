@@ -3,6 +3,7 @@ const { toList } = require('@salesforce-ux/design-system-previewer/lib/tree');
 
 const find = (list, f) => Either.fromNullable(list.find(f));
 
+// This adds these methods to the SLDS.umd.js output
 module.exports = ui => {
   const component = name =>
     Either.of(ui.get('components')).chain(cs =>
@@ -12,6 +13,15 @@ module.exports = ui => {
   const components = () =>
     ui
       .get('components')
+      .keySeq()
+      .sort();
+
+  const moduleComponent = name =>
+    Either.of(ui.get('modules')).chain(cs => Either.fromNullable(cs.get(name)));
+
+  const moduleComponents = () =>
+    ui
+      .get('modules')
       .keySeq()
       .sort();
 
@@ -46,6 +56,8 @@ module.exports = ui => {
     ui,
     component,
     components,
+    moduleComponent,
+    moduleComponents,
     utility,
     utilities,
     variants,

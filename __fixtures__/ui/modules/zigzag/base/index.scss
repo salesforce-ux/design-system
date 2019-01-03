@@ -1,0 +1,21 @@
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+@import '../../../init';
+@import '../mixins/index';
+
+/**
+ * # The zigzag
+ *
+ * Something something
+ *
+ * @summary This neutralizes all the base styles making it look like a text link
+ * @name base
+ * @selector .dsm-zigzag
+ * @restrict div
+ * @variant
+ */
+.dsm-zigzag {
+  @include button-reset;
+  @include button-normalize;
+}

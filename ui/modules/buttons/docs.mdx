@@ -1,0 +1,42 @@
+import CodeView from '../../../shared/components/CodeView';
+import CodeBlock from '../../../shared/components/CodeBlock';
+import Blockquote from '../../../shared/components/Blockquote';
+import * as ButtonExamples from './base/example';
+import { getDisplayElementById } from '../../shared/helpers';
+
+<div className="doc lead">
+  HELLO Buttons are clickable items used to perform an action.
+</div>
+
+## I'm a heading
+
+Buttons should be used in situations where users might need to:
+
+- submit a form
+- begin a new task
+- trigger a new UI element to appear on the page
+- specify a new or next step in a process
+
+## normal markdown things
+
+<Blockquote type="a11y" header="Accessibility Note">
+  Since both the chevron toggle and the step's title act as a trigger to open and close the step's detail, ensure both the icon button and the title include `aria-controls=[uniqueId]` where the `uniqueId` matches the `id` on the `<div />` with `class="slds-summary-detail__content".`
+</Blockquote>
+
+- lists
+
+*italic*
+
+## I'm another heading
+
+<CodeView>
+  <React.Fragment>
+    {ButtonExamples.default()}
+    {getDisplayElementById(ButtonExamples.examples, 'button-neutral')}
+    {getDisplayElementById(ButtonExamples.examples, 'button-brand')}
+    {getDisplayElementById(ButtonExamples.examples, 'button-brand-outline')}
+    {getDisplayElementById(ButtonExamples.examples, 'button-destructive')}
+    {getDisplayElementById(ButtonExamples.examples, 'button-destructive-text')}
+    {getDisplayElementById(ButtonExamples.examples, 'button-success')}
+  </React.Fragment>
+</CodeView>

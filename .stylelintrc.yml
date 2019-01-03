@@ -13,7 +13,7 @@ defaultSeverity: "error"
 # Overrides
 rules:
   "selector-class-pattern":
-    - "^(slds|site|demo)(-[a-z0-9_-]+|)$"
+    - "^(slds|site|demo|dsm)(-[a-z0-9_-]+|)$"
     -
       severity: error
       resolveNestedSelectors: true

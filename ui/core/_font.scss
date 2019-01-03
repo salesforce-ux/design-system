@@ -3,11 +3,13 @@
 
 // scss-lint:disable SpaceAfterComma
 
-@if ($slds-load-webfonts) {
-  @include font-face(Light,                 $font-weight-setting: $font-weight-light);
-  @include font-face(LightItalic,   italic, $font-weight-light);
-  @include font-face(Regular,               $font-weight-setting: $font-weight-regular);
-  @include font-face(Italic,        italic, $font-weight-regular);
-  @include font-face(Bold,                  $font-weight-setting: $font-weight-bold);
-  @include font-face(BoldItalic,    italic, $font-weight-bold);
+@mixin core-fonts {
+  @if ($slds-load-webfonts) {
+    @include font-face(Light,                 $font-weight-setting: $font-weight-light);
+    @include font-face(LightItalic,   italic, $font-weight-light);
+    @include font-face(Regular,               $font-weight-setting: $font-weight-regular);
+    @include font-face(Italic,        italic, $font-weight-regular);
+    @include font-face(Bold,                  $font-weight-setting: $font-weight-bold);
+    @include font-face(BoldItalic,    italic, $font-weight-bold);
+  }
 }

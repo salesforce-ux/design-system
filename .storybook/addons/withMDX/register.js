@@ -2,8 +2,11 @@ import React, { lazy, Suspense } from 'react';
 import addons from '@storybook/addons';
 import styled from '@emotion/styled';
 
+// import the framework to make the docs _look_ like the framework, plus we rely on it for buttons in the code blocks
 import '../../../ui/index.scss';
+// import the docs specific styles
 import '../../../shared/styles/doc.scss';
+
 import ErrorBoundary from './error-boundary';
 
 const MDXPanel = styled.div({
@@ -26,7 +29,9 @@ class MDX extends React.Component {
   }
 
   onAddMDX(params) {
-    const docsPathArr = params.storyFile
+    // create a string that represents the reletive path to the docs file, for this specific story file
+    // './ui/components/buttons/stateful/index.stories.js' -> 'ui/components/buttons' | ''
+    const docsPathPart = params.storyFile
       ? `${params.storyFile
           .split('/')
           .filter((slug, index) => index > 0 && index <= 3)
@@ -36,22 +41,23 @@ class MDX extends React.Component {
     this.setState({
       kind: params.kind,
       story: params.story,
-      mdxFilePath: docsPathArr
+      mdxFilePath: docsPathPart
     });
   }
 
   componentDidMount() {
     const { channel, api } = this.props;
-    // Listen to the notes and render it.
+    // Listen to the mdx and render it.
     channel.on('SLDS/add_mdx', this.onAddMDX);
 
-    // Clear the current notes on every story change.
+    // Clear the current mdx on every story change.
     this.stopListeningOnStory = api.onStory(() => {
       this.onAddMDX('');
     });
   }
 
   renderMDXDoxs(mdxFilePath) {
+    //dynamically import the docs file reletive to the storyfile
     const Mdx = lazy(() => import(`../../../${mdxFilePath}/docs.mdx`));
     return (
       <ErrorBoundary>
@@ -73,7 +79,7 @@ class MDX extends React.Component {
     ) : null;
   }
 
-  // This is some cleanup tasks when the Notes panel is unmounting.
+  // This is some cleanup tasks when the MDX panel is unmounting.
   componentWillUnmount() {
     if (this.stopListeningOnStory) {
       this.stopListeningOnStory();

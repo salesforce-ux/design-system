@@ -50,9 +50,9 @@ export const getDisplayElementById = (collection, id) => {
       )} has broken schema that requires an array of example/state objects with 'id' and 'element' properties`
     );
 
-  const elementObj = collection.find(o => o.id === id);
-  if (elementObj) {
-    return elementObj.element;
+  const elementObj = collection.filter(example => example.id === id);
+  if (elementObj && elementObj[0]) {
+    return elementObj[0].element;
   } else {
     throw new Error(`No display element with id "${id}" found`);
   }

@@ -99,8 +99,16 @@ const NavItem = props => (
  * Document Name
  */
 const Name = props => (
-  <div className="slds-builder-header__item">
-    <h1 className="slds-builder-header__item-label">Page Type</h1>
+  <div className="slds-builder-header__item slds-has-flexi-truncate">
+    <h1 className="slds-builder-header__item-label">
+      <span
+        class="slds-truncate"
+        title="Page Type with a very very long name that will truncate when the container is not wide enough to contain this content completely"
+      >
+        Page Type with a very very long name that will truncate when the
+        container is not wide enough to contain this content completely
+      </span>
+    </h1>
   </div>
 );
 

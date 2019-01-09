@@ -4,6 +4,12 @@
 
 <!-- ## [Unreleased] -->
 
+## 2.8.0
+
+### Added
+
+- Added `slds-container_fluid` to the div containing a step's title and content in order to display the Setup Assistant properly in IE11
+
 ## 2.7.0
 
 ### Changed

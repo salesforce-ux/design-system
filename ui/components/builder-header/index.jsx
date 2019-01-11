@@ -98,19 +98,19 @@ const NavItem = props => (
 /**
  * Document Name
  */
-const Name = props => (
-  <div className="slds-builder-header__item slds-has-flexi-truncate">
-    <h1 className="slds-builder-header__item-label">
-      <span
-        class="slds-truncate"
-        title="Page Type with a very very long name that will truncate when the container is not wide enough to contain this content completely"
-      >
-        Page Type with a very very long name that will truncate when the
-        container is not wide enough to contain this content completely
-      </span>
-    </h1>
-  </div>
-);
+const Name = props => {
+  const { label } = props;
+
+  return (
+    <div className="slds-builder-header__item slds-has-flexi-truncate">
+      <h1 className="slds-builder-header__item-label">
+        <span class="slds-truncate" title={label}>
+          {label}
+        </span>
+      </h1>
+    </div>
+  );
+};
 
 /**
  * Back Link
@@ -251,13 +251,14 @@ class BuilderToolbar extends Component {
  */
 class BuilderHeader extends Component {
   render() {
-    const { showToolbar } = this.props;
+    const { showToolbar, docName } = this.props;
+
     return (
       <div className="slds-builder-header_container">
         <header className="slds-builder-header">
           <Logo />
           <Nav />
-          <Name />
+          <Name label={docName || 'Page Type'} />
           <div className="slds-builder-header__item slds-builder-header__utilities">
             <BackLink />
             <Help />

@@ -10,6 +10,10 @@ const { matchesMarkup } = createHelpers(__dirname);
 
 describe('render builder header', () => {
   it('render base builder header', () => matchesMarkup(<BuilderHeader />));
+  it('render base builder header with truncated name', () =>
+    matchesMarkup(
+      <BuilderHeader docName="Page Type with a very very long name that will truncate when the container is not wide enough to contain this content completely" />
+    ));
   it('render base builder header with toolbar', () =>
     matchesMarkup(<BuilderHeader showToolbar />));
 });

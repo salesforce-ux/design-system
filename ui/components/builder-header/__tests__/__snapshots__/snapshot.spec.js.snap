@@ -132,12 +132,17 @@ exports[`render builder header render base builder header 1`] = `
       </ul>
     </nav>
     <div
-      className="slds-builder-header__item"
+      className="slds-builder-header__item slds-has-flexi-truncate"
     >
       <h1
         className="slds-builder-header__item-label"
       >
-        Page Type
+        <span
+          class="slds-truncate"
+          title="Page Type"
+        >
+          Page Type
+        </span>
       </h1>
     </div>
     <div
@@ -342,12 +347,17 @@ exports[`render builder header render base builder header with toolbar 1`] = `
       </ul>
     </nav>
     <div
-      className="slds-builder-header__item"
+      className="slds-builder-header__item slds-has-flexi-truncate"
     >
       <h1
         className="slds-builder-header__item-label"
       >
-        Page Type
+        <span
+          class="slds-truncate"
+          title="Page Type"
+        >
+          Page Type
+        </span>
       </h1>
     </div>
     <div
@@ -574,5 +584,220 @@ exports[`render builder header render base builder header with toolbar 1`] = `
       </button>
     </div>
   </div>
+</div>
+`;
+
+exports[`render builder header render base builder header with truncated name 1`] = `
+<div
+  className="slds-builder-header_container"
+>
+  <header
+    className="slds-builder-header"
+  >
+    <div
+      className="slds-builder-header__item"
+    >
+      <div
+        className="slds-builder-header__item-label slds-media slds-media_center"
+      >
+        <div
+          className="slds-media__figure"
+        >
+          <span
+            className="slds-icon_container slds-icon-utility-builder slds-current-color"
+            title={null}
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-icon slds-icon_x-small"
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#builder"
+              />
+            </svg>
+          </span>
+        </div>
+        <div
+          className="slds-media__body"
+        >
+          App Name
+        </div>
+      </div>
+    </div>
+    <nav
+      className="slds-builder-header__item slds-builder-header__nav"
+    >
+      <ul
+        className="slds-builder-header__nav-list"
+      >
+        <li
+          className="slds-builder-header__nav-item"
+        >
+          <a
+            className="slds-builder-header__item-action slds-media slds-media_center"
+            href="javascript:void(0);"
+          >
+            <span
+              className="slds-media__figure"
+            >
+              <span
+                className="slds-icon_container slds-icon-utility-settings slds-current-color"
+                title={null}
+              >
+                <svg
+                  aria-hidden={true}
+                  className="slds-icon slds-icon_x-small"
+                >
+                  <use
+                    xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#settings"
+                  />
+                </svg>
+              </span>
+            </span>
+            <span
+              className="slds-media__body"
+            >
+              <span
+                className="slds-truncate"
+                title="Link"
+              >
+                Link
+              </span>
+            </span>
+          </a>
+        </li>
+        <li
+          className="slds-builder-header__nav-item"
+        >
+          <button
+            aria-haspopup="true"
+            className="slds-button slds-builder-header__item-action slds-media slds-media_center"
+            title="Click to open menu"
+          >
+            <span
+              className="slds-media__figure"
+            >
+              <span
+                className="slds-icon_container slds-icon-utility-page slds-current-color"
+                title={null}
+              >
+                <svg
+                  aria-hidden={true}
+                  className="slds-icon slds-icon_x-small"
+                >
+                  <use
+                    xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#page"
+                  />
+                </svg>
+              </span>
+            </span>
+            <span
+              className="slds-media__body"
+            >
+              <span
+                className="slds-truncate"
+                title="Dropdown"
+              >
+                Dropdown
+              </span>
+              <span
+                className="slds-icon_container slds-icon-utility-chevrondown slds-current-color slds-m-left_small"
+                title={null}
+              >
+                <svg
+                  aria-hidden={true}
+                  className="slds-icon slds-icon_x-small"
+                >
+                  <use
+                    xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#chevrondown"
+                  />
+                </svg>
+              </span>
+            </span>
+          </button>
+        </li>
+      </ul>
+    </nav>
+    <div
+      className="slds-builder-header__item slds-has-flexi-truncate"
+    >
+      <h1
+        className="slds-builder-header__item-label"
+      >
+        <span
+          class="slds-truncate"
+          title="Page Type with a very very long name that will truncate when the container is not wide enough to contain this content completely"
+        >
+          Page Type with a very very long name that will truncate when the container is not wide enough to contain this content completely
+        </span>
+      </h1>
+    </div>
+    <div
+      className="slds-builder-header__item slds-builder-header__utilities"
+    >
+      <div
+        className="slds-builder-header__utilities-item"
+      >
+        <a
+          className="slds-builder-header__item-action slds-media slds-media_center"
+          href="javascript:void(0);"
+        >
+          <div
+            className="slds-media__figure"
+          >
+            <span
+              className="slds-icon_container slds-icon-utility-back slds-current-color"
+              title={null}
+            >
+              <svg
+                aria-hidden={true}
+                className="slds-icon slds-icon_x-small"
+              >
+                <use
+                  xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#back"
+                />
+              </svg>
+            </span>
+          </div>
+          <div
+            className="slds-media__body"
+          >
+            Back
+          </div>
+        </a>
+      </div>
+      <div
+        className="slds-builder-header__utilities-item"
+      >
+        <a
+          className="slds-builder-header__item-action slds-media slds-media_center"
+          href="javascript:void(0);"
+        >
+          <div
+            className="slds-media__figure"
+          >
+            <span
+              className="slds-icon_container slds-icon-utility-help slds-current-color"
+              title={null}
+            >
+              <svg
+                aria-hidden={true}
+                className="slds-icon slds-icon_x-small"
+              >
+                <use
+                  xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#help"
+                />
+              </svg>
+            </span>
+          </div>
+          <div
+            className="slds-media__body"
+          >
+            Help
+          </div>
+        </a>
+      </div>
+    </div>
+  </header>
 </div>
 `;

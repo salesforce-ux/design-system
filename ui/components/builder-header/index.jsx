@@ -2,6 +2,7 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import SvgIcon from '../../shared/svg-icon';
 import ButtonIcon from '../button-icons/';
 import { UtilityIcon } from '../icons/base/example';
@@ -98,11 +99,27 @@ const NavItem = props => (
 /**
  * Document Name
  */
-const Name = props => (
-  <div className="slds-builder-header__item">
-    <h1 className="slds-builder-header__item-label">Page Type</h1>
-  </div>
-);
+const Name = props => {
+  const { label } = props;
+
+  return (
+    <div className="slds-builder-header__item slds-has-flexi-truncate">
+      <h1 className="slds-builder-header__item-label">
+        <span class="slds-truncate" title={label}>
+          {label}
+        </span>
+      </h1>
+    </div>
+  );
+};
+
+Name.propTypes = {
+  label: PropTypes.string
+};
+
+Name.defaultProps = {
+  label: 'Page Type'
+};
 
 /**
  * Back Link
@@ -243,13 +260,14 @@ class BuilderToolbar extends Component {
  */
 class BuilderHeader extends Component {
   render() {
-    const { showToolbar } = this.props;
+    const { showToolbar, docName } = this.props;
+
     return (
       <div className="slds-builder-header_container">
         <header className="slds-builder-header">
           <Logo />
           <Nav />
-          <Name />
+          <Name label={docName} />
           <div className="slds-builder-header__item slds-builder-header__utilities">
             <BackLink />
             <Help />

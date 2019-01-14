@@ -2,6 +2,7 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import SvgIcon from '../../shared/svg-icon';
 import ButtonIcon from '../button-icons/';
 import { UtilityIcon } from '../icons/base/example';
@@ -110,6 +111,14 @@ const Name = props => {
       </h1>
     </div>
   );
+};
+
+Name.propTypes = {
+  label: PropTypes.string
+};
+
+Name.defaultProps = {
+  label: 'Page Type'
 };
 
 /**
@@ -258,7 +267,7 @@ class BuilderHeader extends Component {
         <header className="slds-builder-header">
           <Logo />
           <Nav />
-          <Name label={docName || 'Page Type'} />
+          <Name label={docName} />
           <div className="slds-builder-header__item slds-builder-header__utilities">
             <BackLink />
             <Help />

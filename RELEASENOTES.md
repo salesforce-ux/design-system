@@ -309,6 +309,8 @@
 - Moved `slds-grid` from `slds-modal__content` to `slds-welcome-mat__content`
 #### Deprecated
 - Deprecated `.slds-welcome-mat .slds-modal-container` selector for `.slds-modal-small` to be applied to `slds-modal`. To upgrade existing welcome mat, in `slds-modal`, replace `slds-welcome-mat` with `slds-modal_small`, and also remove `slds-welcome-mat__content` from `slds-modal-container`. Markup structure changes need to be made existing code. First, wrap the existing content of `<div class='slds-modal-container'>` with `<div class='slds-welcome-mat__content slds-grid'>`. Then, wrap `<div class='slds-welcome-mat__content slds-grid'>` with `<div class='slds-welcome-mat'>`.
+#### Fixed
+- Fixed vertical alignment of `slds-welcome-mat__info-content` in IE11.
 
 ## Utilities
 

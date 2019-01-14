@@ -110,7 +110,7 @@ const renderExpandableSteps = steps => {
           isOpen={step.isOpen}
           summaryTitle={step.title}
         />
-        <div>
+        <div className="slds-container_fluid">
           <SummaryDetailTitle>
             <SetupAssistantStepSummary
               title={step.title}

@@ -6,6 +6,7 @@ import { Step as BaseStep, Progress as BaseProgress } from './base/example';
 import { Step as VerticalStep, Progress as VerticalProgress } from './vertical/example';
 import { Tooltip } from '../tooltips/base/example';
 import { Modal, ModalHeader, ModalContent, ModalFooter } from '../modals/base/example';
+import style from './docs/index.scss';
 
 <div className="doc lead">
   A progress indicator component communicates to the user the progress of a particular process.
@@ -26,11 +27,11 @@ import { Modal, ModalHeader, ModalContent, ModalFooter } from '../modals/base/ex
 ## Implementation Requirements
 
 <Blockquote type="note" header="JavaScript Requirements">
-  The <code class="doc">.slds-progress-bar</code> accepts a range from 0% to 100%, and this percentage should be applied with inline styling to the <code class="doc">div</code> with class <code class="doc">slds-progress-bar__value</code> using JavaScript. If implementing a horizontal progress indicator, set the width, otherwise set the height for vertical progress indicators.
+  The <code className="doc">.slds-progress-bar</code> accepts a range from 0% to 100%, and this percentage should be applied with inline styling to the <code className="doc">div</code> with class <code className="doc">slds-progress-bar__value</code> using JavaScript. If implementing a horizontal progress indicator, set the width, otherwise set the height for vertical progress indicators.
 </Blockquote>
 
 <Blockquote type="a11y" header="Accessibility Requirements">
-  As the percentage of completion changes, be sure to update the <code class="doc">aria-valuenow</code> property on the `<div>` with `class="slds-progress-bar"`, as well as the `slds-assistive-text` `<span>`.
+  As the percentage of completion changes, be sure to update the <code className="doc">aria-valuenow</code> property on the `<div>` with `class="slds-progress-bar"`, as well as the `slds-assistive-text` `<span>`.
 </Blockquote>
 
 <CodeBlock toggleCode={false}>
@@ -103,7 +104,7 @@ When an error has occurred on a step, the `<div>` with class `.slds-progress__it
 ### Step Title Tooltip
 
 <Blockquote type="a11y" header="Accessibility Requirements">
-  When a step's tooltip is visible, the step's button needs the <code class="doc">aria-describedby</code> attribute, whose value should be the <code class="doc">id</code> of the associated tooltip.
+  When a step's tooltip is visible, the step's button needs the <code className="doc">aria-describedby</code> attribute, whose value should be the <code className="doc">id</code> of the associated tooltip.
 </Blockquote>
 
 <Example title="Progress Indicator Tooltip Horizontal">

@@ -39,6 +39,7 @@ export let Listbox = props => (
     id={props.id || listboxId}
     role="listbox"
     aria-orientation={props.horizontal || props.inline ? 'horizontal' : null}
+    className={props.listboxClassName}
   >
     <ul
       className={classNames(
@@ -442,7 +443,7 @@ let ObjectSwitcher = props => (
 ----------------------------------------------------------------------------- */
 
 export const ListboxDropdown = props => (
-  <Listbox className="slds-dropdown slds-dropdown_fluid" vertical>
+  <Listbox listboxClassName="slds-dropdown slds-dropdown_fluid" vertical>
     <ListboxItem>
       <EntityOption
         id={listboxOptionId01}

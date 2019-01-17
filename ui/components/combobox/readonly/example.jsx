@@ -18,7 +18,7 @@ const listboxOptionId01 = 'listbox-option-unique-id-01';
 const listboxOptionId02 = 'listbox-option-unique-id-02';
 
 const ListboxDropdown = props => (
-  <Listbox className="slds-dropdown slds-dropdown_fluid" vertical>
+  <Listbox listboxClassName="slds-dropdown slds-dropdown_fluid" vertical>
     <ListboxItem>
       <Option
         id={listboxOptionId01}

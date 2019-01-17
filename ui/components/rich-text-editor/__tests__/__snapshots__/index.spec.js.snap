@@ -622,12 +622,13 @@ exports[`renders a RTE editor with an error and non-readonly combobox 1`] = `
                     </div>
                     <div
                       aria-orientation={null}
+                      className="slds-dropdown slds-dropdown_fluid"
                       id="family-listbox"
                       role="listbox"
                     >
                       <ul
                         aria-label={undefined}
-                        className="slds-listbox slds-listbox_vertical slds-dropdown slds-dropdown_fluid"
+                        className="slds-listbox slds-listbox_vertical"
                         role="presentation"
                       >
                         <li
@@ -746,12 +747,13 @@ exports[`renders a RTE editor with an error and non-readonly combobox 1`] = `
                     </div>
                     <div
                       aria-orientation={null}
+                      className="slds-dropdown slds-dropdown_fluid"
                       id="size-listbox"
                       role="listbox"
                     >
                       <ul
                         aria-label={undefined}
-                        className="slds-listbox slds-listbox_vertical slds-dropdown slds-dropdown_fluid"
+                        className="slds-listbox slds-listbox_vertical"
                         role="presentation"
                       >
                         <li
@@ -871,12 +873,13 @@ exports[`renders a RTE editor with an error and non-readonly combobox 1`] = `
                   </div>
                   <div
                     aria-orientation={null}
+                    className="slds-dropdown slds-dropdown_fluid"
                     id="family-listbox"
                     role="listbox"
                   >
                     <ul
                       aria-label={undefined}
-                      className="slds-listbox slds-listbox_vertical slds-dropdown slds-dropdown_fluid"
+                      className="slds-listbox slds-listbox_vertical"
                       role="presentation"
                     >
                       <li
@@ -1097,12 +1100,13 @@ exports[`renders an RTE toolbar in a narrow space 1`] = `
                       </div>
                       <div
                         aria-orientation={null}
+                        className="slds-dropdown slds-dropdown_fluid"
                         id="family-listbox"
                         role="listbox"
                       >
                         <ul
                           aria-label={undefined}
-                          className="slds-listbox slds-listbox_vertical slds-dropdown slds-dropdown_fluid"
+                          className="slds-listbox slds-listbox_vertical"
                           role="presentation"
                         >
                           <li
@@ -1221,12 +1225,13 @@ exports[`renders an RTE toolbar in a narrow space 1`] = `
                       </div>
                       <div
                         aria-orientation={null}
+                        className="slds-dropdown slds-dropdown_fluid"
                         id="size-listbox"
                         role="listbox"
                       >
                         <ul
                           aria-label={undefined}
-                          className="slds-listbox slds-listbox_vertical slds-dropdown slds-dropdown_fluid"
+                          className="slds-listbox slds-listbox_vertical"
                           role="presentation"
                         >
                           <li

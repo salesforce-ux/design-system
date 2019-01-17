@@ -37,7 +37,7 @@ const listboxOptionId12 = 'listbox-option-unique-id-12';
 
 const ListboxDropdown = props => (
   <Listbox
-    className="slds-dropdown slds-dropdown_fluid slds-dropdown_length-5"
+    listboxClassName="slds-dropdown slds-dropdown_fluid slds-dropdown_length-5"
     vertical
   >
     <ListboxItem>
@@ -123,7 +123,7 @@ export default (
               className="slds-combobox-picklist slds-timepicker"
               inputIcon="right"
               inputIconRightSymbol="clock"
-              inputIconRightAssistiveText="Select a time"
+              inputIconRightAssistiveText={false}
               placeholder=" "
               listbox={<ListboxDropdown />}
             />
@@ -178,7 +178,7 @@ export let states = [
                   className="slds-combobox-picklist slds-timepicker"
                   inputIcon="right"
                   inputIconRightSymbol="clock"
-                  inputIconRightAssistiveText="Select a time"
+                  inputIconRightAssistiveText={false}
                   placeholder=" "
                   listbox={<ListboxDropdown />}
                 />
@@ -233,7 +233,7 @@ export let states = [
                   className="slds-combobox-picklist slds-timepicker"
                   inputIcon="right"
                   inputIconRightSymbol="clock"
-                  inputIconRightAssistiveText="Select a time"
+                  inputIconRightAssistiveText={false}
                   placeholder=" "
                   value="8:00am"
                   listbox={<ListboxDropdown optionSelected />}

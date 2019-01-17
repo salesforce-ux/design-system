@@ -256,6 +256,7 @@ exports[`Global Actions Bar renders favorites item with dialog menu 1`] = `
     >
       <div
         aria-orientation={null}
+        className={undefined}
         id="listbox-unique-id"
         role="listbox"
       >

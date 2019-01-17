@@ -27,7 +27,7 @@ const listboxOptionId03 = 'listbox-option-unique-id-03';
 const ListboxDropdown = props => (
   <Listbox
     aria-label={props.heading ? props.heading : null}
-    className="slds-dropdown slds-dropdown_fluid"
+    listboxClassName="slds-dropdown slds-dropdown_fluid"
     vertical
   >
     {props.heading ? (

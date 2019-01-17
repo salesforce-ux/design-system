@@ -230,7 +230,11 @@ export let ComposerOverflowMenu = props => (
 );
 
 const ComboboxListbox = props => (
-  <Listbox className="slds-dropdown slds-dropdown_fluid" vertical id={props.id}>
+  <Listbox
+    listboxClassName="slds-dropdown slds-dropdown_fluid"
+    vertical
+    id={props.id}
+  >
     <ListboxItem>
       <EntityOption id={props.listboxOptionId} entityTitle="Acme" entityMeta />
     </ListboxItem>

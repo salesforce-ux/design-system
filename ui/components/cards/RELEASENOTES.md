@@ -3,6 +3,11 @@
 # Cards Release Notes
 
 <!-- ## [Unreleased] -->
+## 2.8.1
+
+### Fixed
+
+- Fixed collapsing issue when `slds-assistive-text` would be applied to `slds-card__header`
 
 ## 2.7.0
 

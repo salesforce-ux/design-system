@@ -132,4 +132,19 @@ describe('Card', () => {
         </CardFooter>
       </Card>
     ));
+  it('renders a base card with header visibly hidden', () =>
+    matchesMarkup(
+      <Card>
+        <CardHeader
+          title="Card Header"
+          href="javascript:void(0);"
+          symbol="contact"
+          className="slds-assistive-text"
+        />
+        <CardBody>Anything can go into the card body</CardBody>
+        <CardFooter>
+          View All <span className="slds-assistive-text">Contacts</span>
+        </CardFooter>
+      </Card>
+    ));
 });

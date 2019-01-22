@@ -111,7 +111,7 @@ Lint the code base for syntax and stylistic errors.
 # Lint indentation, Sass, JavaScript files
 npm run gulp -- lint
 
-# Lint languagesindependently
+# Lint languages independently
 npm run gulp -- lint:sass
 npm run gulp -- lint:javascript
 npm run gulp -- lint:javascript:test

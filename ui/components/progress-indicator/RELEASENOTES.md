@@ -4,4 +4,8 @@
 
 <!-- ## [Unreleased] -->
 
-<!-- ## [VERSION] -->
+## 2.8.1
+
+### Fixed
+
+- IE11: Layout issues when in a modal

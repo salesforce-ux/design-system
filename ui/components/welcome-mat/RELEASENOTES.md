@@ -3,6 +3,10 @@
 # Welcome Mat Release Notes
 
 <!-- ## [Unreleased] -->
+## 2.8.1
+
+### Fixed
+- Fixed vertical alignment of `slds-welcome-mat__info-content` in IE11.
 
 ## 2.8.0
 

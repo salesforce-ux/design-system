@@ -124,9 +124,17 @@ export const copyComponentDesignTokens = () =>
     })
     .pipe(gulp.dest(distPath('ui')));
 
-export const copyReleaseNotes = () =>
+export const copyComponentReleaseNotes = () =>
   gulp
     .src('components/**/RELEASENOTES.md', {
+      base: path.resolve(paths.ui),
+      cwd: path.resolve(paths.ui)
+    })
+    .pipe(gulp.dest(distPath('__internal/release-notes')));
+
+export const copyUtilityReleaseNotes = () =>
+  gulp
+    .src('utilities/**/RELEASENOTES.md', {
       base: path.resolve(paths.ui),
       cwd: path.resolve(paths.ui)
     })

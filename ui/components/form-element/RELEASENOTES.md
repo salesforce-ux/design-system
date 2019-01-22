@@ -3,6 +3,11 @@
 # Form Element Release Notes
 
 <!-- ## [Unreleased] -->
+## 2.8.1
+
+### Fixed
+- Resolved issue where left-aligned checkbox labels would become squished
+
 ## 2.8.0
 
 ### Added

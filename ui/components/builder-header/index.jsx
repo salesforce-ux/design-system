@@ -105,7 +105,7 @@ const Name = props => {
   return (
     <div className="slds-builder-header__item slds-has-flexi-truncate">
       <h1 className="slds-builder-header__item-label">
-        <span class="slds-truncate" title={label}>
+        <span className="slds-truncate" title={label}>
           {label}
         </span>
       </h1>

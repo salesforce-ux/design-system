@@ -30,6 +30,15 @@
   }
 }
 
+/**
+* @summary Horizontally flip icons
+* @selector .slds-icon_flip
+* @ restrict .slds-icon_container
+*/
+[dir="rtl"] .slds-icon_flip {
+  transform: scaleX(-1);
+}
+
 [class*='slds-icon-action-'] {
   padding: $spacing-x-small;
   border-radius: $border-radius-circle;

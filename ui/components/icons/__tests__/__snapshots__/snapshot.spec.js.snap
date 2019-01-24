@@ -42,6 +42,36 @@ exports[`Icon Action renders an xx-small action icon 1`] = `
 </span>
 `;
 
+exports[`RTL icons should render a horizontally flipped icon 1`] = `
+<div
+  dir="rtl"
+  style={
+    Object {
+      "width": "32px",
+    }
+  }
+>
+  <span
+    className="slds-icon_container slds-icon-utility-picklist_type slds-icon_flip"
+    title="List icon"
+  >
+    <svg
+      aria-hidden={true}
+      className="slds-icon slds-icon-text-default"
+    >
+      <use
+        xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#picklist_type"
+      />
+    </svg>
+    <span
+      className="slds-assistive-text"
+    >
+      List icon
+    </span>
+  </span>
+</div>
+`;
+
 exports[`Utility Icon should render a utility icon 1`] = `
 <span
   className="slds-icon_container slds-icon-utility-announcement"

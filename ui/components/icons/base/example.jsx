@@ -64,5 +64,20 @@ export let examples = [
     id: 'currentColor',
     label: 'Current Color',
     element: <UtilityIcon containerClassName="slds-current-color" />
+  },
+  {
+    id: 'rtl-flipped',
+    label: 'Horizontally flipped icon',
+    element: (
+      <div dir="rtl" style={{ width: '32px' }}>
+        <UtilityIcon
+          containerClassName="slds-icon_flip"
+          className="slds-icon-text-default"
+          symbol="picklist_type"
+          title="List icon"
+          assistiveText="List icon"
+        />
+      </div>
+    )
   }
 ];

@@ -4,6 +4,12 @@
 
 <!-- ## [Unreleased] -->
 
+## 2.9.0
+
+### Fixed
+
+- Adjusted `z-index` for hover and focus state to not overlap modal overlays and the global header.
+
 ## 2.8.0
 
 ### Fixed

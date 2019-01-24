@@ -1,0 +1,10 @@
+global:
+  scope: component
+  type: z-index
+  category: z-index
+  cssProperties:
+    - 'z-index'
+props:
+  FILES_Z_INDEX_HOVER:
+    value: 5
+    type: number

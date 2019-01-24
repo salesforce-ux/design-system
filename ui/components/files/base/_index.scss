@@ -30,7 +30,7 @@
   &:not(.slds-file_loading) a:focus:before,
   &:not(.slds-file_loading) a:focus:after {
     position: absolute;
-    z-index: $z-index-overlay;
+    z-index: $files-z-index-hover;
     cursor: pointer;
     content: '';
   }
@@ -73,7 +73,7 @@
   // Puts title bar and actions menu at the same z-index as the overlay, so they remain clickable
   &:not(.slds-file_loading) a:hover + .slds-file__title,
   &:not(.slds-file_loading) a:focus + .slds-file__title {
-    z-index: $z-index-overlay;
+    z-index: $files-z-index-hover;
   }
 
   /**
@@ -201,7 +201,7 @@
    */
   &__title {
     display: flex;
-    z-index: $z-index-overlay;
+    z-index: $files-z-index-hover;
     align-items: center;
     padding: $spacing-x-small;
 
@@ -323,7 +323,7 @@
    */
   &__actions-menu {
     position: absolute;
-    z-index: $z-index-overlay;
+    z-index: $files-z-index-hover;
     bottom: $spacing-x-small;
     right: $spacing-xx-small;
   }

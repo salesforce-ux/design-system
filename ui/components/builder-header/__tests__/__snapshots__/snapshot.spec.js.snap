@@ -138,7 +138,7 @@ exports[`render builder header render base builder header 1`] = `
         className="slds-builder-header__item-label"
       >
         <span
-          class="slds-truncate"
+          className="slds-truncate"
           title="Page Type"
         >
           Page Type
@@ -353,7 +353,7 @@ exports[`render builder header render base builder header with toolbar 1`] = `
         className="slds-builder-header__item-label"
       >
         <span
-          class="slds-truncate"
+          className="slds-truncate"
           title="Page Type"
         >
           Page Type
@@ -725,7 +725,7 @@ exports[`render builder header render base builder header with truncated name 1`
         className="slds-builder-header__item-label"
       >
         <span
-          class="slds-truncate"
+          className="slds-truncate"
           title="Page Type with a very very long name that will truncate when the container is not wide enough to contain this content completely"
         >
           Page Type with a very very long name that will truncate when the container is not wide enough to contain this content completely

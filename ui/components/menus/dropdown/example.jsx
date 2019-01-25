@@ -465,5 +465,62 @@ export let examples = [
     id: 'notifications-menu',
     label: 'Menu with alert notifications',
     element: <NotificationsMenu />
+  },
+  {
+    id: 'right-to-left',
+    label: 'RTL support - Center aligned',
+    element: (
+      <div dir="rtl" style={{ width: '10rem' }}>
+        <Trigger className="slds-is-open">
+          <Menu>
+            <MenuList ariaLabel="Show More">
+              <MenuItem tabIndex="0">Menu Item One</MenuItem>
+              <MenuItem>Menu Item Two</MenuItem>
+              <MenuItem>Menu Item Three</MenuItem>
+              <li className="slds-has-divider_top-space" role="separator" />
+              <MenuItem>Menu Item Four</MenuItem>
+            </MenuList>
+          </Menu>
+        </Trigger>
+      </div>
+    )
+  },
+  {
+    id: 'right-to-left-align-left',
+    label: 'RTL support - Left aligned',
+    element: (
+      <div dir="rtl" style={{ width: '10rem' }}>
+        <Trigger className="slds-is-open">
+          <Menu className="slds-dropdown_left">
+            <MenuList ariaLabel="Show More">
+              <MenuItem tabIndex="0">Menu Item One</MenuItem>
+              <MenuItem>Menu Item Two</MenuItem>
+              <MenuItem>Menu Item Three</MenuItem>
+              <li className="slds-has-divider_top-space" role="separator" />
+              <MenuItem>Menu Item Four</MenuItem>
+            </MenuList>
+          </Menu>
+        </Trigger>
+      </div>
+    )
+  },
+  {
+    id: 'right-to-left-align-right',
+    label: 'RTL support - Right aligned',
+    element: (
+      <div dir="rtl" style={{ width: '10rem' }}>
+        <Trigger className="slds-is-open">
+          <Menu className="slds-dropdown_right">
+            <MenuList ariaLabel="Show More">
+              <MenuItem tabIndex="0">Menu Item One</MenuItem>
+              <MenuItem>Menu Item Two</MenuItem>
+              <MenuItem>Menu Item Three</MenuItem>
+              <li className="slds-has-divider_top-space" role="separator" />
+              <MenuItem>Menu Item Four</MenuItem>
+            </MenuList>
+          </Menu>
+        </Trigger>
+      </div>
+    )
   }
 ];

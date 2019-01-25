@@ -501,3 +501,10 @@
     }
   }
 }
+
+[dir="rtl"] .slds-dropdown_center,
+[dir="rtl"] .slds-dropdown--center {
+  left: auto;
+  right: auto;
+  transform: translateX(calc(50% - (#{$square-icon-medium-content-alt} / 2)));
+}

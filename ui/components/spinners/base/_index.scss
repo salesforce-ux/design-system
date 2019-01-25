@@ -219,10 +219,10 @@
 
 .slds-spinner_xx-small,
 .slds-spinner--xx-small {
-  width: 0.5rem;
+  width: $spinner-size-xx-small;
 
   &.slds-spinner_inline {
-    height: 0.5rem;
+    height: $spinner-size-xx-small;
   }
 
   &.slds-spinner:before,
@@ -250,6 +250,13 @@
     right: -0.0625rem;
     animation-name: dotsBounceAfter-extraExtraSmall;
   }
+}
+
+[dir="rtl]"] .slds-spinner_xx-small,
+[dir="rtl]"] .slds-spinner--xx-small {
+  left: unset;
+  right: unset;
+  transform: translateX(calc(-50% - (#{$spinner-size-xx-small} / 2)));
 }
 
 @keyframes dotsBounceBefore-extraExtraSmall {
@@ -297,10 +304,10 @@
 
 .slds-spinner_x-small,
 .slds-spinner--x-small {
-  width: 1rem;
+  width: $spinner-size-x-small;
 
   &.slds-spinner_inline {
-    height: 1rem;
+    height: $spinner-size-x-small;
   }
 
   &.slds-spinner:before,
@@ -328,6 +335,13 @@
     right: -0.125rem;
     animation-name: dotsBounceAfter-extraSmall;
   }
+}
+
+[dir="rtl]"] .slds-spinner_x-small,
+[dir="rtl]"] .slds-spinner--x-small {
+  left: unset;
+  right: unset;
+  transform: translateX(calc(-50% - (#{$spinner-size-x-small} / 2)));
 }
 
 @keyframes dotsBounceBefore-extraSmall {
@@ -375,10 +389,10 @@
 
 .slds-spinner_small,
 .slds-spinner--small {
-  width: 1.25rem;
+  width: $spinner-size-small;
 
   &.slds-spinner_inline {
-    height: 1.25rem;
+    height: $spinner-size-small;
   }
 
   &.slds-spinner:before,
@@ -406,6 +420,13 @@
     right: -0.125rem;
     animation-name: dotsBounceAfter-small;
   }
+}
+
+[dir="rtl]"] .slds-spinner_medium,
+[dir="rtl]"] .slds-spinner--medium {
+  left: unset;
+  right: unset;
+  transform: translateX(calc(-50% - (#{$spinner-size-small} / 2)));
 }
 
 @keyframes dotsBounceBefore-small {
@@ -453,10 +474,10 @@
 
 .slds-spinner_medium,
 .slds-spinner--medium {
-  width: 2rem;
+  width: $spinner-size-medium;
 
   &.slds-spinner_inline {
-    height: 2rem;
+    height: $spinner-size-medium;
   }
 
   &.slds-spinner:before,
@@ -484,6 +505,13 @@
     top: -0.25rem;
     right: -0.25rem;
   }
+}
+
+[dir="rtl]"] .slds-spinner_medium,
+[dir="rtl]"] .slds-spinner--medium {
+  left: unset;
+  right: unset;
+  transform: translateX(calc(-50% - (#{$spinner-size-medium} / 2)));
 }
 
 @keyframes dotsBounceBefore-medium {
@@ -531,10 +559,10 @@
 
 .slds-spinner_large,
 .slds-spinner--large {
-  width: 2.75rem;
+  width: $spinner-size-large;
 
   &.slds-spinner_inline {
-    height: 2.75rem;
+    height: $spinner-size-large;
   }
 
   &.slds-spinner:before,
@@ -562,6 +590,13 @@
     top: -0.3125rem;
     right: -0.3125rem;
   }
+}
+
+[dir="rtl]"] .slds-spinner_large,
+[dir="rtl]"] .slds-spinner--large {
+  left: unset;
+  right: unset;
+  transform: translateX(calc(-50% - (#{$spinner-size-large} / 2)));
 }
 
 @keyframes dotsBounceBefore-large {

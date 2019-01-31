@@ -141,9 +141,10 @@
     "react-test-renderer": "16.4.1",
     "rimraf": "2.6.1",
     "sass-loader": "6.0.6",
-    "semver": "5.5.1",
     "scss-inline-imports": "1.0.5",
     "scss-parser": "1.0.0",
+    "semver": "5.5.1",
+    "simple-git": "1.107.0",
     "strip-indent": "2.0.0",
     "style-loader": "0.19.0",
     "stylelint": "7.10.1",
@@ -183,11 +184,12 @@
     "pretest": "npm run gulp -- build",
     "test": "node -r @std/esm ./node_modules/.bin/jest",
     "jest": "node -r @std/esm ./node_modules/.bin/jest",
-    "precommit": "lint-staged",
+    "precommit": "npm run release-notes:hook && lint-staged",
     "pr-checks": "npm run gulp -- pr-checks",
     "compile-aura-tokens-map": "npm run gulp -- generate:auraTokensMap",
     "compile-token-component-map": "npm run gulp -- generate:tokenComponentMap",
-    "releasenotes": "node ./scripts/release-notes/index.js"
+    "release-notes:compile": "node ./scripts/release-notes/index.js",
+    "release-notes:hook": "node ./scripts/release-notes/hook.js"
   },
   "lint-staged": {
     "linters": {

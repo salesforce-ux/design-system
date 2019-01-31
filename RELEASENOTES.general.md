@@ -1,5 +1,7 @@
 <!-- Release notes authoring guidelines: http://keepachangelog.com/ -->
 <!-- On release, add general notes here. In time the legacy relase notes will be add to this -->
+## 2.8.0 - January 4, 2019
+
 ## 2.7.5 - November 19, 2018
 
 ## 2.7.4 - October 11, 2018

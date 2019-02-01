@@ -252,11 +252,13 @@
   }
 }
 
-[dir="rtl]"] .slds-spinner_xx-small,
-[dir="rtl]"] .slds-spinner--xx-small {
-  left: unset;
-  right: unset;
-  transform: translateX(calc(-50% - (#{$spinner-size-xx-small} / 2)));
+.slds-spinner_xx-small,
+.slds-spinner--xx-small {
+  @include rtl() {
+    left: unset;
+    right: unset;
+    transform: translateX(calc((50% * -1) - (#{$spinner-size-xx-small} / 2)));
+  }
 }
 
 @keyframes dotsBounceBefore-extraExtraSmall {
@@ -337,11 +339,13 @@
   }
 }
 
-[dir="rtl]"] .slds-spinner_x-small,
-[dir="rtl]"] .slds-spinner--x-small {
-  left: unset;
-  right: unset;
-  transform: translateX(calc(-50% - (#{$spinner-size-x-small} / 2)));
+.slds-spinner_x-small,
+.slds-spinner--x-small {
+  @include rtl() {
+    left: unset;
+    right: unset;
+    transform: translateX(calc((50% * -1) - (#{$spinner-size-x-small} / 2)));
+  }
 }
 
 @keyframes dotsBounceBefore-extraSmall {
@@ -422,11 +426,13 @@
   }
 }
 
-[dir="rtl]"] .slds-spinner_medium,
-[dir="rtl]"] .slds-spinner--medium {
-  left: unset;
-  right: unset;
-  transform: translateX(calc(-50% - (#{$spinner-size-small} / 2)));
+.slds-spinner_small,
+.slds-spinner--small {
+  @include rtl() {
+    left: unset;
+    right: unset;
+    transform: translateX(calc((50% * -1) - (#{$spinner-size-small} / 2)));
+  }
 }
 
 @keyframes dotsBounceBefore-small {
@@ -507,11 +513,13 @@
   }
 }
 
-[dir="rtl]"] .slds-spinner_medium,
-[dir="rtl]"] .slds-spinner--medium {
-  left: unset;
-  right: unset;
-  transform: translateX(calc(-50% - (#{$spinner-size-medium} / 2)));
+.slds-spinner_medium,
+.slds-spinner--medium {
+  @include rtl() {
+    left: unset;
+    right: unset;
+    transform: translateX(calc((50% * -1) - (#{$spinner-size-medium} / 2)));
+  }
 }
 
 @keyframes dotsBounceBefore-medium {
@@ -592,11 +600,13 @@
   }
 }
 
-[dir="rtl]"] .slds-spinner_large,
-[dir="rtl]"] .slds-spinner--large {
-  left: unset;
-  right: unset;
-  transform: translateX(calc(-50% - (#{$spinner-size-large} / 2)));
+.slds-spinner_large,
+.slds-spinner--large {
+  @include rtl() {
+    left: unset;
+    right: unset;
+    transform: translateX(calc((50% * -1) - (#{$spinner-size-large} / 2)));
+  }
 }
 
 @keyframes dotsBounceBefore-large {

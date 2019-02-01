@@ -35,8 +35,10 @@
 * @selector .slds-icon_flip
 * @ restrict .slds-icon_container
 */
-[dir="rtl"] .slds-icon_flip {
-  transform: scaleX(-1);
+.slds-icon_flip {
+  @include rtl() {
+    transform: scaleX(-1);
+  }
 }
 
 [class*='slds-icon-action-'] {

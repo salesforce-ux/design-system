@@ -6,6 +6,7 @@ global:
   cssProperties:
   - '*width'
   - '*height'
+  - 'transform'
 props:
   SPINNER_SIZE_XX_SMALL:
     value: '0.5rem'

@@ -61,6 +61,21 @@ describe('Path Track', () => {
     const rendered = shallow(<PathTrack stageName="Won" />);
     expect(rendered.find('.slds-path__stage-name').text()).toBe('Stage: Won');
   });
+
+  it('renders the coaching toggle button for small regions', () => {
+    const rendered = shallow(<PathTrack isSmallRegion />);
+    expect(rendered.find('.slds-path__trigger-region-small').length).toBe(1);
+  });
+
+  it('renders the stretch button sizes for small regions', () => {
+    const rendered = shallow(<PathTrack isSmallRegion coachingOpen />);
+    expect(rendered.find('.slds-button_stretch').length).toBe(2);
+  });
+
+  it("doesn't render the scroll button for mobile", () => {
+    const rendered = shallow(<PathTrack hasCoaching isMobile />);
+    expect(rendered.find('.slds-path__scroll-controls').length).toBe(0);
+  });
 });
 
 describe('Path Step', () => {

@@ -29,11 +29,6 @@
  * @restrict .slds-path div
  */
 .slds-path__track {
-  padding-top: $var-spacing-vertical-small;
-  padding-bottom: $var-spacing-vertical-small;
-  padding-left: $spacing-small;
-  padding-right: $spacing-small;
-
   /**
    * Indicates the scroller is in the overflow state
    *
@@ -98,6 +93,7 @@
  */
 .slds-path__stage-name {
   display: none;
+  font-weight: $font-weight-bold;
 }
 
 /**
@@ -549,7 +545,6 @@
  */
 .slds-path__trigger {
   margin-right: $spacing-small;
-  border-radius: $border-radius-circle;
   transition: $duration-slowly transform ease-in-out;
 }
 
@@ -643,7 +638,6 @@
 .slds-path__coach-title {
   @include text-title;
   margin-bottom: $spacing-x-small;
-  border-bottom: $color-border $border-width-thin solid;
   padding-bottom: $spacing-x-small;
   line-height: 1.125; // to align heading in Guidance (due to edit button)
 }
@@ -703,10 +697,6 @@
   .slds-path__stage-name {
     display: block;
   }
-
-  .slds-path__content:not(.slds-is-collapsed) {
-    border-top: $border-width-thin solid $color-border;
-  }
 }
 
 /**
@@ -724,10 +714,6 @@
   .slds-path__track,
   .slds-path__coach {
     @include flex-wrap(true);
-  }
-
-  .slds-path__coach {
-    padding: 0 $spacing-small;
   }
 
   .slds-path__stage-name {
@@ -757,4 +743,15 @@
   .slds-path__guidance {
     margin-top: $spacing-medium;
   }
+}
+
+/**
+ * @summary This class is used to create a full width coaching toggle in small regions
+ *
+ * @selector .slds-path__trigger-region-small
+ * @restrict .slds-path__action div
+ */
+.slds-path__trigger-region-small {
+  width: 100%;
+  margin-top: $spacing-small;
 }

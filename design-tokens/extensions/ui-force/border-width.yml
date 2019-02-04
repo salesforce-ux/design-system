@@ -14,10 +14,6 @@ global:
 imports:
 - ../../aliases/border-width.yml
 props:
-  BORDER_WIDTH_THIN:
-    value: '{!BORDER_WIDTH_THIN}'
-  BORDER_WIDTH_THICK:
-    value: '{!BORDER_WIDTH_THICK}'
   BORDER_STROKE_WIDTH_THIN:
     value: '{!BORDER_WIDTH_THIN}'
   BORDER_STROKE_WIDTH_THICK:

@@ -23,14 +23,14 @@
 #### Changed
 - Padding has been removed from `slds-path__track` to fix display issues when the Path is nested inside of a Card; of which is it's default state.
 
-## Release 2.8.2 - February 4, 2019
+## Release 2.8.2 - February 1, 2019
 
 ## Components
 ### [Files](https://www.lightningdesignsystem.com/components/files)
 #### Fixed
 - Adjusted `z-index` for hover and focus state to not overlap modal overlays and the global header.
 
-## Release 2.8.1 - February 4, 2019
+## Release 2.8.1 - January 23, 2019
 
 ## Components
 ### [Cards](https://www.lightningdesignsystem.com/components/cards)

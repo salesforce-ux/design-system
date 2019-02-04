@@ -2,9 +2,11 @@ const fs = require('fs');
 
 const {
   getReleaseDate,
+  logStatus,
   COMMENT_BEST_PRACTICES,
   NEW_LINE,
-  NEW_LINE_DOUBLE
+  NEW_LINE_DOUBLE,
+  RELEASE_NOTES_FILENAME
 } = require('./helpers.js');
 const model = require('./model.js');
 const { notes: notesLegacy } = require('./legacy.js');
@@ -42,7 +44,7 @@ function compileReleaseNotes() {
             ? `### [${block.name}](https://www.lightningdesignsystem.com${block.urlPath}${block.component})`
             : '',
           block.versionNotes.join(NEW_LINE)
-        ].join(NEW_LINE_DOUBLE);
+        ].join(NEW_LINE);
       });
 
     return perComponentNotes;
@@ -64,25 +66,19 @@ function compileReleaseNotes() {
     )
   );
 
-  return [COMMENT_BEST_PRACTICES, ...perVersionNotes, notesLegacy].join(
-    NEW_LINE_DOUBLE
-  );
+  return [COMMENT_BEST_PRACTICES, ...perVersionNotes, notesLegacy]
+    .join(NEW_LINE_DOUBLE) // compile all the release notes parts
+    .replace(/\n{3,}/g, NEW_LINE_DOUBLE); // clean up extra line breaks in compiled release notes
 }
 
 /**
  * output - writes the releasenotes file
  */
 function output() {
-  // write blocks to visible JSON for dev
-  // fs.writeFile('rn-all.txt', JSON.stringify(model.getBlocks(), 0, 2), err => {
-  //   if (err) throw err;
-  //   console.log('Release Notes Data saved!');
-  // });
-
   // write to release notes file
-  fs.writeFile('RELEASENOTES.md', compileReleaseNotes(), err => {
+  fs.writeFile(RELEASE_NOTES_FILENAME, compileReleaseNotes(), err => {
     if (err) throw err;
-    console.log('Release Notes saved!');
+    logStatus(`${RELEASE_NOTES_FILENAME} saved!`);
   });
 }
 

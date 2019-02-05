@@ -182,7 +182,7 @@
 .slds-chat-message__text {
   @include break-word;
   display: inline-block;
-  font-size: $font-size-text-small;
+  font-size: $font-size-3;
   max-width: rem(420px);
   white-space: pre-line;
 
@@ -408,7 +408,7 @@
  * @restrict .slds-chat-message .slds-button
  */
 .slds-chat-message__action {
-  font-size: $font-size-text-x-small;
+  font-size: $font-size-2;
   margin-left: $spacing-x-small;
   line-height: $line-height-heading;
 
@@ -434,7 +434,7 @@
   display: inline-flex;
   flex-wrap: wrap;
   justify-content: center;
-  font-size: $font-size-text-small;
+  font-size: $font-size-3;
   text-align: center;
   width: 100%;
 
@@ -484,7 +484,7 @@
   */
 .slds-chat-event__agent-message {
   flex-grow: 3;
-  font-size: $font-size-text-x-small;
+  font-size: $font-size-2;
   font-style: italic;
   margin-top: $spacing-x-small;
   width: 100%;
@@ -504,7 +504,7 @@
   border-bottom-width: $border-width-thin;
   color: $color-text-weak;
   display: flex;
-  font-size: $font-size-text-small;
+  font-size: $font-size-3;
   justify-content: center;
   padding: $spacing-x-small 0;
   width: 100%;

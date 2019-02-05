@@ -31,7 +31,7 @@
 .slds-tabs_default,
 .slds-tabs--default {
   @include tabs;
-  background-color: $color-foreground-primary;
+  background-color: $color-background-alt;
 
   /**
    * @summary A tab item that has an overflow menu

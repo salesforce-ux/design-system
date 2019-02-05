@@ -15,6 +15,7 @@ global:
   - 'margin*'
   - 'padding*'
   - transform
+  deprecated: true
 props:
   WIDTH_STAGE_LEFT:
     value: '88%'
@@ -27,32 +28,27 @@ props:
   MAX_HEIGHT_CARD_MEDIA:
     value: 144px
     comment: Maximum height for photos and such in cards.
-    deprecated: true
   MAX_HEIGHT_HEADER_BRAND:
     value: 32px
     comment: Maximum height for brand logos in header.
-    deprecated: true
   MAX_WIDTH_ACTION_BAR_WITH_LABELS:
     value: 320px
     comment: Maximum width for action icons in action bar when there are only 2 items with labels.
   MAX_WIDTH_HEADER_BRAND:
     value: 156px
     comment: Maximum width for brand logos in header.
-    deprecated: true
   SQUARE_RECORD_ANCHOR_PIC:
     value: 3rem
     comment: Use squareIconLargeBoundary
-    deprecated: true
   FLEX_MASTER_PANEL:
     value: '7'
     comment: 2 Column Layout - Master
   SQUARE_TOOLTIP:
     value: 1.25rem
     comment: Tooltip square size
-    deprecated: true
-  SQUARE_TOOLTIP_NUBBIN:
-    value: 1rem
-    comment: Tooltip nubbin square size
   FLEX_DETAIL_PANEL:
     value: '3'
     comment: 2 Column Layout - Detail
+  SQUARE_TOOLTIP_NUBBIN:
+    value: 1rem
+    comment: Tooltip nubbin square size

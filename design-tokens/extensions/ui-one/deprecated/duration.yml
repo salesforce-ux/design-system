@@ -7,12 +7,7 @@ global:
   cssProperties:
   - 'animation*'
   - 'transition*'
-imports:
-- ../../aliases/duration.yml
+  deprecated: true
 props:
-  DURATION_TOAST_SHORT:
-    value: 4.8s
-    comment: 4.8 seconds
-  DURATION_TOAST_MEDIUM:
-    value: 9.6s
-    comment: 9.6 seconds
+  DURATION_SLIDE:
+    value: 0.25s

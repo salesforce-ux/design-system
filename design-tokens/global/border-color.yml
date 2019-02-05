@@ -9,6 +9,7 @@ global:
   - box-shadow
   - outline
   - outline-color
+  scope: global
 imports:
 - ../aliases/colors.yml
 - ../aliases/color-palettes.yml
@@ -59,6 +60,7 @@ props:
   COLOR_BORDER_SUCCESS:
     value: '{!EMERALD}'
     comment: Border color for UI elements that have to do with success.
+    access: global
   COLOR_BORDER_SUCCESS_DARK:
     value: '{!SALEM}'
     comment: Dark alternative border color for UI elements that have to do with success.

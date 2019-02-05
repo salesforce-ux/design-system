@@ -112,7 +112,7 @@
   border: $border-width-thin solid $color-border;
   border-radius: $border-radius-medium;
   padding: $spacing-xx-small 0;
-  font-size: $font-size-small;
+  font-size: $font-size-2;
   background: $color-background-alt;
   box-shadow: $shadow-drop-down;
   transform: translateX(-50%);
@@ -350,13 +350,13 @@
   // Adjust position of dropdown with top nubbin
   &[class*="slds-nubbin_top"],
   &[class*="slds-nubbin--top"] {
-    margin-top: ($square-tooltip-nubbin / 2);
+    margin-top: ($nubbin-size-default / 2);
   }
 
   // Adjust position of dropdown with bottom nubbin
   &[class*="slds-nubbin_bottom"],
   &[class*="slds-nubbin--bottom"] {
-    margin-bottom: ($square-tooltip-nubbin / 2);
+    margin-bottom: ($nubbin-size-default / 2);
   }
 
   /**

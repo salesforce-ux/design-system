@@ -47,7 +47,7 @@
     &__marker {
       @include square($square-icon-small-boundary);
       border-radius: $border-radius-circle;
-      background: $color-background-shade;
+      background: $color-background-dark;
       display: inline-block;
       vertical-align: middle;
       z-index: 1;
@@ -67,7 +67,7 @@
       display: block;
       width: 100%;
       z-index: -1;
-      background: $color-background-shade;
+      background: $color-background-dark;
     }
 
     &__progress-bar {

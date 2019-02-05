@@ -10,9 +10,6 @@ global:
 imports:
 - ../../../aliases/color-palettes.yml
 props:
-  ## DEFAULT
-  COLOR_BORDER_PRIMARY:
-    value: '{!PALETTE_GRAY_5}'
   ## INPUT
   COLOR_BORDER_INPUT:
     value: '{!PALETTE_GRAY_5}'

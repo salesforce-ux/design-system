@@ -25,13 +25,13 @@
 
 
 @mixin text-heading--label-normal {
-  font-size: $font-size-small;
+  font-size: $font-size-2;
   line-height: $line-height-heading;
   color: $color-text-weak;
 }
 
 @mixin text-heading--label-bold {
-  font-size: $font-size-small;
+  font-size: $font-size-2;
   font-weight: $font-weight-bold;
   line-height: $line-height-heading;
   color: $color-text-weak;

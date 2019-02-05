@@ -11,6 +11,6 @@ global:
 imports:
 - ../../aliases/font-family.yml
 props:
-  FONT_FAMILY:
+  FONT_FAMILY_TEXT:
     value: '{!SANS_SERIF}'
-    comment: 'Deprecated: use FONT_FAMILY_TEXT instead for regular body text and FONT_FAMILY_HEADING for headings.'
+    comment: 'Deprecated: use FONT_FAMILY instead for regular body text and FONT_FAMILY_HEADING for headings.'

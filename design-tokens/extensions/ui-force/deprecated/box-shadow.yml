@@ -104,3 +104,9 @@ props:
   ELEVATION_INVERSE_SHADOW_32:
     value: '{!OFFSET_NONE} -{!OFFSET_XX_LARGE}px {!OFFSET_XX_LARGE}px {!OFFSET_NONE} {!BLACK_TRANSPARENT_16}'
     comment: Deprecated
+  SHADOW_ACTION_OVERFLOW_FOOTER:
+    value: '{!OFFSET_NONE} -{!OFFSET_X_SMALL}px {!OFFSET_MEDIUM}px {!PALETTE_COOL_GRAY_2}'
+    comment: Shadow above overflow menu close bar.
+  SHADOW_LINK_FOCUS_INVERSE:
+    value: '{!OFFSET_NONE} {!OFFSET_NONE} {!OFFSET_SMALL}px {!PALETTE_COOL_GRAY_4}'
+    comment: Custom glow for focus states on UI link elements with explicit containers on dark or vibrantly colored backgrounds.

@@ -69,7 +69,7 @@
    */
   &__footer {
     display: flex;
-    font-size: $font-size-small;
+    font-size: $font-size-2;
     flex-direction: column;
 
     @include mq-medium-min {

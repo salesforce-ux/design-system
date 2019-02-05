@@ -17,6 +17,10 @@ props:
     value: '{!PALETTE_COOL_GRAY_1}'
   COLOR_BACKGROUND_SECONDARY:
     value: '{!PALETTE_COOL_GRAY_2}'
+  COLOR_FOREGROUND_PRIMARY:
+    value: '{!PALETTE_COOL_GRAY_1}'
+  COLOR_CONTRAST_PRIMARY:
+    value: '{!PALETTE_COOL_GRAY_2}'
   COLOR_CONTRAST_SECONDARY:
     value: '{!PALETTE_COOL_GRAY_1}'
   COLOR_BACKGROUND_BRAND_PRIMARY:
@@ -36,27 +40,34 @@ props:
   COLOR_BACKGROUND_BROWSER:
     value: '{!PALETTE_COOL_GRAY_9}'
     comment: 'Secondary top bar background color (child browser, file preview, etc.)'
+    access: global
   COLOR_BACKGROUND_CHROME_MOBILE:
     value: '{!SCIENCE_BLUE}'
     comment: Background color for default mobile chrome (ex. global header)
+    access: global
   COLOR_BACKGROUND_CHROME_DESKTOP:
     value: '{!WHITE}'
     comment: Background color for default desktop chrome (ex. global header)
+    access: global
   COLOR_BACKGROUND_NOTIFICATION_BADGE_HOVER:
     value: '{!ENDEAVOUR}'
     comment: Notifications badge background color.
+    access: global
   COLOR_BACKGROUND_NOTIFICATION_BADGE_FOCUS:
     value: '{!ENDEAVOUR}'
     comment: Notifications badge background color.
+    access: global
   COLOR_BACKGROUND_NOTIFICATION_BADGE_ACTIVE:
     value: '{!MIDNIGHT_BLUE}'
     comment: Notifications badge background color.
+    access: global
   COLOR_BACKGROUND_ORG_SWITCHER_ARROW:
     value: '{!DEEP_COVE}'
     comment: Stage left org switcher dropdown arrow background color.
   COLOR_BACKGROUND_PAYLOAD:
     value: '{!PALETTE_COOL_GRAY_2}'
     comment: Background color for payloads in the feed.
+    access: global
   COLOR_BACKGROUND_UTILITY_BAR_HOVER:
     value: '{!PALETTE_COOL_GRAY_4}'
     comment: Hover color for utility bar item.
@@ -94,3 +105,48 @@ props:
   COLOR_BACKGROUND_ERROR_ALT:
     value: '{!DEEP_BLUSH}'
     comment: Alternative color for UI elements related to errors.
+  COLOR_BACKGROUND_ACTIONBAR_ICON_UTILITY:
+    value: '{!PALETTE_COOL_GRAY_9}'
+    comment: Background for utility icons that live in the action bar on mobile.
+  COLOR_BACKGROUND_INDICATOR_DOT:
+    value: '{!BISCAY}'
+    comment: Color of the indicator dot.
+  COLOR_BACKGROUND_MODAL:
+    value: '{!WHITE}'
+    comment: Standard modal header
+    access: global
+  COLOR_BACKGROUND_MODAL_BRAND:
+    value: '{!SCIENCE_BLUE}'
+    comment: Brandable modal header
+    access: global
+  COLOR_BACKGROUND_NOTIFICATION:
+    value: '{!WHITE}'
+    comment: Background color for notification list item.
+  COLOR_BACKGROUND_SHADE:
+    value: '{!PALETTE_COOL_GRAY_4}'
+    specificity: builders
+    comment: Used as gray background when more contrast is desired.
+    access: global
+  COLOR_BACKGROUND_MODAL_BUTTON:
+    value: '{!BLACK_TRANSPARENT_07}'
+    comment: Button backgrounds on modal headers
+    access: global
+  COLOR_BACKGROUND_MODAL_BUTTON_ACTIVE:
+    value: '{!BLACK_TRANSPARENT_16}'
+    comment: Active button backgrounds on modal headers
+    access: global
+  FILL_BRAND:
+    value: '{!SCIENCE_BLUE}'
+    comment: 'Brand fill color'
+    cssProperties:
+    - fill
+  FILL_BRAND_HOVER:
+    value: '{!ENDEAVOUR}'
+    comment: 'Brand hover fill color'
+    cssProperties:
+    - fill
+  FILL_BRAND_ACTIVE:
+    value: '{!BISCAY}'
+    comment: 'Brand active fill color'
+    cssProperties:
+    - fill

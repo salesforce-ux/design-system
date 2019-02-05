@@ -22,6 +22,7 @@ props:
     value: '{!PALETTE_GRAY_2}'
     deprecated: true
     comment: Use COLOR_BACKGROUND_PAGE_HEADER instead.
+    access: global
   COLOR_BACKGROUND_PAGE_HEADER:
     value: '{!PALETTE_GRAY_1}'
     deprecated: true

@@ -13,16 +13,6 @@ imports:
 - ../../../aliases/colors.yml
 - ../../../aliases/color-palettes.yml
 props:
-  ## BACKGROUNDS
-  COLOR_CONTRAST_PRIMARY:
-    value: '{!PALETTE_GRAY_3}'
-  COLOR_BACKGROUND:
-    value: '{!PALETTE_GRAY_3}'
-    comment: Default background color for the whole app.
-  COLOR_BACKGROUND_SHADE:
-    value: '{!PALETTE_GRAY_4}'
-    specificity: builders
-    comment: Used as gray background when more contrast is desired.
   ## TABLE
   TABLE_COLOR_BACKGROUND_HEADER:
     value: '{!PALETTE_GRAY_2}'

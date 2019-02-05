@@ -23,7 +23,7 @@ props:
     release: 2.8.0
   COLOR_BACKGROUND_DARK:
     value: '{!PALETTE_GRAY_4}'
-    comment: Light variant of COLOR_BACKGROUND.
+    comment: Dark variant of COLOR_BACKGROUND.
     release: 2.8.0
   COLOR_BACKGROUND_ROW_HOVER:
     value: '{!PALETTE_GRAY_3}'
@@ -43,9 +43,11 @@ props:
   COLOR_BACKGROUND_STENCIL:
     value: '{!PALETTE_GRAY_3}'
     comment: Used as background for loading stencils on white background.
+    access: global
   COLOR_BACKGROUND_STENCIL_ALT:
     value: '{!PALETTE_GRAY_4}'
     comment: Used as an alternate background for loading stencils on gray backgrounds.
+    access: global
   BRAND_BACKGROUND_PRIMARY:
     value: "#b0c4df"
     comment: "Primary page background color"

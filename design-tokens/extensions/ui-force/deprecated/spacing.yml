@@ -7,8 +7,9 @@ global:
   cssProperties:
   - 'margin*'
   - 'padding*'
+  deprecated: true
 imports:
-- ../../aliases/spacing.yml
+- ../../../aliases/spacing.yml
 props:
   COMPONENT_SPACING_MARGIN:
     value: '0'

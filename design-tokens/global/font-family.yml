@@ -7,11 +7,14 @@ global:
   cssProperties:
   - 'font'
   - 'font-family'
+  scope: global
 imports:
 - ../aliases/font-family.yml
 props:
-  FONT_FAMILY_TEXT:
+  FONT_FAMILY:
     value: '{!SANS_SERIF}'
+    comment: 'Default font-family for Salesforce applications'
+    access: global
   FONT_FAMILY_HEADING:
     value: '{!SANS_SERIF}'
   FONT_FAMILY_MONOSPACE:

@@ -38,7 +38,7 @@
   &:before,
   &:after {
     left: $spacing-large;
-    top: (($square-tooltip-nubbin / 2) * -1);
+    top: (($nubbin-size-default / 2) * -1);
   }
 }
 
@@ -63,8 +63,8 @@
   &:after {
     left: auto;
     right: $spacing-large;
-    top: (($square-tooltip-nubbin / 2) * -1);
-    margin-right: (($square-tooltip-nubbin / 2) * -1);
+    top: (($nubbin-size-default / 2) * -1);
+    margin-right: (($nubbin-size-default / 2) * -1);
   }
 }
 
@@ -106,7 +106,7 @@
   &:after {
     left: $spacing-large;
     top: 100%;
-    margin-top: (($square-tooltip-nubbin / 2) * -1);
+    margin-top: (($nubbin-size-default / 2) * -1);
   }
 }
 
@@ -132,8 +132,8 @@
     left: auto;
     right: $spacing-large;
     top: 100%;
-    margin-top: (($square-tooltip-nubbin / 2) * -1);
-    margin-right: (($square-tooltip-nubbin / 2) * -1);
+    margin-top: (($nubbin-size-default / 2) * -1);
+    margin-right: (($nubbin-size-default / 2) * -1);
   }
 }
 

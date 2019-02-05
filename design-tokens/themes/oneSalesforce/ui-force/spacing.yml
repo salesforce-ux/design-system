@@ -10,11 +10,7 @@ global:
 imports:
 - ../../../aliases/spacing.yml
 props:
-  ## GLOBALS
-  COMPONENT_SPACING_MARGIN:
-    value: '{!SPACING_SMALL}'
-  COMPONENT_SPACING_PADDING:
-    value: '{!SPACING_MEDIUM}'
+  ## BRAND BAND
   TEMPLATE_GUTTERS:
     value: '{!SPACING_SMALL}'
   TEMPLATE_PROFILE_GUTTERS:

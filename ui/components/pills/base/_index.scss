@@ -135,7 +135,7 @@
     .slds-avatar {
       @include square($square-icon-x-small-boundary);
       display: block;
-      font-size: $font-size-heading-xx-small;
+      font-size: $font-size-1;
     }
 
     ~ .slds-pill__action {

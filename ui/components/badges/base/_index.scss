@@ -11,7 +11,7 @@
  * @variant
  */
 .slds-badge {
-  background-color: $color-background-shade;
+  background-color: $color-background-dark;
   padding: $spacing-xx-small $spacing-x-small;
   border-radius: $border-radius-pill;
   font-size: $font-size-2;
@@ -53,7 +53,7 @@
 .slds-badge_lightest {
   border: $border-width-thin solid $color-border;
   background-color: $badge-color-background-lightest;
-  font-size: $font-size-text-x-small;
+  font-size: $font-size-2;
   text-transform: none;
   letter-spacing: normal;
 }

@@ -16,5 +16,7 @@ props:
     value: '{!GEYSER}'
   BUTTON_COLOR_BORDER_BRAND_PRIMARY:
     value: '{!SCIENCE_BLUE}'
+    deprecated: true
   BUTTON_COLOR_BORDER_SECONDARY:
     value: '{!WHITE_TRANSPARENT_80}'
+    deprecated: true

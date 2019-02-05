@@ -13,6 +13,9 @@ imports:
 - ../../../aliases/colors.yml
 - ../../../aliases/color-palettes.yml
 props:
+  ## DEFAULT
+  COLOR_BORDER_PRIMARY:
+    value: '{!PALETTE_GRAY_5}'
   ## STROKES
   COLOR_STROKE_BRAND:
     value: '{!SCIENCE_BLUE}'

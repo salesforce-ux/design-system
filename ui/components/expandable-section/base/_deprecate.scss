@@ -4,7 +4,7 @@
 @include deprecate('4.0.0', 'Use .slds-section__title instead') {
 
   .slds-section-title {
-    font-size: $font-size-large;
+    font-size: $font-size-5;
 
     > a {
       display: inline-block;

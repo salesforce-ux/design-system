@@ -8,6 +8,7 @@ global:
   - 'background*'
   - 'border*'
   - box-shadow
+  scope: global
 imports:
 - ../aliases/colors.yml
 - ../aliases/color-palettes.yml
@@ -23,7 +24,7 @@ props:
     release: 2.8.0
   COLOR_BACKGROUND_DARK:
     value: '{!PALETTE_COOL_GRAY_4}'
-    comment: Light variant of COLOR_BACKGROUND.
+    comment: Dark variant of COLOR_BACKGROUND.
     release: 2.8.0
 
   COLOR_BACKGROUND_ALT:
@@ -81,9 +82,11 @@ props:
   COLOR_BACKGROUND_STENCIL:
     value: '{!PALETTE_COOL_GRAY_3}'
     comment: Used as background for loading stencils on white background.
+    access: global
   COLOR_BACKGROUND_STENCIL_ALT:
     value: '{!PALETTE_COOL_GRAY_4}'
     comment: Used as an alternate background for loading stencils on gray backgrounds.
+    access: global
   COLOR_BACKGROUND_BACKDROP:
     value: '{!WHITE_TRANSPARENT_75}'
     comment: The color of the mask overlay that appears when you enter a modal state.

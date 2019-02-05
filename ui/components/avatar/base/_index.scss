@@ -98,7 +98,7 @@
 .slds-avatar_x-small,
 .slds-avatar--x-small {
   @include square($square-icon-x-small-boundary);
-  font-size: $font-size-heading-xx-small;
+  font-size: $font-size-1;
 
   .slds-icon {
     @include square($square-icon-x-small-boundary);
@@ -116,7 +116,7 @@
 .slds-avatar_small,
 .slds-avatar--small {
   @include square($square-icon-small-boundary);
-  font-size: $font-size-heading-xx-small;
+  font-size: $font-size-1;
 
   .slds-icon {
     @include square($square-icon-small-boundary);
@@ -152,7 +152,7 @@
 .slds-avatar_large,
 .slds-avatar--large {
   @include square($square-icon-large-boundary);
-  font-size: $font-size-heading-medium;
+  font-size: $font-size-6;
   font-weight: $font-weight-light;
   line-height: $line-height-heading;
 

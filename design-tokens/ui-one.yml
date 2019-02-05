@@ -3,7 +3,6 @@
 
 imports:
 - ./extensions/ui-one/base.yml
-- ./components.yml
 auraExtends: 'force:base'
 auraImports:
 - 'one:actionBackgrounds'

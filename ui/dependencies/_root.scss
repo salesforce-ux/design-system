@@ -8,14 +8,14 @@
     font-size: 100%;
     line-height: $var-line-height-text;
     background: $brand-background-primary;
-    color: $color-text-primary;
+    color: $color-text-default;
     -webkit: {
       tap-highlight-color: rgba(0, 0, 0, 0);
     }
   }
 
   #{$body} {
-    font-size: $font-size-medium;
+    font-size: $font-size-3;
     background: transparent;
   }
 }

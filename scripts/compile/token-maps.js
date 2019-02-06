@@ -25,6 +25,14 @@ const packageJson = require('../../package.json');
 
 const jsonDir = path.join(paths.dist, 'design-tokens', 'dist', '**', '*.json');
 
+const designTokenSets = [
+  'ui-force',
+  'form-factor-large',
+  'form-factor-medium',
+  'form-factor-small',
+  'theme-one-salesforce'
+];
+
 const getTokenNames = _.memoize(jsonDir =>
   _(glob.sync(jsonDir))
     .map(p => fs.readFileSync(p, 'utf-8'))
@@ -146,11 +154,12 @@ TokenMaps.loadComponentsScss = configs =>
 
 TokenMaps.loadTokens = () =>
   new Task((reject, resolve) => {
-    const tokensPath = path.join(paths.designTokens, 'dist');
+    const tokenPaths = designTokenSets.map(tokenSetName =>
+      path.join(paths.designTokens, 'dist', `${tokenSetName}.raw.json`)
+    );
 
     // Update global
-    tokensMap = glob
-      .sync(path.resolve(tokensPath, '**/*.raw.json'))
+    tokensMap = tokenPaths
       .filter(tokenPath => TokenMaps.validRawTokensDistFile(tokenPath))
       .map(tokenPath => fs.readFileSync(tokenPath, 'utf-8').toString())
       .map(jsonText => JSON.parse(jsonText).props || {})

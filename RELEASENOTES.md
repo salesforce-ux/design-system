@@ -4,6 +4,10 @@
 ## Release 2.8.3 - February 4, 2019
 
 ## Components
+### [Tabs](https://www.lightningdesignsystem.com/components/tabs)
+#### Changed
+- Removed animation when invoking an active tab
+
 ### [Global Navigation](https://www.lightningdesignsystem.com/components/global-navigation)
 #### Fixed
 - Fixed issue where a navigation item would lose its background color when active and/or hovered.

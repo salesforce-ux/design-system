@@ -3,6 +3,12 @@
 # Tabs Release Notes
 
 <!-- ## [Unreleased] -->
+## 2.8.3
+
+### Changed
+
+- Removed animation when invoking an active tab
+
 ## 2.8.0
 
 ### Added

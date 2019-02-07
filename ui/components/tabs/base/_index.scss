@@ -3,22 +3,6 @@
 
 @import 'deprecate';
 
-// Animation for `slds-is-active` state
-@keyframes shadow {
-
-  0% {
-    box-shadow: inset 0 0 $brand-light;
-  }
-
-  50% {
-    box-shadow: inset 0 rem(-30px) $brand-primary-transparent-40;
-  }
-
-  100% {
-    box-shadow: inset 0 rem(-40px) $brand-light;
-  }
-}
-
 /**
  * @summary Initializes a default tablist
  *
@@ -88,7 +72,6 @@
   &.slds-active,
   &.slds-is-active {
     color: $color-text-action-label-active;
-    animation: shadow 300ms;
 
     &:after {
       background-color: $brand-primary;

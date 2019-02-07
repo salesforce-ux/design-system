@@ -14,7 +14,7 @@
   "private": false,
   "config": {
     "slds": {
-      "internal": false
+      "internal": true
     },
     "search": {
       "appId": "B2KKG101RI",

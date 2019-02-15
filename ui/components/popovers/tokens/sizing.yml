@@ -1,0 +1,19 @@
+# Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+# Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+global:
+  type: size
+  category: sizing
+  cssProperties:
+  - '*width'
+  - '*height'
+  - top
+  - right
+  - bottom
+  - left
+  - 'margin*'
+  - 'padding*'
+props:
+  NUBBIN_SIZE_DEFAULT:
+    value: 1rem
+    comment: Tooltip nubbin square size

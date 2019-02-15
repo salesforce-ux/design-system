@@ -219,10 +219,10 @@
 
 .slds-spinner_xx-small,
 .slds-spinner--xx-small {
-  width: 0.5rem;
+  width: $spinner-size-xx-small;
 
   &.slds-spinner_inline {
-    height: 0.5rem;
+    height: $spinner-size-xx-small;
   }
 
   &.slds-spinner:before,
@@ -249,6 +249,15 @@
     top: -0.0625rem;
     right: -0.0625rem;
     animation-name: dotsBounceAfter-extraExtraSmall;
+  }
+}
+
+.slds-spinner_xx-small,
+.slds-spinner--xx-small {
+  @include rtl() {
+    left: unset;
+    right: unset;
+    transform: translateX(calc((50% * -1) - (#{$spinner-size-xx-small} / 2)));
   }
 }
 
@@ -297,10 +306,10 @@
 
 .slds-spinner_x-small,
 .slds-spinner--x-small {
-  width: 1rem;
+  width: $spinner-size-x-small;
 
   &.slds-spinner_inline {
-    height: 1rem;
+    height: $spinner-size-x-small;
   }
 
   &.slds-spinner:before,
@@ -327,6 +336,15 @@
     top: -0.125rem;
     right: -0.125rem;
     animation-name: dotsBounceAfter-extraSmall;
+  }
+}
+
+.slds-spinner_x-small,
+.slds-spinner--x-small {
+  @include rtl() {
+    left: unset;
+    right: unset;
+    transform: translateX(calc((50% * -1) - (#{$spinner-size-x-small} / 2)));
   }
 }
 
@@ -375,10 +393,10 @@
 
 .slds-spinner_small,
 .slds-spinner--small {
-  width: 1.25rem;
+  width: $spinner-size-small;
 
   &.slds-spinner_inline {
-    height: 1.25rem;
+    height: $spinner-size-small;
   }
 
   &.slds-spinner:before,
@@ -405,6 +423,15 @@
     top: -0.125rem;
     right: -0.125rem;
     animation-name: dotsBounceAfter-small;
+  }
+}
+
+.slds-spinner_small,
+.slds-spinner--small {
+  @include rtl() {
+    left: unset;
+    right: unset;
+    transform: translateX(calc((50% * -1) - (#{$spinner-size-small} / 2)));
   }
 }
 
@@ -453,10 +480,10 @@
 
 .slds-spinner_medium,
 .slds-spinner--medium {
-  width: 2rem;
+  width: $spinner-size-medium;
 
   &.slds-spinner_inline {
-    height: 2rem;
+    height: $spinner-size-medium;
   }
 
   &.slds-spinner:before,
@@ -483,6 +510,15 @@
     animation-name: dotsBounceAfter-medium;
     top: -0.25rem;
     right: -0.25rem;
+  }
+}
+
+.slds-spinner_medium,
+.slds-spinner--medium {
+  @include rtl() {
+    left: unset;
+    right: unset;
+    transform: translateX(calc((50% * -1) - (#{$spinner-size-medium} / 2)));
   }
 }
 
@@ -531,10 +567,10 @@
 
 .slds-spinner_large,
 .slds-spinner--large {
-  width: 2.75rem;
+  width: $spinner-size-large;
 
   &.slds-spinner_inline {
-    height: 2.75rem;
+    height: $spinner-size-large;
   }
 
   &.slds-spinner:before,
@@ -561,6 +597,15 @@
     animation-name: dotsBounceAfter-medium;
     top: -0.3125rem;
     right: -0.3125rem;
+  }
+}
+
+.slds-spinner_large,
+.slds-spinner--large {
+  @include rtl() {
+    left: unset;
+    right: unset;
+    transform: translateX(calc((50% * -1) - (#{$spinner-size-large} / 2)));
   }
 }
 

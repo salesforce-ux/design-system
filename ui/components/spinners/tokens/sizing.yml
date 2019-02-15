@@ -1,0 +1,25 @@
+global:
+  scope: component
+  category: sizing
+  type: size
+  comment: ''
+  cssProperties:
+  - '*width'
+  - '*height'
+  - 'transform'
+props:
+  SPINNER_SIZE_XX_SMALL:
+    value: '0.5rem'
+    comment: 'Spinner size for xx-small modifier'
+  SPINNER_SIZE_X_SMALL:
+    value: '1rem'
+    comment: 'Spinner size for x-small modifier'
+  SPINNER_SIZE_SMALL:
+    value: '1.25rem'
+    comment: 'Spinner size for small modifier'
+  SPINNER_SIZE_MEDIUM:
+    value: '2rem'
+    comment: 'Spinner size for medium modifier'
+  SPINNER_SIZE_LARGE:
+    value: '2.75rem'
+    comment: 'Spinner size for large modifier'

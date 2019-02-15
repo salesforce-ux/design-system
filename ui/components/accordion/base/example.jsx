@@ -51,7 +51,7 @@ export let AccordionSection = props => (
         <ActionOverflow position="right" dropdownIsOpen={false} />
       </div>
       <div
-        aria-hidden={!props.isOpen}
+        hidden={!props.isOpen}
         className={classNames('slds-accordion__content', props.className)}
         id={props.referenceId}
       >

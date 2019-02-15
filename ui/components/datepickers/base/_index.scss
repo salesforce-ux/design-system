@@ -12,7 +12,7 @@
  */
 .slds-datepicker {
   padding: 0;
-  font-size: $font-size-small;
+  font-size: $font-size-2;
 
   th,
   td {
@@ -28,7 +28,7 @@
   td {
     padding: $spacing-xx-small;
     text-align: center;
-    font-size: $font-size-small;
+    font-size: $font-size-2;
 
     /**
      * @summary Style for calendar days
@@ -116,7 +116,7 @@
    * @restrict .slds-datepicker table
    */
   &__month {
-    font-size: $font-size-small;
+    font-size: $font-size-2;
   }
 }
 

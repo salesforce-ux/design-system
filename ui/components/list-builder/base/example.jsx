@@ -100,7 +100,7 @@ const rows = [
 ----------------------------------------------------------------------------- */
 
 const ListboxDropdown = props => (
-  <Listbox className="slds-dropdown slds-dropdown_fluid" vertical>
+  <Listbox listboxClassName="slds-dropdown slds-dropdown_fluid" vertical>
     <ListboxItem>
       <EntityOption
         id={listboxOptionId01}

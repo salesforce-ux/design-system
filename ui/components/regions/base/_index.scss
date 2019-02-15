@@ -11,7 +11,7 @@
  * @variant
  */
 .slds-region {
-  background-color: $color-foreground-primary;
+  background-color: $color-background-alt;
 }
 
 /**
@@ -21,7 +21,7 @@
  * @restrict .slds-region
  */
 .slds-region__pinned-top {
-  background-color: $color-foreground-primary;
+  background-color: $color-background-alt;
   border-bottom: $border-width-thin solid $card-color-border;
 }
 
@@ -32,7 +32,7 @@
  * @restrict .slds-region
  */
 .slds-region__pinned-left {
-  background-color: $color-foreground-primary;
+  background-color: $color-background-alt;
   border-right: $border-width-thin solid $card-color-border;
 }
 
@@ -43,6 +43,6 @@
  * @restrict .slds-region
  */
 .slds-region__pinned-right {
-  background-color: $color-foreground-primary;
+  background-color: $color-background-alt;
   border-left: $border-width-thin solid $card-color-border;
 }

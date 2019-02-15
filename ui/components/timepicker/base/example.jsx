@@ -32,7 +32,7 @@ const listboxOptionId12 = 'listbox-option-unique-id-12';
 
 const ListboxDropdown = props => (
   <Listbox
-    className="slds-dropdown slds-dropdown_fluid slds-dropdown_length-5"
+    listboxClassName="slds-dropdown slds-dropdown_fluid slds-dropdown_length-5"
     vertical
   >
     <ListboxItem>
@@ -96,8 +96,10 @@ export default (
   <ComboboxContainer
     label="Time"
     className="slds-combobox-picklist slds-timepicker"
+    autocomplete
     inputIcon="right"
     inputIconRightSymbol="clock"
+    inputIconRightAssistiveText={false}
     placeholder=" "
     listbox={<ListboxDropdown />}
   />
@@ -111,9 +113,11 @@ export let states = [
       <ComboboxContainer
         label="Time"
         className="slds-combobox-picklist slds-timepicker"
+        autocomplete
         isOpen
         inputIcon="right"
         inputIconRightSymbol="clock"
+        inputIconRightAssistiveText={false}
         placeholder=" "
         listbox={<ListboxDropdown />}
       />
@@ -126,9 +130,11 @@ export let states = [
       <ComboboxContainer
         label="Time"
         className="slds-combobox-picklist slds-timepicker"
+        autocomplete
         isOpen
         inputIcon="right"
         inputIconRightSymbol="clock"
+        inputIconRightAssistiveText={false}
         placeholder=" "
         listbox={<ListboxDropdown optionFocused />}
         aria-activedescendant={listboxOptionId01}
@@ -142,9 +148,11 @@ export let states = [
       <ComboboxContainer
         label="Time"
         className="slds-combobox-picklist slds-timepicker"
+        autocomplete
         isOpen
         inputIcon="right"
         inputIconRightSymbol="clock"
+        inputIconRightAssistiveText={false}
         placeholder=" "
         value="8:00am"
         listbox={<ListboxDropdown optionSelected />}

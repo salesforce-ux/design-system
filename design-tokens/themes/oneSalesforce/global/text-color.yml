@@ -11,9 +11,6 @@ imports:
 - ../../../aliases/colors.yml
 - ../../../aliases/color-palettes.yml
 props:
-  COLOR_TEXT_PRIMARY:
-    value: '{!PALETTE_GRAY_13}'
-    comment: Primary body text color
   COLOR_TEXT_DEFAULT:
     value: '{!PALETTE_GRAY_13}'
     comment: Body text color

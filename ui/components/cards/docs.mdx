@@ -2,15 +2,13 @@ import CodeView from '../../../shared/components/CodeView';
 import CodeBlock from '../../../shared/components/CodeBlock';
 import Example from '../../../shared/components/Example';
 import Blockquote from '../../../shared/components/Blockquote';
-import Card, { CardHeader, CardBody, CardFooter } from './';
-import { CardWithDataTable, CardWithTiles, WrappedCards } from './base/example';
-import { EinsteinCard } from './einstein/example';
+import Card, { CardHeader } from './';
+
 import { ActionOverflow } from '../menus/action-overflow/example';
-import { Spinner } from '../spinners/base/example';
-import { TileMedia } from '../tiles/base/example';
-import { StandardIcon } from '../icons/standard/example';
-import { NoTask } from '../illustration/custom';
-import { Illustration, IllustrationText } from '../illustration/base/example';
+import * as CardExamples from './base/example';
+import * as CardEinsteinExamples from './einstein/example';
+import * as CardWrapperExamples from './wrapper/example';
+import { getDisplayElementById } from '../../shared/helpers';
 
 <div className="lead doc">
   Cards are used to apply a container around a related grouping of information.
@@ -26,24 +24,10 @@ To initialize a card, apply the `slds-card` class to an `<article>` element.
 
 A card is made up of 3 sections, a header, a body, and a footer. The header and footer have limitations, but the body section can accommodate any layout of related information.
 
-<Example title="Cards Base">
-  <CodeView hasDensityRadioButtons>
-    <Card>
-      <CardHeader
-        title="Accounts"
-        href="javascript:void(0);"
-        symbol="account"
-        action={<button className="slds-button slds-button_neutral">New</button>}
-      />
-      <CardBody hasPadding>
-        Anything can go in the Card Body
-      </CardBody>
-      <CardFooter>
-        View All <span className="slds-assistive-text">Accounts</span>
-      </CardFooter>
-    </Card>
-  </CodeView>
-</Example>
+
+<CodeView hasDensityRadioButtons>
+  {CardExamples.default}
+</CodeView>
 
 ### Header
 
@@ -60,6 +44,20 @@ The card header can have an icon, a title and actions. The icon and title are lo
     </Card>
   </CodeView>
 </Example>
+
+#### With no header
+
+The card header can be removed from the HTML to prevent the card header from displaying.
+
+<CodeView hasDensityRadioButtons>
+  {getDisplayElementById(CardExamples.examples, 'with-no-header')}
+</CodeView>
+
+Alternatively, the card header can be visually hidden but still accessible to screen readers by applying `slds-assistive-text` to the `slds-card__header` element.
+
+<CodeView hasDensityRadioButtons>
+  {getDisplayElementById(CardExamples.examples, 'visibly-hidden-card-header')}
+</CodeView>
 
 #### Actions row
 
@@ -107,39 +105,21 @@ The card body accommodates any layout or design, as long as its a grouping of re
 
 For an example of when to use the default behavior, see the [Data Table example](/components/cards/#With-a-Data-Table).
 
-<Example title="Cards Body No Padding">
-  <CodeView hasDensityRadioButtons>
-    <Card>
-      <CardHeader
-        title="Accounts"
-        href="javascript:void(0);"
-        symbol="account"
-      />
-      <CardBody>
-        Card Body
-      </CardBody>
-    </Card>
-  </CodeView>
-</Example>
+
+<CodeView hasDensityRadioButtons>
+  {getDisplayElementById(CardExamples.examples, 'body-has-no-padding')}
+</CodeView>
+
 
 #### With padding
 
 For an example of when to use the `slds-card__body_inner` class, see the [Tiles example](/components/cards/#With-Tiles).
 
-<Example title="Cards Body With Padding">
-  <CodeView hasDensityRadioButtons>
-    <Card>
-      <CardHeader
-        title="Accounts"
-        href="javascript:void(0);"
-        symbol="account"
-      />
-      <CardBody hasPadding>
-        Card Body with Padding
-      </CardBody>
-    </Card>
-  </CodeView>
-</Example>
+
+<CodeView hasDensityRadioButtons>
+  {getDisplayElementById(CardExamples.examples, 'body-has-padding')}
+</CodeView>
+
 
 ### Footer
 
@@ -155,43 +135,19 @@ The card footer is optional and should _**only**_ have a "View All" link that ta
 
 #### With no footer
 
-<Example title="Cards No Footer" >
-  <CodeView hasDensityRadioButtons>
-    <Card>
-      <CardHeader
-        title="Accounts"
-        href="javascript:void(0);"
-        showIcon
-        symbol="account"
-      />
-      <CardBody hasPadding>
-        Card Body
-      </CardBody>
-      <CardFooter/>
-    </Card>
-  </CodeView>
-</Example>
+
+<CodeView hasDensityRadioButtons>
+  {getDisplayElementById(CardExamples.examples, 'has-no-footer')}
+</CodeView>
+
 
 #### With a footer
 
-<Example title="Cards with Footer" >
-  <CodeView hasDensityRadioButtons>
-    <Card>
-      <CardHeader
-        title="Accounts"
-        href="javascript:void(0);"
-        showIcon
-        symbol="account"
-      />
-      <CardBody hasPadding>
-        Card Body
-      </CardBody>
-      <CardFooter>
-        View All <span className="slds-assistive-text">Accounts</span>
-      </CardFooter>
-    </Card>
-  </CodeView>
-</Example>
+
+<CodeView hasDensityRadioButtons>
+  {getDisplayElementById(CardExamples.examples, 'has-footer')}
+</CodeView>
+
 
 ## Examples
 
@@ -201,84 +157,51 @@ When a card doesn't have any data, it is represented with the body and footer co
 
 #### Collapsed
 
-<Example title="Cards Collapsed" >
-  <CodeView hasDensityRadioButtons>
-    <Card>
-      <CardHeader
-        title="Card Header"
-        href="javascript:void(0);"
-        symbol="account"
-        action={<button className="slds-button slds-button_neutral">New</button>}
-      />
-      <CardBody/>
-      <CardFooter/>
-    </Card>
-  </CodeView>
-</Example>
+
+<CodeView hasDensityRadioButtons>
+  {getDisplayElementById(CardExamples.states, 'empty')}
+</CodeView>
+
 
 #### With Illustration
 
 Alternatively, a card can be represented with no data by using an [illustration](/components/illustration) in the card body.
 
-<Example title="Cards With illustration" >
-  <CodeView hasDensityRadioButtons>
-    <Card>
-      <CardHeader
-        title="Tasks"
-        href="javascript:void(0);"
-        symbol="task"
-      />
-      <CardBody hasPadding>
-        <Illustration>
-          <NoTask />
-          <IllustrationText
-            heading="No new tasks"
-            message="Nothing needs your attention right now. Check back later."
-          />
-        </Illustration>
-      </CardBody>
-    </Card>
-  </CodeView>
-</Example>
+
+<CodeView hasDensityRadioButtons>
+  {getDisplayElementById(CardExamples.states, 'empty-illustration')}
+</CodeView>
+
 
 ### Loading
 
 When a card instantiates and is loading, we want to provide feedback to the user by display a spinner. Once the data has loaded, the spinner can be removed from the card component.
 
-<Example title="Cards Loading" >
-  <CodeView hasDensityRadioButtons>
-    <Card>
-      <CardHeader
-        title="Tasks"
-        href="javascript:void(0);"
-        symbol="task"
-      />
-      <CardBody hasPadding>
-        <Spinner className="slds-spinner_small" />
-      </CardBody>
-    </Card>
-  </CodeView>
-</Example>
+
+<CodeView hasDensityRadioButtons>
+  {getDisplayElementById(CardExamples.states, 'loading')}
+</CodeView>
+
 
 ### With a Data Table
 
 Placing a data table inside of an `slds-card__body` is an example of when to utilize the default behavior of a card body, since no padding is applied.
 
-<Example title="Cards With Data Table" >
-  <CodeView hasDensityRadioButtons>
-    <CardWithDataTable/>
-  </CodeView>
-</Example>
+
+<CodeView hasDensityRadioButtons>
+  {getDisplayElementById(CardExamples.examples, 'related-list-table')}
+</CodeView>
+
 
 ### With Tiles
 
 Placing contact tiles inside of an `slds-card__body` is an example of using `slds-card__body_inner` to apply additional padding to the card body content.
 
-<Example title="Cards with Title">
-  <CodeView hasDensityRadioButtons>
-    <CardWithTiles/>
-  </CodeView>
-</Example>
+
+<CodeView hasDensityRadioButtons>
+  {getDisplayElementById(CardExamples.examples, 'related-list-tiles')}
+</CodeView>
+
 
 ## Layout
 
@@ -288,102 +211,53 @@ When a card is located inside of another card body, we remove the dropshadow and
 
 #### No styling
 
-<Example title="Cards Nested with No Styling">
-  <CodeView hasDensityRadioButtons>
-    <Card>
-      <CardHeader
-        title="Outer Card Header"
-        href="javascript:void(0);"
-        symbol="account"
-      />
-      <CardBody hasPadding>
-        <Card>
-          <CardHeader
-            title="Card Header"
-            href="javascript:void(0);"
-            symbol="account"
-          />
-          <CardBody hasPadding>
-            This is a nested card with no styling (default)
-          </CardBody>
-          <CardFooter>
-            View All <span className="slds-assistive-text">Accounts</span>
-          </CardFooter>
-        </Card>
-      </CardBody>
-      <CardFooter>
-        View All <span className="slds-assistive-text">Accounts</span>
-      </CardFooter>
-    </Card>
-  </CodeView>
-</Example>
+
+<CodeView hasDensityRadioButtons>
+  {getDisplayElementById(CardExamples.examples, 'nested-no-boundary')}
+</CodeView>
+
 
 #### With card styling
 
 Adding `slds-card_boundary` to the `slds-card` element will give you back the card styling.
 
-<Example title="Cards Nested With Styling" >
-  <CodeView hasDensityRadioButtons>
-    <Card>
-      <CardHeader
-        title="Outer Card Header"
-        href="javascript:void(0);"
-        symbol="account"
-      />
-      <CardBody hasPadding>
-        <Card hasCardBoundary>
-          <CardHeader
-            title="Card Header"
-            href="javascript:void(0);"
-            symbol="account"
-          />
-          <CardBody hasPadding>
-            This is a card inside an `slds-card` to illustrate how `slds-card_boundary` adds a rounded border when desired.
-          </CardBody>
-          <CardFooter>
-            View All <span className="slds-assistive-text">Accounts</span>
-          </CardFooter>
-        </Card>
-      </CardBody>
-      <CardFooter>
-        View All <span className="slds-assistive-text">Accounts</span>
-      </CardFooter>
-    </Card>
-  </CodeView>
-</Example>
+
+<CodeView hasDensityRadioButtons>
+  {getDisplayElementById(CardExamples.examples, 'nested-with-boundary')}
+</CodeView>
+
 
 ### Wrapped Cards
 
 To combine several cards into a single card look, wrap the cards using `slds-card-wrapper`. Similar to the nested cards, adding `slds-card_boundary` to the `slds-card` element will give you back the card styling.
 
-<Example title="Cards Wrapped" >
-  <CodeView hasDensityRadioButtons>
-    <WrappedCards/>
-  </CodeView>
-</Example>
+
+<CodeView hasDensityRadioButtons>
+  {CardWrapperExamples.default}
+</CodeView>
+
 
 ## Einstein Theming
 
 For cards that contain Einstein related information, you can include an Einstein themed card header.
 
-<Example title="Cards Einstein Theme" >
-  <CodeView hasDensityRadioButtons>
-    <EinsteinCard/>
-  </CodeView>
-</Example>
+
+<CodeView hasDensityRadioButtons>
+  {CardEinsteinExamples.default}
+</CodeView>
+
 
 ### With an Icon
 
-<Example title="Cards Einstein Theme with Icon" >
-  <CodeView hasDensityRadioButtons>
-    <EinsteinCard hasIcon/>
-  </CodeView>
-</Example>
+
+<CodeView hasDensityRadioButtons>
+  {getDisplayElementById(CardEinsteinExamples.states, 'einstein-with-icon')}
+</CodeView>
+
 
 ### With Actions
 
-<Example title="Cards Einstein Theme with Icon and Actions" >
-  <CodeView hasDensityRadioButtons>
-    <EinsteinCard hasIcon hasActions/>
-  </CodeView>
-</Example>
+
+<CodeView hasDensityRadioButtons>
+  {getDisplayElementById(CardEinsteinExamples.states, 'einstein-with-icon-and-actions')}
+</CodeView>

@@ -33,11 +33,17 @@ props:
     value: '{!PALETTE_GRAY_3}'
   COLOR_BACKGROUND_SECONDARY:
     value: '{!PALETTE_GRAY_1}'
+  COLOR_CONTRAST_PRIMARY:
+    value: '{!PALETTE_GRAY_3}'
   COLOR_CONTRAST_SECONDARY:
     value: '{!PALETTE_GRAY_3}'
   COLOR_BACKGROUND_ALT_2:
     value: '{!PALETTE_GRAY_3}'
     comment: Used when further differentiation is needed because colorBackground and colorBackgroundAlt are both being used in close proximity.
+  COLOR_BACKGROUND_SHADE:
+    value: '{!PALETTE_GRAY_4}'
+    specificity: builders
+    comment: Used as gray background when more contrast is desired.
   COLOR_BACKGROUND_SHADE_DARK:
     value: '{!PALETTE_GRAY_5}'
     specificity: builders

@@ -434,6 +434,81 @@ exports[`Card renders a base card with empty footer 1`] = `
 </article>
 `;
 
+exports[`Card renders a base card with header visibly hidden 1`] = `
+<article
+  className="slds-card"
+>
+  <div
+    className="slds-card__header slds-grid slds-assistive-text"
+  >
+    <header
+      className="slds-media slds-media_center slds-has-flexi-truncate"
+    >
+      <div
+        className="slds-media__figure"
+      >
+        <span
+          className="slds-icon_container slds-icon-standard-contact"
+          title="contact"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-icon slds-icon_small"
+          >
+            <use
+              xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#contact"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            contact
+          </span>
+        </span>
+      </div>
+      <div
+        className="slds-media__body"
+      >
+        <h2
+          className="slds-card__header-title"
+        >
+          <a
+            className="slds-card__header-link slds-truncate"
+            href="javascript:void(0);"
+            title="Card Header"
+          >
+            <span>
+              Card Header
+            </span>
+          </a>
+        </h2>
+      </div>
+    </header>
+  </div>
+  <div
+    className="slds-card__body"
+  >
+    Anything can go into the card body
+  </div>
+  <footer
+    className="slds-card__footer"
+  >
+    <a
+      className="slds-card__footer-action"
+      href="javascript:void(0);"
+      tabIndex={undefined}
+    >
+      View All 
+      <span
+        className="slds-assistive-text"
+      >
+        Contacts
+      </span>
+    </a>
+  </footer>
+</article>
+`;
+
 exports[`Card renders a base card without a footer 1`] = `
 <article
   className="slds-card"

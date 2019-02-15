@@ -12,6 +12,7 @@ const Demo = props => (
   <div
     className={classNames('demo-only', props.className)}
     style={{ height: '6rem' }}
+    dir={props.dir}
   >
     {props.children}
   </div>
@@ -112,6 +113,51 @@ export let examples = [
         <SpinnerContainer>
           <Spinner className="slds-spinner_medium slds-spinner_delayed" />
         </SpinnerContainer>
+      </Demo>
+    )
+  },
+  {
+    id: 'right-to-left-xx-small',
+    label: 'RTL support - Size Xx-Small',
+    element: (
+      <Demo dir="rtl">
+        <Spinner className="slds-spinner_xx-small" />
+      </Demo>
+    )
+  },
+  {
+    id: 'right-to-left-x-small',
+    label: 'RTL support - Size X-Small',
+    element: (
+      <Demo dir="rtl">
+        <Spinner className="slds-spinner_x-small" />
+      </Demo>
+    )
+  },
+  {
+    id: 'right-to-left-small',
+    label: 'RTL support - Size Small',
+    element: (
+      <Demo dir="rtl">
+        <Spinner className="slds-spinner_small" />
+      </Demo>
+    )
+  },
+  {
+    id: 'right-to-left-medium',
+    label: 'RTL support - Size Medium',
+    element: (
+      <Demo dir="rtl">
+        <Spinner className="slds-spinner_medium" />
+      </Demo>
+    )
+  },
+  {
+    id: 'right-to-left-large',
+    label: 'RTL support - Size Large',
+    element: (
+      <Demo dir="rtl">
+        <Spinner className="slds-spinner_large" />
       </Demo>
     )
   }

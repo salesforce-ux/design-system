@@ -4,6 +4,12 @@
 
 <!-- ## [Unreleased] -->
 
+## 2.9.0
+
+### Added
+
+- Icon modifier class `slds-icon_flip` to horizontally flip icons.
+
 ## 2.7.0
 
 ### Added

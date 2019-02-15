@@ -205,7 +205,7 @@ export const RteFormula = props => {
 
 export const FontFamilyDropdown = props => (
   <Listbox
-    className="slds-dropdown slds-dropdown_fluid"
+    listboxClassName="slds-dropdown slds-dropdown_fluid"
     vertical
     id="family-listbox"
   >
@@ -226,7 +226,7 @@ export const FontFamilyDropdown = props => (
 
 const FontSizeDropdown = props => (
   <Listbox
-    className="slds-dropdown slds-dropdown_fluid"
+    listboxClassName="slds-dropdown slds-dropdown_fluid"
     vertical
     id="size-listbox"
   >

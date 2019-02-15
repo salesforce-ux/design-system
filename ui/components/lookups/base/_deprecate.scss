@@ -15,7 +15,7 @@
      */
     &__list {
       // crazy calc - line height of primary text + line height of meta text - the offset to bring the meta up a bit + the top/bottom padding multipied by how many items I want to show
-      max-height: calc((((#{$line-height-text} * #{$font-size-medium}) + (#{$line-height-text} * #{$font-size-small}) - #{$spacing-xx-small}) + (#{$spacing-xx-small} * 2)) * 8);
+      max-height: calc((((#{$line-height-text} * #{$font-size-3}) + (#{$line-height-text} * #{$font-size-2}) - #{$spacing-xx-small}) + (#{$spacing-xx-small} * 2)) * 8);
       overflow-y: auto;
     }
 
@@ -86,7 +86,7 @@
      * @restrict .slds-lookup a, .slds-lookup button, .slds-lookup span
      */
     &__item-action {
-      font-size: $font-size-medium;
+      font-size: $font-size-3;
       display: flex;
       align-items: center;
       padding: $spacing-xx-small $spacing-medium;

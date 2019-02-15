@@ -17,6 +17,12 @@ import {
   Td,
   ReadOnlyCell
 } from '../../data-tables/';
+import { Spinner } from '../../spinners/base/example';
+import { NoTask } from '../../illustration/custom';
+import {
+  Illustration,
+  IllustrationText
+} from '../../illustration/base/example';
 
 const headerAction = (
   <button className="slds-button slds-button_neutral">New</button>
@@ -251,14 +257,10 @@ export const WrappedCards = props => (
   </div>
 );
 
-/// ////////////////////////////////////////
-// Export
-/// ////////////////////////////////////////
-
 export default (
   <Card>
     <CardHeader
-      title="Card Header"
+      title="Accounts"
       href="javascript:void(0);"
       symbol="account"
       action={<button className="slds-button slds-button_neutral">New</button>}
@@ -288,6 +290,36 @@ export let states = [
         <CardFooter />
       </Card>
     )
+  },
+  {
+    id: 'empty-illustration',
+    label: 'Empty with illustration',
+    element: (
+      <Card>
+        <CardHeader title="Tasks" href="javascript:void(0);" symbol="task" />
+        <CardBody hasPadding>
+          <Illustration>
+            <NoTask />
+            <IllustrationText
+              heading="No new tasks"
+              message="Nothing needs your attention right now. Check back later."
+            />
+          </Illustration>
+        </CardBody>
+      </Card>
+    )
+  },
+  {
+    id: 'loading',
+    label: 'Loading',
+    element: (
+      <Card>
+        <CardHeader title="Tasks" href="javascript:void(0);" symbol="task" />
+        <CardBody hasPadding>
+          <Spinner className="slds-spinner_small" />
+        </CardBody>
+      </Card>
+    )
   }
 ];
 
@@ -306,5 +338,159 @@ export let examples = [
     id: 'nested-cards',
     label: 'Nested cards',
     element: <NestedCards />
+  },
+  {
+    id: 'with-no-header',
+    label: 'With no header',
+    element: (
+      <Card>
+        <CardBody hasPadding>Anything can go into the card body</CardBody>
+        <CardFooter>
+          View All <span className="slds-assistive-text">Accounts</span>
+        </CardFooter>
+      </Card>
+    )
+  },
+  {
+    id: 'visibly-hidden-card-header',
+    label: 'Visibly hidden card header',
+    element: (
+      <Card>
+        <CardHeader
+          title="Card Header"
+          href="javascript:void(0);"
+          className="slds-assistive-text"
+        />
+        <CardBody hasPadding>Anything can go into the card body</CardBody>
+        <CardFooter>
+          View All <span className="slds-assistive-text">Accounts</span>
+        </CardFooter>
+      </Card>
+    )
+  },
+  {
+    id: 'body-has-no-padding',
+    label: 'Body with no padding',
+    element: (
+      <Card>
+        <CardHeader
+          title="Accounts"
+          href="javascript:void(0);"
+          symbol="account"
+        />
+        <CardBody>Card Body</CardBody>
+      </Card>
+    )
+  },
+  {
+    id: 'body-has-padding',
+    label: 'Body with padding',
+    element: (
+      <Card>
+        <CardHeader
+          title="Accounts"
+          href="javascript:void(0);"
+          symbol="account"
+        />
+        <CardBody hasPadding>Card Body with Padding</CardBody>
+      </Card>
+    )
+  },
+  {
+    id: 'has-no-footer',
+    label: 'No footer',
+    element: (
+      <Card>
+        <CardHeader
+          title="Accounts"
+          href="javascript:void(0);"
+          showIcon
+          symbol="account"
+        />
+        <CardBody hasPadding>Card Body</CardBody>
+        <CardFooter />
+      </Card>
+    )
+  },
+  {
+    id: 'has-footer',
+    label: 'Has footer',
+    element: (
+      <Card>
+        <CardHeader
+          title="Accounts"
+          href="javascript:void(0);"
+          showIcon
+          symbol="account"
+        />
+        <CardBody hasPadding>Card Body</CardBody>
+        <CardFooter>
+          View All <span className="slds-assistive-text">Accounts</span>
+        </CardFooter>
+      </Card>
+    )
+  },
+  {
+    id: 'nested-no-boundary',
+    label: 'Nested with no boundary',
+    element: (
+      <Card>
+        <CardHeader
+          title="Outer Card Header"
+          href="javascript:void(0);"
+          symbol="account"
+        />
+        <CardBody hasPadding>
+          <Card>
+            <CardHeader
+              title="Card Header"
+              href="javascript:void(0);"
+              symbol="account"
+            />
+            <CardBody hasPadding>
+              This is a nested card with no styling (default)
+            </CardBody>
+            <CardFooter>
+              View All <span className="slds-assistive-text">Accounts</span>
+            </CardFooter>
+          </Card>
+        </CardBody>
+        <CardFooter>
+          View All <span className="slds-assistive-text">Accounts</span>
+        </CardFooter>
+      </Card>
+    )
+  },
+  {
+    id: 'nested-with-boundary',
+    label: 'Nested with no boundary',
+    element: (
+      <Card>
+        <CardHeader
+          title="Outer Card Header"
+          href="javascript:void(0);"
+          symbol="account"
+        />
+        <CardBody hasPadding>
+          <Card hasCardBoundary>
+            <CardHeader
+              title="Card Header"
+              href="javascript:void(0);"
+              symbol="account"
+            />
+            <CardBody hasPadding>
+              This is a card inside an `slds-card` to illustrate how
+              `slds-card_boundary` adds a rounded border when desired.
+            </CardBody>
+            <CardFooter>
+              View All <span className="slds-assistive-text">Accounts</span>
+            </CardFooter>
+          </Card>
+        </CardBody>
+        <CardFooter>
+          View All <span className="slds-assistive-text">Accounts</span>
+        </CardFooter>
+      </Card>
+    )
   }
 ];

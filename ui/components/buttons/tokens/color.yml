@@ -14,56 +14,76 @@ props:
     value: "{!WHITE}"
   BUTTON_COLOR_BACKGROUND_BRAND_PRIMARY:
     value: "{!SCIENCE_BLUE}"
+    deprecated: true
+    comment: 'Use BRAND_ACCESSIBLE to pick up theming capabilities'
   BUTTON_COLOR_BACKGROUND_SECONDARY:
     value: "{!WHITE_TRANSPARENT_80}"
+    deprecated: true
   COLOR_BACKGROUND_BUTTON_BRAND:
     value: "{!SCIENCE_BLUE}"
     comment: Brandable primary button
+    access: global
   COLOR_BACKGROUND_BUTTON_BRAND_ACTIVE:
     value: "{!MIDNIGHT_BLUE}"
     comment: Brandable primary button - active state
+    access: global
   COLOR_BACKGROUND_BUTTON_BRAND_HOVER:
     value: "{!ENDEAVOUR}"
     comment: Brandable primary button - hover state
+    access: global
   COLOR_BACKGROUND_BUTTON_BRAND_DISABLED:
     value: "{!STEAM}"
     comment: Brandable primary button - disabled state
+    access: global
   COLOR_BACKGROUND_BUTTON_DEFAULT:
     value: "{!WHITE}"
     comment: Default secondary button
+    access: global
   COLOR_BACKGROUND_BUTTON_DEFAULT_HOVER:
     value: "{!LINK_WATER}"
     comment: Default secondary button - hover state
+    access: global
   COLOR_BACKGROUND_BUTTON_DEFAULT_FOCUS:
     value: "{!LINK_WATER}"
     comment: Default secondary button - focus state
+    access: global
   COLOR_BACKGROUND_BUTTON_DEFAULT_ACTIVE:
     value: "{!WHITE_LILAC}"
     comment: Default secondary button - active state
+    access: global
   COLOR_BACKGROUND_BUTTON_DEFAULT_DISABLED:
     value: "{!WHITE}"
     comment: Default secondary button - disabled state
+    access: global
   COLOR_BACKGROUND_BUTTON_ICON:
     value: "{!TRANSPARENT}"
     comment: Background color for icon-only button
+    access: global
   COLOR_BACKGROUND_BUTTON_ICON_HOVER:
     value: "{!LINK_WATER}"
     comment: Background color for icon-only button - hover state
+    access: global
   COLOR_BACKGROUND_BUTTON_ICON_FOCUS:
     value: "{!LINK_WATER}"
     comment: Background color for icon-only button - focus state
+    access: global
   COLOR_BACKGROUND_BUTTON_ICON_ACTIVE:
     value: "{!WHITE_LILAC}"
     comment: Background color for icon-only button - active state
+    access: global
   COLOR_BACKGROUND_BUTTON_ICON_DISABLED:
     value: "{!WHITE}"
     comment: Background color for icon-only button - disabled state
+    access: global
   COLOR_BACKGROUND_BUTTON_INVERSE:
     value: "{!TRANSPARENT}"
     comment: Button backgrounds on inverse/dark backgrounds
+    access: global
   COLOR_BACKGROUND_BUTTON_INVERSE_ACTIVE:
     value: "{!BLACK_TRANSPARENT_24}"
     comment: Active button backgrounds on inverse backgrounds on mobile
+    access: global
   COLOR_BACKGROUND_BUTTON_INVERSE_DISABLED:
     value: "{!TRANSPARENT}"
     comment: Disabled button backgrounds on inverse/dark backgrounds
+    access: global

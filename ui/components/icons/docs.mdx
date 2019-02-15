@@ -7,9 +7,12 @@ import { ActionIcon } from './action/example';
 import { CustomIcon } from './custom/example';
 import { DoctypeIcon } from './doctype/example';
 import { StandardIcon } from './standard/example';
+import * as UtilityIconExamples from '../icons/base/example';
+import { getDisplayElementById } from '../../shared/helpers';
 
 <div className="doc lead">
-  Icons provide visual context and enhance usability. All of the Icons can be found <a href="/icons">here</a>.
+  Icons provide visual context and enhance usability. All of the Icons can be
+  found <a href="/icons">here</a>.
 </div>
 
 <Example title="Base Default">
@@ -26,31 +29,39 @@ When placing the icon code into your page, customize the path in the `use` attri
 
 <CodeBlock toggleCode={false}>
   <svg aria-hidden="true" className="slds-icon" title="when needed">
-    <use xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#case"></use>
+    <use xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#case" />
   </svg>
 </CodeBlock>
 
 <Blockquote type="note" header="Note">
-If an icon has more than one word in the name, it should be included in the `use` attribute with the underscore separator as shown on the icon page. For example: log_a_call.
+  If an icon has more than one word in the name, it should be included in the
+  `use` attribute with the underscore separator as shown on the icon page. For
+  example: log_a_call.
 </Blockquote>
 
 ## Accessibility
 
 Icons require a containing element for two reasons:
 
-* If assistive text is required, the containing element should contain both the icon and a `<span>` with hidden assistive text describing the icon using the `slds-assistive-text` class.
-* If the icon is used without a visible, descriptive label, a `title` attribute is needed on the containing element. The `title` should describe the icon.
+- If assistive text is required, the containing element should contain both the icon and a `<span>` with hidden assistive text describing the icon using the `slds-assistive-text` class.
+- If the icon is used without a visible, descriptive label, a `title` attribute is needed on the containing element. The `title` should describe the icon.
 
 If an icon has a visible label that describes what the icon represents, no title or hidden assistive text is required.
 
 The containing element must have the `slds-icon_container` class.
 
 <Blockquote type="note" header="Note">
-You must require SLDS in your application for SVG sprites to work. If you’re using Visualforce, see <a href="/platforms/visualforce">the Visualforce tutorial</a>. If you’re using <a href="/platforms/lightning">Lightning components, see this documentation</a>.
+  You must require SLDS in your application for SVG sprites to work. If you’re
+  using Visualforce, see{' '}
+  <a href="/platforms/visualforce">the Visualforce tutorial</a>. If you’re using{' '}
+  <a href="/platforms/lightning">
+    Lightning components, see this documentation
+  </a>
+  .
 </Blockquote>
 
-* You can access the SVG sprites by downloading the entire [CSS Framework or just the icons](/downloads). To include a sprite in your application, the recommended method is to place it into the page as the first element inside the `body` element. Alternatively, you can leave the sprite in the assets/icons directory and link to it from your page. To render a sprited icon, add the tiny [SVG for Everybody](https://github.com/jonathantneal/svg4everybody) script for Internet Explorer.
-* When placed into the `body`, the SVG sprite takes up space in the page. Use either `display:none` or `position:absolute` and set both the width and height to zero.
+- You can access the SVG sprites by downloading the entire [CSS Framework or just the icons](/downloads). To include a sprite in your application, the recommended method is to place it into the page as the first element inside the `body` element. Alternatively, you can leave the sprite in the assets/icons directory and link to it from your page. To render a sprited icon, add the tiny [SVG for Everybody](https://github.com/jonathantneal/svg4everybody) script for Internet Explorer.
+- When placed into the `body`, the SVG sprite takes up space in the page. Use either `display:none` or `position:absolute` and set both the width and height to zero.
 
 ## Background Color
 
@@ -60,8 +71,7 @@ To change a background color for action, custom, or standard icons, use composed
 Place the class on the `.slds-icon_container`.
 
 <CodeBlock toggleCode={false}>
-  <div className="slds-icon_container slds-icon-standard-account">
-  </div>
+  <div className="slds-icon_container slds-icon-standard-account" />
 </CodeBlock>
 
 Some icon names have more than one word, separated by `_` underscores. Replace underscores with dashes when composing the class name. So `log_a_call` in the standard icon set becomes `.slds-icon-action-log-a-call`.
@@ -222,3 +232,11 @@ To change the size of an icon to large, add the `slds-icon_large` class to the i
     <UtilityIcon className="slds-icon-text-default slds-icon_large" />
   </CodeView>
 </Example>
+
+## Right-to-Left Support
+
+To horizontally flip an icon to support bidirectionality (reading from right to left), use the `slds-icon_flip` class with the `slds-icon_container` class, and setting the `dir` attribute on any parent container, most often the parent component or on `html` itself.
+
+<CodeView>
+  {getDisplayElementById(UtilityIconExamples.examples, 'rtl-flipped')}
+</CodeView>

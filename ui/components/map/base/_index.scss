@@ -84,7 +84,7 @@
  * @restrict .slds-coordinates h2
  */
 .slds-coordinates__title {
-  font-size: $font-size-large;
+  font-size: $font-size-5;
   font-weight: $font-weight-bold;
 }
 
@@ -119,7 +119,7 @@
     background-color: $color-background-row-selected;
 
     .slds-text-link {
-      color: $color-text-link-primary-active;
+      color: $color-text-link-active;
     }
   }
 }

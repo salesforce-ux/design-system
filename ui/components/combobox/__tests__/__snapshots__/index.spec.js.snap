@@ -7064,12 +7064,13 @@ exports[`render deprecated combobox renders a base combobox 1`] = `
           </div>
           <div
             aria-orientation={null}
+            className="slds-dropdown slds-dropdown_fluid"
             id="listbox-unique-id"
             role="listbox"
           >
             <ul
               aria-label={undefined}
-              className="slds-listbox slds-listbox_vertical slds-dropdown slds-dropdown_fluid"
+              className="slds-listbox slds-listbox_vertical"
               role="presentation"
             >
               <li
@@ -7237,12 +7238,13 @@ exports[`render deprecated combobox renders a base combobox with closed options 
           </div>
           <div
             aria-orientation={null}
+            className="slds-dropdown slds-dropdown_fluid"
             id="listbox-unique-id"
             role="listbox"
           >
             <ul
               aria-label={undefined}
-              className="slds-listbox slds-listbox_vertical slds-dropdown slds-dropdown_fluid"
+              className="slds-listbox slds-listbox_vertical"
               role="presentation"
             >
               <li
@@ -7527,12 +7529,13 @@ exports[`render deprecated combobox renders a base combobox with focus 1`] = `
           </div>
           <div
             aria-orientation={null}
+            className="slds-dropdown slds-dropdown_fluid"
             id="listbox-unique-id"
             role="listbox"
           >
             <ul
               aria-label={undefined}
-              className="slds-listbox slds-listbox_vertical slds-dropdown slds-dropdown_fluid"
+              className="slds-listbox slds-listbox_vertical"
               role="presentation"
             >
               <li
@@ -7700,12 +7703,13 @@ exports[`render deprecated combobox renders a base combobox with open item focus
           </div>
           <div
             aria-orientation={null}
+            className="slds-dropdown slds-dropdown_fluid"
             id="listbox-unique-id"
             role="listbox"
           >
             <ul
               aria-label={undefined}
-              className="slds-listbox slds-listbox_vertical slds-dropdown slds-dropdown_fluid"
+              className="slds-listbox slds-listbox_vertical"
               role="presentation"
             >
               <li
@@ -7909,12 +7913,13 @@ exports[`render deprecated combobox renders a multi-entity combobox 1`] = `
           </div>
           <div
             aria-orientation={null}
+            className="slds-dropdown slds-dropdown_fluid"
             id="listbox-unique-id"
             role="listbox"
           >
             <ul
               aria-label={undefined}
-              className="slds-listbox slds-listbox_vertical slds-dropdown slds-dropdown_fluid"
+              className="slds-listbox slds-listbox_vertical"
               role="presentation"
             >
               <li
@@ -8118,12 +8123,13 @@ exports[`render deprecated combobox renders a multi-entity combobox with focus 1
           </div>
           <div
             aria-orientation={null}
+            className="slds-dropdown slds-dropdown_fluid"
             id="listbox-unique-id"
             role="listbox"
           >
             <ul
               aria-label={undefined}
-              className="slds-listbox slds-listbox_vertical slds-dropdown slds-dropdown_fluid"
+              className="slds-listbox slds-listbox_vertical"
               role="presentation"
             >
               <li
@@ -8327,12 +8333,13 @@ exports[`render deprecated combobox renders a multi-entity combobox with focused
           </div>
           <div
             aria-orientation={null}
+            className="slds-dropdown slds-dropdown_fluid"
             id="listbox-unique-id"
             role="listbox"
           >
             <ul
               aria-label={undefined}
-              className="slds-listbox slds-listbox_vertical slds-dropdown slds-dropdown_fluid"
+              className="slds-listbox slds-listbox_vertical"
               role="presentation"
             >
               <li
@@ -8653,12 +8660,13 @@ exports[`render deprecated combobox renders a multi-entity combobox with open it
           </div>
           <div
             aria-orientation={null}
+            className="slds-dropdown slds-dropdown_fluid"
             id="listbox-unique-id"
             role="listbox"
           >
             <ul
               aria-label={undefined}
-              className="slds-listbox slds-listbox_vertical slds-dropdown slds-dropdown_fluid"
+              className="slds-listbox slds-listbox_vertical"
               role="presentation"
             >
               <li
@@ -9044,12 +9052,13 @@ exports[`render deprecated combobox renders a readonly combobox 1`] = `
           </div>
           <div
             aria-orientation={null}
+            className="slds-dropdown slds-dropdown_fluid"
             id="listbox-unique-id"
             role="listbox"
           >
             <ul
               aria-label={undefined}
-              className="slds-listbox slds-listbox_vertical slds-dropdown slds-dropdown_fluid"
+              className="slds-listbox slds-listbox_vertical"
               role="presentation"
             >
               <li
@@ -9222,12 +9231,13 @@ exports[`render deprecated combobox renders a readonly combobox with closed opti
           </div>
           <div
             aria-orientation={null}
+            className="slds-dropdown slds-dropdown_fluid"
             id="listbox-unique-id"
             role="listbox"
           >
             <ul
               aria-label={undefined}
-              className="slds-listbox slds-listbox_vertical slds-dropdown slds-dropdown_fluid"
+              className="slds-listbox slds-listbox_vertical"
               role="presentation"
             >
               <li
@@ -9400,12 +9410,13 @@ exports[`render deprecated combobox renders a readonly combobox with closed opti
           </div>
           <div
             aria-orientation={null}
+            className="slds-dropdown slds-dropdown_fluid"
             id="listbox-unique-id"
             role="listbox"
           >
             <ul
               aria-label={undefined}
-              className="slds-listbox slds-listbox_vertical slds-dropdown slds-dropdown_fluid"
+              className="slds-listbox slds-listbox_vertical"
               role="presentation"
             >
               <li
@@ -9659,12 +9670,13 @@ exports[`render deprecated combobox renders a readonly combobox with focus 1`] =
           </div>
           <div
             aria-orientation={null}
+            className="slds-dropdown slds-dropdown_fluid"
             id="listbox-unique-id"
             role="listbox"
           >
             <ul
               aria-label={undefined}
-              className="slds-listbox slds-listbox_vertical slds-dropdown slds-dropdown_fluid"
+              className="slds-listbox slds-listbox_vertical"
               role="presentation"
             >
               <li
@@ -9837,12 +9849,13 @@ exports[`render deprecated combobox renders a readonly combobox with open item f
           </div>
           <div
             aria-orientation={null}
+            className="slds-dropdown slds-dropdown_fluid"
             id="listbox-unique-id"
             role="listbox"
           >
             <ul
               aria-label={undefined}
-              className="slds-listbox slds-listbox_vertical slds-dropdown slds-dropdown_fluid"
+              className="slds-listbox slds-listbox_vertical"
               role="presentation"
             >
               <li
@@ -10015,12 +10028,13 @@ exports[`render deprecated combobox renders a readonly combobox with open option
           </div>
           <div
             aria-orientation={null}
+            className="slds-dropdown slds-dropdown_fluid"
             id="listbox-unique-id"
             role="listbox"
           >
             <ul
               aria-label={undefined}
-              className="slds-listbox slds-listbox_vertical slds-dropdown slds-dropdown_fluid"
+              className="slds-listbox slds-listbox_vertical"
               role="presentation"
             >
               <li
@@ -10193,12 +10207,13 @@ exports[`render deprecated combobox renders a readonly combobox with open option
           </div>
           <div
             aria-orientation={null}
+            className="slds-dropdown slds-dropdown_fluid"
             id="listbox-unique-id"
             role="listbox"
           >
             <ul
               aria-label={undefined}
-              className="slds-listbox slds-listbox_vertical slds-dropdown slds-dropdown_fluid"
+              className="slds-listbox slds-listbox_vertical"
               role="presentation"
             >
               <li
@@ -10366,12 +10381,13 @@ exports[`render deprecated combobox renders an inline combobox open item focused
           </div>
           <div
             aria-orientation={null}
+            className="slds-dropdown slds-dropdown_fluid"
             id="listbox-unique-id"
             role="listbox"
           >
             <ul
               aria-label={undefined}
-              className="slds-listbox slds-listbox_vertical slds-dropdown slds-dropdown_fluid"
+              className="slds-listbox slds-listbox_vertical"
               role="presentation"
             >
               <li
@@ -10539,12 +10555,13 @@ exports[`render deprecated combobox renders an inline combobox with focus 1`] = 
           </div>
           <div
             aria-orientation={null}
+            className="slds-dropdown slds-dropdown_fluid"
             id="listbox-unique-id"
             role="listbox"
           >
             <ul
               aria-label={undefined}
-              className="slds-listbox slds-listbox_vertical slds-dropdown slds-dropdown_fluid"
+              className="slds-listbox slds-listbox_vertical"
               role="presentation"
             >
               <li
@@ -10712,12 +10729,13 @@ exports[`render deprecated combobox renders an inline listbox combobox 1`] = `
           </div>
           <div
             aria-orientation={null}
+            className="slds-dropdown slds-dropdown_fluid"
             id="listbox-unique-id"
             role="listbox"
           >
             <ul
               aria-label={undefined}
-              className="slds-listbox slds-listbox_vertical slds-dropdown slds-dropdown_fluid"
+              className="slds-listbox slds-listbox_vertical"
               role="presentation"
             >
               <li
@@ -10910,12 +10928,13 @@ exports[`render deprecated combobox renders an inline listbox combobox with clos
           </div>
           <div
             aria-orientation={null}
+            className="slds-dropdown slds-dropdown_fluid"
             id="listbox-unique-id"
             role="listbox"
           >
             <ul
               aria-label={undefined}
-              className="slds-listbox slds-listbox_vertical slds-dropdown slds-dropdown_fluid"
+              className="slds-listbox slds-listbox_vertical"
               role="presentation"
             >
               <li
@@ -11200,12 +11219,13 @@ exports[`render deprecated combobox renders an inline listbox combobox with focu
           </div>
           <div
             aria-orientation={null}
+            className="slds-dropdown slds-dropdown_fluid"
             id="listbox-unique-id"
             role="listbox"
           >
             <ul
               aria-label={undefined}
-              className="slds-listbox slds-listbox_vertical slds-dropdown slds-dropdown_fluid"
+              className="slds-listbox slds-listbox_vertical"
               role="presentation"
             >
               <li
@@ -11490,12 +11510,13 @@ exports[`render deprecated combobox renders an inline listbox combobox with opti
           </div>
           <div
             aria-orientation={null}
+            className="slds-dropdown slds-dropdown_fluid"
             id="listbox-unique-id"
             role="listbox"
           >
             <ul
               aria-label={undefined}
-              className="slds-listbox slds-listbox_vertical slds-dropdown slds-dropdown_fluid"
+              className="slds-listbox slds-listbox_vertical"
               role="presentation"
             >
               <li

@@ -4,7 +4,7 @@
 import React, { Component } from 'react';
 import classNames from 'classnames';
 
-const tokenSet = require('../../../design-tokens/dist/force-base.json');
+const tokenSet = require('../../../design-tokens/dist/theme-one-salesforce.json');
 let tokenValue = tokenSet.BRAND_BACKGROUND_PRIMARY;
 
 export const BrandBand = props => (

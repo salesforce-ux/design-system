@@ -111,7 +111,7 @@
  * @variant
  */
 .slds-listbox {
-  font-size: $font-size-medium;
+  font-size: $font-size-3;
 }
 
 /**
@@ -393,7 +393,7 @@
   .slds-combobox__input {
     width: rem(120px);
     transition: width 80ms linear;
-    font-size: $font-size-text-x-small;
+    font-size: $font-size-2;
     color: $color-text-placeholder;
 
     &:focus,

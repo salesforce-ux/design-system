@@ -12,6 +12,9 @@ imports:
 - ../../../aliases/colors.yml
 - ../../../aliases/color-palettes.yml
 props:
+  COLOR_TEXT_PRIMARY:
+    value: '{!BISCAY}'
+    comment: Primary body text color
   COLOR_TEXT_SECONDARY:
     value: '{!PALETTE_COOL_GRAY_9}'
     comment: Secondary body text color
@@ -21,15 +24,83 @@ props:
   COLOR_TEXT_MODAL:
     value: '{!WHITE}'
     comment: Modal header title
+    access: global
   COLOR_TEXT_MODAL_BUTTON:
     value: '{!PALETTE_COOL_GRAY_9}'
     comment: Modal header button text color
+    access: global
   COLOR_TEXT_STAGE_LEFT:
     value: '{!PALETTE_COOL_GRAY_4}'
     comment: Text in stage left navigation.
+    access: global
   COLOR_TEXT_TOAST:
     value: '{!PALETTE_COOL_GRAY_4}'
     comment: Color for text on toast messages.
+    access: global
   COLOR_TEXT_PILL:
     value: '{!SCIENCE_BLUE}'
     comment: Text color for pills.
+    access: global
+  COLOR_TEXT_BROWSER:
+    value: '{!WHITE}'
+    comment: Top bar icon color
+    access: global
+  COLOR_TEXT_BROWSER_ACTIVE:
+    value: '{!BLACK_TRANSPARENT_40}'
+    comment: Top bar active icon color
+    access: global
+  COLOR_TEXT_LINK_PRIMARY:
+    value: "{!SCIENCE_BLUE}"
+  COLOR_TEXT_LINK_PRIMARY_HOVER:
+    value: "{!SCIENCE_BLUE}"
+  COLOR_TEXT_LINK_PRIMARY_ACTIVE:
+    value: "{!MIDNIGHT_BLUE}"
+  COLOR_TEXT_LINK_PRIMARY_FOCUS:
+    value: "{!SCIENCE_BLUE}"
+  COLOR_TEXT_INVERSE_ACTIVE:
+    value: '{!MALIBU}'
+    comment: Active state on a standalone link on a dark background.
+    access: global
+  COLOR_TEXT_INVERSE_HOVER:
+    value: '{!PALETTE_COOL_GRAY_7}'
+    comment: Hover state on a standalone link on a dark background.
+    access: global
+  COLOR_TEXT_TAB_LABEL_SELECTED:
+    value: '{!SCIENCE_BLUE}'
+    comment: Color for text on a selected tab in a tab group.
+    access: global
+  COLOR_TEXT_TAB_LABEL_HOVER:
+    value: '{!ENDEAVOUR}'
+    comment: Color for text in hover state in a tab group.
+    access: global
+  COLOR_TEXT_TAB_LABEL_FOCUS:
+    value: '{!ENDEAVOUR}'
+    comment: Color for text in focus state in a tab group.
+    access: global
+  COLOR_TEXT_TAB_LABEL_ACTIVE:
+    value: '{!MIDNIGHT_BLUE}'
+    comment: Color for text in active state in a tab group.
+    access: global
+  COLOR_TEXT_TAB_LABEL_DISABLED:
+    value: '{!PALETTE_COOL_GRAY_4}'
+    comment: Color for disabled text in a tab group.
+    access: global
+  COLOR_TEXT_ICON_BRAND:
+    value: '{!SCIENCE_BLUE}'
+    comment: Color for non-interactive icons that represent a selected item in a list
+    access: global
+  COLOR_TEXT_ICON_UTILITY:
+    value: '{!PALETTE_COOL_GRAY_7}'
+    comment: Color for interactive utility icons
+  COLOR_TEXT_TOGGLE_DISABLED:
+    value: '{!PALETTE_COOL_GRAY_5}'
+    comment: Color for disabled toggles
+  COLOR_TEXT_ICON_INVERSE_HINT:
+    value: '{!WHITE_TRANSPARENT_50}'
+    comment: Icon color for a button that has a parent element that has a hover state on a dark background. This is the default text/icon color for that button before its parent has been hovered over.
+  COLOR_TEXT_ICON_INVERSE_HINT_HOVER:
+    value: '{!WHITE_TRANSPARENT_75}'
+    comment: Hovered icon color for a button that has a parent element that has a hover state
+  COLOR_TEXT_ICON_DEFAULT_HINT_BORDERLESS:
+    value: '{!PALETTE_COOL_GRAY_4}'
+    comment: Icon color for a button that has a parent element that has a hover state. This is the default text/icon color for that button before its parent has been hovered over.

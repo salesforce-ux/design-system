@@ -57,6 +57,7 @@
   background-repeat: no-repeat;
   background-size: contain;
   background-color: $welcome-mat-background-color-info;
+  align-items: center;
 }
 
 /**
@@ -181,7 +182,7 @@
  */
 .slds-welcome-mat__tile-description {
   color: $color-text-weak;
-  font-size: $font-size-text-x-small;
+  font-size: $font-size-2;
   line-height: $line-height-text;
 }
 

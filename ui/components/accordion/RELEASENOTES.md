@@ -4,6 +4,9 @@
 
 <!-- ## [Unreleased] -->
 
+## 2.9.0
+- Replaced `aria-hidden` with the HTML5 `hidden` attribute on closed `slds-accordion__section`s to hide content from both screen readers and browsers.
+
 ## 2.8.0
 
 ### Changed

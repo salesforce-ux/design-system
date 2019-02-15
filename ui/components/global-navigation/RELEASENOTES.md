@@ -3,6 +3,12 @@
 # Global Navigation Release Notes
 
 <!-- ## [Unreleased] -->
+## 2.8.3
+
+### Fixed
+
+- Fixed issue where a navigation item would lose its background color when active and/or hovered.
+
 ## 2.8.0
 
 ### Added

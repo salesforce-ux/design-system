@@ -12,8 +12,13 @@ global:
 imports:
 - ../../../aliases/spacing.yml
 props:
+  COMPONENT_SPACING_MARGIN:
+    value: '{!SPACING_SMALL}'
+  COMPONENT_SPACING_PADDING:
+    value: '{!SPACING_MEDIUM}'
   ## CARD
   CARD_SPACING_MARGIN:
     value: '{!SPACING_SMALL}'
   CARD_FOOTER_PADDING:
     value: '{!SPACING_SMALL} {!SPACING_MEDIUM}'
+

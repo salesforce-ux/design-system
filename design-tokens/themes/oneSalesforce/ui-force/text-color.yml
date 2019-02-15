@@ -11,30 +11,12 @@ imports:
 - ../../../aliases/colors.yml
 - ../../../aliases/color-palettes.yml
 props:
-  COLOR_TEXT_SECONDARY:
-    value: '{!PALETTE_GRAY_11}'
-    comment: Secondary body text color
-  COLOR_TEXT_TERTIARY:
-    value: '{!PALETTE_GRAY_8}'
-    comment: Tertiary body text color
-  COLOR_TEXT_INVERSE_ACTIVE:
-    value: '{!MALIBU}'
-    comment: Active state on a standalone link on a dark background.
-  COLOR_TEXT_INVERSE_HOVER:
-    value: '{!PALETTE_GRAY_7}'
-    comment: Hover state on a standalone link on a dark background.
   ## ICONS
-  COLOR_TEXT_ICON_UTILITY:
-    value: '{!PALETTE_GRAY_7}'
-    comment: Color for interactive utility icons
   COLOR_TEXT_ICON_DEFAULT:
     value: '{!PALETTE_GRAY_9}'
     comment: Default icon color.
   COLOR_TEXT_ICON_DEFAULT_HINT:
     value: '{!PALETTE_GRAY_7}'
-    comment: Icon color for a button that has a parent element that has a hover state. This is the default text/icon color for that button before its parent has been hovered over.
-  COLOR_TEXT_ICON_DEFAULT_HINT_BORDERLESS:
-    value: '{!PALETTE_GRAY_4}'
     comment: Icon color for a button that has a parent element that has a hover state. This is the default text/icon color for that button before its parent has been hovered over.
   COLOR_TEXT_ICON_DEFAULT_DISABLED:
     value: '{!PALETTE_GRAY_5}'

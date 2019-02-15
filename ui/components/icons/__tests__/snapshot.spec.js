@@ -40,3 +40,18 @@ describe('Utility Icon', () => {
     matchesMarkup(<UtilityIcon useCurrentColor />);
   });
 });
+
+describe('RTL icons', () => {
+  it('should render a horizontally flipped icon', () =>
+    matchesMarkup(
+      <div dir="rtl" style={{ width: '32px' }}>
+        <UtilityIcon
+          containerClassName="slds-icon_flip"
+          className="slds-icon-text-default"
+          symbol="picklist_type"
+          title="List icon"
+          assistiveText="List icon"
+        />
+      </div>
+    ));
+});

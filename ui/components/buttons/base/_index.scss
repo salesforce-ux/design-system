@@ -172,7 +172,7 @@ a.slds-button--inverse:focus {
 
   &[disabled],
   &:disabled {
-    border-color: $color-border-primary;
+    border-color: $color-border;
     color: $color-text-button-default-disabled;
     background-color: $color-background-button-default-disabled;
   }

@@ -10,5 +10,4 @@ imports:
 - ./duration.yml
 - ./image-paths.yml
 - ./sizing.yml
-- ./spacing.yml
 - ./text-color.yml

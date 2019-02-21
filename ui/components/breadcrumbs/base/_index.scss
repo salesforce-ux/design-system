@@ -18,7 +18,6 @@
   .slds-list__item,
   &__item {
     position: relative;
-    font-weight: $font-weight-bold;
 
     &:before {
       content: '\003E';

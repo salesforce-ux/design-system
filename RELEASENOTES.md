@@ -4,6 +4,11 @@
 ## Release 2.8.4 - February 19, 2019
 
 ## Components
+
+### [Breadcrumbs](https://www.lightningdesignsystem.com/components/breadcrumbs)
+#### Fixed
+- Adjusted typographic styling for breadcrumb items.
+
 ### [Select](https://www.lightningdesignsystem.com/components/select)
 #### Fixed
 - Adjusted pseudo elements to allow click events to pass through

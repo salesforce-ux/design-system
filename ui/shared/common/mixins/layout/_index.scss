@@ -1,0 +1,90 @@
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+// TINY - 320px - 20rem
+@mixin mq-x-small-min {
+  @media (min-width: pem($mq-x-small)) {
+    @content;
+  }
+}
+
+@mixin mq-x-small-max {
+  @media (max-width: pem($mq-x-small)) {
+    @content;
+  }
+}
+
+
+
+// SMALL - 480px - 30rem
+@mixin mq-small-min {
+  @media (min-width: pem($mq-small)) {
+    @content;
+  }
+}
+
+@mixin mq-small-max {
+  @media (max-width: pem($mq-small)) {
+    @content;
+  }
+}
+
+
+
+// MEDIUM - 768px - 48rem
+@mixin mq-medium-min {
+  @media (min-width: pem($mq-medium)) {
+    @content;
+  }
+}
+
+@mixin mq-medium-max {
+  @media (max-width: pem($mq-medium)) {
+    @content;
+  }
+}
+
+
+
+// LARGE - 1024px - 64rem
+@mixin mq-large-min {
+  @media (min-width: pem($mq-large)) {
+    @content;
+  }
+}
+
+@mixin mq-large-max {
+  @media (max-width: pem($mq-large)) {
+    @content;
+  }
+}
+
+
+
+// HUGE - 1224px - 76.5rem
+@mixin mq-huge-min {
+  @media (min-width: pem(1224)) {
+    @content;
+  }
+}
+
+@mixin mq-huge-max {
+  @media (max-width: pem(1224)) {
+    @content;
+  }
+}
+
+
+
+// SUPER - 1824px - 114rem
+@mixin mq-super-min {
+  @media (min-width: pem(1824)) {
+    @content;
+  }
+}
+
+@mixin mq-super-max {
+  @media (max-width: pem(1824)) {
+    @content;
+  }
+}

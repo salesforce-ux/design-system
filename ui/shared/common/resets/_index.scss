@@ -1,0 +1,157 @@
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+::placeholder {
+  color: $color-text-placeholder;
+  font-weight: $font-weight-regular;
+  font-size: $font-size-3;
+}
+
+::selection {
+  background: $color-background-selection;
+  text-shadow: none;
+  color: $color-text-default;
+}
+
+html {
+  font-family: $font-family;
+  font-size: 100%;
+  line-height: $var-line-height-text;
+  background: $brand-background-primary;
+  color: $color-text-default;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body {
+  font-size: $font-size-3;
+  background: transparent;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul,
+dl,
+fieldset {
+  margin: 0;
+  padding: 0;
+}
+
+dd,
+figure {
+  margin: 0;
+}
+
+abbr[title] {
+  text-decoration: none;
+}
+
+abbr[title],
+fieldset,
+hr {
+  border: 0;
+}
+
+hr {
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font: {
+    weight: inherit;
+    size: 1em;
+  }
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+a {
+  color: $brand-text-link;
+  text-decoration: none;
+  transition: color 0.1s linear;
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+    color: $brand-text-link-active;
+  }
+
+  &:active {
+    color: $brand-text-link-active;
+  }
+}
+
+a,
+button {
+  cursor: pointer;
+}
+
+b,
+strong,
+dfn {
+  font-weight: $font-weight-bold;
+}
+
+mark {
+  background-color: $color-background-highlight-search;
+  color: $color-text-default;
+}
+
+abbr[title] {
+  cursor: help;
+}
+
+input[type="search"] {
+  box-sizing: border-box;
+}
+
+table {
+  width: 100%;
+}
+
+caption,
+th,
+td {
+  text-align: left;
+}
+
+hr {
+  display: block;
+  margin: $spacing-x-large 0;
+  border-top: 1px solid $color-border;
+  height: 1px;
+  clear: both;
+}
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}

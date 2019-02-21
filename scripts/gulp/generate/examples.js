@@ -51,7 +51,7 @@ export const wrapped = () =>
     .src(`${paths.generated}/examples/*.html`)
     .pipe(
       gulpInsert.wrap(
-        '<!DOCTYPE html><html lang="en"><head><title>Example</title><link type="text/css" rel="stylesheet" href="../assets/styles/index.css" /></head><body>',
+        '<!DOCTYPE html><html lang="en" class="example-html"><head><title>Example</title><link type="text/css" rel="stylesheet" href="../assets/styles/index.css" /><style type="text/css">.example-html { background: white; }</style></head><body>',
         '</body></html>'
       )
     )

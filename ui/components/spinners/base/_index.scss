@@ -43,6 +43,12 @@
   left: 50%;
   z-index: ($z-index-spinner + 1);
   transform: translate(-50%, -50%) rotate(90deg);
+
+  @include rtl() {
+    right: 50%;
+    left: unset;
+    transform: translate(50%, -50%) rotate(90deg);
+  }
 }
 
 .slds-spinner_inline {
@@ -252,15 +258,6 @@
   }
 }
 
-.slds-spinner_xx-small,
-.slds-spinner--xx-small {
-  @include rtl() {
-    left: unset;
-    right: unset;
-    transform: translateX(calc((50% * -1) - (0.5rem / 2)));
-  }
-}
-
 @keyframes dotsBounceBefore-extraExtraSmall {
 
   60% {
@@ -336,15 +333,6 @@
     top: -0.125rem;
     right: -0.125rem;
     animation-name: dotsBounceAfter-extraSmall;
-  }
-}
-
-.slds-spinner_x-small,
-.slds-spinner--x-small {
-  @include rtl() {
-    left: unset;
-    right: unset;
-    transform: translateX(calc((50% * -1) - (1rem / 2)));
   }
 }
 
@@ -426,15 +414,6 @@
   }
 }
 
-.slds-spinner_small,
-.slds-spinner--small {
-  @include rtl() {
-    left: unset;
-    right: unset;
-    transform: translateX(calc((50% * -1) - (1.25rem / 2)));
-  }
-}
-
 @keyframes dotsBounceBefore-small {
 
   60% {
@@ -513,15 +492,6 @@
   }
 }
 
-.slds-spinner_medium,
-.slds-spinner--medium {
-  @include rtl() {
-    left: unset;
-    right: unset;
-    transform: translateX(calc((50% * -1) - (2rem / 2)));
-  }
-}
-
 @keyframes dotsBounceBefore-medium {
 
   60% {
@@ -597,15 +567,6 @@
     animation-name: dotsBounceAfter-medium;
     top: -0.3125rem;
     right: -0.3125rem;
-  }
-}
-
-.slds-spinner_large,
-.slds-spinner--large {
-  @include rtl() {
-    left: unset;
-    right: unset;
-    transform: translateX(calc((50% * -1) - (2.75rem / 2)));
   }
 }
 

@@ -507,6 +507,6 @@
   @include rtl() {
     left: auto;
     right: auto;
-    transform: translateX(calc(50% - (#{$square-icon-medium-content-alt} / 2)));
+    transform: translateX(calc(50% - (0.875rem / 2)));
   }
 }

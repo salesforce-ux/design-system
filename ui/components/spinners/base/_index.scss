@@ -257,7 +257,7 @@
   @include rtl() {
     left: unset;
     right: unset;
-    transform: translateX(calc((50% * -1) - (#{$spinner-size-xx-small} / 2)));
+    transform: translateX(calc((50% * -1) - (0.5rem / 2)));
   }
 }
 
@@ -344,7 +344,7 @@
   @include rtl() {
     left: unset;
     right: unset;
-    transform: translateX(calc((50% * -1) - (#{$spinner-size-x-small} / 2)));
+    transform: translateX(calc((50% * -1) - (1rem / 2)));
   }
 }
 
@@ -431,7 +431,7 @@
   @include rtl() {
     left: unset;
     right: unset;
-    transform: translateX(calc((50% * -1) - (#{$spinner-size-small} / 2)));
+    transform: translateX(calc((50% * -1) - (1.25rem / 2)));
   }
 }
 
@@ -518,7 +518,7 @@
   @include rtl() {
     left: unset;
     right: unset;
-    transform: translateX(calc((50% * -1) - (#{$spinner-size-medium} / 2)));
+    transform: translateX(calc((50% * -1) - (2rem / 2)));
   }
 }
 
@@ -605,7 +605,7 @@
   @include rtl() {
     left: unset;
     right: unset;
-    transform: translateX(calc((50% * -1) - (#{$spinner-size-large} / 2)));
+    transform: translateX(calc((50% * -1) - (2.75rem / 2)));
   }
 }
 

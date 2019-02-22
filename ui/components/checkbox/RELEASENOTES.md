@@ -2,6 +2,11 @@
 
 # Checkbox Release Notes
 
+## 2.9.0
+
+### Fixed
+- Added @noflip annotation for correct alignment in RTL languages
+
 ## 2.8.0
 
 ### Added

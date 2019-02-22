@@ -145,5 +145,20 @@ export let states = [
         </div>
       </Fieldset>
     )
+  },
+  {
+    id: 'rtl',
+    label: 'Right to Left',
+    element: (
+      <div dir="rtl">
+        <Fieldset>
+          <Legend>Radio Group Label</Legend>
+          <FormElementControl>
+            <Radio checked label="Radio Label One" />
+            <Radio label="Radio Label Two" />
+          </FormElementControl>
+        </Fieldset>
+      </div>
+    )
   }
 ];

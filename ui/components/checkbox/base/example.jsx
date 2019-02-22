@@ -246,5 +246,16 @@ export let examples = [
         />
       </FormElement>
     )
+  },
+  {
+    id: 'rtl',
+    label: 'Right to Left',
+    element: (
+      <div dir="rtl">
+        <FormElement>
+          <Checkbox label={checkboxLabel} checked />
+        </FormElement>
+      </div>
+    )
   }
 ];

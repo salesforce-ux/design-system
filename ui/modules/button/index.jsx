@@ -14,13 +14,15 @@ class Button extends Component {
 
   renderLeftIcon() {
     if (!this.props.leftIcon) return;
-    return <span className="dsm-button__icon-left">{this.props.leftIcon}</span>;
+    return (
+      <span className="sldswc-button__icon-left">{this.props.leftIcon}</span>
+    );
   }
 
   renderRightIcon() {
     if (!this.props.RightIcon) return;
     return (
-      <span className="dsm-button__icon-right">{this.props.RightIcon}</span>
+      <span className="sldswc-button__icon-right">{this.props.RightIcon}</span>
     );
   }
 
@@ -28,16 +30,16 @@ class Button extends Component {
     const { variant, size, use, children, disabled } = this.props;
 
     const classNameList = classNames({
-      'dsm-button': variant !== 'reset',
-      'dsm-button_brand': variant === 'brand',
-      'dsm-button_brand-outline': variant === 'brand-outline',
-      'dsm-button_destructive': variant === 'destructive',
-      'dsm-button_destructive-text': variant === 'destructive-text',
-      'dsm-button_inverse': variant === 'inverse',
-      'dsm-button_neutral': variant === 'neutral',
-      'dsm-reset-button': variant === 'reset',
-      'dsm-button_success': variant === 'success',
-      'dsm-button_full-width': size === 'full-width'
+      'sldswc-button': variant !== 'reset',
+      'sldswc-button_brand': variant === 'brand',
+      'sldswc-button_brand-outline': variant === 'brand-outline',
+      'sldswc-button_destructive': variant === 'destructive',
+      'sldswc-button_destructive-text': variant === 'destructive-text',
+      'sldswc-button_inverse': variant === 'inverse',
+      'sldswc-button_neutral': variant === 'neutral',
+      'sldswc-reset-button': variant === 'reset',
+      'sldswc-button_success': variant === 'success',
+      'sldswc-button_full-width': size === 'full-width'
     });
 
     return (

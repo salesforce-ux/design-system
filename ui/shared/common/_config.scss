@@ -1,0 +1,47 @@
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/// Debug mode (uncomment to activate)
+/// Turn on to output deprecation warnings during development
+/// Note: remove when/if gulp-sass starts supporting the --quiet flag
+///
+/// @type Boolean
+// $app-debug: true;
+
+/// Image Path
+///
+/// @type String
+$static-image-path: '../../images' !default;
+
+/// Font Path
+///
+/// @type String
+$static-font-path: '../../fonts/webfonts' !default;
+
+/// Load webfonts
+///
+/// The Design System loads Salesforce webfonts using @font-face rules.
+/// Apps that already load webfonts or load webfonts using JavaScript
+/// should switch this setting off.
+///
+/// @type Boolean
+$slds-load-webfonts: true !default;
+
+/// Grid Column Support
+///
+/// @type list
+$grid-columns: (1, 2, 3, 4, 5, 6, 7, 8, 12) !default;
+
+/// Reset wrapping class
+/// Wraps a version of normalize
+///
+/// @example scss
+///  #{$reset-wrapping-class} .foo { ... } // outputs .slds .foo { ... }
+///
+/// @type String
+$reset-wrapping-class: '.slds' !default;
+
+/// Scoped boolean
+/// Indicates if out is scoped or not
+/// @type Boolean
+$scoped: false !default;

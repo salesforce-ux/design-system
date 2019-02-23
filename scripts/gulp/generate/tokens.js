@@ -21,7 +21,8 @@ let formatTransforms = _({
     'map.scss',
     'json',
     'common.js',
-    'aura.tokens'
+    'aura.tokens',
+    'custom-properties.css'
   ],
   ios: ['ios.json'],
   android: ['android.xml'],

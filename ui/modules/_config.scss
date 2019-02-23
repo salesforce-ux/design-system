@@ -1,0 +1,12 @@
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/// Version number
+/// Helps deprecating pieces of the codebase
+/// Note: update at each release
+///
+/// For internal use only
+///
+/// @type String
+/// @access private
+$app-version: '3.0.0';

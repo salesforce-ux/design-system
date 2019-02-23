@@ -1,0 +1,66 @@
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+@import '../../../shared/common/init';
+@import '../mixins/index';
+
+.sldswc-card {
+  position: relative;
+  padding: 0;
+  background: $card-color-background;
+  border: $border-width-thin solid $card-color-border;
+  border-radius: $border-radius-medium;
+  background-clip: padding-box;
+  box-shadow: $card-shadow;
+}
+
+.sldswc-card__header {
+  padding: $var-spacing-vertical-small $var-spacing-horizontal-medium 0;
+  margin: 0 0 $var-spacing-vertical-small;
+
+  header {
+    display: flex;
+  }
+}
+
+.sldswc-card__header-actions {
+  flex: none;
+}
+
+.sldswc-card__header-title {
+  @include truncate;
+  font-size: $var-font-size-5;
+  line-height: $line-height-heading;
+  font-weight: $card-font-weight;
+  flex: 1 1 0%;
+  align-self: center;
+}
+
+.sldswc-card__header-link {
+  color: $color-text-default;
+}
+
+.sldswc-card__body {
+  margin-top: $var-spacing-vertical-small;
+  margin-bottom: $var-spacing-vertical-small;
+}
+
+.sldswc-card__body:empty {
+  display: none;
+}
+
+.sldswc-card__body_inner {
+  padding: 0 $var-spacing-horizontal-medium;
+}
+
+.sldswc-card__footer {
+  padding: $var-spacing-vertical-small $var-spacing-horizontal-medium;
+  margin-top: $var-spacing-vertical-small;
+  text-align: $card-footer-text-align;
+  font-size: $font-size-3;
+  border-top: $border-width-thin solid $card-footer-color-border;
+}
+
+.sldswc-card__footer-action {
+  display: block;
+}

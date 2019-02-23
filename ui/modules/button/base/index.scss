@@ -1,17 +1,17 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-@import '../../../init';
+@import '../../../shared/common/init';
 @import '../mixins/index';
 
 /**
  * @summary This neutralizes all the base styles making it look like a text link
  * @name base
- * @selector .dsm-button
+ * @selector .sldswc-button
  * @restrict button, a
  * @variant
  */
-.dsm-button {
+.sldswc-button {
   @include button-reset;
   @include button-normalize;
 }
@@ -19,12 +19,12 @@
 /**
  * @name brand
  * @summary Creates the Salesforce brand style
- * @selector .dsm-button_brand
- * @restrict .dsm-button
+ * @selector .sldswc-button_brand
+ * @restrict .sldswc-button
  * @modifier
  * @group theme
  */
-.dsm-button_brand {
+.sldswc-button_brand {
   @include button-shape;
   background-color: $brand-accessible;
   border-color: $brand-accessible;
@@ -59,12 +59,12 @@
 /**
  * @name brand outline
  * @summary Creates the Salesforce brand button in an outline style
- * @selector .dsm-button_outline-brand
- * @restrict .dsm-button
+ * @selector .sldswc-button_outline-brand
+ * @restrict .sldswc-button
  * @modifier
  * @group theme
  */
-.dsm-button_brand-outline {
+.sldswc-button_brand-outline {
   @include button-shape;
   background-color: $button-color-background-primary;
   border-color: $brand-accessible;
@@ -89,12 +89,12 @@
 /**
  * @name destructive
  * @summary Creates the destructive button style
- * @selector .dsm-button_destructive
- * @restrict .dsm-button
+ * @selector .sldswc-button_destructive
+ * @restrict .sldswc-button
  * @modifier
  * @group theme
  */
-.dsm-button_destructive {
+.sldswc-button_destructive {
   @include button-shape;
   background-color: $color-background-destructive;
   border-color: $color-background-destructive;
@@ -128,12 +128,12 @@
 /**
  * @name destructive text
  * @summary Creates the destructive text button style
- * @selector .dsm-button_destructive-text
- * @restrict .dsm-button
+ * @selector .sldswc-button_destructive-text
+ * @restrict .sldswc-button
  * @modifier
  * @group theme
  */
-.dsm-button_destructive-text {
+.sldswc-button_destructive-text {
   @include button-shape;
   border-color: $button-color-border-primary;
   background-color: $button-color-background-primary;
@@ -159,12 +159,12 @@
 /**
  * @name inverse
  * @summary Creates the inverse button style
- * @selector .dsm-button_inverse
- * @restrict .dsm-button
+ * @selector .sldswc-button_inverse
+ * @restrict .sldswc-button
  * @modifier
  * @group theme
  */
-.dsm-button_inverse {
+.sldswc-button_inverse {
   @include button-shape;
   background-color: $color-background-button-inverse;
   border-color: $button-color-border-primary;
@@ -198,12 +198,12 @@
 /**
  * @name success
  * @summary Creates the success button style
- * @selector .dsm-button_success
- * @restrict .dsm-button
+ * @selector .sldswc-button_success
+ * @restrict .sldswc-button
  * @modifier
  * @group theme
  */
-.dsm-button_success {
+.sldswc-button_success {
   @include button-shape;
   background-color: $color-background-button-success;
   border-color: $color-border-success;
@@ -238,12 +238,12 @@
 /**
  * @name neutral
  * @summary Creates the gray border with white background default style
- * @selector .dsm-button_neutral
- * @restrict .dsm-button
+ * @selector .sldswc-button_neutral
+ * @restrict .sldswc-button
  * @modifier
  * @group theme
  */
-.dsm-button_neutral {
+.sldswc-button_neutral {
   @include button-shape;
   border-color: $button-color-border-primary;
   background-color: $button-color-background-primary;
@@ -267,31 +267,31 @@
 /**
  * @name full width
  * @summary Creates the full width button style
- * @selector .dsm-button_full-width
- * @restrict .dsm-button
+ * @selector .sldswc-button_full-width
+ * @restrict .sldswc-button
  * @modifier
  * @group size
  */
-.dsm-button_full-width {
+.sldswc-button_full-width {
   width: 100%;
 }
 
 /**
  * @name icon left
  * @summary Creates space to the right of an icon when used to wrap an icon component as a child of a button
- * @selector .dsm-button_icon-left
- * @restrict .dsm-button span
+ * @selector .sldswc-button_icon-left
+ * @restrict .sldswc-button span
  */
-.dsm-button__icon-left {
+.sldswc-button__icon-left {
   margin-right: $spacing-x-small;
 }
 
 /**
  * @name icon right
  * @summary Creates space to the left of an icon when used to wrap an icon component as a child of a button
- * @selector .dsm-button_icon-right
- * @restrict .dsm-button span
+ * @selector .sldswc-button_icon-right
+ * @restrict .sldswc-button span
  */
-.dsm-button__icon-right {
+.sldswc-button__icon-right {
   margin-left: $spacing-x-small;
 }

@@ -11,7 +11,6 @@ import gulpPostcss from 'gulp-postcss';
 import gulpRename from 'gulp-rename';
 import gulpSass from 'gulp-sass';
 import gulpFile from 'gulp-file';
-import gulpFlatten from 'gulp-flatten';
 import gulpStripCssComments from 'gulp-strip-css-comments';
 import gulpTap from 'gulp-tap';
 import Immutable from 'immutable';

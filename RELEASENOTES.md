@@ -26,6 +26,8 @@
 - Added `slds-path__trigger-region-small` to create a full width coaching toggle in small regions
 #### Changed
 - Padding has been removed from `slds-path__track` to fix display issues when the Path is nested inside of a Card; of which is it's default state.
+## Fixed
+- Flipped chevrons for RTL languages
 
 ## Release 2.8.3 - February 22, 2019
 

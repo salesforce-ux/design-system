@@ -97,6 +97,8 @@
         width: $square-icon-x-small-content;
         position: absolute;
         top: 50%;
+        /* stylelint-disable comment-empty-line-before */
+        /*! @noflip */
         left: 50%;
         transform: translate3d(-50%, -50%, 0) rotate(-45deg);
         border-bottom: $border-width-thick solid $brand-accessible;
@@ -138,6 +140,7 @@
       display: block;
       position: absolute;
       top: 50%;
+      /*! @noflip */
       left: 50%;
       width: $square-icon-x-small-content;
       height: 2px;

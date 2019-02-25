@@ -7,11 +7,21 @@ global:
 props:
   CUSTOM_SPRITE:
     value: '/assets/icons/custom-sprite/svg/symbols.svg'
+  CUSTOM_SPRITE_RTL:
+    value: '/assets/icons/custom-sprite/svg/symbols.svg'
   DOCTYPE_SPRITE:
+    value: '/assets/icons/doctype-sprite/svg/symbols.svg'
+  DOCTYPE_SPRITE_RTL:
     value: '/assets/icons/doctype-sprite/svg/symbols.svg'
   STANDARD_SPRITE:
     value: '/assets/icons/standard-sprite/svg/symbols.svg'
+  STANDARD_SPRITE_RTL:
+    value: '/assets/icons/standard-sprite/svg/symbols.svg'
   ACTION_SPRITE:
     value: '/assets/icons/action-sprite/svg/symbols.svg'
+  ACTION_SPRITE_RTL:
+    value: '/assets/icons/action-sprite/svg/symbols.svg'
   UTILITY_SPRITE:
+    value: '/assets/icons/utility-sprite/svg/symbols.svg'
+  UTILITY_SPRITE_RTL:
     value: '/assets/icons/utility-sprite/svg/symbols.svg'

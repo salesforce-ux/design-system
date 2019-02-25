@@ -102,6 +102,7 @@
         left: 50%;
         transform: translate3d(-50%, -50%, 0) rotate(-45deg);
         border-bottom: $border-width-thick solid $brand-accessible;
+        /*! @noflip */
         border-left: $border-width-thick solid $brand-accessible;
       }
     }

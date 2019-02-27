@@ -1,13 +1,18 @@
 import React, { Component } from 'react';
+import ShadowDOM from 'react-shadow';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import uniqueId from 'lodash.uniqueid';
 
-import '../common/index.scss';
-import './base/index.scss';
+// import '../common/index.scss';
+// import './base/index.scss';
+
+import common from '../compiled/common/index.css';
+
+// console.log({common});
 
 export const CardHeader = props => {
-  const { title, href, symbol, hasActions, actions } = props;
+  const { title, href, iconName, hasActions, actions } = props;
 
   return (
     <div className="sldswc-card__header">
@@ -36,51 +41,34 @@ CardHeader.defaultProps = {
 CardHeader.propTypes = {
   title: PropTypes.string,
   href: PropTypes.string,
-  symbol: PropTypes.string,
+  iconName: PropTypes.string,
   hasActions: PropTypes.bool,
   actions: PropTypes.node
 };
 
 export const CardBody = props => {
-  const { children, hasPadding } = props;
+  const { children, hasFullBleed } = props;
   const computedClassNames = classNames(
     'sldswc-card__body',
-    hasPadding && 'sldswc-card__body_inner'
+    hasFullBleed && 'sldswc-card__body_full-bleed'
   );
 
   return <div className={computedClassNames}>{children}</div>;
 };
 
-CardBody.defaultProps = {
-  hasPadding: true
-};
-
 CardBody.propTypes = {
   children: PropTypes.node,
-  hasPadding: PropTypes.bool
+  hasFullBleed: PropTypes.bool
 };
 
 export const CardFooter = props => {
-  const { children, linkTabIndex } = props;
+  const { children } = props;
 
-  return (
-    <footer className="sldswc-card__footer">
-      {children && (
-        <a
-          className="sldswc-card__footer-action"
-          href="javascript:void(0);"
-          tabIndex={linkTabIndex}
-        >
-          {children}
-        </a>
-      )}
-    </footer>
-  );
+  return <footer className="sldswc-card__footer">{children}</footer>;
 };
 
 CardFooter.propTypes = {
-  children: PropTypes.node,
-  linkTabIndex: PropTypes.number
+  children: PropTypes.node
 };
 
 class Card extends Component {
@@ -92,14 +80,14 @@ class Card extends Component {
   }
 
   renderHeader() {
-    const { title, href, symbol, hasActions, actions } = this.props;
+    const { title, titleHref, iconName, hasActions, actions } = this.props;
     if (!this.props.title) return;
     return (
       <CardHeader
         title={title}
-        href={href}
-        symbol={symbol}
-        hasActions={hasActions}
+        href={titleHref}
+        iconName={iconName}
+        hasActions={actions}
         actions={actions}
         key={uniqueId('cardheader-')}
       />
@@ -107,58 +95,65 @@ class Card extends Component {
   }
 
   renderBody() {
-    const { children, bodyHasPadding } = this.props;
+    const { children, hasFullBleed } = this.props;
     if (!this.props.children) return;
-
     return (
-      <CardBody hasPadding={bodyHasPadding} key={uniqueId('cardbody-')}>
+      <CardBody hasFullBleed={hasFullBleed} key={uniqueId('cardbody-')}>
         {children}
       </CardBody>
     );
   }
 
   renderFooter() {
-    const { footer, footerLinkTabIndex } = this.props;
+    const { footer } = this.props;
     if (!this.props.footer) return;
 
-    return (
-      <CardFooter
-        linkTabIndex={footerLinkTabIndex}
-        key={uniqueId('cardfooter-')}
-      >
-        {footer}
-      </CardFooter>
-    );
+    return <CardFooter key={uniqueId('cardfooter-')}>{footer}</CardFooter>;
   }
 
   render() {
-    const { custom, children, hasCardBoundary } = this.props;
+    const { custom, children, hasBoundary, isBare } = this.props;
     const computedClassNames = classNames(
       'sldswc-card',
-      hasCardBoundary && 'sldswc-card_boundary'
+      hasBoundary && 'sldswc-card_boundary',
+      isBare && 'sldswc-card_bare'
     );
     return (
-      <article className={computedClassNames}>
-        {!custom
-          ? [this.renderHeader(), this.renderBody(), this.renderFooter()]
-          : children}
-      </article>
+      <ShadowDOM include={[common, 'ui/modules/compiled/card/base/index.css']}>
+        <lightning-card>
+          <article className={computedClassNames}>
+            {!custom
+              ? [this.renderHeader(), this.renderBody(), this.renderFooter()]
+              : children}
+          </article>
+        </lightning-card>
+      </ShadowDOM>
     );
   }
 }
 
+Card.defaultProps = {
+  footer: (
+    <a className="sldswc-card__footer-action" href="javascript:void(0);">
+      View All
+    </a>
+  )
+};
+
 Card.propTypes = {
   custom: PropTypes.bool,
-  title: PropTypes.string,
-  href: PropTypes.string,
-  symbol: PropTypes.string,
-  hasActions: PropTypes.bool,
+  // Slots
   actions: PropTypes.node,
   children: PropTypes.node,
-  bodyHasPadding: PropTypes.bool,
-  hasCardBoundary: PropTypes.bool,
   footer: PropTypes.node,
-  footerLinkTabIndex: PropTypes.number
+  // Properties
+  title: PropTypes.string,
+  titleHref: PropTypes.string,
+  iconName: PropTypes.string,
+  hasActions: PropTypes.bool,
+  hasFullBleed: PropTypes.bool,
+  hasBoundary: PropTypes.bool,
+  isBare: PropTypes.bool
 };
 
 export default Card;

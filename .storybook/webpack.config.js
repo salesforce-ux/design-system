@@ -4,7 +4,7 @@ const visit = require('unist-util-visit');
 module.exports = (baseConfig, env, defaultConfig) => {
   defaultConfig.module.rules.push(
     {
-      test: /\.scss$/,
+      test: /\.(scss|css)$/,
       include: [
         path.resolve(__dirname, '../ui'),
         path.resolve(__dirname, '../.storybook'),

@@ -80,6 +80,24 @@ export const sass = () =>
     .pipe(gulpSourcemaps.write('.'))
     .pipe(gulp.dest('assets/styles'));
 
+export const componentSass = () =>
+  gulp
+    .src('ui/modules/**/index.scss')
+    .pipe(gulpPlumber())
+    .pipe(gulpSourcemaps.init())
+    .pipe(
+      gulpSass
+        .sync({
+          precision: 10,
+          includePaths: [paths.ui, paths.node_modules]
+        })
+        .on('error', gulpSass.logError)
+    )
+    .pipe(gulpAutoprefixer({ remove: false }))
+    .pipe(gulpMinifycss({ advanced: false, roundingPrecision: '-1' }))
+    // .pipe(gulpSourcemaps.write('.'))
+    .pipe(gulp.dest('ui/modules/compiled/'));
+
 // Quick check that all variants compile correctly to CSS
 export const sassTest = () =>
   gulp

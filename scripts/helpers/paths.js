@@ -11,7 +11,7 @@ const rootPath = path.resolve.bind(path, root);
 const node_modules = rootPath('node_modules');
 
 const watchPaths = {
-  css: [rootPath('assets/**/*.css')],
+  css: [rootPath('assets/**/*.css'), rootPath('ui/**/*.css')],
   sass: [rootPath('ui/**/*.scss'), rootPath('design-tokens/*.yml')],
   js: [
     rootPath('app_modules/**/*.{js,jsx}'),

@@ -12,6 +12,11 @@ class Button extends Component {
     this.renderRightIcon = this.renderRightIcon.bind(this);
   }
 
+  componentDidMount() {
+    // this.sadButton.focus();
+    // this.sadButton.addEventListener('click', () => (this.sadButton.disabled = true));
+  }
+
   renderLeftIcon() {
     if (!this.props.leftIcon) return;
     return (
@@ -37,7 +42,6 @@ class Button extends Component {
       'sldswc-button_destructive-text': variant === 'destructive-text',
       'sldswc-button_inverse': variant === 'inverse',
       'sldswc-button_neutral': variant === 'neutral',
-      'sldswc-reset-button': variant === 'reset',
       'sldswc-button_success': variant === 'success',
       'sldswc-button_full-width': size === 'full-width'
     });
@@ -51,7 +55,11 @@ class Button extends Component {
             {this.renderRightIcon()}
           </a>
         ) : (
-          <button className={classNameList} disabled={disabled}>
+          <button
+            className={classNameList}
+            disabled={disabled}
+            ref={el => (this.sadButton = el)}
+          >
             {this.renderLeftIcon()}
             {children}
             {this.renderRightIcon()}
@@ -63,10 +71,12 @@ class Button extends Component {
 }
 
 Button.propTypes = {
+  // Slots
   children: PropTypes.node,
-  disabled: PropTypes.bool,
   leftIcon: PropTypes.node,
   rightIcon: PropTypes.node,
+  // Attributes
+  disabled: PropTypes.bool,
   size: PropTypes.oneOf(['full-width']),
   use: PropTypes.oneOf(['a', 'button']),
   variant: PropTypes.oneOf([

@@ -4,6 +4,14 @@
 @import '../../../shared/common/init';
 @import '../mixins/index';
 
+/**
+ * @summary Initializes card
+ * @name base
+ * @selector .sldswc-card
+ * @restrict article, div, section
+ * @support dev-ready
+ * @variant
+ */
 .sldswc-card {
   position: relative;
   padding: 0;
@@ -14,6 +22,11 @@
   box-shadow: $card-shadow;
 }
 
+/**
+ * @summary Initializes card header
+ * @selector .sldswc-card__header
+ * @restrict .sldswc-card div
+ */
 .sldswc-card__header {
   padding: $var-spacing-vertical-small $var-spacing-horizontal-medium 0;
   margin: 0 0 $var-spacing-vertical-small;
@@ -23,36 +36,69 @@
   }
 }
 
+/**
+ * @summary Parent container of actions slot
+ * @selector .sldswc-card__header-actions
+ * @restrict .sldswc-card__header div
+ */
 .sldswc-card__header-actions {
   flex: none;
 }
 
+/**
+ * @summary Title element within card header
+ * @selector .sldswc-card__header-title
+ * @restrict .sldswc-card__header h2
+ */
 .sldswc-card__header-title {
   @include truncate;
   font-size: $var-font-size-5;
-  line-height: $line-height-heading;
+  line-height: 2rem;
   font-weight: $card-font-weight;
   flex: 1 1 0%;
   align-self: center;
 }
 
+/**
+ * @summary Actionable element within the card header title
+ * @selector .sldswc-card__header-link
+ * @restrict .sldswc-card__header-title a
+ */
 .sldswc-card__header-link {
   color: $color-text-default;
 }
 
+/**
+ * @summary Initializes card body
+ * @selector .sldswc-card__body
+ * @restrict .sldswc-card div
+ */
 .sldswc-card__body {
   margin-top: $var-spacing-vertical-small;
   margin-bottom: $var-spacing-vertical-small;
+  padding: 0 $var-spacing-horizontal-medium;
 }
 
 .sldswc-card__body:empty {
   display: none;
 }
 
-.sldswc-card__body_inner {
-  padding: 0 $var-spacing-horizontal-medium;
+/**
+ * @name full-bleed
+ * @summary Sets card body to have content bleed to edges
+ * @selector .sldswc-card__body_full-bleed
+ * @restrict .sldswc-card__body
+ * @modifier
+ */
+.sldswc-card__body_full-bleed {
+  padding: 0;
 }
 
+/**
+ * @summary Initializes card footer
+ * @selector .sldswc-card__footer
+ * @restrict .sldswc-card footer
+ */
 .sldswc-card__footer {
   padding: $var-spacing-vertical-small $var-spacing-horizontal-medium;
   margin-top: $var-spacing-vertical-small;
@@ -61,6 +107,35 @@
   border-top: $border-width-thin solid $card-footer-color-border;
 }
 
+/**
+ * @summary Link in card footer
+ * @selector .sldswc-card__footer-action
+ * @restrict .sldswc-card footer a
+ */
 .sldswc-card__footer-action {
   display: block;
+}
+
+/**
+ * @name bare-card
+ * @summary Sets card to not have borders or box-shadow
+ * @selector .sldswc-card_bare
+ * @restrict .sldswc-card
+ * @modifier
+ */
+.sldswc-card_bare {
+  border: 0;
+  box-shadow: none;
+}
+
+/**
+ * @name border-boundary
+ * @summary Sets card to not have box-shadow but a border
+ * @selector .sldswc-card_boundary
+ * @restrict .sldswc-card
+ * @modifier
+ */
+.sldswc-card_boundary {
+  border: $border-width-thin solid $card-color-border;
+  box-shadow: none;
 }

@@ -91,7 +91,6 @@
     "gulp-eslint": "5.0.0",
     "gulp-file": "0.4.0",
     "gulp-filter": "5.0.0",
-    "gulp-flatten": "0.4.0",
     "gulp-htmlhint": "0.3.1",
     "gulp-if": "2.0.2",
     "gulp-ignore": "2.0.2",
@@ -235,5 +234,8 @@
     "cjs": true,
     "esm": "js"
   },
-  "dependencies": {}
+  "dependencies": {
+    "@webcomponents/webcomponentsjs": "^2.2.7",
+    "react-shadow": "^16.3.2"
+  }
 }

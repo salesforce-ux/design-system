@@ -60,7 +60,7 @@
     "classnames": "2.2.5",
     "colors": "1.1.2",
     "conventional-changelog": "1.1.4",
-    "css-loader": "1.0.1",
+    "css-loader": "2.1.0",
     "cssstats": "3.0.0",
     "data.either": "1.5.0",
     "del": "2.2.2",
@@ -152,6 +152,7 @@
     "raw-loader": "0.5.1",
     "react": "16.6.3",
     "react-dom": "16.6.3",
+    "react-shadow": "16.3.2",
     "react-test-renderer": "16.4.1",
     "resolve-url-loader": "3.0.0",
     "rimraf": "2.6.1",
@@ -161,7 +162,7 @@
     "semver": "5.5.1",
     "simple-git": "1.107.0",
     "strip-indent": "2.0.0",
-    "style-loader": "0.19.0",
+    "style-loader": "0.23.1",
     "stylelint": "7.10.1",
     "stylelint-config-slds": "1.0.7",
     "stylestats": "7.0.1",
@@ -171,6 +172,7 @@
     "touch": "3.1.0",
     "vinyl": "2.1.0",
     "vnu-jar": "17.11.1",
+    "web-component-refs": "0.0.4",
     "webpack": "4.26.0",
     "webpack-cli": "2.0.9",
     "yargs": "8.0.1"
@@ -205,6 +207,7 @@
     "compile-token-component-map": "npm run gulp -- generate:tokenComponentMap",
     "releasenotes": "node ./scripts/release-notes/index.js",
     "storybook": "npm run build && start-storybook -s ./.dist -p 9001 -c .storybook",
+    "storybook-build": "build-storybook -c .storybook -o .out",
     "release-notes:compile": "node ./scripts/release-notes/index.js",
     "release-notes:hook": "node ./scripts/release-notes/hook.js"
   },
@@ -233,9 +236,5 @@
   "@std/esm": {
     "cjs": true,
     "esm": "js"
-  },
-  "dependencies": {
-    "@webcomponents/webcomponentsjs": "^2.2.7",
-    "react-shadow": "^16.3.2"
   }
 }

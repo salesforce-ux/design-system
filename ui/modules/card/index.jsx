@@ -1,15 +1,17 @@
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
 import React, { Component } from 'react';
-import ShadowDOM from 'react-shadow';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import uniqueId from 'lodash.uniqueid';
+import Shadow from '../../shared/shadow';
 
-// import '../common/index.scss';
-// import './base/index.scss';
+import '../common/index.scss';
+import './base/index.scss';
 
-import common from '../compiled/common/index.css';
-
-// console.log({common});
+import common from '!!raw-loader!../compiled/common/index.css';
+import card from '!!raw-loader!../compiled/card/base/index.css';
 
 export const CardHeader = props => {
   const { title, href, iconName, hasActions, actions } = props;
@@ -27,7 +29,9 @@ export const CardHeader = props => {
           )}
         </h2>
         {hasActions && (
-          <div className="sldswc-card__header-actions">{actions}</div>
+          <div className="sldswc-card__header-actions">
+            <slot name="actions">{actions}</slot>
+          </div>
         )}
       </header>
     </div>
@@ -42,8 +46,8 @@ CardHeader.propTypes = {
   title: PropTypes.string,
   href: PropTypes.string,
   iconName: PropTypes.string,
-  hasActions: PropTypes.bool,
-  actions: PropTypes.node
+  actions: PropTypes.node,
+  hasActions: PropTypes.bool
 };
 
 export const CardBody = props => {
@@ -80,16 +84,17 @@ class Card extends Component {
   }
 
   renderHeader() {
-    const { title, titleHref, iconName, hasActions, actions } = this.props;
+    const { title, titleHref, iconName, actions, hasActions } = this.props;
     if (!this.props.title) return;
+
     return (
       <CardHeader
         title={title}
         href={titleHref}
         iconName={iconName}
-        hasActions={actions}
+        hasActions={hasActions}
         actions={actions}
-        key={uniqueId('cardheader-')}
+        key={uniqueId('card-header-')}
       />
     );
   }
@@ -97,8 +102,9 @@ class Card extends Component {
   renderBody() {
     const { children, hasFullBleed } = this.props;
     if (!this.props.children) return;
+
     return (
-      <CardBody hasFullBleed={hasFullBleed} key={uniqueId('cardbody-')}>
+      <CardBody hasFullBleed={hasFullBleed} key={uniqueId('card-body-')}>
         {children}
       </CardBody>
     );
@@ -108,7 +114,11 @@ class Card extends Component {
     const { footer } = this.props;
     if (!this.props.footer) return;
 
-    return <CardFooter key={uniqueId('cardfooter-')}>{footer}</CardFooter>;
+    return (
+      <CardFooter key={uniqueId('card-footer-')}>
+        <slot name="footer">{footer}</slot>
+      </CardFooter>
+    );
   }
 
   render() {
@@ -118,16 +128,15 @@ class Card extends Component {
       hasBoundary && 'sldswc-card_boundary',
       isBare && 'sldswc-card_bare'
     );
+
     return (
-      <ShadowDOM include={[common, 'ui/modules/compiled/card/base/index.css']}>
-        <lightning-card>
-          <article className={computedClassNames}>
-            {!custom
-              ? [this.renderHeader(), this.renderBody(), this.renderFooter()]
-              : children}
-          </article>
-        </lightning-card>
-      </ShadowDOM>
+      <Shadow name="card" includes={[common, card]} shadow={this.props.shadow}>
+        <article className={computedClassNames}>
+          {!custom
+            ? [this.renderHeader(), this.renderBody(), this.renderFooter()]
+            : children}
+        </article>
+      </Shadow>
     );
   }
 }
@@ -153,7 +162,8 @@ Card.propTypes = {
   hasActions: PropTypes.bool,
   hasFullBleed: PropTypes.bool,
   hasBoundary: PropTypes.bool,
-  isBare: PropTypes.bool
+  isBare: PropTypes.bool,
+  shadow: PropTypes.bool
 };
 
 export default Card;

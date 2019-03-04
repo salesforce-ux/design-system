@@ -1,5 +1,6 @@
 import React from 'react';
 import Button from '../';
+import ShadowExample from '../../../shared/shadow/example';
 
 const ButtonExample = () => <Button>Button</Button>;
 

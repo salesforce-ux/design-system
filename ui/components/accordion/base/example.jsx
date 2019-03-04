@@ -61,7 +61,7 @@ export let AccordionSection = props => (
   </li>
 );
 
-export default (
+const AccordionExample = () => (
   <Accordion>
     <AccordionSection
       summary="Accordion summary"
@@ -86,6 +86,8 @@ export default (
     </AccordionSection>
   </Accordion>
 );
+
+export default AccordionExample;
 
 export let states = [
   {

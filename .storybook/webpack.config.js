@@ -4,7 +4,7 @@ const visit = require('unist-util-visit');
 module.exports = (baseConfig, env, defaultConfig) => {
   defaultConfig.module.rules.push(
     {
-      test: /\.(scss|css)$/,
+      test: /\.scss$/,
       include: [
         path.resolve(__dirname, '../ui'),
         path.resolve(__dirname, '../.storybook'),
@@ -40,6 +40,18 @@ module.exports = (baseConfig, env, defaultConfig) => {
             files: [path.resolve(__dirname, './scss/framework/config.scss')]
           }
         }
+      ]
+    },
+    {
+      test: /\.css$/,
+      include: path.resolve(__dirname, '../ui'),
+      use: [
+        'raw-loader'
+        // {
+        //   loader: "css-loader",
+        //   options: { importLoaders: 1 }
+        // },
+        // 'postcss-loader'
       ]
     },
     {

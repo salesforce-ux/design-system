@@ -35,12 +35,7 @@ module.exports = I.fromJS({
       },
       {
         test: /\.scss$/,
-        loaders: ['style-loader', 'raw-loader', 'css-loader', 'sass-loader']
-      },
-      {
-        test: /\.css$/,
-        loaders: ['style-loader', 'raw-loader', 'css-loader'],
-        include: paths.watch.css
+        loaders: ['style-loader', 'raw-loader', 'sass-loader']
       },
       {
         test: /\.mdx$/,

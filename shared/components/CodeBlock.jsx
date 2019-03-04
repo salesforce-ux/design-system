@@ -5,6 +5,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import ReactDOM from 'react-dom/server.browser';
 import { beautify } from '../utils/beautify';
+import { mapElement } from '../utils/react';
 import classNames from 'classnames';
 import Copy from './Copy';
 import Prism from '../vendor/prism';
@@ -41,15 +42,12 @@ class CodeBlock extends Component {
 
   getCode() {
     const { children } = this.props;
-    try {
-      React.Children.only(children);
-    } catch (error) {
-      throw new Error(
-        'We expected exactly one child in CodeView, you passed in 0 or many children'
-      );
-    }
-    const code = children ? ReactDOM.renderToStaticMarkup(children) : '';
-    return beautify(code);
+    const element = mapElement(children, (child, index) => {
+      return React.cloneElement(child, {
+        shadow: typeof child.type === 'function' ? false : undefined
+      });
+    });
+    return beautify(element ? ReactDOM.renderToStaticMarkup(element) : '');
   }
 
   getHighlightedCode() {

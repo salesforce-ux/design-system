@@ -1,20 +1,19 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import Shadow from '../../shared/shadow';
 
 import '../common/index.scss';
 import './base/index.scss';
+
+import common from '!!raw-loader!../compiled/common/index.css';
+import button from '!!raw-loader!../compiled/button/base/index.css';
 
 class Button extends Component {
   constructor() {
     super();
     this.renderLeftIcon = this.renderLeftIcon.bind(this);
     this.renderRightIcon = this.renderRightIcon.bind(this);
-  }
-
-  componentDidMount() {
-    // this.sadButton.focus();
-    // this.sadButton.addEventListener('click', () => (this.sadButton.disabled = true));
   }
 
   renderLeftIcon() {
@@ -47,25 +46,31 @@ class Button extends Component {
     });
 
     return (
-      <React.Fragment>
-        {use === 'a' ? (
-          <a className={classNameList} href="javascript:void(0);">
-            {this.renderLeftIcon()}
-            {children}
-            {this.renderRightIcon()}
-          </a>
-        ) : (
-          <button
-            className={classNameList}
-            disabled={disabled}
-            ref={el => (this.sadButton = el)}
-          >
-            {this.renderLeftIcon()}
-            {children}
-            {this.renderRightIcon()}
-          </button>
-        )}
-      </React.Fragment>
+      <Shadow
+        name="button"
+        includes={[common, button]}
+        shadow={this.props.shadow}
+      >
+        <React.Fragment>
+          {use === 'a' ? (
+            <a className={classNameList} href="javascript:void(0);">
+              {this.renderLeftIcon()}
+              {children}
+              {this.renderRightIcon()}
+            </a>
+          ) : (
+            <button
+              className={classNameList}
+              disabled={disabled}
+              ref={el => (this.sadButton = el)}
+            >
+              {this.renderLeftIcon()}
+              {children}
+              {this.renderRightIcon()}
+            </button>
+          )}
+        </React.Fragment>
+      </Shadow>
     );
   }
 }
@@ -88,7 +93,8 @@ Button.propTypes = {
     'neutral',
     'reset',
     'success'
-  ])
+  ]),
+  shadow: PropTypes.bool
 };
 
 Button.defaultProps = {

@@ -3,7 +3,7 @@
 const r = require.context(
   '../../ui',
   true,
-  /(components|utilities).*?(example\.jsx|docs\.mdx)$/
+  /(components|utilities|modules).*?(example\.jsx|docs\.mdx)$/
 );
 
 const I = require('immutable');

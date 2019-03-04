@@ -1,6 +1,7 @@
 import React from 'react';
 import Card, { CardHeader, CardBody, CardFooter } from '../';
 import Button from '../../button';
+import ShadowExample from '../../../shared/shadow/example';
 
 const CardExample = () => (
   <Card title="Card Title" href="javascript:void(0);">
@@ -28,13 +29,15 @@ export const examples = [
     id: 'with-actions',
     label: 'With Header Actions',
     element: (
-      <Card
-        title="Card Title"
-        hasActions
-        actions={<Button variant="neutral">New</Button>}
-      >
-        Card Body
-      </Card>
+      <ShadowExample hasShadowToggle>
+        <Card
+          title="Card Title"
+          hasActions
+          actions={<Button variant="neutral">New</Button>}
+        >
+          Card Body
+        </Card>
+      </ShadowExample>
     )
   },
   {
@@ -108,11 +111,7 @@ export const customElements = [
     element: (
       <lightning-card>
         #shadow-root
-        <Card
-          title="Card Title"
-          footer={<slot name="footer" />}
-          actions={<slot name="actions" />}
-        >
+        <Card title="Card Title" hasActions shadow={false}>
           <slot />
         </Card>
       </lightning-card>

@@ -1,8 +1,8 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import ComponentExample, {
-  examples as ComponentExamples,
-  states as ComponentStates
+import AccordionExample, {
+  examples as AccordionExamples,
+  states as AccordionStates
 } from './example';
 import { getDisplayElementById } from '../../../shared/helpers';
 
@@ -10,17 +10,17 @@ import '../../../index.scss';
 
 const stories = storiesOf('Components/Accordion/Base', module).add(
   'Base',
-  () => ComponentExample
+  () => <AccordionExample />
 );
 
-ComponentExamples.forEach(example => {
+AccordionExamples.forEach(example => {
   stories.add(example.label, () =>
-    getDisplayElementById(ComponentExamples, example.id)
+    getDisplayElementById(AccordionExamples, example.id)
   );
 });
 
-ComponentStates.forEach(example => {
+AccordionStates.forEach(example => {
   stories.add(example.label, () =>
-    getDisplayElementById(ComponentStates, example.id)
+    getDisplayElementById(AccordionStates, example.id)
   );
 });

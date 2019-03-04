@@ -473,6 +473,17 @@
       right: rem(10px);
     }
   }
+
+  @include rtl() {
+
+    &:before {
+      transform: skew(-30deg) translate3d(0, 0, 0);
+    }
+
+    &:after {
+      transform: skew(28deg) translate3d(0, 0, 0);
+    }
+  }
 }
 
 

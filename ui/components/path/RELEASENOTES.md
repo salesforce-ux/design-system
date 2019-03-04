@@ -13,6 +13,10 @@
 
 - Padding has been removed from `slds-path__track` to fix display issues when the Path is nested inside of a Card; of which is it's default state.
 
+## Fixed
+
+- Flipped chevrons for RTL languages
+
 ## 2.8.0
 
 ### Changed

@@ -4,4 +4,7 @@
 
 <!-- ## [Unreleased] -->
 
-<!-- ## [VERSION] -->
+## 2.8.4
+
+### Fixed
+- Adjusted pseudo elements to allow click events to pass through

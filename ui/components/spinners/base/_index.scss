@@ -40,15 +40,11 @@
 .slds-spinner {
   position: absolute;
   top: 50%;
+
+  /*! @noflip */
   left: 50%;
   z-index: ($z-index-spinner + 1);
   transform: translate(-50%, -50%) rotate(90deg);
-
-  @include rtl() {
-    right: 50%;
-    left: unset;
-    transform: translate(50%, -50%) rotate(90deg);
-  }
 }
 
 .slds-spinner_inline {

@@ -30,7 +30,10 @@ const designTokenSets = [
   'form-factor-large',
   'form-factor-medium',
   'form-factor-small',
-  'theme-one-salesforce'
+  'theme-one-salesforce',
+  'bg-actions',
+  'bg-custom',
+  'bg-standard'
 ];
 
 const getTokenNames = _.memoize(jsonDir =>

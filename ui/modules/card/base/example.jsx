@@ -101,19 +101,4 @@ export const examples = [
   }
 ];
 
-// export const customElements = [
-//   {
-//     id: 'custom-element',
-//     label: 'custom-element',
-//     element: (
-//       <lightning-card>
-//         #shadow-root
-//         <Card title="Card Title" hasActions shadow={false}>
-//           <slot />
-//         </Card>
-//       </lightning-card>
-//     )
-//   }
-// ];
-
 export default CardExample;

@@ -3,6 +3,7 @@ import CodeBlock from '../../../shared/components/CodeBlock';
 import Blockquote from '../../../shared/components/Blockquote';
 import * as CardExamples from './base/example';
 import Card, { CardHeader, CardBody, CardFooter } from './';
+import Button from '../button';
 import { getDisplayElementById } from '../../shared/helpers';
 
 <div className="doc lead">
@@ -26,6 +27,15 @@ A card is made up of 3 sections, a header, a body, and a footer. The header and 
 ## Custom Elements and Shadow Boundaries
 
 The Card component should only have one shadow boundary that contains the header, the body, and the footer. The body should have an open `slot` for children components.
+
+<CodeBlock toggleCode={false}>
+  <lightning-card>
+  #shadow-root
+    <Card title="Card Title" hasActions shadow={false}>
+      <slot />
+    </Card>
+  </lightning-card>
+</CodeBlock>
 
 ## Implementation Guidelines
 

@@ -10,7 +10,7 @@ class ModeToggle extends Component {
     return (
       <ShadowContext.Consumer>
         {({ shadow, setShadowMode }) => (
-          <div>
+          <div style={{ padding: '1rem' }}>
             <input
               type="checkbox"
               id="shadow-toggle"

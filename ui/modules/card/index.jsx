@@ -10,11 +10,11 @@ import Shadow from '../../shared/shadow';
 import '../common/index.scss';
 import './base/index.scss';
 
-import common from '!!raw-loader!../compiled/common/index.css';
-import card from '!!raw-loader!../compiled/card/base/index.css';
+import common from '!!css-loader!../common/index.css'; // eslint-disable-line import/no-webpack-loader-syntax
+import card from '!!css-loader!./base/index.css'; // eslint-disable-line import/no-webpack-loader-syntax
 
 export const CardHeader = props => {
-  const { title, href, iconName, hasActions, actions } = props;
+  const { title, href, hasActions, actions } = props;
 
   return (
     <div className="sldswc-card__header">
@@ -45,7 +45,6 @@ CardHeader.defaultProps = {
 CardHeader.propTypes = {
   title: PropTypes.string,
   href: PropTypes.string,
-  iconName: PropTypes.string,
   actions: PropTypes.node,
   hasActions: PropTypes.bool
 };

@@ -35,7 +35,7 @@ module.exports = I.fromJS({
       },
       {
         test: /\.scss$/,
-        loaders: ['style-loader', 'raw-loader', 'sass-loader']
+        loaders: ['style-loader', 'sass-loader']
       },
       {
         test: /\.mdx$/,

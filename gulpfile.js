@@ -183,7 +183,7 @@ export const watch = () =>
   gulp.watch(paths.watch.sass).on('change', changedPath => {
     console.log(changedPath);
     console.log(`Compiling Sass...`);
-    gulp.series('styles:sass')(() => {
+    gulp.series('styles:sass', 'styles:sass:components')(() => {
       const pattern = /ui\/(.+?)\/(.+?)\//;
       const match = changedPath.match(pattern);
       if (match) {

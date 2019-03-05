@@ -6,8 +6,8 @@ import Shadow from '../../shared/shadow';
 import '../common/index.scss';
 import './base/index.scss';
 
-import common from '!!raw-loader!../compiled/common/index.css';
-import button from '!!raw-loader!../compiled/button/base/index.css';
+import common from '!!css-loader!../common/index.css'; // eslint-disable-line import/no-webpack-loader-syntax
+import button from '!!css-loader!./base/index.css'; // eslint-disable-line import/no-webpack-loader-syntax
 
 class Button extends Component {
   constructor() {

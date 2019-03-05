@@ -4,8 +4,7 @@
 @import '../core/font';
 
 @mixin core($scoped: false, $globals: false) {
-
-@include core-fonts;
+  @include core-fonts;
 
   *,
   *:before,

@@ -82,7 +82,7 @@ export const sass = () =>
 
 export const componentSass = () =>
   gulp
-    .src('ui/modules/**/index.scss')
+    .src('ui/modules/**/index.scss', { base: '.' })
     .pipe(gulpPlumber())
     .pipe(gulpSourcemaps.init())
     .pipe(
@@ -96,7 +96,8 @@ export const componentSass = () =>
     .pipe(gulpAutoprefixer({ remove: false }))
     .pipe(gulpMinifycss({ advanced: false, roundingPrecision: '-1' }))
     // .pipe(gulpSourcemaps.write('.'))
-    .pipe(gulp.dest('ui/modules/compiled/'));
+    // .pipe(gulp.dest('ui/modules/compiled/'));
+    .pipe(gulp.dest('.'));
 
 // Quick check that all variants compile correctly to CSS
 export const sassTest = () =>

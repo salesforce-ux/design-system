@@ -27,20 +27,10 @@ class Shadow extends Component {
     const { includes } = this.props;
     if (!includes) return;
     if (Array.isArray(includes)) {
-      includes.map(content => {
-        if (typeof content !== 'string') {
-          console.error('The CSS you passed into the Shadow is not a string');
-          return false;
-        }
-      });
       // If multiples, reduce to single string to pass to style tag
       return includes.join('');
     } else {
-      if (typeof includes !== 'string') {
-        console.error('The CSS you passed into the Shadow is not a string');
-        return false;
-      }
-      return includes;
+      return includes.toString();
     }
   }
 

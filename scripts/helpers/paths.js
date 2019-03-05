@@ -48,6 +48,6 @@ module.exports = {
   test: rootPath('.test'),
   logs: rootPath('.logs'),
   reports: rootPath('.reports'),
-
+  modules: rootPath('ui/modules'),
   watch: watchPaths
 };

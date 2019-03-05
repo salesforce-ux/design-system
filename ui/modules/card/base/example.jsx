@@ -1,5 +1,5 @@
 import React from 'react';
-import Card, { CardHeader, CardBody, CardFooter } from '../';
+import Card from '../';
 import Button from '../../button';
 import ShadowExample from '../../../shared/shadow/example';
 

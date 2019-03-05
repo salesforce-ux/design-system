@@ -50,6 +50,7 @@ export default async () => {
     'docs'
   ));
   getDoc.keys().forEach(key => {
+    console.log(key);
     const { getElement } = getDoc(key);
     const examples = flattenElement(getElement())
       .filter(e => e.type === Example)

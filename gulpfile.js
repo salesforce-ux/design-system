@@ -186,6 +186,7 @@ export const watch = () =>
     gulp.series('styles:sass', 'styles:sass:components')(() => {
       const pattern = /ui\/(.+?)\/(.+?)\//;
       const match = changedPath.match(pattern);
+      console.log(match);
       if (match) {
         const [type, id] = match.slice(1);
         glob

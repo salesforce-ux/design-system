@@ -10,6 +10,7 @@ const paths = require('../helpers/paths');
 const disableThreadLoaderOnTravis = use =>
   process.env.TRAVIS ? use.loader !== 'thread-loader' : true;
 
+// Module.rules require the longform declaration of use: [ loader: '' ]
 module.exports = I.fromJS({
   mode: 'production',
   module: {
@@ -35,7 +36,11 @@ module.exports = I.fromJS({
       },
       {
         test: /\.scss$/,
-        loaders: ['style-loader', 'sass-loader']
+        use: [
+          { loader: 'style-loader' },
+          { loader: 'raw-loader' },
+          { loader: 'sass-loader' }
+        ]
       },
       {
         test: /\.mdx$/,

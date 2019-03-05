@@ -67,8 +67,9 @@ export const unwrapped = () => {
         uiJSON.get('components').map(comp =>
           SLDS.variants(comp)
             .filter(variant => variant.get('showcasePath'))
-            .map(variant =>
-              showcase(variant.get('showcasePath'), true).map(section =>
+            .map(variant => {
+              // console.log(variant)
+              return showcase(variant.get('showcasePath'), true).map(section =>
                 section.get('items').map(i =>
                   stream.write(
                     new Vinyl({
@@ -77,8 +78,8 @@ export const unwrapped = () => {
                     })
                   )
                 )
-              )
-            )
+              );
+            })
         )
       )
     )

@@ -44,6 +44,7 @@ class CodeBlock extends Component {
     const { children } = this.props;
     const element = mapElement(children, (child, index) => {
       return React.cloneElement(child, {
+        key: `docelement-${index}`,
         shadow: typeof child.type === 'function' ? false : undefined
       });
     });

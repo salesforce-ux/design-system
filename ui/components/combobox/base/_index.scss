@@ -181,6 +181,10 @@
     display: inline-block;
     vertical-align: middle;
   }
+
+  &[aria-disabled="true"] {
+    color: $color-text-button-default-disabled;
+  }
 }
 
 /**
@@ -206,6 +210,10 @@
   color: $color-text-icon-default;
 }
 
+.slds-listbox__option[aria-disabled="true"] .slds-listbox__option-icon {
+  color: currentColor;
+}
+
 /**
  * Creates a vertical listbox
  *
@@ -229,6 +237,7 @@
     text-decoration: none;
   }
 
+  .slds-listbox__option[aria-disabled="true"],
   .slds-listbox__option[role="presentation"]:hover {
     background-color: transparent;
     cursor: default;
@@ -369,11 +378,14 @@
  * @selector .slds-listbox__option-meta
  * @restrict .slds-listbox__option span
  */
-.slds-listbox__option-meta,
 .slds-listbox__option-meta {
   display: block;
   margin-top: ($spacing-xx-small * -1); // Offset $line-height-text from result-text
   color: $color-text-label;
+}
+
+.slds-listbox__option[aria-disabled="true"] .slds-listbox__option-meta {
+  color: currentColor;
 }
 
 .slds-listbox_object-switcher,

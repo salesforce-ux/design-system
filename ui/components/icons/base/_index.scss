@@ -228,3 +228,13 @@ $bg-standard-map: map-merge($task2-monkey-patch, $bg-standard-map);
     fill: currentColor;
   }
 }
+
+/**
+ * The icon container of icon in a disabled element
+ *
+ * @selector .slds-icon_disabled
+ * @restrict .slds-icon_container
+ */
+.slds-icon_disabled {
+  background-color: currentColor;
+}

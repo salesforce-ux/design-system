@@ -8,6 +8,7 @@ import { StandardIcon } from '../../icons/standard/example';
 import { UtilityIcon } from '../../icons/base/example';
 import { Spinner } from '../../spinners/base/example';
 import _ from '../../../shared/helpers';
+
 /**
  * Listbox
  */
@@ -57,6 +58,7 @@ export const ListboxItem = props => (
 export const ListboxOption = props => (
   <div
     aria-selected={props.focused ? 'true' : null}
+    aria-disabled={props.isDisabled ? 'true' : null}
     id={props.id || 'please-provide-a-unique-id'}
     className={classNames(
       'slds-media slds-listbox__option',
@@ -74,6 +76,19 @@ export const ListboxOption = props => (
 );
 
 /**
+ * Listbox Option Icon
+ */
+export const ListboxOptionIcon = props => (
+  <span
+    className={classNames('slds-media__figure slds-listbox__option-icon', {
+      'slds-listbox__option-icon-disabled': props.isDisabled
+    })}
+  >
+    {props.children}
+  </span>
+);
+
+/**
  * Entity Option
  */
 export const EntityOption = props => (
@@ -83,6 +98,7 @@ export const EntityOption = props => (
     tabIndex={props.tabIndex}
     label={props.label}
     focused={props.focused}
+    isDisabled={props.isDisabled}
     className={classNames(
       {
         'slds-media_center': !props.entityMeta,
@@ -93,7 +109,7 @@ export const EntityOption = props => (
     )}
   >
     {!props.label && (
-      <span className="slds-media__figure slds-listbox__option-icon">
+      <ListboxOptionIcon isDisabled={props.isDisabled}>
         <StandardIcon
           className="slds-icon_small"
           symbol={
@@ -101,8 +117,9 @@ export const EntityOption = props => (
           }
           assistiveText={false}
           title={false}
+          isDisabled={props.isDisabled}
         />
-      </span>
+      </ListboxOptionIcon>
     )}
     {props.label ? (
       <h3 className="slds-listbox__option-header" role="presentation">
@@ -122,7 +139,14 @@ export const EntityOption = props => (
           )}
         </span>
         {props.entityMeta && (
-          <span className="slds-listbox__option-meta slds-listbox__option-meta_entity">
+          <span
+            className={classNames(
+              'slds-listbox__option-meta slds-listbox__option-meta_entity',
+              {
+                'slds-listbox__option-meta-disabled': props.isDisabled
+              }
+            )}
+          >
             {props.entityType || 'Account'} &bull;{' '}
             {props.entityField || ' San Francisco'}
           </span>
@@ -150,6 +174,7 @@ export const TypeaheadTermOption = props => (
     id="option0"
     focused={props.focused}
     tabIndex={props.tabIndex}
+    isDisabled={props.isDisabled}
     className={classNames(
       'slds-listbox__option_term',
       props.focused && 'slds-has-focus'
@@ -180,6 +205,7 @@ export const Option = props => (
     id={props.id}
     label={props.label}
     focused={props.focused}
+    isDisabled={props.isDisabled}
     className={classNames(
       'slds-media_small',
       {
@@ -233,7 +259,13 @@ export const Option = props => (
           )}
         </span>
         {props.meta && (
-          <span className="slds-listbox__option-meta">{props.meta}</span>
+          <span
+            className={classNames('slds-listbox__option-meta', {
+              'slds-listbox__option-meta-disabled': props.isDisabled
+            })}
+          >
+            {props.meta}
+          </span>
         )}
       </span>
     )}
@@ -269,6 +301,7 @@ export class Listbox extends Component {
           afterTerm={option.afterTerm}
           rightIcon={option.rightIcon}
           rightIconAssistiveText={option.rightIconAssistiveText}
+          isDisabled={option.isDisabled}
         />
       </ListboxItem>
     );
@@ -294,6 +327,7 @@ export class Listbox extends Component {
           afterTerm={option.afterTerm}
           icon={option.icon}
           meta={option.meta}
+          isDisabled={option.isDisabled}
         />
       </ListboxItem>
     );

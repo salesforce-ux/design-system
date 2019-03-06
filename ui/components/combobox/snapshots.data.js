@@ -444,3 +444,19 @@ export const EntityStylingOptions = {
     rightIconAssistiveText: 'Has further options'
   }
 };
+
+const optionReducer = (p, n) => ({ [n[0]]: n[1], ...p });
+
+export const PlainDisabledOptions = Object.keys(PlainStylingOptions)
+  .map((key, idx) => [
+    key,
+    { ...PlainStylingOptions[key], isDisabled: idx < 2 }
+  ])
+  .reduceRight(optionReducer, {});
+
+export const EntityDisabledOptions = Object.keys(EntityOptions)
+  .map((key, idx) => [
+    key,
+    { ...EntityStylingOptions[key], isDisabled: idx < 2 }
+  ])
+  .reduceRight(optionReducer, {});

@@ -506,6 +506,8 @@
 .slds-path__stage {
   position: absolute;
   top: 50%;
+  /* stylelint-disable comment-empty-line-before */
+  /*! @noflip */
   left: 50%;
   transform: translate(-50%, -50%) rotateX(-180deg);
 }

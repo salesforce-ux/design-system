@@ -29,11 +29,12 @@
  * @restrict .slds-path div
  */
 .slds-path__track {
-
-  @include flex-wrap(true);
+  flex-wrap: wrap;
+  align-items: flex-start;
 
   @include mq-large-min {
-    @include flex-wrap(false);
+    flex-wrap: nowrap;
+    align-items: stretch;
   }
 
   /**
@@ -108,7 +109,7 @@
   margin: $spacing-small 0;
 
   @include mq-medium-min {
-    margin: unset;
+    margin: 0;
   }
 
   @include mq-large-min {
@@ -128,7 +129,7 @@
   overflow: hidden;
 
   @include mq-large-min {
-    flex-basis: unset;
+    flex-basis: auto;
   }
 }
 
@@ -138,7 +139,7 @@
   }
 
   @include mq-large-min {
-    padding-left: unset;
+    padding-left: 0;
   }
 }
 
@@ -160,14 +161,14 @@
     max-width: 100%; // IE11 flexbox fix - ensure everything stays inside the flex container
     justify-content: space-between;
     margin-top: $spacing-medium;
-    flex-direction: unset;
+    flex-direction: row;
   }
 
   @include mq-large-min {
-    flex-basis: unset;
-    flex-grow: unset;
-    align-items: unset;
-    margin-top: unset;
+    flex-basis: auto;
+    flex-grow: 0;
+    align-items: normal;
+    margin-top: 0;
     margin-left: $spacing-large;
   }
 }
@@ -615,7 +616,7 @@
   display: none;
 
   @include mq-medium-min {
-    display: unset;
+    display: block;
   }
 }
 
@@ -647,8 +648,8 @@
   margin-right: 0;
 
   @include mq-medium-min {
-    width: unset;
-    margin-right: unset;
+    width: auto;
+    margin-right: 0;
   }
 }
 
@@ -701,7 +702,7 @@
   background-color: $color-background-guidance;
 
   @include mq-medium-min {
-    margin-top: unset;
+    margin-top: 0;
   }
 }
 
@@ -716,9 +717,8 @@
 
   @include mq-medium-min {
     flex-basis: 50%;
-    padding-left: unset;
+    padding-left: 0;
     padding-right: $spacing-small;
-  }
 }
 
 /**
@@ -728,10 +728,12 @@
  * @restrict .slds-path__content div
  */
 .slds-path__coach {
-  @include flex-wrap(true);
+  flex-wrap: wrap;
+  align-items: flex-start;
 
   @include mq-medium-min {
-    @include flex-wrap(false);
+    flex-wrap: nowrap;
+    align-items: stretch;
   }
 }
 

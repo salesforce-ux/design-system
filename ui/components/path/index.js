@@ -118,14 +118,16 @@ export const PathTrack = props => {
         <Button isBrand className="slds-path__mark-complete">
           {actionButtonLabel}
         </Button>
-        <Button
-          isNeutral
-          className="slds-path__trigger-coaching-content"
-          aria-expanded={coachingOpen}
-          aria-controls={coachingId}
-        >
-          {coachingOpen ? 'Show Less' : 'Show More'}
-        </Button>
+        {hasCoaching ? (
+          <Button
+            isNeutral
+            className="slds-path__trigger-coaching-content"
+            aria-expanded={coachingOpen}
+            aria-controls={coachingId}
+          >
+            {coachingOpen ? 'Show Less' : 'Show More'}
+          </Button>
+        ) : null}
       </div>
     </div>
   );

@@ -446,14 +446,15 @@ const PathMobile = props => {
   const coachingId = 'path-coaching-3';
 
   return (
-    <div className="slds-region_small" style={{ width: '360px' }}>
+    <div>
       <Card>
         <CardBody hasPadding>
-          <Path hasCoaching coachingOpen={props.coachingOpen}>
+          <Path coachingOpen={props.coachingOpen}>
             <PathTrack
               stageName="Needs Analysis"
               coachingId={coachingId}
               hasOverflow
+              hasCoaching
               coachingOpen={props.coachingOpen}
               isSmallRegion
               isMobile

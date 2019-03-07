@@ -90,7 +90,7 @@ export const PathTrack = props => {
               {props.children}
             </ul>
 
-            {hasOverflow && !isMobile ? (
+            {hasOverflow ? (
               <div className="slds-path__scroll-controls">
                 <ButtonIcon
                   symbol="left"
@@ -115,24 +115,17 @@ export const PathTrack = props => {
 
       <div className="slds-grid slds-path__action">
         <span className="slds-path__stage-name">Stage: {stageName}</span>
-        <Button
-          isBrand
-          className={classNames(isSmallRegion && 'slds-button_stretch')}
-        >
+        <Button isBrand className="slds-path__mark-complete">
           {actionButtonLabel}
         </Button>
-        {isSmallRegion && (
-          <div className="slds-path__trigger-region-small">
-            <Button
-              isNeutral
-              className={classNames(isSmallRegion && 'slds-button_stretch')}
-              aria-expanded={coachingOpen}
-              aria-controls={coachingId}
-            >
-              {coachingOpen ? 'Show Less' : 'Show More'}
-            </Button>
-          </div>
-        )}
+        <Button
+          isNeutral
+          className="slds-path__trigger-coaching-content"
+          aria-expanded={coachingOpen}
+          aria-controls={coachingId}
+        >
+          {coachingOpen ? 'Show Less' : 'Show More'}
+        </Button>
       </div>
     </div>
   );

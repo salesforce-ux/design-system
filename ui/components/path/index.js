@@ -11,14 +11,14 @@ import RecordDetail from '../form-element/record-detail';
  * @name Path - Path container element
  * @param {*} props
  * @prop {boolean} hasCoaching - set to true if the Path has a Coaching section
- * @prop {coachingOpen} - set to true if the Path coaching should display in an open state
+ * @prop {isCoachingOpen} - set to true if the Path coaching should display in an open state
  *
  */
 export const Path = props => (
   <div
     className={classNames('slds-path', {
       'slds-path_has-coaching': props.hasCoaching,
-      'slds-is-expanded': props.coachingOpen
+      'slds-is-expanded': props.isCoachingOpen
     })}
   >
     {props.children}
@@ -27,19 +27,19 @@ export const Path = props => (
 
 Path.propTypes = {
   hasCoaching: PropTypes.bool,
-  coachingOpen: PropTypes.bool
+  isCoachingOpen: PropTypes.bool
 };
 
 Path.defaultProps = {
   hasCoaching: false,
-  coachingOpen: false
+  isCoachingOpen: false
 };
 
 /**
  * @name PathTrack - Track container for Path Steps
  * @param {*} props
  * @prop {boolean} hasCaoching - When true, adds the Coaching Button Toggle and preps Path Track for coaching support
- * @prop {boolean} coachingOpen - When true, displays the Coaching Button Toggle in an active state
+ * @prop {boolean} isCoachingOpen - When true, displays the Coaching Button Toggle in an active state
  * @prop {boolean} isSmallRegion - When true, the Mark as Complete button will be full width
  * @prop {boolean} isMobile - When true, removes the coaching toggle and the scroll buttons
  * @prop {boolean} hasOverflow - When true, presents the Path Steps in a scroller wrapper with control buttons
@@ -50,7 +50,7 @@ Path.defaultProps = {
 export const PathTrack = props => {
   const {
     hasCoaching,
-    coachingOpen,
+    isCoachingOpen,
     hasOverflow,
     coachingId,
     stageName,
@@ -71,11 +71,11 @@ export const PathTrack = props => {
             symbol="chevronright"
             theme="neutral"
             className={classNames('slds-path__trigger', {
-              'slds-path__trigger_open': coachingOpen
+              'slds-path__trigger_open': isCoachingOpen
             })}
             assistiveText="Show Details"
             title="Toggle Sales Coaching"
-            aria-expanded={coachingOpen}
+            aria-expanded={isCoachingOpen}
             aria-controls={coachingId}
           />
         ) : null}
@@ -122,10 +122,10 @@ export const PathTrack = props => {
           <Button
             isNeutral
             className="slds-path__trigger-coaching-content"
-            aria-expanded={coachingOpen}
+            aria-expanded={isCoachingOpen}
             aria-controls={coachingId}
           >
-            {coachingOpen ? 'Show Less' : 'Show More'}
+            {isCoachingOpen ? 'Show Less' : 'Show More'}
           </Button>
         ) : null}
       </div>
@@ -135,7 +135,7 @@ export const PathTrack = props => {
 
 PathTrack.propTypes = {
   hasCoaching: PropTypes.bool,
-  coachingOpen: PropTypes.bool,
+  isCoachingOpen: PropTypes.bool,
   hasOverflow: PropTypes.bool,
   coachingId: PropTypes.string,
   stageName: PropTypes.string,
@@ -146,7 +146,7 @@ PathTrack.propTypes = {
 
 PathTrack.defaultProps = {
   hasCoaching: false,
-  coachingOpen: false,
+  isCoachingOpen: false,
   hasOverflow: false,
   coachingId: '',
   stageName: 'Unqualified',

@@ -186,8 +186,8 @@ const PathWithCoachingOpen = () => {
   return (
     <Card>
       <CardBody hasPadding>
-        <Path hasCoaching isCoachingOpen>
-          <PathTrack coachingId={coachingId} hasCoaching isCoachingOpen>
+        <Path hasCoaching coachingOpen>
+          <PathTrack coachingId={coachingId} hasCoaching coachingOpen>
             <PathStep label="Contacted" stepState={['complete']} index={26} />
             <PathStep label="Open" stepState={['complete']} index={27} />
             <PathStep label="Unqualified" stepState={['current']} index={28} />
@@ -319,12 +319,12 @@ const PathMediumCoaching = () => {
     <div className="slds-region_medium" style={{ width: '700px' }}>
       <Card>
         <CardBody hasPadding>
-          <Path hasCoaching isCoachingOpen>
+          <Path hasCoaching coachingOpen>
             <PathTrack
               stageName="Needs Analysis"
               coachingId={coachingId}
               hasCoaching
-              isCoachingOpen
+              coachingOpen
               hasOverflow
             >
               <PathStep
@@ -384,12 +384,12 @@ const PathSmall = () => {
     <div className="slds-region_small" style={{ width: '360px' }}>
       <Card>
         <CardBody hasPadding>
-          <Path hasCoaching isCoachingOpen>
+          <Path hasCoaching coachingOpen>
             <PathTrack
               stageName="Needs Analysis"
               coachingId={coachingId}
               hasOverflow
-              isCoachingOpen
+              coachingOpen
               isSmallRegion
             >
               <PathStep
@@ -449,13 +449,13 @@ const PathMobile = props => {
     <div>
       <Card>
         <CardBody hasPadding>
-          <Path isCoachingOpen={props.isCoachingOpen}>
+          <Path coachingOpen={props.coachingOpen}>
             <PathTrack
               stageName="Needs Analysis"
               coachingId={coachingId}
               hasOverflow
               hasCoaching
-              isCoachingOpen={props.isCoachingOpen}
+              coachingOpen={props.coachingOpen}
               isSmallRegion
               isMobile
             >
@@ -504,7 +504,7 @@ const PathMobile = props => {
             <PathCoaching
               coachingId={coachingId}
               labelledBy="path-66"
-              isHidden={!props.isCoachingOpen}
+              isHidden={!props.coachingOpen}
             />
           </Path>
         </CardBody>
@@ -574,11 +574,11 @@ export const states = [
   {
     id: 'mobile-coaching',
     label: 'Mobile Coaching - Open',
-    element: <PathMobile isCoachingOpen />
+    element: <PathMobile coachingOpen />
   },
   {
     id: 'mobile-coaching-closed',
     label: 'Mobile Coaching - Closed',
-    element: <PathMobile isCoachingOpen={false} />
+    element: <PathMobile coachingOpen={false} />
   }
 ];

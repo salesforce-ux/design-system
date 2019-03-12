@@ -4,6 +4,18 @@
 @import '../../../shared/common/init';
 @import '../mixins/index';
 
+:host {
+  // background
+  --c-card-color-background: #fff;
+  // borders
+  --c-card-border-width: 1px;
+  --c-card-border-color: $card-color-border;
+  // box-shadow
+  --c-card-box-shadow: $card-shadow;
+  // radii
+  --c-card-border-radius: 4px;
+}
+
 /**
  * @summary Initializes card
  * @name base
@@ -15,11 +27,11 @@
 .sldswc-card {
   position: relative;
   padding: 0;
-  background: $card-color-background;
-  border: $border-width-thin solid $card-color-border;
-  border-radius: $border-radius-medium;
+  background: var(--c-card-color-background);
+  border: var(--c-card-border-width) solid var(--c-card-border-color);
+  border-radius: var(--c-card-border-radius);
   background-clip: padding-box;
-  box-shadow: $card-shadow;
+  box-shadow: var(--c-card-box-shadow);
 }
 
 /**

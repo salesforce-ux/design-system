@@ -9,7 +9,7 @@
 }
 
 @mixin mq-x-small-max {
-  @media (max-width: pem($mq-x-small)) {
+  @media (max-width: pem($mq-x-small -1)) {
     @content;
   }
 }
@@ -24,7 +24,7 @@
 }
 
 @mixin mq-small-max {
-  @media (max-width: pem($mq-small)) {
+  @media (max-width: pem($mq-small - 1)) {
     @content;
   }
 }
@@ -39,7 +39,7 @@
 }
 
 @mixin mq-medium-max {
-  @media (max-width: pem($mq-medium)) {
+  @media (max-width: pem($mq-medium - 1)) {
     @content;
   }
 }
@@ -54,7 +54,7 @@
 }
 
 @mixin mq-large-max {
-  @media (max-width: pem($mq-large)) {
+  @media (max-width: pem($mq-large - 1)) {
     @content;
   }
 }
@@ -63,13 +63,13 @@
 
 // HUGE - 1224px - 76.5rem
 @mixin mq-huge-min {
-  @media (min-width: pem(1224)) {
+  @media (min-width: pem($mq-huge)) {
     @content;
   }
 }
 
 @mixin mq-huge-max {
-  @media (max-width: pem(1224)) {
+  @media (max-width: pem($mq-huge - 1)) {
     @content;
   }
 }
@@ -78,13 +78,13 @@
 
 // SUPER - 1824px - 114rem
 @mixin mq-super-min {
-  @media (min-width: pem(1824)) {
+  @media (min-width: pem($mq-super)) {
     @content;
   }
 }
 
 @mixin mq-super-max {
-  @media (max-width: pem(1824)) {
+  @media (max-width: pem($mq-super - 1)) {
     @content;
   }
 }

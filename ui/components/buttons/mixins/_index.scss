@@ -1,3 +1,13 @@
+
+@mixin button {
+  padding-left: $spacing-medium;
+  padding-right: $spacing-medium;
+  text-align: center;
+  vertical-align: middle;
+  border: $border-width-thin solid $color-border-primary;
+  transition: border 0.15s linear;
+}
+
 @mixin button-reset {
   font-size: inherit;
   color: inherit;

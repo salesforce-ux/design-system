@@ -40,8 +40,6 @@ Path.defaultProps = {
  * @param {*} props
  * @prop {boolean} hasCaoching - When true, adds the Coaching Button Toggle and preps Path Track for coaching support
  * @prop {boolean} coachingOpen - When true, displays the Coaching Button Toggle in an active state
- * @prop {boolean} isSmallRegion - When true, the Mark as Complete button will be full width
- * @prop {boolean} isMobile - When true, removes the coaching toggle and the scroll buttons
  * @prop {boolean} hasOverflow - When true, presents the Path Steps in a scroller wrapper with control buttons
  * @prop {string} coachingId - Id of Coaching container element
  * @prop {string} stageName - Visible name of the current stage
@@ -54,9 +52,7 @@ export const PathTrack = props => {
     hasOverflow,
     coachingId,
     stageName,
-    actionButtonLabel,
-    isSmallRegion,
-    isMobile
+    actionButtonLabel
   } = props;
 
   return (
@@ -139,9 +135,7 @@ PathTrack.propTypes = {
   hasOverflow: PropTypes.bool,
   coachingId: PropTypes.string,
   stageName: PropTypes.string,
-  actionButtonLabel: PropTypes.node,
-  isSmallRegion: PropTypes.bool,
-  isMobile: PropTypes.bool
+  actionButtonLabel: PropTypes.node
 };
 
 PathTrack.defaultProps = {

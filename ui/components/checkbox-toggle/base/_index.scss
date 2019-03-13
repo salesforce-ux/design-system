@@ -150,6 +150,8 @@
           height: 0.7rem; // Seems silly to tokenize?
           width: 0.45rem;
           border-bottom: $border-width-thick solid $color-border-toggle-checked;
+          /* stylelint-disable comment-empty-line-before */
+          /*! @noflip */
           border-right: $border-width-thick solid $color-border-toggle-checked;
           border-radius: 0;
           background-color: transparent;

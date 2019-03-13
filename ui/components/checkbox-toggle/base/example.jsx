@@ -113,6 +113,22 @@ export let CheckboxToggleDisabled = props => {
   );
 };
 
+export let CheckboxToggleRTL = props => {
+  const uniqueId = _.uniqueId('checkbox-toggle-');
+
+  return (
+    <div dir="rtl">
+      <LabelWrapper>
+        <Label>
+          <FauxLabel>Toggle Label</FauxLabel>
+          <Checkbox uniqueId={uniqueId} checked />
+          <Toggle uniqueId={uniqueId} />
+        </Label>
+      </LabelWrapper>
+    </div>
+  );
+};
+
 /// ////////////////////////////////////////
 // Export
 /// ////////////////////////////////////////
@@ -129,5 +145,10 @@ export let states = [
     id: 'checkbox-toggle-disabled',
     label: 'Disabled',
     element: <CheckboxToggleDisabled />
+  },
+  {
+    id: 'checkbox-toggle-rtl',
+    label: 'Right to Left',
+    element: <CheckboxToggleRTL />
   }
 ];

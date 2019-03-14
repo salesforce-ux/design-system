@@ -48,33 +48,18 @@ describe('Path Track', () => {
     ).toBe(2);
   });
 
-  it('correctly sets coachingId aria-controls', () => {
+  it('correctly sets coachingId aria-controls on both trigger buttons (visible & not)', () => {
     const rendered = render(
       <PathTrack hasCoaching coachingId="path-coaching-custom" />
     );
     expect(
       rendered.find('button[aria-controls="path-coaching-custom"]').length
-    ).toBe(1);
+    ).toBe(2);
   });
 
   it('renders the correct stage name', () => {
     const rendered = shallow(<PathTrack stageName="Won" />);
     expect(rendered.find('.slds-path__stage-name').text()).toBe('Stage: Won');
-  });
-
-  it('renders the coaching toggle button for small regions', () => {
-    const rendered = shallow(<PathTrack isSmallRegion />);
-    expect(rendered.find('.slds-path__trigger-region-small').length).toBe(1);
-  });
-
-  it('renders the stretch button sizes for small regions', () => {
-    const rendered = shallow(<PathTrack isSmallRegion coachingOpen />);
-    expect(rendered.find('.slds-button_stretch').length).toBe(2);
-  });
-
-  it("doesn't render the scroll button for mobile", () => {
-    const rendered = shallow(<PathTrack hasCoaching isMobile />);
-    expect(rendered.find('.slds-path__scroll-controls').length).toBe(0);
   });
 });
 

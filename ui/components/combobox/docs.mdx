@@ -13,6 +13,7 @@ import * as Snapshot from './snapshots.data';
 import * as Dialog from './dialog/example';
 import _, { getDisplayElementById } from '../../shared/helpers';
 
+
 <div className="lead doc">
   A widget that provides a user with an input field that is either an autocomplete or readonly, accompanied by a listbox of options.
 </div>
@@ -115,7 +116,7 @@ It is most common to expand the `listbox` of options when a user clicks on the C
 - A `listbox` has the ability to group options together under a visual heading or label. This means the `role="listbox"` attribute is placed on a common parent element, which can wrap multiple lists (or groups) of options
   - When a `listbox` has no option groups, the `ul` element has `role="presentation"` to remove it from the Accessibility Tree
 - Every `option` has `aria-selected="false"` by default
-- Disabled `option`s should have `aria-disabled="true"` applied
+- Disabled `option`s should have `aria-disabled="true"` applied along with [a class on the icon in an entity option](#Disabled-listbox-items).
 
 #### Loading more options
 
@@ -214,6 +215,34 @@ The options in the `listbox` can have a left icon and/or metatext.
     snapshot={Snapshot.PlainStylingOptions}
     type="plain"
     count={4}
+  />
+</CodeView>
+
+#### Disabled listbox items
+
+Options in a listbox that are disabled require these accessibility and styling considerations:
+- `aria-disabled="true"` must be applied to `slds-listbox__option`
+- if using an entity icon, apply `slds-icon_disabled` to `slds-icon_container`
+
+*Plain options: Example shows two disabled options with one enabled one*
+
+<CodeView style={{position: 'relative', maxWidth: '40rem', height: '10rem'}}>
+  <Listbox
+    id={_.uniqueId('listbox-id-')}
+    snapshot={Snapshot.PlainDisabledOptions}
+    type="plain"
+    count={3}
+  />
+</CodeView>
+
+*Entity options: Example shows two disabled entity options with one enabled one*
+
+<CodeView style={{position: 'relative', maxWidth: '40rem', height: '10rem'}}>
+  <Listbox
+    id={_.uniqueId('listbox-id-')}
+    snapshot={Snapshot.EntityDisabledOptions}
+    type="entity"
+    count={3}
   />
 </CodeView>
 

@@ -89,6 +89,7 @@ exports[`Expression Base renders the default expression 1`] = `
                   role="presentation"
                 >
                   <div
+                    aria-disabled={null}
                     aria-selected={null}
                     className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                     id="listbox-option-id-1"
@@ -116,6 +117,7 @@ exports[`Expression Base renders the default expression 1`] = `
                   role="presentation"
                 >
                   <div
+                    aria-disabled={null}
                     aria-selected={null}
                     className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                     id="listbox-option-id-2"
@@ -143,6 +145,7 @@ exports[`Expression Base renders the default expression 1`] = `
                   role="presentation"
                 >
                   <div
+                    aria-disabled={null}
                     aria-selected={null}
                     className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                     id="listbox-option-id-3"
@@ -170,6 +173,7 @@ exports[`Expression Base renders the default expression 1`] = `
                   role="presentation"
                 >
                   <div
+                    aria-disabled={null}
                     aria-selected={null}
                     className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                     id="listbox-option-id-4"
@@ -197,6 +201,7 @@ exports[`Expression Base renders the default expression 1`] = `
                   role="presentation"
                 >
                   <div
+                    aria-disabled={null}
                     aria-selected={null}
                     className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                     id="listbox-option-id-5"
@@ -323,6 +328,7 @@ exports[`Expression Base renders the default expression 1`] = `
                           role="presentation"
                         >
                           <div
+                            aria-disabled={null}
                             aria-selected={null}
                             className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                             id="listbox-option-id-6"
@@ -350,6 +356,7 @@ exports[`Expression Base renders the default expression 1`] = `
                           role="presentation"
                         >
                           <div
+                            aria-disabled={null}
                             aria-selected={null}
                             className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                             id="listbox-option-id-7"
@@ -377,6 +384,7 @@ exports[`Expression Base renders the default expression 1`] = `
                           role="presentation"
                         >
                           <div
+                            aria-disabled={null}
                             aria-selected={null}
                             className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                             id="listbox-option-id-8"
@@ -404,6 +412,7 @@ exports[`Expression Base renders the default expression 1`] = `
                           role="presentation"
                         >
                           <div
+                            aria-disabled={null}
                             aria-selected={null}
                             className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                             id="listbox-option-id-9"
@@ -513,6 +522,7 @@ exports[`Expression Base renders the default expression 1`] = `
                           role="presentation"
                         >
                           <div
+                            aria-disabled={null}
                             aria-selected={null}
                             className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                             id="listbox-option-id-10"
@@ -540,6 +550,7 @@ exports[`Expression Base renders the default expression 1`] = `
                           role="presentation"
                         >
                           <div
+                            aria-disabled={null}
                             aria-selected={null}
                             className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                             id="listbox-option-id-11"
@@ -567,6 +578,7 @@ exports[`Expression Base renders the default expression 1`] = `
                           role="presentation"
                         >
                           <div
+                            aria-disabled={null}
                             aria-selected={null}
                             className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                             id="listbox-option-id-12"
@@ -594,6 +606,7 @@ exports[`Expression Base renders the default expression 1`] = `
                           role="presentation"
                         >
                           <div
+                            aria-disabled={null}
                             aria-selected={null}
                             className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                             id="listbox-option-id-13"
@@ -821,6 +834,7 @@ exports[`Expression Base renders the disabled initial state 1`] = `
                   role="presentation"
                 >
                   <div
+                    aria-disabled={null}
                     aria-selected={null}
                     className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                     id="listbox-option-id-14"
@@ -848,6 +862,7 @@ exports[`Expression Base renders the disabled initial state 1`] = `
                   role="presentation"
                 >
                   <div
+                    aria-disabled={null}
                     aria-selected={null}
                     className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                     id="listbox-option-id-15"
@@ -875,6 +890,7 @@ exports[`Expression Base renders the disabled initial state 1`] = `
                   role="presentation"
                 >
                   <div
+                    aria-disabled={null}
                     aria-selected={null}
                     className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                     id="listbox-option-id-16"
@@ -902,6 +918,7 @@ exports[`Expression Base renders the disabled initial state 1`] = `
                   role="presentation"
                 >
                   <div
+                    aria-disabled={null}
                     aria-selected={null}
                     className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                     id="listbox-option-id-17"
@@ -929,6 +946,7 @@ exports[`Expression Base renders the disabled initial state 1`] = `
                   role="presentation"
                 >
                   <div
+                    aria-disabled={null}
                     aria-selected={null}
                     className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                     id="listbox-option-id-18"
@@ -1055,6 +1073,7 @@ exports[`Expression Base renders the disabled initial state 1`] = `
                           role="presentation"
                         >
                           <div
+                            aria-disabled={null}
                             aria-selected={null}
                             className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                             id="listbox-option-id-19"
@@ -1082,6 +1101,7 @@ exports[`Expression Base renders the disabled initial state 1`] = `
                           role="presentation"
                         >
                           <div
+                            aria-disabled={null}
                             aria-selected={null}
                             className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                             id="listbox-option-id-20"
@@ -1109,6 +1129,7 @@ exports[`Expression Base renders the disabled initial state 1`] = `
                           role="presentation"
                         >
                           <div
+                            aria-disabled={null}
                             aria-selected={null}
                             className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                             id="listbox-option-id-21"
@@ -1136,6 +1157,7 @@ exports[`Expression Base renders the disabled initial state 1`] = `
                           role="presentation"
                         >
                           <div
+                            aria-disabled={null}
                             aria-selected={null}
                             className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                             id="listbox-option-id-22"
@@ -1245,6 +1267,7 @@ exports[`Expression Base renders the disabled initial state 1`] = `
                           role="presentation"
                         >
                           <div
+                            aria-disabled={null}
                             aria-selected={null}
                             className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                             id="listbox-option-id-23"
@@ -1272,6 +1295,7 @@ exports[`Expression Base renders the disabled initial state 1`] = `
                           role="presentation"
                         >
                           <div
+                            aria-disabled={null}
                             aria-selected={null}
                             className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                             id="listbox-option-id-24"
@@ -1299,6 +1323,7 @@ exports[`Expression Base renders the disabled initial state 1`] = `
                           role="presentation"
                         >
                           <div
+                            aria-disabled={null}
                             aria-selected={null}
                             className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                             id="listbox-option-id-25"
@@ -1326,6 +1351,7 @@ exports[`Expression Base renders the disabled initial state 1`] = `
                           role="presentation"
                         >
                           <div
+                            aria-disabled={null}
                             aria-selected={null}
                             className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                             id="listbox-option-id-26"
@@ -1553,6 +1579,7 @@ exports[`Expression Base renders with a custom logic value 1`] = `
                   role="presentation"
                 >
                   <div
+                    aria-disabled={null}
                     aria-selected={null}
                     className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                     id="listbox-option-id-131"
@@ -1580,6 +1607,7 @@ exports[`Expression Base renders with a custom logic value 1`] = `
                   role="presentation"
                 >
                   <div
+                    aria-disabled={null}
                     aria-selected={null}
                     className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                     id="listbox-option-id-132"
@@ -1607,6 +1635,7 @@ exports[`Expression Base renders with a custom logic value 1`] = `
                   role="presentation"
                 >
                   <div
+                    aria-disabled={null}
                     aria-selected={null}
                     className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                     id="listbox-option-id-133"
@@ -1634,6 +1663,7 @@ exports[`Expression Base renders with a custom logic value 1`] = `
                   role="presentation"
                 >
                   <div
+                    aria-disabled={null}
                     aria-selected={null}
                     className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                     id="listbox-option-id-134"
@@ -1661,6 +1691,7 @@ exports[`Expression Base renders with a custom logic value 1`] = `
                   role="presentation"
                 >
                   <div
+                    aria-disabled={null}
                     aria-selected={null}
                     className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                     id="listbox-option-id-135"
@@ -1787,6 +1818,7 @@ exports[`Expression Base renders with a custom logic value 1`] = `
                           role="presentation"
                         >
                           <div
+                            aria-disabled={null}
                             aria-selected={null}
                             className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                             id="listbox-option-id-136"
@@ -1814,6 +1846,7 @@ exports[`Expression Base renders with a custom logic value 1`] = `
                           role="presentation"
                         >
                           <div
+                            aria-disabled={null}
                             aria-selected={null}
                             className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                             id="listbox-option-id-137"
@@ -1841,6 +1874,7 @@ exports[`Expression Base renders with a custom logic value 1`] = `
                           role="presentation"
                         >
                           <div
+                            aria-disabled={null}
                             aria-selected={null}
                             className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                             id="listbox-option-id-138"
@@ -1868,6 +1902,7 @@ exports[`Expression Base renders with a custom logic value 1`] = `
                           role="presentation"
                         >
                           <div
+                            aria-disabled={null}
                             aria-selected={null}
                             className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                             id="listbox-option-id-139"
@@ -1977,6 +2012,7 @@ exports[`Expression Base renders with a custom logic value 1`] = `
                           role="presentation"
                         >
                           <div
+                            aria-disabled={null}
                             aria-selected={null}
                             className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                             id="listbox-option-id-140"
@@ -2004,6 +2040,7 @@ exports[`Expression Base renders with a custom logic value 1`] = `
                           role="presentation"
                         >
                           <div
+                            aria-disabled={null}
                             aria-selected={null}
                             className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                             id="listbox-option-id-141"
@@ -2031,6 +2068,7 @@ exports[`Expression Base renders with a custom logic value 1`] = `
                           role="presentation"
                         >
                           <div
+                            aria-disabled={null}
                             aria-selected={null}
                             className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                             id="listbox-option-id-142"
@@ -2058,6 +2096,7 @@ exports[`Expression Base renders with a custom logic value 1`] = `
                           role="presentation"
                         >
                           <div
+                            aria-disabled={null}
                             aria-selected={null}
                             className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                             id="listbox-option-id-143"
@@ -2285,6 +2324,7 @@ exports[`Expression Base renders with a resource selected 1`] = `
                   role="presentation"
                 >
                   <div
+                    aria-disabled={null}
                     aria-selected={null}
                     className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                     id="listbox-option-id-118"
@@ -2312,6 +2352,7 @@ exports[`Expression Base renders with a resource selected 1`] = `
                   role="presentation"
                 >
                   <div
+                    aria-disabled={null}
                     aria-selected={null}
                     className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                     id="listbox-option-id-119"
@@ -2339,6 +2380,7 @@ exports[`Expression Base renders with a resource selected 1`] = `
                   role="presentation"
                 >
                   <div
+                    aria-disabled={null}
                     aria-selected={null}
                     className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                     id="listbox-option-id-120"
@@ -2366,6 +2408,7 @@ exports[`Expression Base renders with a resource selected 1`] = `
                   role="presentation"
                 >
                   <div
+                    aria-disabled={null}
                     aria-selected={null}
                     className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                     id="listbox-option-id-121"
@@ -2393,6 +2436,7 @@ exports[`Expression Base renders with a resource selected 1`] = `
                   role="presentation"
                 >
                   <div
+                    aria-disabled={null}
                     aria-selected={null}
                     className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                     id="listbox-option-id-122"
@@ -2519,6 +2563,7 @@ exports[`Expression Base renders with a resource selected 1`] = `
                           role="presentation"
                         >
                           <div
+                            aria-disabled={null}
                             aria-selected="true"
                             className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-is-selected slds-has-focus"
                             id="listbox-option-id-123"
@@ -2565,6 +2610,7 @@ exports[`Expression Base renders with a resource selected 1`] = `
                           role="presentation"
                         >
                           <div
+                            aria-disabled={null}
                             aria-selected={null}
                             className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                             id="listbox-option-id-124"
@@ -2592,6 +2638,7 @@ exports[`Expression Base renders with a resource selected 1`] = `
                           role="presentation"
                         >
                           <div
+                            aria-disabled={null}
                             aria-selected={null}
                             className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                             id="listbox-option-id-125"
@@ -2619,6 +2666,7 @@ exports[`Expression Base renders with a resource selected 1`] = `
                           role="presentation"
                         >
                           <div
+                            aria-disabled={null}
                             aria-selected={null}
                             className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                             id="listbox-option-id-126"
@@ -2728,6 +2776,7 @@ exports[`Expression Base renders with a resource selected 1`] = `
                           role="presentation"
                         >
                           <div
+                            aria-disabled={null}
                             aria-selected={null}
                             className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                             id="listbox-option-id-127"
@@ -2755,6 +2804,7 @@ exports[`Expression Base renders with a resource selected 1`] = `
                           role="presentation"
                         >
                           <div
+                            aria-disabled={null}
                             aria-selected={null}
                             className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                             id="listbox-option-id-128"
@@ -2782,6 +2832,7 @@ exports[`Expression Base renders with a resource selected 1`] = `
                           role="presentation"
                         >
                           <div
+                            aria-disabled={null}
                             aria-selected={null}
                             className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                             id="listbox-option-id-129"
@@ -2809,6 +2860,7 @@ exports[`Expression Base renders with a resource selected 1`] = `
                           role="presentation"
                         >
                           <div
+                            aria-disabled={null}
                             aria-selected={null}
                             className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                             id="listbox-option-id-130"
@@ -3036,6 +3088,7 @@ exports[`Expression Base renders with all option selected 1`] = `
                   role="presentation"
                 >
                   <div
+                    aria-disabled={null}
                     aria-selected="true"
                     className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-is-selected slds-has-focus"
                     id="listbox-option-id-66"
@@ -3082,6 +3135,7 @@ exports[`Expression Base renders with all option selected 1`] = `
                   role="presentation"
                 >
                   <div
+                    aria-disabled={null}
                     aria-selected={null}
                     className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                     id="listbox-option-id-67"
@@ -3109,6 +3163,7 @@ exports[`Expression Base renders with all option selected 1`] = `
                   role="presentation"
                 >
                   <div
+                    aria-disabled={null}
                     aria-selected={null}
                     className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                     id="listbox-option-id-68"
@@ -3136,6 +3191,7 @@ exports[`Expression Base renders with all option selected 1`] = `
                   role="presentation"
                 >
                   <div
+                    aria-disabled={null}
                     aria-selected={null}
                     className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                     id="listbox-option-id-69"
@@ -3163,6 +3219,7 @@ exports[`Expression Base renders with all option selected 1`] = `
                   role="presentation"
                 >
                   <div
+                    aria-disabled={null}
                     aria-selected={null}
                     className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                     id="listbox-option-id-70"
@@ -3289,6 +3346,7 @@ exports[`Expression Base renders with all option selected 1`] = `
                           role="presentation"
                         >
                           <div
+                            aria-disabled={null}
                             aria-selected={null}
                             className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                             id="listbox-option-id-71"
@@ -3316,6 +3374,7 @@ exports[`Expression Base renders with all option selected 1`] = `
                           role="presentation"
                         >
                           <div
+                            aria-disabled={null}
                             aria-selected={null}
                             className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                             id="listbox-option-id-72"
@@ -3343,6 +3402,7 @@ exports[`Expression Base renders with all option selected 1`] = `
                           role="presentation"
                         >
                           <div
+                            aria-disabled={null}
                             aria-selected={null}
                             className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                             id="listbox-option-id-73"
@@ -3370,6 +3430,7 @@ exports[`Expression Base renders with all option selected 1`] = `
                           role="presentation"
                         >
                           <div
+                            aria-disabled={null}
                             aria-selected={null}
                             className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                             id="listbox-option-id-74"
@@ -3479,6 +3540,7 @@ exports[`Expression Base renders with all option selected 1`] = `
                           role="presentation"
                         >
                           <div
+                            aria-disabled={null}
                             aria-selected={null}
                             className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                             id="listbox-option-id-75"
@@ -3506,6 +3568,7 @@ exports[`Expression Base renders with all option selected 1`] = `
                           role="presentation"
                         >
                           <div
+                            aria-disabled={null}
                             aria-selected={null}
                             className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                             id="listbox-option-id-76"
@@ -3533,6 +3596,7 @@ exports[`Expression Base renders with all option selected 1`] = `
                           role="presentation"
                         >
                           <div
+                            aria-disabled={null}
                             aria-selected={null}
                             className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                             id="listbox-option-id-77"
@@ -3560,6 +3624,7 @@ exports[`Expression Base renders with all option selected 1`] = `
                           role="presentation"
                         >
                           <div
+                            aria-disabled={null}
                             aria-selected={null}
                             className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                             id="listbox-option-id-78"
@@ -3787,6 +3852,7 @@ exports[`Expression Base renders with always option selected 1`] = `
                   role="presentation"
                 >
                   <div
+                    aria-disabled={null}
                     aria-selected={null}
                     className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                     id="listbox-option-id-92"
@@ -3814,6 +3880,7 @@ exports[`Expression Base renders with always option selected 1`] = `
                   role="presentation"
                 >
                   <div
+                    aria-disabled={null}
                     aria-selected={null}
                     className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                     id="listbox-option-id-93"
@@ -3841,6 +3908,7 @@ exports[`Expression Base renders with always option selected 1`] = `
                   role="presentation"
                 >
                   <div
+                    aria-disabled={null}
                     aria-selected={null}
                     className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                     id="listbox-option-id-94"
@@ -3868,6 +3936,7 @@ exports[`Expression Base renders with always option selected 1`] = `
                   role="presentation"
                 >
                   <div
+                    aria-disabled={null}
                     aria-selected="true"
                     className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-is-selected slds-has-focus"
                     id="listbox-option-id-95"
@@ -3914,6 +3983,7 @@ exports[`Expression Base renders with always option selected 1`] = `
                   role="presentation"
                 >
                   <div
+                    aria-disabled={null}
                     aria-selected={null}
                     className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                     id="listbox-option-id-96"
@@ -4040,6 +4110,7 @@ exports[`Expression Base renders with always option selected 1`] = `
                           role="presentation"
                         >
                           <div
+                            aria-disabled={null}
                             aria-selected={null}
                             className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                             id="listbox-option-id-97"
@@ -4067,6 +4138,7 @@ exports[`Expression Base renders with always option selected 1`] = `
                           role="presentation"
                         >
                           <div
+                            aria-disabled={null}
                             aria-selected={null}
                             className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                             id="listbox-option-id-98"
@@ -4094,6 +4166,7 @@ exports[`Expression Base renders with always option selected 1`] = `
                           role="presentation"
                         >
                           <div
+                            aria-disabled={null}
                             aria-selected={null}
                             className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                             id="listbox-option-id-99"
@@ -4121,6 +4194,7 @@ exports[`Expression Base renders with always option selected 1`] = `
                           role="presentation"
                         >
                           <div
+                            aria-disabled={null}
                             aria-selected={null}
                             className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                             id="listbox-option-id-100"
@@ -4230,6 +4304,7 @@ exports[`Expression Base renders with always option selected 1`] = `
                           role="presentation"
                         >
                           <div
+                            aria-disabled={null}
                             aria-selected={null}
                             className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                             id="listbox-option-id-101"
@@ -4257,6 +4332,7 @@ exports[`Expression Base renders with always option selected 1`] = `
                           role="presentation"
                         >
                           <div
+                            aria-disabled={null}
                             aria-selected={null}
                             className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                             id="listbox-option-id-102"
@@ -4284,6 +4360,7 @@ exports[`Expression Base renders with always option selected 1`] = `
                           role="presentation"
                         >
                           <div
+                            aria-disabled={null}
                             aria-selected={null}
                             className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                             id="listbox-option-id-103"
@@ -4311,6 +4388,7 @@ exports[`Expression Base renders with always option selected 1`] = `
                           role="presentation"
                         >
                           <div
+                            aria-disabled={null}
                             aria-selected={null}
                             className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                             id="listbox-option-id-104"
@@ -4538,6 +4616,7 @@ exports[`Expression Base renders with any option selected 1`] = `
                   role="presentation"
                 >
                   <div
+                    aria-disabled={null}
                     aria-selected={null}
                     className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                     id="listbox-option-id-53"
@@ -4565,6 +4644,7 @@ exports[`Expression Base renders with any option selected 1`] = `
                   role="presentation"
                 >
                   <div
+                    aria-disabled={null}
                     aria-selected="true"
                     className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-is-selected slds-has-focus"
                     id="listbox-option-id-54"
@@ -4611,6 +4691,7 @@ exports[`Expression Base renders with any option selected 1`] = `
                   role="presentation"
                 >
                   <div
+                    aria-disabled={null}
                     aria-selected={null}
                     className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                     id="listbox-option-id-55"
@@ -4638,6 +4719,7 @@ exports[`Expression Base renders with any option selected 1`] = `
                   role="presentation"
                 >
                   <div
+                    aria-disabled={null}
                     aria-selected={null}
                     className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                     id="listbox-option-id-56"
@@ -4665,6 +4747,7 @@ exports[`Expression Base renders with any option selected 1`] = `
                   role="presentation"
                 >
                   <div
+                    aria-disabled={null}
                     aria-selected={null}
                     className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                     id="listbox-option-id-57"
@@ -4791,6 +4874,7 @@ exports[`Expression Base renders with any option selected 1`] = `
                           role="presentation"
                         >
                           <div
+                            aria-disabled={null}
                             aria-selected={null}
                             className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                             id="listbox-option-id-58"
@@ -4818,6 +4902,7 @@ exports[`Expression Base renders with any option selected 1`] = `
                           role="presentation"
                         >
                           <div
+                            aria-disabled={null}
                             aria-selected={null}
                             className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                             id="listbox-option-id-59"
@@ -4845,6 +4930,7 @@ exports[`Expression Base renders with any option selected 1`] = `
                           role="presentation"
                         >
                           <div
+                            aria-disabled={null}
                             aria-selected={null}
                             className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                             id="listbox-option-id-60"
@@ -4872,6 +4958,7 @@ exports[`Expression Base renders with any option selected 1`] = `
                           role="presentation"
                         >
                           <div
+                            aria-disabled={null}
                             aria-selected={null}
                             className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                             id="listbox-option-id-61"
@@ -4981,6 +5068,7 @@ exports[`Expression Base renders with any option selected 1`] = `
                           role="presentation"
                         >
                           <div
+                            aria-disabled={null}
                             aria-selected={null}
                             className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                             id="listbox-option-id-62"
@@ -5008,6 +5096,7 @@ exports[`Expression Base renders with any option selected 1`] = `
                           role="presentation"
                         >
                           <div
+                            aria-disabled={null}
                             aria-selected={null}
                             className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                             id="listbox-option-id-63"
@@ -5035,6 +5124,7 @@ exports[`Expression Base renders with any option selected 1`] = `
                           role="presentation"
                         >
                           <div
+                            aria-disabled={null}
                             aria-selected={null}
                             className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                             id="listbox-option-id-64"
@@ -5062,6 +5152,7 @@ exports[`Expression Base renders with any option selected 1`] = `
                           role="presentation"
                         >
                           <div
+                            aria-disabled={null}
                             aria-selected={null}
                             className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                             id="listbox-option-id-65"
@@ -5289,6 +5380,7 @@ exports[`Expression Base renders with custom logic 1`] = `
                   role="presentation"
                 >
                   <div
+                    aria-disabled={null}
                     aria-selected={null}
                     className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                     id="listbox-option-id-27"
@@ -5316,6 +5408,7 @@ exports[`Expression Base renders with custom logic 1`] = `
                   role="presentation"
                 >
                   <div
+                    aria-disabled={null}
                     aria-selected={null}
                     className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                     id="listbox-option-id-28"
@@ -5343,6 +5436,7 @@ exports[`Expression Base renders with custom logic 1`] = `
                   role="presentation"
                 >
                   <div
+                    aria-disabled={null}
                     aria-selected={null}
                     className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                     id="listbox-option-id-29"
@@ -5370,6 +5464,7 @@ exports[`Expression Base renders with custom logic 1`] = `
                   role="presentation"
                 >
                   <div
+                    aria-disabled={null}
                     aria-selected={null}
                     className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                     id="listbox-option-id-30"
@@ -5397,6 +5492,7 @@ exports[`Expression Base renders with custom logic 1`] = `
                   role="presentation"
                 >
                   <div
+                    aria-disabled={null}
                     aria-selected={null}
                     className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                     id="listbox-option-id-31"
@@ -5551,6 +5647,7 @@ exports[`Expression Base renders with custom logic 1`] = `
                           role="presentation"
                         >
                           <div
+                            aria-disabled={null}
                             aria-selected={null}
                             className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                             id="listbox-option-id-32"
@@ -5578,6 +5675,7 @@ exports[`Expression Base renders with custom logic 1`] = `
                           role="presentation"
                         >
                           <div
+                            aria-disabled={null}
                             aria-selected={null}
                             className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                             id="listbox-option-id-33"
@@ -5605,6 +5703,7 @@ exports[`Expression Base renders with custom logic 1`] = `
                           role="presentation"
                         >
                           <div
+                            aria-disabled={null}
                             aria-selected={null}
                             className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                             id="listbox-option-id-34"
@@ -5632,6 +5731,7 @@ exports[`Expression Base renders with custom logic 1`] = `
                           role="presentation"
                         >
                           <div
+                            aria-disabled={null}
                             aria-selected={null}
                             className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                             id="listbox-option-id-35"
@@ -5741,6 +5841,7 @@ exports[`Expression Base renders with custom logic 1`] = `
                           role="presentation"
                         >
                           <div
+                            aria-disabled={null}
                             aria-selected={null}
                             className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                             id="listbox-option-id-36"
@@ -5768,6 +5869,7 @@ exports[`Expression Base renders with custom logic 1`] = `
                           role="presentation"
                         >
                           <div
+                            aria-disabled={null}
                             aria-selected={null}
                             className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                             id="listbox-option-id-37"
@@ -5795,6 +5897,7 @@ exports[`Expression Base renders with custom logic 1`] = `
                           role="presentation"
                         >
                           <div
+                            aria-disabled={null}
                             aria-selected={null}
                             className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                             id="listbox-option-id-38"
@@ -5822,6 +5925,7 @@ exports[`Expression Base renders with custom logic 1`] = `
                           role="presentation"
                         >
                           <div
+                            aria-disabled={null}
                             aria-selected={null}
                             className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                             id="listbox-option-id-39"
@@ -6049,6 +6153,7 @@ exports[`Expression Base renders with custom option selected 1`] = `
                   role="presentation"
                 >
                   <div
+                    aria-disabled={null}
                     aria-selected={null}
                     className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                     id="listbox-option-id-79"
@@ -6076,6 +6181,7 @@ exports[`Expression Base renders with custom option selected 1`] = `
                   role="presentation"
                 >
                   <div
+                    aria-disabled={null}
                     aria-selected={null}
                     className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                     id="listbox-option-id-80"
@@ -6103,6 +6209,7 @@ exports[`Expression Base renders with custom option selected 1`] = `
                   role="presentation"
                 >
                   <div
+                    aria-disabled={null}
                     aria-selected="true"
                     className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-is-selected slds-has-focus"
                     id="listbox-option-id-81"
@@ -6149,6 +6256,7 @@ exports[`Expression Base renders with custom option selected 1`] = `
                   role="presentation"
                 >
                   <div
+                    aria-disabled={null}
                     aria-selected={null}
                     className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                     id="listbox-option-id-82"
@@ -6176,6 +6284,7 @@ exports[`Expression Base renders with custom option selected 1`] = `
                   role="presentation"
                 >
                   <div
+                    aria-disabled={null}
                     aria-selected={null}
                     className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                     id="listbox-option-id-83"
@@ -6302,6 +6411,7 @@ exports[`Expression Base renders with custom option selected 1`] = `
                           role="presentation"
                         >
                           <div
+                            aria-disabled={null}
                             aria-selected={null}
                             className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                             id="listbox-option-id-84"
@@ -6329,6 +6439,7 @@ exports[`Expression Base renders with custom option selected 1`] = `
                           role="presentation"
                         >
                           <div
+                            aria-disabled={null}
                             aria-selected={null}
                             className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                             id="listbox-option-id-85"
@@ -6356,6 +6467,7 @@ exports[`Expression Base renders with custom option selected 1`] = `
                           role="presentation"
                         >
                           <div
+                            aria-disabled={null}
                             aria-selected={null}
                             className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                             id="listbox-option-id-86"
@@ -6383,6 +6495,7 @@ exports[`Expression Base renders with custom option selected 1`] = `
                           role="presentation"
                         >
                           <div
+                            aria-disabled={null}
                             aria-selected={null}
                             className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                             id="listbox-option-id-87"
@@ -6492,6 +6605,7 @@ exports[`Expression Base renders with custom option selected 1`] = `
                           role="presentation"
                         >
                           <div
+                            aria-disabled={null}
                             aria-selected={null}
                             className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                             id="listbox-option-id-88"
@@ -6519,6 +6633,7 @@ exports[`Expression Base renders with custom option selected 1`] = `
                           role="presentation"
                         >
                           <div
+                            aria-disabled={null}
                             aria-selected={null}
                             className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                             id="listbox-option-id-89"
@@ -6546,6 +6661,7 @@ exports[`Expression Base renders with custom option selected 1`] = `
                           role="presentation"
                         >
                           <div
+                            aria-disabled={null}
                             aria-selected={null}
                             className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                             id="listbox-option-id-90"
@@ -6573,6 +6689,7 @@ exports[`Expression Base renders with custom option selected 1`] = `
                           role="presentation"
                         >
                           <div
+                            aria-disabled={null}
                             aria-selected={null}
                             className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                             id="listbox-option-id-91"
@@ -6800,6 +6917,7 @@ exports[`Expression Base renders with formula option selected 1`] = `
                   role="presentation"
                 >
                   <div
+                    aria-disabled={null}
                     aria-selected={null}
                     className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                     id="listbox-option-id-105"
@@ -6827,6 +6945,7 @@ exports[`Expression Base renders with formula option selected 1`] = `
                   role="presentation"
                 >
                   <div
+                    aria-disabled={null}
                     aria-selected={null}
                     className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                     id="listbox-option-id-106"
@@ -6854,6 +6973,7 @@ exports[`Expression Base renders with formula option selected 1`] = `
                   role="presentation"
                 >
                   <div
+                    aria-disabled={null}
                     aria-selected={null}
                     className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                     id="listbox-option-id-107"
@@ -6881,6 +7001,7 @@ exports[`Expression Base renders with formula option selected 1`] = `
                   role="presentation"
                 >
                   <div
+                    aria-disabled={null}
                     aria-selected={null}
                     className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                     id="listbox-option-id-108"
@@ -6908,6 +7029,7 @@ exports[`Expression Base renders with formula option selected 1`] = `
                   role="presentation"
                 >
                   <div
+                    aria-disabled={null}
                     aria-selected="true"
                     className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-is-selected slds-has-focus"
                     id="listbox-option-id-109"
@@ -7053,6 +7175,7 @@ exports[`Expression Base renders with formula option selected 1`] = `
                           role="presentation"
                         >
                           <div
+                            aria-disabled={null}
                             aria-selected={null}
                             className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                             id="listbox-option-id-110"
@@ -7080,6 +7203,7 @@ exports[`Expression Base renders with formula option selected 1`] = `
                           role="presentation"
                         >
                           <div
+                            aria-disabled={null}
                             aria-selected={null}
                             className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                             id="listbox-option-id-111"
@@ -7107,6 +7231,7 @@ exports[`Expression Base renders with formula option selected 1`] = `
                           role="presentation"
                         >
                           <div
+                            aria-disabled={null}
                             aria-selected={null}
                             className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                             id="listbox-option-id-112"
@@ -7134,6 +7259,7 @@ exports[`Expression Base renders with formula option selected 1`] = `
                           role="presentation"
                         >
                           <div
+                            aria-disabled={null}
                             aria-selected={null}
                             className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                             id="listbox-option-id-113"
@@ -7243,6 +7369,7 @@ exports[`Expression Base renders with formula option selected 1`] = `
                           role="presentation"
                         >
                           <div
+                            aria-disabled={null}
                             aria-selected={null}
                             className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                             id="listbox-option-id-114"
@@ -7270,6 +7397,7 @@ exports[`Expression Base renders with formula option selected 1`] = `
                           role="presentation"
                         >
                           <div
+                            aria-disabled={null}
                             aria-selected={null}
                             className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                             id="listbox-option-id-115"
@@ -7297,6 +7425,7 @@ exports[`Expression Base renders with formula option selected 1`] = `
                           role="presentation"
                         >
                           <div
+                            aria-disabled={null}
                             aria-selected={null}
                             className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                             id="listbox-option-id-116"
@@ -7324,6 +7453,7 @@ exports[`Expression Base renders with formula option selected 1`] = `
                           role="presentation"
                         >
                           <div
+                            aria-disabled={null}
                             aria-selected={null}
                             className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                             id="listbox-option-id-117"
@@ -7551,6 +7681,7 @@ exports[`Expression Base renders with legend text 1`] = `
                   role="presentation"
                 >
                   <div
+                    aria-disabled={null}
                     aria-selected={null}
                     className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                     id="listbox-option-id-40"
@@ -7578,6 +7709,7 @@ exports[`Expression Base renders with legend text 1`] = `
                   role="presentation"
                 >
                   <div
+                    aria-disabled={null}
                     aria-selected={null}
                     className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                     id="listbox-option-id-41"
@@ -7605,6 +7737,7 @@ exports[`Expression Base renders with legend text 1`] = `
                   role="presentation"
                 >
                   <div
+                    aria-disabled={null}
                     aria-selected={null}
                     className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                     id="listbox-option-id-42"
@@ -7632,6 +7765,7 @@ exports[`Expression Base renders with legend text 1`] = `
                   role="presentation"
                 >
                   <div
+                    aria-disabled={null}
                     aria-selected={null}
                     className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                     id="listbox-option-id-43"
@@ -7659,6 +7793,7 @@ exports[`Expression Base renders with legend text 1`] = `
                   role="presentation"
                 >
                   <div
+                    aria-disabled={null}
                     aria-selected={null}
                     className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                     id="listbox-option-id-44"
@@ -7788,6 +7923,7 @@ exports[`Expression Base renders with legend text 1`] = `
                           role="presentation"
                         >
                           <div
+                            aria-disabled={null}
                             aria-selected={null}
                             className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                             id="listbox-option-id-45"
@@ -7815,6 +7951,7 @@ exports[`Expression Base renders with legend text 1`] = `
                           role="presentation"
                         >
                           <div
+                            aria-disabled={null}
                             aria-selected={null}
                             className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                             id="listbox-option-id-46"
@@ -7842,6 +7979,7 @@ exports[`Expression Base renders with legend text 1`] = `
                           role="presentation"
                         >
                           <div
+                            aria-disabled={null}
                             aria-selected={null}
                             className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                             id="listbox-option-id-47"
@@ -7869,6 +8007,7 @@ exports[`Expression Base renders with legend text 1`] = `
                           role="presentation"
                         >
                           <div
+                            aria-disabled={null}
                             aria-selected={null}
                             className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                             id="listbox-option-id-48"
@@ -7978,6 +8117,7 @@ exports[`Expression Base renders with legend text 1`] = `
                           role="presentation"
                         >
                           <div
+                            aria-disabled={null}
                             aria-selected={null}
                             className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                             id="listbox-option-id-49"
@@ -8005,6 +8145,7 @@ exports[`Expression Base renders with legend text 1`] = `
                           role="presentation"
                         >
                           <div
+                            aria-disabled={null}
                             aria-selected={null}
                             className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                             id="listbox-option-id-50"
@@ -8032,6 +8173,7 @@ exports[`Expression Base renders with legend text 1`] = `
                           role="presentation"
                         >
                           <div
+                            aria-disabled={null}
                             aria-selected={null}
                             className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                             id="listbox-option-id-51"
@@ -8059,6 +8201,7 @@ exports[`Expression Base renders with legend text 1`] = `
                           role="presentation"
                         >
                           <div
+                            aria-disabled={null}
                             aria-selected={null}
                             className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                             id="listbox-option-id-52"
@@ -8411,6 +8554,7 @@ exports[`Expression Formula renders the default expression formula variant 1`] =
                   role="presentation"
                 >
                   <div
+                    aria-disabled={null}
                     aria-selected={null}
                     className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                     id="listbox-option-id-289"
@@ -8438,6 +8582,7 @@ exports[`Expression Formula renders the default expression formula variant 1`] =
                   role="presentation"
                 >
                   <div
+                    aria-disabled={null}
                     aria-selected={null}
                     className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                     id="listbox-option-id-290"
@@ -8465,6 +8610,7 @@ exports[`Expression Formula renders the default expression formula variant 1`] =
                   role="presentation"
                 >
                   <div
+                    aria-disabled={null}
                     aria-selected={null}
                     className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                     id="listbox-option-id-291"
@@ -8492,6 +8638,7 @@ exports[`Expression Formula renders the default expression formula variant 1`] =
                   role="presentation"
                 >
                   <div
+                    aria-disabled={null}
                     aria-selected={null}
                     className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                     id="listbox-option-id-292"
@@ -8519,6 +8666,7 @@ exports[`Expression Formula renders the default expression formula variant 1`] =
                   role="presentation"
                 >
                   <div
+                    aria-disabled={null}
                     aria-selected={null}
                     className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                     id="listbox-option-id-293"
@@ -8690,6 +8838,7 @@ exports[`Expression Formula renders the default expression formula variant 1`] =
                                     role="presentation"
                                   >
                                     <div
+                                      aria-disabled={null}
                                       aria-selected={null}
                                       className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-is-selected"
                                       id="listbox-option-id-294"
@@ -8736,6 +8885,7 @@ exports[`Expression Formula renders the default expression formula variant 1`] =
                                     role="presentation"
                                   >
                                     <div
+                                      aria-disabled={null}
                                       aria-selected={null}
                                       className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                                       id="listbox-option-id-295"
@@ -8777,6 +8927,7 @@ exports[`Expression Formula renders the default expression formula variant 1`] =
                                     role="presentation"
                                   >
                                     <div
+                                      aria-disabled={null}
                                       aria-selected={null}
                                       className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                                       id="listbox-option-id-296"
@@ -8818,6 +8969,7 @@ exports[`Expression Formula renders the default expression formula variant 1`] =
                                     role="presentation"
                                   >
                                     <div
+                                      aria-disabled={null}
                                       aria-selected={null}
                                       className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                                       id="listbox-option-id-297"
@@ -8924,6 +9076,7 @@ exports[`Expression Formula renders the default expression formula variant 1`] =
                               role="presentation"
                             >
                               <div
+                                aria-disabled={null}
                                 aria-selected={null}
                                 className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
                                 id="listbox-option-id-298"
@@ -8971,6 +9124,7 @@ exports[`Expression Formula renders the default expression formula variant 1`] =
                               role="presentation"
                             >
                               <div
+                                aria-disabled={null}
                                 aria-selected={null}
                                 className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
                                 id="listbox-option-id-299"
@@ -9139,6 +9293,7 @@ exports[`Expression Formula renders the default expression formula variant 1`] =
                                     role="presentation"
                                   >
                                     <div
+                                      aria-disabled={null}
                                       aria-selected={null}
                                       className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-is-selected"
                                       id="listbox-option-id-300"
@@ -9185,6 +9340,7 @@ exports[`Expression Formula renders the default expression formula variant 1`] =
                                     role="presentation"
                                   >
                                     <div
+                                      aria-disabled={null}
                                       aria-selected={null}
                                       className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                                       id="listbox-option-id-301"
@@ -9226,6 +9382,7 @@ exports[`Expression Formula renders the default expression formula variant 1`] =
                                     role="presentation"
                                   >
                                     <div
+                                      aria-disabled={null}
                                       aria-selected={null}
                                       className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                                       id="listbox-option-id-302"
@@ -9267,6 +9424,7 @@ exports[`Expression Formula renders the default expression formula variant 1`] =
                                     role="presentation"
                                   >
                                     <div
+                                      aria-disabled={null}
                                       aria-selected={null}
                                       className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                                       id="listbox-option-id-303"
@@ -9373,6 +9531,7 @@ exports[`Expression Formula renders the default expression formula variant 1`] =
                               role="presentation"
                             >
                               <div
+                                aria-disabled={null}
                                 aria-selected={null}
                                 className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
                                 id="listbox-option-id-304"
@@ -9420,6 +9579,7 @@ exports[`Expression Formula renders the default expression formula variant 1`] =
                               role="presentation"
                             >
                               <div
+                                aria-disabled={null}
                                 aria-selected={null}
                                 className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
                                 id="listbox-option-id-305"
@@ -9638,6 +9798,7 @@ exports[`Expression Formula renders the default expression formula with an optio
                   role="presentation"
                 >
                   <div
+                    aria-disabled={null}
                     aria-selected={null}
                     className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                     id="listbox-option-id-306"
@@ -9665,6 +9826,7 @@ exports[`Expression Formula renders the default expression formula with an optio
                   role="presentation"
                 >
                   <div
+                    aria-disabled={null}
                     aria-selected={null}
                     className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                     id="listbox-option-id-307"
@@ -9692,6 +9854,7 @@ exports[`Expression Formula renders the default expression formula with an optio
                   role="presentation"
                 >
                   <div
+                    aria-disabled={null}
                     aria-selected={null}
                     className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                     id="listbox-option-id-308"
@@ -9719,6 +9882,7 @@ exports[`Expression Formula renders the default expression formula with an optio
                   role="presentation"
                 >
                   <div
+                    aria-disabled={null}
                     aria-selected={null}
                     className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                     id="listbox-option-id-309"
@@ -9746,6 +9910,7 @@ exports[`Expression Formula renders the default expression formula with an optio
                   role="presentation"
                 >
                   <div
+                    aria-disabled={null}
                     aria-selected="true"
                     className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-is-selected slds-has-focus"
                     id="listbox-option-id-310"
@@ -9936,6 +10101,7 @@ exports[`Expression Formula renders the default expression formula with an optio
                                     role="presentation"
                                   >
                                     <div
+                                      aria-disabled={null}
                                       aria-selected={null}
                                       className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-is-selected"
                                       id="listbox-option-id-311"
@@ -9982,6 +10148,7 @@ exports[`Expression Formula renders the default expression formula with an optio
                                     role="presentation"
                                   >
                                     <div
+                                      aria-disabled={null}
                                       aria-selected={null}
                                       className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                                       id="listbox-option-id-312"
@@ -10023,6 +10190,7 @@ exports[`Expression Formula renders the default expression formula with an optio
                                     role="presentation"
                                   >
                                     <div
+                                      aria-disabled={null}
                                       aria-selected={null}
                                       className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                                       id="listbox-option-id-313"
@@ -10064,6 +10232,7 @@ exports[`Expression Formula renders the default expression formula with an optio
                                     role="presentation"
                                   >
                                     <div
+                                      aria-disabled={null}
                                       aria-selected={null}
                                       className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                                       id="listbox-option-id-314"
@@ -10170,6 +10339,7 @@ exports[`Expression Formula renders the default expression formula with an optio
                               role="presentation"
                             >
                               <div
+                                aria-disabled={null}
                                 aria-selected={null}
                                 className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
                                 id="listbox-option-id-315"
@@ -10217,6 +10387,7 @@ exports[`Expression Formula renders the default expression formula with an optio
                               role="presentation"
                             >
                               <div
+                                aria-disabled={null}
                                 aria-selected={null}
                                 className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
                                 id="listbox-option-id-316"
@@ -10385,6 +10556,7 @@ exports[`Expression Formula renders the default expression formula with an optio
                                     role="presentation"
                                   >
                                     <div
+                                      aria-disabled={null}
                                       aria-selected={null}
                                       className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-is-selected"
                                       id="listbox-option-id-317"
@@ -10431,6 +10603,7 @@ exports[`Expression Formula renders the default expression formula with an optio
                                     role="presentation"
                                   >
                                     <div
+                                      aria-disabled={null}
                                       aria-selected={null}
                                       className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                                       id="listbox-option-id-318"
@@ -10472,6 +10645,7 @@ exports[`Expression Formula renders the default expression formula with an optio
                                     role="presentation"
                                   >
                                     <div
+                                      aria-disabled={null}
                                       aria-selected={null}
                                       className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                                       id="listbox-option-id-319"
@@ -10513,6 +10687,7 @@ exports[`Expression Formula renders the default expression formula with an optio
                                     role="presentation"
                                   >
                                     <div
+                                      aria-disabled={null}
                                       aria-selected={null}
                                       className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                                       id="listbox-option-id-320"
@@ -10619,6 +10794,7 @@ exports[`Expression Formula renders the default expression formula with an optio
                               role="presentation"
                             >
                               <div
+                                aria-disabled={null}
                                 aria-selected={null}
                                 className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
                                 id="listbox-option-id-321"
@@ -10666,6 +10842,7 @@ exports[`Expression Formula renders the default expression formula with an optio
                               role="presentation"
                             >
                               <div
+                                aria-disabled={null}
                                 aria-selected={null}
                                 className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
                                 id="listbox-option-id-322"
@@ -10894,6 +11071,7 @@ exports[`Expression Group renders the default expression group 1`] = `
                     role="presentation"
                   >
                     <div
+                      aria-disabled={null}
                       aria-selected={null}
                       className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                       id="listbox-option-id-236"
@@ -10921,6 +11099,7 @@ exports[`Expression Group renders the default expression group 1`] = `
                     role="presentation"
                   >
                     <div
+                      aria-disabled={null}
                       aria-selected={null}
                       className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                       id="listbox-option-id-237"
@@ -10948,6 +11127,7 @@ exports[`Expression Group renders the default expression group 1`] = `
                     role="presentation"
                   >
                     <div
+                      aria-disabled={null}
                       aria-selected={null}
                       className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                       id="listbox-option-id-238"
@@ -10975,6 +11155,7 @@ exports[`Expression Group renders the default expression group 1`] = `
                     role="presentation"
                   >
                     <div
+                      aria-disabled={null}
                       aria-selected={null}
                       className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                       id="listbox-option-id-239"
@@ -11002,6 +11183,7 @@ exports[`Expression Group renders the default expression group 1`] = `
                     role="presentation"
                   >
                     <div
+                      aria-disabled={null}
                       aria-selected={null}
                       className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                       id="listbox-option-id-240"
@@ -11148,6 +11330,7 @@ exports[`Expression Group renders the default expression group with a row 1`] = 
                     role="presentation"
                   >
                     <div
+                      aria-disabled={null}
                       aria-selected={null}
                       className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                       id="listbox-option-id-276"
@@ -11175,6 +11358,7 @@ exports[`Expression Group renders the default expression group with a row 1`] = 
                     role="presentation"
                   >
                     <div
+                      aria-disabled={null}
                       aria-selected={null}
                       className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                       id="listbox-option-id-277"
@@ -11202,6 +11386,7 @@ exports[`Expression Group renders the default expression group with a row 1`] = 
                     role="presentation"
                   >
                     <div
+                      aria-disabled={null}
                       aria-selected={null}
                       className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                       id="listbox-option-id-278"
@@ -11229,6 +11414,7 @@ exports[`Expression Group renders the default expression group with a row 1`] = 
                     role="presentation"
                   >
                     <div
+                      aria-disabled={null}
                       aria-selected={null}
                       className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                       id="listbox-option-id-279"
@@ -11256,6 +11442,7 @@ exports[`Expression Group renders the default expression group with a row 1`] = 
                     role="presentation"
                   >
                     <div
+                      aria-disabled={null}
                       aria-selected={null}
                       className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                       id="listbox-option-id-280"
@@ -11385,6 +11572,7 @@ exports[`Expression Group renders the default expression group with a row 1`] = 
                             role="presentation"
                           >
                             <div
+                              aria-disabled={null}
                               aria-selected={null}
                               className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                               id="listbox-option-id-281"
@@ -11412,6 +11600,7 @@ exports[`Expression Group renders the default expression group with a row 1`] = 
                             role="presentation"
                           >
                             <div
+                              aria-disabled={null}
                               aria-selected={null}
                               className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                               id="listbox-option-id-282"
@@ -11439,6 +11628,7 @@ exports[`Expression Group renders the default expression group with a row 1`] = 
                             role="presentation"
                           >
                             <div
+                              aria-disabled={null}
                               aria-selected={null}
                               className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                               id="listbox-option-id-283"
@@ -11466,6 +11656,7 @@ exports[`Expression Group renders the default expression group with a row 1`] = 
                             role="presentation"
                           >
                             <div
+                              aria-disabled={null}
                               aria-selected={null}
                               className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                               id="listbox-option-id-284"
@@ -11575,6 +11766,7 @@ exports[`Expression Group renders the default expression group with a row 1`] = 
                             role="presentation"
                           >
                             <div
+                              aria-disabled={null}
                               aria-selected={null}
                               className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                               id="listbox-option-id-285"
@@ -11602,6 +11794,7 @@ exports[`Expression Group renders the default expression group with a row 1`] = 
                             role="presentation"
                           >
                             <div
+                              aria-disabled={null}
                               aria-selected={null}
                               className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                               id="listbox-option-id-286"
@@ -11629,6 +11822,7 @@ exports[`Expression Group renders the default expression group with a row 1`] = 
                             role="presentation"
                           >
                             <div
+                              aria-disabled={null}
                               aria-selected={null}
                               className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                               id="listbox-option-id-287"
@@ -11656,6 +11850,7 @@ exports[`Expression Group renders the default expression group with a row 1`] = 
                             role="presentation"
                           >
                             <div
+                              aria-disabled={null}
                               aria-selected={null}
                               className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                               id="listbox-option-id-288"
@@ -11875,6 +12070,7 @@ exports[`Expression Group renders the default expression group with all option s
                     role="presentation"
                   >
                     <div
+                      aria-disabled={null}
                       aria-selected="true"
                       className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-is-selected slds-has-focus"
                       id="listbox-option-id-251"
@@ -11921,6 +12117,7 @@ exports[`Expression Group renders the default expression group with all option s
                     role="presentation"
                   >
                     <div
+                      aria-disabled={null}
                       aria-selected={null}
                       className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                       id="listbox-option-id-252"
@@ -11948,6 +12145,7 @@ exports[`Expression Group renders the default expression group with all option s
                     role="presentation"
                   >
                     <div
+                      aria-disabled={null}
                       aria-selected={null}
                       className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                       id="listbox-option-id-253"
@@ -11975,6 +12173,7 @@ exports[`Expression Group renders the default expression group with all option s
                     role="presentation"
                   >
                     <div
+                      aria-disabled={null}
                       aria-selected={null}
                       className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                       id="listbox-option-id-254"
@@ -12002,6 +12201,7 @@ exports[`Expression Group renders the default expression group with all option s
                     role="presentation"
                   >
                     <div
+                      aria-disabled={null}
                       aria-selected={null}
                       className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                       id="listbox-option-id-255"
@@ -12148,6 +12348,7 @@ exports[`Expression Group renders the default expression group with always optio
                     role="presentation"
                   >
                     <div
+                      aria-disabled={null}
                       aria-selected={null}
                       className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                       id="listbox-option-id-256"
@@ -12175,6 +12376,7 @@ exports[`Expression Group renders the default expression group with always optio
                     role="presentation"
                   >
                     <div
+                      aria-disabled={null}
                       aria-selected={null}
                       className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                       id="listbox-option-id-257"
@@ -12202,6 +12404,7 @@ exports[`Expression Group renders the default expression group with always optio
                     role="presentation"
                   >
                     <div
+                      aria-disabled={null}
                       aria-selected={null}
                       className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                       id="listbox-option-id-258"
@@ -12229,6 +12432,7 @@ exports[`Expression Group renders the default expression group with always optio
                     role="presentation"
                   >
                     <div
+                      aria-disabled={null}
                       aria-selected="true"
                       className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-is-selected slds-has-focus"
                       id="listbox-option-id-259"
@@ -12275,6 +12479,7 @@ exports[`Expression Group renders the default expression group with always optio
                     role="presentation"
                   >
                     <div
+                      aria-disabled={null}
                       aria-selected={null}
                       className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                       id="listbox-option-id-260"
@@ -12421,6 +12626,7 @@ exports[`Expression Group renders the default expression group with any option s
                     role="presentation"
                   >
                     <div
+                      aria-disabled={null}
                       aria-selected={null}
                       className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                       id="listbox-option-id-246"
@@ -12448,6 +12654,7 @@ exports[`Expression Group renders the default expression group with any option s
                     role="presentation"
                   >
                     <div
+                      aria-disabled={null}
                       aria-selected="true"
                       className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-is-selected slds-has-focus"
                       id="listbox-option-id-247"
@@ -12494,6 +12701,7 @@ exports[`Expression Group renders the default expression group with any option s
                     role="presentation"
                   >
                     <div
+                      aria-disabled={null}
                       aria-selected={null}
                       className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                       id="listbox-option-id-248"
@@ -12521,6 +12729,7 @@ exports[`Expression Group renders the default expression group with any option s
                     role="presentation"
                   >
                     <div
+                      aria-disabled={null}
                       aria-selected={null}
                       className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                       id="listbox-option-id-249"
@@ -12548,6 +12757,7 @@ exports[`Expression Group renders the default expression group with any option s
                     role="presentation"
                   >
                     <div
+                      aria-disabled={null}
                       aria-selected={null}
                       className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                       id="listbox-option-id-250"
@@ -12694,6 +12904,7 @@ exports[`Expression Group renders the default expression group with custom optio
                     role="presentation"
                   >
                     <div
+                      aria-disabled={null}
                       aria-selected={null}
                       className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                       id="listbox-option-id-261"
@@ -12721,6 +12932,7 @@ exports[`Expression Group renders the default expression group with custom optio
                     role="presentation"
                   >
                     <div
+                      aria-disabled={null}
                       aria-selected={null}
                       className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                       id="listbox-option-id-262"
@@ -12748,6 +12960,7 @@ exports[`Expression Group renders the default expression group with custom optio
                     role="presentation"
                   >
                     <div
+                      aria-disabled={null}
                       aria-selected="true"
                       className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-is-selected slds-has-focus"
                       id="listbox-option-id-263"
@@ -12794,6 +13007,7 @@ exports[`Expression Group renders the default expression group with custom optio
                     role="presentation"
                   >
                     <div
+                      aria-disabled={null}
                       aria-selected={null}
                       className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                       id="listbox-option-id-264"
@@ -12821,6 +13035,7 @@ exports[`Expression Group renders the default expression group with custom optio
                     role="presentation"
                   >
                     <div
+                      aria-disabled={null}
                       aria-selected={null}
                       className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                       id="listbox-option-id-265"
@@ -12967,6 +13182,7 @@ exports[`Expression Group renders the default expression group with formula opti
                     role="presentation"
                   >
                     <div
+                      aria-disabled={null}
                       aria-selected={null}
                       className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                       id="listbox-option-id-266"
@@ -12994,6 +13210,7 @@ exports[`Expression Group renders the default expression group with formula opti
                     role="presentation"
                   >
                     <div
+                      aria-disabled={null}
                       aria-selected={null}
                       className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                       id="listbox-option-id-267"
@@ -13021,6 +13238,7 @@ exports[`Expression Group renders the default expression group with formula opti
                     role="presentation"
                   >
                     <div
+                      aria-disabled={null}
                       aria-selected={null}
                       className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                       id="listbox-option-id-268"
@@ -13048,6 +13266,7 @@ exports[`Expression Group renders the default expression group with formula opti
                     role="presentation"
                   >
                     <div
+                      aria-disabled={null}
                       aria-selected={null}
                       className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                       id="listbox-option-id-269"
@@ -13075,6 +13294,7 @@ exports[`Expression Group renders the default expression group with formula opti
                     role="presentation"
                   >
                     <div
+                      aria-disabled={null}
                       aria-selected="true"
                       className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-is-selected slds-has-focus"
                       id="listbox-option-id-270"
@@ -13240,6 +13460,7 @@ exports[`Expression Group renders the default expression group with group option
                     role="presentation"
                   >
                     <div
+                      aria-disabled={null}
                       aria-selected={null}
                       className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                       id="listbox-option-id-271"
@@ -13267,6 +13488,7 @@ exports[`Expression Group renders the default expression group with group option
                     role="presentation"
                   >
                     <div
+                      aria-disabled={null}
                       aria-selected="true"
                       className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-is-selected slds-has-focus"
                       id="listbox-option-id-272"
@@ -13313,6 +13535,7 @@ exports[`Expression Group renders the default expression group with group option
                     role="presentation"
                   >
                     <div
+                      aria-disabled={null}
                       aria-selected={null}
                       className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                       id="listbox-option-id-273"
@@ -13340,6 +13563,7 @@ exports[`Expression Group renders the default expression group with group option
                     role="presentation"
                   >
                     <div
+                      aria-disabled={null}
                       aria-selected={null}
                       className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                       id="listbox-option-id-274"
@@ -13367,6 +13591,7 @@ exports[`Expression Group renders the default expression group with group option
                     role="presentation"
                   >
                     <div
+                      aria-disabled={null}
                       aria-selected={null}
                       className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                       id="listbox-option-id-275"
@@ -13516,6 +13741,7 @@ exports[`Expression Group renders the default expression group with legend text 
                     role="presentation"
                   >
                     <div
+                      aria-disabled={null}
                       aria-selected={null}
                       className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                       id="listbox-option-id-241"
@@ -13543,6 +13769,7 @@ exports[`Expression Group renders the default expression group with legend text 
                     role="presentation"
                   >
                     <div
+                      aria-disabled={null}
                       aria-selected={null}
                       className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                       id="listbox-option-id-242"
@@ -13570,6 +13797,7 @@ exports[`Expression Group renders the default expression group with legend text 
                     role="presentation"
                   >
                     <div
+                      aria-disabled={null}
                       aria-selected={null}
                       className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                       id="listbox-option-id-243"
@@ -13597,6 +13825,7 @@ exports[`Expression Group renders the default expression group with legend text 
                     role="presentation"
                   >
                     <div
+                      aria-disabled={null}
                       aria-selected={null}
                       className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                       id="listbox-option-id-244"
@@ -13624,6 +13853,7 @@ exports[`Expression Group renders the default expression group with legend text 
                     role="presentation"
                   >
                     <div
+                      aria-disabled={null}
                       aria-selected={null}
                       className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                       id="listbox-option-id-245"
@@ -13822,6 +14052,7 @@ exports[`Expression List renders the default expression list 1`] = `
                         role="presentation"
                       >
                         <div
+                          aria-disabled={null}
                           aria-selected={null}
                           className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                           id="listbox-option-id-228"
@@ -13849,6 +14080,7 @@ exports[`Expression List renders the default expression list 1`] = `
                         role="presentation"
                       >
                         <div
+                          aria-disabled={null}
                           aria-selected={null}
                           className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                           id="listbox-option-id-229"
@@ -13876,6 +14108,7 @@ exports[`Expression List renders the default expression list 1`] = `
                         role="presentation"
                       >
                         <div
+                          aria-disabled={null}
                           aria-selected={null}
                           className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                           id="listbox-option-id-230"
@@ -13903,6 +14136,7 @@ exports[`Expression List renders the default expression list 1`] = `
                         role="presentation"
                       >
                         <div
+                          aria-disabled={null}
                           aria-selected={null}
                           className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                           id="listbox-option-id-231"
@@ -14012,6 +14246,7 @@ exports[`Expression List renders the default expression list 1`] = `
                         role="presentation"
                       >
                         <div
+                          aria-disabled={null}
                           aria-selected={null}
                           className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                           id="listbox-option-id-232"
@@ -14039,6 +14274,7 @@ exports[`Expression List renders the default expression list 1`] = `
                         role="presentation"
                       >
                         <div
+                          aria-disabled={null}
                           aria-selected={null}
                           className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                           id="listbox-option-id-233"
@@ -14066,6 +14302,7 @@ exports[`Expression List renders the default expression list 1`] = `
                         role="presentation"
                       >
                         <div
+                          aria-disabled={null}
                           aria-selected={null}
                           className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                           id="listbox-option-id-234"
@@ -14093,6 +14330,7 @@ exports[`Expression List renders the default expression list 1`] = `
                         role="presentation"
                       >
                         <div
+                          aria-disabled={null}
                           aria-selected={null}
                           className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                           id="listbox-option-id-235"
@@ -14372,6 +14610,7 @@ exports[`Expression Narrow Group renders the default expression narrow group 1`]
                   role="presentation"
                 >
                   <div
+                    aria-disabled={null}
                     aria-selected={null}
                     className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                     id="listbox-option-id-333"
@@ -14399,6 +14638,7 @@ exports[`Expression Narrow Group renders the default expression narrow group 1`]
                   role="presentation"
                 >
                   <div
+                    aria-disabled={null}
                     aria-selected={null}
                     className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                     id="listbox-option-id-334"
@@ -14426,6 +14666,7 @@ exports[`Expression Narrow Group renders the default expression narrow group 1`]
                   role="presentation"
                 >
                   <div
+                    aria-disabled={null}
                     aria-selected={null}
                     className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                     id="listbox-option-id-335"
@@ -14453,6 +14694,7 @@ exports[`Expression Narrow Group renders the default expression narrow group 1`]
                   role="presentation"
                 >
                   <div
+                    aria-disabled={null}
                     aria-selected={null}
                     className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                     id="listbox-option-id-336"
@@ -14480,6 +14722,7 @@ exports[`Expression Narrow Group renders the default expression narrow group 1`]
                   role="presentation"
                 >
                   <div
+                    aria-disabled={null}
                     aria-selected={null}
                     className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                     id="listbox-option-id-337"
@@ -14699,6 +14942,7 @@ exports[`Expression Narrow Group renders the default expression narrow with opti
                   role="presentation"
                 >
                   <div
+                    aria-disabled={null}
                     aria-selected={null}
                     className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                     id="listbox-option-id-338"
@@ -14726,6 +14970,7 @@ exports[`Expression Narrow Group renders the default expression narrow with opti
                   role="presentation"
                 >
                   <div
+                    aria-disabled={null}
                     aria-selected="true"
                     className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-is-selected slds-has-focus"
                     id="listbox-option-id-339"
@@ -14772,6 +15017,7 @@ exports[`Expression Narrow Group renders the default expression narrow with opti
                   role="presentation"
                 >
                   <div
+                    aria-disabled={null}
                     aria-selected={null}
                     className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                     id="listbox-option-id-340"
@@ -14799,6 +15045,7 @@ exports[`Expression Narrow Group renders the default expression narrow with opti
                   role="presentation"
                 >
                   <div
+                    aria-disabled={null}
                     aria-selected={null}
                     className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                     id="listbox-option-id-341"
@@ -14826,6 +15073,7 @@ exports[`Expression Narrow Group renders the default expression narrow with opti
                   role="presentation"
                 >
                   <div
+                    aria-disabled={null}
                     aria-selected={null}
                     className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                     id="listbox-option-id-342"
@@ -15028,6 +15276,7 @@ exports[`Expression Narrow renders the default expression narrow variant 1`] = `
                       role="presentation"
                     >
                       <div
+                        aria-disabled={null}
                         aria-selected={null}
                         className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                         id="listbox-option-id-323"
@@ -15055,6 +15304,7 @@ exports[`Expression Narrow renders the default expression narrow variant 1`] = `
                       role="presentation"
                     >
                       <div
+                        aria-disabled={null}
                         aria-selected={null}
                         className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                         id="listbox-option-id-324"
@@ -15082,6 +15332,7 @@ exports[`Expression Narrow renders the default expression narrow variant 1`] = `
                       role="presentation"
                     >
                       <div
+                        aria-disabled={null}
                         aria-selected={null}
                         className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                         id="listbox-option-id-325"
@@ -15109,6 +15360,7 @@ exports[`Expression Narrow renders the default expression narrow variant 1`] = `
                       role="presentation"
                     >
                       <div
+                        aria-disabled={null}
                         aria-selected={null}
                         className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                         id="listbox-option-id-326"
@@ -15136,6 +15388,7 @@ exports[`Expression Narrow renders the default expression narrow variant 1`] = `
                       role="presentation"
                     >
                       <div
+                        aria-disabled={null}
                         aria-selected={null}
                         className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                         id="listbox-option-id-327"
@@ -15356,6 +15609,7 @@ exports[`Expression Narrow renders the default expression narrow with option sel
                       role="presentation"
                     >
                       <div
+                        aria-disabled={null}
                         aria-selected="true"
                         className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-is-selected slds-has-focus"
                         id="listbox-option-id-328"
@@ -15402,6 +15656,7 @@ exports[`Expression Narrow renders the default expression narrow with option sel
                       role="presentation"
                     >
                       <div
+                        aria-disabled={null}
                         aria-selected={null}
                         className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                         id="listbox-option-id-329"
@@ -15429,6 +15684,7 @@ exports[`Expression Narrow renders the default expression narrow with option sel
                       role="presentation"
                     >
                       <div
+                        aria-disabled={null}
                         aria-selected={null}
                         className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                         id="listbox-option-id-330"
@@ -15456,6 +15712,7 @@ exports[`Expression Narrow renders the default expression narrow with option sel
                       role="presentation"
                     >
                       <div
+                        aria-disabled={null}
                         aria-selected={null}
                         className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                         id="listbox-option-id-331"
@@ -15483,6 +15740,7 @@ exports[`Expression Narrow renders the default expression narrow with option sel
                       role="presentation"
                     >
                       <div
+                        aria-disabled={null}
                         aria-selected={null}
                         className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                         id="listbox-option-id-332"
@@ -15683,6 +15941,7 @@ exports[`Expression Options renders the default expression options 1`] = `
                 role="presentation"
               >
                 <div
+                  aria-disabled={null}
                   aria-selected={null}
                   className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                   id="listbox-option-id-208"
@@ -15710,6 +15969,7 @@ exports[`Expression Options renders the default expression options 1`] = `
                 role="presentation"
               >
                 <div
+                  aria-disabled={null}
                   aria-selected={null}
                   className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                   id="listbox-option-id-209"
@@ -15737,6 +15997,7 @@ exports[`Expression Options renders the default expression options 1`] = `
                 role="presentation"
               >
                 <div
+                  aria-disabled={null}
                   aria-selected={null}
                   className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                   id="listbox-option-id-210"
@@ -15764,6 +16025,7 @@ exports[`Expression Options renders the default expression options 1`] = `
                 role="presentation"
               >
                 <div
+                  aria-disabled={null}
                   aria-selected={null}
                   className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                   id="listbox-option-id-211"
@@ -15791,6 +16053,7 @@ exports[`Expression Options renders the default expression options 1`] = `
                 role="presentation"
               >
                 <div
+                  aria-disabled={null}
                   aria-selected={null}
                   className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                   id="listbox-option-id-212"
@@ -15903,6 +16166,7 @@ exports[`Expression Options renders the default expression options in a filter 1
                 role="presentation"
               >
                 <div
+                  aria-disabled={null}
                   aria-selected={null}
                   className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                   id="listbox-option-id-218"
@@ -15930,6 +16194,7 @@ exports[`Expression Options renders the default expression options in a filter 1
                 role="presentation"
               >
                 <div
+                  aria-disabled={null}
                   aria-selected={null}
                   className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                   id="listbox-option-id-219"
@@ -15957,6 +16222,7 @@ exports[`Expression Options renders the default expression options in a filter 1
                 role="presentation"
               >
                 <div
+                  aria-disabled={null}
                   aria-selected={null}
                   className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                   id="listbox-option-id-220"
@@ -15984,6 +16250,7 @@ exports[`Expression Options renders the default expression options in a filter 1
                 role="presentation"
               >
                 <div
+                  aria-disabled={null}
                   aria-selected={null}
                   className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                   id="listbox-option-id-221"
@@ -16011,6 +16278,7 @@ exports[`Expression Options renders the default expression options in a filter 1
                 role="presentation"
               >
                 <div
+                  aria-disabled={null}
                   aria-selected={null}
                   className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                   id="listbox-option-id-222"
@@ -16123,6 +16391,7 @@ exports[`Expression Options renders the default expression options with a label 
                 role="presentation"
               >
                 <div
+                  aria-disabled={null}
                   aria-selected={null}
                   className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                   id="listbox-option-id-213"
@@ -16150,6 +16419,7 @@ exports[`Expression Options renders the default expression options with a label 
                 role="presentation"
               >
                 <div
+                  aria-disabled={null}
                   aria-selected={null}
                   className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                   id="listbox-option-id-214"
@@ -16177,6 +16447,7 @@ exports[`Expression Options renders the default expression options with a label 
                 role="presentation"
               >
                 <div
+                  aria-disabled={null}
                   aria-selected={null}
                   className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                   id="listbox-option-id-215"
@@ -16204,6 +16475,7 @@ exports[`Expression Options renders the default expression options with a label 
                 role="presentation"
               >
                 <div
+                  aria-disabled={null}
                   aria-selected={null}
                   className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                   id="listbox-option-id-216"
@@ -16231,6 +16503,7 @@ exports[`Expression Options renders the default expression options with a label 
                 role="presentation"
               >
                 <div
+                  aria-disabled={null}
                   aria-selected={null}
                   className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                   id="listbox-option-id-217"
@@ -16343,6 +16616,7 @@ exports[`Expression Options renders the default expression options with an optio
                 role="presentation"
               >
                 <div
+                  aria-disabled={null}
                   aria-selected="true"
                   className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-is-selected slds-has-focus"
                   id="listbox-option-id-223"
@@ -16389,6 +16663,7 @@ exports[`Expression Options renders the default expression options with an optio
                 role="presentation"
               >
                 <div
+                  aria-disabled={null}
                   aria-selected={null}
                   className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                   id="listbox-option-id-224"
@@ -16416,6 +16691,7 @@ exports[`Expression Options renders the default expression options with an optio
                 role="presentation"
               >
                 <div
+                  aria-disabled={null}
                   aria-selected={null}
                   className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                   id="listbox-option-id-225"
@@ -16443,6 +16719,7 @@ exports[`Expression Options renders the default expression options with an optio
                 role="presentation"
               >
                 <div
+                  aria-disabled={null}
                   aria-selected={null}
                   className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                   id="listbox-option-id-226"
@@ -16470,6 +16747,7 @@ exports[`Expression Options renders the default expression options with an optio
                 role="presentation"
               >
                 <div
+                  aria-disabled={null}
                   aria-selected={null}
                   className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                   id="listbox-option-id-227"
@@ -16598,6 +16876,7 @@ exports[`Expression Row renders the default row 1`] = `
                       role="presentation"
                     >
                       <div
+                        aria-disabled={null}
                         aria-selected={null}
                         className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                         id="listbox-option-id-144"
@@ -16625,6 +16904,7 @@ exports[`Expression Row renders the default row 1`] = `
                       role="presentation"
                     >
                       <div
+                        aria-disabled={null}
                         aria-selected={null}
                         className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                         id="listbox-option-id-145"
@@ -16652,6 +16932,7 @@ exports[`Expression Row renders the default row 1`] = `
                       role="presentation"
                     >
                       <div
+                        aria-disabled={null}
                         aria-selected={null}
                         className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                         id="listbox-option-id-146"
@@ -16679,6 +16960,7 @@ exports[`Expression Row renders the default row 1`] = `
                       role="presentation"
                     >
                       <div
+                        aria-disabled={null}
                         aria-selected={null}
                         className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                         id="listbox-option-id-147"
@@ -16788,6 +17070,7 @@ exports[`Expression Row renders the default row 1`] = `
                       role="presentation"
                     >
                       <div
+                        aria-disabled={null}
                         aria-selected={null}
                         className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                         id="listbox-option-id-148"
@@ -16815,6 +17098,7 @@ exports[`Expression Row renders the default row 1`] = `
                       role="presentation"
                     >
                       <div
+                        aria-disabled={null}
                         aria-selected={null}
                         className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                         id="listbox-option-id-149"
@@ -16842,6 +17126,7 @@ exports[`Expression Row renders the default row 1`] = `
                       role="presentation"
                     >
                       <div
+                        aria-disabled={null}
                         aria-selected={null}
                         className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                         id="listbox-option-id-150"
@@ -16869,6 +17154,7 @@ exports[`Expression Row renders the default row 1`] = `
                       role="presentation"
                     >
                       <div
+                        aria-disabled={null}
                         aria-selected={null}
                         className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                         id="listbox-option-id-151"
@@ -17070,6 +17356,7 @@ exports[`Expression Row renders the default row in a group 1`] = `
                       role="presentation"
                     >
                       <div
+                        aria-disabled={null}
                         aria-selected={null}
                         className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                         id="listbox-option-id-160"
@@ -17097,6 +17384,7 @@ exports[`Expression Row renders the default row in a group 1`] = `
                       role="presentation"
                     >
                       <div
+                        aria-disabled={null}
                         aria-selected={null}
                         className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                         id="listbox-option-id-161"
@@ -17124,6 +17412,7 @@ exports[`Expression Row renders the default row in a group 1`] = `
                       role="presentation"
                     >
                       <div
+                        aria-disabled={null}
                         aria-selected={null}
                         className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                         id="listbox-option-id-162"
@@ -17151,6 +17440,7 @@ exports[`Expression Row renders the default row in a group 1`] = `
                       role="presentation"
                     >
                       <div
+                        aria-disabled={null}
                         aria-selected={null}
                         className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                         id="listbox-option-id-163"
@@ -17260,6 +17550,7 @@ exports[`Expression Row renders the default row in a group 1`] = `
                       role="presentation"
                     >
                       <div
+                        aria-disabled={null}
                         aria-selected={null}
                         className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                         id="listbox-option-id-164"
@@ -17287,6 +17578,7 @@ exports[`Expression Row renders the default row in a group 1`] = `
                       role="presentation"
                     >
                       <div
+                        aria-disabled={null}
                         aria-selected={null}
                         className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                         id="listbox-option-id-165"
@@ -17314,6 +17606,7 @@ exports[`Expression Row renders the default row in a group 1`] = `
                       role="presentation"
                     >
                       <div
+                        aria-disabled={null}
                         aria-selected={null}
                         className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                         id="listbox-option-id-166"
@@ -17341,6 +17634,7 @@ exports[`Expression Row renders the default row in a group 1`] = `
                       role="presentation"
                     >
                       <div
+                        aria-disabled={null}
                         aria-selected={null}
                         className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                         id="listbox-option-id-167"
@@ -17542,6 +17836,7 @@ exports[`Expression Row renders the default row with a resource selected 1`] = `
                       role="presentation"
                     >
                       <div
+                        aria-disabled={null}
                         aria-selected="true"
                         className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-is-selected slds-has-focus"
                         id="listbox-option-id-192"
@@ -17588,6 +17883,7 @@ exports[`Expression Row renders the default row with a resource selected 1`] = `
                       role="presentation"
                     >
                       <div
+                        aria-disabled={null}
                         aria-selected={null}
                         className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                         id="listbox-option-id-193"
@@ -17615,6 +17911,7 @@ exports[`Expression Row renders the default row with a resource selected 1`] = `
                       role="presentation"
                     >
                       <div
+                        aria-disabled={null}
                         aria-selected={null}
                         className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                         id="listbox-option-id-194"
@@ -17642,6 +17939,7 @@ exports[`Expression Row renders the default row with a resource selected 1`] = `
                       role="presentation"
                     >
                       <div
+                        aria-disabled={null}
                         aria-selected={null}
                         className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                         id="listbox-option-id-195"
@@ -17751,6 +18049,7 @@ exports[`Expression Row renders the default row with a resource selected 1`] = `
                       role="presentation"
                     >
                       <div
+                        aria-disabled={null}
                         aria-selected={null}
                         className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                         id="listbox-option-id-196"
@@ -17778,6 +18077,7 @@ exports[`Expression Row renders the default row with a resource selected 1`] = `
                       role="presentation"
                     >
                       <div
+                        aria-disabled={null}
                         aria-selected={null}
                         className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                         id="listbox-option-id-197"
@@ -17805,6 +18105,7 @@ exports[`Expression Row renders the default row with a resource selected 1`] = `
                       role="presentation"
                     >
                       <div
+                        aria-disabled={null}
                         aria-selected={null}
                         className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                         id="listbox-option-id-198"
@@ -17832,6 +18133,7 @@ exports[`Expression Row renders the default row with a resource selected 1`] = `
                       role="presentation"
                     >
                       <div
+                        aria-disabled={null}
                         aria-selected={null}
                         className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                         id="listbox-option-id-199"
@@ -18033,6 +18335,7 @@ exports[`Expression Row renders the default row with an error 1`] = `
                       role="presentation"
                     >
                       <div
+                        aria-disabled={null}
                         aria-selected={null}
                         className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                         id="listbox-option-id-200"
@@ -18060,6 +18363,7 @@ exports[`Expression Row renders the default row with an error 1`] = `
                       role="presentation"
                     >
                       <div
+                        aria-disabled={null}
                         aria-selected={null}
                         className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                         id="listbox-option-id-201"
@@ -18087,6 +18391,7 @@ exports[`Expression Row renders the default row with an error 1`] = `
                       role="presentation"
                     >
                       <div
+                        aria-disabled={null}
                         aria-selected={null}
                         className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                         id="listbox-option-id-202"
@@ -18114,6 +18419,7 @@ exports[`Expression Row renders the default row with an error 1`] = `
                       role="presentation"
                     >
                       <div
+                        aria-disabled={null}
                         aria-selected={null}
                         className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                         id="listbox-option-id-203"
@@ -18223,6 +18529,7 @@ exports[`Expression Row renders the default row with an error 1`] = `
                       role="presentation"
                     >
                       <div
+                        aria-disabled={null}
                         aria-selected={null}
                         className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                         id="listbox-option-id-204"
@@ -18250,6 +18557,7 @@ exports[`Expression Row renders the default row with an error 1`] = `
                       role="presentation"
                     >
                       <div
+                        aria-disabled={null}
                         aria-selected={null}
                         className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                         id="listbox-option-id-205"
@@ -18277,6 +18585,7 @@ exports[`Expression Row renders the default row with an error 1`] = `
                       role="presentation"
                     >
                       <div
+                        aria-disabled={null}
                         aria-selected={null}
                         className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                         id="listbox-option-id-206"
@@ -18304,6 +18613,7 @@ exports[`Expression Row renders the default row with an error 1`] = `
                       role="presentation"
                     >
                       <div
+                        aria-disabled={null}
                         aria-selected={null}
                         className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                         id="listbox-option-id-207"
@@ -18511,6 +18821,7 @@ exports[`Expression Row renders the default row with button disabled 1`] = `
                       role="presentation"
                     >
                       <div
+                        aria-disabled={null}
                         aria-selected={null}
                         className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                         id="listbox-option-id-176"
@@ -18538,6 +18849,7 @@ exports[`Expression Row renders the default row with button disabled 1`] = `
                       role="presentation"
                     >
                       <div
+                        aria-disabled={null}
                         aria-selected={null}
                         className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                         id="listbox-option-id-177"
@@ -18565,6 +18877,7 @@ exports[`Expression Row renders the default row with button disabled 1`] = `
                       role="presentation"
                     >
                       <div
+                        aria-disabled={null}
                         aria-selected={null}
                         className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                         id="listbox-option-id-178"
@@ -18592,6 +18905,7 @@ exports[`Expression Row renders the default row with button disabled 1`] = `
                       role="presentation"
                     >
                       <div
+                        aria-disabled={null}
                         aria-selected={null}
                         className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                         id="listbox-option-id-179"
@@ -18701,6 +19015,7 @@ exports[`Expression Row renders the default row with button disabled 1`] = `
                       role="presentation"
                     >
                       <div
+                        aria-disabled={null}
                         aria-selected={null}
                         className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                         id="listbox-option-id-180"
@@ -18728,6 +19043,7 @@ exports[`Expression Row renders the default row with button disabled 1`] = `
                       role="presentation"
                     >
                       <div
+                        aria-disabled={null}
                         aria-selected={null}
                         className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                         id="listbox-option-id-181"
@@ -18755,6 +19071,7 @@ exports[`Expression Row renders the default row with button disabled 1`] = `
                       role="presentation"
                     >
                       <div
+                        aria-disabled={null}
                         aria-selected={null}
                         className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                         id="listbox-option-id-182"
@@ -18782,6 +19099,7 @@ exports[`Expression Row renders the default row with button disabled 1`] = `
                       role="presentation"
                     >
                       <div
+                        aria-disabled={null}
                         aria-selected={null}
                         className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                         id="listbox-option-id-183"
@@ -18983,6 +19301,7 @@ exports[`Expression Row renders the default row with input disabled 1`] = `
                       role="presentation"
                     >
                       <div
+                        aria-disabled={null}
                         aria-selected={null}
                         className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                         id="listbox-option-id-168"
@@ -19010,6 +19329,7 @@ exports[`Expression Row renders the default row with input disabled 1`] = `
                       role="presentation"
                     >
                       <div
+                        aria-disabled={null}
                         aria-selected={null}
                         className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                         id="listbox-option-id-169"
@@ -19037,6 +19357,7 @@ exports[`Expression Row renders the default row with input disabled 1`] = `
                       role="presentation"
                     >
                       <div
+                        aria-disabled={null}
                         aria-selected={null}
                         className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                         id="listbox-option-id-170"
@@ -19064,6 +19385,7 @@ exports[`Expression Row renders the default row with input disabled 1`] = `
                       role="presentation"
                     >
                       <div
+                        aria-disabled={null}
                         aria-selected={null}
                         className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                         id="listbox-option-id-171"
@@ -19173,6 +19495,7 @@ exports[`Expression Row renders the default row with input disabled 1`] = `
                       role="presentation"
                     >
                       <div
+                        aria-disabled={null}
                         aria-selected={null}
                         className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                         id="listbox-option-id-172"
@@ -19200,6 +19523,7 @@ exports[`Expression Row renders the default row with input disabled 1`] = `
                       role="presentation"
                     >
                       <div
+                        aria-disabled={null}
                         aria-selected={null}
                         className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                         id="listbox-option-id-173"
@@ -19227,6 +19551,7 @@ exports[`Expression Row renders the default row with input disabled 1`] = `
                       role="presentation"
                     >
                       <div
+                        aria-disabled={null}
                         aria-selected={null}
                         className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                         id="listbox-option-id-174"
@@ -19254,6 +19579,7 @@ exports[`Expression Row renders the default row with input disabled 1`] = `
                       role="presentation"
                     >
                       <div
+                        aria-disabled={null}
                         aria-selected={null}
                         className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                         id="listbox-option-id-175"
@@ -19455,6 +19781,7 @@ exports[`Expression Row renders the default row with inputs and button disabled 
                       role="presentation"
                     >
                       <div
+                        aria-disabled={null}
                         aria-selected={null}
                         className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                         id="listbox-option-id-184"
@@ -19482,6 +19809,7 @@ exports[`Expression Row renders the default row with inputs and button disabled 
                       role="presentation"
                     >
                       <div
+                        aria-disabled={null}
                         aria-selected={null}
                         className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                         id="listbox-option-id-185"
@@ -19509,6 +19837,7 @@ exports[`Expression Row renders the default row with inputs and button disabled 
                       role="presentation"
                     >
                       <div
+                        aria-disabled={null}
                         aria-selected={null}
                         className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                         id="listbox-option-id-186"
@@ -19536,6 +19865,7 @@ exports[`Expression Row renders the default row with inputs and button disabled 
                       role="presentation"
                     >
                       <div
+                        aria-disabled={null}
                         aria-selected={null}
                         className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                         id="listbox-option-id-187"
@@ -19645,6 +19975,7 @@ exports[`Expression Row renders the default row with inputs and button disabled 
                       role="presentation"
                     >
                       <div
+                        aria-disabled={null}
                         aria-selected={null}
                         className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                         id="listbox-option-id-188"
@@ -19672,6 +20003,7 @@ exports[`Expression Row renders the default row with inputs and button disabled 
                       role="presentation"
                     >
                       <div
+                        aria-disabled={null}
                         aria-selected={null}
                         className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                         id="listbox-option-id-189"
@@ -19699,6 +20031,7 @@ exports[`Expression Row renders the default row with inputs and button disabled 
                       role="presentation"
                     >
                       <div
+                        aria-disabled={null}
                         aria-selected={null}
                         className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                         id="listbox-option-id-190"
@@ -19726,6 +20059,7 @@ exports[`Expression Row renders the default row with inputs and button disabled 
                       role="presentation"
                     >
                       <div
+                        aria-disabled={null}
                         aria-selected={null}
                         className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                         id="listbox-option-id-191"
@@ -19930,6 +20264,7 @@ exports[`Expression Row renders the default row with legend text and sassistive 
                       role="presentation"
                     >
                       <div
+                        aria-disabled={null}
                         aria-selected={null}
                         className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                         id="listbox-option-id-152"
@@ -19957,6 +20292,7 @@ exports[`Expression Row renders the default row with legend text and sassistive 
                       role="presentation"
                     >
                       <div
+                        aria-disabled={null}
                         aria-selected={null}
                         className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                         id="listbox-option-id-153"
@@ -19984,6 +20320,7 @@ exports[`Expression Row renders the default row with legend text and sassistive 
                       role="presentation"
                     >
                       <div
+                        aria-disabled={null}
                         aria-selected={null}
                         className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                         id="listbox-option-id-154"
@@ -20011,6 +20348,7 @@ exports[`Expression Row renders the default row with legend text and sassistive 
                       role="presentation"
                     >
                       <div
+                        aria-disabled={null}
                         aria-selected={null}
                         className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                         id="listbox-option-id-155"
@@ -20120,6 +20458,7 @@ exports[`Expression Row renders the default row with legend text and sassistive 
                       role="presentation"
                     >
                       <div
+                        aria-disabled={null}
                         aria-selected={null}
                         className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                         id="listbox-option-id-156"
@@ -20147,6 +20486,7 @@ exports[`Expression Row renders the default row with legend text and sassistive 
                       role="presentation"
                     >
                       <div
+                        aria-disabled={null}
                         aria-selected={null}
                         className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                         id="listbox-option-id-157"
@@ -20174,6 +20514,7 @@ exports[`Expression Row renders the default row with legend text and sassistive 
                       role="presentation"
                     >
                       <div
+                        aria-disabled={null}
                         aria-selected={null}
                         className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                         id="listbox-option-id-158"
@@ -20201,6 +20542,7 @@ exports[`Expression Row renders the default row with legend text and sassistive 
                       role="presentation"
                     >
                       <div
+                        aria-disabled={null}
                         aria-selected={null}
                         className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                         id="listbox-option-id-159"

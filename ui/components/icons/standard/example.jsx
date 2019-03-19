@@ -11,6 +11,7 @@ export let StandardIcon = props => {
     assistiveText,
     className,
     containerClassName,
+    isDisabled,
     isGrouped,
     title
   } = props;
@@ -21,7 +22,8 @@ export let StandardIcon = props => {
         `slds-icon_container slds-icon-standard-${symbol}`,
         containerClassName,
         {
-          'slds-avatar-grouped__icon': !!isGrouped
+          'slds-avatar-grouped__icon': isGrouped,
+          'slds-icon_disabled': isDisabled
         }
       )}
       title={

@@ -4,6 +4,12 @@
 
 <!-- ## [Unreleased] -->
 
+## 2.9.0
+
+### Added
+
+- Added styling for disabled listbox options
+
 ## 2.8.0
 
 ### Added
@@ -13,7 +19,7 @@
 
 ### Removed
 
-- Removed `slds-text-title_caps` from listbox option headers.
+- Removed `slds-text-title_caps` from listbox option headers
 
 ## 2.7.0
 

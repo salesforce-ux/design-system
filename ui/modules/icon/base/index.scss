@@ -1,0 +1,173 @@
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+@import '../../../shared/common/init';
+@import '../mixins/index';
+
+.sldswc-icon {
+  display: inline-flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  width: 1rem;
+  height: 1rem;
+  color: #706e6b;
+  border-radius: 4px;
+  margin: 0 1rem; // demo
+}
+
+/**
+ * Icon type
+ */
+[class*="sldswc-icon-action"],
+[class*="sldswc-icon-custom"],
+[class*="sldswc-icon-standard"],
+[class*="sldswc-icon-doctype"] {
+  width: 2rem;
+  height: 2rem;
+}
+
+[class*="sldswc-icon-action"],
+[class*="sldswc-icon-custom"],
+[class*="sldswc-icon-standard"] {
+  background: #54698d;
+  color: #fff;
+}
+
+[class*="sldswc-icon-action"] {
+  border-radius: 50%;
+  padding: 6px;
+  vertical-align: bottom;
+}
+
+// Action and Custom
+$icon-bg-map: map-merge($bg-actions-map, $bg-custom-map);
+
+@each $name, $color in $icon-bg-map {
+
+  .sldswc-icon-#{$name} {
+    background-color: $color;
+  }
+}
+
+// Standard
+@each $name, $color in $bg-standard-map {
+
+  .sldswc-icon-standard-#{$name} {
+    background-color: $color;
+  }
+}
+
+
+/**
+ * Type: Action
+ */
+
+.sldswc-icon-action {
+
+  &.sldswc-icon_x-large {
+    padding: 10px;
+  }
+
+  &.sldswc-icon_large {
+    padding: 8px;
+  }
+
+  &.sldswc-icon_medium {
+    padding: 6px;
+  }
+
+  &.sldswc-icon_small {
+    padding: 5px;
+  }
+
+  &.sldswc-icon_x-small {
+    padding: 3px;
+  }
+
+  &.sldswc-icon_xx-small {
+    padding: 2px;
+  }
+}
+
+/**
+ * Type: Custom
+ */
+.sldswc-icon-custom {
+
+}
+
+/**
+ * Type: Standard
+ */
+.sldswc-icon-standard {
+
+  &.sldswc-icon_x-small {
+    border-radius: 2px;
+  }
+
+  &.sldswc-icon_xx-small {
+    border-radius: 2px;
+  }
+}
+
+/**
+ * Sizing
+ */
+.sldswc-icon_x-large {
+  width: 64px;
+  height: 64px;
+}
+
+.sldswc-icon_large {
+  width: 48px;
+  height: 48px;
+}
+
+.sldswc-icon_medium {
+  width: 32px;
+  height: 32px;
+}
+
+.sldswc-icon_small {
+  width: 24px;
+  height: 24px;
+}
+
+.sldswc-icon_x-small {
+  width: 16px;
+  height: 16px;
+}
+
+.sldswc-icon_xx-small {
+  width: 12px;
+  height: 12px;
+}
+
+/**
+ * Color
+ */
+ .sldswc-icon_success {
+  color: #027e46;
+}
+
+.sldswc-icon_warning {
+  color: #ffb75d;
+}
+
+.sldswc-icon_error {
+  color: #c23934;
+}
+
+.sldswc-icon_muted {
+  color: #b0adab;
+}
+
+/**
+ * SVG primitive
+ */
+.sldswc-svg {
+  fill: currentColor;
+  width: 100%;
+  height: 100%;
+}

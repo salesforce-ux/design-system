@@ -1,8 +1,7 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-@import
-  'resets/index',
-  'text/index',
-  'sizing/index',
-  'font/index';
+@mixin square($size) {
+  width: $size;
+  height: $size;
+}

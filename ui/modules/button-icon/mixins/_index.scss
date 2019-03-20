@@ -1,0 +1,60 @@
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+@mixin button-icon-reset {
+  appearance: none;
+  background-clip: border-box;
+  background: transparent;
+  border: 0;
+  color: inherit;
+  display: inline-flex;
+  font-size: inherit;
+  line-height: inherit;
+  padding: 0;
+  position: relative;
+  text-align: inherit;
+  text-decoration: none;
+  user-select: none;
+  white-space: normal;
+}
+
+@mixin button-icon-normalize {
+  border-radius: $button-border-radius;
+  border: $border-width-thin solid transparent;
+  text-align: center;
+  vertical-align: middle;
+
+  &:hover,
+  &:focus,
+  &:active,
+  &:visited {
+    text-decoration: none;
+  }
+
+  &:hover,
+  &:focus {
+    --c-icon-color: $brand-accessible-active;
+    color: $brand-accessible-active;
+  }
+
+  &:focus {
+    outline: 0;
+    box-shadow: var(--c-button-icon-shadow-focus, $c-button-icon-shadow-focus);
+    border-color: var(--c-button-icon-color-border-focus, $c-button-icon-color-border-focus);
+  }
+
+  &:active {
+    --c-icon-color: $brand-accessible-active;
+    color: $brand-accessible-active;
+  }
+
+  &[disabled],
+  &:disabled {
+    --c-icon-color: $color-text-button-default-disabled;
+    color: $color-text-button-default-disabled;
+
+    * {
+      pointer-events: none;
+    }
+  }
+}

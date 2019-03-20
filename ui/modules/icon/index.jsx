@@ -4,11 +4,14 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import SvgIcon from '../../shared/svg-icon';
+import IconPrimitive from '../icon-primitive/';
 import Shadow from '../../shared/shadow';
 
 import '../common/index.scss';
 import './base/index.scss';
+
+import common from '!!css-loader!../common/index.css'; // eslint-disable-line import/no-webpack-loader-syntax
+import icon from '!!css-loader!./base/index.css'; // eslint-disable-line import/no-webpack-loader-syntax
 
 /**
  * - svg is sized based on container
@@ -29,7 +32,17 @@ class Icon extends Component {
   }
 
   render() {
-    const { sprite, symbol, title, size, color, type } = this.props;
+    const {
+      sprite,
+      symbol,
+      title,
+      size,
+      color,
+      boundarySize,
+      unset,
+      shadow,
+      assistiveText
+    } = this.props;
 
     const iconSizingClassName = {
       'sldswc-icon_x-large': size === 'x-large',
@@ -47,6 +60,18 @@ class Icon extends Component {
       'sldswc-icon_muted': color === 'muted'
     };
 
+    const iconBoundaryClassName = {
+      'sldswc-icon-boundary_x-large': boundarySize === 'x-large',
+      'sldswc-icon-boundary_large': boundarySize === 'large',
+      'sldswc-icon-boundary_medium': boundarySize === 'medium',
+      'sldswc-icon-boundary_small': boundarySize === 'small',
+      'sldswc-icon-boundary_x-small': boundarySize === 'x-small'
+    };
+
+    const iconModifierClassName = {
+      'sldswc-icon_unset': unset
+    };
+
     // Remove underscores and add a dash before numbers
     const sanitizedSymbol = symbol
       .replace('_', '-')
@@ -59,18 +84,28 @@ class Icon extends Component {
     const computedClassNames = `sldswc-icon-${sprite} sldswc-icon-${sanitizedSprite}${sanitizedSymbol}`;
 
     return (
-      <span
-        className={classNames(
-          'sldswc-icon',
-          iconSizingClassName,
-          iconColorClassName,
-          computedClassNames
-        )}
-        title={title}
-      >
-        <SvgIcon className="sldswc-svg" sprite={sprite} symbol={symbol} />
-        {this.renderAssistiveText()}
-      </span>
+      <Shadow name="icon" includes={[common, icon]} shadow={shadow}>
+        <span
+          className={classNames('sldswc-icon-boundary', iconBoundaryClassName)}
+        >
+          <span
+            className={classNames(
+              'sldswc-icon',
+              iconSizingClassName,
+              iconColorClassName,
+              iconModifierClassName,
+              computedClassNames
+            )}
+            title={title}
+          >
+            <IconPrimitive
+              sprite={sprite}
+              symbol={symbol}
+              assistiveText={assistiveText}
+            />
+          </span>
+        </span>
+      </Shadow>
     );
   }
 }

@@ -1,0 +1,47 @@
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+@import '../../../shared/common/init';
+@import '../mixins/index';
+
+$c-button-icon-color-backgorund: $color-gray-1;
+$c-button-icon-shadow-focus: 0 0 2px $brand-accessible;
+$c-button-icon-color-border-focus: $brand-accessible;
+
+.sldswc-button-icon {
+  @include button-icon-reset;
+  @include button-icon-normalize;
+}
+
+/**
+ * Sizing
+ */
+.sldswc-button-icon_x-large {
+
+}
+.sldswc-button-icon_large {
+
+}
+.sldswc-button-icon_medium {
+
+}
+.sldswc-button-icon_small {
+
+}
+.sldswc-button-icon_x-small {
+
+}
+
+/**
+ * Bordered
+ */
+.sldswc-button-icon_bordered {
+  border-color: $color-border;
+}
+
+/**
+ * Bordered
+ */
+.sldswc-button-icon_background {
+  background-color: var(--c-button-icon-color-background, $c-button-icon-color-backgorund)
+}

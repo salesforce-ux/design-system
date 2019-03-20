@@ -4,16 +4,21 @@
 @import '../../../shared/common/init';
 @import '../mixins/index';
 
+:host {
+  @include icon-base;
+
+  span {
+    display: inherit;
+  }
+}
+
 .sldswc-icon {
-  display: inline-flex;
-  align-items: center;
-  align-content: center;
-  justify-content: center;
+  @include icon-base;
   width: 1rem;
   height: 1rem;
-  color: #706e6b;
+  color: var(--c-icon-color, $color-gray-9);
   border-radius: 4px;
-  margin: 0 1rem; // demo
+  vertical-align: middle;
 }
 
 /**
@@ -37,7 +42,6 @@
 [class*="sldswc-icon-action"] {
   border-radius: 50%;
   padding: 6px;
-  vertical-align: bottom;
 }
 
 // Action and Custom
@@ -58,6 +62,14 @@ $icon-bg-map: map-merge($bg-actions-map, $bg-custom-map);
   }
 }
 
+/**
+ * Modifiers
+ * - Remove background
+ */
+.sldswc-icon_unset {
+  background-color: unset;
+  color: unset;
+}
 
 /**
  * Type: Action
@@ -164,10 +176,34 @@ $icon-bg-map: map-merge($bg-actions-map, $bg-custom-map);
 }
 
 /**
- * SVG primitive
+ * Icon Boundaries
+ * - Optional
  */
-.sldswc-svg {
-  fill: currentColor;
-  width: 100%;
-  height: 100%;
+.sldswc-icon-boundary {
+  @include icon-base;
+}
+
+.sldswc-icon-boundary_x-large {
+  width: 64px;
+  height: 64px;
+}
+
+.sldswc-icon-boundary_large {
+  width: 48px;
+  height: 48px;
+}
+
+.sldswc-icon-boundary_medium {
+  width: 32px;
+  height: 32px;
+}
+
+.sldswc-icon-boundary_small {
+  width: 24px;
+  height: 24px;
+}
+
+.sldswc-icon-boundary_x-small {
+  width: 16px;
+  height: 16px;
 }

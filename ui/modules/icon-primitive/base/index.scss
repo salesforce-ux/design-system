@@ -1,0 +1,23 @@
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+@import '../../../shared/common/init';
+@import '../mixins/index';
+
+/**
+ * SVG primitive
+ */
+:host {
+  @include icon-primitive-base;
+
+  span {
+    display: inherit;
+    height: inherit;
+    width: inherit;
+  }
+}
+
+.sldswc-svg {
+  @include icon-primitive-base;
+  fill: currentColor;
+}

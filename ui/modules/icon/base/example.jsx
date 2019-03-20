@@ -32,6 +32,8 @@ export let examples = [
         <Icon sprite="action" symbol="flow" size="small" />
         <Icon sprite="action" symbol="call" size="x-small" />
         <Icon sprite="action" symbol="call" size="xx-small" />
+        <Icon sprite="action" symbol="call" unset />
+        <Icon sprite="action" symbol="call" unset color="warning" />
       </React.Fragment>
     )
   },
@@ -47,6 +49,8 @@ export let examples = [
         <Icon sprite="standard" symbol="opportunity" size="small" />
         <Icon sprite="standard" symbol="opportunity" size="x-small" />
         <Icon sprite="standard" symbol="opportunity" size="xx-small" />
+        <Icon sprite="standard" symbol="opportunity" unset />
+        <Icon sprite="standard" symbol="opportunity" unset color="success" />
       </React.Fragment>
     )
   },
@@ -62,6 +66,8 @@ export let examples = [
         <Icon sprite="custom" symbol="custom5" size="small" />
         <Icon sprite="custom" symbol="custom6" size="x-small" />
         <Icon sprite="custom" symbol="custom7" size="xx-small" />
+        <Icon sprite="custom" symbol="custom1" unset />
+        <Icon sprite="custom" symbol="custom1" unset color="muted" />
       </React.Fragment>
     )
   },
@@ -77,6 +83,40 @@ export let examples = [
         <Icon sprite="doctype" symbol="excel" size="small" />
         <Icon sprite="doctype" symbol="link" size="x-small" />
         <Icon sprite="doctype" symbol="xml" size="xx-small" />
+      </React.Fragment>
+    )
+  },
+  {
+    id: 'boundary',
+    label: 'Icons with Boundary Sizes',
+    element: (
+      <React.Fragment>
+        <Icon />
+        <Icon boundarySize="x-large" symbol="animal_and_nature" />
+        <Icon boundarySize="large" symbol="classic_interface" />
+        <Icon boundarySize="medium" symbol="collapse_all" />
+        <Icon boundarySize="small" symbol="date_time" />
+        <Icon boundarySize="x-small" symbol="download" />
+      </React.Fragment>
+    )
+  },
+  {
+    id: 'with-text',
+    label: 'Icons with Text',
+    element: (
+      <React.Fragment>
+        <div className="slds-media slds-media_center">
+          <span className="slds-media__figure">
+            <Icon symbol="pinned" boundarySize="small" />
+          </span>
+          <span className="slds-media__body">Pinned Item</span>
+        </div>
+        <div className="slds-media slds-media_center">
+          <span className="slds-media__figure">
+            <Icon sprite="standard" symbol="account" size="small" />
+          </span>
+          <span className="slds-media__body">Accounts</span>
+        </div>
       </React.Fragment>
     )
   }

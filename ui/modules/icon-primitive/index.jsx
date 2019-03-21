@@ -20,7 +20,9 @@ class IconPrimitive extends Component {
 
   renderAssistiveText() {
     if (!this.props.assistiveText) return;
-    return <span className="slds-assistive-text">{assistiveText}</span>;
+    return (
+      <span className="slds-assistive-text">{this.props.assistiveText}</span>
+    );
   }
 
   render() {
@@ -42,6 +44,7 @@ class IconPrimitive extends Component {
 IconPrimitive.propTypes = {
   sprite: PropTypes.string.isRequired,
   symbol: PropTypes.string.isRequired,
+  assistiveText: PropTypes.string,
   shadow: PropTypes.bool
 };
 

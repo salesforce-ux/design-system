@@ -1,7 +1,64 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
+// ------------
+// Init
+// ------------
 @import '../../../shared/common/init';
+
+// ------------
+// Private
+// ------------
+
+// Sizing Tokens
+$_c-sizing-icon-x-large: rem(64px);
+$_c-sizing-icon-large: rem(48px);
+$_c-sizing-icon-medium: rem(32px);
+$_c-sizing-icon-small: rem(24px);
+$_c-sizing-icon-x-small: rem(16px);
+$_c-sizing-icon-xx-small: rem(12px);
+
+$_c-sizing-icon-boundary-x-large: rem(64px);
+$_c-sizing-icon-boundary-large: rem(48px);
+$_c-sizing-icon-boundary-medium: rem(32px);
+$_c-sizing-icon-boundary-small: rem(24px);
+$_c-sizing-icon-boundary-x-small: rem(16px);
+$_c-sizing-icon-boundary-xx-small: rem(12px);
+
+// Colors
+$_c-theme-icon-background-color-default: #54698d;
+$_c-theme-icon-color-on-default: $color-gray-1;
+
+// Border Radius
+$_c-theme-icon-border-radius-circle: 50%;
+$_c-theme-icon-border-radius-small: rem(2px);
+
+// Spacing
+$_c-spacing-icon-action-padding: rem(6px);
+$_c-spacing-icon-action-padding-x-large: rem(10px);
+$_c-spacing-icon-action-padding-large: rem(8px);
+$_c-spacing-icon-action-padding-medium: rem(6px);
+$_c-spacing-icon-action-padding-small: rem(5px);
+$_c-spacing-icon-action-padding-x-small: rem(3px);
+$_c-spacing-icon-action-padding-xx-small: rem(2px);
+
+// ------------
+// Public
+// ------------
+
+// Colors
+$c-theme-icon-color: $color-gray-9;
+$c-theme-icon-color-success: $color-text-success;
+$c-theme-icon-color-warning: $color-text-warning;
+$c-theme-icon-color-error: $color-text-error;
+$c-theme-icon-color-muted: $color-gray-7;
+
+// Border Radius
+$c-theme-icon-border-radius: $border-radius-medium;
+
+// ------------
+// Mixins
+// ------------
 @import '../mixins/index';
 
 :host {
@@ -12,12 +69,16 @@
   }
 }
 
+/**
+ * @summary
+ * @selector .sldswc-icon
+ * @restrict .sldswc-icon-boundary span
+ */
 .sldswc-icon {
   @include icon-base;
-  width: 1rem;
-  height: 1rem;
-  color: var(--c-icon-color, $color-gray-9);
-  border-radius: 4px;
+  @include square($_c-sizing-icon-x-small);
+  color: var(--c-theme-icon-color, $c-theme-icon-color);
+  border-radius: var(--c-theme-icon-border-radius, $c-theme-icon-border-radius);
   vertical-align: middle;
 }
 
@@ -28,20 +89,19 @@
 [class*="sldswc-icon-custom"],
 [class*="sldswc-icon-standard"],
 [class*="sldswc-icon-doctype"] {
-  width: 2rem;
-  height: 2rem;
+  @include square($_c-sizing-icon-small);
 }
 
 [class*="sldswc-icon-action"],
 [class*="sldswc-icon-custom"],
 [class*="sldswc-icon-standard"] {
-  background: #54698d;
-  color: #fff;
+  background: $_c-theme-icon-background-color-default;
+  color: $_c-theme-icon-color-on-default;
 }
 
 [class*="sldswc-icon-action"] {
-  border-radius: 50%;
-  padding: 6px;
+  border-radius: $_c-theme-icon-border-radius-circle;
+  padding: $_c-spacing-icon-action-padding;
 }
 
 // Action and Custom
@@ -63,8 +123,11 @@ $icon-bg-map: map-merge($bg-actions-map, $bg-custom-map);
 }
 
 /**
- * Modifiers
- * - Remove background
+ * @summary Unsets background and color from standard, custom, and action sets
+ * @selector .sldswc-icon_unset
+ * @restrict .sldswc-icon
+ * @modifier
+ * @group unset
  */
 .sldswc-icon_unset {
   background-color: unset;
@@ -72,41 +135,33 @@ $icon-bg-map: map-merge($bg-actions-map, $bg-custom-map);
 }
 
 /**
- * Type: Action
+ * Action Icons
  */
-
 .sldswc-icon-action {
 
   &.sldswc-icon_x-large {
-    padding: 10px;
+    padding: $_c-spacing-icon-action-padding-x-large;
   }
 
   &.sldswc-icon_large {
-    padding: 8px;
+    padding: $_c-spacing-icon-action-padding-large;
   }
 
   &.sldswc-icon_medium {
-    padding: 6px;
+    padding: $_c-spacing-icon-action-padding-medium;
   }
 
   &.sldswc-icon_small {
-    padding: 5px;
+    padding: $_c-spacing-icon-action-padding-small;
   }
 
   &.sldswc-icon_x-small {
-    padding: 3px;
+    padding: $_c-spacing-icon-action-padding-x-small;
   }
 
   &.sldswc-icon_xx-small {
-    padding: 2px;
+    padding: $_c-spacing-icon-action-padding-xx-small;
   }
-}
-
-/**
- * Type: Custom
- */
-.sldswc-icon-custom {
-
 }
 
 /**
@@ -115,95 +170,198 @@ $icon-bg-map: map-merge($bg-actions-map, $bg-custom-map);
 .sldswc-icon-standard {
 
   &.sldswc-icon_x-small {
-    border-radius: 2px;
+    border-radius: $_c-theme-icon-border-radius-small;
   }
 
   &.sldswc-icon_xx-small {
-    border-radius: 2px;
+    border-radius: $_c-theme-icon-border-radius-small;
   }
 }
 
+// ----------
+// Sizing
+// ----------
+
 /**
- * Sizing
+ * @summary
+ * @selector .sldswc-icon_x-large
+ * @restrict .sldswc-icon
+ * @modifier
+ * @group sizing
  */
 .sldswc-icon_x-large {
-  width: 64px;
-  height: 64px;
-}
-
-.sldswc-icon_large {
-  width: 48px;
-  height: 48px;
-}
-
-.sldswc-icon_medium {
-  width: 32px;
-  height: 32px;
-}
-
-.sldswc-icon_small {
-  width: 24px;
-  height: 24px;
-}
-
-.sldswc-icon_x-small {
-  width: 16px;
-  height: 16px;
-}
-
-.sldswc-icon_xx-small {
-  width: 12px;
-  height: 12px;
+  @include square($_c-sizing-icon-x-large);
 }
 
 /**
- * Color
+ * @summary
+ * @selector .sldswc-icon_large
+ * @restrict .sldswc-icon
+ * @modifier
+ * @group sizing
  */
- .sldswc-icon_success {
-  color: #027e46;
-}
-
-.sldswc-icon_warning {
-  color: #ffb75d;
-}
-
-.sldswc-icon_error {
-  color: #c23934;
-}
-
-.sldswc-icon_muted {
-  color: #b0adab;
+.sldswc-icon_large {
+  @include square($_c-sizing-icon-large);
 }
 
 /**
- * Icon Boundaries
- * - Optional
+ * @summary
+ * @selector .sldswc-icon_medium
+ * @restrict .sldswc-icon
+ * @modifier
+ * @group sizing
+ */
+.sldswc-icon_medium {
+  @include square($_c-sizing-icon-medium);
+}
+
+/**
+ * @summary
+ * @selector .sldswc-icon_small
+ * @restrict .sldswc-icon
+ * @modifier
+ * @group sizing
+ */
+.sldswc-icon_small {
+  @include square($_c-sizing-icon-small);
+}
+
+/**
+ * @summary
+ * @selector .sldswc-icon_x-small
+ * @restrict .sldswc-icon
+ * @modifier
+ * @group sizing
+ */
+.sldswc-icon_x-small {
+  @include square($_c-sizing-icon-x-small);
+}
+
+/**
+ * @summary
+ * @selector .sldswc-icon_xx-small
+ * @restrict .sldswc-icon
+ * @modifier
+ * @group sizing
+ */
+.sldswc-icon_xx-small {
+  @include square($_c-sizing-icon-xx-small);
+}
+
+// ----------
+// Color
+// ----------
+
+/**
+ * @summary
+ * @selector .sldswc-icon_success
+ * @restrict .sldswc-icon
+ * @modifier
+ * @group color
+ */
+.sldswc-icon_success {
+  color: var(--c-theme-icon-color-success, $c-theme-icon-color-success);
+}
+
+/**
+ * @summary
+ * @selector .sldswc-icon_warning
+ * @restrict .sldswc-icon
+ * @modifier
+ * @group color
+ */
+.sldswc-icon_warning {
+  color: var(--c-theme-icon-color-warning, $c-theme-icon-color-warning);
+}
+
+/**
+ * @summary
+ * @selector .sldswc-icon_error
+ * @restrict .sldswc-icon
+ * @modifier
+ * @group color
+ */
+.sldswc-icon_error {
+  color: var(--c-theme-icon-color-error, $c-theme-icon-color-error);
+}
+
+/**
+ * @summary
+ * @selector .sldswc-icon_muted
+ * @restrict .sldswc-icon
+ * @modifier
+ * @group color
+ */
+.sldswc-icon_muted {
+  color: var(--c-theme-icon-color-muted, $c-theme-icon-color-muted);
+}
+
+// ----------
+// Icon Boundary
+// ----------
+
+/**
+ * @name base
+ * @summary
+ * @selector .sldswc-icon-boundary
+ * @restrict span
+ * @variant
  */
 .sldswc-icon-boundary {
   @include icon-base;
 }
 
+/**
+ * @summary
+ * @selector .sldswc-icon-boundary_x-large
+ * @restrict .sldswc-icon-boundary
+ * @modifier
+ * @group sizing
+ */
 .sldswc-icon-boundary_x-large {
-  width: 64px;
-  height: 64px;
+  @include square($_c-sizing-icon-x-large);
 }
 
+/**
+ * @summary
+ * @selector .sldswc-icon-boundary_large
+ * @restrict .sldswc-icon-boundary
+ * @modifier
+ * @group sizing
+ */
 .sldswc-icon-boundary_large {
-  width: 48px;
-  height: 48px;
+  @include square($_c-sizing-icon-large);
 }
 
+/**
+ * @summary
+ * @selector .sldswc-icon-boundary_medium
+ * @restrict .sldswc-icon-boundary
+ * @modifier
+ * @group sizing
+ */
 .sldswc-icon-boundary_medium {
-  width: 32px;
-  height: 32px;
+  @include square($_c-sizing-icon-medium);
 }
 
+/**
+ * @summary
+ * @selector .sldswc-icon-boundary_small
+ * @restrict .sldswc-icon-boundary
+ * @modifier
+ * @group sizing
+ */
 .sldswc-icon-boundary_small {
-  width: 24px;
-  height: 24px;
+  @include square($_c-sizing-icon-small);
 }
 
+/**
+ * @summary
+ * @selector .sldswc-icon-boundary_x-small
+ * @restrict .sldswc-icon-boundary
+ * @modifier
+ * @group sizing
+ */
 .sldswc-icon-boundary_x-small {
-  width: 16px;
-  height: 16px;
+  @include square($_c-sizing-icon-x-small);
 }

@@ -24,9 +24,9 @@ class Button extends Component {
   }
 
   renderRightIcon() {
-    if (!this.props.RightIcon) return;
+    if (!this.props.rightIcon) return;
     return (
-      <span className="sldswc-button__icon-right">{this.props.RightIcon}</span>
+      <span className="sldswc-button__icon-right">{this.props.rightIcon}</span>
     );
   }
 

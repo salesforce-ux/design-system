@@ -6,9 +6,10 @@ import ButtonIconExample, {
 } from './example';
 import { getDisplayElementById } from '../../../shared/helpers';
 
-const stories = storiesOf('Modules/ButtonIcon/Base', module).add('Base', () => (
-  <ButtonIconExample />
-));
+const stories = storiesOf('Modules/ButtonIcon/Base', module).add(
+  'Default',
+  () => <ButtonIconExample />
+);
 
 ButtonIconStates.forEach(example => {
   stories.add(example.label, () =>

@@ -274,6 +274,7 @@
  */
 .sldswc-button_full-width {
   width: 100%;
+  justify-content: center;
 }
 
 /**
@@ -283,7 +284,10 @@
  * @restrict .sldswc-button span
  */
 .sldswc-button__icon-left {
+  display: inline-flex;
+  align-self: center;
   margin-right: $spacing-x-small;
+  --c-theme-icon-color: currentColor;
 }
 
 /**
@@ -293,5 +297,8 @@
  * @restrict .sldswc-button span
  */
 .sldswc-button__icon-right {
+  display: inline-flex;
+  align-self: center;
   margin-left: $spacing-x-small;
+  --c-theme-icon-color: currentColor;
 }

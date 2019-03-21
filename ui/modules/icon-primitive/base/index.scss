@@ -1,7 +1,14 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
+// ------------
+// Init
+// ------------
 @import '../../../shared/common/init';
+
+// ------------
+// Mixins
+// ------------
 @import '../mixins/index';
 
 /**
@@ -17,7 +24,14 @@
   }
 }
 
+/**
+ * @name base
+ * @summary
+ * @selector .sldswc-svg
+ * @restrict svg
+ * @variant
+ */
 .sldswc-svg {
   @include icon-primitive-base;
-  fill: currentColor;
+  fill: var(--c-theme-icon-primitive-color, currentColor);
 }

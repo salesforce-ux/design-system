@@ -1,5 +1,6 @@
 import React from 'react';
 import Button from '../';
+import Icon from '../../icon';
 
 const ButtonExample = () => <Button>Button</Button>;
 
@@ -49,6 +50,30 @@ export const examples = [
     element: (
       <Button size="full-width" variant="neutral">
         Full Width Neutral Button
+      </Button>
+    )
+  },
+  {
+    id: 'button-left-icon',
+    label: 'With left icon',
+    element: (
+      <Button
+        variant="neutral"
+        leftIcon={<Icon size="xx-small" symbol="download" />}
+      >
+        Download
+      </Button>
+    )
+  },
+  {
+    id: 'button-right-icon',
+    label: 'With right icon',
+    element: (
+      <Button
+        variant="neutral"
+        rightIcon={<Icon size="xx-small" symbol="new_window" />}
+      >
+        Learn More
       </Button>
     )
   }

@@ -13,24 +13,7 @@ import './base/index.scss';
 import common from '!!css-loader!../common/index.css'; // eslint-disable-line import/no-webpack-loader-syntax
 import icon from '!!css-loader!./base/index.css'; // eslint-disable-line import/no-webpack-loader-syntax
 
-/**
- * - svg is sized based on container
- * - any svg can be used in any context type
- * - sound defaults
- * - colors are independent of the icon symbol
- */
-
 class Icon extends Component {
-  constructor() {
-    super();
-    this.renderAssistiveText = this.renderAssistiveText.bind(this);
-  }
-
-  renderAssistiveText() {
-    if (!this.props.assistiveText) return;
-    return <span className="slds-assistive-text">{assistiveText}</span>;
-  }
-
   render() {
     const {
       sprite,
@@ -113,6 +96,18 @@ class Icon extends Component {
 Icon.defaultProps = {
   sprite: 'utility',
   symbol: 'add'
+};
+
+Icon.propTypes = {
+  sprite: PropTypes.string.isRequired,
+  symbol: PropTypes.string.isRequired,
+  title: PropTypes.string,
+  size: PropTypes.string,
+  color: PropTypes.string,
+  boundarySize: PropTypes.string,
+  unset: PropTypes.bool,
+  shadow: PropTypes.bool,
+  assistiveText: PropTypes.bool
 };
 
 export default Icon;

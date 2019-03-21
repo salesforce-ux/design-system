@@ -1,47 +1,130 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
+// ------------
+// Init
+// ------------
 @import '../../../shared/common/init';
+
+// ------------
+// Private
+// ------------
+
+// Background Color
+$_c-theme-button-icon-color-background-disabled: $brand-disabled;
+
+// Color
+$_c-theme-button-icon-color-disabled: $color-gray-5;
+
+// Border Color
+$_c-theme-button-icon-color-border-disabled: $brand-disabled;
+
+// ------------
+// Public
+// ------------
+
+// Background Color
+$c-theme-button-icon-color-background-default: $color-gray-1;
+$c-theme-button-icon-color-background-brand: $brand-accessible;
+$c-theme-button-icon-color-background-brand-active: $brand-accessible-active;
+
+// Color
+$c-theme-button-icon-color-on-default-active: $brand-accessible-active;
+$c-theme-button-icon-color-on-brand: $color-gray-1;
+$c-theme-button-icon-color-on-brand-active: $color-gray-1;
+
+// Box Shadow
+$c-theme-button-icon-shadow: none;
+$c-theme-button-icon-shadow-focus: 0 0 2px $brand-accessible;
+
+// Border Size
+$c-spacing-button-icon-border-width: $border-width-thin;
+
+// Border Color
+$c-theme-button-icon-color-border-brand: $brand-accessible;
+$c-theme-button-icon-color-border-brand-active: $brand-accessible-active;
+$c-theme-button-icon-color-border: $color-border;
+$c-theme-button-icon-color-border-focus: $brand-accessible;
+
+// Border Radius
+$c-theme-button-icon-border-radius: $button-border-radius;
+
+// ------------
+// Mixins
+// ------------
 @import '../mixins/index';
 
-$c-button-icon-color-backgorund: $color-gray-1;
-$c-button-icon-shadow-focus: 0 0 2px $brand-accessible;
-$c-button-icon-color-border-focus: $brand-accessible;
-
+/**
+ * @name base
+ * @summary
+ * @selector .sldswc-button-icon
+ * @restrict button, a
+ * @variant
+ */
 .sldswc-button-icon {
   @include button-icon-reset;
   @include button-icon-normalize;
 }
 
 /**
- * Sizing
+ * @name brand
+ * @summary
+ * @selector .sldswc-button-icon_brand
+ * @restrict .slds-button-icon
+ * @modifier
+ * @group theme
  */
-.sldswc-button-icon_x-large {
+.sldswc-button-icon_brand {
+  background-color: var(--c-theme-button-icon-color-background-brand, $c-theme-button-icon-color-background-brand);
+  border-color: var(--c-theme-button-icon-color-border-brand, $c-theme-button-icon-color-border-brand);;
+  // Override icon color
+  --c-theme-icon-color: var(--c-theme-button-icon-color-on-brand, $c-theme-button-icon-color-on-brand);
 
-}
-.sldswc-button-icon_large {
+  &:link,
+  &:visited,
+  &:active {
+    // Override icon color
+    --c-theme-icon-color: var(--c-theme-button-icon-color-on-brand, $c-theme-button-icon-color-on-brand);
+  }
 
-}
-.sldswc-button-icon_medium {
+  &:hover,
+  &:focus {
+    background-color: var(--c-theme-button-icon-color-background-brand-active, $c-theme-button-icon-color-background-brand-active);
+    border-color: var(--c-theme-button-icon-color-border-brand-active, $c-theme-button-icon-color-border-brand-active);
+    // Override icon color
+    --c-theme-icon-color: var(--c-theme-button-icon-color-on-brand-active, $c-theme-button-icon-color-on-brand-active);
+  }
 
-}
-.sldswc-button-icon_small {
+  &:active {
+    background-color: var(--c-theme-button-icon-color-background-brand-active, $c-theme-button-icon-color-background-brand-active);
+    border-color: var(--c-theme-button-icon-color-border-brand-active, $c-theme-button-icon-color-border-brand-active);
+  }
 
-}
-.sldswc-button-icon_x-small {
-
+  &[disabled],
+  &:disabled {
+    background: $_c-theme-button-icon-color-background-disabled;
+    border-color: $_c-theme-button-icon-color-border-disabled;
+    // Override icon color
+    --c-icon-color: $_c-theme-button-icon-color-disabled;
+  }
 }
 
 /**
- * Bordered
+ * @summary Adds a bordered container to a button icon
+ * @selector .sldswc-button-icon_bordered
+ * @restrict .slds-button-icon
+ * @modifier
  */
 .sldswc-button-icon_bordered {
-  border-color: $color-border;
+  border-color: var(--c-theme-button-icon-color-border, $c-theme-button-icon-color-border);
 }
 
 /**
- * Bordered
+ * @summary Adds a background fill of white to a button icon
+ * @selector .sldswc-button-icon_background
+ * @restrict .slds-button-icon
+ * @modifier
  */
 .sldswc-button-icon_background {
-  background-color: var(--c-button-icon-color-background, $c-button-icon-color-backgorund)
+  background-color: var(--c-theme-button-icon-color-background-default, $c-theme-button-icon-color-background-default);
 }

@@ -19,8 +19,9 @@
 }
 
 @mixin button-icon-normalize {
-  border-radius: $button-border-radius;
-  border: $border-width-thin solid transparent;
+  border-radius: var(--c-theme-button-icon-border-radius, $c-theme-button-icon-border-radius);
+  border: var(--c-spacing-button-icon-border-width, $c-spacing-button-icon-border-width) solid transparent;
+  box-shadow: var(--c-theme-button-icon-shadow, $c-theme-button-icon-shadow);
   text-align: center;
   vertical-align: middle;
 
@@ -33,25 +34,22 @@
 
   &:hover,
   &:focus {
-    --c-icon-color: $brand-accessible-active;
-    color: $brand-accessible-active;
+    --c-theme-icon-color: var(--c-theme-button-icon-color-on-default-active, $c-theme-button-icon-color-on-default-active);
   }
 
   &:focus {
     outline: 0;
-    box-shadow: var(--c-button-icon-shadow-focus, $c-button-icon-shadow-focus);
-    border-color: var(--c-button-icon-color-border-focus, $c-button-icon-color-border-focus);
+    box-shadow: var(--c-theme-button-icon-shadow-focus, $c-theme-button-icon-shadow-focus);
+    border-color: var(--c-theme-button-icon-color-border-focus, $c-theme-button-icon-color-border-focus);
   }
 
   &:active {
-    --c-icon-color: $brand-accessible-active;
-    color: $brand-accessible-active;
+    --c-theme-icon-color: var(--c-theme-button-icon-color-on-default-active, $c-theme-button-icon-color-on-default-active);
   }
 
   &[disabled],
   &:disabled {
-    --c-icon-color: $color-text-button-default-disabled;
-    color: $color-text-button-default-disabled;
+    --c-theme-icon-color: $_c-theme-button-icon-color-disabled;
 
     * {
       pointer-events: none;

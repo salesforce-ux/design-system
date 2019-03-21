@@ -10,9 +10,6 @@ import Shadow from '../../shared/shadow';
 import common from '../common/index.scss';
 import card from './base/index.scss';
 
-// import common from '!!css-loader!../common/index.css'; // eslint-disable-line import/no-webpack-loader-syntax
-// import card from '!!css-loader!./base/index.scss'; // eslint-disable-line import/no-webpack-loader-syntax
-
 export const CardHeader = props => {
   const { title, href, hasActions, actions } = props;
 

@@ -17,6 +17,7 @@ import * as Snapshot from '../snapshots.data';
 import createHelpers from '../../../../jest.helpers';
 import { Popover } from '../../popovers/base/example';
 import { Button } from '../../buttons/base/example';
+import _ from '../../../shared/helpers';
 
 const { matchesMarkup } = createHelpers(__dirname);
 
@@ -620,6 +621,24 @@ describe('render combobox', () => {
         resultsType="listbox"
         isOpen
         hasFocus
+      />
+    ));
+  it('renders disabled plain options in the listbox', () =>
+    matchesMarkup(
+      <Listbox
+        id={_.uniqueId('listbox-id-')}
+        snapshot={Snapshot.PlainDisabledOptions}
+        type="plain"
+        count={3}
+      />
+    ));
+  it('renders disabled entity options in the listbox', () =>
+    matchesMarkup(
+      <Listbox
+        id={_.uniqueId('listbox-id-')}
+        snapshot={Snapshot.EntityDisabledOptions}
+        type="entity"
+        count={3}
       />
     ));
   it('renders different styles of options in the listbox with drill in', () =>

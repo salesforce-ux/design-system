@@ -555,3 +555,29 @@ props:
     value: '#3C97DD'
   VISITS:
     value: '#3C97DD'
+  ACTIONS_AND_BUTTONS:
+    value: '#fcb95b'
+  LETTERHEAD:
+    value: '#3c97dd'
+  INVOCABLE_ACTION:
+    value: '#54698d'
+  SHIFT_TYPE:
+    value: '#eb7092'
+  SHIFT:
+    value: '#eb7092'
+  CATEGORY:
+    value: '#027E46'
+  CATALOG:
+    value: '#027E46'
+  VISIT_TEMPLATES:
+    value: '#3c97dd'
+  INSTORE_LOCATIONS:
+    value: '#54698d'
+  STORE_GROUP:
+    value: '#3c97dd'
+  VISUALFORCE_PAGE:
+    value: '#fcb95b'
+  JAVASCRIPT_BUTTONS:
+    value: '#fcb95b'
+  SALES_CADENCE_TARGET:
+    value: '#54698d'

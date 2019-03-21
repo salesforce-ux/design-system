@@ -274,6 +274,7 @@ exports[`render combobox render autocomplete combobox with mutliple selections 1
               role="presentation"
             >
               <div
+                aria-disabled={null}
                 aria-selected={null}
                 className="slds-media slds-listbox__option slds-listbox__option_entity slds-media_center"
                 id="option1"
@@ -313,6 +314,7 @@ exports[`render combobox render autocomplete combobox with mutliple selections 1
               role="presentation"
             >
               <div
+                aria-disabled={null}
                 aria-selected={null}
                 className="slds-media slds-listbox__option slds-listbox__option_entity slds-media_center"
                 id="option2"
@@ -352,6 +354,7 @@ exports[`render combobox render autocomplete combobox with mutliple selections 1
               role="presentation"
             >
               <div
+                aria-disabled={null}
                 aria-selected={null}
                 className="slds-media slds-listbox__option slds-listbox__option_entity slds-media_center"
                 id="option3"
@@ -557,6 +560,7 @@ exports[`render combobox render autocomplete combobox with single selection 1`] 
               role="presentation"
             >
               <div
+                aria-disabled={null}
                 aria-selected={null}
                 className="slds-media slds-listbox__option slds-listbox__option_entity slds-media_center"
                 id="option1"
@@ -596,6 +600,7 @@ exports[`render combobox render autocomplete combobox with single selection 1`] 
               role="presentation"
             >
               <div
+                aria-disabled={null}
                 aria-selected={null}
                 className="slds-media slds-listbox__option slds-listbox__option_entity slds-media_center"
                 id="option2"
@@ -635,6 +640,7 @@ exports[`render combobox render autocomplete combobox with single selection 1`] 
               role="presentation"
             >
               <div
+                aria-disabled={null}
                 aria-selected={null}
                 className="slds-media slds-listbox__option slds-listbox__option_entity slds-media_center"
                 id="option3"
@@ -760,6 +766,7 @@ exports[`render combobox render autocomplete entity combobox 1`] = `
               role="presentation"
             >
               <div
+                aria-disabled={null}
                 aria-selected={null}
                 className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
                 id="option1"
@@ -807,6 +814,7 @@ exports[`render combobox render autocomplete entity combobox 1`] = `
               role="presentation"
             >
               <div
+                aria-disabled={null}
                 aria-selected={null}
                 className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
                 id="option2"
@@ -940,6 +948,7 @@ exports[`render combobox render autocomplete entity combobox displaying options 
               role="presentation"
             >
               <div
+                aria-disabled={null}
                 aria-selected="true"
                 className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_term slds-has-focus"
                 id="option0"
@@ -984,6 +993,7 @@ exports[`render combobox render autocomplete entity combobox displaying options 
               role="presentation"
             >
               <div
+                aria-disabled={null}
                 aria-selected={null}
                 className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
                 id="option1"
@@ -1037,6 +1047,7 @@ exports[`render combobox render autocomplete entity combobox displaying options 
               role="presentation"
             >
               <div
+                aria-disabled={null}
                 aria-selected={null}
                 className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
                 id="option2"
@@ -1090,6 +1101,7 @@ exports[`render combobox render autocomplete entity combobox displaying options 
               role="presentation"
             >
               <div
+                aria-disabled={null}
                 aria-selected={null}
                 className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
                 id="option3"
@@ -1229,6 +1241,7 @@ exports[`render combobox render autocomplete entity combobox with mutliple selec
               role="presentation"
             >
               <div
+                aria-disabled={null}
                 aria-selected={null}
                 className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
                 id="option1"
@@ -1276,6 +1289,7 @@ exports[`render combobox render autocomplete entity combobox with mutliple selec
               role="presentation"
             >
               <div
+                aria-disabled={null}
                 aria-selected={null}
                 className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
                 id="option2"
@@ -1550,6 +1564,7 @@ exports[`render combobox render autocomplete entity combobox with single selecti
               role="presentation"
             >
               <div
+                aria-disabled={null}
                 aria-selected={null}
                 className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
                 id="option1"
@@ -1597,6 +1612,7 @@ exports[`render combobox render autocomplete entity combobox with single selecti
               role="presentation"
             >
               <div
+                aria-disabled={null}
                 aria-selected={null}
                 className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
                 id="option2"
@@ -1725,6 +1741,7 @@ exports[`render combobox render base combobox 1`] = `
               role="presentation"
             >
               <div
+                aria-disabled={null}
                 aria-selected={null}
                 className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                 id="option1"
@@ -1752,6 +1769,7 @@ exports[`render combobox render base combobox 1`] = `
               role="presentation"
             >
               <div
+                aria-disabled={null}
                 aria-selected={null}
                 className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                 id="option2"
@@ -1779,6 +1797,7 @@ exports[`render combobox render base combobox 1`] = `
               role="presentation"
             >
               <div
+                aria-disabled={null}
                 aria-selected={null}
                 className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                 id="option3"
@@ -1806,6 +1825,7 @@ exports[`render combobox render base combobox 1`] = `
               role="presentation"
             >
               <div
+                aria-disabled={null}
                 aria-selected={null}
                 className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                 id="option4"
@@ -1833,6 +1853,7 @@ exports[`render combobox render base combobox 1`] = `
               role="presentation"
             >
               <div
+                aria-disabled={null}
                 aria-selected={null}
                 className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                 id="option5"
@@ -1860,6 +1881,7 @@ exports[`render combobox render base combobox 1`] = `
               role="presentation"
             >
               <div
+                aria-disabled={null}
                 aria-selected={null}
                 className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                 id="option6"
@@ -1887,6 +1909,7 @@ exports[`render combobox render base combobox 1`] = `
               role="presentation"
             >
               <div
+                aria-disabled={null}
                 aria-selected={null}
                 className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                 id="option7"
@@ -1914,6 +1937,7 @@ exports[`render combobox render base combobox 1`] = `
               role="presentation"
             >
               <div
+                aria-disabled={null}
                 aria-selected={null}
                 className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                 id="option8"
@@ -2022,6 +2046,7 @@ exports[`render combobox render combobox with displaying options based on user i
               role="presentation"
             >
               <div
+                aria-disabled={null}
                 aria-selected={null}
                 className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                 id="option1"
@@ -2055,6 +2080,7 @@ exports[`render combobox render combobox with displaying options based on user i
               role="presentation"
             >
               <div
+                aria-disabled={null}
                 aria-selected={null}
                 className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                 id="option2"
@@ -2088,6 +2114,7 @@ exports[`render combobox render combobox with displaying options based on user i
               role="presentation"
             >
               <div
+                aria-disabled={null}
                 aria-selected={null}
                 className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                 id="option3"
@@ -2222,6 +2249,7 @@ exports[`render combobox render grouped combobox 1`] = `
                       role="presentation"
                     >
                       <div
+                        aria-disabled={null}
                         aria-selected={null}
                         className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                         id="object0"
@@ -2241,6 +2269,7 @@ exports[`render combobox render grouped combobox 1`] = `
                       role="presentation"
                     >
                       <div
+                        aria-disabled={null}
                         aria-selected={null}
                         className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-is-selected"
                         id="object1"
@@ -2287,6 +2316,7 @@ exports[`render combobox render grouped combobox 1`] = `
                       role="presentation"
                     >
                       <div
+                        aria-disabled={null}
                         aria-selected={null}
                         className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                         id="object2"
@@ -2314,6 +2344,7 @@ exports[`render combobox render grouped combobox 1`] = `
                       role="presentation"
                     >
                       <div
+                        aria-disabled={null}
                         aria-selected={null}
                         className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                         id="object3"
@@ -2341,6 +2372,7 @@ exports[`render combobox render grouped combobox 1`] = `
                       role="presentation"
                     >
                       <div
+                        aria-disabled={null}
                         aria-selected={null}
                         className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                         id="object4"
@@ -2368,6 +2400,7 @@ exports[`render combobox render grouped combobox 1`] = `
                       role="presentation"
                     >
                       <div
+                        aria-disabled={null}
                         aria-selected={null}
                         className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                         id="object5"
@@ -2395,6 +2428,7 @@ exports[`render combobox render grouped combobox 1`] = `
                       role="presentation"
                     >
                       <div
+                        aria-disabled={null}
                         aria-selected={null}
                         className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                         id="object6"
@@ -2422,6 +2456,7 @@ exports[`render combobox render grouped combobox 1`] = `
                       role="presentation"
                     >
                       <div
+                        aria-disabled={null}
                         aria-selected={null}
                         className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                         id="object7"
@@ -2519,6 +2554,7 @@ exports[`render combobox render grouped combobox 1`] = `
                 role="presentation"
               >
                 <div
+                  aria-disabled={null}
                   aria-selected={null}
                   className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
                   id="option1"
@@ -2566,6 +2602,7 @@ exports[`render combobox render grouped combobox 1`] = `
                 role="presentation"
               >
                 <div
+                  aria-disabled={null}
                   aria-selected={null}
                   className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
                   id="option2"
@@ -2613,6 +2650,7 @@ exports[`render combobox render grouped combobox 1`] = `
                 role="presentation"
               >
                 <div
+                  aria-disabled={null}
                   aria-selected={null}
                   className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
                   id="option3"
@@ -2660,6 +2698,7 @@ exports[`render combobox render grouped combobox 1`] = `
                 role="presentation"
               >
                 <div
+                  aria-disabled={null}
                   aria-selected={null}
                   className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
                   id="option4"
@@ -2809,6 +2848,7 @@ exports[`render combobox render grouped combobox displaying options based on use
                       role="presentation"
                     >
                       <div
+                        aria-disabled={null}
                         aria-selected={null}
                         className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                         id="object0"
@@ -2828,6 +2868,7 @@ exports[`render combobox render grouped combobox displaying options based on use
                       role="presentation"
                     >
                       <div
+                        aria-disabled={null}
                         aria-selected={null}
                         className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-is-selected"
                         id="object1"
@@ -2874,6 +2915,7 @@ exports[`render combobox render grouped combobox displaying options based on use
                       role="presentation"
                     >
                       <div
+                        aria-disabled={null}
                         aria-selected={null}
                         className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                         id="object2"
@@ -2901,6 +2943,7 @@ exports[`render combobox render grouped combobox displaying options based on use
                       role="presentation"
                     >
                       <div
+                        aria-disabled={null}
                         aria-selected={null}
                         className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                         id="object3"
@@ -2928,6 +2971,7 @@ exports[`render combobox render grouped combobox displaying options based on use
                       role="presentation"
                     >
                       <div
+                        aria-disabled={null}
                         aria-selected={null}
                         className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                         id="object4"
@@ -2955,6 +2999,7 @@ exports[`render combobox render grouped combobox displaying options based on use
                       role="presentation"
                     >
                       <div
+                        aria-disabled={null}
                         aria-selected={null}
                         className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                         id="object5"
@@ -2982,6 +3027,7 @@ exports[`render combobox render grouped combobox displaying options based on use
                       role="presentation"
                     >
                       <div
+                        aria-disabled={null}
                         aria-selected={null}
                         className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                         id="object6"
@@ -3009,6 +3055,7 @@ exports[`render combobox render grouped combobox displaying options based on use
                       role="presentation"
                     >
                       <div
+                        aria-disabled={null}
                         aria-selected={null}
                         className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                         id="object7"
@@ -3106,6 +3153,7 @@ exports[`render combobox render grouped combobox displaying options based on use
                 role="presentation"
               >
                 <div
+                  aria-disabled={null}
                   aria-selected="true"
                   className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_term slds-has-focus"
                   id="option0"
@@ -3150,6 +3198,7 @@ exports[`render combobox render grouped combobox displaying options based on use
                 role="presentation"
               >
                 <div
+                  aria-disabled={null}
                   aria-selected={null}
                   className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
                   id="option1"
@@ -3203,6 +3252,7 @@ exports[`render combobox render grouped combobox displaying options based on use
                 role="presentation"
               >
                 <div
+                  aria-disabled={null}
                   aria-selected={null}
                   className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
                   id="option2"
@@ -3256,6 +3306,7 @@ exports[`render combobox render grouped combobox displaying options based on use
                 role="presentation"
               >
                 <div
+                  aria-disabled={null}
                   aria-selected={null}
                   className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
                   id="option3"
@@ -3411,6 +3462,7 @@ exports[`render combobox render grouped combobox with selections made in collaps
                       role="presentation"
                     >
                       <div
+                        aria-disabled={null}
                         aria-selected={null}
                         className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                         id="object0"
@@ -3430,6 +3482,7 @@ exports[`render combobox render grouped combobox with selections made in collaps
                       role="presentation"
                     >
                       <div
+                        aria-disabled={null}
                         aria-selected={null}
                         className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-is-selected"
                         id="object1"
@@ -3476,6 +3529,7 @@ exports[`render combobox render grouped combobox with selections made in collaps
                       role="presentation"
                     >
                       <div
+                        aria-disabled={null}
                         aria-selected={null}
                         className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                         id="object2"
@@ -3503,6 +3557,7 @@ exports[`render combobox render grouped combobox with selections made in collaps
                       role="presentation"
                     >
                       <div
+                        aria-disabled={null}
                         aria-selected={null}
                         className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                         id="object3"
@@ -3530,6 +3585,7 @@ exports[`render combobox render grouped combobox with selections made in collaps
                       role="presentation"
                     >
                       <div
+                        aria-disabled={null}
                         aria-selected={null}
                         className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                         id="object4"
@@ -3557,6 +3613,7 @@ exports[`render combobox render grouped combobox with selections made in collaps
                       role="presentation"
                     >
                       <div
+                        aria-disabled={null}
                         aria-selected={null}
                         className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                         id="object5"
@@ -3584,6 +3641,7 @@ exports[`render combobox render grouped combobox with selections made in collaps
                       role="presentation"
                     >
                       <div
+                        aria-disabled={null}
                         aria-selected={null}
                         className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                         id="object6"
@@ -3611,6 +3669,7 @@ exports[`render combobox render grouped combobox with selections made in collaps
                       role="presentation"
                     >
                       <div
+                        aria-disabled={null}
                         aria-selected={null}
                         className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                         id="object7"
@@ -3708,6 +3767,7 @@ exports[`render combobox render grouped combobox with selections made in collaps
                 role="presentation"
               >
                 <div
+                  aria-disabled={null}
                   aria-selected={null}
                   className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
                   id="option1"
@@ -3755,6 +3815,7 @@ exports[`render combobox render grouped combobox with selections made in collaps
                 role="presentation"
               >
                 <div
+                  aria-disabled={null}
                   aria-selected={null}
                   className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
                   id="option2"
@@ -3802,6 +3863,7 @@ exports[`render combobox render grouped combobox with selections made in collaps
                 role="presentation"
               >
                 <div
+                  aria-disabled={null}
                   aria-selected={null}
                   className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
                   id="option3"
@@ -3849,6 +3911,7 @@ exports[`render combobox render grouped combobox with selections made in collaps
                 role="presentation"
               >
                 <div
+                  aria-disabled={null}
                   aria-selected={null}
                   className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
                   id="option4"
@@ -4460,6 +4523,7 @@ exports[`render combobox render grouped combobox with selections made in expande
                       role="presentation"
                     >
                       <div
+                        aria-disabled={null}
                         aria-selected={null}
                         className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                         id="object0"
@@ -4479,6 +4543,7 @@ exports[`render combobox render grouped combobox with selections made in expande
                       role="presentation"
                     >
                       <div
+                        aria-disabled={null}
                         aria-selected={null}
                         className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-is-selected"
                         id="object1"
@@ -4525,6 +4590,7 @@ exports[`render combobox render grouped combobox with selections made in expande
                       role="presentation"
                     >
                       <div
+                        aria-disabled={null}
                         aria-selected={null}
                         className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                         id="object2"
@@ -4552,6 +4618,7 @@ exports[`render combobox render grouped combobox with selections made in expande
                       role="presentation"
                     >
                       <div
+                        aria-disabled={null}
                         aria-selected={null}
                         className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                         id="object3"
@@ -4579,6 +4646,7 @@ exports[`render combobox render grouped combobox with selections made in expande
                       role="presentation"
                     >
                       <div
+                        aria-disabled={null}
                         aria-selected={null}
                         className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                         id="object4"
@@ -4606,6 +4674,7 @@ exports[`render combobox render grouped combobox with selections made in expande
                       role="presentation"
                     >
                       <div
+                        aria-disabled={null}
                         aria-selected={null}
                         className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                         id="object5"
@@ -4633,6 +4702,7 @@ exports[`render combobox render grouped combobox with selections made in expande
                       role="presentation"
                     >
                       <div
+                        aria-disabled={null}
                         aria-selected={null}
                         className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                         id="object6"
@@ -4660,6 +4730,7 @@ exports[`render combobox render grouped combobox with selections made in expande
                       role="presentation"
                     >
                       <div
+                        aria-disabled={null}
                         aria-selected={null}
                         className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                         id="object7"
@@ -4757,6 +4828,7 @@ exports[`render combobox render grouped combobox with selections made in expande
                 role="presentation"
               >
                 <div
+                  aria-disabled={null}
                   aria-selected={null}
                   className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
                   id="option1"
@@ -4804,6 +4876,7 @@ exports[`render combobox render grouped combobox with selections made in expande
                 role="presentation"
               >
                 <div
+                  aria-disabled={null}
                   aria-selected={null}
                   className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
                   id="option2"
@@ -4851,6 +4924,7 @@ exports[`render combobox render grouped combobox with selections made in expande
                 role="presentation"
               >
                 <div
+                  aria-disabled={null}
                   aria-selected={null}
                   className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
                   id="option3"
@@ -4898,6 +4972,7 @@ exports[`render combobox render grouped combobox with selections made in expande
                 role="presentation"
               >
                 <div
+                  aria-disabled={null}
                   aria-selected={null}
                   className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
                   id="option4"
@@ -5478,6 +5553,7 @@ exports[`render combobox render multiple selections in a closed combobox 1`] = `
               role="presentation"
             >
               <div
+                aria-disabled={null}
                 aria-selected={null}
                 className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-is-selected"
                 id="option1"
@@ -5524,6 +5600,7 @@ exports[`render combobox render multiple selections in a closed combobox 1`] = `
               role="presentation"
             >
               <div
+                aria-disabled={null}
                 aria-selected={null}
                 className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-is-selected"
                 id="option2"
@@ -5570,6 +5647,7 @@ exports[`render combobox render multiple selections in a closed combobox 1`] = `
               role="presentation"
             >
               <div
+                aria-disabled={null}
                 aria-selected={null}
                 className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                 id="option3"
@@ -5597,6 +5675,7 @@ exports[`render combobox render multiple selections in a closed combobox 1`] = `
               role="presentation"
             >
               <div
+                aria-disabled={null}
                 aria-selected={null}
                 className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                 id="option4"
@@ -5624,6 +5703,7 @@ exports[`render combobox render multiple selections in a closed combobox 1`] = `
               role="presentation"
             >
               <div
+                aria-disabled={null}
                 aria-selected={null}
                 className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                 id="option5"
@@ -5651,6 +5731,7 @@ exports[`render combobox render multiple selections in a closed combobox 1`] = `
               role="presentation"
             >
               <div
+                aria-disabled={null}
                 aria-selected={null}
                 className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                 id="option6"
@@ -5678,6 +5759,7 @@ exports[`render combobox render multiple selections in a closed combobox 1`] = `
               role="presentation"
             >
               <div
+                aria-disabled={null}
                 aria-selected={null}
                 className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                 id="option7"
@@ -5705,6 +5787,7 @@ exports[`render combobox render multiple selections in a closed combobox 1`] = `
               role="presentation"
             >
               <div
+                aria-disabled={null}
                 aria-selected={null}
                 className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                 id="option8"
@@ -5898,6 +5981,7 @@ exports[`render combobox render single selection in an open combobox 1`] = `
               role="presentation"
             >
               <div
+                aria-disabled={null}
                 aria-selected="true"
                 className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-is-selected slds-has-focus"
                 id="option1"
@@ -5944,6 +6028,7 @@ exports[`render combobox render single selection in an open combobox 1`] = `
               role="presentation"
             >
               <div
+                aria-disabled={null}
                 aria-selected={null}
                 className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                 id="option2"
@@ -5971,6 +6056,7 @@ exports[`render combobox render single selection in an open combobox 1`] = `
               role="presentation"
             >
               <div
+                aria-disabled={null}
                 aria-selected={null}
                 className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                 id="option3"
@@ -5998,6 +6084,7 @@ exports[`render combobox render single selection in an open combobox 1`] = `
               role="presentation"
             >
               <div
+                aria-disabled={null}
                 aria-selected={null}
                 className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                 id="option4"
@@ -6025,6 +6112,7 @@ exports[`render combobox render single selection in an open combobox 1`] = `
               role="presentation"
             >
               <div
+                aria-disabled={null}
                 aria-selected={null}
                 className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                 id="option5"
@@ -6052,6 +6140,7 @@ exports[`render combobox render single selection in an open combobox 1`] = `
               role="presentation"
             >
               <div
+                aria-disabled={null}
                 aria-selected={null}
                 className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                 id="option6"
@@ -6079,6 +6168,7 @@ exports[`render combobox render single selection in an open combobox 1`] = `
               role="presentation"
             >
               <div
+                aria-disabled={null}
                 aria-selected={null}
                 className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                 id="option7"
@@ -6106,6 +6196,7 @@ exports[`render combobox render single selection in an open combobox 1`] = `
               role="presentation"
             >
               <div
+                aria-disabled={null}
                 aria-selected={null}
                 className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                 id="option8"
@@ -6214,6 +6305,7 @@ exports[`render combobox renders autocomplete combobox 1`] = `
               role="presentation"
             >
               <div
+                aria-disabled={null}
                 aria-selected={null}
                 className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                 id="option1"
@@ -6241,6 +6333,7 @@ exports[`render combobox renders autocomplete combobox 1`] = `
               role="presentation"
             >
               <div
+                aria-disabled={null}
                 aria-selected={null}
                 className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                 id="option2"
@@ -6268,6 +6361,7 @@ exports[`render combobox renders autocomplete combobox 1`] = `
               role="presentation"
             >
               <div
+                aria-disabled={null}
                 aria-selected={null}
                 className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                 id="option3"
@@ -6376,6 +6470,7 @@ exports[`render combobox renders different styles of options in the listbox 1`] 
               role="presentation"
             >
               <div
+                aria-disabled={null}
                 aria-selected={null}
                 className="slds-media slds-listbox__option slds-listbox__option_entity slds-media_center"
                 id="option1"
@@ -6415,6 +6510,7 @@ exports[`render combobox renders different styles of options in the listbox 1`] 
               role="presentation"
             >
               <div
+                aria-disabled={null}
                 aria-selected={null}
                 className="slds-media slds-listbox__option slds-listbox__option_entity slds-media_center"
                 id="option2"
@@ -6454,6 +6550,7 @@ exports[`render combobox renders different styles of options in the listbox 1`] 
               role="presentation"
             >
               <div
+                aria-disabled={null}
                 aria-selected={null}
                 className="slds-media slds-listbox__option slds-listbox__option_entity slds-media_center"
                 id="option3"
@@ -6493,6 +6590,7 @@ exports[`render combobox renders different styles of options in the listbox 1`] 
               role="presentation"
             >
               <div
+                aria-disabled={null}
                 aria-selected={null}
                 className="slds-media slds-listbox__option slds-listbox__option_entity slds-media_center"
                 id="option4"
@@ -6613,6 +6711,7 @@ exports[`render combobox renders different styles of options in the listbox with
               role="presentation"
             >
               <div
+                aria-disabled={null}
                 aria-selected={null}
                 className="slds-media slds-listbox__option slds-listbox__option_entity slds-media_center"
                 id="option1"
@@ -6652,6 +6751,7 @@ exports[`render combobox renders different styles of options in the listbox with
               role="presentation"
             >
               <div
+                aria-disabled={null}
                 aria-selected={null}
                 className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
                 id="option2"
@@ -6699,6 +6799,7 @@ exports[`render combobox renders different styles of options in the listbox with
               role="presentation"
             >
               <div
+                aria-disabled={null}
                 aria-selected={null}
                 className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
                 id="option3"
@@ -6764,6 +6865,295 @@ exports[`render combobox renders different styles of options in the listbox with
       </div>
     </div>
   </div>
+</div>
+`;
+
+exports[`render combobox renders disabled entity options in the listbox 1`] = `
+<div
+  aria-orientation={null}
+  className="slds-dropdown slds-dropdown_length-with-icon-7 slds-dropdown_fluid"
+  id="listbox-id-2"
+  role="listbox"
+>
+  <ul
+    aria-label={undefined}
+    className="slds-listbox slds-listbox_vertical"
+    role="presentation"
+  >
+    <li
+      className="slds-listbox__item"
+      role="presentation"
+    >
+      <div
+        aria-disabled="true"
+        aria-selected={null}
+        className="slds-media slds-listbox__option slds-listbox__option_entity slds-media_center"
+        id="option1"
+        role="option"
+        tabIndex={undefined}
+      >
+        <span
+          className="slds-media__figure slds-listbox__option-icon slds-listbox__option-icon-disabled"
+        >
+          <span
+            className="slds-icon_container slds-icon-standard-account slds-icon_disabled"
+            title={null}
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-icon slds-icon_small"
+            >
+              <use
+                xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#account"
+              />
+            </svg>
+          </span>
+        </span>
+        <span
+          className="slds-media__body"
+        >
+          <span
+            className="slds-listbox__option-text slds-listbox__option-text_entity"
+          >
+            Edge Communications
+          </span>
+        </span>
+      </div>
+    </li>
+    <li
+      className="slds-listbox__item"
+      role="presentation"
+    >
+      <div
+        aria-disabled="true"
+        aria-selected={null}
+        className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
+        id="option2"
+        role="option"
+        tabIndex={undefined}
+      >
+        <span
+          className="slds-media__figure slds-listbox__option-icon slds-listbox__option-icon-disabled"
+        >
+          <span
+            className="slds-icon_container slds-icon-standard-account slds-icon_disabled"
+            title={null}
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-icon slds-icon_small"
+            >
+              <use
+                xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#account"
+              />
+            </svg>
+          </span>
+        </span>
+        <span
+          className="slds-media__body"
+        >
+          <span
+            className="slds-listbox__option-text slds-listbox__option-text_entity"
+          >
+            Express Logistics and Transport
+          </span>
+          <span
+            className="slds-listbox__option-meta slds-listbox__option-meta_entity slds-listbox__option-meta-disabled"
+          >
+            Account
+             •
+             
+            Durham, NC
+          </span>
+        </span>
+      </div>
+    </li>
+    <li
+      className="slds-listbox__item"
+      role="presentation"
+    >
+      <div
+        aria-disabled={null}
+        aria-selected={null}
+        className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
+        id="option3"
+        role="option"
+        tabIndex={undefined}
+      >
+        <span
+          className="slds-media__figure slds-listbox__option-icon"
+        >
+          <span
+            className="slds-icon_container slds-icon-standard-account"
+            title={null}
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-icon slds-icon_small"
+            >
+              <use
+                xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#account"
+              />
+            </svg>
+          </span>
+        </span>
+        <span
+          className="slds-media__body"
+        >
+          <span
+            className="slds-listbox__option-text slds-listbox__option-text_entity"
+          >
+            Alexandria Textiles Corp of America
+          </span>
+          <span
+            className="slds-listbox__option-meta slds-listbox__option-meta_entity"
+          >
+            Account
+             •
+             
+            Alexandria, VA
+          </span>
+        </span>
+        <span
+          className="slds-icon_container slds-icon-utility-chevronright slds-align-middle"
+          title="Has further options"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-icon slds-icon_x-small slds-icon-text-default"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#chevronright"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            Has further options
+          </span>
+        </span>
+      </div>
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`render combobox renders disabled plain options in the listbox 1`] = `
+<div
+  aria-orientation={null}
+  className="slds-dropdown slds-dropdown_length-5 slds-dropdown_fluid"
+  id="listbox-id-1"
+  role="listbox"
+>
+  <ul
+    aria-label={undefined}
+    className="slds-listbox slds-listbox_vertical"
+    role="presentation"
+  >
+    <li
+      className="slds-listbox__item"
+      role="presentation"
+    >
+      <div
+        aria-disabled="true"
+        aria-selected={null}
+        className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
+        id="option1"
+        role="option"
+        tabIndex={undefined}
+      >
+        <span
+          className="slds-media__figure slds-listbox__option-icon"
+        />
+        <span
+          className="slds-media__body"
+        >
+          <span
+            className="slds-truncate"
+            title="Edge Communications"
+          >
+             
+            Edge Communications
+          </span>
+        </span>
+      </div>
+    </li>
+    <li
+      className="slds-listbox__item"
+      role="presentation"
+    >
+      <div
+        aria-disabled="true"
+        aria-selected={null}
+        className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
+        id="option2"
+        role="option"
+        tabIndex={undefined}
+      >
+        <span
+          className="slds-media__figure slds-listbox__option-icon"
+        >
+          <span
+            className="slds-icon_container slds-icon-utility-anchor slds-current-color"
+            title={null}
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-icon slds-icon_x-small"
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#anchor"
+              />
+            </svg>
+          </span>
+        </span>
+        <span
+          className="slds-media__body"
+        >
+          <span
+            className="slds-truncate"
+            title="Alexandria Textiles Corp of America"
+          >
+             
+            Alexandria Textiles Corp of America
+          </span>
+        </span>
+      </div>
+    </li>
+    <li
+      className="slds-listbox__item"
+      role="presentation"
+    >
+      <div
+        aria-disabled={null}
+        aria-selected={null}
+        className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-listbox__option_has-meta"
+        id="option3"
+        role="option"
+        tabIndex={undefined}
+      >
+        <span
+          className="slds-media__figure slds-listbox__option-icon"
+        />
+        <span
+          className="slds-media__body"
+        >
+          <span
+            className="slds-truncate"
+            title="Express Logistics and Transport"
+          >
+             
+            Express Logistics and Transport
+          </span>
+          <span
+            className="slds-listbox__option-meta"
+          >
+            Durham, NC
+          </span>
+        </span>
+      </div>
+    </li>
+  </ul>
 </div>
 `;
 
@@ -6845,6 +7235,7 @@ exports[`render combobox renders groups in a listbox 1`] = `
               role="presentation"
             >
               <div
+                aria-disabled={null}
                 aria-selected={null}
                 className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                 id="option0"
@@ -6864,6 +7255,7 @@ exports[`render combobox renders groups in a listbox 1`] = `
               role="presentation"
             >
               <div
+                aria-disabled={null}
                 aria-selected={null}
                 className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                 id="option1"
@@ -6891,6 +7283,7 @@ exports[`render combobox renders groups in a listbox 1`] = `
               role="presentation"
             >
               <div
+                aria-disabled={null}
                 aria-selected={null}
                 className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                 id="option2"
@@ -6924,6 +7317,7 @@ exports[`render combobox renders groups in a listbox 1`] = `
               role="presentation"
             >
               <div
+                aria-disabled={null}
                 aria-selected={null}
                 className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                 id="option3"
@@ -6943,6 +7337,7 @@ exports[`render combobox renders groups in a listbox 1`] = `
               role="presentation"
             >
               <div
+                aria-disabled={null}
                 aria-selected={null}
                 className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                 id="option4"
@@ -6970,6 +7365,7 @@ exports[`render combobox renders groups in a listbox 1`] = `
               role="presentation"
             >
               <div
+                aria-disabled={null}
                 aria-selected={null}
                 className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                 id="option5"

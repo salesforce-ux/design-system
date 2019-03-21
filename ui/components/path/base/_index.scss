@@ -569,6 +569,8 @@
 .slds-path__stage {
   position: absolute;
   top: 50%;
+  /* stylelint-disable comment-empty-line-before */
+  /*! @noflip */
   left: 50%;
   transform: translate(-50%, -50%) rotateX(-180deg);
 }
@@ -641,6 +643,10 @@
 
 .slds-path__trigger_open {
   transform: rotate(90deg);
+
+  @include rtl() {
+    transform: rotate(-90deg);
+  }
 }
 
 // Mixins and variables to reuse code in responsive and manually locked scenarios

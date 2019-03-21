@@ -128,8 +128,8 @@ class Card extends Component {
       isBare && 'sldswc-card_bare'
     );
 
-    console.log(common);
-    console.log(card);
+    console.log('common:', common);
+    console.log('card:', card);
 
     return (
       <Shadow name="card" includes={[common, card]} shadow={this.props.shadow}>

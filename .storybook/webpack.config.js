@@ -21,12 +21,21 @@ module.exports = (baseConfig, env, defaultConfig) => {
         path.resolve(__dirname, '../assets')
       ],
       use: [
-        // { loader: path.resolve(__dirname, '../scripts/compile/my-loader.js') },
+        {
+          loader: path.resolve(
+            __dirname,
+            '../scripts/compile/sldswc-style-loader.js'
+          )
+        },
         // {
         //   loader: MiniCssExtractPlugin.loader
         // },
-        'style-loader',
-        'css-to-string-loader',
+        // 'style-loader',
+        // 'css-to-string-loader',
+        // {
+        //   loader: 'style-loader',
+        //   options: { insertInto: () => { console.log("@@@ Inside style-loader"); return document.body; } }
+        // },
         {
           loader: 'css-loader',
           options: { importLoaders: 2 }

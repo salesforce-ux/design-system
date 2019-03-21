@@ -20,6 +20,10 @@
   border-radius: $border-radius-medium;
   background-clip: padding-box;
   box-shadow: $card-shadow;
+  background: red;
+}
+
+:host .sldswc-card {
   background: rebeccapurple;
 }
 

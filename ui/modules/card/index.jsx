@@ -7,11 +7,11 @@ import classNames from 'classnames';
 import uniqueId from 'lodash.uniqueid';
 import Shadow from '../../shared/shadow';
 
-import '../common/index.scss';
-import './base/index.scss';
+import common from '../common/index.scss';
+import card from './base/index.scss';
 
-import common from '!!css-loader!../common/index.css'; // eslint-disable-line import/no-webpack-loader-syntax
-import card from '!!css-loader!./base/index.css'; // eslint-disable-line import/no-webpack-loader-syntax
+// import common from '!!css-loader!../common/index.css'; // eslint-disable-line import/no-webpack-loader-syntax
+// import card from '!!css-loader!./base/index.scss'; // eslint-disable-line import/no-webpack-loader-syntax
 
 export const CardHeader = props => {
   const { title, href, hasActions, actions } = props;
@@ -127,6 +127,9 @@ class Card extends Component {
       hasBoundary && 'sldswc-card_boundary',
       isBare && 'sldswc-card_bare'
     );
+
+    console.log(common);
+    console.log(card);
 
     return (
       <Shadow name="card" includes={[common, card]} shadow={this.props.shadow}>

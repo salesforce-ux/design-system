@@ -1,7 +1,16 @@
 const path = require('path');
 const visit = require('unist-util-visit');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const devMode = process.env.NODE_ENV !== 'production';
 
 module.exports = (baseConfig, env, defaultConfig) => {
+  defaultConfig.plugins.push(
+    new MiniCssExtractPlugin({
+      filename: devMode ? '[name]XXX.css' : '[name]XXX.[hash].css',
+      chunkFilename: devMode ? '[id]XXX.css' : '[id]XXX.[hash].css'
+    })
+  );
+
   defaultConfig.module.rules.push(
     {
       test: /\.scss$/,
@@ -12,10 +21,15 @@ module.exports = (baseConfig, env, defaultConfig) => {
         path.resolve(__dirname, '../assets')
       ],
       use: [
+        // { loader: path.resolve(__dirname, '../scripts/compile/my-loader.js') },
+        // {
+        //   loader: MiniCssExtractPlugin.loader
+        // },
         'style-loader',
+        'css-to-string-loader',
         {
           loader: 'css-loader',
-          options: { importLoaders: 1 }
+          options: { importLoaders: 2 }
         },
         {
           loader: 'postcss-loader',
@@ -75,6 +89,15 @@ module.exports = (baseConfig, env, defaultConfig) => {
         }
       ]
     }
+    // ,
+    // {
+    //   test: /\.jsx$/,
+    //   include: [path.resolve(__dirname, '../ui/modules')],
+    //   use: [
+    //     { loader: path.resolve(__dirname, '../scripts/compile/my-loader.js') }
+    //     // { loader: 'sass-loader' }
+    //   ]
+    // }
   );
 
   return defaultConfig;

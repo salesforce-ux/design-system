@@ -1,0 +1,152 @@
+import CodeView from '../../../shared/components/CodeView';
+import CodeBlock from '../../../shared/components/CodeBlock';
+import Blockquote from '../../../shared/components/Blockquote';
+import * as IconExamples from './base/example';
+import { getDisplayElementById } from '../../shared/helpers';
+
+<div className="doc lead">
+  Icons provide visual context and enhance usability. All of the Icons can be
+  found <a href="/icons">here</a>.
+</div>
+
+<CodeView>
+  {IconExamples.default()}
+</CodeView>
+
+## Usage
+
+Five separate SVG sprites are used to create icons — [action](/icons/#action), [custom](/icons/#custom), [doctype](/icons/#doctype), [standard ](/icons/#standard) and [utility](/icons/#utility). Link to the icon SVG sprite by targeting the icon’s hash/ID value in the use href attribute. (You can find the values on the [icon page](/icons/).)
+
+When placing the icon code into your page, customize the path in the `use` attribute of the `svg` to the proper path and icon name for your specific icon. For example, the _case_ icon in the _standard_ sprite would have a path like this:
+
+## Primtive Icon
+
+<Blockquote type="note" header="Note">
+  If an icon has more than one word in the name, it should be included in the
+  <code className="doc">use</code> attribute with the underscore separator as shown on the icon page. For
+  example: <code className="doc">log_a_call</code>.
+</Blockquote>
+
+## Accessibility
+
+Icons require a containing element for two reasons:
+
+- If assistive text is required, the containing element should contain both the icon and a `<span>` with hidden assistive text describing the icon using the `slds-assistive-text` class.
+- If the icon is used without a visible, descriptive label, a `title` attribute is needed on the containing element. The `title` should describe the icon.
+
+If an icon has a visible label that describes what the icon represents, no title or hidden assistive text is required.
+
+## Icon Sizing
+
+Icons accept a sizing class that will change the dimensions of the icon. Sizes range from `x-large` to `xx-small`. Changing the size of the icon is independent of the icons boundary size.
+
+By default, utiity icons are 16px by 16px. For action, custom, doctype, and standard sets, the default is 24px by 24px.
+
+|Class|Size|
+|-----|----|
+|`lwc-icon_x-large`|64px|
+|`lwc-icon_large`|48px|
+|`lwc-icon_medium`|32px|
+|`lwc-icon_small` (action, custom, doctype, standard _default_)|24px|
+|`lwc-icon_x-small` (utility icon _default_)|16px|
+|`lwc-icon_xx-small`|12px|
+
+<CodeView>
+  {getDisplayElementById(IconExamples.examples, 'sizes')}
+</CodeView>
+
+## Icons with Boundary Sizing
+
+Every icon comes with a boundary, this boundary size can be alter independently from the icon size. Sizes range from `x-large` to `xx-small`. Changing the boundary will _not_ change the size of the icon.
+
+By default, the icon boundary is the size of the icon.
+
+|Class|Size|
+|-----|----|
+|`lwc-icon-boundary_x-large`|64px|
+|`lwc-icon-boundary_large`|48px|
+|`lwc-icon-boundary_medium`|32px|
+|`lwc-icon-boundary_small`|24px|
+|`lwc-icon-boundary_x-small`|16px|
+|`lwc-icon-boundary_xx-small`|12px|
+
+<CodeView>
+  {getDisplayElementById(IconExamples.examples, 'boundary')}
+</CodeView>
+
+## Icons with color
+
+Icons can have their color modified by overriding the CSS custom property, `--c-theme-icon-color` inside of `:host`. We provide three colors for user feedback states such as success, warning, and error. We also provide a muted color where an icon doesn't required as much emphasis.
+
+|Class|State|
+|-----|-----|
+|`lwc-icon_success`|success|
+|`lwc-icon_warning`|warning|
+|`lwc-icon_error`|error|
+|`lwc-icon_muted`| |
+
+<CodeView>
+  {getDisplayElementById(IconExamples.examples, 'colors')}
+</CodeView>
+
+## Unset background and color
+
+There might be situations where you want to use an icon from our Standard or Custom set but don't require the background or color. You can unset the default background and color with `lwc-icon_unset`.
+
+After unsetting the color, the icon will inherit the font color from the app. You can apply a provide icon color of success, warning, error, or muted or override the icon color by changing the value of `--c-theme-icon-color` in your `:host`.
+
+<Blockquote type="warning" header="Note">
+  Unsetting the background and color should only be used on our custom or standard set. <strong>Usage on any other set is unsupported.</strong>
+</Blockquote>
+
+<CodeView>
+  {getDisplayElementById(IconExamples.examples, 'unset')}
+</CodeView>
+
+## Types
+
+### Action
+
+To view all available action icons, see [action icons](/icons/#action).
+
+<CodeView>
+  {getDisplayElementById(IconExamples.examples, 'action')}
+</CodeView>
+
+### Custom
+
+Custom icons have a rounded square shape and use a class on the container for the background color.
+
+To view all available custom icons, see [custom icons](/icons/#custom).
+
+<CodeView>
+  {getDisplayElementById(IconExamples.examples, 'custom')}
+</CodeView>
+
+### Doctypes
+
+To view all available doctype icons, see [doctype icons](/icons/#doctype).
+
+<CodeView>
+  {getDisplayElementById(IconExamples.examples, 'doctype')}
+</CodeView>
+
+### Standard
+
+Standard icons have a rounded square shape and use a class on the container for the background color.
+
+To view all available standard icons, see [standard icons](/icons/#standard).
+
+<CodeView>
+  {getDisplayElementById(IconExamples.examples, 'standard')}
+</CodeView>
+
+### Utilities
+
+<CodeView>
+  {getDisplayElementById(IconExamples.examples, 'utility')}
+</CodeView>
+
+## Examples
+
+### Icons with text

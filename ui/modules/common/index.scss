@@ -5,3 +5,7 @@
   '../config',
   '../../shared/common/init',
   '../../shared/common/index';
+
+.lwc-assistive-text {
+  @include assistive-text;
+}

@@ -21,7 +21,7 @@ class IconPrimitive extends Component {
   renderAssistiveText() {
     if (!this.props.assistiveText) return;
     return (
-      <span className="slds-assistive-text">{this.props.assistiveText}</span>
+      <span className="lwc-assistive-text">{this.props.assistiveText}</span>
     );
   }
 

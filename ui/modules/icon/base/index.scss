@@ -64,7 +64,7 @@ $c-theme-icon-border-radius: $border-radius-medium;
 :host {
   @include icon-base;
 
-  span {
+  > span {
     display: inherit;
   }
 }

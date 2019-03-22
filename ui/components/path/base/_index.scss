@@ -619,7 +619,7 @@
  * @selector .slds-path__trigger
  * @restrict .slds-path button
  */
-.slds-button_icon.slds-path__trigger { // increased specificity to avoid issues with PathSimple/legacy path
+.slds-path .slds-path__trigger { // increased specificity to avoid issues with PathSimple/legacy path
   margin-right: $spacing-small;
   transition: $duration-slowly transform ease-in-out;
   display: none;
@@ -665,7 +665,7 @@ $mark-complete-width-medium: auto;
  * @selector .slds-path__mark-complete
  * @restrict .slds-path button
  */
-.slds-button_brand.slds-path__mark-complete { // increased specificity to avoid issues with PathSimple/legacy path
+.slds-path .slds-path__mark-complete { // increased specificity to avoid issues with PathSimple/legacy path
   @include mark-complete-base();
 
   @include mq-medium-min {
@@ -810,7 +810,7 @@ $mark-complete-width-medium: auto;
 }
 
 // overrides .slds-button + .slds-button rule by increasing specificity
-.slds-button.slds-path__trigger-coaching-content {
+.slds-path .slds-path__trigger-coaching-content {
   margin-left: 0;
 }
 

@@ -45,9 +45,10 @@
 
 ### [Path](https://www.lightningdesignsystem.com/components/path)
 #### Added
-- Added `slds-path__trigger-region-small` to create a full width coaching toggle in small regions
+- Added `slds-path__trigger-coaching-content` to create a full width coaching toggle in small regions.
 #### Changed
 - Padding has been removed from `slds-path__track` to fix display issues when the Path is nested inside of a Card; of which is it's default state.
+- Modified to be mobile first and responsive.
 ## Fixed
 - Flipped chevrons for RTL languages
 

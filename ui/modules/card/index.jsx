@@ -121,7 +121,8 @@ class Card extends Component {
   }
 
   render() {
-    const { custom, children, hasBoundary, isBare } = this.props;
+    const { custom, children, hasBoundary, isBare, shadow } = this.props;
+
     const computedClassNames = classNames(
       'sldswc-card',
       hasBoundary && 'sldswc-card_boundary',
@@ -129,7 +130,7 @@ class Card extends Component {
     );
 
     return (
-      <Shadow name="card" includes={[common, card]} shadow={this.props.shadow}>
+      <Shadow name="card" includes={[common, card]} shadow={shadow}>
         <article className={computedClassNames}>
           {!custom
             ? [this.renderHeader(), this.renderBody(), this.renderFooter()]

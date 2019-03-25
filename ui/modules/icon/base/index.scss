@@ -102,6 +102,7 @@ $c-theme-icon-border-radius: $border-radius-medium;
 [class*="sldswc-icon-action"] {
   border-radius: $_c-theme-icon-border-radius-circle;
   padding: $_c-spacing-icon-action-padding;
+  vertical-align: bottom;
 }
 
 // Action and Custom

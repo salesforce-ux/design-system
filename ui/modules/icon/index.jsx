@@ -107,7 +107,7 @@ Icon.propTypes = {
   boundarySize: PropTypes.string,
   unset: PropTypes.bool,
   shadow: PropTypes.bool,
-  assistiveText: PropTypes.bool
+  assistiveText: PropTypes.string
 };
 
 export default Icon;

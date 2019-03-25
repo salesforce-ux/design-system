@@ -27,6 +27,21 @@ export const mapElement = (element, fn) =>
       )
     : element;
 
+export const mapForShadowElements = (element, fn) =>
+  React.isValidElement(element)
+    ? fn(
+        React.cloneElement(element, {
+          children: React.isValidElement(element.props.children)
+            ? fn(element.props.children)
+            : React.Children.map(element.props.children, element => {
+                console.log(`chidl ${element}`);
+                return mapElement(element, fn);
+              })
+          // shadow: typeof element.type === 'function' ? false : undefined
+        })
+      )
+    : element;
+
 export const renderWithBetterError = ReactDOM => (element, msg) => {
   try {
     return ReactDOM.renderToStaticMarkup(element);

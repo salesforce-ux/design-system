@@ -5,7 +5,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import ReactDOM from 'react-dom/server.browser';
 import { beautify } from '../utils/beautify';
-import { mapElement } from '../utils/react';
+import { mapForShadowElements } from '../utils/react';
 import classNames from 'classnames';
 import Copy from './Copy';
 import Prism from '../vendor/prism';
@@ -18,9 +18,9 @@ const highlight = (code, language) =>
 export const ToggleButton = props => (
   <div className="doc-toggle-code">
     <button
-      {...props}
       className="slds-button doc-toggle-code__button"
       aria-live="polite"
+      {...props}
     >
       {props.open ? 'Hide ' : 'Show '} Code
     </button>
@@ -28,8 +28,8 @@ export const ToggleButton = props => (
 );
 
 class CodeBlock extends Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
     this.state = {
       open: false
     };
@@ -42,13 +42,16 @@ class CodeBlock extends Component {
 
   getCode() {
     const { children } = this.props;
-    const element = mapElement(children, (child, index) => {
-      return React.cloneElement(child, {
-        key: `docelement-${index}`,
-        shadow: typeof child.type === 'function' ? false : undefined
-      });
+    const element = mapForShadowElements(children, (child, index) => {
+      if (React.isValidElement(child)) {
+        return React.cloneElement(child, {
+          shadow: typeof child.type === 'function' ? false : undefined
+        });
+      }
     });
-    return beautify(element ? ReactDOM.renderToStaticMarkup(element) : '');
+    const markup = ReactDOM.renderToStaticMarkup(element);
+    const sanitizedMarkup = markup.replace(/className="resolved"/g, '');
+    return beautify(element ? sanitizedMarkup : '');
   }
 
   getHighlightedCode() {

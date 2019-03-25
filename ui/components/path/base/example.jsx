@@ -389,8 +389,8 @@ const PathSmall = () => {
               stageName="Needs Analysis"
               coachingId={coachingId}
               hasOverflow
+              hasCoaching
               coachingOpen
-              isSmallRegion
             >
               <PathStep
                 label="Prospecting"
@@ -435,76 +435,6 @@ const PathSmall = () => {
               <PathStep label="Closed" stepState={['incomplete']} index={72} />
             </PathTrack>
             <PathCoaching coachingId={coachingId} labelledBy="path-66" />
-          </Path>
-        </CardBody>
-      </Card>
-    </div>
-  );
-};
-
-const PathMobile = props => {
-  const coachingId = 'path-coaching-3';
-
-  return (
-    <div className="slds-region_small" style={{ width: '360px' }}>
-      <Card>
-        <CardBody hasPadding>
-          <Path hasCoaching coachingOpen={props.coachingOpen}>
-            <PathTrack
-              stageName="Needs Analysis"
-              coachingId={coachingId}
-              hasOverflow
-              coachingOpen={props.coachingOpen}
-              isSmallRegion
-              isMobile
-            >
-              <PathStep
-                label="Prospecting"
-                stepState={['complete']}
-                index={64}
-              />
-              <PathStep
-                label="Qualification"
-                stepState={['complete']}
-                index={65}
-              />
-              <PathStep
-                label="Needs Analysis"
-                stepState={['active', 'current']}
-                index={66}
-              />
-              <PathStep
-                label="Value Proposition"
-                stepState={['incomplete']}
-                index={67}
-              />
-              <PathStep
-                label="Id. Decision Maker"
-                stepState={['incomplete']}
-                index={68}
-              />
-              <PathStep
-                label="Perception Analysis"
-                stepState={['incomplete']}
-                index={69}
-              />
-              <PathStep
-                label="Proposal / Pricing"
-                stepState={['incomplete']}
-                index={70}
-              />
-              <PathStep
-                label="Negotiation / Review"
-                stepState={['incomplete']}
-                index={71}
-              />
-              <PathStep label="Closed" stepState={['incomplete']} index={72} />
-            </PathTrack>
-            <PathCoaching
-              coachingId={coachingId}
-              labelledBy="path-66"
-              isHidden={!props.coachingOpen}
-            />
           </Path>
         </CardBody>
       </Card>
@@ -569,15 +499,5 @@ export const states = [
     id: 'small-coaching',
     label: 'Small viewport',
     element: <PathSmall />
-  },
-  {
-    id: 'mobile-coaching',
-    label: 'Mobile Coaching - Open',
-    element: <PathMobile coachingOpen />
-  },
-  {
-    id: 'mobile-coaching-closed',
-    label: 'Mobile Coaching - Closed',
-    element: <PathMobile coachingOpen={false} />
   }
 ];

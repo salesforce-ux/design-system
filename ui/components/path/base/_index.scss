@@ -7,6 +7,7 @@
  * @restrict div
  * @variant
  * @support dev-ready
+ * @layout responsive
  * @s1 false
  */
 .slds-path {
@@ -29,6 +30,14 @@
  * @restrict .slds-path div
  */
 .slds-path__track {
+  flex-wrap: wrap;
+  align-items: flex-start;
+
+  @include mq-large-min {
+    flex-wrap: nowrap;
+    align-items: stretch;
+  }
+
   /**
    * Indicates the scroller is in the overflow state
    *
@@ -49,14 +58,15 @@
       overflow: hidden;
     }
 
-    .slds-path__scroller-container {
-      overflow: hidden;
-    }
-
     .slds-path__scroll-controls {
       display: inline-flex;
       flex-shrink: 0;
       padding-left: $spacing-x-small;
+
+      // hide the scroll controls on devices where touch is the primary interface
+      @media (pointer: coarse) and (hover: none) {
+        display: none;
+      }
     }
   }
 }
@@ -92,8 +102,17 @@
  *
  */
 .slds-path__stage-name {
-  display: none;
+  display: block;
   font-weight: $font-weight-bold;
+  margin: $spacing-small 0;
+
+  @include mq-medium-min {
+    margin: 0;
+  }
+
+  @include mq-large-min {
+    display: none;
+  }
 }
 
 /**
@@ -104,6 +123,37 @@
  */
 .slds-path__scroller-container {
   flex: 1;
+  flex-basis: 100%;
+  overflow: hidden;
+
+  @include mq-large-min {
+    flex-basis: auto;
+  }
+}
+
+.slds-path_has-coaching .slds-path__action {
+  @include mq-medium-min {
+    padding-left: ($spacing-small + $square-icon-medium-boundary);
+  }
+
+  @include mq-large-min {
+    padding-left: 0;
+  }
+}
+
+// Mixins to reuse code in responsive and manually locked scenarios
+@mixin path-action-base() {
+  flex-grow: 1;
+  flex-basis: 100%;
+  margin-left: 0;
+  align-items: center;
+}
+
+@mixin path-action-base-medium() {
+  max-width: 100%; // IE11 flexbox fix - ensure everything stays inside the flex container
+  justify-content: space-between;
+  margin-top: $spacing-medium;
+  flex-direction: row;
 }
 
 /**
@@ -113,8 +163,21 @@
  * @restrict .slds-path div
  */
 .slds-path__action {
-  margin-left: $spacing-large;
+  @include path-action-base();
   flex-shrink: 0;
+  flex-direction: column;
+
+  @include mq-medium-min {
+    @include path-action-base-medium();
+  }
+
+  @include mq-large-min {
+    flex-basis: auto;
+    flex-grow: 0;
+    align-items: normal;
+    margin-top: 0;
+    margin-left: $spacing-large;
+  }
 }
 
 // these mixins exist in order to alias selector assignment in the case
@@ -556,9 +619,14 @@
  * @selector .slds-path__trigger
  * @restrict .slds-path button
  */
-.slds-path__trigger {
+.slds-path .slds-path__trigger { // increased specificity to avoid issues with PathSimple/legacy path
   margin-right: $spacing-small;
   transition: $duration-slowly transform ease-in-out;
+  display: none;
+
+  @include mq-medium-min {
+    display: block;
+  }
 }
 
 // @TODO: Move to global utility?
@@ -581,15 +649,28 @@
   }
 }
 
+// Mixins and variables to reuse code in responsive and manually locked scenarios
+$mark-complete-width: 100%;
+$mark-complete-width-medium: auto;
+
+@mixin mark-complete-base() {
+  width: $mark-complete-width;
+  min-width: $path-button-width-fixed;
+  margin-right: 0;
+}
+
 /**
  * @summary Actionable button that invokes a completion of the path
  *
  * @selector .slds-path__mark-complete
  * @restrict .slds-path button
  */
-.slds-path__mark-complete {
-  border-radius: $border-radius-pill;
-  min-width: $path-button-width-fixed;
+.slds-path .slds-path__mark-complete { // increased specificity to avoid issues with PathSimple/legacy path
+  @include mark-complete-base();
+
+  @include mq-medium-min {
+    width: $mark-complete-width-medium;
+  }
 }
 
 /**
@@ -616,16 +697,6 @@
  */
 
 /**
- * @summary Key field section of expanded tabpanel
- *
- * @selector .slds-path__keys
- * @restrict .slds-path__content div
- */
-.slds-path__keys {
-  padding-left: $spacing-small;
-}
-
-/**
  * @summary Guidance section of expanded tabpanel
  *
  * @selector .slds-path__guidance
@@ -633,17 +704,59 @@
  */
 .slds-path__guidance {
   margin-right: $spacing-x-small;
-  padding-left: $spacing-small;
   padding-bottom: $spacing-xx-small;
   background-color: $color-background-guidance;
+
+  @include mq-medium-min {
+    margin-top: 0;
+  }
 }
 
-// Layout adjustments for sub section sof expanded tabpanel
+// Layout adjustments for sub sections of expanded tabpanel
 .slds-path__keys,
 .slds-path__guidance {
-  flex: 1 1 50%;
+  flex: 1 1 100%;
   margin-top: $var-spacing-vertical-medium;
-  padding-right: $spacing-small;
+
+  padding-left: 0;
+  padding-right: 0;
+
+  @include mq-medium-min {
+    flex-basis: 50%;
+  }
+}
+
+/**
+ * @summary Key field section of expanded tabpanel
+ *
+ * @selector .slds-path__keys
+ * @restrict .slds-path__content div
+ */
+.slds-path__keys {
+  @include mq-medium-min {
+    padding-right: $spacing-small;
+  }
+}
+
+
+@mixin path-coach-medium() {
+  flex-wrap: nowrap;
+  align-items: stretch;
+}
+
+/**
+ * @summary This creates the layout block for the coaching area
+ *
+ * @selector .slds-path__coach
+ * @restrict .slds-path__content div
+ */
+.slds-path__coach {
+  flex-wrap: wrap;
+  align-items: flex-start;
+
+  @include mq-medium-min {
+    @include path-coach-medium();
+  }
 }
 
 /**
@@ -682,6 +795,29 @@
 }
 
 /**
+ * @summary This class is used to create a full width coaching toggle in small regions
+ *
+ * @selector .slds-path__trigger-coaching-content
+ * @restrict .slds-path__action button
+ */
+.slds-path__trigger-coaching-content {
+  width: 100%;
+  margin-top: $spacing-small;
+
+  @include mq-medium-min {
+    display: none;
+  }
+}
+
+// overrides .slds-button + .slds-button rule by increasing specificity
+.slds-path .slds-path__trigger-coaching-content {
+  margin-left: 0;
+}
+
+
+//
+//
+/**
  * @summary This class should be placed on a containing div when the Path container is between 565px and 1280px
  *
  * @selector .slds-region_medium
@@ -698,30 +834,52 @@
   }
 
   .slds-path__track {
-    @include flex-wrap(true);
+    flex-wrap: wrap;
+    align-items: flex-start;
   }
 
   .slds-path__action {
-    flex-grow: 1;
-    flex-basis: 100%;
-    max-width: 100%; // IE11 flexbox fix - ensure everything stays inside the flex container
-    justify-content: space-between;
-    align-items: center;
-    margin-top: $spacing-medium;
-    margin-left: 0;
+    @include path-action-base();
+    @include path-action-base-medium();
+  }
+
+  .slds-path__stage-name,
+  .slds-path__trigger {
+    display: block;
   }
 
   .slds-path__stage-name {
-    display: block;
+    margin: 0;
+  }
+
+  .slds-path__trigger-coaching-content {
+    display: none;
+  }
+
+  .slds-path__mark-complete {
+    width: $mark-complete-width-medium;
+  }
+
+  .slds-path__coach {
+    @include path-coach-medium();
+  }
+
+  .slds-path__keys,
+  .slds-path__guidance {
+    flex-basis: 50%;
+  }
+
+  .slds-path__keys {
+    padding-right: $spacing-small;
   }
 }
 
 /**
- * @summary This class should be placed on a containing div when the Path container is between 360px and 564px
- *
- * @selector .slds-region_medium
- * @restrict div
- */
+* @summary This class should be placed on a containing div when the Path container is between 360px and 564px
+*
+* @selector .slds-region_medium
+* @restrict div
+*/
 .slds-region_small {
 
   .slds-path__scroller-container {
@@ -730,24 +888,27 @@
 
   .slds-path__track,
   .slds-path__coach {
-    @include flex-wrap(true);
+    flex-wrap: wrap;
+    align-items: flex-start;
   }
 
   .slds-path__stage-name {
     display: block;
-    margin: $spacing-medium 0;
+    margin: $spacing-small 0;
   }
 
   .slds-path__action {
-    flex-grow: 1;
-    flex-basis: 100%;
+    @include path-action-base();
     flex-direction: column;
-    margin-left: 0;
-    align-items: center;
+    margin-top: 0;
+  }
+
+  .slds-path_has-coaching .slds-path__action {
+    padding-left: 0;
   }
 
   .slds-path__mark-complete {
-    margin-right: 0;
+    width: $mark-complete-width;
   }
 
   .slds-path__keys,
@@ -760,15 +921,12 @@
   .slds-path__guidance {
     margin-top: $spacing-medium;
   }
-}
 
-/**
- * @summary This class is used to create a full width coaching toggle in small regions
- *
- * @selector .slds-path__trigger-region-small
- * @restrict .slds-path__action div
- */
-.slds-path__trigger-region-small {
-  width: 100%;
-  margin-top: $spacing-small;
+  .slds-path__trigger {
+    display: none;
+  }
+
+  .slds-path__trigger-coaching-content {
+    display: inline-block;
+  }
 }

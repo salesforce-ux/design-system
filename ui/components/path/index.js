@@ -40,8 +40,6 @@ Path.defaultProps = {
  * @param {*} props
  * @prop {boolean} hasCaoching - When true, adds the Coaching Button Toggle and preps Path Track for coaching support
  * @prop {boolean} coachingOpen - When true, displays the Coaching Button Toggle in an active state
- * @prop {boolean} isSmallRegion - When true, the Mark as Complete button will be full width
- * @prop {boolean} isMobile - When true, removes the coaching toggle and the scroll buttons
  * @prop {boolean} hasOverflow - When true, presents the Path Steps in a scroller wrapper with control buttons
  * @prop {string} coachingId - Id of Coaching container element
  * @prop {string} stageName - Visible name of the current stage
@@ -54,9 +52,7 @@ export const PathTrack = props => {
     hasOverflow,
     coachingId,
     stageName,
-    actionButtonLabel,
-    isSmallRegion,
-    isMobile
+    actionButtonLabel
   } = props;
 
   return (
@@ -90,7 +86,7 @@ export const PathTrack = props => {
               {props.children}
             </ul>
 
-            {hasOverflow && !isMobile ? (
+            {hasOverflow ? (
               <div className="slds-path__scroll-controls">
                 <ButtonIcon
                   symbol="left"
@@ -115,24 +111,19 @@ export const PathTrack = props => {
 
       <div className="slds-grid slds-path__action">
         <span className="slds-path__stage-name">Stage: {stageName}</span>
-        <Button
-          isBrand
-          className={classNames(isSmallRegion && 'slds-button_stretch')}
-        >
+        <Button isBrand className="slds-path__mark-complete">
           {actionButtonLabel}
         </Button>
-        {isSmallRegion && (
-          <div className="slds-path__trigger-region-small">
-            <Button
-              isNeutral
-              className={classNames(isSmallRegion && 'slds-button_stretch')}
-              aria-expanded={coachingOpen}
-              aria-controls={coachingId}
-            >
-              {coachingOpen ? 'Show Less' : 'Show More'}
-            </Button>
-          </div>
-        )}
+        {hasCoaching ? (
+          <Button
+            isNeutral
+            className="slds-path__trigger-coaching-content"
+            aria-expanded={coachingOpen}
+            aria-controls={coachingId}
+          >
+            {coachingOpen ? 'Show Less' : 'Show More'}
+          </Button>
+        ) : null}
       </div>
     </div>
   );
@@ -144,9 +135,7 @@ PathTrack.propTypes = {
   hasOverflow: PropTypes.bool,
   coachingId: PropTypes.string,
   stageName: PropTypes.string,
-  actionButtonLabel: PropTypes.node,
-  isSmallRegion: PropTypes.bool,
-  isMobile: PropTypes.bool
+  actionButtonLabel: PropTypes.node
 };
 
 PathTrack.defaultProps = {

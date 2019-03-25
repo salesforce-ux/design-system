@@ -5,7 +5,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import ReactDOM from 'react-dom/server.browser';
 import { beautify } from '../utils/beautify';
-import { mapForShadowElements } from '../utils/react';
+import { mapElement } from '../utils/react';
 import classNames from 'classnames';
 import Copy from './Copy';
 import Prism from '../vendor/prism';
@@ -42,8 +42,9 @@ class CodeBlock extends Component {
 
   getCode() {
     const { children } = this.props;
-    const element = mapForShadowElements(children, (child, index) => {
+    const element = mapElement(children, (child, index) => {
       if (React.isValidElement(child)) {
+        if (child === undefined) return child;
         return React.cloneElement(child, {
           shadow: typeof child.type === 'function' ? false : undefined
         });
@@ -57,6 +58,15 @@ class CodeBlock extends Component {
   getHighlightedCode() {
     const { language } = this.props;
     return highlight(this.getCode(), language);
+  }
+
+  componentDidMount() {
+    console.log('Mounted');
+  }
+
+  componentDidUpdate(prev, next) {
+    console.log('Updated');
+    console.log(prev, next);
   }
 
   render() {

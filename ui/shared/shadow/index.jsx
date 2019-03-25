@@ -74,7 +74,7 @@ class Shadow extends Component {
   render() {
     return this.props.shadow === false
       ? this.props.children
-      : this.renderComponent();
+      : this.renderShadowDom();
   }
 }
 

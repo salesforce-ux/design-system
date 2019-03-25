@@ -50,11 +50,13 @@ export default async () => {
     'docs'
   ));
   getDoc.keys().forEach(key => {
-    console.log(key);
+    // console.log(key);
     const { getElement } = getDoc(key);
+    // console.log(getElement())
     const examples = flattenElement(getElement())
       .filter(e => e.type === Example)
       .map(e => {
+        console.log(e.type);
         return {
           title: e.props.title,
           element: mapElement(e.props.children, e => {

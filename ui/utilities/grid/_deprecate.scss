@@ -6,24 +6,27 @@
   .slds-nowrap_small,
   .slds-nowrap--small {
     @include mq-small-min {
-      @include flex-item(expand);
-      @include flex-wrap(false);
+      flex: 1 1 auto;
+      flex-wrap: nowrap;
+      align-items: stretch;
     }
   }
 
   .slds-nowrap_medium,
   .slds-nowrap--medium {
     @include mq-medium-min {
-      @include flex-item(expand);
-      @include flex-wrap(false);
+      flex: 1 1 auto;
+      flex-wrap: nowrap;
+      align-items: stretch;
     }
   }
 
   .slds-nowrap_large,
   .slds-nowrap--large {
     @include mq-large-min {
-      @include flex-item(expand);
-      @include flex-wrap(false);
+      flex: 1 1 auto;
+      flex-wrap: nowrap;
+      align-items: stretch;
     }
   }
 }

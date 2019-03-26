@@ -27,26 +27,6 @@
   }
 }
 
-@mixin form-element-vertical-spacing {
-  margin-top: $spacing-small;
-
-  @include mq-small-min {
-    margin-top: $spacing-x-small;
-  }
-}
-
-@mixin form-element-required($element: null) {
-  @if $element != null {
-
-    > #{$element}:before {
-      content: '*';
-      color: $color-text-error;
-      position: absolute;
-      left: ($spacing-x-small * -1);
-    }
-  }
-}
-
 @mixin form-input-error($element: null) {
   @if $element != null {
 

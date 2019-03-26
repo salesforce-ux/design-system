@@ -14,8 +14,6 @@
   }
 }
 
-
-
 // SMALL - 480px - 30rem
 @mixin mq-small-min {
   @media (min-width: pem($mq-small)) {
@@ -28,8 +26,6 @@
     @content;
   }
 }
-
-
 
 // MEDIUM - 768px - 48rem
 @mixin mq-medium-min {
@@ -44,8 +40,6 @@
   }
 }
 
-
-
 // LARGE - 1024px - 64rem
 @mixin mq-large-min {
   @media (min-width: pem($mq-large)) {
@@ -58,76 +52,6 @@
     @content;
   }
 }
-
-
-
-// HUGE - 1224px - 76.5rem
-@mixin mq-huge-min {
-  @media (min-width: pem(1224)) {
-    @content;
-  }
-}
-
-@mixin mq-huge-max {
-  @media (max-width: pem(1224)) {
-    @content;
-  }
-}
-
-
-
-// SUPER - 1824px - 114rem
-@mixin mq-super-min {
-  @media (min-width: pem(1824)) {
-    @content;
-  }
-}
-
-@mixin mq-super-max {
-  @media (max-width: pem(1824)) {
-    @content;
-  }
-}
-
-
-
-// Sizing Helper
-@mixin width($columns: $grid-columns, $breakpoint: null, $max: false) {
-  $breakpoint-string: null;
-
-  // Loop through the number of columns for each denominator of our fractions.
-  @each $denominator in $columns {
-    @if ($breakpoint != null) {
-      $breakpoint-string: if($max, 'max-', '') + $breakpoint + '-';
-    }
-
-    @for $i from 1 through $denominator {
-
-      .slds-#{$breakpoint-string}size_#{$i}-of-#{$denominator},
-      .slds-#{$breakpoint-string}size--#{$i}-of-#{$denominator} {
-        width: ($i / $denominator) * 100%;
-      }
-    }
-  }
-}
-
-
-
-// Sizing Helper
-@mixin flex-size($span: 1, $spread: 12) {
-  @if type-of($span) == number and unitless($span) == false {
-    flex: 0 0 rem($span);
-    max-width: rem($span);
-  }
-
-  @else {
-    $pct: percentage($span / $spread);
-    flex: 0 0 $pct;
-    max-width: $pct;
-  }
-}
-
-
 
 // Wrapping Helper
 @mixin flex-wrap($wrap: true) {
@@ -142,56 +66,6 @@
   }
 }
 
-
-
-// Children - Flexbox Item
-@mixin flex-item($size: expand) {
-  @if (type-of($size) == 'number') {
-    @include flex-size($size, $columns);
-  }
-
-  @if ($size == shrink) {
-    flex: 0 0 auto;
-    overflow: visible;
-  }
-
-  @else if ($size == expand) {
-    flex: 1 1 auto;
-  }
-}
-
-
-
-
-// Truncate
-@mixin truncate {
-  max-width: 100%;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-// Hyphenate
-@mixin hyphenate {
-  overflow-wrap: break-word;
-  word-wrap: break-word;
-  hyphens: auto;
-}
-
-// word-break
-@mixin break-word {
-  overflow-wrap: break-word;
-  word-wrap: break-word;
-  word-break: break-word;
-}
-
-// normal-wrap
-@mixin normal-wrap {
-  overflow-wrap: normal;
-  word-wrap: normal;
-  word-break: normal;
-}
-
 // Clearfix
 @mixin clearfix {
 
@@ -200,100 +74,6 @@
     display: table;
     clear: both;
   }
-}
-
-
-@mixin square($size) {
-  width: $size;
-  height: $size;
-}
-
-
-@mixin visibility($class-name, $min: null, $max: null) {
-
-  .slds-#{$class-name} {
-    /* Allow class interpolation with parent selector for easier utility class generation */
-    /* stylelint-disable selector-class-pattern */
-    &-show {
-      display: none;
-
-      @if $min {
-        @media (min-width: $min) {
-          display: block;
-
-          &_inline-block,
-          &--inline-block {
-            display: inline-block;
-          }
-
-          &_inline,
-          &--inline {
-            display: inline;
-          }
-        }
-      }
-    }
-
-    @if $min and $max {
-
-      &-show-only {
-        display: none;
-
-        @media (min-width: $min) and (max-width: $max - 1) {
-          display: block;
-
-          &_inline-block,
-          &--inline-block {
-            display: inline-block;
-          }
-
-          &_inline,
-          &--inline {
-            display: inline;
-          }
-        }
-      }
-    }
-    /* stylelint-enable selector-class-pattern */
-  }
-
-  @if $max {
-
-    .slds-max-#{$class-name}-hide {
-      @media (max-width: $max - 1) {
-        display: none;
-      }
-    }
-  }
-}
-
-@mixin align-horizontal($children: null, $fallback: null, $mq: null) {
-  display: flex;
-
-  @if $mq != null {
-    flex-direction: column;
-
-    @include mq-medium-min {
-      flex-direction: row;
-    }
-  }
-
-  @if $children != null {
-
-    > #{$children} {
-      align-self: center;
-    }
-  }
-}
-
-@mixin docked-bar {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background: $color-background;
-  box-shadow: $shadow-docked;
-  z-index: $z-index-overlay; // Better token - more specific to docked stuff
 }
 
 @mixin absolute-center {

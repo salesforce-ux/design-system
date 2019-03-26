@@ -19,8 +19,14 @@
  */
 
 .slds-docked-form-footer {
-  @include docked-bar;
   display: flex;
   justify-content: center;
   padding: $spacing-x-small 0;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: $color-background;
+  box-shadow: $shadow-docked;
+  z-index: $z-index-overlay; // Better token - more specific to docked stuff
 }

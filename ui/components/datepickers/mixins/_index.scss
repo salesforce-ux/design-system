@@ -1,0 +1,14 @@
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+@mixin calendar-selection-fill {
+  content: '';
+  position: absolute;
+  background: $brand-accessible;
+  top: 0;
+  left: -50%;
+  height: 100%;
+  width: ($square-icon-medium-boundary + $spacing-x-small);
+  transform: translateX($spacing-x-small * -1);
+  z-index: -1;
+}

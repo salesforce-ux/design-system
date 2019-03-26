@@ -1,3 +1,100 @@
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+@mixin button {
+  padding-left: $spacing-medium;
+  padding-right: $spacing-medium;
+  text-align: center;
+  vertical-align: middle;
+  border: $border-width-thin solid $color-border-primary;
+  transition: border 0.15s linear;
+}
+
+@mixin button-base {
+  border-color: $button-color-border-primary;
+  background-color: $button-color-background-primary;
+
+  &:hover,
+  &:focus {
+    background-color: $color-background-button-default-hover;
+  }
+
+  &:active {
+    background-color: $color-background-button-default-active;
+  }
+}
+
+@mixin button-brand {
+  background-color: $brand-accessible;
+  border-color: $brand-accessible;
+  color: $color-text-brand-primary;
+
+  &:link,
+  &:visited,
+  &:active {
+    color: $color-text-brand-primary;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $brand-accessible-active;
+    border-color: $brand-accessible-active;
+    color: $color-text-brand-primary;
+  }
+
+  &:active {
+    background-color: $brand-accessible-active;
+    border-color: $brand-accessible-active;
+  }
+}
+
+@mixin button-destructive {
+  background-color: $color-background-destructive;
+  border-color: $color-background-destructive;
+  color: $color-text-inverse;
+
+  &:link,
+  &:visited,
+  &:active {
+    color: $color-text-inverse;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $color-background-destructive-hover;
+    color: $color-text-inverse;
+  }
+
+  &:active {
+    background-color: $color-background-destructive-active;
+    border-color: $color-border-destructive-active;
+  }
+}
+
+@mixin button-success {
+  background-color: $color-background-button-success;
+  border-color: $color-border-success;
+  color: $color-text-default;
+
+  &:link,
+  &:visited,
+  &:active {
+    color: $color-text-default;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $color-background-button-success-hover;
+    border-color: $color-border-success-dark;
+    color: $color-text-inverse;
+  }
+
+  &:active {
+    background-color: $color-background-button-success-active;
+    border-color: $color-border-success-dark;
+  }
+}
+
 @mixin button-reset {
   font-size: inherit;
   color: inherit;

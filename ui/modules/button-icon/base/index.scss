@@ -25,6 +25,7 @@ $_c-theme-button-icon-color-border-disabled: $brand-disabled;
 
 // Background Color
 $c-theme-button-icon-color-background-default: $color-gray-1;
+$c-theme-button-icon-color-background-default-active: $color-gray-1;
 $c-theme-button-icon-color-background-brand: $brand-accessible;
 $c-theme-button-icon-color-background-brand-active: $brand-accessible-active;
 
@@ -105,7 +106,7 @@ $c-theme-button-icon-border-radius: $button-border-radius;
     background: $_c-theme-button-icon-color-background-disabled;
     border-color: $_c-theme-button-icon-color-border-disabled;
     // Override icon color
-    --c-icon-color: $_c-theme-button-icon-color-disabled;
+    --c-theme-icon-color: $_c-theme-button-icon-color-disabled;
   }
 }
 
@@ -127,4 +128,9 @@ $c-theme-button-icon-border-radius: $button-border-radius;
  */
 .sldswc-button-icon_background {
   background-color: var(--c-theme-button-icon-color-background-default, $c-theme-button-icon-color-background-default);
+
+  &:focus,
+  &:hover {
+    background-color: var(--c-theme-button-icon-color-background-default-active, $c-theme-button-icon-color-background-default-active);
+  }
 }

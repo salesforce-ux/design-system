@@ -1,0 +1,154 @@
+import CodeView from '../../../shared/components/CodeView';
+import CodeBlock from '../../../shared/components/CodeBlock';
+import Blockquote from '../../../shared/components/Blockquote';
+import DisplayGrid from '../../../shared/components/DisplayGrid';
+import DisplayColumn from '../../../shared/components/DisplayColumn';
+import * as ButtonIconExamples from './base/example';
+import { getDisplayElementById } from '../../shared/helpers';
+
+<div className="doc lead">
+  Button icons provide the user with visual iconography that is typically used to invoke an event or action.
+</div>
+
+## About Button Icon
+
+### Accessibility
+
+<Blockquote type="a11y" header="Accessibility Note">
+  If an icon button doesn’t include a label, use a <code className="doc">title</code> attribute to show on hover for sighted users, and a span with class <code className="doc">slds-assistive-text</code> to describe the button's action for screen readers.
+</Blockquote>
+
+## Base
+
+The size of a button icon is based off the size of the icon that is being consumed. The default size of the consumed icon is a 16px by 16px square.
+
+To alter the size of the icon boundary, please refer to [Icon](/modules/icon) documentation.
+
+<CodeView toggleCode={false}>
+  <React.Fragment>
+    {ButtonIconExamples.default()}
+    {getDisplayElementById(ButtonIconExamples.states, "default-disabled")}
+  </React.Fragment>
+</CodeView>
+
+## Base with borders
+
+The default border color of a button icon is transparent. You may apply a border color to the button icon by applying `sldswc-button-icon_bordered` to the button icon.
+
+<CodeView toggleCode={false} style={{backgroundColor: '#f3f2f2', padding: '1rem', margin: '-1rem'}}>
+  <React.Fragment>
+    {getDisplayElementById(ButtonIconExamples.examples, "bordered")}
+    {getDisplayElementById(ButtonIconExamples.states, "bordered-disabled")}
+  </React.Fragment>
+</CodeView>
+
+## Base with fill background
+
+The default background color of a button icon is transparent. You may apply a background fill of white by applying `sldswc-button-icon_background` to the button icon. It is **highly recommended** that a bordered is applied with the background fill.
+
+<CodeView toggleCode={false} style={{backgroundColor: '#f3f2f2', padding: '1rem',margin: '-1rem'}}>
+  <React.Fragment>
+    {getDisplayElementById(ButtonIconExamples.examples, "filled")}
+    {getDisplayElementById(ButtonIconExamples.states, "filled-disabled")}
+  </React.Fragment>
+</CodeView>
+
+## Brand
+
+<CodeView toggleCode={false}>
+  <React.Fragment>
+    {getDisplayElementById(ButtonIconExamples.examples, "brand")}
+    {getDisplayElementById(ButtonIconExamples.states, "brand-disabled")}
+  </React.Fragment>
+</CodeView>
+
+## Sizes
+
+<CodeView>
+  {getDisplayElementById(ButtonIconExamples.examples, "icon-sizes")}
+</CodeView>
+
+## Boundary Sizes
+
+<DisplayGrid>
+  <DisplayColumn>
+    <CodeView>
+      {getDisplayElementById(ButtonIconExamples.examples, "boundary-sizes")}
+    </CodeView>
+  </DisplayColumn>
+  <DisplayColumn>
+    <CodeView>
+      {getDisplayElementById(ButtonIconExamples.examples, "boundary-sizes-bordered")}
+    </CodeView>
+  </DisplayColumn>
+</DisplayGrid>
+
+<DisplayGrid>
+  <DisplayColumn>
+    <strong>X-Large boundary with varing icon sizes</strong>
+    <CodeView>
+      {getDisplayElementById(ButtonIconExamples.examples, "boundary-size-x-large")}
+    </CodeView>
+  </DisplayColumn>
+  <DisplayColumn>
+    <strong>Large boundary with varing icon sizes</strong>
+    <CodeView>
+      {getDisplayElementById(ButtonIconExamples.examples, "boundary-size-large")}
+    </CodeView>
+  </DisplayColumn>
+  <DisplayColumn>
+    <strong>Medium boundary with varing icon sizes</strong>
+    <CodeView>
+      {getDisplayElementById(ButtonIconExamples.examples, "boundary-size-medium")}
+    </CodeView>
+  </DisplayColumn>
+  <DisplayColumn>
+    <strong>Small with varing icon sizes</strong>
+    <CodeView>
+      {getDisplayElementById(ButtonIconExamples.examples, "boundary-size-small")}
+    </CodeView>
+  </DisplayColumn>
+  <DisplayColumn>
+    <strong>X-Small boundary with varing icon sizes</strong>
+    <CodeView>
+      {getDisplayElementById(ButtonIconExamples.examples, "boundary-size-x-small")}
+    </CodeView>
+  </DisplayColumn>
+</DisplayGrid>
+
+## Customization Examples
+
+### Trailhead
+
+```css
+  :host {
+    --c-theme-button-icon-shadow: 0 1px 0 #e2e2e2;
+    --c-theme-button-icon-color-background-default-active: #e2e2e2;
+    --c-theme-button-icon-color-on-default-active: #585858;
+    --c-theme-button-icon-shadow-focus: var(--c-theme-button-icon-shadow);
+  }
+```
+
+<CodeView toggleCode={false}>
+  {getDisplayElementById(ButtonIconExamples.examples, "customization-trailhead")}
+</CodeView>
+
+### Addidas
+
+```css
+  :host {
+    --c-theme-button-icon-color-background-brand: #000;
+    --c-theme-button-icon-color-background-brand-active: #000;
+    --c-theme-button-icon-color-border-brand: #000;
+    --c-theme-button-icon-color-border-brand-active: #000;
+    --c-theme-button-icon-color-on-brand-active: #767677;
+    --c-theme-button-icon-border-radius: 0;
+    --c-theme-button-icon-shadow-focus: none;
+    --c-theme-button-icon-shadow: 2px 2px 0 1px #fff, 3px 3px 0 1px #000;
+    --c-theme-button-icon-shadow-focus: var(--c-theme-button-icon-shadow);
+  }
+```
+
+<CodeView toggleCode={false}>
+  {getDisplayElementById(ButtonIconExamples.examples, "customization-addidas")}
+</CodeView>

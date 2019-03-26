@@ -4,7 +4,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import CodeBlock from './CodeBlock';
+import classNames from 'classnames';
 import _ from '../../ui/shared/helpers';
+import { kebabCase } from 'lodash';
 
 class CodeView extends React.Component {
   constructor(props) {
@@ -97,13 +99,29 @@ class CodeView extends React.Component {
     );
   }
 
+  checkNamespace() {
+    const { children } = this.props;
+    let namespace;
+    if (!React.isValidElement(children)) return;
+    console.log(children.__docgenInfo);
+    if (children.type !== React.Fragment) {
+      namespace = children.type.name;
+    } else if (children.type === React.Fragment) {
+      children.props.children.map(e => {
+        namespace = e.type.name;
+      });
+    }
+    const sanitizedNamespace = `docs-codeview-${kebabCase(namespace)}`;
+    return sanitizedNamespace;
+  }
+
   render() {
-    const { position, toggleCode } = this.props;
+    const { position, toggleCode, children } = this.props;
     return (
-      <div className="docs-codeblock">
+      <div className={classNames('docs-codeblock', this.checkNamespace())}>
         {position === 'bottom' ? this.renderChildren() : null}
         <CodeBlock language="html" toggleCode={toggleCode}>
-          {this.props.children}
+          {children}
         </CodeBlock>
         {position === 'top' ? this.renderChildren() : null}
       </div>

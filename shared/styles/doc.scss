@@ -261,6 +261,13 @@ tr.doc th:not(:first-child) {
   border-left: 1px solid $light-gray-border-color;
 }
 
+pre.doc {
+  background: #fafaf9;
+  color: #1990b8;
+  padding: 2px;
+  border-radius: 0.125rem;
+}
+
 code.doc {
   background: #f6f9fb;
   color: #1990b8;

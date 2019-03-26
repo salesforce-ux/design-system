@@ -1,7 +1,7 @@
 import React from 'react';
 import ButtonIcon from '../';
 
-const ButtonIconExample = () => <ButtonIcon />;
+const ButtonIconExample = () => <ButtonIcon boundarySize="small" />;
 
 export default ButtonIconExample;
 
@@ -9,24 +9,18 @@ export let states = [
   {
     id: 'default-disabled',
     label: 'Default Disabled',
-    element: <ButtonIcon disabled />
+    element: <ButtonIcon disabled boundarySize="small" />
   },
   {
     id: 'bordered-disabled',
     label: 'Bordered Disabled',
-    element: (
-      <div style={{ background: '#fafaf9', padding: '1rem' }}>
-        <ButtonIcon disabled hasBorder boundarySize="small" />
-      </div>
-    )
+    element: <ButtonIcon disabled hasBorder boundarySize="small" />
   },
   {
     id: 'filled-disabled',
     label: 'Filled Disabled',
     element: (
-      <div style={{ background: '#fafaf9', padding: '1rem' }}>
-        <ButtonIcon disabled hasBorder hasBackground boundarySize="small" />
-      </div>
+      <ButtonIcon disabled hasBorder hasBackground boundarySize="small" />
     )
   },
   {
@@ -52,19 +46,13 @@ export let examples = [
   {
     id: 'bordered',
     label: 'Bordered',
-    element: (
-      <div style={{ background: '#fafaf9', padding: '1rem' }}>
-        <ButtonIcon symbol="add" hasBorder boundarySize="small" />
-      </div>
-    )
+    element: <ButtonIcon symbol="add" hasBorder boundarySize="small" />
   },
   {
     id: 'filled',
     label: 'Filled',
     element: (
-      <div style={{ background: '#fafaf9', padding: '1rem' }}>
-        <ButtonIcon symbol="add" hasBorder hasBackground boundarySize="small" />
-      </div>
+      <ButtonIcon symbol="add" hasBorder hasBackground boundarySize="small" />
     )
   },
   {
@@ -261,29 +249,47 @@ export let examples = [
     )
   },
   {
-    id: 'customization',
-    label: 'Customization',
+    id: 'customization-trailhead',
+    label: 'Customization - Trailhead',
     element: (
-      <React.Fragment>
-        <ButtonIcon
-          symbol="settings"
-          boundarySize="medium"
-          variant="brand"
-          customization={`
-            :host {
-              --c-theme-button-icon-color-background-brand: #000;
-              --c-theme-button-icon-color-background-brand-active: #000;
-              --c-theme-button-icon-color-border-brand: #000;
-              --c-theme-button-icon-color-border-brand-active: #000;
-              --c-theme-button-icon-color-on-brand-active: #767677;
-              --c-theme-button-icon-border-radius: 0;
-              --c-theme-button-icon-shadow-focus: none;
-              --c-theme-button-icon-shadow: 2px 2px 0 1px #fff, 3px 3px 0 1px #000;
-              --c-theme-button-icon-shadow-focus: var(--c-theme-button-icon-shadow);
-            }
-          `}
-        />
-      </React.Fragment>
+      <ButtonIcon
+        symbol="add"
+        boundarySize="medium"
+        hasBorder
+        hasBackground
+        customization={`
+          :host {
+            --c-theme-button-icon-shadow: 0 1px 0 #e2e2e2;
+            --c-theme-button-icon-color-background-default-active: #e2e2e2;
+            --c-theme-button-icon-color-on-default-active: #585858;
+            --c-theme-button-icon-shadow-focus: var(--c-theme-button-icon-shadow);
+          }
+        `}
+      />
+    )
+  },
+  {
+    id: 'customization-addidas',
+    label: 'Customization - Addidas',
+    element: (
+      <ButtonIcon
+        symbol="settings"
+        boundarySize="medium"
+        variant="brand"
+        customization={`
+          :host {
+            --c-theme-button-icon-color-background-brand: #000;
+            --c-theme-button-icon-color-background-brand-active: #000;
+            --c-theme-button-icon-color-border-brand: #000;
+            --c-theme-button-icon-color-border-brand-active: #000;
+            --c-theme-button-icon-color-on-brand-active: #767677;
+            --c-theme-button-icon-border-radius: 0;
+            --c-theme-button-icon-shadow-focus: none;
+            --c-theme-button-icon-shadow: 2px 2px 0 1px #fff, 3px 3px 0 1px #000;
+            --c-theme-button-icon-shadow-focus: var(--c-theme-button-icon-shadow);
+          }
+        `}
+      />
     )
   }
 ];

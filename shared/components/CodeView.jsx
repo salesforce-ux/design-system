@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 import CodeBlock from './CodeBlock';
 import classNames from 'classnames';
 import _ from '../../ui/shared/helpers';
-import { kebabCase } from 'lodash';
+// import { kebabCase } from 'lodash';
 
 class CodeView extends React.Component {
   constructor(props) {
@@ -99,26 +99,26 @@ class CodeView extends React.Component {
     );
   }
 
-  checkNamespace() {
-    const { children } = this.props;
-    let namespace;
-    if (!React.isValidElement(children)) return;
-    console.log(children.__docgenInfo);
-    if (children.type !== React.Fragment) {
-      namespace = children.type.name;
-    } else if (children.type === React.Fragment) {
-      children.props.children.map(e => {
-        namespace = e.type.name;
-      });
-    }
-    const sanitizedNamespace = `docs-codeview-${kebabCase(namespace)}`;
-    return sanitizedNamespace;
-  }
+  // checkNamespace() {
+  //   const { children } = this.props;
+  //   let namespace;
+  //   if (!React.isValidElement(children)) return;
+  //   console.log(children.__docgenInfo);
+  //   if (children.type !== React.Fragment) {
+  //     namespace = children.type.name;
+  //   } else if (children.type === React.Fragment) {
+  //     children.props.children.map(e => {
+  //       namespace = e.type.name;
+  //     });
+  //   }
+  //   const sanitizedNamespace = `docs-codeview-${kebabCase(namespace)}`;
+  //   return sanitizedNamespace;
+  // }
 
   render() {
     const { position, toggleCode, children } = this.props;
     return (
-      <div className={classNames('docs-codeblock', this.checkNamespace())}>
+      <div className={classNames('docs-codeblock')}>
         {position === 'bottom' ? this.renderChildren() : null}
         <CodeBlock language="html" toggleCode={toggleCode}>
           {children}

@@ -27,3 +27,7 @@ props:
      value: /_slds/fonts/v2.3.0/SalesforceSans-Italic.woff2
   SALESFORCE_SANS_ITALIC_WOFF:
      value: /_slds/fonts/v2.3.0/SalesforceSans-Italic.woff
+  NEUTRAFACE_DISPLAY_WOFF2:
+     value: /_slds/fonts/NeutrafaceDisplay.woff2?cache=2.9.0
+  NEUTRAFACE_DISPLAY_WOFF:
+     value: /_slds/fonts/NeutrafaceDisplay.woff?cache=2.9.0

@@ -34,7 +34,7 @@ class IconPrimitive extends Component {
         includes={[common, iconPrimitive]}
         shadow={shadow}
       >
-        <SvgIcon className="sldswc-svg" sprite={sprite} symbol={symbol} />
+        <SvgIcon className="lwc-svg" sprite={sprite} symbol={symbol} />
         {this.renderAssistiveText()}
       </Shadow>
     );

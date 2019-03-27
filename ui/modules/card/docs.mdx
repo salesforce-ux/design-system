@@ -12,7 +12,7 @@ import { getDisplayElementById } from '../../shared/helpers';
 
 ## Structuring a Card
 
-To initialize a card, apply the `sldswc-card` class to an `article` element.
+To initialize a card, apply the `lwc-card` class to an `article` element.
 
 <Blockquote type="a11y" header="Accessibility Note">
   Cards should use an underlying <code className="doc">article</code> element to maintain usability for some screen reader users.
@@ -46,9 +46,9 @@ The Card component should only have one shadow boundary that contains the header
 |`actions`|`slot`|
 |`children`|`slot`|
 |`footer`|`slot`|
-|`isBare`|`boolean`|`sldswc-card_bare`|`sldswc-card`
-|`hasBoundary`|`boolean`|`sldswc-card_boundary`|`sldswc-card`
-|`hasFullBleed`|`boolean`|`sldswc-card__body_full-bleed`|`sldswc-card__body`
+|`isBare`|`boolean`|`lwc-card_bare`|`lwc-card`
+|`hasBoundary`|`boolean`|`lwc-card_boundary`|`lwc-card`
+|`hasFullBleed`|`boolean`|`lwc-card__body_full-bleed`|`lwc-card__body`
 |`title`|`string`|
 |`titleHref`|`string`|
 |`iconName`|`string`|
@@ -103,7 +103,7 @@ The card body accommodates any layout or design, as long as its a grouping of re
 
 #### Full Bleed
 
-- `sldswc-card__body_full-bleed` — Apply to the Card body when the component requires the content of the body to bleed to the edges of the Card's boundary.
+- `lwc-card__body_full-bleed` — Apply to the Card body when the component requires the content of the body to bleed to the edges of the Card's boundary.
 
 ##### Usage
 

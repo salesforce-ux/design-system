@@ -28,31 +28,31 @@ class Icon extends Component {
     } = this.props;
 
     const iconSizingClassName = {
-      'sldswc-icon_x-large': size === 'x-large',
-      'sldswc-icon_large': size === 'large',
-      'sldswc-icon_medium': size === 'medium',
-      'sldswc-icon_small': size === 'small',
-      'sldswc-icon_x-small': size === 'x-small',
-      'sldswc-icon_xx-small': size === 'xx-small'
+      'lwc-icon_x-large': size === 'x-large',
+      'lwc-icon_large': size === 'large',
+      'lwc-icon_medium': size === 'medium',
+      'lwc-icon_small': size === 'small',
+      'lwc-icon_x-small': size === 'x-small',
+      'lwc-icon_xx-small': size === 'xx-small'
     };
 
     const iconColorClassName = {
-      'sldswc-icon_success': color === 'success',
-      'sldswc-icon_warning': color === 'warning',
-      'sldswc-icon_error': color === 'error',
-      'sldswc-icon_muted': color === 'muted'
+      'lwc-icon_success': color === 'success',
+      'lwc-icon_warning': color === 'warning',
+      'lwc-icon_error': color === 'error',
+      'lwc-icon_muted': color === 'muted'
     };
 
     const iconBoundaryClassName = {
-      'sldswc-icon-boundary_x-large': boundarySize === 'x-large',
-      'sldswc-icon-boundary_large': boundarySize === 'large',
-      'sldswc-icon-boundary_medium': boundarySize === 'medium',
-      'sldswc-icon-boundary_small': boundarySize === 'small',
-      'sldswc-icon-boundary_x-small': boundarySize === 'x-small'
+      'lwc-icon-boundary_x-large': boundarySize === 'x-large',
+      'lwc-icon-boundary_large': boundarySize === 'large',
+      'lwc-icon-boundary_medium': boundarySize === 'medium',
+      'lwc-icon-boundary_small': boundarySize === 'small',
+      'lwc-icon-boundary_x-small': boundarySize === 'x-small'
     };
 
     const iconModifierClassName = {
-      'sldswc-icon_unset': unset
+      'lwc-icon_unset': unset
     };
 
     // Remove underscores and add a dash before numbers
@@ -64,16 +64,16 @@ class Icon extends Component {
     // Remove duplicate customs in string
     const sanitizedSprite = sprite === 'custom' ? '' : `${sprite}-`;
 
-    const computedClassNames = `sldswc-icon-${sprite} sldswc-icon-${sanitizedSprite}${sanitizedSymbol}`;
+    const computedClassNames = `lwc-icon-${sprite} lwc-icon-${sanitizedSprite}${sanitizedSymbol}`;
 
     return (
       <Shadow name="icon" includes={[common, icon]} shadow={shadow}>
         <span
-          className={classNames('sldswc-icon-boundary', iconBoundaryClassName)}
+          className={classNames('lwc-icon-boundary', iconBoundaryClassName)}
         >
           <span
             className={classNames(
-              'sldswc-icon',
+              'lwc-icon',
               iconSizingClassName,
               iconColorClassName,
               iconModifierClassName,

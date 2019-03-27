@@ -17,11 +17,11 @@ export const CardHeader = props => {
   const { title, href, hasActions, actions } = props;
 
   return (
-    <div className="sldswc-card__header">
+    <div className="lwc-card__header">
       <header>
-        <h2 className="sldswc-card__header-title">
+        <h2 className="lwc-card__header-title">
           {href ? (
-            <a href={href} className="sldswc-card__header-link" title={title}>
+            <a href={href} className="lwc-card__header-link" title={title}>
               <span>{title}</span>
             </a>
           ) : (
@@ -29,7 +29,7 @@ export const CardHeader = props => {
           )}
         </h2>
         {hasActions && (
-          <div className="sldswc-card__header-actions">
+          <div className="lwc-card__header-actions">
             <slot name="actions">{actions}</slot>
           </div>
         )}
@@ -52,8 +52,8 @@ CardHeader.propTypes = {
 export const CardBody = props => {
   const { children, hasFullBleed } = props;
   const computedClassNames = classNames(
-    'sldswc-card__body',
-    hasFullBleed && 'sldswc-card__body_full-bleed'
+    'lwc-card__body',
+    hasFullBleed && 'lwc-card__body_full-bleed'
   );
 
   return <div className={computedClassNames}>{children}</div>;
@@ -67,7 +67,7 @@ CardBody.propTypes = {
 export const CardFooter = props => {
   const { children } = props;
 
-  return <footer className="sldswc-card__footer">{children}</footer>;
+  return <footer className="lwc-card__footer">{children}</footer>;
 };
 
 CardFooter.propTypes = {
@@ -124,9 +124,9 @@ class Card extends Component {
     const { custom, children, hasBoundary, isBare, shadow } = this.props;
 
     const computedClassNames = classNames(
-      'sldswc-card',
-      hasBoundary && 'sldswc-card_boundary',
-      isBare && 'sldswc-card_bare'
+      'lwc-card',
+      hasBoundary && 'lwc-card_boundary',
+      isBare && 'lwc-card_bare'
     );
 
     return (
@@ -143,7 +143,7 @@ class Card extends Component {
 
 Card.defaultProps = {
   footer: (
-    <a className="sldswc-card__footer-action" href="javascript:void(0);">
+    <a className="lwc-card__footer-action" href="javascript:void(0);">
       View All
     </a>
   )

@@ -30,15 +30,15 @@ class ButtonIcon extends Component {
     } = this.props;
 
     const buttonVariantClassName = {
-      'sldswc-button-icon_brand': variant === 'brand'
+      'lwc-button-icon_brand': variant === 'brand'
     };
 
     const buttonBorderClassName = {
-      'sldswc-button-icon_bordered': hasBorder
+      'lwc-button-icon_bordered': hasBorder
     };
 
     const buttonBackgroundClassName = {
-      'sldswc-button-icon_background': hasBackground
+      'lwc-button-icon_background': hasBackground
     };
 
     return (
@@ -49,7 +49,7 @@ class ButtonIcon extends Component {
       >
         <button
           className={classNames(
-            'sldswc-button-icon',
+            'lwc-button-icon',
             buttonVariantClassName,
             buttonBorderClassName,
             buttonBackgroundClassName

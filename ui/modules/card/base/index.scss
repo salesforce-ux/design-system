@@ -19,12 +19,12 @@
 /**
  * @summary Initializes card
  * @name base
- * @selector .sldswc-card
+ * @selector .lwc-card
  * @restrict article, div, section
  * @support dev-ready
  * @variant
  */
-.sldswc-card {
+.lwc-card {
   position: relative;
   padding: 0;
   background: var(--c-card-color-background);
@@ -36,10 +36,10 @@
 
 /**
  * @summary Initializes card header
- * @selector .sldswc-card__header
- * @restrict .sldswc-card div
+ * @selector .lwc-card__header
+ * @restrict .lwc-card div
  */
-.sldswc-card__header {
+.lwc-card__header {
   padding: $var-spacing-vertical-small $var-spacing-horizontal-medium 0;
   margin: 0 0 $var-spacing-vertical-small;
 
@@ -50,19 +50,19 @@
 
 /**
  * @summary Parent container of actions slot
- * @selector .sldswc-card__header-actions
- * @restrict .sldswc-card__header div
+ * @selector .lwc-card__header-actions
+ * @restrict .lwc-card__header div
  */
-.sldswc-card__header-actions {
+.lwc-card__header-actions {
   flex: none;
 }
 
 /**
  * @summary Title element within card header
- * @selector .sldswc-card__header-title
- * @restrict .sldswc-card__header h2
+ * @selector .lwc-card__header-title
+ * @restrict .lwc-card__header h2
  */
-.sldswc-card__header-title {
+.lwc-card__header-title {
   @include truncate;
   font-size: $var-font-size-5;
   line-height: 2rem;
@@ -73,45 +73,45 @@
 
 /**
  * @summary Actionable element within the card header title
- * @selector .sldswc-card__header-link
- * @restrict .sldswc-card__header-title a
+ * @selector .lwc-card__header-link
+ * @restrict .lwc-card__header-title a
  */
-.sldswc-card__header-link {
+.lwc-card__header-link {
   color: $color-text-default;
 }
 
 /**
  * @summary Initializes card body
- * @selector .sldswc-card__body
- * @restrict .sldswc-card div
+ * @selector .lwc-card__body
+ * @restrict .lwc-card div
  */
-.sldswc-card__body {
+.lwc-card__body {
   margin-top: $var-spacing-vertical-small;
   margin-bottom: $var-spacing-vertical-small;
   padding: 0 $var-spacing-horizontal-medium;
 }
 
-.sldswc-card__body:empty {
+.lwc-card__body:empty {
   display: none;
 }
 
 /**
  * @name full-bleed
  * @summary Sets card body to have content bleed to edges
- * @selector .sldswc-card__body_full-bleed
- * @restrict .sldswc-card__body
+ * @selector .lwc-card__body_full-bleed
+ * @restrict .lwc-card__body
  * @modifier
  */
-.sldswc-card__body_full-bleed {
+.lwc-card__body_full-bleed {
   padding: 0;
 }
 
 /**
  * @summary Initializes card footer
- * @selector .sldswc-card__footer
- * @restrict .sldswc-card footer
+ * @selector .lwc-card__footer
+ * @restrict .lwc-card footer
  */
-.sldswc-card__footer {
+.lwc-card__footer {
   padding: $var-spacing-vertical-small $var-spacing-horizontal-medium;
   margin-top: $var-spacing-vertical-small;
   text-align: $card-footer-text-align;
@@ -121,21 +121,21 @@
 
 /**
  * @summary Link in card footer
- * @selector .sldswc-card__footer-action
- * @restrict .sldswc-card footer a
+ * @selector .lwc-card__footer-action
+ * @restrict .lwc-card footer a
  */
-.sldswc-card__footer-action {
+.lwc-card__footer-action {
   display: block;
 }
 
 /**
  * @name bare-card
  * @summary Sets card to not have borders or box-shadow
- * @selector .sldswc-card_bare
- * @restrict .sldswc-card
+ * @selector .lwc-card_bare
+ * @restrict .lwc-card
  * @modifier
  */
-.sldswc-card_bare {
+.lwc-card_bare {
   border: 0;
   box-shadow: none;
 }
@@ -143,11 +143,11 @@
 /**
  * @name border-boundary
  * @summary Sets card to not have box-shadow but a border
- * @selector .sldswc-card_boundary
- * @restrict .sldswc-card
+ * @selector .lwc-card_boundary
+ * @restrict .lwc-card
  * @modifier
  */
-.sldswc-card_boundary {
+.lwc-card_boundary {
   border: $border-width-thin solid $card-color-border;
   box-shadow: none;
 }

@@ -54,11 +54,11 @@ $c-sizing-button-height: $line-height-button;
 /**
  * @summary This neutralizes all the base styles making it look like a text link
  * @name base
- * @selector .sldswc-button
+ * @selector .lwc-button
  * @restrict button, a
  * @variant
  */
-.sldswc-button {
+.lwc-button {
   @include button-reset;
   @include button-normalize;
 }
@@ -66,12 +66,12 @@ $c-sizing-button-height: $line-height-button;
 /**
  * @name brand
  * @summary Creates the Salesforce brand style
- * @selector .sldswc-button_brand
- * @restrict .sldswc-button
+ * @selector .lwc-button_brand
+ * @restrict .lwc-button
  * @modifier
  * @group theme
  */
-.sldswc-button_brand {
+.lwc-button_brand {
   @include button-shape;
   background-color: $brand-accessible;
   border-color: $brand-accessible;
@@ -106,12 +106,12 @@ $c-sizing-button-height: $line-height-button;
 /**
  * @name brand outline
  * @summary Creates the Salesforce brand button in an outline style
- * @selector .sldswc-button_outline-brand
- * @restrict .sldswc-button
+ * @selector .lwc-button_outline-brand
+ * @restrict .lwc-button
  * @modifier
  * @group theme
  */
-.sldswc-button_brand-outline {
+.lwc-button_brand-outline {
   @include button-shape;
   background-color: $button-color-background-primary;
   border-color: $brand-accessible;
@@ -136,12 +136,12 @@ $c-sizing-button-height: $line-height-button;
 /**
  * @name destructive
  * @summary Creates the destructive button style
- * @selector .sldswc-button_destructive
- * @restrict .sldswc-button
+ * @selector .lwc-button_destructive
+ * @restrict .lwc-button
  * @modifier
  * @group theme
  */
-.sldswc-button_destructive {
+.lwc-button_destructive {
   @include button-shape;
   background-color: $color-background-destructive;
   border-color: $color-background-destructive;
@@ -175,12 +175,12 @@ $c-sizing-button-height: $line-height-button;
 /**
  * @name destructive text
  * @summary Creates the destructive text button style
- * @selector .sldswc-button_destructive-text
- * @restrict .sldswc-button
+ * @selector .lwc-button_destructive-text
+ * @restrict .lwc-button
  * @modifier
  * @group theme
  */
-.sldswc-button_destructive-text {
+.lwc-button_destructive-text {
   @include button-shape;
   border-color: $button-color-border-primary;
   background-color: $button-color-background-primary;
@@ -206,12 +206,12 @@ $c-sizing-button-height: $line-height-button;
 /**
  * @name inverse
  * @summary Creates the inverse button style
- * @selector .sldswc-button_inverse
- * @restrict .sldswc-button
+ * @selector .lwc-button_inverse
+ * @restrict .lwc-button
  * @modifier
  * @group theme
  */
-.sldswc-button_inverse {
+.lwc-button_inverse {
   @include button-shape;
   background-color: $_c-theme-button-color-background-inverse;
   border-color: $_c-theme-button-color-border-inverse;
@@ -246,12 +246,12 @@ $c-sizing-button-height: $line-height-button;
 /**
  * @name success
  * @summary Creates the success button style
- * @selector .sldswc-button_success
- * @restrict .sldswc-button
+ * @selector .lwc-button_success
+ * @restrict .lwc-button
  * @modifier
  * @group theme
  */
-.sldswc-button_success {
+.lwc-button_success {
   @include button-shape;
   background-color: $color-background-button-success;
   border-color: $color-border-success;
@@ -286,12 +286,12 @@ $c-sizing-button-height: $line-height-button;
 /**
  * @name neutral
  * @summary Creates the gray border with white background default style
- * @selector .sldswc-button_neutral
- * @restrict .sldswc-button
+ * @selector .lwc-button_neutral
+ * @restrict .lwc-button
  * @modifier
  * @group theme
  */
-.sldswc-button_neutral {
+.lwc-button_neutral {
   @include button-shape;
   border-color: $button-color-border-primary;
   background-color: $button-color-background-primary;
@@ -315,12 +315,12 @@ $c-sizing-button-height: $line-height-button;
 /**
  * @name full width
  * @summary Creates the full width button style
- * @selector .sldswc-button_full-width
- * @restrict .sldswc-button
+ * @selector .lwc-button_full-width
+ * @restrict .lwc-button
  * @modifier
  * @group size
  */
-.sldswc-button_full-width {
+.lwc-button_full-width {
   width: 100%;
   justify-content: center;
 }
@@ -328,10 +328,10 @@ $c-sizing-button-height: $line-height-button;
 /**
  * @name icon left
  * @summary Creates space to the right of an icon when used to wrap an icon component as a child of a button
- * @selector .sldswc-button_icon-left
- * @restrict .sldswc-button span
+ * @selector .lwc-button_icon-left
+ * @restrict .lwc-button span
  */
-.sldswc-button__icon-left {
+.lwc-button__icon-left {
   display: inline-flex;
   align-self: center;
   margin-right: $spacing-x-small;
@@ -341,10 +341,10 @@ $c-sizing-button-height: $line-height-button;
 /**
  * @name icon right
  * @summary Creates space to the left of an icon when used to wrap an icon component as a child of a button
- * @selector .sldswc-button_icon-right
- * @restrict .sldswc-button span
+ * @selector .lwc-button_icon-right
+ * @restrict .lwc-button span
  */
-.sldswc-button__icon-right {
+.lwc-button__icon-right {
   display: inline-flex;
   align-self: center;
   margin-left: $spacing-x-small;

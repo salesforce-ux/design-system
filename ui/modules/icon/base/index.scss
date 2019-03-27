@@ -71,10 +71,10 @@ $c-theme-icon-border-radius: $border-radius-medium;
 
 /**
  * @summary
- * @selector .sldswc-icon
- * @restrict .sldswc-icon-boundary span
+ * @selector .lwc-icon
+ * @restrict .lwc-icon-boundary span
  */
-.sldswc-icon {
+.lwc-icon {
   @include icon-base;
   @include square($_c-sizing-icon-x-small);
   color: var(--c-theme-icon-color, $c-theme-icon-color);
@@ -85,21 +85,21 @@ $c-theme-icon-border-radius: $border-radius-medium;
 /**
  * Icon type
  */
-[class*="sldswc-icon-action"],
-[class*="sldswc-icon-custom"],
-[class*="sldswc-icon-standard"],
-[class*="sldswc-icon-doctype"] {
+[class*="lwc-icon-action"],
+[class*="lwc-icon-custom"],
+[class*="lwc-icon-standard"],
+[class*="lwc-icon-doctype"] {
   @include square($_c-sizing-icon-small);
 }
 
-[class*="sldswc-icon-action"],
-[class*="sldswc-icon-custom"],
-[class*="sldswc-icon-standard"] {
+[class*="lwc-icon-action"],
+[class*="lwc-icon-custom"],
+[class*="lwc-icon-standard"] {
   background: $_c-theme-icon-background-color-default;
   color: $_c-theme-icon-color-on-default;
 }
 
-[class*="sldswc-icon-action"] {
+[class*="lwc-icon-action"] {
   border-radius: $_c-theme-icon-border-radius-circle;
   padding: $_c-spacing-icon-action-padding;
   vertical-align: bottom;
@@ -110,7 +110,7 @@ $icon-bg-map: map-merge($bg-actions-map, $bg-custom-map);
 
 @each $name, $color in $icon-bg-map {
 
-  .sldswc-icon-#{$name} {
+  .lwc-icon-#{$name} {
     background-color: $color;
   }
 }
@@ -118,19 +118,19 @@ $icon-bg-map: map-merge($bg-actions-map, $bg-custom-map);
 // Standard
 @each $name, $color in $bg-standard-map {
 
-  .sldswc-icon-standard-#{$name} {
+  .lwc-icon-standard-#{$name} {
     background-color: $color;
   }
 }
 
 /**
  * @summary Unsets background and color from standard, custom, and action sets
- * @selector .sldswc-icon_unset
- * @restrict .sldswc-icon
+ * @selector .lwc-icon_unset
+ * @restrict .lwc-icon
  * @modifier
  * @group unset
  */
-.sldswc-icon_unset {
+.lwc-icon_unset {
   background-color: unset;
   color: unset;
 }
@@ -138,29 +138,29 @@ $icon-bg-map: map-merge($bg-actions-map, $bg-custom-map);
 /**
  * Action Icons
  */
-.sldswc-icon-action {
+.lwc-icon-action {
 
-  &.sldswc-icon_x-large {
+  &.lwc-icon_x-large {
     padding: $_c-spacing-icon-action-padding-x-large;
   }
 
-  &.sldswc-icon_large {
+  &.lwc-icon_large {
     padding: $_c-spacing-icon-action-padding-large;
   }
 
-  &.sldswc-icon_medium {
+  &.lwc-icon_medium {
     padding: $_c-spacing-icon-action-padding-medium;
   }
 
-  &.sldswc-icon_small {
+  &.lwc-icon_small {
     padding: $_c-spacing-icon-action-padding-small;
   }
 
-  &.sldswc-icon_x-small {
+  &.lwc-icon_x-small {
     padding: $_c-spacing-icon-action-padding-x-small;
   }
 
-  &.sldswc-icon_xx-small {
+  &.lwc-icon_xx-small {
     padding: $_c-spacing-icon-action-padding-xx-small;
   }
 }
@@ -168,13 +168,13 @@ $icon-bg-map: map-merge($bg-actions-map, $bg-custom-map);
 /**
  * Type: Standard
  */
-.sldswc-icon-standard {
+.lwc-icon-standard {
 
-  &.sldswc-icon_x-small {
+  &.lwc-icon_x-small {
     border-radius: $_c-theme-icon-border-radius-small;
   }
 
-  &.sldswc-icon_xx-small {
+  &.lwc-icon_xx-small {
     border-radius: $_c-theme-icon-border-radius-small;
   }
 }
@@ -185,67 +185,67 @@ $icon-bg-map: map-merge($bg-actions-map, $bg-custom-map);
 
 /**
  * @summary
- * @selector .sldswc-icon_x-large
- * @restrict .sldswc-icon
+ * @selector .lwc-icon_x-large
+ * @restrict .lwc-icon
  * @modifier
  * @group sizing
  */
-.sldswc-icon_x-large {
+.lwc-icon_x-large {
   @include square($_c-sizing-icon-x-large);
 }
 
 /**
  * @summary
- * @selector .sldswc-icon_large
- * @restrict .sldswc-icon
+ * @selector .lwc-icon_large
+ * @restrict .lwc-icon
  * @modifier
  * @group sizing
  */
-.sldswc-icon_large {
+.lwc-icon_large {
   @include square($_c-sizing-icon-large);
 }
 
 /**
  * @summary
- * @selector .sldswc-icon_medium
- * @restrict .sldswc-icon
+ * @selector .lwc-icon_medium
+ * @restrict .lwc-icon
  * @modifier
  * @group sizing
  */
-.sldswc-icon_medium {
+.lwc-icon_medium {
   @include square($_c-sizing-icon-medium);
 }
 
 /**
  * @summary
- * @selector .sldswc-icon_small
- * @restrict .sldswc-icon
+ * @selector .lwc-icon_small
+ * @restrict .lwc-icon
  * @modifier
  * @group sizing
  */
-.sldswc-icon_small {
+.lwc-icon_small {
   @include square($_c-sizing-icon-small);
 }
 
 /**
  * @summary
- * @selector .sldswc-icon_x-small
- * @restrict .sldswc-icon
+ * @selector .lwc-icon_x-small
+ * @restrict .lwc-icon
  * @modifier
  * @group sizing
  */
-.sldswc-icon_x-small {
+.lwc-icon_x-small {
   @include square($_c-sizing-icon-x-small);
 }
 
 /**
  * @summary
- * @selector .sldswc-icon_xx-small
- * @restrict .sldswc-icon
+ * @selector .lwc-icon_xx-small
+ * @restrict .lwc-icon
  * @modifier
  * @group sizing
  */
-.sldswc-icon_xx-small {
+.lwc-icon_xx-small {
   @include square($_c-sizing-icon-xx-small);
 }
 
@@ -255,45 +255,45 @@ $icon-bg-map: map-merge($bg-actions-map, $bg-custom-map);
 
 /**
  * @summary
- * @selector .sldswc-icon_success
- * @restrict .sldswc-icon
+ * @selector .lwc-icon_success
+ * @restrict .lwc-icon
  * @modifier
  * @group color
  */
-.sldswc-icon_success {
+.lwc-icon_success {
   color: var(--c-theme-icon-color-success, $c-theme-icon-color-success);
 }
 
 /**
  * @summary
- * @selector .sldswc-icon_warning
- * @restrict .sldswc-icon
+ * @selector .lwc-icon_warning
+ * @restrict .lwc-icon
  * @modifier
  * @group color
  */
-.sldswc-icon_warning {
+.lwc-icon_warning {
   color: var(--c-theme-icon-color-warning, $c-theme-icon-color-warning);
 }
 
 /**
  * @summary
- * @selector .sldswc-icon_error
- * @restrict .sldswc-icon
+ * @selector .lwc-icon_error
+ * @restrict .lwc-icon
  * @modifier
  * @group color
  */
-.sldswc-icon_error {
+.lwc-icon_error {
   color: var(--c-theme-icon-color-error, $c-theme-icon-color-error);
 }
 
 /**
  * @summary
- * @selector .sldswc-icon_muted
- * @restrict .sldswc-icon
+ * @selector .lwc-icon_muted
+ * @restrict .lwc-icon
  * @modifier
  * @group color
  */
-.sldswc-icon_muted {
+.lwc-icon_muted {
   color: var(--c-theme-icon-color-muted, $c-theme-icon-color-muted);
 }
 
@@ -304,65 +304,65 @@ $icon-bg-map: map-merge($bg-actions-map, $bg-custom-map);
 /**
  * @name base
  * @summary
- * @selector .sldswc-icon-boundary
+ * @selector .lwc-icon-boundary
  * @restrict span
  * @variant
  */
-.sldswc-icon-boundary {
+.lwc-icon-boundary {
   @include icon-base;
 }
 
 /**
  * @summary
- * @selector .sldswc-icon-boundary_x-large
- * @restrict .sldswc-icon-boundary
+ * @selector .lwc-icon-boundary_x-large
+ * @restrict .lwc-icon-boundary
  * @modifier
  * @group sizing
  */
-.sldswc-icon-boundary_x-large {
+.lwc-icon-boundary_x-large {
   @include square($_c-sizing-icon-x-large);
 }
 
 /**
  * @summary
- * @selector .sldswc-icon-boundary_large
- * @restrict .sldswc-icon-boundary
+ * @selector .lwc-icon-boundary_large
+ * @restrict .lwc-icon-boundary
  * @modifier
  * @group sizing
  */
-.sldswc-icon-boundary_large {
+.lwc-icon-boundary_large {
   @include square($_c-sizing-icon-large);
 }
 
 /**
  * @summary
- * @selector .sldswc-icon-boundary_medium
- * @restrict .sldswc-icon-boundary
+ * @selector .lwc-icon-boundary_medium
+ * @restrict .lwc-icon-boundary
  * @modifier
  * @group sizing
  */
-.sldswc-icon-boundary_medium {
+.lwc-icon-boundary_medium {
   @include square($_c-sizing-icon-medium);
 }
 
 /**
  * @summary
- * @selector .sldswc-icon-boundary_small
- * @restrict .sldswc-icon-boundary
+ * @selector .lwc-icon-boundary_small
+ * @restrict .lwc-icon-boundary
  * @modifier
  * @group sizing
  */
-.sldswc-icon-boundary_small {
+.lwc-icon-boundary_small {
   @include square($_c-sizing-icon-small);
 }
 
 /**
  * @summary
- * @selector .sldswc-icon-boundary_x-small
- * @restrict .sldswc-icon-boundary
+ * @selector .lwc-icon-boundary_x-small
+ * @restrict .lwc-icon-boundary
  * @modifier
  * @group sizing
  */
-.sldswc-icon-boundary_x-small {
+.lwc-icon-boundary_x-small {
   @include square($_c-sizing-icon-x-small);
 }

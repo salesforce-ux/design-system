@@ -28,11 +28,11 @@
 /**
  * @name base
  * @summary
- * @selector .sldswc-svg
+ * @selector .lwc-svg
  * @restrict svg
  * @variant
  */
-.sldswc-svg {
+.lwc-svg {
   @include icon-primitive-base;
   fill: var(--c-theme-icon-primitive-color, currentColor);
 }

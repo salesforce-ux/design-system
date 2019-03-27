@@ -58,11 +58,11 @@ $c-theme-button-icon-border-radius: $button-border-radius;
 /**
  * @name base
  * @summary
- * @selector .sldswc-button-icon
+ * @selector .lwc-button-icon
  * @restrict button, a
  * @variant
  */
-.sldswc-button-icon {
+.lwc-button-icon {
   @include button-icon-reset;
   @include button-icon-normalize;
 }
@@ -70,12 +70,12 @@ $c-theme-button-icon-border-radius: $button-border-radius;
 /**
  * @name brand
  * @summary
- * @selector .sldswc-button-icon_brand
+ * @selector .lwc-button-icon_brand
  * @restrict .slds-button-icon
  * @modifier
  * @group theme
  */
-.sldswc-button-icon_brand {
+.lwc-button-icon_brand {
   background-color: var(--c-theme-button-icon-color-background-brand, $c-theme-button-icon-color-background-brand);
   border-color: var(--c-theme-button-icon-color-border-brand, $c-theme-button-icon-color-border-brand);;
   // Override icon color
@@ -112,21 +112,21 @@ $c-theme-button-icon-border-radius: $button-border-radius;
 
 /**
  * @summary Adds a bordered container to a button icon
- * @selector .sldswc-button-icon_bordered
+ * @selector .lwc-button-icon_bordered
  * @restrict .slds-button-icon
  * @modifier
  */
-.sldswc-button-icon_bordered {
+.lwc-button-icon_bordered {
   border-color: var(--c-theme-button-icon-color-border, $c-theme-button-icon-color-border);
 }
 
 /**
  * @summary Adds a background fill of white to a button icon
- * @selector .sldswc-button-icon_background
+ * @selector .lwc-button-icon_background
  * @restrict .slds-button-icon
  * @modifier
  */
-.sldswc-button-icon_background {
+.lwc-button-icon_background {
   background-color: var(--c-theme-button-icon-color-background-default, $c-theme-button-icon-color-background-default);
 
   &:focus,

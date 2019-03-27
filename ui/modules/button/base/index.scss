@@ -1,7 +1,54 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
+// ------------
+// Init
+// ------------
 @import '../../../shared/common/init';
+
+// ------------
+// Private
+// ------------
+
+// Background Color
+$_c-theme-button-color-background-inverse: transparent;
+$_c-theme-button-color-background-inverse-active: $color-gray-1;
+
+// Border Color
+$_c-theme-button-color-border-inverse: $color-gray-1;
+
+// Color
+$_c-theme-button-color-disabled: $color-gray-5;
+$_c-theme-button-color-inverse: $color-gray-1;
+
+// ------------
+// Public
+// ------------
+
+// Background Color
+
+// Border Color
+
+// Border Size
+$c-sizing-button-border-width: $border-width-thin;
+
+// Color
+$c-theme-button-color: $brand-accessible;
+$c-theme-button-color-active: $brand-accessible-active;
+
+// Border Radius
+$c-theme-button-border-radius: $border-radius-medium;
+
+// Box Shadow
+$c-theme-button-box-shadow: none;
+$c-theme-button-box-shadow-active: 0 0 2px $brand-accessible;
+
+// Height
+$c-sizing-button-height: $line-height-button;
+
+// ------------
+// Mixins
+// ------------
 @import '../mixins/index';
 
 /**
@@ -166,18 +213,19 @@
  */
 .sldswc-button_inverse {
   @include button-shape;
-  background-color: $color-background-button-inverse;
-  border-color: $button-color-border-primary;
+  background-color: $_c-theme-button-color-background-inverse;
+  border-color: $_c-theme-button-color-border-inverse;
 
   &,
   &:link,
   &:visited {
-    color: $color-text-button-inverse;
+    color: $_c-theme-button-color-inverse;
   }
 
   &:hover,
   &:focus,
   &:active {
+    background-color: $_c-theme-button-color-background-inverse-active;
     color: $color-text-button-default;
   }
 

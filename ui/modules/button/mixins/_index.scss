@@ -19,12 +19,13 @@
 }
 
 @mixin button-normalize {
-  border-radius: $button-border-radius;
-  border: $border-width-thin solid transparent;
-  color: $brand-accessible;
-  line-height: $line-height-button;
+  border-radius: var(--c-theme-button-border-radius, $c-theme-button-border-radius);
+  border: var(--c-sizing-button-border-width, $c-sizing-button-border-width) solid transparent;
+  color: var(--c-theme-button-color, $c-theme-button-color);
+  line-height: var(--c-sizing-button-height, $c-sizing-button-height);
   text-align: center;
   vertical-align: middle;
+  box-shadow: var(--c-theme-button-box-shadow, $c-theme-button-box-shadow);
 
   &:hover,
   &:focus,
@@ -35,21 +36,22 @@
 
   &:hover,
   &:focus {
-    color: $brand-accessible-active;
+    color: var(--c-theme-button-color-active, $c-theme-button-color-active);
   }
 
   &:focus {
     outline: 0;
-    box-shadow: $shadow-button-focus;
+    box-shadow: var(--c-theme-button-box-shadow-active, $c-theme-button-box-shadow-active);
   }
 
   &:active {
-    color: $brand-accessible-active;
+    color: var(--c-theme-button-color-active, $c-theme-button-color-active);
   }
 
   &[disabled],
   &:disabled {
-    color: $color-text-button-default-disabled;
+    color: $_c-theme-button-color-disabled;
+    cursor: default;
 
     * {
       pointer-events: none;
@@ -61,10 +63,4 @@
   padding-left: $spacing-medium;
   padding-right: $spacing-medium;
   transition: border 0.15s linear;
-}
-
-@mixin focus-inverse {
-  outline: none;
-  box-shadow: $shadow-button-focus-inverse;
-  border: $border-width-thin solid $color-border-button-focus-inverse;
 }

@@ -8,7 +8,7 @@ import { getDisplayElementById } from '../../shared/helpers';
   Buttons are clickable items used to perform an action.
 </div>
 
-## I'm a heading
+## About buttons
 
 Buttons should be used in situations where users might need to:
 
@@ -16,8 +16,6 @@ Buttons should be used in situations where users might need to:
 - begin a new task
 - trigger a new UI element to appear on the page
 - specify a new or next step in a process
-
-## I'm another heading
 
 <CodeView>
   <React.Fragment>
@@ -29,4 +27,161 @@ Buttons should be used in situations where users might need to:
     {getDisplayElementById(ButtonExamples.examples, 'button-destructive-text')}
     {getDisplayElementById(ButtonExamples.examples, 'button-success')}
   </React.Fragment>
+</CodeView>
+
+## Button vs. Link
+
+The HTML elements for buttons and links describe a very specific type of action that is going to be taken when they are used. It is important you know when to use which, as the distinction matters:
+
+- Use a **link** when you’re **navigating to another place**, such as: a "view all" page, "Jane Chen" profile, a page "skip link" etc.
+- Use **buttons** when you are **performing an action**, such as: "submit," "merge," "create new," "upload," etc.
+  - An action is almost **always** on the same page
+
+<Blockquote type="a11y" header="Accessibility Rule of Thumb">
+  If pressing a Button results in a new URL, or the resultant UI makes sense as "a new browser tab", that's probably always a link <code className="doc"><a /></code>. Everything else is a <code className="doc"><button /></code>.
+</Blockquote>
+
+### Accessibility
+
+The distinction is important to screen reader users to know what's going to happen next. Will I navigate somewhere or will something happen on the page? So it's important to choose the right HTML element for the job.
+
+If you absolutely cannot use a `<button />` element for an action and instead need to use an `<a />`, you are required to do 2 things:
+
+- Add `role="button"` attribute to the `<a />` to make the element announce itself as a `button` element.
+- Add a JavaScript event handler for when the user presses the space key.  This is because a `button` element will respond by default to both the enter and space keys being pressed, but an `<a />` element will not.
+
+Finally, color alone does not suffice when conveying the meaning of buttons. Ensure that the text you use in the button matches the meaning you are trying to convey via color. For example, if you use the destructive button to point out a potential warning, make sure the text communicates the same message.
+
+### Links that look like Buttons
+
+<Blockquote type="a11y" header="Accessibility Warning">
+  Use these with caution - dictation software users may not be able to properly identify these actions, as they can say "show buttons" and these won't highlight since they are semantically links, even though they may look like buttons.
+</Blockquote>
+
+<CodeView>
+  <React.Fragment>
+    {getDisplayElementById(ButtonExamples.examples, 'base-link')}
+    {getDisplayElementById(ButtonExamples.examples, 'neutral-link')}
+    {getDisplayElementById(ButtonExamples.examples, 'brand-link')}
+    {getDisplayElementById(ButtonExamples.examples, 'brand-outline-link')}
+    {getDisplayElementById(ButtonExamples.examples, 'destructive-link')}
+    {getDisplayElementById(ButtonExamples.examples, 'destructive-text-link')}
+    {getDisplayElementById(ButtonExamples.examples, 'success-link')}
+  </React.Fragment>
+</CodeView>
+
+## Variations
+
+### Base
+
+The base `lwc-button` looks like a plain text link. It removes all the styling of the native button.
+
+The base and neutral buttons are used most frequently and can be used multiple times per feature. Use these buttons when the actions are of secondary importance to the content surrounding it, such as in the actions ribbon in a page header.
+
+<CodeView toggleCode={false}>
+  <React.Fragment>
+    {ButtonExamples.default()}
+    {getDisplayElementById(ButtonExamples.states, 'button-disabled')}
+  </React.Fragment>
+</CodeView>
+
+### Neutral
+
+Add the `lwc-button_neutral` class to create a neutral button.
+
+<CodeView toggleCode={false}>
+  <React.Fragment>
+    {getDisplayElementById(ButtonExamples.examples, 'button-neutral')}
+    {getDisplayElementById(ButtonExamples.states, 'button-neutral-disabled')}
+  </React.Fragment>
+</CodeView>
+
+### Brand
+
+To create the brand button, add the `lwc-button_brand` class to the `lwc-button` class. The brand color tokens can be overridden for theme specific usage.
+
+The Brand button generally should only be used once per component screen at any one time. It is used for when there is an action that is clearly more important than the other actions and you need to draw attention to it. An example is when you have a “Save” and “Cancel” button. The “Save” is the primary action.
+
+Not all features need to have primary actions, sometimes the actions are secondary to the content and are all of equal importance.
+
+<CodeView toggleCode={false}>
+  <React.Fragment>
+    {getDisplayElementById(ButtonExamples.examples, 'button-brand')}
+    {getDisplayElementById(ButtonExamples.states, 'button-brand-disabled')}
+  </React.Fragment>
+</CodeView>
+
+### Outline Brand
+
+To create the outline brand button, add the `lwc-button_outline-brand` class to the `lwc-button` class. The brand color tokens can be overridden for theme specific usage.
+
+<CodeView toggleCode={false}>
+  <React.Fragment>
+    {getDisplayElementById(ButtonExamples.examples, 'button-brand-outline')}
+    {getDisplayElementById(ButtonExamples.states, 'button-brand-outline-disabled')}
+  </React.Fragment>
+</CodeView>
+
+### Inverse
+
+Use the inverse button on dark backgrounds. Add the `lwc-button_inverse` class to the `lwc-button` class.
+
+<CodeView style={{ backgroundColor: '#16325c', padding: '0.5rem' }} toggleCode={false}>
+  <React.Fragment>
+    {getDisplayElementById(ButtonExamples.examples, 'button-inverse')}
+    {getDisplayElementById(ButtonExamples.states, 'button-inverse-disabled')}
+  </React.Fragment>
+</CodeView>
+
+### Destructive
+
+To create the destructive button, add the `lwc-button_destructive` class to the `lwc-button` class.
+
+This button is used to indicate a destructive action to the user, like permanently erasing data.
+
+<CodeView toggleCode={false}>
+  <React.Fragment>
+    {getDisplayElementById(ButtonExamples.examples, 'button-destructive')}
+    {getDisplayElementById(ButtonExamples.states, 'button-destructive-disabled')}
+  </React.Fragment>
+</CodeView>
+
+### Text Destructive
+
+To create the text destructive button, add the `lwc-button_text-destructive` class to the `lwc-button` class.
+
+This button is used to indicate a destructive action to the user, like permanently erasing data. Use this version when the [Destructive](#Destructive) button would be too distracting to the experience.
+
+<CodeView toggleCode={false}>
+  <React.Fragment>
+    {getDisplayElementById(ButtonExamples.examples, 'button-destructive-text')}
+    {getDisplayElementById(ButtonExamples.states, 'button-destructive-text-disabled')}
+  </React.Fragment>
+</CodeView>
+
+### Success
+
+To create the success button, add the `lwc-button_success` class to the `lwc-button` class.
+
+<CodeView toggleCode={false}>
+  <React.Fragment>
+    {getDisplayElementById(ButtonExamples.examples, 'button-success')}
+    {getDisplayElementById(ButtonExamples.states, 'button-success-disabled')}
+  </React.Fragment>
+</CodeView>
+
+## With Icons
+
+The SVG, element, or icon inside the button receives the `lwc-button__icon` class. You can position the icon on the left or the right using `lwc-button__icon_left` or `lwc-button__icon_right`, which applies the correct amount of space between the icon and the text.
+
+### Left Icon
+
+<CodeView>
+  {getDisplayElementById(ButtonExamples.examples, 'button-left-icon')}
+</CodeView>
+
+### Right Icon
+
+<CodeView>
+  {getDisplayElementById(ButtonExamples.examples, 'button-right-icon')}
 </CodeView>

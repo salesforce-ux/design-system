@@ -31,7 +31,7 @@ class Button extends Component {
   }
 
   render() {
-    const { variant, size, use, children, disabled } = this.props;
+    const { variant, size, use, children, disabled, shadow } = this.props;
 
     const classNameList = classNames({
       'sldswc-button': variant !== 'reset',
@@ -46,11 +46,7 @@ class Button extends Component {
     });
 
     return (
-      <Shadow
-        name="button"
-        includes={[common, button]}
-        shadow={this.props.shadow}
-      >
+      <Shadow name="button" includes={[common, button]} shadow={shadow}>
         <React.Fragment>
           {use === 'a' ? (
             <a className={classNameList} href="javascript:void(0);">
@@ -59,11 +55,7 @@ class Button extends Component {
               {this.renderRightIcon()}
             </a>
           ) : (
-            <button
-              className={classNameList}
-              disabled={disabled}
-              ref={el => (this.sadButton = el)}
-            >
+            <button className={classNameList} disabled={disabled}>
               {this.renderLeftIcon()}
               {children}
               {this.renderRightIcon()}

@@ -42,14 +42,14 @@ class CodeBlock extends Component {
 
   getCode() {
     const { children } = this.props;
-    const element = mapElement(children, (child, index) => {
-      if (React.isValidElement(child)) {
-        if (child === undefined) return child;
-        return React.cloneElement(child, {
-          shadow: typeof child.type === 'function' ? false : undefined
-        });
-      }
-    });
+    const element = React.isValidElement(children)
+      ? mapElement(children, (child, index) => {
+          if (child === undefined) return child;
+          return React.cloneElement(child, {
+            shadow: typeof child.type === 'function' ? false : undefined
+          });
+        })
+      : children;
     const markup = ReactDOM.renderToStaticMarkup(element);
     const sanitizedMarkup = markup.replace(/className="resolved"/g, '');
     return beautify(element ? sanitizedMarkup : '');
@@ -58,15 +58,6 @@ class CodeBlock extends Component {
   getHighlightedCode() {
     const { language } = this.props;
     return highlight(this.getCode(), language);
-  }
-
-  componentDidMount() {
-    console.log('Mounted');
-  }
-
-  componentDidUpdate(prev, next) {
-    console.log('Updated');
-    console.log(prev, next);
   }
 
   render() {

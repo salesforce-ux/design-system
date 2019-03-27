@@ -23,11 +23,7 @@ export const examples = [
   {
     id: 'button-inverse',
     label: 'Inverse',
-    element: (
-      <div style={{ backgroundColor: '#16325c', padding: '0.5rem' }}>
-        <Button variant="inverse">Inverse Button</Button>
-      </div>
-    )
+    element: <Button variant="inverse">Inverse Button</Button>
   },
   {
     id: 'button-destructive',
@@ -76,6 +72,65 @@ export const examples = [
         Learn More
       </Button>
     )
+  },
+  {
+    id: 'base-link',
+    label: 'Base link',
+    element: <Button use="a">Base Link</Button>
+  },
+  {
+    id: 'neutral-link',
+    label: 'Neutral link',
+    element: (
+      <Button use="a" variant="neutral">
+        Neutral Link
+      </Button>
+    )
+  },
+  {
+    id: 'brand-link',
+    label: 'Brand link',
+    element: (
+      <Button use="a" variant="brand">
+        Brand Link
+      </Button>
+    )
+  },
+  {
+    id: 'brand-outline-link',
+    label: 'Brand outline link',
+    element: (
+      <Button use="a" variant="brand-outline">
+        Brand Outline Link
+      </Button>
+    )
+  },
+  {
+    id: 'destructive-link',
+    label: 'Destructive link',
+    element: (
+      <Button use="a" variant="destructive">
+        Destructive Link
+      </Button>
+    )
+  },
+  {
+    id: 'destructive-text-link',
+    label: 'Destructive text link',
+    element: (
+      <Button use="a" variant="destructive-text">
+        Destructive text Link
+      </Button>
+    )
+  },
+  {
+    id: 'success-link',
+    label: 'Success link',
+    element: (
+      <Button use="a" variant="success">
+        Success Link
+      </Button>
+    )
   }
 ];
 
@@ -116,11 +171,9 @@ export let states = [
     id: 'button-inverse-disabled',
     label: 'Inverse Disabled',
     element: (
-      <div style={{ backgroundColor: '#16325c', padding: '0.5rem' }}>
-        <Button disabled variant="inverse">
-          Inverse Button
-        </Button>
-      </div>
+      <Button disabled variant="inverse">
+        Inverse Button
+      </Button>
     )
   },
   {

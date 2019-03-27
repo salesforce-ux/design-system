@@ -50,6 +50,7 @@
   &[disabled],
   &:disabled {
     --c-theme-icon-color: $_c-theme-button-icon-color-disabled;
+    cursor: default;
 
     * {
       pointer-events: none;

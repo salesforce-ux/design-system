@@ -12,12 +12,20 @@
 .slds-media_timeline,
 .slds-media--timeline {
   @include deprecate('4.0.0', 'Use .slds-timeline__media instead of .slds-media--timeline');
-  @include feed-vertical-rule($square-icon-small-boundary, $border-width-thick);
   padding-bottom: $spacing-large;
+  position: relative;
 
   &:before {
-    margin-left: $border-width-thin;
+    content: '';
+    background: $color-border;
+    height: 100%;
+    width: $border-width-thick;
+    position: absolute;
+    left: ($square-icon-small-boundary / 2);
     top: $border-width-thick;
+    bottom: 0;
+    margin-left: $border-width-thin;
+    z-index: -1;
   }
 }
 

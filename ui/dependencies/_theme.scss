@@ -1,9 +1,14 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-// If you have a horizontal list and want a dot as a list item separator
-//
-// Use - apply to repeating list items
+/// Apply a horizontal gradient
+///
+/// @param {color} $start
+/// @param {color} $end
+/// @param {string} $direction
+/// @group theme
+/// @example gradient-horizontal
+///   @include gradient-horizontal(#000, #fff)
 @mixin gradient-horizontal($start, $end, $direction: right) {
   @if alpha($start) == 1 and alpha($end) == 1 {
     background-color: $start;
@@ -15,8 +20,14 @@
   }
 }
 
-
-
+/// Apply a vertical gradient
+///
+/// @param {color} $start
+/// @param {color} $end
+/// @param {string} $direction
+/// @group theme
+/// @example gradient-vertical
+///   @include gradient-vertical(#000, #fff)
 @mixin gradient-vertical($start, $end, $direction: bottom) {
   @if alpha($start) == 1 and alpha($end) == 1 {
     background-color: $start;

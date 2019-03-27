@@ -1,0 +1,75 @@
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/* stylelint-disable declaration-no-important */
+
+@mixin assistive-text {
+  position: absolute !important;
+  margin: -1px !important;
+  border: 0 !important;
+  padding: 0 !important;
+  width: 1px !important;
+  height: 1px !important;
+  overflow: hidden !important;
+  clip: rect(0 0 0 0) !important;
+  text-transform: none !important;
+  white-space: nowrap !important; // https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+}
+
+@mixin visibility($class-name, $min: null, $max: null) {
+
+  .slds-#{$class-name} {
+    /* Allow class interpolation with parent selector for easier utility class generation */
+    /* stylelint-disable selector-class-pattern */
+    &-show {
+      display: none;
+
+      @if $min {
+        @media (min-width: $min) {
+          display: block;
+
+          &_inline-block,
+          &--inline-block {
+            display: inline-block;
+          }
+
+          &_inline,
+          &--inline {
+            display: inline;
+          }
+        }
+      }
+    }
+
+    @if $min and $max {
+
+      &-show-only {
+        display: none;
+
+        @media (min-width: $min) and (max-width: $max - 1) {
+          display: block;
+
+          &_inline-block,
+          &--inline-block {
+            display: inline-block;
+          }
+
+          &_inline,
+          &--inline {
+            display: inline;
+          }
+        }
+      }
+    }
+    /* stylelint-enable selector-class-pattern */
+  }
+
+  @if $max {
+
+    .slds-max-#{$class-name}-hide {
+      @media (max-width: $max - 1) {
+        display: none;
+      }
+    }
+  }
+}

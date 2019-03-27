@@ -94,7 +94,7 @@ Token.propTypes = {
 };
 
 Token.defaultProps = {
-  tokenSet: 'force-base'
+  tokenSet: 'ui-force'
 };
 
 export default Token;

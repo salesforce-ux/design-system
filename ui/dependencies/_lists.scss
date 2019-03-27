@@ -40,9 +40,6 @@
   }
 }
 
-
-
-
 // Output dot separators based on direction parameter
 //
 // @require $size, $direction, $color, $mq
@@ -111,6 +108,26 @@
       &:after {
         content: none;
       }
+    }
+  }
+}
+
+
+@mixin align-horizontal($children: null, $fallback: null, $mq: null) {
+  display: flex;
+
+  @if $mq != null {
+    flex-direction: column;
+
+    @include mq-medium-min {
+      flex-direction: row;
+    }
+  }
+
+  @if $children != null {
+
+    > #{$children} {
+      align-self: center;
     }
   }
 }

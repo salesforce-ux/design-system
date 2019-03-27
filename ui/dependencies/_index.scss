@@ -2,27 +2,21 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 @import
-
   'functions',
   'rtl',
-
   'layout',
+  'text',
   'typography',
+  'sizing',
+  'scrolling',
   'interactions',
   'forms',
-  'motion',
-  'theme',
-
-  // Components
-  'buttons',
-  'dropdowns',
-  'feed',
-  'forms',
   'lists',
+  'motion',
   'popover',
-  'tables',
+  'theme',
+  'visibility',
+  'forms',
   'tabs',
-
-
   'root',
   'core';

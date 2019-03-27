@@ -1,0 +1,70 @@
+import CodeView from '../../../shared/components/CodeView';
+import CodeBlock from '../../../shared/components/CodeBlock';
+import Blockquote from '../../../shared/components/Blockquote';
+import { getDisplayElementById } from '../../shared/helpers';
+import * as ActivityTimelineExamples from './base/example';
+import { ActivityTimeline } from './base/example';
+
+<div className="lead doc">
+  The activity timeline displays each of the user’s upcoming, current, and past activities.
+</div>
+
+<CodeView>
+  {ActivityTimelineExamples.default}
+</CodeView>
+
+Each Activity timeline item receives its width from the parent list. It can consume the full width of the main page area or be placed in the smaller right sidebar.
+
+<Blockquote type="a11y" header="Accessibility Note">
+  Text describing the type of timeline item is placed in a <code className="doc">span</code>. It is the first element in the timeline item and should be hidden with the <code className="doc">slds-assistive-text</code> class. The <code className="doc">SVG</code> image does not need the <code className="doc">slds-assistive-text</code> class.
+</Blockquote>
+
+### Notable attributes
+
+**Button:**
+
+- <code className="doc">aria-controls</code> is used to create an association between the button and the details section. If the details section has an <code className="doc">id="email-content"</code>, then the button should have <code className="doc">aria-controls="email-content"</code>.
+- The title of the timeline item can also be used as a button to open the details section. If the details section has an <code className="doc">id="email-content"</code>, then the div with <code className="doc">slds-timeline__trigger</code> should have <code className="doc">aria-controls="email-content"</code> and the click handler.
+- <code className="doc">aria-expanded</code> indicates if the details section is open or closed and is read aloud by assitive technology when the button is focused.
+
+**Section:**
+
+- <code className="doc">aria-hidden</code> indicates if the details section is open or closed, and if set to <code className="doc">true</code>, assistive technology hides the details section.
+
+### Keyboard navigation
+
+- The button should behave as a normal button. The user should be able to tab to focus it and press enter/space to activate it.
+
+## States
+
+### Expanding sections
+
+<Blockquote type="a11y" header="Accessibility Note">
+  When the user interacts with the button to open the details section, <code className="doc">aria-expanded</code> on the button should be <code className="doc">true</code> and <code className="doc">aria-hidden</code> on the details section should be <code className="doc">false</code>.
+
+  When the user interacts with the button to close the details section, <code className="doc">aria-expanded</code> on the button should be <code className="doc">false</code> and <code className="doc">aria-hidden</code> on the details section should be <code className="doc">true</code>.
+</Blockquote>
+
+#### Single Item Expanded
+
+<CodeView>
+  {getDisplayElementById(ActivityTimelineExamples.states, 'expanded-single')}
+</CodeView>
+
+#### Multiple Items Expanded
+
+<CodeView>
+  {getDisplayElementById(ActivityTimelineExamples.states, 'expanded')}
+</CodeView>
+
+### Error
+
+<CodeView>
+  {getDisplayElementById(ActivityTimelineExamples.states, 'error-single')}
+</CodeView>
+
+## Narrow Region Example
+
+<CodeView>
+  {getDisplayElementById(ActivityTimelineExamples.examples, 'narrow')}
+</CodeView>

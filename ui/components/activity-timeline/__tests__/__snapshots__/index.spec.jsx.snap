@@ -306,7 +306,7 @@ exports[`Activity Timeline Expandable renders a narrow timeline item 1`] = `
          
       </p>
       <article
-        aria-hidden={false}
+        aria-hidden={true}
         className="slds-box slds-timeline__item_details slds-theme_shade slds-m-top_x-small slds-m-horizontal_xx-small"
         id="call-item"
       >
@@ -521,7 +521,7 @@ exports[`Activity Timeline Expandable renders a task timeline item 1`] = `
          
       </p>
       <article
-        aria-hidden={false}
+        aria-hidden={true}
         className="slds-box slds-timeline__item_details slds-theme_shade slds-m-top_x-small slds-m-horizontal_xx-small"
         id="call-item"
       >
@@ -723,7 +723,7 @@ exports[`Activity Timeline Expandable renders a timeline item 1`] = `
          
       </p>
       <article
-        aria-hidden={false}
+        aria-hidden={true}
         className="slds-box slds-timeline__item_details slds-theme_shade slds-m-top_x-small slds-m-horizontal_xx-small"
         id="call-item"
       >
@@ -1232,7 +1232,7 @@ exports[`Activity Timeline Expandable renders a timeline item with icons 1`] = `
          
       </p>
       <article
-        aria-hidden={false}
+        aria-hidden={true}
         className="slds-box slds-timeline__item_details slds-theme_shade slds-m-top_x-small slds-m-horizontal_xx-small"
         id="call-item"
       >
@@ -1372,7 +1372,7 @@ exports[`Activity Timeline Expandable renders a timeline media body 1`] = `
 
 exports[`Activity Timeline Expandable renders an empty details section 1`] = `
 <article
-  aria-hidden={false}
+  aria-hidden={true}
   className="slds-box slds-timeline__item_details slds-theme_shade slds-m-top_x-small slds-m-horizontal_xx-small"
   id="test1"
 />

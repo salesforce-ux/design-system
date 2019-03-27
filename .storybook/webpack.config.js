@@ -1,5 +1,7 @@
 const path = require('path');
 const visit = require('unist-util-visit');
+const paths = require('../scripts/helpers/paths');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = (baseConfig, env, defaultConfig) => {
   defaultConfig.module.rules.push(
@@ -76,6 +78,13 @@ module.exports = (baseConfig, env, defaultConfig) => {
       ]
     }
   );
-
+  defaultConfig.plugins.push(
+    new CopyWebpackPlugin([
+      {
+        from: paths.icons,
+        to: '/assets/icons'
+      }
+    ])
+  );
   return defaultConfig;
 };

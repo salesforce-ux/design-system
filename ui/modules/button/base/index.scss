@@ -26,6 +26,14 @@ $_c-theme-button-color-inverse: $color-gray-1;
 // ------------
 
 // Background Color
+$c-button-color-background-default: $color-gray-1;
+$c-button-color-background-default-active: $color-gray-2;
+$c-button-color-background-brand: $brand-accessible;
+$c-button-color-background-brand-active: $brand-accessible-active;
+$c-button-color-background-destructive: $color-background-destructive;
+$c-button-color-background-destructive-active: $color-background-destructive-active;
+$c-button-color-background-success: $color-background-success;
+$c-button-color-background-success-active: $color-background-success-dark;
 
 // Border Color
 
@@ -73,7 +81,7 @@ $c-sizing-button-height: $line-height-button;
  */
 .lwc-button_brand {
   @include button-shape;
-  background-color: $brand-accessible;
+  background-color: var(--c-button-color-background-brand, $c-button-color-background-brand);
   border-color: $brand-accessible;
   color: $color-text-brand-primary;
 
@@ -85,13 +93,13 @@ $c-sizing-button-height: $line-height-button;
 
   &:hover,
   &:focus {
-    background-color: $brand-accessible-active;
+    background-color: var(--c-button-color-background-brand-active, $c-button-color-background-brand-active);
     border-color: $brand-accessible-active;
     color: $color-text-brand-primary;
   }
 
   &:active {
-    background-color: $brand-accessible-active;
+    background-color: var(--c-button-color-background-brand-active, $c-button-color-background-brand-active);
     border-color: $brand-accessible-active;
   }
 
@@ -294,15 +302,15 @@ $c-sizing-button-height: $line-height-button;
 .lwc-button_neutral {
   @include button-shape;
   border-color: $button-color-border-primary;
-  background-color: $button-color-background-primary;
+  background-color: var(--c-button-color-background-default, $c-button-color-background-default);
 
   &:hover,
   &:focus {
-    background-color: $color-background-button-default-hover;
+    background-color: var(--c-button-color-background-default-active, $c-button-color-background-default-active);
   }
 
   &:active {
-    background-color: $color-background-button-default-active;
+    background-color: var(--c-button-color-background-default-active, $c-button-color-background-default-active);
   }
 
   &[disabled],

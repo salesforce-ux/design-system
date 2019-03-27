@@ -71,7 +71,7 @@ $c-theme-button-icon-border-radius: $button-border-radius;
  * @name brand
  * @summary
  * @selector .lwc-button-icon_brand
- * @restrict .slds-button-icon
+ * @restrict .lwc-button-icon
  * @modifier
  * @group theme
  */
@@ -113,7 +113,7 @@ $c-theme-button-icon-border-radius: $button-border-radius;
 /**
  * @summary Adds a bordered container to a button icon
  * @selector .lwc-button-icon_bordered
- * @restrict .slds-button-icon
+ * @restrict .lwc-button-icon
  * @modifier
  */
 .lwc-button-icon_bordered {
@@ -123,7 +123,7 @@ $c-theme-button-icon-border-radius: $button-border-radius;
 /**
  * @summary Adds a background fill of white to a button icon
  * @selector .lwc-button-icon_background
- * @restrict .slds-button-icon
+ * @restrict .lwc-button-icon
  * @modifier
  */
 .lwc-button-icon_background {

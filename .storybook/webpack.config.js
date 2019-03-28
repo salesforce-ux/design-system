@@ -14,10 +14,15 @@ module.exports = (baseConfig, env, defaultConfig) => {
         path.resolve(__dirname, '../assets')
       ],
       use: [
-        'style-loader',
+        {
+          loader: path.resolve(
+            __dirname,
+            '../scripts/compile/lwc-style-loader.js'
+          )
+        },
         {
           loader: 'css-loader',
-          options: { importLoaders: 1 }
+          options: { importLoaders: 2 }
         },
         {
           loader: 'postcss-loader',

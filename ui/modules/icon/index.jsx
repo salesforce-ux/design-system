@@ -7,11 +7,8 @@ import classNames from 'classnames';
 import IconPrimitive from '../icon-primitive/';
 import Shadow from '../../shared/shadow';
 
-import '../common/index.scss';
-import './base/index.scss';
-
-import common from '!!css-loader!../common/index.css'; // eslint-disable-line import/no-webpack-loader-syntax
-import icon from '!!css-loader!./base/index.css'; // eslint-disable-line import/no-webpack-loader-syntax
+import common from '../common/index.scss';
+import icon from './base/index.scss';
 
 class Icon extends Component {
   render() {

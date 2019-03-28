@@ -5,6 +5,7 @@ import * as CardExamples from './base/example';
 import Card, { CardHeader, CardBody, CardFooter } from './';
 import Button from '../button';
 import { getDisplayElementById } from '../../shared/helpers';
+import ShadowExample from '../../shared/shadow/example'
 
 <div className="doc lead">
   Cards are used to apply a container around a related grouping of information.
@@ -36,6 +37,10 @@ The Card component should only have one shadow boundary that contains the header
     </Card>
   </lightning-card>
 </CodeBlock>
+
+<ShadowExample hasShadowToggle>
+  <Card title="Shadow Card Title" />
+</ShadowExample>
 
 ## Implementation Guidelines
 

@@ -6,11 +6,8 @@ import PropTypes from 'prop-types';
 import SvgIcon from '../../shared/svg-icon';
 import Shadow from '../../shared/shadow';
 
-import '../common/index.scss';
-import './base/index.scss';
-
-import common from '!!css-loader!../common/index.css'; // eslint-disable-line import/no-webpack-loader-syntax
-import iconPrimitive from '!!css-loader!./base/index.css'; // eslint-disable-line import/no-webpack-loader-syntax
+import common from '../common/index.scss';
+import iconPrimitive from './base/index.scss';
 
 class IconPrimitive extends Component {
   constructor() {

@@ -3,11 +3,8 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import Shadow from '../../shared/shadow';
 
-import '../common/index.scss';
-import './base/index.scss';
-
-import common from '!!css-loader!../common/index.css'; // eslint-disable-line import/no-webpack-loader-syntax
-import button from '!!css-loader!./base/index.css'; // eslint-disable-line import/no-webpack-loader-syntax
+import common from '../common/index.scss';
+import button from './base/index.scss';
 
 class Button extends Component {
   constructor() {

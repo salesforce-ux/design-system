@@ -1,11 +1,14 @@
 import React from 'react';
 import Card from '../';
 import Button from '../../button';
+import ShadowExample from '../../../shared/shadow/example';
 
 const CardExample = () => (
-  <Card title="Card Title" href="javascript:void(0);">
-    Card Body
-  </Card>
+  <ShadowExample hasShadowToggle>
+    <Card title="Card XXYYXX Title" href="javascript:void(0);">
+      Card Body
+    </Card>
+  </ShadowExample>
 );
 
 export const states = [

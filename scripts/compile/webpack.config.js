@@ -37,7 +37,9 @@ module.exports = I.fromJS({
       {
         test: /\.scss$/,
         use: [
-          { loader: 'style-loader' },
+          {
+            loader: path.resolve(__dirname, 'lwc-style-loader.js')
+          },
           { loader: 'raw-loader' },
           { loader: 'sass-loader' }
         ]

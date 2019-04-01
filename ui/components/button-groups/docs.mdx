@@ -1,0 +1,153 @@
+import CodeView from '../../../shared/components/CodeView';
+import CodeBlock from '../../../shared/components/CodeBlock';
+import Blockquote from '../../../shared/components/Blockquote';
+import { getDisplayElementById } from '../../shared/helpers';
+import * as ButtonGroupsBaseExamples from './base/example';
+import * as ButtonGroupsListExamples from './list/example';
+import * as ButtonGroupsRowExamples from './row/example';
+
+<div className="doc lead">
+  Button groups are used to bunch together buttons with similar actions
+</div>
+
+## About Button Groups
+
+Buttons in a group are surrounded by a parent with the `.slds-button-group` class, unless they are in a list (in which case they use `.slds-button-group-list`. If the last button is an icon, like the down triangle, use the `.slds-button_icon-border-filled` class when accompanying a `.slds-button_neutral` group.
+
+If the last button in a group needs to be wrapped in another element (for example, a drop-down trigger), add the `.slds-button_last` class to the wrapper element to create proper spacing and borders.
+
+## Accessibility
+
+Unless you are using the list version, include the Aria role `role="group"` so that assistive technologies are alerted to the grouping.
+
+## Base
+
+<CodeView>
+  {ButtonGroupsBaseExamples.default}
+</CodeView>
+
+### States
+
+#### Disabled
+
+<CodeView>
+  {getDisplayElementById(ButtonGroupsBaseExamples.states, 'disabled')}
+</CodeView>
+
+#### With Overflow Menu
+
+<CodeView>
+  {getDisplayElementById(ButtonGroupsBaseExamples.states, 'with-overflow')}
+</CodeView>
+
+#### With Overflow Menu – Open
+
+<CodeView>
+  {getDisplayElementById(ButtonGroupsBaseExamples.states, 'with-overflow-open')}
+</CodeView>
+
+#### With Overflow Menu – Disabled
+
+<CodeView>
+  {getDisplayElementById(ButtonGroupsBaseExamples.states, 'with-overflow-disabled')}
+</CodeView>
+
+### Examples
+
+#### Inverse
+
+<CodeView>
+  {getDisplayElementById(ButtonGroupsBaseExamples.examples, 'inverse')}
+</CodeView>
+
+#### Inverse - Disabled
+
+<CodeView>
+  {getDisplayElementById(ButtonGroupsBaseExamples.examples, 'inverse-disabled')}
+</CodeView>
+
+#### Inverse - With Overflow Menu
+
+<CodeView>
+  {getDisplayElementById(ButtonGroupsBaseExamples.examples, 'inverse-overflow')}
+</CodeView>
+
+#### Inverse - With Disabled Overflow Menu
+
+<CodeView>
+  {getDisplayElementById(ButtonGroupsBaseExamples.examples, 'inverse-overflow-disabled')}
+</CodeView>
+
+### Button Icon Group
+
+<CodeView>
+  {getDisplayElementById(ButtonGroupsBaseExamples.examples, 'button-group-icon')}
+</CodeView>
+
+#### Disabled
+
+<CodeView>
+  {getDisplayElementById(ButtonGroupsBaseExamples.examples, 'button-group-icon-disabled')}
+</CodeView>
+
+#### Selected
+
+<CodeView>
+  {getDisplayElementById(ButtonGroupsBaseExamples.examples, 'button-group-icon-selected')}
+</CodeView>
+
+### Brand Button
+
+#### With Overflow Menu
+
+<CodeView>
+  {getDisplayElementById(ButtonGroupsBaseExamples.examples, 'brand-with-overflow')}
+</CodeView>
+
+### With Style Encapsulation
+
+<CodeView>
+  {getDisplayElementById(ButtonGroupsBaseExamples.examples, 'style-encapsulated-button-group')}
+</CodeView>
+
+#### First/Last
+
+<CodeView>
+  {getDisplayElementById(ButtonGroupsBaseExamples.examples, 'style-encapsulated-button-group-2-button')}
+</CodeView>
+
+#### Button Icon Group
+
+<CodeView>
+  {getDisplayElementById(ButtonGroupsBaseExamples.examples, 'style-encapsulated-button-icon-group')}
+</CodeView>
+
+#### Button Icon Group – First/Last
+
+<CodeView>
+  {getDisplayElementById(ButtonGroupsBaseExamples.examples, 'style-encapsulated-button-icon-group-2-button')}
+</CodeView>
+
+
+## List
+
+<CodeView>
+  {ButtonGroupsListExamples.default}
+</CodeView>
+
+### Examples
+
+See the [Base examples](#Examples) for various usecases such as [inverse](#Inverse).
+
+
+## Row
+
+<CodeView>
+  {ButtonGroupsRowExamples.default}
+</CodeView>
+
+### Of Button Icons
+
+<CodeView>
+  {getDisplayElementById(ButtonGroupsRowExamples.examples, 'buttons-icons')}
+</CodeView>

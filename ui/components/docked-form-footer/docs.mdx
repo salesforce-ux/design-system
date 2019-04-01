@@ -1,0 +1,31 @@
+import CodeView from '../../../shared/components/CodeView';
+import CodeBlock from '../../../shared/components/CodeBlock';
+import Blockquote from '../../../shared/components/Blockquote';
+import { getDisplayElementById } from '../../shared/helpers';
+import * as DockedFormFooterExamples from './base/example';
+
+<div className="lead doc">
+  Docked form footer is used to dock form actions to the bottom of the viewport
+</div>
+
+## Base
+
+<CodeView style={{ height: '180px' }}>
+  {DockedFormFooterExamples.default}
+</CodeView>
+
+### With Error(s)
+
+<CodeView style={{ height: '180px' }}>
+  {getDisplayElementById(DockedFormFooterExamples.states, 'docked-form-footer-with-error')}
+</CodeView>
+
+### With Error Popover
+
+<CodeView style={{ height: '180px' }}>
+  {getDisplayElementById(DockedFormFooterExamples.states, 'docked-form-footer-with-popover')}
+</CodeView>
+
+The popover should be positioned with JavaScript.
+
+When errors are found within a form, the user will be notified with a popover with the page-level errors listed out. Please provide a contextually specific title for the dialog with the aria-label attribute. e.g. "Acme Global edit form errors".

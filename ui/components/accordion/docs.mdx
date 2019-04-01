@@ -1,0 +1,46 @@
+import CodeView from '../../../shared/components/CodeView';
+import { getDisplayElementById } from '../../shared/helpers';
+import * as Base from './base/example';
+
+<div className="doc lead">
+  An accordion allows a user to toggle the display of a section of content.
+</div>
+
+## Base
+<CodeView hasDensityRadioButtons>
+  {Base.default}
+</CodeView>
+
+## States
+
+### Section 1 - Open
+<CodeView hasDensityRadioButtons>
+  { getDisplayElementById(Base.states, 'section-one-open') }
+</CodeView>
+
+### Section 2 - Open
+<CodeView hasDensityRadioButtons>
+  { getDisplayElementById(Base.states, 'section-two-open') }
+</CodeView>
+
+### Section 3 - Open
+<CodeView hasDensityRadioButtons>
+  { getDisplayElementById(Base.states, 'section-three-open') }
+</CodeView>
+
+### Multiple Sections - Open
+<CodeView hasDensityRadioButtons>
+  { getDisplayElementById(Base.states, 'multiple-sections-open') }
+</CodeView>
+
+### Styled
+<CodeView hasDensityRadioButtons>
+  { getDisplayElementById(Base.states, 'styled') }
+</CodeView>
+
+## Examples
+
+### Nested Accordions
+<CodeView hasDensityRadioButtons>
+  { getDisplayElementById(Base.examples, 'nested-accordions') }
+</CodeView>

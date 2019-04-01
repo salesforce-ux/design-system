@@ -1,5 +1,4 @@
 import CodeView from '../../../shared/components/CodeView';
-import Example from '../../../shared/components/Example';
 import { getDisplayElementById } from '../../shared/helpers';
 import Blockquote from '../../../shared/components/Blockquote';
 import * as Breadcrumbs from './base/example';
@@ -18,13 +17,9 @@ Breadcrumbs are typically constructed with an <code className="doc">ol</code> be
 
 ## Base
 
-<Example title="Default Breadcrumbs">
-  <CodeView>
-    <Breadcrumbs.Context>
-      {Breadcrumbs.default}
-    </Breadcrumbs.Context>
-  </CodeView>
-</Example>
+<CodeView style={{height: '50px'}}>
+  {Breadcrumbs.default}
+</CodeView>
 
 ## Variations
 
@@ -32,10 +27,6 @@ Breadcrumbs are typically constructed with an <code className="doc">ol</code> be
 
 The overflow menu breadcrumbs variant is a composition of the overflow menu with actions example of the menus component and breadcrumbs component. To implement this, include the overflow menu as the first <code className="doc"><li></code> in the breadcrumb component. In order to vertically align all of the breadcrumb items to the center, add the <code className="doc">.slds-grid_vertical-align-center</code> class to the <code className="doc"><ol></code>.
 
-<Example title="Breadcrumbs with Overflow">
-  <CodeView>
-    <Breadcrumbs.Context>
-      {getDisplayElementById(Breadcrumbs.states, "overflow-breadcrumbs")}
-    </Breadcrumbs.Context>
-  </CodeView>
-</Example>
+<CodeView style={{height: '150px'}}>
+  {getDisplayElementById(Breadcrumbs.states, "overflow-breadcrumbs")}
+</CodeView>

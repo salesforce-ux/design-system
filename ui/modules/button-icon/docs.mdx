@@ -24,7 +24,7 @@ The size of a button icon is based off the size of the icon that is being consum
 
 To alter the size of the icon boundary, please refer to [Icon](/modules/icon) documentation.
 
-<CodeView toggleCode={false}>
+<CodeView toggleCode={false} style={`lightning-button-icon { margin-right: 0.5rem; }`}>
   <React.Fragment>
     {ButtonIconExamples.default()}
     {getDisplayElementById(ButtonIconExamples.states, "default-disabled")}
@@ -35,7 +35,7 @@ To alter the size of the icon boundary, please refer to [Icon](/modules/icon) do
 
 The default border color of a button icon is transparent. You may apply a border color to the button icon by applying `lwc-button-icon_bordered` to the button icon.
 
-<CodeView toggleCode={false} style={{backgroundColor: '#f3f2f2', padding: '1rem', margin: '-1rem'}}>
+<CodeView toggleCode={false} style={`background-color: #f3f2f2; padding: 1rem; margin: -1rem; lightning-button-icon { margin-right: 0.5rem; }`}>
   <React.Fragment>
     {getDisplayElementById(ButtonIconExamples.examples, "bordered")}
     {getDisplayElementById(ButtonIconExamples.states, "bordered-disabled")}
@@ -46,7 +46,7 @@ The default border color of a button icon is transparent. You may apply a border
 
 The default background color of a button icon is transparent. You may apply a background fill of white by applying `lwc-button-icon_background` to the button icon. It is **highly recommended** that a bordered is applied with the background fill.
 
-<CodeView toggleCode={false} style={{backgroundColor: '#f3f2f2', padding: '1rem',margin: '-1rem'}}>
+<CodeView toggleCode={false} style={`background-color: #f3f2f2; padding: 1rem; margin: -1rem; lightning-button-icon { margin-right: 0.5rem; }`}>
   <React.Fragment>
     {getDisplayElementById(ButtonIconExamples.examples, "filled")}
     {getDisplayElementById(ButtonIconExamples.states, "filled-disabled")}
@@ -55,7 +55,7 @@ The default background color of a button icon is transparent. You may apply a ba
 
 ## Brand
 
-<CodeView toggleCode={false}>
+<CodeView toggleCode={false} style={`lightning-button-icon { margin-right: 0.5rem; }`}>
   <React.Fragment>
     {getDisplayElementById(ButtonIconExamples.examples, "brand")}
     {getDisplayElementById(ButtonIconExamples.states, "brand-disabled")}
@@ -64,7 +64,7 @@ The default background color of a button icon is transparent. You may apply a ba
 
 ## Sizes
 
-<CodeView>
+<CodeView style={`lightning-button-icon { margin-right: 0.5rem; }`}>
   {getDisplayElementById(ButtonIconExamples.examples, "icon-sizes")}
 </CodeView>
 
@@ -72,12 +72,12 @@ The default background color of a button icon is transparent. You may apply a ba
 
 <DisplayGrid>
   <DisplayColumn>
-    <CodeView>
+    <CodeView style={`lightning-button-icon { margin-right: 0.5rem; }`}>
       {getDisplayElementById(ButtonIconExamples.examples, "boundary-sizes")}
     </CodeView>
   </DisplayColumn>
   <DisplayColumn>
-    <CodeView>
+    <CodeView style={`lightning-button-icon { margin-right: 0.5rem; }`}>
       {getDisplayElementById(ButtonIconExamples.examples, "boundary-sizes-bordered")}
     </CodeView>
   </DisplayColumn>
@@ -86,31 +86,31 @@ The default background color of a button icon is transparent. You may apply a ba
 <DisplayGrid>
   <DisplayColumn>
     <strong>X-Large boundary with varing icon sizes</strong>
-    <CodeView>
+    <CodeView style={`lightning-button-icon { margin-right: 0.5rem; }`}>
       {getDisplayElementById(ButtonIconExamples.examples, "boundary-size-x-large")}
     </CodeView>
   </DisplayColumn>
   <DisplayColumn>
     <strong>Large boundary with varing icon sizes</strong>
-    <CodeView>
+    <CodeView style={`lightning-button-icon { margin-right: 0.5rem; }`}>
       {getDisplayElementById(ButtonIconExamples.examples, "boundary-size-large")}
     </CodeView>
   </DisplayColumn>
   <DisplayColumn>
     <strong>Medium boundary with varing icon sizes</strong>
-    <CodeView>
+    <CodeView style={`lightning-button-icon { margin-right: 0.5rem; }`}>
       {getDisplayElementById(ButtonIconExamples.examples, "boundary-size-medium")}
     </CodeView>
   </DisplayColumn>
   <DisplayColumn>
     <strong>Small with varing icon sizes</strong>
-    <CodeView>
+    <CodeView style={`lightning-button-icon { margin-right: 0.5rem; }`}>
       {getDisplayElementById(ButtonIconExamples.examples, "boundary-size-small")}
     </CodeView>
   </DisplayColumn>
   <DisplayColumn>
     <strong>X-Small boundary with varing icon sizes</strong>
-    <CodeView>
+    <CodeView style={`lightning-button-icon { margin-right: 0.5rem; }`}>
       {getDisplayElementById(ButtonIconExamples.examples, "boundary-size-x-small")}
     </CodeView>
   </DisplayColumn>

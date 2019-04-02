@@ -142,7 +142,7 @@
     "semver": "5.5.1",
     "simple-git": "1.107.0",
     "style-loader": "0.23.1",
-    "styled-components": "^4.2.0",
+    "styled-components": "4.2.0",
     "stylelint": "7.10.1",
     "stylelint-config-slds": "1.0.7",
     "stylestats": "7.0.1",

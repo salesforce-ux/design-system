@@ -4,11 +4,9 @@ import Button from '../../button';
 import ShadowExample from '../../../shared/shadow/example';
 
 const CardExample = () => (
-  <ShadowExample hasShadowToggle>
-    <Card title="Card XXYYXX Title" href="javascript:void(0);">
-      Card Body
-    </Card>
-  </ShadowExample>
+  <Card title="Card Title" href="javascript:void(0);">
+    Card Body
+  </Card>
 );
 
 export const states = [

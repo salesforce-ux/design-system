@@ -1,0 +1,45 @@
+import * as Base from './base/example.jsx';
+import CodeView from '../../../shared/components/CodeView';
+import { getDisplayElementById } from '../../shared/helpers';
+
+<div className="doc lead">
+  A styled checkable input that communicates if an option is being added to a group
+</div>
+
+## About Checkbox Button
+The ‘add button’ is similar to a checkbox in that it presents a user with a
+binary choice for an item. However, the only action a user can take is to
+add (or remove) an entity. When a user clicks the add button, the entity is
+stored, similar to an ‘add to cart’ experience, until the user saves changes.
+
+The add button is useful for increasing clarity. Since the button only adds
+or removes entities, the user knows the action they will prompt upon click.
+The add button also provides a clear visual affordance (in SLDS, we use the
+‘+’ icon as an metaphor for ‘add’) and a large target to take this action.
+
+Use the add button if the component you’re building:
+- Exists without other multi-select elements (i.e. checkboxes)
+- Allows users to select multiple entities
+- Semantically fits the add/remove model
+
+## Base
+<CodeView>
+  {Base.default}
+</CodeView>
+
+## States
+
+### Checked
+<CodeView>
+  { getDisplayElementById(Base.states, 'checkbox-add-button-checked') }
+</CodeView>
+
+### Disabled
+<CodeView>
+  { getDisplayElementById(Base.states, 'checkbox-add-button-disabled') }
+</CodeView>
+
+### Checked and Disabled
+<CodeView>
+  { getDisplayElementById(Base.states, 'checkbox-add-button-checked-and-disabled') }
+</CodeView>

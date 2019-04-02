@@ -160,7 +160,7 @@ export const TimelineItem = props => (
       `${props.type === 'log_a_call'
         ? 'slds-timeline__item_call'
         : 'slds-timeline__item_' + props.type}`,
-      { 'slds-is-open': props.isExpanded === 'true' },
+      { 'slds-is-open': props.isExpanded },
       props.className
     )}
   >
@@ -214,11 +214,11 @@ export const DescriptionCard = props => (
       'slds-theme_shade',
       'slds-m-top_x-small',
       'slds-m-horizontal_xx-small',
-      { 'slds-p-around_medium': props.isExpanded === 'true' },
+      { 'slds-p-around_medium': props.isExpanded },
       props.className
     )}
     id={props.id}
-    aria-hidden={props.isExpanded === 'false'}
+    aria-hidden={!props.isExpanded}
   >
     {props.fields && <FieldInfoList {...props} />}
     {props.children && (
@@ -246,127 +246,135 @@ export const NarrowContext = props => (
   </div>
 );
 
-export let BaseExample = props => (
-  <ul className="slds-timeline">
-    <li>
-      <TimelineItem
-        id={`${taskItemId + '-' + props.id}`}
-        type="task"
-        title="Review proposals for EBC deck with larger team and have marketing review this"
-        date="9:00am | 3/20/17"
-        subtext={{
-          you: 'You',
-          action: 'created a task with',
-          to: 'Charlie Gomez'
-        }}
-        iconSet={taskIcons}
-        fields={[
-          { label: 'Name', content: 'Charlie Gomez' },
-          {
-            label: 'Related To',
-            content: 'Tesla Cloudhub + Anypoint Connectors'
-          }
-        ]}
-        bodyLabel="Description"
-        isExpanded={props.isExpanded}
-        isNarrow={props.isNarrow}
-        hasError={props.hasError}
-      >
-        Need to finalize proposals and brand details before the meeting
-      </TimelineItem>
-    </li>
-    <li>
-      <TimelineItem
-        id={`${callItemId + '-' + props.id}`}
-        type="log_a_call"
-        title="Mobile conversation on Monday"
-        date="10:00am | 3/23/17"
-        subtext={{
-          you: 'You',
-          action: 'logged a call with',
-          to: 'Adam Chan'
-        }}
-        fields={[
-          { label: 'Name', content: 'Adam Chan' },
-          {
-            label: 'Related To',
-            content: 'Tesla Cloudhub + Anypoint Connectors'
-          }
-        ]}
-        bodyLabel="Description"
-        isExpanded={props.isExpanded}
-        isNarrow={props.isNarrow}
-      >
-        Adam seemed interested in closing this deal quickly! Let’s move.
-      </TimelineItem>
-    </li>
-    <li>
-      <TimelineItem
-        id={`${emailItemId + '-' + props.id}`}
-        type="email"
-        title="Re: Mobile conversation on Monday with the new global team"
-        date="10:00am | 3/24/17"
-        subtext={{
-          you: 'You',
-          action: 'emailed',
-          to: 'Lea Chan'
-        }}
-        iconSet={emailIcons}
-        fields={[
-          { label: 'From Address', content: 'Jackie Dewar' },
-          {
-            label: 'To Address',
-            content: 'Lea Chan'
-          }
-        ]}
-        bodyLabel="Text Body"
-        isExpanded={props.isExpanded}
-        isNarrow={props.isNarrow}
-        footerButtons={props.footerButtons}
-      >
-        Hi everyone, Thanks for meeting with the team today and going through
-        the proposals we saw. This goes on and wraps if needed.
-      </TimelineItem>
-    </li>
-    <li>
-      <TimelineItem
-        id={`${eventItemId + '-' + props.id}`}
-        type="event"
-        title="EBC Follow up call"
-        date="10:30am | 3/24/17"
-        subtext={{
-          you: 'You',
-          action: 'created an event with',
-          to: 'Aida Lee',
-          extra: 'and 5 others'
-        }}
-        iconSet={eventIcons}
-        fields={[
-          {
-            label: 'Location',
-            content: 'Westen St. Francis, San Francisco, CA, 94622'
-          },
-          {
-            label: 'Attendees',
-            content: 'Jason Dewar (Organizer) + 5 others'
-          },
-          {
-            label: 'When',
-            content: 'March 26, 10:00 AM - 11:00 AM'
-          }
-        ]}
-        bodyLabel="Description"
-        isExpanded={props.isExpanded}
-        isNarrow={props.isNarrow}
-        footerButtons={props.footerButtons}
-      >
-        Let's discuss the 2017 product roadmap and address any questions
-      </TimelineItem>
-    </li>
-  </ul>
-);
+export let ActivityTimeline = props => {
+  const handleExpandedSections = index => {
+    if (!props.itemsExpanded) return;
+    const expand = props.itemsExpanded.includes(index);
+    return expand;
+  };
 
-export default <BaseExample id="base" isExpanded="false" />;
+  return (
+    <ul className="slds-timeline">
+      <li>
+        <TimelineItem
+          id={`${taskItemId + '-' + props.id}`}
+          type="task"
+          title="Review proposals for EBC deck with larger team and have marketing review this"
+          date="9:00am | 3/20/17"
+          subtext={{
+            you: 'You',
+            action: 'created a task with',
+            to: 'Charlie Gomez'
+          }}
+          iconSet={taskIcons}
+          fields={[
+            { label: 'Name', content: 'Charlie Gomez' },
+            {
+              label: 'Related To',
+              content: 'Tesla Cloudhub + Anypoint Connectors'
+            }
+          ]}
+          bodyLabel="Description"
+          isExpanded={handleExpandedSections(1)}
+          isNarrow={props.isNarrow}
+          hasError={props.hasError}
+        >
+          Need to finalize proposals and brand details before the meeting
+        </TimelineItem>
+      </li>
+      <li>
+        <TimelineItem
+          id={`${callItemId + '-' + props.id}`}
+          type="log_a_call"
+          title="Mobile conversation on Monday"
+          date="10:00am | 3/23/17"
+          subtext={{
+            you: 'You',
+            action: 'logged a call with',
+            to: 'Adam Chan'
+          }}
+          fields={[
+            { label: 'Name', content: 'Adam Chan' },
+            {
+              label: 'Related To',
+              content: 'Tesla Cloudhub + Anypoint Connectors'
+            }
+          ]}
+          bodyLabel="Description"
+          isExpanded={handleExpandedSections(2)}
+          isNarrow={props.isNarrow}
+        >
+          Adam seemed interested in closing this deal quickly! Let’s move.
+        </TimelineItem>
+      </li>
+      <li>
+        <TimelineItem
+          id={`${emailItemId + '-' + props.id}`}
+          type="email"
+          title="Re: Mobile conversation on Monday with the new global team"
+          date="10:00am | 3/24/17"
+          subtext={{
+            you: 'You',
+            action: 'emailed',
+            to: 'Lea Chan'
+          }}
+          iconSet={emailIcons}
+          fields={[
+            { label: 'From Address', content: 'Jackie Dewar' },
+            {
+              label: 'To Address',
+              content: 'Lea Chan'
+            }
+          ]}
+          bodyLabel="Text Body"
+          isExpanded={handleExpandedSections(3)}
+          isNarrow={props.isNarrow}
+          footerButtons={props.footerButtons}
+        >
+          Hi everyone, Thanks for meeting with the team today and going through
+          the proposals we saw. This goes on and wraps if needed.
+        </TimelineItem>
+      </li>
+      <li>
+        <TimelineItem
+          id={`${eventItemId + '-' + props.id}`}
+          type="event"
+          title="EBC Follow up call"
+          date="10:30am | 3/24/17"
+          subtext={{
+            you: 'You',
+            action: 'created an event with',
+            to: 'Aida Lee',
+            extra: 'and 5 others'
+          }}
+          iconSet={eventIcons}
+          fields={[
+            {
+              label: 'Location',
+              content: 'Westen St. Francis, San Francisco, CA, 94622'
+            },
+            {
+              label: 'Attendees',
+              content: 'Jason Dewar (Organizer) + 5 others'
+            },
+            {
+              label: 'When',
+              content: 'March 26, 10:00 AM - 11:00 AM'
+            }
+          ]}
+          bodyLabel="Description"
+          isExpanded={handleExpandedSections(4)}
+          isNarrow={props.isNarrow}
+          footerButtons={props.footerButtons}
+        >
+          Let's discuss the 2017 product roadmap and address any questions
+        </TimelineItem>
+      </li>
+    </ul>
+  );
+};
+
+export default <ActivityTimeline id="base" isExpanded="false" />;
 
 export let examples = [
   {
@@ -374,7 +382,12 @@ export let examples = [
     label: 'Narrow',
     element: (
       <NarrowContext>
-        <BaseExample id="narrow" isExpanded="true" isNarrow footerButtons />
+        <ActivityTimeline
+          id="narrow"
+          itemsExpanded={[1, 2, 3, 4]}
+          isNarrow
+          footerButtons
+        />
       </NarrowContext>
     )
   }
@@ -384,12 +397,38 @@ export let states = [
   {
     id: 'expanded',
     label: 'Expanded',
-    element: <BaseExample id="expanded" isExpanded="true" footerButtons />
+    element: (
+      <ActivityTimeline
+        id="expanded"
+        itemsExpanded={[1, 2, 3, 4]}
+        footerButtons
+      />
+    )
   },
-
+  {
+    id: 'expanded-single',
+    label: 'Expanded - Single Item',
+    element: (
+      <ActivityTimeline id="expanded" itemsExpanded={[1]} footerButtons />
+    )
+  },
   {
     id: 'error',
     label: 'Error',
-    element: <BaseExample id="error" isExpanded="true" hasError footerButtons />
+    element: (
+      <ActivityTimeline
+        id="error"
+        itemsExpanded={[1, 2, 3, 4]}
+        hasError
+        footerButtons
+      />
+    )
+  },
+  {
+    id: 'error-single',
+    label: 'Error - Single Item',
+    element: (
+      <ActivityTimeline id="error" itemsExpanded={[1]} hasError footerButtons />
+    )
   }
 ];

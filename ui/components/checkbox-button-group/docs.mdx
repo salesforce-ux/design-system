@@ -1,0 +1,24 @@
+import CodeView from '../../../shared/components/CodeView';
+import { getDisplayElementById } from '../../shared/helpers';
+import * as Base from './base/example';
+
+<div className="doc lead">
+  A styled checkable input group that communicates if an option(s) are true, false or indeterminate
+</div>
+
+## Base
+<CodeView>
+  {Base.default}
+</CodeView>
+
+## States
+
+### Has Error
+<CodeView>
+  { getDisplayElementById(Base.states, 'has-error') }
+</CodeView>
+
+### Disabled
+<CodeView>
+  { getDisplayElementById(Base.states, 'disabled') }
+</CodeView>

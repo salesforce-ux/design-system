@@ -32,7 +32,7 @@ export default async () => {
       .updateIn(['module', 'rules'], rules =>
         rules.map(rule =>
           rule.update('use', use =>
-            use.filter(u => u.get('loader') !== 'style-loader')
+            use.filter(u => !RegExp('lwc-style-loader').test(u.get('loader')))
           )
         )
       )

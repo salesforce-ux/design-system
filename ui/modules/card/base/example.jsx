@@ -1,7 +1,6 @@
 import React from 'react';
 import Card from '../';
 import Button from '../../button';
-import ShadowExample from '../../../shared/shadow/example';
 
 const CardExample = () => (
   <Card title="Card Title" href="javascript:void(0);">

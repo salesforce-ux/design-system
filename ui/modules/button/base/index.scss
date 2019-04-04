@@ -43,6 +43,7 @@ $c-sizing-button-border-width: $border-width-thin;
 // Color
 $c-button-color: $brand-accessible;
 $c-button-color-active: $brand-accessible-active;
+$c-button-color-neutral: $brand-accessible;
 
 // Border Radius
 $c-button-border-radius: $border-radius-medium;
@@ -81,7 +82,6 @@ $c-sizing-button-height: $line-height-button;
  */
 .lwc-button_brand {
   @include button-shape;
-  // Assignment: Definition (Component Override, Global Override, Fallback)
   --c-button-color-background: var(--c-button-color-background-brand, $brand-accessible);
   --c-button-border-color: var(--c-button-border-color-brand, $brand-accessible);
   --c-button-color: var(--c-button-color-brand, $color-text-brand-primary);
@@ -304,6 +304,7 @@ $c-sizing-button-height: $line-height-button;
   @include button-shape;
   border-color: $button-color-border-primary;
   --c-button-color-background: var(--c-button-color-background-default, $c-button-color-background-default);
+  --c-button-color: var(--c-button-color-neutral, $c-button-color-neutral);
 
   &:hover,
   &:focus {

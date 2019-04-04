@@ -1,20 +1,30 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
+// ------------
+// Init
+// ------------
 @import '../../../shared/common/init';
-@import '../mixins/index';
 
-:host {
-  // background
-  --c-card-color-background: #fff;
-  // borders
-  --c-card-border-width: 1px;
-  --c-card-border-color: $card-color-border;
-  // box-shadow
-  --c-card-box-shadow: $card-shadow;
-  // radii
-  --c-card-border-radius: 4px;
-}
+// ------------
+// Private
+// ------------
+
+// ------------
+// Public
+// ------------
+
+$c-card-color-background: $color-gray-1;
+$c-card-color-width: $border-width-thin;
+$c-card-color-border: $color-border;
+$c-card-box-shadow: $card-shadow;
+$c-card-border-radius: $border-radius-medium;
+$c-card-text-color: inherit;
+
+// ------------
+// Mixins
+// ------------
+@import '../mixins/index';
 
 /**
  * @summary Initializes card
@@ -27,11 +37,12 @@
 .lwc-card {
   position: relative;
   padding: 0;
-  background: var(--c-card-color-background);
-  border: var(--c-card-border-width) solid var(--c-card-border-color);
-  border-radius: var(--c-card-border-radius);
+  background: var(--c-card-color-background, $c-card-color-background);
+  border: var(--c-card-border-width, $c-card-color-width) solid var(--c-card-border-color, $c-card-color-border);
+  border-radius: var(--c-card-border-radius, $c-card-border-radius);
   background-clip: padding-box;
-  box-shadow: var(--c-card-box-shadow);
+  box-shadow: var(--c-card-box-shadow, $c-card-box-shadow);
+  color: var(--c-card-text-color, $c-card-text-color);
 }
 
 /**

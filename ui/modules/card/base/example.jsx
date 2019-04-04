@@ -109,14 +109,27 @@ export const examples = [
         actions={
           <React.Fragment>
             <Button>New</Button>
-            <Button variant="neutral">New</Button>
+            <Button variant="neutral" use="a">
+              New
+            </Button>
             <Button variant="brand">Edit</Button>
           </React.Fragment>
         }
-        customization={`:host {
-            --c-button-color-background: red;
-            --bullshit: purple;
-          }`}
+        customization={`
+          :host {
+            --c-card-color-background: rebeccapurple;
+            --c-card-color-width: 3px;
+            --c-card-color-border: purple;
+            --c-card-box-shadow: rgba(255, 20, 147, 0.35) 0 2px 5px;
+            --c-card-border-radius: 8px;
+            --c-card-text-color: #fff;
+
+            --c-button-color: currentColor;
+          }
+          :host a {
+            color: currentColor;
+          }
+        `}
       />
     )
   }

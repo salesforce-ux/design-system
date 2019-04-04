@@ -26,12 +26,12 @@ $_c-sizing-icon-boundary-x-small: rem(16px);
 $_c-sizing-icon-boundary-xx-small: rem(12px);
 
 // Colors
-$_c-theme-icon-background-color-default: #54698d;
-$_c-theme-icon-color-on-default: $color-gray-1;
+$_c-icon-background-color-default: #54698d;
+$_c-icon-color-on-default: $color-gray-1;
 
 // Border Radius
-$_c-theme-icon-border-radius-circle: 50%;
-$_c-theme-icon-border-radius-small: rem(2px);
+$_c-icon-border-radius-circle: 50%;
+$_c-icon-border-radius-small: rem(2px);
 
 // Spacing
 $_c-spacing-icon-action-padding: rem(6px);
@@ -47,14 +47,14 @@ $_c-spacing-icon-action-padding-xx-small: rem(2px);
 // ------------
 
 // Colors
-$c-theme-icon-color: $color-gray-9;
-$c-theme-icon-color-success: $color-text-success;
-$c-theme-icon-color-warning: $color-text-warning;
-$c-theme-icon-color-error: $color-text-error;
-$c-theme-icon-color-muted: $color-gray-7;
+$c-icon-color: $color-gray-9;
+$c-icon-color-success: $color-text-success;
+$c-icon-color-warning: $color-text-warning;
+$c-icon-color-error: $color-text-error;
+$c-icon-color-muted: $color-gray-7;
 
 // Border Radius
-$c-theme-icon-border-radius: $border-radius-medium;
+$c-icon-border-radius: $border-radius-medium;
 
 // ------------
 // Mixins
@@ -77,8 +77,8 @@ $c-theme-icon-border-radius: $border-radius-medium;
 .lwc-icon {
   @include icon-base;
   @include square($_c-sizing-icon-x-small);
-  color: var(--c-theme-icon-color, $c-theme-icon-color);
-  border-radius: var(--c-theme-icon-border-radius, $c-theme-icon-border-radius);
+  color: var(--c-icon-color, $c-icon-color);
+  border-radius: var(--c-icon-border-radius, $c-icon-border-radius);
   vertical-align: middle;
 }
 
@@ -95,12 +95,12 @@ $c-theme-icon-border-radius: $border-radius-medium;
 [class*="lwc-icon-action"],
 [class*="lwc-icon-custom"],
 [class*="lwc-icon-standard"] {
-  background: $_c-theme-icon-background-color-default;
-  color: $_c-theme-icon-color-on-default;
+  background: $_c-icon-background-color-default;
+  color: $_c-icon-color-on-default;
 }
 
 [class*="lwc-icon-action"] {
-  border-radius: $_c-theme-icon-border-radius-circle;
+  border-radius: $_c-icon-border-radius-circle;
   padding: $_c-spacing-icon-action-padding;
   vertical-align: bottom;
 }
@@ -171,11 +171,11 @@ $icon-bg-map: map-merge($bg-actions-map, $bg-custom-map);
 .lwc-icon-standard {
 
   &.lwc-icon_x-small {
-    border-radius: $_c-theme-icon-border-radius-small;
+    border-radius: $_c-icon-border-radius-small;
   }
 
   &.lwc-icon_xx-small {
-    border-radius: $_c-theme-icon-border-radius-small;
+    border-radius: $_c-icon-border-radius-small;
   }
 }
 
@@ -261,7 +261,7 @@ $icon-bg-map: map-merge($bg-actions-map, $bg-custom-map);
  * @group color
  */
 .lwc-icon_success {
-  color: var(--c-theme-icon-color-success, $c-theme-icon-color-success);
+  color: var(--c-icon-color-success, $c-icon-color-success);
 }
 
 /**
@@ -272,7 +272,7 @@ $icon-bg-map: map-merge($bg-actions-map, $bg-custom-map);
  * @group color
  */
 .lwc-icon_warning {
-  color: var(--c-theme-icon-color-warning, $c-theme-icon-color-warning);
+  color: var(--c-icon-color-warning, $c-icon-color-warning);
 }
 
 /**
@@ -283,7 +283,7 @@ $icon-bg-map: map-merge($bg-actions-map, $bg-custom-map);
  * @group color
  */
 .lwc-icon_error {
-  color: var(--c-theme-icon-color-error, $c-theme-icon-color-error);
+  color: var(--c-icon-color-error, $c-icon-color-error);
 }
 
 /**
@@ -294,7 +294,7 @@ $icon-bg-map: map-merge($bg-actions-map, $bg-custom-map);
  * @group color
  */
 .lwc-icon_muted {
-  color: var(--c-theme-icon-color-muted, $c-theme-icon-color-muted);
+  color: var(--c-icon-color-muted, $c-icon-color-muted);
 }
 
 // ----------

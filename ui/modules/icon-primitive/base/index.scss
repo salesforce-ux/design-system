@@ -34,5 +34,5 @@
  */
 .lwc-svg {
   @include icon-primitive-base;
-  fill: var(--c-theme-icon-primitive-color, currentColor);
+  fill: var(--c-icon-primitive-color, currentColor);
 }

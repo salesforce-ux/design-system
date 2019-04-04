@@ -11,44 +11,44 @@
 // ------------
 
 // Background Color
-$_c-theme-button-icon-color-background-disabled: $brand-disabled;
+$_c-button-icon-color-background-disabled: $brand-disabled;
 
 // Color
-$_c-theme-button-icon-color-disabled: $color-gray-5;
+$_c-button-icon-color-disabled: $color-gray-5;
 
 // Border Color
-$_c-theme-button-icon-color-border-disabled: $brand-disabled;
+$_c-button-icon-color-border-disabled: $brand-disabled;
 
 // ------------
 // Public
 // ------------
 
 // Background Color
-$c-theme-button-icon-color-background-default: $color-gray-1;
-$c-theme-button-icon-color-background-default-active: $color-gray-1;
-$c-theme-button-icon-color-background-brand: $brand-accessible;
-$c-theme-button-icon-color-background-brand-active: $brand-accessible-active;
+$c-button-icon-color-background-default: $color-gray-1;
+$c-button-icon-color-background-default-active: $color-gray-1;
+$c-button-icon-color-background-brand: $brand-accessible;
+$c-button-icon-color-background-brand-active: $brand-accessible-active;
 
 // Color
-$c-theme-button-icon-color-on-default-active: $brand-accessible-active;
-$c-theme-button-icon-color-on-brand: $color-gray-1;
-$c-theme-button-icon-color-on-brand-active: $color-gray-1;
+$c-button-icon-color-on-default-active: $brand-accessible-active;
+$c-button-icon-color-on-brand: $color-gray-1;
+$c-button-icon-color-on-brand-active: $color-gray-1;
 
 // Box Shadow
-$c-theme-button-icon-shadow: none;
-$c-theme-button-icon-shadow-focus: 0 0 2px $brand-accessible;
+$c-button-icon-shadow: none;
+$c-button-icon-shadow-focus: 0 0 2px $brand-accessible;
 
 // Border Size
 $c-spacing-button-icon-border-width: $border-width-thin;
 
 // Border Color
-$c-theme-button-icon-color-border-brand: $brand-accessible;
-$c-theme-button-icon-color-border-brand-active: $brand-accessible-active;
-$c-theme-button-icon-color-border: $color-border;
-$c-theme-button-icon-color-border-focus: $brand-accessible;
+$c-button-icon-color-border-brand: $brand-accessible;
+$c-button-icon-color-border-brand-active: $brand-accessible-active;
+$c-button-icon-color-border: $color-border;
+$c-button-icon-color-border-focus: $brand-accessible;
 
 // Border Radius
-$c-theme-button-icon-border-radius: $button-border-radius;
+$c-button-icon-border-radius: $button-border-radius;
 
 // ------------
 // Mixins
@@ -76,37 +76,37 @@ $c-theme-button-icon-border-radius: $button-border-radius;
  * @group theme
  */
 .lwc-button-icon_brand {
-  background-color: var(--c-theme-button-icon-color-background-brand, $c-theme-button-icon-color-background-brand);
-  border-color: var(--c-theme-button-icon-color-border-brand, $c-theme-button-icon-color-border-brand);;
+  background-color: var(--c-button-icon-color-background-brand, $c-button-icon-color-background-brand);
+  border-color: var(--c-button-icon-color-border-brand, $c-button-icon-color-border-brand);;
   // Override icon color
-  --c-theme-icon-color: var(--c-theme-button-icon-color-on-brand, $c-theme-button-icon-color-on-brand);
+  --c-icon-color: var(--c-button-icon-color-on-brand, $c-button-icon-color-on-brand);
 
   &:link,
   &:visited,
   &:active {
     // Override icon color
-    --c-theme-icon-color: var(--c-theme-button-icon-color-on-brand, $c-theme-button-icon-color-on-brand);
+    --c-icon-color: var(--c-button-icon-color-on-brand, $c-button-icon-color-on-brand);
   }
 
   &:hover,
   &:focus {
-    background-color: var(--c-theme-button-icon-color-background-brand-active, $c-theme-button-icon-color-background-brand-active);
-    border-color: var(--c-theme-button-icon-color-border-brand-active, $c-theme-button-icon-color-border-brand-active);
+    background-color: var(--c-button-icon-color-background-brand-active, $c-button-icon-color-background-brand-active);
+    border-color: var(--c-button-icon-color-border-brand-active, $c-button-icon-color-border-brand-active);
     // Override icon color
-    --c-theme-icon-color: var(--c-theme-button-icon-color-on-brand-active, $c-theme-button-icon-color-on-brand-active);
+    --c-icon-color: var(--c-button-icon-color-on-brand-active, $c-button-icon-color-on-brand-active);
   }
 
   &:active {
-    background-color: var(--c-theme-button-icon-color-background-brand-active, $c-theme-button-icon-color-background-brand-active);
-    border-color: var(--c-theme-button-icon-color-border-brand-active, $c-theme-button-icon-color-border-brand-active);
+    background-color: var(--c-button-icon-color-background-brand-active, $c-button-icon-color-background-brand-active);
+    border-color: var(--c-button-icon-color-border-brand-active, $c-button-icon-color-border-brand-active);
   }
 
   &[disabled],
   &:disabled {
-    background: $_c-theme-button-icon-color-background-disabled;
-    border-color: $_c-theme-button-icon-color-border-disabled;
+    background: $_c-button-icon-color-background-disabled;
+    border-color: $_c-button-icon-color-border-disabled;
     // Override icon color
-    --c-theme-icon-color: $_c-theme-button-icon-color-disabled;
+    --c-icon-color: $_c-button-icon-color-disabled;
   }
 }
 
@@ -117,7 +117,7 @@ $c-theme-button-icon-border-radius: $button-border-radius;
  * @modifier
  */
 .lwc-button-icon_bordered {
-  border-color: var(--c-theme-button-icon-color-border, $c-theme-button-icon-color-border);
+  border-color: var(--c-button-icon-color-border, $c-button-icon-color-border);
 }
 
 /**
@@ -127,10 +127,10 @@ $c-theme-button-icon-border-radius: $button-border-radius;
  * @modifier
  */
 .lwc-button-icon_background {
-  background-color: var(--c-theme-button-icon-color-background-default, $c-theme-button-icon-color-background-default);
+  background-color: var(--c-button-icon-color-background-default, $c-button-icon-color-background-default);
 
   &:focus,
   &:hover {
-    background-color: var(--c-theme-button-icon-color-background-default-active, $c-theme-button-icon-color-background-default-active);
+    background-color: var(--c-button-icon-color-background-default-active, $c-button-icon-color-background-default-active);
   }
 }

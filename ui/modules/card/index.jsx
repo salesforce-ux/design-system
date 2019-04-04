@@ -118,7 +118,14 @@ class Card extends Component {
   }
 
   render() {
-    const { custom, children, hasBoundary, isBare, shadow } = this.props;
+    const {
+      custom,
+      children,
+      hasBoundary,
+      isBare,
+      shadow,
+      customization
+    } = this.props;
 
     const computedClassNames = classNames(
       'lwc-card',
@@ -130,7 +137,11 @@ class Card extends Component {
     console.log('card:', card);
 
     return (
-      <Shadow name="card" includes={[common, card]} shadow={shadow}>
+      <Shadow
+        name="card"
+        includes={[common, card, customization]}
+        shadow={shadow}
+      >
         <article className={computedClassNames}>
           {!custom
             ? [this.renderHeader(), this.renderBody(), this.renderFooter()]

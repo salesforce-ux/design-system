@@ -11,15 +11,15 @@
 // ------------
 
 // Background Color
-$_c-theme-button-color-background-inverse: transparent;
-$_c-theme-button-color-background-inverse-active: $color-gray-1;
+$_c-button-color-background-inverse: transparent;
+$_c-button-color-background-inverse-active: $color-gray-1;
 
 // Border Color
-$_c-theme-button-color-border-inverse: $color-gray-1;
+$_c-button-color-border-inverse: $color-gray-1;
 
 // Color
-$_c-theme-button-color-disabled: $color-gray-5;
-$_c-theme-button-color-inverse: $color-gray-1;
+$_c-button-color-disabled: $color-gray-5;
+$_c-button-color-inverse: $color-gray-1;
 
 // ------------
 // Public
@@ -41,15 +41,15 @@ $c-button-color-background-success-active: $color-background-success-dark;
 $c-sizing-button-border-width: $border-width-thin;
 
 // Color
-$c-theme-button-color: $brand-accessible;
-$c-theme-button-color-active: $brand-accessible-active;
+$c-button-color: $brand-accessible;
+$c-button-color-active: $brand-accessible-active;
 
 // Border Radius
-$c-theme-button-border-radius: $border-radius-medium;
+$c-button-border-radius: $border-radius-medium;
 
 // Box Shadow
-$c-theme-button-box-shadow: none;
-$c-theme-button-box-shadow-active: 0 0 2px $brand-accessible;
+$c-button-box-shadow: none;
+$c-button-box-shadow-active: 0 0 2px $brand-accessible;
 
 // Height
 $c-sizing-button-height: $line-height-button;
@@ -81,33 +81,34 @@ $c-sizing-button-height: $line-height-button;
  */
 .lwc-button_brand {
   @include button-shape;
-  background-color: var(--c-button-color-background-brand, $c-button-color-background-brand);
-  border-color: $brand-accessible;
-  color: $color-text-brand-primary;
+  // Assignment: Definition (Component Override, Global Override, Fallback)
+  --c-button-color-background: var(--c-button-color-background-brand, $brand-accessible);
+  --c-button-border-color: var(--c-button-border-color-brand, $brand-accessible);
+  --c-button-color: var(--c-button-color-brand, $color-text-brand-primary);
 
   &:link,
   &:visited,
   &:active {
-    color: $color-text-brand-primary;
+    --c-button-color: var(--c-button-color-brand-active, $color-text-brand-primary);
   }
 
   &:hover,
   &:focus {
-    background-color: var(--c-button-color-background-brand-active, $c-button-color-background-brand-active);
-    border-color: $brand-accessible-active;
-    color: $color-text-brand-primary;
+    --c-button-color-background: var(--c-button-color-background-brand-active, $brand-accessible-active);
+    --c-button-border-color: var(--c-button-border-color-brand-active, $brand-accessible-active);
+    --c-button-color-active: var(--c-button-color-brand-active, $color-text-brand-primary);
   }
 
   &:active {
-    background-color: var(--c-button-color-background-brand-active, $c-button-color-background-brand-active);
-    border-color: $brand-accessible-active;
+    --c-button-color-background: var(--c-button-color-background-brand-active, $brand-accessible-active);
+    --c-button-border-color: var(--c-button-border-color-brand-active, $brand-accessible-active);
   }
 
   &[disabled],
   &:disabled {
-    background: $brand-disabled;
-    border-color: $brand-disabled;
-    color: $color-text-button-brand-disabled;
+    --c-button-color-background: var(--c-button-color-background-brand-disabled, $brand-disabled);
+    --c-button-border-color: var(--c-button-border-color-brand-disabled, $brand-disabled);
+    --c-button-color: var(--c-button-color-brand-disabled, $color-text-button-brand-disabled);
   }
 }
 
@@ -221,19 +222,19 @@ $c-sizing-button-height: $line-height-button;
  */
 .lwc-button_inverse {
   @include button-shape;
-  background-color: $_c-theme-button-color-background-inverse;
-  border-color: $_c-theme-button-color-border-inverse;
+  background-color: $_c-button-color-background-inverse;
+  border-color: $_c-button-color-border-inverse;
 
   &,
   &:link,
   &:visited {
-    color: $_c-theme-button-color-inverse;
+    color: $_c-button-color-inverse;
   }
 
   &:hover,
   &:focus,
   &:active {
-    background-color: $_c-theme-button-color-background-inverse-active;
+    background-color: $_c-button-color-background-inverse-active;
     color: $color-text-button-default;
   }
 
@@ -302,7 +303,7 @@ $c-sizing-button-height: $line-height-button;
 .lwc-button_neutral {
   @include button-shape;
   border-color: $button-color-border-primary;
-  background-color: var(--c-button-color-background-default, $c-button-color-background-default);
+  --c-button-color-background: var(--c-button-color-background-default, $c-button-color-background-default);
 
   &:hover,
   &:focus {
@@ -343,7 +344,7 @@ $c-sizing-button-height: $line-height-button;
   display: inline-flex;
   align-self: center;
   margin-right: $spacing-x-small;
-  --c-theme-icon-color: currentColor;
+  --c-icon-color: currentColor;
 }
 
 /**
@@ -356,5 +357,5 @@ $c-sizing-button-height: $line-height-button;
   display: inline-flex;
   align-self: center;
   margin-left: $spacing-x-small;
-  --c-theme-icon-color: currentColor;
+  --c-icon-color: currentColor;
 }

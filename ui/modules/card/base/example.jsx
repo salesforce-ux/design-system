@@ -98,6 +98,27 @@ export const examples = [
         </Card>
       </Card>
     )
+  },
+  {
+    id: 'card-customization',
+    label: 'Card Customization',
+    element: (
+      <Card
+        title="Card Title"
+        hasActions
+        actions={
+          <React.Fragment>
+            <Button>New</Button>
+            <Button variant="neutral">New</Button>
+            <Button variant="brand">Edit</Button>
+          </React.Fragment>
+        }
+        customization={`:host {
+            --c-button-color-background: red;
+            --bullshit: purple;
+          }`}
+      />
+    )
   }
 ];
 

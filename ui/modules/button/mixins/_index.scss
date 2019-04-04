@@ -19,13 +19,14 @@
 }
 
 @mixin button-normalize {
-  border-radius: var(--c-theme-button-border-radius, $c-theme-button-border-radius);
+  background-color: var(--c-button-color-background, transparent);
+  border-radius: var(--c-button-border-radius, $c-button-border-radius);
   border: var(--c-sizing-button-border-width, $c-sizing-button-border-width) solid transparent;
-  color: var(--c-theme-button-color, $c-theme-button-color);
+  color: var(--c-button-color, var(--lwc-brand-accessible, $brand-accessible));
   line-height: var(--c-sizing-button-height, $c-sizing-button-height);
   text-align: center;
   vertical-align: middle;
-  box-shadow: var(--c-theme-button-box-shadow, $c-theme-button-box-shadow);
+  box-shadow: var(--c-button-box-shadow, $c-button-box-shadow);
 
   &:hover,
   &:focus,
@@ -36,21 +37,21 @@
 
   &:hover,
   &:focus {
-    color: var(--c-theme-button-color-active, $c-theme-button-color-active);
+    color: var(--c-button-color-active, $c-button-color-active);
   }
 
   &:focus {
     outline: 0;
-    box-shadow: var(--c-theme-button-box-shadow-active, $c-theme-button-box-shadow-active);
+    box-shadow: var(--c-button-box-shadow-active, $c-button-box-shadow-active);
   }
 
   &:active {
-    color: var(--c-theme-button-color-active, $c-theme-button-color-active);
+    color: var(--c-button-color-active, $c-button-color-active);
   }
 
   &[disabled],
   &:disabled {
-    color: $_c-theme-button-color-disabled;
+    color: $_c-button-color-disabled;
     cursor: default;
 
     * {

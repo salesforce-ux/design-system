@@ -1,0 +1,243 @@
+import CodeView from '../../../shared/components/CodeView';
+import CodeBlock from '../../../shared/components/CodeBlock';
+import Blockquote from '../../../shared/components/Blockquote';
+import { getDisplayElementById } from '../../shared/helpers';
+import * as SimpleTableExamples from './base/example';
+import * as AdvancedTableExamples from './advanced/example';
+import * as InlineEditTableExamples from './inline-edit/example';
+
+<div className="lead">
+Data tables are an enhanced version of an HTML table and are used to display tabular data.
+</div>
+
+## About Data Tables
+
+To initialize a data table, apply the `slds-table` class to the `table` element. This class creates a `table` with formatted cells and allows you to use data table utilities.
+
+<Blockquote type="a11y" header="Accessibility">
+To create an accessible table, the top row of column headers (<code className="doc">th</code>) are placed in a <code className="doc">thead</code>. Each one receives the <code className="doc">scope="col"</code> attribute. The first non-actionable (meaning that doesn't contain a checkbox or menu) column in each row should be marked as a th with a <code className="doc">scope="row"</code> attribute.
+</Blockquote>
+
+## Base table
+
+<CodeView>
+  {SimpleTableExamples.default}
+</CodeView>
+
+### Striped rows
+
+<CodeView>
+  {getDisplayElementById(SimpleTableExamples.examples, 'data-table-striped-rows')}
+</CodeView>
+
+### Columns dividers
+
+<CodeView>
+  {getDisplayElementById(SimpleTableExamples.examples, 'data-table-vertical-borders')}
+</CodeView>
+
+### Rows with no hover
+
+<CodeView>
+  {getDisplayElementById(SimpleTableExamples.examples, 'data-table-no-hover')}
+</CodeView>
+
+### Single Column table
+
+<CodeView>
+  {getDisplayElementById(SimpleTableExamples.examples, 'single-column')}
+</CodeView>
+
+### Headless
+
+<CodeView>
+  {getDisplayElementById(SimpleTableExamples.examples, 'headless')}
+</CodeView>
+
+#### With no borders
+
+<CodeView>
+  {getDisplayElementById(SimpleTableExamples.examples, 'headless-no-borders')}
+</CodeView>
+
+## Actionable mode - Column sorting and row selection(s)
+
+<CodeView style={{overflow:'hidden'}}>
+  {getDisplayElementById(AdvancedTableExamples.states, 'actionable-mode')}
+</CodeView>
+
+### Single row selection
+
+<CodeView style={{overflow:'hidden'}}>
+  {getDisplayElementById(AdvancedTableExamples.examples, 'radio-group')}
+</CodeView>
+
+### Navigation mode - Cell focused
+
+<CodeView style={{overflow:'hidden'}}>
+  {getDisplayElementById(AdvancedTableExamples.states, 'cell-focused')}
+</CodeView>
+
+### Row Selection
+
+#### Single row selected
+
+<CodeView style={{overflow:'hidden'}}>
+  {getDisplayElementById(AdvancedTableExamples.states, 'row-selected')}
+</CodeView>
+
+#### All rows selected
+
+<CodeView style={{overflow:'hidden'}}>
+  {getDisplayElementById(AdvancedTableExamples.states, 'all-row-selected')}
+</CodeView>
+
+### Column sorting
+
+#### Sorted Ascending
+
+<CodeView style={{overflow:'hidden'}}>
+  {getDisplayElementById(AdvancedTableExamples.states, 'sorted-column-asc')}
+</CodeView>
+
+#### Sorted Descending
+
+<CodeView style={{overflow:'hidden'}}>
+  {getDisplayElementById(AdvancedTableExamples.states, 'sorted-column-desc')}
+</CodeView>
+
+### Column resizing
+
+<CodeView style={{overflow:'hidden'}}>
+  {getDisplayElementById(AdvancedTableExamples.states, 'resized-column')}
+</CodeView>
+
+### Column headers with overflow actions button menu
+
+<CodeView style={{overflow:'hidden'}}>
+  {getDisplayElementById(AdvancedTableExamples.examples, 'header-menu-button')}
+</CodeView>
+
+### Column with icons
+
+<CodeView style={{overflow:'hidden'}}>
+  {getDisplayElementById(AdvancedTableExamples.examples, 'header-icon-menu-button')}
+</CodeView>
+
+### Cell with icons
+
+<CodeView style={{overflow:'hidden'}}>
+  {getDisplayElementById(AdvancedTableExamples.examples, 'cell-icon')}
+</CodeView>
+
+## Inline Edit
+
+### Accessibility
+
+The Advanced Data Table and Inline Edit Data Table are based on the semantics, roles and interaction model of the ARIA Grid. In SLDS we overlay the [ARIA Grid](http://w3c.github.io/aria/practices/aria-practices.html#grid) on top of native HTML table semantics.
+
+The role of Grid comes with 2 distinct modes, Navigation mode and Actionable mode. Both come with very specific keyboard interaction modals. Navigation mode is the default mode of the Grid.
+
+**Navigation Mode**
+
+- Tabbing into the grid focuses the first data cell in the table.
+- The second tab key press takes the user focus out of the grid onto the next focusable element on the page.
+- Once the user has tabbed out of the grid, tabbing back into the grid will return focus to the last cell the user was focused on.
+- Navigation in the grid is accomplished via the arrow keys.
+- No actionable items in cell contents are focusable.
+- Pressing the Enter key on a chosen grid cell, places the entire Grid into Actionable mode.
+
+**Actionable Mode**
+
+- Once in Actionable mode, all focusable items in the entire grid can be tabbed to.
+- Arrow navigation still takes the user cell to cell in any direction, but focuses on the first actionable item in the cell, if there is one.
+- Pressing the Escape key exits Actionable mode, placing the user back into Navigation mode, keeping the users cursor on the same cell they were focused in.
+- When interacting with a component in a cell, such as a Menu, that also uses the Escape key as an exit action, pressing Escape will take the user back to the triggering element in the current cell. A subsequent press of Escape will return the user to Navigation mode.
+
+For the purposes of these docs, the Default state of Inline Edit is representative of Navigation mode, all other states are assumed to be in Actionable Mode.
+
+<CodeView style={{overflow:'hidden'}}>
+  {InlineEditTableExamples.default}
+</CodeView>
+
+### Keyboard navigation
+
+#### 1st cell highlighted (checkbox)
+
+<CodeView style={{overflow:'hidden'}}>
+  {getDisplayElementById(InlineEditTableExamples.states, 'checkbox')}
+</CodeView>
+
+#### 2nd cell highlighted
+
+<CodeView style={{overflow:'hidden'}}>
+  {getDisplayElementById(InlineEditTableExamples.states, 'with-link')}
+</CodeView>
+
+#### 3rd cell highlighted
+
+<CodeView style={{overflow:'hidden'}}>
+  {getDisplayElementById(InlineEditTableExamples.states, 'focused')}
+</CodeView>
+
+### Cell Edit
+
+<CodeView style={{overflow:'hidden'}}>
+  {getDisplayElementById(InlineEditTableExamples.states, 'edit')}
+</CodeView>
+
+#### Required form element
+
+<CodeView style={{overflow:'hidden'}}>
+  {getDisplayElementById(InlineEditTableExamples.states, 'required')}
+</CodeView>
+
+#### Required form element with error
+
+<CodeView style={{overflow:'hidden'}}>
+  {getDisplayElementById(InlineEditTableExamples.states, 'error')}
+</CodeView>
+
+#### Edited cell (unsaved)
+
+<CodeView style={{overflow:'hidden'}}>
+  {getDisplayElementById(InlineEditTableExamples.states, 'edited')}
+</CodeView>
+
+#### Edited cell with row selected (unsaved)
+
+<CodeView style={{overflow:'hidden'}}>
+  {getDisplayElementById(InlineEditTableExamples.states, 'row-selected-with-edited-cell')}
+</CodeView>
+
+#### Edited cell with row level error (unsaved)
+
+<CodeView style={{overflow:'hidden'}}>
+  {getDisplayElementById(InlineEditTableExamples.states, 'row-error')}
+</CodeView>
+
+#### Edited cell with focused row level error  (unsaved)
+
+<CodeView style={{overflow:'hidden'}}>
+  {getDisplayElementById(InlineEditTableExamples.states, 'row-error-focused')}
+</CodeView>
+
+#### Edited cell with row selected and row level error (unsaved)
+
+<CodeView style={{overflow:'hidden'}}>
+  {getDisplayElementById(InlineEditTableExamples.states, 'row-error-and-selected')}
+</CodeView>
+
+### Header navigation
+
+#### Header cell focused
+
+<CodeView style={{overflow:'hidden'}}>
+  {getDisplayElementById(InlineEditTableExamples.states, 'header-cell-focused')}
+</CodeView>
+
+#### Header cell marked
+
+<CodeView style={{overflow:'hidden'}}>
+  {getDisplayElementById(InlineEditTableExamples.states, 'header-cell-marked')}
+</CodeView>

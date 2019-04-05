@@ -95,7 +95,7 @@ export default (
   </Table>
 );
 
-export let states = [
+export let examples = [
   {
     id: 'data-table-striped-rows',
     label: 'With striped rows',
@@ -171,6 +171,54 @@ export let states = [
               />
             </Td>
           </TBodyTr>
+        </TBody>
+      </Table>
+    )
+  },
+  {
+    id: 'no-borders',
+    label: 'No borders',
+    element: (
+      <Table isStriped hasCellBuffer type="base">
+        <THead>
+          <HeadRowData />
+        </THead>
+        <TBody>
+          <RowData title="Cloudhub" />
+          <RowData title="Cloudhub + Anypoint Connectors" />
+          <RowData title="Cloudhub" />
+        </TBody>
+      </Table>
+    )
+  },
+  {
+    id: 'headless',
+    label: 'Headless',
+    element: (
+      <Table hasHiddenHeader isBordered hasCellBuffer type="base">
+        <THead isHidden>
+          <HeadRowData />
+        </THead>
+        <TBody>
+          <RowData title="Cloudhub" />
+          <RowData title="Cloudhub + Anypoint Connectors" />
+          <RowData title="Cloudhub" />
+        </TBody>
+      </Table>
+    )
+  },
+  {
+    id: 'headless-no-borders',
+    label: 'Headless with no borders',
+    element: (
+      <Table hasHiddenHeader hasCellBuffer type="base">
+        <THead isHidden>
+          <HeadRowData />
+        </THead>
+        <TBody>
+          <RowData title="Cloudhub" />
+          <RowData title="Cloudhub + Anypoint Connectors" />
+          <RowData title="Cloudhub" />
         </TBody>
       </Table>
     )

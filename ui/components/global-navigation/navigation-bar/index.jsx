@@ -2,12 +2,12 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import SvgIcon from '../../../shared/svg-icon';
 import { Menu, MenuList, MenuItem } from '../../menus/dropdown/example';
 import ButtonIcon from '../../button-icons/';
 import { WaffleIcon } from '../../dynamic-icons/waffle/example';
-import _ from '../../../shared/helpers';
 
 // Context Item Dropdown
 const contextDropdown = (
@@ -34,87 +34,115 @@ const contextDropdown = (
   </Menu>
 );
 
-export let ContextBar = props => (
-  <div className={classNames('slds-context-bar', props.className)}>
-    <div className="slds-context-bar__primary">
-      <div className="slds-context-bar__item slds-context-bar__dropdown-trigger slds-dropdown-trigger slds-dropdown-trigger_click slds-no-hover">
-        <div className="slds-context-bar__icon-action">
-          <WaffleIcon className="slds-context-bar__button" />
-        </div>
-        <span className="slds-context-bar__label-action slds-context-bar__app-name">
-          <span className="slds-truncate" title={props.appName || 'App Name'}>
-            {props.appName || 'App Name'}
-          </span>
+export const NavBarItem = props => {
+  const {
+    label,
+    isActive,
+    hasNavMenu,
+    hasNavMenuOpen,
+    hasMenuDropdown
+  } = props;
+  const computedClassNames = classNames('slds-context-bar__item', {
+    'slds-is-active': isActive,
+    'slds-context-bar__dropdown-trigger slds-dropdown-trigger slds-dropdown-trigger_click': hasNavMenu,
+    'slds-is-open': hasNavMenuOpen
+  });
+  return (
+    <li className={computedClassNames}>
+      <a
+        href="javascript:void(0);"
+        className="slds-context-bar__label-action"
+        title={label}
+      >
+        {isActive && <span className="slds-assistive-text">Current Page:</span>}
+        <span className="slds-truncate" title={label}>
+          {label}
         </span>
-      </div>
+      </a>
+      {hasNavMenu && (
+        <React.Fragment>
+          <OverflowMenuButton onClick={props.onClick} />
+          {hasMenuDropdown && contextDropdown}
+        </React.Fragment>
+      )}
+    </li>
+  );
+};
+
+NavBarItem.defaultProps = {
+  lable: 'Menu Item',
+  hasMenuDropdown: true
+};
+
+NavBarItem.propTypes = {
+  label: PropTypes.string.isRequired,
+  isActive: PropTypes.bool,
+  hasNavMenu: PropTypes.bool,
+  hasNavMenuOpen: PropTypes.bool,
+  hasMenuDropdown: PropTypes.bool
+};
+
+const OverflowMenuButton = props => {
+  return (
+    <div className="slds-context-bar__icon-action slds-p-left_none">
+      <ButtonIcon
+        className="slds-button_icon slds-context-bar__button"
+        symbol="chevrondown"
+        aria-haspopup="true"
+        assistiveText="Open menu item submenu"
+        title="Open menu item submenu"
+        {...props}
+      />
     </div>
-    <nav className="slds-context-bar__secondary" role="navigation">
-      <ul className="slds-grid">
-        <li
-          className={classNames(
-            'slds-context-bar__item',
-            props.itemActive && 'slds-is-active'
-          )}
-        >
-          <a
-            href="javascript:void(0);"
-            className="slds-context-bar__label-action"
-            title="Home"
-          >
-            {props.itemActive && (
-              <span className="slds-assistive-text">Current Page:</span>
-            )}
-            <span className="slds-truncate" title="Home">
-              Home
-            </span>
-          </a>
-        </li>
-        <li
-          className={classNames(
-            'slds-context-bar__item slds-context-bar__dropdown-trigger slds-dropdown-trigger slds-dropdown-trigger_click',
-            props.hasNavMenuOpen && 'slds-is-open'
-          )}
-        >
-          <a
-            href="javascript:void(0);"
-            className="slds-context-bar__label-action"
-            title="Menu Item"
-          >
-            <span className="slds-truncate" title="Menu Item">
-              Menu Item
-            </span>
-          </a>
-          <div className="slds-context-bar__icon-action slds-p-left_none">
-            <ButtonIcon
-              className="slds-button_icon slds-context-bar__button"
-              symbol="chevrondown"
-              aria-haspopup="true"
-              assistiveText="Open menu item submenu"
-              title="Open menu item submenu"
-              onClick={() => props.isInteractive && props.toggleNavMenu()}
-            />
+  );
+};
+
+export let ContextBar = props => {
+  const { appName, homeItemIsActive, hasNavMenuOpen, children } = props;
+  return (
+    <div className="slds-context-bar">
+      <div className="slds-context-bar__primary">
+        <div className="slds-context-bar__item slds-context-bar__dropdown-trigger slds-dropdown-trigger slds-dropdown-trigger_click slds-no-hover">
+          <div className="slds-context-bar__icon-action">
+            <WaffleIcon className="slds-context-bar__button" />
           </div>
-          {!props.hideDropdown ? contextDropdown : null}
-        </li>
-        {!props.children
-          ? _.times(3, i => (
-              <li className="slds-context-bar__item" key={i}>
-                <a
-                  href="javascript:void(0);"
-                  className="slds-context-bar__label-action"
-                  title="Menu Item"
-                >
-                  <span className="slds-truncate" title="Menu Item">
-                    Menu Item
-                  </span>
-                </a>
-              </li>
-            ))
-          : props.children}
-      </ul>
-    </nav>
-  </div>
-);
+          <span className="slds-context-bar__label-action slds-context-bar__app-name">
+            <span className="slds-truncate" title={appName || 'App Name'}>
+              {appName || 'App Name'}
+            </span>
+          </span>
+        </div>
+      </div>
+      <nav className="slds-context-bar__secondary" role="navigation">
+        <ul className="slds-grid">
+          <NavBarItem label="Home" isActive={homeItemIsActive} />
+          {!children ? (
+            <React.Fragment>
+              <NavBarItem
+                label="Menu Item"
+                hasNavMenu
+                hasNavMenuOpen={hasNavMenuOpen}
+                onClick={() => props.toggleNavMenu()}
+              />
+              <NavBarItem label="Menu Item" />
+              <NavBarItem label="Menu Item" />
+              <NavBarItem label="Menu Item" />
+            </React.Fragment>
+          ) : (
+            children
+          )}
+        </ul>
+      </nav>
+    </div>
+  );
+};
+
+ContextBar.propTypes = {
+  appName: PropTypes.string,
+  homeItemIsActive: PropTypes.bool,
+  hasNavMenuOpen: PropTypes.bool,
+  children: PropTypes.node
+};
 
 class GlobalNavigation extends Component {
   constructor() {
@@ -135,10 +163,9 @@ class GlobalNavigation extends Component {
   render() {
     return (
       <ContextBar
-        itemActive
+        homeItemIsActive
         toggleNavMenu={this.toggleNavMenu}
         hasNavMenuOpen={this.props.hasNavMenuOpen || this.state.hasNavMenuOpen}
-        isInteractive
       />
     );
   }

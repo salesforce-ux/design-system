@@ -399,7 +399,7 @@ export const Context = props => (
 );
 
 export default (
-  <div className="demo-only">
+  <React.Fragment>
     <ContextTabBar>
       <ContextTab
         title="Home"
@@ -419,7 +419,7 @@ export default (
     <ContextTabPanel id={tabPanelId03} tabId={tabId03}>
       Tab Two Content
     </ContextTabPanel>
-  </div>
+  </React.Fragment>
 );
 
 export let states = [
@@ -427,7 +427,7 @@ export let states = [
     id: 'tab-active',
     label: 'Tab - Active',
     element: (
-      <div className="demo-only">
+      <React.Fragment>
         <ContextTabBar>
           <ContextTab
             title="Home"
@@ -456,14 +456,14 @@ export let states = [
         <ContextTabPanel id={tabPanelId03} tabId={tabId03}>
           Tab Two Content
         </ContextTabPanel>
-      </div>
+      </React.Fragment>
     )
   },
   {
     id: 'tab-active-focus',
     label: 'Tab - Active Focus',
     element: (
-      <div className="demo-only">
+      <React.Fragment>
         <ContextTabBar>
           <ContextTab
             title="Home"
@@ -493,7 +493,7 @@ export let states = [
         <ContextTabPanel id={tabPanelId03} tabId={tabId03}>
           Tab Two Content
         </ContextTabPanel>
-      </div>
+      </React.Fragment>
     )
   },
   {
@@ -537,7 +537,7 @@ export let states = [
     id: 'unsaved-tab',
     label: 'Unsaved Tab',
     element: (
-      <div className="demo-only">
+      <React.Fragment>
         <ContextTabBar>
           <ContextTab
             title="Home"
@@ -567,14 +567,14 @@ export let states = [
         <ContextTabPanel id={tabPanelId03} tabId={tabId03}>
           Tab Two Content
         </ContextTabPanel>
-      </div>
+      </React.Fragment>
     )
   },
   {
     id: 'unread-tab',
     label: 'Unread Tab',
     element: (
-      <div className="demo-only">
+      <React.Fragment>
         <span aria-live="polite" className="slds-assistive-text">
           New activity in Tab: Chat - Customer
         </span>
@@ -608,14 +608,14 @@ export let states = [
         <ContextTabPanel id={tabPanelId03} tabId={tabId03}>
           Chat - Customer Content
         </ContextTabPanel>
-      </div>
+      </React.Fragment>
     )
   },
   {
     id: 'unread-unsaved-tab',
     label: 'Unread/Unsaved Tab',
     element: (
-      <div className="demo-only">
+      <React.Fragment>
         <span aria-live="polite" className="slds-assistive-text">
           New activity in Tab: Chat - Customer
         </span>
@@ -650,14 +650,14 @@ export let states = [
         <ContextTabPanel id={tabPanelId03} tabId={tabId03}>
           Chat - Customer Content
         </ContextTabPanel>
-      </div>
+      </React.Fragment>
     )
   },
   {
     id: 'tab-success',
     label: 'Tab - Success',
     element: (
-      <div className="demo-only">
+      <React.Fragment>
         <span aria-live="polite" className="slds-assistive-text">
           Success: SLA agreement warning cleared in tab: Chat - Customer
         </span>
@@ -691,14 +691,14 @@ export let states = [
         <ContextTabPanel id={tabPanelId03} tabId={tabId03}>
           Chat - Customer Content
         </ContextTabPanel>
-      </div>
+      </React.Fragment>
     )
   },
   {
     id: 'tab-success-active',
     label: 'Tab - Success Active',
     element: (
-      <div className="demo-only">
+      <React.Fragment>
         <span aria-live="polite" className="slds-assistive-text">
           Success: SLA agreement warning cleared in tab: Chat - Customer
         </span>
@@ -732,14 +732,14 @@ export let states = [
         <ContextTabPanel id={tabPanelId03} show tabId={tabId03}>
           Chat - Customer Content
         </ContextTabPanel>
-      </div>
+      </React.Fragment>
     )
   },
   {
     id: 'tab-success-focus',
     label: 'Tab - Success Focused',
     element: (
-      <div className="demo-only">
+      <React.Fragment>
         <span aria-live="polite" className="slds-assistive-text">
           Success: SLA agreement warning cleared in tab: Chat - Customer
         </span>
@@ -774,14 +774,14 @@ export let states = [
         <ContextTabPanel id={tabPanelId03} show tabId={tabId03}>
           Chat - Customer Content
         </ContextTabPanel>
-      </div>
+      </React.Fragment>
     )
   },
   {
     id: 'tab-success-unread',
     label: 'Tab - Success Unread',
     element: (
-      <div className="demo-only">
+      <React.Fragment>
         <span aria-live="polite" className="slds-assistive-text">
           Success: SLA agreement warning cleared in tab: Chat - Customer
         </span>
@@ -816,14 +816,14 @@ export let states = [
         <ContextTabPanel id={tabPanelId03} tabId={tabId03}>
           Chat - Customer Content
         </ContextTabPanel>
-      </div>
+      </React.Fragment>
     )
   },
   {
     id: 'tab-success-unsaved',
     label: 'Tab - Success Unsaved',
     element: (
-      <div className="demo-only">
+      <React.Fragment>
         <span aria-live="polite" className="slds-assistive-text">
           Success: SLA agreement warning cleared in tab: Chat - Customer
         </span>
@@ -858,14 +858,14 @@ export let states = [
         <ContextTabPanel id={tabPanelId03} tabId={tabId03}>
           Chat - Customer Content
         </ContextTabPanel>
-      </div>
+      </React.Fragment>
     )
   },
   {
     id: 'tab-success-unread-unsaved',
     label: 'Tab - Success Unread and Unsaved',
     element: (
-      <div className="demo-only">
+      <React.Fragment>
         <span aria-live="polite" className="slds-assistive-text">
           Success: SLA agreement warning cleared in tab: Chat - Customer
         </span>
@@ -901,14 +901,14 @@ export let states = [
         <ContextTabPanel id={tabPanelId03} tabId={tabId03}>
           Chat - Customer Content
         </ContextTabPanel>
-      </div>
+      </React.Fragment>
     )
   },
   {
     id: 'tab-warning',
     label: 'Tab - Warning',
     element: (
-      <div className="demo-only">
+      <React.Fragment>
         <span aria-live="polite" className="slds-assistive-text">
           Warning: SLA agreement in 30 seconds in tab: Chat - Customer
         </span>
@@ -942,14 +942,14 @@ export let states = [
         <ContextTabPanel id={tabPanelId03} tabId={tabId03}>
           Chat - Customer Content
         </ContextTabPanel>
-      </div>
+      </React.Fragment>
     )
   },
   {
     id: 'tab-warning-active',
     label: 'Tab - Warning Active',
     element: (
-      <div className="demo-only">
+      <React.Fragment>
         <span aria-live="polite" className="slds-assistive-text">
           Warning: SLA agreement in 30 seconds in tab: Chat - Customer
         </span>
@@ -983,14 +983,14 @@ export let states = [
         <ContextTabPanel id={tabPanelId03} show tabId={tabId03}>
           Chat - Customer Content
         </ContextTabPanel>
-      </div>
+      </React.Fragment>
     )
   },
   {
     id: 'tab-warning-focus',
     label: 'Tab - Warning focused',
     element: (
-      <div className="demo-only">
+      <React.Fragment>
         <span aria-live="polite" className="slds-assistive-text">
           Warning: SLA agreement in 30 seconds in tab: Chat - Customer
         </span>
@@ -1025,14 +1025,14 @@ export let states = [
         <ContextTabPanel id={tabPanelId03} tabId={tabId03}>
           Chat - Customer Content
         </ContextTabPanel>
-      </div>
+      </React.Fragment>
     )
   },
   {
     id: 'tab-warning-unread',
     label: 'Tab - Warning Unread',
     element: (
-      <div className="demo-only">
+      <React.Fragment>
         <span aria-live="polite" className="slds-assistive-text">
           Warning: SLA agreement in 30 seconds in tab: Chat - Customer
         </span>
@@ -1067,14 +1067,14 @@ export let states = [
         <ContextTabPanel id={tabPanelId03} tabId={tabId03}>
           Chat - Customer Content
         </ContextTabPanel>
-      </div>
+      </React.Fragment>
     )
   },
   {
     id: 'tab-warning-unsaved',
     label: 'Tab - Warning Unsaved',
     element: (
-      <div className="demo-only">
+      <React.Fragment>
         <span aria-live="polite" className="slds-assistive-text">
           Warning: SLA agreement in 30 seconds in tab: Chat - Customer
         </span>
@@ -1109,14 +1109,14 @@ export let states = [
         <ContextTabPanel id={tabPanelId03} tabId={tabId03}>
           Chat - Customer Content
         </ContextTabPanel>
-      </div>
+      </React.Fragment>
     )
   },
   {
     id: 'tab-warning-unread-unsaved',
     label: 'Tab - Warning Unread and Unsaved',
     element: (
-      <div className="demo-only">
+      <React.Fragment>
         <span aria-live="polite" className="slds-assistive-text">
           Warning: SLA agreement in 30 seconds in tab: Chat - Customer
         </span>
@@ -1152,14 +1152,14 @@ export let states = [
         <ContextTabPanel id={tabPanelId03} tabId={tabId03}>
           Chat - Customer Content
         </ContextTabPanel>
-      </div>
+      </React.Fragment>
     )
   },
   {
     id: 'tab-error',
     label: 'Tab - Error',
     element: (
-      <div className="demo-only">
+      <React.Fragment>
         <span aria-live="polite" className="slds-assistive-text">
           Violation: SLA agreement in tab: Chat - Customer
         </span>
@@ -1193,14 +1193,14 @@ export let states = [
         <ContextTabPanel id={tabPanelId03} tabId={tabId03}>
           Chat - Customer Content
         </ContextTabPanel>
-      </div>
+      </React.Fragment>
     )
   },
   {
     id: 'tab-error-active',
     label: 'Tab - Error Active',
     element: (
-      <div className="demo-only">
+      <React.Fragment>
         <span aria-live="polite" className="slds-assistive-text">
           Violation: SLA agreement in tab: Chat - Customer
         </span>
@@ -1234,14 +1234,14 @@ export let states = [
         <ContextTabPanel id={tabPanelId03} show tabId={tabId03}>
           Chat - Customer Content
         </ContextTabPanel>
-      </div>
+      </React.Fragment>
     )
   },
   {
     id: 'tab-error-focused',
     label: 'Tab - Error focused',
     element: (
-      <div className="demo-only">
+      <React.Fragment>
         <span aria-live="polite" className="slds-assistive-text">
           Violation: SLA agreement in tab: Chat - Customer
         </span>
@@ -1276,14 +1276,14 @@ export let states = [
         <ContextTabPanel id={tabPanelId03} show tabId={tabId03}>
           Chat - Customer Content
         </ContextTabPanel>
-      </div>
+      </React.Fragment>
     )
   },
   {
     id: 'tab-error-unread',
     label: 'Tab - Error Unread',
     element: (
-      <div className="demo-only">
+      <React.Fragment>
         <span aria-live="polite" className="slds-assistive-text">
           Violation: SLA agreement in tab: Chat - Customer
         </span>
@@ -1318,14 +1318,14 @@ export let states = [
         <ContextTabPanel id={tabPanelId03} tabId={tabId03}>
           Chat - Customer Content
         </ContextTabPanel>
-      </div>
+      </React.Fragment>
     )
   },
   {
-    id: 'tab-error-unsave',
+    id: 'tab-error-unsaved',
     label: 'Tab - Error Unsaved',
     element: (
-      <div className="demo-only">
+      <React.Fragment>
         <span aria-live="polite" className="slds-assistive-text">
           Violation: SLA agreement in tab: Chat - Customer
         </span>
@@ -1360,14 +1360,14 @@ export let states = [
         <ContextTabPanel id={tabPanelId03} tabId={tabId03}>
           Chat - Customer Content
         </ContextTabPanel>
-      </div>
+      </React.Fragment>
     )
   },
   {
     id: 'tab-error-unread-unsaved',
     label: 'Tab - Error Unread and Unsaved',
     element: (
-      <div className="demo-only">
+      <React.Fragment>
         <span aria-live="polite" className="slds-assistive-text">
           Violation: SLA agreement in tab: Chat - Customer
         </span>
@@ -1403,14 +1403,14 @@ export let states = [
         <ContextTabPanel id={tabPanelId03} tabId={tabId03}>
           Chat - Customer Content
         </ContextTabPanel>
-      </div>
+      </React.Fragment>
     )
   },
   {
     id: 'pinned-tab',
     label: 'Pinned Tab',
     element: (
-      <div className="demo-only">
+      <React.Fragment>
         <ContextTabBar>
           <ContextTab
             title="Home"
@@ -1440,14 +1440,14 @@ export let states = [
         <ContextTabPanel id={tabPanelId03} tabId={tabId03}>
           Tab Two Content
         </ContextTabPanel>
-      </div>
+      </React.Fragment>
     )
   },
   {
     id: 'pinned-tab-active',
     label: 'Pinned Tab - Active',
     element: (
-      <div className="demo-only">
+      <React.Fragment>
         <ContextTabBar>
           <ContextTab
             title="Home"
@@ -1477,14 +1477,14 @@ export let states = [
         <ContextTabPanel id={tabPanelId03} tabId={tabId03}>
           Tab Two Content
         </ContextTabPanel>
-      </div>
+      </React.Fragment>
     )
   },
   {
     id: 'pinned-tab-active-focus',
     label: 'Pinned Tab - Active Focus',
     element: (
-      <div className="demo-only">
+      <React.Fragment>
         <ContextTabBar>
           <ContextTab
             title="Home"
@@ -1515,14 +1515,14 @@ export let states = [
         <ContextTabPanel id={tabPanelId03} tabId={tabId03}>
           Tab Two Content
         </ContextTabPanel>
-      </div>
+      </React.Fragment>
     )
   },
   {
     id: 'unsaved-pinned-tab',
     label: 'Unsaved Pinned Tab',
     element: (
-      <div className="demo-only">
+      <React.Fragment>
         <ContextTabBar>
           <ContextTab
             title="Home"
@@ -1553,14 +1553,14 @@ export let states = [
         <ContextTabPanel id={tabPanelId03} tabId={tabId03}>
           Tab Two Content
         </ContextTabPanel>
-      </div>
+      </React.Fragment>
     )
   },
   {
     id: 'unread-pinned-tab',
     label: 'Unread Pinned Tab',
     element: (
-      <div className="demo-only">
+      <React.Fragment>
         <span aria-live="polite" className="slds-assistive-text">
           New activity in Tab: Chat - Customer
         </span>
@@ -1594,14 +1594,14 @@ export let states = [
         <ContextTabPanel id={tabPanelId03} tabId={tabId03}>
           Tab Two Content
         </ContextTabPanel>
-      </div>
+      </React.Fragment>
     )
   },
   {
     id: 'pinned-tab-success',
     label: 'Pinned Success Tab',
     element: (
-      <div className="demo-only">
+      <React.Fragment>
         <span aria-live="polite" className="slds-assistive-text">
           Success: SLA agreement warning cleared in tab: Chat - Customer
         </span>
@@ -1635,7 +1635,7 @@ export let states = [
         <ContextTabPanel id={tabPanelId03} tabId={tabId03}>
           Tab Two Content
         </ContextTabPanel>
-      </div>
+      </React.Fragment>
     )
   },
   {
@@ -1683,7 +1683,7 @@ export let states = [
     id: 'pinned-tab-success-focused',
     label: 'Pinned Success Tab Focused',
     element: (
-      <div className="demo-only">
+      <React.Fragment>
         <span aria-live="polite" className="slds-assistive-text">
           Success: SLA agreement warning cleared in tab: Chat - Customer
         </span>
@@ -1718,14 +1718,14 @@ export let states = [
         <ContextTabPanel id={tabPanelId03} tabId={tabId03}>
           Tab Two Content
         </ContextTabPanel>
-      </div>
+      </React.Fragment>
     )
   },
   {
     id: 'pinned-tab-success-unread',
     label: 'Pinned Success Tab Unread',
     element: (
-      <div className="demo-only">
+      <React.Fragment>
         <span aria-live="polite" className="slds-assistive-text">
           Success: SLA agreement warning cleared in tab: Chat - Customer
         </span>
@@ -1760,14 +1760,14 @@ export let states = [
         <ContextTabPanel id={tabPanelId03} tabId={tabId03}>
           Tab Two Content
         </ContextTabPanel>
-      </div>
+      </React.Fragment>
     )
   },
   {
     id: 'pinned-tab-success-unsaved',
     label: 'Pinned Success Tab Unsaved',
     element: (
-      <div className="demo-only">
+      <React.Fragment>
         <span aria-live="polite" className="slds-assistive-text">
           Success: SLA agreement warning cleared in tab: Chat - Customer
         </span>
@@ -1802,14 +1802,14 @@ export let states = [
         <ContextTabPanel id={tabPanelId03} tabId={tabId03}>
           Tab Two Content
         </ContextTabPanel>
-      </div>
+      </React.Fragment>
     )
   },
   {
     id: 'pinned-tab-warning',
     label: 'Pinned Warning Tab',
     element: (
-      <div className="demo-only">
+      <React.Fragment>
         <span aria-live="polite" className="slds-assistive-text">
           Warning: SLA agreement in 30 seconds in tab: Chat - Customer
         </span>
@@ -1843,14 +1843,14 @@ export let states = [
         <ContextTabPanel id={tabPanelId03} tabId={tabId03}>
           Tab Two Content
         </ContextTabPanel>
-      </div>
+      </React.Fragment>
     )
   },
   {
     id: 'pinned-tab-warning-active',
     label: 'Pinned Warning Tab Active',
     element: (
-      <div className="demo-only">
+      <React.Fragment>
         <span aria-live="polite" className="slds-assistive-text">
           Warning: SLA agreement in 30 seconds in tab: Chat - Customer
         </span>
@@ -1884,14 +1884,14 @@ export let states = [
         <ContextTabPanel id={tabPanelId03} tabId={tabId03}>
           Tab Two Content
         </ContextTabPanel>
-      </div>
+      </React.Fragment>
     )
   },
   {
     id: 'pinned-tab-warning-focused',
     label: 'Pinned Warning Tab Focused',
     element: (
-      <div className="demo-only">
+      <React.Fragment>
         <span aria-live="polite" className="slds-assistive-text">
           Warning: SLA agreement in 30 seconds in tab: Chat - Customer
         </span>
@@ -1926,14 +1926,14 @@ export let states = [
         <ContextTabPanel id={tabPanelId03} tabId={tabId03}>
           Tab Two Content
         </ContextTabPanel>
-      </div>
+      </React.Fragment>
     )
   },
   {
     id: 'pinned-tab-warning-unread',
     label: 'Pinned Warning Tab Unread',
     element: (
-      <div className="demo-only">
+      <React.Fragment>
         <span aria-live="polite" className="slds-assistive-text">
           Warning: SLA agreement in 30 seconds in tab: Chat - Customer
         </span>
@@ -1968,14 +1968,14 @@ export let states = [
         <ContextTabPanel id={tabPanelId03} tabId={tabId03}>
           Tab Two Content
         </ContextTabPanel>
-      </div>
+      </React.Fragment>
     )
   },
   {
     id: 'pinned-tab-warning-unsaved',
     label: 'Pinned Warning Tab Unsaved',
     element: (
-      <div className="demo-only">
+      <React.Fragment>
         <span aria-live="polite" className="slds-assistive-text">
           Warning: SLA agreement in 30 seconds in tab: Chat - Customer
         </span>
@@ -2010,14 +2010,14 @@ export let states = [
         <ContextTabPanel id={tabPanelId03} tabId={tabId03}>
           Tab Two Content
         </ContextTabPanel>
-      </div>
+      </React.Fragment>
     )
   },
   {
     id: 'pinned-tab-error',
     label: 'Pinned Error Tab',
     element: (
-      <div className="demo-only">
+      <React.Fragment>
         <span aria-live="polite" className="slds-assistive-text">
           Violation: SLA agreement in tab: Chat - Customer
         </span>
@@ -2051,14 +2051,14 @@ export let states = [
         <ContextTabPanel id={tabPanelId03} tabId={tabId03}>
           Tab Two Content
         </ContextTabPanel>
-      </div>
+      </React.Fragment>
     )
   },
   {
     id: 'pinned-tab-error-active',
     label: 'Pinned Error Tab Active',
     element: (
-      <div className="demo-only">
+      <React.Fragment>
         <span aria-live="polite" className="slds-assistive-text">
           Violation: SLA agreement in tab: Chat - Customer
         </span>
@@ -2092,14 +2092,14 @@ export let states = [
         <ContextTabPanel id={tabPanelId03} tabId={tabId03}>
           Tab Two Content
         </ContextTabPanel>
-      </div>
+      </React.Fragment>
     )
   },
   {
     id: 'pinned-tab-error-focused',
     label: 'Pinned Error Tab Focused',
     element: (
-      <div className="demo-only">
+      <React.Fragment>
         <span aria-live="polite" className="slds-assistive-text">
           Violation: SLA agreement in tab: Chat - Customer
         </span>
@@ -2133,14 +2133,14 @@ export let states = [
         <ContextTabPanel id={tabPanelId03} tabId={tabId03}>
           Tab Two Content
         </ContextTabPanel>
-      </div>
+      </React.Fragment>
     )
   },
   {
     id: 'pinned-tab-error-unread',
     label: 'Pinned Error Tab Unread',
     element: (
-      <div className="demo-only">
+      <React.Fragment>
         <span aria-live="polite" className="slds-assistive-text">
           Violation: SLA agreement in tab: Chat - Customer
         </span>
@@ -2175,14 +2175,14 @@ export let states = [
         <ContextTabPanel id={tabPanelId03} tabId={tabId03}>
           Tab Two Content
         </ContextTabPanel>
-      </div>
+      </React.Fragment>
     )
   },
   {
     id: 'pinned-tab-error-unsaved',
     label: 'Pinned Error Tab Unsaved',
     element: (
-      <div className="demo-only">
+      <React.Fragment>
         <span aria-live="polite" className="slds-assistive-text">
           Violation: SLA agreement in tab: Chat - Customer
         </span>
@@ -2217,14 +2217,14 @@ export let states = [
         <ContextTabPanel id={tabPanelId03} tabId={tabId03}>
           Tab Two Content
         </ContextTabPanel>
-      </div>
+      </React.Fragment>
     )
   },
   {
     id: 'overflow-tabs',
     label: 'Overflow Tabs',
     element: (
-      <div className="demo-only">
+      <React.Fragment>
         <ContextTabBar>
           <ContextTab
             title="Home"
@@ -2254,7 +2254,7 @@ export let states = [
         <ContextTabPanel id={tabPanelId03} tabId={tabId03}>
           Tab Two Content
         </ContextTabPanel>
-      </div>
+      </React.Fragment>
     )
   },
   {
@@ -2298,7 +2298,7 @@ export let states = [
     id: 'unsaved-overflow-tabs',
     label: 'Unsaved Overflow Tabs',
     element: (
-      <div className="demo-only">
+      <React.Fragment>
         <ContextTabBar>
           <ContextTab
             title="Home"
@@ -2328,7 +2328,7 @@ export let states = [
         <ContextTabPanel id={tabPanelId03} tabId={tabId03}>
           Tab Two Content
         </ContextTabPanel>
-      </div>
+      </React.Fragment>
     )
   },
   {
@@ -2372,7 +2372,7 @@ export let states = [
     id: 'unread-overflow-tabs',
     label: 'Unread Overflow Tabs',
     element: (
-      <div className="demo-only">
+      <React.Fragment>
         <span aria-live="polite" className="slds-assistive-text">
           New activity in Tab: Chat - Customer
         </span>
@@ -2405,7 +2405,7 @@ export let states = [
         <ContextTabPanel id={tabPanelId03} tabId={tabId03}>
           Tab Two Content
         </ContextTabPanel>
-      </div>
+      </React.Fragment>
     )
   },
   {
@@ -2795,7 +2795,7 @@ export let states = [
     id: 'object-switcher-active',
     label: 'Object Switcher - Active',
     element: (
-      <div className="demo-only">
+      <React.Fragment>
         <ContextTabBar objectSwitchClassName="slds-is-active">
           <ContextTab
             title="Home"
@@ -2823,7 +2823,7 @@ export let states = [
         <ContextTabPanel id={tabPanelId03} tabId={tabId03}>
           Tab Two Content
         </ContextTabPanel>
-      </div>
+      </React.Fragment>
     )
   },
   {

@@ -1,0 +1,445 @@
+import CodeView from '../../../shared/components/CodeView';
+import CodeBlock from '../../../shared/components/CodeBlock';
+import Blockquote from '../../../shared/components/Blockquote';
+import { NavBarItem } from './navigation-bar/';
+import * as NavExamples from './navigation-bar/example';
+import * as NavTabBarExamples from './navigation-tab-bar/example';
+import { getDisplayElementById } from '../../shared/helpers';
+
+<div className="lead">
+  Global Navigation is the list of navigation links your users find in the Header on every page in Salesforce. Your Global Navigation includes a Navigation Bar where your users find the App Launcher, App Name, and Pages that each App includes.
+</div>
+
+## Navigation Bar
+
+<CodeView style={{height: '16rem'}}>
+  {NavExamples.default}
+</CodeView>
+
+### Building the Navigation Bar
+
+The navigation bar is composed of a wrapper and 2 required regions:
+
+- **Primary,** which contains the App Launcher and App Name
+- **Secondary,** which contains the App Items, for navigating within the current app
+
+The markup should follow the order listed above for proper keyboard interaction set by the 508 compliance standards. Each included region inside the wrapper of `.slds-context-bar` needs the appropriate ordering class name, e.g. `.slds-context-bar__primary`.
+
+### Items on the Navigation Bar
+
+Every item that sits on the horizontal axis of the navigation bar should receive the class `.slds-context-bar__item`.
+
+<CodeBlock>
+  <NavBarItem label="Menu Item" />
+</CodeBlock>
+
+This class is used to notify the navigation bar that it has a new item. The styles applied allow the children of the navigation bar to vertically aligned, without knowing the height of the navigation bar. The styles will also allow for the actionable items `.slds-context-bar__label-action` and `.slds-context-bar__icon-action` to stretch 100% of the height of the navigation bar, optimizing the hit area of those actions.
+
+Since the items are leveraging flexbox, the elements inside can easily be re-ordered easily by using an order class helper on the element, such as `.slds-order--[#]`.
+
+### Building the Navigation Bar Item
+
+The navigation bar item is built to accommodate 2 specific layout needs.
+
+1.  Individual text hyperlink to invokes link destination
+2.  Individual text hyperlink to invokes link destination + button icon to indicate menu dropdown is available
+
+These layouts are built upon 2 reusable classes. The text hyperlink action area would get the class `.slds-context-bar__label-action` and the icon based action area would get the class `.slds-context-bar__icon-action`.
+
+The `.slds-context-bar__icon-action` class handles the alignment and coloring of the icons based on interactions such as `:hover`, `:focus` and `:active`. This is a required if you have an actionable icon area adjacent to an actionable text area.
+
+The markup structure should have the button icon(s) preceding the text label. The icons can be visually reordered by using the ordering utility classes such as `.slds-order--[#]`.
+
+#### Icons
+
+The icons in the navigation bar either serve as a visual affordance that indicates an item has a menu with additional actions or the icon itself is actionable.
+
+<CodeBlock>
+  <NavBarItem label="Menu Item" hasNavMenu hasMenuDropdown={false} />
+</CodeBlock>
+
+The class used to indicate a button icon will sit adjacent to another actionable item is `.slds-context-bar__icon-action`. If you two icons in an item, each icon should be contained in it’s own `.slds-context-bar__icon-action` element.
+
+The look and feel of the button icon is dependant on the modifiers used from [Button Icon Variant Component](/components/buttons/#icon) page.
+
+The `.slds-context-bar__icon-action` styles apply a default left and right padding of 0.75rem. That padding can be removed or modified by using our spacing utilities. In example #1, the left padding has been removed by using the class `.slds-p-left--none`.
+
+If a navigation bar item has an icon then we want to provide visual indication that its active when a user hovers into its region. To make this happen, apply the class `.slds-hint-parent` to the hover region, most cases would be `.slds-context-bar__icon-action` element.
+
+#### Menu trigger area
+
+When a navigation bar items requires a menu with additional sub options or actions, the classes that need to be added to the target hit area are the following:
+
+<CodeBlock>
+  <NavBarItem label="Menu Item" hasNavMenu />
+</CodeBlock>
+
+1.  `.slds-context-bar__dropdown-trigger` — Add a hoverable zone below the action so that the dropdown doesn’t disappear when the mouse is between the action and the dropdown — this is specific to the navigation bar
+2.  `.slds-dropdown-trigger` — Globally used utility that notifies the element there is a dropdown menu
+3.  `.slds-dropdown-trigger_click` — Specifies that an item requires a click to open interaction.
+
+If the navigation item has one hyperlink with a menu containing additional sub actions, then the hover area that invokes the dropdown menu is both the `.slds-context-bar__label-action` and `.slds-context-bar__icon-action`. If the navigation item is demonstrated as a tab format, one hyperlink plus two additional actions, then the hover area that invokes the dropdown menu is only on the `.slds-context-bar__icon-action`.
+
+### Specifics of the Navigation Bar
+
+#### App Launcher
+
+The app launcher is the one element on the navigation bar that requires a mouse click or keyboard enter to invoke the app launcher dropdown. Please use JavaScript to accommodate this requirement.
+
+#### App Name
+
+The application name needs to receive the `.slds-context-bar__app-name` class. This class will handle such things as its unique font sizing and truncation widths.
+
+#### Dividers
+
+Due to the platform-esc nature of the navigation bar, there is an available element utility to apply a divider between sections where needed. The `.slds-context-bar__vertical-divider` class should be applied to an empty `<div>` and placed within the markup of your navigation bar for a visual divider.
+
+Alternatively, two classes are available to add border using css. Adding the class `.slds-context-bar__item--divider-left` will add a left border to a navigation bar item while `.slds-context-bar__item--divider-right` will add a right border.
+
+## States
+
+### Active item
+
+<CodeView>
+  {getDisplayElementById(NavExamples.states, 'item-active')}
+</CodeView>
+
+### Menu Open
+
+<CodeView style={{height: '16rem'}}>
+  {getDisplayElementById(NavExamples.states, 'item-menu-open')}
+</CodeView>
+
+## Navigation Tab Bar
+
+<CodeView>
+  {NavTabBarExamples.default}
+</CodeView>
+
+### Accessibility
+
+**Communicating Status to Screen Readers**
+
+When communitcatin tab status updates to the user, unread, warning, error and success notifications should  all employ the same technique to communicate that update to users of assistive technology, who would be otherwise unaware of that status change.
+
+You should use a single hidden ARIA live region for the entire sub tabs block, the contents of which gets updated each time a sub tab changes its status. The contents should contain a description of the status level and the name of the tab the status change event occured in. The markup would look something like:
+
+`<div className="slds-assistive-text" aria-live="polite">...</div>`
+
+Upon clearing the status on a given tab, you should clear the message from the live region.
+
+**Unread status**
+
+In order to inform screen readers of new activity in a tab, 2 things should occur.
+
+1. The `title` attribute and `aria-label` on the element that displays the red dot should read **"New Activity"**. This will update the text content of the tab to include the "New Activity" text: "New Activity Chat - Customer".
+
+2. The hidden live region as described above, should have its content updated to **"New Activity in Tab: [Tab Name Here]"** to alert the user of new activity in that particular sub tab.
+
+`<span aria-label="New Activity" className="slds-indicator_unread" title="New Activity"></span>`
+
+`<div className="slds-assistive-text" aria-live="polite">New activity in Tab: Chat - Customer</div>`
+
+**Warning, Error and Success Tabs**
+
+When you wish to draw attention to a particular tab because something has occurred in that tab that corresponds to an alert level, you can use the `slds-has-warning`, `slds-has-error` or `slds-has-success` class to change the background color and introduce a short pulsing animation to draw attention from the user.
+
+The icon is updated to match the corresponding alert level, to give an extra way to communicate the level of the status without relying on the use of color alone.
+
+In this example we show that something inside the tab is about to break a service level agreement in 30 seconds, and we wish to draw the users attention to it to take action.
+
+Update the hidden live region with a message that informs the user of the status level, the message and the offending sub tab **[level]: [message] in tab: [tab_name]**.
+
+`<div className="slds-assistive-text" aria-live="polite">Warning: SLA agreement in 30 seconds in tab: Chat - Customer</div>`
+
+### States
+
+#### Active
+
+<CodeView>
+  {getDisplayElementById(NavTabBarExamples.states, 'tab-active')}
+</CodeView>
+
+##### Focus
+
+<CodeView>
+  {getDisplayElementById(NavTabBarExamples.states, 'tab-active-focus')}
+</CodeView>
+
+#### Unsaved
+
+<CodeView>
+  {getDisplayElementById(NavTabBarExamples.states, 'unsaved-tab')}
+</CodeView>
+
+#### Unread
+
+<CodeView>
+  {getDisplayElementById(NavTabBarExamples.states, 'unread-tab')}
+</CodeView>
+
+#### Overflow
+
+<CodeView>
+  {getDisplayElementById(NavTabBarExamples.states, 'tab-item-action-menu-open')}
+</CodeView>
+
+#### Unread/Unsaved
+
+<CodeView>
+  {getDisplayElementById(NavTabBarExamples.states, 'unread-unsaved-tab')}
+</CodeView>
+
+### Tab Feedback States
+
+#### Success
+
+<CodeView>
+  {getDisplayElementById(NavTabBarExamples.states, 'tab-success')}
+</CodeView>
+
+##### Active
+
+<CodeView>
+  {getDisplayElementById(NavTabBarExamples.states, 'tab-success-active')}
+</CodeView>
+
+##### Focus
+
+<CodeView>
+  {getDisplayElementById(NavTabBarExamples.states, 'tab-success-focus')}
+</CodeView>
+
+##### Unsaved
+
+<CodeView>
+  {getDisplayElementById(NavTabBarExamples.states, 'tab-success-unsaved')}
+</CodeView>
+
+##### Unread
+
+<CodeView>
+  {getDisplayElementById(NavTabBarExamples.states, 'tab-success-unread')}
+</CodeView>
+
+##### Unread/Unsaved
+
+<CodeView>
+  {getDisplayElementById(NavTabBarExamples.states, 'tab-success-unread-unsaved')}
+</CodeView>
+
+#### Warning
+
+<CodeView>
+  {getDisplayElementById(NavTabBarExamples.states, 'tab-warning')}
+</CodeView>
+
+##### Active
+
+<CodeView>
+  {getDisplayElementById(NavTabBarExamples.states, 'tab-warning-active')}
+</CodeView>
+
+##### Focus
+
+<CodeView>
+  {getDisplayElementById(NavTabBarExamples.states, 'tab-warning-focus')}
+</CodeView>
+
+##### Unsaved
+
+<CodeView>
+  {getDisplayElementById(NavTabBarExamples.states, 'tab-warning-unsaved')}
+</CodeView>
+
+##### Unread
+
+<CodeView>
+  {getDisplayElementById(NavTabBarExamples.states, 'tab-warning-unread')}
+</CodeView>
+
+##### Unread/Unsaved
+
+<CodeView>
+  {getDisplayElementById(NavTabBarExamples.states, 'tab-warning-unread-unsaved')}
+</CodeView>
+
+#### Error
+
+<CodeView>
+  {getDisplayElementById(NavTabBarExamples.states, 'tab-error')}
+</CodeView>
+
+##### Active
+
+<CodeView>
+  {getDisplayElementById(NavTabBarExamples.states, 'tab-error-active')}
+</CodeView>
+
+##### Focus
+
+<CodeView>
+  {getDisplayElementById(NavTabBarExamples.states, 'tab-error-focused')}
+</CodeView>
+
+##### Unsaved
+
+<CodeView>
+  {getDisplayElementById(NavTabBarExamples.states, 'tab-error-unsaved')}
+</CodeView>
+
+##### Unread
+
+<CodeView>
+  {getDisplayElementById(NavTabBarExamples.states, 'tab-error-unread')}
+</CodeView>
+
+##### Unread/Unsaved
+
+<CodeView>
+  {getDisplayElementById(NavTabBarExamples.states, 'tab-error-unread-unsaved')}
+</CodeView>
+
+### Pinned
+
+<CodeView>
+  {getDisplayElementById(NavTabBarExamples.states, 'pinned-tab')}
+</CodeView>
+
+#### Pinned States
+
+##### Active
+
+<CodeView>
+  {getDisplayElementById(NavTabBarExamples.states, 'pinned-tab-active')}
+</CodeView>
+
+##### Focus
+
+<CodeView>
+  {getDisplayElementById(NavTabBarExamples.states, 'pinned-tab-active-focus')}
+</CodeView>
+
+##### Unsaved
+
+<CodeView>
+  {getDisplayElementById(NavTabBarExamples.states, 'unsaved-pinned-tab')}
+</CodeView>
+
+##### Unread
+
+<CodeView>
+  {getDisplayElementById(NavTabBarExamples.states, 'unread-pinned-tab')}
+</CodeView>
+
+### Overflowed Tabs
+
+<CodeView>
+  {getDisplayElementById(NavTabBarExamples.states, 'overflow-tabs')}
+</CodeView>
+
+#### Opened
+
+<CodeView>
+  {getDisplayElementById(NavTabBarExamples.states, 'overflow-tabs-open')}
+</CodeView>
+
+#### Unsaved
+
+<CodeView>
+  {getDisplayElementById(NavTabBarExamples.states, 'unsaved-overflow-tabs')}
+</CodeView>
+
+##### Opened
+
+<CodeView>
+  {getDisplayElementById(NavTabBarExamples.states, 'unsaved-overflow-tabs-open')}
+</CodeView>
+
+#### Unread
+
+<CodeView>
+  {getDisplayElementById(NavTabBarExamples.states, 'unread-overflow-tabs')}
+</CodeView>
+
+##### Opened
+
+<CodeView>
+  {getDisplayElementById(NavTabBarExamples.states, 'unread-overflow-tabs-open')}
+</CodeView>
+
+#### Unread/Unsaved
+
+<CodeView>
+  {getDisplayElementById(NavTabBarExamples.states, 'unread-unsaved-overflow-tabs-open')}
+</CodeView>
+
+##### No Icon
+
+<CodeView>
+  {getDisplayElementById(NavTabBarExamples.states, 'unread-unsaved-overflow-tabs-without-icon-open')}
+</CodeView>
+
+### Feedback states for overflow menu
+
+#### Success
+
+<CodeView>
+  {getDisplayElementById(NavTabBarExamples.states, 'success-overflow')}
+</CodeView>
+
+##### Unsaved/Unread
+
+<CodeView>
+  {getDisplayElementById(NavTabBarExamples.states, 'success-overflow-unread-unsaved')}
+</CodeView>
+
+#### Warning
+
+<CodeView>
+  {getDisplayElementById(NavTabBarExamples.states, 'warning-overflow')}
+</CodeView>
+
+##### Unsaved/Unread
+
+<CodeView>
+  {getDisplayElementById(NavTabBarExamples.states, 'warning-overflow-unread-unsaved')}
+</CodeView>
+
+#### Error
+
+<CodeView>
+  {getDisplayElementById(NavTabBarExamples.states, 'error-overflow')}
+</CodeView>
+
+##### Unsaved/Unread
+
+<CodeView>
+  {getDisplayElementById(NavTabBarExamples.states, 'error-overflow-unread-unsaved')}
+</CodeView>
+
+### Object Switcher
+
+#### Active
+
+<CodeView>
+  {getDisplayElementById(NavTabBarExamples.states, 'object-switcher-active')}
+</CodeView>
+
+#### Menu open
+
+<CodeView>
+  {getDisplayElementById(NavTabBarExamples.states, 'object-switcher-menu-open')}
+</CodeView>
+
+### Add a tab dialog
+
+<CodeView>
+  {getDisplayElementById(NavTabBarExamples.states, 'add-tab-dialog-open')}
+</CodeView>
+
+### Active tab with Sub Tabs
+
+<CodeView>
+  {getDisplayElementById(NavTabBarExamples.states, 'sub-tabs-open')}
+</CodeView>

@@ -2,6 +2,7 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 import React from 'react';
+import PropTypes from 'prop-types';
 import ButtonIcon from '../../button-icons/';
 import classNames from 'classnames';
 
@@ -19,7 +20,7 @@ let Demo = props => (
 export let Modal = props => (
   <section
     role="dialog"
-    tabIndex="-1"
+    tabIndex={props.tabIndex}
     {...props}
     aria-modal="true"
     aria-describedby={props['aria-describedby'] || 'modal-content-id-1'}
@@ -28,6 +29,14 @@ export let Modal = props => (
     <div className="slds-modal__container">{props.children}</div>
   </section>
 );
+
+Modal.propTypes = {
+  tabIndex: PropTypes.oneOf(['-1', '0'])
+};
+
+Modal.defaultProps = {
+  tabIndex: '-1'
+};
 
 export let ModalHeader = props => (
   <header className={classNames('slds-modal__header', props.className)}>
@@ -106,9 +115,16 @@ let Taglines = props => (
   </Demo>
 );
 
-let Large = props => (
+let ModalSizes = props => (
   <Demo style={{ height: '640px' }}>
-    <Modal className="slds-modal_large" aria-labelledby="modal-heading-01">
+    <Modal
+      className={classNames(
+        props.size === 'small' && 'slds-modal_small',
+        props.size === 'medium' && 'slds-modal_medium',
+        props.size === 'large' && 'slds-modal_large'
+      )}
+      aria-labelledby="modal-heading-01"
+    >
       <ModalHeader>
         <h2
           id="modal-heading-01"
@@ -142,6 +158,10 @@ let Large = props => (
     </Modal>
   </Demo>
 );
+
+ModalSizes.propTypes = {
+  size: PropTypes.oneOf(['small', 'medium', 'large'])
+};
 
 let Directional = props => (
   <Demo style={{ height: '640px' }}>
@@ -307,7 +327,17 @@ export let examples = [
   {
     id: 'large',
     label: 'Large',
-    element: <Large />
+    element: <ModalSizes size="large" />
+  },
+  {
+    id: 'medium',
+    label: 'Medium',
+    element: <ModalSizes size="medium" />
+  },
+  {
+    id: 'small',
+    label: 'Small',
+    element: <ModalSizes size="small" />
   },
   {
     id: 'directional',

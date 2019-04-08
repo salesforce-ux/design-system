@@ -88,7 +88,12 @@ export const createTableOfContents = (() => {
       children: []
     };
     flattenElement(mapElement(element, e => (e.type === Example ? null : e)))
-      .filter(e => /^h[1-6]/.test(String(e.type)) && e.props.id)
+      .filter(
+        e =>
+          /^h[1-6]/.test(String(e.type)) &&
+          e.props.id &&
+          e.props.className === 'doc'
+      )
       .forEach(element => {
         let level = parseInt(element.type[1], 10);
         let levelLast = get(tree, keyPath.concat(['level']));

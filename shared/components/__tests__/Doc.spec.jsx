@@ -9,15 +9,25 @@ import { createTableOfContents } from '../Doc';
 
 const mdx = (
   <div>
-    <h1 id="a">A</h1>
+    <h1 id="a" className="doc">
+      A
+    </h1>
     <p>Lorem ipsum dolor sit amemt</p>
-    <h2 id="aa">AA</h2>
+    <h2 id="aa" className="doc">
+      AA
+    </h2>
     <p>Lorem ipsum dolor sit amemt</p>
-    <h1 id="b">B</h1>
+    <h1 id="b" className="doc">
+      B
+    </h1>
     <p>Lorem ipsum dolor sit amemt</p>
-    <h2 id="bb">BB</h2>
+    <h2 id="bb" className="doc">
+      BB
+    </h2>
     <p>Lorem ipsum dolor sit amemt</p>
-    <h3 id="bbb">BBB</h3>
+    <h3 id="bbb" className="doc">
+      BBB
+    </h3>
     <p>Lorem ipsum dolor sit amemt</p>
   </div>
 );

@@ -1,0 +1,45 @@
+import CodeView from '../../../shared/components/CodeView';
+import CodeBlock from '../../../shared/components/CodeBlock';
+import Blockquote from '../../../shared/components/Blockquote';
+import { getDisplayElementById } from '../../shared/helpers';
+import * as MapExamples from './base/example';
+
+<div className="lead doc">
+  A map component is used to find a location
+</div>
+
+# Base
+
+<CodeView>
+  {MapExamples.default}
+</CodeView>
+
+## States
+
+### First Coordinate Selected
+
+<CodeView>
+  {getDisplayElementById(MapExamples.states, 'multiple-coordinates-item-one-selection')}
+</CodeView>
+
+### Second Coordinate Selected
+
+<CodeView>
+  {getDisplayElementById(MapExamples.states, 'multiple-coordinates-item-two-selection')}
+</CodeView>
+
+# Examples
+
+## In Modal
+
+### Single Coordinate With Footer
+
+<CodeView>
+  {getDisplayElementById(MapExamples.examples, 'single-coordinate')}
+</CodeView>
+
+### Multiple Coordinates With Footer
+
+<CodeView>
+  {getDisplayElementById(MapExamples.examples, 'multiple-coordinates')}
+</CodeView>

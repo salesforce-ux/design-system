@@ -462,7 +462,9 @@ export let states = [
         <div className="slds-backdrop slds-backdrop_open" />
       </div>
     )
-  },
+  }
+];
+export let examples = [
   {
     id: 'two-column-with-hidden-header',
     label: 'Two Column with Hidden Header',

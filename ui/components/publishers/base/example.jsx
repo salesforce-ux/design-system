@@ -60,3 +60,15 @@ export default (
     <PublisherActions />
   </Publisher>
 );
+
+export const examples = [
+  {
+    id: 'active',
+    label: 'Active',
+    element: (
+      <Publisher className="slds-is-active">
+        <PublisherActions />
+      </Publisher>
+    )
+  }
+];

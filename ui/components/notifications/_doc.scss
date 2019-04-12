@@ -2,25 +2,7 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 /**
- * Notifications serve as a feedback & confirmation mechanism that comes in at the top right. The body of the notification is a clickable region that will prompt an additional browser tab with that record loaded and dismiss the notification. It is also dismissable by clicking the X icon.
- *
- * ### Implementation Notes
- *
- * The first three notifications that appear on the page should stack on one another. The fourth notification will show slightly beneath the third notification. Any subsequent notifications won't show until earlier notifications are dismissed.
- *
  * @summary Notifications serve as a feedback & confirmation mechanism that comes into the page at the top right.
- *
- * #### Accessibility
- *
- * Notifications should contain `role="dialog"` to signal to
- * assistive technology that they require the user’s immediate attention.
- *
- * #### Implementation Notes and Requirements
- * This notification will consist of the following:
- * * Entity icon with background color
- * * Subject field for the reminder
- * * The time/date of when the event/task is occurring
- * * An ‘X’ icon to dismiss the reminder
  *
  * @base
  * @name notifications

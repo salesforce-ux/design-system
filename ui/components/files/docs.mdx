@@ -1,0 +1,102 @@
+import CodeView from '../../../shared/components/CodeView';
+import DisplayColumn from '../../../shared/components/DisplayColumn';
+import DisplayGrid from '../../../shared/components/DisplayGrid';
+import Blockquote from '../../../shared/components/Blockquote';
+import { getDisplayElementById } from '../../shared/helpers';
+import * as Base from './base/example';
+
+<div className="doc lead">
+  Files are a representation of content uploaded as an attachment.
+</div>
+
+## About Files
+
+## Base
+
+A figure component is a self-contained unit of content, such as an image with an optional caption. The figure component should NOT be used with icons or logos. A figure can optionally be cropped to a specific ratio such as 16x9, 4x3 and 1x1 with the use of `.slds-image__crop` and passing in a ratio class such as `.slds-image__crop_16-by-9`.
+
+<CodeView>
+  {Base.default}
+</CodeView>
+
+## States
+
+### File with no image
+
+<CodeView>
+  {getDisplayElementById(Base.examples, 'attachment-file-no-image')}
+</CodeView>
+
+### File with no title
+
+<CodeView>
+  {getDisplayElementById(Base.examples, 'attachment-file-no-title')}
+</CodeView>
+
+### File with actions
+
+<CodeView>
+  {getDisplayElementById(Base.examples, 'attachment-file-with-actions')}
+</CodeView>
+
+### File with no title + actions
+
+<CodeView>
+  {getDisplayElementById(Base.examples, 'attachment-file-with-no-title-actions')}
+</CodeView>
+
+### File with external icon
+
+<CodeView>
+  {getDisplayElementById(Base.examples, 'attachment-file-external-icon')}
+</CodeView>
+
+### File in loading state with title
+
+<CodeView>
+  {getDisplayElementById(Base.examples, 'attachment-file-loading-with-title')}
+</CodeView>
+
+### File in loading state without title
+
+<CodeView>
+  {getDisplayElementById(Base.examples, 'attachment-file-loading-no-title')}
+</CodeView>
+
+### < 3 file attachments
+
+<CodeView>
+  {getDisplayElementById(Base.examples, 'multi-attachments')}
+</CodeView>
+
+### > 3 file attachments
+
+<CodeView>
+  {getDisplayElementById(Base.examples, 'multi-attachments-overflow')}
+</CodeView>
+
+## Modifiers
+
+### Ratio
+
+#### .slds-file__crop_4-by-3
+
+<CodeView>
+  {getDisplayElementById(Base.examples, 'crop-4-by-3')}
+</CodeView>
+
+#### .slds-file__crop_16-by-9
+
+<CodeView>
+  {getDisplayElementById(Base.examples, 'crop-16-by-9')}
+</CodeView>
+
+#### .slds-file__crop_1-by-1
+
+<CodeView>
+  {getDisplayElementById(Base.examples, 'crop-1-by-1')}
+</CodeView>
+
+## Accessibility
+
+Every `<img>` you add to your site needs to have an `alt` attribute. If the image is informational, set the `alt` equal to a descriptive alternative for that image. If the image is decorative or redundant to adjacent text, set `alt=""`, which conveys to assistive technology users that the image isn’t necessary for understanding the page. Avoid using generic strings like **photo**, **image**, or **icon** as alt values, as they don’t communicate valuable content to the user.

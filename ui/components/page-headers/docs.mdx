@@ -1,0 +1,93 @@
+import CodeView from '../../../shared/components/CodeView';
+import CodeBlock from '../../../shared/components/CodeBlock';
+import Blockquote from '../../../shared/components/Blockquote';
+import { getDisplayElementById } from '../../shared/helpers';
+import * as PageHeadersExamplesBase from './base/example';
+import * as PageHeadersExamplesObjectHome from './object-home/example';
+import * as PageHeadersExamplesRecordHome from './record-home/example';
+import * as PageHeadersExamplesRecordHomeVertical from './record-home-vertical/example';
+import * as PageHeadersExamplesRelatedList from './related-list/example';
+
+<div className="lead doc">
+  Page headers are used at the top of several page types. They use the `.slds-page-header` class as a base and are comprised of multiple components.
+</div>
+
+# Base
+
+<CodeView>
+  {PageHeadersExamplesBase.default}
+</CodeView>
+
+The page header contains the Title of the page, and supporting details. For large form factors, it may include actions.
+
+# Object Home
+
+<CodeView>
+  {PageHeadersExamplesObjectHome.default}
+</CodeView>
+
+The title for the Object Home page header is a filtering component. The `.slds-text-focus` class is placed on the media object that contains the title and down icon to simulate a hover and focus state of a link.
+
+This component is created entirely of existing components like buttons, button groups, and icons.
+
+## Examples
+
+### With extra long name
+
+<CodeView>
+  {getDisplayElementById(PageHeadersExamplesObjectHome.examples, 'base-extra-long')}
+</CodeView>
+
+### Inside a card
+
+<CodeView>
+  {getDisplayElementById(PageHeadersExamplesObjectHome.examples, 'card')}
+</CodeView>
+
+### Inside a tabs card
+
+<CodeView>
+  {getDisplayElementById(PageHeadersExamplesObjectHome.examples, 'tab-card')}
+</CodeView>
+
+# Record Home
+
+<CodeView>
+  {PageHeadersExamplesRecordHome.default}
+</CodeView>
+
+Page header record home contains up to four compact layout fields. They're contained in the `.slds-page-header__detail-row` div. That div contains the top and bottom spacing needed for this version of the page header.
+
+When text is truncated, the full text should be placed in a tooltip on hover (currently shown in the title attribute). One line truncation is created by using the `.slds-truncate` class. Two line truncation must be achieved using JavaScript.
+
+The page header is located at the top of every record home. It includes the record title and compact layout for a record. Excluding the title, the page header displays 4 compact layout fields. Similar data types can be rolled up and be displayed as a single field.
+
+**Record Title**
+
+- Display Record Type icon to the left of the title
+- Record Type is displayed above the title
+- When required, follow action is displayed to the right of the record title
+- Display one line of text, truncate when the length conflicts with the page level actions
+
+As shown in Field 3, web addresses and email addresses should be parsed and displayed as hyperlinks linking to the appropriate mailto: or web url. Do not modify the user's input, display as intended.
+
+When text is truncated, display full field text in browser tooltip on hover.
+
+Display addresses in two lines. Street address on first line, City, State and Postal Code on line 2. For lengthy addresses, truncate each line individually based on the available width of the area using the `.slds-truncate` class. Display the full address via browser tooltip.
+
+# Record Home Vertical
+
+<CodeView>
+  {PageHeadersExamplesRecordHomeVertical.default}
+</CodeView>
+
+Vertical page header record home contains up to seven compact layout fields. They're contained in the `.slds-page-header__detail-row` div.
+The heading does not truncate. This is typically used in more compact layouts where more vertical space is desired.
+
+# Related List
+
+<CodeView>
+  {PageHeadersExamplesRelatedList.default}
+</CodeView>
+
+The Related List page header is similar to the Object Home page header. It includes a breadcrumb component at the top and the title is truncated.

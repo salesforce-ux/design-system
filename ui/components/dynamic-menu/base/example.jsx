@@ -86,7 +86,7 @@ export const DynamicMenu = props => (
     bodyClassName="slds-p-horizontal_none"
     title="My Favourites"
     footer={<Footer />}
-    style={{ position: 'absolute', left: '0', top: '55px' }}
+    style={{ position: 'absolute', left: '-0.5rem', top: '48px' }}
   >
     {props.children}
   </Popover>
@@ -94,7 +94,10 @@ export const DynamicMenu = props => (
 
 // Default
 export default (
-  <div className="demo-only" style={{ height: '12rem' }}>
+  <div
+    className="demo-only"
+    style={{ height: '13rem', position: 'relative', marginLeft: '1rem' }}
+  >
     <ButtonIcon
       className="slds-button_icon-border-filled"
       symbol="favorite"
@@ -121,7 +124,10 @@ export let states = [
     id: 'dynamic-menu-0-items',
     label: 'Dynamic Menu — 0 Items',
     element: (
-      <div className="demo-only" style={{ height: '12rem' }}>
+      <div
+        className="demo-only"
+        style={{ height: '13rem', position: 'relative', marginLeft: '1rem' }}
+      >
         <ButtonIcon
           className="slds-button_icon-border-filled"
           symbol="favorite"
@@ -146,7 +152,10 @@ export let states = [
     id: 'dynamic-menu-1-item',
     label: 'Dynamic Menu — 1 Item',
     element: (
-      <div className="demo-only" style={{ height: '13rem' }}>
+      <div
+        className="demo-only"
+        style={{ height: '14rem', position: 'relative', marginLeft: '1rem' }}
+      >
         <ButtonIcon
           className="slds-button_icon-border-filled"
           symbol="favorite"
@@ -163,7 +172,10 @@ export let states = [
     id: 'dynamic-menu-sub-10-item',
     label: 'Dynamic Menu — <10 Items',
     element: (
-      <div className="demo-only" style={{ height: '27rem' }}>
+      <div
+        className="demo-only"
+        style={{ height: '28rem', position: 'relative', marginLeft: '1rem' }}
+      >
         <ButtonIcon
           className="slds-button_icon-border-filled"
           symbol="favorite"
@@ -180,7 +192,10 @@ export let states = [
     id: 'dynamic-menu-over-10-item',
     label: 'Dynamic Menu — >10 Items',
     element: (
-      <div className="demo-only" style={{ height: '34rem' }}>
+      <div
+        className="demo-only"
+        style={{ height: '38rem', position: 'relative', marginLeft: '1rem' }}
+      >
         <ButtonIcon
           className="slds-button_icon-border-filled"
           symbol="favorite"

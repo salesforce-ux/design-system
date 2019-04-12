@@ -1,0 +1,33 @@
+import CodeView from '../../../shared/components/CodeView';
+import CodeBlock from '../../../shared/components/CodeBlock';
+import Blockquote from '../../../shared/components/Blockquote';
+import { getDisplayElementById } from '../../shared/helpers';
+import * as ScopedNotificationExamples from './base/example';
+
+<div className="lead doc">
+  Scoped notifications serve advisory information for the user that is not important enough to justify an alert. It is often presented as a status bar scoped to the container. They are not dismissable.
+</div>
+
+## Base
+
+<CodeView>
+  {ScopedNotificationExamples.default}
+</CodeView>
+
+### Examples
+
+#### Light Theme
+
+<CodeView>
+  {getDisplayElementById(ScopedNotificationExamples.examples, 'light-theme')}
+</CodeView>
+
+#### Dark Theme
+
+<CodeView>
+  {getDisplayElementById(ScopedNotificationExamples.examples, 'dark-theme')}
+</CodeView>
+
+## Accessibility
+
+Scoped notifications contain `role="status"` on the container to signal to the browser to send an accessible status event to assistive technology. The assistive technology then notifies the user.

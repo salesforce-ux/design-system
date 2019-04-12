@@ -1,0 +1,50 @@
+import CodeView from '../../../shared/components/CodeView';
+import DisplayColumn from '../../../shared/components/DisplayColumn';
+import DisplayGrid from '../../../shared/components/DisplayGrid';
+import Blockquote from '../../../shared/components/Blockquote';
+import { getDisplayElementById } from '../../shared/helpers';
+import * as Base from './base/example';
+
+<div className="doc lead">
+  Toggle visibility of section content
+</div>
+
+## About Expandable Section
+Section Titles are interactive titles that open and close sections, typically on a form.
+
+## Base
+<CodeView>
+  {Base.default}
+</CodeView>
+
+## Examples
+### Non-collapsable
+<CodeView>
+  {getDisplayElementById(Base.examples, 'non-collapsable')}
+</CodeView>
+
+## States
+
+### Closed
+<CodeView>
+  {getDisplayElementById(Base.states, 'closed')}
+</CodeView>
+
+## Accessibility
+If the Section Title is interactive, the button needs to be associated with the section so that assistive technology knows what the button opens and closes. The button and section also need ARIA attributes to indicate the open and closed state of the section.
+
+### Notable attributes
+
+#### Button:
+- `aria-controls` is used to create an association between the button and the section. If the section has an `id="content"`, then the button should have `aria-controls="content"`.
+- `aria-expanded` indicates if the section is open or closed and is read aloud by assistive technology when the button is focused.
+
+#### Section:
+- `aria-hidden` indicates if the section is open or closed, and if set to `true`, assistive technology hides the section.
+
+#### Keyboard navigation
+- The button should behave as a normal button. The user should be able to tab to focus it and press enter/space to activate it.
+
+### Updating Operation and State
+- When the user interacts with the button to open the section, `aria-expanded` on the button should be `true` and `aria-hidden` on the section should be `false`.
+- When the user interacts with the button to close the section, `aria-expanded` on the button should be `false` and `aria-hidden` on the section should be `true`.

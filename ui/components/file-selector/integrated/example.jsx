@@ -16,7 +16,7 @@ let IntegratedFileSelector = props => (
       className={classNames(
         'slds-file-selector__dropzone slds-file-selector__dropzone_integrated',
         props.drag ? 'slds-has-drag' : null,
-        props.draggover ? 'slds-has-drag-over' : null
+        props.dragover ? 'slds-has-drag-over' : null
       )}
       aria-hidden="true"
     >
@@ -25,14 +25,14 @@ let IntegratedFileSelector = props => (
         accept="image/png"
         type="file"
         id="file-upload-input-01"
-        disabled={props.draggoverError}
+        disabled={props.dragoverError}
         tabIndex="-1"
       />
       <label
         className="slds-file-selector__body slds-file-selector__body_integrated"
         htmlFor="file-upload-input-01"
       >
-        {props.draggoverError ? (
+        {props.dragoverError ? (
           <SvgIcon
             className="slds-file-selector__body-icon slds-icon slds-icon-text-default"
             sprite="utility"
@@ -46,7 +46,7 @@ let IntegratedFileSelector = props => (
           />
         )}
         <span className="slds-file-selector__text slds-file-selector__text_integrated slds-text-heading_medium slds-text-align_center">
-          {props.draggoverError
+          {props.dragoverError
             ? 'Too many files selected. Attach up to 1 file.'
             : 'Drop Files'}
         </span>
@@ -89,14 +89,14 @@ export let states = [
     )
   },
   {
-    id: 'integrated-file-selector-draggover',
+    id: 'integrated-file-selector-dragover',
     label: 'Dragover',
     element: (
       <div className="demo-only" style={{ width: '320px', height: '320px' }}>
         <IntegratedFileSelector
           className="slds-file-selector_integrated"
           drag
-          draggover
+          dragover
         >
           Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
@@ -110,14 +110,14 @@ export let states = [
     )
   },
   {
-    id: 'integrated-file-selector-draggover-error',
+    id: 'integrated-file-selector-dragover-error',
     label: 'Dragover with error',
     element: (
       <div className="demo-only" style={{ width: '320px', height: '320px' }}>
         <IntegratedFileSelector
           className="slds-file-selector_integrated"
           drag
-          draggoverError
+          dragoverError
           error
         >
           Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do

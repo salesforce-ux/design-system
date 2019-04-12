@@ -1,0 +1,69 @@
+import CodeView from '../../../shared/components/CodeView';
+import CodeBlock from '../../../shared/components/CodeBlock';
+import Blockquote from '../../../shared/components/Blockquote';
+import * as DockedComposerExamples from './base/example';
+import { getDisplayElementById } from '../../shared/helpers';
+
+<div className="doc lead">
+  Docked Composer is a persistent utility bar that allows a user to continually use the app to complete tasks or gather information while expanding/collapsing a composer window.
+</div>
+
+## Implementation Notes
+
+The docked composer relies heavily on utility classes to piece together the layout so please pay close attention to the markup and classes.
+
+The overflow menu for docked composer, `.slds-docked-composer_overflow`, displays when the number of docked composers exceeds the width of the viewport. The overflow pill displays with a number indicator for all hidden docked composers. A user can invoke a popover with all available docked composers and replace the furthest left docked composer with the one being selected.
+
+When a user clicks on the "pop out" icon in the `.slds-docked-composer__header`, a modal displays and contains the task that was currently in the docked composer.
+
+## Base
+
+<CodeView style={{height: '500px', minWidth: '615px', overflow: 'hidden'}}>
+  {DockedComposerExamples.default}
+</CodeView>
+
+### States
+
+#### Open/Focused
+
+<CodeView style={{height: '500px', minWidth: '615px', overflow: 'hidden'}}>
+  {getDisplayElementById(DockedComposerExamples.states, 'single-composer-focused')}
+</CodeView>
+
+#### Closed
+
+<CodeView style={{height: '500px', minWidth: '615px', overflow: 'hidden'}}>
+  {getDisplayElementById(DockedComposerExamples.states, 'single-composer-closed')}
+</CodeView>
+
+#### Closed/Focused
+
+<CodeView style={{height: '500px', minWidth: '615px', overflow: 'hidden'}}>
+  {getDisplayElementById(DockedComposerExamples.states, 'single-composer-closed-focused')}
+</CodeView>
+
+#### Popped out
+
+<CodeView style={{height: '500px', minWidth: '615px', overflow: 'hidden'}}>
+  {getDisplayElementById(DockedComposerExamples.states, 'single-composer-popout')}
+</CodeView>
+
+#### With overflow menu
+
+<CodeView style={{height: '500px', minWidth: '615px', overflow: 'hidden'}}>
+  {getDisplayElementById(DockedComposerExamples.states, 'multiple-composer-overflow')}
+</CodeView>
+
+### Examples
+
+#### Log a task
+
+<CodeView style={{height: '500px', minWidth: '615px', overflow: 'hidden'}}>
+  {getDisplayElementById(DockedComposerExamples.examples, 'task')}
+</CodeView>
+
+#### Email Composer
+
+<CodeView style={{height: '500px', minWidth: '615px', overflow: 'hidden'}}>
+  {getDisplayElementById(DockedComposerExamples.examples, 'email')}
+</CodeView>

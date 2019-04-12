@@ -37,8 +37,10 @@
     transform: translateY(-50%);
   }
 
-  .slds-combobox_container {
+  .slds-combobox_container,
+  .slds-input[value] {
     border: 0;
+    box-shadow: none;
   }
 }
 

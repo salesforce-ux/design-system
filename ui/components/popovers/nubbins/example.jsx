@@ -22,11 +22,6 @@ let Popover = props => (
       title="Close dialog"
     />
     <div id="popover-body-id" className="slds-popover__body">
-      <code>
-        slds-popover
-        <br />
-        {`slds-nubbin_${props.nubbinPosition}`}
-      </code>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, quaerat?
         Accusamus excepturi eos, molestias expedita distinctio eligendi ut esse

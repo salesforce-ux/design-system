@@ -210,5 +210,69 @@ export let examples = [
         </div>
       </Popover>
     )
+  },
+  {
+    id: 'width-small',
+    label: 'Width - Small',
+    element: (
+      <Popover
+        className="slds-nubbin_left slds-popover_small"
+        closeButton
+        headerTitle="Header Title"
+      >
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+      </Popover>
+    )
+  },
+  {
+    id: 'width-medium',
+    label: 'Width - Medium',
+    element: (
+      <Popover
+        className="slds-nubbin_left slds-popover_medium"
+        closeButton
+        headerTitle="Header Title"
+      >
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+      </Popover>
+    )
+  },
+  {
+    id: 'width-large',
+    label: 'Width - Large',
+    element: (
+      <Popover
+        className="slds-nubbin_left slds-popover_large"
+        closeButton
+        headerTitle="Header Title"
+      >
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+      </Popover>
+    )
+  },
+  {
+    id: 'width-full-width',
+    label: 'Width - Full Width',
+    element: (
+      <Popover
+        className="slds-nubbin_left slds-popover_full-width"
+        closeButton
+        headerTitle="Header Title"
+      >
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+      </Popover>
+    )
   }
 ];

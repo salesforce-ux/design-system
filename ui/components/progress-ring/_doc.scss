@@ -2,43 +2,6 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 /**
- * The Progress Ring component renders a svg-based progress ring.
- *
- * Content (typically iconography) can be rendered inside the progress ring. For the current supported size of this progress ring, xxs sized icons should be used.
- *
- * ### Implementation Guidelines
- *
- * #### Defining Progress Ring Completeness
- *
- * The 'completeness' of the Progress Ring is indicated by the circular shape (pie slice), which is a svg shape of an arc.
- *
- * The path declaration looks complex, but is actually pretty straightforward, with just a few parts that need customization.
- *
- * The breakdown of the progress ring's `d` attribute can be broken down like so:
- * d="M 1 0 A 1 1 0 {isLong} 1 {arcX} {arcY} L 0 0"
- *
- * - isLong: a binary flag if the arc should 'take the long path' (used for > 50% fill)
- * - arcX: the arc's x position, formulated by Math.cos(2 * Math.PI * fillPercent)
- * - arcY: the arc's y position, formulated by Math.sin(2 * Math.PI * fillPercent)
- *
- * These calculations work in accordance with the defined svg viewBox, which goes from -1 to 1, on both x and y axis.
- *
- * #### Progress Ring Content
- *
- * The Progress Ring is currently designed to display any icon from our icon set.
- *
- * ### Accessibility Guidelines
- *
- * `.slds-progress-ring__progress` is the visual indicator of progress and needs proper aria roles and settings:
- * - `role` : `progressbar`
- * - `aria-valuemin` : `0` // the smallest valid value
- * - `aria-valuemax` : `100` // the largest valid value
- * - `aria-valuenow` : `{fill}` // the current fill value
- *
- * Proper accessibility guidelines should be followed on any icons used within this Progress Ring component.
- *
- * @summary Customizable and configurable progress ring. Will display progress in a circular progress bar factor, and is capable of displaying iconography inside of the ring structure.
- *
  * @base
  * @name progress-ring
  * @selector .slds-progress-ring

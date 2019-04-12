@@ -53,5 +53,30 @@ export const examples = [
         <UtilityIcon symbol="check" title="Complete" assistiveText="Complete" />
       </ProgressRing>
     )
+  },
+  {
+    id: 'progress-ring-large',
+    label: 'Large Size',
+    element: <ProgressRing percent={100} className="slds-progress-ring_large" />
+  },
+  {
+    id: 'progress-ring-active-step',
+    label: 'Active Step',
+    element: <ProgressRing percent={100} isActiveStep />
+  },
+  {
+    id: 'progress-ring-theme-warning',
+    label: 'Theme: Warning',
+    element: <ProgressRing percent={100} isWarning />
+  },
+  {
+    id: 'progress-ring-theme-expired',
+    label: 'Theme: Expired',
+    element: <ProgressRing percent={100} isExpired />
+  },
+  {
+    id: 'progress-ring-theme-complete',
+    label: 'Theme: Complete',
+    element: <ProgressRing percent={100} isComplete />
   }
 ];

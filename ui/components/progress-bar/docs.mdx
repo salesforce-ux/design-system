@@ -1,0 +1,137 @@
+import CodeView from '../../../shared/components/CodeView';
+import DisplayColumn from '../../../shared/components/DisplayColumn';
+import DisplayGrid from '../../../shared/components/DisplayGrid';
+import Blockquote from '../../../shared/components/Blockquote';
+import { getDisplayElementById } from '../../shared/helpers';
+import * as Base from './base/example';
+import * as Vertical from './vertical/example';
+
+<div className="doc lead">
+  A progress bar component communicates to the user the progress of a particular process.
+</div>
+
+## About Progress Bar
+
+## Base
+
+<CodeView>
+  {Base.default}
+</CodeView>
+
+### States
+
+### 0% complete
+
+<CodeView>
+  {getDisplayElementById(Base.states, 'zero')}
+</CodeView>
+
+### 25% complete
+
+<CodeView>
+  {getDisplayElementById(Base.states, '25')}
+</CodeView>
+
+### 50% complete
+
+<CodeView>
+  {getDisplayElementById(Base.states, '50')}
+</CodeView>
+
+### 75% complete
+
+<CodeView>
+  {getDisplayElementById(Base.states, '75')}
+</CodeView>
+
+### 100% complete
+
+<CodeView>
+  {getDisplayElementById(Base.states, '100')}
+</CodeView>
+
+## Examples
+### Descriptive Progress Bar
+
+<CodeView>
+  {getDisplayElementById(Base.examples, 'progress-bar-descriptive')}
+</CodeView>
+
+## Vertical
+
+<CodeView>
+  {Vertical.default}
+</CodeView>
+
+## States
+
+### 0% complete
+
+<CodeView>
+  {getDisplayElementById(Vertical.states, 'zero')}
+</CodeView>
+
+### 25% complete
+
+<CodeView>
+  {getDisplayElementById(Vertical.states, '25')}
+</CodeView>
+
+### 50% complete
+
+<CodeView>
+  {getDisplayElementById(Vertical.states, '50')}
+</CodeView>
+
+### 75% complete
+
+<CodeView>
+  {getDisplayElementById(Vertical.states, '75')}
+</CodeView>
+
+### 100% complete
+
+<CodeView>
+  {getDisplayElementById(Vertical.states, '100')}
+</CodeView>
+
+## Modifiers
+
+### Color
+<CodeView>
+  {getDisplayElementById(Base.examples, 'success')}
+</CodeView>
+
+### Radius
+<CodeView>
+  {getDisplayElementById(Base.examples, 'circular')}
+</CodeView>
+
+### Thickness
+
+<DisplayGrid>
+  <DisplayColumn>
+    <strong>X-Small</strong>
+    <CodeView toggleCode={false}>
+      {getDisplayElementById(Base.examples, 'thickness-x-small')}
+    </CodeView>
+  </DisplayColumn>
+  <DisplayColumn>
+    <strong>Small</strong>
+    <CodeView toggleCode={false}>
+      {getDisplayElementById(Base.examples, 'thickness-small')}
+    </CodeView>
+  </DisplayColumn>
+  <DisplayColumn>
+    <strong>Medium</strong>
+    <CodeView toggleCode={false}>
+      {getDisplayElementById(Base.examples, 'thickness-medium')}
+    </CodeView>
+  </DisplayColumn>
+  <DisplayColumn>
+    <strong>Large</strong>
+    <CodeView toggleCode={false}>
+      {getDisplayElementById(Base.examples, 'thickness-large')}
+    </CodeView>
+  </DisplayColumn>
+</DisplayGrid>

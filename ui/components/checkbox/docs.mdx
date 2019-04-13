@@ -1,0 +1,168 @@
+import CodeView from '../../../shared/components/CodeView';
+import CodeBlock from '../../../shared/components/CodeBlock';
+import Blockquote from '../../../shared/components/Blockquote';
+import * as CheckboxExamples from './base/example';
+import * as CheckboxFormElementExamples from './form-element/example';
+import { getDisplayElementById } from '../../shared/helpers';
+
+<div className="doc lead">
+  A checkable input that communicates if an option is true, false or indeterminate
+</div>
+
+## About Checkbox
+
+The ability to style checkboxes with CSS varies across browsers. To ensure that checkboxes look the same everywhere, we use a custom DOM. Pay close attention to the markup, because all elements must exist for the styles to work.
+
+### Accessibility
+
+Groups of checkboxes should be marked up using the fieldset and legend element. This helps someone using assistive technology to understand the question they're answering with the group of checkboxes. The fieldset is placed around the whole group and the legend contains the question.
+
+Custom checkboxes are created by applying the `.slds-checkbox` class to a `<label>` element. To remain accessible to all user agents, place `<input>` with `type="checkbox"` inside the `<label>` element. The `<input>` is then visually hidden, and the styling is placed on a span with the `.slds-checkbox_faux` class. The styling of the span changes based on whether the checkbox is selected or focused by using a pseudo-element. A second span with `.slds-form-element__label` contains the label text.
+
+When a single checkbox is required, `<div class="slds-checkbox">` should get `<abbr class="required" title="required">*</abbr>` added to the DOM, directly before the `<input type="checkbox" />` for visual indication that the checkbox is required.
+
+When a checkbox group is required, the `<fieldset>` should receive the class `.slds-is-required`. The `<legend>` should then get `<abbr class="required" title="required">*</abbr>` added to the DOM for visual indication that the checkbox group is required.
+
+As SLDS checkboxes rely on the `:checked` pseudo selector, and the indeterminate state is only accessible via JavaScript, the use of a CSS class on the input will be necessary to implement this in SLDS. Use JavaScript to add the class when the indeterminate property is set to true on the input.
+
+## Base
+
+The base variant of a checkbox is a single boolean value. The base checkbox is consumed by both a grouped checkbox and a checkbox within a form element.
+
+The [form element variant](#Form-Element) accommodates a top level label and additional functionality such as like help text and read only mode. Help text is no supported on a single checkbox.
+
+<CodeView>
+  {CheckboxExamples.default}
+</CodeView>
+
+## States
+
+### Required
+
+<CodeView>
+  {getDisplayElementById(CheckboxExamples.states, 'required')}
+</CodeView>
+
+### Error
+
+<CodeView>
+  {getDisplayElementById(CheckboxExamples.states, 'error')}
+</CodeView>
+
+### Disabled
+
+<CodeView>
+  {getDisplayElementById(CheckboxExamples.states, 'disabled')}
+</CodeView>
+
+#### Checked
+
+<CodeView>
+  {getDisplayElementById(CheckboxExamples.states, 'checked-and-disabled')}
+</CodeView>
+
+## Examples
+
+### Group
+
+<CodeView>
+  {getDisplayElementById(CheckboxExamples.examples, 'group')}
+</CodeView>
+
+#### Required
+
+<CodeView>
+  {getDisplayElementById(CheckboxExamples.examples, 'group-required')}
+</CodeView>
+
+#### Error
+
+<CodeView>
+  {getDisplayElementById(CheckboxExamples.examples, 'group-error')}
+</CodeView>
+
+#### Disabled
+
+<CodeView>
+  {getDisplayElementById(CheckboxExamples.examples, 'group-disabled')}
+</CodeView>
+
+### RTL (right to left direction)
+
+<CodeView>
+  {getDisplayElementById(CheckboxExamples.examples, 'rtl')}
+</CodeView>
+
+## Form Element
+
+<CodeView>
+  {CheckboxFormElementExamples.default}
+</CodeView>
+
+### States
+
+#### Checked
+
+<CodeView>
+  {getDisplayElementById(CheckboxFormElementExamples.states, 'checked')}
+</CodeView>
+
+#### Disabled
+
+<CodeView>
+  {getDisplayElementById(CheckboxFormElementExamples.states, 'disabled')}
+</CodeView>
+
+#### Checked and Disabled
+
+<CodeView>
+  {getDisplayElementById(CheckboxFormElementExamples.states, 'checked-disabled')}
+</CodeView>
+
+#### Error
+
+<CodeView>
+  {getDisplayElementById(CheckboxFormElementExamples.states, 'error')}
+</CodeView>
+
+#### Required
+
+<CodeView>
+  {getDisplayElementById(CheckboxFormElementExamples.states, 'required')}
+</CodeView>
+
+### View mode
+
+View mode is the read only state of a checkbox form element.
+
+#### Unchecked
+
+<CodeView>
+  {getDisplayElementById(CheckboxFormElementExamples.states, 'view-mode-unchecked')}
+</CodeView>
+
+#### Checked
+
+<CodeView>
+  {getDisplayElementById(CheckboxFormElementExamples.states, 'view-mode-checked')}
+</CodeView>
+
+### Examples
+
+#### With help text
+
+<CodeView>
+  {getDisplayElementById(CheckboxFormElementExamples.examples, 'help-text-icon')}
+</CodeView>
+
+#### Required with help text
+
+<CodeView>
+  {getDisplayElementById(CheckboxFormElementExamples.examples, 'required-help-text-icon')}
+</CodeView>
+
+#### Required with help text with tooltip
+
+<CodeView>
+  {getDisplayElementById(CheckboxFormElementExamples.examples, 'required-help-text-icon-tooltip')}
+</CodeView>

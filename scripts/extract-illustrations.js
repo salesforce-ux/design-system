@@ -6,9 +6,10 @@ import * as informational from '../ui/components/illustration/informational';
 import * as misc from '../ui/components/illustration/misc';
 import * as nodata from '../ui/components/illustration/nodata';
 import snakeCase from 'lodash/snakeCase';
-const fs = require('fs');
+import * as fs from 'fs';
+import * as path from 'path';
 
-const basedir = __dirname + '/..';
+const basedir = path.join(__dirname, '..');
 const outputDir = basedir + '/assets/images/illustrations';
 
 const stylecode = `
@@ -56,7 +57,7 @@ const nameMappings = {};
 modules.forEach(module_ => {
   for (var name in module_) {
     let realName = nameMappings[name] || snakeCase(name);
-    let filename = outputDir + '/' + realName + '.svg';
+    let filename = path.join(outputDir, '/', realName, '.svg');
     let output = ReactDOMServer.renderToStaticMarkup(module_[name]());
     output = output.replace('slds-illustration__svg', 'slds-illustration');
     let match = '1999/xlink">';

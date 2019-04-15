@@ -4,8 +4,8 @@
   "version": "2.9.0-dev",
   "author": "Salesforce",
   "slds": {
-    "name": "Summer ’19",
-    "id": "220"
+    "name": "Winter ’20",
+    "id": "222"
   },
   "important": [
     "'private' and 'config.slds.internal' should have the same value",
@@ -19,7 +19,7 @@
     "search": {
       "appId": "B2KKG101RI",
       "apiKey": "f289c1dd954797a3e57158c04a897d46",
-      "indexName": "summer-19"
+      "indexName": "winter-20"
     }
   },
   "devDependencies": {

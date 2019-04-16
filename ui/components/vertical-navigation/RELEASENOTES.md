@@ -4,6 +4,12 @@
 
 <!-- ## [Unreleased] -->
 
+## 2.9.0
+
+### Changed
+
+- Replaced active navigation item background token with `BRAND_PRIMARY_TRANSPARENT_10` branding token.
+
 ## 2.8.0
 
 ### Changed

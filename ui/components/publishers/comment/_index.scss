@@ -3,13 +3,13 @@
 
 /**
  * The comment publisher is found at the bottom of a discussion feed comment
- * thread. It contains basic publishing capibilities.
+ * thread. It contains basic publishing capabilities.
  *
  * The comment publisher is in a collapsed state by default. There are 4 states
  * of the discussion feed that provide different feedback to the user. First,
  * the collapsed state, this indicates the user has not interacted with the
  * comment publisher. When the user initiates an interaction with the publisher,
- * by either focusing of the textara or clicking the "Comment" button, through
+ * by either focusing of the textarea or clicking the "Comment" button, through
  * javascript the class of `slds-is-active` should be applied to the
  * `slds-publisher` element. This class will expand the publisher box and
  * display additional publisher actions.

@@ -3,6 +3,9 @@
 
 // Lightning Design System - Lightning Out
 
+// Before editing this file, know that this file is that `design-system-aura`
+// uses to generate the scoped version of the SLDS CSS
+
 @import 'init';
 
 #{$reset-wrapping-class} {
@@ -15,6 +18,7 @@
   @import 'touch/index';
   @import 'components/index';
   @import 'utilities/index';
+  @import 'core/vf-reset';
 
   // Print
   @import 'vendor/html5boilerplate-print';

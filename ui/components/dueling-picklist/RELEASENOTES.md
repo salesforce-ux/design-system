@@ -4,6 +4,13 @@
 
 <!-- ## [Unreleased] -->
 
+## 2.9.0
+
+### Fixed
+
+- Scrollbar not visible in narrow width containers
+  - `slds-dueling-list__options` is no longer set to a fixed `max-width` and instead is limited to 100%
+
 ## 2.7.0
 
 ### Changed

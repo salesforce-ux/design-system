@@ -13,6 +13,7 @@ import Vinyl from 'vinyl';
 // the pattern for all other gulp scripts
 const IGNORE = [
   /(.*)_JAVA_OPTIONS(.*)/i, // "Travis outputs this to make this interesting"
+  /Warning:(.*)/i, // Warnings shouldn't be considered errors
   /(.*)role=gridcell(.*)must be contained in, or owned by, an element with(.*)role=row/, // "An element with “role=gridcell“ must be contained in, or owned by, an element with “role=row“",
   /(.*)listbox(.*)for attribute(.*)aria-haspopup/, // "Bad value “listbox“ for attribute “aria-haspopup“ on element “div“.",
   /(.*)dialog(.*)for attribute(.*)aria-haspopup/, // "Bad value “dialog“ for attribute “aria-haspopup“ on element “div“.",

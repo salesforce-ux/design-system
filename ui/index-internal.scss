@@ -13,12 +13,12 @@
   // Resets
   @import 'vendor/normalize-reset';
   @include core($scoped: true, $globals: true);
+  @import 'core/vf-reset';
 
   // Framework
   @import 'touch/index';
   @import 'components/index';
   @import 'utilities/index';
-  @import 'core/vf-reset';
 
   // Print
   @import 'vendor/html5boilerplate-print';

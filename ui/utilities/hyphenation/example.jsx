@@ -3,10 +3,6 @@
 
 import React from 'react';
 
-export const Context = props => (
-  <div style={{ width: '200px' }}>{props.children}</div>
-);
-
 export let examples = [
   {
     id: 'default',

@@ -96,7 +96,7 @@ Note that \`.slds-hide\` and any of the \`.slds-show-*\` utility classes should 
       </div>
     ),
     description: `
-Responsive visibility classes will hide content on specific breakpoints. \`slds-show_[breakpoint]\` renders \`display: none\` when the the view port width is smaller than the breakpoint, and does nothing if it is bigger or equal. \`slds-hide_[breakpoint]\` does the oposite by rendering \`display: none\` when the the viewport width is bigger or equal than the breakpoint, and does nothing if it is smaller.
+Responsive visibility classes will hide content on specific breakpoints. \`slds-show_[breakpoint]\` renders \`display: none\` when the the view port width is smaller than the breakpoint, and does nothing if it is bigger or equal. \`slds-hide_[breakpoint]\` does the opposite by rendering \`display: none\` when the the viewport width is bigger or equal than the breakpoint, and does nothing if it is smaller.
 
 |Class Name|Less than 320px|X-Small (>= 320px)|Small (>= 480px)|Medium (>= 768px)|Large (>= 1024px)|X-Large (>= 1280px)|
 |---|---|---|---|---|---|---|

@@ -2,17 +2,6 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 /**
- * Spacing indicates `margin` and `padding`. The base unit of all our spacing metrics is **4**.
- *
- * - Most components already come with spacing included. These utility classes are for added convenience in laying out components.
- * - Classes prefixed in `slds-p-` are used for adding **padding**. Classes prefixed by `slds-m-` are used for adding [margins](/utilities/margin).
- * - The directions available for the spacing classes are `top`, `right`, `bottom`, and `left`.
- * - You can use the `vertical` shortcut for both `top` and `bottom`, `horizontal` for both `right` and `left`, and `around` for all sides.
- * - Use the `_xxx-small` through `_xx-large` scale to choose the size needed.
- * - Where **vertical centering** is required, check out our [centered media object](/utilities/media-objects) instead of applying extra `margin` or `padding`.
- *
- * @summary Adjust whitespace with horizontal and vertical spacing helpers
- *
  * @utility
  * @name padding
  * @selector [class*='slds-p-'], [class*='slds-var-p-']

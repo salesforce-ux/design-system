@@ -1,0 +1,32 @@
+import CodeView from '../../../shared/components/CodeView.jsx';
+import { getDisplayElementById } from '../../shared/helpers';
+import * as Base from './example';
+
+<div className="doc lead">
+  A box theme applies spacing, a border, and rounded corners to areas of content.
+</div>
+
+## About Box
+Three padding settings are available. You can also add a [color theme](/utilities/themes/#flavor-color) to your box.
+
+## Base
+<CodeView>
+  {getDisplayElementById(Base.examples, 'default')}
+</CodeView>
+
+## Examples
+
+### Small
+<CodeView>
+  {getDisplayElementById(Base.examples, 'small')}
+</CodeView>
+
+### X-Small
+<CodeView>
+  {getDisplayElementById(Base.examples, 'x-small')}
+</CodeView>
+
+### XX-Small
+<CodeView>
+  {getDisplayElementById(Base.examples, 'xx-small')}
+</CodeView>

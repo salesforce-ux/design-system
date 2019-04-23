@@ -1,0 +1,32 @@
+import CodeView from '../../../shared/components/CodeView.jsx';
+import { getDisplayElementById } from '../../shared/helpers';
+import * as Base from './example';
+
+<div className="doc lead">
+  Make a containing box scrollable when scrolling is available.
+</div>
+
+## About Scrollable
+Use the scrollable utility when you need to provide scrolling within a section of a page. For example, when the content within an element exceeds either the width or height of the element, applying `.slds-scrollable_y` provides a vertical scrollbar, while `.slds-scrollable_x` adds a horizontal scrollbar.
+
+## Examples
+
+### Auto
+<CodeView>
+  {getDisplayElementById(Base.examples, 'auto')}
+</CodeView>
+
+### None
+<CodeView>
+  {getDisplayElementById(Base.examples, 'none')}
+</CodeView>
+
+### X-Axis
+<CodeView>
+  {getDisplayElementById(Base.examples, 'x-axis')}
+</CodeView>
+
+### Y-Axis
+<CodeView>
+  {getDisplayElementById(Base.examples, 'y-axis')}
+</CodeView>

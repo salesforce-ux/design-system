@@ -3,23 +3,6 @@
 
 import React from 'react';
 
-export const Context = props => (
-  <div style={{ background: '##F4F6F9', padding: '1rem' }}>
-    <div
-      className="slds-align_absolute-center"
-      style={{
-        textAlign: 'center',
-        width: '8rem',
-        backgroundColor: '#fff'
-      }}
-    >
-      {props.children}
-    </div>
-  </div>
-);
-
-export default <div>This should have a border.</div>;
-
 export let examples = [
   {
     id: 'top',

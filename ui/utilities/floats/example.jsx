@@ -3,16 +3,6 @@
 
 import React from 'react';
 
-export const Context = props => (
-  <div className="slds-clearfix">{props.children}</div>
-);
-
-export default (
-  <div>
-    <p>I’m floooaaaating</p>
-  </div>
-);
-
 export let examples = [
   {
     id: 'left',

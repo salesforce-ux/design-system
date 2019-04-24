@@ -92,7 +92,7 @@ export let examples = [
     )
   },
   {
-    id: '7-column',
+    id: 'seven-column',
     label: '7 Column Span',
     element: (
       <div className="demo-only demo-only--sizing slds-grid slds-wrap">
@@ -112,7 +112,7 @@ export let examples = [
     )
   },
   {
-    id: '8-column',
+    id: 'eight-column',
     label: '8 Column Span',
     element: (
       <div className="demo-only demo-only--sizing slds-grid slds-wrap">
@@ -135,7 +135,7 @@ export let examples = [
     )
   },
   {
-    id: '12-column',
+    id: 'twelve-column',
     label: '12 Column Span',
     element: (
       <div className="demo-only demo-only--sizing slds-grid slds-wrap">

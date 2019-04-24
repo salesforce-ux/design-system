@@ -1,0 +1,27 @@
+import CodeView from '../../../shared/components/CodeView.jsx';
+import { getDisplayElementById } from '../../shared/helpers';
+import * as Base from './example';
+
+<div className="doc lead">
+  Themes apply a set of color styles to an area.
+</div>
+
+## About Themes
+Use a color theme to apply color to the background and text. Some color themes apply a background image or texture.
+
+## Base
+<CodeView>
+  {getDisplayElementById(Base.examples, 'default')}
+</CodeView>
+
+## Examples
+
+### Shade
+<CodeView>
+  {getDisplayElementById(Base.examples, 'shade')}
+</CodeView>
+
+### Texture
+<CodeView>
+  {getDisplayElementById(Base.examples, 'texture')}
+</CodeView>

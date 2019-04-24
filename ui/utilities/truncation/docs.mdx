@@ -1,0 +1,42 @@
+import CodeView from '../../../shared/components/CodeView.jsx';
+import Blockquote from '../../../shared/components/Blockquote.jsx';
+import { getDisplayElementById } from '../../shared/helpers';
+import * as Base from './example';
+
+<div className="doc lead">
+  When applying truncation, place the full text in a title attribute so that it’s accessible on hover.
+</div>
+
+<Blockquote type="note" heading="note">
+  There is an iOS bug that is triggered when you add a component from Visualforce into S1 using an iFrame. The truncated element does not recognize its width.
+</Blockquote>
+
+## About Truncation
+If problems occur when using truncation with elements that use flexbox, you might need to add the `.slds-has-flexi-truncate` class on the flexbox child node ( `.slds-col` or `.slds-col_padded` elements) that contains the truncated text.
+
+## Examples
+
+### Single Line
+<CodeView>
+  {getDisplayElementById(Base.examples, 'fluid')}
+</CodeView>
+
+### Single Line with Nested Grid Containers
+<CodeView>
+  {getDisplayElementById(Base.examples, 'nested-grids')}
+</CodeView>
+
+### Maximum Width of 25%
+<CodeView>
+  {getDisplayElementById(Base.examples, '25%')}
+</CodeView>
+
+### Maximum Width of 33%
+<CodeView>
+  {getDisplayElementById(Base.examples, '33%')}
+</CodeView>
+
+### Maximum Width of 75%
+<CodeView>
+  {getDisplayElementById(Base.examples, '75%')}
+</CodeView>

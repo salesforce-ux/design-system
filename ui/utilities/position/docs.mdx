@@ -1,0 +1,37 @@
+import CodeView from '../../../shared/components/CodeView.jsx';
+import { getDisplayElementById } from '../../shared/helpers';
+import * as Base from './example';
+
+<div className="doc lead">
+  Positioning utilities give you the ability to change the position property of an element.
+</div>
+
+## Examples
+
+### Fixed
+`.slds-is-fixed` can be used to position a container relative to the viewport.
+
+<CodeView>
+  {getDisplayElementById(Base.examples, 'fixed')}
+</CodeView>
+
+### Absolute
+`.slds-is-absolute` can be used to position a container relative to its closest ancestor with relative positioning.
+
+<CodeView>
+  {getDisplayElementById(Base.examples, 'absolute')}
+</CodeView>
+
+### Relative
+`.slds-is-relative` can be used to contain children if children are absolutely positioned and out of flow. It is also used to position element without changing layout.
+
+<CodeView>
+  {getDisplayElementById(Base.examples, 'relative')}
+</CodeView>
+
+### Static
+`.slds-is-static` resets positioning of element back to normal behavior.
+
+<CodeView>
+  {getDisplayElementById(Base.examples, 'static')}
+</CodeView>

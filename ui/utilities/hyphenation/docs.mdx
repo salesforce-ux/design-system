@@ -1,0 +1,15 @@
+import CodeView from '../../../shared/components/CodeView.jsx';
+import { getDisplayElementById } from '../../shared/helpers';
+import * as Base from './example';
+
+<div className="doc lead">
+  The hyphenation class should be placed on text that might be served in narrow width containers and is not truncated.
+</div>
+
+## About Hyphenation
+This will allow the text to break, or hyphenate, depending on the browser's capabilities. Chrome currently doesn't show the hyphenation, but the bug is currently marked fixed, so it should soon.
+
+## Base
+<CodeView>
+  {getDisplayElementById(Base.examples, 'default')}
+</CodeView>

@@ -2,8 +2,6 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 /**
- * @summary Specify the visibility of elements by showing and hiding. It's best practice to swap the hide and show classes rather than use them concurrently, as this will cause issues.
- *
  * @utility
  * @name visibility
  * @selector [class*='show'], [class*='hide'], [class*='assistive-text']

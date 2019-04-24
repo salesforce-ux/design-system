@@ -1,0 +1,39 @@
+import CodeView from '../../../shared/components/CodeView.jsx';
+import Blockquote from '../../../shared/components/Blockquote.jsx';
+import { getDisplayElementById } from '../../shared/helpers';
+import * as Base from './example';
+
+<div className="doc lead">
+  Use a float to pull an element out of the document’s normal flow and to align it with the left or right side of the container.
+</div>
+
+## About Floats
+To float an element on the left, add the `.slds-float_left` class to the element. To float it on the right, add the `.slds-float_right` class.
+
+<Blockquote type="note" header="Note">
+  The floated element must be first in the document flow, even if it renders on the right.
+</Blockquote>
+
+If you want the parent of the floated element to contain the floats, add the `.slds-clearfix` class to the parent.
+
+## Examples
+
+### Left
+<CodeView>
+  {getDisplayElementById(Base.examples, 'left')}
+</CodeView>
+
+### Right
+<CodeView>
+  {getDisplayElementById(Base.examples, 'right')}
+</CodeView>
+
+### None
+<CodeView>
+  {getDisplayElementById(Base.examples, 'none')}
+</CodeView>
+
+### Clearfix
+<CodeView>
+  {getDisplayElementById(Base.examples, 'clearfix')}
+</CodeView>

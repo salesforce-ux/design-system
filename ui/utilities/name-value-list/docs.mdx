@@ -1,0 +1,24 @@
+import CodeView from '../../../shared/components/CodeView.jsx';
+import { getDisplayElementById } from '../../shared/helpers';
+import * as Base from './example';
+
+<div className="doc lead">
+  An unordered list that describes a name/value pairing.
+</div>
+
+## Examples
+
+### Horizontal
+<CodeView>
+  {getDisplayElementById(Base.examples, 'name-value-pair-horizontal')}
+</CodeView>
+
+### Inline
+<CodeView>
+  {getDisplayElementById(Base.examples, 'name-value-pair-inline')}
+</CodeView>
+
+### Stacked
+<CodeView>
+  {getDisplayElementById(Base.examples, 'name-value-pair-stacked')}
+</CodeView>

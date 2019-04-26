@@ -1,0 +1,109 @@
+import CodeView from '../../../shared/components/CodeView';
+import { getDisplayElementById } from '../../shared/helpers';
+import * as Base from './base/example';
+
+<div className="doc lead">
+  Spinners are CSS loading indicators that should be shown when retrieving data or performing slow computations. In some cases, the first time a parent component loads, a stencil is preferred to indicate network activity.
+</div>
+
+## About Spinners
+
+To use the spinner in a component, the parent of the spinner should be set to `position:relative`. You can use the utility class `.slds-is-relative` or add the declaration to your custom component CSS. If you are using the spinner in an `iframe` and dynamically loading DOM nodes after the page has loaded, it is recommended that you set the `.slds-spinner_container` to `position:fixed` so that it remains centered in the viewport. The background overlay for the spinner is an optional element.
+
+#### Accessibility
+
+A spinner should have the Aria `role="status"` and contain assistive text that explains what is currently happening.
+
+## Base
+
+<CodeView>
+  {Base.default}
+</CodeView>
+
+## Examples
+
+### Without container
+
+<CodeView>
+  {getDisplayElementById(Base.examples, 'without-container')}
+</CodeView>
+
+### With container
+
+<CodeView>
+  {getDisplayElementById(Base.examples, 'with-container')}
+</CodeView>
+
+### Fixed container
+
+<CodeView>
+  {getDisplayElementById(Base.examples, 'fixed-container')}
+</CodeView>
+
+### Right to left support
+
+<CodeView>
+  {getDisplayElementById(Base.examples, 'right-to-left-medium')}
+</CodeView>
+
+## Layout
+
+### Inlined
+
+<CodeView>
+  {getDisplayElementById(Base.examples, 'inlined')}
+</CodeView>
+
+## Color
+
+### Inverse
+
+<CodeView>
+  {getDisplayElementById(Base.examples, 'inverse')}
+</CodeView>
+
+### Brand
+
+<CodeView>
+  {getDisplayElementById(Base.examples, 'brand')}
+</CodeView>
+
+## Timing
+
+### Delayed
+
+<CodeView>
+  {getDisplayElementById(Base.examples, 'delayed')}
+</CodeView>
+
+## Sizing
+
+### Xx-Small
+
+<CodeView>
+  {getDisplayElementById(Base.examples, 'xx-small')}
+</CodeView>
+
+### X-Small
+
+<CodeView>
+  {getDisplayElementById(Base.examples, 'x-small')}
+</CodeView>
+
+### Small
+
+<CodeView>
+  {getDisplayElementById(Base.examples, 'small')}
+</CodeView>
+
+### Medium
+
+<CodeView>
+  {getDisplayElementById(Base.examples, 'medium')}
+</CodeView>
+
+### Large
+
+<CodeView>
+  {getDisplayElementById(Base.examples, 'large')}
+</CodeView>

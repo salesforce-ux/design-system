@@ -1,0 +1,37 @@
+import CodeView from '../../../shared/components/CodeView';
+import * as Base from './base/example';
+import { getDisplayElementById } from '../../shared/helpers';
+
+<div className="doc lead">
+  Use Summary Detail to show and hide details while always showing a summary
+</div>
+
+## About Summary Detail
+The summary detail component uses a button to show and hide content while showing an overall summary
+
+## Base
+
+<CodeView style={{ height: '150px' }}>
+  {Base.default}
+</CodeView>
+
+## States
+
+### Closed
+
+<CodeView style={{ height: '150px' }}>
+  {getDisplayElementById(Base.states, 'closed')}
+</CodeView>
+
+## Examples
+
+### Closed with Complex title
+<CodeView style={{ height: '150px' }}>
+  {getDisplayElementById(Base.examples, 'closed-with-complex-title')}
+</CodeView>
+
+### Open with Complex title
+
+<CodeView style={{ height: '150px' }}>
+  {getDisplayElementById(Base.examples, 'open-with-complex-title')}
+</CodeView>

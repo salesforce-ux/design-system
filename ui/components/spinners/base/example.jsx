@@ -117,6 +117,72 @@ export let examples = [
     )
   },
   {
+    id: 'brand',
+    label: 'With brand colors',
+    element: (
+      <Demo>
+        <SpinnerContainer>
+          <Spinner className="slds-spinner_medium slds-spinner_brand" />
+        </SpinnerContainer>
+      </Demo>
+    )
+  },
+  {
+    id: 'xx-small',
+    label: 'Size Xx-Small',
+    element: (
+      <Demo>
+        <SpinnerContainer>
+          <Spinner className="slds-spinner_xx-small" />
+        </SpinnerContainer>
+      </Demo>
+    )
+  },
+  {
+    id: 'x-small',
+    label: 'Size X-Small',
+    element: (
+      <Demo>
+        <SpinnerContainer>
+          <Spinner className="slds-spinner_x-small" />
+        </SpinnerContainer>
+      </Demo>
+    )
+  },
+  {
+    id: 'small',
+    label: 'Size Small',
+    element: (
+      <Demo>
+        <SpinnerContainer>
+          <Spinner className="slds-spinner_small" />
+        </SpinnerContainer>
+      </Demo>
+    )
+  },
+  {
+    id: 'medium',
+    label: 'Size Medium',
+    element: (
+      <Demo>
+        <SpinnerContainer>
+          <Spinner className="slds-spinner_medium" />
+        </SpinnerContainer>
+      </Demo>
+    )
+  },
+  {
+    id: 'large',
+    label: 'Size Large',
+    element: (
+      <Demo>
+        <SpinnerContainer>
+          <Spinner className="slds-spinner_large" />
+        </SpinnerContainer>
+      </Demo>
+    )
+  },
+  {
     id: 'right-to-left-xx-small',
     label: 'RTL support - Size Xx-Small',
     element: (

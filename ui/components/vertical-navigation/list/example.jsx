@@ -50,7 +50,7 @@ export let NavVerticalItem = props => (
     <a
       href="javascript:void(0);"
       className="slds-nav-vertical__action"
-      aria-current={props.active ? 'page' : null}
+      aria-current={props.active}
     >
       {props.children}
     </a>
@@ -58,9 +58,21 @@ export let NavVerticalItem = props => (
 );
 
 NavVerticalItem.propTypes = {
-  active: PropTypes.bool,
+  active: PropTypes.oneOf([
+    true,
+    undefined,
+    'page',
+    'step',
+    'location',
+    'date',
+    'time'
+  ]),
   className: PropTypes.string,
   children: PropTypes.node
+};
+
+NavVerticalItem.defaultProps = {
+  active: undefined
 };
 
 export let NavVerticalSection = props => {
@@ -92,13 +104,11 @@ export let NavVerticalSection = props => {
         className
       )}
     >
-      {!hasExpandableSection &&
-        !isNavVerticalRadioSet &&
-        title && (
-          <h2 id={headerId} className="slds-nav-vertical__title">
-            {title}
-          </h2>
-        )}
+      {!hasExpandableSection && !isNavVerticalRadioSet && title && (
+        <h2 id={headerId} className="slds-nav-vertical__title">
+          {title}
+        </h2>
+      )}
       {hasExpandableSection && (
         <Button
           className="slds-button_reset slds-nav-vertical__action slds-nav-vertical__action_overflow"
@@ -309,8 +319,7 @@ export let examples = [
             <NavVerticalItem active>
               Recent
               <span className="slds-badge slds-col_bump-left">
-                <span className="slds-assistive-text">:</span>
-                3
+                <span className="slds-assistive-text">:</span>3
                 <span className="slds-assistive-text">New Items</span>
               </span>
             </NavVerticalItem>

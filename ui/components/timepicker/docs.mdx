@@ -1,0 +1,54 @@
+import CodeView from '../../../shared/components/CodeView';
+import Blockquote from '../../../shared/components/Blockquote';
+import * as Base from './base/example';
+import { getDisplayElementById } from '../../shared/helpers';
+
+<div className="doc lead">
+  A timepicker is an autocomplete text input to capture a time.
+</div>
+
+## About Timepicker
+#### Implementation Notes and Requirements
+
+A timepicker is used to select a single time. The component is using the combobox HTML structure and has the following markup requirements:
+
+**Desktop**
+- Add `.slds-is-open` to the element with `.slds-dropdown-trigger` to invoke the dropdown that contains the list of time options.
+- The `.slds-has-focus` modifier class is required on the `.slds-listbox__option` element that has focus.
+- The `.slds-is-selected` modifier class is required on the `.slds-listbox__option` element that has been selected.
+
+**Mobile**
+- When on mobile, we want to leverage the native timepicker by changing the `input` type from `text` to `time`
+- When switching `input type="text"` to `input type="time"` for mobile, we need to remove the ARIA attributes. The native rendering doesn't require these.
+  - On the element with the class `slds-combobox`, please remove `role="combobox"`, `aria-expanded`, and `aria-haspopup`.
+  - On the `input` that we just added `type="time"` too, please remove `aria-controls`, `aria-autocomplete`, and `role="textbox"`.
+
+<Blockquote type="a11y" header="Accessibility Note">
+  Please follow the implementation guidelines found under [Combobox](/components/combobox)
+</Blockquote>
+
+## Base
+
+<CodeView style={{ height: '15rem' }}>
+  {Base.default}
+</CodeView>
+
+## States
+
+### Focused
+
+<CodeView style={{ height: '15rem' }}>
+  {getDisplayElementById(Base.states, 'focused')}
+</CodeView>
+
+### Open - Item Focused
+
+<CodeView style={{ height: '15rem' }}>
+  {getDisplayElementById(Base.states, 'open-item-focused')}
+</CodeView>
+
+### Open - Time selected
+
+<CodeView style={{ height: '15rem' }}>
+  {getDisplayElementById(Base.states, 'time-selection')}
+</CodeView>

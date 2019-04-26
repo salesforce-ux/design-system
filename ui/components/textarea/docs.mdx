@@ -1,0 +1,42 @@
+import CodeView from '../../../shared/components/CodeView';
+import { getDisplayElementById } from '../../shared/helpers';
+import Blockquote from '../../../shared/components/Blockquote';
+import * as Textareas from './base/example';
+
+<div className="doc lead">
+  Textarea inputs are used for freeform data entry.
+</div>
+
+## About Textarea
+
+You can style the HTML `<textarea>` element to align with the Salesforce brand by using the class `.slds-textarea` on the `<textarea>` element.
+
+<CodeView>
+  {Textareas.default}
+</CodeView>
+
+## States
+
+### Disabled
+
+<CodeView>
+  {getDisplayElementById(Textareas.states, "disabled")}
+</CodeView>
+
+### Required
+
+<CodeView>
+  {getDisplayElementById(Textareas.states, "required")}
+</CodeView>
+
+### Error
+
+<CodeView>
+  {getDisplayElementById(Textareas.states, "error")}
+</CodeView>
+
+### Read only
+
+<CodeView>
+  {getDisplayElementById(Textareas.states, "read-only")}
+</CodeView>

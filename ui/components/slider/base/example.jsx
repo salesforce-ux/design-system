@@ -204,5 +204,14 @@ export let examples = [
         </div>
       </FormElement>
     )
+  },
+  {
+    id: 'vertical',
+    label: 'Vertical',
+    element: (
+      <FormElement labelContent={<SliderLabel />} inputId={sliderId}>
+        <Slider value="50" className="slds-slider_vertical" />
+      </FormElement>
+    )
   }
 ];

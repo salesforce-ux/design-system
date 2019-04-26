@@ -2,15 +2,6 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 /**
- * The HTML `<select>` element presents a menu of options. The options within
- * the menu are represented by `<option>` elements that you can group with
- * `<optgroup>` elements. You can pre-select options for the user.
- *
- * For selecting multiple options, we have created a custom component
- * called the [Dueling Picklist](/components/dueling-picklist) to ensure
- * Accessibility and ease-of-use. Please refer to that documentation for
- * the interaction model, markup, and Accessibility requirements.
- *
  * @summary Select element presents a menu of options. For selecting multiple options, see Dueling Picklist.
  *
  * @base

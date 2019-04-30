@@ -15,6 +15,7 @@ class VerticalTabs extends React.Component {
 
   render() {
     const { currentTabIndex } = this.state;
+    const { itemFocused, tabs } = this.props;
 
     return (
       <div className="slds-vertical-tabs">
@@ -23,8 +24,11 @@ class VerticalTabs extends React.Component {
           role="tablist"
           aria-orientation="vertical"
         >
-          {this.props.tabs.map((tab, index) => {
-            const isActive = index === currentTabIndex ? 'slds-is-active' : '';
+          {tabs.map((tab, index) => {
+            const isActive =
+              index === currentTabIndex && !itemFocused ? 'slds-is-active' : '';
+            const hasFocus =
+              index === currentTabIndex && itemFocused ? 'slds-has-focus' : '';
             const tabIndex = index === currentTabIndex ? 0 : -1;
             const isAriaSelected = index === currentTabIndex ? 'true' : 'false';
             const ariaControlId = `slds-vertical-tabs-${index}`;
@@ -32,7 +36,11 @@ class VerticalTabs extends React.Component {
 
             return (
               <li
-                className={classNames('slds-vertical-tabs__nav-item', isActive)}
+                className={classNames(
+                  'slds-vertical-tabs__nav-item',
+                  isActive,
+                  hasFocus
+                )}
                 title={tab.label}
                 role="presentation"
                 key={tabNavId}
@@ -62,7 +70,7 @@ class VerticalTabs extends React.Component {
           })}
         </ul>
 
-        {this.props.tabs.map((tab, index) => {
+        {tabs.map((tab, index) => {
           const tabContentId = `slds-vertical-tabs-${index}`;
           const showHideClass =
             index === currentTabIndex ? 'slds-show' : 'slds-hide';
@@ -79,7 +87,7 @@ class VerticalTabs extends React.Component {
               aria-labelledby={ariaLabelledBy}
               key={tabContentId}
             >
-              {this.props.tabs[currentTabIndex].content}
+              {tabs[currentTabIndex].content}
             </div>
           );
         })}

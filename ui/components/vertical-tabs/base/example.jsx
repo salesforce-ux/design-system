@@ -17,5 +17,10 @@ export let examples = [
     id: 'with-badges',
     label: 'With badges',
     element: <VerticalTabs tabs={Snapshot.exampleTabsWithBadges} />
+  },
+  {
+    id: 'item-focus',
+    label: 'Item Focus',
+    element: <VerticalTabs itemFocused tabs={Snapshot.exampleTabs} />
   }
 ];

@@ -29,12 +29,12 @@ import {
   Td,
   ReadOnlyCell
 } from '../../data-tables/';
-import { PillContainer } from '../../pills/base/example';
 import {
   ListboxPills,
   ListboxPillsItem,
-  ListboxPill
-} from '../../pills/listbox-of-pill-options/example';
+  ListboxPill,
+  PillContainer
+} from '../../pills';
 
 /* -----------------------------------------------------------------------------
     Variables and Objects

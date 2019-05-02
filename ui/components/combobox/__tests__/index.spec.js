@@ -1,11 +1,7 @@
 /* eslint-env jest */
 import React from 'react';
 import { ComboboxContainer, ListboxDropdown } from '../base/example';
-import {
-  ListboxPills,
-  ListboxPillsItem,
-  ListboxPill
-} from '../../pills/listbox-of-pill-options/example';
+import { ListboxPills, ListboxPillsItem, ListboxPill } from '../../pills';
 import Combobox, { ComboboxGroup } from '../';
 import ObjectSwitcher from '../object-switcher/';
 import Listbox, { ListboxGroup, ListboxWrapper } from '../listbox/';

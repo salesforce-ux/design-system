@@ -5,7 +5,7 @@ import React from 'react';
 import ButtonIcon from '../../button-icons/';
 import { Checkbox } from '../../checkbox/base/example';
 import { Select } from '../../select/base/example';
-import { Pill, PillContainer } from '../../pills/base/example';
+import { Pill, PillContainer } from '../../pills';
 import { FormElement } from '../../form-element';
 import SvgIcon from '../../../shared/svg-icon';
 import classNames from 'classnames';

@@ -26,11 +26,7 @@ import {
   ListboxItem,
   EntityOption
 } from '../../combobox/base/example';
-import {
-  ListboxPills,
-  ListboxPillsItem,
-  ListboxPill
-} from '../../pills/listbox-of-pill-options/example';
+import { ListboxPills, ListboxPillsItem, ListboxPill } from '../../pills';
 import SvgIcon from '../../../shared/svg-icon';
 import classNames from 'classnames';
 import _ from '../../../shared/helpers';

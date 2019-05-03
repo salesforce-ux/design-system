@@ -4,4 +4,5 @@
 imports:
 - ./background-color.yml
 - ./border-color.yml
+- ./palette-colors.yml
 - ./text-color.yml

@@ -532,7 +532,8 @@ export const RowTh = props => {
   const computedClasses = classNames({
     'slds-cell-edit': props.isEditable,
     'slds-has-focus': props.hasFocus,
-    'slds-tree__item': props.type === 'treegrid'
+    'slds-tree__item': props.type === 'treegrid',
+    'slds-is-hovered': props.isItemHovered
   });
 
   return (

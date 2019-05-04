@@ -7,7 +7,7 @@ import classNames from 'classnames';
 import SvgIcon from '../../../shared/svg-icon';
 import { Menu, MenuList, MenuItem } from '../../menus/dropdown/example';
 import ButtonIcon from '../../button-icons/';
-import { WaffleIcon } from '../../dynamic-icons/waffle/example';
+import WaffleIcon from '../../dynamic-icons/waffle';
 
 // Context Item Dropdown
 const contextDropdown = (

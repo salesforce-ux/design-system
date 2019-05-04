@@ -1,0 +1,176 @@
+import CodeView from '../../../shared/components/CodeView';
+import { getDisplayElementById } from '../../shared/helpers';
+import * as EllieExamples from './ellie/example';
+import * as EqExamples from './eq/example';
+import * as GlobalActionHelpExamples from './global-action-help/example';
+import * as ScoreExamples from './score/example';
+import * as StrengthExamples from './strength/example';
+import * as TrendExamples from './trend/example';
+import * as TypingExamples from './typing/example';
+import * as WaffleExamples from './waffle/example';
+
+<div className="lead doc">
+  A set of delightful animated icons
+</div>
+
+## Ellie
+
+<CodeView>
+  {EllieExamples.default}
+</CodeView>
+
+### Paused
+
+<CodeView>
+  {getDisplayElementById(EllieExamples.states, 'paused')}
+</CodeView>
+
+### Static
+
+<CodeView>
+  {getDisplayElementById(EllieExamples.states, 'static')}
+</CodeView>
+
+## Eq
+
+<CodeView>
+  {EqExamples.default}
+</CodeView>
+
+## Global Action Help
+
+<CodeView>
+  {GlobalActionHelpExamples.default}
+</CodeView>
+
+## Score
+
+<CodeView>
+  {ScoreExamples.default}
+</CodeView>
+
+### Positive
+
+<CodeView>
+  {getDisplayElementById(ScoreExamples.states, 'positive')}
+</CodeView>
+
+### Negative
+
+<CodeView>
+  {getDisplayElementById(ScoreExamples.states, 'negative')}
+</CodeView>
+
+## Strength
+
+<CodeView>
+  {StrengthExamples.default}
+</CodeView>
+
+### Strength: 1
+
+<CodeView>
+  {getDisplayElementById(StrengthExamples.states, 'strength-1')}
+</CodeView>
+
+### Strength: 2
+
+<CodeView>
+  {getDisplayElementById(StrengthExamples.states, 'strength-2')}
+</CodeView>
+
+### Strength: 3
+
+<CodeView>
+  {getDisplayElementById(StrengthExamples.states, 'strength-3')}
+</CodeView>
+
+### Strength: -1
+
+<CodeView>
+  {getDisplayElementById(StrengthExamples.states, 'strength-negative-1')}
+</CodeView>
+
+### Strength: -2
+
+<CodeView>
+  {getDisplayElementById(StrengthExamples.states, 'strength-negative-2')}
+</CodeView>
+
+### Strength: -3
+
+<CodeView>
+  {getDisplayElementById(StrengthExamples.states, 'strength-negative-3')}
+</CodeView>
+
+### Animated on load
+
+<CodeView>
+  {getDisplayElementById(StrengthExamples.states, 'animated')}
+</CodeView>
+
+### Animated on load (negative)
+
+<CodeView>
+  {getDisplayElementById(StrengthExamples.states, 'animated-negative')}
+</CodeView>
+
+### Paused
+
+<CodeView>
+  {getDisplayElementById(StrengthExamples.states, 'paused')}
+</CodeView>
+
+## Trend
+
+<CodeView>
+  {TrendExamples.default}
+</CodeView>
+
+### Down
+
+<CodeView>
+  {getDisplayElementById(TrendExamples.states, 'down')}
+</CodeView>
+
+### Up
+
+<CodeView>
+  {getDisplayElementById(TrendExamples.states, 'up')}
+</CodeView>
+
+### Static (no animation)
+
+<CodeView>
+  {getDisplayElementById(TrendExamples.states, 'static')}
+</CodeView>
+
+### Paused
+
+<CodeView>
+  {getDisplayElementById(TrendExamples.states, 'paused')}
+</CodeView>
+
+## Typing
+
+<CodeView>
+  {TypingExamples.default}
+</CodeView>
+
+### Paused
+
+<CodeView>
+  {getDisplayElementById(TypingExamples.states, 'paused')}
+</CodeView>
+
+### Static
+
+<CodeView>
+  {getDisplayElementById(TypingExamples.states, 'static')}
+</CodeView>
+
+## Waffle
+
+<CodeView>
+  {WaffleExamples.default}
+</CodeView>

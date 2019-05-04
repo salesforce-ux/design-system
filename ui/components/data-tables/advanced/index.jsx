@@ -5,7 +5,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { IsDependentOn } from '../../../shared/helpers';
 
-import { Score } from '../../dynamic-icons/score/example';
+import Score from '../../dynamic-icons/score';
 import MediaObject from '../../../utilities/media-objects/index.react';
 import { Input } from '../../input/base/example';
 import { FormElement } from '../../form-element';
@@ -148,8 +148,8 @@ ProductPriceCell.propTypes = {
 };
 
 /**
-  * @name ProductItemDetailsCell - A common cell container for product details
-*/
+ * @name ProductItemDetailsCell - A common cell container for product details
+ */
 export const ProductItemDetailsCell = props => (
   <MediaObject
     figureLeft={
@@ -188,8 +188,8 @@ ProductItemDetailsCell.propTypes = {
 };
 
 /**
-  * @name ProductQuantityCell - A common cell container for product quantity field
-*/
+ * @name ProductQuantityCell - A common cell container for product quantity field
+ */
 export const ProductQuantityCell = props => (
   <FormElement
     inputId={props.inputId}

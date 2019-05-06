@@ -30,23 +30,24 @@ It can be configured to show one or both of those color selection interfaces.
   {Base.default}
 </CodeView>
 
-## States
-### Summary Error
+### States
+
+#### Summary Error
 <CodeView>
   {getDisplayElementById(Base.states, 'summary-error')}
 </CodeView>
 
-### Open, default tab selected
+#### Open, default tab selected
 <CodeView>
   {getDisplayElementById(Base.states, 'color-picker-open')}
 </CodeView>
 
-### Open, custom tab selected
+#### Open, custom tab selected
 <CodeView>
   {getDisplayElementById(Base.states, 'custom-tab-selected')}
 </CodeView>
 
-### Open, custom tab selected, error state
+#### Open, custom tab selected, error state
 <CodeView>
   {getDisplayElementById(Base.states, 'custom-tab-selected-error')}
 </CodeView>
@@ -59,33 +60,34 @@ The Custom-Only variant should only render the custom color selection tool in th
   {CustomOnly.default}
 </CodeView>
 
-## States
-### Open
+### States
+
+#### Open
 
 <CodeView>
   {getDisplayElementById(CustomOnly.states, 'custom-color-picker-open')}
 </CodeView>
 
-### Open with Error
+#### Open with Error
 
 <CodeView>
   {getDisplayElementById(CustomOnly.states, 'custom-color-picker-open-error')}
 </CodeView>
 
-# Predefined Only
+## Predefined Only
 The Predefined Only variant should only render the predefined colors selection in the Color Picker popover. It should not be inside a tabset.
 
 <CodeView>
   {PredefinedOnly.default}
 </CodeView>
 
-## States
-### Open
+### States
+
+#### Open
 
 <CodeView>
   {getDisplayElementById(PredefinedOnly.states, 'predefined-color-picker-open')}
 </CodeView>
-
 
 ## Swatches Only
 
@@ -104,8 +106,9 @@ The Swatches Only variant should only render a group of individual swatches. It 
   {SwatchesOnly.default}
 </CodeView>
 
-## States
-### Open
+### States
+
+#### Open
 
 <CodeView>
   {getDisplayElementById(SwatchesOnly.states, 'open-swatches-only-color-picker')}

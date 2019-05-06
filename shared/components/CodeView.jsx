@@ -7,11 +7,16 @@ import CodeBlock from './CodeBlock';
 
 class CodeView extends React.Component {
   renderChildren() {
-    const { style } = this.props;
+    const { style, isViewport } = this.props;
 
     return (
       <div className="docs-codeblock-example">
-        <div style={style}>{this.props.children}</div>
+        <div
+          className={isViewport && 'demo-only demo-only_viewport'}
+          style={style}
+        >
+          {this.props.children}
+        </div>
       </div>
     );
   }
@@ -34,6 +39,7 @@ CodeView.propTypes = {
   children: PropTypes.node,
   position: PropTypes.oneOf(['top', 'bottom']),
   style: PropTypes.object,
+  isViewport: PropTypes.bool,
   toggleCode: PropTypes.bool
 };
 

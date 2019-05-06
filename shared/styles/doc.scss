@@ -366,3 +366,7 @@ h2.doc-toc-header {
   background: #1589ee;
   border-radius: 4px;
 }
+
+.demo-only_viewport > * {
+  position: absolute;
+}

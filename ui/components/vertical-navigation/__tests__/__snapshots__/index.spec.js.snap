@@ -160,7 +160,7 @@ exports[`Vertical Nav Radio Group renders a checked radio button 1`] = `
   <input
     defaultChecked={true}
     id="test1"
-    name="example"
+    name="unique-id-example"
     type="radio"
     value="test1"
   />
@@ -190,7 +190,7 @@ exports[`Vertical Nav Radio Group renders a compact fieldset 1`] = `
     <input
       defaultChecked={undefined}
       id="test1"
-      name="example"
+      name="unique-id-example"
       type="radio"
       value="test1"
     />
@@ -223,7 +223,7 @@ exports[`Vertical Nav Radio Group renders a fieldset 1`] = `
     <input
       defaultChecked={undefined}
       id="test1"
-      name="example"
+      name="unique-id-example"
       type="radio"
       value="test1"
     />
@@ -248,7 +248,7 @@ exports[`Vertical Nav Radio Group renders a radio button 1`] = `
   <input
     defaultChecked={undefined}
     id="test1"
-    name="example"
+    name="unique-id-example"
     type="radio"
     value="test1"
   />
@@ -278,7 +278,7 @@ exports[`Vertical Nav Radio Group renders a shaded fieldset 1`] = `
     <input
       defaultChecked={undefined}
       id="test1"
-      name="example"
+      name="unique-id-example"
       type="radio"
       value="test1"
     />
@@ -311,7 +311,7 @@ exports[`Vertical Nav Radio Group renders a shaded fieldset with a checked item 
     <input
       defaultChecked={true}
       id="test1"
-      name="example"
+      name="unique-id-example"
       type="radio"
       value="test1"
     />

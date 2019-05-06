@@ -11,7 +11,7 @@ import classNames from 'classnames';
 /// ///////////////////////////////////////////
 
 let Demo = props => (
-  <div className="demo-only" {...props}>
+  <div className="demo-only demo-only_viewport" {...props}>
     {props.children}
     <div className="slds-backdrop slds-backdrop_open" />
   </div>

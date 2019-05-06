@@ -242,7 +242,10 @@ const ComboboxListbox = props => (
 /// ////////////////////////////////////////
 
 export const Context = props => (
-  <div style={{ height: '500px', minWidth: '615px', overflowX: 'auto' }}>
+  <div
+    className="demo-only demo-only_viewport"
+    style={{ height: '500px', minWidth: '615px', overflowX: 'auto' }}
+  >
     {props.children}
   </div>
 );

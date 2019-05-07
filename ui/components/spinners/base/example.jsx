@@ -37,7 +37,7 @@ export let Spinner = props => (
 /// ///////////////////////////////////////////
 
 export default (
-  <Demo>
+  <Demo className="demo-only demo-only_viewport">
     <Spinner className="slds-spinner_medium" />
   </Demo>
 );
@@ -84,7 +84,7 @@ export let examples = [
     description:
       'The spinner container may be used with a container with fixed positioning by adding the <code>.slds-is-fixed</code> class to the container. This may be needed if you are dynamically loading portions of a component after the spinner is showing.',
     element: (
-      <Demo className="demo--inverse">
+      <Demo className="demo-only demo-only_viewport demo--inverse">
         <SpinnerContainer className="slds-is-fixed">
           <Spinner className="slds-spinner_medium" />
         </SpinnerContainer>

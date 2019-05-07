@@ -16,7 +16,9 @@ import {
   ExpandedTree,
   SelectedTree,
   DeeplyNestedTree,
-  MetaTextTree
+  MetaTextTree,
+  TreeWithItemHovered,
+  TreeWithItemDisabled
 } from '../base/index';
 
 import { FormElement } from '../../form-element/index';
@@ -81,6 +83,30 @@ export let states = [
         <TreeHeader id="treeheading">Tree Group Header</TreeHeader>
         <TreeList headerId="treeheading">
           <MetaTextTree />
+        </TreeList>
+      </TreeContainer>
+    )
+  },
+  {
+    id: 'item-hovered',
+    label: 'Item Hovered',
+    element: (
+      <TreeContainer>
+        <TreeHeader id="treeheading">Tree Group Header</TreeHeader>
+        <TreeList headerId="treeheading">
+          <TreeWithItemHovered />
+        </TreeList>
+      </TreeContainer>
+    )
+  },
+  {
+    id: 'item-disabled',
+    label: 'Item Disabled',
+    element: (
+      <TreeContainer>
+        <TreeHeader id="treeheading">Tree Group Header</TreeHeader>
+        <TreeList headerId="treeheading">
+          <TreeWithItemDisabled />
         </TreeList>
       </TreeContainer>
     )

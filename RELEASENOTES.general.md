@@ -1,5 +1,17 @@
 <!-- Release notes authoring guidelines: http://keepachangelog.com/ -->
 <!-- On release, add general notes here. In time the legacy relase notes will be add to this -->
+## 2.9.2 - May 7, 2019
+
+## General
+
+- Moved all components to mdx documentation
+
+## 2.9.1 - April 18, 2019
+
+## Fix
+
+- Fix import statement for VisualForce specific styles
+
 ## 2.9.0 - April 17, 2019
 
 ## 2.8.4 - February 21, 2019

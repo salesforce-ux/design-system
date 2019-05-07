@@ -9,11 +9,7 @@ import {
   ListboxItem,
   EntityOption
 } from '../base/example';
-import {
-  ListboxPills,
-  ListboxPillsItem,
-  ListboxPill
-} from '../../pills/listbox-of-pill-options/example';
+import { ListboxPills, ListboxPillsItem, ListboxPill } from '../../pills';
 
 const listboxOptionId01 = 'listbox-option-unique-id-01';
 const listboxOptionId02 = 'listbox-option-unique-id-02';

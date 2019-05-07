@@ -8,7 +8,7 @@ import {
   ListboxItem,
   Option
 } from '../../combobox/base/example';
-import { ListboxPill } from '../../pills/listbox-of-pill-options/example';
+import { ListboxPill } from '../../pills';
 
 /* -----------------------------------------------------------------------------
     Variables

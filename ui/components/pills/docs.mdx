@@ -9,7 +9,7 @@ import * as PillsExamplesListbox from './listbox-of-pill-options/example';
   A pill represents an object that can be viewed with or without an icon.
 </div>
 
-# About Pills
+## About Pills
 
 To create a pill, apply the `.slds-pill` class on a `<span>`.
 
@@ -27,39 +27,49 @@ You may also want the functionality to remove the pill as a selection. An "X" ic
 
 A `.slds-pill_container` can be used as a visual container for multiple pill(s).
 
-# Base
+## Base
 
 <CodeView>
   {PillsExamplesBase.default}
 </CodeView>
 
-## Examples
+### Examples
 
-### With Icon
+#### With Icon
 
 <CodeView>
   {getDisplayElementById(PillsExamplesBase.examples, 'icon')}
 </CodeView>
 
-### With Avatar
+#### With Avatar
 
 <CodeView>
   {getDisplayElementById(PillsExamplesBase.examples, 'avatar')}
 </CodeView>
 
-### Error
-
-<CodeView>
-  {getDisplayElementById(PillsExamplesBase.examples, 'error')}
-</CodeView>
-
-### Inside a Pill Container
+#### Pill with Container
 
 <CodeView>
   {getDisplayElementById(PillsExamplesBase.examples, 'container')}
 </CodeView>
 
-# Listbox Of Pill Options
+### States
+
+#### Error
+
+<CodeView>
+  {getDisplayElementById(PillsExamplesBase.states, 'error')}
+</CodeView>
+
+#### Truncated
+
+The pills component will respect the width of its parent and truncate if necessary.
+
+<CodeView style={{ width: '220px' }}>
+  {getDisplayElementById(PillsExamplesBase.states, 'truncated')}
+</CodeView>
+
+## Listbox Of Pill Options
 
 <CodeView>
   {PillsExamplesListbox.default}
@@ -67,7 +77,7 @@ A `.slds-pill_container` can be used as a visual container for multiple pill(s).
 
 A Listbox of Pills is a way to display a list of selected options when performing user input, usually from a multi-select [Combobox](/components/combobox), [Lookup](/components/lookups) or [Picklist](/components/picklist).
 
-## Accessibility
+### Accessibility
 
 **Interaction requirements**
 
@@ -96,3 +106,25 @@ A Listbox of Pills is a way to display a list of selected options when performin
   - When on the last `option`, place user focus on the previous `option`
   - When on the first `option`, place user focus on the next `option`
   - When on the only `option`, place user focus on the `listbox` or any `input` element the `option` might be associated with
+
+### Examples
+
+#### With Icon
+
+<CodeView>
+  {getDisplayElementById(PillsExamplesListbox.examples, 'listbox-pill-with-icon')}
+</CodeView>
+
+#### With Avatar
+
+<CodeView>
+  {getDisplayElementById(PillsExamplesListbox.examples, 'listbox-pill-with-avatar')}
+</CodeView>
+
+### Layout
+
+#### Bare
+
+<CodeView>
+  {getDisplayElementById(PillsExamplesListbox.examples, 'listbox-pill-bare')}
+</CodeView>

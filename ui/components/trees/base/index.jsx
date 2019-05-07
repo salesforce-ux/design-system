@@ -226,3 +226,65 @@ export const MetaTextTree = () => (
   </React.Fragment>
 );
 MetaTextTree.displayName = 'MetaTextTree';
+
+export const TreeWithItemHovered = () => (
+  <React.Fragment>
+    <TreeListItem ariaLevel={1} tabIndex={0}>
+      <TreeItem className="slds-is-hovered" />
+    </TreeListItem>
+    <TreeListItem ariaLevel={1} isBranch itemLabel="Tree Branch">
+      <TreeItem isBranch itemLabel="Tree Branch" />
+      <TreeGroup>
+        <TreeListItem ariaLevel={2}>
+          <TreeItem />
+        </TreeListItem>
+      </TreeGroup>
+    </TreeListItem>
+    <TreeListItem ariaLevel={1} isBranch itemLabel="Tree Branch">
+      <TreeItem isBranch itemLabel="Tree Branch" />
+      <TreeGroup>
+        <TreeListItem ariaLevel={2}>
+          <TreeItem />
+        </TreeListItem>
+      </TreeGroup>
+    </TreeListItem>
+    <TreeListItem
+      ariaLevel={1}
+      itemLabel="Tree Item with a Really Really Long Name That Should Truncate"
+    >
+      <TreeItem itemLabel="Tree Item with a Really Really Long Name That Should Truncate" />
+    </TreeListItem>
+  </React.Fragment>
+);
+TreeWithItemHovered.displayName = 'TreeWithItemHovered';
+
+export const TreeWithItemDisabled = () => (
+  <React.Fragment>
+    <TreeListItem ariaLevel={1} tabIndex={0}>
+      <TreeItem />
+    </TreeListItem>
+    <TreeListItem ariaLevel={1} isBranch itemLabel="Tree Branch">
+      <TreeItem isBranch isDisabled itemLabel="Tree Branch" />
+      <TreeGroup>
+        <TreeListItem ariaLevel={2}>
+          <TreeItem />
+        </TreeListItem>
+      </TreeGroup>
+    </TreeListItem>
+    <TreeListItem ariaLevel={1} isBranch itemLabel="Tree Branch">
+      <TreeItem isBranch isDisabled itemLabel="Tree Branch" />
+      <TreeGroup>
+        <TreeListItem ariaLevel={2}>
+          <TreeItem />
+        </TreeListItem>
+      </TreeGroup>
+    </TreeListItem>
+    <TreeListItem
+      ariaLevel={1}
+      itemLabel="Tree Item with a Really Really Long Name That Should Truncate"
+    >
+      <TreeItem itemLabel="Tree Item with a Really Really Long Name That Should Truncate" />
+    </TreeListItem>
+  </React.Fragment>
+);
+TreeWithItemDisabled.displayName = 'TreeWithItemDisabled';

@@ -48,7 +48,11 @@ export const Row = props => (
         <SelectRowCell index={rowIndex++} checked={props.isSelected} />
       </Td>
     )}
-    <RowTh data-label="Account Name" type="treegrid">
+    <RowTh
+      data-label="Account Name"
+      type="treegrid"
+      isItemHovered={props.isItemHovered}
+    >
       <ButtonIcon
         aria-hidden="true"
         assistiveText={
@@ -632,6 +636,62 @@ export let examples = [
           isHidden
         />
         <HeadlessRows isExpanded={false} hasSelectedRow hasSingleRowSelection />
+      </TreeGrid>
+    )
+  },
+  {
+    id: 'item-disabled',
+    label: 'Item Disabled',
+    element: (
+      <TreeGrid isBordered isFixedLayout isResizable selectionType="multiple">
+        <AdvancedDataTableHead columns={columns} hasMenus />
+        <DefaultRows isExpanded={false} />
+      </TreeGrid>
+    )
+  },
+  {
+    id: 'item-hovered',
+    label: 'Item Hovered',
+    element: (
+      <TreeGrid isBordered isFixedLayout isResizable selectionType="multiple">
+        <AdvancedDataTableHead columns={columns} hasMenus />
+        <TBody>
+          <Row
+            city="Phoenix, AZ"
+            employees="3,100"
+            isItemHovered
+            isFocusable
+            isExpanded={false}
+            level="1"
+            name="Rewis Inc"
+            numberOfItemsAtLevel="4"
+            owner="Jane Doe"
+            phone="837-555-1212"
+            positionWithinLevel="1"
+          />
+          <Row
+            city="San Francisco, CA"
+            employees="10,000"
+            isExpanded={false}
+            level="1"
+            name="Acme Corporation"
+            numberOfItemsAtLevel="4"
+            owner="John Doe"
+            phone="837-555-1212"
+            positionWithinLevel="2"
+          />
+          <Row
+            city="New York, NY"
+            employees="6,000"
+            isExpanded={false}
+            level="1"
+            name="Rohde Enterprises"
+            numberOfItemsAtLevel="4"
+            owner="John Doe"
+            phone="837-555-1212"
+            positionWithinLevel="3"
+          />
+        </TBody>
       </TreeGrid>
     )
   }

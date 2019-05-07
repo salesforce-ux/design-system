@@ -2,11 +2,7 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 import React, { Component } from 'react';
-import {
-  ListboxPills,
-  ListboxPillsItem,
-  ListboxPill
-} from '../../pills/listbox-of-pill-options/example';
+import { ListboxPills, ListboxPillsItem, ListboxPill } from '../../pills';
 import { StandardIcon } from '../../icons/standard/example';
 import classNames from 'classnames';
 

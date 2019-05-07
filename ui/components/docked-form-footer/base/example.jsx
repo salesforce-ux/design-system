@@ -10,7 +10,9 @@ import _ from '../../../shared/helpers';
 const headingUniqueId = _.uniqueId('dialog-heading-id-');
 
 export const Context = props => (
-  <div style={{ height: '180px' }}>{props.children}</div>
+  <div className="demo-only demo-only_viewport" style={{ height: '180px' }}>
+    {props.children}
+  </div>
 );
 
 export default (

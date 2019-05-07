@@ -185,7 +185,7 @@ export class File extends Component {
         'slds-file__crop': hasCrop,
         'slds-file__crop slds-file__crop_16-by-9': has16x9Crop,
         'slds-file__crop slds-file__crop_4-by-3': has4x3Crop,
-        'slds-file__crop slds-file__crop-1-by-1': has1x1Crop,
+        'slds-file__crop slds-file__crop_1-by-1': has1x1Crop,
         'slds-file__figure slds-file__figure_portrait': hasImagePortrait
       }) || 'slds-file__figure';
 

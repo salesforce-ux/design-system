@@ -5,7 +5,7 @@ import React from 'react';
 import classNames from 'classnames';
 import { Avatar } from '../avatar';
 import { UtilityIcon } from '../icons/base/example';
-import { TypingIcon } from '../dynamic-icons/typing/example';
+import TypingIcon from '../dynamic-icons/typing';
 
 export const Chat = props => (
   <section
@@ -99,15 +99,13 @@ export const ChatMessageBody = props => {
           props.messageType === 'image' && props.isLoading
       })}
     >
-      {props.name &&
-        props.timeStamp &&
-        props.isPast && (
-          <ChatMessageTimeStamp
-            isPast
-            name={props.name}
-            timeStamp={props.timeStamp}
-          />
-        )}
+      {props.name && props.timeStamp && props.isPast && (
+        <ChatMessageTimeStamp
+          isPast
+          name={props.name}
+          timeStamp={props.timeStamp}
+        />
+      )}
       <div
         className={classNames(
           chatTextClasses,
@@ -135,14 +133,12 @@ export const ChatMessageBody = props => {
       </div>
       {props.type === 'delivery-failure' ? (
         <div className="slds-grid slds-grid_align-spread slds-grid_vertical-align-start">
-          {props.name &&
-            props.timeStamp &&
-            !props.isPast && (
-              <ChatMessageTimeStamp
-                name={props.name}
-                timeStamp={props.timeStamp}
-              />
-            )}
+          {props.name && props.timeStamp && !props.isPast && (
+            <ChatMessageTimeStamp
+              name={props.name}
+              timeStamp={props.timeStamp}
+            />
+          )}
           {props.type === 'delivery-failure' && (
             <ChatMessageAction symbol="redo" actionTitle="Resend" />
           )}

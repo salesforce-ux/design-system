@@ -3,7 +3,7 @@
 
 import React from 'react';
 
-import { Ellie } from '../../dynamic-icons/ellie/example';
+import Ellie from '../../dynamic-icons/ellie';
 import { StandardIcon } from '../../icons/standard/example';
 import { Table, TBody, AdvancedDataTableHead as Thead } from '../';
 import { AdvancedDataTableTr, ProductDataTableTr } from '../advanced/';

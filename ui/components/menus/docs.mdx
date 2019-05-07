@@ -2,9 +2,12 @@ import CodeView from '../../../shared/components/CodeView';
 import CodeBlock from '../../../shared/components/CodeBlock';
 import Example from '../../../shared/components/Example';
 import Blockquote from '../../../shared/components/Blockquote';
+import InlineFragment from '../../../shared/components/InlineFragment';
 import { BaseMenu, SubHeader, IconLeft, DoubleIcon, IconRight, ActionOverflow, OverflowMenu, NotificationsMenu } from '../menus/dropdown/example';
+import * as DropdownHeight from '../menus/dropdown-height/example';
 import { Submenu } from '../menus/submenu/example';
 import { DoctypeIcon } from '../icons/doctype/example';
+import { getDisplayElementById } from '../../shared/helpers';
 
 <div className="doc lead">
   A Menu offers a list of actions or functions that a user can access.
@@ -136,7 +139,7 @@ The class is based on the `slds-has-${level}` pattern, where `${level}` correspo
 - `slds-has-warning`
 
 <CodeBlock toggleCode={false}>
-  <a class="slds-has-warning" href="javascript:void(0);" role="menuitem" tabindex="-1">...</a>
+  <a className="slds-has-warning" href="javascript:void(0);" role="menuitem" tabIndex="-1">...</a>
 </CodeBlock>
 
 <Blockquote type="note" header="Warning Icon">
@@ -259,3 +262,24 @@ To adjust the width of the menu dropdown add modifier `slds-dropdown_*` to the `
 | `.slds-dropdown_small` <br/> 15rem / 240px   | <div style={{height: '200px', width: '320px'}}><BaseMenu className="slds-dropdown_left slds-dropdown_small" /></div>    |
 | `.slds-dropdown_medium` <br/> 20rem / 320px  | <div style={{height: '200px', width: '320px'}}><BaseMenu className="slds-dropdown_left slds-dropdown_medium" /></div>   |
 | `.slds-dropdown_large` <br/> 25rem / 400px   | <div style={{height: '200px', width: '320px'}}><BaseMenu className="slds-dropdown_left slds-dropdown_large" /></div>    |
+
+## Height
+
+To adjust the length of visible menu dropdown items before overflow scrolling activates, add modifier `slds-dropdown_length-*`, or when using icons, `slds-dropdown_length-with-icon-*`, where the `*` is `5`, `7`, `10`. Apply the height classes to both the `<div>`s with class `slds-dropdown` and `slds-dropdown__list`
+
+<CodeBlock toggleCode={false}>
+  <div className="slds-dropdown slds-dropdown_left slds-dropdown_length-7">
+    <ul class="slds-dropdown__list slds-dropdown_length-7">
+      ...
+    </ul>
+  </div>
+</CodeBlock>
+
+| Modifier                                             | Example                                                                                                                                                                  |
+| ---------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `.slds-dropdown_length-5` <br/> 5 items              | <div style={{height: '16rem', width: '320px'}}><InlineFragment fragmentChildren={ getDisplayElementById(DropdownHeight.states, 'dropdown-menu-length-5') }/></div>        |
+| `.slds-dropdown_length-7` <br/> 7 items              | <div style={{height: '21rem', width: '320px'}}><InlineFragment fragmentChildren={ getDisplayElementById(DropdownHeight.states, 'dropdown-menu-length-7') }/></div>       |
+| `.slds-dropdown_length-10` <br/> 10 items            | <div style={{height: '26rem', width: '320px'}}><InlineFragment fragmentChildren={ getDisplayElementById(DropdownHeight.states, 'dropdown-menu-length-10') }/></div>      |
+| `.slds-dropdown_length-with-icon-5` <br/> 5 items    | <div style={{height: '16rem', width: '320px'}}><InlineFragment fragmentChildren={ getDisplayElementById(DropdownHeight.states, 'dropdown-menu-length-5-icon') }/></div>  |
+| `.slds-dropdown_length-with-icon-7` <br/> 7 items    | <div style={{height: '21rem', width: '320px'}}><InlineFragment fragmentChildren={ getDisplayElementById(DropdownHeight.states, 'dropdown-menu-length-7-icon') }/></div>  |
+| `.slds-dropdown_length-with-icon-10` <br/> 10 items  | <div style={{height: '28rem', width: '320px'}}><InlineFragment fragmentChildren={ getDisplayElementById(DropdownHeight.states, 'dropdown-menu-length-10-icon') }/></div> |

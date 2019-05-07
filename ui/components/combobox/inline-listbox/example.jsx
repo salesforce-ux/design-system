@@ -3,11 +3,7 @@
 
 import React from 'react';
 import { StandardIcon } from '../../icons/standard/example';
-import {
-  ListboxPills,
-  ListboxPillsItem,
-  ListboxPill
-} from '../../pills/listbox-of-pill-options/example';
+import { ListboxPills, ListboxPillsItem, ListboxPill } from '../../pills';
 import {
   ComboboxContainer,
   Listbox,

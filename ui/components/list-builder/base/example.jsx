@@ -29,12 +29,12 @@ import {
   Td,
   ReadOnlyCell
 } from '../../data-tables/';
-import { PillContainer } from '../../pills/base/example';
 import {
   ListboxPills,
   ListboxPillsItem,
-  ListboxPill
-} from '../../pills/listbox-of-pill-options/example';
+  ListboxPill,
+  PillContainer
+} from '../../pills';
 
 /* -----------------------------------------------------------------------------
     Variables and Objects
@@ -293,7 +293,7 @@ let FilteredItems = props => (
 ----------------------------------------------------------------------------- */
 
 export default (
-  <div className="demo-only" style={{ height: '640px' }}>
+  <div className="demo-only demo-only_viewport" style={{ height: '640px' }}>
     <Modal
       className="slds-modal_large slds-list-builder"
       aria-labelledby="id-of-modalheader-h2"
@@ -336,7 +336,7 @@ export let states = [
     id: 'items-selected',
     label: 'Items Selected',
     element: (
-      <div className="demo-only" style={{ height: '640px' }}>
+      <div className="demo-only demo-only_viewport" style={{ height: '640px' }}>
         <Modal
           className="slds-modal_large"
           aria-labelledby="id-of-modalheader-h2"
@@ -381,7 +381,7 @@ export let states = [
     id: 'items-disabled',
     label: 'Items Disabled',
     element: (
-      <div className="demo-only" style={{ height: '640px' }}>
+      <div className="demo-only demo-only_viewport" style={{ height: '640px' }}>
         <Modal
           className="slds-modal_large"
           aria-labelledby="id-of-modalheader-h2"
@@ -424,7 +424,7 @@ export let states = [
     id: 'items-default-selected',
     label: 'Items Default Selected',
     element: (
-      <div className="demo-only" style={{ height: '640px' }}>
+      <div className="demo-only demo-only_viewport" style={{ height: '640px' }}>
         <Modal
           className="slds-modal_large"
           aria-labelledby="id-of-modalheader-h2"
@@ -469,7 +469,7 @@ export let examples = [
     id: 'two-column-with-hidden-header',
     label: 'Two Column with Hidden Header',
     element: (
-      <div className="demo-only" style={{ height: '640px' }}>
+      <div className="demo-only demo-only_viewport" style={{ height: '640px' }}>
         <Modal
           className="slds-modal_large"
           aria-labelledby="id-of-modalheader-h2"
@@ -508,7 +508,7 @@ export let examples = [
     id: 'filtered',
     label: 'Filtered Results',
     element: (
-      <div className="demo-only" style={{ height: '640px' }}>
+      <div className="demo-only demo-only_viewport" style={{ height: '640px' }}>
         <Modal
           className="slds-modal_large"
           aria-labelledby="id-of-modalheader-h2"

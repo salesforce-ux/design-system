@@ -48,23 +48,3 @@ props:
     value: '{!PALETTE_GRAY_4}'
     comment: Used as an alternate background for loading stencils on gray backgrounds.
     access: global
-  BRAND_BACKGROUND_PRIMARY:
-    value: "#b0c4df"
-    comment: "Primary page background color"
-    themeable: true
-    release: 2.6.0
-  BRAND_BACKGROUND_PRIMARY_TRANSPARENT:
-    value: "rgba(176,196,223,0)"
-    comment: "These RGBA values need to be updated if BRAND_BACKGROUND_PRIMARY changes, solves webkit bug"
-    themeable: true
-    release: 2.6.0
-  BRAND_BACKGROUND_DARK:
-    value: "#195594"
-    comment: "Dark variant of BRAND_BACKGROUND_PRIMARY, used within gradient of background color"
-    themeable: true
-    release: 2.6.0
-  BRAND_BACKGROUND_DARK_TRANSPARENT:
-    value: "rgba(25,85,148,0)"
-    comment: "These RGBA values need to be updated if BRAND_BACKGROUND_DARK changes, solves webkit bug"
-    themeable: true
-    release: 2.6.0

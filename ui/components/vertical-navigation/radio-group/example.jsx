@@ -31,7 +31,7 @@ export let NavVerticalItemRadio = props => (
       type="radio"
       id={props.id}
       value={props.id}
-      name="example"
+      name={props.name || 'unique-id-example'}
     />
     <label className="slds-nav-vertical__action" htmlFor={props.id}>
       <span className="slds-nav-vertical_radio-faux">{props.children}</span>
@@ -86,19 +86,19 @@ export let examples = [
         isNavVerticalRadioSet
       >
         <NavVerticalFieldset compact>
-          <NavVerticalItemRadio checked id="recent">
+          <NavVerticalItemRadio checked id="recent" name="unique-id-compact">
             Recent
           </NavVerticalItemRadio>
-          <NavVerticalItemRadio id="created-by-me">
+          <NavVerticalItemRadio id="created-by-me" name="unique-id-compact">
             Created by Me
           </NavVerticalItemRadio>
-          <NavVerticalItemRadio id="private-reports">
+          <NavVerticalItemRadio id="private-reports" name="unique-id-compact">
             Private Reports
           </NavVerticalItemRadio>
-          <NavVerticalItemRadio id="public-reports">
+          <NavVerticalItemRadio id="public-reports" name="unique-id-compact">
             Public Reports
           </NavVerticalItemRadio>
-          <NavVerticalItemRadio id="all-reports">
+          <NavVerticalItemRadio id="all-reports" name="unique-id-compact">
             All Reports
           </NavVerticalItemRadio>
         </NavVerticalFieldset>
@@ -116,19 +116,19 @@ export let examples = [
           isNavVerticalRadioSet
         >
           <NavVerticalFieldset shaded>
-            <NavVerticalItemRadio checked id="recent">
+            <NavVerticalItemRadio checked id="recent" name="unique-id-shade">
               Recent
             </NavVerticalItemRadio>
-            <NavVerticalItemRadio id="created-by-me">
+            <NavVerticalItemRadio id="created-by-me" name="unique-id-shade">
               Created by Me
             </NavVerticalItemRadio>
-            <NavVerticalItemRadio id="private-reports">
+            <NavVerticalItemRadio id="private-reports" name="unique-id-shade">
               Private Reports
             </NavVerticalItemRadio>
-            <NavVerticalItemRadio id="public-reports">
+            <NavVerticalItemRadio id="public-reports" name="unique-id-shade">
               Public Reports
             </NavVerticalItemRadio>
-            <NavVerticalItemRadio id="all-reports">
+            <NavVerticalItemRadio id="all-reports" name="unique-id-shade">
               All Reports
             </NavVerticalItemRadio>
           </NavVerticalFieldset>

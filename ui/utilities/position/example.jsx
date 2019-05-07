@@ -10,7 +10,7 @@ export let examples = [
     element: (
       <div
         className="demo-only slds-grid"
-        style={{ height: '150px', width: '300px', padding: '2rem' }}
+        style={{ height: '10rem', width: '20rem', padding: '2rem' }}
       >
         <div className="slds-is-fixed">
           <div
@@ -23,9 +23,9 @@ export let examples = [
             }}
           >
             An element with fixed positioning is positioned relative to the
-            viewport. If no other positioning values are given (<code>top, right, bottom, left</code>)
-            it will start its positioning relative to where it is in the flow of
-            the page.
+            viewport. If no other positioning values are given (
+            <code>top, right, bottom, left</code>) it will start its positioning
+            relative to where it is in the flow of the page.
           </div>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
@@ -43,7 +43,7 @@ export let examples = [
     element: (
       <div
         className="demo-only slds-grid"
-        style={{ height: '150px', width: '300px', padding: '2rem' }}
+        style={{ height: '10rem', width: '20rem', padding: '2rem' }}
       >
         <div className="slds-is-absolute">
           <div
@@ -77,7 +77,7 @@ export let examples = [
     element: (
       <div
         className="demo-only slds-grid"
-        style={{ height: '150px', width: '300px', padding: '2rem' }}
+        style={{ height: '10rem', width: '20rem', padding: '2rem' }}
       >
         <div className="slds-is-relative">
           <div
@@ -89,9 +89,8 @@ export let examples = [
               background: '#f4f6f9'
             }}
           >
-            An absolutely positioned element is positioned relative to the
-            nearest positioned parent. The <code>.slds-is-relative</code> class
-            can be used to give the parent or ancestor positioning.
+            Like static, a relatively positioned element is put where its normal
+            position would be in the document layout flow.
           </div>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
@@ -109,7 +108,7 @@ export let examples = [
     element: (
       <div
         className="demo-only slds-grid"
-        style={{ height: '150px', width: '300px', padding: '2rem' }}
+        style={{ height: '10rem', width: '20rem', padding: '2rem' }}
       >
         <div className="slds-is-static">
           <div

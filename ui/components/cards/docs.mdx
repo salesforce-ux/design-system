@@ -3,7 +3,6 @@ import CodeBlock from '../../../shared/components/CodeBlock';
 import Example from '../../../shared/components/Example';
 import Blockquote from '../../../shared/components/Blockquote';
 import Card, { CardHeader } from './';
-
 import { ActionOverflow } from '../menus/action-overflow/example';
 import * as CardExamples from './base/example';
 import * as CardEinsteinExamples from './einstein/example';
@@ -25,7 +24,7 @@ To initialize a card, apply the `slds-card` class to an `<article>` element.
 A card is made up of 3 sections, a header, a body, and a footer. The header and footer have limitations, but the body section can accommodate any layout of related information.
 
 
-<CodeView hasDensityRadioButtons>
+<CodeView>
   {CardExamples.default}
 </CodeView>
 
@@ -34,7 +33,7 @@ A card is made up of 3 sections, a header, a body, and a footer. The header and 
 The card header can have an icon, a title and actions. The icon and title are located on the left, while the actions row is located on the right side of the card header.
 
 <Example title="Cards Header">
-  <CodeView hasDensityRadioButtons>
+  <CodeView>
     <Card>
       <CardHeader
         title="Accounts"
@@ -49,13 +48,13 @@ The card header can have an icon, a title and actions. The icon and title are lo
 
 The card header can be removed from the HTML to prevent the card header from displaying.
 
-<CodeView hasDensityRadioButtons>
+<CodeView>
   {getDisplayElementById(CardExamples.examples, 'with-no-header')}
 </CodeView>
 
 Alternatively, the card header can be visually hidden but still accessible to screen readers by applying `slds-assistive-text` to the `slds-card__header` element.
 
-<CodeView hasDensityRadioButtons>
+<CodeView>
   {getDisplayElementById(CardExamples.examples, 'visibly-hidden-card-header')}
 </CodeView>
 
@@ -66,7 +65,7 @@ The actions row of a card header typically accommodates a single action for the 
 ##### Single action
 
 <Example title="Cards Single Action">
-  <CodeView hasDensityRadioButtons>
+  <CodeView>
     <Card>
       <CardHeader
         title="Accounts"
@@ -81,7 +80,7 @@ The actions row of a card header typically accommodates a single action for the 
 ##### Multiple actions
 
 <Example title="Cards Multiple Actions">
-  <CodeView style={{height: '10rem'}} hasDensityRadioButtons>
+  <CodeView style={{height: '10rem'}}>
     <Card>
       <CardHeader
         title="Accounts"
@@ -106,7 +105,7 @@ The card body accommodates any layout or design, as long as its a grouping of re
 For an example of when to use the default behavior, see the [Data Table example](/components/cards/#With-a-Data-Table).
 
 
-<CodeView hasDensityRadioButtons>
+<CodeView>
   {getDisplayElementById(CardExamples.examples, 'body-has-no-padding')}
 </CodeView>
 
@@ -116,7 +115,7 @@ For an example of when to use the default behavior, see the [Data Table example]
 For an example of when to use the `slds-card__body_inner` class, see the [Tiles example](/components/cards/#With-Tiles).
 
 
-<CodeView hasDensityRadioButtons>
+<CodeView>
   {getDisplayElementById(CardExamples.examples, 'body-has-padding')}
 </CodeView>
 
@@ -136,7 +135,7 @@ The card footer is optional and should _**only**_ have a "View All" link that ta
 #### With no footer
 
 
-<CodeView hasDensityRadioButtons>
+<CodeView>
   {getDisplayElementById(CardExamples.examples, 'has-no-footer')}
 </CodeView>
 
@@ -144,7 +143,7 @@ The card footer is optional and should _**only**_ have a "View All" link that ta
 #### With a footer
 
 
-<CodeView hasDensityRadioButtons>
+<CodeView>
   {getDisplayElementById(CardExamples.examples, 'has-footer')}
 </CodeView>
 
@@ -158,7 +157,7 @@ When a card doesn't have any data, it is represented with the body and footer co
 #### Collapsed
 
 
-<CodeView hasDensityRadioButtons>
+<CodeView>
   {getDisplayElementById(CardExamples.states, 'empty')}
 </CodeView>
 
@@ -168,7 +167,7 @@ When a card doesn't have any data, it is represented with the body and footer co
 Alternatively, a card can be represented with no data by using an [illustration](/components/illustration) in the card body.
 
 
-<CodeView hasDensityRadioButtons>
+<CodeView>
   {getDisplayElementById(CardExamples.states, 'empty-illustration')}
 </CodeView>
 
@@ -178,7 +177,7 @@ Alternatively, a card can be represented with no data by using an [illustration]
 When a card instantiates and is loading, we want to provide feedback to the user by display a spinner. Once the data has loaded, the spinner can be removed from the card component.
 
 
-<CodeView hasDensityRadioButtons>
+<CodeView>
   {getDisplayElementById(CardExamples.states, 'loading')}
 </CodeView>
 
@@ -188,7 +187,7 @@ When a card instantiates and is loading, we want to provide feedback to the user
 Placing a data table inside of an `slds-card__body` is an example of when to utilize the default behavior of a card body, since no padding is applied.
 
 
-<CodeView hasDensityRadioButtons>
+<CodeView>
   {getDisplayElementById(CardExamples.examples, 'related-list-table')}
 </CodeView>
 
@@ -198,7 +197,7 @@ Placing a data table inside of an `slds-card__body` is an example of when to uti
 Placing contact tiles inside of an `slds-card__body` is an example of using `slds-card__body_inner` to apply additional padding to the card body content.
 
 
-<CodeView hasDensityRadioButtons>
+<CodeView>
   {getDisplayElementById(CardExamples.examples, 'related-list-tiles')}
 </CodeView>
 
@@ -212,7 +211,7 @@ When a card is located inside of another card body, we remove the dropshadow and
 #### No styling
 
 
-<CodeView hasDensityRadioButtons>
+<CodeView>
   {getDisplayElementById(CardExamples.examples, 'nested-no-boundary')}
 </CodeView>
 
@@ -222,7 +221,7 @@ When a card is located inside of another card body, we remove the dropshadow and
 Adding `slds-card_boundary` to the `slds-card` element will give you back the card styling.
 
 
-<CodeView hasDensityRadioButtons>
+<CodeView>
   {getDisplayElementById(CardExamples.examples, 'nested-with-boundary')}
 </CodeView>
 
@@ -232,7 +231,7 @@ Adding `slds-card_boundary` to the `slds-card` element will give you back the ca
 To combine several cards into a single card look, wrap the cards using `slds-card-wrapper`. Similar to the nested cards, adding `slds-card_boundary` to the `slds-card` element will give you back the card styling.
 
 
-<CodeView hasDensityRadioButtons>
+<CodeView>
   {CardWrapperExamples.default}
 </CodeView>
 
@@ -242,7 +241,7 @@ To combine several cards into a single card look, wrap the cards using `slds-car
 For cards that contain Einstein related information, you can include an Einstein themed card header.
 
 
-<CodeView hasDensityRadioButtons>
+<CodeView>
   {CardEinsteinExamples.default}
 </CodeView>
 
@@ -250,7 +249,7 @@ For cards that contain Einstein related information, you can include an Einstein
 ### With an Icon
 
 
-<CodeView hasDensityRadioButtons>
+<CodeView>
   {getDisplayElementById(CardEinsteinExamples.states, 'einstein-with-icon')}
 </CodeView>
 
@@ -258,6 +257,6 @@ For cards that contain Einstein related information, you can include an Einstein
 ### With Actions
 
 
-<CodeView hasDensityRadioButtons>
+<CodeView>
   {getDisplayElementById(CardEinsteinExamples.states, 'einstein-with-icon-and-actions')}
 </CodeView>

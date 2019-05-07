@@ -1,7 +1,7 @@
 /* eslint-env jest */
 import React from 'react';
 
-import { TypingIcon } from '../typing/example';
+import TypingIcon from '../typing';
 
 import createHelpers from '../../../../jest.helpers';
 

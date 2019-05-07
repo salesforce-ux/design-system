@@ -1,0 +1,125 @@
+import CodeView from '../../../shared/components/CodeView';
+import CodeBlock from '../../../shared/components/CodeBlock';
+import Blockquote from '../../../shared/components/Blockquote';
+import * as TreeExamples from './base/example';
+import { getDisplayElementById } from '../../shared/helpers';
+
+<div className="doc lead">
+  A tree is visualization of a structure hierarchy. A branch can be expanded or collapsed.
+</div>
+
+## About Trees
+
+A tree is composed of two core elements `.slds-tree` and `.slds-tree__item`. The tree wrapper, the outer most parent `ul`, will receive the class `.slds-tree`. This class will be used for scoping a tree, which allows for particular styling based on states in which the tree may enter.
+
+A tree will need helper classes added and removed to help structure the layout. Each child node list item needs an `aria-level` attribute with its value being the number of levels deep it is nested to indicate the distinct grouping is nested within.
+
+Whenever the tree has a nested group, the nested `ul` element should receive the ARIA role `group`. The parent `li[role="treeitem"]` requires the `aria-expanded` attribute to be applied. Toggling `aria-expanded` to `true` or `false` will show or hide the child `group`. The parent `li[role="treeitem"]` also requires `aria-label` to be applied and set to the tree items text value, this ensures child groups are announced to screen readers as you interact with that branch.
+
+Whenever a `role="treeitem"` node is selected, `aria-selected="true"` needs to be applied to display the selected styles.
+
+In our example, we are using a chevron icon on tree branches to help indicate to the user what action clicking the tree branch will perform, whether opening or closing it. The effect of rotating the icon 90° to indicate open/closed status is achieved by applying the ARIA attribute `aria-expanded` to the `treeitem`. `aria-hidden="true"` and `tabindex="-1"` must be placed on the toggle button.
+
+Tree items can only contain text values, no actionable elements, apart from our toggle button, can be placed inside a Tree item.
+
+Trees can only contain a single focusable tree item and `tabindex="0"` must be placed on the `li[role="treeitem]` that takes current focus. Every other actionable and non-actionable element must be made unfocusable by adding `tabindex="-1"` or removing `tabindex`, respectively.
+
+When implementing collapsed rows, we suggest showing the content DOM nodes within each collapsed row only once the row is expanded for performance reasons. You can additionally toggle the hidden row with `slds-show` and `slds-hide` if you intend to keep all of the content in the DOM.
+
+You can add metatext (see: metatext state) to any tree item, which adds a smaller, second line of text below tree node labels to provide supplemental information (to provide users with added context, aid with identification/disambiguation). To add metatext, include an additional `span` within the treeitem with the class `slds-tree__item-meta`. We've added an additional parent span around the label/title and metatext to ensure the spacing works properly when metatext is included. If adding metatext to a tree item with child nodes (i.e. a branch), be sure to update the `aria-label` to include the metatext. For example: `aria-label="Tree Branch Label: Tree Branch Metatext"`
+
+### Accessibility
+
+#### Interaction requirements
+
+- Only a single action per tree item
+- Only 1 focusabled item per Tree
+- Actionable elements in a tree item are mouse only and should not be focusable, they should be presentational and should be hidden from screen readers and keyboard users
+- Focus is placed on the entire `li[role="treeitem"]`. If that item has child items, focus must include those as well.
+
+#### Notable attributes
+
+- `role="tree"` is placed on the `ul`
+- `role="tree"` element also has `aria-labelledby` applied which points to the trees heading element
+- `role="treeitem"` is placed on the tree `li` elements
+- `aria-level` is applied to `treeitem` elements to indicate their nesting depth
+- `aria-expanded` is applied to `treeitem` elements that have child tree nodes. It is set to `true` or `false`
+- `aria-label` is applied to `treeitem` elements that have child tree nodes. Be sure to add any metatext to the label, if applicable
+- `aria-selected="true"` is applied to `treeitem` elements that are selected
+- `tabindex="0"` is applied to the `treeitem` that is in focus
+- `role="group"` is applied to child tree node containers, `ul`
+
+#### Keyboard navigation
+
+- Clicking on a tree item creates a selection
+- `Up` and `Down` arrow keys move `:focus` **and** `aria-selected`. Previous selections are cleared
+- `Right` arrow key to expand collapsed node.
+- `Left` arrow key to collapse expanded node.
+- `Left` arrow key on an end child node, collapses the group and moves `:focus` and `aria-selected` to the parent `treeitem`
+- `Enter` performs the default action on an end tree item (if there is one).
+- `Ctrl` + `Up` and `Ctrl` + `Down` moves focus. Current selection is maintained
+- `Ctrl` + `Space` will add or remove the currently focused tree item to the selection
+
+### Filtering
+
+When filtering a tree you should couple the tree with a search input. The search input will control the contents of the tree and as such should the attribute `aria-controls` added to it. The value of the `aria-controls` attribute should be the ID of the tree it controls. The search input should also be of type `search`.
+
+Upon typing in the input the tree should start filtering immediately, expanding all nodes that have matching tree items to display, and highlighting the search term in each of the matching items. The highlight is provided by wrapping the term in `<mark />` elements.
+
+## Base
+
+<CodeView>
+  {TreeExamples.default}
+</CodeView>
+
+### States
+
+#### Expanded Item
+
+<CodeView>
+  {getDisplayElementById(TreeExamples.states, 'expanded')}
+</CodeView>
+
+#### Item Selected
+
+<CodeView>
+  {getDisplayElementById(TreeExamples.states, 'selected')}
+</CodeView>
+
+#### Deeply Nested Branches
+
+<CodeView>
+  {getDisplayElementById(TreeExamples.states, 'deep-nesting')}
+</CodeView>
+
+#### Item with Metatext
+
+<CodeView>
+  {getDisplayElementById(TreeExamples.states, 'metatext')}
+</CodeView>
+
+#### Item Hovered
+
+<CodeView>
+  {getDisplayElementById(TreeExamples.states, 'item-hovered')}
+</CodeView>
+
+#### Items Disabled
+
+<CodeView>
+  {getDisplayElementById(TreeExamples.states, 'item-disabled')}
+</CodeView>
+
+## Examples
+
+### Filterable Tree
+
+<CodeView>
+  {getDisplayElementById(TreeExamples.examples, 'filterable-tree')}
+</CodeView>
+
+### Filtered Tree
+
+<CodeView>
+  {getDisplayElementById(TreeExamples.examples, 'filterabled-tree')}
+</CodeView>

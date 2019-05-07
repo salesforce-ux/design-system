@@ -5,7 +5,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import SvgIcon from '../../../shared/svg-icon';
 import { Menu, MenuList, MenuItem } from '../../menus/dropdown/example';
-import { WaffleIcon } from '../../dynamic-icons/waffle/example';
+import WaffleIcon from '../../dynamic-icons/waffle';
 import ButtonIcon from '../../button-icons/';
 import {
   Subtab,

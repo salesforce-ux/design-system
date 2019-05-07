@@ -76,7 +76,7 @@ let Notification = props => {
 /// ///////////////////////////////////////////
 
 export default (
-  <div className="demo-only slds-is-relative" style={{ height: '4.5rem' }}>
+  <div className="demo-only demo-only_viewport" style={{ height: '4.5rem' }}>
     <NotificationContainer>
       <div
         aria-live="assertive"
@@ -100,7 +100,10 @@ export let examples = [
     id: 'task-notification',
     label: 'Task Notification',
     element: (
-      <div className="demo-only slds-is-relative" style={{ height: '4.5rem' }}>
+      <div
+        className="demo-only demo-only_viewport"
+        style={{ height: '4.5rem' }}
+      >
         <NotificationContainer>
           <div
             aria-live="assertive"
@@ -123,7 +126,7 @@ export let examples = [
     id: 'stacked-2',
     label: 'Stacked Notifications',
     element: (
-      <div className="demo-only slds-is-relative" style={{ height: '15rem' }}>
+      <div className="demo-only demo-only_viewport" style={{ height: '15rem' }}>
         <NotificationContainer>
           <div
             aria-live="assertive"
@@ -152,7 +155,7 @@ export let examples = [
     id: 'stacked-3',
     label: 'Three Stacked Notifications',
     element: (
-      <div className="demo-only slds-is-relative" style={{ height: '15rem' }}>
+      <div className="demo-only demo-only_viewport" style={{ height: '15rem' }}>
         <NotificationContainer>
           <div
             aria-live="assertive"
@@ -187,7 +190,7 @@ export let examples = [
     id: 'overflow-six',
     label: 'Six Stacked Notifications',
     element: (
-      <div className="demo-only slds-is-relative" style={{ height: '17rem' }}>
+      <div className="demo-only demo-only_viewport" style={{ height: '17rem' }}>
         <NotificationContainer>
           <div
             aria-live="assertive"

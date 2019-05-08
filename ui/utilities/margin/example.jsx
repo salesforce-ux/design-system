@@ -3,10 +3,6 @@
 
 import React from 'react';
 
-export const Context = props => (
-  <div className="demo-only-spacing demo-only-margin">{props.children}</div>
-);
-
 export let examples = [
   {
     id: 'top',

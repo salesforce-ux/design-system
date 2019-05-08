@@ -2,11 +2,7 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 import React from 'react';
-import {
-  ListboxPills,
-  ListboxPillsItem,
-  ListboxPill
-} from '../../pills/listbox-of-pill-options/example';
+import { ListboxPills, ListboxPillsItem, ListboxPill } from '../../pills';
 import ButtonIcon from '../../button-icons/';
 import { Input } from '../../input/base/example';
 import { StandardIcon } from '../../icons/standard/example';
@@ -25,15 +21,15 @@ const listboxOptionId01 = 'listbox-option-unique-id-01';
 const listboxOptionId02 = 'listbox-option-unique-id-02';
 
 /**
-* Generic Listbox container
-* @name Listbox
-* @prop {string}  id - Unique ID of listbox, targetted by the combobox container
-* @prop {string}  className - A CSS class for the outer element
-* @prop {boolean} vertical - Vertical Orientation
-* @prop {boolean} horizontal - Horizontal Orientation
-* @prop {boolean} inline - Horizontal Orientation but inlined with adjacent elements
-* @prop {string}  aria-label -
-*/
+ * Generic Listbox container
+ * @name Listbox
+ * @prop {string}  id - Unique ID of listbox, targetted by the combobox container
+ * @prop {string}  className - A CSS class for the outer element
+ * @prop {boolean} vertical - Vertical Orientation
+ * @prop {boolean} horizontal - Horizontal Orientation
+ * @prop {boolean} inline - Horizontal Orientation but inlined with adjacent elements
+ * @prop {string}  aria-label -
+ */
 export let Listbox = props => (
   <div
     id={props.id || listboxId}
@@ -60,10 +56,10 @@ export let Listbox = props => (
 );
 
 /**
-* Generic list item within a listbox
-* @name ListboxItem
-* @prop {string}  className - A CSS class for the outer element
-*/
+ * Generic list item within a listbox
+ * @name ListboxItem
+ * @prop {string}  className - A CSS class for the outer element
+ */
 export let ListboxItem = props => (
   <li
     role="presentation"
@@ -74,10 +70,10 @@ export let ListboxItem = props => (
 );
 
 /**
-* Generic listbox option within a listbox
-* @name ListboxItemOption
-* @prop {string}  className - A CSS class for the outer element
-*/
+ * Generic listbox option within a listbox
+ * @name ListboxItemOption
+ * @prop {string}  className - A CSS class for the outer element
+ */
 export let ListboxOption = props => (
   <div
     id={props.id || 'listbox-option-unique-id'}
@@ -97,30 +93,30 @@ export let ListboxOption = props => (
 );
 
 /**
-* Combobox container for text input, text input icons, listbox of options,
-* listbox of pill options and object switcher.
-* @name ComboboxContainer
-* @prop {string}  id
-* @prop {string}  className - A CSS class for the element containing the input
-* @prop {string}  containerClassName - A CSS class for the element containing the input and listbox
-* @prop {string}  formClassName - A CSS class for the form element
-* @prop {string}  formControlClassName - A CSS class for the form element control
-* @prop {boolean} isOpen
-* @prop {boolean} selectedOptionsInline - Specifies that the listbox of pill options are displayed inlined to its adjacent elements
-* @prop {boolean} objectSwitcherInline - Specifies that the object switcher is displayed inlined to its adjacent elements
-* @prop {string}  inputIcon - Specifies the position of an input icon
-* @prop {string}  inputIconLeftSprite
-* @prop {string}  inputIconLeftSymbol
-* @prop {string}  inputIconRightSymbol
-* @prop {boolean} inputButtonIcon
-* @prop {string}  value
-* @prop {boolean} autocomplete
-* @prop {boolean} readonly
-* @prop {string}  tabIndex
-* @prop {string}  aria-controls
-* @prop {boolean} hideLabel
-* @prop {string}  placeholder
-*/
+ * Combobox container for text input, text input icons, listbox of options,
+ * listbox of pill options and object switcher.
+ * @name ComboboxContainer
+ * @prop {string}  id
+ * @prop {string}  className - A CSS class for the element containing the input
+ * @prop {string}  containerClassName - A CSS class for the element containing the input and listbox
+ * @prop {string}  formClassName - A CSS class for the form element
+ * @prop {string}  formControlClassName - A CSS class for the form element control
+ * @prop {boolean} isOpen
+ * @prop {boolean} selectedOptionsInline - Specifies that the listbox of pill options are displayed inlined to its adjacent elements
+ * @prop {boolean} objectSwitcherInline - Specifies that the object switcher is displayed inlined to its adjacent elements
+ * @prop {string}  inputIcon - Specifies the position of an input icon
+ * @prop {string}  inputIconLeftSprite
+ * @prop {string}  inputIconLeftSymbol
+ * @prop {string}  inputIconRightSymbol
+ * @prop {boolean} inputButtonIcon
+ * @prop {string}  value
+ * @prop {boolean} autocomplete
+ * @prop {boolean} readonly
+ * @prop {string}  tabIndex
+ * @prop {string}  aria-controls
+ * @prop {boolean} hideLabel
+ * @prop {string}  placeholder
+ */
 export let ComboboxContainer = props => {
   const comboboxId = _.uniqueId('combobox-unique-id-');
   return (
@@ -306,18 +302,18 @@ export let ComboboxContainer = props => {
 };
 
 /**
-* An entity option is a type of listbox option, it contains a standard icon,
-* a result name and an optional second line of text that sits below the result name
-* @name EntityOption
-* @prop {string}  id
-* @prop {string}  className
-* @prop {boolean} selected
-* @prop {boolean} focused
-* @prop {boolean} entityMeta - A secondary line of additional information below the result name
-* @prop {string}  entityType - Type of entity, such as account or lead
-* @prop {string}  entityTitle - Name of result
-* @prop {string}  entityLocation - Physical location of entity, such as 'San Francisco'
-*/
+ * An entity option is a type of listbox option, it contains a standard icon,
+ * a result name and an optional second line of text that sits below the result name
+ * @name EntityOption
+ * @prop {string}  id
+ * @prop {string}  className
+ * @prop {boolean} selected
+ * @prop {boolean} focused
+ * @prop {boolean} entityMeta - A secondary line of additional information below the result name
+ * @prop {string}  entityType - Type of entity, such as account or lead
+ * @prop {string}  entityTitle - Name of result
+ * @prop {string}  entityLocation - Physical location of entity, such as 'San Francisco'
+ */
 export let EntityOption = props => (
   <ListboxOption
     type="entity"
@@ -358,15 +354,15 @@ export let EntityOption = props => (
 );
 
 /**
-* A plain option is a type of listbox option, it contains a string of text and
-* a tick mark to show an option has been selected
-* @name Option
-* @prop {string}  id
-* @prop {string}  className
-* @prop {boolean} selected
-* @prop {boolean} focused
-* @prop {string}  title
-*/
+ * A plain option is a type of listbox option, it contains a string of text and
+ * a tick mark to show an option has been selected
+ * @name Option
+ * @prop {string}  id
+ * @prop {string}  className
+ * @prop {boolean} selected
+ * @prop {boolean} focused
+ * @prop {string}  title
+ */
 export let Option = props => (
   <ListboxOption
     type="plain"
@@ -401,11 +397,11 @@ export let Option = props => (
 );
 
 /**
-* Object switcher is a popup menu button, its visually displayed inlined with
-* its adjacent objects. A "polymorphic" combobox example uses this.
-* @name ObjectSwitcher
-* @prop {string}  className
-*/
+ * Object switcher is a popup menu button, its visually displayed inlined with
+ * its adjacent objects. A "polymorphic" combobox example uses this.
+ * @name ObjectSwitcher
+ * @prop {string}  className
+ */
 let ObjectSwitcher = props => (
   <div
     className={classNames(

@@ -167,5 +167,53 @@ export let examples = [
         articleDescription="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt."
       />
     )
+  },
+  {
+    id: 'crop-4-by-3',
+    label: 'Crop 4 x 3',
+    element: (
+      <div style={{ width: '20rem' }}>
+        <File
+          isCard
+          has4x3Crop
+          hasTitleCard
+          symbol="pdf"
+          title="Proposal.pdf"
+          hasImage
+        />
+      </div>
+    )
+  },
+  {
+    id: 'crop-16-by-9',
+    label: 'Crop 16 x 9',
+    element: (
+      <div style={{ width: '20rem' }}>
+        <File
+          isCard
+          has16x9Crop
+          hasTitleCard
+          symbol="pdf"
+          title="Proposal.pdf"
+          hasImage
+        />
+      </div>
+    )
+  },
+  {
+    id: 'crop-1-by-1',
+    label: 'Crop 1 by 1',
+    element: (
+      <div style={{ width: '20rem' }}>
+        <File
+          isCard
+          has1x1Crop
+          hasTitleCard
+          symbol="pdf"
+          title="Proposal.pdf"
+          hasImage
+        />
+      </div>
+    )
   }
 ];

@@ -2,52 +2,6 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 /**
- * You can style the HTML `<input>` element to align with the Salesforce brand
- * by using the `.slds-input` class on the `<input>` element.
- *
- * The `<input>` element includes support for all HTML5 types: `text`,
- * `password`, `datetime`, `datetime-local`, `date`, `month`, `time`, `week`,
- * `number`, `email`, `url`, `search`, `tel`, and `color`.
- *
- * The static state is for form elements that can’t be modified by the user. It is used for small, non-editable form fields that sit next to inputs and allows the size and height to align. It is not meant for large paragraphs of text.
- *
- * ##### Pointer Events
- *
- * In order to have an actionable SVG within the input, like a clear
- * or increment/decrement button, the icon must be contained within
- * a button, not an anchor `<a>`, in order for pointer events to work properly.
- * You can see examples of the correct markup in the [Left Icon & Clear Button example](../input/?example=double-icon&variant=base)
- * or the [Counter example](../input/?example=increment-decrement-counter&variant=base).
- *
- * #### Accessibility
- *
- * Inputs with errors should have `aria-describedby` to insure that the
- * associated field level error message is read by assistive technology.
- * If the error message has an `id="my-error-message"`, then the input should
- * have `aria-describedby="my-error-message"`.
- *
- * If you need some type of field level help and if your tooltips are
- * available on hover, make sure they’re also available on keyboard focus. The
- * help icon needs to be associated to the tooltip so that when the user focuses
- * on the icon, assistive technology reads out the content of the tooltip. If
- * the tooltip has an `id="help"`, then the `<button>` containing the icon should
- * have `aria-describedby="help"`.
- *
- * In some cases, the read-only field state is swapped and has no `<input>`. This is called `static` in the examples. In that case, don’t use a `<label>`. This provides better accessibility for screen readers and keyboard navigators. Instead, use a `<span>` with the `.slds-form-element__label` class. Instead of an `<input>`, use the `.slds-form-element__static` class inside the `.slds-form-element__control` wrapper.
- *
- * ##### Fixed Text
- *
- * When using the fixed text variants for prepending or appending symbols to inputs,
- * please be sure to use `aria-labelledby` on the input, that points to the ids of the label,
- * prepended text and appended text as a space separated list. The IDs must appear in that order:
- * label, prepended, then appended.
- *
- * The reason we do this is to create a better association between the input and the supporting labels around it.
- * By only using the traditional `label[for]` method, the fixed text is never read out in the context of editing
- * the input value. With using the `aria-labelledby` attribute we can create a better label with all the
- * visual labels associated with it, in a relevant order, that is read by assistive technology when the user
- * needs it; when they're editing the value.
- *
  * @summary Text inputs are used for freeform data entry
  *
  * @base

@@ -1,0 +1,52 @@
+import CodeView from '../../../shared/components/CodeView';
+import { getDisplayElementById } from '../../shared/helpers';
+import * as Base from './base/example';
+
+<div className="doc lead">
+  Select element presents a menu of options. For selecting multiple options, see Dueling Picklist.
+</div>
+
+## About Select
+The HTML `<select>` element presents a menu of options. The options within the menu are represented by `<option>` elements that you can group with `<optgroup>` elements. You can pre-select options for the user.
+
+For selecting multiple options, we have created a custom component called the [Dueling Picklist](/components/dueling-picklist) to ensure Accessibility and ease-of-use. Please refer to that documentation for the interaction model, markup, and Accessibility requirements.
+
+## Base
+
+<CodeView>
+  {Base.default}
+</CodeView>
+
+## States
+
+### Error
+
+<CodeView>
+  {getDisplayElementById(Base.states, 'select-error')}
+</CodeView>
+
+### Disabled
+
+<CodeView>
+  {getDisplayElementById(Base.states, 'select-disabled')}
+</CodeView>
+
+## Examples
+
+### Required
+
+<CodeView>
+  {getDisplayElementById(Base.examples, 'select-required')}
+</CodeView>
+
+### Multiple Selection
+
+<CodeView>
+  {getDisplayElementById(Base.examples, 'select-multiple')}
+</CodeView>
+
+### Multiple Selection Narrow
+
+<CodeView>
+  {getDisplayElementById(Base.examples, 'select-multiple-narrow')}
+</CodeView>

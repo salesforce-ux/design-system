@@ -8,6 +8,9 @@ import ButtonIcon from '../../button-icons/';
 import { UtilityIcon } from '../../icons/base/example';
 import { Button } from '../../buttons/base/example';
 
+const tooltipContent =
+  'Sit nulla est ex deserunt exercitation anim occaecat. Nostrud ullamco deserunt aute id consequat veniam incididunt duis in sint irure nisi.';
+
 export let Tooltip = props => (
   <div
     className={classNames('slds-popover slds-popover_tooltip', props.className)}
@@ -53,8 +56,7 @@ export default (
       id="help"
       style={{ position: 'absolute', top: '-4px', left: '35px' }}
     >
-      Sit nulla est ex deserunt exercitation anim occaecat. Nostrud ullamco
-      deserunt aute id consequat veniam incididunt duis in sint irure nisi.
+      {tooltipContent}
     </Tooltip>
   </div>
 );
@@ -85,8 +87,7 @@ export let examples = [
           hasLearnMore
           style={{ position: 'absolute', top: '-4px', left: '15px' }}
         >
-          Sit nulla est ex deserunt exercitation anim occaecat. Nostrud ullamco
-          deserunt aute id consequat veniam incididunt duis in sint irure nisi.
+          {tooltipContent}
         </Tooltip>
       </div>
     )
@@ -115,8 +116,7 @@ export let examples = [
           id="help"
           style={{ position: 'absolute', top: '-4px', left: '15px' }}
         >
-          Sit nulla est ex deserunt exercitation anim occaecat. Nostrud ullamco
-          deserunt aute id consequat veniam incididunt duis in sint irure nisi.
+          {tooltipContent}
         </Tooltip>
       </div>
     )
@@ -140,8 +140,167 @@ export let examples = [
           id="help"
           style={{ position: 'absolute', top: '-4px', left: '45px' }}
         >
-          Sit nulla est ex deserunt exercitation anim occaecat. Nostrud ullamco
-          deserunt aute id consequat veniam incididunt duis in sint irure nisi.
+          {tooltipContent}
+        </Tooltip>
+      </div>
+    )
+  },
+  {
+    id: 'bottom-to-top',
+    label: 'Bottom to Top',
+    element: (
+      <div
+        style={{
+          paddingLeft: '2rem',
+          paddingTop: '5rem',
+          position: 'relative'
+        }}
+      >
+        <a href="javascript:void(0)" aria-describedby="help">
+          Help Text
+        </a>
+        <Tooltip
+          className={[
+            'slds-nubbin_bottom-left',
+            'slds-slide-from-bottom-to-top'
+          ].join(' ')}
+          id="help"
+          style={{ position: 'absolute', top: '-4px', left: '35px' }}
+        >
+          {tooltipContent}
+        </Tooltip>
+      </div>
+    )
+  },
+  {
+    id: 'top-to-bottom',
+    label: 'Top to Bottom',
+    element: (
+      <div
+        style={{
+          paddingLeft: '2rem',
+          paddingTop: '5rem',
+          position: 'relative'
+        }}
+      >
+        <a href="javascript:void(0)" aria-describedby="help">
+          Help Text
+        </a>
+        <Tooltip
+          className={[
+            'slds-nubbin_bottom-left',
+            'slds-slide-from-top-to-bottom'
+          ].join(' ')}
+          id="help"
+          style={{ position: 'absolute', top: '-4px', left: '35px' }}
+        >
+          {tooltipContent}
+        </Tooltip>
+      </div>
+    )
+  },
+  {
+    id: 'right-to-left',
+    label: 'Right to Left',
+    element: (
+      <div
+        style={{
+          paddingLeft: '2rem',
+          paddingTop: '5rem',
+          position: 'relative'
+        }}
+      >
+        <a href="javascript:void(0)" aria-describedby="help">
+          Help Text
+        </a>
+        <Tooltip
+          className={[
+            'slds-nubbin_bottom-left',
+            'slds-slide-from-right-to-left'
+          ].join(' ')}
+          id="help"
+          style={{ position: 'absolute', top: '-4px', left: '35px' }}
+        >
+          {tooltipContent}
+        </Tooltip>
+      </div>
+    )
+  },
+  {
+    id: 'left-to-right',
+    label: 'Left to Right',
+    element: (
+      <div
+        style={{
+          paddingLeft: '2rem',
+          paddingTop: '5rem',
+          position: 'relative'
+        }}
+      >
+        <a href="javascript:void(0)" aria-describedby="help">
+          Help Text
+        </a>
+        <Tooltip
+          className={[
+            'slds-nubbin_bottom-left',
+            'slds-slide-from-left-to-right'
+          ].join(' ')}
+          id="help"
+          style={{ position: 'absolute', top: '-4px', left: '35px' }}
+        >
+          {tooltipContent}
+        </Tooltip>
+      </div>
+    )
+  },
+  {
+    id: 'rise',
+    label: 'Rise',
+    element: (
+      <div
+        style={{
+          paddingLeft: '2rem',
+          paddingTop: '5rem',
+          position: 'relative'
+        }}
+      >
+        <a href="javascript:void(0)" aria-describedby="help">
+          Help Text
+        </a>
+        <Tooltip
+          className={['slds-nubbin_bottom-left', 'slds-rise-from-ground'].join(
+            ' '
+          )}
+          id="help"
+          style={{ position: 'absolute', top: '-4px', left: '35px' }}
+        >
+          {tooltipContent}
+        </Tooltip>
+      </div>
+    )
+  },
+  {
+    id: 'fall',
+    label: 'Fall',
+    element: (
+      <div
+        style={{
+          paddingLeft: '2rem',
+          paddingTop: '5rem',
+          position: 'relative'
+        }}
+      >
+        <a href="javascript:void(0)" aria-describedby="help">
+          Help Text
+        </a>
+        <Tooltip
+          className={['slds-nubbin_bottom-left', 'slds-fall-into-ground'].join(
+            ' '
+          )}
+          id="help"
+          style={{ position: 'absolute', top: '-4px', left: '35px' }}
+        >
+          {tooltipContent}
         </Tooltip>
       </div>
     )

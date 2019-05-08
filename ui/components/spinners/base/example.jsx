@@ -37,7 +37,7 @@ export let Spinner = props => (
 /// ///////////////////////////////////////////
 
 export default (
-  <Demo>
+  <Demo className="demo-only demo-only_viewport">
     <Spinner className="slds-spinner_medium" />
   </Demo>
 );
@@ -84,7 +84,7 @@ export let examples = [
     description:
       'The spinner container may be used with a container with fixed positioning by adding the <code>.slds-is-fixed</code> class to the container. This may be needed if you are dynamically loading portions of a component after the spinner is showing.',
     element: (
-      <Demo className="demo--inverse">
+      <Demo className="demo-only demo-only_viewport demo--inverse">
         <SpinnerContainer className="slds-is-fixed">
           <Spinner className="slds-spinner_medium" />
         </SpinnerContainer>
@@ -112,6 +112,72 @@ export let examples = [
       <Demo>
         <SpinnerContainer>
           <Spinner className="slds-spinner_medium slds-spinner_delayed" />
+        </SpinnerContainer>
+      </Demo>
+    )
+  },
+  {
+    id: 'brand',
+    label: 'With brand colors',
+    element: (
+      <Demo>
+        <SpinnerContainer>
+          <Spinner className="slds-spinner_medium slds-spinner_brand" />
+        </SpinnerContainer>
+      </Demo>
+    )
+  },
+  {
+    id: 'xx-small',
+    label: 'Size Xx-Small',
+    element: (
+      <Demo>
+        <SpinnerContainer>
+          <Spinner className="slds-spinner_xx-small" />
+        </SpinnerContainer>
+      </Demo>
+    )
+  },
+  {
+    id: 'x-small',
+    label: 'Size X-Small',
+    element: (
+      <Demo>
+        <SpinnerContainer>
+          <Spinner className="slds-spinner_x-small" />
+        </SpinnerContainer>
+      </Demo>
+    )
+  },
+  {
+    id: 'small',
+    label: 'Size Small',
+    element: (
+      <Demo>
+        <SpinnerContainer>
+          <Spinner className="slds-spinner_small" />
+        </SpinnerContainer>
+      </Demo>
+    )
+  },
+  {
+    id: 'medium',
+    label: 'Size Medium',
+    element: (
+      <Demo>
+        <SpinnerContainer>
+          <Spinner className="slds-spinner_medium" />
+        </SpinnerContainer>
+      </Demo>
+    )
+  },
+  {
+    id: 'large',
+    label: 'Size Large',
+    element: (
+      <Demo>
+        <SpinnerContainer>
+          <Spinner className="slds-spinner_large" />
         </SpinnerContainer>
       </Demo>
     )

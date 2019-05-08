@@ -1,0 +1,97 @@
+import CodeView from '../../../shared/components/CodeView';
+import DisplayColumn from '../../../shared/components/DisplayColumn';
+import DisplayGrid from '../../../shared/components/DisplayGrid';
+import Blockquote from '../../../shared/components/Blockquote';
+import { getDisplayElementById } from '../../shared/helpers';
+import * as Base from './base/example';
+import * as Image from './image/example';
+import * as Integrated from './integrated/example';
+
+<div className="doc lead">
+  The File selector component allows the user to select file(s) from a user’s file system. Either natively using an file input or drag and drop.
+</div>
+
+## About File Selector
+
+## Base
+<CodeView>
+  {Base.default}
+</CodeView>
+
+## States
+
+### Error
+<CodeView>
+  {getDisplayElementById(Base.states, 'file-selector-files-error')}
+</CodeView>
+
+### Dragover
+<CodeView>
+  {getDisplayElementById(Base.states, 'file-selector-files-dragover')}
+</CodeView>
+
+### Dragover with error
+<CodeView>
+  {getDisplayElementById(Base.states, 'file-selector-files-dragover-error')}
+</CodeView>
+
+## Image
+
+Multi Line / Image
+
+Use as a dedicated dropzone for image files only. May require a cropping control.
+
+<CodeView>
+  {Image.default}
+</CodeView>
+
+## States
+
+### Error
+<CodeView>
+  {getDisplayElementById(Image.states, 'file-selector-images-error')}
+</CodeView>
+
+### Dragover
+<CodeView>
+  {getDisplayElementById(Image.states, 'file-selector-images-dragover')}
+</CodeView>
+
+### Dragover with error
+<CodeView>
+  {getDisplayElementById(Image.states, 'file-selector-images-dragover-error')}
+</CodeView>
+
+## Integrated
+
+Invisible Dropzone (Container)
+
+Use when an entire container should be droppable. The container should have a visible boundary, like a modal, composer, or page.
+
+<CodeView>
+  {Integrated.default}
+</CodeView>
+
+## States
+
+### Drag
+<CodeView>
+  {getDisplayElementById(Integrated.states, 'integrated-file-selector-drag')}
+</CodeView>
+
+### Dragover
+<CodeView>
+  {getDisplayElementById(Integrated.states, 'integrated-file-selector-dragover')}
+</CodeView>
+
+### Dragover with error
+<CodeView>
+  {getDisplayElementById(Integrated.states, 'integrated-file-selector-dragover-error')}
+</CodeView>
+
+## Accessibility
+
+When implementing this component, pay special attention to the following:
+
+### Notable attributes
+  - `aria-labelledby` is placed on the HTML `input` to form an "Accessible Label" from 2 seperate visible text labels, by referencing their `id` attributes

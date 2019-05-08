@@ -1,0 +1,66 @@
+import CodeView from '../../../shared/components/CodeView';
+import DisplayColumn from '../../../shared/components/DisplayColumn';
+import DisplayGrid from '../../../shared/components/DisplayGrid';
+import Blockquote from '../../../shared/components/Blockquote';
+import { getDisplayElementById } from '../../shared/helpers';
+import * as Base from './base/example';
+import * as Post from './post/example';
+
+<div className="doc lead">
+  A feed consists of a list of recurring elements of similar types. Examples of a feed would be a discussion feed.
+</div>
+
+## About Feeds
+
+<Blockquote type="a11y" header="Accessibility Note">
+  Most feeds have a media object containing the user's name and avatar image. If both the image and the name link to the same location, add `tab-index="-1"` to the `<a>` element so that assistive technology does not read out duplicate links.
+</Blockquote>
+
+## Base
+<CodeView>
+  {Base.default}
+</CodeView>
+
+## Post
+<CodeView>
+  {Post.default}
+</CodeView>
+
+## Examples
+
+### Link attachment
+<CodeView>
+  {getDisplayElementById(Post.examples, 'post-attachment-link')}
+</CodeView>
+
+### Files(s) attachment
+<CodeView>
+  {getDisplayElementById(Post.examples, 'post-attachment-files')}
+</CodeView>
+
+### With replies
+<CodeView>
+  {getDisplayElementById(Post.examples, 'post-with-comments')}
+</CodeView>
+
+### Replies - Overflow Bar
+<CodeView>
+  {getDisplayElementById(Post.examples, 'post-with-overflow')}
+</CodeView>
+
+### Replies - Publisher active
+<CodeView>
+  {getDisplayElementById(Post.examples, 'post-with-publisher-active')}
+</CodeView>
+
+### Question
+<CodeView>
+  {getDisplayElementById(Post.examples, 'questions')}
+</CodeView>
+
+## States
+
+### Like
+<CodeView>
+  {getDisplayElementById(Post.states, 'post-with-liker-bar')}
+</CodeView>

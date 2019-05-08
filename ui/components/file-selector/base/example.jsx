@@ -20,7 +20,7 @@ export let FileSelector = props => (
         <div
           className={classNames(
             'slds-file-selector__dropzone',
-            props.draggover ? 'slds-has-drag-over' : null
+            props.dragover ? 'slds-has-drag-over' : null
           )}
         >
           <input
@@ -28,7 +28,7 @@ export let FileSelector = props => (
             accept="image/png"
             type="file"
             id="file-upload-input-01"
-            disabled={props.draggoverError}
+            disabled={props.dragoverError}
             aria-describedby={props.error ? 'error-01' : null}
             aria-labelledby="file-selector-primary-label file-selector-secondary-label"
           />
@@ -42,7 +42,8 @@ export let FileSelector = props => (
                 className="slds-button__icon slds-button__icon_left"
                 sprite="utility"
                 symbol="upload"
-              />Upload {props.files ? 'Files' : 'Image'}
+              />
+              Upload {props.files ? 'Files' : 'Image'}
             </span>
             <span className="slds-file-selector__text slds-medium-show">
               or Drop {props.files ? 'Files' : 'Image'}
@@ -68,20 +69,20 @@ export let states = [
     element: <FileSelector files className="slds-file-selector_files" error />
   },
   {
-    id: 'file-selector-files-draggover',
+    id: 'file-selector-files-dragover',
     label: 'Dragover',
     element: (
-      <FileSelector files className="slds-file-selector_files" draggover />
+      <FileSelector files className="slds-file-selector_files" dragover />
     )
   },
   {
-    id: 'file-selector-files-draggover-error',
+    id: 'file-selector-files-dragover-error',
     label: 'Dragover with error',
     element: (
       <FileSelector
         files
         className="slds-file-selector_files"
-        draggoverError
+        dragoverError
         error
       />
     )

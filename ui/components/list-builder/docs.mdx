@@ -1,0 +1,52 @@
+import CodeView from '../../../shared/components/CodeView';
+import { getDisplayElementById } from '../../shared/helpers';
+import Blockquote from '../../../shared/components/Blockquote';
+import * as ListBuilder from './base/example';
+
+<div className="doc lead">
+  The List builder is a quick, visual and efficient ‘shopping cart’ approach to adding multiple items to a parent object.
+</div>
+
+<Blockquote type="warning" header="Warning">
+  The List builder relies heavily on utility classes to piece together the layout so please pay close attention to the markup and classes.
+</Blockquote>
+
+## Base
+
+<CodeView>
+  {ListBuilder.default}
+</CodeView>
+
+## States
+
+### Items Selected
+
+<CodeView>
+  {getDisplayElementById(ListBuilder.states, "items-selected")}
+</CodeView>
+
+### Items Disabled
+
+<CodeView>
+  {getDisplayElementById(ListBuilder.states, "items-disabled")}
+</CodeView>
+
+### Items Default Selected
+
+<CodeView>
+  {getDisplayElementById(ListBuilder.states, "items-default-selected")}
+</CodeView>
+
+## Examples
+
+### Two Column with Hidden Header
+
+<CodeView>
+  {getDisplayElementById(ListBuilder.examples, "filtered")}
+</CodeView>
+
+### Filtered Results
+
+<CodeView>
+  {getDisplayElementById(ListBuilder.examples, "two-column-with-hidden-header")}
+</CodeView>

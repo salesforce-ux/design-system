@@ -77,3 +77,16 @@ export let Default = props => <Publisher />;
 /// ////////////////////////////////////////
 
 export default <Publisher />;
+
+export const examples = [
+  {
+    id: 'active',
+    label: 'Active',
+    element: <Publisher className="slds-is-active" />
+  },
+  {
+    id: 'focused',
+    label: 'Focused',
+    element: <Publisher className="slds-has-focus" />
+  }
+];

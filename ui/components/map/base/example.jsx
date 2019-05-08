@@ -5,7 +5,9 @@ import React from 'react';
 import Map, { MapContainer } from '../';
 
 export const Context = props => (
-  <div style={{ height: '660px' }}>{props.children}</div>
+  <div className="demo-only demo-only_viewport" style={{ height: '660px' }}>
+    {props.children}
+  </div>
 );
 
 export default (

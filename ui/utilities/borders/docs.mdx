@@ -1,0 +1,26 @@
+import CodeView from '../../../shared/components/CodeView.jsx';
+import { getDisplayElementById } from '../../shared/helpers';
+import * as Base from './example';
+
+<div className="doc lead">
+  Use border utility classes to add borders to elements
+</div>
+
+## Examples
+
+### Top
+<CodeView>
+  {getDisplayElementById(Base.examples, 'top')}
+</CodeView>
+### Right
+<CodeView>
+  {getDisplayElementById(Base.examples, 'right')}
+</CodeView>
+### Bottom
+<CodeView>
+  {getDisplayElementById(Base.examples, 'bottom')}
+</CodeView>
+### Left
+<CodeView>
+  {getDisplayElementById(Base.examples, 'left')}
+</CodeView>

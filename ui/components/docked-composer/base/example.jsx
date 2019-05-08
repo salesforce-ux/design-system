@@ -26,11 +26,7 @@ import {
   ListboxItem,
   EntityOption
 } from '../../combobox/base/example';
-import {
-  ListboxPills,
-  ListboxPillsItem,
-  ListboxPill
-} from '../../pills/listbox-of-pill-options/example';
+import { ListboxPills, ListboxPillsItem, ListboxPill } from '../../pills';
 import SvgIcon from '../../../shared/svg-icon';
 import classNames from 'classnames';
 import _ from '../../../shared/helpers';
@@ -246,7 +242,10 @@ const ComboboxListbox = props => (
 /// ////////////////////////////////////////
 
 export const Context = props => (
-  <div style={{ height: '500px', minWidth: '615px', overflowX: 'auto' }}>
+  <div
+    className="demo-only demo-only_viewport"
+    style={{ height: '500px', minWidth: '615px', overflowX: 'auto' }}
+  >
     {props.children}
   </div>
 );

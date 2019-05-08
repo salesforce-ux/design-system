@@ -47,6 +47,12 @@
   transform: translate(-50%, -50%) rotate(90deg);
 }
 
+/**
+ * @summary Returns the spinner back into the document flow
+ * @selector .slds-spinner_inline
+ * @restrict .slds-spinner
+ * @modifier
+ */
 .slds-spinner_inline {
   position: relative;
   top: auto;
@@ -194,6 +200,7 @@
  *
  * @selector .slds-spinner_inverse
  * @restrict .slds-spinner
+ * @modifier
  */
 
 .slds-spinner_inverse,

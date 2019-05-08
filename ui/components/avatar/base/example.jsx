@@ -22,6 +22,19 @@ export default (
 
 export let examples = [
   {
+    id: 'circle',
+    label: 'Circle',
+    element: (
+      <Avatar className="slds-avatar_circle">
+        <img
+          alt="Person name"
+          src="/assets/images/avatar2.jpg"
+          title="Person name"
+        />
+      </Avatar>
+    )
+  },
+  {
     id: 'profile-icon',
     label: 'Profile Avatar Image',
     element: (
@@ -92,6 +105,59 @@ export let examples = [
       </Avatar>
     )
   },
+  {
+    id: 'x-small-image',
+    label: 'X-Small Image',
+    element: (
+      <Avatar className="slds-avatar_circle slds-avatar_x-small">
+        <img
+          alt="Person name"
+          src="/assets/images/avatar2.jpg"
+          title="Person name"
+        />
+      </Avatar>
+    )
+  },
+  {
+    id: 'small-image',
+    label: 'Small Image',
+    element: (
+      <Avatar className="slds-avatar_circle slds-avatar_small">
+        <img
+          alt="Person name"
+          src="/assets/images/avatar2.jpg"
+          title="Person name"
+        />
+      </Avatar>
+    )
+  },
+  {
+    id: 'medium-image',
+    label: 'Medium Image',
+    element: (
+      <Avatar className="slds-avatar_circle slds-avatar_medium">
+        <img
+          alt="Person name"
+          src="/assets/images/avatar2.jpg"
+          title="Person name"
+        />
+      </Avatar>
+    )
+  },
+  {
+    id: 'large-image',
+    label: 'Large Image',
+    element: (
+      <Avatar className="slds-avatar_circle slds-avatar_large">
+        <img
+          alt="Person name"
+          src="/assets/images/avatar2.jpg"
+          title="Person name"
+        />
+      </Avatar>
+    )
+  },
+
   {
     id: 'linked-avatar',
     label: 'Wrapped in a link',

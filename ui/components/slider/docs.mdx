@@ -1,0 +1,120 @@
+import CodeView from '../../../shared/components/CodeView';
+import * as Base from './base/example';
+import { getDisplayElementById } from '../../shared/helpers';
+
+<div className="doc lead">
+  An input range slider lets the user specify a numeric value which must be between two specified values.
+</div>
+
+## About Slider
+The slider component is built using a native input form element with the attribute type of "range".
+
+### Implementation Notes and Requirements
+
+- `slds-slider` should be applied to the div containing both the `<input>` and the `<span>` that holds the value of the `<input>`
+- `slds-slider__range` should be applied to the `<input>` element
+  - The `<input>` should have a unique ID that matches the `for` attribute on the form element `<label>`
+- The `slds-slider__range` element can accept 4 attributes that describe the input range:
+  - **value**: Current value of the input range
+  - **min**: Minimum value of a specified range
+  - **max**: Maximum value of a specified range
+  - **step**: Indicates the granularity that is expected by limiting the allowed values
+- The `slds-slider__value` span should be updated with the current value of the `<input>`
+- The `slds-slider__value` element must have `aria-hidden=true` to hide from screen readers as they understand that value already from the `<input>`
+- The class `slds-assistive-text` can be placed on the `<label>`, or either `<span>` within the `<label>`, to visually hide the either value (or both).
+
+## Base
+
+<CodeView>
+  {Base.default}
+</CodeView>
+
+## States
+
+### Disabled
+
+<CodeView>
+  {getDisplayElementById(Base.states, 'disabled')}
+</CodeView>
+
+### Value: 0
+
+<CodeView>
+  {getDisplayElementById(Base.states, 'value-0')}
+</CodeView>
+
+### Value: 25
+
+<CodeView>
+  {getDisplayElementById(Base.states, 'value-25')}
+</CodeView>
+
+### Value: 50
+
+<CodeView>
+  {getDisplayElementById(Base.states, 'value-50')}
+</CodeView>
+
+### Value: 75
+
+<CodeView>
+  {getDisplayElementById(Base.states, 'value-75')}
+</CodeView>
+
+### Value: 100
+
+<CodeView>
+  {getDisplayElementById(Base.states, 'value-100')}
+</CodeView>
+
+## Examples
+
+### Min/Max Range
+
+<CodeView>
+  {getDisplayElementById(Base.examples, 'min-max')}
+</CodeView>
+
+### Min/Max Range with Steps
+
+<CodeView>
+  {getDisplayElementById(Base.examples, 'steps')}
+</CodeView>
+
+### Width: x-small
+
+<CodeView>
+  {getDisplayElementById(Base.examples, 'width-x-small')}
+</CodeView>
+
+### Width: small
+
+<CodeView>
+  {getDisplayElementById(Base.examples, 'width-small')}
+</CodeView>
+
+### Width: medium
+
+<CodeView>
+  {getDisplayElementById(Base.examples, 'width-medium')}
+</CodeView>
+
+### Width: large
+
+<CodeView>
+  {getDisplayElementById(Base.examples, 'width-large')}
+</CodeView>
+
+### Error
+
+<CodeView>
+  {getDisplayElementById(Base.examples, 'error')}
+</CodeView>
+
+## Modifiers
+
+### Vertical
+
+<CodeView>
+  {getDisplayElementById(Base.examples, 'vertical')}
+</CodeView>

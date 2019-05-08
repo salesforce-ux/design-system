@@ -1,0 +1,69 @@
+import CodeView from '../../../shared/components/CodeView';
+import { getDisplayElementById } from '../../shared/helpers';
+import * as VisualPickers_coverable from './coverable-content/example';
+import * as VisualPickers_noncoverable from './non-coverable-content/example';
+import * as VisualPickers_link from './link/example';
+import * as VisualPickers_vertical from './vertical/example';
+
+<div className="doc lead">
+  A visual picker can be either radio buttons, checkboxes, or links that are visually enhanced.
+</div>
+
+## Coverable Content
+
+### Base
+
+<CodeView>
+  {VisualPickers_coverable.default}
+</CodeView>
+
+### States
+
+#### Disabled
+<CodeView>
+  {getDisplayElementById(VisualPickers_coverable.states, "disabled")}
+</CodeView>
+
+### Examples
+
+#### Checkbox group
+
+<CodeView>
+  {getDisplayElementById(VisualPickers_coverable.examples, "checkbox-group")}
+</CodeView>
+
+## Non Coverable Content
+
+### Base
+
+<CodeView>
+  {VisualPickers_noncoverable.default}
+</CodeView>
+
+### States
+
+#### Disabled
+<CodeView>
+  {getDisplayElementById(VisualPickers_noncoverable.states, "disabled")}
+</CodeView>
+
+## Link
+
+<CodeView>
+  {VisualPickers_link.default}
+</CodeView>
+
+## Vertical
+
+### Base
+
+<CodeView>
+  {VisualPickers_vertical.default}
+</CodeView>
+
+### States
+
+#### Disabled
+<CodeView>
+  {getDisplayElementById(VisualPickers_vertical.states, "disabled")}
+</CodeView>

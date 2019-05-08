@@ -1,0 +1,18 @@
+import CodeView from "../../../shared/components/CodeView";
+import { getDisplayElementById } from "../../shared/helpers";
+import * as Header from "./header/example";
+
+<div className="doc lead">
+  Trial bar components are used to provide an interactive and educational
+  prospect experience for setup.
+</div>
+
+## Header
+
+<CodeView>{Header.default}</CodeView>
+
+### States
+
+#### Menu - Open
+
+<CodeView>{getDisplayElementById(Header.states, "menu-open")}</CodeView>

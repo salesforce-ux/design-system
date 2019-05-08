@@ -21,22 +21,22 @@ export let states = [
     )
   },
   {
-    id: 'file-selector-images-draggover',
+    id: 'file-selector-images-dragover',
     label: 'Dragover',
     element: (
       <div className="demo-only" style={{ maxWidth: '320px' }}>
-        <FileSelector className="slds-file-selector_images" draggover />
+        <FileSelector className="slds-file-selector_images" dragover />
       </div>
     )
   },
   {
-    id: 'file-selector-images-draggover-error',
+    id: 'file-selector-images-dragover-error',
     label: 'Dragover with error',
     element: (
       <div className="demo-only" style={{ maxWidth: '320px' }}>
         <FileSelector
           className="slds-file-selector_images"
-          draggoverError
+          dragoverError
           error
         />
       </div>

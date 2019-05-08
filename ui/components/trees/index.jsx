@@ -28,13 +28,13 @@ export const TreeItem = props => {
   };
 
   return (
-    <div className="slds-tree__item">
+    <div className={classNames('slds-tree__item', props.className)}>
       <ButtonIcon
         aria-hidden="true"
         assistiveText={`Expand ${props.itemLabel}`}
         className={classNames(
           'slds-m-right_x-small',
-          !props.isBranch && 'slds-is-disabled'
+          (!props.isBranch || props.isDisabled) && 'slds-is-disabled'
         )}
         iconClassName="slds-button__icon_small"
         symbol="chevronright"
@@ -67,6 +67,7 @@ TreeItem.displayName = 'TreeItem';
 TreeItem.propTypes = {
   children: PropTypes.node,
   isBranch: PropTypes.bool,
+  isDisabled: PropTypes.bool,
   itemLabel: PropTypes.string,
   metaTextLabel: PropTypes.string,
   /** Term or string to highlight within the itemLabel */

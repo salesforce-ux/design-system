@@ -75,5 +75,35 @@ export let examples = [
     element: (
       <ProgressBarDescriptive label="Einstein Setup Assistant" value="25" />
     )
+  },
+  {
+    id: 'success',
+    label: 'Success',
+    element: <ProgressBar isSuccess value="75" />
+  },
+  {
+    id: 'circular',
+    label: 'Circular',
+    element: <ProgressBar className="slds-progress-bar__cicular" value="75" />
+  },
+  {
+    id: 'thickness-x-small',
+    label: 'X-Small Thickness',
+    element: <ProgressBar className="slds-progress-bar_x-small" value="75" />
+  },
+  {
+    id: 'thickness-small',
+    label: 'Small Thickness',
+    element: <ProgressBar className="slds-progress-bar_small" value="75" />
+  },
+  {
+    id: 'thickness-medium',
+    label: 'Medium Thickness',
+    element: <ProgressBar className="slds-progress-bar_medium" value="75" />
+  },
+  {
+    id: 'thickness-large',
+    label: 'Large Thickness',
+    element: <ProgressBar className="slds-progress-bar_large" value="75" />
   }
 ];

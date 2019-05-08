@@ -12,6 +12,7 @@ import {
 export default (
   <div className="demo-only" style={{ height: '24rem' }}>
     <Modal
+      tabIndex="0"
       role="alertdialog"
       aria-labelledby="prompt-heading-id"
       aria-describedby="prompt-message-wrapper"

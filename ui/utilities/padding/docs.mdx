@@ -1,8 +1,12 @@
+import { Fragment } from 'react';
 import SpacingCodeView from '../../../shared/components/SpacingCodeView';
 import Example from '../../../shared/components/Example';
 
-<div className="lead">Adjust whitespace by applying horizontal and vertical padding helpers</div>
+<div className="doc lead">
+  Adjust whitespace by applying horizontal and vertical padding helpers.
+</div>
 
+## About Padding
 The base unit of all of our spacing metrics is **4**.
 
 **Before using**
@@ -15,10 +19,12 @@ The base unit of all of our spacing metrics is **4**.
 - You can also use `none` as the size on any of the directions to enforce zero padding.
 - Where **vertical centering** is required, check out our [centered media object](/utilities/media-objects) instead of applying extra `padding` or `margin`.
 
-## Location - Top
+## Examples
+
+### Location - Top
 
 <Example title="top paddings">
-  <div>
+  <Fragment>
     <SpacingCodeView type="p" size="none" position="top" />
     <SpacingCodeView type="p" size="xxx-small" position="top" />
     <SpacingCodeView type="p" size="xx-small" position="top" />
@@ -28,13 +34,13 @@ The base unit of all of our spacing metrics is **4**.
     <SpacingCodeView type="p" size="large" position="top" />
     <SpacingCodeView type="p" size="x-large" position="top" />
     <SpacingCodeView type="p" size="xx-large" position="top" />
-  </div>
+  </Fragment>
 </Example>
 
-## Location - Left
+### Location - Left
 
 <Example title="left paddings">
-  <div>
+  <Fragment>
     <SpacingCodeView type="p" size="none" position="left" />
     <SpacingCodeView type="p" size="xxx-small" position="left" />
     <SpacingCodeView type="p" size="xx-small" position="left" />
@@ -44,13 +50,13 @@ The base unit of all of our spacing metrics is **4**.
     <SpacingCodeView type="p" size="large" position="left" />
     <SpacingCodeView type="p" size="x-large" position="left" />
     <SpacingCodeView type="p" size="xx-large" position="left" />
-  </div>
+  </Fragment>
 </Example>
 
-## Location - Bottom
+### Location - Bottom
 
 <Example title="bottom paddings">
-  <div>
+  <Fragment>
     <SpacingCodeView type="p" size="none" position="bottom" />
     <SpacingCodeView type="p" size="xxx-small" position="bottom" />
     <SpacingCodeView type="p" size="xx-small" position="bottom" />
@@ -60,13 +66,13 @@ The base unit of all of our spacing metrics is **4**.
     <SpacingCodeView type="p" size="large" position="bottom" />
     <SpacingCodeView type="p" size="x-large" position="bottom" />
     <SpacingCodeView type="p" size="xx-large" position="bottom" />
-  </div>
+  </Fragment>
 </Example>
 
-## Location - Right
+### Location - Right
 
 <Example title="right paddings">
-  <div>
+  <Fragment>
     <SpacingCodeView type="p" size="none" position="right" />
     <SpacingCodeView type="p" size="xxx-small" position="right" />
     <SpacingCodeView type="p" size="xx-small" position="right" />
@@ -76,13 +82,13 @@ The base unit of all of our spacing metrics is **4**.
     <SpacingCodeView type="p" size="large" position="right" />
     <SpacingCodeView type="p" size="x-large" position="right" />
     <SpacingCodeView type="p" size="xx-large" position="right" />
-  </div>
+  </Fragment>
 </Example>
 
-## Location - Horizontal
+### Location - Horizontal
 
 <Example title="horizontal paddings">
-  <div>
+  <Fragment>
     <SpacingCodeView type="p" size="none" position="horizontal" />
     <SpacingCodeView type="p" size="xxx-small" position="horizontal" />
     <SpacingCodeView type="p" size="xx-small" position="horizontal" />
@@ -92,13 +98,13 @@ The base unit of all of our spacing metrics is **4**.
     <SpacingCodeView type="p" size="large" position="horizontal" />
     <SpacingCodeView type="p" size="x-large" position="horizontal" />
     <SpacingCodeView type="p" size="xx-large" position="horizontal" />
-  </div>
+  </Fragment>
 </Example>
 
-## Location - Vertical
+### Location - Vertical
 
 <Example title="vertical paddings">
-  <div>
+  <Fragment>
     <SpacingCodeView type="p" size="none" position="vertical" />
     <SpacingCodeView type="p" size="xxx-small" position="vertical" />
     <SpacingCodeView type="p" size="xx-small" position="vertical" />
@@ -108,13 +114,13 @@ The base unit of all of our spacing metrics is **4**.
     <SpacingCodeView type="p" size="large" position="vertical" />
     <SpacingCodeView type="p" size="x-large" position="vertical" />
     <SpacingCodeView type="p" size="xx-large" position="vertical" />
-  </div>
+  </Fragment>
 </Example>
 
-## Location - Around
+### Location - Around
 
 <Example title="around paddings">
-  <div>
+  <Fragment>
     <SpacingCodeView type="p" size="none" position="around" />
     <SpacingCodeView type="p" size="xxx-small" position="around" />
     <SpacingCodeView type="p" size="xx-small" position="around" />
@@ -124,7 +130,7 @@ The base unit of all of our spacing metrics is **4**.
     <SpacingCodeView type="p" size="large" position="around" />
     <SpacingCodeView type="p" size="x-large" position="around" />
     <SpacingCodeView type="p" size="xx-large" position="around" />
-  </div>
+  </Fragment>
 </Example>
 
 ## Variable Density Classes

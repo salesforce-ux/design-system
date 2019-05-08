@@ -1,0 +1,107 @@
+import CodeView from '../../../shared/components/CodeView.jsx';
+import { getDisplayElementById } from '../../shared/helpers';
+import * as Base from './example';
+
+<div className="doc lead">
+  For consistent typography throughout the application, we created text helper classes for headings and body text.
+</div>
+
+## About Text
+In our framework, all headings (`h1`–`h6`) are reset to the base (body text) size, with margins and padding reset to zero. When building an enterprise application, the heading level may vary depending on the context of the component or page. Using the correct heading level is important for accessibility.
+
+## Base
+<CodeView>
+  {getDisplayElementById(Base.examples, 'body-default')}
+</CodeView>
+
+## Examples
+
+### Body Size - Small
+<CodeView>
+  {getDisplayElementById(Base.examples, 'body-small')}
+</CodeView>
+
+### Heading Size - Large
+<CodeView>
+  {getDisplayElementById(Base.examples, 'heading-large')}
+</CodeView>
+
+### Heading Size - Medium
+<CodeView>
+  {getDisplayElementById(Base.examples, 'heading-medium')}
+</CodeView>
+
+### Heading Size - Small
+<CodeView>
+  {getDisplayElementById(Base.examples, 'heading-small')}
+</CodeView>
+
+### Title
+<CodeView>
+  {getDisplayElementById(Base.examples, 'heading-title')}
+</CodeView>
+
+### Title Uppercase
+<CodeView>
+  {getDisplayElementById(Base.examples, 'heading-title--caps')}
+</CodeView>
+
+### Longform
+<CodeView>
+  {getDisplayElementById(Base.examples, 'longform')}
+</CodeView>
+
+### Align Left
+<CodeView>
+  {getDisplayElementById(Base.examples, 'align-left')}
+</CodeView>
+
+### Align Right
+<CodeView>
+  {getDisplayElementById(Base.examples, 'align-right')}
+</CodeView>
+
+### Align Center
+<CodeView>
+  {getDisplayElementById(Base.examples, 'align-center')}
+</CodeView>
+
+### Color - Default
+<CodeView>
+  {getDisplayElementById(Base.examples, 'text-color-default')}
+</CodeView>
+
+### Color - Success
+<CodeView>
+  {getDisplayElementById(Base.examples, 'text-color-success')}
+</CodeView>
+
+### Color - Weak
+<CodeView>
+  {getDisplayElementById(Base.examples, 'text-color-weak')}
+</CodeView>
+
+### Color - Error
+<CodeView>
+  {getDisplayElementById(Base.examples, 'text-color-error')}
+</CodeView>
+
+### Color - Destructive Actions
+<CodeView>
+  {getDisplayElementById(Base.examples, 'text-color-destructive')}
+</CodeView>
+
+### Color - Inverse
+<CodeView>
+  {getDisplayElementById(Base.examples, 'text-color-inverse')}
+</CodeView>
+
+### Color - Inverse - Weak
+<CodeView>
+  {getDisplayElementById(Base.examples, 'text-color-inverse-weak')}
+</CodeView>
+
+### Font - Monospace
+<CodeView>
+  {getDisplayElementById(Base.examples, 'text-font-monospace')}
+</CodeView>

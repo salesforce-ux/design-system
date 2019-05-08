@@ -1,0 +1,163 @@
+import CodeView from '../../../shared/components/CodeView';
+import * as Base from './base/example';
+import { getDisplayElementById } from '../../shared/helpers';
+
+<div className="doc lead">
+  A tree is visualization of a structure hierarchy. A branch can be expanded or collapsed.
+</div>
+
+## About Tree Grid
+A tree grid is additional semantics that are laid on top of a grid based component via ARIA attributes, to enable hierarchically structured tabular data.
+
+The tree grid comes with a very specific keyboard interaction model which **must** be implemented for the component to be screen reader accessible.
+
+### Accessibility
+
+#### Notable attributes
+
+  - `role="treegrid"` should be applied to the `table` element
+  - `aria-readonly="true"` should be applied to the `table` element
+  - `aria-level="n"` where `n` represents the nesting level of a particular grid row, should be applied to the `tr` element
+  - `aria-setsize="n"` where `n` is the number of items for that specific `aria-level` should be applied to the `tr` element
+  - `aria-posinset="n"` where `n` represents the position in the `aria-level` set the row is placed at, should be applied to the `tr` element
+  - `aria-expanded="false"` should be placed on rows that are collapsed and have child rows
+  - `aria-expanded="true"` should be placed on rows that are expanded and have child rows
+  - `tabindex="0"` should be placed on the first `tr` in the grid on load, to make the row focusable
+  - Every actionable element in the grid should have `tabindex="-1"` applied to make them not focusable in the grids navigation mode
+
+#### Multi select tree grid
+
+  - `aria-multiselectable="true"` should be placed on the `table` element
+  - `aria-selected="false"` should be set by default on all `tr` elements that aren't selected
+  - `aria-selected="true"` should be set only on the `tr` elements that are selected
+
+#### Single Select tree grid
+
+  - `aria-selected="true"` should be applied to the `tr` that is selected in the tree grid
+
+
+#### Keyboard interaction
+
+  - Overall keyboard interaction should follow the same keyboard modal as the [Advanced and Inline Edit Data Table](/components/data-tables) with some additions
+    - Navigation mode is the default mode. The grid only has a single focusable element at any time and it is either the `tr` or the `td`
+    - Actionable mode is enabled when the user presses the `Enter` key, where actionable elements become focusable in the cell
+    - Actionable mode is exited when the user presses the `Escape` key, and the user is placed back into Navigation Mode on the last cell they were in
+  - User focus is initially placed on the first row in the tree grid
+  - `Down` arrow key moves the user down one row and moves `tabindex="0"` with it
+  - `Up` arrow key moves the user up one row and moves `tabindex="0"` with it
+  - `Space` key when focused on a row should select that row by setting `aria-selected="true` on the `tr` element
+  - `Right` arrow key on a collapsed row, will expand it and update `aria-expanded`
+  - `Right` arrow key on an expanded or end row will move the user to the first cell in the row and move `tabindex="0"` with it
+  - `Right` arrow key on a cell will move the user to the next cell in the row and move `tabindex="0"` with it
+  - `Left` arrow key on a collapsed or end row will move the user to it's parent row and collapse it, if it has one
+  - `Left` arrow key on an expanded row will collapse it and update `aria-expanded`
+  - `Left` arrow key on a cell will move the user to the previous cell in the row and moves `tabindex="0"` with it
+  - `Left` arrow key on the first cell of a row will move the user back to the row  and moves `tabindex="0"` with it
+
+
+## Base
+
+<CodeView>
+  {Base.default}
+</CodeView>
+
+### States
+
+#### Expanded
+
+<CodeView>
+  {getDisplayElementById(Base.states, 'expanded')}
+</CodeView>
+
+#### Selected row
+
+<CodeView>
+  {getDisplayElementById(Base.states, 'selected-row')}
+</CodeView>
+
+#### Deeply nested branches
+
+<CodeView>
+  {getDisplayElementById(Base.states, 'deep-nesting')}
+</CodeView>
+
+## Examples
+
+### Headless
+
+<CodeView>
+  {getDisplayElementById(Base.examples, 'treegrid-headless')}
+</CodeView>
+
+### Headless with selected row
+
+<CodeView>
+  {getDisplayElementById(Base.examples, 'treegrid-headless-selected-row')}
+</CodeView>
+
+### Headless with no borders
+
+<CodeView>
+  {getDisplayElementById(Base.examples, 'treegrid-headless-no-borders')}
+</CodeView>
+
+### Headless with no borders and a selected row
+
+<CodeView>
+  {getDisplayElementById(Base.examples, 'treegrid-headless-no-borders-selected-row')}
+</CodeView>
+
+### Single select
+
+<CodeView>
+  {getDisplayElementById(Base.examples, 'treegrid-single-select')}
+</CodeView>
+
+### Single select with a selected row
+
+<CodeView>
+  {getDisplayElementById(Base.examples, 'treegrid-single-select-selected-row')}
+</CodeView>
+
+### Single select headless
+
+<CodeView>
+  {getDisplayElementById(Base.examples, 'treegrid-single-select-headless')}
+</CodeView>
+
+### Single select headless with selected row
+
+<CodeView>
+  {getDisplayElementById(Base.examples, 'treegrid-single-select-headless-selected')}
+</CodeView>
+
+### Single select headless with no borders
+
+<CodeView>
+  {getDisplayElementById(Base.examples, 'treegrid-single-select-headless-no-borders')}
+</CodeView>
+
+### Single select headless with no borders and a selected row
+
+<CodeView>
+  {getDisplayElementById(Base.examples, 'treegrid-single-select-headless-no-borders-with-selected')}
+</CodeView>
+
+## Modifiers
+### Interaction
+
+#### Item Disabled
+
+When a branch doesn't have children, apply `slds-is-disabled` to the corresponding `slds-button_icon` element.
+
+<CodeView>
+  {getDisplayElementById(Base.examples, 'item-disabled')}
+</CodeView>
+
+#### Item Hovered
+
+When a tree item is hovered, apply `slds-is-hovered` to `slds-tree__item` element`.
+
+<CodeView>
+  {getDisplayElementById(Base.examples, 'item-hovered')}
+</CodeView>

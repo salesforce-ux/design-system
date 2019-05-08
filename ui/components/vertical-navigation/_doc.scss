@@ -2,16 +2,6 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 /**
- *
- * @summary Navigation represents a list of links that either take the user to another page or parts of the page the user is in.
- *
- *
- * **Radio Group Variant**
- *
- * The radio group variant should be used when your vertical navigation acts as a selection or filter on content, like within a modal. If the vertical navigation takes the user to another page or part of a page, use the standard List version. If your content changes entirely whenever options in the navigation are selected, instead of filtering one master list, then use the [Vertical Tabs](/components/vertical-tabs) component.
- *
- *
- *
  * @base
  * @name vertical-navigation
  * @selector .slds-nav-vertical

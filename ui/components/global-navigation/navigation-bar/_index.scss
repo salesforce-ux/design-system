@@ -418,43 +418,6 @@
 
 
   /**
-   *
-   * #### Accessibility
-   *
-   * **Communicating Status to Screen Readers**
-   *
-   * When communitcatin tab status updates to the user, unread, warning, error and success notifications should  all employ the same technique to communicate that update to users of assistive technology, who would be otherwise unaware of that status change.
-   *
-   * You should use a single hidden ARIA live region for the entire sub tabs block, the contents of which gets updated each time a sub tab changes its status. The contents should contain a description of the status level and the name of the tab the status change event occured in. The markup would look something like:
-   *
-   * `<div className="slds-assistive-text" aria-live="polite">...</div>`
-   *
-   * Upon clearing the status on a given tab, you should clear the message from the live region.
-
-   * **Unread status**
-   *
-   * In order to inform screen readers of new activity in a tab, 2 things should occur.
-   *
-   * 1. The `title` attribute and `aria-label` on the element that displays the red dot should read **"New Activity"**. This will update the text content of the tab to include the "New Activity" text: "New Activity Chat - Customer".
-   *
-   * 2. The hidden live region as described above, should have its content updated to **"New Activity in Tab: [Tab Name Here]"** to alert the user of new activity in that particular sub tab.
-   *
-   * `<span aria-label="New Activity" className="slds-indicator_unread" title="New Activity"></span>`
-   *
-   * `<div className="slds-assistive-text" aria-live="polite">New activity in Tab: Chat - Customer</div>`
-   *
-   * **Warning, Error and Success Tabs**
-   *
-   * When you wish to draw attention to a particular tab because something has occurred in that tab that corresponds to an alert level, you can use the `slds-has-warning`, `slds-has-error` or `slds-has-success` class to change the background color and introduce a short pulsing animation to draw attention from the user.
-   *
-   * The icon is updated to match the corresponding alert level, to give an extra way to communicate the level of the status without relying on the use of color alone.
-   *
-   * In this example we show that something inside the tab is about to break a service level agreement in 30 seconds, and we wish to draw the users attention to it to take action.
-   *
-   * Update the hidden live region with a message that informs the user of the status level, the message and the offending sub tab **[level]: [message] in tab: [tab_name]**.
-   *
-   * `<div className="slds-assistive-text" aria-live="polite">Warning: SLA agreement in 30 seconds in tab: Chat - Customer</div>`
-   *
    * @summary Tab modifier when using a tabset
    *
    * @name navigation-tab-bar

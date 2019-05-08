@@ -1,11 +1,11 @@
 {
   "name": "design-system",
   "description": "Salesforce Lightning Design System",
-  "version": "2.9.0-dev",
+  "version": "2.9.5-dev",
   "author": "Salesforce",
   "slds": {
-    "name": "Summer ’19",
-    "id": "220"
+    "name": "Winter ’20",
+    "id": "222"
   },
   "important": [
     "'private' and 'config.slds.internal' should have the same value",
@@ -19,7 +19,7 @@
     "search": {
       "appId": "B2KKG101RI",
       "apiKey": "f289c1dd954797a3e57158c04a897d46",
-      "indexName": "summer-19"
+      "indexName": "winter-20"
     }
   },
   "devDependencies": {
@@ -32,7 +32,7 @@
     "@salesforce-ux/design-system-markup": "2.0.2",
     "@salesforce-ux/design-system-parser": "1.1.0",
     "@salesforce-ux/design-system-previewer": "3.2.1",
-    "@salesforce-ux/icons": "9.25.0",
+    "@salesforce-ux/icons": "9.26.0",
     "@salesforce-ux/instant-vrt": "2.0.0",
     "@salesforce-ux/scss-parser-aura": "3.0.4",
     "@std/esm": "0.23.2",
@@ -63,12 +63,12 @@
     "enzyme": "3.8.0",
     "enzyme-adapter-react-16": "1.7.1",
     "eslint": "5.6.0",
-    "eslint-config-prettier": "3.0.1",
+    "eslint-config-prettier": "4.1.0",
     "eslint-config-standard": "12.0.0",
     "eslint-config-standard-jsx": "6.0.2",
     "eslint-plugin-import": "2.14.0",
     "eslint-plugin-node": "7.0.1",
-    "eslint-plugin-prettier": "2.6.2",
+    "eslint-plugin-prettier": "3.0.1",
     "eslint-plugin-promise": "4.0.1",
     "eslint-plugin-react": "7.11.1",
     "eslint-plugin-standard": "4.0.0",
@@ -127,7 +127,7 @@
     "postcss-nested-props": "2.0.0",
     "postcss-scss": "1.0.6",
     "precss": "3.1.2",
-    "prettier": "1.7.2",
+    "prettier": "1.17.0",
     "prop-types": "15.6.0",
     "puppeteer": "0.10.1",
     "raw-loader": "0.5.1",

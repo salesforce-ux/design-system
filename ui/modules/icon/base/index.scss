@@ -11,19 +11,19 @@
 // ------------
 
 // Sizing Tokens
-$_c-sizing-icon-x-large: rem(64px);
-$_c-sizing-icon-large: rem(48px);
-$_c-sizing-icon-medium: rem(32px);
-$_c-sizing-icon-small: rem(24px);
-$_c-sizing-icon-x-small: rem(16px);
-$_c-sizing-icon-xx-small: rem(12px);
+$_c-icon-x-large: rem(64px);
+$_c-icon-large: rem(48px);
+$_c-icon-medium: rem(32px);
+$_c-icon-small: rem(24px);
+$_c-icon-x-small: rem(16px);
+$_c-icon-xx-small: rem(12px);
 
-$_c-sizing-icon-boundary-x-large: rem(64px);
-$_c-sizing-icon-boundary-large: rem(48px);
-$_c-sizing-icon-boundary-medium: rem(32px);
-$_c-sizing-icon-boundary-small: rem(24px);
-$_c-sizing-icon-boundary-x-small: rem(16px);
-$_c-sizing-icon-boundary-xx-small: rem(12px);
+$_c-icon-boundary-x-large: rem(64px);
+$_c-icon-boundary-large: rem(48px);
+$_c-icon-boundary-medium: rem(32px);
+$_c-icon-boundary-small: rem(24px);
+$_c-icon-boundary-x-small: rem(16px);
+$_c-icon-boundary-xx-small: rem(12px);
 
 // Colors
 $_c-icon-background-color-default: #54698d;
@@ -34,13 +34,13 @@ $_c-icon-border-radius-circle: 50%;
 $_c-icon-border-radius-small: rem(2px);
 
 // Spacing
-$_c-spacing-icon-action-padding: rem(6px);
-$_c-spacing-icon-action-padding-x-large: rem(10px);
-$_c-spacing-icon-action-padding-large: rem(8px);
-$_c-spacing-icon-action-padding-medium: rem(6px);
-$_c-spacing-icon-action-padding-small: rem(5px);
-$_c-spacing-icon-action-padding-x-small: rem(3px);
-$_c-spacing-icon-action-padding-xx-small: rem(2px);
+$_c-icon-action-padding: rem(6px);
+$_c-icon-action-padding-x-large: rem(10px);
+$_c-icon-action-padding-large: rem(8px);
+$_c-icon-action-padding-medium: rem(6px);
+$_c-icon-action-padding-small: rem(5px);
+$_c-icon-action-padding-x-small: rem(3px);
+$_c-icon-action-padding-xx-small: rem(2px);
 
 // ------------
 // Public
@@ -76,7 +76,7 @@ $c-icon-border-radius: $border-radius-medium;
  */
 .lwc-icon {
   @include icon-base;
-  @include square($_c-sizing-icon-x-small);
+  @include square($_c-icon-x-small);
   color: var(--c-icon-color, $c-icon-color);
   border-radius: var(--c-icon-border-radius, $c-icon-border-radius);
   vertical-align: middle;
@@ -89,7 +89,7 @@ $c-icon-border-radius: $border-radius-medium;
 [class*="lwc-icon-custom"],
 [class*="lwc-icon-standard"],
 [class*="lwc-icon-doctype"] {
-  @include square($_c-sizing-icon-small);
+  @include square($_c-icon-small);
 }
 
 [class*="lwc-icon-action"],
@@ -101,7 +101,7 @@ $c-icon-border-radius: $border-radius-medium;
 
 [class*="lwc-icon-action"] {
   border-radius: $_c-icon-border-radius-circle;
-  padding: $_c-spacing-icon-action-padding;
+  padding: $_c-icon-action-padding;
   vertical-align: bottom;
 }
 
@@ -141,27 +141,27 @@ $icon-bg-map: map-merge($bg-actions-map, $bg-custom-map);
 .lwc-icon-action {
 
   &.lwc-icon_x-large {
-    padding: $_c-spacing-icon-action-padding-x-large;
+    padding: $_c-icon-action-padding-x-large;
   }
 
   &.lwc-icon_large {
-    padding: $_c-spacing-icon-action-padding-large;
+    padding: $_c-icon-action-padding-large;
   }
 
   &.lwc-icon_medium {
-    padding: $_c-spacing-icon-action-padding-medium;
+    padding: $_c-icon-action-padding-medium;
   }
 
   &.lwc-icon_small {
-    padding: $_c-spacing-icon-action-padding-small;
+    padding: $_c-icon-action-padding-small;
   }
 
   &.lwc-icon_x-small {
-    padding: $_c-spacing-icon-action-padding-x-small;
+    padding: $_c-icon-action-padding-x-small;
   }
 
   &.lwc-icon_xx-small {
-    padding: $_c-spacing-icon-action-padding-xx-small;
+    padding: $_c-icon-action-padding-xx-small;
   }
 }
 
@@ -191,7 +191,7 @@ $icon-bg-map: map-merge($bg-actions-map, $bg-custom-map);
  * @group sizing
  */
 .lwc-icon_x-large {
-  @include square($_c-sizing-icon-x-large);
+  @include square($_c-icon-x-large);
 }
 
 /**
@@ -202,7 +202,7 @@ $icon-bg-map: map-merge($bg-actions-map, $bg-custom-map);
  * @group sizing
  */
 .lwc-icon_large {
-  @include square($_c-sizing-icon-large);
+  @include square($_c-icon-large);
 }
 
 /**
@@ -213,7 +213,7 @@ $icon-bg-map: map-merge($bg-actions-map, $bg-custom-map);
  * @group sizing
  */
 .lwc-icon_medium {
-  @include square($_c-sizing-icon-medium);
+  @include square($_c-icon-medium);
 }
 
 /**
@@ -224,7 +224,7 @@ $icon-bg-map: map-merge($bg-actions-map, $bg-custom-map);
  * @group sizing
  */
 .lwc-icon_small {
-  @include square($_c-sizing-icon-small);
+  @include square($_c-icon-small);
 }
 
 /**
@@ -235,7 +235,7 @@ $icon-bg-map: map-merge($bg-actions-map, $bg-custom-map);
  * @group sizing
  */
 .lwc-icon_x-small {
-  @include square($_c-sizing-icon-x-small);
+  @include square($_c-icon-x-small);
 }
 
 /**
@@ -246,7 +246,7 @@ $icon-bg-map: map-merge($bg-actions-map, $bg-custom-map);
  * @group sizing
  */
 .lwc-icon_xx-small {
-  @include square($_c-sizing-icon-xx-small);
+  @include square($_c-icon-xx-small);
 }
 
 // ----------
@@ -320,7 +320,7 @@ $icon-bg-map: map-merge($bg-actions-map, $bg-custom-map);
  * @group sizing
  */
 .lwc-icon-boundary_x-large {
-  @include square($_c-sizing-icon-x-large);
+  @include square($_c-icon-x-large);
 }
 
 /**
@@ -331,7 +331,7 @@ $icon-bg-map: map-merge($bg-actions-map, $bg-custom-map);
  * @group sizing
  */
 .lwc-icon-boundary_large {
-  @include square($_c-sizing-icon-large);
+  @include square($_c-icon-large);
 }
 
 /**
@@ -342,7 +342,7 @@ $icon-bg-map: map-merge($bg-actions-map, $bg-custom-map);
  * @group sizing
  */
 .lwc-icon-boundary_medium {
-  @include square($_c-sizing-icon-medium);
+  @include square($_c-icon-medium);
 }
 
 /**
@@ -353,7 +353,7 @@ $icon-bg-map: map-merge($bg-actions-map, $bg-custom-map);
  * @group sizing
  */
 .lwc-icon-boundary_small {
-  @include square($_c-sizing-icon-small);
+  @include square($_c-icon-small);
 }
 
 /**
@@ -364,5 +364,17 @@ $icon-bg-map: map-merge($bg-actions-map, $bg-custom-map);
  * @group sizing
  */
 .lwc-icon-boundary_x-small {
-  @include square($_c-sizing-icon-x-small);
+  @include square($_c-icon-x-small);
+}
+
+/**
+ * @name base
+ * @summary
+ * @selector .lwc-svg
+ * @restrict svg
+ * @variant
+ */
+.lwc-svg {
+  @include icon-svg;
+  fill: var(--c-icon-primitive-color, currentColor);
 }

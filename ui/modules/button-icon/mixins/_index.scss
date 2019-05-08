@@ -20,7 +20,7 @@
 
 @mixin button-icon-normalize {
   border-radius: var(--c-button-icon-border-radius, $c-button-icon-border-radius);
-  border: var(--c-spacing-button-icon-border-width, $c-spacing-button-icon-border-width) solid transparent;
+  border: var(--c-button-icon-border-width, $c-button-icon-border-width) solid transparent;
   box-shadow: var(--c-button-icon-shadow, $c-button-icon-shadow);
   text-align: center;
   vertical-align: middle;

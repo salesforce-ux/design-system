@@ -4,6 +4,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import SvgIcon from '../../shared/svg-icon';
 import IconPrimitive from '../icon-primitive/';
 import Shadow from '../../shared/shadow';
 
@@ -11,6 +12,18 @@ import common from '../common/index.scss';
 import icon from './base/index.scss';
 
 class Icon extends Component {
+  constructor() {
+    super();
+    this.renderAssistiveText = this.renderAssistiveText.bind(this);
+  }
+
+  renderAssistiveText() {
+    if (!this.props.assistiveText) return;
+    return (
+      <span className="lwc-assistive-text">{this.props.assistiveText}</span>
+    );
+  }
+
   render() {
     const {
       sprite,
@@ -78,11 +91,8 @@ class Icon extends Component {
             )}
             title={title}
           >
-            <IconPrimitive
-              sprite={sprite}
-              symbol={symbol}
-              assistiveText={assistiveText}
-            />
+            <SvgIcon className="lwc-svg" sprite={sprite} symbol={symbol} />
+            {this.renderAssistiveText()}
           </span>
         </span>
       </Shadow>

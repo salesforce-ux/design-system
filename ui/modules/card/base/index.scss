@@ -69,6 +69,16 @@ $c-card-text-color: inherit;
 }
 
 /**
+ * @summary Figure or Icon element within card header
+ * @selector .lwc-card__header-figure
+ * @restrict .lwc-card__header div
+ */
+.lwc-card__header-figure {
+  display: inline-flex;
+  margin-right: $spacing-small;
+}
+
+/**
  * @summary Title element within card header
  * @selector .lwc-card__header-title
  * @restrict .lwc-card__header h2

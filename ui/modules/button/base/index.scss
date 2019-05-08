@@ -26,6 +26,8 @@ $_c-button-color-inverse: $color-gray-1;
 // ------------
 
 // Background Color
+$c-button-color-background: transparent;
+$c-button-color-background-active: transparent;
 $c-button-color-background-default: $color-gray-1;
 $c-button-color-background-default-active: $color-gray-2;
 $c-button-color-background-brand: $brand-accessible;
@@ -36,6 +38,10 @@ $c-button-color-background-success: $color-background-success;
 $c-button-color-background-success-active: $color-background-success-dark;
 
 // Border Color
+$c-button-color-border: transparent;
+$c-button-color-border-active: transparent;
+$c-button-color-border-brand: $brand-accessible;
+$c-button-color-border-brand-active: $brand-accessible-active;
 
 // Border Size
 $c-button-border-width: $border-width-thin;
@@ -44,6 +50,8 @@ $c-button-border-width: $border-width-thin;
 $c-button-color: $brand-accessible;
 $c-button-color-active: $brand-accessible-active;
 $c-button-color-neutral: $brand-accessible;
+$c-button-color-brand: $color-gray-1;
+$c-button-color-brand-active: $brand-accessible-active;
 
 // Border Radius
 $c-button-border-radius: $border-radius-medium;
@@ -82,9 +90,9 @@ $c-button-height: $line-height-button;
  */
 .lwc-button_brand {
   @include button-shape;
-  --c-button-color-background: var(--c-button-color-background-brand, $brand-accessible);
-  --c-button-border-color: var(--c-button-border-color-brand, $brand-accessible);
-  --c-button-color: var(--c-button-color-brand, $color-text-brand-primary);
+  --c-button-color-background: var(--c-button-color-background-brand, $c-button-color-background-brand);
+  --c-button-color-border: var(--c-button-color-border-brand, $c-button-color-border-brand);
+  --c-button-color: var(--c-button-color-brand, $c-button-color-brand);
 
   &:link,
   &:visited,

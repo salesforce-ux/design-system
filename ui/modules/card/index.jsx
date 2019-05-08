@@ -5,6 +5,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import uniqueId from 'lodash.uniqueid';
+import Icon from '../icon';
 import Shadow from '../../shared/shadow';
 
 import common from '../common/index.scss';
@@ -16,6 +17,9 @@ export const CardHeader = props => {
   return (
     <div className="lwc-card__header">
       <header>
+        <div className="lwc-card__header-figure">
+          <Icon sprite="standard" symbol="account" />
+        </div>
         <h2 className="lwc-card__header-title">
           {href ? (
             <a href={href} className="lwc-card__header-link" title={title}>

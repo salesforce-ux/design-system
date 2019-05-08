@@ -38,7 +38,7 @@ $c-button-color-background-success-active: $color-background-success-dark;
 // Border Color
 
 // Border Size
-$c-sizing-button-border-width: $border-width-thin;
+$c-button-border-width: $border-width-thin;
 
 // Color
 $c-button-color: $brand-accessible;
@@ -53,7 +53,7 @@ $c-button-box-shadow: none;
 $c-button-box-shadow-active: 0 0 2px $brand-accessible;
 
 // Height
-$c-sizing-button-height: $line-height-button;
+$c-button-height: $line-height-button;
 
 // ------------
 // Mixins
@@ -122,23 +122,23 @@ $c-sizing-button-height: $line-height-button;
  */
 .lwc-button_brand-outline {
   @include button-shape;
-  background-color: $button-color-background-primary;
-  border-color: $brand-accessible;
+  --c-button-color-background: $button-color-background-primary;
+  --c-button-border-color: $brand-accessible;
 
   &:hover,
   &:focus {
-    background-color: $color-background-button-default-hover;
+    --c-button-color-background: $color-background-button-default-hover;
   }
 
   &:active {
-    background-color: $color-background-button-default-active;
+    --c-button-color-background: $color-background-button-default-active;
   }
 
   &[disabled],
   &:disabled {
-    background: $brand-disabled;
-    border-color: $brand-disabled;
-    color: $color-text-button-brand-disabled;
+    --c-button-color-background: $brand-disabled;
+    --c-button-border-color: $brand-disabled;
+    --c-button-color: $color-text-button-brand-disabled;
   }
 }
 

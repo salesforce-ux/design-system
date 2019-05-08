@@ -6,6 +6,30 @@ const ButtonExample = () => <Button>Button</Button>;
 
 export const examples = [
   {
+    id: 'button-all',
+    label: 'All Variants',
+    element: (
+      <div>
+        <Button variant="neutral">Neutral Button</Button>
+        <Button variant="brand">Brand Button</Button>
+        <Button variant="brand-outline">Brand Outline Button</Button>
+        <Button variant="inverse">Inverse Button</Button>
+        <Button variant="destructive">Destructive Button</Button>
+        <Button variant="destructive-text">Destructive Text Button</Button>
+        <Button variant="success">Success Button</Button>
+        <Button size="full-width" variant="neutral">
+          Full Width Neutral Button
+        </Button>
+        <Button
+          variant="neutral"
+          leftIcon={<Icon size="xx-small" symbol="download" />}
+        >
+          Download
+        </Button>
+      </div>
+    )
+  },
+  {
     id: 'button-neutral',
     label: 'Neutral',
     element: <Button variant="neutral">Neutral Button</Button>

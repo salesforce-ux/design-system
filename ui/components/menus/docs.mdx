@@ -191,7 +191,7 @@ Any menu item that opens a submenu must have `aria-haspop="true"` on the `<a />`
 
 ### Submenu to Right
 
-To open the submenu to the right of the main menu, add `slds-dropdown_submenu-right` to the `<div>` with the `slds-dropdown_submenu` class.
+To open the submenu to the right of the main menu, add `slds-dropdown_submenu-right` to the `<div />` with the `slds-dropdown_submenu` class.
 
 <Example title="Menu with Submenu Right">
   <CodeView style={{height: '300px'}}>
@@ -201,7 +201,7 @@ To open the submenu to the right of the main menu, add `slds-dropdown_submenu-ri
 
 ### Submenu to Left
 
-To open the submenu to the left, add `slds-dropdown_submenu-left` to the `<div>` with the `slds-dropdown_submenu` class.
+To open the submenu to the left, add `slds-dropdown_submenu-left` to the `<div />` with the `slds-dropdown_submenu` class.
 
 <Example title="Menu with Submenu Left">
   <CodeView style={{height: '300px', marginLeft: '150px'}}>
@@ -221,7 +221,7 @@ For an overflow of action items, use the overflow menu with actions styling by a
 
 ## Positioning
 
-There are 3 options for the positioning of the menu dropdown -- left, right, and bottom. To access these options, add a modifier to the `<div>` with class name `slds-dropdown`. For the standard positioning where the dropdown aligns with the left side of the dropdown trigger, use `slds-dropdown_left`, as seen above.
+There are 3 options for the positioning of the menu dropdown -- left, right, and bottom. To access these options, add a modifier to the `<div />` with class name `slds-dropdown`. For the standard positioning where the dropdown aligns with the left side of the dropdown trigger, use `slds-dropdown_left`, as seen above.
 
 <CodeBlock toggleCode={false}>
   <div className="slds-dropdown slds-dropdown_left">...</div>
@@ -249,23 +249,23 @@ To position the dropdown to sit on top of the dropdown trigger, use `slds-dropdo
 
 ## Width
 
-To adjust the width of the menu dropdown add modifier `slds-dropdown_*` to the `<div>` with class `slds-dropdown` where the `*` is `xx-small`, `x-small`, `small`, `medium`, or `large`.
+To adjust the width of the menu dropdown add modifier `slds-dropdown_*` to the `<div />` with class `slds-dropdown` where the `*` is `xx-small`, `x-small`, `small`, `medium`, or `large`.
 
 <CodeBlock toggleCode={false}>
   <div className="slds-dropdown slds-dropdown_left slds-dropdown_medium">{'...'}</div>
 </CodeBlock>
 
-| Modifier                                     | Example                                                                                                                 |
+<!-- | Modifier                                     | Example                                                                                                                 |
 | -------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
 | `.slds-dropdown_xx-small` <br/> 6rem / 96px  | <div style={{height: '200px', width: '320px'}}><BaseMenu className="slds-dropdown_left slds-dropdown_xx-small" /></div> |
 | `.slds-dropdown_x-small` <br/> 12rem / 192px | <div style={{height: '200px', width: '320px'}}><BaseMenu className="slds-dropdown_left slds-dropdown_x-small" /></div>  |
 | `.slds-dropdown_small` <br/> 15rem / 240px   | <div style={{height: '200px', width: '320px'}}><BaseMenu className="slds-dropdown_left slds-dropdown_small" /></div>    |
 | `.slds-dropdown_medium` <br/> 20rem / 320px  | <div style={{height: '200px', width: '320px'}}><BaseMenu className="slds-dropdown_left slds-dropdown_medium" /></div>   |
-| `.slds-dropdown_large` <br/> 25rem / 400px   | <div style={{height: '200px', width: '320px'}}><BaseMenu className="slds-dropdown_left slds-dropdown_large" /></div>    |
+| `.slds-dropdown_large` <br/> 25rem / 400px   | <div style={{height: '200px', width: '320px'}}><BaseMenu className="slds-dropdown_left slds-dropdown_large" /></div>    | -->
 
 ## Height
 
-To adjust the length of visible menu dropdown items before overflow scrolling activates, add modifier `slds-dropdown_length-*`, or when using icons, `slds-dropdown_length-with-icon-*`, where the `*` is `5`, `7`, `10`. Apply the height classes to both the `<div>`s with class `slds-dropdown` and `slds-dropdown__list`
+To adjust the length of visible menu dropdown items before overflow scrolling activates, add modifier `slds-dropdown_length-*`, or when using icons, `slds-dropdown_length-with-icon-*`, where the `*` is `5`, `7`, `10`. Apply the height classes to both the `<div />`s with class `slds-dropdown` and `slds-dropdown__list`
 
 <CodeBlock toggleCode={false}>
   <div className="slds-dropdown slds-dropdown_left slds-dropdown_length-7">
@@ -275,11 +275,11 @@ To adjust the length of visible menu dropdown items before overflow scrolling ac
   </div>
 </CodeBlock>
 
-| Modifier                                             | Example                                                                                                                                                                  |
+<!-- | Modifier                                             | Example                                                                                                                                                                  |
 | ---------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `.slds-dropdown_length-5` <br/> 5 items              | <div style={{height: '16rem', width: '320px'}}><InlineFragment fragmentChildren={ getDisplayElementById(DropdownHeight.states, 'dropdown-menu-length-5') }/></div>        |
 | `.slds-dropdown_length-7` <br/> 7 items              | <div style={{height: '21rem', width: '320px'}}><InlineFragment fragmentChildren={ getDisplayElementById(DropdownHeight.states, 'dropdown-menu-length-7') }/></div>       |
 | `.slds-dropdown_length-10` <br/> 10 items            | <div style={{height: '26rem', width: '320px'}}><InlineFragment fragmentChildren={ getDisplayElementById(DropdownHeight.states, 'dropdown-menu-length-10') }/></div>      |
 | `.slds-dropdown_length-with-icon-5` <br/> 5 items    | <div style={{height: '16rem', width: '320px'}}><InlineFragment fragmentChildren={ getDisplayElementById(DropdownHeight.states, 'dropdown-menu-length-5-icon') }/></div>  |
 | `.slds-dropdown_length-with-icon-7` <br/> 7 items    | <div style={{height: '21rem', width: '320px'}}><InlineFragment fragmentChildren={ getDisplayElementById(DropdownHeight.states, 'dropdown-menu-length-7-icon') }/></div>  |
-| `.slds-dropdown_length-with-icon-10` <br/> 10 items  | <div style={{height: '28rem', width: '320px'}}><InlineFragment fragmentChildren={ getDisplayElementById(DropdownHeight.states, 'dropdown-menu-length-10-icon') }/></div> |
+| `.slds-dropdown_length-with-icon-10` <br/> 10 items  | <div style={{height: '28rem', width: '320px'}}><InlineFragment fragmentChildren={ getDisplayElementById(DropdownHeight.states, 'dropdown-menu-length-10-icon') }/></div> | -->

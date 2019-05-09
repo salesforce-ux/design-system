@@ -12,13 +12,13 @@ const referenceId03 = 'accordion-details-03';
 const referenceId04 = 'accordion-details-04';
 const referenceId05 = 'accordion-details-05';
 
-export let Accordion = props => (
+export const Accordion = props => (
   <ul className={classNames('slds-accordion', props.className)}>
     {props.children}
   </ul>
 );
 
-export let AccordionSection = props => (
+export const AccordionSection = props => (
   <li className="slds-accordion__list-item">
     <section
       className={classNames(
@@ -61,7 +61,7 @@ export let AccordionSection = props => (
   </li>
 );
 
-export default (
+export const AccordionExample = () => (
   <Accordion>
     <AccordionSection
       summary="Accordion summary"
@@ -86,6 +86,8 @@ export default (
     </AccordionSection>
   </Accordion>
 );
+
+export default <AccordionExample />;
 
 export let states = [
   {

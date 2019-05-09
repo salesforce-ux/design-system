@@ -137,9 +137,6 @@ class Card extends Component {
       isBare && 'lwc-card_bare'
     );
 
-    console.log('common:', common);
-    console.log('card:', card);
-
     return (
       <Shadow
         name="card"

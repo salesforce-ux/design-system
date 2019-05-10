@@ -7,21 +7,6 @@
 @import '../../../shared/common/init';
 
 // ------------
-// Private
-// ------------
-
-// ------------
-// Public
-// ------------
-
-$c-card-color-background: $color-gray-1;
-$c-card-color-width: $border-width-thin;
-$c-card-color-border: $color-border;
-$c-card-box-shadow: $card-shadow;
-$c-card-border-radius: $border-radius-medium;
-$c-card-text-color: inherit;
-
-// ------------
 // Mixins
 // ------------
 @import '../mixins/index';
@@ -36,13 +21,13 @@ $c-card-text-color: inherit;
  */
 .lwc-card {
   position: relative;
-  padding: 0;
-  background: var(--c-card-color-background, $c-card-color-background);
-  border: var(--c-card-border-width, $c-card-color-width) solid var(--c-card-border-color, $c-card-color-border);
-  border-radius: var(--c-card-border-radius, $c-card-border-radius);
+  padding: var(--c-card-padding, 0);
+  background: var(--c-card-color-background, $color-gray-1);
+  border: var(--c-card-border-width, $border-width-thin) solid var(--c-card-border-color, $color-border);
+  border-radius: var(--c-card-border-radius, $border-radius-medium);
   background-clip: padding-box;
-  box-shadow: var(--c-card-box-shadow, $c-card-box-shadow);
-  color: var(--c-card-text-color, $c-card-text-color);
+  box-shadow: var(--c-card-box-shadow, $card-shadow);
+  color: var(--c-card-text-color, inherit);
 }
 
 /**
@@ -51,12 +36,23 @@ $c-card-text-color: inherit;
  * @restrict .lwc-card div
  */
 .lwc-card__header {
-  padding: $var-spacing-vertical-small $var-spacing-horizontal-medium 0;
-  margin: 0 0 $var-spacing-vertical-small;
+  padding: var(--c-card-header-spacing-vertical, var(--var-spacing-vertical-small, $var-spacing-vertical-small)) var(--c-card-header-spacing-horizontal, var(--var-spacing-horizontal-medium, $var-spacing-horizontal-medium)) 0;
+  margin: 0 0 var(--c-card-header-spacing-vertical, var(--var-spacing-vertical-small, $var-spacing-vertical-small));
 
   header {
     display: flex;
   }
+}
+
+/**
+ * @name full-bleed
+ * @summary Sets card body to have content bleed to edges
+ * @selector .lwc-card__body_full-bleed
+ * @restrict .lwc-card__body
+ * @modifier
+ */
+.lwc-card__header_full-bleed {
+  --c-card-body-spacing-horizontal: 0;
 }
 
 /**
@@ -85,9 +81,9 @@ $c-card-text-color: inherit;
  */
 .lwc-card__header-title {
   @include truncate;
-  font-size: $var-font-size-5;
+  font-size: var(--var-font-size-5, $font-size-5);
   line-height: 2rem;
-  font-weight: $card-font-weight;
+  font-weight: var(--c-card-title-font-weight, $font-weight-bold);
   flex: 1 1 0%;
   align-self: center;
 }
@@ -98,7 +94,7 @@ $c-card-text-color: inherit;
  * @restrict .lwc-card__header-title a
  */
 .lwc-card__header-link {
-  color: $color-text-default;
+  color: var(--c-card-title-color-text, $color-text-default);
 }
 
 /**
@@ -107,9 +103,9 @@ $c-card-text-color: inherit;
  * @restrict .lwc-card div
  */
 .lwc-card__body {
-  margin-top: $var-spacing-vertical-small;
-  margin-bottom: $var-spacing-vertical-small;
-  padding: 0 $var-spacing-horizontal-medium;
+  margin-top: var(--c-card-body-spacing-vertical, var(--var-spacing-vertical-small, $var-spacing-vertical-small));
+  margin-bottom: var(--c-card-body-spacing-vertical, var(--var-spacing-vertical-small, $var-spacing-vertical-small));
+  padding: var(--c-card-body-spacing-vertical, 0) var(--c-card-body-spacing-horizontal, var(--var-spacing-horizontal-medium, $var-spacing-horizontal-medium));
 }
 
 .lwc-card__body:empty {
@@ -124,7 +120,7 @@ $c-card-text-color: inherit;
  * @modifier
  */
 .lwc-card__body_full-bleed {
-  padding: 0;
+  --c-card-body-spacing-horizontal: 0;
 }
 
 /**
@@ -133,11 +129,11 @@ $c-card-text-color: inherit;
  * @restrict .lwc-card footer
  */
 .lwc-card__footer {
-  padding: $var-spacing-vertical-small $var-spacing-horizontal-medium;
-  margin-top: $var-spacing-vertical-small;
-  text-align: $card-footer-text-align;
-  font-size: $font-size-3;
-  border-top: $border-width-thin solid $card-footer-color-border;
+  padding: var(--c-card-footer-spacing-vertical, var(--var-spacing-vertical-small, $var-spacing-vertical-small)) var(--c-card-footer-spacing-horizontal, var(--var-spacing-horizontal-medium, $var-spacing-horizontal-medium));
+  margin-top: var(--c-card-footer-spacing-vertical, var(--var-spacing-vertical-small, $var-spacing-vertical-small));
+  text-align: var(--c-card-footer-text-align, center);
+  font-size: var(--c-card-footer-font-size, $font-size-3);
+  border-top: var(--c-card-footer-border-width, $border-width-thin) solid var(--c-card-footer-border-color, $color-border);
 }
 
 /**
@@ -169,6 +165,6 @@ $c-card-text-color: inherit;
  * @modifier
  */
 .lwc-card_boundary {
-  border: $border-width-thin solid $card-color-border;
+  border: var(--c-card-border-width, $border-width-thin) solid var(--c-card-border-color, $color-border);
   box-shadow: none;
 }

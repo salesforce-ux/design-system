@@ -12,29 +12,33 @@ import common from '../common/index.scss';
 import card from './base/index.scss';
 
 export const CardHeader = props => {
-  const { title, href, hasActions, actions } = props;
+  const { title, href, hasActions, actions, children } = props;
 
   return (
     <div className="lwc-card__header">
-      <header>
-        <div className="lwc-card__header-figure">
-          <Icon sprite="standard" symbol="account" />
-        </div>
-        <h2 className="lwc-card__header-title">
-          {href ? (
-            <a href={href} className="lwc-card__header-link" title={title}>
-              <span>{title}</span>
-            </a>
-          ) : (
-            <span title={title}>{title}</span>
-          )}
-        </h2>
-        {hasActions && (
-          <div className="lwc-card__header-actions">
-            <slot name="actions">{actions}</slot>
+      {!children ? (
+        <header>
+          <div className="lwc-card__header-figure">
+            <Icon sprite="standard" symbol="account" />
           </div>
-        )}
-      </header>
+          <h2 className="lwc-card__header-title">
+            {href ? (
+              <a href={href} className="lwc-card__header-link" title={title}>
+                <span>{title}</span>
+              </a>
+            ) : (
+              <span title={title}>{title}</span>
+            )}
+          </h2>
+          {hasActions && (
+            <div className="lwc-card__header-actions">
+              <slot name="actions">{actions}</slot>
+            </div>
+          )}
+        </header>
+      ) : (
+        children
+      )}
     </div>
   );
 };

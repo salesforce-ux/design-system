@@ -1,5 +1,5 @@
 import React from 'react';
-import Card from '../';
+import Card, { CardHeader, CardBody, CardFooter } from '../';
 import Button from '../../button';
 
 const CardExample = () => (
@@ -104,33 +104,42 @@ export const examples = [
     label: 'Card Customization',
     element: (
       <Card
-        title="Card Title"
-        hasActions
-        actions={
-          <React.Fragment>
-            <Button>New</Button>
-            <Button variant="neutral" use="a">
-              New
-            </Button>
-            <Button variant="brand">Edit</Button>
-          </React.Fragment>
-        }
+        custom
         customization={`
           :host {
-            --c-card-color-background: rebeccapurple;
-            --c-card-color-width: 3px;
-            --c-card-color-border: purple;
-            --c-card-box-shadow: rgba(255, 20, 147, 0.35) 0 2px 5px;
-            --c-card-border-radius: 8px;
-            --c-card-text-color: #fff;
-
-            --c-button-color: currentColor;
+            --c-card-border-width: 0;
+            --c-card-box-shadow: 0 2px 1px -1px rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 1px 3px 0 rgba(0,0,0,.12);
+            --c-card-border-radius: 4px;
+            --c-card-header-spacing-vertical: 0;
+            --c-card-header-spacing-horizontal: 0;
+            --c-card-footer-text-align: left;
+            --c-card-footer-border-width: 0;
           }
-          :host a {
-            color: currentColor;
+          :host .lwc-card__header {
+            border-radius: inherit;
+            overflow: hidden;
           }
         `}
-      />
+      >
+        <CardHeader>
+          <img
+            src="assets/images/themes/oneSalesforce/banner-user-default.png"
+            alt="Image of mountains and a hot air ballon"
+          />
+        </CardHeader>
+        <CardBody>
+          <h2 className="lwc-card__header-title">Custom Card Title</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum
+            magni ipsam modi quas! Et, nihil mollitia dolor maxime maiores
+            doloremque odit! Quod, consequuntur. Est, sequi. Nulla sunt aliquam
+            ipsum adipisci!
+          </p>
+        </CardBody>
+        <CardFooter>
+          <Button variant="brand-outline">Read Article</Button>
+        </CardFooter>
+      </Card>
     )
   }
 ];

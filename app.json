@@ -1,0 +1,10 @@
+{
+  "name": "design-system-internal",
+  "description": "Storybook site on design-system-framework.herokuapp.com",
+  "scripts": {},
+  "env": {},
+  "formation": {},
+  "addons": [],
+  "buildpacks": [],
+  "stack": "heroku-18"
+}

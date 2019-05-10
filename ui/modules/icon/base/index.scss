@@ -27,10 +27,8 @@ $_c-icon-boundary-xx-small: rem(12px);
 
 // Colors
 $_c-icon-background-color-default: #54698d;
-$_c-icon-color-on-default: $color-gray-1;
 
 // Border Radius
-$_c-icon-border-radius-circle: 50%;
 $_c-icon-border-radius-small: rem(2px);
 
 // Spacing
@@ -42,19 +40,6 @@ $_c-icon-action-padding-small: rem(5px);
 $_c-icon-action-padding-x-small: rem(3px);
 $_c-icon-action-padding-xx-small: rem(2px);
 
-// ------------
-// Public
-// ------------
-
-// Colors
-$c-icon-color: $color-gray-9;
-$c-icon-color-success: $color-text-success;
-$c-icon-color-warning: $color-text-warning;
-$c-icon-color-error: $color-text-error;
-$c-icon-color-muted: $color-gray-7;
-
-// Border Radius
-$c-icon-border-radius: $border-radius-medium;
 
 // ------------
 // Mixins
@@ -77,8 +62,8 @@ $c-icon-border-radius: $border-radius-medium;
 .lwc-icon {
   @include icon-base;
   @include square($_c-icon-x-small);
-  color: var(--c-icon-color, $c-icon-color);
-  border-radius: var(--c-icon-border-radius, $c-icon-border-radius);
+  color: var(--c-icon-color, $color-gray-9);
+  border-radius: var(--c-icon-border-radius, $border-radius-medium);
   vertical-align: middle;
 }
 
@@ -96,11 +81,11 @@ $c-icon-border-radius: $border-radius-medium;
 [class*="lwc-icon-custom"],
 [class*="lwc-icon-standard"] {
   background: $_c-icon-background-color-default;
-  color: $_c-icon-color-on-default;
+  color: var(--c-icon-color, $color-gray-1);
 }
 
 [class*="lwc-icon-action"] {
-  border-radius: $_c-icon-border-radius-circle;
+  border-radius: $border-radius-circle;
   padding: $_c-icon-action-padding;
   vertical-align: bottom;
 }
@@ -261,7 +246,7 @@ $icon-bg-map: map-merge($bg-actions-map, $bg-custom-map);
  * @group color
  */
 .lwc-icon_success {
-  color: var(--c-icon-color-success, $c-icon-color-success);
+  color: var(--c-icon-color-success, $color-text-success);
 }
 
 /**
@@ -272,7 +257,7 @@ $icon-bg-map: map-merge($bg-actions-map, $bg-custom-map);
  * @group color
  */
 .lwc-icon_warning {
-  color: var(--c-icon-color-warning, $c-icon-color-warning);
+  color: var(--c-icon-color-warning, $color-text-warning);
 }
 
 /**
@@ -283,7 +268,7 @@ $icon-bg-map: map-merge($bg-actions-map, $bg-custom-map);
  * @group color
  */
 .lwc-icon_error {
-  color: var(--c-icon-color-error, $c-icon-color-error);
+  color: var(--c-icon-color-error, $color-text-error);
 }
 
 /**
@@ -294,7 +279,7 @@ $icon-bg-map: map-merge($bg-actions-map, $bg-custom-map);
  * @group color
  */
 .lwc-icon_muted {
-  color: var(--c-icon-color-muted, $c-icon-color-muted);
+  color: var(--c-icon-color-muted, $color-gray-7);
 }
 
 // ----------

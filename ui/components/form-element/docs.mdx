@@ -19,17 +19,21 @@ import * as CompoundExamples from './compound/example';
 import * as AddressExamples from './address/example';
 import { getDisplayElementById } from '../../shared/helpers';
 
-<div className="lead doc">
+<div className="doc lead">
   An HTML form element contains a HTML label and element
 </div>
 
+## About Form Elements
+
 There are many types of form elements, including [inputs](/components/input), [text areas](/components/textarea), [checkboxes](/components/checkbox), and [radio buttons](/components/radio-group). Visit the individual component pages for in-depth details of specific states and visuals.
 
-## Structuring a form element
+### Structure
 
 To create a form element, a `<div>` element with the class `slds-form-element` is required.
 
 A form element is made up of three primary elements, the label (`slds-form-element__label`), a container (`slds-form-element__control`), and the form element, i.e. `<input>`.
+
+#### Base
 
 <Example title="Form Element - Base">
   <CodeView>
@@ -39,7 +43,7 @@ A form element is made up of three primary elements, the label (`slds-form-eleme
   </CodeView>
 </Example>
 
-### Form Label
+#### Form Label
 
 A form label should use the `<label>` element or `<legend>` element with the class `slds-form-element__label`. Use a `<legend>` when you have a [compound form](/components/form-element/#Compound)
 
@@ -51,7 +55,7 @@ A form label should use the `<label>` element or `<legend>` element with the cla
   <label className="slds-form-element__label" htmlFor="unique-id-of-input">Form label</label>
 </CodeBlock>
 
-### Form Control
+#### Form Control
 
 A form control is a `div` with the class `slds-form-element__control`. The control is required to maintain the structure of the form element.
 

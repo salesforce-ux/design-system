@@ -10,7 +10,7 @@ import { getDisplayElementById } from '../../shared/helpers';
   Global Navigation is the list of navigation links your users find in the Header on every page in Salesforce. Your Global Navigation includes a Navigation Bar where your users find the App Launcher, App Name, and Pages that each App includes.
 </div>
 
-## Navigation Bar
+## About Navigation Bar
 
 <CodeView style={{height: '16rem'}}>
   {NavExamples.default}
@@ -96,21 +96,21 @@ Due to the platform-esc nature of the navigation bar, there is an available elem
 
 Alternatively, two classes are available to add border using css. Adding the class `.slds-context-bar__item--divider-left` will add a left border to a navigation bar item while `.slds-context-bar__item--divider-right` will add a right border.
 
-## States
+### States
 
-### Active item
+#### Active item
 
 <CodeView>
   {getDisplayElementById(NavExamples.states, 'item-active')}
 </CodeView>
 
-### Menu Open
+#### Menu Open
 
 <CodeView style={{height: '16rem'}}>
   {getDisplayElementById(NavExamples.states, 'item-menu-open')}
 </CodeView>
 
-## Navigation Tab Bar
+## About Navigation Tab Bar
 
 <CodeView>
   {NavTabBarExamples.default}
@@ -118,7 +118,7 @@ Alternatively, two classes are available to add border using css. Adding the cla
 
 ### Accessibility
 
-**Communicating Status to Screen Readers**
+**Communicating Status to Screen Readers:**
 
 When communitcatin tab status updates to the user, unread, warning, error and success notifications should  all employ the same technique to communicate that update to users of assistive technology, who would be otherwise unaware of that status change.
 
@@ -128,7 +128,7 @@ You should use a single hidden ARIA live region for the entire sub tabs block, t
 
 Upon clearing the status on a given tab, you should clear the message from the live region.
 
-**Unread status**
+**Unread status:**
 
 In order to inform screen readers of new activity in a tab, 2 things should occur.
 
@@ -140,7 +140,7 @@ In order to inform screen readers of new activity in a tab, 2 things should occu
 
 `<div className="slds-assistive-text" aria-live="polite">New activity in Tab: Chat - Customer</div>`
 
-**Warning, Error and Success Tabs**
+**Warning, Error and Success Tabs:**
 
 When you wish to draw attention to a particular tab because something has occurred in that tab that corresponds to an alert level, you can use the `slds-has-warning`, `slds-has-error` or `slds-has-success` class to change the background color and introduce a short pulsing animation to draw attention from the user.
 

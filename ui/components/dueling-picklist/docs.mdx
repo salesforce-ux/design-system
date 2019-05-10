@@ -9,20 +9,20 @@ import { DoctypeIcon } from '../icons/doctype/example';
   A dueling-picklist is used to move options between two lists and is often referred to as a multi-select. Sometimes, the list options can then be re-ordered, depending on the use case.
 </div>
 
-<Example title="Dueling Picklist with Reorder">
-  <MultiSelect dataSet={DefaultSnapShot} />
-</Example>
+## About Dueling-Picklist
+
+### Accessibility
 
 This component is essentially 2 ARIA listboxes side by side, so we follow the [ARIA practices guide](https://www.w3.org/TR/wai-aria-practices/#Listbox) to help implement their interaction in an accessible way. Some additional details, supplementary to the ARIA guide include:
 
-## Notable Attributes
+#### Markup
 - `aria-multiselectable="true"` should be set on each listbox
 - `aria-selected` should be placed on each `role="option"`, and set to `false` by default
 - `aria-labelledby` is used to identify the list to the user and should point to the list label
 - `aria-describedby` is used to provide operation instructions for the Drag and Drop interaction
 - `tabindex` should be set to "0" when an item is selected and "-1" otherwise
 
-## Focus Management
+#### Focus Management
 - Initially, nothing should be selected and the first item in each list should have `tabindex="0"`
 - When an item is focused, it becomes selected
 - When focus leaves the list, the last selected item remains selected and focusable. When focus returns to the list focus is placed on the last selected item.
@@ -31,7 +31,7 @@ This component is essentially 2 ARIA listboxes side by side, so we follow the [A
   - With a keyboard shortcut: focus remains on the item, but in the target list. Since the item is focused, it is also selected.
   - If there are already selected items in the target list, they stay selected and the new items are added below them.
 
-## Expected Keyboard Navigation
+#### Keyboard Interactions
 - Each list has a single focusable option inside. There is only ever one focusable option per list and it is expected that a user will use their arrow keys, and some modifier keys, to perform all actions.
 - Because we support drag and drop re-ordering within a list, we implement the second multi-select keyboard model.
   - `up` and `down` arrows move focus _and_ selection, with `aria-selected="true"`. Any previously selected items are deselected.
@@ -42,6 +42,12 @@ This component is essentially 2 ARIA listboxes side by side, so we follow the [A
   - `cmd/ctrl + right` and `cmd/ctrl + left` Moves selected items between lists
   - `space` toggles "Drag and Drop" mode. When in "Drag and Drop" mode:
     - `up` and `down` arrows move the selected items _within_ the current list
+
+## Base
+
+<Example title="Dueling Picklist with Reorder">
+  <MultiSelect dataSet={DefaultSnapShot} />
+</Example>
 
 ## Group Label
 

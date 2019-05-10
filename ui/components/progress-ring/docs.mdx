@@ -14,9 +14,9 @@ The Progress Ring component renders a svg-based progress ring.
 
 Content (typically iconography) can be rendered inside the progress ring. For the current supported size of this progress ring, xxs sized icons should be used.
 
-## Implementation Guidelines
+### Implementation Guidelines
 
-### Defining Progress Ring Completeness
+#### Defining Completeness
 
 The 'completeness' of the Progress Ring is indicated by the circular shape (pie slice), which is a svg shape of an arc.
 
@@ -31,11 +31,11 @@ The breakdown of the progress ring's `d` attribute can be broken down like so:\
 
 These calculations work in accordance with the defined svg viewBox, which goes from -1 to 1, on both x and y axis.
 
-### Progress Ring Content
+#### Content
 
 The Progress Ring is currently designed to display any icon from our icon set.
 
-## Accessibility Guidelines
+### Accessibility
 
 `.slds-progress-ring__progress` is the visual indicator of progress and needs proper aria roles and settings:
 - `role` : `progressbar`
@@ -51,51 +51,51 @@ Proper accessibility guidelines should be followed on any icons used within this
   {ProgressRingExamples.default}
 </CodeView>
 
-### Examples
+## Examples
 
-#### Partially Drained
+### Partially Drained
 
 <CodeView>
   {getDisplayElementById(ProgressRingExamples.examples, 'progress-ring-partially-drained')}
 </CodeView>
 
-#### Partially Drained with Warning Icon
+### Partially Drained with Warning Icon
 
 <CodeView>
   {getDisplayElementById(ProgressRingExamples.examples, 'progress-ring-warning')}
 </CodeView>
 
-#### Partially Filled
+### Partially Filled
 
 <CodeView>
   {getDisplayElementById(ProgressRingExamples.examples, 'progress-ring-partially-filled')}
 </CodeView>
 
-#### Partially Filled with Warning Icon
+### Partially Filled with Warning Icon
 
 <CodeView>
   {getDisplayElementById(ProgressRingExamples.examples, 'progress-ring-partially-filled-warning')}
 </CodeView>
 
-#### With Expired Icon
+### With Expired Icon
 
 <CodeView>
   {getDisplayElementById(ProgressRingExamples.examples, 'progress-ring-expired')}
 </CodeView>
 
-#### Complete
+### Complete
 
 <CodeView>
   {getDisplayElementById(ProgressRingExamples.examples, 'progress-ring-complete')}
 </CodeView>
 
-#### Large Size
+### Large Size
 
 <CodeView>
   {getDisplayElementById(ProgressRingExamples.examples, 'progress-ring-large')}
 </CodeView>
 
-#### Active Step
+### Active Step
 
 <CodeView>
   {getDisplayElementById(ProgressRingExamples.examples, 'progress-ring-active-step')}
@@ -103,7 +103,7 @@ Proper accessibility guidelines should be followed on any icons used within this
 
 Set the color of the ring to the active step color.
 
-#### Theme - Warning
+### Theme - Warning
 
 <CodeView>
   {getDisplayElementById(ProgressRingExamples.examples, 'progress-ring-theme-warning')}
@@ -111,7 +111,7 @@ Set the color of the ring to the active step color.
 
 Set the color of the ring to the warning color.
 
-#### Theme - Expired
+### Theme - Expired
 
 <CodeView>
   {getDisplayElementById(ProgressRingExamples.examples, 'progress-ring-theme-expired')}
@@ -119,7 +119,7 @@ Set the color of the ring to the warning color.
 
 Set the color of the ring to the expired color.
 
-#### Theme - Complete
+### Theme - Complete
 
 <CodeView>
   {getDisplayElementById(ProgressRingExamples.examples, 'progress-ring-theme-complete')}

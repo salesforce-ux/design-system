@@ -8,24 +8,24 @@ import { getDisplayElementById } from '../../shared/helpers';
 </div>
 
 ## About Timepicker
-#### Implementation Notes and Requirements
+
+### Implementation
 
 A timepicker is used to select a single time. The component is using the combobox HTML structure and has the following markup requirements:
 
-**Desktop**
+**Desktop:**
 - Add `.slds-is-open` to the element with `.slds-dropdown-trigger` to invoke the dropdown that contains the list of time options.
 - The `.slds-has-focus` modifier class is required on the `.slds-listbox__option` element that has focus.
 - The `.slds-is-selected` modifier class is required on the `.slds-listbox__option` element that has been selected.
 
-**Mobile**
+**Mobile:**
 - When on mobile, we want to leverage the native timepicker by changing the `input` type from `text` to `time`
 - When switching `input type="text"` to `input type="time"` for mobile, we need to remove the ARIA attributes. The native rendering doesn't require these.
   - On the element with the class `slds-combobox`, please remove `role="combobox"`, `aria-expanded`, and `aria-haspopup`.
   - On the `input` that we just added `type="time"` too, please remove `aria-controls`, `aria-autocomplete`, and `role="textbox"`.
 
-<Blockquote type="a11y" header="Accessibility Note">
-  Please follow the implementation guidelines found under [Combobox](/components/combobox)
-</Blockquote>
+### Accessibility
+Please follow the implementation guidelines found under [Combobox](/components/combobox)
 
 ## Base
 

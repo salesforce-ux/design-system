@@ -11,16 +11,19 @@ import DisplayColumn from '../../../shared/components/DisplayColumn';
 import DisplayGrid from '../../../shared/components/DisplayGrid';
 import { getDisplayElementById } from '../../shared/helpers';
 
-<div className="lead">
+<div className="doc lead">
   An avatar group is an element that communicates to the user that there is more than 1 person associated to an item.
 </div>
 
-## Base
+## About Avatar Group
+
 The Avatar Group contains two Avatar components with modifying classes. Both Avatars in the group get `slds-avatar-grouped` applied to them. Then, `slds-avatar-grouped__primary` is applied to the first Avatar and `slds-avatar-grouped__secondary` on the second. Avatars of the image variety are preferred within an Avatar Group.
 
 <Blockquote type="note" header="Design Guidelines">
   Avatar Groups should only be used to represent people and NOT groups of salesforce objects.
 </Blockquote>
+
+## Base
 
 <CodeView>
   {Base.default}

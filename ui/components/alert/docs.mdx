@@ -6,11 +6,29 @@ import ButtonIcon from '../button-icons/';
 import { UtilityIcon } from '../icons/base/example';
 import Blockquote from '../../../shared/components/Blockquote';
 
-<div className="lead">
+<div className="doc lead">
   Alert banners communicate a state that affects the entire system, not just a feature or page. It persists over a session and appears without the user initiating the action.
 </div>
 
-## Default/Info Alert
+## About Alert
+
+### Accessibility
+
+#### Role
+Alert notifications should contain <code className="doc">role="alert"</code> on the container to signal to assistive technology that they require the user’s immediate attention.
+
+<CodeBlock toggleCode={false}>
+  <div className="slds-notify slds-notify_alert slds-theme_alert-texture slds-theme_info" role="alert">...</div>
+</CodeBlock>
+
+#### Assistive Text
+Use a span with the class <code className="doc">.slds-assistive-text</code> to let the user know what type of notification it is
+
+<CodeBlock toggleCode={false}>
+  <span className="slds-assistive-text">Info</span>
+</CodeBlock>
+
+## Base
 
 Use the info alert when notifying the user of neutral information about the system.
 
@@ -31,23 +49,9 @@ Use the info alert when notifying the user of neutral information about the syst
   </CodeView>
 </Example>
 
-<Blockquote type="a11y" header="Accessible Role">
-  Alert notifications should contain <code className="doc">role="alert"</code> on the container to signal to assistive technology that they require the user’s immediate attention.
-</Blockquote>
+## Variations
 
-<CodeBlock toggleCode={false}>
-  <div className="slds-notify slds-notify_alert slds-theme_alert-texture slds-theme_info" role="alert">...</div>
-</CodeBlock>
-
-<Blockquote type="a11y" header="Accessibility Note">
-  Use a span with the class <code className="doc">.slds-assistive-text</code> to let the user know what type of notification it is
-</Blockquote>
-
-<CodeBlock toggleCode={false}>
-  <span className="slds-assistive-text">Info</span>
-</CodeBlock>
-
-## Warning Alert
+### Warning
 
 Use the warning variant to warn the user about important system information that deserves caution.
 
@@ -68,7 +72,7 @@ Use the warning variant to warn the user about important system information that
   </CodeView>
 </Example>
 
-## Error Alert
+### Error
 
 Use the error variant when you need to alert the user about an error in the system that needs immediate attention.
 
@@ -89,7 +93,7 @@ Use the error variant when you need to alert the user about an error in the syst
   </CodeView>
 </Example>
 
-## Offline Alert
+### Offline
 
 Use the offline alert to let the user know that they are not connected to the internet.
 

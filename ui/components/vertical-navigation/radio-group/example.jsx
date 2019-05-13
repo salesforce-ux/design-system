@@ -56,19 +56,21 @@ export const NavVerticalRadioSet = props => (
     isNavVerticalRadioSet
   >
     <NavVerticalFieldset>
-      <NavVerticalItemRadio checked id="recent">
+      <NavVerticalItemRadio checked id="unique-id-01-recent">
         Recent
       </NavVerticalItemRadio>
-      <NavVerticalItemRadio id="created-by-me">
+      <NavVerticalItemRadio id="unique-id-01-created-by-me">
         Created by Me
       </NavVerticalItemRadio>
-      <NavVerticalItemRadio id="private-reports">
+      <NavVerticalItemRadio id="unique-id-01-private-reports">
         Private Reports
       </NavVerticalItemRadio>
-      <NavVerticalItemRadio id="public-reports">
+      <NavVerticalItemRadio id="unique-id-01-public-reports">
         Public Reports
       </NavVerticalItemRadio>
-      <NavVerticalItemRadio id="all-reports">All Reports</NavVerticalItemRadio>
+      <NavVerticalItemRadio id="unique-id-01-all-reports">
+        All Reports
+      </NavVerticalItemRadio>
     </NavVerticalFieldset>
   </NavVerticalSection>
 );
@@ -86,19 +88,35 @@ export let examples = [
         isNavVerticalRadioSet
       >
         <NavVerticalFieldset compact>
-          <NavVerticalItemRadio checked id="recent" name="unique-id-compact">
+          <NavVerticalItemRadio
+            checked
+            id="unique-id-02-recent"
+            name="unique-id-compact"
+          >
             Recent
           </NavVerticalItemRadio>
-          <NavVerticalItemRadio id="created-by-me" name="unique-id-compact">
+          <NavVerticalItemRadio
+            id="unique-id-02-created-by-me"
+            name="unique-id-compact"
+          >
             Created by Me
           </NavVerticalItemRadio>
-          <NavVerticalItemRadio id="private-reports" name="unique-id-compact">
+          <NavVerticalItemRadio
+            id="unique-id-02-private-reports"
+            name="unique-id-compact"
+          >
             Private Reports
           </NavVerticalItemRadio>
-          <NavVerticalItemRadio id="public-reports" name="unique-id-compact">
+          <NavVerticalItemRadio
+            id="unique-id-02-public-reports"
+            name="unique-id-compact"
+          >
             Public Reports
           </NavVerticalItemRadio>
-          <NavVerticalItemRadio id="all-reports" name="unique-id-compact">
+          <NavVerticalItemRadio
+            id="unique-id-02-all-reports"
+            name="unique-id-compact"
+          >
             All Reports
           </NavVerticalItemRadio>
         </NavVerticalFieldset>
@@ -116,19 +134,35 @@ export let examples = [
           isNavVerticalRadioSet
         >
           <NavVerticalFieldset shaded>
-            <NavVerticalItemRadio checked id="recent" name="unique-id-shade">
+            <NavVerticalItemRadio
+              checked
+              id="unique-id-03-recent"
+              name="unique-id-shade"
+            >
               Recent
             </NavVerticalItemRadio>
-            <NavVerticalItemRadio id="created-by-me" name="unique-id-shade">
+            <NavVerticalItemRadio
+              id="unique-id-03-created-by-me"
+              name="unique-id-shade"
+            >
               Created by Me
             </NavVerticalItemRadio>
-            <NavVerticalItemRadio id="private-reports" name="unique-id-shade">
+            <NavVerticalItemRadio
+              id="unique-id-03-private-reports"
+              name="unique-id-shade"
+            >
               Private Reports
             </NavVerticalItemRadio>
-            <NavVerticalItemRadio id="public-reports" name="unique-id-shade">
+            <NavVerticalItemRadio
+              id="unique-id-03-public-reports"
+              name="unique-id-shade"
+            >
               Public Reports
             </NavVerticalItemRadio>
-            <NavVerticalItemRadio id="all-reports" name="unique-id-shade">
+            <NavVerticalItemRadio
+              id="unique-id-03-all-reports"
+              name="unique-id-shade"
+            >
               All Reports
             </NavVerticalItemRadio>
           </NavVerticalFieldset>

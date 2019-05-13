@@ -32,8 +32,8 @@
  * @group theme
  */
 .lwc-button-icon_brand {
-  --c-button-icon-color-background: var(--c-button-icon-color-background-brand, $brand-accessible);
-  --c-button-icon-border-color: var(--c-button-icon-color-border-brand, $brand-accessible);
+  --c-button-icon-color-background: var(--c-button-icon-color-background-brand, var(--brand-accessible, $brand-accessible));
+  --c-button-icon-border-color: var(--c-button-icon-color-border-brand, var(--brand-accessible, $brand-accessible));
   // Override icon color
   --c-icon-color: var(--c-button-icon-color-on-brand, $color-gray-1);
 
@@ -41,20 +41,20 @@
   &:visited,
   &:active {
     // Override icon color
-    --c-icon-color: var(--c-button-icon-color-on-brand, $brand-accessible);
+    --c-icon-color: var(--c-button-icon-color-on-brand, var(--brand-accessible, $brand-accessible));
   }
 
   &:hover,
   &:focus {
-    --c-button-icon-color-background: var(--c-button-icon-color-background-brand-active, $brand-accessible-active);
-    --c-button-icon-border-color: var(--c-button-icon-color-border-brand-active, $brand-accessible-active);
+    --c-button-icon-color-background: var(--c-button-icon-color-background-brand-active, var(--brand-accessible-active, $brand-accessible-active));
+    --c-button-icon-border-color: var(--c-button-icon-color-border-brand-active, var(--brand-accessible-active, $brand-accessible-active));
     // Override icon color
     --c-icon-color: var(--c-button-icon-color-brand-active, $color-gray-1);
   }
 
   &:active {
-    --c-button-icon-color-background: var(--c-button-icon-color-background-brand-active, $brand-accessible-active);
-    --c-button-icon-border-color: var(--c-button-icon-color-border-brand-active, $brand-accessible-active);
+    --c-button-icon-color-background: var(--c-button-icon-color-background-brand-active, var(--brand-accessible-active, $brand-accessible-active));
+    --c-button-icon-border-color: var(--c-button-icon-color-border-brand-active, var(--brand-accessible-active, $brand-accessible-active));
   }
 
   &[disabled],

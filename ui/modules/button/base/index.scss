@@ -34,8 +34,8 @@
  */
 .lwc-button_brand {
   @include button-shape;
-  --c-button-color-background: var(--c-button-color-background-brand, $brand-accessible);
-  --c-button-color-border: var(--c-button-color-border-brand, $brand-accessible);
+  --c-button-color-background: var(--c-button-color-background-brand, var(--lwc-brand-accessible, $brand-accessible));
+  --c-button-color-border: var(--c-button-color-border-brand, var(--lwc-brand-accessible, $brand-accessible));
   --c-button-color: var(--c-button-color-brand, $color-gray-1);
   --c-active-button-color: var(--c-button-color-brand-active, $color-gray-1);
   --c-active-button-color-background: var(--c-button-color-background-brand-active, $brand-accessible-active);
@@ -55,8 +55,9 @@
 .lwc-button_brand-outline {
   @include button-shape;
   --c-button-color-background: var(--c-button-color-background-brand-outline, $button-color-background-primary);
-  --c-button-color-border: var(--c-button-color-border-brand-outline, $brand-accessible);
+  --c-button-color-border: var(--c-button-color-border-brand-outline, var(--lwc-brand-accessible, $brand-accessible));
   --c-active-button-color-background: var(--c-hover-button-color-background-brand-outline, $color-background-button-default-hover);
+  --c-disabled-button-color-border: var(--c-disabled-button-color-border-brand-outline, $brand-disabled);
 
   &:active {
     --c-active-button-color-background: var(--c-active-button-color-background-brand-outline, $color-background-button-default-active);
@@ -107,6 +108,7 @@
   --c-button-color-border: var(--c-button-color-border-destructive-text, $button-color-border-primary);
   --c-button-color: var(--c-button-color-destructive-text, $color-text-destructive);
   --c-active-button-color-background: var(--c-hover-button-color-background-destructive-text, $color-background-button-default-hover);
+  --c-disabled-button-color-border: var(--c-disabled-button-color-border-destructive-text, $brand-disabled);
 
   &:active {
     --c-button-color-background: var(--c-active-button-color-background-destructive-text, $color-background-button-default-active);
@@ -188,6 +190,7 @@
   --c-button-color-background: var(--c-button-color-background-neutral, $color-gray-1);
   --c-button-color: var(--c-button-color-neutral, $brand-accessible);
   --c-active-button-color-background: var(--c-active-button-color-background-neutral, $color-gray-2);
+  --c-disabled-button-color-border: var(--c-disabled-button-color-border-neutral, $brand-disabled);
 }
 
 /**

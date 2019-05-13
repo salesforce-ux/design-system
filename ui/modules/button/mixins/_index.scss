@@ -52,7 +52,7 @@
 
   &[disabled],
   &:disabled {
-    border-color: var(--c-disabled-button-color-border, $brand-disabled);
+    border-color: var(--c-disabled-button-color-border, transparent);
     color: var(--c-disabled-button-color, $color-gray-5);
     background-color: var(--c-disabled-button-color-background, transparent);
     cursor: default;

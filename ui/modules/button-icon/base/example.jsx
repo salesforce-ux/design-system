@@ -39,6 +39,18 @@ export let states = [
 
 export let examples = [
   {
+    id: 'all',
+    label: 'All Variants',
+    element: (
+      <React.Fragment>
+        <ButtonIcon boundarySize="small" />
+        <ButtonIcon symbol="search" variant="brand" boundarySize="small" />
+        <ButtonIcon symbol="add" hasBorder boundarySize="small" />
+        <ButtonIcon symbol="add" hasBorder hasBackground boundarySize="small" />
+      </React.Fragment>
+    )
+  },
+  {
     id: 'brand',
     label: 'Brand',
     element: <ButtonIcon symbol="search" variant="brand" boundarySize="small" />
@@ -259,10 +271,10 @@ export let examples = [
         hasBackground
         customization={`
           :host {
-            --c-theme-button-icon-shadow: 0 1px 0 #e2e2e2;
-            --c-theme-button-icon-color-background-default-active: #e2e2e2;
-            --c-theme-button-icon-color-on-default-active: #585858;
-            --c-theme-button-icon-shadow-focus: var(--c-theme-button-icon-shadow);
+            --c-button-icon-shadow: 0 1px 0 #e2e2e2;
+            --c-button-icon-color-background-default-active: #e2e2e2;
+            --c-button-icon-color-default-active: #585858;
+            --c-button-icon-shadow-active: var(--c-theme-button-icon-shadow);
           }
         `}
       />
@@ -278,15 +290,14 @@ export let examples = [
         variant="brand"
         customization={`
           :host {
-            --c-theme-button-icon-color-background-brand: #000;
-            --c-theme-button-icon-color-background-brand-active: #000;
-            --c-theme-button-icon-color-border-brand: #000;
-            --c-theme-button-icon-color-border-brand-active: #000;
-            --c-theme-button-icon-color-on-brand-active: #767677;
-            --c-theme-button-icon-border-radius: 0;
-            --c-theme-button-icon-shadow-focus: none;
-            --c-theme-button-icon-shadow: 2px 2px 0 1px #fff, 3px 3px 0 1px #000;
-            --c-theme-button-icon-shadow-focus: var(--c-theme-button-icon-shadow);
+            --c-button-icon-color-background-brand: #000;
+            --c-button-icon-color-background-brand-active: #000;
+            --c-button-icon-color-border-brand: #000;
+            --c-button-icon-color-border-brand-active: #000;
+            --c-button-icon-color-brand-active: #767677;
+            --c-button-icon-border-radius: 0;
+            --c-button-icon-shadow: 2px 2px 0 1px #fff, 3px 3px 0 1px #000;
+            --c-button-icon-shadow-active: var(--c-button-icon-shadow);
           }
         `}
       />

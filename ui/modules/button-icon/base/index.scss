@@ -7,50 +7,6 @@
 @import '../../../shared/common/init';
 
 // ------------
-// Private
-// ------------
-
-// Background Color
-$_c-button-icon-color-background-disabled: $brand-disabled;
-
-// Color
-$_c-button-icon-color-disabled: $color-gray-5;
-
-// Border Color
-$_c-button-icon-color-border-disabled: $brand-disabled;
-
-// ------------
-// Public
-// ------------
-
-// Background Color
-$c-button-icon-color-background-default: $color-gray-1;
-$c-button-icon-color-background-default-active: $color-gray-1;
-$c-button-icon-color-background-brand: $brand-accessible;
-$c-button-icon-color-background-brand-active: $brand-accessible-active;
-
-// Color
-$c-button-icon-color-on-default-active: $brand-accessible-active;
-$c-button-icon-color-on-brand: $color-gray-1;
-$c-button-icon-color-on-brand-active: $color-gray-1;
-
-// Box Shadow
-$c-button-icon-shadow: none;
-$c-button-icon-shadow-focus: 0 0 2px $brand-accessible;
-
-// Border Size
-$c-button-icon-border-width: $border-width-thin;
-
-// Border Color
-$c-button-icon-color-border-brand: $brand-accessible;
-$c-button-icon-color-border-brand-active: $brand-accessible-active;
-$c-button-icon-color-border: $color-border;
-$c-button-icon-color-border-focus: $brand-accessible;
-
-// Border Radius
-$c-button-icon-border-radius: $button-border-radius;
-
-// ------------
 // Mixins
 // ------------
 @import '../mixins/index';
@@ -76,37 +32,37 @@ $c-button-icon-border-radius: $button-border-radius;
  * @group theme
  */
 .lwc-button-icon_brand {
-  background-color: var(--c-button-icon-color-background-brand, $c-button-icon-color-background-brand);
-  border-color: var(--c-button-icon-color-border-brand, $c-button-icon-color-border-brand);;
+  --c-button-icon-color-background: var(--c-button-icon-color-background-brand, $brand-accessible);
+  --c-button-icon-border-color: var(--c-button-icon-color-border-brand, $brand-accessible);
   // Override icon color
-  --c-icon-color: var(--c-button-icon-color-on-brand, $c-button-icon-color-on-brand);
+  --c-icon-color: var(--c-button-icon-color-on-brand, $color-gray-1);
 
   &:link,
   &:visited,
   &:active {
     // Override icon color
-    --c-icon-color: var(--c-button-icon-color-on-brand, $c-button-icon-color-on-brand);
+    --c-icon-color: var(--c-button-icon-color-on-brand, $brand-accessible);
   }
 
   &:hover,
   &:focus {
-    background-color: var(--c-button-icon-color-background-brand-active, $c-button-icon-color-background-brand-active);
-    border-color: var(--c-button-icon-color-border-brand-active, $c-button-icon-color-border-brand-active);
+    --c-button-icon-color-background: var(--c-button-icon-color-background-brand-active, $brand-accessible-active);
+    --c-button-icon-border-color: var(--c-button-icon-color-border-brand-active, $brand-accessible-active);
     // Override icon color
-    --c-icon-color: var(--c-button-icon-color-on-brand-active, $c-button-icon-color-on-brand-active);
+    --c-icon-color: var(--c-button-icon-color-brand-active, $color-gray-1);
   }
 
   &:active {
-    background-color: var(--c-button-icon-color-background-brand-active, $c-button-icon-color-background-brand-active);
-    border-color: var(--c-button-icon-color-border-brand-active, $c-button-icon-color-border-brand-active);
+    --c-button-icon-color-background: var(--c-button-icon-color-background-brand-active, $brand-accessible-active);
+    --c-button-icon-border-color: var(--c-button-icon-color-border-brand-active, $brand-accessible-active);
   }
 
   &[disabled],
   &:disabled {
-    background: $_c-button-icon-color-background-disabled;
-    border-color: $_c-button-icon-color-border-disabled;
+    --c-button-icon-color-background: $brand-disabled;
+    --c-button-icon-border-color: $brand-disabled;
     // Override icon color
-    --c-icon-color: $_c-button-icon-color-disabled;
+    --c-icon-color: $color-gray-5;
   }
 }
 
@@ -117,7 +73,7 @@ $c-button-icon-border-radius: $button-border-radius;
  * @modifier
  */
 .lwc-button-icon_bordered {
-  border-color: var(--c-button-icon-color-border, $c-button-icon-color-border);
+  --c-button-icon-border-color: var(--c-button-icon-color-border, $color-border);
 }
 
 /**
@@ -127,10 +83,10 @@ $c-button-icon-border-radius: $button-border-radius;
  * @modifier
  */
 .lwc-button-icon_background {
-  background-color: var(--c-button-icon-color-background-default, $c-button-icon-color-background-default);
+  --c-button-icon-color-background: var(--c-button-icon-color-background-default, $color-gray-1);
 
   &:focus,
   &:hover {
-    background-color: var(--c-button-icon-color-background-default-active, $c-button-icon-color-background-default-active);
+    --c-button-icon-color-background: var(--c-button-icon-color-background-default-active, $color-gray-1);
   }
 }

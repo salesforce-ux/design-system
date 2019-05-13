@@ -13,20 +13,24 @@ import { Illustration, IllustrationText, IllustrationCTA } from '../illustration
   An illustration is an image and inline text that work in tandem to communicate a state in a more friendly way.
 </div>
 
-<Illustration>
-  <FishingDeals />
-  <IllustrationText heading="Lorem ipsum dolor" />
-</Illustration>
+## About Illustration
 
 Illustrations should be used within other components, such as cards, to express the state of the component. An illustration image must be accompanied with heading text inline.
 
-<Blockquote type="a11y" header="Accessibility Note">
-  Each SVG tag requires an <code className="doc">aria-hidden="true"</code> attribute
-</Blockquote>
+### Accessibility
+
+Each SVG tag requires an <code className="doc">aria-hidden="true"</code> attribute.
 
 <CodeBlock toggleCode={false}>
   <svg viewBox="0 0 483 218" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">...</svg>
 </CodeBlock>
+
+## Base
+
+<Illustration>
+  <FishingDeals />
+  <IllustrationText heading="Lorem ipsum dolor" />
+</Illustration>
 
 ## Using Empty States
 

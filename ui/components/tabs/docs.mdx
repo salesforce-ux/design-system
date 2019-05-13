@@ -14,31 +14,22 @@ import style from './docs/index.scss';
   Tabs keeps related content in a single container that is shown and hidden through navigation.
 </div>
 
-<Example title="Tabs Base">
-  <CodeView style={{height: '200px'}}>
-    <TabsDefault />
-  </CodeView>
-</Example>
+## About Tabs
 
 The default tab set style encapsulates everything that is underneath it without enclosing it visually. Because tab sets can be nested, pay close attention to the markup. They are constructed to prevent styles from leaking from parent tab sets into child tab sets.
 
-<Blockquote type="a11y" header="Accessibility Roles">
-  Tabbed UIs have three parts with specific ARIA role requirements:
-  <ul>
-    <li>- The tab list, which should have `role="tablist"`</li>
-    <li>- The tabs in that list, which should each be an `<a role="tab">` anchor wrapped in a `<li role="presentation">` list item</li>
-    <li>- The tab panels, which display each tab’s content and should each have `role="tabpanel"`</li>
-  </ul>
-</Blockquote>
+### Implementation
 
-### Expected Markup
+#### Markup
+
 The following markup is crucial for Accessibility
 - Selected tab’s anchor has `aria-selected="true"`, all other tabs’ anchors have `aria-selected="false"`
 - Selected tab’s anchor has `tabindex="0"`, all other tabs have `tabindex="-1"`
 - Each tab’s anchor has an `aria-controls` attribute whose value is the id of the associated `<div role="tabpanel">`
 - Each tab panel has an `aria-labelledby` attribute whose value is the id of its associated `<a role="tab">`
 
-### Expected Keyboard Interactions
+#### Keyboard Interactions
+
 - Arrow keys, when focus is on a selected tab, cycle selection to the next or previous tab
 - Tab key, when focus is before the tab list, moves focus to the selected tab
 - Tab key, when focus is on selected tab, moves focus into the selected tab’s associated tab panel or to the next focusable element on the page if that panel has no focusable elements
@@ -54,6 +45,24 @@ The active tab has two markup requirements:
 Inactive `.slds-tabs_{variant}__content` containers receive `.slds-hide`.
 
 When the user clicks a different tab, move the `.slds-active` class and toggle the `.slds-hide`/`.slds-show` classes.
+
+### Accessibility
+
+Tabbed UIs have three parts with specific ARIA role requirements:
+
+<ul>
+  <li>- The tab list, which should have `role="tablist"`</li>
+  <li>- The tabs in that list, which should each be an `<a role="tab">` anchor wrapped in a `<li role="presentation">` list item</li>
+  <li>- The tab panels, which display each tab’s content and should each have `role="tabpanel"`</li>
+</ul>
+
+## Base
+
+<Example title="Tabs Base">
+  <CodeView style={{height: '200px'}}>
+    <TabsDefault />
+  </CodeView>
+</Example>
 
 ## With Overflow
 

@@ -12,6 +12,8 @@ import SvgIcon from '../../shared/svg-icon';
   Buttons are clickable items used to perform an action.
 </div>
 
+## About Buttons
+
 Buttons should be used in situations where users might need to:
 
 - submit a form
@@ -31,19 +33,17 @@ Buttons should be used in situations where users might need to:
   </React.Fragment>
 </CodeView>
 
-## Button vs. Link
+### Button vs. Link
 
 The HTML elements for buttons and links describe a very specific type of action that is going to be taken when they are used. It is important you know when to use which, as the distinction matters:
 
 - Use a **link** when you’re **navigating to another place**, such as: a "view all" page, "Jane Chen" profile, a page "skip link" etc.
 - Use **buttons** when you are **performing an action**, such as: "submit," "merge," "create new," "upload," etc.
-  - An action is almost **always** on the same page
-
-<Blockquote type="a11y" header="Accessibility Rule of Thumb">
-  If pressing a Button results in a new URL, or the resultant UI makes sense as "a new browser tab", that's probably always a link `<a>`. Everything else is a `<button>`.
-</Blockquote>
+- An action is almost **always** on the same page
 
 ### Accessibility
+
+If pressing a Button results in a new URL, or the resultant UI makes sense as "a new browser tab", that is a link `<a>`. Everything else is a `<button>`.
 
 The distinction is important to screen reader users to know what's going to happen next. Will I navigate somewhere or will something happen on the page? So it's important to choose the right HTML element for the job.
 
@@ -53,12 +53,6 @@ If you absolutely cannot use a `<button />` element for an action and instead ne
 - Add a JavaScript event handler for when the user presses the space key.  This is because a `button` element will respond by default to both the enter and space keys being pressed, but an `<a />` element will not.
 
 Finally, color alone does not suffice when conveying the meaning of buttons. Ensure that the text you use in the button matches the meaning you are trying to convey via color. For example, if you use the destructive button to point out a potential warning, make sure the text communicates the same message.
-
-### Links that look like Buttons
-
-<Blockquote type="a11y" header="Accessibility Warning">
-  Use these with caution - dictation software users may not be able to properly identify these actions, as they can say "show buttons" and these won't highlight since they are semantically links, even though they may look like buttons.
-</Blockquote>
 
 <CodeView>
   <React.Fragment>
@@ -72,9 +66,11 @@ Finally, color alone does not suffice when conveying the meaning of buttons. Ens
   </React.Fragment>
 </CodeView>
 
-## Variations
+### Links that look like Buttons
 
-### Base
+Use these with caution - dictation software users may not be able to properly identify these actions, as they can say "show buttons" and these won't highlight since they are semantically links, even though they may look like buttons.
+
+## Base
 
 The base `slds-button` looks like a plain text link. It removes all the styling of the native button.
 
@@ -83,6 +79,8 @@ The base and neutral buttons are used most frequently and can be used multiple t
 <CodeView toggleCode={false}>
   {ButtonExamples.default}
 </CodeView>
+
+## Variations
 
 ### Neutral
 

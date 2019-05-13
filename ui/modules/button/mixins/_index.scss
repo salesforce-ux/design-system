@@ -10,8 +10,8 @@
   display: inline-flex;
   font-size: inherit;
   line-height: inherit;
-  padding: 0;
   position: relative;
+  padding: 0;
   text-align: inherit;
   text-decoration: none;
   user-select: none;
@@ -20,13 +20,16 @@
 
 @mixin button-normalize {
   background-color: var(--c-button-color-background, transparent);
-  border-radius: var(--c-button-border-radius, $c-button-border-radius);
-  border: var(--c-button-border-width, $c-button-border-width) solid var(--c-button-border-color, transparent);
+  border-radius: var(--c-button-border-radius, $border-radius-medium);
+  border: var(--c-button-border-width, $border-width-thin) solid var(--c-button-color-border, transparent);
   color: var(--c-button-color, var(--lwc-brand-accessible, $brand-accessible));
-  line-height: var(--c-button-height, $c-button-height);
+  line-height: var(--c-button-height, $line-height-button);
   text-align: center;
   vertical-align: middle;
-  box-shadow: var(--c-button-box-shadow, $c-button-box-shadow);
+  box-shadow: var(--c-button-box-shadow, none);
+
+  --c-active-button-color-border: var(--c-button-color-border);
+  --c-active-button-color: var(--c-button-color);
 
   &:hover,
   &:focus,
@@ -37,21 +40,21 @@
 
   &:hover,
   &:focus {
-    color: var(--c-button-color-active, $c-button-color-active);
+    border-color: var(--c-active-button-color-border, transparent);
+    color: var(--c-active-button-color, $brand-accessible-active);
+    background-color: var(--c-active-button-color-background, transparent);
   }
 
   &:focus {
     outline: 0;
-    box-shadow: var(--c-button-box-shadow-active, $c-button-box-shadow-active);
-  }
-
-  &:active {
-    color: var(--c-button-color-active, $c-button-color-active);
+    box-shadow: var(--c-active-button-box-shadow, 0 0 2px $brand-accessible);
   }
 
   &[disabled],
   &:disabled {
-    color: $_c-button-color-disabled;
+    border-color: var(--c-disabled-button-color-border, $brand-disabled);
+    color: var(--c-disabled-button-color, $color-gray-5);
+    background-color: var(--c-disabled-button-color-background, transparent);
     cursor: default;
 
     * {

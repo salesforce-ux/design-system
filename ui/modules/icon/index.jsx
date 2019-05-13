@@ -5,7 +5,6 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import SvgIcon from '../../shared/svg-icon';
-import IconPrimitive from '../icon-primitive/';
 import Shadow from '../../shared/shadow';
 
 import common from '../common/index.scss';
@@ -33,8 +32,7 @@ class Icon extends Component {
       color,
       boundarySize,
       unset,
-      shadow,
-      assistiveText
+      shadow
     } = this.props;
 
     const iconSizingClassName = {

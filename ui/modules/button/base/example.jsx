@@ -7,25 +7,68 @@ const ButtonExample = () => <Button>Button</Button>;
 export const examples = [
   {
     id: 'button-all',
-    label: 'All Variants',
+    label: 'Button Combo',
     element: (
       <div>
+        <Button>Base Button</Button>
         <Button variant="neutral">Neutral Button</Button>
         <Button variant="brand">Brand Button</Button>
         <Button variant="brand-outline">Brand Outline Button</Button>
-        <Button variant="inverse">Inverse Button</Button>
         <Button variant="destructive">Destructive Button</Button>
         <Button variant="destructive-text">Destructive Text Button</Button>
         <Button variant="success">Success Button</Button>
-        <Button size="full-width" variant="neutral">
-          Full Width Neutral Button
-        </Button>
         <Button
           variant="neutral"
           leftIcon={<Icon size="xx-small" symbol="download" />}
         >
           Download
         </Button>
+        <div
+          style={{
+            backgroundColor: '#16325C',
+            margin: 0.25 + 'rem',
+            padding: 0.5 + 'rem'
+          }}
+        >
+          <Button variant="inverse">Inverse Button</Button>
+        </div>
+        <Button disabled>Base Button</Button>
+        <Button disabled variant="neutral">
+          Neutral Button
+        </Button>
+        <Button disabled variant="brand">
+          Brand Button
+        </Button>
+        <Button disabled variant="brand-outline">
+          Brand Outline Button
+        </Button>
+        <Button disabled variant="destructive">
+          Destructive Button
+        </Button>
+        <Button disabled variant="destructive-text">
+          Destructive Text Button
+        </Button>
+        <Button disabled variant="success">
+          Success Button
+        </Button>
+        <Button
+          disabled
+          variant="neutral"
+          leftIcon={<Icon size="xx-small" symbol="download" />}
+        >
+          Download
+        </Button>
+        <div
+          style={{
+            backgroundColor: '#16325C',
+            margin: 0.25 + 'rem',
+            padding: 0.5 + 'rem'
+          }}
+        >
+          <Button disabled variant="inverse">
+            Inverse Button
+          </Button>
+        </div>
       </div>
     )
   },

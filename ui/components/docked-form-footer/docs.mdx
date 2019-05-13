@@ -8,6 +8,16 @@ import * as DockedFormFooterExamples from './base/example';
   Docked form footer is used to dock form actions to the bottom of the viewport
 </div>
 
+## About Docked Form footer
+
+The popover should be positioned with JavaScript.
+
+When errors are found within a form, the user will be notified with a popover with the page-level errors listed out.
+
+### Accessibility
+
+Please provide a contextually specific title for the dialog with the aria-label attribute. e.g. "Acme Global edit form errors".
+
 ## Base
 
 <CodeView isViewport style={{ height: '180px' }}>
@@ -25,7 +35,3 @@ import * as DockedFormFooterExamples from './base/example';
 <CodeView isViewport style={{ height: '180px' }}>
   {getDisplayElementById(DockedFormFooterExamples.states, 'docked-form-footer-with-popover')}
 </CodeView>
-
-The popover should be positioned with JavaScript.
-
-When errors are found within a form, the user will be notified with a popover with the page-level errors listed out. Please provide a contextually specific title for the dialog with the aria-label attribute. e.g. "Acme Global edit form errors".

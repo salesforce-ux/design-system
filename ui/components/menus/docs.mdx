@@ -13,25 +13,23 @@ import { getDisplayElementById } from '../../shared/helpers';
   A Menu offers a list of actions or functions that a user can access.
 </div>
 
-<Example title="Menu Base">
-  <CodeView style={{height: '200px'}}>
-    <BaseMenu className="slds-dropdown_left" />
-  </CodeView>
-</Example>
+## About Menu
 
 The unordered menu list `<ul>` with `role="menu"` should be contained in a `<div>` with the class `.slds-dropdown`.
 
 The target HTML element and dropdown need to be wrapped in the class `.slds-dropdown-trigger dropdown-trigger_click`.
 
-<Blockquote type="a11y" header="Key Accessibility Markup">
-  <ul>
-    <li>- The menu trigger is a focusable element (`<a>` or `<button>`) with `aria-haspopup="true"`</li>
-    <li>- The menu has `role="menu"` and an `aria-label` attribute whose value is the name of the menu trigger</li>
-    <li>- The menu items have `role="menuitem"`, `role="menuitemcheckbox"`, or `role="menuitemradio"`, depending on the selection options</li>
-  </ul>
-</Blockquote>
+### Accessibility
 
-## Expected Keyboard Interactions
+#### Markup
+
+<ul>
+  <li>- The menu trigger is a focusable element (`<a>` or `<button>`) with `aria-haspopup="true"`</li>
+  <li>- The menu has `role="menu"` and an `aria-label` attribute whose value is the name of the menu trigger</li>
+  <li>- The menu items have `role="menuitem"`, `role="menuitemcheckbox"`, or `role="menuitemradio"`, depending on the selection options</li>
+</ul>
+
+#### Keyboard Interactions
 
 The main thing that distinguishes menus from other popover blocks is keyboard navigation: elsewhere, users press the Tab key to navigate through actionable items, but in a menu, users press the arrow keys to navigate.
 
@@ -41,6 +39,14 @@ The main thing that distinguishes menus from other popover blocks is keyboard na
 - Tab key closes the menu and moves focus to the next focusable element on the page
 - Esc key closes the menu and moves focus back to the menu trigger
 - Any character key moves focus to the next menu item that starts with that character, if applicable
+
+## Base
+
+<Example title="Menu Base">
+  <CodeView style={{height: '200px'}}>
+    <BaseMenu className="slds-dropdown_left" />
+  </CodeView>
+</Example>
 
 ## With Subheaders
 

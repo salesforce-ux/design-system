@@ -10,11 +10,12 @@ import { getDisplayElementById } from '../../shared/helpers';
 </div>
 
 ## About Vertical Tabs
+
 The Vertical Tabs component serves as a container to show groups of content, divided into tabs. Each tab label should correspond with a block of related content. Only one tab's contents are visible at any given time.
 
 This component varies from the regular 'tabs' component, with the tabs arranged on the left in a vertical space, instead of on the top in a horizontal space.
 
-### Implementation Notes and Requirements
+### Implementation
 
 The Tab Component has the following markup requirements:
 
@@ -28,20 +29,20 @@ The Tab Component has the following markup requirements:
 
 Vertical Tabbed UIs have three parts with specific
 
-**ARIA** role requirements:
+#### ARIA Roles
 
 - The tab list, which should have `role="tablist"`
 - The tabs in that list, which should each be an `<a role="tab">` anchor wrapped in a `<li role="presentation">` li
 - The tab panels, which display each tab's content and should each have `role="tabpanel"`
 
-**Expected markup:**
+#### Markup
 
 - Selected tab’s anchor has `aria-selected="true"`, all other tabs’ anchors have `aria-selected="false"`
 - Selected tab’s anchor has `tabindex="0"`, all other tabs have `tabindex="-1"`
 - Each tab’s anchor has an `aria-controls` attribute whose value is the id of the associated `<div role="tabpanel">`
 - Each tab panel has an `aria-labelledby` attribute whose value is the id of its associated `<a role="tab">`
 
-**Expected keyboard interactions:**
+#### Keyboard Interactions
 
 - Arrow keys, when focus is on selected tab, cycle selection to the next or previous tab
 - Tab key, when focus is before the tab list, moves focus to the selected tab

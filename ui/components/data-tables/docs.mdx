@@ -6,7 +6,7 @@ import * as SimpleTableExamples from './base/example';
 import * as AdvancedTableExamples from './advanced/example';
 import * as InlineEditTableExamples from './inline-edit/example';
 
-<div className="lead">
+<div className="doc lead">
 Data tables are an enhanced version of an HTML table and are used to display tabular data.
 </div>
 
@@ -14,11 +14,10 @@ Data tables are an enhanced version of an HTML table and are used to display tab
 
 To initialize a data table, apply the `slds-table` class to the `table` element. This class creates a `table` with formatted cells and allows you to use data table utilities.
 
-<Blockquote type="a11y" header="Accessibility">
+### Accessibility
 To create an accessible table, the top row of column headers (<code className="doc">th</code>) are placed in a <code className="doc">thead</code>. Each one receives the <code className="doc">scope="col"</code> attribute. The first non-actionable (meaning that doesn't contain a checkbox or menu) column in each row should be marked as a th with a <code className="doc">scope="row"</code> attribute.
-</Blockquote>
 
-## Base table
+## Base
 
 <CodeView>
   {SimpleTableExamples.default}

@@ -4,17 +4,46 @@ import Blockquote from '../../../shared/components/Blockquote';
 import Example from '../../../shared/components/Example';
 import Carousel, { CarouselPlayToggle } from './';
 
-<div className="lead">
+<div className="doc lead">
   A carousel allows multiple pieces of featured content to occupy an allocated amount of space.
 </div>
+
+
+## About Carousel
+
+A Carousel can accept a maximum number of 5 panels where only 1 panel is visible at a time.
+
+### Accessibility
+
+A Carousel is built using a tabbed UI specification and requires the following to meet accessibility requirements:
+
+- The tab list, which should have `role="tablist"`
+- The tabs in that list, which should each be an `<a role="tab">` anchor wrapped in a `<li role="presentation">` list item
+- The tab panels, which display each tab’s content and should each have `role="tabpanel"`
+
+#### Markup
+
+- Selected tab’s anchor has `aria-selected="true"`, all other tabs’ anchors have `aria-selected="false"`
+- Selected tab’s anchor has `tabindex="0"`, all other tabs have `tabindex="-1"`
+- Each tab’s anchor has an `aria-controls` attribute whose value is the id of the associated `<div role="tabpanel">`
+- Each tab panel has an `aria-labelledby` attribute whose value is the id of its associated `<a role="tab">`
+- Each tab panel has an `aria-hidden` attribute whose value is toggled based on which panel is visible
+- When the Carousel is set to auto-play, the HTML for the pause button is required to precede the HTML of the tab set
+
+#### Keyboard Interactions
+
+- Arrow keys, when focus is on selected tab, cycle selection to the next or previous tab
+- Tab key, when focus is before the tab list, moves focus to the selected tab panel
+- Tab key, when focus is on selected tabpanel, moves focus into the selected tabpanel's associated tab or to the next focusable element on the page if that panel has no focusable elements
+- Shift+Tab keys, when focus is on first element in a tab panel, move focus focus entirely from tabset
+
+## Base
 
 <Example title="carousel">
   <CodeView style={{width: '480px', maxWidth: '100%'}}>
     <Carousel panelActive="1" autoPlay />
   </CodeView>
 </Example>
-
-A Carousel can accept a maximum number of 5 panels where only 1 panel is visible at a time.
 
 ## Navigating between panels
 
@@ -90,27 +119,3 @@ If the Carousel is set to auto-play, a pause button is required to be first in t
     </div>
   </CodeBlock>
 </Example>
-
-## Accessibility
-
-A Carousel is built using a tabbed UI specification and requires the following to meet accessibility requirements:
-
-- The tab list, which should have `role="tablist"`
-- The tabs in that list, which should each be an `<a role="tab">` anchor wrapped in a `<li role="presentation">` list item
-- The tab panels, which display each tab’s content and should each have `role="tabpanel"`
-
-### Expected markup:
-
-- Selected tab’s anchor has `aria-selected="true"`, all other tabs’ anchors have `aria-selected="false"`
-- Selected tab’s anchor has `tabindex="0"`, all other tabs have `tabindex="-1"`
-- Each tab’s anchor has an `aria-controls` attribute whose value is the id of the associated `<div role="tabpanel">`
-- Each tab panel has an `aria-labelledby` attribute whose value is the id of its associated `<a role="tab">`
-- Each tab panel has an `aria-hidden` attribute whose value is toggled based on which panel is visible
-- When the Carousel is set to auto-play, the HTML for the pause button is required to precede the HTML of the tab set
-
-### Expected keyboard interactions:
-
-- Arrow keys, when focus is on selected tab, cycle selection to the next or previous tab
-- Tab key, when focus is before the tab list, moves focus to the selected tab panel
-- Tab key, when focus is on selected tabpanel, moves focus into the selected tabpanel's associated tab or to the next focusable element on the page if that panel has no focusable elements
-- Shift+Tab keys, when focus is on first element in a tab panel, move focus focus entirely from tabset

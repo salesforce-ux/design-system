@@ -13,16 +13,17 @@ import { getDisplayElementById } from '../../shared/helpers';
   Cards are used to apply a container around a related grouping of information.
 </div>
 
-## Structuring a Card
+## About Cards
 
 To initialize a card, apply the `slds-card` class to an `<article>` element.
 
-<Blockquote type="a11y" header="Accessibility Note">
-  Cards should use an underlying <code className="doc"><article></code> element to maintain usability for some screen reader users.
-</Blockquote>
+### Accessibility
+
+Cards should use an underlying <code className="doc"><article></code> element to maintain usability for some screen reader users.
+
+## Card Structure
 
 A card is made up of 3 sections, a header, a body, and a footer. The header and footer have limitations, but the body section can accommodate any layout of related information.
-
 
 <CodeView>
   {CardExamples.default}

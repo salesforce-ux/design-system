@@ -30,14 +30,7 @@ You can add metatext (see: metatext state) to any tree item, which adds a smalle
 
 ### Accessibility
 
-#### Interaction requirements
-
-- Only a single action per tree item
-- Only 1 focusabled item per Tree
-- Actionable elements in a tree item are mouse only and should not be focusable, they should be presentational and should be hidden from screen readers and keyboard users
-- Focus is placed on the entire `li[role="treeitem"]`. If that item has child items, focus must include those as well.
-
-#### Notable attributes
+#### Markup
 
 - `role="tree"` is placed on the `ul`
 - `role="tree"` element also has `aria-labelledby` applied which points to the trees heading element
@@ -49,7 +42,14 @@ You can add metatext (see: metatext state) to any tree item, which adds a smalle
 - `tabindex="0"` is applied to the `treeitem` that is in focus
 - `role="group"` is applied to child tree node containers, `ul`
 
-#### Keyboard navigation
+#### Interactions
+
+- Only a single action per tree item
+- Only 1 focusabled item per Tree
+- Actionable elements in a tree item are mouse only and should not be focusable, they should be presentational and should be hidden from screen readers and keyboard users
+- Focus is placed on the entire `li[role="treeitem"]`. If that item has child items, focus must include those as well.
+
+#### Keyboard Navigation
 
 - Clicking on a tree item creates a selection
 - `Up` and `Down` arrow keys move `:focus` **and** `aria-selected`. Previous selections are cleared

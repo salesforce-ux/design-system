@@ -1,0 +1,13 @@
+# Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+# Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+global:
+  scope: component
+  type: sizing
+  category: height
+  cssProperties:
+  - width
+  - height
+props:
+  BUTTON_ICON_BOUNDARY_TOUCH:
+    value: 2.75rem

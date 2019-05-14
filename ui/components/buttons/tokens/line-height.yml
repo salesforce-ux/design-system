@@ -18,3 +18,6 @@ props:
     value: 1.75rem
     comment: Line heights for small buttons
     access: global
+  BUTTON_LINE_HEIGHT_TOUCH:
+    value: 2.65rem
+    comment: Line height for touch screens

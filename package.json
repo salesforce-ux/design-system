@@ -182,7 +182,7 @@
     "fsevents": "*"
   },
   "engines": {
-    "node": ">=8.0.0",
+    "node": "^10.0.0",
     "npm": ">=3.10.6"
   },
   "license": "SEE LICENSE IN README.md",
@@ -206,10 +206,12 @@
     "pr-checks": "npm run gulp -- pr-checks",
     "compile-aura-tokens-map": "npm run gulp -- generate:auraTokensMap",
     "compile-token-component-map": "npm run gulp -- generate:tokenComponentMap",
-    "storybook": "npm run build && start-storybook -s ./.dist -p 9002 -c .storybook",
-    "storybook-build": "build-storybook -c .storybook -o .out",
+    "storybook": "npm run build && start-storybook -s .dist/ -p 9002 -c .storybook",
+    "storybook:heroku": "start-storybook -c .storybook -p 9002",
+    "storybook:build": "build-storybook -c .storybook -s .dist/ -o .out",
     "release-notes:compile": "node ./scripts/release-notes/index.js",
-    "release-notes:hook": "node ./scripts/release-notes/hook.js"
+    "release-notes:hook": "node ./scripts/release-notes/hook.js",
+    "heroku-postbuild": "npm run build && npm run dist && npm run storybook:build"
   },
   "lint-staged": {
     "linters": {

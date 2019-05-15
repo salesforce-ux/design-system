@@ -58,7 +58,7 @@ module.exports = async ({ config, mode }) => {
     new CopyWebpackPlugin([
       {
         from: paths.icons,
-        to: '/assets/icons'
+        to: 'assets/icons'
       }
     ])
   );

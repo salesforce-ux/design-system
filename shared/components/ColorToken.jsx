@@ -4,45 +4,7 @@
 import React, { Component } from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
-
-export class Tokens extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      open: this.props.open
-    };
-  }
-
-  render() {
-    return (
-      <div className="doc-tokens-group">
-        <button
-          className="slds-button"
-          onClick={() => this.setState({ open: !this.state.open })}
-        >
-          {this.state.open ? 'Hide' : 'Show'} Tokens Used {this.props.text}
-        </button>
-        <div
-          className={classNames(
-            this.state.open ? 'slds-is-expanded' : 'slds-is-collapsed'
-          )}
-        >
-          <div className="slds-grid slds-wrap">{this.props.children}</div>
-        </div>
-      </div>
-    );
-  }
-}
-
-Tokens.propTypes = {
-  open: PropTypes.bool,
-  text: PropTypes.string,
-  children: PropTypes.node
-};
-
-Tokens.defaultProps = {
-  open: false
-};
+import { StyledColorToken } from '../styles/ColorToken';
 
 class Token extends Component {
   render() {
@@ -57,9 +19,9 @@ class Token extends Component {
     });
 
     return (
-      <div
+      <StyledColorToken
         className={classNames(
-          'doc-token slds-media slds-media_center',
+          'slds-media slds-media_center',
           this.props.grid && 'slds-size_1-of-2 slds-large-size_1-of-3'
         )}
       >
@@ -82,7 +44,7 @@ class Token extends Component {
             <span title={tokenValue}>{tokenValue}</span>
           </p>
         </div>
-      </div>
+      </StyledColorToken>
     );
   }
 }

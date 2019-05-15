@@ -4,7 +4,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import CodeBlock from './CodeBlock';
-import classNames from 'classnames';
+import { StyledCodeView } from '../styles/CodeBlock';
 import styled from 'styled-components';
 
 const StyledDemo = styled.div`
@@ -25,13 +25,13 @@ class CodeView extends React.Component {
   render() {
     const { position, toggleCode, children } = this.props;
     return (
-      <div className={classNames('docs-codeblock')}>
+      <StyledCodeView>
         {position === 'bottom' ? this.renderChildren() : null}
         <CodeBlock language="html" toggleCode={toggleCode}>
           {children}
         </CodeBlock>
         {position === 'top' ? this.renderChildren() : null}
-      </div>
+      </StyledCodeView>
     );
   }
 }

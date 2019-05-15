@@ -9,6 +9,7 @@ import { mapElement } from '../utils/react';
 import classNames from 'classnames';
 import Copy from './Copy';
 import Prism from '../vendor/prism';
+import { StyledButton, StyledCodeBlock } from '../styles/CodeBlock';
 import '../vendor/prism/_prism.scss';
 import '../vendor/prism/_prism-overrides.scss';
 
@@ -16,15 +17,9 @@ const highlight = (code, language) =>
   Prism.highlight(code, Prism.languages[language]);
 
 export const ToggleButton = props => (
-  <div className="doc-toggle-code">
-    <button
-      className="slds-button doc-toggle-code__button"
-      aria-live="polite"
-      {...props}
-    >
-      {props.open ? 'Hide ' : 'Show '} Code
-    </button>
-  </div>
+  <StyledButton aria-live="polite" {...props}>
+    {props.open ? 'Hide ' : 'Show '} Code
+  </StyledButton>
 );
 
 class CodeBlock extends Component {
@@ -63,7 +58,7 @@ class CodeBlock extends Component {
   render() {
     const { language, toggleCode = true } = this.props;
     return (
-      <div className="docs-codeblock-source">
+      <StyledCodeBlock className="docs-codeblock-source">
         <ul className="docs-codeblock__action-bar">
           {toggleCode && (
             <li>
@@ -74,7 +69,7 @@ class CodeBlock extends Component {
             </li>
           )}
           <li>
-            <Copy key="copy" className="site-code_copy" text={this.getCode()} />
+            <Copy key="copy" text={this.getCode()} />
           </li>
         </ul>
         <div
@@ -92,7 +87,7 @@ class CodeBlock extends Component {
             />
           </pre>
         </div>
-      </div>
+      </StyledCodeBlock>
     );
   }
 }

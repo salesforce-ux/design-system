@@ -5,10 +5,10 @@ import cx from 'classnames';
 import get from 'lodash.get';
 import React from 'react';
 
-import '../styles/doc.scss';
 import { flattenElement, mapElement } from '../utils/react';
 
 import Example from './Example';
+import { DocBlock } from '../styles/DocBlock';
 
 export const createAnchor = (type, id) =>
   React.createElement(
@@ -116,6 +116,6 @@ export const createTableOfContents = (() => {
 
 export default class Doc extends React.Component {
   render() {
-    return <div {...this.props} />;
+    return <DocBlock {...this.props} />;
   }
 }

@@ -5,6 +5,8 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import CodeBlock from './CodeBlock';
+import { StyledCodeView } from '../styles/CodeBlock';
+import { StyledSpacingExample } from '../styles/SpacingCodeView';
 
 // Used to showcase Margin and Padding docs without showing
 // internal, doc-only styling classes
@@ -14,9 +16,9 @@ class SpacingCodeView extends Component {
     let typeName = type === 'p' ? 'padding' : 'margin';
     let spacingClass = `slds-${type}-${position}_${size}`;
     return (
-      <div className="docs-codeblock">
+      <StyledCodeView>
         <div className="docs-codeblock-example">
-          <div className="doc-spacing">
+          <StyledSpacingExample>
             <div
               className={classNames(
                 `doc-${typeName}`,
@@ -24,12 +26,12 @@ class SpacingCodeView extends Component {
                 spacingClass
               )}
             />
-          </div>
+          </StyledSpacingExample>
         </div>
         <CodeBlock toggleCode={false}>
           <div className={`${spacingClass}`} />
         </CodeBlock>
-      </div>
+      </StyledCodeView>
     );
   }
 }

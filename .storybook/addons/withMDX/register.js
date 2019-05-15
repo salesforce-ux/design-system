@@ -1,20 +1,16 @@
 import React, { lazy, Suspense } from 'react';
 import addons from '@storybook/addons';
-import styled from '@emotion/styled';
-
-// import the framework to make the docs _look_ like the framework, plus we rely on it for buttons in the code blocks
-import '../../../ui/index.scss';
-// import the docs specific styles
-import '../../../shared/styles/doc.scss';
+import styled from 'styled-components';
+import { DocBlock } from '../../../shared/styles/DocBlock';
 
 import ErrorBoundary from './error-boundary';
 
-const MDXPanel = styled.div({
-  fontFamily: "'Salesforce Sans', sans-serif",
-  padding: 20,
-  width: '100%',
-  overflow: 'auto'
-});
+const MDXPanel = styled.div`
+  font-family: 'Salesforce Sans', sans-serif;
+  padding: 20px;
+  width: 100%;
+  overflow: auto;
+`;
 
 class MDX extends React.Component {
   constructor(props) {
@@ -74,7 +70,9 @@ class MDX extends React.Component {
 
     return active ? (
       <MDXPanel>
-        {mdxFilePath ? this.renderMDXDoxs(mdxFilePath) : 'no docs'}
+        <DocBlock>
+          {mdxFilePath ? this.renderMDXDoxs(mdxFilePath) : 'no docs'}
+        </DocBlock>
       </MDXPanel>
     ) : null;
   }

@@ -72,6 +72,7 @@ $light-gray-border-color: #f2f2f2;
 }
 
 .docs-codeblock__action-bar li {
+  display: flex;
   padding: 0 0.5rem;
   border-left: 1px solid $light-gray-border-color;
 }

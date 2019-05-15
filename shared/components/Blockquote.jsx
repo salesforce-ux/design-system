@@ -3,18 +3,19 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
+import { StyledBlockquote } from '../styles/Blockquote';
 
 class Blockquote extends React.Component {
   render() {
     const { type } = this.props;
     return (
       // types include: note (default), a11y, warning
-      <blockquote className={`doc site-blockquote_${type}`}>
+      <StyledBlockquote className={`doc blockquote_${type}`}>
         {this.props.header ? (
-          <p className="doc lead">{this.props.header}</p>
+          <p className="doc blockquote__header">{this.props.header}</p>
         ) : null}
         <p className="doc">{this.props.children}</p>
-      </blockquote>
+      </StyledBlockquote>
     );
   }
 }

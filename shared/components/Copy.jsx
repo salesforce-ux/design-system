@@ -3,6 +3,7 @@
 
 import React from 'react';
 import SvgIcon from '../../ui/shared/svg-icon/';
+import { StyledButton } from '../styles/CodeBlock';
 
 const isCopySupported = () =>
   document &&
@@ -57,35 +58,30 @@ class Copy extends React.PureComponent {
     const { copied } = this.state;
     const title = copied ? 'Copied' : 'Copy to Clipboard';
     return (
-      <button
-        className="slds-button slds-button_icon-container doc-copy-to-clipboard"
-        onClick={() => this.copyToClipboard()}
-        title={title}
-      >
+      <StyledButton onClick={() => this.copyToClipboard()} title={title}>
         <SvgIcon
           sprite="utility"
           symbol={copied ? 'check' : 'copy_to_clipboard'}
-          className="slds-button__icon"
         />
-        <span aria-live="polite" className="slds-assistive-text">
+        <span aria-live="polite" hidden>
           {title}
         </span>
-      </button>
+      </StyledButton>
     );
   }
   render() {
     if (!this.state.show) return null;
     return (
-      <div className={this.props.className}>
+      <React.Fragment>
         {this.renderButton()}
         <pre
           aria-hidden="true"
-          className="slds-assistive-text"
+          hidden
           ref={node => {
             this.copyNode = node;
           }}
         />
-      </div>
+      </React.Fragment>
     );
   }
 }

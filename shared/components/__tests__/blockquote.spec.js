@@ -10,21 +10,21 @@ import Blockquote from '../Blockquote';
 describe('Blockquote', () => {
   it('Renders the note blockquote', () => {
     const wrapper = shallow(<Blockquote />);
-    expect(wrapper.find('.site-blockquote_note').length).toEqual(1);
+    expect(wrapper.find('.blockquote_note').length).toEqual(1);
   });
 
   it('Renders the a11y blockquote', () => {
     const wrapper = shallow(<Blockquote type="a11y" />);
-    expect(wrapper.find('.site-blockquote_a11y').length).toEqual(1);
+    expect(wrapper.find('.blockquote_a11y').length).toEqual(1);
   });
 
   it('Renders the warning blockquote', () => {
     const wrapper = shallow(<Blockquote type="warning" />);
-    expect(wrapper.find('.site-blockquote_warning').length).toEqual(1);
+    expect(wrapper.find('.blockquote_warning').length).toEqual(1);
   });
 
   it('Renders a header in the blockquote', () => {
     const wrapper = shallow(<Blockquote header="Some header text goes here" />);
-    expect(wrapper.find('.lead').length).toEqual(1);
+    expect(wrapper.find('.blockquote__header').length).toEqual(1);
   });
 });

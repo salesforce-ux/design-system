@@ -19,10 +19,10 @@
 }
 
 @mixin button-icon-normalize {
-  background-color: var(--c-button-icon-color-background, transparent);
-  border-radius: var(--c-button-icon-border-radius, $border-radius-medium);
-  border: var(--c-button-icon-border-width, $border-width-thin) solid var(--c-button-icon-border-color, transparent);
-  box-shadow: var(--c-button-icon-shadow, none);
+  background-color: var(--lwc-c-button-icon-color-background, transparent);
+  border-radius: var(--lwc-c-button-icon-border-radius, $border-radius-medium);
+  border: var(--lwc-c-button-icon-border-width, $border-width-thin) solid var(--lwc-c-button-icon-border-color, transparent);
+  box-shadow: var(--lwc-c-button-icon-shadow, none);
   text-align: center;
   vertical-align: middle;
 
@@ -35,22 +35,22 @@
 
   &:hover,
   &:focus {
-    --c-icon-color: var(--c-button-icon-color-active, $brand-accessible-active);
+    --lwc-c-icon-color: var(--lwc-c-button-icon-color-active, $brand-accessible-active);
   }
 
   &:focus {
     outline: 0;
-    --c-button-icon-shadow: var(--c-button-icon-shadow-active, 0 0 2px $brand-accessible);
-    --c-button-icon-border-color: var(--c-button-icon-color-border-active, $brand-accessible);
+    --lwc-c-button-icon-shadow: var(--lwc-c-button-icon-shadow-active, 0 0 2px $brand-accessible);
+    --lwc-c-button-icon-border-color: var(--lwc-c-button-icon-color-border-active, $brand-accessible);
   }
 
   &:active {
-    --c-icon-color: var(--c-button-icon-color-active, $brand-accessible-active);
+    --lwc-c-icon-color: var(--lwc-c-button-icon-color-active, $brand-accessible-active);
   }
 
   &[disabled],
   &:disabled {
-    --c-icon-color: $color-gray-5;
+    --lwc-c-icon-color: $color-gray-5;
     cursor: default;
 
     * {

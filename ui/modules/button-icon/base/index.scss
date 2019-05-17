@@ -32,37 +32,37 @@
  * @group theme
  */
 .lwc-button-icon_brand {
-  --c-button-icon-color-background: var(--c-button-icon-color-background-brand, var(--brand-accessible, $brand-accessible));
-  --c-button-icon-border-color: var(--c-button-icon-color-border-brand, var(--brand-accessible, $brand-accessible));
+  --lwc-c-button-icon-color-background: var(--lwc-c-button-icon-color-background-brand, var(--brand-accessible, $brand-accessible));
+  --lwc-c-button-icon-border-color: var(--lwc-c-button-icon-color-border-brand, var(--brand-accessible, $brand-accessible));
   // Override icon color
-  --c-icon-color: var(--c-button-icon-color-on-brand, $color-gray-1);
+  --lwc-c-icon-color: var(--lwc-c-button-icon-color-on-brand, $color-gray-1);
 
   &:link,
   &:visited,
   &:active {
     // Override icon color
-    --c-icon-color: var(--c-button-icon-color-on-brand, var(--brand-accessible, $brand-accessible));
+    --lwc-c-icon-color: var(--lwc-c-button-icon-color-on-brand, var(--brand-accessible, $brand-accessible));
   }
 
   &:hover,
   &:focus {
-    --c-button-icon-color-background: var(--c-button-icon-color-background-brand-active, var(--brand-accessible-active, $brand-accessible-active));
-    --c-button-icon-border-color: var(--c-button-icon-color-border-brand-active, var(--brand-accessible-active, $brand-accessible-active));
+    --lwc-c-button-icon-color-background: var(--lwc-c-button-icon-color-background-brand-active, var(--brand-accessible-active, $brand-accessible-active));
+    --lwc-c-button-icon-border-color: var(--lwc-c-button-icon-color-border-brand-active, var(--brand-accessible-active, $brand-accessible-active));
     // Override icon color
-    --c-icon-color: var(--c-button-icon-color-brand-active, $color-gray-1);
+    --lwc-c-icon-color: var(--lwc-c-button-icon-color-brand-active, $color-gray-1);
   }
 
   &:active {
-    --c-button-icon-color-background: var(--c-button-icon-color-background-brand-active, var(--brand-accessible-active, $brand-accessible-active));
-    --c-button-icon-border-color: var(--c-button-icon-color-border-brand-active, var(--brand-accessible-active, $brand-accessible-active));
+    --lwc-c-button-icon-color-background: var(--lwc-c-button-icon-color-background-brand-active, var(--brand-accessible-active, $brand-accessible-active));
+    --lwc-c-button-icon-border-color: var(--lwc-c-button-icon-color-border-brand-active, var(--brand-accessible-active, $brand-accessible-active));
   }
 
   &[disabled],
   &:disabled {
-    --c-button-icon-color-background: $brand-disabled;
-    --c-button-icon-border-color: $brand-disabled;
+    --lwc-c-button-icon-color-background: $brand-disabled;
+    --lwc-c-button-icon-border-color: $brand-disabled;
     // Override icon color
-    --c-icon-color: $color-gray-5;
+    --lwc-c-icon-color: $color-gray-5;
   }
 }
 
@@ -73,7 +73,7 @@
  * @modifier
  */
 .lwc-button-icon_bordered {
-  --c-button-icon-border-color: var(--c-button-icon-color-border, $color-border);
+  --lwc-c-button-icon-border-color: var(--lwc-c-button-icon-color-border, $color-border);
 }
 
 /**
@@ -83,10 +83,10 @@
  * @modifier
  */
 .lwc-button-icon_background {
-  --c-button-icon-color-background: var(--c-button-icon-color-background-default, $color-gray-1);
+  --lwc-c-button-icon-color-background: var(--lwc-c-button-icon-color-background-default, $color-gray-1);
 
   &:focus,
   &:hover {
-    --c-button-icon-color-background: var(--c-button-icon-color-background-default-active, $color-gray-1);
+    --lwc-c-button-icon-color-background: var(--lwc-c-button-icon-color-background-default-active, $color-gray-1);
   }
 }

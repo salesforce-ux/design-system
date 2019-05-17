@@ -62,8 +62,8 @@ $_c-icon-action-padding-xx-small: rem(2px);
 .lwc-icon {
   @include icon-base;
   @include square($_c-icon-x-small);
-  color: var(--c-icon-color, $color-gray-9);
-  border-radius: var(--c-icon-border-radius, $border-radius-medium);
+  color: var(--lwc-c-icon-color, $color-gray-9);
+  border-radius: var(--lwc-c-icon-border-radius, $border-radius-medium);
   vertical-align: middle;
 }
 
@@ -81,7 +81,7 @@ $_c-icon-action-padding-xx-small: rem(2px);
 [class*="lwc-icon-custom"],
 [class*="lwc-icon-standard"] {
   background: $_c-icon-background-color-default;
-  color: var(--c-icon-color, $color-gray-1);
+  color: var(--lwc-c-icon-color, $color-gray-1);
 }
 
 [class*="lwc-icon-action"] {
@@ -246,7 +246,7 @@ $icon-bg-map: map-merge($bg-actions-map, $bg-custom-map);
  * @group color
  */
 .lwc-icon_success {
-  color: var(--c-icon-color-success, $color-text-success);
+  color: var(--lwc-c-icon-color-success, $color-text-success);
 }
 
 /**
@@ -257,7 +257,7 @@ $icon-bg-map: map-merge($bg-actions-map, $bg-custom-map);
  * @group color
  */
 .lwc-icon_warning {
-  color: var(--c-icon-color-warning, $color-text-warning);
+  color: var(--lwc-c-icon-color-warning, $color-text-warning);
 }
 
 /**
@@ -268,7 +268,7 @@ $icon-bg-map: map-merge($bg-actions-map, $bg-custom-map);
  * @group color
  */
 .lwc-icon_error {
-  color: var(--c-icon-color-error, $color-text-error);
+  color: var(--lwc-c-icon-color-error, $color-text-error);
 }
 
 /**
@@ -279,7 +279,7 @@ $icon-bg-map: map-merge($bg-actions-map, $bg-custom-map);
  * @group color
  */
 .lwc-icon_muted {
-  color: var(--c-icon-color-muted, $color-gray-7);
+  color: var(--lwc-c-icon-color-muted, $color-gray-7);
 }
 
 // ----------
@@ -361,5 +361,5 @@ $icon-bg-map: map-merge($bg-actions-map, $bg-custom-map);
  */
 .lwc-svg {
   @include icon-svg;
-  fill: var(--c-icon-primitive-color, currentColor);
+  fill: var(--lwc-c-icon-primitive-color, currentColor);
 }

@@ -21,13 +21,13 @@
  */
 .lwc-card {
   position: relative;
-  padding: var(--c-card-padding, 0);
-  background: var(--c-card-color-background, $color-gray-1);
-  border: var(--c-card-border-width, $border-width-thin) solid var(--c-card-border-color, $color-border);
-  border-radius: var(--c-card-border-radius, $border-radius-medium);
+  padding: var(--lwc-c-card-padding, 0);
+  background: var(--lwc-c-card-color-background, $color-gray-1);
+  border: var(--lwc-c-card-border-width, $border-width-thin) solid var(--lwc-c-card-border-color, $color-border);
+  border-radius: var(--lwc-c-card-border-radius, $border-radius-medium);
   background-clip: padding-box;
-  box-shadow: var(--c-card-box-shadow, $card-shadow);
-  color: var(--c-card-text-color, inherit);
+  box-shadow: var(--lwc-c-card-box-shadow, $card-shadow);
+  color: var(--lwc-c-card-text-color, inherit);
 }
 
 /**
@@ -36,8 +36,8 @@
  * @restrict .lwc-card div
  */
 .lwc-card__header {
-  padding: var(--c-card-header-spacing-vertical, var(--var-spacing-vertical-small, $var-spacing-vertical-small)) var(--c-card-header-spacing-horizontal, var(--var-spacing-horizontal-medium, $var-spacing-horizontal-medium)) 0;
-  margin: 0 0 var(--c-card-header-spacing-vertical, var(--var-spacing-vertical-small, $var-spacing-vertical-small));
+  padding: var(--lwc-c-card-header-spacing-vertical, var(--var-spacing-vertical-small, $var-spacing-vertical-small)) var(--lwc-c-card-header-spacing-horizontal, var(--var-spacing-horizontal-medium, $var-spacing-horizontal-medium)) 0;
+  margin: 0 0 var(--lwc-c-card-header-spacing-vertical, var(--var-spacing-vertical-small, $var-spacing-vertical-small));
 
   header {
     display: flex;
@@ -52,7 +52,7 @@
  * @modifier
  */
 .lwc-card__header_full-bleed {
-  --c-card-body-spacing-horizontal: 0;
+  --lwc-c-card-body-spacing-horizontal: 0;
 }
 
 /**
@@ -83,7 +83,7 @@
   @include truncate;
   font-size: var(--var-font-size-5, $font-size-5);
   line-height: 2rem;
-  font-weight: var(--c-card-title-font-weight, $font-weight-bold);
+  font-weight: var(--lwc-c-card-title-font-weight, $font-weight-bold);
   flex: 1 1 0%;
   align-self: center;
 }
@@ -94,7 +94,7 @@
  * @restrict .lwc-card__header-title a
  */
 .lwc-card__header-link {
-  color: var(--c-card-title-color-text, $color-text-default);
+  color: var(--lwc-c-card-title-color-text, $color-text-default);
 }
 
 /**
@@ -103,9 +103,9 @@
  * @restrict .lwc-card div
  */
 .lwc-card__body {
-  margin-top: var(--c-card-body-spacing-vertical, var(--var-spacing-vertical-small, $var-spacing-vertical-small));
-  margin-bottom: var(--c-card-body-spacing-vertical, var(--var-spacing-vertical-small, $var-spacing-vertical-small));
-  padding: var(--c-card-body-spacing-vertical, 0) var(--c-card-body-spacing-horizontal, var(--var-spacing-horizontal-medium, $var-spacing-horizontal-medium));
+  margin-top: var(--lwc-c-card-body-spacing-vertical, var(--var-spacing-vertical-small, $var-spacing-vertical-small));
+  margin-bottom: var(--lwc-c-card-body-spacing-vertical, var(--var-spacing-vertical-small, $var-spacing-vertical-small));
+  padding: var(--lwc-c-card-body-spacing-vertical, 0) var(--lwc-c-card-body-spacing-horizontal, var(--var-spacing-horizontal-medium, $var-spacing-horizontal-medium));
 }
 
 .lwc-card__body:empty {
@@ -120,7 +120,7 @@
  * @modifier
  */
 .lwc-card__body_full-bleed {
-  --c-card-body-spacing-horizontal: 0;
+  --lwc-c-card-body-spacing-horizontal: 0;
 }
 
 /**
@@ -129,11 +129,11 @@
  * @restrict .lwc-card footer
  */
 .lwc-card__footer {
-  padding: var(--c-card-footer-spacing-vertical, var(--var-spacing-vertical-small, $var-spacing-vertical-small)) var(--c-card-footer-spacing-horizontal, var(--var-spacing-horizontal-medium, $var-spacing-horizontal-medium));
-  margin-top: var(--c-card-footer-spacing-vertical, var(--var-spacing-vertical-small, $var-spacing-vertical-small));
-  text-align: var(--c-card-footer-text-align, center);
-  font-size: var(--c-card-footer-font-size, $font-size-3);
-  border-top: var(--c-card-footer-border-width, $border-width-thin) solid var(--c-card-footer-border-color, $color-border);
+  padding: var(--lwc-c-card-footer-spacing-vertical, var(--var-spacing-vertical-small, $var-spacing-vertical-small)) var(--lwc-c-card-footer-spacing-horizontal, var(--var-spacing-horizontal-medium, $var-spacing-horizontal-medium));
+  margin-top: var(--lwc-c-card-footer-spacing-vertical, var(--var-spacing-vertical-small, $var-spacing-vertical-small));
+  text-align: var(--lwc-c-card-footer-text-align, center);
+  font-size: var(--lwc-c-card-footer-font-size, $font-size-3);
+  border-top: var(--lwc-c-card-footer-border-width, $border-width-thin) solid var(--lwc-c-card-footer-border-color, $color-border);
 }
 
 /**
@@ -165,6 +165,6 @@
  * @modifier
  */
 .lwc-card_boundary {
-  border: var(--c-card-border-width, $border-width-thin) solid var(--c-card-border-color, $color-border);
+  border: var(--lwc-c-card-border-width, $border-width-thin) solid var(--lwc-c-card-border-color, $color-border);
   box-shadow: none;
 }

@@ -1,6 +1,16 @@
 import React from 'react';
 import Button from '../';
 import Icon from '../../icon';
+import styled from 'styled-components';
+
+const ComboDemo = styled.div``;
+const CustomizedDemo = styled.div`
+  --lwc-brand-accessible: green;
+  --lwc-c-button-border-width: 0.5rem;
+  --lwc-c-button-border-radius: 0;
+  --lwc-c-button-box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2),
+    0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12);
+`;
 
 const ButtonExample = () => <Button>Button</Button>;
 
@@ -9,7 +19,8 @@ export const examples = [
     id: 'button-all',
     label: 'Button Combo',
     element: (
-      <div>
+      <ComboDemo>
+        <h1>Buttons</h1>
         <Button>Base Button</Button>
         <Button variant="neutral">Neutral Button</Button>
         <Button variant="brand">Brand Button</Button>
@@ -26,12 +37,14 @@ export const examples = [
         <div
           style={{
             backgroundColor: '#16325C',
-            margin: 0.25 + 'rem',
+            margin: 0.5 + 'rem',
             padding: 0.5 + 'rem'
           }}
         >
           <Button variant="inverse">Inverse Button</Button>
         </div>
+
+        <h1>Disabled Buttons</h1>
         <Button disabled>Base Button</Button>
         <Button disabled variant="neutral">
           Neutral Button
@@ -61,7 +74,7 @@ export const examples = [
         <div
           style={{
             backgroundColor: '#16325C',
-            margin: 0.25 + 'rem',
+            margin: 0.5 + 'rem',
             padding: 0.5 + 'rem'
           }}
         >
@@ -69,7 +82,49 @@ export const examples = [
             Inverse Button
           </Button>
         </div>
-      </div>
+
+        <h1>Customized Buttons</h1>
+        <CustomizedDemo
+          customization={`
+          lightning-button{
+            margin: 5px;
+          }
+        `}
+        >
+          <Button>Custom Base Button</Button>
+          <Button variant="neutral">Custom Neutral Button</Button>
+          <Button
+            variant="brand"
+            customization={`
+              :host {
+                --lwc-c-button-color-background-brand: pink;
+              }
+        `}
+          >
+            Custom Brand Button (should be pink)
+          </Button>
+          <Button variant="brand">Brand Button</Button>
+          <Button variant="brand-outline">Brand Outline Button</Button>
+          <Button variant="destructive">Destructive Button</Button>
+          <Button variant="destructive-text">Destructive Text Button</Button>
+          <Button variant="success">Success Button</Button>
+          <Button
+            variant="neutral"
+            leftIcon={<Icon size="xx-small" symbol="download" />}
+          >
+            Download
+          </Button>
+          <div
+            style={{
+              backgroundColor: '#16325C',
+              margin: 0.5 + 'rem',
+              padding: 0.5 + 'rem'
+            }}
+          >
+            <Button variant="inverse">Inverse Button</Button>
+          </div>
+        </CustomizedDemo>
+      </ComboDemo>
     )
   },
   {

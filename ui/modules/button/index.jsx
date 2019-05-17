@@ -26,7 +26,15 @@ class Button extends Component {
   }
 
   render() {
-    const { variant, size, use, children, disabled, shadow } = this.props;
+    const {
+      variant,
+      size,
+      use,
+      children,
+      disabled,
+      shadow,
+      customization
+    } = this.props;
 
     const classNameList = classNames({
       'lwc-button': variant !== 'reset',
@@ -41,7 +49,11 @@ class Button extends Component {
     });
 
     return (
-      <Shadow name="button" includes={[common, button]} shadow={shadow}>
+      <Shadow
+        name="button"
+        includes={[common, button, customization]}
+        shadow={shadow}
+      >
         <React.Fragment>
           {use === 'a' ? (
             <a className={classNameList} href="javascript:void(0);">

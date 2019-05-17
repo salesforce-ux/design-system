@@ -84,7 +84,7 @@ By default, the icon boundary is the size of the icon.
 
 ## Icons with color
 
-Icons can have their color modified by overriding the CSS custom property, `--c-theme-icon-color` inside of `:host`. We provide three colors for user feedback states such as success, warning, and error. We also provide a muted color where an icon doesn't required as much emphasis.
+Icons can have their color modified by overriding the CSS custom property, `--lwc-c-icon-color` inside of `:host`. We provide three colors for user feedback states such as success, warning, and error. We also provide a muted color where an icon doesn't required as much emphasis.
 
 |Class|State|
 |-----|-----|
@@ -101,7 +101,7 @@ Icons can have their color modified by overriding the CSS custom property, `--c-
 
 There might be situations where you want to use an icon from our Standard or Custom set but don't require the background or color. You can unset the default background and color with `lwc-icon_unset`.
 
-After unsetting the color, the icon will inherit the font color from the app. You can apply a provide icon color of success, warning, error, or muted or override the icon color by changing the value of `--c-theme-icon-color` in your `:host`.
+After unsetting the color, the icon will inherit the font color from the app. You can apply a provide icon color of success, warning, error, or muted or override the icon color by changing the value of `--lwc-c-icon-color` in your `:host`.
 
 <Blockquote type="warning" header="Note">
   Unsetting the background and color should only be used on our custom or standard set. <strong>Usage on any other set is unsupported.</strong>

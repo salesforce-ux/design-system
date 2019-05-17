@@ -20,9 +20,10 @@
   cursor: move;
 
   &:hover,
-  &:focus {
+  &:focus,
+  &:active {
     outline: 0;
-    border-color: $color-border-selection-hover;
+    border-color: $brand-accessible-active;
   }
 
   /**

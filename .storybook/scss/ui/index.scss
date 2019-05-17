@@ -1,0 +1,11 @@
+/* overriding the story iframe showcase styles to accommodate Touch devices */
+
+.sb-show-main {
+  background: white;
+  padding: 2rem;
+  min-height: 100vh;
+
+  @media (pointer: coarse) and (hover: none) {
+    padding: 1rem;
+  }
+}

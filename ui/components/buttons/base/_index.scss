@@ -29,6 +29,10 @@
   white-space: normal;
   user-select: none;
 
+  @include touch-device {
+    line-height: $button-line-height-touch;
+  }
+
   &:hover,
   &:focus,
   &:active,

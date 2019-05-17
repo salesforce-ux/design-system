@@ -53,6 +53,13 @@
   }
 }
 
+// Touch-enabled devices without hover
+@mixin touch-device {
+  @media (pointer: coarse) and (hover: none) {
+    @content;
+  }
+}
+
 // Wrapping Helper
 @mixin flex-wrap($wrap: true) {
   @if $wrap {

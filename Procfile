@@ -1,1 +1,1 @@
-web: node server/heroku/dist/server.js
+web: npx http-server .out

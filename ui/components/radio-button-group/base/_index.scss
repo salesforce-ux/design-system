@@ -28,6 +28,10 @@
   border-radius: 0;
   background-clip: padding-box;
 
+  @include touch-device {
+    line-height: $radio-button-group-line-height-touch;
+  }
+
   /**
    * Create styled button when adjacent to the input[radio] element
    *

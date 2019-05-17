@@ -17,5 +17,9 @@
   #{$body} {
     font-size: $font-size-3;
     background: transparent;
+
+    @include touch-device {
+      font-size: $font-size-5;
+    }
   }
 }

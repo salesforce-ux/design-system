@@ -2,11 +2,12 @@
 # Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 global:
-  type: size
+  scope: component
+  type: sizing
+  category: height
   cssProperties:
-  - font
-  - font-size
-  category: font-size
+  - width
+  - height
 props:
-  FORM_LABEL_FONT_SIZE:
-    value: '0.875rem'
+  BUTTON_ICON_BOUNDARY_TOUCH:
+    value: 2.75rem

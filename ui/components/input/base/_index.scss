@@ -29,6 +29,10 @@
     background-color: transparent;
     font-size: $input-static-font-size;
     font-weight: $input-readonly-font-weight; // This is a plain readonly input. It should not have the text treatment that static has.
+
+    @include touch-device {
+      font-size: $font-size-5;
+    }
   }
 
   &[type="search"]::-ms-clear {

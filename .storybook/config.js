@@ -2,6 +2,8 @@ import { configure, addDecorator, addParameters } from '@storybook/react';
 import { withA11y } from '@storybook/addon-a11y';
 import { create } from '@storybook/theming';
 
+import './scss/ui/index.scss';
+
 const req = require.context('../ui/', true, /\.stories\.js$/);
 
 function loadStories() {

@@ -37,7 +37,7 @@ module.exports = async ({ config, mode }) => {
         },
         // Reads Sass vars from files or inlined in the options property
         // needed to reset the asset paths for webpack to load them, as we
-        //  assume we're loading from the assets folder with a relitive path
+        // assume we're loading from the assets folder with a relative path
         // from the compile css monolith to the assets, like fonts
         {
           loader: '@epegzz/sass-vars-loader',

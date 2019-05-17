@@ -101,7 +101,7 @@ export let examples = [
   },
   {
     id: 'checkbox-group',
-    label: 'Checkbox',
+    label: 'Checkbox Group',
     element: (
       <Fieldset label="Form Element Legend">
         <Checkbox label="Checkbox Label" />
@@ -111,7 +111,7 @@ export let examples = [
   },
   {
     id: 'checkbox-group-required',
-    label: 'Checkbox',
+    label: 'Checkbox Group - Required',
     element: (
       <Fieldset label="Form Element Legend" isRequired>
         <Checkbox label="Checkbox Label" />
@@ -121,7 +121,7 @@ export let examples = [
   },
   {
     id: 'checkbox-group-required-help-text',
-    label: 'Checkbox',
+    label: 'Checkbox Group - Required with help text icon',
     element: (
       <Fieldset
         id="fieldset-with-help-text"

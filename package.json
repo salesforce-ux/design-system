@@ -217,5 +217,14 @@
   "@std/esm": {
     "cjs": true,
     "esm": "js"
+  },
+  "lwc": {
+    "modules": {
+      "@salesforce/slds/button": "node_modules/@salesforce-ux/design-system/ui/modules/button/base/index.css",
+      "@salesforce/slds/buttonIcon": "node_modules/@salesforce-ux/design-system/ui/modules/button-icon/base/index.css",
+      "@salesforce/slds/card": "node_modules/@salesforce-ux/design-system/ui/modules/card/base/index.css",
+      "@salesforce/slds/common": "node_modules/@salesforce-ux/design-system/ui/modules/common/index.css",
+      "@salesforce/slds/icon": "node_modules/@salesforce-ux/design-system/ui/modules/icon/base/index.css"
+    }
   }
 }

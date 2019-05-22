@@ -115,7 +115,7 @@ export let examples = [
   },
   {
     id: 'multi-attachments',
-    label: '< 3 file attachments',
+    label: 'Less than 3 file attachments',
     element: (
       <ul className="slds-grid slds-grid_pull-padded">
         <li className="slds-p-horizontal_xx-small slds-size_1-of-2 slds-medium-size_1-of-3">
@@ -136,7 +136,7 @@ export let examples = [
   },
   {
     id: 'multi-attachments-overflow',
-    label: '> 3 file attachments',
+    label: 'Greater than 3 file attachments',
     element: (
       <ul className="slds-grid slds-grid_pull-padded">
         <li className="slds-p-horizontal_xx-small slds-size_1-of-2 slds-medium-size_1-of-3">

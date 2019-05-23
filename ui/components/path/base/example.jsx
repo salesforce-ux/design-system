@@ -1,6 +1,7 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 import React, { Component, Fragment } from 'react';
+import MobileFrame from '../../../../shared/components/MobileFrame';
 import Card, { CardBody } from '../../cards/';
 
 import { Tooltip } from '../../tooltips/base/example';
@@ -499,5 +500,14 @@ export const states = [
     id: 'small-coaching',
     label: 'Small viewport',
     element: <PathSmall />
+  },
+  {
+    id: 'mobile-default',
+    label: 'Mobile: default',
+    element: (
+      <MobileFrame>
+        <PathBase />
+      </MobileFrame>
+    )
   }
 ];

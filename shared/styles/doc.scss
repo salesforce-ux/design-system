@@ -17,6 +17,15 @@ $light-gray-border-color: #f2f2f2;
   transform: translate3d(0, 0, 0);
 }
 
+.docs-mobile_iframe {
+  border: none;
+  width: 100%;
+}
+
+.docs-mobile_iframe + .demo-content {
+  display: none;
+}
+
 .docs-codeblock-example,
 .docs-codeblock-source__code {
   padding: 1rem;

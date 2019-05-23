@@ -156,7 +156,7 @@ export const AppLauncherTile = props => (
     <div className="slds-app-launcher__tile-body">
       <a href="javascript:void(0);">{props.label}</a>
       <p>
-        {props.description} {' '}
+        {props.description}{' '}
         {props.hasTooltip && (
           <button
             aria-describedby={`help-${props.index}`}
@@ -371,6 +371,21 @@ export let states = [
         />
         <div className="slds-backdrop slds-backdrop_open" />
       </div>
+    )
+  },
+  {
+    id: 'tooltip',
+    label: 'Tooltip',
+    element: (
+      <AppLauncherTile
+        figureClass="slds-icon-custom-27"
+        objectInitials="SC"
+        label="Sales Cloud"
+        description="The primary internal Salesforce org. Used to run our online sales business..."
+        hasTooltip
+        tooltipText="The primary internal Salesforce org. Used to run our online sales business and manage accounts."
+        index="x"
+      />
     )
   }
 ];

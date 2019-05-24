@@ -5,21 +5,19 @@ import { getDisplayElementById } from '../../shared/helpers';
 import * as ActivityTimelineExamples from './base/example';
 import { ActivityTimeline } from './base/example';
 
-<div className="lead doc">
+<div className="doc lead">
   The activity timeline displays each of the user’s upcoming, current, and past activities.
 </div>
 
-<CodeView>
-  {ActivityTimelineExamples.default}
-</CodeView>
+## About Activity Timeline
 
 Each Activity timeline item receives its width from the parent list. It can consume the full width of the main page area or be placed in the smaller right sidebar.
 
-<Blockquote type="a11y" header="Accessibility Note">
-  Text describing the type of timeline item is placed in a <code className="doc">span</code>. It is the first element in the timeline item and should be hidden with the <code className="doc">slds-assistive-text</code> class. The <code className="doc">SVG</code> image does not need the <code className="doc">slds-assistive-text</code> class.
-</Blockquote>
+### Accessibility
 
-### Notable attributes
+Text describing the type of timeline item is placed in a <code className="doc">span</code>. It is the first element in the timeline item and should be hidden with the <code className="doc">slds-assistive-text</code> class. The <code className="doc">SVG</code> image does not need the <code className="doc">slds-assistive-text</code> class.
+
+#### Markup
 
 **Button:**
 
@@ -31,9 +29,16 @@ Each Activity timeline item receives its width from the parent list. It can cons
 
 - <code className="doc">aria-hidden</code> indicates if the details section is open or closed, and if set to <code className="doc">true</code>, assistive technology hides the details section.
 
-### Keyboard navigation
+#### Keyboard Interactions
 
 - The button should behave as a normal button. The user should be able to tab to focus it and press enter/space to activate it.
+
+
+## Base
+
+<CodeView>
+  {ActivityTimelineExamples.default}
+</CodeView>
 
 ## States
 

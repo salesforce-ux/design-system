@@ -10,17 +10,18 @@ import * as Base from './base/example';
 </div>
 
 ## About Rich Text Editor
+
 At a high-level, the buttons in Rich Text Editor (RTE) are organized into four groupings: “format text”, “format body”, “insert content”, and “clear formatting”.
 
-The “clear formatting” button always stays at the end of the buttons set, regardless of which rich text editor variant is used. It should always stand by itself.
+The "clear formatting” button always stays at the end of the buttons set, regardless of which rich text editor variant is used. It should always stand by itself.
 
 On smaller screen sizes, the select dropdowns for Font and Size in the toolbar can overlap outside of the container. To adjust the widths of the dropdowns, apply the class `slds-region_narrow` to the outermost `div` of the rich text editor.
 
 A label may be used to further describe the purpose of a Rich Text Editor. To add a label, place a `<span>` element with the class `slds-form-element__label`, right before the `slds-form-element__control` element.
 
-<Blockquote type="a11y" header="Accessibility Note">
-  Ensure that there is a single tab key stop for the button groups in the toolbar, and that left and right arrows are used to navigate through each button.
-</Blockquote>
+### Accessibility
+
+Ensure that there is a single tab key stop for the button groups in the toolbar, and that left and right arrows are used to navigate through each button.
 
 ## Base
 

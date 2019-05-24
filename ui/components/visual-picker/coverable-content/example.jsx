@@ -179,6 +179,34 @@ export let states = [
 
 export let examples = [
   {
+    id: 'base_large',
+    label: 'large base',
+    element: (
+      <Fieldset>
+        <Legend>Select an app</Legend>
+        <FormElementControl>
+          <VisualPicker
+            type="radio"
+            icon
+            sprite="utility"
+            symbol="connected_apps"
+            label={<Option label="Connected App" />}
+            size="large"
+          />
+          <VisualPicker
+            type="radio"
+            disabled
+            icon
+            sprite="utility"
+            symbol="custom_apps"
+            label={<Option label="Custom App" />}
+            size="large"
+          />
+        </FormElementControl>
+      </Fieldset>
+    )
+  },
+  {
     id: 'checkbox-group',
     label: 'Checkbox group',
     element: (
@@ -208,6 +236,41 @@ export let examples = [
             symbol="orders"
             label={<Option label="Orders" />}
             size="medium"
+          />
+        </FormElementControl>
+      </Fieldset>
+    )
+  },
+  {
+    id: 'checkbox-group_large',
+    label: 'Large checkbox group',
+    element: (
+      <Fieldset>
+        <Legend>Add the following object(s)</Legend>
+        <FormElementControl>
+          <VisualPicker
+            type="checkbox"
+            icon
+            sprite="standard"
+            symbol="account"
+            label={<Option label="Account" />}
+            size="large"
+          />
+          <VisualPicker
+            type="checkbox"
+            icon
+            sprite="standard"
+            symbol="lead"
+            label={<Option label="Lead" />}
+            size="large"
+          />
+          <VisualPicker
+            type="checkbox"
+            icon
+            sprite="standard"
+            symbol="orders"
+            label={<Option label="Orders" />}
+            size="large"
           />
         </FormElementControl>
       </Fieldset>

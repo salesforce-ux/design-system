@@ -12,6 +12,26 @@ import style from './docs/index.scss';
   A progress indicator component communicates to the user the progress of a particular process.
 </div>
 
+## About Progress Indicator
+
+### Implementation Requirements
+
+The <code className="doc">.slds-progress-bar</code> accepts a range from 0% to 100%, and this percentage should be applied with inline styling to the <code className="doc">div</code> with class <code className="doc">slds-progress-bar__value</code> using JavaScript. If implementing a horizontal progress indicator, set the width, otherwise set the height for vertical progress indicators.
+
+### Accessibility
+
+As the percentage of completion changes, be sure to update the <code className="doc">aria-valuenow</code> property on the `<div>` with `class="slds-progress-bar"`, as well as the `slds-assistive-text` `<span>`.
+
+<CodeBlock toggleCode={false}>
+  <div className="slds-progress-bar slds-progress-bar_x-small" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" role="progressbar">
+    <span className="slds-progress-bar__value" style={{width:'50%'}}>
+      <span className="slds-assistive-text">Progress: 50%</span>
+    </span>
+  </div>
+</CodeBlock>
+
+## Base
+
 <Example title="Progress Indicator Base Horizontal">
   <CodeView>
     <BaseProgress value="0">
@@ -23,24 +43,6 @@ import style from './docs/index.scss';
     </BaseProgress>
   </CodeView>
 </Example>
-
-## Implementation Requirements
-
-<Blockquote type="note" header="JavaScript Requirements">
-  The <code className="doc">.slds-progress-bar</code> accepts a range from 0% to 100%, and this percentage should be applied with inline styling to the <code className="doc">div</code> with class <code className="doc">slds-progress-bar__value</code> using JavaScript. If implementing a horizontal progress indicator, set the width, otherwise set the height for vertical progress indicators.
-</Blockquote>
-
-<Blockquote type="a11y" header="Accessibility Requirements">
-  As the percentage of completion changes, be sure to update the <code className="doc">aria-valuenow</code> property on the `<div>` with `class="slds-progress-bar"`, as well as the `slds-assistive-text` `<span>`.
-</Blockquote>
-
-<CodeBlock toggleCode={false}>
-  <div className="slds-progress-bar slds-progress-bar_x-small" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" role="progressbar">
-    <span className="slds-progress-bar__value" style={{width:'50%'}}>
-      <span className="slds-assistive-text">Progress: 50%</span>
-    </span>
-  </div>
-</CodeBlock>
 
 ## Horizontal
 

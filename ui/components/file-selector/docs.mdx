@@ -13,6 +13,13 @@ import * as Integrated from './integrated/example';
 
 ## About File Selector
 
+### Accessibility
+
+When implementing this component, pay special attention to the following:
+
+#### Markup
+- `aria-labelledby` is placed on the HTML `input` to form an "Accessible Label" from 2 seperate visible text labels, by referencing their `id` attributes
+
 ## Base
 <CodeView>
   {Base.default}
@@ -88,10 +95,3 @@ Use when an entire container should be droppable. The container should have a vi
 <CodeView>
   {getDisplayElementById(Integrated.states, 'integrated-file-selector-dragover-error')}
 </CodeView>
-
-## Accessibility
-
-When implementing this component, pay special attention to the following:
-
-### Notable attributes
-  - `aria-labelledby` is placed on the HTML `input` to form an "Accessible Label" from 2 seperate visible text labels, by referencing their `id` attributes

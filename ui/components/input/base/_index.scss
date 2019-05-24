@@ -19,6 +19,10 @@
   line-height: $height-input;
   min-height: calc(#{$height-input} + (#{$border-width-thin} * 2)); // For IE
 
+  @include touch-device {
+    @include border-box-line-height($height-tappable);
+  }
+
   /**
    * @selector [readonly]
    * @restrict .slds-input
@@ -297,8 +301,7 @@
  * @restrict button
  */
 .slds-input__button_decrement {
-  position: absolute;
-  bottom: 0.25rem;
+  @include vertical-center;
   left: 0.75rem;
 }
 
@@ -309,7 +312,6 @@
  * @restrict button
  */
 .slds-input__button_increment {
-  position: absolute;
-  bottom: 0.25rem;
+  @include vertical-center;
   right: 0.75rem;
 }

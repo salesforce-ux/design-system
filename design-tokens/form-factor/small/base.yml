@@ -7,4 +7,3 @@ imports:
 - ./font-size.yml
 - ./font-weight.yml
 - ./line-height.yml
-- ./sizing.yml

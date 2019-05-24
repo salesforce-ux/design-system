@@ -5,56 +5,59 @@ import * as InfoOnly from './info-only/example';
 import Example from '../../../shared/components/Example';
 import CodeView from '../../../shared/components/CodeView';
 import { getDisplayElementById } from '../../shared/helpers';
-import style from './docs/index.scss';
 
 <div className="doc lead">
   A Welcome Mat provides a series of unordered items a user can click to learn about a thematic topic.
 </div>
 
+## About Welcome Mat
+
+- Welcome Mat tiles may trigger walkthroughs, modals, videos, or navigate users to specific URLs.
+- The Welcome Mat consists of two sections, the informational left pane and the actionable right pane.
+- The left pane should be used to educate users as to the theme of the content displayed in the right pane.
+- Icon choices, colors, and tile content can be customized to fit your experience.
+
+## Base
+
 <Example title="Welcome Mat Base">
-  <CodeView>
+  <CodeView isViewport style={{ height: '700px' }}>
     <WelcomeMat.Context>
       {WelcomeMat.default}
     </WelcomeMat.Context>
   </CodeView>
 </Example>
 
-## Overview
+## Examples
 
-* Welcome Mat tiles may trigger walkthroughs, modals, videos, or navigate users to specific URLs.
-* The Welcome Mat consists of two sections, the informational left pane and the actionable right pane.
-* The left pane should be used to educate users as to the theme of the content displayed in the right pane.
-* Icon choices, colors, and tile content can be customized to fit your experience.
-
-## With Completed Steps
+### With Completed Steps
 
 As users complete items in the list, the list updates to show as completed.
 
 As tiles are completed, they move to the bottom of the list, and get a modifier class of `slds-welcome-mat__tile_complete`.
 
 <Example title="Welcome Mat Partially Completed Steps">
-  <CodeView>
+  <CodeView isViewport style={{ height: '700px' }}>
     <WelcomeMat.Context>
       {getDisplayElementById(WelcomeMat.examples, "with-completed-tiles")}
     </WelcomeMat.Context>
   </CodeView>
 </Example>
 
-## Trailhead Connected
+### Trailhead Connected
 
 The Trailhead Connected variant should only be used when users can achieve a badge in Trailhead for completing all steps in the current Welcome Mat.
 
 Only Trailhead connected mats may have the Trailhead font for the header.
 
 <Example title="Welcome Mat Trailhead">
-  <CodeView>
+  <CodeView isViewport style={{ height: '700px' }}>
     <WelcomeMat.Context>
       {WelcomeMatTrailhead.default}
     </WelcomeMat.Context>
   </CodeView>
 </Example>
 
-## Trailhead Connected - Complete
+### Trailhead Connected - Complete
 
 When all tiles on a Trailhead Connected Welcome Mat are completed, users should be presented with a message and link to view their new badge on their Trailblazer profile page.
 
@@ -63,31 +66,31 @@ When a class of `slds-welcome-mat__info-progress_complete` is added to the `.sld
 Additionally, the progress indicator should be replaced with a button to view the badge on the user's Trailblazer profile page.
 
 <Example title="Welcome Mat Trailhead Complete">
-  <CodeView>
+  <CodeView isViewport style={{ height: '700px' }}>
     <WelcomeMat.Context>
       {getDisplayElementById(WelcomeMatTrailhead.examples, "trailhead-complete")}
     </WelcomeMat.Context>
   </CodeView>
 </Example>
 
-## Info-only
+### Info-only
 In the event your displayed steps are informational rather than actionable, you can set the tiles to "info only" mode. In this variation, the `<a>` tags are removed from the tiles. The tiles also lose their button appearance, removing borders and shadows.
 
 The tile container background changes from gray to white, which is done by applying the modifier class of `slds-welcome-mat__tiles_info-only` to the `slds-welcome-mat__tiles` element. Since the tiles aren't actionable, also apply the modifier class of `slds-welcome-mat__tile-info-only` to each `slds-welcome-mat__tile` element.
 
 <Example title="Welcome Mat with only informational content">
-  <CodeView>
+  <CodeView isViewport style={{ height: '700px' }}>
     <WelcomeMat.Context>
       {InfoOnly.default}
     </WelcomeMat.Context>
   </CodeView>
 </Example>
 
-## Splash
+### Splash
 The Splash variant is a singular interstitial modal. It removes the actionable/content column and allows the background image to span the full-width. Make sure that the areas of your background image behind your text provide enough contrast to ensure accessibility.
 
 <Example title="Splash">
-  <CodeView>
+  <CodeView isViewport style={{ height: '700px' }}>
     <WelcomeMat.Context>
       {Splash.default}
     </WelcomeMat.Context>

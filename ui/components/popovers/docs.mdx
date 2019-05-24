@@ -16,10 +16,6 @@ import { getDisplayElementById } from '../../shared/helpers';
   A popover is a non-modal dialog. The component should be paired with a clickable trigger element and contain at least one focusable element.
 </div>
 
-<CodeView>
-  {PopoverExamples.default}
-</CodeView>
-
 ## About Popovers
 
 A popover is used to display contextual information to the user.
@@ -47,6 +43,12 @@ This is due to the focus moving and trapping nature of non-modal dialogs. You **
   - Apply the `aria-labelledby` attribute to the `dialog` element and set the value to be the ID of the main Heading element in the Popover (if it provides a good and meaningful title to the `dialog`)
   - If no Heading element is present, use the `aria-label` attribute and set the value to be a meaningful title of the `dialog`
 - The `dialog` should be described where possible. This can be achieved by applying the `aria-describedby` attribute to the `dialog` element and set the value to be the id of the Popover body
+
+## Base
+
+<CodeView>
+  {PopoverExamples.default}
+</CodeView>
 
 ## With Header
 
@@ -184,7 +186,7 @@ This is due to the focus moving and trapping nature of non-modal dialogs. You **
   {getDisplayElementById(ErrorExamples.examples, 'with-footer')}
 </CodeView>
 
-### Warining
+### Warning
 
 <CodeView>
   {WarningExamples.default}

@@ -12,7 +12,7 @@ import { getDisplayElementById } from '../../shared/helpers';
   {InputExamples.default}
 </CodeView>
 
-## About inputs
+## About Inputs
 
 You can style the HTML `<input>` element to align with the Salesforce brand
 by using the `.slds-input` class on the `<input>` element.
@@ -54,37 +54,39 @@ The reason we do this is to create a better association between the input and th
 
 By only using the traditional `label[for]` method, the fixed text is never read out in the context of editing the input value. With using the `aria-labelledby` attribute we can create a better label with all the visual labels associated with it, in a relevant order, that is read by assistive technology when the user needs it; when they're editing the value.
 
-### States
+## States
 
-#### Required
+### Required
 
 <CodeView>
   {getDisplayElementById(InputExamples.states, 'input-required')}
 </CodeView>
 
-#### Disabled
+### Disabled
 
 <CodeView>
   {getDisplayElementById(InputExamples.states, 'input-disabled')}
 </CodeView>
 
-#### Error
+### Error
 
 <CodeView>
   {getDisplayElementById(InputExamples.states, 'input-error')}
 </CodeView>
 
-#### Error with icon
+### Error with icon
 
 <CodeView>
   {getDisplayElementById(InputExamples.states, 'input-error-icon')}
 </CodeView>
 
-#### Read Only
+### Read Only
 
 <CodeView>
   {getDisplayElementById(InputExamples.states, 'read-only')}
 </CodeView>
+
+## Examples
 
 ### With Icons
 

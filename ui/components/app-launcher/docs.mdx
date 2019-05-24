@@ -3,28 +3,24 @@ import CodeBlock from '../../../shared/components/CodeBlock';
 import Example from '../../../shared/components/Example';
 import Blockquote from '../../../shared/components/Blockquote';
 import { AppLauncherModal, AppLauncherTile, appTiles, appTilesGrabbed, appTilesMoved, appTilesDropped, appTilesSearch, itemTiles, searchItemTiles } from './base/example'
-import style from './docs/index.scss';
+import * as AppLauncherExamples from './base/example';
+import { getDisplayElementById } from '../../shared/helpers';
 
 <div className="doc lead">
   The App Launcher allows the user to quickly access all the apps and functionality within their organization.
 </div>
 
+## About App Launcher
+
 The App Launcher is a [modal dialog](/components/modals) which contains 2 sections of information. The top section is a list of all the applications installed in the organization, and the second section is the list of items in that organization.
 
 The 2 sections are implemented as [Expandable Sections](/components/expandable-section/) and can be expanded or collapsed. Applications and Items are also searchable within the modal via the search input in the modal header.
 
-<Example title="App Launcher base">
-  <CodeView>
-    <div className="demo-only" style={{ height: '800px' }}>
-      <AppLauncherModal
-        appTiles={appTiles}
-        dragDropLiveRegion=""
-        itemTiles={itemTiles}
-      />
-      <div className="slds-backdrop slds-backdrop_open" />
-    </div>
-  </CodeView>
-</Example>
+## Base
+
+<CodeView isViewport style={{ height: '800px' }}>
+  {AppLauncherExamples.default}
+</CodeView>
 
 ## Description overflow
 
@@ -36,21 +32,9 @@ When the tile description is too long to fit on 2 lines, a "more" `button` is sh
 
 On hover or focus, the more `button` will display the full desscription using a [Tooltip](/components/tooltips)
 
-<Example title="App Launcher tile tooltip">
-  <CodeView>
-    <section className="demo-only slds-app-launcher" style={{ width: '360px', height: '135px' }}>
-      <AppLauncherTile
-        figureClass="slds-icon-custom-27"
-        objectInitials="SC"
-        label="Sales Cloud"
-        description="The primary internal Salesforce org. Used to run our online sales business..."
-        hasTooltip
-        tooltipText="The primary internal Salesforce org. Used to run our online sales business and manage accounts."
-        index="x"
-      />
-    </section>
-  </CodeView>
-</Example>
+<CodeView style={{ width: '360px', height: '135px' }}>
+  {getDisplayElementById(AppLauncherExamples.states, 'tooltip')}
+</CodeView>
 
 ## Reordering tiles via drag and drop
 
@@ -64,68 +48,30 @@ App tiles can be re-ordered via mouse drag and drop or with the keyboard via the
 
 When a tile is grabbed add the class name of `slds-is-grabbed` to the tile class list. When initiating the grab via the stateful button, be sure to set `aria-pressed="true"` on the button. Also be sure to update the contents of the live region to communicate what was grabbed, its current position and how to move the item. Something like: _"Sales Cloud: current position 1 of 6. Use the up and down arrows to move this app"_
 
-<Example title="App Launcher tile grabbed">
-  <CodeView>
-    <div className="demo-only" style={{ height: '800px' }}>
-      <AppLauncherModal
-        appTiles={appTilesGrabbed}
-        dragDropLiveRegion="Sales Cloud: current position 1 of 6. Use the up and down arrows to move this app"
-        grabbed
-        itemTiles={itemTiles}
-      />
-      <div className="slds-backdrop slds-backdrop_open" />
-    </div>
-  </CodeView>
-</Example>
+<CodeView style={{ height: '800px' }}>
+  {getDisplayElementById(AppLauncherExamples.states, 'grabbed')}
+</CodeView>
 
 ### Tile moved in list
 
 When the tile is moved in the list using a keyboard, update the live region for every move to indicate its new position to the user. Something like: _"Sales Cloud: new position 3 of 6."_
 
-<Example title="App Launcher tile moved">
-  <CodeView>
-    <div className="demo-only" style={{ height: '800px' }}>
-      <AppLauncherModal
-        appTiles={appTilesMoved}
-        dragDropLiveRegion="Sales Cloud: new position 3 of 6."
-        itemTiles={itemTiles}
-      />
-      <div className="slds-backdrop slds-backdrop_open" />
-    </div>
-  </CodeView>
-</Example>
+<CodeView style={{ height: '800px' }}>
+  {getDisplayElementById(AppLauncherExamples.states, 'moved')}
+</CodeView>
 
 ### Tile dropped
 
 Finally, when a tile is dropped into its final position, reset `aria-pressed` to be `false` on the stateful button, and update the live region to inform the user of the items final position. e.g. _"Sales Cloud: final position 4 of 6."_
 
-<Example title="App Launcher tile dropped">
-  <CodeView>
-    <div className="demo-only" style={{ height: '800px' }}>
-      <AppLauncherModal
-        appTiles={appTilesDropped}
-        dragDropLiveRegion="Sales Cloud: final position 4 of 6."
-        itemTiles={itemTiles}
-      />
-      <div className="slds-backdrop slds-backdrop_open" />
-    </div>
-  </CodeView>
-</Example>
+<CodeView style={{ height: '800px' }}>
+  {getDisplayElementById(AppLauncherExamples.states, 'dropped')}
+</CodeView>
 
 ## Searching
 
 When using the search input at the top of the modal, the list of applications and items filters as the user types. The remaining items on display have the matching search term highlighted with the use of the `<mark />` element wrapping the matching term. This creates the visual highlight around the term.
 
-<Example title="App Launcher search">
-  <CodeView>
-    <div className="demo-only" style={{ height: '800px' }}>
-      <AppLauncherModal
-        appTiles={appTilesSearch}
-        dragDropLiveRegion=""
-        itemTiles={searchItemTiles}
-        searchTerm="sales"
-      />
-      <div className="slds-backdrop slds-backdrop_open" />
-    </div>
-  </CodeView>
-</Example>
+<CodeView style={{ height: '800px' }}>
+  {getDisplayElementById(AppLauncherExamples.states, 'search')}
+</CodeView>

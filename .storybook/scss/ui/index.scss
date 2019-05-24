@@ -1,7 +1,8 @@
 /* overriding the story iframe showcase styles to accommodate Touch devices */
 
+html { background: transparent !important; }
+
 .sb-show-main {
-  background: white;
   padding: 2rem;
   min-height: 100vh;
 

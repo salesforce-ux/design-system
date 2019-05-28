@@ -31,27 +31,13 @@ The Card component should only have one shadow boundary that contains the header
 <CodeBlock toggleCode={false}>
   <lightning-card>
   #shadow-root
-    <Card title="Card Title" hasActions shadow={false}>
+    <Card title="Card Title" hasActions hasPadding={false} shadow={false}>
       <slot />
     </Card>
   </lightning-card>
 </CodeBlock>
 
 ## Implementation Guidelines
-
-### Card Attribute Overview
-
-|Attribute|Type|Class|Restriction|
-|---------|-----|-----|-----------|
-|`actions`|`slot`|
-|`children`|`slot`|
-|`footer`|`slot`|
-|`isBare`|`boolean`|`lwc-card_bare`|`lwc-card`
-|`hasBoundary`|`boolean`|`lwc-card_boundary`|`lwc-card`
-|`hasFullBleed`|`boolean`|`lwc-card__body_full-bleed`|`lwc-card__body`
-|`title`|`string`|
-|`titleHref`|`string`|
-|`iconName`|`string`|
 
 ## Examples
 
@@ -99,11 +85,11 @@ The Card header can have an icon, a title and actions. The icon and title are lo
 
 ### Body
 
-The card body accommodates any layout or design, as long as its a grouping of related information.
+The card body accommodates any layout or design, as long as its a grouping of related information. By default, the Card's body bleeds to the edges of the Card's boundary.
 
-#### Full Bleed
+#### Padded
 
-- `lwc-card__body_full-bleed` — Apply to the Card body when the component requires the content of the body to bleed to the edges of the Card's boundary.
+- `lwc-card__body_padded` — Apply to the Card body when the component requires the content of the body to have padding and not to the edges of the Card's boundary.
 
 ##### Usage
 

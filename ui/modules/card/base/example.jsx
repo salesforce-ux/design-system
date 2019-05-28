@@ -55,7 +55,7 @@ export const examples = [
     id: 'full-bleed',
     label: 'Full-bleed',
     element: (
-      <Card title="Card Title" hasFullBleed>
+      <Card title="Card Title" hasPadding={false}>
         <img
           src="assets/images/themes/oneSalesforce/banner-user-default.png"
           alt="Image of mountains and a hot air ballon"

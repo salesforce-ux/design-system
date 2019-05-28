@@ -55,18 +55,22 @@ CardHeader.propTypes = {
 };
 
 export const CardBody = props => {
-  const { children, hasFullBleed } = props;
+  const { children, hasPadding } = props;
   const computedClassNames = classNames(
     'lwc-card__body',
-    hasFullBleed && 'lwc-card__body_full-bleed'
+    hasPadding && 'lwc-card__body_padded'
   );
 
   return <div className={computedClassNames}>{children}</div>;
 };
 
+CardBody.defaultProps = {
+  hasPadding: true
+};
+
 CardBody.propTypes = {
   children: PropTypes.node,
-  hasFullBleed: PropTypes.bool
+  hasPadding: PropTypes.bool
 };
 
 export const CardFooter = props => {
@@ -104,11 +108,11 @@ class Card extends Component {
   }
 
   renderBody() {
-    const { children, hasFullBleed } = this.props;
+    const { children, hasPadding } = this.props;
     if (!this.props.children) return;
 
     return (
-      <CardBody hasFullBleed={hasFullBleed} key={uniqueId('card-body-')}>
+      <CardBody hasPadding={hasPadding} key={uniqueId('card-body-')}>
         {children}
       </CardBody>
     );
@@ -176,7 +180,7 @@ Card.propTypes = {
   titleHref: PropTypes.string,
   iconName: PropTypes.string,
   hasActions: PropTypes.bool,
-  hasFullBleed: PropTypes.bool,
+  hasPadding: PropTypes.bool,
   hasBoundary: PropTypes.bool,
   isBare: PropTypes.bool,
   shadow: PropTypes.bool

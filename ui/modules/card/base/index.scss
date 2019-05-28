@@ -105,7 +105,7 @@
 .lwc-card__body {
   margin-top: var(--lwc-c-card-body-spacing-vertical, var(--var-spacing-vertical-small, $var-spacing-vertical-small));
   margin-bottom: var(--lwc-c-card-body-spacing-vertical, var(--var-spacing-vertical-small, $var-spacing-vertical-small));
-  padding: var(--lwc-c-card-body-spacing-vertical, 0) var(--lwc-c-card-body-spacing-horizontal, var(--var-spacing-horizontal-medium, $var-spacing-horizontal-medium));
+  padding: var(--lwc-c-card-body-spacing-vertical, 0) var(--lwc-c-card-body-spacing-horizontal, 0);
 }
 
 .lwc-card__body:empty {
@@ -113,14 +113,14 @@
 }
 
 /**
- * @name full-bleed
- * @summary Sets card body to have content bleed to edges
- * @selector .lwc-card__body_full-bleed
+ * @name padded
+ * @summary Sets card body to have padding so content doesn't bleed to edges
+ * @selector .lwc-card__body_padded
  * @restrict .lwc-card__body
  * @modifier
  */
-.lwc-card__body_full-bleed {
-  --lwc-c-card-body-spacing-horizontal: 0;
+.lwc-card__body_padded {
+  --lwc-c-card-body-spacing-horizontal: var(--var-spacing-horizontal-medium, $var-spacing-horizontal-medium);
 }
 
 /**

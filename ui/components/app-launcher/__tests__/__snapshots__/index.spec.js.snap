@@ -193,7 +193,6 @@ exports[`renders a default app launcher 1`] = `
                     <p>
                       The primary internal Salesforce org. Used to run our online sales business...
                        
-                       
                       <button
                         aria-describedby="help-0"
                         className="slds-button slds-button_reset slds-text-link"
@@ -278,7 +277,6 @@ exports[`renders a default app launcher 1`] = `
                     </a>
                     <p>
                       Salesforce Marketing Cloud lets businesses of any size...
-                       
                        
                       <button
                         aria-describedby="help-1"
@@ -365,7 +363,6 @@ exports[`renders a default app launcher 1`] = `
                     <p>
                       Community for managing employee benefits and time off.
                        
-                       
                     </p>
                     <div
                       className="slds-popover slds-popover_tooltip slds-nubbin_top slds-hide"
@@ -444,7 +441,6 @@ exports[`renders a default app launcher 1`] = `
                     </a>
                     <p>
                       Manage your finances across multiple financial platforms...
-                       
                        
                       <button
                         aria-describedby="help-3"
@@ -531,7 +527,6 @@ exports[`renders a default app launcher 1`] = `
                     <p>
                       The key to call center and contact center management is more...
                        
-                       
                       <button
                         aria-describedby="help-4"
                         className="slds-button slds-button_reset slds-text-link"
@@ -616,7 +611,6 @@ exports[`renders a default app launcher 1`] = `
                     </a>
                     <p>
                       Areas of Focus are used to track customer support for your...
-                       
                        
                       <button
                         aria-describedby="help-5"
@@ -965,7 +959,6 @@ exports[`renders a dropped app launcher 1`] = `
                     <p>
                       Salesforce Marketing Cloud lets businesses of any size...
                        
-                       
                       <button
                         aria-describedby="help-0"
                         className="slds-button slds-button_reset slds-text-link"
@@ -1051,7 +1044,6 @@ exports[`renders a dropped app launcher 1`] = `
                     <p>
                       Community for managing employee benefits and time off.
                        
-                       
                     </p>
                     <div
                       className="slds-popover slds-popover_tooltip slds-nubbin_top slds-hide"
@@ -1130,7 +1122,6 @@ exports[`renders a dropped app launcher 1`] = `
                     </a>
                     <p>
                       Manage your finances across multiple financial platforms...
-                       
                        
                       <button
                         aria-describedby="help-2"
@@ -1217,7 +1208,6 @@ exports[`renders a dropped app launcher 1`] = `
                     <p>
                       The primary internal Salesforce org. Used to run our online sales business...
                        
-                       
                       <button
                         aria-describedby="help-3"
                         className="slds-button slds-button_reset slds-text-link"
@@ -1303,7 +1293,6 @@ exports[`renders a dropped app launcher 1`] = `
                     <p>
                       The key to call center and contact center management is more...
                        
-                       
                       <button
                         aria-describedby="help-4"
                         className="slds-button slds-button_reset slds-text-link"
@@ -1388,7 +1377,6 @@ exports[`renders a dropped app launcher 1`] = `
                     </a>
                     <p>
                       Areas of Focus are used to track customer support for your...
-                       
                        
                       <button
                         aria-describedby="help-5"
@@ -1737,7 +1725,6 @@ exports[`renders a grabbed app launcher 1`] = `
                     <p>
                       The primary internal Salesforce org. Used to run our online sales business...
                        
-                       
                       <button
                         aria-describedby="help-0"
                         className="slds-button slds-button_reset slds-text-link"
@@ -1822,7 +1809,6 @@ exports[`renders a grabbed app launcher 1`] = `
                     </a>
                     <p>
                       Salesforce Marketing Cloud lets businesses of any size...
-                       
                        
                       <button
                         aria-describedby="help-1"
@@ -1909,7 +1895,6 @@ exports[`renders a grabbed app launcher 1`] = `
                     <p>
                       Community for managing employee benefits and time off.
                        
-                       
                     </p>
                     <div
                       className="slds-popover slds-popover_tooltip slds-nubbin_top slds-hide"
@@ -1988,7 +1973,6 @@ exports[`renders a grabbed app launcher 1`] = `
                     </a>
                     <p>
                       Manage your finances across multiple financial platforms...
-                       
                        
                       <button
                         aria-describedby="help-3"
@@ -2075,7 +2059,6 @@ exports[`renders a grabbed app launcher 1`] = `
                     <p>
                       The key to call center and contact center management is more...
                        
-                       
                       <button
                         aria-describedby="help-4"
                         className="slds-button slds-button_reset slds-text-link"
@@ -2160,7 +2143,6 @@ exports[`renders a grabbed app launcher 1`] = `
                     </a>
                     <p>
                       Areas of Focus are used to track customer support for your...
-                       
                        
                       <button
                         aria-describedby="help-5"
@@ -2509,7 +2491,6 @@ exports[`renders a moved app launcher 1`] = `
                     <p>
                       Salesforce Marketing Cloud lets businesses of any size...
                        
-                       
                       <button
                         aria-describedby="help-0"
                         className="slds-button slds-button_reset slds-text-link"
@@ -2595,7 +2576,6 @@ exports[`renders a moved app launcher 1`] = `
                     <p>
                       Community for managing employee benefits and time off.
                        
-                       
                     </p>
                     <div
                       className="slds-popover slds-popover_tooltip slds-nubbin_top slds-hide"
@@ -2674,7 +2654,6 @@ exports[`renders a moved app launcher 1`] = `
                     </a>
                     <p>
                       The primary internal Salesforce org. Used to run our online sales business...
-                       
                        
                       <button
                         aria-describedby="help-2"
@@ -2761,7 +2740,6 @@ exports[`renders a moved app launcher 1`] = `
                     <p>
                       Manage your finances across multiple financial platforms...
                        
-                       
                       <button
                         aria-describedby="help-3"
                         className="slds-button slds-button_reset slds-text-link"
@@ -2847,7 +2825,6 @@ exports[`renders a moved app launcher 1`] = `
                     <p>
                       The key to call center and contact center management is more...
                        
-                       
                       <button
                         aria-describedby="help-4"
                         className="slds-button slds-button_reset slds-text-link"
@@ -2932,7 +2909,6 @@ exports[`renders a moved app launcher 1`] = `
                     </a>
                     <p>
                       Areas of Focus are used to track customer support for your...
-                       
                        
                       <button
                         aria-describedby="help-5"
@@ -3293,7 +3269,6 @@ exports[`renders a search app launcher 1`] = `
                     <p>
                       The primary internal Salesforce org. Used to run our...
                        
-                       
                       <button
                         aria-describedby="help-0"
                         className="slds-button slds-button_reset slds-text-link"
@@ -3473,7 +3448,6 @@ exports[`renders an app tile with a tooltip 1`] = `
     </a>
     <p>
       The primary internal Salesforce org. Used to run our online sales business...
-       
        
       <button
         aria-describedby="help-x"

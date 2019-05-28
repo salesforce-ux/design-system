@@ -2,6 +2,6 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 import React from 'react';
-import ButtonMenu from './';
+import { ButtonMenu } from './';
 
 export default <ButtonMenu />;

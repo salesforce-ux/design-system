@@ -1,5 +1,11 @@
 <!-- Release notes authoring guidelines: http://keepachangelog.com/ -->
 <!-- On release, add general notes here. In time the legacy relase notes will be add to this -->
+## 2.9.3 - May 24, 2019
+
+## Fix
+
+- Fix `font-size` of `body` to adjust when on a touch-enabled device
+
 ## 2.9.2 - May 7, 2019
 
 ## General

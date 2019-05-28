@@ -4,6 +4,12 @@
 
 <!-- ## [Unreleased] -->
 
+## 2.10.0
+
+### Changed
+
+- Boldened Button labels on touch devices
+
 ## 2.8.0
 
 ### Added

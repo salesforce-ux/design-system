@@ -14,31 +14,22 @@ import style from './docs/index.scss';
   Tabs keeps related content in a single container that is shown and hidden through navigation.
 </div>
 
-<Example title="Tabs Base">
-  <CodeView style={{height: '200px'}}>
-    <TabsDefault />
-  </CodeView>
-</Example>
+## About Tabs
 
 The default tab set style encapsulates everything that is underneath it without enclosing it visually. Because tab sets can be nested, pay close attention to the markup. They are constructed to prevent styles from leaking from parent tab sets into child tab sets.
 
-<Blockquote type="a11y" header="Accessibility Roles">
-  Tabbed UIs have three parts with specific ARIA role requirements:
-  <ul>
-    <li>- The tab list, which should have `role="tablist"`</li>
-    <li>- The tabs in that list, which should each be an `<a role="tab" />` anchor wrapped in a `<li role="presentation" />` list item</li>
-    <li>- The tab panels, which display each tab’s content and should each have `role="tabpanel"`</li>
-  </ul>
-</Blockquote>
+### Implementation
 
-### Expected Markup
+#### Markup
+
 The following markup is crucial for Accessibility
 - Selected tab’s anchor has `aria-selected="true"`, all other tabs’ anchors have `aria-selected="false"`
 - Selected tab’s anchor has `tabindex="0"`, all other tabs have `tabindex="-1"`
 - Each tab’s anchor has an `aria-controls` attribute whose value is the id of the associated `<div role="tabpanel">`
 - Each tab panel has an `aria-labelledby` attribute whose value is the id of its associated `<a role="tab">`
 
-### Expected Keyboard Interactions
+#### Keyboard Interactions
+
 - Arrow keys, when focus is on a selected tab, cycle selection to the next or previous tab
 - Tab key, when focus is before the tab list, moves focus to the selected tab
 - Tab key, when focus is on selected tab, moves focus into the selected tab’s associated tab panel or to the next focusable element on the page if that panel has no focusable elements
@@ -54,6 +45,22 @@ The active tab has two markup requirements:
 Inactive `.slds-tabs_{variant}__content` containers receive `.slds-hide`.
 
 When the user clicks a different tab, move the `.slds-active` class and toggle the `.slds-hide`/`.slds-show` classes.
+
+### Accessibility
+
+Tabbed UIs have three parts with specific ARIA role requirements:
+
+- The tab list, which should have `role="tablist"`
+- The tabs in that list, which should each be an `<a role="tab">` anchor wrapped in a `<li role="presentation">` list item
+- The tab panels, which display each tab’s content and should each have `role="tabpanel"`
+
+## Base
+
+<Example title="Tabs Base">
+  <CodeView style={{height: '200px'}}>
+    <TabsDefault />
+  </CodeView>
+</Example>
 
 ## With Overflow
 
@@ -165,7 +172,7 @@ Unsaved tabs receive a blue asterisk on the tab.
 </CodeView>
 
 <Blockquote header="Additional Tag for Accessibility" type="a11y">
-  In order to inform screen readers of the unsaved state, an `<abbr />` tag is used to render the asterisk. The `title` attribute and `aria-label` should read <b>"Tab Not Saved"</b>.
+  In order to inform screen readers of the unsaved state, an `abbr` tag is used to render the asterisk. The `title` attribute and `aria-label` should read <strong>"Tab Not Saved"</strong>.
 </Blockquote>
 
 <CodeBlock toggleCode={false}>
@@ -195,9 +202,9 @@ Unread tabs receive a red dot on the tab.
 <Blockquote header="Accessibility" type="a11y">
   In order to inform screen readers of new activity in a tab, 2 things should occur.
   <br/><br/>
-  1. The `title` attribute and `aria-label` on the element that displays the red dot should read <b>"New Activity"</b>. This will update the text content of the tab to include the "New Activity" text: "New Activity Chat - Customer".
+  1. The `title` attribute and `aria-label` on the element that displays the red dot should read <strong>"New Activity"</strong>. This will update the text content of the tab to include the "New Activity" text: "New Activity Chat - Customer".
   <br/><br/>
-  2. The hidden live region as described above, should have its content updated to <b>"New Activity in Tab: [Tab Name Here]"</b> to alert the user of new activity in that particular sub tab.
+  2. The hidden live region as described above, should have its content updated to <strong>"New Activity in Tab: [Tab Name Here]"</strong> to alert the user of new activity in that particular sub tab.
 </Blockquote>
 
 <CodeBlock toggleCode={false}>
@@ -235,7 +242,7 @@ In this example we show that something inside the sub tab is about to break a se
 </CodeView>
 
 <Blockquote header="Accessibility" type="a11y">
-  Update the hidden live region with a message that informs the user of the status level, the warning and the offending sub tab <b>[level]: [message] in tab: [tab_name]</b>
+  Update the hidden live region with a message that informs the user of the status level, the warning and the offending sub tab <strong>[level]: [message] in tab: [tab_name]</strong>
 </Blockquote>
 
 <CodeBlock toggleCode={false}>
@@ -269,7 +276,7 @@ In this example we show that something inside the sub tab has broken an SLA agre
 </CodeView>
 
 <Blockquote header="Accessibility" type="a11y">
-  Update the hidden live region with a message that informs the user of the status level, the error or violation and the offending sub tab <b>[level]: [message] in tab: [tab_name]</b>
+  Update the hidden live region with a message that informs the user of the status level, the error or violation and the offending sub tab <strong>[level]: [message] in tab: [tab_name]</strong>
 </Blockquote>
 
 <CodeBlock toggleCode={false}>
@@ -301,7 +308,7 @@ The icon is updated to be the success icon, to give an extra way to communicate 
 </CodeView>
 
 <Blockquote header="Accessibility" type="a11y">
-  Update the hidden live region with a message that informs the user that the status level has been successfully cleared and the sub tab it was cleared from <b>[level]: [message] in tab: [tab_name]</b>
+  Update the hidden live region with a message that informs the user that the status level has been successfully cleared and the sub tab it was cleared from <strong>[level]: [message] in tab: [tab_name]</strong>
 </Blockquote>
 
 <CodeBlock toggleCode={false}>

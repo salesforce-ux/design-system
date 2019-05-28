@@ -8,15 +8,11 @@ import { ExpressionNarrow, ExpressionNarrowGroup } from './filters/example';
 import { Filters, FilterObject, FilterObjectListItem, FiltersFooter } from '../panels/filtering/example';
 import SvgIcon from '../../shared/svg-icon';
 
-<div className="lead doc">
+<div className="doc lead">
   Expression builders help users declaratively construct logical expressions. These expressions can be used when querying for a filtered set of records, creating rules to control when something executes, or any other conditional logic.
 </div>
 
-<Example title="Expression Builder -  Base">
-  <CodeView>
-    <Expression optionSelected="all" resourceIsSelected/>
-  </CodeView>
-</Example>
+## About Expression Builder
 
 The variants scale from lightweight e-commerce style filtering to declarative rule building, and even to advanced formula or SOQL/SQL expressions.
 
@@ -25,9 +21,9 @@ We also include size variants to fit a variety of use cases:
 - Use the narrow version for in-context expression building, enabling users to preview their results.
 - Use the full width version when expression building is a standalone task, perhaps in a modal.
 
-## Accessibility
+### Accessibility
 
-### Markup
+#### Markup
 
 Each row in the expression builder is a `<fieldset>` and is contained in an `<li>` inside of a `<ul>`.
 
@@ -53,9 +49,9 @@ The first child DOM element of the `<fieldset>` should be the `<legend>`, which 
   <legend className="slds-expression__legend"><span>AND</span><span className= "slds-assistive-text">Condition N</span></legend>
 </CodeBlock>
 
-### Focus Management
+#### Focus Management
 
-**Adding**
+**Adding:**
 
 When clicking `Add Condition`:
 
@@ -65,7 +61,7 @@ When clicking `Add Group`:
 
 - Focus should move to the mode combobox in the new group, where "All Conditions Are Met For This Group" should be selected by default
 
-**Deleting**
+**Deleting:**
 
 When "deleting" the only row:
 
@@ -83,7 +79,13 @@ When deleting the last row:
 
 - Use JavaScript to move focus to the first combobox input in the _previous_ row, labeled "Resource" or something similar.
 
-## Default
+## Base
+
+<Example title="Expression Builder -  Base">
+  <CodeView>
+    <Expression optionSelected="all" resourceIsSelected/>
+  </CodeView>
+</Example>
 
 By default, the expression builder starts with one condition. The default option for the mode combobox is "All Conditions Are Met". Until a Resource is selected, the Operator and Value fields, as well as the Delete button, are disabled.
 

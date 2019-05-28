@@ -13,7 +13,7 @@ The tree grid comes with a very specific keyboard interaction model which **must
 
 ### Accessibility
 
-#### Notable attributes
+#### Markup
 
   - `role="treegrid"` should be applied to the `table` element
   - `aria-readonly="true"` should be applied to the `table` element
@@ -25,18 +25,17 @@ The tree grid comes with a very specific keyboard interaction model which **must
   - `tabindex="0"` should be placed on the first `tr` in the grid on load, to make the row focusable
   - Every actionable element in the grid should have `tabindex="-1"` applied to make them not focusable in the grids navigation mode
 
-#### Multi select tree grid
+**Multi select tree grid:**
 
   - `aria-multiselectable="true"` should be placed on the `table` element
   - `aria-selected="false"` should be set by default on all `tr` elements that aren't selected
   - `aria-selected="true"` should be set only on the `tr` elements that are selected
 
-#### Single Select tree grid
+**Single Select tree grid:**
 
   - `aria-selected="true"` should be applied to the `tr` that is selected in the tree grid
 
-
-#### Keyboard interaction
+#### Keyboard Interactions
 
   - Overall keyboard interaction should follow the same keyboard modal as the [Advanced and Inline Edit Data Table](/components/data-tables) with some additions
     - Navigation mode is the default mode. The grid only has a single focusable element at any time and it is either the `tr` or the `td`

@@ -12,6 +12,26 @@ import style from './docs/index.scss';
   A progress indicator component communicates to the user the progress of a particular process.
 </div>
 
+## About Progress Indicator
+
+### Implementation Requirements
+
+The `.slds-progress-bar` accepts a range from 0% to 100%, and this percentage should be applied with inline styling to the `div` with class `slds-progress-bar__value` using JavaScript. If implementing a horizontal progress indicator, set the width, otherwise set the height for vertical progress indicators.
+
+### Accessibility
+
+As the percentage of completion changes, be sure to update the `aria-valuenow` property on the `div` with `class="slds-progress-bar"`, as well as the `slds-assistive-text` `span`.
+
+<CodeBlock toggleCode={false}>
+  <div className="slds-progress-bar slds-progress-bar_x-small" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" role="progressbar">
+    <span className="slds-progress-bar__value" style={{width:'50%'}}>
+      <span className="slds-assistive-text">Progress: 50%</span>
+    </span>
+  </div>
+</CodeBlock>
+
+## Base
+
 <Example title="Progress Indicator Base Horizontal">
   <CodeView>
     <BaseProgress value="0">
@@ -24,31 +44,13 @@ import style from './docs/index.scss';
   </CodeView>
 </Example>
 
-## Implementation Requirements
-
-<Blockquote type="note" header="JavaScript Requirements">
-  The <code className="doc">.slds-progress-bar</code> accepts a range from 0% to 100%, and this percentage should be applied with inline styling to the <code className="doc">div</code> with class <code className="doc">slds-progress-bar__value</code> using JavaScript. If implementing a horizontal progress indicator, set the width, otherwise set the height for vertical progress indicators.
-</Blockquote>
-
-<Blockquote type="a11y" header="Accessibility Requirements">
-  As the percentage of completion changes, be sure to update the <code class="doc">aria-valuenow</code> property on the `<div />` with `class="slds-progress-bar"`, as well as the `slds-assistive-text` `<span />`.
-</Blockquote>
-
-<CodeBlock toggleCode={false}>
-  <div className="slds-progress-bar slds-progress-bar_x-small" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" role="progressbar">
-    <span className="slds-progress-bar__value" style={{width:'50%'}}>
-      <span className="slds-assistive-text">Progress: 50%</span>
-    </span>
-  </div>
-</CodeBlock>
-
 ## Horizontal
 
 ### Active Step
 When a step becomes active, the `<div>` with class `.slds-progress__item` should also get the class `.slds-is-active`.
 
 <Blockquote type="a11y" header="Accessibility Requirements">
-  When a step is active, be sure to append "- Active" to the hidden button text in the `<span />` with class `slds-assistive-text`, such as `Step 1 - Active`.
+  When a step is active, be sure to append "- Active" to the hidden button text in the `span` with class `slds-assistive-text`, such as `Step 1 - Active`.
 </Blockquote>
 
 <Example title="Progress Indicator Active Horizontal">
@@ -67,7 +69,7 @@ When a step becomes active, the `<div>` with class `.slds-progress__item` should
 When the step is completed, the `.slds-is-active` class should be replaced with the class `.slds-is-completed` on `.slds-progress__item`. At that point, the `.slds-progress__item` element will receive a "success" icon, providing feedback that the step has been completed.
 
 <Blockquote type="a11y" header="Accessibility Requirements">
-  When a step is completed, be sure to append "- Completed" to the hidden button text in the `<span />` with class `slds-assistive-text`, such as `Step 2 - Completed`.
+  When a step is completed, be sure to append "- Completed" to the hidden button text in the `span` with class `slds-assistive-text`, such as `Step 2 - Completed`.
 </Blockquote>
 
 <Example title="Progress Indicator Done Horizontal">
@@ -86,7 +88,7 @@ When the step is completed, the `.slds-is-active` class should be replaced with 
 When an error has occurred on a step, the `<div>` with class `.slds-progress__item` should also get the class `.slds-has-error`.
 
 <Blockquote type="a11y" header="Accessibility Requirements">
-  When a step has an error, be sure to append "- Error" to the hidden button text in the `<span />` with class `slds-assistive-text`, such as `Step 3 - Error`.
+  When a step has an error, be sure to append "- Error" to the hidden button text in the `span` with class `slds-assistive-text`, such as `Step 3 - Error`.
 </Blockquote>
 
 <Example title="Progress Indicator Done Horizontal">
@@ -180,7 +182,7 @@ When an error has occurred on a step, the `<div>` with class `.slds-progress__it
 To display a vertical progress indicator, the `<div>` with class `.slds-progress` should also get the class `.slds-progress_vertical`. The vertical progress indicator will take up 100% of the height of its container. The step titles in the vertical variant appear next to the step, instead of in a tooltip.
 
 <Blockquote type="note" header="Implementation Note">
-  The key markup difference between the horizontal and vertical variants is the progress markers. Horizontal progress indicators use `<button />` for each step, whereas Vertical progress indicator steps are not interactive and therefore simply use `<div />`.
+  The key markup difference between the horizontal and vertical variants is the progress markers. Horizontal progress indicators use `button` for each step, whereas Vertical progress indicator steps are not interactive and therefore simply use `div`.
 </Blockquote>
 
 <Example title="Progress Indicator Vertical">

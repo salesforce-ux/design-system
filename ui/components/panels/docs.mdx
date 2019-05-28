@@ -6,11 +6,11 @@ import Panel, {PanelPlayground,Container, Header} from './';
 import {Filters,FiltersFooter,FilterObject} from './filtering/example';
 import SvgIcon from '../../shared/svg-icon';
 
-<div className="lead doc">
+<div className="doc lead">
   A panel is typically used to provide supplemental information or form inputs that relate to your primary canvas.
 </div>
 
-## Base Panel
+## About Panel
 
 A panel is docked to the left/right side of a viewport and is in the document flow of the canvas or main content.
 
@@ -23,6 +23,8 @@ A panel is docked to the left/right side of a viewport and is in the document fl
 Toggling visibility of a Panel will re-flow the main content.
 
 The panel should take up 100% of the height of its parent container. In most cases, that would be the viewport or main stage of your application.
+
+## Base
 
 <Example title="Panel base">
   <CodeView style={{ backgroundColor: '#fafaf9', position: 'relative', height: '600px', overflow: 'hidden' }}>

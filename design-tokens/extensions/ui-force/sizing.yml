@@ -32,4 +32,7 @@ props:
     comment: "Maximum width for action overflow menu so that it's not full-screen for tablet."
   SQUARE_TAPPABLE:
     value: 2.75rem
-    comment: Tap target Size
+    comment: Tap target size for elements that rely on width and height dimensions
+  HEIGHT_TAPPABLE:
+    value: 2.75rem
+    comment: Tap target size for elements that rely on height or line-height

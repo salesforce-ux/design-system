@@ -25,60 +25,59 @@ These are modals that require a linearly directional paradigm of navigation (“
 
 If you're using a Modal for a system alert that the user must acknowledge, consider using a [Prompt](/components/prompt).
 
-## Accessibility
+### Accessibility
 Modals, by definition, trap focus. This means that if a user presses Tab or Shift+Tab while their keyboard focus is in the modal, their focus should stay in and cycle through the modal’s content. Focus shouldn’t return to the underlying page until the user presses the Esc key, presses an explicit “Cancel” or “Close” button in the modal, or performs another action that closes the modal.
 
-**Expected markup:**
+#### Expected markup
 - Modal has `role="dialog"`
 - When the modal is open, everything behind it has HTML attribute `aria-hidden="true"`, so assistive technology won't read out the underlying page. The best way to do this is to give the modal and the page separate wrapper elements and toggle `aria-hidden="true"`/`aria-hidden="false"` on the main page's wrapper depending on whether or not the modal is open.
 - Modal contains an HTML heading
 - Modal has an `aria-labelledby` attribute whose value is the id of the modal’s heading
 
-**Expected keyboard interactions:**
+#### Expected keyboard interactions
 - Esc key closes the modal and moves focus to whatever triggered the modal to open
 - Tab key at bottom of modal cycles focus back to first focusable element at top of modal
 - Shift+Tab keys at top of modal cycle focus back to last focusable element at bottom of modal
 - Enter key submits modal’s form data, if applicable
 
 ## Base
-<CodeView>
+<CodeView isViewport style={{ height: '640px' }}>
 { Base.default }
 </CodeView>
 
 ## Examples
 
 ### Taglines
-<CodeView>
+<CodeView isViewport style={{ height: '640px' }}>
 { getDisplayElementById(Base.examples, 'taglines') }
 </CodeView>
 
 ### Headless
-<CodeView>
+<CodeView isViewport style={{ height: '640px' }}>
 { getDisplayElementById(Base.examples, 'headless') }
 </CodeView>
 
 ### Footless
-<CodeView>
+<CodeView isViewport style={{ height: '640px' }}>
 { getDisplayElementById(Base.examples, 'footless') }
 </CodeView>
 
 ### Directional
-<CodeView>
+<CodeView isViewport style={{ height: '640px' }}>
 { getDisplayElementById(Base.examples, 'directional') }
 </CodeView>
 
 ### Small Modal
-<CodeView>
+<CodeView isViewport style={{ height: '640px' }}>
 { getDisplayElementById(Base.examples, 'small') }
 </CodeView>
 
 ### Medium Modal
-<CodeView>
+<CodeView isViewport style={{ height: '640px' }}>
   { getDisplayElementById(Base.examples, 'medium') }
 </CodeView>
 
-
 ### Large Modal
-<CodeView>
+<CodeView isViewport style={{ height: '640px' }}>
   { getDisplayElementById(Base.examples, 'large') }
 </CodeView>

@@ -18,6 +18,58 @@ import style from './docs/index.scss';
   The global header is the anchor for the Salesforce platform and spans all other parts of the UI. The functionality in the header is applicable across all contexts in the Salesforce ecosystem (internal or 3rd party).
 </div>
 
+## About Global Header
+
+### Structure
+
+The global header is made up of 3 distinct sections, the logo, the global search, and the global actions. Each section is wrapped in a `<div>` with the classname `slds-global-header__item`. The search region gets the modifier class `slds-global-header__item_search`. This class provides particular styling to handle the search box.
+
+<Example title="global header layout">
+  <CodeBlock toggleCode={false}>
+    <header className="slds-global-header_container">
+      <div className="slds-global-header">
+        <div className="slds-global-header__item">...</div>
+        <div className="slds-global-header__item slds-global-header__item_search">...</div>
+        <div className="slds-global-header__item">...</div>
+      </div>
+    </header>
+  </CodeBlock>
+</Example>
+
+In most scenarios, you will want to fixed the global header to the top of the viewport. To achieve this, wrap the global header component in a `<div>` with the classname `slds-global-header_container`.
+
+<Example title="global header container">
+  <CodeBlock toggleCode={false}>
+    <header className="slds-global-header_container">
+      <div className="slds-global-header">
+        ...
+      </div>
+    </header>
+  </CodeBlock>
+</Example>
+
+### Accessibility
+
+For screen reading users, we need to provide a way to navigate over the global header and directly to content regions. For this scenario, we need to provide two links above the global header that provides navigation to landmarks within the app. These links are visually hidden by default but become visible when focused.
+
+<Example title="global header jump links">
+  <CodeBlock toggleCode={false}>
+    <header className="slds-global-header_container">
+      <a href="javascript:void(0);" className="slds-assistive-text slds-assistive-text_focus">
+        Skip to Navigation
+      </a>
+      <a href="javascript:void(0);" className="slds-assistive-text slds-assistive-text_focus">
+        Skip to Main Content
+      </a>
+      <div className="slds-global-header">
+        ...
+      </div>
+    </header>
+  </CodeBlock>
+</Example>
+
+## Base
+
 <Example title="base global header">
   <CodeView style={{ position: 'relative', height: '21.25rem' }}>
     <GlobalHeader
@@ -59,54 +111,6 @@ import style from './docs/index.scss';
       }
     />
   </CodeView>
-</Example>
-
-## Structuring the Global Header
-
-The global header is made up of 3 distinct sections, the logo, the global search, and the global actions. Each section is wrapped in a `<div>` with the classname `slds-global-header__item`. The search region gets the modifier class `slds-global-header__item_search`. This class provides particular styling to handle the search box.
-
-<Example title="global header layout">
-  <CodeBlock toggleCode={false}>
-    <header className="slds-global-header_container">
-      <div className="slds-global-header">
-        <div className="slds-global-header__item">...</div>
-        <div className="slds-global-header__item slds-global-header__item_search">...</div>
-        <div className="slds-global-header__item">...</div>
-      </div>
-    </header>
-  </CodeBlock>
-</Example>
-
-In most scenarios, you will want to fixed the global header to the top of the viewport. To achieve this, wrap the global header component in a `<div>` with the classname `slds-global-header_container`.
-
-<Example title="global header container">
-  <CodeBlock toggleCode={false}>
-    <header className="slds-global-header_container">
-      <div className="slds-global-header">
-        ...
-      </div>
-    </header>
-  </CodeBlock>
-</Example>
-
-<Blockquote type="a11y" header="Accessibility Requirement">
-  For screen reading users, we need to provide a way to navigate over the global header and directly to content regions. For this scenario, we need to provide two links above the global header that provides navigation to landmarks within the app. These links are visually hidden by default but become visible when focused.
-</Blockquote>
-
-<Example title="global header jump links">
-  <CodeBlock toggleCode={false}>
-    <header className="slds-global-header_container">
-      <a href="javascript:void(0);" className="slds-assistive-text slds-assistive-text_focus">
-        Skip to Navigation
-      </a>
-      <a href="javascript:void(0);" className="slds-assistive-text slds-assistive-text_focus">
-        Skip to Main Content
-      </a>
-      <div className="slds-global-header">
-        ...
-      </div>
-    </header>
-  </CodeBlock>
 </Example>
 
 ## Logo

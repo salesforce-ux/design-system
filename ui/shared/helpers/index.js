@@ -58,6 +58,59 @@ export const getDisplayElementById = (collection, id) => {
   }
 };
 
+/**
+ * @desc Get all examples for a single component by type
+ * @param object $object - the object to check types against
+ * @param array $types - the type of examples you want
+ * @return array - array of componenet examples based parameters
+ */
+export const getDisplayCollectionsByType = (object, types) => {
+  let collection = [];
+  if (Array.isArray(types)) {
+    types.map(type => {
+      if (object.hasOwnProperty(type)) {
+        if (Array.isArray(object[type])) {
+          object[type].map(element => {
+            let newElement = {};
+            newElement.component = getDisplayElementById(
+              object[type],
+              element.id
+            );
+            newElement.label = element.label;
+            return collection.push(newElement);
+          });
+        } else {
+          let newElement = {};
+          newElement.label = 'Default';
+          newElement.component = object[type];
+          collection.push(newElement);
+        }
+      }
+    });
+  } else {
+    throw new Error(`Expected "${types}" to be an array`);
+  }
+  return collection;
+};
+
+/**
+ * @desc Get all examples for multiple components by type
+ * @param array $array - the components to check types against
+ * @param array $types - the type of examples you want
+ * @return array - array of componenet examples based on parameters
+ */
+export const getAllDisplayCollectionsByType = (array, types) => {
+  let collection = [];
+  if (Array.isArray(array)) {
+    array.map(element =>
+      collection.push(getDisplayCollectionsByType(element, types))
+    );
+  } else {
+    throw new Error(`Expected "${array}" to be an array`);
+  }
+  return collection;
+};
+
 export default {
   omit,
   range,

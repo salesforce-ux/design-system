@@ -157,11 +157,12 @@ gulp.task(
 gulp.task('styles:sass', styles.sass);
 gulp.task('styles:sass:components', styles.componentSass);
 gulp.task('styles:test', styles.sassTest);
+gulp.task('styles:formFactors', styles.sassFormFactors);
 gulp.task(
   'styles',
   gulp.series(
     gulp.parallel('generate:tokens:sass'),
-    gulp.parallel('styles:sass', 'styles:test')
+    gulp.parallel('styles:sass', 'styles:test', 'styles:formFactors')
   )
 );
 gulp.task(

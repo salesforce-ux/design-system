@@ -14,6 +14,9 @@
  */
 .slds-input {
   @include form-states;
+  // stylelint-disable property-no-vendor-prefix
+  -webkit-appearance: none; // Scope to WebKit UA styling to remove unwanted inner-shadow
+  // stylelint-enable property-no-vendor-prefix
   display: inline-block;
   padding: 0 $spacing-medium 0 $spacing-small;
   line-height: $height-input;
@@ -83,10 +86,11 @@
     padding: 0 $spacing-xx-large;
 
     &[type='number'] {
-      appearance: textfield;
+      // stylelint-disable property-no-vendor-prefix
+      -moz-appearance: textfield; // FF needs 'textfield' to remove counter UA styling; -webkit-appearance in .slds-input removes for other browsers
+      // stylelint-enable property-no-vendor-prefix
     }
 
-    &::-webkit-outer-spin-button,
     &::-webkit-inner-spin-button {
       appearance: none;
       margin: 0;

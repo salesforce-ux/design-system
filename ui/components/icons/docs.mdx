@@ -15,27 +15,15 @@ import { getDisplayElementById } from '../../shared/helpers';
   found <a href="/icons">here</a>.
 </div>
 
+<CodeView exampleOnly>
+  <UtilityIcon className="slds-icon-text-default" />
+</CodeView>
+
 ## About Icons
 
 Five separate SVG sprites are used to create icons — [action](/icons/#action), [custom](/icons/#custom), [doctype](/icons/#doctype), [standard ](/icons/#standard) and [utility](/icons/#utility). Link to the icon SVG sprite by targeting the icon’s hash/ID value in the use href attribute. (You can find the values on the [icon page](/icons/).)
 
-### Markup
-
-When placing the icon code into your page, customize the path in the `use` attribute of the `svg` to the proper path and icon name for your specific icon. For example, the _case_ icon in the _standard_ sprite would have a path like this:
-
-<CodeBlock toggleCode={false}>
-  <svg aria-hidden="true" className="slds-icon" title="when needed">
-    <use xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#case" />
-  </svg>
-</CodeBlock>
-
-<Blockquote type="note" header="Note">
-  If an icon has more than one word in the name, it should be included in the
-  `use` attribute with the underscore separator as shown on the icon page. For
-  example: log_a_call.
-</Blockquote>
-
-### Accessibility
+## Accessibility
 
 Icons require a containing element for two reasons:
 
@@ -46,20 +34,7 @@ If an icon has a visible label that describes what the icon represents, no title
 
 The containing element must have the `slds-icon_container` class.
 
-<Blockquote type="note" header="Note">
-  You must require SLDS in your application for SVG sprites to work. If you’re
-  using Visualforce, see{' '}
-  <a href="/platforms/visualforce">the Visualforce tutorial</a>. If you’re using{' '}
-  <a href="/platforms/lightning">
-    Lightning components, see this documentation
-  </a>
-  .
-</Blockquote>
-
-- You can access the SVG sprites by downloading the entire [CSS Framework or just the icons](/downloads). To include a sprite in your application, the recommended method is to place it into the page as the first element inside the `body` element. Alternatively, you can leave the sprite in the assets/icons directory and link to it from your page. To render a sprited icon, add the tiny [SVG for Everybody](https://github.com/jonathantneal/svg4everybody) script for Internet Explorer.
-- When placed into the `body`, the SVG sprite takes up space in the page. Use either `display:none` or `position:absolute` and set both the width and height to zero.
-
-## Base
+## Default
 
 <Example title="Base Default">
   <CodeView>
@@ -67,35 +42,27 @@ The containing element must have the `slds-icon_container` class.
   </CodeView>
 </Example>
 
-## Background Color
+### Structure and Implementation
 
-To change a background color for action, custom, or standard icons, use composed class names:
+An icon must have a containing element with the class `slds-icon_container` for [accessibility support](#Accessibility). Inside the container, a `<svg>` with the class `slds-icon` contains the reference to your icon and a `<span>` with the class `slds-assistive-text` contains your hidden assistive text that describes the icon. Be sure to read the [accessibility section](#Accessibility) to know when to use assistive text, the `title` attribute, or when neither is needed.
 
-<code className="docs">.slds-icon-[sprite name]-[icon name]</code>
-Place the class on the `.slds-icon_container`.
+When placing the icon code into your page, customize the path in the `use` attribute of the `svg` to the proper path and icon name for your specific icon. For example, the _case_ icon in the _standard_ sprite would have a path like this:
 
 <CodeBlock toggleCode={false}>
-  <div className="slds-icon_container slds-icon-standard-account" />
+  <svg aria-hidden="true" className="slds-icon" title="when needed">
+    <use xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#case" />
+  </svg>
 </CodeBlock>
 
-Some icon names have more than one word, separated by `_` underscores. Replace underscores with dashes when composing the class name. So `log_a_call` in the standard icon set becomes `.slds-icon-action-log-a-call`.
+If an icon has more than one word in the name, it should be included in the `use` attribute with the underscore separator as shown on the icon page. For example: log_a_call.
 
-- For [action](/components/icons?variant=action) icons, add the `.slds-icon_container_circle` class to the container (`.slds-icon_container`), which changes the background shape to a circle.
-- [Doctype](/components/icons?variant=doctype) icons have no background color.
-- [Standard](/components/icons?variant=standard) and [Custom](/components/icons?variant=custom) icons have a rounded square shape and use a class on the container for the background color.
-- [Utility](/components/icons?variant=base) icons have no background color.
-
-## Current Color
-
-To change the fill of an icon to match the current color of its parent, add the `slds-current-color` class to the icon's container. This class utilizes the CSS `currentColor` value.
-
-<Example title="Current Color">
-  <CodeView>
-    <UtilityIcon containerClassName="slds-current-color" />
-  </CodeView>
-</Example>
+You must require SLDS in your application for SVG sprites to work. If you’re using Visualforce, see <a href="/platforms/visualforce">the Visualforce tutorial</a>. If you’re using <a href="/platforms/lightning"> Lightning components, see this documentation</a>.
+- You can access the SVG sprites by downloading the entire [CSS Framework or just the icons](/downloads). To include a sprite in your application, the recommended method is to place it into the page as the first element inside the `body` element. Alternatively, you can leave the sprite in the assets/icons directory and link to it from your page. To render a sprited icon, add the tiny [SVG for Everybody](https://github.com/jonathantneal/svg4everybody) script for Internet Explorer.
+- When placed into the `body`, the SVG sprite takes up space in the page. Use either `display:none` or `position:absolute` and set both the width and height to zero.
 
 ## Types
+
+All available SVG sprites fall into one of these five main categories: action, custom, doctype, standard, and utility.
 
 ### Action
 
@@ -153,6 +120,16 @@ To change the fill of an icon to the default text color, add the `slds-icon-text
   </CodeView>
 </Example>
 
+### Current Color
+
+To change the fill of an icon to match the current color of its parent, add the `slds-current-color` class to the icon's container. This class utilizes the CSS `currentColor` value.
+
+<Example title="Current Color">
+  <CodeView>
+    <UtilityIcon containerClassName="slds-current-color" />
+  </CodeView>
+</Example>
+
 ### Success
 
 To change the fill of an icon to the success text color, add the `slds-icon-text-success` class to the icon.
@@ -192,6 +169,24 @@ To change the fill of an icon to the light text color, add the `slds-icon-text-l
     <UtilityIcon className="slds-icon-text-light" />
   </CodeView>
 </Example>
+
+### Background Color
+
+To change a background color for action, custom, or standard icons, use composed class names:
+
+<code className="docs">.slds-icon-[sprite name]-[icon name]</code>
+Place the class on the `.slds-icon_container`.
+
+<CodeBlock toggleCode={false}>
+  <div className="slds-icon_container slds-icon-standard-account" />
+</CodeBlock>
+
+Some icon names have more than one word, separated by `_` underscores. Replace underscores with dashes when composing the class name. So `log_a_call` in the standard icon set becomes `.slds-icon-action-log-a-call`.
+
+- For [action](/components/icons?variant=action) icons, add the `.slds-icon_container_circle` class to the container (`.slds-icon_container`), which changes the background shape to a circle.
+- [Doctype](/components/icons?variant=doctype) icons have no background color.
+- [Standard](/components/icons?variant=standard) and [Custom](/components/icons?variant=custom) icons have a rounded square shape and use a class on the container for the background color.
+- [Utility](/components/icons?variant=base) icons have no background color.
 
 ## Size
 

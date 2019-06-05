@@ -312,6 +312,10 @@ a.slds-button--inverse:focus {
 .slds-button__icon {
   @include square($square-icon-medium-content-alt);
   fill: currentColor;
+
+  @include touch-device {
+    @include square($square-icon-medium-content);
+  }
 }
 
 /**

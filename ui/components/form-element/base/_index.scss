@@ -90,6 +90,10 @@
 
   .slds-form-element__static {
     width: calc(100% - #{$square-icon-small-boundary}); // Leave space for edit icon
+
+    @include touch-device {
+      width: calc(100% - #{$square-tappable});
+    }
   }
 }
 

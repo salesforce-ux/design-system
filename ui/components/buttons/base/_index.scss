@@ -14,7 +14,8 @@
  */
 .slds-button {
   position: relative;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
   padding: 0;
   background: transparent;
   background-clip: border-box;

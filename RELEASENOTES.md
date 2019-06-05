@@ -9,6 +9,10 @@
   - App Launcher did not use brand tokens for `:hover` and `:active` states
   - `.slds-app-launcher__tile` now uses `$brand-accessible` for its `:hover` state and `$brand-accessible-active` for its `:active` state
 
+### [Button Icons](https://www.lightningdesignsystem.com/components/button-icons)
+#### Changed
+- Center contents of `slds-button_icon` with change of `display: inline-flex` to `slds-button`
+
 ### [Buttons](https://www.lightningdesignsystem.com/components/buttons)
 #### Changed
 - Boldened Button labels on touch devices

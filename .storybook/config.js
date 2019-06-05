@@ -2,7 +2,7 @@ import { configure, addDecorator, addParameters } from '@storybook/react';
 import { withA11y } from '@storybook/addon-a11y';
 import sldsTheme from './sldsTheme';
 
-import './scss/ui/index.scss';
+import './scss/ui/index.scss'; // Our custom Storybook presentation styles
 
 const req = require.context('../ui/', true, /\.stories\.js$/);
 

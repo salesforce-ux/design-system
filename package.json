@@ -155,6 +155,7 @@
     "raw-loader": "0.5.1",
     "react": "16.8.6",
     "react-dom": "16.8.6",
+    "react-lazyload": "2.6.1",
     "react-test-renderer": "16.4.1",
     "resolve-url-loader": "3.1.0",
     "rimraf": "2.6.1",

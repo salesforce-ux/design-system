@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import LazyLoad from 'react-lazyload';
 
 // We don't use design tokens or SLDS classes for styling here to prevent false failed tests for unrelated changes,
 // this styling is cosmetic for Storybook only
@@ -22,10 +23,12 @@ const Label = styled.h2`
 
 // A bit barebones at the moment but in place for future extensibility
 const StoryFrame = ({ component, label }) => (
-  <Wrapper>
-    <Label>{label}</Label>
-    {component}
-  </Wrapper>
+  <LazyLoad height={200} offset={[-200, 0]}>
+    <Wrapper>
+      <Label>{label}</Label>
+      {component}
+    </Wrapper>
+  </LazyLoad>
 );
 
 StoryFrame.propTypes = {

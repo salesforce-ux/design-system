@@ -72,37 +72,33 @@ export const ColorPickerSummary = props => {
 
   return (
     <div className="slds-color-picker__summary">
-      <label
-        className="slds-color-picker__summary-label"
-        htmlFor="color-picker-summary-input"
-      >
-        Choose Color
-      </label>
-
-      <Button
-        className="slds-color-picker__summary-button slds-button_icon slds-button_icon-more"
-        title="Choose Color"
-      >
-        <Swatch color="hsl(220, 46%, 55%)" suppressAssistiveText />
-        <SvgIcon
-          className="slds-button__icon slds-button__icon_small slds-m-left_xx-small"
-          sprite="utility"
-          symbol="down"
-        />
-        <span className="slds-assistive-text">
-          Choose a color. Current color: #5679C0
-        </span>
-      </Button>
-
       <FormElement
-        formElementClassName="slds-color-picker__summary-input"
+        labelContent="Choose Color"
+        inputId="color-picker-summary-input"
         hasError={hasSummaryError}
       >
-        <Input
-          id="color-picker-summary-input"
-          defaultValue="#5679C0"
-          aria-describedby={hasSummaryError ? errorId : null}
-        />
+        <Button
+          className="slds-color-picker__summary-button slds-button_icon slds-button_icon-more"
+          title="Choose Color"
+        >
+          <Swatch color="hsl(220, 46%, 55%)" suppressAssistiveText />
+          <SvgIcon
+            className="slds-button__icon slds-button__icon_small slds-m-left_xx-small"
+            sprite="utility"
+            symbol="down"
+          />
+          <span className="slds-assistive-text">
+            Choose a color. Current color: #5679C0
+          </span>
+        </Button>
+
+        <span className="slds-color-picker__summary-input">
+          <Input
+            id="color-picker-summary-input"
+            defaultValue="#5679C0"
+            aria-describedby={hasSummaryError ? errorId : null}
+          />
+        </span>
       </FormElement>
 
       {hasSummaryError ? (

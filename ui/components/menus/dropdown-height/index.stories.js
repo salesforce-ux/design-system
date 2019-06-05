@@ -4,10 +4,7 @@ import { getDisplayElementById } from '../../../shared/helpers';
 
 import '../../../index.scss';
 
-const stories = storiesOf('Components/Menus/Dropdown Height', module).add(
-  'Base',
-  () => DropdownHeightExamples.default
-);
+const stories = storiesOf('Components/Menus/Dropdown Height', module);
 
 DropdownHeightExamples.states.forEach(example => {
   stories.add(example.label, () =>

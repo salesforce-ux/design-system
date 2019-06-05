@@ -101,5 +101,5 @@
 // Treats line-height as if it has box-sizing: border-box behavior
 // Useful for blueprints that rely on line-height for their overall height
 @mixin border-box-line-height($value, $border: $border-width-thin * 2, $padding: 0) {
-  line-height: $value - rem($border + $padding);
+  line-height: $value - rem($border + $padding * 1px); // * 1px to ensure we pass a pixel value to rem()
 }

@@ -55,7 +55,7 @@ exports[`renders a base color picker with custom tab selected 1`] = `
             Choose a color. Current color: #5679C0
           </span>
         </button>
-        <span
+        <div
           className="slds-color-picker__summary-input"
         >
           <input
@@ -67,7 +67,7 @@ exports[`renders a base color picker with custom tab selected 1`] = `
             readOnly={undefined}
             type="text"
           />
-        </span>
+        </div>
       </div>
     </div>
   </div>
@@ -1166,7 +1166,7 @@ exports[`renders a base color picker with custom tab selected in error state 1`]
             Choose a color. Current color: #5679C0
           </span>
         </button>
-        <span
+        <div
           className="slds-color-picker__summary-input"
         >
           <input
@@ -1178,7 +1178,7 @@ exports[`renders a base color picker with custom tab selected in error state 1`]
             readOnly={undefined}
             type="text"
           />
-        </span>
+        </div>
       </div>
     </div>
   </div>
@@ -2283,7 +2283,7 @@ exports[`renders a base color picker with summary error 1`] = `
             Choose a color. Current color: #5679C0
           </span>
         </button>
-        <span
+        <div
           className="slds-color-picker__summary-input"
         >
           <input
@@ -2295,7 +2295,7 @@ exports[`renders a base color picker with summary error 1`] = `
             readOnly={undefined}
             type="text"
           />
-        </span>
+        </div>
       </div>
     </div>
     <p
@@ -3400,7 +3400,7 @@ exports[`renders a custom only color picker 1`] = `
             Choose a color. Current color: #5679C0
           </span>
         </button>
-        <span
+        <div
           className="slds-color-picker__summary-input"
         >
           <input
@@ -3412,7 +3412,7 @@ exports[`renders a custom only color picker 1`] = `
             readOnly={undefined}
             type="text"
           />
-        </span>
+        </div>
       </div>
     </div>
   </div>
@@ -3693,7 +3693,7 @@ exports[`renders a default base color picker 1`] = `
             Choose a color. Current color: #5679C0
           </span>
         </button>
-        <span
+        <div
           className="slds-color-picker__summary-input"
         >
           <input
@@ -3705,7 +3705,7 @@ exports[`renders a default base color picker 1`] = `
             readOnly={undefined}
             type="text"
           />
-        </span>
+        </div>
       </div>
     </div>
   </div>
@@ -4804,7 +4804,7 @@ exports[`renders a predefined only color picker 1`] = `
             Choose a color. Current color: #5679C0
           </span>
         </button>
-        <span
+        <div
           className="slds-color-picker__summary-input"
         >
           <input
@@ -4816,7 +4816,7 @@ exports[`renders a predefined only color picker 1`] = `
             readOnly={undefined}
             type="text"
           />
-        </span>
+        </div>
       </div>
     </div>
   </div>
@@ -6474,7 +6474,7 @@ exports[`renders an opened custom only color picker 1`] = `
             Choose a color. Current color: #5679C0
           </span>
         </button>
-        <span
+        <div
           className="slds-color-picker__summary-input"
         >
           <input
@@ -6486,7 +6486,7 @@ exports[`renders an opened custom only color picker 1`] = `
             readOnly={undefined}
             type="text"
           />
-        </span>
+        </div>
       </div>
     </div>
   </div>
@@ -6767,7 +6767,7 @@ exports[`renders an opened custom only color picker with error 1`] = `
             Choose a color. Current color: #5679C0
           </span>
         </button>
-        <span
+        <div
           className="slds-color-picker__summary-input"
         >
           <input
@@ -6779,7 +6779,7 @@ exports[`renders an opened custom only color picker with error 1`] = `
             readOnly={undefined}
             type="text"
           />
-        </span>
+        </div>
       </div>
     </div>
   </div>
@@ -7066,7 +7066,7 @@ exports[`renders an opened predefined only color picker 1`] = `
             Choose a color. Current color: #5679C0
           </span>
         </button>
-        <span
+        <div
           className="slds-color-picker__summary-input"
         >
           <input
@@ -7078,7 +7078,7 @@ exports[`renders an opened predefined only color picker 1`] = `
             readOnly={undefined}
             type="text"
           />
-        </span>
+        </div>
       </div>
     </div>
   </div>

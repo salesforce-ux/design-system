@@ -92,13 +92,13 @@ export const ColorPickerSummary = props => {
           </span>
         </Button>
 
-        <span className="slds-color-picker__summary-input">
+        <div className="slds-color-picker__summary-input">
           <Input
             id="color-picker-summary-input"
             defaultValue="#5679C0"
             aria-describedby={hasSummaryError ? errorId : null}
           />
-        </span>
+        </div>
       </FormElement>
 
       {hasSummaryError ? (

@@ -3,6 +3,13 @@
 # Form Element Release Notes
 
 <!-- ## [Unreleased] -->
+
+## 2.10.0
+
+### Changed
+
+- On touch devices, set the amount of space created for the edit icon to `$square-tappable` which aligns with touch specific sizing
+
 ## 2.8.1
 
 ### Fixed

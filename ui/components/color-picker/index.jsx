@@ -71,42 +71,40 @@ export const ColorPickerSummary = props => {
   const errorId = 'color-picker-summary-error';
 
   return (
-    <div className="slds-color-picker__summary">
-      <FormElement
-        labelContent="Choose Color"
-        inputId="color-picker-summary-input"
-        hasError={hasSummaryError}
+    <FormElement
+      formElementClassName="slds-color-picker__summary"
+      labelContent="Choose Color"
+      labelClassName="slds-color-picker__summary-label"
+      inputId="color-picker-summary-input"
+      hasError={hasSummaryError}
+    >
+      <Button
+        className="slds-color-picker__summary-button slds-button_icon slds-button_icon-more"
+        title="Choose Color"
       >
-        <Button
-          className="slds-color-picker__summary-button slds-button_icon slds-button_icon-more"
-          title="Choose Color"
-        >
-          <Swatch color="hsl(220, 46%, 55%)" suppressAssistiveText />
-          <SvgIcon
-            className="slds-button__icon slds-button__icon_small slds-m-left_xx-small"
-            sprite="utility"
-            symbol="down"
-          />
-          <span className="slds-assistive-text">
-            Choose a color. Current color: #5679C0
-          </span>
-        </Button>
-
-        <div className="slds-color-picker__summary-input">
-          <Input
-            id="color-picker-summary-input"
-            defaultValue="#5679C0"
-            aria-describedby={hasSummaryError ? errorId : null}
-          />
-        </div>
-      </FormElement>
-
+        <Swatch color="hsl(220, 46%, 55%)" suppressAssistiveText />
+        <SvgIcon
+          className="slds-button__icon slds-button__icon_small slds-m-left_xx-small"
+          sprite="utility"
+          symbol="down"
+        />
+        <span className="slds-assistive-text">
+          Choose a color. Current color: #5679C0
+        </span>
+      </Button>
+      <div className="slds-color-picker__summary-input">
+        <Input
+          id="color-picker-summary-input"
+          defaultValue="#5679C0"
+          aria-describedby={hasSummaryError ? errorId : null}
+        />
+      </div>
       {hasSummaryError ? (
         <p className="slds-form-error" id={errorId}>
           {errorMessage}
         </p>
       ) : null}
-    </div>
+    </FormElement>
   );
 };
 

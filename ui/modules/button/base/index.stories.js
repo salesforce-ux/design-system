@@ -2,8 +2,6 @@ import { storiesOf } from '@storybook/react';
 import * as ButtonExamples from './example';
 import { getDisplayElementById } from '../../../shared/helpers';
 
-console.log(ButtonExamples);
-
 storiesOf('Modules/Button/Base', module).add(
   'Base',
   () => ButtonExamples.default

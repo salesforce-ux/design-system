@@ -8,6 +8,9 @@
 
 ### Changed
 
-- Relaxed the restrictions to allow for nesting inside a form element
+- Moved the FormElement from inside the summary-input div to wrapped around the entire summary component
+- Moving the FormElement component gives the label the class `slds-form-element__label`
+- Moving the FormElement component wraps the button as well as the input in the `slds-form-element__control` div
+- Relaxed the restrictions to allow for nesting the label and inputs an additional level
 
 <!-- ## [VERSION] -->

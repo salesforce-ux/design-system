@@ -3,7 +3,7 @@ import { withOptions } from '@storybook/addon-options';
 import { checkA11y } from '@storybook/addon-a11y';
 import withMDX from './addons/withMDX';
 
-import './scss/ui/index.scss';
+import './scss/ui/index.scss'; // Our custom Storybook presentation styles
 
 const req = require.context('../ui/', true, /\.stories\.js$/);
 

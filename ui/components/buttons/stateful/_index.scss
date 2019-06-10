@@ -33,6 +33,12 @@
   border-color: transparent;
 }
 
+.slds-button_stateful .slds-text-selected,
+.slds-button_stateful .slds-text-selected-focus,
+.slds-button_stateful .slds-text-not-selected {
+  align-items: center;
+}
+
 /**
  * Default state of a stateful button
  *
@@ -67,7 +73,7 @@
    * @restrict .slds-button_stateful span
    */
   .slds-text-not-selected {
-    display: block;
+    display: inline-flex;
   }
 }
 
@@ -85,7 +91,7 @@
 .slds-is-selected[disabled]:focus {
 
   .slds-text-selected {
-    display: block;
+    display: inline-flex;
   }
 
   .slds-text-selected-focus {
@@ -112,7 +118,7 @@
   }
 
   .slds-text-selected {
-    display: block;
+    display: inline-flex;
   }
 
   .slds-text-selected-focus {
@@ -131,7 +137,7 @@
     }
 
     .slds-text-selected-focus {
-      display: block;
+      display: inline-flex;
     }
   }
 }

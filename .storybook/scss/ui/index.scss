@@ -10,3 +10,11 @@ html { background: transparent !important; }
     padding: 1rem;
   }
 }
+
+// Lazy Load
+// We don't use design tokens or SLDS classes for styling here to prevent false
+// failed tests for unrelated changes, this styling is cosmetic for Storybook only
+.lazyload-placeholder {
+  background-color: #f2f2f2;
+  margin: 1.25rem 0;
+}

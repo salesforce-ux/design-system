@@ -4,6 +4,12 @@
 
 <!-- ## [Unreleased] -->
 
+## 2.10.0
+
+### Changed
+
+- Removed default `box-shadow` on `inputs` for Webkit
+
 ## 2.8.0
 
 ### Fixed

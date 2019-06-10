@@ -12,6 +12,9 @@
  */
 .slds-textarea {
   @include form-states;
+  // stylelint-disable property-no-vendor-prefix
+  -webkit-appearance: none; // // Scope to WebKit UA styling to remove unwanted inner-shadow
+  // stylelint-enable property-no-vendor-prefix
   resize: vertical;
   padding: $spacing-x-small $spacing-small;
 }

@@ -1,0 +1,100 @@
+import CodeView from '../../../shared/components/CodeView';
+import CodeBlock from '../../../shared/components/CodeBlock';
+import Blockquote from '../../../shared/components/Blockquote';
+import * as ButtonGroupExamples from './base/example';
+import * as ButtonIconGroupExamples from './icon/example';
+import { getDisplayElementById } from '../../shared/helpers';
+
+<div className="doc lead">
+  Buttons are clickable items used to perform an action.
+</div>
+
+<CodeView exampleOnly style={`lightning-button-group { margin-right: 0.5rem; }`}>
+  <React.Fragment>
+    {ButtonGroupExamples.default}
+    {ButtonIconGroupExamples.default}
+  </React.Fragment>
+</CodeView>
+
+## About Button Groups
+
+Buttons in a group are surrounded by a parent with the `.lwc-button-group` class.
+
+## Accessibility
+
+Include the Aria role `role="group"` so that assistive technologies are alerted to the grouping.
+
+## Default
+
+<CodeView>
+  {ButtonGroupExamples.default}
+</CodeView>
+
+### States
+
+#### Disabled
+
+<CodeView style={`lightning-button-group { margin-right: 0.5rem; }`}>
+  <React.Fragment>
+    {getDisplayElementById(ButtonGroupExamples.states, 'first-disabled')}
+    {getDisplayElementById(ButtonGroupExamples.states, 'middle-disabled')}
+    {getDisplayElementById(ButtonGroupExamples.states, 'last-disabled')}
+    {getDisplayElementById(ButtonGroupExamples.states, 'all-disabled')}
+  </React.Fragment>
+</CodeView>
+
+#### With Overflow Menu
+
+<CodeView>
+  {getDisplayElementById(ButtonGroupExamples.states, 'overflow-menu')}
+</CodeView>
+
+##### Disabled
+
+<CodeView>
+  {getDisplayElementById(ButtonGroupExamples.states, 'overflow-menu-disabled')}
+</CodeView>
+
+## Inverse
+
+<CodeView style={`background-color: #16325c; padding: 0.5rem; lightning-button-group { margin-right: 0.5rem; }`}>
+  <React.Fragment>
+    {getDisplayElementById(ButtonGroupExamples.examples, 'inverse-doc')}
+    {getDisplayElementById(ButtonIconGroupExamples.examples, 'inverse-doc')}
+  </React.Fragment>
+</CodeView>
+
+### States
+
+#### Disabled
+
+<CodeView style={`background-color: #16325c; padding: 0.5rem; lightning-button-group { margin-right: 0.5rem; }`}>
+  <React.Fragment>
+    {getDisplayElementById(ButtonGroupExamples.states, 'inverse-first-disabled')}
+    {getDisplayElementById(ButtonGroupExamples.states, 'inverse-middle-disabled')}
+    {getDisplayElementById(ButtonGroupExamples.states, 'inverse-last-disabled')}
+    {getDisplayElementById(ButtonGroupExamples.states, 'inverse-all-disabled')}
+  </React.Fragment>
+</CodeView>
+
+### Examples
+
+#### Brand with Overflow Menu
+
+A button group is limited to one primary brand button. The overflow menu button icon can also be primary brand to reduce visual noise.
+
+<CodeView>
+  {getDisplayElementById(ButtonGroupExamples.examples, 'brand-overflow-menu')}
+</CodeView>
+
+#### Variations with different # of buttons
+
+<CodeView style={`lightning-button-group { margin-right: 0.5rem; }`}>
+  <React.Fragment>
+    {getDisplayElementById(ButtonGroupExamples.examples, 'single-button')}
+    {getDisplayElementById(ButtonGroupExamples.examples, 'two-buttons')}
+    {getDisplayElementById(ButtonGroupExamples.examples, 'three-buttons')}
+    {getDisplayElementById(ButtonGroupExamples.examples, 'four-buttons')}
+    {getDisplayElementById(ButtonGroupExamples.examples, 'five-buttons')}
+  </React.Fragment>
+</CodeView>

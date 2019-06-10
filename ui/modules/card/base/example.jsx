@@ -2,7 +2,7 @@ import React from 'react';
 import Card, { CardHeader, CardBody, CardFooter } from '../';
 import Button from '../../button';
 
-const CardExample = () => (
+export default (
   <Card title="Card Title" href="javascript:void(0);">
     Card Body
   </Card>
@@ -143,5 +143,3 @@ export const examples = [
     )
   }
 ];
-
-export default CardExample;

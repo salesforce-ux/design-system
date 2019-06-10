@@ -32,61 +32,133 @@
  * @group theme
  */
 .lwc-button-icon_brand {
-  --lwc-c-button-icon-color-background: var(--lwc-c-button-icon-color-background-brand, var(--brand-accessible, $brand-accessible));
-  --lwc-c-button-icon-border-color: var(--lwc-c-button-icon-color-border-brand, var(--brand-accessible, $brand-accessible));
-  // Override icon color
-  --lwc-c-icon-color: var(--lwc-c-button-icon-color-on-brand, $color-gray-1);
+  --lwc-c-button-icon-color-background: var(--lwc-c-button-icon-color-background-brand, var(--lwc-brand-accessible, $brand-accessible));
+  --lwc-c-button-icon-color-border: var(--lwc-c-button-icon-color-border-brand, var(--lwc-brand-accessible, $brand-accessible));
+  --lwc-c-button-icon-color: var(--lwc-c-button-icon-color-brand, $color-gray-1);
+  --lwc-c-button-icon-shadow: var(--lwc-c-button-icon-shadow-brand, var(--lwc-c-button-shadow-brand, none));
 
-  &:link,
-  &:visited,
-  &:active {
-    // Override icon color
-    --lwc-c-icon-color: var(--lwc-c-button-icon-color-on-brand, var(--brand-accessible, $brand-accessible));
-  }
-
-  &:hover,
-  &:focus {
-    --lwc-c-button-icon-color-background: var(--lwc-c-button-icon-color-background-brand-active, var(--brand-accessible-active, $brand-accessible-active));
-    --lwc-c-button-icon-border-color: var(--lwc-c-button-icon-color-border-brand-active, var(--brand-accessible-active, $brand-accessible-active));
-    // Override icon color
-    --lwc-c-icon-color: var(--lwc-c-button-icon-color-brand-active, $color-gray-1);
-  }
+  --lwc-c-button-icon-color-background-active: var(--lwc-c-button-icon-color-background-brand-active, var(--lwc-brand-accessible-active, $brand-accessible-active));
+  --lwc-c-button-icon-color-border-active: var(--lwc-c-button-icon-color-border-brand-active, var(--lwc-brand-accessible-active, $brand-accessible-active));
+  --lwc-c-button-icon-color-active: var(--lwc-c-button-icon-color-brand-active, $color-gray-1);
 
   &:active {
-    --lwc-c-button-icon-color-background: var(--lwc-c-button-icon-color-background-brand-active, var(--brand-accessible-active, $brand-accessible-active));
-    --lwc-c-button-icon-border-color: var(--lwc-c-button-icon-color-border-brand-active, var(--brand-accessible-active, $brand-accessible-active));
+    --lwc-c-button-icon-color-background: var(--lwc-c-button-icon-color-background-brand-active, var(--lwc-brand-accessible-active, $brand-accessible-active));
+    --lwc-c-button-icon-color-border: var(--lwc-c-button-icon-color-border-brand-active, var(--lwc-brand-accessible-active, $brand-accessible-active));
   }
 
   &[disabled],
   &:disabled {
     --lwc-c-button-icon-color-background: $brand-disabled;
-    --lwc-c-button-icon-border-color: $brand-disabled;
-    // Override icon color
-    --lwc-c-icon-color: $color-gray-5;
+    --lwc-c-button-icon-color-border: $brand-disabled;
+    --lwc-c-button-icon-color: $color-gray-5;
+    --lwc-c-button-icon-color-background-active: $brand-disabled;
+    --lwc-c-button-icon-color-border-active: $brand-disabled;
+    --lwc-c-button-icon-color-active: $color-gray-5;
   }
 }
 
 /**
- * @summary Adds a bordered container to a button icon
- * @selector .lwc-button-icon_bordered
+ * @summary Adds a background fill of white and border to a button icon
+ * @selector .lwc-button-icon_neutral
  * @restrict .lwc-button-icon
  * @modifier
  */
-.lwc-button-icon_bordered {
-  --lwc-c-button-icon-border-color: var(--lwc-c-button-icon-color-border, $color-border);
+.lwc-button-icon_neutral {
+  --lwc-c-button-icon-color-background: var(--lwc-c-button-icon-color-background-neutral, $color-gray-1);
+  --lwc-c-button-icon-color-border: var(--lwc-c-button-icon-color-border-neutral, $color-border);
+  --lwc-c-button-icon-color-background-active: var(--lwc-c-button-icon-color-background-neutral-active, $color-gray-1);
+  --lwc-c-button-icon-color-border-active: var(--lwc-c-button-icon-color-border-neutral, $color-border);
 }
 
 /**
- * @summary Adds a background fill of white to a button icon
- * @selector .lwc-button-icon_background
+ * @summary Adds a bordered container to a button icon
+ * @selector .lwc-button-icon_neutral-outline
  * @restrict .lwc-button-icon
  * @modifier
  */
-.lwc-button-icon_background {
-  --lwc-c-button-icon-color-background: var(--lwc-c-button-icon-color-background-default, $color-gray-1);
+.lwc-button-icon_neutral-outline {
+  --lwc-c-button-icon-color-border: var(--lwc-c-button-icon-color-border-neutral, $color-border);
+  --lwc-c-button-icon-color-border-active: var(--lwc-c-button-icon-color-border-neutral, $color-border);
+}
 
-  &:focus,
-  &:hover {
-    --lwc-c-button-icon-color-background: var(--lwc-c-button-icon-color-background-default-active, $color-gray-1);
+/**
+ * @name inverse
+ * @summary Creates the inverse button style
+ * @selector .lwc-button_inverse
+ * @restrict .lwc-button
+ * @modifier
+ * @group theme
+ */
+.lwc-button-icon_inverse {
+  --lwc-c-button-icon-color-background: var(--lwc-c-button-icon-color-background-inverse, var(--lwc-c-button-color-background-inverse, transparent));
+  --lwc-c-button-icon-color-border: var(--lwc-c-button-icon-color-border-inverse, var(--lwc-c-button-color-border-inverse, $color-gray-1));
+  --lwc-c-button-icon-color: var(--lwc-c-button-icon-color-inverse, var(--lwc-c-button-color-inverse, $color-gray-1));
+
+  --lwc-c-button-icon-color-background-active: var(--lwc-c-button-icon-color-background-inverse-active, transparent);
+  --lwc-c-button-icon-color-border-active: var(--lwc-c-button-icon-color-border-inverse-active, var(--lwc-c-active-button-color-border-inverse, $color-gray-1));
+  --lwc-c-button-icon-color-active: var(--lwc-c-button-icon-color-inverse-active, var(--lwc-c-active-button-color-inverse, $color-gray-3));
+
+  &[disabled],
+  &:disabled {
+    --lwc-c-button-icon-color-background: $color-background-button-inverse-disabled;
+    --lwc-c-button-icon-color-border: $color-border-button-inverse-disabled;
+    --lwc-c-button-icon-color: $color-text-button-inverse-disabled;
+
+    --lwc-c-button-icon-color-background-active: var(--lwc-c-button-icon-color-background);
+    --lwc-c-button-icon-color-border-active: var(--lwc-c-button-icon-color-border);
+    --lwc-c-button-icon-color-active: var(--lwc-c-button-icon-color);
+  }
+
+  &:focus {
+    border: $border-width-thin solid var(--lwc-c-focus-button-color-border-inverse, $color-border-button-focus-inverse);
+    box-shadow: var(--lwc-c-focus-button-box-shadow-inverse, $shadow-button-focus-inverse);
+    outline: none;
+  }
+}
+
+/**
+ * @summary Provides visual feedback that a button icon has been pressed
+ * @selector .lwc-is-pressed
+ * @restrict .lwc-button-icon
+ * @modifier
+ */
+.lwc-is-pressed {
+  --lwc-c-button-icon-color-background: var(--lwc-c-button-icon-color-background-brand, var(--lwc-brand-accessible, $brand-accessible));
+  --lwc-c-button-icon-color-border: var(--lwc-c-button-icon-color-border-brand, var(--lwc-brand-accessible, $brand-accessible));
+  --lwc-c-button-icon-color: var(--lwc-c-button-icon-color-brand, $color-gray-1);
+  --lwc-c-button-icon-shadow: var(--lwc-c-button-icon-shadow-brand, var(--lwc-c-button-shadow-brand, none));
+
+  --lwc-c-button-icon-color-background-active: var(--lwc-c-button-icon-color-background-brand-active, var(--lwc-brand-accessible-active, $brand-accessible-active));
+  --lwc-c-button-icon-color-border-active: var(--lwc-c-button-icon-color-border-brand, var(--lwc-brand-accessible-active, $brand-accessible-active));
+  --lwc-c-button-icon-color-active: var(--lwc-c-button-icon-color-brand-active, $color-gray-1);
+}
+
+/**
+ * @summary A button icon that invokes a menu
+ * @selector .lwc-button-icon_menu
+ * @restrict .lwc-button-icon
+ * @modifier
+ */
+.lwc-button-icon_menu {
+  --lwc-c-button-icon-color-background: var(--lwc-c-button-icon-color-background-neutral, $color-gray-1);
+  --lwc-c-button-icon-color-border: var(--lwc-c-button-icon-color-border-neutral, $color-border);
+  --lwc-c-button-icon-color-background-active: var(--lwc-c-button-icon-color-background-neutral-active, $color-gray-1);
+  --lwc-c-button-icon-color-border-active: var(--lwc-c-button-icon-color-border-neutral, $color-border);
+
+  &:after {
+    content: '';
+    width: 0;
+    height: 0;
+    border-left: 3px solid transparent;
+    border-right: 3px solid transparent;
+    border-top: 4px solid $color-gray-9;
+    display: inline-flex;
+    align-self: center;
+    margin-right: $spacing-x-small;
+  }
+
+  &[disabled]:after,
+  &:disabled:after {
+    border-top-color: $color-gray-5;
   }
 }

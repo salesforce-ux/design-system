@@ -18,12 +18,18 @@ $_c-icon-small: rem(24px);
 $_c-icon-x-small: rem(16px);
 $_c-icon-xx-small: rem(12px);
 
-$_c-icon-boundary-x-large: rem(64px);
-$_c-icon-boundary-large: rem(48px);
-$_c-icon-boundary-medium: rem(32px);
-$_c-icon-boundary-small: rem(24px);
-$_c-icon-boundary-x-small: rem(16px);
-$_c-icon-boundary-xx-small: rem(12px);
+// Boundary Sizes
+// We need to account for borders being apart of the box-model so we're subtracting
+// the a border width of 2px (top/bottom or left/right) since the boundary size is typically
+// used in combination with a boundary border like a button icon
+//
+// (30+1+1)x(30+1+1) = 32x32
+$_c-icon-boundary-x-large: rem(62px);
+$_c-icon-boundary-large: rem(46px);
+$_c-icon-boundary-medium: rem(30px);
+$_c-icon-boundary-small: rem(22px);
+$_c-icon-boundary-x-small: rem(14px);
+$_c-icon-boundary-xx-small: rem(10px);
 
 // Colors
 $_c-icon-background-color-default: #54698d;
@@ -305,7 +311,7 @@ $icon-bg-map: map-merge($bg-actions-map, $bg-custom-map);
  * @group sizing
  */
 .lwc-icon-boundary_x-large {
-  @include square($_c-icon-x-large);
+  @include square($_c-icon-boundary-x-large);
 }
 
 /**
@@ -316,7 +322,7 @@ $icon-bg-map: map-merge($bg-actions-map, $bg-custom-map);
  * @group sizing
  */
 .lwc-icon-boundary_large {
-  @include square($_c-icon-large);
+  @include square($_c-icon-boundary-large);
 }
 
 /**
@@ -327,7 +333,7 @@ $icon-bg-map: map-merge($bg-actions-map, $bg-custom-map);
  * @group sizing
  */
 .lwc-icon-boundary_medium {
-  @include square($_c-icon-medium);
+  @include square($_c-icon-boundary-medium);
 }
 
 /**
@@ -338,7 +344,7 @@ $icon-bg-map: map-merge($bg-actions-map, $bg-custom-map);
  * @group sizing
  */
 .lwc-icon-boundary_small {
-  @include square($_c-icon-small);
+  @include square($_c-icon-boundary-small);
 }
 
 /**
@@ -349,7 +355,7 @@ $icon-bg-map: map-merge($bg-actions-map, $bg-custom-map);
  * @group sizing
  */
 .lwc-icon-boundary_x-small {
-  @include square($_c-icon-x-small);
+  @include square($_c-icon-boundary-x-small);
 }
 
 /**

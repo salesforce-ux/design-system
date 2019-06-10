@@ -1,23 +1,17 @@
-import React from 'react';
 import { storiesOf } from '@storybook/react';
-import CardExample, {
-  states as CardStates,
-  examples as CardExamples
-} from './example';
+import * as CardExamples from './example';
 import { getDisplayElementById } from '../../../shared/helpers';
 
-const stories = storiesOf('Modules/Card/Base', module).add('Base', () => (
-  <CardExample />
-));
+storiesOf('Modules/Card/Base', module).add('Base', () => CardExamples.default);
 
-CardStates.forEach(example => {
-  stories.add(example.label, () =>
-    getDisplayElementById(CardStates, example.id)
+CardExamples.states.forEach(example => {
+  storiesOf('Modules/Card/Base/States', module).add(example.label, () =>
+    getDisplayElementById(CardExamples.states, example.id)
   );
 });
 
-CardExamples.forEach(example => {
-  stories.add(example.label, () =>
-    getDisplayElementById(CardExamples, example.id)
+CardExamples.examples.forEach(example => {
+  storiesOf('Modules/Card/Base/Examples', module).add(example.label, () =>
+    getDisplayElementById(CardExamples.examples, example.id)
   );
 });

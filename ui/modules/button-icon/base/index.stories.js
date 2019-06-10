@@ -1,24 +1,21 @@
-import React from 'react';
 import { storiesOf } from '@storybook/react';
-import ButtonIconExample, {
-  states as ButtonIconStates,
-  examples as ButtonIconExamples
-} from './example';
+import * as ButtonIconExamples from './example';
 import { getDisplayElementById } from '../../../shared/helpers';
 
-const stories = storiesOf('Modules/ButtonIcon/Base', module).add(
+storiesOf('Modules/Button Icon/Base', module).add(
   'Default',
-  () => <ButtonIconExample />
+  () => ButtonIconExamples.default
 );
 
-ButtonIconStates.forEach(example => {
-  stories.add(example.label, () =>
-    getDisplayElementById(ButtonIconStates, example.id)
+ButtonIconExamples.states.forEach(example => {
+  storiesOf('Modules/Button Icon/Base/States', module).add(example.label, () =>
+    getDisplayElementById(ButtonIconExamples.states, example.id)
   );
 });
 
-ButtonIconExamples.forEach(example => {
-  stories.add(example.label, () =>
-    getDisplayElementById(ButtonIconExamples, example.id)
+ButtonIconExamples.examples.forEach(example => {
+  storiesOf('Modules/Button Icon/Base/Examples', module).add(
+    example.label,
+    () => getDisplayElementById(ButtonIconExamples.examples, example.id)
   );
 });

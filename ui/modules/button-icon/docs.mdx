@@ -18,7 +18,7 @@ import { getDisplayElementById } from '../../shared/helpers';
   If an icon button doesn’t include a label, use a <code className="doc">title</code> attribute to show on hover for sighted users, and a span with class <code className="doc">slds-assistive-text</code> to describe the button's action for screen readers.
 </Blockquote>
 
-## Base
+## Default
 
 The size of a button icon is based off the size of the icon that is being consumed. The default size of the consumed icon is a 16px by 16px square.
 
@@ -26,30 +26,30 @@ To alter the size of the icon boundary, please refer to [Icon](/modules/icon) do
 
 <CodeView toggleCode={false} style={`lightning-button-icon { margin-right: 0.5rem; }`}>
   <React.Fragment>
-    {ButtonIconExamples.default()}
+    {ButtonIconExamples.default}
     {getDisplayElementById(ButtonIconExamples.states, "default-disabled")}
   </React.Fragment>
 </CodeView>
 
-## Base with borders
+## Neutral
 
-The default border color of a button icon is transparent. You may apply a border color to the button icon by applying `lwc-button-icon_bordered` to the button icon.
+The default background color of a button icon is transparent. You may apply a background fill of white by applying `lwc-button-icon_neutral` to the button icon.
 
 <CodeView toggleCode={false} style={`background-color: #f3f2f2; padding: 1rem; margin: -1rem; lightning-button-icon { margin-right: 0.5rem; }`}>
   <React.Fragment>
-    {getDisplayElementById(ButtonIconExamples.examples, "bordered")}
-    {getDisplayElementById(ButtonIconExamples.states, "bordered-disabled")}
+    {getDisplayElementById(ButtonIconExamples.examples, "neutral")}
+    {getDisplayElementById(ButtonIconExamples.states, "neutral-disabled")}
   </React.Fragment>
 </CodeView>
 
-## Base with fill background
+## Neutral outline
 
-The default background color of a button icon is transparent. You may apply a background fill of white by applying `lwc-button-icon_background` to the button icon. It is **highly recommended** that a bordered is applied with the background fill.
+The default border color of a button icon is transparent. You may apply a border color to the button icon by applying `lwc-button-icon_neutral-outline` to the button icon.
 
 <CodeView toggleCode={false} style={`background-color: #f3f2f2; padding: 1rem; margin: -1rem; lightning-button-icon { margin-right: 0.5rem; }`}>
   <React.Fragment>
-    {getDisplayElementById(ButtonIconExamples.examples, "filled")}
-    {getDisplayElementById(ButtonIconExamples.states, "filled-disabled")}
+    {getDisplayElementById(ButtonIconExamples.examples, "neutral-outline")}
+    {getDisplayElementById(ButtonIconExamples.states, "neutral-outline-disabled")}
   </React.Fragment>
 </CodeView>
 
@@ -59,6 +59,15 @@ The default background color of a button icon is transparent. You may apply a ba
   <React.Fragment>
     {getDisplayElementById(ButtonIconExamples.examples, "brand")}
     {getDisplayElementById(ButtonIconExamples.states, "brand-disabled")}
+  </React.Fragment>
+</CodeView>
+
+## Inverse
+
+<CodeView toggleCode={false} style={`background-color: #16325c; padding: 1rem; margin: -1rem; lightning-button-icon { margin-right: 0.5rem; }`}>
+  <React.Fragment>
+    {getDisplayElementById(ButtonIconExamples.examples, "inverse-doc")}
+    {getDisplayElementById(ButtonIconExamples.states, "inverse-disabled-doc")}
   </React.Fragment>
 </CodeView>
 
@@ -115,17 +124,3 @@ The default background color of a button icon is transparent. You may apply a ba
     </CodeView>
   </DisplayColumn>
 </DisplayGrid>
-
-## Customization Examples
-
-### Trailhead
-
-<CodeView toggleCode={false}>
-  {getDisplayElementById(ButtonIconExamples.examples, "customization-trailhead")}
-</CodeView>
-
-### Addidas
-
-<CodeView toggleCode={false}>
-  {getDisplayElementById(ButtonIconExamples.examples, "customization-addidas")}
-</CodeView>

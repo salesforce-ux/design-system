@@ -45,17 +45,6 @@
 }
 
 /**
- * @name full-bleed
- * @summary Sets card body to have content bleed to edges
- * @selector .lwc-card__body_full-bleed
- * @restrict .lwc-card__body
- * @modifier
- */
-.lwc-card__header_full-bleed {
-  --lwc-c-card-body-spacing-horizontal: 0;
-}
-
-/**
  * @summary Parent container of actions slot
  * @selector .lwc-card__header-actions
  * @restrict .lwc-card__header div

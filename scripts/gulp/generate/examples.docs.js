@@ -63,6 +63,7 @@ export default async () => {
                 React.Children.toArray(e.props.children)
               )
             );
+
             if (e.type === CodeBlock) return fragment;
             if (e.type === CodeView) return fragment;
             return e;

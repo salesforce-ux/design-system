@@ -20,11 +20,13 @@
 
 @mixin button-icon-normalize {
   background-color: var(--lwc-c-button-icon-color-background, transparent);
-  border-radius: var(--lwc-c-button-icon-border-radius, $border-radius-medium);
-  border: var(--lwc-c-button-icon-border-width, $border-width-thin) solid var(--lwc-c-button-icon-border-color, transparent);
-  box-shadow: var(--lwc-c-button-icon-shadow, none);
+  border-radius: var(--lwc-c-button-icon-border-radius, var(--lwc-c-button-border-radius, $border-radius-medium));
+  border: var(--lwc-c-button-icon-border-width, var(--lwc-c-button-border-width, $border-width-thin)) solid var(--lwc-c-button-icon-color-border, var(--lwc-c-button-color-border, transparent));
+  box-shadow: var(--lwc-c-button-icon-shadow, var(--lwc-c-button-shadow, none));
   text-align: center;
   vertical-align: middle;
+  margin: var(--lwc-c-button-icon-spacing-vertical, var(--lwc-c-button-spacing-vertical, 0)) var(--lwc-c-button-icon-spacing-horizontal, var(--lwc-c-button-spacing-horizontal, 0));
+  --lwc-c-icon-color: var(--lwc-c-button-icon-color, $color-gray-9);
 
   &:hover,
   &:focus,
@@ -35,17 +37,19 @@
 
   &:hover,
   &:focus {
-    --lwc-c-icon-color: var(--lwc-c-button-icon-color-active, $brand-accessible-active);
+    background-color: var(--lwc-c-button-icon-color-background-active, transparent);
+    border-color: var(--lwc-c-button-icon-color-border-active, transparent);
+    --lwc-c-icon-color: var(--lwc-c-button-icon-color-active, var(--lwc-brand-accessible-active, $brand-accessible-active));
   }
 
   &:focus {
     outline: 0;
-    --lwc-c-button-icon-shadow: var(--lwc-c-button-icon-shadow-active, 0 0 2px $brand-accessible);
-    --lwc-c-button-icon-border-color: var(--lwc-c-button-icon-color-border-active, $brand-accessible);
+    z-index: var(--lwc-c-button-depth-active, 0);
+    box-shadow: var(--lwc-c-button-icon-shadow-focus, 0 0 3px var(--lwc-brand-accessible, $brand-accessible));
   }
 
   &:active {
-    --lwc-c-icon-color: var(--lwc-c-button-icon-color-active, $brand-accessible-active);
+    --lwc-c-icon-color: var(--lwc-c-button-icon-color-active, var(--lwc-brand-accessible-active, $brand-accessible-active));
   }
 
   &[disabled],

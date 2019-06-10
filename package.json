@@ -222,6 +222,7 @@
     "modules": {
       "@salesforce/slds/button": "ui/modules/button/base/index.css",
       "@salesforce/slds/buttonIcon": "ui/modules/button-icon/base/index.css",
+      "@salesforce/slds/buttonGroup": "ui/modules/button-group/base/index.css",
       "@salesforce/slds/card": "ui/modules/card/base/index.css",
       "@salesforce/slds/common": "ui/modules/common/index.css",
       "@salesforce/slds/icon": "ui/modules/icon/base/index.css"

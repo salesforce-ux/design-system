@@ -26,10 +26,8 @@
   line-height: var(--lwc-c-button-height, $line-height-button);
   text-align: center;
   vertical-align: middle;
-  box-shadow: var(--lwc-c-button-box-shadow, none);
-
-  --lwc-c-active-button-color-border: var(--lwc-c-button-color-border);
-  --lwc-c-active-button-color: var(--lwc-c-button-color);
+  box-shadow: var(--lwc-c-button-shadow, none);
+  margin: var(--lwc-c-button-spacing-vertical, 0) var(--lwc-c-button-spacing-horizontal, 0);
 
   &:hover,
   &:focus,
@@ -41,20 +39,21 @@
   &:hover,
   &:focus {
     border-color: var(--lwc-c-active-button-color-border, transparent);
-    color: var(--lwc-c-active-button-color, $brand-accessible-active);
+    color: var(--lwc-c-active-button-color, var(--lwc-brand-accessible-active, $brand-accessible-active));
     background-color: var(--lwc-c-active-button-color-background, transparent);
   }
 
   &:focus {
     outline: 0;
-    box-shadow: var(--lwc-c-active-button-box-shadow, 0 0 2px $brand-accessible);
+    box-shadow: var(--lwc-c-active-button-box-shadow, 0 0 2px var(--lwc-brand-accessible, $brand-accessible));
+    z-index: var(--lwc-c-button-depth-active, 0);
   }
 
   &[disabled],
   &:disabled {
+    background-color: var(--lwc-c-disabled-button-color-background, transparent);
     border-color: var(--lwc-c-disabled-button-color-border, transparent);
     color: var(--lwc-c-disabled-button-color, $color-gray-5);
-    background-color: var(--lwc-c-disabled-button-color-background, transparent);
     cursor: default;
 
     * {

@@ -11,15 +11,28 @@ import common from '../common/index.scss';
 import buttonIcon from './base/index.scss';
 
 class ButtonIcon extends Component {
+  constructor() {
+    super();
+    this.handlePressed = this.handlePressed.bind(this);
+    this.state = {
+      isPressed: false
+    };
+  }
+  handlePressed() {
+    this.setState({
+      isPressed: !this.state.isPressed
+    });
+  }
   render() {
     const {
       sprite,
       symbol,
       size,
       boundarySize,
-      hasBorder,
-      hasBackground,
       disabled,
+      isPressed,
+      title,
+      type,
       variant,
       shadow,
       customization,
@@ -27,15 +40,15 @@ class ButtonIcon extends Component {
     } = this.props;
 
     const buttonVariantClassName = {
-      'lwc-button-icon_brand': variant === 'brand'
+      'lwc-button-icon_neutral': variant === 'neutral',
+      'lwc-button-icon_neutral-outline': variant === 'neutral-outline',
+      'lwc-button-icon_menu': variant === 'menu',
+      'lwc-button-icon_brand': variant === 'brand',
+      'lwc-button-icon_inverse': variant === 'inverse'
     };
 
-    const buttonBorderClassName = {
-      'lwc-button-icon_bordered': hasBorder
-    };
-
-    const buttonBackgroundClassName = {
-      'lwc-button-icon_background': hasBackground
+    const buttonStateClassName = {
+      'lwc-is-pressed': isPressed || this.state.isPressed
     };
 
     return (
@@ -48,10 +61,14 @@ class ButtonIcon extends Component {
           className={classNames(
             'lwc-button-icon',
             buttonVariantClassName,
-            buttonBorderClassName,
-            buttonBackgroundClassName
+            buttonStateClassName
           )}
           disabled={disabled}
+          aria-pressed={
+            type === 'stateful' ? isPressed || this.state.isPressed : null
+          }
+          title={title}
+          onClick={type === 'stateful' ? this.handlePressed : undefined}
         >
           <Icon
             size={size}
@@ -76,10 +93,10 @@ ButtonIcon.propTypes = {
   symbol: PropTypes.string.isRequired,
   size: PropTypes.string,
   boundarySize: PropTypes.string,
-  hasBorder: PropTypes.bool,
-  hasBackground: PropTypes.bool,
+  isPressed: PropTypes.bool,
   disabled: PropTypes.bool,
   variant: PropTypes.string,
+  title: PropTypes.string,
   shadow: PropTypes.bool,
   customization: PropTypes.node,
   assistiveText: PropTypes.string

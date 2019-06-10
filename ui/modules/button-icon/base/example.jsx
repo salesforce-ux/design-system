@@ -1,26 +1,38 @@
 import React from 'react';
 import ButtonIcon from '../';
+import styled from 'styled-components';
 
-const ButtonIconExample = () => <ButtonIcon boundarySize="small" />;
+const Inverse = styled.div`
+  display: inline-flex;
+  background-color: #16325c;
+  padding: 0.5rem;
+`;
 
-export default ButtonIconExample;
+export default <ButtonIcon boundarySize="medium" />;
 
 export let states = [
   {
     id: 'default-disabled',
     label: 'Default Disabled',
-    element: <ButtonIcon disabled boundarySize="small" />
+    element: <ButtonIcon disabled boundarySize="medium" />
   },
   {
-    id: 'bordered-disabled',
-    label: 'Bordered Disabled',
-    element: <ButtonIcon disabled hasBorder boundarySize="small" />
-  },
-  {
-    id: 'filled-disabled',
-    label: 'Filled Disabled',
+    id: 'neutral-disabled',
+    label: 'Neutral Disabled',
     element: (
-      <ButtonIcon disabled hasBorder hasBackground boundarySize="small" />
+      <ButtonIcon
+        disabled
+        variant="neutral"
+        hasBackground
+        boundarySize="medium"
+      />
+    )
+  },
+  {
+    id: 'neutral-outline-disabled',
+    label: 'Neutral Outline Disabled',
+    element: (
+      <ButtonIcon disabled variant="neutral-outline" boundarySize="medium" />
     )
   },
   {
@@ -31,7 +43,99 @@ export let states = [
         symbol="search"
         disabled
         variant="brand"
-        boundarySize="small"
+        boundarySize="medium"
+      />
+    )
+  },
+  {
+    id: 'inverse-disabled',
+    label: 'Inverse Disabled',
+    element: (
+      <Inverse>
+        <ButtonIcon
+          symbol="add"
+          variant="inverse"
+          boundarySize="medium"
+          disabled
+        />
+      </Inverse>
+    )
+  },
+  {
+    id: 'inverse-disabled-doc',
+    label: 'Inverse Disabled - For Doc Use',
+    element: (
+      <ButtonIcon
+        symbol="add"
+        variant="inverse"
+        boundarySize="medium"
+        disabled
+      />
+    )
+  },
+  {
+    id: 'stateful',
+    label: 'Stateful',
+    element: (
+      <ButtonIcon
+        symbol="add"
+        variant="neutral"
+        type="stateful"
+        boundarySize="medium"
+        title="Add"
+      />
+    )
+  },
+  {
+    id: 'stateful-not-pressed',
+    label: 'Stateful - Not Pressed',
+    element: (
+      <ButtonIcon
+        symbol="add"
+        isPressed={false}
+        variant="neutral"
+        type="stateful"
+        boundarySize="medium"
+        title="Add"
+      />
+    )
+  },
+  {
+    id: 'stateful-pressed',
+    label: 'Stateful - Pressed',
+    element: (
+      <ButtonIcon
+        symbol="add"
+        isPressed
+        variant="neutral"
+        type="stateful"
+        boundarySize="medium"
+        title="Add"
+      />
+    )
+  },
+  {
+    id: 'overflow-menu',
+    label: 'Overflow Menu',
+    element: (
+      <ButtonIcon
+        symbol="settings"
+        variant="menu"
+        boundarySize="medium"
+        title="More Options"
+      />
+    )
+  },
+  {
+    id: 'overflow-menu-disabled',
+    label: 'Overflow Menu Disabled',
+    element: (
+      <ButtonIcon
+        symbol="settings"
+        variant="menu"
+        boundarySize="medium"
+        title="More Options"
+        disabled
       />
     )
   }
@@ -39,33 +143,41 @@ export let states = [
 
 export let examples = [
   {
-    id: 'all',
-    label: 'All Variants',
-    element: (
-      <React.Fragment>
-        <ButtonIcon boundarySize="small" />
-        <ButtonIcon symbol="search" variant="brand" boundarySize="small" />
-        <ButtonIcon symbol="add" hasBorder boundarySize="small" />
-        <ButtonIcon symbol="add" hasBorder hasBackground boundarySize="small" />
-      </React.Fragment>
-    )
-  },
-  {
     id: 'brand',
     label: 'Brand',
-    element: <ButtonIcon symbol="search" variant="brand" boundarySize="small" />
-  },
-  {
-    id: 'bordered',
-    label: 'Bordered',
-    element: <ButtonIcon symbol="add" hasBorder boundarySize="small" />
-  },
-  {
-    id: 'filled',
-    label: 'Filled',
     element: (
-      <ButtonIcon symbol="add" hasBorder hasBackground boundarySize="small" />
+      <ButtonIcon symbol="search" variant="brand" boundarySize="medium" />
     )
+  },
+  {
+    id: 'neutral',
+    label: 'Neutral',
+    element: <ButtonIcon symbol="add" variant="neutral" boundarySize="medium" />
+  },
+  {
+    id: 'neutral-outline',
+    label: 'Neutral Outline',
+    element: (
+      <ButtonIcon
+        symbol="add"
+        variant="neutral-outline"
+        boundarySize="medium"
+      />
+    )
+  },
+  {
+    id: 'inverse',
+    label: 'Inverse',
+    element: (
+      <Inverse>
+        <ButtonIcon symbol="add" variant="inverse" boundarySize="medium" />
+      </Inverse>
+    )
+  },
+  {
+    id: 'inverse-doc',
+    label: 'Inverse - For Doc Use',
+    element: <ButtonIcon symbol="add" variant="inverse" boundarySize="medium" />
   },
   {
     id: 'icon-sizes',
@@ -103,31 +215,31 @@ export let examples = [
           symbol="settings"
           boundarySize="x-large"
           size="large"
-          hasBorder
+          variant="neutral"
         />
         <ButtonIcon
           symbol="settings"
           boundarySize="large"
           size="medium"
-          hasBorder
+          variant="neutral"
         />
         <ButtonIcon
           symbol="settings"
           boundarySize="medium"
           size="small"
-          hasBorder
+          variant="neutral"
         />
         <ButtonIcon
           symbol="settings"
           boundarySize="small"
           size="x-small"
-          hasBorder
+          variant="neutral"
         />
         <ButtonIcon
           symbol="settings"
           boundarySize="x-small"
           size="xx-small"
-          hasBorder
+          variant="neutral"
         />
       </React.Fragment>
     )
@@ -141,31 +253,31 @@ export let examples = [
           symbol="settings"
           boundarySize="x-large"
           size="large"
-          hasBorder
+          variant="neutral"
         />
         <ButtonIcon
           symbol="settings"
           boundarySize="x-large"
           size="medium"
-          hasBorder
+          variant="neutral"
         />
         <ButtonIcon
           symbol="settings"
           boundarySize="x-large"
           size="small"
-          hasBorder
+          variant="neutral"
         />
         <ButtonIcon
           symbol="settings"
           boundarySize="x-large"
           size="x-small"
-          hasBorder
+          variant="neutral"
         />
         <ButtonIcon
           symbol="settings"
           boundarySize="x-large"
           size="xx-small"
-          hasBorder
+          variant="neutral"
         />
       </React.Fragment>
     )
@@ -179,25 +291,25 @@ export let examples = [
           symbol="settings"
           boundarySize="large"
           size="medium"
-          hasBorder
+          variant="neutral"
         />
         <ButtonIcon
           symbol="settings"
           boundarySize="large"
           size="small"
-          hasBorder
+          variant="neutral"
         />
         <ButtonIcon
           symbol="settings"
           boundarySize="large"
           size="x-small"
-          hasBorder
+          variant="neutral"
         />
         <ButtonIcon
           symbol="settings"
           boundarySize="large"
           size="xx-small"
-          hasBorder
+          variant="neutral"
         />
       </React.Fragment>
     )
@@ -211,19 +323,19 @@ export let examples = [
           symbol="settings"
           boundarySize="medium"
           size="small"
-          hasBorder
+          variant="neutral"
         />
         <ButtonIcon
           symbol="settings"
           boundarySize="medium"
           size="x-small"
-          hasBorder
+          variant="neutral"
         />
         <ButtonIcon
           symbol="settings"
           boundarySize="medium"
           size="xx-small"
-          hasBorder
+          variant="neutral"
         />
       </React.Fragment>
     )
@@ -237,13 +349,13 @@ export let examples = [
           symbol="settings"
           boundarySize="small"
           size="x-small"
-          hasBorder
+          variant="neutral"
         />
         <ButtonIcon
           symbol="settings"
           boundarySize="small"
           size="xx-small"
-          hasBorder
+          variant="neutral"
         />
       </React.Fragment>
     )
@@ -256,7 +368,7 @@ export let examples = [
         symbol="settings"
         boundarySize="x-small"
         size="xx-small"
-        hasBorder
+        variant="neutral"
       />
     )
   },
@@ -267,14 +379,13 @@ export let examples = [
       <ButtonIcon
         symbol="add"
         boundarySize="medium"
-        hasBorder
-        hasBackground
+        variant="neutral"
         customization={`
           :host {
             --lwc-c-button-icon-shadow: 0 1px 0 #e2e2e2;
             --lwc-c-button-icon-color-background-default-active: #e2e2e2;
-            --lwc-c-button-icon-color-default-active: #585858;
-            --lwc-c-button-icon-shadow-active: var(--lwc-c-theme-button-icon-shadow);
+            --lwc-c-active-button-icon-color-default: #585858;
+            --lwc-c-active-button-icon-shadow: var(--lwc-c-theme-button-icon-shadow);
           }
         `}
       />
@@ -294,10 +405,10 @@ export let examples = [
             --lwc-c-button-icon-color-background-brand-active: #000;
             --lwc-c-button-icon-color-border-brand: #000;
             --lwc-c-button-icon-color-border-brand-active: #000;
-            --lwc-c-button-icon-color-brand-active: #767677;
+            --lwc-c-active-button-icon-color-brand: #767677;
             --lwc-c-button-icon-border-radius: 0;
             --lwc-c-button-icon-shadow: 2px 2px 0 1px #fff, 3px 3px 0 1px #000;
-            --lwc-c-button-icon-shadow-active: var(--lwc-c-button-icon-shadow);
+            --lwc-c-active-button-icon-shadow: var(--lwc-c-button-icon-shadow);
           }
         `}
       />

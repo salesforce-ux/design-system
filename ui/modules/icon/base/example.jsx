@@ -1,11 +1,9 @@
 import React from 'react';
 import Icon from '../';
 
-const IconExample = () => (
+export default (
   <Icon sprite="utility" symbol="add" title="add" assistiveText="add" />
 );
-
-export default IconExample;
 
 export let examples = [
   {

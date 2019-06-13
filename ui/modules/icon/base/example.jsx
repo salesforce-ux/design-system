@@ -193,26 +193,10 @@ export let examples = [
     id: 'with-text',
     label: 'Icons with Text',
     element: (
-      <React.Fragment>
-        <div className="slds-media slds-media_center">
-          <span className="slds-media__figure">
-            <Icon symbol="pinned" boundarySize="small" />
-          </span>
-          <span className="slds-media__body">Pinned Item</span>
-        </div>
-        <div className="slds-media slds-media_center">
-          <span className="slds-media__figure">
-            <Icon sprite="standard" symbol="account" size="small" />
-          </span>
-          <span className="slds-media__body">Accounts</span>
-        </div>
-        <div className="slds-media slds-media_center">
-          <span className="slds-media__figure">
-            <Icon sprite="action" symbol="call" />
-          </span>
-          <span className="slds-media__body">Call</span>
-        </div>
-      </React.Fragment>
+      <a href="#" className="lwc-align-inline_center">
+        <Icon symbol="email" boundarySize="x-small" />
+        name@salesforce.com
+      </a>
     )
   }
 ];

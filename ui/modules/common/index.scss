@@ -9,3 +9,9 @@
 .lwc-assistive-text {
   @include assistive-text;
 }
+
+.lwc-align-inline_center {
+  display: inline-flex;
+  align-items: center;
+  --lwc-c-icon-spacing-horizontal-end: $spacing-x-small;
+}

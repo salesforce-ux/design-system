@@ -301,6 +301,7 @@ $icon-bg-map: map-merge($bg-actions-map, $bg-custom-map);
  */
 .lwc-icon-boundary {
   @include icon-base;
+  margin: var(--lwc-c-icon-spacing-vertical-top, 0) var(--lwc-c-icon-spacing-horizontal-end, 0) var(--lwc-c-icon-spacing-vertical-bottom, 0) var(--lwc-c-icon-spacing-horizontal-start, 0);
 }
 
 /**

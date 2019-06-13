@@ -33,7 +33,8 @@
 // [yup][yup]
 .lwc-button-group slot > :not(:first-child):not(:last-child),
 .lwc-button-group slot > :first-child + :last-child {
-  --lwc-c-button-spacing-horizontal: -1px;
+  --lwc-c-button-spacing-horizontal-start: -1px;
+  --lwc-c-button-spacing-horizontal-end: -1px;
 }
 
 // Scenarios:

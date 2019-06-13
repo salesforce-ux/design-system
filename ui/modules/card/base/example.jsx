@@ -110,8 +110,10 @@ export const examples = [
             --lwc-c-card-border-width: 0;
             --lwc-c-card-box-shadow: 0 2px 1px -1px rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 1px 3px 0 rgba(0,0,0,.12);
             --lwc-c-card-border-radius: 4px;
-            --lwc-c-card-header-spacing-vertical: 0;
-            --lwc-c-card-header-spacing-horizontal: 0;
+            --lwc-c-card-header-spacing-vertical-top: 0;
+            --lwc-c-card-header-spacing-vertical-bottom: 0;
+            --lwc-c-card-header-spacing-horizontal-start: 0;
+            --lwc-c-card-header-spacing-horizontal-end: 0;
             --lwc-c-card-footer-text-align: left;
             --lwc-c-card-footer-border-width: 0;
           }

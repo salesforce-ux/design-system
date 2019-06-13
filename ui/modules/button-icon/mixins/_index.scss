@@ -25,7 +25,10 @@
   box-shadow: var(--lwc-c-button-icon-shadow, var(--lwc-c-button-shadow, none));
   text-align: center;
   vertical-align: middle;
-  margin: var(--lwc-c-button-icon-spacing-vertical, var(--lwc-c-button-spacing-vertical, 0)) var(--lwc-c-button-icon-spacing-horizontal, var(--lwc-c-button-spacing-horizontal, 0));
+  margin-top: var(--lwc-c-button-icon-spacing-vertical-top, var(--lwc-c-button-spacing-vertical-top, 0));
+  margin-right: var(--lwc-c-button-icon-spacing-horizontal-end, var(--lwc-c-button-spacing-horizontal-end, 0));
+  margin-bottom: var(--lwc-c-button-icon-spacing-vertical-bottom, var(--lwc-c-button-spacing-vertical-bottom, 0));
+  margin-left: var(--lwc-c-button-icon-spacing-horizontal-start, var(--lwc-c-button-spacing-horizontal-start, 0));
   --lwc-c-icon-color: var(--lwc-c-button-icon-color, $color-gray-9);
 
   &:hover,

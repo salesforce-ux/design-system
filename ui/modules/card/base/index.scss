@@ -21,7 +21,10 @@
  */
 .lwc-card {
   position: relative;
-  padding: var(--lwc-c-card-padding, 0);
+  padding-top: var(--lwc-c-card-spacing-vertical-top, 0);
+  padding-right: var(--lwc-c-card-spacing-horizontal-end, 0);
+  padding-bottom: var(--lwc-c-card-spacing-vertical-bottom, 0);
+  padding-left: var(--lwc-c-card-spacing-horizontal-start, 0);
   background: var(--lwc-c-card-color-background, $color-gray-1);
   border: var(--lwc-c-card-border-width, $border-width-thin) solid var(--lwc-c-card-border-color, $color-border);
   border-radius: var(--lwc-c-card-border-radius, $border-radius-medium);
@@ -36,8 +39,15 @@
  * @restrict .lwc-card div
  */
 .lwc-card__header {
-  padding: var(--lwc-c-card-header-spacing-vertical, var(--var-spacing-vertical-small, $var-spacing-vertical-small)) var(--lwc-c-card-header-spacing-horizontal, var(--var-spacing-horizontal-medium, $var-spacing-horizontal-medium)) 0;
-  margin: 0 0 var(--lwc-c-card-header-spacing-vertical, var(--var-spacing-vertical-small, $var-spacing-vertical-small));
+  padding-top: var(--lwc-c-card-header-spacing-vertical-top, var(--var-spacing-vertical-small, $var-spacing-vertical-small));
+  padding-right: var(--lwc-c-card-header-spacing-horizontal-end, var(--var-spacing-horizontal-medium, $var-spacing-horizontal-small));
+  padding-bottom: var(--lwc-c-card-header-spacing-vertical-bottom, 0);
+  padding-left: var(--lwc-c-card-header-spacing-horizontal-start, var(--var-spacing-horizontal-medium, $var-spacing-horizontal-medium));
+
+  margin-top: var(--lwc-c-card-header-spacing-vertical-top, 0);
+  margin-right: var(--lwc-c-card-header-spacing-horizontal-end, 0);
+  margin-bottom: var(--lwc-c-card-header-spacing-vertical-bottom, var(--var-spacing-vertical-small, $var-spacing-vertical-small));
+  margin-left: var(--lwc-c-card-header-spacing-horizontal-start, 0);
 
   header {
     display: flex;
@@ -92,9 +102,12 @@
  * @restrict .lwc-card div
  */
 .lwc-card__body {
-  margin-top: var(--lwc-c-card-body-spacing-vertical, var(--var-spacing-vertical-small, $var-spacing-vertical-small));
-  margin-bottom: var(--lwc-c-card-body-spacing-vertical, var(--var-spacing-vertical-small, $var-spacing-vertical-small));
-  padding: var(--lwc-c-card-body-spacing-vertical, 0) var(--lwc-c-card-body-spacing-horizontal, 0);
+  margin-top: var(--lwc-c-card-body-spacing-vertical-top, var(--var-spacing-vertical-small, $var-spacing-vertical-small));
+  margin-bottom: var(--lwc-c-card-body-spacing-vertical-bottom, var(--var-spacing-vertical-small, $var-spacing-vertical-small));
+  padding-top: var(--lwc-c-card-body-spacing-vertical-top, 0);
+  padding-right: var(--lwc-c-card-body-spacing-horizontal-end, 0);
+  padding-bottom: var(--lwc-c-card-body-spacing-vertical-bottom, 0);
+  padding-left: var(--lwc-c-card-body-spacing-horizontal-start, 0);
 }
 
 .lwc-card__body:empty {
@@ -109,7 +122,8 @@
  * @modifier
  */
 .lwc-card__body_padded {
-  --lwc-c-card-body-spacing-horizontal: var(--var-spacing-horizontal-medium, $var-spacing-horizontal-medium);
+  --lwc-c-card-body-spacing-horizontal-start: var(--var-spacing-horizontal-medium, $var-spacing-horizontal-medium);
+  --lwc-c-card-body-spacing-horizontal-end: var(--var-spacing-horizontal-medium, $var-spacing-horizontal-medium);
 }
 
 /**
@@ -118,8 +132,12 @@
  * @restrict .lwc-card footer
  */
 .lwc-card__footer {
-  padding: var(--lwc-c-card-footer-spacing-vertical, var(--var-spacing-vertical-small, $var-spacing-vertical-small)) var(--lwc-c-card-footer-spacing-horizontal, var(--var-spacing-horizontal-medium, $var-spacing-horizontal-medium));
-  margin-top: var(--lwc-c-card-footer-spacing-vertical, var(--var-spacing-vertical-small, $var-spacing-vertical-small));
+  padding-top: var(--lwc-c-card-footer-spacing-vertical-top, var(--var-spacing-vertical-small, $var-spacing-vertical-small));
+  padding-right: var(--lwc-c-card-footer-spacing-horizontal-end, var(--var-spacing-horizontal-medium, $var-spacing-horizontal-small));
+  padding-bottom: var(--lwc-c-card-footer-spacing-vertical-bottom, var(--var-spacing-vertical-small, $var-spacing-vertical-small));
+  padding-left: var(--lwc-c-card-footer-spacing-horizontal-start, var(--var-spacing-horizontal-medium, $var-spacing-horizontal-medium));
+
+  margin-top: var(--lwc-c-card-footer-spacing-vertical-top, var(--var-spacing-vertical-small, $var-spacing-vertical-small));
   text-align: var(--lwc-c-card-footer-text-align, center);
   font-size: var(--lwc-c-card-footer-font-size, $font-size-3);
   border-top: var(--lwc-c-card-footer-border-width, $border-width-thin) solid var(--lwc-c-card-footer-border-color, $color-border);

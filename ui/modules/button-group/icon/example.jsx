@@ -185,7 +185,7 @@ export let examples = [
     )
   },
   {
-    id: 'single-buttons',
+    id: 'single-button',
     label: '1 Button',
     element: (
       <ButtonGroup>

@@ -98,3 +98,46 @@ A button group is limited to one primary brand button. The overflow menu button 
     {getDisplayElementById(ButtonGroupExamples.examples, 'five-buttons')}
   </React.Fragment>
 </CodeView>
+
+## Button Icons
+
+<CodeView>
+  {ButtonIconGroupExamples.default}
+</CodeView>
+
+### States
+
+#### Pressed
+
+<CodeView style={`lightning-button-group { margin-right: 0.5rem; }`}>
+  <React.Fragment>
+    {getDisplayElementById(ButtonIconGroupExamples.examples, 'single-pressed-button')}
+    {getDisplayElementById(ButtonIconGroupExamples.examples, 'two-pressed-buttons')}
+    {getDisplayElementById(ButtonIconGroupExamples.examples, 'three-pressed-buttons')}
+  </React.Fragment>
+</CodeView>
+
+#### Disabled
+
+<CodeView style={`lightning-button-group { margin-right: 0.5rem; }`}>
+  <React.Fragment>
+    {getDisplayElementById(ButtonIconGroupExamples.states, 'first-disabled')}
+    {getDisplayElementById(ButtonIconGroupExamples.states, 'middle-disabled')}
+    {getDisplayElementById(ButtonIconGroupExamples.states, 'last-disabled')}
+    {getDisplayElementById(ButtonIconGroupExamples.states, 'all-disabled')}
+  </React.Fragment>
+</CodeView>
+
+### Examples
+
+#### Variations with different # of buttons
+
+<CodeView style={`lightning-button-group { margin-right: 0.5rem; }`}>
+  <React.Fragment>
+    {getDisplayElementById(ButtonIconGroupExamples.examples, 'single-button')}
+    {getDisplayElementById(ButtonIconGroupExamples.examples, 'two-buttons')}
+    {getDisplayElementById(ButtonIconGroupExamples.examples, 'three-buttons')}
+    {getDisplayElementById(ButtonIconGroupExamples.examples, 'four-buttons')}
+    {getDisplayElementById(ButtonIconGroupExamples.examples, 'five-buttons')}
+  </React.Fragment>
+</CodeView>

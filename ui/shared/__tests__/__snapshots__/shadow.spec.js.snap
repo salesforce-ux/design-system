@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Shadow Wrapper Renders a shadow boundary 1`] = `"<lightning-component className=\\"resolved\\"></lightning-component>"`;
+
+exports[`Shadow Wrapper Renders no shadow boundary 1`] = `"<div>test</div>"`;

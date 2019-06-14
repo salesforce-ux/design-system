@@ -22,14 +22,14 @@ exports[`renders a default checkbox button group 1`] = `
           aria-describedby={undefined}
           defaultChecked={undefined}
           disabled={undefined}
-          id="monday"
+          id="unique-id-monday-1"
           name="checkbox"
           type="checkbox"
-          value="monday"
+          value="unique-id-monday-1"
         />
         <label
           className="slds-checkbox_button__label"
-          htmlFor="monday"
+          htmlFor="unique-id-monday-1"
         >
           <span
             className="slds-checkbox_faux"
@@ -45,14 +45,14 @@ exports[`renders a default checkbox button group 1`] = `
           aria-describedby={undefined}
           defaultChecked={undefined}
           disabled={undefined}
-          id="tuesday"
+          id="unique-id-tuesday-1"
           name="checkbox"
           type="checkbox"
-          value="tuesday"
+          value="unique-id-tuesday-1"
         />
         <label
           className="slds-checkbox_button__label"
-          htmlFor="tuesday"
+          htmlFor="unique-id-tuesday-1"
         >
           <span
             className="slds-checkbox_faux"
@@ -68,14 +68,14 @@ exports[`renders a default checkbox button group 1`] = `
           aria-describedby={undefined}
           defaultChecked={undefined}
           disabled={undefined}
-          id="wednesday"
+          id="unique-id-wednesday-1"
           name="checkbox"
           type="checkbox"
-          value="wednesday"
+          value="unique-id-wednesday-1"
         />
         <label
           className="slds-checkbox_button__label"
-          htmlFor="wednesday"
+          htmlFor="unique-id-wednesday-1"
         >
           <span
             className="slds-checkbox_faux"
@@ -91,14 +91,14 @@ exports[`renders a default checkbox button group 1`] = `
           aria-describedby={undefined}
           defaultChecked={undefined}
           disabled={undefined}
-          id="thursday"
+          id="unique-id-thursday-1"
           name="checkbox"
           type="checkbox"
-          value="thursday"
+          value="unique-id-thursday-1"
         />
         <label
           className="slds-checkbox_button__label"
-          htmlFor="thursday"
+          htmlFor="unique-id-thursday-1"
         >
           <span
             className="slds-checkbox_faux"
@@ -114,14 +114,14 @@ exports[`renders a default checkbox button group 1`] = `
           aria-describedby={undefined}
           defaultChecked={undefined}
           disabled={undefined}
-          id="friday"
+          id="unique-id-friday-1"
           name="checkbox"
           type="checkbox"
-          value="friday"
+          value="unique-id-friday-1"
         />
         <label
           className="slds-checkbox_button__label"
-          htmlFor="friday"
+          htmlFor="unique-id-friday-1"
         >
           <span
             className="slds-checkbox_faux"
@@ -157,14 +157,14 @@ exports[`renders a default checkbox button group with error 1`] = `
           aria-describedby="error_01"
           defaultChecked={undefined}
           disabled={undefined}
-          id="monday"
+          id="unique-id-monday-2"
           name="checkbox"
           type="checkbox"
-          value="monday"
+          value="unique-id-monday-2"
         />
         <label
           className="slds-checkbox_button__label"
-          htmlFor="monday"
+          htmlFor="unique-id-monday-2"
         >
           <span
             className="slds-checkbox_faux"
@@ -180,14 +180,14 @@ exports[`renders a default checkbox button group with error 1`] = `
           aria-describedby="error_01"
           defaultChecked={undefined}
           disabled={undefined}
-          id="tuesday"
+          id="unique-id-tuesday-2"
           name="checkbox"
           type="checkbox"
-          value="tuesday"
+          value="unique-id-tuesday-2"
         />
         <label
           className="slds-checkbox_button__label"
-          htmlFor="tuesday"
+          htmlFor="unique-id-tuesday-2"
         >
           <span
             className="slds-checkbox_faux"
@@ -203,14 +203,14 @@ exports[`renders a default checkbox button group with error 1`] = `
           aria-describedby="error_01"
           defaultChecked={undefined}
           disabled={undefined}
-          id="wednesday"
+          id="unique-id-wednesday-2"
           name="checkbox"
           type="checkbox"
-          value="wednesday"
+          value="unique-id-wednesday-2"
         />
         <label
           className="slds-checkbox_button__label"
-          htmlFor="wednesday"
+          htmlFor="unique-id-wednesday-2"
         >
           <span
             className="slds-checkbox_faux"
@@ -226,14 +226,14 @@ exports[`renders a default checkbox button group with error 1`] = `
           aria-describedby="error_01"
           defaultChecked={undefined}
           disabled={undefined}
-          id="thursday"
+          id="unique-id-thursday-2"
           name="checkbox"
           type="checkbox"
-          value="thursday"
+          value="unique-id-thursday-2"
         />
         <label
           className="slds-checkbox_button__label"
-          htmlFor="thursday"
+          htmlFor="unique-id-thursday-2"
         >
           <span
             className="slds-checkbox_faux"
@@ -249,14 +249,14 @@ exports[`renders a default checkbox button group with error 1`] = `
           aria-describedby="error_01"
           defaultChecked={undefined}
           disabled={undefined}
-          id="friday"
+          id="unique-id-friday-2"
           name="checkbox"
           type="checkbox"
-          value="friday"
+          value="unique-id-friday-2"
         />
         <label
           className="slds-checkbox_button__label"
-          htmlFor="friday"
+          htmlFor="unique-id-friday-2"
         >
           <span
             className="slds-checkbox_faux"
@@ -298,14 +298,14 @@ exports[`renders a disabled checkbox button group 1`] = `
           aria-describedby={undefined}
           defaultChecked={undefined}
           disabled="true"
-          id="monday"
+          id="unique-id-monday-3"
           name="checkbox"
           type="checkbox"
-          value="monday"
+          value="unique-id-monday-3"
         />
         <label
           className="slds-checkbox_button__label"
-          htmlFor="monday"
+          htmlFor="unique-id-monday-3"
         >
           <span
             className="slds-checkbox_faux"
@@ -321,14 +321,14 @@ exports[`renders a disabled checkbox button group 1`] = `
           aria-describedby={undefined}
           defaultChecked={undefined}
           disabled="true"
-          id="tuesday"
+          id="unique-id-tuesday-3"
           name="checkbox"
           type="checkbox"
-          value="tuesday"
+          value="unique-id-tuesday-3"
         />
         <label
           className="slds-checkbox_button__label"
-          htmlFor="tuesday"
+          htmlFor="unique-id-tuesday-3"
         >
           <span
             className="slds-checkbox_faux"
@@ -344,14 +344,14 @@ exports[`renders a disabled checkbox button group 1`] = `
           aria-describedby={undefined}
           defaultChecked={undefined}
           disabled="true"
-          id="wednesday"
+          id="unique-id-wednesday-3"
           name="checkbox"
           type="checkbox"
-          value="wednesday"
+          value="unique-id-wednesday-3"
         />
         <label
           className="slds-checkbox_button__label"
-          htmlFor="wednesday"
+          htmlFor="unique-id-wednesday-3"
         >
           <span
             className="slds-checkbox_faux"
@@ -367,14 +367,14 @@ exports[`renders a disabled checkbox button group 1`] = `
           aria-describedby={undefined}
           defaultChecked={undefined}
           disabled="true"
-          id="thursday"
+          id="unique-id-thursday-3"
           name="checkbox"
           type="checkbox"
-          value="thursday"
+          value="unique-id-thursday-3"
         />
         <label
           className="slds-checkbox_button__label"
-          htmlFor="thursday"
+          htmlFor="unique-id-thursday-3"
         >
           <span
             className="slds-checkbox_faux"
@@ -390,14 +390,14 @@ exports[`renders a disabled checkbox button group 1`] = `
           aria-describedby={undefined}
           defaultChecked={undefined}
           disabled="true"
-          id="friday"
+          id="unique-id-friday-3"
           name="checkbox"
           type="checkbox"
-          value="friday"
+          value="unique-id-friday-3"
         />
         <label
           className="slds-checkbox_button__label"
-          htmlFor="friday"
+          htmlFor="unique-id-friday-3"
         >
           <span
             className="slds-checkbox_faux"

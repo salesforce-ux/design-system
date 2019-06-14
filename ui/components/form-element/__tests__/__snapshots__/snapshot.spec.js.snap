@@ -1218,7 +1218,7 @@ exports[`Horizontal Form Element renders deprecated horizontal form elements - e
       >
         <label
           className="slds-form-element__label"
-          htmlFor="checkbox-id-01"
+          htmlFor="checkbox-unique-id-5"
           id={undefined}
         >
           Security Assessment Required?
@@ -1233,7 +1233,7 @@ exports[`Horizontal Form Element renders deprecated horizontal form elements - e
               aria-describedby={undefined}
               defaultChecked={undefined}
               disabled={undefined}
-              id="checkbox-id-01"
+              id="checkbox-unique-id-5"
               name="label"
               required={undefined}
               type="checkbox"
@@ -1356,15 +1356,15 @@ exports[`Horizontal Form Element renders deprecated horizontal form elements - e
               aria-labelledby={null}
               defaultChecked={true}
               disabled={undefined}
-              id="checkbox-5"
+              id="checkbox-unique-id-6"
               name="default"
               tabIndex={undefined}
               type="checkbox"
-              value="checkbox-5"
+              value="checkbox-unique-id-6"
             />
             <label
               className="slds-checkbox__label"
-              htmlFor="checkbox-5"
+              htmlFor="checkbox-unique-id-6"
               id={undefined}
             >
               <span
@@ -1385,15 +1385,15 @@ exports[`Horizontal Form Element renders deprecated horizontal form elements - e
               aria-labelledby={null}
               defaultChecked={undefined}
               disabled={undefined}
-              id="checkbox-6"
+              id="checkbox-unique-id-7"
               name="default"
               tabIndex={undefined}
               type="checkbox"
-              value="checkbox-6"
+              value="checkbox-unique-id-7"
             />
             <label
               className="slds-checkbox__label"
-              htmlFor="checkbox-6"
+              htmlFor="checkbox-unique-id-7"
               id={undefined}
             >
               <span
@@ -3067,15 +3067,15 @@ exports[`Horizontal Form Element renders simple horizontal form elements 1`] = `
           aria-labelledby={null}
           defaultChecked={undefined}
           disabled={undefined}
-          id="checkbox-3"
+          id="checkbox-unique-id-3"
           name="default"
           tabIndex={undefined}
           type="checkbox"
-          value="checkbox-3"
+          value="checkbox-unique-id-3"
         />
         <label
           className="slds-checkbox__label"
-          htmlFor="checkbox-3"
+          htmlFor="checkbox-unique-id-3"
           id={undefined}
         >
           <span
@@ -3096,15 +3096,15 @@ exports[`Horizontal Form Element renders simple horizontal form elements 1`] = `
           aria-labelledby={null}
           defaultChecked={undefined}
           disabled={undefined}
-          id="checkbox-4"
+          id="checkbox-unique-id-4"
           name="default"
           tabIndex={undefined}
           type="checkbox"
-          value="checkbox-4"
+          value="checkbox-unique-id-4"
         />
         <label
           className="slds-checkbox__label"
-          htmlFor="checkbox-4"
+          htmlFor="checkbox-unique-id-4"
           id={undefined}
         >
           <span
@@ -4621,15 +4621,15 @@ exports[`Stacked Form Element renders simple stacked form elements 1`] = `
           aria-labelledby={null}
           defaultChecked={undefined}
           disabled={undefined}
-          id="checkbox-1"
+          id="checkbox-unique-id-1"
           name="default"
           tabIndex={undefined}
           type="checkbox"
-          value="checkbox-1"
+          value="checkbox-unique-id-1"
         />
         <label
           className="slds-checkbox__label"
-          htmlFor="checkbox-1"
+          htmlFor="checkbox-unique-id-1"
           id={undefined}
         >
           <span
@@ -4650,15 +4650,15 @@ exports[`Stacked Form Element renders simple stacked form elements 1`] = `
           aria-labelledby={null}
           defaultChecked={undefined}
           disabled={undefined}
-          id="checkbox-2"
+          id="checkbox-unique-id-2"
           name="default"
           tabIndex={undefined}
           type="checkbox"
-          value="checkbox-2"
+          value="checkbox-unique-id-2"
         />
         <label
           className="slds-checkbox__label"
-          htmlFor="checkbox-2"
+          htmlFor="checkbox-unique-id-2"
           id={undefined}
         >
           <span

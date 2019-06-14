@@ -6,6 +6,7 @@ import React from 'react';
 import createHelpers from '../../../../jest.helpers';
 import { Checkbox } from '../base/example';
 import { CheckboxPrimitive, CheckboxStandalone } from '../';
+import { FormElementCheckboxStandalone } from '../form-element';
 
 const { matchesMarkup } = createHelpers(__dirname);
 
@@ -54,4 +55,25 @@ describe('Standalone Checkbox', () => {
     matchesMarkup(<CheckboxStandalone isRequired />));
   it('renders primitive checkbox with an aria-describedby error ID', () =>
     matchesMarkup(<CheckboxStandalone errorId="error-id" />));
+});
+
+describe('Form Element Standalone Checkbox', () => {
+  it('renders form element standalone checkbox with a label', () =>
+    matchesMarkup(<FormElementCheckboxStandalone />));
+  it('renders form element standalone checkbox with an ID and a label', () =>
+    matchesMarkup(<FormElementCheckboxStandalone id="checkbox-id" />));
+  it('renders form element standalone checkbox with a name and a label', () =>
+    matchesMarkup(<FormElementCheckboxStandalone name="checkbox-name" />));
+  it('renders form element standalone checkbox with a value and a label', () =>
+    matchesMarkup(<FormElementCheckboxStandalone value="checkbox-value" />));
+  it('renders form element standalone checkbox that is disabled with a label', () =>
+    matchesMarkup(<FormElementCheckboxStandalone isDisabled />));
+  it('renders form element standalone checkbox that is required with a label', () =>
+    matchesMarkup(<FormElementCheckboxStandalone isRequired />));
+  it('renders = form element standalone checkbox with an aria-describedby error ID with label and error text', () =>
+    matchesMarkup(
+      <FormElementCheckboxStandalone hasError inlineMessage="Error message" />
+    ));
+  it('renders form element standalone checkbox that is checked with a label', () =>
+    matchesMarkup(<FormElementCheckboxStandalone isChecked />));
 });

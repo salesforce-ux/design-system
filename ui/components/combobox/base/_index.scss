@@ -392,6 +392,10 @@
 .slds-listbox--object-switcher {
   flex-shrink: 0;
   padding: $spacing-xxx-small;
+
+  @include touch-device {
+    padding: 0;
+  }
 }
 
 /**
@@ -407,6 +411,10 @@
     transition: width 80ms linear;
     font-size: $font-size-2;
     color: $color-text-placeholder;
+
+    @include touch-device {
+      font-size: $font-size-5;
+    }
 
     &:focus,
     &.slds-has-focus {
@@ -515,6 +523,10 @@
   height: calc(#{$height-input} + #{$border-width-thin});
   overflow: hidden;
 
+  @include touch-device {
+    height: $height-tappable;
+  }
+
   /**
    * @summary Expanded state of a selection group
    * @selector .slds-is-expanded
@@ -536,9 +548,8 @@
    * @restrict .slds-listbox_selection-group > span
    */
   .slds-listbox-toggle {
-    position: absolute;
+    @include vertical-center;
     right: $spacing-x-small;
-    top: $spacing-x-small;
 
     .slds-button {
       line-height: 1;
@@ -591,6 +602,12 @@
     padding-top: $spacing-xxx-small;
     padding-bottom: $spacing-xxx-small;
 
+    @include touch-device {
+      @include border-box-line-height($height-tappable, 0, $spacing-xxx-small * 2);
+      min-height: $height-tappable;
+      padding: 0;
+    }
+
     &:focus,
     &:active {
       outline: 0;
@@ -637,7 +654,6 @@
     padding: 0;
   }
 
-  .slds-combobox__input[value],
   .slds-combobox__input-value {
     box-shadow: 0 0 0 2px #fff inset, 0 0 0 3px $color-border inset;
   }

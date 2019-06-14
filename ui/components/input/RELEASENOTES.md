@@ -9,6 +9,7 @@
 ### Changed
 
 - Removed default `box-shadow` on `inputs` for Webkit
+- Positioning of icons inside of inputs have been tweaked when on a touch device
 
 ## 2.8.0
 

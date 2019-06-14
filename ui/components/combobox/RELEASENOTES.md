@@ -3,6 +3,11 @@
 # Combobox Release Notes
 
 <!-- ## [Unreleased] -->
+## 2.10.0
+
+### Changed
+
+- Increase font-size and height of combobox height on a touch device
 
 ## 2.9.0
 

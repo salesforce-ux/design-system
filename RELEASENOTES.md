@@ -38,6 +38,10 @@
 - On touch devices, set tap target size of menu row item to `$height-tappable`
 - On touch devices, set `font-size` of menu to `$font-size-5`
 
+### [Path](https://www.lightningdesignsystem.com/components/path)
+#### Fixed
+- Fixed text disappearing when peaking between stage in Safari
+
 ## Release 2.9.4 - June 13, 2019
 
 ## Components

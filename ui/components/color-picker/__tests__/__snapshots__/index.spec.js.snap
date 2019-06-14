@@ -5,54 +5,55 @@ exports[`renders a base color picker with custom tab selected 1`] = `
   className="slds-color-picker"
 >
   <div
-    className="slds-color-picker__summary"
+    className="slds-form-element slds-color-picker__summary"
+    role={undefined}
   >
     <label
-      className="slds-color-picker__summary-label"
+      className="slds-form-element__label slds-color-picker__summary-label"
       htmlFor="color-picker-summary-input"
+      id={undefined}
     >
       Choose Color
     </label>
-    <button
-      className="slds-button slds-color-picker__summary-button slds-button_icon slds-button_icon-more"
-      disabled={undefined}
-      title="Choose Color"
+    <div
+      className="slds-form-element__control"
     >
-      <span
-        className="slds-swatch"
-        style={
-          Object {
-            "background": "hsl(220, 46%, 55%)",
-          }
-        }
+      <button
+        className="slds-button slds-color-picker__summary-button slds-button_icon slds-button_icon-more"
+        disabled={undefined}
+        title="Choose Color"
       >
         <span
-          aria-hidden={undefined}
+          className="slds-swatch"
+          style={
+            Object {
+              "background": "hsl(220, 46%, 55%)",
+            }
+          }
+        >
+          <span
+            aria-hidden={undefined}
+            className="slds-assistive-text"
+          >
+            hsl(220, 46%, 55%)
+          </span>
+        </span>
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_small slds-m-left_xx-small"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+          />
+        </svg>
+        <span
           className="slds-assistive-text"
         >
-          hsl(220, 46%, 55%)
+          Choose a color. Current color: #5679C0
         </span>
-      </span>
-      <svg
-        aria-hidden={true}
-        className="slds-button__icon slds-button__icon_small slds-m-left_xx-small"
-      >
-        <use
-          xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
-        />
-      </svg>
-      <span
-        className="slds-assistive-text"
-      >
-        Choose a color. Current color: #5679C0
-      </span>
-    </button>
-    <div
-      className="slds-form-element slds-color-picker__summary-input"
-      role={undefined}
-    >
+      </button>
       <div
-        className="slds-form-element__control"
+        className="slds-color-picker__summary-input"
       >
         <input
           aria-describedby={null}
@@ -1111,54 +1112,55 @@ exports[`renders a base color picker with custom tab selected in error state 1`]
   className="slds-color-picker"
 >
   <div
-    className="slds-color-picker__summary"
+    className="slds-form-element slds-color-picker__summary"
+    role={undefined}
   >
     <label
-      className="slds-color-picker__summary-label"
+      className="slds-form-element__label slds-color-picker__summary-label"
       htmlFor="color-picker-summary-input"
+      id={undefined}
     >
       Choose Color
     </label>
-    <button
-      className="slds-button slds-color-picker__summary-button slds-button_icon slds-button_icon-more"
-      disabled={undefined}
-      title="Choose Color"
+    <div
+      className="slds-form-element__control"
     >
-      <span
-        className="slds-swatch"
-        style={
-          Object {
-            "background": "hsl(220, 46%, 55%)",
-          }
-        }
+      <button
+        className="slds-button slds-color-picker__summary-button slds-button_icon slds-button_icon-more"
+        disabled={undefined}
+        title="Choose Color"
       >
         <span
-          aria-hidden={undefined}
+          className="slds-swatch"
+          style={
+            Object {
+              "background": "hsl(220, 46%, 55%)",
+            }
+          }
+        >
+          <span
+            aria-hidden={undefined}
+            className="slds-assistive-text"
+          >
+            hsl(220, 46%, 55%)
+          </span>
+        </span>
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_small slds-m-left_xx-small"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+          />
+        </svg>
+        <span
           className="slds-assistive-text"
         >
-          hsl(220, 46%, 55%)
+          Choose a color. Current color: #5679C0
         </span>
-      </span>
-      <svg
-        aria-hidden={true}
-        className="slds-button__icon slds-button__icon_small slds-m-left_xx-small"
-      >
-        <use
-          xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
-        />
-      </svg>
-      <span
-        className="slds-assistive-text"
-      >
-        Choose a color. Current color: #5679C0
-      </span>
-    </button>
-    <div
-      className="slds-form-element slds-color-picker__summary-input"
-      role={undefined}
-    >
+      </button>
       <div
-        className="slds-form-element__control"
+        className="slds-color-picker__summary-input"
       >
         <input
           aria-describedby={null}
@@ -2223,54 +2225,55 @@ exports[`renders a base color picker with summary error 1`] = `
   className="slds-color-picker"
 >
   <div
-    className="slds-color-picker__summary"
+    className="slds-form-element slds-has-error slds-color-picker__summary"
+    role={undefined}
   >
     <label
-      className="slds-color-picker__summary-label"
+      className="slds-form-element__label slds-color-picker__summary-label"
       htmlFor="color-picker-summary-input"
+      id={undefined}
     >
       Choose Color
     </label>
-    <button
-      className="slds-button slds-color-picker__summary-button slds-button_icon slds-button_icon-more"
-      disabled={undefined}
-      title="Choose Color"
+    <div
+      className="slds-form-element__control"
     >
-      <span
-        className="slds-swatch"
-        style={
-          Object {
-            "background": "hsl(220, 46%, 55%)",
-          }
-        }
+      <button
+        className="slds-button slds-color-picker__summary-button slds-button_icon slds-button_icon-more"
+        disabled={undefined}
+        title="Choose Color"
       >
         <span
-          aria-hidden={undefined}
+          className="slds-swatch"
+          style={
+            Object {
+              "background": "hsl(220, 46%, 55%)",
+            }
+          }
+        >
+          <span
+            aria-hidden={undefined}
+            className="slds-assistive-text"
+          >
+            hsl(220, 46%, 55%)
+          </span>
+        </span>
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_small slds-m-left_xx-small"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+          />
+        </svg>
+        <span
           className="slds-assistive-text"
         >
-          hsl(220, 46%, 55%)
+          Choose a color. Current color: #5679C0
         </span>
-      </span>
-      <svg
-        aria-hidden={true}
-        className="slds-button__icon slds-button__icon_small slds-m-left_xx-small"
-      >
-        <use
-          xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
-        />
-      </svg>
-      <span
-        className="slds-assistive-text"
-      >
-        Choose a color. Current color: #5679C0
-      </span>
-    </button>
-    <div
-      className="slds-form-element slds-has-error slds-color-picker__summary-input"
-      role={undefined}
-    >
+      </button>
       <div
-        className="slds-form-element__control"
+        className="slds-color-picker__summary-input"
       >
         <input
           aria-describedby="color-picker-summary-error"
@@ -2282,13 +2285,13 @@ exports[`renders a base color picker with summary error 1`] = `
           type="text"
         />
       </div>
+      <p
+        className="slds-form-error"
+        id="color-picker-summary-error"
+      >
+        Please ensure value is correct
+      </p>
     </div>
-    <p
-      className="slds-form-error"
-      id="color-picker-summary-error"
-    >
-      Please ensure value is correct
-    </p>
   </div>
   <section
     aria-describedby="dialog-body-id-2"
@@ -3335,54 +3338,55 @@ exports[`renders a custom only color picker 1`] = `
   className="slds-color-picker"
 >
   <div
-    className="slds-color-picker__summary"
+    className="slds-form-element slds-color-picker__summary"
+    role={undefined}
   >
     <label
-      className="slds-color-picker__summary-label"
+      className="slds-form-element__label slds-color-picker__summary-label"
       htmlFor="color-picker-summary-input"
+      id={undefined}
     >
       Choose Color
     </label>
-    <button
-      className="slds-button slds-color-picker__summary-button slds-button_icon slds-button_icon-more"
-      disabled={undefined}
-      title="Choose Color"
+    <div
+      className="slds-form-element__control"
     >
-      <span
-        className="slds-swatch"
-        style={
-          Object {
-            "background": "hsl(220, 46%, 55%)",
-          }
-        }
+      <button
+        className="slds-button slds-color-picker__summary-button slds-button_icon slds-button_icon-more"
+        disabled={undefined}
+        title="Choose Color"
       >
         <span
-          aria-hidden={undefined}
+          className="slds-swatch"
+          style={
+            Object {
+              "background": "hsl(220, 46%, 55%)",
+            }
+          }
+        >
+          <span
+            aria-hidden={undefined}
+            className="slds-assistive-text"
+          >
+            hsl(220, 46%, 55%)
+          </span>
+        </span>
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_small slds-m-left_xx-small"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+          />
+        </svg>
+        <span
           className="slds-assistive-text"
         >
-          hsl(220, 46%, 55%)
+          Choose a color. Current color: #5679C0
         </span>
-      </span>
-      <svg
-        aria-hidden={true}
-        className="slds-button__icon slds-button__icon_small slds-m-left_xx-small"
-      >
-        <use
-          xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
-        />
-      </svg>
-      <span
-        className="slds-assistive-text"
-      >
-        Choose a color. Current color: #5679C0
-      </span>
-    </button>
-    <div
-      className="slds-form-element slds-color-picker__summary-input"
-      role={undefined}
-    >
+      </button>
       <div
-        className="slds-form-element__control"
+        className="slds-color-picker__summary-input"
       >
         <input
           aria-describedby={null}
@@ -3623,54 +3627,55 @@ exports[`renders a default base color picker 1`] = `
   className="slds-color-picker"
 >
   <div
-    className="slds-color-picker__summary"
+    className="slds-form-element slds-color-picker__summary"
+    role={undefined}
   >
     <label
-      className="slds-color-picker__summary-label"
+      className="slds-form-element__label slds-color-picker__summary-label"
       htmlFor="color-picker-summary-input"
+      id={undefined}
     >
       Choose Color
     </label>
-    <button
-      className="slds-button slds-color-picker__summary-button slds-button_icon slds-button_icon-more"
-      disabled={undefined}
-      title="Choose Color"
+    <div
+      className="slds-form-element__control"
     >
-      <span
-        className="slds-swatch"
-        style={
-          Object {
-            "background": "hsl(220, 46%, 55%)",
-          }
-        }
+      <button
+        className="slds-button slds-color-picker__summary-button slds-button_icon slds-button_icon-more"
+        disabled={undefined}
+        title="Choose Color"
       >
         <span
-          aria-hidden={undefined}
+          className="slds-swatch"
+          style={
+            Object {
+              "background": "hsl(220, 46%, 55%)",
+            }
+          }
+        >
+          <span
+            aria-hidden={undefined}
+            className="slds-assistive-text"
+          >
+            hsl(220, 46%, 55%)
+          </span>
+        </span>
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_small slds-m-left_xx-small"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+          />
+        </svg>
+        <span
           className="slds-assistive-text"
         >
-          hsl(220, 46%, 55%)
+          Choose a color. Current color: #5679C0
         </span>
-      </span>
-      <svg
-        aria-hidden={true}
-        className="slds-button__icon slds-button__icon_small slds-m-left_xx-small"
-      >
-        <use
-          xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
-        />
-      </svg>
-      <span
-        className="slds-assistive-text"
-      >
-        Choose a color. Current color: #5679C0
-      </span>
-    </button>
-    <div
-      className="slds-form-element slds-color-picker__summary-input"
-      role={undefined}
-    >
+      </button>
       <div
-        className="slds-form-element__control"
+        className="slds-color-picker__summary-input"
       >
         <input
           aria-describedby={null}
@@ -4729,54 +4734,55 @@ exports[`renders a predefined only color picker 1`] = `
   className="slds-color-picker"
 >
   <div
-    className="slds-color-picker__summary"
+    className="slds-form-element slds-color-picker__summary"
+    role={undefined}
   >
     <label
-      className="slds-color-picker__summary-label"
+      className="slds-form-element__label slds-color-picker__summary-label"
       htmlFor="color-picker-summary-input"
+      id={undefined}
     >
       Choose Color
     </label>
-    <button
-      className="slds-button slds-color-picker__summary-button slds-button_icon slds-button_icon-more"
-      disabled={undefined}
-      title="Choose Color"
+    <div
+      className="slds-form-element__control"
     >
-      <span
-        className="slds-swatch"
-        style={
-          Object {
-            "background": "hsl(220, 46%, 55%)",
-          }
-        }
+      <button
+        className="slds-button slds-color-picker__summary-button slds-button_icon slds-button_icon-more"
+        disabled={undefined}
+        title="Choose Color"
       >
         <span
-          aria-hidden={undefined}
+          className="slds-swatch"
+          style={
+            Object {
+              "background": "hsl(220, 46%, 55%)",
+            }
+          }
+        >
+          <span
+            aria-hidden={undefined}
+            className="slds-assistive-text"
+          >
+            hsl(220, 46%, 55%)
+          </span>
+        </span>
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_small slds-m-left_xx-small"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+          />
+        </svg>
+        <span
           className="slds-assistive-text"
         >
-          hsl(220, 46%, 55%)
+          Choose a color. Current color: #5679C0
         </span>
-      </span>
-      <svg
-        aria-hidden={true}
-        className="slds-button__icon slds-button__icon_small slds-m-left_xx-small"
-      >
-        <use
-          xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
-        />
-      </svg>
-      <span
-        className="slds-assistive-text"
-      >
-        Choose a color. Current color: #5679C0
-      </span>
-    </button>
-    <div
-      className="slds-form-element slds-color-picker__summary-input"
-      role={undefined}
-    >
+      </button>
       <div
-        className="slds-form-element__control"
+        className="slds-color-picker__summary-input"
       >
         <input
           aria-describedby={null}
@@ -6394,54 +6400,55 @@ exports[`renders an opened custom only color picker 1`] = `
   className="slds-color-picker"
 >
   <div
-    className="slds-color-picker__summary"
+    className="slds-form-element slds-color-picker__summary"
+    role={undefined}
   >
     <label
-      className="slds-color-picker__summary-label"
+      className="slds-form-element__label slds-color-picker__summary-label"
       htmlFor="color-picker-summary-input"
+      id={undefined}
     >
       Choose Color
     </label>
-    <button
-      className="slds-button slds-color-picker__summary-button slds-button_icon slds-button_icon-more"
-      disabled={undefined}
-      title="Choose Color"
+    <div
+      className="slds-form-element__control"
     >
-      <span
-        className="slds-swatch"
-        style={
-          Object {
-            "background": "hsl(220, 46%, 55%)",
-          }
-        }
+      <button
+        className="slds-button slds-color-picker__summary-button slds-button_icon slds-button_icon-more"
+        disabled={undefined}
+        title="Choose Color"
       >
         <span
-          aria-hidden={undefined}
+          className="slds-swatch"
+          style={
+            Object {
+              "background": "hsl(220, 46%, 55%)",
+            }
+          }
+        >
+          <span
+            aria-hidden={undefined}
+            className="slds-assistive-text"
+          >
+            hsl(220, 46%, 55%)
+          </span>
+        </span>
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_small slds-m-left_xx-small"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+          />
+        </svg>
+        <span
           className="slds-assistive-text"
         >
-          hsl(220, 46%, 55%)
+          Choose a color. Current color: #5679C0
         </span>
-      </span>
-      <svg
-        aria-hidden={true}
-        className="slds-button__icon slds-button__icon_small slds-m-left_xx-small"
-      >
-        <use
-          xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
-        />
-      </svg>
-      <span
-        className="slds-assistive-text"
-      >
-        Choose a color. Current color: #5679C0
-      </span>
-    </button>
-    <div
-      className="slds-form-element slds-color-picker__summary-input"
-      role={undefined}
-    >
+      </button>
       <div
-        className="slds-form-element__control"
+        className="slds-color-picker__summary-input"
       >
         <input
           aria-describedby={null}
@@ -6682,54 +6689,55 @@ exports[`renders an opened custom only color picker with error 1`] = `
   className="slds-color-picker"
 >
   <div
-    className="slds-color-picker__summary"
+    className="slds-form-element slds-color-picker__summary"
+    role={undefined}
   >
     <label
-      className="slds-color-picker__summary-label"
+      className="slds-form-element__label slds-color-picker__summary-label"
       htmlFor="color-picker-summary-input"
+      id={undefined}
     >
       Choose Color
     </label>
-    <button
-      className="slds-button slds-color-picker__summary-button slds-button_icon slds-button_icon-more"
-      disabled={undefined}
-      title="Choose Color"
+    <div
+      className="slds-form-element__control"
     >
-      <span
-        className="slds-swatch"
-        style={
-          Object {
-            "background": "hsl(220, 46%, 55%)",
-          }
-        }
+      <button
+        className="slds-button slds-color-picker__summary-button slds-button_icon slds-button_icon-more"
+        disabled={undefined}
+        title="Choose Color"
       >
         <span
-          aria-hidden={undefined}
+          className="slds-swatch"
+          style={
+            Object {
+              "background": "hsl(220, 46%, 55%)",
+            }
+          }
+        >
+          <span
+            aria-hidden={undefined}
+            className="slds-assistive-text"
+          >
+            hsl(220, 46%, 55%)
+          </span>
+        </span>
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_small slds-m-left_xx-small"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+          />
+        </svg>
+        <span
           className="slds-assistive-text"
         >
-          hsl(220, 46%, 55%)
+          Choose a color. Current color: #5679C0
         </span>
-      </span>
-      <svg
-        aria-hidden={true}
-        className="slds-button__icon slds-button__icon_small slds-m-left_xx-small"
-      >
-        <use
-          xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
-        />
-      </svg>
-      <span
-        className="slds-assistive-text"
-      >
-        Choose a color. Current color: #5679C0
-      </span>
-    </button>
-    <div
-      className="slds-form-element slds-color-picker__summary-input"
-      role={undefined}
-    >
+      </button>
       <div
-        className="slds-form-element__control"
+        className="slds-color-picker__summary-input"
       >
         <input
           aria-describedby={null}
@@ -6976,54 +6984,55 @@ exports[`renders an opened predefined only color picker 1`] = `
   className="slds-color-picker"
 >
   <div
-    className="slds-color-picker__summary"
+    className="slds-form-element slds-color-picker__summary"
+    role={undefined}
   >
     <label
-      className="slds-color-picker__summary-label"
+      className="slds-form-element__label slds-color-picker__summary-label"
       htmlFor="color-picker-summary-input"
+      id={undefined}
     >
       Choose Color
     </label>
-    <button
-      className="slds-button slds-color-picker__summary-button slds-button_icon slds-button_icon-more"
-      disabled={undefined}
-      title="Choose Color"
+    <div
+      className="slds-form-element__control"
     >
-      <span
-        className="slds-swatch"
-        style={
-          Object {
-            "background": "hsl(220, 46%, 55%)",
-          }
-        }
+      <button
+        className="slds-button slds-color-picker__summary-button slds-button_icon slds-button_icon-more"
+        disabled={undefined}
+        title="Choose Color"
       >
         <span
-          aria-hidden={undefined}
+          className="slds-swatch"
+          style={
+            Object {
+              "background": "hsl(220, 46%, 55%)",
+            }
+          }
+        >
+          <span
+            aria-hidden={undefined}
+            className="slds-assistive-text"
+          >
+            hsl(220, 46%, 55%)
+          </span>
+        </span>
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_small slds-m-left_xx-small"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+          />
+        </svg>
+        <span
           className="slds-assistive-text"
         >
-          hsl(220, 46%, 55%)
+          Choose a color. Current color: #5679C0
         </span>
-      </span>
-      <svg
-        aria-hidden={true}
-        className="slds-button__icon slds-button__icon_small slds-m-left_xx-small"
-      >
-        <use
-          xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
-        />
-      </svg>
-      <span
-        className="slds-assistive-text"
-      >
-        Choose a color. Current color: #5679C0
-      </span>
-    </button>
-    <div
-      className="slds-form-element slds-color-picker__summary-input"
-      role={undefined}
-    >
+      </button>
       <div
-        className="slds-form-element__control"
+        className="slds-color-picker__summary-input"
       >
         <input
           aria-describedby={null}

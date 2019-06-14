@@ -48,7 +48,9 @@ export const AccordionSection = props => (
             </span>
           </button>
         </h3>
-        <ActionOverflow position="right" dropdownIsOpen={false} />
+        {props.hasActionOverflow && (
+          <ActionOverflow position="right" dropdownIsOpen={false} />
+        )}
       </div>
       <div
         hidden={!props.isOpen}
@@ -205,37 +207,6 @@ export let states = [
         </AccordionSection>
       </Accordion>
     )
-  },
-  {
-    id: 'styled',
-    label: 'Wrapped in Card',
-    element: (
-      <div className="slds-card">
-        <Accordion>
-          <AccordionSection
-            summary="Accordion summary"
-            isOpen
-            referenceId={referenceId01}
-          >
-            Accordion details - A
-          </AccordionSection>
-          <AccordionSection
-            summary="Accordion summary"
-            isOpen={false}
-            referenceId={referenceId02}
-          >
-            Accordion details - B
-          </AccordionSection>
-          <AccordionSection
-            summary="Accordion summary"
-            isOpen={false}
-            referenceId={referenceId03}
-          >
-            Accordion details - C
-          </AccordionSection>
-        </Accordion>
-      </div>
-    )
   }
 ];
 
@@ -276,6 +247,69 @@ export let examples = [
         </AccordionSection>
         <AccordionSection
           summary="Accordion summary"
+          isOpen={false}
+          referenceId={referenceId03}
+        >
+          Accordion details - C
+        </AccordionSection>
+      </Accordion>
+    )
+  },
+  {
+    id: 'styled',
+    label: 'Wrapped in Card',
+    element: (
+      <div className="slds-card">
+        <Accordion>
+          <AccordionSection
+            summary="Accordion summary"
+            isOpen
+            referenceId={referenceId01}
+          >
+            Accordion details - A
+          </AccordionSection>
+          <AccordionSection
+            summary="Accordion summary"
+            isOpen={false}
+            referenceId={referenceId02}
+          >
+            Accordion details - B
+          </AccordionSection>
+          <AccordionSection
+            summary="Accordion summary"
+            isOpen={false}
+            referenceId={referenceId03}
+          >
+            Accordion details - C
+          </AccordionSection>
+        </Accordion>
+      </div>
+    )
+  },
+  {
+    id: 'has-action-overflow',
+    label: 'Has Action Overflow Menu',
+    element: (
+      <Accordion>
+        <AccordionSection
+          summary="Accordion summary"
+          hasActionOverflow
+          isOpen
+          referenceId={referenceId01}
+        >
+          Accordion details - A
+        </AccordionSection>
+        <AccordionSection
+          summary="Accordion summary"
+          hasActionOverflow
+          isOpen={false}
+          referenceId={referenceId02}
+        >
+          Accordion details - B
+        </AccordionSection>
+        <AccordionSection
+          summary="Accordion summary"
+          hasActionOverflow
           isOpen={false}
           referenceId={referenceId03}
         >

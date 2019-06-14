@@ -27,6 +27,10 @@
   font-size: $font-size-2;
   line-height: $line-height-heading;
   color: $color-text-weak;
+
+  @include touch-device {
+    font-size: $font-size-4;
+  }
 }
 
 @mixin text-heading--label-bold {

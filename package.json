@@ -1,7 +1,7 @@
 {
   "name": "design-system",
   "description": "Salesforce Lightning Design System",
-  "version": "2.9.3",
+  "version": "2.9.4",
   "author": "Salesforce",
   "slds": {
     "name": "Summer ’19",

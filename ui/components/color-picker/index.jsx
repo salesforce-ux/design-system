@@ -71,14 +71,13 @@ export const ColorPickerSummary = props => {
   const errorId = 'color-picker-summary-error';
 
   return (
-    <div className="slds-color-picker__summary">
-      <label
-        className="slds-color-picker__summary-label"
-        htmlFor="color-picker-summary-input"
-      >
-        Choose Color
-      </label>
-
+    <FormElement
+      formElementClassName="slds-color-picker__summary"
+      labelContent="Choose Color"
+      labelClassName="slds-color-picker__summary-label"
+      inputId="color-picker-summary-input"
+      hasError={hasSummaryError}
+    >
       <Button
         className="slds-color-picker__summary-button slds-button_icon slds-button_icon-more"
         title="Choose Color"
@@ -93,24 +92,19 @@ export const ColorPickerSummary = props => {
           Choose a color. Current color: #5679C0
         </span>
       </Button>
-
-      <FormElement
-        formElementClassName="slds-color-picker__summary-input"
-        hasError={hasSummaryError}
-      >
+      <div className="slds-color-picker__summary-input">
         <Input
           id="color-picker-summary-input"
           defaultValue="#5679C0"
           aria-describedby={hasSummaryError ? errorId : null}
         />
-      </FormElement>
-
+      </div>
       {hasSummaryError ? (
         <p className="slds-form-error" id={errorId}>
           {errorMessage}
         </p>
       ) : null}
-    </div>
+    </FormElement>
   );
 };
 

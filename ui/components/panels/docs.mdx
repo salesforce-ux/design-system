@@ -10,6 +10,17 @@ import SvgIcon from '../../shared/svg-icon';
   A panel is typically used to provide supplemental information or form inputs that relate to your primary canvas.
 </div>
 
+<CodeView exampleOnly style={{ backgroundColor: '#fafaf9', position: 'relative', height: '200px', overflow: 'hidden' }}>
+  <Panel
+    size="medium"
+    title="Panel Header"
+    docked="left"
+    invoke="toggle"
+  >
+    A panel body accepts any layout or component
+  </Panel>
+</CodeView>
+
 ## About Panel
 
 A panel is docked to the left/right side of a viewport and is in the document flow of the canvas or main content.

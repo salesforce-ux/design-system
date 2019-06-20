@@ -595,17 +595,20 @@
   border: $border-width-thin solid $color-border;
   border-radius: $border-radius-medium;
 
+  .slds-combobox {
+    flex-basis: 50%;
+    flex-shrink: 0;
+  }
+
   .slds-combobox__input {
-    min-height: $height-pill;
-    line-height: $height-pill;
+    min-height: 100%;
+    line-height: calc(#{$height-input} - 2px);
     border: 0;
     padding-top: $spacing-xxx-small;
     padding-bottom: $spacing-xxx-small;
 
     @include touch-device {
       @include border-box-line-height($height-tappable, 0, $spacing-xxx-small * 2);
-      min-height: $height-tappable;
-      padding: 0;
     }
 
     &:focus,

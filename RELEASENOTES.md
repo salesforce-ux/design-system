@@ -36,11 +36,13 @@
 ### [Checkbox Button Group](https://www.lightningdesignsystem.com/components/checkbox-button-group)
 #### Changed
 - For touch devices, increase tap target size of `.slds-checkbox_button`
+<!-- ## [VERSION] -->
 
 ### [Checkbox Toggle](https://www.lightningdesignsystem.com/components/checkbox-toggle)
 #### Changed
 - For touch devices, change `font-size` of label text to `$font-size-5`
 - For touch devices, increase `font-size` of `.slds-checkbox_faux_container` to `$font-size-2`
+<!-- ## [VERSION] -->
 
 ### [Color Picker](https://www.lightningdesignsystem.com/components/color-picker)
 #### Changed
@@ -76,6 +78,12 @@
 ### [Path](https://www.lightningdesignsystem.com/components/path)
 #### Fixed
 - Fixed text disappearing when peaking between stage in Safari
+
+### [Radio Group](https://www.lightningdesignsystem.com/components/radio-group)
+#### Changed
+- Increase tap size of `.slds-radio__label` on touch devices
+- Increase the size of the faux radio element on touch devices
+- Let the label text inherit its `font-size` from the body on touch devices
 
 ## Release 2.9.4 - June 13, 2019
 

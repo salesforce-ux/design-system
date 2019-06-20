@@ -20,6 +20,10 @@
 - Center contents of contained Buttons with change of `display: inline-flex` to `slds-button`
 - On touch devices, set size of `.slds-button__icon` to `$square-icon-medium-content`
 
+### [Color Picker](https://www.lightningdesignsystem.com/components/color-picker)
+#### Changed
+- Removed `text-transform: uppercase` from default and custom tabs
+
 ### [Combobox](https://www.lightningdesignsystem.com/components/combobox)
 #### Changed
 - Increase font-size and height of combobox height on a touch device

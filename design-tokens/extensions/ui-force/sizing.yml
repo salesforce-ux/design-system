@@ -36,3 +36,6 @@ props:
   HEIGHT_TAPPABLE:
     value: 2.75rem
     comment: Tap target size for elements that rely on height or line-height
+  HEIGHT_TAPPABLE_SMALL:
+    value: 2rem
+    comment: Small tap target size for elements that rely on height or line-height

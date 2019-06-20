@@ -11,6 +11,7 @@
 - Increase font-size and height of combobox height on a touch device
 - Increase height of a listbox option on a touch device
 - Changed the size of icon in a plain listbox to inherit the size of the `body`
+- Modified the spacing between pills when inside the context of a selection group
 
 ### Fixed
 

@@ -8,6 +8,7 @@ import {
   ListboxItem,
   Option
 } from '../base/example';
+import { ListboxItemHeading } from '../listbox';
 import { ListboxPills, ListboxPillsItem, ListboxPill } from '../../pills';
 
 const listboxOptionId01 = 'listbox-option-unique-id-01';
@@ -15,6 +16,7 @@ const listboxOptionId02 = 'listbox-option-unique-id-02';
 
 const ListboxDropdown = props => (
   <Listbox listboxClassName="slds-dropdown slds-dropdown_fluid" vertical>
+    {props.heading && <ListboxItemHeading type="plain" text={props.heading} />}
     <ListboxItem>
       <Option
         id={listboxOptionId01}
@@ -147,6 +149,24 @@ export let states = [
             </ListboxPillsItem>
           </ListboxPills>
         </ComboboxContainer>
+      </div>
+    )
+  },
+  {
+    id: 'open-option-heading',
+    label: 'Sub-heading',
+    element: (
+      <div className="demo-only" style={{ height: '10rem' }}>
+        <ComboboxContainer
+          isOpen
+          inputIcon="right"
+          inputIconRightSymbol="down"
+          value="Option A"
+          listbox={
+            <ListboxDropdown optionOneSelected heading="Recently Viewed" />
+          }
+          readonly
+        />
       </div>
     )
   }

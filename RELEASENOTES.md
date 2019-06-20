@@ -23,7 +23,8 @@
 ### [Combobox](https://www.lightningdesignsystem.com/components/combobox)
 #### Changed
 - Increase font-size and height of combobox height on a touch device
--
+- Increase height of a listbox option on a touch device
+- Changed the size of icon in a plain listbox to inherit the size of the `body`
 #### Fixed
 - Resolve issue with deprecated inline listbox not displaying correctly when multiple pills forces the container to grow
 - Resolve issue where deprecated inline listbox was not the same height as other inputs
@@ -41,6 +42,7 @@
 #### Changed
 - On touch devices, set tap target size of menu row item to `$height-tappable`
 - On touch devices, set `font-size` of menu to `$font-size-5`
+- Remove `font-size` declaration from `slds-dropdown__header` to inherit `font-size` from `body` element
 
 ### [Path](https://www.lightningdesignsystem.com/components/path)
 #### Fixed

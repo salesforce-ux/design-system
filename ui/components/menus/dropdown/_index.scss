@@ -370,7 +370,7 @@
    * @restrict .slds-dropdown li
    */
   &__header {
-    @include text-title;
+    font-weight: $font-weight-bold;
     padding: $spacing-x-small $spacing-small;
   }
 

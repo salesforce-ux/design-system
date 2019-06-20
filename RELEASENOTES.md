@@ -20,6 +20,28 @@
 - Center contents of contained Buttons with change of `display: inline-flex` to `slds-button`
 - On touch devices, set size of `.slds-button__icon` to `$square-icon-medium-content`
 
+### [Checkbox](https://www.lightningdesignsystem.com/components/checkbox)
+#### Changed
+- For touch devices, increase size of faux checkbox to `$square-tappable-x-small`
+- For touch devices, increase tap target size of `.slds-checkbox__label` to `$height-tappable` and center with flex properties
+- For touch devices, increase `font-size` of inline label to `$font-size-5`
+- For touch devices, increase size of `.slds-checkbox_standalone` to `$height-tappable` for consistency with tap target size increases
+- For touch devices and within `.slds-checkbox_standalone`, increase the tap target size of the checkbox input
+- Ensure the checkbox input is hidden with `opacity: 0`
+
+### [Checkbox Button](https://www.lightningdesignsystem.com/components/checkbox-button)
+#### Changed
+- For touch devices, increase size of checkbox-button to `$square-tappable` and center children with flex properties
+
+### [Checkbox Button Group](https://www.lightningdesignsystem.com/components/checkbox-button-group)
+#### Changed
+- For touch devices, increase tap target size of `.slds-checkbox_button`
+
+### [Checkbox Toggle](https://www.lightningdesignsystem.com/components/checkbox-toggle)
+#### Changed
+- For touch devices, change `font-size` of label text to `$font-size-5`
+- For touch devices, increase `font-size` of `.slds-checkbox_faux_container` to `$font-size-2`
+
 ### [Color Picker](https://www.lightningdesignsystem.com/components/color-picker)
 #### Changed
 - Removed `text-transform: uppercase` from default and custom tabs
@@ -37,6 +59,8 @@
 ### [Form Element](https://www.lightningdesignsystem.com/components/form-element)
 #### Changed
 - On touch devices, set the amount of space created for the edit icon to `$square-tappable` which aligns with touch specific sizing
+- On touch devices, increase the tap target size of `.slds-form-element__label` to `$$height-tappable-small`, center with flex, and increase `font-size` to `$font-size-4`
+- On touch devices, set the tap target height of button-icons to `$height-tappable-small` when inline with label text
 
 ### [Input](https://www.lightningdesignsystem.com/components/input)
 #### Changed

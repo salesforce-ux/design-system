@@ -31,7 +31,7 @@
   background-clip: padding-box;
 
   @include touch-device {
-    line-height: $checkbox-button-group-line-height-touch;
+    @include border-box-line-height($height-tappable);
   }
 
   /**

@@ -56,5 +56,9 @@
   .slds-form-element__icon {
     float: none;
     padding-top: $spacing-xx-small;
+
+    @include touch-device {
+      padding-top: 0;
+    }
   }
 }

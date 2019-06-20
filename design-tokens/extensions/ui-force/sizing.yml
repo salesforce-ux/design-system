@@ -33,6 +33,12 @@ props:
   SQUARE_TAPPABLE:
     value: 2.75rem
     comment: Tap target size for elements that rely on width and height dimensions
+  SQUARE_TAPPABLE_SMALL:
+    value: 2rem
+    comment: Small tap target size for elements that rely on width and height dimensions
+  SQUARE_TAPPABLE_X_SMALL:
+    value: 1.5rem
+    comment: X-small tap target size for elements that rely on width and height dimensions
   HEIGHT_TAPPABLE:
     value: 2.75rem
     comment: Tap target size for elements that rely on height or line-height

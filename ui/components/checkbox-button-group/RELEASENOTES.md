@@ -4,4 +4,10 @@
 
 <!-- ## [Unreleased] -->
 
+## 2.10.0
+
+### Changed
+
+- For touch devices, increase tap target size of `.slds-checkbox_button`
+
 <!-- ## [VERSION] -->

@@ -12,13 +12,27 @@
 .slds-checkbox_standalone {
   pointer-events: none; // Allows pointer-event to pass through to input
 
+  @include touch-device {
+    min-height: $height-tappable;
+  }
+
   [type="checkbox"] {
     @include square(1rem); // Increase dimensions since the pointer-event is being passed to this element
     margin: 0;
     clip: auto; // This allows element to be available but since visibily hidden
+    opacity: 0; // Visually hide but keep size and pointer events, doesn't impact screen readers
+
+    @include touch-device {
+      @include square($square-tappable); // Needs to be larger than faux checkbox for increased tap target size
+      @include vertical-center;
+    }
   }
 
   .slds-checkbox_faux {
     display: block; // Helps with some alignment
+
+    @include touch-device {
+      @include vertical-center; // We vertically align with position instead of flex due to ".slds-form-element__control .slds-checkbox" display specificity
+    }
   }
 }

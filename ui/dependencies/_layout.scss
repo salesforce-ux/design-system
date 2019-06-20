@@ -73,6 +73,11 @@
   }
 }
 
+@mixin flex-vertical-center($display: flex) {
+  display: $display;
+  align-items: center;
+}
+
 // Clearfix
 @mixin clearfix {
 

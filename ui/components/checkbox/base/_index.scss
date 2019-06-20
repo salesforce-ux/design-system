@@ -16,41 +16,6 @@
   position: relative;
 
   /**
-   * @name stacked
-   * @summary stacks label over checkbox
-   * @selector .slds-checkbox_stacked
-   * @restrict .slds-checkbox
-   * @modifier
-   * @group layout
-   * @deprecated
-   */
-  &.slds-checkbox_stacked {
-    /**
-     * @summary Container for faux checkbox element
-     * @selector .slds-checkbox__label
-     * @restrict .slds-checkbox label
-     */
-    .slds-checkbox__label {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .slds-form-element__label {
-      margin-bottom: $spacing-xx-small;
-      font-size: $font-size-2;
-    }
-
-    .slds-checkbox_faux {
-      order: 1;
-      margin-bottom: 1px;
-    }
-
-    .slds-required {
-      float: left;
-    }
-  }
-
-  /**
    * @summary Creates a custom styled checkbox
    * @selector .slds-checkbox_faux
    * @restrict .slds-checkbox span
@@ -65,12 +30,35 @@
     border-radius: $border-radius-small;
     background: $color-background-input;
     transition: border $duration-quickly linear, background-color $duration-quickly linear;
+
+    @include touch-device {
+      @include square($square-tappable-x-small);
+    }
   }
 
-  .slds-form-element__label {
-    display: inline;
-    vertical-align: middle;
-    font-size: $font-size-3;
+  /**
+   * @summary Container for faux checkbox, text, and slds-form-element__label
+   * @selector .slds-checkbox__label
+   * @restrict .slds-checkbox label
+   */
+  .slds-checkbox__label {
+    @include touch-device {
+      @include flex-vertical-center(inline-flex);
+      min-height: $height-tappable;
+    }
+
+    // When slds-form-element__label is inline with slds-checkbox_faux, display as inline
+    .slds-form-element__label {
+      display: inline;
+      vertical-align: middle;
+      font-size: $font-size-3;
+
+      @include touch-device {
+        // When in touch context, go back to flex for vertical centering within tap target area
+        display: inline-flex;
+        font-size: $font-size-5;
+      }
+    }
   }
 
   [type="checkbox"] {
@@ -104,6 +92,12 @@
         border-bottom: $border-width-thick solid $brand-accessible;
         /*! @noflip */
         border-left: $border-width-thick solid $brand-accessible;
+
+        @include touch-device {
+          height: ($square-icon-small-content / 2);
+          width: $square-icon-small-content;
+          margin-top: -1px; // vertical alignment adjustment for centering
+        }
       }
     }
 
@@ -148,6 +142,10 @@
       background: $brand-accessible;
       border: 0;
       transform: translate3d(-50%, -50%, 0);
+
+      @include touch-device {
+        width: $square-icon-small-content;
+      }
     }
 
     &[disabled] {
@@ -165,6 +163,41 @@
           border-color: $color-gray-8;
         }
       }
+    }
+  }
+
+  /**
+   * @name stacked
+   * @summary stacks label over checkbox
+   * @selector .slds-checkbox_stacked
+   * @restrict .slds-checkbox
+   * @modifier
+   * @group layout
+   * @deprecated
+   */
+  &.slds-checkbox_stacked {
+
+    .slds-checkbox__label {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .slds-form-element__label {
+      font-size: $font-size-2;
+
+      @include touch-device {
+        font-size: $font-size-4;
+      }
+    }
+
+    .slds-checkbox_faux {
+      order: 1;
+      margin-bottom: 1px;
+    }
+
+    .slds-required {
+      float: left;
     }
   }
 }

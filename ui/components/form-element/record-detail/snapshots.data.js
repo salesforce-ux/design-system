@@ -5,7 +5,7 @@ import React from 'react';
 import ButtonIcon from '../../button-icons/';
 import { FormElement, Fieldset } from '../';
 import { CompoundFormElement, CompoundFormRow } from '../compound/';
-import { Input } from '../../input/base/example';
+import Input from '../../input/';
 import { Textarea } from '../../textarea/base/example';
 import { Checkbox } from '../../checkbox/base/example';
 import { FormElementCheckboxStandalone } from '../../checkbox/form-element';

@@ -140,11 +140,16 @@ exports[`Compound Form Element render deprecated compound form element 1`] = `
             className="slds-form-element__control"
           >
             <input
+              aria-invalid={undefined}
               className="slds-input"
               defaultValue="10.283"
+              disabled={undefined}
               id="location-longitude-01"
               placeholder={undefined}
               readOnly={undefined}
+              required={undefined}
+              role={undefined}
+              tabIndex={undefined}
               type="text"
             />
           </div>
@@ -164,11 +169,16 @@ exports[`Compound Form Element render deprecated compound form element 1`] = `
             className="slds-form-element__control"
           >
             <input
+              aria-invalid={undefined}
               className="slds-input"
               defaultValue="54.293"
+              disabled={undefined}
               id="location-latitude-01"
               placeholder={undefined}
               readOnly={undefined}
+              required={undefined}
+              role={undefined}
+              tabIndex={undefined}
               type="text"
             />
           </div>
@@ -244,12 +254,16 @@ exports[`Compound Form Element renders address compound form element 1`] = `
             className="slds-form-element__control"
           >
             <input
+              aria-invalid={undefined}
               className="slds-input"
               defaultValue="Burlington"
+              disabled={undefined}
               id="form-element-id-05"
               placeholder={undefined}
               readOnly={undefined}
               required={true}
+              role={undefined}
+              tabIndex={undefined}
               type="text"
             />
           </div>
@@ -273,12 +287,16 @@ exports[`Compound Form Element renders address compound form element 1`] = `
             className="slds-form-element__control"
           >
             <input
+              aria-invalid={undefined}
               className="slds-input"
               defaultValue="NC"
+              disabled={undefined}
               id="form-element-id-06"
               placeholder={undefined}
               readOnly={undefined}
               required={true}
+              role={undefined}
+              tabIndex={undefined}
               type="text"
             />
           </div>
@@ -306,12 +324,16 @@ exports[`Compound Form Element renders address compound form element 1`] = `
             className="slds-form-element__control"
           >
             <input
+              aria-invalid={undefined}
               className="slds-input"
               defaultValue="27215"
+              disabled={undefined}
               id="form-element-id-07"
               placeholder={undefined}
               readOnly={undefined}
               required={true}
+              role={undefined}
+              tabIndex={undefined}
               type="text"
             />
           </div>
@@ -335,12 +357,16 @@ exports[`Compound Form Element renders address compound form element 1`] = `
             className="slds-form-element__control"
           >
             <input
+              aria-invalid={undefined}
               className="slds-input"
               defaultValue="USA"
+              disabled={undefined}
               id="form-element-id-08"
               placeholder={undefined}
               readOnly={undefined}
               required={true}
+              role={undefined}
+              tabIndex={undefined}
               type="text"
             />
           </div>
@@ -385,11 +411,16 @@ exports[`Compound Form Element renders simple compound form element 1`] = `
             className="slds-form-element__control"
           >
             <input
+              aria-invalid={undefined}
               className="slds-input"
               defaultValue={undefined}
+              disabled={undefined}
               id="input-01"
               placeholder={undefined}
               readOnly={undefined}
+              required={undefined}
+              role={undefined}
+              tabIndex={undefined}
               type="text"
             />
           </div>
@@ -413,11 +444,16 @@ exports[`Compound Form Element renders simple compound form element 1`] = `
             className="slds-form-element__control"
           >
             <input
+              aria-invalid={undefined}
               className="slds-input"
               defaultValue={undefined}
+              disabled={undefined}
               id="input-02"
               placeholder={undefined}
               readOnly={undefined}
+              required={undefined}
+              role={undefined}
+              tabIndex={undefined}
               type="text"
             />
           </div>
@@ -444,11 +480,16 @@ exports[`Form Element Composition renders form element with input 1`] = `
     className="slds-form-element__control"
   >
     <input
+      aria-invalid={undefined}
       className="slds-input"
       defaultValue={undefined}
+      disabled={undefined}
       id="input-1"
       placeholder={undefined}
       readOnly={undefined}
+      required={undefined}
+      role={undefined}
+      tabIndex={undefined}
       type="text"
     />
   </div>
@@ -479,12 +520,16 @@ exports[`Form Element Composition renders form element with input that has an er
   >
     <input
       aria-describedby="error-1"
+      aria-invalid="true"
       className="slds-input"
       defaultValue={undefined}
+      disabled={undefined}
       id="input-1"
       placeholder={undefined}
       readOnly={undefined}
       required={true}
+      role={undefined}
+      tabIndex={undefined}
       type="text"
     />
   </div>
@@ -520,12 +565,16 @@ exports[`Form Element Composition renders form element with input that is requir
     className="slds-form-element__control"
   >
     <input
+      aria-invalid={undefined}
       className="slds-input"
       defaultValue={undefined}
+      disabled={undefined}
       id="input-1"
       placeholder={undefined}
       readOnly={undefined}
       required={true}
+      role={undefined}
+      tabIndex={undefined}
       type="text"
     />
   </div>
@@ -1104,12 +1153,16 @@ exports[`Horizontal Form Element renders deprecated horizontal form elements - e
           className="slds-form-element__control"
         >
           <input
+            aria-invalid={undefined}
             className="slds-input"
             defaultValue="Jack Rogers"
+            disabled={undefined}
             id="form-element-id-01"
             placeholder={undefined}
             readOnly={true}
             required={true}
+            role={undefined}
+            tabIndex={undefined}
             type="text"
           />
         </div>
@@ -1152,6 +1205,7 @@ exports[`Horizontal Form Element renders deprecated horizontal form elements - e
                   aria-activedescendant={undefined}
                   aria-autocomplete="list"
                   aria-controls="listbox-id-01"
+                  aria-invalid={undefined}
                   autoComplete="off"
                   autoFocus={undefined}
                   className="slds-input slds-combobox__input slds-combobox__input-value"
@@ -1162,6 +1216,7 @@ exports[`Horizontal Form Element renders deprecated horizontal form elements - e
                   onFocus={[Function]}
                   placeholder="Search..."
                   readOnly={undefined}
+                  required={undefined}
                   role="textbox"
                   tabIndex={undefined}
                   type="text"
@@ -1283,6 +1338,7 @@ exports[`Horizontal Form Element renders deprecated horizontal form elements - e
                   aria-activedescendant={undefined}
                   aria-autocomplete={null}
                   aria-controls="listbox-id-02"
+                  aria-invalid={undefined}
                   autoComplete="off"
                   autoFocus={undefined}
                   className="slds-input slds-combobox__input slds-combobox__input-value"
@@ -1293,6 +1349,7 @@ exports[`Horizontal Form Element renders deprecated horizontal form elements - e
                   onFocus={[Function]}
                   placeholder="Select an Option"
                   readOnly={true}
+                  required={undefined}
                   role="textbox"
                   tabIndex={undefined}
                   type="text"
@@ -1460,11 +1517,16 @@ exports[`Horizontal Form Element renders deprecated horizontal form elements - e
           className="slds-form-element__control"
         >
           <input
+            aria-invalid={undefined}
             className="slds-input"
             defaultValue="5367"
+            disabled={undefined}
             id="form-element-id-02"
             placeholder={undefined}
             readOnly={undefined}
+            required={undefined}
+            role={undefined}
+            tabIndex={undefined}
             type="text"
           />
         </div>
@@ -1489,11 +1551,16 @@ exports[`Horizontal Form Element renders deprecated horizontal form elements - e
           className="slds-form-element__control slds-input-has-icon slds-input-has-icon_right"
         >
           <input
+            aria-invalid={undefined}
             className="slds-input"
             defaultValue="1/1/2018"
+            disabled={undefined}
             id="form-element-id-03"
             placeholder={undefined}
             readOnly={undefined}
+            required={undefined}
+            role={undefined}
+            tabIndex={undefined}
             type="text"
           />
           <button
@@ -1560,11 +1627,16 @@ exports[`Horizontal Form Element renders deprecated horizontal form elements - e
                   className="slds-form-element__control"
                 >
                   <input
+                    aria-invalid={undefined}
                     className="slds-input"
                     defaultValue="10.283"
+                    disabled={undefined}
                     id="location-longitude-01"
                     placeholder={undefined}
                     readOnly={undefined}
+                    required={undefined}
+                    role={undefined}
+                    tabIndex={undefined}
                     type="text"
                   />
                 </div>
@@ -1584,11 +1656,16 @@ exports[`Horizontal Form Element renders deprecated horizontal form elements - e
                   className="slds-form-element__control"
                 >
                   <input
+                    aria-invalid={undefined}
                     className="slds-input"
                     defaultValue="54.293"
+                    disabled={undefined}
                     id="location-latitude-01"
                     placeholder={undefined}
                     readOnly={undefined}
+                    required={undefined}
+                    role={undefined}
+                    tabIndex={undefined}
                     type="text"
                   />
                 </div>
@@ -2002,12 +2079,16 @@ exports[`Horizontal Form Element renders deprecated horizontal form elements - e
                   className="slds-form-element__control"
                 >
                   <input
+                    aria-invalid={undefined}
                     className="slds-input"
                     defaultValue="Burlington"
+                    disabled={undefined}
                     id="form-element-id-05"
                     placeholder={undefined}
                     readOnly={undefined}
                     required={true}
+                    role={undefined}
+                    tabIndex={undefined}
                     type="text"
                   />
                 </div>
@@ -2027,12 +2108,16 @@ exports[`Horizontal Form Element renders deprecated horizontal form elements - e
                   className="slds-form-element__control"
                 >
                   <input
+                    aria-invalid={undefined}
                     className="slds-input"
                     defaultValue="NC"
+                    disabled={undefined}
                     id="form-element-id-06"
                     placeholder={undefined}
                     readOnly={undefined}
                     required={true}
+                    role={undefined}
+                    tabIndex={undefined}
                     type="text"
                   />
                 </div>
@@ -2056,12 +2141,16 @@ exports[`Horizontal Form Element renders deprecated horizontal form elements - e
                   className="slds-form-element__control"
                 >
                   <input
+                    aria-invalid={undefined}
                     className="slds-input"
                     defaultValue="27215"
+                    disabled={undefined}
                     id="form-element-id-07"
                     placeholder={undefined}
                     readOnly={undefined}
                     required={true}
+                    role={undefined}
+                    tabIndex={undefined}
                     type="text"
                   />
                 </div>
@@ -2081,12 +2170,16 @@ exports[`Horizontal Form Element renders deprecated horizontal form elements - e
                   className="slds-form-element__control"
                 >
                   <input
+                    aria-invalid={undefined}
                     className="slds-input"
                     defaultValue="USA"
+                    disabled={undefined}
                     id="form-element-id-08"
                     placeholder={undefined}
                     readOnly={undefined}
                     required={true}
+                    role={undefined}
+                    tabIndex={undefined}
                     type="text"
                   />
                 </div>
@@ -2159,11 +2252,16 @@ exports[`Horizontal Form Element renders deprecated horizontal form elements - e
                   className="slds-form-element__control"
                 >
                   <input
+                    aria-invalid={undefined}
                     className="slds-input"
                     defaultValue="Austin"
+                    disabled={undefined}
                     id="form-element-id-10"
                     placeholder={undefined}
                     readOnly={undefined}
+                    required={undefined}
+                    role={undefined}
+                    tabIndex={undefined}
                     type="text"
                   />
                 </div>
@@ -2183,11 +2281,16 @@ exports[`Horizontal Form Element renders deprecated horizontal form elements - e
                   className="slds-form-element__control"
                 >
                   <input
+                    aria-invalid={undefined}
                     className="slds-input"
                     defaultValue="TX"
+                    disabled={undefined}
                     id="form-element-id-11"
                     placeholder={undefined}
                     readOnly={undefined}
+                    required={undefined}
+                    role={undefined}
+                    tabIndex={undefined}
                     type="text"
                   />
                 </div>
@@ -2211,11 +2314,16 @@ exports[`Horizontal Form Element renders deprecated horizontal form elements - e
                   className="slds-form-element__control"
                 >
                   <input
+                    aria-invalid={undefined}
                     className="slds-input"
                     defaultValue="78767"
+                    disabled={undefined}
                     id="form-element-id-12"
                     placeholder={undefined}
                     readOnly={undefined}
+                    required={undefined}
+                    role={undefined}
+                    tabIndex={undefined}
                     type="text"
                   />
                 </div>
@@ -2235,11 +2343,16 @@ exports[`Horizontal Form Element renders deprecated horizontal form elements - e
                   className="slds-form-element__control"
                 >
                   <input
+                    aria-invalid={undefined}
                     className="slds-input"
                     defaultValue="USA"
+                    disabled={undefined}
                     id="form-element-id-13"
                     placeholder={undefined}
                     readOnly={undefined}
+                    required={undefined}
+                    role={undefined}
+                    tabIndex={undefined}
                     type="text"
                   />
                 </div>
@@ -2987,11 +3100,16 @@ exports[`Horizontal Form Element renders horizontal form element with input and 
       />
     </svg>
     <input
+      aria-invalid={undefined}
       className="slds-input"
       defaultValue={undefined}
+      disabled={undefined}
       id="input-1"
       placeholder={undefined}
       readOnly={undefined}
+      required={undefined}
+      role={undefined}
+      tabIndex={undefined}
       type="text"
     />
   </div>
@@ -3017,11 +3135,16 @@ exports[`Horizontal Form Element renders simple horizontal form elements 1`] = `
       className="slds-form-element__control"
     >
       <input
+        aria-invalid={undefined}
         className="slds-input"
         defaultValue={undefined}
+        disabled={undefined}
         id="horizontal-input-id-01"
         placeholder="Placeholder Text"
         readOnly={undefined}
+        required={undefined}
+        role={undefined}
+        tabIndex={undefined}
         type="text"
       />
     </div>
@@ -4571,11 +4694,16 @@ exports[`Stacked Form Element renders simple stacked form elements 1`] = `
       className="slds-form-element__control"
     >
       <input
+        aria-invalid={undefined}
         className="slds-input"
         defaultValue={undefined}
+        disabled={undefined}
         id="stacked-input-id-01"
         placeholder="Placeholder Text"
         readOnly={undefined}
+        required={undefined}
+        role={undefined}
+        tabIndex={undefined}
         type="text"
       />
     </div>

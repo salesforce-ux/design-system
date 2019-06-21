@@ -19,11 +19,16 @@ exports[`Form Layout renders a base form layout 1`] = `
       className="slds-form-element__control"
     >
       <input
+        aria-invalid={undefined}
         className="slds-input"
         defaultValue={undefined}
+        disabled={undefined}
         id="input-id-01"
         placeholder={undefined}
         readOnly={undefined}
+        required={undefined}
+        role={undefined}
+        tabIndex={undefined}
         type="text"
       />
     </div>
@@ -213,11 +218,16 @@ exports[`Form Layout renders a base form layout horizontally 1`] = `
       className="slds-form-element__control"
     >
       <input
+        aria-invalid={undefined}
         className="slds-input"
         defaultValue={undefined}
+        disabled={undefined}
         id="input-id-01"
         placeholder={undefined}
         readOnly={undefined}
+        required={undefined}
+        role={undefined}
+        tabIndex={undefined}
         type="text"
       />
     </div>
@@ -407,11 +417,16 @@ exports[`Form Layout renders a base form layout stacked 1`] = `
       className="slds-form-element__control"
     >
       <input
+        aria-invalid={undefined}
         className="slds-input"
         defaultValue={undefined}
+        disabled={undefined}
         id="input-id-01"
         placeholder={undefined}
         readOnly={undefined}
+        required={undefined}
+        role={undefined}
+        tabIndex={undefined}
         type="text"
       />
     </div>
@@ -617,11 +632,16 @@ Array [
               className="slds-form-element__control"
             >
               <input
+                aria-invalid={undefined}
                 className="slds-input"
                 defaultValue={undefined}
+                disabled={undefined}
                 id="input-01"
                 placeholder={undefined}
                 readOnly={undefined}
+                required={undefined}
+                role={undefined}
+                tabIndex={undefined}
                 type="text"
               />
             </div>
@@ -641,11 +661,16 @@ Array [
               className="slds-form-element__control"
             >
               <input
+                aria-invalid={undefined}
                 className="slds-input"
                 defaultValue={undefined}
+                disabled={undefined}
                 id="input-02"
                 placeholder={undefined}
                 readOnly={undefined}
+                required={undefined}
+                role={undefined}
+                tabIndex={undefined}
                 type="text"
               />
             </div>
@@ -687,11 +712,16 @@ Array [
               className="slds-form-element__control"
             >
               <input
+                aria-invalid={undefined}
                 className="slds-input"
                 defaultValue={undefined}
+                disabled={undefined}
                 id="input-03"
                 placeholder={undefined}
                 readOnly={undefined}
+                required={undefined}
+                role={undefined}
+                tabIndex={undefined}
                 type="text"
               />
             </div>
@@ -715,11 +745,16 @@ Array [
               className="slds-form-element__control"
             >
               <input
+                aria-invalid={undefined}
                 className="slds-input"
                 defaultValue={undefined}
+                disabled={undefined}
                 id="input-04"
                 placeholder={undefined}
                 readOnly={undefined}
+                required={undefined}
+                role={undefined}
+                tabIndex={undefined}
                 type="text"
               />
             </div>
@@ -739,11 +774,16 @@ Array [
               className="slds-form-element__control"
             >
               <input
+                aria-invalid={undefined}
                 className="slds-input"
                 defaultValue="MT"
+                disabled={undefined}
                 id="input-05"
                 placeholder={undefined}
                 readOnly={undefined}
+                required={undefined}
+                role={undefined}
+                tabIndex={undefined}
                 type="text"
               />
             </div>
@@ -767,11 +807,16 @@ Array [
               className="slds-form-element__control"
             >
               <input
+                aria-invalid={undefined}
                 className="slds-input"
                 defaultValue={undefined}
+                disabled={undefined}
                 id="input-06"
                 placeholder={undefined}
                 readOnly={undefined}
+                required={undefined}
+                role={undefined}
+                tabIndex={undefined}
                 type="text"
               />
             </div>
@@ -791,11 +836,16 @@ Array [
               className="slds-form-element__control"
             >
               <input
+                aria-invalid={undefined}
                 className="slds-input"
                 defaultValue="Canada"
+                disabled={undefined}
                 id="input-07"
                 placeholder={undefined}
                 readOnly={undefined}
+                required={undefined}
+                role={undefined}
+                tabIndex={undefined}
                 type="text"
               />
             </div>
@@ -842,11 +892,16 @@ Array [
               className="slds-form-element__control"
             >
               <input
+                aria-invalid={undefined}
                 className="slds-input"
                 defaultValue={undefined}
+                disabled={undefined}
                 id="input-01"
                 placeholder={undefined}
                 readOnly={undefined}
+                required={undefined}
+                role={undefined}
+                tabIndex={undefined}
                 type="text"
               />
             </div>
@@ -866,11 +921,16 @@ Array [
               className="slds-form-element__control"
             >
               <input
+                aria-invalid={undefined}
                 className="slds-input"
                 defaultValue={undefined}
+                disabled={undefined}
                 id="input-02"
                 placeholder={undefined}
                 readOnly={undefined}
+                required={undefined}
+                role={undefined}
+                tabIndex={undefined}
                 type="text"
               />
             </div>
@@ -912,11 +972,16 @@ Array [
               className="slds-form-element__control"
             >
               <input
+                aria-invalid={undefined}
                 className="slds-input"
                 defaultValue={undefined}
+                disabled={undefined}
                 id="input-03"
                 placeholder={undefined}
                 readOnly={undefined}
+                required={undefined}
+                role={undefined}
+                tabIndex={undefined}
                 type="text"
               />
             </div>
@@ -940,11 +1005,16 @@ Array [
               className="slds-form-element__control"
             >
               <input
+                aria-invalid={undefined}
                 className="slds-input"
                 defaultValue={undefined}
+                disabled={undefined}
                 id="input-04"
                 placeholder={undefined}
                 readOnly={undefined}
+                required={undefined}
+                role={undefined}
+                tabIndex={undefined}
                 type="text"
               />
             </div>
@@ -964,11 +1034,16 @@ Array [
               className="slds-form-element__control"
             >
               <input
+                aria-invalid={undefined}
                 className="slds-input"
                 defaultValue="MT"
+                disabled={undefined}
                 id="input-05"
                 placeholder={undefined}
                 readOnly={undefined}
+                required={undefined}
+                role={undefined}
+                tabIndex={undefined}
                 type="text"
               />
             </div>
@@ -992,11 +1067,16 @@ Array [
               className="slds-form-element__control"
             >
               <input
+                aria-invalid={undefined}
                 className="slds-input"
                 defaultValue={undefined}
+                disabled={undefined}
                 id="input-06"
                 placeholder={undefined}
                 readOnly={undefined}
+                required={undefined}
+                role={undefined}
+                tabIndex={undefined}
                 type="text"
               />
             </div>
@@ -1016,11 +1096,16 @@ Array [
               className="slds-form-element__control"
             >
               <input
+                aria-invalid={undefined}
                 className="slds-input"
                 defaultValue="Canada"
+                disabled={undefined}
                 id="input-07"
                 placeholder={undefined}
                 readOnly={undefined}
+                required={undefined}
+                role={undefined}
+                tabIndex={undefined}
                 type="text"
               />
             </div>

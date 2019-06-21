@@ -4,7 +4,7 @@
 import React from 'react';
 import { CompoundFormElement, CompoundFormRow } from '../compound/';
 import { FormElement } from '../';
-import { Input } from '../../input/base/example';
+import Input from '../../input/';
 import { Textarea } from '../../textarea/base/example';
 
 export default (

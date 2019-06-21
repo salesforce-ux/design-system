@@ -65,6 +65,8 @@
 - On touch devices, set the tap target height of button-icons to `$height-tappable-small` when inline with label text
 
 ### [Input](https://www.lightningdesignsystem.com/components/input)
+#### Added
+- When an `input` has an error, `aria-invalid="true"` has been added to the `input` element
 #### Changed
 - Removed default `box-shadow` on `inputs` for Webkit
 - Positioning of icons inside of inputs have been tweaked when on a touch device

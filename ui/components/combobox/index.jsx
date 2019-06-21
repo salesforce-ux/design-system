@@ -5,7 +5,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import ButtonIcon from '../button-icons/';
-import { Input } from '../input/base/example';
+import Input from '../input/';
 import { Spinner } from '../spinners/base/example';
 import { FormElement } from '../form-element/';
 
@@ -95,7 +95,9 @@ const ComboboxInput = props => {
         type="text"
         placeholder={
           !props.placeholder
-            ? props.autocomplete ? 'Search...' : 'Select an Option'
+            ? props.autocomplete
+              ? 'Search...'
+              : 'Select an Option'
             : props.placeholder
         }
         readOnly={props['readonly']}

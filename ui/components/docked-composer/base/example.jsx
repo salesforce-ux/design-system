@@ -19,7 +19,7 @@ import {
   RteClearFormatting
 } from '../../rich-text-editor/base/example';
 import { FormElement } from '../../form-element';
-import { Input } from '../../input/base/example';
+import Input from '../../input/';
 import {
   ComboboxContainer,
   Listbox,

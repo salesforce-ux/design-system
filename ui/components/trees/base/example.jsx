@@ -22,7 +22,7 @@ import {
 } from '../base/index';
 
 import { FormElement } from '../../form-element/index';
-import { Input } from '../../input/base/example';
+import Input from '../../input/';
 import { UtilityIcon } from '../../icons/base/example';
 
 /// ///////////////////////////////////////////

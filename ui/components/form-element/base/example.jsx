@@ -3,7 +3,7 @@
 
 import React from 'react';
 import { FormElement, Fieldset } from '../';
-import { Input } from '../../input/base/example';
+import Input from '../../input/';
 import { Textarea } from '../../textarea/base/example';
 import { Checkbox } from '../../checkbox/base/example';
 import { Radio } from '../../radio-group/base/example';

@@ -4,7 +4,7 @@
 import React from 'react';
 import { CompoundFormElement, CompoundFormRow } from './';
 import { FormElement, Fieldset } from '../';
-import { Input } from '../../input/base/example';
+import Input from '../../input/';
 
 export default (
   <CompoundFormElement labelContent="Location">

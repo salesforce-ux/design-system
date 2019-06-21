@@ -6,6 +6,10 @@
 
 ## 2.10.0
 
+### Added
+
+- When an `input` has an error, `aria-invalid="true"` has been added to the `input` element
+
 ### Changed
 
 - Removed default `box-shadow` on `inputs` for Webkit

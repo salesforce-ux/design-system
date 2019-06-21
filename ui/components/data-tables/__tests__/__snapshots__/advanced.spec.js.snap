@@ -1817,11 +1817,15 @@ exports[`Product data table product quantity cell should render 1`] = `
     className="slds-form-element__control"
   >
     <input
+      aria-invalid={undefined}
       className="slds-input slds-size_xxx-small slds-text-align_center slds-p-horizontal_x-small"
       defaultValue={undefined}
+      disabled={undefined}
       id="product-quantity-text-input-id-0"
       placeholder=" "
       readOnly={undefined}
+      required={undefined}
+      role={undefined}
       tabIndex="-1"
       type="text"
     />
@@ -1845,11 +1849,15 @@ exports[`Product data table product quantity cell should set a quantity 1`] = `
     className="slds-form-element__control"
   >
     <input
+      aria-invalid={undefined}
       className="slds-input slds-size_xxx-small slds-text-align_center slds-p-horizontal_x-small"
       defaultValue="1"
+      disabled={undefined}
       id="product-quantity-text-input-id-0"
       placeholder=" "
       readOnly={undefined}
+      required={undefined}
+      role={undefined}
       tabIndex="-1"
       type="text"
     />
@@ -1873,11 +1881,15 @@ exports[`Product data table product quantity cell should set the input focusable
     className="slds-form-element__control"
   >
     <input
+      aria-invalid={undefined}
       className="slds-input slds-size_xxx-small slds-text-align_center slds-p-horizontal_x-small"
       defaultValue={undefined}
+      disabled={undefined}
       id="product-quantity-text-input-id-0"
       placeholder=" "
       readOnly={undefined}
+      required={undefined}
+      role={undefined}
       tabIndex={null}
       type="text"
     />
@@ -1995,11 +2007,15 @@ exports[`Product data table row should make focusable elements focusable in acti
         className="slds-form-element__control"
       >
         <input
+          aria-invalid={undefined}
           className="slds-input slds-size_xxx-small slds-text-align_center slds-p-horizontal_x-small"
           defaultValue="1"
+          disabled={undefined}
           id="product-quantity-text-input-id-1"
           placeholder=" "
           readOnly={undefined}
+          required={undefined}
+          role={undefined}
           tabIndex={null}
           type="text"
         />
@@ -2184,11 +2200,15 @@ exports[`Product data table row should render 1`] = `
         className="slds-form-element__control"
       >
         <input
+          aria-invalid={undefined}
           className="slds-input slds-size_xxx-small slds-text-align_center slds-p-horizontal_x-small"
           defaultValue="1"
+          disabled={undefined}
           id="product-quantity-text-input-id-1"
           placeholder=" "
           readOnly={undefined}
+          required={undefined}
+          role={undefined}
           tabIndex="-1"
           type="text"
         />

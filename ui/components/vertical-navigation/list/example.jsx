@@ -5,7 +5,7 @@ import React from 'react';
 import { PropTypes } from 'prop-types';
 import { UtilityIcon } from '../../icons/base/example.jsx';
 import { FormElement } from '../../form-element';
-import { Input } from '../../input/base/example';
+import Input from '../../input/';
 import SvgIcon from '../../../shared/svg-icon';
 import classNames from 'classnames';
 import { Button } from '../../buttons/base/example';

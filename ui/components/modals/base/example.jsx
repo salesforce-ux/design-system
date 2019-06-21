@@ -10,12 +10,14 @@ import classNames from 'classnames';
 // Partial(s)
 /// ///////////////////////////////////////////
 
-let Demo = props => (
-  <div style={props.style}>
-    {props.children}
-    <div className="slds-backdrop slds-backdrop_open" />
-  </div>
-);
+let Demo = props => {
+  return (
+    <div style={{ transform: 'translate3d(0,0,0)', ...props.style }}>
+      {props.children}
+      <div className="slds-backdrop slds-backdrop_open" />
+    </div>
+  );
+};
 
 export let Modal = props => (
   <section
@@ -76,10 +78,7 @@ let Taglines = props => (
   <Demo style={{ height: '640px' }}>
     <Modal aria-labelledby="modal-heading-01">
       <ModalHeader>
-        <h2
-          id="modal-heading-01"
-          className="slds-text-heading_medium slds-hyphenate"
-        >
+        <h2 id="modal-heading-01" className="slds-modal__title slds-hyphenate">
           Modal Header
         </h2>
         <p className="slds-m-top_x-small">
@@ -126,10 +125,7 @@ let ModalSizes = props => (
       aria-labelledby="modal-heading-01"
     >
       <ModalHeader>
-        <h2
-          id="modal-heading-01"
-          className="slds-text-heading_medium slds-hyphenate"
-        >
+        <h2 id="modal-heading-01" className="slds-modal__title slds-hyphenate">
           Modal Header
         </h2>
       </ModalHeader>
@@ -167,10 +163,7 @@ let Directional = props => (
   <Demo style={{ height: '640px' }}>
     <Modal aria-labelledby="modal-heading-01">
       <ModalHeader>
-        <h2
-          id="modal-heading-01"
-          className="slds-text-heading_medium slds-hyphenate"
-        >
+        <h2 id="modal-heading-01" className="slds-modal__title slds-hyphenate">
           Modal Header
         </h2>
       </ModalHeader>
@@ -238,10 +231,7 @@ let Footless = props => (
   <Demo style={{ height: '640px' }}>
     <Modal aria-labelledby="modal-heading-01">
       <ModalHeader>
-        <h2
-          id="modal-heading-01"
-          className="slds-text-heading_medium slds-hyphenate"
-        >
+        <h2 id="modal-heading-01" className="slds-modal__title slds-hyphenate">
           Modal Header
         </h2>
       </ModalHeader>
@@ -275,10 +265,7 @@ export default (
   <Demo style={{ height: '640px' }}>
     <Modal aria-labelledby="modal-heading-01">
       <ModalHeader>
-        <h2
-          id="modal-heading-01"
-          className="slds-text-heading_medium slds-hyphenate"
-        >
+        <h2 id="modal-heading-01" className="slds-modal__title slds-hyphenate">
           Modal Header
         </h2>
       </ModalHeader>
@@ -308,7 +295,7 @@ export default (
   </Demo>
 );
 
-export let examples = [
+export const examples = [
   {
     id: 'taglines',
     label: 'Taglines',
@@ -345,3 +332,5 @@ export let examples = [
     element: <Directional />
   }
 ];
+
+export const states = [];

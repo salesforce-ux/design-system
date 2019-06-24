@@ -7,6 +7,8 @@ global:
   cssProperties:
   - font
   - font-weight
+  scope: global
+  primitive: true
 imports:
 - ../aliases/font-weight.yml
 props:

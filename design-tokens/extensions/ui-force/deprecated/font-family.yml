@@ -7,15 +7,10 @@ global:
   cssProperties:
   - 'font'
   - 'font-family'
-  scope: global
+  deprecated: true
 imports:
-- ../aliases/font-family.yml
+- ../../../aliases/font-family.yml
 props:
-  FONT_FAMILY:
+  FONT_FAMILY_TEXT:
     value: '{!SANS_SERIF}'
-    comment: 'Default font-family for Salesforce applications'
-    access: global
-  FONT_FAMILY_HEADING:
-    value: '{!SANS_SERIF}'
-  FONT_FAMILY_MONOSPACE:
-    value: '{!MONOSPACE}'
+    comment: 'Deprecated: use FONT_FAMILY instead for regular body text and FONT_FAMILY_HEADING for headings.'

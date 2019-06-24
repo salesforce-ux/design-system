@@ -2,16 +2,15 @@
 # Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 imports:
-- ./deprecated/base.yml
 - ./background-color.yml
 - ./border-color.yml
 - ./border-radius.yml
+- ./border-width.yml
 - ./box-shadow.yml
 - ./duration.yml
 - ./font-family.yml
 - ./font-size.yml
 - ./font-weight.yml
-- ./illustrations.yml
 - ./line-height.yml
 - ./opacity.yml
 - ./palette-colors.yml

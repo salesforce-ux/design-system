@@ -7,6 +7,7 @@ global:
   cssProperties:
   - 'border*radius'
   scope: global
+  primitive: true
 imports:
 - ../aliases/border-radius.yml
 props:

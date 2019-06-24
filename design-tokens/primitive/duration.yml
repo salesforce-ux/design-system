@@ -8,6 +8,7 @@ global:
   - 'animation*'
   - 'transition*'
   scope: global
+  primitive: true
 imports:
 - ../aliases/duration.yml
 props:

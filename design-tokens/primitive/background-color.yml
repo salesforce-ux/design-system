@@ -9,6 +9,7 @@ global:
   - 'border*'
   - box-shadow
   scope: global
+  primitive: true
 imports:
 - ../aliases/colors.yml
 - ../aliases/color-palettes.yml

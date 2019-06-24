@@ -8,6 +8,7 @@ global:
   - font
   - font-size
   scope: global
+  primitive: true
 imports:
 - ../aliases/font-size.yml
 props:

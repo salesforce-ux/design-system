@@ -3,5 +3,5 @@
 
 imports:
 - ./deprecated/base.yml
-- ./global/base.yml
+- ./primitive/base.yml
 - ./ui-force/base.yml

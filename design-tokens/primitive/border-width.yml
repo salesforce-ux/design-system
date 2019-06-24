@@ -2,24 +2,29 @@
 # Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 global:
+  category: border-style
   type: size
   cssProperties:
-  - '*width'
-  - '*height'
-  - '*flex*'
   - top
   - right
   - bottom
   - left
   - 'margin*'
   - 'padding*'
-  - transform
-  category: sizing
+  - 'border*'
+  - '*width'
+  - '*height'
+  - box-shadow
+  - stroke
+  - stroke-width
+  scope: global
+  primitive: true
+imports:
+- ../aliases/border-width.yml
 props:
-  HEIGHT_HEADER:
-    value: 3.125rem
-    comment: Header for desktop.
+  BORDER_WIDTH_THIN:
+    value: 1px
     access: global
-  SQUARE_ICON_MEDIUM:
-    value: 2rem
-    comment: Medium tap target size
+  BORDER_WIDTH_THICK:
+    value: 2px
+    access: global

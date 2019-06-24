@@ -6,6 +6,7 @@ imports:
 - ./border-color.yml
 - ./box-shadow.yml
 - ./font-size.yml
+- ./font-family.yml
 - ./sizing.yml
 - ./spacing.yml
 - ./text-color.yml

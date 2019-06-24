@@ -25,9 +25,11 @@ const getComponents = key => {
   return components.map(comp => `.html/${comp}*.html`);
 };
 
-// /////////////////////////////////////////////////////////
-// Gulp
-// /////////////////////////////////////////////////////////
+/*
+ * ==================
+ * Gulp
+ * ==================
+ */
 
 const withName = name => fn => {
   const f = (...args) => fn(...args);
@@ -35,9 +37,11 @@ const withName = name => fn => {
   return f;
 };
 
-// /////////////////////////////////////////////////////////
-// Clean
-// /////////////////////////////////////////////////////////
+/*
+ * ==================
+ * Clean
+ * ==================
+ */
 
 gulp.task('clean', () =>
   del([
@@ -50,9 +54,11 @@ gulp.task('clean', () =>
   ])
 );
 
-// /////////////////////////////////////////////////////////
-// Examples
-// /////////////////////////////////////////////////////////
+/*
+ * ==================
+ * Examples
+ * ==================
+ */
 
 gulp.task(
   'generate:examples:wrapped',
@@ -63,35 +69,55 @@ gulp.task(
   )
 );
 
-// /////////////////////////////////////////////////////////
-// Tokens
-// /////////////////////////////////////////////////////////
+/*
+ * ==================
+ * Tokens
+ * ==================
+ */
 
-gulp.task('generate:tokens:sass:default', tokens.sassDefault);
-gulp.task('generate:tokens:sass:map', tokens.sassMap);
+// Generate Primitive Aliases from npm package - @salesforce-ux/design-system-primitive-tokens
 gulp.task(
-  'generate:tokens:sass',
-  gulp.parallel('generate:tokens:sass:default', 'generate:tokens:sass:map')
+  'generate:tokens:primitive:aliases',
+  tokens.copyDesignPrimitiveAliases
 );
+
+// Generate Primitive Tokens from npm package - @salesforce-ux/design-system-primitive-tokens
+gulp.task('generate:tokens:primitive', tokens.copyDesignPrimitiveTokens);
+
+// Generate component specific tokens
 gulp.task('generate:tokens:components:imports', tokens.componentsImports);
+
+// Generate package specific tokens
+gulp.task('generate:tokens:package', tokens.packages);
+
+// Generate all tokens - [Primitive, Component Specific, Package]
 gulp.task(
   'generate:tokens:all',
-  gulp.series('generate:tokens:components:imports', tokens.all)
+  gulp.series(
+    'generate:tokens:primitive:aliases',
+    'generate:tokens:primitive',
+    'generate:tokens:components:imports',
+    'generate:tokens:package'
+  )
 );
 
 gulp.task('generate:auraTokensMap', done => {
   dist.writeAuraTokensMap().fork(e => done(e), () => done());
 });
+
 gulp.task('generate:tokenComponentMap', done => {
   dist.writeTokenComponentMap().fork(e => done(e), () => done());
 });
+
 gulp.task('generate:utilityDeclarationsMap', done => {
   dist.writeUtilityDeclarationsMap().fork(e => done(e), () => done());
 });
 
-// /////////////////////////////////////////////////////////
-// Lint
-// /////////////////////////////////////////////////////////
+/*
+ * ==================
+ * Lint
+ * ==================
+ */
 
 const a11y = withName('a11y')(() => accessibility.axe(getComponents()));
 
@@ -150,34 +176,37 @@ gulp.task(
   )
 );
 
-// /////////////////////////////////////////////////////////
-// Styles
-// /////////////////////////////////////////////////////////
+/*
+ * ==================
+ * Styles
+ * ==================
+ */
 
 gulp.task('styles:sass', styles.sass);
 gulp.task('styles:test', styles.sassTest);
 gulp.task('styles:formFactors', styles.sassFormFactors);
 gulp.task(
   'styles',
-  gulp.series(
-    gulp.parallel('generate:tokens:sass'),
-    gulp.parallel('styles:sass', 'styles:test', 'styles:formFactors')
-  )
+  gulp.series(gulp.parallel('styles:sass', 'styles:test', 'styles:formFactors'))
 );
 gulp.task(
   'styles:stats',
   gulp.series('styles', withName('stylestats')(styles.stylestats))
 );
 
-// /////////////////////////////////////////////////////////
-// Build
-// /////////////////////////////////////////////////////////
+/*
+ * ==================
+ * Builds
+ * ==================
+ */
 
 gulp.task('build', gulp.series('clean', 'generate:tokens:all', 'styles'));
 
-// /////////////////////////////////////////////////////////
-// Test
-// /////////////////////////////////////////////////////////
+/*
+ * ==================
+ * Tests
+ * ==================
+ */
 
 export const watch = () =>
   gulp.watch(paths.watch.sass).on('change', changedPath => {
@@ -196,9 +225,11 @@ export const watch = () =>
     });
   });
 
-// /////////////////////////////////////////////////////////
-// Dist
-// /////////////////////////////////////////////////////////
+/*
+ * ==================
+ * Dist
+ * ==================
+ */
 
 gulp.task(
   'dist',
@@ -245,9 +276,11 @@ gulp.task(
   )
 );
 
-// /////////////////////////////////////////////////////////
-// Travis
-// /////////////////////////////////////////////////////////
+/*
+ * ==================
+ * Travis
+ * ==================
+ */
 
 gulp.task('travis', done => {
   if (!travis.shouldPushToBuildServer()) return done();

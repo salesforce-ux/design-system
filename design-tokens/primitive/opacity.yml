@@ -6,6 +6,8 @@ global:
   category: opacity
   cssProperties:
   - opacity
+  scope: global
+  primitive: true
 props:
   OPACITY_5:
     value: '0.5'

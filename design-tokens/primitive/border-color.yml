@@ -10,6 +10,7 @@ global:
   - outline
   - outline-color
   scope: global
+  primitive: true
 imports:
 - ../aliases/colors.yml
 - ../aliases/color-palettes.yml

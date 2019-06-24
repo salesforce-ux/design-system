@@ -18,6 +18,8 @@ global:
   - box-shadow
   - stroke
   - stroke-width
+  scope: global
+  primitive: true
 imports:
 - ../aliases/spacing.yml
 props:
@@ -55,7 +57,7 @@ props:
   SPACING_XX_LARGE:
     value: '{!SPACING_XX_LARGE}'
     comment: 'Constant spacing token for size XX Large'
-
+    access: global
   VAR_SPACING_XXX_SMALL:
     value: '{!SPACING_XXX_SMALL}'
     comment: 'Variable spacing token for size XXX Small'
@@ -287,10 +289,4 @@ props:
     - margin-bottom
     - padding-top
     - padding-bottom
-    access: global
-  BORDER_WIDTH_THIN:
-    value: 1px
-    access: global
-  BORDER_WIDTH_THICK:
-    value: 2px
     access: global

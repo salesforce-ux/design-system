@@ -9,7 +9,6 @@ import _ from 'lodash';
 import path from 'path';
 import through from 'through2';
 import Vinyl from 'vinyl';
-
 import paths from '../../helpers/paths';
 
 // Some transforms are commented out because the use cases are lacking
@@ -36,7 +35,8 @@ let formatTransforms = _({
   .flatten()
   .value();
 
-export const all = done => {
+// Pipe through every YAML file and generate a platform specific token file
+export const packages = done => {
   const convert = ({ name, transform }, done) =>
     gulp
       .src(path.resolve(paths.designTokens, '*.yml'))
@@ -51,28 +51,14 @@ export const all = done => {
   async.each(formatTransforms, convert, done);
 };
 
-export const sassDefault = () =>
-  gulp
-    .src(path.resolve(paths.designTokens, '*.yml'))
-    .pipe(
-      gulpTheo.plugin({
-        transform: { type: 'web' },
-        format: { type: 'default.scss' }
-      })
-    )
-    .pipe(gulp.dest(path.resolve(paths.designTokens, 'dist')));
-
-export const sassMap = () =>
-  gulp
-    .src(path.resolve(paths.designTokens, '*.yml'))
-    .pipe(
-      gulpTheo.plugin({
-        transform: { type: 'web' },
-        format: { type: 'map.scss' }
-      })
-    )
-    .pipe(gulp.dest(path.resolve(paths.designTokens, 'dist')));
-
+// Pipe through every component specific YAML file and generate a file of imports
+//
+// components.yml
+//  # File generated automatically, do not edit manually
+//    imports:
+//      - ../ui/components/avatar-group/tokens/background-color.yml
+//      - ../ui/components/badges/tokens/background-color.yml
+//      ...
 export const componentsImports = () =>
   gulp
     .src(path.resolve(paths.ui, 'components/**/tokens/**/*.yml'))
@@ -93,3 +79,15 @@ export const componentsImports = () =>
       })
     )
     .pipe(gulp.dest(paths.designTokens));
+
+// Copy @salesforce-ux/design-system-primitive-token aliases to design-tokens folder
+export const copyDesignPrimitiveAliases = () =>
+  gulp
+    .src(path.resolve(paths.designPrimitiveTokens, 'design-tokens/aliases/*'))
+    .pipe(gulp.dest(path.resolve(paths.designTokens, 'aliases')));
+
+// Copy @salesforce-ux/design-system-primitive-token tokens to design-tokens folder
+export const copyDesignPrimitiveTokens = () =>
+  gulp
+    .src(path.resolve(paths.designPrimitiveTokens, 'design-tokens/primitive/*'))
+    .pipe(gulp.dest(path.resolve(paths.designTokens, 'primitive')));

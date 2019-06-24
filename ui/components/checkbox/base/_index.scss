@@ -33,6 +33,7 @@
 
     @include touch-device {
       @include square($square-tappable-x-small);
+      flex-shrink: 0; // Contained within flex, we don't want checkbox to shrink
     }
   }
 
@@ -44,6 +45,7 @@
   .slds-checkbox__label {
     @include touch-device {
       @include flex-vertical-center(inline-flex);
+      vertical-align: middle;  // Label is inline but with explicit size so we need to help with alignment
       min-height: $height-tappable;
     }
 

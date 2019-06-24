@@ -53,7 +53,8 @@
     font-size: $font-size-3;
 
     @include touch-device {
-      font-size: inherit;
+      display: inline-flex; // In touch, .slds-form-element__label uses flex for vert centering
+      font-size: $font-size-5;
     }
   }
 

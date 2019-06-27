@@ -1,0 +1,26 @@
+# Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+# Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+global:
+  category: font
+  type: font-weight
+  cssProperties:
+  - font
+  - font-weight
+  scope: global
+  primitive: true
+imports:
+- ../aliases/font-weight.yml
+props:
+  FONT_WEIGHT_LIGHT:
+    value: '{!FONT_WEIGHT_LIGHT}'
+    comment: Use for large headings only.
+    access: global
+  FONT_WEIGHT_REGULAR:
+    value: '{!FONT_WEIGHT_REGULAR}'
+    comment: Most all body copy.
+    access: global
+  FONT_WEIGHT_BOLD:
+    value: '{!FONT_WEIGHT_BOLD}'
+    comment: Used sparingly for emphasized text within regular body copy.
+    access: global

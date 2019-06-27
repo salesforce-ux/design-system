@@ -19,9 +19,6 @@ global:
 props:
   WIDTH_STAGE_LEFT:
     value: '88%'
-  HEIGHT_FOOTER:
-    value: 3.75rem
-    comment: Action footer menu. Phone 44px; Tablet 50px
   HEIGHT_OVERFLOW_START:
     value: 144px
     comment: Space above overflow menu before scrolling.

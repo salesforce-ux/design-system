@@ -5,7 +5,7 @@ import React from 'react';
 import { DatePicker } from '../base/example';
 import ButtonIcon from '../../button-icons/';
 import { FormElement } from '../../form-element';
-import { Input } from '../../input/base/example';
+import Input from '../../input/';
 
 /* -----------------------------------------------------------------------------
     Variables

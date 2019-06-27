@@ -4,7 +4,7 @@
 import React from 'react';
 import { ListboxPills, ListboxPillsItem, ListboxPill } from '../../pills';
 import ButtonIcon from '../../button-icons/';
-import { Input } from '../../input/base/example';
+import Input from '../../input/';
 import { StandardIcon } from '../../icons/standard/example';
 import { UtilityIcon } from '../../icons/base/example';
 import { Spinner } from '../../spinners/base/example';

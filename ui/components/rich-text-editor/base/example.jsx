@@ -19,7 +19,7 @@ import { IconObjectSwitcher } from '../../combobox/object-switcher/';
 import { UtilityIcon } from '../../icons/base/example';
 import * as Snapshot from '../../combobox/snapshots.data';
 import { FormElement } from '../../form-element';
-import { Input } from '../../input/base/example';
+import Input from '../../input/';
 import classNames from 'classnames';
 import _ from '../../../shared/helpers';
 

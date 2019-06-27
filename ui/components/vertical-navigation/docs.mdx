@@ -1,4 +1,5 @@
 import CodeView from '../../../shared/components/CodeView';
+import Blockquote from '../../../shared/components/Blockquote';
 import { getDisplayElementById } from '../../shared/helpers';
 import * as List from './list/example';
 import * as RadioGroup from './radio-group/example';
@@ -13,6 +14,12 @@ import * as RadioGroup from './radio-group/example';
 <CodeView>
   {List.default}
 </CodeView>
+
+<Blockquote type="a11y" header="Accessibility Note">
+  The <code className="doc">aria-current</code> attribute is used when an element within a set (e.g., navigation list items) is styled to indicate the selected or active item. In our use case, the attribute should be placed on the <code className="doc">slds-nav-vertical__action</code> link element. In our example above, we're using the generic <code className="doc">true</code> value, but the attribute will accept a variety of options depending on your use case.
+
+  For more information on <code className="doc">aria-current</code>, please visit the <a href="https://www.w3.org/TR/wai-aria-1.1/#aria-current">W3C specification page</a>.
+</Blockquote>
 
 ### States
 

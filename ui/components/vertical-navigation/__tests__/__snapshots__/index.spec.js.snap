@@ -60,7 +60,7 @@ exports[`Vertical Nav List Group renders a list item 1`] = `
   className="slds-nav-vertical__item"
 >
   <a
-    aria-current={null}
+    aria-current={undefined}
     className="slds-nav-vertical__action"
     href="javascript:void(0);"
   >
@@ -104,7 +104,7 @@ exports[`Vertical Nav List Group renders an active list item 1`] = `
   className="slds-nav-vertical__item slds-is-active"
 >
   <a
-    aria-current="page"
+    aria-current={true}
     className="slds-nav-vertical__action"
     href="javascript:void(0);"
   >

@@ -3,6 +3,12 @@
 # Path Release Notes
 
 <!-- ## [Unreleased] -->
+## 2.10.0
+
+### Fixed
+
+- Fixed text disappearing when peaking between stage in Safari
+
 ## 2.9.0
 
 ### Added

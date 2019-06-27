@@ -1,0 +1,244 @@
+# Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+# Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+global:
+  type: color
+  category: color
+  cssProperties:
+  - background-color
+  - 'border*color'
+  - box-shadow
+  - fill
+  - color
+  scope: global
+  primitive: true
+imports:
+- ../aliases/color-palettes.yml
+props:
+  COLOR_GRAY_1:
+    value: "{!PALETTE_GRAY_1}"
+    comment: "Gray Color 1"
+    release: 2.5.0
+  COLOR_GRAY_2:
+    value: "{!PALETTE_GRAY_2}"
+    comment: "Gray Color 2"
+    release: 2.5.0
+  COLOR_GRAY_3:
+    value: "{!PALETTE_GRAY_3}"
+    comment: "Gray Color 3"
+    release: 2.5.0
+  COLOR_GRAY_4:
+    value: "{!PALETTE_GRAY_4}"
+    comment: "Gray Color 4"
+    release: 2.5.0
+  COLOR_GRAY_5:
+    value: "{!PALETTE_GRAY_5}"
+    comment: "Gray Color 5"
+    release: 2.5.0
+  COLOR_GRAY_6:
+    value: "{!PALETTE_GRAY_6}"
+    comment: "Gray Color 6"
+    release: 2.5.0
+  COLOR_GRAY_7:
+    value: "{!PALETTE_GRAY_7}"
+    comment: "Gray Color 7"
+    release: 2.5.0
+  COLOR_GRAY_8:
+    value: "{!PALETTE_GRAY_8}"
+    comment: "Gray Color 8"
+    release: 2.5.0
+  COLOR_GRAY_9:
+    value: "{!PALETTE_GRAY_9}"
+    comment: "Gray Color 9"
+    release: 2.5.0
+  COLOR_GRAY_10:
+    value: "{!PALETTE_GRAY_10}"
+    comment: "Gray Color 10"
+    release: 2.5.0
+  COLOR_GRAY_11:
+    value: "{!PALETTE_GRAY_11}"
+    comment: "Gray Color 11"
+    release: 2.5.0
+  COLOR_GRAY_12:
+    value: "{!PALETTE_GRAY_12}"
+    comment: "Gray Color 12"
+    release: 2.5.0
+  COLOR_GRAY_13:
+    value: "{!PALETTE_GRAY_13}"
+    comment: "Gray Color 13"
+    release: 2.5.0
+  BRAND_PRIMARY:
+    value: "#1589ee"
+    comment: "Primary brand color"
+    themeable: true
+    release: 2.6.0
+  BRAND_PRIMARY_ACTIVE:
+    value: "#007add"
+    comment: "Active / Hover state of BRAND_PRIMARY"
+    themeable: true
+    release: 2.6.0
+  BRAND_PRIMARY_TRANSPARENT:
+    value: "rgba(21,137,238,0.1)"
+    comment: "Transparent value of BRAND_PRIMARY"
+    themeable: true
+    release: 2.6.0
+  BRAND_PRIMARY_TRANSPARENT_10:
+    value: "rgba(21,137,238,0.1)"
+    comment: "Transparent value of BRAND_PRIMARY at 10%"
+    themeable: true
+    release: 2.6.0
+  BRAND_PRIMARY_TRANSPARENT_40:
+    value: "rgba(21,137,238,0.4)"
+    comment: "Transparent value of BRAND_PRIMARY at 40%"
+    themeable: true
+    release: 2.6.0
+  BRAND_LIGHT:
+    value: "#f4f6fe"
+    comment: "Light variant of BRAND that is accessible with dark colors"
+    themeable: true
+    release: 2.6.0
+  BRAND_LIGHT_ACTIVE:
+    value: "#e3e5ed"
+    comment: "Active / Hover state of BRAND_LIGHT"
+    themeable: true
+    release: 2.6.0
+  BRAND_DARK:
+    value: "#182337"
+    comment: "Dark variant of BRAND that is accessible with light colors"
+    themeable: true
+    release: 2.6.0
+  BRAND_DARK_ACTIVE:
+    value: "#253045"
+    comment: "Active / Hover state of BRAND_DARK"
+    themeable: true
+    release: 2.6.0
+  BRAND_ACCESSIBLE:
+    value: "#0070d2"
+    comment: "Dark variant of BRAND that is accessible with white"
+    themeable: true
+    release: 2.6.0
+  BRAND_ACCESSIBLE_ACTIVE:
+    value: "#005fb2"
+    comment: "Active / Hover state of BRAND_A11Y"
+    themeable: true
+    release: 2.6.0
+  BRAND_DISABLED:
+    value: "#c9c7c5"
+    comment: "Disabled state of BRAND_A11Y"
+    themeable: true
+    release: 2.6.0
+  BRAND_CONTRAST:
+    value: "#1a1b1e"
+    comment: "Variant of BRAND that is accessible with BRAND"
+    themeable: true
+    release: 2.6.0
+  BRAND_CONTRAST_ACTIVE:
+    value: "#0d0e12"
+    comment: "Active / Hover state of BRAND_CONTRAST"
+    themeable: true
+    release: 2.6.0
+  BRAND_BACKGROUND_PRIMARY:
+    value: "#fafaf9"
+    comment: "Primary page background color"
+    themeable: true
+    release: 2.6.0
+  BRAND_BACKGROUND_PRIMARY_TRANSPARENT:
+    value: "rgba(250,250,249,0)"
+    comment: "These RGBA values need to be updated if BRAND_BACKGROUND_PRIMARY changes, solves webkit bug"
+    themeable: true
+    release: 2.6.0
+  BRAND_BACKGROUND_DARK:
+    value: "#e8e8e8"
+    comment: "Dark variant of BRAND_BACKGROUND_PRIMARY, used within gradient of background color"
+    themeable: true
+    release: 2.6.0
+  BRAND_BACKGROUND_DARK_TRANSPARENT:
+    value: "rgba(221,219,218,0)"
+    comment: "These RGBA values need to be updated if BRAND_BACKGROUND_DARK changes, solves webkit bug"
+    themeable: true
+    release: 2.6.0
+  BRAND_HEADER:
+    value: "#ffffff"
+    comment: "Background color a branded app header"
+    themeable: true
+    release: 2.6.0
+  BRAND_HEADER_CONTRAST_WEAK:
+    value: "#919191"
+    comment: "Weak contrast ratio, useful for iconography"
+    themeable: true
+    release: 2.6.0
+  BRAND_HEADER_CONTRAST_WEAK_ACTIVE:
+    value: "#818181"
+    comment: "Active / Hover state of BRAND_HEADER_CONTRAST_WEAK"
+    themeable: true
+    release: 2.6.0
+  BRAND_HEADER_CONTRAST_WEAK_DISABLED:
+    value: "rgba(166,166,166,0.25)"
+    comment: "Disabled state of BRAND_HEADER_CONTRAST_WEAK"
+    themeable: true
+    release: 2.6.0
+  BRAND_HEADER_ICON:
+    value: "#919191"
+    comment: "Icons of BRAND_HEADER that is accessible with BRAND_HEADER"
+    themeable: true
+    release: 2.6.0
+  BRAND_HEADER_ICON_ACTIVE:
+    value: "#818181"
+    comment: "Active / Hover state of BRAND_HEADER_ICON"
+    themeable: true
+    release: 2.6.0
+  BRAND_HEADER_ICON_DISABLED:
+    value: "rgba(145,145,145,0.25)"
+    comment: "Disabled state of BRAND_HEADER_ICON"
+    themeable: true
+    release: 2.6.0
+  BRAND_HEADER_CONTRAST:
+    value: "#5e5e5e"
+    comment: "Variant of BRAND_HEADER that is accessible with BRAND_HEADER"
+    themeable: true
+    release: 2.6.0
+  BRAND_HEADER_CONTRAST_ACTIVE:
+    value: "#505050"
+    comment: "Active / Hover state of BRAND_HEADER_CONTRAST"
+    themeable: true
+    release: 2.6.0
+  BRAND_HEADER_CONTRAST_INVERSE:
+    value: "#ffffff"
+    comment: "Variant of BRAND_HEADER that is accessible with BRAND_HEADER"
+    themeable: true
+    release: 2.6.0
+  BRAND_HEADER_CONTRAST_INVERSE_ACTIVE:
+    value: "#eeeeee"
+    comment: "Active / Hover state of BRAND_HEADER_CONTRAST"
+    themeable: true
+    release: 2.6.0
+  BRAND_HEADER_CONTRAST_COOL:
+    value: "#005583"
+    comment: "Variant of BRAND_HEADER_CONTRAST that provides a cool color"
+    themeable: true
+    release: 2.6.0
+  BRAND_HEADER_CONTRAST_COOL_ACTIVE:
+    value: "#005583"
+    comment: "Active / Hover state of BRAND_HEADER_CONTRAST_COOL"
+    themeable: true
+    release: 2.6.0
+  BRAND_HEADER_CONTRAST_WARM:
+    value: "#BF0201"
+    comment: "Variant of BRAND_HEADER_CONTRAST that provides a warm color"
+    themeable: true
+    release: 2.6.0
+  BRAND_HEADER_CONTRAST_WARM_ACTIVE:
+    value: "#ac0000"
+    comment: "Active / Hover state of BRAND_HEADER_CONTRAST_WARM"
+    themeable: true
+    release: 2.6.0
+  BRAND_TEXT_LINK:
+    value: "#006DCC"
+    comment: "Primary text link brand color"
+    themeable: true
+    release: 2.6.0
+  BRAND_TEXT_LINK_ACTIVE:
+    value: "#005fb2"
+    comment: "Active / Hover state of BRAND_TEXT_LINK"
+    themeable: true
+    release: 2.6.0

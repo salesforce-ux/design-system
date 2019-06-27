@@ -33,6 +33,10 @@ module.exports = {
   assets: rootPath('assets'),
   ui: rootPath('ui'),
   designTokens: rootPath('design-tokens'),
+  designPrimitiveTokens: path.resolve(
+    node_modules,
+    '@salesforce-ux/design-system-primitive-tokens'
+  ),
 
   icons: path.resolve(
     node_modules,

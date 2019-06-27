@@ -3,6 +3,11 @@
 # Color Picker Release Notes
 
 <!-- ## [Unreleased] -->
+## 2.10.0
+
+### Changed
+
+- Removed `text-transform: uppercase` from default and custom tabs
 
 ## 2.9.4
 

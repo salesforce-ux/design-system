@@ -2,7 +2,7 @@
 # Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 imports:
-- ../../global/font-weight.yml
-- ../../global/font-size.yml
-- ../../global/line-height.yml
-- ../../global/font-family.yml
+- ../../primitive/font-weight.yml
+- ../../primitive/font-size.yml
+- ../../primitive/line-height.yml
+- ../../primitive/font-family.yml

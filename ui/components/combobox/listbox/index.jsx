@@ -53,6 +53,19 @@ export const ListboxItem = props => (
 );
 
 /**
+ * Listbox Item Sub-Heading
+ */
+export const ListboxItemHeading = props => (
+  <li
+    className="slds-dropdown__header slds-truncate"
+    title={props.text}
+    role="separator"
+  >
+    <span>{props.text}</span>
+  </li>
+);
+
+/**
  * Listbox Option
  */
 export const ListboxOption = props => (

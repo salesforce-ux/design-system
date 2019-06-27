@@ -11,7 +11,7 @@ import { Button } from '../buttons/base/example';
 import Tabs from '../tabs/index.react';
 import { Popover } from '../popovers/base/example';
 import { FormElement } from '../form-element';
-import { Input } from '../input/base/example';
+import Input from '../input/';
 
 const swatchColors = [
   '#e3abec',

@@ -10,6 +10,8 @@ import gulpSass from 'gulp-sass';
 import gulpSourcemaps from 'gulp-sourcemaps';
 import StyleStats from 'stylestats';
 
+import gulpFile from 'gulp-file';
+
 import paths from '../helpers/paths';
 
 const sign = x => (x < 0 ? '' : '+');
@@ -54,9 +56,9 @@ export const stylestats = done => {
 
       gulpUtil.log(`Additional stats:
             Rules: ${result.rules} (${sign(diff.rules)}${diff.rules})
-            Selectors: ${result.selectors} (${sign(
+            Selectors: ${result.selectors} (${sign(diff.selectors)}${
         diff.selectors
-      )}${diff.selectors})`);
+      })`);
       done(error, result);
     });
   });
@@ -92,3 +94,47 @@ export const sassTest = () =>
         .on('error', gulpSass.logError)
     )
     .pipe(gulp.dest('assets/styles/.test'));
+
+// Generate versions of SLDS for each set of form factor tokens
+export const sassFormFactors = () => {
+  let template = tokens => `
+      // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+      // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+      // Load SLDS from the process.env.SLDS__FRAMEWORK__PATH
+      $brand-background-primary: #ffffff;
+      @import 'design-tokens/dist/${tokens}';
+      @import 'ui/index.scss';
+    `;
+  let files = [
+    {
+      name: 'slds-large',
+      tokens: 'form-factor-large.default.scss'
+    },
+    {
+      name: 'slds-medium',
+      tokens: 'form-factor-medium.default.scss'
+    },
+    {
+      name: 'slds-small',
+      tokens: 'form-factor-small.default.scss'
+    }
+  ];
+
+  return files
+    .reduce(
+      (src, file) => src.pipe(gulpFile(file.name, template(file.tokens))),
+      gulp.src('styles/EMPTY/*.scss')
+    )
+    .pipe(
+      gulpSass
+        .sync({
+          precision: 10,
+          includePaths: [paths.ui, paths.node_modules]
+        })
+        .on('error', gulpSass.logError)
+    )
+    .pipe(gulpAutoprefixer({ remove: false }))
+    .pipe(gulpMinifycss({ advanced: false, roundingPrecision: '-1' }))
+    .pipe(gulpSourcemaps.write('.'))
+    .pipe(gulp.dest('assets/styles'));
+};

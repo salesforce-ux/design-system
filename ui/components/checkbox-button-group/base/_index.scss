@@ -30,6 +30,10 @@
   border-radius: 0;
   background-clip: padding-box;
 
+  @include touch-device {
+    @include border-box-line-height($height-tappable);
+  }
+
   /**
    * @summary Creates a custom styled checkbox
    * @selector .slds-checkbox_faux

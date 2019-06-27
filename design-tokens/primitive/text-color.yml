@@ -1,0 +1,138 @@
+# Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+# Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+global:
+  type: color
+  category: text-color
+  cssProperties:
+  - color
+  - fill
+  scope: global
+  primitive: true
+imports:
+- ../aliases/colors.yml
+- ../aliases/color-palettes.yml
+props:
+  COLOR_TEXT_DEFAULT:
+    value: '{!BISCAY}'
+    comment: Body text color
+    access: global
+  COLOR_TEXT_BRAND_PRIMARY:
+    value: '{!WHITE}'
+    comment: Text color found on any primary brand color
+
+  COLOR_TEXT_ACTION_LABEL:
+    value: '{!PALETTE_COOL_GRAY_9}'
+    comment: Action label text color
+    access: global
+  COLOR_TEXT_ACTION_LABEL_ACTIVE:
+    value: '{!BISCAY}'
+    comment: Action label active text color
+    access: global
+  COLOR_TEXT_BRAND:
+    value: '{!AZURE}'
+    comment: Our product brand blue.
+    access: global
+
+  COLOR_TEXT_CUSTOMER:
+    value: '{!TANGERINE}'
+    comment: Customer text used in anchor subtitle
+
+  COLOR_TEXT_ERROR:
+    value: '{!FLUSH_MAHOGANY}'
+    comment: Error text for inputs and error misc
+    access: global
+  COLOR_TEXT_INVERSE:
+    value: '{!WHITE}'
+    comment: Inverse text color for dark backgrounds
+    access: global
+  COLOR_TEXT_INVERSE_WEAK:
+    value: '{!PALETTE_COOL_GRAY_7}'
+    comment: Weak inverse text color for dark backgrounds
+    access: global
+  COLOR_TEXT_LINK:
+    value: '{!SCIENCE_BLUE}'
+    comment: Link text (508)
+    access: global
+  COLOR_TEXT_LINK_ACTIVE:
+    value: '{!MIDNIGHT_BLUE}'
+    comment: Active link text
+    access: global
+  COLOR_TEXT_LINK_DISABLED:
+    value: '{!BISCAY}'
+    comment: Disabled link text
+    access: global
+  COLOR_TEXT_LINK_FOCUS:
+    value: '{!ENDEAVOUR}'
+    comment: Focus link text
+    access: global
+  COLOR_TEXT_LINK_HOVER:
+    value: '{!ENDEAVOUR}'
+    cssProperties:
+      - color
+      - 'border*'
+    comment: Hover link text
+    access: global
+
+  COLOR_TEXT_LINK_INVERSE:
+    value: '{!WHITE}'
+    comment: Link color on dark background
+    access: global
+  COLOR_TEXT_LINK_INVERSE_HOVER:
+    value: '{!WHITE_TRANSPARENT_75}'
+    comment: Link color on dark background - hover state
+    access: global
+  COLOR_TEXT_LINK_INVERSE_ACTIVE:
+    value: '{!WHITE_TRANSPARENT_50}'
+    comment: Link color on dark background - active state
+    access: global
+  COLOR_TEXT_LINK_INVERSE_DISABLED:
+    value: '{!WHITE_TRANSPARENT_15}'
+    comment: Link color on dark background - disabled state
+    access: global
+
+  COLOR_TEXT_WARNING:
+    value: '{!KOROMIKO}'
+    comment: Color for texts or icons that are related to warnings on a dark background.
+
+  COLOR_TEXT_WARNING_ALT:
+    value: '{!CINNAMON}'
+    comment: Color for texts that are related to warnings on a light background.
+
+  COLOR_TEXT_WEAK:
+    value: '{!PALETTE_COOL_GRAY_9}'
+    comment: Color for text that is purposefully de-emphasized to create visual hierarchy.
+    access: global
+
+  COLOR_TEXT_ICON_DEFAULT:
+    value: '{!PALETTE_COOL_GRAY_9}'
+    comment: Default icon color.
+    access: global
+  COLOR_TEXT_LABEL:
+    value: '{!PALETTE_COOL_GRAY_9}'
+    comment: Text color for field labels.
+    access: global
+  COLOR_TEXT_PLACEHOLDER:
+    value: '{!PALETTE_COOL_GRAY_9}'
+    comment: Input placeholder text.
+    access: global
+  COLOR_TEXT_PLACEHOLDER_INVERSE:
+    value: '{!PALETTE_COOL_GRAY_4}'
+    comment: Input placeholder text on dark backgrounds.
+    access: global
+  COLOR_TEXT_REQUIRED:
+    value: '{!FLUSH_MAHOGANY}'
+    comment: Color of required field marker.
+    access: global
+  COLOR_TEXT_SUCCESS:
+    value: '{!FOREST_GREEN}'
+    comment: Text color for success text.
+  COLOR_TEXT_SUCCESS_INVERSE:
+    value: '{!EMERALD}'
+    comment: Text color for success text on dark backgrounds.
+  COLOR_TEXT_DESTRUCTIVE:
+    value: '{!FLUSH_MAHOGANY}'
+    comment: Text color for destructive actions
+  COLOR_TEXT_DESTRUCTIVE_HOVER:
+    value: '{!MEXICAN_RED}'
+    comment: Text color for destructive actions - hover state

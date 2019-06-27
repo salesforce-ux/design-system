@@ -76,15 +76,15 @@ exports[`Base popover renders a popover with a checkbox group 1`] = `
             aria-labelledby={null}
             defaultChecked={undefined}
             disabled={undefined}
-            id="checkbox-1"
+            id="checkbox-unique-id-1"
             name="options"
             tabIndex={undefined}
             type="checkbox"
-            value="checkbox-1"
+            value="checkbox-unique-id-1"
           />
           <label
             className="slds-checkbox__label"
-            htmlFor="checkbox-1"
+            htmlFor="checkbox-unique-id-1"
             id={undefined}
           >
             <span
@@ -105,15 +105,15 @@ exports[`Base popover renders a popover with a checkbox group 1`] = `
             aria-labelledby={null}
             defaultChecked={undefined}
             disabled={undefined}
-            id="checkbox-2"
+            id="checkbox-unique-id-2"
             name="options"
             tabIndex={undefined}
             type="checkbox"
-            value="checkbox-2"
+            value="checkbox-unique-id-2"
           />
           <label
             className="slds-checkbox__label"
-            htmlFor="checkbox-2"
+            htmlFor="checkbox-unique-id-2"
             id={undefined}
           >
             <span
@@ -134,15 +134,15 @@ exports[`Base popover renders a popover with a checkbox group 1`] = `
             aria-labelledby={null}
             defaultChecked={undefined}
             disabled={undefined}
-            id="checkbox-3"
+            id="checkbox-unique-id-3"
             name="options"
             tabIndex={undefined}
             type="checkbox"
-            value="checkbox-3"
+            value="checkbox-unique-id-3"
           />
           <label
             className="slds-checkbox__label"
-            htmlFor="checkbox-3"
+            htmlFor="checkbox-unique-id-3"
             id={undefined}
           >
             <span
@@ -163,15 +163,15 @@ exports[`Base popover renders a popover with a checkbox group 1`] = `
             aria-labelledby={null}
             defaultChecked={undefined}
             disabled={undefined}
-            id="checkbox-4"
+            id="checkbox-unique-id-4"
             name="options"
             tabIndex={undefined}
             type="checkbox"
-            value="checkbox-4"
+            value="checkbox-unique-id-4"
           />
           <label
             className="slds-checkbox__label"
-            htmlFor="checkbox-4"
+            htmlFor="checkbox-unique-id-4"
             id={undefined}
           >
             <span

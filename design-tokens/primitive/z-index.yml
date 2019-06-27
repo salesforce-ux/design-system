@@ -1,0 +1,47 @@
+# Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+# Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+global:
+  type: z-index
+  category: z-index
+  cssProperties:
+  - z-index
+  scope: global
+  primitive: true
+props:
+  Z_INDEX_TOAST:
+    value: '10000'
+    comment: Toasts
+  Z_INDEX_SPINNER:
+    value: '9050'
+    comment: Spinner
+  Z_INDEX_MODAL:
+    value: '9000'
+    comment: Modal
+  Z_INDEX_REMINDER:
+    value: '8500'
+    comment: Notifications under modals
+  Z_INDEX_OVERLAY:
+    value: '8000'
+    comment: Overlay
+  Z_INDEX_DROPDOWN:
+    value: '7000'
+    comment: Dropdown
+  Z_INDEX_DIALOG:
+    value: '6000'
+    comment: Dialog
+  Z_INDEX_POPUP:
+    value: '5000'
+    comment: Popup
+  Z_INDEX_STICKY:
+    value: '100'
+    comment: Stickied element
+  Z_INDEX_DEFAULT:
+    value: '1'
+    comment: Default
+  Z_INDEX_DOCKED:
+    value: '4'
+    comment: Docked element
+  Z_INDEX_DEEPDIVE:
+    value: '-99999'
+    comment: Deep dive

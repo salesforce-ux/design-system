@@ -1,0 +1,20 @@
+/* overriding the story iframe showcase styles to accommodate Touch devices */
+
+html { background: transparent !important; }
+
+.sb-show-main {
+  padding: 2rem;
+  min-height: 100vh;
+
+  @media (pointer: coarse) and (hover: none) {
+    padding: 1rem;
+  }
+}
+
+// Lazy Load
+// We don't use design tokens or SLDS classes for styling here to prevent false
+// failed tests for unrelated changes, this styling is cosmetic for Storybook only
+.lazyload-placeholder {
+  background-color: #f2f2f2;
+  margin: 1.25rem 0;
+}

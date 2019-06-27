@@ -29,7 +29,7 @@ let Legend = props => (
 );
 
 export let Checkbox = props => {
-  const uniqueId = _.uniqueId('checkbox-');
+  const uniqueId = _.uniqueId('checkbox-unique-id-'); // "*-unique-id-*" prevents copy/paste & informs about IDs
 
   return (
     <div className={classNames('slds-checkbox', props.className)}>
@@ -64,7 +64,7 @@ export let Checkbox = props => {
           >
             {props.isRequired && (
               <abbr className="slds-required" title="required">
-                * {' '}
+                *{' '}
               </abbr>
             )}
             {props.label}

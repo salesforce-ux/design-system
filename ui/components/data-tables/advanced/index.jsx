@@ -7,7 +7,7 @@ import { IsDependentOn } from '../../../shared/helpers';
 
 import Score from '../../dynamic-icons/score';
 import MediaObject from '../../../utilities/media-objects/index.react';
-import { Input } from '../../input/base/example';
+import Input from '../../input/';
 import { FormElement } from '../../form-element';
 import {
   TBodyTr,

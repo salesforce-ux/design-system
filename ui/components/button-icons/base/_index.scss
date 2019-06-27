@@ -31,7 +31,12 @@
 .slds-button--icon-error {
   line-height: $line-height-reset;
   vertical-align: middle;
+  justify-content: center;
   color: $color-text-icon-default;
+
+  @include touch-device {
+    @include square($button-icon-boundary-touch);
+  }
 }
 
 /**
@@ -53,6 +58,10 @@
 .slds-button_icon-container-more,
 .slds-button--icon-container-more {
   @include square($square-icon-medium-boundary);
+
+  @include touch-device {
+    @include square($button-icon-boundary-touch);
+  }
 }
 
 /**
@@ -183,6 +192,10 @@
 .slds-button_icon-small,
 .slds-button--icon-small {
   @include square($square-icon-small-boundary);
+
+  @include touch-device {
+    @include square($button-icon-boundary-touch);
+  }
 }
 
 /**
@@ -196,6 +209,10 @@
 .slds-button--icon-x-small {
   @include square($square-icon-x-small-boundary);
   line-height: $line-height-reset;
+
+  @include touch-device {
+    @include square($button-icon-boundary-touch);
+  }
 
   .slds-button__icon {
     @include square($square-icon-small-content);
@@ -213,6 +230,10 @@
 .slds-button--icon-xx-small {
   @include square($square-icon-xx-small-boundary);
   line-height: $line-height-reset;
+
+  @include touch-device {
+    @include square($button-icon-boundary-touch);
+  }
 
   .slds-button__icon {
     @include square($square-icon-x-small-content);
@@ -232,6 +253,10 @@
   background-color: $button-color-background-primary;
   border-color: $button-color-border-primary;
   color: $color-text-icon-default;
+
+  @include touch-device {
+    @include square($button-icon-boundary-touch);
+  }
 
   &:hover,
   &:focus {

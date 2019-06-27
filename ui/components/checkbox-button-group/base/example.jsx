@@ -3,6 +3,7 @@
 
 import React from 'react';
 import classNames from 'classnames';
+import _ from '../../../shared/helpers';
 
 /// ////////////////////////////////////////
 // Partial(s)
@@ -21,24 +22,31 @@ export let CheckboxGroup = props => (
   <div className="slds-checkbox_button-group">{props.children}</div>
 );
 
-export let Checkbox = props => (
-  <span
-    className={classNames('slds-button slds-checkbox_button', props.className)}
-  >
-    <input
-      aria-describedby={props.errorId}
-      disabled={props.disabled}
-      defaultChecked={props.checked}
-      id={props.id}
-      value={props.id}
-      name="checkbox"
-      type="checkbox"
-    />
-    <label className="slds-checkbox_button__label" htmlFor={props.id}>
-      <span className="slds-checkbox_faux">{props.children}</span>
-    </label>
-  </span>
-);
+export let Checkbox = props => {
+  const uniqueId = _.uniqueId(`unique-id-${props.id}-`); // "*-unique-id-*" prevents copy/paste & informs about IDs
+
+  return (
+    <span
+      className={classNames(
+        'slds-button slds-checkbox_button',
+        props.className
+      )}
+    >
+      <input
+        aria-describedby={props.errorId}
+        disabled={props.disabled}
+        defaultChecked={props.checked}
+        id={uniqueId}
+        value={uniqueId}
+        name="checkbox"
+        type="checkbox"
+      />
+      <label className="slds-checkbox_button__label" htmlFor={uniqueId}>
+        <span className="slds-checkbox_faux">{props.children}</span>
+      </label>
+    </span>
+  );
+};
 
 /// ////////////////////////////////////////
 // Export
@@ -91,19 +99,19 @@ export let states = [
     element: (
       <Fieldset>
         <CheckboxGroup>
-          <Checkbox id="monday" disabled="true">
+          <Checkbox id="monday" disabled>
             Mon
           </Checkbox>
-          <Checkbox id="tuesday" disabled="true">
+          <Checkbox id="tuesday" disabled>
             Tue
           </Checkbox>
-          <Checkbox id="wednesday" disabled="true">
+          <Checkbox id="wednesday" disabled>
             Wed
           </Checkbox>
-          <Checkbox id="thursday" disabled="true">
+          <Checkbox id="thursday" disabled>
             Thu
           </Checkbox>
-          <Checkbox id="friday" disabled="true">
+          <Checkbox id="friday" disabled>
             Fri
           </Checkbox>
         </CheckboxGroup>

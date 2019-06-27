@@ -121,7 +121,7 @@ export let examples = [
   },
   {
     id: 'with-option-selected',
-    label: 'With Narrow Expression Group',
+    label: 'With Option Selected',
     element: (
       <ExpressionNarrow optionSelected="all">
         <FilterObject operator="AND" type="Status" removable>

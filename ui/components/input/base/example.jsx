@@ -2,10 +2,9 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 import React from 'react';
-import PropTypes from 'prop-types';
+import Input from '../';
 import SvgIcon from '../../../shared/svg-icon';
 import ButtonIcon from '../../button-icons/';
-import classNames from 'classnames';
 import { Spinner } from '../../spinners/base/example';
 import {
   FormElement,
@@ -17,32 +16,6 @@ const inputLabel = 'Input Label';
 const inputId = 'text-input-id-1';
 const errorId = 'error-message-unique-id';
 const placeholderText = 'Placeholder Text';
-
-/// ////////////////////////////////////////
-// Partial(s)
-/// ////////////////////////////////////////
-
-export let Input = props => {
-  return (
-    <input
-      {...props}
-      id={props.id || inputId}
-      className={classNames('slds-input', props.className)}
-      type={props.type || 'text'}
-      placeholder={props.placeholder}
-      readOnly={props['readOnly']}
-      defaultValue={props.defaultValue}
-    />
-  );
-};
-
-Input.propTypes = {
-  placeholder: PropTypes.string
-};
-
-/// ///////////////////////////////////////////
-// State Constructor(s)
-/// ///////////////////////////////////////////
 
 let Required = props => (
   <FormElement labelContent={inputLabel} inputId={inputId} isRequired>
@@ -314,12 +287,7 @@ export let examples = [
           assistiveText={'Decrement counter'}
           title={'Decrement counter'}
         />
-        <Input
-          className="slds-input_counter"
-          id={inputId}
-          type="number"
-          placeholder={'1'}
-        />
+        <Input id={inputId} type="number" placeholder={'1'} />
         <ButtonIcon
           className="slds-button_icon-small slds-input__button_increment"
           symbol="new"

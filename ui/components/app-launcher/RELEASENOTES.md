@@ -4,6 +4,13 @@
 
 <!-- ## [Unreleased] -->
 
+## 2.10.0
+
+  ### Fixed
+
+  - App Launcher did not use brand tokens for `:hover` and `:active` states
+  - `.slds-app-launcher__tile` now uses `$brand-accessible` for its `:hover` state and `$brand-accessible-active` for its `:active` state
+
 ## 2.7.0
 
 ### Changed

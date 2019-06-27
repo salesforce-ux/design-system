@@ -1,0 +1,11 @@
+global:
+  scope: component
+  category: "line-height"
+  type: number
+  cssProperties:
+  - font
+  - "*height"
+props:
+  RADIO_BUTTON_GROUP_LINE_HEIGHT_TOUCH:
+    value: 2.69rem
+    comment: Line height for touch screens

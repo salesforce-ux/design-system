@@ -14,10 +14,17 @@
  */
 .slds-input {
   @include form-states;
+  // stylelint-disable property-no-vendor-prefix
+  -webkit-appearance: none; // Scope to WebKit UA styling to remove unwanted inner-shadow
+  // stylelint-enable property-no-vendor-prefix
   display: inline-block;
   padding: 0 $spacing-medium 0 $spacing-small;
   line-height: $height-input;
   min-height: calc(#{$height-input} + (#{$border-width-thin} * 2)); // For IE
+
+  @include touch-device {
+    @include border-box-line-height($height-tappable);
+  }
 
   /**
    * @selector [readonly]
@@ -29,6 +36,10 @@
     background-color: transparent;
     font-size: $input-static-font-size;
     font-weight: $input-readonly-font-weight; // This is a plain readonly input. It should not have the text treatment that static has.
+
+    @include touch-device {
+      font-size: $font-size-5;
+    }
   }
 
   &[type="search"]::-ms-clear {
@@ -75,10 +86,11 @@
     padding: 0 $spacing-xx-large;
 
     &[type='number'] {
-      appearance: textfield;
+      // stylelint-disable property-no-vendor-prefix
+      -moz-appearance: textfield; // FF needs 'textfield' to remove counter UA styling; -webkit-appearance in .slds-input removes for other browsers
+      // stylelint-enable property-no-vendor-prefix
     }
 
-    &::-webkit-outer-spin-button,
     &::-webkit-inner-spin-button {
       appearance: none;
       margin: 0;
@@ -133,8 +145,16 @@
     border: 0; // Re-aligns icons to center
     z-index: 2;
 
+    @include touch-device {
+      @include square($square-icon-medium-content);
+      margin-top: (($square-icon-medium-content / 2) * -1);
+    }
+
     /* @Todo - we need to be sure this is deprecated since the color sems to be the correct gray I see in specs */
-    @include deprecate('4.0.0', 'Use .slds-icon-text-default on the SVG icon instead') {
+    @include deprecate(
+      '4.0.0',
+      'Use .slds-icon-text-default on the SVG icon instead'
+    ) {
       fill: $color-text-input-icon;
     }
   }
@@ -154,6 +174,10 @@
 
     .slds-input__icon {
       left: $spacing-small;
+
+      @include touch-device {
+        left: $spacing-x-small;
+      }
     }
 
     .slds-input,
@@ -174,6 +198,10 @@
 
     .slds-input__icon {
       right: $spacing-small;
+
+      @include touch-device {
+        right: $spacing-x-small;
+      }
     }
 
     .slds-input,
@@ -200,6 +228,10 @@
     .slds-input__icon_left,
     .slds-input__icon--left {
       left: $spacing-small;
+
+      @include touch-device {
+        left: $spacing-x-small;
+      }
     }
 
     /**
@@ -211,6 +243,10 @@
     .slds-input__icon_right,
     .slds-input__icon--right {
       right: $spacing-small;
+
+      @include touch-device {
+        right: $spacing-x-small;
+      }
     }
 
     .slds-input,
@@ -225,7 +261,7 @@
     .slds-input,
     .slds-input_bare,
     .slds-input--bare {
-      padding-right: ($spacing-xx-large + $spacing-xx-small);
+      padding-right: ($spacing-xx-large + $spacing-x-small);
     }
   }
 }
@@ -260,6 +296,10 @@
   .slds-input__spinner {
     right: $spacing-large;
     left: auto;
+
+    @include touch-device {
+      right: calc(#{$spacing-large} + #{$spacing-xx-small});
+    }
   }
 }
 
@@ -293,8 +333,7 @@
  * @restrict button
  */
 .slds-input__button_decrement {
-  position: absolute;
-  bottom: 0.25rem;
+  @include vertical-center;
   left: 0.75rem;
 }
 
@@ -305,7 +344,6 @@
  * @restrict button
  */
 .slds-input__button_increment {
-  position: absolute;
-  bottom: 0.25rem;
+  @include vertical-center;
   right: 0.75rem;
 }

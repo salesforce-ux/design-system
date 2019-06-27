@@ -4,6 +4,15 @@
 
 <!-- ## [Unreleased] -->
 
+## 2.10.0
+
+### Changed
+
+- Boldened Button labels on touch devices
+- Modify display of `slds-button` to `inline-flex`
+- Center contents of contained Buttons with change of `display: inline-flex` to `slds-button`
+- On touch devices, set size of `.slds-button__icon` to `$square-icon-medium-content`
+
 ## 2.8.0
 
 ### Added

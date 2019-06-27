@@ -1,11 +1,11 @@
 {
   "name": "design-system",
   "description": "Salesforce Lightning Design System",
-  "version": "2.9.4",
+  "version": "2.10.0-dev",
   "author": "Salesforce",
   "slds": {
-    "name": "Summer ’19",
-    "id": "220"
+    "name": "Winter ’20",
+    "id": "222"
   },
   "important": [
     "'private' and 'config.slds.internal' should have the same value",
@@ -14,24 +14,37 @@
   "private": false,
   "config": {
     "slds": {
-      "internal": false
+      "internal": true
     },
     "search": {
       "appId": "B2KKG101RI",
       "apiKey": "f289c1dd954797a3e57158c04a897d46",
-      "indexName": "summer-19"
+      "indexName": "winter-20"
     }
   },
   "devDependencies": {
+    "@babel/core": "7.4.4",
+    "@epegzz/sass-vars-loader": "4.3.1",
+    "@mdx-js/loader": "1.0.18",
+    "@mdx-js/mdx": "1.0.18",
     "@salesforce-ux/build-server-api": "2.0.2",
     "@salesforce-ux/create-snap": "0.0.6",
     "@salesforce-ux/design-system-markup": "2.0.2",
     "@salesforce-ux/design-system-parser": "1.0.1",
     "@salesforce-ux/design-system-previewer": "3.2.1",
+    "@salesforce-ux/design-system-primitive-tokens": "0.0.2",
     "@salesforce-ux/icons": "9.26.0",
     "@salesforce-ux/instant-vrt": "2.0.0",
     "@salesforce-ux/scss-parser-aura": "3.0.4",
     "@std/esm": "0.23.2",
+    "@storybook/addon-a11y": "5.0.11",
+    "@storybook/addon-backgrounds": "5.0.11",
+    "@storybook/addon-options": "5.0.11",
+    "@storybook/addon-viewport": "5.0.11",
+    "@storybook/addons": "5.0.11",
+    "@storybook/react": "5.0.11",
+    "@storybook/theming": "5.0.11",
+    "ajv": "6.10.0",
     "async": "2.3.0",
     "autoprefixer": "6.7.7",
     "axe-core": "3.0.3",
@@ -41,6 +54,7 @@
     "babel-eslint": "9.0.0",
     "babel-jest": "22.4.1",
     "babel-loader": "7.1.3",
+    "babel-plugin-syntax-dynamic-import": "6.18.0",
     "babel-plugin-transform-es2015-modules-commonjs": "6.24.1",
     "babel-plugin-transform-object-rest-spread": "6.23.0",
     "babel-preset-es2015": "6.18.0",
@@ -50,11 +64,14 @@
     "classnames": "2.2.5",
     "colors": "1.1.2",
     "conventional-changelog": "1.1.4",
+    "copy-webpack-plugin": "5.0.3",
+    "core-js": "2.6.5",
+    "css-loader": "2.1.1",
     "cssstats": "3.0.0",
     "data.either": "1.5.0",
     "del": "2.2.2",
-    "enzyme": "3.3.0",
-    "enzyme-adapter-react-16": "1.1.1",
+    "enzyme": "3.9.0",
+    "enzyme-adapter-react-16": "1.12.1",
     "eslint": "5.6.0",
     "eslint-config-prettier": "4.1.0",
     "eslint-config-standard": "12.0.0",
@@ -88,7 +105,6 @@
     "gulp-minify-css": "1.2.4",
     "gulp-plumber": "1.1.0",
     "gulp-postcss": "6.4.0",
-    "gulp-rem2px": "0.0.1",
     "gulp-rename": "1.2.2",
     "gulp-replace": "0.5.4",
     "gulp-sass": "3.1.0",
@@ -128,6 +144,7 @@
     "openport": "0.0.4",
     "plugin-error": "1.0.1",
     "postcss": "5.2.16",
+    "postcss-loader": "3.0.0",
     "postcss-nested-props": "2.0.0",
     "postcss-scss": "1.0.6",
     "precss": "3.1.2",
@@ -136,9 +153,11 @@
     "puppeteer": "0.10.1",
     "query-ast": "1.0.1",
     "raw-loader": "0.5.1",
-    "react": "16.2.0",
-    "react-dom": "16.2.0",
+    "react": "16.8.6",
+    "react-dom": "16.8.6",
+    "react-lazyload": "2.6.1",
     "react-test-renderer": "16.4.1",
+    "resolve-url-loader": "3.1.0",
     "rimraf": "2.6.1",
     "sass-loader": "6.0.6",
     "scss-inline-imports": "1.0.5",
@@ -147,6 +166,7 @@
     "simple-git": "1.107.0",
     "strip-indent": "2.0.0",
     "style-loader": "0.19.0",
+    "styled-components": "4.2.0",
     "stylelint": "7.10.1",
     "stylelint-config-slds": "1.0.7",
     "stylestats": "7.0.1",
@@ -156,7 +176,7 @@
     "touch": "3.1.0",
     "vinyl": "2.1.0",
     "vnu-jar": "17.11.1",
-    "webpack": "4.0.0",
+    "webpack": "4.31.0",
     "webpack-cli": "2.0.9",
     "yargs": "8.0.1"
   },
@@ -164,7 +184,7 @@
     "fsevents": "*"
   },
   "engines": {
-    "node": ">=8.0.0",
+    "node": "^10.0.0",
     "npm": ">=3.10.6"
   },
   "license": "SEE LICENSE IN README.md",
@@ -188,8 +208,12 @@
     "pr-checks": "npm run gulp -- pr-checks",
     "compile-aura-tokens-map": "npm run gulp -- generate:auraTokensMap",
     "compile-token-component-map": "npm run gulp -- generate:tokenComponentMap",
+    "storybook": "npm run build && start-storybook -s .dist/ -p 9002 -c .storybook",
+    "storybook:heroku": "start-storybook -c .storybook -p 9002",
+    "storybook:build": "build-storybook -c .storybook -s .dist/ -o .out",
     "release-notes:compile": "node ./scripts/release-notes/index.js",
-    "release-notes:hook": "node ./scripts/release-notes/hook.js"
+    "release-notes:hook": "node ./scripts/release-notes/hook.js",
+    "heroku-postbuild": "npm run build && npm run dist && npm run storybook:build"
   },
   "lint-staged": {
     "linters": {

@@ -1,6 +1,9 @@
 import { configure, addDecorator, addParameters } from '@storybook/react';
 import { withA11y } from '@storybook/addon-a11y';
 import sldsTheme from './sldsTheme';
+import { initializeRTL } from 'storybook-addon-rtl';
+
+initializeRTL();
 
 import './scss/ui/index.scss'; // Our custom Storybook presentation styles
 

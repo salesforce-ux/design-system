@@ -8,7 +8,12 @@
 ### Changed
 - Global tokens have been removed from this repository and are installed as a dependency from https://www.npmjs.com/package/@salesforce-ux/design-system-primitive-tokens
 
+
 ## Components
+### [Accordion](https://www.lightningdesignsystem.com/components/accordion)
+#### Added
+- Added right-to-left specific selector to `slds-accordion__summary-action-icon` to allow the icon to rotate in the proper direction in right-to-left languages.
+
 ### [App Launcher](https://www.lightningdesignsystem.com/components/app-launcher)
   ### Fixed
   - App Launcher did not use brand tokens for `:hover` and `:active` states
@@ -41,13 +46,11 @@
 ### [Checkbox Button Group](https://www.lightningdesignsystem.com/components/checkbox-button-group)
 #### Changed
 - For touch devices, increase tap target size of `.slds-checkbox_button`
-<!-- ## [VERSION] -->
 
 ### [Checkbox Toggle](https://www.lightningdesignsystem.com/components/checkbox-toggle)
 #### Changed
 - For touch devices, change `font-size` of label text to `$font-size-5`
 - For touch devices, increase `font-size` of `.slds-checkbox_faux_container` to `$font-size-2`
-<!-- ## [VERSION] -->
 
 ### [Color Picker](https://www.lightningdesignsystem.com/components/color-picker)
 #### Changed
@@ -77,21 +80,40 @@
 - Positioning of icons inside of inputs have been tweaked when on a touch device
 
 ### [Menus](https://www.lightningdesignsystem.com/components/menus)
+#### Added
+- Added explicit `right: auto` to `slds-dropdown_left`
+
 #### Changed
 - On touch devices, set tap target size of menu row item to `$height-tappable`
 - On touch devices, set `font-size` of menu to `$font-size-5`
 - Remove `font-size` declaration from `slds-dropdown__header` to inherit `font-size` from `body` element
+
 
 ### [Modals](https://www.lightningdesignsystem.com/components/modals)
 #### Changed
 - Deprecated use of `slds-text-heading_medium` utility class on Modal title, added class `slds-modal__title` to declare styles for the Modal title.
 - On touch devices, set font weight of Modal title to `$font-weight-bold`
 - On touch devices, set tap target size of the Modal close button to `$height-tappable`
-<!-- ## [VERSION] -->
+
 
 ### [Path](https://www.lightningdesignsystem.com/components/path)
 #### Fixed
 - Fixed text disappearing when peaking between stage in Safari
+
+
+### [Popovers](https://www.lightningdesignsystem.com/components/popovers)
+#### Added
+- Added `@noflip` annotation to left and right nubbin selectors.
+
+### [Trees](https://www.lightningdesignsystem.com/components/trees)
+#### Added
+- Added right-to-left specific selector to `slds-tree__item` to place the `box-shadow` in the correct location in right-to-left languages.
+- Added right-to-left specific selector to `slds-tree__item slds-button__icon` to allow the icon to rotate in the proper direction in right-to-left languages.
+
+### [Vertical Navigation](https://www.lightningdesignsystem.com/components/vertical-navigation)
+#### Added
+- Added right-to-left specific selector to `slds-nav-vertical__action_overflow slds-button__icon` to allow the icon to rotate in the proper direction in right-to-left languages.
+- Added right-to-left specific selector to `slds-nav-vertical__action` to place the `box-shadow` in the correct location in right-to-left languages.
 
 ### [Pills](https://www.lightningdesignsystem.com/components/pills)
 #### Changed
@@ -101,13 +123,14 @@
 - On touch devices, set `font-size` of `.slds-pill__label` to `$font-size-4`
 - On touch devices, update the padding of `.slds-pill__action`
 - On touch devices, adjust the positioning of the icon inside a pill after padding updates
-<!-- ## [VERSION] -->
+
 
 ### [Radio Group](https://www.lightningdesignsystem.com/components/radio-group)
 #### Changed
 - Increase tap size of `.slds-radio__label` on touch devices
 - Increase the size of the faux radio element on touch devices
 - Let the label text inherit its `font-size` from the body on touch devices
+
 
 ## Release 2.9.4 - June 13, 2019
 

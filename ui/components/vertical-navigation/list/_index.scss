@@ -123,6 +123,10 @@
   &:hover {
     text-decoration: none;
     box-shadow: inset rem(2px) 0 0 $brand-primary;
+
+    @include rtl() {
+      box-shadow: inset rem(-2px) 0 0 $brand-primary;
+    }
   }
 
   &:focus {
@@ -144,5 +148,9 @@
   .slds-nav-vertical__action {
     font-weight: bold;
     box-shadow: inset rem(4px) 0 0 $brand-primary;
+
+    @include rtl() {
+      box-shadow: inset rem(-4px) 0 0 $brand-primary;
+    }
   }
 }

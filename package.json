@@ -164,6 +164,7 @@
     "scss-parser": "1.0.0",
     "semver": "5.5.1",
     "simple-git": "1.107.0",
+    "storybook-addon-rtl": "0.2.2",
     "strip-indent": "2.0.0",
     "style-loader": "0.19.0",
     "styled-components": "4.2.0",

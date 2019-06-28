@@ -253,7 +253,7 @@ export let RteFormatFont = props => (
   >
     <div className="slds-rich-text-editor__select">
       <ComboboxContainer
-        className="slds-size_x-small"
+        className="slds-rich-text-editor__select_x-small"
         id="font-family"
         inputIcon="right"
         inputIconRightSymbol="down"
@@ -268,7 +268,7 @@ export let RteFormatFont = props => (
 
     <div className="slds-rich-text-editor__select">
       <ComboboxContainer
-        className="slds-size_xx-small"
+        className="slds-rich-text-editor__select_xx-small"
         id="font-size"
         inputIcon="right"
         inputIconRightSymbol="down"
@@ -913,7 +913,7 @@ export let examples = [
     id: 'toolbar-narrow',
     label: 'Toolbar Narrow',
     element: (
-      <Demo style={{ width: '294px' }} className="slds-region_narrow">
+      <Demo style={{ maxWidth: '294px' }} className="slds-region_narrow">
         <RichTextEditor>
           <RteToolbar>
             <RteFormatFont />

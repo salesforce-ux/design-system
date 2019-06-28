@@ -139,6 +139,10 @@
 - Increase the size of the faux radio element on touch devices
 - Let the label text inherit its `font-size` from the body on touch devices
 
+### [Rich Text Editor](https://www.lightningdesignsystem.com/components/rich-text-editor)
+#### Changed
+- Remove size utility classes on combobox/selects in toolbar for component-specific classes (`slds-rich-text-editor__select_x-small` and `slds-rich-text-editor__select_xx-small`)
+<!-- ## [Unreleased] -->
 
 ## Release 2.9.4 - June 13, 2019
 

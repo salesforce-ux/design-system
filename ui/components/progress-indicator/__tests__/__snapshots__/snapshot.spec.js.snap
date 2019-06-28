@@ -91,7 +91,7 @@ exports[`Base Progress Indicator renders a done base step 1`] = `
   <button
     aria-describedby={undefined}
     aria-haspopup={undefined}
-    className="slds-button slds-button_icon slds-button_icon slds-progress__marker slds-progress__marker_icon"
+    className="slds-button slds-button_icon slds-progress__marker slds-progress__marker_icon"
     id={undefined}
     title="Step 1 - Completed"
   >
@@ -157,7 +157,7 @@ exports[`Base Progress Indicator renders an error base step 1`] = `
   <button
     aria-describedby={undefined}
     aria-haspopup={undefined}
-    className="slds-button slds-button_icon slds-button_icon slds-progress__marker slds-progress__marker_icon"
+    className="slds-button slds-button_icon slds-progress__marker slds-progress__marker_icon"
     id={undefined}
     title="Step 1 - Error"
   >
@@ -188,7 +188,7 @@ exports[`Vertical Progress Indicator renders a done vertical step 1`] = `
   >
     <svg
       aria-hidden={true}
-      className="slds-icon slds-icon slds-icon_xx-small"
+      className="slds-icon slds-icon_xx-small"
     >
       <use
         xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#success"
@@ -283,7 +283,7 @@ exports[`Vertical Progress Indicator renders a vertical progress indicator with 
       >
         <svg
           aria-hidden={true}
-          className="slds-icon slds-icon slds-icon_xx-small"
+          className="slds-icon slds-icon_xx-small"
         >
           <use
             xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#success"
@@ -368,7 +368,7 @@ exports[`Vertical Progress Indicator renders a vertical progress indicator with 
       >
         <svg
           aria-hidden={true}
-          className="slds-icon slds-icon slds-icon_xx-small"
+          className="slds-icon slds-icon_xx-small"
         >
           <use
             xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#success"
@@ -453,7 +453,7 @@ exports[`Vertical Progress Indicator renders a vertical progress indicator with 
       >
         <svg
           aria-hidden={true}
-          className="slds-icon slds-icon slds-icon_xx-small"
+          className="slds-icon slds-icon_xx-small"
         >
           <use
             xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#success"
@@ -547,7 +547,7 @@ exports[`Vertical Progress Indicator renders a vertical step with green success 
   >
     <svg
       aria-hidden={true}
-      className="slds-icon slds-icon slds-icon_xx-small"
+      className="slds-icon slds-icon_xx-small"
     >
       <use
         xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#success"
@@ -599,7 +599,7 @@ exports[`Vertical Progress Indicator renders an error vertical step 1`] = `
   >
     <svg
       aria-hidden={true}
-      className="slds-icon slds-icon slds-icon_xx-small"
+      className="slds-icon slds-icon_xx-small"
     >
       <use
         xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#error"

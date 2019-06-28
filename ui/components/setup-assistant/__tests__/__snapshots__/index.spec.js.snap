@@ -372,7 +372,7 @@ exports[`Setup Assistant  renders a step detail 1`] = `
         >
           <svg
             aria-hidden={true}
-            className="slds-icon slds-icon slds-icon_xx-small"
+            className="slds-icon slds-icon_xx-small"
           >
             <use
               xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#success"

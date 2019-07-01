@@ -20,20 +20,45 @@ import * as AddressExamples from './address/example';
 import { getDisplayElementById } from '../../shared/helpers';
 
 <div className="doc lead">
-  An HTML form element contains a HTML label and element
+  A Form Element contains an HTML input element paired with a label.
 </div>
+
+<CodeView exampleOnly>
+  <FormElement labelContent="Form Label" inputId="form-element-showcase-01" isRequired>
+    <Input id="form-element-showcase-01" placeholder="Placeholder Text" required />
+  </FormElement>
+</CodeView>
 
 ## About Form Elements
 
-There are many types of form elements, including [inputs](/components/input), [text areas](/components/textarea), [checkboxes](/components/checkbox), and [radio buttons](/components/radio-group). Visit the individual component pages for in-depth details of specific states and visuals.
+The Form Element is initialized with `slds-form-element` and is made up of three primary pieces; a label (`slds-form-element__label`), a form control container (`slds-form-element__control`), and a form input element, i.e. `<input>`.
 
-### Structure
+### Form Label
 
-To create a form element, a `<div>` element with the class `slds-form-element` is required.
+A form label should use either the `<label>` or `<legend>` elements with the class `slds-form-element__label`. Use `<legend>` when you have a [compound form](/components/form-element/#Compound).
 
-A form element is made up of three primary elements, the label (`slds-form-element__label`), a container (`slds-form-element__control`), and the form element, i.e. `<input>`.
+<CodeBlock toggleCode={false}>
+  <label className="slds-form-element__label" htmlFor="unique-id-of-input">Form label</label>
+</CodeBlock>
 
-#### Base
+### Form Control
+
+A form control is a `div` with the class `slds-form-element__control`. The control is required to maintain the structure of the Form Element.
+
+<CodeBlock toggleCode={false}>
+  <div className="slds-form-element__control">Any form type goes here</div>
+</CodeBlock>
+
+### Form Input Elements
+
+There are many types of input elements that can be used in the Form Element, including [inputs](/components/input), [text areas](/components/textarea), [checkboxes](/components/checkbox), and [radio buttons](/components/radio-group). Visit the individual component pages for in-depth details of their specific states and visuals.
+
+### Accessibility
+
+Labels must have the <code className="doc">for</code> attribute applied, and its value must match the ID of the associated form element, like <code className="doc"><input id="unique-id-of-input"></code>. This association ensures that assistive technology informs users about what information to enter where.
+
+
+## Base
 
 <Example title="Form Element - Base">
   <CodeView>
@@ -42,26 +67,6 @@ A form element is made up of three primary elements, the label (`slds-form-eleme
     </FormElement>
   </CodeView>
 </Example>
-
-#### Form Label
-
-A form label should use the `<label>` element or `<legend>` element with the class `slds-form-element__label`. Use a `<legend>` when you have a [compound form](/components/form-element/#Compound)
-
-<Blockquote type="a11y" header="Accessibility requirement">
-  Labels must have the <code className="doc">for</code> attribute applied, and its value must match the ID of the associated form element, like <code className="doc"><input id="unique-id-of-input"></code>. This association ensures that assistive technology informs users about what information to enter where.
-</Blockquote>
-
-<CodeBlock toggleCode={false}>
-  <label className="slds-form-element__label" htmlFor="unique-id-of-input">Form label</label>
-</CodeBlock>
-
-#### Form Control
-
-A form control is a `div` with the class `slds-form-element__control`. The control is required to maintain the structure of the form element.
-
-<CodeBlock toggleCode={false}>
-  <div className="slds-form-element__control">Any form type goes here</div>
-</CodeBlock>
 
 ## States
 
@@ -201,7 +206,7 @@ If an error has occurred while submitting a form, the form element with an error
 
 </Example>
 
-## Layout
+## Layout Variations
 
 If your form has more than one form element, you can switch the direction of `slds-form-element__label` and `slds-form-element__control` by applying `slds-form-element_stacked` for stacked labels and `slds-form-element_horizontal` for left-aligned labels. For optimal spacing and layout, ensure the `slds-form-element` class is present on each element within the form.
 

@@ -182,10 +182,8 @@ export const componentSass = () =>
     .src('ui/modules/**/index.scss')
     // Prevent pipe breaking caused by errors
     .pipe(gulpPlumber())
-    // Remove comments
-    .pipe(gulpStripCssComments({ preserve: false }))
     // Compile Sass files to CSS
-    .pipe(gulpSass().on('error', gulpSass.logError))
+    .pipe(gulpSass({ outputStyle: 'expanded' }).on('error', gulpSass.logError))
     // Write message to the top of each module file
     .pipe(
       gulpTap(function(file) {

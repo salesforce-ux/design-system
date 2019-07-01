@@ -4,6 +4,12 @@
 
 <!-- ## [Unreleased] -->
 
+## 2.10.0
+
+### Added
+- Added right-to-left specific selector to `slds-tree__item` to place the `box-shadow` in the correct location in right-to-left languages.
+- Added right-to-left specific selector to `slds-tree__item slds-button__icon` to allow the icon to rotate in the proper direction in right-to-left languages.
+
 ## 2.8.0
 
 ### Added

@@ -580,7 +580,7 @@ exports[`renders a RTE editor with an error and non-readonly combobox 1`] = `
                   <div
                     aria-expanded="false"
                     aria-haspopup="listbox"
-                    className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click slds-size_x-small"
+                    className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click slds-rich-text-editor__select_x-small"
                     role="combobox"
                   >
                     <div
@@ -708,7 +708,7 @@ exports[`renders a RTE editor with an error and non-readonly combobox 1`] = `
                   <div
                     aria-expanded="false"
                     aria-haspopup="listbox"
-                    className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click slds-size_xx-small"
+                    className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click slds-rich-text-editor__select_xx-small"
                     role="combobox"
                   >
                     <div
@@ -1067,7 +1067,7 @@ exports[`renders an RTE toolbar in a narrow space 1`] = `
                     <div
                       aria-expanded="false"
                       aria-haspopup="listbox"
-                      className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click slds-size_x-small"
+                      className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click slds-rich-text-editor__select_x-small"
                       role="combobox"
                     >
                       <div
@@ -1195,7 +1195,7 @@ exports[`renders an RTE toolbar in a narrow space 1`] = `
                     <div
                       aria-expanded="false"
                       aria-haspopup="listbox"
-                      className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click slds-size_xx-small"
+                      className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click slds-rich-text-editor__select_xx-small"
                       role="combobox"
                     >
                       <div

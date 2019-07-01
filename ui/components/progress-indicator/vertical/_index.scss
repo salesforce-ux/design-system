@@ -26,9 +26,13 @@
     &:after {
       content: '';
       position: absolute;
-      left: 7px;
+      left: calc((#{$square-icon-utility-small} / 2) - 1px); // "-1px" accounts for half of line width to get true center
       width: 2px;
       background-color: $progress-bar-color-background;
+
+      @include touch-device {
+        left: calc((#{$square-tappable-xx-small} / 2) - 1px); // "-1px" accounts for half of line width to get true center
+      }
     }
 
     &:before {
@@ -65,6 +69,10 @@
     align-items: center;
     margin-top: $spacing-small;
     padding-bottom: $spacing-small;
+
+    @include touch-device {
+      font-size: $font-size-4;
+    }
   }
 
   /**
@@ -78,6 +86,8 @@
   }
 
   .slds-progress__marker {
+    display: flex;
+    justify-content: center;
     margin-right: $spacing-medium;
     min-width: $square-icon-utility-small;
     z-index: 5;
@@ -89,7 +99,6 @@
   }
 
   .slds-progress__item.slds-is-completed .slds-progress__marker_icon {
-    margin-left: 1px;
 
     svg {
       fill: $progress-bar-color-background-fill;
@@ -110,7 +119,6 @@
   }
 
   .slds-progress__item.slds-has-error .slds-progress__marker_icon {
-    margin-left: 1px;
 
     svg {
       fill: $color-text-error;

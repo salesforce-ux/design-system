@@ -95,6 +95,24 @@
   display: inline-flex;
   align-self: center;
 
+  @include touch-device {
+    position: relative; // Position context for invisible tap target
+    align-items: center;
+    min-height: $height-tappable;
+  }
+
+  .slds-button {
+    @include touch-device {
+
+      &:before { // Create invisible tap target area
+        content: '';
+        position: absolute;
+        height: $height-tappable;
+        width: calc(100% + 8px); // 8px accounts for border width of container
+      }
+    }
+  }
+
   &.slds-is-completed .slds-progress__marker,
   &.slds-is-active .slds-progress__marker {
     background: $progress-color-background;
@@ -180,6 +198,11 @@
   border: 4px solid $progress-color-border;
   vertical-align: middle;
 
+  @include touch-device {
+    @include square($square-tappable-xx-small);
+    justify-content: center;
+  }
+
   /**
    * Modifier that notifies the marker indicator that the step has been completed and its getting an icon
    *
@@ -190,5 +213,12 @@
   &_icon,
   &--icon {
     @include square(auto);
+
+    .slds-button__icon,
+    .slds-icon {
+      @include touch-device {
+        @include square($square-tappable-xx-small);
+      }
+    }
   }
 }

@@ -87,6 +87,10 @@
 .slds-tree [role="treeitem"][aria-selected="true"] > .slds-tree__item {
   background: $brand-primary-transparent-10;
   box-shadow: $brand-primary 4px 0 0 inset;
+
+  @include rtl() {
+    box-shadow: $brand-primary -4px 0 0 inset;
+  }
 }
 
 .slds-tree [role="treeitem"] > [role="group"] {
@@ -106,6 +110,10 @@
 [aria-expanded="true"] > .slds-tree__item .slds-button__icon {
   transition: $duration-promptly transform ease-in-out;
   transform: rotate(90deg);
+
+  @include rtl() {
+    transform: rotate(-90deg);
+  }
 }
 // scss-lint:enable SelectorDepth
 

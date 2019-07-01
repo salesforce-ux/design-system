@@ -22,6 +22,7 @@ const Label = styled.h2`
 `;
 
 const Example = styled.div`
+  transform: translate3d(0, 0, 0);
   position: ${props => props.isViewport && 'relative'};
   ${props => props.styles}
 

@@ -12,6 +12,9 @@
 - On touch devices, set `font-size` of menu to `$font-size-5`
 - Remove `font-size` declaration from `slds-dropdown__header` to inherit `font-size` from `body` element
 
+### Added
+- Added explicit `right: auto` to `slds-dropdown_left`
+
 ## 2.8.0
 
 ### Added

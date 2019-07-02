@@ -3,11 +3,11 @@
 
 import React from 'react';
 import {
-  ComboboxContainer,
-  Listbox,
-  ListboxItem,
-  Option
-} from '../base/example';
+  DeprecatedCombobox,
+  DeprecatedListbox,
+  DeprecatedListboxItem,
+  DeprecatedOption
+} from '../deprecated';
 import { ListboxItemHeading } from '../listbox';
 import { ListboxPills, ListboxPillsItem, ListboxPill } from '../../pills';
 
@@ -15,29 +15,32 @@ const listboxOptionId01 = 'listbox-option-unique-id-01';
 const listboxOptionId02 = 'listbox-option-unique-id-02';
 
 const ListboxDropdown = props => (
-  <Listbox listboxClassName="slds-dropdown slds-dropdown_fluid" vertical>
+  <DeprecatedListbox
+    listboxClassName="slds-dropdown slds-dropdown_fluid"
+    vertical
+  >
     {props.heading && <ListboxItemHeading type="plain" text={props.heading} />}
-    <ListboxItem>
-      <Option
+    <DeprecatedListboxItem>
+      <DeprecatedOption
         id={listboxOptionId01}
         title="Option A"
         focused={props.focused}
         selected={props.optionOneSelected}
       />
-    </ListboxItem>
-    <ListboxItem>
-      <Option
+    </DeprecatedListboxItem>
+    <DeprecatedListboxItem>
+      <DeprecatedOption
         id={listboxOptionId02}
         title="Option B"
         selected={props.optionTwoSelected}
       />
-    </ListboxItem>
-  </Listbox>
+    </DeprecatedListboxItem>
+  </DeprecatedListbox>
 );
 
 export default (
   <div className="demo-only" style={{ height: '10rem' }}>
-    <ComboboxContainer
+    <DeprecatedCombobox
       inputIcon="right"
       inputIconRightSymbol="down"
       listbox={<ListboxDropdown />}
@@ -48,11 +51,11 @@ export default (
 
 export let states = [
   {
-    id: 'focused',
-    label: 'Focused',
+    id: 'deprecated-focused',
+    label: 'Deprecated - Focused',
     element: (
       <div className="demo-only" style={{ height: '10rem' }}>
-        <ComboboxContainer
+        <DeprecatedCombobox
           isOpen
           inputIcon="right"
           inputIconRightSymbol="down"
@@ -66,11 +69,11 @@ export let states = [
     `
   },
   {
-    id: 'open-item-focused',
-    label: 'Open - Item Focused',
+    id: 'deprecated-open-item-focused',
+    label: 'Deprecated - Open - Item Focused',
     element: (
       <div className="demo-only" style={{ height: '10rem' }}>
-        <ComboboxContainer
+        <DeprecatedCombobox
           isOpen
           inputIcon="right"
           inputIconRightSymbol="down"
@@ -82,11 +85,11 @@ export let states = [
     )
   },
   {
-    id: 'open-option-selected',
-    label: 'Open - Option Selected',
+    id: 'deprecated-open-option-selected',
+    label: 'Deprecated - Open - Option Selected',
     element: (
       <div className="demo-only" style={{ height: '10rem' }}>
-        <ComboboxContainer
+        <DeprecatedCombobox
           isOpen
           inputIcon="right"
           inputIconRightSymbol="down"
@@ -98,11 +101,11 @@ export let states = [
     )
   },
   {
-    id: 'open-options-selected',
-    label: 'Open - Option(s) Selected',
+    id: 'deprecated-open-options-selected',
+    label: 'Deprecated - Open - Option(s) Selected',
     element: (
       <div className="demo-only" style={{ height: '10rem' }}>
-        <ComboboxContainer
+        <DeprecatedCombobox
           isOpen
           inputIcon="right"
           inputIconRightSymbol="down"
@@ -114,11 +117,11 @@ export let states = [
     )
   },
   {
-    id: 'closed-option-selected',
-    label: 'Option Selected',
+    id: 'deprecated-closed-option-selected',
+    label: 'Deprecated - Option Selected',
     element: (
       <div className="demo-only" style={{ height: '10rem' }}>
-        <ComboboxContainer
+        <DeprecatedCombobox
           inputIcon="right"
           inputIconRightSymbol="down"
           value="Option A"
@@ -129,11 +132,11 @@ export let states = [
     )
   },
   {
-    id: 'closed-options-selected',
-    label: 'Option(s) Selected',
+    id: 'deprecated-closed-options-selected',
+    label: 'Deprecated - Option(s) Selected',
     element: (
       <div className="demo-only" style={{ height: '10rem' }}>
-        <ComboboxContainer
+        <DeprecatedCombobox
           inputIcon="right"
           inputIconRightSymbol="down"
           value="2 Options Selected"
@@ -148,16 +151,16 @@ export let states = [
               <ListboxPill label="Option B" />
             </ListboxPillsItem>
           </ListboxPills>
-        </ComboboxContainer>
+        </DeprecatedCombobox>
       </div>
     )
   },
   {
-    id: 'open-option-heading',
-    label: 'Sub-heading',
+    id: 'deprecated-open-option-heading',
+    label: 'Deprecated - Sub-heading',
     element: (
       <div className="demo-only" style={{ height: '10rem' }}>
-        <ComboboxContainer
+        <DeprecatedCombobox
           isOpen
           inputIcon="right"
           inputIconRightSymbol="down"

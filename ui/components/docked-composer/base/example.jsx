@@ -21,11 +21,11 @@ import {
 import { FormElement } from '../../form-element';
 import Input from '../../input/';
 import {
-  ComboboxContainer,
-  Listbox,
-  ListboxItem,
-  EntityOption
-} from '../../combobox/base/example';
+  DeprecatedCombobox,
+  DeprecatedListbox,
+  DeprecatedListboxItem,
+  DeprecatedEntityOption
+} from '../../combobox/deprecated/';
 import { ListboxPills, ListboxPillsItem, ListboxPill } from '../../pills';
 import SvgIcon from '../../../shared/svg-icon';
 import classNames from 'classnames';
@@ -226,15 +226,19 @@ export let ComposerOverflowMenu = props => (
 );
 
 const ComboboxListbox = props => (
-  <Listbox
+  <DeprecatedListbox
     listboxClassName="slds-dropdown slds-dropdown_fluid"
     vertical
     id={props.id}
   >
-    <ListboxItem>
-      <EntityOption id={props.listboxOptionId} entityTitle="Acme" entityMeta />
-    </ListboxItem>
-  </Listbox>
+    <DeprecatedListboxItem>
+      <DeprecatedEntityOption
+        id={props.listboxOptionId}
+        entityTitle="Acme"
+        entityMeta
+      />
+    </DeprecatedListboxItem>
+  </DeprecatedListbox>
 );
 
 /// ////////////////////////////////////////
@@ -429,7 +433,7 @@ export let examples = [
                   </div>
                 </div>
                 <div className="slds-form-element__row">
-                  <ComboboxContainer
+                  <DeprecatedCombobox
                     formClassName="slds-size_1-of-2"
                     autocomplete
                     label="Name"
@@ -446,7 +450,7 @@ export let examples = [
                       />
                     }
                   />
-                  <ComboboxContainer
+                  <DeprecatedCombobox
                     formClassName="slds-size_1-of-2"
                     autocomplete
                     label="Name"
@@ -954,7 +958,7 @@ export let examples = [
                   </div>
                 </div>
                 <div className="slds-form-element__row">
-                  <ComboboxContainer
+                  <DeprecatedCombobox
                     formClassName="slds-size_1-of-2"
                     autocomplete
                     label="Name"
@@ -971,7 +975,7 @@ export let examples = [
                       />
                     }
                   />
-                  <ComboboxContainer
+                  <DeprecatedCombobox
                     formClassName="slds-size_1-of-2"
                     autocomplete
                     label="Name"
@@ -1008,7 +1012,7 @@ export let examples = [
           footer={<EmailFooter />}
         >
           <div className="slds-email-composer">
-            <ComboboxContainer
+            <DeprecatedCombobox
               id="recipients-to"
               formClassName="slds-email-composer__combobox"
               selectedOptionsInline
@@ -1036,8 +1040,8 @@ export let examples = [
                   </ListboxPill>
                 </ListboxPillsItem>
               </ListboxPills>
-            </ComboboxContainer>
-            <ComboboxContainer
+            </DeprecatedCombobox>
+            <DeprecatedCombobox
               id="recipients-bcc"
               formClassName="slds-email-composer__combobox"
               selectedOptionsInline
@@ -1052,7 +1056,7 @@ export let examples = [
                 />
               }
             />
-            <ComboboxContainer
+            <DeprecatedCombobox
               id="recipients-cc"
               formClassName="slds-email-composer__combobox"
               selectedOptionsInline

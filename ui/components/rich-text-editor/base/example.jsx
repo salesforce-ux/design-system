@@ -8,11 +8,11 @@ import ButtonIcon from '../../button-icons/';
 import SvgIcon from '../../../shared/svg-icon';
 import { Tooltip } from '../../tooltips/base/example';
 import {
-  ComboboxContainer,
-  Listbox,
-  ListboxItem,
-  Option
-} from '../../combobox/base/example';
+  DeprecatedCombobox,
+  DeprecatedListbox,
+  DeprecatedListboxItem,
+  DeprecatedOption
+} from '../../combobox/deprecated/';
 import { Listbox as NewListbox } from '../../combobox/listbox';
 import { ComboboxGroup } from '../../combobox/';
 import { IconObjectSwitcher } from '../../combobox/object-switcher/';
@@ -204,45 +204,45 @@ export const RteFormula = props => {
 };
 
 export const FontFamilyDropdown = props => (
-  <Listbox
+  <DeprecatedListbox
     listboxClassName="slds-dropdown slds-dropdown_fluid"
     vertical
     id="family-listbox"
   >
-    <ListboxItem>
-      <Option
+    <DeprecatedListboxItem>
+      <DeprecatedOption
         id={listboxOptionId01}
         title="Times New Roman"
         focused={props.focused}
         selected={props.selected}
         hideIcon
       />
-    </ListboxItem>
-    <ListboxItem>
-      <Option id={listboxOptionId02} title="Arial" hideIcon />
-    </ListboxItem>
-  </Listbox>
+    </DeprecatedListboxItem>
+    <DeprecatedListboxItem>
+      <DeprecatedOption id={listboxOptionId02} title="Arial" hideIcon />
+    </DeprecatedListboxItem>
+  </DeprecatedListbox>
 );
 
 const FontSizeDropdown = props => (
-  <Listbox
+  <DeprecatedListbox
     listboxClassName="slds-dropdown slds-dropdown_fluid"
     vertical
     id="size-listbox"
   >
-    <ListboxItem>
-      <Option
+    <DeprecatedListboxItem>
+      <DeprecatedOption
         id={listboxOptionId03}
         title="12px"
         focused={props.focused}
         selected={props.selected}
         hideIcon
       />
-    </ListboxItem>
-    <ListboxItem>
-      <Option id={listboxOptionId04} title="14px" hideIcon />
-    </ListboxItem>
-  </Listbox>
+    </DeprecatedListboxItem>
+    <DeprecatedListboxItem>
+      <DeprecatedOption id={listboxOptionId04} title="14px" hideIcon />
+    </DeprecatedListboxItem>
+  </DeprecatedListbox>
 );
 
 export let RteFormatFont = props => (
@@ -252,7 +252,7 @@ export let RteFormatFont = props => (
     aria-label="Format font family &amp; size"
   >
     <div className="slds-rich-text-editor__select">
-      <ComboboxContainer
+      <DeprecatedCombobox
         className="slds-rich-text-editor__select_x-small"
         id="font-family"
         inputIcon="right"
@@ -267,7 +267,7 @@ export let RteFormatFont = props => (
     </div>
 
     <div className="slds-rich-text-editor__select">
-      <ComboboxContainer
+      <DeprecatedCombobox
         className="slds-rich-text-editor__select_xx-small"
         id="font-size"
         inputIcon="right"

@@ -17,7 +17,7 @@ import {
   RteTextarea,
   FontFamilyDropdown
 } from '../base/example';
-import { ComboboxContainer } from '../../combobox/base/example';
+import { DeprecatedCombobox } from '../../combobox/deprecated';
 
 const { matchesMarkup } = createHelpers(__dirname);
 
@@ -38,7 +38,7 @@ const IndentedOutputText = props => (
 
 const ComboboxNonReadOnly = props => (
   <div className="slds-rich-text-editor__select">
-    <ComboboxContainer
+    <DeprecatedCombobox
       className="slds-size_x-small"
       id="font-family"
       inputIcon="right"

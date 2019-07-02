@@ -107,6 +107,10 @@
 #### Fixed
 - Fixed text disappearing when peaking between stage in Safari
 
+### [Picklist](https://www.lightningdesignsystem.com/components/picklist)
+#### Changed
+- Migrated picklist HTML to use non-deprecated combobox
+
 ### [Pills](https://www.lightningdesignsystem.com/components/pills)
 #### Changed
 - On touch devices, increase tap target height of `.slds-pill` to `$height-tappable-small` and change horizontal padding to `$spacing-small`

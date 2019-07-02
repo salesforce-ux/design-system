@@ -372,8 +372,12 @@
    * @restrict .slds-dropdown li
    */
   &__header {
-    font-weight: $font-weight-bold;
+    @include text-title;
     padding: $spacing-x-small $spacing-small;
+
+    @include touch-device {
+      font-size: $font-size-5;
+    }
   }
 
   /**

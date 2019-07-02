@@ -2,11 +2,10 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 /**
- * @summary Container that manages layout when a listbox of pill options sit next to a combobox search input
- *
- * @name multi-entity
- * @selector .slds-combobox-group
- * @restrict div
+ * @name deprecated-readonly
+ * @selector [readonly]
+ * @restrict .slds-combobox_container input
  * @support dev-ready
  * @variant
+ * @deprecated
  */

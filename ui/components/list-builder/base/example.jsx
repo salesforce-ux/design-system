@@ -11,11 +11,11 @@ import {
 } from '../../modals/base/example';
 import { CheckboxAddButton } from '../../checkbox-button/base/example';
 import {
-  ComboboxContainer,
-  Listbox,
-  ListboxItem,
-  EntityOption
-} from '../../combobox/base/example';
+  DeprecatedCombobox,
+  DeprecatedListbox,
+  DeprecatedListboxItem,
+  DeprecatedEntityOption
+} from '../../combobox/deprecated/';
 import {
   Table,
   THead,
@@ -100,28 +100,31 @@ const rows = [
 ----------------------------------------------------------------------------- */
 
 const ListboxDropdown = props => (
-  <Listbox listboxClassName="slds-dropdown slds-dropdown_fluid" vertical>
-    <ListboxItem>
-      <EntityOption
+  <DeprecatedListbox
+    listboxClassName="slds-dropdown slds-dropdown_fluid"
+    vertical
+  >
+    <DeprecatedListboxItem>
+      <DeprecatedEntityOption
         id={listboxOptionId01}
         entityTitle="Acme"
         entityMeta
         focused={props.focused}
       />
-    </ListboxItem>
-    <ListboxItem>
-      <EntityOption
+    </DeprecatedListboxItem>
+    <DeprecatedListboxItem>
+      <DeprecatedEntityOption
         id={listboxOptionId02}
         entityTitle="Salesforce.com, Inc."
         entityMeta
       />
-    </ListboxItem>
-  </Listbox>
+    </DeprecatedListboxItem>
+  </DeprecatedListbox>
 );
 
 let ProductListHeader = props => (
   <div className="slds-p-vertical_x-small slds-p-horizontal_large slds-shrink-none slds-theme_shade">
-    <ComboboxContainer
+    <DeprecatedCombobox
       autocomplete
       hideLabel
       inputIcon="right"

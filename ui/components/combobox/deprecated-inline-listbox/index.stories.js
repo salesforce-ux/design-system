@@ -4,10 +4,10 @@ import { getDisplayElementById } from '../../../shared/helpers';
 
 import '../../../index.scss';
 
-const stories = storiesOf('Components/Combobox/Inline Listbox', module).add(
-  'Base',
-  () => InlineListboxExamples.default
-);
+const stories = storiesOf(
+  'Components/Combobox/Deprecated Inline Listbox',
+  module
+).add('Base', () => InlineListboxExamples.default);
 
 InlineListboxExamples.states.map(example => {
   stories.add(example.label, () =>

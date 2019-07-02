@@ -80,6 +80,12 @@
 - Removed default `box-shadow` on `inputs` for Webkit
 - Positioning of icons inside of inputs have been tweaked when on a touch device
 
+### [Map](https://www.lightningdesignsystem.com/components/map)
+#### Changed
+- Adjusted padding around map on touch devices
+- Removed height restriction on `.slds-has-coordinates` on touch devices to prevent internal scrolling of long lists
+- Increased font size of `.slds-coordinates__title` on touch devices
+
 ### [Menus](https://www.lightningdesignsystem.com/components/menus)
 #### Changed
 - On touch devices:

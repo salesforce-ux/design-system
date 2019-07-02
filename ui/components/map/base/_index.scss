@@ -65,6 +65,7 @@
   @include touch-device {
     max-height: none;
   }
+
   .slds-map:before {
     padding-top: 75%;
   }
@@ -101,7 +102,6 @@
   @include touch-device {
     font-size: $font-size-6;
   }
-
 }
 
 /**

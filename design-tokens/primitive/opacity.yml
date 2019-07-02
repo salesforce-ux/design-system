@@ -1,0 +1,17 @@
+# Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+# Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+global:
+  type: opacity
+  category: opacity
+  cssProperties:
+  - opacity
+  scope: global
+  primitive: true
+props:
+  OPACITY_5:
+    value: '0.5'
+    comment: '50% transparency of an element'
+  OPACITY_8:
+    value: '0.8'
+    comment: '80% transparency of an element'

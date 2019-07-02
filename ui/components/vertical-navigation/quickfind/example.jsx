@@ -8,7 +8,7 @@ import {
   NavVerticalSection
 } from '../list/example';
 import { FormElement } from '../../form-element';
-import { Input } from '../../input/base/example';
+import Input from '../../input/';
 import SvgIcon from '../../../shared/svg-icon';
 
 const inputId01 = 'input-id-01';

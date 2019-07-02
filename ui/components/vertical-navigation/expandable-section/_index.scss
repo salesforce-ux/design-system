@@ -13,6 +13,10 @@
 
   &[aria-expanded="true"] .slds-button__icon {
     transform: rotate(90deg);
+
+    @include rtl() {
+      transform: rotate(-90deg);
+    }
   }
 }
 

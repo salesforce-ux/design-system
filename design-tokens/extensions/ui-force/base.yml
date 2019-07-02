@@ -8,6 +8,7 @@ imports:
 - ./border-width.yml
 - ./box-shadow.yml
 - ./duration.yml
+- ./illustrations.yml
 - ./image-paths.yml
 - ./sizing.yml
 - ./text-color.yml

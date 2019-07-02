@@ -73,6 +73,10 @@
 .slds-accordion__summary-action-icon {
   flex-shrink: 0;
   transform: rotate(-90deg);
+
+  @include rtl() {
+    transform: rotate(90deg);
+  }
 }
 
 /**

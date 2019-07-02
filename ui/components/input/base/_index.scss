@@ -147,6 +147,7 @@
 
     @include touch-device {
       @include square($square-icon-medium-content);
+      margin-top: (($square-icon-medium-content / 2) * -1);
     }
 
     /* @Todo - we need to be sure this is deprecated since the color sems to be the correct gray I see in specs */
@@ -173,6 +174,10 @@
 
     .slds-input__icon {
       left: $spacing-small;
+
+      @include touch-device {
+        left: $spacing-x-small;
+      }
     }
 
     .slds-input,
@@ -193,6 +198,10 @@
 
     .slds-input__icon {
       right: $spacing-small;
+
+      @include touch-device {
+        right: $spacing-x-small;
+      }
     }
 
     .slds-input,
@@ -219,6 +228,10 @@
     .slds-input__icon_left,
     .slds-input__icon--left {
       left: $spacing-small;
+
+      @include touch-device {
+        left: $spacing-x-small;
+      }
     }
 
     /**
@@ -230,6 +243,10 @@
     .slds-input__icon_right,
     .slds-input__icon--right {
       right: $spacing-small;
+
+      @include touch-device {
+        right: $spacing-x-small;
+      }
     }
 
     .slds-input,
@@ -244,7 +261,7 @@
     .slds-input,
     .slds-input_bare,
     .slds-input--bare {
-      padding-right: ($spacing-xx-large + $spacing-xx-small);
+      padding-right: ($spacing-xx-large + $spacing-x-small);
     }
   }
 }
@@ -279,6 +296,10 @@
   .slds-input__spinner {
     right: $spacing-large;
     left: auto;
+
+    @include touch-device {
+      right: calc(#{$spacing-large} + #{$spacing-xx-small});
+    }
   }
 }
 

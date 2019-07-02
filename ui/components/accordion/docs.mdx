@@ -1,4 +1,5 @@
 import CodeView from '../../../shared/components/CodeView';
+import Blockquote from '../../../shared/components/Blockquote';
 import { getDisplayElementById } from '../../shared/helpers';
 import * as Base from './base/example';
 
@@ -6,10 +7,33 @@ import * as Base from './base/example';
   An accordion allows a user to toggle the display of a section of content.
 </div>
 
-## Base
+<CodeView exampleOnly>
+  {getDisplayElementById(Base.examples, 'styled')}
+</CodeView>
+
+## About Accordions
+
+Accordions are composed of a list of longer blocks of text, with a header button to toggle the visibility of each block.
+
+## Accessibility
+
+Availability of accordion content to assistive technology requires the use of `aria-controls` and toggling `aria-expanded` as regions are expanded and collapsed.
+
+There are additional accessibility considerations within the [Buttons](/components/buttons) and [Menus](/components/menus).
+
+## Default
 <CodeView>
   {Base.default}
 </CodeView>
+
+### Structure and Implementation
+
+An accordion is implemented as an unordered list with a class of `slds-accordion`. Inside the list, each chunk of content is inside both a list item with class of `slds-accordion__list-item` and a section with a class of `slds-accordion__section`.
+
+The content itself is contained within a div with the class `slds-accordion__content`, an ID that corresponds to the `aria-control` on the button and the hidden attribute.
+
+Content visibility is toggled via a [Button](/components/buttons) in the H3 heading. To make accordion content visible, the section is given the class `slds-is-open`, the button is changed from `aria-expanded="false"` to `aria-expanded="true"`, and the hidden attribute is removed from the content div.
+
 
 ## States
 
@@ -33,14 +57,19 @@ import * as Base from './base/example';
   { getDisplayElementById(Base.states, 'multiple-sections-open') }
 </CodeView>
 
-### Styled
-<CodeView>
-  { getDisplayElementById(Base.states, 'styled') }
-</CodeView>
-
 ## Examples
 
-### Nested Accordions
+### With Action Overflow Menu
+<CodeView>
+  { getDisplayElementById(Base.examples, 'has-action-overflow') }
+</CodeView>
+
+### In a Card
+<CodeView>
+  { getDisplayElementById(Base.examples, 'styled') }
+</CodeView>
+
+### Nested
 <CodeView>
   { getDisplayElementById(Base.examples, 'nested-accordions') }
 </CodeView>

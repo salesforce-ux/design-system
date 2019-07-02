@@ -4,7 +4,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { FormElement, Fieldset } from '../../form-element/';
-import { Input } from '../../input/base/example';
+import Input from '../../input/';
 
 export const CompoundForm = props => {
   const { hasTooltip, isRequired } = props;

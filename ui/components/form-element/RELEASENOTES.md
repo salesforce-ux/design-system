@@ -9,6 +9,8 @@
 ### Changed
 
 - On touch devices, set the amount of space created for the edit icon to `$square-tappable` which aligns with touch specific sizing
+- On touch devices, increase the tap target size of `.slds-form-element__label` to `$$height-tappable-small`, center with flex, and increase `font-size` to `$font-size-4`
+- On touch devices, set the tap target height of button-icons to `$height-tappable-small` when inline with label text
 
 ## 2.8.1
 

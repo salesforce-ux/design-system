@@ -18,7 +18,7 @@ import {
   FormElement
 } from '../';
 import { CompoundFormElement, CompoundFormRow } from '../compound/';
-import { Input } from '../../input/base/example';
+import Input from '../../input/';
 import ButtonIcon from '../../button-icons/';
 import SvgIcon from '../../../shared/svg-icon';
 import * as StackedExamples from '../stacked/example';

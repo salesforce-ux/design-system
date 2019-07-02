@@ -2,7 +2,7 @@
 # Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 imports:
-- ./global/base.yml
+- ./primitive/base.yml
 - ./extensions/ui-force/base.yml
 - ./components.yml
 auraImports:

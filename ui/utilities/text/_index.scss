@@ -10,6 +10,10 @@
 .slds-text-body_regular,
 .slds-text-body--regular {
   font-size: $font-size-3;
+
+  @include touch-device {
+    font-size: $font-size-5;
+  }
 }
 
 /**
@@ -21,6 +25,10 @@
 .slds-text-body_small,
 .slds-text-body--small {
   font-size: $font-size-2;
+
+  @include touch-device {
+    font-size: $font-size-4;
+  }
 }
 
 
@@ -35,6 +43,10 @@
   font-weight: $font-weight-light;
   font-size: $font-size-9;
   line-height: $line-height-heading;
+
+  @include touch-device {
+    font-size: $font-size-10;
+  }
 }
 
 /**
@@ -48,6 +60,10 @@
   font-weight: $font-weight-light;
   font-size: $font-size-7;
   line-height: $line-height-heading;
+
+  @include touch-device {
+    font-size: $font-size-8;
+  }
 }
 
 /**
@@ -60,6 +76,10 @@
 .slds-text-heading--small {
   font-size: $font-size-5;
   line-height: $line-height-heading;
+
+  @include touch-device {
+    font-size: $font-size-7;
+  }
 }
 
 @include  deprecate('4.0.0', 'Use slds text-title instead') {

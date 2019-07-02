@@ -3,7 +3,7 @@
 
 import React from 'react';
 import { FormElement } from '../../../components/form-layout/element/example';
-import { Input } from '../../../components/input/base/example';
+import Input from '../../../components/input/';
 import { Select } from '../../../components/select/base/example';
 import {
   Modal,

@@ -5,7 +5,7 @@ import React from 'react';
 import RecordDetail from '../record-detail/';
 import * as Snapshot from '../record-detail/snapshots.data';
 import { FormElement, Fieldset } from '..';
-import { Input } from '../../input/base/example';
+import Input from '../../input/';
 import { Textarea } from '../../textarea/base/example';
 import { Radio } from '../../radio-group/base/example';
 import { Checkbox } from '../../checkbox/base/example';

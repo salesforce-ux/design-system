@@ -14,3 +14,9 @@ BaseExamples.states.forEach(example => {
     getDisplayElementById(BaseExamples.states, example.id)
   );
 });
+
+BaseExamples.examples.forEach(example => {
+  stories.add(example.label, () =>
+    getDisplayElementById(BaseExamples.examples, example.id)
+  );
+});

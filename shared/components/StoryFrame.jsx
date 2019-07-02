@@ -21,12 +21,24 @@ const Label = styled.h2`
   padding: 0.5rem 1rem;
 `;
 
+const Example = styled.div`
+  transform: translate3d(0, 0, 0);
+  position: ${props => props.isViewport && 'relative'};
+  ${props => props.styles}
+
+  > * {
+    position: ${props => props.isViewport && 'absolute'};
+  }
+`;
+
 // A bit barebones at the moment but in place for future extensibility
-const StoryFrame = ({ component, label }) => (
+const StoryFrame = ({ component, label, isViewport, styles }) => (
   <LazyLoad height={200} offset={[-200, 0]}>
     <Wrapper>
       <Label>{label}</Label>
-      {component}
+      <Example isViewport={isViewport} styles={styles}>
+        {component}
+      </Example>
     </Wrapper>
   </LazyLoad>
 );

@@ -14,6 +14,17 @@
 .slds-checkbox--toggle {
   width: 100%;
 
+  @include touch-device {
+    padding: $spacing-xxx-small 0;
+  }
+
+  .slds-form-element__label {
+    @include touch-device {
+      align-items: flex-start;
+      font-size: $font-size-5;
+    }
+  }
+
   /**
    * @summary Creates a custom styled checkbox
    * @selector .slds-checkbox_faux
@@ -67,6 +78,10 @@
     + .slds-checkbox--faux_container {
       font-size: $font-size-1;
       color: $color-text-label;
+
+      @include touch-device {
+        font-size: $font-size-2;
+      }
 
       /**
        * @summary Container for text to show when checkbox is toggle off

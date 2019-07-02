@@ -110,15 +110,15 @@ exports[`AdvancedDataTableHead component should check the select all column head
             aria-labelledby="check-select-all-label column-group-header"
             defaultChecked={true}
             disabled={undefined}
-            id="checkbox-14"
+            id="checkbox-unique-id-14"
             name="options"
             tabIndex="-1"
             type="checkbox"
-            value="checkbox-14"
+            value="checkbox-unique-id-14"
           />
           <label
             className="slds-checkbox__label"
-            htmlFor="checkbox-14"
+            htmlFor="checkbox-unique-id-14"
             id="check-select-all-label"
           >
             <span
@@ -258,15 +258,15 @@ exports[`AdvancedDataTableHead component should hide all the resize controls 1`]
             aria-labelledby="check-select-all-label column-group-header"
             defaultChecked={null}
             disabled={undefined}
-            id="checkbox-10"
+            id="checkbox-unique-id-10"
             name="options"
             tabIndex="-1"
             type="checkbox"
-            value="checkbox-10"
+            value="checkbox-unique-id-10"
           />
           <label
             className="slds-checkbox__label"
-            htmlFor="checkbox-10"
+            htmlFor="checkbox-unique-id-10"
             id="check-select-all-label"
           >
             <span
@@ -386,15 +386,15 @@ exports[`AdvancedDataTableHead component should hide all the sorting controls 1`
             aria-labelledby="check-select-all-label column-group-header"
             defaultChecked={null}
             disabled={undefined}
-            id="checkbox-11"
+            id="checkbox-unique-id-11"
             name="options"
             tabIndex="-1"
             type="checkbox"
-            value="checkbox-11"
+            value="checkbox-unique-id-11"
           />
           <label
             className="slds-checkbox__label"
-            htmlFor="checkbox-11"
+            htmlFor="checkbox-unique-id-11"
             id="check-select-all-label"
           >
             <span
@@ -513,15 +513,15 @@ exports[`AdvancedDataTableHead component should hide row level actions header 1`
             aria-labelledby="check-select-all-label column-group-header"
             defaultChecked={null}
             disabled={undefined}
-            id="checkbox-9"
+            id="checkbox-unique-id-9"
             name="options"
             tabIndex="-1"
             type="checkbox"
-            value="checkbox-9"
+            value="checkbox-unique-id-9"
           />
           <label
             className="slds-checkbox__label"
-            htmlFor="checkbox-9"
+            htmlFor="checkbox-unique-id-9"
             id="check-select-all-label"
           >
             <span
@@ -814,15 +814,15 @@ exports[`AdvancedDataTableHead component should render 1`] = `
             aria-labelledby="check-select-all-label column-group-header"
             defaultChecked={null}
             disabled={undefined}
-            id="checkbox-4"
+            id="checkbox-unique-id-4"
             name="options"
             tabIndex="-1"
             type="checkbox"
-            value="checkbox-4"
+            value="checkbox-unique-id-4"
           />
           <label
             className="slds-checkbox__label"
-            htmlFor="checkbox-4"
+            htmlFor="checkbox-unique-id-4"
             id="check-select-all-label"
           >
             <span
@@ -962,15 +962,15 @@ exports[`AdvancedDataTableHead component should render enable actionable mode 1`
             aria-labelledby="check-select-all-label column-group-header"
             defaultChecked={null}
             disabled={undefined}
-            id="checkbox-5"
+            id="checkbox-unique-id-5"
             name="options"
             tabIndex="0"
             type="checkbox"
-            value="checkbox-5"
+            value="checkbox-unique-id-5"
           />
           <label
             className="slds-checkbox__label"
-            htmlFor="checkbox-5"
+            htmlFor="checkbox-unique-id-5"
             id="check-select-all-label"
           >
             <span
@@ -1129,15 +1129,15 @@ exports[`AdvancedDataTableHead component should render error column header and s
             aria-labelledby="check-select-all-label column-group-header"
             defaultChecked={null}
             disabled={undefined}
-            id="checkbox-6"
+            id="checkbox-unique-id-6"
             name="options"
             tabIndex="-1"
             type="checkbox"
-            value="checkbox-6"
+            value="checkbox-unique-id-6"
           />
           <label
             className="slds-checkbox__label"
-            htmlFor="checkbox-6"
+            htmlFor="checkbox-unique-id-6"
             id="check-select-all-label"
           >
             <span
@@ -1277,15 +1277,15 @@ exports[`AdvancedDataTableHead component should render menus 1`] = `
             aria-labelledby="check-select-all-label column-group-header"
             defaultChecked={null}
             disabled={undefined}
-            id="checkbox-8"
+            id="checkbox-unique-id-8"
             name="options"
             tabIndex="-1"
             type="checkbox"
-            value="checkbox-8"
+            value="checkbox-unique-id-8"
           />
           <label
             className="slds-checkbox__label"
-            htmlFor="checkbox-8"
+            htmlFor="checkbox-unique-id-8"
             id="check-select-all-label"
           >
             <span
@@ -1446,15 +1446,15 @@ exports[`AdvancedDataTableHead component should set a main column width 1`] = `
             aria-labelledby="check-select-all-label column-group-header"
             defaultChecked={null}
             disabled={undefined}
-            id="checkbox-12"
+            id="checkbox-unique-id-12"
             name="options"
             tabIndex="-1"
             type="checkbox"
-            value="checkbox-12"
+            value="checkbox-unique-id-12"
           />
           <label
             className="slds-checkbox__label"
-            htmlFor="checkbox-12"
+            htmlFor="checkbox-unique-id-12"
             id="check-select-all-label"
           >
             <span
@@ -1594,15 +1594,15 @@ exports[`AdvancedDataTableHead component should set a single column width 1`] = 
             aria-labelledby="check-select-all-label column-group-header"
             defaultChecked={null}
             disabled={undefined}
-            id="checkbox-13"
+            id="checkbox-unique-id-13"
             name="options"
             tabIndex="-1"
             type="checkbox"
-            value="checkbox-13"
+            value="checkbox-unique-id-13"
           />
           <label
             className="slds-checkbox__label"
-            htmlFor="checkbox-13"
+            htmlFor="checkbox-unique-id-13"
             id="check-select-all-label"
           >
             <span
@@ -1742,15 +1742,15 @@ exports[`AdvancedDataTableHead component should set sort direction 1`] = `
             aria-labelledby="check-select-all-label column-group-header"
             defaultChecked={null}
             disabled={undefined}
-            id="checkbox-15"
+            id="checkbox-unique-id-15"
             name="options"
             tabIndex="-1"
             type="checkbox"
-            value="checkbox-15"
+            value="checkbox-unique-id-15"
           />
           <label
             className="slds-checkbox__label"
-            htmlFor="checkbox-15"
+            htmlFor="checkbox-unique-id-15"
             id="check-select-all-label"
           >
             <span
@@ -1898,15 +1898,15 @@ exports[`AdvancedDataTableHead component should should pass hasFocus when suppli
             aria-labelledby="check-select-all-label column-group-header"
             defaultChecked={null}
             disabled={undefined}
-            id="checkbox-7"
+            id="checkbox-unique-id-7"
             name="options"
             tabIndex="-1"
             type="checkbox"
-            value="checkbox-7"
+            value="checkbox-unique-id-7"
           />
           <label
             className="slds-checkbox__label"
-            htmlFor="checkbox-7"
+            htmlFor="checkbox-unique-id-7"
             id="check-select-all-label"
           >
             <span
@@ -3763,15 +3763,15 @@ Array [
         aria-labelledby="check-select-all-label column-group-header"
         defaultChecked={true}
         disabled={undefined}
-        id="checkbox-3"
+        id="checkbox-unique-id-3"
         name="options"
         tabIndex="-1"
         type="checkbox"
-        value="checkbox-3"
+        value="checkbox-unique-id-3"
       />
       <label
         className="slds-checkbox__label"
-        htmlFor="checkbox-3"
+        htmlFor="checkbox-unique-id-3"
         id="check-select-all-label"
       >
         <span
@@ -3807,15 +3807,15 @@ Array [
         aria-labelledby="check-select-all-label column-group-header"
         defaultChecked={null}
         disabled={undefined}
-        id="checkbox-2"
+        id="checkbox-unique-id-2"
         name="options"
         tabIndex="0"
         type="checkbox"
-        value="checkbox-2"
+        value="checkbox-unique-id-2"
       />
       <label
         className="slds-checkbox__label"
-        htmlFor="checkbox-2"
+        htmlFor="checkbox-unique-id-2"
         id="check-select-all-label"
       >
         <span
@@ -3851,15 +3851,15 @@ Array [
         aria-labelledby="check-select-all-label column-group-header"
         defaultChecked={null}
         disabled={undefined}
-        id="checkbox-1"
+        id="checkbox-unique-id-1"
         name="options"
         tabIndex="-1"
         type="checkbox"
-        value="checkbox-1"
+        value="checkbox-unique-id-1"
       />
       <label
         className="slds-checkbox__label"
-        htmlFor="checkbox-1"
+        htmlFor="checkbox-unique-id-1"
         id="check-select-all-label"
       >
         <span

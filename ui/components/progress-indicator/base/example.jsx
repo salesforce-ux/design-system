@@ -36,7 +36,7 @@ export let Step = props => (
   >
     {props.done && !props.error ? (
       <ButtonIcon
-        className="slds-button_icon slds-progress__marker slds-progress__marker_icon"
+        className="slds-progress__marker slds-progress__marker_icon"
         symbol="success"
         aria-describedby={props['aria-describedby']}
         assistiveText={props.done ? props.children + ' - Completed' : null}
@@ -44,7 +44,7 @@ export let Step = props => (
       />
     ) : props.error ? (
       <ButtonIcon
-        className="slds-button_icon slds-progress__marker slds-progress__marker_icon"
+        className="slds-progress__marker slds-progress__marker_icon"
         symbol="error"
         aria-describedby={props['aria-describedby']}
         assistiveText={props.error ? props.children + ' - Error' : null}

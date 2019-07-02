@@ -4,6 +4,12 @@
 
 <!-- ## [Unreleased] -->
 
+## 2.10.0
+
+### Changed
+
+- For touch devices, increase size of checkbox-button to `$square-tappable` and center children with flex properties
+
 ## 2.7.0
 
 ### Added

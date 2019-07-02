@@ -216,3 +216,33 @@ it('renders a nested accordion', () =>
       </AccordionSection>
     </Accordion>
   ));
+
+it('renders an accordion with action overflow', () =>
+  matchesMarkup(
+    <Accordion>
+      <AccordionSection
+        summary="Accordion summary"
+        hasActionOverflow
+        isOpen
+        referenceId={referenceId01}
+      >
+        Accordion details - A
+      </AccordionSection>
+      <AccordionSection
+        summary="Accordion summary"
+        hasActionOverflow
+        isOpen={false}
+        referenceId={referenceId02}
+      >
+        Accordion details - B
+      </AccordionSection>
+      <AccordionSection
+        summary="Accordion summary"
+        hasActionOverflow
+        isOpen={false}
+        referenceId={referenceId03}
+      >
+        Accordion details - C
+      </AccordionSection>
+    </Accordion>
+  ));

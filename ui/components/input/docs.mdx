@@ -33,8 +33,7 @@ You can see examples of the correct markup in the [Left Icon & Clear Button exam
 
 Inputs with errors should have `aria-describedby` to insure that the associated field level error message is read by assistive technology.
 
-If the error message has an `id="my-error-message"`, then the input should
-have `aria-describedby="my-error-message"`.
+If the error message has an `id="my-error-message"`, then the input should have `aria-describedby="my-error-message"` and `aria-invalid="true"`.
 
 If you need some type of field level help and if your tooltips are available on hover, make sure they’re also available on keyboard focus. The help icon needs to be associated to the tooltip so that when the user focuses
 on the icon, assistive technology reads out the content of the tooltip. If the tooltip has an `id="help"`, then the `<button>` containing the icon should have `aria-describedby="help"`.

@@ -404,3 +404,5 @@ props:
     value: '#4A698D'
   ACTION_SCRIPT:
     value: '#0070d2'
+  ACTION_BUG:
+    value: '#EF6E5D'

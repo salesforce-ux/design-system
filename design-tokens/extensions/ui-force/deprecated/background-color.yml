@@ -96,9 +96,11 @@ props:
   COLOR_BACKGROUND_INPUT_CHECKBOX:
     value: '{!WHITE}'
     comment: Default checkboxes
+    access: 'global'
   COLOR_BACKGROUND_INPUT_CHECKBOX_SELECTED:
     value: '{!AZURE}'
     comment: Selected checkboxes
+    access: 'global'
   COLOR_BACKGROUND_INPUT_SEARCH:
     value: '{!BLACK_TRANSPARENT_16}'
     comment: Background color for search input fields.

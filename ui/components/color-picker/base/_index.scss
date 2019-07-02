@@ -61,7 +61,7 @@
  * @summary Input field for summary UI
  *
  * @selector .slds-color-picker__summary-input
- * @restrict .slds-color-picker__summary > div
+ * @restrict .slds-color-picker__summary div
  */
 .slds-color-picker__summary-input {
   display: inline-block;
@@ -86,11 +86,6 @@
 
   .slds-popover__footer {
     background: $color-background;
-  }
-
-  .slds-tabs_default__item {
-    text-transform: uppercase;
-    letter-spacing: 0.05rem;
   }
 
   .slds-tabs_default__content {

@@ -1,5 +1,11 @@
 <!-- Release notes authoring guidelines: http://keepachangelog.com/ -->
 
+## 2.10.0
+
+### Changed
+
+- Global tokens have been removed from this repository and are installed as a dependency from https://www.npmjs.com/package/@salesforce-ux/design-system-primitive-tokens
+
 ## 2.9.0
 
 ### Added

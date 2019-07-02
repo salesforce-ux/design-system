@@ -1,0 +1,33 @@
+# Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+# Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+global:
+  type: color
+  category: color
+  cssProperties:
+  - background-color
+  - 'border*color'
+  - box-shadow
+  - fill
+  - color
+props:
+  BRAND_BACKGROUND_PRIMARY:
+    value: "#b0c4df"
+    comment: "Primary page background color"
+    themeable: true
+    release: 2.6.0
+  BRAND_BACKGROUND_PRIMARY_TRANSPARENT:
+    value: "rgba(176,196,223,0)"
+    comment: "These RGBA values need to be updated if BRAND_BACKGROUND_PRIMARY changes, solves webkit bug"
+    themeable: true
+    release: 2.6.0
+  BRAND_BACKGROUND_DARK:
+    value: "#195594"
+    comment: "Dark variant of BRAND_BACKGROUND_PRIMARY, used within gradient of background color"
+    themeable: true
+    release: 2.6.0
+  BRAND_BACKGROUND_DARK_TRANSPARENT:
+    value: "rgba(25,85,148,0)"
+    comment: "These RGBA values need to be updated if BRAND_BACKGROUND_DARK changes, solves webkit bug"
+    themeable: true
+    release: 2.6.0

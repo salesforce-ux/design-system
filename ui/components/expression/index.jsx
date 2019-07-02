@@ -15,7 +15,7 @@ import {
   FormElementSpanFauxLabel,
   FormElementControl
 } from '../form-element';
-import { Input } from '../input/base/example';
+import Input from '../input/';
 import * as Snapshot from './snapshots.data';
 import classNames from 'classnames';
 import _ from '../../shared/helpers';

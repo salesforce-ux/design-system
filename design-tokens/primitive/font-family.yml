@@ -1,0 +1,22 @@
+# Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+# Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+global:
+  category: font
+  type: font
+  cssProperties:
+  - 'font'
+  - 'font-family'
+  scope: global
+  primitive: true
+imports:
+- ../aliases/font-family.yml
+props:
+  FONT_FAMILY:
+    value: '{!SANS_SERIF}'
+    comment: 'Default font-family for Salesforce applications'
+    access: global
+  FONT_FAMILY_HEADING:
+    value: '{!SANS_SERIF}'
+  FONT_FAMILY_MONOSPACE:
+    value: '{!MONOSPACE}'

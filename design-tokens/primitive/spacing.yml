@@ -1,0 +1,292 @@
+# Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+# Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+global:
+  category: spacing
+  type: size
+  comment: ''
+  cssProperties:
+  - top
+  - right
+  - bottom
+  - left
+  - 'margin*'
+  - 'padding*'
+  - 'border*'
+  - '*width'
+  - '*height'
+  - box-shadow
+  - stroke
+  - stroke-width
+  scope: global
+  primitive: true
+imports:
+- ../aliases/spacing.yml
+props:
+  SPACING_NONE:
+    value: '{!SPACING_NONE}'
+    comment: 'Constant spacing token for 0'
+  SPACING_XXX_SMALL:
+    value: '{!SPACING_XXX_SMALL}'
+    comment: 'Constant spacing token for size XXX small'
+    access: global
+  SPACING_XX_SMALL:
+    value: '{!SPACING_XX_SMALL}'
+    comment: 'Constant spacing token for size XX small'
+    access: global
+  SPACING_X_SMALL:
+    value: '{!SPACING_X_SMALL}'
+    comment: 'Constant spacing token for size X small'
+    access: global
+  SPACING_SMALL:
+    value: '{!SPACING_SMALL}'
+    comment: 'Constant spacing token for size Small'
+    access: global
+  SPACING_MEDIUM:
+    value: '{!SPACING_MEDIUM}'
+    comment: 'Constant spacing token for size Medium'
+    access: global
+  SPACING_LARGE:
+    value: '{!SPACING_LARGE}'
+    comment: 'Constant spacing token for size Large'
+    access: global
+  SPACING_X_LARGE:
+    value: '{!SPACING_X_LARGE}'
+    comment: 'Constant spacing token for size X Large'
+    access: global
+  SPACING_XX_LARGE:
+    value: '{!SPACING_XX_LARGE}'
+    comment: 'Constant spacing token for size XX Large'
+    access: global
+  VAR_SPACING_XXX_SMALL:
+    value: '{!SPACING_XXX_SMALL}'
+    comment: 'Variable spacing token for size XXX Small'
+    release: 2.7.0
+    access: global
+  VAR_SPACING_XX_SMALL:
+    value: '{!SPACING_XX_SMALL}'
+    comment: 'Variable spacing token for size XX Small'
+    release: 2.7.0
+    access: global
+  VAR_SPACING_X_SMALL:
+    value: '{!SPACING_X_SMALL}'
+    comment: 'Variable spacing token for size X Small'
+    release: 2.7.0
+    access: global
+  VAR_SPACING_SMALL:
+    value: '{!SPACING_SMALL}'
+    comment: 'Variable spacing token for size Small'
+    release: 2.7.0
+    access: global
+  VAR_SPACING_MEDIUM:
+    value: '{!SPACING_MEDIUM}'
+    comment: 'Variable spacing token for size Medium'
+    release: 2.7.0
+    access: global
+  VAR_SPACING_LARGE:
+    value: '{!SPACING_LARGE}'
+    comment: 'Variable spacing token for size Large'
+    release: 2.7.0
+    access: global
+  VAR_SPACING_X_LARGE:
+    value: '{!SPACING_X_LARGE}'
+    comment: 'Variable spacing token for size X Large'
+    release: 2.7.0
+    access: global
+  VAR_SPACING_XX_LARGE:
+    value: '{!SPACING_XX_LARGE}'
+    comment: 'Variable spacing token for size XX Large'
+    release: 2.7.0
+    access: global
+  VAR_SPACING_HORIZONTAL_XXX_SMALL:
+    value: '{!SPACING_XXX_SMALL}'
+    comment: 'Variable horizontal spacing token for size XXX Small'
+    release: 2.7.0
+    cssProperties:
+    - left
+    - right
+    - margin-left
+    - margin-right
+    - padding-left
+    - padding-right
+    access: global
+  VAR_SPACING_HORIZONTAL_XX_SMALL:
+    value: '{!SPACING_XX_SMALL}'
+    comment: 'Variable horizontal spacing token for size XX Small'
+    release: 2.7.0
+    cssProperties:
+    - left
+    - right
+    - margin-left
+    - margin-right
+    - padding-left
+    - padding-right
+    access: global
+  VAR_SPACING_HORIZONTAL_X_SMALL:
+    value: '{!SPACING_X_SMALL}'
+    comment: 'Variable horizontal spacing token for size X Small'
+    release: 2.7.0
+    cssProperties:
+    - left
+    - right
+    - margin-left
+    - margin-right
+    - padding-left
+    - padding-right
+    access: global
+  VAR_SPACING_HORIZONTAL_SMALL:
+    value: '{!SPACING_SMALL}'
+    comment: 'Variable horizontal spacing token for size Small'
+    release: 2.7.0
+    cssProperties:
+    - left
+    - right
+    - margin-left
+    - margin-right
+    - padding-left
+    - padding-right
+    access: global
+  VAR_SPACING_HORIZONTAL_MEDIUM:
+    value: '{!SPACING_MEDIUM}'
+    comment: 'Variable horizontal spacing token for size Medium'
+    release: 2.7.0
+    cssProperties:
+    - left
+    - right
+    - margin-left
+    - margin-right
+    - padding-left
+    - padding-right
+    access: global
+  VAR_SPACING_HORIZONTAL_LARGE:
+    value: '{!SPACING_LARGE}'
+    comment: 'Variable horizontal spacing token for size Large'
+    release: 2.7.0
+    cssProperties:
+    - left
+    - right
+    - margin-left
+    - margin-right
+    - padding-left
+    - padding-right
+    access: global
+  VAR_SPACING_HORIZONTAL_X_LARGE:
+    value: '{!SPACING_X_LARGE}'
+    comment: 'Variable horizontal spacing token for size X Large'
+    release: 2.7.0
+    cssProperties:
+    - left
+    - right
+    - margin-left
+    - margin-right
+    - padding-left
+    - padding-right
+    access: global
+  VAR_SPACING_HORIZONTAL_XX_LARGE:
+    value: '{!SPACING_XX_LARGE}'
+    comment: 'Variable horizontal spacing token for size XX Large'
+    release: 2.7.0
+    cssProperties:
+    - left
+    - right
+    - margin-left
+    - margin-right
+    - padding-left
+    - padding-right
+    access: global
+  VAR_SPACING_VERTICAL_XXX_SMALL:
+    value: '{!SPACING_XXX_SMALL}'
+    comment: 'Variable vertical spacing token for size XXX Small'
+    release: 2.7.0
+    cssProperties:
+    - top
+    - bottom
+    - margin-top
+    - margin-bottom
+    - padding-top
+    - padding-bottom
+    access: global
+  VAR_SPACING_VERTICAL_XX_SMALL:
+    value: '{!SPACING_XX_SMALL}'
+    comment: 'Variable vertical spacing token for size XX Small'
+    release: 2.7.0
+    cssProperties:
+    - top
+    - bottom
+    - margin-top
+    - margin-bottom
+    - padding-top
+    - padding-bottom
+    access: global
+  VAR_SPACING_VERTICAL_X_SMALL:
+    value: '{!SPACING_X_SMALL}'
+    comment: 'Variable vertical spacing token for size X Small'
+    release: 2.7.0
+    cssProperties:
+    - top
+    - bottom
+    - margin-top
+    - margin-bottom
+    - padding-top
+    - padding-bottom
+    access: global
+  VAR_SPACING_VERTICAL_SMALL:
+    value: '{!SPACING_SMALL}'
+    comment: 'Variable vertical spacing token for size Small'
+    release: 2.7.0
+    cssProperties:
+    - top
+    - bottom
+    - margin-top
+    - margin-bottom
+    - padding-top
+    - padding-bottom
+    access: global
+  VAR_SPACING_VERTICAL_MEDIUM:
+    value: '{!SPACING_MEDIUM}'
+    comment: 'Variable vertical spacing token for size Medium'
+    release: 2.7.0
+    cssProperties:
+    - top
+    - bottom
+    - margin-top
+    - margin-bottom
+    - padding-top
+    - padding-bottom
+    access: global
+  VAR_SPACING_VERTICAL_LARGE:
+    value: '{!SPACING_LARGE}'
+    comment: 'Variable vertical spacing token for size Large'
+    release: 2.7.0
+    cssProperties:
+    - top
+    - bottom
+    - margin-top
+    - margin-bottom
+    - padding-top
+    - padding-bottom
+    access: global
+  VAR_SPACING_VERTICAL_X_LARGE:
+    value: '{!SPACING_X_LARGE}'
+    comment: 'Variable vertical spacing token for size X Large'
+    release: 2.7.0
+    cssProperties:
+    - top
+    - bottom
+    - margin-top
+    - margin-bottom
+    - padding-top
+    - padding-bottom
+    access: global
+  VAR_SPACING_VERTICAL_XX_LARGE:
+    value: '{!SPACING_XX_LARGE}'
+    comment: 'Variable vertical spacing token for size XX Large'
+    release: 2.7.0
+    cssProperties:
+    - top
+    - bottom
+    - margin-top
+    - margin-bottom
+    - padding-top
+    - padding-bottom
+    access: global

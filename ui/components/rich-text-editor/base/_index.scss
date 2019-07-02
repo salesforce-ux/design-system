@@ -90,6 +90,28 @@
   margin-bottom: $spacing-xx-small;
 }
 
+/**
+ * Container X-Small Size for Rich Text Editor Combobox
+ *
+ * @selector .slds-rich-text-editor__select_x-small
+ * @restrict .slds-rich-text-editor__select .slds-combobox
+ */
+.slds-rich-text-editor__select_x-small {
+  max-width: $size-x-small;
+  width: auto;
+}
+
+/**
+ * Container XX-Small Size for Rich Text Editor Combobox
+ *
+ * @selector .slds-rich-text-editor__select_xx-small
+ * @restrict .slds-rich-text-editor__select .slds-combobox
+ */
+.slds-rich-text-editor__select_xx-small {
+  max-width: $size-xx-small;
+  width: auto;
+}
+
 // This class should be placed on a containing div when RTE toolbar is in a small space
 .slds-region_narrow {
 

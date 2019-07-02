@@ -28,8 +28,23 @@
   padding-top: $spacing-xx-small;
   margin-bottom: $spacing-xxx-small;
 
+  @include touch-device {
+    @include flex-vertical-center(inline-flex);
+    min-height: $height-tappable-small;
+    padding-top: 0;
+    margin-bottom: 0;
+    font-size: $font-size-4;
+  }
+
   &:empty {
     margin: 0;
+  }
+}
+
+// In touch, resize height of info button icon that is inline with form label
+.slds-form-element__label + .slds-form-element__icon .slds-button_icon {
+  @include touch-device {
+    height: $height-tappable-small;
   }
 }
 
@@ -62,6 +77,10 @@
   vertical-align: top;
   line-height: $line-height-reset;
   z-index: 1; // Helps ensure the help-text icon is clickable in all implementations
+
+  @include touch-device {
+    padding-top: 0; // Padding deprecated with increased touch target area size
+  }
 
   .slds-button_icon {
     position: relative; // Resetting position since the edit button icon to invoke inline-edit is set to position: absolute

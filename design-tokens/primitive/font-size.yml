@@ -1,0 +1,81 @@
+# Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+# Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+global:
+  category: font-size
+  type: font-size
+  cssProperties:
+  - font
+  - font-size
+  scope: global
+  primitive: true
+imports:
+- ../aliases/font-size.yml
+props:
+  FONT_SIZE_1:
+    value: '{!FONT_SIZE_1}'
+    comment: 'Constant typography token for font size 1'
+  FONT_SIZE_2:
+    value: '{!FONT_SIZE_2}'
+    comment: 'Constant typography token for font size 2'
+  FONT_SIZE_3:
+    value: '{!FONT_SIZE_3}'
+    comment: 'Constant typography token for font size 3'
+  FONT_SIZE_4:
+    value: '{!FONT_SIZE_4}'
+    comment: 'Constant typography token for font size 4'
+  FONT_SIZE_5:
+    value: '{!FONT_SIZE_5}'
+    comment: 'Constant typography token for font size 5'
+  FONT_SIZE_6:
+    value: '{!FONT_SIZE_6}'
+    comment: 'Constant typography token for font size 6'
+  FONT_SIZE_7:
+    value: '{!FONT_SIZE_7}'
+    comment: 'Constant typography token for font size 7'
+  FONT_SIZE_8:
+    value: '{!FONT_SIZE_8}'
+    comment: 'Constant typography token for font size 8'
+  FONT_SIZE_9:
+    value: '{!FONT_SIZE_9}'
+    comment: 'Constant typography token for font size 9'
+  FONT_SIZE_10:
+    value: '{!FONT_SIZE_10}'
+    comment: 'Constant typography token for font size 10'
+  FONT_SIZE_11:
+    value: '{!FONT_SIZE_11}'
+    comment: 'Constant typography token for font size 11'
+
+  VAR_FONT_SIZE_1:
+    value: '{!FONT_SIZE_1}'
+    comment: 'Variable typography token for font size 1'
+  VAR_FONT_SIZE_2:
+    value: '{!FONT_SIZE_2}'
+    comment: 'Variable typography token for font size 2'
+  VAR_FONT_SIZE_3:
+    value: '{!FONT_SIZE_3}'
+    comment: 'Variable typography token for font size 3'
+  VAR_FONT_SIZE_4:
+    value: '{!FONT_SIZE_4}'
+    comment: 'Variable typography token for font size 4'
+  VAR_FONT_SIZE_5:
+    value: '{!FONT_SIZE_5}'
+    comment: 'Variable typography token for font size 5'
+  VAR_FONT_SIZE_6:
+    value: '{!FONT_SIZE_6}'
+    comment: 'Variable typography token for font size 6'
+  VAR_FONT_SIZE_7:
+    value: '{!FONT_SIZE_7}'
+    comment: 'Variable typography token for font size 7'
+  VAR_FONT_SIZE_8:
+    value: '{!FONT_SIZE_8}'
+    comment: 'Variable typography token for font size 8'
+  VAR_FONT_SIZE_9:
+    value: '{!FONT_SIZE_9}'
+    comment: 'Variable typography token for font size 9'
+  VAR_FONT_SIZE_10:
+    value: '{!FONT_SIZE_10}'
+    comment: 'Variable typography token for font size 10'
+  VAR_FONT_SIZE_11:
+    value: '{!FONT_SIZE_11}'
+    comment: 'Variable typography token for font size 11'

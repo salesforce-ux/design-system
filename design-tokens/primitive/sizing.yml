@@ -1,0 +1,118 @@
+# Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+# Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+global:
+  type: size
+  category: sizing
+  cssProperties:
+  - font
+  - font-size
+  - '*width'
+  - '*height'
+  - flex
+  - top
+  - right
+  - bottom
+  - left
+  - 'margin*'
+  - 'padding*'
+  - transform
+  scope: global
+  primitive: true
+imports:
+- ../aliases/sizing.yml
+props:
+  SIZE_XXX_SMALL:
+    value: '{!SIZE_XXX_SMALL}'
+    comment: Generic sizing token scale for UI components.
+  SIZE_XX_SMALL:
+    value: '{!SIZE_XX_SMALL}'
+    comment: Generic sizing token scale for UI components.
+    access: global
+  SIZE_X_SMALL:
+    value: '{!SIZE_X_SMALL}'
+    comment: Generic sizing token scale for UI components.
+    access: global
+  SIZE_SMALL:
+    value: '{!SIZE_SMALL}'
+    comment: Generic sizing token scale for UI components.
+    access: global
+  SIZE_MEDIUM:
+    value: '{!SIZE_MEDIUM}'
+    comment: Generic sizing token scale for UI components.
+    access: global
+  SIZE_LARGE:
+    value: '{!SIZE_LARGE}'
+    comment: Generic sizing token scale for UI components.
+    access: global
+  SIZE_X_LARGE:
+    value: '{!SIZE_X_LARGE}'
+    comment: Generic sizing token scale for UI components.
+    access: global
+  SIZE_XX_LARGE:
+    value: '{!SIZE_XX_LARGE}'
+    comment: Generic sizing token scale for UI components.
+    access: global
+
+  SQUARE_ICON_UTILITY_SMALL:
+    value: '{!SIZE_SQUARE_MEDIUM}'
+    comment: Small utility icon without border.
+    access: global
+  SQUARE_ICON_UTILITY_MEDIUM:
+    value: '{!SIZE_SQUARE_LARGE}'
+    comment: Medium utility icon without border.
+    access: global
+  SQUARE_ICON_UTILITY_LARGE:
+    value: '{!SIZE_SQUARE_X_LARGE}'
+    comment: Large utility icon without border.
+    access: global
+  SQUARE_ICON_LARGE_BOUNDARY:
+    value: 3rem
+    comment: 'Anchor: Outer colored tile'
+    access: global
+  SQUARE_ICON_LARGE_BOUNDARY_ALT:
+    value: 5rem
+    comment: 'Anchor: avatar'
+    access: global
+  SQUARE_ICON_LARGE_CONTENT:
+    value: '{!SIZE_SQUARE_XX_LARGE}'
+    comment: 'Anchor: Icon content (white shape)'
+    access: global
+  SQUARE_ICON_MEDIUM_BOUNDARY:
+    value: '{!SIZE_SQUARE_XX_LARGE}'
+    comment: 'Stage left & actions: Outer colored tile'
+    access: global
+  SQUARE_ICON_MEDIUM_BOUNDARY_ALT:
+    value: '{!SIZE_SQUARE_XXX_LARGE}'
+    comment: Icon button boundary.
+    access: global
+  SQUARE_ICON_MEDIUM_CONTENT:
+    value: '{!SIZE_SQUARE_MEDIUM}'
+    comment: 'Stage left & actions: Icon content (white shape)'
+    access: global
+  SQUARE_ICON_MEDIUM_CONTENT_ALT:
+    value: '{!SIZE_SQUARE_SMALL}'
+    comment: Alternate medium tap target size
+  SQUARE_ICON_SMALL_BOUNDARY:
+    value: '{!SIZE_SQUARE_X_LARGE}'
+    comment: 'Search Results: Outer colored tile'
+    access: global
+  SQUARE_ICON_SMALL_CONTENT:
+    value: '{!SIZE_SQUARE_XX_SMALL}'
+    comment: 'Search Results: Icon content (white shape)'
+    access: global
+  SQUARE_ICON_X_SMALL_BOUNDARY:
+    value: '{!SIZE_SQUARE_LARGE}'
+    comment: Very small icon button boundary.
+    access: global
+  SQUARE_ICON_X_SMALL_CONTENT:
+    value: '{!SIZE_SQUARE_XXX_SMALL}'
+    comment: Very small icons in icon buttons.
+    access: global
+  SQUARE_ICON_XX_SMALL_BOUNDARY:
+    value: '{!SIZE_SQUARE_MEDIUM}'
+    comment: Very very small icon button boundary.
+
+  VAR_SQUARE_ICON_MEDIUM_BOUNDARY:
+    value: '{!SIZE_SQUARE_XX_LARGE}'
+    comment: Variable medium boundary for square icons

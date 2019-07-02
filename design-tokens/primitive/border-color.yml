@@ -1,0 +1,109 @@
+# Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+# Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+global:
+  type: color
+  category: border-color
+  cssProperties:
+  - 'border*'
+  - box-shadow
+  - outline
+  - outline-color
+  scope: global
+  primitive: true
+imports:
+- ../aliases/colors.yml
+- ../aliases/color-palettes.yml
+props:
+  COLOR_BORDER:
+    value: '{!PALETTE_COOL_GRAY_5}'
+    comment: Default border color for UI elements.
+    cssProperties:
+    - 'border*'
+    - box-shadow
+    - 'background*'
+    access: global
+  COLOR_BORDER_BRAND:
+    value: '{!AZURE}'
+    comment: Our product brand blue.
+    access: global
+  COLOR_BORDER_BRAND_DARK:
+    value: '{!SCIENCE_BLUE}'
+    comment: 'Our product brand blue, darkened to meet accessibility color contrast ratios with white text.'
+  COLOR_BORDER_CUSTOMER:
+    value: '{!TANGERINE}'
+    comment: Border color for UI elements related to the concept of an external user or customer.
+  COLOR_BORDER_DESTRUCTIVE:
+    value: '{!FLUSH_MAHOGANY}'
+    comment: Border color for UI elements that have to do with destructive actions.
+  COLOR_BORDER_DESTRUCTIVE_HOVER:
+    value: '{!TABASCO}'
+    comment: Hover border color for UI elements that have to do with destructive actions.
+  COLOR_BORDER_DESTRUCTIVE_ACTIVE:
+    value: '{!MAROON}'
+    comment: Active border color for UI elements that have to do with destructive actions.
+  COLOR_BORDER_INFO:
+    value: '{!PALETTE_COOL_GRAY_9}'
+    comment: 'Border color for UI elements related to providing neutral information (not error, success, or warning).'
+  COLOR_BORDER_ERROR:
+    value: '{!FLUSH_MAHOGANY}'
+    comment: Border color for UI elements that have to do with errors.
+    access: global
+  COLOR_BORDER_ERROR_ALT:
+    value: '{!DEEP_BLUSH}'
+    comment: Alternative border color for UI elements related to errors.
+  COLOR_BORDER_ERROR_DARK:
+    value: '{!DEEP_BLUSH}'
+    comment: Dark alternative border color for UI elements related to errors.
+  COLOR_BORDER_OFFLINE:
+    value: '{!PALETTE_COOL_GRAY_11}'
+    comment: Border color for UI elements related to the offline state.
+  COLOR_BORDER_SUCCESS:
+    value: '{!EMERALD}'
+    comment: Border color for UI elements that have to do with success.
+    access: global
+  COLOR_BORDER_SUCCESS_DARK:
+    value: '{!SALEM}'
+    comment: Dark alternative border color for UI elements that have to do with success.
+  COLOR_BORDER_WARNING:
+    value: '{!KOROMIKO}'
+    comment: Border color for UI elements that have to do with warnings.
+    access: global
+  COLOR_BORDER_INVERSE:
+    value: '{!DEEP_COVE}'
+    comment: Border color to match UI elements using color-background-inverse.
+  COLOR_BORDER_SEPARATOR:
+    value: '{!PALETTE_COOL_GRAY_2}'
+    comment: Lightest separator color - used as default separator on white backgrounds.
+    access: global
+  COLOR_BORDER_SEPARATOR_ALT:
+    value: '{!PALETTE_COOL_GRAY_5}'
+    comment: Medium separator color - used as default separator on light gray backgrounds.
+    access: global
+  COLOR_BORDER_SEPARATOR_ALT_2:
+    value: '{!PALETTE_COOL_GRAY_6}'
+    comment: Darkest separator color - used as an alternate separator color when more differentiation is desired.
+  COLOR_BORDER_SEPARATOR_INVERSE:
+    value: '{!SAN_JUAN}'
+    comment: 'Used as a separator on dark backgrounds, such as stage left navigation.'
+    access: global
+  COLOR_BORDER_ROW_SELECTED:
+    value: '{!SCIENCE_BLUE}'
+    comment: Used as the border color for selected rows or items on list-like components.
+    access: global
+  COLOR_BORDER_ROW_SELECTED_HOVER:
+    value: '{!AZURE}'
+    comment: Used as the border color for the hover state on selected rows or items on list-like components.
+    access: global
+  COLOR_BORDER_SELECTION:
+    value: '{!SCIENCE_BLUE}'
+    specificity: builders
+    comment: Used to delineate the boundary of a selected component. Specific to builders.
+  COLOR_BORDER_SELECTION_HOVER:
+    value: '{!AZURE}'
+    specificity: builders
+    comment: Used to delineate the boundary of a component that is being hovered over. Specific to builders.
+  COLOR_BORDER_SELECTION_ACTIVE:
+    value: '{!PALETTE_COOL_GRAY_2}'
+    specificity: builders
+    comment: Used to delineate the boundary of a component that is being clicked. Specific to builders.

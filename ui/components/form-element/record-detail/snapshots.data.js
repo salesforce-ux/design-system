@@ -5,10 +5,10 @@ import React from 'react';
 import ButtonIcon from '../../button-icons/';
 import { FormElement, Fieldset } from '../';
 import { CompoundFormElement, CompoundFormRow } from '../compound/';
-import { Input } from '../../input/base/example';
+import Input from '../../input/';
 import { Textarea } from '../../textarea/base/example';
 import { Checkbox } from '../../checkbox/base/example';
-import { CheckboxStandalone } from '../../checkbox/';
+import { FormElementCheckboxStandalone } from '../../checkbox/form-element';
 import { MultiSelect, DefaultSnapShot } from '../../dueling-picklist/';
 import Combobox from '../../combobox/';
 import Listbox from '../../combobox/listbox/';
@@ -94,14 +94,11 @@ export const ObjectFieldTypes = {
             />
           ),
           component: (
-            <FormElement
+            <FormElementCheckboxStandalone
               labelContent="Security Assessment Required?"
-              inputId="stacked-checkbox-id-01"
               isEditing
               isStacked
-            >
-              <CheckboxStandalone id="stacked-checkbox-id-01" />
-            </FormElement>
+            />
           )
         },
         {
@@ -529,14 +526,11 @@ export const ObjectFieldTypesHorizontal = {
             />
           ),
           component: (
-            <FormElement
-              isHorizontal
+            <FormElementCheckboxStandalone
               labelContent="Security Assessment Required?"
-              inputId="horizontal-checkbox-id-01"
+              isHorizontal
               isEditing
-            >
-              <CheckboxStandalone id="horizontal-checkbox-id-01" />
-            </FormElement>
+            />
           )
         },
         {
@@ -981,13 +975,10 @@ export const ObjectFieldTypesSingleColumn = {
           ),
           column: 1,
           component: (
-            <FormElement
+            <FormElementCheckboxStandalone
               labelContent="Security Assessment Required?"
-              inputId="checkbox-id-01"
               isEditing
-            >
-              <CheckboxStandalone id="checkbox-id-01" />
-            </FormElement>
+            />
           )
         }
       ]
@@ -1416,13 +1407,10 @@ export const DeprecatedObjectFieldTypes = {
           label: 'Security Assessment Required?',
           value: 'False',
           component: (
-            <FormElement
+            <FormElementCheckboxStandalone
               labelContent="Security Assessment Required?"
-              inputId="checkbox-id-01"
               isEditing
-            >
-              <CheckboxStandalone id="checkbox-id-01" />
-            </FormElement>
+            />
           )
         },
         {

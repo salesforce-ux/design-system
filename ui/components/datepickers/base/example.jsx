@@ -6,7 +6,7 @@ import classNames from 'classnames';
 import ButtonIcon from '../../button-icons/';
 import { Select } from '../../select/base/example';
 import { FormElement } from '../../form-element';
-import { Input } from '../../input/base/example';
+import Input from '../../input/';
 
 /* -----------------------------------------------------------------------------
     Variables

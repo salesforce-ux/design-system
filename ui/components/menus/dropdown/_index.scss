@@ -119,6 +119,7 @@
   transform: translateX(-50%);
 
   @include touch-device {
+    padding: 0;
     font-size: $font-size-5;
   }
 

@@ -1,6 +1,12 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
+$mq-x-small: 320px !default;
+$mq-small: 480px !default;
+$mq-medium: 768px !default;
+$mq-large: 1024px !default;
+$mq-x-large: 1280px !default;
+
 // TINY - 320px - 20rem
 @mixin mq-x-small-min {
   @media (min-width: pem($mq-x-small)) {

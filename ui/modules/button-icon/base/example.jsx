@@ -138,6 +138,18 @@ export let states = [
         disabled
       />
     )
+  },
+  {
+    id: 'inverse-disabled',
+    label: 'Inverse Disabled',
+    element: (
+      <ButtonIcon
+        symbol="add"
+        disabled
+        variant="inverse"
+        boundarySize="small"
+      />
+    )
   }
 ];
 

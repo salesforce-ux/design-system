@@ -31,6 +31,8 @@
   margin-right: var(--lwc-c-button-spacing-horizontal-end, 0);
   margin-bottom: var(--lwc-c-button-spacing-vertical-bottom, 0);
   margin-left: var(--lwc-c-button-spacing-horizontal-start, 0);
+  --lwc-c-active-button-color-border: var(--lwc-c-button-color-border);
+  --lwc-c-active-button-color: var(--lwc-c-button-color);
 
   &:hover,
   &:focus,

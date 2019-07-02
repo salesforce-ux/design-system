@@ -1,0 +1,368 @@
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+// ------------
+// Init
+// ------------
+@import '../../../shared/common/init';
+
+
+// ------------
+// Mixins
+// ------------
+@import '../mixins/index';
+
+/**
+ * @name base
+ * @summary Modal Component
+ * @selector .lwc-modal
+ * @restrict section
+ * @variant
+ */
+.lwc-modal {
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    transform var(--lwc-c-modal-duration-open, $duration-quickly) linear,
+    opacity var(--lwc-c-modal-duration-open, $duration-quickly) linear;
+  position: var(--lwc-c-modal-position, fixed);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: calc(#{$z-index-modal} + 1);
+}
+
+/**
+ * @name open
+ * @summary Invoke open state of modal dialog
+ * @selector .lwc-modal_is-open
+ * @restrict .lwc-modal
+ * @modifier
+ * @group visisbility
+ */
+.lwc-modal_is-open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.lwc-modal_slide-in {
+
+  .lwc-modal__container {
+    transform: translate(0, -50px);
+  }
+}
+
+/**
+ * @summary Container for modal dialog panel
+ * @selector .lwc-modal__container
+ * @restrict .lwc-modal div
+ */
+.lwc-modal__container {
+  position: relative;
+  transform: translate(0, 0);
+  transition:
+    transform var(--lwc-c-modal-duration-open, $duration-quickly) linear,
+    opacity var(--lwc-c-modal-duration-open, $duration-quickly) linear;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 $spacing-x-large;
+  height: 100%;
+  padding: $spacing-large 0;
+
+  @include mq-medium-min {
+    margin: 0 auto;
+    width: 50%;
+    min-width: rem(320px);
+    max-width: rem(640px);
+  }
+}
+
+/**
+ * Sizing
+ */
+
+/**
+ * @summary Xx-Small size for Modal
+ * @selector .lwc-modal__container_xx-small
+ * @restrict .lwc-modal__container
+ */
+.lwc-modal__container_xx-small {
+  @include mq-medium-min {
+    min-width: rem(120px);
+    max-width: rem(320px);
+  }
+}
+
+/**
+ * @summary X-Small size for Modal
+ * @selector .lwc-modal__container_x-small
+ * @restrict .lwc-modal__container
+ */
+.lwc-modal__container_x-small {
+  @include mq-medium-min {
+    min-width: rem(320px);
+    max-width: rem(560px);
+  }
+}
+
+/**
+ * @summary Small size for Modal
+ * @selector .lwc-modal__container_small
+ * @restrict .lwc-modal__container
+ */
+.lwc-modal__container_small {
+  @include mq-medium-min {
+    min-width: rem(320px);
+    max-width: rem(800px);
+  }
+}
+
+/**
+ * @summary Medium size for Modal
+ * @selector .lwc-modal__container_medium
+ * @restrict .lwc-modal__container
+ */
+.lwc-modal__container_medium {
+  @include mq-medium-min {
+    width: 70%;
+    min-width: rem(640px);
+    max-width: rem(1200px);
+  }
+}
+
+/**
+ * @summary Large size for Modal
+ * @selector .lwc-modal__container_large
+ * @restrict .lwc-modal__container
+ */
+.lwc-modal__container_large {
+  @include mq-medium-min {
+    width: 90%;
+    min-width: rem(640px);
+    max-width: none;
+  }
+}
+
+/**
+ * @summary Full size for Modal
+ * @selector .lwc-modal__container_full
+ * @restrict .lwc-modal__container
+ */
+.lwc-modal__container_full {
+  min-width: 100%;
+  max-width: 100%;
+  padding: $spacing-large;
+
+  .lwc-modal__surface {
+    flex: 1 1 0%;
+  }
+}
+
+/**
+ * @summary Fixed size for Modal
+ * @selector .lwc-modal__container_fixed
+ * @restrict .lwc-modal__container
+ */
+.lwc-modal__container_fixed {
+  min-width: rem(560px);
+  max-width: rem(840px);
+  min-height: rem(560px);
+  max-height: rem(840px);
+  height: 80vh;
+  top: 50%;
+  transform: translateY(-50%);
+
+  .lwc-modal__surface {
+    flex: 1 1 0%;
+  }
+}
+
+/**
+ * Position
+ */
+
+/**
+ * @summary Top position for Modal
+ * @selector .lwc-modal__container_top
+ * @restrict .lwc-modal__container
+ */
+.lwc-modal__container_top,
+.lwc-modal__container_top-right,
+.lwc-modal__container_top-left {
+  justify-content: flex-start;
+}
+
+/**
+ * @summary Top/Right position for Modal
+ * @selector .lwc-modal__container_top-right
+ * @restrict .lwc-modal__container
+ */
+.lwc-modal__container_top-right {
+  margin-right: $spacing-large;
+}
+
+/**
+ * @summary Top Left position for Modal
+ * @selector .lwc-modal__container_top-left
+ * @restrict .lwc-modal__container
+ */
+.lwc-modal__container_top-left {
+  margin-left: $spacing-large;
+}
+
+/**
+ * @summary Bottom position for Modal
+ * @selector .lwc-modal__container_bottom
+ * @restrict .lwc-modal__container
+ */
+.lwc-modal__container_bottom,
+.lwc-modal__container_bottom-right,
+.lwc-modal__container_bottom-left {
+  justify-content: flex-end;
+}
+
+/**
+ * @summary Bottom Right position for Modal
+ * @selector .lwc-modal__container_bottom-right
+ * @restrict .lwc-modal__container
+ */
+.lwc-modal__container_bottom-right {
+  margin-right: $spacing-large;
+}
+
+/**
+ * @summary Bottom Left position for Modal
+ * @selector .lwc-modal__container_bottom-left
+ * @restrict .lwc-modal__container
+ */
+.lwc-modal__container_bottom-left {
+  margin-left: $spacing-large;
+}
+
+/**
+ * @summary Surface background for Modal
+ * @selector .lwc-modal__surface
+ * @restrict .lwc-modal div
+ */
+.lwc-modal__surface {
+  background: var(--lwc-c-modal-color-background, $color-gray-1);
+  border-radius: var(--lwc-c-modal-border-radius, $border-radius-medium);
+  box-shadow: var(--lwc-c-modal-shadow, $shadow-drop-down);
+  display: flex;
+  flex-direction: column;
+}
+
+/**
+ * @summary Element containing close button for Modal
+ * @selector .lwc-modal__close
+ * @restrict .lwc-modal span
+ */
+.lwc-modal__close {
+  display: inline-flex;
+  margin-left: auto;
+  position: relative;
+  top: calc(#{$spacing-x-small} * -1);
+  right: calc(#{$spacing-x-small} * -1);
+  --lwc-c-button-icon-color-border-inverse: transparent;
+}
+
+/**
+ * @summary Modal header
+ * @selector .lwc-modal__header
+ * @restrict .lwc-modal header
+ */
+.lwc-modal__header {
+  background-color: var(--lwc-c-modal-header-color-background, transparent);
+  border-bottom: var(--lwc-c-modal-header-border-width, $border-width-thick) solid var(--lwc-c-modal-header-color-border, $color-border);
+  padding: var(--lwc-c-modal-header-spacing, $spacing-medium);
+  text-align: center;
+  flex-shrink: 0;
+}
+
+/**
+ * @summary Modal header title
+ * @selector .lwc-modal__header-title
+ * @restrict .lwc-modal__header h2
+ */
+.lwc-modal__header-title {
+  font-size: var(--lwc-c-modal-header-font-size, $font-size-7);
+  color: var(--lwc-c-modal-header-color-text, inherit);
+}
+
+/**
+ * @summary Prompt variant for Modal header
+ * @selector .lwc-modal__header_prompt
+ * @restrict .lwc-modal__header
+ */
+.lwc-modal__header_prompt {
+  --lwc-c-modal-header-color-background: $color-background-error-dark;
+  --lwc-c-modal-header-color-text: $color-gray-1;
+  --lwc-c-modal-header-border-width: 0;
+}
+
+/**
+ * @summary Content slot for modal body
+ * @selector .lwc-modal__content
+ * @restrict .lwc-modal div
+ */
+.lwc-modal__content {
+  overflow: hidden;
+  overflow-y: auto;
+  padding: var(--lwc-c-modal-content-spacing, $spacing-medium);
+  flex: 1;
+}
+
+/**
+ * @summary Modal footer
+ * @selector .lwc-modal__footer
+ * @restrict .lwc-modal footer
+ */
+.lwc-modal__footer {
+  border-top: var(--lwc-c-modal-footer-border-width, $border-width-thick) solid var(--lwc-c-modal-footer-color-border, $color-border);
+  padding: $spacing-small $spacing-medium;
+  background-color: var(--lwc-c-modal-footer-color-background, $color-background);
+  text-align: right;
+  overflow: hidden;
+  border-bottom-left-radius: inherit;
+  border-bottom-right-radius: inherit;
+  flex-shrink: 0;
+  --lwc-c-button-spacing-horizontal-start: $spacing-small;
+}
+
+/**
+ * @summary Direction variant for Modal footer
+ * @selector .lwc-modal__footer_directional
+ * @restrict .lwc-modal__footer
+ */
+.lwc-modal__footer_directional,
+.lwc-modal__footer_directional slot {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  --lwc-c-button-spacing-horizontal-start: 0;
+}
+
+/**
+ * @summary Prompt variant for Modal footer
+ * @selector .lwc-modal__footer_prompt
+ * @restrict .lwc-modal__footer
+ */
+.lwc-modal__footer_prompt,
+.lwc-modal__footer_prompt slot {
+  display: flex;
+  justify-content: center;
+  --lwc-c-modal-footer-color-background: transparent;
+  --lwc-c-modal-footer-border-width: 0;
+  --c-button-margin: 0 $spacing-x-small;
+}
+
+/**
+ * @summary Backdrop for Modal
+ * @selector .lwc-backdrop
+ * @restrict .lwc-modal ~ div
+ */
+.lwc-backdrop {
+  @include backdrop;
+}

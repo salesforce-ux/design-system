@@ -1,0 +1,284 @@
+import CodeView from '../../../shared/components/CodeView';
+import CodeBlock from '../../../shared/components/CodeBlock';
+import Blockquote from '../../../shared/components/Blockquote';
+import Showcase from '../../../shared/components/Showcase';
+import * as ModalExamples from './base/example';
+import { getDisplayElementById } from '../../shared/helpers';
+import ModalDemo from './docs';
+
+<div className="doc lead">
+  Modals are used to display content in a layer above the app. This paradigm is used in cases such as the creation or editing of a record, as well as various types of messaging and wizards.
+</div>
+
+<Showcase style={`--lwc-c-modal-position: absolute; position: relative; width: 100%; height: 420px; `}>
+  {getDisplayElementById(ModalExamples.examples, 'has-header-footer')}
+</Showcase>
+
+## About Modal
+
+Default modals are used in the vast majority of cases. They are as wide as 50% of the viewport, but include a minimum and maximum width to avoid going too narrow or too wide.
+
+Modals always have an equal amount of space at the top and bottom to account for the height of the close button.
+
+### Scrolling
+
+Modals grow according to how much content is within, but once the modal full height (including the previously mentioned space on top and bottom), the content area will begin to scroll. **(This scrolling is currently not available in Salesforce1 Mobile.)**
+
+### Taglines
+
+Modals can have a tagline in the header, simply by adding a paragraph after the heading.
+
+Modal headers can also have taglines, if you need to provide additional context. This tagline can also contain links, or the whole thing could be a link in and of itself.
+
+### Sizing
+
+Modals come with a range of sizes that call for different amounts of content. The height follows the same behavior and styles of other modals.
+
+[See modal sizing for details](#Sizing)
+
+### Positioning
+
+By default, the modals positioning is centered within the viewport and grows to the height of the content. You can alter the positioning of the modal to be located in six quadrants of the viewport — top/left, top, top/right, bottom/left, bottom, and bottom/right.
+
+[See modal positioning for details](#Sizing)
+
+### Variants
+
+#### Directional
+
+There are modals that require a linearly directional paradigm of navigation (“Next” and “Back”, etc.) — the actionable buttons in the modal footer live on the left and right, rather than all on the right. [See direction footer variant for details](#Directional)
+
+#### Prompt
+
+If you're using a Modal for a system alert that the user must acknowledge, consider using a [See prompt variants](#Prompt).
+
+## Accessibility
+
+Modals, by definition, trap focus. This means that if a user presses Tab or Shift+Tab while their keyboard focus is in the modal, their focus should stay in and cycle through the modal’s content. Focus shouldn’t return to the underlying page until the user presses the Esc key, presses an explicit “Cancel” or “Close” button in the modal, or performs another action that closes the modal.
+
+**Expected markup:**
+- Modal has `role="dialog"`
+- When the modal is open, everything behind it has HTML attribute `aria-hidden="true"`, so assistive technology won't read out the underlying page. The best way to do this is to give the modal and the page separate wrapper elements and toggle `aria-hidden="true"`/`aria-hidden="false"` on the main page's wrapper depending on whether or not the modal is open.
+- When a Modal contains an HTML heading, the Modal has an `aria-labelledby` attribute whose value is the id of the modal’s heading
+
+**Expected keyboard interactions:**
+- Esc key closes the modal and moves focus to whatever triggered the modal to open
+- Tab key at bottom of modal cycles focus back to first focusable element at top of modal
+- Shift+Tab keys at top of modal cycle focus back to last focusable element at bottom of modal
+- Enter key submits modal’s form data, if applicable
+
+## Default
+
+The default Modal has no header or footer, but will have a close button.
+
+<Blockquote type="a11y" header="Close Button and Accessibility">
+  It is <strong>required</strong> to always have a focusable element inside your modal to invoke focus trapping and allow the end-user to dismiss the modal through their keyboard or alternate assistive technologies. As a safe fallback, it is advised to always have a close button to dismiss the modal and meet the requirements of a single focusable item inside your modal.
+</Blockquote>
+
+<ModalDemo>
+  {ModalExamples.default()}
+</ModalDemo>
+
+### With header
+
+When a Modal has header you should update your HTML to point the Modal to the title of your heading title by assisning the ID of the heading element to the `aria-labelledby` attribute on the Modal.
+
+<ModalDemo>
+  {getDisplayElementById(ModalExamples.examples, 'has-header')}
+</ModalDemo>
+
+#### With tagline
+
+Modals can have a tagline in the header, simply by adding a paragraph after the heading.
+
+Modal headers can also have taglines, if you need to provide additional context. This tagline can also contain links, or the whole thing could be a link in and of itself.
+
+<ModalDemo>
+  {getDisplayElementById(ModalExamples.examples, 'has-header-tagline')}
+</ModalDemo>
+
+### With footer
+
+<ModalDemo>
+  {getDisplayElementById(ModalExamples.examples, 'has-footer')}
+</ModalDemo>
+
+### With header and footer
+
+<ModalDemo>
+  {getDisplayElementById(ModalExamples.examples, 'has-header-footer')}
+</ModalDemo>
+
+### Scrollable
+
+Modals grow according to how much content is within, but once the modal full height (including the previously mentioned space on top and bottom), the content area will begin to scroll. **(This scrolling is currently not available in Salesforce1 Mobile.)**
+
+<ModalDemo>
+  {getDisplayElementById(ModalExamples.examples, 'scrollable')}
+</ModalDemo>
+
+### Sizing
+
+Modals come with a range of sizes that call for different amounts of content. The height follows the same behavior and styles of other modals.
+
+Each sizing class should be applied to the `lwc-modal__container` element.
+
+|Size|Class|Min|Max|
+|----|-----|---|---|
+|Default|`lwc-modal__container`|320px|640px|
+|Xx-Small|`lwc-modal__container_xx-small`|120px|320px|
+|X-Small|`lwc-modal__container_x-small`|320px|560px|
+|Small|`lwc-modal__container_small`|320px|800px|
+|Medium|`lwc-modal__container_medium`|640px|1200px|
+|Large|`lwc-modal__container_large`|640px|90%|
+|Full|`lwc-modal__container_full`|100%|100%|
+|Fixed|`lwc-modal__container_fixed`|560px|840px|
+
+#### Xx-Small
+
+<ModalDemo>
+  {getDisplayElementById(ModalExamples.examples, 'size-xx-small')}
+</ModalDemo>
+
+#### X-Small
+
+<ModalDemo>
+  {getDisplayElementById(ModalExamples.examples, 'size-x-small')}
+</ModalDemo>
+
+#### Small
+
+<ModalDemo>
+  {getDisplayElementById(ModalExamples.examples, 'size-small')}
+</ModalDemo>
+
+#### Medium
+
+<ModalDemo>
+  {getDisplayElementById(ModalExamples.examples, 'size-medium')}
+</ModalDemo>
+
+#### Large
+
+<ModalDemo>
+  {getDisplayElementById(ModalExamples.examples, 'size-large')}
+</ModalDemo>
+
+#### Full
+
+<ModalDemo>
+  {getDisplayElementById(ModalExamples.examples, 'size-full')}
+</ModalDemo>
+
+#### Fixed
+
+The fixed size of a Modal can be used when you have an explicit amount of content to show within your modal. This size is used on a Modal variant like Welcome Mat.
+
+<ModalDemo extraStyles={`height: 800px;`}>
+  {getDisplayElementById(ModalExamples.examples, 'size-fixed')}
+</ModalDemo>
+
+### Position
+
+By default, the modals positioning is centered within the viewport and grows to the height of the content. You can alter the positioning of the modal to be located in six quadrants of the viewport — top/left, top, top/right, bottom/left, bottom, and bottom/right.
+
+Each position class should be applied to the `lwc-modal__container` element.
+
+|Position|Class|
+|----|-----|
+|Top/Left|`lwc-modal__container_top-left`|
+|Top|`lwc-modal__container_top`|
+|Top/Right|`lwc-modal__container_top-right`|
+|Bottom/Left|`lwc-modal__container_bottom-left`|
+|Bottom|`lwc-modal__container_bottom`|
+|Bottom/Right|`lwc-modal__container_bottom-right`|
+
+#### Top
+
+<ModalDemo>
+  {getDisplayElementById(ModalExamples.examples, 'position-top')}
+</ModalDemo>
+
+#### Top/Left
+
+<ModalDemo>
+  {getDisplayElementById(ModalExamples.examples, 'position-top-left')}
+</ModalDemo>
+
+#### Top/Right
+
+<ModalDemo>
+  {getDisplayElementById(ModalExamples.examples, 'position-top-right')}
+</ModalDemo>
+
+#### Bottom
+
+<ModalDemo>
+  {getDisplayElementById(ModalExamples.examples, 'position-bottom')}
+</ModalDemo>
+
+#### Bottom/Left
+
+<ModalDemo>
+  {getDisplayElementById(ModalExamples.examples, 'position-bottom-left')}
+</ModalDemo>
+
+#### Bottom/Right
+
+<ModalDemo>
+  {getDisplayElementById(ModalExamples.examples, 'position-bottom-right')}
+</ModalDemo>
+
+### No Backdrop
+
+It is not recommended to remove the backdrop but it can be done by simply removing the `lwc-backdrop` element from the HTML.
+
+<ModalDemo>
+  {getDisplayElementById(ModalExamples.examples, 'no-backdrop')}
+</ModalDemo>
+
+## Directional
+
+There are modals that require a linearly directional paradigm of navigation (“Next” and “Back”, etc.) — the actionable buttons in the modal footer live on the left and right, rather than all on the right.
+
+Applying the class `lwc-modal__footer_directional` to the `lwc-modal__footer` element will achieve this outcome.
+
+<ModalDemo>
+  {getDisplayElementById(ModalExamples.examples, 'is-directional-footer')}
+</ModalDemo>
+
+## Prompt
+
+If you're using a Modal for a system alert that the user must acknowledge, you should use the Prompt variant of a modal. A modifying class of `lwc-modal__header_prompt` should be added to the `lwc-modal__header` element. The `lwc-modal__footer` element will need the class `lwc-modal__footer_prompt` to properly align the buttons to dismiss the Prompt. The Close button is not required to be present in this variant as there will always be a button to dismiss or acknowledge the modal prompt.
+
+### Accessibility
+
+Prompt notifications are similar to modals, in that they are a focus trap, but they should take a slightly different `role` of `alertdialog` to indicate their severity. Like modals they should be labelled by their headings, but additonally they should be described by the message details of the prompt.
+
+The element containing the prompt message should be the target focus of the browser when it is displayed, which is why we add `tabindex="0"` to `lwc-modal__container`.
+
+There is no requirement for a close button, as the confirmation button should be used to dismiss the prompt, along with the usual Esc key dismissal.
+
+**Expected markup ([same as Modals](#Default), but with the following differences):**
+- Modal has `role="alertdialog"`
+- Modal has an `aria-describedby` attribute that matches the id of the modal message container.
+- Modal message container container should have `tabindex="0"`
+
+**Expected keyboard interaction ([same as Modals](#Default), with the addition of):**
+- Modal message container should take initial focus
+
+### Blocking
+
+By default, a prompt is a blocking non-dialog Modal.
+
+<ModalDemo>
+  {getDisplayElementById(ModalExamples.examples, 'prompt')}
+</ModalDemo>
+
+### Non-blocking
+
+A prompt can be non-blocking by changing the `tabindex` of the prompt to `-1`.
+
+<ModalDemo>
+  {getDisplayElementById(ModalExamples.examples, 'prompt-non-blocking')}
+</ModalDemo>

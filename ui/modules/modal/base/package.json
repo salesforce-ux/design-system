@@ -1,0 +1,8 @@
+{
+  "name": "modal",
+  "variant": "base",
+  "version": "3.0.0-dev",
+  "description": "Salesforce Lightning Design System - Modal component blueprint",
+  "author": "Salesforce",
+  "license": "SEE LICENSE IN README.md"
+}

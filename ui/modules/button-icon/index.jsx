@@ -36,7 +36,8 @@ class ButtonIcon extends Component {
       variant,
       shadow,
       customization,
-      assistiveText
+      assistiveText,
+      onClick
     } = this.props;
 
     const buttonVariantClassName = {
@@ -68,7 +69,7 @@ class ButtonIcon extends Component {
             type === 'stateful' ? isPressed || this.state.isPressed : null
           }
           title={title}
-          onClick={type === 'stateful' ? this.handlePressed : undefined}
+          onClick={type === 'stateful' ? this.handlePressed : onClick}
         >
           <Icon
             size={size}

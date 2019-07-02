@@ -31,11 +31,11 @@ import { getDisplayElementById } from '../../shared/helpers';
 
 ## About Form Elements
 
-The Form Element is initialized with `slds-form-element` and is made up of three primary pieces; a label (`slds-form-element__label`), a form control container (`slds-form-element__control`), and a form input element, i.e. `<input>`.
+The Form Element is initialized with `slds-form-element` and is made up of three primary pieces; a label (`slds-form-element__label`), a form control container (`slds-form-element__control`), and a form input element, i.e. `input`.
 
 ### Form Label
 
-A form label should use either the `<label>` or `<legend>` elements with the class `slds-form-element__label`. Use `<legend>` when you have a [compound form](/components/form-element/#Compound).
+A form label should use either the `label` or `legend` elements with the class `slds-form-element__label`. Use `legend` when you have a [compound form](/components/form-element/#Compound).
 
 <CodeBlock toggleCode={false}>
   <label className="slds-form-element__label" htmlFor="unique-id-of-input">Form label</label>
@@ -55,7 +55,7 @@ There are many types of input elements that can be used in the Form Element, inc
 
 ### Accessibility
 
-Labels must have the <code className="doc">for</code> attribute applied, and its value must match the ID of the associated form element, like <code className="doc"><input id="unique-id-of-input"></code>. This association ensures that assistive technology informs users about what information to enter where.
+Labels must have the <code className="doc">for</code> attribute applied, and its value must match the ID of the associated form element, like <code className="doc">input id="unique-id-of-input"</code>. This association ensures that assistive technology informs users about what information to enter where.
 
 
 ## Base
@@ -72,7 +72,7 @@ Labels must have the <code className="doc">for</code> attribute applied, and its
 
 ### View Mode/Static
 
-If a form element requires a view mode or static state, instead of `slds-form-element__label` being a `<label>` element, we want to change the element to a `<span>`. This is because the form is no longer a form but a statically read name and value pair.
+If a form element requires a view mode or static state, instead of `slds-form-element__label` being a `label` element, we want to change the element to a `span`. This is because the form is no longer a form but a statically read name and value pair.
 
 The string inside of `slds-form-element__control` needs to be wrapped in a `<div>` as well, with the class `slds-form-element__static` applied to it.
 

@@ -162,3 +162,18 @@
     border-top-color: $color-gray-5;
   }
 }
+
+/**
+ * @summary Inverse Variant
+ * @selector .lwc-button-icon_inverse
+ * @restrict .lwc-button-icon
+ * @modifier
+ */
+.lwc-button-icon_inverse {
+  --lwc-c-button-icon-color-background: var(--lwc-c-button-icon-color-background-inverse, transparent);
+  --lwc-c-button-icon-color-active: var(--lwc-c-button-icon-color-inverse-active, $color-gray-1);
+  --lwc-c-button-icon-shadow-active: var(--lwc-c-button-icon-shadow-active-inverse, $shadow-button-focus-inverse);
+  --lwc-c-button-icon-color-border-active: var(--lwc-c-button-icon-color-border-inverse-active, $color-border-button-focus-inverse);
+  // Override icon color
+  --lwc-c-icon-color: var(--lwc-c-button-icon-color-inverse, $color-gray-1);
+}

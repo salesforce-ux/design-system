@@ -228,7 +228,8 @@
       "@salesforce/slds/buttonGroup": "ui/modules/button-group/base/index.css",
       "@salesforce/slds/card": "ui/modules/card/base/index.css",
       "@salesforce/slds/common": "ui/modules/common/index.css",
-      "@salesforce/slds/icon": "ui/modules/icon/base/index.css"
+      "@salesforce/slds/icon": "ui/modules/icon/base/index.css",
+      "@salesforce/slds/modal": "ui/modules/modal/base/index.css"
     }
   }
 }

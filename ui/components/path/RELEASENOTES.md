@@ -19,6 +19,8 @@
 
 - Padding has been removed from `slds-path__track` to fix display issues when the Path is nested inside of a Card; of which is it's default state.
 - Modified to be mobile first and responsive.
+- Changed border radius to make circle and pill shaped buttons to square and rectangular shape.
+- Removed horizontal rule under coaching title areas
 
 ## Fixed
 

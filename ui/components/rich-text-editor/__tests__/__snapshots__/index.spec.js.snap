@@ -837,7 +837,7 @@ exports[`renders a RTE editor with an error and non-readonly combobox 1`] = `
                 <div
                   aria-expanded="false"
                   aria-haspopup="listbox"
-                  className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click slds-size_x-small"
+                  className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click slds-rich-text-editor__select_x-small"
                   role="combobox"
                 >
                   <div
@@ -1018,6 +1018,223 @@ exports[`renders a RTE textarea with aria-labelledby 1`] = `
     suppressContentEditableWarning={true}
   >
     Compose text...
+  </div>
+</div>
+`;
+
+exports[`renders a RTE with toolbar only, for touch devices 1`] = `
+<div
+  className="slds-form-element"
+  role={undefined}
+>
+  <div
+    className="slds-form-element__control"
+  >
+    <div
+      className="slds-rich-text-editor slds-grid slds-grid_vertical slds-nowrap slds-rich-text-editor_toolbar-only"
+    >
+      <div
+        aria-label={undefined}
+        className="slds-rich-text-editor__toolbar slds-shrink-none slds-rich-text-editor__toolbar_detached"
+        role="toolbar"
+      >
+        <ul
+          aria-label="Format text"
+          className="slds-button-group-list"
+        >
+          <li>
+            <button
+              aria-describedby="bold"
+              aria-haspopup={undefined}
+              className="slds-button slds-button_icon slds-button_icon-border-filled"
+              disabled={undefined}
+              id={undefined}
+              tabIndex="0"
+            >
+              <svg
+                aria-hidden={true}
+                className="slds-button__icon"
+              >
+                <use
+                  xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#bold"
+                />
+              </svg>
+              <span
+                className="slds-assistive-text"
+              >
+                Bold
+              </span>
+            </button>
+          </li>
+          <li>
+            <button
+              aria-haspopup={undefined}
+              className="slds-button slds-button_icon slds-button_icon-border-filled"
+              disabled={undefined}
+              id={undefined}
+              tabIndex="-1"
+            >
+              <svg
+                aria-hidden={true}
+                className="slds-button__icon"
+              >
+                <use
+                  xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#italic"
+                />
+              </svg>
+              <span
+                className="slds-assistive-text"
+              >
+                Italic
+              </span>
+            </button>
+          </li>
+          <li>
+            <button
+              aria-haspopup={undefined}
+              className="slds-button slds-button_icon slds-button_icon-border-filled"
+              disabled={undefined}
+              id={undefined}
+              tabIndex="-1"
+            >
+              <svg
+                aria-hidden={true}
+                className="slds-button__icon"
+              >
+                <use
+                  xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#underline"
+                />
+              </svg>
+              <span
+                className="slds-assistive-text"
+              >
+                Underline
+              </span>
+            </button>
+          </li>
+          <li>
+            <button
+              aria-haspopup={undefined}
+              className="slds-button slds-button_icon slds-button_icon-border-filled"
+              disabled={undefined}
+              id={undefined}
+              tabIndex="-1"
+            >
+              <svg
+                aria-hidden={true}
+                className="slds-button__icon"
+              >
+                <use
+                  xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#strikethrough"
+                />
+              </svg>
+              <span
+                className="slds-assistive-text"
+              >
+                Strike Through
+              </span>
+            </button>
+          </li>
+        </ul>
+        <ul
+          aria-label="Format body"
+          className="slds-button-group-list"
+        >
+          <li>
+            <button
+              aria-haspopup={undefined}
+              className="slds-button slds-button_icon slds-button_icon-border-filled"
+              disabled={undefined}
+              id={undefined}
+              tabIndex="-1"
+            >
+              <svg
+                aria-hidden={true}
+                className="slds-button__icon"
+              >
+                <use
+                  xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#richtextbulletedlist"
+                />
+              </svg>
+              <span
+                className="slds-assistive-text"
+              >
+                Bulleted List
+              </span>
+            </button>
+          </li>
+          <li>
+            <button
+              aria-haspopup={undefined}
+              className="slds-button slds-button_icon slds-button_icon-border-filled"
+              disabled={undefined}
+              id={undefined}
+              tabIndex="-1"
+            >
+              <svg
+                aria-hidden={true}
+                className="slds-button__icon"
+              >
+                <use
+                  xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#richtextnumberedlist"
+                />
+              </svg>
+              <span
+                className="slds-assistive-text"
+              >
+                Numbered List
+              </span>
+            </button>
+          </li>
+          <li>
+            <button
+              aria-haspopup={undefined}
+              className="slds-button slds-button_icon slds-button_icon-border-filled"
+              disabled={undefined}
+              id={undefined}
+              tabIndex="-1"
+            >
+              <svg
+                aria-hidden={true}
+                className="slds-button__icon"
+              >
+                <use
+                  xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#richtextindent"
+                />
+              </svg>
+              <span
+                className="slds-assistive-text"
+              >
+                Indent
+              </span>
+            </button>
+          </li>
+          <li>
+            <button
+              aria-haspopup={undefined}
+              className="slds-button slds-button_icon slds-button_icon-border-filled"
+              disabled={undefined}
+              id={undefined}
+              tabIndex="-1"
+            >
+              <svg
+                aria-hidden={true}
+                className="slds-button__icon"
+              >
+                <use
+                  xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#richtextoutdent"
+                />
+              </svg>
+              <span
+                className="slds-assistive-text"
+              >
+                Outdent
+              </span>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
   </div>
 </div>
 `;

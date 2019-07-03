@@ -16,6 +16,17 @@
 }
 
 /**
+ * Rich text editor container for when toolbar is detached from Textarea.
+ *
+ * @selector .slds-rich-text-editor_toolbar-only
+ * @restrict .slds-rich-text-editor
+ */
+.slds-rich-text-editor_toolbar-only {
+  border: 0;
+  border-radius: 0;
+}
+
+/**
  * Container for Rich Text Editor Toolbar
  *
  * @selector .slds-rich-text-editor__toolbar
@@ -65,6 +76,19 @@
 .slds-rich-text-editor__toolbar_bottom {
   border-radius: 0 0 $border-radius-medium $border-radius-medium;
   border-top: $border-width-thin solid $color-border;
+  border-bottom: 0;
+}
+
+
+/**
+ * Container for Rich Text Editor Toolbar when detached from Textarea
+ *
+ * @selector .slds-rich-text-editor__toolbar_detached
+ * @restrict .slds-rich-text-editor_toolbar-only .slds-rich-text-editor__toolbar
+ */
+.slds-rich-text-editor__toolbar_detached {
+  border-radius: 0;
+  border-top: 0;
   border-bottom: 0;
 }
 

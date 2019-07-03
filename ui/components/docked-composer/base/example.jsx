@@ -17,7 +17,7 @@ import {
   RteInsertContent,
   RteTextarea,
   RteClearFormatting
-} from '../../rich-text-editor/base/example';
+} from '../../rich-text-editor';
 import { FormElement } from '../../form-element';
 import Input from '../../input/';
 import {

@@ -1,10 +1,10 @@
 import React from 'react';
 import {
-  ComboboxContainer,
-  EntityOption,
-  Listbox,
-  ListboxItem
-} from '../../combobox/base/example';
+  DeprecatedCombobox,
+  DeprecatedListbox,
+  DeprecatedListboxItem,
+  DeprecatedEntityOption
+} from '../../combobox/deprecated/';
 import ButtonIcon from '../../button-icons/';
 import { Popover } from '../../popovers/base/example';
 import SvgIcon from '../../../shared/svg-icon';
@@ -27,12 +27,12 @@ const accounts = [
 ];
 
 export const ListboxList = props => (
-  <Listbox
+  <DeprecatedListbox
     className="slds-dropdown_length-10"
     vertical
     aria-label="My Favorites"
   >
-    <ListboxItem>
+    <DeprecatedListboxItem>
       <div
         className="slds-media slds-listbox__option slds-listbox__option_plain"
         role="presentation"
@@ -41,18 +41,18 @@ export const ListboxList = props => (
           My Favorites
         </h3>
       </div>
-    </ListboxItem>
+    </DeprecatedListboxItem>
     {accounts.slice(0, props.length).map((value, i) => (
-      <ListboxItem key={value}>
-        <EntityOption
+      <DeprecatedListboxItem key={value}>
+        <DeprecatedEntityOption
           id={_.uniqueId('listbox-option-id-')}
           entityTitle={value}
           entityMeta
           tabIndex={i === 0 && !props.isCombobox ? '0' : null}
         />
-      </ListboxItem>
+      </DeprecatedListboxItem>
     ))}
-  </Listbox>
+  </DeprecatedListbox>
 );
 
 export const Footer = props => (
@@ -203,7 +203,7 @@ export let states = [
           title="Show Favorites"
         />
         <DynamicMenu>
-          <ComboboxContainer
+          <DeprecatedCombobox
             autocomplete
             isOpen
             placeholder="Search Favorites"

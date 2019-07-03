@@ -18,7 +18,7 @@ const popoverId05 = 'popover-unique-id-05';
 const popoverId06 = 'popover-unique-id-06';
 const popoverId07 = 'popover-unique-id-07';
 
-export let ComboboxWithDialog = props => {
+export const ComboboxWithDialog = () => {
   const popoverId = _.uniqueId('popover-id-');
   return (
     <Combobox

@@ -1,24 +1,12 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import * as BaseExamples from './base/example';
-import * as DialogExamples from './dialog/example';
-import * as GroupedExamples from './grouped/example';
-import * as InlineListboxExamples from './deprecated-inline-listbox/example';
-import * as MultiEntityExamples from './deprecated-multi-entity/example';
-import * as ReadonlyExamples from './deprecated-readonly/example';
 import { getAllDisplayCollectionsByType } from '../../shared/helpers';
 import StoryFrame from '../../../shared/components/StoryFrame';
 
 import '../../index.scss';
 
-const examples = [
-  BaseExamples,
-  DialogExamples,
-  GroupedExamples,
-  InlineListboxExamples,
-  MultiEntityExamples,
-  ReadonlyExamples
-];
+const examples = [BaseExamples];
 
 const kitchenSink = getAllDisplayCollectionsByType(examples, [
   'default',
@@ -26,14 +14,15 @@ const kitchenSink = getAllDisplayCollectionsByType(examples, [
   'states'
 ]);
 
-storiesOf('Components/Combobox', module).add('Kitchen Sink', () =>
+storiesOf('Components/Map', module).add('Kitchen Sink', () =>
   kitchenSink.map((element, idx) =>
     element.map(({ label, component }) => (
       <StoryFrame
         component={component}
         label={label}
-        styles={`height: 17rem;`}
         key={`kitchen-sink-${label}-${idx}`}
+        styles={{ transform: 'translate3d(0,0,0)', minHeight: '500px' }}
+        fullBleed
       />
     ))
   )

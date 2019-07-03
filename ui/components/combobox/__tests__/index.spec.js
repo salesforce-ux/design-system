@@ -1,6 +1,7 @@
 /* eslint-env jest */
 import React from 'react';
-import { ComboboxContainer, ListboxDropdown } from '../base/example';
+import { DeprecatedCombobox } from '../deprecated/';
+import { ListboxDropdown } from '../base/example';
 import { ListboxPills, ListboxPillsItem, ListboxPill } from '../../pills';
 import Combobox, { ComboboxGroup } from '../';
 import ObjectSwitcher from '../object-switcher/';
@@ -30,7 +31,7 @@ describe('render deprecated combobox', () => {
   it('renders a base combobox', () =>
     matchesMarkup(
       <div className="demo-only" style={{ height: '10rem' }}>
-        <ComboboxContainer
+        <DeprecatedCombobox
           autocomplete
           inputIcon="right"
           inputIconRightSymbol="search"
@@ -42,7 +43,7 @@ describe('render deprecated combobox', () => {
   it('renders a base combobox with focus', () =>
     matchesMarkup(
       <div className="demo-only" style={{ height: '10rem' }}>
-        <ComboboxContainer
+        <DeprecatedCombobox
           isOpen
           autocomplete
           inputIcon="right"
@@ -55,7 +56,7 @@ describe('render deprecated combobox', () => {
   it('renders a base combobox with open item focused', () =>
     matchesMarkup(
       <div className="demo-only" style={{ height: '10rem' }}>
-        <ComboboxContainer
+        <DeprecatedCombobox
           isOpen
           autocomplete
           inputIcon="right"
@@ -69,7 +70,7 @@ describe('render deprecated combobox', () => {
   it('renders a base combobox with closed options selected', () =>
     matchesMarkup(
       <div className="demo-only" style={{ height: '10rem' }}>
-        <ComboboxContainer
+        <DeprecatedCombobox
           inputIcon="right"
           inputIconRightSymbol="search"
           autocomplete
@@ -95,14 +96,14 @@ describe('render deprecated combobox', () => {
               </ListboxPill>
             </ListboxPillsItem>
           </ListboxPills>
-        </ComboboxContainer>
+        </DeprecatedCombobox>
       </div>
     ));
 
   it('renders an inline listbox combobox', () =>
     matchesMarkup(
       <div className="demo-only" style={{ height: '10rem' }}>
-        <ComboboxContainer
+        <DeprecatedCombobox
           inputIcon="right"
           inputIconRightSymbol="search"
           selectedOptionsInline
@@ -115,7 +116,7 @@ describe('render deprecated combobox', () => {
   it('renders an inline combobox with focus', () =>
     matchesMarkup(
       <div className="demo-only" style={{ height: '10rem' }}>
-        <ComboboxContainer
+        <DeprecatedCombobox
           containerClassName="slds-has-input-focus"
           inputIcon="right"
           inputIconRightSymbol="search"
@@ -130,7 +131,7 @@ describe('render deprecated combobox', () => {
   it('renders an inline combobox open item focused', () =>
     matchesMarkup(
       <div className="demo-only" style={{ height: '10rem' }}>
-        <ComboboxContainer
+        <DeprecatedCombobox
           inputIcon="right"
           inputIconRightSymbol="search"
           selectedOptionsInline
@@ -145,7 +146,7 @@ describe('render deprecated combobox', () => {
   it('renders an inline listbox combobox with closed option selected', () =>
     matchesMarkup(
       <div className="demo-only" style={{ height: '10rem' }}>
-        <ComboboxContainer
+        <DeprecatedCombobox
           selectedOptionsInline
           autocomplete
           readonly
@@ -163,7 +164,7 @@ describe('render deprecated combobox', () => {
   it('renders an inline listbox combobox with options selected', () =>
     matchesMarkup(
       <div className="demo-only" style={{ height: '10rem' }}>
-        <ComboboxContainer
+        <DeprecatedCombobox
           inputIcon="right"
           inputIconRightSymbol="search"
           selectedOptionsInline
@@ -190,14 +191,14 @@ describe('render deprecated combobox', () => {
               </ListboxPill>
             </ListboxPillsItem>
           </ListboxPills>
-        </ComboboxContainer>
+        </DeprecatedCombobox>
       </div>
     ));
 
   it('renders an inline listbox combobox with focused options selected', () =>
     matchesMarkup(
       <div className="demo-only" style={{ height: '10rem' }}>
-        <ComboboxContainer
+        <DeprecatedCombobox
           inputIcon="right"
           inputIconRightSymbol="search"
           selectedOptionsInline
@@ -224,14 +225,14 @@ describe('render deprecated combobox', () => {
               </ListboxPill>
             </ListboxPillsItem>
           </ListboxPills>
-        </ComboboxContainer>
+        </DeprecatedCombobox>
       </div>
     ));
 
   it('renders a multi-entity combobox', () =>
     matchesMarkup(
       <div className="demo-only" style={{ height: '10rem' }}>
-        <ComboboxContainer
+        <DeprecatedCombobox
           inputIcon="right"
           inputIconRightSymbol="search"
           objectSwitcherInline
@@ -245,7 +246,7 @@ describe('render deprecated combobox', () => {
   it('renders a multi-entity combobox with focus', () =>
     matchesMarkup(
       <div className="demo-only" style={{ height: '10rem' }}>
-        <ComboboxContainer
+        <DeprecatedCombobox
           containerClassName="slds-has-input-focus"
           inputIcon="right"
           inputIconRightSymbol="search"
@@ -261,7 +262,7 @@ describe('render deprecated combobox', () => {
   it('renders a multi-entity combobox with open item focused', () =>
     matchesMarkup(
       <div className="demo-only" style={{ height: '10rem' }}>
-        <ComboboxContainer
+        <DeprecatedCombobox
           inputIcon="right"
           inputIconRightSymbol="search"
           objectSwitcherInline
@@ -276,7 +277,7 @@ describe('render deprecated combobox', () => {
 
   it('renders a multi-entity combobox with options selected', () =>
     matchesMarkup(
-      <ComboboxContainer
+      <DeprecatedCombobox
         inputIcon="right"
         inputIconRightSymbol="search"
         objectSwitcherInline
@@ -304,13 +305,13 @@ describe('render deprecated combobox', () => {
             </ListboxPill>
           </ListboxPillsItem>
         </ListboxPills>
-      </ComboboxContainer>
+      </DeprecatedCombobox>
     ));
 
   it('renders a multi-entity combobox with focused options selected', () =>
     matchesMarkup(
       <div className="demo-only" style={{ height: '10rem' }}>
-        <ComboboxContainer
+        <DeprecatedCombobox
           isOpen
           containerClassName="slds-has-input-focus"
           inputIcon="right"
@@ -341,14 +342,14 @@ describe('render deprecated combobox', () => {
               </ListboxPill>
             </ListboxPillsItem>
           </ListboxPills>
-        </ComboboxContainer>
+        </DeprecatedCombobox>
       </div>
     ));
 
   it('renders a readonly combobox', () =>
     matchesMarkup(
       <div className="demo-only" style={{ height: '10rem' }}>
-        <ComboboxContainer
+        <DeprecatedCombobox
           inputIcon="right"
           inputIconRightSymbol="down"
           listbox={<ListboxDropdown />}
@@ -360,7 +361,7 @@ describe('render deprecated combobox', () => {
   it('renders a readonly combobox with focus', () =>
     matchesMarkup(
       <div className="demo-only" style={{ height: '10rem' }}>
-        <ComboboxContainer
+        <DeprecatedCombobox
           isOpen
           inputIcon="right"
           inputIconRightSymbol="down"
@@ -373,7 +374,7 @@ describe('render deprecated combobox', () => {
   it('renders a readonly combobox with open item focused', () =>
     matchesMarkup(
       <div className="demo-only" style={{ height: '10rem' }}>
-        <ComboboxContainer
+        <DeprecatedCombobox
           isOpen
           inputIcon="right"
           inputIconRightSymbol="down"
@@ -387,7 +388,7 @@ describe('render deprecated combobox', () => {
   it('renders a readonly combobox with open option selected', () =>
     matchesMarkup(
       <div className="demo-only" style={{ height: '10rem' }}>
-        <ComboboxContainer
+        <DeprecatedCombobox
           isOpen
           inputIcon="right"
           inputIconRightSymbol="down"
@@ -401,7 +402,7 @@ describe('render deprecated combobox', () => {
   it('renders a readonly combobox with open option(s) selected', () =>
     matchesMarkup(
       <div className="demo-only" style={{ height: '10rem' }}>
-        <ComboboxContainer
+        <DeprecatedCombobox
           isOpen
           inputIcon="right"
           inputIconRightSymbol="down"
@@ -415,7 +416,7 @@ describe('render deprecated combobox', () => {
   it('renders a readonly combobox with closed option selected', () =>
     matchesMarkup(
       <div className="demo-only" style={{ height: '10rem' }}>
-        <ComboboxContainer
+        <DeprecatedCombobox
           inputIcon="right"
           inputIconRightSymbol="down"
           value="Option A"
@@ -428,7 +429,7 @@ describe('render deprecated combobox', () => {
   it('renders a readonly combobox with closed option(s) selected', () =>
     matchesMarkup(
       <div className="demo-only" style={{ height: '10rem' }}>
-        <ComboboxContainer
+        <DeprecatedCombobox
           inputIcon="right"
           inputIconRightSymbol="down"
           value="2 Options Selected"
@@ -443,7 +444,7 @@ describe('render deprecated combobox', () => {
               <ListboxPill label="Option B" />
             </ListboxPillsItem>
           </ListboxPills>
-        </ComboboxContainer>
+        </DeprecatedCombobox>
       </div>
     ));
 });

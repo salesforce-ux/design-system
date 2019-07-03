@@ -2,8 +2,6 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 /**
- * @summary Container that manages layout when a listbox of pill options sit next to a combobox search input
- *
  * @name base
  * @selector .slds-combobox_container
  * @restrict div
@@ -195,6 +193,10 @@
  */
 .slds-listbox__option-header {
   @include text-title;
+
+  @include touch-device {
+    font-size: $font-size-5;
+  }
 }
 
 /**

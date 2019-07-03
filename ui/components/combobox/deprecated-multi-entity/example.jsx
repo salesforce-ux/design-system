@@ -4,39 +4,42 @@
 import React from 'react';
 import { StandardIcon } from '../../icons/standard/example';
 import {
-  ComboboxContainer,
-  Listbox,
-  ListboxItem,
-  EntityOption
-} from '../base/example';
+  DeprecatedCombobox,
+  DeprecatedListbox,
+  DeprecatedListboxItem,
+  DeprecatedEntityOption
+} from '../deprecated';
 import { ListboxPills, ListboxPillsItem, ListboxPill } from '../../pills';
 
 const listboxOptionId01 = 'listbox-option-unique-id-01';
 const listboxOptionId02 = 'listbox-option-unique-id-02';
 
 const ListboxDropdown = props => (
-  <Listbox listboxClassName="slds-dropdown slds-dropdown_fluid" vertical>
-    <ListboxItem>
-      <EntityOption
+  <DeprecatedListbox
+    listboxClassName="slds-dropdown slds-dropdown_fluid"
+    vertical
+  >
+    <DeprecatedListboxItem>
+      <DeprecatedEntityOption
         id={listboxOptionId01}
         entityTitle="Acme"
         entityMeta
         focused={props.focused}
       />
-    </ListboxItem>
-    <ListboxItem>
-      <EntityOption
+    </DeprecatedListboxItem>
+    <DeprecatedListboxItem>
+      <DeprecatedEntityOption
         id={listboxOptionId02}
         entityTitle="Salesforce.com, Inc."
         entityMeta
       />
-    </ListboxItem>
-  </Listbox>
+    </DeprecatedListboxItem>
+  </DeprecatedListbox>
 );
 
 export default (
   <div className="demo-only" style={{ height: '10rem' }}>
-    <ComboboxContainer
+    <DeprecatedCombobox
       inputIcon="right"
       inputIconRightSymbol="search"
       objectSwitcherInline
@@ -49,11 +52,11 @@ export default (
 
 export let states = [
   {
-    id: 'focused',
-    label: 'Focused',
+    id: 'deprecated-focused',
+    label: 'Deprecated - Focused',
     element: (
       <div className="demo-only" style={{ height: '10rem' }}>
-        <ComboboxContainer
+        <DeprecatedCombobox
           containerClassName="slds-has-input-focus"
           inputIcon="right"
           inputIconRightSymbol="search"
@@ -70,11 +73,11 @@ export let states = [
     `
   },
   {
-    id: 'open-item-focused',
-    label: 'Open - Item Focused',
+    id: 'deprecated-open-item-focused',
+    label: 'Deprecated - Open - Item Focused',
     element: (
       <div className="demo-only" style={{ height: '10rem' }}>
-        <ComboboxContainer
+        <DeprecatedCombobox
           inputIcon="right"
           inputIconRightSymbol="search"
           objectSwitcherInline
@@ -88,10 +91,10 @@ export let states = [
     )
   },
   {
-    id: 'options-selected',
-    label: 'Option(s) Selected',
+    id: 'deprecated-options-selected',
+    label: 'Deprecated - Option(s) Selected',
     element: (
-      <ComboboxContainer
+      <DeprecatedCombobox
         inputIcon="right"
         inputIconRightSymbol="search"
         objectSwitcherInline
@@ -120,15 +123,15 @@ export let states = [
             </ListboxPill>
           </ListboxPillsItem>
         </ListboxPills>
-      </ComboboxContainer>
+      </DeprecatedCombobox>
     )
   },
   {
-    id: 'focused-options-selected',
-    label: 'Focused - Option(s) Selected',
+    id: 'deprecated-focused-options-selected',
+    label: 'Deprecated - Focused - Option(s) Selected',
     element: (
       <div className="demo-only" style={{ height: '10rem' }}>
-        <ComboboxContainer
+        <DeprecatedCombobox
           isOpen
           containerClassName="slds-has-input-focus"
           inputIcon="right"
@@ -159,7 +162,7 @@ export let states = [
               </ListboxPill>
             </ListboxPillsItem>
           </ListboxPills>
-        </ComboboxContainer>
+        </DeprecatedCombobox>
       </div>
     ),
     script: `

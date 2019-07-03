@@ -2,9 +2,9 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 /**
- * @name dialog
- * @selector  .slds-combobox[aria-haspopup=“dialog”]
- * @restrict .slds-combobox_container .slds-combobox
+ * @name autocomplete
+ * @selector [aria-autocomplete="list"]
+ * @restrict .slds-combobox__input
  * @support dev-ready
  * @variant
  */

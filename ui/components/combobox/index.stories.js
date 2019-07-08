@@ -3,9 +3,9 @@ import { storiesOf } from '@storybook/react';
 import * as BaseExamples from './base/example';
 import * as DialogExamples from './dialog/example';
 import * as GroupedExamples from './grouped/example';
-import * as InlineListboxExamples from './inline-listbox/example';
-import * as MultiEntityExamples from './multi-entity/example';
-import * as ReadonlyExamples from './readonly/example';
+import * as InlineListboxExamples from './deprecated-inline-listbox/example';
+import * as MultiEntityExamples from './deprecated-multi-entity/example';
+import * as ReadonlyExamples from './deprecated-readonly/example';
 import { getAllDisplayCollectionsByType } from '../../shared/helpers';
 import StoryFrame from '../../../shared/components/StoryFrame';
 
@@ -32,6 +32,7 @@ storiesOf('Components/Combobox', module).add('Kitchen Sink', () =>
       <StoryFrame
         component={component}
         label={label}
+        styles={`height: 17rem;`}
         key={`kitchen-sink-${label}-${idx}`}
       />
     ))

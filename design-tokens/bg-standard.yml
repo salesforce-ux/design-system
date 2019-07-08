@@ -581,3 +581,35 @@ props:
     value: '#fcb95b'
   SALES_CADENCE_TARGET:
     value: '#54698d'
+  EVENTS:
+    value: '#3C97DB'
+  HIGH_VELOCITY_SALES:
+    value: '#47CFC9'
+  RECYCLE_BIN:
+    value: '#1589E4'
+  SNIPPETS:
+    value: '#0EB58A'
+  ORDER_ITEM:
+    value: '#769ED3'
+  SALES_CHANNEL:
+    value: '#2a739e'
+  FULFILLMENT_ORDER:
+    value: '#b9ac91'
+  OPPORTUNITY_CONTACT ROLE:
+    value: '#7e8be4'
+  JOB_PROFILE:
+    value: '#eb7092'
+  EDUCATION:
+    value: '#3c97dd'
+  CUSTOMER_360:
+    value: '#032e61'
+  STORE:
+    value: '#04844b'
+  BUYER_ACCOUNT:
+    value: '#04844b'
+  BUYER_GROUP:
+    value: '#04844b'
+  DELEGATED_ACCOUNT:
+    value: '#04844b'
+  ENTITLEMENT_POLICY:
+    value: '#04844b'

@@ -56,7 +56,7 @@ export let Step = props => {
     >
       {done || error ? (
         <UtilityIcon
-          className="slds-icon slds-icon_xx-small"
+          className="slds-icon_xx-small"
           containerClassName={classNames(
             'slds-progress__marker',
             'slds-progress__marker_icon',

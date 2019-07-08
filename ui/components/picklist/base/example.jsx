@@ -2,71 +2,12 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 import React from 'react';
-import {
-  ComboboxContainer,
-  Listbox,
-  ListboxItem,
-  Option
-} from '../../combobox/base/example';
-import { ListboxPill } from '../../pills';
-
-/* -----------------------------------------------------------------------------
-    Variables
------------------------------------------------------------------------------ */
-
-const listboxSelectionsId = 'listbox-selections-unique-id';
-const listboxOptionId00 = 'listbox-option-unique-id-00';
-const listboxOptionId01 = 'listbox-option-unique-id-01';
-const listboxOptionId02 = 'listbox-option-unique-id-02';
-const listboxOptionId03 = 'listbox-option-unique-id-03';
-
-/* -----------------------------------------------------------------------------
-    Private
------------------------------------------------------------------------------ */
-
-const ListboxDropdown = props => (
-  <Listbox
-    aria-label={props.heading ? props.heading : null}
-    listboxClassName="slds-dropdown slds-dropdown_fluid"
-    vertical
-  >
-    {props.heading ? (
-      <li role="presentation" className="slds-listbox__item">
-        <div
-          className="slds-media slds-listbox__option slds-listbox__option_plain"
-          role="presentation"
-          id={listboxOptionId00}
-        >
-          <h3 className="slds-listbox__option-header" role="presentation">
-            {props.heading}
-          </h3>
-        </div>
-      </li>
-    ) : null}
-    <ListboxItem>
-      <Option
-        id={listboxOptionId01}
-        title="Option A"
-        focused={props.focused}
-        selected={props.optionOneSelected}
-      />
-    </ListboxItem>
-    <ListboxItem>
-      <Option
-        id={listboxOptionId02}
-        title="Option B"
-        selected={props.optionTwoSelected}
-      />
-    </ListboxItem>
-    <ListboxItem>
-      <Option
-        id={listboxOptionId03}
-        title="Option ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-        selected={props.optionThreeSelected}
-      />
-    </ListboxItem>
-  </Listbox>
-);
+import Combobox from '../../combobox';
+import Listbox, { ListboxWrapper, ListboxGroup } from '../../combobox/listbox/';
+import ListboxOfSelections from '../../combobox/listbox-of-pills/';
+import { UtilityIcon } from '../../icons/base/example';
+import _ from '../../../shared/helpers';
+import * as snapshot from '../snapshots.data';
 
 /* -----------------------------------------------------------------------------
     Exports
@@ -74,18 +15,37 @@ const ListboxDropdown = props => (
 
 // Demo wrapper
 export const Context = props => (
-  <div style={{ height: '14rem' }}>{props.children}</div>
+  <div style={{ height: '11rem' }}>{props.children}</div>
 );
 
 // Default
 export default (
-  <ComboboxContainer
-    className="slds-combobox-picklist"
-    containerClassName="slds-size_small"
-    inputIcon="right"
-    inputIconRightSymbol="down"
-    listbox={<ListboxDropdown />}
+  <Combobox
+    id={_.uniqueId('combobox-id-')}
+    className="slds-size_small"
+    aria-controls="listbox-id-1"
+    inputIconPosition="right"
+    rightInputIcon={
+      <UtilityIcon
+        symbol="down"
+        className="slds-icon slds-icon_x-small slds-icon-text-default"
+        containerClassName="slds-input__icon slds-input__icon_right"
+        assistiveText={false}
+        title={false}
+      />
+    }
+    results={
+      <Listbox
+        id="listbox-id-1"
+        snapshot={snapshot.options}
+        type="plain"
+        count={8}
+        visualSelection
+      />
+    }
+    resultsType="listbox"
     readonly
+    hasInteractions
   />
 );
 
@@ -95,31 +55,68 @@ export let states = [
     id: 'focused',
     label: 'Focused',
     element: (
-      <ComboboxContainer
-        containerClassName="slds-size_small"
-        isOpen
-        inputIcon="right"
-        inputIconRightSymbol="down"
-        listbox={<ListboxDropdown />}
+      <Combobox
+        id={_.uniqueId('combobox-id-')}
+        className="slds-size_small"
+        aria-controls="listbox-id-2"
+        inputIconPosition="right"
+        rightInputIcon={
+          <UtilityIcon
+            symbol="down"
+            className="slds-icon slds-icon_x-small slds-icon-text-default"
+            containerClassName="slds-input__icon slds-input__icon_right"
+            assistiveText={false}
+            title={false}
+          />
+        }
+        results={
+          <Listbox
+            id="listbox-id-2"
+            snapshot={snapshot.options}
+            type="plain"
+            count={8}
+            visualSelection
+          />
+        }
+        resultsType="listbox"
         readonly
+        hasFocus
+        isOpen
       />
-    ),
-    script: `
-      document.getElementById('combobox-unique-id').focus()
-    `
+    )
   },
   {
     id: 'open-item-focused',
     label: 'Open - Item Focused',
     element: (
-      <ComboboxContainer
-        containerClassName="slds-size_small"
-        isOpen
-        inputIcon="right"
-        inputIconRightSymbol="down"
-        listbox={<ListboxDropdown focused />}
-        aria-activedescendant={listboxOptionId01}
+      <Combobox
+        id={_.uniqueId('combobox-id-')}
+        className="slds-size_small"
+        aria-controls="listbox-id-3"
+        inputIconPosition="right"
+        rightInputIcon={
+          <UtilityIcon
+            symbol="down"
+            className="slds-icon slds-icon_x-small slds-icon-text-default"
+            containerClassName="slds-input__icon slds-input__icon_right"
+            assistiveText={false}
+            title={false}
+          />
+        }
+        results={
+          <Listbox
+            id="listbox-id-3"
+            snapshot={snapshot.optionsFocused}
+            type="plain"
+            count={8}
+            visualSelection
+          />
+        }
+        resultsType="listbox"
+        aria-activedescendant="option1"
         readonly
+        hasFocus
+        isOpen
       />
     )
   },
@@ -127,14 +124,35 @@ export let states = [
     id: 'open-option-selected',
     label: 'Open - Option Selected',
     element: (
-      <ComboboxContainer
-        containerClassName="slds-size_small"
-        isOpen
-        inputIcon="right"
-        inputIconRightSymbol="down"
+      <Combobox
+        id={_.uniqueId('combobox-id-')}
+        className="slds-size_small"
+        aria-controls="listbox-id-4"
+        inputIconPosition="right"
         value="Option A"
-        listbox={<ListboxDropdown optionOneSelected />}
+        rightInputIcon={
+          <UtilityIcon
+            symbol="down"
+            className="slds-icon slds-icon_x-small slds-icon-text-default"
+            containerClassName="slds-input__icon slds-input__icon_right"
+            assistiveText={false}
+            title={false}
+          />
+        }
+        results={
+          <Listbox
+            id="listbox-id-4"
+            snapshot={snapshot.optionSelected}
+            type="plain"
+            count={8}
+            visualSelection
+          />
+        }
+        resultsType="listbox"
+        aria-activedescendant="option1"
         readonly
+        hasFocus
+        isOpen
       />
     )
   },
@@ -142,14 +160,34 @@ export let states = [
     id: 'open-options-selected',
     label: 'Open - Options Selected',
     element: (
-      <ComboboxContainer
-        containerClassName="slds-size_small"
-        isOpen
-        inputIcon="right"
-        inputIconRightSymbol="down"
-        value="2 Options Selected"
-        listbox={<ListboxDropdown optionOneSelected optionTwoSelected />}
+      <Combobox
+        id={_.uniqueId('combobox-id-')}
+        className="slds-size_small"
+        aria-controls="listbox-id-5"
         readonly
+        value="2 Options Selected"
+        inputIconPosition="right"
+        rightInputIcon={
+          <UtilityIcon
+            symbol="down"
+            className="slds-icon slds-icon_x-small slds-icon-text-default"
+            containerClassName="slds-input__icon slds-input__icon_right"
+            assistiveText={false}
+            title={false}
+          />
+        }
+        results={
+          <Listbox
+            id="listbox-id-5"
+            snapshot={snapshot.optionsSelected}
+            type="plain"
+            count={8}
+            visualSelection
+          />
+        }
+        resultsType="listbox"
+        isOpen
+        hasFocus
       />
     )
   },
@@ -157,12 +195,32 @@ export let states = [
     id: 'closed-option-selected',
     label: 'Closed - Option Selected',
     element: (
-      <ComboboxContainer
-        containerClassName="slds-size_small"
-        inputIcon="right"
-        inputIconRightSymbol="down"
+      <Combobox
+        id={_.uniqueId('combobox-id-')}
+        className="slds-size_small"
+        aria-controls="listbox-id-6"
+        inputIconPosition="right"
         value="Option A"
-        listbox={<ListboxDropdown focused optionOneSelected />}
+        rightInputIcon={
+          <UtilityIcon
+            symbol="down"
+            className="slds-icon slds-icon_x-small slds-icon-text-default"
+            containerClassName="slds-input__icon slds-input__icon_right"
+            assistiveText={false}
+            title={false}
+          />
+        }
+        results={
+          <Listbox
+            id="listbox-id-6"
+            snapshot={snapshot.optionSelected}
+            type="plain"
+            count={8}
+            visualSelection
+          />
+        }
+        resultsType="listbox"
+        aria-activedescendant="option1"
         readonly
       />
     )
@@ -171,44 +229,75 @@ export let states = [
     id: 'closed-options-selected',
     label: 'Closed - Options Selected',
     element: (
-      <ComboboxContainer
-        containerClassName="slds-size_small"
-        inputIcon="right"
-        inputIconRightSymbol="down"
-        value="2 Options Selected"
-        listbox={<ListboxDropdown optionOneSelected optionTwoSelected />}
+      <Combobox
+        id={_.uniqueId('combobox-id-')}
+        className="slds-size_small"
+        aria-controls="listbox-id-7"
         readonly
-      >
-        <Listbox
-          id={listboxSelectionsId}
-          aria-label="Selected Options:"
-          className="slds-p-top_xxx-small"
-          horizontal
-        >
-          <ListboxItem>
-            <ListboxPill label="Option A" tabIndex="0" />
-          </ListboxItem>
-          <ListboxItem>
-            <ListboxPill label="Option B" />
-          </ListboxItem>
-        </Listbox>
-      </ComboboxContainer>
+        value="2 Options Selected"
+        inputIconPosition="right"
+        rightInputIcon={
+          <UtilityIcon
+            symbol="down"
+            className="slds-icon slds-icon_x-small slds-icon-text-default"
+            containerClassName="slds-input__icon slds-input__icon_right"
+            assistiveText={false}
+            title={false}
+          />
+        }
+        results={
+          <Listbox
+            id="listbox-id-7"
+            snapshot={snapshot.optionsSelected}
+            type="plain"
+            count={8}
+            visualSelection
+          />
+        }
+        resultsType="listbox"
+        listboxOfSelections={
+          <ListboxOfSelections
+            snapshot={snapshot.selectionOfOptions}
+            count={2}
+          />
+        }
+      />
     )
   },
   {
     id: 'group-heading',
     label: 'Group heading label',
     element: (
-      <ComboboxContainer
-        containerClassName="slds-size_small"
-        isOpen
-        inputIcon="right"
-        inputIconRightSymbol="down"
-        value="Option A"
-        listbox={
-          <ListboxDropdown optionOneSelected heading="Recently Viewed" />
-        }
+      <Combobox
+        id={_.uniqueId('combobox-id-')}
+        className="slds-size_small"
+        aria-controls="listbox-id-8"
         readonly
+        inputIconPosition="right"
+        rightInputIcon={
+          <UtilityIcon
+            symbol="down"
+            className="slds-icon slds-icon_x-small slds-icon-text-default"
+            containerClassName="slds-input__icon slds-input__icon_right"
+            assistiveText={false}
+            title={false}
+          />
+        }
+        results={
+          <ListboxWrapper
+            id="listbox-id-8"
+            className="slds-dropdown slds-dropdown_fluid"
+          >
+            <ListboxGroup
+              aria-label="Group One"
+              snapshot={snapshot.optionGroup}
+              count={3}
+            />
+          </ListboxWrapper>
+        }
+        resultsType="listbox"
+        isOpen
+        hasFocus
       />
     )
   }

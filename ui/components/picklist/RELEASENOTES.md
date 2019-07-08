@@ -3,6 +3,11 @@
 # Picklist Release Notes
 
 <!-- ## [Unreleased] -->
+## 2.10.0
+
+### Changed
+
+- Migrated picklist HTML to use non-deprecated combobox
 
 ## 2.8.0
 

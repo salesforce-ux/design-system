@@ -2,6 +2,15 @@
 
 # Rich Text Editor Release Notes
 
+## 2.10.0
+
+### Added
+- Created Toolbar Only variant for use without attached textarea on touch devices
+
+### Changed
+
+- Removed size utility classes on combobox/selects in toolbar for component-specific classes (`slds-rich-text-editor__select_x-small` and `slds-rich-text-editor__select_xx-small`)
+
 <!-- ## [Unreleased] -->
 ## 2.7.5
 

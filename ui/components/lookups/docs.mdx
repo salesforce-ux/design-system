@@ -11,10 +11,15 @@ import * as MultiEntity from './multi-entity/example';
   Lookup is an autocomplete combobox that will search against a database object.
 </div>
 
+<<<<<<< HEAD
 <CodeView exampleOnly>
   <Base.Context>
     {Base.default}
   </Base.Context>
+=======
+<CodeView style={{height: '15rem'}} exampleOnly>
+  {getDisplayElementById(Base.states, 'displaying-options-based-on-input')}
+>>>>>>> winter-20
 </CodeView>
 
 ## About Lookups
@@ -39,41 +44,31 @@ Lookups allow the user to have dual keyboard focus: while focus in the input sea
 
 ## Base
 
-<CodeView>
-  <Base.Context>
-    {Base.default}
-  </Base.Context>
+<CodeView style={{height: '13rem'}}>
+  {Base.default}
 </CodeView>
 
 ## States
 
 ### Focused
 
-<CodeView>
-  <Base.Context>
-    {getDisplayElementById(Base.states, 'focused')}
-  </Base.Context>
+<CodeView style={{height: '13rem'}}>
+  {getDisplayElementById(Base.states, 'focused')}
 </CodeView>
 
 ### Open - Item Focused
-<CodeView>
-  <Base.Context>
-    {getDisplayElementById(Base.states, 'open-item-focused')}
-  </Base.Context>
+<CodeView style={{height: '13rem'}}>
+  {getDisplayElementById(Base.states, 'open-item-focused')}
 </CodeView>
 
 ### Displaying options based on user input
-<CodeView>
-  <Base.Context>
-    {getDisplayElementById(Base.states, 'displaying-options-based-on-input')}
-  </Base.Context>
+<CodeView style={{height: '14rem'}}>
+  {getDisplayElementById(Base.states, 'displaying-options-based-on-input')}
 </CodeView>
 
 ### Option Selected
 <CodeView>
-  <Base.Context>
-    {getDisplayElementById(Base.states, 'closed-option-selected')}
-  </Base.Context>
+  {getDisplayElementById(Base.states, 'closed-option-selected')}
 </CodeView>
 
 ## Grouped
@@ -84,38 +79,28 @@ Lookups allow the user to have dual keyboard focus: while focus in the input sea
 
 ## Multi Entity
 
-<CodeView>
-  <MultiEntity.Context>
-    {MultiEntity.default}
-  </MultiEntity.Context>
+<CodeView style={{height: '17rem'}}>
+  {MultiEntity.default}
 </CodeView>
 
 ## States
 
 ### Focused
-<CodeView>
-  <MultiEntity.Context>
-    {getDisplayElementById(MultiEntity.states, 'focused')}
-  </MultiEntity.Context>
+<CodeView style={{height: '15rem'}}>
+  {getDisplayElementById(MultiEntity.states, 'focused')}
 </CodeView>
 
 ### Open - Item Focused
-<CodeView>
-  <MultiEntity.Context>
-    {getDisplayElementById(MultiEntity.states, 'open-item-focused')}
-  </MultiEntity.Context>
+<CodeView style={{height: '15rem'}}>
+  {getDisplayElementById(MultiEntity.states, 'open-item-focused')}
 </CodeView>
 
 ### Option(s) Selected
 <CodeView>
-  <MultiEntity.Context>
-    {getDisplayElementById(MultiEntity.states, 'options-selected')}
-  </MultiEntity.Context>
+  {getDisplayElementById(MultiEntity.states, 'options-selected')}
 </CodeView>
 
 ### Focused - Option(s) Selected
-<CodeView>
-  <MultiEntity.Context>
-    {getDisplayElementById(MultiEntity.states, 'focused-options-selected')}
-  </MultiEntity.Context>
+<CodeView style={{height: '15rem'}}>
+  {getDisplayElementById(MultiEntity.states, 'focused-options-selected')}
 </CodeView>

@@ -10,7 +10,7 @@ import {
   RteToolbar,
   RteTextarea,
   RteFormula
-} from '../../rich-text-editor/base/example';
+} from '../../rich-text-editor';
 
 export const Formula = props => (
   <div className="slds-expression">

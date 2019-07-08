@@ -12,7 +12,7 @@ import { FormElement } from '../form-element/';
 /**
  * Combobox Container
  */
-const ComboboxContainer = props => (
+const DeprecatedCombobox = props => (
   <div
     className={classNames(
       'slds-combobox_container',
@@ -191,7 +191,7 @@ export default class Combobox extends Component {
         isStacked={isStacked}
         column={column}
       >
-        <ComboboxContainer className={className} hasSelection={hasSelection}>
+        <DeprecatedCombobox className={className} hasSelection={hasSelection}>
           <ComboboxFormElement
             aria-controls={comboboxAriaControls}
             staticListbox={staticListbox}
@@ -220,7 +220,7 @@ export default class Combobox extends Component {
             />
             {results}
           </ComboboxFormElement>
-        </ComboboxContainer>
+        </DeprecatedCombobox>
         {listboxOfSelections}
       </FormElement>
     );
@@ -335,7 +335,7 @@ export class ComboboxGroup extends Component {
       >
         <ComboboxGroupContainer hasSelection={hasSelection}>
           {addonPosition === 'start' && addon}
-          <ComboboxContainer comboboxPosition={comboboxPosition}>
+          <DeprecatedCombobox comboboxPosition={comboboxPosition}>
             <ComboboxFormElement
               isOpen={isOpen || this.state.focused}
               id={comboboxID}
@@ -362,7 +362,7 @@ export class ComboboxGroup extends Component {
               />
               {results}
             </ComboboxFormElement>
-          </ComboboxContainer>
+          </DeprecatedCombobox>
           {addonPosition === 'end' && addon}
         </ComboboxGroupContainer>
         {hasSelection && listboxOfSelections}

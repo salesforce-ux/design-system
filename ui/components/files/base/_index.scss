@@ -18,6 +18,16 @@
   position: relative;
 
   /**
+   * Text title for file name
+   *
+   * @selector .slds-file__text
+   * @restrict .slds-file__title span
+   */
+  .slds-file__text {
+    display: block;
+  }
+
+  /**
    * A decorator class that prevents hover styles from being applied to Files in loading state
    *
    * @selector .slds-file_loading
@@ -204,6 +214,11 @@
     z-index: $files-z-index-hover;
     align-items: center;
     padding: $spacing-x-small;
+    overflow: hidden;
+
+    .slds-media {
+      overflow: hidden;
+    }
 
     /**
      * Adds overlay to file

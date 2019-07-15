@@ -1,21 +1,14 @@
-import React from 'react';
 import { storiesOf } from '@storybook/react';
-import ModalExample, {
-  examples as ModalExamples,
-  states as ModalStates
-} from './example';
+import * as ModalExamples from './example';
 import { getDisplayElementById } from '../../../shared/helpers';
 
-storiesOf('Modules/Modal/Base', module).add('Base', () => <ModalExample />);
+storiesOf('Modules/Modal/Base', module).add(
+  'Default',
+  () => ModalExamples.default
+);
 
-ModalExamples.forEach(example => {
-  storiesOf('Modules/Modal/Examples', module).add(example.label, () =>
-    getDisplayElementById(ModalExamples, example.id)
-  );
-});
-
-ModalStates.forEach(example => {
-  storiesOf('Modules/Modal/States', module).add(example.label, () =>
-    getDisplayElementById(ModalStates, example.id)
+ModalExamples.examples.forEach(examples => {
+  storiesOf('Modules/Modal/Examples', module).add(examples.label, () =>
+    getDisplayElementById(ModalExamples.examples, examples.id)
   );
 });

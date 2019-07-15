@@ -279,40 +279,6 @@ class Modal extends Component {
     );
   }
 
-  handleAnimation() {
-    // const { animation } = this.props;
-    // const modal = this.modalRef;
-    // const animateClass = animation && {
-    //   start: `lwc-modal_${animation}-in`,
-    //   end: `lwc-modal_${animation}-out`
-    // };
-    // console.log(modal);
-    // modal.classList.add(animateClass.start);
-    // if (modal.classList.contains(animateClass.start)) {
-    //   modal.addEventListener('transitionend', function() {
-    //     this.classList.remove(animateClass.start);
-    // });
-    // modal.classList.remove(animateClass.start);
-    // }
-    // modal.addEventListener('transitionstart', function() {
-    //   this.classList.add(animateClass.start);
-    // });
-    // modal.addEventListener('transitionend', function() {
-    //   this.classList.remove(animateClass.start);
-    // });
-    // if (this.state.open) {
-    // }
-    // modal.addEventListener('transitionend', function() {
-    //   this.classList.add('lwc-modal_is-open');
-    // })
-    // } else {
-    //   modal.addEventListener('transitionstart', function() {
-    //     // console.log(this)
-    //     this.classList.remove(animateClass.start);
-    //   });
-    // }
-  }
-
   render() {
     const {
       hasHeader,
@@ -375,7 +341,7 @@ Modal.propTypes = {
   size: PropTypes.string,
   role: PropTypes.oneOf(['dialog', 'alertdialog']),
   tabIndex: PropTypes.string,
-  position: PropTypes.position,
+  position: PropTypes.string,
   shadow: PropTypes.bool
 };
 

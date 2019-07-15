@@ -71,16 +71,19 @@ export const getDisplayCollectionsByType = (object, types) => {
       if (object.hasOwnProperty(type)) {
         if (Array.isArray(object[type])) {
           object[type].map(element => {
+            // console.log(element);
             let newElement = {};
             newElement.component = getDisplayElementById(
               object[type],
               element.id
             );
+            newElement.id = element.id;
             newElement.label = element.label;
             return collection.push(newElement);
           });
         } else {
           let newElement = {};
+          newElement.id = 'default';
           newElement.label = 'Default';
           newElement.component = object[type];
           collection.push(newElement);

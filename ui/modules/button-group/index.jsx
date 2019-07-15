@@ -4,13 +4,31 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Shadow from '../../shared/shadow';
-
 import common from '../common/index.scss';
 import buttonGroup from './base/index.scss';
 
 class ButtonGroup extends Component {
+  // Check position then clone with position prop
+  getChildren() {
+    const { children } = this.props;
+    if (!children.length) return children;
+    return children.map((child, index) => {
+      if (index === 0) {
+        return React.cloneElement(child, {
+          key: `start-${index}`,
+          position: `start`
+        });
+      } else if (index === children.length - 1) {
+        return React.cloneElement(child, {
+          key: `end-${index}`,
+          position: `end`
+        });
+      }
+      return child;
+    });
+  }
   render() {
-    const { children, shadow } = this.props;
+    const { shadow } = this.props;
     return (
       <Shadow
         name="button-group"
@@ -18,7 +36,7 @@ class ButtonGroup extends Component {
         shadow={shadow}
       >
         <div className="lwc-button-group" role="group">
-          <slot>{children}</slot>
+          <slot>{this.getChildren()}</slot>
         </div>
       </Shadow>
     );

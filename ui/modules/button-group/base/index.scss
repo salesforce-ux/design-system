@@ -20,45 +20,9 @@
  */
 .lwc-button-group {
   display: inline-flex;
-}
-
-.lwc-button-group slot > * {
   --lwc-c-button-border-radius: 0;
   --lwc-c-button-depth-active: 1;
-}
-
-// Scenarios:
-// [nope][yup][yup][yup][nope]
-// [nope][yup][nope]
-// [yup][yup]
-.lwc-button-group slot > :not(:first-child):not(:last-child),
-.lwc-button-group slot > :first-child + :last-child {
-  --lwc-c-button-spacing-horizontal-start: -1px;
-  --lwc-c-button-spacing-horizontal-end: -1px;
-}
-
-// Scenarios:
-// [yup][nope][nope]
-.lwc-button-group slot > :first-child {
-  --lwc-c-button-border-radius: 4px 0 0 4px;
-}
-
-// Scenarios:
-// [nope][nope][yup]
-.lwc-button-group slot > :last-child {
-  --lwc-c-button-border-radius: 0 4px 4px 0;
-}
-
-// Scenarios:
-// [yup][yup][nope]
-.lwc-button-group slot > :not(:last-child) {
+  --lwc-c-button-spacing-horizontal-end: ($border-width-thin * -1);
   --lwc-c-button-shadow-brand: inset -1px 0 0 $color-border;
   --lwc-c-button-icon-shadow-brand: inset -1px 0 0 $color-border;
-}
-
-// Scenarios:
-// [yup]
-// [nope][nope][nope]
-.lwc-button-group slot > :only-child {
-  --lwc-c-button-border-radius: 4px;
 }

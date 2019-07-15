@@ -20,7 +20,7 @@ export default (
 
 export let states = [
   {
-    id: 'first-disabled',
+    id: 'group-first-disabled',
     label: 'First Disabled',
     element: (
       <ButtonGroup>
@@ -33,7 +33,7 @@ export let states = [
     )
   },
   {
-    id: 'middle-disabled',
+    id: 'group-middle-disabled',
     label: 'Middle Disabled',
     element: (
       <ButtonGroup>
@@ -46,7 +46,7 @@ export let states = [
     )
   },
   {
-    id: 'last-disabled',
+    id: 'group-last-disabled',
     label: 'Last Disabled',
     element: (
       <ButtonGroup>
@@ -59,7 +59,7 @@ export let states = [
     )
   },
   {
-    id: 'all-disabled',
+    id: 'group-all-disabled',
     label: 'All Disabled',
     element: (
       <ButtonGroup>
@@ -76,7 +76,7 @@ export let states = [
     )
   },
   {
-    id: 'inverse-first-disabled',
+    id: 'group-inverse-first-disabled',
     label: 'First Disabled',
     element: (
       <ButtonGroup>
@@ -89,7 +89,7 @@ export let states = [
     )
   },
   {
-    id: 'inverse-middle-disabled',
+    id: 'group-inverse-middle-disabled',
     label: 'Middle Disabled',
     element: (
       <ButtonGroup>
@@ -102,7 +102,7 @@ export let states = [
     )
   },
   {
-    id: 'inverse-last-disabled',
+    id: 'group-inverse-last-disabled',
     label: 'Last Disabled',
     element: (
       <ButtonGroup>
@@ -115,7 +115,7 @@ export let states = [
     )
   },
   {
-    id: 'inverse-all-disabled',
+    id: 'group-inverse-all-disabled',
     label: 'All Disabled',
     element: (
       <ButtonGroup>
@@ -132,7 +132,7 @@ export let states = [
     )
   },
   {
-    id: 'overflow-menu',
+    id: 'group-overflow-menu',
     label: 'with button-icon overflow menu',
     element: (
       <ButtonGroup>
@@ -144,7 +144,7 @@ export let states = [
     )
   },
   {
-    id: 'overflow-menu-disabled',
+    id: 'group-overflow-menu-disabled',
     label: 'with disabled button-icon overflow menu',
     element: (
       <ButtonGroup>
@@ -164,16 +164,7 @@ export let states = [
 
 export let examples = [
   {
-    id: 'single-button',
-    label: '1 Button',
-    element: (
-      <ButtonGroup>
-        <Button variant="neutral">Only</Button>
-      </ButtonGroup>
-    )
-  },
-  {
-    id: 'two-buttons',
+    id: 'group-two-buttons',
     label: '2 Buttons',
     element: (
       <ButtonGroup>
@@ -183,7 +174,7 @@ export let examples = [
     )
   },
   {
-    id: 'three-buttons',
+    id: 'group-three-buttons',
     label: '3 Buttons',
     element: (
       <ButtonGroup>
@@ -194,7 +185,7 @@ export let examples = [
     )
   },
   {
-    id: 'four-buttons',
+    id: 'group-four-buttons',
     label: '4 Buttons',
     element: (
       <ButtonGroup>
@@ -206,7 +197,7 @@ export let examples = [
     )
   },
   {
-    id: 'five-buttons',
+    id: 'group-five-buttons',
     label: '5 Buttons',
     element: (
       <ButtonGroup>
@@ -219,7 +210,7 @@ export let examples = [
     )
   },
   {
-    id: 'brand-overflow-menu',
+    id: 'group-brand-overflow-menu',
     label: 'Brand with button-icon overflow menu',
     element: (
       <ButtonGroup>
@@ -229,7 +220,7 @@ export let examples = [
     )
   },
   {
-    id: 'two-brand-button-addon',
+    id: 'group-two-brand-button-addon',
     label: '2 - Brand with button-icon addon',
     element: (
       <ButtonGroup>
@@ -240,7 +231,7 @@ export let examples = [
     )
   },
   {
-    id: 'inverse',
+    id: 'group-inverse',
     label: 'Inverse',
     element: (
       <Inverse>
@@ -253,7 +244,7 @@ export let examples = [
     )
   },
   {
-    id: 'inverse-doc',
+    id: 'group-inverse-doc',
     label: 'Inverse - For Doc use',
     element: (
       <ButtonGroup>

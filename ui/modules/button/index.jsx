@@ -32,6 +32,7 @@ class Button extends Component {
       use,
       children,
       disabled,
+      position,
       shadow,
       customization
     } = this.props;
@@ -45,7 +46,9 @@ class Button extends Component {
       'lwc-button_inverse': variant === 'inverse',
       'lwc-button_neutral': variant === 'neutral',
       'lwc-button_success': variant === 'success',
-      'lwc-button_full-width': size === 'full-width'
+      'lwc-button_full-width': size === 'full-width',
+      'lwc-button_start': position === 'start',
+      'lwc-button_end': position === 'end'
     });
 
     return (
@@ -82,6 +85,7 @@ Button.propTypes = {
   // Attributes
   disabled: PropTypes.bool,
   size: PropTypes.oneOf(['full-width']),
+  position: PropTypes.oneOf(['start', 'end']),
   use: PropTypes.oneOf(['a', 'button']),
   variant: PropTypes.oneOf([
     'brand',

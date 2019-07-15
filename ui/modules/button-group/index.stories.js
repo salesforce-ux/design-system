@@ -15,12 +15,14 @@ const kitchenSink = getAllDisplayCollectionsByType(examples, [
 
 storiesOf('Modules/Button Group/', module).add('Kitchen Sink', () =>
   kitchenSink.map((element, idx) =>
-    element.map(({ label, component }) => (
-      <StoryFrame
-        component={component}
-        label={label}
-        key={`kitchen-sink-${label}-${idx}`}
-      />
-    ))
+    element.map(({ id, label, component }) => {
+      return (
+        <StoryFrame
+          component={component}
+          label={label}
+          key={`kitchen-sink-${id}-${idx}`}
+        />
+      );
+    })
   )
 );

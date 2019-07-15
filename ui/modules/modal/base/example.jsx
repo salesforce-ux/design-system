@@ -2,7 +2,7 @@ import React from 'react';
 import Modal from '../';
 import Button from '../../button/';
 
-const ModalExample = () => (
+export default (
   <Modal>
     <p>
       Sit nulla est ex deserunt exercitation anim occaecat. Nostrud ullamco
@@ -13,27 +13,6 @@ const ModalExample = () => (
     </p>
   </Modal>
 );
-
-export default ModalExample;
-
-export let states = [
-  {
-    id: 'foo-state',
-    label: 'foo-state',
-    element: (
-      <Modal>
-        <p>
-          Sit nulla est ex deserunt exercitation anim occaecat. Nostrud ullamco
-          deserunt aute id consequat veniam incididunt duis in sint irure nisi.
-          Mollit officia cillum Lorem ullamco minim nostrud elit officia tempor
-          esse quis. Cillum sunt ad dolore quis aute consequat ipsum magna
-          exercitation reprehenderit magna. Tempor cupidatat consequat elit
-          dolor adipisicing.
-        </p>
-      </Modal>
-    )
-  }
-];
 
 export let examples = [
   {

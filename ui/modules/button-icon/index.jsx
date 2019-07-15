@@ -34,6 +34,7 @@ class ButtonIcon extends Component {
       title,
       type,
       variant,
+      position,
       shadow,
       customization,
       assistiveText,
@@ -52,6 +53,11 @@ class ButtonIcon extends Component {
       'lwc-is-pressed': isPressed || this.state.isPressed
     };
 
+    const buttonPositionClassName = {
+      'lwc-button-icon_start': position === 'start',
+      'lwc-button-icon_end': position === 'end'
+    };
+
     return (
       <Shadow
         name="button-icon"
@@ -62,7 +68,8 @@ class ButtonIcon extends Component {
           className={classNames(
             'lwc-button-icon',
             buttonVariantClassName,
-            buttonStateClassName
+            buttonStateClassName,
+            buttonPositionClassName
           )}
           disabled={disabled}
           aria-pressed={
@@ -97,6 +104,7 @@ ButtonIcon.propTypes = {
   isPressed: PropTypes.bool,
   disabled: PropTypes.bool,
   variant: PropTypes.string,
+  position: PropTypes.oneOf(['start', 'end']),
   title: PropTypes.string,
   shadow: PropTypes.bool,
   customization: PropTypes.node,

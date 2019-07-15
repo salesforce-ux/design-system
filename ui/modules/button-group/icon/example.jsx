@@ -11,30 +11,15 @@ const Inverse = styled.div`
 
 export default (
   <ButtonGroup>
-    <ButtonIcon
-      boundarySize="medium"
-      variant="neutral"
-      symbol="chart"
-      type="stateful"
-    />
-    <ButtonIcon
-      boundarySize="medium"
-      variant="neutral"
-      symbol="filterList"
-      type="stateful"
-    />
-    <ButtonIcon
-      boundarySize="medium"
-      variant="neutral"
-      symbol="settings"
-      type="stateful"
-    />
+    <ButtonIcon boundarySize="medium" variant="neutral" symbol="chart" />
+    <ButtonIcon boundarySize="medium" variant="neutral" symbol="filterList" />
+    <ButtonIcon boundarySize="medium" variant="neutral" symbol="settings" />
   </ButtonGroup>
 );
 
 export let states = [
   {
-    id: 'first-disabled',
+    id: 'group-icon-first-disabled',
     label: 'First Disabled',
     element: (
       <ButtonGroup>
@@ -54,7 +39,7 @@ export let states = [
     )
   },
   {
-    id: 'middle-disabled',
+    id: 'group-icon-middle-disabled',
     label: 'Middle Disabled',
     element: (
       <ButtonGroup>
@@ -70,7 +55,7 @@ export let states = [
     )
   },
   {
-    id: 'last-disabled',
+    id: 'group-icon-last-disabled',
     label: 'Last Disabled',
     element: (
       <ButtonGroup>
@@ -90,7 +75,7 @@ export let states = [
     )
   },
   {
-    id: 'all-disabled',
+    id: 'group-icon-all-disabled',
     label: 'All Disabled',
     element: (
       <ButtonGroup>
@@ -119,22 +104,7 @@ export let states = [
 
 export let examples = [
   {
-    id: 'single-pressed-button',
-    label: '1 Button - Pressed',
-    element: (
-      <ButtonGroup>
-        <ButtonIcon
-          boundarySize="medium"
-          variant="neutral"
-          symbol="settings"
-          type="stateful"
-          isPressed
-        />
-      </ButtonGroup>
-    )
-  },
-  {
-    id: 'two-pressed-buttons',
+    id: 'group-icon-two-pressed-buttons',
     label: '2 Buttons - Pressed',
     element: (
       <ButtonGroup>
@@ -156,7 +126,7 @@ export let examples = [
     )
   },
   {
-    id: 'three-pressed-buttons',
+    id: 'group-icon-three-pressed-buttons',
     label: '3 Buttons - Pressed',
     element: (
       <ButtonGroup>
@@ -185,16 +155,7 @@ export let examples = [
     )
   },
   {
-    id: 'single-button',
-    label: '1 Button',
-    element: (
-      <ButtonGroup>
-        <ButtonIcon boundarySize="medium" variant="neutral" symbol="settings" />
-      </ButtonGroup>
-    )
-  },
-  {
-    id: 'two-buttons',
+    id: 'group-icon-two-buttons',
     label: '2 Buttons',
     element: (
       <ButtonGroup>
@@ -208,7 +169,7 @@ export let examples = [
     )
   },
   {
-    id: 'three-buttons',
+    id: 'group-icon-three-buttons',
     label: '3 Buttons',
     element: (
       <ButtonGroup>
@@ -223,7 +184,7 @@ export let examples = [
     )
   },
   {
-    id: 'four-buttons',
+    id: 'group-icon-four-buttons',
     label: '4 Buttons',
     element: (
       <ButtonGroup>
@@ -239,7 +200,7 @@ export let examples = [
     )
   },
   {
-    id: 'five-buttons',
+    id: 'group-icon-five-buttons',
     label: '5 Buttons',
     element: (
       <ButtonGroup>
@@ -256,7 +217,7 @@ export let examples = [
     )
   },
   {
-    id: 'inverse',
+    id: 'group-icon-inverse',
     label: 'Inverse',
     element: (
       <Inverse>
@@ -277,7 +238,7 @@ export let examples = [
     )
   },
   {
-    id: 'inverse-doc',
+    id: 'group-icon-inverse-doc',
     label: 'Inverse - For Doc use',
     element: (
       <ButtonGroup>

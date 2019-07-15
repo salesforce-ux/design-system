@@ -177,3 +177,12 @@
   // Override icon color
   --lwc-c-icon-color: var(--lwc-c-button-icon-color-inverse, $color-gray-1);
 }
+
+.lwc-button-icon_start {
+  --lwc-c-button-border-radius: $border-radius-medium 0 0 $border-radius-medium;
+}
+
+.lwc-button-icon_end {
+  --lwc-c-button-border-radius: 0 $border-radius-medium $border-radius-medium 0;
+  --lwc-c-button-icon-shadow-brand: none;
+}

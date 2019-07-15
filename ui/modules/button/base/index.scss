@@ -221,3 +221,12 @@
   margin-left: $spacing-x-small;
   --lwc-c-icon-color: currentColor;
 }
+
+.lwc-button_start {
+  --lwc-c-button-border-radius: $border-radius-medium 0 0 $border-radius-medium;
+}
+
+.lwc-button_end {
+  --lwc-c-button-border-radius: 0 $border-radius-medium $border-radius-medium 0;
+  --lwc-c-button-shadow-brand: none;
+}

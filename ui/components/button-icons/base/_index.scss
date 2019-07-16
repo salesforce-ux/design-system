@@ -31,7 +31,6 @@
 .slds-button--icon-error {
   line-height: $line-height-reset;
   vertical-align: middle;
-  justify-content: center;
   color: $color-text-icon-default;
 
   @include touch-device {

@@ -153,7 +153,12 @@ If the user needs to select multiple options for a field, like a list of languag
 
 ### Locked Items
 
-If items are not able to be removed from the selected list, a lock icon appears next to the item name.
+If items are not able to be removed or reordered from the selected list, a lock icon appears next to the item name.
+
+<Blockquote type="a11y" header="Aria Disabled and Assistive Text">
+  For each locked item, <code className="doc">aria-disabled="true"</code> must be applied to <code className="doc">.slds-listbox__option</code> and
+  assistive text (<code className="doc">.slds-assistive-text</code>) must be added to <code className="doc">.slds-icon_container</code>.
+</Blockquote>
 
 <Example title="Dueling Picklist with a Locked Item">
   <CodeView>

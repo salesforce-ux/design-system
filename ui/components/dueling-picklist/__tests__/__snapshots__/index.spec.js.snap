@@ -56,9 +56,10 @@ exports[`renders a default dueling picklist 1`] = `
               role="presentation"
             >
               <div
+                aria-disabled={undefined}
                 aria-selected={false}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
-                draggable="true"
+                draggable={true}
                 role="option"
                 tabIndex={0}
               >
@@ -79,9 +80,10 @@ exports[`renders a default dueling picklist 1`] = `
               role="presentation"
             >
               <div
+                aria-disabled={undefined}
                 aria-selected={false}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
-                draggable="true"
+                draggable={true}
                 role="option"
                 tabIndex={-1}
               >
@@ -102,9 +104,10 @@ exports[`renders a default dueling picklist 1`] = `
               role="presentation"
             >
               <div
+                aria-disabled={undefined}
                 aria-selected={false}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
-                draggable="true"
+                draggable={true}
                 role="option"
                 tabIndex={-1}
               >
@@ -125,9 +128,10 @@ exports[`renders a default dueling picklist 1`] = `
               role="presentation"
             >
               <div
+                aria-disabled={undefined}
                 aria-selected={false}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
-                draggable="true"
+                draggable={true}
                 role="option"
                 tabIndex={-1}
               >
@@ -213,9 +217,10 @@ exports[`renders a default dueling picklist 1`] = `
               role="presentation"
             >
               <div
+                aria-disabled={undefined}
                 aria-selected={false}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
-                draggable="true"
+                draggable={true}
                 role="option"
                 tabIndex={0}
               >
@@ -236,9 +241,10 @@ exports[`renders a default dueling picklist 1`] = `
               role="presentation"
             >
               <div
+                aria-disabled={undefined}
                 aria-selected={false}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
-                draggable="true"
+                draggable={true}
                 role="option"
                 tabIndex={-1}
               >
@@ -360,9 +366,10 @@ exports[`renders a default dueling picklist with no reordering 1`] = `
               role="presentation"
             >
               <div
+                aria-disabled={undefined}
                 aria-selected={false}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
-                draggable="true"
+                draggable={true}
                 role="option"
                 tabIndex={0}
               >
@@ -383,9 +390,10 @@ exports[`renders a default dueling picklist with no reordering 1`] = `
               role="presentation"
             >
               <div
+                aria-disabled={undefined}
                 aria-selected={false}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
-                draggable="true"
+                draggable={true}
                 role="option"
                 tabIndex={-1}
               >
@@ -406,9 +414,10 @@ exports[`renders a default dueling picklist with no reordering 1`] = `
               role="presentation"
             >
               <div
+                aria-disabled={undefined}
                 aria-selected={false}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
-                draggable="true"
+                draggable={true}
                 role="option"
                 tabIndex={-1}
               >
@@ -429,9 +438,10 @@ exports[`renders a default dueling picklist with no reordering 1`] = `
               role="presentation"
             >
               <div
+                aria-disabled={undefined}
                 aria-selected={false}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
-                draggable="true"
+                draggable={true}
                 role="option"
                 tabIndex={-1}
               >
@@ -517,9 +527,10 @@ exports[`renders a default dueling picklist with no reordering 1`] = `
               role="presentation"
             >
               <div
+                aria-disabled={undefined}
                 aria-selected={false}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
-                draggable="true"
+                draggable={true}
                 role="option"
                 tabIndex={0}
               >
@@ -540,9 +551,10 @@ exports[`renders a default dueling picklist with no reordering 1`] = `
               role="presentation"
             >
               <div
+                aria-disabled={undefined}
                 aria-selected={false}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
-                draggable="true"
+                draggable={true}
                 role="option"
                 tabIndex={-1}
               >
@@ -622,9 +634,10 @@ exports[`renders a disabled dueling picklist 1`] = `
               role="presentation"
             >
               <div
+                aria-disabled={undefined}
                 aria-selected={false}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
-                draggable="true"
+                draggable={true}
                 role="option"
                 tabIndex={-1}
               >
@@ -645,9 +658,10 @@ exports[`renders a disabled dueling picklist 1`] = `
               role="presentation"
             >
               <div
+                aria-disabled={undefined}
                 aria-selected={false}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
-                draggable="true"
+                draggable={true}
                 role="option"
                 tabIndex={-1}
               >
@@ -668,9 +682,10 @@ exports[`renders a disabled dueling picklist 1`] = `
               role="presentation"
             >
               <div
+                aria-disabled={undefined}
                 aria-selected={false}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
-                draggable="true"
+                draggable={true}
                 role="option"
                 tabIndex={-1}
               >
@@ -691,9 +706,10 @@ exports[`renders a disabled dueling picklist 1`] = `
               role="presentation"
             >
               <div
+                aria-disabled={undefined}
                 aria-selected={false}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
-                draggable="true"
+                draggable={true}
                 role="option"
                 tabIndex={-1}
               >
@@ -779,9 +795,10 @@ exports[`renders a disabled dueling picklist 1`] = `
               role="presentation"
             >
               <div
+                aria-disabled={undefined}
                 aria-selected={false}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
-                draggable="true"
+                draggable={true}
                 role="option"
                 tabIndex={-1}
               >
@@ -802,9 +819,10 @@ exports[`renders a disabled dueling picklist 1`] = `
               role="presentation"
             >
               <div
+                aria-disabled={undefined}
                 aria-selected={false}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
-                draggable="true"
+                draggable={true}
                 role="option"
                 tabIndex={-1}
               >
@@ -926,9 +944,10 @@ exports[`renders a dueling picklist with a dropped option 1`] = `
               role="presentation"
             >
               <div
+                aria-disabled={undefined}
                 aria-selected={false}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
-                draggable="true"
+                draggable={true}
                 role="option"
                 tabIndex={0}
               >
@@ -949,9 +968,10 @@ exports[`renders a dueling picklist with a dropped option 1`] = `
               role="presentation"
             >
               <div
+                aria-disabled={undefined}
                 aria-selected={false}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
-                draggable="true"
+                draggable={true}
                 role="option"
                 tabIndex={-1}
               >
@@ -972,9 +992,10 @@ exports[`renders a dueling picklist with a dropped option 1`] = `
               role="presentation"
             >
               <div
+                aria-disabled={undefined}
                 aria-selected={false}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
-                draggable="true"
+                draggable={true}
                 role="option"
                 tabIndex={-1}
               >
@@ -995,9 +1016,10 @@ exports[`renders a dueling picklist with a dropped option 1`] = `
               role="presentation"
             >
               <div
+                aria-disabled={undefined}
                 aria-selected={false}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
-                draggable="true"
+                draggable={true}
                 role="option"
                 tabIndex={-1}
               >
@@ -1083,9 +1105,10 @@ exports[`renders a dueling picklist with a dropped option 1`] = `
               role="presentation"
             >
               <div
+                aria-disabled={undefined}
                 aria-selected={true}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline slds-is-selected"
-                draggable="true"
+                draggable={true}
                 role="option"
                 tabIndex={0}
               >
@@ -1106,9 +1129,10 @@ exports[`renders a dueling picklist with a dropped option 1`] = `
               role="presentation"
             >
               <div
+                aria-disabled={undefined}
                 aria-selected={false}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
-                draggable="true"
+                draggable={true}
                 role="option"
                 tabIndex={-1}
               >
@@ -1230,9 +1254,10 @@ exports[`renders a dueling picklist with a grabbed option 1`] = `
               role="presentation"
             >
               <div
+                aria-disabled={undefined}
                 aria-selected={false}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
-                draggable="true"
+                draggable={true}
                 role="option"
                 tabIndex={0}
               >
@@ -1253,9 +1278,10 @@ exports[`renders a dueling picklist with a grabbed option 1`] = `
               role="presentation"
             >
               <div
+                aria-disabled={undefined}
                 aria-selected={false}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
-                draggable="true"
+                draggable={true}
                 role="option"
                 tabIndex={-1}
               >
@@ -1276,9 +1302,10 @@ exports[`renders a dueling picklist with a grabbed option 1`] = `
               role="presentation"
             >
               <div
+                aria-disabled={undefined}
                 aria-selected={false}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
-                draggable="true"
+                draggable={true}
                 role="option"
                 tabIndex={-1}
               >
@@ -1299,9 +1326,10 @@ exports[`renders a dueling picklist with a grabbed option 1`] = `
               role="presentation"
             >
               <div
+                aria-disabled={undefined}
                 aria-selected={false}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
-                draggable="true"
+                draggable={true}
                 role="option"
                 tabIndex={-1}
               >
@@ -1387,9 +1415,10 @@ exports[`renders a dueling picklist with a grabbed option 1`] = `
               role="presentation"
             >
               <div
+                aria-disabled={undefined}
                 aria-selected={false}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
-                draggable="true"
+                draggable={true}
                 role="option"
                 tabIndex={-1}
               >
@@ -1410,9 +1439,10 @@ exports[`renders a dueling picklist with a grabbed option 1`] = `
               role="presentation"
             >
               <div
+                aria-disabled={undefined}
                 aria-selected={true}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline slds-is-grabbed slds-is-selected"
-                draggable="true"
+                draggable={true}
                 role="option"
                 tabIndex={0}
               >
@@ -1534,9 +1564,10 @@ exports[`renders a dueling picklist with a required option 1`] = `
               role="presentation"
             >
               <div
+                aria-disabled={undefined}
                 aria-selected={false}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
-                draggable="true"
+                draggable={true}
                 role="option"
                 tabIndex={0}
               >
@@ -1557,9 +1588,10 @@ exports[`renders a dueling picklist with a required option 1`] = `
               role="presentation"
             >
               <div
+                aria-disabled={undefined}
                 aria-selected={false}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
-                draggable="true"
+                draggable={true}
                 role="option"
                 tabIndex={-1}
               >
@@ -1580,9 +1612,10 @@ exports[`renders a dueling picklist with a required option 1`] = `
               role="presentation"
             >
               <div
+                aria-disabled={undefined}
                 aria-selected={false}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
-                draggable="true"
+                draggable={true}
                 role="option"
                 tabIndex={-1}
               >
@@ -1603,9 +1636,10 @@ exports[`renders a dueling picklist with a required option 1`] = `
               role="presentation"
             >
               <div
+                aria-disabled={undefined}
                 aria-selected={false}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
-                draggable="true"
+                draggable={true}
                 role="option"
                 tabIndex={-1}
               >
@@ -1691,9 +1725,10 @@ exports[`renders a dueling picklist with a required option 1`] = `
               role="presentation"
             >
               <div
+                aria-disabled={true}
                 aria-selected={false}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
-                draggable="true"
+                draggable={false}
                 role="option"
                 tabIndex={0}
               >
@@ -1711,12 +1746,12 @@ exports[`renders a dueling picklist with a required option 1`] = `
                   className="slds-media__figure slds-media__figure_reverse"
                 >
                   <span
-                    className="slds-icon_container"
+                    className="slds-icon_container slds-current-color"
                     title="Locked item"
                   >
                     <svg
                       aria-hidden={true}
-                      className="slds-icon slds-icon_x-small slds-icon-text-default"
+                      className="slds-icon slds-icon_x-small"
                     >
                       <use
                         xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#lock"
@@ -1738,9 +1773,10 @@ exports[`renders a dueling picklist with a required option 1`] = `
               role="presentation"
             >
               <div
+                aria-disabled={undefined}
                 aria-selected={false}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
-                draggable="true"
+                draggable={true}
                 role="option"
                 tabIndex={-1}
               >
@@ -1862,9 +1898,10 @@ exports[`renders a dueling picklist with a selected option 1`] = `
               role="presentation"
             >
               <div
+                aria-disabled={undefined}
                 aria-selected={false}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
-                draggable="true"
+                draggable={true}
                 role="option"
                 tabIndex={0}
               >
@@ -1885,9 +1922,10 @@ exports[`renders a dueling picklist with a selected option 1`] = `
               role="presentation"
             >
               <div
+                aria-disabled={undefined}
                 aria-selected={false}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
-                draggable="true"
+                draggable={true}
                 role="option"
                 tabIndex={-1}
               >
@@ -1908,9 +1946,10 @@ exports[`renders a dueling picklist with a selected option 1`] = `
               role="presentation"
             >
               <div
+                aria-disabled={undefined}
                 aria-selected={false}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
-                draggable="true"
+                draggable={true}
                 role="option"
                 tabIndex={-1}
               >
@@ -1931,9 +1970,10 @@ exports[`renders a dueling picklist with a selected option 1`] = `
               role="presentation"
             >
               <div
+                aria-disabled={undefined}
                 aria-selected={false}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
-                draggable="true"
+                draggable={true}
                 role="option"
                 tabIndex={-1}
               >
@@ -2019,9 +2059,10 @@ exports[`renders a dueling picklist with a selected option 1`] = `
               role="presentation"
             >
               <div
+                aria-disabled={undefined}
                 aria-selected={false}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
-                draggable="true"
+                draggable={true}
                 role="option"
                 tabIndex={-1}
               >
@@ -2042,9 +2083,10 @@ exports[`renders a dueling picklist with a selected option 1`] = `
               role="presentation"
             >
               <div
+                aria-disabled={undefined}
                 aria-selected={true}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline slds-is-selected"
-                draggable="true"
+                draggable={true}
                 role="option"
                 tabIndex={0}
               >
@@ -2166,9 +2208,10 @@ exports[`renders a dueling picklist with an option that was moved 1`] = `
               role="presentation"
             >
               <div
+                aria-disabled={undefined}
                 aria-selected={false}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
-                draggable="true"
+                draggable={true}
                 role="option"
                 tabIndex={0}
               >
@@ -2189,9 +2232,10 @@ exports[`renders a dueling picklist with an option that was moved 1`] = `
               role="presentation"
             >
               <div
+                aria-disabled={undefined}
                 aria-selected={false}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
-                draggable="true"
+                draggable={true}
                 role="option"
                 tabIndex={-1}
               >
@@ -2212,9 +2256,10 @@ exports[`renders a dueling picklist with an option that was moved 1`] = `
               role="presentation"
             >
               <div
+                aria-disabled={undefined}
                 aria-selected={false}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
-                draggable="true"
+                draggable={true}
                 role="option"
                 tabIndex={-1}
               >
@@ -2235,9 +2280,10 @@ exports[`renders a dueling picklist with an option that was moved 1`] = `
               role="presentation"
             >
               <div
+                aria-disabled={undefined}
                 aria-selected={false}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
-                draggable="true"
+                draggable={true}
                 role="option"
                 tabIndex={-1}
               >
@@ -2323,9 +2369,10 @@ exports[`renders a dueling picklist with an option that was moved 1`] = `
               role="presentation"
             >
               <div
+                aria-disabled={undefined}
                 aria-selected={true}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline slds-is-grabbed slds-is-selected"
-                draggable="true"
+                draggable={true}
                 role="option"
                 tabIndex={0}
               >
@@ -2346,9 +2393,10 @@ exports[`renders a dueling picklist with an option that was moved 1`] = `
               role="presentation"
             >
               <div
+                aria-disabled={undefined}
                 aria-selected={false}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
-                draggable="true"
+                draggable={true}
                 role="option"
                 tabIndex={-1}
               >
@@ -2470,9 +2518,10 @@ exports[`renders a dueling picklist with an option that was moved to another lis
               role="presentation"
             >
               <div
+                aria-disabled={undefined}
                 aria-selected={false}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
-                draggable="true"
+                draggable={true}
                 role="option"
                 tabIndex={0}
               >
@@ -2493,9 +2542,10 @@ exports[`renders a dueling picklist with an option that was moved to another lis
               role="presentation"
             >
               <div
+                aria-disabled={undefined}
                 aria-selected={false}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
-                draggable="true"
+                draggable={true}
                 role="option"
                 tabIndex={-1}
               >
@@ -2516,9 +2566,10 @@ exports[`renders a dueling picklist with an option that was moved to another lis
               role="presentation"
             >
               <div
+                aria-disabled={undefined}
                 aria-selected={false}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
-                draggable="true"
+                draggable={true}
                 role="option"
                 tabIndex={-1}
               >
@@ -2539,9 +2590,10 @@ exports[`renders a dueling picklist with an option that was moved to another lis
               role="presentation"
             >
               <div
+                aria-disabled={undefined}
                 aria-selected={false}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
-                draggable="true"
+                draggable={true}
                 role="option"
                 tabIndex={-1}
               >
@@ -2627,9 +2679,10 @@ exports[`renders a dueling picklist with an option that was moved to another lis
               role="presentation"
             >
               <div
+                aria-disabled={undefined}
                 aria-selected={true}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline slds-is-grabbed slds-is-selected"
-                draggable="true"
+                draggable={true}
                 role="option"
                 tabIndex={0}
               >
@@ -2650,9 +2703,10 @@ exports[`renders a dueling picklist with an option that was moved to another lis
               role="presentation"
             >
               <div
+                aria-disabled={undefined}
                 aria-selected={false}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
-                draggable="true"
+                draggable={true}
                 role="option"
                 tabIndex={-1}
               >
@@ -2774,9 +2828,10 @@ exports[`renders a dueling picklist with multiple selected options 1`] = `
               role="presentation"
             >
               <div
+                aria-disabled={undefined}
                 aria-selected={true}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline slds-is-selected"
-                draggable="true"
+                draggable={true}
                 role="option"
                 tabIndex={-1}
               >
@@ -2797,9 +2852,10 @@ exports[`renders a dueling picklist with multiple selected options 1`] = `
               role="presentation"
             >
               <div
+                aria-disabled={undefined}
                 aria-selected={false}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
-                draggable="true"
+                draggable={true}
                 role="option"
                 tabIndex={-1}
               >
@@ -2820,9 +2876,10 @@ exports[`renders a dueling picklist with multiple selected options 1`] = `
               role="presentation"
             >
               <div
+                aria-disabled={undefined}
                 aria-selected={true}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline slds-is-selected"
-                draggable="true"
+                draggable={true}
                 role="option"
                 tabIndex={0}
               >
@@ -2843,9 +2900,10 @@ exports[`renders a dueling picklist with multiple selected options 1`] = `
               role="presentation"
             >
               <div
+                aria-disabled={undefined}
                 aria-selected={false}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
-                draggable="true"
+                draggable={true}
                 role="option"
                 tabIndex={-1}
               >
@@ -2931,9 +2989,10 @@ exports[`renders a dueling picklist with multiple selected options 1`] = `
               role="presentation"
             >
               <div
+                aria-disabled={undefined}
                 aria-selected={false}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
-                draggable="true"
+                draggable={true}
                 role="option"
                 tabIndex={0}
               >
@@ -2954,9 +3013,10 @@ exports[`renders a dueling picklist with multiple selected options 1`] = `
               role="presentation"
             >
               <div
+                aria-disabled={undefined}
                 aria-selected={false}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
-                draggable="true"
+                draggable={true}
                 role="option"
                 tabIndex={-1}
               >
@@ -3102,9 +3162,10 @@ exports[`renders a dueling picklist with tooltip 1`] = `
               role="presentation"
             >
               <div
+                aria-disabled={undefined}
                 aria-selected={false}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
-                draggable="true"
+                draggable={true}
                 role="option"
                 tabIndex={0}
               >
@@ -3125,9 +3186,10 @@ exports[`renders a dueling picklist with tooltip 1`] = `
               role="presentation"
             >
               <div
+                aria-disabled={undefined}
                 aria-selected={false}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
-                draggable="true"
+                draggable={true}
                 role="option"
                 tabIndex={-1}
               >
@@ -3148,9 +3210,10 @@ exports[`renders a dueling picklist with tooltip 1`] = `
               role="presentation"
             >
               <div
+                aria-disabled={undefined}
                 aria-selected={false}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
-                draggable="true"
+                draggable={true}
                 role="option"
                 tabIndex={-1}
               >
@@ -3171,9 +3234,10 @@ exports[`renders a dueling picklist with tooltip 1`] = `
               role="presentation"
             >
               <div
+                aria-disabled={undefined}
                 aria-selected={false}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
-                draggable="true"
+                draggable={true}
                 role="option"
                 tabIndex={-1}
               >
@@ -3259,9 +3323,10 @@ exports[`renders a dueling picklist with tooltip 1`] = `
               role="presentation"
             >
               <div
+                aria-disabled={undefined}
                 aria-selected={false}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
-                draggable="true"
+                draggable={true}
                 role="option"
                 tabIndex={0}
               >
@@ -3282,9 +3347,10 @@ exports[`renders a dueling picklist with tooltip 1`] = `
               role="presentation"
             >
               <div
+                aria-disabled={undefined}
                 aria-selected={false}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
-                draggable="true"
+                draggable={true}
                 role="option"
                 tabIndex={-1}
               >
@@ -3364,7 +3430,7 @@ exports[`renders a required dueling picklist 1`] = `
       className="slds-required"
       title="required"
     >
-      * 
+      *
        
     </abbr>
     Select Options
@@ -3413,9 +3479,10 @@ exports[`renders a required dueling picklist 1`] = `
               role="presentation"
             >
               <div
+                aria-disabled={undefined}
                 aria-selected={false}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
-                draggable="true"
+                draggable={true}
                 role="option"
                 tabIndex={0}
               >
@@ -3436,9 +3503,10 @@ exports[`renders a required dueling picklist 1`] = `
               role="presentation"
             >
               <div
+                aria-disabled={undefined}
                 aria-selected={false}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
-                draggable="true"
+                draggable={true}
                 role="option"
                 tabIndex={-1}
               >
@@ -3459,9 +3527,10 @@ exports[`renders a required dueling picklist 1`] = `
               role="presentation"
             >
               <div
+                aria-disabled={undefined}
                 aria-selected={false}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
-                draggable="true"
+                draggable={true}
                 role="option"
                 tabIndex={-1}
               >
@@ -3482,9 +3551,10 @@ exports[`renders a required dueling picklist 1`] = `
               role="presentation"
             >
               <div
+                aria-disabled={undefined}
                 aria-selected={false}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
-                draggable="true"
+                draggable={true}
                 role="option"
                 tabIndex={-1}
               >
@@ -3570,9 +3640,10 @@ exports[`renders a required dueling picklist 1`] = `
               role="presentation"
             >
               <div
+                aria-disabled={undefined}
                 aria-selected={false}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
-                draggable="true"
+                draggable={true}
                 role="option"
                 tabIndex={0}
               >
@@ -3593,9 +3664,10 @@ exports[`renders a required dueling picklist 1`] = `
               role="presentation"
             >
               <div
+                aria-disabled={undefined}
                 aria-selected={false}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
-                draggable="true"
+                draggable={true}
                 role="option"
                 tabIndex={-1}
               >
@@ -3675,7 +3747,7 @@ exports[`renders a required dueling picklist with tooltip 1`] = `
       className="slds-required"
       title="required"
     >
-      * 
+      *
        
     </abbr>
     Select Options
@@ -3748,9 +3820,10 @@ exports[`renders a required dueling picklist with tooltip 1`] = `
               role="presentation"
             >
               <div
+                aria-disabled={undefined}
                 aria-selected={false}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
-                draggable="true"
+                draggable={true}
                 role="option"
                 tabIndex={0}
               >
@@ -3771,9 +3844,10 @@ exports[`renders a required dueling picklist with tooltip 1`] = `
               role="presentation"
             >
               <div
+                aria-disabled={undefined}
                 aria-selected={false}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
-                draggable="true"
+                draggable={true}
                 role="option"
                 tabIndex={-1}
               >
@@ -3794,9 +3868,10 @@ exports[`renders a required dueling picklist with tooltip 1`] = `
               role="presentation"
             >
               <div
+                aria-disabled={undefined}
                 aria-selected={false}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
-                draggable="true"
+                draggable={true}
                 role="option"
                 tabIndex={-1}
               >
@@ -3817,9 +3892,10 @@ exports[`renders a required dueling picklist with tooltip 1`] = `
               role="presentation"
             >
               <div
+                aria-disabled={undefined}
                 aria-selected={false}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
-                draggable="true"
+                draggable={true}
                 role="option"
                 tabIndex={-1}
               >
@@ -3905,9 +3981,10 @@ exports[`renders a required dueling picklist with tooltip 1`] = `
               role="presentation"
             >
               <div
+                aria-disabled={undefined}
                 aria-selected={false}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
-                draggable="true"
+                draggable={true}
                 role="option"
                 tabIndex={0}
               >
@@ -3928,9 +4005,10 @@ exports[`renders a required dueling picklist with tooltip 1`] = `
               role="presentation"
             >
               <div
+                aria-disabled={undefined}
                 aria-selected={false}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
-                draggable="true"
+                draggable={true}
                 role="option"
                 tabIndex={-1}
               >
@@ -4052,9 +4130,10 @@ exports[`renders a responsive dueling picklist 1`] = `
               role="presentation"
             >
               <div
+                aria-disabled={undefined}
                 aria-selected={false}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
-                draggable="true"
+                draggable={true}
                 role="option"
                 tabIndex={0}
               >
@@ -4075,9 +4154,10 @@ exports[`renders a responsive dueling picklist 1`] = `
               role="presentation"
             >
               <div
+                aria-disabled={undefined}
                 aria-selected={false}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
-                draggable="true"
+                draggable={true}
                 role="option"
                 tabIndex={-1}
               >
@@ -4098,9 +4178,10 @@ exports[`renders a responsive dueling picklist 1`] = `
               role="presentation"
             >
               <div
+                aria-disabled={undefined}
                 aria-selected={false}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
-                draggable="true"
+                draggable={true}
                 role="option"
                 tabIndex={-1}
               >
@@ -4121,9 +4202,10 @@ exports[`renders a responsive dueling picklist 1`] = `
               role="presentation"
             >
               <div
+                aria-disabled={undefined}
                 aria-selected={false}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
-                draggable="true"
+                draggable={true}
                 role="option"
                 tabIndex={-1}
               >
@@ -4209,9 +4291,10 @@ exports[`renders a responsive dueling picklist 1`] = `
               role="presentation"
             >
               <div
+                aria-disabled={undefined}
                 aria-selected={false}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
-                draggable="true"
+                draggable={true}
                 role="option"
                 tabIndex={0}
               >
@@ -4232,9 +4315,10 @@ exports[`renders a responsive dueling picklist 1`] = `
               role="presentation"
             >
               <div
+                aria-disabled={undefined}
                 aria-selected={false}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
-                draggable="true"
+                draggable={true}
                 role="option"
                 tabIndex={-1}
               >
@@ -4356,9 +4440,10 @@ exports[`renders a responsive non-reorderable dueling picklist 1`] = `
               role="presentation"
             >
               <div
+                aria-disabled={undefined}
                 aria-selected={false}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
-                draggable="true"
+                draggable={true}
                 role="option"
                 tabIndex={0}
               >
@@ -4379,9 +4464,10 @@ exports[`renders a responsive non-reorderable dueling picklist 1`] = `
               role="presentation"
             >
               <div
+                aria-disabled={undefined}
                 aria-selected={false}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
-                draggable="true"
+                draggable={true}
                 role="option"
                 tabIndex={-1}
               >
@@ -4402,9 +4488,10 @@ exports[`renders a responsive non-reorderable dueling picklist 1`] = `
               role="presentation"
             >
               <div
+                aria-disabled={undefined}
                 aria-selected={false}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
-                draggable="true"
+                draggable={true}
                 role="option"
                 tabIndex={-1}
               >
@@ -4425,9 +4512,10 @@ exports[`renders a responsive non-reorderable dueling picklist 1`] = `
               role="presentation"
             >
               <div
+                aria-disabled={undefined}
                 aria-selected={false}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
-                draggable="true"
+                draggable={true}
                 role="option"
                 tabIndex={-1}
               >
@@ -4513,9 +4601,10 @@ exports[`renders a responsive non-reorderable dueling picklist 1`] = `
               role="presentation"
             >
               <div
+                aria-disabled={undefined}
                 aria-selected={false}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
-                draggable="true"
+                draggable={true}
                 role="option"
                 tabIndex={0}
               >
@@ -4536,9 +4625,10 @@ exports[`renders a responsive non-reorderable dueling picklist 1`] = `
               role="presentation"
             >
               <div
+                aria-disabled={undefined}
                 aria-selected={false}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
-                draggable="true"
+                draggable={true}
                 role="option"
                 tabIndex={-1}
               >

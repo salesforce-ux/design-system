@@ -209,6 +209,11 @@ export let examples = [
     )
   },
   {
+    id: 'email-input',
+    label: 'Email Input',
+    element: <Input id="input-url" type="email" placeholder="E-Mail" />
+  },
+  {
     id: 'fixed-text',
     label: 'Fixed text',
     element: (

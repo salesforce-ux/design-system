@@ -49,6 +49,16 @@
   }
 
   /**
+   * Prevents certain input types from switching to RTL layout.
+   */
+  &[type="url"],
+  &[type="tel"],
+  &[type="email"] {
+    direction: ltr;
+    text-align: left;
+  }
+
+  /**
    * Removes aesthetic nature from an input
    *
    * @selector .slds-input_bare

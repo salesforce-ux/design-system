@@ -75,6 +75,10 @@
 - Removed `.slds-icon-text-default` from `.slds-icon` and replaced it with `.slds-current-color` on the icon's container `.slds-icon_container` so the icon's color matches the locked item's disabled color
 - Removed `draggable` attribute from locked items as they are not draggable in the locked state
 
+### [Files](https://www.lightningdesignsystem.com/components/files)
+#### Fixed
+- Added `display` and `overflow` css rules to allow for text truncation on `.slds-file__text`.
+
 ### [Form Element](https://www.lightningdesignsystem.com/components/form-element)
 #### Changed
 - On touch devices, set the amount of space created for the edit icon to `$square-tappable` which aligns with touch specific sizing

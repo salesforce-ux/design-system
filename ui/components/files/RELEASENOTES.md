@@ -4,6 +4,12 @@
 
 <!-- ## [Unreleased] -->
 
+## 2.10.0
+
+### Fixed
+
+- Added `display` and `overflow` css rules to allow for text truncation on `.slds-file__text`.
+
 ## 2.8.2
 
 ### Fixed

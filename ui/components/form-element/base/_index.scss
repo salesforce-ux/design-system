@@ -172,6 +172,10 @@
   color: $input-static-color;
   width: 100%;
 
+  @include touch-device {
+    font-size: $font-size-5;
+  }
+
   &.slds-text-longform *:last-child {
     margin-bottom: 0;
   }

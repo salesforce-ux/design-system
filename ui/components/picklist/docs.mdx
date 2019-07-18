@@ -6,8 +6,12 @@ import { getDisplayElementById } from '../../shared/helpers';
 import * as Base from './base/example';
 
 <div className="doc lead">
-  Notifications serve as a feedback & confirmation mechanism that comes into the page at the top right.
+  A Picklist provides a user with an read-only input field that is accompanied with a listbox of pre-defined options. A picklist has a single and multi-selection pattern.
 </div>
+
+<CodeView style={{ height: '11rem' }} exampleOnly>
+  {getDisplayElementById(Base.states, 'open-option-selected')}
+</CodeView>
 
 ## About Picklist
 A picklist is a widget that displays a list of selectable options. When an option is selected, it is shown as selected and the value of the read-only input is updated to match it.
@@ -16,7 +20,7 @@ A multi-select picklist is widget that displays a list of selectable options, wh
 
 The target HTML element, `slds-combobox` and dropdown need to be wrapped in the class `.slds-dropdown-trigger dropdown-trigger_click`.
 
-### Accessibility
+## Accessibility
 
 A Picklist allows a user to select and set a value from a pre-defined list of options. As such we follow the ARIA Combobox widget pattern to implement it as it's the most appropriate concept to achieve this. The variant of Combobox we chose is the "Read-only" version, as a users keyboard input cannot directly affect the value set in the Combobox, but can only select a value from a pre-definied list. It also does not perform a search, or autocomplete function. It most closely resembles the HTML `select` element.
 
@@ -24,12 +28,11 @@ Implementing a multi-select pattern with a Combobox is not standard, nor is it t
 
 Please refer to the [Combobox](/components/combobox) documentation relating to read-only implementation guidelines.
 
-
-## Base
+## Default
 
 A Picklist provides a user with an read-only input field that is accompanied with a listbox of pre-defined options. A picklist has a single and multi-selection pattern.
 
-<CodeView style={{ height: '14rem' }}>
+<CodeView style={{ height: '11rem' }}>
   {Base.default}
 </CodeView>
 
@@ -37,42 +40,44 @@ A Picklist provides a user with an read-only input field that is accompanied wit
 
 ### Focused
 
-<CodeView style={{ height: '14rem' }}>
+<CodeView style={{ height: '11rem' }}>
   {getDisplayElementById(Base.states, 'focused')}
 </CodeView>
 
 ### Open - Item Focused
 
-<CodeView style={{ height: '14rem' }}>
+<CodeView style={{ height: '11rem' }}>
   {getDisplayElementById(Base.states, 'open-item-focused')}
 </CodeView>
 
 ### Open - Option Selected
 
-<CodeView style={{ height: '14rem' }}>
+<CodeView style={{ height: '11rem' }}>
   {getDisplayElementById(Base.states, 'open-option-selected')}
 </CodeView>
 
 ### Open - Options Selected
 
-<CodeView style={{ height: '14rem' }}>
+<CodeView style={{ height: '11rem' }}>
   {getDisplayElementById(Base.states, 'open-options-selected')}
 </CodeView>
 
 ### Closed - Option Selected
 
-<CodeView style={{ height: '14rem' }}>
+<CodeView>
   {getDisplayElementById(Base.states, 'closed-option-selected')}
 </CodeView>
 
 ### Closed - Options Selected
 
-<CodeView style={{ height: '14rem' }}>
+<CodeView>
   {getDisplayElementById(Base.states, 'closed-options-selected')}
 </CodeView>
 
+## Examples
+
 ### Group heading label
 
-<CodeView style={{ height: '14rem' }}>
+<CodeView style={{ height: '13rem' }}>
   {getDisplayElementById(Base.states, 'group-heading')}
 </CodeView>

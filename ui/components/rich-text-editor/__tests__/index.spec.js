@@ -16,8 +16,8 @@ import {
   RteClearFormatting,
   RteTextarea,
   FontFamilyDropdown
-} from '../base/example';
-import { ComboboxContainer } from '../../combobox/base/example';
+} from '../';
+import { DeprecatedCombobox } from '../../combobox/deprecated';
 
 const { matchesMarkup } = createHelpers(__dirname);
 
@@ -38,8 +38,8 @@ const IndentedOutputText = props => (
 
 const ComboboxNonReadOnly = props => (
   <div className="slds-rich-text-editor__select">
-    <ComboboxContainer
-      className="slds-size_x-small"
+    <DeprecatedCombobox
+      className="slds-rich-text-editor__select_x-small"
       id="font-family"
       inputIcon="right"
       inputIconRightSymbol="down"
@@ -124,6 +124,16 @@ it('renders a RTE editor with an error and non-readonly combobox', () =>
       <RteToolbar>
         <RteFormatFont />
         <ComboboxNonReadOnly />
+      </RteToolbar>
+    </RichTextEditor>
+  ));
+
+it('renders a RTE with toolbar only, for touch devices', () =>
+  matchesMarkup(
+    <RichTextEditor isToolbarOnly>
+      <RteToolbar isToolbarOnly>
+        <RteFormatText tabIndexSetting="0" hasTooltip />
+        <RteFormatBody />
       </RteToolbar>
     </RichTextEditor>
   ));

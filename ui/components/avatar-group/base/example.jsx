@@ -47,7 +47,8 @@ export const examples = [
   },
   {
     id: 'with-user-initials-inversed',
-    label: 'With initials',
+    label: 'With initials inversed',
+    demoStyles: 'padding: 0.5rem; background: #16325c',
     element: (
       <AvatarGroup>
         <AvatarGroupContent type="user-initials" isInverse />

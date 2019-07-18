@@ -3,11 +3,11 @@
 
 import React from 'react';
 import {
-  ComboboxContainer,
-  Listbox,
-  ListboxItem,
-  Option
-} from '../../combobox/base/example';
+  DeprecatedCombobox,
+  DeprecatedListbox,
+  DeprecatedListboxItem,
+  DeprecatedOption
+} from '../../combobox/deprecated/';
 import { DatePicker } from '../../datepickers/base/example';
 import ButtonIcon from '../../button-icons/';
 import { FormElement } from '../../form-element';
@@ -36,51 +36,51 @@ const listboxOptionId12 = 'listbox-option-unique-id-12';
 ----------------------------------------------------------------------------- */
 
 const ListboxDropdown = props => (
-  <Listbox
+  <DeprecatedListbox
     listboxClassName="slds-dropdown slds-dropdown_fluid slds-dropdown_length-5"
     vertical
   >
-    <ListboxItem>
-      <Option id={listboxOptionId01} title="6:00am" />
-    </ListboxItem>
-    <ListboxItem>
-      <Option id={listboxOptionId02} title="7:00am" />
-    </ListboxItem>
-    <ListboxItem>
-      <Option
+    <DeprecatedListboxItem>
+      <DeprecatedOption id={listboxOptionId01} title="6:00am" />
+    </DeprecatedListboxItem>
+    <DeprecatedListboxItem>
+      <DeprecatedOption id={listboxOptionId02} title="7:00am" />
+    </DeprecatedListboxItem>
+    <DeprecatedListboxItem>
+      <DeprecatedOption
         id={listboxOptionId03}
         title="8:00am"
         selected={props.optionSelected}
       />
-    </ListboxItem>
-    <ListboxItem>
-      <Option id={listboxOptionId04} title="9:00am" />
-    </ListboxItem>
-    <ListboxItem>
-      <Option id={listboxOptionId05} title="10:00am" />
-    </ListboxItem>
-    <ListboxItem>
-      <Option id={listboxOptionId06} title="11:00am" />
-    </ListboxItem>
-    <ListboxItem>
-      <Option id={listboxOptionId07} title="12:00pm" />
-    </ListboxItem>
-    <ListboxItem>
-      <Option id={listboxOptionId08} title="1:00pm" />
-    </ListboxItem>
-    <ListboxItem>
-      <Option id={listboxOptionId09} title="2:00pm" />
-    </ListboxItem>
-    <ListboxItem>
-      <Option id={listboxOptionId10} title="3:00pm" />
-    </ListboxItem>
-    <ListboxItem>
-      <Option id={listboxOptionId11} title="4:00pm" />
-    </ListboxItem>
-    <ListboxItem>
-      <Option id={listboxOptionId12} title="5:00pm" />
-    </ListboxItem>
-  </Listbox>
+    </DeprecatedListboxItem>
+    <DeprecatedListboxItem>
+      <DeprecatedOption id={listboxOptionId04} title="9:00am" />
+    </DeprecatedListboxItem>
+    <DeprecatedListboxItem>
+      <DeprecatedOption id={listboxOptionId05} title="10:00am" />
+    </DeprecatedListboxItem>
+    <DeprecatedListboxItem>
+      <DeprecatedOption id={listboxOptionId06} title="11:00am" />
+    </DeprecatedListboxItem>
+    <DeprecatedListboxItem>
+      <DeprecatedOption id={listboxOptionId07} title="12:00pm" />
+    </DeprecatedListboxItem>
+    <DeprecatedListboxItem>
+      <DeprecatedOption id={listboxOptionId08} title="1:00pm" />
+    </DeprecatedListboxItem>
+    <DeprecatedListboxItem>
+      <DeprecatedOption id={listboxOptionId09} title="2:00pm" />
+    </DeprecatedListboxItem>
+    <DeprecatedListboxItem>
+      <DeprecatedOption id={listboxOptionId10} title="3:00pm" />
+    </DeprecatedListboxItem>
+    <DeprecatedListboxItem>
+      <DeprecatedOption id={listboxOptionId11} title="4:00pm" />
+    </DeprecatedListboxItem>
+    <DeprecatedListboxItem>
+      <DeprecatedOption id={listboxOptionId12} title="5:00pm" />
+    </DeprecatedListboxItem>
+  </DeprecatedListbox>
 );
 
 /* -----------------------------------------------------------------------------
@@ -117,7 +117,7 @@ export default (
                 title="Select a date"
               />
             </FormElement>
-            <ComboboxContainer
+            <DeprecatedCombobox
               label="Time"
               autocomplete
               className="slds-combobox-picklist slds-timepicker"
@@ -172,7 +172,7 @@ export let states = [
                     title="Select a date"
                   />
                 </FormElement>
-                <ComboboxContainer
+                <DeprecatedCombobox
                   label="Time"
                   autocomplete
                   className="slds-combobox-picklist slds-timepicker"
@@ -226,7 +226,7 @@ export let states = [
                     title="Select a date"
                   />
                 </FormElement>
-                <ComboboxContainer
+                <DeprecatedCombobox
                   label="Time"
                   autocomplete
                   isOpen

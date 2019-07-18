@@ -7481,7 +7481,7 @@ exports[`render deprecated combobox renders a base combobox 1`] = `
             <input
               aria-activedescendant={undefined}
               aria-autocomplete="list"
-              aria-controls="listbox-unique-id"
+              aria-controls={undefined}
               aria-invalid={undefined}
               autoComplete="off"
               className="slds-input slds-combobox__input"
@@ -7658,7 +7658,7 @@ exports[`render deprecated combobox renders a base combobox with closed options 
             <input
               aria-activedescendant={undefined}
               aria-autocomplete="list"
-              aria-controls="listbox-unique-id"
+              aria-controls={undefined}
               aria-invalid={undefined}
               autoComplete="off"
               className="slds-input slds-combobox__input"
@@ -7952,7 +7952,7 @@ exports[`render deprecated combobox renders a base combobox with focus 1`] = `
             <input
               aria-activedescendant={undefined}
               aria-autocomplete="list"
-              aria-controls="listbox-unique-id"
+              aria-controls={undefined}
               aria-invalid={undefined}
               autoComplete="off"
               className="slds-input slds-combobox__input"
@@ -8129,7 +8129,7 @@ exports[`render deprecated combobox renders a base combobox with open item focus
             <input
               aria-activedescendant="listbox-option-unique-id-01"
               aria-autocomplete="list"
-              aria-controls="listbox-unique-id"
+              aria-controls={undefined}
               aria-invalid={undefined}
               autoComplete="off"
               className="slds-input slds-combobox__input"
@@ -8342,7 +8342,7 @@ exports[`render deprecated combobox renders a multi-entity combobox 1`] = `
             <input
               aria-activedescendant={undefined}
               aria-autocomplete="list"
-              aria-controls="listbox-unique-id"
+              aria-controls={undefined}
               aria-invalid={undefined}
               autoComplete="off"
               className="slds-input slds-combobox__input"
@@ -8555,7 +8555,7 @@ exports[`render deprecated combobox renders a multi-entity combobox with focus 1
             <input
               aria-activedescendant={undefined}
               aria-autocomplete="list"
-              aria-controls="listbox-unique-id"
+              aria-controls={undefined}
               aria-invalid={undefined}
               autoComplete="off"
               className="slds-input slds-combobox__input"
@@ -8768,7 +8768,7 @@ exports[`render deprecated combobox renders a multi-entity combobox with focused
             <input
               aria-activedescendant={undefined}
               aria-autocomplete="list"
-              aria-controls="listbox-unique-id"
+              aria-controls={undefined}
               aria-invalid={undefined}
               autoComplete="off"
               className="slds-input slds-combobox__input"
@@ -9098,7 +9098,7 @@ exports[`render deprecated combobox renders a multi-entity combobox with open it
             <input
               aria-activedescendant="listbox-option-unique-id-01"
               aria-autocomplete="list"
-              aria-controls="listbox-unique-id"
+              aria-controls={undefined}
               aria-invalid={undefined}
               autoComplete="off"
               className="slds-input slds-combobox__input"
@@ -9491,7 +9491,7 @@ exports[`render deprecated combobox renders a readonly combobox 1`] = `
             <input
               aria-activedescendant={undefined}
               aria-autocomplete={null}
-              aria-controls="listbox-unique-id"
+              aria-controls={undefined}
               aria-invalid={undefined}
               autoComplete="off"
               className="slds-input slds-combobox__input"
@@ -9673,7 +9673,7 @@ exports[`render deprecated combobox renders a readonly combobox with closed opti
             <input
               aria-activedescendant={undefined}
               aria-autocomplete={null}
-              aria-controls="listbox-unique-id"
+              aria-controls={undefined}
               aria-invalid={undefined}
               autoComplete="off"
               className="slds-input slds-combobox__input slds-combobox__input-value"
@@ -9855,7 +9855,7 @@ exports[`render deprecated combobox renders a readonly combobox with closed opti
             <input
               aria-activedescendant={undefined}
               aria-autocomplete={null}
-              aria-controls="listbox-unique-id"
+              aria-controls={undefined}
               aria-invalid={undefined}
               autoComplete="off"
               className="slds-input slds-combobox__input slds-combobox__input-value"
@@ -10118,7 +10118,7 @@ exports[`render deprecated combobox renders a readonly combobox with focus 1`] =
             <input
               aria-activedescendant={undefined}
               aria-autocomplete={null}
-              aria-controls="listbox-unique-id"
+              aria-controls={undefined}
               aria-invalid={undefined}
               autoComplete="off"
               className="slds-input slds-combobox__input"
@@ -10300,7 +10300,7 @@ exports[`render deprecated combobox renders a readonly combobox with open item f
             <input
               aria-activedescendant="listbox-option-unique-id-01"
               aria-autocomplete={null}
-              aria-controls="listbox-unique-id"
+              aria-controls={undefined}
               aria-invalid={undefined}
               autoComplete="off"
               className="slds-input slds-combobox__input"
@@ -10482,7 +10482,7 @@ exports[`render deprecated combobox renders a readonly combobox with open option
             <input
               aria-activedescendant={undefined}
               aria-autocomplete={null}
-              aria-controls="listbox-unique-id"
+              aria-controls={undefined}
               aria-invalid={undefined}
               autoComplete="off"
               className="slds-input slds-combobox__input slds-combobox__input-value"
@@ -10664,7 +10664,7 @@ exports[`render deprecated combobox renders a readonly combobox with open option
             <input
               aria-activedescendant={undefined}
               aria-autocomplete={null}
-              aria-controls="listbox-unique-id"
+              aria-controls={undefined}
               aria-invalid={undefined}
               autoComplete="off"
               className="slds-input slds-combobox__input slds-combobox__input-value"
@@ -10846,7 +10846,7 @@ exports[`render deprecated combobox renders an inline combobox open item focused
             <input
               aria-activedescendant="listbox-option-unique-id-01"
               aria-autocomplete="list"
-              aria-controls="listbox-unique-id"
+              aria-controls={undefined}
               aria-invalid={undefined}
               autoComplete="off"
               className="slds-input slds-combobox__input"
@@ -11023,7 +11023,7 @@ exports[`render deprecated combobox renders an inline combobox with focus 1`] = 
             <input
               aria-activedescendant={undefined}
               aria-autocomplete="list"
-              aria-controls="listbox-unique-id"
+              aria-controls={undefined}
               aria-invalid={undefined}
               autoComplete="off"
               className="slds-input slds-combobox__input"
@@ -11200,7 +11200,7 @@ exports[`render deprecated combobox renders an inline listbox combobox 1`] = `
             <input
               aria-activedescendant={undefined}
               aria-autocomplete="list"
-              aria-controls="listbox-unique-id"
+              aria-controls={undefined}
               aria-invalid={undefined}
               autoComplete="off"
               className="slds-input slds-combobox__input"
@@ -11395,7 +11395,7 @@ exports[`render deprecated combobox renders an inline listbox combobox with clos
             <input
               aria-activedescendant={undefined}
               aria-autocomplete="list"
-              aria-controls="listbox-unique-id"
+              aria-controls={undefined}
               aria-invalid={undefined}
               autoComplete="off"
               className="slds-input slds-combobox__input slds-combobox__input-value"
@@ -11696,7 +11696,7 @@ exports[`render deprecated combobox renders an inline listbox combobox with focu
             <input
               aria-activedescendant={undefined}
               aria-autocomplete="list"
-              aria-controls="listbox-unique-id"
+              aria-controls={undefined}
               aria-invalid={undefined}
               autoComplete="off"
               className="slds-input slds-combobox__input"
@@ -11990,7 +11990,7 @@ exports[`render deprecated combobox renders an inline listbox combobox with opti
             <input
               aria-activedescendant={undefined}
               aria-autocomplete="list"
-              aria-controls="listbox-unique-id"
+              aria-controls={undefined}
               aria-invalid={undefined}
               autoComplete="off"
               className="slds-input slds-combobox__input"

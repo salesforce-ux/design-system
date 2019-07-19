@@ -211,7 +211,11 @@ export let examples = [
   {
     id: 'email-input',
     label: 'Email Input',
-    element: <Input id="input-url" type="email" placeholder="E-Mail" />
+    element: (
+      <FormElement labelContent="Email" inputId="input-email">
+        <Input id="input-email" type="email" placeholder="E-Mail" />
+      </FormElement>
+    )
   },
   {
     id: 'fixed-text',

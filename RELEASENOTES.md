@@ -92,6 +92,7 @@
 #### Changed
 - Removed default `box-shadow` on `inputs` for Webkit
 - Positioning of icons inside of inputs have been tweaked when on a touch device
+- Added ltr declarations on `url`, `tel`, and `email` type inputs to prevent rtl adjustments from being inherited (these input types should always render ltr)
 
 ### [Map](https://www.lightningdesignsystem.com/components/map)
 #### Changed

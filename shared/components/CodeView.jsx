@@ -8,7 +8,7 @@ import StyledDemo from './StyledDemo';
 
 class CodeView extends React.Component {
   renderChildren() {
-    const { style } = this.props;
+    const { style, isViewport } = this.props;
 
     return (
       <div className="docs-codeblock-example">

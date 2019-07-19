@@ -16,7 +16,6 @@
   position: relative;
   display: inline-flex;
   align-items: center;
-  justify-content: center;
   padding: 0;
   background: transparent;
   background-clip: border-box;
@@ -399,12 +398,13 @@ a.slds-button--inverse:focus {
 }
 
 /**
- * @summary Creates a button style for 100% width that maintains current styling
+ * @summary Creates a button style for 100% width with centered text that maintains current styling
  * @selector .slds-button_stretch
  * @restrict .slds-button
  * @modifier
  * @group size
  */
 .slds-button_stretch {
+  justify-content: center;
   width: 100%;
 }

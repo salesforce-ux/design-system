@@ -137,6 +137,15 @@ export let examples = [
     )
   },
   {
+    id: 'full-width',
+    label: 'Full Width',
+    element: (
+      <Button isFullWidth isNeutral>
+        Full Width Neutral Button
+      </Button>
+    )
+  },
+  {
     id: 'base-link',
     label: 'Base as a Link',
     element: <Button use="a">Base Link</Button>

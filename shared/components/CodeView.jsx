@@ -29,7 +29,7 @@ class CodeView extends React.Component {
   render() {
     const { position, toggleCode, children, exampleOnly } = this.props;
     return (
-      <StyledCodeView>
+      <div className="docs-codeblock">
         {position === 'bottom' ? this.renderChildren() : null}
         {!exampleOnly && (
           <CodeBlock language="html" toggleCode={toggleCode}>
@@ -37,7 +37,7 @@ class CodeView extends React.Component {
           </CodeBlock>
         )}
         {position === 'top' ? this.renderChildren() : null}
-      </StyledCodeView>
+      </div>
     );
   }
 }

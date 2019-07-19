@@ -20,6 +20,7 @@ storiesOf('Components/App Launcher', module).add('Kitchen Sink', () =>
       <StoryFrame
         component={component}
         label={label}
+        styles={`height: 40rem`}
         key={`kitchen-sink-${label}-${idx}`}
       />
     ))

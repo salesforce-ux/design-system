@@ -5,9 +5,7 @@ import LazyLoad from 'react-lazyload';
 
 // We don't use design tokens or SLDS classes for styling here to prevent false failed tests for unrelated changes,
 // this styling is cosmetic for Storybook only
-const Wrapper = styled.div.attrs(props => ({
-  padding: props.isFullBleed ? 0 : '1rem'
-}))`
+const Wrapper = styled.div`
   border: solid 3px #f2f2f2;
 
   & + & {
@@ -15,9 +13,7 @@ const Wrapper = styled.div.attrs(props => ({
   }
 `;
 
-const Label = styled.h2.attrs(props => ({
-  margin: props.isFullBleed ? '0 0 1rem' : '-1rem -1rem 1rem'
-}))`
+const Label = styled.h2`
   border-bottom: solid 3px #f2f2f2;
   font-size: 0.75rem;
   padding: 0.5rem 1rem;
@@ -26,6 +22,7 @@ const Label = styled.h2.attrs(props => ({
 const Example = styled.div`
   transform: translate3d(0, 0, 0);
   position: ${props => props.isViewport && 'relative'};
+  padding: ${props => (props.isFullBleed ? '0' : '1rem')};
   ${props => props.styles}
 
   > * {
@@ -38,10 +35,14 @@ const StoryFrame = props => {
   const { component, label, isViewport, styles, isFullBleed } = props;
 
   return (
-    <LazyLoad height={200} offset={[-200, 0]}>
-      <Wrapper isFullBleed={isFullBleed}>
+    <LazyLoad height={200} offset={100}>
+      <Wrapper>
         <Label>{label}</Label>
-        <Example isViewport={isViewport} styles={styles}>
+        <Example
+          isViewport={isViewport}
+          styles={styles}
+          isFullBleed={isFullBleed}
+        >
           {component}
         </Example>
       </Wrapper>

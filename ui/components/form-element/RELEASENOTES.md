@@ -12,6 +12,7 @@
 - On touch devices, increase the tap target size of `.slds-form-element__label` to `$$height-tappable-small`, center with flex, and increase `font-size` to `$font-size-4`
 - On touch devices, set the tap target height of button-icons to `$height-tappable-small` when inline with label text
 - On touch devices, increase the font size of `.slds-form-element__static` to `$font-size-5`
+- On touch devices and within `.slds-form-element_readonly`, increase the size of `.slds-icon` to `$square-tappable-x-small` and increase the height of `.slds-form-element__control` to `$height-tappable` which aligns `.slds-form-element_readonly`'s touch height to other form elements
 
 ## 2.8.1
 

@@ -1,7 +1,7 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-import React from 'react';
+import React, { Fragment } from 'react';
 import SvgIcon from '../../../shared/svg-icon';
 import { Modal, ModalHeader, ModalContent } from '../../modals/base/example';
 import {
@@ -14,6 +14,12 @@ import { Avatar } from '../../avatar/base/example';
 import { ButtonIconStateful } from '../../button-icons/stateful/example';
 import { Tooltip } from '../../tooltips/base/example';
 import classNames from 'classnames';
+
+const exampleDemoStyles = 'height: 800px;';
+
+export const Context = props => (
+  <div style={{ height: '800px' }}>{props.children}</div>
+);
 
 /// ///////////////////////////////////////////
 // Partial(s)
@@ -303,23 +309,32 @@ export const appTilesMoved = moveItemPosition(appTiles, 0, 2);
 appTilesMoved[2] = Object.assign({}, appTilesMoved[2], { grabbed: true });
 export const appTilesDropped = moveItemPosition(appTiles, 0, 3);
 
-export default (
-  <div className="demo-only" style={{ height: '800px' }}>
+const defaultComponent = (
+  <Fragment>
     <AppLauncherModal
       appTiles={appTiles}
       dragDropLiveRegion=""
       itemTiles={itemTiles}
     />
     <div className="slds-backdrop slds-backdrop_open" />
-  </div>
+  </Fragment>
 );
+
+export default defaultComponent;
 
 export let states = [
   {
+    id: 'default',
+    label: 'Default',
+    demoStyles: exampleDemoStyles,
+    element: defaultComponent
+  },
+  {
     id: 'grabbed',
     label: 'Tile grabbed',
+    demoStyles: exampleDemoStyles,
     element: (
-      <div className="demo-only" style={{ height: '800px' }}>
+      <Fragment>
         <AppLauncherModal
           appTiles={appTilesGrabbed}
           dragDropLiveRegion="Sales Cloud: current position 1 of 6. Use the up and down arrows to move this app"
@@ -327,42 +342,45 @@ export let states = [
           itemTiles={itemTiles}
         />
         <div className="slds-backdrop slds-backdrop_open" />
-      </div>
+      </Fragment>
     )
   },
   {
     id: 'moved',
     label: 'Tile moved in list',
+    demoStyles: exampleDemoStyles,
     element: (
-      <div className="demo-only" style={{ height: '800px' }}>
+      <Fragment>
         <AppLauncherModal
           appTiles={appTilesMoved}
           dragDropLiveRegion="Sales Cloud: new position 3 of 6."
           itemTiles={itemTiles}
         />
         <div className="slds-backdrop slds-backdrop_open" />
-      </div>
+      </Fragment>
     )
   },
   {
     id: 'dropped',
     label: 'Tile dropped',
+    demoStyles: exampleDemoStyles,
     element: (
-      <div className="demo-only" style={{ height: '800px' }}>
+      <Fragment>
         <AppLauncherModal
           appTiles={appTilesDropped}
           dragDropLiveRegion="Sales Cloud: final position 4 of 6."
           itemTiles={itemTiles}
         />
         <div className="slds-backdrop slds-backdrop_open" />
-      </div>
+      </Fragment>
     )
   },
   {
     id: 'search',
     label: 'Search',
+    demoStyles: exampleDemoStyles,
     element: (
-      <div className="demo-only" style={{ height: '800px' }}>
+      <Fragment>
         <AppLauncherModal
           appTiles={appTilesSearch}
           dragDropLiveRegion=""
@@ -370,12 +388,13 @@ export let states = [
           searchTerm="sales"
         />
         <div className="slds-backdrop slds-backdrop_open" />
-      </div>
+      </Fragment>
     )
   },
   {
     id: 'tooltip',
     label: 'Tooltip',
+    demoStyles: 'width: 360px; height: 135px;',
     element: (
       <AppLauncherTile
         figureClass="slds-icon-custom-27"

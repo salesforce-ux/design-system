@@ -463,7 +463,7 @@ export let examples = [
   },
   {
     id: 'nested-with-boundary',
-    label: 'Nested with no boundary',
+    label: 'Nested with boundary',
     element: (
       <Card>
         <CardHeader

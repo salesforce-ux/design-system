@@ -170,7 +170,7 @@ export let states = [
   },
   {
     id: 'dynamic-menu-sub-10-item',
-    label: 'Dynamic Menu — <10 Items',
+    label: 'Dynamic Menu — Less Than 10 Items',
     element: (
       <div
         className="demo-only"
@@ -190,7 +190,7 @@ export let states = [
   },
   {
     id: 'dynamic-menu-over-10-item',
-    label: 'Dynamic Menu — >10 Items',
+    label: 'Dynamic Menu — Greater Than 10 Items',
     element: (
       <div
         className="demo-only"

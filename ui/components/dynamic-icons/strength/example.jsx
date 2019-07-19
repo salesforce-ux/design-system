@@ -30,17 +30,17 @@ export let states = [
   },
   {
     id: 'strength-negative-1',
-    label: 'Strength: -1',
+    label: 'Strength: Neg 1',
     element: <Strength data-slds-strength="-1" />
   },
   {
     id: 'strength-negative-2',
-    label: 'Strength: -2',
+    label: 'Strength: Neg 2',
     element: <Strength data-slds-strength="-2" />
   },
   {
     id: 'strength-negative-3',
-    label: 'Strength: -3',
+    label: 'Strength: Neg 3',
     element: <Strength data-slds-strength="-3" />
   },
   {

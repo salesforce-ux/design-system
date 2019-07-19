@@ -33,6 +33,7 @@
   vertical-align: middle;
   justify-content: center;
   color: $color-text-icon-default;
+  flex-shrink: 0;
 
   @include touch-device {
     @include square($button-icon-boundary-touch);

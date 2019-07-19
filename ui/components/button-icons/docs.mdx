@@ -22,9 +22,15 @@ import _, { getDisplayElementById } from '../../shared/helpers';
 
 ## About Button Icons
 
+Button icons are button elements that represent their behavior with an [icon](/components/icon) instead of text.  The button itself should have the classes `slds-button` and `slds-button_icon`, while the svg icon has `slds-button__icon` on it.
+
+Some styling variations require the button to receive additional 'container' classes that remove the button styling and/or add borders. See below for more detail.
+
 ### Accessibility
 
-If an icon button doesn’t include a label, use a <code className="doc">title</code> attribute to show on hover for sighted users, and a span with class <code className="doc">slds-assistive-text</code> to describe the button's action for screen readers.
+If an icon button doesn’t include a label, use a `title` attribute to show on hover for sighted users, and a span with class `slds-assistive-text` to describe the button's action for screen readers.
+
+When using assistive text, the icon element itself should have `aria-hidden` set to `true`.
 
 ## Base
 <CodeView toggleCode={false}>
@@ -47,13 +53,13 @@ If an icon button doesn’t include a label, use a <code className="doc">title</
 
 ### Icon Containers
 
-Icon containers create a button that looks like a plain icon.
+Icon containers remove button styling from the button, leaving a bare icon.
 
 For a bare icon with transparent container, add `slds-button_icon-container` to the `<button>`. To add a border, use the `slds-button_icon-border` class instead.
 
 For a neutral themed button icon, with border and a filled background, use the `slds-button_icon-border-filled` class to the `slds-button` class.
 
-Use the inverse button on dark backgrounds. Add the `slds-button_inverse` class to the `slds-button` class.
+Use the inverse button on dark backgrounds by adding the `slds-button_inverse` class to the `slds-button` class.
 
 <DisplayGrid>
   <DisplayColumn>

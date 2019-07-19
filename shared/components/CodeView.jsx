@@ -4,12 +4,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import CodeBlock from './CodeBlock';
-import { StyledCodeView } from '../styles/CodeBlock';
-import styled from 'styled-components';
-
-const StyledDemo = styled.div`
-  ${props => props.styles};
-`;
+import StyledDemo from './StyledDemo';
 
 class CodeView extends React.Component {
   renderChildren() {
@@ -17,7 +12,16 @@ class CodeView extends React.Component {
 
     return (
       <div className="docs-codeblock-example">
-        <StyledDemo styles={style}>{this.props.children}</StyledDemo>
+        {style ? (
+          <StyledDemo
+            className={isViewport && 'demo-only demo-only_viewport'}
+            styles={style}
+          >
+            {this.props.children}
+          </StyledDemo>
+        ) : (
+          this.props.children
+        )}
       </div>
     );
   }
@@ -41,7 +45,8 @@ class CodeView extends React.Component {
 CodeView.propTypes = {
   children: PropTypes.node,
   position: PropTypes.oneOf(['top', 'bottom']),
-  style: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+  style: PropTypes.string,
+  isViewport: PropTypes.bool,
   toggleCode: PropTypes.bool,
   exampleOnly: PropTypes.bool
 };

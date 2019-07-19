@@ -7,7 +7,6 @@ import LazyLoad from 'react-lazyload';
 // this styling is cosmetic for Storybook only
 const Wrapper = styled.div`
   border: solid 3px #f2f2f2;
-  padding: 1rem;
 
   & + & {
     margin-top: 1.25rem;
@@ -17,13 +16,13 @@ const Wrapper = styled.div`
 const Label = styled.h2`
   border-bottom: solid 3px #f2f2f2;
   font-size: 0.75rem;
-  margin: -1rem -1rem 1rem;
   padding: 0.5rem 1rem;
 `;
 
 const Example = styled.div`
   transform: translate3d(0, 0, 0);
   position: ${props => props.isViewport && 'relative'};
+  padding: ${props => (props.isFullBleed ? '0' : '1rem')};
   ${props => props.styles}
 
   > * {
@@ -32,16 +31,24 @@ const Example = styled.div`
 `;
 
 // A bit barebones at the moment but in place for future extensibility
-const StoryFrame = ({ component, label, isViewport, styles }) => (
-  <LazyLoad height={200} offset={[-200, 0]}>
-    <Wrapper>
-      <Label>{label}</Label>
-      <Example isViewport={isViewport} styles={styles}>
-        {component}
-      </Example>
-    </Wrapper>
-  </LazyLoad>
-);
+const StoryFrame = props => {
+  const { component, label, isViewport, styles, isFullBleed } = props;
+
+  return (
+    <LazyLoad height={200} offset={100}>
+      <Wrapper>
+        <Label>{label}</Label>
+        <Example
+          isViewport={isViewport}
+          styles={styles}
+          isFullBleed={isFullBleed}
+        >
+          {component}
+        </Example>
+      </Wrapper>
+    </LazyLoad>
+  );
+};
 
 StoryFrame.propTypes = {
   component: PropTypes.node,

@@ -129,11 +129,22 @@
   .slds-form-element__control {
     padding-top: $spacing-xxx-small;
     padding-bottom: $spacing-xxx-small;
+
+    @include touch-device {
+      @include flex-vertical-center;
+      min-height: $height-tappable; // Makes height consistent with other checkbox variants
+    }
   }
 
   // We want no spacing in read only and allow line-height to handle white-space
   .slds-form-element__label {
     margin-bottom: 0;
+  }
+
+  .slds-icon {
+    @include touch-device {
+      @include square($square-tappable-x-small);
+    }
   }
 }
 
@@ -171,6 +182,10 @@
   font-weight: $input-static-font-weight;
   color: $input-static-color;
   width: 100%;
+
+  @include touch-device {
+    font-size: $font-size-5;
+  }
 
   &.slds-text-longform *:last-child {
     margin-bottom: 0;

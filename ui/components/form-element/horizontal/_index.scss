@@ -66,12 +66,24 @@
       margin-bottom: 0;
       position: relative;
       z-index: 1;
+
+      @include touch-device {
+        display: block; // Don't need flex behavior for horizontal variant
+        max-width: calc(33% - #{$square-tappable}); // Remove the width of touch icon dimensions
+        flex-basis: calc(33% - #{$square-tappable}); // Remove the width of touch icon dimensions
+        padding-top: $spacing-xx-small;
+      }
     }
 
     // Handle control - default behavior
     .slds-form-element__control {
       padding-left: 33%;
       clear: none; // Reset clear: left when switching to horizontal form layout
+
+      @include touch-device {
+        display: block; // Flex behavior is not needed for horizontal variant
+        min-height: 0; // Min-height only needed for stacked vertical rhythm
+      }
 
       .slds-form-element__control {
         padding-left: 0; // Remove left padding on nested form controls, due to issues related to lightning-form components
@@ -82,11 +94,21 @@
     .slds-form-element__icon {
       float: left;
       padding-top: $spacing-xx-small;
+
+      @include touch-device {
+        padding-top: 0; // Icon size is larger in touch, don't need extra spacing
+      }
     }
 
     // Handle checkbox
     .slds-checkbox_standalone {
       padding: $spacing-xx-small 0;
+    }
+
+    .slds-checkbox__label {
+      @include touch-device {
+        display: block; // Horizontal variant doesn't need vertical centering / Messes up .slds-form-element__label width
+      }
     }
 
     // Since the HTML differs for checkbox and radio groups, adjust the display behavior
@@ -131,6 +153,12 @@
       .slds-input__icon_left {
         left: calc(33% + #{$spacing-small});
       }
+    }
+  }
+
+  .slds-button_icon {
+    @include touch-device {
+      vertical-align: top; // Makes our vertical spacing more predictable in horizontal variant
     }
   }
 }

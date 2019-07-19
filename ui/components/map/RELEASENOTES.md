@@ -4,6 +4,14 @@
 
 <!-- ## [Unreleased] -->
 
+## 2.10.0
+
+### Changed
+
+- Adjusted padding around map on touch devices
+- Removed height restriction on `.slds-has-coordinates` on touch devices to prevent internal scrolling of long lists
+- Increased font size of `.slds-coordinates__title` on touch devices
+
 ## 2.7.0
 
 ### Added

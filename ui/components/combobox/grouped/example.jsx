@@ -3,7 +3,7 @@
 
 import React from 'react';
 import Combobox, { ComboboxGroup } from '../';
-import ObjectSwitcher from '../object-switcher/';
+import ObjectSwitcher, { IconObjectSwitcher } from '../object-switcher/';
 import Listbox from '../listbox/';
 import ListboxOfSelections from '../listbox-of-pills/';
 import { UtilityIcon } from '../../icons/base/example';
@@ -11,25 +11,22 @@ import * as Snapshot from '../snapshots.data';
 import _ from '../../../shared/helpers';
 
 const ComboboxId = _.uniqueId('combobox-id-');
-const ObjectSwitcherComboboxId = _.uniqueId('object-switcher-combobox-id-');
 const PrimaryComboboxId = _.uniqueId('primary-combobox-id-');
 const ListboxId = _.uniqueId('listbox-id-');
 
 export const Context = props => (
-  <div style={{ width: '600px', maxWidth: '100%', height: '240px' }}>
-    {props.children}
-  </div>
+  <div style={{ height: '240px' }}>{props.children}</div>
 );
 
 export default (
   <ComboboxGroup
-    id={ComboboxId}
-    aria-controls={ListboxId}
-    comboboxID={PrimaryComboboxId}
+    id={_.uniqueId('combobox-id-')}
+    aria-controls="listbox-id-20"
+    comboboxID="primary-combobox-id-1"
     autocomplete
     results={
       <Listbox
-        id={ListboxId}
+        id="listbox-id-20"
         snapshot={Snapshot.EntityOptions}
         type="entity"
         count={4}
@@ -38,11 +35,11 @@ export default (
     resultsType="listbox"
     addon={
       <ObjectSwitcher
-        id={ObjectSwitcherComboboxId}
+        id={_.uniqueId('combobox-id-')}
         value="Accounts"
         addonPosition="start"
         hasInteractions
-        comboboxAriaControls={PrimaryComboboxId}
+        comboboxAriaControls="primary-combobox-id-1"
       />
     }
     addonPosition="start"
@@ -63,18 +60,61 @@ export default (
 
 export let states = [
   {
+    id: 'focused-open',
+    label: 'Focused - Open',
+    element: (
+      <ComboboxGroup
+        id={_.uniqueId('combobox-id-')}
+        aria-controls="listbox-id-21"
+        comboboxID="primary-combobox-id-2"
+        autocomplete
+        results={
+          <Listbox
+            id="listbox-id-21"
+            snapshot={Snapshot.EntityOptions}
+            type="entity"
+            count={4}
+          />
+        }
+        resultsType="listbox"
+        isOpen
+        hasFocus
+        addon={
+          <ObjectSwitcher
+            id={_.uniqueId('combobox-id-')}
+            value="Accounts"
+            addonPosition="start"
+            comboboxAriaControls="primary-combobox-id-2"
+          />
+        }
+        addonPosition="start"
+        comboboxPosition="end"
+        inputIconPosition="right"
+        rightInputIcon={
+          <UtilityIcon
+            symbol="search"
+            className="slds-icon slds-icon_x-small slds-icon-text-default"
+            containerClassName="slds-input__icon slds-input__icon_right"
+            assistiveText={false}
+            title={false}
+          />
+        }
+      />
+    )
+  },
+  {
     id: 'typeahead',
     label: 'Typeahead',
     element: (
       <ComboboxGroup
-        id={ComboboxId}
+        id={_.uniqueId('combobox-id-')}
         aria-activedescendant="option0"
-        aria-controls={ListboxId}
-        comboboxID={PrimaryComboboxId}
+        aria-controls="listbox-id-22"
+        comboboxID="primary-combobox-id-2"
         autocomplete
         results={
           <Listbox
-            id={ListboxId}
+            id="listbox-id-22"
             snapshot={Snapshot.EntityOptionsTypeahead}
             term="salesforce"
             type="entity"
@@ -87,10 +127,10 @@ export let states = [
         hasFocus
         addon={
           <ObjectSwitcher
-            id={ObjectSwitcherComboboxId}
+            id={_.uniqueId('combobox-id-')}
             value="Accounts"
             addonPosition="start"
-            comboboxAriaControls={PrimaryComboboxId}
+            comboboxAriaControls="primary-combobox-id-2"
           />
         }
         addonPosition="start"
@@ -113,14 +153,14 @@ export let states = [
     label: 'Typeahead - Loading',
     element: (
       <ComboboxGroup
-        id={ComboboxId}
+        id={_.uniqueId('combobox-id-')}
         aria-activedescendant="option0"
-        aria-controls={ListboxId}
-        comboboxID={PrimaryComboboxId}
+        aria-controls="listbox-id-23"
+        comboboxID="primary-combobox-id-2"
         autocomplete
         results={
           <Listbox
-            id={ListboxId}
+            id="listbox-id-23"
             snapshot={Snapshot.EntityOptionsTypeahead}
             term="salesforce"
             type="entity"
@@ -135,10 +175,10 @@ export let states = [
         hasFocus
         addon={
           <ObjectSwitcher
-            id={ObjectSwitcherComboboxId}
+            id={_.uniqueId('combobox-id-')}
             value="Accounts"
             addonPosition="start"
-            comboboxAriaControls={PrimaryComboboxId}
+            comboboxAriaControls="primary-combobox-id-2"
           />
         }
         addonPosition="start"
@@ -148,29 +188,77 @@ export let states = [
     )
   },
   {
-    id: 'selecting-options',
-    label: 'Selecting Options',
+    id: 'selected-options',
+    label: 'Selected Options',
     element: (
       <ComboboxGroup
-        id={ComboboxId}
-        aria-controls={ListboxId}
-        comboboxID={PrimaryComboboxId}
+        id={_.uniqueId('combobox-id-')}
+        aria-controls="listbox-id-24"
+        comboboxID="primary-combobox-id-3"
         autocomplete
         results={
           <Listbox
-            id={ListboxId}
+            id="listbox-id-24"
             snapshot={Snapshot.EntityOptions}
             type="entity"
             count={4}
           />
         }
         resultsType="listbox"
+        hasFocus
         addon={
           <ObjectSwitcher
-            id={ObjectSwitcherComboboxId}
+            id={_.uniqueId('combobox-id-')}
             value="Accounts"
             addonPosition="start"
-            comboboxAriaControls={PrimaryComboboxId}
+            comboboxAriaControls="primary-combobox-id-3"
+          />
+        }
+        addonPosition="start"
+        comboboxPosition="end"
+        inputIconPosition="right"
+        rightInputIcon={
+          <UtilityIcon
+            symbol="search"
+            className="slds-icon slds-icon_x-small slds-icon-text-default"
+            containerClassName="slds-input__icon slds-input__icon_right"
+            assistiveText={false}
+            title={false}
+          />
+        }
+        hasSelection
+        listboxOfSelections={
+          <ListboxOfSelections snapshot={Snapshot.EntitySelections} count={2} />
+        }
+      />
+    )
+  },
+  {
+    id: 'selected-options-open',
+    label: 'Selected Options - Open',
+    element: (
+      <ComboboxGroup
+        id={_.uniqueId('combobox-id-')}
+        aria-controls="listbox-id-25"
+        comboboxID="primary-combobox-id-4"
+        autocomplete
+        results={
+          <Listbox
+            id="listbox-id-25"
+            snapshot={Snapshot.EntityOptions}
+            type="entity"
+            count={4}
+          />
+        }
+        resultsType="listbox"
+        isOpen
+        hasFocus
+        addon={
+          <ObjectSwitcher
+            id={_.uniqueId('combobox-id-')}
+            value="Accounts"
+            addonPosition="start"
+            comboboxAriaControls="primary-combobox-id-4"
           />
         }
         addonPosition="start"
@@ -194,16 +282,16 @@ export let states = [
   },
   {
     id: 'overflow-collapsed',
-    label: 'Selections - Overflowed - Collapsed',
+    label: 'Selections in container - Overflowed - Collapsed',
     element: (
       <ComboboxGroup
-        id={ComboboxId}
-        aria-controls={ListboxId}
-        comboboxID={PrimaryComboboxId}
+        id={_.uniqueId('combobox-id-')}
+        aria-controls="listbox-id-26"
+        comboboxID="primary-combobox-id-5"
         autocomplete
         results={
           <Listbox
-            id={ListboxId}
+            id="listbox-id-26"
             snapshot={Snapshot.EntityOptions}
             type="entity"
             count={4}
@@ -212,10 +300,10 @@ export let states = [
         resultsType="listbox"
         addon={
           <ObjectSwitcher
-            id={ObjectSwitcherComboboxId}
+            id={_.uniqueId('combobox-id-')}
             value="Accounts"
             addonPosition="start"
-            comboboxAriaControls={PrimaryComboboxId}
+            comboboxAriaControls="primary-combobox-id-5"
           />
         }
         addonPosition="start"
@@ -239,28 +327,29 @@ export let states = [
   },
   {
     id: 'overflow-expanded',
-    label: 'Selections - Overflowed - Expanded',
+    label: 'Selections in container - Overflowed - Expanded',
     element: (
       <ComboboxGroup
-        id={ComboboxId}
-        aria-controls={ListboxId}
-        comboboxID={PrimaryComboboxId}
+        id={_.uniqueId('combobox-id-')}
+        aria-controls="listbox-id-27"
+        comboboxID="primary-combobox-id-6"
         autocomplete
         results={
           <Listbox
-            id={ListboxId}
+            id="listbox-id-27"
             snapshot={Snapshot.EntityOptions}
             type="entity"
             count={4}
           />
         }
         resultsType="listbox"
+        hasFocus
         addon={
           <ObjectSwitcher
-            id={ObjectSwitcherComboboxId}
+            id={_.uniqueId('combobox-id-')}
             value="Accounts"
             addonPosition="start"
-            comboboxAriaControls={PrimaryComboboxId}
+            comboboxAriaControls="primary-combobox-id-6"
           />
         }
         addonPosition="start"
@@ -288,7 +377,7 @@ export let states = [
   },
   {
     id: 'non-grouped-overflow-collapsed',
-    label: 'Selections - Overflowed - Expanded',
+    label: 'Selections - Collapsed',
     element: (
       <Combobox
         id={ComboboxId}
@@ -323,7 +412,7 @@ export let states = [
   },
   {
     id: 'non-grouped-overflow-expanded',
-    label: 'Selections - Overflowed - Expanded',
+    label: 'Selections - Expanded',
     element: (
       <Combobox
         id={ComboboxId}
@@ -355,6 +444,135 @@ export let states = [
             snapshot={Snapshot.EntitySelections}
             count={8}
             isExpanded
+          />
+        }
+      />
+    )
+  },
+  {
+    id: 'scoping-results-focused',
+    label: 'Scoping results - Focused',
+    element: (
+      <ComboboxGroup
+        id={_.uniqueId('combobox-id-')}
+        aria-controls="listbox-id-28"
+        comboboxID="primary-combobox-id-7"
+        autocomplete
+        results={
+          <Listbox
+            id="listbox-id-28"
+            snapshot={Snapshot.EntityOptions}
+            type="entity"
+            count={2}
+          />
+        }
+        addon={
+          <ObjectSwitcher
+            id={_.uniqueId('combobox-id-')}
+            value="Accounts"
+            addonPosition="start"
+            isOpen
+            hasFocus
+            comboboxAriaControls="primary-combobox-id-7"
+          />
+        }
+        resultsType="listbox"
+        addonPosition="start"
+        comboboxPosition="end"
+        inputIconPosition="right"
+        rightInputIcon={
+          <UtilityIcon
+            symbol="search"
+            className="slds-icon slds-icon_x-small slds-icon-text-default"
+            containerClassName="slds-input__icon slds-input__icon_right"
+            assistiveText={false}
+            title={false}
+          />
+        }
+      />
+    )
+  },
+  {
+    id: 'scoping-results-icon',
+    label: 'Scoping results - Icon variant',
+    element: (
+      <ComboboxGroup
+        id={_.uniqueId('combobox-id-')}
+        aria-controls="listbox-id-29"
+        comboboxID="primary-combobox-id-9"
+        autocomplete
+        results={
+          <Listbox
+            id="listbox-id-29"
+            snapshot={Snapshot.EntityOptions}
+            type="entity"
+            count={2}
+          />
+        }
+        resultsType="listbox"
+        addon={
+          <IconObjectSwitcher
+            id={_.uniqueId('combobox-id-')}
+            value="Apex"
+            filteredSymbol="apex"
+            addonPosition="start"
+            comboboxAriaControls="primary-combobox-id-9"
+          />
+        }
+        addonPosition="start"
+        comboboxPosition="end"
+        inputIconPosition="right"
+        rightInputIcon={
+          <UtilityIcon
+            symbol="search"
+            className="slds-icon slds-icon_x-small slds-icon-text-default"
+            containerClassName="slds-input__icon slds-input__icon_right"
+            assistiveText={false}
+            title={false}
+          />
+        }
+      />
+    )
+  },
+  {
+    id: 'scoping-results-icon-focused',
+    label: 'Scoping results - Icon variant - Focused',
+    element: (
+      <ComboboxGroup
+        id={_.uniqueId('combobox-id-')}
+        aria-controls="listbox-id-30"
+        comboboxID="primary-combobox-id-8"
+        autocomplete
+        results={
+          <Listbox
+            id="listbox-id-30"
+            snapshot={Snapshot.EntityOptions}
+            type="entity"
+            count={2}
+          />
+        }
+        resultsType="listbox"
+        addon={
+          <IconObjectSwitcher
+            id={_.uniqueId('combobox-id-')}
+            value="Apex"
+            filteredSymbol="apex"
+            addonPosition="start"
+            isOpen
+            hasFocus
+            comboboxAriaControls="primary-combobox-id-8"
+          />
+        }
+        addonPosition="start"
+        comboboxPosition="end"
+        inputIconPosition="right"
+        rightInputIcon={
+          <UtilityIcon
+            symbol="search"
+            className="slds-icon slds-icon_x-small slds-icon-text-default"
+            containerClassName="slds-input__icon slds-input__icon_right"
+            assistiveText={false}
+            title={false}
           />
         }
       />

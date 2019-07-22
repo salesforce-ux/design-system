@@ -30,6 +30,10 @@
 - On touch devices, set size of `.slds-button__icon` to `$square-icon-medium-content`
 - `justify-content: center` is now applied to the stretch variant `.slds-button_stretch`
 
+### [Cards](https://www.lightningdesignsystem.com/components/cards)
+#### Changed
+- Visually remove border and set border-radius to zero on touch devices
+
 ### [Checkbox](https://www.lightningdesignsystem.com/components/checkbox)
 #### Changed
 - For touch devices, increase size of faux checkbox to `$square-tappable-x-small`

@@ -5,6 +5,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import CodeBlock from './CodeBlock';
 import StyledDemo from './StyledDemo';
+import { StyledCodeView } from '../styles/CodeBlock';
 
 class CodeView extends React.Component {
   renderChildren() {
@@ -29,7 +30,7 @@ class CodeView extends React.Component {
   render() {
     const { position, toggleCode, children, exampleOnly } = this.props;
     return (
-      <div className="docs-codeblock">
+      <StyledCodeView>
         {position === 'bottom' ? this.renderChildren() : null}
         {!exampleOnly && (
           <CodeBlock language="html" toggleCode={toggleCode}>
@@ -37,7 +38,7 @@ class CodeView extends React.Component {
           </CodeBlock>
         )}
         {position === 'top' ? this.renderChildren() : null}
-      </div>
+      </StyledCodeView>
     );
   }
 }

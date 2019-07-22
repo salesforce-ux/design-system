@@ -14,8 +14,10 @@
 
 - Removed default `box-shadow` on `inputs` for Webkit
 - Positioning of icons inside of inputs have been tweaked when on a touch device
+- Added ltr declarations on `url`, `tel`, and `email` type inputs to prevent rtl adjustments from being inherited (these input types should always render ltr)
 
 ## 2.8.0
 
 ### Fixed
+
 - Resolved issue where `slds-input__icon_left` and `.slds-input__icon` elements were positioned over labels when in horizontal form elements

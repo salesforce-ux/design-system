@@ -613,3 +613,13 @@ props:
     value: '#04844b'
   ENTITLEMENT_POLICY:
     value: '#04844b'
+  APP:
+    value: '#fcb95b'
+  CHART:
+    value: '#1fcaa0'
+  DASHBOARD_EA:
+    value: '#7e8be4'
+  DATASET:
+    value: '#b070e6'
+  STORY:
+    value: '#54698d'

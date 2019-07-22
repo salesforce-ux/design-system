@@ -20,7 +20,7 @@ exports[`treegrid default rows should remove the selection column 1`] = `
       <button
         aria-haspopup={undefined}
         aria-hidden="true"
-        className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small slds-is-disabled"
+        className="slds-button slds-button_icon slds-button_icon-x-small slds-m-right_x-small slds-is-disabled"
         id={undefined}
         tabIndex="-1"
         title="Expand Rewis Inc"
@@ -174,7 +174,7 @@ exports[`treegrid default rows should remove the selection column 1`] = `
       <button
         aria-haspopup={undefined}
         aria-hidden="true"
-        className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small slds-is-disabled"
+        className="slds-button slds-button_icon slds-button_icon-x-small slds-m-right_x-small slds-is-disabled"
         id={undefined}
         tabIndex="-1"
         title="Expand Acme Corporation"
@@ -329,7 +329,7 @@ exports[`treegrid default rows should remove the selection column 1`] = `
       <button
         aria-haspopup={undefined}
         aria-hidden="true"
-        className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small"
+        className="slds-button slds-button_icon slds-button_icon-x-small slds-m-right_x-small"
         id={undefined}
         tabIndex="-1"
         title="Expand Rohde Enterprises"
@@ -483,7 +483,7 @@ exports[`treegrid default rows should remove the selection column 1`] = `
       <button
         aria-haspopup={undefined}
         aria-hidden="true"
-        className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small slds-is-disabled"
+        className="slds-button slds-button_icon slds-button_icon-x-small slds-m-right_x-small slds-is-disabled"
         id={undefined}
         tabIndex="-1"
         title="Expand Cheese Corp"
@@ -685,7 +685,7 @@ exports[`treegrid default rows should render with children 1`] = `
       <button
         aria-haspopup={undefined}
         aria-hidden="true"
-        className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small slds-is-disabled"
+        className="slds-button slds-button_icon slds-button_icon-x-small slds-m-right_x-small slds-is-disabled"
         id={undefined}
         tabIndex="-1"
         title="Expand Rewis Inc"
@@ -882,7 +882,7 @@ exports[`treegrid default rows should render with children 1`] = `
       <button
         aria-haspopup={undefined}
         aria-hidden="true"
-        className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small slds-is-disabled"
+        className="slds-button slds-button_icon slds-button_icon-x-small slds-m-right_x-small slds-is-disabled"
         id={undefined}
         tabIndex="-1"
         title="Expand Acme Corporation"
@@ -1080,7 +1080,7 @@ exports[`treegrid default rows should render with children 1`] = `
       <button
         aria-haspopup={undefined}
         aria-hidden="true"
-        className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small"
+        className="slds-button slds-button_icon slds-button_icon-x-small slds-m-right_x-small"
         id={undefined}
         tabIndex="-1"
         title="Expand Rohde Enterprises"
@@ -1277,7 +1277,7 @@ exports[`treegrid default rows should render with children 1`] = `
       <button
         aria-haspopup={undefined}
         aria-hidden="true"
-        className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small slds-is-disabled"
+        className="slds-button slds-button_icon slds-button_icon-x-small slds-m-right_x-small slds-is-disabled"
         id={undefined}
         tabIndex="-1"
         title="Expand Cheese Corp"
@@ -1479,7 +1479,7 @@ exports[`treegrid default rows should show a selected row 1`] = `
       <button
         aria-haspopup={undefined}
         aria-hidden="true"
-        className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small slds-is-disabled"
+        className="slds-button slds-button_icon slds-button_icon-x-small slds-m-right_x-small slds-is-disabled"
         id={undefined}
         tabIndex="-1"
         title="Expand Rewis Inc"
@@ -1676,7 +1676,7 @@ exports[`treegrid default rows should show a selected row 1`] = `
       <button
         aria-haspopup={undefined}
         aria-hidden="true"
-        className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small slds-is-disabled"
+        className="slds-button slds-button_icon slds-button_icon-x-small slds-m-right_x-small slds-is-disabled"
         id={undefined}
         tabIndex="-1"
         title="Expand Acme Corporation"
@@ -1874,7 +1874,7 @@ exports[`treegrid default rows should show a selected row 1`] = `
       <button
         aria-haspopup={undefined}
         aria-hidden="true"
-        className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small"
+        className="slds-button slds-button_icon slds-button_icon-x-small slds-m-right_x-small"
         id={undefined}
         tabIndex="-1"
         title="Expand Rohde Enterprises"
@@ -2071,7 +2071,7 @@ exports[`treegrid default rows should show a selected row 1`] = `
       <button
         aria-haspopup={undefined}
         aria-hidden="true"
-        className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small slds-is-disabled"
+        className="slds-button slds-button_icon slds-button_icon-x-small slds-m-right_x-small slds-is-disabled"
         id={undefined}
         tabIndex="-1"
         title="Expand Cheese Corp"
@@ -2273,7 +2273,7 @@ exports[`treegrid default rows should show expanded row 1`] = `
       <button
         aria-haspopup={undefined}
         aria-hidden="true"
-        className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small slds-is-disabled"
+        className="slds-button slds-button_icon slds-button_icon-x-small slds-m-right_x-small slds-is-disabled"
         id={undefined}
         tabIndex="-1"
         title="Expand Rewis Inc"
@@ -2470,7 +2470,7 @@ exports[`treegrid default rows should show expanded row 1`] = `
       <button
         aria-haspopup={undefined}
         aria-hidden="true"
-        className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small"
+        className="slds-button slds-button_icon slds-button_icon-x-small slds-m-right_x-small"
         id={undefined}
         tabIndex="-1"
         title="Collapse Acme Corporation"
@@ -2668,7 +2668,7 @@ exports[`treegrid default rows should show expanded row 1`] = `
       <button
         aria-haspopup={undefined}
         aria-hidden="true"
-        className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small"
+        className="slds-button slds-button_icon slds-button_icon-x-small slds-m-right_x-small"
         id={undefined}
         tabIndex="-1"
         title="Expand Rohde Enterprises"
@@ -2865,7 +2865,7 @@ exports[`treegrid default rows should show expanded row 1`] = `
       <button
         aria-haspopup={undefined}
         aria-hidden="true"
-        className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small slds-is-disabled"
+        className="slds-button slds-button_icon slds-button_icon-x-small slds-m-right_x-small slds-is-disabled"
         id={undefined}
         tabIndex="-1"
         title="Expand Cheese Corp"
@@ -5662,7 +5662,7 @@ exports[`treegrid row should remove the selection column 1`] = `
     <button
       aria-haspopup={undefined}
       aria-hidden="true"
-      className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small slds-is-disabled"
+      className="slds-button slds-button_icon slds-button_icon-x-small slds-m-right_x-small slds-is-disabled"
       id={undefined}
       tabIndex="-1"
       title="Expand Rewis Inc"
@@ -5862,7 +5862,7 @@ exports[`treegrid row should render 1`] = `
     <button
       aria-haspopup={undefined}
       aria-hidden="true"
-      className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small slds-is-disabled"
+      className="slds-button slds-button_icon slds-button_icon-x-small slds-m-right_x-small slds-is-disabled"
       id={undefined}
       tabIndex="-1"
       title="Expand Rewis Inc"
@@ -6062,7 +6062,7 @@ exports[`treegrid row should select the row and check the box 1`] = `
     <button
       aria-haspopup={undefined}
       aria-hidden="true"
-      className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small slds-is-disabled"
+      className="slds-button slds-button_icon slds-button_icon-x-small slds-m-right_x-small slds-is-disabled"
       id={undefined}
       tabIndex="-1"
       title="Expand Rewis Inc"
@@ -6262,7 +6262,7 @@ exports[`treegrid row should set aria-expanded on row  1`] = `
     <button
       aria-haspopup={undefined}
       aria-hidden="true"
-      className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small"
+      className="slds-button slds-button_icon slds-button_icon-x-small slds-m-right_x-small"
       id={undefined}
       tabIndex="-1"
       title="Collapse Rewis Inc"
@@ -6462,7 +6462,7 @@ exports[`treegrid row should set aria-expanded to false on row  1`] = `
     <button
       aria-haspopup={undefined}
       aria-hidden="true"
-      className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small"
+      className="slds-button slds-button_icon slds-button_icon-x-small slds-m-right_x-small"
       id={undefined}
       tabIndex="-1"
       title="Expand Rewis Inc"
@@ -6662,7 +6662,7 @@ exports[`treegrid row should set selection of the row to false 1`] = `
     <button
       aria-haspopup={undefined}
       aria-hidden="true"
-      className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small slds-is-disabled"
+      className="slds-button slds-button_icon slds-button_icon-x-small slds-m-right_x-small slds-is-disabled"
       id={undefined}
       tabIndex="-1"
       title="Expand Rewis Inc"
@@ -6862,7 +6862,7 @@ exports[`treegrid row should set tabindex on the row 1`] = `
     <button
       aria-haspopup={undefined}
       aria-hidden="true"
-      className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small slds-is-disabled"
+      className="slds-button slds-button_icon slds-button_icon-x-small slds-m-right_x-small slds-is-disabled"
       id={undefined}
       tabIndex="-1"
       title="Expand Rewis Inc"

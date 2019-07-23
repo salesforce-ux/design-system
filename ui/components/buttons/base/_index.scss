@@ -199,6 +199,11 @@ a.slds-button--inverse:focus {
   background-color: $color-background-button-inverse;
   border-color: $button-color-border-primary;
 
+  &:hover,
+  &:focus {
+    background-color: $color-background-button-default-hover;
+  }
+
   &[disabled],
   &:disabled {
     background-color: $color-background-button-inverse-disabled;

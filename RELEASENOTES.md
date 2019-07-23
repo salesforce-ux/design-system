@@ -23,6 +23,8 @@
 - Center contents of `slds-button_icon` with change of `display: inline-flex` to `slds-button`
 
 ### [Buttons](https://www.lightningdesignsystem.com/components/buttons)
+#### Fixed
+- Fixed poor color contrast of inverse buttons on hover and focus
 #### Changed
 - Boldened Button labels on touch devices
 - Modify display of `slds-button` to `inline-flex`

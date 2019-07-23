@@ -6,6 +6,10 @@
 
 ## 2.10.0
 
+### Fixed
+
+- Fixed poor color contrast of inverse buttons on hover and focus
+
 ### Changed
 
 - Boldened Button labels on touch devices

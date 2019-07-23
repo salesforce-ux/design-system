@@ -34,6 +34,12 @@
 #### Changed
 - Visually remove border and set border-radius to zero on touch devices
 
+### [Chat](https://www.lightningdesignsystem.com/components/chat)
+#### Changed
+- Horizontal rules have been removed from event messages for an improved chat experience, `.slds-chat-event__rule` is no longer used and marked as deprecated
+- Bookends now span full width which allows the bookend borders to be visually flush with their container `.slds-chat-list`
+- Horizontal padding added to `.slds-chat-bookend` to compensate for the negative margins used to make the bookend span full width
+
 ### [Checkbox](https://www.lightningdesignsystem.com/components/checkbox)
 #### Changed
 - For touch devices, increase size of faux checkbox to `$square-tappable-x-small`
@@ -88,6 +94,7 @@
 - On touch devices, set the amount of space created for the edit icon to `$square-tappable` which aligns with touch specific sizing
 - On touch devices, increase the tap target size of `.slds-form-element__label` to `$$height-tappable-small`, center with flex, and increase `font-size` to `$font-size-4`
 - On touch devices, set the tap target height of button-icons to `$height-tappable-small` when inline with label text
+- On touch devices, increase the font size of `.slds-form-element__static` to `$font-size-5`
 - On touch devices and within `.slds-form-element_readonly`, increase the size of `.slds-icon` to `$square-tappable-x-small` and increase the height of `.slds-form-element__control` to `$height-tappable` which aligns `.slds-form-element_readonly`'s touch height to other form elements
 
 ### [Input](https://www.lightningdesignsystem.com/components/input)

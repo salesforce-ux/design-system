@@ -1,4 +1,5 @@
 import CodeView from '../../../shared/components/CodeView';
+import Blockquote from '../../../shared/components/Blockquote';
 import * as DateTimeExamples from './base/example';
 import { getDisplayElementById } from '../../shared/helpers';
 
@@ -9,6 +10,12 @@ import { getDisplayElementById } from '../../shared/helpers';
 ## About datetime picker
 
 ### Implementation
+
+The datetime is two [form elements](/components/form-element), each containing a label and text [input](/components/input), and a dropdown [menu](/components/menus), containing a grid-based calendar and filters. The date form element acts as a trigger for the dropdown.
+
+<Blockquote type="warning">
+  Placement of inline form elements inside a data table cell is not supported. Instead, use a button to invoke a popover, which does support form elements.
+</Blockquote>
 
 The datetime picker has the following markup requirements:
 

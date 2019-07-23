@@ -131,6 +131,8 @@
 <!-- ## [VERSION] -->
 
 ### [Path](https://www.lightningdesignsystem.com/components/path)
+#### Changed
+- For touch devices, increased the height and tap target size of the path component to `$height-tappable`
 #### Fixed
 - Fixed text disappearing when peaking between stage in Safari
 

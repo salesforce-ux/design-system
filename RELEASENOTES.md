@@ -80,6 +80,9 @@
 - Resolve issue with deprecated inline listbox not displaying correctly when multiple pills forces the container to grow
 - Resolve issue where deprecated inline listbox was not the same height as other inputs
 
+### [Counter](https://www.lightningdesignsystem.com/components/counter)
+- Created new page for the Counter version of Input.
+
 ### [Dueling Picklist](https://www.lightningdesignsystem.com/components/dueling-picklist)
 #### Fixed
 - Locked items now have `aria-disabled="true"` to improve accessibility and help indicate the locked item's immutable behavior within the listbox.

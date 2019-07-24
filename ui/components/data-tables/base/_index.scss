@@ -375,7 +375,7 @@
     position: absolute;
     top: 50%;
     right: $spacing-xx-small;
-    transform: translateY(-50%);
+    margin-top: ($spacing-x-small * -1);
   }
 }
 

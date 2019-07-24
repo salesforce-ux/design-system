@@ -4,7 +4,11 @@
 
 <!-- ## [Unreleased] -->
 
-### Added
+## 2.10.0
+
+### Changed
+
+- Changed `slds-th__action-button` alignment to use `margin-top` instead of `transform: translateY`
 
 ## 2.8.0
 

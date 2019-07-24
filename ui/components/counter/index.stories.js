@@ -9,17 +9,17 @@ import '../../index.scss';
 const examples = [BaseExamples];
 
 const kitchenSink = getAllDisplayCollectionsByType(examples, [
+  'default',
   'examples',
   'states'
 ]);
 
-storiesOf('Components/App Launcher', module).add('Kitchen Sink', () =>
+storiesOf('Components/Counter', module).add('Kitchen Sink', () =>
   kitchenSink.map((element, idx) =>
-    element.map(({ demoStyles, label, component }) => (
+    element.map(({ label, component }) => (
       <StoryFrame
         component={component}
         label={label}
-        styles={demoStyles || null}
         key={`kitchen-sink-${label}-${idx}`}
       />
     ))

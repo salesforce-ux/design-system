@@ -1390,9 +1390,6 @@ exports[`Chat event renders a basic chat event 1`] = `
   role={undefined}
 >
   <div
-    className="slds-chat-event__rule"
-  />
-  <div
     className="slds-chat-event__body"
   >
     <span
@@ -1416,9 +1413,6 @@ exports[`Chat event renders a basic chat event 1`] = `
        • 
     </p>
   </div>
-  <div
-    className="slds-chat-event__rule"
-  />
 </div>
 `;
 
@@ -1427,9 +1421,6 @@ exports[`Chat event renders a basic chat event with a message from an agent 1`] 
   className="slds-chat-event"
   role={undefined}
 >
-  <div
-    className="slds-chat-event__rule"
-  />
   <div
     className="slds-chat-event__body"
   >
@@ -1455,9 +1446,6 @@ exports[`Chat event renders a basic chat event with a message from an agent 1`] 
       5:09 PM
     </p>
   </div>
-  <div
-    className="slds-chat-event__rule"
-  />
   <div
     className="slds-chat-event__agent-message"
   >
@@ -1472,9 +1460,6 @@ exports[`Chat event renders a basic chat event with a timestamp 1`] = `
   role={undefined}
 >
   <div
-    className="slds-chat-event__rule"
-  />
-  <div
     className="slds-chat-event__body"
   >
     <span
@@ -1499,9 +1484,6 @@ exports[`Chat event renders a basic chat event with a timestamp 1`] = `
       5:09 PM
     </p>
   </div>
-  <div
-    className="slds-chat-event__rule"
-  />
 </div>
 `;
 
@@ -1511,9 +1493,6 @@ exports[`Chat event renders a errored chat event with a message from an agent 1`
   role="alert"
 >
   <div
-    className="slds-chat-event__rule"
-  />
-  <div
     className="slds-chat-event__body"
   >
     <span
@@ -1538,9 +1517,6 @@ exports[`Chat event renders a errored chat event with a message from an agent 1`
       5:09 PM
     </p>
   </div>
-  <div
-    className="slds-chat-event__rule"
-  />
   <div
     className="slds-chat-event__agent-message"
   >
@@ -1555,9 +1531,6 @@ exports[`Chat event renders a errored chat event with a timestamp 1`] = `
   role="alert"
 >
   <div
-    className="slds-chat-event__rule"
-  />
-  <div
     className="slds-chat-event__body"
   >
     <span
@@ -1582,9 +1555,6 @@ exports[`Chat event renders a errored chat event with a timestamp 1`] = `
       5:09 PM
     </p>
   </div>
-  <div
-    className="slds-chat-event__rule"
-  />
 </div>
 `;
 

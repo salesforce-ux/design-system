@@ -4,6 +4,14 @@
 
 <!-- ## [Unreleased] -->
 
+## 2.10.0
+
+### Changed
+
+- Horizontal rules have been removed from event messages for an improved chat experience, `.slds-chat-event__rule` is no longer used and marked as deprecated
+- Bookends now span full width which allows the bookend borders to be visually flush with their container `.slds-chat-list`
+- Horizontal padding added to `.slds-chat-bookend` to compensate for the negative margins used to make the bookend span full width
+
 ## 2.8.0
 
 ### Changed

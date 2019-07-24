@@ -22,6 +22,7 @@ storiesOf('Components/Chat', module).add('Kitchen Sink', () =>
         component={component}
         label={label}
         key={`kitchen-sink-${label}-${idx}`}
+        isFullBleed
       />
     ))
   )

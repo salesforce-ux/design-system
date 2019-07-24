@@ -88,6 +88,10 @@ module.exports = (baseConfig, env, defaultConfig) => {
       {
         from: paths.icons,
         to: 'assets/icons'
+      },
+      {
+        from: paths.assets,
+        to: 'assets'
       }
     ])
   );

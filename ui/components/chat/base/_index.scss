@@ -72,6 +72,8 @@
  */
 .slds-chat-listitem_bookend {
   margin: $spacing-medium 0;
+  margin-left: ($spacing-small * -1);
+  margin-right: ($spacing-small * -1);
 }
 
 .slds-chat-listitem_bookend + .slds-chat-listitem_bookend {
@@ -95,13 +97,6 @@
  */
 .slds-chat-icon {
   margin-right: $spacing-x-small;
-
-  @include deprecate('4.0', 'Please use slds-icon-text-default modifier for slds-icon') {
-
-    .slds-icon {
-      fill: $color-text-weak;
-    }
-  }
 }
 
 /**
@@ -459,11 +454,15 @@
   * @summary Used to style the horizontal rules on an event
   * @selector .slds-chat-event__rule
   * @restrict .slds-chat-event div
+  * @deprecated
   */
-.slds-chat-event__rule {
-  border-top: $border-width-thin $color-border solid;
-  height: rem(1px);
-  flex-grow: 1;
+@include deprecate('4.0', 'Horizontal rules are no longer used on events') {
+
+  .slds-chat-event__rule {
+    border-top: $border-width-thin $color-border solid;
+    height: rem(1px);
+    flex-grow: 1;
+  }
 }
 
 /**
@@ -506,7 +505,7 @@
   display: flex;
   font-size: $font-size-3;
   justify-content: center;
-  padding: $spacing-x-small 0;
+  padding: $spacing-x-small $spacing-small;
   width: 100%;
 }
 

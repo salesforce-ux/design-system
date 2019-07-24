@@ -80,19 +80,18 @@ export const getDisplayCollectionsByType = (object, types) => {
       if (object.hasOwnProperty(type)) {
         if (Array.isArray(object[type])) {
           object[type].map(element => {
-            let newElement = {};
-            newElement.component = getDisplayElementById(
-              object[type],
-              element.id
-            );
-            newElement.label = element.label;
-            return collection.push(newElement);
+            const { demoStyles, label } = element;
+            return collection.push({
+              component: getDisplayElementById(object[type], element.id),
+              label,
+              demoStyles
+            });
           });
         } else {
-          let newElement = {};
-          newElement.label = 'Default';
-          newElement.component = object[type];
-          collection.push(newElement);
+          collection.push({
+            label: 'Default',
+            component: object[type]
+          });
         }
       }
     });

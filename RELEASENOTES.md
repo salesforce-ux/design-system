@@ -83,6 +83,10 @@
 ### [Counter](https://www.lightningdesignsystem.com/components/counter)
 - Created new page for the Counter version of Input.
 
+### [Data Tables](https://www.lightningdesignsystem.com/components/data-tables)
+#### Changed
+- Changed `slds-th__action-button` alignment to use `margin-top` instead of `transform: translateY`
+
 ### [Dueling Picklist](https://www.lightningdesignsystem.com/components/dueling-picklist)
 #### Fixed
 - Locked items now have `aria-disabled="true"` to improve accessibility and help indicate the locked item's immutable behavior within the listbox.

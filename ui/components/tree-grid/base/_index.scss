@@ -30,8 +30,12 @@
 
   .slds-button {
     align-self: center;
-    margin-top: 0;
+
+    &:not(.slds-th__action-button) {
+      margin-top: 0;
+    }
   }
+
 
   // This is only going 20 levels deep for now -- it may have to be expanded later if people are building deep deep trees.
   $max-nesting-depth: 20 !default;

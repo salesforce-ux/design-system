@@ -5,6 +5,7 @@ import { Popover } from '../base/example';
 import { Header, Footer } from '../walkthrough/example';
 import { EinsteinHeader } from '../../einstein-header/base';
 import { FeedbackHeader, FeedbackFooter } from '../error/example';
+import { Prompt } from '../prompt/example';
 
 import createHelpers from '../../../../jest.helpers';
 import { Button } from '../../buttons/base/example';
@@ -284,4 +285,27 @@ describe('Base popover', () => {
         </Fieldset>
       </Popover>
     ));
+});
+
+describe('Prompt popover', () => {
+  it('renders base without position', () =>
+    matchesMarkup(<Prompt symbol="prompt" />));
+
+  it('renders positioned top left', () =>
+    matchesMarkup(<Prompt symbol="prompt" position="top-left" />));
+
+  it('renders positioned top center', () =>
+    matchesMarkup(<Prompt symbol="prompt" position="top" />));
+
+  it('renders positioned top right', () =>
+    matchesMarkup(<Prompt symbol="prompt" position="top-right" />));
+
+  it('renders positioned bottom right', () =>
+    matchesMarkup(<Prompt symbol="prompt" position="bottom-right" />));
+
+  it('renders positioned bottom center', () =>
+    matchesMarkup(<Prompt symbol="prompt" position="bottom" />));
+
+  it('renders positioned bottom left', () =>
+    matchesMarkup(<Prompt symbol="prompt" position="bottom-left" />));
 });

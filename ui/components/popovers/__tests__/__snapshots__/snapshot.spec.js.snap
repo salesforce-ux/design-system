@@ -260,6 +260,727 @@ exports[`Base popover renders a small scrolling popover 1`] = `
 </section>
 `;
 
+exports[`Prompt popover renders base without position 1`] = `
+<section
+  aria-describedby="dialog-body-id-16"
+  aria-label={undefined}
+  aria-labelledby="dialog-heading-id-3"
+  className="slds-popover slds-popover_prompt"
+  id={undefined}
+  role="dialog"
+  style={undefined}
+>
+  <button
+    aria-haspopup={undefined}
+    className="slds-button slds-button_icon slds-button_icon-small slds-float_right slds-popover__close"
+    id={undefined}
+    title="Close dialog"
+  >
+    <svg
+      aria-hidden={true}
+      className="slds-button__icon"
+    >
+      <use
+        xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#close"
+      />
+    </svg>
+    <span
+      className="slds-assistive-text"
+    >
+      Close dialog
+    </span>
+  </button>
+  <div
+    className="slds-popover__body"
+    id="dialog-body-id-16"
+  >
+    <div
+      className="slds-media"
+    >
+      <div
+        className="slds-media__figure"
+      >
+        <span
+          className="slds-icon_container"
+          title={undefined}
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-icon slds-icon_small slds-icon-text-default"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#prompt"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          />
+        </span>
+      </div>
+      <div
+        className="slds-media__body"
+      >
+        <h2
+          className="slds-popover_prompt__heading"
+          id="dialog-heading-id-3"
+        >
+          Title
+        </h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+      </div>
+    </div>
+  </div>
+  <footer
+    className="slds-popover__footer"
+  >
+    <div
+      className="slds-grid slds-grid_vertical-align-center"
+    >
+      <button
+        className="slds-button slds-button_neutral slds-col_bump-right"
+      >
+        Dismiss
+      </button>
+      <span
+        className="slds-popover_prompt__action-link"
+      >
+        <a
+          className="slds-button"
+          href="#"
+        >
+          Learn more
+        </a>
+      </span>
+      <button
+        className="slds-button slds-button_brand"
+      >
+        Save
+      </button>
+    </div>
+  </footer>
+</section>
+`;
+
+exports[`Prompt popover renders positioned bottom center 1`] = `
+<section
+  aria-describedby="dialog-body-id-21"
+  aria-label={undefined}
+  aria-labelledby="dialog-heading-id-3"
+  className="slds-popover slds-popover_prompt slds-popover_prompt_bottom"
+  id={undefined}
+  role="dialog"
+  style={undefined}
+>
+  <button
+    aria-haspopup={undefined}
+    className="slds-button slds-button_icon slds-button_icon-small slds-float_right slds-popover__close"
+    id={undefined}
+    title="Close dialog"
+  >
+    <svg
+      aria-hidden={true}
+      className="slds-button__icon"
+    >
+      <use
+        xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#close"
+      />
+    </svg>
+    <span
+      className="slds-assistive-text"
+    >
+      Close dialog
+    </span>
+  </button>
+  <div
+    className="slds-popover__body"
+    id="dialog-body-id-21"
+  >
+    <div
+      className="slds-media"
+    >
+      <div
+        className="slds-media__figure"
+      >
+        <span
+          className="slds-icon_container"
+          title={undefined}
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-icon slds-icon_small slds-icon-text-default"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#prompt"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          />
+        </span>
+      </div>
+      <div
+        className="slds-media__body"
+      >
+        <h2
+          className="slds-popover_prompt__heading"
+          id="dialog-heading-id-3"
+        >
+          Title
+        </h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+      </div>
+    </div>
+  </div>
+  <footer
+    className="slds-popover__footer"
+  >
+    <div
+      className="slds-grid slds-grid_vertical-align-center"
+    >
+      <button
+        className="slds-button slds-button_neutral slds-col_bump-right"
+      >
+        Dismiss
+      </button>
+      <span
+        className="slds-popover_prompt__action-link"
+      >
+        <a
+          className="slds-button"
+          href="#"
+        >
+          Learn more
+        </a>
+      </span>
+      <button
+        className="slds-button slds-button_brand"
+      >
+        Save
+      </button>
+    </div>
+  </footer>
+</section>
+`;
+
+exports[`Prompt popover renders positioned bottom left 1`] = `
+<section
+  aria-describedby="dialog-body-id-22"
+  aria-label={undefined}
+  aria-labelledby="dialog-heading-id-3"
+  className="slds-popover slds-popover_prompt slds-popover_prompt_bottom-left"
+  id={undefined}
+  role="dialog"
+  style={undefined}
+>
+  <button
+    aria-haspopup={undefined}
+    className="slds-button slds-button_icon slds-button_icon-small slds-float_right slds-popover__close"
+    id={undefined}
+    title="Close dialog"
+  >
+    <svg
+      aria-hidden={true}
+      className="slds-button__icon"
+    >
+      <use
+        xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#close"
+      />
+    </svg>
+    <span
+      className="slds-assistive-text"
+    >
+      Close dialog
+    </span>
+  </button>
+  <div
+    className="slds-popover__body"
+    id="dialog-body-id-22"
+  >
+    <div
+      className="slds-media"
+    >
+      <div
+        className="slds-media__figure"
+      >
+        <span
+          className="slds-icon_container"
+          title={undefined}
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-icon slds-icon_small slds-icon-text-default"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#prompt"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          />
+        </span>
+      </div>
+      <div
+        className="slds-media__body"
+      >
+        <h2
+          className="slds-popover_prompt__heading"
+          id="dialog-heading-id-3"
+        >
+          Title
+        </h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+      </div>
+    </div>
+  </div>
+  <footer
+    className="slds-popover__footer"
+  >
+    <div
+      className="slds-grid slds-grid_vertical-align-center"
+    >
+      <button
+        className="slds-button slds-button_neutral slds-col_bump-right"
+      >
+        Dismiss
+      </button>
+      <span
+        className="slds-popover_prompt__action-link"
+      >
+        <a
+          className="slds-button"
+          href="#"
+        >
+          Learn more
+        </a>
+      </span>
+      <button
+        className="slds-button slds-button_brand"
+      >
+        Save
+      </button>
+    </div>
+  </footer>
+</section>
+`;
+
+exports[`Prompt popover renders positioned bottom right 1`] = `
+<section
+  aria-describedby="dialog-body-id-20"
+  aria-label={undefined}
+  aria-labelledby="dialog-heading-id-3"
+  className="slds-popover slds-popover_prompt slds-popover_prompt_bottom-right"
+  id={undefined}
+  role="dialog"
+  style={undefined}
+>
+  <button
+    aria-haspopup={undefined}
+    className="slds-button slds-button_icon slds-button_icon-small slds-float_right slds-popover__close"
+    id={undefined}
+    title="Close dialog"
+  >
+    <svg
+      aria-hidden={true}
+      className="slds-button__icon"
+    >
+      <use
+        xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#close"
+      />
+    </svg>
+    <span
+      className="slds-assistive-text"
+    >
+      Close dialog
+    </span>
+  </button>
+  <div
+    className="slds-popover__body"
+    id="dialog-body-id-20"
+  >
+    <div
+      className="slds-media"
+    >
+      <div
+        className="slds-media__figure"
+      >
+        <span
+          className="slds-icon_container"
+          title={undefined}
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-icon slds-icon_small slds-icon-text-default"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#prompt"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          />
+        </span>
+      </div>
+      <div
+        className="slds-media__body"
+      >
+        <h2
+          className="slds-popover_prompt__heading"
+          id="dialog-heading-id-3"
+        >
+          Title
+        </h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+      </div>
+    </div>
+  </div>
+  <footer
+    className="slds-popover__footer"
+  >
+    <div
+      className="slds-grid slds-grid_vertical-align-center"
+    >
+      <button
+        className="slds-button slds-button_neutral slds-col_bump-right"
+      >
+        Dismiss
+      </button>
+      <span
+        className="slds-popover_prompt__action-link"
+      >
+        <a
+          className="slds-button"
+          href="#"
+        >
+          Learn more
+        </a>
+      </span>
+      <button
+        className="slds-button slds-button_brand"
+      >
+        Save
+      </button>
+    </div>
+  </footer>
+</section>
+`;
+
+exports[`Prompt popover renders positioned top center 1`] = `
+<section
+  aria-describedby="dialog-body-id-18"
+  aria-label={undefined}
+  aria-labelledby="dialog-heading-id-3"
+  className="slds-popover slds-popover_prompt slds-popover_prompt_top"
+  id={undefined}
+  role="dialog"
+  style={undefined}
+>
+  <button
+    aria-haspopup={undefined}
+    className="slds-button slds-button_icon slds-button_icon-small slds-float_right slds-popover__close"
+    id={undefined}
+    title="Close dialog"
+  >
+    <svg
+      aria-hidden={true}
+      className="slds-button__icon"
+    >
+      <use
+        xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#close"
+      />
+    </svg>
+    <span
+      className="slds-assistive-text"
+    >
+      Close dialog
+    </span>
+  </button>
+  <div
+    className="slds-popover__body"
+    id="dialog-body-id-18"
+  >
+    <div
+      className="slds-media"
+    >
+      <div
+        className="slds-media__figure"
+      >
+        <span
+          className="slds-icon_container"
+          title={undefined}
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-icon slds-icon_small slds-icon-text-default"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#prompt"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          />
+        </span>
+      </div>
+      <div
+        className="slds-media__body"
+      >
+        <h2
+          className="slds-popover_prompt__heading"
+          id="dialog-heading-id-3"
+        >
+          Title
+        </h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+      </div>
+    </div>
+  </div>
+  <footer
+    className="slds-popover__footer"
+  >
+    <div
+      className="slds-grid slds-grid_vertical-align-center"
+    >
+      <button
+        className="slds-button slds-button_neutral slds-col_bump-right"
+      >
+        Dismiss
+      </button>
+      <span
+        className="slds-popover_prompt__action-link"
+      >
+        <a
+          className="slds-button"
+          href="#"
+        >
+          Learn more
+        </a>
+      </span>
+      <button
+        className="slds-button slds-button_brand"
+      >
+        Save
+      </button>
+    </div>
+  </footer>
+</section>
+`;
+
+exports[`Prompt popover renders positioned top left 1`] = `
+<section
+  aria-describedby="dialog-body-id-17"
+  aria-label={undefined}
+  aria-labelledby="dialog-heading-id-3"
+  className="slds-popover slds-popover_prompt slds-popover_prompt_top-left"
+  id={undefined}
+  role="dialog"
+  style={undefined}
+>
+  <button
+    aria-haspopup={undefined}
+    className="slds-button slds-button_icon slds-button_icon-small slds-float_right slds-popover__close"
+    id={undefined}
+    title="Close dialog"
+  >
+    <svg
+      aria-hidden={true}
+      className="slds-button__icon"
+    >
+      <use
+        xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#close"
+      />
+    </svg>
+    <span
+      className="slds-assistive-text"
+    >
+      Close dialog
+    </span>
+  </button>
+  <div
+    className="slds-popover__body"
+    id="dialog-body-id-17"
+  >
+    <div
+      className="slds-media"
+    >
+      <div
+        className="slds-media__figure"
+      >
+        <span
+          className="slds-icon_container"
+          title={undefined}
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-icon slds-icon_small slds-icon-text-default"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#prompt"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          />
+        </span>
+      </div>
+      <div
+        className="slds-media__body"
+      >
+        <h2
+          className="slds-popover_prompt__heading"
+          id="dialog-heading-id-3"
+        >
+          Title
+        </h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+      </div>
+    </div>
+  </div>
+  <footer
+    className="slds-popover__footer"
+  >
+    <div
+      className="slds-grid slds-grid_vertical-align-center"
+    >
+      <button
+        className="slds-button slds-button_neutral slds-col_bump-right"
+      >
+        Dismiss
+      </button>
+      <span
+        className="slds-popover_prompt__action-link"
+      >
+        <a
+          className="slds-button"
+          href="#"
+        >
+          Learn more
+        </a>
+      </span>
+      <button
+        className="slds-button slds-button_brand"
+      >
+        Save
+      </button>
+    </div>
+  </footer>
+</section>
+`;
+
+exports[`Prompt popover renders positioned top right 1`] = `
+<section
+  aria-describedby="dialog-body-id-19"
+  aria-label={undefined}
+  aria-labelledby="dialog-heading-id-3"
+  className="slds-popover slds-popover_prompt slds-popover_prompt_top-right"
+  id={undefined}
+  role="dialog"
+  style={undefined}
+>
+  <button
+    aria-haspopup={undefined}
+    className="slds-button slds-button_icon slds-button_icon-small slds-float_right slds-popover__close"
+    id={undefined}
+    title="Close dialog"
+  >
+    <svg
+      aria-hidden={true}
+      className="slds-button__icon"
+    >
+      <use
+        xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#close"
+      />
+    </svg>
+    <span
+      className="slds-assistive-text"
+    >
+      Close dialog
+    </span>
+  </button>
+  <div
+    className="slds-popover__body"
+    id="dialog-body-id-19"
+  >
+    <div
+      className="slds-media"
+    >
+      <div
+        className="slds-media__figure"
+      >
+        <span
+          className="slds-icon_container"
+          title={undefined}
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-icon slds-icon_small slds-icon-text-default"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#prompt"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          />
+        </span>
+      </div>
+      <div
+        className="slds-media__body"
+      >
+        <h2
+          className="slds-popover_prompt__heading"
+          id="dialog-heading-id-3"
+        >
+          Title
+        </h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+      </div>
+    </div>
+  </div>
+  <footer
+    className="slds-popover__footer"
+  >
+    <div
+      className="slds-grid slds-grid_vertical-align-center"
+    >
+      <button
+        className="slds-button slds-button_neutral slds-col_bump-right"
+      >
+        Dismiss
+      </button>
+      <span
+        className="slds-popover_prompt__action-link"
+      >
+        <a
+          className="slds-button"
+          href="#"
+        >
+          Learn more
+        </a>
+      </span>
+      <button
+        className="slds-button slds-button_brand"
+      >
+        Save
+      </button>
+    </div>
+  </footer>
+</section>
+`;
+
 exports[`renders a feature popover 1`] = `
 <section
   aria-describedby="dialog-body-id-3"

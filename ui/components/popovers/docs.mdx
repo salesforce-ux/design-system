@@ -10,6 +10,7 @@ import * as WarningExamples from './warning/example';
 import * as WalkthroughExamples from './walkthrough/example';
 import * as FeatureExamples from './feature/example';
 import * as PreviewPanelExamples from './panels/example';
+import * as PromptExamples from './prompt/example';
 import { getDisplayElementById } from '../../shared/helpers';
 
 <div className="doc lead">
@@ -283,4 +284,46 @@ This is due to the focus moving and trapping nature of non-modal dialogs. You **
 
 <CodeView>
   {PreviewPanelExamples.default}
+</CodeView>
+
+### Prompt
+
+<CodeView>
+  {PromptExamples.default}
+</CodeView>
+
+#### Positioned top left
+
+<CodeView style={{ height: '250px' }}>
+  {getDisplayElementById(PromptExamples.examples, 'top-left')}
+</CodeView>
+
+#### Positioned top center
+
+<CodeView style={{ height: '250px' }}>
+  {getDisplayElementById(PromptExamples.examples, 'top-center')}
+</CodeView>
+
+#### Positioned top right
+
+<CodeView style={{ height: '250px' }}>
+  {getDisplayElementById(PromptExamples.examples, 'top-right')}
+</CodeView>
+
+#### Positioned bottom right
+
+<CodeView style={{ height: '250px' }}>
+  {getDisplayElementById(PromptExamples.examples, 'bottom-right')}
+</CodeView>
+
+#### Positioned bottom center
+
+<CodeView style={{ height: '250px' }}>
+  {getDisplayElementById(PromptExamples.examples, 'bottom-center')}
+</CodeView>
+
+#### Positioned bottom left
+
+<CodeView style={{ height: '250px' }}>
+  {getDisplayElementById(PromptExamples.examples, 'bottom-left')}
 </CodeView>

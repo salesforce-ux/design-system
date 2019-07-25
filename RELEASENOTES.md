@@ -160,6 +160,7 @@
 
 ### [Popovers](https://www.lightningdesignsystem.com/components/popovers)
 #### Added
+- Added a new 'prompt' variant of popover useful for showing non-blocking messages needing interaction.
 - Added `@noflip` annotation to left and right nubbin selectors.
 
 ### [Progress Indicator](https://www.lightningdesignsystem.com/components/progress-indicator)

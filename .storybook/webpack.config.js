@@ -3,8 +3,8 @@ const visit = require('unist-util-visit');
 const paths = require('../scripts/helpers/paths');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
-module.exports = (baseConfig, env, defaultConfig) => {
-  defaultConfig.module.rules.push(
+module.exports = async ({ config, mode }) => {
+  config.module.rules.push(
     {
       test: /\.scss$/,
       include: [
@@ -83,7 +83,7 @@ module.exports = (baseConfig, env, defaultConfig) => {
       ]
     }
   );
-  defaultConfig.plugins.push(
+  config.plugins.push(
     new CopyWebpackPlugin([
       {
         from: paths.icons,
@@ -95,5 +95,5 @@ module.exports = (baseConfig, env, defaultConfig) => {
       }
     ])
   );
-  return defaultConfig;
+  return config;
 };

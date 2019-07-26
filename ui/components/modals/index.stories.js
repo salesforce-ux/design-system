@@ -9,7 +9,6 @@ import '../../index.scss';
 const examples = [BaseExamples];
 
 const kitchenSink = getAllDisplayCollectionsByType(examples, [
-  'default',
   'examples',
   'states'
 ]);
@@ -20,6 +19,7 @@ storiesOf('Components/Modal', module).add('Kitchen Sink', () =>
       <StoryFrame
         component={component}
         label={label}
+        styles={BaseExamples.exampleDemoStyles}
         key={`kitchen-sink-${label}-${idx}`}
       />
     ))

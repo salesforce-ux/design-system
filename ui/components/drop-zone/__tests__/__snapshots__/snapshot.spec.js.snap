@@ -164,9 +164,7 @@ exports[`Drop Zone Base renders the container 1`] = `
       role="group"
     >
       <button
-        aria-haspopup={undefined}
         className="slds-button slds-button_icon slds-button_icon-brand slds-button_icon-x-small"
-        id={undefined}
         title="Move"
       >
         <svg
@@ -184,9 +182,7 @@ exports[`Drop Zone Base renders the container 1`] = `
         </span>
       </button>
       <button
-        aria-haspopup={undefined}
         className="slds-button slds-button_icon slds-button_icon-brand slds-button_icon-x-small"
-        id={undefined}
         title="Close"
       >
         <svg

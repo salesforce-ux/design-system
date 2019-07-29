@@ -8,7 +8,6 @@ exports[`Style Encapsulation Markup & Classes renders a encapsulated button with
   <div>
     <button
       className="slds-button slds-button_neutral slds-button_first"
-      disabled={undefined}
     >
       First
     </button>
@@ -24,7 +23,6 @@ exports[`Style Encapsulation Markup & Classes renders a encapsulated button with
   <div>
     <button
       className="slds-button slds-button_neutral slds-button_first"
-      disabled={undefined}
     >
       Last
     </button>
@@ -40,7 +38,6 @@ exports[`Style Encapsulation Markup & Classes renders a encapsulated button with
   <div>
     <button
       className="slds-button slds-button_neutral slds-button_middle"
-      disabled={undefined}
     >
       Middle
     </button>
@@ -63,19 +60,16 @@ exports[`renders a button group with overflow open 1`] = `
   >
     <button
       className="slds-button slds-button_neutral"
-      disabled={undefined}
     >
       Refresh
     </button>
     <button
       className="slds-button slds-button_neutral"
-      disabled={undefined}
     >
       Edit
     </button>
     <button
       className="slds-button slds-button_neutral"
-      disabled={undefined}
     >
       Save
     </button>
@@ -85,7 +79,6 @@ exports[`renders a button group with overflow open 1`] = `
       <button
         aria-haspopup="true"
         className="slds-button slds-button_icon slds-button_icon-border-filled"
-        id={undefined}
         title="Show More"
       >
         <svg
@@ -104,10 +97,8 @@ exports[`renders a button group with overflow open 1`] = `
       </button>
       <div
         className="slds-dropdown slds-dropdown_right slds-dropdown_actions"
-        style={undefined}
       >
         <ul
-          aria-label={undefined}
           className="slds-dropdown__list"
           role="menu"
         >
@@ -116,8 +107,6 @@ exports[`renders a button group with overflow open 1`] = `
             role="presentation"
           >
             <a
-              aria-checked={undefined}
-              className={undefined}
               href="javascript:void(0);"
               role="menuitem"
               tabIndex="0"
@@ -135,8 +124,6 @@ exports[`renders a button group with overflow open 1`] = `
             role="presentation"
           >
             <a
-              aria-checked={undefined}
-              className={undefined}
               href="javascript:void(0);"
               role="menuitem"
               tabIndex="-1"
@@ -154,8 +141,6 @@ exports[`renders a button group with overflow open 1`] = `
             role="presentation"
           >
             <a
-              aria-checked={undefined}
-              className={undefined}
               href="javascript:void(0);"
               role="menuitem"
               tabIndex="-1"
@@ -182,19 +167,16 @@ exports[`renders a default button group 1`] = `
 >
   <button
     className="slds-button slds-button_neutral"
-    disabled={undefined}
   >
     Refresh
   </button>
   <button
     className="slds-button slds-button_neutral"
-    disabled={undefined}
   >
     Edit
   </button>
   <button
     className="slds-button slds-button_neutral"
-    disabled={undefined}
   >
     Save
   </button>
@@ -214,7 +196,6 @@ exports[`renders a row a button icons spaced out 1`] = `
       <button
         aria-haspopup="true"
         className="slds-button slds-button_icon slds-button_icon-more"
-        id={undefined}
         title="More Options"
       >
         <svg
@@ -250,7 +231,6 @@ exports[`renders a row a button icons spaced out 1`] = `
       <button
         aria-haspopup="true"
         className="slds-button slds-button_icon slds-button_icon-more"
-        id={undefined}
         title="More Options"
       >
         <svg
@@ -281,9 +261,7 @@ exports[`renders a row a button icons spaced out 1`] = `
     className="slds-button-group-item"
   >
     <button
-      aria-haspopup={undefined}
       className="slds-button slds-button_icon slds-button_icon-border-filled"
-      id={undefined}
     >
       <svg
         aria-hidden={true}
@@ -304,9 +282,7 @@ exports[`renders a row a button icons spaced out 1`] = `
     className="slds-button-group-item"
   >
     <button
-      aria-haspopup={undefined}
       className="slds-button slds-button_icon slds-button_icon-border-filled"
-      id={undefined}
     >
       <svg
         aria-hidden={true}
@@ -331,9 +307,7 @@ exports[`renders a row a button icons spaced out 1`] = `
       role="group"
     >
       <button
-        aria-haspopup={undefined}
         className="slds-button slds-button_icon slds-button_icon-border-filled"
-        id={undefined}
       >
         <svg
           aria-hidden={true}
@@ -350,9 +324,7 @@ exports[`renders a row a button icons spaced out 1`] = `
         </span>
       </button>
       <button
-        aria-haspopup={undefined}
         className="slds-button slds-button_icon slds-button_icon-border-filled"
-        id={undefined}
       >
         <svg
           aria-hidden={true}
@@ -382,7 +354,6 @@ exports[`renders a row a buttons spaced out 1`] = `
   >
     <button
       className="slds-button slds-button_neutral"
-      disabled={undefined}
     >
       Refresh
     </button>
@@ -392,7 +363,6 @@ exports[`renders a row a buttons spaced out 1`] = `
   >
     <button
       className="slds-button slds-button_neutral"
-      disabled={undefined}
     >
       Edit
     </button>
@@ -402,7 +372,6 @@ exports[`renders a row a buttons spaced out 1`] = `
   >
     <button
       className="slds-button slds-button_brand"
-      disabled={undefined}
     >
       Save
     </button>
@@ -417,7 +386,6 @@ exports[`renders a single brand button with brand button icon dropdown 1`] = `
 >
   <button
     className="slds-button slds-button_brand"
-    disabled={undefined}
   >
     Save
   </button>
@@ -427,7 +395,6 @@ exports[`renders a single brand button with brand button icon dropdown 1`] = `
     <button
       aria-haspopup="true"
       className="slds-button slds-button_icon slds-button_icon-brand"
-      id={undefined}
       title="More Actions"
     >
       <svg

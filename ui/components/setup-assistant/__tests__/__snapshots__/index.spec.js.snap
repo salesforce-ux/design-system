@@ -31,7 +31,7 @@ exports[`Setup Assistant  renders a complete setup assistant step 1`] = `
   className="slds-setup-assistant__step-summary"
 >
   <div
-    className="slds-media"
+    className="isComplete number"
   >
     <div
       className="slds-media__figure"
@@ -181,7 +181,7 @@ exports[`Setup Assistant  renders a setup assistant step with the title as a but
   className="slds-setup-assistant__step-summary"
 >
   <div
-    className="slds-media"
+    className="isComplete number"
   >
     <div
       className="slds-media__figure"
@@ -246,7 +246,6 @@ exports[`Setup Assistant  renders a setup assistant step with the title as a but
               aria-controls="test-detail-action-1"
               aria-expanded="false"
               className="slds-button slds-button_reset"
-              disabled={undefined}
             >
               Configure user settings for this org
             </button>
@@ -269,7 +268,7 @@ exports[`Setup Assistant  renders a setup assistant step with title button and a
   className="slds-setup-assistant__step-summary"
 >
   <div
-    className="slds-media"
+    className="isComplete number"
   >
     <div
       className="slds-media__figure"
@@ -334,7 +333,6 @@ exports[`Setup Assistant  renders a setup assistant step with title button and a
               aria-controls="test-detail-action-1"
               aria-expanded="true"
               className="slds-button slds-button_reset"
-              disabled={undefined}
             >
               Configure user settings for this org
             </button>
@@ -358,7 +356,6 @@ exports[`Setup Assistant  renders a step detail 1`] = `
 >
   <div
     className="slds-progress slds-progress_vertical slds-progress_success"
-    style={undefined}
   >
     <ol
       className="slds-progress__list slds-progress__list-bordered"
@@ -400,7 +397,6 @@ exports[`Setup Assistant  renders a step detail 1`] = `
             >
               <label
                 className="slds-checkbox_toggle slds-grid"
-                htmlFor={undefined}
               >
                 <span
                   className="slds-form-element__label slds-m-bottom_none slds-assistive-text"
@@ -410,7 +406,6 @@ exports[`Setup Assistant  renders a step detail 1`] = `
                 <input
                   aria-describedby="checkbox-toggle-1"
                   defaultChecked={true}
-                  disabled={undefined}
                   name="checkbox-toggle-1"
                   type="checkbox"
                   value="checkbox-toggle-1"
@@ -443,7 +438,6 @@ exports[`Setup Assistant  renders a step detail 1`] = `
         className="slds-progress__item slds-is-active"
       >
         <div
-          aria-describedby={undefined}
           className="slds-progress__marker"
         >
           <span
@@ -475,7 +469,6 @@ exports[`Setup Assistant  renders a step detail 1`] = `
         className="slds-progress__item"
       >
         <div
-          aria-describedby={undefined}
           className="slds-progress__marker"
         />
         <div
@@ -491,7 +484,6 @@ exports[`Setup Assistant  renders a step detail 1`] = `
           >
             <button
               className="slds-button slds-button_outline-brand"
-              disabled={undefined}
             >
               Add Users
             </button>
@@ -500,7 +492,6 @@ exports[`Setup Assistant  renders a step detail 1`] = `
       </li>
     </ol>
     <div
-      aria-labelledby={undefined}
       aria-valuemax="100"
       aria-valuemin="0"
       aria-valuenow="50"
@@ -562,7 +553,7 @@ exports[`Setup Assistant  renders an in-progess setup assistant step 1`] = `
   className="slds-setup-assistant__step-summary"
 >
   <div
-    className="slds-media"
+    className="number"
   >
     <div
       className="slds-media__figure"
@@ -626,7 +617,7 @@ exports[`Setup Assistant  renders an in-progess setup assistant step with progre
   className="slds-setup-assistant__step-summary"
 >
   <div
-    className="slds-media"
+    className="number percentage"
   >
     <div
       className="slds-media__figure"
@@ -690,7 +681,7 @@ exports[`Setup Assistant  renders an incomplete setup assistant step 1`] = `
   className="slds-setup-assistant__step-summary"
 >
   <div
-    className="slds-media"
+    className="number"
   >
     <div
       className="slds-media__figure"

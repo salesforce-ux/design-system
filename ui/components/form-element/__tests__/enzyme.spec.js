@@ -4,7 +4,7 @@
 
 import React from 'react';
 import { mount } from 'enzyme';
-import { RecordDetailField } from '../record-detail/';
+import { RecordDetailField } from '../record-detail';
 
 describe('Record Detail', () => {
   it('render option as a string', () => {

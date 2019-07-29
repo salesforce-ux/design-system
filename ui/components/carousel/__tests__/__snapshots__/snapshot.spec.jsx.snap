@@ -11,12 +11,8 @@ exports[`renders a carousel, auto-play disabled 1`] = `
       className="slds-carousel__autoplay"
     >
       <button
-        aria-controls={undefined}
-        aria-haspopup={undefined}
         aria-pressed={true}
         className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
-        disabled={undefined}
-        id={undefined}
         title="Stop auto-play"
       >
         <svg
@@ -228,12 +224,8 @@ exports[`renders a carousel, auto-play enabled 1`] = `
       className="slds-carousel__autoplay"
     >
       <button
-        aria-controls={undefined}
-        aria-haspopup={undefined}
         aria-pressed={false}
         className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
-        disabled={undefined}
-        id={undefined}
         title="Stop auto-play"
       >
         <svg

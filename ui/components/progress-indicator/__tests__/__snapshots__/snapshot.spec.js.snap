@@ -11,7 +11,6 @@ exports[`Base Progress Indicator renders a base progress indicator 1`] = `
       className="slds-progress__item slds-is-active"
     >
       <button
-        aria-describedby={undefined}
         className="slds-button slds-progress__marker"
       >
         <span
@@ -27,7 +26,6 @@ exports[`Base Progress Indicator renders a base progress indicator 1`] = `
       className="slds-progress__item"
     >
       <button
-        aria-describedby={undefined}
         className="slds-button slds-progress__marker"
       >
         <span
@@ -40,10 +38,8 @@ exports[`Base Progress Indicator renders a base progress indicator 1`] = `
     </li>
   </ol>
   <div
-    aria-labelledby={undefined}
     aria-valuemax="100"
     aria-valuemin="0"
-    aria-valuenow={undefined}
     className="slds-progress-bar slds-progress-bar_x-small"
     role="progressbar"
   >
@@ -71,7 +67,6 @@ exports[`Base Progress Indicator renders a base step 1`] = `
   className="slds-progress__item"
 >
   <button
-    aria-describedby={undefined}
     className="slds-button slds-progress__marker"
   >
     <span
@@ -89,10 +84,7 @@ exports[`Base Progress Indicator renders a done base step 1`] = `
   className="slds-progress__item slds-is-completed"
 >
   <button
-    aria-describedby={undefined}
-    aria-haspopup={undefined}
     className="slds-button slds-button_icon slds-progress__marker slds-progress__marker_icon"
-    id={undefined}
     title="Step 1 - Completed"
   >
     <svg
@@ -117,7 +109,6 @@ exports[`Base Progress Indicator renders an active base step 1`] = `
   className="slds-progress__item slds-is-active"
 >
   <button
-    aria-describedby={undefined}
     className="slds-button slds-progress__marker"
   >
     <span
@@ -155,10 +146,7 @@ exports[`Base Progress Indicator renders an error base step 1`] = `
   className="slds-progress__item slds-has-error"
 >
   <button
-    aria-describedby={undefined}
-    aria-haspopup={undefined}
     className="slds-button slds-button_icon slds-progress__marker slds-progress__marker_icon"
-    id={undefined}
     title="Step 1 - Error"
   >
     <svg
@@ -211,7 +199,6 @@ exports[`Vertical Progress Indicator renders a done vertical step 1`] = `
 exports[`Vertical Progress Indicator renders a vertical progress indicator 1`] = `
 <div
   className="slds-progress slds-progress_vertical"
-  style={undefined}
 >
   <ol
     className="slds-progress__list"
@@ -220,7 +207,6 @@ exports[`Vertical Progress Indicator renders a vertical progress indicator 1`] =
       className="slds-progress__item slds-is-active"
     >
       <div
-        aria-describedby={undefined}
         className="slds-progress__marker"
       >
         <span
@@ -239,7 +225,6 @@ exports[`Vertical Progress Indicator renders a vertical progress indicator 1`] =
       className="slds-progress__item"
     >
       <div
-        aria-describedby={undefined}
         className="slds-progress__marker"
       />
       <div
@@ -250,7 +235,6 @@ exports[`Vertical Progress Indicator renders a vertical progress indicator 1`] =
     </li>
   </ol>
   <div
-    aria-labelledby={undefined}
     aria-valuemax="100"
     aria-valuemin="0"
     aria-valuenow={0}
@@ -269,7 +253,6 @@ exports[`Vertical Progress Indicator renders a vertical progress indicator 1`] =
 exports[`Vertical Progress Indicator renders a vertical progress indicator with borders 1`] = `
 <div
   className="slds-progress slds-progress_vertical"
-  style={undefined}
 >
   <ol
     className="slds-progress__list slds-progress__list-bordered"
@@ -305,7 +288,6 @@ exports[`Vertical Progress Indicator renders a vertical progress indicator with 
       className="slds-progress__item slds-is-active"
     >
       <div
-        aria-describedby={undefined}
         className="slds-progress__marker"
       >
         <span
@@ -324,7 +306,6 @@ exports[`Vertical Progress Indicator renders a vertical progress indicator with 
       className="slds-progress__item"
     >
       <div
-        aria-describedby={undefined}
         className="slds-progress__marker"
       />
       <div
@@ -335,7 +316,6 @@ exports[`Vertical Progress Indicator renders a vertical progress indicator with 
     </li>
   </ol>
   <div
-    aria-labelledby={undefined}
     aria-valuemax="100"
     aria-valuemin="0"
     aria-valuenow="50"
@@ -354,7 +334,6 @@ exports[`Vertical Progress Indicator renders a vertical progress indicator with 
 exports[`Vertical Progress Indicator renders a vertical progress indicator with green bar 1`] = `
 <div
   className="slds-progress slds-progress_vertical slds-progress_success"
-  style={undefined}
 >
   <ol
     className="slds-progress__list"
@@ -390,7 +369,6 @@ exports[`Vertical Progress Indicator renders a vertical progress indicator with 
       className="slds-progress__item slds-is-active"
     >
       <div
-        aria-describedby={undefined}
         className="slds-progress__marker"
       >
         <span
@@ -409,7 +387,6 @@ exports[`Vertical Progress Indicator renders a vertical progress indicator with 
       className="slds-progress__item"
     >
       <div
-        aria-describedby={undefined}
         className="slds-progress__marker"
       />
       <div
@@ -420,7 +397,6 @@ exports[`Vertical Progress Indicator renders a vertical progress indicator with 
     </li>
   </ol>
   <div
-    aria-labelledby={undefined}
     aria-valuemax="100"
     aria-valuemin="0"
     aria-valuenow="50"
@@ -439,7 +415,6 @@ exports[`Vertical Progress Indicator renders a vertical progress indicator with 
 exports[`Vertical Progress Indicator renders a vertical progress indicator with some progress 1`] = `
 <div
   className="slds-progress slds-progress_vertical"
-  style={undefined}
 >
   <ol
     className="slds-progress__list"
@@ -475,7 +450,6 @@ exports[`Vertical Progress Indicator renders a vertical progress indicator with 
       className="slds-progress__item slds-is-active"
     >
       <div
-        aria-describedby={undefined}
         className="slds-progress__marker"
       >
         <span
@@ -494,7 +468,6 @@ exports[`Vertical Progress Indicator renders a vertical progress indicator with 
       className="slds-progress__item"
     >
       <div
-        aria-describedby={undefined}
         className="slds-progress__marker"
       />
       <div
@@ -505,7 +478,6 @@ exports[`Vertical Progress Indicator renders a vertical progress indicator with 
     </li>
   </ol>
   <div
-    aria-labelledby={undefined}
     aria-valuemax="100"
     aria-valuemin="0"
     aria-valuenow="50"
@@ -526,7 +498,6 @@ exports[`Vertical Progress Indicator renders a vertical step 1`] = `
   className="slds-progress__item"
 >
   <div
-    aria-describedby={undefined}
     className="slds-progress__marker"
   />
   <div
@@ -572,7 +543,6 @@ exports[`Vertical Progress Indicator renders an active vertical step 1`] = `
   className="slds-progress__item slds-is-active"
 >
   <div
-    aria-describedby={undefined}
     className="slds-progress__marker"
   >
     <span

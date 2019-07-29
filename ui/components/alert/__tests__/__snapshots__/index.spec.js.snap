@@ -36,9 +36,7 @@ exports[`renders a base alert 1`] = `
     className="slds-notify__close"
   >
     <button
-      aria-haspopup={undefined}
       className="slds-button slds-button_icon slds-button_icon-small slds-button_icon-inverse"
-      id={undefined}
       title="Close"
     >
       <svg
@@ -94,9 +92,7 @@ exports[`renders a error alert 1`] = `
     className="slds-notify__close"
   >
     <button
-      aria-haspopup={undefined}
       className="slds-button slds-button_icon slds-button_icon-small slds-button_icon-inverse"
-      id={undefined}
       title="Close"
     >
       <svg
@@ -153,9 +149,7 @@ exports[`renders a offline alert 1`] = `
     className="slds-notify__close"
   >
     <button
-      aria-haspopup={undefined}
       className="slds-button slds-button_icon slds-button_icon-small slds-button_icon-inverse"
-      id={undefined}
       title="Close"
     >
       <svg
@@ -212,9 +206,7 @@ exports[`renders a warning alert 1`] = `
     className="slds-notify__close"
   >
     <button
-      aria-haspopup={undefined}
       className="slds-button slds-button_icon slds-button_icon-small"
-      id={undefined}
       title="Close"
     >
       <svg

@@ -2,31 +2,17 @@
 
 exports[`Advanced data table row should make every focusable element focusable when in actionableMode 1`] = `
 <tr
-  aria-expanded={undefined}
-  aria-level={undefined}
-  aria-posinset={undefined}
-  aria-selected={undefined}
-  aria-setsize={undefined}
   className="slds-hint-parent"
-  tabIndex={undefined}
 >
   <td
-    aria-readonly={undefined}
-    aria-selected={undefined}
     className="slds-text-align_right"
-    data-label={undefined}
     role="gridcell"
-    style={undefined}
-    tabIndex={undefined}
   >
     <div
       className="slds-checkbox"
     >
       <input
-        aria-describedby={undefined}
         aria-labelledby="check-button-label-01 column-group-header"
-        defaultChecked={undefined}
-        disabled={undefined}
         id="checkbox-01"
         name="options"
         tabIndex="0"
@@ -51,7 +37,6 @@ exports[`Advanced data table row should make every focusable element focusable w
   </td>
   <th
     className={null}
-    data-label={undefined}
     scope="row"
     tabIndex={null}
   >
@@ -68,13 +53,8 @@ exports[`Advanced data table row should make every focusable element focusable w
     </div>
   </th>
   <td
-    aria-readonly={undefined}
-    aria-selected={undefined}
     className={null}
-    data-label={undefined}
     role="gridcell"
-    style={undefined}
-    tabIndex={undefined}
   >
     <div
       className="slds-truncate"
@@ -84,13 +64,8 @@ exports[`Advanced data table row should make every focusable element focusable w
     </div>
   </td>
   <td
-    aria-readonly={undefined}
-    aria-selected={undefined}
     className={null}
-    data-label={undefined}
     role="gridcell"
-    style={undefined}
-    tabIndex={undefined}
   >
     <div
       className="slds-truncate"
@@ -100,13 +75,8 @@ exports[`Advanced data table row should make every focusable element focusable w
     </div>
   </td>
   <td
-    aria-readonly={undefined}
-    aria-selected={undefined}
     className={null}
-    data-label={undefined}
     role="gridcell"
-    style={undefined}
-    tabIndex={undefined}
   >
     <div
       className="slds-truncate"
@@ -116,13 +86,8 @@ exports[`Advanced data table row should make every focusable element focusable w
     </div>
   </td>
   <td
-    aria-readonly={undefined}
-    aria-selected={undefined}
     className={null}
-    data-label={undefined}
     role="gridcell"
-    style={undefined}
-    tabIndex={undefined}
   >
     <div
       className="slds-truncate"
@@ -132,13 +97,8 @@ exports[`Advanced data table row should make every focusable element focusable w
     </div>
   </td>
   <td
-    aria-readonly={undefined}
-    aria-selected={undefined}
     className={null}
-    data-label={undefined}
     role="gridcell"
-    style={undefined}
-    tabIndex={undefined}
   >
     <div
       className="slds-truncate"
@@ -148,13 +108,8 @@ exports[`Advanced data table row should make every focusable element focusable w
     </div>
   </td>
   <td
-    aria-readonly={undefined}
-    aria-selected={undefined}
     className={null}
-    data-label={undefined}
     role="gridcell"
-    style={undefined}
-    tabIndex={undefined}
   >
     <div
       className="slds-truncate"
@@ -169,18 +124,12 @@ exports[`Advanced data table row should make every focusable element focusable w
     </div>
   </td>
   <td
-    aria-readonly={undefined}
-    aria-selected={undefined}
     className={null}
-    data-label={undefined}
     role="gridcell"
-    style={undefined}
-    tabIndex={undefined}
   >
     <button
       aria-haspopup="true"
       className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
-      id={undefined}
       tabIndex="0"
       title="More actions for Acme"
     >
@@ -204,31 +153,17 @@ exports[`Advanced data table row should make every focusable element focusable w
 
 exports[`Advanced data table row should remove the row actions column 1`] = `
 <tr
-  aria-expanded={undefined}
-  aria-level={undefined}
-  aria-posinset={undefined}
-  aria-selected={undefined}
-  aria-setsize={undefined}
   className="slds-hint-parent"
-  tabIndex={undefined}
 >
   <td
-    aria-readonly={undefined}
-    aria-selected={undefined}
     className="slds-text-align_right"
-    data-label={undefined}
     role="gridcell"
-    style={undefined}
-    tabIndex={undefined}
   >
     <div
       className="slds-checkbox"
     >
       <input
-        aria-describedby={undefined}
         aria-labelledby="check-button-label-01 column-group-header"
-        defaultChecked={undefined}
-        disabled={undefined}
         id="checkbox-01"
         name="options"
         tabIndex="-1"
@@ -253,7 +188,6 @@ exports[`Advanced data table row should remove the row actions column 1`] = `
   </td>
   <th
     className={null}
-    data-label={undefined}
     scope="row"
     tabIndex="0"
   >
@@ -270,13 +204,8 @@ exports[`Advanced data table row should remove the row actions column 1`] = `
     </div>
   </th>
   <td
-    aria-readonly={undefined}
-    aria-selected={undefined}
     className={null}
-    data-label={undefined}
     role="gridcell"
-    style={undefined}
-    tabIndex={undefined}
   >
     <div
       className="slds-truncate"
@@ -286,13 +215,8 @@ exports[`Advanced data table row should remove the row actions column 1`] = `
     </div>
   </td>
   <td
-    aria-readonly={undefined}
-    aria-selected={undefined}
     className={null}
-    data-label={undefined}
     role="gridcell"
-    style={undefined}
-    tabIndex={undefined}
   >
     <div
       className="slds-truncate"
@@ -302,13 +226,8 @@ exports[`Advanced data table row should remove the row actions column 1`] = `
     </div>
   </td>
   <td
-    aria-readonly={undefined}
-    aria-selected={undefined}
     className={null}
-    data-label={undefined}
     role="gridcell"
-    style={undefined}
-    tabIndex={undefined}
   >
     <div
       className="slds-truncate"
@@ -318,13 +237,8 @@ exports[`Advanced data table row should remove the row actions column 1`] = `
     </div>
   </td>
   <td
-    aria-readonly={undefined}
-    aria-selected={undefined}
     className={null}
-    data-label={undefined}
     role="gridcell"
-    style={undefined}
-    tabIndex={undefined}
   >
     <div
       className="slds-truncate"
@@ -334,13 +248,8 @@ exports[`Advanced data table row should remove the row actions column 1`] = `
     </div>
   </td>
   <td
-    aria-readonly={undefined}
-    aria-selected={undefined}
     className={null}
-    data-label={undefined}
     role="gridcell"
-    style={undefined}
-    tabIndex={undefined}
   >
     <div
       className="slds-truncate"
@@ -350,13 +259,8 @@ exports[`Advanced data table row should remove the row actions column 1`] = `
     </div>
   </td>
   <td
-    aria-readonly={undefined}
-    aria-selected={undefined}
     className={null}
-    data-label={undefined}
     role="gridcell"
-    style={undefined}
-    tabIndex={undefined}
   >
     <div
       className="slds-truncate"
@@ -375,31 +279,17 @@ exports[`Advanced data table row should remove the row actions column 1`] = `
 
 exports[`Advanced data table row should render a table row 1`] = `
 <tr
-  aria-expanded={undefined}
-  aria-level={undefined}
-  aria-posinset={undefined}
-  aria-selected={undefined}
-  aria-setsize={undefined}
   className="slds-hint-parent"
-  tabIndex={undefined}
 >
   <td
-    aria-readonly={undefined}
-    aria-selected={undefined}
     className="slds-text-align_right"
-    data-label={undefined}
     role="gridcell"
-    style={undefined}
-    tabIndex={undefined}
   >
     <div
       className="slds-checkbox"
     >
       <input
-        aria-describedby={undefined}
         aria-labelledby="check-button-label-01 column-group-header"
-        defaultChecked={undefined}
-        disabled={undefined}
         id="checkbox-01"
         name="options"
         tabIndex="-1"
@@ -424,7 +314,6 @@ exports[`Advanced data table row should render a table row 1`] = `
   </td>
   <th
     className={null}
-    data-label={undefined}
     scope="row"
     tabIndex="0"
   >
@@ -441,13 +330,8 @@ exports[`Advanced data table row should render a table row 1`] = `
     </div>
   </th>
   <td
-    aria-readonly={undefined}
-    aria-selected={undefined}
     className={null}
-    data-label={undefined}
     role="gridcell"
-    style={undefined}
-    tabIndex={undefined}
   >
     <div
       className="slds-truncate"
@@ -457,13 +341,8 @@ exports[`Advanced data table row should render a table row 1`] = `
     </div>
   </td>
   <td
-    aria-readonly={undefined}
-    aria-selected={undefined}
     className={null}
-    data-label={undefined}
     role="gridcell"
-    style={undefined}
-    tabIndex={undefined}
   >
     <div
       className="slds-truncate"
@@ -473,13 +352,8 @@ exports[`Advanced data table row should render a table row 1`] = `
     </div>
   </td>
   <td
-    aria-readonly={undefined}
-    aria-selected={undefined}
     className={null}
-    data-label={undefined}
     role="gridcell"
-    style={undefined}
-    tabIndex={undefined}
   >
     <div
       className="slds-truncate"
@@ -489,13 +363,8 @@ exports[`Advanced data table row should render a table row 1`] = `
     </div>
   </td>
   <td
-    aria-readonly={undefined}
-    aria-selected={undefined}
     className={null}
-    data-label={undefined}
     role="gridcell"
-    style={undefined}
-    tabIndex={undefined}
   >
     <div
       className="slds-truncate"
@@ -505,13 +374,8 @@ exports[`Advanced data table row should render a table row 1`] = `
     </div>
   </td>
   <td
-    aria-readonly={undefined}
-    aria-selected={undefined}
     className={null}
-    data-label={undefined}
     role="gridcell"
-    style={undefined}
-    tabIndex={undefined}
   >
     <div
       className="slds-truncate"
@@ -521,13 +385,8 @@ exports[`Advanced data table row should render a table row 1`] = `
     </div>
   </td>
   <td
-    aria-readonly={undefined}
-    aria-selected={undefined}
     className={null}
-    data-label={undefined}
     role="gridcell"
-    style={undefined}
-    tabIndex={undefined}
   >
     <div
       className="slds-truncate"
@@ -542,18 +401,12 @@ exports[`Advanced data table row should render a table row 1`] = `
     </div>
   </td>
   <td
-    aria-readonly={undefined}
-    aria-selected={undefined}
     className={null}
-    data-label={undefined}
     role="gridcell"
-    style={undefined}
-    tabIndex={undefined}
   >
     <button
       aria-haspopup="true"
       className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
-      id={undefined}
       tabIndex="-1"
       title="More actions for Acme"
     >
@@ -577,31 +430,19 @@ exports[`Advanced data table row should render a table row 1`] = `
 
 exports[`Advanced data table row should select the row 1`] = `
 <tr
-  aria-expanded={undefined}
-  aria-level={undefined}
-  aria-posinset={undefined}
   aria-selected={true}
-  aria-setsize={undefined}
   className="slds-hint-parent slds-is-selected"
-  tabIndex={undefined}
 >
   <td
-    aria-readonly={undefined}
-    aria-selected={undefined}
     className="slds-text-align_right"
-    data-label={undefined}
     role="gridcell"
-    style={undefined}
-    tabIndex={undefined}
   >
     <div
       className="slds-checkbox"
     >
       <input
-        aria-describedby={undefined}
         aria-labelledby="check-button-label-01 column-group-header"
         defaultChecked={true}
-        disabled={undefined}
         id="checkbox-01"
         name="options"
         tabIndex="-1"
@@ -626,7 +467,6 @@ exports[`Advanced data table row should select the row 1`] = `
   </td>
   <th
     className={null}
-    data-label={undefined}
     scope="row"
     tabIndex="0"
   >
@@ -643,13 +483,8 @@ exports[`Advanced data table row should select the row 1`] = `
     </div>
   </th>
   <td
-    aria-readonly={undefined}
-    aria-selected={undefined}
     className={null}
-    data-label={undefined}
     role="gridcell"
-    style={undefined}
-    tabIndex={undefined}
   >
     <div
       className="slds-truncate"
@@ -659,13 +494,8 @@ exports[`Advanced data table row should select the row 1`] = `
     </div>
   </td>
   <td
-    aria-readonly={undefined}
-    aria-selected={undefined}
     className={null}
-    data-label={undefined}
     role="gridcell"
-    style={undefined}
-    tabIndex={undefined}
   >
     <div
       className="slds-truncate"
@@ -675,13 +505,8 @@ exports[`Advanced data table row should select the row 1`] = `
     </div>
   </td>
   <td
-    aria-readonly={undefined}
-    aria-selected={undefined}
     className={null}
-    data-label={undefined}
     role="gridcell"
-    style={undefined}
-    tabIndex={undefined}
   >
     <div
       className="slds-truncate"
@@ -691,13 +516,8 @@ exports[`Advanced data table row should select the row 1`] = `
     </div>
   </td>
   <td
-    aria-readonly={undefined}
-    aria-selected={undefined}
     className={null}
-    data-label={undefined}
     role="gridcell"
-    style={undefined}
-    tabIndex={undefined}
   >
     <div
       className="slds-truncate"
@@ -707,13 +527,8 @@ exports[`Advanced data table row should select the row 1`] = `
     </div>
   </td>
   <td
-    aria-readonly={undefined}
-    aria-selected={undefined}
     className={null}
-    data-label={undefined}
     role="gridcell"
-    style={undefined}
-    tabIndex={undefined}
   >
     <div
       className="slds-truncate"
@@ -723,13 +538,8 @@ exports[`Advanced data table row should select the row 1`] = `
     </div>
   </td>
   <td
-    aria-readonly={undefined}
-    aria-selected={undefined}
     className={null}
-    data-label={undefined}
     role="gridcell"
-    style={undefined}
-    tabIndex={undefined}
   >
     <div
       className="slds-truncate"
@@ -744,18 +554,12 @@ exports[`Advanced data table row should select the row 1`] = `
     </div>
   </td>
   <td
-    aria-readonly={undefined}
-    aria-selected={undefined}
     className={null}
-    data-label={undefined}
     role="gridcell"
-    style={undefined}
-    tabIndex={undefined}
   >
     <button
       aria-haspopup="true"
       className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
-      id={undefined}
       tabIndex="-1"
       title="More actions for Acme"
     >
@@ -779,31 +583,19 @@ exports[`Advanced data table row should select the row 1`] = `
 
 exports[`Advanced data table row should select the row with a radio button 1`] = `
 <tr
-  aria-expanded={undefined}
-  aria-level={undefined}
-  aria-posinset={undefined}
   aria-selected={true}
-  aria-setsize={undefined}
   className="slds-hint-parent slds-is-selected"
-  tabIndex={undefined}
 >
   <td
-    aria-readonly={undefined}
-    aria-selected={undefined}
     className="slds-text-align_right"
-    data-label={undefined}
     role="gridcell"
-    style={undefined}
-    tabIndex={undefined}
   >
     <span
       className="slds-radio"
     >
       <input
-        aria-describedby={undefined}
         aria-labelledby="radio-button-label-01 column-group-header"
         defaultChecked={true}
-        disabled={undefined}
         id="radio-01"
         name="options"
         tabIndex="-1"
@@ -828,7 +620,6 @@ exports[`Advanced data table row should select the row with a radio button 1`] =
   </td>
   <th
     className={null}
-    data-label={undefined}
     scope="row"
     tabIndex="0"
   >
@@ -845,13 +636,8 @@ exports[`Advanced data table row should select the row with a radio button 1`] =
     </div>
   </th>
   <td
-    aria-readonly={undefined}
-    aria-selected={undefined}
     className={null}
-    data-label={undefined}
     role="gridcell"
-    style={undefined}
-    tabIndex={undefined}
   >
     <div
       className="slds-truncate"
@@ -861,13 +647,8 @@ exports[`Advanced data table row should select the row with a radio button 1`] =
     </div>
   </td>
   <td
-    aria-readonly={undefined}
-    aria-selected={undefined}
     className={null}
-    data-label={undefined}
     role="gridcell"
-    style={undefined}
-    tabIndex={undefined}
   >
     <div
       className="slds-truncate"
@@ -877,13 +658,8 @@ exports[`Advanced data table row should select the row with a radio button 1`] =
     </div>
   </td>
   <td
-    aria-readonly={undefined}
-    aria-selected={undefined}
     className={null}
-    data-label={undefined}
     role="gridcell"
-    style={undefined}
-    tabIndex={undefined}
   >
     <div
       className="slds-truncate"
@@ -893,13 +669,8 @@ exports[`Advanced data table row should select the row with a radio button 1`] =
     </div>
   </td>
   <td
-    aria-readonly={undefined}
-    aria-selected={undefined}
     className={null}
-    data-label={undefined}
     role="gridcell"
-    style={undefined}
-    tabIndex={undefined}
   >
     <div
       className="slds-truncate"
@@ -909,13 +680,8 @@ exports[`Advanced data table row should select the row with a radio button 1`] =
     </div>
   </td>
   <td
-    aria-readonly={undefined}
-    aria-selected={undefined}
     className={null}
-    data-label={undefined}
     role="gridcell"
-    style={undefined}
-    tabIndex={undefined}
   >
     <div
       className="slds-truncate"
@@ -925,13 +691,8 @@ exports[`Advanced data table row should select the row with a radio button 1`] =
     </div>
   </td>
   <td
-    aria-readonly={undefined}
-    aria-selected={undefined}
     className={null}
-    data-label={undefined}
     role="gridcell"
-    style={undefined}
-    tabIndex={undefined}
   >
     <div
       className="slds-truncate"
@@ -946,18 +707,12 @@ exports[`Advanced data table row should select the row with a radio button 1`] =
     </div>
   </td>
   <td
-    aria-readonly={undefined}
-    aria-selected={undefined}
     className={null}
-    data-label={undefined}
     role="gridcell"
-    style={undefined}
-    tabIndex={undefined}
   >
     <button
       aria-haspopup="true"
       className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
-      id={undefined}
       tabIndex="-1"
       title="More actions for Acme"
     >
@@ -981,31 +736,17 @@ exports[`Advanced data table row should select the row with a radio button 1`] =
 
 exports[`Advanced data table row should show amount scores 1`] = `
 <tr
-  aria-expanded={undefined}
-  aria-level={undefined}
-  aria-posinset={undefined}
-  aria-selected={undefined}
-  aria-setsize={undefined}
   className="slds-hint-parent"
-  tabIndex={undefined}
 >
   <td
-    aria-readonly={undefined}
-    aria-selected={undefined}
     className="slds-text-align_right"
-    data-label={undefined}
     role="gridcell"
-    style={undefined}
-    tabIndex={undefined}
   >
     <div
       className="slds-checkbox"
     >
       <input
-        aria-describedby={undefined}
         aria-labelledby="check-button-label-01 column-group-header"
-        defaultChecked={undefined}
-        disabled={undefined}
         id="checkbox-01"
         name="options"
         tabIndex="-1"
@@ -1030,7 +771,6 @@ exports[`Advanced data table row should show amount scores 1`] = `
   </td>
   <th
     className={null}
-    data-label={undefined}
     scope="row"
     tabIndex="0"
   >
@@ -1047,13 +787,8 @@ exports[`Advanced data table row should show amount scores 1`] = `
     </div>
   </th>
   <td
-    aria-readonly={undefined}
-    aria-selected={undefined}
     className={null}
-    data-label={undefined}
     role="gridcell"
-    style={undefined}
-    tabIndex={undefined}
   >
     <div
       className="slds-truncate"
@@ -1063,13 +798,8 @@ exports[`Advanced data table row should show amount scores 1`] = `
     </div>
   </td>
   <td
-    aria-readonly={undefined}
-    aria-selected={undefined}
     className={null}
-    data-label={undefined}
     role="gridcell"
-    style={undefined}
-    tabIndex={undefined}
   >
     <div
       className="slds-truncate"
@@ -1079,13 +809,8 @@ exports[`Advanced data table row should show amount scores 1`] = `
     </div>
   </td>
   <td
-    aria-readonly={undefined}
-    aria-selected={undefined}
     className={null}
-    data-label={undefined}
     role="gridcell"
-    style={undefined}
-    tabIndex={undefined}
   >
     <div
       className="slds-truncate"
@@ -1095,13 +820,8 @@ exports[`Advanced data table row should show amount scores 1`] = `
     </div>
   </td>
   <td
-    aria-readonly={undefined}
-    aria-selected={undefined}
     className={null}
-    data-label={undefined}
     role="gridcell"
-    style={undefined}
-    tabIndex={undefined}
   >
     <div
       className="slds-truncate"
@@ -1111,13 +831,8 @@ exports[`Advanced data table row should show amount scores 1`] = `
     </div>
   </td>
   <td
-    aria-readonly={undefined}
-    aria-selected={undefined}
     className={null}
-    data-label={undefined}
     role="gridcell"
-    style={undefined}
-    tabIndex={undefined}
   >
     <div
       className="slds-grid slds-grid_vertical-align-center"
@@ -1174,13 +889,8 @@ exports[`Advanced data table row should show amount scores 1`] = `
     </div>
   </td>
   <td
-    aria-readonly={undefined}
-    aria-selected={undefined}
     className={null}
-    data-label={undefined}
     role="gridcell"
-    style={undefined}
-    tabIndex={undefined}
   >
     <div
       className="slds-truncate"
@@ -1195,18 +905,12 @@ exports[`Advanced data table row should show amount scores 1`] = `
     </div>
   </td>
   <td
-    aria-readonly={undefined}
-    aria-selected={undefined}
     className={null}
-    data-label={undefined}
     role="gridcell"
-    style={undefined}
-    tabIndex={undefined}
   >
     <button
       aria-haspopup="true"
       className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
-      id={undefined}
       tabIndex="-1"
       title="More actions for Acme"
     >
@@ -1230,31 +934,17 @@ exports[`Advanced data table row should show amount scores 1`] = `
 
 exports[`Advanced data table row should show record name cell in first row as focusable 1`] = `
 <tr
-  aria-expanded={undefined}
-  aria-level={undefined}
-  aria-posinset={undefined}
-  aria-selected={undefined}
-  aria-setsize={undefined}
   className="slds-hint-parent"
-  tabIndex={undefined}
 >
   <td
-    aria-readonly={undefined}
-    aria-selected={undefined}
     className="slds-text-align_right"
-    data-label={undefined}
     role="gridcell"
-    style={undefined}
-    tabIndex={undefined}
   >
     <div
       className="slds-checkbox"
     >
       <input
-        aria-describedby={undefined}
         aria-labelledby="check-button-label-01 column-group-header"
-        defaultChecked={undefined}
-        disabled={undefined}
         id="checkbox-01"
         name="options"
         tabIndex="-1"
@@ -1279,7 +969,6 @@ exports[`Advanced data table row should show record name cell in first row as fo
   </td>
   <th
     className="slds-has-focus"
-    data-label={undefined}
     scope="row"
     tabIndex="0"
   >
@@ -1296,13 +985,8 @@ exports[`Advanced data table row should show record name cell in first row as fo
     </div>
   </th>
   <td
-    aria-readonly={undefined}
-    aria-selected={undefined}
     className={null}
-    data-label={undefined}
     role="gridcell"
-    style={undefined}
-    tabIndex={undefined}
   >
     <div
       className="slds-truncate"
@@ -1312,13 +996,8 @@ exports[`Advanced data table row should show record name cell in first row as fo
     </div>
   </td>
   <td
-    aria-readonly={undefined}
-    aria-selected={undefined}
     className={null}
-    data-label={undefined}
     role="gridcell"
-    style={undefined}
-    tabIndex={undefined}
   >
     <div
       className="slds-truncate"
@@ -1328,13 +1007,8 @@ exports[`Advanced data table row should show record name cell in first row as fo
     </div>
   </td>
   <td
-    aria-readonly={undefined}
-    aria-selected={undefined}
     className={null}
-    data-label={undefined}
     role="gridcell"
-    style={undefined}
-    tabIndex={undefined}
   >
     <div
       className="slds-truncate"
@@ -1344,13 +1018,8 @@ exports[`Advanced data table row should show record name cell in first row as fo
     </div>
   </td>
   <td
-    aria-readonly={undefined}
-    aria-selected={undefined}
     className={null}
-    data-label={undefined}
     role="gridcell"
-    style={undefined}
-    tabIndex={undefined}
   >
     <div
       className="slds-truncate"
@@ -1360,13 +1029,8 @@ exports[`Advanced data table row should show record name cell in first row as fo
     </div>
   </td>
   <td
-    aria-readonly={undefined}
-    aria-selected={undefined}
     className={null}
-    data-label={undefined}
     role="gridcell"
-    style={undefined}
-    tabIndex={undefined}
   >
     <div
       className="slds-truncate"
@@ -1376,13 +1040,8 @@ exports[`Advanced data table row should show record name cell in first row as fo
     </div>
   </td>
   <td
-    aria-readonly={undefined}
-    aria-selected={undefined}
     className={null}
-    data-label={undefined}
     role="gridcell"
-    style={undefined}
-    tabIndex={undefined}
   >
     <div
       className="slds-truncate"
@@ -1397,18 +1056,12 @@ exports[`Advanced data table row should show record name cell in first row as fo
     </div>
   </td>
   <td
-    aria-readonly={undefined}
-    aria-selected={undefined}
     className={null}
-    data-label={undefined}
     role="gridcell"
-    style={undefined}
-    tabIndex={undefined}
   >
     <button
       aria-haspopup="true"
       className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
-      id={undefined}
       tabIndex="-1"
       title="More actions for Acme"
     >
@@ -1432,31 +1085,17 @@ exports[`Advanced data table row should show record name cell in first row as fo
 
 exports[`Advanced data table row should swap row selection to a radio button 1`] = `
 <tr
-  aria-expanded={undefined}
-  aria-level={undefined}
-  aria-posinset={undefined}
-  aria-selected={undefined}
-  aria-setsize={undefined}
   className="slds-hint-parent"
-  tabIndex={undefined}
 >
   <td
-    aria-readonly={undefined}
-    aria-selected={undefined}
     className="slds-text-align_right"
-    data-label={undefined}
     role="gridcell"
-    style={undefined}
-    tabIndex={undefined}
   >
     <span
       className="slds-radio"
     >
       <input
-        aria-describedby={undefined}
         aria-labelledby="radio-button-label-01 column-group-header"
-        defaultChecked={undefined}
-        disabled={undefined}
         id="radio-01"
         name="options"
         tabIndex="-1"
@@ -1481,7 +1120,6 @@ exports[`Advanced data table row should swap row selection to a radio button 1`]
   </td>
   <th
     className={null}
-    data-label={undefined}
     scope="row"
     tabIndex="0"
   >
@@ -1498,13 +1136,8 @@ exports[`Advanced data table row should swap row selection to a radio button 1`]
     </div>
   </th>
   <td
-    aria-readonly={undefined}
-    aria-selected={undefined}
     className={null}
-    data-label={undefined}
     role="gridcell"
-    style={undefined}
-    tabIndex={undefined}
   >
     <div
       className="slds-truncate"
@@ -1514,13 +1147,8 @@ exports[`Advanced data table row should swap row selection to a radio button 1`]
     </div>
   </td>
   <td
-    aria-readonly={undefined}
-    aria-selected={undefined}
     className={null}
-    data-label={undefined}
     role="gridcell"
-    style={undefined}
-    tabIndex={undefined}
   >
     <div
       className="slds-truncate"
@@ -1530,13 +1158,8 @@ exports[`Advanced data table row should swap row selection to a radio button 1`]
     </div>
   </td>
   <td
-    aria-readonly={undefined}
-    aria-selected={undefined}
     className={null}
-    data-label={undefined}
     role="gridcell"
-    style={undefined}
-    tabIndex={undefined}
   >
     <div
       className="slds-truncate"
@@ -1546,13 +1169,8 @@ exports[`Advanced data table row should swap row selection to a radio button 1`]
     </div>
   </td>
   <td
-    aria-readonly={undefined}
-    aria-selected={undefined}
     className={null}
-    data-label={undefined}
     role="gridcell"
-    style={undefined}
-    tabIndex={undefined}
   >
     <div
       className="slds-truncate"
@@ -1562,13 +1180,8 @@ exports[`Advanced data table row should swap row selection to a radio button 1`]
     </div>
   </td>
   <td
-    aria-readonly={undefined}
-    aria-selected={undefined}
     className={null}
-    data-label={undefined}
     role="gridcell"
-    style={undefined}
-    tabIndex={undefined}
   >
     <div
       className="slds-truncate"
@@ -1578,13 +1191,8 @@ exports[`Advanced data table row should swap row selection to a radio button 1`]
     </div>
   </td>
   <td
-    aria-readonly={undefined}
-    aria-selected={undefined}
     className={null}
-    data-label={undefined}
     role="gridcell"
-    style={undefined}
-    tabIndex={undefined}
   >
     <div
       className="slds-truncate"
@@ -1599,18 +1207,12 @@ exports[`Advanced data table row should swap row selection to a radio button 1`]
     </div>
   </td>
   <td
-    aria-readonly={undefined}
-    aria-selected={undefined}
     className={null}
-    data-label={undefined}
     role="gridcell"
-    style={undefined}
-    tabIndex={undefined}
   >
     <button
       aria-haspopup="true"
       className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
-      id={undefined}
       tabIndex="-1"
       title="More actions for Acme"
     >
@@ -1804,12 +1406,10 @@ exports[`Product data table product items details cell should render 1`] = `
 exports[`Product data table product quantity cell should render 1`] = `
 <div
   className="slds-form-element"
-  role={undefined}
 >
   <label
     className="slds-form-element__label slds-assistive-text"
     htmlFor="product-quantity-text-input-id-0"
-    id={undefined}
   >
     Baseball Cap quantity
   </label>
@@ -1817,15 +1417,9 @@ exports[`Product data table product quantity cell should render 1`] = `
     className="slds-form-element__control"
   >
     <input
-      aria-invalid={undefined}
       className="slds-input slds-size_xxx-small slds-text-align_center slds-p-horizontal_x-small"
-      defaultValue={undefined}
-      disabled={undefined}
       id="product-quantity-text-input-id-0"
       placeholder=" "
-      readOnly={undefined}
-      required={undefined}
-      role={undefined}
       tabIndex="-1"
       type="text"
     />
@@ -1836,12 +1430,10 @@ exports[`Product data table product quantity cell should render 1`] = `
 exports[`Product data table product quantity cell should set a quantity 1`] = `
 <div
   className="slds-form-element"
-  role={undefined}
 >
   <label
     className="slds-form-element__label slds-assistive-text"
     htmlFor="product-quantity-text-input-id-0"
-    id={undefined}
   >
     Baseball Cap quantity
   </label>
@@ -1849,15 +1441,10 @@ exports[`Product data table product quantity cell should set a quantity 1`] = `
     className="slds-form-element__control"
   >
     <input
-      aria-invalid={undefined}
       className="slds-input slds-size_xxx-small slds-text-align_center slds-p-horizontal_x-small"
       defaultValue="1"
-      disabled={undefined}
       id="product-quantity-text-input-id-0"
       placeholder=" "
-      readOnly={undefined}
-      required={undefined}
-      role={undefined}
       tabIndex="-1"
       type="text"
     />
@@ -1868,12 +1455,10 @@ exports[`Product data table product quantity cell should set a quantity 1`] = `
 exports[`Product data table product quantity cell should set the input focusable in actionableMode 1`] = `
 <div
   className="slds-form-element"
-  role={undefined}
 >
   <label
     className="slds-form-element__label slds-assistive-text"
     htmlFor="product-quantity-text-input-id-0"
-    id={undefined}
   >
     Baseball Cap quantity
   </label>
@@ -1881,15 +1466,9 @@ exports[`Product data table product quantity cell should set the input focusable
     className="slds-form-element__control"
   >
     <input
-      aria-invalid={undefined}
       className="slds-input slds-size_xxx-small slds-text-align_center slds-p-horizontal_x-small"
-      defaultValue={undefined}
-      disabled={undefined}
       id="product-quantity-text-input-id-0"
       placeholder=" "
-      readOnly={undefined}
-      required={undefined}
-      role={undefined}
       tabIndex={null}
       type="text"
     />
@@ -1899,19 +1478,11 @@ exports[`Product data table product quantity cell should set the input focusable
 
 exports[`Product data table row should make focusable elements focusable in actionableMode 1`] = `
 <tr
-  aria-expanded={undefined}
-  aria-level={undefined}
-  aria-posinset={undefined}
-  aria-selected={undefined}
-  aria-setsize={undefined}
   className="slds-hint-parent slds-align-top"
-  tabIndex={undefined}
 >
   <th
     className={null}
-    data-label={undefined}
     scope="row"
-    tabIndex={undefined}
   >
     <div
       className="slds-media"
@@ -1984,22 +1555,15 @@ exports[`Product data table row should make focusable elements focusable in acti
     </div>
   </th>
   <td
-    aria-readonly={undefined}
-    aria-selected={undefined}
     className={null}
-    data-label={undefined}
     role="gridcell"
-    style={undefined}
-    tabIndex={undefined}
   >
     <div
       className="slds-form-element"
-      role={undefined}
     >
       <label
         className="slds-form-element__label slds-assistive-text"
         htmlFor="product-quantity-text-input-id-1"
-        id={undefined}
       >
         Baseball Cap quantity
       </label>
@@ -2007,15 +1571,10 @@ exports[`Product data table row should make focusable elements focusable in acti
         className="slds-form-element__control"
       >
         <input
-          aria-invalid={undefined}
           className="slds-input slds-size_xxx-small slds-text-align_center slds-p-horizontal_x-small"
           defaultValue="1"
-          disabled={undefined}
           id="product-quantity-text-input-id-1"
           placeholder=" "
-          readOnly={undefined}
-          required={undefined}
-          role={undefined}
           tabIndex={null}
           type="text"
         />
@@ -2023,13 +1582,8 @@ exports[`Product data table row should make focusable elements focusable in acti
     </div>
   </td>
   <td
-    aria-readonly={undefined}
-    aria-selected={undefined}
     className={null}
-    data-label={undefined}
     role="gridcell"
-    style={undefined}
-    tabIndex={undefined}
   >
     <div
       className="slds-truncate"
@@ -2039,13 +1593,8 @@ exports[`Product data table row should make focusable elements focusable in acti
     </div>
   </td>
   <td
-    aria-readonly={undefined}
-    aria-selected={undefined}
     className={null}
-    data-label={undefined}
     role="gridcell"
-    style={undefined}
-    tabIndex={undefined}
   >
     <p>
       <s>
@@ -2057,18 +1606,12 @@ exports[`Product data table row should make focusable elements focusable in acti
     </p>
   </td>
   <td
-    aria-readonly={undefined}
-    aria-selected={undefined}
     className={null}
-    data-label={undefined}
     role="gridcell"
-    style={undefined}
-    tabIndex={undefined}
   >
     <button
       aria-haspopup="true"
       className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
-      id={undefined}
       tabIndex="0"
       title="More actions for Baseball Cap"
     >
@@ -2092,19 +1635,11 @@ exports[`Product data table row should make focusable elements focusable in acti
 
 exports[`Product data table row should render 1`] = `
 <tr
-  aria-expanded={undefined}
-  aria-level={undefined}
-  aria-posinset={undefined}
-  aria-selected={undefined}
-  aria-setsize={undefined}
   className="slds-hint-parent slds-align-top"
-  tabIndex={undefined}
 >
   <th
     className={null}
-    data-label={undefined}
     scope="row"
-    tabIndex={undefined}
   >
     <div
       className="slds-media"
@@ -2177,22 +1712,15 @@ exports[`Product data table row should render 1`] = `
     </div>
   </th>
   <td
-    aria-readonly={undefined}
-    aria-selected={undefined}
     className={null}
-    data-label={undefined}
     role="gridcell"
-    style={undefined}
-    tabIndex={undefined}
   >
     <div
       className="slds-form-element"
-      role={undefined}
     >
       <label
         className="slds-form-element__label slds-assistive-text"
         htmlFor="product-quantity-text-input-id-1"
-        id={undefined}
       >
         Baseball Cap quantity
       </label>
@@ -2200,15 +1728,10 @@ exports[`Product data table row should render 1`] = `
         className="slds-form-element__control"
       >
         <input
-          aria-invalid={undefined}
           className="slds-input slds-size_xxx-small slds-text-align_center slds-p-horizontal_x-small"
           defaultValue="1"
-          disabled={undefined}
           id="product-quantity-text-input-id-1"
           placeholder=" "
-          readOnly={undefined}
-          required={undefined}
-          role={undefined}
           tabIndex="-1"
           type="text"
         />
@@ -2216,13 +1739,8 @@ exports[`Product data table row should render 1`] = `
     </div>
   </td>
   <td
-    aria-readonly={undefined}
-    aria-selected={undefined}
     className={null}
-    data-label={undefined}
     role="gridcell"
-    style={undefined}
-    tabIndex={undefined}
   >
     <div
       className="slds-truncate"
@@ -2232,13 +1750,8 @@ exports[`Product data table row should render 1`] = `
     </div>
   </td>
   <td
-    aria-readonly={undefined}
-    aria-selected={undefined}
     className={null}
-    data-label={undefined}
     role="gridcell"
-    style={undefined}
-    tabIndex={undefined}
   >
     <p>
       <s>
@@ -2250,18 +1763,12 @@ exports[`Product data table row should render 1`] = `
     </p>
   </td>
   <td
-    aria-readonly={undefined}
-    aria-selected={undefined}
     className={null}
-    data-label={undefined}
     role="gridcell"
-    style={undefined}
-    tabIndex={undefined}
   >
     <button
       aria-haspopup="true"
       className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
-      id={undefined}
       tabIndex="-1"
       title="More actions for Baseball Cap"
     >

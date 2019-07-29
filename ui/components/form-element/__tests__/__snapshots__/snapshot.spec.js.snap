@@ -19,7 +19,6 @@ exports[`Compound Form Element render compound form element row 1`] = `
 exports[`Compound Form Element render compound form element wrapper 1`] = `
 <fieldset
   className="slds-form-element slds-form-element_compound"
-  id={undefined}
 >
   <legend
     className="slds-form-element__legend slds-form-element__label"
@@ -35,7 +34,6 @@ exports[`Compound Form Element render compound form element wrapper 1`] = `
 exports[`Compound Form Element render compound form element wrapper with horizontal form elements 1`] = `
 <fieldset
   className="slds-form-element slds-form-element_compound slds-form-element_horizontal"
-  id={undefined}
 >
   <legend
     className="slds-form-element__legend slds-form-element__label"
@@ -51,7 +49,6 @@ exports[`Compound Form Element render compound form element wrapper with horizon
 exports[`Compound Form Element render compound form element wrapper with legend 1`] = `
 <fieldset
   className="slds-form-element slds-form-element_compound"
-  id={undefined}
 >
   <legend
     className="slds-form-element__legend slds-form-element__label"
@@ -69,7 +66,6 @@ exports[`Compound Form Element render compound form element wrapper with legend 
 exports[`Compound Form Element render compound form element wrapper with required form elements 1`] = `
 <fieldset
   className="slds-form-element slds-form-element_compound slds-is-required"
-  id={undefined}
 >
   <legend
     className="slds-form-element__legend slds-form-element__label"
@@ -93,7 +89,6 @@ exports[`Compound Form Element render compound form element wrapper with require
 exports[`Compound Form Element render compound form element wrapper with stacked form elements 1`] = `
 <fieldset
   className="slds-form-element slds-form-element_compound slds-form-element_stacked"
-  id={undefined}
 >
   <legend
     className="slds-form-element__legend slds-form-element__label"
@@ -109,7 +104,6 @@ exports[`Compound Form Element render compound form element wrapper with stacked
 exports[`Compound Form Element render deprecated compound form element 1`] = `
 <fieldset
   className="slds-form-element slds-form_compound"
-  id={undefined}
 >
   <legend
     className="slds-form-element__legend slds-form-element__label"
@@ -127,12 +121,10 @@ exports[`Compound Form Element render deprecated compound form element 1`] = `
       >
         <div
           className="slds-form-element slds-size_1-of-2"
-          role={undefined}
         >
           <label
             className="slds-form-element__label"
             htmlFor="location-longitude-01"
-            id={undefined}
           >
             Longitude
           </label>
@@ -140,28 +132,19 @@ exports[`Compound Form Element render deprecated compound form element 1`] = `
             className="slds-form-element__control"
           >
             <input
-              aria-invalid={undefined}
               className="slds-input"
               defaultValue="10.283"
-              disabled={undefined}
               id="location-longitude-01"
-              placeholder={undefined}
-              readOnly={undefined}
-              required={undefined}
-              role={undefined}
-              tabIndex={undefined}
               type="text"
             />
           </div>
         </div>
         <div
           className="slds-form-element slds-size_1-of-2"
-          role={undefined}
         >
           <label
             className="slds-form-element__label"
             htmlFor="location-latitude-01"
-            id={undefined}
           >
             Latitude
           </label>
@@ -169,16 +152,9 @@ exports[`Compound Form Element render deprecated compound form element 1`] = `
             className="slds-form-element__control"
           >
             <input
-              aria-invalid={undefined}
               className="slds-input"
               defaultValue="54.293"
-              disabled={undefined}
               id="location-latitude-01"
-              placeholder={undefined}
-              readOnly={undefined}
-              required={undefined}
-              role={undefined}
-              tabIndex={undefined}
               type="text"
             />
           </div>
@@ -192,7 +168,6 @@ exports[`Compound Form Element render deprecated compound form element 1`] = `
 exports[`Compound Form Element renders address compound form element 1`] = `
 <fieldset
   className="slds-form-element slds-form-element_compound slds-form-element_address"
-  id={undefined}
 >
   <legend
     className="slds-form-element__legend slds-form-element__label"
@@ -210,12 +185,10 @@ exports[`Compound Form Element renders address compound form element 1`] = `
       >
         <div
           className="slds-form-element"
-          role={undefined}
         >
           <label
             className="slds-form-element__label"
             htmlFor="form-element-id-04"
-            id={undefined}
           >
             Billing Street
           </label>
@@ -241,12 +214,10 @@ exports[`Compound Form Element renders address compound form element 1`] = `
       >
         <div
           className="slds-form-element"
-          role={undefined}
         >
           <label
             className="slds-form-element__label"
             htmlFor="form-element-id-05"
-            id={undefined}
           >
             Billing City
           </label>
@@ -254,16 +225,10 @@ exports[`Compound Form Element renders address compound form element 1`] = `
             className="slds-form-element__control"
           >
             <input
-              aria-invalid={undefined}
               className="slds-input"
               defaultValue="Burlington"
-              disabled={undefined}
               id="form-element-id-05"
-              placeholder={undefined}
-              readOnly={undefined}
               required={true}
-              role={undefined}
-              tabIndex={undefined}
               type="text"
             />
           </div>
@@ -274,12 +239,10 @@ exports[`Compound Form Element renders address compound form element 1`] = `
       >
         <div
           className="slds-form-element"
-          role={undefined}
         >
           <label
             className="slds-form-element__label"
             htmlFor="form-element-id-06"
-            id={undefined}
           >
             Billing State/Province
           </label>
@@ -287,16 +250,10 @@ exports[`Compound Form Element renders address compound form element 1`] = `
             className="slds-form-element__control"
           >
             <input
-              aria-invalid={undefined}
               className="slds-input"
               defaultValue="NC"
-              disabled={undefined}
               id="form-element-id-06"
-              placeholder={undefined}
-              readOnly={undefined}
               required={true}
-              role={undefined}
-              tabIndex={undefined}
               type="text"
             />
           </div>
@@ -311,12 +268,10 @@ exports[`Compound Form Element renders address compound form element 1`] = `
       >
         <div
           className="slds-form-element"
-          role={undefined}
         >
           <label
             className="slds-form-element__label"
             htmlFor="form-element-id-07"
-            id={undefined}
           >
             Billing Zip/Postal Code
           </label>
@@ -324,16 +279,10 @@ exports[`Compound Form Element renders address compound form element 1`] = `
             className="slds-form-element__control"
           >
             <input
-              aria-invalid={undefined}
               className="slds-input"
               defaultValue="27215"
-              disabled={undefined}
               id="form-element-id-07"
-              placeholder={undefined}
-              readOnly={undefined}
               required={true}
-              role={undefined}
-              tabIndex={undefined}
               type="text"
             />
           </div>
@@ -344,12 +293,10 @@ exports[`Compound Form Element renders address compound form element 1`] = `
       >
         <div
           className="slds-form-element"
-          role={undefined}
         >
           <label
             className="slds-form-element__label"
             htmlFor="form-element-id-08"
-            id={undefined}
           >
             Billing Country
           </label>
@@ -357,16 +304,10 @@ exports[`Compound Form Element renders address compound form element 1`] = `
             className="slds-form-element__control"
           >
             <input
-              aria-invalid={undefined}
               className="slds-input"
               defaultValue="USA"
-              disabled={undefined}
               id="form-element-id-08"
-              placeholder={undefined}
-              readOnly={undefined}
               required={true}
-              role={undefined}
-              tabIndex={undefined}
               type="text"
             />
           </div>
@@ -380,7 +321,6 @@ exports[`Compound Form Element renders address compound form element 1`] = `
 exports[`Compound Form Element renders simple compound form element 1`] = `
 <fieldset
   className="slds-form-element slds-form-element_compound"
-  id={undefined}
 >
   <legend
     className="slds-form-element__legend slds-form-element__label"
@@ -398,12 +338,10 @@ exports[`Compound Form Element renders simple compound form element 1`] = `
       >
         <div
           className="slds-form-element"
-          role={undefined}
         >
           <label
             className="slds-form-element__label"
             htmlFor="input-01"
-            id={undefined}
           >
             Latitude
           </label>
@@ -411,16 +349,8 @@ exports[`Compound Form Element renders simple compound form element 1`] = `
             className="slds-form-element__control"
           >
             <input
-              aria-invalid={undefined}
               className="slds-input"
-              defaultValue={undefined}
-              disabled={undefined}
               id="input-01"
-              placeholder={undefined}
-              readOnly={undefined}
-              required={undefined}
-              role={undefined}
-              tabIndex={undefined}
               type="text"
             />
           </div>
@@ -431,12 +361,10 @@ exports[`Compound Form Element renders simple compound form element 1`] = `
       >
         <div
           className="slds-form-element"
-          role={undefined}
         >
           <label
             className="slds-form-element__label"
             htmlFor="input-02"
-            id={undefined}
           >
             Longitude
           </label>
@@ -444,16 +372,8 @@ exports[`Compound Form Element renders simple compound form element 1`] = `
             className="slds-form-element__control"
           >
             <input
-              aria-invalid={undefined}
               className="slds-input"
-              defaultValue={undefined}
-              disabled={undefined}
               id="input-02"
-              placeholder={undefined}
-              readOnly={undefined}
-              required={undefined}
-              role={undefined}
-              tabIndex={undefined}
               type="text"
             />
           </div>
@@ -467,12 +387,10 @@ exports[`Compound Form Element renders simple compound form element 1`] = `
 exports[`Form Element Composition renders form element with input 1`] = `
 <div
   className="slds-form-element"
-  role={undefined}
 >
   <label
     className="slds-form-element__label"
     htmlFor="input-1"
-    id={undefined}
   >
     Form label
   </label>
@@ -480,16 +398,8 @@ exports[`Form Element Composition renders form element with input 1`] = `
     className="slds-form-element__control"
   >
     <input
-      aria-invalid={undefined}
       className="slds-input"
-      defaultValue={undefined}
-      disabled={undefined}
       id="input-1"
-      placeholder={undefined}
-      readOnly={undefined}
-      required={undefined}
-      role={undefined}
-      tabIndex={undefined}
       type="text"
     />
   </div>
@@ -499,12 +409,10 @@ exports[`Form Element Composition renders form element with input 1`] = `
 exports[`Form Element Composition renders form element with input that has an error 1`] = `
 <div
   className="slds-form-element slds-has-error"
-  role={undefined}
 >
   <label
     className="slds-form-element__label"
     htmlFor="input-1"
-    id={undefined}
   >
     <abbr
       className="slds-required"
@@ -522,14 +430,8 @@ exports[`Form Element Composition renders form element with input that has an er
       aria-describedby="error-1"
       aria-invalid="true"
       className="slds-input"
-      defaultValue={undefined}
-      disabled={undefined}
       id="input-1"
-      placeholder={undefined}
-      readOnly={undefined}
       required={true}
-      role={undefined}
-      tabIndex={undefined}
       type="text"
     />
   </div>
@@ -545,12 +447,10 @@ exports[`Form Element Composition renders form element with input that has an er
 exports[`Form Element Composition renders form element with input that is required 1`] = `
 <div
   className="slds-form-element"
-  role={undefined}
 >
   <label
     className="slds-form-element__label"
     htmlFor="input-1"
-    id={undefined}
   >
     <abbr
       className="slds-required"
@@ -565,16 +465,9 @@ exports[`Form Element Composition renders form element with input that is requir
     className="slds-form-element__control"
   >
     <input
-      aria-invalid={undefined}
       className="slds-input"
-      defaultValue={undefined}
-      disabled={undefined}
       id="input-1"
-      placeholder={undefined}
-      readOnly={undefined}
       required={true}
-      role={undefined}
-      tabIndex={undefined}
       type="text"
     />
   </div>
@@ -584,11 +477,9 @@ exports[`Form Element Composition renders form element with input that is requir
 exports[`Form Element Composition renders inline editable form element in view mode 1`] = `
 <div
   className="slds-form-element slds-form-element_edit slds-form-element_readonly slds-hint-parent"
-  role={undefined}
 >
   <span
     className="slds-form-element__label"
-    id={undefined}
   >
     Status
   </span>
@@ -601,9 +492,7 @@ exports[`Form Element Composition renders inline editable form element in view m
       In Progress
     </div>
     <button
-      aria-haspopup={undefined}
       className="slds-button slds-button_icon"
-      id={undefined}
       title="Edit: Status"
     >
       <svg
@@ -627,7 +516,6 @@ exports[`Form Element Composition renders inline editable form element in view m
 exports[`Form Element renders form element as a fieldset 1`] = `
 <fieldset
   className="slds-form-element"
-  id={undefined}
 >
   <legend
     className="slds-form-element__legend slds-form-element__label"
@@ -645,7 +533,6 @@ exports[`Form Element renders form element as a fieldset 1`] = `
 exports[`Form Element renders form element as a fieldset with compound field classname 1`] = `
 <fieldset
   className="slds-form-element slds-form-element_compound"
-  id={undefined}
 >
   <legend
     className="slds-form-element__legend slds-form-element__label"
@@ -663,7 +550,6 @@ exports[`Form Element renders form element as a fieldset with compound field cla
 exports[`Form Element renders form element as a fieldset with error classname 1`] = `
 <fieldset
   className="slds-form-element slds-has-error"
-  id={undefined}
 >
   <legend
     className="slds-form-element__legend slds-form-element__label"
@@ -681,7 +567,6 @@ exports[`Form Element renders form element as a fieldset with error classname 1`
 exports[`Form Element renders form element as a fieldset with help text icon 1`] = `
 <fieldset
   className="slds-form-element"
-  id={undefined}
 >
   <legend
     className="slds-form-element__legend slds-form-element__label"
@@ -692,9 +577,7 @@ exports[`Form Element renders form element as a fieldset with help text icon 1`]
     className="slds-form-element__icon"
   >
     <button
-      aria-haspopup={undefined}
       className="slds-button slds-button_icon"
-      id={undefined}
     >
       <svg
         aria-hidden={true}
@@ -722,7 +605,6 @@ exports[`Form Element renders form element as a fieldset with help text icon 1`]
 exports[`Form Element renders form element as a fieldset with hidden legend 1`] = `
 <fieldset
   className="slds-form-element"
-  id={undefined}
 >
   <legend
     className="slds-form-element__legend slds-form-element__label slds-assistive-text"
@@ -740,7 +622,6 @@ exports[`Form Element renders form element as a fieldset with hidden legend 1`] 
 exports[`Form Element renders form element as a fieldset with required asterisk 1`] = `
 <fieldset
   className="slds-form-element slds-is-required"
-  id={undefined}
 >
   <legend
     className="slds-form-element__legend slds-form-element__label"
@@ -805,9 +686,7 @@ Array [
     className="slds-form-element__icon"
   >
     <button
-      aria-haspopup={undefined}
       className="slds-button slds-button_icon"
-      id={undefined}
     >
       <svg
         aria-hidden={true}
@@ -845,7 +724,6 @@ exports[`Form Element renders form element fieldset legend with required asteris
 exports[`Form Element renders form element fieldset wrapper 1`] = `
 <fieldset
   className="slds-form-element"
-  id={undefined}
 >
   content
 </fieldset>
@@ -854,7 +732,6 @@ exports[`Form Element renders form element fieldset wrapper 1`] = `
 exports[`Form Element renders form element fieldset wrapper with compound fields 1`] = `
 <fieldset
   className="slds-form-element slds-form-element_compound"
-  id={undefined}
 >
   content
 </fieldset>
@@ -863,7 +740,6 @@ exports[`Form Element renders form element fieldset wrapper with compound fields
 exports[`Form Element renders form element fieldset wrapper with error classname 1`] = `
 <fieldset
   className="slds-form-element slds-has-error"
-  id={undefined}
 >
   content
 </fieldset>
@@ -872,7 +748,6 @@ exports[`Form Element renders form element fieldset wrapper with error classname
 exports[`Form Element renders form element fieldset wrapper with required classname 1`] = `
 <fieldset
   className="slds-form-element slds-is-required"
-  id={undefined}
 >
   content
 </fieldset>
@@ -883,10 +758,7 @@ exports[`Form Element renders form element help text icon 1`] = `
   className="slds-form-element__icon"
 >
   <button
-    aria-describedby={undefined}
-    aria-haspopup={undefined}
     className="slds-button slds-button_icon"
-    id={undefined}
   >
     <svg
       aria-hidden={true}
@@ -911,9 +783,7 @@ exports[`Form Element renders form element help text icon with a tooltip 1`] = `
 >
   <button
     aria-describedby="help"
-    aria-haspopup={undefined}
     className="slds-button slds-button_icon"
-    id={undefined}
   >
     <svg
       aria-hidden={true}
@@ -954,7 +824,6 @@ exports[`Form Element renders form element help text icon with a tooltip 1`] = `
 exports[`Form Element renders form element inline help message 1`] = `
 <div
   className="slds-form-element__help"
-  id={undefined}
 />
 `;
 
@@ -968,8 +837,6 @@ exports[`Form Element renders form element inline help message with ID 1`] = `
 exports[`Form Element renders form element label 1`] = `
 <label
   className="slds-form-element__label"
-  htmlFor={undefined}
-  id={undefined}
 >
   Form label
 </label>
@@ -978,7 +845,6 @@ exports[`Form Element renders form element label 1`] = `
 exports[`Form Element renders form element label as a span element 1`] = `
 <span
   className="slds-form-element__label"
-  id={undefined}
 >
   content
 </span>
@@ -987,8 +853,6 @@ exports[`Form Element renders form element label as a span element 1`] = `
 exports[`Form Element renders form element label with hidden label 1`] = `
 <label
   className="slds-form-element__label slds-assistive-text"
-  htmlFor={undefined}
-  id={undefined}
 >
   Form label
 </label>
@@ -998,7 +862,6 @@ exports[`Form Element renders form element label with input ID 1`] = `
 <label
   className="slds-form-element__label"
   htmlFor="input-id"
-  id={undefined}
 >
   Form label
 </label>
@@ -1007,7 +870,6 @@ exports[`Form Element renders form element label with input ID 1`] = `
 exports[`Form Element renders form element label with label ID 1`] = `
 <label
   className="slds-form-element__label"
-  htmlFor={undefined}
   id="label-id"
 >
   Form label
@@ -1017,8 +879,6 @@ exports[`Form Element renders form element label with label ID 1`] = `
 exports[`Form Element renders form element label with label classname 1`] = `
 <label
   className="slds-form-element__label slds-foo"
-  htmlFor={undefined}
-  id={undefined}
 >
   Form label
 </label>
@@ -1027,8 +887,6 @@ exports[`Form Element renders form element label with label classname 1`] = `
 exports[`Form Element renders form element label with required asterisk 1`] = `
 <label
   className="slds-form-element__label"
-  htmlFor={undefined}
-  id={undefined}
 >
   <abbr
     className="slds-required"
@@ -1044,8 +902,6 @@ exports[`Form Element renders form element label with required asterisk 1`] = `
 exports[`Form Element renders form element label with required asterisk 2`] = `
 <label
   className="slds-form-element__label"
-  htmlFor={undefined}
-  id={undefined}
 >
   <abbr
     className="slds-required"
@@ -1077,7 +933,6 @@ exports[`Form Element renders form element with static/view only value 1`] = `
 exports[`Form Element renders form element wrapper 1`] = `
 <div
   className="slds-form-element"
-  role={undefined}
 >
   content
 </div>
@@ -1086,7 +941,6 @@ exports[`Form Element renders form element wrapper 1`] = `
 exports[`Form Element renders form element wrapper with error classname 1`] = `
 <div
   className="slds-form-element slds-has-error"
-  role={undefined}
 >
   content
 </div>
@@ -1095,7 +949,6 @@ exports[`Form Element renders form element wrapper with error classname 1`] = `
 exports[`Form Element renders form element wrapper with hint classname 1`] = `
 <div
   className="slds-form-element slds-hint-parent"
-  role={undefined}
 >
   content
 </div>
@@ -1104,7 +957,6 @@ exports[`Form Element renders form element wrapper with hint classname 1`] = `
 exports[`Form Element renders form element wrapper with inline edit classname 1`] = `
 <div
   className="slds-form-element slds-form-element_edit"
-  role={undefined}
 >
   content
 </div>
@@ -1113,7 +965,6 @@ exports[`Form Element renders form element wrapper with inline edit classname 1`
 exports[`Form Element renders form element wrapper with view mode classname 1`] = `
 <div
   className="slds-form-element slds-form-element_readonly"
-  role={undefined}
 >
   content
 </div>
@@ -1133,12 +984,10 @@ exports[`Horizontal Form Element renders deprecated horizontal form elements - e
     >
       <div
         className="slds-form-element slds-is-editing"
-        role={undefined}
       >
         <label
           className="slds-form-element__label"
           htmlFor="form-element-id-01"
-          id={undefined}
         >
           <abbr
             className="slds-required"
@@ -1153,16 +1002,11 @@ exports[`Horizontal Form Element renders deprecated horizontal form elements - e
           className="slds-form-element__control"
         >
           <input
-            aria-invalid={undefined}
             className="slds-input"
             defaultValue="Jack Rogers"
-            disabled={undefined}
             id="form-element-id-01"
-            placeholder={undefined}
             readOnly={true}
             required={true}
-            role={undefined}
-            tabIndex={undefined}
             type="text"
           />
         </div>
@@ -1174,12 +1018,10 @@ exports[`Horizontal Form Element renders deprecated horizontal form elements - e
     >
       <div
         className="slds-form-element slds-is-editing"
-        role={undefined}
       >
         <label
           className="slds-form-element__label"
           htmlFor="combobox-id-01"
-          id={undefined}
         >
           Team Name
         </label>
@@ -1190,11 +1032,9 @@ exports[`Horizontal Form Element renders deprecated horizontal form elements - e
             className="slds-combobox_container"
           >
             <div
-              aria-controls={undefined}
               aria-expanded="false"
               aria-haspopup="listbox"
               className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click"
-              id={undefined}
               role="combobox"
             >
               <div
@@ -1202,29 +1042,20 @@ exports[`Horizontal Form Element renders deprecated horizontal form elements - e
                 role="none"
               >
                 <input
-                  aria-activedescendant={undefined}
                   aria-autocomplete="list"
                   aria-controls="listbox-id-01"
-                  aria-invalid={undefined}
                   autoComplete="off"
-                  autoFocus={undefined}
                   className="slds-input slds-combobox__input slds-combobox__input-value"
                   defaultValue="Salesforce Lightning Design System"
-                  disabled={undefined}
                   id="combobox-id-01"
                   onBlur={[Function]}
                   onFocus={[Function]}
                   placeholder="Search..."
-                  readOnly={undefined}
-                  required={undefined}
                   role="textbox"
-                  tabIndex={undefined}
                   type="text"
                 />
                 <button
-                  aria-haspopup={undefined}
                   className="slds-button slds-button_icon slds-input__icon slds-input__icon_right"
-                  id={undefined}
                   title="Clear the text input"
                 >
                   <svg
@@ -1249,7 +1080,6 @@ exports[`Horizontal Form Element renders deprecated horizontal form elements - e
                 role="listbox"
               >
                 <ul
-                  aria-label={undefined}
                   className="slds-listbox slds-listbox_vertical"
                   role="presentation"
                 />
@@ -1269,12 +1099,10 @@ exports[`Horizontal Form Element renders deprecated horizontal form elements - e
     >
       <div
         className="slds-form-element slds-is-editing"
-        role={undefined}
       >
         <label
           className="slds-form-element__label"
           htmlFor="checkbox-unique-id-5"
-          id={undefined}
         >
           Security Assessment Required?
         </label>
@@ -1285,12 +1113,8 @@ exports[`Horizontal Form Element renders deprecated horizontal form elements - e
             className="slds-checkbox slds-checkbox_standalone"
           >
             <input
-              aria-describedby={undefined}
-              defaultChecked={undefined}
-              disabled={undefined}
               id="checkbox-unique-id-5"
               name="label"
-              required={undefined}
               type="checkbox"
               value="option"
             />
@@ -1307,12 +1131,10 @@ exports[`Horizontal Form Element renders deprecated horizontal form elements - e
     >
       <div
         className="slds-form-element slds-is-editing"
-        role={undefined}
       >
         <label
           className="slds-form-element__label"
           htmlFor="combobox-id-02"
-          id={undefined}
         >
           Status
         </label>
@@ -1323,11 +1145,9 @@ exports[`Horizontal Form Element renders deprecated horizontal form elements - e
             className="slds-combobox_container"
           >
             <div
-              aria-controls={undefined}
               aria-expanded="false"
               aria-haspopup="listbox"
               className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click"
-              id={undefined}
               role="combobox"
             >
               <div
@@ -1335,23 +1155,17 @@ exports[`Horizontal Form Element renders deprecated horizontal form elements - e
                 role="none"
               >
                 <input
-                  aria-activedescendant={undefined}
                   aria-autocomplete={null}
                   aria-controls="listbox-id-02"
-                  aria-invalid={undefined}
                   autoComplete="off"
-                  autoFocus={undefined}
                   className="slds-input slds-combobox__input slds-combobox__input-value"
                   defaultValue="In Progress"
-                  disabled={undefined}
                   id="combobox-id-02"
                   onBlur={[Function]}
                   onFocus={[Function]}
                   placeholder="Select an Option"
                   readOnly={true}
-                  required={undefined}
                   role="textbox"
-                  tabIndex={undefined}
                   type="text"
                 />
                 <span
@@ -1375,7 +1189,6 @@ exports[`Horizontal Form Element renders deprecated horizontal form elements - e
                 role="listbox"
               >
                 <ul
-                  aria-label={undefined}
                   className="slds-listbox slds-listbox_vertical"
                   role="presentation"
                 />
@@ -1395,7 +1208,6 @@ exports[`Horizontal Form Element renders deprecated horizontal form elements - e
     >
       <fieldset
         className="slds-form-element slds-is-editing"
-        id={undefined}
       >
         <legend
           className="slds-form-element__legend slds-form-element__label"
@@ -1409,20 +1221,16 @@ exports[`Horizontal Form Element renders deprecated horizontal form elements - e
             className="slds-checkbox"
           >
             <input
-              aria-describedby={undefined}
               aria-labelledby={null}
               defaultChecked={true}
-              disabled={undefined}
               id="checkbox-unique-id-6"
               name="default"
-              tabIndex={undefined}
               type="checkbox"
               value="checkbox-unique-id-6"
             />
             <label
               className="slds-checkbox__label"
               htmlFor="checkbox-unique-id-6"
-              id={undefined}
             >
               <span
                 className="slds-checkbox_faux"
@@ -1438,20 +1246,15 @@ exports[`Horizontal Form Element renders deprecated horizontal form elements - e
             className="slds-checkbox"
           >
             <input
-              aria-describedby={undefined}
               aria-labelledby={null}
-              defaultChecked={undefined}
-              disabled={undefined}
               id="checkbox-unique-id-7"
               name="default"
-              tabIndex={undefined}
               type="checkbox"
               value="checkbox-unique-id-7"
             />
             <label
               className="slds-checkbox__label"
               htmlFor="checkbox-unique-id-7"
-              id={undefined}
             >
               <span
                 className="slds-checkbox_faux"
@@ -1480,12 +1283,10 @@ exports[`Horizontal Form Element renders deprecated horizontal form elements - e
     >
       <div
         className="slds-form-element slds-is-editing"
-        role={undefined}
       >
         <label
           className="slds-form-element__label"
           htmlFor="form-element-id-02"
-          id={undefined}
         >
           SLA Serial Number
         </label>
@@ -1493,10 +1294,7 @@ exports[`Horizontal Form Element renders deprecated horizontal form elements - e
           className="slds-form-element__icon"
         >
           <button
-            aria-describedby={undefined}
-            aria-haspopup={undefined}
             className="slds-button slds-button_icon"
-            id={undefined}
           >
             <svg
               aria-hidden={true}
@@ -1517,16 +1315,9 @@ exports[`Horizontal Form Element renders deprecated horizontal form elements - e
           className="slds-form-element__control"
         >
           <input
-            aria-invalid={undefined}
             className="slds-input"
             defaultValue="5367"
-            disabled={undefined}
             id="form-element-id-02"
-            placeholder={undefined}
-            readOnly={undefined}
-            required={undefined}
-            role={undefined}
-            tabIndex={undefined}
             type="text"
           />
         </div>
@@ -1538,12 +1329,10 @@ exports[`Horizontal Form Element renders deprecated horizontal form elements - e
     >
       <div
         className="slds-form-element slds-is-editing slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open"
-        role={undefined}
       >
         <label
           className="slds-form-element__label"
           htmlFor="form-element-id-03"
-          id={undefined}
         >
           Date
         </label>
@@ -1551,22 +1340,13 @@ exports[`Horizontal Form Element renders deprecated horizontal form elements - e
           className="slds-form-element__control slds-input-has-icon slds-input-has-icon_right"
         >
           <input
-            aria-invalid={undefined}
             className="slds-input"
             defaultValue="1/1/2018"
-            disabled={undefined}
             id="form-element-id-03"
-            placeholder={undefined}
-            readOnly={undefined}
-            required={undefined}
-            role={undefined}
-            tabIndex={undefined}
             type="text"
           />
           <button
-            aria-haspopup={undefined}
             className="slds-button slds-button_icon slds-input__icon slds-input__icon_right"
-            id={undefined}
             title="Select a date"
           >
             <svg
@@ -1596,7 +1376,6 @@ exports[`Horizontal Form Element renders deprecated horizontal form elements - e
     >
       <fieldset
         className="slds-form-element slds-form_compound slds-is-editing"
-        id={undefined}
       >
         <legend
           className="slds-form-element__legend slds-form-element__label"
@@ -1614,12 +1393,10 @@ exports[`Horizontal Form Element renders deprecated horizontal form elements - e
             >
               <div
                 className="slds-form-element slds-size_1-of-2"
-                role={undefined}
               >
                 <label
                   className="slds-form-element__label"
                   htmlFor="location-longitude-01"
-                  id={undefined}
                 >
                   Longitude
                 </label>
@@ -1627,28 +1404,19 @@ exports[`Horizontal Form Element renders deprecated horizontal form elements - e
                   className="slds-form-element__control"
                 >
                   <input
-                    aria-invalid={undefined}
                     className="slds-input"
                     defaultValue="10.283"
-                    disabled={undefined}
                     id="location-longitude-01"
-                    placeholder={undefined}
-                    readOnly={undefined}
-                    required={undefined}
-                    role={undefined}
-                    tabIndex={undefined}
                     type="text"
                   />
                 </div>
               </div>
               <div
                 className="slds-form-element slds-size_1-of-2"
-                role={undefined}
               >
                 <label
                   className="slds-form-element__label"
                   htmlFor="location-latitude-01"
-                  id={undefined}
                 >
                   Latitude
                 </label>
@@ -1656,16 +1424,9 @@ exports[`Horizontal Form Element renders deprecated horizontal form elements - e
                   className="slds-form-element__control"
                 >
                   <input
-                    aria-invalid={undefined}
                     className="slds-input"
                     defaultValue="54.293"
-                    disabled={undefined}
                     id="location-latitude-01"
-                    placeholder={undefined}
-                    readOnly={undefined}
-                    required={undefined}
-                    role={undefined}
-                    tabIndex={undefined}
                     type="text"
                   />
                 </div>
@@ -1723,7 +1484,6 @@ exports[`Horizontal Form Element renders deprecated horizontal form elements - e
               >
                 <ul
                   aria-describedby="option-drag-label"
-                  aria-disabled={undefined}
                   aria-labelledby="label-1"
                   aria-multiselectable="true"
                   className="slds-listbox slds-listbox_vertical"
@@ -1734,7 +1494,6 @@ exports[`Horizontal Form Element renders deprecated horizontal form elements - e
                     role="presentation"
                   >
                     <div
-                      aria-disabled={undefined}
                       aria-selected={false}
                       className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
                       draggable={true}
@@ -1758,7 +1517,6 @@ exports[`Horizontal Form Element renders deprecated horizontal form elements - e
                     role="presentation"
                   >
                     <div
-                      aria-disabled={undefined}
                       aria-selected={false}
                       className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
                       draggable={true}
@@ -1782,7 +1540,6 @@ exports[`Horizontal Form Element renders deprecated horizontal form elements - e
                     role="presentation"
                   >
                     <div
-                      aria-disabled={undefined}
                       aria-selected={false}
                       className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
                       draggable={true}
@@ -1806,7 +1563,6 @@ exports[`Horizontal Form Element renders deprecated horizontal form elements - e
                     role="presentation"
                   >
                     <div
-                      aria-disabled={undefined}
                       aria-selected={false}
                       className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
                       draggable={true}
@@ -1833,7 +1589,6 @@ exports[`Horizontal Form Element renders deprecated horizontal form elements - e
             >
               <button
                 className="slds-button slds-button_icon slds-button_icon-container"
-                disabled={undefined}
                 title="Move Selection to Second Category"
               >
                 <svg
@@ -1852,7 +1607,6 @@ exports[`Horizontal Form Element renders deprecated horizontal form elements - e
               </button>
               <button
                 className="slds-button slds-button_icon slds-button_icon-container"
-                disabled={undefined}
                 title="Move Selection to First Category"
               >
                 <svg
@@ -1884,7 +1638,6 @@ exports[`Horizontal Form Element renders deprecated horizontal form elements - e
               >
                 <ul
                   aria-describedby="option-drag-label"
-                  aria-disabled={undefined}
                   aria-labelledby="label-2"
                   aria-multiselectable="true"
                   className="slds-listbox slds-listbox_vertical"
@@ -1895,7 +1648,6 @@ exports[`Horizontal Form Element renders deprecated horizontal form elements - e
                     role="presentation"
                   >
                     <div
-                      aria-disabled={undefined}
                       aria-selected={false}
                       className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
                       draggable={true}
@@ -1919,7 +1671,6 @@ exports[`Horizontal Form Element renders deprecated horizontal form elements - e
                     role="presentation"
                   >
                     <div
-                      aria-disabled={undefined}
                       aria-selected={false}
                       className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
                       draggable={true}
@@ -1946,7 +1697,6 @@ exports[`Horizontal Form Element renders deprecated horizontal form elements - e
             >
               <button
                 className="slds-button slds-button_icon slds-button_icon-container"
-                disabled={undefined}
                 title="Move Selection Up"
               >
                 <svg
@@ -1965,7 +1715,6 @@ exports[`Horizontal Form Element renders deprecated horizontal form elements - e
               </button>
               <button
                 className="slds-button slds-button_icon slds-button_icon-container"
-                disabled={undefined}
                 title="Move Selection Down"
               >
                 <svg
@@ -1997,7 +1746,6 @@ exports[`Horizontal Form Element renders deprecated horizontal form elements - e
     >
       <fieldset
         className="slds-form-element slds-form_compound slds-form-element_address slds-is-required slds-is-editing slds-form-element_stacked"
-        id={undefined}
       >
         <legend
           className="slds-form-element__legend slds-form-element__label"
@@ -2015,9 +1763,7 @@ exports[`Horizontal Form Element renders deprecated horizontal form elements - e
           className="slds-form-element__icon"
         >
           <button
-            aria-haspopup={undefined}
             className="slds-button slds-button_icon"
-            id={undefined}
           >
             <svg
               aria-hidden={true}
@@ -2045,12 +1791,10 @@ exports[`Horizontal Form Element renders deprecated horizontal form elements - e
             >
               <div
                 className="slds-form-element slds-size_1-of-1"
-                role={undefined}
               >
                 <label
                   className="slds-form-element__label"
                   htmlFor="form-element-id-04"
-                  id={undefined}
                 >
                   Billing Street
                 </label>
@@ -2072,12 +1816,10 @@ exports[`Horizontal Form Element renders deprecated horizontal form elements - e
             >
               <div
                 className="slds-form-element slds-size_4-of-6"
-                role={undefined}
               >
                 <label
                   className="slds-form-element__label"
                   htmlFor="form-element-id-05"
-                  id={undefined}
                 >
                   Billing City
                 </label>
@@ -2085,28 +1827,20 @@ exports[`Horizontal Form Element renders deprecated horizontal form elements - e
                   className="slds-form-element__control"
                 >
                   <input
-                    aria-invalid={undefined}
                     className="slds-input"
                     defaultValue="Burlington"
-                    disabled={undefined}
                     id="form-element-id-05"
-                    placeholder={undefined}
-                    readOnly={undefined}
                     required={true}
-                    role={undefined}
-                    tabIndex={undefined}
                     type="text"
                   />
                 </div>
               </div>
               <div
                 className="slds-form-element slds-size_2-of-6"
-                role={undefined}
               >
                 <label
                   className="slds-form-element__label"
                   htmlFor="form-element-id-06"
-                  id={undefined}
                 >
                   Billing State/Province
                 </label>
@@ -2114,16 +1848,10 @@ exports[`Horizontal Form Element renders deprecated horizontal form elements - e
                   className="slds-form-element__control"
                 >
                   <input
-                    aria-invalid={undefined}
                     className="slds-input"
                     defaultValue="NC"
-                    disabled={undefined}
                     id="form-element-id-06"
-                    placeholder={undefined}
-                    readOnly={undefined}
                     required={true}
-                    role={undefined}
-                    tabIndex={undefined}
                     type="text"
                   />
                 </div>
@@ -2134,12 +1862,10 @@ exports[`Horizontal Form Element renders deprecated horizontal form elements - e
             >
               <div
                 className="slds-form-element slds-size_4-of-6"
-                role={undefined}
               >
                 <label
                   className="slds-form-element__label"
                   htmlFor="form-element-id-07"
-                  id={undefined}
                 >
                   Billing Zip/Postal Code
                 </label>
@@ -2147,28 +1873,20 @@ exports[`Horizontal Form Element renders deprecated horizontal form elements - e
                   className="slds-form-element__control"
                 >
                   <input
-                    aria-invalid={undefined}
                     className="slds-input"
                     defaultValue="27215"
-                    disabled={undefined}
                     id="form-element-id-07"
-                    placeholder={undefined}
-                    readOnly={undefined}
                     required={true}
-                    role={undefined}
-                    tabIndex={undefined}
                     type="text"
                   />
                 </div>
               </div>
               <div
                 className="slds-form-element slds-size_2-of-6"
-                role={undefined}
               >
                 <label
                   className="slds-form-element__label"
                   htmlFor="form-element-id-08"
-                  id={undefined}
                 >
                   Billing Country
                 </label>
@@ -2176,16 +1894,10 @@ exports[`Horizontal Form Element renders deprecated horizontal form elements - e
                   className="slds-form-element__control"
                 >
                   <input
-                    aria-invalid={undefined}
                     className="slds-input"
                     defaultValue="USA"
-                    disabled={undefined}
                     id="form-element-id-08"
-                    placeholder={undefined}
-                    readOnly={undefined}
                     required={true}
-                    role={undefined}
-                    tabIndex={undefined}
                     type="text"
                   />
                 </div>
@@ -2201,7 +1913,6 @@ exports[`Horizontal Form Element renders deprecated horizontal form elements - e
     >
       <fieldset
         className="slds-form-element slds-form_compound slds-form-element_address slds-is-editing slds-form-element_stacked"
-        id={undefined}
       >
         <legend
           className="slds-form-element__legend slds-form-element__label"
@@ -2219,12 +1930,10 @@ exports[`Horizontal Form Element renders deprecated horizontal form elements - e
             >
               <div
                 className="slds-form-element slds-size_1-of-1"
-                role={undefined}
               >
                 <label
                   className="slds-form-element__label"
                   htmlFor="form-element-id-09"
-                  id={undefined}
                 >
                   Shipping Street
                 </label>
@@ -2245,12 +1954,10 @@ exports[`Horizontal Form Element renders deprecated horizontal form elements - e
             >
               <div
                 className="slds-form-element slds-size_4-of-6"
-                role={undefined}
               >
                 <label
                   className="slds-form-element__label"
                   htmlFor="form-element-id-10"
-                  id={undefined}
                 >
                   Shipping City
                 </label>
@@ -2258,28 +1965,19 @@ exports[`Horizontal Form Element renders deprecated horizontal form elements - e
                   className="slds-form-element__control"
                 >
                   <input
-                    aria-invalid={undefined}
                     className="slds-input"
                     defaultValue="Austin"
-                    disabled={undefined}
                     id="form-element-id-10"
-                    placeholder={undefined}
-                    readOnly={undefined}
-                    required={undefined}
-                    role={undefined}
-                    tabIndex={undefined}
                     type="text"
                   />
                 </div>
               </div>
               <div
                 className="slds-form-element slds-size_2-of-6"
-                role={undefined}
               >
                 <label
                   className="slds-form-element__label"
                   htmlFor="form-element-id-11"
-                  id={undefined}
                 >
                   Shipping State/Province
                 </label>
@@ -2287,16 +1985,9 @@ exports[`Horizontal Form Element renders deprecated horizontal form elements - e
                   className="slds-form-element__control"
                 >
                   <input
-                    aria-invalid={undefined}
                     className="slds-input"
                     defaultValue="TX"
-                    disabled={undefined}
                     id="form-element-id-11"
-                    placeholder={undefined}
-                    readOnly={undefined}
-                    required={undefined}
-                    role={undefined}
-                    tabIndex={undefined}
                     type="text"
                   />
                 </div>
@@ -2307,12 +1998,10 @@ exports[`Horizontal Form Element renders deprecated horizontal form elements - e
             >
               <div
                 className="slds-form-element slds-size_4-of-6"
-                role={undefined}
               >
                 <label
                   className="slds-form-element__label"
                   htmlFor="form-element-id-12"
-                  id={undefined}
                 >
                   Shipping Zip/Postal Code
                 </label>
@@ -2320,28 +2009,19 @@ exports[`Horizontal Form Element renders deprecated horizontal form elements - e
                   className="slds-form-element__control"
                 >
                   <input
-                    aria-invalid={undefined}
                     className="slds-input"
                     defaultValue="78767"
-                    disabled={undefined}
                     id="form-element-id-12"
-                    placeholder={undefined}
-                    readOnly={undefined}
-                    required={undefined}
-                    role={undefined}
-                    tabIndex={undefined}
                     type="text"
                   />
                 </div>
               </div>
               <div
                 className="slds-form-element slds-size_2-of-6"
-                role={undefined}
               >
                 <label
                   className="slds-form-element__label"
                   htmlFor="form-element-id-13"
-                  id={undefined}
                 >
                   Shipping Country
                 </label>
@@ -2349,16 +2029,9 @@ exports[`Horizontal Form Element renders deprecated horizontal form elements - e
                   className="slds-form-element__control"
                 >
                   <input
-                    aria-invalid={undefined}
                     className="slds-input"
                     defaultValue="USA"
-                    disabled={undefined}
                     id="form-element-id-13"
-                    placeholder={undefined}
-                    readOnly={undefined}
-                    required={undefined}
-                    role={undefined}
-                    tabIndex={undefined}
                     type="text"
                   />
                 </div>
@@ -2378,12 +2051,10 @@ exports[`Horizontal Form Element renders deprecated horizontal form elements - e
     >
       <div
         className="slds-form-element slds-form-element_stacked slds-is-editing slds-form-element_1-col"
-        role={undefined}
       >
         <label
           className="slds-form-element__label"
           htmlFor="form-element-id-14"
-          id={undefined}
         >
           Description
         </label>
@@ -2417,11 +2088,9 @@ exports[`Horizontal Form Element renders deprecated horizontal form elements - v
     >
       <div
         className="slds-form-element slds-form-element_edit slds-form-element_readonly slds-hint-parent"
-        role={undefined}
       >
         <span
           className="slds-form-element__label"
-          id={undefined}
         >
           <abbr
             className="slds-required"
@@ -2439,7 +2108,6 @@ exports[`Horizontal Form Element renders deprecated horizontal form elements - v
             className="slds-form-element__static"
           >
             <span
-              aria-hidden={undefined}
               className="slds-avatar slds-avatar_x-small slds-avatar_circle slds-m-right_xx-small"
             >
               <img
@@ -2455,9 +2123,7 @@ exports[`Horizontal Form Element renders deprecated horizontal form elements - v
             </a>
           </div>
           <button
-            aria-haspopup={undefined}
             className="slds-button slds-button_icon"
-            id={undefined}
             title="Edit: Assigned To"
           >
             <svg
@@ -2483,11 +2149,9 @@ exports[`Horizontal Form Element renders deprecated horizontal form elements - v
     >
       <div
         className="slds-form-element slds-form-element_edit slds-form-element_readonly slds-hint-parent"
-        role={undefined}
       >
         <span
           className="slds-form-element__label"
-          id={undefined}
         >
           Team Name
         </span>
@@ -2504,9 +2168,7 @@ exports[`Horizontal Form Element renders deprecated horizontal form elements - v
             </a>
           </div>
           <button
-            aria-haspopup={undefined}
             className="slds-button slds-button_icon"
-            id={undefined}
             title="Edit: Team Name"
           >
             <svg
@@ -2536,11 +2198,9 @@ exports[`Horizontal Form Element renders deprecated horizontal form elements - v
     >
       <div
         className="slds-form-element slds-form-element_edit slds-form-element_readonly slds-hint-parent"
-        role={undefined}
       >
         <span
           className="slds-form-element__label"
-          id={undefined}
         >
           Security Assessment Required?
         </span>
@@ -2553,9 +2213,7 @@ exports[`Horizontal Form Element renders deprecated horizontal form elements - v
             False
           </div>
           <button
-            aria-haspopup={undefined}
             className="slds-button slds-button_icon"
-            id={undefined}
             title="Edit: Security Assessment Required?"
           >
             <svg
@@ -2581,11 +2239,9 @@ exports[`Horizontal Form Element renders deprecated horizontal form elements - v
     >
       <div
         className="slds-form-element slds-form-element_edit slds-form-element_readonly slds-hint-parent"
-        role={undefined}
       >
         <span
           className="slds-form-element__label"
-          id={undefined}
         >
           Status
         </span>
@@ -2596,9 +2252,7 @@ exports[`Horizontal Form Element renders deprecated horizontal form elements - v
             className="slds-form-element__static"
           />
           <button
-            aria-haspopup={undefined}
             className="slds-button slds-button_icon"
-            id={undefined}
             title="Edit: Status"
           >
             <svg
@@ -2628,11 +2282,9 @@ exports[`Horizontal Form Element renders deprecated horizontal form elements - v
     >
       <div
         className="slds-form-element slds-form-element_edit slds-form-element_readonly slds-hint-parent"
-        role={undefined}
       >
         <span
           className="slds-form-element__label"
-          id={undefined}
         >
           Personalization Settings
         </span>
@@ -2645,9 +2297,7 @@ exports[`Horizontal Form Element renders deprecated horizontal form elements - v
             Disable end user personalization
           </div>
           <button
-            aria-haspopup={undefined}
             className="slds-button slds-button_icon"
-            id={undefined}
             title="Edit: Personalization Settings"
           >
             <svg
@@ -2683,11 +2333,9 @@ exports[`Horizontal Form Element renders deprecated horizontal form elements - v
     >
       <div
         className="slds-form-element slds-form-element_edit slds-form-element_readonly slds-hint-parent"
-        role={undefined}
       >
         <span
           className="slds-form-element__label"
-          id={undefined}
         >
           SLA Serial Number
         </span>
@@ -2695,10 +2343,7 @@ exports[`Horizontal Form Element renders deprecated horizontal form elements - v
           className="slds-form-element__icon"
         >
           <button
-            aria-describedby={undefined}
-            aria-haspopup={undefined}
             className="slds-button slds-button_icon"
-            id={undefined}
           >
             <svg
               aria-hidden={true}
@@ -2724,9 +2369,7 @@ exports[`Horizontal Form Element renders deprecated horizontal form elements - v
             5367
           </div>
           <button
-            aria-haspopup={undefined}
             className="slds-button slds-button_icon"
-            id={undefined}
             title="Edit: SLA Serial Number"
           >
             <svg
@@ -2752,11 +2395,9 @@ exports[`Horizontal Form Element renders deprecated horizontal form elements - v
     >
       <div
         className="slds-form-element slds-form-element_edit slds-form-element_readonly slds-hint-parent"
-        role={undefined}
       >
         <span
           className="slds-form-element__label"
-          id={undefined}
         >
           SLA Expiration Date
         </span>
@@ -2769,9 +2410,7 @@ exports[`Horizontal Form Element renders deprecated horizontal form elements - v
             1/1/2018
           </div>
           <button
-            aria-haspopup={undefined}
             className="slds-button slds-button_icon"
-            id={undefined}
             title="Edit: SLA Expiration Date"
           >
             <svg
@@ -2801,11 +2440,9 @@ exports[`Horizontal Form Element renders deprecated horizontal form elements - v
     >
       <div
         className="slds-form-element slds-form-element_edit slds-form-element_readonly slds-hint-parent"
-        role={undefined}
       >
         <span
           className="slds-form-element__label"
-          id={undefined}
         >
           Location
         </span>
@@ -2818,9 +2455,7 @@ exports[`Horizontal Form Element renders deprecated horizontal form elements - v
             10.283, 54.293
           </div>
           <button
-            aria-haspopup={undefined}
             className="slds-button slds-button_icon"
-            id={undefined}
             title="Edit: Location"
           >
             <svg
@@ -2846,11 +2481,9 @@ exports[`Horizontal Form Element renders deprecated horizontal form elements - v
     >
       <div
         className="slds-form-element slds-form-element_edit slds-form-element_readonly slds-hint-parent"
-        role={undefined}
       >
         <span
           className="slds-form-element__label"
-          id={undefined}
         >
           Selected Languages
         </span>
@@ -2863,9 +2496,7 @@ exports[`Horizontal Form Element renders deprecated horizontal form elements - v
             Arabic, Chinese, English, German
           </div>
           <button
-            aria-haspopup={undefined}
             className="slds-button slds-button_icon"
-            id={undefined}
             title="Edit: Selected Languages"
           >
             <svg
@@ -2895,11 +2526,9 @@ exports[`Horizontal Form Element renders deprecated horizontal form elements - v
     >
       <div
         className="slds-form-element slds-form-element_edit slds-form-element_readonly slds-hint-parent"
-        role={undefined}
       >
         <span
           className="slds-form-element__label"
-          id={undefined}
         >
           <abbr
             className="slds-required"
@@ -2914,10 +2543,7 @@ exports[`Horizontal Form Element renders deprecated horizontal form elements - v
           className="slds-form-element__icon"
         >
           <button
-            aria-describedby={undefined}
-            aria-haspopup={undefined}
             className="slds-button slds-button_icon"
-            id={undefined}
           >
             <svg
               aria-hidden={true}
@@ -2952,9 +2578,7 @@ exports[`Horizontal Form Element renders deprecated horizontal form elements - v
             </a>
           </div>
           <button
-            aria-haspopup={undefined}
             className="slds-button slds-button_icon"
-            id={undefined}
             title="Edit: Billing Address"
           >
             <svg
@@ -2980,11 +2604,9 @@ exports[`Horizontal Form Element renders deprecated horizontal form elements - v
     >
       <div
         className="slds-form-element slds-form-element_edit slds-form-element_readonly slds-hint-parent"
-        role={undefined}
       >
         <span
           className="slds-form-element__label"
-          id={undefined}
         >
           Shipping Address
         </span>
@@ -3006,9 +2628,7 @@ exports[`Horizontal Form Element renders deprecated horizontal form elements - v
             </a>
           </div>
           <button
-            aria-haspopup={undefined}
             className="slds-button slds-button_icon"
-            id={undefined}
             title="Edit: Shipping Address"
           >
             <svg
@@ -3038,11 +2658,9 @@ exports[`Horizontal Form Element renders deprecated horizontal form elements - v
     >
       <div
         className="slds-form-element slds-form-element_edit slds-form-element_readonly slds-hint-parent slds-form-element_1-col"
-        role={undefined}
       >
         <span
           className="slds-form-element__label"
-          id={undefined}
         >
           Description
         </span>
@@ -3056,9 +2674,7 @@ exports[`Horizontal Form Element renders deprecated horizontal form elements - v
             <br />
           </div>
           <button
-            aria-haspopup={undefined}
             className="slds-button slds-button_icon"
-            id={undefined}
             title="Edit: Description"
           >
             <svg
@@ -3085,12 +2701,10 @@ exports[`Horizontal Form Element renders deprecated horizontal form elements - v
 exports[`Horizontal Form Element renders horizontal form element with input and icons 1`] = `
 <div
   className="slds-form-element slds-form-element_horizontal"
-  role={undefined}
 >
   <label
     className="slds-form-element__label"
     htmlFor="input-1"
-    id={undefined}
   >
     Input label
   </label>
@@ -3106,16 +2720,8 @@ exports[`Horizontal Form Element renders horizontal form element with input and 
       />
     </svg>
     <input
-      aria-invalid={undefined}
       className="slds-input"
-      defaultValue={undefined}
-      disabled={undefined}
       id="input-1"
-      placeholder={undefined}
-      readOnly={undefined}
-      required={undefined}
-      role={undefined}
-      tabIndex={undefined}
       type="text"
     />
   </div>
@@ -3128,12 +2734,10 @@ exports[`Horizontal Form Element renders simple horizontal form elements 1`] = `
 >
   <div
     className="slds-form-element slds-form-element_horizontal"
-    role={undefined}
   >
     <label
       className="slds-form-element__label"
       htmlFor="horizontal-input-id-01"
-      id={undefined}
     >
       Text Input
     </label>
@@ -3141,28 +2745,19 @@ exports[`Horizontal Form Element renders simple horizontal form elements 1`] = `
       className="slds-form-element__control"
     >
       <input
-        aria-invalid={undefined}
         className="slds-input"
-        defaultValue={undefined}
-        disabled={undefined}
         id="horizontal-input-id-01"
         placeholder="Placeholder Text"
-        readOnly={undefined}
-        required={undefined}
-        role={undefined}
-        tabIndex={undefined}
         type="text"
       />
     </div>
   </div>
   <div
     className="slds-form-element slds-form-element_horizontal"
-    role={undefined}
   >
     <label
       className="slds-form-element__label"
       htmlFor="horizontal-input-id-02"
-      id={undefined}
     >
       Textarea Input
     </label>
@@ -3178,7 +2773,6 @@ exports[`Horizontal Form Element renders simple horizontal form elements 1`] = `
   </div>
   <fieldset
     className="slds-form-element slds-form-element_horizontal"
-    id={undefined}
   >
     <legend
       className="slds-form-element__legend slds-form-element__label"
@@ -3192,20 +2786,15 @@ exports[`Horizontal Form Element renders simple horizontal form elements 1`] = `
         className="slds-checkbox"
       >
         <input
-          aria-describedby={undefined}
           aria-labelledby={null}
-          defaultChecked={undefined}
-          disabled={undefined}
           id="checkbox-unique-id-3"
           name="default"
-          tabIndex={undefined}
           type="checkbox"
           value="checkbox-unique-id-3"
         />
         <label
           className="slds-checkbox__label"
           htmlFor="checkbox-unique-id-3"
-          id={undefined}
         >
           <span
             className="slds-checkbox_faux"
@@ -3221,20 +2810,15 @@ exports[`Horizontal Form Element renders simple horizontal form elements 1`] = `
         className="slds-checkbox"
       >
         <input
-          aria-describedby={undefined}
           aria-labelledby={null}
-          defaultChecked={undefined}
-          disabled={undefined}
           id="checkbox-unique-id-4"
           name="default"
-          tabIndex={undefined}
           type="checkbox"
           value="checkbox-unique-id-4"
         />
         <label
           className="slds-checkbox__label"
           htmlFor="checkbox-unique-id-4"
-          id={undefined}
         >
           <span
             className="slds-checkbox_faux"
@@ -3250,7 +2834,6 @@ exports[`Horizontal Form Element renders simple horizontal form elements 1`] = `
   </fieldset>
   <fieldset
     className="slds-form-element slds-form-element_horizontal"
-    id={undefined}
   >
     <legend
       className="slds-form-element__legend slds-form-element__label"
@@ -3264,20 +2847,15 @@ exports[`Horizontal Form Element renders simple horizontal form elements 1`] = `
         className="slds-radio"
       >
         <input
-          aria-describedby={undefined}
           aria-labelledby={null}
-          defaultChecked={undefined}
-          disabled={undefined}
           id="radio-3"
           name="options"
-          tabIndex={undefined}
           type="radio"
           value="radio-3"
         />
         <label
           className="slds-radio__label"
           htmlFor="radio-3"
-          id={undefined}
         >
           <span
             className="slds-radio_faux"
@@ -3293,20 +2871,15 @@ exports[`Horizontal Form Element renders simple horizontal form elements 1`] = `
         className="slds-radio"
       >
         <input
-          aria-describedby={undefined}
           aria-labelledby={null}
-          defaultChecked={undefined}
-          disabled={undefined}
           id="radio-4"
           name="options"
-          tabIndex={undefined}
           type="radio"
           value="radio-4"
         />
         <label
           className="slds-radio__label"
           htmlFor="radio-4"
-          id={undefined}
         >
           <span
             className="slds-radio_faux"
@@ -3337,11 +2910,9 @@ exports[`Stacked Form Element renders deprecated stacked form elements - edit mo
     >
       <div
         className="slds-form-element slds-form-element_edit slds-form-element_readonly slds-hint-parent"
-        role={undefined}
       >
         <span
           className="slds-form-element__label"
-          id={undefined}
         >
           <abbr
             className="slds-required"
@@ -3359,7 +2930,6 @@ exports[`Stacked Form Element renders deprecated stacked form elements - edit mo
             className="slds-form-element__static"
           >
             <span
-              aria-hidden={undefined}
               className="slds-avatar slds-avatar_x-small slds-avatar_circle slds-m-right_xx-small"
             >
               <img
@@ -3375,9 +2945,7 @@ exports[`Stacked Form Element renders deprecated stacked form elements - edit mo
             </a>
           </div>
           <button
-            aria-haspopup={undefined}
             className="slds-button slds-button_icon"
-            id={undefined}
             title="Edit: Assigned To"
           >
             <svg
@@ -3403,11 +2971,9 @@ exports[`Stacked Form Element renders deprecated stacked form elements - edit mo
     >
       <div
         className="slds-form-element slds-form-element_edit slds-form-element_readonly slds-hint-parent"
-        role={undefined}
       >
         <span
           className="slds-form-element__label"
-          id={undefined}
         >
           Team Name
         </span>
@@ -3424,9 +2990,7 @@ exports[`Stacked Form Element renders deprecated stacked form elements - edit mo
             </a>
           </div>
           <button
-            aria-haspopup={undefined}
             className="slds-button slds-button_icon"
-            id={undefined}
             title="Edit: Team Name"
           >
             <svg
@@ -3456,11 +3020,9 @@ exports[`Stacked Form Element renders deprecated stacked form elements - edit mo
     >
       <div
         className="slds-form-element slds-form-element_edit slds-form-element_readonly slds-hint-parent"
-        role={undefined}
       >
         <span
           className="slds-form-element__label"
-          id={undefined}
         >
           Security Assessment Required?
         </span>
@@ -3473,9 +3035,7 @@ exports[`Stacked Form Element renders deprecated stacked form elements - edit mo
             False
           </div>
           <button
-            aria-haspopup={undefined}
             className="slds-button slds-button_icon"
-            id={undefined}
             title="Edit: Security Assessment Required?"
           >
             <svg
@@ -3501,11 +3061,9 @@ exports[`Stacked Form Element renders deprecated stacked form elements - edit mo
     >
       <div
         className="slds-form-element slds-form-element_edit slds-form-element_readonly slds-hint-parent"
-        role={undefined}
       >
         <span
           className="slds-form-element__label"
-          id={undefined}
         >
           Status
         </span>
@@ -3516,9 +3074,7 @@ exports[`Stacked Form Element renders deprecated stacked form elements - edit mo
             className="slds-form-element__static"
           />
           <button
-            aria-haspopup={undefined}
             className="slds-button slds-button_icon"
-            id={undefined}
             title="Edit: Status"
           >
             <svg
@@ -3548,11 +3104,9 @@ exports[`Stacked Form Element renders deprecated stacked form elements - edit mo
     >
       <div
         className="slds-form-element slds-form-element_edit slds-form-element_readonly slds-hint-parent"
-        role={undefined}
       >
         <span
           className="slds-form-element__label"
-          id={undefined}
         >
           Personalization Settings
         </span>
@@ -3565,9 +3119,7 @@ exports[`Stacked Form Element renders deprecated stacked form elements - edit mo
             Disable end user personalization
           </div>
           <button
-            aria-haspopup={undefined}
             className="slds-button slds-button_icon"
-            id={undefined}
             title="Edit: Personalization Settings"
           >
             <svg
@@ -3603,11 +3155,9 @@ exports[`Stacked Form Element renders deprecated stacked form elements - edit mo
     >
       <div
         className="slds-form-element slds-form-element_edit slds-form-element_readonly slds-hint-parent"
-        role={undefined}
       >
         <span
           className="slds-form-element__label"
-          id={undefined}
         >
           SLA Serial Number
         </span>
@@ -3615,10 +3165,7 @@ exports[`Stacked Form Element renders deprecated stacked form elements - edit mo
           className="slds-form-element__icon"
         >
           <button
-            aria-describedby={undefined}
-            aria-haspopup={undefined}
             className="slds-button slds-button_icon"
-            id={undefined}
           >
             <svg
               aria-hidden={true}
@@ -3644,9 +3191,7 @@ exports[`Stacked Form Element renders deprecated stacked form elements - edit mo
             5367
           </div>
           <button
-            aria-haspopup={undefined}
             className="slds-button slds-button_icon"
-            id={undefined}
             title="Edit: SLA Serial Number"
           >
             <svg
@@ -3672,11 +3217,9 @@ exports[`Stacked Form Element renders deprecated stacked form elements - edit mo
     >
       <div
         className="slds-form-element slds-form-element_edit slds-form-element_readonly slds-hint-parent"
-        role={undefined}
       >
         <span
           className="slds-form-element__label"
-          id={undefined}
         >
           SLA Expiration Date
         </span>
@@ -3689,9 +3232,7 @@ exports[`Stacked Form Element renders deprecated stacked form elements - edit mo
             1/1/2018
           </div>
           <button
-            aria-haspopup={undefined}
             className="slds-button slds-button_icon"
-            id={undefined}
             title="Edit: SLA Expiration Date"
           >
             <svg
@@ -3721,11 +3262,9 @@ exports[`Stacked Form Element renders deprecated stacked form elements - edit mo
     >
       <div
         className="slds-form-element slds-form-element_edit slds-form-element_readonly slds-hint-parent"
-        role={undefined}
       >
         <span
           className="slds-form-element__label"
-          id={undefined}
         >
           Location
         </span>
@@ -3738,9 +3277,7 @@ exports[`Stacked Form Element renders deprecated stacked form elements - edit mo
             10.283, 54.293
           </div>
           <button
-            aria-haspopup={undefined}
             className="slds-button slds-button_icon"
-            id={undefined}
             title="Edit: Location"
           >
             <svg
@@ -3766,11 +3303,9 @@ exports[`Stacked Form Element renders deprecated stacked form elements - edit mo
     >
       <div
         className="slds-form-element slds-form-element_edit slds-form-element_readonly slds-hint-parent"
-        role={undefined}
       >
         <span
           className="slds-form-element__label"
-          id={undefined}
         >
           Selected Languages
         </span>
@@ -3783,9 +3318,7 @@ exports[`Stacked Form Element renders deprecated stacked form elements - edit mo
             Arabic, Chinese, English, German
           </div>
           <button
-            aria-haspopup={undefined}
             className="slds-button slds-button_icon"
-            id={undefined}
             title="Edit: Selected Languages"
           >
             <svg
@@ -3815,11 +3348,9 @@ exports[`Stacked Form Element renders deprecated stacked form elements - edit mo
     >
       <div
         className="slds-form-element slds-form-element_edit slds-form-element_readonly slds-hint-parent"
-        role={undefined}
       >
         <span
           className="slds-form-element__label"
-          id={undefined}
         >
           <abbr
             className="slds-required"
@@ -3834,10 +3365,7 @@ exports[`Stacked Form Element renders deprecated stacked form elements - edit mo
           className="slds-form-element__icon"
         >
           <button
-            aria-describedby={undefined}
-            aria-haspopup={undefined}
             className="slds-button slds-button_icon"
-            id={undefined}
           >
             <svg
               aria-hidden={true}
@@ -3872,9 +3400,7 @@ exports[`Stacked Form Element renders deprecated stacked form elements - edit mo
             </a>
           </div>
           <button
-            aria-haspopup={undefined}
             className="slds-button slds-button_icon"
-            id={undefined}
             title="Edit: Billing Address"
           >
             <svg
@@ -3900,11 +3426,9 @@ exports[`Stacked Form Element renders deprecated stacked form elements - edit mo
     >
       <div
         className="slds-form-element slds-form-element_edit slds-form-element_readonly slds-hint-parent"
-        role={undefined}
       >
         <span
           className="slds-form-element__label"
-          id={undefined}
         >
           Shipping Address
         </span>
@@ -3926,9 +3450,7 @@ exports[`Stacked Form Element renders deprecated stacked form elements - edit mo
             </a>
           </div>
           <button
-            aria-haspopup={undefined}
             className="slds-button slds-button_icon"
-            id={undefined}
             title="Edit: Shipping Address"
           >
             <svg
@@ -3958,11 +3480,9 @@ exports[`Stacked Form Element renders deprecated stacked form elements - edit mo
     >
       <div
         className="slds-form-element slds-form-element_edit slds-form-element_readonly slds-hint-parent slds-form-element_1-col"
-        role={undefined}
       >
         <span
           className="slds-form-element__label"
-          id={undefined}
         >
           Description
         </span>
@@ -3976,9 +3496,7 @@ exports[`Stacked Form Element renders deprecated stacked form elements - edit mo
             <br />
           </div>
           <button
-            aria-haspopup={undefined}
             className="slds-button slds-button_icon"
-            id={undefined}
             title="Edit: Description"
           >
             <svg
@@ -4016,11 +3534,9 @@ exports[`Stacked Form Element renders deprecated stacked form elements - view mo
     >
       <div
         className="slds-form-element slds-form-element_edit slds-form-element_readonly slds-hint-parent"
-        role={undefined}
       >
         <span
           className="slds-form-element__label"
-          id={undefined}
         >
           <abbr
             className="slds-required"
@@ -4038,7 +3554,6 @@ exports[`Stacked Form Element renders deprecated stacked form elements - view mo
             className="slds-form-element__static"
           >
             <span
-              aria-hidden={undefined}
               className="slds-avatar slds-avatar_x-small slds-avatar_circle slds-m-right_xx-small"
             >
               <img
@@ -4054,9 +3569,7 @@ exports[`Stacked Form Element renders deprecated stacked form elements - view mo
             </a>
           </div>
           <button
-            aria-haspopup={undefined}
             className="slds-button slds-button_icon"
-            id={undefined}
             title="Edit: Assigned To"
           >
             <svg
@@ -4082,11 +3595,9 @@ exports[`Stacked Form Element renders deprecated stacked form elements - view mo
     >
       <div
         className="slds-form-element slds-form-element_edit slds-form-element_readonly slds-hint-parent"
-        role={undefined}
       >
         <span
           className="slds-form-element__label"
-          id={undefined}
         >
           Team Name
         </span>
@@ -4103,9 +3614,7 @@ exports[`Stacked Form Element renders deprecated stacked form elements - view mo
             </a>
           </div>
           <button
-            aria-haspopup={undefined}
             className="slds-button slds-button_icon"
-            id={undefined}
             title="Edit: Team Name"
           >
             <svg
@@ -4135,11 +3644,9 @@ exports[`Stacked Form Element renders deprecated stacked form elements - view mo
     >
       <div
         className="slds-form-element slds-form-element_edit slds-form-element_readonly slds-hint-parent"
-        role={undefined}
       >
         <span
           className="slds-form-element__label"
-          id={undefined}
         >
           Security Assessment Required?
         </span>
@@ -4152,9 +3659,7 @@ exports[`Stacked Form Element renders deprecated stacked form elements - view mo
             False
           </div>
           <button
-            aria-haspopup={undefined}
             className="slds-button slds-button_icon"
-            id={undefined}
             title="Edit: Security Assessment Required?"
           >
             <svg
@@ -4180,11 +3685,9 @@ exports[`Stacked Form Element renders deprecated stacked form elements - view mo
     >
       <div
         className="slds-form-element slds-form-element_edit slds-form-element_readonly slds-hint-parent"
-        role={undefined}
       >
         <span
           className="slds-form-element__label"
-          id={undefined}
         >
           Status
         </span>
@@ -4195,9 +3698,7 @@ exports[`Stacked Form Element renders deprecated stacked form elements - view mo
             className="slds-form-element__static"
           />
           <button
-            aria-haspopup={undefined}
             className="slds-button slds-button_icon"
-            id={undefined}
             title="Edit: Status"
           >
             <svg
@@ -4227,11 +3728,9 @@ exports[`Stacked Form Element renders deprecated stacked form elements - view mo
     >
       <div
         className="slds-form-element slds-form-element_edit slds-form-element_readonly slds-hint-parent"
-        role={undefined}
       >
         <span
           className="slds-form-element__label"
-          id={undefined}
         >
           Personalization Settings
         </span>
@@ -4244,9 +3743,7 @@ exports[`Stacked Form Element renders deprecated stacked form elements - view mo
             Disable end user personalization
           </div>
           <button
-            aria-haspopup={undefined}
             className="slds-button slds-button_icon"
-            id={undefined}
             title="Edit: Personalization Settings"
           >
             <svg
@@ -4282,11 +3779,9 @@ exports[`Stacked Form Element renders deprecated stacked form elements - view mo
     >
       <div
         className="slds-form-element slds-form-element_edit slds-form-element_readonly slds-hint-parent"
-        role={undefined}
       >
         <span
           className="slds-form-element__label"
-          id={undefined}
         >
           SLA Serial Number
         </span>
@@ -4294,10 +3789,7 @@ exports[`Stacked Form Element renders deprecated stacked form elements - view mo
           className="slds-form-element__icon"
         >
           <button
-            aria-describedby={undefined}
-            aria-haspopup={undefined}
             className="slds-button slds-button_icon"
-            id={undefined}
           >
             <svg
               aria-hidden={true}
@@ -4323,9 +3815,7 @@ exports[`Stacked Form Element renders deprecated stacked form elements - view mo
             5367
           </div>
           <button
-            aria-haspopup={undefined}
             className="slds-button slds-button_icon"
-            id={undefined}
             title="Edit: SLA Serial Number"
           >
             <svg
@@ -4351,11 +3841,9 @@ exports[`Stacked Form Element renders deprecated stacked form elements - view mo
     >
       <div
         className="slds-form-element slds-form-element_edit slds-form-element_readonly slds-hint-parent"
-        role={undefined}
       >
         <span
           className="slds-form-element__label"
-          id={undefined}
         >
           SLA Expiration Date
         </span>
@@ -4368,9 +3856,7 @@ exports[`Stacked Form Element renders deprecated stacked form elements - view mo
             1/1/2018
           </div>
           <button
-            aria-haspopup={undefined}
             className="slds-button slds-button_icon"
-            id={undefined}
             title="Edit: SLA Expiration Date"
           >
             <svg
@@ -4400,11 +3886,9 @@ exports[`Stacked Form Element renders deprecated stacked form elements - view mo
     >
       <div
         className="slds-form-element slds-form-element_edit slds-form-element_readonly slds-hint-parent"
-        role={undefined}
       >
         <span
           className="slds-form-element__label"
-          id={undefined}
         >
           Location
         </span>
@@ -4417,9 +3901,7 @@ exports[`Stacked Form Element renders deprecated stacked form elements - view mo
             10.283, 54.293
           </div>
           <button
-            aria-haspopup={undefined}
             className="slds-button slds-button_icon"
-            id={undefined}
             title="Edit: Location"
           >
             <svg
@@ -4445,11 +3927,9 @@ exports[`Stacked Form Element renders deprecated stacked form elements - view mo
     >
       <div
         className="slds-form-element slds-form-element_edit slds-form-element_readonly slds-hint-parent"
-        role={undefined}
       >
         <span
           className="slds-form-element__label"
-          id={undefined}
         >
           Selected Languages
         </span>
@@ -4462,9 +3942,7 @@ exports[`Stacked Form Element renders deprecated stacked form elements - view mo
             Arabic, Chinese, English, German
           </div>
           <button
-            aria-haspopup={undefined}
             className="slds-button slds-button_icon"
-            id={undefined}
             title="Edit: Selected Languages"
           >
             <svg
@@ -4494,11 +3972,9 @@ exports[`Stacked Form Element renders deprecated stacked form elements - view mo
     >
       <div
         className="slds-form-element slds-form-element_edit slds-form-element_readonly slds-hint-parent"
-        role={undefined}
       >
         <span
           className="slds-form-element__label"
-          id={undefined}
         >
           <abbr
             className="slds-required"
@@ -4513,10 +3989,7 @@ exports[`Stacked Form Element renders deprecated stacked form elements - view mo
           className="slds-form-element__icon"
         >
           <button
-            aria-describedby={undefined}
-            aria-haspopup={undefined}
             className="slds-button slds-button_icon"
-            id={undefined}
           >
             <svg
               aria-hidden={true}
@@ -4551,9 +4024,7 @@ exports[`Stacked Form Element renders deprecated stacked form elements - view mo
             </a>
           </div>
           <button
-            aria-haspopup={undefined}
             className="slds-button slds-button_icon"
-            id={undefined}
             title="Edit: Billing Address"
           >
             <svg
@@ -4579,11 +4050,9 @@ exports[`Stacked Form Element renders deprecated stacked form elements - view mo
     >
       <div
         className="slds-form-element slds-form-element_edit slds-form-element_readonly slds-hint-parent"
-        role={undefined}
       >
         <span
           className="slds-form-element__label"
-          id={undefined}
         >
           Shipping Address
         </span>
@@ -4605,9 +4074,7 @@ exports[`Stacked Form Element renders deprecated stacked form elements - view mo
             </a>
           </div>
           <button
-            aria-haspopup={undefined}
             className="slds-button slds-button_icon"
-            id={undefined}
             title="Edit: Shipping Address"
           >
             <svg
@@ -4637,11 +4104,9 @@ exports[`Stacked Form Element renders deprecated stacked form elements - view mo
     >
       <div
         className="slds-form-element slds-form-element_edit slds-form-element_readonly slds-hint-parent slds-form-element_1-col"
-        role={undefined}
       >
         <span
           className="slds-form-element__label"
-          id={undefined}
         >
           Description
         </span>
@@ -4655,9 +4120,7 @@ exports[`Stacked Form Element renders deprecated stacked form elements - view mo
             <br />
           </div>
           <button
-            aria-haspopup={undefined}
             className="slds-button slds-button_icon"
-            id={undefined}
             title="Edit: Description"
           >
             <svg
@@ -4687,12 +4150,10 @@ exports[`Stacked Form Element renders simple stacked form elements 1`] = `
 >
   <div
     className="slds-form-element slds-form-element_stacked"
-    role={undefined}
   >
     <label
       className="slds-form-element__label"
       htmlFor="stacked-input-id-01"
-      id={undefined}
     >
       Text Input
     </label>
@@ -4700,28 +4161,19 @@ exports[`Stacked Form Element renders simple stacked form elements 1`] = `
       className="slds-form-element__control"
     >
       <input
-        aria-invalid={undefined}
         className="slds-input"
-        defaultValue={undefined}
-        disabled={undefined}
         id="stacked-input-id-01"
         placeholder="Placeholder Text"
-        readOnly={undefined}
-        required={undefined}
-        role={undefined}
-        tabIndex={undefined}
         type="text"
       />
     </div>
   </div>
   <div
     className="slds-form-element slds-form-element_stacked"
-    role={undefined}
   >
     <label
       className="slds-form-element__label"
       htmlFor="stacked-input-id-02"
-      id={undefined}
     >
       Textarea Input
     </label>
@@ -4737,7 +4189,6 @@ exports[`Stacked Form Element renders simple stacked form elements 1`] = `
   </div>
   <fieldset
     className="slds-form-element slds-form-element_stacked"
-    id={undefined}
   >
     <legend
       className="slds-form-element__legend slds-form-element__label"
@@ -4751,20 +4202,15 @@ exports[`Stacked Form Element renders simple stacked form elements 1`] = `
         className="slds-checkbox"
       >
         <input
-          aria-describedby={undefined}
           aria-labelledby={null}
-          defaultChecked={undefined}
-          disabled={undefined}
           id="checkbox-unique-id-1"
           name="default"
-          tabIndex={undefined}
           type="checkbox"
           value="checkbox-unique-id-1"
         />
         <label
           className="slds-checkbox__label"
           htmlFor="checkbox-unique-id-1"
-          id={undefined}
         >
           <span
             className="slds-checkbox_faux"
@@ -4780,20 +4226,15 @@ exports[`Stacked Form Element renders simple stacked form elements 1`] = `
         className="slds-checkbox"
       >
         <input
-          aria-describedby={undefined}
           aria-labelledby={null}
-          defaultChecked={undefined}
-          disabled={undefined}
           id="checkbox-unique-id-2"
           name="default"
-          tabIndex={undefined}
           type="checkbox"
           value="checkbox-unique-id-2"
         />
         <label
           className="slds-checkbox__label"
           htmlFor="checkbox-unique-id-2"
-          id={undefined}
         >
           <span
             className="slds-checkbox_faux"
@@ -4809,7 +4250,6 @@ exports[`Stacked Form Element renders simple stacked form elements 1`] = `
   </fieldset>
   <fieldset
     className="slds-form-element slds-form-element_stacked"
-    id={undefined}
   >
     <legend
       className="slds-form-element__legend slds-form-element__label"
@@ -4823,20 +4263,15 @@ exports[`Stacked Form Element renders simple stacked form elements 1`] = `
         className="slds-radio"
       >
         <input
-          aria-describedby={undefined}
           aria-labelledby={null}
-          defaultChecked={undefined}
-          disabled={undefined}
           id="radio-1"
           name="options"
-          tabIndex={undefined}
           type="radio"
           value="radio-1"
         />
         <label
           className="slds-radio__label"
           htmlFor="radio-1"
-          id={undefined}
         >
           <span
             className="slds-radio_faux"
@@ -4852,20 +4287,15 @@ exports[`Stacked Form Element renders simple stacked form elements 1`] = `
         className="slds-radio"
       >
         <input
-          aria-describedby={undefined}
           aria-labelledby={null}
-          defaultChecked={undefined}
-          disabled={undefined}
           id="radio-2"
           name="options"
-          tabIndex={undefined}
           type="radio"
           value="radio-2"
         />
         <label
           className="slds-radio__label"
           htmlFor="radio-2"
-          id={undefined}
         >
           <span
             className="slds-radio_faux"

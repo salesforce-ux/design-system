@@ -3,9 +3,7 @@
 exports[`Base Tooltip renders a base tooltip 1`] = `
 <div
   className="slds-popover slds-popover_tooltip slds-nubbin_bottom-left"
-  id={undefined}
   role="tooltip"
-  style={undefined}
 >
   <div
     className="slds-popover__body"
@@ -16,9 +14,7 @@ exports[`Base Tooltip renders a base tooltip 1`] = `
 exports[`Base Tooltip renders a base tooltip with learn more 1`] = `
 <div
   className="slds-popover slds-popover_tooltip slds-nubbin_bottom-left"
-  id={undefined}
   role="tooltip"
-  style={undefined}
 >
   <div
     className="slds-popover__body"

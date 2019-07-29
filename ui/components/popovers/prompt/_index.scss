@@ -1,0 +1,137 @@
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * Prompt components are used to provide an interactive custom message.
+ *
+ * @summary Initializes a prompt non-modal dialog
+ *
+ * @name prompt
+ * @selector .slds-popover_prompt
+ * @restrict .slds-popover
+ * @support dev-ready
+ * @variant
+ */
+.slds-popover_prompt {
+  width: $size-large;
+
+  .slds-popover__body {
+    padding: $spacing-medium;
+  }
+
+  /**
+    * @summary Applies styles for footer area of popover
+    * @selector .slds-popover__footer
+    * @restrict .slds-popover footer
+    */
+  .slds-popover__footer {
+    border-top: $border-width-thick solid $brand-dark;
+  }
+}
+
+/**
+  * @summary Applies styles for heading text of prompt
+  * @selector .slds-popover_prompt__heading
+  * @restrict .slds-popover_prompt .slds-media__body > h2
+  */
+.slds-popover_prompt__heading {
+  font-size: $font-size-5;
+  line-height: $line-height-heading;
+  font-weight: $font-weight-bold;
+
+  @include touch-device {
+    font-size: $font-size-7;
+  }
+}
+
+/**
+  * @summary Applies styles for the optional action link in the footer of prompt
+  * @selector .slds-popover_prompt__action-link
+  * @restrict .slds-popover_prompt .slds-popover__footer span
+  */
+.slds-popover_prompt__action-link {
+  margin-right: $spacing-medium;
+}
+
+/**
+ * Position
+ */
+
+/**
+  * @summary Position Prompt top left
+  * @selector .slds-popover_prompt_top-left
+  * @restrict .slds-popover_prompt
+  * @modifier
+  */
+
+/**
+  * @summary Position Prompt top center
+  * @selector .slds-popover_prompt_top
+  * @restrict .slds-popover_prompt
+  * @modifier
+  */
+
+/**
+  * @summary Position Prompt top right
+  * @selector .slds-popover_prompt_top-right
+  * @restrict .slds-popover_prompt
+  * @modifier
+  */
+
+/**
+  * @summary Position Prompt bottom left
+  * @selector .slds-popover_prompt_bottom-left
+  * @restrict .slds-popover_prompt
+  * @modifier
+  */
+
+/**
+  * @summary Position Prompt bottom center
+  * @selector .slds-popover_prompt_bottom
+  * @restrict .slds-popover_prompt
+  * @modifier
+  */
+
+/**
+  * @summary Position Prompt bottom right
+  * @selector .slds-popover_prompt_bottom-right
+  * @restrict .slds-popover_prompt
+  * @modifier
+  */
+
+.slds-popover_prompt_top,
+.slds-popover_prompt_top-right,
+.slds-popover_prompt_top-left,
+.slds-popover_prompt_bottom,
+.slds-popover_prompt_bottom-right,
+.slds-popover_prompt_bottom-left {
+  position: absolute;
+}
+
+.slds-popover_prompt_top,
+.slds-popover_prompt_top-right,
+.slds-popover_prompt_top-left {
+  top: $spacing-x-small;
+}
+
+.slds-popover_prompt_bottom,
+.slds-popover_prompt_bottom-right,
+.slds-popover_prompt_bottom-left {
+  bottom: $spacing-x-small;
+}
+
+.slds-popover_prompt_top,
+.slds-popover_prompt_bottom {
+  left: 50%;
+  margin-left: (($size-large / 2) * -1);
+}
+
+.slds-popover_prompt_top-right,
+.slds-popover_prompt_bottom-right {
+  right: $spacing-x-small;
+}
+
+.slds-popover_prompt_top-left,
+.slds-popover_prompt_bottom-left {
+  left: $spacing-x-small;
+}

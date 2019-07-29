@@ -225,7 +225,7 @@
   }
 
   /**
-   * @summary Sets min-width of 25rem/400px
+   * @summary Sets width equal to input
    * @selector .slds-dropdown_large
    * @restrict .slds-dropdown
    * @modifier
@@ -233,7 +233,7 @@
    */
   &_fluid,
   &--fluid {
-    min-width: auto;
+    min-width: $size-x-small; // Prevents menu from being illegible when input's width is small
     max-width: 100%;
     width: 100%;
   }

@@ -1,6 +1,6 @@
 import * as Base from './base/example.jsx';
 import CodeView from '../../../shared/components/CodeView';
-import { getDisplayElementById } from '../../shared/helpers';
+import { getDisplayElementById, getDemoStylesById } from '../../shared/helpers';
 
 <div className="doc lead">
   Modals are used to display content in a layer above the app. This paradigm is used in cases such as the creation or editing of a record, as well as various types of messaging and wizards.
@@ -41,43 +41,43 @@ Modals, by definition, trap focus. This means that if a user presses Tab or Shif
 - Enter key submits modal’s form data, if applicable
 
 ## Base
-<CodeView isViewport style={{ height: '640px' }}>
-{ Base.default }
+<CodeView isViewport style={getDemoStylesById(Base.examples, 'default')}>
+{ getDisplayElementById(Base.examples, 'default') }
 </CodeView>
 
 ## Examples
 
 ### Taglines
-<CodeView isViewport style={{ height: '640px' }}>
+<CodeView isViewport style={getDemoStylesById(Base.examples, 'taglines')}>
 { getDisplayElementById(Base.examples, 'taglines') }
 </CodeView>
 
 ### Headless
-<CodeView isViewport style={{ height: '640px' }}>
+<CodeView isViewport style={getDemoStylesById(Base.examples, 'headless')}>
 { getDisplayElementById(Base.examples, 'headless') }
 </CodeView>
 
 ### Footless
-<CodeView isViewport style={{ height: '640px' }}>
+<CodeView isViewport style={getDemoStylesById(Base.examples, 'footless')}>
 { getDisplayElementById(Base.examples, 'footless') }
 </CodeView>
 
 ### Directional
-<CodeView isViewport style={{ height: '640px' }}>
+<CodeView isViewport style={getDemoStylesById(Base.examples, 'directional')}>
 { getDisplayElementById(Base.examples, 'directional') }
 </CodeView>
 
 ### Small Modal
-<CodeView isViewport style={{ height: '640px' }}>
+<CodeView isViewport style={getDemoStylesById(Base.examples, 'small')}>
 { getDisplayElementById(Base.examples, 'small') }
 </CodeView>
 
 ### Medium Modal
-<CodeView isViewport style={{ height: '640px' }}>
+<CodeView isViewport style={getDemoStylesById(Base.examples, 'medium')}>
   { getDisplayElementById(Base.examples, 'medium') }
 </CodeView>
 
 ### Large Modal
-<CodeView isViewport style={{ height: '640px' }}>
+<CodeView isViewport style={getDemoStylesById(Base.examples, 'large')}>
   { getDisplayElementById(Base.examples, 'large') }
 </CodeView>

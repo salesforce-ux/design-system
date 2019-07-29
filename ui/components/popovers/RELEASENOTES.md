@@ -7,6 +7,7 @@
 ## 2.10.0
 
 ### Added
+- Added a new 'prompt' variant of popover useful for showing non-blocking messages needing interaction.
 - Added `@noflip` annotation to left and right nubbin selectors.
 
 ## 2.8.0

@@ -279,19 +279,19 @@ For accessibility, include the attribute \`aria-live=\\"assertive\\"\` on the bu
                 Object {
                   "items": Array [
                     Object {
+                      "id": "default",
+                    },
+                  ],
+                  "title": "default",
+                },
+                Object {
+                  "items": Array [
+                    Object {
                       "id": "icon-right",
                       "label": "Neutral with right icon",
                     },
                   ],
                   "title": "examples",
-                },
-                Object {
-                  "items": Array [
-                    Object {
-                      "id": "default",
-                    },
-                  ],
-                  "title": "default",
                 },
               ],
               "showcasePath": "./ui/components/buttons/with-icon/example.jsx",
@@ -301,19 +301,19 @@ For accessibility, include the attribute \`aria-live=\\"assertive\\"\` on the bu
             Object {
               "items": Array [
                 Object {
+                  "id": "default",
+                },
+              ],
+              "title": "default",
+            },
+            Object {
+              "items": Array [
+                Object {
                   "id": "disabled",
                   "label": "Disabled",
                 },
               ],
               "title": "states",
-            },
-            Object {
-              "items": Array [
-                Object {
-                  "id": "default",
-                },
-              ],
-              "title": "default",
             },
           ],
           "showcasePath": "./ui/components/buttons/base/example.jsx",
@@ -1031,6 +1031,14 @@ If you want the parent of the floated element to contain the floats, add the \`.
         Object {
           "items": Array [
             Object {
+              "id": "default",
+            },
+          ],
+          "title": "default",
+        },
+        Object {
+          "items": Array [
+            Object {
               "id": "left",
               "label": "Left",
             },
@@ -1049,14 +1057,6 @@ If you want the parent of the floated element to contain the floats, add the \`.
           ],
           "title": "examples",
         },
-        Object {
-          "items": Array [
-            Object {
-              "id": "default",
-            },
-          ],
-          "title": "default",
-        },
       ],
       "showcasePath": "./ui/utilities/floats/example.jsx",
     },
@@ -1069,12 +1069,25 @@ Array [
   Object {
     "items": Array [
       Object {
+        "id": "default",
+      },
+    ],
+    "title": "default",
+  },
+  Object {
+    "items": Array [
+      Object {
         "id": "disabled",
         "label": "Disabled",
       },
     ],
     "title": "states",
   },
+]
+`;
+
+exports[`scripts/ui.js ui includes the examples skeleton for utilities 1`] = `
+Array [
   Object {
     "items": Array [
       Object {
@@ -1083,11 +1096,6 @@ Array [
     ],
     "title": "default",
   },
-]
-`;
-
-exports[`scripts/ui.js ui includes the examples skeleton for utilities 1`] = `
-Array [
   Object {
     "items": Array [
       Object {
@@ -1108,14 +1116,6 @@ Array [
       },
     ],
     "title": "examples",
-  },
-  Object {
-    "items": Array [
-      Object {
-        "id": "default",
-      },
-    ],
-    "title": "default",
   },
 ]
 `;

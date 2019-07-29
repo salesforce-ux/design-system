@@ -7,7 +7,6 @@ exports[`Base Menu renders a base menu to the bottom 1`] = `
   <button
     aria-haspopup="true"
     className="slds-button slds-button_icon slds-button_icon-border-filled"
-    id={undefined}
     title="Show More"
   >
     <svg
@@ -26,7 +25,6 @@ exports[`Base Menu renders a base menu to the bottom 1`] = `
   </button>
   <div
     className="slds-dropdown slds-dropdown_bottom"
-    style={undefined}
   >
     <ul
       aria-label="Show More"
@@ -38,8 +36,6 @@ exports[`Base Menu renders a base menu to the bottom 1`] = `
         role="presentation"
       >
         <a
-          aria-checked={undefined}
-          className={undefined}
           href="javascript:void(0);"
           role="menuitem"
           tabIndex="0"
@@ -57,8 +53,6 @@ exports[`Base Menu renders a base menu to the bottom 1`] = `
         role="presentation"
       >
         <a
-          aria-checked={undefined}
-          className={undefined}
           href="javascript:void(0);"
           role="menuitem"
           tabIndex="-1"
@@ -76,8 +70,6 @@ exports[`Base Menu renders a base menu to the bottom 1`] = `
         role="presentation"
       >
         <a
-          aria-checked={undefined}
-          className={undefined}
           href="javascript:void(0);"
           role="menuitem"
           tabIndex="-1"
@@ -99,8 +91,6 @@ exports[`Base Menu renders a base menu to the bottom 1`] = `
         role="presentation"
       >
         <a
-          aria-checked={undefined}
-          className={undefined}
           href="javascript:void(0);"
           role="menuitem"
           tabIndex="-1"
@@ -125,7 +115,6 @@ exports[`Base Menu renders a base menu to the left 1`] = `
   <button
     aria-haspopup="true"
     className="slds-button slds-button_icon slds-button_icon-border-filled"
-    id={undefined}
     title="Show More"
   >
     <svg
@@ -144,7 +133,6 @@ exports[`Base Menu renders a base menu to the left 1`] = `
   </button>
   <div
     className="slds-dropdown slds-dropdown_left"
-    style={undefined}
   >
     <ul
       aria-label="Show More"
@@ -156,8 +144,6 @@ exports[`Base Menu renders a base menu to the left 1`] = `
         role="presentation"
       >
         <a
-          aria-checked={undefined}
-          className={undefined}
           href="javascript:void(0);"
           role="menuitem"
           tabIndex="0"
@@ -175,8 +161,6 @@ exports[`Base Menu renders a base menu to the left 1`] = `
         role="presentation"
       >
         <a
-          aria-checked={undefined}
-          className={undefined}
           href="javascript:void(0);"
           role="menuitem"
           tabIndex="-1"
@@ -194,8 +178,6 @@ exports[`Base Menu renders a base menu to the left 1`] = `
         role="presentation"
       >
         <a
-          aria-checked={undefined}
-          className={undefined}
           href="javascript:void(0);"
           role="menuitem"
           tabIndex="-1"
@@ -217,8 +199,6 @@ exports[`Base Menu renders a base menu to the left 1`] = `
         role="presentation"
       >
         <a
-          aria-checked={undefined}
-          className={undefined}
           href="javascript:void(0);"
           role="menuitem"
           tabIndex="-1"
@@ -243,7 +223,6 @@ exports[`Base Menu renders a base menu to the right 1`] = `
   <button
     aria-haspopup="true"
     className="slds-button slds-button_icon slds-button_icon-border-filled"
-    id={undefined}
     title="Show More"
   >
     <svg
@@ -262,7 +241,6 @@ exports[`Base Menu renders a base menu to the right 1`] = `
   </button>
   <div
     className="slds-dropdown slds-dropdown_right"
-    style={undefined}
   >
     <ul
       aria-label="Show More"
@@ -274,8 +252,6 @@ exports[`Base Menu renders a base menu to the right 1`] = `
         role="presentation"
       >
         <a
-          aria-checked={undefined}
-          className={undefined}
           href="javascript:void(0);"
           role="menuitem"
           tabIndex="0"
@@ -293,8 +269,6 @@ exports[`Base Menu renders a base menu to the right 1`] = `
         role="presentation"
       >
         <a
-          aria-checked={undefined}
-          className={undefined}
           href="javascript:void(0);"
           role="menuitem"
           tabIndex="-1"
@@ -312,8 +286,6 @@ exports[`Base Menu renders a base menu to the right 1`] = `
         role="presentation"
       >
         <a
-          aria-checked={undefined}
-          className={undefined}
           href="javascript:void(0);"
           role="menuitem"
           tabIndex="-1"
@@ -335,8 +307,6 @@ exports[`Base Menu renders a base menu to the right 1`] = `
         role="presentation"
       >
         <a
-          aria-checked={undefined}
-          className={undefined}
           href="javascript:void(0);"
           role="menuitem"
           tabIndex="-1"
@@ -361,7 +331,6 @@ exports[`Menu with submenu renders a closed submenu 1`] = `
   <button
     aria-haspopup="true"
     className="slds-button slds-button_icon slds-button_icon-border-filled"
-    id={undefined}
     title="Show More"
   >
     <svg
@@ -380,7 +349,6 @@ exports[`Menu with submenu renders a closed submenu 1`] = `
   </button>
   <div
     className="slds-dropdown slds-dropdown_left"
-    style={undefined}
   >
     <ul
       aria-label="Show More"
@@ -392,8 +360,6 @@ exports[`Menu with submenu renders a closed submenu 1`] = `
         role="presentation"
       >
         <a
-          aria-checked={undefined}
-          className={undefined}
           href="javascript:void(0);"
           role="menuitem"
           tabIndex="0"
@@ -411,8 +377,6 @@ exports[`Menu with submenu renders a closed submenu 1`] = `
         role="presentation"
       >
         <a
-          aria-checked={undefined}
-          className={undefined}
           href="javascript:void(0);"
           role="menuitem"
           tabIndex="-1"
@@ -430,7 +394,6 @@ exports[`Menu with submenu renders a closed submenu 1`] = `
         role="presentation"
       >
         <a
-          aria-expanded={undefined}
           aria-haspopup="true"
           href="javascript:void(0);"
           role="menuitem"
@@ -453,7 +416,6 @@ exports[`Menu with submenu renders a closed submenu 1`] = `
         </a>
         <div
           className="slds-dropdown slds-dropdown_submenu slds-dropdown_submenu-right"
-          style={undefined}
         >
           <ul
             aria-label="Menu Item Three"
@@ -465,8 +427,6 @@ exports[`Menu with submenu renders a closed submenu 1`] = `
               role="presentation"
             >
               <a
-                aria-checked={undefined}
-                className={undefined}
                 href="javascript:void(0);"
                 role="menuitem"
                 tabIndex="0"
@@ -484,8 +444,6 @@ exports[`Menu with submenu renders a closed submenu 1`] = `
               role="presentation"
             >
               <a
-                aria-checked={undefined}
-                className={undefined}
                 href="javascript:void(0);"
                 role="menuitem"
                 tabIndex="-1"
@@ -503,8 +461,6 @@ exports[`Menu with submenu renders a closed submenu 1`] = `
               role="presentation"
             >
               <a
-                aria-checked={undefined}
-                className={undefined}
                 href="javascript:void(0);"
                 role="menuitem"
                 tabIndex="-1"
@@ -526,8 +482,6 @@ exports[`Menu with submenu renders a closed submenu 1`] = `
               role="presentation"
             >
               <a
-                aria-checked={undefined}
-                className={undefined}
                 href="javascript:void(0);"
                 role="menuitem"
                 tabIndex="-1"
@@ -555,7 +509,6 @@ exports[`Menu with submenu renders an open submenu 1`] = `
   <button
     aria-haspopup="true"
     className="slds-button slds-button_icon slds-button_icon-border-filled"
-    id={undefined}
     title="Show More"
   >
     <svg
@@ -574,7 +527,6 @@ exports[`Menu with submenu renders an open submenu 1`] = `
   </button>
   <div
     className="slds-dropdown slds-dropdown_left"
-    style={undefined}
   >
     <ul
       aria-label="Show More"
@@ -586,8 +538,6 @@ exports[`Menu with submenu renders an open submenu 1`] = `
         role="presentation"
       >
         <a
-          aria-checked={undefined}
-          className={undefined}
           href="javascript:void(0);"
           role="menuitem"
           tabIndex="0"
@@ -605,8 +555,6 @@ exports[`Menu with submenu renders an open submenu 1`] = `
         role="presentation"
       >
         <a
-          aria-checked={undefined}
-          className={undefined}
           href="javascript:void(0);"
           role="menuitem"
           tabIndex="-1"
@@ -647,7 +595,6 @@ exports[`Menu with submenu renders an open submenu 1`] = `
         </a>
         <div
           className="slds-dropdown slds-dropdown_submenu slds-dropdown_submenu-right"
-          style={undefined}
         >
           <ul
             aria-label="Menu Item Three"
@@ -659,8 +606,6 @@ exports[`Menu with submenu renders an open submenu 1`] = `
               role="presentation"
             >
               <a
-                aria-checked={undefined}
-                className={undefined}
                 href="javascript:void(0);"
                 role="menuitem"
                 tabIndex="0"
@@ -678,8 +623,6 @@ exports[`Menu with submenu renders an open submenu 1`] = `
               role="presentation"
             >
               <a
-                aria-checked={undefined}
-                className={undefined}
                 href="javascript:void(0);"
                 role="menuitem"
                 tabIndex="-1"
@@ -697,8 +640,6 @@ exports[`Menu with submenu renders an open submenu 1`] = `
               role="presentation"
             >
               <a
-                aria-checked={undefined}
-                className={undefined}
                 href="javascript:void(0);"
                 role="menuitem"
                 tabIndex="-1"
@@ -720,8 +661,6 @@ exports[`Menu with submenu renders an open submenu 1`] = `
               role="presentation"
             >
               <a
-                aria-checked={undefined}
-                className={undefined}
                 href="javascript:void(0);"
                 role="menuitem"
                 tabIndex="-1"
@@ -748,8 +687,6 @@ exports[`MenuItem should render a menu item 1`] = `
   role="presentation"
 >
   <a
-    aria-checked={undefined}
-    className={undefined}
     href="javascript:void(0);"
     role="menuitem"
     tabIndex="-1"
@@ -770,7 +707,6 @@ exports[`MenuItem should render an error menu item 1`] = `
   role="presentation"
 >
   <a
-    aria-checked={undefined}
     className="slds-has-error"
     href="javascript:void(0);"
     role="menuitem"
@@ -792,7 +728,6 @@ exports[`MenuItem should render an success menu item 1`] = `
   role="presentation"
 >
   <a
-    aria-checked={undefined}
     className="slds-has-success"
     href="javascript:void(0);"
     role="menuitem"
@@ -814,7 +749,6 @@ exports[`MenuItem should render an warning menu item 1`] = `
   role="presentation"
 >
   <a
-    aria-checked={undefined}
     className="slds-has-warning"
     href="javascript:void(0);"
     role="menuitem"

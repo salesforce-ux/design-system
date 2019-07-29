@@ -7,7 +7,7 @@
 // Needed for Enzyme
 global.requestAnimationFrame = cb => setTimeout(cb, 0);
 
-import enzyme from 'enzyme';
-import EnzymeAdapter from 'enzyme-adapter-react-16';
+import { configure } from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
 
-enzyme.configure({ adapter: new EnzymeAdapter() });
+configure({ adapter: new Adapter() });

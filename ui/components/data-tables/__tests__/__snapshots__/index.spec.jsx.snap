@@ -8,7 +8,6 @@ exports[`AdvancedDataTableHead component should apply hidden class 1`] = `
     className="slds-line-height_reset"
   >
     <th
-      aria-label={undefined}
       aria-sort={null}
       className="slds-text-align_right"
       scope="col"
@@ -53,7 +52,6 @@ exports[`AdvancedDataTableHead component should apply hidden class 1`] = `
       </div>
     </th>
     <th
-      aria-label={undefined}
       aria-sort={null}
       className=""
       scope="col"
@@ -65,7 +63,6 @@ exports[`AdvancedDataTableHead component should apply hidden class 1`] = `
     >
       <div
         className="slds-truncate slds-assistive-text"
-        id={undefined}
         title="Actions"
       >
         Actions
@@ -83,7 +80,6 @@ exports[`AdvancedDataTableHead component should check the select all column head
     className="slds-line-height_reset"
   >
     <th
-      aria-label={undefined}
       aria-sort={null}
       className="slds-text-align_right"
       scope="col"
@@ -106,10 +102,8 @@ exports[`AdvancedDataTableHead component should check the select all column head
           className="slds-checkbox"
         >
           <input
-            aria-describedby={undefined}
             aria-labelledby="check-select-all-label column-group-header"
             defaultChecked={true}
-            disabled={undefined}
             id="checkbox-unique-id-14"
             name="options"
             tabIndex="-1"
@@ -201,7 +195,6 @@ exports[`AdvancedDataTableHead component should check the select all column head
       </div>
     </th>
     <th
-      aria-label={undefined}
       aria-sort={null}
       className=""
       scope="col"
@@ -213,7 +206,6 @@ exports[`AdvancedDataTableHead component should check the select all column head
     >
       <div
         className="slds-truncate slds-assistive-text"
-        id={undefined}
         title="Actions"
       >
         Actions
@@ -231,7 +223,6 @@ exports[`AdvancedDataTableHead component should hide all the resize controls 1`]
     className="slds-line-height_reset"
   >
     <th
-      aria-label={undefined}
       aria-sort={null}
       className="slds-text-align_right"
       scope="col"
@@ -254,10 +245,8 @@ exports[`AdvancedDataTableHead component should hide all the resize controls 1`]
           className="slds-checkbox"
         >
           <input
-            aria-describedby={undefined}
             aria-labelledby="check-select-all-label column-group-header"
             defaultChecked={null}
-            disabled={undefined}
             id="checkbox-unique-id-10"
             name="options"
             tabIndex="-1"
@@ -329,7 +318,6 @@ exports[`AdvancedDataTableHead component should hide all the resize controls 1`]
       </a>
     </th>
     <th
-      aria-label={undefined}
       aria-sort={null}
       className=""
       scope="col"
@@ -341,7 +329,6 @@ exports[`AdvancedDataTableHead component should hide all the resize controls 1`]
     >
       <div
         className="slds-truncate slds-assistive-text"
-        id={undefined}
         title="Actions"
       >
         Actions
@@ -359,7 +346,6 @@ exports[`AdvancedDataTableHead component should hide all the sorting controls 1`
     className="slds-line-height_reset"
   >
     <th
-      aria-label={undefined}
       aria-sort={null}
       className="slds-text-align_right"
       scope="col"
@@ -382,10 +368,8 @@ exports[`AdvancedDataTableHead component should hide all the sorting controls 1`
           className="slds-checkbox"
         >
           <input
-            aria-describedby={undefined}
             aria-labelledby="check-select-all-label column-group-header"
             defaultChecked={null}
-            disabled={undefined}
             id="checkbox-unique-id-11"
             name="options"
             tabIndex="-1"
@@ -456,7 +440,6 @@ exports[`AdvancedDataTableHead component should hide all the sorting controls 1`
       </div>
     </th>
     <th
-      aria-label={undefined}
       aria-sort={null}
       className=""
       scope="col"
@@ -468,7 +451,6 @@ exports[`AdvancedDataTableHead component should hide all the sorting controls 1`
     >
       <div
         className="slds-truncate slds-assistive-text"
-        id={undefined}
         title="Actions"
       >
         Actions
@@ -486,7 +468,6 @@ exports[`AdvancedDataTableHead component should hide row level actions header 1`
     className="slds-line-height_reset"
   >
     <th
-      aria-label={undefined}
       aria-sort={null}
       className="slds-text-align_right"
       scope="col"
@@ -509,10 +490,8 @@ exports[`AdvancedDataTableHead component should hide row level actions header 1`
           className="slds-checkbox"
         >
           <input
-            aria-describedby={undefined}
             aria-labelledby="check-select-all-label column-group-header"
             defaultChecked={null}
-            disabled={undefined}
             id="checkbox-unique-id-9"
             name="options"
             tabIndex="-1"
@@ -682,7 +661,6 @@ exports[`AdvancedDataTableHead component should hide select column header 1`] = 
       </div>
     </th>
     <th
-      aria-label={undefined}
       aria-sort={null}
       className=""
       scope="col"
@@ -694,7 +672,6 @@ exports[`AdvancedDataTableHead component should hide select column header 1`] = 
     >
       <div
         className="slds-truncate slds-assistive-text"
-        id={undefined}
         title="Actions"
       >
         Actions
@@ -712,7 +689,6 @@ exports[`AdvancedDataTableHead component should remove select all, sort and resi
     className="slds-line-height_reset"
   >
     <th
-      aria-label={undefined}
       aria-sort={null}
       className="slds-text-align_right"
       scope="col"
@@ -757,7 +733,6 @@ exports[`AdvancedDataTableHead component should remove select all, sort and resi
       </div>
     </th>
     <th
-      aria-label={undefined}
       aria-sort={null}
       className=""
       scope="col"
@@ -769,7 +744,6 @@ exports[`AdvancedDataTableHead component should remove select all, sort and resi
     >
       <div
         className="slds-truncate slds-assistive-text"
-        id={undefined}
         title="Actions"
       >
         Actions
@@ -787,7 +761,6 @@ exports[`AdvancedDataTableHead component should render 1`] = `
     className="slds-line-height_reset"
   >
     <th
-      aria-label={undefined}
       aria-sort={null}
       className="slds-text-align_right"
       scope="col"
@@ -810,10 +783,8 @@ exports[`AdvancedDataTableHead component should render 1`] = `
           className="slds-checkbox"
         >
           <input
-            aria-describedby={undefined}
             aria-labelledby="check-select-all-label column-group-header"
             defaultChecked={null}
-            disabled={undefined}
             id="checkbox-unique-id-4"
             name="options"
             tabIndex="-1"
@@ -905,7 +876,6 @@ exports[`AdvancedDataTableHead component should render 1`] = `
       </div>
     </th>
     <th
-      aria-label={undefined}
       aria-sort={null}
       className=""
       scope="col"
@@ -917,7 +887,6 @@ exports[`AdvancedDataTableHead component should render 1`] = `
     >
       <div
         className="slds-truncate slds-assistive-text"
-        id={undefined}
         title="Actions"
       >
         Actions
@@ -935,7 +904,6 @@ exports[`AdvancedDataTableHead component should render enable actionable mode 1`
     className="slds-line-height_reset"
   >
     <th
-      aria-label={undefined}
       aria-sort={null}
       className="slds-text-align_right"
       scope="col"
@@ -958,10 +926,8 @@ exports[`AdvancedDataTableHead component should render enable actionable mode 1`
           className="slds-checkbox"
         >
           <input
-            aria-describedby={undefined}
             aria-labelledby="check-select-all-label column-group-header"
             defaultChecked={null}
-            disabled={undefined}
             id="checkbox-unique-id-5"
             name="options"
             tabIndex="0"
@@ -1053,7 +1019,6 @@ exports[`AdvancedDataTableHead component should render enable actionable mode 1`
       </div>
     </th>
     <th
-      aria-label={undefined}
       aria-sort={null}
       className=""
       scope="col"
@@ -1065,7 +1030,6 @@ exports[`AdvancedDataTableHead component should render enable actionable mode 1`
     >
       <div
         className="slds-truncate slds-assistive-text"
-        id={undefined}
         title="Actions"
       >
         Actions
@@ -1083,7 +1047,6 @@ exports[`AdvancedDataTableHead component should render error column header and s
     className="slds-line-height_reset"
   >
     <th
-      aria-label={undefined}
       aria-sort={null}
       className=""
       scope="col"
@@ -1095,14 +1058,12 @@ exports[`AdvancedDataTableHead component should render error column header and s
     >
       <div
         className="slds-truncate slds-assistive-text"
-        id={undefined}
         title="Errors"
       >
         Errors
       </div>
     </th>
     <th
-      aria-label={undefined}
       aria-sort={null}
       className=""
       scope="col"
@@ -1125,10 +1086,8 @@ exports[`AdvancedDataTableHead component should render error column header and s
           className="slds-checkbox"
         >
           <input
-            aria-describedby={undefined}
             aria-labelledby="check-select-all-label column-group-header"
             defaultChecked={null}
-            disabled={undefined}
             id="checkbox-unique-id-6"
             name="options"
             tabIndex="-1"
@@ -1220,7 +1179,6 @@ exports[`AdvancedDataTableHead component should render error column header and s
       </div>
     </th>
     <th
-      aria-label={undefined}
       aria-sort={null}
       className=""
       scope="col"
@@ -1232,7 +1190,6 @@ exports[`AdvancedDataTableHead component should render error column header and s
     >
       <div
         className="slds-truncate slds-assistive-text"
-        id={undefined}
         title="Actions"
       >
         Actions
@@ -1250,7 +1207,6 @@ exports[`AdvancedDataTableHead component should render menus 1`] = `
     className="slds-line-height_reset"
   >
     <th
-      aria-label={undefined}
       aria-sort={null}
       className="slds-text-align_right"
       scope="col"
@@ -1273,10 +1229,8 @@ exports[`AdvancedDataTableHead component should render menus 1`] = `
           className="slds-checkbox"
         >
           <input
-            aria-describedby={undefined}
             aria-labelledby="check-select-all-label column-group-header"
             defaultChecked={null}
-            disabled={undefined}
             id="checkbox-unique-id-8"
             name="options"
             tabIndex="-1"
@@ -1349,7 +1303,6 @@ exports[`AdvancedDataTableHead component should render menus 1`] = `
       <button
         aria-haspopup="true"
         className="slds-button slds-button_icon slds-th__action-button slds-button_icon-x-small"
-        id={undefined}
         tabIndex="-1"
         title="Show Name column actions"
       >
@@ -1389,7 +1342,6 @@ exports[`AdvancedDataTableHead component should render menus 1`] = `
       </div>
     </th>
     <th
-      aria-label={undefined}
       aria-sort={null}
       className=""
       scope="col"
@@ -1401,7 +1353,6 @@ exports[`AdvancedDataTableHead component should render menus 1`] = `
     >
       <div
         className="slds-truncate slds-assistive-text"
-        id={undefined}
         title="Actions"
       >
         Actions
@@ -1419,7 +1370,6 @@ exports[`AdvancedDataTableHead component should set a main column width 1`] = `
     className="slds-line-height_reset"
   >
     <th
-      aria-label={undefined}
       aria-sort={null}
       className="slds-text-align_right"
       scope="col"
@@ -1442,10 +1392,8 @@ exports[`AdvancedDataTableHead component should set a main column width 1`] = `
           className="slds-checkbox"
         >
           <input
-            aria-describedby={undefined}
             aria-labelledby="check-select-all-label column-group-header"
             defaultChecked={null}
-            disabled={undefined}
             id="checkbox-unique-id-12"
             name="options"
             tabIndex="-1"
@@ -1537,7 +1485,6 @@ exports[`AdvancedDataTableHead component should set a main column width 1`] = `
       </div>
     </th>
     <th
-      aria-label={undefined}
       aria-sort={null}
       className=""
       scope="col"
@@ -1549,7 +1496,6 @@ exports[`AdvancedDataTableHead component should set a main column width 1`] = `
     >
       <div
         className="slds-truncate slds-assistive-text"
-        id={undefined}
         title="Actions"
       >
         Actions
@@ -1567,7 +1513,6 @@ exports[`AdvancedDataTableHead component should set a single column width 1`] = 
     className="slds-line-height_reset"
   >
     <th
-      aria-label={undefined}
       aria-sort={null}
       className="slds-text-align_right"
       scope="col"
@@ -1590,10 +1535,8 @@ exports[`AdvancedDataTableHead component should set a single column width 1`] = 
           className="slds-checkbox"
         >
           <input
-            aria-describedby={undefined}
             aria-labelledby="check-select-all-label column-group-header"
             defaultChecked={null}
-            disabled={undefined}
             id="checkbox-unique-id-13"
             name="options"
             tabIndex="-1"
@@ -1685,7 +1628,6 @@ exports[`AdvancedDataTableHead component should set a single column width 1`] = 
       </div>
     </th>
     <th
-      aria-label={undefined}
       aria-sort={null}
       className=""
       scope="col"
@@ -1697,7 +1639,6 @@ exports[`AdvancedDataTableHead component should set a single column width 1`] = 
     >
       <div
         className="slds-truncate slds-assistive-text"
-        id={undefined}
         title="Actions"
       >
         Actions
@@ -1715,7 +1656,6 @@ exports[`AdvancedDataTableHead component should set sort direction 1`] = `
     className="slds-line-height_reset"
   >
     <th
-      aria-label={undefined}
       aria-sort={null}
       className="slds-text-align_right"
       scope="col"
@@ -1738,10 +1678,8 @@ exports[`AdvancedDataTableHead component should set sort direction 1`] = `
           className="slds-checkbox"
         >
           <input
-            aria-describedby={undefined}
             aria-labelledby="check-select-all-label column-group-header"
             defaultChecked={null}
-            disabled={undefined}
             id="checkbox-unique-id-15"
             name="options"
             tabIndex="-1"
@@ -1841,7 +1779,6 @@ exports[`AdvancedDataTableHead component should set sort direction 1`] = `
       </div>
     </th>
     <th
-      aria-label={undefined}
       aria-sort={null}
       className=""
       scope="col"
@@ -1853,7 +1790,6 @@ exports[`AdvancedDataTableHead component should set sort direction 1`] = `
     >
       <div
         className="slds-truncate slds-assistive-text"
-        id={undefined}
         title="Actions"
       >
         Actions
@@ -1871,7 +1807,6 @@ exports[`AdvancedDataTableHead component should should pass hasFocus when suppli
     className="slds-line-height_reset"
   >
     <th
-      aria-label={undefined}
       aria-sort={null}
       className="slds-text-align_right"
       scope="col"
@@ -1894,10 +1829,8 @@ exports[`AdvancedDataTableHead component should should pass hasFocus when suppli
           className="slds-checkbox"
         >
           <input
-            aria-describedby={undefined}
             aria-labelledby="check-select-all-label column-group-header"
             defaultChecked={null}
-            disabled={undefined}
             id="checkbox-unique-id-7"
             name="options"
             tabIndex="-1"
@@ -1989,7 +1922,6 @@ exports[`AdvancedDataTableHead component should should pass hasFocus when suppli
       </div>
     </th>
     <th
-      aria-label={undefined}
       aria-sort={null}
       className=""
       scope="col"
@@ -2001,7 +1933,6 @@ exports[`AdvancedDataTableHead component should should pass hasFocus when suppli
     >
       <div
         className="slds-truncate slds-assistive-text"
-        id={undefined}
         title="Actions"
       >
         Actions
@@ -2019,7 +1950,6 @@ exports[`AdvancedDataTableHead component should swap the select column to the si
     className="slds-line-height_reset"
   >
     <th
-      aria-label={undefined}
       aria-sort={null}
       className="slds-text-align_right"
       scope="col"
@@ -2105,7 +2035,6 @@ exports[`AdvancedDataTableHead component should swap the select column to the si
       </div>
     </th>
     <th
-      aria-label={undefined}
       aria-sort={null}
       className=""
       scope="col"
@@ -2117,7 +2046,6 @@ exports[`AdvancedDataTableHead component should swap the select column to the si
     >
       <div
         className="slds-truncate slds-assistive-text"
-        id={undefined}
         title="Actions"
       >
         Actions
@@ -2140,7 +2068,6 @@ exports[`ColumnHeader component should render with an id when passed 1`] = `
 exports[`ColumnHeader component should render with assistive text class with isAssistiveText prop 1`] = `
 <div
   className="slds-truncate slds-assistive-text"
-  id={undefined}
   title="Column Name"
 >
   Column Name
@@ -2150,7 +2077,6 @@ exports[`ColumnHeader component should render with assistive text class with isA
 exports[`ColumnHeader component should render with default column name 1`] = `
 <div
   className="slds-truncate"
-  id={undefined}
   title="Column Name"
 >
   Column Name
@@ -2160,7 +2086,6 @@ exports[`ColumnHeader component should render with default column name 1`] = `
 exports[`ColumnHeader component should render with set column name and title should match 1`] = `
 <div
   className="slds-truncate"
-  id={undefined}
   title="foo"
 >
   foo
@@ -2173,67 +2098,54 @@ exports[`ColumnTh component should add aria-label when passed 1`] = `
   aria-sort={null}
   className=""
   scope="col"
-  style={undefined}
 />
 `;
 
 exports[`ColumnTh component should apply has focus class with hasFocus 1`] = `
 <th
-  aria-label={undefined}
   aria-sort={null}
   className="slds-has-focus"
   scope="col"
-  style={undefined}
 />
 `;
 
 exports[`ColumnTh component should apply has menu class with hasMenu 1`] = `
 <th
-  aria-label={undefined}
   aria-sort={null}
   className="slds-has-button-menu"
   scope="col"
-  style={undefined}
 />
 `;
 
 exports[`ColumnTh component should apply is resizable class with isResizable 1`] = `
 <th
-  aria-label={undefined}
   aria-sort={null}
   className="slds-is-resizable"
   scope="col"
-  style={undefined}
 />
 `;
 
 exports[`ColumnTh component should apply is sortable class and aria-sort none with isSortable 1`] = `
 <th
-  aria-label={undefined}
   aria-sort="none"
   className="slds-is-sortable"
   scope="col"
-  style={undefined}
 />
 `;
 
 exports[`ColumnTh component should apply text align right class with isRightAligned 1`] = `
 <th
-  aria-label={undefined}
   aria-sort={null}
   className="slds-text-align_right"
   scope="col"
-  style={undefined}
 />
 `;
 
 exports[`ColumnTh component should render with children 1`] = `
 <th
-  aria-label={undefined}
   aria-sort={null}
   className=""
   scope="col"
-  style={undefined}
 >
   <div />
 </th>
@@ -2241,37 +2153,30 @@ exports[`ColumnTh component should render with children 1`] = `
 
 exports[`ColumnTh component should set sort direction of ascending 1`] = `
 <th
-  aria-label={undefined}
   aria-sort="ascending"
   className="slds-is-sortable slds-is-sorted slds-is-sorted_asc"
   scope="col"
-  style={undefined}
 />
 `;
 
 exports[`ColumnTh component should set sort direction of descending 1`] = `
 <th
-  aria-label={undefined}
   aria-sort="descending"
   className="slds-is-sortable slds-is-sorted slds-is-sorted_desc"
   scope="col"
-  style={undefined}
 />
 `;
 
 exports[`ColumnTh component should set sort direction of none 1`] = `
 <th
-  aria-label={undefined}
   aria-sort="none"
   className="slds-is-sortable"
   scope="col"
-  style={undefined}
 />
 `;
 
 exports[`ColumnTh component should set style attribute when passed 1`] = `
 <th
-  aria-label={undefined}
   aria-sort={null}
   className=""
   scope="col"
@@ -2288,7 +2193,6 @@ exports[`Data table component should render a advanced table with aria-multisele
   aria-multiselectable="true"
   className="slds-table"
   role="grid"
-  style={undefined}
 />
 `;
 
@@ -2297,7 +2201,6 @@ exports[`Data table component should render a advanced table without aria-multis
   aria-multiselectable={null}
   className="slds-table"
   role="grid"
-  style={undefined}
 />
 `;
 
@@ -2306,7 +2209,6 @@ exports[`Data table component should render a base table 1`] = `
   aria-multiselectable={null}
   className="slds-table"
   role={null}
-  style={undefined}
 />
 `;
 
@@ -2315,7 +2217,6 @@ exports[`Data table component should render a table with borders 1`] = `
   aria-multiselectable={null}
   className="slds-table slds-table_bordered"
   role={null}
-  style={undefined}
 />
 `;
 
@@ -2324,7 +2225,6 @@ exports[`Data table component should render a table with cell buffer class 1`] =
   aria-multiselectable={null}
   className="slds-table slds-table_cell-buffer"
   role={null}
-  style={undefined}
 />
 `;
 
@@ -2333,7 +2233,6 @@ exports[`Data table component should render a table with column borders 1`] = `
   aria-multiselectable={null}
   className="slds-table slds-table_col-bordered"
   role={null}
-  style={undefined}
 />
 `;
 
@@ -2342,7 +2241,6 @@ exports[`Data table component should render a table with editbale class 1`] = `
   aria-multiselectable={null}
   className="slds-table slds-table_edit"
   role={null}
-  style={undefined}
 />
 `;
 
@@ -2351,7 +2249,6 @@ exports[`Data table component should render a table with fixed layout class 1`] 
   aria-multiselectable={null}
   className="slds-table slds-table_fixed-layout"
   role={null}
-  style={undefined}
 />
 `;
 
@@ -2360,7 +2257,6 @@ exports[`Data table component should render a table with hidden header class 1`]
   aria-multiselectable={null}
   className="slds-table slds-table_header-hidden"
   role={null}
-  style={undefined}
 />
 `;
 
@@ -2369,7 +2265,6 @@ exports[`Data table component should render a table with no cell focus class 1`]
   aria-multiselectable={null}
   className="slds-table slds-no-cell-focus"
   role={null}
-  style={undefined}
 />
 `;
 
@@ -2378,7 +2273,6 @@ exports[`Data table component should render a table with no row hover class 1`] 
   aria-multiselectable={null}
   className="slds-table slds-no-row-hover"
   role={null}
-  style={undefined}
 />
 `;
 
@@ -2400,7 +2294,6 @@ exports[`Data table component should render a table with resizable class 1`] = `
   aria-multiselectable={null}
   className="slds-table slds-table_resizable-cols"
   role={null}
-  style={undefined}
 />
 `;
 
@@ -2409,7 +2302,6 @@ exports[`Data table component should render a table with responsive class 1`] = 
   aria-multiselectable={null}
   className="slds-table slds-max-medium-table_stacked-horizontal"
   role={null}
-  style={undefined}
 />
 `;
 
@@ -2418,7 +2310,6 @@ exports[`Data table component should render a table with responsive stacked clas
   aria-multiselectable={null}
   className="slds-table slds-max-medium-table_stacked"
   role={null}
-  style={undefined}
 />
 `;
 
@@ -2427,7 +2318,6 @@ exports[`Data table component should render a table with striped class 1`] = `
   aria-multiselectable={null}
   className="slds-table slds-table_striped"
   role={null}
-  style={undefined}
 />
 `;
 
@@ -2436,7 +2326,6 @@ exports[`Data table component should render a treegrid table with role treegrid 
   aria-multiselectable={null}
   className="slds-table slds-tree slds-table_tree"
   role="treegrid"
-  style={undefined}
 />
 `;
 
@@ -2445,7 +2334,6 @@ exports[`Data table component should render an advanced table with role grid 1`]
   aria-multiselectable={null}
   className="slds-table"
   role="grid"
-  style={undefined}
 />
 `;
 
@@ -2454,7 +2342,6 @@ exports[`Data table component should take children 1`] = `
   aria-multiselectable={null}
   className="slds-table"
   role={null}
-  style={undefined}
 >
   <tr />
 </table>
@@ -2463,10 +2350,7 @@ exports[`Data table component should take children 1`] = `
 exports[`EditPopover component should render 1`] = `
 <section
   aria-describedby="dialog-body-id-4"
-  aria-label={undefined}
-  aria-labelledby={undefined}
   className="slds-popover slds-popover slds-popover_edit"
-  id={undefined}
   role="dialog"
   style={
     Object {
@@ -2501,7 +2385,6 @@ exports[`EditPopover component should render 1`] = `
           className="slds-input"
           defaultValue="Acme Enterprises"
           id="company-01"
-          required={undefined}
           type="text"
         />
       </div>
@@ -2513,10 +2396,7 @@ exports[`EditPopover component should render 1`] = `
 exports[`EditPopover component should set field required 1`] = `
 <section
   aria-describedby="dialog-body-id-5"
-  aria-label={undefined}
-  aria-labelledby={undefined}
   className="slds-popover slds-popover slds-popover_edit"
-  id={undefined}
   role="dialog"
   style={
     Object {
@@ -2569,10 +2449,7 @@ exports[`EditPopover component should set field required 1`] = `
 exports[`EditPopover component should show error 1`] = `
 <section
   aria-describedby="dialog-body-id-6"
-  aria-label={undefined}
-  aria-labelledby={undefined}
   className="slds-popover slds-popover slds-popover_edit"
-  id={undefined}
   role="dialog"
   style={
     Object {
@@ -2639,10 +2516,8 @@ exports[`EditableCell component should lock the cell 1`] = `
     cell text
   </span>
   <button
-    aria-haspopup={undefined}
     className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
     disabled={true}
-    id={undefined}
     tabIndex="-1"
     title="Edit field of cell text"
   >
@@ -2674,10 +2549,7 @@ exports[`EditableCell component should render 1`] = `
     cell text
   </span>
   <button
-    aria-haspopup={undefined}
     className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
-    disabled={undefined}
-    id={undefined}
     tabIndex="-1"
     title="Edit field of cell text"
   >
@@ -2712,10 +2584,7 @@ exports[`EditableCell component should render a cell text as link 1`] = `
     cell text
   </a>
   <button
-    aria-haspopup={undefined}
     className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
-    disabled={undefined}
-    id={undefined}
     tabIndex="-1"
     title="Edit field of cell text"
   >
@@ -2750,10 +2619,7 @@ exports[`EditableCell component should set tabindex to 0 on focusable elements w
     cell text
   </a>
   <button
-    aria-haspopup={undefined}
     className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
-    disabled={undefined}
-    id={undefined}
     tabIndex="0"
     title="Edit field of cell text"
   >
@@ -2786,10 +2652,7 @@ Array [
       cell text
     </span>
     <button
-      aria-haspopup={undefined}
       className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
-      disabled={undefined}
-      id={undefined}
       tabIndex="-1"
       title="Edit field of cell text"
     >
@@ -2810,10 +2673,7 @@ Array [
   </span>,
   <section
     aria-describedby="dialog-body-id-3"
-    aria-label={undefined}
-    aria-labelledby={undefined}
     className="slds-popover slds-popover slds-popover_edit"
-    id={undefined}
     role="dialog"
     style={
       Object {
@@ -2848,7 +2708,6 @@ Array [
             className="slds-input"
             defaultValue="Acme Enterprises"
             id="company-01"
-            required={undefined}
             type="text"
           />
         </div>
@@ -2876,10 +2735,7 @@ Array [
       cell text
     </span>
     <button
-      aria-haspopup={undefined}
       className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
-      disabled={undefined}
-      id={undefined}
       tabIndex="-1"
       title="Edit field of cell text"
     >
@@ -2900,10 +2756,7 @@ Array [
   </span>,
   <section
     aria-describedby="dialog-body-id-1"
-    aria-label={undefined}
-    aria-labelledby={undefined}
     className="slds-popover slds-popover slds-popover_edit"
-    id={undefined}
     role="dialog"
     style={
       Object {
@@ -2938,7 +2791,6 @@ Array [
             className="slds-input"
             defaultValue="Acme Enterprises"
             id="company-01"
-            required={undefined}
             type="text"
           />
         </div>
@@ -2960,10 +2812,7 @@ Array [
       cell text
     </span>
     <button
-      aria-haspopup={undefined}
       className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
-      disabled={undefined}
-      id={undefined}
       tabIndex="-1"
       title="Edit field of cell text"
     >
@@ -2984,10 +2833,7 @@ Array [
   </span>,
   <section
     aria-describedby="dialog-body-id-2"
-    aria-label={undefined}
-    aria-labelledby={undefined}
     className="slds-popover slds-popover slds-popover_edit"
-    id={undefined}
     role="dialog"
     style={
       Object {
@@ -3041,7 +2887,6 @@ Array [
 exports[`ErrorCell component should remove aria-hidden and slds-hidden from button when hasError 1`] = `
 Array [
   <button
-    aria-haspopup={undefined}
     aria-hidden={null}
     className="slds-button slds-button_icon slds-button_icon-error slds-m-horizontal_xxx-small"
     id="error-01"
@@ -3071,7 +2916,6 @@ Array [
 exports[`ErrorCell component should render 1`] = `
 Array [
   <button
-    aria-haspopup={undefined}
     aria-hidden="true"
     className="slds-button slds-button_icon slds-button_icon-error slds-m-horizontal_xxx-small slds-hidden"
     id="error-01"
@@ -3101,7 +2945,6 @@ Array [
 exports[`ErrorCell component should set tabindex on the button to 0 in actionable mode 1`] = `
 Array [
   <button
-    aria-haspopup={undefined}
     aria-hidden={null}
     className="slds-button slds-button_icon slds-button_icon-error slds-m-horizontal_xxx-small"
     id="error-01"
@@ -3506,7 +3349,6 @@ Array [
   <button
     aria-haspopup="true"
     className="slds-button slds-button_icon slds-th__action-button slds-button_icon-x-small"
-    id={undefined}
     tabIndex="-1"
     title="Show Column Name column actions"
   >
@@ -3594,7 +3436,6 @@ exports[`ResizeControl component should render with a label 1`] = `
     id="cell-resize-handle-1"
     max="1000"
     min="20"
-    tabIndex={undefined}
     type="range"
   />
   <span
@@ -3634,7 +3475,6 @@ exports[`RowActionsCell component should render 1`] = `
 <button
   aria-haspopup="true"
   className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
-  id={undefined}
   tabIndex="-1"
   title="More actions for row name"
 >
@@ -3658,7 +3498,6 @@ exports[`RowActionsCell component should set tabindex to 0 when in actionable mo
 <button
   aria-haspopup="true"
   className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
-  id={undefined}
   tabIndex="0"
   title="More actions for row name"
 >
@@ -3681,9 +3520,7 @@ exports[`RowActionsCell component should set tabindex to 0 when in actionable mo
 exports[`RowTh component should apply the cell edit class 1`] = `
 <th
   className="slds-cell-edit"
-  data-label={undefined}
   scope="row"
-  tabIndex={undefined}
 >
   <div />
 </th>
@@ -3692,9 +3529,7 @@ exports[`RowTh component should apply the cell edit class 1`] = `
 exports[`RowTh component should apply the has focus class 1`] = `
 <th
   className="slds-has-focus"
-  data-label={undefined}
   scope="row"
-  tabIndex={undefined}
 >
   <div />
 </th>
@@ -3703,9 +3538,7 @@ exports[`RowTh component should apply the has focus class 1`] = `
 exports[`RowTh component should apply tree item class 1`] = `
 <th
   className="slds-tree__item"
-  data-label={undefined}
   scope="row"
-  tabIndex={undefined}
 >
   <div />
 </th>
@@ -3714,9 +3547,7 @@ exports[`RowTh component should apply tree item class 1`] = `
 exports[`RowTh component should render 1`] = `
 <th
   className={null}
-  data-label={undefined}
   scope="row"
-  tabIndex={undefined}
 >
   <div />
 </th>
@@ -3727,7 +3558,6 @@ exports[`RowTh component should set a data-label 1`] = `
   className={null}
   data-label="foo"
   scope="row"
-  tabIndex={undefined}
 >
   <div />
 </th>
@@ -3736,7 +3566,6 @@ exports[`RowTh component should set a data-label 1`] = `
 exports[`RowTh component should set tabindex 1`] = `
 <th
   className={null}
-  data-label={undefined}
   scope="row"
   tabIndex="0"
 >
@@ -3759,10 +3588,8 @@ Array [
       className="slds-checkbox"
     >
       <input
-        aria-describedby={undefined}
         aria-labelledby="check-select-all-label column-group-header"
         defaultChecked={true}
-        disabled={undefined}
         id="checkbox-unique-id-3"
         name="options"
         tabIndex="-1"
@@ -3803,10 +3630,8 @@ Array [
       className="slds-checkbox"
     >
       <input
-        aria-describedby={undefined}
         aria-labelledby="check-select-all-label column-group-header"
         defaultChecked={null}
-        disabled={undefined}
         id="checkbox-unique-id-2"
         name="options"
         tabIndex="0"
@@ -3847,10 +3672,8 @@ Array [
       className="slds-checkbox"
     >
       <input
-        aria-describedby={undefined}
         aria-labelledby="check-select-all-label column-group-header"
         defaultChecked={null}
-        disabled={undefined}
         id="checkbox-unique-id-1"
         name="options"
         tabIndex="-1"
@@ -3881,13 +3704,9 @@ exports[`SelectRowCell component should render 1`] = `
   className="slds-checkbox"
 >
   <input
-    aria-describedby={undefined}
     aria-labelledby="check-button-label-01 column-group-header"
-    defaultChecked={undefined}
-    disabled={undefined}
     id="checkbox-01"
     name="options"
-    tabIndex={undefined}
     type="checkbox"
     value="checkbox-01"
   />
@@ -3913,13 +3732,10 @@ exports[`SelectRowCell component should render a checked checkbox 1`] = `
   className="slds-checkbox"
 >
   <input
-    aria-describedby={undefined}
     aria-labelledby="check-button-label-01 column-group-header"
     defaultChecked={true}
-    disabled={undefined}
     id="checkbox-01"
     name="options"
-    tabIndex={undefined}
     type="checkbox"
     value="checkbox-01"
   />
@@ -3945,13 +3761,10 @@ exports[`SelectRowCell component should render a checked radio button 1`] = `
   className="slds-radio"
 >
   <input
-    aria-describedby={undefined}
     aria-labelledby="radio-button-label-01 column-group-header"
     defaultChecked={true}
-    disabled={undefined}
     id="radio-01"
     name="options"
-    tabIndex={undefined}
     type="radio"
     value="radio-01"
   />
@@ -3977,13 +3790,9 @@ exports[`SelectRowCell component should render a radio button 1`] = `
   className="slds-radio"
 >
   <input
-    aria-describedby={undefined}
     aria-labelledby="radio-button-label-01 column-group-header"
-    defaultChecked={undefined}
-    disabled={undefined}
     id="radio-01"
     name="options"
-    tabIndex={undefined}
     type="radio"
     value="radio-01"
   />
@@ -4009,10 +3818,7 @@ exports[`SelectRowCell component should set tabindex on a checkbox 1`] = `
   className="slds-checkbox"
 >
   <input
-    aria-describedby={undefined}
     aria-labelledby="check-button-label-01 column-group-header"
-    defaultChecked={undefined}
-    disabled={undefined}
     id="checkbox-01"
     name="options"
     tabIndex="-1"
@@ -4041,10 +3847,7 @@ exports[`SelectRowCell component should set tabindex on a radio 1`] = `
   className="slds-radio"
 >
   <input
-    aria-describedby={undefined}
     aria-labelledby="radio-button-label-01 column-group-header"
-    defaultChecked={undefined}
-    disabled={undefined}
     id="radio-01"
     name="options"
     tabIndex="-1"
@@ -4076,13 +3879,7 @@ exports[`TBody component should render with children 1`] = `
 
 exports[`TBodyTr component should render top aligned 1`] = `
 <tr
-  aria-expanded={undefined}
-  aria-level={undefined}
-  aria-posinset={undefined}
-  aria-selected={undefined}
-  aria-setsize={undefined}
   className="slds-hint-parent slds-align-top"
-  tabIndex={undefined}
 >
   <td />
 </tr>
@@ -4090,13 +3887,7 @@ exports[`TBodyTr component should render top aligned 1`] = `
 
 exports[`TBodyTr component should render with children 1`] = `
 <tr
-  aria-expanded={undefined}
-  aria-level={undefined}
-  aria-posinset={undefined}
-  aria-selected={undefined}
-  aria-setsize={undefined}
   className="slds-hint-parent"
-  tabIndex={undefined}
 >
   <td />
 </tr>
@@ -4105,12 +3896,7 @@ exports[`TBodyTr component should render with children 1`] = `
 exports[`TBodyTr component should set aria-expanded 1`] = `
 <tr
   aria-expanded={true}
-  aria-level={undefined}
-  aria-posinset={undefined}
-  aria-selected={undefined}
-  aria-setsize={undefined}
   className="slds-hint-parent"
-  tabIndex={undefined}
 >
   <td />
 </tr>
@@ -4119,12 +3905,7 @@ exports[`TBodyTr component should set aria-expanded 1`] = `
 exports[`TBodyTr component should set aria-expanded to false 1`] = `
 <tr
   aria-expanded={false}
-  aria-level={undefined}
-  aria-posinset={undefined}
-  aria-selected={undefined}
-  aria-setsize={undefined}
   className="slds-hint-parent"
-  tabIndex={undefined}
 >
   <td />
 </tr>
@@ -4132,13 +3913,8 @@ exports[`TBodyTr component should set aria-expanded to false 1`] = `
 
 exports[`TBodyTr component should set aria-level 1`] = `
 <tr
-  aria-expanded={undefined}
   aria-level="1"
-  aria-posinset={undefined}
-  aria-selected={undefined}
-  aria-setsize={undefined}
   className="slds-hint-parent"
-  tabIndex={undefined}
 >
   <td />
 </tr>
@@ -4146,13 +3922,8 @@ exports[`TBodyTr component should set aria-level 1`] = `
 
 exports[`TBodyTr component should set aria-posinset 1`] = `
 <tr
-  aria-expanded={undefined}
-  aria-level={undefined}
   aria-posinset="2"
-  aria-selected={undefined}
-  aria-setsize={undefined}
   className="slds-hint-parent"
-  tabIndex={undefined}
 >
   <td />
 </tr>
@@ -4160,13 +3931,8 @@ exports[`TBodyTr component should set aria-posinset 1`] = `
 
 exports[`TBodyTr component should set aria-selected 1`] = `
 <tr
-  aria-expanded={undefined}
-  aria-level={undefined}
-  aria-posinset={undefined}
   aria-selected={true}
-  aria-setsize={undefined}
   className="slds-hint-parent slds-is-selected"
-  tabIndex={undefined}
 >
   <td />
 </tr>
@@ -4174,13 +3940,8 @@ exports[`TBodyTr component should set aria-selected 1`] = `
 
 exports[`TBodyTr component should set aria-selected to false 1`] = `
 <tr
-  aria-expanded={undefined}
-  aria-level={undefined}
-  aria-posinset={undefined}
   aria-selected={false}
-  aria-setsize={undefined}
   className="slds-hint-parent"
-  tabIndex={undefined}
 >
   <td />
 </tr>
@@ -4188,13 +3949,8 @@ exports[`TBodyTr component should set aria-selected to false 1`] = `
 
 exports[`TBodyTr component should set aria-setsize 1`] = `
 <tr
-  aria-expanded={undefined}
-  aria-level={undefined}
-  aria-posinset={undefined}
-  aria-selected={undefined}
   aria-setsize="10"
   className="slds-hint-parent"
-  tabIndex={undefined}
 >
   <td />
 </tr>
@@ -4202,11 +3958,6 @@ exports[`TBodyTr component should set aria-setsize 1`] = `
 
 exports[`TBodyTr component should set tabindex 1`] = `
 <tr
-  aria-expanded={undefined}
-  aria-level={undefined}
-  aria-posinset={undefined}
-  aria-selected={undefined}
-  aria-setsize={undefined}
   className="slds-hint-parent"
   tabIndex="0"
 >
@@ -4244,13 +3995,9 @@ exports[`THeadTr component should render with children 1`] = `
 
 exports[`Td component should apply a supplied data-label 1`] = `
 <td
-  aria-readonly={undefined}
-  aria-selected={undefined}
   className={null}
   data-label="foo"
   role={null}
-  style={undefined}
-  tabIndex={undefined}
 >
   <div />
 </td>
@@ -4259,12 +4006,8 @@ exports[`Td component should apply a supplied data-label 1`] = `
 exports[`Td component should apply aria-readonly 1`] = `
 <td
   aria-readonly={true}
-  aria-selected={undefined}
   className={null}
-  data-label={undefined}
   role={null}
-  style={undefined}
-  tabIndex={undefined}
 >
   <div />
 </td>
@@ -4272,13 +4015,9 @@ exports[`Td component should apply aria-readonly 1`] = `
 
 exports[`Td component should apply aria-selected 1`] = `
 <td
-  aria-readonly={undefined}
   aria-selected={true}
   className={null}
-  data-label={undefined}
   role={null}
-  style={undefined}
-  tabIndex={undefined}
 >
   <div />
 </td>
@@ -4286,13 +4025,8 @@ exports[`Td component should apply aria-selected 1`] = `
 
 exports[`Td component should apply the cell shrink class 1`] = `
 <td
-  aria-readonly={undefined}
-  aria-selected={undefined}
   className="slds-cell-shrink"
-  data-label={undefined}
   role={null}
-  style={undefined}
-  tabIndex={undefined}
 >
   <div />
 </td>
@@ -4300,13 +4034,8 @@ exports[`Td component should apply the cell shrink class 1`] = `
 
 exports[`Td component should apply the error cell class 1`] = `
 <td
-  aria-readonly={undefined}
-  aria-selected={undefined}
   className="slds-cell-error"
-  data-label={undefined}
   role={null}
-  style={undefined}
-  tabIndex={undefined}
 >
   <div />
 </td>
@@ -4314,13 +4043,8 @@ exports[`Td component should apply the error cell class 1`] = `
 
 exports[`Td component should apply the has error class 1`] = `
 <td
-  aria-readonly={undefined}
-  aria-selected={undefined}
   className="slds-has-error"
-  data-label={undefined}
   role={null}
-  style={undefined}
-  tabIndex={undefined}
 >
   <div />
 </td>
@@ -4328,13 +4052,8 @@ exports[`Td component should apply the has error class 1`] = `
 
 exports[`Td component should apply the has focus class 1`] = `
 <td
-  aria-readonly={undefined}
-  aria-selected={undefined}
   className="slds-has-focus"
-  data-label={undefined}
   role={null}
-  style={undefined}
-  tabIndex={undefined}
 >
   <div />
 </td>
@@ -4342,13 +4061,8 @@ exports[`Td component should apply the has focus class 1`] = `
 
 exports[`Td component should apply the is editable class 1`] = `
 <td
-  aria-readonly={undefined}
-  aria-selected={undefined}
   className="slds-cell-edit"
-  data-label={undefined}
   role={null}
-  style={undefined}
-  tabIndex={undefined}
 >
   <div />
 </td>
@@ -4356,13 +4070,8 @@ exports[`Td component should apply the is editable class 1`] = `
 
 exports[`Td component should apply the is edited class 1`] = `
 <td
-  aria-readonly={undefined}
-  aria-selected={undefined}
   className="slds-is-edited"
-  data-label={undefined}
   role={null}
-  style={undefined}
-  tabIndex={undefined}
 >
   <div />
 </td>
@@ -4370,13 +4079,8 @@ exports[`Td component should apply the is edited class 1`] = `
 
 exports[`Td component should apply the right aligned class 1`] = `
 <td
-  aria-readonly={undefined}
-  aria-selected={undefined}
   className="slds-text-align_right"
-  data-label={undefined}
   role={null}
-  style={undefined}
-  tabIndex={undefined}
 >
   <div />
 </td>
@@ -4384,13 +4088,8 @@ exports[`Td component should apply the right aligned class 1`] = `
 
 exports[`Td component should render with children 1`] = `
 <td
-  aria-readonly={undefined}
-  aria-selected={undefined}
   className={null}
-  data-label={undefined}
   role={null}
-  style={undefined}
-  tabIndex={undefined}
 >
   <div />
 </td>
@@ -4398,13 +4097,8 @@ exports[`Td component should render with children 1`] = `
 
 exports[`Td component should set role of gridcell for advanced 1`] = `
 <td
-  aria-readonly={undefined}
-  aria-selected={undefined}
   className={null}
-  data-label={undefined}
   role="gridcell"
-  style={undefined}
-  tabIndex={undefined}
 >
   <div />
 </td>
@@ -4412,13 +4106,8 @@ exports[`Td component should set role of gridcell for advanced 1`] = `
 
 exports[`Td component should set role of gridcell for treegrid 1`] = `
 <td
-  aria-readonly={undefined}
-  aria-selected={undefined}
   className={null}
-  data-label={undefined}
   role="gridcell"
-  style={undefined}
-  tabIndex={undefined}
 >
   <div />
 </td>
@@ -4426,17 +4115,13 @@ exports[`Td component should set role of gridcell for treegrid 1`] = `
 
 exports[`Td component should set style 1`] = `
 <td
-  aria-readonly={undefined}
-  aria-selected={undefined}
   className={null}
-  data-label={undefined}
   role={null}
   style={
     Object {
       "width": "2rem",
     }
   }
-  tabIndex={undefined}
 >
   <div />
 </td>
@@ -4444,12 +4129,8 @@ exports[`Td component should set style 1`] = `
 
 exports[`Td component should set tabindex 1`] = `
 <td
-  aria-readonly={undefined}
-  aria-selected={undefined}
   className={null}
-  data-label={undefined}
   role={null}
-  style={undefined}
   tabIndex="0"
 >
   <div />

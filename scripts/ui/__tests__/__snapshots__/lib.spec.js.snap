@@ -2,45 +2,27 @@
 
 exports[`scripts/lib.js gets every example in the system 1`] = `
 Object {
-  "components": Object {
-    "buttons": Array [
-      "<button class=\\"slds-button\\" disabled=\\"\\">Button</button>",
-      "<button class=\\"slds-button\\">Button</button>",
-      "<button class=\\"slds-button\\">Button Neutral</button>",
-      "<button class=\\"slds-button\\">Button Neutral</button>",
-      "<button class=\\"slds-button slds-button_stateful slds-button_neutral slds-not-selected\\" aria-live=\\"assertive\\"></button>",
-    ],
-    "data-tables": Array [
-      "<table></table>",
-      "<table></table>",
-      "<table></table>",
-    ],
-  },
-  "modules": Object {
-    "buttons": Array [],
-    "zigzag": Array [],
-  },
-  "utilities": Object {
-    "alignment": Array [
-      "<div class=\\"slds-align_absolute-center\\">This content will be positioned in the absolute center of its container</div>",
-    ],
-    "floats": Array [
-      "<div class=\\"slds-clearfix\\"><div class=\\"slds-float_left\\"><p>I’m floooaaaating</p></div></div>",
-      "<div class=\\"slds-clearfix\\"><div class=\\"slds-float_right\\"><p>I’m floooaaaating</p></div></div>",
-      "<div class=\\"slds-float_none\\"><p>I’m not floooaaaating</p></div>",
-      "<div class=\\"slds-clearfix\\"><div class=\\"slds-float_left\\"><p>I’m floooaaaating</p></div><div class=\\"slds-float_right\\"><p>I’m floooaaaating</p></div></div>",
-      "<div><p>I’m floooaaaating</p></div>",
-      "<div class=\\"slds-clearfix\\"><div class=\\"slds-float_left\\"><p>I’m floooaaaating</p></div></div>",
-      "<div class=\\"slds-clearfix\\"><div class=\\"slds-float_right\\"><p>I’m floooaaaating</p></div></div>",
-      "<div class=\\"slds-float_none\\"><p>I’m not floooaaaating</p></div>",
-      "<div class=\\"slds-clearfix\\"><div class=\\"slds-float_left\\"><p>I’m floooaaaating</p></div><div class=\\"slds-float_right\\"><p>I’m floooaaaating</p></div></div>",
-      "<div><p>I’m floooaaaating</p></div>",
-      "<div class=\\"slds-clearfix\\"><div class=\\"slds-float_left\\"><p>I’m floooaaaating</p></div></div>",
-      "<div class=\\"slds-clearfix\\"><div class=\\"slds-float_right\\"><p>I’m floooaaaating</p></div></div>",
-      "<div class=\\"slds-float_none\\"><p>I’m not floooaaaating</p></div>",
-      "<div class=\\"slds-clearfix\\"><div class=\\"slds-float_left\\"><p>I’m floooaaaating</p></div><div class=\\"slds-float_right\\"><p>I’m floooaaaating</p></div></div>",
-      "<div><p>I’m floooaaaating</p></div>",
-    ],
-  },
+  "alignment": Array [
+    "<div class=\\"slds-align_absolute-center\\">This content will be positioned in the absolute center of its container</div>",
+  ],
+  "buttons": Array [],
+  "data-tables": Array [],
+  "floats": Array [
+    "<div><p>I’m floooaaaating</p></div>",
+    "<div class=\\"slds-clearfix\\"><div class=\\"slds-float_left\\"><p>I’m floooaaaating</p></div></div>",
+    "<div class=\\"slds-clearfix\\"><div class=\\"slds-float_right\\"><p>I’m floooaaaating</p></div></div>",
+    "<div class=\\"slds-float_none\\"><p>I’m not floooaaaating</p></div>",
+    "<div class=\\"slds-clearfix\\"><div class=\\"slds-float_left\\"><p>I’m floooaaaating</p></div><div class=\\"slds-float_right\\"><p>I’m floooaaaating</p></div></div>",
+    "<div><p>I’m floooaaaating</p></div>",
+    "<div class=\\"slds-clearfix\\"><div class=\\"slds-float_left\\"><p>I’m floooaaaating</p></div></div>",
+    "<div class=\\"slds-clearfix\\"><div class=\\"slds-float_right\\"><p>I’m floooaaaating</p></div></div>",
+    "<div class=\\"slds-float_none\\"><p>I’m not floooaaaating</p></div>",
+    "<div class=\\"slds-clearfix\\"><div class=\\"slds-float_left\\"><p>I’m floooaaaating</p></div><div class=\\"slds-float_right\\"><p>I’m floooaaaating</p></div></div>",
+    "<div><p>I’m floooaaaating</p></div>",
+    "<div class=\\"slds-clearfix\\"><div class=\\"slds-float_left\\"><p>I’m floooaaaating</p></div></div>",
+    "<div class=\\"slds-clearfix\\"><div class=\\"slds-float_right\\"><p>I’m floooaaaating</p></div></div>",
+    "<div class=\\"slds-float_none\\"><p>I’m not floooaaaating</p></div>",
+    "<div class=\\"slds-clearfix\\"><div class=\\"slds-float_left\\"><p>I’m floooaaaating</p></div><div class=\\"slds-float_right\\"><p>I’m floooaaaating</p></div></div>",
+  ],
 }
 `;

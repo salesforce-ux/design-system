@@ -8,7 +8,6 @@ exports[`Vertical Nav List Group renders a collapsed list section 1`] = `
     aria-controls="list1"
     aria-expanded="false"
     className="slds-button slds-button_reset slds-nav-vertical__action slds-nav-vertical__action_overflow"
-    disabled={undefined}
   >
     <svg
       aria-hidden={true}
@@ -60,7 +59,6 @@ exports[`Vertical Nav List Group renders a list item 1`] = `
   className="slds-nav-vertical__item"
 >
   <a
-    aria-current={undefined}
     className="slds-nav-vertical__action"
     href="javascript:void(0);"
   >
@@ -121,7 +119,6 @@ exports[`Vertical Nav List Group renders an expanded list section 1`] = `
     aria-controls="list1"
     aria-expanded="true"
     className="slds-button slds-button_reset slds-nav-vertical__action slds-nav-vertical__action_overflow"
-    disabled={undefined}
   >
     <svg
       aria-hidden={true}
@@ -188,7 +185,6 @@ exports[`Vertical Nav Radio Group renders a compact fieldset 1`] = `
     className="slds-nav-vertical__item"
   >
     <input
-      defaultChecked={undefined}
       id="test1"
       name="unique-id-example"
       type="radio"
@@ -221,7 +217,6 @@ exports[`Vertical Nav Radio Group renders a fieldset 1`] = `
     className="slds-nav-vertical__item"
   >
     <input
-      defaultChecked={undefined}
       id="test1"
       name="unique-id-example"
       type="radio"
@@ -246,7 +241,6 @@ exports[`Vertical Nav Radio Group renders a radio button 1`] = `
   className="slds-nav-vertical__item"
 >
   <input
-    defaultChecked={undefined}
     id="test1"
     name="unique-id-example"
     type="radio"
@@ -276,7 +270,6 @@ exports[`Vertical Nav Radio Group renders a shaded fieldset 1`] = `
     className="slds-nav-vertical__item"
   >
     <input
-      defaultChecked={undefined}
       id="test1"
       name="unique-id-example"
       type="radio"

@@ -7,9 +7,7 @@ exports[`Activity Timeline Expandable renders a collapsed timeline media figure 
   <button
     aria-controls="event-figure"
     aria-expanded="false"
-    aria-haspopup={undefined}
     className="slds-button slds-button_icon"
-    id={undefined}
     title="Toggle details for undefined"
   >
     <svg
@@ -104,7 +102,6 @@ exports[`Activity Timeline Expandable renders a full expanded details section wi
   </div>
   <button
     className="slds-button slds-button_neutral slds-m-top_small"
-    disabled={undefined}
   >
     <svg
       aria-hidden={true}
@@ -201,10 +198,7 @@ exports[`Activity Timeline Expandable renders a narrow timeline item 1`] = `
     >
       <button
         aria-controls="call-item"
-        aria-expanded={undefined}
-        aria-haspopup={undefined}
         className="slds-button slds-button_icon"
-        id={undefined}
         title="Toggle details for Mobile conversation on Monday"
       >
         <svg
@@ -268,7 +262,6 @@ exports[`Activity Timeline Expandable renders a narrow timeline item 1`] = `
           <button
             aria-haspopup="true"
             className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
-            id={undefined}
             title="More Options for this item"
           >
             <svg
@@ -387,10 +380,7 @@ exports[`Activity Timeline Expandable renders a task timeline item 1`] = `
     >
       <button
         aria-controls="call-item"
-        aria-expanded={undefined}
-        aria-haspopup={undefined}
         className="slds-button slds-button_icon"
-        id={undefined}
         title="Toggle details for Mobile conversation on Monday"
       >
         <svg
@@ -434,20 +424,15 @@ exports[`Activity Timeline Expandable renders a task timeline item 1`] = `
             className="slds-checkbox"
           >
             <input
-              aria-describedby={undefined}
               aria-labelledby={null}
-              defaultChecked={undefined}
-              disabled={undefined}
               id="checkbox-unique-id-2"
               name="options"
-              tabIndex={undefined}
               type="checkbox"
               value="checkbox-unique-id-2"
             />
             <label
               className="slds-checkbox__label"
               htmlFor="checkbox-unique-id-2"
-              id={undefined}
             >
               <span
                 className="slds-checkbox_faux"
@@ -483,7 +468,6 @@ exports[`Activity Timeline Expandable renders a task timeline item 1`] = `
           <button
             aria-haspopup="true"
             className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
-            id={undefined}
             title="More Options for this item"
           >
             <svg
@@ -618,10 +602,7 @@ exports[`Activity Timeline Expandable renders a timeline item 1`] = `
     >
       <button
         aria-controls="call-item"
-        aria-expanded={undefined}
-        aria-haspopup={undefined}
         className="slds-button slds-button_icon"
-        id={undefined}
         title="Toggle details for Mobile conversation on Monday"
       >
         <svg
@@ -685,7 +666,6 @@ exports[`Activity Timeline Expandable renders a timeline item 1`] = `
           <button
             aria-haspopup="true"
             className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
-            id={undefined}
             title="More Options for this item"
           >
             <svg
@@ -790,7 +770,6 @@ exports[`Activity Timeline Expandable renders a timeline item 1`] = `
 exports[`Activity Timeline Expandable renders a timeline item error 1`] = `
 <div
   className="slds-grid slds-text-color_error slds-m-top_x-small slds-m-horizontal_xx-small"
-  id={undefined}
 >
   <span
     className="slds-icon_container slds-icon-utility-error"
@@ -827,20 +806,15 @@ exports[`Activity Timeline Expandable renders a timeline item trigger with a tas
       className="slds-checkbox"
     >
       <input
-        aria-describedby={undefined}
         aria-labelledby={null}
-        defaultChecked={undefined}
-        disabled={undefined}
         id="checkbox-unique-id-1"
         name="options"
-        tabIndex={undefined}
         type="checkbox"
         value="checkbox-unique-id-1"
       />
       <label
         className="slds-checkbox__label"
         htmlFor="checkbox-unique-id-1"
-        id={undefined}
       >
         <span
           className="slds-checkbox_faux"
@@ -876,7 +850,6 @@ exports[`Activity Timeline Expandable renders a timeline item trigger with a tas
     <button
       aria-haspopup="true"
       className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
-      id={undefined}
       title="More Options for this item"
     >
       <svg
@@ -968,7 +941,6 @@ exports[`Activity Timeline Expandable renders a timeline item trigger with icons
     <button
       aria-haspopup="true"
       className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
-      id={undefined}
       title="More Options for this item"
     >
       <svg
@@ -1020,7 +992,6 @@ exports[`Activity Timeline Expandable renders a timeline item trigger with no ic
     <button
       aria-haspopup="true"
       className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
-      id={undefined}
       title="More Options for this item"
     >
       <svg
@@ -1058,10 +1029,7 @@ exports[`Activity Timeline Expandable renders a timeline item with icons 1`] = `
     >
       <button
         aria-controls="call-item"
-        aria-expanded={undefined}
-        aria-haspopup={undefined}
         className="slds-button slds-button_icon"
-        id={undefined}
         title="Toggle details for Mobile conversation on Monday"
       >
         <svg
@@ -1105,20 +1073,15 @@ exports[`Activity Timeline Expandable renders a timeline item with icons 1`] = `
             className="slds-checkbox"
           >
             <input
-              aria-describedby={undefined}
               aria-labelledby={null}
-              defaultChecked={undefined}
-              disabled={undefined}
               id="checkbox-unique-id-3"
               name="options"
-              tabIndex={undefined}
               type="checkbox"
               value="checkbox-unique-id-3"
             />
             <label
               className="slds-checkbox__label"
               htmlFor="checkbox-unique-id-3"
-              id={undefined}
             >
               <span
                 className="slds-checkbox_faux"
@@ -1194,7 +1157,6 @@ exports[`Activity Timeline Expandable renders a timeline item with icons 1`] = `
           <button
             aria-haspopup="true"
             className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
-            id={undefined}
             title="More Options for this item"
           >
             <svg
@@ -1330,7 +1292,6 @@ exports[`Activity Timeline Expandable renders a timeline media body 1`] = `
       <button
         aria-haspopup="true"
         className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
-        id={undefined}
         title="More Options for this item"
       >
         <svg
@@ -1404,9 +1365,7 @@ exports[`Activity Timeline Expandable renders an expanded timeline item 1`] = `
       <button
         aria-controls="call-item"
         aria-expanded="true"
-        aria-haspopup={undefined}
         className="slds-button slds-button_icon"
-        id={undefined}
         title="Toggle details for Mobile conversation on Monday"
       >
         <svg
@@ -1470,7 +1429,6 @@ exports[`Activity Timeline Expandable renders an expanded timeline item 1`] = `
           <button
             aria-haspopup="true"
             className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
-            id={undefined}
             title="More Options for this item"
           >
             <svg
@@ -1579,9 +1537,7 @@ exports[`Activity Timeline Expandable renders an expanded timeline media figure 
   <button
     aria-controls="event-figure"
     aria-expanded="true"
-    aria-haspopup={undefined}
     className="slds-button slds-button_icon"
-    id={undefined}
     title="Toggle details for undefined"
   >
     <svg
@@ -1687,20 +1643,15 @@ exports[`Activity Timeline Expandable renders the deprecated combined timeline 1
                     className="slds-checkbox"
                   >
                     <input
-                      aria-describedby={undefined}
                       aria-labelledby={null}
-                      defaultChecked={undefined}
-                      disabled={undefined}
                       id="checkbox-unique-id-4"
                       name="options"
-                      tabIndex={undefined}
                       type="checkbox"
                       value="checkbox-unique-id-4"
                     />
                     <label
                       className="slds-checkbox__label"
                       htmlFor="checkbox-unique-id-4"
-                      id={undefined}
                     >
                       <span
                         className="slds-checkbox_faux"
@@ -1785,7 +1736,6 @@ exports[`Activity Timeline Expandable renders the deprecated combined timeline 1
             <button
               aria-haspopup="true"
               className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
-              id={undefined}
               title="More Options for Task, Review proposals"
             >
               <svg
@@ -1955,7 +1905,6 @@ exports[`Activity Timeline Expandable renders the deprecated combined timeline 1
             <button
               aria-haspopup="true"
               className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
-              id={undefined}
               title="More Options for Event, Company One"
             >
               <svg
@@ -2088,7 +2037,6 @@ exports[`Activity Timeline Expandable renders the deprecated combined timeline 1
             <button
               aria-haspopup="true"
               className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
-              id={undefined}
               title="More Options for Call, Mobile conversation"
             >
               <svg
@@ -2228,7 +2176,6 @@ exports[`Activity Timeline Expandable renders the deprecated combined timeline 1
             <button
               aria-haspopup="true"
               className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
-              id={undefined}
               title="More Options for Email, Mobile conversation"
             >
               <svg
@@ -2265,7 +2212,6 @@ exports[`Activity Timeline Expandable renders timeline actions 1`] = `
   <button
     aria-haspopup="true"
     className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
-    id={undefined}
     title="More Options for Call, Mobile conversation"
   >
     <svg

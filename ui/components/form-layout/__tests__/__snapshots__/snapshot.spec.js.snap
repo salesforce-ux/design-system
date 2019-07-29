@@ -6,12 +6,10 @@ exports[`Form Layout renders a base form layout 1`] = `
 >
   <div
     className="slds-form-element"
-    role={undefined}
   >
     <label
       className="slds-form-element__label"
       htmlFor="input-id-01"
-      id={undefined}
     >
       Text Input
     </label>
@@ -19,28 +17,18 @@ exports[`Form Layout renders a base form layout 1`] = `
       className="slds-form-element__control"
     >
       <input
-        aria-invalid={undefined}
         className="slds-input"
-        defaultValue={undefined}
-        disabled={undefined}
         id="input-id-01"
-        placeholder={undefined}
-        readOnly={undefined}
-        required={undefined}
-        role={undefined}
-        tabIndex={undefined}
         type="text"
       />
     </div>
   </div>
   <div
     className="slds-form-element"
-    role={undefined}
   >
     <label
       className="slds-form-element__label"
       htmlFor="input-id-02"
-      id={undefined}
     >
       Textarea Label
     </label>
@@ -69,20 +57,15 @@ exports[`Form Layout renders a base form layout 1`] = `
         className="slds-checkbox"
       >
         <input
-          aria-describedby={undefined}
           aria-labelledby={null}
-          defaultChecked={undefined}
-          disabled={undefined}
           id="checkbox-unique-id-1"
           name="default"
-          tabIndex={undefined}
           type="checkbox"
           value="checkbox-unique-id-1"
         />
         <label
           className="slds-checkbox__label"
           htmlFor="checkbox-unique-id-1"
-          id={undefined}
         >
           <span
             className="slds-checkbox_faux"
@@ -98,20 +81,15 @@ exports[`Form Layout renders a base form layout 1`] = `
         className="slds-checkbox"
       >
         <input
-          aria-describedby={undefined}
           aria-labelledby={null}
-          defaultChecked={undefined}
-          disabled={undefined}
           id="checkbox-unique-id-2"
           name="default"
-          tabIndex={undefined}
           type="checkbox"
           value="checkbox-unique-id-2"
         />
         <label
           className="slds-checkbox__label"
           htmlFor="checkbox-unique-id-2"
-          id={undefined}
         >
           <span
             className="slds-checkbox_faux"
@@ -140,20 +118,15 @@ exports[`Form Layout renders a base form layout 1`] = `
         className="slds-radio"
       >
         <input
-          aria-describedby={undefined}
           aria-labelledby={null}
-          defaultChecked={undefined}
-          disabled={undefined}
           id="radio-1"
           name="options"
-          tabIndex={undefined}
           type="radio"
           value="radio-1"
         />
         <label
           className="slds-radio__label"
           htmlFor="radio-1"
-          id={undefined}
         >
           <span
             className="slds-radio_faux"
@@ -169,20 +142,15 @@ exports[`Form Layout renders a base form layout 1`] = `
         className="slds-radio"
       >
         <input
-          aria-describedby={undefined}
           aria-labelledby={null}
-          defaultChecked={undefined}
-          disabled={undefined}
           id="radio-2"
           name="options"
-          tabIndex={undefined}
           type="radio"
           value="radio-2"
         />
         <label
           className="slds-radio__label"
           htmlFor="radio-2"
-          id={undefined}
         >
           <span
             className="slds-radio_faux"
@@ -205,12 +173,10 @@ exports[`Form Layout renders a base form layout horizontally 1`] = `
 >
   <div
     className="slds-form-element"
-    role={undefined}
   >
     <label
       className="slds-form-element__label"
       htmlFor="input-id-01"
-      id={undefined}
     >
       Text Input
     </label>
@@ -218,28 +184,18 @@ exports[`Form Layout renders a base form layout horizontally 1`] = `
       className="slds-form-element__control"
     >
       <input
-        aria-invalid={undefined}
         className="slds-input"
-        defaultValue={undefined}
-        disabled={undefined}
         id="input-id-01"
-        placeholder={undefined}
-        readOnly={undefined}
-        required={undefined}
-        role={undefined}
-        tabIndex={undefined}
         type="text"
       />
     </div>
   </div>
   <div
     className="slds-form-element"
-    role={undefined}
   >
     <label
       className="slds-form-element__label"
       htmlFor="input-id-02"
-      id={undefined}
     >
       Textarea Label
     </label>
@@ -268,20 +224,15 @@ exports[`Form Layout renders a base form layout horizontally 1`] = `
         className="slds-checkbox"
       >
         <input
-          aria-describedby={undefined}
           aria-labelledby={null}
-          defaultChecked={undefined}
-          disabled={undefined}
           id="checkbox-unique-id-5"
           name="default"
-          tabIndex={undefined}
           type="checkbox"
           value="checkbox-unique-id-5"
         />
         <label
           className="slds-checkbox__label"
           htmlFor="checkbox-unique-id-5"
-          id={undefined}
         >
           <span
             className="slds-checkbox_faux"
@@ -297,20 +248,15 @@ exports[`Form Layout renders a base form layout horizontally 1`] = `
         className="slds-checkbox"
       >
         <input
-          aria-describedby={undefined}
           aria-labelledby={null}
-          defaultChecked={undefined}
-          disabled={undefined}
           id="checkbox-unique-id-6"
           name="default"
-          tabIndex={undefined}
           type="checkbox"
           value="checkbox-unique-id-6"
         />
         <label
           className="slds-checkbox__label"
           htmlFor="checkbox-unique-id-6"
-          id={undefined}
         >
           <span
             className="slds-checkbox_faux"
@@ -339,20 +285,15 @@ exports[`Form Layout renders a base form layout horizontally 1`] = `
         className="slds-radio"
       >
         <input
-          aria-describedby={undefined}
           aria-labelledby={null}
-          defaultChecked={undefined}
-          disabled={undefined}
           id="radio-5"
           name="options"
-          tabIndex={undefined}
           type="radio"
           value="radio-5"
         />
         <label
           className="slds-radio__label"
           htmlFor="radio-5"
-          id={undefined}
         >
           <span
             className="slds-radio_faux"
@@ -368,20 +309,15 @@ exports[`Form Layout renders a base form layout horizontally 1`] = `
         className="slds-radio"
       >
         <input
-          aria-describedby={undefined}
           aria-labelledby={null}
-          defaultChecked={undefined}
-          disabled={undefined}
           id="radio-6"
           name="options"
-          tabIndex={undefined}
           type="radio"
           value="radio-6"
         />
         <label
           className="slds-radio__label"
           htmlFor="radio-6"
-          id={undefined}
         >
           <span
             className="slds-radio_faux"
@@ -404,12 +340,10 @@ exports[`Form Layout renders a base form layout stacked 1`] = `
 >
   <div
     className="slds-form-element"
-    role={undefined}
   >
     <label
       className="slds-form-element__label"
       htmlFor="input-id-01"
-      id={undefined}
     >
       Text Input
     </label>
@@ -417,28 +351,18 @@ exports[`Form Layout renders a base form layout stacked 1`] = `
       className="slds-form-element__control"
     >
       <input
-        aria-invalid={undefined}
         className="slds-input"
-        defaultValue={undefined}
-        disabled={undefined}
         id="input-id-01"
-        placeholder={undefined}
-        readOnly={undefined}
-        required={undefined}
-        role={undefined}
-        tabIndex={undefined}
         type="text"
       />
     </div>
   </div>
   <div
     className="slds-form-element"
-    role={undefined}
   >
     <label
       className="slds-form-element__label"
       htmlFor="input-id-02"
-      id={undefined}
     >
       Textarea Label
     </label>
@@ -467,20 +391,15 @@ exports[`Form Layout renders a base form layout stacked 1`] = `
         className="slds-checkbox"
       >
         <input
-          aria-describedby={undefined}
           aria-labelledby={null}
-          defaultChecked={undefined}
-          disabled={undefined}
           id="checkbox-unique-id-3"
           name="default"
-          tabIndex={undefined}
           type="checkbox"
           value="checkbox-unique-id-3"
         />
         <label
           className="slds-checkbox__label"
           htmlFor="checkbox-unique-id-3"
-          id={undefined}
         >
           <span
             className="slds-checkbox_faux"
@@ -496,20 +415,15 @@ exports[`Form Layout renders a base form layout stacked 1`] = `
         className="slds-checkbox"
       >
         <input
-          aria-describedby={undefined}
           aria-labelledby={null}
-          defaultChecked={undefined}
-          disabled={undefined}
           id="checkbox-unique-id-4"
           name="default"
-          tabIndex={undefined}
           type="checkbox"
           value="checkbox-unique-id-4"
         />
         <label
           className="slds-checkbox__label"
           htmlFor="checkbox-unique-id-4"
-          id={undefined}
         >
           <span
             className="slds-checkbox_faux"
@@ -538,20 +452,15 @@ exports[`Form Layout renders a base form layout stacked 1`] = `
         className="slds-radio"
       >
         <input
-          aria-describedby={undefined}
           aria-labelledby={null}
-          defaultChecked={undefined}
-          disabled={undefined}
           id="radio-3"
           name="options"
-          tabIndex={undefined}
           type="radio"
           value="radio-3"
         />
         <label
           className="slds-radio__label"
           htmlFor="radio-3"
-          id={undefined}
         >
           <span
             className="slds-radio_faux"
@@ -567,20 +476,15 @@ exports[`Form Layout renders a base form layout stacked 1`] = `
         className="slds-radio"
       >
         <input
-          aria-describedby={undefined}
           aria-labelledby={null}
-          defaultChecked={undefined}
-          disabled={undefined}
           id="radio-4"
           name="options"
-          tabIndex={undefined}
           type="radio"
           value="radio-4"
         />
         <label
           className="slds-radio__label"
           htmlFor="radio-4"
-          id={undefined}
         >
           <span
             className="slds-radio_faux"
@@ -601,7 +505,6 @@ exports[`Form Layout renders a compound form layout 1`] = `
 Array [
   <fieldset
     className="slds-form-element slds-form_compound"
-    id={undefined}
   >
     <legend
       className="slds-form-element__legend slds-form-element__label"
@@ -619,12 +522,10 @@ Array [
         >
           <div
             className="slds-form-element slds-size_1-of-2"
-            role={undefined}
           >
             <label
               className="slds-form-element__label"
               htmlFor="input-01"
-              id={undefined}
             >
               Latitude
             </label>
@@ -632,28 +533,18 @@ Array [
               className="slds-form-element__control"
             >
               <input
-                aria-invalid={undefined}
                 className="slds-input"
-                defaultValue={undefined}
-                disabled={undefined}
                 id="input-01"
-                placeholder={undefined}
-                readOnly={undefined}
-                required={undefined}
-                role={undefined}
-                tabIndex={undefined}
                 type="text"
               />
             </div>
           </div>
           <div
             className="slds-form-element slds-size_1-of-2"
-            role={undefined}
           >
             <label
               className="slds-form-element__label"
               htmlFor="input-02"
-              id={undefined}
             >
               Longitude
             </label>
@@ -661,16 +552,8 @@ Array [
               className="slds-form-element__control"
             >
               <input
-                aria-invalid={undefined}
                 className="slds-input"
-                defaultValue={undefined}
-                disabled={undefined}
                 id="input-02"
-                placeholder={undefined}
-                readOnly={undefined}
-                required={undefined}
-                role={undefined}
-                tabIndex={undefined}
                 type="text"
               />
             </div>
@@ -681,7 +564,6 @@ Array [
   </fieldset>,
   <fieldset
     className="slds-form-element slds-form_compound slds-form-element_address"
-    id={undefined}
   >
     <legend
       className="slds-form-element__legend slds-form-element__label"
@@ -699,12 +581,10 @@ Array [
         >
           <div
             className="slds-form-element slds-size_1-of-1"
-            role={undefined}
           >
             <label
               className="slds-form-element__label"
               htmlFor="input-03"
-              id={undefined}
             >
               Shipping Street
             </label>
@@ -712,16 +592,8 @@ Array [
               className="slds-form-element__control"
             >
               <input
-                aria-invalid={undefined}
                 className="slds-input"
-                defaultValue={undefined}
-                disabled={undefined}
                 id="input-03"
-                placeholder={undefined}
-                readOnly={undefined}
-                required={undefined}
-                role={undefined}
-                tabIndex={undefined}
                 type="text"
               />
             </div>
@@ -732,12 +604,10 @@ Array [
         >
           <div
             className="slds-form-element slds-size_4-of-6"
-            role={undefined}
           >
             <label
               className="slds-form-element__label"
               htmlFor="input-04"
-              id={undefined}
             >
               Shipping City
             </label>
@@ -745,28 +615,18 @@ Array [
               className="slds-form-element__control"
             >
               <input
-                aria-invalid={undefined}
                 className="slds-input"
-                defaultValue={undefined}
-                disabled={undefined}
                 id="input-04"
-                placeholder={undefined}
-                readOnly={undefined}
-                required={undefined}
-                role={undefined}
-                tabIndex={undefined}
                 type="text"
               />
             </div>
           </div>
           <div
             className="slds-form-element slds-size_2-of-6"
-            role={undefined}
           >
             <label
               className="slds-form-element__label"
               htmlFor="input-05"
-              id={undefined}
             >
               Shipping State/Province
             </label>
@@ -774,16 +634,9 @@ Array [
               className="slds-form-element__control"
             >
               <input
-                aria-invalid={undefined}
                 className="slds-input"
                 defaultValue="MT"
-                disabled={undefined}
                 id="input-05"
-                placeholder={undefined}
-                readOnly={undefined}
-                required={undefined}
-                role={undefined}
-                tabIndex={undefined}
                 type="text"
               />
             </div>
@@ -794,12 +647,10 @@ Array [
         >
           <div
             className="slds-form-element slds-size_4-of-6"
-            role={undefined}
           >
             <label
               className="slds-form-element__label"
               htmlFor="input-06"
-              id={undefined}
             >
               Shipping Zip/Postal Code
             </label>
@@ -807,28 +658,18 @@ Array [
               className="slds-form-element__control"
             >
               <input
-                aria-invalid={undefined}
                 className="slds-input"
-                defaultValue={undefined}
-                disabled={undefined}
                 id="input-06"
-                placeholder={undefined}
-                readOnly={undefined}
-                required={undefined}
-                role={undefined}
-                tabIndex={undefined}
                 type="text"
               />
             </div>
           </div>
           <div
             className="slds-form-element slds-size_2-of-6"
-            role={undefined}
           >
             <label
               className="slds-form-element__label"
               htmlFor="input-07"
-              id={undefined}
             >
               Shipping Country
             </label>
@@ -836,16 +677,9 @@ Array [
               className="slds-form-element__control"
             >
               <input
-                aria-invalid={undefined}
                 className="slds-input"
                 defaultValue="Canada"
-                disabled={undefined}
                 id="input-07"
-                placeholder={undefined}
-                readOnly={undefined}
-                required={undefined}
-                role={undefined}
-                tabIndex={undefined}
                 type="text"
               />
             </div>
@@ -861,7 +695,6 @@ exports[`Form Layout renders a compound form layout with a tooltip 1`] = `
 Array [
   <fieldset
     className="slds-form-element slds-form_compound"
-    id={undefined}
   >
     <legend
       className="slds-form-element__legend slds-form-element__label"
@@ -879,12 +712,10 @@ Array [
         >
           <div
             className="slds-form-element slds-size_1-of-2"
-            role={undefined}
           >
             <label
               className="slds-form-element__label"
               htmlFor="input-01"
-              id={undefined}
             >
               Latitude
             </label>
@@ -892,28 +723,18 @@ Array [
               className="slds-form-element__control"
             >
               <input
-                aria-invalid={undefined}
                 className="slds-input"
-                defaultValue={undefined}
-                disabled={undefined}
                 id="input-01"
-                placeholder={undefined}
-                readOnly={undefined}
-                required={undefined}
-                role={undefined}
-                tabIndex={undefined}
                 type="text"
               />
             </div>
           </div>
           <div
             className="slds-form-element slds-size_1-of-2"
-            role={undefined}
           >
             <label
               className="slds-form-element__label"
               htmlFor="input-02"
-              id={undefined}
             >
               Longitude
             </label>
@@ -921,16 +742,8 @@ Array [
               className="slds-form-element__control"
             >
               <input
-                aria-invalid={undefined}
                 className="slds-input"
-                defaultValue={undefined}
-                disabled={undefined}
                 id="input-02"
-                placeholder={undefined}
-                readOnly={undefined}
-                required={undefined}
-                role={undefined}
-                tabIndex={undefined}
                 type="text"
               />
             </div>
@@ -941,7 +754,6 @@ Array [
   </fieldset>,
   <fieldset
     className="slds-form-element slds-form_compound slds-form-element_address"
-    id={undefined}
   >
     <legend
       className="slds-form-element__legend slds-form-element__label"
@@ -959,12 +771,10 @@ Array [
         >
           <div
             className="slds-form-element slds-size_1-of-1"
-            role={undefined}
           >
             <label
               className="slds-form-element__label"
               htmlFor="input-03"
-              id={undefined}
             >
               Shipping Street
             </label>
@@ -972,16 +782,8 @@ Array [
               className="slds-form-element__control"
             >
               <input
-                aria-invalid={undefined}
                 className="slds-input"
-                defaultValue={undefined}
-                disabled={undefined}
                 id="input-03"
-                placeholder={undefined}
-                readOnly={undefined}
-                required={undefined}
-                role={undefined}
-                tabIndex={undefined}
                 type="text"
               />
             </div>
@@ -992,12 +794,10 @@ Array [
         >
           <div
             className="slds-form-element slds-size_4-of-6"
-            role={undefined}
           >
             <label
               className="slds-form-element__label"
               htmlFor="input-04"
-              id={undefined}
             >
               Shipping City
             </label>
@@ -1005,28 +805,18 @@ Array [
               className="slds-form-element__control"
             >
               <input
-                aria-invalid={undefined}
                 className="slds-input"
-                defaultValue={undefined}
-                disabled={undefined}
                 id="input-04"
-                placeholder={undefined}
-                readOnly={undefined}
-                required={undefined}
-                role={undefined}
-                tabIndex={undefined}
                 type="text"
               />
             </div>
           </div>
           <div
             className="slds-form-element slds-size_2-of-6"
-            role={undefined}
           >
             <label
               className="slds-form-element__label"
               htmlFor="input-05"
-              id={undefined}
             >
               Shipping State/Province
             </label>
@@ -1034,16 +824,9 @@ Array [
               className="slds-form-element__control"
             >
               <input
-                aria-invalid={undefined}
                 className="slds-input"
                 defaultValue="MT"
-                disabled={undefined}
                 id="input-05"
-                placeholder={undefined}
-                readOnly={undefined}
-                required={undefined}
-                role={undefined}
-                tabIndex={undefined}
                 type="text"
               />
             </div>
@@ -1054,12 +837,10 @@ Array [
         >
           <div
             className="slds-form-element slds-size_4-of-6"
-            role={undefined}
           >
             <label
               className="slds-form-element__label"
               htmlFor="input-06"
-              id={undefined}
             >
               Shipping Zip/Postal Code
             </label>
@@ -1067,28 +848,18 @@ Array [
               className="slds-form-element__control"
             >
               <input
-                aria-invalid={undefined}
                 className="slds-input"
-                defaultValue={undefined}
-                disabled={undefined}
                 id="input-06"
-                placeholder={undefined}
-                readOnly={undefined}
-                required={undefined}
-                role={undefined}
-                tabIndex={undefined}
                 type="text"
               />
             </div>
           </div>
           <div
             className="slds-form-element slds-size_2-of-6"
-            role={undefined}
           >
             <label
               className="slds-form-element__label"
               htmlFor="input-07"
-              id={undefined}
             >
               Shipping Country
             </label>
@@ -1096,16 +867,9 @@ Array [
               className="slds-form-element__control"
             >
               <input
-                aria-invalid={undefined}
                 className="slds-input"
                 defaultValue="Canada"
-                disabled={undefined}
                 id="input-07"
-                placeholder={undefined}
-                readOnly={undefined}
-                required={undefined}
-                role={undefined}
-                tabIndex={undefined}
                 type="text"
               />
             </div>

@@ -40,7 +40,6 @@ exports[`Chat Images and Files renders a loading inbound chat message item with 
     className="slds-chat-message"
   >
     <span
-      aria-hidden={undefined}
       className="slds-avatar slds-avatar_circle slds-chat-avatar"
     >
       <abbr
@@ -145,7 +144,6 @@ exports[`Chat Images and Files renders a loading inbound chat message item with 
     className="slds-chat-message"
   >
     <span
-      aria-hidden={undefined}
       className="slds-avatar slds-avatar_circle slds-chat-avatar"
     >
       <abbr
@@ -256,7 +254,6 @@ exports[`Chat Images and Files renders an inbound chat message item with file an
     className="slds-chat-message"
   >
     <span
-      aria-hidden={undefined}
       className="slds-avatar slds-avatar_circle slds-chat-avatar"
     >
       <abbr
@@ -339,9 +336,7 @@ exports[`Chat Images and Files renders an inbound chat message item with file an
               role="group"
             >
               <button
-                aria-haspopup={undefined}
                 className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small"
-                id={undefined}
                 title="Download"
               >
                 <svg
@@ -361,7 +356,6 @@ exports[`Chat Images and Files renders an inbound chat message item with file an
               <button
                 aria-haspopup="true"
                 className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small"
-                id={undefined}
                 title="More Actions"
               >
                 <svg
@@ -403,7 +397,6 @@ exports[`Chat Images and Files renders an inbound chat message item with image a
     className="slds-chat-message"
   >
     <span
-      aria-hidden={undefined}
       className="slds-avatar slds-avatar_circle slds-chat-avatar"
     >
       <abbr
@@ -446,9 +439,7 @@ exports[`Chat Images and Files renders an inbound chat message item with image a
               role="group"
             >
               <button
-                aria-haspopup={undefined}
                 className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-button_icon-inverse"
-                id={undefined}
                 title="Download"
               >
                 <svg
@@ -468,7 +459,6 @@ exports[`Chat Images and Files renders an inbound chat message item with image a
               <button
                 aria-haspopup="true"
                 className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-button_icon-inverse"
-                id={undefined}
                 title="More Actions"
               >
                 <svg
@@ -510,7 +500,6 @@ exports[`Chat Images and Files renders an inbound chat message item with portrai
     className="slds-chat-message"
   >
     <span
-      aria-hidden={undefined}
       className="slds-avatar slds-avatar_circle slds-chat-avatar"
     >
       <abbr
@@ -553,9 +542,7 @@ exports[`Chat Images and Files renders an inbound chat message item with portrai
               role="group"
             >
               <button
-                aria-haspopup={undefined}
                 className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-button_icon-inverse"
-                id={undefined}
                 title="Download"
               >
                 <svg
@@ -575,7 +562,6 @@ exports[`Chat Images and Files renders an inbound chat message item with portrai
               <button
                 aria-haspopup="true"
                 className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-button_icon-inverse"
-                id={undefined}
                 title="More Actions"
               >
                 <svg
@@ -617,7 +603,6 @@ exports[`Chat Images and Files renders an inbound chat message item with portrai
     className="slds-chat-message"
   >
     <span
-      aria-hidden={undefined}
       className="slds-avatar slds-avatar_circle slds-chat-avatar"
     >
       <abbr
@@ -700,9 +685,7 @@ exports[`Chat Images and Files renders an inbound chat message item with portrai
               role="group"
             >
               <button
-                aria-haspopup={undefined}
                 className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small"
-                id={undefined}
                 title="Download"
               >
                 <svg
@@ -722,7 +705,6 @@ exports[`Chat Images and Files renders an inbound chat message item with portrai
               <button
                 aria-haspopup="true"
                 className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small"
-                id={undefined}
                 title="More Actions"
               >
                 <svg
@@ -836,9 +818,7 @@ exports[`Chat Images and Files renders an outbound chat message item with file a
               role="group"
             >
               <button
-                aria-haspopup={undefined}
                 className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small"
-                id={undefined}
                 title="Download"
               >
                 <svg
@@ -858,7 +838,6 @@ exports[`Chat Images and Files renders an outbound chat message item with file a
               <button
                 aria-haspopup="true"
                 className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small"
-                id={undefined}
                 title="More Actions"
               >
                 <svg
@@ -932,9 +911,7 @@ exports[`Chat Images and Files renders an outbound chat message item with image 
               role="group"
             >
               <button
-                aria-haspopup={undefined}
                 className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-button_icon-inverse"
-                id={undefined}
                 title="Download"
               >
                 <svg
@@ -954,7 +931,6 @@ exports[`Chat Images and Files renders an outbound chat message item with image 
               <button
                 aria-haspopup="true"
                 className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-button_icon-inverse"
-                id={undefined}
                 title="More Actions"
               >
                 <svg
@@ -1028,9 +1004,7 @@ exports[`Chat Images and Files renders an outbound chat message item with portra
               role="group"
             >
               <button
-                aria-haspopup={undefined}
                 className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-button_icon-inverse"
-                id={undefined}
                 title="Download"
               >
                 <svg
@@ -1050,7 +1024,6 @@ exports[`Chat Images and Files renders an outbound chat message item with portra
               <button
                 aria-haspopup="true"
                 className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-button_icon-inverse"
-                id={undefined}
                 title="More Actions"
               >
                 <svg
@@ -1164,9 +1137,7 @@ exports[`Chat Images and Files renders an outbound chat message item with portra
               role="group"
             >
               <button
-                aria-haspopup={undefined}
                 className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small"
-                id={undefined}
                 title="Download"
               >
                 <svg
@@ -1186,7 +1157,6 @@ exports[`Chat Images and Files renders an outbound chat message item with portra
               <button
                 aria-haspopup="true"
                 className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small"
-                id={undefined}
                 title="More Actions"
               >
                 <svg
@@ -1222,7 +1192,6 @@ exports[`Chat Images and Files renders an outbound chat message item with portra
 
 exports[`Chat avatar renders a chat avatar 1`] = `
 <span
-  aria-hidden={undefined}
   className="slds-avatar slds-avatar_circle slds-chat-avatar"
 >
   <abbr
@@ -1387,7 +1356,6 @@ exports[`Chat container renders a past chat container 1`] = `
 exports[`Chat event renders a basic chat event 1`] = `
 <div
   className="slds-chat-event"
-  role={undefined}
 >
   <div
     className="slds-chat-event__body"
@@ -1419,7 +1387,6 @@ exports[`Chat event renders a basic chat event 1`] = `
 exports[`Chat event renders a basic chat event with a message from an agent 1`] = `
 <div
   className="slds-chat-event"
-  role={undefined}
 >
   <div
     className="slds-chat-event__body"
@@ -1457,7 +1424,6 @@ exports[`Chat event renders a basic chat event with a message from an agent 1`] 
 exports[`Chat event renders a basic chat event with a timestamp 1`] = `
 <div
   className="slds-chat-event"
-  role={undefined}
 >
   <div
     className="slds-chat-event__body"

@@ -501,6 +501,391 @@ exports[`renders a styled accordion 1`] = `
 </div>
 `;
 
+exports[`renders an accordion with action overflow 1`] = `
+<ul
+  className="slds-accordion"
+>
+  <li
+    className="slds-accordion__list-item"
+  >
+    <section
+      className="slds-accordion__section slds-is-open"
+    >
+      <div
+        className="slds-accordion__summary"
+      >
+        <h3
+          className="slds-accordion__summary-heading"
+        >
+          <button
+            aria-controls="accordion-details-01"
+            aria-expanded={true}
+            className="slds-button slds-button_reset slds-accordion__summary-action"
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-accordion__summary-action-icon slds-button__icon slds-button__icon_left"
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#switch"
+              />
+            </svg>
+            <span
+              className="slds-truncate"
+              title="Accordion summary"
+            >
+              Accordion summary
+            </span>
+          </button>
+        </h3>
+        <div
+          className="slds-dropdown-trigger slds-dropdown-trigger_click"
+        >
+          <button
+            aria-haspopup="true"
+            className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+            title="Show More"
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-button__icon"
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+              />
+            </svg>
+            <span
+              className="slds-assistive-text"
+            >
+              Show More
+            </span>
+          </button>
+          <div
+            className="slds-dropdown slds-dropdown_actions slds-dropdown_right"
+          >
+            <ul
+              className="slds-dropdown__list"
+              role="menu"
+            >
+              <li
+                className="slds-dropdown__item"
+                role="presentation"
+              >
+                <a
+                  href="javascript:void(0);"
+                  role="menuitem"
+                  tabIndex="0"
+                >
+                  <span
+                    className="slds-truncate"
+                    title="Action One"
+                  >
+                    Action One
+                  </span>
+                </a>
+              </li>
+              <li
+                className="slds-dropdown__item"
+                role="presentation"
+              >
+                <a
+                  href="javascript:void(0);"
+                  role="menuitem"
+                  tabIndex="-1"
+                >
+                  <span
+                    className="slds-truncate"
+                    title="Action Two"
+                  >
+                    Action Two
+                  </span>
+                </a>
+              </li>
+              <li
+                className="slds-dropdown__item"
+                role="presentation"
+              >
+                <a
+                  href="javascript:void(0);"
+                  role="menuitem"
+                  tabIndex="-1"
+                >
+                  <span
+                    className="slds-truncate"
+                    title="Action Three"
+                  >
+                    Action Three
+                  </span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div
+        className="slds-accordion__content"
+        hidden={false}
+        id="accordion-details-01"
+      >
+        Accordion details - A
+      </div>
+    </section>
+  </li>
+  <li
+    className="slds-accordion__list-item"
+  >
+    <section
+      className="slds-accordion__section"
+    >
+      <div
+        className="slds-accordion__summary"
+      >
+        <h3
+          className="slds-accordion__summary-heading"
+        >
+          <button
+            aria-controls="accordion-details-02"
+            aria-expanded={false}
+            className="slds-button slds-button_reset slds-accordion__summary-action"
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-accordion__summary-action-icon slds-button__icon slds-button__icon_left"
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#switch"
+              />
+            </svg>
+            <span
+              className="slds-truncate"
+              title="Accordion summary"
+            >
+              Accordion summary
+            </span>
+          </button>
+        </h3>
+        <div
+          className="slds-dropdown-trigger slds-dropdown-trigger_click"
+        >
+          <button
+            aria-haspopup="true"
+            className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+            title="Show More"
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-button__icon"
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+              />
+            </svg>
+            <span
+              className="slds-assistive-text"
+            >
+              Show More
+            </span>
+          </button>
+          <div
+            className="slds-dropdown slds-dropdown_actions slds-dropdown_right"
+          >
+            <ul
+              className="slds-dropdown__list"
+              role="menu"
+            >
+              <li
+                className="slds-dropdown__item"
+                role="presentation"
+              >
+                <a
+                  href="javascript:void(0);"
+                  role="menuitem"
+                  tabIndex="0"
+                >
+                  <span
+                    className="slds-truncate"
+                    title="Action One"
+                  >
+                    Action One
+                  </span>
+                </a>
+              </li>
+              <li
+                className="slds-dropdown__item"
+                role="presentation"
+              >
+                <a
+                  href="javascript:void(0);"
+                  role="menuitem"
+                  tabIndex="-1"
+                >
+                  <span
+                    className="slds-truncate"
+                    title="Action Two"
+                  >
+                    Action Two
+                  </span>
+                </a>
+              </li>
+              <li
+                className="slds-dropdown__item"
+                role="presentation"
+              >
+                <a
+                  href="javascript:void(0);"
+                  role="menuitem"
+                  tabIndex="-1"
+                >
+                  <span
+                    className="slds-truncate"
+                    title="Action Three"
+                  >
+                    Action Three
+                  </span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div
+        className="slds-accordion__content"
+        hidden={true}
+        id="accordion-details-02"
+      >
+        Accordion details - B
+      </div>
+    </section>
+  </li>
+  <li
+    className="slds-accordion__list-item"
+  >
+    <section
+      className="slds-accordion__section"
+    >
+      <div
+        className="slds-accordion__summary"
+      >
+        <h3
+          className="slds-accordion__summary-heading"
+        >
+          <button
+            aria-controls="accordion-details-03"
+            aria-expanded={false}
+            className="slds-button slds-button_reset slds-accordion__summary-action"
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-accordion__summary-action-icon slds-button__icon slds-button__icon_left"
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#switch"
+              />
+            </svg>
+            <span
+              className="slds-truncate"
+              title="Accordion summary"
+            >
+              Accordion summary
+            </span>
+          </button>
+        </h3>
+        <div
+          className="slds-dropdown-trigger slds-dropdown-trigger_click"
+        >
+          <button
+            aria-haspopup="true"
+            className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+            title="Show More"
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-button__icon"
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+              />
+            </svg>
+            <span
+              className="slds-assistive-text"
+            >
+              Show More
+            </span>
+          </button>
+          <div
+            className="slds-dropdown slds-dropdown_actions slds-dropdown_right"
+          >
+            <ul
+              className="slds-dropdown__list"
+              role="menu"
+            >
+              <li
+                className="slds-dropdown__item"
+                role="presentation"
+              >
+                <a
+                  href="javascript:void(0);"
+                  role="menuitem"
+                  tabIndex="0"
+                >
+                  <span
+                    className="slds-truncate"
+                    title="Action One"
+                  >
+                    Action One
+                  </span>
+                </a>
+              </li>
+              <li
+                className="slds-dropdown__item"
+                role="presentation"
+              >
+                <a
+                  href="javascript:void(0);"
+                  role="menuitem"
+                  tabIndex="-1"
+                >
+                  <span
+                    className="slds-truncate"
+                    title="Action Two"
+                  >
+                    Action Two
+                  </span>
+                </a>
+              </li>
+              <li
+                className="slds-dropdown__item"
+                role="presentation"
+              >
+                <a
+                  href="javascript:void(0);"
+                  role="menuitem"
+                  tabIndex="-1"
+                >
+                  <span
+                    className="slds-truncate"
+                    title="Action Three"
+                  >
+                    Action Three
+                  </span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div
+        className="slds-accordion__content"
+        hidden={true}
+        id="accordion-details-03"
+      >
+        Accordion details - C
+      </div>
+    </section>
+  </li>
+</ul>
+`;
+
 exports[`renders an accordion with multiple sections open 1`] = `
 <ul
   className="slds-accordion"
@@ -1032,417 +1417,6 @@ exports[`renders an accordion with section two open 1`] = `
             </span>
           </button>
         </h3>
-      </div>
-      <div
-        className="slds-accordion__content"
-        hidden={true}
-        id="accordion-details-03"
-      >
-        Accordion details - C
-      </div>
-    </section>
-  </li>
-</ul>
-`;
-exports[`renders an accordion with action overflow 1`] = `
-<ul
-  className="slds-accordion"
->
-  <li
-    className="slds-accordion__list-item"
-  >
-    <section
-      className="slds-accordion__section slds-is-open"
-    >
-      <div
-        className="slds-accordion__summary"
-      >
-        <h3
-          className="slds-accordion__summary-heading"
-        >
-          <button
-            aria-controls="accordion-details-01"
-            aria-expanded={true}
-            className="slds-button slds-button_reset slds-accordion__summary-action"
-          >
-            <svg
-              aria-hidden={true}
-              className="slds-accordion__summary-action-icon slds-button__icon slds-button__icon_left"
-            >
-              <use
-                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#switch"
-              />
-            </svg>
-            <span
-              className="slds-truncate"
-              title="Accordion summary"
-            >
-              Accordion summary
-            </span>
-          </button>
-        </h3>
-        <div
-          className="slds-dropdown-trigger slds-dropdown-trigger_click"
-        >
-          <button
-            aria-haspopup="true"
-            className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
-            id={undefined}
-            title="Show More"
-          >
-            <svg
-              aria-hidden={true}
-              className="slds-button__icon"
-            >
-              <use
-                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
-              />
-            </svg>
-            <span
-              className="slds-assistive-text"
-            >
-              Show More
-            </span>
-          </button>
-          <div
-            className="slds-dropdown slds-dropdown_actions slds-dropdown_right"
-            style={undefined}
-          >
-            <ul
-              aria-label={undefined}
-              className="slds-dropdown__list"
-              role="menu"
-            >
-              <li
-                className="slds-dropdown__item"
-                role="presentation"
-              >
-                <a
-                  aria-checked={undefined}
-                  className={undefined}
-                  href="javascript:void(0);"
-                  role="menuitem"
-                  tabIndex="0"
-                >
-                  <span
-                    className="slds-truncate"
-                    title="Action One"
-                  >
-                    Action One
-                  </span>
-                </a>
-              </li>
-              <li
-                className="slds-dropdown__item"
-                role="presentation"
-              >
-                <a
-                  aria-checked={undefined}
-                  className={undefined}
-                  href="javascript:void(0);"
-                  role="menuitem"
-                  tabIndex="-1"
-                >
-                  <span
-                    className="slds-truncate"
-                    title="Action Two"
-                  >
-                    Action Two
-                  </span>
-                </a>
-              </li>
-              <li
-                className="slds-dropdown__item"
-                role="presentation"
-              >
-                <a
-                  aria-checked={undefined}
-                  className={undefined}
-                  href="javascript:void(0);"
-                  role="menuitem"
-                  tabIndex="-1"
-                >
-                  <span
-                    className="slds-truncate"
-                    title="Action Three"
-                  >
-                    Action Three
-                  </span>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div
-        className="slds-accordion__content"
-        hidden={false}
-        id="accordion-details-01"
-      >
-        Accordion details - A
-      </div>
-    </section>
-  </li>
-  <li
-    className="slds-accordion__list-item"
-  >
-    <section
-      className="slds-accordion__section"
-    >
-      <div
-        className="slds-accordion__summary"
-      >
-        <h3
-          className="slds-accordion__summary-heading"
-        >
-          <button
-            aria-controls="accordion-details-02"
-            aria-expanded={false}
-            className="slds-button slds-button_reset slds-accordion__summary-action"
-          >
-            <svg
-              aria-hidden={true}
-              className="slds-accordion__summary-action-icon slds-button__icon slds-button__icon_left"
-            >
-              <use
-                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#switch"
-              />
-            </svg>
-            <span
-              className="slds-truncate"
-              title="Accordion summary"
-            >
-              Accordion summary
-            </span>
-          </button>
-        </h3>
-        <div
-          className="slds-dropdown-trigger slds-dropdown-trigger_click"
-        >
-          <button
-            aria-haspopup="true"
-            className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
-            id={undefined}
-            title="Show More"
-          >
-            <svg
-              aria-hidden={true}
-              className="slds-button__icon"
-            >
-              <use
-                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
-              />
-            </svg>
-            <span
-              className="slds-assistive-text"
-            >
-              Show More
-            </span>
-          </button>
-          <div
-            className="slds-dropdown slds-dropdown_actions slds-dropdown_right"
-            style={undefined}
-          >
-            <ul
-              aria-label={undefined}
-              className="slds-dropdown__list"
-              role="menu"
-            >
-              <li
-                className="slds-dropdown__item"
-                role="presentation"
-              >
-                <a
-                  aria-checked={undefined}
-                  className={undefined}
-                  href="javascript:void(0);"
-                  role="menuitem"
-                  tabIndex="0"
-                >
-                  <span
-                    className="slds-truncate"
-                    title="Action One"
-                  >
-                    Action One
-                  </span>
-                </a>
-              </li>
-              <li
-                className="slds-dropdown__item"
-                role="presentation"
-              >
-                <a
-                  aria-checked={undefined}
-                  className={undefined}
-                  href="javascript:void(0);"
-                  role="menuitem"
-                  tabIndex="-1"
-                >
-                  <span
-                    className="slds-truncate"
-                    title="Action Two"
-                  >
-                    Action Two
-                  </span>
-                </a>
-              </li>
-              <li
-                className="slds-dropdown__item"
-                role="presentation"
-              >
-                <a
-                  aria-checked={undefined}
-                  className={undefined}
-                  href="javascript:void(0);"
-                  role="menuitem"
-                  tabIndex="-1"
-                >
-                  <span
-                    className="slds-truncate"
-                    title="Action Three"
-                  >
-                    Action Three
-                  </span>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div
-        className="slds-accordion__content"
-        hidden={true}
-        id="accordion-details-02"
-      >
-        Accordion details - B
-      </div>
-    </section>
-  </li>
-  <li
-    className="slds-accordion__list-item"
-  >
-    <section
-      className="slds-accordion__section"
-    >
-      <div
-        className="slds-accordion__summary"
-      >
-        <h3
-          className="slds-accordion__summary-heading"
-        >
-          <button
-            aria-controls="accordion-details-03"
-            aria-expanded={false}
-            className="slds-button slds-button_reset slds-accordion__summary-action"
-          >
-            <svg
-              aria-hidden={true}
-              className="slds-accordion__summary-action-icon slds-button__icon slds-button__icon_left"
-            >
-              <use
-                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#switch"
-              />
-            </svg>
-            <span
-              className="slds-truncate"
-              title="Accordion summary"
-            >
-              Accordion summary
-            </span>
-          </button>
-        </h3>
-        <div
-          className="slds-dropdown-trigger slds-dropdown-trigger_click"
-        >
-          <button
-            aria-haspopup="true"
-            className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
-            id={undefined}
-            title="Show More"
-          >
-            <svg
-              aria-hidden={true}
-              className="slds-button__icon"
-            >
-              <use
-                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
-              />
-            </svg>
-            <span
-              className="slds-assistive-text"
-            >
-              Show More
-            </span>
-          </button>
-          <div
-            className="slds-dropdown slds-dropdown_actions slds-dropdown_right"
-            style={undefined}
-          >
-            <ul
-              aria-label={undefined}
-              className="slds-dropdown__list"
-              role="menu"
-            >
-              <li
-                className="slds-dropdown__item"
-                role="presentation"
-              >
-                <a
-                  aria-checked={undefined}
-                  className={undefined}
-                  href="javascript:void(0);"
-                  role="menuitem"
-                  tabIndex="0"
-                >
-                  <span
-                    className="slds-truncate"
-                    title="Action One"
-                  >
-                    Action One
-                  </span>
-                </a>
-              </li>
-              <li
-                className="slds-dropdown__item"
-                role="presentation"
-              >
-                <a
-                  aria-checked={undefined}
-                  className={undefined}
-                  href="javascript:void(0);"
-                  role="menuitem"
-                  tabIndex="-1"
-                >
-                  <span
-                    className="slds-truncate"
-                    title="Action Two"
-                  >
-                    Action Two
-                  </span>
-                </a>
-              </li>
-              <li
-                className="slds-dropdown__item"
-                role="presentation"
-              >
-                <a
-                  aria-checked={undefined}
-                  className={undefined}
-                  href="javascript:void(0);"
-                  role="menuitem"
-                  tabIndex="-1"
-                >
-                  <span
-                    className="slds-truncate"
-                    title="Action Three"
-                  >
-                    Action Three
-                  </span>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
       </div>
       <div
         className="slds-accordion__content"

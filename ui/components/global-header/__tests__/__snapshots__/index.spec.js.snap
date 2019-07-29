@@ -30,11 +30,8 @@ exports[`Global Actions Bar renders favorites item 1`] = `
     className="slds-button-group"
   >
     <button
-      aria-haspopup={undefined}
       aria-pressed="false"
       className="slds-button slds-button_icon slds-global-actions__favorites-action slds-button_icon slds-button_icon-border slds-button_icon-small"
-      disabled={undefined}
-      id={undefined}
       onClick={[Function]}
       title="Toggle Favorites"
     >
@@ -53,9 +50,7 @@ exports[`Global Actions Bar renders favorites item 1`] = `
       </span>
     </button>
     <button
-      aria-haspopup={undefined}
       className="slds-button slds-button_icon slds-global-actions__favorites-more slds-button_icon slds-button_icon-border slds-button_icon-small"
-      id={undefined}
       title="View Favorites"
     >
       <svg
@@ -84,11 +79,9 @@ exports[`Global Actions Bar renders favorites item that is disabled 1`] = `
     className="slds-button-group"
   >
     <button
-      aria-haspopup={undefined}
       aria-pressed="false"
       className="slds-button slds-button_icon slds-global-actions__favorites-action slds-button_icon slds-button_icon-border slds-button_icon-small slds-is-disabled"
       disabled={true}
-      id={undefined}
       onClick={[Function]}
       title="Toggle Favorites"
     >
@@ -107,9 +100,7 @@ exports[`Global Actions Bar renders favorites item that is disabled 1`] = `
       </span>
     </button>
     <button
-      aria-haspopup={undefined}
       className="slds-button slds-button_icon slds-global-actions__favorites-more slds-button_icon slds-button_icon-border slds-button_icon-small"
-      id={undefined}
       title="View Favorites"
     >
       <svg
@@ -138,11 +129,8 @@ exports[`Global Actions Bar renders favorites item that is selected 1`] = `
     className="slds-button-group"
   >
     <button
-      aria-haspopup={undefined}
       aria-pressed="true"
       className="slds-button slds-button_icon slds-global-actions__favorites-action slds-button_icon slds-button_icon-border slds-button_icon-small slds-is-selected"
-      disabled={undefined}
-      id={undefined}
       onClick={[Function]}
       title="Toggle Favorites"
     >
@@ -161,9 +149,7 @@ exports[`Global Actions Bar renders favorites item that is selected 1`] = `
       </span>
     </button>
     <button
-      aria-haspopup={undefined}
       className="slds-button slds-button_icon slds-global-actions__favorites-more slds-button_icon slds-button_icon-border slds-button_icon-small"
-      id={undefined}
       title="View Favorites"
     >
       <svg
@@ -192,11 +178,8 @@ exports[`Global Actions Bar renders favorites item with dialog menu 1`] = `
     className="slds-button-group"
   >
     <button
-      aria-haspopup={undefined}
       aria-pressed="false"
       className="slds-button slds-button_icon slds-global-actions__favorites-action slds-button_icon slds-button_icon-border slds-button_icon-small"
-      disabled={undefined}
-      id={undefined}
       onClick={[Function]}
       title="Toggle Favorites"
     >
@@ -215,9 +198,7 @@ exports[`Global Actions Bar renders favorites item with dialog menu 1`] = `
       </span>
     </button>
     <button
-      aria-haspopup={undefined}
       className="slds-button slds-button_icon slds-global-actions__favorites-more slds-button_icon slds-button_icon-border slds-button_icon-small"
-      id={undefined}
       title="View Favorites"
     >
       <svg
@@ -238,9 +219,7 @@ exports[`Global Actions Bar renders favorites item with dialog menu 1`] = `
   <section
     aria-describedby="dialog-body-id-1"
     aria-label="My Favorites"
-    aria-labelledby={undefined}
     className="slds-popover slds-nubbin_top slds-dynamic-menu"
-    id={undefined}
     role="dialog"
     style={
       Object {
@@ -256,7 +235,6 @@ exports[`Global Actions Bar renders favorites item with dialog menu 1`] = `
     >
       <div
         aria-orientation={null}
-        className={undefined}
         id="listbox-unique-id"
         role="listbox"
       >
@@ -430,11 +408,8 @@ exports[`Global Actions Bar renders global actions bar 1`] = `
         className="slds-button-group"
       >
         <button
-          aria-haspopup={undefined}
           aria-pressed="false"
           className="slds-button slds-button_icon slds-global-actions__favorites-action slds-button_icon slds-button_icon-border slds-button_icon-small"
-          disabled={undefined}
-          id={undefined}
           onClick={[Function]}
           title="Toggle Favorites"
         >
@@ -453,9 +428,7 @@ exports[`Global Actions Bar renders global actions bar 1`] = `
           </span>
         </button>
         <button
-          aria-haspopup={undefined}
           className="slds-button slds-button_icon slds-global-actions__favorites-more slds-button_icon slds-button_icon-border slds-button_icon-small"
-          id={undefined}
           title="View Favorites"
         >
           <svg
@@ -484,7 +457,6 @@ exports[`Global Actions Bar renders global actions bar 1`] = `
       <button
         aria-haspopup="true"
         className="slds-button slds-button_icon slds-button_icon slds-button_icon-container slds-button_icon-small slds-global-actions__task slds-global-actions__item-action"
-        id={undefined}
         title="Global Actions"
       >
         <svg
@@ -512,7 +484,6 @@ exports[`Global Actions Bar renders global actions bar 1`] = `
       <button
         aria-haspopup="true"
         className="slds-button slds-button_icon slds-button_icon slds-button_icon-container slds-button_icon-small slds-global-actions__help slds-global-actions__item-action"
-        id={undefined}
         title="Help and Training"
       >
         <svg
@@ -540,7 +511,6 @@ exports[`Global Actions Bar renders global actions bar 1`] = `
       <button
         aria-haspopup="true"
         className="slds-button slds-button_icon slds-button_icon slds-button_icon-container slds-button_icon-small slds-global-actions__setup slds-global-actions__item-action"
-        id={undefined}
         title="Setup"
       >
         <svg
@@ -567,10 +537,8 @@ exports[`Global Actions Bar renders global actions bar 1`] = `
     >
       <button
         aria-atomic="true"
-        aria-haspopup={undefined}
         aria-live="assertive"
         className="slds-button slds-button_icon slds-button_icon slds-button_icon-container slds-button_icon-small slds-global-actions__notifications slds-global-actions__item-action"
-        id={undefined}
         title="no new notifications"
       >
         <svg
@@ -626,7 +594,6 @@ exports[`Global Actions Bar renders help item 1`] = `
   <button
     aria-haspopup="true"
     className="slds-button slds-button_icon slds-button_icon slds-button_icon-container slds-button_icon-small slds-global-actions__help slds-global-actions__item-action"
-    id={undefined}
     title="Help and Training"
   >
     <svg
@@ -652,10 +619,8 @@ exports[`Global Actions Bar renders notification item 1`] = `
 >
   <button
     aria-atomic="true"
-    aria-haspopup={undefined}
     aria-live="assertive"
     className="slds-button slds-button_icon slds-button_icon slds-button_icon-container slds-button_icon-small slds-global-actions__notifications slds-global-actions__item-action"
-    id={undefined}
     title="no new notifications"
   >
     <svg
@@ -685,10 +650,8 @@ exports[`Global Actions Bar renders notification item with 1 notification 1`] = 
 >
   <button
     aria-atomic="true"
-    aria-haspopup={undefined}
     aria-live="assertive"
     className="slds-button slds-button_icon slds-button_icon slds-button_icon-container slds-button_icon-small slds-global-actions__notifications slds-global-actions__item-action"
-    id={undefined}
     title="1 new notifications"
   >
     <svg
@@ -720,10 +683,8 @@ exports[`Global Actions Bar renders notification item with dialog menu 1`] = `
 >
   <button
     aria-atomic="true"
-    aria-haspopup={undefined}
     aria-live="assertive"
     className="slds-button slds-button_icon slds-button_icon slds-button_icon-container slds-button_icon-small slds-global-actions__notifications slds-global-actions__item-action"
-    id={undefined}
     title="no new notifications"
   >
     <svg
@@ -754,7 +715,6 @@ exports[`Global Actions Bar renders setup item 1`] = `
   <button
     aria-haspopup="true"
     className="slds-button slds-button_icon slds-button_icon slds-button_icon-container slds-button_icon-small slds-global-actions__setup slds-global-actions__item-action"
-    id={undefined}
     title="Setup"
   >
     <svg
@@ -781,7 +741,6 @@ exports[`Global Actions Bar renders task item 1`] = `
   <button
     aria-haspopup="true"
     className="slds-button slds-button_icon slds-button_icon slds-button_icon-container slds-button_icon-small slds-global-actions__task slds-global-actions__item-action"
-    id={undefined}
     title="Global Actions"
   >
     <svg
@@ -808,7 +767,6 @@ exports[`Global Actions Bar renders task item with dialog menu 1`] = `
   <button
     aria-haspopup="true"
     className="slds-button slds-button_icon slds-button_icon slds-button_icon-container slds-button_icon-small slds-global-actions__task slds-global-actions__item-action"
-    id={undefined}
     title="Global Actions"
   >
     <svg
@@ -834,7 +792,6 @@ exports[`Global Actions Bar renders task item with dialog menu 1`] = `
     }
   >
     <ul
-      aria-label={undefined}
       className="slds-dropdown__list"
       role="menu"
     >
@@ -843,8 +800,6 @@ exports[`Global Actions Bar renders task item with dialog menu 1`] = `
         role="presentation"
       >
         <a
-          aria-checked={undefined}
-          className={undefined}
           href="javascript:void(0);"
           role="menuitem"
           tabIndex="0"
@@ -880,8 +835,6 @@ exports[`Global Actions Bar renders task item with dialog menu 1`] = `
         role="presentation"
       >
         <a
-          aria-checked={undefined}
-          className={undefined}
           href="javascript:void(0);"
           role="menuitem"
           tabIndex="0"
@@ -917,8 +870,6 @@ exports[`Global Actions Bar renders task item with dialog menu 1`] = `
         role="presentation"
       >
         <a
-          aria-checked={undefined}
-          className={undefined}
           href="javascript:void(0);"
           role="menuitem"
           tabIndex="0"
@@ -999,11 +950,8 @@ exports[`Global Header renders global header 1`] = `
               className="slds-button-group"
             >
               <button
-                aria-haspopup={undefined}
                 aria-pressed="false"
                 className="slds-button slds-button_icon slds-global-actions__favorites-action slds-button_icon slds-button_icon-border slds-button_icon-small"
-                disabled={undefined}
-                id={undefined}
                 onClick={[Function]}
                 title="Toggle Favorites"
               >
@@ -1022,9 +970,7 @@ exports[`Global Header renders global header 1`] = `
                 </span>
               </button>
               <button
-                aria-haspopup={undefined}
                 className="slds-button slds-button_icon slds-global-actions__favorites-more slds-button_icon slds-button_icon-border slds-button_icon-small"
-                id={undefined}
                 title="View Favorites"
               >
                 <svg
@@ -1053,7 +999,6 @@ exports[`Global Header renders global header 1`] = `
             <button
               aria-haspopup="true"
               className="slds-button slds-button_icon slds-button_icon slds-button_icon-container slds-button_icon-small slds-global-actions__task slds-global-actions__item-action"
-              id={undefined}
               title="Global Actions"
             >
               <svg
@@ -1081,7 +1026,6 @@ exports[`Global Header renders global header 1`] = `
             <button
               aria-haspopup="true"
               className="slds-button slds-button_icon slds-button_icon slds-button_icon-container slds-button_icon-small slds-global-actions__help slds-global-actions__item-action"
-              id={undefined}
               title="Help and Training"
             >
               <svg
@@ -1109,7 +1053,6 @@ exports[`Global Header renders global header 1`] = `
             <button
               aria-haspopup="true"
               className="slds-button slds-button_icon slds-button_icon slds-button_icon-container slds-button_icon-small slds-global-actions__setup slds-global-actions__item-action"
-              id={undefined}
               title="Setup"
             >
               <svg
@@ -1136,10 +1079,8 @@ exports[`Global Header renders global header 1`] = `
           >
             <button
               aria-atomic="true"
-              aria-haspopup={undefined}
               aria-live="assertive"
               className="slds-button slds-button_icon slds-button_icon slds-button_icon-container slds-button_icon-small slds-global-actions__notifications slds-global-actions__item-action"
-              id={undefined}
               title="no new notifications"
             >
               <svg

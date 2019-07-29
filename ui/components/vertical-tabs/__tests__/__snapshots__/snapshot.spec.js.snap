@@ -20,7 +20,6 @@ exports[`Vertical Tabs renders base vertical tab items 1`] = `
         className="slds-vertical-tabs__link"
         href="javascript:void(0)"
         id="slds-vertical-tabs-0__nav"
-        onClick={undefined}
         role="tab"
         tabIndex={0}
       >
@@ -49,7 +48,6 @@ exports[`Vertical Tabs renders base vertical tab items 1`] = `
         className="slds-vertical-tabs__link"
         href="javascript:void(0)"
         id="slds-vertical-tabs-1__nav"
-        onClick={undefined}
         role="tab"
         tabIndex={-1}
       >
@@ -78,7 +76,6 @@ exports[`Vertical Tabs renders base vertical tab items 1`] = `
         className="slds-vertical-tabs__link"
         href="javascript:void(0)"
         id="slds-vertical-tabs-2__nav"
-        onClick={undefined}
         role="tab"
         tabIndex={-1}
       >
@@ -195,7 +192,6 @@ exports[`Vertical Tabs renders base vertical tab items with badges 1`] = `
         className="slds-vertical-tabs__link"
         href="javascript:void(0)"
         id="slds-vertical-tabs-0__nav"
-        onClick={undefined}
         role="tab"
         tabIndex={0}
       >
@@ -244,7 +240,6 @@ exports[`Vertical Tabs renders base vertical tab items with badges 1`] = `
         className="slds-vertical-tabs__link"
         href="javascript:void(0)"
         id="slds-vertical-tabs-1__nav"
-        onClick={undefined}
         role="tab"
         tabIndex={-1}
       >
@@ -293,7 +288,6 @@ exports[`Vertical Tabs renders base vertical tab items with badges 1`] = `
         className="slds-vertical-tabs__link"
         href="javascript:void(0)"
         id="slds-vertical-tabs-2__nav"
-        onClick={undefined}
         role="tab"
         tabIndex={-1}
       >
@@ -424,7 +418,6 @@ exports[`Vertical Tabs renders base vertical tab items with icons 1`] = `
         className="slds-vertical-tabs__link"
         href="javascript:void(0)"
         id="slds-vertical-tabs-0__nav"
-        onClick={undefined}
         role="tab"
         tabIndex={0}
       >
@@ -467,7 +460,6 @@ exports[`Vertical Tabs renders base vertical tab items with icons 1`] = `
         className="slds-vertical-tabs__link"
         href="javascript:void(0)"
         id="slds-vertical-tabs-1__nav"
-        onClick={undefined}
         role="tab"
         tabIndex={-1}
       >
@@ -529,7 +521,6 @@ exports[`Vertical Tabs renders base vertical tab items with icons 1`] = `
         className="slds-vertical-tabs__link"
         href="javascript:void(0)"
         id="slds-vertical-tabs-2__nav"
-        onClick={undefined}
         role="tab"
         tabIndex={-1}
       >

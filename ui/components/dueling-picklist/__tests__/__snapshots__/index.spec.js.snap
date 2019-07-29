@@ -45,7 +45,6 @@ exports[`renders a default dueling picklist 1`] = `
         >
           <ul
             aria-describedby="option-drag-label"
-            aria-disabled={undefined}
             aria-labelledby="label-1"
             aria-multiselectable="true"
             className="slds-listbox slds-listbox_vertical"
@@ -56,7 +55,6 @@ exports[`renders a default dueling picklist 1`] = `
               role="presentation"
             >
               <div
-                aria-disabled={undefined}
                 aria-selected={false}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
                 draggable={true}
@@ -80,7 +78,6 @@ exports[`renders a default dueling picklist 1`] = `
               role="presentation"
             >
               <div
-                aria-disabled={undefined}
                 aria-selected={false}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
                 draggable={true}
@@ -104,7 +101,6 @@ exports[`renders a default dueling picklist 1`] = `
               role="presentation"
             >
               <div
-                aria-disabled={undefined}
                 aria-selected={false}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
                 draggable={true}
@@ -128,7 +124,6 @@ exports[`renders a default dueling picklist 1`] = `
               role="presentation"
             >
               <div
-                aria-disabled={undefined}
                 aria-selected={false}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
                 draggable={true}
@@ -155,7 +150,6 @@ exports[`renders a default dueling picklist 1`] = `
       >
         <button
           className="slds-button slds-button_icon slds-button_icon-container"
-          disabled={undefined}
           title="Move Selection to Second Category"
         >
           <svg
@@ -174,7 +168,6 @@ exports[`renders a default dueling picklist 1`] = `
         </button>
         <button
           className="slds-button slds-button_icon slds-button_icon-container"
-          disabled={undefined}
           title="Move Selection to First Category"
         >
           <svg
@@ -206,7 +199,6 @@ exports[`renders a default dueling picklist 1`] = `
         >
           <ul
             aria-describedby="option-drag-label"
-            aria-disabled={undefined}
             aria-labelledby="label-2"
             aria-multiselectable="true"
             className="slds-listbox slds-listbox_vertical"
@@ -217,7 +209,6 @@ exports[`renders a default dueling picklist 1`] = `
               role="presentation"
             >
               <div
-                aria-disabled={undefined}
                 aria-selected={false}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
                 draggable={true}
@@ -241,7 +232,6 @@ exports[`renders a default dueling picklist 1`] = `
               role="presentation"
             >
               <div
-                aria-disabled={undefined}
                 aria-selected={false}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
                 draggable={true}
@@ -268,7 +258,6 @@ exports[`renders a default dueling picklist 1`] = `
       >
         <button
           className="slds-button slds-button_icon slds-button_icon-container"
-          disabled={undefined}
           title="Move Selection Up"
         >
           <svg
@@ -287,7 +276,6 @@ exports[`renders a default dueling picklist 1`] = `
         </button>
         <button
           className="slds-button slds-button_icon slds-button_icon-container"
-          disabled={undefined}
           title="Move Selection Down"
         >
           <svg
@@ -355,7 +343,6 @@ exports[`renders a default dueling picklist with no reordering 1`] = `
         >
           <ul
             aria-describedby="option-drag-label"
-            aria-disabled={undefined}
             aria-labelledby="label-3"
             aria-multiselectable="true"
             className="slds-listbox slds-listbox_vertical"
@@ -366,7 +353,6 @@ exports[`renders a default dueling picklist with no reordering 1`] = `
               role="presentation"
             >
               <div
-                aria-disabled={undefined}
                 aria-selected={false}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
                 draggable={true}
@@ -390,7 +376,6 @@ exports[`renders a default dueling picklist with no reordering 1`] = `
               role="presentation"
             >
               <div
-                aria-disabled={undefined}
                 aria-selected={false}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
                 draggable={true}
@@ -414,7 +399,6 @@ exports[`renders a default dueling picklist with no reordering 1`] = `
               role="presentation"
             >
               <div
-                aria-disabled={undefined}
                 aria-selected={false}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
                 draggable={true}
@@ -438,7 +422,6 @@ exports[`renders a default dueling picklist with no reordering 1`] = `
               role="presentation"
             >
               <div
-                aria-disabled={undefined}
                 aria-selected={false}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
                 draggable={true}
@@ -465,7 +448,6 @@ exports[`renders a default dueling picklist with no reordering 1`] = `
       >
         <button
           className="slds-button slds-button_icon slds-button_icon-container"
-          disabled={undefined}
           title="Move Selection to Second Category"
         >
           <svg
@@ -484,7 +466,6 @@ exports[`renders a default dueling picklist with no reordering 1`] = `
         </button>
         <button
           className="slds-button slds-button_icon slds-button_icon-container"
-          disabled={undefined}
           title="Move Selection to First Category"
         >
           <svg
@@ -516,7 +497,6 @@ exports[`renders a default dueling picklist with no reordering 1`] = `
         >
           <ul
             aria-describedby="option-drag-label"
-            aria-disabled={undefined}
             aria-labelledby="label-4"
             aria-multiselectable="true"
             className="slds-listbox slds-listbox_vertical"
@@ -527,7 +507,6 @@ exports[`renders a default dueling picklist with no reordering 1`] = `
               role="presentation"
             >
               <div
-                aria-disabled={undefined}
                 aria-selected={false}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
                 draggable={true}
@@ -551,7 +530,6 @@ exports[`renders a default dueling picklist with no reordering 1`] = `
               role="presentation"
             >
               <div
-                aria-disabled={undefined}
                 aria-selected={false}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
                 draggable={true}
@@ -634,7 +612,6 @@ exports[`renders a disabled dueling picklist 1`] = `
               role="presentation"
             >
               <div
-                aria-disabled={undefined}
                 aria-selected={false}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
                 draggable={true}
@@ -658,7 +635,6 @@ exports[`renders a disabled dueling picklist 1`] = `
               role="presentation"
             >
               <div
-                aria-disabled={undefined}
                 aria-selected={false}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
                 draggable={true}
@@ -682,7 +658,6 @@ exports[`renders a disabled dueling picklist 1`] = `
               role="presentation"
             >
               <div
-                aria-disabled={undefined}
                 aria-selected={false}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
                 draggable={true}
@@ -706,7 +681,6 @@ exports[`renders a disabled dueling picklist 1`] = `
               role="presentation"
             >
               <div
-                aria-disabled={undefined}
                 aria-selected={false}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
                 draggable={true}
@@ -795,7 +769,6 @@ exports[`renders a disabled dueling picklist 1`] = `
               role="presentation"
             >
               <div
-                aria-disabled={undefined}
                 aria-selected={false}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
                 draggable={true}
@@ -819,7 +792,6 @@ exports[`renders a disabled dueling picklist 1`] = `
               role="presentation"
             >
               <div
-                aria-disabled={undefined}
                 aria-selected={false}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
                 draggable={true}
@@ -933,7 +905,6 @@ exports[`renders a dueling picklist with a dropped option 1`] = `
         >
           <ul
             aria-describedby="option-drag-label"
-            aria-disabled={undefined}
             aria-labelledby="label-17"
             aria-multiselectable="true"
             className="slds-listbox slds-listbox_vertical"
@@ -944,7 +915,6 @@ exports[`renders a dueling picklist with a dropped option 1`] = `
               role="presentation"
             >
               <div
-                aria-disabled={undefined}
                 aria-selected={false}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
                 draggable={true}
@@ -968,7 +938,6 @@ exports[`renders a dueling picklist with a dropped option 1`] = `
               role="presentation"
             >
               <div
-                aria-disabled={undefined}
                 aria-selected={false}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
                 draggable={true}
@@ -992,7 +961,6 @@ exports[`renders a dueling picklist with a dropped option 1`] = `
               role="presentation"
             >
               <div
-                aria-disabled={undefined}
                 aria-selected={false}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
                 draggable={true}
@@ -1016,7 +984,6 @@ exports[`renders a dueling picklist with a dropped option 1`] = `
               role="presentation"
             >
               <div
-                aria-disabled={undefined}
                 aria-selected={false}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
                 draggable={true}
@@ -1043,7 +1010,6 @@ exports[`renders a dueling picklist with a dropped option 1`] = `
       >
         <button
           className="slds-button slds-button_icon slds-button_icon-container"
-          disabled={undefined}
           title="Move Selection to Second Category"
         >
           <svg
@@ -1062,7 +1028,6 @@ exports[`renders a dueling picklist with a dropped option 1`] = `
         </button>
         <button
           className="slds-button slds-button_icon slds-button_icon-container"
-          disabled={undefined}
           title="Move Selection to First Category"
         >
           <svg
@@ -1094,7 +1059,6 @@ exports[`renders a dueling picklist with a dropped option 1`] = `
         >
           <ul
             aria-describedby="option-drag-label"
-            aria-disabled={undefined}
             aria-labelledby="label-18"
             aria-multiselectable="true"
             className="slds-listbox slds-listbox_vertical"
@@ -1105,7 +1069,6 @@ exports[`renders a dueling picklist with a dropped option 1`] = `
               role="presentation"
             >
               <div
-                aria-disabled={undefined}
                 aria-selected={true}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline slds-is-selected"
                 draggable={true}
@@ -1129,7 +1092,6 @@ exports[`renders a dueling picklist with a dropped option 1`] = `
               role="presentation"
             >
               <div
-                aria-disabled={undefined}
                 aria-selected={false}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
                 draggable={true}
@@ -1156,7 +1118,6 @@ exports[`renders a dueling picklist with a dropped option 1`] = `
       >
         <button
           className="slds-button slds-button_icon slds-button_icon-container"
-          disabled={undefined}
           title="Move Selection Up"
         >
           <svg
@@ -1175,7 +1136,6 @@ exports[`renders a dueling picklist with a dropped option 1`] = `
         </button>
         <button
           className="slds-button slds-button_icon slds-button_icon-container"
-          disabled={undefined}
           title="Move Selection Down"
         >
           <svg
@@ -1243,7 +1203,6 @@ exports[`renders a dueling picklist with a grabbed option 1`] = `
         >
           <ul
             aria-describedby="option-drag-label"
-            aria-disabled={undefined}
             aria-labelledby="label-13"
             aria-multiselectable="true"
             className="slds-listbox slds-listbox_vertical"
@@ -1254,7 +1213,6 @@ exports[`renders a dueling picklist with a grabbed option 1`] = `
               role="presentation"
             >
               <div
-                aria-disabled={undefined}
                 aria-selected={false}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
                 draggable={true}
@@ -1278,7 +1236,6 @@ exports[`renders a dueling picklist with a grabbed option 1`] = `
               role="presentation"
             >
               <div
-                aria-disabled={undefined}
                 aria-selected={false}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
                 draggable={true}
@@ -1302,7 +1259,6 @@ exports[`renders a dueling picklist with a grabbed option 1`] = `
               role="presentation"
             >
               <div
-                aria-disabled={undefined}
                 aria-selected={false}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
                 draggable={true}
@@ -1326,7 +1282,6 @@ exports[`renders a dueling picklist with a grabbed option 1`] = `
               role="presentation"
             >
               <div
-                aria-disabled={undefined}
                 aria-selected={false}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
                 draggable={true}
@@ -1353,7 +1308,6 @@ exports[`renders a dueling picklist with a grabbed option 1`] = `
       >
         <button
           className="slds-button slds-button_icon slds-button_icon-container"
-          disabled={undefined}
           title="Move Selection to Second Category"
         >
           <svg
@@ -1372,7 +1326,6 @@ exports[`renders a dueling picklist with a grabbed option 1`] = `
         </button>
         <button
           className="slds-button slds-button_icon slds-button_icon-container"
-          disabled={undefined}
           title="Move Selection to First Category"
         >
           <svg
@@ -1404,7 +1357,6 @@ exports[`renders a dueling picklist with a grabbed option 1`] = `
         >
           <ul
             aria-describedby="option-drag-label"
-            aria-disabled={undefined}
             aria-labelledby="label-14"
             aria-multiselectable="true"
             className="slds-listbox slds-listbox_vertical"
@@ -1415,7 +1367,6 @@ exports[`renders a dueling picklist with a grabbed option 1`] = `
               role="presentation"
             >
               <div
-                aria-disabled={undefined}
                 aria-selected={false}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
                 draggable={true}
@@ -1439,7 +1390,6 @@ exports[`renders a dueling picklist with a grabbed option 1`] = `
               role="presentation"
             >
               <div
-                aria-disabled={undefined}
                 aria-selected={true}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline slds-is-grabbed slds-is-selected"
                 draggable={true}
@@ -1466,7 +1416,6 @@ exports[`renders a dueling picklist with a grabbed option 1`] = `
       >
         <button
           className="slds-button slds-button_icon slds-button_icon-container"
-          disabled={undefined}
           title="Move Selection Up"
         >
           <svg
@@ -1485,7 +1434,6 @@ exports[`renders a dueling picklist with a grabbed option 1`] = `
         </button>
         <button
           className="slds-button slds-button_icon slds-button_icon-container"
-          disabled={undefined}
           title="Move Selection Down"
         >
           <svg
@@ -1553,7 +1501,6 @@ exports[`renders a dueling picklist with a required option 1`] = `
         >
           <ul
             aria-describedby="option-drag-label"
-            aria-disabled={undefined}
             aria-labelledby="label-5"
             aria-multiselectable="true"
             className="slds-listbox slds-listbox_vertical"
@@ -1564,7 +1511,6 @@ exports[`renders a dueling picklist with a required option 1`] = `
               role="presentation"
             >
               <div
-                aria-disabled={undefined}
                 aria-selected={false}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
                 draggable={true}
@@ -1588,7 +1534,6 @@ exports[`renders a dueling picklist with a required option 1`] = `
               role="presentation"
             >
               <div
-                aria-disabled={undefined}
                 aria-selected={false}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
                 draggable={true}
@@ -1612,7 +1557,6 @@ exports[`renders a dueling picklist with a required option 1`] = `
               role="presentation"
             >
               <div
-                aria-disabled={undefined}
                 aria-selected={false}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
                 draggable={true}
@@ -1636,7 +1580,6 @@ exports[`renders a dueling picklist with a required option 1`] = `
               role="presentation"
             >
               <div
-                aria-disabled={undefined}
                 aria-selected={false}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
                 draggable={true}
@@ -1663,7 +1606,6 @@ exports[`renders a dueling picklist with a required option 1`] = `
       >
         <button
           className="slds-button slds-button_icon slds-button_icon-container"
-          disabled={undefined}
           title="Move Selection to Second Category"
         >
           <svg
@@ -1682,7 +1624,6 @@ exports[`renders a dueling picklist with a required option 1`] = `
         </button>
         <button
           className="slds-button slds-button_icon slds-button_icon-container"
-          disabled={undefined}
           title="Move Selection to First Category"
         >
           <svg
@@ -1714,7 +1655,6 @@ exports[`renders a dueling picklist with a required option 1`] = `
         >
           <ul
             aria-describedby="option-drag-label"
-            aria-disabled={undefined}
             aria-labelledby="label-6"
             aria-multiselectable="true"
             className="slds-listbox slds-listbox_vertical"
@@ -1773,7 +1713,6 @@ exports[`renders a dueling picklist with a required option 1`] = `
               role="presentation"
             >
               <div
-                aria-disabled={undefined}
                 aria-selected={false}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
                 draggable={true}
@@ -1800,7 +1739,6 @@ exports[`renders a dueling picklist with a required option 1`] = `
       >
         <button
           className="slds-button slds-button_icon slds-button_icon-container"
-          disabled={undefined}
           title="Move Selection Up"
         >
           <svg
@@ -1819,7 +1757,6 @@ exports[`renders a dueling picklist with a required option 1`] = `
         </button>
         <button
           className="slds-button slds-button_icon slds-button_icon-container"
-          disabled={undefined}
           title="Move Selection Down"
         >
           <svg
@@ -1887,7 +1824,6 @@ exports[`renders a dueling picklist with a selected option 1`] = `
         >
           <ul
             aria-describedby="option-drag-label"
-            aria-disabled={undefined}
             aria-labelledby="label-9"
             aria-multiselectable="true"
             className="slds-listbox slds-listbox_vertical"
@@ -1898,7 +1834,6 @@ exports[`renders a dueling picklist with a selected option 1`] = `
               role="presentation"
             >
               <div
-                aria-disabled={undefined}
                 aria-selected={false}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
                 draggable={true}
@@ -1922,7 +1857,6 @@ exports[`renders a dueling picklist with a selected option 1`] = `
               role="presentation"
             >
               <div
-                aria-disabled={undefined}
                 aria-selected={false}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
                 draggable={true}
@@ -1946,7 +1880,6 @@ exports[`renders a dueling picklist with a selected option 1`] = `
               role="presentation"
             >
               <div
-                aria-disabled={undefined}
                 aria-selected={false}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
                 draggable={true}
@@ -1970,7 +1903,6 @@ exports[`renders a dueling picklist with a selected option 1`] = `
               role="presentation"
             >
               <div
-                aria-disabled={undefined}
                 aria-selected={false}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
                 draggable={true}
@@ -1997,7 +1929,6 @@ exports[`renders a dueling picklist with a selected option 1`] = `
       >
         <button
           className="slds-button slds-button_icon slds-button_icon-container"
-          disabled={undefined}
           title="Move Selection to Second Category"
         >
           <svg
@@ -2016,7 +1947,6 @@ exports[`renders a dueling picklist with a selected option 1`] = `
         </button>
         <button
           className="slds-button slds-button_icon slds-button_icon-container"
-          disabled={undefined}
           title="Move Selection to First Category"
         >
           <svg
@@ -2048,7 +1978,6 @@ exports[`renders a dueling picklist with a selected option 1`] = `
         >
           <ul
             aria-describedby="option-drag-label"
-            aria-disabled={undefined}
             aria-labelledby="label-10"
             aria-multiselectable="true"
             className="slds-listbox slds-listbox_vertical"
@@ -2059,7 +1988,6 @@ exports[`renders a dueling picklist with a selected option 1`] = `
               role="presentation"
             >
               <div
-                aria-disabled={undefined}
                 aria-selected={false}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
                 draggable={true}
@@ -2083,7 +2011,6 @@ exports[`renders a dueling picklist with a selected option 1`] = `
               role="presentation"
             >
               <div
-                aria-disabled={undefined}
                 aria-selected={true}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline slds-is-selected"
                 draggable={true}
@@ -2110,7 +2037,6 @@ exports[`renders a dueling picklist with a selected option 1`] = `
       >
         <button
           className="slds-button slds-button_icon slds-button_icon-container"
-          disabled={undefined}
           title="Move Selection Up"
         >
           <svg
@@ -2129,7 +2055,6 @@ exports[`renders a dueling picklist with a selected option 1`] = `
         </button>
         <button
           className="slds-button slds-button_icon slds-button_icon-container"
-          disabled={undefined}
           title="Move Selection Down"
         >
           <svg
@@ -2197,7 +2122,6 @@ exports[`renders a dueling picklist with an option that was moved 1`] = `
         >
           <ul
             aria-describedby="option-drag-label"
-            aria-disabled={undefined}
             aria-labelledby="label-15"
             aria-multiselectable="true"
             className="slds-listbox slds-listbox_vertical"
@@ -2208,7 +2132,6 @@ exports[`renders a dueling picklist with an option that was moved 1`] = `
               role="presentation"
             >
               <div
-                aria-disabled={undefined}
                 aria-selected={false}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
                 draggable={true}
@@ -2232,7 +2155,6 @@ exports[`renders a dueling picklist with an option that was moved 1`] = `
               role="presentation"
             >
               <div
-                aria-disabled={undefined}
                 aria-selected={false}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
                 draggable={true}
@@ -2256,7 +2178,6 @@ exports[`renders a dueling picklist with an option that was moved 1`] = `
               role="presentation"
             >
               <div
-                aria-disabled={undefined}
                 aria-selected={false}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
                 draggable={true}
@@ -2280,7 +2201,6 @@ exports[`renders a dueling picklist with an option that was moved 1`] = `
               role="presentation"
             >
               <div
-                aria-disabled={undefined}
                 aria-selected={false}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
                 draggable={true}
@@ -2307,7 +2227,6 @@ exports[`renders a dueling picklist with an option that was moved 1`] = `
       >
         <button
           className="slds-button slds-button_icon slds-button_icon-container"
-          disabled={undefined}
           title="Move Selection to Second Category"
         >
           <svg
@@ -2326,7 +2245,6 @@ exports[`renders a dueling picklist with an option that was moved 1`] = `
         </button>
         <button
           className="slds-button slds-button_icon slds-button_icon-container"
-          disabled={undefined}
           title="Move Selection to First Category"
         >
           <svg
@@ -2358,7 +2276,6 @@ exports[`renders a dueling picklist with an option that was moved 1`] = `
         >
           <ul
             aria-describedby="option-drag-label"
-            aria-disabled={undefined}
             aria-labelledby="label-16"
             aria-multiselectable="true"
             className="slds-listbox slds-listbox_vertical"
@@ -2369,7 +2286,6 @@ exports[`renders a dueling picklist with an option that was moved 1`] = `
               role="presentation"
             >
               <div
-                aria-disabled={undefined}
                 aria-selected={true}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline slds-is-grabbed slds-is-selected"
                 draggable={true}
@@ -2393,7 +2309,6 @@ exports[`renders a dueling picklist with an option that was moved 1`] = `
               role="presentation"
             >
               <div
-                aria-disabled={undefined}
                 aria-selected={false}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
                 draggable={true}
@@ -2420,7 +2335,6 @@ exports[`renders a dueling picklist with an option that was moved 1`] = `
       >
         <button
           className="slds-button slds-button_icon slds-button_icon-container"
-          disabled={undefined}
           title="Move Selection Up"
         >
           <svg
@@ -2439,7 +2353,6 @@ exports[`renders a dueling picklist with an option that was moved 1`] = `
         </button>
         <button
           className="slds-button slds-button_icon slds-button_icon-container"
-          disabled={undefined}
           title="Move Selection Down"
         >
           <svg
@@ -2507,7 +2420,6 @@ exports[`renders a dueling picklist with an option that was moved to another lis
         >
           <ul
             aria-describedby="option-drag-label"
-            aria-disabled={undefined}
             aria-labelledby="label-19"
             aria-multiselectable="true"
             className="slds-listbox slds-listbox_vertical"
@@ -2518,7 +2430,6 @@ exports[`renders a dueling picklist with an option that was moved to another lis
               role="presentation"
             >
               <div
-                aria-disabled={undefined}
                 aria-selected={false}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
                 draggable={true}
@@ -2542,7 +2453,6 @@ exports[`renders a dueling picklist with an option that was moved to another lis
               role="presentation"
             >
               <div
-                aria-disabled={undefined}
                 aria-selected={false}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
                 draggable={true}
@@ -2566,7 +2476,6 @@ exports[`renders a dueling picklist with an option that was moved to another lis
               role="presentation"
             >
               <div
-                aria-disabled={undefined}
                 aria-selected={false}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
                 draggable={true}
@@ -2590,7 +2499,6 @@ exports[`renders a dueling picklist with an option that was moved to another lis
               role="presentation"
             >
               <div
-                aria-disabled={undefined}
                 aria-selected={false}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
                 draggable={true}
@@ -2617,7 +2525,6 @@ exports[`renders a dueling picklist with an option that was moved to another lis
       >
         <button
           className="slds-button slds-button_icon slds-button_icon-container"
-          disabled={undefined}
           title="Move Selection to Second Category"
         >
           <svg
@@ -2636,7 +2543,6 @@ exports[`renders a dueling picklist with an option that was moved to another lis
         </button>
         <button
           className="slds-button slds-button_icon slds-button_icon-container"
-          disabled={undefined}
           title="Move Selection to First Category"
         >
           <svg
@@ -2668,7 +2574,6 @@ exports[`renders a dueling picklist with an option that was moved to another lis
         >
           <ul
             aria-describedby="option-drag-label"
-            aria-disabled={undefined}
             aria-labelledby="label-20"
             aria-multiselectable="true"
             className="slds-listbox slds-listbox_vertical"
@@ -2679,7 +2584,6 @@ exports[`renders a dueling picklist with an option that was moved to another lis
               role="presentation"
             >
               <div
-                aria-disabled={undefined}
                 aria-selected={true}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline slds-is-grabbed slds-is-selected"
                 draggable={true}
@@ -2703,7 +2607,6 @@ exports[`renders a dueling picklist with an option that was moved to another lis
               role="presentation"
             >
               <div
-                aria-disabled={undefined}
                 aria-selected={false}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
                 draggable={true}
@@ -2730,7 +2633,6 @@ exports[`renders a dueling picklist with an option that was moved to another lis
       >
         <button
           className="slds-button slds-button_icon slds-button_icon-container"
-          disabled={undefined}
           title="Move Selection Up"
         >
           <svg
@@ -2749,7 +2651,6 @@ exports[`renders a dueling picklist with an option that was moved to another lis
         </button>
         <button
           className="slds-button slds-button_icon slds-button_icon-container"
-          disabled={undefined}
           title="Move Selection Down"
         >
           <svg
@@ -2817,7 +2718,6 @@ exports[`renders a dueling picklist with multiple selected options 1`] = `
         >
           <ul
             aria-describedby="option-drag-label"
-            aria-disabled={undefined}
             aria-labelledby="label-11"
             aria-multiselectable="true"
             className="slds-listbox slds-listbox_vertical"
@@ -2828,7 +2728,6 @@ exports[`renders a dueling picklist with multiple selected options 1`] = `
               role="presentation"
             >
               <div
-                aria-disabled={undefined}
                 aria-selected={true}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline slds-is-selected"
                 draggable={true}
@@ -2852,7 +2751,6 @@ exports[`renders a dueling picklist with multiple selected options 1`] = `
               role="presentation"
             >
               <div
-                aria-disabled={undefined}
                 aria-selected={false}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
                 draggable={true}
@@ -2876,7 +2774,6 @@ exports[`renders a dueling picklist with multiple selected options 1`] = `
               role="presentation"
             >
               <div
-                aria-disabled={undefined}
                 aria-selected={true}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline slds-is-selected"
                 draggable={true}
@@ -2900,7 +2797,6 @@ exports[`renders a dueling picklist with multiple selected options 1`] = `
               role="presentation"
             >
               <div
-                aria-disabled={undefined}
                 aria-selected={false}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
                 draggable={true}
@@ -2927,7 +2823,6 @@ exports[`renders a dueling picklist with multiple selected options 1`] = `
       >
         <button
           className="slds-button slds-button_icon slds-button_icon-container"
-          disabled={undefined}
           title="Move Selection to Second Category"
         >
           <svg
@@ -2946,7 +2841,6 @@ exports[`renders a dueling picklist with multiple selected options 1`] = `
         </button>
         <button
           className="slds-button slds-button_icon slds-button_icon-container"
-          disabled={undefined}
           title="Move Selection to First Category"
         >
           <svg
@@ -2978,7 +2872,6 @@ exports[`renders a dueling picklist with multiple selected options 1`] = `
         >
           <ul
             aria-describedby="option-drag-label"
-            aria-disabled={undefined}
             aria-labelledby="label-12"
             aria-multiselectable="true"
             className="slds-listbox slds-listbox_vertical"
@@ -2989,7 +2882,6 @@ exports[`renders a dueling picklist with multiple selected options 1`] = `
               role="presentation"
             >
               <div
-                aria-disabled={undefined}
                 aria-selected={false}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
                 draggable={true}
@@ -3013,7 +2905,6 @@ exports[`renders a dueling picklist with multiple selected options 1`] = `
               role="presentation"
             >
               <div
-                aria-disabled={undefined}
                 aria-selected={false}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
                 draggable={true}
@@ -3040,7 +2931,6 @@ exports[`renders a dueling picklist with multiple selected options 1`] = `
       >
         <button
           className="slds-button slds-button_icon slds-button_icon-container"
-          disabled={undefined}
           title="Move Selection Up"
         >
           <svg
@@ -3059,7 +2949,6 @@ exports[`renders a dueling picklist with multiple selected options 1`] = `
         </button>
         <button
           className="slds-button slds-button_icon slds-button_icon-container"
-          disabled={undefined}
           title="Move Selection Down"
         >
           <svg
@@ -3098,10 +2987,7 @@ exports[`renders a dueling picklist with tooltip 1`] = `
     className="slds-form-element__icon"
   >
     <button
-      aria-describedby={undefined}
-      aria-haspopup={undefined}
       className="slds-button slds-button_icon"
-      id={undefined}
     >
       <svg
         aria-hidden={true}
@@ -3151,7 +3037,6 @@ exports[`renders a dueling picklist with tooltip 1`] = `
         >
           <ul
             aria-describedby="option-drag-label"
-            aria-disabled={undefined}
             aria-labelledby="label-27"
             aria-multiselectable="true"
             className="slds-listbox slds-listbox_vertical"
@@ -3162,7 +3047,6 @@ exports[`renders a dueling picklist with tooltip 1`] = `
               role="presentation"
             >
               <div
-                aria-disabled={undefined}
                 aria-selected={false}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
                 draggable={true}
@@ -3186,7 +3070,6 @@ exports[`renders a dueling picklist with tooltip 1`] = `
               role="presentation"
             >
               <div
-                aria-disabled={undefined}
                 aria-selected={false}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
                 draggable={true}
@@ -3210,7 +3093,6 @@ exports[`renders a dueling picklist with tooltip 1`] = `
               role="presentation"
             >
               <div
-                aria-disabled={undefined}
                 aria-selected={false}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
                 draggable={true}
@@ -3234,7 +3116,6 @@ exports[`renders a dueling picklist with tooltip 1`] = `
               role="presentation"
             >
               <div
-                aria-disabled={undefined}
                 aria-selected={false}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
                 draggable={true}
@@ -3261,7 +3142,6 @@ exports[`renders a dueling picklist with tooltip 1`] = `
       >
         <button
           className="slds-button slds-button_icon slds-button_icon-container"
-          disabled={undefined}
           title="Move Selection to Second Category"
         >
           <svg
@@ -3280,7 +3160,6 @@ exports[`renders a dueling picklist with tooltip 1`] = `
         </button>
         <button
           className="slds-button slds-button_icon slds-button_icon-container"
-          disabled={undefined}
           title="Move Selection to First Category"
         >
           <svg
@@ -3312,7 +3191,6 @@ exports[`renders a dueling picklist with tooltip 1`] = `
         >
           <ul
             aria-describedby="option-drag-label"
-            aria-disabled={undefined}
             aria-labelledby="label-28"
             aria-multiselectable="true"
             className="slds-listbox slds-listbox_vertical"
@@ -3323,7 +3201,6 @@ exports[`renders a dueling picklist with tooltip 1`] = `
               role="presentation"
             >
               <div
-                aria-disabled={undefined}
                 aria-selected={false}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
                 draggable={true}
@@ -3347,7 +3224,6 @@ exports[`renders a dueling picklist with tooltip 1`] = `
               role="presentation"
             >
               <div
-                aria-disabled={undefined}
                 aria-selected={false}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
                 draggable={true}
@@ -3374,7 +3250,6 @@ exports[`renders a dueling picklist with tooltip 1`] = `
       >
         <button
           className="slds-button slds-button_icon slds-button_icon-container"
-          disabled={undefined}
           title="Move Selection Up"
         >
           <svg
@@ -3393,7 +3268,6 @@ exports[`renders a dueling picklist with tooltip 1`] = `
         </button>
         <button
           className="slds-button slds-button_icon slds-button_icon-container"
-          disabled={undefined}
           title="Move Selection Down"
         >
           <svg
@@ -3468,7 +3342,6 @@ exports[`renders a required dueling picklist 1`] = `
         >
           <ul
             aria-describedby="option-drag-label"
-            aria-disabled={undefined}
             aria-labelledby="label-25"
             aria-multiselectable="true"
             className="slds-listbox slds-listbox_vertical"
@@ -3479,7 +3352,6 @@ exports[`renders a required dueling picklist 1`] = `
               role="presentation"
             >
               <div
-                aria-disabled={undefined}
                 aria-selected={false}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
                 draggable={true}
@@ -3503,7 +3375,6 @@ exports[`renders a required dueling picklist 1`] = `
               role="presentation"
             >
               <div
-                aria-disabled={undefined}
                 aria-selected={false}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
                 draggable={true}
@@ -3527,7 +3398,6 @@ exports[`renders a required dueling picklist 1`] = `
               role="presentation"
             >
               <div
-                aria-disabled={undefined}
                 aria-selected={false}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
                 draggable={true}
@@ -3551,7 +3421,6 @@ exports[`renders a required dueling picklist 1`] = `
               role="presentation"
             >
               <div
-                aria-disabled={undefined}
                 aria-selected={false}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
                 draggable={true}
@@ -3578,7 +3447,6 @@ exports[`renders a required dueling picklist 1`] = `
       >
         <button
           className="slds-button slds-button_icon slds-button_icon-container"
-          disabled={undefined}
           title="Move Selection to Second Category"
         >
           <svg
@@ -3597,7 +3465,6 @@ exports[`renders a required dueling picklist 1`] = `
         </button>
         <button
           className="slds-button slds-button_icon slds-button_icon-container"
-          disabled={undefined}
           title="Move Selection to First Category"
         >
           <svg
@@ -3629,7 +3496,6 @@ exports[`renders a required dueling picklist 1`] = `
         >
           <ul
             aria-describedby="option-drag-label"
-            aria-disabled={undefined}
             aria-labelledby="label-26"
             aria-multiselectable="true"
             className="slds-listbox slds-listbox_vertical"
@@ -3640,7 +3506,6 @@ exports[`renders a required dueling picklist 1`] = `
               role="presentation"
             >
               <div
-                aria-disabled={undefined}
                 aria-selected={false}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
                 draggable={true}
@@ -3664,7 +3529,6 @@ exports[`renders a required dueling picklist 1`] = `
               role="presentation"
             >
               <div
-                aria-disabled={undefined}
                 aria-selected={false}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
                 draggable={true}
@@ -3691,7 +3555,6 @@ exports[`renders a required dueling picklist 1`] = `
       >
         <button
           className="slds-button slds-button_icon slds-button_icon-container"
-          disabled={undefined}
           title="Move Selection Up"
         >
           <svg
@@ -3710,7 +3573,6 @@ exports[`renders a required dueling picklist 1`] = `
         </button>
         <button
           className="slds-button slds-button_icon slds-button_icon-container"
-          disabled={undefined}
           title="Move Selection Down"
         >
           <svg
@@ -3756,10 +3618,7 @@ exports[`renders a required dueling picklist with tooltip 1`] = `
     className="slds-form-element__icon"
   >
     <button
-      aria-describedby={undefined}
-      aria-haspopup={undefined}
       className="slds-button slds-button_icon"
-      id={undefined}
     >
       <svg
         aria-hidden={true}
@@ -3809,7 +3668,6 @@ exports[`renders a required dueling picklist with tooltip 1`] = `
         >
           <ul
             aria-describedby="option-drag-label"
-            aria-disabled={undefined}
             aria-labelledby="label-29"
             aria-multiselectable="true"
             className="slds-listbox slds-listbox_vertical"
@@ -3820,7 +3678,6 @@ exports[`renders a required dueling picklist with tooltip 1`] = `
               role="presentation"
             >
               <div
-                aria-disabled={undefined}
                 aria-selected={false}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
                 draggable={true}
@@ -3844,7 +3701,6 @@ exports[`renders a required dueling picklist with tooltip 1`] = `
               role="presentation"
             >
               <div
-                aria-disabled={undefined}
                 aria-selected={false}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
                 draggable={true}
@@ -3868,7 +3724,6 @@ exports[`renders a required dueling picklist with tooltip 1`] = `
               role="presentation"
             >
               <div
-                aria-disabled={undefined}
                 aria-selected={false}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
                 draggable={true}
@@ -3892,7 +3747,6 @@ exports[`renders a required dueling picklist with tooltip 1`] = `
               role="presentation"
             >
               <div
-                aria-disabled={undefined}
                 aria-selected={false}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
                 draggable={true}
@@ -3919,7 +3773,6 @@ exports[`renders a required dueling picklist with tooltip 1`] = `
       >
         <button
           className="slds-button slds-button_icon slds-button_icon-container"
-          disabled={undefined}
           title="Move Selection to Second Category"
         >
           <svg
@@ -3938,7 +3791,6 @@ exports[`renders a required dueling picklist with tooltip 1`] = `
         </button>
         <button
           className="slds-button slds-button_icon slds-button_icon-container"
-          disabled={undefined}
           title="Move Selection to First Category"
         >
           <svg
@@ -3970,7 +3822,6 @@ exports[`renders a required dueling picklist with tooltip 1`] = `
         >
           <ul
             aria-describedby="option-drag-label"
-            aria-disabled={undefined}
             aria-labelledby="label-30"
             aria-multiselectable="true"
             className="slds-listbox slds-listbox_vertical"
@@ -3981,7 +3832,6 @@ exports[`renders a required dueling picklist with tooltip 1`] = `
               role="presentation"
             >
               <div
-                aria-disabled={undefined}
                 aria-selected={false}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
                 draggable={true}
@@ -4005,7 +3855,6 @@ exports[`renders a required dueling picklist with tooltip 1`] = `
               role="presentation"
             >
               <div
-                aria-disabled={undefined}
                 aria-selected={false}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
                 draggable={true}
@@ -4032,7 +3881,6 @@ exports[`renders a required dueling picklist with tooltip 1`] = `
       >
         <button
           className="slds-button slds-button_icon slds-button_icon-container"
-          disabled={undefined}
           title="Move Selection Up"
         >
           <svg
@@ -4051,7 +3899,6 @@ exports[`renders a required dueling picklist with tooltip 1`] = `
         </button>
         <button
           className="slds-button slds-button_icon slds-button_icon-container"
-          disabled={undefined}
           title="Move Selection Down"
         >
           <svg
@@ -4119,7 +3966,6 @@ exports[`renders a responsive dueling picklist 1`] = `
         >
           <ul
             aria-describedby="option-drag-label"
-            aria-disabled={undefined}
             aria-labelledby="label-21"
             aria-multiselectable="true"
             className="slds-listbox slds-listbox_vertical"
@@ -4130,7 +3976,6 @@ exports[`renders a responsive dueling picklist 1`] = `
               role="presentation"
             >
               <div
-                aria-disabled={undefined}
                 aria-selected={false}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
                 draggable={true}
@@ -4154,7 +3999,6 @@ exports[`renders a responsive dueling picklist 1`] = `
               role="presentation"
             >
               <div
-                aria-disabled={undefined}
                 aria-selected={false}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
                 draggable={true}
@@ -4178,7 +4022,6 @@ exports[`renders a responsive dueling picklist 1`] = `
               role="presentation"
             >
               <div
-                aria-disabled={undefined}
                 aria-selected={false}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
                 draggable={true}
@@ -4202,7 +4045,6 @@ exports[`renders a responsive dueling picklist 1`] = `
               role="presentation"
             >
               <div
-                aria-disabled={undefined}
                 aria-selected={false}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
                 draggable={true}
@@ -4229,7 +4071,6 @@ exports[`renders a responsive dueling picklist 1`] = `
       >
         <button
           className="slds-button slds-button_icon slds-button_icon-container"
-          disabled={undefined}
           title="Move Selection to Second Category"
         >
           <svg
@@ -4248,7 +4089,6 @@ exports[`renders a responsive dueling picklist 1`] = `
         </button>
         <button
           className="slds-button slds-button_icon slds-button_icon-container"
-          disabled={undefined}
           title="Move Selection to First Category"
         >
           <svg
@@ -4280,7 +4120,6 @@ exports[`renders a responsive dueling picklist 1`] = `
         >
           <ul
             aria-describedby="option-drag-label"
-            aria-disabled={undefined}
             aria-labelledby="label-22"
             aria-multiselectable="true"
             className="slds-listbox slds-listbox_vertical"
@@ -4291,7 +4130,6 @@ exports[`renders a responsive dueling picklist 1`] = `
               role="presentation"
             >
               <div
-                aria-disabled={undefined}
                 aria-selected={false}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
                 draggable={true}
@@ -4315,7 +4153,6 @@ exports[`renders a responsive dueling picklist 1`] = `
               role="presentation"
             >
               <div
-                aria-disabled={undefined}
                 aria-selected={false}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
                 draggable={true}
@@ -4342,7 +4179,6 @@ exports[`renders a responsive dueling picklist 1`] = `
       >
         <button
           className="slds-button slds-button_icon slds-button_icon-container"
-          disabled={undefined}
           title="Move Selection Up"
         >
           <svg
@@ -4361,7 +4197,6 @@ exports[`renders a responsive dueling picklist 1`] = `
         </button>
         <button
           className="slds-button slds-button_icon slds-button_icon-container"
-          disabled={undefined}
           title="Move Selection Down"
         >
           <svg
@@ -4429,7 +4264,6 @@ exports[`renders a responsive non-reorderable dueling picklist 1`] = `
         >
           <ul
             aria-describedby="option-drag-label"
-            aria-disabled={undefined}
             aria-labelledby="label-23"
             aria-multiselectable="true"
             className="slds-listbox slds-listbox_vertical"
@@ -4440,7 +4274,6 @@ exports[`renders a responsive non-reorderable dueling picklist 1`] = `
               role="presentation"
             >
               <div
-                aria-disabled={undefined}
                 aria-selected={false}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
                 draggable={true}
@@ -4464,7 +4297,6 @@ exports[`renders a responsive non-reorderable dueling picklist 1`] = `
               role="presentation"
             >
               <div
-                aria-disabled={undefined}
                 aria-selected={false}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
                 draggable={true}
@@ -4488,7 +4320,6 @@ exports[`renders a responsive non-reorderable dueling picklist 1`] = `
               role="presentation"
             >
               <div
-                aria-disabled={undefined}
                 aria-selected={false}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
                 draggable={true}
@@ -4512,7 +4343,6 @@ exports[`renders a responsive non-reorderable dueling picklist 1`] = `
               role="presentation"
             >
               <div
-                aria-disabled={undefined}
                 aria-selected={false}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
                 draggable={true}
@@ -4539,7 +4369,6 @@ exports[`renders a responsive non-reorderable dueling picklist 1`] = `
       >
         <button
           className="slds-button slds-button_icon slds-button_icon-container"
-          disabled={undefined}
           title="Move Selection to Second Category"
         >
           <svg
@@ -4558,7 +4387,6 @@ exports[`renders a responsive non-reorderable dueling picklist 1`] = `
         </button>
         <button
           className="slds-button slds-button_icon slds-button_icon-container"
-          disabled={undefined}
           title="Move Selection to First Category"
         >
           <svg
@@ -4590,7 +4418,6 @@ exports[`renders a responsive non-reorderable dueling picklist 1`] = `
         >
           <ul
             aria-describedby="option-drag-label"
-            aria-disabled={undefined}
             aria-labelledby="label-24"
             aria-multiselectable="true"
             className="slds-listbox slds-listbox_vertical"
@@ -4601,7 +4428,6 @@ exports[`renders a responsive non-reorderable dueling picklist 1`] = `
               role="presentation"
             >
               <div
-                aria-disabled={undefined}
                 aria-selected={false}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
                 draggable={true}
@@ -4625,7 +4451,6 @@ exports[`renders a responsive non-reorderable dueling picklist 1`] = `
               role="presentation"
             >
               <div
-                aria-disabled={undefined}
                 aria-selected={false}
                 className="slds-listbox__option slds-listbox__option_plain slds-media slds-media_small slds-media_inline"
                 draggable={true}
@@ -4658,7 +4483,6 @@ exports[`renders a view mode of dueling picklist 1`] = `
 >
   <div
     className="slds-form-element"
-    role={undefined}
   >
     <span
       className="slds-form-element__label"

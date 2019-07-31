@@ -15,6 +15,7 @@ import paths from '../../helpers/paths';
 const placeInExampleFolderForLinting = example => {
   const filename = `${example.title.replace(/\W/g, '_')}.html`;
   const filepath = path.resolve(paths.generated, 'examples');
+
   fs.outputFileSync(
     path.join(filepath, filename),
     beautify(ReactDOM.renderToStaticMarkup(example.element))

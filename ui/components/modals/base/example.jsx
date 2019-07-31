@@ -1,7 +1,7 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-import React from 'react';
+import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import ButtonIcon from '../../button-icons/';
 import classNames from 'classnames';
@@ -10,12 +10,18 @@ import classNames from 'classnames';
 // Partial(s)
 /// ///////////////////////////////////////////
 
-let Demo = props => {
+export const exampleDemoStyles = 'height: 640px;';
+
+export const Context = props => (
+  <div style={{ height: '640px' }}>{props.children}</div>
+);
+
+let Backdrop = props => {
   return (
-    <div style={{ transform: 'translate3d(0,0,0)', ...props.style }}>
+    <Fragment>
       {props.children}
       <div className="slds-backdrop slds-backdrop_open" />
-    </div>
+    </Fragment>
   );
 };
 
@@ -75,7 +81,7 @@ export let ModalFooter = props => (
 /// ///////////////////////////////////////////
 
 let Taglines = props => (
-  <Demo style={{ height: '640px' }}>
+  <Backdrop>
     <Modal aria-labelledby="modal-heading-01">
       <ModalHeader>
         <h2 id="modal-heading-01" className="slds-modal__title slds-hyphenate">
@@ -111,11 +117,11 @@ let Taglines = props => (
         <button className="slds-button slds-button_brand">Save</button>
       </ModalFooter>
     </Modal>
-  </Demo>
+  </Backdrop>
 );
 
 let ModalSizes = props => (
-  <Demo style={{ height: '640px' }}>
+  <Backdrop>
     <Modal
       className={classNames(
         props.size === 'small' && 'slds-modal_small',
@@ -152,7 +158,7 @@ let ModalSizes = props => (
         <button className="slds-button slds-button_brand">Save</button>
       </ModalFooter>
     </Modal>
-  </Demo>
+  </Backdrop>
 );
 
 ModalSizes.propTypes = {
@@ -160,7 +166,7 @@ ModalSizes.propTypes = {
 };
 
 let Directional = props => (
-  <Demo style={{ height: '640px' }}>
+  <Backdrop>
     <Modal aria-labelledby="modal-heading-01">
       <ModalHeader>
         <h2 id="modal-heading-01" className="slds-modal__title slds-hyphenate">
@@ -194,11 +200,11 @@ let Directional = props => (
         </button>
       </ModalFooter>
     </Modal>
-  </Demo>
+  </Backdrop>
 );
 
 let Headless = props => (
-  <Demo style={{ height: '640px' }}>
+  <Backdrop>
     <Modal aria-label="Meaningful description of the modal content">
       <ModalHeader className="slds-modal__header_empty" />
       <ModalContent className="slds-p-around_medium">
@@ -224,11 +230,11 @@ let Headless = props => (
         <button className="slds-button slds-button_brand">Save</button>
       </ModalFooter>
     </Modal>
-  </Demo>
+  </Backdrop>
 );
 
 let Footless = props => (
-  <Demo style={{ height: '640px' }}>
+  <Backdrop>
     <Modal aria-labelledby="modal-heading-01">
       <ModalHeader>
         <h2 id="modal-heading-01" className="slds-modal__title slds-hyphenate">
@@ -254,15 +260,15 @@ let Footless = props => (
         </p>
       </ModalContent>
     </Modal>
-  </Demo>
+  </Backdrop>
 );
 
 /// ///////////////////////////////////////////
 // Export
 /// ///////////////////////////////////////////
 
-export default (
-  <Demo style={{ height: '640px' }}>
+const defaultComponent = (
+  <Backdrop>
     <Modal aria-labelledby="modal-heading-01">
       <ModalHeader>
         <h2 id="modal-heading-01" className="slds-modal__title slds-hyphenate">
@@ -292,43 +298,58 @@ export default (
         <button className="slds-button slds-button_brand">Save</button>
       </ModalFooter>
     </Modal>
-  </Demo>
+  </Backdrop>
 );
+
+export default defaultComponent;
 
 export const examples = [
   {
+    id: 'default',
+    label: 'Default',
+    demoStyles: exampleDemoStyles,
+    element: <Taglines />
+  },
+  {
     id: 'taglines',
     label: 'Taglines',
+    demoStyles: exampleDemoStyles,
     element: <Taglines />
   },
   {
     id: 'headless',
     label: 'Header empty',
+    demoStyles: exampleDemoStyles,
     element: <Headless />
   },
   {
     id: 'footless',
     label: 'Footer removed',
+    demoStyles: exampleDemoStyles,
     element: <Footless />
   },
   {
     id: 'large',
     label: 'Large',
+    demoStyles: exampleDemoStyles,
     element: <ModalSizes size="large" />
   },
   {
     id: 'medium',
     label: 'Medium',
+    demoStyles: exampleDemoStyles,
     element: <ModalSizes size="medium" />
   },
   {
     id: 'small',
     label: 'Small',
+    demoStyles: exampleDemoStyles,
     element: <ModalSizes size="small" />
   },
   {
     id: 'directional',
     label: 'Directional',
+    demoStyles: exampleDemoStyles,
     element: <Directional />
   }
 ];

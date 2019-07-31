@@ -94,10 +94,12 @@ gulp.task('generate:tokens:package', tokens.packages);
 gulp.task(
   'generate:tokens:all',
   gulp.series(
-    'generate:tokens:primitive:aliases',
-    'generate:tokens:primitive',
-    'generate:tokens:components:imports',
-    'generate:tokens:package'
+    withName('generate:tokens:primitive:aliases')(
+      tokens.copyDesignPrimitiveAliases
+    ),
+    withName('generate:tokens:primitive')(tokens.copyDesignPrimitiveTokens),
+    withName('generate:tokens:components:imports')(tokens.componentsImports),
+    withName('generate:tokens:package')(tokens.packages)
   )
 );
 
@@ -146,9 +148,9 @@ gulp.task('lint:tokens:aliases', lint.tokensAliases);
 gulp.task(
   'lint:tokens',
   gulp.parallel(
-    'lint:tokens:yml',
-    'lint:tokens:components',
-    'lint:tokens:aliases'
+    withName('lint:tokens:yml')(lint.tokensYml),
+    withName('lint:tokens:components')(lint.tokensComponents),
+    withName('lint:tokens:aliases')(lint.tokensAliases)
   )
 );
 
@@ -156,22 +158,27 @@ gulp.task(
   'lint:examples',
   gulp.series(
     'generate:examples:wrapped',
-    gulp.parallel(vnu, a11y, 'lint:markup', 'lint:html')
+    gulp.parallel(
+      vnu,
+      a11y,
+      withName('lint:markup')(lint.markup),
+      withName('lint:html')(lint.html)
+    )
   )
 );
 
 gulp.task(
   'lint:restrictions',
-  gulp.series('generate:examples:wrapped', 'lint:markup')
+  gulp.series('generate:examples:wrapped', withName('lint:markup')(lint.markup))
 );
 
 gulp.task(
   'lint',
   gulp.parallel(
-    'lint:sass',
-    'lint:spaces',
-    'lint:javascript',
-    'lint:javascript:test',
+    withName('lint:sass')(lint.sass),
+    withName('lint:spaces')(lint.spaces),
+    withName('lint:javascript')(lint.javascript),
+    withName('lint:javascript:test')(lint.javascriptTest),
     'lint:tokens'
   )
 );
@@ -187,7 +194,13 @@ gulp.task('styles:test', styles.sassTest);
 gulp.task('styles:formFactors', styles.sassFormFactors);
 gulp.task(
   'styles',
-  gulp.series(gulp.parallel('styles:sass', 'styles:test', 'styles:formFactors'))
+  gulp.series(
+    gulp.parallel(
+      withName('styles:sass')(styles.sass),
+      withName('styles:test')(styles.sassTest),
+      withName('styles:formFactors')(styles.sassFormFactors)
+    )
+  )
 );
 gulp.task(
   'styles:stats',
@@ -298,7 +311,12 @@ gulp.task('travis', done => {
 
 gulp.task(
   'travis:lint:examples',
-  gulp.parallel(vnu, a11y, 'lint:markup', 'lint:html')
+  gulp.parallel(
+    vnu,
+    a11y,
+    withName('lint:markup')(lint.markup),
+    withName('lint:html')(lint.html)
+  )
 );
 
 gulp.task(

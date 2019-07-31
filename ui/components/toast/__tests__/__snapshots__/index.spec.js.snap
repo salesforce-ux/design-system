@@ -32,9 +32,7 @@ exports[`Toast renders a default toast for info 1`] = `
       className="slds-notify__close"
     >
       <button
-        aria-haspopup={undefined}
         className="slds-button slds-button_icon slds-button_icon-inverse"
-        id={undefined}
         title="Close"
       >
         <svg
@@ -101,9 +99,7 @@ exports[`Toast renders a relative toast 1`] = `
       className="slds-notify__close"
     >
       <button
-        aria-haspopup={undefined}
         className="slds-button slds-button_icon slds-button_icon-inverse"
-        id={undefined}
         title="Close"
       >
         <svg
@@ -157,9 +153,7 @@ exports[`Toast renders a success toast 1`] = `
       className="slds-notify__close"
     >
       <button
-        aria-haspopup={undefined}
         className="slds-button slds-button_icon slds-button_icon-inverse"
-        id={undefined}
         title="Close"
       >
         <svg
@@ -226,9 +220,7 @@ exports[`Toast renders a toast with an icon 1`] = `
       className="slds-notify__close"
     >
       <button
-        aria-haspopup={undefined}
         className="slds-button slds-button_icon slds-button_icon-inverse"
-        id={undefined}
         title="Close"
       >
         <svg
@@ -282,9 +274,7 @@ exports[`Toast renders a warning toast 1`] = `
       className="slds-notify__close"
     >
       <button
-        aria-haspopup={undefined}
         className="slds-button slds-button_icon slds-button_icon-inverse"
-        id={undefined}
         title="Close"
       >
         <svg
@@ -338,9 +328,7 @@ exports[`Toast renders an error toast 1`] = `
       className="slds-notify__close"
     >
       <button
-        aria-haspopup={undefined}
         className="slds-button slds-button_icon slds-button_icon-inverse"
-        id={undefined}
         title="Close"
       >
         <svg
@@ -394,9 +382,7 @@ exports[`Toast renders an info toast 1`] = `
       className="slds-notify__close"
     >
       <button
-        aria-haspopup={undefined}
         className="slds-button slds-button_icon slds-button_icon-inverse"
-        id={undefined}
         title="Close"
       >
         <svg

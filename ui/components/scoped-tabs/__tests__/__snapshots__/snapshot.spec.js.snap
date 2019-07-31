@@ -252,7 +252,6 @@ exports[`Scoped Tabs render scoped tabs with overflowing items 1`] = `
           <button
             aria-haspopup={true}
             className="slds-button"
-            disabled={undefined}
           >
             More
             <svg
@@ -266,10 +265,8 @@ exports[`Scoped Tabs render scoped tabs with overflowing items 1`] = `
           </button>
           <div
             className="slds-dropdown slds-dropdown_right"
-            style={undefined}
           >
             <ul
-              aria-label={undefined}
               className="slds-dropdown__list slds-dropdown_length-with-icon-10"
               role="menu"
             >
@@ -278,8 +275,6 @@ exports[`Scoped Tabs render scoped tabs with overflowing items 1`] = `
                 role="presentation"
               >
                 <a
-                  aria-checked={undefined}
-                  className={undefined}
                   href="javascript:void(0);"
                   role="menuitem"
                   tabIndex="-1"
@@ -297,8 +292,6 @@ exports[`Scoped Tabs render scoped tabs with overflowing items 1`] = `
                 role="presentation"
               >
                 <a
-                  aria-checked={undefined}
-                  className={undefined}
                   href="javascript:void(0);"
                   role="menuitem"
                   tabIndex="-1"
@@ -316,8 +309,6 @@ exports[`Scoped Tabs render scoped tabs with overflowing items 1`] = `
                 role="presentation"
               >
                 <a
-                  aria-checked={undefined}
-                  className={undefined}
                   href="javascript:void(0);"
                   role="menuitem"
                   tabIndex="-1"

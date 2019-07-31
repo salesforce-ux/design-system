@@ -37,6 +37,22 @@ export let examples = [
     )
   },
   {
+    id: 'attachment-file-truncate-title',
+    label: 'File with truncating title',
+    element: (
+      <div style={{ width: '20rem' }}>
+        <File
+          title="super-super-long-file-name-that-will-truncate.pdf"
+          symbol="pdf"
+          isCard
+          hasCrop
+          hasTitleCard
+          hasActions
+        />
+      </div>
+    )
+  },
+  {
     id: 'attachment-file-with-actions',
     label: 'File with actions',
     element: (

@@ -32,8 +32,9 @@ const uniqueId = (() => {
   return prefix => (prefix ? addToPrefix(prefix) : idCounter++);
 })();
 
-// Get a component example in doc block from the exported states and examples objects
-export const getDisplayElementById = (collection, id) => {
+// Get a component example object from the exported states and examples objects
+// To retrieve a specific property value from the object, pass in its key as an argument
+export const getDisplayExampleById = (collection, id, key) => {
   if (
     !(
       Array.isArray(collection) &&
@@ -52,11 +53,19 @@ export const getDisplayElementById = (collection, id) => {
 
   const elementObj = collection.filter(example => example.id === id);
   if (elementObj && elementObj[0]) {
-    return elementObj[0].element;
+    return elementObj[0][key] || elementObj[0];
   } else {
     throw new Error(`No display element with id "${id}" found`);
   }
 };
+
+// Get a component example in doc block from the exported states and examples objects
+export const getDisplayElementById = (collection, id) =>
+  getDisplayExampleById(collection, id, 'element');
+
+// Get a component example's styles in doc block from the exported states and examples objects
+export const getDemoStylesById = (collection, id) =>
+  getDisplayExampleById(collection, id, 'demoStyles');
 
 /**
  * @desc Get all examples for a single component by type
@@ -71,19 +80,18 @@ export const getDisplayCollectionsByType = (object, types) => {
       if (object.hasOwnProperty(type)) {
         if (Array.isArray(object[type])) {
           object[type].map(element => {
-            let newElement = {};
-            newElement.component = getDisplayElementById(
-              object[type],
-              element.id
-            );
-            newElement.label = element.label;
-            return collection.push(newElement);
+            const { demoStyles, label } = element;
+            return collection.push({
+              component: getDisplayElementById(object[type], element.id),
+              label,
+              demoStyles
+            });
           });
         } else {
-          let newElement = {};
-          newElement.label = 'Default';
-          newElement.component = object[type];
-          collection.push(newElement);
+          collection.push({
+            label: 'Default',
+            component: object[type]
+          });
         }
       }
     });

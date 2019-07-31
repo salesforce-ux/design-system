@@ -16,8 +16,6 @@ exports[`renders a coverable content visual picker 1`] = `
       className="slds-visual-picker slds-visual-picker_medium"
     >
       <input
-        defaultChecked={undefined}
-        disabled={undefined}
         id="visual-picker-7"
         name="options"
         type="radio"
@@ -73,8 +71,6 @@ exports[`renders a coverable content visual picker 1`] = `
       className="slds-visual-picker slds-visual-picker_medium"
     >
       <input
-        defaultChecked={undefined}
-        disabled={undefined}
         id="visual-picker-8"
         name="options"
         type="radio"
@@ -146,8 +142,6 @@ exports[`renders a coverable content visual picker with checkbox group 1`] = `
       className="slds-visual-picker slds-visual-picker_medium"
     >
       <input
-        defaultChecked={undefined}
-        disabled={undefined}
         id="visual-picker-11"
         name="options"
         type="checkbox"
@@ -203,8 +197,6 @@ exports[`renders a coverable content visual picker with checkbox group 1`] = `
       className="slds-visual-picker slds-visual-picker_medium"
     >
       <input
-        defaultChecked={undefined}
-        disabled={undefined}
         id="visual-picker-12"
         name="options"
         type="checkbox"
@@ -260,8 +252,6 @@ exports[`renders a coverable content visual picker with checkbox group 1`] = `
       className="slds-visual-picker slds-visual-picker_medium"
     >
       <input
-        defaultChecked={undefined}
-        disabled={undefined}
         id="visual-picker-13"
         name="options"
         type="checkbox"
@@ -333,8 +323,6 @@ exports[`renders a disabled coverable content visual picker 1`] = `
       className="slds-visual-picker slds-visual-picker_medium"
     >
       <input
-        defaultChecked={undefined}
-        disabled={undefined}
         id="visual-picker-9"
         name="options"
         type="checkbox"
@@ -390,7 +378,6 @@ exports[`renders a disabled coverable content visual picker 1`] = `
       className="slds-visual-picker slds-visual-picker_medium"
     >
       <input
-        defaultChecked={undefined}
         disabled={true}
         id="visual-picker-10"
         name="options"
@@ -463,8 +450,6 @@ exports[`renders a disabled non-coverable content visual picker 1`] = `
       className="slds-visual-picker slds-visual-picker_medium"
     >
       <input
-        defaultChecked={undefined}
-        disabled={undefined}
         id="visual-picker-17"
         name="options"
         type="radio"
@@ -521,8 +506,6 @@ exports[`renders a disabled non-coverable content visual picker 1`] = `
       className="slds-visual-picker slds-visual-picker_medium"
     >
       <input
-        defaultChecked={undefined}
-        disabled={undefined}
         id="visual-picker-18"
         name="options"
         type="radio"
@@ -579,7 +562,6 @@ exports[`renders a disabled non-coverable content visual picker 1`] = `
       className="slds-visual-picker slds-visual-picker_medium"
     >
       <input
-        defaultChecked={undefined}
         disabled={true}
         id="visual-picker-19"
         name="options"
@@ -653,8 +635,6 @@ exports[`renders a disabled vertical visual picker 1`] = `
       className="slds-visual-picker slds-visual-picker_vertical"
     >
       <input
-        defaultChecked={undefined}
-        disabled={undefined}
         id="visual-picker-4"
         name="options"
         type="radio"
@@ -697,8 +677,6 @@ exports[`renders a disabled vertical visual picker 1`] = `
       className="slds-visual-picker slds-visual-picker_vertical"
     >
       <input
-        defaultChecked={undefined}
-        disabled={undefined}
         id="visual-picker-5"
         name="options"
         type="radio"
@@ -741,7 +719,6 @@ exports[`renders a disabled vertical visual picker 1`] = `
       className="slds-visual-picker slds-visual-picker_vertical"
     >
       <input
-        defaultChecked={undefined}
         disabled={true}
         id="visual-picker-6"
         name="options"
@@ -855,8 +832,6 @@ exports[`renders a non-coverable content visual picker 1`] = `
       className="slds-visual-picker slds-visual-picker_medium"
     >
       <input
-        defaultChecked={undefined}
-        disabled={undefined}
         id="visual-picker-14"
         name="options"
         type="radio"
@@ -913,8 +888,6 @@ exports[`renders a non-coverable content visual picker 1`] = `
       className="slds-visual-picker slds-visual-picker_medium"
     >
       <input
-        defaultChecked={undefined}
-        disabled={undefined}
         id="visual-picker-15"
         name="options"
         type="radio"
@@ -971,8 +944,6 @@ exports[`renders a non-coverable content visual picker 1`] = `
       className="slds-visual-picker slds-visual-picker_medium"
     >
       <input
-        defaultChecked={undefined}
-        disabled={undefined}
         id="visual-picker-16"
         name="options"
         type="radio"
@@ -1045,8 +1016,6 @@ exports[`renders a vertical visual picker 1`] = `
       className="slds-visual-picker slds-visual-picker_vertical"
     >
       <input
-        defaultChecked={undefined}
-        disabled={undefined}
         id="visual-picker-1"
         name="options"
         type="radio"
@@ -1089,8 +1058,6 @@ exports[`renders a vertical visual picker 1`] = `
       className="slds-visual-picker slds-visual-picker_vertical"
     >
       <input
-        defaultChecked={undefined}
-        disabled={undefined}
         id="visual-picker-2"
         name="options"
         type="radio"
@@ -1133,8 +1100,6 @@ exports[`renders a vertical visual picker 1`] = `
       className="slds-visual-picker slds-visual-picker_vertical"
     >
       <input
-        defaultChecked={undefined}
-        disabled={undefined}
         id="visual-picker-3"
         name="options"
         type="radio"

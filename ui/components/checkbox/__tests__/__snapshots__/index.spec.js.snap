@@ -2,12 +2,7 @@
 
 exports[`Checkbox Primitive renders primitive checkbox 1`] = `
 <input
-  aria-describedby={undefined}
-  defaultChecked={undefined}
-  disabled={undefined}
-  id={undefined}
   name="label"
-  required={undefined}
   type="checkbox"
   value="option"
 />
@@ -15,12 +10,8 @@ exports[`Checkbox Primitive renders primitive checkbox 1`] = `
 
 exports[`Checkbox Primitive renders primitive checkbox that is disabled 1`] = `
 <input
-  aria-describedby={undefined}
-  defaultChecked={undefined}
   disabled={true}
-  id={undefined}
   name="label"
-  required={undefined}
   type="checkbox"
   value="option"
 />
@@ -28,10 +19,6 @@ exports[`Checkbox Primitive renders primitive checkbox that is disabled 1`] = `
 
 exports[`Checkbox Primitive renders primitive checkbox that is required 1`] = `
 <input
-  aria-describedby={undefined}
-  defaultChecked={undefined}
-  disabled={undefined}
-  id={undefined}
   name="label"
   required={true}
   type="checkbox"
@@ -41,12 +28,7 @@ exports[`Checkbox Primitive renders primitive checkbox that is required 1`] = `
 
 exports[`Checkbox Primitive renders primitive checkbox with a name 1`] = `
 <input
-  aria-describedby={undefined}
-  defaultChecked={undefined}
-  disabled={undefined}
-  id={undefined}
   name="checkbox-name"
-  required={undefined}
   type="checkbox"
   value="option"
 />
@@ -54,12 +36,7 @@ exports[`Checkbox Primitive renders primitive checkbox with a name 1`] = `
 
 exports[`Checkbox Primitive renders primitive checkbox with a value 1`] = `
 <input
-  aria-describedby={undefined}
-  defaultChecked={undefined}
-  disabled={undefined}
-  id={undefined}
   name="label"
-  required={undefined}
   type="checkbox"
   value="checkbox-value"
 />
@@ -67,12 +44,8 @@ exports[`Checkbox Primitive renders primitive checkbox with a value 1`] = `
 
 exports[`Checkbox Primitive renders primitive checkbox with an ID 1`] = `
 <input
-  aria-describedby={undefined}
-  defaultChecked={undefined}
-  disabled={undefined}
   id="checkbox-id"
   name="label"
-  required={undefined}
   type="checkbox"
   value="option"
 />
@@ -81,11 +54,7 @@ exports[`Checkbox Primitive renders primitive checkbox with an ID 1`] = `
 exports[`Checkbox Primitive renders primitive checkbox with an aria-describedby error ID 1`] = `
 <input
   aria-describedby="error-id"
-  defaultChecked={undefined}
-  disabled={undefined}
-  id={undefined}
   name="label"
-  required={undefined}
   type="checkbox"
   value="option"
 />
@@ -96,20 +65,15 @@ exports[`Checkbox renders checkbox 1`] = `
   className="slds-checkbox"
 >
   <input
-    aria-describedby={undefined}
     aria-labelledby={null}
-    defaultChecked={undefined}
-    disabled={undefined}
     id="checkbox-unique-id-1"
     name="options"
-    tabIndex={undefined}
     type="checkbox"
     value="checkbox-unique-id-1"
   />
   <label
     className="slds-checkbox__label"
     htmlFor="checkbox-unique-id-1"
-    id={undefined}
   >
     <span
       className="slds-checkbox_faux"
@@ -123,20 +87,16 @@ exports[`Checkbox renders checkbox that is disabled 1`] = `
   className="slds-checkbox"
 >
   <input
-    aria-describedby={undefined}
     aria-labelledby={null}
-    defaultChecked={undefined}
     disabled={true}
     id="checkbox-unique-id-5"
     name="options"
-    tabIndex={undefined}
     type="checkbox"
     value="checkbox-unique-id-5"
   />
   <label
     className="slds-checkbox__label"
     htmlFor="checkbox-unique-id-5"
-    id={undefined}
   >
     <span
       className="slds-checkbox_faux"
@@ -150,20 +110,15 @@ exports[`Checkbox renders checkbox with a hidden label 1`] = `
   className="slds-checkbox"
 >
   <input
-    aria-describedby={undefined}
     aria-labelledby={null}
-    defaultChecked={undefined}
-    disabled={undefined}
     id="checkbox-unique-id-3"
     name="options"
-    tabIndex={undefined}
     type="checkbox"
     value="checkbox-unique-id-3"
   />
   <label
     className="slds-checkbox__label"
     htmlFor="checkbox-unique-id-3"
-    id={undefined}
   >
     <span
       className="slds-checkbox_faux"
@@ -182,20 +137,15 @@ exports[`Checkbox renders checkbox with a label 1`] = `
   className="slds-checkbox"
 >
   <input
-    aria-describedby={undefined}
     aria-labelledby={null}
-    defaultChecked={undefined}
-    disabled={undefined}
     id="checkbox-unique-id-2"
     name="options"
-    tabIndex={undefined}
     type="checkbox"
     value="checkbox-unique-id-2"
   />
   <label
     className="slds-checkbox__label"
     htmlFor="checkbox-unique-id-2"
-    id={undefined}
   >
     <span
       className="slds-checkbox_faux"
@@ -214,20 +164,15 @@ exports[`Checkbox renders checkbox with help text icon 1`] = `
   className="slds-checkbox"
 >
   <input
-    aria-describedby={undefined}
     aria-labelledby={null}
-    defaultChecked={undefined}
-    disabled={undefined}
     id="checkbox-unique-id-6"
     name="options"
-    tabIndex={undefined}
     type="checkbox"
     value="checkbox-unique-id-6"
   />
   <label
     className="slds-checkbox__label"
     htmlFor="checkbox-unique-id-6"
-    id={undefined}
   >
     <span
       className="slds-checkbox_faux"
@@ -237,10 +182,7 @@ exports[`Checkbox renders checkbox with help text icon 1`] = `
     className="slds-form-element__icon"
   >
     <button
-      aria-describedby={undefined}
-      aria-haspopup={undefined}
       className="slds-button slds-button_icon"
-      id={undefined}
     >
       <svg
         aria-hidden={true}
@@ -265,20 +207,15 @@ exports[`Checkbox renders checkbox with required asterisk 1`] = `
   className="slds-checkbox"
 >
   <input
-    aria-describedby={undefined}
     aria-labelledby={null}
-    defaultChecked={undefined}
-    disabled={undefined}
     id="checkbox-unique-id-4"
     name="options"
-    tabIndex={undefined}
     type="checkbox"
     value="checkbox-unique-id-4"
   />
   <label
     className="slds-checkbox__label"
     htmlFor="checkbox-unique-id-4"
-    id={undefined}
   >
     <span
       className="slds-checkbox_faux"
@@ -290,12 +227,10 @@ exports[`Checkbox renders checkbox with required asterisk 1`] = `
 exports[`Form Element Standalone Checkbox renders = form element standalone checkbox with an aria-describedby error ID with label and error text 1`] = `
 <div
   className="slds-form-element slds-has-error"
-  role={undefined}
 >
   <label
     className="slds-form-element__label"
     htmlFor="checkbox-unique-id-13"
-    id={undefined}
   >
     Form Element Label
   </label>
@@ -307,11 +242,8 @@ exports[`Form Element Standalone Checkbox renders = form element standalone chec
     >
       <input
         aria-describedby="error-unique-id-7"
-        defaultChecked={undefined}
-        disabled={undefined}
         id="checkbox-unique-id-13"
         name="label"
-        required={undefined}
         type="checkbox"
         value="option"
       />
@@ -332,12 +264,10 @@ exports[`Form Element Standalone Checkbox renders = form element standalone chec
 exports[`Form Element Standalone Checkbox renders form element standalone checkbox that is checked with a label 1`] = `
 <div
   className="slds-form-element"
-  role={undefined}
 >
   <label
     className="slds-form-element__label"
     htmlFor="checkbox-unique-id-14"
-    id={undefined}
   >
     Form Element Label
   </label>
@@ -348,12 +278,9 @@ exports[`Form Element Standalone Checkbox renders form element standalone checkb
       className="slds-checkbox slds-checkbox_standalone"
     >
       <input
-        aria-describedby={undefined}
         defaultChecked={true}
-        disabled={undefined}
         id="checkbox-unique-id-14"
         name="label"
-        required={undefined}
         type="checkbox"
         value="option"
       />
@@ -368,12 +295,10 @@ exports[`Form Element Standalone Checkbox renders form element standalone checkb
 exports[`Form Element Standalone Checkbox renders form element standalone checkbox that is disabled with a label 1`] = `
 <div
   className="slds-form-element"
-  role={undefined}
 >
   <label
     className="slds-form-element__label"
     htmlFor="checkbox-unique-id-11"
-    id={undefined}
   >
     Form Element Label
   </label>
@@ -384,12 +309,9 @@ exports[`Form Element Standalone Checkbox renders form element standalone checkb
       className="slds-checkbox slds-checkbox_standalone"
     >
       <input
-        aria-describedby={undefined}
-        defaultChecked={undefined}
         disabled={true}
         id="checkbox-unique-id-11"
         name="label"
-        required={undefined}
         type="checkbox"
         value="option"
       />
@@ -404,12 +326,10 @@ exports[`Form Element Standalone Checkbox renders form element standalone checkb
 exports[`Form Element Standalone Checkbox renders form element standalone checkbox that is required with a label 1`] = `
 <div
   className="slds-form-element"
-  role={undefined}
 >
   <label
     className="slds-form-element__label"
     htmlFor="checkbox-unique-id-12"
-    id={undefined}
   >
     <abbr
       className="slds-required"
@@ -427,9 +347,6 @@ exports[`Form Element Standalone Checkbox renders form element standalone checkb
       className="slds-checkbox slds-checkbox_standalone"
     >
       <input
-        aria-describedby={undefined}
-        defaultChecked={undefined}
-        disabled={undefined}
         id="checkbox-unique-id-12"
         name="label"
         required={true}
@@ -447,12 +364,10 @@ exports[`Form Element Standalone Checkbox renders form element standalone checkb
 exports[`Form Element Standalone Checkbox renders form element standalone checkbox with a label 1`] = `
 <div
   className="slds-form-element"
-  role={undefined}
 >
   <label
     className="slds-form-element__label"
     htmlFor="checkbox-unique-id-7"
-    id={undefined}
   >
     Form Element Label
   </label>
@@ -463,12 +378,8 @@ exports[`Form Element Standalone Checkbox renders form element standalone checkb
       className="slds-checkbox slds-checkbox_standalone"
     >
       <input
-        aria-describedby={undefined}
-        defaultChecked={undefined}
-        disabled={undefined}
         id="checkbox-unique-id-7"
         name="label"
-        required={undefined}
         type="checkbox"
         value="option"
       />
@@ -483,12 +394,10 @@ exports[`Form Element Standalone Checkbox renders form element standalone checkb
 exports[`Form Element Standalone Checkbox renders form element standalone checkbox with a name and a label 1`] = `
 <div
   className="slds-form-element"
-  role={undefined}
 >
   <label
     className="slds-form-element__label"
     htmlFor="checkbox-unique-id-9"
-    id={undefined}
   >
     Form Element Label
   </label>
@@ -499,12 +408,8 @@ exports[`Form Element Standalone Checkbox renders form element standalone checkb
       className="slds-checkbox slds-checkbox_standalone"
     >
       <input
-        aria-describedby={undefined}
-        defaultChecked={undefined}
-        disabled={undefined}
         id="checkbox-unique-id-9"
         name="checkbox-name"
-        required={undefined}
         type="checkbox"
         value="option"
       />
@@ -519,12 +424,10 @@ exports[`Form Element Standalone Checkbox renders form element standalone checkb
 exports[`Form Element Standalone Checkbox renders form element standalone checkbox with a value and a label 1`] = `
 <div
   className="slds-form-element"
-  role={undefined}
 >
   <label
     className="slds-form-element__label"
     htmlFor="checkbox-unique-id-10"
-    id={undefined}
   >
     Form Element Label
   </label>
@@ -535,12 +438,8 @@ exports[`Form Element Standalone Checkbox renders form element standalone checkb
       className="slds-checkbox slds-checkbox_standalone"
     >
       <input
-        aria-describedby={undefined}
-        defaultChecked={undefined}
-        disabled={undefined}
         id="checkbox-unique-id-10"
         name="label"
-        required={undefined}
         type="checkbox"
         value="checkbox-value"
       />
@@ -555,12 +454,10 @@ exports[`Form Element Standalone Checkbox renders form element standalone checkb
 exports[`Form Element Standalone Checkbox renders form element standalone checkbox with an ID and a label 1`] = `
 <div
   className="slds-form-element"
-  role={undefined}
 >
   <label
     className="slds-form-element__label"
     htmlFor="checkbox-unique-id-8"
-    id={undefined}
   >
     Form Element Label
   </label>
@@ -571,12 +468,8 @@ exports[`Form Element Standalone Checkbox renders form element standalone checkb
       className="slds-checkbox slds-checkbox_standalone"
     >
       <input
-        aria-describedby={undefined}
-        defaultChecked={undefined}
-        disabled={undefined}
         id="checkbox-unique-id-8"
         name="label"
-        required={undefined}
         type="checkbox"
         value="option"
       />
@@ -593,12 +486,8 @@ exports[`Standalone Checkbox renders primitive checkbox that is disabled 1`] = `
   className="slds-checkbox slds-checkbox_standalone"
 >
   <input
-    aria-describedby={undefined}
-    defaultChecked={undefined}
     disabled={true}
-    id={undefined}
     name="label"
-    required={undefined}
     type="checkbox"
     value="option"
   />
@@ -613,10 +502,6 @@ exports[`Standalone Checkbox renders primitive checkbox that is required 1`] = `
   className="slds-checkbox slds-checkbox_standalone"
 >
   <input
-    aria-describedby={undefined}
-    defaultChecked={undefined}
-    disabled={undefined}
-    id={undefined}
     name="label"
     required={true}
     type="checkbox"
@@ -633,12 +518,7 @@ exports[`Standalone Checkbox renders primitive checkbox with a name 1`] = `
   className="slds-checkbox slds-checkbox_standalone"
 >
   <input
-    aria-describedby={undefined}
-    defaultChecked={undefined}
-    disabled={undefined}
-    id={undefined}
     name="checkbox-name"
-    required={undefined}
     type="checkbox"
     value="option"
   />
@@ -653,12 +533,7 @@ exports[`Standalone Checkbox renders primitive checkbox with a value 1`] = `
   className="slds-checkbox slds-checkbox_standalone"
 >
   <input
-    aria-describedby={undefined}
-    defaultChecked={undefined}
-    disabled={undefined}
-    id={undefined}
     name="label"
-    required={undefined}
     type="checkbox"
     value="checkbox-value"
   />
@@ -673,12 +548,8 @@ exports[`Standalone Checkbox renders primitive checkbox with an ID 1`] = `
   className="slds-checkbox slds-checkbox_standalone"
 >
   <input
-    aria-describedby={undefined}
-    defaultChecked={undefined}
-    disabled={undefined}
     id="checkbox-id"
     name="label"
-    required={undefined}
     type="checkbox"
     value="option"
   />
@@ -694,11 +565,7 @@ exports[`Standalone Checkbox renders primitive checkbox with an aria-describedby
 >
   <input
     aria-describedby="error-id"
-    defaultChecked={undefined}
-    disabled={undefined}
-    id={undefined}
     name="label"
-    required={undefined}
     type="checkbox"
     value="option"
   />
@@ -713,12 +580,7 @@ exports[`Standalone Checkbox renders standalone checkbox 1`] = `
   className="slds-checkbox slds-checkbox_standalone"
 >
   <input
-    aria-describedby={undefined}
-    defaultChecked={undefined}
-    disabled={undefined}
-    id={undefined}
     name="label"
-    required={undefined}
     type="checkbox"
     value="option"
   />

@@ -58,13 +58,10 @@ export const Row = props => (
         assistiveText={
           props.isExpanded ? `Expand ${props.name}` : `Collapse ${props.name}`
         }
-        className={classNames(
-          'slds-button_icon slds-button_icon-x-small slds-m-right_x-small',
-          {
-            'slds-is-disabled':
-              props.isExpanded === null || props.isExpanded === undefined
-          }
-        )}
+        className={classNames('slds-button_icon-x-small slds-m-right_x-small', {
+          'slds-is-disabled':
+            props.isExpanded === null || props.isExpanded === undefined
+        })}
         iconClassName="slds-button__icon_small"
         symbol="chevronright"
         tabIndex="-1"

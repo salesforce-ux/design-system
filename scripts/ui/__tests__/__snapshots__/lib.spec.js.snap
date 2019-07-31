@@ -8,10 +8,6 @@ Object {
   "buttons": Array [],
   "data-tables": Array [],
   "floats": Array [
-    "<div class=\\"slds-clearfix\\"><div class=\\"slds-float_left\\"><p>I’m floooaaaating</p></div></div>",
-    "<div class=\\"slds-clearfix\\"><div class=\\"slds-float_right\\"><p>I’m floooaaaating</p></div></div>",
-    "<div class=\\"slds-float_none\\"><p>I’m not floooaaaating</p></div>",
-    "<div class=\\"slds-clearfix\\"><div class=\\"slds-float_left\\"><p>I’m floooaaaating</p></div><div class=\\"slds-float_right\\"><p>I’m floooaaaating</p></div></div>",
     "<div><p>I’m floooaaaating</p></div>",
     "<div class=\\"slds-clearfix\\"><div class=\\"slds-float_left\\"><p>I’m floooaaaating</p></div></div>",
     "<div class=\\"slds-clearfix\\"><div class=\\"slds-float_right\\"><p>I’m floooaaaating</p></div></div>",
@@ -23,6 +19,10 @@ Object {
     "<div class=\\"slds-float_none\\"><p>I’m not floooaaaating</p></div>",
     "<div class=\\"slds-clearfix\\"><div class=\\"slds-float_left\\"><p>I’m floooaaaating</p></div><div class=\\"slds-float_right\\"><p>I’m floooaaaating</p></div></div>",
     "<div><p>I’m floooaaaating</p></div>",
+    "<div class=\\"slds-clearfix\\"><div class=\\"slds-float_left\\"><p>I’m floooaaaating</p></div></div>",
+    "<div class=\\"slds-clearfix\\"><div class=\\"slds-float_right\\"><p>I’m floooaaaating</p></div></div>",
+    "<div class=\\"slds-float_none\\"><p>I’m not floooaaaating</p></div>",
+    "<div class=\\"slds-clearfix\\"><div class=\\"slds-float_left\\"><p>I’m floooaaaating</p></div><div class=\\"slds-float_right\\"><p>I’m floooaaaating</p></div></div>",
   ],
 }
 `;

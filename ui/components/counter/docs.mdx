@@ -1,0 +1,55 @@
+import CodeView from '../../../shared/components/CodeView';
+import CodeBlock from '../../../shared/components/CodeBlock';
+import Blockquote from '../../../shared/components/Blockquote';
+import * as CounterExamples from './base/example';
+import { getDisplayElementById } from '../../shared/helpers';
+
+<div className="doc lead">
+  The Counter allows a user to increase or decrease a numerical value.
+</div>
+
+## About Counter
+  A Counter is a [Form Element](/components/form-element) containing a label and a number [Input](/components/input) that can be increased or decreased using companion [Button Icons](/components/button-icons).
+
+### Accessibility
+  To ensure the Counter is fully accessible, follow all guidelines for Button Icons and the error state on Inputs.
+
+## Base
+
+<CodeView>
+  {CounterExamples.default}
+</CodeView>
+
+### States
+
+#### Required
+
+<CodeView>
+  {getDisplayElementById(CounterExamples.states, 'required')}
+</CodeView>
+
+#### Error
+
+<CodeView>
+  {getDisplayElementById(CounterExamples.states, 'error')}
+</CodeView>
+
+#### Disabled
+
+<CodeView>
+  {getDisplayElementById(CounterExamples.states, 'disabled')}
+</CodeView>
+
+#### Read-only
+
+<CodeView>
+  {getDisplayElementById(CounterExamples.states, 'read-only')}
+</CodeView>
+
+### Examples
+
+#### Centered
+
+<CodeView>
+  {getDisplayElementById(CounterExamples.examples, 'centered')}
+</CodeView>

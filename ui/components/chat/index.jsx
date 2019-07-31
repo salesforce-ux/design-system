@@ -204,14 +204,12 @@ export const ChatEvent = props => (
     })}
     role={props.hasError && 'alert'}
   >
-    <div className="slds-chat-event__rule" />
     <div className="slds-chat-event__body">
       <ChatIcon symbol={props.symbol} assistiveText={props.iconAssistiveText} />
       <p>
         {props.children} &bull; {props.timeStamp}
       </p>
     </div>
-    <div className="slds-chat-event__rule" />
     {props.agentMessage && (
       <div className="slds-chat-event__agent-message">{props.agentMessage}</div>
     )}

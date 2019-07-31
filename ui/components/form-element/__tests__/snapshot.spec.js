@@ -16,10 +16,10 @@ import {
   FieldsetWrapper,
   Legend,
   FormElement
-} from '../';
-import { CompoundFormElement, CompoundFormRow } from '../compound/';
-import Input from '../../input/';
-import ButtonIcon from '../../button-icons/';
+} from '..';
+import { CompoundFormElement, CompoundFormRow } from '../compound';
+import Input from '../../input';
+import ButtonIcon from '../../button-icons';
 import SvgIcon from '../../../shared/svg-icon';
 import * as StackedExamples from '../stacked/example';
 import * as HorizontalExamples from '../horizontal/example';

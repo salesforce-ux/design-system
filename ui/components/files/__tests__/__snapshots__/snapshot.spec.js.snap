@@ -607,9 +607,7 @@ exports[`File Component renders image with actions and no title 1`] = `
           role="group"
         >
           <button
-            aria-haspopup={undefined}
             className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-button_icon-inverse"
-            id={undefined}
             title="Download"
           >
             <svg
@@ -629,7 +627,6 @@ exports[`File Component renders image with actions and no title 1`] = `
           <button
             aria-haspopup="true"
             className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-button_icon-inverse"
-            id={undefined}
             title="More Actions"
           >
             <svg
@@ -759,9 +756,7 @@ exports[`File Component renders image with title and actions 1`] = `
         role="group"
       >
         <button
-          aria-haspopup={undefined}
           className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small"
-          id={undefined}
           title="Download"
         >
           <svg
@@ -781,7 +776,6 @@ exports[`File Component renders image with title and actions 1`] = `
         <button
           aria-haspopup="true"
           className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small"
-          id={undefined}
           title="More Actions"
         >
           <svg

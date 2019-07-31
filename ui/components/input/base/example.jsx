@@ -209,6 +209,15 @@ export let examples = [
     )
   },
   {
+    id: 'email-input',
+    label: 'Email Input',
+    element: (
+      <FormElement labelContent="Email" inputId="input-email">
+        <Input id="input-email" type="email" placeholder="E-Mail" />
+      </FormElement>
+    )
+  },
+  {
     id: 'fixed-text',
     label: 'Fixed text',
     element: (
@@ -269,32 +278,6 @@ export let examples = [
           <Input id={inputId} placeholder={placeholderText} />
         </FormElement>
       </div>
-    )
-  },
-  {
-    id: 'increment-decrement-counter',
-    label: 'Counter',
-    element: (
-      <FormElement
-        formElementClassName="slds-text-align_center"
-        labelContent={inputLabel}
-        inputId={inputId}
-        labelClassName="slds-m-right_none"
-      >
-        <ButtonIcon
-          className="slds-button_icon-small slds-input__button_decrement"
-          symbol="ban"
-          assistiveText={'Decrement counter'}
-          title={'Decrement counter'}
-        />
-        <Input id={inputId} type="number" placeholder={'1'} />
-        <ButtonIcon
-          className="slds-button_icon-small slds-input__button_increment"
-          symbol="new"
-          assistiveText={'Increment counter'}
-          title={'Increment counter'}
-        />
-      </FormElement>
     )
   }
 ];

@@ -21,8 +21,8 @@ storiesOf('Components/Map', module).add('Kitchen Sink', () =>
         component={component}
         label={label}
         key={`kitchen-sink-${label}-${idx}`}
-        styles={{ transform: 'translate3d(0,0,0)', minHeight: '500px' }}
-        fullBleed
+        styles={{ minHeight: '500px' }}
+        isFullBleed
       />
     ))
   )

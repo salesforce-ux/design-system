@@ -25,10 +25,7 @@ exports[`render Panel component render Base Panel 1`] = `
         Panel Header
       </h2>
       <button
-        aria-haspopup={undefined}
         className="slds-button slds-button_icon slds-button_icon-small slds-panel__close"
-        id={undefined}
-        onClick={undefined}
         title="Collapse Panel Header"
       >
         <svg
@@ -80,10 +77,7 @@ exports[`render Panel component render Base Panel animated 1`] = `
         Panel Header
       </h2>
       <button
-        aria-haspopup={undefined}
         className="slds-button slds-button_icon slds-button_icon-small slds-panel__close"
-        id={undefined}
-        onClick={undefined}
         title="Collapse Panel Header"
       >
         <svg
@@ -135,10 +129,7 @@ exports[`render Panel component render Base Panel drawer 1`] = `
         Panel Header
       </h2>
       <button
-        aria-haspopup={undefined}
         className="slds-button slds-button_icon slds-button_icon-small slds-panel__close"
-        id={undefined}
-        onClick={undefined}
         title="Collapse Panel Header"
       >
         <svg
@@ -190,10 +181,7 @@ exports[`render Panel component render Base Panel full size 1`] = `
         Panel Header
       </h2>
       <button
-        aria-haspopup={undefined}
         className="slds-button slds-button_icon slds-button_icon-small slds-panel__close"
-        id={undefined}
-        onClick={undefined}
         title="Collapse Panel Header"
       >
         <svg
@@ -245,10 +233,7 @@ exports[`render Panel component render Base Panel large size 1`] = `
         Panel Header
       </h2>
       <button
-        aria-haspopup={undefined}
         className="slds-button slds-button_icon slds-button_icon-small slds-panel__close"
-        id={undefined}
-        onClick={undefined}
         title="Collapse Panel Header"
       >
         <svg
@@ -300,10 +285,7 @@ exports[`render Panel component render Base Panel medium size 1`] = `
         Panel Header
       </h2>
       <button
-        aria-haspopup={undefined}
         className="slds-button slds-button_icon slds-button_icon-small slds-panel__close"
-        id={undefined}
-        onClick={undefined}
         title="Collapse Panel Header"
       >
         <svg
@@ -355,10 +337,7 @@ exports[`render Panel component render Base Panel small size 1`] = `
         Panel Header
       </h2>
       <button
-        aria-haspopup={undefined}
         className="slds-button slds-button_icon slds-button_icon-small slds-panel__close"
-        id={undefined}
-        onClick={undefined}
         title="Collapse Panel Header"
       >
         <svg
@@ -404,10 +383,7 @@ exports[`render Panel component render Base Panel with left position drill in 1`
       className="slds-panel__header"
     >
       <button
-        aria-haspopup={undefined}
         className="slds-button slds-button_icon slds-button_icon-small slds-panel__back"
-        id={undefined}
-        onClick={undefined}
         title="Collapse Panel Header"
       >
         <svg
@@ -431,10 +407,7 @@ exports[`render Panel component render Base Panel with left position drill in 1`
         Panel Header
       </h2>
       <button
-        aria-haspopup={undefined}
         className="slds-button slds-button_icon slds-button_icon-small slds-panel__close"
-        id={undefined}
-        onClick={undefined}
         title="Collapse Panel Header"
       >
         <svg
@@ -480,10 +453,7 @@ exports[`render Panel component render Base Panel with right position drill in 1
       className="slds-panel__header"
     >
       <button
-        aria-haspopup={undefined}
         className="slds-button slds-button_icon slds-button_icon-small slds-panel__back"
-        id={undefined}
-        onClick={undefined}
         title="Collapse Panel Header"
       >
         <svg
@@ -507,10 +477,7 @@ exports[`render Panel component render Base Panel with right position drill in 1
         Panel Header
       </h2>
       <button
-        aria-haspopup={undefined}
         className="slds-button slds-button_icon slds-button_icon-small slds-panel__close"
-        id={undefined}
-        onClick={undefined}
         title="Collapse Panel Header"
       >
         <svg
@@ -562,10 +529,7 @@ exports[`render Panel component render Base Panel x-large size 1`] = `
         Panel Header
       </h2>
       <button
-        aria-haspopup={undefined}
         className="slds-button slds-button_icon slds-button_icon-small slds-panel__close"
-        id={undefined}
-        onClick={undefined}
         title="Collapse Panel Header"
       >
         <svg
@@ -617,10 +581,7 @@ exports[`render Panel component renders Base Panel with centered title text 1`] 
         Panel Header
       </h2>
       <button
-        aria-haspopup={undefined}
         className="slds-button slds-button_icon slds-button_icon-small slds-panel__close"
-        id={undefined}
-        onClick={undefined}
         title="Collapse Panel Header"
       >
         <svg
@@ -672,10 +633,7 @@ exports[`render Panel component renders Base Panel with long header title 1`] = 
         Panel Header with a really, really long title name
       </h2>
       <button
-        aria-haspopup={undefined}
         className="slds-button slds-button_icon slds-button_icon-small slds-panel__close"
-        id={undefined}
-        onClick={undefined}
         title="Collapse Panel Header with a really, really long title name"
       >
         <svg

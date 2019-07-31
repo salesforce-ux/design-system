@@ -3,6 +3,11 @@
 # Cards Release Notes
 
 <!-- ## [Unreleased] -->
+## 2.10.0
+
+### Changed
+- Visually remove border and set border-radius to zero on touch devices
+
 ## 2.8.1
 
 ### Fixed

@@ -105,7 +105,7 @@ const MultiSelectLabel = props => {
     >
       {isRequired && (
         <abbr className="slds-required" title="required">
-          * {' '}
+          *{' '}
         </abbr>
       )}
       {children}
@@ -212,7 +212,8 @@ const Option = props => (
         }
       )}
       aria-selected={props.option.isSelected}
-      draggable="true"
+      aria-disabled={props.option.locked}
+      draggable={!props.option.locked}
       role="option"
       tabIndex={props.option.tabIndex}
     >
@@ -223,9 +224,12 @@ const Option = props => (
       </span>
       {props.option.locked && (
         <span className="slds-media__figure slds-media__figure_reverse">
-          <span className="slds-icon_container" title="Locked item">
+          <span
+            className="slds-icon_container slds-current-color"
+            title="Locked item"
+          >
             <SvgIcon
-              className="slds-icon slds-icon_x-small slds-icon-text-default"
+              className="slds-icon slds-icon_x-small"
               sprite="utility"
               symbol="lock"
             />

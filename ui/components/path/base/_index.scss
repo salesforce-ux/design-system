@@ -355,6 +355,10 @@
 
       .slds-path__link {
         height: calc(#{$height-sales-path} - #{rem(4px)});
+
+        @include touch-device {
+          height: calc(#{$height-tappable} - #{rem(4px)});
+        }
       }
     }
 
@@ -411,6 +415,10 @@
 
       .slds-path__link {
         height: $height-sales-path;
+
+        @include touch-device {
+          height: $height-tappable;
+        }
       }
     }
 
@@ -488,6 +496,11 @@
   min-width: 5rem;
   text-align: center;
 
+  @include touch-device {
+    margin-left: rem(8px);
+    margin-right: rem(9px);
+  }
+
   &:before,
   &:after {
     content: '';
@@ -495,18 +508,31 @@
     left: rem(-4px);
     right: rem(-5px);
     cursor: pointer;
+
+    @include touch-device {
+      left: rem(-5px);
+      right: rem(-6px);
+    }
   }
 
   &:before {
     top: 0;
     height: calc((#{$height-sales-path} / 2) + 0.0625rem);
     transform: skew(28deg) translate3d(0, 0, 0);
+
+    @include touch-device {
+      height: calc((#{$height-tappable} / 2) + 0.0625rem);
+    }
   }
 
   &:after {
     bottom: 0;
     height: ($height-sales-path / 2);
     transform: skew(-30deg) translate3d(0, 0, 0);
+
+    @include touch-device {
+      height: ($height-tappable / 2);
+    }
   }
 
   &:first-child {
@@ -518,6 +544,10 @@
     &:before,
     &:after {
       left: rem(18px);
+
+      @include touch-device {
+        left: rem(26px);
+      }
     }
   }
 
@@ -534,6 +564,10 @@
     &:before,
     &:after {
       right: rem(10px);
+
+      @include touch-device {
+        right: rem(18px);
+      }
     }
   }
 
@@ -600,6 +634,10 @@
 
   &:focus {
     outline: 0;
+  }
+
+  @include touch-device {
+    height: $height-tappable;
   }
 }
 

@@ -4,9 +4,7 @@ exports[`Summary-Detail renders a closed summary-detail action 1`] = `
 <button
   aria-controls="test-id-4"
   aria-expanded="false"
-  aria-haspopup={undefined}
   className="slds-button slds-button_icon slds-m-right_x-small"
-  id={undefined}
   title="Toggle details for Summary Title"
 >
   <svg
@@ -29,9 +27,7 @@ exports[`Summary-Detail renders an open summary-detail action 1`] = `
 <button
   aria-controls="test-id-3"
   aria-expanded="true"
-  aria-haspopup={undefined}
   className="slds-button slds-button_icon slds-m-right_x-small"
-  id={undefined}
   title="Toggle details for Summary Title"
 >
   <svg

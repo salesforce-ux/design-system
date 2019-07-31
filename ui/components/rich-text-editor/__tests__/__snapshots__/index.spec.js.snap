@@ -3,7 +3,6 @@
 exports[`renders a RTE editor with a label 1`] = `
 <div
   className="slds-form-element"
-  role={undefined}
 >
   <span
     className="slds-form-element__label"
@@ -18,7 +17,6 @@ exports[`renders a RTE editor with a label 1`] = `
       className="slds-rich-text-editor slds-grid slds-grid_vertical slds-nowrap"
     >
       <div
-        aria-label={undefined}
         className="slds-rich-text-editor__toolbar slds-shrink-none"
         role="toolbar"
       >
@@ -29,10 +27,7 @@ exports[`renders a RTE editor with a label 1`] = `
           <li>
             <button
               aria-describedby={null}
-              aria-haspopup={undefined}
               className="slds-button slds-button_icon slds-button_icon-border-filled"
-              disabled={undefined}
-              id={undefined}
               tabIndex="0"
             >
               <svg
@@ -52,10 +47,7 @@ exports[`renders a RTE editor with a label 1`] = `
           </li>
           <li>
             <button
-              aria-haspopup={undefined}
               className="slds-button slds-button_icon slds-button_icon-border-filled"
-              disabled={undefined}
-              id={undefined}
               tabIndex="-1"
             >
               <svg
@@ -75,10 +67,7 @@ exports[`renders a RTE editor with a label 1`] = `
           </li>
           <li>
             <button
-              aria-haspopup={undefined}
               className="slds-button slds-button_icon slds-button_icon-border-filled"
-              disabled={undefined}
-              id={undefined}
               tabIndex="-1"
             >
               <svg
@@ -98,10 +87,7 @@ exports[`renders a RTE editor with a label 1`] = `
           </li>
           <li>
             <button
-              aria-haspopup={undefined}
               className="slds-button slds-button_icon slds-button_icon-border-filled"
-              disabled={undefined}
-              id={undefined}
               tabIndex="-1"
             >
               <svg
@@ -126,10 +112,7 @@ exports[`renders a RTE editor with a label 1`] = `
         >
           <li>
             <button
-              aria-haspopup={undefined}
               className="slds-button slds-button_icon slds-button_icon-border-filled"
-              disabled={undefined}
-              id={undefined}
               tabIndex="-1"
             >
               <svg
@@ -149,10 +132,7 @@ exports[`renders a RTE editor with a label 1`] = `
           </li>
           <li>
             <button
-              aria-haspopup={undefined}
               className="slds-button slds-button_icon slds-button_icon-border-filled"
-              disabled={undefined}
-              id={undefined}
               tabIndex="-1"
             >
               <svg
@@ -172,10 +152,7 @@ exports[`renders a RTE editor with a label 1`] = `
           </li>
           <li>
             <button
-              aria-haspopup={undefined}
               className="slds-button slds-button_icon slds-button_icon-border-filled"
-              disabled={undefined}
-              id={undefined}
               tabIndex="-1"
             >
               <svg
@@ -195,10 +172,7 @@ exports[`renders a RTE editor with a label 1`] = `
           </li>
           <li>
             <button
-              aria-haspopup={undefined}
               className="slds-button slds-button_icon slds-button_icon-border-filled"
-              disabled={undefined}
-              id={undefined}
               tabIndex="-1"
             >
               <svg
@@ -226,10 +200,7 @@ exports[`renders a RTE editor with a label 1`] = `
             role={null}
           >
             <button
-              aria-haspopup={undefined}
               className="slds-button slds-button_icon slds-button_icon-border-filled"
-              disabled={undefined}
-              id={undefined}
               role={null}
               tabIndex="-1"
             >
@@ -254,7 +225,6 @@ exports[`renders a RTE editor with a label 1`] = `
         className="slds-rich-text-editor__textarea slds-grid"
       >
         <div
-          aria-describedby={undefined}
           aria-label={null}
           aria-labelledby="rte-label-id-02"
           className="slds-rich-text-area__content slds-text-color_weak slds-grow"
@@ -272,7 +242,6 @@ exports[`renders a RTE editor with a label 1`] = `
 exports[`renders a RTE editor with an error 1`] = `
 <div
   className="slds-form-element"
-  role={undefined}
 >
   <div
     className="slds-form-element__control"
@@ -281,7 +250,6 @@ exports[`renders a RTE editor with an error 1`] = `
       className="slds-rich-text-editor slds-grid slds-grid_vertical slds-nowrap slds-has-error"
     >
       <div
-        aria-label={undefined}
         className="slds-rich-text-editor__toolbar slds-shrink-none"
         role="toolbar"
       >
@@ -292,10 +260,7 @@ exports[`renders a RTE editor with an error 1`] = `
           <li>
             <button
               aria-describedby={null}
-              aria-haspopup={undefined}
               className="slds-button slds-button_icon slds-button_icon-border-filled"
-              disabled={undefined}
-              id={undefined}
               tabIndex="0"
             >
               <svg
@@ -315,10 +280,7 @@ exports[`renders a RTE editor with an error 1`] = `
           </li>
           <li>
             <button
-              aria-haspopup={undefined}
               className="slds-button slds-button_icon slds-button_icon-border-filled"
-              disabled={undefined}
-              id={undefined}
               tabIndex="-1"
             >
               <svg
@@ -338,10 +300,7 @@ exports[`renders a RTE editor with an error 1`] = `
           </li>
           <li>
             <button
-              aria-haspopup={undefined}
               className="slds-button slds-button_icon slds-button_icon-border-filled"
-              disabled={undefined}
-              id={undefined}
               tabIndex="-1"
             >
               <svg
@@ -361,10 +320,7 @@ exports[`renders a RTE editor with an error 1`] = `
           </li>
           <li>
             <button
-              aria-haspopup={undefined}
               className="slds-button slds-button_icon slds-button_icon-border-filled"
-              disabled={undefined}
-              id={undefined}
               tabIndex="-1"
             >
               <svg
@@ -389,10 +345,7 @@ exports[`renders a RTE editor with an error 1`] = `
         >
           <li>
             <button
-              aria-haspopup={undefined}
               className="slds-button slds-button_icon slds-button_icon-border-filled"
-              disabled={undefined}
-              id={undefined}
               tabIndex="-1"
             >
               <svg
@@ -412,10 +365,7 @@ exports[`renders a RTE editor with an error 1`] = `
           </li>
           <li>
             <button
-              aria-haspopup={undefined}
               className="slds-button slds-button_icon slds-button_icon-border-filled"
-              disabled={undefined}
-              id={undefined}
               tabIndex="-1"
             >
               <svg
@@ -435,10 +385,7 @@ exports[`renders a RTE editor with an error 1`] = `
           </li>
           <li>
             <button
-              aria-haspopup={undefined}
               className="slds-button slds-button_icon slds-button_icon-border-filled"
-              disabled={undefined}
-              id={undefined}
               tabIndex="-1"
             >
               <svg
@@ -458,10 +405,7 @@ exports[`renders a RTE editor with an error 1`] = `
           </li>
           <li>
             <button
-              aria-haspopup={undefined}
               className="slds-button slds-button_icon slds-button_icon-border-filled"
-              disabled={undefined}
-              id={undefined}
               tabIndex="-1"
             >
               <svg
@@ -489,10 +433,7 @@ exports[`renders a RTE editor with an error 1`] = `
             role={null}
           >
             <button
-              aria-haspopup={undefined}
               className="slds-button slds-button_icon slds-button_icon-border-filled"
-              disabled={undefined}
-              id={undefined}
               role={null}
               tabIndex="-1"
             >
@@ -519,7 +460,6 @@ exports[`renders a RTE editor with an error 1`] = `
         <div
           aria-describedby="rte-error-01"
           aria-label="Compose text"
-          aria-labelledby={undefined}
           className="slds-rich-text-area__content slds-text-color_weak slds-grow"
           contentEditable="true"
           suppressContentEditableWarning={true}
@@ -541,7 +481,6 @@ exports[`renders a RTE editor with an error 1`] = `
 exports[`renders a RTE editor with an error and non-readonly combobox 1`] = `
 <div
   className="slds-form-element"
-  role={undefined}
 >
   <div
     className="slds-form-element__control"
@@ -550,7 +489,6 @@ exports[`renders a RTE editor with an error and non-readonly combobox 1`] = `
       className="slds-rich-text-editor slds-grid slds-grid_vertical slds-nowrap slds-has-error"
     >
       <div
-        aria-label={undefined}
         className="slds-rich-text-editor__toolbar slds-shrink-none"
         role="toolbar"
       >
@@ -588,20 +526,15 @@ exports[`renders a RTE editor with an error and non-readonly combobox 1`] = `
                       role="none"
                     >
                       <input
-                        aria-activedescendant={undefined}
                         aria-autocomplete={null}
                         aria-controls="family-listbox"
-                        aria-invalid={undefined}
                         autoComplete="off"
                         className="slds-input slds-combobox__input slds-combobox__input-value"
                         defaultValue="Font"
-                        disabled={undefined}
                         id="font-family"
                         placeholder="Select an Option"
                         readOnly={true}
-                        required={undefined}
                         role="textbox"
-                        tabIndex={undefined}
                         type="text"
                       />
                       <span
@@ -630,7 +563,6 @@ exports[`renders a RTE editor with an error and non-readonly combobox 1`] = `
                       role="listbox"
                     >
                       <ul
-                        aria-label={undefined}
                         className="slds-listbox slds-listbox_vertical"
                         role="presentation"
                       >
@@ -642,7 +574,6 @@ exports[`renders a RTE editor with an error and non-readonly combobox 1`] = `
                             className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-media_center"
                             id="listbox-option-unique-id-01"
                             role="option"
-                            tabIndex={undefined}
                           >
                             <span
                               className="slds-media__body"
@@ -665,7 +596,6 @@ exports[`renders a RTE editor with an error and non-readonly combobox 1`] = `
                             className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-media_center"
                             id="listbox-option-unique-id-02"
                             role="option"
-                            tabIndex={undefined}
                           >
                             <span
                               className="slds-media__body"
@@ -716,18 +646,14 @@ exports[`renders a RTE editor with an error and non-readonly combobox 1`] = `
                       role="none"
                     >
                       <input
-                        aria-activedescendant={undefined}
                         aria-autocomplete={null}
                         aria-controls="size-listbox"
-                        aria-invalid={undefined}
                         autoComplete="off"
                         className="slds-input slds-combobox__input slds-combobox__input-value"
                         defaultValue="Size"
-                        disabled={undefined}
                         id="font-size"
                         placeholder="Select an Option"
                         readOnly={true}
-                        required={undefined}
                         role="textbox"
                         tabIndex="-1"
                         type="text"
@@ -758,7 +684,6 @@ exports[`renders a RTE editor with an error and non-readonly combobox 1`] = `
                       role="listbox"
                     >
                       <ul
-                        aria-label={undefined}
                         className="slds-listbox slds-listbox_vertical"
                         role="presentation"
                       >
@@ -770,7 +695,6 @@ exports[`renders a RTE editor with an error and non-readonly combobox 1`] = `
                             className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-media_center"
                             id="listbox-option-unique-id-03"
                             role="option"
-                            tabIndex={undefined}
                           >
                             <span
                               className="slds-media__body"
@@ -793,7 +717,6 @@ exports[`renders a RTE editor with an error and non-readonly combobox 1`] = `
                             className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-media_center"
                             id="listbox-option-unique-id-04"
                             role="option"
-                            tabIndex={undefined}
                           >
                             <span
                               className="slds-media__body"
@@ -845,20 +768,14 @@ exports[`renders a RTE editor with an error and non-readonly combobox 1`] = `
                     role="none"
                   >
                     <input
-                      aria-activedescendant={undefined}
                       aria-autocomplete={null}
                       aria-controls="family-listbox"
-                      aria-invalid={undefined}
                       autoComplete="off"
                       className="slds-input slds-combobox__input slds-combobox__input-value"
                       defaultValue="Font"
-                      disabled={undefined}
                       id="font-family"
                       placeholder="Select an Option"
-                      readOnly={undefined}
-                      required={undefined}
                       role="textbox"
-                      tabIndex={undefined}
                       type="text"
                     />
                     <span
@@ -887,7 +804,6 @@ exports[`renders a RTE editor with an error and non-readonly combobox 1`] = `
                     role="listbox"
                   >
                     <ul
-                      aria-label={undefined}
                       className="slds-listbox slds-listbox_vertical"
                       role="presentation"
                     >
@@ -899,7 +815,6 @@ exports[`renders a RTE editor with an error and non-readonly combobox 1`] = `
                           className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-media_center"
                           id="listbox-option-unique-id-01"
                           role="option"
-                          tabIndex={undefined}
                         >
                           <span
                             className="slds-media__body"
@@ -922,7 +837,6 @@ exports[`renders a RTE editor with an error and non-readonly combobox 1`] = `
                           className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-media_center"
                           id="listbox-option-unique-id-02"
                           role="option"
-                          tabIndex={undefined}
                         >
                           <span
                             className="slds-media__body"
@@ -955,9 +869,7 @@ exports[`renders a RTE output with indentation 1`] = `
   className="slds-rich-text-editor__output slds-grid"
 >
   <div
-    aria-describedby={undefined}
     aria-label="Compose text"
-    aria-labelledby={undefined}
     className="slds-rich-text-area__content slds-grow"
     contentEditable="true"
     suppressContentEditableWarning={true}
@@ -993,9 +905,7 @@ exports[`renders a RTE textarea with aria-label when no label is present 1`] = `
   className="slds-rich-text-editor__textarea slds-grid"
 >
   <div
-    aria-describedby={undefined}
     aria-label="Compose text"
-    aria-labelledby={undefined}
     className="slds-rich-text-area__content slds-text-color_weak slds-grow"
     contentEditable="true"
     suppressContentEditableWarning={true}
@@ -1010,7 +920,6 @@ exports[`renders a RTE textarea with aria-labelledby 1`] = `
   className="slds-rich-text-editor__textarea slds-grid"
 >
   <div
-    aria-describedby={undefined}
     aria-label={null}
     aria-labelledby="rte-label-id-01"
     className="slds-rich-text-area__content slds-text-color_weak slds-grow"
@@ -1025,7 +934,6 @@ exports[`renders a RTE textarea with aria-labelledby 1`] = `
 exports[`renders a RTE with toolbar only, for touch devices 1`] = `
 <div
   className="slds-form-element"
-  role={undefined}
 >
   <div
     className="slds-form-element__control"
@@ -1034,7 +942,6 @@ exports[`renders a RTE with toolbar only, for touch devices 1`] = `
       className="slds-rich-text-editor slds-grid slds-grid_vertical slds-nowrap slds-rich-text-editor_toolbar-only"
     >
       <div
-        aria-label={undefined}
         className="slds-rich-text-editor__toolbar slds-shrink-none slds-rich-text-editor__toolbar_detached"
         role="toolbar"
       >
@@ -1045,10 +952,7 @@ exports[`renders a RTE with toolbar only, for touch devices 1`] = `
           <li>
             <button
               aria-describedby="bold"
-              aria-haspopup={undefined}
               className="slds-button slds-button_icon slds-button_icon-border-filled"
-              disabled={undefined}
-              id={undefined}
               tabIndex="0"
             >
               <svg
@@ -1068,10 +972,7 @@ exports[`renders a RTE with toolbar only, for touch devices 1`] = `
           </li>
           <li>
             <button
-              aria-haspopup={undefined}
               className="slds-button slds-button_icon slds-button_icon-border-filled"
-              disabled={undefined}
-              id={undefined}
               tabIndex="-1"
             >
               <svg
@@ -1091,10 +992,7 @@ exports[`renders a RTE with toolbar only, for touch devices 1`] = `
           </li>
           <li>
             <button
-              aria-haspopup={undefined}
               className="slds-button slds-button_icon slds-button_icon-border-filled"
-              disabled={undefined}
-              id={undefined}
               tabIndex="-1"
             >
               <svg
@@ -1114,10 +1012,7 @@ exports[`renders a RTE with toolbar only, for touch devices 1`] = `
           </li>
           <li>
             <button
-              aria-haspopup={undefined}
               className="slds-button slds-button_icon slds-button_icon-border-filled"
-              disabled={undefined}
-              id={undefined}
               tabIndex="-1"
             >
               <svg
@@ -1142,10 +1037,7 @@ exports[`renders a RTE with toolbar only, for touch devices 1`] = `
         >
           <li>
             <button
-              aria-haspopup={undefined}
               className="slds-button slds-button_icon slds-button_icon-border-filled"
-              disabled={undefined}
-              id={undefined}
               tabIndex="-1"
             >
               <svg
@@ -1165,10 +1057,7 @@ exports[`renders a RTE with toolbar only, for touch devices 1`] = `
           </li>
           <li>
             <button
-              aria-haspopup={undefined}
               className="slds-button slds-button_icon slds-button_icon-border-filled"
-              disabled={undefined}
-              id={undefined}
               tabIndex="-1"
             >
               <svg
@@ -1188,10 +1077,7 @@ exports[`renders a RTE with toolbar only, for touch devices 1`] = `
           </li>
           <li>
             <button
-              aria-haspopup={undefined}
               className="slds-button slds-button_icon slds-button_icon-border-filled"
-              disabled={undefined}
-              id={undefined}
               tabIndex="-1"
             >
               <svg
@@ -1211,10 +1097,7 @@ exports[`renders a RTE with toolbar only, for touch devices 1`] = `
           </li>
           <li>
             <button
-              aria-haspopup={undefined}
               className="slds-button slds-button_icon slds-button_icon-border-filled"
-              disabled={undefined}
-              id={undefined}
               tabIndex="-1"
             >
               <svg
@@ -1245,7 +1128,6 @@ exports[`renders an RTE toolbar in a narrow space 1`] = `
 >
   <div
     className="slds-form-element"
-    role={undefined}
   >
     <div
       className="slds-form-element__control"
@@ -1254,7 +1136,6 @@ exports[`renders an RTE toolbar in a narrow space 1`] = `
         className="slds-rich-text-editor slds-grid slds-grid_vertical slds-nowrap"
       >
         <div
-          aria-label={undefined}
           className="slds-rich-text-editor__toolbar slds-shrink-none"
           role="toolbar"
         >
@@ -1292,20 +1173,15 @@ exports[`renders an RTE toolbar in a narrow space 1`] = `
                         role="none"
                       >
                         <input
-                          aria-activedescendant={undefined}
                           aria-autocomplete={null}
                           aria-controls="family-listbox"
-                          aria-invalid={undefined}
                           autoComplete="off"
                           className="slds-input slds-combobox__input slds-combobox__input-value"
                           defaultValue="Font"
-                          disabled={undefined}
                           id="font-family"
                           placeholder="Select an Option"
                           readOnly={true}
-                          required={undefined}
                           role="textbox"
-                          tabIndex={undefined}
                           type="text"
                         />
                         <span
@@ -1334,7 +1210,6 @@ exports[`renders an RTE toolbar in a narrow space 1`] = `
                         role="listbox"
                       >
                         <ul
-                          aria-label={undefined}
                           className="slds-listbox slds-listbox_vertical"
                           role="presentation"
                         >
@@ -1346,7 +1221,6 @@ exports[`renders an RTE toolbar in a narrow space 1`] = `
                               className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-media_center"
                               id="listbox-option-unique-id-01"
                               role="option"
-                              tabIndex={undefined}
                             >
                               <span
                                 className="slds-media__body"
@@ -1369,7 +1243,6 @@ exports[`renders an RTE toolbar in a narrow space 1`] = `
                               className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-media_center"
                               id="listbox-option-unique-id-02"
                               role="option"
-                              tabIndex={undefined}
                             >
                               <span
                                 className="slds-media__body"
@@ -1420,18 +1293,14 @@ exports[`renders an RTE toolbar in a narrow space 1`] = `
                         role="none"
                       >
                         <input
-                          aria-activedescendant={undefined}
                           aria-autocomplete={null}
                           aria-controls="size-listbox"
-                          aria-invalid={undefined}
                           autoComplete="off"
                           className="slds-input slds-combobox__input slds-combobox__input-value"
                           defaultValue="Size"
-                          disabled={undefined}
                           id="font-size"
                           placeholder="Select an Option"
                           readOnly={true}
-                          required={undefined}
                           role="textbox"
                           tabIndex="-1"
                           type="text"
@@ -1462,7 +1331,6 @@ exports[`renders an RTE toolbar in a narrow space 1`] = `
                         role="listbox"
                       >
                         <ul
-                          aria-label={undefined}
                           className="slds-listbox slds-listbox_vertical"
                           role="presentation"
                         >
@@ -1474,7 +1342,6 @@ exports[`renders an RTE toolbar in a narrow space 1`] = `
                               className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-media_center"
                               id="listbox-option-unique-id-03"
                               role="option"
-                              tabIndex={undefined}
                             >
                               <span
                                 className="slds-media__body"
@@ -1497,7 +1364,6 @@ exports[`renders an RTE toolbar in a narrow space 1`] = `
                               className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-media_center"
                               id="listbox-option-unique-id-04"
                               role="option"
-                              tabIndex={undefined}
                             >
                               <span
                                 className="slds-media__body"
@@ -1527,10 +1393,7 @@ exports[`renders an RTE toolbar in a narrow space 1`] = `
             <li>
               <button
                 aria-describedby={null}
-                aria-haspopup={undefined}
                 className="slds-button slds-button_icon slds-button_icon-border-filled"
-                disabled={undefined}
-                id={undefined}
                 tabIndex="-1"
               >
                 <svg
@@ -1550,10 +1413,7 @@ exports[`renders an RTE toolbar in a narrow space 1`] = `
             </li>
             <li>
               <button
-                aria-haspopup={undefined}
                 className="slds-button slds-button_icon slds-button_icon-border-filled"
-                disabled={undefined}
-                id={undefined}
                 tabIndex="-1"
               >
                 <svg
@@ -1573,10 +1433,7 @@ exports[`renders an RTE toolbar in a narrow space 1`] = `
             </li>
             <li>
               <button
-                aria-haspopup={undefined}
                 className="slds-button slds-button_icon slds-button_icon-border-filled"
-                disabled={undefined}
-                id={undefined}
                 tabIndex="-1"
               >
                 <svg
@@ -1596,10 +1453,7 @@ exports[`renders an RTE toolbar in a narrow space 1`] = `
             </li>
             <li>
               <button
-                aria-haspopup={undefined}
                 className="slds-button slds-button_icon slds-button_icon-border-filled"
-                disabled={undefined}
-                id={undefined}
                 tabIndex="-1"
               >
                 <svg
@@ -1626,7 +1480,6 @@ exports[`renders an RTE toolbar in a narrow space 1`] = `
               <button
                 aria-haspopup="true"
                 className="slds-button slds-button_icon slds-button_icon-more slds-button_icon-more-filled"
-                disabled={undefined}
                 tabIndex="-1"
               >
                 <svg
@@ -1656,7 +1509,6 @@ exports[`renders an RTE toolbar in a narrow space 1`] = `
               <button
                 aria-haspopup="true"
                 className="slds-button slds-button_icon slds-button_icon-more slds-button_icon-more-filled"
-                disabled={undefined}
                 tabIndex="-1"
               >
                 <svg
@@ -1689,10 +1541,7 @@ exports[`renders an RTE toolbar in a narrow space 1`] = `
           >
             <li>
               <button
-                aria-haspopup={undefined}
                 className="slds-button slds-button_icon slds-button_icon-border-filled"
-                disabled={undefined}
-                id={undefined}
                 tabIndex="-1"
               >
                 <svg
@@ -1712,10 +1561,7 @@ exports[`renders an RTE toolbar in a narrow space 1`] = `
             </li>
             <li>
               <button
-                aria-haspopup={undefined}
                 className="slds-button slds-button_icon slds-button_icon-border-filled"
-                disabled={undefined}
-                id={undefined}
                 tabIndex="-1"
               >
                 <svg
@@ -1735,10 +1581,7 @@ exports[`renders an RTE toolbar in a narrow space 1`] = `
             </li>
             <li>
               <button
-                aria-haspopup={undefined}
                 className="slds-button slds-button_icon slds-button_icon-border-filled"
-                disabled={undefined}
-                id={undefined}
                 tabIndex="-1"
               >
                 <svg
@@ -1758,10 +1601,7 @@ exports[`renders an RTE toolbar in a narrow space 1`] = `
             </li>
             <li>
               <button
-                aria-haspopup={undefined}
                 className="slds-button slds-button_icon slds-button_icon-border-filled"
-                disabled={undefined}
-                id={undefined}
                 tabIndex="-1"
               >
                 <svg
@@ -1786,10 +1626,7 @@ exports[`renders an RTE toolbar in a narrow space 1`] = `
           >
             <li>
               <button
-                aria-haspopup={undefined}
                 className="slds-button slds-button_icon slds-button_icon-border-filled"
-                disabled={undefined}
-                id={undefined}
                 tabIndex="-1"
               >
                 <svg
@@ -1809,10 +1646,7 @@ exports[`renders an RTE toolbar in a narrow space 1`] = `
             </li>
             <li>
               <button
-                aria-haspopup={undefined}
                 className="slds-button slds-button_icon slds-button_icon-border-filled"
-                disabled={undefined}
-                id={undefined}
                 tabIndex="-1"
               >
                 <svg
@@ -1832,10 +1666,7 @@ exports[`renders an RTE toolbar in a narrow space 1`] = `
             </li>
             <li>
               <button
-                aria-haspopup={undefined}
                 className="slds-button slds-button_icon slds-button_icon-border-filled"
-                disabled={undefined}
-                id={undefined}
                 tabIndex="-1"
               >
                 <svg
@@ -1863,10 +1694,7 @@ exports[`renders an RTE toolbar in a narrow space 1`] = `
               role={null}
             >
               <button
-                aria-haspopup={undefined}
                 className="slds-button slds-button_icon slds-button_icon-border-filled"
-                disabled={undefined}
-                id={undefined}
                 role={null}
                 tabIndex="-1"
               >
@@ -1889,10 +1717,7 @@ exports[`renders an RTE toolbar in a narrow space 1`] = `
               role={null}
             >
               <button
-                aria-haspopup={undefined}
                 className="slds-button slds-button_icon slds-button_icon-border-filled"
-                disabled={undefined}
-                id={undefined}
                 role={null}
                 tabIndex="-1"
               >
@@ -1915,10 +1740,7 @@ exports[`renders an RTE toolbar in a narrow space 1`] = `
               role={null}
             >
               <button
-                aria-haspopup={undefined}
                 className="slds-button slds-button_icon slds-button_icon-border-filled"
-                disabled={undefined}
-                id={undefined}
                 role={null}
                 tabIndex="-1"
               >
@@ -1947,10 +1769,7 @@ exports[`renders an RTE toolbar in a narrow space 1`] = `
               role={null}
             >
               <button
-                aria-haspopup={undefined}
                 className="slds-button slds-button_icon slds-button_icon-border-filled"
-                disabled={undefined}
-                id={undefined}
                 role={null}
                 tabIndex="-1"
               >
@@ -1975,9 +1794,7 @@ exports[`renders an RTE toolbar in a narrow space 1`] = `
           className="slds-rich-text-editor__textarea slds-grid"
         >
           <div
-            aria-describedby={undefined}
             aria-label="Compose text"
-            aria-labelledby={undefined}
             className="slds-rich-text-area__content slds-text-color_weak slds-grow"
             contentEditable="true"
             suppressContentEditableWarning={true}

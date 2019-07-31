@@ -6,12 +6,17 @@
 
 ## 2.10.0
 
+### Fixed
+
+- Fixed poor color contrast of inverse buttons on hover and focus
+
 ### Changed
 
 - Boldened Button labels on touch devices
 - Modify display of `slds-button` to `inline-flex`
 - Center contents of contained Buttons with change of `display: inline-flex` to `slds-button`
 - On touch devices, set size of `.slds-button__icon` to `$square-icon-medium-content`
+- `justify-content: center` is now applied to the stretch variant `.slds-button_stretch`
 
 ## 2.8.0
 

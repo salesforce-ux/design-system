@@ -21,9 +21,11 @@ import showcase from '../../ui/showcase';
 import { ui } from '../../ui';
 
 const getFileName = (component, variant, item) =>
-  Immutable.List
-    .of(component.get('id'), variant.get('id'), item.get('id'))
-    .join('_');
+  Immutable.List.of(
+    component.get('id'),
+    variant.get('id'),
+    item.get('id')
+  ).join('_');
 
 const getWrappedElement = item =>
   item.get('Context')

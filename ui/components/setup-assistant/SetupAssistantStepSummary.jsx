@@ -22,7 +22,7 @@ class SetupAssistantStepSummary extends React.Component {
       referenceId,
       isOpen
     } = this.props;
-    const className = classNames(('slds-media': stepProgress));
+    const className = classNames(('slds-media', stepProgress));
 
     const stepAction =
       action &&

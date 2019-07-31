@@ -1,81 +1,82 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import Shadow from '../../shared/shadow';
+import Shadow from '../../shared/shadow/';
+import { rollupAdoptedStylesheets } from '../../shared/shadow/helpers';
 
 import common from '../common/index.scss';
 import button from './base/index.scss';
 
-class Button extends Component {
-  constructor() {
-    super();
-    this.renderLeftIcon = this.renderLeftIcon.bind(this);
-    this.renderRightIcon = this.renderRightIcon.bind(this);
-  }
+const Button = props => {
+  const {
+    variant,
+    size,
+    use,
+    children,
+    disabled,
+    position,
+    shadow,
+    customization
+  } = props;
 
-  renderLeftIcon() {
-    if (!this.props.leftIcon) return;
-    return <span className="lwc-button__icon-left">{this.props.leftIcon}</span>;
-  }
+  const css = rollupAdoptedStylesheets([common, button, customization]);
 
-  renderRightIcon() {
-    if (!this.props.rightIcon) return;
-    return (
-      <span className="lwc-button__icon-right">{this.props.rightIcon}</span>
-    );
-  }
+  const variantClassName = {
+    'lwc-button': variant !== 'reset',
+    'lwc-button_brand': variant === 'brand',
+    'lwc-button_brand-outline': variant === 'brand-outline',
+    'lwc-button_destructive': variant === 'destructive',
+    'lwc-button_destructive-text': variant === 'destructive-text',
+    'lwc-button_inverse': variant === 'inverse',
+    'lwc-button_neutral': variant === 'neutral',
+    'lwc-button_success': variant === 'success'
+  };
 
-  render() {
-    const {
-      variant,
-      size,
-      use,
-      children,
-      disabled,
-      position,
-      shadow,
-      customization
-    } = this.props;
+  const sizeClassName = {
+    'lwc-button_full-width': size === 'full-width'
+  };
 
-    const classNameList = classNames({
-      'lwc-button': variant !== 'reset',
-      'lwc-button_brand': variant === 'brand',
-      'lwc-button_brand-outline': variant === 'brand-outline',
-      'lwc-button_destructive': variant === 'destructive',
-      'lwc-button_destructive-text': variant === 'destructive-text',
-      'lwc-button_inverse': variant === 'inverse',
-      'lwc-button_neutral': variant === 'neutral',
-      'lwc-button_success': variant === 'success',
-      'lwc-button_full-width': size === 'full-width',
-      'lwc-button_start': position === 'start',
-      'lwc-button_end': position === 'end'
-    });
+  const positionClassName = {
+    'lwc-button_start': position === 'start',
+    'lwc-button_end': position === 'end'
+  };
 
-    return (
-      <Shadow
-        name="button"
-        includes={[common, button, customization]}
-        shadow={shadow}
-      >
-        <React.Fragment>
-          {use === 'a' ? (
-            <a className={classNameList} href="javascript:void(0);">
-              {this.renderLeftIcon()}
-              {children}
-              {this.renderRightIcon()}
-            </a>
-          ) : (
-            <button className={classNameList} disabled={disabled}>
-              {this.renderLeftIcon()}
-              {children}
-              {this.renderRightIcon()}
-            </button>
-          )}
-        </React.Fragment>
-      </Shadow>
-    );
-  }
-}
+  const computedClassNames = classNames(
+    variantClassName,
+    sizeClassName,
+    positionClassName
+  );
+
+  const renderLeftIcon = () => {
+    if (!props.leftIcon) return;
+    return <span className="lwc-button__icon-left">{props.leftIcon}</span>;
+  };
+
+  const renderRightIcon = () => {
+    if (!props.rightIcon) return;
+    return <span className="lwc-button__icon-right">{props.rightIcon}</span>;
+  };
+
+  return (
+    <Shadow.on name="button" includes={css} shadow={shadow}>
+      <React.Fragment>
+        {use === 'a' ? (
+          <a className={computedClassNames} href="javascript:void(0);">
+            {renderLeftIcon()}
+            {children}
+            {renderRightIcon()}
+          </a>
+        ) : (
+          <button className={computedClassNames} disabled={disabled}>
+            {renderLeftIcon()}
+            {children}
+            {renderRightIcon()}
+          </button>
+        )}
+      </React.Fragment>
+    </Shadow.on>
+  );
+};
 
 Button.propTypes = {
   // Slots
@@ -96,12 +97,14 @@ Button.propTypes = {
     'neutral',
     'reset',
     'success'
-  ]),
-  shadow: PropTypes.bool
+  ])
 };
 
 Button.defaultProps = {
   use: 'button'
 };
+
+// createElement("button", css);
+// customElements.define("lightning-button", constructor["button"]); // eslint-disable-line no-undef
 
 export default Button;

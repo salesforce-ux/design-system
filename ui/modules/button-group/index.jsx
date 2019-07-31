@@ -3,7 +3,9 @@
 
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import Shadow from '../../shared/shadow';
+import Shadow from '../../shared/shadow/';
+import { rollupAdoptedStylesheets } from '../../shared/shadow/helpers';
+
 import common from '../common/index.scss';
 import buttonGroup from './base/index.scss';
 
@@ -28,17 +30,16 @@ class ButtonGroup extends Component {
     });
   }
   render() {
-    const { shadow } = this.props;
+    const { shadow, customization } = this.props;
+
+    const css = rollupAdoptedStylesheets([common, buttonGroup, customization]);
+
     return (
-      <Shadow
-        name="button-group"
-        includes={[common, buttonGroup]}
-        shadow={shadow}
-      >
+      <Shadow.on name="button-group" includes={css} shadow={shadow}>
         <div className="lwc-button-group" role="group">
           <slot>{this.getChildren()}</slot>
         </div>
-      </Shadow>
+      </Shadow.on>
     );
   }
 }

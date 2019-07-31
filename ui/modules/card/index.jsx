@@ -6,7 +6,8 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import uniqueId from 'lodash.uniqueid';
 import Icon from '../icon';
-import Shadow from '../../shared/shadow';
+import Shadow from '../../shared/shadow/';
+import { rollupAdoptedStylesheets } from '../../shared/shadow/helpers';
 
 import common from '../common/index.scss';
 import card from './base/index.scss';
@@ -139,6 +140,8 @@ class Card extends Component {
       customization
     } = this.props;
 
+    const css = rollupAdoptedStylesheets([common, card, customization]);
+
     const computedClassNames = classNames(
       'lwc-card',
       hasBoundary && 'lwc-card_boundary',
@@ -146,17 +149,13 @@ class Card extends Component {
     );
 
     return (
-      <Shadow
-        name="card"
-        includes={[common, card, customization]}
-        shadow={shadow}
-      >
+      <Shadow.on name="card" includes={css} shadow={shadow}>
         <article className={computedClassNames}>
           {!custom
             ? [this.renderHeader(), this.renderBody(), this.renderFooter()]
             : children}
         </article>
-      </Shadow>
+      </Shadow.on>
     );
   }
 }
@@ -182,8 +181,7 @@ Card.propTypes = {
   hasActions: PropTypes.bool,
   hasPadding: PropTypes.bool,
   hasBoundary: PropTypes.bool,
-  isBare: PropTypes.bool,
-  shadow: PropTypes.bool
+  isBare: PropTypes.bool
 };
 
 export default Card;

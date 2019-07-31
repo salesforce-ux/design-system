@@ -5,7 +5,8 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import SvgIcon from '../../shared/svg-icon';
-import Shadow from '../../shared/shadow';
+import Shadow from '../../shared/shadow/';
+import { rollupAdoptedStylesheets } from '../../shared/shadow/helpers';
 
 import common from '../common/index.scss';
 import icon from './base/index.scss';
@@ -31,9 +32,12 @@ class Icon extends Component {
       size,
       color,
       boundarySize,
-      unset,
-      shadow
+      shadow,
+      customization,
+      unset
     } = this.props;
+
+    const css = rollupAdoptedStylesheets([common, icon, customization]);
 
     const iconSizingClassName = {
       'lwc-icon_x-large': size === 'x-large',
@@ -75,7 +79,7 @@ class Icon extends Component {
     const computedClassNames = `lwc-icon-${sprite} lwc-icon-${sanitizedSprite}${sanitizedSymbol}`;
 
     return (
-      <Shadow name="icon" includes={[common, icon]} shadow={shadow}>
+      <Shadow.on name="icon" includes={css} shadow={shadow}>
         <span
           className={classNames('lwc-icon-boundary', iconBoundaryClassName)}
         >
@@ -93,7 +97,7 @@ class Icon extends Component {
             {this.renderAssistiveText()}
           </span>
         </span>
-      </Shadow>
+      </Shadow.on>
     );
   }
 }

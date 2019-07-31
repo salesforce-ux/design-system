@@ -54,10 +54,6 @@ $_c-icon-action-padding-xx-small: rem(2px);
 
 :host {
   @include icon-base;
-
-  > span {
-    display: inherit;
-  }
 }
 
 /**

@@ -5,7 +5,8 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import Icon from '../icon';
-import Shadow from '../../shared/shadow';
+import Shadow from '../../shared/shadow/';
+import { rollupAdoptedStylesheets } from '../../shared/shadow/helpers';
 
 import common from '../common/index.scss';
 import buttonIcon from './base/index.scss';
@@ -41,6 +42,8 @@ class ButtonIcon extends Component {
       onClick
     } = this.props;
 
+    const css = rollupAdoptedStylesheets([common, buttonIcon, customization]);
+
     const buttonVariantClassName = {
       'lwc-button-icon_neutral': variant === 'neutral',
       'lwc-button-icon_neutral-outline': variant === 'neutral-outline',
@@ -59,11 +62,7 @@ class ButtonIcon extends Component {
     };
 
     return (
-      <Shadow
-        name="button-icon"
-        includes={[common, buttonIcon, customization]}
-        shadow={shadow}
-      >
+      <Shadow.on name="button-icon" includes={css} shadow={shadow}>
         <button
           className={classNames(
             'lwc-button-icon',
@@ -86,7 +85,7 @@ class ButtonIcon extends Component {
             assistiveText={assistiveText}
           />
         </button>
-      </Shadow>
+      </Shadow.on>
     );
   }
 }

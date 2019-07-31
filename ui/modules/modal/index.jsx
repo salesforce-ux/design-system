@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import ButtonIcon from '../button-icon/';
-import Shadow from '../../shared/shadow';
+import Shadow from '../../shared/shadow/';
+import { rollupAdoptedStylesheets } from '../../shared/shadow/helpers';
 
 import common from '../common/index.scss';
 import modal from './base/index.scss';
@@ -290,12 +291,15 @@ class Modal extends Component {
       position,
       tabIndex,
       shadow,
+      customization,
       role,
       handleClose
     } = this.props;
 
+    const css = rollupAdoptedStylesheets([common, modal, customization]);
+
     return (
-      <Shadow name="modal" includes={[common, modal]} shadow={shadow}>
+      <Shadow.on name="modal" includes={css} shadow={shadow}>
         <ModalContainer
           hasHeader={hasHeader}
           headerId={headerId}
@@ -314,7 +318,7 @@ class Modal extends Component {
           {this.renderFooter()}
         </ModalContainer>
         {hasBackdrop && <Backdrop isOpen={this.state.open} />}
-      </Shadow>
+      </Shadow.on>
     );
   }
 }

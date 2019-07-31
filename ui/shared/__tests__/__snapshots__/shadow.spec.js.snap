@@ -1,5 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Shadow Wrapper Renders a shadow boundary 1`] = `"<lightning-component className=\\"resolved\\"></lightning-component>"`;
+exports[`ShadowRoot creates a custom element 1`] = `<lightning-test />`;
 
-exports[`Shadow Wrapper Renders no shadow boundary 1`] = `"<div>test</div>"`;
+exports[`ShadowRoot renders with no shadow boundary via config 1`] = `
+<div>
+  content
+</div>
+`;
+
+exports[`ShadowRoot renders with no shadow boundary via prop 1`] = `
+<div>
+  content
+</div>
+`;

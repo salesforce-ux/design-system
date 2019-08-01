@@ -2,7 +2,7 @@
 
 # Rich Text Editor Release Notes
 
-## 2.7.6 - July 30 2019
+## 2.9.5 - July 30 2019
 
 ### Fixed
 

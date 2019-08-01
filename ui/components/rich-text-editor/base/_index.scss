@@ -564,13 +564,11 @@
   }
 
   ins {
-    background-color: rgba($color-text-success, 0.08);
     color: $color-text-success;
-    text-decoration: none;
+    text-decoration: underline;
   }
 
   del {
-    background-color: rgba($color-text-destructive, 0.08);
     color: $color-text-destructive;
     text-decoration: line-through;
   }

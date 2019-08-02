@@ -27,8 +27,8 @@ module.exports = I.fromJS({
             loader: 'babel-loader',
             options: {
               babelrc: false,
-              presets: ['es2015', 'react'],
-              plugins: ['transform-object-rest-spread']
+              presets: ['@babel/preset-env', '@babel/preset-react'],
+              plugins: ['@babel/plugin-proposal-object-rest-spread']
             }
           }
         ].filter(disableThreadLoaderOnTravis)
@@ -56,8 +56,8 @@ module.exports = I.fromJS({
             loader: 'babel-loader',
             options: {
               babelrc: false,
-              presets: ['es2015', 'react'],
-              plugins: ['transform-object-rest-spread']
+              presets: ['@babel/preset-env', '@babel/preset-react'],
+              plugins: ['@babel/plugin-proposal-object-rest-spread']
             }
           },
           {

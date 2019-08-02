@@ -4,11 +4,9 @@ exports[`Base popover renders a hidden popover 1`] = `
 <section
   aria-describedby="dialog-body-id-13"
   aria-label="Language Options"
-  aria-labelledby={undefined}
   className="slds-popover slds-popover_hide"
   id="popover-id-01"
   role="dialog"
-  style={undefined}
 >
   <div
     className="slds-popover__body"
@@ -25,11 +23,9 @@ exports[`Base popover renders a popover at full width 1`] = `
 <section
   aria-describedby="dialog-body-id-11"
   aria-label="Language Options"
-  aria-labelledby={undefined}
   className="slds-popover slds-popover_full-width"
   id="popover-id-01"
   role="dialog"
-  style={undefined}
 >
   <div
     className="slds-popover__body"
@@ -46,11 +42,9 @@ exports[`Base popover renders a popover with a checkbox group 1`] = `
 <section
   aria-describedby="dialog-body-id-15"
   aria-label="Language Options"
-  aria-labelledby={undefined}
   className="slds-popover slds-popover_full-width"
   id="popover-id-01"
   role="dialog"
-  style={undefined}
 >
   <div
     className="slds-popover__body"
@@ -58,7 +52,6 @@ exports[`Base popover renders a popover with a checkbox group 1`] = `
   >
     <fieldset
       className="slds-form-element"
-      id={undefined}
     >
       <legend
         className="slds-form-element__legend slds-form-element__label"
@@ -72,20 +65,15 @@ exports[`Base popover renders a popover with a checkbox group 1`] = `
           className="slds-checkbox"
         >
           <input
-            aria-describedby={undefined}
             aria-labelledby={null}
-            defaultChecked={undefined}
-            disabled={undefined}
             id="checkbox-unique-id-1"
             name="options"
-            tabIndex={undefined}
             type="checkbox"
             value="checkbox-unique-id-1"
           />
           <label
             className="slds-checkbox__label"
             htmlFor="checkbox-unique-id-1"
-            id={undefined}
           >
             <span
               className="slds-checkbox_faux"
@@ -101,20 +89,15 @@ exports[`Base popover renders a popover with a checkbox group 1`] = `
           className="slds-checkbox"
         >
           <input
-            aria-describedby={undefined}
             aria-labelledby={null}
-            defaultChecked={undefined}
-            disabled={undefined}
             id="checkbox-unique-id-2"
             name="options"
-            tabIndex={undefined}
             type="checkbox"
             value="checkbox-unique-id-2"
           />
           <label
             className="slds-checkbox__label"
             htmlFor="checkbox-unique-id-2"
-            id={undefined}
           >
             <span
               className="slds-checkbox_faux"
@@ -130,20 +113,15 @@ exports[`Base popover renders a popover with a checkbox group 1`] = `
           className="slds-checkbox"
         >
           <input
-            aria-describedby={undefined}
             aria-labelledby={null}
-            defaultChecked={undefined}
-            disabled={undefined}
             id="checkbox-unique-id-3"
             name="options"
-            tabIndex={undefined}
             type="checkbox"
             value="checkbox-unique-id-3"
           />
           <label
             className="slds-checkbox__label"
             htmlFor="checkbox-unique-id-3"
-            id={undefined}
           >
             <span
               className="slds-checkbox_faux"
@@ -159,20 +137,15 @@ exports[`Base popover renders a popover with a checkbox group 1`] = `
           className="slds-checkbox"
         >
           <input
-            aria-describedby={undefined}
             aria-labelledby={null}
-            defaultChecked={undefined}
-            disabled={undefined}
             id="checkbox-unique-id-4"
             name="options"
-            tabIndex={undefined}
             type="checkbox"
             value="checkbox-unique-id-4"
           />
           <label
             className="slds-checkbox__label"
             htmlFor="checkbox-unique-id-4"
-            id={undefined}
           >
             <span
               className="slds-checkbox_faux"
@@ -192,13 +165,11 @@ exports[`Base popover renders a popover with a checkbox group 1`] = `
   >
     <button
       className="slds-button slds-button_neutral"
-      disabled={undefined}
     >
       Cancel
     </button>
     <button
       className="slds-button slds-button_brand"
-      disabled={undefined}
     >
       Done
     </button>
@@ -210,11 +181,9 @@ exports[`Base popover renders a popover with a footer 1`] = `
 <section
   aria-describedby="dialog-body-id-14"
   aria-label="Language Options"
-  aria-labelledby={undefined}
   className="slds-popover"
   id="popover-id-01"
   role="dialog"
-  style={undefined}
 >
   <div
     className="slds-popover__body"
@@ -229,11 +198,9 @@ exports[`Base popover renders a popover with a footer 1`] = `
   >
     <button
       className="slds-button"
-      disabled={undefined}
     />
     <button
       className="slds-button"
-      disabled={undefined}
     />
   </footer>
 </section>
@@ -243,11 +210,9 @@ exports[`Base popover renders a small scrolling popover 1`] = `
 <section
   aria-describedby="dialog-body-id-12"
   aria-label="Language Options"
-  aria-labelledby={undefined}
   className="slds-popover"
   id="popover-id-01"
   role="dialog"
-  style={undefined}
 >
   <div
     className="slds-popover__body slds-popover__body_small"
@@ -263,17 +228,12 @@ exports[`Base popover renders a small scrolling popover 1`] = `
 exports[`Prompt popover renders base without position 1`] = `
 <section
   aria-describedby="dialog-body-id-16"
-  aria-label={undefined}
   aria-labelledby="dialog-heading-id-3"
   className="slds-popover slds-popover_prompt"
-  id={undefined}
   role="dialog"
-  style={undefined}
 >
   <button
-    aria-haspopup={undefined}
     className="slds-button slds-button_icon slds-button_icon-small slds-float_right slds-popover__close"
-    id={undefined}
     title="Close dialog"
   >
     <svg
@@ -302,7 +262,6 @@ exports[`Prompt popover renders base without position 1`] = `
       >
         <span
           className="slds-icon_container"
-          title={undefined}
         >
           <svg
             aria-hidden={true}
@@ -366,17 +325,12 @@ exports[`Prompt popover renders base without position 1`] = `
 exports[`Prompt popover renders positioned bottom center 1`] = `
 <section
   aria-describedby="dialog-body-id-21"
-  aria-label={undefined}
   aria-labelledby="dialog-heading-id-3"
   className="slds-popover slds-popover_prompt slds-popover_prompt_bottom"
-  id={undefined}
   role="dialog"
-  style={undefined}
 >
   <button
-    aria-haspopup={undefined}
     className="slds-button slds-button_icon slds-button_icon-small slds-float_right slds-popover__close"
-    id={undefined}
     title="Close dialog"
   >
     <svg
@@ -405,7 +359,6 @@ exports[`Prompt popover renders positioned bottom center 1`] = `
       >
         <span
           className="slds-icon_container"
-          title={undefined}
         >
           <svg
             aria-hidden={true}
@@ -469,17 +422,12 @@ exports[`Prompt popover renders positioned bottom center 1`] = `
 exports[`Prompt popover renders positioned bottom left 1`] = `
 <section
   aria-describedby="dialog-body-id-22"
-  aria-label={undefined}
   aria-labelledby="dialog-heading-id-3"
   className="slds-popover slds-popover_prompt slds-popover_prompt_bottom-left"
-  id={undefined}
   role="dialog"
-  style={undefined}
 >
   <button
-    aria-haspopup={undefined}
     className="slds-button slds-button_icon slds-button_icon-small slds-float_right slds-popover__close"
-    id={undefined}
     title="Close dialog"
   >
     <svg
@@ -508,7 +456,6 @@ exports[`Prompt popover renders positioned bottom left 1`] = `
       >
         <span
           className="slds-icon_container"
-          title={undefined}
         >
           <svg
             aria-hidden={true}
@@ -572,17 +519,12 @@ exports[`Prompt popover renders positioned bottom left 1`] = `
 exports[`Prompt popover renders positioned bottom right 1`] = `
 <section
   aria-describedby="dialog-body-id-20"
-  aria-label={undefined}
   aria-labelledby="dialog-heading-id-3"
   className="slds-popover slds-popover_prompt slds-popover_prompt_bottom-right"
-  id={undefined}
   role="dialog"
-  style={undefined}
 >
   <button
-    aria-haspopup={undefined}
     className="slds-button slds-button_icon slds-button_icon-small slds-float_right slds-popover__close"
-    id={undefined}
     title="Close dialog"
   >
     <svg
@@ -611,7 +553,6 @@ exports[`Prompt popover renders positioned bottom right 1`] = `
       >
         <span
           className="slds-icon_container"
-          title={undefined}
         >
           <svg
             aria-hidden={true}
@@ -675,17 +616,12 @@ exports[`Prompt popover renders positioned bottom right 1`] = `
 exports[`Prompt popover renders positioned top center 1`] = `
 <section
   aria-describedby="dialog-body-id-18"
-  aria-label={undefined}
   aria-labelledby="dialog-heading-id-3"
   className="slds-popover slds-popover_prompt slds-popover_prompt_top"
-  id={undefined}
   role="dialog"
-  style={undefined}
 >
   <button
-    aria-haspopup={undefined}
     className="slds-button slds-button_icon slds-button_icon-small slds-float_right slds-popover__close"
-    id={undefined}
     title="Close dialog"
   >
     <svg
@@ -714,7 +650,6 @@ exports[`Prompt popover renders positioned top center 1`] = `
       >
         <span
           className="slds-icon_container"
-          title={undefined}
         >
           <svg
             aria-hidden={true}
@@ -778,17 +713,12 @@ exports[`Prompt popover renders positioned top center 1`] = `
 exports[`Prompt popover renders positioned top left 1`] = `
 <section
   aria-describedby="dialog-body-id-17"
-  aria-label={undefined}
   aria-labelledby="dialog-heading-id-3"
   className="slds-popover slds-popover_prompt slds-popover_prompt_top-left"
-  id={undefined}
   role="dialog"
-  style={undefined}
 >
   <button
-    aria-haspopup={undefined}
     className="slds-button slds-button_icon slds-button_icon-small slds-float_right slds-popover__close"
-    id={undefined}
     title="Close dialog"
   >
     <svg
@@ -817,7 +747,6 @@ exports[`Prompt popover renders positioned top left 1`] = `
       >
         <span
           className="slds-icon_container"
-          title={undefined}
         >
           <svg
             aria-hidden={true}
@@ -881,17 +810,12 @@ exports[`Prompt popover renders positioned top left 1`] = `
 exports[`Prompt popover renders positioned top right 1`] = `
 <section
   aria-describedby="dialog-body-id-19"
-  aria-label={undefined}
   aria-labelledby="dialog-heading-id-3"
   className="slds-popover slds-popover_prompt slds-popover_prompt_top-right"
-  id={undefined}
   role="dialog"
-  style={undefined}
 >
   <button
-    aria-haspopup={undefined}
     className="slds-button slds-button_icon slds-button_icon-small slds-float_right slds-popover__close"
-    id={undefined}
     title="Close dialog"
   >
     <svg
@@ -920,7 +844,6 @@ exports[`Prompt popover renders positioned top right 1`] = `
       >
         <span
           className="slds-icon_container"
-          title={undefined}
         >
           <svg
             aria-hidden={true}
@@ -984,17 +907,12 @@ exports[`Prompt popover renders positioned top right 1`] = `
 exports[`renders a feature popover 1`] = `
 <section
   aria-describedby="dialog-body-id-3"
-  aria-label={undefined}
   aria-labelledby="dialog-heading-id-01"
   className="slds-popover slds-popover_walkthrough slds-popover_feature slds-nubbin_left"
-  id={undefined}
   role="dialog"
-  style={undefined}
 >
   <button
-    aria-haspopup={undefined}
     className="slds-button slds-button_icon slds-button_icon-small slds-float_right slds-popover__close slds-button_icon-inverse"
-    id={undefined}
     title="Close dialog"
   >
     <svg
@@ -1037,16 +955,11 @@ exports[`renders a large popover 1`] = `
 <section
   aria-describedby="dialog-body-id-10"
   aria-label="Dialog Title"
-  aria-labelledby={undefined}
   className="slds-popover slds-nubbin_left slds-popover_large"
-  id={undefined}
   role="dialog"
-  style={undefined}
 >
   <button
-    aria-haspopup={undefined}
     className="slds-button slds-button_icon slds-button_icon-small slds-float_right slds-popover__close"
-    id={undefined}
     title="Close dialog"
   >
     <svg
@@ -1078,16 +991,11 @@ exports[`renders a small popover 1`] = `
 <section
   aria-describedby="dialog-body-id-9"
   aria-label="Dialog Title"
-  aria-labelledby={undefined}
   className="slds-popover slds-nubbin_left slds-popover_small"
-  id={undefined}
   role="dialog"
-  style={undefined}
 >
   <button
-    aria-haspopup={undefined}
     className="slds-button slds-button_icon slds-button_icon-small slds-float_right slds-popover__close"
-    id={undefined}
     title="Close dialog"
   >
     <svg
@@ -1121,14 +1029,10 @@ exports[`renders a walkthrough popover 1`] = `
   aria-label={null}
   aria-labelledby="dialog-heading-id-01"
   className="slds-popover slds-popover_walkthrough slds-nubbin_left"
-  id={undefined}
   role="dialog"
-  style={undefined}
 >
   <button
-    aria-haspopup={undefined}
     className="slds-button slds-button_icon slds-button_icon-small slds-float_right slds-popover__close slds-button_icon-inverse"
-    id={undefined}
     title="Close dialog"
   >
     <svg
@@ -1185,14 +1089,10 @@ exports[`renders a warning popover 1`] = `
   aria-label={null}
   aria-labelledby="dialog-heading-id-01"
   className="slds-popover slds-popover_warning slds-nubbin_bottom-left"
-  id={undefined}
   role="dialog"
-  style={undefined}
 >
   <button
-    aria-haspopup={undefined}
     className="slds-button slds-button_icon slds-button_icon-small slds-float_right slds-popover__close"
-    id={undefined}
     title="Close dialog"
   >
     <svg
@@ -1237,7 +1137,6 @@ exports[`renders a warning popover 1`] = `
       >
         <h2
           className="slds-truncate slds-text-heading_medium"
-          id={undefined}
           title="Resolve the following errors"
         >
           Resolve the following errors
@@ -1269,14 +1168,10 @@ exports[`renders a warning popover with footer 1`] = `
   aria-label={null}
   aria-labelledby="dialog-heading-id-01"
   className="slds-popover slds-popover_warning slds-nubbin_bottom-left"
-  id={undefined}
   role="dialog"
-  style={undefined}
 >
   <button
-    aria-haspopup={undefined}
     className="slds-button slds-button_icon slds-button_icon-small slds-float_right slds-popover__close"
-    id={undefined}
     title="Close dialog"
   >
     <svg
@@ -1321,7 +1216,6 @@ exports[`renders a warning popover with footer 1`] = `
       >
         <h2
           className="slds-truncate slds-text-heading_medium"
-          id={undefined}
           title="Resolve the following errors"
         >
           Resolve the following errors
@@ -1361,17 +1255,12 @@ exports[`renders a warning popover with footer 1`] = `
 exports[`renders an action popover 1`] = `
 <section
   aria-describedby="dialog-body-id-2"
-  aria-label={undefined}
   aria-labelledby="dialog-heading-id-01"
   className="slds-popover slds-popover_walkthrough slds-popover_walkthrough-alt slds-nubbin_left"
-  id={undefined}
   role="dialog"
-  style={undefined}
 >
   <button
-    aria-haspopup={undefined}
     className="slds-button slds-button_icon slds-button_icon-small slds-float_right slds-popover__close slds-button_icon-inverse"
-    id={undefined}
     title="Close dialog"
   >
     <svg
@@ -1443,17 +1332,13 @@ exports[`renders an einstein popover 1`] = `
   aria-label={null}
   aria-labelledby="dialog-heading-id-01"
   className="slds-popover slds-nubbin_left slds-popover_einstein"
-  id={undefined}
   role="dialog"
-  style={undefined}
 >
   <div
     className="slds-grid slds-einstein-header slds-popover__header"
   >
     <button
-      aria-haspopup={undefined}
       className="slds-button slds-button_icon slds-button_icon-small slds-float_right slds-popover__close slds-button_icon"
-      id={undefined}
       title="Close dialog"
     >
       <svg
@@ -1514,14 +1399,10 @@ exports[`renders an error popover 1`] = `
   aria-label={null}
   aria-labelledby="dialog-heading-id-01"
   className="slds-popover slds-popover_error slds-nubbin_bottom-left"
-  id={undefined}
   role="dialog"
-  style={undefined}
 >
   <button
-    aria-haspopup={undefined}
     className="slds-button slds-button_icon slds-button_icon-small slds-float_right slds-popover__close slds-button_icon-inverse"
-    id={undefined}
     title="Close dialog"
   >
     <svg
@@ -1566,7 +1447,6 @@ exports[`renders an error popover 1`] = `
       >
         <h2
           className="slds-truncate slds-text-heading_medium"
-          id={undefined}
           title="Resolve the following errors"
         >
           Resolve the following errors
@@ -1598,14 +1478,10 @@ exports[`renders an error popover with footer 1`] = `
   aria-label={null}
   aria-labelledby="dialog-heading-id-01"
   className="slds-popover slds-popover_error slds-nubbin_bottom-left"
-  id={undefined}
   role="dialog"
-  style={undefined}
 >
   <button
-    aria-haspopup={undefined}
     className="slds-button slds-button_icon slds-button_icon-small slds-float_right slds-popover__close slds-button_icon-inverse"
-    id={undefined}
     title="Close dialog"
   >
     <svg
@@ -1650,7 +1526,6 @@ exports[`renders an error popover with footer 1`] = `
       >
         <h2
           className="slds-truncate slds-text-heading_medium"
-          id={undefined}
           title="Resolve the following errors"
         >
           Resolve the following errors

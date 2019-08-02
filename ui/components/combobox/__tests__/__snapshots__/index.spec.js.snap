@@ -3,12 +3,10 @@
 exports[`Combobox with a Dialog dropdown renders a closed, readonly dialog combobox 1`] = `
 <div
   className="slds-form-element"
-  role={undefined}
 >
   <label
     className="slds-form-element__label"
     htmlFor="combobox-id-01"
-    id={undefined}
   >
     Languages
   </label>
@@ -19,11 +17,9 @@ exports[`Combobox with a Dialog dropdown renders a closed, readonly dialog combo
       className="slds-combobox_container"
     >
       <div
-        aria-controls={undefined}
         aria-expanded="false"
         aria-haspopup="dialog"
         className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click"
-        id={undefined}
         role="combobox"
       >
         <div
@@ -31,23 +27,16 @@ exports[`Combobox with a Dialog dropdown renders a closed, readonly dialog combo
           role="none"
         >
           <input
-            aria-activedescendant={undefined}
             aria-autocomplete={null}
             aria-controls="popover-id-01"
-            aria-invalid={undefined}
             autoComplete="off"
-            autoFocus={undefined}
             className="slds-input slds-combobox__input"
-            defaultValue={undefined}
-            disabled={undefined}
             id="combobox-id-01"
             onBlur={[Function]}
             onFocus={[Function]}
             placeholder="Select an Option"
             readOnly={true}
-            required={undefined}
             role="textbox"
-            tabIndex={undefined}
             type="text"
           />
           <span
@@ -67,11 +56,9 @@ exports[`Combobox with a Dialog dropdown renders a closed, readonly dialog combo
         <section
           aria-describedby="dialog-body-id-1"
           aria-label="Language Options"
-          aria-labelledby={undefined}
           className="slds-popover slds-popover_full-width slds-popover_hide"
           id="popover-id-01"
           role="dialog"
-          style={undefined}
         >
           <div
             className="slds-popover__body slds-popover__body_small"
@@ -86,11 +73,9 @@ exports[`Combobox with a Dialog dropdown renders a closed, readonly dialog combo
           >
             <button
               className="slds-button"
-              disabled={undefined}
             />
             <button
               className="slds-button"
-              disabled={undefined}
             />
           </footer>
         </section>
@@ -103,12 +88,10 @@ exports[`Combobox with a Dialog dropdown renders a closed, readonly dialog combo
 exports[`Combobox with a Dialog dropdown renders an open, readonly dialog combobox 1`] = `
 <div
   className="slds-form-element"
-  role={undefined}
 >
   <label
     className="slds-form-element__label"
     htmlFor="combobox-id-01"
-    id={undefined}
   >
     Languages
   </label>
@@ -119,11 +102,9 @@ exports[`Combobox with a Dialog dropdown renders an open, readonly dialog combob
       className="slds-combobox_container"
     >
       <div
-        aria-controls={undefined}
         aria-expanded="true"
         aria-haspopup="dialog"
         className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open"
-        id={undefined}
         role="combobox"
       >
         <div
@@ -131,23 +112,16 @@ exports[`Combobox with a Dialog dropdown renders an open, readonly dialog combob
           role="none"
         >
           <input
-            aria-activedescendant={undefined}
             aria-autocomplete={null}
             aria-controls="popover-id-01"
-            aria-invalid={undefined}
             autoComplete="off"
-            autoFocus={undefined}
             className="slds-input slds-combobox__input"
-            defaultValue={undefined}
-            disabled={undefined}
             id="combobox-id-01"
             onBlur={[Function]}
             onFocus={[Function]}
             placeholder="Select an Option"
             readOnly={true}
-            required={undefined}
             role="textbox"
-            tabIndex={undefined}
             type="text"
           />
           <span
@@ -167,11 +141,9 @@ exports[`Combobox with a Dialog dropdown renders an open, readonly dialog combob
         <section
           aria-describedby="dialog-body-id-2"
           aria-label="Language Options"
-          aria-labelledby={undefined}
           className="slds-popover slds-popover_full-width"
           id="popover-id-01"
           role="dialog"
-          style={undefined}
         >
           <div
             className="slds-popover__body slds-popover__body_small"
@@ -186,11 +158,9 @@ exports[`Combobox with a Dialog dropdown renders an open, readonly dialog combob
           >
             <button
               className="slds-button"
-              disabled={undefined}
             />
             <button
               className="slds-button"
-              disabled={undefined}
             />
           </footer>
         </section>
@@ -203,12 +173,10 @@ exports[`Combobox with a Dialog dropdown renders an open, readonly dialog combob
 exports[`render combobox render autocomplete combobox with mutliple selections 1`] = `
 <div
   className="slds-form-element"
-  role={undefined}
 >
   <label
     className="slds-form-element__label"
     htmlFor="combobox-id-01"
-    id={undefined}
   >
     Relate to
   </label>
@@ -219,11 +187,9 @@ exports[`render combobox render autocomplete combobox with mutliple selections 1
       className="slds-combobox_container slds-has-selection"
     >
       <div
-        aria-controls={undefined}
         aria-expanded="false"
         aria-haspopup="listbox"
         className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click"
-        id={undefined}
         role="combobox"
       >
         <div
@@ -231,23 +197,15 @@ exports[`render combobox render autocomplete combobox with mutliple selections 1
           role="none"
         >
           <input
-            aria-activedescendant={undefined}
             aria-autocomplete="list"
             aria-controls="listbox-id-01"
-            aria-invalid={undefined}
             autoComplete="off"
-            autoFocus={undefined}
             className="slds-input slds-combobox__input"
-            defaultValue={undefined}
-            disabled={undefined}
             id="combobox-id-01"
             onBlur={[Function]}
             onFocus={[Function]}
             placeholder="Search..."
-            readOnly={undefined}
-            required={undefined}
             role="textbox"
-            tabIndex={undefined}
             type="text"
           />
           <span
@@ -271,7 +229,6 @@ exports[`render combobox render autocomplete combobox with mutliple selections 1
           role="listbox"
         >
           <ul
-            aria-label={undefined}
             className="slds-listbox slds-listbox_vertical"
             role="presentation"
           >
@@ -285,7 +242,6 @@ exports[`render combobox render autocomplete combobox with mutliple selections 1
                 className="slds-media slds-listbox__option slds-listbox__option_entity slds-media_center"
                 id="option1"
                 role="option"
-                tabIndex={undefined}
               >
                 <span
                   className="slds-media__figure slds-listbox__option-icon"
@@ -325,7 +281,6 @@ exports[`render combobox render autocomplete combobox with mutliple selections 1
                 className="slds-media slds-listbox__option slds-listbox__option_entity slds-media_center"
                 id="option2"
                 role="option"
-                tabIndex={undefined}
               >
                 <span
                   className="slds-media__figure slds-listbox__option-icon"
@@ -365,7 +320,6 @@ exports[`render combobox render autocomplete combobox with mutliple selections 1
                 className="slds-media slds-listbox__option slds-listbox__option_entity slds-media_center"
                 id="option3"
                 role="option"
-                tabIndex={undefined}
               >
                 <span
                   className="slds-media__figure slds-listbox__option-icon"
@@ -409,7 +363,6 @@ exports[`render combobox render autocomplete combobox with mutliple selections 1
         role="listbox"
       >
         <li
-          aria-hidden={undefined}
           className="slds-listbox-item"
           role="presentation"
         >
@@ -417,7 +370,6 @@ exports[`render combobox render autocomplete combobox with mutliple selections 1
             aria-selected="true"
             className="slds-pill"
             role="option"
-            tabIndex={undefined}
           >
             <span
               className="slds-pill__label"
@@ -446,7 +398,6 @@ exports[`render combobox render autocomplete combobox with mutliple selections 1
           </span>
         </li>
         <li
-          aria-hidden={undefined}
           className="slds-listbox-item"
           role="presentation"
         >
@@ -454,7 +405,6 @@ exports[`render combobox render autocomplete combobox with mutliple selections 1
             aria-selected="true"
             className="slds-pill"
             role="option"
-            tabIndex={undefined}
           >
             <span
               className="slds-pill__label"
@@ -491,12 +441,10 @@ exports[`render combobox render autocomplete combobox with mutliple selections 1
 exports[`render combobox render autocomplete combobox with single selection 1`] = `
 <div
   className="slds-form-element"
-  role={undefined}
 >
   <label
     className="slds-form-element__label"
     htmlFor="combobox-id-01"
-    id={undefined}
   >
     Relate to
   </label>
@@ -507,11 +455,9 @@ exports[`render combobox render autocomplete combobox with single selection 1`] 
       className="slds-combobox_container"
     >
       <div
-        aria-controls={undefined}
         aria-expanded="false"
         aria-haspopup="listbox"
         className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click"
-        id={undefined}
         role="combobox"
       >
         <div
@@ -519,23 +465,16 @@ exports[`render combobox render autocomplete combobox with single selection 1`] 
           role="none"
         >
           <input
-            aria-activedescendant={undefined}
             aria-autocomplete="list"
             aria-controls="listbox-id-01"
-            aria-invalid={undefined}
             autoComplete="off"
-            autoFocus={undefined}
             className="slds-input slds-combobox__input slds-combobox__input-value"
             defaultValue="GenePoint"
-            disabled={undefined}
             id="combobox-id-01"
             onBlur={[Function]}
             onFocus={[Function]}
             placeholder="Search..."
-            readOnly={undefined}
-            required={undefined}
             role="textbox"
-            tabIndex={undefined}
             type="text"
           />
           <span
@@ -559,7 +498,6 @@ exports[`render combobox render autocomplete combobox with single selection 1`] 
           role="listbox"
         >
           <ul
-            aria-label={undefined}
             className="slds-listbox slds-listbox_vertical"
             role="presentation"
           >
@@ -573,7 +511,6 @@ exports[`render combobox render autocomplete combobox with single selection 1`] 
                 className="slds-media slds-listbox__option slds-listbox__option_entity slds-media_center"
                 id="option1"
                 role="option"
-                tabIndex={undefined}
               >
                 <span
                   className="slds-media__figure slds-listbox__option-icon"
@@ -613,7 +550,6 @@ exports[`render combobox render autocomplete combobox with single selection 1`] 
                 className="slds-media slds-listbox__option slds-listbox__option_entity slds-media_center"
                 id="option2"
                 role="option"
-                tabIndex={undefined}
               >
                 <span
                   className="slds-media__figure slds-listbox__option-icon"
@@ -653,7 +589,6 @@ exports[`render combobox render autocomplete combobox with single selection 1`] 
                 className="slds-media slds-listbox__option slds-listbox__option_entity slds-media_center"
                 id="option3"
                 role="option"
-                tabIndex={undefined}
               >
                 <span
                   className="slds-media__figure slds-listbox__option-icon"
@@ -694,12 +629,10 @@ exports[`render combobox render autocomplete combobox with single selection 1`] 
 exports[`render combobox render autocomplete entity combobox 1`] = `
 <div
   className="slds-form-element"
-  role={undefined}
 >
   <label
     className="slds-form-element__label"
     htmlFor="combobox-id-01"
-    id={undefined}
   >
     Relate to
   </label>
@@ -710,11 +643,9 @@ exports[`render combobox render autocomplete entity combobox 1`] = `
       className="slds-combobox_container"
     >
       <div
-        aria-controls={undefined}
         aria-expanded="true"
         aria-haspopup="listbox"
         className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open"
-        id={undefined}
         role="combobox"
       >
         <div
@@ -722,23 +653,15 @@ exports[`render combobox render autocomplete entity combobox 1`] = `
           role="none"
         >
           <input
-            aria-activedescendant={undefined}
             aria-autocomplete="list"
             aria-controls="listbox-id-01"
-            aria-invalid={undefined}
             autoComplete="off"
-            autoFocus={undefined}
             className="slds-input slds-combobox__input slds-has-focus"
-            defaultValue={undefined}
-            disabled={undefined}
             id="combobox-id-01"
             onBlur={[Function]}
             onFocus={[Function]}
             placeholder="Search..."
-            readOnly={undefined}
-            required={undefined}
             role="textbox"
-            tabIndex={undefined}
             type="text"
           />
           <span
@@ -767,7 +690,6 @@ exports[`render combobox render autocomplete entity combobox 1`] = `
           role="listbox"
         >
           <ul
-            aria-label={undefined}
             className="slds-listbox slds-listbox_vertical"
             role="presentation"
           >
@@ -781,7 +703,6 @@ exports[`render combobox render autocomplete entity combobox 1`] = `
                 className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
                 id="option1"
                 role="option"
-                tabIndex={undefined}
               >
                 <span
                   className="slds-media__figure slds-listbox__option-icon"
@@ -829,7 +750,6 @@ exports[`render combobox render autocomplete entity combobox 1`] = `
                 className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
                 id="option2"
                 role="option"
-                tabIndex={undefined}
               >
                 <span
                   className="slds-media__figure slds-listbox__option-icon"
@@ -878,12 +798,10 @@ exports[`render combobox render autocomplete entity combobox 1`] = `
 exports[`render combobox render autocomplete entity combobox displaying options based on user input 1`] = `
 <div
   className="slds-form-element"
-  role={undefined}
 >
   <label
     className="slds-form-element__label"
     htmlFor="combobox-id-01"
-    id={undefined}
   >
     Relate to
   </label>
@@ -894,11 +812,9 @@ exports[`render combobox render autocomplete entity combobox displaying options 
       className="slds-combobox_container"
     >
       <div
-        aria-controls={undefined}
         aria-expanded="true"
         aria-haspopup="listbox"
         className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open"
-        id={undefined}
         role="combobox"
       >
         <div
@@ -909,20 +825,14 @@ exports[`render combobox render autocomplete entity combobox displaying options 
             aria-activedescendant="option1"
             aria-autocomplete="list"
             aria-controls="listbox-id-01"
-            aria-invalid={undefined}
             autoComplete="off"
-            autoFocus={undefined}
             className="slds-input slds-combobox__input slds-has-focus slds-combobox__input-value"
             defaultValue="salesforce"
-            disabled={undefined}
             id="combobox-id-01"
             onBlur={[Function]}
             onFocus={[Function]}
             placeholder="Search..."
-            readOnly={undefined}
-            required={undefined}
             role="textbox"
-            tabIndex={undefined}
             type="text"
           />
           <span
@@ -951,7 +861,6 @@ exports[`render combobox render autocomplete entity combobox displaying options 
           role="listbox"
         >
           <ul
-            aria-label={undefined}
             className="slds-listbox slds-listbox_vertical"
             role="presentation"
           >
@@ -965,7 +874,6 @@ exports[`render combobox render autocomplete entity combobox displaying options 
                 className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_term slds-has-focus"
                 id="option0"
                 role="option"
-                tabIndex={undefined}
               >
                 <span
                   className="slds-media__figure slds-listbox__option-icon"
@@ -1010,7 +918,6 @@ exports[`render combobox render autocomplete entity combobox displaying options 
                 className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
                 id="option1"
                 role="option"
-                tabIndex={undefined}
               >
                 <span
                   className="slds-media__figure slds-listbox__option-icon"
@@ -1064,7 +971,6 @@ exports[`render combobox render autocomplete entity combobox displaying options 
                 className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
                 id="option2"
                 role="option"
-                tabIndex={undefined}
               >
                 <span
                   className="slds-media__figure slds-listbox__option-icon"
@@ -1118,7 +1024,6 @@ exports[`render combobox render autocomplete entity combobox displaying options 
                 className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
                 id="option3"
                 role="option"
-                tabIndex={undefined}
               >
                 <span
                   className="slds-media__figure slds-listbox__option-icon"
@@ -1173,12 +1078,10 @@ exports[`render combobox render autocomplete entity combobox displaying options 
 exports[`render combobox render autocomplete entity combobox with mutliple selections 1`] = `
 <div
   className="slds-form-element"
-  role={undefined}
 >
   <label
     className="slds-form-element__label"
     htmlFor="combobox-id-01"
-    id={undefined}
   >
     Relate to
   </label>
@@ -1189,11 +1092,9 @@ exports[`render combobox render autocomplete entity combobox with mutliple selec
       className="slds-combobox_container slds-has-selection"
     >
       <div
-        aria-controls={undefined}
         aria-expanded="false"
         aria-haspopup="listbox"
         className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click"
-        id={undefined}
         role="combobox"
       >
         <div
@@ -1201,23 +1102,15 @@ exports[`render combobox render autocomplete entity combobox with mutliple selec
           role="none"
         >
           <input
-            aria-activedescendant={undefined}
             aria-autocomplete="list"
             aria-controls="listbox-id-01"
-            aria-invalid={undefined}
             autoComplete="off"
-            autoFocus={undefined}
             className="slds-input slds-combobox__input"
-            defaultValue={undefined}
-            disabled={undefined}
             id="combobox-id-01"
             onBlur={[Function]}
             onFocus={[Function]}
             placeholder="Search..."
-            readOnly={undefined}
-            required={undefined}
             role="textbox"
-            tabIndex={undefined}
             type="text"
           />
           <span
@@ -1246,7 +1139,6 @@ exports[`render combobox render autocomplete entity combobox with mutliple selec
           role="listbox"
         >
           <ul
-            aria-label={undefined}
             className="slds-listbox slds-listbox_vertical"
             role="presentation"
           >
@@ -1260,7 +1152,6 @@ exports[`render combobox render autocomplete entity combobox with mutliple selec
                 className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
                 id="option1"
                 role="option"
-                tabIndex={undefined}
               >
                 <span
                   className="slds-media__figure slds-listbox__option-icon"
@@ -1308,7 +1199,6 @@ exports[`render combobox render autocomplete entity combobox with mutliple selec
                 className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
                 id="option2"
                 role="option"
-                tabIndex={undefined}
               >
                 <span
                   className="slds-media__figure slds-listbox__option-icon"
@@ -1360,7 +1250,6 @@ exports[`render combobox render autocomplete entity combobox with mutliple selec
         role="listbox"
       >
         <li
-          aria-hidden={undefined}
           className="slds-listbox-item"
           role="presentation"
         >
@@ -1415,7 +1304,6 @@ exports[`render combobox render autocomplete entity combobox with mutliple selec
           </span>
         </li>
         <li
-          aria-hidden={undefined}
           className="slds-listbox-item"
           role="presentation"
         >
@@ -1423,7 +1311,6 @@ exports[`render combobox render autocomplete entity combobox with mutliple selec
             aria-selected="true"
             className="slds-pill"
             role="option"
-            tabIndex={undefined}
           >
             <span
               className="slds-icon_container slds-icon-standard-account slds-pill__icon_container"
@@ -1478,12 +1365,10 @@ exports[`render combobox render autocomplete entity combobox with mutliple selec
 exports[`render combobox render autocomplete entity combobox with single selection 1`] = `
 <div
   className="slds-form-element"
-  role={undefined}
 >
   <label
     className="slds-form-element__label"
     htmlFor="combobox-id-01"
-    id={undefined}
   >
     Relate to
   </label>
@@ -1494,11 +1379,9 @@ exports[`render combobox render autocomplete entity combobox with single selecti
       className="slds-combobox_container slds-has-selection"
     >
       <div
-        aria-controls={undefined}
         aria-expanded="false"
         aria-haspopup="listbox"
         className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click"
-        id={undefined}
         role="combobox"
       >
         <div
@@ -1524,29 +1407,22 @@ exports[`render combobox render autocomplete entity combobox with single selecti
             </span>
           </span>
           <input
-            aria-activedescendant={undefined}
             aria-autocomplete={null}
             aria-controls="listbox-id-01"
-            aria-invalid={undefined}
             autoComplete="off"
-            autoFocus={undefined}
             className="slds-input slds-combobox__input slds-combobox__input-value"
             defaultValue="Salesforce.com, Inc."
-            disabled={undefined}
             id="combobox-id-01"
             onBlur={[Function]}
             onFocus={[Function]}
             placeholder="Select an Option"
             readOnly={true}
-            required={undefined}
             role="textbox"
             tabIndex="-1"
             type="text"
           />
           <button
-            aria-haspopup={undefined}
             className="slds-button slds-button_icon slds-input__icon slds-input__icon_right"
-            id={undefined}
             title="Remove selected option"
           >
             <svg
@@ -1571,7 +1447,6 @@ exports[`render combobox render autocomplete entity combobox with single selecti
           role="listbox"
         >
           <ul
-            aria-label={undefined}
             className="slds-listbox slds-listbox_vertical"
             role="presentation"
           >
@@ -1585,7 +1460,6 @@ exports[`render combobox render autocomplete entity combobox with single selecti
                 className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
                 id="option1"
                 role="option"
-                tabIndex={undefined}
               >
                 <span
                   className="slds-media__figure slds-listbox__option-icon"
@@ -1633,7 +1507,6 @@ exports[`render combobox render autocomplete entity combobox with single selecti
                 className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
                 id="option2"
                 role="option"
-                tabIndex={undefined}
               >
                 <span
                   className="slds-media__figure slds-listbox__option-icon"
@@ -1682,12 +1555,10 @@ exports[`render combobox render autocomplete entity combobox with single selecti
 exports[`render combobox render base combobox 1`] = `
 <div
   className="slds-form-element"
-  role={undefined}
 >
   <label
     className="slds-form-element__label"
     htmlFor="combobox-id-01"
-    id={undefined}
   >
     Relate to
   </label>
@@ -1698,11 +1569,9 @@ exports[`render combobox render base combobox 1`] = `
       className="slds-combobox_container"
     >
       <div
-        aria-controls={undefined}
         aria-expanded="true"
         aria-haspopup="listbox"
         className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open"
-        id={undefined}
         role="combobox"
       >
         <div
@@ -1710,23 +1579,17 @@ exports[`render combobox render base combobox 1`] = `
           role="none"
         >
           <input
-            aria-activedescendant={undefined}
             aria-autocomplete={null}
             aria-controls="listbox-id-01"
-            aria-invalid={undefined}
             autoComplete="off"
-            autoFocus={undefined}
             className="slds-input slds-combobox__input slds-has-focus slds-combobox__input-value"
             defaultValue="Accounts"
-            disabled={undefined}
             id="combobox-id-01"
             onBlur={[Function]}
             onFocus={[Function]}
             placeholder="Select an Option"
             readOnly={true}
-            required={undefined}
             role="textbox"
-            tabIndex={undefined}
             type="text"
           />
           <span
@@ -1750,7 +1613,6 @@ exports[`render combobox render base combobox 1`] = `
           role="listbox"
         >
           <ul
-            aria-label={undefined}
             className="slds-listbox slds-listbox_vertical"
             role="presentation"
           >
@@ -1764,7 +1626,6 @@ exports[`render combobox render base combobox 1`] = `
                 className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                 id="option1"
                 role="option"
-                tabIndex={undefined}
               >
                 <span
                   className="slds-media__figure slds-listbox__option-icon"
@@ -1792,7 +1653,6 @@ exports[`render combobox render base combobox 1`] = `
                 className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                 id="option2"
                 role="option"
-                tabIndex={undefined}
               >
                 <span
                   className="slds-media__figure slds-listbox__option-icon"
@@ -1820,7 +1680,6 @@ exports[`render combobox render base combobox 1`] = `
                 className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                 id="option3"
                 role="option"
-                tabIndex={undefined}
               >
                 <span
                   className="slds-media__figure slds-listbox__option-icon"
@@ -1848,7 +1707,6 @@ exports[`render combobox render base combobox 1`] = `
                 className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                 id="option4"
                 role="option"
-                tabIndex={undefined}
               >
                 <span
                   className="slds-media__figure slds-listbox__option-icon"
@@ -1876,7 +1734,6 @@ exports[`render combobox render base combobox 1`] = `
                 className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                 id="option5"
                 role="option"
-                tabIndex={undefined}
               >
                 <span
                   className="slds-media__figure slds-listbox__option-icon"
@@ -1904,7 +1761,6 @@ exports[`render combobox render base combobox 1`] = `
                 className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                 id="option6"
                 role="option"
-                tabIndex={undefined}
               >
                 <span
                   className="slds-media__figure slds-listbox__option-icon"
@@ -1932,7 +1788,6 @@ exports[`render combobox render base combobox 1`] = `
                 className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                 id="option7"
                 role="option"
-                tabIndex={undefined}
               >
                 <span
                   className="slds-media__figure slds-listbox__option-icon"
@@ -1960,7 +1815,6 @@ exports[`render combobox render base combobox 1`] = `
                 className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                 id="option8"
                 role="option"
-                tabIndex={undefined}
               >
                 <span
                   className="slds-media__figure slds-listbox__option-icon"
@@ -1989,12 +1843,10 @@ exports[`render combobox render base combobox 1`] = `
 exports[`render combobox render combobox with displaying options based on user input 1`] = `
 <div
   className="slds-form-element"
-  role={undefined}
 >
   <label
     className="slds-form-element__label"
     htmlFor="combobox-id-01"
-    id={undefined}
   >
     Relate to
   </label>
@@ -2005,11 +1857,9 @@ exports[`render combobox render combobox with displaying options based on user i
       className="slds-combobox_container"
     >
       <div
-        aria-controls={undefined}
         aria-expanded="true"
         aria-haspopup="listbox"
         className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open"
-        id={undefined}
         role="combobox"
       >
         <div
@@ -2020,20 +1870,14 @@ exports[`render combobox render combobox with displaying options based on user i
             aria-activedescendant="option1"
             aria-autocomplete="list"
             aria-controls="listbox-id-01"
-            aria-invalid={undefined}
             autoComplete="off"
-            autoFocus={undefined}
             className="slds-input slds-combobox__input slds-has-focus slds-combobox__input-value"
             defaultValue="opp"
-            disabled={undefined}
             id="combobox-id-01"
             onBlur={[Function]}
             onFocus={[Function]}
             placeholder="Search..."
-            readOnly={undefined}
-            required={undefined}
             role="textbox"
-            tabIndex={undefined}
             type="text"
           />
           <span
@@ -2057,7 +1901,6 @@ exports[`render combobox render combobox with displaying options based on user i
           role="listbox"
         >
           <ul
-            aria-label={undefined}
             className="slds-listbox slds-listbox_vertical"
             role="presentation"
           >
@@ -2071,7 +1914,6 @@ exports[`render combobox render combobox with displaying options based on user i
                 className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                 id="option1"
                 role="option"
-                tabIndex={undefined}
               >
                 <span
                   className="slds-media__figure slds-listbox__option-icon"
@@ -2105,7 +1947,6 @@ exports[`render combobox render combobox with displaying options based on user i
                 className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                 id="option2"
                 role="option"
-                tabIndex={undefined}
               >
                 <span
                   className="slds-media__figure slds-listbox__option-icon"
@@ -2139,7 +1980,6 @@ exports[`render combobox render combobox with displaying options based on user i
                 className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                 id="option3"
                 role="option"
-                tabIndex={undefined}
               >
                 <span
                   className="slds-media__figure slds-listbox__option-icon"
@@ -2174,12 +2014,10 @@ exports[`render combobox render combobox with displaying options based on user i
 exports[`render combobox render grouped combobox 1`] = `
 <div
   className="slds-form-element"
-  role={undefined}
 >
   <label
     className="slds-form-element__label"
     htmlFor="combobox-id-01"
-    id={undefined}
   >
     Relate to
   </label>
@@ -2194,12 +2032,9 @@ exports[`render combobox render grouped combobox 1`] = `
       >
         <div
           className="slds-form-element"
-          role={undefined}
         >
           <label
             className="slds-form-element__label slds-assistive-text"
-            htmlFor={undefined}
-            id={undefined}
           >
             Filter Search by:
           </label>
@@ -2214,7 +2049,6 @@ exports[`render combobox render grouped combobox 1`] = `
                 aria-expanded="false"
                 aria-haspopup="listbox"
                 className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click"
-                id={undefined}
                 role="combobox"
               >
                 <div
@@ -2222,23 +2056,16 @@ exports[`render combobox render grouped combobox 1`] = `
                   role="none"
                 >
                   <input
-                    aria-activedescendant={undefined}
                     aria-autocomplete={null}
                     aria-controls="objectswitcher-listbox-id-01"
-                    aria-invalid={undefined}
                     autoComplete="off"
-                    autoFocus={undefined}
                     className="slds-input slds-combobox__input slds-combobox__input-value"
                     defaultValue="Accounts"
-                    disabled={undefined}
                     id="text-input-id-1"
                     onBlur={[Function]}
                     onFocus={[Function]}
                     placeholder=" "
-                    readOnly={undefined}
-                    required={undefined}
                     role="textbox"
-                    tabIndex={undefined}
                     type="text"
                   />
                   <span
@@ -2276,7 +2103,6 @@ exports[`render combobox render grouped combobox 1`] = `
                         className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                         id="object0"
                         role="presentation"
-                        tabIndex={undefined}
                       >
                         <h3
                           className="slds-listbox__option-header"
@@ -2296,7 +2122,6 @@ exports[`render combobox render grouped combobox 1`] = `
                         className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-is-selected"
                         id="object1"
                         role="option"
-                        tabIndex={undefined}
                       >
                         <span
                           className="slds-media__figure slds-listbox__option-icon"
@@ -2343,7 +2168,6 @@ exports[`render combobox render grouped combobox 1`] = `
                         className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                         id="object2"
                         role="option"
-                        tabIndex={undefined}
                       >
                         <span
                           className="slds-media__figure slds-listbox__option-icon"
@@ -2371,7 +2195,6 @@ exports[`render combobox render grouped combobox 1`] = `
                         className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                         id="object3"
                         role="option"
-                        tabIndex={undefined}
                       >
                         <span
                           className="slds-media__figure slds-listbox__option-icon"
@@ -2399,7 +2222,6 @@ exports[`render combobox render grouped combobox 1`] = `
                         className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                         id="object4"
                         role="option"
-                        tabIndex={undefined}
                       >
                         <span
                           className="slds-media__figure slds-listbox__option-icon"
@@ -2427,7 +2249,6 @@ exports[`render combobox render grouped combobox 1`] = `
                         className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                         id="object5"
                         role="option"
-                        tabIndex={undefined}
                       >
                         <span
                           className="slds-media__figure slds-listbox__option-icon"
@@ -2455,7 +2276,6 @@ exports[`render combobox render grouped combobox 1`] = `
                         className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                         id="object6"
                         role="option"
-                        tabIndex={undefined}
                       >
                         <span
                           className="slds-media__figure slds-listbox__option-icon"
@@ -2483,7 +2303,6 @@ exports[`render combobox render grouped combobox 1`] = `
                         className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                         id="object7"
                         role="option"
-                        tabIndex={undefined}
                       >
                         <span
                           className="slds-media__figure slds-listbox__option-icon"
@@ -2512,7 +2331,6 @@ exports[`render combobox render grouped combobox 1`] = `
         className="slds-combobox_container slds-combobox-addon_end"
       >
         <div
-          aria-controls={undefined}
           aria-expanded="true"
           aria-haspopup="listbox"
           className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open"
@@ -2524,23 +2342,15 @@ exports[`render combobox render grouped combobox 1`] = `
             role="none"
           >
             <input
-              aria-activedescendant={undefined}
               aria-autocomplete="list"
               aria-controls="listbox-id-01"
-              aria-invalid={undefined}
               autoComplete="off"
-              autoFocus={undefined}
               className="slds-input slds-combobox__input slds-has-focus"
-              defaultValue={undefined}
-              disabled={undefined}
               id="combobox-id-01"
               onBlur={[Function]}
               onFocus={[Function]}
               placeholder="Search..."
-              readOnly={undefined}
-              required={undefined}
               role="textbox"
-              tabIndex={undefined}
               type="text"
             />
             <span
@@ -2569,7 +2379,6 @@ exports[`render combobox render grouped combobox 1`] = `
             role="listbox"
           >
             <ul
-              aria-label={undefined}
               className="slds-listbox slds-listbox_vertical"
               role="presentation"
             >
@@ -2583,7 +2392,6 @@ exports[`render combobox render grouped combobox 1`] = `
                   className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
                   id="option1"
                   role="option"
-                  tabIndex={undefined}
                 >
                   <span
                     className="slds-media__figure slds-listbox__option-icon"
@@ -2631,7 +2439,6 @@ exports[`render combobox render grouped combobox 1`] = `
                   className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
                   id="option2"
                   role="option"
-                  tabIndex={undefined}
                 >
                   <span
                     className="slds-media__figure slds-listbox__option-icon"
@@ -2679,7 +2486,6 @@ exports[`render combobox render grouped combobox 1`] = `
                   className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
                   id="option3"
                   role="option"
-                  tabIndex={undefined}
                 >
                   <span
                     className="slds-media__figure slds-listbox__option-icon"
@@ -2727,7 +2533,6 @@ exports[`render combobox render grouped combobox 1`] = `
                   className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
                   id="option4"
                   role="option"
-                  tabIndex={undefined}
                 >
                   <span
                     className="slds-media__figure slds-listbox__option-icon"
@@ -2777,12 +2582,10 @@ exports[`render combobox render grouped combobox 1`] = `
 exports[`render combobox render grouped combobox displaying options based on user input 1`] = `
 <div
   className="slds-form-element"
-  role={undefined}
 >
   <label
     className="slds-form-element__label"
     htmlFor="combobox-id-01"
-    id={undefined}
   >
     Relate to
   </label>
@@ -2797,12 +2600,9 @@ exports[`render combobox render grouped combobox displaying options based on use
       >
         <div
           className="slds-form-element"
-          role={undefined}
         >
           <label
             className="slds-form-element__label slds-assistive-text"
-            htmlFor={undefined}
-            id={undefined}
           >
             Filter Search by:
           </label>
@@ -2817,7 +2617,6 @@ exports[`render combobox render grouped combobox displaying options based on use
                 aria-expanded="false"
                 aria-haspopup="listbox"
                 className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click"
-                id={undefined}
                 role="combobox"
               >
                 <div
@@ -2825,23 +2624,16 @@ exports[`render combobox render grouped combobox displaying options based on use
                   role="none"
                 >
                   <input
-                    aria-activedescendant={undefined}
                     aria-autocomplete={null}
                     aria-controls="objectswitcher-listbox-id-01"
-                    aria-invalid={undefined}
                     autoComplete="off"
-                    autoFocus={undefined}
                     className="slds-input slds-combobox__input slds-combobox__input-value"
                     defaultValue="Accounts"
-                    disabled={undefined}
                     id="text-input-id-1"
                     onBlur={[Function]}
                     onFocus={[Function]}
                     placeholder=" "
-                    readOnly={undefined}
-                    required={undefined}
                     role="textbox"
-                    tabIndex={undefined}
                     type="text"
                   />
                   <span
@@ -2879,7 +2671,6 @@ exports[`render combobox render grouped combobox displaying options based on use
                         className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                         id="object0"
                         role="presentation"
-                        tabIndex={undefined}
                       >
                         <h3
                           className="slds-listbox__option-header"
@@ -2899,7 +2690,6 @@ exports[`render combobox render grouped combobox displaying options based on use
                         className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-is-selected"
                         id="object1"
                         role="option"
-                        tabIndex={undefined}
                       >
                         <span
                           className="slds-media__figure slds-listbox__option-icon"
@@ -2946,7 +2736,6 @@ exports[`render combobox render grouped combobox displaying options based on use
                         className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                         id="object2"
                         role="option"
-                        tabIndex={undefined}
                       >
                         <span
                           className="slds-media__figure slds-listbox__option-icon"
@@ -2974,7 +2763,6 @@ exports[`render combobox render grouped combobox displaying options based on use
                         className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                         id="object3"
                         role="option"
-                        tabIndex={undefined}
                       >
                         <span
                           className="slds-media__figure slds-listbox__option-icon"
@@ -3002,7 +2790,6 @@ exports[`render combobox render grouped combobox displaying options based on use
                         className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                         id="object4"
                         role="option"
-                        tabIndex={undefined}
                       >
                         <span
                           className="slds-media__figure slds-listbox__option-icon"
@@ -3030,7 +2817,6 @@ exports[`render combobox render grouped combobox displaying options based on use
                         className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                         id="object5"
                         role="option"
-                        tabIndex={undefined}
                       >
                         <span
                           className="slds-media__figure slds-listbox__option-icon"
@@ -3058,7 +2844,6 @@ exports[`render combobox render grouped combobox displaying options based on use
                         className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                         id="object6"
                         role="option"
-                        tabIndex={undefined}
                       >
                         <span
                           className="slds-media__figure slds-listbox__option-icon"
@@ -3086,7 +2871,6 @@ exports[`render combobox render grouped combobox displaying options based on use
                         className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                         id="object7"
                         role="option"
-                        tabIndex={undefined}
                       >
                         <span
                           className="slds-media__figure slds-listbox__option-icon"
@@ -3115,7 +2899,6 @@ exports[`render combobox render grouped combobox displaying options based on use
         className="slds-combobox_container slds-combobox-addon_end"
       >
         <div
-          aria-controls={undefined}
           aria-expanded="true"
           aria-haspopup="listbox"
           className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open"
@@ -3127,23 +2910,16 @@ exports[`render combobox render grouped combobox displaying options based on use
             role="none"
           >
             <input
-              aria-activedescendant={undefined}
               aria-autocomplete="list"
               aria-controls="listbox-id-01"
-              aria-invalid={undefined}
               autoComplete="off"
-              autoFocus={undefined}
               className="slds-input slds-combobox__input slds-has-focus slds-combobox__input-value"
               defaultValue="salesforce"
-              disabled={undefined}
               id="combobox-id-01"
               onBlur={[Function]}
               onFocus={[Function]}
               placeholder="Search..."
-              readOnly={undefined}
-              required={undefined}
               role="textbox"
-              tabIndex={undefined}
               type="text"
             />
             <span
@@ -3172,7 +2948,6 @@ exports[`render combobox render grouped combobox displaying options based on use
             role="listbox"
           >
             <ul
-              aria-label={undefined}
               className="slds-listbox slds-listbox_vertical"
               role="presentation"
             >
@@ -3186,7 +2961,6 @@ exports[`render combobox render grouped combobox displaying options based on use
                   className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_term slds-has-focus"
                   id="option0"
                   role="option"
-                  tabIndex={undefined}
                 >
                   <span
                     className="slds-media__figure slds-listbox__option-icon"
@@ -3231,7 +3005,6 @@ exports[`render combobox render grouped combobox displaying options based on use
                   className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
                   id="option1"
                   role="option"
-                  tabIndex={undefined}
                 >
                   <span
                     className="slds-media__figure slds-listbox__option-icon"
@@ -3285,7 +3058,6 @@ exports[`render combobox render grouped combobox displaying options based on use
                   className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
                   id="option2"
                   role="option"
-                  tabIndex={undefined}
                 >
                   <span
                     className="slds-media__figure slds-listbox__option-icon"
@@ -3339,7 +3111,6 @@ exports[`render combobox render grouped combobox displaying options based on use
                   className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
                   id="option3"
                   role="option"
-                  tabIndex={undefined}
                 >
                   <span
                     className="slds-media__figure slds-listbox__option-icon"
@@ -3395,12 +3166,10 @@ exports[`render combobox render grouped combobox displaying options based on use
 exports[`render combobox render grouped combobox with selections made in collapsed state 1`] = `
 <div
   className="slds-form-element"
-  role={undefined}
 >
   <label
     className="slds-form-element__label"
     htmlFor="combobox-id-01"
-    id={undefined}
   >
     Relate to
   </label>
@@ -3415,12 +3184,9 @@ exports[`render combobox render grouped combobox with selections made in collaps
       >
         <div
           className="slds-form-element"
-          role={undefined}
         >
           <label
             className="slds-form-element__label slds-assistive-text"
-            htmlFor={undefined}
-            id={undefined}
           >
             Filter Search by:
           </label>
@@ -3435,7 +3201,6 @@ exports[`render combobox render grouped combobox with selections made in collaps
                 aria-expanded="false"
                 aria-haspopup="listbox"
                 className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click"
-                id={undefined}
                 role="combobox"
               >
                 <div
@@ -3443,23 +3208,16 @@ exports[`render combobox render grouped combobox with selections made in collaps
                   role="none"
                 >
                   <input
-                    aria-activedescendant={undefined}
                     aria-autocomplete={null}
                     aria-controls="objectswitcher-listbox-id-01"
-                    aria-invalid={undefined}
                     autoComplete="off"
-                    autoFocus={undefined}
                     className="slds-input slds-combobox__input slds-combobox__input-value"
                     defaultValue="Accounts"
-                    disabled={undefined}
                     id="text-input-id-1"
                     onBlur={[Function]}
                     onFocus={[Function]}
                     placeholder=" "
-                    readOnly={undefined}
-                    required={undefined}
                     role="textbox"
-                    tabIndex={undefined}
                     type="text"
                   />
                   <span
@@ -3497,7 +3255,6 @@ exports[`render combobox render grouped combobox with selections made in collaps
                         className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                         id="object0"
                         role="presentation"
-                        tabIndex={undefined}
                       >
                         <h3
                           className="slds-listbox__option-header"
@@ -3517,7 +3274,6 @@ exports[`render combobox render grouped combobox with selections made in collaps
                         className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-is-selected"
                         id="object1"
                         role="option"
-                        tabIndex={undefined}
                       >
                         <span
                           className="slds-media__figure slds-listbox__option-icon"
@@ -3564,7 +3320,6 @@ exports[`render combobox render grouped combobox with selections made in collaps
                         className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                         id="object2"
                         role="option"
-                        tabIndex={undefined}
                       >
                         <span
                           className="slds-media__figure slds-listbox__option-icon"
@@ -3592,7 +3347,6 @@ exports[`render combobox render grouped combobox with selections made in collaps
                         className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                         id="object3"
                         role="option"
-                        tabIndex={undefined}
                       >
                         <span
                           className="slds-media__figure slds-listbox__option-icon"
@@ -3620,7 +3374,6 @@ exports[`render combobox render grouped combobox with selections made in collaps
                         className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                         id="object4"
                         role="option"
-                        tabIndex={undefined}
                       >
                         <span
                           className="slds-media__figure slds-listbox__option-icon"
@@ -3648,7 +3401,6 @@ exports[`render combobox render grouped combobox with selections made in collaps
                         className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                         id="object5"
                         role="option"
-                        tabIndex={undefined}
                       >
                         <span
                           className="slds-media__figure slds-listbox__option-icon"
@@ -3676,7 +3428,6 @@ exports[`render combobox render grouped combobox with selections made in collaps
                         className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                         id="object6"
                         role="option"
-                        tabIndex={undefined}
                       >
                         <span
                           className="slds-media__figure slds-listbox__option-icon"
@@ -3704,7 +3455,6 @@ exports[`render combobox render grouped combobox with selections made in collaps
                         className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                         id="object7"
                         role="option"
-                        tabIndex={undefined}
                       >
                         <span
                           className="slds-media__figure slds-listbox__option-icon"
@@ -3733,7 +3483,6 @@ exports[`render combobox render grouped combobox with selections made in collaps
         className="slds-combobox_container slds-combobox-addon_end"
       >
         <div
-          aria-controls={undefined}
           aria-expanded="false"
           aria-haspopup="listbox"
           className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click"
@@ -3745,23 +3494,15 @@ exports[`render combobox render grouped combobox with selections made in collaps
             role="none"
           >
             <input
-              aria-activedescendant={undefined}
               aria-autocomplete="list"
               aria-controls="listbox-id-01"
-              aria-invalid={undefined}
               autoComplete="off"
-              autoFocus={undefined}
               className="slds-input slds-combobox__input"
-              defaultValue={undefined}
-              disabled={undefined}
               id="combobox-id-01"
               onBlur={[Function]}
               onFocus={[Function]}
               placeholder="Search..."
-              readOnly={undefined}
-              required={undefined}
               role="textbox"
-              tabIndex={undefined}
               type="text"
             />
             <span
@@ -3790,7 +3531,6 @@ exports[`render combobox render grouped combobox with selections made in collaps
             role="listbox"
           >
             <ul
-              aria-label={undefined}
               className="slds-listbox slds-listbox_vertical"
               role="presentation"
             >
@@ -3804,7 +3544,6 @@ exports[`render combobox render grouped combobox with selections made in collaps
                   className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
                   id="option1"
                   role="option"
-                  tabIndex={undefined}
                 >
                   <span
                     className="slds-media__figure slds-listbox__option-icon"
@@ -3852,7 +3591,6 @@ exports[`render combobox render grouped combobox with selections made in collaps
                   className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
                   id="option2"
                   role="option"
-                  tabIndex={undefined}
                 >
                   <span
                     className="slds-media__figure slds-listbox__option-icon"
@@ -3900,7 +3638,6 @@ exports[`render combobox render grouped combobox with selections made in collaps
                   className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
                   id="option3"
                   role="option"
-                  tabIndex={undefined}
                 >
                   <span
                     className="slds-media__figure slds-listbox__option-icon"
@@ -3948,7 +3685,6 @@ exports[`render combobox render grouped combobox with selections made in collaps
                   className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
                   id="option4"
                   role="option"
-                  tabIndex={undefined}
                 >
                   <span
                     className="slds-media__figure slds-listbox__option-icon"
@@ -4012,7 +3748,6 @@ exports[`render combobox render grouped combobox with selections made in collaps
         role="listbox"
       >
         <li
-          aria-hidden={undefined}
           className="slds-listbox-item"
           role="presentation"
         >
@@ -4067,7 +3802,6 @@ exports[`render combobox render grouped combobox with selections made in collaps
           </span>
         </li>
         <li
-          aria-hidden={undefined}
           className="slds-listbox-item"
           role="presentation"
         >
@@ -4075,7 +3809,6 @@ exports[`render combobox render grouped combobox with selections made in collaps
             aria-selected="true"
             className="slds-pill"
             role="option"
-            tabIndex={undefined}
           >
             <span
               className="slds-icon_container slds-icon-standard-account slds-pill__icon_container"
@@ -4122,7 +3855,6 @@ exports[`render combobox render grouped combobox with selections made in collaps
           </span>
         </li>
         <li
-          aria-hidden={undefined}
           className="slds-listbox-item"
           role="presentation"
         >
@@ -4130,7 +3862,6 @@ exports[`render combobox render grouped combobox with selections made in collaps
             aria-selected="true"
             className="slds-pill"
             role="option"
-            tabIndex={undefined}
           >
             <span
               className="slds-icon_container slds-icon-standard-account slds-pill__icon_container"
@@ -4177,7 +3908,6 @@ exports[`render combobox render grouped combobox with selections made in collaps
           </span>
         </li>
         <li
-          aria-hidden={undefined}
           className="slds-listbox-item"
           role="presentation"
         >
@@ -4185,7 +3915,6 @@ exports[`render combobox render grouped combobox with selections made in collaps
             aria-selected="true"
             className="slds-pill"
             role="option"
-            tabIndex={undefined}
           >
             <span
               className="slds-icon_container slds-icon-standard-account slds-pill__icon_container"
@@ -4232,7 +3961,6 @@ exports[`render combobox render grouped combobox with selections made in collaps
           </span>
         </li>
         <li
-          aria-hidden={undefined}
           className="slds-listbox-item"
           role="presentation"
         >
@@ -4240,7 +3968,6 @@ exports[`render combobox render grouped combobox with selections made in collaps
             aria-selected="true"
             className="slds-pill"
             role="option"
-            tabIndex={undefined}
           >
             <span
               className="slds-icon_container slds-icon-standard-account slds-pill__icon_container"
@@ -4287,7 +4014,6 @@ exports[`render combobox render grouped combobox with selections made in collaps
           </span>
         </li>
         <li
-          aria-hidden={undefined}
           className="slds-listbox-item"
           role="presentation"
         >
@@ -4295,7 +4021,6 @@ exports[`render combobox render grouped combobox with selections made in collaps
             aria-selected="true"
             className="slds-pill"
             role="option"
-            tabIndex={undefined}
           >
             <span
               className="slds-icon_container slds-icon-standard-account slds-pill__icon_container"
@@ -4342,7 +4067,6 @@ exports[`render combobox render grouped combobox with selections made in collaps
           </span>
         </li>
         <li
-          aria-hidden={undefined}
           className="slds-listbox-item"
           role="presentation"
         >
@@ -4350,7 +4074,6 @@ exports[`render combobox render grouped combobox with selections made in collaps
             aria-selected="true"
             className="slds-pill"
             role="option"
-            tabIndex={undefined}
           >
             <span
               className="slds-icon_container slds-icon-standard-account slds-pill__icon_container"
@@ -4397,7 +4120,6 @@ exports[`render combobox render grouped combobox with selections made in collaps
           </span>
         </li>
         <li
-          aria-hidden={undefined}
           className="slds-listbox-item"
           role="presentation"
         >
@@ -4405,7 +4127,6 @@ exports[`render combobox render grouped combobox with selections made in collaps
             aria-selected="true"
             className="slds-pill"
             role="option"
-            tabIndex={undefined}
           >
             <span
               className="slds-icon_container slds-icon-standard-account slds-pill__icon_container"
@@ -4460,12 +4181,10 @@ exports[`render combobox render grouped combobox with selections made in collaps
 exports[`render combobox render grouped combobox with selections made in expanded state 1`] = `
 <div
   className="slds-form-element"
-  role={undefined}
 >
   <label
     className="slds-form-element__label"
     htmlFor="combobox-id-01"
-    id={undefined}
   >
     Relate to
   </label>
@@ -4480,12 +4199,9 @@ exports[`render combobox render grouped combobox with selections made in expande
       >
         <div
           className="slds-form-element"
-          role={undefined}
         >
           <label
             className="slds-form-element__label slds-assistive-text"
-            htmlFor={undefined}
-            id={undefined}
           >
             Filter Search by:
           </label>
@@ -4500,7 +4216,6 @@ exports[`render combobox render grouped combobox with selections made in expande
                 aria-expanded="false"
                 aria-haspopup="listbox"
                 className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click"
-                id={undefined}
                 role="combobox"
               >
                 <div
@@ -4508,23 +4223,16 @@ exports[`render combobox render grouped combobox with selections made in expande
                   role="none"
                 >
                   <input
-                    aria-activedescendant={undefined}
                     aria-autocomplete={null}
                     aria-controls="objectswitcher-listbox-id-01"
-                    aria-invalid={undefined}
                     autoComplete="off"
-                    autoFocus={undefined}
                     className="slds-input slds-combobox__input slds-combobox__input-value"
                     defaultValue="Accounts"
-                    disabled={undefined}
                     id="text-input-id-1"
                     onBlur={[Function]}
                     onFocus={[Function]}
                     placeholder=" "
-                    readOnly={undefined}
-                    required={undefined}
                     role="textbox"
-                    tabIndex={undefined}
                     type="text"
                   />
                   <span
@@ -4562,7 +4270,6 @@ exports[`render combobox render grouped combobox with selections made in expande
                         className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                         id="object0"
                         role="presentation"
-                        tabIndex={undefined}
                       >
                         <h3
                           className="slds-listbox__option-header"
@@ -4582,7 +4289,6 @@ exports[`render combobox render grouped combobox with selections made in expande
                         className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-is-selected"
                         id="object1"
                         role="option"
-                        tabIndex={undefined}
                       >
                         <span
                           className="slds-media__figure slds-listbox__option-icon"
@@ -4629,7 +4335,6 @@ exports[`render combobox render grouped combobox with selections made in expande
                         className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                         id="object2"
                         role="option"
-                        tabIndex={undefined}
                       >
                         <span
                           className="slds-media__figure slds-listbox__option-icon"
@@ -4657,7 +4362,6 @@ exports[`render combobox render grouped combobox with selections made in expande
                         className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                         id="object3"
                         role="option"
-                        tabIndex={undefined}
                       >
                         <span
                           className="slds-media__figure slds-listbox__option-icon"
@@ -4685,7 +4389,6 @@ exports[`render combobox render grouped combobox with selections made in expande
                         className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                         id="object4"
                         role="option"
-                        tabIndex={undefined}
                       >
                         <span
                           className="slds-media__figure slds-listbox__option-icon"
@@ -4713,7 +4416,6 @@ exports[`render combobox render grouped combobox with selections made in expande
                         className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                         id="object5"
                         role="option"
-                        tabIndex={undefined}
                       >
                         <span
                           className="slds-media__figure slds-listbox__option-icon"
@@ -4741,7 +4443,6 @@ exports[`render combobox render grouped combobox with selections made in expande
                         className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                         id="object6"
                         role="option"
-                        tabIndex={undefined}
                       >
                         <span
                           className="slds-media__figure slds-listbox__option-icon"
@@ -4769,7 +4470,6 @@ exports[`render combobox render grouped combobox with selections made in expande
                         className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                         id="object7"
                         role="option"
-                        tabIndex={undefined}
                       >
                         <span
                           className="slds-media__figure slds-listbox__option-icon"
@@ -4798,7 +4498,6 @@ exports[`render combobox render grouped combobox with selections made in expande
         className="slds-combobox_container slds-combobox-addon_end"
       >
         <div
-          aria-controls={undefined}
           aria-expanded="false"
           aria-haspopup="listbox"
           className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click"
@@ -4810,23 +4509,15 @@ exports[`render combobox render grouped combobox with selections made in expande
             role="none"
           >
             <input
-              aria-activedescendant={undefined}
               aria-autocomplete="list"
               aria-controls="listbox-id-01"
-              aria-invalid={undefined}
               autoComplete="off"
-              autoFocus={undefined}
               className="slds-input slds-combobox__input slds-has-focus"
-              defaultValue={undefined}
-              disabled={undefined}
               id="combobox-id-01"
               onBlur={[Function]}
               onFocus={[Function]}
               placeholder="Search..."
-              readOnly={undefined}
-              required={undefined}
               role="textbox"
-              tabIndex={undefined}
               type="text"
             />
             <span
@@ -4855,7 +4546,6 @@ exports[`render combobox render grouped combobox with selections made in expande
             role="listbox"
           >
             <ul
-              aria-label={undefined}
               className="slds-listbox slds-listbox_vertical"
               role="presentation"
             >
@@ -4869,7 +4559,6 @@ exports[`render combobox render grouped combobox with selections made in expande
                   className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
                   id="option1"
                   role="option"
-                  tabIndex={undefined}
                 >
                   <span
                     className="slds-media__figure slds-listbox__option-icon"
@@ -4917,7 +4606,6 @@ exports[`render combobox render grouped combobox with selections made in expande
                   className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
                   id="option2"
                   role="option"
-                  tabIndex={undefined}
                 >
                   <span
                     className="slds-media__figure slds-listbox__option-icon"
@@ -4965,7 +4653,6 @@ exports[`render combobox render grouped combobox with selections made in expande
                   className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
                   id="option3"
                   role="option"
-                  tabIndex={undefined}
                 >
                   <span
                     className="slds-media__figure slds-listbox__option-icon"
@@ -5013,7 +4700,6 @@ exports[`render combobox render grouped combobox with selections made in expande
                   className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
                   id="option4"
                   role="option"
-                  tabIndex={undefined}
                 >
                   <span
                     className="slds-media__figure slds-listbox__option-icon"
@@ -5066,7 +4752,6 @@ exports[`render combobox render grouped combobox with selections made in expande
         role="listbox"
       >
         <li
-          aria-hidden={undefined}
           className="slds-listbox-item"
           role="presentation"
         >
@@ -5121,7 +4806,6 @@ exports[`render combobox render grouped combobox with selections made in expande
           </span>
         </li>
         <li
-          aria-hidden={undefined}
           className="slds-listbox-item"
           role="presentation"
         >
@@ -5129,7 +4813,6 @@ exports[`render combobox render grouped combobox with selections made in expande
             aria-selected="true"
             className="slds-pill"
             role="option"
-            tabIndex={undefined}
           >
             <span
               className="slds-icon_container slds-icon-standard-account slds-pill__icon_container"
@@ -5176,7 +4859,6 @@ exports[`render combobox render grouped combobox with selections made in expande
           </span>
         </li>
         <li
-          aria-hidden={undefined}
           className="slds-listbox-item"
           role="presentation"
         >
@@ -5184,7 +4866,6 @@ exports[`render combobox render grouped combobox with selections made in expande
             aria-selected="true"
             className="slds-pill"
             role="option"
-            tabIndex={undefined}
           >
             <span
               className="slds-icon_container slds-icon-standard-account slds-pill__icon_container"
@@ -5231,7 +4912,6 @@ exports[`render combobox render grouped combobox with selections made in expande
           </span>
         </li>
         <li
-          aria-hidden={undefined}
           className="slds-listbox-item"
           role="presentation"
         >
@@ -5239,7 +4919,6 @@ exports[`render combobox render grouped combobox with selections made in expande
             aria-selected="true"
             className="slds-pill"
             role="option"
-            tabIndex={undefined}
           >
             <span
               className="slds-icon_container slds-icon-standard-account slds-pill__icon_container"
@@ -5286,7 +4965,6 @@ exports[`render combobox render grouped combobox with selections made in expande
           </span>
         </li>
         <li
-          aria-hidden={undefined}
           className="slds-listbox-item"
           role="presentation"
         >
@@ -5294,7 +4972,6 @@ exports[`render combobox render grouped combobox with selections made in expande
             aria-selected="true"
             className="slds-pill"
             role="option"
-            tabIndex={undefined}
           >
             <span
               className="slds-icon_container slds-icon-standard-account slds-pill__icon_container"
@@ -5341,7 +5018,6 @@ exports[`render combobox render grouped combobox with selections made in expande
           </span>
         </li>
         <li
-          aria-hidden={undefined}
           className="slds-listbox-item"
           role="presentation"
         >
@@ -5349,7 +5025,6 @@ exports[`render combobox render grouped combobox with selections made in expande
             aria-selected="true"
             className="slds-pill"
             role="option"
-            tabIndex={undefined}
           >
             <span
               className="slds-icon_container slds-icon-standard-account slds-pill__icon_container"
@@ -5396,7 +5071,6 @@ exports[`render combobox render grouped combobox with selections made in expande
           </span>
         </li>
         <li
-          aria-hidden={undefined}
           className="slds-listbox-item"
           role="presentation"
         >
@@ -5404,7 +5078,6 @@ exports[`render combobox render grouped combobox with selections made in expande
             aria-selected="true"
             className="slds-pill"
             role="option"
-            tabIndex={undefined}
           >
             <span
               className="slds-icon_container slds-icon-standard-account slds-pill__icon_container"
@@ -5451,7 +5124,6 @@ exports[`render combobox render grouped combobox with selections made in expande
           </span>
         </li>
         <li
-          aria-hidden={undefined}
           className="slds-listbox-item"
           role="presentation"
         >
@@ -5459,7 +5131,6 @@ exports[`render combobox render grouped combobox with selections made in expande
             aria-selected="true"
             className="slds-pill"
             role="option"
-            tabIndex={undefined}
           >
             <span
               className="slds-icon_container slds-icon-standard-account slds-pill__icon_container"
@@ -5514,12 +5185,10 @@ exports[`render combobox render grouped combobox with selections made in expande
 exports[`render combobox render multiple selections in a closed combobox 1`] = `
 <div
   className="slds-form-element"
-  role={undefined}
 >
   <label
     className="slds-form-element__label"
     htmlFor="combobox-id-01"
-    id={undefined}
   >
     Relate to
   </label>
@@ -5530,11 +5199,9 @@ exports[`render combobox render multiple selections in a closed combobox 1`] = `
       className="slds-combobox_container"
     >
       <div
-        aria-controls={undefined}
         aria-expanded="false"
         aria-haspopup="listbox"
         className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click"
-        id={undefined}
         role="combobox"
       >
         <div
@@ -5542,23 +5209,17 @@ exports[`render combobox render multiple selections in a closed combobox 1`] = `
           role="none"
         >
           <input
-            aria-activedescendant={undefined}
             aria-autocomplete={null}
             aria-controls="listbox-id-01"
-            aria-invalid={undefined}
             autoComplete="off"
-            autoFocus={undefined}
             className="slds-input slds-combobox__input slds-combobox__input-value"
             defaultValue="2 Options Selected"
-            disabled={undefined}
             id="combobox-id-01"
             onBlur={[Function]}
             onFocus={[Function]}
             placeholder="Select an Option"
             readOnly={true}
-            required={undefined}
             role="textbox"
-            tabIndex={undefined}
             type="text"
           />
           <span
@@ -5582,7 +5243,6 @@ exports[`render combobox render multiple selections in a closed combobox 1`] = `
           role="listbox"
         >
           <ul
-            aria-label={undefined}
             className="slds-listbox slds-listbox_vertical"
             role="presentation"
           >
@@ -5596,7 +5256,6 @@ exports[`render combobox render multiple selections in a closed combobox 1`] = `
                 className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-is-selected"
                 id="option1"
                 role="option"
-                tabIndex={undefined}
               >
                 <span
                   className="slds-media__figure slds-listbox__option-icon"
@@ -5643,7 +5302,6 @@ exports[`render combobox render multiple selections in a closed combobox 1`] = `
                 className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-is-selected"
                 id="option2"
                 role="option"
-                tabIndex={undefined}
               >
                 <span
                   className="slds-media__figure slds-listbox__option-icon"
@@ -5690,7 +5348,6 @@ exports[`render combobox render multiple selections in a closed combobox 1`] = `
                 className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                 id="option3"
                 role="option"
-                tabIndex={undefined}
               >
                 <span
                   className="slds-media__figure slds-listbox__option-icon"
@@ -5718,7 +5375,6 @@ exports[`render combobox render multiple selections in a closed combobox 1`] = `
                 className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                 id="option4"
                 role="option"
-                tabIndex={undefined}
               >
                 <span
                   className="slds-media__figure slds-listbox__option-icon"
@@ -5746,7 +5402,6 @@ exports[`render combobox render multiple selections in a closed combobox 1`] = `
                 className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                 id="option5"
                 role="option"
-                tabIndex={undefined}
               >
                 <span
                   className="slds-media__figure slds-listbox__option-icon"
@@ -5774,7 +5429,6 @@ exports[`render combobox render multiple selections in a closed combobox 1`] = `
                 className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                 id="option6"
                 role="option"
-                tabIndex={undefined}
               >
                 <span
                   className="slds-media__figure slds-listbox__option-icon"
@@ -5802,7 +5456,6 @@ exports[`render combobox render multiple selections in a closed combobox 1`] = `
                 className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                 id="option7"
                 role="option"
-                tabIndex={undefined}
               >
                 <span
                   className="slds-media__figure slds-listbox__option-icon"
@@ -5830,7 +5483,6 @@ exports[`render combobox render multiple selections in a closed combobox 1`] = `
                 className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                 id="option8"
                 role="option"
-                tabIndex={undefined}
               >
                 <span
                   className="slds-media__figure slds-listbox__option-icon"
@@ -5862,7 +5514,6 @@ exports[`render combobox render multiple selections in a closed combobox 1`] = `
         role="listbox"
       >
         <li
-          aria-hidden={undefined}
           className="slds-listbox-item"
           role="presentation"
         >
@@ -5899,7 +5550,6 @@ exports[`render combobox render multiple selections in a closed combobox 1`] = `
           </span>
         </li>
         <li
-          aria-hidden={undefined}
           className="slds-listbox-item"
           role="presentation"
         >
@@ -5907,7 +5557,6 @@ exports[`render combobox render multiple selections in a closed combobox 1`] = `
             aria-selected="true"
             className="slds-pill"
             role="option"
-            tabIndex={undefined}
           >
             <span
               className="slds-pill__label"
@@ -5944,12 +5593,10 @@ exports[`render combobox render multiple selections in a closed combobox 1`] = `
 exports[`render combobox render single selection in an open combobox 1`] = `
 <div
   className="slds-form-element"
-  role={undefined}
 >
   <label
     className="slds-form-element__label"
     htmlFor="combobox-id-01"
-    id={undefined}
   >
     Relate to
   </label>
@@ -5960,11 +5607,9 @@ exports[`render combobox render single selection in an open combobox 1`] = `
       className="slds-combobox_container"
     >
       <div
-        aria-controls={undefined}
         aria-expanded="true"
         aria-haspopup="listbox"
         className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open"
-        id={undefined}
         role="combobox"
       >
         <div
@@ -5975,20 +5620,15 @@ exports[`render combobox render single selection in an open combobox 1`] = `
             aria-activedescendant="option1"
             aria-autocomplete={null}
             aria-controls="listbox-id-01"
-            aria-invalid={undefined}
             autoComplete="off"
-            autoFocus={undefined}
             className="slds-input slds-combobox__input slds-has-focus slds-combobox__input-value"
             defaultValue="Accounts"
-            disabled={undefined}
             id="combobox-id-01"
             onBlur={[Function]}
             onFocus={[Function]}
             placeholder="Select an Option"
             readOnly={true}
-            required={undefined}
             role="textbox"
-            tabIndex={undefined}
             type="text"
           />
           <span
@@ -6012,7 +5652,6 @@ exports[`render combobox render single selection in an open combobox 1`] = `
           role="listbox"
         >
           <ul
-            aria-label={undefined}
             className="slds-listbox slds-listbox_vertical"
             role="presentation"
           >
@@ -6026,7 +5665,6 @@ exports[`render combobox render single selection in an open combobox 1`] = `
                 className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-is-selected slds-has-focus"
                 id="option1"
                 role="option"
-                tabIndex={undefined}
               >
                 <span
                   className="slds-media__figure slds-listbox__option-icon"
@@ -6073,7 +5711,6 @@ exports[`render combobox render single selection in an open combobox 1`] = `
                 className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                 id="option2"
                 role="option"
-                tabIndex={undefined}
               >
                 <span
                   className="slds-media__figure slds-listbox__option-icon"
@@ -6101,7 +5738,6 @@ exports[`render combobox render single selection in an open combobox 1`] = `
                 className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                 id="option3"
                 role="option"
-                tabIndex={undefined}
               >
                 <span
                   className="slds-media__figure slds-listbox__option-icon"
@@ -6129,7 +5765,6 @@ exports[`render combobox render single selection in an open combobox 1`] = `
                 className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                 id="option4"
                 role="option"
-                tabIndex={undefined}
               >
                 <span
                   className="slds-media__figure slds-listbox__option-icon"
@@ -6157,7 +5792,6 @@ exports[`render combobox render single selection in an open combobox 1`] = `
                 className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                 id="option5"
                 role="option"
-                tabIndex={undefined}
               >
                 <span
                   className="slds-media__figure slds-listbox__option-icon"
@@ -6185,7 +5819,6 @@ exports[`render combobox render single selection in an open combobox 1`] = `
                 className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                 id="option6"
                 role="option"
-                tabIndex={undefined}
               >
                 <span
                   className="slds-media__figure slds-listbox__option-icon"
@@ -6213,7 +5846,6 @@ exports[`render combobox render single selection in an open combobox 1`] = `
                 className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                 id="option7"
                 role="option"
-                tabIndex={undefined}
               >
                 <span
                   className="slds-media__figure slds-listbox__option-icon"
@@ -6241,7 +5873,6 @@ exports[`render combobox render single selection in an open combobox 1`] = `
                 className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                 id="option8"
                 role="option"
-                tabIndex={undefined}
               >
                 <span
                   className="slds-media__figure slds-listbox__option-icon"
@@ -6270,12 +5901,10 @@ exports[`render combobox render single selection in an open combobox 1`] = `
 exports[`render combobox renders autocomplete combobox 1`] = `
 <div
   className="slds-form-element"
-  role={undefined}
 >
   <label
     className="slds-form-element__label"
     htmlFor="combobox-id-01"
-    id={undefined}
   >
     Relate to
   </label>
@@ -6286,11 +5915,9 @@ exports[`render combobox renders autocomplete combobox 1`] = `
       className="slds-combobox_container"
     >
       <div
-        aria-controls={undefined}
         aria-expanded="true"
         aria-haspopup="listbox"
         className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open"
-        id={undefined}
         role="combobox"
       >
         <div
@@ -6298,23 +5925,15 @@ exports[`render combobox renders autocomplete combobox 1`] = `
           role="none"
         >
           <input
-            aria-activedescendant={undefined}
             aria-autocomplete="list"
             aria-controls="listbox-id-01"
-            aria-invalid={undefined}
             autoComplete="off"
-            autoFocus={undefined}
             className="slds-input slds-combobox__input slds-has-focus"
-            defaultValue={undefined}
-            disabled={undefined}
             id="combobox-id-01"
             onBlur={[Function]}
             onFocus={[Function]}
             placeholder="Search..."
-            readOnly={undefined}
-            required={undefined}
             role="textbox"
-            tabIndex={undefined}
             type="text"
           />
           <span
@@ -6338,7 +5957,6 @@ exports[`render combobox renders autocomplete combobox 1`] = `
           role="listbox"
         >
           <ul
-            aria-label={undefined}
             className="slds-listbox slds-listbox_vertical"
             role="presentation"
           >
@@ -6352,7 +5970,6 @@ exports[`render combobox renders autocomplete combobox 1`] = `
                 className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                 id="option1"
                 role="option"
-                tabIndex={undefined}
               >
                 <span
                   className="slds-media__figure slds-listbox__option-icon"
@@ -6380,7 +5997,6 @@ exports[`render combobox renders autocomplete combobox 1`] = `
                 className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                 id="option2"
                 role="option"
-                tabIndex={undefined}
               >
                 <span
                   className="slds-media__figure slds-listbox__option-icon"
@@ -6408,7 +6024,6 @@ exports[`render combobox renders autocomplete combobox 1`] = `
                 className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                 id="option3"
                 role="option"
-                tabIndex={undefined}
               >
                 <span
                   className="slds-media__figure slds-listbox__option-icon"
@@ -6437,12 +6052,10 @@ exports[`render combobox renders autocomplete combobox 1`] = `
 exports[`render combobox renders different styles of options in the listbox 1`] = `
 <div
   className="slds-form-element"
-  role={undefined}
 >
   <label
     className="slds-form-element__label"
     htmlFor="combobox-id-01"
-    id={undefined}
   >
     Relate to
   </label>
@@ -6453,11 +6066,9 @@ exports[`render combobox renders different styles of options in the listbox 1`] 
       className="slds-combobox_container"
     >
       <div
-        aria-controls={undefined}
         aria-expanded="true"
         aria-haspopup="listbox"
         className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open"
-        id={undefined}
         role="combobox"
       >
         <div
@@ -6465,23 +6076,17 @@ exports[`render combobox renders different styles of options in the listbox 1`] 
           role="none"
         >
           <input
-            aria-activedescendant={undefined}
             aria-autocomplete={null}
             aria-controls="listbox-id-01"
-            aria-invalid={undefined}
             autoComplete="off"
-            autoFocus={undefined}
             className="slds-input slds-combobox__input slds-has-focus slds-combobox__input-value"
             defaultValue="Accounts"
-            disabled={undefined}
             id="combobox-id-01"
             onBlur={[Function]}
             onFocus={[Function]}
             placeholder="Select an Option"
             readOnly={true}
-            required={undefined}
             role="textbox"
-            tabIndex={undefined}
             type="text"
           />
           <span
@@ -6505,7 +6110,6 @@ exports[`render combobox renders different styles of options in the listbox 1`] 
           role="listbox"
         >
           <ul
-            aria-label={undefined}
             className="slds-listbox slds-listbox_vertical"
             role="presentation"
           >
@@ -6519,7 +6123,6 @@ exports[`render combobox renders different styles of options in the listbox 1`] 
                 className="slds-media slds-listbox__option slds-listbox__option_entity slds-media_center"
                 id="option1"
                 role="option"
-                tabIndex={undefined}
               >
                 <span
                   className="slds-media__figure slds-listbox__option-icon"
@@ -6559,7 +6162,6 @@ exports[`render combobox renders different styles of options in the listbox 1`] 
                 className="slds-media slds-listbox__option slds-listbox__option_entity slds-media_center"
                 id="option2"
                 role="option"
-                tabIndex={undefined}
               >
                 <span
                   className="slds-media__figure slds-listbox__option-icon"
@@ -6599,7 +6201,6 @@ exports[`render combobox renders different styles of options in the listbox 1`] 
                 className="slds-media slds-listbox__option slds-listbox__option_entity slds-media_center"
                 id="option3"
                 role="option"
-                tabIndex={undefined}
               >
                 <span
                   className="slds-media__figure slds-listbox__option-icon"
@@ -6639,7 +6240,6 @@ exports[`render combobox renders different styles of options in the listbox 1`] 
                 className="slds-media slds-listbox__option slds-listbox__option_entity slds-media_center"
                 id="option4"
                 role="option"
-                tabIndex={undefined}
               >
                 <span
                   className="slds-media__figure slds-listbox__option-icon"
@@ -6680,12 +6280,10 @@ exports[`render combobox renders different styles of options in the listbox 1`] 
 exports[`render combobox renders different styles of options in the listbox with drill in 1`] = `
 <div
   className="slds-form-element"
-  role={undefined}
 >
   <label
     className="slds-form-element__label"
     htmlFor="combobox-id-01"
-    id={undefined}
   >
     Relate to
   </label>
@@ -6696,11 +6294,9 @@ exports[`render combobox renders different styles of options in the listbox with
       className="slds-combobox_container"
     >
       <div
-        aria-controls={undefined}
         aria-expanded="true"
         aria-haspopup="listbox"
         className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open"
-        id={undefined}
         role="combobox"
       >
         <div
@@ -6708,23 +6304,17 @@ exports[`render combobox renders different styles of options in the listbox with
           role="none"
         >
           <input
-            aria-activedescendant={undefined}
             aria-autocomplete={null}
             aria-controls="listbox-id-01"
-            aria-invalid={undefined}
             autoComplete="off"
-            autoFocus={undefined}
             className="slds-input slds-combobox__input slds-has-focus slds-combobox__input-value"
             defaultValue="Accounts"
-            disabled={undefined}
             id="combobox-id-01"
             onBlur={[Function]}
             onFocus={[Function]}
             placeholder="Select an Option"
             readOnly={true}
-            required={undefined}
             role="textbox"
-            tabIndex={undefined}
             type="text"
           />
           <span
@@ -6748,7 +6338,6 @@ exports[`render combobox renders different styles of options in the listbox with
           role="listbox"
         >
           <ul
-            aria-label={undefined}
             className="slds-listbox slds-listbox_vertical"
             role="presentation"
           >
@@ -6762,7 +6351,6 @@ exports[`render combobox renders different styles of options in the listbox with
                 className="slds-media slds-listbox__option slds-listbox__option_entity slds-media_center"
                 id="option1"
                 role="option"
-                tabIndex={undefined}
               >
                 <span
                   className="slds-media__figure slds-listbox__option-icon"
@@ -6802,7 +6390,6 @@ exports[`render combobox renders different styles of options in the listbox with
                 className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
                 id="option2"
                 role="option"
-                tabIndex={undefined}
               >
                 <span
                   className="slds-media__figure slds-listbox__option-icon"
@@ -6850,7 +6437,6 @@ exports[`render combobox renders different styles of options in the listbox with
                 className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
                 id="option3"
                 role="option"
-                tabIndex={undefined}
               >
                 <span
                   className="slds-media__figure slds-listbox__option-icon"
@@ -6922,7 +6508,6 @@ exports[`render combobox renders disabled entity options in the listbox 1`] = `
   role="listbox"
 >
   <ul
-    aria-label={undefined}
     className="slds-listbox slds-listbox_vertical"
     role="presentation"
   >
@@ -6936,7 +6521,6 @@ exports[`render combobox renders disabled entity options in the listbox 1`] = `
         className="slds-media slds-listbox__option slds-listbox__option_entity slds-media_center"
         id="option1"
         role="option"
-        tabIndex={undefined}
       >
         <span
           className="slds-media__figure slds-listbox__option-icon slds-listbox__option-icon-disabled"
@@ -6976,7 +6560,6 @@ exports[`render combobox renders disabled entity options in the listbox 1`] = `
         className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
         id="option2"
         role="option"
-        tabIndex={undefined}
       >
         <span
           className="slds-media__figure slds-listbox__option-icon slds-listbox__option-icon-disabled"
@@ -7024,7 +6607,6 @@ exports[`render combobox renders disabled entity options in the listbox 1`] = `
         className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
         id="option3"
         role="option"
-        tabIndex={undefined}
       >
         <span
           className="slds-media__figure slds-listbox__option-icon"
@@ -7092,7 +6674,6 @@ exports[`render combobox renders disabled plain options in the listbox 1`] = `
   role="listbox"
 >
   <ul
-    aria-label={undefined}
     className="slds-listbox slds-listbox_vertical"
     role="presentation"
   >
@@ -7106,7 +6687,6 @@ exports[`render combobox renders disabled plain options in the listbox 1`] = `
         className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
         id="option1"
         role="option"
-        tabIndex={undefined}
       >
         <span
           className="slds-media__figure slds-listbox__option-icon"
@@ -7134,7 +6714,6 @@ exports[`render combobox renders disabled plain options in the listbox 1`] = `
         className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
         id="option2"
         role="option"
-        tabIndex={undefined}
       >
         <span
           className="slds-media__figure slds-listbox__option-icon"
@@ -7176,7 +6755,6 @@ exports[`render combobox renders disabled plain options in the listbox 1`] = `
         className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-listbox__option_has-meta"
         id="option3"
         role="option"
-        tabIndex={undefined}
       >
         <span
           className="slds-media__figure slds-listbox__option-icon"
@@ -7206,12 +6784,10 @@ exports[`render combobox renders disabled plain options in the listbox 1`] = `
 exports[`render combobox renders groups in a listbox 1`] = `
 <div
   className="slds-form-element"
-  role={undefined}
 >
   <label
     className="slds-form-element__label"
     htmlFor="combobox-id-01"
-    id={undefined}
   >
     Relate to
   </label>
@@ -7222,11 +6798,9 @@ exports[`render combobox renders groups in a listbox 1`] = `
       className="slds-combobox_container"
     >
       <div
-        aria-controls={undefined}
         aria-expanded="true"
         aria-haspopup="listbox"
         className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open"
-        id={undefined}
         role="combobox"
       >
         <div
@@ -7234,23 +6808,16 @@ exports[`render combobox renders groups in a listbox 1`] = `
           role="none"
         >
           <input
-            aria-activedescendant={undefined}
             aria-autocomplete={null}
             aria-controls="listbox-id-01"
-            aria-invalid={undefined}
             autoComplete="off"
-            autoFocus={undefined}
             className="slds-input slds-combobox__input slds-has-focus"
-            defaultValue={undefined}
-            disabled={undefined}
             id="combobox-id-01"
             onBlur={[Function]}
             onFocus={[Function]}
             placeholder="Select an Option"
             readOnly={true}
-            required={undefined}
             role="textbox"
-            tabIndex={undefined}
             type="text"
           />
           <span
@@ -7288,7 +6855,6 @@ exports[`render combobox renders groups in a listbox 1`] = `
                 className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                 id="option0"
                 role="presentation"
-                tabIndex={undefined}
               >
                 <h3
                   className="slds-listbox__option-header"
@@ -7308,7 +6874,6 @@ exports[`render combobox renders groups in a listbox 1`] = `
                 className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                 id="option1"
                 role="option"
-                tabIndex={undefined}
               >
                 <span
                   className="slds-media__figure slds-listbox__option-icon"
@@ -7336,7 +6901,6 @@ exports[`render combobox renders groups in a listbox 1`] = `
                 className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                 id="option2"
                 role="option"
-                tabIndex={undefined}
               >
                 <span
                   className="slds-media__figure slds-listbox__option-icon"
@@ -7370,7 +6934,6 @@ exports[`render combobox renders groups in a listbox 1`] = `
                 className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                 id="option3"
                 role="presentation"
-                tabIndex={undefined}
               >
                 <h3
                   className="slds-listbox__option-header"
@@ -7390,7 +6953,6 @@ exports[`render combobox renders groups in a listbox 1`] = `
                 className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                 id="option4"
                 role="option"
-                tabIndex={undefined}
               >
                 <span
                   className="slds-media__figure slds-listbox__option-icon"
@@ -7418,7 +6980,6 @@ exports[`render combobox renders groups in a listbox 1`] = `
                 className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                 id="option5"
                 role="option"
-                tabIndex={undefined}
               >
                 <span
                   className="slds-media__figure slds-listbox__option-icon"
@@ -7479,20 +7040,12 @@ exports[`render deprecated combobox renders a base combobox 1`] = `
             role="none"
           >
             <input
-              aria-activedescendant={undefined}
               aria-autocomplete="list"
-              aria-controls={undefined}
-              aria-invalid={undefined}
               autoComplete="off"
               className="slds-input slds-combobox__input"
-              defaultValue={undefined}
-              disabled={undefined}
               id="combobox-unique-id-1"
               placeholder="Search Salesforce"
-              readOnly={undefined}
-              required={undefined}
               role="textbox"
-              tabIndex={undefined}
               type="text"
             />
             <span
@@ -7516,7 +7069,6 @@ exports[`render deprecated combobox renders a base combobox 1`] = `
             role="listbox"
           >
             <ul
-              aria-label={undefined}
               className="slds-listbox slds-listbox_vertical"
               role="presentation"
             >
@@ -7528,7 +7080,6 @@ exports[`render deprecated combobox renders a base combobox 1`] = `
                   className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
                   id="listbox-option-unique-id-01"
                   role="option"
-                  tabIndex={undefined}
                 >
                   <span
                     className="slds-media__figure"
@@ -7574,7 +7125,6 @@ exports[`render deprecated combobox renders a base combobox 1`] = `
                   className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
                   id="listbox-option-unique-id-02"
                   role="option"
-                  tabIndex={undefined}
                 >
                   <span
                     className="slds-media__figure"
@@ -7656,20 +7206,12 @@ exports[`render deprecated combobox renders a base combobox with closed options 
             role="none"
           >
             <input
-              aria-activedescendant={undefined}
               aria-autocomplete="list"
-              aria-controls={undefined}
-              aria-invalid={undefined}
               autoComplete="off"
               className="slds-input slds-combobox__input"
-              defaultValue={undefined}
-              disabled={undefined}
               id="combobox-unique-id-4"
               placeholder="Search Salesforce"
-              readOnly={undefined}
-              required={undefined}
               role="textbox"
-              tabIndex={undefined}
               type="text"
             />
             <span
@@ -7693,7 +7235,6 @@ exports[`render deprecated combobox renders a base combobox with closed options 
             role="listbox"
           >
             <ul
-              aria-label={undefined}
               className="slds-listbox slds-listbox_vertical"
               role="presentation"
             >
@@ -7705,7 +7246,6 @@ exports[`render deprecated combobox renders a base combobox with closed options 
                   className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
                   id="listbox-option-unique-id-01"
                   role="option"
-                  tabIndex={undefined}
                 >
                   <span
                     className="slds-media__figure"
@@ -7751,7 +7291,6 @@ exports[`render deprecated combobox renders a base combobox with closed options 
                   className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
                   id="listbox-option-unique-id-02"
                   role="option"
-                  tabIndex={undefined}
                 >
                   <span
                     className="slds-media__figure"
@@ -7800,7 +7339,6 @@ exports[`render deprecated combobox renders a base combobox with closed options 
         role="listbox"
       >
         <li
-          aria-hidden={undefined}
           className="slds-listbox-item"
           role="presentation"
         >
@@ -7855,7 +7393,6 @@ exports[`render deprecated combobox renders a base combobox with closed options 
           </span>
         </li>
         <li
-          aria-hidden={undefined}
           className="slds-listbox-item"
           role="presentation"
         >
@@ -7863,7 +7400,6 @@ exports[`render deprecated combobox renders a base combobox with closed options 
             aria-selected="true"
             className="slds-pill"
             role="option"
-            tabIndex={undefined}
           >
             <span
               className="slds-icon_container slds-icon-standard-account slds-pill__icon_container"
@@ -7950,20 +7486,12 @@ exports[`render deprecated combobox renders a base combobox with focus 1`] = `
             role="none"
           >
             <input
-              aria-activedescendant={undefined}
               aria-autocomplete="list"
-              aria-controls={undefined}
-              aria-invalid={undefined}
               autoComplete="off"
               className="slds-input slds-combobox__input"
-              defaultValue={undefined}
-              disabled={undefined}
               id="combobox-unique-id-2"
               placeholder="Search Salesforce"
-              readOnly={undefined}
-              required={undefined}
               role="textbox"
-              tabIndex={undefined}
               type="text"
             />
             <span
@@ -7987,7 +7515,6 @@ exports[`render deprecated combobox renders a base combobox with focus 1`] = `
             role="listbox"
           >
             <ul
-              aria-label={undefined}
               className="slds-listbox slds-listbox_vertical"
               role="presentation"
             >
@@ -7999,7 +7526,6 @@ exports[`render deprecated combobox renders a base combobox with focus 1`] = `
                   className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
                   id="listbox-option-unique-id-01"
                   role="option"
-                  tabIndex={undefined}
                 >
                   <span
                     className="slds-media__figure"
@@ -8045,7 +7571,6 @@ exports[`render deprecated combobox renders a base combobox with focus 1`] = `
                   className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
                   id="listbox-option-unique-id-02"
                   role="option"
-                  tabIndex={undefined}
                 >
                   <span
                     className="slds-media__figure"
@@ -8129,18 +7654,11 @@ exports[`render deprecated combobox renders a base combobox with open item focus
             <input
               aria-activedescendant="listbox-option-unique-id-01"
               aria-autocomplete="list"
-              aria-controls={undefined}
-              aria-invalid={undefined}
               autoComplete="off"
               className="slds-input slds-combobox__input"
-              defaultValue={undefined}
-              disabled={undefined}
               id="combobox-unique-id-3"
               placeholder="Search Salesforce"
-              readOnly={undefined}
-              required={undefined}
               role="textbox"
-              tabIndex={undefined}
               type="text"
             />
             <span
@@ -8164,7 +7682,6 @@ exports[`render deprecated combobox renders a base combobox with open item focus
             role="listbox"
           >
             <ul
-              aria-label={undefined}
               className="slds-listbox slds-listbox_vertical"
               role="presentation"
             >
@@ -8176,7 +7693,6 @@ exports[`render deprecated combobox renders a base combobox with open item focus
                   className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta slds-has-focus"
                   id="listbox-option-unique-id-01"
                   role="option"
-                  tabIndex={undefined}
                 >
                   <span
                     className="slds-media__figure"
@@ -8222,7 +7738,6 @@ exports[`render deprecated combobox renders a base combobox with open item focus
                   className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
                   id="listbox-option-unique-id-02"
                   role="option"
-                  tabIndex={undefined}
                 >
                   <span
                     className="slds-media__figure"
@@ -8340,20 +7855,12 @@ exports[`render deprecated combobox renders a multi-entity combobox 1`] = `
             role="none"
           >
             <input
-              aria-activedescendant={undefined}
               aria-autocomplete="list"
-              aria-controls={undefined}
-              aria-invalid={undefined}
               autoComplete="off"
               className="slds-input slds-combobox__input"
-              defaultValue={undefined}
-              disabled={undefined}
               id="combobox-unique-id-11"
               placeholder="Search Salesforce"
-              readOnly={undefined}
-              required={undefined}
               role="textbox"
-              tabIndex={undefined}
               type="text"
             />
             <span
@@ -8377,7 +7884,6 @@ exports[`render deprecated combobox renders a multi-entity combobox 1`] = `
             role="listbox"
           >
             <ul
-              aria-label={undefined}
               className="slds-listbox slds-listbox_vertical"
               role="presentation"
             >
@@ -8389,7 +7895,6 @@ exports[`render deprecated combobox renders a multi-entity combobox 1`] = `
                   className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
                   id="listbox-option-unique-id-01"
                   role="option"
-                  tabIndex={undefined}
                 >
                   <span
                     className="slds-media__figure"
@@ -8435,7 +7940,6 @@ exports[`render deprecated combobox renders a multi-entity combobox 1`] = `
                   className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
                   id="listbox-option-unique-id-02"
                   role="option"
-                  tabIndex={undefined}
                 >
                   <span
                     className="slds-media__figure"
@@ -8553,20 +8057,12 @@ exports[`render deprecated combobox renders a multi-entity combobox with focus 1
             role="none"
           >
             <input
-              aria-activedescendant={undefined}
               aria-autocomplete="list"
-              aria-controls={undefined}
-              aria-invalid={undefined}
               autoComplete="off"
               className="slds-input slds-combobox__input"
-              defaultValue={undefined}
-              disabled={undefined}
               id="combobox-unique-id-12"
               placeholder="Search Salesforce"
-              readOnly={undefined}
-              required={undefined}
               role="textbox"
-              tabIndex={undefined}
               type="text"
             />
             <span
@@ -8590,7 +8086,6 @@ exports[`render deprecated combobox renders a multi-entity combobox with focus 1
             role="listbox"
           >
             <ul
-              aria-label={undefined}
               className="slds-listbox slds-listbox_vertical"
               role="presentation"
             >
@@ -8602,7 +8097,6 @@ exports[`render deprecated combobox renders a multi-entity combobox with focus 1
                   className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
                   id="listbox-option-unique-id-01"
                   role="option"
-                  tabIndex={undefined}
                 >
                   <span
                     className="slds-media__figure"
@@ -8648,7 +8142,6 @@ exports[`render deprecated combobox renders a multi-entity combobox with focus 1
                   className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
                   id="listbox-option-unique-id-02"
                   role="option"
-                  tabIndex={undefined}
                 >
                   <span
                     className="slds-media__figure"
@@ -8766,20 +8259,12 @@ exports[`render deprecated combobox renders a multi-entity combobox with focused
             role="none"
           >
             <input
-              aria-activedescendant={undefined}
               aria-autocomplete="list"
-              aria-controls={undefined}
-              aria-invalid={undefined}
               autoComplete="off"
               className="slds-input slds-combobox__input"
-              defaultValue={undefined}
-              disabled={undefined}
               id="combobox-unique-id-15"
               placeholder="Search Salesforce"
-              readOnly={undefined}
-              required={undefined}
               role="textbox"
-              tabIndex={undefined}
               type="text"
             />
             <span
@@ -8803,7 +8288,6 @@ exports[`render deprecated combobox renders a multi-entity combobox with focused
             role="listbox"
           >
             <ul
-              aria-label={undefined}
               className="slds-listbox slds-listbox_vertical"
               role="presentation"
             >
@@ -8815,7 +8299,6 @@ exports[`render deprecated combobox renders a multi-entity combobox with focused
                   className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
                   id="listbox-option-unique-id-01"
                   role="option"
-                  tabIndex={undefined}
                 >
                   <span
                     className="slds-media__figure"
@@ -8861,7 +8344,6 @@ exports[`render deprecated combobox renders a multi-entity combobox with focused
                   className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
                   id="listbox-option-unique-id-02"
                   role="option"
-                  tabIndex={undefined}
                 >
                   <span
                     className="slds-media__figure"
@@ -8910,7 +8392,6 @@ exports[`render deprecated combobox renders a multi-entity combobox with focused
         role="listbox"
       >
         <li
-          aria-hidden={undefined}
           className="slds-listbox-item"
           role="presentation"
         >
@@ -8965,7 +8446,6 @@ exports[`render deprecated combobox renders a multi-entity combobox with focused
           </span>
         </li>
         <li
-          aria-hidden={undefined}
           className="slds-listbox-item"
           role="presentation"
         >
@@ -8973,7 +8453,6 @@ exports[`render deprecated combobox renders a multi-entity combobox with focused
             aria-selected="true"
             className="slds-pill"
             role="option"
-            tabIndex={undefined}
           >
             <span
               className="slds-icon_container slds-icon-standard-opportunity slds-pill__icon_container"
@@ -9098,18 +8577,11 @@ exports[`render deprecated combobox renders a multi-entity combobox with open it
             <input
               aria-activedescendant="listbox-option-unique-id-01"
               aria-autocomplete="list"
-              aria-controls={undefined}
-              aria-invalid={undefined}
               autoComplete="off"
               className="slds-input slds-combobox__input"
-              defaultValue={undefined}
-              disabled={undefined}
               id="combobox-unique-id-13"
               placeholder="Search Salesforce"
-              readOnly={undefined}
-              required={undefined}
               role="textbox"
-              tabIndex={undefined}
               type="text"
             />
             <span
@@ -9133,7 +8605,6 @@ exports[`render deprecated combobox renders a multi-entity combobox with open it
             role="listbox"
           >
             <ul
-              aria-label={undefined}
               className="slds-listbox slds-listbox_vertical"
               role="presentation"
             >
@@ -9145,7 +8616,6 @@ exports[`render deprecated combobox renders a multi-entity combobox with open it
                   className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta slds-has-focus"
                   id="listbox-option-unique-id-01"
                   role="option"
-                  tabIndex={undefined}
                 >
                   <span
                     className="slds-media__figure"
@@ -9191,7 +8661,6 @@ exports[`render deprecated combobox renders a multi-entity combobox with open it
                   className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
                   id="listbox-option-unique-id-02"
                   role="option"
-                  tabIndex={undefined}
                 >
                   <span
                     className="slds-media__figure"
@@ -9301,20 +8770,13 @@ exports[`render deprecated combobox renders a multi-entity combobox with options
           role="none"
         >
           <input
-            aria-activedescendant={undefined}
             aria-autocomplete="list"
             aria-controls={null}
-            aria-invalid={undefined}
             autoComplete="off"
             className="slds-input slds-combobox__input"
-            defaultValue={undefined}
-            disabled={undefined}
             id="combobox-unique-id-14"
             placeholder="Search Salesforce"
-            readOnly={undefined}
-            required={undefined}
             role="textbox"
-            tabIndex={undefined}
             type="text"
           />
           <span
@@ -9340,7 +8802,6 @@ exports[`render deprecated combobox renders a multi-entity combobox with options
       role="listbox"
     >
       <li
-        aria-hidden={undefined}
         className="slds-listbox-item"
         role="presentation"
       >
@@ -9395,7 +8856,6 @@ exports[`render deprecated combobox renders a multi-entity combobox with options
         </span>
       </li>
       <li
-        aria-hidden={undefined}
         className="slds-listbox-item"
         role="presentation"
       >
@@ -9403,7 +8863,6 @@ exports[`render deprecated combobox renders a multi-entity combobox with options
           aria-selected="true"
           className="slds-pill"
           role="option"
-          tabIndex={undefined}
         >
           <span
             className="slds-icon_container slds-icon-standard-opportunity slds-pill__icon_container"
@@ -9489,20 +8948,13 @@ exports[`render deprecated combobox renders a readonly combobox 1`] = `
             role="none"
           >
             <input
-              aria-activedescendant={undefined}
               aria-autocomplete={null}
-              aria-controls={undefined}
-              aria-invalid={undefined}
               autoComplete="off"
               className="slds-input slds-combobox__input"
-              defaultValue={undefined}
-              disabled={undefined}
               id="combobox-unique-id-16"
               placeholder="Select an Option"
               readOnly={true}
-              required={undefined}
               role="textbox"
-              tabIndex={undefined}
               type="text"
             />
             <span
@@ -9531,7 +8983,6 @@ exports[`render deprecated combobox renders a readonly combobox 1`] = `
             role="listbox"
           >
             <ul
-              aria-label={undefined}
               className="slds-listbox slds-listbox_vertical"
               role="presentation"
             >
@@ -9543,7 +8994,6 @@ exports[`render deprecated combobox renders a readonly combobox 1`] = `
                   className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
                   id="listbox-option-unique-id-01"
                   role="option"
-                  tabIndex={undefined}
                 >
                   <span
                     className="slds-media__figure"
@@ -9589,7 +9039,6 @@ exports[`render deprecated combobox renders a readonly combobox 1`] = `
                   className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
                   id="listbox-option-unique-id-02"
                   role="option"
-                  tabIndex={undefined}
                 >
                   <span
                     className="slds-media__figure"
@@ -9671,20 +9120,14 @@ exports[`render deprecated combobox renders a readonly combobox with closed opti
             role="none"
           >
             <input
-              aria-activedescendant={undefined}
               aria-autocomplete={null}
-              aria-controls={undefined}
-              aria-invalid={undefined}
               autoComplete="off"
               className="slds-input slds-combobox__input slds-combobox__input-value"
               defaultValue="Option A"
-              disabled={undefined}
               id="combobox-unique-id-21"
               placeholder="Select an Option"
               readOnly={true}
-              required={undefined}
               role="textbox"
-              tabIndex={undefined}
               type="text"
             />
             <span
@@ -9713,7 +9156,6 @@ exports[`render deprecated combobox renders a readonly combobox with closed opti
             role="listbox"
           >
             <ul
-              aria-label={undefined}
               className="slds-listbox slds-listbox_vertical"
               role="presentation"
             >
@@ -9725,7 +9167,6 @@ exports[`render deprecated combobox renders a readonly combobox with closed opti
                   className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta slds-has-focus"
                   id="listbox-option-unique-id-01"
                   role="option"
-                  tabIndex={undefined}
                 >
                   <span
                     className="slds-media__figure"
@@ -9771,7 +9212,6 @@ exports[`render deprecated combobox renders a readonly combobox with closed opti
                   className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
                   id="listbox-option-unique-id-02"
                   role="option"
-                  tabIndex={undefined}
                 >
                   <span
                     className="slds-media__figure"
@@ -9853,20 +9293,14 @@ exports[`render deprecated combobox renders a readonly combobox with closed opti
             role="none"
           >
             <input
-              aria-activedescendant={undefined}
               aria-autocomplete={null}
-              aria-controls={undefined}
-              aria-invalid={undefined}
               autoComplete="off"
               className="slds-input slds-combobox__input slds-combobox__input-value"
               defaultValue="2 Options Selected"
-              disabled={undefined}
               id="combobox-unique-id-22"
               placeholder="Select an Option"
               readOnly={true}
-              required={undefined}
               role="textbox"
-              tabIndex={undefined}
               type="text"
             />
             <span
@@ -9895,7 +9329,6 @@ exports[`render deprecated combobox renders a readonly combobox with closed opti
             role="listbox"
           >
             <ul
-              aria-label={undefined}
               className="slds-listbox slds-listbox_vertical"
               role="presentation"
             >
@@ -9907,7 +9340,6 @@ exports[`render deprecated combobox renders a readonly combobox with closed opti
                   className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
                   id="listbox-option-unique-id-01"
                   role="option"
-                  tabIndex={undefined}
                 >
                   <span
                     className="slds-media__figure"
@@ -9953,7 +9385,6 @@ exports[`render deprecated combobox renders a readonly combobox with closed opti
                   className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
                   id="listbox-option-unique-id-02"
                   role="option"
-                  tabIndex={undefined}
                 >
                   <span
                     className="slds-media__figure"
@@ -10002,7 +9433,6 @@ exports[`render deprecated combobox renders a readonly combobox with closed opti
         role="listbox"
       >
         <li
-          aria-hidden={undefined}
           className="slds-listbox-item"
           role="presentation"
         >
@@ -10039,7 +9469,6 @@ exports[`render deprecated combobox renders a readonly combobox with closed opti
           </span>
         </li>
         <li
-          aria-hidden={undefined}
           className="slds-listbox-item"
           role="presentation"
         >
@@ -10047,7 +9476,6 @@ exports[`render deprecated combobox renders a readonly combobox with closed opti
             aria-selected="true"
             className="slds-pill"
             role="option"
-            tabIndex={undefined}
           >
             <span
               className="slds-pill__label"
@@ -10116,20 +9544,13 @@ exports[`render deprecated combobox renders a readonly combobox with focus 1`] =
             role="none"
           >
             <input
-              aria-activedescendant={undefined}
               aria-autocomplete={null}
-              aria-controls={undefined}
-              aria-invalid={undefined}
               autoComplete="off"
               className="slds-input slds-combobox__input"
-              defaultValue={undefined}
-              disabled={undefined}
               id="combobox-unique-id-17"
               placeholder="Select an Option"
               readOnly={true}
-              required={undefined}
               role="textbox"
-              tabIndex={undefined}
               type="text"
             />
             <span
@@ -10158,7 +9579,6 @@ exports[`render deprecated combobox renders a readonly combobox with focus 1`] =
             role="listbox"
           >
             <ul
-              aria-label={undefined}
               className="slds-listbox slds-listbox_vertical"
               role="presentation"
             >
@@ -10170,7 +9590,6 @@ exports[`render deprecated combobox renders a readonly combobox with focus 1`] =
                   className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
                   id="listbox-option-unique-id-01"
                   role="option"
-                  tabIndex={undefined}
                 >
                   <span
                     className="slds-media__figure"
@@ -10216,7 +9635,6 @@ exports[`render deprecated combobox renders a readonly combobox with focus 1`] =
                   className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
                   id="listbox-option-unique-id-02"
                   role="option"
-                  tabIndex={undefined}
                 >
                   <span
                     className="slds-media__figure"
@@ -10300,18 +9718,12 @@ exports[`render deprecated combobox renders a readonly combobox with open item f
             <input
               aria-activedescendant="listbox-option-unique-id-01"
               aria-autocomplete={null}
-              aria-controls={undefined}
-              aria-invalid={undefined}
               autoComplete="off"
               className="slds-input slds-combobox__input"
-              defaultValue={undefined}
-              disabled={undefined}
               id="combobox-unique-id-18"
               placeholder="Select an Option"
               readOnly={true}
-              required={undefined}
               role="textbox"
-              tabIndex={undefined}
               type="text"
             />
             <span
@@ -10340,7 +9752,6 @@ exports[`render deprecated combobox renders a readonly combobox with open item f
             role="listbox"
           >
             <ul
-              aria-label={undefined}
               className="slds-listbox slds-listbox_vertical"
               role="presentation"
             >
@@ -10352,7 +9763,6 @@ exports[`render deprecated combobox renders a readonly combobox with open item f
                   className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta slds-has-focus"
                   id="listbox-option-unique-id-01"
                   role="option"
-                  tabIndex={undefined}
                 >
                   <span
                     className="slds-media__figure"
@@ -10398,7 +9808,6 @@ exports[`render deprecated combobox renders a readonly combobox with open item f
                   className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
                   id="listbox-option-unique-id-02"
                   role="option"
-                  tabIndex={undefined}
                 >
                   <span
                     className="slds-media__figure"
@@ -10480,20 +9889,14 @@ exports[`render deprecated combobox renders a readonly combobox with open option
             role="none"
           >
             <input
-              aria-activedescendant={undefined}
               aria-autocomplete={null}
-              aria-controls={undefined}
-              aria-invalid={undefined}
               autoComplete="off"
               className="slds-input slds-combobox__input slds-combobox__input-value"
               defaultValue="Option A"
-              disabled={undefined}
               id="combobox-unique-id-19"
               placeholder="Select an Option"
               readOnly={true}
-              required={undefined}
               role="textbox"
-              tabIndex={undefined}
               type="text"
             />
             <span
@@ -10522,7 +9925,6 @@ exports[`render deprecated combobox renders a readonly combobox with open option
             role="listbox"
           >
             <ul
-              aria-label={undefined}
               className="slds-listbox slds-listbox_vertical"
               role="presentation"
             >
@@ -10534,7 +9936,6 @@ exports[`render deprecated combobox renders a readonly combobox with open option
                   className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
                   id="listbox-option-unique-id-01"
                   role="option"
-                  tabIndex={undefined}
                 >
                   <span
                     className="slds-media__figure"
@@ -10580,7 +9981,6 @@ exports[`render deprecated combobox renders a readonly combobox with open option
                   className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
                   id="listbox-option-unique-id-02"
                   role="option"
-                  tabIndex={undefined}
                 >
                   <span
                     className="slds-media__figure"
@@ -10662,20 +10062,14 @@ exports[`render deprecated combobox renders a readonly combobox with open option
             role="none"
           >
             <input
-              aria-activedescendant={undefined}
               aria-autocomplete={null}
-              aria-controls={undefined}
-              aria-invalid={undefined}
               autoComplete="off"
               className="slds-input slds-combobox__input slds-combobox__input-value"
               defaultValue="2 Options Selected"
-              disabled={undefined}
               id="combobox-unique-id-20"
               placeholder="Select an Option"
               readOnly={true}
-              required={undefined}
               role="textbox"
-              tabIndex={undefined}
               type="text"
             />
             <span
@@ -10704,7 +10098,6 @@ exports[`render deprecated combobox renders a readonly combobox with open option
             role="listbox"
           >
             <ul
-              aria-label={undefined}
               className="slds-listbox slds-listbox_vertical"
               role="presentation"
             >
@@ -10716,7 +10109,6 @@ exports[`render deprecated combobox renders a readonly combobox with open option
                   className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
                   id="listbox-option-unique-id-01"
                   role="option"
-                  tabIndex={undefined}
                 >
                   <span
                     className="slds-media__figure"
@@ -10762,7 +10154,6 @@ exports[`render deprecated combobox renders a readonly combobox with open option
                   className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
                   id="listbox-option-unique-id-02"
                   role="option"
-                  tabIndex={undefined}
                 >
                   <span
                     className="slds-media__figure"
@@ -10846,18 +10237,11 @@ exports[`render deprecated combobox renders an inline combobox open item focused
             <input
               aria-activedescendant="listbox-option-unique-id-01"
               aria-autocomplete="list"
-              aria-controls={undefined}
-              aria-invalid={undefined}
               autoComplete="off"
               className="slds-input slds-combobox__input"
-              defaultValue={undefined}
-              disabled={undefined}
               id="combobox-unique-id-7"
               placeholder="Search Salesforce"
-              readOnly={undefined}
-              required={undefined}
               role="textbox"
-              tabIndex={undefined}
               type="text"
             />
             <span
@@ -10881,7 +10265,6 @@ exports[`render deprecated combobox renders an inline combobox open item focused
             role="listbox"
           >
             <ul
-              aria-label={undefined}
               className="slds-listbox slds-listbox_vertical"
               role="presentation"
             >
@@ -10893,7 +10276,6 @@ exports[`render deprecated combobox renders an inline combobox open item focused
                   className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta slds-has-focus"
                   id="listbox-option-unique-id-01"
                   role="option"
-                  tabIndex={undefined}
                 >
                   <span
                     className="slds-media__figure"
@@ -10939,7 +10321,6 @@ exports[`render deprecated combobox renders an inline combobox open item focused
                   className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
                   id="listbox-option-unique-id-02"
                   role="option"
-                  tabIndex={undefined}
                 >
                   <span
                     className="slds-media__figure"
@@ -11021,20 +10402,12 @@ exports[`render deprecated combobox renders an inline combobox with focus 1`] = 
             role="none"
           >
             <input
-              aria-activedescendant={undefined}
               aria-autocomplete="list"
-              aria-controls={undefined}
-              aria-invalid={undefined}
               autoComplete="off"
               className="slds-input slds-combobox__input"
-              defaultValue={undefined}
-              disabled={undefined}
               id="combobox-unique-id-6"
               placeholder="Search Salesforce"
-              readOnly={undefined}
-              required={undefined}
               role="textbox"
-              tabIndex={undefined}
               type="text"
             />
             <span
@@ -11058,7 +10431,6 @@ exports[`render deprecated combobox renders an inline combobox with focus 1`] = 
             role="listbox"
           >
             <ul
-              aria-label={undefined}
               className="slds-listbox slds-listbox_vertical"
               role="presentation"
             >
@@ -11070,7 +10442,6 @@ exports[`render deprecated combobox renders an inline combobox with focus 1`] = 
                   className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
                   id="listbox-option-unique-id-01"
                   role="option"
-                  tabIndex={undefined}
                 >
                   <span
                     className="slds-media__figure"
@@ -11116,7 +10487,6 @@ exports[`render deprecated combobox renders an inline combobox with focus 1`] = 
                   className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
                   id="listbox-option-unique-id-02"
                   role="option"
-                  tabIndex={undefined}
                 >
                   <span
                     className="slds-media__figure"
@@ -11198,20 +10568,12 @@ exports[`render deprecated combobox renders an inline listbox combobox 1`] = `
             role="none"
           >
             <input
-              aria-activedescendant={undefined}
               aria-autocomplete="list"
-              aria-controls={undefined}
-              aria-invalid={undefined}
               autoComplete="off"
               className="slds-input slds-combobox__input"
-              defaultValue={undefined}
-              disabled={undefined}
               id="combobox-unique-id-5"
               placeholder="Search Salesforce"
-              readOnly={undefined}
-              required={undefined}
               role="textbox"
-              tabIndex={undefined}
               type="text"
             />
             <span
@@ -11235,7 +10597,6 @@ exports[`render deprecated combobox renders an inline listbox combobox 1`] = `
             role="listbox"
           >
             <ul
-              aria-label={undefined}
               className="slds-listbox slds-listbox_vertical"
               role="presentation"
             >
@@ -11247,7 +10608,6 @@ exports[`render deprecated combobox renders an inline listbox combobox 1`] = `
                   className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
                   id="listbox-option-unique-id-01"
                   role="option"
-                  tabIndex={undefined}
                 >
                   <span
                     className="slds-media__figure"
@@ -11293,7 +10653,6 @@ exports[`render deprecated combobox renders an inline listbox combobox 1`] = `
                   className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
                   id="listbox-option-unique-id-02"
                   role="option"
-                  tabIndex={undefined}
                 >
                   <span
                     className="slds-media__figure"
@@ -11393,26 +10752,18 @@ exports[`render deprecated combobox renders an inline listbox combobox with clos
               </span>
             </span>
             <input
-              aria-activedescendant={undefined}
               aria-autocomplete="list"
-              aria-controls={undefined}
-              aria-invalid={undefined}
               autoComplete="off"
               className="slds-input slds-combobox__input slds-combobox__input-value"
               defaultValue="Salesforce.com, Inc."
-              disabled={undefined}
               id="combobox-unique-id-8"
               placeholder="Search Salesforce"
               readOnly={true}
-              required={undefined}
               role="textbox"
-              tabIndex={undefined}
               type="text"
             />
             <button
-              aria-haspopup={undefined}
               className="slds-button slds-button_icon slds-input__icon slds-input__icon_right"
-              id={undefined}
               title="Remove selected option"
             >
               <svg
@@ -11437,7 +10788,6 @@ exports[`render deprecated combobox renders an inline listbox combobox with clos
             role="listbox"
           >
             <ul
-              aria-label={undefined}
               className="slds-listbox slds-listbox_vertical"
               role="presentation"
             >
@@ -11449,7 +10799,6 @@ exports[`render deprecated combobox renders an inline listbox combobox with clos
                   className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
                   id="listbox-option-unique-id-01"
                   role="option"
-                  tabIndex={undefined}
                 >
                   <span
                     className="slds-media__figure"
@@ -11495,7 +10844,6 @@ exports[`render deprecated combobox renders an inline listbox combobox with clos
                   className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
                   id="listbox-option-unique-id-02"
                   role="option"
-                  tabIndex={undefined}
                 >
                   <span
                     className="slds-media__figure"
@@ -11573,7 +10921,6 @@ exports[`render deprecated combobox renders an inline listbox combobox with focu
           role="listbox"
         >
           <li
-            aria-hidden={undefined}
             className="slds-listbox-item"
             role="presentation"
           >
@@ -11628,7 +10975,6 @@ exports[`render deprecated combobox renders an inline listbox combobox with focu
             </span>
           </li>
           <li
-            aria-hidden={undefined}
             className="slds-listbox-item"
             role="presentation"
           >
@@ -11636,7 +10982,6 @@ exports[`render deprecated combobox renders an inline listbox combobox with focu
               aria-selected="true"
               className="slds-pill"
               role="option"
-              tabIndex={undefined}
             >
               <span
                 className="slds-icon_container slds-icon-standard-account slds-pill__icon_container"
@@ -11694,20 +11039,12 @@ exports[`render deprecated combobox renders an inline listbox combobox with focu
             role="none"
           >
             <input
-              aria-activedescendant={undefined}
               aria-autocomplete="list"
-              aria-controls={undefined}
-              aria-invalid={undefined}
               autoComplete="off"
               className="slds-input slds-combobox__input"
-              defaultValue={undefined}
-              disabled={undefined}
               id="combobox-unique-id-10"
               placeholder="Search Salesforce"
-              readOnly={undefined}
-              required={undefined}
               role="textbox"
-              tabIndex={undefined}
               type="text"
             />
             <span
@@ -11731,7 +11068,6 @@ exports[`render deprecated combobox renders an inline listbox combobox with focu
             role="listbox"
           >
             <ul
-              aria-label={undefined}
               className="slds-listbox slds-listbox_vertical"
               role="presentation"
             >
@@ -11743,7 +11079,6 @@ exports[`render deprecated combobox renders an inline listbox combobox with focu
                   className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
                   id="listbox-option-unique-id-01"
                   role="option"
-                  tabIndex={undefined}
                 >
                   <span
                     className="slds-media__figure"
@@ -11789,7 +11124,6 @@ exports[`render deprecated combobox renders an inline listbox combobox with focu
                   className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
                   id="listbox-option-unique-id-02"
                   role="option"
-                  tabIndex={undefined}
                 >
                   <span
                     className="slds-media__figure"
@@ -11867,7 +11201,6 @@ exports[`render deprecated combobox renders an inline listbox combobox with opti
           role="listbox"
         >
           <li
-            aria-hidden={undefined}
             className="slds-listbox-item"
             role="presentation"
           >
@@ -11922,7 +11255,6 @@ exports[`render deprecated combobox renders an inline listbox combobox with opti
             </span>
           </li>
           <li
-            aria-hidden={undefined}
             className="slds-listbox-item"
             role="presentation"
           >
@@ -11930,7 +11262,6 @@ exports[`render deprecated combobox renders an inline listbox combobox with opti
               aria-selected="true"
               className="slds-pill"
               role="option"
-              tabIndex={undefined}
             >
               <span
                 className="slds-icon_container slds-icon-standard-account slds-pill__icon_container"
@@ -11988,20 +11319,12 @@ exports[`render deprecated combobox renders an inline listbox combobox with opti
             role="none"
           >
             <input
-              aria-activedescendant={undefined}
               aria-autocomplete="list"
-              aria-controls={undefined}
-              aria-invalid={undefined}
               autoComplete="off"
               className="slds-input slds-combobox__input"
-              defaultValue={undefined}
-              disabled={undefined}
               id="combobox-unique-id-9"
               placeholder="Search Salesforce"
-              readOnly={undefined}
-              required={undefined}
               role="textbox"
-              tabIndex={undefined}
               type="text"
             />
             <span
@@ -12025,7 +11348,6 @@ exports[`render deprecated combobox renders an inline listbox combobox with opti
             role="listbox"
           >
             <ul
-              aria-label={undefined}
               className="slds-listbox slds-listbox_vertical"
               role="presentation"
             >
@@ -12037,7 +11359,6 @@ exports[`render deprecated combobox renders an inline listbox combobox with opti
                   className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
                   id="listbox-option-unique-id-01"
                   role="option"
-                  tabIndex={undefined}
                 >
                   <span
                     className="slds-media__figure"
@@ -12083,7 +11404,6 @@ exports[`render deprecated combobox renders an inline listbox combobox with opti
                   className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
                   id="listbox-option-unique-id-02"
                   role="option"
-                  tabIndex={undefined}
                 >
                   <span
                     className="slds-media__figure"

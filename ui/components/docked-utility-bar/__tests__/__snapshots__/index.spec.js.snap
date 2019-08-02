@@ -70,9 +70,7 @@ exports[`Base Docked Utility Bar  renders a base docked utility bar with closed 
         className="slds-col_bump-left slds-shrink-none"
       >
         <button
-          aria-haspopup={undefined}
           className="slds-button slds-button_icon slds-button_icon"
-          id={undefined}
           title="Close Panel"
         >
           <svg
@@ -152,9 +150,7 @@ exports[`Base Docked Utility Bar  renders a base docked utility bar with opened 
         className="slds-col_bump-left slds-shrink-none"
       >
         <button
-          aria-haspopup={undefined}
           className="slds-button slds-button_icon slds-button_icon"
-          id={undefined}
           title="Close Panel"
         >
           <svg
@@ -311,9 +307,7 @@ exports[`Base Docked Utility Bar - Utility Bar Panel renders a default utility b
       className="slds-col_bump-left slds-shrink-none"
     >
       <button
-        aria-haspopup={undefined}
         className="slds-button slds-button_icon slds-button_icon"
-        id={undefined}
         title="Close Panel"
       >
         <svg
@@ -380,9 +374,7 @@ exports[`Base Docked Utility Bar - Utility Bar Panel renders an open utility bar
       className="slds-col_bump-left slds-shrink-none"
     >
       <button
-        aria-haspopup={undefined}
         className="slds-button slds-button_icon slds-button_icon"
-        id={undefined}
         title="Close Panel"
       >
         <svg

@@ -185,6 +185,10 @@
 - Removed size utility classes on combobox/selects in toolbar for component-specific classes (`slds-rich-text-editor__select_x-small` and `slds-rich-text-editor__select_xx-small`)
 <!-- ## [Unreleased] -->
 
+### [Spinners](https://www.lightningdesignsystem.com/components/spinners)
+#### Fixed
+- Revised keyframes and transform rules to fix spinner CPU / rendering performance issues.
+
 ### [Trees](https://www.lightningdesignsystem.com/components/trees)
 #### Added
 - Added right-to-left specific selector to `slds-tree__item` to place the `box-shadow` in the correct location in right-to-left languages.

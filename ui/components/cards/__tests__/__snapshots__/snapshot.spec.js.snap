@@ -45,7 +45,6 @@ exports[`Card Footer renders a card footer with content 1`] = `
   <a
     className="slds-card__footer-action"
     href="javascript:void(0);"
-    tabIndex={undefined}
   >
     View All 
     <span
@@ -359,7 +358,6 @@ exports[`Card renders a base card with content in footer 1`] = `
     <a
       className="slds-card__footer-action"
       href="javascript:void(0);"
-      tabIndex={undefined}
     >
       View All 
       <span
@@ -496,7 +494,6 @@ exports[`Card renders a base card with header visibly hidden 1`] = `
     <a
       className="slds-card__footer-action"
       href="javascript:void(0);"
-      tabIndex={undefined}
     >
       View All 
       <span
@@ -586,7 +583,6 @@ exports[`Einstein Card renders a base einstein card 1`] = `
         >
           <h2
             className="slds-truncate"
-            id={undefined}
             title="Einstein (10+)"
           >
             <a
@@ -619,7 +615,6 @@ exports[`Einstein Card renders a base einstein card 1`] = `
     <a
       className="slds-card__footer-action"
       href="javascript:void(0);"
-      tabIndex={undefined}
     >
       View All
        
@@ -651,7 +646,6 @@ exports[`Einstein Card renders an einstein card with actions 1`] = `
         >
           <h2
             className="slds-truncate"
-            id={undefined}
             title="Einstein (10+)"
           >
             <a
@@ -680,10 +674,8 @@ exports[`Einstein Card renders an einstein card with actions 1`] = `
         role="group"
       >
         <button
-          aria-haspopup={undefined}
           aria-pressed="false"
           className="slds-button slds-button_icon slds-button_icon-border-filled"
-          id={undefined}
           title="Email"
         >
           <svg
@@ -701,10 +693,8 @@ exports[`Einstein Card renders an einstein card with actions 1`] = `
           </span>
         </button>
         <button
-          aria-haspopup={undefined}
           aria-pressed="false"
           className="slds-button slds-button_icon slds-button_icon-border-filled"
-          id={undefined}
           title="Edit"
         >
           <svg
@@ -735,7 +725,6 @@ exports[`Einstein Card renders an einstein card with actions 1`] = `
     <a
       className="slds-card__footer-action"
       href="javascript:void(0);"
-      tabIndex={undefined}
     >
       View All
        
@@ -783,7 +772,6 @@ exports[`Einstein Card renders an einstein card with icon 1`] = `
         >
           <h2
             className="slds-truncate"
-            id={undefined}
             title="Einstein (10+)"
           >
             <a
@@ -816,7 +804,6 @@ exports[`Einstein Card renders an einstein card with icon 1`] = `
     <a
       className="slds-card__footer-action"
       href="javascript:void(0);"
-      tabIndex={undefined}
     >
       View All
        
@@ -864,7 +851,6 @@ exports[`Einstein Card renders an einstein card with icon and actions 1`] = `
         >
           <h2
             className="slds-truncate"
-            id={undefined}
             title="Einstein (10+)"
           >
             <a
@@ -893,10 +879,8 @@ exports[`Einstein Card renders an einstein card with icon and actions 1`] = `
         role="group"
       >
         <button
-          aria-haspopup={undefined}
           aria-pressed="false"
           className="slds-button slds-button_icon slds-button_icon-border-filled"
-          id={undefined}
           title="Email"
         >
           <svg
@@ -914,10 +898,8 @@ exports[`Einstein Card renders an einstein card with icon and actions 1`] = `
           </span>
         </button>
         <button
-          aria-haspopup={undefined}
           aria-pressed="false"
           className="slds-button slds-button_icon slds-button_icon-border-filled"
-          id={undefined}
           title="Edit"
         >
           <svg
@@ -948,7 +930,6 @@ exports[`Einstein Card renders an einstein card with icon and actions 1`] = `
     <a
       className="slds-card__footer-action"
       href="javascript:void(0);"
-      tabIndex={undefined}
     >
       View All
        

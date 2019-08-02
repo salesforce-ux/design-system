@@ -5,10 +5,8 @@ exports[`Base Tree - Branch Item renders a tree branch item with a label passed 
   className="slds-tree__item"
 >
   <button
-    aria-haspopup={undefined}
     aria-hidden="true"
     className="slds-button slds-button_icon slds-m-right_x-small"
-    id={undefined}
     tabIndex="-1"
     title="Expand Tree Item"
   >
@@ -44,10 +42,8 @@ exports[`Base Tree - Branch Item renders a tree branch item with metatext 1`] = 
   className="slds-tree__item"
 >
   <button
-    aria-haspopup={undefined}
     aria-hidden="true"
     className="slds-button slds-button_icon slds-m-right_x-small"
-    id={undefined}
     tabIndex="-1"
     title="Expand Tree Item"
   >
@@ -94,18 +90,14 @@ exports[`Base Tree - List Item for Branches renders a tree list item at index 0,
   aria-expanded={false}
   aria-label="Test Branch"
   aria-level={1}
-  aria-selected={undefined}
   role="treeitem"
-  tabIndex={undefined}
 >
   <div
     className="slds-tree__item"
   >
     <button
-      aria-haspopup={undefined}
       aria-hidden="true"
       className="slds-button slds-button_icon slds-m-right_x-small"
-      id={undefined}
       tabIndex="-1"
       title="Expand Test Branch"
     >
@@ -142,18 +134,14 @@ exports[`Base Tree - List Item for Branches renders a tree list item for a branc
   aria-expanded={true}
   aria-label="Test Branch"
   aria-level={1}
-  aria-selected={undefined}
   role="treeitem"
-  tabIndex={undefined}
 >
   <div
     className="slds-tree__item"
   >
     <button
-      aria-haspopup={undefined}
       aria-hidden="true"
       className="slds-button slds-button_icon slds-m-right_x-small"
-      id={undefined}
       tabIndex="-1"
       title="Expand Test Branch"
     >
@@ -198,10 +186,8 @@ exports[`Base Tree - List Item for Branches renders a tree list item for a branc
     className="slds-tree__item"
   >
     <button
-      aria-haspopup={undefined}
       aria-hidden="true"
       className="slds-button slds-button_icon slds-m-right_x-small"
-      id={undefined}
       tabIndex="-1"
       title="Expand Test Branch"
     >
@@ -238,18 +224,14 @@ exports[`Base Tree - List Item for Branches renders a tree list item for a branc
   aria-expanded={false}
   aria-label="Test Branch: Some Metatext"
   aria-level={1}
-  aria-selected={undefined}
   role="treeitem"
-  tabIndex={undefined}
 >
   <div
     className="slds-tree__item"
   >
     <button
-      aria-haspopup={undefined}
       aria-hidden="true"
       className="slds-button slds-button_icon slds-m-right_x-small"
-      id={undefined}
       tabIndex="-1"
       title="Expand Test Branch"
     >
@@ -297,18 +279,14 @@ exports[`Base Tree - List Item for Branches renders a tree list item for a branc
   aria-expanded={false}
   aria-label="Test Branch"
   aria-level={1}
-  aria-selected={undefined}
   role="treeitem"
-  tabIndex={undefined}
 >
   <div
     className="slds-tree__item"
   >
     <button
-      aria-haspopup={undefined}
       aria-hidden="true"
       className="slds-button slds-button_icon slds-m-right_x-small"
-      id={undefined}
       tabIndex="-1"
       title="Expand Test Branch"
     >
@@ -345,18 +323,14 @@ exports[`Base Tree - List Item for individual Items renders a default tree list 
   aria-expanded={null}
   aria-label={null}
   aria-level={1}
-  aria-selected={undefined}
   role="treeitem"
-  tabIndex={undefined}
 >
   <div
     className="slds-tree__item"
   >
     <button
-      aria-haspopup={undefined}
       aria-hidden="true"
       className="slds-button slds-button_icon slds-m-right_x-small slds-is-disabled"
-      id={undefined}
       tabIndex="-1"
       title="Expand Tree Item"
     >
@@ -401,10 +375,8 @@ exports[`Base Tree - List Item for individual Items renders a tree list item tha
     className="slds-tree__item"
   >
     <button
-      aria-haspopup={undefined}
       aria-hidden="true"
       className="slds-button slds-button_icon slds-m-right_x-small slds-is-disabled"
-      id={undefined}
       tabIndex="-1"
       title="Expand Tree Item"
     >
@@ -441,18 +413,14 @@ exports[`Base Tree - List Item for individual Items renders a tree list item wit
   aria-expanded={null}
   aria-label={null}
   aria-level={1}
-  aria-selected={undefined}
   role="treeitem"
-  tabIndex={undefined}
 >
   <div
     className="slds-tree__item"
   >
     <button
-      aria-haspopup={undefined}
       aria-hidden="true"
       className="slds-button slds-button_icon slds-m-right_x-small slds-is-disabled"
-      id={undefined}
       tabIndex="-1"
       title="Expand Tree Item"
     >
@@ -489,18 +457,14 @@ exports[`Base Tree - List Item for individual Items renders a tree list item wit
   aria-expanded={null}
   aria-label={null}
   aria-level={1}
-  aria-selected={undefined}
   role="treeitem"
-  tabIndex={undefined}
 >
   <div
     className="slds-tree__item"
   >
     <button
-      aria-haspopup={undefined}
       aria-hidden="true"
       className="slds-button slds-button_icon slds-m-right_x-small slds-is-disabled"
-      id={undefined}
       tabIndex="-1"
       title="Expand Test Item"
     >
@@ -548,7 +512,6 @@ exports[`Base Tree - List Item for individual Items renders a tree list item wit
   aria-expanded={null}
   aria-label={null}
   aria-level={1}
-  aria-selected={undefined}
   role="treeitem"
   tabIndex={0}
 >
@@ -556,10 +519,8 @@ exports[`Base Tree - List Item for individual Items renders a tree list item wit
     className="slds-tree__item"
   >
     <button
-      aria-haspopup={undefined}
       aria-hidden="true"
       className="slds-button slds-button_icon slds-m-right_x-small slds-is-disabled"
-      id={undefined}
       tabIndex="-1"
       title="Expand Tree Item"
     >
@@ -624,18 +585,14 @@ exports[`Base Tree - Tree Group renders a tree group with children 1`] = `
     aria-expanded={null}
     aria-label={null}
     aria-level={1}
-    aria-selected={undefined}
     role="treeitem"
-    tabIndex={undefined}
   >
     <div
       className="slds-tree__item"
     >
       <button
-        aria-haspopup={undefined}
         aria-hidden="true"
         className="slds-button slds-button_icon slds-m-right_x-small slds-is-disabled"
-        id={undefined}
         tabIndex="-1"
         title="Expand Tree Item"
       >
@@ -689,10 +646,8 @@ exports[`Base Tree - Tree Item renders a default tree item 1`] = `
   className="slds-tree__item"
 >
   <button
-    aria-haspopup={undefined}
     aria-hidden="true"
     className="slds-button slds-button_icon slds-m-right_x-small slds-is-disabled"
-    id={undefined}
     tabIndex="-1"
     title="Expand Tree Item"
   >
@@ -728,10 +683,8 @@ exports[`Base Tree - Tree Item renders a tree item with a label passed in 1`] = 
   className="slds-tree__item"
 >
   <button
-    aria-haspopup={undefined}
     aria-hidden="true"
     className="slds-button slds-button_icon slds-m-right_x-small slds-is-disabled"
-    id={undefined}
     tabIndex="-1"
     title="Expand Tree Item Label"
   >
@@ -767,10 +720,8 @@ exports[`Base Tree - Tree Item renders a tree item with children 1`] = `
   className="slds-tree__item"
 >
   <button
-    aria-haspopup={undefined}
     aria-hidden="true"
     className="slds-button slds-button_icon slds-m-right_x-small slds-is-disabled"
-    id={undefined}
     tabIndex="-1"
     title="Expand Tree Item"
   >
@@ -807,10 +758,8 @@ exports[`Base Tree - Tree Item renders a tree item with marked term 1`] = `
   className="slds-tree__item"
 >
   <button
-    aria-haspopup={undefined}
     aria-hidden="true"
     className="slds-button slds-button_icon slds-m-right_x-small slds-is-disabled"
-    id={undefined}
     tabIndex="-1"
     title="Expand lightning button"
   >
@@ -852,10 +801,8 @@ exports[`Base Tree - Tree Item renders a tree item with marked term in metatext 
   className="slds-tree__item"
 >
   <button
-    aria-haspopup={undefined}
     aria-hidden="true"
     className="slds-button slds-button_icon slds-m-right_x-small slds-is-disabled"
-    id={undefined}
     tabIndex="-1"
     title="Expand lightning button"
   >
@@ -914,10 +861,8 @@ exports[`Base Tree - Tree Item renders a tree item with metatext 1`] = `
   className="slds-tree__item"
 >
   <button
-    aria-haspopup={undefined}
     aria-hidden="true"
     className="slds-button slds-button_icon slds-m-right_x-small slds-is-disabled"
-    id={undefined}
     tabIndex="-1"
     title="Expand Tree Item"
   >
@@ -963,7 +908,6 @@ exports[`Base Tree - Tree List renders a default tree list 1`] = `
 <ul
   aria-labelledby="treeheading"
   className="slds-tree"
-  id={undefined}
   role="tree"
 />
 `;
@@ -972,25 +916,20 @@ exports[`Base Tree - Tree List renders a tree list with children 1`] = `
 <ul
   aria-labelledby="treeheading"
   className="slds-tree"
-  id={undefined}
   role="tree"
 >
   <li
     aria-expanded={null}
     aria-label={null}
     aria-level={1}
-    aria-selected={undefined}
     role="treeitem"
-    tabIndex={undefined}
   >
     <div
       className="slds-tree__item"
     >
       <button
-        aria-haspopup={undefined}
         aria-hidden="true"
         className="slds-button slds-button_icon slds-m-right_x-small slds-is-disabled"
-        id={undefined}
         tabIndex="-1"
         title="Expand Tree Item"
       >

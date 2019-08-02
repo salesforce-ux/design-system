@@ -435,7 +435,6 @@ exports[`Default Tabs renders default tabs with icons 1`] = `
           <button
             aria-haspopup={true}
             className="slds-button"
-            disabled={undefined}
           >
             More
             <svg
@@ -449,10 +448,8 @@ exports[`Default Tabs renders default tabs with icons 1`] = `
           </button>
           <div
             className="slds-dropdown slds-dropdown_right"
-            style={undefined}
           >
             <ul
-              aria-label={undefined}
               className="slds-dropdown__list slds-dropdown_length-with-icon-10"
               role="menu"
             >
@@ -461,8 +458,6 @@ exports[`Default Tabs renders default tabs with icons 1`] = `
                 role="presentation"
               >
                 <a
-                  aria-checked={undefined}
-                  className={undefined}
                   href="javascript:void(0);"
                   role="menuitem"
                   tabIndex="-1"
@@ -505,8 +500,6 @@ exports[`Default Tabs renders default tabs with icons 1`] = `
                 role="presentation"
               >
                 <a
-                  aria-checked={undefined}
-                  className={undefined}
                   href="javascript:void(0);"
                   role="menuitem"
                   tabIndex="-1"
@@ -549,8 +542,6 @@ exports[`Default Tabs renders default tabs with icons 1`] = `
                 role="presentation"
               >
                 <a
-                  aria-checked={undefined}
-                  className={undefined}
                   href="javascript:void(0);"
                   role="menuitem"
                   tabIndex="-1"
@@ -929,7 +920,6 @@ exports[`Default Tabs renders default tabs with overflowing tab items 1`] = `
           <button
             aria-haspopup={true}
             className="slds-button"
-            disabled={undefined}
           >
             More
             <svg
@@ -943,10 +933,8 @@ exports[`Default Tabs renders default tabs with overflowing tab items 1`] = `
           </button>
           <div
             className="slds-dropdown slds-dropdown_right"
-            style={undefined}
           >
             <ul
-              aria-label={undefined}
               className="slds-dropdown__list slds-dropdown_length-with-icon-10"
               role="menu"
             >
@@ -955,8 +943,6 @@ exports[`Default Tabs renders default tabs with overflowing tab items 1`] = `
                 role="presentation"
               >
                 <a
-                  aria-checked={undefined}
-                  className={undefined}
                   href="javascript:void(0);"
                   role="menuitem"
                   tabIndex="-1"
@@ -974,8 +960,6 @@ exports[`Default Tabs renders default tabs with overflowing tab items 1`] = `
                 role="presentation"
               >
                 <a
-                  aria-checked={undefined}
-                  className={undefined}
                   href="javascript:void(0);"
                   role="menuitem"
                   tabIndex="-1"
@@ -993,8 +977,6 @@ exports[`Default Tabs renders default tabs with overflowing tab items 1`] = `
                 role="presentation"
               >
                 <a
-                  aria-checked={undefined}
-                  className={undefined}
                   href="javascript:void(0);"
                   role="menuitem"
                   tabIndex="-1"
@@ -1383,7 +1365,6 @@ exports[`Default Tabs renders tabs as a card 1`] = `
         <a
           className="slds-card__footer-action"
           href="javascript:void(0);"
-          tabIndex={undefined}
         >
           View All 
           <span
@@ -1471,7 +1452,6 @@ exports[`Default Tabs renders tabs as a card 1`] = `
         <a
           className="slds-card__footer-action"
           href="javascript:void(0);"
-          tabIndex={undefined}
         >
           View All 
           <span
@@ -1565,7 +1545,6 @@ exports[`Default Tabs renders tabs as a card 1`] = `
         <a
           className="slds-card__footer-action"
           href="javascript:void(0);"
-          tabIndex={undefined}
         >
           View All 
           <span
@@ -1872,10 +1851,7 @@ exports[`Mobile stacked tabs renders a hidden tab panel 1`] = `
     className="slds-panel__header slds-panel__header_align-center"
   >
     <button
-      aria-haspopup={undefined}
       className="slds-button slds-button_icon slds-button_icon-small slds-panel__back"
-      id={undefined}
-      onClick={undefined}
       title="Collapse Item One Panel"
     >
       <svg
@@ -1925,7 +1901,6 @@ exports[`Mobile stacked tabs renders a mobile tabs demo 1`] = `
     >
       <button
         className="slds-button slds-button_full-width"
-        disabled={undefined}
         onClick={[Function]}
       >
         <span
@@ -1949,7 +1924,6 @@ exports[`Mobile stacked tabs renders a mobile tabs demo 1`] = `
     >
       <button
         className="slds-button slds-button_full-width"
-        disabled={undefined}
         onClick={[Function]}
       >
         <span
@@ -1973,7 +1947,6 @@ exports[`Mobile stacked tabs renders a mobile tabs demo 1`] = `
     >
       <button
         className="slds-button slds-button_full-width"
-        disabled={undefined}
         onClick={[Function]}
       >
         <span
@@ -2001,9 +1974,7 @@ exports[`Mobile stacked tabs renders a mobile tabs demo 1`] = `
       className="slds-panel__header slds-panel__header_align-center"
     >
       <button
-        aria-haspopup={undefined}
         className="slds-button slds-button_icon slds-button_icon-small slds-panel__back"
-        id={undefined}
         onClick={[Function]}
         title="Collapse Item 1 Panel"
       >
@@ -2042,9 +2013,7 @@ exports[`Mobile stacked tabs renders a mobile tabs demo 1`] = `
       className="slds-panel__header slds-panel__header_align-center"
     >
       <button
-        aria-haspopup={undefined}
         className="slds-button slds-button_icon slds-button_icon-small slds-panel__back"
-        id={undefined}
         onClick={[Function]}
         title="Collapse Item 2 Panel"
       >
@@ -2083,9 +2052,7 @@ exports[`Mobile stacked tabs renders a mobile tabs demo 1`] = `
       className="slds-panel__header slds-panel__header_align-center"
     >
       <button
-        aria-haspopup={undefined}
         className="slds-button slds-button_icon slds-button_icon-small slds-panel__back"
-        id={undefined}
         onClick={[Function]}
         title="Collapse Item 3 Panel"
       >
@@ -2131,7 +2098,6 @@ exports[`Mobile stacked tabs renders a mobile tabs demo with a visible panel sho
     >
       <button
         className="slds-button slds-button_full-width"
-        disabled={undefined}
         onClick={[Function]}
       >
         <span
@@ -2155,7 +2121,6 @@ exports[`Mobile stacked tabs renders a mobile tabs demo with a visible panel sho
     >
       <button
         className="slds-button slds-button_full-width"
-        disabled={undefined}
         onClick={[Function]}
       >
         <span
@@ -2179,7 +2144,6 @@ exports[`Mobile stacked tabs renders a mobile tabs demo with a visible panel sho
     >
       <button
         className="slds-button slds-button_full-width"
-        disabled={undefined}
         onClick={[Function]}
       >
         <span
@@ -2207,9 +2171,7 @@ exports[`Mobile stacked tabs renders a mobile tabs demo with a visible panel sho
       className="slds-panel__header slds-panel__header_align-center"
     >
       <button
-        aria-haspopup={undefined}
         className="slds-button slds-button_icon slds-button_icon-small slds-panel__back"
-        id={undefined}
         onClick={[Function]}
         title="Collapse Item 1 Panel"
       >
@@ -2248,9 +2210,7 @@ exports[`Mobile stacked tabs renders a mobile tabs demo with a visible panel sho
       className="slds-panel__header slds-panel__header_align-center"
     >
       <button
-        aria-haspopup={undefined}
         className="slds-button slds-button_icon slds-button_icon-small slds-panel__back"
-        id={undefined}
         onClick={[Function]}
         title="Collapse Item 2 Panel"
       >
@@ -2289,9 +2249,7 @@ exports[`Mobile stacked tabs renders a mobile tabs demo with a visible panel sho
       className="slds-panel__header slds-panel__header_align-center"
     >
       <button
-        aria-haspopup={undefined}
         className="slds-button slds-button_icon slds-button_icon-small slds-panel__back"
-        id={undefined}
         onClick={[Function]}
         title="Collapse Item 3 Panel"
       >
@@ -2337,7 +2295,6 @@ exports[`Mobile stacked tabs renders a static mobile tabs demo 1`] = `
     >
       <button
         className="slds-button slds-button_full-width"
-        disabled={undefined}
         onClick={[Function]}
       >
         <span
@@ -2361,7 +2318,6 @@ exports[`Mobile stacked tabs renders a static mobile tabs demo 1`] = `
     >
       <button
         className="slds-button slds-button_full-width"
-        disabled={undefined}
         onClick={[Function]}
       >
         <span
@@ -2385,7 +2341,6 @@ exports[`Mobile stacked tabs renders a static mobile tabs demo 1`] = `
     >
       <button
         className="slds-button slds-button_full-width"
-        disabled={undefined}
         onClick={[Function]}
       >
         <span
@@ -2413,9 +2368,7 @@ exports[`Mobile stacked tabs renders a static mobile tabs demo 1`] = `
       className="slds-panel__header slds-panel__header_align-center"
     >
       <button
-        aria-haspopup={undefined}
         className="slds-button slds-button_icon slds-button_icon-small slds-panel__back"
-        id={undefined}
         onClick={[Function]}
         title="Collapse Item 1 Panel"
       >
@@ -2454,9 +2407,7 @@ exports[`Mobile stacked tabs renders a static mobile tabs demo 1`] = `
       className="slds-panel__header slds-panel__header_align-center"
     >
       <button
-        aria-haspopup={undefined}
         className="slds-button slds-button_icon slds-button_icon-small slds-panel__back"
-        id={undefined}
         onClick={[Function]}
         title="Collapse Item 2 Panel"
       >
@@ -2495,9 +2446,7 @@ exports[`Mobile stacked tabs renders a static mobile tabs demo 1`] = `
       className="slds-panel__header slds-panel__header_align-center"
     >
       <button
-        aria-haspopup={undefined}
         className="slds-button slds-button_icon slds-button_icon-small slds-panel__back"
-        id={undefined}
         onClick={[Function]}
         title="Collapse Item 3 Panel"
       >
@@ -2543,7 +2492,6 @@ exports[`Mobile stacked tabs renders a static mobile tabs demo with a visible pa
     >
       <button
         className="slds-button slds-button_full-width"
-        disabled={undefined}
         onClick={[Function]}
       >
         <span
@@ -2567,7 +2515,6 @@ exports[`Mobile stacked tabs renders a static mobile tabs demo with a visible pa
     >
       <button
         className="slds-button slds-button_full-width"
-        disabled={undefined}
         onClick={[Function]}
       >
         <span
@@ -2591,7 +2538,6 @@ exports[`Mobile stacked tabs renders a static mobile tabs demo with a visible pa
     >
       <button
         className="slds-button slds-button_full-width"
-        disabled={undefined}
         onClick={[Function]}
       >
         <span
@@ -2619,9 +2565,7 @@ exports[`Mobile stacked tabs renders a static mobile tabs demo with a visible pa
       className="slds-panel__header slds-panel__header_align-center"
     >
       <button
-        aria-haspopup={undefined}
         className="slds-button slds-button_icon slds-button_icon-small slds-panel__back"
-        id={undefined}
         onClick={[Function]}
         title="Collapse Item 1 Panel"
       >
@@ -2660,9 +2604,7 @@ exports[`Mobile stacked tabs renders a static mobile tabs demo with a visible pa
       className="slds-panel__header slds-panel__header_align-center"
     >
       <button
-        aria-haspopup={undefined}
         className="slds-button slds-button_icon slds-button_icon-small slds-panel__back"
-        id={undefined}
         onClick={[Function]}
         title="Collapse Item 2 Panel"
       >
@@ -2701,9 +2643,7 @@ exports[`Mobile stacked tabs renders a static mobile tabs demo with a visible pa
       className="slds-panel__header slds-panel__header_align-center"
     >
       <button
-        aria-haspopup={undefined}
         className="slds-button slds-button_icon slds-button_icon-small slds-panel__back"
-        id={undefined}
         onClick={[Function]}
         title="Collapse Item 3 Panel"
       >
@@ -2746,8 +2686,6 @@ exports[`Mobile stacked tabs renders a tab 1`] = `
 exports[`Mobile stacked tabs renders a tab button 1`] = `
 <button
   className="slds-button slds-button_full-width"
-  disabled={undefined}
-  onClick={undefined}
 >
   <span
     className="slds-truncate"
@@ -2793,10 +2731,7 @@ exports[`Mobile stacked tabs renders a visible tab panel 1`] = `
     className="slds-panel__header slds-panel__header_align-center"
   >
     <button
-      aria-haspopup={undefined}
       className="slds-button slds-button_icon slds-button_icon-small slds-panel__back"
-      id={undefined}
-      onClick={undefined}
       title="Collapse Item One Panel"
     >
       <svg
@@ -2840,8 +2775,6 @@ exports[`Mobile stacked tabs renders nested mobile tabs 1`] = `
     >
       <button
         className="slds-button slds-button_full-width"
-        disabled={undefined}
-        onClick={undefined}
       >
         <span
           className="slds-truncate"
@@ -2864,8 +2797,6 @@ exports[`Mobile stacked tabs renders nested mobile tabs 1`] = `
     >
       <button
         className="slds-button slds-button_full-width"
-        disabled={undefined}
-        onClick={undefined}
       >
         <span
           className="slds-truncate"
@@ -2888,8 +2819,6 @@ exports[`Mobile stacked tabs renders nested mobile tabs 1`] = `
     >
       <button
         className="slds-button slds-button_full-width"
-        disabled={undefined}
-        onClick={undefined}
       >
         <span
           className="slds-truncate"
@@ -2916,10 +2845,7 @@ exports[`Mobile stacked tabs renders nested mobile tabs 1`] = `
       className="slds-panel__header slds-panel__header_align-center"
     >
       <button
-        aria-haspopup={undefined}
         className="slds-button slds-button_icon slds-button_icon-small slds-panel__back"
-        id={undefined}
-        onClick={undefined}
         title="Collapse Item 1 Panel"
       >
         <svg
@@ -2954,8 +2880,6 @@ exports[`Mobile stacked tabs renders nested mobile tabs 1`] = `
         >
           <button
             className="slds-button slds-button_full-width"
-            disabled={undefined}
-            onClick={undefined}
           >
             <span
               className="slds-truncate"
@@ -2978,8 +2902,6 @@ exports[`Mobile stacked tabs renders nested mobile tabs 1`] = `
         >
           <button
             className="slds-button slds-button_full-width"
-            disabled={undefined}
-            onClick={undefined}
           >
             <span
               className="slds-truncate"
@@ -3002,8 +2924,6 @@ exports[`Mobile stacked tabs renders nested mobile tabs 1`] = `
         >
           <button
             className="slds-button slds-button_full-width"
-            disabled={undefined}
-            onClick={undefined}
           >
             <span
               className="slds-truncate"
@@ -3033,8 +2953,6 @@ exports[`Mobile stacked tabs renders nested mobile tabs 1`] = `
         >
           <button
             className="slds-button slds-button_full-width"
-            disabled={undefined}
-            onClick={undefined}
           >
             <span
               className="slds-truncate"
@@ -3057,8 +2975,6 @@ exports[`Mobile stacked tabs renders nested mobile tabs 1`] = `
         >
           <button
             className="slds-button slds-button_full-width"
-            disabled={undefined}
-            onClick={undefined}
           >
             <span
               className="slds-truncate"
@@ -3087,10 +3003,7 @@ exports[`Mobile stacked tabs renders nested mobile tabs 1`] = `
       className="slds-panel__header slds-panel__header_align-center"
     >
       <button
-        aria-haspopup={undefined}
         className="slds-button slds-button_icon slds-button_icon-small slds-panel__back"
-        id={undefined}
-        onClick={undefined}
         title="Collapse Item 2 Panel"
       >
         <svg
@@ -3128,10 +3041,7 @@ exports[`Mobile stacked tabs renders nested mobile tabs 1`] = `
       className="slds-panel__header slds-panel__header_align-center"
     >
       <button
-        aria-haspopup={undefined}
         className="slds-button slds-button_icon slds-button_icon-small slds-panel__back"
-        id={undefined}
-        onClick={undefined}
         title="Collapse Item 3 Panel"
       >
         <svg
@@ -3169,10 +3079,7 @@ exports[`Mobile stacked tabs renders nested mobile tabs 1`] = `
       className="slds-panel__header slds-panel__header_align-center"
     >
       <button
-        aria-haspopup={undefined}
         className="slds-button slds-button_icon slds-button_icon-small slds-panel__back"
-        id={undefined}
-        onClick={undefined}
         title="Collapse Nested Item 1 Panel"
       >
         <svg
@@ -3210,10 +3117,7 @@ exports[`Mobile stacked tabs renders nested mobile tabs 1`] = `
       className="slds-panel__header slds-panel__header_align-center"
     >
       <button
-        aria-haspopup={undefined}
         className="slds-button slds-button_icon slds-button_icon-small slds-panel__back"
-        id={undefined}
-        onClick={undefined}
         title="Collapse Nested Item 2 Panel"
       >
         <svg
@@ -3251,10 +3155,7 @@ exports[`Mobile stacked tabs renders nested mobile tabs 1`] = `
       className="slds-panel__header slds-panel__header_align-center"
     >
       <button
-        aria-haspopup={undefined}
         className="slds-button slds-button_icon slds-button_icon-small slds-panel__back"
-        id={undefined}
-        onClick={undefined}
         title="Collapse Nested Item 3 Panel"
       >
         <svg
@@ -3292,10 +3193,7 @@ exports[`Mobile stacked tabs renders nested mobile tabs 1`] = `
       className="slds-panel__header slds-panel__header_align-center"
     >
       <button
-        aria-haspopup={undefined}
         className="slds-button slds-button_icon slds-button_icon-small slds-panel__back"
-        id={undefined}
-        onClick={undefined}
         title="Collapse Nested Item 4 Panel"
       >
         <svg
@@ -3333,10 +3231,7 @@ exports[`Mobile stacked tabs renders nested mobile tabs 1`] = `
       className="slds-panel__header slds-panel__header_align-center"
     >
       <button
-        aria-haspopup={undefined}
         className="slds-button slds-button_icon slds-button_icon-small slds-panel__back"
-        id={undefined}
-        onClick={undefined}
         title="Collapse Nested Item 5 Panel"
       >
         <svg
@@ -3379,7 +3274,6 @@ exports[`SubtabOverflow should render a SubtabOverflow 1`] = `
     <button
       aria-haspopup="true"
       className="slds-button"
-      disabled={undefined}
       title="More Tab Items"
     >
       <span
@@ -3407,10 +3301,8 @@ exports[`SubtabOverflow should render a SubtabOverflow 1`] = `
     </button>
     <div
       className="slds-dropdown slds-dropdown_right"
-      style={undefined}
     >
       <ul
-        aria-label={undefined}
         className="slds-dropdown__list"
         role="menu"
       >
@@ -3419,8 +3311,6 @@ exports[`SubtabOverflow should render a SubtabOverflow 1`] = `
           role="presentation"
         >
           <a
-            aria-checked={undefined}
-            className={undefined}
             href="javascript:void(0);"
             role="menuitem"
             tabIndex="-1"
@@ -3461,8 +3351,6 @@ exports[`SubtabOverflow should render a SubtabOverflow 1`] = `
           role="presentation"
         >
           <a
-            aria-checked={undefined}
-            className={undefined}
             href="javascript:void(0);"
             role="menuitem"
             tabIndex="-1"
@@ -3514,7 +3402,6 @@ exports[`SubtabOverflow should render a error SubtabOverflow 1`] = `
     <button
       aria-haspopup="true"
       className="slds-button"
-      disabled={undefined}
       title="More Tab Items"
     >
       <span
@@ -3542,10 +3429,8 @@ exports[`SubtabOverflow should render a error SubtabOverflow 1`] = `
     </button>
     <div
       className="slds-dropdown slds-dropdown_right"
-      style={undefined}
     >
       <ul
-        aria-label={undefined}
         className="slds-dropdown__list"
         role="menu"
       >
@@ -3554,7 +3439,6 @@ exports[`SubtabOverflow should render a error SubtabOverflow 1`] = `
           role="presentation"
         >
           <a
-            aria-checked={undefined}
             className="slds-has-error"
             href="javascript:void(0);"
             role="menuitem"
@@ -3600,8 +3484,6 @@ exports[`SubtabOverflow should render a error SubtabOverflow 1`] = `
           role="presentation"
         >
           <a
-            aria-checked={undefined}
-            className={undefined}
             href="javascript:void(0);"
             role="menuitem"
             tabIndex="-1"
@@ -3653,7 +3535,6 @@ exports[`SubtabOverflow should render a success SubtabOverflow 1`] = `
     <button
       aria-haspopup="true"
       className="slds-button"
-      disabled={undefined}
       title="More Tab Items"
     >
       <span
@@ -3681,10 +3562,8 @@ exports[`SubtabOverflow should render a success SubtabOverflow 1`] = `
     </button>
     <div
       className="slds-dropdown slds-dropdown_right"
-      style={undefined}
     >
       <ul
-        aria-label={undefined}
         className="slds-dropdown__list"
         role="menu"
       >
@@ -3693,7 +3572,6 @@ exports[`SubtabOverflow should render a success SubtabOverflow 1`] = `
           role="presentation"
         >
           <a
-            aria-checked={undefined}
             className="slds-has-success"
             href="javascript:void(0);"
             role="menuitem"
@@ -3739,8 +3617,6 @@ exports[`SubtabOverflow should render a success SubtabOverflow 1`] = `
           role="presentation"
         >
           <a
-            aria-checked={undefined}
-            className={undefined}
             href="javascript:void(0);"
             role="menuitem"
             tabIndex="-1"
@@ -3792,7 +3668,6 @@ exports[`SubtabOverflow should render a warning SubtabOverflow 1`] = `
     <button
       aria-haspopup="true"
       className="slds-button"
-      disabled={undefined}
       title="More Tab Items"
     >
       <span
@@ -3820,10 +3695,8 @@ exports[`SubtabOverflow should render a warning SubtabOverflow 1`] = `
     </button>
     <div
       className="slds-dropdown slds-dropdown_right"
-      style={undefined}
     >
       <ul
-        aria-label={undefined}
         className="slds-dropdown__list"
         role="menu"
       >
@@ -3832,7 +3705,6 @@ exports[`SubtabOverflow should render a warning SubtabOverflow 1`] = `
           role="presentation"
         >
           <a
-            aria-checked={undefined}
             className="slds-has-warning"
             href="javascript:void(0);"
             role="menuitem"
@@ -3878,8 +3750,6 @@ exports[`SubtabOverflow should render a warning SubtabOverflow 1`] = `
           role="presentation"
         >
           <a
-            aria-checked={undefined}
-            className={undefined}
             href="javascript:void(0);"
             role="menuitem"
             tabIndex="-1"
@@ -3931,7 +3801,6 @@ exports[`SubtabOverflow should render an open SubtabOverflow 1`] = `
     <button
       aria-haspopup="true"
       className="slds-button"
-      disabled={undefined}
       title="More Tab Items"
     >
       <span
@@ -3959,10 +3828,8 @@ exports[`SubtabOverflow should render an open SubtabOverflow 1`] = `
     </button>
     <div
       className="slds-dropdown slds-dropdown_right"
-      style={undefined}
     >
       <ul
-        aria-label={undefined}
         className="slds-dropdown__list"
         role="menu"
       >
@@ -3971,8 +3838,6 @@ exports[`SubtabOverflow should render an open SubtabOverflow 1`] = `
           role="presentation"
         >
           <a
-            aria-checked={undefined}
-            className={undefined}
             href="javascript:void(0);"
             role="menuitem"
             tabIndex="-1"
@@ -4013,8 +3878,6 @@ exports[`SubtabOverflow should render an open SubtabOverflow 1`] = `
           role="presentation"
         >
           <a
-            aria-checked={undefined}
-            className={undefined}
             href="javascript:void(0);"
             role="menuitem"
             tabIndex="-1"
@@ -4066,7 +3929,6 @@ exports[`SubtabOverflow should render an open SubtabOverflow with no icon on the
     <button
       aria-haspopup="true"
       className="slds-button"
-      disabled={undefined}
       title="More Tab Items"
     >
       <span
@@ -4094,10 +3956,8 @@ exports[`SubtabOverflow should render an open SubtabOverflow with no icon on the
     </button>
     <div
       className="slds-dropdown slds-dropdown_right"
-      style={undefined}
     >
       <ul
-        aria-label={undefined}
         className="slds-dropdown__list"
         role="menu"
       >
@@ -4106,8 +3966,6 @@ exports[`SubtabOverflow should render an open SubtabOverflow with no icon on the
           role="presentation"
         >
           <a
-            aria-checked={undefined}
-            className={undefined}
             href="javascript:void(0);"
             role="menuitem"
             tabIndex="-1"
@@ -4130,8 +3988,6 @@ exports[`SubtabOverflow should render an open SubtabOverflow with no icon on the
           role="presentation"
         >
           <a
-            aria-checked={undefined}
-            className={undefined}
             href="javascript:void(0);"
             role="menuitem"
             tabIndex="-1"
@@ -4236,9 +4092,7 @@ exports[`Subtabs renders dirty overflowed subtab 1`] = `
           className="slds-col_bump-left slds-p-left_none slds-p-right_none"
         >
           <button
-            aria-haspopup={undefined}
             className="slds-button slds-button_icon slds-button_icon-container slds-button_icon-x-small"
-            id={undefined}
             tabIndex="-1"
             title="Close 00071938"
           >
@@ -4304,9 +4158,7 @@ exports[`Subtabs renders dirty overflowed subtab 1`] = `
           className="slds-col_bump-left slds-p-left_none slds-p-right_none"
         >
           <button
-            aria-haspopup={undefined}
             className="slds-button slds-button_icon slds-button_icon-container slds-button_icon-x-small"
-            id={undefined}
             tabIndex="-1"
             title="Close 00071939"
           >
@@ -4335,7 +4187,6 @@ exports[`Subtabs renders dirty overflowed subtab 1`] = `
           <button
             aria-haspopup="true"
             className="slds-button"
-            disabled={undefined}
             title="More Tab Items"
           >
             <span
@@ -4371,10 +4222,8 @@ exports[`Subtabs renders dirty overflowed subtab 1`] = `
           </button>
           <div
             className="slds-dropdown slds-dropdown_right"
-            style={undefined}
           >
             <ul
-              aria-label={undefined}
               className="slds-dropdown__list"
               role="menu"
             >
@@ -4383,8 +4232,6 @@ exports[`Subtabs renders dirty overflowed subtab 1`] = `
                 role="presentation"
               >
                 <a
-                  aria-checked={undefined}
-                  className={undefined}
                   href="javascript:void(0);"
                   role="menuitem"
                   tabIndex="-1"
@@ -4433,8 +4280,6 @@ exports[`Subtabs renders dirty overflowed subtab 1`] = `
                 role="presentation"
               >
                 <a
-                  aria-checked={undefined}
-                  className={undefined}
                   href="javascript:void(0);"
                   role="menuitem"
                   tabIndex="-1"
@@ -4558,9 +4403,7 @@ exports[`Subtabs renders dirty overflowed subtab with notification 1`] = `
           className="slds-col_bump-left slds-p-left_none slds-p-right_none"
         >
           <button
-            aria-haspopup={undefined}
             className="slds-button slds-button_icon slds-button_icon-container slds-button_icon-x-small"
-            id={undefined}
             tabIndex="-1"
             title="Close 00071938"
           >
@@ -4626,9 +4469,7 @@ exports[`Subtabs renders dirty overflowed subtab with notification 1`] = `
           className="slds-col_bump-left slds-p-left_none slds-p-right_none"
         >
           <button
-            aria-haspopup={undefined}
             className="slds-button slds-button_icon slds-button_icon-container slds-button_icon-x-small"
-            id={undefined}
             tabIndex="-1"
             title="Close 00071939"
           >
@@ -4657,7 +4498,6 @@ exports[`Subtabs renders dirty overflowed subtab with notification 1`] = `
           <button
             aria-haspopup="true"
             className="slds-button"
-            disabled={undefined}
             title="More Tab Items"
           >
             <span
@@ -4698,10 +4538,8 @@ exports[`Subtabs renders dirty overflowed subtab with notification 1`] = `
           </button>
           <div
             className="slds-dropdown slds-dropdown_right"
-            style={undefined}
           >
             <ul
-              aria-label={undefined}
               className="slds-dropdown__list"
               role="menu"
             >
@@ -4710,8 +4548,6 @@ exports[`Subtabs renders dirty overflowed subtab with notification 1`] = `
                 role="presentation"
               >
                 <a
-                  aria-checked={undefined}
-                  className={undefined}
                   href="javascript:void(0);"
                   role="menuitem"
                   tabIndex="-1"
@@ -4765,8 +4601,6 @@ exports[`Subtabs renders dirty overflowed subtab with notification 1`] = `
                 role="presentation"
               >
                 <a
-                  aria-checked={undefined}
-                  className={undefined}
                   href="javascript:void(0);"
                   role="menuitem"
                   tabIndex="-1"
@@ -4890,9 +4724,7 @@ exports[`Subtabs renders overflowed subtab 1`] = `
           className="slds-col_bump-left slds-p-left_none slds-p-right_none"
         >
           <button
-            aria-haspopup={undefined}
             className="slds-button slds-button_icon slds-button_icon-container slds-button_icon-x-small"
-            id={undefined}
             tabIndex="-1"
             title="Close 00071938"
           >
@@ -4958,9 +4790,7 @@ exports[`Subtabs renders overflowed subtab 1`] = `
           className="slds-col_bump-left slds-p-left_none slds-p-right_none"
         >
           <button
-            aria-haspopup={undefined}
             className="slds-button slds-button_icon slds-button_icon-container slds-button_icon-x-small"
-            id={undefined}
             tabIndex="-1"
             title="Close 00071939"
           >
@@ -4989,7 +4819,6 @@ exports[`Subtabs renders overflowed subtab 1`] = `
           <button
             aria-haspopup="true"
             className="slds-button"
-            disabled={undefined}
             title="More Tab Items"
           >
             <span
@@ -5017,10 +4846,8 @@ exports[`Subtabs renders overflowed subtab 1`] = `
           </button>
           <div
             className="slds-dropdown slds-dropdown_right"
-            style={undefined}
           >
             <ul
-              aria-label={undefined}
               className="slds-dropdown__list"
               role="menu"
             >
@@ -5029,8 +4856,6 @@ exports[`Subtabs renders overflowed subtab 1`] = `
                 role="presentation"
               >
                 <a
-                  aria-checked={undefined}
-                  className={undefined}
                   href="javascript:void(0);"
                   role="menuitem"
                   tabIndex="-1"
@@ -5071,8 +4896,6 @@ exports[`Subtabs renders overflowed subtab 1`] = `
                 role="presentation"
               >
                 <a
-                  aria-checked={undefined}
-                  className={undefined}
                   href="javascript:void(0);"
                   role="menuitem"
                   tabIndex="-1"
@@ -5196,9 +5019,7 @@ exports[`Subtabs renders overflowed subtab with notification 1`] = `
           className="slds-col_bump-left slds-p-left_none slds-p-right_none"
         >
           <button
-            aria-haspopup={undefined}
             className="slds-button slds-button_icon slds-button_icon-container slds-button_icon-x-small"
-            id={undefined}
             tabIndex="-1"
             title="Close 00071938"
           >
@@ -5264,9 +5085,7 @@ exports[`Subtabs renders overflowed subtab with notification 1`] = `
           className="slds-col_bump-left slds-p-left_none slds-p-right_none"
         >
           <button
-            aria-haspopup={undefined}
             className="slds-button slds-button_icon slds-button_icon-container slds-button_icon-x-small"
-            id={undefined}
             tabIndex="-1"
             title="Close 00071939"
           >
@@ -5295,7 +5114,6 @@ exports[`Subtabs renders overflowed subtab with notification 1`] = `
           <button
             aria-haspopup="true"
             className="slds-button"
-            disabled={undefined}
             title="More Tab Items"
           >
             <span
@@ -5329,10 +5147,8 @@ exports[`Subtabs renders overflowed subtab with notification 1`] = `
           </button>
           <div
             className="slds-dropdown slds-dropdown_right"
-            style={undefined}
           >
             <ul
-              aria-label={undefined}
               className="slds-dropdown__list"
               role="menu"
             >
@@ -5341,8 +5157,6 @@ exports[`Subtabs renders overflowed subtab with notification 1`] = `
                 role="presentation"
               >
                 <a
-                  aria-checked={undefined}
-                  className={undefined}
                   href="javascript:void(0);"
                   role="menuitem"
                   tabIndex="-1"
@@ -5389,8 +5203,6 @@ exports[`Subtabs renders overflowed subtab with notification 1`] = `
                 role="presentation"
               >
                 <a
-                  aria-checked={undefined}
-                  className={undefined}
                   href="javascript:void(0);"
                   role="menuitem"
                   tabIndex="-1"
@@ -5505,9 +5317,7 @@ exports[`Subtabs renders subtab with notification and dirty 1`] = `
         className="slds-col_bump-left slds-p-left_none slds-p-right_none"
       >
         <button
-          aria-haspopup={undefined}
           className="slds-button slds-button_icon slds-button_icon-container slds-button_icon-x-small"
-          id={undefined}
           tabIndex="0"
           title="Close 00071938"
         >
@@ -5586,9 +5396,7 @@ exports[`Subtabs renders subtab with notification and dirty 1`] = `
         className="slds-col_bump-left slds-p-left_none slds-p-right_none"
       >
         <button
-          aria-haspopup={undefined}
           className="slds-button slds-button_icon slds-button_icon-container slds-button_icon-x-small"
-          id={undefined}
           tabIndex="-1"
           title="Close Chat - Customer"
         >
@@ -5675,9 +5483,7 @@ exports[`Subtabs should render a subtab 1`] = `
     className="slds-col_bump-left slds-p-left_none slds-p-right_none"
   >
     <button
-      aria-haspopup={undefined}
       className="slds-button slds-button_icon slds-button_icon-container slds-button_icon-x-small"
-      id={undefined}
       tabIndex="-1"
       title="Close Subtab Name"
     >
@@ -5750,9 +5556,7 @@ exports[`Subtabs should render a success subtab 1`] = `
     className="slds-col_bump-left slds-p-left_none slds-p-right_none"
   >
     <button
-      aria-haspopup={undefined}
       className="slds-button slds-button_icon slds-button_icon-inverse slds-button_icon-container slds-button_icon-x-small"
-      id={undefined}
       tabIndex="-1"
       title="Close Subtab Name"
     >
@@ -5825,9 +5629,7 @@ exports[`Subtabs should render a warning subtab 1`] = `
     className="slds-col_bump-left slds-p-left_none slds-p-right_none"
   >
     <button
-      aria-haspopup={undefined}
       className="slds-button slds-button_icon slds-button_icon-container slds-button_icon-x-small"
-      id={undefined}
       tabIndex="-1"
       title="Close Subtab Name"
     >
@@ -5900,9 +5702,7 @@ exports[`Subtabs should render an error subtab 1`] = `
     className="slds-col_bump-left slds-p-left_none slds-p-right_none"
   >
     <button
-      aria-haspopup={undefined}
       className="slds-button slds-button_icon slds-button_icon-inverse slds-button_icon-container slds-button_icon-x-small"
-      id={undefined}
       tabIndex="-1"
       title="Close Subtab Name"
     >

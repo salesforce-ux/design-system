@@ -54,9 +54,7 @@ exports[`renders a closed and focused docked composer 1`] = `
         className="slds-col_bump-left slds-shrink-none"
       >
         <button
-          aria-haspopup={undefined}
           className="slds-button slds-button_icon slds-button_icon"
-          id={undefined}
           title="Minimize window"
         >
           <svg
@@ -74,9 +72,7 @@ exports[`renders a closed and focused docked composer 1`] = `
           </span>
         </button>
         <button
-          aria-haspopup={undefined}
           className="slds-button slds-button_icon slds-button_icon"
-          id={undefined}
           title="Expand Composer"
         >
           <svg
@@ -94,9 +90,7 @@ exports[`renders a closed and focused docked composer 1`] = `
           </span>
         </button>
         <button
-          aria-haspopup={undefined}
           className="slds-button slds-button_icon slds-button_icon"
-          id={undefined}
           title="Close"
         >
           <svg
@@ -198,9 +192,7 @@ exports[`renders a closed docked composer 1`] = `
         className="slds-col_bump-left slds-shrink-none"
       >
         <button
-          aria-haspopup={undefined}
           className="slds-button slds-button_icon slds-button_icon"
-          id={undefined}
           title="Minimize window"
         >
           <svg
@@ -218,9 +210,7 @@ exports[`renders a closed docked composer 1`] = `
           </span>
         </button>
         <button
-          aria-haspopup={undefined}
           className="slds-button slds-button_icon slds-button_icon"
-          id={undefined}
           title="Expand Composer"
         >
           <svg
@@ -238,9 +228,7 @@ exports[`renders a closed docked composer 1`] = `
           </span>
         </button>
         <button
-          aria-haspopup={undefined}
           className="slds-button slds-button_icon slds-button_icon"
-          id={undefined}
           title="Close"
         >
           <svg
@@ -337,9 +325,7 @@ exports[`renders a docked composer 1`] = `
         className="slds-col_bump-left slds-shrink-none"
       >
         <button
-          aria-haspopup={undefined}
           className="slds-button slds-button_icon slds-button_icon"
-          id={undefined}
           title="Minimize window"
         >
           <svg
@@ -357,9 +343,7 @@ exports[`renders a docked composer 1`] = `
           </span>
         </button>
         <button
-          aria-haspopup={undefined}
           className="slds-button slds-button_icon slds-button_icon"
-          id={undefined}
           title="Expand Composer"
         >
           <svg
@@ -377,9 +361,7 @@ exports[`renders a docked composer 1`] = `
           </span>
         </button>
         <button
-          aria-haspopup={undefined}
           className="slds-button slds-button_icon slds-button_icon"
-          id={undefined}
           title="Close"
         >
           <svg
@@ -460,10 +442,8 @@ exports[`renders a docked composer with multiple composer overflow 1`] = `
     </button>
     <div
       className="slds-dropdown slds-dropdown_left slds-dropdown_bottom slds-dropdown_medium slds-nubbin_bottom-left"
-      style={undefined}
     >
       <ul
-        aria-label={undefined}
         className="slds-dropdown__list slds-dropdown_length-with-icon-7"
         role="menu"
       >
@@ -472,8 +452,6 @@ exports[`renders a docked composer with multiple composer overflow 1`] = `
           role="presentation"
         >
           <a
-            aria-checked={undefined}
-            className={undefined}
             href="javascript:void(0);"
             role="menuitem"
             tabIndex="-1"
@@ -508,8 +486,6 @@ exports[`renders a docked composer with multiple composer overflow 1`] = `
           role="presentation"
         >
           <a
-            aria-checked={undefined}
-            className={undefined}
             href="javascript:void(0);"
             role="menuitem"
             tabIndex="-1"
@@ -544,8 +520,6 @@ exports[`renders a docked composer with multiple composer overflow 1`] = `
           role="presentation"
         >
           <a
-            aria-checked={undefined}
-            className={undefined}
             href="javascript:void(0);"
             role="menuitem"
             tabIndex="-1"
@@ -623,9 +597,7 @@ exports[`renders a docked composer with multiple composer overflow 1`] = `
         className="slds-col_bump-left slds-shrink-none"
       >
         <button
-          aria-haspopup={undefined}
           className="slds-button slds-button_icon slds-button_icon"
-          id={undefined}
           title="Minimize window"
         >
           <svg
@@ -643,9 +615,7 @@ exports[`renders a docked composer with multiple composer overflow 1`] = `
           </span>
         </button>
         <button
-          aria-haspopup={undefined}
           className="slds-button slds-button_icon slds-button_icon"
-          id={undefined}
           title="Expand Composer"
         >
           <svg
@@ -663,9 +633,7 @@ exports[`renders a docked composer with multiple composer overflow 1`] = `
           </span>
         </button>
         <button
-          aria-haspopup={undefined}
           className="slds-button slds-button_icon slds-button_icon"
-          id={undefined}
           title="Close"
         >
           <svg
@@ -775,9 +743,7 @@ exports[`renders a docked composer with popout 1`] = `
               className="slds-col_bump-left slds-shrink-none"
             >
               <button
-                aria-haspopup={undefined}
                 className="slds-button slds-button_icon slds-button_icon"
-                id={undefined}
                 title="Minimize window"
               >
                 <svg
@@ -795,9 +761,7 @@ exports[`renders a docked composer with popout 1`] = `
                 </span>
               </button>
               <button
-                aria-haspopup={undefined}
                 className="slds-button slds-button_icon slds-button_icon"
-                id={undefined}
                 title="Expand Composer"
               >
                 <svg
@@ -815,9 +779,7 @@ exports[`renders a docked composer with popout 1`] = `
                 </span>
               </button>
               <button
-                aria-haspopup={undefined}
                 className="slds-button slds-button_icon slds-button_icon"
-                id={undefined}
                 title="Close"
               >
                 <svg
@@ -920,9 +882,7 @@ exports[`renders a docked composer with single composer open 1`] = `
         className="slds-col_bump-left slds-shrink-none"
       >
         <button
-          aria-haspopup={undefined}
           className="slds-button slds-button_icon slds-button_icon"
-          id={undefined}
           title="Minimize window"
         >
           <svg
@@ -940,9 +900,7 @@ exports[`renders a docked composer with single composer open 1`] = `
           </span>
         </button>
         <button
-          aria-haspopup={undefined}
           className="slds-button slds-button_icon slds-button_icon"
-          id={undefined}
           title="Expand Composer"
         >
           <svg
@@ -960,9 +918,7 @@ exports[`renders a docked composer with single composer open 1`] = `
           </span>
         </button>
         <button
-          aria-haspopup={undefined}
           className="slds-button slds-button_icon slds-button_icon"
-          id={undefined}
           title="Close"
         >
           <svg
@@ -1059,9 +1015,7 @@ exports[`renders a focused docked composer 1`] = `
         className="slds-col_bump-left slds-shrink-none"
       >
         <button
-          aria-haspopup={undefined}
           className="slds-button slds-button_icon slds-button_icon"
-          id={undefined}
           title="Minimize window"
         >
           <svg
@@ -1079,9 +1033,7 @@ exports[`renders a focused docked composer 1`] = `
           </span>
         </button>
         <button
-          aria-haspopup={undefined}
           className="slds-button slds-button_icon slds-button_icon"
-          id={undefined}
           title="Expand Composer"
         >
           <svg
@@ -1099,9 +1051,7 @@ exports[`renders a focused docked composer 1`] = `
           </span>
         </button>
         <button
-          aria-haspopup={undefined}
           className="slds-button slds-button_icon slds-button_icon"
-          id={undefined}
           title="Close"
         >
           <svg

@@ -49,7 +49,6 @@ exports[`ContextTab should render a ContextTab with a set icon icon 1`] = `
     <button
       aria-haspopup="true"
       className="slds-button slds-button_icon slds-button_icon-current-color slds-button_icon-container slds-button_icon-x-small"
-      id={undefined}
       tabIndex="-1"
       title="Actions for Tab Name"
     >
@@ -69,10 +68,8 @@ exports[`ContextTab should render a ContextTab with a set icon icon 1`] = `
     </button>
     <div
       className="slds-dropdown slds-dropdown_right"
-      style={undefined}
     >
       <ul
-        aria-label={undefined}
         className="slds-dropdown__list"
         role="menu"
       >
@@ -81,8 +78,6 @@ exports[`ContextTab should render a ContextTab with a set icon icon 1`] = `
           role="presentation"
         >
           <a
-            aria-checked={undefined}
-            className={undefined}
             href="javascript:void(0);"
             role="menuitem"
             tabIndex="-1"
@@ -110,8 +105,6 @@ exports[`ContextTab should render a ContextTab with a set icon icon 1`] = `
           role="presentation"
         >
           <a
-            aria-checked={undefined}
-            className={undefined}
             href="javascript:void(0);"
             role="menuitem"
             tabIndex="-1"
@@ -139,8 +132,6 @@ exports[`ContextTab should render a ContextTab with a set icon icon 1`] = `
           role="presentation"
         >
           <a
-            aria-checked={undefined}
-            className={undefined}
             href="javascript:void(0);"
             role="menuitem"
             tabIndex="-1"
@@ -168,8 +159,6 @@ exports[`ContextTab should render a ContextTab with a set icon icon 1`] = `
           role="presentation"
         >
           <a
-            aria-checked={undefined}
-            className={undefined}
             href="javascript:void(0);"
             role="menuitem"
             tabIndex="-1"
@@ -199,9 +188,7 @@ exports[`ContextTab should render a ContextTab with a set icon icon 1`] = `
     className="slds-context-bar__icon-action slds-col_bump-left slds-p-left_none"
   >
     <button
-      aria-haspopup={undefined}
       className="slds-button slds-button_icon slds-button_icon-current-color slds-button_icon-container slds-button_icon-x-small"
-      id={undefined}
       tabIndex="-1"
       title="Close Tab Name"
     >
@@ -278,7 +265,6 @@ exports[`ContextTab should render a ContextTab with an unread indicator 1`] = `
     <button
       aria-haspopup="true"
       className="slds-button slds-button_icon slds-button_icon-current-color slds-button_icon-container slds-button_icon-x-small"
-      id={undefined}
       tabIndex="-1"
       title="Actions for Tab Name"
     >
@@ -298,10 +284,8 @@ exports[`ContextTab should render a ContextTab with an unread indicator 1`] = `
     </button>
     <div
       className="slds-dropdown slds-dropdown_right"
-      style={undefined}
     >
       <ul
-        aria-label={undefined}
         className="slds-dropdown__list"
         role="menu"
       >
@@ -310,8 +294,6 @@ exports[`ContextTab should render a ContextTab with an unread indicator 1`] = `
           role="presentation"
         >
           <a
-            aria-checked={undefined}
-            className={undefined}
             href="javascript:void(0);"
             role="menuitem"
             tabIndex="-1"
@@ -339,8 +321,6 @@ exports[`ContextTab should render a ContextTab with an unread indicator 1`] = `
           role="presentation"
         >
           <a
-            aria-checked={undefined}
-            className={undefined}
             href="javascript:void(0);"
             role="menuitem"
             tabIndex="-1"
@@ -368,8 +348,6 @@ exports[`ContextTab should render a ContextTab with an unread indicator 1`] = `
           role="presentation"
         >
           <a
-            aria-checked={undefined}
-            className={undefined}
             href="javascript:void(0);"
             role="menuitem"
             tabIndex="-1"
@@ -397,8 +375,6 @@ exports[`ContextTab should render a ContextTab with an unread indicator 1`] = `
           role="presentation"
         >
           <a
-            aria-checked={undefined}
-            className={undefined}
             href="javascript:void(0);"
             role="menuitem"
             tabIndex="-1"
@@ -428,9 +404,7 @@ exports[`ContextTab should render a ContextTab with an unread indicator 1`] = `
     className="slds-context-bar__icon-action slds-col_bump-left slds-p-left_none"
   >
     <button
-      aria-haspopup={undefined}
       className="slds-button slds-button_icon slds-button_icon-current-color slds-button_icon-container slds-button_icon-x-small"
-      id={undefined}
       tabIndex="-1"
       title="Close Tab Name"
     >
@@ -509,7 +483,6 @@ exports[`ContextTab should render a ContextTab with an unsaved indicator 1`] = `
     <button
       aria-haspopup="true"
       className="slds-button slds-button_icon slds-button_icon-current-color slds-button_icon-container slds-button_icon-x-small"
-      id={undefined}
       tabIndex="-1"
       title="Actions for Tab Name"
     >
@@ -529,10 +502,8 @@ exports[`ContextTab should render a ContextTab with an unsaved indicator 1`] = `
     </button>
     <div
       className="slds-dropdown slds-dropdown_right"
-      style={undefined}
     >
       <ul
-        aria-label={undefined}
         className="slds-dropdown__list"
         role="menu"
       >
@@ -541,8 +512,6 @@ exports[`ContextTab should render a ContextTab with an unsaved indicator 1`] = `
           role="presentation"
         >
           <a
-            aria-checked={undefined}
-            className={undefined}
             href="javascript:void(0);"
             role="menuitem"
             tabIndex="-1"
@@ -570,8 +539,6 @@ exports[`ContextTab should render a ContextTab with an unsaved indicator 1`] = `
           role="presentation"
         >
           <a
-            aria-checked={undefined}
-            className={undefined}
             href="javascript:void(0);"
             role="menuitem"
             tabIndex="-1"
@@ -599,8 +566,6 @@ exports[`ContextTab should render a ContextTab with an unsaved indicator 1`] = `
           role="presentation"
         >
           <a
-            aria-checked={undefined}
-            className={undefined}
             href="javascript:void(0);"
             role="menuitem"
             tabIndex="-1"
@@ -628,8 +593,6 @@ exports[`ContextTab should render a ContextTab with an unsaved indicator 1`] = `
           role="presentation"
         >
           <a
-            aria-checked={undefined}
-            className={undefined}
             href="javascript:void(0);"
             role="menuitem"
             tabIndex="-1"
@@ -659,9 +622,7 @@ exports[`ContextTab should render a ContextTab with an unsaved indicator 1`] = `
     className="slds-context-bar__icon-action slds-col_bump-left slds-p-left_none"
   >
     <button
-      aria-haspopup={undefined}
       className="slds-button slds-button_icon slds-button_icon-current-color slds-button_icon-container slds-button_icon-x-small"
-      id={undefined}
       tabIndex="-1"
       title="Close Tab Name"
     >
@@ -736,7 +697,6 @@ exports[`ContextTab should render a ContextTab with status level 1`] = `
     <button
       aria-haspopup="true"
       className="slds-button slds-button_icon slds-button_icon-inverse slds-button_icon-container slds-button_icon-x-small"
-      id={undefined}
       tabIndex="-1"
       title="Actions for Tab Name"
     >
@@ -756,10 +716,8 @@ exports[`ContextTab should render a ContextTab with status level 1`] = `
     </button>
     <div
       className="slds-dropdown slds-dropdown_right"
-      style={undefined}
     >
       <ul
-        aria-label={undefined}
         className="slds-dropdown__list"
         role="menu"
       >
@@ -768,8 +726,6 @@ exports[`ContextTab should render a ContextTab with status level 1`] = `
           role="presentation"
         >
           <a
-            aria-checked={undefined}
-            className={undefined}
             href="javascript:void(0);"
             role="menuitem"
             tabIndex="-1"
@@ -797,8 +753,6 @@ exports[`ContextTab should render a ContextTab with status level 1`] = `
           role="presentation"
         >
           <a
-            aria-checked={undefined}
-            className={undefined}
             href="javascript:void(0);"
             role="menuitem"
             tabIndex="-1"
@@ -826,8 +780,6 @@ exports[`ContextTab should render a ContextTab with status level 1`] = `
           role="presentation"
         >
           <a
-            aria-checked={undefined}
-            className={undefined}
             href="javascript:void(0);"
             role="menuitem"
             tabIndex="-1"
@@ -855,8 +807,6 @@ exports[`ContextTab should render a ContextTab with status level 1`] = `
           role="presentation"
         >
           <a
-            aria-checked={undefined}
-            className={undefined}
             href="javascript:void(0);"
             role="menuitem"
             tabIndex="-1"
@@ -886,9 +836,7 @@ exports[`ContextTab should render a ContextTab with status level 1`] = `
     className="slds-context-bar__icon-action slds-col_bump-left slds-p-left_none"
   >
     <button
-      aria-haspopup={undefined}
       className="slds-button slds-button_icon slds-button_icon-inverse slds-button_icon-container slds-button_icon-x-small"
-      id={undefined}
       tabIndex="-1"
       title="Close Tab Name"
     >
@@ -941,7 +889,6 @@ exports[`ContextTab should render a ContextTab without an icon 1`] = `
     <button
       aria-haspopup="true"
       className="slds-button slds-button_icon slds-button_icon-current-color slds-button_icon-container slds-button_icon-x-small"
-      id={undefined}
       tabIndex="-1"
       title="Actions for Tab Name"
     >
@@ -961,10 +908,8 @@ exports[`ContextTab should render a ContextTab without an icon 1`] = `
     </button>
     <div
       className="slds-dropdown slds-dropdown_right"
-      style={undefined}
     >
       <ul
-        aria-label={undefined}
         className="slds-dropdown__list"
         role="menu"
       >
@@ -973,8 +918,6 @@ exports[`ContextTab should render a ContextTab without an icon 1`] = `
           role="presentation"
         >
           <a
-            aria-checked={undefined}
-            className={undefined}
             href="javascript:void(0);"
             role="menuitem"
             tabIndex="-1"
@@ -1002,8 +945,6 @@ exports[`ContextTab should render a ContextTab without an icon 1`] = `
           role="presentation"
         >
           <a
-            aria-checked={undefined}
-            className={undefined}
             href="javascript:void(0);"
             role="menuitem"
             tabIndex="-1"
@@ -1031,8 +972,6 @@ exports[`ContextTab should render a ContextTab without an icon 1`] = `
           role="presentation"
         >
           <a
-            aria-checked={undefined}
-            className={undefined}
             href="javascript:void(0);"
             role="menuitem"
             tabIndex="-1"
@@ -1060,8 +999,6 @@ exports[`ContextTab should render a ContextTab without an icon 1`] = `
           role="presentation"
         >
           <a
-            aria-checked={undefined}
-            className={undefined}
             href="javascript:void(0);"
             role="menuitem"
             tabIndex="-1"
@@ -1091,9 +1028,7 @@ exports[`ContextTab should render a ContextTab without an icon 1`] = `
     className="slds-context-bar__icon-action slds-col_bump-left slds-p-left_none"
   >
     <button
-      aria-haspopup={undefined}
       className="slds-button slds-button_icon slds-button_icon-current-color slds-button_icon-container slds-button_icon-x-small"
-      id={undefined}
       tabIndex="-1"
       title="Close Tab Name"
     >
@@ -1164,7 +1099,6 @@ exports[`ContextTab should render a default ContextTab 1`] = `
     <button
       aria-haspopup="true"
       className="slds-button slds-button_icon slds-button_icon-current-color slds-button_icon-container slds-button_icon-x-small"
-      id={undefined}
       tabIndex="-1"
       title="Actions for Tab Name"
     >
@@ -1184,10 +1118,8 @@ exports[`ContextTab should render a default ContextTab 1`] = `
     </button>
     <div
       className="slds-dropdown slds-dropdown_right"
-      style={undefined}
     >
       <ul
-        aria-label={undefined}
         className="slds-dropdown__list"
         role="menu"
       >
@@ -1196,8 +1128,6 @@ exports[`ContextTab should render a default ContextTab 1`] = `
           role="presentation"
         >
           <a
-            aria-checked={undefined}
-            className={undefined}
             href="javascript:void(0);"
             role="menuitem"
             tabIndex="-1"
@@ -1225,8 +1155,6 @@ exports[`ContextTab should render a default ContextTab 1`] = `
           role="presentation"
         >
           <a
-            aria-checked={undefined}
-            className={undefined}
             href="javascript:void(0);"
             role="menuitem"
             tabIndex="-1"
@@ -1254,8 +1182,6 @@ exports[`ContextTab should render a default ContextTab 1`] = `
           role="presentation"
         >
           <a
-            aria-checked={undefined}
-            className={undefined}
             href="javascript:void(0);"
             role="menuitem"
             tabIndex="-1"
@@ -1283,8 +1209,6 @@ exports[`ContextTab should render a default ContextTab 1`] = `
           role="presentation"
         >
           <a
-            aria-checked={undefined}
-            className={undefined}
             href="javascript:void(0);"
             role="menuitem"
             tabIndex="-1"
@@ -1314,9 +1238,7 @@ exports[`ContextTab should render a default ContextTab 1`] = `
     className="slds-context-bar__icon-action slds-col_bump-left slds-p-left_none"
   >
     <button
-      aria-haspopup={undefined}
       className="slds-button slds-button_icon slds-button_icon-current-color slds-button_icon-container slds-button_icon-x-small"
-      id={undefined}
       tabIndex="-1"
       title="Close Tab Name"
     >
@@ -1387,7 +1309,6 @@ exports[`ContextTab should render an active ContextTab 1`] = `
     <button
       aria-haspopup="true"
       className="slds-button slds-button_icon slds-button_icon-current-color slds-button_icon-container slds-button_icon-x-small"
-      id={undefined}
       tabIndex="0"
       title="Actions for Tab Name"
     >
@@ -1407,10 +1328,8 @@ exports[`ContextTab should render an active ContextTab 1`] = `
     </button>
     <div
       className="slds-dropdown slds-dropdown_right"
-      style={undefined}
     >
       <ul
-        aria-label={undefined}
         className="slds-dropdown__list"
         role="menu"
       >
@@ -1419,8 +1338,6 @@ exports[`ContextTab should render an active ContextTab 1`] = `
           role="presentation"
         >
           <a
-            aria-checked={undefined}
-            className={undefined}
             href="javascript:void(0);"
             role="menuitem"
             tabIndex="-1"
@@ -1448,8 +1365,6 @@ exports[`ContextTab should render an active ContextTab 1`] = `
           role="presentation"
         >
           <a
-            aria-checked={undefined}
-            className={undefined}
             href="javascript:void(0);"
             role="menuitem"
             tabIndex="-1"
@@ -1477,8 +1392,6 @@ exports[`ContextTab should render an active ContextTab 1`] = `
           role="presentation"
         >
           <a
-            aria-checked={undefined}
-            className={undefined}
             href="javascript:void(0);"
             role="menuitem"
             tabIndex="-1"
@@ -1506,8 +1419,6 @@ exports[`ContextTab should render an active ContextTab 1`] = `
           role="presentation"
         >
           <a
-            aria-checked={undefined}
-            className={undefined}
             href="javascript:void(0);"
             role="menuitem"
             tabIndex="-1"
@@ -1537,9 +1448,7 @@ exports[`ContextTab should render an active ContextTab 1`] = `
     className="slds-context-bar__icon-action slds-col_bump-left slds-p-left_none"
   >
     <button
-      aria-haspopup={undefined}
       className="slds-button slds-button_icon slds-button_icon-current-color slds-button_icon-container slds-button_icon-x-small"
-      id={undefined}
       tabIndex="0"
       title="Close Tab Name"
     >
@@ -1595,10 +1504,8 @@ exports[`ContextTabBarOverflow should render a ContextTabBarOverflow 1`] = `
   </button>
   <div
     className="slds-dropdown slds-dropdown_right"
-    style={undefined}
   >
     <ul
-      aria-label={undefined}
       className="slds-dropdown__list"
       role="menu"
     >
@@ -1607,8 +1514,6 @@ exports[`ContextTabBarOverflow should render a ContextTabBarOverflow 1`] = `
         role="presentation"
       >
         <a
-          aria-checked={undefined}
-          className={undefined}
           href="javascript:void(0);"
           role="menuitem"
           tabIndex="-1"
@@ -1649,8 +1554,6 @@ exports[`ContextTabBarOverflow should render a ContextTabBarOverflow 1`] = `
         role="presentation"
       >
         <a
-          aria-checked={undefined}
-          className={undefined}
           href="javascript:void(0);"
           role="menuitem"
           tabIndex="-1"
@@ -1725,10 +1628,8 @@ exports[`ContextTabBarOverflow should render a ContextTabBarOverflow with a stat
   </button>
   <div
     className="slds-dropdown slds-dropdown_right"
-    style={undefined}
   >
     <ul
-      aria-label={undefined}
       className="slds-dropdown__list"
       role="menu"
     >
@@ -1737,7 +1638,6 @@ exports[`ContextTabBarOverflow should render a ContextTabBarOverflow with a stat
         role="presentation"
       >
         <a
-          aria-checked={undefined}
           className="slds-has-error"
           href="javascript:void(0);"
           role="menuitem"
@@ -1783,8 +1683,6 @@ exports[`ContextTabBarOverflow should render a ContextTabBarOverflow with a stat
         role="presentation"
       >
         <a
-          aria-checked={undefined}
-          className={undefined}
           href="javascript:void(0);"
           role="menuitem"
           tabIndex="-1"
@@ -1859,10 +1757,8 @@ exports[`ContextTabBarOverflow should render a ContextTabBarOverflow with a stat
   </button>
   <div
     className="slds-dropdown slds-dropdown_right"
-    style={undefined}
   >
     <ul
-      aria-label={undefined}
       className="slds-dropdown__list"
       role="menu"
     >
@@ -1871,7 +1767,6 @@ exports[`ContextTabBarOverflow should render a ContextTabBarOverflow with a stat
         role="presentation"
       >
         <a
-          aria-checked={undefined}
           className="slds-has-warning"
           href="javascript:void(0);"
           role="menuitem"
@@ -1917,8 +1812,6 @@ exports[`ContextTabBarOverflow should render a ContextTabBarOverflow with a stat
         role="presentation"
       >
         <a
-          aria-checked={undefined}
-          className={undefined}
           href="javascript:void(0);"
           role="menuitem"
           tabIndex="-1"
@@ -2044,7 +1937,6 @@ exports[`Navigation Tab Bar renders a context tab 1`] = `
     <button
       aria-haspopup="true"
       className="slds-button slds-button_icon slds-button_icon-current-color slds-button_icon-container slds-button_icon-x-small"
-      id={undefined}
       tabIndex="-1"
       title="Actions for Tab Item 1"
     >
@@ -2064,10 +1956,8 @@ exports[`Navigation Tab Bar renders a context tab 1`] = `
     </button>
     <div
       className="slds-dropdown slds-dropdown_right"
-      style={undefined}
     >
       <ul
-        aria-label={undefined}
         className="slds-dropdown__list"
         role="menu"
       >
@@ -2076,8 +1966,6 @@ exports[`Navigation Tab Bar renders a context tab 1`] = `
           role="presentation"
         >
           <a
-            aria-checked={undefined}
-            className={undefined}
             href="javascript:void(0);"
             role="menuitem"
             tabIndex="-1"
@@ -2105,8 +1993,6 @@ exports[`Navigation Tab Bar renders a context tab 1`] = `
           role="presentation"
         >
           <a
-            aria-checked={undefined}
-            className={undefined}
             href="javascript:void(0);"
             role="menuitem"
             tabIndex="-1"
@@ -2134,8 +2020,6 @@ exports[`Navigation Tab Bar renders a context tab 1`] = `
           role="presentation"
         >
           <a
-            aria-checked={undefined}
-            className={undefined}
             href="javascript:void(0);"
             role="menuitem"
             tabIndex="-1"
@@ -2163,8 +2047,6 @@ exports[`Navigation Tab Bar renders a context tab 1`] = `
           role="presentation"
         >
           <a
-            aria-checked={undefined}
-            className={undefined}
             href="javascript:void(0);"
             role="menuitem"
             tabIndex="-1"
@@ -2194,9 +2076,7 @@ exports[`Navigation Tab Bar renders a context tab 1`] = `
     className="slds-context-bar__icon-action slds-col_bump-left slds-p-left_none"
   >
     <button
-      aria-haspopup={undefined}
       className="slds-button slds-button_icon slds-button_icon-current-color slds-button_icon-container slds-button_icon-x-small"
-      id={undefined}
       tabIndex="-1"
       title="Close Tab Item 1"
     >
@@ -2265,10 +2145,8 @@ exports[`Navigation Tab Bar renders an overflow tab 1`] = `
   </button>
   <div
     className="slds-dropdown slds-dropdown_right"
-    style={undefined}
   >
     <ul
-      aria-label={undefined}
       className="slds-dropdown__list"
       role="menu"
     >
@@ -2277,8 +2155,6 @@ exports[`Navigation Tab Bar renders an overflow tab 1`] = `
         role="presentation"
       >
         <a
-          aria-checked={undefined}
-          className={undefined}
           href="javascript:void(0);"
           role="menuitem"
           tabIndex="-1"
@@ -2332,8 +2208,6 @@ exports[`Navigation Tab Bar renders an overflow tab 1`] = `
         role="presentation"
       >
         <a
-          aria-checked={undefined}
-          className={undefined}
           href="javascript:void(0);"
           role="menuitem"
           tabIndex="-1"
@@ -2429,7 +2303,6 @@ exports[`Navigation Tab Bar renders an unread context tab 1`] = `
     <button
       aria-haspopup="true"
       className="slds-button slds-button_icon slds-button_icon-current-color slds-button_icon-container slds-button_icon-x-small"
-      id={undefined}
       tabIndex="-1"
       title="Actions for Tab Item 1"
     >
@@ -2449,10 +2322,8 @@ exports[`Navigation Tab Bar renders an unread context tab 1`] = `
     </button>
     <div
       className="slds-dropdown slds-dropdown_right"
-      style={undefined}
     >
       <ul
-        aria-label={undefined}
         className="slds-dropdown__list"
         role="menu"
       >
@@ -2461,8 +2332,6 @@ exports[`Navigation Tab Bar renders an unread context tab 1`] = `
           role="presentation"
         >
           <a
-            aria-checked={undefined}
-            className={undefined}
             href="javascript:void(0);"
             role="menuitem"
             tabIndex="-1"
@@ -2490,8 +2359,6 @@ exports[`Navigation Tab Bar renders an unread context tab 1`] = `
           role="presentation"
         >
           <a
-            aria-checked={undefined}
-            className={undefined}
             href="javascript:void(0);"
             role="menuitem"
             tabIndex="-1"
@@ -2519,8 +2386,6 @@ exports[`Navigation Tab Bar renders an unread context tab 1`] = `
           role="presentation"
         >
           <a
-            aria-checked={undefined}
-            className={undefined}
             href="javascript:void(0);"
             role="menuitem"
             tabIndex="-1"
@@ -2548,8 +2413,6 @@ exports[`Navigation Tab Bar renders an unread context tab 1`] = `
           role="presentation"
         >
           <a
-            aria-checked={undefined}
-            className={undefined}
             href="javascript:void(0);"
             role="menuitem"
             tabIndex="-1"
@@ -2579,9 +2442,7 @@ exports[`Navigation Tab Bar renders an unread context tab 1`] = `
     className="slds-context-bar__icon-action slds-col_bump-left slds-p-left_none"
   >
     <button
-      aria-haspopup={undefined}
       className="slds-button slds-button_icon slds-button_icon-current-color slds-button_icon-container slds-button_icon-x-small"
-      id={undefined}
       tabIndex="-1"
       title="Close Tab Item 1"
     >
@@ -2660,7 +2521,6 @@ exports[`Navigation Tab Bar renders an unsaved context tab 1`] = `
     <button
       aria-haspopup="true"
       className="slds-button slds-button_icon slds-button_icon-current-color slds-button_icon-container slds-button_icon-x-small"
-      id={undefined}
       tabIndex="-1"
       title="Actions for Tab Item 1"
     >
@@ -2680,10 +2540,8 @@ exports[`Navigation Tab Bar renders an unsaved context tab 1`] = `
     </button>
     <div
       className="slds-dropdown slds-dropdown_right"
-      style={undefined}
     >
       <ul
-        aria-label={undefined}
         className="slds-dropdown__list"
         role="menu"
       >
@@ -2692,8 +2550,6 @@ exports[`Navigation Tab Bar renders an unsaved context tab 1`] = `
           role="presentation"
         >
           <a
-            aria-checked={undefined}
-            className={undefined}
             href="javascript:void(0);"
             role="menuitem"
             tabIndex="-1"
@@ -2721,8 +2577,6 @@ exports[`Navigation Tab Bar renders an unsaved context tab 1`] = `
           role="presentation"
         >
           <a
-            aria-checked={undefined}
-            className={undefined}
             href="javascript:void(0);"
             role="menuitem"
             tabIndex="-1"
@@ -2750,8 +2604,6 @@ exports[`Navigation Tab Bar renders an unsaved context tab 1`] = `
           role="presentation"
         >
           <a
-            aria-checked={undefined}
-            className={undefined}
             href="javascript:void(0);"
             role="menuitem"
             tabIndex="-1"
@@ -2779,8 +2631,6 @@ exports[`Navigation Tab Bar renders an unsaved context tab 1`] = `
           role="presentation"
         >
           <a
-            aria-checked={undefined}
-            className={undefined}
             href="javascript:void(0);"
             role="menuitem"
             tabIndex="-1"
@@ -2810,9 +2660,7 @@ exports[`Navigation Tab Bar renders an unsaved context tab 1`] = `
     className="slds-context-bar__icon-action slds-col_bump-left slds-p-left_none"
   >
     <button
-      aria-haspopup={undefined}
       className="slds-button slds-button_icon slds-button_icon-current-color slds-button_icon-container slds-button_icon-x-small"
-      id={undefined}
       tabIndex="-1"
       title="Close Tab Item 1"
     >
@@ -3091,7 +2939,6 @@ exports[`renders a global-navigation with sub-tabs 1`] = `
           <button
             aria-haspopup="true"
             className="slds-button slds-button_icon slds-button_icon-container slds-button_icon-x-small"
-            id={undefined}
             title="Open object switcher menu"
           >
             <svg
@@ -3111,10 +2958,8 @@ exports[`renders a global-navigation with sub-tabs 1`] = `
         </div>
         <div
           className="slds-dropdown slds-dropdown_right"
-          style={undefined}
         >
           <ul
-            aria-label={undefined}
             className="slds-dropdown__list"
             role="menu"
           >
@@ -3123,8 +2968,6 @@ exports[`renders a global-navigation with sub-tabs 1`] = `
               role="presentation"
             >
               <a
-                aria-checked={undefined}
-                className={undefined}
                 href="javascript:void(0);"
                 role="menuitem"
                 tabIndex="-1"
@@ -3159,8 +3002,6 @@ exports[`renders a global-navigation with sub-tabs 1`] = `
               role="presentation"
             >
               <a
-                aria-checked={undefined}
-                className={undefined}
                 href="javascript:void(0);"
                 role="menuitem"
                 tabIndex="-1"
@@ -3195,8 +3036,6 @@ exports[`renders a global-navigation with sub-tabs 1`] = `
               role="presentation"
             >
               <a
-                aria-checked={undefined}
-                className={undefined}
                 href="javascript:void(0);"
                 role="menuitem"
                 tabIndex="-1"
@@ -3236,9 +3075,7 @@ exports[`renders a global-navigation with sub-tabs 1`] = `
           className="slds-context-bar__icon-action"
         >
           <button
-            aria-haspopup={undefined}
             className="slds-button slds-button_icon slds-button_icon-container slds-button_icon-small"
-            id={undefined}
             title="Open a New Tab"
           >
             <svg
@@ -3316,7 +3153,6 @@ exports[`renders a global-navigation with sub-tabs 1`] = `
             <button
               aria-haspopup="true"
               className="slds-button slds-button_icon slds-button_icon-current-color slds-button_icon-container slds-button_icon-x-small"
-              id={undefined}
               tabIndex="0"
               title="Actions for Home"
             >
@@ -3336,10 +3172,8 @@ exports[`renders a global-navigation with sub-tabs 1`] = `
             </button>
             <div
               className="slds-dropdown slds-dropdown_right"
-              style={undefined}
             >
               <ul
-                aria-label={undefined}
                 className="slds-dropdown__list"
                 role="menu"
               >
@@ -3348,8 +3182,6 @@ exports[`renders a global-navigation with sub-tabs 1`] = `
                   role="presentation"
                 >
                   <a
-                    aria-checked={undefined}
-                    className={undefined}
                     href="javascript:void(0);"
                     role="menuitem"
                     tabIndex="-1"
@@ -3377,8 +3209,6 @@ exports[`renders a global-navigation with sub-tabs 1`] = `
                   role="presentation"
                 >
                   <a
-                    aria-checked={undefined}
-                    className={undefined}
                     href="javascript:void(0);"
                     role="menuitem"
                     tabIndex="-1"
@@ -3406,8 +3236,6 @@ exports[`renders a global-navigation with sub-tabs 1`] = `
                   role="presentation"
                 >
                   <a
-                    aria-checked={undefined}
-                    className={undefined}
                     href="javascript:void(0);"
                     role="menuitem"
                     tabIndex="-1"
@@ -3435,8 +3263,6 @@ exports[`renders a global-navigation with sub-tabs 1`] = `
                   role="presentation"
                 >
                   <a
-                    aria-checked={undefined}
-                    className={undefined}
                     href="javascript:void(0);"
                     role="menuitem"
                     tabIndex="-1"
@@ -3466,9 +3292,7 @@ exports[`renders a global-navigation with sub-tabs 1`] = `
             className="slds-context-bar__icon-action slds-col_bump-left slds-p-left_none"
           >
             <button
-              aria-haspopup={undefined}
               className="slds-button slds-button_icon slds-button_icon-current-color slds-button_icon-container slds-button_icon-x-small"
-              id={undefined}
               tabIndex="0"
               title="Close Home"
             >
@@ -3536,7 +3360,6 @@ exports[`renders a global-navigation with sub-tabs 1`] = `
             <button
               aria-haspopup="true"
               className="slds-button slds-button_icon slds-button_icon-current-color slds-button_icon-container slds-button_icon-x-small"
-              id={undefined}
               tabIndex="-1"
               title="Actions for Tab Item 1"
             >
@@ -3556,10 +3379,8 @@ exports[`renders a global-navigation with sub-tabs 1`] = `
             </button>
             <div
               className="slds-dropdown slds-dropdown_right"
-              style={undefined}
             >
               <ul
-                aria-label={undefined}
                 className="slds-dropdown__list"
                 role="menu"
               >
@@ -3568,8 +3389,6 @@ exports[`renders a global-navigation with sub-tabs 1`] = `
                   role="presentation"
                 >
                   <a
-                    aria-checked={undefined}
-                    className={undefined}
                     href="javascript:void(0);"
                     role="menuitem"
                     tabIndex="-1"
@@ -3597,8 +3416,6 @@ exports[`renders a global-navigation with sub-tabs 1`] = `
                   role="presentation"
                 >
                   <a
-                    aria-checked={undefined}
-                    className={undefined}
                     href="javascript:void(0);"
                     role="menuitem"
                     tabIndex="-1"
@@ -3626,8 +3443,6 @@ exports[`renders a global-navigation with sub-tabs 1`] = `
                   role="presentation"
                 >
                   <a
-                    aria-checked={undefined}
-                    className={undefined}
                     href="javascript:void(0);"
                     role="menuitem"
                     tabIndex="-1"
@@ -3655,8 +3470,6 @@ exports[`renders a global-navigation with sub-tabs 1`] = `
                   role="presentation"
                 >
                   <a
-                    aria-checked={undefined}
-                    className={undefined}
                     href="javascript:void(0);"
                     role="menuitem"
                     tabIndex="-1"
@@ -3686,9 +3499,7 @@ exports[`renders a global-navigation with sub-tabs 1`] = `
             className="slds-context-bar__icon-action slds-col_bump-left slds-p-left_none"
           >
             <button
-              aria-haspopup={undefined}
               className="slds-button slds-button_icon slds-button_icon-current-color slds-button_icon-container slds-button_icon-x-small"
-              id={undefined}
               tabIndex="-1"
               title="Close Tab Item 1"
             >
@@ -3756,7 +3567,6 @@ exports[`renders a global-navigation with sub-tabs 1`] = `
             <button
               aria-haspopup="true"
               className="slds-button slds-button_icon slds-button_icon-current-color slds-button_icon-container slds-button_icon-x-small"
-              id={undefined}
               tabIndex="-1"
               title="Actions for Tab Item 2"
             >
@@ -3776,10 +3586,8 @@ exports[`renders a global-navigation with sub-tabs 1`] = `
             </button>
             <div
               className="slds-dropdown slds-dropdown_right"
-              style={undefined}
             >
               <ul
-                aria-label={undefined}
                 className="slds-dropdown__list"
                 role="menu"
               >
@@ -3788,8 +3596,6 @@ exports[`renders a global-navigation with sub-tabs 1`] = `
                   role="presentation"
                 >
                   <a
-                    aria-checked={undefined}
-                    className={undefined}
                     href="javascript:void(0);"
                     role="menuitem"
                     tabIndex="-1"
@@ -3817,8 +3623,6 @@ exports[`renders a global-navigation with sub-tabs 1`] = `
                   role="presentation"
                 >
                   <a
-                    aria-checked={undefined}
-                    className={undefined}
                     href="javascript:void(0);"
                     role="menuitem"
                     tabIndex="-1"
@@ -3846,8 +3650,6 @@ exports[`renders a global-navigation with sub-tabs 1`] = `
                   role="presentation"
                 >
                   <a
-                    aria-checked={undefined}
-                    className={undefined}
                     href="javascript:void(0);"
                     role="menuitem"
                     tabIndex="-1"
@@ -3875,8 +3677,6 @@ exports[`renders a global-navigation with sub-tabs 1`] = `
                   role="presentation"
                 >
                   <a
-                    aria-checked={undefined}
-                    className={undefined}
                     href="javascript:void(0);"
                     role="menuitem"
                     tabIndex="-1"
@@ -3906,9 +3706,7 @@ exports[`renders a global-navigation with sub-tabs 1`] = `
             className="slds-context-bar__icon-action slds-col_bump-left slds-p-left_none"
           >
             <button
-              aria-haspopup={undefined}
               className="slds-button slds-button_icon slds-button_icon-current-color slds-button_icon-container slds-button_icon-x-small"
-              id={undefined}
               tabIndex="-1"
               title="Close Tab Item 2"
             >
@@ -3990,9 +3788,7 @@ exports[`renders a global-navigation with sub-tabs 1`] = `
             className="slds-col_bump-left slds-p-left_none slds-p-right_none"
           >
             <button
-              aria-haspopup={undefined}
               className="slds-button slds-button_icon slds-button_icon-container slds-button_icon-x-small"
-              id={undefined}
               tabIndex="0"
               title="Close 00071938"
             >
@@ -4058,9 +3854,7 @@ exports[`renders a global-navigation with sub-tabs 1`] = `
             className="slds-col_bump-left slds-p-left_none slds-p-right_none"
           >
             <button
-              aria-haspopup={undefined}
               className="slds-button slds-button_icon slds-button_icon-container slds-button_icon-x-small"
-              id={undefined}
               tabIndex="-1"
               title="Close Chat - Customer"
             >
@@ -4212,7 +4006,6 @@ exports[`renders an overflowed global-navigation with dropdown, unread, and unsa
           <button
             aria-haspopup="true"
             className="slds-button slds-button_icon slds-button_icon-container slds-button_icon-x-small"
-            id={undefined}
             title="Open object switcher menu"
           >
             <svg
@@ -4232,10 +4025,8 @@ exports[`renders an overflowed global-navigation with dropdown, unread, and unsa
         </div>
         <div
           className="slds-dropdown slds-dropdown_right"
-          style={undefined}
         >
           <ul
-            aria-label={undefined}
             className="slds-dropdown__list"
             role="menu"
           >
@@ -4244,8 +4035,6 @@ exports[`renders an overflowed global-navigation with dropdown, unread, and unsa
               role="presentation"
             >
               <a
-                aria-checked={undefined}
-                className={undefined}
                 href="javascript:void(0);"
                 role="menuitem"
                 tabIndex="-1"
@@ -4280,8 +4069,6 @@ exports[`renders an overflowed global-navigation with dropdown, unread, and unsa
               role="presentation"
             >
               <a
-                aria-checked={undefined}
-                className={undefined}
                 href="javascript:void(0);"
                 role="menuitem"
                 tabIndex="-1"
@@ -4316,8 +4103,6 @@ exports[`renders an overflowed global-navigation with dropdown, unread, and unsa
               role="presentation"
             >
               <a
-                aria-checked={undefined}
-                className={undefined}
                 href="javascript:void(0);"
                 role="menuitem"
                 tabIndex="-1"
@@ -4357,9 +4142,7 @@ exports[`renders an overflowed global-navigation with dropdown, unread, and unsa
           className="slds-context-bar__icon-action"
         >
           <button
-            aria-haspopup={undefined}
             className="slds-button slds-button_icon slds-button_icon-container slds-button_icon-small"
-            id={undefined}
             title="Open a New Tab"
           >
             <svg
@@ -4437,7 +4220,6 @@ exports[`renders an overflowed global-navigation with dropdown, unread, and unsa
             <button
               aria-haspopup="true"
               className="slds-button slds-button_icon slds-button_icon-current-color slds-button_icon-container slds-button_icon-x-small"
-              id={undefined}
               tabIndex="0"
               title="Actions for Home"
             >
@@ -4457,10 +4239,8 @@ exports[`renders an overflowed global-navigation with dropdown, unread, and unsa
             </button>
             <div
               className="slds-dropdown slds-dropdown_right"
-              style={undefined}
             >
               <ul
-                aria-label={undefined}
                 className="slds-dropdown__list"
                 role="menu"
               >
@@ -4469,8 +4249,6 @@ exports[`renders an overflowed global-navigation with dropdown, unread, and unsa
                   role="presentation"
                 >
                   <a
-                    aria-checked={undefined}
-                    className={undefined}
                     href="javascript:void(0);"
                     role="menuitem"
                     tabIndex="-1"
@@ -4498,8 +4276,6 @@ exports[`renders an overflowed global-navigation with dropdown, unread, and unsa
                   role="presentation"
                 >
                   <a
-                    aria-checked={undefined}
-                    className={undefined}
                     href="javascript:void(0);"
                     role="menuitem"
                     tabIndex="-1"
@@ -4527,8 +4303,6 @@ exports[`renders an overflowed global-navigation with dropdown, unread, and unsa
                   role="presentation"
                 >
                   <a
-                    aria-checked={undefined}
-                    className={undefined}
                     href="javascript:void(0);"
                     role="menuitem"
                     tabIndex="-1"
@@ -4556,8 +4330,6 @@ exports[`renders an overflowed global-navigation with dropdown, unread, and unsa
                   role="presentation"
                 >
                   <a
-                    aria-checked={undefined}
-                    className={undefined}
                     href="javascript:void(0);"
                     role="menuitem"
                     tabIndex="-1"
@@ -4587,9 +4359,7 @@ exports[`renders an overflowed global-navigation with dropdown, unread, and unsa
             className="slds-context-bar__icon-action slds-col_bump-left slds-p-left_none"
           >
             <button
-              aria-haspopup={undefined}
               className="slds-button slds-button_icon slds-button_icon-current-color slds-button_icon-container slds-button_icon-x-small"
-              id={undefined}
               tabIndex="0"
               title="Close Home"
             >
@@ -4657,7 +4427,6 @@ exports[`renders an overflowed global-navigation with dropdown, unread, and unsa
             <button
               aria-haspopup="true"
               className="slds-button slds-button_icon slds-button_icon-current-color slds-button_icon-container slds-button_icon-x-small"
-              id={undefined}
               tabIndex="-1"
               title="Actions for Tab Item 1"
             >
@@ -4677,10 +4446,8 @@ exports[`renders an overflowed global-navigation with dropdown, unread, and unsa
             </button>
             <div
               className="slds-dropdown slds-dropdown_right"
-              style={undefined}
             >
               <ul
-                aria-label={undefined}
                 className="slds-dropdown__list"
                 role="menu"
               >
@@ -4689,8 +4456,6 @@ exports[`renders an overflowed global-navigation with dropdown, unread, and unsa
                   role="presentation"
                 >
                   <a
-                    aria-checked={undefined}
-                    className={undefined}
                     href="javascript:void(0);"
                     role="menuitem"
                     tabIndex="-1"
@@ -4718,8 +4483,6 @@ exports[`renders an overflowed global-navigation with dropdown, unread, and unsa
                   role="presentation"
                 >
                   <a
-                    aria-checked={undefined}
-                    className={undefined}
                     href="javascript:void(0);"
                     role="menuitem"
                     tabIndex="-1"
@@ -4747,8 +4510,6 @@ exports[`renders an overflowed global-navigation with dropdown, unread, and unsa
                   role="presentation"
                 >
                   <a
-                    aria-checked={undefined}
-                    className={undefined}
                     href="javascript:void(0);"
                     role="menuitem"
                     tabIndex="-1"
@@ -4776,8 +4537,6 @@ exports[`renders an overflowed global-navigation with dropdown, unread, and unsa
                   role="presentation"
                 >
                   <a
-                    aria-checked={undefined}
-                    className={undefined}
                     href="javascript:void(0);"
                     role="menuitem"
                     tabIndex="-1"
@@ -4807,9 +4566,7 @@ exports[`renders an overflowed global-navigation with dropdown, unread, and unsa
             className="slds-context-bar__icon-action slds-col_bump-left slds-p-left_none"
           >
             <button
-              aria-haspopup={undefined}
               className="slds-button slds-button_icon slds-button_icon-current-color slds-button_icon-container slds-button_icon-x-small"
-              id={undefined}
               tabIndex="-1"
               title="Close Tab Item 1"
             >
@@ -4877,7 +4634,6 @@ exports[`renders an overflowed global-navigation with dropdown, unread, and unsa
             <button
               aria-haspopup="true"
               className="slds-button slds-button_icon slds-button_icon-current-color slds-button_icon-container slds-button_icon-x-small"
-              id={undefined}
               tabIndex="-1"
               title="Actions for Tab Item 2"
             >
@@ -4897,10 +4653,8 @@ exports[`renders an overflowed global-navigation with dropdown, unread, and unsa
             </button>
             <div
               className="slds-dropdown slds-dropdown_right"
-              style={undefined}
             >
               <ul
-                aria-label={undefined}
                 className="slds-dropdown__list"
                 role="menu"
               >
@@ -4909,8 +4663,6 @@ exports[`renders an overflowed global-navigation with dropdown, unread, and unsa
                   role="presentation"
                 >
                   <a
-                    aria-checked={undefined}
-                    className={undefined}
                     href="javascript:void(0);"
                     role="menuitem"
                     tabIndex="-1"
@@ -4938,8 +4690,6 @@ exports[`renders an overflowed global-navigation with dropdown, unread, and unsa
                   role="presentation"
                 >
                   <a
-                    aria-checked={undefined}
-                    className={undefined}
                     href="javascript:void(0);"
                     role="menuitem"
                     tabIndex="-1"
@@ -4967,8 +4717,6 @@ exports[`renders an overflowed global-navigation with dropdown, unread, and unsa
                   role="presentation"
                 >
                   <a
-                    aria-checked={undefined}
-                    className={undefined}
                     href="javascript:void(0);"
                     role="menuitem"
                     tabIndex="-1"
@@ -4996,8 +4744,6 @@ exports[`renders an overflowed global-navigation with dropdown, unread, and unsa
                   role="presentation"
                 >
                   <a
-                    aria-checked={undefined}
-                    className={undefined}
                     href="javascript:void(0);"
                     role="menuitem"
                     tabIndex="-1"
@@ -5027,9 +4773,7 @@ exports[`renders an overflowed global-navigation with dropdown, unread, and unsa
             className="slds-context-bar__icon-action slds-col_bump-left slds-p-left_none"
           >
             <button
-              aria-haspopup={undefined}
               className="slds-button slds-button_icon slds-button_icon-current-color slds-button_icon-container slds-button_icon-x-small"
-              id={undefined}
               tabIndex="-1"
               title="Close Tab Item 2"
             >
@@ -5095,10 +4839,8 @@ exports[`renders an overflowed global-navigation with dropdown, unread, and unsa
           </button>
           <div
             className="slds-dropdown slds-dropdown_right"
-            style={undefined}
           >
             <ul
-              aria-label={undefined}
               className="slds-dropdown__list"
               role="menu"
             >
@@ -5107,8 +4849,6 @@ exports[`renders an overflowed global-navigation with dropdown, unread, and unsa
                 role="presentation"
               >
                 <a
-                  aria-checked={undefined}
-                  className={undefined}
                   href="javascript:void(0);"
                   role="menuitem"
                   tabIndex="-1"
@@ -5162,8 +4902,6 @@ exports[`renders an overflowed global-navigation with dropdown, unread, and unsa
                 role="presentation"
               >
                 <a
-                  aria-checked={undefined}
-                  className={undefined}
                   href="javascript:void(0);"
                   role="menuitem"
                   tabIndex="-1"

@@ -3,7 +3,6 @@
 exports[`treegrid default rows should remove the selection column 1`] = `
 <tbody>
   <tr
-    aria-expanded={undefined}
     aria-level="1"
     aria-posinset="1"
     aria-selected={null}
@@ -15,13 +14,10 @@ exports[`treegrid default rows should remove the selection column 1`] = `
       className="slds-tree__item"
       data-label="Account Name"
       scope="row"
-      tabIndex={undefined}
     >
       <button
-        aria-haspopup={undefined}
         aria-hidden="true"
         className="slds-button slds-button_icon slds-button_icon-x-small slds-m-right_x-small slds-is-disabled"
-        id={undefined}
         tabIndex="-1"
         title="Expand Rewis Inc"
       >
@@ -52,13 +48,9 @@ exports[`treegrid default rows should remove the selection column 1`] = `
       </div>
     </th>
     <td
-      aria-readonly={undefined}
-      aria-selected={undefined}
       className={null}
       data-label="Employees"
       role="gridcell"
-      style={undefined}
-      tabIndex={undefined}
     >
       <div
         className="slds-truncate"
@@ -68,13 +60,9 @@ exports[`treegrid default rows should remove the selection column 1`] = `
       </div>
     </td>
     <td
-      aria-readonly={undefined}
-      aria-selected={undefined}
       className={null}
       data-label="Phone Number"
       role="gridcell"
-      style={undefined}
-      tabIndex={undefined}
     >
       <div
         className="slds-truncate"
@@ -84,13 +72,9 @@ exports[`treegrid default rows should remove the selection column 1`] = `
       </div>
     </td>
     <td
-      aria-readonly={undefined}
-      aria-selected={undefined}
       className={null}
       data-label="Account Owner"
       role="gridcell"
-      style={undefined}
-      tabIndex={undefined}
     >
       <div
         className="slds-truncate"
@@ -105,13 +89,9 @@ exports[`treegrid default rows should remove the selection column 1`] = `
       </div>
     </td>
     <td
-      aria-readonly={undefined}
-      aria-selected={undefined}
       className={null}
       data-label="Billing City"
       role="gridcell"
-      style={undefined}
-      tabIndex={undefined}
     >
       <div
         className="slds-truncate"
@@ -121,22 +101,17 @@ exports[`treegrid default rows should remove the selection column 1`] = `
       </div>
     </td>
     <td
-      aria-readonly={undefined}
-      aria-selected={undefined}
       className={null}
-      data-label={undefined}
       role="gridcell"
       style={
         Object {
           "width": "3.25rem",
         }
       }
-      tabIndex={undefined}
     >
       <button
         aria-haspopup="true"
         className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
-        id={undefined}
         tabIndex="-1"
         title="More actions for Rewis Inc"
       >
@@ -157,7 +132,6 @@ exports[`treegrid default rows should remove the selection column 1`] = `
     </td>
   </tr>
   <tr
-    aria-expanded={undefined}
     aria-level="1"
     aria-posinset="2"
     aria-selected={null}
@@ -169,13 +143,10 @@ exports[`treegrid default rows should remove the selection column 1`] = `
       className="slds-tree__item"
       data-label="Account Name"
       scope="row"
-      tabIndex={undefined}
     >
       <button
-        aria-haspopup={undefined}
         aria-hidden="true"
         className="slds-button slds-button_icon slds-button_icon-x-small slds-m-right_x-small slds-is-disabled"
-        id={undefined}
         tabIndex="-1"
         title="Expand Acme Corporation"
       >
@@ -206,13 +177,9 @@ exports[`treegrid default rows should remove the selection column 1`] = `
       </div>
     </th>
     <td
-      aria-readonly={undefined}
-      aria-selected={undefined}
       className={null}
       data-label="Employees"
       role="gridcell"
-      style={undefined}
-      tabIndex={undefined}
     >
       <div
         className="slds-truncate"
@@ -222,13 +189,9 @@ exports[`treegrid default rows should remove the selection column 1`] = `
       </div>
     </td>
     <td
-      aria-readonly={undefined}
-      aria-selected={undefined}
       className={null}
       data-label="Phone Number"
       role="gridcell"
-      style={undefined}
-      tabIndex={undefined}
     >
       <div
         className="slds-truncate"
@@ -238,13 +201,9 @@ exports[`treegrid default rows should remove the selection column 1`] = `
       </div>
     </td>
     <td
-      aria-readonly={undefined}
-      aria-selected={undefined}
       className={null}
       data-label="Account Owner"
       role="gridcell"
-      style={undefined}
-      tabIndex={undefined}
     >
       <div
         className="slds-truncate"
@@ -259,13 +218,9 @@ exports[`treegrid default rows should remove the selection column 1`] = `
       </div>
     </td>
     <td
-      aria-readonly={undefined}
-      aria-selected={undefined}
       className={null}
       data-label="Billing City"
       role="gridcell"
-      style={undefined}
-      tabIndex={undefined}
     >
       <div
         className="slds-truncate"
@@ -275,22 +230,17 @@ exports[`treegrid default rows should remove the selection column 1`] = `
       </div>
     </td>
     <td
-      aria-readonly={undefined}
-      aria-selected={undefined}
       className={null}
-      data-label={undefined}
       role="gridcell"
       style={
         Object {
           "width": "3.25rem",
         }
       }
-      tabIndex={undefined}
     >
       <button
         aria-haspopup="true"
         className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
-        id={undefined}
         tabIndex="-1"
         title="More actions for Acme Corporation"
       >
@@ -324,13 +274,10 @@ exports[`treegrid default rows should remove the selection column 1`] = `
       className="slds-tree__item"
       data-label="Account Name"
       scope="row"
-      tabIndex={undefined}
     >
       <button
-        aria-haspopup={undefined}
         aria-hidden="true"
         className="slds-button slds-button_icon slds-button_icon-x-small slds-m-right_x-small"
-        id={undefined}
         tabIndex="-1"
         title="Expand Rohde Enterprises"
       >
@@ -361,13 +308,9 @@ exports[`treegrid default rows should remove the selection column 1`] = `
       </div>
     </th>
     <td
-      aria-readonly={undefined}
-      aria-selected={undefined}
       className={null}
       data-label="Employees"
       role="gridcell"
-      style={undefined}
-      tabIndex={undefined}
     >
       <div
         className="slds-truncate"
@@ -377,13 +320,9 @@ exports[`treegrid default rows should remove the selection column 1`] = `
       </div>
     </td>
     <td
-      aria-readonly={undefined}
-      aria-selected={undefined}
       className={null}
       data-label="Phone Number"
       role="gridcell"
-      style={undefined}
-      tabIndex={undefined}
     >
       <div
         className="slds-truncate"
@@ -393,13 +332,9 @@ exports[`treegrid default rows should remove the selection column 1`] = `
       </div>
     </td>
     <td
-      aria-readonly={undefined}
-      aria-selected={undefined}
       className={null}
       data-label="Account Owner"
       role="gridcell"
-      style={undefined}
-      tabIndex={undefined}
     >
       <div
         className="slds-truncate"
@@ -414,13 +349,9 @@ exports[`treegrid default rows should remove the selection column 1`] = `
       </div>
     </td>
     <td
-      aria-readonly={undefined}
-      aria-selected={undefined}
       className={null}
       data-label="Billing City"
       role="gridcell"
-      style={undefined}
-      tabIndex={undefined}
     >
       <div
         className="slds-truncate"
@@ -430,22 +361,17 @@ exports[`treegrid default rows should remove the selection column 1`] = `
       </div>
     </td>
     <td
-      aria-readonly={undefined}
-      aria-selected={undefined}
       className={null}
-      data-label={undefined}
       role="gridcell"
       style={
         Object {
           "width": "3.25rem",
         }
       }
-      tabIndex={undefined}
     >
       <button
         aria-haspopup="true"
         className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
-        id={undefined}
         tabIndex="-1"
         title="More actions for Rohde Enterprises"
       >
@@ -466,7 +392,6 @@ exports[`treegrid default rows should remove the selection column 1`] = `
     </td>
   </tr>
   <tr
-    aria-expanded={undefined}
     aria-level="1"
     aria-posinset="4"
     aria-selected={null}
@@ -478,13 +403,10 @@ exports[`treegrid default rows should remove the selection column 1`] = `
       className="slds-tree__item"
       data-label="Account Name"
       scope="row"
-      tabIndex={undefined}
     >
       <button
-        aria-haspopup={undefined}
         aria-hidden="true"
         className="slds-button slds-button_icon slds-button_icon-x-small slds-m-right_x-small slds-is-disabled"
-        id={undefined}
         tabIndex="-1"
         title="Expand Cheese Corp"
       >
@@ -515,13 +437,9 @@ exports[`treegrid default rows should remove the selection column 1`] = `
       </div>
     </th>
     <td
-      aria-readonly={undefined}
-      aria-selected={undefined}
       className={null}
       data-label="Employees"
       role="gridcell"
-      style={undefined}
-      tabIndex={undefined}
     >
       <div
         className="slds-truncate"
@@ -531,13 +449,9 @@ exports[`treegrid default rows should remove the selection column 1`] = `
       </div>
     </td>
     <td
-      aria-readonly={undefined}
-      aria-selected={undefined}
       className={null}
       data-label="Phone Number"
       role="gridcell"
-      style={undefined}
-      tabIndex={undefined}
     >
       <div
         className="slds-truncate"
@@ -547,13 +461,9 @@ exports[`treegrid default rows should remove the selection column 1`] = `
       </div>
     </td>
     <td
-      aria-readonly={undefined}
-      aria-selected={undefined}
       className={null}
       data-label="Account Owner"
       role="gridcell"
-      style={undefined}
-      tabIndex={undefined}
     >
       <div
         className="slds-truncate"
@@ -568,13 +478,9 @@ exports[`treegrid default rows should remove the selection column 1`] = `
       </div>
     </td>
     <td
-      aria-readonly={undefined}
-      aria-selected={undefined}
       className={null}
       data-label="Billing City"
       role="gridcell"
-      style={undefined}
-      tabIndex={undefined}
     >
       <div
         className="slds-truncate"
@@ -584,22 +490,17 @@ exports[`treegrid default rows should remove the selection column 1`] = `
       </div>
     </td>
     <td
-      aria-readonly={undefined}
-      aria-selected={undefined}
       className={null}
-      data-label={undefined}
       role="gridcell"
       style={
         Object {
           "width": "3.25rem",
         }
       }
-      tabIndex={undefined}
     >
       <button
         aria-haspopup="true"
         className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
-        id={undefined}
         tabIndex="-1"
         title="More actions for Cheese Corp"
       >
@@ -625,7 +526,6 @@ exports[`treegrid default rows should remove the selection column 1`] = `
 exports[`treegrid default rows should render with children 1`] = `
 <tbody>
   <tr
-    aria-expanded={undefined}
     aria-level="1"
     aria-posinset="1"
     aria-selected={false}
@@ -634,29 +534,22 @@ exports[`treegrid default rows should render with children 1`] = `
     tabIndex="0"
   >
     <td
-      aria-readonly={undefined}
-      aria-selected={undefined}
       className="slds-text-align_right"
-      data-label={undefined}
       role="gridcell"
       style={
         Object {
           "width": "3.25rem",
         }
       }
-      tabIndex={undefined}
     >
       <div
         className="slds-checkbox"
       >
         <input
-          aria-describedby={undefined}
           aria-labelledby="check-button-label-011 column-group-header"
           defaultChecked={false}
-          disabled={undefined}
           id="checkbox-011"
           name="options"
-          tabIndex={undefined}
           type="checkbox"
           value="checkbox-011"
         />
@@ -680,13 +573,10 @@ exports[`treegrid default rows should render with children 1`] = `
       className="slds-tree__item"
       data-label="Account Name"
       scope="row"
-      tabIndex={undefined}
     >
       <button
-        aria-haspopup={undefined}
         aria-hidden="true"
         className="slds-button slds-button_icon slds-button_icon-x-small slds-m-right_x-small slds-is-disabled"
-        id={undefined}
         tabIndex="-1"
         title="Expand Rewis Inc"
       >
@@ -717,13 +607,9 @@ exports[`treegrid default rows should render with children 1`] = `
       </div>
     </th>
     <td
-      aria-readonly={undefined}
-      aria-selected={undefined}
       className={null}
       data-label="Employees"
       role="gridcell"
-      style={undefined}
-      tabIndex={undefined}
     >
       <div
         className="slds-truncate"
@@ -733,13 +619,9 @@ exports[`treegrid default rows should render with children 1`] = `
       </div>
     </td>
     <td
-      aria-readonly={undefined}
-      aria-selected={undefined}
       className={null}
       data-label="Phone Number"
       role="gridcell"
-      style={undefined}
-      tabIndex={undefined}
     >
       <div
         className="slds-truncate"
@@ -749,13 +631,9 @@ exports[`treegrid default rows should render with children 1`] = `
       </div>
     </td>
     <td
-      aria-readonly={undefined}
-      aria-selected={undefined}
       className={null}
       data-label="Account Owner"
       role="gridcell"
-      style={undefined}
-      tabIndex={undefined}
     >
       <div
         className="slds-truncate"
@@ -770,13 +648,9 @@ exports[`treegrid default rows should render with children 1`] = `
       </div>
     </td>
     <td
-      aria-readonly={undefined}
-      aria-selected={undefined}
       className={null}
       data-label="Billing City"
       role="gridcell"
-      style={undefined}
-      tabIndex={undefined}
     >
       <div
         className="slds-truncate"
@@ -786,22 +660,17 @@ exports[`treegrid default rows should render with children 1`] = `
       </div>
     </td>
     <td
-      aria-readonly={undefined}
-      aria-selected={undefined}
       className={null}
-      data-label={undefined}
       role="gridcell"
       style={
         Object {
           "width": "3.25rem",
         }
       }
-      tabIndex={undefined}
     >
       <button
         aria-haspopup="true"
         className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
-        id={undefined}
         tabIndex="-1"
         title="More actions for Rewis Inc"
       >
@@ -822,7 +691,6 @@ exports[`treegrid default rows should render with children 1`] = `
     </td>
   </tr>
   <tr
-    aria-expanded={undefined}
     aria-level="1"
     aria-posinset="2"
     aria-selected={false}
@@ -831,29 +699,22 @@ exports[`treegrid default rows should render with children 1`] = `
     tabIndex={null}
   >
     <td
-      aria-readonly={undefined}
-      aria-selected={undefined}
       className="slds-text-align_right"
-      data-label={undefined}
       role="gridcell"
       style={
         Object {
           "width": "3.25rem",
         }
       }
-      tabIndex={undefined}
     >
       <div
         className="slds-checkbox"
       >
         <input
-          aria-describedby={undefined}
           aria-labelledby="check-button-label-012 column-group-header"
           defaultChecked={false}
-          disabled={undefined}
           id="checkbox-012"
           name="options"
-          tabIndex={undefined}
           type="checkbox"
           value="checkbox-012"
         />
@@ -877,13 +738,10 @@ exports[`treegrid default rows should render with children 1`] = `
       className="slds-tree__item"
       data-label="Account Name"
       scope="row"
-      tabIndex={undefined}
     >
       <button
-        aria-haspopup={undefined}
         aria-hidden="true"
         className="slds-button slds-button_icon slds-button_icon-x-small slds-m-right_x-small slds-is-disabled"
-        id={undefined}
         tabIndex="-1"
         title="Expand Acme Corporation"
       >
@@ -914,13 +772,9 @@ exports[`treegrid default rows should render with children 1`] = `
       </div>
     </th>
     <td
-      aria-readonly={undefined}
-      aria-selected={undefined}
       className={null}
       data-label="Employees"
       role="gridcell"
-      style={undefined}
-      tabIndex={undefined}
     >
       <div
         className="slds-truncate"
@@ -930,13 +784,9 @@ exports[`treegrid default rows should render with children 1`] = `
       </div>
     </td>
     <td
-      aria-readonly={undefined}
-      aria-selected={undefined}
       className={null}
       data-label="Phone Number"
       role="gridcell"
-      style={undefined}
-      tabIndex={undefined}
     >
       <div
         className="slds-truncate"
@@ -946,13 +796,9 @@ exports[`treegrid default rows should render with children 1`] = `
       </div>
     </td>
     <td
-      aria-readonly={undefined}
-      aria-selected={undefined}
       className={null}
       data-label="Account Owner"
       role="gridcell"
-      style={undefined}
-      tabIndex={undefined}
     >
       <div
         className="slds-truncate"
@@ -967,13 +813,9 @@ exports[`treegrid default rows should render with children 1`] = `
       </div>
     </td>
     <td
-      aria-readonly={undefined}
-      aria-selected={undefined}
       className={null}
       data-label="Billing City"
       role="gridcell"
-      style={undefined}
-      tabIndex={undefined}
     >
       <div
         className="slds-truncate"
@@ -983,22 +825,17 @@ exports[`treegrid default rows should render with children 1`] = `
       </div>
     </td>
     <td
-      aria-readonly={undefined}
-      aria-selected={undefined}
       className={null}
-      data-label={undefined}
       role="gridcell"
       style={
         Object {
           "width": "3.25rem",
         }
       }
-      tabIndex={undefined}
     >
       <button
         aria-haspopup="true"
         className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
-        id={undefined}
         tabIndex="-1"
         title="More actions for Acme Corporation"
       >
@@ -1029,29 +866,22 @@ exports[`treegrid default rows should render with children 1`] = `
     tabIndex={null}
   >
     <td
-      aria-readonly={undefined}
-      aria-selected={undefined}
       className="slds-text-align_right"
-      data-label={undefined}
       role="gridcell"
       style={
         Object {
           "width": "3.25rem",
         }
       }
-      tabIndex={undefined}
     >
       <div
         className="slds-checkbox"
       >
         <input
-          aria-describedby={undefined}
           aria-labelledby="check-button-label-013 column-group-header"
           defaultChecked={false}
-          disabled={undefined}
           id="checkbox-013"
           name="options"
-          tabIndex={undefined}
           type="checkbox"
           value="checkbox-013"
         />
@@ -1075,13 +905,10 @@ exports[`treegrid default rows should render with children 1`] = `
       className="slds-tree__item"
       data-label="Account Name"
       scope="row"
-      tabIndex={undefined}
     >
       <button
-        aria-haspopup={undefined}
         aria-hidden="true"
         className="slds-button slds-button_icon slds-button_icon-x-small slds-m-right_x-small"
-        id={undefined}
         tabIndex="-1"
         title="Expand Rohde Enterprises"
       >
@@ -1112,13 +939,9 @@ exports[`treegrid default rows should render with children 1`] = `
       </div>
     </th>
     <td
-      aria-readonly={undefined}
-      aria-selected={undefined}
       className={null}
       data-label="Employees"
       role="gridcell"
-      style={undefined}
-      tabIndex={undefined}
     >
       <div
         className="slds-truncate"
@@ -1128,13 +951,9 @@ exports[`treegrid default rows should render with children 1`] = `
       </div>
     </td>
     <td
-      aria-readonly={undefined}
-      aria-selected={undefined}
       className={null}
       data-label="Phone Number"
       role="gridcell"
-      style={undefined}
-      tabIndex={undefined}
     >
       <div
         className="slds-truncate"
@@ -1144,13 +963,9 @@ exports[`treegrid default rows should render with children 1`] = `
       </div>
     </td>
     <td
-      aria-readonly={undefined}
-      aria-selected={undefined}
       className={null}
       data-label="Account Owner"
       role="gridcell"
-      style={undefined}
-      tabIndex={undefined}
     >
       <div
         className="slds-truncate"
@@ -1165,13 +980,9 @@ exports[`treegrid default rows should render with children 1`] = `
       </div>
     </td>
     <td
-      aria-readonly={undefined}
-      aria-selected={undefined}
       className={null}
       data-label="Billing City"
       role="gridcell"
-      style={undefined}
-      tabIndex={undefined}
     >
       <div
         className="slds-truncate"
@@ -1181,22 +992,17 @@ exports[`treegrid default rows should render with children 1`] = `
       </div>
     </td>
     <td
-      aria-readonly={undefined}
-      aria-selected={undefined}
       className={null}
-      data-label={undefined}
       role="gridcell"
       style={
         Object {
           "width": "3.25rem",
         }
       }
-      tabIndex={undefined}
     >
       <button
         aria-haspopup="true"
         className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
-        id={undefined}
         tabIndex="-1"
         title="More actions for Rohde Enterprises"
       >
@@ -1217,7 +1023,6 @@ exports[`treegrid default rows should render with children 1`] = `
     </td>
   </tr>
   <tr
-    aria-expanded={undefined}
     aria-level="1"
     aria-posinset="4"
     aria-selected={false}
@@ -1226,29 +1031,22 @@ exports[`treegrid default rows should render with children 1`] = `
     tabIndex={null}
   >
     <td
-      aria-readonly={undefined}
-      aria-selected={undefined}
       className="slds-text-align_right"
-      data-label={undefined}
       role="gridcell"
       style={
         Object {
           "width": "3.25rem",
         }
       }
-      tabIndex={undefined}
     >
       <div
         className="slds-checkbox"
       >
         <input
-          aria-describedby={undefined}
           aria-labelledby="check-button-label-014 column-group-header"
           defaultChecked={false}
-          disabled={undefined}
           id="checkbox-014"
           name="options"
-          tabIndex={undefined}
           type="checkbox"
           value="checkbox-014"
         />
@@ -1272,13 +1070,10 @@ exports[`treegrid default rows should render with children 1`] = `
       className="slds-tree__item"
       data-label="Account Name"
       scope="row"
-      tabIndex={undefined}
     >
       <button
-        aria-haspopup={undefined}
         aria-hidden="true"
         className="slds-button slds-button_icon slds-button_icon-x-small slds-m-right_x-small slds-is-disabled"
-        id={undefined}
         tabIndex="-1"
         title="Expand Cheese Corp"
       >
@@ -1309,13 +1104,9 @@ exports[`treegrid default rows should render with children 1`] = `
       </div>
     </th>
     <td
-      aria-readonly={undefined}
-      aria-selected={undefined}
       className={null}
       data-label="Employees"
       role="gridcell"
-      style={undefined}
-      tabIndex={undefined}
     >
       <div
         className="slds-truncate"
@@ -1325,13 +1116,9 @@ exports[`treegrid default rows should render with children 1`] = `
       </div>
     </td>
     <td
-      aria-readonly={undefined}
-      aria-selected={undefined}
       className={null}
       data-label="Phone Number"
       role="gridcell"
-      style={undefined}
-      tabIndex={undefined}
     >
       <div
         className="slds-truncate"
@@ -1341,13 +1128,9 @@ exports[`treegrid default rows should render with children 1`] = `
       </div>
     </td>
     <td
-      aria-readonly={undefined}
-      aria-selected={undefined}
       className={null}
       data-label="Account Owner"
       role="gridcell"
-      style={undefined}
-      tabIndex={undefined}
     >
       <div
         className="slds-truncate"
@@ -1362,13 +1145,9 @@ exports[`treegrid default rows should render with children 1`] = `
       </div>
     </td>
     <td
-      aria-readonly={undefined}
-      aria-selected={undefined}
       className={null}
       data-label="Billing City"
       role="gridcell"
-      style={undefined}
-      tabIndex={undefined}
     >
       <div
         className="slds-truncate"
@@ -1378,22 +1157,17 @@ exports[`treegrid default rows should render with children 1`] = `
       </div>
     </td>
     <td
-      aria-readonly={undefined}
-      aria-selected={undefined}
       className={null}
-      data-label={undefined}
       role="gridcell"
       style={
         Object {
           "width": "3.25rem",
         }
       }
-      tabIndex={undefined}
     >
       <button
         aria-haspopup="true"
         className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
-        id={undefined}
         tabIndex="-1"
         title="More actions for Cheese Corp"
       >
@@ -1419,7 +1193,6 @@ exports[`treegrid default rows should render with children 1`] = `
 exports[`treegrid default rows should show a selected row 1`] = `
 <tbody>
   <tr
-    aria-expanded={undefined}
     aria-level="1"
     aria-posinset="1"
     aria-selected={false}
@@ -1428,29 +1201,22 @@ exports[`treegrid default rows should show a selected row 1`] = `
     tabIndex="0"
   >
     <td
-      aria-readonly={undefined}
-      aria-selected={undefined}
       className="slds-text-align_right"
-      data-label={undefined}
       role="gridcell"
       style={
         Object {
           "width": "3.25rem",
         }
       }
-      tabIndex={undefined}
     >
       <div
         className="slds-checkbox"
       >
         <input
-          aria-describedby={undefined}
           aria-labelledby="check-button-label-015 column-group-header"
           defaultChecked={false}
-          disabled={undefined}
           id="checkbox-015"
           name="options"
-          tabIndex={undefined}
           type="checkbox"
           value="checkbox-015"
         />
@@ -1474,13 +1240,10 @@ exports[`treegrid default rows should show a selected row 1`] = `
       className="slds-tree__item"
       data-label="Account Name"
       scope="row"
-      tabIndex={undefined}
     >
       <button
-        aria-haspopup={undefined}
         aria-hidden="true"
         className="slds-button slds-button_icon slds-button_icon-x-small slds-m-right_x-small slds-is-disabled"
-        id={undefined}
         tabIndex="-1"
         title="Expand Rewis Inc"
       >
@@ -1511,13 +1274,9 @@ exports[`treegrid default rows should show a selected row 1`] = `
       </div>
     </th>
     <td
-      aria-readonly={undefined}
-      aria-selected={undefined}
       className={null}
       data-label="Employees"
       role="gridcell"
-      style={undefined}
-      tabIndex={undefined}
     >
       <div
         className="slds-truncate"
@@ -1527,13 +1286,9 @@ exports[`treegrid default rows should show a selected row 1`] = `
       </div>
     </td>
     <td
-      aria-readonly={undefined}
-      aria-selected={undefined}
       className={null}
       data-label="Phone Number"
       role="gridcell"
-      style={undefined}
-      tabIndex={undefined}
     >
       <div
         className="slds-truncate"
@@ -1543,13 +1298,9 @@ exports[`treegrid default rows should show a selected row 1`] = `
       </div>
     </td>
     <td
-      aria-readonly={undefined}
-      aria-selected={undefined}
       className={null}
       data-label="Account Owner"
       role="gridcell"
-      style={undefined}
-      tabIndex={undefined}
     >
       <div
         className="slds-truncate"
@@ -1564,13 +1315,9 @@ exports[`treegrid default rows should show a selected row 1`] = `
       </div>
     </td>
     <td
-      aria-readonly={undefined}
-      aria-selected={undefined}
       className={null}
       data-label="Billing City"
       role="gridcell"
-      style={undefined}
-      tabIndex={undefined}
     >
       <div
         className="slds-truncate"
@@ -1580,22 +1327,17 @@ exports[`treegrid default rows should show a selected row 1`] = `
       </div>
     </td>
     <td
-      aria-readonly={undefined}
-      aria-selected={undefined}
       className={null}
-      data-label={undefined}
       role="gridcell"
       style={
         Object {
           "width": "3.25rem",
         }
       }
-      tabIndex={undefined}
     >
       <button
         aria-haspopup="true"
         className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
-        id={undefined}
         tabIndex="-1"
         title="More actions for Rewis Inc"
       >
@@ -1616,7 +1358,6 @@ exports[`treegrid default rows should show a selected row 1`] = `
     </td>
   </tr>
   <tr
-    aria-expanded={undefined}
     aria-level="1"
     aria-posinset="2"
     aria-selected={true}
@@ -1625,29 +1366,22 @@ exports[`treegrid default rows should show a selected row 1`] = `
     tabIndex={null}
   >
     <td
-      aria-readonly={undefined}
-      aria-selected={undefined}
       className="slds-text-align_right"
-      data-label={undefined}
       role="gridcell"
       style={
         Object {
           "width": "3.25rem",
         }
       }
-      tabIndex={undefined}
     >
       <div
         className="slds-checkbox"
       >
         <input
-          aria-describedby={undefined}
           aria-labelledby="check-button-label-016 column-group-header"
           defaultChecked={true}
-          disabled={undefined}
           id="checkbox-016"
           name="options"
-          tabIndex={undefined}
           type="checkbox"
           value="checkbox-016"
         />
@@ -1671,13 +1405,10 @@ exports[`treegrid default rows should show a selected row 1`] = `
       className="slds-tree__item"
       data-label="Account Name"
       scope="row"
-      tabIndex={undefined}
     >
       <button
-        aria-haspopup={undefined}
         aria-hidden="true"
         className="slds-button slds-button_icon slds-button_icon-x-small slds-m-right_x-small slds-is-disabled"
-        id={undefined}
         tabIndex="-1"
         title="Expand Acme Corporation"
       >
@@ -1708,13 +1439,9 @@ exports[`treegrid default rows should show a selected row 1`] = `
       </div>
     </th>
     <td
-      aria-readonly={undefined}
-      aria-selected={undefined}
       className={null}
       data-label="Employees"
       role="gridcell"
-      style={undefined}
-      tabIndex={undefined}
     >
       <div
         className="slds-truncate"
@@ -1724,13 +1451,9 @@ exports[`treegrid default rows should show a selected row 1`] = `
       </div>
     </td>
     <td
-      aria-readonly={undefined}
-      aria-selected={undefined}
       className={null}
       data-label="Phone Number"
       role="gridcell"
-      style={undefined}
-      tabIndex={undefined}
     >
       <div
         className="slds-truncate"
@@ -1740,13 +1463,9 @@ exports[`treegrid default rows should show a selected row 1`] = `
       </div>
     </td>
     <td
-      aria-readonly={undefined}
-      aria-selected={undefined}
       className={null}
       data-label="Account Owner"
       role="gridcell"
-      style={undefined}
-      tabIndex={undefined}
     >
       <div
         className="slds-truncate"
@@ -1761,13 +1480,9 @@ exports[`treegrid default rows should show a selected row 1`] = `
       </div>
     </td>
     <td
-      aria-readonly={undefined}
-      aria-selected={undefined}
       className={null}
       data-label="Billing City"
       role="gridcell"
-      style={undefined}
-      tabIndex={undefined}
     >
       <div
         className="slds-truncate"
@@ -1777,22 +1492,17 @@ exports[`treegrid default rows should show a selected row 1`] = `
       </div>
     </td>
     <td
-      aria-readonly={undefined}
-      aria-selected={undefined}
       className={null}
-      data-label={undefined}
       role="gridcell"
       style={
         Object {
           "width": "3.25rem",
         }
       }
-      tabIndex={undefined}
     >
       <button
         aria-haspopup="true"
         className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
-        id={undefined}
         tabIndex="-1"
         title="More actions for Acme Corporation"
       >
@@ -1823,29 +1533,22 @@ exports[`treegrid default rows should show a selected row 1`] = `
     tabIndex={null}
   >
     <td
-      aria-readonly={undefined}
-      aria-selected={undefined}
       className="slds-text-align_right"
-      data-label={undefined}
       role="gridcell"
       style={
         Object {
           "width": "3.25rem",
         }
       }
-      tabIndex={undefined}
     >
       <div
         className="slds-checkbox"
       >
         <input
-          aria-describedby={undefined}
           aria-labelledby="check-button-label-017 column-group-header"
           defaultChecked={false}
-          disabled={undefined}
           id="checkbox-017"
           name="options"
-          tabIndex={undefined}
           type="checkbox"
           value="checkbox-017"
         />
@@ -1869,13 +1572,10 @@ exports[`treegrid default rows should show a selected row 1`] = `
       className="slds-tree__item"
       data-label="Account Name"
       scope="row"
-      tabIndex={undefined}
     >
       <button
-        aria-haspopup={undefined}
         aria-hidden="true"
         className="slds-button slds-button_icon slds-button_icon-x-small slds-m-right_x-small"
-        id={undefined}
         tabIndex="-1"
         title="Expand Rohde Enterprises"
       >
@@ -1906,13 +1606,9 @@ exports[`treegrid default rows should show a selected row 1`] = `
       </div>
     </th>
     <td
-      aria-readonly={undefined}
-      aria-selected={undefined}
       className={null}
       data-label="Employees"
       role="gridcell"
-      style={undefined}
-      tabIndex={undefined}
     >
       <div
         className="slds-truncate"
@@ -1922,13 +1618,9 @@ exports[`treegrid default rows should show a selected row 1`] = `
       </div>
     </td>
     <td
-      aria-readonly={undefined}
-      aria-selected={undefined}
       className={null}
       data-label="Phone Number"
       role="gridcell"
-      style={undefined}
-      tabIndex={undefined}
     >
       <div
         className="slds-truncate"
@@ -1938,13 +1630,9 @@ exports[`treegrid default rows should show a selected row 1`] = `
       </div>
     </td>
     <td
-      aria-readonly={undefined}
-      aria-selected={undefined}
       className={null}
       data-label="Account Owner"
       role="gridcell"
-      style={undefined}
-      tabIndex={undefined}
     >
       <div
         className="slds-truncate"
@@ -1959,13 +1647,9 @@ exports[`treegrid default rows should show a selected row 1`] = `
       </div>
     </td>
     <td
-      aria-readonly={undefined}
-      aria-selected={undefined}
       className={null}
       data-label="Billing City"
       role="gridcell"
-      style={undefined}
-      tabIndex={undefined}
     >
       <div
         className="slds-truncate"
@@ -1975,22 +1659,17 @@ exports[`treegrid default rows should show a selected row 1`] = `
       </div>
     </td>
     <td
-      aria-readonly={undefined}
-      aria-selected={undefined}
       className={null}
-      data-label={undefined}
       role="gridcell"
       style={
         Object {
           "width": "3.25rem",
         }
       }
-      tabIndex={undefined}
     >
       <button
         aria-haspopup="true"
         className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
-        id={undefined}
         tabIndex="-1"
         title="More actions for Rohde Enterprises"
       >
@@ -2011,7 +1690,6 @@ exports[`treegrid default rows should show a selected row 1`] = `
     </td>
   </tr>
   <tr
-    aria-expanded={undefined}
     aria-level="1"
     aria-posinset="4"
     aria-selected={false}
@@ -2020,29 +1698,22 @@ exports[`treegrid default rows should show a selected row 1`] = `
     tabIndex={null}
   >
     <td
-      aria-readonly={undefined}
-      aria-selected={undefined}
       className="slds-text-align_right"
-      data-label={undefined}
       role="gridcell"
       style={
         Object {
           "width": "3.25rem",
         }
       }
-      tabIndex={undefined}
     >
       <div
         className="slds-checkbox"
       >
         <input
-          aria-describedby={undefined}
           aria-labelledby="check-button-label-018 column-group-header"
           defaultChecked={false}
-          disabled={undefined}
           id="checkbox-018"
           name="options"
-          tabIndex={undefined}
           type="checkbox"
           value="checkbox-018"
         />
@@ -2066,13 +1737,10 @@ exports[`treegrid default rows should show a selected row 1`] = `
       className="slds-tree__item"
       data-label="Account Name"
       scope="row"
-      tabIndex={undefined}
     >
       <button
-        aria-haspopup={undefined}
         aria-hidden="true"
         className="slds-button slds-button_icon slds-button_icon-x-small slds-m-right_x-small slds-is-disabled"
-        id={undefined}
         tabIndex="-1"
         title="Expand Cheese Corp"
       >
@@ -2103,13 +1771,9 @@ exports[`treegrid default rows should show a selected row 1`] = `
       </div>
     </th>
     <td
-      aria-readonly={undefined}
-      aria-selected={undefined}
       className={null}
       data-label="Employees"
       role="gridcell"
-      style={undefined}
-      tabIndex={undefined}
     >
       <div
         className="slds-truncate"
@@ -2119,13 +1783,9 @@ exports[`treegrid default rows should show a selected row 1`] = `
       </div>
     </td>
     <td
-      aria-readonly={undefined}
-      aria-selected={undefined}
       className={null}
       data-label="Phone Number"
       role="gridcell"
-      style={undefined}
-      tabIndex={undefined}
     >
       <div
         className="slds-truncate"
@@ -2135,13 +1795,9 @@ exports[`treegrid default rows should show a selected row 1`] = `
       </div>
     </td>
     <td
-      aria-readonly={undefined}
-      aria-selected={undefined}
       className={null}
       data-label="Account Owner"
       role="gridcell"
-      style={undefined}
-      tabIndex={undefined}
     >
       <div
         className="slds-truncate"
@@ -2156,13 +1812,9 @@ exports[`treegrid default rows should show a selected row 1`] = `
       </div>
     </td>
     <td
-      aria-readonly={undefined}
-      aria-selected={undefined}
       className={null}
       data-label="Billing City"
       role="gridcell"
-      style={undefined}
-      tabIndex={undefined}
     >
       <div
         className="slds-truncate"
@@ -2172,22 +1824,17 @@ exports[`treegrid default rows should show a selected row 1`] = `
       </div>
     </td>
     <td
-      aria-readonly={undefined}
-      aria-selected={undefined}
       className={null}
-      data-label={undefined}
       role="gridcell"
       style={
         Object {
           "width": "3.25rem",
         }
       }
-      tabIndex={undefined}
     >
       <button
         aria-haspopup="true"
         className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
-        id={undefined}
         tabIndex="-1"
         title="More actions for Cheese Corp"
       >
@@ -2213,7 +1860,6 @@ exports[`treegrid default rows should show a selected row 1`] = `
 exports[`treegrid default rows should show expanded row 1`] = `
 <tbody>
   <tr
-    aria-expanded={undefined}
     aria-level="1"
     aria-posinset="1"
     aria-selected={false}
@@ -2222,29 +1868,22 @@ exports[`treegrid default rows should show expanded row 1`] = `
     tabIndex="0"
   >
     <td
-      aria-readonly={undefined}
-      aria-selected={undefined}
       className="slds-text-align_right"
-      data-label={undefined}
       role="gridcell"
       style={
         Object {
           "width": "3.25rem",
         }
       }
-      tabIndex={undefined}
     >
       <div
         className="slds-checkbox"
       >
         <input
-          aria-describedby={undefined}
           aria-labelledby="check-button-label-019 column-group-header"
           defaultChecked={false}
-          disabled={undefined}
           id="checkbox-019"
           name="options"
-          tabIndex={undefined}
           type="checkbox"
           value="checkbox-019"
         />
@@ -2268,13 +1907,10 @@ exports[`treegrid default rows should show expanded row 1`] = `
       className="slds-tree__item"
       data-label="Account Name"
       scope="row"
-      tabIndex={undefined}
     >
       <button
-        aria-haspopup={undefined}
         aria-hidden="true"
         className="slds-button slds-button_icon slds-button_icon-x-small slds-m-right_x-small slds-is-disabled"
-        id={undefined}
         tabIndex="-1"
         title="Expand Rewis Inc"
       >
@@ -2305,13 +1941,9 @@ exports[`treegrid default rows should show expanded row 1`] = `
       </div>
     </th>
     <td
-      aria-readonly={undefined}
-      aria-selected={undefined}
       className={null}
       data-label="Employees"
       role="gridcell"
-      style={undefined}
-      tabIndex={undefined}
     >
       <div
         className="slds-truncate"
@@ -2321,13 +1953,9 @@ exports[`treegrid default rows should show expanded row 1`] = `
       </div>
     </td>
     <td
-      aria-readonly={undefined}
-      aria-selected={undefined}
       className={null}
       data-label="Phone Number"
       role="gridcell"
-      style={undefined}
-      tabIndex={undefined}
     >
       <div
         className="slds-truncate"
@@ -2337,13 +1965,9 @@ exports[`treegrid default rows should show expanded row 1`] = `
       </div>
     </td>
     <td
-      aria-readonly={undefined}
-      aria-selected={undefined}
       className={null}
       data-label="Account Owner"
       role="gridcell"
-      style={undefined}
-      tabIndex={undefined}
     >
       <div
         className="slds-truncate"
@@ -2358,13 +1982,9 @@ exports[`treegrid default rows should show expanded row 1`] = `
       </div>
     </td>
     <td
-      aria-readonly={undefined}
-      aria-selected={undefined}
       className={null}
       data-label="Billing City"
       role="gridcell"
-      style={undefined}
-      tabIndex={undefined}
     >
       <div
         className="slds-truncate"
@@ -2374,22 +1994,17 @@ exports[`treegrid default rows should show expanded row 1`] = `
       </div>
     </td>
     <td
-      aria-readonly={undefined}
-      aria-selected={undefined}
       className={null}
-      data-label={undefined}
       role="gridcell"
       style={
         Object {
           "width": "3.25rem",
         }
       }
-      tabIndex={undefined}
     >
       <button
         aria-haspopup="true"
         className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
-        id={undefined}
         tabIndex="-1"
         title="More actions for Rewis Inc"
       >
@@ -2419,29 +2034,22 @@ exports[`treegrid default rows should show expanded row 1`] = `
     tabIndex={null}
   >
     <td
-      aria-readonly={undefined}
-      aria-selected={undefined}
       className="slds-text-align_right"
-      data-label={undefined}
       role="gridcell"
       style={
         Object {
           "width": "3.25rem",
         }
       }
-      tabIndex={undefined}
     >
       <div
         className="slds-checkbox"
       >
         <input
-          aria-describedby={undefined}
           aria-labelledby="check-button-label-020 column-group-header"
           defaultChecked={false}
-          disabled={undefined}
           id="checkbox-020"
           name="options"
-          tabIndex={undefined}
           type="checkbox"
           value="checkbox-020"
         />
@@ -2465,13 +2073,10 @@ exports[`treegrid default rows should show expanded row 1`] = `
       className="slds-tree__item"
       data-label="Account Name"
       scope="row"
-      tabIndex={undefined}
     >
       <button
-        aria-haspopup={undefined}
         aria-hidden="true"
         className="slds-button slds-button_icon slds-button_icon-x-small slds-m-right_x-small"
-        id={undefined}
         tabIndex="-1"
         title="Collapse Acme Corporation"
       >
@@ -2502,13 +2107,9 @@ exports[`treegrid default rows should show expanded row 1`] = `
       </div>
     </th>
     <td
-      aria-readonly={undefined}
-      aria-selected={undefined}
       className={null}
       data-label="Employees"
       role="gridcell"
-      style={undefined}
-      tabIndex={undefined}
     >
       <div
         className="slds-truncate"
@@ -2518,13 +2119,9 @@ exports[`treegrid default rows should show expanded row 1`] = `
       </div>
     </td>
     <td
-      aria-readonly={undefined}
-      aria-selected={undefined}
       className={null}
       data-label="Phone Number"
       role="gridcell"
-      style={undefined}
-      tabIndex={undefined}
     >
       <div
         className="slds-truncate"
@@ -2534,13 +2131,9 @@ exports[`treegrid default rows should show expanded row 1`] = `
       </div>
     </td>
     <td
-      aria-readonly={undefined}
-      aria-selected={undefined}
       className={null}
       data-label="Account Owner"
       role="gridcell"
-      style={undefined}
-      tabIndex={undefined}
     >
       <div
         className="slds-truncate"
@@ -2555,13 +2148,9 @@ exports[`treegrid default rows should show expanded row 1`] = `
       </div>
     </td>
     <td
-      aria-readonly={undefined}
-      aria-selected={undefined}
       className={null}
       data-label="Billing City"
       role="gridcell"
-      style={undefined}
-      tabIndex={undefined}
     >
       <div
         className="slds-truncate"
@@ -2571,22 +2160,17 @@ exports[`treegrid default rows should show expanded row 1`] = `
       </div>
     </td>
     <td
-      aria-readonly={undefined}
-      aria-selected={undefined}
       className={null}
-      data-label={undefined}
       role="gridcell"
       style={
         Object {
           "width": "3.25rem",
         }
       }
-      tabIndex={undefined}
     >
       <button
         aria-haspopup="true"
         className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
-        id={undefined}
         tabIndex="-1"
         title="More actions for Acme Corporation"
       >
@@ -2617,29 +2201,22 @@ exports[`treegrid default rows should show expanded row 1`] = `
     tabIndex={null}
   >
     <td
-      aria-readonly={undefined}
-      aria-selected={undefined}
       className="slds-text-align_right"
-      data-label={undefined}
       role="gridcell"
       style={
         Object {
           "width": "3.25rem",
         }
       }
-      tabIndex={undefined}
     >
       <div
         className="slds-checkbox"
       >
         <input
-          aria-describedby={undefined}
           aria-labelledby="check-button-label-021 column-group-header"
           defaultChecked={false}
-          disabled={undefined}
           id="checkbox-021"
           name="options"
-          tabIndex={undefined}
           type="checkbox"
           value="checkbox-021"
         />
@@ -2663,13 +2240,10 @@ exports[`treegrid default rows should show expanded row 1`] = `
       className="slds-tree__item"
       data-label="Account Name"
       scope="row"
-      tabIndex={undefined}
     >
       <button
-        aria-haspopup={undefined}
         aria-hidden="true"
         className="slds-button slds-button_icon slds-button_icon-x-small slds-m-right_x-small"
-        id={undefined}
         tabIndex="-1"
         title="Expand Rohde Enterprises"
       >
@@ -2700,13 +2274,9 @@ exports[`treegrid default rows should show expanded row 1`] = `
       </div>
     </th>
     <td
-      aria-readonly={undefined}
-      aria-selected={undefined}
       className={null}
       data-label="Employees"
       role="gridcell"
-      style={undefined}
-      tabIndex={undefined}
     >
       <div
         className="slds-truncate"
@@ -2716,13 +2286,9 @@ exports[`treegrid default rows should show expanded row 1`] = `
       </div>
     </td>
     <td
-      aria-readonly={undefined}
-      aria-selected={undefined}
       className={null}
       data-label="Phone Number"
       role="gridcell"
-      style={undefined}
-      tabIndex={undefined}
     >
       <div
         className="slds-truncate"
@@ -2732,13 +2298,9 @@ exports[`treegrid default rows should show expanded row 1`] = `
       </div>
     </td>
     <td
-      aria-readonly={undefined}
-      aria-selected={undefined}
       className={null}
       data-label="Account Owner"
       role="gridcell"
-      style={undefined}
-      tabIndex={undefined}
     >
       <div
         className="slds-truncate"
@@ -2753,13 +2315,9 @@ exports[`treegrid default rows should show expanded row 1`] = `
       </div>
     </td>
     <td
-      aria-readonly={undefined}
-      aria-selected={undefined}
       className={null}
       data-label="Billing City"
       role="gridcell"
-      style={undefined}
-      tabIndex={undefined}
     >
       <div
         className="slds-truncate"
@@ -2769,22 +2327,17 @@ exports[`treegrid default rows should show expanded row 1`] = `
       </div>
     </td>
     <td
-      aria-readonly={undefined}
-      aria-selected={undefined}
       className={null}
-      data-label={undefined}
       role="gridcell"
       style={
         Object {
           "width": "3.25rem",
         }
       }
-      tabIndex={undefined}
     >
       <button
         aria-haspopup="true"
         className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
-        id={undefined}
         tabIndex="-1"
         title="More actions for Rohde Enterprises"
       >
@@ -2805,7 +2358,6 @@ exports[`treegrid default rows should show expanded row 1`] = `
     </td>
   </tr>
   <tr
-    aria-expanded={undefined}
     aria-level="1"
     aria-posinset="4"
     aria-selected={false}
@@ -2814,29 +2366,22 @@ exports[`treegrid default rows should show expanded row 1`] = `
     tabIndex={null}
   >
     <td
-      aria-readonly={undefined}
-      aria-selected={undefined}
       className="slds-text-align_right"
-      data-label={undefined}
       role="gridcell"
       style={
         Object {
           "width": "3.25rem",
         }
       }
-      tabIndex={undefined}
     >
       <div
         className="slds-checkbox"
       >
         <input
-          aria-describedby={undefined}
           aria-labelledby="check-button-label-022 column-group-header"
           defaultChecked={false}
-          disabled={undefined}
           id="checkbox-022"
           name="options"
-          tabIndex={undefined}
           type="checkbox"
           value="checkbox-022"
         />
@@ -2860,13 +2405,10 @@ exports[`treegrid default rows should show expanded row 1`] = `
       className="slds-tree__item"
       data-label="Account Name"
       scope="row"
-      tabIndex={undefined}
     >
       <button
-        aria-haspopup={undefined}
         aria-hidden="true"
         className="slds-button slds-button_icon slds-button_icon-x-small slds-m-right_x-small slds-is-disabled"
-        id={undefined}
         tabIndex="-1"
         title="Expand Cheese Corp"
       >
@@ -2897,13 +2439,9 @@ exports[`treegrid default rows should show expanded row 1`] = `
       </div>
     </th>
     <td
-      aria-readonly={undefined}
-      aria-selected={undefined}
       className={null}
       data-label="Employees"
       role="gridcell"
-      style={undefined}
-      tabIndex={undefined}
     >
       <div
         className="slds-truncate"
@@ -2913,13 +2451,9 @@ exports[`treegrid default rows should show expanded row 1`] = `
       </div>
     </td>
     <td
-      aria-readonly={undefined}
-      aria-selected={undefined}
       className={null}
       data-label="Phone Number"
       role="gridcell"
-      style={undefined}
-      tabIndex={undefined}
     >
       <div
         className="slds-truncate"
@@ -2929,13 +2463,9 @@ exports[`treegrid default rows should show expanded row 1`] = `
       </div>
     </td>
     <td
-      aria-readonly={undefined}
-      aria-selected={undefined}
       className={null}
       data-label="Account Owner"
       role="gridcell"
-      style={undefined}
-      tabIndex={undefined}
     >
       <div
         className="slds-truncate"
@@ -2950,13 +2480,9 @@ exports[`treegrid default rows should show expanded row 1`] = `
       </div>
     </td>
     <td
-      aria-readonly={undefined}
-      aria-selected={undefined}
       className={null}
       data-label="Billing City"
       role="gridcell"
-      style={undefined}
-      tabIndex={undefined}
     >
       <div
         className="slds-truncate"
@@ -2966,22 +2492,17 @@ exports[`treegrid default rows should show expanded row 1`] = `
       </div>
     </td>
     <td
-      aria-readonly={undefined}
-      aria-selected={undefined}
       className={null}
-      data-label={undefined}
       role="gridcell"
       style={
         Object {
           "width": "3.25rem",
         }
       }
-      tabIndex={undefined}
     >
       <button
         aria-haspopup="true"
         className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
-        id={undefined}
         tabIndex="-1"
         title="More actions for Cheese Corp"
       >
@@ -3006,10 +2527,8 @@ exports[`treegrid default rows should show expanded row 1`] = `
 
 exports[`treegrid headless row should hide the selection column 1`] = `
 <tr
-  aria-expanded={undefined}
   aria-level="1"
   aria-posinset="1"
-  aria-selected={undefined}
   aria-setsize="1"
   className="slds-hint-parent"
   tabIndex={null}
@@ -3018,13 +2537,10 @@ exports[`treegrid headless row should hide the selection column 1`] = `
     className="slds-tree__item"
     data-label="Account Name"
     scope="row"
-    tabIndex={undefined}
   >
     <button
-      aria-haspopup={undefined}
       aria-hidden="true"
       className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small slds-is-disabled"
-      id={undefined}
       tabIndex="-1"
       title="Expand foo"
     >
@@ -3055,22 +2571,17 @@ exports[`treegrid headless row should hide the selection column 1`] = `
     </div>
   </th>
   <td
-    aria-readonly={undefined}
-    aria-selected={undefined}
     className={null}
-    data-label={undefined}
     role="gridcell"
     style={
       Object {
         "width": "3.25rem",
       }
     }
-    tabIndex={undefined}
   >
     <button
       aria-haspopup="true"
       className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
-      id={undefined}
       tabIndex="-1"
       title="More actions for foo"
     >
@@ -3094,38 +2605,28 @@ exports[`treegrid headless row should hide the selection column 1`] = `
 
 exports[`treegrid headless row should render 1`] = `
 <tr
-  aria-expanded={undefined}
   aria-level="1"
   aria-posinset="1"
-  aria-selected={undefined}
   aria-setsize="1"
   className="slds-hint-parent"
   tabIndex={null}
 >
   <td
-    aria-readonly={undefined}
-    aria-selected={undefined}
     className="slds-text-align_right"
-    data-label={undefined}
     role="gridcell"
     style={
       Object {
         "width": "3.25rem",
       }
     }
-    tabIndex={undefined}
   >
     <div
       className="slds-checkbox"
     >
       <input
-        aria-describedby={undefined}
         aria-labelledby="check-button-label-06 column-group-header"
-        defaultChecked={undefined}
-        disabled={undefined}
         id="checkbox-06"
         name="options"
-        tabIndex={undefined}
         type="checkbox"
         value="checkbox-06"
       />
@@ -3149,13 +2650,10 @@ exports[`treegrid headless row should render 1`] = `
     className="slds-tree__item"
     data-label="Account Name"
     scope="row"
-    tabIndex={undefined}
   >
     <button
-      aria-haspopup={undefined}
       aria-hidden="true"
       className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small slds-is-disabled"
-      id={undefined}
       tabIndex="-1"
       title="Expand foo"
     >
@@ -3186,22 +2684,17 @@ exports[`treegrid headless row should render 1`] = `
     </div>
   </th>
   <td
-    aria-readonly={undefined}
-    aria-selected={undefined}
     className={null}
-    data-label={undefined}
     role="gridcell"
     style={
       Object {
         "width": "3.25rem",
       }
     }
-    tabIndex={undefined}
   >
     <button
       aria-haspopup="true"
       className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
-      id={undefined}
       tabIndex="-1"
       title="More actions for foo"
     >
@@ -3228,35 +2721,26 @@ exports[`treegrid headless row should set expanded to false 1`] = `
   aria-expanded={false}
   aria-level="1"
   aria-posinset="1"
-  aria-selected={undefined}
   aria-setsize="1"
   className="slds-hint-parent"
   tabIndex={null}
 >
   <td
-    aria-readonly={undefined}
-    aria-selected={undefined}
     className="slds-text-align_right"
-    data-label={undefined}
     role="gridcell"
     style={
       Object {
         "width": "3.25rem",
       }
     }
-    tabIndex={undefined}
   >
     <div
       className="slds-checkbox"
     >
       <input
-        aria-describedby={undefined}
         aria-labelledby="check-button-label-08 column-group-header"
-        defaultChecked={undefined}
-        disabled={undefined}
         id="checkbox-08"
         name="options"
-        tabIndex={undefined}
         type="checkbox"
         value="checkbox-08"
       />
@@ -3280,13 +2764,10 @@ exports[`treegrid headless row should set expanded to false 1`] = `
     className="slds-tree__item"
     data-label="Account Name"
     scope="row"
-    tabIndex={undefined}
   >
     <button
-      aria-haspopup={undefined}
       aria-hidden="true"
       className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small"
-      id={undefined}
       tabIndex="-1"
       title="Expand foo"
     >
@@ -3317,22 +2798,17 @@ exports[`treegrid headless row should set expanded to false 1`] = `
     </div>
   </th>
   <td
-    aria-readonly={undefined}
-    aria-selected={undefined}
     className={null}
-    data-label={undefined}
     role="gridcell"
     style={
       Object {
         "width": "3.25rem",
       }
     }
-    tabIndex={undefined}
   >
     <button
       aria-haspopup="true"
       className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
-      id={undefined}
       tabIndex="-1"
       title="More actions for foo"
     >
@@ -3359,35 +2835,26 @@ exports[`treegrid headless row should set expanded to true 1`] = `
   aria-expanded={true}
   aria-level="1"
   aria-posinset="1"
-  aria-selected={undefined}
   aria-setsize="1"
   className="slds-hint-parent"
   tabIndex={null}
 >
   <td
-    aria-readonly={undefined}
-    aria-selected={undefined}
     className="slds-text-align_right"
-    data-label={undefined}
     role="gridcell"
     style={
       Object {
         "width": "3.25rem",
       }
     }
-    tabIndex={undefined}
   >
     <div
       className="slds-checkbox"
     >
       <input
-        aria-describedby={undefined}
         aria-labelledby="check-button-label-07 column-group-header"
-        defaultChecked={undefined}
-        disabled={undefined}
         id="checkbox-07"
         name="options"
-        tabIndex={undefined}
         type="checkbox"
         value="checkbox-07"
       />
@@ -3411,13 +2878,10 @@ exports[`treegrid headless row should set expanded to true 1`] = `
     className="slds-tree__item"
     data-label="Account Name"
     scope="row"
-    tabIndex={undefined}
   >
     <button
-      aria-haspopup={undefined}
       aria-hidden="true"
       className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small"
-      id={undefined}
       tabIndex="-1"
       title="Collapse foo"
     >
@@ -3448,22 +2912,17 @@ exports[`treegrid headless row should set expanded to true 1`] = `
     </div>
   </th>
   <td
-    aria-readonly={undefined}
-    aria-selected={undefined}
     className={null}
-    data-label={undefined}
     role="gridcell"
     style={
       Object {
         "width": "3.25rem",
       }
     }
-    tabIndex={undefined}
   >
     <button
       aria-haspopup="true"
       className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
-      id={undefined}
       tabIndex="-1"
       title="More actions for foo"
     >
@@ -3487,7 +2946,6 @@ exports[`treegrid headless row should set expanded to true 1`] = `
 
 exports[`treegrid headless row should set selected to false 1`] = `
 <tr
-  aria-expanded={undefined}
   aria-level="1"
   aria-posinset="1"
   aria-selected={false}
@@ -3496,29 +2954,22 @@ exports[`treegrid headless row should set selected to false 1`] = `
   tabIndex={null}
 >
   <td
-    aria-readonly={undefined}
-    aria-selected={undefined}
     className="slds-text-align_right"
-    data-label={undefined}
     role="gridcell"
     style={
       Object {
         "width": "3.25rem",
       }
     }
-    tabIndex={undefined}
   >
     <div
       className="slds-checkbox"
     >
       <input
-        aria-describedby={undefined}
         aria-labelledby="check-button-label-010 column-group-header"
         defaultChecked={false}
-        disabled={undefined}
         id="checkbox-010"
         name="options"
-        tabIndex={undefined}
         type="checkbox"
         value="checkbox-010"
       />
@@ -3542,13 +2993,10 @@ exports[`treegrid headless row should set selected to false 1`] = `
     className="slds-tree__item"
     data-label="Account Name"
     scope="row"
-    tabIndex={undefined}
   >
     <button
-      aria-haspopup={undefined}
       aria-hidden="true"
       className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small slds-is-disabled"
-      id={undefined}
       tabIndex="-1"
       title="Expand foo"
     >
@@ -3579,22 +3027,17 @@ exports[`treegrid headless row should set selected to false 1`] = `
     </div>
   </th>
   <td
-    aria-readonly={undefined}
-    aria-selected={undefined}
     className={null}
-    data-label={undefined}
     role="gridcell"
     style={
       Object {
         "width": "3.25rem",
       }
     }
-    tabIndex={undefined}
   >
     <button
       aria-haspopup="true"
       className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
-      id={undefined}
       tabIndex="-1"
       title="More actions for foo"
     >
@@ -3618,7 +3061,6 @@ exports[`treegrid headless row should set selected to false 1`] = `
 
 exports[`treegrid headless row should set selected to true and check the box 1`] = `
 <tr
-  aria-expanded={undefined}
   aria-level="1"
   aria-posinset="1"
   aria-selected={true}
@@ -3627,29 +3069,22 @@ exports[`treegrid headless row should set selected to true and check the box 1`]
   tabIndex={null}
 >
   <td
-    aria-readonly={undefined}
-    aria-selected={undefined}
     className="slds-text-align_right"
-    data-label={undefined}
     role="gridcell"
     style={
       Object {
         "width": "3.25rem",
       }
     }
-    tabIndex={undefined}
   >
     <div
       className="slds-checkbox"
     >
       <input
-        aria-describedby={undefined}
         aria-labelledby="check-button-label-09 column-group-header"
         defaultChecked={true}
-        disabled={undefined}
         id="checkbox-09"
         name="options"
-        tabIndex={undefined}
         type="checkbox"
         value="checkbox-09"
       />
@@ -3673,13 +3108,10 @@ exports[`treegrid headless row should set selected to true and check the box 1`]
     className="slds-tree__item"
     data-label="Account Name"
     scope="row"
-    tabIndex={undefined}
   >
     <button
-      aria-haspopup={undefined}
       aria-hidden="true"
       className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small slds-is-disabled"
-      id={undefined}
       tabIndex="-1"
       title="Expand foo"
     >
@@ -3710,22 +3142,17 @@ exports[`treegrid headless row should set selected to true and check the box 1`]
     </div>
   </th>
   <td
-    aria-readonly={undefined}
-    aria-selected={undefined}
     className={null}
-    data-label={undefined}
     role="gridcell"
     style={
       Object {
         "width": "3.25rem",
       }
     }
-    tabIndex={undefined}
   >
     <button
       aria-haspopup="true"
       className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
-      id={undefined}
       tabIndex="-1"
       title="More actions for foo"
     >
@@ -3750,7 +3177,6 @@ exports[`treegrid headless row should set selected to true and check the box 1`]
 exports[`treegrid headless rows should remove the selection column 1`] = `
 <tbody>
   <tr
-    aria-expanded={undefined}
     aria-level="1"
     aria-posinset="1"
     aria-selected={null}
@@ -3762,13 +3188,10 @@ exports[`treegrid headless rows should remove the selection column 1`] = `
       className="slds-tree__item"
       data-label="Account Name"
       scope="row"
-      tabIndex={undefined}
     >
       <button
-        aria-haspopup={undefined}
         aria-hidden="true"
         className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small slds-is-disabled"
-        id={undefined}
         tabIndex="-1"
         title="Expand Rewis Inc"
       >
@@ -3799,22 +3222,17 @@ exports[`treegrid headless rows should remove the selection column 1`] = `
       </div>
     </th>
     <td
-      aria-readonly={undefined}
-      aria-selected={undefined}
       className={null}
-      data-label={undefined}
       role="gridcell"
       style={
         Object {
           "width": "3.25rem",
         }
       }
-      tabIndex={undefined}
     >
       <button
         aria-haspopup="true"
         className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
-        id={undefined}
         tabIndex="-1"
         title="More actions for Rewis Inc"
       >
@@ -3835,7 +3253,6 @@ exports[`treegrid headless rows should remove the selection column 1`] = `
     </td>
   </tr>
   <tr
-    aria-expanded={undefined}
     aria-level="1"
     aria-posinset="2"
     aria-selected={null}
@@ -3847,13 +3264,10 @@ exports[`treegrid headless rows should remove the selection column 1`] = `
       className="slds-tree__item"
       data-label="Account Name"
       scope="row"
-      tabIndex={undefined}
     >
       <button
-        aria-haspopup={undefined}
         aria-hidden="true"
         className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small slds-is-disabled"
-        id={undefined}
         tabIndex="-1"
         title="Expand Acme Corporation"
       >
@@ -3884,22 +3298,17 @@ exports[`treegrid headless rows should remove the selection column 1`] = `
       </div>
     </th>
     <td
-      aria-readonly={undefined}
-      aria-selected={undefined}
       className={null}
-      data-label={undefined}
       role="gridcell"
       style={
         Object {
           "width": "3.25rem",
         }
       }
-      tabIndex={undefined}
     >
       <button
         aria-haspopup="true"
         className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
-        id={undefined}
         tabIndex="-1"
         title="More actions for Acme Corporation"
       >
@@ -3932,13 +3341,10 @@ exports[`treegrid headless rows should remove the selection column 1`] = `
       className="slds-tree__item"
       data-label="Account Name"
       scope="row"
-      tabIndex={undefined}
     >
       <button
-        aria-haspopup={undefined}
         aria-hidden="true"
         className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small"
-        id={undefined}
         tabIndex="-1"
         title="Expand Rohde Enterprises"
       >
@@ -3969,22 +3375,17 @@ exports[`treegrid headless rows should remove the selection column 1`] = `
       </div>
     </th>
     <td
-      aria-readonly={undefined}
-      aria-selected={undefined}
       className={null}
-      data-label={undefined}
       role="gridcell"
       style={
         Object {
           "width": "3.25rem",
         }
       }
-      tabIndex={undefined}
     >
       <button
         aria-haspopup="true"
         className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
-        id={undefined}
         tabIndex="-1"
         title="More actions for Rohde Enterprises"
       >
@@ -4005,7 +3406,6 @@ exports[`treegrid headless rows should remove the selection column 1`] = `
     </td>
   </tr>
   <tr
-    aria-expanded={undefined}
     aria-level="1"
     aria-posinset="4"
     aria-selected={null}
@@ -4017,13 +3417,10 @@ exports[`treegrid headless rows should remove the selection column 1`] = `
       className="slds-tree__item"
       data-label="Account Name"
       scope="row"
-      tabIndex={undefined}
     >
       <button
-        aria-haspopup={undefined}
         aria-hidden="true"
         className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small slds-is-disabled"
-        id={undefined}
         tabIndex="-1"
         title="Expand Cheese Corp"
       >
@@ -4054,22 +3451,17 @@ exports[`treegrid headless rows should remove the selection column 1`] = `
       </div>
     </th>
     <td
-      aria-readonly={undefined}
-      aria-selected={undefined}
       className={null}
-      data-label={undefined}
       role="gridcell"
       style={
         Object {
           "width": "3.25rem",
         }
       }
-      tabIndex={undefined}
     >
       <button
         aria-haspopup="true"
         className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
-        id={undefined}
         tabIndex="-1"
         title="More actions for Cheese Corp"
       >
@@ -4095,7 +3487,6 @@ exports[`treegrid headless rows should remove the selection column 1`] = `
 exports[`treegrid headless rows should render 1`] = `
 <tbody>
   <tr
-    aria-expanded={undefined}
     aria-level="1"
     aria-posinset="1"
     aria-selected={false}
@@ -4104,29 +3495,22 @@ exports[`treegrid headless rows should render 1`] = `
     tabIndex="0"
   >
     <td
-      aria-readonly={undefined}
-      aria-selected={undefined}
       className="slds-text-align_right"
-      data-label={undefined}
       role="gridcell"
       style={
         Object {
           "width": "3.25rem",
         }
       }
-      tabIndex={undefined}
     >
       <div
         className="slds-checkbox"
       >
         <input
-          aria-describedby={undefined}
           aria-labelledby="check-button-label-023 column-group-header"
           defaultChecked={false}
-          disabled={undefined}
           id="checkbox-023"
           name="options"
-          tabIndex={undefined}
           type="checkbox"
           value="checkbox-023"
         />
@@ -4150,13 +3534,10 @@ exports[`treegrid headless rows should render 1`] = `
       className="slds-tree__item"
       data-label="Account Name"
       scope="row"
-      tabIndex={undefined}
     >
       <button
-        aria-haspopup={undefined}
         aria-hidden="true"
         className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small slds-is-disabled"
-        id={undefined}
         tabIndex="-1"
         title="Expand Rewis Inc"
       >
@@ -4187,22 +3568,17 @@ exports[`treegrid headless rows should render 1`] = `
       </div>
     </th>
     <td
-      aria-readonly={undefined}
-      aria-selected={undefined}
       className={null}
-      data-label={undefined}
       role="gridcell"
       style={
         Object {
           "width": "3.25rem",
         }
       }
-      tabIndex={undefined}
     >
       <button
         aria-haspopup="true"
         className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
-        id={undefined}
         tabIndex="-1"
         title="More actions for Rewis Inc"
       >
@@ -4223,7 +3599,6 @@ exports[`treegrid headless rows should render 1`] = `
     </td>
   </tr>
   <tr
-    aria-expanded={undefined}
     aria-level="1"
     aria-posinset="2"
     aria-selected={false}
@@ -4232,29 +3607,22 @@ exports[`treegrid headless rows should render 1`] = `
     tabIndex={null}
   >
     <td
-      aria-readonly={undefined}
-      aria-selected={undefined}
       className="slds-text-align_right"
-      data-label={undefined}
       role="gridcell"
       style={
         Object {
           "width": "3.25rem",
         }
       }
-      tabIndex={undefined}
     >
       <div
         className="slds-checkbox"
       >
         <input
-          aria-describedby={undefined}
           aria-labelledby="check-button-label-024 column-group-header"
           defaultChecked={false}
-          disabled={undefined}
           id="checkbox-024"
           name="options"
-          tabIndex={undefined}
           type="checkbox"
           value="checkbox-024"
         />
@@ -4278,13 +3646,10 @@ exports[`treegrid headless rows should render 1`] = `
       className="slds-tree__item"
       data-label="Account Name"
       scope="row"
-      tabIndex={undefined}
     >
       <button
-        aria-haspopup={undefined}
         aria-hidden="true"
         className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small slds-is-disabled"
-        id={undefined}
         tabIndex="-1"
         title="Expand Acme Corporation"
       >
@@ -4315,22 +3680,17 @@ exports[`treegrid headless rows should render 1`] = `
       </div>
     </th>
     <td
-      aria-readonly={undefined}
-      aria-selected={undefined}
       className={null}
-      data-label={undefined}
       role="gridcell"
       style={
         Object {
           "width": "3.25rem",
         }
       }
-      tabIndex={undefined}
     >
       <button
         aria-haspopup="true"
         className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
-        id={undefined}
         tabIndex="-1"
         title="More actions for Acme Corporation"
       >
@@ -4360,29 +3720,22 @@ exports[`treegrid headless rows should render 1`] = `
     tabIndex={null}
   >
     <td
-      aria-readonly={undefined}
-      aria-selected={undefined}
       className="slds-text-align_right"
-      data-label={undefined}
       role="gridcell"
       style={
         Object {
           "width": "3.25rem",
         }
       }
-      tabIndex={undefined}
     >
       <div
         className="slds-checkbox"
       >
         <input
-          aria-describedby={undefined}
           aria-labelledby="check-button-label-025 column-group-header"
           defaultChecked={false}
-          disabled={undefined}
           id="checkbox-025"
           name="options"
-          tabIndex={undefined}
           type="checkbox"
           value="checkbox-025"
         />
@@ -4406,13 +3759,10 @@ exports[`treegrid headless rows should render 1`] = `
       className="slds-tree__item"
       data-label="Account Name"
       scope="row"
-      tabIndex={undefined}
     >
       <button
-        aria-haspopup={undefined}
         aria-hidden="true"
         className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small"
-        id={undefined}
         tabIndex="-1"
         title="Expand Rohde Enterprises"
       >
@@ -4443,22 +3793,17 @@ exports[`treegrid headless rows should render 1`] = `
       </div>
     </th>
     <td
-      aria-readonly={undefined}
-      aria-selected={undefined}
       className={null}
-      data-label={undefined}
       role="gridcell"
       style={
         Object {
           "width": "3.25rem",
         }
       }
-      tabIndex={undefined}
     >
       <button
         aria-haspopup="true"
         className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
-        id={undefined}
         tabIndex="-1"
         title="More actions for Rohde Enterprises"
       >
@@ -4479,7 +3824,6 @@ exports[`treegrid headless rows should render 1`] = `
     </td>
   </tr>
   <tr
-    aria-expanded={undefined}
     aria-level="1"
     aria-posinset="4"
     aria-selected={false}
@@ -4488,29 +3832,22 @@ exports[`treegrid headless rows should render 1`] = `
     tabIndex={null}
   >
     <td
-      aria-readonly={undefined}
-      aria-selected={undefined}
       className="slds-text-align_right"
-      data-label={undefined}
       role="gridcell"
       style={
         Object {
           "width": "3.25rem",
         }
       }
-      tabIndex={undefined}
     >
       <div
         className="slds-checkbox"
       >
         <input
-          aria-describedby={undefined}
           aria-labelledby="check-button-label-026 column-group-header"
           defaultChecked={false}
-          disabled={undefined}
           id="checkbox-026"
           name="options"
-          tabIndex={undefined}
           type="checkbox"
           value="checkbox-026"
         />
@@ -4534,13 +3871,10 @@ exports[`treegrid headless rows should render 1`] = `
       className="slds-tree__item"
       data-label="Account Name"
       scope="row"
-      tabIndex={undefined}
     >
       <button
-        aria-haspopup={undefined}
         aria-hidden="true"
         className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small slds-is-disabled"
-        id={undefined}
         tabIndex="-1"
         title="Expand Cheese Corp"
       >
@@ -4571,22 +3905,17 @@ exports[`treegrid headless rows should render 1`] = `
       </div>
     </th>
     <td
-      aria-readonly={undefined}
-      aria-selected={undefined}
       className={null}
-      data-label={undefined}
       role="gridcell"
       style={
         Object {
           "width": "3.25rem",
         }
       }
-      tabIndex={undefined}
     >
       <button
         aria-haspopup="true"
         className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
-        id={undefined}
         tabIndex="-1"
         title="More actions for Cheese Corp"
       >
@@ -4612,7 +3941,6 @@ exports[`treegrid headless rows should render 1`] = `
 exports[`treegrid headless rows should show a selected row 1`] = `
 <tbody>
   <tr
-    aria-expanded={undefined}
     aria-level="1"
     aria-posinset="1"
     aria-selected={false}
@@ -4621,29 +3949,22 @@ exports[`treegrid headless rows should show a selected row 1`] = `
     tabIndex="0"
   >
     <td
-      aria-readonly={undefined}
-      aria-selected={undefined}
       className="slds-text-align_right"
-      data-label={undefined}
       role="gridcell"
       style={
         Object {
           "width": "3.25rem",
         }
       }
-      tabIndex={undefined}
     >
       <div
         className="slds-checkbox"
       >
         <input
-          aria-describedby={undefined}
           aria-labelledby="check-button-label-027 column-group-header"
           defaultChecked={false}
-          disabled={undefined}
           id="checkbox-027"
           name="options"
-          tabIndex={undefined}
           type="checkbox"
           value="checkbox-027"
         />
@@ -4667,13 +3988,10 @@ exports[`treegrid headless rows should show a selected row 1`] = `
       className="slds-tree__item"
       data-label="Account Name"
       scope="row"
-      tabIndex={undefined}
     >
       <button
-        aria-haspopup={undefined}
         aria-hidden="true"
         className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small slds-is-disabled"
-        id={undefined}
         tabIndex="-1"
         title="Expand Rewis Inc"
       >
@@ -4704,22 +4022,17 @@ exports[`treegrid headless rows should show a selected row 1`] = `
       </div>
     </th>
     <td
-      aria-readonly={undefined}
-      aria-selected={undefined}
       className={null}
-      data-label={undefined}
       role="gridcell"
       style={
         Object {
           "width": "3.25rem",
         }
       }
-      tabIndex={undefined}
     >
       <button
         aria-haspopup="true"
         className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
-        id={undefined}
         tabIndex="-1"
         title="More actions for Rewis Inc"
       >
@@ -4740,7 +4053,6 @@ exports[`treegrid headless rows should show a selected row 1`] = `
     </td>
   </tr>
   <tr
-    aria-expanded={undefined}
     aria-level="1"
     aria-posinset="2"
     aria-selected={true}
@@ -4749,29 +4061,22 @@ exports[`treegrid headless rows should show a selected row 1`] = `
     tabIndex={null}
   >
     <td
-      aria-readonly={undefined}
-      aria-selected={undefined}
       className="slds-text-align_right"
-      data-label={undefined}
       role="gridcell"
       style={
         Object {
           "width": "3.25rem",
         }
       }
-      tabIndex={undefined}
     >
       <div
         className="slds-checkbox"
       >
         <input
-          aria-describedby={undefined}
           aria-labelledby="check-button-label-028 column-group-header"
           defaultChecked={true}
-          disabled={undefined}
           id="checkbox-028"
           name="options"
-          tabIndex={undefined}
           type="checkbox"
           value="checkbox-028"
         />
@@ -4795,13 +4100,10 @@ exports[`treegrid headless rows should show a selected row 1`] = `
       className="slds-tree__item"
       data-label="Account Name"
       scope="row"
-      tabIndex={undefined}
     >
       <button
-        aria-haspopup={undefined}
         aria-hidden="true"
         className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small slds-is-disabled"
-        id={undefined}
         tabIndex="-1"
         title="Expand Acme Corporation"
       >
@@ -4832,22 +4134,17 @@ exports[`treegrid headless rows should show a selected row 1`] = `
       </div>
     </th>
     <td
-      aria-readonly={undefined}
-      aria-selected={undefined}
       className={null}
-      data-label={undefined}
       role="gridcell"
       style={
         Object {
           "width": "3.25rem",
         }
       }
-      tabIndex={undefined}
     >
       <button
         aria-haspopup="true"
         className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
-        id={undefined}
         tabIndex="-1"
         title="More actions for Acme Corporation"
       >
@@ -4877,29 +4174,22 @@ exports[`treegrid headless rows should show a selected row 1`] = `
     tabIndex={null}
   >
     <td
-      aria-readonly={undefined}
-      aria-selected={undefined}
       className="slds-text-align_right"
-      data-label={undefined}
       role="gridcell"
       style={
         Object {
           "width": "3.25rem",
         }
       }
-      tabIndex={undefined}
     >
       <div
         className="slds-checkbox"
       >
         <input
-          aria-describedby={undefined}
           aria-labelledby="check-button-label-029 column-group-header"
           defaultChecked={false}
-          disabled={undefined}
           id="checkbox-029"
           name="options"
-          tabIndex={undefined}
           type="checkbox"
           value="checkbox-029"
         />
@@ -4923,13 +4213,10 @@ exports[`treegrid headless rows should show a selected row 1`] = `
       className="slds-tree__item"
       data-label="Account Name"
       scope="row"
-      tabIndex={undefined}
     >
       <button
-        aria-haspopup={undefined}
         aria-hidden="true"
         className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small"
-        id={undefined}
         tabIndex="-1"
         title="Expand Rohde Enterprises"
       >
@@ -4960,22 +4247,17 @@ exports[`treegrid headless rows should show a selected row 1`] = `
       </div>
     </th>
     <td
-      aria-readonly={undefined}
-      aria-selected={undefined}
       className={null}
-      data-label={undefined}
       role="gridcell"
       style={
         Object {
           "width": "3.25rem",
         }
       }
-      tabIndex={undefined}
     >
       <button
         aria-haspopup="true"
         className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
-        id={undefined}
         tabIndex="-1"
         title="More actions for Rohde Enterprises"
       >
@@ -4996,7 +4278,6 @@ exports[`treegrid headless rows should show a selected row 1`] = `
     </td>
   </tr>
   <tr
-    aria-expanded={undefined}
     aria-level="1"
     aria-posinset="4"
     aria-selected={false}
@@ -5005,29 +4286,22 @@ exports[`treegrid headless rows should show a selected row 1`] = `
     tabIndex={null}
   >
     <td
-      aria-readonly={undefined}
-      aria-selected={undefined}
       className="slds-text-align_right"
-      data-label={undefined}
       role="gridcell"
       style={
         Object {
           "width": "3.25rem",
         }
       }
-      tabIndex={undefined}
     >
       <div
         className="slds-checkbox"
       >
         <input
-          aria-describedby={undefined}
           aria-labelledby="check-button-label-030 column-group-header"
           defaultChecked={false}
-          disabled={undefined}
           id="checkbox-030"
           name="options"
-          tabIndex={undefined}
           type="checkbox"
           value="checkbox-030"
         />
@@ -5051,13 +4325,10 @@ exports[`treegrid headless rows should show a selected row 1`] = `
       className="slds-tree__item"
       data-label="Account Name"
       scope="row"
-      tabIndex={undefined}
     >
       <button
-        aria-haspopup={undefined}
         aria-hidden="true"
         className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small slds-is-disabled"
-        id={undefined}
         tabIndex="-1"
         title="Expand Cheese Corp"
       >
@@ -5088,22 +4359,17 @@ exports[`treegrid headless rows should show a selected row 1`] = `
       </div>
     </th>
     <td
-      aria-readonly={undefined}
-      aria-selected={undefined}
       className={null}
-      data-label={undefined}
       role="gridcell"
       style={
         Object {
           "width": "3.25rem",
         }
       }
-      tabIndex={undefined}
     >
       <button
         aria-haspopup="true"
         className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
-        id={undefined}
         tabIndex="-1"
         title="More actions for Cheese Corp"
       >
@@ -5129,7 +4395,6 @@ exports[`treegrid headless rows should show a selected row 1`] = `
 exports[`treegrid headless rows should show expanded row 1`] = `
 <tbody>
   <tr
-    aria-expanded={undefined}
     aria-level="1"
     aria-posinset="1"
     aria-selected={false}
@@ -5138,29 +4403,22 @@ exports[`treegrid headless rows should show expanded row 1`] = `
     tabIndex="0"
   >
     <td
-      aria-readonly={undefined}
-      aria-selected={undefined}
       className="slds-text-align_right"
-      data-label={undefined}
       role="gridcell"
       style={
         Object {
           "width": "3.25rem",
         }
       }
-      tabIndex={undefined}
     >
       <div
         className="slds-checkbox"
       >
         <input
-          aria-describedby={undefined}
           aria-labelledby="check-button-label-031 column-group-header"
           defaultChecked={false}
-          disabled={undefined}
           id="checkbox-031"
           name="options"
-          tabIndex={undefined}
           type="checkbox"
           value="checkbox-031"
         />
@@ -5184,13 +4442,10 @@ exports[`treegrid headless rows should show expanded row 1`] = `
       className="slds-tree__item"
       data-label="Account Name"
       scope="row"
-      tabIndex={undefined}
     >
       <button
-        aria-haspopup={undefined}
         aria-hidden="true"
         className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small slds-is-disabled"
-        id={undefined}
         tabIndex="-1"
         title="Expand Rewis Inc"
       >
@@ -5221,22 +4476,17 @@ exports[`treegrid headless rows should show expanded row 1`] = `
       </div>
     </th>
     <td
-      aria-readonly={undefined}
-      aria-selected={undefined}
       className={null}
-      data-label={undefined}
       role="gridcell"
       style={
         Object {
           "width": "3.25rem",
         }
       }
-      tabIndex={undefined}
     >
       <button
         aria-haspopup="true"
         className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
-        id={undefined}
         tabIndex="-1"
         title="More actions for Rewis Inc"
       >
@@ -5266,29 +4516,22 @@ exports[`treegrid headless rows should show expanded row 1`] = `
     tabIndex={null}
   >
     <td
-      aria-readonly={undefined}
-      aria-selected={undefined}
       className="slds-text-align_right"
-      data-label={undefined}
       role="gridcell"
       style={
         Object {
           "width": "3.25rem",
         }
       }
-      tabIndex={undefined}
     >
       <div
         className="slds-checkbox"
       >
         <input
-          aria-describedby={undefined}
           aria-labelledby="check-button-label-032 column-group-header"
           defaultChecked={false}
-          disabled={undefined}
           id="checkbox-032"
           name="options"
-          tabIndex={undefined}
           type="checkbox"
           value="checkbox-032"
         />
@@ -5312,13 +4555,10 @@ exports[`treegrid headless rows should show expanded row 1`] = `
       className="slds-tree__item"
       data-label="Account Name"
       scope="row"
-      tabIndex={undefined}
     >
       <button
-        aria-haspopup={undefined}
         aria-hidden="true"
         className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small"
-        id={undefined}
         tabIndex="-1"
         title="Collapse Acme Corporation"
       >
@@ -5349,22 +4589,17 @@ exports[`treegrid headless rows should show expanded row 1`] = `
       </div>
     </th>
     <td
-      aria-readonly={undefined}
-      aria-selected={undefined}
       className={null}
-      data-label={undefined}
       role="gridcell"
       style={
         Object {
           "width": "3.25rem",
         }
       }
-      tabIndex={undefined}
     >
       <button
         aria-haspopup="true"
         className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
-        id={undefined}
         tabIndex="-1"
         title="More actions for Acme Corporation"
       >
@@ -5394,29 +4629,22 @@ exports[`treegrid headless rows should show expanded row 1`] = `
     tabIndex={null}
   >
     <td
-      aria-readonly={undefined}
-      aria-selected={undefined}
       className="slds-text-align_right"
-      data-label={undefined}
       role="gridcell"
       style={
         Object {
           "width": "3.25rem",
         }
       }
-      tabIndex={undefined}
     >
       <div
         className="slds-checkbox"
       >
         <input
-          aria-describedby={undefined}
           aria-labelledby="check-button-label-033 column-group-header"
           defaultChecked={false}
-          disabled={undefined}
           id="checkbox-033"
           name="options"
-          tabIndex={undefined}
           type="checkbox"
           value="checkbox-033"
         />
@@ -5440,13 +4668,10 @@ exports[`treegrid headless rows should show expanded row 1`] = `
       className="slds-tree__item"
       data-label="Account Name"
       scope="row"
-      tabIndex={undefined}
     >
       <button
-        aria-haspopup={undefined}
         aria-hidden="true"
         className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small"
-        id={undefined}
         tabIndex="-1"
         title="Expand Rohde Enterprises"
       >
@@ -5477,22 +4702,17 @@ exports[`treegrid headless rows should show expanded row 1`] = `
       </div>
     </th>
     <td
-      aria-readonly={undefined}
-      aria-selected={undefined}
       className={null}
-      data-label={undefined}
       role="gridcell"
       style={
         Object {
           "width": "3.25rem",
         }
       }
-      tabIndex={undefined}
     >
       <button
         aria-haspopup="true"
         className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
-        id={undefined}
         tabIndex="-1"
         title="More actions for Rohde Enterprises"
       >
@@ -5513,7 +4733,6 @@ exports[`treegrid headless rows should show expanded row 1`] = `
     </td>
   </tr>
   <tr
-    aria-expanded={undefined}
     aria-level="1"
     aria-posinset="4"
     aria-selected={false}
@@ -5522,29 +4741,22 @@ exports[`treegrid headless rows should show expanded row 1`] = `
     tabIndex={null}
   >
     <td
-      aria-readonly={undefined}
-      aria-selected={undefined}
       className="slds-text-align_right"
-      data-label={undefined}
       role="gridcell"
       style={
         Object {
           "width": "3.25rem",
         }
       }
-      tabIndex={undefined}
     >
       <div
         className="slds-checkbox"
       >
         <input
-          aria-describedby={undefined}
           aria-labelledby="check-button-label-034 column-group-header"
           defaultChecked={false}
-          disabled={undefined}
           id="checkbox-034"
           name="options"
-          tabIndex={undefined}
           type="checkbox"
           value="checkbox-034"
         />
@@ -5568,13 +4780,10 @@ exports[`treegrid headless rows should show expanded row 1`] = `
       className="slds-tree__item"
       data-label="Account Name"
       scope="row"
-      tabIndex={undefined}
     >
       <button
-        aria-haspopup={undefined}
         aria-hidden="true"
         className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small slds-is-disabled"
-        id={undefined}
         tabIndex="-1"
         title="Expand Cheese Corp"
       >
@@ -5605,22 +4814,17 @@ exports[`treegrid headless rows should show expanded row 1`] = `
       </div>
     </th>
     <td
-      aria-readonly={undefined}
-      aria-selected={undefined}
       className={null}
-      data-label={undefined}
       role="gridcell"
       style={
         Object {
           "width": "3.25rem",
         }
       }
-      tabIndex={undefined}
     >
       <button
         aria-haspopup="true"
         className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
-        id={undefined}
         tabIndex="-1"
         title="More actions for Cheese Corp"
       >
@@ -5645,10 +4849,8 @@ exports[`treegrid headless rows should show expanded row 1`] = `
 
 exports[`treegrid row should remove the selection column 1`] = `
 <tr
-  aria-expanded={undefined}
   aria-level="1"
   aria-posinset="1"
-  aria-selected={undefined}
   aria-setsize="1"
   className="slds-hint-parent"
   tabIndex={null}
@@ -5657,13 +4859,10 @@ exports[`treegrid row should remove the selection column 1`] = `
     className="slds-tree__item"
     data-label="Account Name"
     scope="row"
-    tabIndex={undefined}
   >
     <button
-      aria-haspopup={undefined}
       aria-hidden="true"
       className="slds-button slds-button_icon slds-button_icon-x-small slds-m-right_x-small slds-is-disabled"
-      id={undefined}
       tabIndex="-1"
       title="Expand Rewis Inc"
     >
@@ -5694,13 +4893,9 @@ exports[`treegrid row should remove the selection column 1`] = `
     </div>
   </th>
   <td
-    aria-readonly={undefined}
-    aria-selected={undefined}
     className={null}
     data-label="Employees"
     role="gridcell"
-    style={undefined}
-    tabIndex={undefined}
   >
     <div
       className="slds-truncate"
@@ -5710,13 +4905,9 @@ exports[`treegrid row should remove the selection column 1`] = `
     </div>
   </td>
   <td
-    aria-readonly={undefined}
-    aria-selected={undefined}
     className={null}
     data-label="Phone Number"
     role="gridcell"
-    style={undefined}
-    tabIndex={undefined}
   >
     <div
       className="slds-truncate"
@@ -5726,13 +4917,9 @@ exports[`treegrid row should remove the selection column 1`] = `
     </div>
   </td>
   <td
-    aria-readonly={undefined}
-    aria-selected={undefined}
     className={null}
     data-label="Account Owner"
     role="gridcell"
-    style={undefined}
-    tabIndex={undefined}
   >
     <div
       className="slds-truncate"
@@ -5747,13 +4934,9 @@ exports[`treegrid row should remove the selection column 1`] = `
     </div>
   </td>
   <td
-    aria-readonly={undefined}
-    aria-selected={undefined}
     className={null}
     data-label="Billing City"
     role="gridcell"
-    style={undefined}
-    tabIndex={undefined}
   >
     <div
       className="slds-truncate"
@@ -5763,22 +4946,17 @@ exports[`treegrid row should remove the selection column 1`] = `
     </div>
   </td>
   <td
-    aria-readonly={undefined}
-    aria-selected={undefined}
     className={null}
-    data-label={undefined}
     role="gridcell"
     style={
       Object {
         "width": "3.25rem",
       }
     }
-    tabIndex={undefined}
   >
     <button
       aria-haspopup="true"
       className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
-      id={undefined}
       tabIndex="-1"
       title="More actions for Rewis Inc"
     >
@@ -5802,38 +4980,28 @@ exports[`treegrid row should remove the selection column 1`] = `
 
 exports[`treegrid row should render 1`] = `
 <tr
-  aria-expanded={undefined}
   aria-level="1"
   aria-posinset="1"
-  aria-selected={undefined}
   aria-setsize="1"
   className="slds-hint-parent"
   tabIndex={null}
 >
   <td
-    aria-readonly={undefined}
-    aria-selected={undefined}
     className="slds-text-align_right"
-    data-label={undefined}
     role="gridcell"
     style={
       Object {
         "width": "3.25rem",
       }
     }
-    tabIndex={undefined}
   >
     <div
       className="slds-checkbox"
     >
       <input
-        aria-describedby={undefined}
         aria-labelledby="check-button-label-00 column-group-header"
-        defaultChecked={undefined}
-        disabled={undefined}
         id="checkbox-00"
         name="options"
-        tabIndex={undefined}
         type="checkbox"
         value="checkbox-00"
       />
@@ -5857,13 +5025,10 @@ exports[`treegrid row should render 1`] = `
     className="slds-tree__item"
     data-label="Account Name"
     scope="row"
-    tabIndex={undefined}
   >
     <button
-      aria-haspopup={undefined}
       aria-hidden="true"
       className="slds-button slds-button_icon slds-button_icon-x-small slds-m-right_x-small slds-is-disabled"
-      id={undefined}
       tabIndex="-1"
       title="Expand Rewis Inc"
     >
@@ -5894,13 +5059,9 @@ exports[`treegrid row should render 1`] = `
     </div>
   </th>
   <td
-    aria-readonly={undefined}
-    aria-selected={undefined}
     className={null}
     data-label="Employees"
     role="gridcell"
-    style={undefined}
-    tabIndex={undefined}
   >
     <div
       className="slds-truncate"
@@ -5910,13 +5071,9 @@ exports[`treegrid row should render 1`] = `
     </div>
   </td>
   <td
-    aria-readonly={undefined}
-    aria-selected={undefined}
     className={null}
     data-label="Phone Number"
     role="gridcell"
-    style={undefined}
-    tabIndex={undefined}
   >
     <div
       className="slds-truncate"
@@ -5926,13 +5083,9 @@ exports[`treegrid row should render 1`] = `
     </div>
   </td>
   <td
-    aria-readonly={undefined}
-    aria-selected={undefined}
     className={null}
     data-label="Account Owner"
     role="gridcell"
-    style={undefined}
-    tabIndex={undefined}
   >
     <div
       className="slds-truncate"
@@ -5947,13 +5100,9 @@ exports[`treegrid row should render 1`] = `
     </div>
   </td>
   <td
-    aria-readonly={undefined}
-    aria-selected={undefined}
     className={null}
     data-label="Billing City"
     role="gridcell"
-    style={undefined}
-    tabIndex={undefined}
   >
     <div
       className="slds-truncate"
@@ -5963,22 +5112,17 @@ exports[`treegrid row should render 1`] = `
     </div>
   </td>
   <td
-    aria-readonly={undefined}
-    aria-selected={undefined}
     className={null}
-    data-label={undefined}
     role="gridcell"
     style={
       Object {
         "width": "3.25rem",
       }
     }
-    tabIndex={undefined}
   >
     <button
       aria-haspopup="true"
       className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
-      id={undefined}
       tabIndex="-1"
       title="More actions for Rewis Inc"
     >
@@ -6002,7 +5146,6 @@ exports[`treegrid row should render 1`] = `
 
 exports[`treegrid row should select the row and check the box 1`] = `
 <tr
-  aria-expanded={undefined}
   aria-level="1"
   aria-posinset="1"
   aria-selected={true}
@@ -6011,29 +5154,22 @@ exports[`treegrid row should select the row and check the box 1`] = `
   tabIndex={null}
 >
   <td
-    aria-readonly={undefined}
-    aria-selected={undefined}
     className="slds-text-align_right"
-    data-label={undefined}
     role="gridcell"
     style={
       Object {
         "width": "3.25rem",
       }
     }
-    tabIndex={undefined}
   >
     <div
       className="slds-checkbox"
     >
       <input
-        aria-describedby={undefined}
         aria-labelledby="check-button-label-04 column-group-header"
         defaultChecked={true}
-        disabled={undefined}
         id="checkbox-04"
         name="options"
-        tabIndex={undefined}
         type="checkbox"
         value="checkbox-04"
       />
@@ -6057,13 +5193,10 @@ exports[`treegrid row should select the row and check the box 1`] = `
     className="slds-tree__item"
     data-label="Account Name"
     scope="row"
-    tabIndex={undefined}
   >
     <button
-      aria-haspopup={undefined}
       aria-hidden="true"
       className="slds-button slds-button_icon slds-button_icon-x-small slds-m-right_x-small slds-is-disabled"
-      id={undefined}
       tabIndex="-1"
       title="Expand Rewis Inc"
     >
@@ -6094,13 +5227,9 @@ exports[`treegrid row should select the row and check the box 1`] = `
     </div>
   </th>
   <td
-    aria-readonly={undefined}
-    aria-selected={undefined}
     className={null}
     data-label="Employees"
     role="gridcell"
-    style={undefined}
-    tabIndex={undefined}
   >
     <div
       className="slds-truncate"
@@ -6110,13 +5239,9 @@ exports[`treegrid row should select the row and check the box 1`] = `
     </div>
   </td>
   <td
-    aria-readonly={undefined}
-    aria-selected={undefined}
     className={null}
     data-label="Phone Number"
     role="gridcell"
-    style={undefined}
-    tabIndex={undefined}
   >
     <div
       className="slds-truncate"
@@ -6126,13 +5251,9 @@ exports[`treegrid row should select the row and check the box 1`] = `
     </div>
   </td>
   <td
-    aria-readonly={undefined}
-    aria-selected={undefined}
     className={null}
     data-label="Account Owner"
     role="gridcell"
-    style={undefined}
-    tabIndex={undefined}
   >
     <div
       className="slds-truncate"
@@ -6147,13 +5268,9 @@ exports[`treegrid row should select the row and check the box 1`] = `
     </div>
   </td>
   <td
-    aria-readonly={undefined}
-    aria-selected={undefined}
     className={null}
     data-label="Billing City"
     role="gridcell"
-    style={undefined}
-    tabIndex={undefined}
   >
     <div
       className="slds-truncate"
@@ -6163,22 +5280,17 @@ exports[`treegrid row should select the row and check the box 1`] = `
     </div>
   </td>
   <td
-    aria-readonly={undefined}
-    aria-selected={undefined}
     className={null}
-    data-label={undefined}
     role="gridcell"
     style={
       Object {
         "width": "3.25rem",
       }
     }
-    tabIndex={undefined}
   >
     <button
       aria-haspopup="true"
       className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
-      id={undefined}
       tabIndex="-1"
       title="More actions for Rewis Inc"
     >
@@ -6205,35 +5317,26 @@ exports[`treegrid row should set aria-expanded on row  1`] = `
   aria-expanded={true}
   aria-level="1"
   aria-posinset="1"
-  aria-selected={undefined}
   aria-setsize="1"
   className="slds-hint-parent"
   tabIndex={null}
 >
   <td
-    aria-readonly={undefined}
-    aria-selected={undefined}
     className="slds-text-align_right"
-    data-label={undefined}
     role="gridcell"
     style={
       Object {
         "width": "3.25rem",
       }
     }
-    tabIndex={undefined}
   >
     <div
       className="slds-checkbox"
     >
       <input
-        aria-describedby={undefined}
         aria-labelledby="check-button-label-01 column-group-header"
-        defaultChecked={undefined}
-        disabled={undefined}
         id="checkbox-01"
         name="options"
-        tabIndex={undefined}
         type="checkbox"
         value="checkbox-01"
       />
@@ -6257,13 +5360,10 @@ exports[`treegrid row should set aria-expanded on row  1`] = `
     className="slds-tree__item"
     data-label="Account Name"
     scope="row"
-    tabIndex={undefined}
   >
     <button
-      aria-haspopup={undefined}
       aria-hidden="true"
       className="slds-button slds-button_icon slds-button_icon-x-small slds-m-right_x-small"
-      id={undefined}
       tabIndex="-1"
       title="Collapse Rewis Inc"
     >
@@ -6294,13 +5394,9 @@ exports[`treegrid row should set aria-expanded on row  1`] = `
     </div>
   </th>
   <td
-    aria-readonly={undefined}
-    aria-selected={undefined}
     className={null}
     data-label="Employees"
     role="gridcell"
-    style={undefined}
-    tabIndex={undefined}
   >
     <div
       className="slds-truncate"
@@ -6310,13 +5406,9 @@ exports[`treegrid row should set aria-expanded on row  1`] = `
     </div>
   </td>
   <td
-    aria-readonly={undefined}
-    aria-selected={undefined}
     className={null}
     data-label="Phone Number"
     role="gridcell"
-    style={undefined}
-    tabIndex={undefined}
   >
     <div
       className="slds-truncate"
@@ -6326,13 +5418,9 @@ exports[`treegrid row should set aria-expanded on row  1`] = `
     </div>
   </td>
   <td
-    aria-readonly={undefined}
-    aria-selected={undefined}
     className={null}
     data-label="Account Owner"
     role="gridcell"
-    style={undefined}
-    tabIndex={undefined}
   >
     <div
       className="slds-truncate"
@@ -6347,13 +5435,9 @@ exports[`treegrid row should set aria-expanded on row  1`] = `
     </div>
   </td>
   <td
-    aria-readonly={undefined}
-    aria-selected={undefined}
     className={null}
     data-label="Billing City"
     role="gridcell"
-    style={undefined}
-    tabIndex={undefined}
   >
     <div
       className="slds-truncate"
@@ -6363,22 +5447,17 @@ exports[`treegrid row should set aria-expanded on row  1`] = `
     </div>
   </td>
   <td
-    aria-readonly={undefined}
-    aria-selected={undefined}
     className={null}
-    data-label={undefined}
     role="gridcell"
     style={
       Object {
         "width": "3.25rem",
       }
     }
-    tabIndex={undefined}
   >
     <button
       aria-haspopup="true"
       className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
-      id={undefined}
       tabIndex="-1"
       title="More actions for Rewis Inc"
     >
@@ -6405,35 +5484,26 @@ exports[`treegrid row should set aria-expanded to false on row  1`] = `
   aria-expanded={false}
   aria-level="1"
   aria-posinset="1"
-  aria-selected={undefined}
   aria-setsize="1"
   className="slds-hint-parent"
   tabIndex={null}
 >
   <td
-    aria-readonly={undefined}
-    aria-selected={undefined}
     className="slds-text-align_right"
-    data-label={undefined}
     role="gridcell"
     style={
       Object {
         "width": "3.25rem",
       }
     }
-    tabIndex={undefined}
   >
     <div
       className="slds-checkbox"
     >
       <input
-        aria-describedby={undefined}
         aria-labelledby="check-button-label-02 column-group-header"
-        defaultChecked={undefined}
-        disabled={undefined}
         id="checkbox-02"
         name="options"
-        tabIndex={undefined}
         type="checkbox"
         value="checkbox-02"
       />
@@ -6457,13 +5527,10 @@ exports[`treegrid row should set aria-expanded to false on row  1`] = `
     className="slds-tree__item"
     data-label="Account Name"
     scope="row"
-    tabIndex={undefined}
   >
     <button
-      aria-haspopup={undefined}
       aria-hidden="true"
       className="slds-button slds-button_icon slds-button_icon-x-small slds-m-right_x-small"
-      id={undefined}
       tabIndex="-1"
       title="Expand Rewis Inc"
     >
@@ -6494,13 +5561,9 @@ exports[`treegrid row should set aria-expanded to false on row  1`] = `
     </div>
   </th>
   <td
-    aria-readonly={undefined}
-    aria-selected={undefined}
     className={null}
     data-label="Employees"
     role="gridcell"
-    style={undefined}
-    tabIndex={undefined}
   >
     <div
       className="slds-truncate"
@@ -6510,13 +5573,9 @@ exports[`treegrid row should set aria-expanded to false on row  1`] = `
     </div>
   </td>
   <td
-    aria-readonly={undefined}
-    aria-selected={undefined}
     className={null}
     data-label="Phone Number"
     role="gridcell"
-    style={undefined}
-    tabIndex={undefined}
   >
     <div
       className="slds-truncate"
@@ -6526,13 +5585,9 @@ exports[`treegrid row should set aria-expanded to false on row  1`] = `
     </div>
   </td>
   <td
-    aria-readonly={undefined}
-    aria-selected={undefined}
     className={null}
     data-label="Account Owner"
     role="gridcell"
-    style={undefined}
-    tabIndex={undefined}
   >
     <div
       className="slds-truncate"
@@ -6547,13 +5602,9 @@ exports[`treegrid row should set aria-expanded to false on row  1`] = `
     </div>
   </td>
   <td
-    aria-readonly={undefined}
-    aria-selected={undefined}
     className={null}
     data-label="Billing City"
     role="gridcell"
-    style={undefined}
-    tabIndex={undefined}
   >
     <div
       className="slds-truncate"
@@ -6563,22 +5614,17 @@ exports[`treegrid row should set aria-expanded to false on row  1`] = `
     </div>
   </td>
   <td
-    aria-readonly={undefined}
-    aria-selected={undefined}
     className={null}
-    data-label={undefined}
     role="gridcell"
     style={
       Object {
         "width": "3.25rem",
       }
     }
-    tabIndex={undefined}
   >
     <button
       aria-haspopup="true"
       className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
-      id={undefined}
       tabIndex="-1"
       title="More actions for Rewis Inc"
     >
@@ -6602,7 +5648,6 @@ exports[`treegrid row should set aria-expanded to false on row  1`] = `
 
 exports[`treegrid row should set selection of the row to false 1`] = `
 <tr
-  aria-expanded={undefined}
   aria-level="1"
   aria-posinset="1"
   aria-selected={false}
@@ -6611,29 +5656,22 @@ exports[`treegrid row should set selection of the row to false 1`] = `
   tabIndex={null}
 >
   <td
-    aria-readonly={undefined}
-    aria-selected={undefined}
     className="slds-text-align_right"
-    data-label={undefined}
     role="gridcell"
     style={
       Object {
         "width": "3.25rem",
       }
     }
-    tabIndex={undefined}
   >
     <div
       className="slds-checkbox"
     >
       <input
-        aria-describedby={undefined}
         aria-labelledby="check-button-label-05 column-group-header"
         defaultChecked={false}
-        disabled={undefined}
         id="checkbox-05"
         name="options"
-        tabIndex={undefined}
         type="checkbox"
         value="checkbox-05"
       />
@@ -6657,13 +5695,10 @@ exports[`treegrid row should set selection of the row to false 1`] = `
     className="slds-tree__item"
     data-label="Account Name"
     scope="row"
-    tabIndex={undefined}
   >
     <button
-      aria-haspopup={undefined}
       aria-hidden="true"
       className="slds-button slds-button_icon slds-button_icon-x-small slds-m-right_x-small slds-is-disabled"
-      id={undefined}
       tabIndex="-1"
       title="Expand Rewis Inc"
     >
@@ -6694,13 +5729,9 @@ exports[`treegrid row should set selection of the row to false 1`] = `
     </div>
   </th>
   <td
-    aria-readonly={undefined}
-    aria-selected={undefined}
     className={null}
     data-label="Employees"
     role="gridcell"
-    style={undefined}
-    tabIndex={undefined}
   >
     <div
       className="slds-truncate"
@@ -6710,13 +5741,9 @@ exports[`treegrid row should set selection of the row to false 1`] = `
     </div>
   </td>
   <td
-    aria-readonly={undefined}
-    aria-selected={undefined}
     className={null}
     data-label="Phone Number"
     role="gridcell"
-    style={undefined}
-    tabIndex={undefined}
   >
     <div
       className="slds-truncate"
@@ -6726,13 +5753,9 @@ exports[`treegrid row should set selection of the row to false 1`] = `
     </div>
   </td>
   <td
-    aria-readonly={undefined}
-    aria-selected={undefined}
     className={null}
     data-label="Account Owner"
     role="gridcell"
-    style={undefined}
-    tabIndex={undefined}
   >
     <div
       className="slds-truncate"
@@ -6747,13 +5770,9 @@ exports[`treegrid row should set selection of the row to false 1`] = `
     </div>
   </td>
   <td
-    aria-readonly={undefined}
-    aria-selected={undefined}
     className={null}
     data-label="Billing City"
     role="gridcell"
-    style={undefined}
-    tabIndex={undefined}
   >
     <div
       className="slds-truncate"
@@ -6763,22 +5782,17 @@ exports[`treegrid row should set selection of the row to false 1`] = `
     </div>
   </td>
   <td
-    aria-readonly={undefined}
-    aria-selected={undefined}
     className={null}
-    data-label={undefined}
     role="gridcell"
     style={
       Object {
         "width": "3.25rem",
       }
     }
-    tabIndex={undefined}
   >
     <button
       aria-haspopup="true"
       className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
-      id={undefined}
       tabIndex="-1"
       title="More actions for Rewis Inc"
     >
@@ -6802,38 +5816,28 @@ exports[`treegrid row should set selection of the row to false 1`] = `
 
 exports[`treegrid row should set tabindex on the row 1`] = `
 <tr
-  aria-expanded={undefined}
   aria-level="1"
   aria-posinset="1"
-  aria-selected={undefined}
   aria-setsize="1"
   className="slds-hint-parent"
   tabIndex="0"
 >
   <td
-    aria-readonly={undefined}
-    aria-selected={undefined}
     className="slds-text-align_right"
-    data-label={undefined}
     role="gridcell"
     style={
       Object {
         "width": "3.25rem",
       }
     }
-    tabIndex={undefined}
   >
     <div
       className="slds-checkbox"
     >
       <input
-        aria-describedby={undefined}
         aria-labelledby="check-button-label-03 column-group-header"
-        defaultChecked={undefined}
-        disabled={undefined}
         id="checkbox-03"
         name="options"
-        tabIndex={undefined}
         type="checkbox"
         value="checkbox-03"
       />
@@ -6857,13 +5861,10 @@ exports[`treegrid row should set tabindex on the row 1`] = `
     className="slds-tree__item"
     data-label="Account Name"
     scope="row"
-    tabIndex={undefined}
   >
     <button
-      aria-haspopup={undefined}
       aria-hidden="true"
       className="slds-button slds-button_icon slds-button_icon-x-small slds-m-right_x-small slds-is-disabled"
-      id={undefined}
       tabIndex="-1"
       title="Expand Rewis Inc"
     >
@@ -6894,13 +5895,9 @@ exports[`treegrid row should set tabindex on the row 1`] = `
     </div>
   </th>
   <td
-    aria-readonly={undefined}
-    aria-selected={undefined}
     className={null}
     data-label="Employees"
     role="gridcell"
-    style={undefined}
-    tabIndex={undefined}
   >
     <div
       className="slds-truncate"
@@ -6910,13 +5907,9 @@ exports[`treegrid row should set tabindex on the row 1`] = `
     </div>
   </td>
   <td
-    aria-readonly={undefined}
-    aria-selected={undefined}
     className={null}
     data-label="Phone Number"
     role="gridcell"
-    style={undefined}
-    tabIndex={undefined}
   >
     <div
       className="slds-truncate"
@@ -6926,13 +5919,9 @@ exports[`treegrid row should set tabindex on the row 1`] = `
     </div>
   </td>
   <td
-    aria-readonly={undefined}
-    aria-selected={undefined}
     className={null}
     data-label="Account Owner"
     role="gridcell"
-    style={undefined}
-    tabIndex={undefined}
   >
     <div
       className="slds-truncate"
@@ -6947,13 +5936,9 @@ exports[`treegrid row should set tabindex on the row 1`] = `
     </div>
   </td>
   <td
-    aria-readonly={undefined}
-    aria-selected={undefined}
     className={null}
     data-label="Billing City"
     role="gridcell"
-    style={undefined}
-    tabIndex={undefined}
   >
     <div
       className="slds-truncate"
@@ -6963,22 +5948,17 @@ exports[`treegrid row should set tabindex on the row 1`] = `
     </div>
   </td>
   <td
-    aria-readonly={undefined}
-    aria-selected={undefined}
     className={null}
-    data-label={undefined}
     role="gridcell"
     style={
       Object {
         "width": "3.25rem",
       }
     }
-    tabIndex={undefined}
   >
     <button
       aria-haspopup="true"
       className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
-      id={undefined}
       tabIndex="-1"
       title="More actions for Rewis Inc"
     >
@@ -7005,7 +5985,6 @@ exports[`treegrid treegrid component should add borders 1`] = `
   aria-multiselectable={null}
   className="slds-table slds-table_bordered slds-table_edit slds-tree slds-table_tree"
   role="treegrid"
-  style={undefined}
 >
   <tr />
 </table>
@@ -7016,7 +5995,6 @@ exports[`treegrid treegrid component should fix the table layout 1`] = `
   aria-multiselectable={null}
   className="slds-table slds-table_edit slds-table_fixed-layout slds-tree slds-table_tree"
   role="treegrid"
-  style={undefined}
 >
   <tr />
 </table>
@@ -7027,7 +6005,6 @@ exports[`treegrid treegrid component should remove header 1`] = `
   aria-multiselectable={null}
   className="slds-table slds-table_header-hidden slds-table_edit slds-tree slds-table_tree"
   role="treegrid"
-  style={undefined}
 >
   <tr />
 </table>
@@ -7038,7 +6015,6 @@ exports[`treegrid treegrid component should render 1`] = `
   aria-multiselectable={null}
   className="slds-table slds-table_edit slds-tree slds-table_tree"
   role="treegrid"
-  style={undefined}
 >
   <tr />
 </table>
@@ -7049,7 +6025,6 @@ exports[`treegrid treegrid component should set aria-multiselectable to true 1`]
   aria-multiselectable="true"
   className="slds-table slds-table_edit slds-tree slds-table_tree"
   role="treegrid"
-  style={undefined}
 >
   <tr />
 </table>
@@ -7060,7 +6035,6 @@ exports[`treegrid treegrid component should set resizable 1`] = `
   aria-multiselectable={null}
   className="slds-table slds-table_edit slds-table_resizable-cols slds-tree slds-table_tree"
   role="treegrid"
-  style={undefined}
 >
   <tr />
 </table>

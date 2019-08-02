@@ -439,9 +439,7 @@ exports[`render builder header render base builder header with toolbar 1`] = `
         className="slds-button-group"
       >
         <button
-          aria-haspopup={undefined}
           className="slds-button slds-button_icon slds-button_icon-border"
-          id={undefined}
           tabIndex="0"
           title="Undo"
         >
@@ -460,9 +458,7 @@ exports[`render builder header render base builder header with toolbar 1`] = `
           </span>
         </button>
         <button
-          aria-haspopup={undefined}
           className="slds-button slds-button_icon slds-button_icon-border"
-          id={undefined}
           tabIndex="-1"
           title="Redo"
         >
@@ -490,9 +486,7 @@ exports[`render builder header render base builder header with toolbar 1`] = `
         className="slds-button-group"
       >
         <button
-          aria-haspopup={undefined}
           className="slds-button slds-button_icon slds-button_icon-border"
-          id={undefined}
           tabIndex="-1"
           title="Cut"
         >
@@ -511,9 +505,7 @@ exports[`render builder header render base builder header with toolbar 1`] = `
           </span>
         </button>
         <button
-          aria-haspopup={undefined}
           className="slds-button slds-button_icon slds-button_icon-border"
-          id={undefined}
           tabIndex="-1"
           title="Copy"
         >
@@ -532,9 +524,7 @@ exports[`render builder header render base builder header with toolbar 1`] = `
           </span>
         </button>
         <button
-          aria-haspopup={undefined}
           className="slds-button slds-button_icon slds-button_icon-border"
-          id={undefined}
           tabIndex="-1"
           title="Paste"
         >

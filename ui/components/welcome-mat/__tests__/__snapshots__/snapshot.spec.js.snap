@@ -16,9 +16,7 @@ exports[`Composed Welcome Mat Snapshots renders a deprecated welcome mat 1`] = `
       className="slds-modal__header slds-modal__header_empty"
     >
       <button
-        aria-haspopup={undefined}
         className="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse"
-        id={undefined}
         title="Close"
       >
         <svg
@@ -72,7 +70,6 @@ exports[`Composed Welcome Mat Snapshots renders a deprecated welcome mat 1`] = `
             </p>
           </div>
           <div
-            aria-labelledby={undefined}
             aria-valuemax="100"
             aria-valuemin="0"
             aria-valuenow={0}
@@ -432,9 +429,7 @@ exports[`Composed Welcome Mat Snapshots renders a splash welcome mat 1`] = `
       className="slds-modal__header slds-modal__header_empty"
     >
       <button
-        aria-haspopup={undefined}
         className="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse"
-        id={undefined}
         title="Close"
       >
         <svg
@@ -486,7 +481,6 @@ exports[`Composed Welcome Mat Snapshots renders a splash welcome mat 1`] = `
               >
                 <button
                   className="slds-button slds-button_brand"
-                  disabled={undefined}
                 >
                   Learn More
                 </button>
@@ -495,7 +489,6 @@ exports[`Composed Welcome Mat Snapshots renders a splash welcome mat 1`] = `
                 >
                   <div
                     className="slds-form-element"
-                    role={undefined}
                   >
                     <div
                       className="slds-form-element__control"
@@ -504,20 +497,15 @@ exports[`Composed Welcome Mat Snapshots renders a splash welcome mat 1`] = `
                         className="slds-checkbox"
                       >
                         <input
-                          aria-describedby={undefined}
                           aria-labelledby={null}
-                          defaultChecked={undefined}
-                          disabled={undefined}
                           id="checkbox-unique-id-1"
                           name="options"
-                          tabIndex={undefined}
                           type="checkbox"
                           value="checkbox-unique-id-1"
                         />
                         <label
                           className="slds-checkbox__label"
                           htmlFor="checkbox-unique-id-1"
-                          id={undefined}
                         >
                           <span
                             className="slds-checkbox_faux"
@@ -558,9 +546,7 @@ exports[`Composed Welcome Mat Snapshots renders a trailhead welcome mat 1`] = `
       className="slds-modal__header slds-modal__header_empty"
     >
       <button
-        aria-haspopup={undefined}
         className="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse"
-        id={undefined}
         title="Close"
       >
         <svg
@@ -650,7 +636,6 @@ exports[`Composed Welcome Mat Snapshots renders a trailhead welcome mat 1`] = `
                 </p>
               </div>
               <div
-                aria-labelledby={undefined}
                 aria-valuemax="100"
                 aria-valuemin="0"
                 aria-valuenow={0}
@@ -1052,9 +1037,7 @@ exports[`Composed Welcome Mat Snapshots renders a welcome mat 1`] = `
       className="slds-modal__header slds-modal__header_empty"
     >
       <button
-        aria-haspopup={undefined}
         className="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse"
-        id={undefined}
         title="Close"
       >
         <svg
@@ -1114,7 +1097,6 @@ exports[`Composed Welcome Mat Snapshots renders a welcome mat 1`] = `
                 </p>
               </div>
               <div
-                aria-labelledby={undefined}
                 aria-valuemax="100"
                 aria-valuemin="0"
                 aria-valuenow={0}
@@ -1516,9 +1498,7 @@ exports[`Composed Welcome Mat Snapshots renders an info-only welcome mat 1`] = `
       className="slds-modal__header slds-modal__header_empty"
     >
       <button
-        aria-haspopup={undefined}
         className="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse"
-        id={undefined}
         title="Close"
       >
         <svg
@@ -1570,7 +1550,6 @@ exports[`Composed Welcome Mat Snapshots renders an info-only welcome mat 1`] = `
               >
                 <button
                   className="slds-button slds-button_brand"
-                  disabled={undefined}
                 >
                   Learn More
                 </button>
@@ -1579,7 +1558,6 @@ exports[`Composed Welcome Mat Snapshots renders an info-only welcome mat 1`] = `
                 >
                   <div
                     className="slds-form-element"
-                    role={undefined}
                   >
                     <div
                       className="slds-form-element__control"
@@ -1588,20 +1566,15 @@ exports[`Composed Welcome Mat Snapshots renders an info-only welcome mat 1`] = `
                         className="slds-checkbox"
                       >
                         <input
-                          aria-describedby={undefined}
                           aria-labelledby={null}
-                          defaultChecked={undefined}
-                          disabled={undefined}
                           id="checkbox-unique-id-2"
                           name="options"
-                          tabIndex={undefined}
                           type="checkbox"
                           value="checkbox-unique-id-2"
                         />
                         <label
                           className="slds-checkbox__label"
                           htmlFor="checkbox-unique-id-2"
-                          id={undefined}
                         >
                           <span
                             className="slds-checkbox_faux"
@@ -1913,7 +1886,6 @@ Array [
     </p>
   </div>,
   <div
-    aria-labelledby={undefined}
     aria-valuemax="100"
     aria-valuemin="0"
     aria-valuenow={0}
@@ -1967,7 +1939,6 @@ Array [
     </p>
   </div>,
   <div
-    aria-labelledby={undefined}
     aria-valuemax="100"
     aria-valuemin="0"
     aria-valuenow={40}
@@ -2021,7 +1992,6 @@ Array [
     </p>
   </div>,
   <div
-    aria-labelledby={undefined}
     aria-valuemax="100"
     aria-valuemin="0"
     aria-valuenow={0}
@@ -2075,7 +2045,6 @@ Array [
     </p>
   </div>,
   <div
-    aria-labelledby={undefined}
     aria-valuemax="100"
     aria-valuemin="0"
     aria-valuenow={0}
@@ -2107,7 +2076,6 @@ exports[`Welcome Mat Helper Components renders WelcomeMatInfoActions 1`] = `
 >
   <button
     className="slds-button slds-button_brand"
-    disabled={undefined}
   >
     Learn More
   </button>
@@ -2116,7 +2084,6 @@ exports[`Welcome Mat Helper Components renders WelcomeMatInfoActions 1`] = `
   >
     <div
       className="slds-form-element"
-      role={undefined}
     >
       <div
         className="slds-form-element__control"
@@ -2125,20 +2092,15 @@ exports[`Welcome Mat Helper Components renders WelcomeMatInfoActions 1`] = `
           className="slds-checkbox"
         >
           <input
-            aria-describedby={undefined}
             aria-labelledby={null}
-            defaultChecked={undefined}
-            disabled={undefined}
             id="checkbox-unique-id-4"
             name="options"
-            tabIndex={undefined}
             type="checkbox"
             value="checkbox-unique-id-4"
           />
           <label
             className="slds-checkbox__label"
             htmlFor="checkbox-unique-id-4"
-            id={undefined}
           >
             <span
               className="slds-checkbox_faux"
@@ -2195,7 +2157,6 @@ Array [
   >
     <button
       className="slds-button slds-button_brand"
-      disabled={undefined}
     >
       Learn More
     </button>
@@ -2204,7 +2165,6 @@ Array [
     >
       <div
         className="slds-form-element"
-        role={undefined}
       >
         <div
           className="slds-form-element__control"
@@ -2213,20 +2173,15 @@ Array [
             className="slds-checkbox"
           >
             <input
-              aria-describedby={undefined}
               aria-labelledby={null}
-              defaultChecked={undefined}
-              disabled={undefined}
               id="checkbox-unique-id-5"
               name="options"
-              tabIndex={undefined}
               type="checkbox"
               value="checkbox-unique-id-5"
             />
             <label
               className="slds-checkbox__label"
               htmlFor="checkbox-unique-id-5"
-              id={undefined}
             >
               <span
                 className="slds-checkbox_faux"
@@ -2249,7 +2204,6 @@ exports[`Welcome Mat Helper Components renders WelcomeMatSampleActions 1`] = `
 Array [
   <button
     className="slds-button slds-button_brand"
-    disabled={undefined}
   >
     Learn More
   </button>,
@@ -2258,7 +2212,6 @@ Array [
   >
     <div
       className="slds-form-element"
-      role={undefined}
     >
       <div
         className="slds-form-element__control"
@@ -2267,20 +2220,15 @@ Array [
           className="slds-checkbox"
         >
           <input
-            aria-describedby={undefined}
             aria-labelledby={null}
-            defaultChecked={undefined}
-            disabled={undefined}
             id="checkbox-unique-id-3"
             name="options"
-            tabIndex={undefined}
             type="checkbox"
             value="checkbox-unique-id-3"
           />
           <label
             className="slds-checkbox__label"
             htmlFor="checkbox-unique-id-3"
-            id={undefined}
           >
             <span
               className="slds-checkbox_faux"
@@ -2556,7 +2504,6 @@ Array [
     </p>
   </div>,
   <div
-    aria-labelledby={undefined}
     aria-valuemax="100"
     aria-valuemin="0"
     aria-valuenow={0}
@@ -2640,7 +2587,6 @@ Array [
     </p>
   </div>,
   <div
-    aria-labelledby={undefined}
     aria-valuemax="100"
     aria-valuemin="0"
     aria-valuenow={40}
@@ -2724,7 +2670,6 @@ Array [
     </p>
   </div>,
   <div
-    aria-labelledby={undefined}
     aria-valuemax="100"
     aria-valuemin="0"
     aria-valuenow={0}
@@ -2808,7 +2753,6 @@ Array [
     </p>
   </div>,
   <div
-    aria-labelledby={undefined}
     aria-valuemax="100"
     aria-valuemin="0"
     aria-valuenow={0}

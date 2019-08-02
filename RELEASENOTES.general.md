@@ -3,29 +3,13 @@
 
 ## 2.9.5 - August 2, 2019
 
-## Fix
-
-- Update Rich Text Editor styles to include INS and DEL elements
-
 ## 2.9.4 - July 3, 2019
 
 ## 2.9.3 - May 24, 2019
 
-## Fix
-
-- Fix `font-size` of `body` to adjust when on a touch-enabled device
-
 ## 2.9.2 - May 7, 2019
 
-## General
-
-- Moved all components to mdx documentation
-
 ## 2.9.1 - April 18, 2019
-
-## Fix
-
-- Fix import statement for VisualForce specific styles
 
 ## 2.9.0 - April 17, 2019
 

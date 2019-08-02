@@ -2,7 +2,12 @@
 
 # Rich Text Editor Release Notes
 
-<!-- ## [Unreleased] -->
+## 2.9.5 - July 30 2019
+
+### Fixed
+
+- Added text treatments for `<ins>` and `<del>
+
 ## 2.7.5
 
 ### Fixed

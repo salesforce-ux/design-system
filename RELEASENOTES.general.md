@@ -1,5 +1,8 @@
 <!-- Release notes authoring guidelines: http://keepachangelog.com/ -->
-<!-- On release, add general notes here. In time the legacy relase notes will be add to this -->
+<!-- On release, add general notes here. In time the legacy release notes will be add to this -->
+
+## 2.9.5 - August 2, 2019
+
 ## 2.9.4 - July 3, 2019
 
 ## 2.9.3 - May 24, 2019

@@ -11,7 +11,12 @@
 
 - Removed size utility classes on combobox/selects in toolbar for component-specific classes (`slds-rich-text-editor__select_x-small` and `slds-rich-text-editor__select_xx-small`)
 
-<!-- ## [Unreleased] -->
+## 2.9.5
+
+### Fixed
+
+- Added text treatments for `<ins>` and `<del>
+
 ## 2.7.5
 
 ### Fixed

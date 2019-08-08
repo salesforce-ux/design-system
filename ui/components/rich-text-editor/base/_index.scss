@@ -609,6 +609,16 @@
     margin: $spacing-x-large $spacing-large;
   }
 
+  ins {
+    color: $color-text-success;
+    text-decoration: underline;
+  }
+
+  del {
+    color: $color-text-destructive;
+    text-decoration: line-through;
+  }
+
   ul {
     @include list-has-bullets;
 

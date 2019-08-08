@@ -1,7 +1,8 @@
 sudo: required
-language: java
-jdk:
-  - oraclejdk8
+dist: bionic
+language: node_js
+node_js:
+  - "8"
 before_install:
   - nvm install v8.4.0
   - npm version
@@ -9,8 +10,10 @@ install:
   - npm install
 script:
   - npm run gulp -- travis
-cache:
-  directories:
-    - node_modules
+cache: npm
 addons:
-  chrome: stable
+  apt:
+    sources:
+      - google-chrome
+    packages:
+      - google-chrome-stable

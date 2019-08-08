@@ -9,6 +9,11 @@ install:
   - npm install
 script:
   - npm run gulp -- travis
-cache: npm
+cache:
+  directories:
+    - node_modules
 addons:
   chrome: stable
+  apt:
+    packages:
+      - libgconf-2-4

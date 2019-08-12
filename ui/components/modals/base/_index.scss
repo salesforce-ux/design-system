@@ -276,8 +276,9 @@
 
   .slds-modal__container {
     @include mq-medium-min {
-      width: 52.0625rem; // These values taken from welcome mat modal
-      max-width: none;
+      width: 60%;
+      max-width: 52.0625rem; // This value taken from welcome mat modal
+      min-width: 40rem; // TODO: Tokenize
     }
   }
 }

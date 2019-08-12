@@ -145,7 +145,7 @@ export const sass = () =>
     .src(distPath('scss/index.scss'))
     .pipe(
       gulpSass({
-        precision: 10,
+        precision: 3,
         includePaths: [paths.node_modules]
       })
     )

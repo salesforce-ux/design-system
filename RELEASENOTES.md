@@ -35,7 +35,9 @@
 ### [Cards](https://www.lightningdesignsystem.com/components/cards)
 #### Changed
 - Visually remove border and set border-radius to zero on touch devices
-- For touch devices, set font size of `.slds-card__header-title` to `$var-font-size-6`
+- For touch devices:
+  - Set font size of `.slds-card__header-title` to `$var-font-size-6`
+  - Make `.slds-card__header-title` always bold whether it contains a link or not
 
 ### [Chat](https://www.lightningdesignsystem.com/components/chat)
 #### Changed

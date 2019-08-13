@@ -3,6 +3,15 @@
 # Tabs Release Notes
 
 <!-- ## [Unreleased] -->
+
+## 2.10.0
+
+### Changed
+
+- For touch devices:
+  - Changed the text color of `.slds-tabs-mobile__item` to Gray Color 12
+  - Removed the active color from the button nested within `.slds-tabs-mobile__item` so the text color does not change on press (background color still changes on press)
+
 ## 2.8.3
 
 ### Changed

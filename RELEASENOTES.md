@@ -35,6 +35,7 @@
 ### [Cards](https://www.lightningdesignsystem.com/components/cards)
 #### Changed
 - Visually remove border and set border-radius to zero on touch devices
+- For touch devices, set font size of `.slds-card__header-title` to `$var-font-size-6`
 
 ### [Chat](https://www.lightningdesignsystem.com/components/chat)
 #### Changed
@@ -187,6 +188,12 @@
 ### [Spinners](https://www.lightningdesignsystem.com/components/spinners)
 #### Fixed
 - Revised keyframes and transform rules to fix spinner CPU / rendering performance issues.
+
+### [Tabs](https://www.lightningdesignsystem.com/components/tabs)
+#### Changed
+- For touch devices:
+  - Changed the text color of `.slds-tabs-mobile__item` to Gray Color 12
+  - Removed the active color from the button nested within `.slds-tabs-mobile__item` so the text color does not change on press (background color still changes on press)
 
 ### [Trees](https://www.lightningdesignsystem.com/components/trees)
 #### Added

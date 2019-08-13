@@ -7,6 +7,7 @@
 
 ### Changed
 - Visually remove border and set border-radius to zero on touch devices
+- For touch devices, set font size of `.slds-card__header-title` to `$var-font-size-6`
 
 ## 2.8.1
 

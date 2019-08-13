@@ -66,6 +66,13 @@
   &:last-child {
     border-bottom: $border-width-thin solid $color-border;
   }
+
+  @include touch-device {
+
+    .slds-button:active {
+      color: currentColor;
+    }
+  }
 }
 
 /**

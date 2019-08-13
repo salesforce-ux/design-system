@@ -28,3 +28,7 @@ props:
   SHADOW_DOCKED:
     value: '{!OFFSET_NONE} -{!OFFSET_X_SMALL}px {!OFFSET_X_SMALL}px {!OFFSET_NONE} {!BLACK_TRANSPARENT_16}'
     comment: Shadow on elements that are docked to the bottom of the viewport.
+  SHADOW_HEADER:
+    value: '{!OFFSET_NONE} {!OFFSET_X_SMALL}px {!OFFSET_MEDIUM}px {!BLACK_TRANSPARENT_07}'
+    comment: Shadow for header.
+    access: global

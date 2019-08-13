@@ -20,7 +20,3 @@ props:
     value: '{!OFFSET_NONE} {!OFFSET_X_SMALL}px {!OFFSET_SMALL}px {!OFFSET_NONE} {!BLACK_TRANSPARENT_16}'
     comment: Shadow for drop down.
     access: global
-  SHADOW_HEADER:
-    value: '{!OFFSET_NONE} {!OFFSET_X_SMALL}px {!OFFSET_MEDIUM}px {!BLACK_TRANSPARENT_07}'
-    comment: Shadow for header.
-    access: global

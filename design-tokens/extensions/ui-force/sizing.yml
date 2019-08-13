@@ -43,22 +43,3 @@ props:
   MAX_WIDTH_ACTION_OVERFLOW_MENU:
     value: 512px
     comment: "Maximum width for action overflow menu so that it's not full-screen for tablet."
-  SQUARE_TAPPABLE:
-    value: 2.75rem
-    comment: Tap target size for elements that rely on width and height dimensions
-    access: global
-  SQUARE_TAPPABLE_SMALL:
-    value: 2rem
-    comment: Small tap target size for elements that rely on width and height dimensions
-  SQUARE_TAPPABLE_X_SMALL:
-    value: 1.5rem
-    comment: X-small tap target size for elements that rely on width and height dimensions
-  SQUARE_TAPPABLE_XX_SMALL:
-    value: 1.25rem
-    comment: Xx-small tap target size for elements that rely on width and height dimensions
-  HEIGHT_TAPPABLE:
-    value: 2.75rem
-    comment: Tap target size for elements that rely on height or line-height
-  HEIGHT_TAPPABLE_SMALL:
-    value: 2rem
-    comment: Small tap target size for elements that rely on height or line-height

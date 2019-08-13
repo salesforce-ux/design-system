@@ -22,10 +22,6 @@ props:
     value: '1'
     comment: Remove extra leading. Unitless line-heights for reusability
     access: global
-  LINE_HEIGHT_TAB:
-    value: 2.5rem
-    comment: Line heights for tabs
-    access: global
   VAR_LINE_HEIGHT_TEXT:
     value: '1.5'
     comment: Variable unitless line-heights for reusability

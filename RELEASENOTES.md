@@ -97,6 +97,7 @@
 
 ### [Files](https://www.lightningdesignsystem.com/components/files)
 #### Fixed
+- Scoped the eyeball hover effect to the figure link only.
 - Added `display` and `overflow` css rules to allow for text truncation on `.slds-file__text`.
 
 ### [Form Element](https://www.lightningdesignsystem.com/components/form-element)

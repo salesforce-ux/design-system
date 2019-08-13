@@ -10,5 +10,7 @@ imports:
 - ./duration.yml
 - ./illustrations.yml
 - ./image-paths.yml
+- ./line-height.yml
+- ./radius.yml
 - ./sizing.yml
 - ./text-color.yml

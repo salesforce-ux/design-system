@@ -55,3 +55,7 @@ props:
   COLOR_TEXT_BUTTON_INVERSE:
     value: '{!PALETTE_GRAY_4}'
     comment: Text color for a button that has a parent element that has a hover state. This is the default text/icon color for that button before its parent has been hovered over.
+  ## TABS
+  COLOR_TEXT_TAB_LABEL:
+    value: '{!PALETTE_GRAY_12}'
+    comment: Color for default text in a tab group.

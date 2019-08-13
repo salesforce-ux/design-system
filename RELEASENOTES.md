@@ -189,6 +189,12 @@
 #### Fixed
 - Revised keyframes and transform rules to fix spinner CPU / rendering performance issues.
 
+### [Tabs](https://www.lightningdesignsystem.com/components/tabs)
+#### Changed
+- For touch devices:
+  - Changed the text color of `.slds-tabs-mobile__item` to Gray Color 12
+  - Removed the active color from the button nested within `.slds-tabs-mobile__item` so the text color does not change on press (background color still changes on press)
+
 ### [Trees](https://www.lightningdesignsystem.com/components/trees)
 #### Added
 - Added right-to-left specific selector to `slds-tree__item` to place the `box-shadow` in the correct location in right-to-left languages.

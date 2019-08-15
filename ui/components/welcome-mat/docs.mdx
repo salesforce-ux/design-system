@@ -10,6 +10,12 @@ import { getDisplayElementById } from '../../shared/helpers';
   A Welcome Mat provides a series of unordered items a user can click to learn about a thematic topic.
 </div>
 
+<CodeView exampleOnly isViewport style={{ height: '700px' }}>
+  <WelcomeMat.Context>
+    {getDisplayElementById(WelcomeMat.examples, "with-completed-tiles")}
+  </WelcomeMat.Context>
+</CodeView>
+
 ## About Welcome Mat
 
 - Welcome Mat tiles may trigger walkthroughs, modals, videos, or navigate users to specific URLs.

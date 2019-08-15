@@ -8,7 +8,7 @@ import { getDisplayElementById } from '../../shared/helpers';
   Text inputs are used for freeform data entry
 </div>
 
-<CodeView>
+<CodeView exampleOnly>
   {InputExamples.default}
 </CodeView>
 
@@ -51,6 +51,12 @@ The IDs must appear in that order:
 The reason we do this is to create a better association between the input and the supporting labels around it.
 
 By only using the traditional `label[for]` method, the fixed text is never read out in the context of editing the input value. With using the `aria-labelledby` attribute we can create a better label with all the visual labels associated with it, in a relevant order, that is read by assistive technology when the user needs it; when they're editing the value.
+
+## Base
+
+<CodeView>
+  {InputExamples.default}
+</CodeView>
 
 ## States
 

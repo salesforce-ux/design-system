@@ -9,18 +9,24 @@ import * as PageHeadersExamplesRecordHomeVertical from './record-home-vertical/e
 import * as PageHeadersExamplesRelatedList from './related-list/example';
 
 <div className="lead doc">
-  Page headers are used at the top of several page types. They use the `.slds-page-header` class as a base and are comprised of multiple components.
+  Page headers are used at the top of several page types and contains the Title of the page.
 </div>
 
-# Base
+<CodeView exampleOnly>
+  {PageHeadersExamplesObjectHome.default}
+</CodeView>
+
+## About Page header
+
+The Page Header uses the `.slds-page-header` class as a base and is comprised of multiple components including the Title of the page and supporting details. For large form factors, it may include actions.
+
+## Base
 
 <CodeView>
   {PageHeadersExamplesBase.default}
 </CodeView>
 
-The page header contains the Title of the page, and supporting details. For large form factors, it may include actions.
-
-# Object Home
+## Object Home
 
 <CodeView>
   {PageHeadersExamplesObjectHome.default}
@@ -30,27 +36,27 @@ The title for the Object Home page header is a filtering component. The `.slds-t
 
 This component is created entirely of existing components like buttons, button groups, and icons.
 
-## Examples
+### Examples
 
-### With extra long name
+#### With extra long name
 
 <CodeView>
   {getDisplayElementById(PageHeadersExamplesObjectHome.examples, 'base-extra-long')}
 </CodeView>
 
-### Inside a card
+#### Inside a card
 
 <CodeView>
   {getDisplayElementById(PageHeadersExamplesObjectHome.examples, 'card')}
 </CodeView>
 
-### Inside a tabs card
+#### Inside a tabs card
 
 <CodeView>
   {getDisplayElementById(PageHeadersExamplesObjectHome.examples, 'tab-card')}
 </CodeView>
 
-# Record Home
+## Record Home
 
 <CodeView>
   {PageHeadersExamplesRecordHome.default}
@@ -75,7 +81,7 @@ When text is truncated, display full field text in browser tooltip on hover.
 
 Display addresses in two lines. Street address on first line, City, State and Postal Code on line 2. For lengthy addresses, truncate each line individually based on the available width of the area using the `.slds-truncate` class. Display the full address via browser tooltip.
 
-# Record Home Vertical
+## Record Home Vertical
 
 <CodeView>
   {PageHeadersExamplesRecordHomeVertical.default}
@@ -84,7 +90,7 @@ Display addresses in two lines. Street address on first line, City, State and Po
 Vertical page header record home contains up to seven compact layout fields. They're contained in the `.slds-page-header__detail-row` div.
 The heading does not truncate. This is typically used in more compact layouts where more vertical space is desired.
 
-# Related List
+## Related List
 
 <CodeView>
   {PageHeadersExamplesRelatedList.default}

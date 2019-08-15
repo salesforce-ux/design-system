@@ -13,6 +13,13 @@ import { Illustration, IllustrationText, IllustrationCTA } from '../illustration
   An illustration is an image and inline text that work in tandem to communicate a state in a more friendly way.
 </div>
 
+<CodeView exampleOnly>
+  <Illustration>
+    <OpenRoad />
+    <IllustrationText heading="Lorem ipsum dolor" />
+  </Illustration>
+</CodeView>
+
 ## About Illustration
 
 Illustrations should be used within other components, such as cards, to express the state of the component. An illustration image must be accompanied with heading text inline.
@@ -27,10 +34,12 @@ Each SVG tag requires an <code className="doc">aria-hidden="true"</code> attribu
 
 ## Base
 
-<Illustration>
-  <FishingDeals />
-  <IllustrationText heading="Lorem ipsum dolor" />
-</Illustration>
+<CodeView>
+  <Illustration>
+    <FishingDeals />
+    <IllustrationText heading="Lorem ipsum dolor" />
+  </Illustration>
+</CodeView>
 
 ## Using Empty States
 

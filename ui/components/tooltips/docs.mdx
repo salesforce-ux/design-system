@@ -9,6 +9,14 @@ import { getDisplayElementById } from '../../shared/helpers';
   A Tooltip is a small piece of contextual information about an element on the screen, which is displayed when a user hovers or focuses on the element it is describing. It is not focusable and cannot contain focusable content.
 </div>
 
+<CodeView exampleOnly style={{
+          paddingLeft: '1rem',
+          paddingTop: '1rem',
+          position: 'relative'
+        }}>
+  {getDisplayElementById(Base.examples, 'button-icon')}
+</CodeView>
+
 ## About Tooltips
 
 Nubbins are indicators that inform the user of the direction of the content associated with the tooltip. A tooltip can accept the following nubbin position classes, `.slds-nubbin_left`, `.slds-nubbin_left-top`, `.slds-nubbin_left-bottom`, `.slds-nubbin_top-left`, `.slds-nubbin_top-right`, `.slds-nubbin_right-top`, `.slds-nubbin_right-bottom`, `.slds-nubbin_bottom-left`, `.slds-nubbin_bottom-right`.

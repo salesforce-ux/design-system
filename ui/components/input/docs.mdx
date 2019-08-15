@@ -39,25 +39,6 @@ on the icon, assistive technology reads out the content of the tooltip. If the t
 
 In some cases, the read-only field state is swapped and has no `<input>`. This is called `static` in the examples. In that case, don’t use a `<label>`. This provides better accessibility for screen readers and keyboard navigators. Instead, use a `<span>` with the `.slds-form-element__label` class. Instead of an `<input>`, use the `.slds-form-element__static` class inside the `.slds-form-element__control` wrapper.
 
-### Fixed Text
-
-When using the fixed text variants for prepending or appending symbols to inputs, please be sure to use `aria-labelledby` on the input, that points to the ids of the label, prepended text and appended text as a space separated list.
-
-The IDs must appear in that order:
-1. label,
-2. prepended
-3. then appended.
-
-The reason we do this is to create a better association between the input and the supporting labels around it.
-
-By only using the traditional `label[for]` method, the fixed text is never read out in the context of editing the input value. With using the `aria-labelledby` attribute we can create a better label with all the visual labels associated with it, in a relevant order, that is read by assistive technology when the user needs it; when they're editing the value.
-
-## Base
-
-<CodeView>
-  {InputExamples.default}
-</CodeView>
-
 ## States
 
 ### Required
@@ -96,6 +77,10 @@ By only using the traditional `label[for]` method, the fixed text is never read 
 
 #### Icon on the left
 
+<Blockquote type="warning">
+  A left aligned icon cannot be paired wtih fixed text.
+</Blockquote>
+
 <CodeView>
   {getDisplayElementById(InputExamples.examples, 'left-icon')}
 </CodeView>
@@ -119,6 +104,22 @@ By only using the traditional `label[for]` method, the fixed text is never read 
 </CodeView>
 
 ### Fixed Text
+
+<Blockquote type="warning">
+  Fixed text cannot be paired with an icon that is aligned left.
+</Blockquote>
+
+When using the fixed text variants for prepending or appending symbols to inputs, please be sure to use `aria-labelledby` on the input, that points to the ids of the label, prepended text and appended text as a space separated list.
+
+The IDs must appear in that order:
+1. label,
+2. prepended
+3. then appended.
+
+The reason we do this is to create a better association between the input and the supporting labels around it.
+
+By only using the traditional `label[for]` method, the fixed text is never read out in the context of editing the input value. With using the `aria-labelledby` attribute we can create a better label with all the visual labels associated with it, in a relevant order, that is read by assistive technology when the user needs it; when they're editing the value.
+
 
 <CodeView>
   {getDisplayElementById(InputExamples.examples, 'fixed-text')}

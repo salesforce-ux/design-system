@@ -112,6 +112,7 @@
 
 ### [Input](https://www.lightningdesignsystem.com/components/input)
 #### Added
+- Updated documentation to state that iconLeft and fixed text labels are incompatible.
 - When an `input` has an error, `aria-invalid="true"` has been added to the `input` element
 #### Changed
 - Removed default `box-shadow` on `inputs` for Webkit

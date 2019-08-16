@@ -8,6 +8,10 @@ import { getDisplayElementById } from '../../shared/helpers';
   A tree is visualization of a structure hierarchy. A branch can be expanded or collapsed.
 </div>
 
+<CodeView exampleOnly>
+  {getDisplayElementById(TreeExamples.states, 'selected')}
+</CodeView>
+
 ## About Trees
 
 A tree is composed of two core elements `.slds-tree` and `.slds-tree__item`. The tree wrapper, the outer most parent `ul`, will receive the class `.slds-tree`. This class will be used for scoping a tree, which allows for particular styling based on states in which the tree may enter.

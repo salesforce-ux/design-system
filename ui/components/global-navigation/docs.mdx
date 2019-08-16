@@ -10,13 +10,11 @@ import { getDisplayElementById } from '../../shared/helpers';
   Global Navigation is the list of navigation links your users find in the Header on every page in Salesforce. Your Global Navigation includes a Navigation Bar where your users find the App Launcher, App Name, and Pages that each App includes.
 </div>
 
-## About Navigation Bar
-
-<CodeView style={{height: '16rem'}}>
+<CodeView exampleOnly style={{height: '15rem'}}>
   {NavExamples.default}
 </CodeView>
 
-### Building the Navigation Bar
+## About Navigation Bar
 
 The navigation bar is composed of a wrapper and 2 required regions:
 
@@ -24,6 +22,10 @@ The navigation bar is composed of a wrapper and 2 required regions:
 - **Secondary,** which contains the App Items, for navigating within the current app
 
 The markup should follow the order listed above for proper keyboard interaction set by the 508 compliance standards. Each included region inside the wrapper of `.slds-context-bar` needs the appropriate ordering class name, e.g. `.slds-context-bar__primary`.
+
+<CodeView style={{height: '16rem'}}>
+  {NavExamples.default}
+</CodeView>
 
 ### Items on the Navigation Bar
 

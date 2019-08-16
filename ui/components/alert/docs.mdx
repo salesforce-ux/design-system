@@ -10,6 +10,21 @@ import Blockquote from '../../../shared/components/Blockquote';
   Alert banners communicate a state that affects the entire system, not just a feature or page. It persists over a session and appears without the user initiating the action.
 </div>
 
+<CodeView exampleOnly>
+  <Alert type="info">
+      <UtilityIcon
+        containerClassName="slds-m-right_x-small"
+        className="slds-icon_x-small"
+        assistiveText={false}
+        symbol="user"
+      />
+      <h2>
+        Logged in as John Smith (johnsmith@acme.com).{' '}
+        <a href="javascript:void(0);">Log out</a>
+      </h2>
+    </Alert>
+</CodeView>
+
 ## About Alert
 
 ### Accessibility

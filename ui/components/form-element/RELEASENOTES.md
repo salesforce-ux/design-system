@@ -4,6 +4,10 @@
 
 <!-- ## [Unreleased] -->
 
+## 2.10.1
+
+- On touch devices, remove the `min-height` from `.slds-form-element_readonly .slds-form-element__control` for denser read-only forms
+
 ## 2.10.0
 
 ### Changed

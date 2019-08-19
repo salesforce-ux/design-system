@@ -129,11 +129,7 @@
   .slds-form-element__control {
     padding-top: $spacing-xxx-small;
     padding-bottom: $spacing-xxx-small;
-
-    @include touch-device {
-      @include flex-vertical-center;
-      min-height: $height-tappable; // Makes height consistent with other checkbox variants
-    }
+    // No touch-device() min-height which deviates from touch input height system, see https://gus.lightning.force.com/lightning/r/ADM_Work__c/a07B0000006P1raIAC/view
   }
 
   // We want no spacing in read only and allow line-height to handle white-space

@@ -61,7 +61,7 @@ $light-gray-border-color: #f2f2f2;
 
 .docs-codeblock__action-bar {
   display: flex;
-  flex-direction: row-reverse;
+  justify-content: flex-end;
   border-bottom: 1px solid $light-gray-border-color;
   background: #fff;
 }

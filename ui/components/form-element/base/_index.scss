@@ -129,7 +129,7 @@
   .slds-form-element__control {
     padding-top: $spacing-xxx-small;
     padding-bottom: $spacing-xxx-small;
-    // No touch-device() min-height which deviates from touch input height system, see https://gus.lightning.force.com/lightning/r/ADM_Work__c/a07B0000006P1raIAC/view
+    // Heads up: no touch-device() min-height is intended per design which deviates from touch input height system
   }
 
   // We want no spacing in read only and allow line-height to handle white-space

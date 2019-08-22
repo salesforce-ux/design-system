@@ -1,7 +1,7 @@
 {
   "name": "design-system",
   "description": "Salesforce Lightning Design System",
-  "version": "2.10.0-dev",
+  "version": "2.10.0",
   "author": "Salesforce",
   "slds": {
     "name": "Winter ’20",
@@ -14,7 +14,7 @@
   "private": false,
   "config": {
     "slds": {
-      "internal": true
+      "internal": false
     },
     "search": {
       "appId": "B2KKG101RI",

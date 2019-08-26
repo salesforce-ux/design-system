@@ -4,10 +4,6 @@
 
 <!-- ## [Unreleased] -->
 
-## 2.10.1
-
-- On touch devices, remove the `min-height` from `.slds-form-element_readonly .slds-form-element__control` for denser read-only forms
-
 ## 2.10.0
 
 ### Changed
@@ -17,6 +13,7 @@
 - On touch devices, set the tap target height of button-icons to `$height-tappable-small` when inline with label text
 - On touch devices, increase the font size of `.slds-form-element__static` to `$font-size-5`
 - On touch devices and within `.slds-form-element_readonly`, increase the size of `.slds-icon` to `$square-tappable-x-small` and increase the height of `.slds-form-element__control` to `$height-tappable` which aligns `.slds-form-element_readonly`'s touch height to other form elements
+- On touch devices, remove the `min-height` from `.slds-form-element_readonly .slds-form-element__control` for denser read-only forms
 
 ## 2.8.1
 

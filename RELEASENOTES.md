@@ -3,6 +3,9 @@
 
 ## Release 2.10.0 - August 22, 2019
 
+- Update color swatch to latest token values
+- Removed support for ASE color swatch format
+
 ## Tokens
 
 ### Changed

@@ -34,8 +34,10 @@ export let Radio = props => {
     <span className={classNames('slds-radio', props.className)}>
       <input
         type="radio"
-        id={props.id ? props.id : uniqueId}
-        value={props.id ? props.id : uniqueId}
+        id={props.id || uniqueId}
+        value={props.id || uniqueId}
+        // Since there are no more iframes with doc blocks, a unique name must
+        // be given to each radio group to properly display the checked status within each group
         name={props.name || 'options'}
         disabled={props.disabled}
         defaultChecked={props.checked}
@@ -74,8 +76,8 @@ export default (
   <Fieldset>
     <Legend>Radio Group Label</Legend>
     <FormElementControl>
-      <Radio checked label="Radio Label One" />
-      <Radio label="Radio Label Two" />
+      <Radio checked label="Radio Label One" name="default" />
+      <Radio label="Radio Label Two" name="default" />
     </FormElementControl>
   </Fieldset>
 );
@@ -88,8 +90,8 @@ export let states = [
       <Fieldset>
         <Legend>Radio Group Label</Legend>
         <FormElementControl>
-          <Radio disabled label="Radio Label One" />
-          <Radio disabled label="Radio Label Two" />
+          <Radio disabled label="Radio Label One" name="disabled" />
+          <Radio disabled label="Radio Label Two" name="disabled" />
         </FormElementControl>
       </Fieldset>
     )
@@ -101,8 +103,13 @@ export let states = [
       <Fieldset>
         <Legend>Radio Group Label</Legend>
         <FormElementControl>
-          <Radio checked disabled label="Radio Label One" />
-          <Radio disabled label="Radio Label Two" />
+          <Radio
+            checked
+            disabled
+            label="Radio Label One"
+            name="checked-and-disabled"
+          />
+          <Radio disabled label="Radio Label Two" name="checked-and-disabled" />
         </FormElementControl>
       </Fieldset>
     )
@@ -119,8 +126,8 @@ export let states = [
           Radio Group Label
         </Legend>
         <FormElementControl>
-          <Radio checked label="Radio Label One" />
-          <Radio label="Radio Label Two" />
+          <Radio checked label="Radio Label One" name="required" />
+          <Radio label="Radio Label Two" name="required" />
         </FormElementControl>
       </Fieldset>
     )
@@ -137,8 +144,13 @@ export let states = [
           Radio Group Label
         </Legend>
         <FormElementControl>
-          <Radio errorId="error_01" checked label="Radio Label One" />
-          <Radio errorId="error_01" label="Radio Label Two" />
+          <Radio
+            errorId="error_01"
+            checked
+            label="Radio Label One"
+            name="error"
+          />
+          <Radio errorId="error_01" label="Radio Label Two" name="error" />
         </FormElementControl>
         <div id="error_01" className="slds-form-element__help">
           This field is required
@@ -154,8 +166,8 @@ export let states = [
         <Fieldset>
           <Legend>Radio Group Label</Legend>
           <FormElementControl>
-            <Radio checked label="Radio Label One" />
-            <Radio label="Radio Label Two" />
+            <Radio checked label="Radio Label One" name="rtl" />
+            <Radio label="Radio Label Two" name="rtl" />
           </FormElementControl>
         </Fieldset>
       </div>

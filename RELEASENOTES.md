@@ -3,6 +3,17 @@
 
 ## Release 2.11.0 - August 26, 2019
 
+## Components
+### [Lookups](https://www.lightningdesignsystem.com/components/lookups)
+#### Added
+- Grouped Lookup wrapping `<div>` attributes:
+  -  `role="combobox"`
+  -  `aria-haspopup="listbox"`
+  -  `aria-expanded="true"`
+- Grouped Lookup `<input>` attribute `aria-controls` set to id of adjacent table
+#### Changed
+- Grouped Lookup `<input>` `role` from `combobox` to `textbox`
+
 ## Release 2.10.0 - August 22, 2019
 
 - Update color swatch to latest token values

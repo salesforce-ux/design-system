@@ -1,5 +1,10 @@
 <!-- Release notes authoring guidelines: http://keepachangelog.com/ -->
 <!-- On release, add general notes here. In time the legacy release notes will be add to this -->
+## 2.11.0
+
+## Added
+
+- Added `-moz` and `-webkit` prefixes to `appearance : none` rules
 
 ## 2.11.0 - August 26, 2019
 

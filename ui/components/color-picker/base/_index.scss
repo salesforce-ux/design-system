@@ -225,7 +225,7 @@
     $hue: ($hue + $color-step);
   }
 
-  appearance: none;
+  @include appearance(none);
   flex: 1;
   padding: 0;
   height: $color-picker-slider-height;
@@ -238,7 +238,7 @@
   );
 
   @mixin thumb-styles {
-    appearance: none;
+    @include appearance(none);
     cursor: pointer;
     height: calc(#{$color-picker-slider-height} - (#{$border-width-thin} * 2));
     width: $color-picker-thumb-width;

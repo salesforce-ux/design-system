@@ -1,7 +1,7 @@
 import Grid, {Column} from './docs/Grid';
 import CodeView from '../../../shared/components/CodeView';
-import Example from '../../../shared/components/Example';
 import Blockquote from '../../../shared/components/Blockquote';
+import GridCodeView from './docs/GridCodeView';
 
 <div className="doc lead">
   The SLDS grid system provides a flexible, mobile-first, device-agnostic layout system. It  has features to control alignment, order, flow, and gutters.
@@ -15,15 +15,11 @@ Our most-used grid has standard 16px gutters. If you don’t have a design that 
   1. Add a grid container by adding `slds-grid` to an HTML element
   2. Add as many `slds-col` elements as you want inside of your grid container
 
-<Example title="Grid Intro 3 col with gutters">
-  <Grid columns="3" className="slds-gutters" />
-</Example>
+<GridCodeView exampleId="intro-3-col-with-gutters"/>
 
 Initially, each column takes an equal percentage of the width available. In this case, that's 33.3% of the container’s width. Once content is added, the sections expand as needed to fit the content if sizing classes are not used.
 
-<Example title="Grid Intro 4 col with gutters">
-  <Grid columns="4" className="slds-gutters" />
-</Example>
+<GridCodeView exampleId="intro-4-col-with-gutters"/>
 
 Adding a fourth column means they'll each take up 25% of the width of the container.
 
@@ -31,21 +27,13 @@ Adding a fourth column means they'll each take up 25% of the width of the contai
 
 You can have up to 12 columns in your grid.
 
-<Example title="Grid Intro 12 col">
-  <Grid columns="12" />
-</Example>
-
+<GridCodeView exampleId="intro-12-col"/>
 
 ## Column Widths
 
 If you don’t want the columns to have widths based on their content, you can easily control the width of the columns by adding column width classes.
 
-<Example title="Grid Column Width 2 col">
-  <Grid className="slds-gutters">
-    <Column className="slds-size_2-of-3">1</Column>
-    <Column className="slds-size_1-of-3">2</Column>
-  </Grid>
-</Example>
+<GridCodeView exampleId="grid-col-width-2-col"/>
 
 This example sets the width of the first column 66% of your `slds-grid` container and the second column to 33% of your `slds-grid` container.
 
@@ -55,90 +43,11 @@ Our sizing classes set widths in percentages. This will keep your layout fluid t
 
 A 12 column grid is our most used grid. Here's an overview of all the available width classes for a 12 column grid:
 
-<Example title="Grid Column Width all options">
-  <Grid small className="slds-wrap">
-
-    <Column className="slds-size_1-of-12">1</Column>
-    <Column className="slds-size_1-of-12">1</Column>
-    <Column className="slds-size_1-of-12">1</Column>
-    <Column className="slds-size_1-of-12">1</Column>
-    <Column className="slds-size_1-of-12">1</Column>
-    <Column className="slds-size_1-of-12">1</Column>
-    <Column className="slds-size_1-of-12">1</Column>
-    <Column className="slds-size_1-of-12">1</Column>
-    <Column className="slds-size_1-of-12">1</Column>
-    <Column className="slds-size_1-of-12">1</Column>
-    <Column className="slds-size_1-of-12">1</Column>
-    <Column className="slds-size_1-of-12">1</Column>
-
-    <Column className="slds-size_2-of-12">2</Column>
-    <Column className="slds-size_2-of-12">2</Column>
-    <Column className="slds-size_2-of-12">2</Column>
-    <Column className="slds-size_2-of-12">2</Column>
-    <Column className="slds-size_2-of-12">2</Column>
-    <Column className="slds-size_2-of-12">2</Column>
-
-    <Column className="slds-size_3-of-12">3</Column>
-    <Column className="slds-size_3-of-12">3</Column>
-    <Column className="slds-size_3-of-12">3</Column>
-    <Column className="slds-size_3-of-12">3</Column>
-
-    <Column className="slds-size_4-of-12">4</Column>
-    <Column className="slds-size_4-of-12">4</Column>
-    <Column className="slds-size_4-of-12">4</Column>
-
-    <Column className="slds-size_5-of-12">5</Column>
-    <Column className="slds-size_5-of-12">5</Column>
-    <Column className="slds-size_2-of-12">2</Column>
-
-    <Column className="slds-size_6-of-12">6</Column>
-    <Column className="slds-size_6-of-12">6</Column>
-
-    <Column className="slds-size_7-of-12">7</Column>
-    <Column className="slds-size_5-of-12">5</Column>
-
-    <Column className="slds-size_8-of-12">8</Column>
-    <Column className="slds-size_4-of-12">4</Column>
-
-    <Column className="slds-size_9-of-12">9</Column>
-    <Column className="slds-size_3-of-12">3</Column>
-
-    <Column className="slds-size_10-of-12">10</Column>
-    <Column className="slds-size_2-of-12">2</Column>
-
-    <Column className="slds-size_11-of-12">11</Column>
-    <Column className="slds-size_1-of-12">1</Column>
-  </Grid>
-</Example>
+<GridCodeView exampleId="col-width-all-options"/>
 
 Since width class names are written in a human-friendly way, you may choose to write `slds-size_1-of-2` or `slds-size_6-of-12`, both outcomes are the same.
 
-<Example title="Grid Column Width all fraction options">
-  <Grid small className="slds-wrap">
-
-    <Column className="slds-size_1-of-6">1/6</Column>
-    <Column className="slds-size_1-of-6">1/6</Column>
-    <Column className="slds-size_1-of-6">1/6</Column>
-    <Column className="slds-size_1-of-6">1/6</Column>
-    <Column className="slds-size_1-of-6">1/6</Column>
-    <Column className="slds-size_1-of-6">1/6</Column>
-
-    <Column className="slds-size_1-of-4">1/4</Column>
-    <Column className="slds-size_1-of-4">1/4</Column>
-    <Column className="slds-size_1-of-4">1/4</Column>
-    <Column className="slds-size_1-of-4">1/4</Column>
-
-    <Column className="slds-size_1-of-3">1/3</Column>
-    <Column className="slds-size_1-of-3">1/3</Column>
-    <Column className="slds-size_1-of-3">1/3</Column>
-
-    <Column className="slds-size_1-of-2">1/2</Column>
-    <Column className="slds-size_1-of-2">1/2</Column>
-
-    <Column className="slds-size_1-of-1">1/1</Column>
-
-  </Grid>
-</Example>
+<GridCodeView exampleId="col-width-all-fraction-options"/>
 
 ## Column Gutters
 
@@ -146,9 +55,7 @@ By default, we start with 0 gutters on our columns. This allows flexibility to a
 
 You can easily add padding to your grid by applying `slds-gutters` to the `slds-grid` container. This will add the gutters to your columns as well as align the outside of your grid.
 
-<Example title="Grid Column Gutters 2 col basic">
-  <Grid columns="2" className="slds-gutters" />
-</Example>
+<GridCodeView exampleId="2-col-with-gutters"/>
 
 In the above example, adding `slds-gutters` will give us our default gutter size of 24px (12px on each side).
 
@@ -160,23 +67,13 @@ You can modify the width of the gutters between each column by using `slds-gutte
 
 You can also add different gutter widths to your columns by using a spacing utility and adding it to the `slds-col` element (e.g. `slds-p-location_size-*`). The "location" can be __left__, __right__, __top__, __bottom__, __vertical__, __horizontal__ or __around__. The "size" can be __xxx-small__ (2px), __xx-small__ (4px), __x-small__ (8px), __small__ (12px), __medium__ (16px), __large (24px)__, __x-large__ (32px) or __xx-large__ (48px).
 
-<Example title="Grid Column Gutters 2 col utilities">
-  <Grid>
-    <Column className="slds-p-horizontal_medium">1</Column>
-    <Column className="slds-p-horizontal_medium">2</Column>
-  </Grid>
-</Example>
+<GridCodeView exampleId="2-col-gutters-utilities"/>
 
 The above example adds gutters of 32px (16px on each side) in between each column.
 
 You'll notice the 16px space on the left and right of your container created by the spacing classes. You can remove this by adding a `slds-grid_pull-padded-[size]` class to the `slds-grid` container. The `[size]` portion of this class should be the name of the spacing utility size you've applied to the outermost columns.
 
-<Example title="Grid Column Gutters 2 col pull padded">
-  <Grid className="slds-grid_pull-padded-medium">
-    <Column className="slds-p-horizontal_medium">1</Column>
-    <Column className="slds-p-horizontal_medium">2</Column>
-  </Grid>
-</Example>
+<GridCodeView exampleId="2-col-pull-padded"/>
 
 ### Direct Columns Only
 
@@ -184,41 +81,17 @@ By default, `slds-gutters` will apply to _any_ column nested within the grid. If
 
 You can modify the width of the gutters between each column by using `slds-gutters_direct-x-small` (16px), `slds-gutters_direct-small` (24px), `slds-gutters_direct-medium` (32px), `slds-gutters_direct-large` (48px), and `slds-gutters_direct-x-large` (64px).
 
-<Example title="Grid Direct Column Gutters">
-  <Grid className="slds-gutters_direct">
-    <Column>1</Column>
-      <div className="slds-grid">
-        <Column>Nested Column 1</Column>
-        <Column>Nested Column 2</Column>
-      </div>
-    <Column>3</Column>
-  </Grid>
-</Example>
+<GridCodeView exampleId="direct-col-gutters"/>
 
 Below is the same example without using the `slds-gutters_direct` class:
 
-<Example title="Grid All Children Column Gutters">
-  <Grid className="slds-gutters">
-    <Column>1</Column>
-      <div className="slds-grid">
-        <Column>Nested Column 1</Column>
-        <Column>Nested Column 2</Column>
-      </div>
-    <Column>3</Column>
-  </Grid>
-</Example>
+<GridCodeView exampleId="all-children-col-gutters"/>
 
 ## Column Wrapping
 
 By default, your columns will align themselves horizontally unless you tell them otherwise. If you are using sizing classes (e.g. `slds-size_4-of-12`) and the total # of columns in a row exceed 12 then you can let the grid container know to wrap your columns to a new row by adding `slds-wrap` to the `slds-grid` container.
 
-<Example title="Grid Column Wrapping 3 col">
-  <Grid className="slds-wrap">
-    <Column className="slds-size_8-of-12">1</Column>
-    <Column className="slds-size_5-of-12">1</Column>
-    <Column className="slds-size_5-of-12">1</Column>
-  </Grid>
-</Example>
+<GridCodeView exampleId="3-col-wrapping"/>
 
 ## Column Reordering
 
@@ -227,27 +100,13 @@ You can visually reorder columns independently from their position in the markup
 </Blockquote>
 
 
-<Example title="Grid Column Reordering 3 col">
-  <Grid>
-    <Column className="slds-order_3">1</Column>
-    <Column className="slds-order_1">2</Column>
-    <Column className="slds-order_2">3</Column>
-  </Grid>
-</Example>
+<GridCodeView exampleId="3-col-reordering"/>
 
 ## Column Nesting
 
 Nesting columns is simple and can add more flexibility in your designs. In a column, you can add a nested grid by creating another `slds-grid` container and as many `slds-col` elements inside of that container as you need.
 
-<Example title="Grid Column Nesting">
-  <Grid className="slds-wrap">
-    <Column className="slds-size_10-of-12">1</Column>
-    <div className="slds-col slds-grid slds-size_1-of-2">
-      <Column className="slds-size_1-of-2">Nested: 1</Column>
-      <Column className="slds-size_1-of-2">Nested: 2</Column>
-    </div>
-  </Grid>
-</Example>
+<GridCodeView exampleId="col-nesting"/>
 
 ## Grid Flow
 
@@ -257,21 +116,13 @@ Once an `slds-grid` has been set, you can change things like flow. By *default*,
 
 The default flow is left to right on the horizontal axis
 
-<Example title="Grid Default Left to Right">
-  <Grid columns="3" />
-</Example>
+<GridCodeView exampleId="default-left-to-right"/>
 
 ### Top to Bottom
 
 To switch the grid to flow top to bottom on the vertical axis, add `slds-grid_vertical` to the `slds-grid` container.
 
-<Example title="Grid Vertical Align">
-  <Grid className="slds-grid_vertical">
-    <Column>1</Column>
-    <Column>2</Column>
-    <Column>3</Column>
-  </Grid>
-</Example>
+<GridCodeView exampleId="vertical-align"/>
 
 ### Reversed
 
@@ -281,25 +132,13 @@ There may be times you find yourself in a situation to reverse the visual flow o
 
 To reverse the horizontal flow, add the class `slds-grid_reverse` to the `slds-grid` container.
 
-<Example title="Grid Horizontal Reversed">
-<Grid className="slds-grid_reverse">
-  <Column>1</Column>
-  <Column>2</Column>
-  <Column>3</Column>
-</Grid>
-</Example>
+<GridCodeView exampleId="horizontal-reversed"/>
 
 #### Bottom to Top
 
 To reverse the vertical flow, add the class `slds-grid_vertical-reverse` to the `slds-grid` container.
 
-<Example title="Grid Vertical Align Reversed">
-  <Grid className="slds-grid_vertical-reverse" style={{height: '200px'}}>
-    <Column>1</Column>
-    <Column>2</Column>
-    <Column>3</Column>
-  </Grid>
-</Example>
+<GridCodeView exampleId="vertical-aligned-reversed"/>
 
 ## Creating Responsive Layouts
 
@@ -330,12 +169,7 @@ Below is an overview table outlining the default behavior for columns and how th
 
 Since we build on the concept of mobile first, let's set a layout for mobile and override for desktop directly in our HTML. We do this by setting a mobile, in this case default widths to our columns and override the layout when we meet the criteria of a desktop viewport size.
 
-<Example title="Grid Responsive 2 col mobile desktop">
-  <Grid className="slds-wrap">
-    <Column className="slds-size_1-of-1 slds-large-size_8-of-12">1</Column>
-    <Column className="slds-size_1-of-1 slds-large-size_4-of-12">2</Column>
-  </Grid>
-</Example>
+<GridCodeView exampleId="responsive-2-col-mobile-desktop"/>
 
 In the above example, we are setting a stacked layout for mobile/tablet devices and then when our viewport exceeds a width of 1024px we redraw our layout to be a nice two column where the primary content area takes up 8 columns and the secondary content area takes up 4 columns.
 
@@ -343,12 +177,7 @@ In the above example, we are setting a stacked layout for mobile/tablet devices 
 
 If our designs need a bit more flexibility, we can accomplish that by establishing different layouts for mobile, tablet, and desktop.
 
-<Example title="Grid Responsive 2 col mobile tablet desktop">
-<Grid className="slds-wrap">
-  <Column className="slds-size_1-of-1 slds-medium-size_6-of-12 slds-large-size_8-of-12">1</Column>
-  <Column className="slds-size_1-of-1 slds-medium-size_6-of-12 slds-large-size_4-of-12">2</Column>
-</Grid>
-</Example>
+<GridCodeView exampleId="responsive-2-col-mobile-tablet-desktop"/>
 
 In this above example, we are setting our default stacked layout and when our browser exceeds a viewport width of 768px, we adjust the layout for each column to take up 50% or 6 columns of the slds-grid container. Then once we exceed a viewport width of 1024px, we again redraw a layout to be a nice 66% or 8 columns for the primary content area and 33% or 4 columns for the secondary content area.
 
@@ -356,12 +185,7 @@ In this above example, we are setting our default stacked layout and when our br
 
 With flexbox it's easy to reorder your columns visually. Luckily with the SLDS grid system it's easy to reorder visually in a responsive manner! Following the same naming convention as sizing, we'll want to prefix `slds-order` with our breakpoint name and pass in an integer for where you want it visually. The lowest value is the first in order. If no order is defined, standard ordering is applied. This means that a column with no order class will render before `slds-order_1`.
 
-<Example title="Grid Responsive Reordering 2 col mobile desktop">
-  <Grid>
-    <Column className="slds-order_2 slds-large-order_1">1</Column>
-    <Column className="slds-order_1 slds-large-order_2">2</Column>
-  </Grid>
-</Example>
+<GridCodeView exampleId="responsive-reordering-2-col-mobile-desktop"/>
 
 In the above example, we're setting our first column to be last in the order of 3. Then once your viewport exceeds a width of 1024px, we're changing the visual order of our first column back to 1. Now this seemed rather long winded to move 1 column. Below is an easy way of letting the column know you only want to reorder the first column if it's in a viewport smaller than 480px. This breaks the convention of mobile first and should be used sparingly.
 
@@ -375,61 +199,31 @@ Since the grids are built on flexbox, they allow us to do some interesting thing
 
 If you want your columns to grow from the the center of the horizontal axis, apply the class `slds-grid_align-center`.
 
-<Example title="Grid Horizontal Align center basic">
-  <Grid className="slds-grid_align-center">
-    <Column>1</Column>
-    <Column>2</Column>
-    <Column>3</Column>
-  </Grid>
-</Example>
+<GridCodeView exampleId="horizontal-align-center-basic"/>
 
 #### Setting variable widths based on content
 
 Another powerful technique is letting a column shrink to the width of the content inside of it, while explicitly setting widths to other columns. This is achieved by using the `slds-shrink-none` or `slds-grow-none` utility classes or simply removing the `slds-col` class from the column element.
 
-<Example title="Grid Horizontal Align center variable">
-<Grid className="slds-grid_align-center">
-  <Column className="slds-size_1-of-6">1</Column>
-  <Column className="slds-grow-none">2</Column>
-  <Column className="slds-size_1-of-6">3</Column>
-</Grid>
-</Example>
+<GridCodeView exampleId="horizontal-align-center-variable"/>
 
 #### Content evenly spaced out
 
 To evenly distribute columns on the horizontal axis with an equal amount of white space separating the columns, apply the class `slds-grid_align-space`.
 
-<Example title="Grid Horizontal Align spaced">
-  <Grid className="slds-grid_align-space">
-    <Column>1</Column>
-    <Column>2</Column>
-    <Column>3</Column>
-  </Grid>
-</Example>
+<GridCodeView exampleId="horizontal-align-spaced"/>
 
 #### Content evenly spread out from edges
 
 To spread out your columns on the horizontal axis, with the first column starting at the start of your main axis and last item ending at the far end of your main axis, apply the class `slds-grid_align-spread`.
 
-<Example title="Grid Horizontal Align spread">
-  <Grid className="slds-grid_align-spread">
-    <Column>1</Column>
-    <Column>2</Column>
-    <Column>3</Column>
-  </Grid>
-</Example>
+<GridCodeView exampleId="horizontal-align-spread"/>
 
 #### Content right justified
 
 If you want your columns to grow from the end of the horizontal axis, apply the class `slds-grid_align-end`.
 
-<Example title="Grid Horizontal Align end">
-  <Grid className="slds-grid_align-end">
-    <Column>1</Column>
-    <Column>2</Column>
-    <Column>3</Column>
-  </Grid>
-</Example>
+<GridCodeView exampleId="horizontal-align-end"/>
 
 #### Content alignment with bump
 
@@ -439,31 +233,13 @@ To "bump" a single or multiple grid items, apply the class `slds-col_bump-{direc
 
 In the example below, applying the left bump class to item 5 bumps items 1 through 4 to the left.
 
-<Example title="Grid Content Alignment Bump Left">
-  <Grid bareGrid>
-    <div><span>1</span></div>
-    <div><span>2</span></div>
-    <div><span>3</span></div>
-    <div><span>4</span></div>
-    <div className="slds-col_bump-left"><span>5</span></div>
-    <div><span>6</span></div>
-  </Grid>
-</Example>
+<GridCodeView exampleId="content-alignment-bump-left"/>
 
 **Bump Right**
 
 In the example below, applying the right bump class to item 5 bumps item 6 to the right.
 
-<Example title="Grid Content Alignment Bump Right">
-  <Grid bareGrid>
-    <div><span>1</span></div>
-    <div><span>2</span></div>
-    <div><span>3</span></div>
-    <div><span>4</span></div>
-    <div className="slds-col_bump-right"><span>5</span></div>
-    <div><span>6</span></div>
-  </Grid>
-</Example>
+<GridCodeView exampleId="content-alignment-bump-right"/>
 
 ### Vertical Axis
 
@@ -475,59 +251,29 @@ To vertically align elements on a cross-axis of a `slds-grid` container, the ele
 
 To align a single row or multi-line rows to the beginning of the cross axis, apply the class `slds-grid_vertical-align-start`.
 
-<Example title="Grid Vertical Align start">
-  <Grid className="slds-grid_vertical-align-start" style={{height: '200px'}}>
-    <Column>1</Column>
-    <Column>2</Column>
-    <Column>3</Column>
-  </Grid>
-</Example>
+<GridCodeView exampleId="vertical-align-start"/>
 
 #### Content centered
 
 To vertically center align a single row or multi-line rows to the height of a `slds-grid` container, apply the class `slds-grid_vertical-align-center`. When `slds-grid_vertical-align-center` is used in conjunction with `slds-grid_align-center`, the outcome would horizontally and vertically center align your content in the center of the `slds-grid` container.
 
-<Example title="Grid Vertical Align center">
-  <Grid className="slds-grid_vertical-align-center" style={{height: '200px'}}>
-    <Column>1</Column>
-    <Column>2</Column>
-    <Column>3</Column>
-  </Grid>
-</Example>
+<GridCodeView exampleId="vertical-align-center"/>
 
 #### Content bottom
 
 To align a single row or multi-line rows to the end of the cross axis, apply the class `slds-grid_vertical-align-end`.
 
-<Example title="Grid Vertical Align end">
-  <Grid className="slds-grid_vertical-align-end" style={{height: '200px'}}>
-    <Column>1</Column>
-    <Column>2</Column>
-    <Column>3</Column>
-  </Grid>
-</Example>
+<GridCodeView exampleId="vertical-align-end"/>
 
 #### Content absolutely centered
 
-<Example title="Grid Vertical Align absolute center">
-  <Grid className="slds-grid_vertical-align-center slds-grid_align-center" style={{height: '200px'}}>
-    <Column>1</Column>
-    <Column>2</Column>
-    <Column>3</Column>
-  </Grid>
-</Example>
+<GridCodeView exampleId="vertical-align-absolute-center"/>
 
 #### Individual alignment
 
 To specify the vertical placement of grid items on the cross axis, you can apply `slds-align-top`, `slds-align-middle`, and `slds-align-bottom` to a `slds-col` element.
 
-<Example title="Grid Vertical Align individual">
-  <Grid style={{height: '200px'}}>
-    <Column className="slds-align-top">1</Column>
-    <Column className="slds-align-middle">2</Column>
-    <Column className="slds-align-bottom">3</Column>
-  </Grid>
-</Example>
+<GridCodeView exampleId="vertical-align-individual"/>
 
 ## Page Containers
 

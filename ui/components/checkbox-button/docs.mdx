@@ -3,12 +3,11 @@ import CodeView from '../../../shared/components/CodeView';
 import { getDisplayElementById } from '../../shared/helpers';
 
 <div className="doc lead">
-  A styled checkable input that communicates if an option is being added to a group
+  A styled checkable input that communicates if an option is being added to a
+  group
 </div>
 
-<CodeView exampleOnly>
-  {Base.default}
-</CodeView>
+<CodeView exampleOnly>{Base.default}</CodeView>
 
 ## About Checkbox Button
 
@@ -23,28 +22,34 @@ The add button also provides a clear visual affordance (in SLDS, we use the
 ‘+’ icon as an metaphor for ‘add’) and a large target to take this action.
 
 Use the add button if the component you’re building:
+
 - Exists without other multi-select elements (i.e. checkboxes)
 - Allows users to select multiple entities
 - Semantically fits the add/remove model
 
 ## Base
-<CodeView>
-  {Base.default}
-</CodeView>
+
+<CodeView>{Base.default}</CodeView>
 
 ## States
 
 ### Checked
+
 <CodeView>
-  { getDisplayElementById(Base.states, 'checkbox-add-button-checked') }
+  {getDisplayElementById(Base.states, 'checkbox-add-button-checked')}
 </CodeView>
 
 ### Disabled
+
 <CodeView>
-  { getDisplayElementById(Base.states, 'checkbox-add-button-disabled') }
+  {getDisplayElementById(Base.states, 'checkbox-add-button-disabled')}
 </CodeView>
 
 ### Checked and Disabled
+
 <CodeView>
-  { getDisplayElementById(Base.states, 'checkbox-add-button-checked-and-disabled') }
+  {getDisplayElementById(
+    Base.states,
+    'checkbox-add-button-checked-and-disabled'
+  )}
 </CodeView>

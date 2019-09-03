@@ -3,17 +3,19 @@ import CodeBlock from '../../../shared/components/CodeBlock';
 import Example from '../../../shared/components/Example';
 import Blockquote from '../../../shared/components/Blockquote';
 import BuilderHeader from './index.jsx';
-import style from './docs/index.scss';
+
+// import style from './docs/index.scss';
 
 <div className="doc lead">
-  Every builder needs a builder header, which contains basic navigation elements. It also shows the builder type and content name.
+  Every builder needs a builder header, which contains basic navigation
+  elements. It also shows the builder type and content name.
 </div>
 
 <CodeView exampleOnly>
-    <div style={{ position: 'relative', height: '100px' }}>
-      <BuilderHeader showToolbar />
-    </div>
-  </CodeView>
+  <div style={{ position: 'relative', height: '100px' }}>
+    <BuilderHeader showToolbar />
+  </div>
+</CodeView>
 
 ## About Builder Header
 

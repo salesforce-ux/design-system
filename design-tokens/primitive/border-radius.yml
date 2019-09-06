@@ -21,9 +21,6 @@ props:
   BORDER_RADIUS_LARGE:
     value: '{!BORDER_RADIUS_LARGE}'
     access: global
-  BORDER_RADIUS_PILL:
-    value: '{!BORDER_RADIUS_PILL}'
-    access: global
   BORDER_RADIUS_CIRCLE:
     value: '{!BORDER_RADIUS_CIRCLE}'
     comment: 'Circle for global use, action icon bgd shape'

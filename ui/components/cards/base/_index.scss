@@ -60,6 +60,11 @@
 .slds-card__header-title {
   font-size: $var-font-size-5;
   line-height: $line-height-heading;
+
+  @include touch-device {
+    font-size: $var-font-size-6;
+    font-weight: $card-font-weight; // Ensures title is bold when there is no nested link
+  }
 }
 
 /**

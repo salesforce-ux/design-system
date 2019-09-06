@@ -8,19 +8,7 @@ import React from 'react';
 import { flattenElement, mapElement } from '../utils/react';
 
 import Example from './Example';
-import { DocBlock } from '../styles/DocBlock';
-
-export const createAnchor = (type, id) =>
-  React.createElement(
-    'a',
-    {
-      'aria-label': 'Jump to section',
-      className: 'doc doc-anchor',
-      'data-level': type[1],
-      href: `#${id}`
-    },
-    '#'
-  );
+import DocHeaderAnchor from './DocHeaderAnchor';
 
 export const tags = [
   'p',
@@ -53,7 +41,16 @@ export const factories = tags.reduce(
     Object.assign({}, factories, {
       [type]: (props, ...children) => {
         if (/h[1-6]/.test(type)) {
-          children.push(createAnchor(type, props.id));
+          children.push(
+            React.createElement(
+              DocHeaderAnchor,
+              {
+                id: props.id,
+                type
+              },
+              null
+            )
+          );
         }
         return React.createElement(
           type,

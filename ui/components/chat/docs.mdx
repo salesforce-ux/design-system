@@ -10,6 +10,53 @@ import { DoctypeIcon } from '../icons/doctype/example';
   The Chat component is used to display real-time and past chat logs between service agents and customers. It comes with a number of sub components that can be used to display the different types of chat items.
 </div>
 
+<CodeView exampleOnly>
+  <Chat>
+    <ChatList>
+      <ChatListItem type="bookend">
+        <ChatBookend
+          type="start"
+          name="Andy Martinez"
+          timeStamp="4:58 PM"
+        />
+      </ChatListItem>
+      <ChatListItem type="inbound">
+        <ChatMessage>
+          <ChatAvatar initials="AM" name="Andy Martinez" ariaHidden="true"/>
+          <ChatMessageBody
+            type="inbound"
+            name="Andy Martinez"
+            timeStamp="4:59 PM"
+          >
+            Hi, my CloudWidget only speaks French
+          </ChatMessageBody>
+        </ChatMessage>
+      </ChatListItem>
+      <ChatListItem type="outbound">
+        <ChatMessage>
+          <ChatMessageBody type="outbound-agent">
+            Hi Andy, thank you for contacting Widget Support. Can you please tell me what language you are trying to program on your CloudWidget?
+          </ChatMessageBody>
+        </ChatMessage>
+      </ChatListItem>
+      <ChatListItem type="outbound">
+        <ChatMessage>
+          <ChatMessageBody
+            type="outbound-agent"
+            name="Jason Dewar"
+            timeStamp="5:02 PM"
+          >
+            Have you tried turning it off and on again?
+          </ChatMessageBody>
+        </ChatMessage>
+      </ChatListItem>
+      <ChatListItem type="bookend">
+        <ChatBookend type="stop" name="Andy Martinez" timeStamp="5:30 PM" />
+      </ChatListItem>
+    </ChatList>
+  </Chat>
+</CodeView>
+
 ## About Chat
 
 A chat consists of an unordered list of possible chat items, wrapped in a `section` which has the accessible role of `log`.

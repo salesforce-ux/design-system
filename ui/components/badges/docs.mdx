@@ -12,11 +12,15 @@ import { getDisplayElementById } from '../../shared/helpers';
   Badges are labels which hold small amounts of information.
 </div>
 
-<CodeView toggleCode={false}>
+<CodeView exampleOnly>
   {Base.default}
 </CodeView>
 
-## Badge Colors
+## About Badges
+
+Badges are composed of text inside a `span` element and may include inline/inline-block elements and/or icons.
+
+### Colors
 
 There are three different color badges you can use.
 
@@ -25,6 +29,13 @@ There are three different color badges you can use.
 | <Badge key="1">Default Badge</Badge>| `.slds-badge`| This is the default badge. You probably want to use this one unless you fall into a specific use-case.|
 | <InverseBadge key="2">Darker Badge</InverseBadge>| `.slds-badge_inverse`| This badge is used when you need higher contrast than our default badge.|
 | <LightestBadge key="3">Lightest Badge</LightestBadge>| `.slds-badge_lightest`| This badge is used when you need higher contrast, such as on colored backgrounds.|
+
+
+## Base
+
+<CodeView toggleCode={false}>
+  {Base.default}
+</CodeView>
 
 ## Badges with Icons
 
@@ -82,7 +93,7 @@ Along with icons, you can have nested textual elements, such as `strong`, `em`, 
 <Example title="Badge with nested element">
   <CodeView toggleCode={false}>
     <Badge>
-      Component In: <strong>Lightning</strong>
+      Component In: <em>Lightning</em>
     </Badge>
   </CodeView>
 </Example>

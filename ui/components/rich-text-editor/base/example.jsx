@@ -203,7 +203,8 @@ let TextInputExample = props => (
       <a href="#">
         https://url.com/document/d/1dSOGKlCQtSG73NcSJB7qCJVyjE52MdTjvjGNqc3L2Rw/edE52MdTjvjGNqc3L2Rw/edE52MdTjvjGNqc3L2Rw/edE52MdTjvjGNqc3L2Rw/edE52MdTjvjGNqc3L2Rw/edE52MdTjvjGNqc3L2Rw/edE52MdTjvjGNqc3L2Rw/edE52MdTjvjGNqc3L2Rw/edE52MdTjvjGNqc3L2Rw/edE52MdTjvjGNqc3L2Rw/edE52MdTjvjGNqc3L2Rw/edE52MdTjvjGNqc3L2Rw/edE52MdTjvjGNqc3L2Rw/edE52MdTjvjGNqc3L2Rw/ed
       </a>{' '}
-      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+      quis nostrud <ins>Content to be inserted.</ins> exercitation ullamco{' '}
+      <del>Content to be deleted.</del> laboris nisi ut aliquip ex ea commodo
       consequat.
     </p>
   </div>

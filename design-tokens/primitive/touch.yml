@@ -1,0 +1,58 @@
+# Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+# Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+global:
+  type: size
+  category: touch
+  property: sizing
+  cssProperties:
+  - '*width'
+  - '*height'
+  - top
+  - right
+  - bottom
+  - left
+  - 'margin*'
+  - 'padding*'
+  - transform
+  scope: global
+  primitive: true
+props:
+  SQUARE_TAPPABLE:
+    value: 2.75rem
+    comment: Tap target size for elements that rely on width and height dimensions
+    access: global
+    release: 1.0.0
+    cssProperties:
+      - font
+      - font-size
+      - '*width'
+      - '*height'
+      - flex
+      - top
+      - right
+      - bottom
+      - left
+      - 'margin*'
+      - 'padding*'
+      - transform
+  SQUARE_TAPPABLE_SMALL:
+    value: 2rem
+    comment: Small tap target size for elements that rely on width and height dimensions
+    release: 2.10.0
+  SQUARE_TAPPABLE_X_SMALL:
+    value: 1.5rem
+    comment: X-small tap target size for elements that rely on width and height dimensions
+    release: 2.10.0
+  SQUARE_TAPPABLE_XX_SMALL:
+    value: 1.25rem
+    comment: Xx-small tap target size for elements that rely on width and height dimensions
+    release: 2.10.0
+  HEIGHT_TAPPABLE:
+    value: 2.75rem
+    comment: Tap target size for elements that rely on height or line-height
+    release: 2.10.0
+  HEIGHT_TAPPABLE_SMALL:
+    value: 2rem
+    comment: Small tap target size for elements that rely on height or line-height
+    release: 2.10.0

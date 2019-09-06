@@ -60,6 +60,9 @@ class CodeBlock extends Component {
     return (
       <StyledCodeBlock className="docs-codeblock-source">
         <ul className="docs-codeblock__action-bar">
+          <li>
+            <Copy key="copy" className="site-code_copy" text={this.getCode()} />
+          </li>
           {toggleCode && (
             <li>
               <ToggleButton
@@ -68,9 +71,6 @@ class CodeBlock extends Component {
               />
             </li>
           )}
-          <li>
-            <Copy key="copy" text={this.getCode()} />
-          </li>
         </ul>
         <div
           className={classNames(

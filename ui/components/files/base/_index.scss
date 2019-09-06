@@ -35,10 +35,14 @@
    */
 
   // Hover state
-  &:not(.slds-file_loading) a:hover:before,
-  &:not(.slds-file_loading) a:hover:after,
-  &:not(.slds-file_loading) a:focus:before,
-  &:not(.slds-file_loading) a:focus:after {
+  &:not(.slds-file_loading) .slds-file__figure:hover:before,
+  &:not(.slds-file_loading) .slds-file__figure:hover:after,
+  &:not(.slds-file_loading) .slds-file__figure:focus:before,
+  &:not(.slds-file_loading) .slds-file__figure:focus:after,
+  &:not(.slds-file_loading) .slds-file__crop:hover:before,
+  &:not(.slds-file_loading) .slds-file__crop:hover:after,
+  &:not(.slds-file_loading) .slds-file__crop:focus:before,
+  &:not(.slds-file_loading) .slds-file__crop:focus:after {
     position: absolute;
     z-index: $files-z-index-hover;
     cursor: pointer;
@@ -46,8 +50,10 @@
   }
 
   // Adds overlay background to Files
-  &:not(.slds-file_loading) a:hover:before,
-  &:not(.slds-file_loading) a:focus:before {
+  &:not(.slds-file_loading) .slds-file__figure:hover:before,
+  &:not(.slds-file_loading) .slds-file__figure:focus:before,
+  &:not(.slds-file_loading) .slds-file__crop:hover:before,
+  &:not(.slds-file_loading) .slds-file__crop:focus:before {
     top: 0;
     right: 0;
     bottom: 0;
@@ -56,8 +62,10 @@
   }
 
   // Adds and vertically centers "preview" icon via base64
-  &:not(.slds-file_loading) a:hover:after,
-  &:not(.slds-file_loading) a:focus:after {
+  &:not(.slds-file_loading) .slds-file__figure:hover:after,
+  &:not(.slds-file_loading) .slds-file__figure:focus:after,
+  &:not(.slds-file_loading) .slds-file__crop:hover:after,
+  &:not(.slds-file_loading) .slds-file__crop:focus:after {
     top: 50%;
     left: 50%;
     width: $square-icon-large-content;
@@ -72,17 +80,23 @@
   // Remove hover state for devices with any available input mechanism can hover over elements
   @media (any-hover:none) {
 
-    &:not(.slds-file_loading) a:hover:before,
-    &:not(.slds-file_loading) a:hover:after,
-    &:not(.slds-file_loading) a:focus:before,
-    &:not(.slds-file_loading) a:focus:after {
+    &:not(.slds-file_loading) .slds-file__figure:hover:before,
+    &:not(.slds-file_loading) .slds-file__figure:hover:after,
+    &:not(.slds-file_loading) .slds-file__figure:focus:before,
+    &:not(.slds-file_loading) .slds-file__figure:focus:after,
+    &:not(.slds-file_loading) .slds-file__crop:hover:before,
+    &:not(.slds-file_loading) .slds-file__crop:hover:after,
+    &:not(.slds-file_loading) .slds-file__crop:focus:before,
+    &:not(.slds-file_loading) .slds-file__crop:focus:after {
       display: none;
     }
   }
 
   // Puts title bar and actions menu at the same z-index as the overlay, so they remain clickable
-  &:not(.slds-file_loading) a:hover + .slds-file__title,
-  &:not(.slds-file_loading) a:focus + .slds-file__title {
+  &:not(.slds-file_loading) .slds-file__figure:hover + .slds-file__title,
+  &:not(.slds-file_loading) .slds-file__figure:focus + .slds-file__title,
+  &:not(.slds-file_loading) .slds-file__crop:hover + .slds-file__title,
+  &:not(.slds-file_loading) .slds-file__crop:focus + .slds-file__title {
     z-index: $files-z-index-hover;
   }
 
@@ -94,8 +108,10 @@
    */
 
   // When a title card is present, take its height into account when centering the "preview" icon
-  &.slds-has-title a:hover:after,
-  &.slds-has-title a:focus:after {
+  &.slds-has-title .slds-file__figure:hover:after,
+  &.slds-has-title .slds-file__figure:focus:after,
+  &.slds-has-title .slds-file__crop:hover:after,
+  &.slds-has-title .slds-file__crop:focus:after {
     transform: translate(-50%, calc(-50% - (#{$square-icon-large-content} / 2)));
   }
 

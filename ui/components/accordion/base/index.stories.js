@@ -1,12 +1,14 @@
 import { storiesOf } from '@storybook/react';
 import * as AccordionExamples from './example';
 import { getDisplayElementById } from '../../../shared/helpers';
+import Docs from '../docs.mdx';
 
 import '../../../index.scss';
 
 const stories = storiesOf('Components/Accordion/Base', module).add(
   'Base',
-  () => AccordionExamples.default
+  () => AccordionExamples.default,
+  { docs: { page: Docs } }
 );
 
 AccordionExamples.examples.forEach(example => {

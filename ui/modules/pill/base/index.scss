@@ -1,0 +1,26 @@
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+// ------------
+// Init
+// ------------
+@import '../../../shared/common/init';
+
+
+// ------------
+// Mixins
+// ------------
+//@import '../mixins/index';
+
+/**
+ * @summary Initializes pill
+ * @name base
+ * @selector .lwc-pill
+ * @restrict span
+ * @support dev-ready
+ * @variant
+ */
+
+ .lwc-pill {
+   border: 1px solid red;
+ }

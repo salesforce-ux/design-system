@@ -8,8 +8,9 @@ import { beautify } from '../utils/beautify';
 import classNames from 'classnames';
 import Copy from './Copy';
 import Prism from '../vendor/prism';
-import '../vendor/prism/_prism.scss';
-import '../vendor/prism/_prism-overrides.scss';
+
+// import '../vendor/prism/_prism.scss';
+// import '../vendor/prism/_prism-overrides.scss';
 
 const highlight = (code, language) =>
   Prism.highlight(code, Prism.languages[language]);

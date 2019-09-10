@@ -34,7 +34,7 @@
     "@babel/preset-react": "7.0.0",
     "@babel/runtime": "7.5.4",
     "@epegzz/sass-vars-loader": "4.3.1",
-    "@mdx-js/loader": "1.0.18",
+    "@mdx-js/loader": "1.4.0",
     "@mdx-js/mdx": "1.0.18",
     "@salesforce-ux/build-server-api": "2.0.2",
     "@salesforce-ux/create-snap": "0.0.6",

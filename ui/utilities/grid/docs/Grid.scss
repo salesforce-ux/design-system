@@ -1,0 +1,56 @@
+// stylelint-disable selector-class-pattern
+.simple-grid .slds-grid {
+  height: 8.75rem;
+  margin-bottom: 1rem;
+}
+
+.simple-grid_small .slds-grid {
+  height: auto;
+}
+
+.simple-grid .slds-grid > .slds-grid {
+  height: auto;
+  margin-bottom: 0;
+}
+
+.simple-grid .slds-col {
+  display: inline-flex;
+  background: #54698d;
+  color: #fff;
+  text-align: center;
+  background-clip: content-box;
+  border: 1px solid #fff;
+  border-radius: 0;
+}
+
+.simple-grid .slds-col > span {
+  align-self: center;
+  margin: auto;
+  font-size: 1.575rem;
+  padding: 0.5rem;
+}
+
+.simple-grid .slds-wrap {
+  align-items: stretch;
+}
+
+.simple-grid__buttons {
+  margin: auto;
+}
+
+.simple-grid_bare-columns .slds-grid > div {
+  display: inline-flex;
+  background: #54698d;
+  color: #fff;
+  text-align: center;
+  background-clip: content-box;
+  border: 1px solid #fff;
+  border-radius: 0;
+}
+
+.simple-grid_bare-columns .slds-grid > div > span {
+  align-self: center;
+  margin: auto;
+  font-size: 1.575rem;
+  padding: 0.5rem;
+}

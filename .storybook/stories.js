@@ -9,12 +9,16 @@ import { makeTitle } from '../shared/utils/text-formatting';
 export default () => {
   const componentList = getComponents();
 
+  console.log(componentList.length);
+
+  // load each component
   componentList.forEach(component => {
     const Docs = require(`../ui/components/${component}/docs.mdx`).default;
 
     const componentTitle = makeTitle(component);
     const variants = getComponentVariants(component);
 
+    // load each component variant
     variants.forEach(variant => {
       const variantTitle = makeTitle(variant);
       const storyTitle = `Components/${componentTitle}/${variantTitle}`;

@@ -9,7 +9,11 @@ import { makeTitle } from '../shared/utils/text-formatting';
 export default () => {
   const componentList = getComponents();
 
-  // load each component
+  // load component files / kitchen sinks
+  const req = require.context('../ui/', true, /\.stories\.js$/);
+  req.keys().forEach(filename => req(filename));
+
+  // create stories for each component / variant from example files
   componentList.forEach(component => {
     const Docs = require(`../ui/components/${component}/docs.mdx`).default;
 

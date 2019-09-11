@@ -5,13 +5,18 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import CodeBlock from './CodeBlock';
 import StyledDemo from './StyledDemo';
+import classNames from 'classnames';
 
 class CodeView extends React.Component {
   renderChildren() {
     const { style, isViewport } = this.props;
 
     return (
-      <div className="docs-codeblock-example">
+      <div
+        className={classNames('docs-codeblock-example', {
+          'docs-codeblock-example_viewport': isViewport
+        })}
+      >
         {style ? (
           <StyledDemo
             className={isViewport && 'demo-only demo-only_viewport'}

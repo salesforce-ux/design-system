@@ -6,6 +6,22 @@ import SvgIcon from '../../../shared/svg-icon';
 import ButtonIcon from '../../button-icons/';
 import classNames from 'classnames';
 
+const exampleDemoStyles = `
+  height: 540px;
+
+  .slds-utility-bar_container {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  .slds-utility-bar,
+  .slds-utility-panel {
+    position: absolute;
+  }
+`;
+
 /// ////////////////////////////////////////
 // Partial(s)
 /// ////////////////////////////////////////
@@ -114,7 +130,7 @@ export const Context = props => (
   </div>
 );
 
-export default (
+const defaultComponent = (
   <UtilityBar
     panel={
       <UtilityPanel header="Call">
@@ -132,10 +148,19 @@ export default (
   </UtilityBar>
 );
 
+export default defaultComponent;
+
 export let states = [
+  {
+    id: 'default',
+    label: 'Default',
+    demoStyles: exampleDemoStyles,
+    element: defaultComponent
+  },
   {
     id: 'open',
     label: 'Panel Open',
+    demoStyles: exampleDemoStyles,
     element: (
       <UtilityBar panel={PanelOpen}>
         <UtilityBarItem symbol="call" active>
@@ -153,6 +178,7 @@ export let states = [
   {
     id: 'notification',
     label: 'Item has notification',
+    demoStyles: exampleDemoStyles,
     element: (
       <UtilityBar>
         <UtilityBarItem symbol="call">Call</UtilityBarItem>
@@ -168,6 +194,7 @@ export let states = [
   {
     id: 'pop-out',
     label: 'Item has popout',
+    demoStyles: exampleDemoStyles,
     element: (
       <UtilityBar>
         <UtilityBarItem symbol="call">Call</UtilityBarItem>

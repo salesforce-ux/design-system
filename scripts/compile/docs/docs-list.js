@@ -9,6 +9,4 @@ Object.keys(uijson.components).forEach(
   c => (componentExports[c] = `./ui/components/${c}/docs.mdx`)
 );
 
-// componentExports['button-groups'] = './ui/components/button-groups/docs.mdx';
-
 module.exports = componentExports;

@@ -9,8 +9,6 @@ import { makeTitle } from '../shared/utils/text-formatting';
 export default () => {
   const componentList = getComponents();
 
-  console.log(componentList.length);
-
   // load each component
   componentList.forEach(component => {
     const Docs = require(`../ui/components/${component}/docs.mdx`).default;

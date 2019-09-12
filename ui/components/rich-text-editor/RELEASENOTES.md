@@ -5,7 +5,8 @@
 ## 2.10.0
 
 ### Added
-- Created Toolbar Only variant for use without attached textarea on touch devices
+
+- Created Toolbar Only variant for use without attached textarea for touch devices
 
 ### Changed
 

@@ -6,9 +6,9 @@
 ## 2.10.0
 
 ### Changed
-- Visually remove border and set border-radius to zero on touch devices
+- Visually remove border and set border-radius to zero for touch devices
 - For touch devices:
-  - Set font size of `.slds-card__header-title` to `$var-font-size-6`
+  - Set font size of `.slds-card__header-title` to `$var-font-size-6` (1.125rem)
   - Make `.slds-card__header-title` always bold whether it contains a link or not
 
 ## 2.8.1

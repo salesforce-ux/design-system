@@ -21,6 +21,69 @@
  * @variant
  */
 
- .lwc-pill {
-   border: 1px solid red;
- }
+.lwc-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  border: $border-width-thin solid $color-border;
+  border-radius: $border-radius-medium;
+  background-color: $color-background-pill;
+  line-height: 1.5;
+  padding: $spacing-xxx-small 0;
+  min-height: 1.625rem;
+  max-width: 100%; // Required to make the container shrink when truncated
+  &:hover {
+    background-color: $color-background-button-default-hover;
+  }
+  &:focus, &:focus-within {
+    outline: 0;
+    border-radius: $border-radius-medium;
+    border-color: $color-border-input-active;
+    box-shadow: $shadow-button-focus;
+  }
+}
+
+.lwc-pill__media {
+  width: 1.25rem;
+  height: 1.25rem;
+  margin: $spacing-xxx-small;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lwc-pill__label {
+  padding: 0 $spacing-xxx-small;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.lwc-pill__action {
+  &:hover {
+    text-decoration: underline;
+  }
+  &:focus {
+    outline: 0;
+    border-color: transparent;
+    box-shadow: none;
+    text-decoration: underline;
+  }
+}
+
+.lwc-pill__remove {
+  width: 1rem;
+  height: 1rem;
+  margin: $spacing-xxx-small;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lwc-pill_has-error {
+  border-color: $color-border-error;
+  .lwc-pill__label {
+    font-weight: $font-weight-bold;
+    color: $color-text-error;
+  }
+}

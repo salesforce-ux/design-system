@@ -2,15 +2,16 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 // Lightning Design System
+$deprecate-mode: 'silent';
+
 @import 'init';
 
 // Resets
-@import 'vendor/normalize';
-@include core($scoped: false, $globals: true);
+@import 'vendor/normalize-sanitized';
+@include core($scoped: false, $globals: false);
 
 // Framework
-@import 'touch/index';
-@import 'components/index';
+@import 'components/index-sanitized';
 @import 'utilities/index';
 
 // Print

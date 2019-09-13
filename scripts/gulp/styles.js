@@ -1,14 +1,15 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
+import fs from 'fs';
+import cssStats from 'cssstats';
+import fetch from 'isomorphic-fetch';
 import gulp from 'gulp';
 import gulpAutoprefixer from 'gulp-autoprefixer';
-import gulpUtil from 'gulp-util';
-import gulpMinifycss from 'gulp-minify-css';
+import gulpMinifycss from 'gulp-clean-css';
 import gulpPlumber from 'gulp-plumber';
 import gulpSass from 'gulp-sass';
 import gulpSourcemaps from 'gulp-sourcemaps';
-import StyleStats from 'stylestats';
 
 import gulpFile from 'gulp-file';
 
@@ -17,51 +18,58 @@ import paths from '../helpers/paths';
 const sign = x => (x < 0 ? '' : '+');
 const toKB = n => (n / 1024).toFixed(2);
 
-export const stylestats = done => {
-  const localFile = 'assets/styles/slds.css';
-  const remoteFile =
-    'https://www.lightningdesignsystem.com/assets/styles/salesforce-lightning-design-system.css';
+export const stats = done => {
+  console.log('Gathering stats...');
+  const localCss = fs.readFileSync(
+    paths.rootPath('assets/styles/index.css'),
+    'utf8'
+  );
 
-  const localStats = new StyleStats(localFile, '.stylestatsrc');
-  const remoteStats = new StyleStats(remoteFile, '.stylestatsrc');
-  const remote = {};
+  const getDiff = (base, source) => {
+    const sanitizedBase = base.replace(/(kB)/, '');
+    const sanitizedSource = source.replace(/(kB)/, '');
+    const percentage = Math.round(
+      ((sanitizedSource - sanitizedBase) / sanitizedBase) * 100
+    );
+    if (base > source) {
+      return `${sanitizedSource - sanitizedBase}kB (${percentage}%)`;
+    } else {
+      return `${sanitizedSource - sanitizedBase}kB (${percentage}%)`;
+    }
+  };
 
-  remoteStats.parse((error, result) => {
-    if (error) throw error;
-    remote.size = result.size;
-    remote.gzippedSize = result.gzippedSize;
-    remote.rules = result.rules;
-    remote.selectors = result.selectors;
-
-    localStats.parse((error, result) => {
-      const diff = {};
-
-      diff.size = result.size - remote.size;
-      diff.gzippedSize = result.gzippedSize - remote.gzippedSize;
-      diff.rules = result.rules - remote.rules;
-      diff.selectors = result.selectors - remote.selectors;
-
-      gulpUtil.log(
-        gulpUtil.colors.green(`slds.scss (minified):
-            ${toKB(result.size)}KB (${toKB(result.gzippedSize)}KB gzipped)`)
-      );
-
-      gulpUtil.log(
-        gulpUtil.colors.gray(
-          `That's ${sign(diff.size)}${toKB(diff.size)}KB (${sign(
-            diff.gzippedSize
-          )}${diff.gzippedSize.toKB()}KB gzipped) than the current public version.`
-        )
-      );
-
-      gulpUtil.log(`Additional stats:
-            Rules: ${result.rules} (${sign(diff.rules)}${diff.rules})
-            Selectors: ${result.selectors} (${sign(diff.selectors)}${
-        diff.selectors
-      })`);
-      done(error, result);
-    });
-  });
+  fetch(
+    'https://www.lightningdesignsystem.com/assets/styles/salesforce-lightning-design-system.min.css'
+  )
+    .then(res => res.text())
+    .then(file => {
+      const remoteStats = cssStats(file);
+      const localStats = cssStats(localCss);
+      const remote = {
+        remote: {
+          size: remoteStats.humanizedSize,
+          gzip: remoteStats.humanizedGzipSize
+        }
+      };
+      const local = {
+        local: {
+          size: localStats.humanizedSize,
+          gzip: localStats.humanizedGzipSize
+        }
+      };
+      const diff = {
+        diff: {
+          size: getDiff(remoteStats.humanizedSize, localStats.humanizedSize),
+          gzip: getDiff(
+            remoteStats.humanizedGzipSize,
+            localStats.humanizedGzipSize
+          )
+        }
+      };
+      console.log([remote, local, diff]);
+    })
+    .catch(err => console.error(err));
+  done();
 };
 
 export const sass = () =>

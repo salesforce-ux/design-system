@@ -14,6 +14,7 @@ import * as examples from './scripts/gulp/generate/examples';
 import * as tokens from './scripts/gulp/generate/tokens';
 import * as lint from './scripts/gulp/lint';
 import * as styles from './scripts/gulp/styles';
+import * as sanitized from './scripts/gulp/generate/sanitized';
 
 import paths from './scripts/helpers/paths';
 import * as travis from './scripts/helpers/travis';
@@ -185,6 +186,13 @@ gulp.task(
 
 /*
  * ==================
+ * Styles Sanitized
+ * ==================
+ */
+gulp.task('sanitized:sass', sanitized.sass);
+
+/*
+ * ==================
  * Styles
  * ==================
  */
@@ -204,7 +212,7 @@ gulp.task(
 );
 gulp.task(
   'styles:stats',
-  gulp.series('styles', withName('stylestats')(styles.stylestats))
+  gulp.series('styles', withName('styles:stats')(styles.stats))
 );
 
 /*
@@ -266,14 +274,16 @@ gulp.task(
       withName('dist:copyDesignTokens')(dist.copyDesignTokens),
       withName('dist:copyComponentDesignTokens')(dist.copyComponentDesignTokens)
     ),
+    withName('dist:generateSanitized')(dist.generateSanitized),
     withName('dist:sass')(dist.sass),
-    withName('dist:minifyCss')(dist.minifyCss),
+    withName('dist:writeSanitized')(dist.writeSanitized),
     gulp.parallel(
       withName('dist:versionBlock')(dist.versionBlock),
       withName('dist:versionInline')(dist.versionInline),
       withName('dist:buildInfo')(dist.buildInfo),
       withName('dist:packageJson')(dist.packageJson)
     ),
+    withName('dist:minifyCss')(dist.minifyCss),
     withName('dist:writeUI')(dist.writeUI),
     withName('dist:writeLibrary')(dist.writeLibrary),
     withName('dist:writeTokenComponentMap')(done =>

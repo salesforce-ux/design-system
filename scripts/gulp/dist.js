@@ -5,7 +5,7 @@ import autoprefixer from 'autoprefixer';
 import del from 'del';
 import gulp from 'gulp';
 import gulpInsert from 'gulp-insert';
-import gulpMinifyCss from 'gulp-minify-css';
+import gulpMinifyCss from 'gulp-clean-css';
 import gulpPostcss from 'gulp-postcss';
 import gulpRename from 'gulp-rename';
 import gulpSass from 'gulp-sass';
@@ -23,6 +23,7 @@ import {
 import { createLibrary } from '../compile/bundle';
 import paths from '../helpers/paths';
 import ui from '../ui';
+import { generateSanitizedScss, writeSanitizedCss } from './generate/sanitized';
 
 const distPath = path.resolve.bind(path, paths.dist);
 
@@ -159,6 +160,9 @@ export const sass = () =>
       })
     )
     .pipe(gulp.dest(distPath('assets/styles/')));
+
+export const generateSanitized = done => generateSanitizedScss(done);
+export const writeSanitized = done => writeSanitizedCss(done);
 
 export const minifyCss = () =>
   gulp

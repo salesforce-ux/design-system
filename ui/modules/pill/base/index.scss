@@ -22,42 +22,49 @@
  */
 
 .lwc-pill {
+  border: var(--lwc-c-pill-border-width, $border-width-thin) solid var(--lwc-c-pill-border-color, $color-border);
+  border-radius: var(--lwc-c-pill-border-radius, $border-radius-medium);
+  background-color: var(--lwc-c-pill-color-background, $color-background-pill);
+  padding: var(--lwc-c-pill-spacing-vertical, $spacing-xxx-small) var(--lwc-c-pill-spacing-horizontal, 0);
+  min-height: var(--lwc-c-pill-height, $height-pill);
+  line-height: var(--lwc-c-pill-line-height, $line-height-text);
+
   display: inline-flex;
   align-items: center;
   justify-content: space-between;
-  border: $border-width-thin solid $color-border;
-  border-radius: $border-radius-medium;
-  background-color: $color-background-pill;
-  line-height: 1.5;
-  padding: $spacing-xxx-small 0;
-  min-height: 1.625rem;
   max-width: 100%; // Required to make the container shrink when truncated
   &:hover {
-    background-color: $color-background-button-default-hover;
+    background-color: var(--lwc-c-pill-color-background-hover, $color-background-button-default-hover);
   }
   &:focus, &:focus-within {
     outline: 0;
-    border-radius: $border-radius-medium;
-    border-color: $color-border-input-active;
-    box-shadow: $shadow-button-focus;
+    border-radius: var(--lwc-c-pill-border-radius, $border-radius-medium);
+    border-color: var(--lwc-c-pill-border-color-focus, $color-border-input-active);
+    box-shadow: var(--lwc-c-pill-box-shadow-focus, $shadow-button-focus);
   }
 }
 
+//restrictions here
+
 .lwc-pill__media {
-  width: 1.25rem;
-  height: 1.25rem;
-  margin: $spacing-xxx-small;
+  width: var(--lwc-c-pill-media-size, $square-icon-x-small-boundary);
+  height: var(--lwc-c-pill-media-size, $square-icon-x-small-boundary);
+  margin: var(--lwc-c-pill-media-margin, $spacing-xxx-small);
   display: inline-flex;
   align-items: center;
   justify-content: center;
 }
 
+//restrictions here
+
 .lwc-pill__label {
-  padding: 0 $spacing-xxx-small;
+  padding: var(--lwc-c-pill-label-spacing-vertical, 0) var(--lwc-c-pill-label-spacing-horizontal, $spacing-xxx-small);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
+
+//restrictions here
 
 .lwc-pill__action {
   &:hover {
@@ -71,19 +78,23 @@
   }
 }
 
+//restrictions here
+
 .lwc-pill__remove {
-  width: 1rem;
-  height: 1rem;
-  margin: $spacing-xxx-small;
+  width: var(--lwc-c-pill-dismiss-size, $square-icon-xx-small-boundary);
+  height: var(--lwc-c-pill-dismiss-size, $square-icon-xx-small-boundary);
+  margin: var(--lwc-c-pill-dismiss-margin, $spacing-xxx-small);
   display: inline-flex;
   align-items: center;
   justify-content: center;
 }
 
+//restrictions here
+
 .lwc-pill_has-error {
-  border-color: $color-border-error;
+  border-color: var(--lwc-c-pill-border-color-error, $color-border-error);
   .lwc-pill__label {
-    font-weight: $font-weight-bold;
-    color: $color-text-error;
+    font-weight: var(--lwc-c-pill-label-font-weight-error, $font-weight-bold);
+    color: var(--lwc-c-pill-label-font-color-error, $color-text-error);
   }
 }

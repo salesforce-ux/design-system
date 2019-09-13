@@ -2,7 +2,7 @@ import React from 'react';
 import Pill from '../';
 
 const Demo = props => (
-  <div className="demo-only" style={{ width: '6rem' }} dir={props.dir}>
+  <div className="demo-only" style={{ width: '6rem' }}>
     {props.children}
   </div>
 );

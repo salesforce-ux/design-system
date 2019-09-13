@@ -9,6 +9,7 @@ import { flattenElement, mapElement } from '../utils/react';
 
 import Example from './Example';
 import DocHeaderAnchor from './DocHeaderAnchor';
+import { DocBlock } from '../styles/DocBlock';
 
 export const tags = [
   'p',

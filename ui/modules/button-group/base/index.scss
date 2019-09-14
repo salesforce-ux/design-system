@@ -20,9 +20,9 @@
  */
 .lwc-button-group {
   display: inline-flex;
-  --lwc-c-button-border-radius: 0;
+  --lwc-c-button-radius: 0;
   --lwc-c-button-depth-active: 1;
   --lwc-c-button-spacing-horizontal-end: ($border-width-thin * -1);
-  --lwc-c-button-shadow-brand: inset -1px 0 0 $color-border;
-  --lwc-c-button-icon-shadow-brand: inset -1px 0 0 $color-border;
+  --lwc-c-button-brand-shadow: inset -1px 0 0 $color-border;
+  --lwc-c-button-icon-brand-shadow: inset -1px 0 0 $color-border;
 }

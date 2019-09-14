@@ -21,16 +21,16 @@
  */
 .lwc-card {
   position: relative;
-  padding-top: var(--lwc-c-card-spacing-vertical-top, 0);
+  padding-top: var(--lwc-c-card-spacing-vertical-start, 0);
   padding-right: var(--lwc-c-card-spacing-horizontal-end, 0);
-  padding-bottom: var(--lwc-c-card-spacing-vertical-bottom, 0);
+  padding-bottom: var(--lwc-c-card-spacing-vertical-end, 0);
   padding-left: var(--lwc-c-card-spacing-horizontal-start, 0);
   background: var(--lwc-c-card-color-background, $color-gray-1);
-  border: var(--lwc-c-card-border-width, $border-width-thin) solid var(--lwc-c-card-border-color, $color-border);
-  border-radius: var(--lwc-c-card-border-radius, $border-radius-medium);
+  border: var(--lwc-c-card-border-width, $border-width-thin) solid var(--lwc-c-card-color-border, $color-border);
+  border-radius: var(--lwc-c-card-radius, $border-radius-medium);
   background-clip: padding-box;
-  box-shadow: var(--lwc-c-card-box-shadow, $card-shadow);
-  color: var(--lwc-c-card-text-color, inherit);
+  box-shadow: var(--lwc-c-card-shadow, $card-shadow);
+  color: var(--lwc-c-card-color-text, inherit);
 }
 
 /**
@@ -39,14 +39,14 @@
  * @restrict .lwc-card div
  */
 .lwc-card__header {
-  padding-top: var(--lwc-c-card-header-spacing-vertical-top, var(--var-spacing-vertical-small, $var-spacing-vertical-small));
+  padding-top: var(--lwc-c-card-header-spacing-vertical-start, var(--var-spacing-vertical-small, $var-spacing-vertical-small));
   padding-right: var(--lwc-c-card-header-spacing-horizontal-end, var(--var-spacing-horizontal-medium, $var-spacing-horizontal-small));
-  padding-bottom: var(--lwc-c-card-header-spacing-vertical-bottom, 0);
+  padding-bottom: var(--lwc-c-card-header-spacing-vertical-end, 0);
   padding-left: var(--lwc-c-card-header-spacing-horizontal-start, var(--var-spacing-horizontal-medium, $var-spacing-horizontal-medium));
 
-  margin-top: var(--lwc-c-card-header-spacing-vertical-top, 0);
+  margin-top: var(--lwc-c-card-header-spacing-vertical-start, 0);
   margin-right: var(--lwc-c-card-header-spacing-horizontal-end, 0);
-  margin-bottom: var(--lwc-c-card-header-spacing-vertical-bottom, var(--var-spacing-vertical-small, $var-spacing-vertical-small));
+  margin-bottom: var(--lwc-c-card-header-spacing-vertical-end, var(--var-spacing-vertical-small, $var-spacing-vertical-small));
   margin-left: var(--lwc-c-card-header-spacing-horizontal-start, 0);
 
   header {
@@ -102,11 +102,11 @@
  * @restrict .lwc-card div
  */
 .lwc-card__body {
-  margin-top: var(--lwc-c-card-body-spacing-vertical-top, var(--var-spacing-vertical-small, $var-spacing-vertical-small));
-  margin-bottom: var(--lwc-c-card-body-spacing-vertical-bottom, var(--var-spacing-vertical-small, $var-spacing-vertical-small));
-  padding-top: var(--lwc-c-card-body-spacing-vertical-top, 0);
+  margin-top: var(--lwc-c-card-body-spacing-vertical-start, var(--var-spacing-vertical-small, $var-spacing-vertical-small));
+  margin-bottom: var(--lwc-c-card-body-spacing-vertical-end, var(--var-spacing-vertical-small, $var-spacing-vertical-small));
+  padding-top: var(--lwc-c-card-body-spacing-vertical-start, 0);
   padding-right: var(--lwc-c-card-body-spacing-horizontal-end, 0);
-  padding-bottom: var(--lwc-c-card-body-spacing-vertical-bottom, 0);
+  padding-bottom: var(--lwc-c-card-body-spacing-vertical-end, 0);
   padding-left: var(--lwc-c-card-body-spacing-horizontal-start, 0);
 }
 
@@ -132,15 +132,15 @@
  * @restrict .lwc-card footer
  */
 .lwc-card__footer {
-  padding-top: var(--lwc-c-card-footer-spacing-vertical-top, var(--var-spacing-vertical-small, $var-spacing-vertical-small));
+  padding-top: var(--lwc-c-card-footer-spacing-vertical-start, var(--var-spacing-vertical-small, $var-spacing-vertical-small));
   padding-right: var(--lwc-c-card-footer-spacing-horizontal-end, var(--var-spacing-horizontal-medium, $var-spacing-horizontal-small));
-  padding-bottom: var(--lwc-c-card-footer-spacing-vertical-bottom, var(--var-spacing-vertical-small, $var-spacing-vertical-small));
+  padding-bottom: var(--lwc-c-card-footer-spacing-vertical-end, var(--var-spacing-vertical-small, $var-spacing-vertical-small));
   padding-left: var(--lwc-c-card-footer-spacing-horizontal-start, var(--var-spacing-horizontal-medium, $var-spacing-horizontal-medium));
 
-  margin-top: var(--lwc-c-card-footer-spacing-vertical-top, var(--var-spacing-vertical-small, $var-spacing-vertical-small));
+  margin-top: var(--lwc-c-card-footer-spacing-vertical-start, var(--var-spacing-vertical-small, $var-spacing-vertical-small));
   text-align: var(--lwc-c-card-footer-text-align, center);
   font-size: var(--lwc-c-card-footer-font-size, $font-size-3);
-  border-top: var(--lwc-c-card-footer-border-width, $border-width-thin) solid var(--lwc-c-card-footer-border-color, $color-border);
+  border-top: var(--lwc-c-card-footer-border-width, $border-width-thin) solid var(--lwc-c-card-footer-color-border, $color-border);
 }
 
 /**
@@ -172,6 +172,6 @@
  * @modifier
  */
 .lwc-card_boundary {
-  border: var(--lwc-c-card-border-width, $border-width-thin) solid var(--lwc-c-card-border-color, $color-border);
+  border: var(--lwc-c-card-border-width, $border-width-thin) solid var(--lwc-c-card-color-border, $color-border);
   box-shadow: none;
 }

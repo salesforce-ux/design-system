@@ -395,9 +395,9 @@ export let examples = [
         customization={`
           :host {
             --lwc-c-button-icon-shadow: 0 1px 0 #e2e2e2;
-            --lwc-c-button-icon-color-background-default-active: #e2e2e2;
-            --lwc-c-active-button-icon-color-default: #585858;
-            --lwc-c-active-button-icon-shadow: var(--lwc-c-theme-button-icon-shadow);
+            --lwc-c-button-icon-neutral-color-background-active: #e2e2e2;
+            --lwc-c-button-icon-neutral-color-active: #585858;
+            --lwc-c-button-icon-shadow-active: var(--lwc-c-button-icon-shadow);
           }
         `}
       />
@@ -413,14 +413,14 @@ export let examples = [
         variant="brand"
         customization={`
           :host {
-            --lwc-c-button-icon-color-background-brand: #000;
-            --lwc-c-button-icon-color-background-brand-active: #000;
-            --lwc-c-button-icon-color-border-brand: #000;
-            --lwc-c-button-icon-color-border-brand-active: #000;
-            --lwc-c-active-button-icon-color-brand: #767677;
-            --lwc-c-button-icon-border-radius: 0;
+            --lwc-c-button-icon-brand-color-background: #000;
+            --lwc-c-button-icon-brand-color-background-active: #000;
+            --lwc-c-button-icon-brand-color-border: #000;
+            --lwc-c-button-icon-brand-color-border-active: #000;
+            --lwc-c-button-icon-brand-color-active: #767677;
+            --lwc-c-button-icon-radius: 0;
             --lwc-c-button-icon-shadow: 2px 2px 0 1px #fff, 3px 3px 0 1px #000;
-            --lwc-c-active-button-icon-shadow: var(--lwc-c-button-icon-shadow);
+            --lwc-c-button-icon-shadow-active: var(--lwc-c-button-icon-shadow);
           }
         `}
       />

@@ -233,14 +233,35 @@
     "esm": "js"
   },
   "lwc": {
-    "modules": {
-      "@salesforce/slds/button": "ui/modules/button/base/index.css",
-      "@salesforce/slds/buttonIcon": "ui/modules/button-icon/base/index.css",
-      "@salesforce/slds/buttonGroup": "ui/modules/button-group/base/index.css",
-      "@salesforce/slds/card": "ui/modules/card/base/index.css",
-      "@salesforce/slds/common": "ui/modules/common/index.css",
-      "@salesforce/slds/icon": "ui/modules/icon/base/index.css",
-      "@salesforce/slds/modal": "ui/modules/modal/base/index.css"
-    }
+    "modules": [
+      {
+        "name": "@salesforce/slds/button",
+        "path": "ui/modules/button/base/index.css"
+      },
+      {
+        "name": "@salesforce/slds/buttonIcon",
+        "path": "ui/modules/button-icon/base/index.css"
+      },
+      {
+        "name": "@salesforce/slds/buttonGroup",
+        "path": "ui/modules/button-group/base/index.css"
+      },
+      {
+        "name": "@salesforce/slds/card",
+        "path": "ui/modules/card/base/index.css"
+      },
+      {
+        "name": "@salesforce/slds/common",
+        "path": "ui/modules/common/index.css"
+      },
+      {
+        "name": "@salesforce/slds/icon",
+        "path": "ui/modules/icon/base/index.css"
+      },
+      {
+        "name": "@salesforce/slds/modal",
+        "path": "ui/modules/modal/base/index.css"
+      }
+    ]
   }
 }

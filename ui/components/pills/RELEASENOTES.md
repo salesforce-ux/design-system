@@ -8,11 +8,12 @@
 
 ### Changed
 
-- On touch devices, increase tap target height of `.slds-pill` to `$height-tappable-small` and change horizontal padding to `$spacing-small`
-- On touch devices, update spacing between pills to `$spacing-xx-small`
-- On touch devices, set padding of pill container to `$spacing-xx-small`
-- On touch devices, set `font-size` of `.slds-pill__label` to `$font-size-4`
-- On touch devices, update the padding of `.slds-pill__action`
-- On touch devices, adjust the positioning of the icon inside a pill after padding updates
+- For touch devices:
+  - Increase tap target height of `.slds-pill` to `$height-tappable-small` (2rem) and change horizontal padding to `$spacing-small` (0.75rem)
+  - Update spacing between pills to `$spacing-xx-small` (0.25rem)
+  - Set padding of pill container to `$spacing-xx-small` (0.25rem)
+  - Set `font-size` of `.slds-pill__label` to `$font-size-4` (0.875rem)
+  - Update the padding of `.slds-pill__action`
+  - Adjust the positioning of the icon inside a pill after padding updates
 
 <!-- ## [VERSION] -->

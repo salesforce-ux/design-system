@@ -8,7 +8,7 @@
 
 ### Changed
 
-- For touch devices, increase size of checkbox-button to `$square-tappable` and center children with flex properties
+- For touch devices, increase size of checkbox-button to `$square-tappable` (2.75rem) and center children with flex properties
 
 ## 2.7.0
 

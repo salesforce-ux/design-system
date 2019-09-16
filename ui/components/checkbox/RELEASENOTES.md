@@ -8,11 +8,12 @@
 
 ### Changed
 
-- For touch devices, increase size of faux checkbox to `$square-tappable-x-small`
-- For touch devices, increase tap target size of `.slds-checkbox__label` to `$height-tappable` and center with flex properties
-- For touch devices, increase `font-size` of inline label to `$font-size-5`
-- For touch devices, increase size of `.slds-checkbox_standalone` to `$height-tappable` for consistency with tap target size increases
-- For touch devices and within `.slds-checkbox_standalone`, increase the tap target size of the checkbox input
+- For touch devices:
+  - Increase size of faux checkbox to `$square-tappable-x-small` (1.5rem)
+  - Increase tap target size of `.slds-checkbox__label` to `$height-tappable` (2.75rem) and center with flex properties
+  - Increase `font-size` of inline label to `$font-size-5` (1rem)
+  - Increase size of `.slds-checkbox_standalone` to `$height-tappable` (2.75rem) for consistency with tap target size increases
+  - Within `.slds-checkbox_standalone`, increase the tap target size of the checkbox input
 - Ensure the checkbox input is hidden with `opacity: 0`
 
 ## 2.9.0

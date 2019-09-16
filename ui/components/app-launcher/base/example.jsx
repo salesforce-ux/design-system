@@ -1,9 +1,14 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-import React, { Fragment } from 'react';
+import React from 'react';
 import SvgIcon from '../../../shared/svg-icon';
-import { Modal, ModalHeader, ModalContent } from '../../modals/base/example';
+import {
+  Modal,
+  ModalHeader,
+  ModalContent,
+  Backdrop
+} from '../../modals/base/example';
 import {
   Section,
   SectionContent,
@@ -310,14 +315,13 @@ appTilesMoved[2] = Object.assign({}, appTilesMoved[2], { grabbed: true });
 export const appTilesDropped = moveItemPosition(appTiles, 0, 3);
 
 const defaultComponent = (
-  <Fragment>
+  <Backdrop>
     <AppLauncherModal
       appTiles={appTiles}
       dragDropLiveRegion=""
       itemTiles={itemTiles}
     />
-    <div className="slds-backdrop slds-backdrop_open" />
-  </Fragment>
+  </Backdrop>
 );
 
 export default defaultComponent;
@@ -334,15 +338,14 @@ export let states = [
     label: 'Tile grabbed',
     demoStyles: exampleDemoStyles,
     element: (
-      <Fragment>
+      <Backdrop>
         <AppLauncherModal
           appTiles={appTilesGrabbed}
           dragDropLiveRegion="Sales Cloud: current position 1 of 6. Use the up and down arrows to move this app"
           grabbed
           itemTiles={itemTiles}
         />
-        <div className="slds-backdrop slds-backdrop_open" />
-      </Fragment>
+      </Backdrop>
     )
   },
   {
@@ -350,14 +353,13 @@ export let states = [
     label: 'Tile moved in list',
     demoStyles: exampleDemoStyles,
     element: (
-      <Fragment>
+      <Backdrop>
         <AppLauncherModal
           appTiles={appTilesMoved}
           dragDropLiveRegion="Sales Cloud: new position 3 of 6."
           itemTiles={itemTiles}
         />
-        <div className="slds-backdrop slds-backdrop_open" />
-      </Fragment>
+      </Backdrop>
     )
   },
   {
@@ -365,14 +367,13 @@ export let states = [
     label: 'Tile dropped',
     demoStyles: exampleDemoStyles,
     element: (
-      <Fragment>
+      <Backdrop>
         <AppLauncherModal
           appTiles={appTilesDropped}
           dragDropLiveRegion="Sales Cloud: final position 4 of 6."
           itemTiles={itemTiles}
         />
-        <div className="slds-backdrop slds-backdrop_open" />
-      </Fragment>
+      </Backdrop>
     )
   },
   {
@@ -380,15 +381,14 @@ export let states = [
     label: 'Search',
     demoStyles: exampleDemoStyles,
     element: (
-      <Fragment>
+      <Backdrop>
         <AppLauncherModal
           appTiles={appTilesSearch}
           dragDropLiveRegion=""
           itemTiles={searchItemTiles}
           searchTerm="sales"
         />
-        <div className="slds-backdrop slds-backdrop_open" />
-      </Fragment>
+      </Backdrop>
     )
   },
   {

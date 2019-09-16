@@ -36,7 +36,7 @@ When the tile description is too long to fit on 2 lines, a "more" `button` is sh
 
 On hover or focus, the more `button` will display the full desscription using a [Tooltip](/components/tooltips)
 
-<CodeView style={getDemoStylesById(AppLauncherExamples.states, 'tooltip')}>
+<CodeView isViewport style={getDemoStylesById(AppLauncherExamples.states, 'tooltip')}>
   {getDisplayElementById(AppLauncherExamples.states, 'tooltip')}
 </CodeView>
 
@@ -52,7 +52,7 @@ App tiles can be re-ordered via mouse drag and drop or with the keyboard via the
 
 When a tile is grabbed add the class name of `slds-is-grabbed` to the tile class list. When initiating the grab via the stateful button, be sure to set `aria-pressed="true"` on the button. Also be sure to update the contents of the live region to communicate what was grabbed, its current position and how to move the item. Something like: _"Sales Cloud: current position 1 of 6. Use the up and down arrows to move this app"_
 
-<CodeView style={getDemoStylesById(AppLauncherExamples.states, 'grabbed')}>
+<CodeView isViewport style={getDemoStylesById(AppLauncherExamples.states, 'grabbed')}>
   {getDisplayElementById(AppLauncherExamples.states, 'grabbed')}
 </CodeView>
 
@@ -60,7 +60,7 @@ When a tile is grabbed add the class name of `slds-is-grabbed` to the tile class
 
 When the tile is moved in the list using a keyboard, update the live region for every move to indicate its new position to the user. Something like: _"Sales Cloud: new position 3 of 6."_
 
-<CodeView style={getDemoStylesById(AppLauncherExamples.states, 'moved')}>
+<CodeView isViewport style={getDemoStylesById(AppLauncherExamples.states, 'moved')}>
   {getDisplayElementById(AppLauncherExamples.states, 'moved')}
 </CodeView>
 
@@ -68,7 +68,7 @@ When the tile is moved in the list using a keyboard, update the live region for 
 
 Finally, when a tile is dropped into its final position, reset `aria-pressed` to be `false` on the stateful button, and update the live region to inform the user of the items final position. e.g. _"Sales Cloud: final position 4 of 6."_
 
-<CodeView style={getDemoStylesById(AppLauncherExamples.states, 'dropped')}>
+<CodeView isViewport style={getDemoStylesById(AppLauncherExamples.states, 'dropped')}>
   {getDisplayElementById(AppLauncherExamples.states, 'dropped')}
 </CodeView>
 
@@ -76,6 +76,6 @@ Finally, when a tile is dropped into its final position, reset `aria-pressed` to
 
 When using the search input at the top of the modal, the list of applications and items filters as the user types. The remaining items on display have the matching search term highlighted with the use of the `<mark />` element wrapping the matching term. This creates the visual highlight around the term.
 
-<CodeView style={getDemoStylesById(AppLauncherExamples.states, 'search')}>
+<CodeView isViewport style={getDemoStylesById(AppLauncherExamples.states, 'search')}>
   {getDisplayElementById(AppLauncherExamples.states, 'search')}
 </CodeView>

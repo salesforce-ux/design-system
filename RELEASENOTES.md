@@ -34,6 +34,10 @@
   - App Launcher did not use brand tokens for `:hover` and `:active` states
   - `.slds-app-launcher__tile` now uses `$brand-accessible` for its `:hover` state and `$brand-accessible-active` for its `:active` state
 
+### [Button Groups](https://www.lightningdesignsystem.com/components/button-groups)
+#### Changed
+- For touch devices, the visual height of the button group is increased for an improved tap target size. This change comes from `slds-button` which is a child component of button-group.
+
 ### [Button Icons](https://www.lightningdesignsystem.com/components/button-icons)
 #### Changed
 - Center contents of `slds-button_icon` with change of `display: inline-flex` to `slds-button`
@@ -42,17 +46,19 @@
 #### Fixed
 - Fixed poor color contrast of inverse buttons on hover and focus
 #### Changed
-- Boldened Button labels on touch devices
 - Modify display of `slds-button` to `inline-flex`
 - Center contents of contained Buttons with change of `display: inline-flex` to `slds-button`
-- On touch devices, set size of `.slds-button__icon` to `$square-icon-medium-content`
 - `justify-content: center` is now applied to the stretch variant `.slds-button_stretch`
+- For touch devices:
+  - Increase the line-height (which affects the overall visual height) to `$button-line-height-touch` (2.65rem)
+  - Set the size of `.slds-button__icon` to `$square-icon-medium-content` (1rem)
+  - Boldened Button labels
 
 ### [Cards](https://www.lightningdesignsystem.com/components/cards)
 #### Changed
-- Visually remove border and set border-radius to zero on touch devices
+- Visually remove border and set border-radius to zero for touch devices
 - For touch devices:
-  - Set font size of `.slds-card__header-title` to `$var-font-size-6`
+  - Set font size of `.slds-card__header-title` to `$var-font-size-6` (1.125rem)
   - Make `.slds-card__header-title` always bold whether it contains a link or not
 
 ### [Chat](https://www.lightningdesignsystem.com/components/chat)
@@ -63,26 +69,28 @@
 
 ### [Checkbox](https://www.lightningdesignsystem.com/components/checkbox)
 #### Changed
-- For touch devices, increase size of faux checkbox to `$square-tappable-x-small`
-- For touch devices, increase tap target size of `.slds-checkbox__label` to `$height-tappable` and center with flex properties
-- For touch devices, increase `font-size` of inline label to `$font-size-5`
-- For touch devices, increase size of `.slds-checkbox_standalone` to `$height-tappable` for consistency with tap target size increases
-- For touch devices and within `.slds-checkbox_standalone`, increase the tap target size of the checkbox input
+- For touch devices:
+  - Increase size of faux checkbox to `$square-tappable-x-small` (1.5rem)
+  - Increase tap target size of `.slds-checkbox__label` to `$height-tappable` (2.75rem) and center with flex properties
+  - Increase `font-size` of inline label to `$font-size-5` (1rem)
+  - Increase size of `.slds-checkbox_standalone` to `$height-tappable` (2.75rem) for consistency with tap target size increases
+  - Within `.slds-checkbox_standalone`, increase the tap target size of the checkbox input
 - Ensure the checkbox input is hidden with `opacity: 0`
 
 ### [Checkbox Button](https://www.lightningdesignsystem.com/components/checkbox-button)
 #### Changed
-- For touch devices, increase size of checkbox-button to `$square-tappable` and center children with flex properties
+- For touch devices, increase size of checkbox-button to `$square-tappable` (2.75rem) and center children with flex properties
 
 ### [Checkbox Button Group](https://www.lightningdesignsystem.com/components/checkbox-button-group)
 #### Changed
-- For touch devices, increase tap target size of `.slds-checkbox_button`
+- For touch devices, increase tap target size of `.slds-checkbox_button` to `$height-tappable` (2.75rem)
 <!-- ## [VERSION] -->
 
 ### [Checkbox Toggle](https://www.lightningdesignsystem.com/components/checkbox-toggle)
 #### Changed
-- For touch devices, change `font-size` of label text to `$font-size-5`
-- For touch devices, increase `font-size` of `.slds-checkbox_faux_container` to `$font-size-2`
+- For touch devices:
+  - Change `font-size` of label text to `$font-size-5` (1rem)
+  - Increase `font-size` of `.slds-checkbox_faux_container` to `$font-size-2` (0.75rem)
 <!-- ## [VERSION] -->
 
 ### [Color Picker](https://www.lightningdesignsystem.com/components/color-picker)
@@ -91,8 +99,9 @@
 
 ### [Combobox](https://www.lightningdesignsystem.com/components/combobox)
 #### Changed
-- Increase font-size and height of combobox height on a touch device
-- Increase height of a listbox option on a touch device
+- For touch devices:
+  - Increase font-size and height of combobox height
+  - Increase height of a listbox option
 - Changed the size of icon in a plain listbox to inherit the size of the `body`
 - Modified the spacing between pills when inside the context of a selection group
 #### Fixed
@@ -113,6 +122,10 @@
 - Removed `.slds-icon-text-default` from `.slds-icon` and replaced it with `.slds-current-color` on the icon's container `.slds-icon_container` so the icon's color matches the locked item's disabled color
 - Removed `draggable` attribute from locked items as they are not draggable in the locked state
 
+### [File Selector](https://www.lightningdesignsystem.com/components/file-selector)
+#### Changed
+- For touch devices, the line-height is increased for a larger tap target size. This change comes from `slds-button` which is used as a child component in file-selector.
+
 ### [Files](https://www.lightningdesignsystem.com/components/files)
 #### Fixed
 - Scoped the eyeball hover effect to the figure link only.
@@ -120,12 +133,13 @@
 
 ### [Form Element](https://www.lightningdesignsystem.com/components/form-element)
 #### Changed
-- On touch devices, set the amount of space created for the edit icon to `$square-tappable` which aligns with touch specific sizing
-- On touch devices, increase the tap target size of `.slds-form-element__label` to `$$height-tappable-small`, center with flex, and increase `font-size` to `$font-size-4`
-- On touch devices, set the tap target height of button-icons to `$height-tappable-small` when inline with label text
-- On touch devices, increase the font size of `.slds-form-element__static` to `$font-size-5`
-- On touch devices and within `.slds-form-element_readonly`, increase the size of `.slds-icon` to `$square-tappable-x-small` and increase the height of `.slds-form-element__control` to `$height-tappable` which aligns `.slds-form-element_readonly`'s touch height to other form elements
-- On touch devices, remove the `min-height` from `.slds-form-element_readonly .slds-form-element__control` for denser read-only forms
+- For touch devices:
+  - Set the amount of space created for the edit icon to `$square-tappable` (2.75rem) which aligns with touch specific sizing
+  - Increase the tap target size of `.slds-form-element__label` to `$height-tappable-small` (2rem), center with flex, and increase `font-size` to `$font-size-4` (0.875rem)
+  - Set the tap target height of button-icons to `$height-tappable-small` (2rem) when inline with label text
+  - Increase the font size of `.slds-form-element__static` to `$font-size-5` (1rem)
+  - Within `.slds-form-element_readonly`, increase the size of `.slds-icon` to `$square-tappable-x-small` (1.5rem) and increase the height of `.slds-form-element__control` to `$height-tappable` (2.75rem) which aligns `.slds-form-element_readonly`'s touch height to other form elements
+  - Remove the `min-height` from `.slds-form-element_readonly .slds-form-element__control` for denser read-only forms
 
 ### [Input](https://www.lightningdesignsystem.com/components/input)
 #### Added
@@ -133,23 +147,27 @@
 - When an `input` has an error, `aria-invalid="true"` has been added to the `input` element
 #### Changed
 - Removed default `box-shadow` on `inputs` for Webkit
-- Positioning of icons inside of inputs have been tweaked when on a touch device
 - Added ltr declarations on `url`, `tel`, and `email` type inputs to prevent rtl adjustments from being inherited (these input types should always render ltr)
+- For touch devices:
+  - Increase the line-height to `$height-tappable` (2.75rem) for an improved tap target
+  - For read-only inputs, increase the font size to `$font-size-5` (1rem) for consistency with the font sizes of other inputs
+  - Positioning of icons inside of inputs have been tweaked
 
 ### [Map](https://www.lightningdesignsystem.com/components/map)
 #### Changed
-- Adjusted padding around map on touch devices
-- Removed height restriction on `.slds-has-coordinates` on touch devices to prevent internal scrolling of long lists
-- Increased font size of `.slds-coordinates__title` on touch devices
+- For touch devices:
+  - Adjusted padding around map
+  - Removed height restriction on `.slds-has-coordinates` to prevent internal scrolling of long lists
+  - Increased font size of `.slds-coordinates__title`
 
 ### [Menus](https://www.lightningdesignsystem.com/components/menus)
 #### Changed
-- On touch devices:
-  - Set tap target size of menu row item to `$height-tappable`
+- For touch devices:
+  - Set tap target size of menu row item to `$height-tappable` (2.75rem)
   - Remove padding from `.slds-dropdown` after increased tap target size of menu row items
-  - Set `font-size` of menu to `$font-size-5`
+  - Set `font-size` of menu to `$font-size-5` (1rem)
 - Remove `font-size` declaration from `slds-dropdown__header` to inherit `font-size` from `body` element
-- Update `.slds-dropdown_fluid` to have a `min-width` set to `$size-x-small` to prevent menus from being unreadable when associated with inputs that have a small width
+- Update `.slds-dropdown_fluid` to have a `min-width` set to `$size-x-small` (12rem) to prevent menus from being unreadable when associated with inputs that have a small width
 #### Added
 - Added explicit `right: auto` to `slds-dropdown_left`
 
@@ -157,13 +175,14 @@
 #### Changed
 - Changed `slds-modal_small` width to percentage-based to address the disparity of size relationship between `slds-modal_small` and other sized modals `slds-modal_medium` and `slds-modal_large`)
 - Deprecated use of `slds-text-heading_medium` utility class on Modal title, added class `slds-modal__title` to declare styles for the Modal title.
-- On touch devices, set font weight of Modal title to `$font-weight-bold`
-- On touch devices, set tap target size of the Modal close button to `$height-tappable`
+- For touch devices:
+  - Set font weight of Modal title to `$font-weight-bold`
+  - Set tap target size of the Modal close button to `$height-tappable` (2.75rem)
 <!-- ## [VERSION] -->
 
 ### [Path](https://www.lightningdesignsystem.com/components/path)
 #### Changed
-- For touch devices, increased the height and tap target size of the path component to `$height-tappable`
+- For touch devices, increased the height and tap target size of the path component to `$height-tappable` (2.75rem)
 #### Fixed
 - Fixed text disappearing when peaking between stage in Safari
 
@@ -173,12 +192,13 @@
 
 ### [Pills](https://www.lightningdesignsystem.com/components/pills)
 #### Changed
-- On touch devices, increase tap target height of `.slds-pill` to `$height-tappable-small` and change horizontal padding to `$spacing-small`
-- On touch devices, update spacing between pills to `$spacing-xx-small`
-- On touch devices, set padding of pill container to `$spacing-xx-small`
-- On touch devices, set `font-size` of `.slds-pill__label` to `$font-size-4`
-- On touch devices, update the padding of `.slds-pill__action`
-- On touch devices, adjust the positioning of the icon inside a pill after padding updates
+- For touch devices:
+  - Increase tap target height of `.slds-pill` to `$height-tappable-small` (2rem) and change horizontal padding to `$spacing-small` (0.75rem)
+  - Update spacing between pills to `$spacing-xx-small` (0.25rem)
+  - Set padding of pill container to `$spacing-xx-small` (0.25rem)
+  - Set `font-size` of `.slds-pill__label` to `$font-size-4` (0.875rem)
+  - Update the padding of `.slds-pill__action`
+  - Adjust the positioning of the icon inside a pill after padding updates
 <!-- ## [VERSION] -->
 
 ### [Popovers](https://www.lightningdesignsystem.com/components/popovers)
@@ -190,19 +210,20 @@
 #### Changed
 - Updated how the vertical variant handles the layout of its indicators so pixel nudging becomes deprecated (e.x. `margin-left: 1px` on `.slds-progress__item.slds-is-completed .slds-progress__marker_icon`)
 - For touch devices:
-  - Increased tap target size of contained `.slds-button` to a height equal to `$height-tappable` using `:before` pseudo element
-  - Increased icon and marker size to `$square-tappable-xx-small`
-  - For vertical variant, increased font size to `$font-size-4`
+  - Increased tap target size of contained `.slds-button` to a height equal to `$height-tappable` (2.75rem) using `:before` pseudo element
+  - Increased icon and marker size to `$square-tappable-xx-small` (1.25rem)
+  - For vertical variant, increased font size to `$font-size-4` (0.875rem)
 
 ### [Radio Group](https://www.lightningdesignsystem.com/components/radio-group)
 #### Changed
-- Increase tap size of `.slds-radio__label` on touch devices
-- Increase the size of the faux radio element on touch devices
-- Let the label text inherit its `font-size` from the body on touch devices
+- For touch devices:
+  - Increase tap size of `.slds-radio__label` to `$height-tappable`(2.75rem)
+  - Increase the size of the faux radio element to `$square-tappable-x-small` (1.5rem)
+  - Let the label text inherit its `font-size` from the body
 
 ### [Rich Text Editor](https://www.lightningdesignsystem.com/components/rich-text-editor)
 #### Added
-- Created Toolbar Only variant for use without attached textarea on touch devices
+- Created Toolbar Only variant for use without attached textarea for touch devices
 #### Changed
 - Removed size utility classes on combobox/selects in toolbar for component-specific classes (`slds-rich-text-editor__select_x-small` and `slds-rich-text-editor__select_xx-small`)
 
@@ -247,7 +268,7 @@
 ## Utilities
 ### [Text Utility](https://www.lightningdesignsystem.com/utilities/text)
 #### Fix
-- Revert `font-size` of text utilities back to their original state on touch devices
+- Revert `font-size` of text utilities back to their original state for touch devices
 
 ## Release 2.9.3 - May 24, 2019
 

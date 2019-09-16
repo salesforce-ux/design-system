@@ -2,9 +2,10 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 import React from 'react';
-import { sampleTiles } from '../helpers';
+import { sampleTiles, WelcomeMatContext, exampleDemoStyles } from '../helpers';
 import WelcomeMat from '../';
 import WelcomeMatContent from '../WelcomeMatContent';
+import { Backdrop } from '../../modals/base/example';
 
 const tiles = sampleTiles();
 const completedTiles = [
@@ -14,61 +15,81 @@ const completedTiles = [
 ];
 const doubleTiles = [...completedTiles].concat(tiles.slice(2));
 
-export const Context = props => (
-  <div className="demo-only" style={{ height: '800px' }}>
-    {props.children}
-    <div className="slds-backdrop slds-backdrop_open" />
-  </div>
+export const Context = WelcomeMatContext;
+
+const defaultComponent = (
+  <Backdrop>
+    <WelcomeMat />
+  </Backdrop>
 );
 
-export default <WelcomeMat />;
+export default defaultComponent;
 
 export let examples = [
   {
+    id: 'default',
+    label: 'Default',
+    demoStyles: exampleDemoStyles,
+    element: defaultComponent
+  },
+  {
     id: 'with-completed-tiles',
     label: 'With Completed Tiles',
-    element: <WelcomeMat tiles={completedTiles} />
+    demoStyles: exampleDemoStyles,
+    element: (
+      <Backdrop>
+        <WelcomeMat tiles={completedTiles} />
+      </Backdrop>
+    )
   },
   {
     id: 'with-overflowing-tiles',
     label: 'With Overflowing Tiles',
-    element: <WelcomeMat tiles={doubleTiles} />
+    demoStyles: exampleDemoStyles,
+    element: (
+      <Backdrop>
+        <WelcomeMat tiles={doubleTiles} />
+      </Backdrop>
+    )
   },
   {
     id: 'with-overflowing-tiles-and-long-description',
     label: 'With Overflowing Tiles and Long Description',
+    demoStyles: exampleDemoStyles,
     element: (
-      <WelcomeMat
-        tiles={doubleTiles}
-        content={({ complete, total, labelId }) => (
-          <WelcomeMatContent
-            complete={complete}
-            total={total}
-            labelId={labelId}
-            description={
-              <React.Fragment>
-                <p>
-                  Integer nibh libero, pulvinar sed libero et, rhoncus convallis
-                  purus. Sed faucibus nibh vel arcu vestibulum, nec commodo
-                  sapien tincidunt. In dignissim faucibus ipsum, nec placerat
-                  dui pulvinar a mi nec lectus feugiat vel arcu rhoncus
-                  convallis, nibh libero.
-                </p>
-                <p>
-                  Sed vestibulum dui ac diam suscipit vehicula. Nam vestibulum
-                  mi nec lectus feugiat euismod. Phasellus in suscipit est.
-                </p>
-                <p>
-                  Morbi facilisis aliquet dapibus. Morbi ac leo viverra, cursus
-                  nibh eget, ultrices mauris. Integer pharetra, lorem ac
-                  hendrerit vulputate, sem elit luctus metus, sit amet vehicula
-                  justo ex at sem.
-                </p>
-              </React.Fragment>
-            }
-          />
-        )}
-      />
+      <Backdrop>
+        <WelcomeMat
+          tiles={doubleTiles}
+          content={({ complete, total, labelId }) => (
+            <WelcomeMatContent
+              complete={complete}
+              total={total}
+              labelId={labelId}
+              description={
+                <React.Fragment>
+                  <p>
+                    Integer nibh libero, pulvinar sed libero et, rhoncus
+                    convallis purus. Sed faucibus nibh vel arcu vestibulum, nec
+                    commodo sapien tincidunt. In dignissim faucibus ipsum, nec
+                    placerat dui pulvinar a mi nec lectus feugiat vel arcu
+                    rhoncus convallis, nibh libero.
+                  </p>
+                  <p>
+                    Sed vestibulum dui ac diam suscipit vehicula. Nam vestibulum
+                    mi nec lectus feugiat euismod. Phasellus in suscipit est.
+                  </p>
+                  <p>
+                    Morbi facilisis aliquet dapibus. Morbi ac leo viverra,
+                    cursus nibh eget, ultrices mauris. Integer pharetra, lorem
+                    ac hendrerit vulputate, sem elit luctus metus, sit amet
+                    vehicula justo ex at sem.
+                  </p>
+                </React.Fragment>
+              }
+            />
+          )}
+        />
+      </Backdrop>
     )
   }
 ];

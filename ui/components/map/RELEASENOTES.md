@@ -8,9 +8,10 @@
 
 ### Changed
 
-- Adjusted padding around map on touch devices
-- Removed height restriction on `.slds-has-coordinates` on touch devices to prevent internal scrolling of long lists
-- Increased font size of `.slds-coordinates__title` on touch devices
+- For touch devices:
+  - Adjusted padding around map
+  - Removed height restriction on `.slds-has-coordinates` to prevent internal scrolling of long lists
+  - Increased font size of `.slds-coordinates__title`
 
 ## 2.7.0
 

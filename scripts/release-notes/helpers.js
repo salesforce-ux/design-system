@@ -33,10 +33,14 @@ function getReleaseDate() {
 const logStatus = message =>
   console.log('\n', '\u{26A1}', '\x1b[32m', message, '\x1b[0m', '\n');
 
+const logWarning = message =>
+  console.log('\n', '\x1b[35m', '\u{1F640}', message, '\u{1F640}', '\n');
+
 module.exports = {
   arrayOfLines,
   getReleaseDate,
   logStatus,
+  logWarning,
   COMMENT_BEST_PRACTICES,
   NEW_LINE,
   NEW_LINE_DOUBLE,

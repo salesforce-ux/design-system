@@ -5,7 +5,7 @@ import React from 'react';
 import { Avatar } from '../../avatar/base/example';
 import ButtonIcon from '../../button-icons/';
 import { Menu, MenuList, MenuItem } from '../../menus/dropdown/example';
-import { Modal, ModalContent } from '../../modals/base/example';
+import { Modal, ModalContent, Backdrop } from '../../modals/base/example';
 import {
   RichTextEditor,
   RteToolbar,
@@ -328,7 +328,7 @@ export let states = [
     id: 'single-composer-popout',
     label: 'Popout',
     element: (
-      <div>
+      <Backdrop>
         <Modal
           className="slds-docked-composer-modal"
           aria-labelledby={dialogHeadingId}
@@ -342,8 +342,7 @@ export let states = [
             </DockedComposerPanel>
           </ModalContent>
         </Modal>
-        <div className="slds-backdrop slds-backdrop_open" />
-      </div>
+      </Backdrop>
     )
   },
   {

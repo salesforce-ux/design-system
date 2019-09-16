@@ -2,25 +2,35 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 import React from 'react';
-import PropTypes from 'prop-types';
 
 import WelcomeMat from '../';
-import { WelcomeMatMarketingContent } from '../helpers';
+import {
+  WelcomeMatMarketingContent,
+  WelcomeMatContext,
+  exampleDemoStyles
+} from '../helpers';
+import { Backdrop } from '../../modals/base/example';
 
-export const Context = props => (
-  <div className="demo-only" style={{ height: '800px' }}>
-    {props.children}
-    <div className="slds-backdrop slds-backdrop_open" />
-  </div>
+export const Context = WelcomeMatContext;
+
+const defaultComponent = (
+  <Backdrop>
+    <WelcomeMat
+      content={({ labelId }) => (
+        <WelcomeMatMarketingContent labelId={labelId} />
+      )}
+      isInfoOnly
+    />
+  </Backdrop>
 );
 
-Context.propTypes = {
-  children: PropTypes.node.isRequired
-};
+export default defaultComponent;
 
-export default (
-  <WelcomeMat
-    content={({ labelId }) => <WelcomeMatMarketingContent labelId={labelId} />}
-    isInfoOnly
-  />
-);
+export let examples = [
+  {
+    id: 'default',
+    label: 'Default',
+    demoStyles: exampleDemoStyles,
+    element: defaultComponent
+  }
+];

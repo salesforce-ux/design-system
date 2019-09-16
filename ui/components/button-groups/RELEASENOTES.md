@@ -3,6 +3,13 @@
 # Button Groups Release Notes
 
 <!-- ## [Unreleased] -->
+
+## 2.10.0
+
+### Changed
+
+- For touch devices, the visual height of the button group is increased for an improved tap target size. This change comes from `slds-button` which is a child component of button-group.
+
 ## 2.8.0
 
 ### Added

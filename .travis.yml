@@ -7,8 +7,6 @@ before_install:
   - npm version
 install:
   - npm install
-before_script:
-  - export NODE_OPTIONS=–-max_old_space_size=4096
 script:
   - npm run gulp -- travis
 cache:

@@ -200,7 +200,7 @@
   "scripts": {
     "build": "npm run gulp -- build",
     "dist": "npm run gulp -- dist",
-    "gulp": "babel-node ./node_modules/gulp/bin/gulp.js",
+    "gulp": "babel-node --max-old-space-size=4096 ./node_modules/gulp/bin/gulp.js",
     "lint": "npm run gulp -- lint",
     "start": "npm run build && npm run previewer",
     "previewer": "babel-node scripts/previewer",

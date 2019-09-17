@@ -29,17 +29,17 @@
     background-color: var(--lwc-c-pill-color-background-active, $color-background-button-default-hover);
   }
 
-  &:focus, 
+  &:focus,
   &:focus-within {
     outline: 0;
     border-radius: var(--lwc-c-pill-radius, $border-radius-medium);
     border-color: var(--lwc-c-pill-color-border-active, $color-border-input-active);
     box-shadow: var(--lwc-c-pill-shadow-active, $shadow-button-focus);
-    //box-shadow: 0 0 3px var(--lwc-c-pill-shadow-active,$color-border-selection);
+    // box-shadow: 0 0 3px var(--lwc-c-pill-shadow-active,$color-border-selection);
   }
 }
 
-//restrictions here
+// restrictions here
 
 .lwc-pill__media {
   --lwc-c-icon-size: 1.25rem;
@@ -47,7 +47,7 @@
   margin: 0 $spacing-xxx-small;
 }
 
-//restrictions here
+// restrictions here
 
 .lwc-pill__label {
   padding: 0 $spacing-xxx-small;
@@ -56,12 +56,14 @@
   text-overflow: ellipsis;
 }
 
-//restrictions here
+// restrictions here
 
 .lwc-pill__action {
+
   &:hover {
     text-decoration: underline;
   }
+
   &:focus {
     outline: 0;
     border-color: transparent;
@@ -70,18 +72,19 @@
   }
 }
 
-//restrictions here
+// restrictions here
 
 .lwc-pill__remove {
-  --lwc-c-icon-size: .875rem;
+  --lwc-c-icon-size: 0.875rem;
   margin: 0 $spacing-xxx-small;
 }
 
-//restrictions here
+// restrictions here
 
 .lwc-pill_has-error {
   --lwc-c-pill-color-border: $color-border-error;
   --lwc-c-pill-color-border-active: $color-border-error;
+
   .lwc-pill__label {
     font-weight: $font-weight-bold;
     color: $color-text-error;

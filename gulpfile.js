@@ -224,6 +224,7 @@ gulp.task('build', gulp.series('clean', 'generate:tokens:all', 'styles'));
 gulp.task(
   'dist:ui-json',
   gulp.series(
+    'generate:tokens:all',
     withName('dist:clean:before')(dist.cleanBefore),
     withName('dist:writeUI')(dist.writeUI),
     withName('dist:clean:after')(dist.cleanAfter)

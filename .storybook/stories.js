@@ -1,3 +1,4 @@
+import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { getDisplayElementById } from '../ui/shared/helpers';
 import {
@@ -6,6 +7,10 @@ import {
 } from '../shared/utils/annotations';
 import { makeTitle } from '../shared/utils/text-formatting';
 
+/**
+ * This function uses our annotations-based ui.json to programmatically add
+ * stories from our example files.
+ */
 export default () => {
   const componentList = getComponents();
 
@@ -26,6 +31,15 @@ export default () => {
       const storyTitle = `Components/${componentTitle}/${variantTitle}`;
       let examples;
 
+      const DocsComponent = () => (
+        <div>
+          <h1 className="slds-text-heading_large slds-m-bottom_medium">
+            {componentTitle}
+          </h1>
+          <Docs />
+        </div>
+      );
+
       try {
         examples = require(`../ui/components/${component}/${variant}/example`);
       } catch (e) {
@@ -39,7 +53,9 @@ export default () => {
           variantTitle,
           () => examples.default,
           {
-            docs: { page: Docs }
+            docs: {
+              page: DocsComponent
+            }
           }
         );
 
@@ -49,7 +65,9 @@ export default () => {
               example.label,
               () => getDisplayElementById(examples.examples, example.id),
               {
-                docs: { page: Docs }
+                docs: {
+                  page: DocsComponent
+                }
               }
             );
           });
@@ -61,7 +79,9 @@ export default () => {
               example.label,
               () => getDisplayElementById(examples.states, example.id),
               {
-                docs: { page: Docs }
+                docs: {
+                  page: DocsComponent
+                }
               }
             );
           });

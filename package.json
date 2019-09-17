@@ -202,6 +202,7 @@
   "scripts": {
     "build": "npm run gulp -- build",
     "dist": "npm run gulp -- dist",
+    "dist:ui-json": "npm run gulp -- dist:ui-json",
     "gulp": "babel-node ./node_modules/gulp/bin/gulp.js",
     "lint": "npm run gulp -- lint",
     "start": "npm run build && npm run previewer",
@@ -215,7 +216,8 @@
     "pr-checks": "npm run gulp -- pr-checks",
     "compile-aura-tokens-map": "npm run gulp -- generate:auraTokensMap",
     "compile-token-component-map": "npm run gulp -- generate:tokenComponentMap",
-    "storybook": "start-storybook -c .storybook -p 9002",
+    "storybook": "npm run dist:ui-json && start-storybook -c .storybook -p 9002",
+    "storybook:dev": "start-storybook -c .storybook -p 9002",
     "storybook:heroku": "start-storybook -c .storybook -p 9002",
     "storybook:build": "build-storybook -c .storybook -s .dist/ -o .out",
     "release-notes:compile": "node ./scripts/release-notes/index.js",

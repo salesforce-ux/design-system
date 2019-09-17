@@ -217,6 +217,21 @@ gulp.task('build', gulp.series('clean', 'generate:tokens:all', 'styles'));
 
 /*
  * ==================
+ * Write UI.json
+ * ==================
+ */
+
+gulp.task(
+  'dist:ui-json',
+  gulp.series(
+    withName('dist:clean:before')(dist.cleanBefore),
+    withName('dist:writeUI')(dist.writeUI),
+    withName('dist:clean:after')(dist.cleanAfter)
+  )
+);
+
+/*
+ * ==================
  * Tests
  * ==================
  */

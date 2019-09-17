@@ -8,21 +8,24 @@
 
 ### Changed
 
-- On touch devices, set the amount of space created for the edit icon to `$square-tappable` which aligns with touch specific sizing
-- On touch devices, increase the tap target size of `.slds-form-element__label` to `$$height-tappable-small`, center with flex, and increase `font-size` to `$font-size-4`
-- On touch devices, set the tap target height of button-icons to `$height-tappable-small` when inline with label text
-- On touch devices, increase the font size of `.slds-form-element__static` to `$font-size-5`
-- On touch devices and within `.slds-form-element_readonly`, increase the size of `.slds-icon` to `$square-tappable-x-small` and increase the height of `.slds-form-element__control` to `$height-tappable` which aligns `.slds-form-element_readonly`'s touch height to other form elements
-- On touch devices, remove the `min-height` from `.slds-form-element_readonly .slds-form-element__control` for denser read-only forms
+- For touch devices:
+  - Set the amount of space created for the edit icon to `$square-tappable` (2.75rem) which aligns with touch specific sizing
+  - Increase the tap target size of `.slds-form-element__label` to `$height-tappable-small` (2rem), center with flex, and increase `font-size` to `$font-size-4` (0.875rem)
+  - Set the tap target height of button-icons to `$height-tappable-small` (2rem) when inline with label text
+  - Increase the font size of `.slds-form-element__static` to `$font-size-5` (1rem)
+  - Within `.slds-form-element_readonly`, increase the size of `.slds-icon` to `$square-tappable-x-small` (1.5rem) and increase the height of `.slds-form-element__control` to `$height-tappable` (2.75rem) which aligns `.slds-form-element_readonly`'s touch height to other form elements
+  - Remove the `min-height` from `.slds-form-element_readonly .slds-form-element__control` for denser read-only forms
 
 ## 2.8.1
 
 ### Fixed
+
 - Resolved issue where left-aligned checkbox labels would become squished
 
 ## 2.8.0
 
 ### Added
+
 - Added form classes for rows and columns, `slds-form__row` and `slds-form__item`
 - Added `slds-form-element_stacked` to manage stacked form elements
 - Added `slds-form-element_horizontal` to manage horizontal form elements
@@ -34,10 +37,12 @@
 - Added image based checkbox to record form
 
 ### Changed
+
 - Added spacing around `slds-form-element` depending on densification settings
 - Form labels will now hyphenate when a word with no spaces exceeds the available space of the label container
 
 ### Deprecated
+
 - Deprecated `slds-form_stacked` for `slds-form-element_stacked`
 - Deprecated `slds-form_horizontal` for `slds-form-element_horizontal`
 - Deprecated `slds-form_compound` for `slds-form-element_compound`
@@ -45,29 +50,35 @@
 ## 2.7.5
 
 ### Changed
+
 - Form labels will now hyphenate when a word with no spaces exceeds the available space of the label container
 
 ## 2.7.4
 
 ### Added
+
 - Added `slds-form-element_address` for address specific compound form elements
 
 ### Fixed
+
 - Resolved issue where empty form elements would collapse in view mode
 
 ## 2.7.3
 
 ### Fixed
+
 - Resolved issue where Rich Text content would overflow the container of a form element in IE11
 
 ## 2.7.0
 
 ### Added
+
 - Left aligned label support for components with help text icon and required asterisk
 - Left aligned label support for `fieldset` and `legend` form elements
 - Added `slds-form-element__readonly` to apply appropiate styling when a form element is in view mode
 
 ### Changed
+
 - Reduced overall height of all view mode form elements
 - Changed labels to be left-aligned when using `slds-form_horizontal`
 - Changed HTML so a compound form's `slds-form-element__group` is wrapped inside of `slds-form-element__control`

@@ -4,46 +4,56 @@
 import React from 'react';
 import WelcomeMat from '../';
 import WelcomeMatContentTrailhead from '../WelcomeMatContentTrailhead';
+import { WelcomeMatContext, exampleDemoStyles } from '../helpers';
+import { Backdrop } from '../../modals/base/example';
 
 const completeTiles = [];
 WelcomeMat.defaultProps.tiles.forEach(tile => {
   completeTiles.push(Object.assign({}, tile, { completed: true }));
 });
 
-export const Context = props => (
-  <div className="demo-only" style={{ height: '800px' }}>
-    {props.children}
-    <div className="slds-backdrop slds-backdrop_open" />
-  </div>
+export const Context = WelcomeMatContext;
+
+const defaultComponent = (
+  <Backdrop>
+    <WelcomeMat
+      content={({ complete, total, labelId }) => (
+        <WelcomeMatContentTrailhead
+          complete={complete}
+          total={total}
+          labelId={labelId}
+        />
+      )}
+    />
+  </Backdrop>
 );
 
-export default (
-  <WelcomeMat
-    content={({ complete, total, labelId }) => (
-      <WelcomeMatContentTrailhead
-        complete={complete}
-        total={total}
-        labelId={labelId}
-      />
-    )}
-  />
-);
+export default defaultComponent;
 
 export let examples = [
   {
+    id: 'default',
+    label: 'Default',
+    demoStyles: exampleDemoStyles,
+    element: defaultComponent
+  },
+  {
     id: 'trailhead-complete',
     label: 'Trailhead Complete',
+    demoStyles: exampleDemoStyles,
     element: (
-      <WelcomeMat
-        tiles={completeTiles}
-        content={({ complete, total, labelId }) => (
-          <WelcomeMatContentTrailhead
-            complete={complete}
-            total={total}
-            labelId={labelId}
-          />
-        )}
-      />
+      <Backdrop>
+        <WelcomeMat
+          tiles={completeTiles}
+          content={({ complete, total, labelId }) => (
+            <WelcomeMatContentTrailhead
+              complete={complete}
+              total={total}
+              labelId={labelId}
+            />
+          )}
+        />
+      </Backdrop>
     )
   }
 ];

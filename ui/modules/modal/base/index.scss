@@ -248,7 +248,7 @@
  */
 .lwc-modal__surface {
   background: var(--lwc-c-modal-color-background, $color-gray-1);
-  border-radius: var(--lwc-c-modal-border-radius, $border-radius-medium);
+  border-radius: var(--lwc-c-modal-radius, $border-radius-medium);
   box-shadow: var(--lwc-c-modal-shadow, $shadow-drop-down);
   display: flex;
   flex-direction: column;
@@ -265,7 +265,7 @@
   position: relative;
   top: calc(#{$spacing-x-small} * -1);
   right: calc(#{$spacing-x-small} * -1);
-  --lwc-c-button-icon-color-border-inverse: transparent;
+  --lwc-c-button-icon-inverse-color-border: transparent;
 }
 
 /**
@@ -355,7 +355,8 @@
   justify-content: center;
   --lwc-c-modal-footer-color-background: transparent;
   --lwc-c-modal-footer-border-width: 0;
-  --c-button-margin: 0 $spacing-x-small;
+  --lwc-c-button-spacing-horizontal-start: $spacing-x-small;
+  --lwc-c-button-spacing-horizontal-end: $spacing-x-small;
 }
 
 /**

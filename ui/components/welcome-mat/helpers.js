@@ -9,6 +9,18 @@ import { Button } from '../buttons/base/example';
 import { Checkbox } from '../checkbox/base/example';
 import { FormElement } from '../form-element/index';
 
+export const exampleDemoStyles = 'height: 800px;';
+
+export const WelcomeMatContext = props => (
+  <div className="demo-only" style={{ height: '800px' }}>
+    {props.children}
+  </div>
+);
+
+WelcomeMatContext.propTypes = {
+  children: PropTypes.node.isRequired
+};
+
 /**
  * Sample Tile Data
  */

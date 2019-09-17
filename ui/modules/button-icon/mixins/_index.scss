@@ -20,14 +20,14 @@
 
 @mixin button-icon-normalize {
   background-color: var(--lwc-c-button-icon-color-background, transparent);
-  border-radius: var(--lwc-c-button-icon-border-radius, var(--lwc-c-button-border-radius, $border-radius-medium));
+  border-radius: var(--lwc-c-button-icon-radius, var(--lwc-c-button-radius, $border-radius-medium));
   border: var(--lwc-c-button-icon-border-width, var(--lwc-c-button-border-width, $border-width-thin)) solid var(--lwc-c-button-icon-color-border, var(--lwc-c-button-color-border, transparent));
   box-shadow: var(--lwc-c-button-icon-shadow, var(--lwc-c-button-shadow, none));
   text-align: center;
   vertical-align: middle;
-  margin-top: var(--lwc-c-button-icon-spacing-vertical-top, var(--lwc-c-button-spacing-vertical-top, 0));
+  margin-top: var(--lwc-c-button-icon-spacing-vertical-start, var(--lwc-c-button-spacing-vertical-start, 0));
   margin-right: var(--lwc-c-button-icon-spacing-horizontal-end, var(--lwc-c-button-spacing-horizontal-end, 0));
-  margin-bottom: var(--lwc-c-button-icon-spacing-vertical-bottom, var(--lwc-c-button-spacing-vertical-bottom, 0));
+  margin-bottom: var(--lwc-c-button-icon-spacing-vertical-end, var(--lwc-c-button-spacing-vertical-end, 0));
   margin-left: var(--lwc-c-button-icon-spacing-horizontal-start, var(--lwc-c-button-spacing-horizontal-start, 0));
   --lwc-c-icon-color: var(--lwc-c-button-icon-color, $color-gray-9);
 
@@ -48,7 +48,7 @@
   &:focus {
     outline: 0;
     z-index: var(--lwc-c-button-depth-active, 0);
-    box-shadow: var(--lwc-c-button-icon-shadow-focus, 0 0 3px var(--lwc-brand-accessible, $brand-accessible));
+    box-shadow: var(--lwc-c-button-icon-shadow-active, 0 0 3px var(--lwc-brand-accessible, $brand-accessible));
   }
 
   &:active {

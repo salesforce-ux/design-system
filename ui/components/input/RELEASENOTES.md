@@ -14,8 +14,11 @@
 ### Changed
 
 - Removed default `box-shadow` on `inputs` for Webkit
-- Positioning of icons inside of inputs have been tweaked when on a touch device
 - Added ltr declarations on `url`, `tel`, and `email` type inputs to prevent rtl adjustments from being inherited (these input types should always render ltr)
+- For touch devices:
+  - Increase the line-height to `$height-tappable` (2.75rem) for an improved tap target
+  - For read-only inputs, increase the font size to `$font-size-5` (1rem) for consistency with the font sizes of other inputs
+  - Positioning of icons inside of inputs have been tweaked
 
 ## 2.8.0
 

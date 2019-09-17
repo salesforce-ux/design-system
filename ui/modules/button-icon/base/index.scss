@@ -32,25 +32,25 @@
  * @group theme
  */
 .lwc-button-icon_brand {
-  --lwc-c-button-icon-color-background: var(--lwc-c-button-icon-color-background-brand, var(--lwc-brand-accessible, $brand-accessible));
-  --lwc-c-button-icon-color-border: var(--lwc-c-button-icon-color-border-brand, var(--lwc-brand-accessible, $brand-accessible));
-  --lwc-c-button-icon-color: var(--lwc-c-button-icon-color-brand, $color-gray-1);
-  --lwc-c-button-icon-shadow: var(--lwc-c-button-icon-shadow-brand, var(--lwc-c-button-shadow-brand, none));
+  --lwc-c-button-icon-color-background: var(--lwc-c-button-icon-brand-color-background, var(--lwc-brand-accessible, $brand-accessible));
+  --lwc-c-button-icon-color-border: var(--lwc-c-button-icon-brand-color-border, var(--lwc-brand-accessible, $brand-accessible));
+  --lwc-c-button-icon-color: var(--lwc-c-button-icon-brand-color, $color-gray-1);
+  --lwc-c-button-icon-shadow: var(--lwc-c-button-icon-brand-shadow, var(--lwc-c-button-brand-shadow, none));
 
-  --lwc-c-button-icon-color-background-active: var(--lwc-c-button-icon-color-background-brand-active, var(--lwc-brand-accessible-active, $brand-accessible-active));
-  --lwc-c-button-icon-color-border-active: var(--lwc-c-button-icon-color-border-brand-active, var(--lwc-brand-accessible-active, $brand-accessible-active));
+  --lwc-c-button-icon-color-background-active: var(--lwc-c-button-icon-brand-color-background-active, var(--lwc-brand-accessible-active, $brand-accessible-active));
+  --lwc-c-button-icon-color-border-active: var(--lwc-c-button-icon-brand-color-border-active, var(--lwc-brand-accessible-active, $brand-accessible-active));
   --lwc-c-button-icon-color-active: var(--lwc-c-button-icon-color-brand-active, $color-gray-1);
 
   &:active {
-    --lwc-c-button-icon-color-background: var(--lwc-c-button-icon-color-background-brand-active, var(--lwc-brand-accessible-active, $brand-accessible-active));
-    --lwc-c-button-icon-color-border: var(--lwc-c-button-icon-color-border-brand-active, var(--lwc-brand-accessible-active, $brand-accessible-active));
+    --lwc-c-button-icon-color-background: var(--lwc-c-button-icon-brand-color-background-active, var(--lwc-brand-accessible-active, $brand-accessible-active));
+    --lwc-c-button-icon-color-border: var(--lwc-c-button-icon-brand-color-border-active, var(--lwc-brand-accessible-active, $brand-accessible-active));
   }
 
   &[disabled],
   &:disabled {
     --lwc-c-button-icon-color-background: $brand-disabled;
     --lwc-c-button-icon-color-border: $brand-disabled;
-    --lwc-c-button-icon-color: $color-gray-5;
+    --lwc-c-button-icon-color-text: $color-gray-5;
     --lwc-c-button-icon-color-background-active: $brand-disabled;
     --lwc-c-button-icon-color-border-active: $brand-disabled;
     --lwc-c-button-icon-color-active: $color-gray-5;
@@ -64,10 +64,10 @@
  * @modifier
  */
 .lwc-button-icon_neutral {
-  --lwc-c-button-icon-color-background: var(--lwc-c-button-icon-color-background-neutral, $color-gray-1);
-  --lwc-c-button-icon-color-border: var(--lwc-c-button-icon-color-border-neutral, $color-border);
-  --lwc-c-button-icon-color-background-active: var(--lwc-c-button-icon-color-background-neutral-active, $color-gray-1);
-  --lwc-c-button-icon-color-border-active: var(--lwc-c-button-icon-color-border-neutral, $color-border);
+  --lwc-c-button-icon-color-background: var(--lwc-c-button-icon-neutral-color-background, $color-gray-1);
+  --lwc-c-button-icon-color-border: var(--lwc-c-button-icon-neutral-color-border, $color-border);
+  --lwc-c-button-icon-color-background-active: var(--lwc-c-button-icon-neutral-color-background-active, $color-gray-1);
+  --lwc-c-button-icon-color-border-active: var(--lwc-c-button-icon-neutral-color-border-active, $color-border);
 }
 
 /**
@@ -77,8 +77,8 @@
  * @modifier
  */
 .lwc-button-icon_neutral-outline {
-  --lwc-c-button-icon-color-border: var(--lwc-c-button-icon-color-border-neutral, $color-border);
-  --lwc-c-button-icon-color-border-active: var(--lwc-c-button-icon-color-border-neutral, $color-border);
+  --lwc-c-button-icon-color-border: var(--lwc-c-button-icon-neutral-color-border, $color-border);
+  --lwc-c-button-icon-color-border-active: var(--lwc-c-button-icon-neutral-color-border-active, $color-border);
 }
 
 /**
@@ -90,13 +90,13 @@
  * @group theme
  */
 .lwc-button-icon_inverse {
-  --lwc-c-button-icon-color-background: var(--lwc-c-button-icon-color-background-inverse, var(--lwc-c-button-color-background-inverse, transparent));
-  --lwc-c-button-icon-color-border: var(--lwc-c-button-icon-color-border-inverse, var(--lwc-c-button-color-border-inverse, $color-gray-1));
-  --lwc-c-button-icon-color: var(--lwc-c-button-icon-color-inverse, var(--lwc-c-button-color-inverse, $color-gray-1));
+  --lwc-c-button-icon-color-background: var(--lwc-c-button-icon-inverse-color-background, var(--lwc-c-button-inverse-color-background, transparent));
+  --lwc-c-button-icon-color-border: var(--lwc-c-button-icon-inverse-color-border, var(--lwc-c-button-inverse-color-border, $color-gray-1));
+  --lwc-c-button-icon-color: var(--lwc-c-button-icon-inverse-color, var(--lwc-c-button-inverse-color, $color-gray-1));
 
-  --lwc-c-button-icon-color-background-active: var(--lwc-c-button-icon-color-background-inverse-active, transparent);
-  --lwc-c-button-icon-color-border-active: var(--lwc-c-button-icon-color-border-inverse-active, var(--lwc-c-active-button-color-border-inverse, $color-gray-1));
-  --lwc-c-button-icon-color-active: var(--lwc-c-button-icon-color-inverse-active, var(--lwc-c-active-button-color-inverse, $color-gray-3));
+  --lwc-c-button-icon-color-background-active: var(--lwc-c-button-icon-inverse-color-background-active, transparent);
+  --lwc-c-button-icon-color-border-active: var(--lwc-c-button-icon-inverse-color-border-active, var(--lwc-c-button-inverse-color-border-active, $color-gray-1));
+  --lwc-c-button-icon-color-active: var(--lwc-c-button-icon-inverse-color-active, var(--lwc-c-inverse-button-color-active, $color-gray-3));
 
   &[disabled],
   &:disabled {
@@ -110,8 +110,8 @@
   }
 
   &:focus {
-    border: $border-width-thin solid var(--lwc-c-focus-button-color-border-inverse, $color-border-button-focus-inverse);
-    box-shadow: var(--lwc-c-focus-button-box-shadow-inverse, $shadow-button-focus-inverse);
+    border: $border-width-thin solid var(--lwc-c-button-inverse-color-border-active, $color-border-button-focus-inverse);
+    box-shadow: var(--lwc-c-button-inverse-shadow-active, $shadow-button-focus-inverse);
     outline: none;
   }
 }
@@ -123,14 +123,14 @@
  * @modifier
  */
 .lwc-is-pressed {
-  --lwc-c-button-icon-color-background: var(--lwc-c-button-icon-color-background-brand, var(--lwc-brand-accessible, $brand-accessible));
-  --lwc-c-button-icon-color-border: var(--lwc-c-button-icon-color-border-brand, var(--lwc-brand-accessible, $brand-accessible));
-  --lwc-c-button-icon-color: var(--lwc-c-button-icon-color-brand, $color-gray-1);
-  --lwc-c-button-icon-shadow: var(--lwc-c-button-icon-shadow-brand, var(--lwc-c-button-shadow-brand, none));
+  --lwc-c-button-icon-color-background: var(--lwc-c-button-icon-brand-color-background, var(--lwc-brand-accessible, $brand-accessible));
+  --lwc-c-button-icon-color-border: var(--lwc-c-button-icon-brand-color-border, var(--lwc-brand-accessible, $brand-accessible));
+  --lwc-c-button-icon-color: var(--lwc-c-button-icon-brand-color, $color-gray-1);
+  --lwc-c-button-icon-shadow: var(--lwc-c-button-icon-brand-shadow, var(--lwc-c-button-brand-shadow, none));
 
-  --lwc-c-button-icon-color-background-active: var(--lwc-c-button-icon-color-background-brand-active, var(--lwc-brand-accessible-active, $brand-accessible-active));
-  --lwc-c-button-icon-color-border-active: var(--lwc-c-button-icon-color-border-brand, var(--lwc-brand-accessible-active, $brand-accessible-active));
-  --lwc-c-button-icon-color-active: var(--lwc-c-button-icon-color-brand-active, $color-gray-1);
+  --lwc-c-button-icon-color-background-active: var(--lwc-c-button-icon-brand-color-background-active, var(--lwc-brand-accessible-active, $brand-accessible-active));
+  --lwc-c-button-icon-color-border-active: var(--lwc-c-button-icon-brand-color-border, var(--lwc-brand-accessible-active, $brand-accessible-active));
+  --lwc-c-button-icon-color-active: var(--lwc-c-button-icon-brand-color-active, $color-gray-1);
 }
 
 /**
@@ -140,10 +140,10 @@
  * @modifier
  */
 .lwc-button-icon_menu {
-  --lwc-c-button-icon-color-background: var(--lwc-c-button-icon-color-background-neutral, $color-gray-1);
-  --lwc-c-button-icon-color-border: var(--lwc-c-button-icon-color-border-neutral, $color-border);
-  --lwc-c-button-icon-color-background-active: var(--lwc-c-button-icon-color-background-neutral-active, $color-gray-1);
-  --lwc-c-button-icon-color-border-active: var(--lwc-c-button-icon-color-border-neutral, $color-border);
+  --lwc-c-button-icon-color-background: var(--lwc-c-button-icon-neutral-color-background, $color-gray-1);
+  --lwc-c-button-icon-color-border: var(--lwc-c-button-icon-neutral-color-border, $color-border);
+  --lwc-c-button-icon-color-background-active: var(--lwc-c-button-icon-neutral-color-background-active, $color-gray-1);
+  --lwc-c-button-icon-color-border-active: var(--lwc-c-button-icon-neutral-color-border, $color-border);
 
   &:after {
     content: '';
@@ -170,19 +170,19 @@
  * @modifier
  */
 .lwc-button-icon_inverse {
-  --lwc-c-button-icon-color-background: var(--lwc-c-button-icon-color-background-inverse, transparent);
-  --lwc-c-button-icon-color-active: var(--lwc-c-button-icon-color-inverse-active, $color-gray-1);
-  --lwc-c-button-icon-shadow-active: var(--lwc-c-button-icon-shadow-active-inverse, $shadow-button-focus-inverse);
-  --lwc-c-button-icon-color-border-active: var(--lwc-c-button-icon-color-border-inverse-active, $color-border-button-focus-inverse);
+  --lwc-c-button-icon-color-background: var(--lwc-c-button-icon-inverse-color-background, transparent);
+  --lwc-c-button-icon-color-active: var(--lwc-c-button-icon-inverse-color-active, $color-gray-1);
+  --lwc-c-button-icon-shadow-active: var(--lwc-c-button-icon-inverse-shadow-active, $shadow-button-focus-inverse);
+  --lwc-c-button-icon-color-border-active: var(--lwc-c-button-icon-inverse-color-border-active, $color-border-button-focus-inverse);
   // Override icon color
-  --lwc-c-icon-color: var(--lwc-c-button-icon-color-inverse, $color-gray-1);
+  --lwc-c-icon-color: var(--lwc-c-button-icon-inverse-color, $color-gray-1);
 }
 
 .lwc-button-icon_start {
-  --lwc-c-button-border-radius: $border-radius-medium 0 0 $border-radius-medium;
+  --lwc-c-button-radius: $border-radius-medium 0 0 $border-radius-medium;
 }
 
 .lwc-button-icon_end {
-  --lwc-c-button-border-radius: 0 $border-radius-medium $border-radius-medium 0;
-  --lwc-c-button-icon-shadow-brand: none;
+  --lwc-c-button-radius: 0 $border-radius-medium $border-radius-medium 0;
+  --lwc-c-button-icon-brand-shadow: none;
 }

@@ -1,15 +1,11 @@
 import React from 'react';
+import styled from 'styled-components';
+
 import Pill from '../';
 
-const Demo = props => (
-  <div className="demo-only" style={{ width: '6rem' }}>
-    {props.children}
-  </div>
-);
-
-/// ///////////////////////////////////////////
-// Export
-/// ///////////////////////////////////////////
+const Truncate = styled.div`
+  width: 6rem;
+`;
 
 export default <Pill>Label</Pill>;
 
@@ -17,16 +13,14 @@ export const examples = [
   {
     id: 'pill-link',
     label: 'Pill with link',
-    element: <Pill actionUrl="https://some-url">Pill with link</Pill>
+    element: <Pill actionUrl="javascript:void(0);">Pill with link</Pill>
   },
   {
     id: 'pill-icon',
     label: 'Pill with icon',
     element: (
       <Pill
-        startMedia="icon"
-        iconBoundarySize="small"
-        iconSize="small"
+        media="icon"
         iconSprite="standard"
         iconSymbol="account"
         iconAssistiveText="Account"
@@ -40,13 +34,11 @@ export const examples = [
     label: 'Pill with icon and link',
     element: (
       <Pill
-        startMedia="icon"
-        iconBoundarySize="x-small"
-        iconSize="x-small"
+        media="icon"
         iconSprite="standard"
         iconSymbol="account"
         iconAssistiveText="Account"
-        actionUrl="https://some-url"
+        actionUrl="javascript:void(0);"
       >
         Pill with icon and link
       </Pill>
@@ -56,9 +48,9 @@ export const examples = [
     id: 'pill-truncated',
     label: 'Pill with truncated content',
     element: (
-      <Demo className="demo-only">
+      <Truncate>
         <Pill>Pill label that is longer than the area that contains it</Pill>
-      </Demo>
+      </Truncate>
     )
   }
 ];

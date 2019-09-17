@@ -12,11 +12,9 @@ import pill from './base/index.scss';
 const Pill = props => {
   const {
     variant,
-    startMedia,
+    media,
     iconSprite,
     iconSymbol,
-    iconSize,
-    iconBoundarySize,
     iconAssistiveText,
     actionUrl,
     children,
@@ -30,27 +28,18 @@ const Pill = props => {
     'lwc-pill_has-error': variant === 'error'
   };
 
-  const computedClassNames = classNames(variantClassName);
-
-  const renderStartMedia = () => {
-    if (!startMedia && variant !== 'error') return;
+  const renderMedia = () => {
+    if (!media && variant !== 'error') return;
     if (variant === 'error') {
       return (
         <span className="lwc-pill__media">
-          <Icon
-            symbol="error"
-            color="error"
-            size="small"
-            assistiveText="Warning"
-          />
+          <Icon symbol="error" color="error" assistiveText="Warning" />
         </span>
       );
-    } else if (startMedia === 'icon') {
+    } else if (media === 'icon') {
       return (
         <span className="lwc-pill__media">
           <Icon
-            size={iconSize}
-            boundarySize={iconBoundarySize}
             sprite={iconSprite}
             symbol={iconSymbol}
             assistiveText={iconAssistiveText}
@@ -63,12 +52,7 @@ const Pill = props => {
   const renderDismiss = () => {
     return (
       <span className="lwc-pill__remove">
-        <ButtonIcon
-          symbol="close"
-          size="x-small"
-          boundarySize="xx-small"
-          assistiveText="Remove"
-        />
+        <ButtonIcon symbol="close" assistiveText="Remove" />
       </span>
     );
   };
@@ -88,8 +72,8 @@ const Pill = props => {
   return (
     <Shadow.on name="pill" includes={css} shadow={shadow}>
       <React.Fragment>
-        <span className={classNames('lwc-pill', computedClassNames)}>
-          {renderStartMedia()}
+        <span className={classNames('lwc-pill', variantClassName)}>
+          {renderMedia()}
           {renderText()}
           {renderDismiss()}
         </span>
@@ -102,12 +86,10 @@ Pill.propTypes = {
   // Slots
   children: PropTypes.node,
   // Attributes
-  startMedia: PropTypes.oneOf(['icon']),
+  media: PropTypes.oneOf(['icon']),
   variant: PropTypes.oneOf(['error']),
   iconSprite: PropTypes.string,
   iconSymbol: PropTypes.string,
-  iconSize: PropTypes.string,
-  iconBoundarySize: PropTypes.string,
   iconAssistiveText: PropTypes.string,
   actionUrl: PropTypes.string,
   shadow: PropTypes.bool,

@@ -31,6 +31,12 @@ $light-gray-border-color: #f2f2f2;
   padding: 1rem;
 }
 
+// if the example is a viewport, remove demo showcase padding so fixed positioned elements
+// can use full area of the codeblock example
+.docs-codeblock-example.docs-codeblock-example_viewport {
+  padding: 0;
+}
+
 .docs-codeblock-source {
   margin-bottom: 1.5rem;
 }

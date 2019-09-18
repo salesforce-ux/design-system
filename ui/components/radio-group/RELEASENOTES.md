@@ -8,9 +8,10 @@
 
 ### Changed
 
-- Increase tap size of `.slds-radio__label` on touch devices
-- Increase the size of the faux radio element on touch devices
-- Let the label text inherit its `font-size` from the body on touch devices
+- For touch devices:
+  - Increase tap size of `.slds-radio__label` to `$height-tappable`(2.75rem)
+  - Increase the size of the faux radio element to `$square-tappable-x-small` (1.5rem)
+  - Let the label text inherit its `font-size` from the body
 
 ## 2.7.0
 

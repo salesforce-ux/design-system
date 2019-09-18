@@ -7,7 +7,7 @@
 
 ### Changed
 
-- For touch devices, increased the height and tap target size of the path component to `$height-tappable`
+- For touch devices, increased the height and tap target size of the path component to `$height-tappable` (2.75rem)
 
 ### Fixed
 

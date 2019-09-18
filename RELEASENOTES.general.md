@@ -5,6 +5,7 @@
 ## Added
 
 - Added `-moz` and `-webkit` prefixes to `appearance : none` rules
+- Generate a sanitized version of SLDS in `.dist` that does not contain `--` BEM notation for modifiers, removes deprecated code, and only imports support Lightning Web Components.
 
 ## 2.11.0 - August 26, 2019
 

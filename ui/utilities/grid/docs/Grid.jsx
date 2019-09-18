@@ -2,6 +2,8 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 import React, { Component } from 'react';
+import CodeView from '../../../../shared/components/CodeView';
+import './Grid.scss';
 import classNames from 'classnames';
 
 export const Column = props => {
@@ -21,12 +23,22 @@ class Grid extends Component {
     }
     return (
       <div
-        className={classNames('slds-grid', this.props.className)}
-        style={this.props.style}
+        className={classNames(
+          'simple-grid',
+          this.props.small && 'simple-grid_small',
+          this.props.bareGrid && 'simple-grid_bare-columns'
+        )}
       >
-        {this.props.columns
-          ? children.map(props => <Column key={props.key} {...props} />)
-          : this.props.children}
+        <CodeView>
+          <div
+            className={classNames('slds-grid', this.props.className)}
+            style={this.props.style}
+          >
+            {this.props.columns
+              ? children.map(props => <Column key={props.key} {...props} />)
+              : this.props.children}
+          </div>
+        </CodeView>
       </div>
     );
   }

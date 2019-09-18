@@ -79,6 +79,16 @@ const ui = () =>
     )
   );
 
+/**
+ * Get json from parsed comments
+ * uiJson : Task -> string
+ */
+const uiJson = () =>
+  ui()
+    .map(x => JSON.stringify(x, null, 2))
+    .chain(json => new Task((rej, res) => json))
+    .fork(y => y);
+
 const writeToDist = () =>
   ui()
     .map(x => JSON.stringify(x, null, 2))
@@ -94,6 +104,7 @@ const writeToDist = () =>
 
 module.exports = {
   ui,
+  uiJson,
   isVariant,
   variants,
   writeToDist,

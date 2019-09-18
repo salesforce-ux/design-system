@@ -16,7 +16,7 @@ export const Context = props => (
   <div style={{ height: '640px' }}>{props.children}</div>
 );
 
-let Backdrop = props => {
+export let Backdrop = props => {
   return (
     <Fragment>
       {props.children}

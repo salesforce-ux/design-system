@@ -9,7 +9,8 @@ import * as ReadonlyExamples from './deprecated-readonly/example';
 import { getAllDisplayCollectionsByType } from '../../shared/helpers';
 import StoryFrame from '../../../shared/components/StoryFrame';
 
-import '../../index.scss';
+import DocsPage from '../../../.storybook/components/DocsPage';
+import Docs from './docs.mdx';
 
 const examples = [
   BaseExamples,
@@ -26,15 +27,22 @@ const kitchenSink = getAllDisplayCollectionsByType(examples, [
   'states'
 ]);
 
-storiesOf('Components/Combobox', module).add('Kitchen Sink', () =>
-  kitchenSink.map((element, idx) =>
-    element.map(({ label, component }) => (
-      <StoryFrame
-        component={component}
-        label={label}
-        styles={`height: 17rem;`}
-        key={`kitchen-sink-${label}-${idx}`}
-      />
-    ))
-  )
+storiesOf('Components/Combobox', module).add(
+  'Kitchen Sink',
+  () =>
+    kitchenSink.map((element, idx) =>
+      element.map(({ label, component }) => (
+        <StoryFrame
+          component={component}
+          label={label}
+          styles={`height: 17rem;`}
+          key={`kitchen-sink-${label}-${idx}`}
+        />
+      ))
+    ),
+  {
+    docs: {
+      page: () => <DocsPage title="Combobox" Docs={Docs} />
+    }
+  }
 );

@@ -7,7 +7,8 @@ import * as FormulaExamples from './formula/example';
 import { getAllDisplayCollectionsByType } from '../../shared/helpers';
 import StoryFrame from '../../../shared/components/StoryFrame';
 
-import '../../index.scss';
+import DocsPage from '../../../.storybook/components/DocsPage';
+import Docs from './docs.mdx';
 
 const examples = [
   BaseExamples,
@@ -22,14 +23,21 @@ const kitchenSink = getAllDisplayCollectionsByType(examples, [
   'states'
 ]);
 
-storiesOf('Components/Expression', module).add('Kitchen Sink', () =>
-  kitchenSink.map((element, idx) =>
-    element.map(({ label, component }, idx) => (
-      <StoryFrame
-        component={component}
-        label={label}
-        key={`kitchen-sink-${idx}`}
-      />
-    ))
-  )
+storiesOf('Components/Expression', module).add(
+  'Kitchen Sink',
+  () =>
+    kitchenSink.map((element, idx) =>
+      element.map(({ label, component }, idx) => (
+        <StoryFrame
+          component={component}
+          label={label}
+          key={`kitchen-sink-${idx}`}
+        />
+      ))
+    ),
+  {
+    docs: {
+      page: () => <DocsPage title="Expression" Docs={Docs} />
+    }
+  }
 );

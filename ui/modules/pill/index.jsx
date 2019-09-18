@@ -57,7 +57,7 @@ const Pill = props => {
     );
   };
 
-  const renderText = () => {
+  const renderText = () =>
     actionUrl ? (
       <a className="lwc-pill__action" href={actionUrl} title={children}>
         <span className="lwc-pill__label">{children}</span>
@@ -65,8 +65,6 @@ const Pill = props => {
     ) : (
       <span className="lwc-pill__label">{children}</span>
     );
-  };
-
   return (
     <Shadow.on name="pill" includes={css} shadow={shadow}>
       <React.Fragment>

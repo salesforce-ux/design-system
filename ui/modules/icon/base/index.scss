@@ -46,7 +46,6 @@ $_c-icon-action-padding-small: rem(5px);
 $_c-icon-action-padding-x-small: rem(3px);
 $_c-icon-action-padding-xx-small: rem(2px);
 
-
 // ------------
 // Mixins
 // ------------
@@ -72,21 +71,21 @@ $_c-icon-action-padding-xx-small: rem(2px);
 /**
  * Icon type
  */
-[class*="lwc-icon-action"],
-[class*="lwc-icon-custom"],
-[class*="lwc-icon-standard"],
-[class*="lwc-icon-doctype"] {
+[class*='lwc-icon-action'],
+[class*='lwc-icon-custom'],
+[class*='lwc-icon-standard'],
+[class*='lwc-icon-doctype'] {
   @include square(var(--lwc-c-icon-size, $_c-icon-small));
 }
 
-[class*="lwc-icon-action"],
-[class*="lwc-icon-custom"],
-[class*="lwc-icon-standard"] {
+[class*='lwc-icon-action'],
+[class*='lwc-icon-custom'],
+[class*='lwc-icon-standard'] {
   background: $_c-icon-background-color-default;
   color: var(--lwc-c-icon-color, $color-gray-1);
 }
 
-[class*="lwc-icon-action"] {
+[class*='lwc-icon-action'] {
   border-radius: $border-radius-circle;
   padding: $_c-icon-action-padding;
   vertical-align: bottom;
@@ -368,4 +367,26 @@ $icon-bg-map: map-merge($bg-actions-map, $bg-custom-map);
 .lwc-svg {
   @include icon-svg;
   fill: var(--lwc-c-icon-primitive-color, currentColor);
+}
+
+/**
+ * @summary
+ * @selector .lwc-icon-orientation_90deg
+ * @restrict .lwc-icon
+ * @modifier
+ * @group orientation
+ */
+.lwc-icon-orientation_90deg {
+  transform: rotate(90deg);
+}
+
+/**
+ * @summary
+ * @selector .lwc-icon-orientation_neg90deg
+ * @restrict .lwc-icon
+ * @modifier
+ * @group orientation
+ */
+.lwc-icon-orientation_neg90deg {
+  transform: rotate(-90deg);
 }

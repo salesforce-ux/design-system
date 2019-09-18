@@ -23,8 +23,8 @@
   border-radius: var(--lwc-c-button-radius, $border-radius-medium);
   border: var(--lwc-c-button-border-width, $border-width-thin) solid var(--lwc-c-button-color-border, transparent);
   color: var(--lwc-c-button-color-text, var(--lwc-brand-accessible, $brand-accessible));
+  font-size: var(--lwc-c-button-font-size, inherit);
   line-height: var(--lwc-c-button-line-height, $line-height-button);
-  text-align: center;
   vertical-align: middle;
   box-shadow: var(--lwc-c-button-shadow, none);
   margin-top: var(--lwc-c-button-spacing-vertical-start, 0);
@@ -50,6 +50,7 @@
     outline: 0;
     box-shadow: var(--lwc-c-button-shadow-active, 0 0 2px var(--lwc-brand-accessible, $brand-accessible));
     z-index: var(--lwc-c-button-depth-active, 0);
+    text-decoration: var(--lwc-c-button-text-decoration-active, none);
   }
 
   &[disabled],

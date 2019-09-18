@@ -6,6 +6,7 @@ import {
   getComponentVariants
 } from '../shared/utils/annotations';
 import { makeTitle } from '../shared/utils/text-formatting';
+import DocsPage from './components/DocsPage';
 
 /**
  * This function uses our annotations-based ui.json to programmatically add
@@ -32,12 +33,7 @@ export default () => {
       let examples;
 
       const DocsComponent = () => (
-        <div>
-          <h1 className="slds-text-heading_large slds-m-bottom_medium">
-            {componentTitle}
-          </h1>
-          <Docs />
-        </div>
+        <DocsPage title={componentTitle} Docs={Docs} />
       );
 
       try {

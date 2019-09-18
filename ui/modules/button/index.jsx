@@ -16,7 +16,9 @@ const Button = props => {
     disabled,
     position,
     shadow,
-    customization
+    customization,
+    ariaControls,
+    ariaExpanded
   } = props;
 
   const css = rollupAdoptedStylesheets([common, button, customization]);
@@ -67,7 +69,12 @@ const Button = props => {
             {renderRightIcon()}
           </a>
         ) : (
-          <button className={computedClassNames} disabled={disabled}>
+          <button
+            className={computedClassNames}
+            disabled={disabled}
+            aria-controls={ariaControls}
+            aria-expanded={ariaExpanded}
+          >
             {renderLeftIcon()}
             {children}
             {renderRightIcon()}
@@ -97,7 +104,9 @@ Button.propTypes = {
     'neutral',
     'reset',
     'success'
-  ])
+  ]),
+  ariaControls: PropTypes.string,
+  ariaExpanded: PropTypes.bool
 };
 
 Button.defaultProps = {

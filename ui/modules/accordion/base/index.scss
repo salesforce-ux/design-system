@@ -1,0 +1,80 @@
+// // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+// ------------
+// Init
+// ------------
+@import '../../../shared/common/init';
+
+/**
+ * @summary Initializes an accordion list with more than one section that will have its display toggled by invoking an interaction on the summary title
+ *
+ * @name base
+ * @selector .lwc-accordion
+ * @restrict article, div, section
+ * @variant
+ * @support dev-ready
+ */
+.lwc-accordion {
+  // Closed assignments
+  --lwc-c-accordion-header-spacing: 0;
+}
+
+/**
+ * @summary Individual accordion group consisting of a header and panel
+ * @selector .lwc-accordion__section
+ * @restrict .lwc-accordion section
+ */
+
+.lwc-accordion__section {
+  border-top: var(--lwc-c-accordion-border-width, $border-width-thin) solid
+    var(--lwc-c-accordion-color-border, $color-border);
+  padding: $spacing-small;
+}
+
+.lwc-accordion__section_start {
+  border-top-width: 0;
+}
+
+.lwc-accordion__section_is-expanded {
+  --lwc-c-accordion-header-spacing: var(
+    --var-spacing-vertical-small,
+    $var-spacing-vertical-small
+  );
+}
+
+// TODO: annotate
+.lwc-accordion__header {
+  display: flex;
+  justify-content: space-between;
+}
+
+/**
+ * @summary Title of accordion section which encompasses the button and title
+ * @selector .lwc-accordion__title
+ * @restrict .lwc-accordion h3
+ */
+
+.lwc-accordion__title {
+  margin-bottom: var(--lwc-c-accordion-header-spacing, 0);
+
+  // Button API - Closed Assignments
+  --lwc-c-button-border-width: 0;
+  --lwc-c-button-text-decoration-active: underline;
+  --lwc-c-button-shadow-active: none;
+  --lwc-c-button-line-height: $line-height-heading;
+
+  // Button API - Open Assignments
+  --lwc-c-button-font-size: var(
+    --lwc-c-accordion-header-font-size,
+    var(--lwc-var-font-size-5, $var-font-size-5)
+  );
+  --lwc-c-button-color-text: var(
+    --lwc-c-accordion-header-color-text,
+    $color-text-default
+  );
+  --lwc-c-button-color-text-active: var(
+    --lwc-c-accordion-header-color-text-active,
+    var(--lwc-brand-accessible-active, $brand-accessible-active)
+  );
+}

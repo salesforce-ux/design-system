@@ -19,7 +19,7 @@
   border: var(--lwc-c-pill-border-width, $border-width-thin) solid var(--lwc-c-pill-color-border, $color-border);
   border-radius: var(--lwc-c-pill-radius, $border-radius-medium);
   background-color: var(--lwc-c-pill-color-background, $color-background-pill);
-  padding: $spacing-xxx-small 0;
+  padding: $spacing-xxx-small;
   min-height: $height-pill;
   display: inline-flex;
   align-items: center;
@@ -44,7 +44,7 @@
 .lwc-pill__media {
   --lwc-c-icon-size: 1.25rem;
   height: 1.25rem;
-  margin: 0 $spacing-xxx-small;
+  margin-right: $spacing-xxx-small;
 }
 
 // restrictions here
@@ -76,7 +76,8 @@
 
 .lwc-pill__remove {
   --lwc-c-icon-size: 0.875rem;
-  margin: 0 $spacing-xxx-small;
+  margin-left: $spacing-xxx-small;
+  margin-top: -$spacing-xxx-small;
 }
 
 // restrictions here

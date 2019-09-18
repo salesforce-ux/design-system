@@ -58,15 +58,13 @@ const Pill = props => {
   };
 
   const renderText = () => {
-    if (actionUrl) {
-      return (
-        <a className="lwc-pill__action" href={actionUrl} title={children}>
-          <span className="lwc-pill__label">{children}</span>
-        </a>
-      );
-    } else {
-      return <span className="lwc-pill__label">{children}</span>;
-    }
+    actionUrl ? (
+      <a className="lwc-pill__action" href={actionUrl} title={children}>
+        <span className="lwc-pill__label">{children}</span>
+      </a>
+    ) : (
+      <span className="lwc-pill__label">{children}</span>
+    );
   };
 
   return (

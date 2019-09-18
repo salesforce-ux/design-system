@@ -392,8 +392,8 @@ When pressed, apply the class `slds-is-selected` to the `slds-global-actions__fa
 
 <Blockquote type="a11y" header="Accessibility Requirement">
   When the favorites action is pressed, we need to toggle the{' '}
-  <code className="doc">aria-pressed</code> attribute to{' '}
-  <code className="doc">true</code>. This will inform a screen reader that the
+  <code>aria-pressed</code> attribute to{' '}
+  <code>true</code>. This will inform a screen reader that the
   button has been pressed.
 </Blockquote>
 
@@ -494,13 +494,13 @@ When a notification is coming through, we want to apply the `slds-incoming-notif
 
 <Blockquote type="a11y" header="Accessibility Note">
   The notification badge is hidden from screen readers by add the attribute{' '}
-  <code className="doc">aria-hidden="true"</code> so the badge doesn't have to
+  <code>aria-hidden="true"</code> so the badge doesn't have to
   be inside the button itself. Since the badge count is hidden, we need to add
   the count number to the button text via some hidden assisitve text. The
   assistive text string should be updated with number of new notifications, such
   as "3 new notification". If there are no notifications, the assistive text
   should read "No notifications". The button element also requires{' '}
-  <code className="doc">aria-live="assertive"</code> to announce any count
+  <code>aria-live="assertive"</code> to announce any count
   updates.
 </Blockquote>
 

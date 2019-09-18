@@ -71,7 +71,7 @@ A chat consists of an unordered list of possible chat items, wrapped in a `secti
 
 ### Accessibility
 
-The <code className="doc">log</code> role has an implicit <code className="doc">aria-live</code> property value of <code className="doc">polite</code>, meaning that it comes for free. It also has an implicit <code className="doc">aria-relevant</code> property value of <code className="doc">additions text</code>. Together this means any additional text, or chat items added to the list will automatically be politely announced by a screen reader
+The <code>log</code> role has an implicit <code>aria-live</code> property value of <code>polite</code>, meaning that it comes for free. It also has an implicit <code>aria-relevant</code> property value of <code>additions text</code>. Together this means any additional text, or chat items added to the list will automatically be politely announced by a screen reader
 
 ## Base
 
@@ -172,12 +172,12 @@ Chat messages are comprised of the message text, and message meta data including
 ### Inbound messages
 
 <Blockquote header="Use of aria-label" type="a11y">
-  Each message meta data wrapper has <code className="doc">aria-label</code>{' '}
+  Each message meta data wrapper has <code>aria-label</code>{' '}
   added, which we can use to form more human sounding messages as they arrive,{' '}
   <b>
     "Hi, my CloudWidget only speaks French said Taylor Watson-Rice at 4:59 PM"
   </b>
-  . A screen reader, when <code className="doc">aria-label</code> is applied to
+  . A screen reader, when <code>aria-label</code> is applied to
   an element, will only announce the contents of the label, not the text content
   held in it.
 </Blockquote>
@@ -316,8 +316,8 @@ It is also possible to display an image preview when sending a supported file fo
 
 <Blockquote header="Contrast" type="a11y">
   When using actions without a title, it's important to use the{' '}
-  <code className="doc">slds-file__title_scrim</code> class in conjunction with{' '}
-  <code className="doc">slds-file__title</code> to ensure proper contrast.
+  <code>slds-file__title_scrim</code> class in conjunction with{' '}
+  <code>slds-file__title</code> to ensure proper contrast.
   Without this, it can be difficult for users to see the action icons when the
   image being sent is predominantly light in color.
 </Blockquote>
@@ -490,7 +490,7 @@ We can take that experience one step further when the sneak peek feature is enab
   When the sneak peek feature is active, we take care to try and reduce the
   verbosity a screen reader user will encounter. As they will hear the final
   message once it is typed, we have found it is preferred to use{' '}
-  <code className="doc">aria-hidden="true"</code> on the text they are currently
+  <code>aria-hidden="true"</code> on the text they are currently
   typing, to reduce noise.
 </Blockquote>
 

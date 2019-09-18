@@ -65,7 +65,7 @@ There are many types of input elements that can be used in the Form Element, inc
 
 ### Accessibility
 
-Labels must have the <code className="doc">for</code> attribute applied, and its value must match the ID of the associated form element, like <code className="doc"><input id="unique-id-of-input" /></code>. This association ensures that assistive technology informs users about what information to enter where.
+Labels must have the <code>for</code> attribute applied, and its value must match the ID of the associated form element, like <code><input id="unique-id-of-input" /></code>. This association ensures that assistive technology informs users about what information to enter where.
 
 ## Base
 
@@ -184,8 +184,8 @@ If an error has occurred while submitting a form, the form element with an error
 <Blockquote type="a11y" header="Accessibility requirement">
   When a form element displays feedback notifying the user of an error, the
   error string should be linked to the element by adding the{' '}
-  <code className="doc">aria-describedby</code> attribute to the{' '}
-  <code className="doc">&lt;input&gt;</code>. The `aria-describedby` attribute
+  <code>aria-describedby</code> attribute to the{' '}
+  <code>&lt;input&gt;</code>. The `aria-describedby` attribute
   must reference the id of the error message. This configuration allows screen
   readers to read the associated error message when the invalid field is
   focused.
@@ -362,9 +362,9 @@ A record form is a series of rows created by `slds-form__row`. Inside of each ro
 
 <Blockquote type="a11y" header="Accessibility Requirement">
   Due to the nature of how the record form is composed, we need to notify screen
-  readers that this is a list by adding <code className="doc">role="list"</code>{' '}
-  to the <code className="doc">slds-form</code> element. Every column inside of
-  each row should get <code className="doc">role="listitem"</code> to identify
+  readers that this is a list by adding <code>role="list"</code>{' '}
+  to the <code>slds-form</code> element. Every column inside of
+  each row should get <code>role="listitem"</code> to identify
   itself as items of the list.
 </Blockquote>
 

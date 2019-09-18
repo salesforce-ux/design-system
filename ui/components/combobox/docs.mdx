@@ -56,18 +56,18 @@ It is most common to expand the `listbox` of options when a user clicks on the C
 
 <Blockquote type="a11y" header="Accessibility Requirement">
   When toggling visibility of the Combobox, the{' '}
-  <code className="doc">aria-expanded</code> attribute needs to be toggled to{' '}
-  <code className="doc">true</code>. Set it to{' '}
-  <code className="doc">false</code> again when the options are hidden.
+  <code>aria-expanded</code> attribute needs to be toggled to{' '}
+  <code>true</code>. Set it to{' '}
+  <code>false</code> again when the options are hidden.
 </Blockquote>
 
 <Blockquote type="a11y" header="Accessibility Note">
-  The <code className="doc">listbox</code> of options must be an <b>owned</b>{' '}
-  child of the <code className="doc">combobox</code>. If it cannot be a direct
-  child of the <code className="doc">combobox</code> element, then{' '}
-  <code className="doc">aria-owns</code> must be placed on the{' '}
-  <code className="doc">combobox</code> and point to the ID of the{' '}
-  <code className="doc">listbox</code> instead.
+  The <code>listbox</code> of options must be an <b>owned</b>{' '}
+  child of the <code>combobox</code>. If it cannot be a direct
+  child of the <code>combobox</code> element, then{' '}
+  <code>aria-owns</code> must be placed on the{' '}
+  <code>combobox</code> and point to the ID of the{' '}
+  <code>listbox</code> instead.
 </Blockquote>
 
 <CodeView style={{ height: '17rem' }}>
@@ -168,7 +168,7 @@ If using a keyboard, placing focus into the Combobox input field _will not_ disp
 After focusing inside the Combobox with the keyboard, pressing the `Down` or `Enter` key will expand the collapsed Combobox and display the `listbox` options. Be sure to update `aria-expanded` to be true. This will also highlight the first option in the listbox.
 
 <Blockquote type="a11y" header="Accessibility Requirement">
-  Update <code className="doc">aria-expanded</code> to "true" when the Combobox
+  Update <code>aria-expanded</code> to "true" when the Combobox
   is expanded.
 </Blockquote>
 
@@ -183,11 +183,11 @@ When an option from the `listbox` is "in focus", user focus never leaves the `in
 
 <Blockquote type="a11y" header="Accessibility Requirement">
   When highlighting an option with "faux focus", the{' '}
-  <code className="doc">aria-activedescendant</code> attribute on the{' '}
-  <code className="doc">input</code> needs to be set to the value of the ID of
+  <code>aria-activedescendant</code> attribute on the{' '}
+  <code>input</code> needs to be set to the value of the ID of
   the highlighted option. The highlighted option must also have{' '}
-  <code className="doc">aria-selected="true"</code>. When no option is
-  highlighted, <code className="doc">aria-activedescendant</code> must be
+  <code>aria-selected="true"</code>. When no option is
+  highlighted, <code>aria-activedescendant</code> must be
   removed.
 </Blockquote>
 
@@ -204,7 +204,7 @@ To collapse the Combobox the user should be able to press the `Escape` key on th
 Pressing the `Enter` key whilst an option is highlighted will select the option as the current value and collapse the Combobox.
 
 <Blockquote type="a11y" header="Accessibility Requirement">
-  Update <code className="doc">aria-expanded</code> to "false" when the Combobox
+  Update <code>aria-expanded</code> to "false" when the Combobox
   is collapsed.
 </Blockquote>
 
@@ -231,10 +231,10 @@ When an option becomes selected, the class `slds-is-selected` should be applied 
 When re-opening a Combobox that already has a selected value, the `listbox` should be displayed with the selected option already highlighted.
 
 <Blockquote type="a11y" header="Accessibility Requirement">
-  Be sure to re-set the <code className="doc">aria-activedescendant</code>{' '}
+  Be sure to re-set the <code>aria-activedescendant</code>{' '}
   attribute on the `input` to the value of the ID of the highlighted option. The
   highlighted option must also have{' '}
-  <code className="doc">aria-selected="true"</code>.
+  <code>aria-selected="true"</code>.
 </Blockquote>
 
 #### Multiple selections
@@ -283,9 +283,9 @@ If no option matches, the user can complete the value of the combobox by finishi
 <Blockquote type="a11y" header="Accessibility Difference">
   The difference between the <strong>Base Combobox</strong> and the{' '}
   <strong>Autocomplete Combobox</strong>, is that the text{' '}
-  <code className="doc">input</code> must have the{' '}
-  <code className="doc">readonly</code> attribute removed and replaced with{' '}
-  <code className="doc">aria-autocomplete="list"</code>.
+  <code>input</code> must have the{' '}
+  <code>readonly</code> attribute removed and replaced with{' '}
+  <code>aria-autocomplete="list"</code>.
 </Blockquote>
 
 <CodeView style={{ height: '12rem' }}>{AutocompleteExamples.default}</CodeView>
@@ -308,10 +308,10 @@ Whilst typing, the highlighted option in the `listbox` should be the user's text
 
 <Blockquote type="a11y" header="Accessibility Requirement">
   When highlighting an option with "faux focus", the{' '}
-  <code className="doc">aria-activedescendant</code> attribute on the `input`
+  <code>aria-activedescendant</code> attribute on the `input`
   needs to be set to the value of the ID of the highlighted option. The
   highlighted option must also have{' '}
-  <code className="doc">aria-selected="true"</code>.
+  <code>aria-selected="true"</code>.
 </Blockquote>
 
 <CodeView style={{ height: '12rem' }}>
@@ -422,8 +422,8 @@ To remove the selected option, simply press the `Delete` key when focused inside
 
 <Blockquote type="a11y" header="Accessibility Requirement">
   When the option is selected, make sure to add the{' '}
-  <code className="doc">readonly</code> attribute to the text{' '}
-  <code className="doc">input</code>. Be sure to remove it again when the option
+  <code>readonly</code> attribute to the text{' '}
+  <code>input</code>. Be sure to remove it again when the option
   is cleared.
 </Blockquote>
 
@@ -454,13 +454,13 @@ The containing `div` of the comboboxes should have the class `slds-combobox-grou
 <Blockquote type="warning" header="Keep in mind">
   The grouped combobox only accepts <em>one</em> addon, in addition to the
   primary combobox. Use the classes{' '}
-  <code className="doc">slds-combobox_addon-start</code> and{' '}
-  <code className="doc">slds-combobox_addon-end</code> to describe the position
+  <code>slds-combobox_addon-start</code> and{' '}
+  <code>slds-combobox_addon-end</code> to describe the position
   of the form element.
 </Blockquote>
 
 <Blockquote type="a11y" header="Accessibility Requirement">
-  Be sure to set <code className="doc">aria-controls</code> on the Object
+  Be sure to set <code>aria-controls</code> on the Object
   Switcher, which points to the Search Combobox ID.
 </Blockquote>
 
@@ -531,7 +531,7 @@ The containing element should receive the class `slds-combobox_object-switcher` 
 <Blockquote type="a11y" header="Accessibility Note">
   When a selection is made, the currently selected items should be prepended
   with a{' '}
-  <code className="doc">
+  <code>
     &lt;span className="slds-assistive-text"&gt;Current Selection:&lt;/span&gt;
   </code>{' '}
   to inform screen readers of its current selection.

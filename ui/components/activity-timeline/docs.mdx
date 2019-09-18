@@ -6,12 +6,11 @@ import * as ActivityTimelineExamples from './base/example';
 import { ActivityTimeline } from './base/example';
 
 <div className="doc lead">
-  The activity timeline displays each of the user’s upcoming, current, and past activities.
+  The activity timeline displays each of the user’s upcoming, current, and past
+  activities.
 </div>
 
-<CodeView exampleOnly>
-  {ActivityTimelineExamples.default}
-</CodeView>
+<CodeView exampleOnly>{ActivityTimelineExamples.default}</CodeView>
 
 ## About Activity Timeline
 
@@ -19,39 +18,37 @@ Each Activity timeline item receives its width from the parent list. It can cons
 
 ### Accessibility
 
-Text describing the type of timeline item is placed in a <code className="doc">span</code>. It is the first element in the timeline item and should be hidden with the <code className="doc">slds-assistive-text</code> class. The <code className="doc">SVG</code> image does not need the <code className="doc">slds-assistive-text</code> class.
+Text describing the type of timeline item is placed in a <code>span</code>. It is the first element in the timeline item and should be hidden with the <code>slds-assistive-text</code> class. The <code>SVG</code> image does not need the <code>slds-assistive-text</code> class.
 
 #### Markup
 
 **Button:**
 
-- <code className="doc">aria-controls</code> is used to create an association between the button and the details section. If the details section has an <code className="doc">id="email-content"</code>, then the button should have <code className="doc">aria-controls="email-content"</code>.
-- The title of the timeline item can also be used as a button to open the details section. If the details section has an <code className="doc">id="email-content"</code>, then the div with <code className="doc">slds-timeline__trigger</code> should have <code className="doc">aria-controls="email-content"</code> and the click handler.
-- <code className="doc">aria-expanded</code> indicates if the details section is open or closed and is read aloud by assitive technology when the button is focused.
+- <code>aria-controls</code> is used to create an association between the button and the details section. If the details section has an <code>id="email-content"</code>, then the button should have <code>aria-controls="email-content"</code>.
+- The title of the timeline item can also be used as a button to open the details section. If the details section has an <code>id="email-content"</code>, then the div with <code>slds-timeline\_\_trigger</code> should have <code>aria-controls="email-content"</code> and the click handler.
+- <code>aria-expanded</code> indicates if the details section is open or closed and is read aloud by assitive technology when the button is focused.
 
 **Section:**
 
-- <code className="doc">aria-hidden</code> indicates if the details section is open or closed, and if set to <code className="doc">true</code>, assistive technology hides the details section.
+- <code>aria-hidden</code> indicates if the details section is open or closed, and if set to <code>true</code>, assistive technology hides the details section.
 
 #### Keyboard Interactions
 
 - The button should behave as a normal button. The user should be able to tab to focus it and press enter/space to activate it.
 
-
 ## Base
 
-<CodeView>
-  {ActivityTimelineExamples.default}
-</CodeView>
+<CodeView>{ActivityTimelineExamples.default}</CodeView>
 
 ## States
 
 ### Expanding sections
 
 <Blockquote type="a11y" header="Accessibility Note">
-  When the user interacts with the button to open the details section, <code className="doc">aria-expanded</code> on the button should be <code className="doc">true</code> and <code className="doc">aria-hidden</code> on the details section should be <code className="doc">false</code>.
+  When the user interacts with the button to open the details section, <code>aria-expanded</code> on the button should be <code>true</code> and <code>aria-hidden</code> on the details section should be <code>false</code>.
 
-  When the user interacts with the button to close the details section, <code className="doc">aria-expanded</code> on the button should be <code className="doc">false</code> and <code className="doc">aria-hidden</code> on the details section should be <code className="doc">true</code>.
+When the user interacts with the button to close the details section, <code>aria-expanded</code> on the button should be <code>false</code> and <code>aria-hidden</code> on the details section should be <code>true</code>.
+
 </Blockquote>
 
 #### Single Item Expanded

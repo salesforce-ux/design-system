@@ -13,7 +13,7 @@ const kitchenSink = getAllDisplayCollectionsByType(examples, [
   'states'
 ]);
 
-storiesOf('Components/Modal', module).add('Kitchen Sink', () =>
+storiesOf('Components/Modals', module).add('Kitchen Sink', () =>
   kitchenSink.map((element, idx) =>
     element.map(({ label, component }) => (
       <StoryFrame

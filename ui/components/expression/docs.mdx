@@ -286,7 +286,7 @@ Use the narrow variant for in-context expression building, where users are able 
 <Blockquote type="a11y" header="Accessibility Requirement">
   Be sure to use assistive text to improve the clarity of what the user might be
   editing. For example, add{' '}
-  <code className="doc">
+  <code>
     <span className="slds-assistive-text">Edit filter:</span>
   </code>{' '}
   to each expression button element.
@@ -370,15 +370,15 @@ One example of in-context expression building is filtering. To see examples of f
 
 <Blockquote type="a11y" header="Accessibility Requirement">
   When an error message is displayed to the user, the{' '}
-  <code className="doc">&lt;div&gt;</code> containing the error message should
-  have the <code className="doc">role="alert"</code> attribute applied. This
+  <code>&lt;div&gt;</code> containing the error message should
+  have the <code>role="alert"</code> attribute applied. This
   will immediately notify the user that an error has occurred.
 </Blockquote>
 
 <Blockquote type="a11y" header="Accessibility Requirement">
   The filter button that has an error is associated to that error with the use
-  of <code className="doc">aria-describedby</code>. The value of{' '}
-  <code className="doc">aria-describedby</code> matches the ID given to the
+  of <code>aria-describedby</code>. The value of{' '}
+  <code>aria-describedby</code> matches the ID given to the
   element that contains the corresponding error message.
 </Blockquote>
 

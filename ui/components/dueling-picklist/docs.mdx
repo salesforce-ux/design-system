@@ -148,9 +148,9 @@ If the user needs to select multiple options for a field, like a list of languag
 ### Selected Item
 
 <Blockquote header="Aria Selected" type="a11y">
-  <code className="doc">aria-selected</code> should be placed on each{' '}
-  <code className="doc">role="option"</code>, and set to{' '}
-  <code className="doc">true</code> when the item is selected.
+  <code>aria-selected</code> should be placed on each{' '}
+  <code>role="option"</code>, and set to{' '}
+  <code>true</code> when the item is selected.
 </Blockquote>
 
 <Example title="Dueling Picklist with Item Selected">
@@ -198,10 +198,10 @@ If the user needs to select multiple options for a field, like a list of languag
 If items are not able to be removed or reordered from the selected list, a lock icon appears next to the item name.
 
 <Blockquote type="a11y" header="Aria Disabled and Assistive Text">
-  For each locked item, <code className="doc">aria-disabled="true"</code> must
-  be applied to <code className="doc">.slds-listbox__option</code> and assistive
-  text (<code className="doc">.slds-assistive-text</code>) must be added to{' '}
-  <code className="doc">.slds-icon_container</code>.
+  For each locked item, <code>aria-disabled="true"</code> must
+  be applied to <code>.slds-listbox__option</code> and assistive
+  text (<code>.slds-assistive-text</code>) must be added to{' '}
+  <code>.slds-icon_container</code>.
 </Blockquote>
 
 <Example title="Dueling Picklist with a Locked Item">
@@ -268,15 +268,15 @@ If the user is not able to interact with the dueling picklist, then it should be
 
 <Blockquote type="a11y" header="Aria Disabled">
   In disabled mode, both list boxes{' '}
-  <code className="doc">ul[role=listbox]</code> should receive{' '}
-  <code className="doc">aria-disabled="true"</code>, and all directional buttons
-  should receive the <code className="doc">disabled</code> attribute.
+  <code>ul[role=listbox]</code> should receive{' '}
+  <code>aria-disabled="true"</code>, and all directional buttons
+  should receive the <code>disabled</code> attribute.
 </Blockquote>
 
 <Blockquote type="note" header="Utility Class">
-  The class <code className="doc">slds-is-disabled</code> should also be applied
+  The class <code>slds-is-disabled</code> should also be applied
   to the divs with the class{' '}
-  <code className="doc">slds-dueling-list_options</code>.
+  <code>slds-dueling-list_options</code>.
 </Blockquote>
 
 <Example title="Dueling Picklist Disabled">

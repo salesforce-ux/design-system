@@ -36,11 +36,11 @@ import {
 
 ### Implementation Requirements
 
-The <code className="doc">.slds-progress-bar</code> accepts a range from 0% to 100%, and this percentage should be applied with inline styling to the <code className="doc">div</code> with class <code className="doc">slds-progress-bar\_\_value</code> using JavaScript. If implementing a horizontal progress indicator, set the width, otherwise set the height for vertical progress indicators.
+The <code>.slds-progress-bar</code> accepts a range from 0% to 100%, and this percentage should be applied with inline styling to the <code>div</code> with class <code>slds-progress-bar\_\_value</code> using JavaScript. If implementing a horizontal progress indicator, set the width, otherwise set the height for vertical progress indicators.
 
 ### Accessibility
 
-As the percentage of completion changes, be sure to update the <code className="doc">aria-valuenow</code> property on the `&lt;div&gt;` with `class="slds-progress-bar"`, as well as the `slds-assistive-text` `&lt;span&gt;`.
+As the percentage of completion changes, be sure to update the <code>aria-valuenow</code> property on the `&lt;div&gt;` with `class="slds-progress-bar"`, as well as the `slds-assistive-text` `&lt;span&gt;`.
 
 <CodeBlock toggleCode={false}>
   <div
@@ -142,8 +142,8 @@ When an error has occurred on a step, the `&lt;div&gt;` with class `.slds-progre
 
 <Blockquote type="a11y" header="Accessibility Requirements">
   When a step's tooltip is visible, the step's button needs the{' '}
-  <code className="doc">aria-describedby</code> attribute, whose value should be
-  the <code className="doc">id</code> of the associated tooltip.
+  <code>aria-describedby</code> attribute, whose value should be
+  the <code>id</code> of the associated tooltip.
 </Blockquote>
 
 <Example title="Progress Indicator Tooltip Horizontal">

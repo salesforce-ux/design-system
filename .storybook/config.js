@@ -7,6 +7,7 @@ import sldsTheme from './sldsTheme';
 
 import '../ui/index.scss'; // load slds css
 import './scss/ui/index.scss'; // Our custom Storybook presentation styles
+import '../shared/styles/doc.scss'; // docs styles
 
 initializeRTL();
 

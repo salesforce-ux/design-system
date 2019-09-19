@@ -163,6 +163,7 @@
     "react-lazyload": "2.6.2",
     "react-test-renderer": "16.8.6",
     "regenerator-runtime": "0.13.2",
+    "rehype-add-classes": "1.0.0",
     "resolve-url-loader": "3.1.0",
     "rimraf": "2.6.1",
     "sass-loader": "6.0.6",
@@ -201,7 +202,7 @@
   "scripts": {
     "build": "npm run gulp -- build",
     "dist": "npm run gulp -- dist",
-    "dist:ui-json": "npm run build && npm run gulp -- dist:ui-json",
+    "dist:ui-json": "npm run gulp -- dist:ui-json",
     "gulp": "babel-node --max-old-space-size=4096 ./node_modules/gulp/bin/gulp.js",
     "lint": "npm run gulp -- lint",
     "start": "npm run build && npm run previewer",

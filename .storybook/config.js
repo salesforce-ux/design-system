@@ -1,12 +1,13 @@
 import { configure, addDecorator, addParameters } from '@storybook/react';
-import { withOptions } from '@storybook/addon-options';
 import { withA11y } from '@storybook/addon-a11y';
-import sldsTheme from './sldsTheme';
-import withMDX from './addons/withMDX';
 
-import './scss/ui/index.scss'; // Our custom Storybook presentation styles
+import sldsTheme from '../shared/storybook/sldsTheme';
 
-const req = require.context('../ui/', true, /\.stories\.js$/);
+import '../ui/index.scss'; // load slds css
+import '../shared/storybook/scss/ui/index.scss'; // Our custom Storybook presentation styles
+import '../shared/styles/doc.scss'; // docs styles
+
+const req = require.context('../ui/components', true, /\.stories\.js$/);
 
 function loadStories() {
   req.keys().forEach(filename => req(filename));
@@ -14,7 +15,6 @@ function loadStories() {
 
 // Global Decorators
 // https://storybook.js.org/addons/introduction/#1-decorators
-addDecorator(withMDX);
 addDecorator(withA11y);
 addParameters({
   options: {

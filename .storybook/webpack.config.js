@@ -44,7 +44,12 @@ module.exports = async ({ config, mode }) => {
           loader: '@epegzz/sass-vars-loader',
           options: {
             syntax: 'scss',
-            files: [path.resolve(__dirname, './scss/framework/config.scss')]
+            files: [
+              path.resolve(
+                __dirname,
+                '../shared/storybook/scss/framework/config.scss'
+              )
+            ]
           }
         }
       ]

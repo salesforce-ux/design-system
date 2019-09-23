@@ -8,6 +8,7 @@ import { beautify } from '../utils/beautify';
 import classNames from 'classnames';
 import Copy from './Copy';
 import Prism from '../vendor/prism';
+
 import '../vendor/prism/_prism.scss';
 import '../vendor/prism/_prism-overrides.scss';
 
@@ -39,7 +40,7 @@ class CodeBlock extends Component {
     this.setState({ open: !this.state.open });
   }
 
-  getCode() {
+  getCode(lines) {
     const { children } = this.props;
     try {
       React.Children.only(children);
@@ -48,17 +49,33 @@ class CodeBlock extends Component {
         'We expected exactly one child in CodeView, you passed in 0 or many children'
       );
     }
-    const code = children ? ReactDOM.renderToStaticMarkup(children) : '';
-    return beautify(code);
+    const markup = children ? ReactDOM.renderToStaticMarkup(children) : '';
+    const formatted = beautify(markup);
+    let code;
+
+    if (lines) {
+      code = formatted
+        .split(/\n/g)
+        .reduce((codeLines, codeLine, i) =>
+          i <= lines ? `${codeLines}\n` + codeLine : codeLines
+        );
+    } else {
+      code = formatted;
+    }
+
+    return code;
   }
 
-  getHighlightedCode() {
+  getHighlightedCode(lines) {
     const { language } = this.props;
-    return highlight(this.getCode(), language);
+    return highlight(this.getCode(lines), language);
   }
 
   render() {
     const { language, toggleCode = true } = this.props;
+    const { open } = this.state;
+    const codeLines = open ? null : 3;
+
     return (
       <div className="docs-codeblock-source">
         <ul className="docs-codeblock__action-bar">
@@ -84,7 +101,7 @@ class CodeBlock extends Component {
             <code
               className={`language-${language}`}
               dangerouslySetInnerHTML={{
-                __html: this.getHighlightedCode()
+                __html: this.getHighlightedCode(codeLines)
               }}
             />
           </pre>

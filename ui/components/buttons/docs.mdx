@@ -50,7 +50,7 @@ The distinction is important to screen reader users to know what's going to happ
 If you absolutely cannot use a `<button />` element for an action and instead need to use an `<a />`, you are required to do 2 things:
 
 - Add `role="button"` attribute to the `<a />` to make the element announce itself as a `button` element.
-- Add a JavaScript event handler for when the user presses the space key.  This is because a `button` element will respond by default to both the enter and space keys being pressed, but an `<a />` element will not.
+- Add a JavaScript event handler for when the user presses the space key. This is because a `button` element will respond by default to both the enter and space keys being pressed, but an `<a />` element will not.
 
 Finally, color alone does not suffice when conveying the meaning of buttons. Ensure that the text you use in the button matches the meaning you are trying to convey via color. For example, if you use the destructive button to point out a potential warning, make sure the text communicates the same message.
 
@@ -76,9 +76,7 @@ The base `slds-button` looks like a plain text link. It removes all the styling 
 
 The base and neutral buttons are used most frequently and can be used multiple times per feature. Use these buttons when the actions are of secondary importance to the content surrounding it, such as in the actions ribbon in a page header.
 
-<CodeView toggleCode={false}>
-  {ButtonExamples.default}
-</CodeView>
+<CodeView toggleCode={false}>{ButtonExamples.default}</CodeView>
 
 ## Variations
 
@@ -114,7 +112,10 @@ To create the outline brand button, add the `slds-button_outline-brand` class to
 
 Use the inverse button on dark backgrounds. Add the `slds-button_inverse` class to the `slds-button` class.
 
-<CodeView style={{ backgroundColor: '#16325c', padding: '0.5rem' }} toggleCode={false}>
+<CodeView
+  style={{ backgroundColor: '#16325c', padding: '0.5rem' }}
+  toggleCode={false}
+>
   {getDisplayElementById(ButtonExamples.examples, 'inverse')}
 </CodeView>
 
@@ -168,9 +169,7 @@ The SVG, element, or icon inside the button receives the `slds-button__icon` cla
 
 ### Left Icon
 
-<CodeView>
-  {IconExamples.default}
-</CodeView>
+<CodeView>{IconExamples.default}</CodeView>
 
 ### Right Icon
 
@@ -187,20 +186,25 @@ The stateful button requires the `slds-button_stateful` class and the `slds-butt
 The button contains three spans with classes that hide or show the content of the spans based on the class on the button. Each span contains text and a corresponding icon. The SVG will have the `slds-button__icon_left` class setting the icon on the left.
 
 <Blockquote type="a11y" header="Accessibility Requirement">
-  Be sure to include the attribute `aria-live="assertive"` on the button. The `aria-live="assertive"` attribute means the value of the `<span>` inside the button will be spoken whenever it changes.
+  Be sure to include the attribute `aria-live="assertive"` on the button. The
+  `aria-live="assertive"` attribute means the value of the `&lt;span&gt;` inside
+  the button will be spoken whenever it changes.
 </Blockquote>
 
 <Blockquote type="note" header="JavaScript Requirement">
-  When the user clicks the button, use JavaScript to toggle the class from <code className="doc">slds-not-selected</code> to <code className="doc">slds-is-selected-clicked</code>. As soon as focus leaves the button, use JavaScript to toggle the class from <code className="doc">slds-is-selected-clicked</code> to <code className="doc">slds-is-selected</code>.
+  When the user clicks the button, use JavaScript to toggle the class from{' '}
+  <code>slds-not-selected</code> to{' '}
+  <code>slds-is-selected-clicked</code>. As soon as focus leaves
+  the button, use JavaScript to toggle the class from{' '}
+  <code>slds-is-selected-clicked</code> to{' '}
+  <code>slds-is-selected</code>.
 </Blockquote>
 
 ### Not Selected
 
 Stateful button uses the class `slds-not-selected` in its initial state.
 
-<CodeView>
-  {StatefulExamples.default}
-</CodeView>
+<CodeView>{StatefulExamples.default}</CodeView>
 
 ### Selected and Focused
 
@@ -227,18 +231,20 @@ The Dual Stateful button requires the `slds-button_dual-stateful` class, along w
 The button contains two spans. Each span contains display text and a corresponding SVG icon with the class `slds-button__icon-left` and has classes that hide or show the contents. By default, the first span with the class `slds-text-is-not-pressed` is displayed; when the class `slds-is-pressed` is applied to the parent button, the span with the class `slds-text-is-pressed` is displayed.
 
 <Blockquote type="a11y" header="Accessibility Requirement">
-  Be sure to include the attribute `aria-live="assertive"` on the button. The `aria-live="assertive"` attribute means the value of the `<span>` inside the button will be spoken whenever it changes.
+  Be sure to include the attribute `aria-live="assertive"` on the button. The
+  `aria-live="assertive"` attribute means the value of the `&lt;span&gt;` inside
+  the button will be spoken whenever it changes.
 </Blockquote>
 
 <Blockquote type="note" header="JavaScript Requirement">
-  When the user clicks the button, use JavaScript to toggle the <code className="doc">slds-is-pressed</code> class on or off, depending on the previous state. Remember, only the pressed state requires this class.
+  When the user clicks the button, use JavaScript to toggle the{' '}
+  <code>slds-is-pressed</code> class on or off, depending on the
+  previous state. Remember, only the pressed state requires this class.
 </Blockquote>
 
 ### Not Pressed
 
-<CodeView>
-  {DualStatefulExamples.default}
-</CodeView>
+<CodeView>{DualStatefulExamples.default}</CodeView>
 
 ### Pressed
 

@@ -9,13 +9,15 @@ import SetupAssistantStepDetail from './SetupAssistantStepDetail';
 import SetupAssistant from './';
 import { FullSetupAssistantCard } from './';
 
-
 <div className="doc lead">
-  Setup Assistant provides Administrators with a centralized list of tasks for onboarding organizations, clouds, or features within the Salesforce Platform. It provides a prescriptive and detailed guide for learning, configuring, and importing data which can take hours to days.
+  Setup Assistant provides Administrators with a centralized list of tasks for
+  onboarding organizations, clouds, or features within the Salesforce Platform.
+  It provides a prescriptive and detailed guide for learning, configuring, and
+  importing data which can take hours to days.
 </div>
 
 <CodeView exampleOnly>
-  <SetupAssistant isBase stepsHaveProgress/>
+  <SetupAssistant isBase stepsHaveProgress />
 </CodeView>
 
 ## About Setup Assistant
@@ -33,7 +35,7 @@ Basic list of learning and task links that do not require progress tracking and 
 
 <Example title="Setup Assistant Base">
   <CodeView>
-    <SetupAssistant isBase/>
+    <SetupAssistant isBase />
   </CodeView>
 </Example>
 
@@ -43,7 +45,7 @@ List of learning and task links with a recommended sequence that require progres
 
 <Example title="Setup Assistant Base steps with Progress">
   <CodeView>
-    <SetupAssistant isBase stepsHaveProgress/>
+    <SetupAssistant isBase stepsHaveProgress />
   </CodeView>
 </Example>
 
@@ -54,12 +56,15 @@ Includes all the features of Setup Assistant Base + Progress, but also includes 
 Clicking on the icon toggle or the primary step's title will open and close that step's details. If a primary step's substeps have been started, the primary step's progress ring turns blue to indicate the amount of progress made on the substeps.
 
 <Blockquote type="a11y" header="Accessibility Note">
-  Since both the chevron toggle and the step's title act as a trigger to open and close the step's detail, ensure both the icon button and the title include `aria-controls=[uniqueId]` where the `uniqueId` matches the `id` on the `<div>` with `class="slds-summary-detail__content".`
+  Since both the chevron toggle and the step's title act as a trigger to open
+  and close the step's detail, ensure both the icon button and the title include
+  `aria-controls=[uniqueId]` where the `uniqueId` matches the `id` on the
+  `&lt;div&gt;` with `class="slds-summary-detail__content".`
 </Blockquote>
 
 <Example title="Setup Assistant Hub Expandable">
   <CodeView>
-    <SetupAssistant stepsAreExpandable/>
+    <SetupAssistant stepsAreExpandable />
   </CodeView>
 </Example>
 
@@ -68,13 +73,15 @@ Clicking on the icon toggle or the primary step's title will open and close that
 If the steps have associated progress, a header is added to the card containing the steps. This header indicates overall progress on this Setup Assistant and utilizes the [Descriptive Progress Bar](../progress-bar)
 
 <Blockquote type="a11y" header="Accessibility Note">
-  In order to prevent duplicating information for screen reader users, the percentage info on the top of the progress bar is hidden using the `slds-assistive-text` class.
+  In order to prevent duplicating information for screen reader users, the
+  percentage info on the top of the progress bar is hidden using the
+  `slds-assistive-text` class.
 </Blockquote>
 
 <Example title="Setup Assistant Hub Expandable">
   <CodeView>
     <FullSetupAssistantCard>
-      <SetupAssistant stepsAreExpandable/>
+      <SetupAssistant stepsAreExpandable />
     </FullSetupAssistantCard>
   </CodeView>
 </Example>

@@ -2,27 +2,25 @@ import CodeView from '../../../shared/components/CodeView';
 import CodeBlock from '../../../shared/components/CodeBlock';
 import Example from '../../../shared/components/Example';
 import Blockquote from '../../../shared/components/Blockquote';
-import {Chat,ChatList,ChatListItem,ChatMessage,ChatMessageBody,ChatAvatar,ChatEvent,ChatBookend} from './';
+import { Chat, ChatList, ChatListItem, ChatMessage, ChatMessageBody, ChatAvatar, ChatEvent, ChatBookend } from './';
 import { File } from '../files';
 import { DoctypeIcon } from '../icons/doctype/example';
 
 <div className="doc lead">
-  The Chat component is used to display real-time and past chat logs between service agents and customers. It comes with a number of sub components that can be used to display the different types of chat items.
+  The Chat component is used to display real-time and past chat logs between
+  service agents and customers. It comes with a number of sub components that
+  can be used to display the different types of chat items.
 </div>
 
 <CodeView exampleOnly>
   <Chat>
     <ChatList>
       <ChatListItem type="bookend">
-        <ChatBookend
-          type="start"
-          name="Andy Martinez"
-          timeStamp="4:58 PM"
-        />
+        <ChatBookend type="start" name="Andy Martinez" timeStamp="4:58 PM" />
       </ChatListItem>
       <ChatListItem type="inbound">
         <ChatMessage>
-          <ChatAvatar initials="AM" name="Andy Martinez" ariaHidden="true"/>
+          <ChatAvatar initials="AM" name="Andy Martinez" ariaHidden="true" />
           <ChatMessageBody
             type="inbound"
             name="Andy Martinez"
@@ -35,7 +33,8 @@ import { DoctypeIcon } from '../icons/doctype/example';
       <ChatListItem type="outbound">
         <ChatMessage>
           <ChatMessageBody type="outbound-agent">
-            Hi Andy, thank you for contacting Widget Support. Can you please tell me what language you are trying to program on your CloudWidget?
+            Hi Andy, thank you for contacting Widget Support. Can you please
+            tell me what language you are trying to program on your CloudWidget?
           </ChatMessageBody>
         </ChatMessage>
       </ChatListItem>
@@ -94,11 +93,7 @@ The modifiers are used to apply any specific styling to the type of chat item it
   <Chat>
     <ChatList>
       <ChatListItem type="bookend">
-        <ChatBookend
-          type="start"
-          name="Andy Martinez"
-          timeStamp="4:58 PM"
-        />
+        <ChatBookend type="start" name="Andy Martinez" timeStamp="4:58 PM" />
       </ChatListItem>
       <ChatListItem type="inbound">
         <ChatMessage>
@@ -114,7 +109,8 @@ The modifiers are used to apply any specific styling to the type of chat item it
       <ChatListItem type="outbound">
         <ChatMessage>
           <ChatMessageBody type="outbound">
-            Hi Andy, thank you for contacting Widget Support. Can you please tell me what language you are trying to program on your CloudWidget?
+            Hi Andy, thank you for contacting Widget Support. Can you please
+            tell me what language you are trying to program on your CloudWidget?
           </ChatMessageBody>
         </ChatMessage>
       </ChatListItem>
@@ -151,21 +147,13 @@ When each chat session is started or stopped, it is represented with a bookend. 
 ### Chat started bookend
 
 <CodeView>
-  <ChatBookend
-    type="start"
-    name="Taylor Watson-Rice"
-    timeStamp="4:59 PM"
-  />
+  <ChatBookend type="start" name="Taylor Watson-Rice" timeStamp="4:59 PM" />
 </CodeView>
 
 ### Chat stopped bookend
 
 <CodeView>
-  <ChatBookend
-    type="stop"
-    name="Taylor Watson-Rice"
-    timeStamp="4:59 PM"
-  />
+  <ChatBookend type="stop" name="Taylor Watson-Rice" timeStamp="4:59 PM" />
 </CodeView>
 
 ## Chat messages
@@ -174,11 +162,15 @@ Chat messages are comprised of the message text, and message meta data including
 
 ### Inbound messages
 
-<Blockquote
-  header="Use of aria-label"
-  type="a11y"
->
-  Each message meta data wrapper has <code className="doc">aria-label</code> added, which we can use to form more human sounding messages as they arrive, <b>"Hi, my CloudWidget only speaks French said Taylor Watson-Rice at 4:59 PM"</b>. A screen reader, when <code className="doc">aria-label</code> is applied to an element, will only announce the contents of the label, not the text content held in it.
+<Blockquote header="Use of aria-label" type="a11y">
+  Each message meta data wrapper has <code className="doc">aria-label</code>{' '}
+  added, which we can use to form more human sounding messages as they arrive,{' '}
+  <b>
+    "Hi, my CloudWidget only speaks French said Taylor Watson-Rice at 4:59 PM"
+  </b>
+  . A screen reader, when <code className="doc">aria-label</code> is applied to
+  an element, will only announce the contents of the label, not the text content
+  held in it.
 </Blockquote>
 
 <Example title="Chat Inbound message">
@@ -237,7 +229,10 @@ Consecutive messages only display name and time meta data once
 Inbound messages can optionally display the customers avatar. When displaying an avatar in inbound messages, be sure to apply the `slds-chat-message_faux-avatar` modifier to any consecutive `slds-chat-message` containers, to ensure correct alignment where the avatar is missing.
 
 <Blockquote header="Aria Hidden Avatars" type="a11y">
-  Because every inbound message already includes the user's name, the user's avatar is redundant and therefore should be treated as decorative. For this reason, we hide the avatar using `aria-hidden="true"` on the `<span>` with `class="slds-avatar"` to avoid redundancy for screen reader users.
+  Because every inbound message already includes the user's name, the user's
+  avatar is redundant and therefore should be treated as decorative. For this
+  reason, we hide the avatar using `aria-hidden="true"` on the `&lt;span&gt;`
+  with `class="slds-avatar"` to avoid redundancy for screen reader users.
 </Blockquote>
 
 <Example title="Chat Inbound message with avatar">
@@ -246,7 +241,11 @@ Inbound messages can optionally display the customers avatar. When displaying an
       <ChatList>
         <ChatListItem type="inbound">
           <ChatMessage>
-            <ChatAvatar initials="TW" name="Taylor Watson-Rice" ariaHidden="true"/>
+            <ChatAvatar
+              initials="TW"
+              name="Taylor Watson-Rice"
+              ariaHidden="true"
+            />
             <ChatMessageBody type="inbound">
               Hi, my CloudWidget only speaks French
             </ChatMessageBody>
@@ -278,7 +277,11 @@ During a chat an agent can request the customer upload a file attachment to be s
       <ChatList>
         <ChatListItem type="inbound">
           <ChatMessage>
-            <ChatAvatar initials="TW" name="Taylor Watson-Rice" ariaHidden="true"/>
+            <ChatAvatar
+              initials="TW"
+              name="Taylor Watson-Rice"
+              ariaHidden="true"
+            />
             <ChatMessageBody
               type="inbound"
               name="Taylor Watson-Rice"
@@ -302,11 +305,12 @@ During a chat an agent can request the customer upload a file attachment to be s
 
 It is also possible to display an image preview when sending a supported file format, such as a JPEG. This is accomplished by using the [File](files/) component within Chat.
 
-<Blockquote
-  header="Contrast"
-  type="a11y"
->
-  When using actions without a title, it's important to use the <code className="doc">slds-file__title_scrim</code> class in conjunction with <code className="doc">slds-file__title</code> to ensure proper contrast. Without this, it can be difficult for users to see the action icons when the image being sent is predominantly light in color.
+<Blockquote header="Contrast" type="a11y">
+  When using actions without a title, it's important to use the{' '}
+  <code className="doc">slds-file__title_scrim</code> class in conjunction with{' '}
+  <code className="doc">slds-file__title</code> to ensure proper contrast.
+  Without this, it can be difficult for users to see the action icons when the
+  image being sent is predominantly light in color.
 </Blockquote>
 
 <Example title="Chat inbound message with image attachment preview">
@@ -315,20 +319,18 @@ It is also possible to display an image preview when sending a supported file fo
       <ChatList>
         <ChatListItem type="inbound">
           <ChatMessage>
-            <ChatAvatar initials="TW" name="Taylor Watson-Rice" ariaHidden="true"/>
+            <ChatAvatar
+              initials="TW"
+              name="Taylor Watson-Rice"
+              ariaHidden="true"
+            />
             <ChatMessageBody
               type="inbound"
               messageType="image"
               name="Taylor Watson-Rice"
               timeStamp="4:59 PM"
             >
-              <File
-                hasActions
-                iconColor="white"
-                noCaption
-                hasImage
-                hasScrim
-              />
+              <File hasActions iconColor="white" noCaption hasImage hasScrim />
             </ChatMessageBody>
           </ChatMessage>
         </ChatListItem>
@@ -345,7 +347,11 @@ Non-image file formats are also supported by using the File component.
       <ChatList>
         <ChatListItem type="inbound">
           <ChatMessage>
-            <ChatAvatar initials="TW" name="Taylor Watson-Rice" ariaHidden="true"/>
+            <ChatAvatar
+              initials="TW"
+              name="Taylor Watson-Rice"
+              ariaHidden="true"
+            />
             <ChatMessageBody
               type="inbound"
               messageType="file"
@@ -376,15 +382,13 @@ Both file and image transfers support messages with and without titles; however,
       <ChatList>
         <ChatListItem type="inbound">
           <ChatMessage>
-            <ChatAvatar initials="TW" name="Taylor Watson-Rice" ariaHidden="true"/>
+            <ChatAvatar
+              initials="TW"
+              name="Taylor Watson-Rice"
+              ariaHidden="true"
+            />
             <ChatMessageBody type="inbound" messageType="image">
-              <File
-                hasActions
-                iconColor="white"
-                noCaption
-                hasScrim
-                hasImage
-              />
+              <File hasActions iconColor="white" noCaption hasScrim hasImage />
             </ChatMessageBody>
           </ChatMessage>
         </ChatListItem>
@@ -416,27 +420,27 @@ When sending or receiving a portrait-orientation image, use the `slds-file__figu
 <Example title="Chat inbound message with portrait-orientation image attachment preview">
   <CodeView>
     <Chat>
-        <ChatList>
-          <ChatListItem type="outbound">
-            <ChatMessage>
-              <ChatMessageBody
-                type="outbound"
-                messageType="image"
-                name="Taylor Watson-Rice"
-                timeStamp="4:59 PM"
-              >
-                <File
-                  hasTitleCard
-                  symbol="image"
-                  title="Image.jpg"
-                  hasActions
-                  hasImagePortrait
-                />
-              </ChatMessageBody>
-            </ChatMessage>
-          </ChatListItem>
-        </ChatList>
-      </Chat>
+      <ChatList>
+        <ChatListItem type="outbound">
+          <ChatMessage>
+            <ChatMessageBody
+              type="outbound"
+              messageType="image"
+              name="Taylor Watson-Rice"
+              timeStamp="4:59 PM"
+            >
+              <File
+                hasTitleCard
+                symbol="image"
+                title="Image.jpg"
+                hasActions
+                hasImagePortrait
+              />
+            </ChatMessageBody>
+          </ChatMessage>
+        </ChatListItem>
+      </ChatList>
+    </Chat>
   </CodeView>
 </Example>
 
@@ -444,11 +448,12 @@ When sending or receiving a portrait-orientation image, use the `slds-file__figu
 
 Whilst chatting with customers, agents can see when a customer is typing a response by using the [Dynamic Icon, Typing](/components/dynamic-icons).
 
-<Blockquote
-  header="Assistive text"
-  type="a11y"
->
-  It's important to set descriptive assistive text to the typing icon, as this is the only means a screen reader user will know a customer is currently typing. The assistive text, because it is text content, will be announced as the icon is added to the DOM. As an example, we use <b>"Customer is typing"</b>
+<Blockquote header="Assistive text" type="a11y">
+  It's important to set descriptive assistive text to the typing icon, as this
+  is the only means a screen reader user will know a customer is currently
+  typing. The assistive text, because it is text content, will be announced as
+  the icon is added to the DOM. As an example, we use{' '}
+  <b>"Customer is typing"</b>
 </Blockquote>
 
 <CodeView>
@@ -456,7 +461,11 @@ Whilst chatting with customers, agents can see when a customer is typing a respo
     <ChatList>
       <ChatListItem type="inbound">
         <ChatMessage>
-          <ChatAvatar initials="TW" name="Taylor Watson-Rice" ariaHidden="true"/>
+          <ChatAvatar
+            initials="TW"
+            name="Taylor Watson-Rice"
+            ariaHidden="true"
+          />
           <ChatMessageBody isTyping type="inbound" />
         </ChatMessage>
       </ChatListItem>
@@ -468,11 +477,12 @@ Whilst chatting with customers, agents can see when a customer is typing a respo
 
 We can take that experience one step further when the sneak peek feature is enabled. This allows agents to see what customers are typing in real time, as they type it.
 
-<Blockquote
-  header="aria-hidden"
-  type="a11y"
->
-  When the sneak peek feature is active, we take care to try and reduce the verbosity a screen reader user will encounter. As they will hear the final message once it is typed, we have found it is preferred to use <code className="doc">aria-hidden="true"</code> on the text they are currently typing, to reduce noise.
+<Blockquote header="aria-hidden" type="a11y">
+  When the sneak peek feature is active, we take care to try and reduce the
+  verbosity a screen reader user will encounter. As they will hear the final
+  message once it is typed, we have found it is preferred to use{' '}
+  <code className="doc">aria-hidden="true"</code> on the text they are currently
+  typing, to reduce noise.
 </Blockquote>
 
 <CodeView>
@@ -480,7 +490,11 @@ We can take that experience one step further when the sneak peek feature is enab
     <ChatList>
       <ChatListItem type="inbound">
         <ChatMessage>
-          <ChatAvatar initials="TW" name="Taylor Watson-Rice" ariaHidden="true"/>
+          <ChatAvatar
+            initials="TW"
+            name="Taylor Watson-Rice"
+            ariaHidden="true"
+          />
           <ChatMessageBody isTyping hasSneakPeek type="inbound">
             Hi, my CloudWidget only spe
           </ChatMessageBody>
@@ -507,7 +521,10 @@ Outbound messages come in 2 forms. Ones that are written by the agent in the cur
               name="Amber Cann"
               timeStamp="4:59 PM"
             >
-              Hi Taylor, thank you for contacting Widget Support. Can you please tell me what language you are trying to program on your CloudWidget? <a href="javascript:void(0)">http://www/cloud.widget</a>
+              Hi Taylor, thank you for contacting Widget Support. Can you please
+              tell me what language you are trying to program on your
+              CloudWidget?{' '}
+              <a href="javascript:void(0)">http://www/cloud.widget</a>
             </ChatMessageBody>
           </ChatMessage>
         </ChatListItem>
@@ -529,7 +546,9 @@ Outbound messages come in 2 forms. Ones that are written by the agent in the cur
               name="Jason Dewar"
               timeStamp="4:59 PM"
             >
-              So sorry to hear that. Let me transfer you to a more technical support member. Thank you for your patience. Have you tried visiting our help site?
+              So sorry to hear that. Let me transfer you to a more technical
+              support member. Thank you for your patience. Have you tried
+              visiting our help site?
             </ChatMessageBody>
           </ChatMessage>
         </ChatListItem>
@@ -550,7 +569,8 @@ For consecutive outbound messages the same rules apply to both types, as consecu
           <ChatMessage>
             <ChatMessageBody type="outbound">
               Hi Andy, thank you for contacting Widget Support. Can you please
-              tell me what language you are trying to program on your CloudWidget?
+              tell me what language you are trying to program on your
+              CloudWidget?
             </ChatMessageBody>
           </ChatMessage>
         </ChatListItem>
@@ -582,13 +602,17 @@ If a customer tries sending a message that is not supported, it will appear as a
       <ChatList>
         <ChatListItem type="inbound">
           <ChatMessage>
-            <ChatAvatar initials="TW" name="Taylor Watson-Rice" ariaHidden="true"/>
+            <ChatAvatar
+              initials="TW"
+              name="Taylor Watson-Rice"
+              ariaHidden="true"
+            />
             <ChatMessageBody
               type="unsupported-type"
               name="Taylor Watson-Rice"
               timeStamp="4:59 PM"
             >
-            Message type is not supported
+              Message type is not supported
             </ChatMessageBody>
           </ChatMessage>
         </ChatListItem>
@@ -601,11 +625,13 @@ If a customer tries sending a message that is not supported, it will appear as a
 
 If the agent attempts to send a message that can't be delivered, a message delivery failure indication appears beneath the original message text, along with an option to resend.
 
-<Blockquote
-  header="Role alert"
-  type="a11y"
->
-  Message delivery failures have the addition <code>role="alert"</code> to their container. A chat log has an <code>aria-live="polite"</code> value, but we would like to inform agents of errors immediately. The <code>role="alert"</code> attribute comes with an implicit <code>aria-live</code> value of <code>assertive</code> which will achieve this.
+<Blockquote header="Role alert" type="a11y">
+  Message delivery failures have the addition <code>role="alert"</code> to their
+  container. A chat log has an <code>aria-live="polite"</code> value, but we
+  would like to inform agents of errors immediately. The{' '}
+  <code>role="alert"</code> attribute comes with an implicit{' '}
+  <code>aria-live</code> value of <code>assertive</code> which will achieve
+  this.
 </Blockquote>
 
 <Example title="Chat Outbound message with delivery failure">
@@ -620,7 +646,7 @@ If the agent attempts to send a message that can't be delivered, a message deliv
               name="Amber Cann"
               timeStamp="4:59 PM"
             >
-            It might be the cause of the problem
+              It might be the cause of the problem
             </ChatMessageBody>
           </ChatMessage>
         </ChatListItem>
@@ -653,82 +679,53 @@ The basic type of events that can occur include;
     <Chat>
       <ChatList>
         <ChatListItem type="event">
-          <ChatEvent
-            symbol="priority"
-            timeStamp="5:09 PM"
-          >
+          <ChatEvent symbol="priority" timeStamp="5:09 PM">
             <b>Jason Dewar</b> raised a flag
           </ChatEvent>
         </ChatListItem>
         <ChatListItem type="event">
-          <ChatEvent
-            symbol="lower_flag"
-            timeStamp="5:09 PM"
-          >
+          <ChatEvent symbol="lower_flag" timeStamp="5:09 PM">
             <b>Jason Dewar</b> lowered the flag
           </ChatEvent>
         </ChatListItem>
         <ChatListItem type="event">
-          <ChatEvent
-            symbol="chat"
-            timeStamp="5:09 PM"
-          >
+          <ChatEvent symbol="chat" timeStamp="5:09 PM">
             Whisper from super <b>SuperAlly</b>
           </ChatEvent>
         </ChatListItem>
         <ChatListItem type="event">
-          <ChatEvent
-            symbol="share_file"
-            timeStamp="5:09 PM"
-          >
+          <ChatEvent symbol="share_file" timeStamp="5:09 PM">
             <b>Jason Dewar</b> sent a file request to <b>Andy Martinez</b>
           </ChatEvent>
         </ChatListItem>
         <ChatListItem type="event">
-          <ChatEvent
-            symbol="file"
-            timeStamp="5:09 PM"
-          >
+          <ChatEvent symbol="file" timeStamp="5:09 PM">
             <b>Andy Martinez</b> sent a file
           </ChatEvent>
         </ChatListItem>
         <ChatListItem type="event">
-          <ChatEvent
-            symbol="cancel_file_request"
-            timeStamp="5:09 PM"
-          >
+          <ChatEvent symbol="cancel_file_request" timeStamp="5:09 PM">
             <b>Jason Dewar</b> cancelled the file request
           </ChatEvent>
         </ChatListItem>
         <ChatListItem type="event">
-          <ChatEvent
-            symbol="change_owner"
-            timeStamp="5:09 PM"
-          >
-            <b>Jason Dewar</b> sent a transfer request to <b>Technical Support Team</b>
+          <ChatEvent symbol="change_owner" timeStamp="5:09 PM">
+            <b>Jason Dewar</b> sent a transfer request to{' '}
+            <b>Technical Support Team</b>
           </ChatEvent>
         </ChatListItem>
         <ChatListItem type="event">
-          <ChatEvent
-            symbol="change_owner"
-            timeStamp="5:09 PM"
-          >
+          <ChatEvent symbol="change_owner" timeStamp="5:09 PM">
             <b>Technical Support Team</b> accepted the transfer request
           </ChatEvent>
         </ChatListItem>
         <ChatListItem type="event">
-          <ChatEvent
-            symbol="cancel_transfer"
-            timeStamp="5:09 PM"
-          >
+          <ChatEvent symbol="cancel_transfer" timeStamp="5:09 PM">
             <b>Jason Dewar</b> cancelled the transfer request
           </ChatEvent>
         </ChatListItem>
         <ChatListItem type="event">
-          <ChatEvent
-            symbol="cancel_request"
-            timeStamp="5:09 PM"
-          >
+          <ChatEvent symbol="cancel_request" timeStamp="5:09 PM">
             <b>Technical Support Team</b> declined the transfer request
           </ChatEvent>
         </ChatListItem>
@@ -763,11 +760,12 @@ Sometimes an agent might add a message to an event for another agent to read.
 
 In the event of an error occurring during the chat, an error event can be displayed to the agent. This is done by adding the `.slds-has-error` modifier class.
 
-<Blockquote
-  header="Role alert"
-  type="a11y"
->
-  Event errors have the addition <code>role="alert"</code> to their container. A chat log has a <code>aria-live="polite"</code> value, but we would like to inform agents of errors immediately. The <code>role="alert"</code> attribute comes with an implicit <code>aria-live</code> value of <code>assertive</code> which will achieve this.
+<Blockquote header="Role alert" type="a11y">
+  Event errors have the addition <code>role="alert"</code> to their container. A
+  chat log has a <code>aria-live="polite"</code> value, but we would like to
+  inform agents of errors immediately. The <code>role="alert"</code> attribute
+  comes with an implicit <code>aria-live</code> value of <code>assertive</code>{' '}
+  which will achieve this.
 </Blockquote>
 
 <Example title="Chat event error">
@@ -796,15 +794,11 @@ In the event of an error occurring during the chat, an error event can be displa
     <Chat>
       <ChatList>
         <ChatListItem type="bookend">
-          <ChatBookend
-            type="start"
-            name="Andy Martinez"
-            timeStamp="4:58 PM"
-          />
+          <ChatBookend type="start" name="Andy Martinez" timeStamp="4:58 PM" />
         </ChatListItem>
         <ChatListItem type="inbound">
           <ChatMessage>
-            <ChatAvatar initials="AM" name="Andy Martinez" ariaHidden="true"/>
+            <ChatAvatar initials="AM" name="Andy Martinez" ariaHidden="true" />
             <ChatMessageBody
               type="inbound"
               name="Andy Martinez"
@@ -817,7 +811,9 @@ In the event of an error occurring during the chat, an error event can be displa
         <ChatListItem type="outbound">
           <ChatMessage>
             <ChatMessageBody type="outbound-agent">
-              Hi Andy, thank you for contacting Widget Support. Can you please tell me what language you are trying to program on your CloudWidget?
+              Hi Andy, thank you for contacting Widget Support. Can you please
+              tell me what language you are trying to program on your
+              CloudWidget?
             </ChatMessageBody>
           </ChatMessage>
         </ChatListItem>
@@ -834,7 +830,7 @@ In the event of an error occurring during the chat, an error event can be displa
         </ChatListItem>
         <ChatListItem type="inbound">
           <ChatMessage>
-            <ChatAvatar initials="AM" name="Andy Martinez" ariaHidden="true"/>
+            <ChatAvatar initials="AM" name="Andy Martinez" ariaHidden="true" />
             <ChatMessageBody
               type="inbound"
               name="Andy Martinez"
@@ -851,7 +847,8 @@ In the event of an error occurring during the chat, an error event can be displa
               name="Jason Dewar"
               timeStamp="5:15 PM"
             >
-              Sorry to hear that. Let me transfer you to a more technical support member. Thank you for your patience!
+              Sorry to hear that. Let me transfer you to a more technical
+              support member. Thank you for your patience!
             </ChatMessageBody>
           </ChatMessage>
         </ChatListItem>
@@ -861,7 +858,8 @@ In the event of an error occurring during the chat, an error event can be displa
             symbol="change_owner"
             timeStamp="5:19 PM"
           >
-            <b>Jason Dewar</b> sent a transfer request to <b>Technical Support Team</b>
+            <b>Jason Dewar</b> sent a transfer request to{' '}
+            <b>Technical Support Team</b>
           </ChatEvent>
         </ChatListItem>
         <ChatListItem type="event">
@@ -887,7 +885,7 @@ In the event of an error occurring during the chat, an error event can be displa
         </ChatListItem>
         <ChatListItem type="inbound">
           <ChatMessage>
-            <ChatAvatar initials="AM" name="Andy Martinez" ariaHidden="true"/>
+            <ChatAvatar initials="AM" name="Andy Martinez" ariaHidden="true" />
             <ChatMessageBody
               type="inbound"
               name="Andy Martinez"
@@ -919,19 +917,11 @@ An agent has the ability to view past chats with particular customers. In this i
     <Chat isPast>
       <ChatList>
         <ChatListItem type="bookend">
-          <ChatBookend
-            type="start"
-            name="Andy Martinez"
-            timeStamp="4:58 PM"
-          />
+          <ChatBookend type="start" name="Andy Martinez" timeStamp="4:58 PM" />
         </ChatListItem>
         <ChatListItem>
           <ChatMessage>
-            <ChatMessageBody
-              isPast
-              name="Andy Martinez"
-              timeStamp="4:59 PM"
-            >
+            <ChatMessageBody isPast name="Andy Martinez" timeStamp="4:59 PM">
               Hi, my CloudWidget only speaks French
             </ChatMessageBody>
           </ChatMessage>
@@ -939,7 +929,9 @@ An agent has the ability to view past chats with particular customers. In this i
         <ChatListItem>
           <ChatMessage>
             <ChatMessageBody isPast name="Jason Dewar" timeStamp="5:02 PM">
-              Hi Andy, thank you for contacting Widget Support. Can you please tell me what language you are trying to program on your CloudWidget?
+              Hi Andy, thank you for contacting Widget Support. Can you please
+              tell me what language you are trying to program on your
+              CloudWidget?
             </ChatMessageBody>
           </ChatMessage>
         </ChatListItem>
@@ -952,23 +944,16 @@ An agent has the ability to view past chats with particular customers. In this i
         </ChatListItem>
         <ChatListItem>
           <ChatMessage>
-            <ChatMessageBody
-              isPast
-              name="Andy Martinez"
-              timeStamp="5:09 PM"
-            >
+            <ChatMessageBody isPast name="Andy Martinez" timeStamp="5:09 PM">
               yes, of course
             </ChatMessageBody>
           </ChatMessage>
         </ChatListItem>
         <ChatListItem>
           <ChatMessage>
-            <ChatMessageBody
-              isPast
-              name="Jason Dewar"
-              timeStamp="5:15 PM"
-            >
-              Sorry to hear that. Let me transfer you to a more technical support member. Thank you for your patience!
+            <ChatMessageBody isPast name="Jason Dewar" timeStamp="5:15 PM">
+              Sorry to hear that. Let me transfer you to a more technical
+              support member. Thank you for your patience!
             </ChatMessageBody>
           </ChatMessage>
         </ChatListItem>
@@ -978,7 +963,8 @@ An agent has the ability to view past chats with particular customers. In this i
             symbol="change_owner"
             timeStamp="5:19 PM"
           >
-            <b>Jason Dewar</b> sent a transfer request to <b>Technical Support Team</b>
+            <b>Jason Dewar</b> sent a transfer request to{' '}
+            <b>Technical Support Team</b>
           </ChatEvent>
         </ChatListItem>
         <ChatListItem type="event">
@@ -993,22 +979,14 @@ An agent has the ability to view past chats with particular customers. In this i
         </ChatListItem>
         <ChatListItem>
           <ChatMessage>
-            <ChatMessageBody
-              isPast
-              name="Amber Cann"
-              timeStamp="5:23 PM"
-            >
+            <ChatMessageBody isPast name="Amber Cann" timeStamp="5:23 PM">
               Hi Andy, my name is Amber and I can help you solve your issue.
             </ChatMessageBody>
           </ChatMessage>
         </ChatListItem>
         <ChatListItem>
           <ChatMessage>
-            <ChatMessageBody
-              isPast
-              name="Andy Martinez"
-              timeStamp="5:29 PM"
-            >
+            <ChatMessageBody isPast name="Andy Martinez" timeStamp="5:29 PM">
               Nevermind, I speak french.
             </ChatMessageBody>
           </ChatMessage>

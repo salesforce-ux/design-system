@@ -13,25 +13,21 @@ import { getDisplayElementById } from '../../shared/helpers';
   Cards are used to apply a container around a related grouping of information.
 </div>
 
-<CodeView exampleOnly>
-  {CardExamples.default}
-</CodeView>
+<CodeView exampleOnly>{CardExamples.default}</CodeView>
 
 ## About Cards
 
-To initialize a card, apply the `slds-card` class to an `<article>` element.
+To initialize a card, apply the `slds-card` class to an `&lt;article&gt;` element.
 
 ### Accessibility
 
-Cards should use an underlying <code className="doc"><article></code> element to maintain usability for some screen reader users.
+Cards should use an underlying <code>&lt;article&gt;</code> element to maintain usability for some screen reader users.
 
 ## Base Card Structure
 
 A card is made up of 3 sections, a header, a body, and a footer. The header and footer have limitations, but the body section can accommodate any layout of related information.
 
-<CodeView>
-  {CardExamples.default}
-</CodeView>
+<CodeView>{CardExamples.default}</CodeView>
 
 ### Header
 
@@ -76,7 +72,9 @@ The actions row of a card header typically accommodates a single action for the 
         title="Accounts"
         href="javascript:void(0);"
         symbol="account"
-        action={<button className="slds-button slds-button_neutral">New</button>}
+        action={
+          <button className="slds-button slds-button_neutral">New</button>
+        }
       />
     </Card>
   </CodeView>
@@ -85,7 +83,7 @@ The actions row of a card header typically accommodates a single action for the 
 ##### Multiple actions
 
 <Example title="Cards Multiple Actions">
-  <CodeView style={{height: '10rem'}}>
+  <CodeView style={{ height: '10rem' }}>
     <Card>
       <CardHeader
         title="Accounts"
@@ -102,56 +100,54 @@ The actions row of a card header typically accommodates a single action for the 
 The card body accommodates any layout or design, as long as its a grouping of related information.
 
 <Blockquote type="note" header="Styling Note">
-  By default, the body of a card does not have padding. Components inside the card will be flush to the left and right edges of the card. If you need to add padding, use the <code className="doc">slds-card__body_inner</code> class on the <code className="doc">slds-card__body</code> element.
+  By default, the body of a card does not have padding. Components inside the
+  card will be flush to the left and right edges of the card. If you need to add
+  padding, use the <code>slds-card__body_inner</code> class on
+  the <code>slds-card__body</code> element.
 </Blockquote>
 
 #### Default without padding
 
 For an example of when to use the default behavior, see the [Data Table example](/components/cards/#With-a-Data-Table).
 
-
 <CodeView>
   {getDisplayElementById(CardExamples.examples, 'body-has-no-padding')}
 </CodeView>
-
 
 #### With padding
 
 For an example of when to use the `slds-card__body_inner` class, see the [Tiles example](/components/cards/#With-Tiles).
 
-
 <CodeView>
   {getDisplayElementById(CardExamples.examples, 'body-has-padding')}
 </CodeView>
-
 
 ### Footer
 
 The card footer is optional and should _**only**_ have a "View All" link that takes a user to the object list view.
 
 <Blockquote type="a11y" header="Accessibility Note">
-  When present, the footer includes hidden assistive text to give screen reader users context about which entity they will be viewing.
+  When present, the footer includes hidden assistive text to give screen reader
+  users context about which entity they will be viewing.
 </Blockquote>
 
 <Blockquote type="note" header="Implementation Note">
-  The examples in this documentation use the `slds-card__footer-action` class on the footer link `<a>` to force the footer's click target to span the entire width of the card. Simply remove this class if not needed.
+  The examples in this documentation use the `slds-card__footer-action` class on
+  the footer link `&lt;a&gt;` to force the footer's click target to span the
+  entire width of the card. Simply remove this class if not needed.
 </Blockquote>
 
 #### With no footer
-
 
 <CodeView>
   {getDisplayElementById(CardExamples.examples, 'has-no-footer')}
 </CodeView>
 
-
 #### With a footer
-
 
 <CodeView>
   {getDisplayElementById(CardExamples.examples, 'has-footer')}
 </CodeView>
-
 
 ## Examples
 
@@ -161,51 +157,37 @@ When a card doesn't have any data, it is represented with the body and footer co
 
 #### Collapsed
 
-
-<CodeView>
-  {getDisplayElementById(CardExamples.states, 'empty')}
-</CodeView>
-
+<CodeView>{getDisplayElementById(CardExamples.states, 'empty')}</CodeView>
 
 #### With Illustration
 
 Alternatively, a card can be represented with no data by using an [illustration](/components/illustration) in the card body.
 
-
 <CodeView>
   {getDisplayElementById(CardExamples.states, 'empty-illustration')}
 </CodeView>
-
 
 ### Loading
 
 When a card instantiates and is loading, we want to provide feedback to the user by display a spinner. Once the data has loaded, the spinner can be removed from the card component.
 
-
-<CodeView>
-  {getDisplayElementById(CardExamples.states, 'loading')}
-</CodeView>
-
+<CodeView>{getDisplayElementById(CardExamples.states, 'loading')}</CodeView>
 
 ### With a Data Table
 
 Placing a data table inside of an `slds-card__body` is an example of when to utilize the default behavior of a card body, since no padding is applied.
 
-
 <CodeView>
   {getDisplayElementById(CardExamples.examples, 'related-list-table')}
 </CodeView>
-
 
 ### With Tiles
 
 Placing contact tiles inside of an `slds-card__body` is an example of using `slds-card__body_inner` to apply additional padding to the card body content.
 
-
 <CodeView>
   {getDisplayElementById(CardExamples.examples, 'related-list-tiles')}
 </CodeView>
-
 
 ## Layout
 
@@ -215,53 +197,41 @@ When a card is located inside of another card body, we remove the dropshadow and
 
 #### No styling
 
-
 <CodeView>
   {getDisplayElementById(CardExamples.examples, 'nested-no-boundary')}
 </CodeView>
-
 
 #### With card styling
 
 Adding `slds-card_boundary` to the `slds-card` element will give you back the card styling.
 
-
 <CodeView>
   {getDisplayElementById(CardExamples.examples, 'nested-with-boundary')}
 </CodeView>
-
 
 ### Wrapped Cards
 
 To combine several cards into a single card look, wrap the cards using `slds-card-wrapper`. Similar to the nested cards, adding `slds-card_boundary` to the `slds-card` element will give you back the card styling.
 
-
-<CodeView>
-  {CardWrapperExamples.default}
-</CodeView>
-
+<CodeView>{CardWrapperExamples.default}</CodeView>
 
 ## Einstein Theming
 
 For cards that contain Einstein related information, you can include an Einstein themed card header.
 
-
-<CodeView>
-  {CardEinsteinExamples.default}
-</CodeView>
-
+<CodeView>{CardEinsteinExamples.default}</CodeView>
 
 ### With an Icon
-
 
 <CodeView>
   {getDisplayElementById(CardEinsteinExamples.states, 'einstein-with-icon')}
 </CodeView>
 
-
 ### With Actions
 
-
 <CodeView>
-  {getDisplayElementById(CardEinsteinExamples.states, 'einstein-with-icon-and-actions')}
+  {getDisplayElementById(
+    CardEinsteinExamples.states,
+    'einstein-with-icon-and-actions'
+  )}
 </CodeView>

@@ -4,33 +4,30 @@ import Blockquote from '../../../shared/components/Blockquote';
 import * as Breadcrumbs from './base/example';
 
 <div className="doc lead">
-  Use breadcrumbs to note the path of a record and help the user to navigate back to the parent.
+  Use breadcrumbs to note the path of a record and help the user to navigate
+  back to the parent.
 </div>
 
-<CodeView exampleOnly>
-  {Breadcrumbs.default}
-</CodeView>
+<CodeView exampleOnly>{Breadcrumbs.default}</CodeView>
 
 ## About Breadcrumbs
 
-Breadcrumbs are typically constructed with an <code className="doc">ol</code> because their order matters. You mark up breadcrumbs with classes from the horizontal list utility. When you add the <code className="doc">.slds-breadcrumb</code> class, the separators are automatically generated.
+Breadcrumbs are typically constructed with an <code>ol</code> because their order matters. You mark up breadcrumbs with classes from the horizontal list utility. When you add the <code>.slds-breadcrumb</code> class, the separators are automatically generated.
 
 ### Accessibility
 
-Place the breadcrumb in a <code className="doc">nav</code> element with <code className="doc">role="navigation"</code>. The <code className="doc">nav</code> element is also marked-up with <code className="doc">aria-label="Breadcrumbs"</code> to describe the type of navigation.
+Place the breadcrumb in a <code>nav</code> element with <code>role="navigation"</code>. The <code>nav</code> element is also marked-up with <code>aria-label="Breadcrumbs"</code> to describe the type of navigation.
 
 ## Base
 
-<CodeView>
-  {Breadcrumbs.default}
-</CodeView>
+<CodeView>{Breadcrumbs.default}</CodeView>
 
 ## Variations
 
 ### With Overflow
 
-The overflow menu breadcrumbs variant is a composition of the overflow menu with actions example of the menus component and breadcrumbs component. To implement this, include the overflow menu as the first <code className="doc"><li></code> in the breadcrumb component. In order to vertically align all of the breadcrumb items to the center, add the <code className="doc">.slds-grid_vertical-align-center</code> class to the <code className="doc"><ol></code>.
+The overflow menu breadcrumbs variant is a composition of the overflow menu with actions example of the menus component and breadcrumbs component. To implement this, include the overflow menu as the first <code>&lt;li&gt;</code> in the breadcrumb component. In order to vertically align all of the breadcrumb items to the center, add the <code>.slds-grid_vertical-align-center</code> class to the <code>&lt;ol&gt;</code>.
 
-<CodeView style={{height: '150px'}}>
-  {getDisplayElementById(Breadcrumbs.states, "overflow-breadcrumbs")}
+<CodeView style={{ height: '150px' }}>
+  {getDisplayElementById(Breadcrumbs.states, 'overflow-breadcrumbs')}
 </CodeView>

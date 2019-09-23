@@ -2,8 +2,8 @@ import CodeView from '../../../shared/components/CodeView';
 import CodeBlock from '../../../shared/components/CodeBlock';
 import Blockquote from '../../../shared/components/Blockquote';
 import Example from '../../../shared/components/Example';
-import Combobox, {ComboboxGroup} from './';
-import ObjectSwitcher, {IconObjectSwitcher} from './object-switcher/';
+import Combobox, { ComboboxGroup } from './';
+import ObjectSwitcher, { IconObjectSwitcher } from './object-switcher/';
 import Listbox, { ListboxGroup, ListboxWrapper, Option } from './listbox/';
 import ListboxOfSelections from './listbox-of-pills/';
 import ButtonIcon from '../button-icons/';
@@ -16,12 +16,12 @@ import * as Snapshot from './snapshots.data';
 import * as Dialog from './dialog/example';
 import _, { getDisplayElementById } from '../../shared/helpers';
 
-
 <div className="lead doc">
-  A widget that provides a user with an input field that is either an autocomplete or readonly, accompanied by a listbox of options.
+  A widget that provides a user with an input field that is either an
+  autocomplete or readonly, accompanied by a listbox of options.
 </div>
 
-<CodeView style={{height: '17rem'}}>
+<CodeView style={{ height: '17rem' }}>
   {getDisplayElementById(BaseExamples.states, 'focused-open')}
 </CodeView>
 
@@ -29,9 +29,7 @@ import _, { getDisplayElementById } from '../../shared/helpers';
 
 A Base Combobox is a readonly text `input` that allows a user to select an option from a pre-defined list of options. It does not allow free form user input, nor does it allow the user to modify the selected value.
 
-<CodeView style={{height: '17rem'}}>
-  {BaseExamples.default}
-</CodeView>
+<CodeView style={{ height: '17rem' }}>{BaseExamples.default}</CodeView>
 
 ### Combobox markup
 
@@ -57,14 +55,22 @@ To toggle visibility of the `listbox`, add the class `slds-is-open` to the `slds
 It is most common to expand the `listbox` of options when a user clicks on the Combobox. For a more detailed description of interaction behaviors, see the [Interaction](#Interaction) section.
 
 <Blockquote type="a11y" header="Accessibility Requirement">
-  When toggling visibility of the Combobox, the <code className="doc">aria-expanded</code> attribute needs to be toggled to <code className="doc">true</code>. Set it to <code className="doc">false</code> again when the options are hidden.
+  When toggling visibility of the Combobox, the{' '}
+  <code>aria-expanded</code> attribute needs to be toggled to{' '}
+  <code>true</code>. Set it to{' '}
+  <code>false</code> again when the options are hidden.
 </Blockquote>
 
 <Blockquote type="a11y" header="Accessibility Note">
-  The <code className="doc">listbox</code> of options must be an <b>owned</b> child of the <code className="doc">combobox</code>. If it cannot be a direct child of the <code className="doc">combobox</code> element, then <code className="doc">aria-owns</code> must be placed on the <code className="doc">combobox</code> and point to the ID of the <code className="doc">listbox</code> instead.
+  The <code>listbox</code> of options must be an <b>owned</b>{' '}
+  child of the <code>combobox</code>. If it cannot be a direct
+  child of the <code>combobox</code> element, then{' '}
+  <code>aria-owns</code> must be placed on the{' '}
+  <code>combobox</code> and point to the ID of the{' '}
+  <code>listbox</code> instead.
 </Blockquote>
 
-<CodeView style={{height: '17rem'}}>
+<CodeView style={{ height: '17rem' }}>
   {getDisplayElementById(BaseExamples.states, 'focused-open')}
 </CodeView>
 
@@ -77,26 +83,23 @@ It is most common to expand the `listbox` of options when a user clicks on the C
 - Every `option` has `aria-selected="false"` by default
 - Disabled `option`s should have `aria-disabled="true"` applied along with [a class on the icon in an entity option](#Disabled-listbox-items).
 
-
 #### Loading more options
 
-If you are dynamically loading in more items to the listbox, the very last `<li>` of the `<ul>` should receive the `role="presentation"` attribute and have the [Spinner component](/components/spinners/)  injected into it.
+If you are dynamically loading in more items to the listbox, the very last `&lt;li&gt;` of the `&lt;ul&gt;` should receive the `role="presentation"` attribute and have the [Spinner component](/components/spinners/) injected into it.
 
-For layout purposes, wrap the spinner in a `<div>` with the class `slds-align_absolute-center` to position the spinner in the middle of the list item, as well as `slds-p-top_medium` to provide the appropiate amount of space for the spinner to be visible.
+For layout purposes, wrap the spinner in a `&lt;div&gt;` with the class `slds-align_absolute-center` to position the spinner in the middle of the list item, as well as `slds-p-top_medium` to provide the appropiate amount of space for the spinner to be visible.
 
-<CodeView style={{height: '14rem'}}>
+<CodeView style={{ height: '14rem' }}>
   {getDisplayElementById(BaseExamples.states, 'loading-options')}
 </CodeView>
-
 
 ### Grouped options
 
 Options within a `listbox` can be grouped together under meaningful headings. This is useful if you wish to create separation between 2 or more sets of options within a single `listbox`.
 
-<CodeView style={{height: '18rem'}}>
+<CodeView style={{ height: '18rem' }}>
   {getDisplayElementById(BaseExamples.states, 'grouped-options')}
 </CodeView>
-
 
 #### Grouped listbox markup
 
@@ -108,7 +111,7 @@ Options within a `listbox` can be grouped together under meaningful headings. Th
 
 The options in the `listbox` can have a left icon and/or metatext.
 
-<CodeView style={{position: 'relative', height: '12rem'}}>
+<CodeView style={{ position: 'relative', height: '12rem' }}>
   <Listbox
     id="listbox-id-2"
     snapshot={Snapshot.PlainStylingOptions}
@@ -120,12 +123,13 @@ The options in the `listbox` can have a left icon and/or metatext.
 #### Disabled listbox items
 
 Options in a listbox that are disabled require these accessibility and styling considerations:
+
 - `aria-disabled="true"` must be applied to `slds-listbox__option`
 - if using an entity icon, apply `slds-icon_disabled` to `slds-icon_container`
 
-*Plain options: Example shows two disabled options with one enabled one*
+_Plain options: Example shows two disabled options with one enabled one_
 
-<CodeView style={{position: 'relative', height: '9rem'}}>
+<CodeView style={{ position: 'relative', height: '9rem' }}>
   <Listbox
     id={_.uniqueId('listbox-id-')}
     snapshot={Snapshot.PlainDisabledOptions}
@@ -134,9 +138,9 @@ Options in a listbox that are disabled require these accessibility and styling c
   />
 </CodeView>
 
-*Entity options: Example shows two disabled entity options with one enabled one*
+_Entity options: Example shows two disabled entity options with one enabled one_
 
-<CodeView style={{position: 'relative', height: '9rem'}}>
+<CodeView style={{ position: 'relative', height: '9rem' }}>
   <Listbox
     id={_.uniqueId('listbox-id-')}
     snapshot={Snapshot.EntityDisabledOptions}
@@ -153,20 +157,19 @@ At its most basic, the `listbox` of options should be displayed when a user inte
 
 A mouse or pointer device user can click on a Combobox and the `listbox` will display automatically whilst focus is placed inside the Combobox input field.
 
-<CodeView style={{height: '17rem'}}>
+<CodeView style={{ height: '17rem' }}>
   {getDisplayElementById(BaseExamples.states, 'focused-open')}
 </CodeView>
 
 If using a keyboard, placing focus into the Combobox input field _will not_ display the `listbox` of options automatically.
 
-<CodeView>
-  {getDisplayElementById(BaseExamples.states, 'focused')}
-</CodeView>
+<CodeView>{getDisplayElementById(BaseExamples.states, 'focused')}</CodeView>
 
 After focusing inside the Combobox with the keyboard, pressing the `Down` or `Enter` key will expand the collapsed Combobox and display the `listbox` options. Be sure to update `aria-expanded` to be true. This will also highlight the first option in the listbox.
 
 <Blockquote type="a11y" header="Accessibility Requirement">
-  Update <code className="doc">aria-expanded</code> to "true" when the Combobox is expanded.
+  Update <code>aria-expanded</code> to "true" when the Combobox
+  is expanded.
 </Blockquote>
 
 #### Highlighting an option
@@ -179,12 +182,18 @@ To Highlight an option in the `Listbox` use the `Up` and `Down` arrow keys to cy
 When an option from the `listbox` is "in focus", user focus never leaves the `input` field, since we manually create a programmatic or "faux focus" state that highlights the selected option and associates it to the `input`.
 
 <Blockquote type="a11y" header="Accessibility Requirement">
-  When highlighting an option with "faux focus", the <code className="doc">aria-activedescendant</code> attribute on the <code className="doc">input</code> needs to be set to the value of the ID of the highlighted option. The highlighted option must also have <code className="doc">aria-selected="true"</code>. When no option is highlighted, <code className="doc">aria-activedescendant</code> must be removed.
+  When highlighting an option with "faux focus", the{' '}
+  <code>aria-activedescendant</code> attribute on the{' '}
+  <code>input</code> needs to be set to the value of the ID of
+  the highlighted option. The highlighted option must also have{' '}
+  <code>aria-selected="true"</code>. When no option is
+  highlighted, <code>aria-activedescendant</code> must be
+  removed.
 </Blockquote>
 
 By typing the first letter of an option name, the first matching option will highlight. When the letter doesn't match an option, highlighting doesn't move.
 
-<CodeView style={{height: '17rem'}}>
+<CodeView style={{ height: '17rem' }}>
   {getDisplayElementById(BaseExamples.states, 'highlighting-an-option')}
 </CodeView>
 
@@ -195,7 +204,8 @@ To collapse the Combobox the user should be able to press the `Escape` key on th
 Pressing the `Enter` key whilst an option is highlighted will select the option as the current value and collapse the Combobox.
 
 <Blockquote type="a11y" header="Accessibility Requirement">
-  Update <code className="doc">aria-expanded</code> to "false" when the Combobox is collapsed.
+  Update <code>aria-expanded</code> to "false" when the Combobox
+  is collapsed.
 </Blockquote>
 
 ### Selecting an option
@@ -212,7 +222,7 @@ Upon selection the Combobox collapses, only showing the `input` field. The value
 
 When an option becomes selected, the class `slds-is-selected` should be applied to the `slds-listbox__option` element with the `role="option"`. This will provide visual feedback that the user has selected that element.
 
-<CodeView style={{height: '17rem'}}>
+<CodeView style={{ height: '17rem' }}>
   {getDisplayElementById(BaseExamples.states, 'selecting-a-single-option')}
 </CodeView>
 
@@ -221,7 +231,10 @@ When an option becomes selected, the class `slds-is-selected` should be applied 
 When re-opening a Combobox that already has a selected value, the `listbox` should be displayed with the selected option already highlighted.
 
 <Blockquote type="a11y" header="Accessibility Requirement">
-  Be sure to re-set the <code className="doc">aria-activedescendant</code> attribute on the `input` to the value of the ID of the highlighted option. The highlighted option must also have <code className="doc">aria-selected="true"</code>.
+  Be sure to re-set the <code>aria-activedescendant</code>{' '}
+  attribute on the `input` to the value of the ID of the highlighted option. The
+  highlighted option must also have{' '}
+  <code>aria-selected="true"</code>.
 </Blockquote>
 
 #### Multiple selections
@@ -229,17 +242,18 @@ When re-opening a Combobox that already has a selected value, the `listbox` shou
 When more than one option has been selected, the value of the `input` should be updated with the total number of selected items, such as "3 options selected".
 
 <Blockquote type="a11y" header="Accessibility Note">
-  The value of the Combobox is the only way you can communicate what option was selected to a screen reader. Given that the option names don't appear in the set value, adding "Current Selection:" to each selected option name allows a screen reader user to understand that the option was already selected from the list.
+  The value of the Combobox is the only way you can communicate what option was
+  selected to a screen reader. Given that the option names don't appear in the
+  set value, adding "Current Selection:" to each selected option name allows a
+  screen reader user to understand that the option was already selected from the
+  list.
 </Blockquote>
 
 <CodeBlock toggleCode={false}>
-  <Option
-    name="Accounts"
-    selected
-  />
+  <Option name="Accounts" selected />
 </CodeBlock>
 
-<CodeView style={{height: '17rem'}}>
+<CodeView style={{ height: '17rem' }}>
   {getDisplayElementById(BaseExamples.states, 'selecting-multiple-options')}
 </CodeView>
 
@@ -248,7 +262,10 @@ When a Combobox with multiple selected options is closed, a [Listbox of Pills](/
 The [Listbox of Pills](/components/pills/#Listbox-Of-Pill-Options) is positioned below the read-only `input`, outside of the Combobox. Each pill represents a selected option. This allows a user to easily see and remove selected items from the Combobox without opening it again.
 
 <CodeView>
-  {getDisplayElementById(BaseExamples.states, 'selected-multiple-options-closed')}
+  {getDisplayElementById(
+    BaseExamples.states,
+    'selected-multiple-options-closed'
+  )}
 </CodeView>
 
 #### Editing multiple selections
@@ -264,13 +281,14 @@ An autocomplete Combobox also allows a user to select an option from a list, but
 If no option matches, the user can complete the value of the combobox by finishing their own text entry.
 
 <Blockquote type="a11y" header="Accessibility Difference">
-  The difference between the <strong>Base Combobox</strong> and the <strong>Autocomplete Combobox</strong>, is that the text <code className="doc">input</code> must have the <code className="doc">readonly</code> attribute removed and replaced with <code className="doc">aria-autocomplete="list"</code>.
+  The difference between the <strong>Base Combobox</strong> and the{' '}
+  <strong>Autocomplete Combobox</strong>, is that the text{' '}
+  <code>input</code> must have the{' '}
+  <code>readonly</code> attribute removed and replaced with{' '}
+  <code>aria-autocomplete="list"</code>.
 </Blockquote>
 
-<CodeView style={{height: '12rem'}}>
-  {AutocompleteExamples.default}
-</CodeView>
-
+<CodeView style={{ height: '12rem' }}>{AutocompleteExamples.default}</CodeView>
 
 ### Displaying options
 
@@ -278,7 +296,7 @@ Displaying options for the Autocomplete Combobox happens just like the base Comb
 
 When a user stops interacting with the Combobox, or selects an option, the Combobox collapses and hides the options.
 
-<CodeView style={{height: '12rem'}}>
+<CodeView style={{ height: '12rem' }}>
   {getDisplayElementById(AutocompleteExamples.states, 'focused-open')}
 </CodeView>
 
@@ -289,10 +307,14 @@ If an option from the pre-populated `listbox` isn't what the user wants, they ca
 Whilst typing, the highlighted option in the `listbox` should be the user's text string.
 
 <Blockquote type="a11y" header="Accessibility Requirement">
-  When highlighting an option with "faux focus", the <code className="doc">aria-activedescendant</code> attribute on the `input` needs to be set to the value of the ID of the highlighted option. The highlighted option must also have <code className="doc">aria-selected="true"</code>.
+  When highlighting an option with "faux focus", the{' '}
+  <code>aria-activedescendant</code> attribute on the `input`
+  needs to be set to the value of the ID of the highlighted option. The
+  highlighted option must also have{' '}
+  <code>aria-selected="true"</code>.
 </Blockquote>
 
-<CodeView style={{height: '12rem'}}>
+<CodeView style={{ height: '12rem' }}>
   {getDisplayElementById(AutocompleteExamples.states, 'typeahead')}
 </CodeView>
 
@@ -300,7 +322,7 @@ Whilst typing, the highlighted option in the `listbox` should be the user's text
 
 The options in the autocomplete `listbox` can have a right icon to indicate an option that drills in for more options.
 
-<CodeView style={{position: 'relative', height: '10rem'}}>
+<CodeView style={{ position: 'relative', height: '10rem' }}>
   <Listbox
     id="listbox-id-3"
     snapshot={Snapshot.EntityStylingOptions}
@@ -316,7 +338,7 @@ The same keyboard interactions apply from the base Combobox, but with these diff
 
 - `Up` and `Down` arrows **should optionally** update the `input` value to reflect the currently selected option
 
-<CodeView style={{height: '12rem'}}>
+<CodeView style={{ height: '12rem' }}>
   {getDisplayElementById(AutocompleteExamples.states, 'highlighting-an-option')}
 </CodeView>
 
@@ -332,15 +354,16 @@ To remove the selected option, simply clear the text `input`.
   {getDisplayElementById(AutocompleteExamples.states, 'selected-an-option')}
 </CodeView>
 
-
 ### Multiple selection
 
 Multiple selection is much the same as the Base Combobox. A list of selected options are displayed below the Combobox as a [Listbox of Pills](/components/pills/#Listbox-Of-Pill-Options).
 
 <CodeView>
-  {getDisplayElementById(AutocompleteExamples.states, 'selected-multiple-options')}
+  {getDisplayElementById(
+    AutocompleteExamples.states,
+    'selected-multiple-options'
+  )}
 </CodeView>
-
 
 #### Editing multiple selections
 
@@ -352,10 +375,9 @@ The [Listbox of Pills](/components/pills/#Listbox-Of-Pill-Options) acts as a sin
 
 An Entity Autocomplete Combobox or Lookup, is used to search for and select Salesforce Entities.
 
-<CodeView style={{height: '10rem'}}>
+<CodeView style={{ height: '10rem' }}>
   {getDisplayElementById(AutocompleteExamples.examples, 'lookup')}
 </CodeView>
-
 
 ### Displaying options
 
@@ -363,21 +385,19 @@ Displaying options happens just like an Autocomplete Combobox, by placing user f
 
 The options now have extra information about them, such as the type of entity and any other important metadata.
 
-<CodeView style={{height: '10rem'}}>
+<CodeView style={{ height: '10rem' }}>
   {getDisplayElementById(AutocompleteExamples.states, 'lookup-focused-open')}
 </CodeView>
-
 
 ### Displaying options based on user input
 
 As with the Autocomplete Combobox, the user can start typing into the `input` to search for Salesforce Entities that match their search term.
 
-In the resultant displayed options, we highlight the matched term by bolding it using the `<mark>` element.
+In the resultant displayed options, we highlight the matched term by bolding it using the `&lt;mark&gt;` element.
 
-<CodeView style={{height: '15rem'}}>
+<CodeView style={{ height: '15rem' }}>
   {getDisplayElementById(AutocompleteExamples.states, 'lookup-typeahead')}
 </CodeView>
-
 
 ### Keyboard interaction
 
@@ -385,10 +405,12 @@ The same keyboard interactions apply from the base Combobox, but with these diff
 
 - `Up` and `Down` arrows **should not** update the `input` value to reflect the currently selected option. The `input` value should only be updated upon selection.
 
-<CodeView style={{height: '10rem'}}>
-  {getDisplayElementById(AutocompleteExamples.states, 'lookup-highlighting-an-option')}
+<CodeView style={{ height: '10rem' }}>
+  {getDisplayElementById(
+    AutocompleteExamples.states,
+    'lookup-highlighting-an-option'
+  )}
 </CodeView>
-
 
 ### Selecting an option
 
@@ -399,22 +421,29 @@ The selected option is still set as the value of the text `input`, but this time
 To remove the selected option, simply press the `Delete` key when focused inside the text `input` or click the remove "x".
 
 <Blockquote type="a11y" header="Accessibility Requirement">
-  When the option is selected, make sure to add the <code className="doc">readonly</code> attribute to the text <code className="doc">input</code>. Be sure to remove it again when the option is cleared.
+  When the option is selected, make sure to add the{' '}
+  <code>readonly</code> attribute to the text{' '}
+  <code>input</code>. Be sure to remove it again when the option
+  is cleared.
 </Blockquote>
 
 <CodeView>
-  {getDisplayElementById(AutocompleteExamples.states, 'lookup-selected-an-option')}
+  {getDisplayElementById(
+    AutocompleteExamples.states,
+    'lookup-selected-an-option'
+  )}
 </CodeView>
-
 
 ### Multiple selection
 
 Multiple selection is handled the same as the Base and Autocomplete Combobox, a list of selected entities is displayed under the combobox as a [Listbox of Pills](/components/pills/#Listbox-Of-Pill-Options).
 
 <CodeView>
-  {getDisplayElementById(AutocompleteExamples.states, 'lookup-multiple-options')}
+  {getDisplayElementById(
+    AutocompleteExamples.states,
+    'lookup-multiple-options'
+  )}
 </CodeView>
-
 
 ## Grouped Comboboxes (Cross-entity / Polymorphic)
 
@@ -423,31 +452,31 @@ The Grouped Comboboxes should be used when a Combobox has another Combobox appen
 The containing `div` of the comboboxes should have the class `slds-combobox-group` on it.
 
 <Blockquote type="warning" header="Keep in mind">
-  The grouped combobox only accepts <em>one</em> addon, in addition to the primary combobox. Use the classes <code className="doc">slds-combobox_addon-start</code> and <code className="doc">slds-combobox_addon-end</code> to describe the position of the form element.
+  The grouped combobox only accepts <em>one</em> addon, in addition to the
+  primary combobox. Use the classes{' '}
+  <code>slds-combobox_addon-start</code> and{' '}
+  <code>slds-combobox_addon-end</code> to describe the position
+  of the form element.
 </Blockquote>
 
 <Blockquote type="a11y" header="Accessibility Requirement">
-  Be sure to set <code className="doc">aria-controls</code> on the Object Switcher, which points to the Search Combobox ID.
+  Be sure to set <code>aria-controls</code> on the Object
+  Switcher, which points to the Search Combobox ID.
 </Blockquote>
 
-<CodeView style={{height: '17rem'}}>
-  {GroupedExamples.default}
-</CodeView>
-
+<CodeView style={{ height: '17rem' }}>{GroupedExamples.default}</CodeView>
 
 ### User input (Typeahead)
 
-<CodeView style={{height: '15rem'}}>
+<CodeView style={{ height: '15rem' }}>
   {getDisplayElementById(GroupedExamples.states, 'typeahead')}
 </CodeView>
 
-
 ### User input (Typeahead) - Loading
 
-<CodeView style={{height: '15rem'}}>
+<CodeView style={{ height: '15rem' }}>
   {getDisplayElementById(GroupedExamples.states, 'typeahead-loading')}
 </CodeView>
-
 
 ### Selecting options
 
@@ -455,13 +484,11 @@ The containing `div` of the comboboxes should have the class `slds-combobox-grou
   {getDisplayElementById(GroupedExamples.states, 'selected-options')}
 </CodeView>
 
-
 ### User input with selection(s) made
 
-<CodeView style={{height: '15rem'}}>
+<CodeView style={{ height: '15rem' }}>
   {getDisplayElementById(GroupedExamples.states, 'selected-options-open')}
 </CodeView>
-
 
 ### Selected options overflow
 
@@ -477,7 +504,6 @@ By default, the `slds-listbox_selection-group` is collapsed.
   {getDisplayElementById(GroupedExamples.states, 'overflow-collapsed')}
 </CodeView>
 
-
 #### Expanded
 
 When a user focuses on _any_ element inside of the combobox group, the class `slds-is-expanded` should be applied to the `slds-listbox_selection-group`. The selection group should remain open until the user moves away from any element inside the combobox group.
@@ -485,7 +511,6 @@ When a user focuses on _any_ element inside of the combobox group, the class `sl
 <CodeView>
   {getDisplayElementById(GroupedExamples.states, 'overflow-expanded')}
 </CodeView>
-
 
 For mouse users, clicking on the "+{x} more" text would expand the selection group and place the user's focus on the first pill inside the Listbox of Pills.
 
@@ -497,15 +522,19 @@ The containing element should receive the class `slds-combobox_object-switcher` 
 
 #### Text variant
 
-<CodeView style={{height: '17rem'}}>
+<CodeView style={{ height: '17rem' }}>
   {getDisplayElementById(GroupedExamples.states, 'scoping-results-focused')}
 </CodeView>
-
 
 #### Icon variant
 
 <Blockquote type="a11y" header="Accessibility Note">
-  When a selection is made, the currently selected items should be prepended with a <code className="doc">&lt;span className="slds-assistive-text"&gt;Current Selection:&lt;/span&gt;</code> to inform screen readers of its current selection.
+  When a selection is made, the currently selected items should be prepended
+  with a{' '}
+  <code>
+    &lt;span className="slds-assistive-text"&gt;Current Selection:&lt;/span&gt;
+  </code>{' '}
+  to inform screen readers of its current selection.
 </Blockquote>
 
 ##### Blurred
@@ -514,13 +543,14 @@ The containing element should receive the class `slds-combobox_object-switcher` 
   {getDisplayElementById(GroupedExamples.states, 'scoping-results-icon')}
 </CodeView>
 
-
 ##### Focused
 
-<CodeView style={{height: '13rem'}}>
-  {getDisplayElementById(GroupedExamples.states, 'scoping-results-icon-focused')}
+<CodeView style={{ height: '13rem' }}>
+  {getDisplayElementById(
+    GroupedExamples.states,
+    'scoping-results-icon-focused'
+  )}
 </CodeView>
-
 
 ## Combobox with a Dialog
 
@@ -529,47 +559,58 @@ If the data displayed within the dropdown of a combobox cannot be represented as
 The key difference for `dialog` dropdowns lies in how they handle focus. In `listbox` dropdowns, users can enter values in the input while arrowing through the listbox options using `aria-activedescendant`. In `dialog` dropdowns, the dropdown becomes a focus trap, so users must have a way to clear or save any selections or changes made.
 
 <Blockquote type="a11y" header="Implementation Details">
-<ol>
-<li>1. The input does not have `aria-autocomplete`, it is essentially readonly</li>
-<li>2. The input for this dialog variant will also never have `aria-activedescendant`</li>
-<li>3. The combobox `<div>` with `class="slds-combobox"` has `aria-haspopup=”dialog”`</li>
-<li>4. The dropdown is a dialog with `role="dialog"`</li>
-<li>5. The dialog should have an `aria-label` with a value for the dialog's title</li>
-<li>6. The combobox has `aria-expanded="false"` when the dialog is closed, and `aria-expanded="true"` when the dialog is open. </li>
-</ol>
+  <ol>
+    <li>
+      1. The input does not have `aria-autocomplete`, it is essentially readonly
+    </li>
+    <li>
+      2. The input for this dialog variant will also never have
+      `aria-activedescendant`
+    </li>
+    <li>
+      3. The combobox `&lt;div&gt;` with `class="slds-combobox"` has
+      `aria-haspopup=”dialog”`
+    </li>
+    <li>4. The dropdown is a dialog with `role="dialog"`</li>
+    <li>
+      5. The dialog should have an `aria-label` with a value for the dialog's
+      title
+    </li>
+    <li>
+      6. The combobox has `aria-expanded="false"` when the dialog is closed, and
+      `aria-expanded="true"` when the dialog is open.{' '}
+    </li>
+  </ol>
 </Blockquote>
 
-<CodeView>
-  {Dialog.default}
-</CodeView>
+<CodeView>{Dialog.default}</CodeView>
 
 ### Open Dialog
 
-To open the dialog, remove the class `slds-popover_hide` from the `<div>` with `class="slds-popover"`. Any content can go inside a `dialog` dropdown.
+To open the dialog, remove the class `slds-popover_hide` from the `&lt;div&gt;` with `class="slds-popover"`. Any content can go inside a `dialog` dropdown.
 
 <Blockquote type="a11y" header="Accessibility Note">
-When the dialog is open, be sure to change `aria-expanded` to **true** on the combobox `<div>` with `class="slds-combobox"`.
+  When the dialog is open, be sure to change `aria-expanded` to **true** on the
+  combobox `&lt;div&gt;` with `class="slds-combobox"`.
 </Blockquote>
 
-<CodeView>
-  {getDisplayElementById(Dialog.states, "open")}
-</CodeView>
+<CodeView>{getDisplayElementById(Dialog.states, 'open')}</CodeView>
 
 ### Keyboard Interaction
 
-  - Focusing on the input does not open the dropdown
-  - Typing in the input does nothing
-  - Pressing the `down arrow` from the input opens the dialog and moves the user's focus into the dialog.
-  - The dialog dropdown is a focus trap
-    - Pressing the `Tab` key cycles the user through all UI elements in the dialog
-  - Pressing `Escape` closes the dialog and clears any changes
-  - Pressing the Cancel button closes the dialog and clears any changes
-  - Pressing the Save button updates the selected value in the input and closes the dialog
+- Focusing on the input does not open the dropdown
+- Typing in the input does nothing
+- Pressing the `down arrow` from the input opens the dialog and moves the user's focus into the dialog.
+- The dialog dropdown is a focus trap
+  - Pressing the `Tab` key cycles the user through all UI elements in the dialog
+- Pressing `Escape` closes the dialog and clears any changes
+- Pressing the Cancel button closes the dialog and clears any changes
+- Pressing the Save button updates the selected value in the input and closes the dialog
 
 ### Focus Management
 
 - Clicking on the input opens and focuses the cursor inside the dialog on the first focusable element.
-- Placing focus on the input *does not* open the dialog
+- Placing focus on the input _does not_ open the dialog
 - Pressing the `down arrow` whilst focused on the input opens the dialog and moves focus to the first focusable element
 
 ### Examples
@@ -579,13 +620,17 @@ When the dialog is open, be sure to change `aria-expanded` to **true** on the co
 Below is an example of a `dialog` combobox where users can make multiple selections using checkboxes. The main difference between the **dialog variant** of a multi-select combobox and the [multi-select Entity Autocomplete](/components/combobox/#Multiple-selection-2) involves the behavior after a selection is made. A `dialog` will not close after each selection, since it is a focus trap, while the `listbox` dropdown of the Entity Autocomplete example closes after each selection made, forcing users to re-open the listbox if they need to make another selection.
 
 <Blockquote type="note" header="Dueling Picklist vs. Multi Select Combobox">
-  We recommend using the <a href="/components/dueling-picklist/"> Dueling Picklist</a> when there are many items to choose from, such as “Select Country”. Use a multiselect combobox with a dialog when you have less horizontal real estate available and fewer items to select from.
+  We recommend using the{' '}
+  <a href="/components/dueling-picklist/"> Dueling Picklist</a> when there are
+  many items to choose from, such as “Select Country”. Use a multiselect
+  combobox with a dialog when you have less horizontal real estate available and
+  fewer items to select from.
 </Blockquote>
 
 ##### Open
 
 <CodeView>
-  {getDisplayElementById(Dialog.examples, "with-checkbox-group")}
+  {getDisplayElementById(Dialog.examples, 'with-checkbox-group')}
 </CodeView>
 
 ##### Open and Selecting
@@ -593,7 +638,7 @@ Below is an example of a `dialog` combobox where users can make multiple selecti
 If nothing has been selected yet, the input's placeholder remains "Select an Option" or something similar.
 
 <CodeView>
-  {getDisplayElementById(Dialog.examples, "selecting-options")}
+  {getDisplayElementById(Dialog.examples, 'selecting-options')}
 </CodeView>
 
 ##### Closed with One Option Selected
@@ -601,13 +646,13 @@ If nothing has been selected yet, the input's placeholder remains "Select an Opt
 When only one selection has been made, the input's value takes on the value of the selection - German in this case.
 
 <CodeView>
-  {getDisplayElementById(Dialog.examples, "closed-one-option-selected")}
+  {getDisplayElementById(Dialog.examples, 'closed-one-option-selected')}
 </CodeView>
 
 ##### Open with One Option Selected
 
 <CodeView>
-  {getDisplayElementById(Dialog.examples, "open-one-option-selected")}
+  {getDisplayElementById(Dialog.examples, 'open-one-option-selected')}
 </CodeView>
 
 ##### Closed with Two or More Options Selected
@@ -615,10 +660,14 @@ When only one selection has been made, the input's value takes on the value of t
 When more then one option has been selected, the input's value reads "{# of items selected} options selected".
 
 <CodeView>
-  {getDisplayElementById(Dialog.examples, "closed-two-or-more-options-selected")}
+  {getDisplayElementById(
+    Dialog.examples,
+    'closed-two-or-more-options-selected'
+  )}
 </CodeView>
 
 ##### Open with Two or More Options Selected
+
 <CodeView>
-  {getDisplayElementById(Dialog.examples, "open-two-or-more-options-selected")}
+  {getDisplayElementById(Dialog.examples, 'open-two-or-more-options-selected')}
 </CodeView>

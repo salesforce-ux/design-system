@@ -7,6 +7,8 @@ import CodeBlock from './CodeBlock';
 import StyledDemo from './StyledDemo';
 import classNames from 'classnames';
 
+import '../styles/doc.scss';
+
 class CodeView extends React.Component {
   renderChildren() {
     const { style, isViewport } = this.props;
@@ -33,6 +35,7 @@ class CodeView extends React.Component {
 
   render() {
     const { position, toggleCode, exampleOnly } = this.props;
+
     return (
       <div className="docs-codeblock">
         {position === 'bottom' ? this.renderChildren() : null}

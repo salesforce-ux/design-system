@@ -1,0 +1,141 @@
+import CodeView from '../../../shared/components/CodeView';
+import { getDisplayElementById } from '../../shared/helpers';
+import * as Base from './base/example';
+
+<div className="doc lead">
+  Spinners are CSS loading indicators that should be shown when retrieving data or performing slow computations. In some cases, the first time a parent component loads, a stencil is preferred to indicate network activity.
+</div>
+
+## About Spinner
+
+To use the spinner in a component, the parent of the spinner should be set to `position:relative`. You can use the utility class `.lwc-spinner_relative` or add the declaration to your custom component CSS. If you are using the spinner in an `iframe` and dynamically loading DOM nodes after the page has loaded, it is recommended that you set the `.lwc-spinner_container` to `position:fixed` so that it remains centered in the viewport. The background overlay for the spinner is an optional element.
+
+### Accessibility
+
+A spinner should have the Aria `role="status"` and contain assistive text that explains what is currently happening.
+
+### Visibility
+
+For performance, when the spinner is no longer needed, remove it from the DOM. If the spinner is needed in the page, but just needs to be hidden from view, apply `lwc-spinner_hidden` to `lwc-spinner`, or `lwc-spinner_container` if the spinner is contained.
+
+## Base
+
+<CodeView>
+  {Base.default}
+</CodeView>
+
+## Examples
+
+### Without container
+
+A container is not required to use the spinner. Here, it is placed on a dark background to illustrate there is nothing there. The spinner will position itself to the closest positioned parent. So if you want it to spin over a single component, the class `lwc-spinner_relative` can be added to the parent.
+
+<CodeView>
+  {getDisplayElementById(Base.examples, 'without-container')}
+</CodeView>
+
+### With container
+
+Here, the regular spinner container is used making the dark background look lighter. The spinner container will position itself to the closest positioned parent. So if you want it to spin over a single component, the class `lwc-spinner_relative` can be added to `lwc-spinner`.
+
+
+<CodeView>
+  {getDisplayElementById(Base.examples, 'with-container')}
+</CodeView>
+
+
+
+### Fixed container
+
+The spinner container may be used with a container with fixed positioning by adding the `lwc-spinner_fixed` class to the container. This may be needed if you are dynamically loading portions of a component after the spinner is showing.
+
+<CodeView>
+  {getDisplayElementById(Base.examples, 'fixed-container')}
+</CodeView>
+
+### Right to left support
+
+<CodeView>
+  {getDisplayElementById(Base.examples, 'right-to-left-medium')}
+</CodeView>
+
+## Layout
+
+### Inlined
+
+<CodeView style={getDemoStylesById(Base.examples, 'inlined')}>
+  {getDisplayElementById(Base.examples, 'inlined')}
+</CodeView>
+
+## Color
+
+### Inverse
+
+<CodeView>
+  {getDisplayElementById(Base.examples, 'inverse')}
+</CodeView>
+
+### Brand
+
+<CodeView>
+  {getDisplayElementById(Base.examples, 'brand')}
+</CodeView>
+
+## Timing
+
+### Delayed
+
+<CodeView>
+  {getDisplayElementById(Base.examples, 'delayed')}
+</CodeView>
+
+## Sizing
+
+Spinners come with a range of sizes depending on visual context and area it is needed.
+
+Each sizing class should be applied to the `lwc-spinner` element.
+
+$_c-spinner-large: 2.75rem;
+$_c-spinner-medium: 2rem;
+$_c-spinner-small: 1.25rem;
+$_c-spinner-x-small: 1rem;
+$_c-spinner-xx-small: 0.5rem;
+
+|Size|Class|Dimensions|
+|----|-----|---|---|
+|Default|`lwc-spinner`|32px x 32px|
+|Xx-Small|`lwc-spinner_xx-small`|8px x 8px|
+|X-Small|`lwc-spinner_x-small`|16px x 16px|
+|Small|`lwc-spinner_small`|20px x 20px|
+|Medium|`lwc-spinner_medium`|32px x 32px|
+|Large|`lwc-spinner_large`|44px x 44px|
+
+### Xx-Small
+
+<CodeView>
+  {getDisplayElementById(Base.examples, 'xx-small')}
+</CodeView>
+
+### X-Small
+
+<CodeView>
+  {getDisplayElementById(Base.examples, 'x-small')}
+</CodeView>
+
+### Small
+
+<CodeView>
+  {getDisplayElementById(Base.examples, 'small')}
+</CodeView>
+
+### Medium
+
+<CodeView>
+  {getDisplayElementById(Base.examples, 'medium')}
+</CodeView>
+
+### Large
+
+<CodeView>
+  {getDisplayElementById(Base.examples, 'large')}
+</CodeView>

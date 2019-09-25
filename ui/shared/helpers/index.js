@@ -11,6 +11,7 @@ import truncate from 'lodash.truncate';
 import upperFirst from 'lodash.upperfirst';
 import IsDependentOn from './prop-types/is-dependent-on';
 import CannotBeSetWith from './prop-types/cannot-be-set-with';
+import StoryWrapper from '../../../shared/components/StoryWrapper';
 
 // SHIM Lodash because it caches in node_modules and generates id's that are always incrementing
 const uniqueId = (() => {
@@ -80,11 +81,12 @@ export const getDisplayCollectionsByType = (object, types) => {
       if (object.hasOwnProperty(type)) {
         if (Array.isArray(object[type])) {
           object[type].map(element => {
-            const { demoStyles, label } = element;
+            const { demoStyles, label, demoProps } = element;
             return collection.push({
               component: getDisplayElementById(object[type], element.id),
               label,
-              demoStyles
+              demoStyles,
+              demoProps
             });
           });
         } else {
@@ -101,12 +103,6 @@ export const getDisplayCollectionsByType = (object, types) => {
   return collection;
 };
 
-/**
- * @desc Get all examples for multiple components by type
- * @param array $array - the components to check types against
- * @param array $types - the type of examples you want
- * @return array - array of componenet examples based on parameters
- */
 export const getAllDisplayCollectionsByType = (array, types) => {
   let collection = [];
   if (Array.isArray(array)) {
@@ -117,6 +113,26 @@ export const getAllDisplayCollectionsByType = (array, types) => {
     throw new Error(`Expected "${array}" to be an array`);
   }
   return collection;
+};
+
+/**
+ * @desc Get the StoryWrapper for a demo-styled example as a Story decorator
+ * @param object $example - the example object being Story-ifed
+ * @return object - decorator onject to pass to storiesOf.add
+ */
+export const getStoryWrapperDecorator = example => {
+  const { demoStyles, demoProps } = example;
+  return demoStyles || demoProps
+    ? {
+        decorators: [
+          storyFn => (
+            <StoryWrapper styles={demoStyles} {...demoProps}>
+              {storyFn()}
+            </StoryWrapper>
+          )
+        ]
+      }
+    : null;
 };
 
 export default {

@@ -265,6 +265,10 @@
       {
         "name": "@salesforce/slds/modal",
         "path": "ui/modules/modal/base/index.css"
+      },
+      {
+        "name": "@salesforce/slds/spinner",
+        "path": "ui/modules/spinner/base/index.css"
       }
     ]
   }

@@ -7,7 +7,7 @@ import '../ui/index.scss'; // load slds css
 import '../shared/storybook/scss/ui/index.scss'; // Our custom Storybook presentation styles
 import '../shared/styles/doc.scss'; // docs styles
 
-const req = require.context('../ui/components', true, /\.stories\.js$/);
+const req = require.context('../ui/modules', true, /\.stories\.js$/);
 
 function loadStories() {
   req.keys().forEach(filename => req(filename));

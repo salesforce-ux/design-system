@@ -4,6 +4,10 @@
 ## Release 2.11.0 - August 26, 2019
 
 ## Components
+### [Buttons](https://www.lightningdesignsystem.com/components/buttons)
+#### Changed
+- For touch devices, update the line-height token of `.slds-button` to use the touch-specific token `$height-tappable` (2.75rem) which is a system-wide touch token instead of using a component-specific token.
+
 ### [Lookups](https://www.lightningdesignsystem.com/components/lookups)
 #### Added
 - Grouped Lookup wrapping `<div>` attributes:

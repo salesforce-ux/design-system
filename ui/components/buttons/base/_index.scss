@@ -31,7 +31,7 @@
   user-select: none;
 
   @include touch-device {
-    line-height: $button-line-height-touch;
+    @include border-box-line-height($height-tappable);
     font-weight: $font-weight-bold;
   }
 

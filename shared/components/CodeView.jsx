@@ -11,17 +11,21 @@ import '../styles/doc.scss';
 
 class CodeView extends React.Component {
   renderChildren() {
-    const { style, isViewport } = this.props;
+    const { style, isViewport, isMobile } = this.props;
 
     return (
       <div
         className={classNames('docs-codeblock-example', {
-          'docs-codeblock-example_viewport': isViewport
+          'docs-codeblock-example_viewport': isViewport,
+          'docs-codeblock-example_mobile': isMobile
         })}
       >
         {style ? (
           <StyledDemo
-            className={isViewport && 'demo-only demo-only_viewport'}
+            className={classNames({
+              'demo-only_viewport': isViewport,
+              'slds-is-mobile': isMobile
+            })}
             styles={style}
           >
             {this.props.children}
@@ -55,6 +59,7 @@ CodeView.propTypes = {
   position: PropTypes.oneOf(['top', 'bottom']),
   style: PropTypes.string,
   isViewport: PropTypes.bool,
+  isMobile: PropTypes.bool,
   toggleCode: PropTypes.bool,
   exampleOnly: PropTypes.bool
 };

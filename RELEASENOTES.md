@@ -3,6 +3,11 @@
 
 ## Release 2.11.0 - August 26, 2019
 
+## Added
+- Added `-moz` and `-webkit` prefixes to `appearance : none` rules
+- Generate a sanitized version of SLDS in `.dist` that does not contain `--` BEM notation for modifiers, removes deprecated code, and only imports support Lightning Web Components.
+- All mobile/touch enhancements are now scoped `slds-is-mobile`. The scoping class should be applied to the `html/body` element.
+
 ## Components
 ### [Buttons](https://www.lightningdesignsystem.com/components/buttons)
 #### Changed

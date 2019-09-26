@@ -1,5 +1,6 @@
 import CodeView from '../../../shared/components/CodeView';
-import Tabset from './base/example';
+import * as TabsetExamples from './base/example';
+import { getDisplayElementById } from '../../shared/helpers';
 
 <div className="lead">
   Tabs keeps related content in a single container that is shown and hidden
@@ -7,7 +8,7 @@ import Tabset from './base/example';
 </div>
 
 <CodeView exampleOnly style={{ height: '200px' }}>
-  {Tabset}
+  {TabsetExamples.default}
 </CodeView>
 
 ## About Tabs
@@ -43,3 +44,25 @@ Tabbed UIs have three parts with specific ARIA role requirements:
 - The tab list, which should have `role="tablist"`
 - The tabs in that list, which should each be an `<a role="tab">` anchor wrapped in a `<li role="presentation">` list item
 - The tab panels, which display each tab’s content and should each have `role="tabpanel"`
+
+## Base
+
+<Example title="Tabs Base">
+  <CodeView style={{ height: '200px' }}>{TabsetExamples.default}</CodeView>
+</Example>
+
+## With Overflow
+
+The overflow tab style is provided as a tab item type that acts as a menu component and appears as a tab item. It could contain those tab items that don't all fit in a horizontal orientation.
+
+[todo: waiting on menu]
+
+## With Icon
+
+Icons can be used with tabs to help users differentiate among them.
+
+<Example title="Tabs With Icons">
+  <CodeView style={{ height: '200px' }}>
+    {getDisplayElementById(TabsetExamples.examples, 'with-icon')}
+  </CodeView>
+</Example>

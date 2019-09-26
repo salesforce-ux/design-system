@@ -2,8 +2,8 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import * as BaseExamples from './example';
 import {
-  getDisplayElementById,
-  getStoryWrapperDecorator
+  getDisplayElementById
+  // getStoryWrapperDecorator
 } from '../../../shared/helpers';
 import DocsPage from '../../../../shared/components/DocsPage';
 import Docs from '../docs.mdx';
@@ -20,6 +20,10 @@ BaseExamples.examples.map(example => {
   stories.add(
     example.label,
     () => getDisplayElementById(BaseExamples.examples, example.id),
-    getStoryWrapperDecorator(example)
+    {
+      docs: {
+        page: () => <DocsPage title="Tabset" Docs={Docs} />
+      }
+    }
   );
 });

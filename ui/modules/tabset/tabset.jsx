@@ -5,6 +5,7 @@ import React, { Component } from 'react';
 import classnames from 'classnames';
 
 import Tab from './tab';
+import Icon from '../icon';
 import Shadow from '../../shared/shadow';
 import { rollupAdoptedStylesheets } from '../../shared/shadow/helpers';
 
@@ -41,6 +42,7 @@ class Tabset extends Component {
           <ul className="lwc-tabset_nav">
             {tabLabels.map((label, i) => {
               const isActive = i === selectedTabIndex;
+              const tabIcon = tabs[i].props.tabIcon;
 
               return (
                 <li className="lwc-tabset_nav-item" key={`label-${i}`}>
@@ -56,6 +58,15 @@ class Tabset extends Component {
                     id={`tab-default-${i}__item`}
                     onClick={e => this.changeSelectedTab(e, i)}
                   >
+                    {tabIcon ? (
+                      <div className="lwc-tabset_nav-item-icon">
+                        <Icon
+                          sprite={tabIcon.sprite}
+                          symbol={tabIcon.symbol}
+                          title={label}
+                        />
+                      </div>
+                    ) : null}
                     {label}
                   </a>
                 </li>

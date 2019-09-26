@@ -41,8 +41,8 @@ class Tabset extends Component {
         <div className="lwc-tabset">
           <ul className="lwc-tabset_nav">
             {tabLabels.map((label, i) => {
+              const { tabIcon, hasError } = tabs[i].props;
               const isActive = i === selectedTabIndex;
-              const tabIcon = tabs[i].props.tabIcon;
 
               return (
                 <li className="lwc-tabset_nav-item" key={`label-${i}`}>
@@ -68,6 +68,18 @@ class Tabset extends Component {
                       </div>
                     ) : null}
                     {label}
+
+                    {hasError ? (
+                      <div className="lwc-tabset_nav-item-error">
+                        <Icon
+                          color="error"
+                          sprite="utility"
+                          symbol="error"
+                          title="This item has an error"
+                          assistiveText="This item has an error"
+                        />
+                      </div>
+                    ) : null}
                   </a>
                 </li>
               );

@@ -61,7 +61,24 @@ export const examples = [
   {
     id: 'with-error',
     label: 'With Error',
-    element: <div>tbd.</div>
+    element: (
+      <Tabset>
+        <Tab label="Opportunities">
+          <p>This is tab 1 content</p>
+          <p>It can be any html</p>
+        </Tab>
+
+        <Tab label="Cases" hasError>
+          <p>This is tab 2 content</p>
+          <p>It can be any html</p>
+        </Tab>
+
+        <Tab label="Products">
+          <p>This is tab 3 content</p>
+          <p>It can be any html</p>
+        </Tab>
+      </Tabset>
+    )
   },
   {
     id: 'with-nested-scoped-tabs',

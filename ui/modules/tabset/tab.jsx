@@ -6,7 +6,16 @@ import Shadow from '../../shared/shadow';
 
 class Tab extends Component {
   render() {
-    return <Shadow.on name="tab">{this.props.children}</Shadow.on>;
+    return (
+      <Shadow.on name="tab">
+        <div
+          className="lwc-tabset_content"
+          aria-labelledby={this.props.labelledby}
+        >
+          {this.props.children}
+        </div>
+      </Shadow.on>
+    );
   }
 }
 

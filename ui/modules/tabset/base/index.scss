@@ -18,7 +18,7 @@
 /**
  * @summary Tabset navigation container
  * @selector .lwc-tabset_nav
- * @restrict .lwc-tabset ol
+ * @restrict .lwc-tabset > ol
  */
 .lwc-tabset_nav {
   display: flex;
@@ -35,7 +35,7 @@
 /**
  * @summary Link item for tabset tab
  * @selector .lwc-tabset_nav-item-link
- * @restrict .lwc-tabset_nav-item a, .lwc-tabset_nav-item button
+ * @restrict .lwc-tabset_nav-item > a, .lwc-tabset_nav-item > button
  */
 .lwc-tabset_nav-item-link {
   position: relative;
@@ -75,9 +75,25 @@
     background-color: var(--lwc-c-tabset-color-active, $brand-primary-active);
     transition: height 300ms;
   }
+}
 
-  .lwc-tabset_nav-item-icon {
-    display: flex;
-    margin-right: var(--var-spacing-horizontal-small, $var-spacing-horizontal-x-small);
-  }
+/**
+ * @summary Container for Tabset Nav Item Icon
+ * @selector .lwc-tabset_nav-item-icon
+ * @restrict .lwc-tabset_nav-item-link > div
+ */
+.lwc-tabset_nav-item-icon {
+  display: flex;
+  margin-right: var(--var-spacing-horizontal-small, $var-spacing-horizontal-x-small);
+}
+
+/**
+ * @summary Container for Tabset Nav Item Error Icon
+ * @selector .lwc-tabset_nav-item-error
+ * @restrict .lwc-tabset_nav-item-link > div
+ */
+.lwc-tabset_nav-item-error {
+  display: flex;
+  margin-left: var(--var-spacing-horizontal-small, $var-spacing-horizontal-x-small);
+  color: red;
 }

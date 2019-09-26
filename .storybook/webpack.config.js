@@ -1,7 +1,9 @@
 const path = require('path');
-const visit = require('unist-util-visit');
-const paths = require('../scripts/helpers/paths');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const addClasses = require('rehype-add-classes');
+
+const paths = require('../scripts/helpers/paths');
+const tags = require('../shared/storybook/docs/tags');
 
 module.exports = async ({ config, mode }) => {
   config.module.rules.push(
@@ -57,14 +59,7 @@ module.exports = async ({ config, mode }) => {
     {
       test: /\.css$/,
       include: path.resolve(__dirname, '../ui'),
-      use: [
-        'raw-loader'
-        // {
-        //   loader: "css-loader",
-        //   options: { importLoaders: 1 }
-        // },
-        // 'postcss-loader'
-      ]
+      use: ['raw-loader']
     },
     {
       test: /\.mdx$/,
@@ -76,13 +71,7 @@ module.exports = async ({ config, mode }) => {
         {
           loader: '@mdx-js/loader',
           options: {
-            hastPlugins: [
-              // Custom hast plugin to add 'doc' classname to each node from the mdx parser.
-              () => tree =>
-                visit(tree, 'element', node => {
-                  node.properties.className = ['doc'];
-                })
-            ]
+            rehypePlugins: [[addClasses, { [tags]: 'doc' }]]
           }
         }
       ]

@@ -3,7 +3,7 @@ import * as TabsetExamples from './base/example';
 import { getDisplayElementById } from '../../shared/helpers';
 
 <div className="lead">
-  Tabs keeps related content in a single container that is shown and hidden
+  Tabsets keep related content in a single container that is shown and hidden
   through navigation.
 </div>
 
@@ -11,13 +11,33 @@ import { getDisplayElementById } from '../../shared/helpers';
   {TabsetExamples.default}
 </CodeView>
 
-## About Tabs
+## About Tabset
 
 The default tab set style encapsulates everything that is underneath it without enclosing it visually. Because tab sets can be nested, pay close attention to the markup. They are constructed to prevent styles from leaking from parent tab sets into child tab sets.
 
-### Implementation
+## Implementation
 
-#### Markup
+### Custom Elements
+
+Tabset is constructed with three custom elements:
+
+- `lightning-tabset`
+- `lightning-tab-bar`
+- `lightning-tab`
+
+#### &lt;lightning-tabset&gt;
+
+### CSS Variables
+
+Tabset has an exposed set of CSS variables, for the optional purpose of customization.
+
+- --lwc-c-tabset-color-border (\$color-gray-7)
+- --lwc-c-tabset-color-tab (\$color-gray-12)
+- --lwc-c-tabset-color-active-text (\$brand-accessible)
+- --lwc-c-tabset-color (\$brand-primary)
+- --lwc-c-tabset-color-active (\$brand-primary-active)
+
+### Accessibility Requirements
 
 The following markup is crucial for Accessibility
 
@@ -26,18 +46,18 @@ The following markup is crucial for Accessibility
 - Each tab’s anchor has an `aria-controls` attribute whose value is the id of the associated `<div role="tabpanel">`
 - Each tab panel has an `aria-labelledby` attribute whose value is the id of its associated `<a role="tab">`
 
-#### Keyboard Interactions
+### Keyboard Interactions
 
 - Arrow keys, when focus is on a selected tab, cycle selection to the next or previous tab
 - Tab key, when focus is before the tab list, moves focus to the selected tab
 - Tab key, when focus is on selected tab, moves focus into the selected tab’s associated tab panel or to the next focusable element on the page if that panel has no focusable elements
 - Shift+Tab keys, when focus is on first element in a tab panel, moves focus back to the selected tab
 
-#### JavaScript Needs
+### JavaScript Needs
 
 [rewrite]
 
-### Accessibility
+### Accessibility [TODO: merge with above or rewrite]
 
 Tabbed UIs have three parts with specific ARIA role requirements:
 
@@ -45,34 +65,36 @@ Tabbed UIs have three parts with specific ARIA role requirements:
 - The tabs in that list, which should each be an `<a role="tab">` anchor wrapped in a `<li role="presentation">` list item
 - The tab panels, which display each tab’s content and should each have `role="tabpanel"`
 
-## Base
+## Variants and Examples
+
+### Base
 
 <Example title="Tabs Base">
   <CodeView style={{ height: '200px' }}>{TabsetExamples.default}</CodeView>
 </Example>
 
-## With Overflow
+#### With Overflow
 
 The overflow tab style is provided as a tab item type that acts as a menu component and appears as a tab item. It could contain those tab items that don't all fit in a horizontal orientation.
 
 [todo: waiting on menu]
 
-## With Icon
+#### With Icon
 
 Icons can be used with tabs to help users differentiate among them.
 
 <Example title="Tabs With Icons">
   <CodeView style={{ height: '200px' }}>
-    {getDisplayElementById(TabsetExamples.examples, 'with-icon')}
+    {getDisplayElementById(TabsetExamples.examples, 'with-start-icon')}
   </CodeView>
 </Example>
 
-## With Error
+#### With End Icon
 
-An icon can be used to communicate when a tab contains a validation error that needs attention.
+Alternatively, you can use the end icon to display an icon after the tab's label. This can be used, for example, to communicate when a tab contains a validation error that needs attention.
 
-<Example title="Tabs With Error">
+<Example title="Tab With End Icon">
   <CodeView style={{ height: '200px' }}>
-    {getDisplayElementById(TabsetExamples.examples, 'with-error')}
+    {getDisplayElementById(TabsetExamples.examples, 'with-end-icon')}
   </CodeView>
 </Example>

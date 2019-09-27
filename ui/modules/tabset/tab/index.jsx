@@ -2,7 +2,9 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 import React, { Component } from 'react';
-import Shadow from '../../shared/shadow';
+import PropTypes from 'prop-types';
+
+import Shadow from '../../../shared/shadow';
 
 class Tab extends Component {
   render() {
@@ -18,5 +20,21 @@ class Tab extends Component {
     );
   }
 }
+
+Tab.propTypes = {
+  label: PropTypes.string,
+  startIcon: PropTypes.shape({
+    sprite: PropTypes.string,
+    symbol: PropTypes.string
+  }),
+  startIconAltText: PropTypes.string,
+  startIconColor: PropTypes.string,
+  endIcon: PropTypes.shape({
+    sprite: PropTypes.string,
+    symbol: PropTypes.string
+  }),
+  endIconAltText: PropTypes.string,
+  endIconColor: PropTypes.string
+};
 
 export default Tab;

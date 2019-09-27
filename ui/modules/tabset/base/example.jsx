@@ -2,7 +2,7 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 import React from 'react';
-import Tabset from '../tabset';
+import Tabset from '../';
 import Tab from '../tab';
 
 export default (
@@ -31,26 +31,26 @@ export const examples = [
     element: <div>tbd.</div>
   },
   {
-    id: 'with-icon',
-    label: 'With Icon',
+    id: 'with-start-icon',
+    label: 'With Start Icon',
     element: (
       <Tabset>
         <Tab
           label="Opportunities"
-          tabIcon={{ sprite: 'standard', symbol: 'opportunity' }}
+          startIcon={{ sprite: 'standard', symbol: 'opportunity' }}
         >
           <p>This is tab 1 content</p>
           <p>It can be any html</p>
         </Tab>
 
-        <Tab label="Cases" tabIcon={{ sprite: 'standard', symbol: 'case' }}>
+        <Tab label="Cases" startIcon={{ sprite: 'standard', symbol: 'case' }}>
           <p>This is tab 2 content</p>
           <p>It can be any html</p>
         </Tab>
 
         <Tab
           label="Products"
-          tabIcon={{ sprite: 'standard', symbol: 'product' }}
+          startIcon={{ sprite: 'standard', symbol: 'product' }}
         >
           <p>This is tab 3 content</p>
           <p>It can be any html</p>
@@ -59,8 +59,8 @@ export const examples = [
     )
   },
   {
-    id: 'with-error',
-    label: 'With Error',
+    id: 'with-end-icon',
+    label: 'With End Icon',
     element: (
       <Tabset>
         <Tab label="Opportunities">
@@ -68,7 +68,12 @@ export const examples = [
           <p>It can be any html</p>
         </Tab>
 
-        <Tab label="Cases" hasError>
+        <Tab
+          label="Cases"
+          endIcon={{ sprite: 'utility', symbol: 'error' }}
+          endIconAltText="There is an error"
+          endIconColor="error"
+        >
           <p>This is tab 2 content</p>
           <p>It can be any html</p>
         </Tab>
@@ -83,6 +88,29 @@ export const examples = [
   {
     id: 'with-nested-scoped-tabs',
     label: 'With Nested Scoped Tabs',
-    element: <div>tbd.</div>
+    element: (
+      <Tabset>
+        <Tab label="Opportunities">
+          <Tabset>
+            <Tab label="Nested Item 1">
+              <p>How amazing, a Tabset within a Tabset.</p>
+            </Tab>
+            <Tab label="Nested Item 2">
+              <p>How amazing, a Tabset within a Tabset.</p>
+            </Tab>
+          </Tabset>
+        </Tab>
+
+        <Tab label="Cases">
+          <p>This is tab 2 content</p>
+          <p>It can be any html</p>
+        </Tab>
+
+        <Tab label="Products">
+          <p>This is tab 3 content</p>
+          <p>It can be any html</p>
+        </Tab>
+      </Tabset>
+    )
   }
 ];

@@ -19,7 +19,9 @@ export let Fieldset = props => (
 );
 
 export let CheckboxGroup = props => (
-  <div className="slds-checkbox_button-group">{props.children}</div>
+  <div className={classNames('slds-checkbox_button-group', props.className)}>
+    {props.children}
+  </div>
 );
 
 export let Checkbox = props => {
@@ -63,6 +65,49 @@ export default (
     </CheckboxGroup>
   </Fieldset>
 );
+
+export const examples = [
+  {
+    id: 'touch-stacked',
+    label: 'Stacked (Touch Only)',
+    element: (
+      <Fieldset>
+        <CheckboxGroup className="slds-checkbox_button-group_stacked">
+          <Checkbox id="monday">Mon</Checkbox>
+          <Checkbox id="tuesday">Tue</Checkbox>
+          <Checkbox id="wednesday">Wed</Checkbox>
+          <Checkbox id="thursday">Thu</Checkbox>
+          <Checkbox id="friday">Fri</Checkbox>
+        </CheckboxGroup>
+      </Fieldset>
+    )
+  },
+  {
+    id: 'touch-stacked-disabled',
+    label: 'Stacked - Disabled (Touch Only)',
+    element: (
+      <Fieldset>
+        <CheckboxGroup className="slds-checkbox_button-group_stacked">
+          <Checkbox id="monday" disabled>
+            Mon
+          </Checkbox>
+          <Checkbox id="tuesday" disabled>
+            Tue
+          </Checkbox>
+          <Checkbox id="wednesday" disabled>
+            Wed
+          </Checkbox>
+          <Checkbox id="thursday" disabled>
+            Thu
+          </Checkbox>
+          <Checkbox id="friday" disabled>
+            Fri
+          </Checkbox>
+        </CheckboxGroup>
+      </Fieldset>
+    )
+  }
+];
 
 export let states = [
   {

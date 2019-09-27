@@ -19,6 +19,44 @@
 }
 
 /**
+ * @name stacked
+ * @summary Layout modifier for the checkbox-button-group variant that causes the layout to become stacked
+ * @selector .slds-checkbox_button-group_stacked
+ * @restrict .slds-checkbox_button-group
+ * @modifier
+ * @group layout
+ */
+.slds-checkbox_button-group_stacked {
+  // This is a modifier of a variant, ignore the incorrect underscore used,
+  // currently only specced to touch devices
+  @include touch-device {
+    display: block;
+
+    .slds-checkbox_button {
+      display: block;
+    }
+
+    .slds-checkbox_button + .slds-checkbox_button {
+      border-left: 0;
+      border-top: $border-width-thin solid $color-border;
+    }
+
+    .slds-checkbox_button:first-child > .slds-checkbox_button__label {
+      border-radius: $border-radius-medium $border-radius-medium 0 0;
+    }
+
+    .slds-checkbox_button:last-child > .slds-checkbox_button__label {
+      border-radius: 0 0 $border-radius-medium $border-radius-medium;
+    }
+
+    .slds-checkbox_button__label {
+      display: block;
+      text-align: center;
+    }
+  }
+}
+
+/**
  * @summary Initializes checkbox inside a button group
  * @selector .slds-checkbox_button
  * @restrict .slds-checkbox_button-group span

@@ -9,9 +9,18 @@
 - All mobile/touch enhancements are now scoped `slds-is-mobile`. The scoping class should be applied to the `html/body` element.
 
 ## Components
+
 ### [Buttons](https://www.lightningdesignsystem.com/components/buttons)
 #### Changed
 - For touch devices, update the line-height token of `.slds-button` to use the touch-specific token `$height-tappable` (2.75rem) which is a system-wide touch token instead of using a component-specific token.
+
+### [Button Groups](https://www.lightningdesignsystem.com/components/button-groups)
+#### Added
+- New `.slds-button-group_stacked` modifier that creates a stacked layout on mobile devices to account for their limited screen width.
+
+### [Checkbox Button Group](https://www.lightningdesignsystem.com/components/checkbox-button-group)
+#### Added
+- New `.slds-checkbox_button-group_stacked` modifier that creates a stacked layout on mobile devices to account for their limited screen width.
 
 ### [Lookups](https://www.lightningdesignsystem.com/components/lookups)
 #### Added
@@ -22,6 +31,11 @@
 - Grouped Lookup `<input>` attribute `aria-controls` set to id of adjacent table
 #### Changed
 - Grouped Lookup `<input>` `role` from `combobox` to `textbox`
+
+### [Radio Button Group](https://www.lightningdesignsystem.com/components/radio-button-group)
+#### Added
+- New `.slds-radio_button-group_stacked` modifier that creates a stacked layout on mobile devices to account for their limited screen width.
+<!-- ## [VERSION] -->
 
 ## Release 2.10.0 - August 22, 2019
 

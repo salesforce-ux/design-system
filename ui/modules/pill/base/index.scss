@@ -35,7 +35,6 @@
     border-radius: var(--lwc-c-pill-radius, $border-radius-medium);
     border-color: var(--lwc-c-pill-color-border-active, var(--lwc-brand-primary-active, $brand-primary-active));
     box-shadow: var(--lwc-c-pill-shadow-active, $shadow-button-focus);
-    // box-shadow: 0 0 3px var(--lwc-c-pill-shadow-active,$brand-primary-active);
   }
 }
 
@@ -48,7 +47,7 @@
 
 .lwc-pill__media {
   --lwc-c-icon-size: 1.25rem;
-  height: 1.25rem;
+  height: var(--lwc-c-icon-size);
   margin-right: $spacing-xxx-small;
 }
 
@@ -97,7 +96,7 @@
 .lwc-pill__remove {
   --lwc-c-icon-size: 0.875rem;
   margin-left: $spacing-xxx-small;
-  margin-top: -$spacing-xxx-small;
+  margin-top: ($spacing-xxx-small * -1);
 }
 
 /**

@@ -1,0 +1,295 @@
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+// ------------
+// Init
+// ------------
+@import '../../../shared/common/init';
+
+// Sizing Tokens
+$_c-spinner-large: 2.75rem;
+$_c-spinner-medium: 2rem;
+$_c-spinner-small: 1.25rem;
+$_c-spinner-x-small: 1rem;
+$_c-spinner-xx-small: 0.5rem;
+
+// Color tokens
+$_c-spinner-dot-background: $color-gray-7;
+$_c-spinner-container-background: $color-background-backdrop;
+
+/**
+ * @name base
+ * @selector .lwc-spinner
+ * @restrict div
+ * @support dev-ready
+ * @variant
+ */
+.lwc-spinner {
+  @include square($_c-spinner-medium);
+  position: absolute;
+  top: 50%;
+
+  /*! @noflip */
+  left: 50%;
+  z-index: ($z-index-spinner + 1);
+  transform: translate(-50%, -50%);
+}
+
+/**
+ * The optional container for the spinner
+ *
+ * @name base
+ * @selector .lwc-spinner_container
+ * @restrict div
+ * @support dev-ready
+ * @variant
+ */
+.lwc-spinner_container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: $z-index-spinner;
+  background-color: $_c-spinner-container-background;
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 0.2s ease, visibility 0s;
+  transition-delay: 0s, 0.3s;
+}
+
+/**
+ * This creates the container for the dot. The :before element is the dot itself
+ *
+ * @selector .lwc-spinner__dot
+ * @restrict .lwc-spinner div
+ * @required
+ */
+.lwc-spinner__dot {
+  @include square(25%);
+  position: absolute;
+  left: 50%;
+  transform-origin: 50% 250%;
+
+  // guides for designing purposes only
+
+  &:before {
+    @include square(100%);
+    content: '';
+    position: absolute;
+    background: $color-background-spinner-dot;
+    background-color: var(--lwc-c-spinner-color, $_c-spinner-dot-background);
+    border-radius: $border-radius-circle;
+    animation-duration: 1000ms;
+    animation-iteration-count: infinite;
+    transform: translate3d(0, 0, 0);
+    will-change: transform;
+    animation-name: spinner_dotsBounce;
+  }
+}
+
+$max-index: 5;
+
+@for $i from 0 through $max-index {
+
+  .lwc-spinner__dot-#{$i + 1} {
+    transform: translate3d(-50%, -50%, 0) rotate($i * 60deg);
+
+    &:before {
+      animation-delay: $i / ($max-index + 1) * 1000ms;
+    }
+  }
+
+
+  /**
+  * @summary Set a delay of 300ms on spinner
+  *
+  * @selector .lwc-spinner_delayed
+  * @restrict .lwc-spinner
+  * @modifier
+  * @group timing
+  */
+  .lwc-spinner_delayed {
+
+    .lwc-spinner__dot-#{$i + 1}:before {
+      animation-delay: ($i * 166.66667) + 216.66667ms;
+    }
+  }
+}
+
+/* size */
+
+/**
+ * This is the extra extra small spinner
+ *
+ * @selector .lwc-spinner_xx-small
+ * @restrict .lwc-spinner
+ * @modifier
+ * @group size
+ */
+
+.lwc-spinner_xx-small {
+  @include square($_c-spinner-xx-small);
+}
+
+/**
+ * This is the extra small spinner
+ *
+ * @selector .lwc-spinner_x-small
+ * @restrict .lwc-spinner
+ * @modifier
+ * @group size
+ */
+
+.lwc-spinner_x-small {
+  @include square($_c-spinner-x-small);
+}
+
+/**
+ * This is the small spinner
+ *
+ * @selector .lwc-spinner_small
+ * @restrict .lwc-spinner
+ * @modifier
+ * @group size
+ */
+
+.lwc-spinner_small {
+  @include square($_c-spinner-small);
+}
+
+/**
+ * This is the medium spinner
+ *
+ * @selector .lwc-spinner_medium
+ * @restrict .lwc-spinner
+ * @modifier
+ * @group size
+ */
+
+.lwc-spinner_medium {
+  @include square($_c-spinner-medium);
+}
+
+/**
+ * This is the large spinner
+ *
+ * @selector .lwc-spinner_large
+ * @restrict .lwc-spinner
+ * @modifier
+ * @group size
+ */
+
+.lwc-spinner_large {
+  @include square($_c-spinner-large);
+}
+
+/* position */
+
+/**
+ * This is sets the spinner, or container, to fixed positioning
+ *
+ * @selector .lwc-spinner_fixed
+ * @restrict .lwc-spinner, .lwc-spinner_container
+ * @modifier
+ * @group size
+ */
+.lwc-spinner_fixed {
+  position: fixed;
+}
+
+/**
+  * This is sets the spinner, or container, to relative positioning
+  *
+  * @selector .lwc-spinner_relative
+  * @restrict .lwc-spinner, .lwc-spinner_container
+  * @modifier
+  * @group size
+  */
+
+.lwc-spinner_relative {
+  position: relative;
+}
+
+/**
+  * This is sets the spinner, or container, to absolute positioning
+  *
+  * @selector .lwc-spinner_absolute
+  * @restrict .lwc-spinner, .lwc-spinner_container
+  * @modifier
+  * @group size
+  */
+.lwc-spinner_absolute {
+  position: absolute;
+}
+
+/**
+ * This creates the blue brand spinner
+ *
+ * @selector .lwc-spinner_brand
+ * @restrict .lwc-spinner
+ * @modifier
+ * @group color
+ */
+.lwc-spinner_brand .lwc-spinner__dot:before {
+  background-color: var(--lwc-c-spinner-color, var(--lwc-brand-primary, $brand-primary));
+}
+
+/**
+ * This creates the inverse spinner
+ *
+ * @selector .lwc-spinner_inverse
+ * @restrict .lwc-spinner
+ * @modifier
+ */
+.lwc-spinner_inverse .lwc-spinner__dot:before {
+  background-color: $color-background-alt;
+}
+
+/**
+ * This is hides the spinner
+ *
+ * @selector .lwc-spinner_hidden
+ * @restrict .lwc-spinner, .lwc-spinner_container
+ * @modifier
+ * @group size
+ */
+.lwc-spinner_hidden {
+  display: none;
+}
+
+/**
+ * This is makes the spinner fade out to invisibility
+ *
+ * @selector .lwc-spinner_invisibile
+ * @restrict .lwc-spinner, .lwc-spinner_container
+ * @modifier
+ * @group size
+ */
+.lwc-spinner_invisibile {
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.2s ease, visibility 0.2s;
+  transition-delay: 0s, 0s;
+}
+
+@keyframes spinner_dotsBounce {
+
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  60% {
+    transform: translate3d(0, 0, 0);
+    animation-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53);
+  }
+
+  80% {
+    transform: translate3d(0, -100%, 0);
+    animation-timing-function: cubic-bezier(0, 1.11, 0.7, 1.43);
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}

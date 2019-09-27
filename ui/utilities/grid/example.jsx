@@ -252,5 +252,20 @@ export let examples = [
     ),
     description:
       'You can use the grid system&rsquo;s containers to constrain your content to a certain width. You can center or left or right align the containers within your viewport.'
+  },
+  {
+    id: 'containers',
+    label: 'Containers',
+    element: (
+      <div className="slds-grid slds-grid_vertical">
+        <div className="slds-container_small" />
+        <div className="slds-container_medium" />
+        <div className="slds-container_large" />
+        <div className="slds-container_x-large" />
+        <div className="slds-container_fluid" />
+      </div>
+    ),
+    description:
+      'You can use the grid system&rsquo;s containers to constrain your content to a certain width. You can center or left or right align the containers within your viewport.'
   }
 ];

@@ -117,8 +117,8 @@ export const getAllDisplayCollectionsByType = (array, types) => {
 
 /**
  * @desc Get the StoryWrapper for a demo-styled example as a Story decorator
- * @param object $example - the example object being Story-ifed
- * @return object - decorator onject to pass to storiesOf.add
+ * @param object $example - the example object being Story-ified
+ * @return object - decorator object to pass to storiesOf.add
  */
 export const getStoryWrapperDecorator = example => {
   const { demoStyles, demoProps } = example;
@@ -134,6 +134,18 @@ export const getStoryWrapperDecorator = example => {
       }
     : null;
 };
+
+/**
+ * @desc Get the parameters for a story with consideration for example wrapper decorator
+ * @param {...Object} $paramObjects - the params to pass to story as Objects
+ * @return object - parameter object to pass to storiesOf.add
+ */
+export const getExampleStoryParams = (...paramObjects) =>
+  paramObjects.reduce((prev, next) => {
+    if (prev.decorators && next.decorators)
+      next.decorators = [...prev.decorators, ...next.decorators];
+    return { ...prev, ...next };
+  }, {});
 
 export default {
   omit,

@@ -3,6 +3,7 @@
 
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 
 import Tab from './tab';
 import TabBar from './tab-bar';
@@ -13,24 +14,25 @@ import commonStyles from '../common/index.scss';
 import tabsetStyles from './base/index.scss';
 
 class Tabset extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
 
     this.state = {
-      selectedTabIndex: 0
+      activeTabIndex: props.activeTabIndex
     };
 
-    this.changeSelectedTab = this.changeSelectedTab.bind(this);
+    this.changeActiveTab = this.changeActiveTab.bind(this);
   }
 
-  changeSelectedTab(clickEvent, selectedTabIndex) {
-    this.setState({ selectedTabIndex });
+  changeActiveTab(clickEvent, activeTabIndex) {
+    this.setState({ activeTabIndex });
     clickEvent.preventDefault();
   }
 
   render() {
-    const { customization } = this.props;
-    const { selectedTabIndex } = this.state;
+    const { customization, variant } = this.props;
+    const { activeTabIndex } = this.state;
+    const tabChildren = this.props.children[activeTabIndex].props.children;
     const css = rollupAdoptedStylesheets([
       commonStyles,
       tabsetStyles,
@@ -39,15 +41,23 @@ class Tabset extends Component {
 
     return (
       <Shadow.on name="tabset" includes={css}>
-        <div className="lwc-tabset">
+        <div
+          className={classNames('lwc-tabset', {
+            'lwc-tabset__scoped': variant === 'scoped'
+          })}
+        >
           <TabBar
             tabs={this.props.children}
-            selectedTabIndex={selectedTabIndex}
-            changeSelectedTab={this.changeSelectedTab}
+            activeTabIndex={activeTabIndex}
+            changeActiveTab={this.changeActiveTab}
+            variant={variant}
           />
 
-          <Tab labelledby={`tab-default-${selectedTabIndex}__item`}>
-            {this.props.children[selectedTabIndex]}
+          <Tab
+            labelledby={`tab-default-${activeTabIndex}__item`}
+            variant={variant}
+          >
+            {tabChildren}
           </Tab>
         </div>
       </Shadow.on>
@@ -56,9 +66,13 @@ class Tabset extends Component {
 }
 
 Tabset.propTypes = {
-  title: PropTypes.string,
   variant: PropTypes.oneOf(['base', 'scoped', 'vertical']),
   activeTabValue: PropTypes.number
+};
+
+Tabset.defaultProps = {
+  variant: 'base',
+  activeTabIndex: 0
 };
 
 export default Tabset;

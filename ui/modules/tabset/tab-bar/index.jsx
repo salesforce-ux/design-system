@@ -2,7 +2,9 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 import React, { Component } from 'react';
-import classnames from 'classnames';
+import classNames from 'classnames';
+import PropTypes from 'prop-types';
+
 import Icon from '../../icon';
 import Shadow from '../../../shared/shadow';
 import { rollupAdoptedStylesheets } from '../../../shared/shadow/helpers';
@@ -13,13 +15,19 @@ import tabBarStyles from './index.scss';
 class TabBar extends Component {
   render() {
     const tabs = React.Children.toArray(this.props.tabs);
-    const { selectedTabIndex, changeSelectedTab } = this.props;
+    const { activeTabIndex, changeActiveTab, variant } = this.props;
     const tabLabels = tabs.map(tab => tab.props.label);
     const css = rollupAdoptedStylesheets([commonStyles, tabBarStyles]);
 
     return (
       <Shadow.on name="tab-bar" includes={css}>
-        <ul className="lwc-tab-bar">
+        <ul
+          className={classNames('lwc-tab-bar', {
+            'lwc-tab-bar__scoped': variant === 'scoped',
+            'lwc-tab-bar__base': variant === 'base'
+          })}
+          role="tablist"
+        >
           {tabLabels.map((label, i) => {
             const {
               startIcon,
@@ -29,21 +37,26 @@ class TabBar extends Component {
               endIconAltText,
               endIconColor
             } = tabs[i].props;
-            const isActive = i === selectedTabIndex;
+            const isActive = i === activeTabIndex;
 
             return (
-              <li className="lwc-tab-bar_nav-item" key={`label-${i}`}>
+              <li
+                title=""
+                role="presentation"
+                className="lwc-tab-bar_nav-item"
+                key={`label-${i}`}
+              >
                 <a
-                  className={classnames('lwc-tab-bar_nav-item-link', {
-                    'slds-is-active': isActive
-                  })}
                   href="#"
                   role="tab"
                   tabIndex={isActive ? 0 : -1}
                   aria-selected={isActive}
                   aria-controls={`tab-default-${i}`}
                   id={`tab-default-${i}__item`}
-                  onClick={e => changeSelectedTab(e, i)}
+                  className={classNames('lwc-tab-bar_nav-item-link', {
+                    'slds-is-active': isActive
+                  })}
+                  onClick={e => changeActiveTab(e, i)}
                 >
                   {startIcon ? (
                     <div className="lwc-tab-bar_nav-item-icon-start">
@@ -77,5 +90,16 @@ class TabBar extends Component {
     );
   }
 }
+
+TabBar.propTypes = {
+  tabs: PropTypes.any,
+  activeTabIndex: PropTypes.number.isRequired,
+  changeActiveTab: PropTypes.func.isRequired,
+  variant: PropTypes.oneOf(['base', 'scoped', 'vertical'])
+};
+
+TabBar.defaultProps = {
+  variant: 'base'
+};
 
 export default TabBar;

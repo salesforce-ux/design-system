@@ -3,16 +3,27 @@
 
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 
+import { rollupAdoptedStylesheets } from '../../../shared/shadow/helpers';
 import Shadow from '../../../shared/shadow';
+
+import commonStyles from '../../common/index.scss';
+import tabStyles from './index.scss';
 
 class Tab extends Component {
   render() {
+    const css = rollupAdoptedStylesheets([commonStyles, tabStyles]);
+
     return (
-      <Shadow.on name="tab">
+      <Shadow.on name="tab" includes={css}>
         <div
-          className="lwc-tabset_content"
+          id={this.props.id}
+          className={classNames('lwc-tab', {
+            'lwc-tab__scoped': this.props.variant === 'scoped'
+          })}
           aria-labelledby={this.props.labelledby}
+          role="tabpanel"
         >
           {this.props.children}
         </div>
@@ -29,12 +40,14 @@ Tab.propTypes = {
   }),
   startIconAltText: PropTypes.string,
   startIconColor: PropTypes.string,
+  sprite: PropTypes.string,
   endIcon: PropTypes.shape({
-    sprite: PropTypes.string,
     symbol: PropTypes.string
   }),
   endIconAltText: PropTypes.string,
-  endIconColor: PropTypes.string
+  endIconColor: PropTypes.string,
+  labelledby: PropTypes.string,
+  variant: PropTypes.oneOf(['base', 'scoped', 'vertical'])
 };
 
 export default Tab;

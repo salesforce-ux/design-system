@@ -13,4 +13,14 @@
  * @restrict div
  * @variant
  */
-.lwc-tabset {}
+
+/**
+ * @summary
+ * @selector .lwc-tabset__scoped
+ * @restrict .lwc-tabset
+ * @modifier
+ */
+.lwc-tabset__scoped {
+  border: $border-width-thin solid var(--lwc-c-tabset-scoped-color-border, $color-gray-5);
+  border-radius: $border-radius-medium;
+}

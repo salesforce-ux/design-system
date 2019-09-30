@@ -91,12 +91,15 @@ export const examples = [
     element: (
       <Tabset>
         <Tab label="Opportunities">
-          <Tabset>
+          <Tabset variant="scoped">
             <Tab label="Nested Item 1">
-              <p>How amazing, a Tabset within a Tabset.</p>
+              <p>Nested Item 1.</p>
             </Tab>
             <Tab label="Nested Item 2">
-              <p>How amazing, a Tabset within a Tabset.</p>
+              <p>Nested Item 2.</p>
+            </Tab>
+            <Tab label="Nested Item 3">
+              <p>Nested Item 3.</p>
             </Tab>
           </Tabset>
         </Tab>

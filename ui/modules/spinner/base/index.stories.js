@@ -2,6 +2,7 @@ import { storiesOf } from '@storybook/react';
 import * as BaseExamples from './example';
 import {
   getDisplayElementById,
+  getExampleStoryParams,
   getStoryWrapperDecorator
 } from '../../../shared/helpers';
 
@@ -13,6 +14,6 @@ BaseExamples.examples.map(example => {
   stories.add(
     example.label,
     () => getDisplayElementById(BaseExamples.examples, example.id),
-    getStoryWrapperDecorator(example)
+    getExampleStoryParams(getStoryWrapperDecorator(example))
   );
 });

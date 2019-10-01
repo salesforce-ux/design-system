@@ -16,11 +16,12 @@ class Tab extends Component {
     const css = rollupAdoptedStylesheets([commonStyles, tabStyles]);
 
     return (
-      <Shadow.on name="tab" includes={css}>
+      <Shadow.on name="tab" includes={css} shadow={this.props.shadow}>
         <div
           id={this.props.id}
           className={classNames('lwc-tab', {
-            'lwc-tab__scoped': this.props.variant === 'scoped'
+            'lwc-tab__scoped': this.props.variant === 'scoped',
+            'lwc-tab__vertical': this.props.variant === 'vertical'
           })}
           aria-labelledby={this.props.labelledby}
           role="tabpanel"

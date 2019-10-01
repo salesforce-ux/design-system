@@ -15,16 +15,17 @@ import tabBarStyles from './index.scss';
 class TabBar extends Component {
   render() {
     const tabs = React.Children.toArray(this.props.tabs);
-    const { activeTabIndex, changeActiveTab, variant } = this.props;
+    const { activeTabIndex, changeActiveTab, variant, shadow } = this.props;
     const tabLabels = tabs.map(tab => tab.props.label);
     const css = rollupAdoptedStylesheets([commonStyles, tabBarStyles]);
 
     return (
-      <Shadow.on name="tab-bar" includes={css}>
+      <Shadow.on name="tab-bar" includes={css} shadow={shadow}>
         <ul
           className={classNames('lwc-tab-bar', {
+            'lwc-tab-bar__base': variant === 'base',
             'lwc-tab-bar__scoped': variant === 'scoped',
-            'lwc-tab-bar__base': variant === 'base'
+            'lwc-tab-bar__vertical': variant === 'vertical'
           })}
           role="tablist"
         >
@@ -69,7 +70,7 @@ class TabBar extends Component {
                     </div>
                   ) : null}
 
-                  {label}
+                  <span className="lwc-tab-bar_nav-item-label">{label}</span>
 
                   {endIcon ? (
                     <div className="lwc-tab-bar_nav-item-icon-end">

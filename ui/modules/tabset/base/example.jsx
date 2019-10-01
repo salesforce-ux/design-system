@@ -115,5 +115,61 @@ export const examples = [
         </Tab>
       </Tabset>
     )
+  },
+  {
+    id: 'vertical',
+    label: 'Vertical Tabset',
+    element: (
+      <Tabset variant="vertical">
+        <Tab label="Tab 1">
+          <p>This is tab 1 content</p>
+          <p>It can be any html</p>
+        </Tab>
+
+        <Tab label="Tab 2">
+          <p>This is tab 2 content</p>
+          <p>It can be any html</p>
+        </Tab>
+
+        <Tab label="Tab 3">
+          <p>This is tab 3 content</p>
+          <p>It can be any html</p>
+        </Tab>
+      </Tabset>
+    )
+  },
+  {
+    id: 'vertical-with-icons',
+    label: 'Vertical Tabset with Icons',
+    element: (
+      <Tabset variant="vertical">
+        <Tab
+          label="Opportunities"
+          startIcon={{ sprite: 'standard', symbol: 'opportunity' }}
+        >
+          <p>This is tab 1 content</p>
+          <p>It can be any html</p>
+        </Tab>
+
+        <Tab
+          label="Cases"
+          startIcon={{ sprite: 'standard', symbol: 'case' }}
+          endIcon={{ sprite: 'utility', symbol: 'error' }}
+          endIconAltText="There is an error"
+          endIconColor="error"
+        >
+          <p>This is tab 2 content</p>
+          <p>It can be any html</p>
+        </Tab>
+
+        <Tab
+          label="Products"
+          startIcon={{ sprite: 'standard', symbol: 'product' }}
+        >
+          <p>This is tab 3 content</p>
+          <p>It can be any html</p>
+        </Tab>
+      </Tabset>
+    )
   }
 ];

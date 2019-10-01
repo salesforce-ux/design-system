@@ -7,7 +7,8 @@
 @import '../../../shared/common/init';
 
 /**
- * @name base
+ * @base
+ * @name lwc-tabset
  * @summary Tabset Component
  * @selector .lwc-tabset
  * @restrict div
@@ -15,12 +16,25 @@
  */
 
 /**
- * @summary
+ * @summary Scoped Tabset
  * @selector .lwc-tabset__scoped
  * @restrict .lwc-tabset
  * @modifier
  */
 .lwc-tabset__scoped {
   border: $border-width-thin solid var(--lwc-c-tabset-scoped-color-border, $color-gray-5);
+  border-radius: $border-radius-medium;
+}
+
+/**
+ * @summary Vertical Tabset variant
+ * @selector .lwc-tabset__vertical
+ * @restrict .lwc-tabset
+ * @modifier
+ */
+.lwc-tabset__vertical {
+  display: flex;
+  overflow: hidden;
+  border: $border-width-thin solid $color-border;
   border-radius: $border-radius-medium;
 }

@@ -7,7 +7,7 @@
 @import '../../../shared/common/init';
 
 /**
- * @summary Tabset navigation container
+ * @summary Tabset tab content
  * @selector .lwc-tab
  * @restrict .lwc-tabset div
  */
@@ -17,15 +17,23 @@
 }
 
 /**
- * @summary Tabset navigation container
+ * @summary Scoped Tabset contnet
  * @selector .lwc-tab__scoped
  * @restrict .lwc-tab
  * @modifier
  */
 .lwc-tab__scoped {
-  padding-top: var(--var-spacing-vertical-medium, $var-spacing-vertical-medium);
-  padding-bottom: var(--var-spacing-vertical-medium, $var-spacing-vertical-medium);
   padding-left: var(--var-spacing-horizontal-medium, $var-spacing-horizontal-medium);
   padding-right: var(--var-spacing-horizontal-medium, $var-spacing-horizontal-medium);
 }
 
+/**
+ * @summary Vertical Tabset content
+ * @selector .lwc-tab__scoped
+ * @restrict .lwc-tab
+ * @modifier
+ */
+.lwc-tab__vertical {
+  padding-left: var(--var-spacing-horizontal-medium, $var-spacing-horizontal-medium);
+  padding-right: var(--var-spacing-horizontal-medium, $var-spacing-horizontal-medium);
+}

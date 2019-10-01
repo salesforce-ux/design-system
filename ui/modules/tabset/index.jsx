@@ -30,7 +30,7 @@ class Tabset extends Component {
   }
 
   render() {
-    const { customization, variant } = this.props;
+    const { customization, variant, shadow } = this.props;
     const { activeTabIndex } = this.state;
     const tabChildren = this.props.children[activeTabIndex].props.children;
     const css = rollupAdoptedStylesheets([
@@ -40,7 +40,7 @@ class Tabset extends Component {
     ]);
 
     return (
-      <Shadow.on name="tabset" includes={css}>
+      <Shadow.on name="tabset" includes={css} shadow={shadow}>
         <div
           className={classNames('lwc-tabset', {
             'lwc-tabset__scoped': variant === 'scoped',

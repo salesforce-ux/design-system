@@ -1,11 +1,12 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import uniqueId from 'lodash.uniqueid';
 import { Accordion, AccordionSection } from '../';
 import Card from '../../card';
 
 // Reusable Sample
 
-const AccordionSample = ({ role, children, isExpanded = 0 }) => {
+const AccordionSample = ({ role, children, isExpanded }) => {
   const sampleData = [
     {
       title: 'Accordion summary',
@@ -33,7 +34,7 @@ const AccordionSample = ({ role, children, isExpanded = 0 }) => {
             position={
               (idx === 0 && 'start') || (idx === sampleData.length - 1 && 'end')
             }
-            role={role && 'listitem'}
+            role={role === 'list' && 'listitem'}
           >
             {content}
             {/* Only first section has children as example */}
@@ -42,6 +43,17 @@ const AccordionSample = ({ role, children, isExpanded = 0 }) => {
         ))}
     </Accordion>
   );
+};
+
+AccordionSample.propTypes = {
+  role: PropTypes.string,
+  isExpanded: PropTypes.number,
+  children: PropTypes.instanceOf(Object).isRequired
+};
+
+AccordionSample.defaultProps = {
+  role: 'list',
+  isExpanded: 0
 };
 
 // Default
@@ -72,11 +84,6 @@ export const examples = [
     id: 'has-action-overflow',
     label: 'Has Action Overflow Menu',
     element: <AccordionSample />
-  },
-  {
-    id: 'role-list',
-    label: 'Role - List',
-    element: <AccordionSample role="list" />
   }
 ];
 

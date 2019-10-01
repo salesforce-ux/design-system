@@ -1,4 +1,6 @@
 import CodeView from '../../../shared/components/CodeView';
+import Tabset from './';
+import Tab from './tab';
 import * as TabsetExamples from './base/example';
 import { getDisplayElementById } from '../../shared/helpers';
 
@@ -11,39 +13,45 @@ import { getDisplayElementById } from '../../shared/helpers';
   {TabsetExamples.default}
 </CodeView>
 
-## About Tabset
+## Web Component Composition
 
-The default tab set style encapsulates everything that is underneath it without enclosing it visually. Because tab sets can be nested, pay close attention to the markup. They are constructed to prevent styles from leaking from parent tab sets into child tab sets.
+Tabset is composed of three web components:
+
+### &lt;lightning-tabset&gt;
+
+The `lightning-tabset` custom element is the base container for the Tabset component.
+It renders the `lightning-tab-bar` and the individual `lightning-tab` for the currently
+displayed tab.
+
+<CodeView>{TabsetExamples.default}</CodeView>
+
+### &lt;lightning-tab-bar&gt;
+
+[todo - showcase tab-bar component]
+
+### &lt;lightning-tab&gt;
+
+[todo = showcase tab component]
 
 ## Implementation
-
-### Custom Elements
-
-Tabset is constructed with three custom elements:
-
-- `lightning-tabset`
-- `lightning-tab-bar`
-- `lightning-tab`
-
-#### &lt;lightning-tabset&gt;
-
-### CSS Variables
-
-Tabset has an exposed set of CSS variables, for the optional purpose of customization.
-
-- --lwc-c-tabset-color-border (\$color-gray-7)
-- --lwc-c-tabset-color-tab (\$color-gray-12)
-- --lwc-c-tabset-color-active-text (\$brand-accessible)
-- --lwc-c-tabset-color (\$brand-primary)
-- --lwc-c-tabset-color-active (\$brand-primary-active)
 
 ### Accessibility Requirements
 
 The following markup is crucial for Accessibility
 
+#### Tabset Accessibility
+
+- The Tabset needs to be defined as a tablist with an attribute of `role="tablist"`.
+
+#### TabBar Accessibility
+
+- Each tab’s anchor has an `aria-controls` attribute whose value is the id of the associated panel `<div role="tabpanel">`
 - Selected tab’s anchor has `aria-selected="true"`, all other tabs’ anchors have `aria-selected="false"`
 - Selected tab’s anchor has `tabindex="0"`, all other tabs have `tabindex="-1"`
-- Each tab’s anchor has an `aria-controls` attribute whose value is the id of the associated `<div role="tabpanel">`
+
+#### Tab Accessibility
+
+- Each tab panel needs to be defined as a tabpanel with an attriubute of `role="tabpanel"`
 - Each tab panel has an `aria-labelledby` attribute whose value is the id of its associated `<a role="tab">`
 
 ### Keyboard Interactions
@@ -57,21 +65,11 @@ The following markup is crucial for Accessibility
 
 [rewrite]
 
-### Accessibility [TODO: merge with above or rewrite]
-
-Tabbed UIs have three parts with specific ARIA role requirements:
-
-- The tab list, which should have `role="tablist"`
-- The tabs in that list, which should each be an `<a role="tab">` anchor wrapped in a `<li role="presentation">` list item
-- The tab panels, which display each tab’s content and should each have `role="tabpanel"`
-
 ## Variants and Examples
 
 ### Base
 
-<Example title="Tabs Base">
-  <CodeView style={{ height: '200px' }}>{TabsetExamples.default}</CodeView>
-</Example>
+<CodeView style={{ height: '200px' }}>{TabsetExamples.default}</CodeView>
 
 #### With Overflow
 
@@ -83,18 +81,30 @@ The overflow tab style is provided as a tab item type that acts as a menu compon
 
 Icons can be used with tabs to help users differentiate among them.
 
-<Example title="Tabs With Icons">
-  <CodeView style={{ height: '200px' }}>
-    {getDisplayElementById(TabsetExamples.examples, 'with-start-icon')}
-  </CodeView>
-</Example>
+<CodeView style={{ height: '200px' }}>
+  {getDisplayElementById(TabsetExamples.examples, 'with-start-icon')}
+</CodeView>
 
 #### With End Icon
 
 Alternatively, you can use the end icon to display an icon after the tab's label. This can be used, for example, to communicate when a tab contains a validation error that needs attention.
 
-<Example title="Tab With End Icon">
-  <CodeView style={{ height: '200px' }}>
-    {getDisplayElementById(TabsetExamples.examples, 'with-end-icon')}
-  </CodeView>
-</Example>
+<CodeView style={{ height: '200px' }}>
+  {getDisplayElementById(TabsetExamples.examples, 'with-end-icon')}
+</CodeView>
+
+#### Vertical Tabset
+
+A vertical tabset can also be rendered.
+
+<CodeView style={{ height: '200px' }}>
+  {getDisplayElementById(TabsetExamples.examples, 'vertical')}
+</CodeView>
+
+#### Vertical Tabset with Icons
+
+Vertical tabsets support icons the same way that regular Tabsets do:
+
+<CodeView style={{ height: '200px' }}>
+  {getDisplayElementById(TabsetExamples.examples, 'vertical-with-icons')}
+</CodeView>

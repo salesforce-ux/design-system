@@ -15,7 +15,13 @@ import tabBarStyles from './index.scss';
 class TabBar extends Component {
   render() {
     const tabs = React.Children.toArray(this.props.tabs);
-    const { activeTabIndex, changeActiveTab, variant, shadow } = this.props;
+    const {
+      tabsetId,
+      activeTabIndex,
+      changeActiveTab,
+      variant,
+      shadow
+    } = this.props;
     const tabLabels = tabs.map(tab => tab.props.label);
     const css = rollupAdoptedStylesheets([commonStyles, tabBarStyles]);
 
@@ -52,8 +58,8 @@ class TabBar extends Component {
                   role="tab"
                   tabIndex={isActive ? 0 : -1}
                   aria-selected={isActive}
-                  aria-controls={`tab-default-${i}`}
-                  id={`tab-default-${i}__item`}
+                  aria-controls={`${tabsetId}-${i}`}
+                  id={`${tabsetId}-${i}__item`}
                   className={classNames('lwc-tab-bar_nav-item-link', {
                     'slds-is-active': isActive
                   })}

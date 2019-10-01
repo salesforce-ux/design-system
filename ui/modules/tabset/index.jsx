@@ -4,6 +4,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import uniqueId from 'lodash.uniqueid';
 
 import Tab from './tab';
 import TabBar from './tab-bar';
@@ -30,8 +31,9 @@ class Tabset extends Component {
   }
 
   render() {
-    const { customization, variant, shadow } = this.props;
+    const { id, variant, customization, shadow } = this.props;
     const { activeTabIndex } = this.state;
+    const activeTabId = `${id}-${activeTabIndex}`;
     const tabChildren = this.props.children[activeTabIndex].props.children;
     const css = rollupAdoptedStylesheets([
       commonStyles,
@@ -48,6 +50,7 @@ class Tabset extends Component {
           })}
         >
           <TabBar
+            tabsetId={id}
             tabs={this.props.children}
             activeTabIndex={activeTabIndex}
             changeActiveTab={this.changeActiveTab}
@@ -55,7 +58,8 @@ class Tabset extends Component {
           />
 
           <Tab
-            labelledby={`tab-default-${activeTabIndex}__item`}
+            tabId={activeTabId}
+            labelledby={`${activeTabId}__item`}
             variant={variant}
           >
             {tabChildren}
@@ -67,11 +71,13 @@ class Tabset extends Component {
 }
 
 Tabset.propTypes = {
+  id: PropTypes.string,
   variant: PropTypes.oneOf(['base', 'scoped', 'vertical']),
   activeTabValue: PropTypes.number
 };
 
 Tabset.defaultProps = {
+  id: uniqueId('tabset-'),
   variant: 'base',
   activeTabIndex: 0
 };

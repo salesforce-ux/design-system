@@ -1,6 +1,12 @@
 <!-- Release notes authoring guidelines: http://keepachangelog.com/ -->
 <!-- On release, add general notes here. In time the legacy release notes will be add to this -->
 
+## 2.10.1 - October 2, 2019
+
+## Changed
+
+- All mobile/touch enhancements are now scoped `slds-is-mobile`. The scoping class should be applied to the `html/body` element.
+
 ## 2.10.0 - August 22, 2019
 
 - Update color swatch to latest token values

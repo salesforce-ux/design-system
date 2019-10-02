@@ -1,0 +1,8 @@
+{
+  "name": "pill",
+  "variant": "base",
+  "version": "3.0.0-dev",
+  "description": "Salesforce Lightning Design System - Pill component blueprint",
+  "author": "Salesforce",
+  "license": "SEE LICENSE IN README.md"
+}

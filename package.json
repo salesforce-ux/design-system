@@ -251,5 +251,13 @@
   "@std/esm": {
     "cjs": true,
     "esm": "js"
+  },
+  "lwc": {
+    "modules": [
+      {
+        "name": "@salesforce/slds/legacy",
+        "path": "assets/styles/salesforce-lightning-design-system-sanitized.css"
+      }
+    ]
   }
 }

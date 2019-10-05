@@ -1,0 +1,118 @@
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+// ------------
+// Init
+// ------------
+@import '../../../shared/common/init';
+
+/**
+ * @summary Initializes pill
+ * @name base
+ * @selector .lwc-pill
+ * @restrict span
+ * @support dev-ready
+ * @variant
+ */
+
+.lwc-pill {
+  border: var(--lwc-c-pill-border-width, $border-width-thin) solid var(--lwc-c-pill-color-border, $color-border);
+  border-radius: var(--lwc-c-pill-radius, $border-radius-medium);
+  background-color: var(--lwc-c-pill-color-background, $color-background-alt);
+  padding: $spacing-xxx-small;
+  min-height: $height-pill;
+  display: inline-flex;
+  align-items: center;
+  max-width: 100%; // Required to make the container shrink when truncated
+
+  &:hover {
+    background-color: var(--lwc-c-pill-color-background-active, $color-background);
+  }
+
+  &:focus,
+  &:focus-within {
+    outline: 0;
+    border-radius: var(--lwc-c-pill-radius, $border-radius-medium);
+    border-color: var(--lwc-c-pill-color-border-active, var(--lwc-brand-primary-active, $brand-primary-active));
+    box-shadow: var(--lwc-c-pill-shadow-active, $shadow-button-focus);
+  }
+}
+
+/**
+  * Wrapper that contains an icon or avatar that sits to the left of the label
+  *
+  * @selector .lwc-pill__media
+  * @restrict .lwc-pill span
+  */
+
+.lwc-pill__media {
+  --lwc-c-icon-size: 1.25rem;
+  height: var(--lwc-c-icon-size);
+  margin-right: $spacing-xxx-small;
+}
+
+/**
+  * Line of text inside a pill
+  *
+  * @selector .lwc-pill__label
+  * @restrict .lwc-pill span
+  */
+
+.lwc-pill__label {
+  padding: 0 $spacing-xxx-small;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/**
+  * Link wrapping around the label when the pill has an URL
+  *
+  * @selector .lwc-pill__action
+  * @restrict .lwc-pill a
+  */
+
+.lwc-pill__action {
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  &:focus {
+    outline: 0;
+    border-color: transparent;
+    box-shadow: none;
+    text-decoration: underline;
+  }
+}
+
+/**
+  * Wrapper that contains the remove icon in pill that sits to the right of the label
+  *
+  * @selector .lwc-pill__remove
+  * @restrict .lwc-pill span
+  */
+
+.lwc-pill__remove {
+  --lwc-c-icon-size: 0.875rem;
+  margin-left: $spacing-xxx-small;
+  margin-top: ($spacing-xxx-small * -1);
+}
+
+/**
+ * Pill error variation
+ *
+ * @selector .lwc-pill_has-error
+ * @restrict .lwc-pill
+ * @modifier
+ */
+
+.lwc-pill_has-error {
+  --lwc-c-pill-color-border: $color-border-error;
+  --lwc-c-pill-color-border-active: $color-border-error;
+
+  .lwc-pill__label {
+    font-weight: $font-weight-bold;
+    color: $color-text-error;
+  }
+}

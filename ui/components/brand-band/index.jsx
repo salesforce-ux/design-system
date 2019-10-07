@@ -4,8 +4,7 @@
 import React, { Component } from 'react';
 import classNames from 'classnames';
 
-const tokenSet = require('../../../design-tokens/dist/theme-one-salesforce.json');
-let tokenValue = tokenSet.BRAND_BACKGROUND_PRIMARY;
+let tokenValue = 'rgb(176, 196, 223)';
 
 export const BrandBand = props => (
   <div

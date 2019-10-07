@@ -9,12 +9,12 @@
  * @variant
  */
 .slds-progress-bar {
+  @include appearance(none);
   display: block;
   width: 100%;
   height: ($progress-bar-height * 4);
   background: $progress-bar-color-background;
   border: 0;
-  appearance: none;
   position: relative;
 
   /**

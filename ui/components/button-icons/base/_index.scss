@@ -101,7 +101,7 @@
  * @restrict .slds-button_icon
  */
 .slds-button_icon-brand {
-  @include button-brand;
+  @include button-icon-brand;
 
   &[disabled],
   &:disabled {

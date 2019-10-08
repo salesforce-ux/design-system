@@ -16,7 +16,7 @@ export default () => {
   const componentList = getComponents();
 
   // load component files / kitchen sinks
-  const req = require.context('../ui/', true, /\.stories\.js$/);
+  const req = require.context('../ui/components/', true, /\.stories\.js$/);
   req.keys().forEach(filename => req(filename));
 
   // create stories for each component / variant from example files

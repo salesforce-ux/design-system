@@ -3,10 +3,10 @@ import { withA11y } from '@storybook/addon-a11y';
 import { initializeRTL } from 'storybook-addon-rtl';
 
 import loadStories from './stories';
-import sldsTheme from './sldsTheme';
+import sldsTheme from '../shared/storybook/sldsTheme';
 
 import '../ui/index.scss'; // load slds css
-import './scss/ui/index.scss'; // Our custom Storybook presentation styles
+import '../shared/storybook/scss/ui/index.scss'; // Our custom Storybook presentation styles
 import '../shared/styles/doc.scss'; // docs styles
 
 initializeRTL();

@@ -4,8 +4,8 @@
   "version": "3.0.0-dev",
   "author": "Salesforce",
   "slds": {
-    "name": "Winter ’20",
-    "id": "222"
+    "name": "Spring ’20",
+    "id": "224"
   },
   "important": [
     "'private' and 'config.slds.internal' should have the same value",
@@ -14,12 +14,12 @@
   "private": false,
   "config": {
     "slds": {
-      "internal": false
+      "internal": true
     },
     "search": {
       "appId": "B2KKG101RI",
       "apiKey": "f289c1dd954797a3e57158c04a897d46",
-      "indexName": "winter-20"
+      "indexName": "spring-20"
     }
   },
   "devDependencies": {
@@ -35,6 +35,7 @@
     "@babel/runtime": "7.5.4",
     "@epegzz/sass-vars-loader": "4.3.1",
     "@mdx-js/loader": "1.4.5",
+    "@mdx-js/mdx": "1.0.18",
     "@salesforce-ux/build-server-api": "2.0.2",
     "@salesforce-ux/create-snap": "0.0.6",
     "@salesforce-ux/design-system-markup": "2.0.2",
@@ -83,7 +84,8 @@
     "eslint-plugin-promise": "4.0.1",
     "eslint-plugin-react": "7.11.1",
     "eslint-plugin-standard": "4.0.0",
-    "express": "4.15.4",
+    "event-stream": "3.3.4",
+    "express": "4.17.1",
     "fs-extra": "2.1.2",
     "futurize": "1.2.0",
     "glob": "7.1.1",
@@ -91,13 +93,13 @@
     "gulp-autoprefixer": "3.1.1",
     "gulp-axe-webdriver": "3.0.1",
     "gulp-cached": "1.1.1",
+    "gulp-clean-css": "4.2.0",
     "gulp-cli": "2.0.1",
     "gulp-eslint": "5.0.0",
     "gulp-file": "0.4.0",
     "gulp-htmlhint": "0.3.1",
     "gulp-insert": "0.5.0",
     "gulp-lintspaces": "0.5.0",
-    "gulp-minify-css": "1.2.4",
     "gulp-plumber": "1.1.0",
     "gulp-postcss": "6.4.0",
     "gulp-rename": "1.2.2",
@@ -115,9 +117,10 @@
     "isomorphic-fetch": "2.2.1",
     "jest": "24.8.0",
     "js-beautify": "1.6.12",
-    "js-yaml": "3.8.3",
+    "js-yaml": "3.13.1",
     "lint-staged": "4.0.4",
-    "lodash": "4.17.4",
+    "lodash": "4.17.15",
+    "lodash-inflection": "1.5.0",
     "lodash.get": "4.4.2",
     "lodash.omit": "4.5.0",
     "lodash.range": "3.2.0",
@@ -130,7 +133,7 @@
     "mdxc": "1.0.0",
     "ms": "2.1.1",
     "nconf": "0.10.0",
-    "no-case": "2.3.1",
+    "no-case": "2.3.2",
     "node-sass": "4.5.2",
     "plugin-error": "1.0.1",
     "postcss": "5.2.16",
@@ -141,6 +144,7 @@
     "prettier": "1.17.0",
     "prop-types": "15.6.0",
     "puppeteer": "0.10.1",
+    "query-ast": "1.0.2",
     "raw-loader": "0.5.1",
     "react": "16.9.0",
     "react-dom": "16.9.0",
@@ -151,15 +155,16 @@
     "resolve-url-loader": "3.1.0",
     "rimraf": "2.6.1",
     "sass-loader": "6.0.6",
-    "scss-parser": "1.0.0",
+    "scss-inline-imports": "1.0.5",
+    "scss-parser": "1.0.3",
     "semver": "5.5.1",
     "simple-git": "1.107.0",
+    "storybook-addon-rtl": "0.2.2",
     "strip-indent": "2.0.0",
     "style-loader": "0.19.0",
     "styled-components": "4.2.0",
     "stylelint": "7.10.1",
     "stylelint-config-slds": "1.0.7",
-    "stylestats": "7.0.1",
     "theo": "7.0.1",
     "thread-loader": "1.1.5",
     "through2": "2.0.3",
@@ -185,6 +190,7 @@
   "scripts": {
     "build": "npm run gulp -- build",
     "dist": "npm run gulp -- dist",
+    "dist:ui-json": "npm run gulp -- dist:ui-json",
     "gulp": "babel-node --max-old-space-size=4096 ./node_modules/gulp/bin/gulp.js",
     "lint": "npm run gulp -- lint",
     "start": "npm run build && npm run previewer",
@@ -275,6 +281,10 @@
       {
         "name": "@salesforce/slds/spinner",
         "path": "ui/modules/spinner/base/index.css"
+      },
+      {
+        "name": "@salesforce/slds/legacy",
+        "path": "assets/styles/salesforce-lightning-design-system-sanitized.css"
       }
     ]
   }

@@ -1,17 +1,15 @@
 import { configure, addDecorator, addParameters } from '@storybook/react';
 import { withA11y } from '@storybook/addon-a11y';
+import { initializeRTL } from 'storybook-addon-rtl';
 
+import loadStories from './stories';
 import sldsTheme from '../shared/storybook/sldsTheme';
 
 import '../ui/index.scss'; // load slds css
 import '../shared/storybook/scss/ui/index.scss'; // Our custom Storybook presentation styles
 import '../shared/styles/doc.scss'; // docs styles
 
-const req = require.context('../ui/components', true, /\.stories\.js$/);
-
-function loadStories() {
-  req.keys().forEach(filename => req(filename));
-}
+initializeRTL();
 
 // Global Decorators
 // https://storybook.js.org/addons/introduction/#1-decorators

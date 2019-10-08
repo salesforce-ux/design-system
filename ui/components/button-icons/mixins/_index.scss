@@ -13,3 +13,27 @@
     color: $color-text-button-default-disabled;
   }
 }
+
+@mixin button-icon-brand {
+  background-color: $brand-accessible;
+  border-color: $brand-accessible;
+  color: $color-text-brand-primary;
+
+  &:link,
+  &:visited,
+  &:active {
+    color: $color-text-brand-primary;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $brand-accessible-active;
+    border-color: $brand-accessible-active;
+    color: $color-text-brand-primary;
+  }
+
+  &:active {
+    background-color: $brand-accessible-active;
+    border-color: $brand-accessible-active;
+  }
+}

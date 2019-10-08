@@ -21,3 +21,4 @@ props:
   BUTTON_LINE_HEIGHT_TOUCH:
     value: 2.65rem
     comment: Line height for touch screens
+    deprecated: true

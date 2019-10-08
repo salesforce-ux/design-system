@@ -21,6 +21,7 @@
  * @restrict .slds-button_icon
  * @support dev-ready
  * @variant
+ * @lwc
  */
 .slds-button_icon-container.slds-is-selected,
 .slds-button--icon-container.slds-is-selected,
@@ -28,7 +29,7 @@
 .slds-button--icon-border.slds-is-selected,
 .slds-button_icon-border-filled.slds-is-selected,
 .slds-button_icon-border-inverse.slds-is-selected {
-  @include button-brand;
+  @include button-icon-brand;
 
   .slds-button__icon {
     fill: $color-text-button-brand;

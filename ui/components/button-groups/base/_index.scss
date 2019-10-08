@@ -137,3 +137,34 @@
 // Sometimes Pragmatism wins and sometimes she loses. This time she won.
 //
 // The end of the story of button-groups.
+
+/**
+ * @name stacked
+ * @summary Layout modifier for the button-group variant that causes the layout to become stacked
+ * @selector .slds-button-group_stacked
+ * @restrict .slds-button-group
+ * @modifier
+ * @group layout
+ */
+.slds-button-group_stacked {
+  @include touch-device {
+    display: block;
+
+    .slds-button {
+      width: 100%;
+    }
+
+    .slds-button + .slds-button {
+      border-top: 0;
+      margin-left: 0;
+    }
+
+    .slds-button:first-child {
+      border-radius: $border-radius-medium $border-radius-medium 0 0;
+    }
+
+    .slds-button:last-child {
+      border-radius: 0 0 $border-radius-medium $border-radius-medium;
+    }
+  }
+}

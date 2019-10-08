@@ -2,7 +2,7 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 @mixin range-thumb {
-  appearance: none;
+  @include appearance(none);
   width: $slider-handle-size;
   height: $slider-handle-size;
   border-radius: 50%;
@@ -46,7 +46,7 @@
  * @restrict input
  */
 .slds-slider__range {
-  appearance: none;
+  @include appearance(none);
   width: 100%;
   background: transparent;
   border-radius: $border-radius-small;

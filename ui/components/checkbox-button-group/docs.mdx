@@ -1,32 +1,42 @@
 import CodeView from '../../../shared/components/CodeView';
+import Blockquote from '../../../shared/components/Blockquote';
 import { getDisplayElementById } from '../../shared/helpers';
 import * as Base from './base/example';
 
 <div className="doc lead">
-  A styled checkable input group that communicates if an option(s) are true, false or indeterminate
+  A styled checkable input group that communicates if an option(s) are true,
+  false or indeterminate
 </div>
 
-<CodeView exampleOnly>
-  {Base.default}
-</CodeView>
+<CodeView exampleOnly>{Base.default}</CodeView>
 
 ## About Checkbox-button-group
 
 The checkbox-button-group is a set of [checkbox buttons](/components/checkbox-button) wrapped in a fieldset that is also a [form element](/components/form-element). It is described by a legend with the classes `slds-form-element__legend` and `slds-form-element__label` applied to it.
 
 ## Base
-<CodeView>
-  {Base.default}
-</CodeView>
+
+<CodeView>{Base.default}</CodeView>
+
+### Variations
+
+#### Stacked
+
+A stacked modifier that accounts for the limited width of mobile devices. It's recommended to use the stacked modifier when you have 3 or more options.
+
+<Blockquote type="note" header="Mobile Only">
+  The <code>.slds-checkbox_button-group_stacked</code> modifier only affects
+  mobile devices, all other devices will show the default layout.
+</Blockquote>
+
+<CodeView>{getDisplayElementById(Base.examples, 'touch-stacked')}</CodeView>
 
 ## States
 
 ### Has Error
-<CodeView>
-  { getDisplayElementById(Base.states, 'has-error') }
-</CodeView>
+
+<CodeView>{getDisplayElementById(Base.states, 'has-error')}</CodeView>
 
 ### Disabled
-<CodeView>
-  { getDisplayElementById(Base.states, 'disabled') }
-</CodeView>
+
+<CodeView>{getDisplayElementById(Base.states, 'disabled')}</CodeView>

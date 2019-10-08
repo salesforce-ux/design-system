@@ -95,7 +95,7 @@ You are able to navigate between panels but interacting with the `slds-carousel_
 
 
 <Blockquote header="Accessibility" type="a11y">
-  A panel becomes visible by toggling the <code className="doc">aria-hidden</code> attribute from <code className="doc">false</code> to <code className="doc">true</code> on the <code className="doc">slds-carousel__panel</code> element. When a panel becomes active, the `tabindex` of the other non-visible panels should be set to -1 while the active panel remains at 0.
+  A panel becomes visible by toggling the <code>aria-hidden</code> attribute from <code>false</code> to <code>true</code> on the <code>slds-carousel__panel</code> element. When a panel becomes active, the `tabindex` of the other non-visible panels should be set to -1 while the active panel remains at 0.
 </Blockquote>
 
 When a panel becomes active, apply an inline style to `slds-carousel__panel` to move the panels left to right. We do this by updating the location of the panel on its Y axis using transforms. The first panel should be `transform: translateX(0%)` but when any precedding panel becomes active it can be subtracted by 100%, moving 100% of each panel to the left. For example, panel 1 would be visible at `transform: translateX(0%)`, while panel 3 would be visible at `transform: translateX(-200%)`.
@@ -107,7 +107,7 @@ When making the `slds-carousel__panel` active, the indicator should be updated w
 If the Carousel is set to auto-play, a pause button is required to be first in the HTML before the tab set.
 
 <Blockquote header="Accessibility" type="a11y">
-  When that pause button is interacted with, the <code className="doc">aria-pressed</code> role needs to be toggled to <code className="doc">true</code>.
+  When that pause button is interacted with, the <code>aria-pressed</code> role needs to be toggled to <code>true</code>.
 </Blockquote>
 
 <Example title="carousel-autoplay">

@@ -35,7 +35,7 @@ class CodeBlock extends Component {
     this.setState({ open: !this.state.open });
   }
 
-  getCode() {
+  getCode(lines) {
     const { children } = this.props;
     const element = React.isValidElement(children)
       ? mapElement(children, (child, index) => {
@@ -50,13 +50,16 @@ class CodeBlock extends Component {
     return beautify(element ? sanitizedMarkup : '');
   }
 
-  getHighlightedCode() {
+  getHighlightedCode(lines) {
     const { language } = this.props;
-    return highlight(this.getCode(), language);
+    return highlight(this.getCode(lines), language);
   }
 
   render() {
     const { language, toggleCode = true } = this.props;
+    const { open } = this.state;
+    const codeLines = open ? null : 3;
+
     return (
       <StyledCodeBlock className="docs-codeblock-source">
         <ul className="docs-codeblock__action-bar">
@@ -82,7 +85,7 @@ class CodeBlock extends Component {
             <code
               className={`language-${language}`}
               dangerouslySetInnerHTML={{
-                __html: this.getHighlightedCode()
+                __html: this.getHighlightedCode(codeLines)
               }}
             />
           </pre>

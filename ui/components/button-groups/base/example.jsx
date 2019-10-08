@@ -422,5 +422,49 @@ export let examples = [
         </div>
       </ButtonGroup>
     )
+  },
+  {
+    id: 'touch-stacked',
+    label: 'Stacked (Touch Only)',
+    element: (
+      <ButtonGroup className="slds-button-group_stacked">
+        <Button isNeutral>Refresh</Button>
+        <Button isNeutral>Edit</Button>
+        <Button isNeutral>Save</Button>
+      </ButtonGroup>
+    )
+  },
+  {
+    id: 'touch-stacked-disabled',
+    label: 'Stacked - Disabled (Touch Only)',
+    element: (
+      <ButtonGroup className="slds-button-group_stacked">
+        <Button isNeutral disabled>
+          Refresh
+        </Button>
+        <Button isNeutral disabled>
+          Edit
+        </Button>
+        <Button isNeutral disabled>
+          Save
+        </Button>
+      </ButtonGroup>
+    )
+  },
+  {
+    id: 'touch-stacked-inverse',
+    label: 'Stacked - Inverse (Touch Only)',
+    element: (
+      <div
+        className="demo-only"
+        style={{ padding: '0.5rem', background: '#16325c' }}
+      >
+        <ButtonGroup className="slds-button-group_stacked">
+          <Button isInverse>Refresh</Button>
+          <Button isInverse>Edit</Button>
+          <Button isInverse>Save</Button>
+        </ButtonGroup>
+      </div>
+    )
   }
 ];

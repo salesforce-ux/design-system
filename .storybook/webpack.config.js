@@ -1,9 +1,34 @@
 const path = require('path');
+const paths = require('../scripts/helpers/paths');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const addClasses = require('rehype-add-classes');
 
-const paths = require('../scripts/helpers/paths');
-const tags = require('../shared/storybook/docs/tags');
+const tags = [
+  'p',
+  'div',
+  'a',
+  'em',
+  'strong',
+  'ol',
+  'ul',
+  'li',
+  'code',
+  'blockquote',
+  'pre',
+  'tr',
+  'td',
+  'th',
+  'table',
+  'thead',
+  'tbody',
+  'h1',
+  'h2',
+  'h3',
+  'h4',
+  'h5',
+  'h6'
+];
+const tagsString = tags.reduce((tags, tag) => `${tags},${tag}`);
 
 module.exports = async ({ config, mode }) => {
   config.module.rules.push(
@@ -63,7 +88,6 @@ module.exports = async ({ config, mode }) => {
     },
     {
       test: /\.mdx$/,
-      include: [path.resolve(__dirname, '../ui')],
       use: [
         {
           loader: 'babel-loader'
@@ -71,7 +95,7 @@ module.exports = async ({ config, mode }) => {
         {
           loader: '@mdx-js/loader',
           options: {
-            rehypePlugins: [[addClasses, { [tags]: 'doc' }]]
+            rehypePlugins: [[addClasses, { [tagsString]: 'doc' }]]
           }
         }
       ]

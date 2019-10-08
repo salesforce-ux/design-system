@@ -8,10 +8,23 @@ import * as RadioButtonGroupExamples from './base/example';
   A styled select list that can have a single entry checked at any one time.
 </div>
 
-## Base
+## Default
+
+<CodeView>{RadioButtonGroupExamples.default}</CodeView>
+
+### Variations
+
+#### Stacked
+
+A stacked modifier that accounts for the limited width of mobile devices. It's recommended to use the stacked modifier when you have 3 or more options.
+
+<Blockquote type="note" header="Mobile Only">
+  The <code>.slds-radio_button-group_stacked</code> modifier only affects mobile
+  devices, all other devices will show the default layout.
+</Blockquote>
 
 <CodeView>
-  {RadioButtonGroupExamples.default}
+  {getDisplayElementById(RadioButtonGroupExamples.examples, 'touch-stacked')}
 </CodeView>
 
 ### States

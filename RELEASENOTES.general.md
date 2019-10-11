@@ -1,6 +1,8 @@
 <!-- Release notes authoring guidelines: http://keepachangelog.com/ -->
 <!-- On release, add general notes here. In time the legacy release notes will be add to this -->
 
+## 2.10.2 - October 10, 2019
+
 ## 2.10.1 - October 2, 2019
 
 ## Changed

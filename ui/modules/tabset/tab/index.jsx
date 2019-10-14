@@ -9,7 +9,7 @@ import { rollupAdoptedStylesheets } from '../../../shared/shadow/helpers';
 import Shadow from '../../../shared/shadow';
 
 import commonStyles from '../../common/index.scss';
-import tabStyles from './index.scss';
+import tabStyles from '../base/index.scss';
 
 class Tab extends Component {
   render() {

@@ -275,6 +275,10 @@
       {
         "name": "@salesforce/slds/spinner",
         "path": "ui/modules/spinner/base/index.css"
+      },
+      {
+        "name": "@salesforce/slds/tabset",
+        "path": "ui/modules/tabset/base/index.css"
       }
     ]
   }

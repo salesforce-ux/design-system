@@ -10,7 +10,7 @@ import Shadow from '../../../shared/shadow';
 import { rollupAdoptedStylesheets } from '../../../shared/shadow/helpers';
 
 import commonStyles from '../../common/index.scss';
-import tabBarStyles from './index.scss';
+import tabBarStyles from '../base/index.scss';
 
 class TabBar extends Component {
   render() {

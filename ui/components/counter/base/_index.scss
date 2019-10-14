@@ -21,7 +21,7 @@
   }
 
   &::-webkit-inner-spin-button {
-    appearance: none;
+    @include appearance(none);
     margin: 0;
   }
 }

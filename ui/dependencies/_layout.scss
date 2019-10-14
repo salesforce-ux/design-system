@@ -55,6 +55,14 @@
 
 // Touch-enabled devices without hover
 @mixin touch-device {
+
+  .slds-is-mobile & {
+    @content;
+  }
+}
+
+// Touch-enabled devices without hover
+@mixin has-touch {
   @media (pointer: coarse) and (hover: none) {
     @content;
   }

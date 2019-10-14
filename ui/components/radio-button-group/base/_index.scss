@@ -18,6 +18,44 @@
 }
 
 /**
+ * @name stacked
+ * @summary Layout modifier for the radio-button-group variant that causes the layout to become stacked
+ * @selector .slds-radio_button-group_stacked
+ * @restrict .slds-radio_button-group
+ * @modifier
+ * @group layout
+ */
+.slds-radio_button-group_stacked {
+  // This is a modifier of a variant, ignore the incorrect underscore used,
+  // currently only specced to touch devices
+  @include touch-device {
+    display: block;
+
+    .slds-radio_button {
+      display: block;
+    }
+
+    .slds-radio_button + .slds-radio_button {
+      border-left: 0;
+      border-top: $border-width-thin solid $color-border;
+    }
+
+    .slds-radio_button:first-child > .slds-radio_button__label {
+      border-radius: $border-radius-medium $border-radius-medium 0 0;
+    }
+
+    .slds-radio_button:last-child > .slds-radio_button__label {
+      border-radius: 0 0 $border-radius-medium $border-radius-medium;
+    }
+
+    .slds-radio_button__label {
+      display: block;
+      text-align: center;
+    }
+  }
+}
+
+/**
  * @selector .slds-radio_button
  * @restrict .slds-radio_button-group span
  */

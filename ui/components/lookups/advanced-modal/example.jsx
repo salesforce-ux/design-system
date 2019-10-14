@@ -24,6 +24,9 @@ export default (
           data-select="multi"
           data-scope="single"
           data-typeahead="true"
+          role="combobox"
+          aria-haspopup="listbox"
+          aria-expanded="true"
         >
           <div className="slds-form-element slds-p-top_medium slds-p-horizontal_medium slds-m-bottom_small">
             <label className="slds-form-element__label" htmlFor="lookup">
@@ -40,15 +43,17 @@ export default (
                 className="slds-input"
                 type="text"
                 aria-haspopup="true"
-                aria-autocomplete="list"
-                role="combobox"
+                role="textbox"
                 aria-activedescendant=""
+                aria-autocomplete="list"
+                aria-controls="lookup-grouped-table-id-1"
               />
             </div>
           </div>
           <table
             className="slds-table slds-table_bordered slds-table_cell-buffer slds-no-row-hover"
             role="listbox"
+            id="lookup-grouped-table-id-1"
           >
             <thead>
               <tr>

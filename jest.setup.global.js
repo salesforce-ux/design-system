@@ -9,8 +9,6 @@ import path from 'path';
 import puppeteer from 'puppeteer';
 import { argv } from 'yargs';
 
-import { watch } from './gulpfile';
-
 // Needed for Jest workers
 process.env.JEST_UPDATE_SNAPSHOTS = argv.u === true;
 
@@ -98,5 +96,4 @@ app.post('/api/getMarkupAndStyle', bodyParser.text(), async (req, res) => {
 module.exports = async () => {
   server = await startServer(12345);
   browser = await puppeteer.launch({ args: ['--no-sandbox'] });
-  if (argv.watch) watch();
 };

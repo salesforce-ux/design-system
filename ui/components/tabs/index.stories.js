@@ -7,7 +7,8 @@ import * as SubTabsExamples from './sub-tabs/example';
 import { getAllDisplayCollectionsByType } from '../../shared/helpers';
 import StoryFrame from '../../../shared/components/StoryFrame';
 
-import '../../index.scss';
+import DocsPage from '../../../.storybook/components/DocsPage';
+import Docs from './docs.mdx';
 
 const examples = [
   BaseExamples,
@@ -22,15 +23,22 @@ const kitchenSink = getAllDisplayCollectionsByType(examples, [
   'states'
 ]);
 
-storiesOf('Components/Tabs', module).add('Kitchen Sink', () =>
-  kitchenSink.map((element, idx) =>
-    element.map(({ label, component }) => (
-      <StoryFrame
-        component={component}
-        label={label}
-        styles={`min-height: 10rem`}
-        key={`kitchen-sink-${label}-${idx}`}
-      />
-    ))
-  )
+storiesOf('Components/Tabs', module).add(
+  'Kitchen Sink',
+  () =>
+    kitchenSink.map((element, idx) =>
+      element.map(({ label, component }) => (
+        <StoryFrame
+          component={component}
+          label={label}
+          styles={`min-height: 10rem`}
+          key={`kitchen-sink-${label}-${idx}`}
+        />
+      ))
+    ),
+  {
+    docs: {
+      page: () => <DocsPage title="Tabs" Docs={Docs} />
+    }
+  }
 );

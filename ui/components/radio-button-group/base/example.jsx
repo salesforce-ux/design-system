@@ -3,6 +3,7 @@
 
 import React from 'react';
 import classNames from 'classnames';
+import uniqueId from 'lodash.uniqueid';
 import { FormElementControl } from '../../form-element/';
 import { Fieldset, Legend } from '../../radio-group/base/example';
 
@@ -11,131 +12,122 @@ import { Fieldset, Legend } from '../../radio-group/base/example';
 /// ////////////////////////////////////////
 
 export let RadioButtonGroup = props => (
-  <div className="slds-radio_button-group">{props.children}</div>
+  <div className={classNames('slds-radio_button-group', props.className)}>
+    {props.children}
+  </div>
 );
 
-export let RadioButton = props => (
-  <span
-    className={classNames('slds-button slds-radio_button', props.className)}
-  >
-    <input
-      name="radio"
-      type="radio"
-      id={props.id}
-      value={props.id}
-      disabled={props.disabled}
-      aria-describedby={props.errorId}
-      defaultChecked={props.checked}
-    />
-    <label className="slds-radio_button__label" htmlFor={props.id}>
-      <span className="slds-radio_faux">{props.children}</span>
-    </label>
-  </span>
-);
+export let RadioButton = props => {
+  const exampleId = uniqueId('example-unique-id-');
+
+  return (
+    <span
+      className={classNames('slds-button slds-radio_button', props.className)}
+    >
+      <input
+        name={props.name}
+        type="radio"
+        id={exampleId}
+        value={props.id}
+        disabled={props.disabled}
+        aria-describedby={props.errorId}
+        defaultChecked={props.checked}
+      />
+      <label className="slds-radio_button__label" htmlFor={exampleId}>
+        <span className="slds-radio_faux">{props.children}</span>
+      </label>
+    </span>
+  );
+};
+
+const ExampleRadioButtonGroup = ({
+  legend,
+  modifier,
+  disabled,
+  required,
+  hasError
+}) => {
+  const exampleName = uniqueId('example-unique-name-');
+  const exampleErrorId = uniqueId('example-unique-id');
+
+  return (
+    <Fieldset className={hasError && 'slds-has-error'}>
+      <Legend>
+        {required && (
+          <abbr className="slds-required" title="required">
+            *
+          </abbr>
+        )}
+        {!legend && 'Radio Group Label'}
+      </Legend>
+      <FormElementControl>
+        <RadioButtonGroup className={modifier}>
+          <RadioButton id="monday" name={exampleName} disabled={disabled}>
+            Mon
+          </RadioButton>
+          <RadioButton id="tuesday" name={exampleName} disabled={disabled}>
+            Tue
+          </RadioButton>
+          <RadioButton id="wednesday" name={exampleName} disabled={disabled}>
+            Wed
+          </RadioButton>
+          <RadioButton id="thursday" name={exampleName} disabled={disabled}>
+            Thu
+          </RadioButton>
+          <RadioButton id="friday" name={exampleName} disabled={disabled}>
+            Fri
+          </RadioButton>
+        </RadioButtonGroup>
+        {hasError && (
+          <div id={exampleErrorId} className="slds-form-element__help">
+            This field is required
+          </div>
+        )}
+      </FormElementControl>
+    </Fieldset>
+  );
+};
 
 /// ////////////////////////////////////////
 // Export
 /// ////////////////////////////////////////
 
-export default (
-  <Fieldset>
-    <Legend>Radio Group Label</Legend>
-    <FormElementControl>
-      <RadioButtonGroup>
-        <RadioButton id="monday">Mon</RadioButton>
-        <RadioButton id="tuesday">Tue</RadioButton>
-        <RadioButton id="wednesday">Wed</RadioButton>
-        <RadioButton id="thursday">Thu</RadioButton>
-        <RadioButton id="friday">Fri</RadioButton>
-      </RadioButtonGroup>
-    </FormElementControl>
-  </Fieldset>
-);
+export default <ExampleRadioButtonGroup />;
+
+export const examples = [
+  {
+    id: 'touch-stacked',
+    label: 'Stacked (Touch Only)',
+    element: (
+      <ExampleRadioButtonGroup modifier="slds-radio_button-group_stacked" />
+    )
+  },
+  {
+    id: 'touch-stacked-disabled',
+    label: 'Stacked - Disabled (Touch Only)',
+    element: (
+      <ExampleRadioButtonGroup
+        modifier="slds-radio_button-group_stacked"
+        disabled
+      />
+    )
+  }
+];
 
 export let states = [
   {
     id: 'disabled',
     label: 'Disabled',
-    element: (
-      <Fieldset>
-        <Legend>Radio Group Label</Legend>
-        <FormElementControl>
-          <RadioButtonGroup>
-            <RadioButton id="monday" disabled="true">
-              Mon
-            </RadioButton>
-            <RadioButton id="tuesday" disabled="true">
-              Tue
-            </RadioButton>
-            <RadioButton id="wednesday" disabled="true">
-              Wed
-            </RadioButton>
-            <RadioButton id="thursday" disabled="true">
-              Thu
-            </RadioButton>
-            <RadioButton id="friday" disabled="true">
-              Fri
-            </RadioButton>
-          </RadioButtonGroup>
-        </FormElementControl>
-      </Fieldset>
-    )
+    element: <ExampleRadioButtonGroup disabled />
   },
   {
     id: 'required',
     label: 'Required',
-    element: (
-      <Fieldset>
-        <Legend>
-          <abbr className="slds-required" title="required">
-            *
-          </abbr>Radio Group Label
-        </Legend>
-        <FormElementControl>
-          <RadioButtonGroup>
-            <RadioButton id="monday">Mon</RadioButton>
-            <RadioButton id="tuesday">Tue</RadioButton>
-            <RadioButton id="wednesday">Wed</RadioButton>
-            <RadioButton id="thursday">Thu</RadioButton>
-            <RadioButton id="friday">Fri</RadioButton>
-          </RadioButtonGroup>
-        </FormElementControl>
-      </Fieldset>
-    )
+    element: <ExampleRadioButtonGroup required />
   },
   {
     id: 'error',
     label: 'Has error',
-    element: (
-      <Fieldset className="slds-has-error">
-        <Legend>
-          <abbr className="slds-required" title="required">
-            *
-          </abbr>Radio Group Label
-        </Legend>
-        <FormElementControl>
-          <RadioButtonGroup>
-            <RadioButton errorId="error_01" id="monday">
-              Mon
-            </RadioButton>
-            <RadioButton errorId="error_01" id="tuesday">
-              Tue
-            </RadioButton>
-            <RadioButton errorId="error_01" id="wednesday">
-              Wed
-            </RadioButton>
-            <RadioButton errorId="error_01" id="thursday">
-              Thu
-            </RadioButton>
-            <RadioButton errorId="error_01" id="friday">
-              Fri
-            </RadioButton>
-          </RadioButtonGroup>
-          <div id="error_01" className="slds-form-element__help">
-            This field is required
-          </div>
-        </FormElementControl>
-      </Fieldset>
-    )
+    element: <ExampleRadioButtonGroup required hasError />
   }
 ];

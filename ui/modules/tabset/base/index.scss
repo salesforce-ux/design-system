@@ -44,7 +44,7 @@
  * @selector .lwc-tab
  * @restrict .lwc-tabset div
  */
- .lwc-tab {
+.lwc-tab {
   padding-top: var(--var-spacing-vertical-medium, $var-spacing-vertical-medium);
   padding-bottom: var(--var-spacing-vertical-medium, $var-spacing-vertical-medium);
 }
@@ -68,7 +68,7 @@
  * @selector .lwc-tab-bar_nav-item-link
  * @restrict .lwc-tab-bar_nav-item > a, .lwc-tab-bar_nav-item > button
  */
- .lwc-tab-bar_nav-item-link {
+.lwc-tab-bar_nav-item-link {
   position: relative;
   display: flex;
   align-items: center;
@@ -185,7 +185,9 @@
     margin-bottom: ($border-width-thin * -1);
     border-left: $border-width-thin solid transparent;
     border-right: $border-width-thin solid transparent;
+    // stylelint-disable function-calc-no-unspaced-operator
     padding-bottom: var(calc(--var-spacing-vertical-small + $border-width-thin), calc($var-spacing-vertical-small + $border-width-thin));
+    // stylelint-enable function-calc-no-unspaced-operator
 
     &.slds-is-active {
       border-color: var(--lwc-c-tabset-scoped-color-border, $color-gray-5);
@@ -230,7 +232,9 @@
 
     &.slds-is-active {
       margin-right: ($border-width-thin * -1);
+      // stylelint-disable function-calc-no-unspaced-operator
       padding-right: var(calc(--var-spacing-horizontal-small + $border-width-thin), calc($var-spacing-horizontal-small + $border-width-thin));
+      // stylelint-enable function-calc-no-unspaced-operator
       background: var(--lwc-c-tabset-vertical-color-background-active, $color-gray-1);
       color: var(--lwc-c-tabset-vertical-color-text-active, $brand-accessible);
     }

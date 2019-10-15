@@ -283,6 +283,10 @@
         "path": "ui/modules/spinner/base/index.css"
       },
       {
+        "name": "@salesforce/slds/tabset",
+        "path": "ui/modules/tabset/base/index.css"
+      },
+      {
         "name": "@salesforce/slds/legacy",
         "path": "assets/styles/salesforce-lightning-design-system-sanitized.css"
       }

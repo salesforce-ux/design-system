@@ -1,0 +1,110 @@
+import CodeView from '../../../shared/components/CodeView';
+import Tabset from './';
+import Tab from './tab';
+import * as TabsetExamples from './base/example';
+import { getDisplayElementById } from '../../shared/helpers';
+
+<div className="lead">
+  Tabsets keep related content in a single container that is shown and hidden
+  through navigation.
+</div>
+
+<CodeView exampleOnly style={{ height: '200px' }}>
+  {TabsetExamples.default}
+</CodeView>
+
+## Web Component Composition
+
+Tabset is composed of three web components:
+
+### &lt;lightning-tabset&gt;
+
+The `lightning-tabset` custom element is the base container for the Tabset component.
+It renders the `lightning-tab-bar` and the individual `lightning-tab` for the currently
+displayed tab.
+
+<CodeView>{TabsetExamples.default}</CodeView>
+
+### &lt;lightning-tab-bar&gt;
+
+[todo - showcase tab-bar component]
+
+### &lt;lightning-tab&gt;
+
+[todo = showcase tab component]
+
+## Implementation
+
+### Accessibility Requirements
+
+The following markup is crucial for Accessibility
+
+#### Tabset Accessibility
+
+- The Tabset needs to be defined as a tablist with an attribute of `role="tablist"`.
+
+#### TabBar Accessibility
+
+- Each tab’s anchor has an `aria-controls` attribute whose value is the id of the associated panel `<div role="tabpanel">`
+- Selected tab’s anchor has `aria-selected="true"`, all other tabs’ anchors have `aria-selected="false"`
+- Selected tab’s anchor has `tabindex="0"`, all other tabs have `tabindex="-1"`
+
+#### Tab Accessibility
+
+- Each tab panel needs to be defined as a tabpanel with an attriubute of `role="tabpanel"`
+- Each tab panel has an `aria-labelledby` attribute whose value is the id of its associated `<a role="tab">`
+
+### Keyboard Interactions
+
+- Arrow keys, when focus is on a selected tab, cycle selection to the next or previous tab
+- Tab key, when focus is before the tab list, moves focus to the selected tab
+- Tab key, when focus is on selected tab, moves focus into the selected tab’s associated tab panel or to the next focusable element on the page if that panel has no focusable elements
+- Shift+Tab keys, when focus is on first element in a tab panel, moves focus back to the selected tab
+
+### JavaScript Needs
+
+[rewrite]
+
+## Variants and Examples
+
+### Base
+
+<CodeView style={{ height: '200px' }}>{TabsetExamples.default}</CodeView>
+
+#### With Overflow
+
+The overflow tab style is provided as a tab item type that acts as a menu component and appears as a tab item. It could contain those tab items that don't all fit in a horizontal orientation.
+
+[todo: waiting on menu]
+
+#### With Icon
+
+Icons can be used with tabs to help users differentiate among them.
+
+<CodeView style={{ height: '200px' }}>
+  {getDisplayElementById(TabsetExamples.examples, 'with-start-icon')}
+</CodeView>
+
+#### With End Icon
+
+Alternatively, you can use the end icon to display an icon after the tab's label. This can be used, for example, to communicate when a tab contains a validation error that needs attention.
+
+<CodeView style={{ height: '200px' }}>
+  {getDisplayElementById(TabsetExamples.examples, 'with-end-icon')}
+</CodeView>
+
+#### Vertical Tabset
+
+A vertical tabset can also be rendered.
+
+<CodeView style={{ height: '200px' }}>
+  {getDisplayElementById(TabsetExamples.examples, 'vertical')}
+</CodeView>
+
+#### Vertical Tabset with Icons
+
+Vertical tabsets support icons the same way that regular Tabsets do:
+
+<CodeView style={{ height: '200px' }}>
+  {getDisplayElementById(TabsetExamples.examples, 'vertical-with-icons')}
+</CodeView>

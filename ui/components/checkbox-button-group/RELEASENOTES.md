@@ -6,9 +6,9 @@
 
 ## 2.11.0
 
-### Added
+### Changed
 
-- New `.slds-checkbox_button-group_stacked` modifier that creates a stacked layout on mobile devices to account for their limited screen width.
+- For mobile devices, checkbox button groups stack vertically to account for the limited horizontal space of mobile screens.
 
 ## 2.10.0
 

@@ -94,26 +94,6 @@ const ExampleRadioButtonGroup = ({
 
 export default <ExampleRadioButtonGroup />;
 
-export const examples = [
-  {
-    id: 'touch-stacked',
-    label: 'Stacked (Touch Only)',
-    element: (
-      <ExampleRadioButtonGroup modifier="slds-radio_button-group_stacked" />
-    )
-  },
-  {
-    id: 'touch-stacked-disabled',
-    label: 'Stacked - Disabled (Touch Only)',
-    element: (
-      <ExampleRadioButtonGroup
-        modifier="slds-radio_button-group_stacked"
-        disabled
-      />
-    )
-  }
-];
-
 export let states = [
   {
     id: 'disabled',

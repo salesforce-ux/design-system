@@ -4,12 +4,6 @@
 
 <!-- ## [Unreleased] -->
 
-## 2.11.0
-
-### Added
-
-- New `.slds-button-group_stacked` modifier that creates a stacked layout on mobile devices to account for their limited screen width.
-
 ## 2.10.0
 
 ### Changed

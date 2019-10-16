@@ -1,0 +1,111 @@
+import CodeView from '../../../shared/components/CodeView';
+import { getDisplayElementById } from '../../shared/helpers';
+import * as Base from './base/example';
+
+<div className="doc lead">
+  An avatar component represents an object or entity
+</div>
+
+<CodeView exampleOnly>
+  {Base.default}
+</CodeView>
+
+## About Avatar
+An avatar can be circular or a rounded rectangle, depending on usage. The default is a rounded rectangle and requires `.lwc-avatar` as the base class.
+
+## Base
+
+An image is the preferred format for an avatar.
+
+<CodeView>
+  {Base.default}
+</CodeView>
+
+## Initials
+
+### Fallback User Initials
+
+If an image is unavailable, up to two letters can be used instead.
+
+If the record name contains two words, like first and last name, use the first capitalized letter of each.
+
+For the background color, set the value of the `--lwc-c-avatar-color-background` custom CSS property to the desired color (e.g `--lwc-c-avatar-color-background: #123abc`)
+
+<CodeView>
+  { getDisplayElementById(Base.examples, 'fallback-user-initials') }
+</CodeView>
+
+### Fallback User Inverse
+
+Used for initials that are dark text on light background
+
+<CodeView>
+  { getDisplayElementById(Base.examples, 'fallback-user-initials-inverse') }
+</CodeView>
+
+### Fallback Entity Initials
+
+For records that only have a single word name, use the first two letters of that word using one capital and one lower case letter. The background color should match the entity or object icon.
+
+<CodeView>
+  { getDisplayElementById(Base.examples, 'fallback-entity-initials') }
+</CodeView>
+
+### Icon
+
+If no image or initials are available, the fallback should be the icon for the entity or object.
+
+#### Fallback User Icon
+<CodeView>
+  { getDisplayElementById(Base.examples, 'fallback-user-icon') }
+</CodeView>
+
+#### Fallback Entity Icon
+<CodeView>
+  { getDisplayElementById(Base.examples, 'fallback-entity-icon') }
+</CodeView>
+
+## Background Image
+
+It is possible to use the background of the avatar for the image. Set the value of the `--lwc-c-avatar-background-image` custom CSS property to the URL of the image, (e.g `--lwc-c-avatar-background-image: url(/path/to/my/image)`)
+
+<CodeView>
+  { getDisplayElementById(Base.examples, 'profile-icon') }
+  { getDisplayElementById(Base.examples, 'group-icon') }
+</CodeView>
+
+## Layout
+
+### Circle
+Use a circle for all people-oriented objects that could potentially render as avatars. For a fully round avatar, add the `.lwc-avatar_circle` class. Four additional classes are available for sizing.
+
+<CodeView>
+  { getDisplayElementById(Base.examples, 'circle') }
+</CodeView>
+
+## Sizes
+Four classes are available for sizing.
+
+### X-Small
+
+<CodeView toggleCode={false}>
+  {getDisplayElementById(Base.examples, 'x-small-image')}
+</CodeView>
+
+### Small
+
+<CodeView toggleCode={false}>
+  {getDisplayElementById(Base.examples, 'small-image')}
+</CodeView>
+
+### Medium
+
+<CodeView toggleCode={false}>
+  {getDisplayElementById(Base.examples, 'medium-image')}
+</CodeView>
+
+### Large
+
+<CodeView toggleCode={false}>
+  {getDisplayElementById(Base.examples, 'large-image')}
+</CodeView>

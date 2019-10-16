@@ -247,6 +247,10 @@
         "path": "ui/modules/accordion/base/index.css"
       },
       {
+        "name": "@salesforce/slds/avatar",
+        "path": "ui/modules/avatar/base/index.css"
+      },
+      {
         "name": "@salesforce/slds/button",
         "path": "ui/modules/button/base/index.css"
       },

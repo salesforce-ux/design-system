@@ -1,0 +1,185 @@
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+// ------------
+// Init
+// ------------
+@import '../../../shared/common/init';
+
+// Image Defaults tokens
+$_c-avatar-user-default: '/assets/images/profile_avatar_200.png';
+$_c-avatar-user-default-medium: '/assets/images/profile_avatar_160.png';
+$_c-avatar-user-default-small: '/assets/images/profile_avatar_96.png';
+$_c-avatar-group-default: '/assets/images/group_avatar_200.png';
+$_c-avatar-group-default-medium: '/assets/images/group_avatar_160.png';
+$_c-avatar-group-default-small: '/assets/images/group_avatar_96.png';
+
+
+// Sizing Tokens
+$_c-avatar-large: $square-icon-large-boundary;
+$_c-avatar-medium: $square-icon-medium-boundary;
+$_c-avatar-small: $square-icon-small-boundary;
+$_c-avatar-x-small: $square-icon-x-small-boundary;
+
+$_c-avatar-user-color-background: #34becd;
+$_c-avatar-user-color-background-inverse: $color-background;
+$_c-avatar-entity-color-background: #7f8de1;
+
+/**
+ * An image is the preferred format for an avatar
+ *
+ * @summary Creates an avatar component
+ * @name base
+ * @selector .lwc-avatar
+ * @restrict div, span, a
+ * @support dev-ready
+ * @variant
+ */
+.lwc-avatar {
+  @include square($_c-avatar-medium);
+  --lwc-c-icon-size: $_c-avatar-medium;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+  border-radius: $border-radius-medium;
+  line-height: $line-height-reset;
+  font-size: $font-size-4;
+  color: var(--lwc-c-avatar-color-text, $color-text-inverse);
+
+  &:hover,
+  &:focus:hover {
+    color: currentColor;
+  }
+}
+
+/**
+ * If an image is unavailable, up to two letters can be used instead.
+ * If the record name contains two words, like first and last name, use
+ * the first capitalized letter of each. For records that only have a
+ * single word name, use the first two letters of that word using one
+ * capital and one lower case letter. The background color should match
+ * the entity or object icon. If no image or initials are available,
+ * the fallback should be the icon for the entity or object.
+ *
+ * @name initials
+ * @summary Used for initials inside an avatar
+ * @selector .lwc-avatar__initials
+ * @restrict .lwc-avatar abbr
+ * @support dev-ready
+ * @variant
+ */
+.lwc-avatar__initials {
+  @include absolute-center;
+  height: 100%;
+  text-shadow: 0 0 1px rgba(0, 0, 0, 0.8);
+  background-color: var(--lwc-c-avatar-color-background, $_c-avatar-user-color-background); // this is the value of icon-standard-user
+
+  &[title] { // This selector with title attribute (specificity) gets rid of a bug where the question cursor flashes for a split second as the mouse hits the .lwc-avatar. Since we can't rely on someone always including it, the main selector leaves it off.
+    cursor: default;
+    text-decoration: none;
+  }
+
+  &:hover {
+    color: var(--lwc-c-avatar-color-text-hover, $color-text-inverse);
+    cursor: default;
+  }
+}
+
+/**
+ * @name inversed
+ * @summary Used for initials that are dark text on light background
+ * @selector .lwc-avatar__initials_inverse
+ * @restrict .lwc-avatar__initials
+ * @modifier
+ * @group color
+ */
+.lwc-avatar__initials_inverse {
+  background-color: var(--lwc-c-avatar-color-background, $_c-avatar-user-color-background-inverse);
+  color: var(--lwc-c-avatar-color-text, $color-text-weak);
+  text-shadow: none;
+
+  // combat abbr override styling in avatar
+  &:hover {
+    color: var(--lwc-c-avatar-color-text-hover, $color-text-weak);
+  }
+}
+
+/**
+  * @name Background Image
+  * @summary Uses the background in the avatar image
+  * @selector .lwc-avatar_background-image
+  * @restrict .lwc-avatar
+  */
+.lwc-avatar_background-image {
+  background: top left / cover no-repeat;
+  background-image: var(--lwc-c-avatar-background-image, url($_c-avatar-user-default));
+}
+
+/**
+ * @name x-small
+ * @summary Size modifier for avatars - X-Small
+ * @selector .lwc-avatar_x-small
+ * @restrict .lwc-avatar
+ * @modifier
+ * @group size
+ */
+.lwc-avatar_x-small {
+  @include square($_c-avatar-x-small);
+  --lwc-c-icon-size: $_c-avatar-x-small;
+  font-size: $font-size-1;
+}
+
+/**
+* @name small
+* @summary Size modifier for avatars - Small
+* @selector .lwc-avatar_small
+* @restrict .lwc-avatar
+* @modifier
+* @group size
+*/
+.lwc-avatar_small {
+  @include square($_c-avatar-small);
+  --lwc-c-icon-size: $_c-avatar-small;
+  font-size: $font-size-1;
+}
+
+/**
+* @name medium
+* @summary Size modifier for avatars - Medium
+* @selector .lwc-avatar_medium
+* @restrict .lwc-avatar
+* @modifier
+* @group size
+*/
+.lwc-avatar_medium {
+  @include square($_c-avatar-medium);
+  --lwc-c-icon-size: $_c-avatar-medium;
+  font-size: $font-size-4;
+}
+
+/**
+* @name large
+* @summary Size modifier for avatars - Large
+* @selector .lwc-avatar_large
+* @restrict .lwc-avatar
+* @modifier
+* @group size
+*/
+.lwc-avatar_large {
+  @include square($_c-avatar-large);
+  --lwc-c-icon-size: $_c-avatar-large;
+  font-size: $font-size-6;
+  line-height: $line-height-heading;
+}
+
+/**
+* @name circle
+* @summary Make avatar a circle
+* @selector .lwc-avatar_circle
+* @restrict .lwc-avatar
+* @modifier
+* @group radius
+*/
+.lwc-avatar_circle {
+  border-radius: $border-radius-circle;
+}

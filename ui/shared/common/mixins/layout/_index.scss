@@ -1,6 +1,14 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
+@mixin absolute-center {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  margin: auto;
+}
+
 $mq-x-small: 320px !default;
 $mq-small: 480px !default;
 $mq-medium: 768px !default;

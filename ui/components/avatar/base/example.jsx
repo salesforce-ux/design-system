@@ -157,6 +157,42 @@ export let examples = [
       </Avatar>
     )
   },
+  {
+    id: 'x-small-icon',
+    label: 'X-Small Icon',
+    element: (
+      <Avatar className="slds-avatar_circle slds-avatar_x-small">
+        <AvatarIcon symbol="user" />
+      </Avatar>
+    )
+  },
+  {
+    id: 'small-icon',
+    label: 'Small Icon',
+    element: (
+      <Avatar className="slds-avatar_circle slds-avatar_small">
+        <AvatarIcon symbol="user" />
+      </Avatar>
+    )
+  },
+  {
+    id: 'medium-icon',
+    label: 'Medium Icon',
+    element: (
+      <Avatar className="slds-avatar_circle slds-avatar_medium">
+        <AvatarIcon symbol="user" />
+      </Avatar>
+    )
+  },
+  {
+    id: 'large-icon',
+    label: 'Large Icon',
+    element: (
+      <Avatar className="slds-avatar_circle slds-avatar_large">
+        <AvatarIcon symbol="user" />
+      </Avatar>
+    )
+  },
 
   {
     id: 'linked-avatar',

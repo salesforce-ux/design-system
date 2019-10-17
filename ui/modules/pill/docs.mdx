@@ -5,10 +5,69 @@ import * as PillExamples from './base/example';
 import { getDisplayElementById } from '../../shared/helpers';
 
 <div className="lead doc">
-  A pill represents an object that can be viewed with or without an icon.
+  A pill represents a dismissible object that can be viewed with or without an icon.
 </div>
 
 ## About Pills
 
+The Pill component is composed of a span with class `lwc-pill` containing text wrapped in a span wtih class `lwc-pill__label`. 
 
-## Base
+To make a Pill dismissible, a Button Icon is included to the right-hand side of `slds-pill__label`, or, in the case of a clickable Pill, to the right of `lwc-pill__action` (see the Linked Text example below). The span containing the Button Icon should have the class `lwc-pill__remove` and the Button Icon should use the "X" icon.
+
+### Accessibility
+
+<Blockquote type="a11y" header="Accessibility Note">
+  Clickable events should only be placed on elements that are inherently clickable. For Pills, this means on linked text and/or the dismiss button only. The Pill as a whole should not have a click event.
+</Blockquote>
+
+## Default
+
+<CodeView>
+  {PillExamples.default}
+</CodeView>
+
+## States
+
+When an error occurs in an interaction with a Pill, the containing span (`lwc-pill`) gains the addditional class `lwc-pill_has-error`.
+
+<CodeView>
+  {getDisplayElementById(PillExamples.states, 'pill-error')}
+</CodeView>
+
+## Examples
+
+### Linked Text
+
+To make a Pill clickable, `lwc-pill__label` may be contained inside a link with class `lwc-pill__action`. 
+
+The link should also have the title attribute matching the label text in case the text gets truncated.
+
+<CodeView>
+  {getDisplayElementById(PillExamples.examples, 'pill-link')}
+</CodeView>
+
+### With Icon
+
+Additionally, a pill may have an Icon or Avatar that sits to the left-hand side of the `lwc-pill__label`, or, in the case of a clickable Pill, to the left of `lwc-pill__action`. The span containing the media object (Icon or Avatar) should have the class `lwc-pill__media`.
+
+<CodeView>
+  {getDisplayElementById(PillExamples.examples, 'pill-icon')}
+</CodeView>
+
+### With Icon and Linked Text
+
+To make a Pill clickable, `lwc-pill__label` may be contained inside a link with class `lwc-pill__action`. Icons and Avatars sit next to the link and not inside it. 
+
+The link should also have the title attribute matching the label text in case the text gets truncated.
+
+<CodeView>
+  {getDisplayElementById(PillExamples.examples, 'pill-icon-link')}
+</CodeView>
+
+### With Truncated Text
+
+Truncation is built into the Pill component. The maximum width is set by the parent containing the Pill.
+
+<CodeView>
+  {getDisplayElementById(PillExamples.examples, 'pill-truncated')}
+</CodeView>

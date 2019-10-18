@@ -26,7 +26,6 @@
  * @summary Initializes menu subheader
  * @selector .lwc-menu-subheader
  * @restrict .lwc-menu div[role=separator]
- * @required
  */
 .lwc-menu-subheader {
   @include truncate;
@@ -46,7 +45,6 @@
  * @summary Initializes menu separator
  * @selector .lwc-menu-separator
  * @restrict .lwc-menu div[role=separator]
- * @required
  */
 .lwc-menu-separator {
   border-top: $border-width-thin solid var(--lwc-c-menu-separator-border-color, $color-border);
@@ -61,7 +59,6 @@
  * @summary Initializes menu item
  * @selector .lwc-menuitem
  * @restrict .lwc-menu div
- * @required
  */
 
 /**
@@ -69,7 +66,6 @@
  *
  * @selector .lwc-menuitem__content
  * @restrict .lwc-menuitem > a
- * @required
  */
 .lwc-menuitem__content {
   padding: $spacing-x-small $spacing-small;
@@ -117,7 +113,7 @@
    * @group notification
    */
   &.lwc-menuitem_action {
-    color: var(--lwc-c-menuitem_action-color-text, $brand-text-link);
+    color: var(--lwc-c-menuitem-action-color-text, $brand-text-link);
   }
 
   /**
@@ -178,7 +174,6 @@
  *
  * @selector .lwc-menuitem__title
  * @restrict .lwc-menuitem > .lwc-menuitem__content > div
- * @required
  */
 .lwc-menuitem__title {
   @include truncate;
@@ -190,21 +185,18 @@
  *
  * @selector .lwc-menuitem__check-icon
  * @restrict .lwc-menuitem__content > span
- * @required
  */
 /**
  * @summary Menuitem start icon wrapper
  *
  * @selector .lwc-menuitem__start-icon
  * @restrict .lwc-menuitem__content > span
- * @required
  */
 /**
  * @summary Menuitem end icon wrapper
  *
  * @selector .lwc-menuitem__end-icon
  * @restrict .lwc-menuitem__content > span
- * @required
  */
 .lwc-menuitem__check-icon,
 .lwc-menuitem__start-icon,

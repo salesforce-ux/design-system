@@ -251,6 +251,10 @@
         "path": "ui/modules/avatar/base/index.css"
       },
       {
+        "name": "@salesforce/slds/badge",
+        "path": "ui/modules/badge/base/index.css"
+      },
+      {
         "name": "@salesforce/slds/button",
         "path": "ui/modules/button/base/index.css"
       },

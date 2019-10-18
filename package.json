@@ -263,6 +263,10 @@
         "path": "ui/modules/button-group/base/index.css"
       },
       {
+        "name": "@salesforce/slds/buttonMenu",
+        "path": "ui/modules/button-menu/base/index.css"
+      },
+      {
         "name": "@salesforce/slds/card",
         "path": "ui/modules/card/base/index.css"
       },
@@ -271,8 +275,16 @@
         "path": "ui/modules/common/index.css"
       },
       {
+        "name": "@salesforce/slds/dropdownContainer",
+        "path": "ui/modules/dropdown-container/index.css"
+      },
+      {
         "name": "@salesforce/slds/icon",
         "path": "ui/modules/icon/base/index.css"
+      },
+      {
+        "name": "@salesforce/slds/menu",
+        "path": "ui/modules/menu/base/index.css"
       },
       {
         "name": "@salesforce/slds/modal",

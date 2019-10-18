@@ -1,0 +1,28 @@
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+// ------------
+// Init
+// ------------
+@import '../../../shared/common/init';
+
+// ------------
+// Private
+// ------------
+
+// ------------
+// Component
+// ------------
+
+/**
+ * @summary Initializes button-menu
+ * @name base
+ * @selector .lwc-button-menu
+ * @restrict div
+ * @support dev-ready
+ * @notes
+ */
+.lwc-button-menu {
+  display: inline-block;
+  position: relative;
+}

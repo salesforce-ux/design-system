@@ -31,8 +31,10 @@ class ButtonIcon extends Component {
       size,
       boundarySize,
       disabled,
+      hasPopup,
       isPressed,
       title,
+      isExpanded,
       type,
       variant,
       position,
@@ -74,6 +76,8 @@ class ButtonIcon extends Component {
           aria-pressed={
             type === 'stateful' ? isPressed || this.state.isPressed : null
           }
+          aria-haspopup={hasPopup}
+          aria-expanded={isExpanded}
           title={title}
           onClick={type === 'stateful' ? this.handlePressed : onClick}
         >
@@ -102,9 +106,11 @@ ButtonIcon.propTypes = {
   boundarySize: PropTypes.string,
   isPressed: PropTypes.bool,
   disabled: PropTypes.bool,
+  hasPopup: PropTypes.bool,
   variant: PropTypes.string,
   position: PropTypes.oneOf(['start', 'end']),
   title: PropTypes.string,
+  isExpanded: PropTypes.bool,
   shadow: PropTypes.bool,
   customization: PropTypes.node,
   assistiveText: PropTypes.string

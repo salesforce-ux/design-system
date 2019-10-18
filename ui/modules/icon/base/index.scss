@@ -53,6 +53,19 @@ $_c-icon-action-padding-xx-small: rem(2px);
 
 :host {
   @include icon-base;
+  // These aren't used by us but by platform.
+  // LWC doesn't have access to getToken(name) method, only Aura does and was used to grab the paths to the icons.
+  // LWC needs them as CSS props. 🤷‍
+  --lwc-c-icon-action-sprite: '/_slds/icons/action-sprite/svg/symbols.svg';
+  --lwc-c-icon-action-sprite-rtl: '/_slds/icons/action-sprite/svg/symbols_rtl.svg';
+  --lwc-c-icon-custom-sprite: '/_slds/icons/custom-sprite/svg/symbols.svg';
+  --lwc-c-icon-custom-sprite-rtl: '/_slds/icons/custom-sprite/svg/symbols_rtl.svg';
+  --lwc-c-icon-doctype-sprite: '/_slds/icons/doctype-sprite/svg/symbols.svg';
+  --lwc-c-icon-doctype-sprite-rtl: '/_slds/icons/doctype-sprite/svg/symbols_rtl.svg';
+  --lwc-c-icon-standard-sprite: '/_slds/icons/standard-sprite/svg/symbols.svg';
+  --lwc-c-icon-standard-sprite-rtl: '/_slds/icons/standard-sprite/svg/symbols_rtl.svg';
+  --lwc-c-icon-utility-sprite: '/_slds/icons/utility-sprite/svg/symbols.svg';
+  --lwc-c-icon-utility-sprite-rtl: '/_slds/icons/utility-sprite/svg/symbols_rtl.svg';
 }
 
 /**

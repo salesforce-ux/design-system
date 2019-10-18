@@ -148,7 +148,7 @@
     "node-sass": "4.5.2",
     "openport": "0.0.4",
     "plugin-error": "1.0.1",
-    "postcss": "5.2.16",
+    "postcss": "7.0.18",
     "postcss-loader": "3.0.0",
     "postcss-nested-props": "2.0.0",
     "postcss-scss": "1.0.6",

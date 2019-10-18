@@ -32,6 +32,15 @@
 - For mobile devices, radio button groups stack vertically to account for the limited horizontal space of mobile screens.
 <!-- ## [VERSION] -->
 
+## Utilities
+### [Line Clamp](https://www.lightningdesignsystem.com/utilities/line-clamp)
+#### Added
+- Added Line Clamp utility with four modifier options:
+  - `.slds-line-clamp` - clamps at 3 lines, value provided by `line-clamp` token.
+  - `.slds-line-clamp_small` - clamps at 3 lines
+  - `.slds-line-clamp_medium` - clamps at 5 lines
+  - `.slds-line-clamp_large` - clamps at 7 lines
+
 ## Release 2.10.0 - August 22, 2019
 
 - Update color swatch to latest token values

@@ -32,6 +32,12 @@
 - For mobile devices, radio button groups stack vertically to account for the limited horizontal space of mobile screens.
 <!-- ## [VERSION] -->
 
+### [Slider](https://www.lightningdesignsystem.com/components/slider)
+#### Changed
+- For mobile devices:
+  - Increased the tap target size of the slider thumb to `$height-tappble (2rem)` for increased usability.
+  - Minor layout and spacing adjustments to account for the larger slider thumb
+
 ## Utilities
 ### [Line Clamp](https://www.lightningdesignsystem.com/utilities/line-clamp)
 #### Added

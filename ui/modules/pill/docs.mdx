@@ -64,7 +64,13 @@ Additionally, a pill may have an Icon or Avatar that sits to the left-hand side 
 
 ### With Icon and Linked Text
 
+If a pill allows the user to take action, such as providing an href to an external source, `lwc-pill__label` may be contained inside a link with class `lwc-pill__action`.
+
 For better accessibility, Icons and Avatars sit next to the linked text and not inside it.
+
+<Blockquote type="a11y" header="Accessibility Note">
+  In Pills, the link should include the title attribute with text matching the label in case the text gets truncated.
+</Blockquote>
 
 <CodeView>
   {getDisplayElementById(PillExamples.examples, 'pill-icon-link')}

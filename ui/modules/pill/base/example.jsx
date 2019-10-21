@@ -1,15 +1,10 @@
 import React from 'react';
-import styled from 'styled-components';
 
 import Pill from '../';
 
-const Truncate = styled.div`
-  width: 6rem;
-`;
-
 export default <Pill>Label</Pill>;
 
-export const examples = [
+export let examples = [
   {
     id: 'pill-link',
     label: 'Pill with link',
@@ -47,15 +42,14 @@ export const examples = [
   {
     id: 'pill-truncated',
     label: 'Pill with truncated content',
+    demoStyles: 'width: 3rem;',
     element: (
-      <Truncate>
-        <Pill>Pill label that is longer than the area that contains it</Pill>
-      </Truncate>
+      <Pill>Pill label that is longer than the area that contains it</Pill>
     )
   }
 ];
 
-export const states = [
+export let states = [
   {
     id: 'pill-error',
     label: 'Pill with error',

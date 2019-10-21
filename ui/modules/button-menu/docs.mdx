@@ -1,0 +1,627 @@
+import CodeView from '../../../shared/components/CodeView';
+import CodeBlock from '../../../shared/components/CodeBlock';
+import Blockquote from '../../../shared/components/Blockquote';
+import ButtonMenu from './';
+import MenuSubheader from '../menu/menu-subheader';
+import MenuSeparator from '../menu/menu-separator';
+import Menuitem from '../menu/menuitem';
+import * as ButtonMenuExamples from './base/example';
+import { getDisplayElementById } from '../../shared/helpers';
+
+<div className="doc lead">
+  A Button Menu offers a list of options, actions, or functions that a user can access after clicking a <code>button-icon</code> trigger.
+</div>
+
+<CodeView exampleOnly style={`height: 9rem;`}>
+  {ButtonMenuExamples.default}
+</CodeView>
+
+## Structure of a Button Menu
+
+A Button Menu begins with a container `div` element with the class of `.lwc-button-menu`. This container holds the `button-icon` trigger element and a dropdown container custom element that contains a `div` element with the class `.lwc-dropdown-container`. The dropdown container holds the menu list custom element that contains a `div` element with the class `.lwc-menu` and has a `role="menu"`. The menu should contain a slot where items will be placed.
+
+<CodeBlock toggleCode={false}>
+  <ButtonMenu title="Show more" isOpen />
+</CodeBlock>
+
+## Accessibility
+
+### Markup and Components
+
+- The menu trigger is a focusable element (`a` or `button`) with `aria-haspopup="true"`
+- The menu has `role="menu"` and an `aria-label` attribute whose value is the name of the menu trigger
+- The menu items have the following roles depending on the selection options:
+  - items cannot be selected: `role="menuitem"`
+  - multiple items can be selected: `role="menuitemcheckbox"`
+  - only a single item can be selected: `role="menuitemradio"`
+
+### Keyboard Interactions
+
+The main thing that distinguishes button-menus from other popover blocks is keyboard navigation: elsewhere, users press the Tab key to navigate through actionable items, but in a menu, users press the arrow keys to navigate.
+
+- Arrow keys cycle focus through menu items (you should use JavaScript to disable focus for any disabled items)
+- If a menu item opens a submenu, pressing Enter or the right arrow key opens the submenu and focus goes to the first item in the submenu
+- If a submenu is open, pressing the left arrow key closes the submenu and puts focus back on the menu item that opened the submenu
+- Tab key closes the menu and moves focus to the next focusable element on the page
+- Esc key closes the menu and moves focus back to the menu trigger
+- Any character key moves focus to the next menu item that starts with that character, if applicable
+
+
+
+## Default open state
+
+A standard Button Menu with the dropdown visible.
+
+<CodeView style={`height: 9rem;`}>
+  {getDisplayElementById(ButtonMenuExamples.examples, 'default')}
+</CodeView>
+
+
+## Default closed state
+
+A standard Button Menu with the dropdown hidden.
+
+<CodeView>
+  {getDisplayElementById(ButtonMenuExamples.examples, 'closed')}
+</CodeView>
+
+
+## With some items disabled
+
+<Blockquote type="a11y" header="Disabled items">
+  A disabled item's `a` element must have the `aria-disabled` attribute set to "true". JavaScript should be used to skip over these items during keyboard navigation with the arrow keys.
+</Blockquote>
+
+### Sample disabled item
+
+<CodeBlock toggleCode={true}>
+  <Menuitem
+    label="Beta"
+    url="/url/to/beta"
+    disabled
+  />
+</CodeBlock>
+
+### Example menu with some items disabled
+
+<CodeView style={`height: 13rem;`}>
+  {getDisplayElementById(ButtonMenuExamples.examples, 'with-disabled')}
+</CodeView>
+
+
+## With subheaders
+
+Subheaders are used to add clarity to a logically grouped set of items.
+
+<Blockquote type="a11y" header="Accessible Role">
+  A subheading must have `role="separator"` on the `div.lwc-menu-subheader` element and the content inside that same element should be in a `span`.
+</Blockquote>
+
+### Sample subheader item
+
+<CodeBlock toggleCode={true}>
+  <MenuSubheader label="Canadian Provinces" />
+</CodeBlock>
+
+### Example with subheaders
+
+<CodeView style={`height: 20rem;`}>
+  {getDisplayElementById(ButtonMenuExamples.examples, 'with-subheaders')}
+</CodeView>
+
+
+## With separators
+
+Separators are used to create separation between two menu items. This could be to add some breathing space or create separation between sets of items.
+
+<Blockquote type="a11y" header="Accessible Role">
+  A separator must have `role="separator"` on the `div.lwc-menu-separator` element.
+</Blockquote>
+
+### Sample separator item
+
+<CodeBlock toggleCode={true}>
+  <MenuSeparator />
+</CodeBlock>
+
+### Example with separators
+
+<CodeView style={`height: 15.5rem;`}>
+  {getDisplayElementById(ButtonMenuExamples.examples, 'with-separators')}
+</CodeView>
+
+
+
+## Items with start icons only
+
+<Blockquote type="a11y" header="Accessibility Note">
+  Do not use the start icon to indicate selection (e.g. checkmarks), be sure to check out the <a href="#with-selectable-items-multiple">Menu with multiple selectable items</a> docs for the Accessibility implications.
+</Blockquote>
+
+A menuitem can have a start icon before the textual content. This icon is purely decorative and should not be used to add meaning to the item's content.
+
+### Sample menuitem with start icon
+
+<CodeBlock toggleCode={true}>
+  <Menuitem
+    label="Beta"
+    url="/url/to/beta"
+    startIconSprite="utility"
+    startIconSymbol="user"
+  />
+</CodeBlock>
+
+### Example menu with start icons
+
+<CodeView style={`height: 9rem;`}>
+  {getDisplayElementById(ButtonMenuExamples.examples, 'with-icons-start')}
+</CodeView>
+
+<!--
+## Items with start icons only and some intentionally blank
+
+<Blockquote type="warning" header="Not recommended">
+  This pattern is not recommended and should only be used as a graceful fallback.
+</Blockquote>
+
+If a menu with items that might not have a start icon and others do a placeholder space must be present to maintain alignment of the content. This is achieved by having an empty `span` with the class `.lwc-menuitem__start-icon` immediately preceding the item's text label.
+
+### Sample menuitem with start icon placeholder space
+
+<CodeBlock toggleCode={true}>
+  <Menuitem
+    label="Beta"
+    url="/url/to/beta"
+    startIconPlaceholder
+  />
+</CodeBlock>
+
+### Example items with start icon placeholder space
+
+<CodeView style={`height: 13rem;`}>
+  {getDisplayElementById(ButtonMenuExamples.examples, 'with-icons-start-some-missing')}
+</CodeView>
+-->
+
+
+## Items with end icons only
+
+A menuitem can have an end icon after the textual content. This icon is purely decorative and should not be used to add meaning to the item's content. The icon will be aligned to the end of item's row. This will cause space to occur between the content and the icon.
+
+### Sample menuitem with end icon
+
+<CodeBlock toggleCode={true}>
+  <Menuitem
+      label="Beta"
+      url="/url/to/beta"
+      endIconSprite="utility"
+      endIconSymbol="help_center"
+    />
+</CodeBlock>
+
+### Example menu with end icons
+
+<CodeView style={`height: 9rem;`}>
+  {getDisplayElementById(ButtonMenuExamples.examples, 'with-icons-end')}
+</CodeView>
+
+
+<!--
+## Items with end icons only and some intentionally blank
+
+<Blockquote type="warning" header="Not recommended">
+  This pattern is not recommended and should only be used as a graceful fallback.
+</Blockquote>
+
+If a menu with items that might not have an end icon and others do a placeholder space must be present to maintain alignment of the content. This is achieved by having an empty `span` with the class `.lwc-menuitem__end-icon` immediately after the item's `span.lwc-menuitem__title` element.
+
+### Sample menuitem with end icon placeholder space
+
+<CodeBlock toggleCode={true}>
+  <Menuitem
+    label="Beta"
+    url="/url/to/beta"
+    endIconPlaceholder
+  />
+</CodeBlock>
+
+### Example items with end icon placeholder space
+
+<CodeView style={`height: 13rem;`}>
+  {getDisplayElementById(ButtonMenuExamples.examples, 'with-icons-end-some-missing')}
+</CodeView>
+-->
+
+
+## Items with start and end icons
+
+### Sample menuitem with start and end icon
+
+<CodeBlock toggleCode={true}>
+  <Menuitem
+    label="Beta"
+    url="/url/to/beta"
+    startIconSprite="utility"
+    startIconSymbol="travel_and_places"
+    endIconSprite="utility"
+    endIconSymbol="help_center"
+  />
+</CodeBlock>
+
+### Example menu with start and end icons
+
+<CodeView style={`height: 13rem;`}>
+  {getDisplayElementById(ButtonMenuExamples.examples, 'with-icons-start-and-end')}
+</CodeView>
+
+
+
+## Multiple items can be selected
+
+When creating a menu with multiple selectable items:
+
+- All selectable items need the proper role of `role="menuitemcheckbox"`
+- All selectable items require a `span.lwc-menuitem__check-icon` element as the first child of the `span.lwc-menuitem__title` element
+- A selected item should contain the "check" utility icon within the `span.lwc-menuitem__check-icon` element
+- An unselected item requires an empty `span.lwc-menuitem__check-icon` element as the first child of the `span.lwc-menuitem__title` element
+- Items that have been selected need `aria-checked="true"` on the `a` element
+
+### Sample menuitem marked as selected
+
+<CodeBlock toggleCode={true}>
+  <Menuitem
+    label="Beta"
+    url="/url/to/beta"
+    role="menuitemcheckbox"
+    checked
+  />
+</CodeBlock>
+
+### Sample menuitem marked as unselected
+
+<CodeBlock toggleCode={true}>
+  <Menuitem
+    label="Alpha"
+    url="/url/to/alpha"
+    role="menuitemcheckbox"
+    checked={false}
+    tabIndex={0}
+  />
+</CodeBlock>
+
+### Example menu with multiple items selected
+
+<CodeView style={`height: 9rem;`}>
+  {getDisplayElementById(ButtonMenuExamples.examples, 'with-selectable-items-multiple')}
+</CodeView>
+
+
+
+## Single item can be selected
+
+When creating a menu with only one item can be selected:
+
+- All selectable items need the proper role of `role="menuitemradio"`
+- All selectable items require a `span.lwc-menuitem__check-icon` element as the first child of the `span.lwc-menuitem__title` element
+- A selected item should contain the "check" utility icon within the `span.lwc-menuitem__check-icon` element
+- An unselected item requires an empty `span.lwc-menuitem__check-icon` element as the first child of the `span.lwc-menuitem__title` element
+- Items that have been selected need `aria-checked="true"` on the `a` element
+
+### Sample menuitem marked as selected
+
+<CodeBlock toggleCode={true}>
+  <Menuitem
+    label="Beta"
+    url="/url/to/beta"
+    role="menuitemradio"
+    checked
+  />
+</CodeBlock>
+
+### Sample menuitem marked as unselected
+
+<CodeBlock toggleCode={true}>
+  <Menuitem
+    label="Alpha"
+    url="/url/to/alpha"
+    role="menuitemradio"
+    checked={false}
+    tabIndex={0}
+  />
+</CodeBlock>
+
+### Example menu with item selected
+
+<CodeView style={`height: 9rem;`}>
+  {getDisplayElementById(ButtonMenuExamples.examples, 'with-selectable-items-single')}
+</CodeView>
+
+
+<!--
+## Selectable items with start icons only
+
+### Sample menuitem with start icons marked as selected
+
+<CodeBlock toggleCode={true}>
+  <Menuitem
+    label="Beta"
+    url="/url/to/beta"
+    startIconSprite="utility"
+    startIconSymbol="travel_and_places"
+    checked
+    role="menuitemcheckbox"
+  />
+</CodeBlock>
+
+### Sample menuitem with start icons marked as unselected
+
+<CodeBlock toggleCode={true}>
+  <Menuitem
+    label="Gamma"
+    url="/url/to/gamma"
+    startIconSprite="utility"
+    startIconSymbol="world"
+    checked={false}
+    role="menuitemcheckbox"
+  />
+</CodeBlock>
+
+### Example menu with multiple items with start icons selected
+
+<CodeView style={`height: 9rem;`}>
+  {getDisplayElementById(ButtonMenuExamples.examples, 'with-icons-start-selectable-multiple')}
+</CodeView>
+-->
+
+
+<!--
+## Selectable items with start and end icons
+
+### Sample menuitem with start and end icons marked as selected
+
+<CodeBlock toggleCode={true}>
+  <Menuitem
+    label="Beta"
+    url="/url/to/beta"
+    startIconSprite="utility"
+    startIconSymbol="travel_and_places"
+    endIconSprite="utility"
+    endIconSymbol="help_center"
+    checked
+    role="menuitemcheckbox"
+  />
+</CodeBlock>
+
+### Sample menuitem with start and end icons marked as unselected
+
+<CodeBlock toggleCode={true}>
+  <Menuitem
+    label="Alpha"
+    url="/url/to/alpha"
+    startIconSprite="utility"
+    startIconSymbol="store"
+    endIconSprite="utility"
+    endIconSymbol="database"
+    tabIndex={0}
+    checked={false}
+    role="menuitemcheckbox"
+  />
+</CodeBlock>
+
+### Example menu with multiple items with start and end icons selected
+
+<CodeView style={`height: 9rem;`}>
+  {getDisplayElementById(ButtonMenuExamples.examples, 'with-icons-start-and-end-selectable-multiple')}
+</CodeView>
+-->
+
+
+<!--
+## Selectable items with start icons only and some intentionally blank
+
+<Blockquote type="warning" header="Not recommended">
+  This pattern is not recommended and should only be used as a graceful fallback.
+</Blockquote>
+
+### Sample menuitem with blank start icon marked as selected
+
+<CodeBlock toggleCode={true}>
+  <Menuitem
+    label="Beta"
+    url="/url/to/beta"
+    startIconPlaceholder
+    checked
+    role="menuitemcheckbox"
+  />
+</CodeBlock>
+
+### Sample menuitem with blank start icon marked as unselected
+
+<CodeBlock toggleCode={true}>
+  <Menuitem
+    label="Epsilon"
+    url="/url/to/epsilon"
+    startIconPlaceholder
+    checked={false}
+    role="menuitemcheckbox"
+  />
+</CodeBlock>
+
+### Example menu with multiple items with start icon selected and some intentionally blank
+
+<CodeView style={`height: 13rem;`}>
+  {getDisplayElementById(ButtonMenuExamples.examples, 'with-icons-start-some-missing-selectable')}
+</CodeView>
+-->
+
+
+
+## Status notification items
+
+### Sample success notification item
+
+<CodeBlock toggleCode={true}>
+  <Menuitem
+    label="Success!"
+    startIconSprite="utility"
+    startIconSymbol="success"
+    status="success"
+  />
+</CodeBlock>
+
+### Sample warning notification item
+
+<CodeBlock toggleCode={true}>
+  <Menuitem
+    label="Warning!"
+    startIconSprite="utility"
+    startIconSymbol="warning"
+    status="warning"
+  />
+</CodeBlock>
+
+### Sample error notification item
+
+<CodeBlock toggleCode={true}>
+  <Menuitem
+    label="Error!"
+    startIconSprite="utility"
+    startIconSymbol="error"
+    status="error"
+  />
+</CodeBlock>
+
+### Example menu with notification items
+
+<CodeView style={`height: 15rem;`}>
+  {getDisplayElementById(ButtonMenuExamples.examples, 'with-status-notifications')}
+</CodeView>
+
+
+
+## Menu height is limited and will scroll
+
+To limit the height of the menu add the `.lwc-dropdown_height-limited` class to the `div.lwc-dropdown-container` element and change the value of the `--lwc-c-menu-length` CSS custom property. The value of the property should be a value from 4 through 10. This will limit the height of the menu to that number of lines and allow scrolling should the content be longer. The example below is limited to 5 lines.
+
+<CodeView style={`height: 13rem;`}>
+  {getDisplayElementById(ButtonMenuExamples.examples, 'with-height-limited')}
+</CodeView>
+
+
+## With specific minimum width
+
+To adjust the minimum width of the menu dropdown add modifier `lwc-dropdown__width-*` to the `.lwc-dropdown-container` element where the `*` is `xx-small`, `x-small`, `small`, `medium`, or `large`.
+
+<CodeBlock toggleCode={false}>
+  <ButtonMenu title="Show more" isOpen width="medium" />
+</CodeBlock>
+
+### xx-small (default)
+
+<CodeView style={`height: 9rem;`}>
+  {getDisplayElementById(ButtonMenuExamples.examples, 'width-xx-small')}
+</CodeView>
+
+### x-small
+
+<CodeView style={`height: 9rem;`}>
+  {getDisplayElementById(ButtonMenuExamples.examples, 'width-x-small')}
+</CodeView>
+
+### small
+
+<CodeView style={`height: 9rem;`}>
+  {getDisplayElementById(ButtonMenuExamples.examples, 'width-small')}
+</CodeView>
+
+### medium
+
+<CodeView style={`height: 9rem;`}>
+  {getDisplayElementById(ButtonMenuExamples.examples, 'width-medium')}
+</CodeView>
+
+### large
+
+<CodeView style={`height: 9rem;`}>
+  {getDisplayElementById(ButtonMenuExamples.examples, 'width-large')}
+</CodeView>
+
+
+## Truncation
+
+When menu-items have textual content that would exceed the maximum width of the menu dropdown the text will be truncated. The below shows various examples of truncated menu-items.
+
+<CodeView style={`height: 11rem;`}>
+  {getDisplayElementById(ButtonMenuExamples.examples, 'with-truncation')}
+</CodeView>
+
+
+## With items as actions
+
+For a list of action items, use the menu with actions styling by adding the modifier `lwc-menuitem_action` to the `a` element. This pattern is typically used in conjunction with a button group.
+
+### Sample action item
+
+<CodeBlock toggleCode={true}>
+  <Menuitem
+    label="Alpha"
+    url="/url/to/alpha"
+    tabIndex={0}
+  />
+</CodeBlock>
+
+### Example menu with action items
+
+<CodeView style={`height: 13rem;`}>
+  {getDisplayElementById(ButtonMenuExamples.examples, 'with-actions')}
+</CodeView>
+
+
+
+## Menu positioned below and aligned to the end of the trigger
+
+To position the menu's dropdown below and aligned to the end of the button-icon trigger use the modifier `.lwc-dropdown__below-end` on the `div.lwc-dropdown-container` element.
+
+<CodeView style={`height: 13rem; padding-left: 4rem;`}>
+  {getDisplayElementById(ButtonMenuExamples.examples, 'positioned-below-end')}
+</CodeView>
+
+
+
+## Menu positioned below and aligned to the center of the trigger
+
+To position the menu's dropdown below and aligned to the center of the button-icon trigger use the modifier `.lwc-dropdown__below-center` on the `div.lwc-dropdown-container` element.
+
+<CodeView style={`height: 13rem; padding-left: 2rem;`}>
+  {getDisplayElementById(ButtonMenuExamples.examples, 'positioned-below-center')}
+</CodeView>
+
+
+
+## Menu positioned above and aligned to the end of the trigger
+
+To position the menu's dropdown above and aligned to the end of the button-icon trigger use the modifier `.lwc-dropdown__above-end` on the `div.lwc-dropdown-container` element.
+
+<CodeView style={`height: 13rem; padding-left: 4rem; padding-top: 11rem;`}>
+  {getDisplayElementById(ButtonMenuExamples.examples, 'positioned-above-end')}
+</CodeView>
+
+
+
+## Menu positioned above and aligned to the center of the trigger
+
+To position the menu's dropdown above and aligned to the center of the button-icon trigger use the modifier `.lwc-dropdown__above-center` on the `div.lwc-dropdown-container` element.
+
+<CodeView style={`height: 13rem; padding-left: 2rem; padding-top: 11rem;`}>
+  {getDisplayElementById(ButtonMenuExamples.examples, 'positioned-above-center')}
+</CodeView>
+
+
+
+## Menu positioned above and aligned to the start of the trigger
+
+To position the menu's dropdown above and aligned to the start of the button-icon trigger use the modifier `.lwc-dropdown__above-start` on the `div.lwc-dropdown-container` element.
+
+<CodeView style={`height: 13rem; padding-top: 11rem;`}>
+  {getDisplayElementById(ButtonMenuExamples.examples, 'positioned-above-start')}
+</CodeView>

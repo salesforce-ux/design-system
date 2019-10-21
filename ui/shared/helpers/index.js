@@ -81,9 +81,10 @@ export const getDisplayCollectionsByType = (object, types) => {
       if (object.hasOwnProperty(type)) {
         if (Array.isArray(object[type])) {
           object[type].map(element => {
-            const { demoStyles, label, demoProps } = element;
+            const { id, demoStyles, label, demoProps } = element;
             return collection.push({
-              component: getDisplayElementById(object[type], element.id),
+              id: id,
+              component: getDisplayElementById(object[type], id),
               label,
               demoStyles,
               demoProps

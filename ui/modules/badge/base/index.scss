@@ -1,0 +1,121 @@
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+// ------------
+// Init
+// ------------
+@import '../../../shared/common/init';
+
+/**
+ * @summary Create badge component
+ *
+ * @name base
+ * @selector .lwc-badge
+ * @restrict span
+ * @support dev-ready
+ * @variant
+ */
+.lwc-badge {
+  --lwc-c-icon-spacing-horizontal-end: $spacing-xx-small;
+
+  display: inline-flex;
+  align-items: center;
+  border-radius: $border-radius-pill;
+  padding: $spacing-xx-small $spacing-x-small;
+  color: $color-text-default;
+  font-size: $font-size-2;
+  font-weight: $font-weight-bold;
+  white-space: nowrap;
+  background-color: $color-background-dark;
+
+  &:empty {
+    padding: 0;
+  }
+}
+
+/**
+ * @summary Change badge color to a dark with light text
+ * @name inverse
+ * @selector .lwc-badge_inverse
+ * @restrict .lwc-badge
+ * @modifier
+ * @group color
+ */
+.lwc-badge_inverse {
+  --lwc-c-icon-color: currentColor;
+
+  color: $color-text-inverse;
+  background-color: $color-gray-9;
+}
+
+/**
+ * @summary Change badge color to positive with light text
+ * @name positive
+ * @selector .lwc-badge_positive
+ * @restrict .lwc-badge
+ * @modifier
+ * @group color
+ */
+.lwc-badge_positive {
+  --lwc-c-icon-color: currentColor;
+
+  color: $color-text-inverse;
+  background-color: $color-background-success-dark;
+}
+
+/**
+ * @summary Change badge color to negative with light text
+ * @name negative
+ * @selector .lwc-badge_negative
+ * @restrict .lwc-badge
+ * @modifier
+ * @group color
+ */
+.lwc-badge_negative {
+  --lwc-c-icon-color: currentColor;
+
+  color: $color-text-inverse;
+  background-color: $color-background-destructive;
+}
+
+/**
+ * @summary Change badge color to warning with normal text
+ * @name warning
+ * @selector .lwc-badge_warning
+ * @restrict .lwc-badge
+ * @modifier
+ * @group color
+ */
+.lwc-badge_warning {
+  --lwc-c-icon-color: currentColor;
+
+  background-color: $color-background-warning;
+}
+
+/**
+ * @summary Reverse the order of icon and text of the badge
+ * @name reverse
+ * @selector .lwc-badge_reverse
+ * @restrict .lwc-badge
+ * @modifier
+ * @group layout
+ */
+.lwc-badge_reverse {
+  --lwc-c-icon-spacing-horizontal-end: 0;
+  --lwc-c-icon-spacing-horizontal-start: $spacing-xx-small;
+
+  flex-direction: row-reverse;
+}
+
+/**
+ * @summary Adjust spacing of icon when the badge only contains an icon
+ * @name icon-only
+ * @selector .lwc-badge_icon
+ * @restrict .lwc-badge
+ * @modifier
+ * @group layout
+ */
+.lwc-badge_icon {
+  --lwc-c-icon-spacing-horizontal-end: 0;
+  --lwc-c-icon-spacing-horizontal-start: 0;
+}

@@ -1,0 +1,168 @@
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+// ------------
+// Init
+// ------------
+@import '../../shared/common/init';
+
+// ------------
+// Private
+// ------------
+
+
+// ------------
+// Component
+// ------------
+
+/**
+ * @summary Initializes dropdown
+ * @selector .lwc-dropdown-container
+ * @restrict .lwc-button-menu div
+ * @notes Applies positioning and container styles, by default, dropdown appears below and aligned with left edge of target
+ */
+.lwc-dropdown-container {
+  position: absolute;
+  z-index: $z-index-dropdown;
+  left: 0;
+  float: left;
+  min-width: $size-xx-small;
+  max-width: $size-medium;
+  margin-top: $spacing-xxx-small;
+  margin-bottom: $spacing-xxx-small;
+  border: $border-width-thin solid var(--lwc-c-dropdown-container-border-color, $color-border);
+  border-radius: $border-radius-medium;
+  padding: $spacing-xx-small 0;
+  font-size: $font-size-2;
+  background: $color-background-alt;
+  box-shadow: $shadow-drop-down;
+}
+
+//
+// Positioning
+//
+/**
+ * @name below-end
+ * @summary Positions the dropdown below and aligned to the end of the trigger element
+ * @selector .lwc-dropdown__below-end
+ * @restrict .lwc-dropdown-container
+ * @modifier
+ */
+.lwc-dropdown__below-end {
+  left: auto;
+  right: 0;
+}
+
+/**
+ * @name below-center
+ * @summary Positions the dropdown below and aligned to the center of the trigger element
+ * @selector .lwc-dropdown__below-center
+ * @restrict .lwc-dropdown-container
+ * @modifier
+ */
+.lwc-dropdown__below-center {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/**
+ * @name above-start
+ * @summary Positions the dropdown above and aligned to the start of the trigger element
+ * @selector .lwc-dropdown__above-start
+ * @restrict .lwc-dropdown-container
+ * @modifier
+ */
+.lwc-dropdown__above-start {
+  bottom: 100%;
+  top: auto;
+}
+
+/**
+ * @name above-end
+ * @summary Positions the dropdown above and aligned to the end of the trigger element
+ * @selector .lwc-dropdown__above-end
+ * @restrict .lwc-dropdown-container
+ * @modifier
+ */
+.lwc-dropdown__above-end {
+  bottom: 100%;
+  top: auto;
+  left: auto;
+  right: 0;
+}
+
+/**
+ * @name above-center
+ * @summary Positions the dropdown above and aligned to the center of the trigger element
+ * @selector .lwc-dropdown__above-center
+ * @restrict .lwc-dropdown-container
+ * @modifier
+ */
+.lwc-dropdown__above-center {
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+//
+// Width
+//
+/**
+ * @name width_x-small
+ * @summary Set the minimum width of the dropdown to x-small
+ * @selector .lwc-dropdown__width_x-small
+ * @restrict .lwc-dropdown-container
+ * @modifier
+ */
+.lwc-dropdown__width_x-small {
+  min-width: $size-x-small;
+}
+
+/**
+ * @name width_small
+ * @summary Set the minimum width of the dropdown to small
+ * @selector .lwc-dropdown__width_small
+ * @restrict .lwc-dropdown-container
+ * @modifier
+ */
+.lwc-dropdown__width_small {
+  min-width: $size-small;
+}
+
+/**
+ * @name width_medium
+ * @summary Set the minimum width of the dropdown to medium
+ * @selector .lwc-dropdown__width_medium
+ * @restrict .lwc-dropdown-container
+ * @modifier
+ */
+.lwc-dropdown__width_medium {
+  min-width: $size-medium;
+}
+
+/**
+ * @name width_large
+ * @summary Set the minimum width of the dropdown to large
+ * @selector .lwc-dropdown__width_large
+ * @restrict .lwc-dropdown-container
+ * @modifier
+ */
+.lwc-dropdown__width_large {
+  min-width: $size-large;
+}
+
+
+//
+// Height
+//
+/**
+ * @name height-limited
+ * @summary Limits the height of the dropdown to approximately 5 lines
+ * @selector .lwc-dropdown_height-limited
+ * @restrict .lwc-dropdown-container
+ * @modifier
+ */
+.lwc-dropdown_height-limited {
+  overflow-y: auto;
+  max-height: 10rem;
+}

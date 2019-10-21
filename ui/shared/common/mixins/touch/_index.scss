@@ -1,0 +1,20 @@
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+// Touch-enabled devices without hover
+// :: feature detection, does the device report having a coarse pointer (such as for touch) as primary and no hover capability
+@mixin has-touch {
+  @media (pointer: coarse) and (hover: none) {
+    @content;
+  }
+}
+
+// Mobile context/devices as defined by platform
+// :: any device not detected to be a desktop environment
+// :: includes mobile web and native apps
+@mixin mobile-device {
+
+  .slds-is-mobile & {
+    @content;
+  }
+}

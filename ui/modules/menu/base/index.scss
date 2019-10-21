@@ -1,0 +1,217 @@
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+// ------------
+// Init
+// ------------
+@import '../../../shared/common/init';
+
+// ------------
+// Private
+// ------------
+
+// ------------
+// Component
+// ------------
+/**
+ * @summary Initializes menu
+ * @selector .lwc-menu
+ * @restrict .lwc-dropdown-container div
+ */
+
+// ------------
+// Menu subheader
+// ------------
+/**
+ * @summary Initializes menu subheader
+ * @selector .lwc-menu-subheader
+ * @restrict .lwc-menu div[role=separator]
+ */
+.lwc-menu-subheader {
+  @include truncate;
+  font-size: $font-size-4;
+  font-weight: $font-weight-bold;
+  padding: $spacing-x-small $spacing-small;
+
+  @include mobile-device {
+    font-size: $font-size-5;
+  }
+}
+
+// ------------
+// Menu separator
+// ------------
+/**
+ * @summary Initializes menu separator
+ * @selector .lwc-menu-separator
+ * @restrict .lwc-menu div[role=separator]
+ */
+.lwc-menu-separator {
+  border-top: $border-width-thin solid var(--lwc-c-menu-separator-border-color, $color-border);
+  margin-top: var(--lwc-var-spacing-x-small, $var-spacing-x-small);
+  padding-top: var(--lwc-var-spacing-x-small, $var-spacing-x-small);
+}
+
+// ------------
+// Menu item
+// ------------
+/**
+ * @summary Initializes menu item
+ * @selector .lwc-menuitem
+ * @restrict .lwc-menu div
+ */
+
+/**
+ * @summary Menuitem content wrapper/anchor
+ *
+ * @selector .lwc-menuitem__content
+ * @restrict .lwc-menuitem > a
+ */
+.lwc-menuitem__content {
+  padding: $spacing-x-small $spacing-small;
+  color: $color-text-default;
+  cursor: pointer;
+  display: flex;
+  align-items: flex-start;
+  max-width: 100%;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: currentColor;
+  }
+
+  &:hover,
+  &:focus {
+    outline: 0;
+    text-decoration: none;
+    background-color: var(--lwc-c-menuitem-color-background-hover, $color-background-row-hover);
+  }
+
+  &:active {
+    text-decoration: none;
+    background-color: var(--lwc-c-menuitem-color-background-active, $color-background-row-active);
+  }
+
+  &[aria-disabled="true"] {
+    color: var(--lwc-c-menuitem-text-color-disabled, $color-text-button-default-disabled);
+    cursor: default;
+
+    --lwc-c-icon-color: currentColor; // ensure icons match text color
+
+    &:hover {
+      background-color: transparent;
+    }
+  }
+
+  /**
+   * @summary Modifies a menuitem to be an action
+   *
+   * @selector .lwc-menuitem_action
+   * @restrict .lwc-menuitem__content
+   * @modifier
+   * @group notification
+   */
+  &.lwc-menuitem_action {
+    color: var(--lwc-c-menuitem-action-color-text, $brand-text-link);
+  }
+
+  /**
+   * @summary Places a menu item into an errored state
+   *
+   * @selector .lwc-menuitem_status-error
+   * @restrict .lwc-menuitem__content
+   * @modifier
+   * @group notification
+   */
+  &.lwc-menuitem_status-error {
+    background: $color-background-destructive;
+  }
+
+  /**
+   * @summary Places a menu item into a success state
+   *
+   * @selector .lwc-menuitem_status-success
+   * @restrict .lwc-menuitem__content
+   * @modifier
+   * @group notification
+   */
+  &.lwc-menuitem_status-success {
+    background: $color-background-success-dark;
+  }
+
+  &.lwc-menuitem_status-error,
+  &.lwc-menuitem_status-success {
+    color: $color-gray-1;
+  }
+
+  /**
+   * @summary Places a menu item into a warning state
+   *
+   * @selector .lwc-menuitem_status-warning
+   * @restrict .lwc-menuitem__content
+   * @modifier
+   * @group notification
+   */
+  &.lwc-menuitem_status-warning {
+    background: $color-background-warning;
+  }
+
+  &.lwc-menuitem_status-error,
+  &.lwc-menuitem_status-success,
+  &.lwc-menuitem_status-warning {
+    --lwc-c-icon-color: currentColor; // ensure status icons always match text color
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+  }
+}
+
+/**
+ * @summary Menuitem title
+ *
+ * @selector .lwc-menuitem__title
+ * @restrict .lwc-menuitem > .lwc-menuitem__content > div
+ */
+.lwc-menuitem__title {
+  @include truncate;
+  flex-grow: 1;
+}
+
+/**
+ * @summary Menuitem selection/checkmark icon wrapper
+ *
+ * @selector .lwc-menuitem__check-icon
+ * @restrict .lwc-menuitem__content > span
+ */
+/**
+ * @summary Menuitem start icon wrapper
+ *
+ * @selector .lwc-menuitem__start-icon
+ * @restrict .lwc-menuitem__content > span
+ */
+/**
+ * @summary Menuitem end icon wrapper
+ *
+ * @selector .lwc-menuitem__end-icon
+ * @restrict .lwc-menuitem__content > span
+ */
+.lwc-menuitem__check-icon,
+.lwc-menuitem__start-icon,
+.lwc-menuitem__end-icon {
+  @include square(rem(16px));
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+.lwc-menuitem__check-icon,
+.lwc-menuitem__start-icon {
+  margin-right: $spacing-x-small;
+}
+
+.lwc-menuitem__end-icon {
+  margin-left: $spacing-x-small;
+  align-self: flex-end;
+}

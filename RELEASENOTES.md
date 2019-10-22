@@ -32,7 +32,14 @@
 - For mobile devices, radio button groups stack vertically to account for the limited horizontal space of mobile screens.
 <!-- ## [VERSION] -->
 
+
+### [Tabs](https://www.lightningdesignsystem.com/components/tabs)
+#### Changed
+- For touch devices:
+  - Removed the focus styling from the button nested within `.slds-tabs-mobile__item` so the text color does not change on press for mobile (background color still changes on press)
+
 ### [Slider](https://www.lightningdesignsystem.com/components/slider)
+
 #### Changed
 - For mobile devices:
   - Increased the tap target size of the slider thumb to `$height-tappble (2rem)` for increased usability.

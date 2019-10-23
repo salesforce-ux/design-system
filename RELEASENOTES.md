@@ -8,6 +8,24 @@
 - Generate a sanitized version of SLDS in `.dist` that does not contain `--` BEM notation for modifiers, removes deprecated code, and only imports support Lightning Web Components.
 - All mobile/touch enhancements are now scoped `slds-is-mobile`. The scoping class should be applied to the `html/body` element.
 
+## Tokens
+
+### Changed
+- Primitive tokens now default to our warm gray color palette
+  - `PALETTE_GRAY_1`: `#ffffff`
+  - `PALETTE_GRAY_2`: `#fafaf9`
+  - `PALETTE_GRAY_3`: `#f3f2f2`
+  - `PALETTE_GRAY_4`: `#ecebea`
+  - `PALETTE_GRAY_5`: `#dddbda`
+  - `PALETTE_GRAY_6`: `#c9c7c5`
+  - `PALETTE_GRAY_7`: `#b0adab`
+  - `PALETTE_GRAY_8`: `#969492`
+  - `PALETTE_GRAY_9`: `#706e6b`
+  - `PALETTE_GRAY_10`: `#514f4d`
+  - `PALETTE_GRAY_11`: `#3e3e3c`
+  - `PALETTE_GRAY_12`: `#2B2826`
+  - `PALETTE_GRAY_13`: `#080707`
+
 ## Components
 ### [Buttons](https://www.lightningdesignsystem.com/components/buttons)
 #### Changed
@@ -32,18 +50,16 @@
 - For mobile devices, radio button groups stack vertically to account for the limited horizontal space of mobile screens.
 <!-- ## [VERSION] -->
 
+### [Slider](https://www.lightningdesignsystem.com/components/slider)
+#### Changed
+- For mobile devices:
+  - Increased the tap target size of the slider thumb to `$height-tappble (2rem)` for increased usability.
+  - Minor layout and spacing adjustments to account for the larger slider thumb
 
 ### [Tabs](https://www.lightningdesignsystem.com/components/tabs)
 #### Changed
 - For touch devices:
   - Removed the focus styling from the button nested within `.slds-tabs-mobile__item` so the text color does not change on press for mobile (background color still changes on press)
-
-### [Slider](https://www.lightningdesignsystem.com/components/slider)
-
-#### Changed
-- For mobile devices:
-  - Increased the tap target size of the slider thumb to `$height-tappble (2rem)` for increased usability.
-  - Minor layout and spacing adjustments to account for the larger slider thumb
 
 ## Utilities
 ### [Line Clamp](https://www.lightningdesignsystem.com/utilities/line-clamp)

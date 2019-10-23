@@ -7,49 +7,52 @@ global:
   cssProperties:
   - color
   - fill
+  primitive: true
 imports:
 - ../../../aliases/colors.yml
 - ../../../aliases/color-palettes.yml
 props:
   COLOR_TEXT_DEFAULT:
-    value: '{!PALETTE_GRAY_13}'
+    value: '{!BISCAY}'
     comment: Body text color
     access: global
   COLOR_TEXT_ICON_DEFAULT:
-    value: '{!PALETTE_GRAY_9}'
+    value: '{!PALETTE_COOL_GRAY_9}'
     comment: Default icon color.
     access: global
   COLOR_TEXT_WEAK:
-    value: '{!PALETTE_GRAY_11}'
+    value: '{!PALETTE_COOL_GRAY_9}'
     comment: Color for text that is purposefully de-emphasized to create visual hierarchy.
     access: global
   COLOR_TEXT_INVERSE:
-    value: '{!PALETTE_GRAY_1}'
+    value: '{!PALETTE_COOL_GRAY_1}'
     comment: Inverse text color for dark backgrounds
     access: global
   COLOR_TEXT_INVERSE_WEAK:
-    value: '{!PALETTE_GRAY_7}'
+    value: '{!PALETTE_COOL_GRAY_7}'
     comment: Weak inverse text color for dark backgrounds
     access: global
   COLOR_TEXT_LABEL:
-    value: '{!PALETTE_GRAY_11}'
+    value: '{!PALETTE_COOL_GRAY_9}'
     comment: Text color for field labels.
+    access: global
   COLOR_TEXT_ACTION_LABEL:
-    value: '{!PALETTE_GRAY_11}'
+    value: '{!PALETTE_COOL_GRAY_9}'
     comment: Action label text color
     access: global
   COLOR_TEXT_ACTION_LABEL_ACTIVE:
-    value: '{!PALETTE_GRAY_13}'
+    value: '{!BISCAY}'
     comment: Action label active text color
     access: global
   COLOR_TEXT_LINK:
-    value: '{!SANTORINI}'
+    value: '{!BRAND_ACCESSIBLE}'
     comment: Link text (508)
     access: global
   COLOR_TEXT_PLACEHOLDER:
-    value: '{!PALETTE_GRAY_11}'
+    value: '{!PALETTE_COOL_GRAY_9}'
     comment: Input placeholder text.
     access: global
   COLOR_TEXT_PLACEHOLDER_INVERSE:
-    value: '{!PALETTE_GRAY_4}'
+    value: '{!PALETTE_COOL_GRAY_4}'
     comment: Input placeholder text on dark backgrounds.
+    access: global

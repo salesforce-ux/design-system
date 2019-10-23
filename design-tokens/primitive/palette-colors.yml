@@ -68,12 +68,12 @@ props:
     comment: "Gray Color 13"
     release: 2.5.0
   BRAND_PRIMARY:
-    value: "#1589ee"
+    value: "{!BRAND_PRIMARY}"
     comment: "Primary brand color"
     themeable: true
     release: 2.6.0
   BRAND_PRIMARY_ACTIVE:
-    value: "#007add"
+    value: "{!BRAND_PRIMARY_ACTIVE}"
     comment: "Active / Hover state of BRAND_PRIMARY"
     themeable: true
     release: 2.6.0
@@ -93,72 +93,72 @@ props:
     themeable: true
     release: 2.6.0
   BRAND_LIGHT:
-    value: "#f4f6fe"
+    value: "{!BRAND_LIGHT}"
     comment: "Light variant of BRAND that is accessible with dark colors"
     themeable: true
     release: 2.6.0
   BRAND_LIGHT_ACTIVE:
-    value: "#e3e5ed"
+    value: "{!BRAND_LIGHT_ACTIVE}"
     comment: "Active / Hover state of BRAND_LIGHT"
     themeable: true
     release: 2.6.0
   BRAND_DARK:
-    value: "#182337"
+    value: "{!BRAND_DARK}"
     comment: "Dark variant of BRAND that is accessible with light colors"
     themeable: true
     release: 2.6.0
   BRAND_DARK_ACTIVE:
-    value: "#253045"
+    value: "{!BRAND_DARK_ACTIVE}"
     comment: "Active / Hover state of BRAND_DARK"
     themeable: true
     release: 2.6.0
   BRAND_ACCESSIBLE:
-    value: "#0070d2"
+    value: "{!BRAND_ACCESSIBLE}"
     comment: "Dark variant of BRAND that is accessible with white"
     themeable: true
     release: 2.6.0
   BRAND_ACCESSIBLE_ACTIVE:
-    value: "#005fb2"
+    value: "{!BRAND_ACCESSIBLE_ACTIVE}"
     comment: "Active / Hover state of BRAND_A11Y"
     themeable: true
     release: 2.6.0
   BRAND_DISABLED:
-    value: "#c9c7c5"
+    value: "{!BRAND_DISABLED}"
     comment: "Disabled state of BRAND_A11Y"
     themeable: true
     release: 2.6.0
   BRAND_CONTRAST:
-    value: "#1a1b1e"
+    value: "{!BRAND_CONTRAST}"
     comment: "Variant of BRAND that is accessible with BRAND"
     themeable: true
     release: 2.6.0
   BRAND_CONTRAST_ACTIVE:
-    value: "#0d0e12"
+    value: "{!BRAND_CONTRAST_ACTIVE}"
     comment: "Active / Hover state of BRAND_CONTRAST"
     themeable: true
     release: 2.6.0
   BRAND_BACKGROUND_PRIMARY:
-    value: "#fafaf9"
+    value: "{!BRAND_BACKGROUND_PRIMARY}"
     comment: "Primary page background color"
     themeable: true
     release: 2.6.0
   BRAND_BACKGROUND_PRIMARY_TRANSPARENT:
-    value: "rgba(250,250,249,0)"
+    value: "rgba(176,196,223,0)"
     comment: "These RGBA values need to be updated if BRAND_BACKGROUND_PRIMARY changes, solves webkit bug"
     themeable: true
     release: 2.6.0
   BRAND_BACKGROUND_DARK:
-    value: "#e8e8e8"
+    value: "{!BRAND_BACKGROUND_DARK}"
     comment: "Dark variant of BRAND_BACKGROUND_PRIMARY, used within gradient of background color"
     themeable: true
     release: 2.6.0
   BRAND_BACKGROUND_DARK_TRANSPARENT:
-    value: "rgba(221,219,218,0)"
+    value: "rgba(25,85,148,0)"
     comment: "These RGBA values need to be updated if BRAND_BACKGROUND_DARK changes, solves webkit bug"
     themeable: true
     release: 2.6.0
   BRAND_HEADER:
-    value: "#ffffff"
+    value: "{!PALETTE_GRAY_1}"
     comment: "Background color a branded app header"
     themeable: true
     release: 2.6.0
@@ -233,12 +233,12 @@ props:
     themeable: true
     release: 2.6.0
   BRAND_TEXT_LINK:
-    value: "#006DCC"
+    value: "{!BRAND_TEXT_LINK}"
     comment: "Primary text link brand color"
     themeable: true
     release: 2.6.0
   BRAND_TEXT_LINK_ACTIVE:
-    value: "#005fb2"
+    value: "{!BRAND_TEXT_LINK_ACTIVE}"
     comment: "Active / Hover state of BRAND_TEXT_LINK"
     themeable: true
     release: 2.6.0

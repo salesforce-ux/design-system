@@ -9,7 +9,7 @@ import {
   ModalContent,
   ModalFooter
 } from '../../modals/base/example';
-import { CheckboxAddButton } from '../../checkbox-button/base/example';
+import { CheckboxAddButtonDeprecated } from '../../checkbox-button/';
 import {
   DeprecatedCombobox,
   DeprecatedListbox,
@@ -212,7 +212,7 @@ let RowData = props => {
         tabIndex={props.index === 1 ? '0' : null}
         type="advanced"
       >
-        <CheckboxAddButton
+        <CheckboxAddButtonDeprecated
           label={checkboxLabel}
           checked={props.checked}
           disabled={props.disabled}
@@ -246,7 +246,7 @@ let TwoColumnRowData = props => {
         type="advanced"
         style={{ width: '3.75rem' }}
       >
-        <CheckboxAddButton
+        <CheckboxAddButtonDeprecated
           label={checkboxLabel}
           checked={props.checked}
           disabled={props.disabled}

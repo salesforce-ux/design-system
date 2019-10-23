@@ -63,7 +63,7 @@ export let examples = [
   {
     id: 'currentColor',
     label: 'Current Color',
-    element: <UtilityIcon containerClassName="slds-current-color" />
+    element: <UtilityIcon useCurrentColor />
   },
   {
     id: 'rtl-flipped',

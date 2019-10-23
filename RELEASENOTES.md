@@ -27,13 +27,21 @@
   - `PALETTE_GRAY_13`: `#080707`
 
 ## Components
+### [Button Groups](https://www.lightningdesignsystem.com/components/button-groups)
+#### Added
+- New `.slds-button-group_stacked` modifier that creates a stacked layout on mobile devices to account for their limited screen width.
+
 ### [Buttons](https://www.lightningdesignsystem.com/components/buttons)
 #### Changed
 - For touch devices, update the line-height token of `.slds-button` to use the touch-specific token `$height-tappable` (2.75rem) which is a system-wide touch token instead of using a component-specific token.
 
-### [Checkbox Button Group](https://www.lightningdesignsystem.com/components/checkbox-button-group)
+### [Checkbox Button](https://www.lightningdesignsystem.com/components/checkbox-button)
 #### Changed
-- For mobile devices, checkbox button groups stack vertically to account for the limited horizontal space of mobile screens.
+- Update the background color of the checkbox selected state from `$color-background-success` to `$color-brand-darker` since a checkbox does not always indicate a successful state.
+
+### [Checkbox Button Group](https://www.lightningdesignsystem.com/components/checkbox-button-group)
+#### Added
+- New `.slds-checkbox_button-group_stacked` modifier that creates a stacked layout on mobile devices to account for their limited screen width.
 
 ### [Lookups](https://www.lightningdesignsystem.com/components/lookups)
 #### Added
@@ -46,6 +54,7 @@
 - Grouped Lookup `<input>` `role` from `combobox` to `textbox`
 
 ### [Radio Button Group](https://www.lightningdesignsystem.com/components/radio-button-group)
+
 #### Changed
 - For mobile devices, radio button groups stack vertically to account for the limited horizontal space of mobile screens.
 <!-- ## [VERSION] -->
@@ -63,12 +72,10 @@
 
 ## Utilities
 ### [Line Clamp](https://www.lightningdesignsystem.com/utilities/line-clamp)
+
 #### Added
-- Added Line Clamp utility with four modifier options:
-  - `.slds-line-clamp` - clamps at 3 lines, value provided by `line-clamp` token.
-  - `.slds-line-clamp_small` - clamps at 3 lines
-  - `.slds-line-clamp_medium` - clamps at 5 lines
-  - `.slds-line-clamp_large` - clamps at 7 lines
+- New `.slds-radio_button-group_stacked` modifier that creates a stacked layout on mobile devices to account for their limited screen width.
+<!-- ## [VERSION] -->
 
 ## Release 2.10.0 - August 22, 2019
 

@@ -4,6 +4,12 @@
 
 <!-- ## [Unreleased] -->
 
+## 2.11.0
+
+### Changed
+
+- Update the background color of the checkbox selected state from `$color-background-success` to `$color-brand-darker` since a checkbox does not always indicate a successful state.
+
 ## 2.10.0
 
 ### Changed

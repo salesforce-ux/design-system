@@ -42,7 +42,7 @@ export let examples = [
   {
     id: 'pill-truncated',
     label: 'Pill with truncated content',
-    demoStyles: 'width: 3rem;',
+    demoStyles: 'width: 5rem;',
     element: (
       <Pill>Pill label that is longer than the area that contains it</Pill>
     )

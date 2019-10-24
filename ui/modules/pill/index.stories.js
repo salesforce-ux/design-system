@@ -18,10 +18,11 @@ storiesOf('Modules/Pill/', module).add(
   'Kitchen Sink',
   () =>
     kitchenSink.map((element, idx) =>
-      element.map(({ label, component }) => (
+      element.map(({ label, component, demoStyles }) => (
         <StoryFrame
           component={component}
           label={label}
+          styles={demoStyles}
           key={`kitchen-sink-${label}-${idx}`}
         />
       ))

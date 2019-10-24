@@ -12,6 +12,9 @@ imports:
 - ../aliases/offset.yml
 - ../aliases/color-palettes.yml
 props:
+  SHADOW_ACTIVE:
+    value: '{!OFFSET_NONE} {!OFFSET_NONE} {!OFFSET_X_SMALL}px {!BRAND_ACCESSIBLE}'
+    comment: Shadow for active states on interactive elements.
   SHADOW_DRAG:
     value: '{!OFFSET_NONE} {!OFFSET_X_SMALL}px {!OFFSET_MEDIUM}px {!OFFSET_NONE} {!BLACK_TRANSPARENT_40}'
     comment: Shadow for drag-n-drop.

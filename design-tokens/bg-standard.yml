@@ -422,7 +422,7 @@ props:
   SMS:
     value: '#88C651'
   TRAILHEAD:
-    value: '#4B8B44'
+    value: '#032e61'
   IOT_CONTEXT:
     value: '#2A739E'
   WORK_QUEUE:
@@ -623,3 +623,11 @@ props:
     value: '#b070e6'
   STORY:
     value: '#54698d'
+  VOICE_CALL:
+    value: '#30c85a'
+  SALESFORCE_CMS:
+    value: '#00a1df'
+  SALES_VALUE:
+    value: '#3c97dd'
+  SETTINGS:
+    value: '#04844b'

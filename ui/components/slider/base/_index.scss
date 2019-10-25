@@ -69,14 +69,10 @@
   // Webkit
   &::-webkit-slider-thumb {
     @include range-thumb;
-    margin-top: calc(
-      ((#{$slider-handle-size} / 2) - (#{$slider-track-height} / 2)) * -1
-    );
+    margin-top: calc(((#{$slider-handle-size} / 2) - (#{$slider-track-height} / 2)) * -1);
 
     @include touch-device {
-      margin-top: calc(
-        ((#{$height-tappable-small} / 2) - (#{$slider-track-height} / 2)) * -1
-      );
+      margin-top: calc(((#{$height-tappable-small} / 2) - (#{$slider-track-height} / 2)) * -1);
     }
   }
 

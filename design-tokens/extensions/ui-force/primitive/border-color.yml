@@ -7,6 +7,8 @@ global:
   cssProperties:
   - 'border*'
   - box-shadow
+  - outline
+  - outline-color
   primitive: true
 imports:
 - ../../../aliases/color-palettes.yml

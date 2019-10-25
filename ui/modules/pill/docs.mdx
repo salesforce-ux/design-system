@@ -2,13 +2,84 @@ import CodeView from '../../../shared/components/CodeView';
 import CodeBlock from '../../../shared/components/CodeBlock';
 import Blockquote from '../../../shared/components/Blockquote';
 import * as PillExamples from './base/example';
-import { getDisplayElementById } from '../../shared/helpers';
+import { getDisplayElementById, getDemoStylesById } from '../../shared/helpers';
 
 <div className="lead doc">
-  A pill represents an object that can be viewed with or without an icon.
+  A pill represents a dismissible object that can be viewed with or without an icon.
 </div>
 
 ## About Pills
 
+The Pill component is composed of a span with class `lwc-pill` containing text wrapped in a span wtih class `lwc-pill__label`.
 
-## Base
+To make a Pill dismissible, a Button Icon is included to the right-hand side of `slds-pill__label`, or, in the case of a clickable Pill, to the right of `lwc-pill__action` (see the Linked Text example below). The span containing the Button Icon should have the class `lwc-pill__remove` and the Button Icon should use the "X" icon.
+
+### Accessibility
+
+<Blockquote type="a11y" header="Accessibility Note">
+  Clickable events should only be placed on elements that are inherently clickable. For Pills, this means on linked text and/or the dismiss button only. The Pill as a whole should not have a click event.
+</Blockquote>
+
+## Default
+
+<CodeView>
+  {PillExamples.default}
+</CodeView>
+
+## States
+
+### Error
+
+When an error occurs in an interaction with a Pill, the containing span (`lwc-pill`) gains the addditional class `lwc-pill_has-error`. Additionally, the optional media slot becomes a required error icon.
+
+<Blockquote type="a11y" header="Accessibility Note">
+  In the case of an error, the Pill must have an error icon as well as the error class. This ensures that any user that cannot see the color difference is still alerted to the error state.
+</Blockquote>
+
+<CodeView>
+  {getDisplayElementById(PillExamples.states, 'pill-error')}
+</CodeView>
+
+## Examples
+
+### Linked Text
+
+If a pill allows the user to take action, such as providing an href to an external source, `lwc-pill__label` may be contained inside a link with class `lwc-pill__action`.
+
+<Blockquote type="a11y" header="Accessibility Note">
+  In Pills, the link should include the title attribute with text matching the label in case the text gets truncated.
+</Blockquote>
+
+<CodeView>
+  {getDisplayElementById(PillExamples.examples, 'pill-link')}
+</CodeView>
+
+### With Icon
+
+Additionally, a pill may have an Icon or Avatar that sits to the left-hand side of the `lwc-pill__label`, or, in the case of a clickable Pill, to the left of `lwc-pill__action`. The span containing the media object (Icon or Avatar) should have the class `lwc-pill__media`.
+
+<CodeView>
+  {getDisplayElementById(PillExamples.examples, 'pill-icon')}
+</CodeView>
+
+### With Icon and Linked Text
+
+If a pill allows the user to take action, such as providing an href to an external source, `lwc-pill__label` may be contained inside a link with class `lwc-pill__action`.
+
+For better accessibility, Icons and Avatars sit next to the linked text and not inside it.
+
+<Blockquote type="a11y" header="Accessibility Note">
+  In Pills, the link should include the title attribute with text matching the label in case the text gets truncated.
+</Blockquote>
+
+<CodeView>
+  {getDisplayElementById(PillExamples.examples, 'pill-icon-link')}
+</CodeView>
+
+### With Truncated Text
+
+Truncation is built into the Pill component. The maximum width is set by the parent containing the Pill.
+
+<CodeView style={getDemoStylesById(PillExamples.examples, 'pill-truncated')}>
+  {getDisplayElementById(PillExamples.examples, 'pill-truncated')}
+</CodeView>

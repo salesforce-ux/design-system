@@ -39,6 +39,8 @@ class ButtonIcon extends Component {
       variant,
       position,
       shadow,
+      showSource,
+      hideSourceOf,
       customization,
       assistiveText,
       onClick
@@ -64,7 +66,13 @@ class ButtonIcon extends Component {
     };
 
     return (
-      <Shadow.on name="button-icon" includes={css} shadow={shadow}>
+      <Shadow.on
+        name="button-icon"
+        includes={css}
+        shadow={shadow}
+        showSource={showSource}
+        hideSourceOf={hideSourceOf}
+      >
         <button
           className={classNames(
             'lwc-button-icon',
@@ -87,6 +95,8 @@ class ButtonIcon extends Component {
             sprite={sprite}
             symbol={symbol}
             assistiveText={assistiveText}
+            showSource={showSource}
+            hideSourceOf={hideSourceOf}
           />
         </button>
       </Shadow.on>
@@ -112,6 +122,8 @@ ButtonIcon.propTypes = {
   title: PropTypes.string,
   isExpanded: PropTypes.bool,
   shadow: PropTypes.bool,
+  showSource: PropTypes.bool,
+  hideSourceOf: PropTypes.array,
   customization: PropTypes.node,
   assistiveText: PropTypes.string
 };

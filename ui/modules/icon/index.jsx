@@ -34,6 +34,8 @@ class Icon extends Component {
       boundarySize,
       orientation,
       shadow,
+      showSource,
+      hideSourceOf,
       customization,
       unset
     } = this.props;
@@ -85,7 +87,13 @@ class Icon extends Component {
     const computedClassNames = `lwc-icon-${sprite} lwc-icon-${sanitizedSprite}${sanitizedSymbol}`;
 
     return (
-      <Shadow.on name="icon" includes={css} shadow={shadow}>
+      <Shadow.on
+        name="icon"
+        includes={css}
+        shadow={shadow}
+        showSource={showSource}
+        hideSourceOf={hideSourceOf}
+      >
         <span
           className={classNames('lwc-icon-boundary', iconBoundaryClassName)}
         >
@@ -124,6 +132,7 @@ Icon.propTypes = {
   orientation: PropTypes.string,
   unset: PropTypes.bool,
   shadow: PropTypes.bool,
+  hideSourceOf: PropTypes.array,
   assistiveText: PropTypes.string
 };
 

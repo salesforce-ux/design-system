@@ -39,12 +39,22 @@ class CodeView extends React.Component {
   }
 
   render() {
-    const { position, toggleCode, children, exampleOnly } = this.props;
+    const {
+      position,
+      toggleCode,
+      children,
+      exampleOnly,
+      hideSourceOf
+    } = this.props;
     return (
       <StyledCodeView>
         {position === 'bottom' ? this.renderChildren() : null}
         {!exampleOnly && (
-          <CodeBlock language="html" toggleCode={toggleCode}>
+          <CodeBlock
+            language="html"
+            toggleCode={toggleCode}
+            hideSourceOf={hideSourceOf}
+          >
             {children}
           </CodeBlock>
         )}
@@ -61,7 +71,8 @@ CodeView.propTypes = {
   isViewport: PropTypes.bool,
   isMobile: PropTypes.bool,
   toggleCode: PropTypes.bool,
-  exampleOnly: PropTypes.bool
+  exampleOnly: PropTypes.bool,
+  hideSourceOf: PropTypes.array
 };
 
 CodeView.defaultProps = {

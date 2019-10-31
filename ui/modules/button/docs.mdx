@@ -4,6 +4,8 @@ import Blockquote from '../../../shared/components/Blockquote';
 import * as ButtonExamples from './base/example';
 import { getDisplayElementById } from '../../shared/helpers';
 
+import { CustomElementName as ButtonElementName } from '.';
+
 <div className="doc lead">
   Buttons are clickable items used to perform an action.
 </div>
@@ -17,7 +19,7 @@ Buttons should be used in situations where users might need to:
 - trigger a new UI element to appear on the page
 - specify a new or next step in a process
 
-<CodeView style={`lightning-button { margin-right: 0.5rem; }`}>
+<CodeView style={`lightning-button { margin-right: 0.5rem; }`} exposeSourceOf={[ButtonElementName]}>
   <React.Fragment>
     {ButtonExamples.default}
     {getDisplayElementById(ButtonExamples.examples, 'button-neutral')}
@@ -176,7 +178,7 @@ The SVG, element, or icon inside the button receives the `lwc-button__icon` clas
 
 ### Left Icon
 
-<CodeView>
+<CodeView exposeSourceOf={[ButtonElementName]}>
   {getDisplayElementById(ButtonExamples.examples, 'button-left-icon')}
 </CodeView>
 

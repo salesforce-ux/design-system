@@ -1,5 +1,7 @@
 /* eslint-disable no-extend-native */
 /* eslint-disable no-undef */
+import React from 'react';
+
 export let constructor = {};
 
 export const createElement = (name, css) => {
@@ -31,6 +33,34 @@ export const rollupAdoptedStylesheets = sheets => {
     styleSheets.push(scopedCss);
   });
   return styleSheets;
+};
+
+// recursively clone the children
+export const recursivelyCloneChildren = (
+  childrenValue,
+  showSource,
+  hideSourceOf
+) => {
+  return React.Children.map(childrenValue, child => {
+    if (!React.isValidElement(child)) return child;
+
+    // set/add props
+    const childProps = {
+      showSource: showSource,
+      hideSourceOf: hideSourceOf
+    };
+
+    // if we have children on this child
+    if (child.props && child.props.children) {
+      childProps.children = recursivelyCloneChildren(
+        child.props.children,
+        showSource,
+        hideSourceOf
+      );
+    }
+
+    return React.cloneElement(child, childProps);
+  });
 };
 
 String.prototype.wasRegistered = function() {

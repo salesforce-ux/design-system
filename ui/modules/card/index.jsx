@@ -13,14 +13,27 @@ import common from '../common/index.scss';
 import card from './base/index.scss';
 
 export const CardHeader = props => {
-  const { title, href, hasActions, actions, children } = props;
+  const {
+    title,
+    href,
+    hasActions,
+    actions,
+    children,
+    showSource,
+    hideSourceOf
+  } = props;
 
   return (
     <div className="lwc-card__header">
       {!children ? (
         <header>
           <div className="lwc-card__header-figure">
-            <Icon sprite="standard" symbol="account" />
+            <Icon
+              sprite="standard"
+              symbol="account"
+              showSource={showSource}
+              hideSourceOf={hideSourceOf}
+            />
           </div>
           <h2 className="lwc-card__header-title">
             {href ? (
@@ -93,7 +106,15 @@ class Card extends Component {
   }
 
   renderHeader() {
-    const { title, titleHref, iconName, actions, hasActions } = this.props;
+    const {
+      title,
+      titleHref,
+      iconName,
+      actions,
+      hasActions,
+      showSource,
+      hideSourceOf
+    } = this.props;
     if (!this.props.title) return;
 
     return (
@@ -104,6 +125,8 @@ class Card extends Component {
         hasActions={hasActions}
         actions={actions}
         key={uniqueId('card-header-')}
+        showSource={showSource}
+        hideSourceOf={hideSourceOf}
       />
     );
   }
@@ -137,6 +160,8 @@ class Card extends Component {
       hasBoundary,
       isBare,
       shadow,
+      showSource,
+      hideSourceOf,
       customization
     } = this.props;
 
@@ -149,7 +174,13 @@ class Card extends Component {
     );
 
     return (
-      <Shadow.on name="card" includes={css} shadow={shadow}>
+      <Shadow.on
+        name="card"
+        includes={css}
+        shadow={shadow}
+        showSource={showSource}
+        hideSourceOf={hideSourceOf}
+      >
         <article className={computedClassNames}>
           {!custom
             ? [this.renderHeader(), this.renderBody(), this.renderFooter()]
@@ -181,7 +212,11 @@ Card.propTypes = {
   hasActions: PropTypes.bool,
   hasPadding: PropTypes.bool,
   hasBoundary: PropTypes.bool,
-  isBare: PropTypes.bool
+  isBare: PropTypes.bool,
+  // Shadow
+  shadow: PropTypes.bool,
+  showSource: PropTypes.bool,
+  hideSourceOf: PropTypes.array
 };
 
 export default Card;

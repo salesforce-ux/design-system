@@ -35,13 +35,15 @@ class CodeBlock extends Component {
     this.setState({ open: !this.state.open });
   }
 
-  getCode(lines) {
-    const { children } = this.props;
+  getCode(lines, showSource = false) {
+    const { children, hideSourceOf } = this.props;
     const element = React.isValidElement(children)
-      ? mapElement(children, (child, index) => {
+      ? mapElement(children, child => {
           if (child === undefined) return child;
           return React.cloneElement(child, {
-            shadow: typeof child.type === 'function' ? false : undefined
+            shadow: child.props.shadow,
+            hideSourceOf: hideSourceOf,
+            showSource: showSource
           });
         })
       : children;
@@ -52,7 +54,7 @@ class CodeBlock extends Component {
 
   getHighlightedCode(lines) {
     const { language } = this.props;
-    return highlight(this.getCode(lines), language);
+    return highlight(this.getCode(lines, true), language);
   }
 
   render() {
@@ -98,7 +100,8 @@ class CodeBlock extends Component {
 CodeBlock.propTypes = {
   language: PropTypes.string,
   toggleCode: PropTypes.bool,
-  children: PropTypes.node
+  children: PropTypes.node,
+  hideSourceOf: PropTypes.array
 };
 
 CodeBlock.defaultProps = {

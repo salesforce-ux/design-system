@@ -30,12 +30,18 @@ class ButtonGroup extends Component {
     });
   }
   render() {
-    const { shadow, customization } = this.props;
+    const { shadow, showSource, hideSourceOf, customization } = this.props;
 
     const css = rollupAdoptedStylesheets([common, buttonGroup, customization]);
 
     return (
-      <Shadow.on name="button-group" includes={css} shadow={shadow}>
+      <Shadow.on
+        name="button-group"
+        includes={css}
+        shadow={shadow}
+        showSource={showSource}
+        hideSourceOf={hideSourceOf}
+      >
         <div className="lwc-button-group" role="group">
           <slot>{this.getChildren()}</slot>
         </div>
@@ -45,7 +51,9 @@ class ButtonGroup extends Component {
 }
 
 ButtonGroup.propTypes = {
-  children: PropTypes.node
+  children: PropTypes.node,
+  showSource: PropTypes.bool,
+  hideSourceOf: PropTypes.array
 };
 
 export default ButtonGroup;

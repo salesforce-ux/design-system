@@ -50,7 +50,9 @@ export default class Spinner extends Component {
       isInvisible,
       position,
       size,
-      shadow
+      shadow,
+      showSource,
+      hideSourceOf
     } = this.props;
 
     const css = rollupAdoptedStylesheets([common, spinner, customization]);
@@ -76,7 +78,13 @@ export default class Spinner extends Component {
     };
 
     return (
-      <Shadow.on name="spinner" includes={css} shadow={shadow}>
+      <Shadow.on
+        name="spinner"
+        includes={css}
+        shadow={shadow}
+        showSource={showSource}
+        hideSourceOf={hideSourceOf}
+      >
         {hasContainer ? (
           <SpinnerContainer position={position} isHidden={isHidden}>
             <SpinnerContents />
@@ -98,5 +106,9 @@ Spinner.propTypes = {
   // Controls the position of the spinner, value maps to modifier class name
   position: PropTypes.oneOf(['fixed', 'relative', 'absolute']),
   // Controls the color of the spinner, value maps to modifier class name
-  color: PropTypes.oneOf(['brand', 'inverse'])
+  color: PropTypes.oneOf(['brand', 'inverse']),
+  // Shadow
+  shadow: PropTypes.bool,
+  showSource: PropTypes.bool,
+  hideSourceOf: PropTypes.array
 };

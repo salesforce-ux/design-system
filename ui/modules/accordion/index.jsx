@@ -5,12 +5,21 @@ import Button from '../button';
 import Icon from '../icon';
 import ButtonIcon from '../button-icon';
 import Shadow from '../../shared/shadow';
-import { rollupAdoptedStylesheets } from '../../shared/shadow/helpers';
+import {
+  rollupAdoptedStylesheets,
+  recursivelyCloneChildren
+} from '../../shared/shadow/helpers';
 
 import common from '../common/index.scss';
 import accordion from './base/index.scss';
 
-const AccordionHeader = ({ title, isExpanded, refId }) => {
+const AccordionHeader = ({
+  title,
+  isExpanded,
+  refId,
+  showSource,
+  hideSourceOf
+}) => {
   return (
     <div className="lwc-accordion__header">
       <h3 className="lwc-accordion__title">
@@ -20,10 +29,14 @@ const AccordionHeader = ({ title, isExpanded, refId }) => {
               size="x-small"
               symbol="switch"
               orientation={!isExpanded && 'neg90deg'}
+              showSource={showSource}
+              hideSourceOf={hideSourceOf}
             />
           }
           ariaControls={refId}
           ariaExpanded={isExpanded}
+          showSource={showSource}
+          hideSourceOf={hideSourceOf}
         >
           {title}
         </Button>
@@ -34,6 +47,8 @@ const AccordionHeader = ({ title, isExpanded, refId }) => {
         variant="neutral"
         size="xx-small"
         symbol="down"
+        showSource={showSource}
+        hideSourceOf={hideSourceOf}
       />
     </div>
   );
@@ -42,13 +57,28 @@ const AccordionHeader = ({ title, isExpanded, refId }) => {
 AccordionHeader.propTypes = {
   title: PropTypes.string.isRequired,
   isExpanded: PropTypes.bool,
-  refId: PropTypes.string.isRequired
+  refId: PropTypes.string.isRequired,
+  showSource: PropTypes.bool,
+  hideSourceOf: PropTypes.array
 };
 
-const AccordionBody = ({ children, isExpanded, refId }) => {
+const AccordionBody = ({
+  children,
+  isExpanded,
+  refId,
+  showSource,
+  hideSourceOf
+}) => {
+  // add shadow related props to all child elements
+  const childElements = recursivelyCloneChildren(
+    children,
+    showSource,
+    hideSourceOf
+  );
+
   return (
     <div id={refId} hidden={!isExpanded}>
-      <slot>{children}</slot>
+      <slot>{childElements}</slot>
     </div>
   );
 };
@@ -56,7 +86,9 @@ const AccordionBody = ({ children, isExpanded, refId }) => {
 AccordionBody.propTypes = {
   children: PropTypes.instanceOf(Object).isRequired,
   isExpanded: PropTypes.bool,
-  refId: PropTypes.string.isRequired
+  refId: PropTypes.string.isRequired,
+  showSource: PropTypes.bool,
+  hideSourceOf: PropTypes.array
 };
 
 const AccordionSection = ({
@@ -67,6 +99,8 @@ const AccordionSection = ({
   role,
   children,
   shadow,
+  showSource,
+  hideSourceOf,
   customization
 }) => {
   const css = rollupAdoptedStylesheets([common, accordion, customization]);
@@ -83,13 +117,30 @@ const AccordionSection = ({
   const computedClassNames = classNames(positionClassName, stateClassName);
 
   return (
-    <Shadow.on name="accordion-section" includes={css} shadow={shadow}>
+    <Shadow.on
+      name="accordion-section"
+      includes={css}
+      shadow={shadow}
+      showSource={showSource}
+      hideSourceOf={hideSourceOf}
+    >
       <section
         className={'lwc-accordion__section ' + computedClassNames}
         role={role}
       >
-        <AccordionHeader title={title} isExpanded={isExpanded} refId={refId} />
-        <AccordionBody isExpanded={isExpanded} refId={refId}>
+        <AccordionHeader
+          title={title}
+          isExpanded={isExpanded}
+          refId={refId}
+          showSource={showSource}
+          hideSourceOf={hideSourceOf}
+        />
+        <AccordionBody
+          isExpanded={isExpanded}
+          refId={refId}
+          showSource={showSource}
+          hideSourceOf={hideSourceOf}
+        >
           {children}
         </AccordionBody>
       </section>
@@ -104,7 +155,9 @@ AccordionSection.propTypes = {
   position: PropTypes.string,
   role: PropTypes.string,
   children: PropTypes.instanceOf(Object).isRequired,
-  shadow: PropTypes.bool
+  shadow: PropTypes.bool,
+  showSource: PropTypes.bool,
+  hideSourceOf: PropTypes.array
 };
 
 const Accordion = ({ role, children, shadow, customization }) => {

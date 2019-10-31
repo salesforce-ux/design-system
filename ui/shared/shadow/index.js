@@ -2,9 +2,25 @@ import React, { useState, useEffect, forwardRef } from 'react';
 import PropTypes from 'prop-types';
 import { createPortal } from 'react-dom';
 
+export const NamespacePrefix = `lightning-`;
+
 function ShadowContent({ children, root }) {
   return createPortal(children, root);
 }
+
+const shouldHideSource = (showSource, tagList, elementName) => {
+  // if showSource is manually set to false then honor it
+  if (!showSource) {
+    return false;
+  }
+
+  let hideSource = false;
+  if (tagList && tagList.includes(elementName)) {
+    hideSource = true;
+  }
+
+  return !hideSource; // we actually want the inverse result in order to show all by default
+};
 
 ShadowContent.propTypes = {
   root: PropTypes.object.isRequired,
@@ -14,12 +30,22 @@ ShadowContent.propTypes = {
 function createElement(options) {
   const ShadowRoot = forwardRef(
     (
-      { mode, delegatesFocus, includes, children, name, shadow, ...props },
+      {
+        mode,
+        delegatesFocus,
+        includes,
+        children,
+        name,
+        shadow,
+        showSource,
+        hideSourceOf,
+        ...props
+      },
       ref
     ) => {
       const [node, setNode] = useState(null);
       const [root, setRoot] = useState(null);
-      const Namespace = `lightning-${name}`;
+      const Namespace = `${NamespacePrefix}${name}`;
 
       useEffect(() => {
         if (node) {
@@ -33,9 +59,22 @@ function createElement(options) {
         }
       }, [node]);
 
+      // decide if we should be showing the shadow DOM source
+      const shouldShowSource = shouldHideSource(showSource, hideSourceOf, name);
+
       if (options.config === 'off' || !shadow) {
         return children;
       } else {
+        // if we should show shadow source
+        if (shouldShowSource) {
+          return (
+            <Namespace ref={setNode} {...props}>
+              {children}
+            </Namespace>
+          );
+        }
+
+        // default: build a shadow root
         return (
           <Namespace ref={setNode} {...props}>
             {root && <ShadowContent root={root}>{children}</ShadowContent>}
@@ -49,7 +88,9 @@ function createElement(options) {
     mode: 'open',
     delegatesFocus: false,
     includes: [],
-    shadow: true
+    shadow: true,
+    showSource: false,
+    hideSourceOf: []
   };
 
   ShadowRoot.propTypes = {
@@ -58,7 +99,9 @@ function createElement(options) {
     includes: PropTypes.array,
     children: PropTypes.node.isRequired,
     name: PropTypes.string.isRequired,
-    shadow: PropTypes.bool
+    shadow: PropTypes.bool,
+    showSource: PropTypes.bool,
+    hideSourceOf: PropTypes.array
   };
 
   return ShadowRoot;

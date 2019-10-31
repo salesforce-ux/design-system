@@ -16,6 +16,8 @@ const Button = props => {
     disabled,
     position,
     shadow,
+    showSource,
+    hideSourceOf,
     customization,
     ariaControls,
     ariaExpanded
@@ -51,36 +53,52 @@ const Button = props => {
 
   const renderLeftIcon = () => {
     if (!props.leftIcon) return;
-    return <span className="lwc-button__icon-left">{props.leftIcon}</span>;
+
+    const leftIcon = React.cloneElement(props.leftIcon, {
+      showSource: showSource,
+      hideSourceOf: hideSourceOf
+    });
+
+    return <span className="lwc-button__icon-left">{leftIcon}</span>;
   };
 
   const renderRightIcon = () => {
     if (!props.rightIcon) return;
-    return <span className="lwc-button__icon-right">{props.rightIcon}</span>;
+
+    const rightIcon = React.cloneElement(props.rightIcon, {
+      showSource: showSource,
+      hideSourceOf: hideSourceOf
+    });
+
+    return <span className="lwc-button__icon-right">{rightIcon}</span>;
   };
 
   return (
-    <Shadow.on name="button" includes={css} shadow={shadow}>
-      <React.Fragment>
-        {use === 'a' ? (
-          <a className={computedClassNames} href="javascript:void(0);">
-            {renderLeftIcon()}
-            {children}
-            {renderRightIcon()}
-          </a>
-        ) : (
-          <button
-            className={computedClassNames}
-            disabled={disabled}
-            aria-controls={ariaControls}
-            aria-expanded={ariaExpanded}
-          >
-            {renderLeftIcon()}
-            {children}
-            {renderRightIcon()}
-          </button>
-        )}
-      </React.Fragment>
+    <Shadow.on
+      name="button"
+      includes={css}
+      shadow={shadow}
+      showSource={showSource}
+      hideSourceOf={hideSourceOf}
+    >
+      {use === 'a' ? (
+        <a className={computedClassNames} href="javascript:void(0);">
+          {renderLeftIcon()}
+          {children}
+          {renderRightIcon()}
+        </a>
+      ) : (
+        <button
+          className={computedClassNames}
+          disabled={disabled}
+          aria-controls={ariaControls}
+          aria-expanded={ariaExpanded}
+        >
+          {renderLeftIcon()}
+          {children}
+          {renderRightIcon()}
+        </button>
+      )}
     </Shadow.on>
   );
 };
@@ -106,7 +124,11 @@ Button.propTypes = {
     'success'
   ]),
   ariaControls: PropTypes.string,
-  ariaExpanded: PropTypes.bool
+  ariaExpanded: PropTypes.bool,
+  // Shadow
+  shadow: PropTypes.bool,
+  showSource: PropTypes.bool,
+  hideSourceOf: PropTypes.array
 };
 
 Button.defaultProps = {

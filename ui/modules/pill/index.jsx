@@ -19,6 +19,8 @@ const Pill = props => {
     actionUrl,
     children,
     shadow,
+    showSource,
+    hideSourceOf,
     customization
   } = props;
 
@@ -33,7 +35,13 @@ const Pill = props => {
     if (variant === 'error') {
       return (
         <span className="lwc-pill__media">
-          <Icon symbol="error" color="error" assistiveText="Warning" />
+          <Icon
+            symbol="error"
+            color="error"
+            assistiveText="Warning"
+            showSource={showSource}
+            hideSourceOf={hideSourceOf}
+          />
         </span>
       );
     } else if (media === 'icon') {
@@ -43,6 +51,8 @@ const Pill = props => {
             sprite={iconSprite}
             symbol={iconSymbol}
             assistiveText={iconAssistiveText}
+            showSource={showSource}
+            hideSourceOf={hideSourceOf}
           />
         </span>
       );
@@ -52,7 +62,12 @@ const Pill = props => {
   const renderDismiss = () => {
     return (
       <span className="lwc-pill__remove">
-        <ButtonIcon symbol="close" assistiveText="Remove" />
+        <ButtonIcon
+          symbol="close"
+          assistiveText="Remove"
+          showSource={showSource}
+          hideSourceOf={hideSourceOf}
+        />
       </span>
     );
   };
@@ -66,7 +81,13 @@ const Pill = props => {
       <span className="lwc-pill__label">{children}</span>
     );
   return (
-    <Shadow.on name="pill" includes={css} shadow={shadow}>
+    <Shadow.on
+      name="pill"
+      includes={css}
+      shadow={shadow}
+      showSource={showSource}
+      hideSourceOf={hideSourceOf}
+    >
       <React.Fragment>
         <span className={classNames('lwc-pill', variantClassName)}>
           {renderMedia()}
@@ -89,6 +110,8 @@ Pill.propTypes = {
   iconAssistiveText: PropTypes.string,
   actionUrl: PropTypes.string,
   shadow: PropTypes.bool,
+  showSource: PropTypes.bool,
+  hideSourceOf: PropTypes.array,
   customization: PropTypes.node
 };
 

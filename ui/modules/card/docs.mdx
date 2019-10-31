@@ -20,7 +20,7 @@ To initialize a card, apply the `lwc-card` class to an `article` element.
 
 A card is made up of 3 sections, a header, a body, and a footer. The header and footer have limitations, but the body section can accommodate any layout of related information.
 
-<CodeView>
+<CodeView hideSourceOf={['icon']}>
   {CardExamples.default}
 </CodeView>
 
@@ -29,12 +29,9 @@ A card is made up of 3 sections, a header, a body, and a footer. The header and 
 The Card component should only have one shadow boundary that contains the header, the body, and the footer. The body should have an open `slot` for children components.
 
 <CodeBlock toggleCode={false}>
-  <lightning-card>
-  #shadow-root
-    <Card title="Card Title" hasActions hasPadding={false} shadow={false}>
-      <slot />
-    </Card>
-  </lightning-card>
+  <Card title="Card Title" hasActions hasPadding={false}>
+    Body content here
+  </Card>
 </CodeBlock>
 
 ## Implementation Guidelines

@@ -3,7 +3,10 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import ButtonIcon from '../button-icon/';
 import Shadow from '../../shared/shadow/';
-import { rollupAdoptedStylesheets } from '../../shared/shadow/helpers';
+import {
+  rollupAdoptedStylesheets,
+  recursivelyCloneChildren
+} from '../../shared/shadow/helpers';
 
 import common from '../common/index.scss';
 import modal from './base/index.scss';
@@ -46,7 +49,9 @@ const ModalContainer = React.forwardRef((props, ref) => {
     position,
     tabIndex,
     handleClose,
-    modalRef
+    modalRef,
+    showSource,
+    hideSourceOf
   } = props;
 
   const computedVisibilityClassNames = {
@@ -100,7 +105,13 @@ const ModalContainer = React.forwardRef((props, ref) => {
           computedPositionClassNames
         )}
       >
-        {hasCloseButton && <ModalClose handleClose={handleClose} />}
+        {hasCloseButton && (
+          <ModalClose
+            handleClose={handleClose}
+            showSource={showSource}
+            hideSourceOf={hideSourceOf}
+          />
+        )}
         <div className="lwc-modal__surface">{children}</div>
       </div>
     </section>
@@ -125,14 +136,16 @@ ModalContainer.propTypes = {
   size: PropTypes.string,
   position: PropTypes.string,
   tabIndex: PropTypes.string,
-  role: PropTypes.oneOf(['dialog', 'alertdialog'])
+  role: PropTypes.oneOf(['dialog', 'alertdialog']),
+  showSource: PropTypes.bool,
+  hideSourceOf: PropTypes.array
 };
 
 /**
  * Modal Close Button
  */
 const ModalClose = props => {
-  const { handleClose } = props;
+  const { handleClose, showSource, hideSourceOf } = props;
 
   return (
     <span className="lwc-modal__close">
@@ -142,6 +155,8 @@ const ModalClose = props => {
         size="small"
         onClick={handleClose}
         assistiveText="Close Dialog"
+        showSource={showSource}
+        hideSourceOf={hideSourceOf}
       />
     </span>
   );
@@ -205,16 +220,23 @@ ModalContent.propTypes = {
  * Modal Footer
  */
 const ModalFooter = props => {
-  const { children, isDirectional, isPrompt } = props;
+  const { children, isDirectional, isPrompt, showSource, hideSourceOf } = props;
 
   const computedClassNames = {
     'lwc-modal__footer_directional': isDirectional,
     'lwc-modal__footer_prompt': isPrompt
   };
 
+  // add shadow related props to all child elements
+  const childElements = recursivelyCloneChildren(
+    children,
+    showSource,
+    hideSourceOf
+  );
+
   return (
     <footer className={classNames('lwc-modal__footer', computedClassNames)}>
-      <slot name="footer">{children}</slot>
+      <slot name="footer">{childElements}</slot>
     </footer>
   );
 };
@@ -222,7 +244,9 @@ const ModalFooter = props => {
 ModalFooter.propTypes = {
   children: PropTypes.node,
   isDirectional: PropTypes.bool,
-  isPrompt: PropTypes.bool
+  isPrompt: PropTypes.bool,
+  showSource: PropTypes.bool,
+  hideSourceOf: PropTypes.array
 };
 
 class Modal extends Component {
@@ -271,10 +295,22 @@ class Modal extends Component {
   }
 
   renderFooter() {
-    const { hasFooter, footer, isDirectional, isPrompt } = this.props;
+    const {
+      hasFooter,
+      footer,
+      isDirectional,
+      isPrompt,
+      showSource,
+      hideSourceOf
+    } = this.props;
     if (!hasFooter) return false;
     return (
-      <ModalFooter isDirectional={isDirectional} isPrompt={isPrompt}>
+      <ModalFooter
+        isDirectional={isDirectional}
+        isPrompt={isPrompt}
+        showSource={showSource}
+        hideSourceOf={hideSourceOf}
+      >
         {!footer ? 'Modal footer requires content' : footer}
       </ModalFooter>
     );
@@ -291,6 +327,8 @@ class Modal extends Component {
       position,
       tabIndex,
       shadow,
+      showSource,
+      hideSourceOf,
       customization,
       role,
       handleClose
@@ -299,7 +337,13 @@ class Modal extends Component {
     const css = rollupAdoptedStylesheets([common, modal, customization]);
 
     return (
-      <Shadow.on name="modal" includes={css} shadow={shadow}>
+      <Shadow.on
+        name="modal"
+        includes={css}
+        shadow={shadow}
+        showSource={showSource}
+        hideSourceOf={hideSourceOf}
+      >
         <ModalContainer
           hasHeader={hasHeader}
           headerId={headerId}
@@ -312,6 +356,8 @@ class Modal extends Component {
           position={position}
           handleClose={handleClose}
           modalRef={el => (this.modalRef = el)}
+          showSource={showSource}
+          hideSourceOf={hideSourceOf}
         >
           {this.renderHeader()}
           {this.renderContent()}
@@ -346,7 +392,9 @@ Modal.propTypes = {
   role: PropTypes.oneOf(['dialog', 'alertdialog']),
   tabIndex: PropTypes.string,
   position: PropTypes.string,
-  shadow: PropTypes.bool
+  shadow: PropTypes.bool,
+  showSource: PropTypes.bool,
+  hideSourceOf: PropTypes.array
 };
 
 export default Modal;

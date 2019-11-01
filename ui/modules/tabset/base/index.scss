@@ -220,17 +220,11 @@
  * @variant
  */
 .lwc-tab-bar__vertical {
+  margin-bottom: -1px;
   height: 100%;
   width: $size-x-small;
   border-right: $border-width-thin solid var(--lwc-c-tabset-scoped-color-border, $color-gray-5);
   background: var(--lwc-c-tabset-vertical-color-background, $color-gray-3);
-
-  .lwc-tab-bar_nav-item {
-
-    &:last-child .lwc-tab-bar_nav-item-link {
-      border-bottom: 0;
-    }
-  }
 
   .lwc-tab-bar_nav-item-link {
     box-sizing: content-box;

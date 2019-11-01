@@ -14,6 +14,9 @@
  * @restrict div
  * @variant
  */
+.lwc-tabset {
+  background-color: var(--lwc-c-tabset-color-background, $color-gray-1);
+}
 
 /**
  * @summary Scoped Tabset
@@ -50,6 +53,15 @@
 }
 
 /**
+ * @summary Tabset hidden tab
+ * @selector .lwc-tabset-tab-hide
+ * @restrict .lwc-tab
+ */
+.lwc-tabset-tab-hide {
+  display: none;
+}
+
+/**
  * @summary Tabset navigation container
  * @selector .lwc-tab-bar
  * @restrict .lwc-tabset > ul
@@ -77,6 +89,7 @@
   padding-left: var(--var-spacing-horizontal-small, $var-spacing-horizontal-small);
   padding-right: var(--var-spacing-horizontal-small, $var-spacing-horizontal-small);
   color: var(--lwc-c-tabset-color-tab, $color-gray-12);
+  white-space: nowrap;
 
   &:hover {
     text-decoration: none;
@@ -136,7 +149,7 @@
       height: 0;
     }
 
-    &.slds-is-active {
+    &.lwc-is-active {
       color: var(--lwc-c-tabset-color-text-active, $brand-accessible);
       font-weight: bold;
 
@@ -189,7 +202,7 @@
     padding-bottom: var(calc(--var-spacing-vertical-small + $border-width-thin), calc($var-spacing-vertical-small + $border-width-thin));
     // stylelint-enable function-calc-no-unspaced-operator
 
-    &.slds-is-active {
+    &.lwc-is-active {
       border-color: var(--lwc-c-tabset-scoped-color-border, $color-gray-5);
       background: var(--lwc-c-tabset-scoped-color-background-active, $color-gray-1);
     }
@@ -207,6 +220,7 @@
  * @variant
  */
 .lwc-tab-bar__vertical {
+  height: 100%;
   width: $size-x-small;
   border-right: $border-width-thin solid var(--lwc-c-tabset-scoped-color-border, $color-gray-5);
   background: var(--lwc-c-tabset-vertical-color-background, $color-gray-3);
@@ -230,7 +244,7 @@
       color: var(--lwc-c-tabset-nav-vertical-color-text, $color-text-action-label-active);
     }
 
-    &.slds-is-active {
+    &.lwc-is-active {
       margin-right: ($border-width-thin * -1);
       // stylelint-disable function-calc-no-unspaced-operator
       padding-right: var(calc(--var-spacing-horizontal-small + $border-width-thin), calc($var-spacing-horizontal-small + $border-width-thin));

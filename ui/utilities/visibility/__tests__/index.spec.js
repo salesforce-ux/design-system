@@ -1,16 +1,16 @@
 /* eslint-env jest */
 import React from 'react';
 import createHelpers from '../../../../jest.helpers';
-const { matchesMarkupAndStyle } = createHelpers(__dirname);
+const { matchesMarkup } = createHelpers(__dirname);
 
 describe('renders visibility utilities', () => {
   it('renders hidden assistive text', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <div className="slds-assistive-text">I am hidden from sight</div>
     ));
 
   it('renders collapsed/expanded utilities', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <div>
         <div className="slds-is-collapsed">
           <h3>I am collapsed</h3>
@@ -24,7 +24,7 @@ describe('renders visibility utilities', () => {
     ));
 
   it('renders hidden/visible utilities', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <div>
         <div className="slds-hidden">I am hidden</div>
         <div className="slds-visible">I am visible</div>
@@ -32,7 +32,7 @@ describe('renders visibility utilities', () => {
     ));
 
   it('renders display utilities', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <div>
         <div className="slds-hide">I am hidden</div>
         <div className="slds-show">I am shown as a block</div>
@@ -43,7 +43,7 @@ describe('renders visibility utilities', () => {
     ));
 
   it('renders transition utilities', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <div>
         <div className="slds-transition-hide">I have zero opacity</div>
         <div className="slds-transition-show">I have 100% opacity</div>
@@ -51,7 +51,7 @@ describe('renders visibility utilities', () => {
     ));
 
   it('renders responsive utilities', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <div>
         <div className="slds-show_x-small">Hides on 319px and down</div>
         <div className="slds-hide_x-small">Hides on 320px and up</div>

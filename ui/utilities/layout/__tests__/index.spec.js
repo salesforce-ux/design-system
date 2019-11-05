@@ -3,16 +3,16 @@ import React from 'react';
 import { Magnet } from '../';
 import createHelpers from '../../../../jest.helpers';
 
-const { matchesMarkupAndStyle } = createHelpers(__dirname);
+const { matchesMarkup } = createHelpers(__dirname);
 
 it('renders top magnet', () =>
-  matchesMarkupAndStyle(<Magnet className="slds-has-top-magnet" />));
+  matchesMarkup(<Magnet className="slds-has-top-magnet" />));
 
 it('renders bottom magnet', () =>
-  matchesMarkupAndStyle(<Magnet className="slds-has-bottom-magnet" />));
+  matchesMarkup(<Magnet className="slds-has-bottom-magnet" />));
 
 it('renders touching magnets', () =>
-  matchesMarkupAndStyle(
+  matchesMarkup(
     <div>
       <Magnet className="slds-has-bottom-magnet" />
       <Magnet className="slds-has-top-magnet" />

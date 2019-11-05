@@ -1,0 +1,127 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders scrollable utilities renders scrollable auto utility 1`] = `
+<div
+  className="slds-scrollable"
+  style={
+    Object {
+      "height": "5rem",
+      "width": "24rem",
+    }
+  }
+>
+  <p>
+    Scrollable Content Here
+  </p>
+  <div
+    className="slds-text-longform"
+    style={
+      Object {
+        "width": "150%",
+      }
+    }
+  >
+    <p>
+      Sit nulla est ex deserunt exercitation anim occaecat. Nostrud ullamco deserunt aute id consequat veniam incididunt duis in sint irure nisi. Mollit officia cillum Lorem ullamco minim nostrud elit officia tempor esse quis.
+    </p>
+    <p>
+      Sit nulla est ex deserunt exercitation anim occaecat. Nostrud ullamco deserunt aute id consequat veniam incididunt duis in sint irure nisi. Mollit officia cillum Lorem ullamco minim nostrud elit officia tempor esse quis.
+    </p>
+    <p>
+      Sit nulla est ex deserunt exercitation anim occaecat. Nostrud ullamco deserunt aute id consequat veniam incididunt duis in sint irure nisi. Mollit officia cillum Lorem ullamco minim nostrud elit officia tempor esse quis.
+    </p>
+  </div>
+</div>
+`;
+
+exports[`renders scrollable utilities renders scrollable none utility 1`] = `
+<div
+  className="slds-scrollable_none"
+  style={
+    Object {
+      "height": "5rem",
+      "width": "24rem",
+    }
+  }
+>
+  <p>
+    Scrollable Content Here
+  </p>
+  <div
+    className="slds-text-longform"
+  >
+    <p>
+      Sit nulla est ex deserunt exercitation anim occaecat. Nostrud ullamco deserunt aute id consequat veniam incididunt duis in sint irure nisi. Mollit officia cillum Lorem ullamco minim nostrud elit officia tempor esse quis.
+    </p>
+    <p>
+      Sit nulla est ex deserunt exercitation anim occaecat. Nostrud ullamco deserunt aute id consequat veniam incididunt duis in sint irure nisi. Mollit officia cillum Lorem ullamco minim nostrud elit officia tempor esse quis.
+    </p>
+    <p>
+      Sit nulla est ex deserunt exercitation anim occaecat. Nostrud ullamco deserunt aute id consequat veniam incididunt duis in sint irure nisi. Mollit officia cillum Lorem ullamco minim nostrud elit officia tempor esse quis.
+    </p>
+  </div>
+</div>
+`;
+
+exports[`renders scrollable utilities renders scrollable x utility 1`] = `
+<div
+  className="slds-scrollable_x"
+  style={
+    Object {
+      "height": "5rem",
+      "width": "24rem",
+    }
+  }
+>
+  <p>
+    Scrollable Content Here
+  </p>
+  <div
+    className="slds-text-longform"
+    style={
+      Object {
+        "width": "150%",
+      }
+    }
+  >
+    <p>
+      Sit nulla est ex deserunt exercitation anim occaecat. Nostrud ullamco deserunt aute id consequat veniam incididunt duis in sint irure nisi. Mollit officia cillum Lorem ullamco minim nostrud elit officia tempor esse quis.
+    </p>
+    <p>
+      Sit nulla est ex deserunt exercitation anim occaecat. Nostrud ullamco deserunt aute id consequat veniam incididunt duis in sint irure nisi. Mollit officia cillum Lorem ullamco minim nostrud elit officia tempor esse quis.
+    </p>
+    <p>
+      Sit nulla est ex deserunt exercitation anim occaecat. Nostrud ullamco deserunt aute id consequat veniam incididunt duis in sint irure nisi. Mollit officia cillum Lorem ullamco minim nostrud elit officia tempor esse quis.
+    </p>
+  </div>
+</div>
+`;
+
+exports[`renders scrollable utilities renders scrollable y utility 1`] = `
+<div
+  className="slds-scrollable_y"
+  style={
+    Object {
+      "height": "5rem",
+      "width": "24rem",
+    }
+  }
+>
+  <p>
+    Scrollable Content Here
+  </p>
+  <div
+    className="slds-text-longform"
+  >
+    <p>
+      Sit nulla est ex deserunt exercitation anim occaecat. Nostrud ullamco deserunt aute id consequat veniam incididunt duis in sint irure nisi. Mollit officia cillum Lorem ullamco minim nostrud elit officia tempor esse quis.
+    </p>
+    <p>
+      Sit nulla est ex deserunt exercitation anim occaecat. Nostrud ullamco deserunt aute id consequat veniam incididunt duis in sint irure nisi. Mollit officia cillum Lorem ullamco minim nostrud elit officia tempor esse quis.
+    </p>
+    <p>
+      Sit nulla est ex deserunt exercitation anim occaecat. Nostrud ullamco deserunt aute id consequat veniam incididunt duis in sint irure nisi. Mollit officia cillum Lorem ullamco minim nostrud elit officia tempor esse quis.
+    </p>
+  </div>
+</div>
+`;

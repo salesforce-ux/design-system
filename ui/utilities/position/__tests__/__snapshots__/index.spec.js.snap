@@ -1,0 +1,145 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders position utilities renders absolute utility 1`] = `
+<div
+  className="demo-only slds-grid"
+  style={
+    Object {
+      "height": "10rem",
+      "padding": "2rem",
+      "width": "20rem",
+    }
+  }
+>
+  <div
+    className="slds-is-absolute"
+  >
+    <div
+      style={
+        Object {
+          "background": "#f4f6f9",
+          "border": "1px solid red",
+          "left": "1rem",
+          "position": "absolute",
+          "top": "1rem",
+        }
+      }
+    >
+      An element with absolute positioning is positioned relative to its closest ancestor with relative positioning. If no other positioning values are given (
+      <code>
+        top, right, bottom, left
+      </code>
+      ) it will start its positioning relative to where it is in the flow of the page.
+    </div>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    </p>
+  </div>
+</div>
+`;
+
+exports[`renders position utilities renders fixed utility 1`] = `
+<div
+  className="demo-only slds-grid"
+  style={
+    Object {
+      "height": "10rem",
+      "padding": "2rem",
+      "width": "20rem",
+    }
+  }
+>
+  <div
+    className="slds-is-fixed"
+  >
+    <div
+      style={
+        Object {
+          "background": "#f4f6f9",
+          "border": "1px solid red",
+          "left": "1rem",
+          "position": "absolute",
+          "top": "1rem",
+        }
+      }
+    >
+      An element with fixed positioning is positioned relative to the viewport. If no other positioning values are given (
+      <code>
+        top, right, bottom, left
+      </code>
+      ) it will start its positioning relative to where it is in the flow of the page.
+    </div>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    </p>
+  </div>
+</div>
+`;
+
+exports[`renders position utilities renders relative utility 1`] = `
+<div
+  className="demo-only slds-grid"
+  style={
+    Object {
+      "height": "10rem",
+      "padding": "2rem",
+      "width": "20rem",
+    }
+  }
+>
+  <div
+    className="slds-is-relative"
+  >
+    <div
+      style={
+        Object {
+          "background": "#f4f6f9",
+          "border": "1px solid red",
+          "left": "1rem",
+          "position": "absolute",
+          "top": "1rem",
+        }
+      }
+    >
+      Like static, a relatively positioned element is put where its normal position would be in the document layout flow.
+    </div>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    </p>
+  </div>
+</div>
+`;
+
+exports[`renders position utilities renders static utility 1`] = `
+<div
+  className="demo-only slds-grid"
+  style={
+    Object {
+      "height": "10rem",
+      "padding": "2rem",
+      "width": "20rem",
+    }
+  }
+>
+  <div
+    className="slds-is-static"
+  >
+    <div
+      style={
+        Object {
+          "background": "#f4f6f9",
+          "border": "1px solid red",
+          "left": "1rem",
+          "position": "absolute",
+          "top": "1rem",
+        }
+      }
+    >
+      A static positioned element is positioned exactly as it comes in the flow of the page.
+    </div>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    </p>
+  </div>
+</div>
+`;

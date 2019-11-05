@@ -1,0 +1,584 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders vertical list utiltiies renders bottom dividers on list items 1`] = `
+<ul
+  className="slds-has-dividers_bottom"
+>
+  <li
+    className="slds-item"
+  >
+    List item with bottom divider
+  </li>
+  <li
+    className="slds-item"
+  >
+    List Item
+  </li>
+  <li
+    className="slds-item"
+  >
+    List Item
+  </li>
+</ul>
+`;
+
+exports[`renders vertical list utiltiies renders bottom dividers on list items with block links 1`] = `
+<ul
+  className="slds-has-dividers_bottom slds-has-block-links"
+>
+  <li
+    className="slds-item"
+  >
+    <a
+      href="javascript:void(0);"
+    >
+      List item with link and bottom divider
+    </a>
+  </li>
+  <li
+    className="slds-item"
+  >
+    <a
+      href="javascript:void(0);"
+    >
+      List Item
+    </a>
+  </li>
+  <li
+    className="slds-item"
+  >
+    <a
+      href="javascript:void(0);"
+    >
+      List Item
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`renders vertical list utiltiies renders bottom dividers on padded list items 1`] = `
+<ul
+  className="slds-has-dividers_bottom-space"
+>
+  <li
+    className="slds-item"
+  >
+    List item with bottom divider with space
+  </li>
+  <li
+    className="slds-item"
+  >
+    List Item
+  </li>
+  <li
+    className="slds-item"
+  >
+    List Item
+  </li>
+</ul>
+`;
+
+exports[`renders vertical list utiltiies renders bottom dividers on padded list items with block links 1`] = `
+<ul
+  className="slds-has-dividers_bottom slds-has-block-links_space"
+>
+  <li
+    className="slds-item"
+  >
+    <a
+      href="javascript:void(0);"
+    >
+      List item with link and bottom divider with space
+    </a>
+  </li>
+  <li
+    className="slds-item"
+  >
+    <a
+      href="javascript:void(0);"
+    >
+      List Item
+    </a>
+  </li>
+  <li
+    className="slds-item"
+  >
+    <a
+      href="javascript:void(0);"
+    >
+      List Item
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`renders vertical list utiltiies renders decimal list style 1`] = `
+<ol
+  className="slds-list_ordered"
+>
+  <li>
+    Basic ordered list
+  </li>
+  <li>
+    List Item
+  </li>
+  <li>
+    List Item
+  </li>
+</ol>
+`;
+
+exports[`renders vertical list utiltiies renders dividers around the list items 1`] = `
+<ul
+  className="slds-has-dividers_around"
+>
+  <li
+    className="slds-item"
+  >
+    List item with around divider
+  </li>
+  <li
+    className="slds-item"
+  >
+    List Item
+  </li>
+  <li
+    className="slds-item"
+  >
+    List Item
+  </li>
+</ul>
+`;
+
+exports[`renders vertical list utiltiies renders dividers around the list items with block links 1`] = `
+<ul
+  className="slds-has-dividers_around slds-has-block-links"
+>
+  <li
+    className="slds-item"
+  >
+    <a
+      href="javascript:void(0);"
+    >
+      List item with link and around divider
+    </a>
+  </li>
+  <li
+    className="slds-item"
+  >
+    <a
+      href="javascript:void(0);"
+    >
+      List Item
+    </a>
+  </li>
+  <li
+    className="slds-item"
+  >
+    <a
+      href="javascript:void(0);"
+    >
+      List Item
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`renders vertical list utiltiies renders dividers around the padded list items 1`] = `
+<ul
+  className="slds-has-dividers_around-space"
+>
+  <li
+    className="slds-item"
+  >
+    List item with around divider with space
+  </li>
+  <li
+    className="slds-item"
+  >
+    List Item
+  </li>
+  <li
+    className="slds-item"
+  >
+    List Item
+  </li>
+</ul>
+`;
+
+exports[`renders vertical list utiltiies renders dividers around the padded list items with block links 1`] = `
+<ul
+  className="slds-has-dividers_around slds-has-block-links_space"
+>
+  <li
+    className="slds-item"
+  >
+    <a
+      href="javascript:void(0);"
+    >
+      List item with link and around divider with space
+    </a>
+  </li>
+  <li
+    className="slds-item"
+  >
+    <a
+      href="javascript:void(0);"
+    >
+      List Item
+    </a>
+  </li>
+  <li
+    className="slds-item"
+  >
+    <a
+      href="javascript:void(0);"
+    >
+      List Item
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`renders vertical list utiltiies renders dotted list style 1`] = `
+<ul
+  className="slds-list_dotted"
+>
+  <li>
+    Basic ordered list
+  </li>
+  <li>
+    List Item
+  </li>
+  <li>
+    List Item
+  </li>
+</ul>
+`;
+
+exports[`renders vertical list utiltiies renders list items with interactions 1`] = `
+<ul
+  className="slds-has-list-interactions slds-has-block-links_space"
+>
+  <li
+    className="slds-item slds-is-selected"
+  >
+    <a
+      href="javascript:void(0);"
+    >
+      List item
+    </a>
+  </li>
+  <li
+    className="slds-item"
+  >
+    <a
+      href="javascript:void(0);"
+    >
+      List item
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`renders vertical list utiltiies renders nested unordered lists 1`] = `
+<ul>
+  <li>
+    Vertical List with nested vertical lists
+  </li>
+  <li>
+    List Item
+  </li>
+  <li>
+    <ul
+      className="slds-is-nested"
+    >
+      <li>
+        Nested Vertical List
+      </li>
+      <li>
+        List Item
+      </li>
+      <li>
+        <ul
+          className="slds-is-nested"
+        >
+          <li>
+            Nested Vertical List
+          </li>
+          <li>
+            List Item
+          </li>
+          <li>
+            List Item
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+`;
+
+exports[`renders vertical list utiltiies renders top dividers on list items 1`] = `
+<ul
+  className="slds-has-dividers_top"
+>
+  <li
+    className="slds-item"
+  >
+    List item with top divider
+  </li>
+  <li
+    className="slds-item"
+  >
+    List Item
+  </li>
+  <li
+    className="slds-item"
+  >
+    List Item
+  </li>
+</ul>
+`;
+
+exports[`renders vertical list utiltiies renders top dividers on list items with block links 1`] = `
+<ul
+  className="slds-has-dividers_top slds-has-block-links"
+>
+  <li
+    className="slds-item"
+  >
+    <a
+      href="javascript:void(0);"
+    >
+      List item with link and top divider
+    </a>
+  </li>
+  <li
+    className="slds-item"
+  >
+    <a
+      href="javascript:void(0);"
+    >
+      List Item
+    </a>
+  </li>
+  <li
+    className="slds-item"
+  >
+    <a
+      href="javascript:void(0);"
+    >
+      List Item
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`renders vertical list utiltiies renders top dividers on padded list items 1`] = `
+<ul
+  className="slds-has-dividers_top-space"
+>
+  <li
+    className="slds-item"
+  >
+    List item with top divider
+  </li>
+  <li
+    className="slds-item"
+  >
+    List Item
+  </li>
+  <li
+    className="slds-item"
+  >
+    List Item
+  </li>
+</ul>
+`;
+
+exports[`renders vertical list utiltiies renders top dividers on padded list items with block links 1`] = `
+<ul
+  className="slds-has-dividers_top slds-has-block-links_space"
+>
+  <li
+    className="slds-item"
+  >
+    <a
+      href="javascript:void(0);"
+    >
+      List item with link and top divider
+    </a>
+  </li>
+  <li
+    className="slds-item"
+  >
+    <a
+      href="javascript:void(0);"
+    >
+      List Item
+    </a>
+  </li>
+  <li
+    className="slds-item"
+  >
+    <a
+      href="javascript:void(0);"
+    >
+      List Item
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`renders vertical list utiltiies renders unordered list 1`] = `
+<ul>
+  <li>
+    Vertical List
+  </li>
+  <li>
+    List Item
+  </li>
+  <li>
+    List Item
+  </li>
+</ul>
+`;
+
+exports[`renders vertical list utiltiies renders unordered list with block links 1`] = `
+<ul
+  className="slds-has-block-links"
+>
+  <li>
+    <a
+      href="javascript:void(0);"
+    >
+      Vertical List with links
+    </a>
+  </li>
+  <li>
+    <a
+      href="javascript:void(0);"
+    >
+      List Item
+    </a>
+  </li>
+  <li>
+    <a
+      href="javascript:void(0);"
+    >
+      List Item
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`renders vertical list utiltiies renders unordered list with inline-block links 1`] = `
+<ul
+  className="slds-has-inline-block-links"
+>
+  <li>
+    <a
+      href="javascript:void(0);"
+    >
+      Vertical List with links
+    </a>
+  </li>
+  <li>
+    <a
+      href="javascript:void(0);"
+    >
+      List Item
+    </a>
+  </li>
+  <li>
+    <a
+      href="javascript:void(0);"
+    >
+      List Item
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`renders vertical list utiltiies renders unordered list with links 1`] = `
+<ul>
+  <li>
+    <a
+      href="javascript:void(0);"
+    >
+      Vertical List with links
+    </a>
+  </li>
+  <li>
+    <a
+      href="javascript:void(0);"
+    >
+      List Item
+    </a>
+  </li>
+  <li>
+    <a
+      href="javascript:void(0);"
+    >
+      List Item
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`renders vertical list utiltiies renders unordered list with padded block links 1`] = `
+<ul
+  className="slds-has-block-links_space"
+>
+  <li>
+    <a
+      href="javascript:void(0);"
+    >
+      Vertical List with links
+    </a>
+  </li>
+  <li>
+    <a
+      href="javascript:void(0);"
+    >
+      List Item
+    </a>
+  </li>
+  <li>
+    <a
+      href="javascript:void(0);"
+    >
+      List Item
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`renders vertical list utiltiies renders unordered list with padded inline-block links 1`] = `
+<ul
+  className="slds-has-inline-block-links_space"
+>
+  <li>
+    <a
+      href="javascript:void(0);"
+    >
+      Vertical List with links
+    </a>
+  </li>
+  <li>
+    <a
+      href="javascript:void(0);"
+    >
+      List Item
+    </a>
+  </li>
+  <li>
+    <a
+      href="javascript:void(0);"
+    >
+      List Item
+    </a>
+  </li>
+</ul>
+`;

@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders box utilities renders actionable box with interactions 1`] = `"<a href=\\"javascript:void(0);\\" class=\\"slds-box slds-box_link\\" style=\\"display: block;\\"><p>This is an actionable box with interactions.</p></a>"`;
+
+exports[`renders box utilities renders box 1`] = `
+<div
+  className="slds-box"
+>
+  <p>
+    This is a regular-sized box.
+  </p>
+</div>
+`;
+
+exports[`renders box utilities renders small box 1`] = `
+<div
+  className="slds-box slds-box_small"
+>
+  <p>
+    This is a regular-sized box.
+  </p>
+</div>
+`;
+
+exports[`renders box utilities renders x small box 1`] = `
+<div
+  className="slds-box slds-box_x-small"
+>
+  <p>
+    This is a regular-sized box.
+  </p>
+</div>
+`;
+
+exports[`renders box utilities renders xx small box 1`] = `
+<div
+  className="slds-box slds-box_xx-small"
+>
+  <p>
+    This is a regular-sized box.
+  </p>
+</div>
+`;

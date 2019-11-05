@@ -961,3 +961,299 @@ exports[`Base Tree - Tree List renders a tree list with children 1`] = `
   </li>
 </ul>
 `;
+
+exports[`tree renders a base Tree with metatext 1`] = `
+<div
+  className="slds-tree_container"
+>
+  <h4
+    className="slds-tree__group-header"
+    id="treeheading"
+  >
+    Tree Group Header
+  </h4>
+  <ul
+    aria-labelledby="treeheading"
+    className="slds-tree"
+    role="tree"
+  >
+    <li
+      aria-expanded={null}
+      aria-label={null}
+      aria-level={1}
+      role="treeitem"
+      tabIndex={0}
+    >
+      <div
+        className="slds-tree__item"
+      >
+        <button
+          aria-hidden="true"
+          className="slds-button slds-button_icon slds-m-right_x-small slds-is-disabled"
+          tabIndex="-1"
+          title="Expand Tree Item"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon slds-button__icon_small"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#chevronright"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            Expand Tree Item
+          </span>
+        </button>
+        <span
+          className="slds-has-flexi-truncate"
+        >
+          <span
+            className="slds-tree__item-label slds-truncate"
+            title="Tree Item"
+          >
+            Tree Item
+          </span>
+        </span>
+      </div>
+    </li>
+    <li
+      aria-expanded={true}
+      aria-label="Tree Branch"
+      aria-level={1}
+      role="treeitem"
+    >
+      <div
+        className="slds-tree__item"
+      >
+        <button
+          aria-hidden="true"
+          className="slds-button slds-button_icon slds-m-right_x-small"
+          tabIndex="-1"
+          title="Expand Tree Branch"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon slds-button__icon_small"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#chevronright"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            Expand Tree Branch
+          </span>
+        </button>
+        <span
+          className="slds-has-flexi-truncate"
+        >
+          <span
+            className="slds-tree__item-label slds-truncate"
+            title="Tree Branch"
+          >
+            Tree Branch
+          </span>
+        </span>
+      </div>
+      <ul
+        role="group"
+      >
+        <li
+          aria-expanded={null}
+          aria-label={null}
+          aria-level={2}
+          role="treeitem"
+        >
+          <div
+            className="slds-tree__item"
+          >
+            <button
+              aria-hidden="true"
+              className="slds-button slds-button_icon slds-m-right_x-small slds-is-disabled"
+              tabIndex="-1"
+              title="Expand Tree Item"
+            >
+              <svg
+                aria-hidden={true}
+                className="slds-button__icon slds-button__icon_small"
+              >
+                <use
+                  xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#chevronright"
+                />
+              </svg>
+              <span
+                className="slds-assistive-text"
+              >
+                Expand Tree Item
+              </span>
+            </button>
+            <span
+              className="slds-has-flexi-truncate"
+            >
+              <span
+                className="slds-tree__item-label slds-truncate"
+                title="Tree Item"
+              >
+                Tree Item
+              </span>
+              <span
+                className="slds-tree__item-meta slds-truncate"
+                title="Tree Item Metatext with a Really Really Long Name That Should Truncate"
+              >
+                <span
+                  className="slds-assistive-text"
+                >
+                  :
+                </span>
+                Tree Item Metatext with a Really Really Long Name That Should Truncate
+              </span>
+            </span>
+          </div>
+        </li>
+      </ul>
+    </li>
+    <li
+      aria-expanded={false}
+      aria-label="Tree Branch: Tree Branch Metatext"
+      aria-level={1}
+      role="treeitem"
+    >
+      <div
+        className="slds-tree__item"
+      >
+        <button
+          aria-hidden="true"
+          className="slds-button slds-button_icon slds-m-right_x-small"
+          tabIndex="-1"
+          title="Expand Tree Branch"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon slds-button__icon_small"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#chevronright"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            Expand Tree Branch
+          </span>
+        </button>
+        <span
+          className="slds-has-flexi-truncate"
+        >
+          <span
+            className="slds-tree__item-label slds-truncate"
+            title="Tree Branch"
+          >
+            Tree Branch
+          </span>
+          <span
+            className="slds-tree__item-meta slds-truncate"
+            title="Tree Branch Metatext"
+          >
+            <span
+              className="slds-assistive-text"
+            >
+              :
+            </span>
+            Tree Branch Metatext
+          </span>
+        </span>
+      </div>
+      <ul
+        role="group"
+      >
+        <li
+          aria-expanded={null}
+          aria-label={null}
+          aria-level={2}
+          role="treeitem"
+        >
+          <div
+            className="slds-tree__item"
+          >
+            <button
+              aria-hidden="true"
+              className="slds-button slds-button_icon slds-m-right_x-small slds-is-disabled"
+              tabIndex="-1"
+              title="Expand Tree Item"
+            >
+              <svg
+                aria-hidden={true}
+                className="slds-button__icon slds-button__icon_small"
+              >
+                <use
+                  xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#chevronright"
+                />
+              </svg>
+              <span
+                className="slds-assistive-text"
+              >
+                Expand Tree Item
+              </span>
+            </button>
+            <span
+              className="slds-has-flexi-truncate"
+            >
+              <span
+                className="slds-tree__item-label slds-truncate"
+                title="Tree Item"
+              >
+                Tree Item
+              </span>
+            </span>
+          </div>
+        </li>
+      </ul>
+    </li>
+    <li
+      aria-expanded={null}
+      aria-label={null}
+      aria-level={1}
+      role="treeitem"
+    >
+      <div
+        className="slds-tree__item"
+      >
+        <button
+          aria-hidden="true"
+          className="slds-button slds-button_icon slds-m-right_x-small slds-is-disabled"
+          tabIndex="-1"
+          title="Expand Tree Item with a Really Really Long Name That Should Truncate"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon slds-button__icon_small"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#chevronright"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            Expand Tree Item with a Really Really Long Name That Should Truncate
+          </span>
+        </button>
+        <span
+          className="slds-has-flexi-truncate"
+        >
+          <span
+            className="slds-tree__item-label slds-truncate"
+            title="Tree Item with a Really Really Long Name That Should Truncate"
+          >
+            Tree Item with a Really Really Long Name That Should Truncate
+          </span>
+        </span>
+      </div>
+    </li>
+  </ul>
+</div>
+`;

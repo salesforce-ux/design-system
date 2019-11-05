@@ -110,6 +110,7 @@
     "gulp-lintspaces": "0.5.0",
     "gulp-plumber": "1.1.0",
     "gulp-postcss": "6.4.0",
+    "gulp-prettier": "2.2.0",
     "gulp-rename": "1.2.2",
     "gulp-replace": "0.5.4",
     "gulp-sass": "3.1.0",
@@ -149,6 +150,7 @@
     "openport": "0.0.4",
     "plugin-error": "1.0.1",
     "postcss": "7.0.18",
+    "postcss-discard-comments": "4.0.2",
     "postcss-loader": "3.0.0",
     "postcss-nested-props": "2.0.0",
     "postcss-scss": "1.0.6",
@@ -256,7 +258,7 @@
     "modules": [
       {
         "name": "@salesforce/slds/legacy",
-        "path": "assets/styles/salesforce-lightning-design-system-sanitized.css"
+        "path": "assets/styles/salesforce-lightning-design-system-imports.sanitized.css"
       }
     ]
   }

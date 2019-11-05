@@ -1,0 +1,144 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders description list utilities renders description list 1`] = `
+<dl>
+  <dt>
+    First Label:
+  </dt>
+  <dd>
+    Description for first label
+  </dd>
+  <dt>
+    Second Label:
+  </dt>
+  <dd>
+    Description for second label
+  </dd>
+</dl>
+`;
+
+exports[`renders description list utilities renders description list with horizontal name/value pair 1`] = `
+<dl
+  className="slds-dl_horizontal"
+>
+  <dt
+    className="slds-dl_horizontal__label"
+  >
+    First Label:
+  </dt>
+  <dd
+    className="slds-dl_horizontal__detail"
+  >
+    Description for first label
+  </dd>
+  <dt
+    className="slds-dl_horizontal__label"
+  >
+    Second Label:
+  </dt>
+  <dd
+    className="slds-dl_horizontal__detail"
+  >
+    Second description
+  </dd>
+</dl>
+`;
+
+exports[`renders description list utilities renders description list with horizontal name/value pair in narrow region 1`] = `
+<div
+  className="slds-region_narrow"
+  style={
+    Object {
+      "width": "360px",
+    }
+  }
+>
+  <dl
+    className="slds-dl_horizontal"
+  >
+    <dt
+      className="slds-dl_horizontal__label"
+    >
+      First Label:
+    </dt>
+    <dd
+      className="slds-dl_horizontal__detail"
+    >
+      Description for first label
+    </dd>
+    <dt
+      className="slds-dl_horizontal__label"
+    >
+      Second Label:
+    </dt>
+    <dd
+      className="slds-dl_horizontal__detail"
+    >
+      Second description
+    </dd>
+  </dl>
+</div>
+`;
+
+exports[`renders description list utilities renders description list with inline name/value pair 1`] = `
+<dl
+  className="slds-dl_inline"
+>
+  <dt
+    className="slds-dl_inline__label"
+  >
+    First Label:
+  </dt>
+  <dd
+    className="slds-dl_inline__detail"
+  >
+    Description for first label
+  </dd>
+  <dt
+    className="slds-dl_inline__label"
+  >
+    Second Label:
+  </dt>
+  <dd
+    className="slds-dl_inline__detail"
+  >
+    Description for second label
+  </dd>
+</dl>
+`;
+
+exports[`renders description list utilities renders description list with inline name/value pair in narrow region 1`] = `
+<div
+  className="slds-region_narrow"
+  style={
+    Object {
+      "width": "360px",
+    }
+  }
+>
+  <dl
+    className="slds-dl_inline"
+  >
+    <dt
+      className="slds-dl_inline__label"
+    >
+      First Label:
+    </dt>
+    <dd
+      className="slds-dl_inline__detail"
+    >
+      Description for first label
+    </dd>
+    <dt
+      className="slds-dl_inline__label"
+    >
+      Second Label:
+    </dt>
+    <dd
+      className="slds-dl_inline__detail"
+    >
+      Second description
+    </dd>
+  </dl>
+</div>
+`;

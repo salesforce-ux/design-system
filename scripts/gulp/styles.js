@@ -5,18 +5,13 @@ import fs from 'fs';
 import cssStats from 'cssstats';
 import fetch from 'isomorphic-fetch';
 import gulp from 'gulp';
-import gulpAutoprefixer from 'gulp-autoprefixer';
-import gulpMinifycss from 'gulp-clean-css';
 import gulpPlumber from 'gulp-plumber';
-import gulpSass from 'gulp-sass';
 import gulpSourcemaps from 'gulp-sourcemaps';
 
 import gulpFile from 'gulp-file';
 
 import paths from '../helpers/paths';
-
-const sign = x => (x < 0 ? '' : '+');
-const toKB = n => (n / 1024).toFixed(2);
+import * as gulpHelpers from '../helpers/gulp';
 
 export const stats = done => {
   console.log('Gathering stats...');
@@ -77,16 +72,9 @@ export const sass = () =>
     .src('ui/index.scss')
     .pipe(gulpPlumber())
     .pipe(gulpSourcemaps.init())
-    .pipe(
-      gulpSass
-        .sync({
-          precision: 10,
-          includePaths: [paths.ui, paths.node_modules]
-        })
-        .on('error', gulpSass.logError)
-    )
-    .pipe(gulpAutoprefixer({ remove: false }))
-    .pipe(gulpMinifycss({ advanced: false, roundingPrecision: '-1' }))
+    .pipe(gulpHelpers.writeScss())
+    .pipe(gulpHelpers.writePostCss())
+    .pipe(gulpHelpers.writeMinifyCss())
     .pipe(gulpSourcemaps.write('.'))
     .pipe(gulp.dest('assets/styles'));
 
@@ -94,13 +82,7 @@ export const sass = () =>
 export const sassTest = () =>
   gulp
     .src('ui/index-*.scss')
-    .pipe(
-      gulpSass
-        .sync({
-          includePaths: [paths.node_modules]
-        })
-        .on('error', gulpSass.logError)
-    )
+    .pipe(gulpHelpers.writeScss())
     .pipe(gulp.dest('assets/styles/.test'));
 
 // Generate versions of SLDS for each set of form factor tokens
@@ -133,16 +115,9 @@ export const sassFormFactors = () => {
       (src, file) => src.pipe(gulpFile(file.name, template(file.tokens))),
       gulp.src('styles/EMPTY/*.scss')
     )
-    .pipe(
-      gulpSass
-        .sync({
-          precision: 10,
-          includePaths: [paths.ui, paths.node_modules]
-        })
-        .on('error', gulpSass.logError)
-    )
-    .pipe(gulpAutoprefixer({ remove: false }))
-    .pipe(gulpMinifycss({ advanced: false, roundingPrecision: '-1' }))
+    .pipe(gulpHelpers.writeScss())
+    .pipe(gulpHelpers.writePostCss())
+    .pipe(gulpHelpers.writeMinifyCss())
     .pipe(gulpSourcemaps.write('.'))
     .pipe(gulp.dest('assets/styles'));
 };

@@ -4,7 +4,7 @@ import createHelpers from '../../../../jest.helpers';
 import MediaObject from '../index.react';
 import { Avatar } from '../../../components/avatar/base/example';
 
-const { matchesMarkupAndStyle } = createHelpers(__dirname);
+const { matchesMarkup } = createHelpers(__dirname);
 
 const image = (
   <Avatar className="slds-avatar_large">
@@ -18,7 +18,7 @@ const image = (
 
 describe('renders media object utilities', () => {
   it('renders media object with left figure', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <MediaObject figureLeft={image}>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat minus
@@ -29,7 +29,7 @@ describe('renders media object utilities', () => {
     ));
 
   it('renders media object with right figure', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <MediaObject figureRight={image}>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat minus
@@ -40,7 +40,7 @@ describe('renders media object utilities', () => {
     ));
 
   it('renders media object with left and right figure', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <MediaObject figureLeft={image} figureRight={image}>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat minus
@@ -51,7 +51,7 @@ describe('renders media object utilities', () => {
     ));
 
   it('renders media object with left figure centered', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <MediaObject figureLeft={image} flavor="center">
         <p>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat minus
@@ -62,7 +62,7 @@ describe('renders media object utilities', () => {
     ));
 
   it('renders media object with small space between figure and text', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <MediaObject figureLeft={image} className="slds-media_small">
         <p>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat minus
@@ -73,7 +73,7 @@ describe('renders media object utilities', () => {
     ));
 
   it('renders media object with large space between figure and text', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <MediaObject figureLeft={image} className="slds-media_large">
         <p>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat minus

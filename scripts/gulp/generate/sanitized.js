@@ -5,14 +5,12 @@ import fs from 'fs';
 import I from 'immutable';
 import path from 'path';
 import gulp from 'gulp';
-import autoprefixer from 'autoprefixer';
-import gulpSass from 'gulp-sass';
-import gulpPlumber from 'gulp-plumber';
-import gulpPostcss from 'gulp-postcss';
 import gulpRename from 'gulp-rename';
 import through from 'through2';
+import discardComments from 'postcss-discard-comments';
 import { toList } from '@salesforce-ux/design-system-previewer/lib/tree';
 import paths from '../../helpers/paths';
+import * as gulpHelpers from '../../helpers/gulp';
 import { uiJson } from '../../ui';
 
 const MODULE_NAME = 'salesforce-lightning-design-system';
@@ -23,6 +21,14 @@ const MODULE_NAME = 'salesforce-lightning-design-system';
 const root = path.resolve(__dirname, '../../../');
 const rootPath = path.resolve.bind(path, root);
 const distPath = path.resolve.bind(path, paths.dist);
+
+/**
+ * Regex to remove BEM -- modifier from source
+ */
+export const regex = [
+  /(\.\S.*[\S]+.(--)+.*)(\,)+?\B/g,
+  /\,[\n\s]*(\.\S.*[\S]+.(--)+.*)\b(\s|\]\))/g
+];
 
 /**
  * Store ui.json in a keyed collection object
@@ -73,7 +79,7 @@ const readLwcAnnotations = c => {
  * @note Will sort alphabetically
  */
 export const writeSanitizedScssFile = packages => {
-  const file = rootPath('ui/components/_index-sanitized.scss');
+  const file = rootPath('ui/components/_index.sanitized.scss');
   let pathImports = [];
   packages.map(t => {
     pathImports.push(`@import '${t}/index';`);
@@ -95,46 +101,63 @@ export const writeSanitizedScssFile = packages => {
 };
 
 /**
+ * Writes a new css file into ui/components that has the imports for
+ * all components with @lwc annotations, this file is for lwc to chunk
+ * files using @import statements
+ * @param {array} packages
+ * @note Will sort alphabetically
+ */
+export const writeSanitizedCssFile = packages => {
+  const file = distPath(`assets/styles/${MODULE_NAME}-imports.sanitized.css`);
+  let pathImports = [];
+  packages.map(t => {
+    pathImports.push(`@import '../../css/${t}/index.css';`);
+  });
+  let content = [
+    '/* Copyright (c) 2015-present, salesforce.com, inc. All rights reserved',
+    '\n',
+    'Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license */',
+    '\n\n',
+    pathImports.sort((a, b) => a.localeCompare(b)).join('\n'),
+    '\n'
+  ].join('');
+
+  try {
+    fs.writeFileSync(file, content);
+  } catch (e) {
+    console.log(`Unable to write file`);
+  }
+};
+
+/**
  * Write sanitized version to assets/styles so it can be copied
  * and minified with dist script runs
  */
 export const writeSanitizedCss = done => {
   gulp
     .src('ui/index-sanitized.scss')
-    .pipe(gulpPlumber())
-    .pipe(
-      gulpSass
-        .sync({
-          outputStyle: 'expanded',
-          precision: 3,
-          includePaths: [paths.ui, paths.node_modules]
-        })
-        .on('error', gulpSass.logError)
-    )
-    .pipe(gulpSass().on('error', gulpSass.logError))
-    .pipe(gulpPostcss([autoprefixer({ remove: false })]))
+    .pipe(gulpHelpers.writeScss({ outputStyle: 'expanded' }))
+    .pipe(gulpHelpers.writePostCss([discardComments()]))
+    // Need to format to ensure proper parsing
+    .pipe(gulpHelpers.writePrettierCss())
+    // Remove BEM -- modifiers
     .pipe(
       through.obj((file, enc, next) => {
         let newFile = file.clone();
-        const regex1 = /(\.\S.*[\S]+.(--)+.*)(\,)+?\B/g;
-        const regex2 = /\,[\n\s]*(\.\S.*[\S]+.(--)+.*)\b(\s|\]\))/g;
         newFile.contents = Buffer.from(
           file.contents
             .toString()
-            .replace(regex1, '')
-            .replace(regex2, '')
+            .replace(regex[0], '')
+            .replace(regex[1], '')
         );
         return next(null, newFile);
       })
     )
-    .pipe(
-      gulpSass.sync({
-        outputStyle: 'nested'
-      })
-    )
+    // For cleanup
+    .pipe(gulpHelpers.writePrettierCss())
     .pipe(
       gulpRename(path => {
-        path.basename = MODULE_NAME + path.basename.substring('index'.length);
+        path.basename = `${MODULE_NAME}.sanitized`;
         path.extname = '.css';
         return path;
       })
@@ -144,11 +167,41 @@ export const writeSanitizedCss = done => {
 };
 
 /**
+ * Compiles sanitized version of SLDS component files
+ */
+export const writeSanitizedComponentCss = () => {
+  return (
+    gulp
+      .src(paths.rootPath('.css/**/index.scss'))
+      .pipe(gulpHelpers.writeScss({ outputStyle: 'expanded' }))
+      .pipe(gulpHelpers.writePostCss([discardComments()]))
+      // Need to format to ensure proper parsing
+      .pipe(gulpHelpers.writePrettierCss())
+      .pipe(
+        through.obj((file, enc, next) => {
+          let newFile = file.clone();
+          newFile.contents = Buffer.from(
+            file.contents
+              .toString()
+              .replace(regex[0], '')
+              .replace(regex[1], '')
+          );
+          return next(null, newFile);
+        })
+      )
+      // Need to format to ensure proper parsing
+      .pipe(gulpHelpers.writePrettierCss())
+      .pipe(gulp.dest(distPath('css/')))
+  );
+};
+
+/**
  * Export for gulp task
  * @param {callback} done
  */
 export const generateSanitizedScss = done => {
   readLwcAnnotations(components);
   writeSanitizedScssFile(rollup);
+  writeSanitizedCssFile(rollup);
   if (done) done();
 };

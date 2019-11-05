@@ -44,6 +44,7 @@ module.exports = {
   ),
   uiKit: path.resolve(node_modules, '@salesforce-ux/design-system-ui-kit'),
 
+  css: rootPath('.css'),
   dist: rootPath('.dist'),
   build: rootPath('.build'),
   generated: rootPath('.generated'),

@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`print utilities hides rendered text only when printing 1`] = `
+<div
+  className="slds-no-print"
+>
+  I am hidden when printing
+</div>
+`;

@@ -1,17 +1,15 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-import autoprefixer from 'autoprefixer';
 import del from 'del';
 import gulp from 'gulp';
 import gulpInsert from 'gulp-insert';
-import gulpMinifyCss from 'gulp-clean-css';
-import gulpPostcss from 'gulp-postcss';
 import gulpRename from 'gulp-rename';
-import gulpSass from 'gulp-sass';
 import gulpFile from 'gulp-file';
+import through from 'through2';
 import Immutable from 'immutable';
 import path from 'path';
+import discardComments from 'postcss-discard-comments';
 
 import packageJSON from '../../package.json';
 
@@ -22,8 +20,13 @@ import {
 } from '../compile/token-maps';
 import { createLibrary } from '../compile/bundle';
 import paths from '../helpers/paths';
+import * as gulpHelpers from '../helpers/gulp';
 import ui from '../ui';
-import { generateSanitizedScss, writeSanitizedCss } from './generate/sanitized';
+import {
+  generateSanitizedScss,
+  writeSanitizedCss,
+  writeSanitizedComponentCss
+} from './generate/sanitized';
 
 const distPath = path.resolve.bind(path, paths.dist);
 
@@ -141,17 +144,17 @@ export const copyUtilityReleaseNotes = () =>
     })
     .pipe(gulp.dest(distPath('__internal/release-notes')));
 
+/*
+ * ==================
+ * Compiles monolithic version of SLDS
+ * ==================
+ */
+
 export const sass = () =>
   gulp
     .src(distPath('scss/index.scss'))
-    .pipe(
-      gulpSass({
-        precision: 3,
-        includePaths: [paths.node_modules]
-      })
-    )
-    .pipe(gulpSass().on('error', gulpSass.logError))
-    .pipe(gulpPostcss([autoprefixer({ remove: false })]))
+    .pipe(gulpHelpers.writeScss({ outputStyle: 'expanded' }))
+    .pipe(gulpHelpers.writePostCss([discardComments()]))
     .pipe(
       gulpRename(path => {
         path.basename = MODULE_NAME + path.basename.substring('index'.length);
@@ -161,19 +164,75 @@ export const sass = () =>
     )
     .pipe(gulp.dest(distPath('assets/styles/')));
 
+/*
+ * ==================
+ * Compiles tmp SCSS files for every component
+ * ==================
+ */
+
+export const generateComponentSass = () =>
+  gulp
+    .src(distPath('scss/components/*/*/_index.scss'))
+    // Write message to the top of each module file
+    .pipe(
+      through.obj((file, enc, next) => {
+        let newFile = file.clone();
+        newFile.contents = Buffer.from(
+          gulpHelpers.writeAutoGenerationWarning(file.contents.toString())
+        );
+        return next(null, newFile);
+      })
+    )
+    // Rename file to index.scss from _index.scss so gulp sass will compile
+    // since it won't compile _ do to it being private
+    .pipe(
+      gulpRename(path => {
+        // mixins aren't public files so we should not rename them to be
+        if (!path.dirname.match(/\/mixins/)) {
+          path.basename = 'index';
+          path.extname = '.scss';
+          return path;
+        }
+      })
+    )
+    .pipe(gulp.dest(paths.rootPath('.css/')));
+
+/*
+ * ==================
+ * Compiles tmp files based on metadata, prepping for sanitization
+ * ==================
+ */
+
 export const generateSanitized = done => generateSanitizedScss(done);
+
+/*
+ * ==================
+ * Compiles sanitized version of SLDS based on tmp file
+ * ==================
+ */
+
 export const writeSanitized = done => writeSanitizedCss(done);
+
+/*
+ * ==================
+ * Compiles sanitized version of SLDS component files
+ * ==================
+ */
+
+export const writeSanitizedComponents = done =>
+  writeSanitizedComponentCss(done);
+
+/*
+ * ==================
+ * Minify
+ * ==================
+ */
 
 export const minifyCss = () =>
   gulp
-    .src(distPath('assets/styles/*.css'), { base: distPath() })
+    .src(distPath(`assets/styles/${MODULE_NAME}.css`), { base: distPath() })
     .pipe(gulp.dest(distPath()))
-    .pipe(
-      gulpMinifyCss({
-        advanced: false,
-        roundingPrecision: '-1'
-      })
-    )
+    .pipe(gulpHelpers.writeMinifyCss())
     .pipe(
       gulpRename(path => {
         path.basename += '.min';

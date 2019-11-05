@@ -2,32 +2,32 @@
 import React from 'react';
 import createHelpers from '../../../../jest.helpers';
 import { mount } from 'enzyme';
-const { matchesMarkupAndStyle } = createHelpers(__dirname);
+const { matchesMarkup } = createHelpers(__dirname);
 
 describe('renders box utilities', () => {
   it('renders box', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <div className="slds-box">
         <p>This is a regular-sized box.</p>
       </div>
     ));
 
   it('renders xx small box', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <div className="slds-box slds-box_xx-small">
         <p>This is a regular-sized box.</p>
       </div>
     ));
 
   it('renders x small box', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <div className="slds-box slds-box_x-small">
         <p>This is a regular-sized box.</p>
       </div>
     ));
 
   it('renders small box', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <div className="slds-box slds-box_small">
         <p>This is a regular-sized box.</p>
       </div>
@@ -43,7 +43,7 @@ describe('renders box utilities', () => {
         <p>This is an actionable box with interactions.</p>
       </a>
     );
-    return matchesMarkupAndStyle(
+    return matchesMarkup(
       el
         .find('.slds-box_link')
         .at(0)

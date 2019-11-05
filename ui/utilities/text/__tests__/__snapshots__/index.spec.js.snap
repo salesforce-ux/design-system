@@ -1,0 +1,235 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders text utilities renders center aligned text 1`] = `
+<div
+  className="slds-text-align_center"
+>
+  The quick brown fox jumps over the lazy dog.
+</div>
+`;
+
+exports[`renders text utilities renders default text color 1`] = `
+<div
+  className="slds-text-color_default"
+>
+  The quick brown fox jumps over the lazy dog.
+</div>
+`;
+
+exports[`renders text utilities renders destructive text color 1`] = `
+<div
+  className="slds-text-color_destructive"
+>
+  The quick brown fox jumps over the lazy dog.
+</div>
+`;
+
+exports[`renders text utilities renders error text color 1`] = `
+<div
+  className="slds-text-color_error"
+>
+  The quick brown fox jumps over the lazy dog.
+</div>
+`;
+
+exports[`renders text utilities renders inversed text color 1`] = `
+<div
+  style={
+    Object {
+      "background": "#16325c",
+      "padding": "0.5rem",
+    }
+  }
+>
+  <div
+    className="slds-text-color_inverse"
+  >
+    The quick brown fox jumps over the lazy dog.
+  </div>
+</div>
+`;
+
+exports[`renders text utilities renders inversed weak text color 1`] = `
+<div
+  style={
+    Object {
+      "background": "#16325c",
+      "padding": "0.5rem",
+    }
+  }
+>
+  <div
+    className="slds-text-color_inverse-weak"
+  >
+    The quick brown fox jumps over the lazy dog.
+  </div>
+</div>
+`;
+
+exports[`renders text utilities renders large heading text 1`] = `
+<div
+  className="slds-text-heading_large"
+>
+  The quick brown fox jumps over the lazy dog.
+</div>
+`;
+
+exports[`renders text utilities renders left aligned text 1`] = `
+<div
+  className="slds-text-align_left"
+>
+  The quick brown fox jumps over the lazy dog.
+</div>
+`;
+
+exports[`renders text utilities renders longform styles 1`] = `
+<div
+  className="slds-text-longform"
+>
+  <p>
+    The quick brown fox jumps over the lazy dog.
+  </p>
+  <p>
+    The quick brown fox jumps over the lazy dog.
+  </p>
+  <h3
+    className="slds-text-heading_small"
+  >
+    Heading
+  </h3>
+  <ul>
+    <li>
+      The quick brown fox jumps over the lazy dog.
+    </li>
+    <li>
+      The quick brown fox jumps over the lazy dog.
+      <ul>
+        <li>
+          The quick brown fox jumps over the lazy dog.
+        </li>
+        <li>
+          The quick brown fox jumps over the lazy dog.
+          <ul>
+            <li>
+              The quick brown fox jumps over the lazy dog.
+            </li>
+            <li>
+              The quick brown fox jumps over the lazy dog.
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+  <h3
+    className="slds-text-heading_small"
+  >
+    Heading
+  </h3>
+  <ol>
+    <li>
+      The quick brown fox jumps over the lazy dog.
+    </li>
+    <li>
+      The quick brown fox jumps over the lazy dog.
+      <ol>
+        <li>
+          The quick brown fox jumps over the lazy dog.
+        </li>
+        <li>
+          The quick brown fox jumps over the lazy dog.
+          <ol>
+            <li>
+              The quick brown fox jumps over the lazy dog.
+            </li>
+            <li>
+              The quick brown fox jumps over the lazy dog.
+            </li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+  </ol>
+</div>
+`;
+
+exports[`renders text utilities renders medium heading text 1`] = `
+<div
+  className="slds-text-heading_medium"
+>
+  The quick brown fox jumps over the lazy dog.
+</div>
+`;
+
+exports[`renders text utilities renders monospace text font 1`] = `
+<div
+  style={
+    Object {
+      "background": "#16325c",
+      "padding": "0.5rem",
+    }
+  }
+>
+  <div
+    className="slds-text-font_monospace"
+  >
+    The quick brown fox jumps over the lazy dog.
+  </div>
+</div>
+`;
+
+exports[`renders text utilities renders regular body text 1`] = `
+<div
+  className="slds-text-body_regular"
+>
+  The quick brown fox jumps over the lazy dog.
+</div>
+`;
+
+exports[`renders text utilities renders right aligned text 1`] = `
+<div
+  className="slds-text-align_right"
+>
+  The quick brown fox jumps over the lazy dog.
+</div>
+`;
+
+exports[`renders text utilities renders small body text 1`] = `
+<div
+  className="slds-text-body_small"
+>
+  The quick brown fox jumps over the lazy dog.
+</div>
+`;
+
+exports[`renders text utilities renders small heading text 1`] = `
+<div
+  className="slds-text-heading_small"
+>
+  The quick brown fox jumps over the lazy dog.
+</div>
+`;
+
+exports[`renders text utilities renders small title text 1`] = `
+<div
+  className="slds-text-title"
+>
+  The quick brown fox jumps over the lazy dog.
+</div>
+`;
+
+exports[`renders text utilities renders small title text in all-caps 1`] = `
+<div
+  className="slds-text-title_caps"
+>
+  The quick brown fox jumps over the lazy dog.
+</div>
+`;
+
+exports[`renders text utilities renders weak text color 1`] = `
+<div
+  className="slds-text-color_weak"
+>
+  The quick brown fox jumps over the lazy dog.
+</div>
+`;

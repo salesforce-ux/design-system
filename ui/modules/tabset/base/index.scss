@@ -50,16 +50,19 @@
 .lwc-tab {
   padding-top: var(--var-spacing-vertical-medium, $var-spacing-vertical-medium);
   padding-bottom: var(--var-spacing-vertical-medium, $var-spacing-vertical-medium);
+  display: none;
+
+  /**
+   * @summary Active tab modifier - displays currently active tab
+   * @selector .lwc-is-active
+   * @restrict .lwc-tab
+   * @modifier
+   */
+  &.lwc-is-active {
+    display: block;
+  }
 }
 
-/**
- * @summary Tabset hidden tab
- * @selector .lwc-tabset-tab-hide
- * @restrict .lwc-tab
- */
-.lwc-tabset-tab-hide {
-  display: none;
-}
 
 /**
  * @summary Tabset navigation container
@@ -149,6 +152,12 @@
       height: 0;
     }
 
+    /**
+     * @summary modifier class for active tab
+     * @selector .lwc-is-active
+     * @restrict .lwc-tab-bar_nav-item-link
+     * @modifier
+     */
     &.lwc-is-active {
       color: var(--lwc-c-tabset-color-text-active, $brand-accessible);
       font-weight: bold;

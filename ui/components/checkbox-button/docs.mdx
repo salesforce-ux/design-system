@@ -11,21 +11,38 @@ import { getDisplayElementById } from '../../shared/helpers';
 
 ## About Checkbox Button
 
-The ‘add button’ is similar to a checkbox in that it presents a user with a
+The checkbox button is similar to a checkbox in that it presents a user with a
 binary choice for an item. However, the only action a user can take is to
-add (or remove) an entity. When a user clicks the add button, the entity is
+add (or remove) an entity. When a user clicks the checkbox button, the entity is
 stored, similar to an ‘add to cart’ experience, until the user saves changes.
 
-The add button is useful for increasing clarity. Since the button only adds
+The checkbox button is useful for increasing clarity. Since the button only adds
 or removes entities, the user knows the action they will prompt upon click.
-The add button also provides a clear visual affordance (in SLDS, we use the
-‘+’ icon as an metaphor for ‘add’) and a large target to take this action.
+The checkbox button also provides a clear visual affordance and a large target to take this action.
 
 Use the add button if the component you’re building:
 
 - Exists without other multi-select elements (i.e. checkboxes)
 - Allows users to select multiple entities
 - Semantically fits the add/remove model
+
+## Structure and Implementation
+
+The checkbox `<input>` is visually hidden with `.slds-assistive-text` and a a faux checkbox is created using the [icon blueprint](/components/icons) which allows the display of an icon instead of the standard checkbox.
+
+Click and tap events are captured by a `<label>` that encases the entire blueprint. The `for` attribute of your `<label>` must match the `id` attribute of your `<input>`.
+
+The states of the checkbox button are styled with the following classes:
+
+| Class                               | State    | Description                                                                       |
+| ----------------------------------- | -------- | --------------------------------------------------------------------------------- |
+| `.slds-checkbox-button_is-checked`  | checked  | The checked state when the checkbox button has been selected                      |
+| `.slds-checkbox-button_is-disabled` | disabled | The disabled state when the checkbox button has been disabled                     |
+| `.slds-checkbox-button_is-focused`  | focused  | The focused state when the checkbox button has focus; important for accessibility |
+
+When implementing this blueprint, monitor the state of the checkbox `<input>` and apply the appropriate state class listed in the above chart based on the current state of the checkbox `<input>`.
+
+It is possible to change the icon used within the checkbox button, see [Different Icons](#different-icon) for more details.
 
 ## Base
 
@@ -36,20 +53,33 @@ Use the add button if the component you’re building:
 ### Checked
 
 <CodeView>
-  {getDisplayElementById(Base.states, 'checkbox-add-button-checked')}
+  {getDisplayElementById(Base.states, 'checkbox-button-checked')}
 </CodeView>
 
 ### Disabled
 
 <CodeView>
-  {getDisplayElementById(Base.states, 'checkbox-add-button-disabled')}
+  {getDisplayElementById(Base.states, 'checkbox-button-disabled')}
 </CodeView>
 
 ### Checked and Disabled
 
 <CodeView>
-  {getDisplayElementById(
-    Base.states,
-    'checkbox-add-button-checked-and-disabled'
-  )}
+  {getDisplayElementById(Base.states, 'checkbox-button-checked-disabled')}
+</CodeView>
+
+## Examples
+
+### Different Icon
+
+You may change the utility icon used by the checkbox button depending on the action you are communicating. Reference the [utility icon listing](/icons/#utility) for all available options.
+
+This example is using the `recycle_bin_empty` utility icon as its base state and the `recycle_bin_full` utility icon as its checked state.
+
+<CodeView>
+  {getDisplayElementById(Base.examples, 'checkbox-button-icon-symbol')}
+</CodeView>
+
+<CodeView>
+  {getDisplayElementById(Base.examples, 'checkbox-button-checked-icon-symbol')}
 </CodeView>

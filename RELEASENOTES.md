@@ -32,12 +32,20 @@
 - For touch devices, update the line-height token of `.slds-button` to use the touch-specific token `$height-tappable` (2.75rem) which is a system-wide touch token instead of using a component-specific token.
 
 ### [Checkbox Button](https://www.lightningdesignsystem.com/components/checkbox-button)
+#### Added
+- Introduced new base blueprint for the checkbox button called `.slds-checkbox-button` which improves icon customization, state handling, and blueprint composition.
 #### Changed
-- Update the background color of the checkbox selected state from `$color-background-success` to `$color-brand-darker` since a checkbox does not always indicate a successful state.
+- `.slds-checkbox_add-button` has been deprecated in favor of `.slds-checkbox-button` (see 'Added' above)
+- Documentation has been updated to reflect the new `.slds-checkbox-button` blueprint
+- Updated the background color of the checkbox button's selected state from `$color-background-success` to `$color-brand-darker` since a checkbox button is meant to communicate a selected state, not success.
 
 ### [Checkbox Button Group](https://www.lightningdesignsystem.com/components/checkbox-button-group)
 #### Changed
 - For mobile devices, checkbox button groups stack vertically to account for the limited horizontal space of mobile screens.
+
+### [List Builder](https://www.lightningdesignsystem.com/components/list-builder)
+#### Changed
+- List Builder now uses the new `.slds-checkbox-button` instead of the deprecated `.slds-checkbox_add-button`
 
 ### [Lookups](https://www.lightningdesignsystem.com/components/lookups)
 #### Added

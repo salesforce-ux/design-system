@@ -25,7 +25,8 @@ import ui from '../ui';
 import {
   generateSanitizedScss,
   writeSanitizedCss,
-  writeSanitizedComponentCss
+  writeSanitizedComponentCss,
+  writeCommonCss
 } from './generate/sanitized';
 
 const distPath = path.resolve.bind(path, paths.dist);
@@ -221,6 +222,14 @@ export const writeSanitized = done => writeSanitizedCss(done);
 
 export const writeSanitizedComponents = done =>
   writeSanitizedComponentCss(done);
+
+/*
+ * ==================
+ * Compiles sanitized common/reset file
+ * ==================
+ */
+
+export const writeCommon = done => writeCommonCss(done);
 
 /*
  * ==================

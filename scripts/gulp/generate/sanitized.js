@@ -95,8 +95,8 @@ export const writeSanitizedScssFile = packages => {
 
   try {
     fs.writeFileSync(file, content);
-  } catch (e) {
-    console.log(`Unable to write file`);
+  } catch (err) {
+    console.log(`Unable to write file - ${err}`);
   }
 };
 
@@ -118,15 +118,51 @@ export const writeSanitizedCssFile = packages => {
     '\n',
     'Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license */',
     '\n\n',
+    "@import '../../css/common/index.css';",
+    '\n',
     pathImports.sort((a, b) => a.localeCompare(b)).join('\n'),
     '\n'
   ].join('');
 
   try {
     fs.writeFileSync(file, content);
-  } catch (e) {
-    console.log(`Unable to write file`);
+  } catch (err) {
+    console.log(`Unable to write file - ${err}`);
   }
+};
+
+/**
+ * We need to dynamically generate a common file to be used as an import
+ * @param {callback} done
+ */
+export const writeCommonCss = done => {
+  const dir = rootPath(`.css/common`);
+  const file = rootPath(`${dir}/index.scss`);
+  let content = [
+    '/* Copyright (c) 2015-present, salesforce.com, inc. All rights reserved',
+    '\n',
+    'Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license */',
+    '\n\n',
+    "@import '.dist/scss/init';",
+    '\n',
+    "@import '.dist/scss/vendor/normalize-sanitized';",
+    '\n',
+    '@include core($scoped: false, $globals: false);',
+    '\n'
+  ].join('');
+  try {
+    if (fs.existsSync(dir)) {
+      fs.writeFileSync(file, content);
+    } else {
+      fs.mkdir(dir, err => {
+        if (err) throw err;
+        fs.writeFileSync(file, content);
+      });
+    }
+  } catch (err) {
+    console.log(`Unable to write file - ${err}`);
+  }
+  if (done) done();
 };
 
 /**
@@ -189,7 +225,7 @@ export const writeSanitizedComponentCss = () => {
           return next(null, newFile);
         })
       )
-      // Need to format to ensure proper parsing
+      // For cleanup
       .pipe(gulpHelpers.writePrettierCss())
       .pipe(gulp.dest(distPath('css/')))
   );

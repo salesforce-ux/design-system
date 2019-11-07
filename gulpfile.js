@@ -275,10 +275,15 @@ gulp.task('dist:sass:framework', dist.sass);
 
 // Components
 gulp.task('dist:sass:components:generate', dist.generateComponentSass);
+gulp.task('dist:sass:components:common', dist.writeCommon);
 
 gulp.task(
   'dist:sass',
-  gulp.series('dist:sass:framework', 'dist:sass:components:generate')
+  gulp.series(
+    'dist:sass:framework',
+    'dist:sass:components:generate',
+    'dist:sass:components:common'
+  )
 );
 
 // Sanitize Framework

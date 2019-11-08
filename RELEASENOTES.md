@@ -27,6 +27,10 @@
   - `PALETTE_GRAY_13`: `#080707`
 
 ## Components
+### [Badges](https://www.lightningdesignsystem.com/components/badges)
+#### Changed
+- Added `display: inline-flex` and `align-items: center` to badge to center content vertically
+
 ### [Buttons](https://www.lightningdesignsystem.com/components/buttons)
 #### Changed
 - For touch devices, update the line-height token of `.slds-button` to use the touch-specific token `$height-tappable` (2.75rem) which is a system-wide touch token instead of using a component-specific token.

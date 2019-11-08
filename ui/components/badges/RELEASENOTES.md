@@ -3,6 +3,11 @@
 # Badges Release Notes
 
 <!-- ## [Unreleased] -->
+## 2.11.0
+
+### Changed
+
+- Added `display: inline-flex` and `align-items: center` to badge to center content vertically
 
 ## 2.8.0
 

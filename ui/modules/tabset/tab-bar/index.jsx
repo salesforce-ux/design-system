@@ -61,7 +61,7 @@ class TabBar extends Component {
                   aria-controls={`${tabsetId}-${i}`}
                   id={`${tabsetId}-${i}__item`}
                   className={classNames('lwc-tab-bar_nav-item-link', {
-                    'slds-is-active': isActive
+                    'lwc-is-active': isActive
                   })}
                   onClick={e => changeActiveTab(e, i)}
                 >

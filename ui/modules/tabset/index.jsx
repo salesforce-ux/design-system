@@ -45,8 +45,8 @@ class Tabset extends Component {
       <Shadow.on name="tabset" includes={css} shadow={shadow}>
         <div
           className={classNames('lwc-tabset', {
-            'lwc-tabset__scoped': variant === 'scoped',
-            'lwc-tabset__vertical': variant === 'vertical'
+            'lwc-tabset_scoped': variant === 'scoped',
+            'lwc-tabset_vertical': variant === 'vertical'
           })}
         >
           <TabBar

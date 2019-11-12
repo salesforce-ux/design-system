@@ -20,8 +20,8 @@ class Tab extends Component {
         <div
           id={this.props.tabId}
           className={classNames('lwc-tab lwc-is-active', {
-            'lwc-tab__scoped': this.props.variant === 'scoped',
-            'lwc-tab__vertical': this.props.variant === 'vertical'
+            'lwc-tab_scoped': this.props.variant === 'scoped',
+            'lwc-tab_vertical': this.props.variant === 'vertical'
           })}
           aria-labelledby={this.props.labelledby}
           role="tabpanel"

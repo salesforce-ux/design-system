@@ -29,9 +29,9 @@ class TabBar extends Component {
       <Shadow.on name="tab-bar" includes={css} shadow={shadow}>
         <ul
           className={classNames('lwc-tab-bar', {
-            'lwc-tab-bar__base': variant === 'base',
-            'lwc-tab-bar__scoped': variant === 'scoped',
-            'lwc-tab-bar__vertical': variant === 'vertical'
+            'lwc-tab-bar_base': variant === 'base',
+            'lwc-tab-bar_scoped': variant === 'scoped',
+            'lwc-tab-bar_vertical': variant === 'vertical'
           })}
           role="tablist"
         >
@@ -50,7 +50,7 @@ class TabBar extends Component {
               <li
                 title=""
                 role="presentation"
-                className="lwc-tab-bar_nav-item"
+                className="lwc-tab-bar__nav-item"
                 key={`label-${i}`}
               >
                 <a
@@ -60,13 +60,13 @@ class TabBar extends Component {
                   aria-selected={isActive}
                   aria-controls={`${tabsetId}-${i}`}
                   id={`${tabsetId}-${i}__item`}
-                  className={classNames('lwc-tab-bar_nav-item-link', {
+                  className={classNames('lwc-tab-bar__nav-item-link', {
                     'lwc-is-active': isActive
                   })}
                   onClick={e => changeActiveTab(e, i)}
                 >
                   {startIcon ? (
-                    <div className="lwc-tab-bar_nav-item-icon-start">
+                    <div className="lwc-tab-bar__nav-item-icon-start">
                       <Icon
                         sprite={startIcon.sprite}
                         symbol={startIcon.symbol}
@@ -76,10 +76,10 @@ class TabBar extends Component {
                     </div>
                   ) : null}
 
-                  <span className="lwc-tab-bar_nav-item-label">{label}</span>
+                  <span className="lwc-tab-bar__nav-item-label">{label}</span>
 
                   {endIcon ? (
-                    <div className="lwc-tab-bar_nav-item-icon-end">
+                    <div className="lwc-tab-bar__nav-item-icon-end">
                       <Icon
                         sprite={endIcon.sprite}
                         symbol={endIcon.symbol}

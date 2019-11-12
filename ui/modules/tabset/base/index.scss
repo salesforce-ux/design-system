@@ -20,22 +20,22 @@
 
 /**
  * @summary Scoped Tabset
- * @selector .lwc-tabset__scoped
+ * @selector .lwc-tabset_scoped
  * @restrict .lwc-tabset
  * @modifier
  */
-.lwc-tabset__scoped {
+.lwc-tabset_scoped {
   border: $border-width-thin solid var(--lwc-c-tabset-scoped-color-border, $color-gray-5);
   border-radius: $border-radius-medium;
 }
 
 /**
  * @summary Vertical Tabset variant
- * @selector .lwc-tabset__vertical
+ * @selector .lwc-tabset_vertical
  * @restrict .lwc-tabset
  * @modifier
  */
-.lwc-tabset__vertical {
+.lwc-tabset_vertical {
   display: flex;
   border: $border-width-thin solid $color-border;
   border-radius: $border-radius-medium;
@@ -72,17 +72,17 @@
 
 /**
  * @summary Tabset navigation item
- * @selector .lwc-tab-bar_nav-item
- * @restrict .lwc-tab-bar_nav > li
+ * @selector .lwc-tab-bar__nav-item
+ * @restrict .lwc-tab-bar__nav > li
  */
 
 
 /**
  * @summary Link item for tabset tab
- * @selector .lwc-tab-bar_nav-item-link
- * @restrict .lwc-tab-bar_nav-item > a, .lwc-tab-bar_nav-item > button
+ * @selector .lwc-tab-bar__nav-item-link
+ * @restrict .lwc-tab-bar__nav-item > a, .lwc-tab-bar_nav-item > button
  */
-.lwc-tab-bar_nav-item-link {
+.lwc-tab-bar__nav-item-link {
   position: relative;
   display: flex;
   align-items: center;
@@ -100,20 +100,20 @@
 
 /**
  * @summary Container for Tabset Nav Item Icon
- * @selector .lwc-tabset_nav-item-icon
- * @restrict .lwc-tabset_nav-item-link > div
+ * @selector .lwc-tabset__nav-item-icon
+ * @restrict .lwc-tabset__nav-item-link > div
  */
-.lwc-tab-bar_nav-item-icon-start {
+.lwc-tab-bar__nav-item-icon-start {
   display: flex;
   margin-right: var(--var-spacing-horizontal-x-small, $var-spacing-horizontal-x-small);
 }
 
 /**
  * @summary
- * @selector .lwc-tab-bar_nav-item-label
- * @restrict .lwc-tab-bar_nav-item-link > span
+ * @selector .lwc-tab-bar__nav-item-label
+ * @restrict .lwc-tab-bar__nav-item-link > span
  */
-.lwc-tab-bar_nav-item-label {
+.lwc-tab-bar__nav-item-label {
   display: block;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -122,25 +122,25 @@
 
 /**
  * @summary Container for Tabset Nav Item Error Icon
- * @selector .lwc-tabset_nav-item-error
- * @restrict .lwc-tabset_nav-item-link > div
+ * @selector .lwc-tab-bar__nav-item-icon-end
+ * @restrict .lwc-tab-bar__nav-item-link > div
  */
-.lwc-tab-bar_nav-item-icon-end {
+.lwc-tab-bar__nav-item-icon-end {
   display: flex;
   margin-left: var(--var-spacing-horizontal-x-small, $var-spacing-horizontal-x-small);
 }
 
 /**
  * @summary Base modifier for the Tabset
- * @selector .lwc-tab-bar__base
+ * @selector .lwc-tab-bar_base
  * @restrict .lwc-tab-bar
  * @modifier
  */
-.lwc-tab-bar__base {
+.lwc-tab-bar_base {
   display: flex;
   border-bottom: $border-width-thin solid var(--lwc-c-tabset-color-border, $color-gray-5);
 
-  .lwc-tab-bar_nav-item-link {
+  .lwc-tab-bar__nav-item-link {
 
     &:after {
       content: '';
@@ -154,7 +154,7 @@
     /**
      * @summary modifier class for active tab
      * @selector .lwc-is-active
-     * @restrict .lwc-tab-bar_nav-item-link
+     * @restrict .lwc-tab-bar__nav-item-link
      * @modifier
      */
     &.lwc-is-active {
@@ -177,20 +177,20 @@
 
 /**
  * @summary Scoped Tabset
- * @selector .lwc-tab-bar__scoped
+ * @selector .lwc-tab-bar_scoped
  * @restrict .lwc-tab-bars
  * @modifier
  */
-.lwc-tab-bar__scoped {
+.lwc-tab-bar_scoped {
   display: flex;
   border-bottom: $border-width-thin solid var(--lwc-c-tabset-color-border, $color-gray-5);
   background: var(--lwc-c-tabset-scoped-color-background, $color-gray-2);
   border-top-left-radius: $border-radius-medium;
   border-top-right-radius: $border-radius-medium;
 
-  .lwc-tab-bar_nav-item {
+  .lwc-tab-bar__nav-item {
 
-    &:first-child .lwc-tab-bar_nav-item-link {
+    &:first-child .lwc-tab-bar__nav-item-link {
       border-top-left-radius: $border-radius-medium;
       border-left: 0;
     }
@@ -200,7 +200,7 @@
     }
   }
 
-  .lwc-tab-bar_nav-item-link {
+  .lwc-tab-bar__nav-item-link {
     box-sizing: content-box;
     display: block;
     margin-bottom: ($border-width-thin * -1);
@@ -223,11 +223,11 @@
 
 /**
  * @summary Vertical Tabset
- * @selector .lwc-tab-bar__vertical
+ * @selector .lwc-tab-bar_vertical
  * @restrict .lwc-tab-bar
  * @variant
  */
-.lwc-tab-bar__vertical {
+.lwc-tab-bar_vertical {
   height: 100%;
   width: $size-x-small;
   border-right: $border-width-thin solid var(--lwc-c-tabset-scoped-color-border, $color-gray-5);
@@ -235,11 +235,11 @@
   border-top-left-radius: $border-radius-medium;
   border-bottom-left-radius: $border-radius-medium;
 
-  .lwc-tab-bar_nav-item:first-child .lwc-tab-bar_nav-item-link.lwc-is-active {
+  .lwc-tab-bar__nav-item:first-child .lwc-tab-bar__nav-item-link.lwc-is-active {
     border-top-left-radius: $border-radius-medium;
   }
 
-  .lwc-tab-bar_nav-item-link {
+  .lwc-tab-bar__nav-item-link {
     box-sizing: content-box;
     border-bottom: $border-width-thin solid var(--lwc-c-tabset-scoped-color-border, $color-gray-5);
     padding-top: var(--var-spacing-vertical-small, $var-spacing-vertical-small);
@@ -261,29 +261,29 @@
     }
   }
 
-  .lwc-tab-bar_nav-item-label {
+  .lwc-tab-bar__nav-item-label {
     flex: 1;
   }
 }
 
 /**
  * @summary Scoped Tabset contnet
- * @selector .lwc-tab__scoped
+ * @selector .lwc-tab_scoped
  * @restrict .lwc-tab
  * @modifier
  */
-.lwc-tab__scoped {
+.lwc-tab_scoped {
   padding-left: var(--var-spacing-horizontal-medium, $var-spacing-horizontal-medium);
   padding-right: var(--var-spacing-horizontal-medium, $var-spacing-horizontal-medium);
 }
 
 /**
  * @summary Vertical Tabset content
- * @selector .lwc-tab__vertical
+ * @selector .lwc-tab_vertical
  * @restrict .lwc-tab
  * @modifier
  */
-.lwc-tab__vertical {
+.lwc-tab_vertical {
   padding-left: var(--var-spacing-horizontal-medium, $var-spacing-horizontal-medium);
   padding-right: var(--var-spacing-horizontal-medium, $var-spacing-horizontal-medium);
 }

@@ -75,11 +75,11 @@
  * @selector .lwc-tab-bar__nav-item
  * @restrict .lwc-tab-bar__nav > li
  */
- .lwc-tab-bar__nav-item {
-   display: flex;
-   flex-direction: row;
-   align-items: center;
- }
+.lwc-tab-bar__nav-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
 
 /**
  * @summary Overflow Nav Item

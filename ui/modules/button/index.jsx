@@ -20,7 +20,8 @@ const Button = props => {
     hideSourceOf,
     customization,
     ariaControls,
-    ariaExpanded
+    ariaExpanded,
+    ariaHaspopup
   } = props;
 
   const css = rollupAdoptedStylesheets([common, button, customization]);
@@ -93,6 +94,7 @@ const Button = props => {
           disabled={disabled}
           aria-controls={ariaControls}
           aria-expanded={ariaExpanded}
+          aria-haspopup={ariaHaspopup}
         >
           {renderLeftIcon()}
           {children}

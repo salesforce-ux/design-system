@@ -14,10 +14,10 @@ import { MetaTextTree } from '../base/index';
 
 import createHelpers from '../../../../jest.helpers';
 
-const { matchesMarkupAndStyle, matchesMarkup } = createHelpers(__dirname);
+const { matchesMarkup } = createHelpers(__dirname);
 describe('tree', () => {
   it('renders a base Tree with metatext', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <TreeContainer>
         <TreeHeader id="treeheading">Tree Group Header</TreeHeader>
         <TreeList headerId="treeheading">

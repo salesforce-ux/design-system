@@ -5,13 +5,14 @@
 $deprecate-mode: 'silent';
 
 @import 'init';
+@import 'core/font';
 
 // Resets
 @import 'vendor/normalize-sanitized';
 @include core($scoped: false, $globals: false);
 
 // Framework
-@import 'components/index-sanitized';
+@import 'components/index.sanitized';
 @import 'utilities/index';
 
 // Print

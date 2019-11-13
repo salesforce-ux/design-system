@@ -18,19 +18,6 @@ The checkbox-button-group is a set of [checkbox buttons](/components/checkbox-bu
 
 <CodeView>{Base.default}</CodeView>
 
-### Variations
-
-#### Stacked
-
-A stacked modifier that accounts for the limited width of mobile devices. It's recommended to use the stacked modifier when you have 3 or more options.
-
-<Blockquote type="note" header="Mobile Only">
-  The <code>.slds-checkbox_button-group_stacked</code> modifier only affects
-  mobile devices, all other devices will show the default layout.
-</Blockquote>
-
-<CodeView>{getDisplayElementById(Base.examples, 'touch-stacked')}</CodeView>
-
 ## States
 
 ### Has Error
@@ -40,3 +27,8 @@ A stacked modifier that accounts for the limited width of mobile devices. It's r
 ### Disabled
 
 <CodeView>{getDisplayElementById(Base.states, 'disabled')}</CodeView>
+
+## Mobile
+
+Within the mobile scope, the layout of checkbox button group becomes stacked to
+account for the limited horizontal space of mobile screens.

@@ -8,18 +8,48 @@
 - Generate a sanitized version of SLDS in `.dist` that does not contain `--` BEM notation for modifiers, removes deprecated code, and only imports support Lightning Web Components.
 - All mobile/touch enhancements are now scoped `slds-is-mobile`. The scoping class should be applied to the `html/body` element.
 
+## Tokens
+
+### Changed
+- Primitive tokens now default to our warm gray color palette
+  - `PALETTE_GRAY_1`: `#ffffff`
+  - `PALETTE_GRAY_2`: `#fafaf9`
+  - `PALETTE_GRAY_3`: `#f3f2f2`
+  - `PALETTE_GRAY_4`: `#ecebea`
+  - `PALETTE_GRAY_5`: `#dddbda`
+  - `PALETTE_GRAY_6`: `#c9c7c5`
+  - `PALETTE_GRAY_7`: `#b0adab`
+  - `PALETTE_GRAY_8`: `#969492`
+  - `PALETTE_GRAY_9`: `#706e6b`
+  - `PALETTE_GRAY_10`: `#514f4d`
+  - `PALETTE_GRAY_11`: `#3e3e3c`
+  - `PALETTE_GRAY_12`: `#2B2826`
+  - `PALETTE_GRAY_13`: `#080707`
+
 ## Components
-### [Button Groups](https://www.lightningdesignsystem.com/components/button-groups)
-#### Added
-- New `.slds-button-group_stacked` modifier that creates a stacked layout on mobile devices to account for their limited screen width.
+### [Badges](https://www.lightningdesignsystem.com/components/badges)
+#### Changed
+- Added `display: inline-flex` and `align-items: center` to badge to center content vertically
 
 ### [Buttons](https://www.lightningdesignsystem.com/components/buttons)
 #### Changed
 - For touch devices, update the line-height token of `.slds-button` to use the touch-specific token `$height-tappable` (2.75rem) which is a system-wide touch token instead of using a component-specific token.
 
-### [Checkbox Button Group](https://www.lightningdesignsystem.com/components/checkbox-button-group)
+### [Checkbox Button](https://www.lightningdesignsystem.com/components/checkbox-button)
 #### Added
-- New `.slds-checkbox_button-group_stacked` modifier that creates a stacked layout on mobile devices to account for their limited screen width.
+- Introduced new base blueprint for the checkbox button called `.slds-checkbox-button` which improves icon customization, state handling, and blueprint composition.
+#### Changed
+- `.slds-checkbox_add-button` has been deprecated in favor of `.slds-checkbox-button` (see 'Added' above)
+- Documentation has been updated to reflect the new `.slds-checkbox-button` blueprint
+- Updated the background color of the checkbox button's selected state from `$color-background-success` to `$color-brand-darker` since a checkbox button is meant to communicate a selected state, not success.
+
+### [Checkbox Button Group](https://www.lightningdesignsystem.com/components/checkbox-button-group)
+#### Changed
+- For mobile devices, checkbox button groups stack vertically to account for the limited horizontal space of mobile screens.
+
+### [List Builder](https://www.lightningdesignsystem.com/components/list-builder)
+#### Changed
+- List Builder now uses the new `.slds-checkbox-button` instead of the deprecated `.slds-checkbox_add-button`
 
 ### [Lookups](https://www.lightningdesignsystem.com/components/lookups)
 #### Added
@@ -32,9 +62,29 @@
 - Grouped Lookup `<input>` `role` from `combobox` to `textbox`
 
 ### [Radio Button Group](https://www.lightningdesignsystem.com/components/radio-button-group)
-#### Added
-- New `.slds-radio_button-group_stacked` modifier that creates a stacked layout on mobile devices to account for their limited screen width.
+#### Changed
+- For mobile devices, radio button groups stack vertically to account for the limited horizontal space of mobile screens.
 <!-- ## [VERSION] -->
+
+### [Slider](https://www.lightningdesignsystem.com/components/slider)
+#### Changed
+- For mobile devices:
+  - Increased the tap target size of the slider thumb to `$height-tappble (2rem)` for increased usability.
+  - Minor layout and spacing adjustments to account for the larger slider thumb
+
+### [Tabs](https://www.lightningdesignsystem.com/components/tabs)
+#### Changed
+- For touch devices:
+  - Removed the focus styling from the button nested within `.slds-tabs-mobile__item` so the text color does not change on press for mobile (background color still changes on press)
+
+## Utilities
+### [Line Clamp](https://www.lightningdesignsystem.com/utilities/line-clamp)
+#### Added
+- Added Line Clamp utility with four modifier options:
+  - `.slds-line-clamp` - clamps at 3 lines, value provided by `line-clamp` token.
+  - `.slds-line-clamp_small` - clamps at 3 lines
+  - `.slds-line-clamp_medium` - clamps at 5 lines
+  - `.slds-line-clamp_large` - clamps at 7 lines
 
 ## Release 2.10.0 - August 22, 2019
 
@@ -70,7 +120,7 @@
 #### Changed
 - Modify display of `slds-button` to `inline-flex`
 - Center contents of contained Buttons with change of `display: inline-flex` to `slds-button`
-- `justify-content: center` is now applied to the stretch variant `.slds-button_stretch`
+- `justify-content: center` is now applied to the stretch variant `.slds-button_stretch` to ensure centered text after `inline-flex` was added to `slds-button`
 - For touch devices:
   - Increase the line-height (which affects the overall visual height) to `$button-line-height-touch` (2.65rem)
   - Set the size of `.slds-button__icon` to `$square-icon-medium-content` (1rem)

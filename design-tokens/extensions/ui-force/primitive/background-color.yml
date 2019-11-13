@@ -9,42 +9,46 @@ global:
   - 'border*'
   - box-shadow
   - text-shadow
+  primitive: true
 imports:
 - ../../../aliases/colors.yml
 - ../../../aliases/color-palettes.yml
 props:
   COLOR_BACKGROUND:
-    value: '{!PALETTE_GRAY_3}'
+    value: '{!PALETTE_COOL_GRAY_2}'
     comment: Default background color for the whole app.
     access: global
   COLOR_BACKGROUND_LIGHT:
-    value: '{!PALETTE_GRAY_1}'
+    value: '{!PALETTE_COOL_GRAY_1}'
     comment: Light variant of COLOR_BACKGROUND.
     release: 2.8.0
   COLOR_BACKGROUND_DARK:
-    value: '{!PALETTE_GRAY_4}'
+    value: '{!PALETTE_COOL_GRAY_4}'
     comment: Dark variant of COLOR_BACKGROUND.
     release: 2.8.0
   COLOR_BACKGROUND_ROW_HOVER:
-    value: '{!PALETTE_GRAY_3}'
+    value: '{!PALETTE_COOL_GRAY_2}'
     comment: Used as the background color for the hover state on rows or items on list-like components.
     access: global
   COLOR_BACKGROUND_ROW_ACTIVE:
-    value: '{!PALETTE_GRAY_4}'
+    value: '{!PALETTE_COOL_GRAY_3}'
     comment: Used as the background color for the active state on rows or items on list-like components.
     access: global
   COLOR_BACKGROUND_ROW_SELECTED:
-    value: '{!PALETTE_GRAY_4}'
+    value: '{!PALETTE_COOL_GRAY_4}'
     comment: Used as the background color for selected rows or items on list-like components.
     access: global
   COLOR_BACKGROUND_INFO:
-    value: '{!PALETTE_GRAY_9}'
+    value: '{!PALETTE_COOL_GRAY_9}'
     comment: 'Background color for UI elements related to providing neutral information (not error, success, or warning).'
+  COLOR_BACKGROUND_OFFLINE:
+    value: '{!PALETTE_COOL_GRAY_11}'
+    comment: Color for UI elements related to the offline state.
   COLOR_BACKGROUND_STENCIL:
-    value: '{!PALETTE_GRAY_3}'
+    value: '{!PALETTE_COOL_GRAY_3}'
     comment: Used as background for loading stencils on white background.
     access: global
   COLOR_BACKGROUND_STENCIL_ALT:
-    value: '{!PALETTE_GRAY_4}'
+    value: '{!PALETTE_COOL_GRAY_4}'
     comment: Used as an alternate background for loading stencils on gray backgrounds.
     access: global

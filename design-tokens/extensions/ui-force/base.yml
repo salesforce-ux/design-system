@@ -3,6 +3,7 @@
 
 imports:
 - ./deprecated/base.yml
+- ./primitive/base.yml
 - ./background-color.yml
 - ./border-color.yml
 - ./border-width.yml

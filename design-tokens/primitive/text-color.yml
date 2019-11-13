@@ -14,7 +14,7 @@ imports:
 - ../aliases/color-palettes.yml
 props:
   COLOR_TEXT_DEFAULT:
-    value: '{!BISCAY}'
+    value: '{!PALETTE_GRAY_13}'
     comment: Body text color
     access: global
   COLOR_TEXT_BRAND_PRIMARY:
@@ -22,15 +22,15 @@ props:
     comment: Text color found on any primary brand color
 
   COLOR_TEXT_ACTION_LABEL:
-    value: '{!PALETTE_COOL_GRAY_9}'
+    value: '{!PALETTE_GRAY_11}'
     comment: Action label text color
     access: global
   COLOR_TEXT_ACTION_LABEL_ACTIVE:
-    value: '{!BISCAY}'
+    value: '{!PALETTE_GRAY_13}'
     comment: Action label active text color
     access: global
   COLOR_TEXT_BRAND:
-    value: '{!AZURE}'
+    value: '{!BRAND_PRIMARY}'
     comment: Our product brand blue.
     access: global
 
@@ -47,11 +47,11 @@ props:
     comment: Inverse text color for dark backgrounds
     access: global
   COLOR_TEXT_INVERSE_WEAK:
-    value: '{!PALETTE_COOL_GRAY_7}'
+    value: '{!PALETTE_GRAY_7}'
     comment: Weak inverse text color for dark backgrounds
     access: global
   COLOR_TEXT_LINK:
-    value: '{!SCIENCE_BLUE}'
+    value: '{!BRAND_TEXT_LINK}'
     comment: Link text (508)
     access: global
   COLOR_TEXT_LINK_ACTIVE:
@@ -67,7 +67,7 @@ props:
     comment: Focus link text
     access: global
   COLOR_TEXT_LINK_HOVER:
-    value: '{!ENDEAVOUR}'
+    value: '{!BRAND_TEXT_LINK_ACTIVE}'
     cssProperties:
       - color
       - 'border*'
@@ -100,24 +100,24 @@ props:
     comment: Color for texts that are related to warnings on a light background.
 
   COLOR_TEXT_WEAK:
-    value: '{!PALETTE_COOL_GRAY_9}'
+    value: '{!PALETTE_GRAY_11}'
     comment: Color for text that is purposefully de-emphasized to create visual hierarchy.
     access: global
 
   COLOR_TEXT_ICON_DEFAULT:
-    value: '{!PALETTE_COOL_GRAY_9}'
+    value: '{!PALETTE_GRAY_9}'
     comment: Default icon color.
     access: global
   COLOR_TEXT_LABEL:
-    value: '{!PALETTE_COOL_GRAY_9}'
+    value: '{!PALETTE_GRAY_11}'
     comment: Text color for field labels.
     access: global
   COLOR_TEXT_PLACEHOLDER:
-    value: '{!PALETTE_COOL_GRAY_9}'
+    value: '{!PALETTE_GRAY_9}'
     comment: Input placeholder text.
     access: global
   COLOR_TEXT_PLACEHOLDER_INVERSE:
-    value: '{!PALETTE_COOL_GRAY_4}'
+    value: '{!PALETTE_GRAY_4}'
     comment: Input placeholder text on dark backgrounds.
     access: global
   COLOR_TEXT_REQUIRED:

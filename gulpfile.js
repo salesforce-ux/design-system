@@ -51,6 +51,7 @@ gulp.task('clean', () =>
     paths.logs,
     paths.build,
     paths.html,
+    paths.css,
     path.join(paths.designTokens, 'dist')
   ])
 );
@@ -189,7 +190,8 @@ gulp.task(
  * Styles Sanitized
  * ==================
  */
-gulp.task('sanitized:sass', sanitized.sass);
+gulp.task('sanitized:sass', sanitized.generateSanitizedScss);
+gulp.task('sanitized:componentSass', sanitized.writeSanitizedComponentCss);
 
 /*
  * ==================
@@ -270,6 +272,36 @@ export const watch = () =>
  * ==================
  */
 
+// Framework
+gulp.task('dist:sass:framework', dist.sass);
+
+// Components
+gulp.task('dist:sass:components:generate', dist.generateComponentSass);
+gulp.task('dist:sass:components:common', dist.writeCommon);
+
+gulp.task(
+  'dist:sass',
+  gulp.series(
+    'dist:sass:framework',
+    'dist:sass:components:generate',
+    'dist:sass:components:common'
+  )
+);
+
+// Sanitize Framework
+gulp.task('dist:sass:sanitized:generate', dist.generateSanitized);
+gulp.task('dist:sass:sanitized:write', dist.writeSanitized);
+gulp.task('dist:sass:sanitized:components', dist.writeSanitizedComponents);
+
+gulp.task(
+  'dist:sass:sanitized',
+  gulp.parallel(
+    'dist:sass:sanitized:generate',
+    'dist:sass:sanitized:write',
+    'dist:sass:sanitized:components'
+  )
+);
+
 gulp.task(
   'dist',
   gulp.series(
@@ -292,10 +324,9 @@ gulp.task(
       withName('dist:copyDesignTokens')(dist.copyDesignTokens),
       withName('dist:copyComponentDesignTokens')(dist.copyComponentDesignTokens)
     ),
-    withName('dist:generateSanitized')(dist.generateSanitized),
-    withName('dist:sass')(dist.sass),
     withName('dist:componentSass')(dist.componentSass),
-    withName('dist:writeSanitized')(dist.writeSanitized),
+    'dist:sass',
+    'dist:sass:sanitized',
     gulp.parallel(
       withName('dist:versionBlock')(dist.versionBlock),
       withName('dist:versionInline')(dist.versionInline),

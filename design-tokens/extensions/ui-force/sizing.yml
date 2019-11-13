@@ -43,3 +43,6 @@ props:
   MAX_WIDTH_ACTION_OVERFLOW_MENU:
     value: 512px
     comment: "Maximum width for action overflow menu so that it's not full-screen for tablet."
+  LINE_CLAMP:
+    value: 3
+    comment: "Default amount of line breaks before text is truncated"

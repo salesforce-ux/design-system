@@ -1,11 +1,11 @@
 /* eslint-env jest */
 import React from 'react';
 import createHelpers from '../../../../jest.helpers';
-const { matchesMarkupAndStyle } = createHelpers(__dirname);
+const { matchesMarkup } = createHelpers(__dirname);
 
 describe('renders vertical list utiltiies', () => {
   it('renders unordered list', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <ul>
         <li>Vertical List</li>
         <li>List Item</li>
@@ -14,7 +14,7 @@ describe('renders vertical list utiltiies', () => {
     ));
 
   it('renders nested unordered lists', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <ul>
         <li>Vertical List with nested vertical lists</li>
         <li>List Item</li>
@@ -35,7 +35,7 @@ describe('renders vertical list utiltiies', () => {
     ));
 
   it('renders unordered list with links', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <ul>
         <li>
           <a href="javascript:void(0);">Vertical List with links</a>
@@ -50,7 +50,7 @@ describe('renders vertical list utiltiies', () => {
     ));
 
   it('renders unordered list with block links', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <ul className="slds-has-block-links">
         <li>
           <a href="javascript:void(0);">Vertical List with links</a>
@@ -65,7 +65,7 @@ describe('renders vertical list utiltiies', () => {
     ));
 
   it('renders unordered list with padded block links', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <ul className="slds-has-block-links_space">
         <li>
           <a href="javascript:void(0);">Vertical List with links</a>
@@ -80,7 +80,7 @@ describe('renders vertical list utiltiies', () => {
     ));
 
   it('renders unordered list with inline-block links', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <ul className="slds-has-inline-block-links">
         <li>
           <a href="javascript:void(0);">Vertical List with links</a>
@@ -95,7 +95,7 @@ describe('renders vertical list utiltiies', () => {
     ));
 
   it('renders unordered list with padded inline-block links', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <ul className="slds-has-inline-block-links_space">
         <li>
           <a href="javascript:void(0);">Vertical List with links</a>
@@ -110,7 +110,7 @@ describe('renders vertical list utiltiies', () => {
     ));
 
   it('renders dotted list style', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <ul className="slds-list_dotted">
         <li>Basic ordered list</li>
         <li>List Item</li>
@@ -119,7 +119,7 @@ describe('renders vertical list utiltiies', () => {
     ));
 
   it('renders decimal list style', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <ol className="slds-list_ordered">
         <li>Basic ordered list</li>
         <li>List Item</li>
@@ -128,7 +128,7 @@ describe('renders vertical list utiltiies', () => {
     ));
 
   it('renders top dividers on list items', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <ul className="slds-has-dividers_top">
         <li className="slds-item">List item with top divider</li>
         <li className="slds-item">List Item</li>
@@ -137,7 +137,7 @@ describe('renders vertical list utiltiies', () => {
     ));
 
   it('renders top dividers on padded list items', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <ul className="slds-has-dividers_top-space">
         <li className="slds-item">List item with top divider</li>
         <li className="slds-item">List Item</li>
@@ -146,7 +146,7 @@ describe('renders vertical list utiltiies', () => {
     ));
 
   it('renders top dividers on list items with block links', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <ul className="slds-has-dividers_top slds-has-block-links">
         <li className="slds-item">
           <a href="javascript:void(0);">List item with link and top divider</a>
@@ -161,7 +161,7 @@ describe('renders vertical list utiltiies', () => {
     ));
 
   it('renders top dividers on padded list items with block links', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <ul className="slds-has-dividers_top slds-has-block-links_space">
         <li className="slds-item">
           <a href="javascript:void(0);">List item with link and top divider</a>
@@ -176,7 +176,7 @@ describe('renders vertical list utiltiies', () => {
     ));
 
   it('renders bottom dividers on list items', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <ul className="slds-has-dividers_bottom">
         <li className="slds-item">List item with bottom divider</li>
         <li className="slds-item">List Item</li>
@@ -185,7 +185,7 @@ describe('renders vertical list utiltiies', () => {
     ));
 
   it('renders bottom dividers on padded list items', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <ul className="slds-has-dividers_bottom-space">
         <li className="slds-item">List item with bottom divider with space</li>
         <li className="slds-item">List Item</li>
@@ -194,7 +194,7 @@ describe('renders vertical list utiltiies', () => {
     ));
 
   it('renders bottom dividers on list items with block links', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <ul className="slds-has-dividers_bottom slds-has-block-links">
         <li className="slds-item">
           <a href="javascript:void(0);">
@@ -211,7 +211,7 @@ describe('renders vertical list utiltiies', () => {
     ));
 
   it('renders bottom dividers on padded list items with block links', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <ul className="slds-has-dividers_bottom slds-has-block-links_space">
         <li className="slds-item">
           <a href="javascript:void(0);">
@@ -228,7 +228,7 @@ describe('renders vertical list utiltiies', () => {
     ));
 
   it('renders dividers around the list items', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <ul className="slds-has-dividers_around">
         <li className="slds-item">List item with around divider</li>
         <li className="slds-item">List Item</li>
@@ -237,7 +237,7 @@ describe('renders vertical list utiltiies', () => {
     ));
 
   it('renders dividers around the padded list items', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <ul className="slds-has-dividers_around-space">
         <li className="slds-item">List item with around divider with space</li>
         <li className="slds-item">List Item</li>
@@ -246,7 +246,7 @@ describe('renders vertical list utiltiies', () => {
     ));
 
   it('renders dividers around the list items with block links', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <ul className="slds-has-dividers_around slds-has-block-links">
         <li className="slds-item">
           <a href="javascript:void(0);">
@@ -263,7 +263,7 @@ describe('renders vertical list utiltiies', () => {
     ));
 
   it('renders dividers around the padded list items with block links', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <ul className="slds-has-dividers_around slds-has-block-links_space">
         <li className="slds-item">
           <a href="javascript:void(0);">
@@ -280,7 +280,7 @@ describe('renders vertical list utiltiies', () => {
     ));
 
   it('renders list items with interactions', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <ul className="slds-has-list-interactions slds-has-block-links_space">
         <li className="slds-item slds-is-selected">
           <a href="javascript:void(0);">List item</a>

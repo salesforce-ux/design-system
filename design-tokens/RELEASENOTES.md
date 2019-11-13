@@ -1,5 +1,24 @@
 <!-- Release notes authoring guidelines: http://keepachangelog.com/ -->
 
+## 2.11.0
+
+### Changed
+
+- Primitive tokens now default to our warm gray color palette
+  - `PALETTE_GRAY_1`: `#ffffff`
+  - `PALETTE_GRAY_2`: `#fafaf9`
+  - `PALETTE_GRAY_3`: `#f3f2f2`
+  - `PALETTE_GRAY_4`: `#ecebea`
+  - `PALETTE_GRAY_5`: `#dddbda`
+  - `PALETTE_GRAY_6`: `#c9c7c5`
+  - `PALETTE_GRAY_7`: `#b0adab`
+  - `PALETTE_GRAY_8`: `#969492`
+  - `PALETTE_GRAY_9`: `#706e6b`
+  - `PALETTE_GRAY_10`: `#514f4d`
+  - `PALETTE_GRAY_11`: `#3e3e3c`
+  - `PALETTE_GRAY_12`: `#2B2826`
+  - `PALETTE_GRAY_13`: `#080707`
+
 ## 2.10.0
 
 ### Changed

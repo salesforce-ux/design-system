@@ -4,6 +4,12 @@
 
 <!-- ## [Unreleased] -->
 
+## 2.11.0
+
+### Changed
+
+- List Builder now uses the new `.slds-checkbox-button` instead of the deprecated `.slds-checkbox_add-button`
+
 ## 2.7.0
 
 ### Added

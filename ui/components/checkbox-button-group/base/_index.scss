@@ -16,19 +16,7 @@
   background-color: $button-color-background-primary;
   border: $border-width-thin solid $color-border;
   border-radius: $border-radius-medium;
-}
 
-/**
- * @name stacked
- * @summary Layout modifier for the checkbox-button-group variant that causes the layout to become stacked
- * @selector .slds-checkbox_button-group_stacked
- * @restrict .slds-checkbox_button-group
- * @modifier
- * @group layout
- */
-.slds-checkbox_button-group_stacked {
-  // This is a modifier of a variant, ignore the incorrect underscore used,
-  // currently only specced to touch devices
   @include touch-device {
     display: block;
 

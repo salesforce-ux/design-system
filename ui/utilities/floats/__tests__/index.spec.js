@@ -1,11 +1,11 @@
 /* eslint-env jest */
 import React from 'react';
 import createHelpers from '../../../../jest.helpers';
-const { matchesMarkupAndStyle } = createHelpers(__dirname);
+const { matchesMarkup } = createHelpers(__dirname);
 
 describe('renders float utilities', () => {
   it('renders float left', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <div className="slds-clearfix">
         <div className="slds-float_left">
           <p>I’m floooaaaating</p>
@@ -14,7 +14,7 @@ describe('renders float utilities', () => {
     ));
 
   it('renders float right', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <div className="slds-clearfix">
         <div className="slds-float_right">
           <p>I’m floooaaaating</p>
@@ -23,14 +23,14 @@ describe('renders float utilities', () => {
     ));
 
   it('renders float none', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <div className="slds-float_none">
         <p>I’m not floooaaaating</p>
       </div>
     ));
 
   it('renders floats with a clearfix', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <div className="slds-clearfix">
         <div className="slds-float_left">
           <p>I’m floooaaaating</p>

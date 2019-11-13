@@ -1,60 +1,60 @@
 /* eslint-env jest */
 import React from 'react';
 import createHelpers from '../../../../jest.helpers';
-const { matchesMarkupAndStyle } = createHelpers(__dirname);
+const { matchesMarkup } = createHelpers(__dirname);
 
 describe('renders text utilities', () => {
   it('renders regular body text', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <div className="slds-text-body_regular">
         The quick brown fox jumps over the lazy dog.
       </div>
     ));
 
   it('renders small body text', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <div className="slds-text-body_small">
         The quick brown fox jumps over the lazy dog.
       </div>
     ));
 
   it('renders large heading text', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <div className="slds-text-heading_large">
         The quick brown fox jumps over the lazy dog.
       </div>
     ));
 
   it('renders medium heading text', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <div className="slds-text-heading_medium">
         The quick brown fox jumps over the lazy dog.
       </div>
     ));
 
   it('renders small heading text', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <div className="slds-text-heading_small">
         The quick brown fox jumps over the lazy dog.
       </div>
     ));
 
   it('renders small title text', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <div className="slds-text-title">
         The quick brown fox jumps over the lazy dog.
       </div>
     ));
 
   it('renders small title text in all-caps', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <div className="slds-text-title_caps">
         The quick brown fox jumps over the lazy dog.
       </div>
     ));
 
   it('renders longform styles', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <div className="slds-text-longform">
         <p>The quick brown fox jumps over the lazy dog.</p>
         <p>The quick brown fox jumps over the lazy dog.</p>
@@ -96,56 +96,56 @@ describe('renders text utilities', () => {
     ));
 
   it('renders left aligned text', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <div className="slds-text-align_left">
         The quick brown fox jumps over the lazy dog.
       </div>
     ));
 
   it('renders center aligned text', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <div className="slds-text-align_center">
         The quick brown fox jumps over the lazy dog.
       </div>
     ));
 
   it('renders right aligned text', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <div className="slds-text-align_right">
         The quick brown fox jumps over the lazy dog.
       </div>
     ));
 
   it('renders default text color', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <div className="slds-text-color_default">
         The quick brown fox jumps over the lazy dog.
       </div>
     ));
 
   it('renders weak text color', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <div className="slds-text-color_weak">
         The quick brown fox jumps over the lazy dog.
       </div>
     ));
 
   it('renders error text color', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <div className="slds-text-color_error">
         The quick brown fox jumps over the lazy dog.
       </div>
     ));
 
   it('renders destructive text color', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <div className="slds-text-color_destructive">
         The quick brown fox jumps over the lazy dog.
       </div>
     ));
 
   it('renders inversed text color', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <div style={{ padding: '0.5rem', background: '#16325c' }}>
         <div className="slds-text-color_inverse">
           The quick brown fox jumps over the lazy dog.
@@ -154,7 +154,7 @@ describe('renders text utilities', () => {
     ));
 
   it('renders inversed weak text color', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <div style={{ padding: '0.5rem', background: '#16325c' }}>
         <div className="slds-text-color_inverse-weak">
           The quick brown fox jumps over the lazy dog.
@@ -163,7 +163,7 @@ describe('renders text utilities', () => {
     ));
 
   it('renders monospace text font', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <div style={{ padding: '0.5rem', background: '#16325c' }}>
         <div className="slds-text-font_monospace">
           The quick brown fox jumps over the lazy dog.

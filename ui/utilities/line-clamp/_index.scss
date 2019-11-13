@@ -1,0 +1,55 @@
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+@mixin clamp($lines) {
+  // stylelint-disable value-no-vendor-prefix
+  display: -webkit-box;
+  // stylelint-enable value-no-vendor-prefix
+  // stylelint-disable property-no-vendor-prefix
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $lines;
+  // stylelint-enable property-no-vendor-prefix
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+}
+
+/**
+ * @summary Sets default line clamp of 3 lines for multi-line truncation, can be altered by a token
+ *
+ * @selector .slds-line-clamp
+ * @modifier
+ */
+.slds-line-clamp {
+  @include clamp($line-clamp);
+}
+
+/**
+ * @summary Sets line clamp for small multi-line truncation
+ *
+ * @selector .slds-line-clamp_small
+ * @modifier
+ */
+.slds-line-clamp_small {
+  @include clamp(3);
+}
+
+/**
+ * @summary Sets line clamp for medium multi-line truncation
+ *
+ * @selector .slds-line-clamp_medium
+ * @modifier
+ */
+.slds-line-clamp_medium {
+  @include clamp(5);
+}
+
+/**
+ * @summary Sets line clamp for large multi-line truncation
+ *
+ * @selector .slds-line-clamp_large
+ * @modifier
+ */
+.slds-line-clamp_large {
+  @include clamp(7);
+}

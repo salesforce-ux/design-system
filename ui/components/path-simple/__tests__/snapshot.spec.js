@@ -11,24 +11,23 @@ import {
 
 import createHelpers from '../../../../jest.helpers';
 
-const { matchesMarkupAndStyle } = createHelpers(__dirname);
+const { matchesMarkup } = createHelpers(__dirname);
 
 describe('SimplePath', () => {
-  it('renders the legacy Simple Path', () =>
-    matchesMarkupAndStyle(<PathSimple />));
+  it('renders the legacy Simple Path', () => matchesMarkup(<PathSimple />));
 
   it('renders the legacy Simple Path with Coaching', () =>
-    matchesMarkupAndStyle(<PathSimpleCoaching />));
+    matchesMarkup(<PathSimpleCoaching />));
 
   it('renders the legacy Simple Path with Visible Coaching', () =>
-    matchesMarkupAndStyle(<PathSimpleCoachingVisible />));
+    matchesMarkup(<PathSimpleCoachingVisible />));
 
   it('renders the legacy Simple Path in a different stage', () =>
-    matchesMarkupAndStyle(<PathSimpleDifferentStage />));
+    matchesMarkup(<PathSimpleDifferentStage />));
 
   it('renders the legacy Simple Path in Lost state', () =>
-    matchesMarkupAndStyle(<PathSimpleLost />));
+    matchesMarkup(<PathSimpleLost />));
 
   it('renders the legacy Simple Path in Won state', () =>
-    matchesMarkupAndStyle(<PathSimpleWon />));
+    matchesMarkup(<PathSimpleWon />));
 });

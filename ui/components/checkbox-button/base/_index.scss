@@ -1,138 +1,74 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
+@import 'deprecate';
+
 /**
- * @summary Initializes checkbox add button
+ * @summary Initializes checkbox button
  *
  * @name base
- * @selector .slds-checkbox_add-button
- * @restrict div
+ * @selector .slds-checkbox-button
+ * @restrict label
  * @support dev-ready
  * @variant
  */
-.slds-checkbox_add-button,
-.slds-checkbox--add-button {
+.slds-checkbox-button {
+  @include square($square-icon-medium-boundary);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: $border-width-thin solid $button-color-border-primary;
+  border-radius: $button-border-radius;
+  color: $color-brand-darker; // Controls icon fill, not meant for text, faux styling API
+  cursor: pointer;
+
   @include touch-device {
     @include square($square-tappable);
-    display: flex;
-    align-items: center;
-    justify-content: center;
   }
+}
 
-  /**
-   * @summary Creates a custom styled checkbox
-   * @selector .slds-checkbox_faux
-   * @restrict .slds-checkbox_add-button label
-   */
-  .slds-checkbox_faux,
-  .slds-checkbox--faux {
-    @include square($square-icon-medium-boundary);
-    position: relative;
-    display: inline-block;
-    border: $border-width-thin solid $color-border-button-default;
-    border-radius: $border-radius-medium;
-    background-color: $color-background-input;
-    cursor: pointer;
+/**
+* @summary Modifier for the checked state
+* @name is-checked
+* @selector .slds-checkbox-button_is-checked
+* @restrict .slds-checkbox-button
+* @modifier
+*/
+.slds-checkbox-button_is-checked {
+  background-color: $color-brand-darker;
+  border-color: transparent;
+  color: $color-text-brand-primary; // Controls icon fill, not meant for text, faux styling API
+}
 
-    @include touch-device {
-      @include square($square-tappable-small);
-    }
+/**
+* @summary Modifier for the disabled state
+* @name is-disabled
+* @selector .slds-checkbox-button_is-disabled
+* @restrict .slds-checkbox-button
+* @modifier
+*/
+.slds-checkbox-button_is-disabled {
+  background-color: $color-background-button-default-disabled;
+  border-color: $button-color-border-primary;
+  color: $color-text-icon-default-disabled; // Controls icon fill, not meant for text, faux styling API
+  cursor: default;
 
-    &:before,
-    &:after {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      height: rem(14px);
-      width: rem(2px);
-      margin: auto;
-      background: $brand-accessible;
-    }
-
-    &:after {
-      width: rem(14px);
-      height: rem(2px);
-    }
-
-    &:hover:not([disabled]),
-    &:focus:not([disabled]) {
-      border: $border-width-thin solid $color-border-button-default;
-      background-color: $color-background-button-default-hover;
-    }
-
-    &:active {
-      background-color: $color-background-button-default-active;
-    }
+  // If checked && disabled
+  &.slds-checkbox-button_is-checked {
+    background-color: $color-background-button-brand-disabled;
+    border-color: $color-border-button-brand-disabled;
+    color: $color-text-button-brand-disabled; // Controls icon fill, not meant for text, faux styling API
   }
+}
 
-  [type="checkbox"]:checked {
-
-    ~ .slds-checkbox_faux,
-    ~ .slds-checkbox--faux,
-    + .slds-checkbox_faux,
-    + .slds-checkbox--faux {
-      border-color: transparent;
-      background: $color-background-success;
-
-      &:before,
-      &:after {
-        background: $color-background-alt;
-      }
-
-      &:before {
-        left: rem(5px);
-        width: rem(2px);
-        height: rem(16px);
-        transform: rotate(40deg);
-      }
-
-      &:after {
-        top: rem(5px);
-        left: rem(-10px);
-        width: rem(9px);
-        height: rem(2px);
-        transform: rotate(40deg);
-      }
-    }
-  }
-
-  [type="checkbox"]:focus {
-
-    ~ .slds-checkbox_faux,
-    ~ .slds-checkbox--faux,
-    + .slds-checkbox_faux,
-    + .slds-checkbox--faux {
-      @include focus-button;
-      border-color: $color-border-input-active;
-    }
-  }
-
-  [type="checkbox"][disabled] {
-
-    ~ .slds-checkbox_faux,
-    ~ .slds-checkbox--faux,
-    + .slds-checkbox_faux,
-    + .slds-checkbox--faux {
-      background-color: $color-background-button-brand-disabled;
-      border-color: $color-border-button-brand-disabled;
-      color: $color-text-button-brand-disabled;
-      cursor: default;
-
-      &:before,
-      &:after {
-        background: $color-gray-8;
-      }
-    }
-  }
-
-  [type="checkbox"][disabled]:checked {
-
-    ~ .slds-checkbox_faux,
-    + .slds-checkbox_faux {
-      background-color: $color-background-alt;
-    }
-  }
+/**
+* @summary Modifier for the focused state
+* @name is-focused
+* @selector .slds-checkbox-button_is-focused
+* @restrict .slds-checkbox-button
+* @modifier
+*/
+.slds-checkbox-button_is-focused {
+  @include focus-button;
+  border-color: $color-border-input-active;
 }

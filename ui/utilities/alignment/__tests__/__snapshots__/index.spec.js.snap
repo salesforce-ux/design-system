@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders absolute center utility renders utility 1`] = `
+<div
+  className="slds-align_absolute-center"
+  style={
+    Object {
+      "height": "5rem",
+    }
+  }
+>
+  This content will be positioned in the absolute center of its container
+</div>
+`;
+
+exports[`renders absolute center utility renders utility nested in a flex container 1`] = `
+<div
+  className="slds-grid"
+  style={
+    Object {
+      "height": "5rem",
+    }
+  }
+>
+  <div
+    className="slds-align_absolute-center"
+  >
+    This content will be positioned in the absolute center of its container
+  </div>
+</div>
+`;

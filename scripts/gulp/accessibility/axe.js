@@ -21,5 +21,5 @@ export default paths =>
     urls: paths,
     showOnlyViolations: true,
     verbose: true,
-    errorOnViolation: true
+    errorOnViolation: false
   });

@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders bottom magnet 1`] = `
+<div
+  className="slds-card slds-has-bottom-magnet"
+>
+  <div
+    className="slds-p-around_medium"
+  >
+    My Component
+  </div>
+</div>
+`;
+
+exports[`renders top magnet 1`] = `
+<div
+  className="slds-card slds-has-top-magnet"
+>
+  <div
+    className="slds-p-around_medium"
+  >
+    My Component
+  </div>
+</div>
+`;
+
+exports[`renders touching magnets 1`] = `
+<div>
+  <div
+    className="slds-card slds-has-bottom-magnet"
+  >
+    <div
+      className="slds-p-around_medium"
+    >
+      My Component
+    </div>
+  </div>
+  <div
+    className="slds-card slds-has-top-magnet"
+  >
+    <div
+      className="slds-p-around_medium"
+    >
+      My Component
+    </div>
+  </div>
+</div>
+`;

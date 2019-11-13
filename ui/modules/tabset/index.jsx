@@ -31,7 +31,13 @@ class Tabset extends Component {
   }
 
   render() {
-    const { id, variant, customization, shadow } = this.props;
+    const {
+      id,
+      variant,
+      customization,
+      overflowThreshold,
+      shadow
+    } = this.props;
     const { activeTabIndex } = this.state;
     const activeTabId = `${id}-${activeTabIndex}`;
     const tabChildren = this.props.children[activeTabIndex].props.children;
@@ -54,6 +60,7 @@ class Tabset extends Component {
             tabs={this.props.children}
             activeTabIndex={activeTabIndex}
             changeActiveTab={this.changeActiveTab}
+            overflowThreshold={overflowThreshold}
             variant={variant}
           />
 

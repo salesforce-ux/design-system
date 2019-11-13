@@ -28,7 +28,38 @@ export const examples = [
   {
     id: 'with-overflow',
     label: 'With Overflow',
-    element: <div>tbd.</div>
+    element: (
+      <Tabset overflowThreshold={3}>
+        <Tab
+          label="Opportunities"
+          startIcon={{ sprite: 'standard', symbol: 'opportunity' }}
+        >
+          <p>This is tab 1 content</p>
+          <p>It can be any html</p>
+        </Tab>
+
+        <Tab label="Cases" startIcon={{ sprite: 'standard', symbol: 'case' }}>
+          <p>This is tab 2 content</p>
+          <p>It can be any html</p>
+        </Tab>
+
+        <Tab
+          label="Products"
+          startIcon={{ sprite: 'standard', symbol: 'product' }}
+        >
+          <p>This is tab 3 content</p>
+          <p>It can be any html</p>
+        </Tab>
+
+        <Tab
+          label="Contacts"
+          startIcon={{ sprite: 'standard', symbol: 'contact' }}
+        >
+          <p>This is tab 4 content</p>
+          <p>It can be any html</p>
+        </Tab>
+      </Tabset>
+    )
   },
   {
     id: 'with-start-icon',

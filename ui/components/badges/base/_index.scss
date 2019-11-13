@@ -19,6 +19,8 @@
   line-height: normal;
   color: $color-text-default;
   white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
 
   + .slds-badge {
     margin-left: $spacing-x-small;

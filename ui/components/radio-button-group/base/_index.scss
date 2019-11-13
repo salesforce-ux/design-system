@@ -15,19 +15,7 @@
   display: inline-flex;
   border: $border-width-thin solid $color-border;
   border-radius: $border-radius-medium;
-}
 
-/**
- * @name stacked
- * @summary Layout modifier for the radio-button-group variant that causes the layout to become stacked
- * @selector .slds-radio_button-group_stacked
- * @restrict .slds-radio_button-group
- * @modifier
- * @group layout
- */
-.slds-radio_button-group_stacked {
-  // This is a modifier of a variant, ignore the incorrect underscore used,
-  // currently only specced to touch devices
   @include touch-device {
     display: block;
 
@@ -111,7 +99,7 @@
   }
 
   // Hide input and style radio--faux
-  [type="radio"] {
+  [type='radio'] {
     @include square(1px);
     border: 0;
     clip: rect(0 0 0 0);

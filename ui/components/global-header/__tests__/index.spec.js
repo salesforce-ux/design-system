@@ -23,35 +23,33 @@ import GlobalActions, {
 
 import createHelpers from '../../../../jest.helpers';
 
-const { matchesMarkup, matchesMarkupAndStyle } = createHelpers(__dirname);
+const { matchesMarkup } = createHelpers(__dirname);
 
 describe('Deprecated Global Header', () => {
   it('renders a deprecated global header', () =>
-    matchesMarkupAndStyle(<GlobalHeaderDeprecated />));
+    matchesMarkup(<GlobalHeaderDeprecated />));
   it('renders a deprecated global header with favorites selected', () =>
-    matchesMarkupAndStyle(<GlobalHeaderDeprecated favoritesSelected />));
+    matchesMarkup(<GlobalHeaderDeprecated favoritesSelected />));
   it('renders a deprecated global header with favorites disabled', () =>
-    matchesMarkupAndStyle(<GlobalHeaderDeprecated favoritesDisabled />));
+    matchesMarkup(<GlobalHeaderDeprecated favoritesDisabled />));
   it('renders a deprecated global header with actions menu showing', () =>
-    matchesMarkupAndStyle(<GlobalHeaderDeprecated actions />));
+    matchesMarkup(<GlobalHeaderDeprecated actions />));
   it('renders a deprecated global header with setup menu showing', () =>
-    matchesMarkupAndStyle(<GlobalHeaderDeprecated setup />));
+    matchesMarkup(<GlobalHeaderDeprecated setup />));
   it('renders a deprecated global header with search expanded', () =>
-    matchesMarkupAndStyle(<GlobalHeaderDeprecated expanded />));
+    matchesMarkup(<GlobalHeaderDeprecated expanded />));
   it('renders a deprecated global header with search expanded and with search term', () =>
-    matchesMarkupAndStyle(
-      <GlobalHeaderDeprecated expanded searchingFor="ibm" />
-    ));
+    matchesMarkup(<GlobalHeaderDeprecated expanded searchingFor="ibm" />));
   it('renders deprecated global action setup menu', () =>
-    matchesMarkupAndStyle(<SetupDropdown />));
+    matchesMarkup(<SetupDropdown />));
   it('renders deprecated global action menu', () =>
-    matchesMarkupAndStyle(<ActionsDropdown />));
+    matchesMarkup(<ActionsDropdown />));
   it('renders deprecated global header search input', () =>
-    matchesMarkupAndStyle(<GlobalSearch />));
+    matchesMarkup(<GlobalSearch />));
   it('renders deprecated global header search MRU', () =>
-    matchesMarkupAndStyle(<GlobalSearchMRUs />));
+    matchesMarkup(<GlobalSearchMRUs />));
   it('renders deprecated global header search typeahead options', () =>
-    matchesMarkupAndStyle(<GlobalSearchSearchOptions />));
+    matchesMarkup(<GlobalSearchSearchOptions />));
 });
 
 describe('Global Header', () => {

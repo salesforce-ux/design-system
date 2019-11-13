@@ -1,5 +1,3101 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`deprecated treegrid renders a deeply nested DeprecatedTreeGrid 1`] = `
+<table
+  aria-readonly="true"
+  className="slds-table slds-table_bordered slds-tree slds-table_tree"
+  role="treegrid"
+>
+  <thead
+    className=""
+  >
+    <tr>
+      <th
+        className="slds-cell-buffer_left"
+        scope="col"
+      >
+        <div
+          className="slds-grid slds-grid_vertical-align-center"
+        >
+          <button
+            className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small slds-m-right_x-small slds-shrink-none slds-table_tree__toggle"
+            tabIndex="-1"
+            title="Expand all rows"
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-button__icon slds-button__icon_small"
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#chevrondown"
+              />
+            </svg>
+            <span
+              className="slds-assistive-text"
+            >
+              Expand all rows
+            </span>
+          </button>
+          <div
+            className="slds-truncate"
+            title="Account Name"
+          >
+            Account Name
+          </div>
+        </div>
+      </th>
+      <th
+        scope="col"
+      >
+        <div
+          className="slds-truncate"
+          title="Employees"
+        >
+          Employees
+        </div>
+      </th>
+      <th
+        scope="col"
+      >
+        <div
+          className="slds-truncate"
+          title="Phone Number"
+        >
+          Phone Number
+        </div>
+      </th>
+      <th
+        scope="col"
+      >
+        <div
+          className="slds-truncate"
+          title="Account Owner"
+        >
+          Account Owner
+        </div>
+      </th>
+      <th
+        scope="col"
+      >
+        <div
+          className="slds-truncate"
+          title="Billing City"
+        >
+          Billing City
+        </div>
+      </th>
+      <th
+        className="slds-cell-shrink"
+        scope="col"
+      >
+        <button
+          aria-haspopup="true"
+          className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+          tabIndex="-1"
+          title="Show More"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon slds-button__icon_hint slds-button__icon_small"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            Show More
+          </span>
+        </button>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr
+      aria-level="1"
+      aria-posinset="1"
+      aria-setsize="4"
+      className="slds-hint-parent"
+      tabIndex="0"
+    >
+      <th
+        className="slds-tree__item"
+        data-label="Account Name"
+        scope="row"
+      >
+        <button
+          aria-hidden="true"
+          className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small slds-is-disabled"
+          tabIndex="-1"
+          title="Expand Rewis Inc"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon slds-button__icon_small"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#chevronright"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            Collapse Rewis Inc
+          </span>
+        </button>
+        <div
+          className="slds-truncate"
+          title="Rewis Inc"
+        >
+          <a
+            href="javascript:void(0);"
+            tabIndex="-1"
+          >
+            Rewis Inc
+          </a>
+        </div>
+      </th>
+      <td
+        data-label="Employees"
+        role="gridcell"
+      >
+        <div
+          className="slds-truncate"
+          title="3,100"
+        >
+          3,100
+        </div>
+      </td>
+      <td
+        data-label="Phone Number"
+        role="gridcell"
+      >
+        <div
+          className="slds-truncate"
+          title="837-555-1212"
+        >
+          837-555-1212
+        </div>
+      </td>
+      <td
+        data-label="Account Owner"
+        role="gridcell"
+      >
+        <div
+          className="slds-truncate"
+          title="Jane Doe"
+        >
+          <a
+            href="javascript:void(0);"
+            tabIndex="-1"
+          >
+            Jane Doe
+          </a>
+        </div>
+      </td>
+      <td
+        data-label="Billing City"
+        role="gridcell"
+      >
+        <div
+          className="slds-truncate"
+          title="Phoenix, AZ"
+        >
+          Phoenix, AZ
+        </div>
+      </td>
+      <td
+        className="slds-cell-shrink"
+        role="gridcell"
+      >
+        <button
+          aria-haspopup="true"
+          className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+          tabIndex="-1"
+          title="More actions for Rewis Inc"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon slds-button__icon_hint slds-button__icon_small"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            More actions for Rewis Inc
+          </span>
+        </button>
+      </td>
+    </tr>
+    <tr
+      aria-expanded="true"
+      aria-level="1"
+      aria-posinset="2"
+      aria-setsize="4"
+      className="slds-hint-parent"
+      tabIndex={null}
+    >
+      <th
+        className="slds-tree__item"
+        data-label="Account Name"
+        scope="row"
+      >
+        <button
+          aria-hidden="true"
+          className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small"
+          tabIndex="-1"
+          title="Collapse Acme Corporation"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon slds-button__icon_small"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#chevronright"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            Expand Acme Corporation
+          </span>
+        </button>
+        <div
+          className="slds-truncate"
+          title="Acme Corporation"
+        >
+          <a
+            href="javascript:void(0);"
+            tabIndex="-1"
+          >
+            Acme Corporation
+          </a>
+        </div>
+      </th>
+      <td
+        data-label="Employees"
+        role="gridcell"
+      >
+        <div
+          className="slds-truncate"
+          title="10,000"
+        >
+          10,000
+        </div>
+      </td>
+      <td
+        data-label="Phone Number"
+        role="gridcell"
+      >
+        <div
+          className="slds-truncate"
+          title="837-555-1212"
+        >
+          837-555-1212
+        </div>
+      </td>
+      <td
+        data-label="Account Owner"
+        role="gridcell"
+      >
+        <div
+          className="slds-truncate"
+          title="John Doe"
+        >
+          <a
+            href="javascript:void(0);"
+            tabIndex="-1"
+          >
+            John Doe
+          </a>
+        </div>
+      </td>
+      <td
+        data-label="Billing City"
+        role="gridcell"
+      >
+        <div
+          className="slds-truncate"
+          title="San Francisco, CA"
+        >
+          San Francisco, CA
+        </div>
+      </td>
+      <td
+        className="slds-cell-shrink"
+        role="gridcell"
+      >
+        <button
+          aria-haspopup="true"
+          className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+          tabIndex="-1"
+          title="More actions for Acme Corporation"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon slds-button__icon_hint slds-button__icon_small"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            More actions for Acme Corporation
+          </span>
+        </button>
+      </td>
+    </tr>
+    <tr
+      aria-expanded="true"
+      aria-level="2"
+      aria-posinset="1"
+      aria-setsize="2"
+      className="slds-hint-parent"
+      tabIndex={null}
+    >
+      <th
+        className="slds-tree__item"
+        data-label="Account Name"
+        scope="row"
+      >
+        <button
+          aria-hidden="true"
+          className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small"
+          tabIndex="-1"
+          title="Collapse Acme Corporation (Bay Area)"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon slds-button__icon_small"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#chevronright"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            Expand Acme Corporation (Bay Area)
+          </span>
+        </button>
+        <div
+          className="slds-truncate"
+          title="Acme Corporation (Bay Area)"
+        >
+          <a
+            href="javascript:void(0);"
+            tabIndex="-1"
+          >
+            Acme Corporation (Bay Area)
+          </a>
+        </div>
+      </th>
+      <td
+        data-label="Employees"
+        role="gridcell"
+      >
+        <div
+          className="slds-truncate"
+          title="3,000"
+        >
+          3,000
+        </div>
+      </td>
+      <td
+        data-label="Phone Number"
+        role="gridcell"
+      >
+        <div
+          className="slds-truncate"
+          title="837-555-1212"
+        >
+          837-555-1212
+        </div>
+      </td>
+      <td
+        data-label="Account Owner"
+        role="gridcell"
+      >
+        <div
+          className="slds-truncate"
+          title="John Doe"
+        >
+          <a
+            href="javascript:void(0);"
+            tabIndex="-1"
+          >
+            John Doe
+          </a>
+        </div>
+      </td>
+      <td
+        data-label="Billing City"
+        role="gridcell"
+      >
+        <div
+          className="slds-truncate"
+          title="New York, NY"
+        >
+          New York, NY
+        </div>
+      </td>
+      <td
+        className="slds-cell-shrink"
+        role="gridcell"
+      >
+        <button
+          aria-haspopup="true"
+          className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+          tabIndex="-1"
+          title="More actions for Acme Corporation (Bay Area)"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon slds-button__icon_hint slds-button__icon_small"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            More actions for Acme Corporation (Bay Area)
+          </span>
+        </button>
+      </td>
+    </tr>
+    <tr
+      aria-level="3"
+      aria-posinset="1"
+      aria-setsize="2"
+      className="slds-hint-parent"
+      tabIndex={null}
+    >
+      <th
+        className="slds-tree__item"
+        data-label="Account Name"
+        scope="row"
+      >
+        <button
+          aria-hidden="true"
+          className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small slds-is-disabled"
+          tabIndex="-1"
+          title="Expand Acme Corporation (Oakland)"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon slds-button__icon_small"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#chevronright"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            Collapse Acme Corporation (Oakland)
+          </span>
+        </button>
+        <div
+          className="slds-truncate"
+          title="Acme Corporation (Oakland)"
+        >
+          <a
+            href="javascript:void(0);"
+            tabIndex="-1"
+          >
+            Acme Corporation (Oakland)
+          </a>
+        </div>
+      </th>
+      <td
+        data-label="Employees"
+        role="gridcell"
+      >
+        <div
+          className="slds-truncate"
+          title="745"
+        >
+          745
+        </div>
+      </td>
+      <td
+        data-label="Phone Number"
+        role="gridcell"
+      >
+        <div
+          className="slds-truncate"
+          title="837-555-1212"
+        >
+          837-555-1212
+        </div>
+      </td>
+      <td
+        data-label="Account Owner"
+        role="gridcell"
+      >
+        <div
+          className="slds-truncate"
+          title="John Doe"
+        >
+          <a
+            href="javascript:void(0);"
+            tabIndex="-1"
+          >
+            John Doe
+          </a>
+        </div>
+      </td>
+      <td
+        data-label="Billing City"
+        role="gridcell"
+      >
+        <div
+          className="slds-truncate"
+          title="New York, NY"
+        >
+          New York, NY
+        </div>
+      </td>
+      <td
+        className="slds-cell-shrink"
+        role="gridcell"
+      >
+        <button
+          aria-haspopup="true"
+          className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+          tabIndex="-1"
+          title="More actions for Acme Corporation (Oakland)"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon slds-button__icon_hint slds-button__icon_small"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            More actions for Acme Corporation (Oakland)
+          </span>
+        </button>
+      </td>
+    </tr>
+    <tr
+      aria-level="3"
+      aria-posinset="2"
+      aria-setsize="2"
+      className="slds-hint-parent"
+      tabIndex={null}
+    >
+      <th
+        className="slds-tree__item"
+        data-label="Account Name"
+        scope="row"
+      >
+        <button
+          aria-hidden="true"
+          className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small slds-is-disabled"
+          tabIndex="-1"
+          title="Expand Acme Corporation (San Francisco)"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon slds-button__icon_small"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#chevronright"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            Collapse Acme Corporation (San Francisco)
+          </span>
+        </button>
+        <div
+          className="slds-truncate"
+          title="Acme Corporation (San Francisco)"
+        >
+          <a
+            href="javascript:void(0);"
+            tabIndex="-1"
+          >
+            Acme Corporation (San Francisco)
+          </a>
+        </div>
+      </th>
+      <td
+        data-label="Employees"
+        role="gridcell"
+      >
+        <div
+          className="slds-truncate"
+          title="578"
+        >
+          578
+        </div>
+      </td>
+      <td
+        data-label="Phone Number"
+        role="gridcell"
+      >
+        <div
+          className="slds-truncate"
+          title="837-555-1212"
+        >
+          837-555-1212
+        </div>
+      </td>
+      <td
+        data-label="Account Owner"
+        role="gridcell"
+      >
+        <div
+          className="slds-truncate"
+          title="Jane Doe"
+        >
+          <a
+            href="javascript:void(0);"
+            tabIndex="-1"
+          >
+            Jane Doe
+          </a>
+        </div>
+      </td>
+      <td
+        data-label="Billing City"
+        role="gridcell"
+      >
+        <div
+          className="slds-truncate"
+          title="Los Angeles, CA"
+        >
+          Los Angeles, CA
+        </div>
+      </td>
+      <td
+        className="slds-cell-shrink"
+        role="gridcell"
+      >
+        <button
+          aria-haspopup="true"
+          className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+          tabIndex="-1"
+          title="More actions for Acme Corporation (San Francisco)"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon slds-button__icon_hint slds-button__icon_small"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            More actions for Acme Corporation (San Francisco)
+          </span>
+        </button>
+      </td>
+    </tr>
+    <tr
+      aria-expanded="true"
+      aria-level="2"
+      aria-posinset="2"
+      aria-setsize="2"
+      className="slds-hint-parent"
+      tabIndex={null}
+    >
+      <th
+        className="slds-tree__item"
+        data-label="Account Name"
+        scope="row"
+      >
+        <button
+          aria-hidden="true"
+          className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small"
+          tabIndex="-1"
+          title="Collapse Acme Corporation (East)"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon slds-button__icon_small"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#chevronright"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            Expand Acme Corporation (East)
+          </span>
+        </button>
+        <div
+          className="slds-truncate"
+          title="Acme Corporation (East)"
+        >
+          <a
+            href="javascript:void(0);"
+            tabIndex="-1"
+          >
+            Acme Corporation (East)
+          </a>
+        </div>
+      </th>
+      <td
+        data-label="Employees"
+        role="gridcell"
+      >
+        <div
+          className="slds-truncate"
+          title="430"
+        >
+          430
+        </div>
+      </td>
+      <td
+        data-label="Phone Number"
+        role="gridcell"
+      >
+        <div
+          className="slds-truncate"
+          title="837-555-1212"
+        >
+          837-555-1212
+        </div>
+      </td>
+      <td
+        data-label="Account Owner"
+        role="gridcell"
+      >
+        <div
+          className="slds-truncate"
+          title="John Doe"
+        >
+          <a
+            href="javascript:void(0);"
+            tabIndex="-1"
+          >
+            John Doe
+          </a>
+        </div>
+      </td>
+      <td
+        data-label="Billing City"
+        role="gridcell"
+      >
+        <div
+          className="slds-truncate"
+          title="San Francisco, CA"
+        >
+          San Francisco, CA
+        </div>
+      </td>
+      <td
+        className="slds-cell-shrink"
+        role="gridcell"
+      >
+        <button
+          aria-haspopup="true"
+          className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+          tabIndex="-1"
+          title="More actions for Acme Corporation (East)"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon slds-button__icon_hint slds-button__icon_small"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            More actions for Acme Corporation (East)
+          </span>
+        </button>
+      </td>
+    </tr>
+    <tr
+      aria-level="3"
+      aria-posinset="1"
+      aria-setsize="2"
+      className="slds-hint-parent"
+      tabIndex={null}
+    >
+      <th
+        className="slds-tree__item"
+        data-label="Account Name"
+        scope="row"
+      >
+        <button
+          aria-hidden="true"
+          className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small slds-is-disabled"
+          tabIndex="-1"
+          title="Expand Acme Corporation (NY)"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon slds-button__icon_small"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#chevronright"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            Collapse Acme Corporation (NY)
+          </span>
+        </button>
+        <div
+          className="slds-truncate"
+          title="Acme Corporation (NY)"
+        >
+          <a
+            href="javascript:void(0);"
+            tabIndex="-1"
+          >
+            Acme Corporation (NY)
+          </a>
+        </div>
+      </th>
+      <td
+        data-label="Employees"
+        role="gridcell"
+      >
+        <div
+          className="slds-truncate"
+          title="1,210"
+        >
+          1,210
+        </div>
+      </td>
+      <td
+        data-label="Phone Number"
+        role="gridcell"
+      >
+        <div
+          className="slds-truncate"
+          title="837-555-1212"
+        >
+          837-555-1212
+        </div>
+      </td>
+      <td
+        data-label="Account Owner"
+        role="gridcell"
+      >
+        <div
+          className="slds-truncate"
+          title="Jane Doe"
+        >
+          <a
+            href="javascript:void(0);"
+            tabIndex="-1"
+          >
+            Jane Doe
+          </a>
+        </div>
+      </td>
+      <td
+        data-label="Billing City"
+        role="gridcell"
+      >
+        <div
+          className="slds-truncate"
+          title="New York, NY"
+        >
+          New York, NY
+        </div>
+      </td>
+      <td
+        className="slds-cell-shrink"
+        role="gridcell"
+      >
+        <button
+          aria-haspopup="true"
+          className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+          tabIndex="-1"
+          title="More actions for Acme Corporation (NY)"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon slds-button__icon_hint slds-button__icon_small"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            More actions for Acme Corporation (NY)
+          </span>
+        </button>
+      </td>
+    </tr>
+    <tr
+      aria-expanded="true"
+      aria-level="3"
+      aria-posinset="2"
+      aria-setsize="2"
+      className="slds-hint-parent"
+      tabIndex={null}
+    >
+      <th
+        className="slds-tree__item"
+        data-label="Account Name"
+        scope="row"
+      >
+        <button
+          aria-hidden="true"
+          className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small"
+          tabIndex="-1"
+          title="Collapse Acme Corporation (VA)"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon slds-button__icon_small"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#chevronright"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            Expand Acme Corporation (VA)
+          </span>
+        </button>
+        <div
+          className="slds-truncate"
+          title="Acme Corporation (VA)"
+        >
+          <a
+            href="javascript:void(0);"
+            tabIndex="-1"
+          >
+            Acme Corporation (VA)
+          </a>
+        </div>
+      </th>
+      <td
+        data-label="Employees"
+        role="gridcell"
+      >
+        <div
+          className="slds-truncate"
+          title="410"
+        >
+          410
+        </div>
+      </td>
+      <td
+        data-label="Phone Number"
+        role="gridcell"
+      >
+        <div
+          className="slds-truncate"
+          title="837-555-1212"
+        >
+          837-555-1212
+        </div>
+      </td>
+      <td
+        data-label="Account Owner"
+        role="gridcell"
+      >
+        <div
+          className="slds-truncate"
+          title="John Doe"
+        >
+          <a
+            href="javascript:void(0);"
+            tabIndex="-1"
+          >
+            John Doe
+          </a>
+        </div>
+      </td>
+      <td
+        data-label="Billing City"
+        role="gridcell"
+      >
+        <div
+          className="slds-truncate"
+          title="New York, NY"
+        >
+          New York, NY
+        </div>
+      </td>
+      <td
+        className="slds-cell-shrink"
+        role="gridcell"
+      >
+        <button
+          aria-haspopup="true"
+          className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+          tabIndex="-1"
+          title="More actions for Acme Corporation (VA)"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon slds-button__icon_hint slds-button__icon_small"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            More actions for Acme Corporation (VA)
+          </span>
+        </button>
+      </td>
+    </tr>
+    <tr
+      aria-expanded="true"
+      aria-level="4"
+      aria-posinset="1"
+      aria-setsize="1"
+      className="slds-hint-parent"
+      tabIndex={null}
+    >
+      <th
+        className="slds-tree__item"
+        data-label="Account Name"
+        scope="row"
+      >
+        <button
+          aria-hidden="true"
+          className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small"
+          tabIndex="-1"
+          title="Collapse Allied Technologies"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon slds-button__icon_small"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#chevronright"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            Expand Allied Technologies
+          </span>
+        </button>
+        <div
+          className="slds-truncate"
+          title="Allied Technologies"
+        >
+          <a
+            href="javascript:void(0);"
+            tabIndex="-1"
+          >
+            Allied Technologies
+          </a>
+        </div>
+      </th>
+      <td
+        data-label="Employees"
+        role="gridcell"
+      >
+        <div
+          className="slds-truncate"
+          title="390"
+        >
+          390
+        </div>
+      </td>
+      <td
+        data-label="Phone Number"
+        role="gridcell"
+      >
+        <div
+          className="slds-truncate"
+          title="837-555-1212"
+        >
+          837-555-1212
+        </div>
+      </td>
+      <td
+        data-label="Account Owner"
+        role="gridcell"
+      >
+        <div
+          className="slds-truncate"
+          title="Jane Doe"
+        >
+          <a
+            href="javascript:void(0);"
+            tabIndex="-1"
+          >
+            Jane Doe
+          </a>
+        </div>
+      </td>
+      <td
+        data-label="Billing City"
+        role="gridcell"
+      >
+        <div
+          className="slds-truncate"
+          title="Los Angeles, CA"
+        >
+          Los Angeles, CA
+        </div>
+      </td>
+      <td
+        className="slds-cell-shrink"
+        role="gridcell"
+      >
+        <button
+          aria-haspopup="true"
+          className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+          tabIndex="-1"
+          title="More actions for Allied Technologies"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon slds-button__icon_hint slds-button__icon_small"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            More actions for Allied Technologies
+          </span>
+        </button>
+      </td>
+    </tr>
+    <tr
+      aria-level="5"
+      aria-posinset="1"
+      aria-setsize="1"
+      className="slds-hint-parent"
+      tabIndex={null}
+    >
+      <th
+        className="slds-tree__item"
+        data-label="Account Name"
+        scope="row"
+      >
+        <button
+          aria-hidden="true"
+          className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small slds-is-disabled"
+          tabIndex="-1"
+          title="Expand Allied Technologies (UV)"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon slds-button__icon_small"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#chevronright"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            Collapse Allied Technologies (UV)
+          </span>
+        </button>
+        <div
+          className="slds-truncate"
+          title="Allied Technologies (UV)"
+        >
+          <a
+            href="javascript:void(0);"
+            tabIndex="-1"
+          >
+            Allied Technologies (UV)
+          </a>
+        </div>
+      </th>
+      <td
+        data-label="Employees"
+        role="gridcell"
+      >
+        <div
+          className="slds-truncate"
+          title="270"
+        >
+          270
+        </div>
+      </td>
+      <td
+        data-label="Phone Number"
+        role="gridcell"
+      >
+        <div
+          className="slds-truncate"
+          title="837-555-1212"
+        >
+          837-555-1212
+        </div>
+      </td>
+      <td
+        data-label="Account Owner"
+        role="gridcell"
+      >
+        <div
+          className="slds-truncate"
+          title="John Doe"
+        >
+          <a
+            href="javascript:void(0);"
+            tabIndex="-1"
+          >
+            John Doe
+          </a>
+        </div>
+      </td>
+      <td
+        data-label="Billing City"
+        role="gridcell"
+      >
+        <div
+          className="slds-truncate"
+          title="San Francisco, CA"
+        >
+          San Francisco, CA
+        </div>
+      </td>
+      <td
+        className="slds-cell-shrink"
+        role="gridcell"
+      >
+        <button
+          aria-haspopup="true"
+          className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+          tabIndex="-1"
+          title="More actions for Allied Technologies (UV)"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon slds-button__icon_hint slds-button__icon_small"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            More actions for Allied Technologies (UV)
+          </span>
+        </button>
+      </td>
+    </tr>
+    <tr
+      aria-expanded="true"
+      aria-level="1"
+      aria-posinset="3"
+      aria-setsize="4"
+      className="slds-hint-parent"
+      tabIndex={null}
+    >
+      <th
+        className="slds-tree__item"
+        data-label="Account Name"
+        scope="row"
+      >
+        <button
+          aria-hidden="true"
+          className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small"
+          tabIndex="-1"
+          title="Collapse Rohde Enterprises"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon slds-button__icon_small"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#chevronright"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            Expand Rohde Enterprises
+          </span>
+        </button>
+        <div
+          className="slds-truncate"
+          title="Rohde Enterprises"
+        >
+          <a
+            href="javascript:void(0);"
+            tabIndex="-1"
+          >
+            Rohde Enterprises
+          </a>
+        </div>
+      </th>
+      <td
+        data-label="Employees"
+        role="gridcell"
+      >
+        <div
+          className="slds-truncate"
+          title="6,000"
+        >
+          6,000
+        </div>
+      </td>
+      <td
+        data-label="Phone Number"
+        role="gridcell"
+      >
+        <div
+          className="slds-truncate"
+          title="837-555-1212"
+        >
+          837-555-1212
+        </div>
+      </td>
+      <td
+        data-label="Account Owner"
+        role="gridcell"
+      >
+        <div
+          className="slds-truncate"
+          title="John Doe"
+        >
+          <a
+            href="javascript:void(0);"
+            tabIndex="-1"
+          >
+            John Doe
+          </a>
+        </div>
+      </td>
+      <td
+        data-label="Billing City"
+        role="gridcell"
+      >
+        <div
+          className="slds-truncate"
+          title="New York, NY"
+        >
+          New York, NY
+        </div>
+      </td>
+      <td
+        className="slds-cell-shrink"
+        role="gridcell"
+      >
+        <button
+          aria-haspopup="true"
+          className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+          tabIndex="-1"
+          title="More actions for Rohde Enterprises"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon slds-button__icon_hint slds-button__icon_small"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            More actions for Rohde Enterprises
+          </span>
+        </button>
+      </td>
+    </tr>
+    <tr
+      aria-level="2"
+      aria-posinset="1"
+      aria-setsize="1"
+      className="slds-hint-parent"
+      tabIndex={null}
+    >
+      <th
+        className="slds-tree__item"
+        data-label="Account Name"
+        scope="row"
+      >
+        <button
+          aria-hidden="true"
+          className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small slds-is-disabled"
+          tabIndex="-1"
+          title="Expand Rohde Enterprises (UCA)"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon slds-button__icon_small"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#chevronright"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            Collapse Rohde Enterprises (UCA)
+          </span>
+        </button>
+        <div
+          className="slds-truncate"
+          title="Rohde Enterprises (UCA)"
+        >
+          <a
+            href="javascript:void(0);"
+            tabIndex="-1"
+          >
+            Rohde Enterprises (UCA)
+          </a>
+        </div>
+      </th>
+      <td
+        data-label="Employees"
+        role="gridcell"
+      >
+        <div
+          className="slds-truncate"
+          title="2,540"
+        >
+          2,540
+        </div>
+      </td>
+      <td
+        data-label="Phone Number"
+        role="gridcell"
+      >
+        <div
+          className="slds-truncate"
+          title="837-555-1212"
+        >
+          837-555-1212
+        </div>
+      </td>
+      <td
+        data-label="Account Owner"
+        role="gridcell"
+      >
+        <div
+          className="slds-truncate"
+          title="John Doe"
+        >
+          <a
+            href="javascript:void(0);"
+            tabIndex="-1"
+          >
+            John Doe
+          </a>
+        </div>
+      </td>
+      <td
+        data-label="Billing City"
+        role="gridcell"
+      >
+        <div
+          className="slds-truncate"
+          title="New York, NY"
+        >
+          New York, NY
+        </div>
+      </td>
+      <td
+        className="slds-cell-shrink"
+        role="gridcell"
+      >
+        <button
+          aria-haspopup="true"
+          className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+          tabIndex="-1"
+          title="More actions for Rohde Enterprises (UCA)"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon slds-button__icon_hint slds-button__icon_small"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            More actions for Rohde Enterprises (UCA)
+          </span>
+        </button>
+      </td>
+    </tr>
+    <tr
+      aria-expanded="true"
+      aria-level="1"
+      aria-posinset="4"
+      aria-setsize="4"
+      className="slds-hint-parent"
+      tabIndex={null}
+    >
+      <th
+        className="slds-tree__item"
+        data-label="Account Name"
+        scope="row"
+      >
+        <button
+          aria-hidden="true"
+          className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small"
+          tabIndex="-1"
+          title="Collapse Tech Labs"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon slds-button__icon_small"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#chevronright"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            Expand Tech Labs
+          </span>
+        </button>
+        <div
+          className="slds-truncate"
+          title="Tech Labs"
+        >
+          <a
+            href="javascript:void(0);"
+            tabIndex="-1"
+          >
+            Tech Labs
+          </a>
+        </div>
+      </th>
+      <td
+        data-label="Employees"
+        role="gridcell"
+      >
+        <div
+          className="slds-truncate"
+          title="1,856"
+        >
+          1,856
+        </div>
+      </td>
+      <td
+        data-label="Phone Number"
+        role="gridcell"
+      >
+        <div
+          className="slds-truncate"
+          title="837-555-1212"
+        >
+          837-555-1212
+        </div>
+      </td>
+      <td
+        data-label="Account Owner"
+        role="gridcell"
+      >
+        <div
+          className="slds-truncate"
+          title="John Doe"
+        >
+          <a
+            href="javascript:void(0);"
+            tabIndex="-1"
+          >
+            John Doe
+          </a>
+        </div>
+      </td>
+      <td
+        data-label="Billing City"
+        role="gridcell"
+      >
+        <div
+          className="slds-truncate"
+          title="New York, NY"
+        >
+          New York, NY
+        </div>
+      </td>
+      <td
+        className="slds-cell-shrink"
+        role="gridcell"
+      >
+        <button
+          aria-haspopup="true"
+          className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+          tabIndex="-1"
+          title="More actions for Tech Labs"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon slds-button__icon_hint slds-button__icon_small"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            More actions for Tech Labs
+          </span>
+        </button>
+      </td>
+    </tr>
+    <tr
+      aria-level="2"
+      aria-posinset="1"
+      aria-setsize="1"
+      className="slds-hint-parent"
+      tabIndex={null}
+    >
+      <th
+        className="slds-tree__item"
+        data-label="Account Name"
+        scope="row"
+      >
+        <button
+          aria-hidden="true"
+          className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small slds-is-disabled"
+          tabIndex="-1"
+          title="Expand Opportunity Resources Inc"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon slds-button__icon_small"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#chevronright"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            Collapse Opportunity Resources Inc
+          </span>
+        </button>
+        <div
+          className="slds-truncate"
+          title="Opportunity Resources Inc"
+        >
+          <a
+            href="javascript:void(0);"
+            tabIndex="-1"
+          >
+            Opportunity Resources Inc
+          </a>
+        </div>
+      </th>
+      <td
+        data-label="Employees"
+        role="gridcell"
+      >
+        <div
+          className="slds-truncate"
+          title="1,934"
+        >
+          1,934
+        </div>
+      </td>
+      <td
+        data-label="Phone Number"
+        role="gridcell"
+      >
+        <div
+          className="slds-truncate"
+          title="837-555-1212"
+        >
+          837-555-1212
+        </div>
+      </td>
+      <td
+        data-label="Account Owner"
+        role="gridcell"
+      >
+        <div
+          className="slds-truncate"
+          title="John Doe"
+        >
+          <a
+            href="javascript:void(0);"
+            tabIndex="-1"
+          >
+            John Doe
+          </a>
+        </div>
+      </td>
+      <td
+        data-label="Billing City"
+        role="gridcell"
+      >
+        <div
+          className="slds-truncate"
+          title="Los Angeles, CA"
+        >
+          Los Angeles, CA
+        </div>
+      </td>
+      <td
+        className="slds-cell-shrink"
+        role="gridcell"
+      >
+        <button
+          aria-haspopup="true"
+          className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+          tabIndex="-1"
+          title="More actions for Opportunity Resources Inc"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon slds-button__icon_hint slds-button__icon_small"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            More actions for Opportunity Resources Inc
+          </span>
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+`;
+
+exports[`deprecated treegrid renders a default DeprecatedTreeGrid 1`] = `
+<table
+  aria-readonly="true"
+  className="slds-table slds-table_bordered slds-tree slds-table_tree"
+  role="treegrid"
+>
+  <thead
+    className=""
+  >
+    <tr>
+      <th
+        className="slds-cell-buffer_left"
+        scope="col"
+      >
+        <div
+          className="slds-grid slds-grid_vertical-align-center"
+        >
+          <button
+            className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small slds-m-right_x-small slds-shrink-none slds-table_tree__toggle"
+            tabIndex="-1"
+            title="Expand all rows"
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-button__icon slds-button__icon_small"
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#chevrondown"
+              />
+            </svg>
+            <span
+              className="slds-assistive-text"
+            >
+              Expand all rows
+            </span>
+          </button>
+          <div
+            className="slds-truncate"
+            title="Account Name"
+          >
+            Account Name
+          </div>
+        </div>
+      </th>
+      <th
+        scope="col"
+      >
+        <div
+          className="slds-truncate"
+          title="Employees"
+        >
+          Employees
+        </div>
+      </th>
+      <th
+        scope="col"
+      >
+        <div
+          className="slds-truncate"
+          title="Phone Number"
+        >
+          Phone Number
+        </div>
+      </th>
+      <th
+        scope="col"
+      >
+        <div
+          className="slds-truncate"
+          title="Account Owner"
+        >
+          Account Owner
+        </div>
+      </th>
+      <th
+        scope="col"
+      >
+        <div
+          className="slds-truncate"
+          title="Billing City"
+        >
+          Billing City
+        </div>
+      </th>
+      <th
+        className="slds-cell-shrink"
+        scope="col"
+      >
+        <button
+          aria-haspopup="true"
+          className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+          tabIndex="-1"
+          title="Show More"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon slds-button__icon_hint slds-button__icon_small"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            Show More
+          </span>
+        </button>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr
+      aria-level="1"
+      aria-posinset="1"
+      aria-setsize="4"
+      className="slds-hint-parent"
+      tabIndex="0"
+    >
+      <th
+        className="slds-tree__item"
+        data-label="Account Name"
+        scope="row"
+      >
+        <button
+          aria-hidden="true"
+          className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small slds-is-disabled"
+          tabIndex="-1"
+          title="Expand Rewis Inc"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon slds-button__icon_small"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#chevronright"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            Collapse Rewis Inc
+          </span>
+        </button>
+        <div
+          className="slds-truncate"
+          title="Rewis Inc"
+        >
+          <a
+            href="javascript:void(0);"
+            tabIndex="-1"
+          >
+            Rewis Inc
+          </a>
+        </div>
+      </th>
+      <td
+        data-label="Employees"
+        role="gridcell"
+      >
+        <div
+          className="slds-truncate"
+          title="3,100"
+        >
+          3,100
+        </div>
+      </td>
+      <td
+        data-label="Phone Number"
+        role="gridcell"
+      >
+        <div
+          className="slds-truncate"
+          title="837-555-1212"
+        >
+          837-555-1212
+        </div>
+      </td>
+      <td
+        data-label="Account Owner"
+        role="gridcell"
+      >
+        <div
+          className="slds-truncate"
+          title="Jane Doe"
+        >
+          <a
+            href="javascript:void(0);"
+            tabIndex="-1"
+          >
+            Jane Doe
+          </a>
+        </div>
+      </td>
+      <td
+        data-label="Billing City"
+        role="gridcell"
+      >
+        <div
+          className="slds-truncate"
+          title="Phoenix, AZ"
+        >
+          Phoenix, AZ
+        </div>
+      </td>
+      <td
+        className="slds-cell-shrink"
+        role="gridcell"
+      >
+        <button
+          aria-haspopup="true"
+          className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+          tabIndex="-1"
+          title="More actions for Rewis Inc"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon slds-button__icon_hint slds-button__icon_small"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            More actions for Rewis Inc
+          </span>
+        </button>
+      </td>
+    </tr>
+    <tr
+      aria-expanded="false"
+      aria-level="1"
+      aria-posinset="2"
+      aria-setsize="4"
+      className="slds-hint-parent"
+      tabIndex={null}
+    >
+      <th
+        className="slds-tree__item"
+        data-label="Account Name"
+        scope="row"
+      >
+        <button
+          aria-hidden="true"
+          className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small"
+          tabIndex="-1"
+          title="Collapse Acme Corporation"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon slds-button__icon_small"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#chevronright"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            Expand Acme Corporation
+          </span>
+        </button>
+        <div
+          className="slds-truncate"
+          title="Acme Corporation"
+        >
+          <a
+            href="javascript:void(0);"
+            tabIndex="-1"
+          >
+            Acme Corporation
+          </a>
+        </div>
+      </th>
+      <td
+        data-label="Employees"
+        role="gridcell"
+      >
+        <div
+          className="slds-truncate"
+          title="10,000"
+        >
+          10,000
+        </div>
+      </td>
+      <td
+        data-label="Phone Number"
+        role="gridcell"
+      >
+        <div
+          className="slds-truncate"
+          title="837-555-1212"
+        >
+          837-555-1212
+        </div>
+      </td>
+      <td
+        data-label="Account Owner"
+        role="gridcell"
+      >
+        <div
+          className="slds-truncate"
+          title="John Doe"
+        >
+          <a
+            href="javascript:void(0);"
+            tabIndex="-1"
+          >
+            John Doe
+          </a>
+        </div>
+      </td>
+      <td
+        data-label="Billing City"
+        role="gridcell"
+      >
+        <div
+          className="slds-truncate"
+          title="San Francisco, CA"
+        >
+          San Francisco, CA
+        </div>
+      </td>
+      <td
+        className="slds-cell-shrink"
+        role="gridcell"
+      >
+        <button
+          aria-haspopup="true"
+          className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+          tabIndex="-1"
+          title="More actions for Acme Corporation"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon slds-button__icon_hint slds-button__icon_small"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            More actions for Acme Corporation
+          </span>
+        </button>
+      </td>
+    </tr>
+    <tr
+      aria-expanded="false"
+      aria-level="1"
+      aria-posinset="3"
+      aria-setsize="4"
+      className="slds-hint-parent"
+      tabIndex={null}
+    >
+      <th
+        className="slds-tree__item"
+        data-label="Account Name"
+        scope="row"
+      >
+        <button
+          aria-hidden="true"
+          className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small"
+          tabIndex="-1"
+          title="Collapse Rohde Enterprises"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon slds-button__icon_small"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#chevronright"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            Expand Rohde Enterprises
+          </span>
+        </button>
+        <div
+          className="slds-truncate"
+          title="Rohde Enterprises"
+        >
+          <a
+            href="javascript:void(0);"
+            tabIndex="-1"
+          >
+            Rohde Enterprises
+          </a>
+        </div>
+      </th>
+      <td
+        data-label="Employees"
+        role="gridcell"
+      >
+        <div
+          className="slds-truncate"
+          title="6,000"
+        >
+          6,000
+        </div>
+      </td>
+      <td
+        data-label="Phone Number"
+        role="gridcell"
+      >
+        <div
+          className="slds-truncate"
+          title="837-555-1212"
+        >
+          837-555-1212
+        </div>
+      </td>
+      <td
+        data-label="Account Owner"
+        role="gridcell"
+      >
+        <div
+          className="slds-truncate"
+          title="John Doe"
+        >
+          <a
+            href="javascript:void(0);"
+            tabIndex="-1"
+          >
+            John Doe
+          </a>
+        </div>
+      </td>
+      <td
+        data-label="Billing City"
+        role="gridcell"
+      >
+        <div
+          className="slds-truncate"
+          title="New York, NY"
+        >
+          New York, NY
+        </div>
+      </td>
+      <td
+        className="slds-cell-shrink"
+        role="gridcell"
+      >
+        <button
+          aria-haspopup="true"
+          className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+          tabIndex="-1"
+          title="More actions for Rohde Enterprises"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon slds-button__icon_hint slds-button__icon_small"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            More actions for Rohde Enterprises
+          </span>
+        </button>
+      </td>
+    </tr>
+    <tr
+      aria-level="1"
+      aria-posinset="4"
+      aria-setsize="4"
+      className="slds-hint-parent"
+      tabIndex={null}
+    >
+      <th
+        className="slds-tree__item"
+        data-label="Account Name"
+        scope="row"
+      >
+        <button
+          aria-hidden="true"
+          className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small slds-is-disabled"
+          tabIndex="-1"
+          title="Expand Cheese Corp"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon slds-button__icon_small"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#chevronright"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            Collapse Cheese Corp
+          </span>
+        </button>
+        <div
+          className="slds-truncate"
+          title="Cheese Corp"
+        >
+          <a
+            href="javascript:void(0);"
+            tabIndex="-1"
+          >
+            Cheese Corp
+          </a>
+        </div>
+      </th>
+      <td
+        data-label="Employees"
+        role="gridcell"
+      >
+        <div
+          className="slds-truncate"
+          title="1,234"
+        >
+          1,234
+        </div>
+      </td>
+      <td
+        data-label="Phone Number"
+        role="gridcell"
+      >
+        <div
+          className="slds-truncate"
+          title="837-555-1212"
+        >
+          837-555-1212
+        </div>
+      </td>
+      <td
+        data-label="Account Owner"
+        role="gridcell"
+      >
+        <div
+          className="slds-truncate"
+          title="Jane Doe"
+        >
+          <a
+            href="javascript:void(0);"
+            tabIndex="-1"
+          >
+            Jane Doe
+          </a>
+        </div>
+      </td>
+      <td
+        data-label="Billing City"
+        role="gridcell"
+      >
+        <div
+          className="slds-truncate"
+          title="Paris, France"
+        >
+          Paris, France
+        </div>
+      </td>
+      <td
+        className="slds-cell-shrink"
+        role="gridcell"
+      >
+        <button
+          aria-haspopup="true"
+          className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+          tabIndex="-1"
+          title="More actions for Cheese Corp"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon slds-button__icon_hint slds-button__icon_small"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            More actions for Cheese Corp
+          </span>
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+`;
+
+exports[`deprecated treegrid renders an expanded DeprecatedTreeGrid 1`] = `
+<table
+  aria-readonly="true"
+  className="slds-table slds-table_bordered slds-tree slds-table_tree"
+  role="treegrid"
+>
+  <thead
+    className=""
+  >
+    <tr>
+      <th
+        className="slds-cell-buffer_left"
+        scope="col"
+      >
+        <div
+          className="slds-grid slds-grid_vertical-align-center"
+        >
+          <button
+            className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small slds-m-right_x-small slds-shrink-none slds-table_tree__toggle"
+            tabIndex="-1"
+            title="Expand all rows"
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-button__icon slds-button__icon_small"
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#chevrondown"
+              />
+            </svg>
+            <span
+              className="slds-assistive-text"
+            >
+              Expand all rows
+            </span>
+          </button>
+          <div
+            className="slds-truncate"
+            title="Account Name"
+          >
+            Account Name
+          </div>
+        </div>
+      </th>
+      <th
+        scope="col"
+      >
+        <div
+          className="slds-truncate"
+          title="Employees"
+        >
+          Employees
+        </div>
+      </th>
+      <th
+        scope="col"
+      >
+        <div
+          className="slds-truncate"
+          title="Phone Number"
+        >
+          Phone Number
+        </div>
+      </th>
+      <th
+        scope="col"
+      >
+        <div
+          className="slds-truncate"
+          title="Account Owner"
+        >
+          Account Owner
+        </div>
+      </th>
+      <th
+        scope="col"
+      >
+        <div
+          className="slds-truncate"
+          title="Billing City"
+        >
+          Billing City
+        </div>
+      </th>
+      <th
+        className="slds-cell-shrink"
+        scope="col"
+      >
+        <button
+          aria-haspopup="true"
+          className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+          tabIndex="-1"
+          title="Show More"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon slds-button__icon_hint slds-button__icon_small"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            Show More
+          </span>
+        </button>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr
+      aria-level="1"
+      aria-posinset="1"
+      aria-setsize="4"
+      className="slds-hint-parent"
+      tabIndex="0"
+    >
+      <th
+        className="slds-tree__item"
+        data-label="Account Name"
+        scope="row"
+      >
+        <button
+          aria-hidden="true"
+          className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small slds-is-disabled"
+          tabIndex="-1"
+          title="Expand Rewis Inc"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon slds-button__icon_small"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#chevronright"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            Collapse Rewis Inc
+          </span>
+        </button>
+        <div
+          className="slds-truncate"
+          title="Rewis Inc"
+        >
+          <a
+            href="javascript:void(0);"
+            tabIndex="-1"
+          >
+            Rewis Inc
+          </a>
+        </div>
+      </th>
+      <td
+        data-label="Employees"
+        role="gridcell"
+      >
+        <div
+          className="slds-truncate"
+          title="3,100"
+        >
+          3,100
+        </div>
+      </td>
+      <td
+        data-label="Phone Number"
+        role="gridcell"
+      >
+        <div
+          className="slds-truncate"
+          title="837-555-1212"
+        >
+          837-555-1212
+        </div>
+      </td>
+      <td
+        data-label="Account Owner"
+        role="gridcell"
+      >
+        <div
+          className="slds-truncate"
+          title="Jane Doe"
+        >
+          <a
+            href="javascript:void(0);"
+            tabIndex="-1"
+          >
+            Jane Doe
+          </a>
+        </div>
+      </td>
+      <td
+        data-label="Billing City"
+        role="gridcell"
+      >
+        <div
+          className="slds-truncate"
+          title="Phoenix, AZ"
+        >
+          Phoenix, AZ
+        </div>
+      </td>
+      <td
+        className="slds-cell-shrink"
+        role="gridcell"
+      >
+        <button
+          aria-haspopup="true"
+          className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+          tabIndex="-1"
+          title="More actions for Rewis Inc"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon slds-button__icon_hint slds-button__icon_small"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            More actions for Rewis Inc
+          </span>
+        </button>
+      </td>
+    </tr>
+    <tr
+      aria-expanded="true"
+      aria-level="1"
+      aria-posinset="2"
+      aria-setsize="4"
+      className="slds-hint-parent"
+      tabIndex={null}
+    >
+      <th
+        className="slds-tree__item"
+        data-label="Account Name"
+        scope="row"
+      >
+        <button
+          aria-hidden="true"
+          className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small"
+          tabIndex="-1"
+          title="Collapse Acme Corporation"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon slds-button__icon_small"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#chevronright"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            Expand Acme Corporation
+          </span>
+        </button>
+        <div
+          className="slds-truncate"
+          title="Acme Corporation"
+        >
+          <a
+            href="javascript:void(0);"
+            tabIndex="-1"
+          >
+            Acme Corporation
+          </a>
+        </div>
+      </th>
+      <td
+        data-label="Employees"
+        role="gridcell"
+      >
+        <div
+          className="slds-truncate"
+          title="10,000"
+        >
+          10,000
+        </div>
+      </td>
+      <td
+        data-label="Phone Number"
+        role="gridcell"
+      >
+        <div
+          className="slds-truncate"
+          title="837-555-1212"
+        >
+          837-555-1212
+        </div>
+      </td>
+      <td
+        data-label="Account Owner"
+        role="gridcell"
+      >
+        <div
+          className="slds-truncate"
+          title="John Doe"
+        >
+          <a
+            href="javascript:void(0);"
+            tabIndex="-1"
+          >
+            John Doe
+          </a>
+        </div>
+      </td>
+      <td
+        data-label="Billing City"
+        role="gridcell"
+      >
+        <div
+          className="slds-truncate"
+          title="San Francisco, CA"
+        >
+          San Francisco, CA
+        </div>
+      </td>
+      <td
+        className="slds-cell-shrink"
+        role="gridcell"
+      >
+        <button
+          aria-haspopup="true"
+          className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+          tabIndex="-1"
+          title="More actions for Acme Corporation"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon slds-button__icon_hint slds-button__icon_small"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            More actions for Acme Corporation
+          </span>
+        </button>
+      </td>
+    </tr>
+    <tr
+      aria-level="2"
+      aria-posinset="1"
+      aria-setsize="1"
+      className="slds-hint-parent"
+      tabIndex={null}
+    >
+      <th
+        className="slds-tree__item"
+        data-label="Account Name"
+        scope="row"
+      >
+        <button
+          aria-hidden="true"
+          className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small slds-is-disabled"
+          tabIndex="-1"
+          title="Expand Acme Corporation (Oakland)"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon slds-button__icon_small"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#chevronright"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            Collapse Acme Corporation (Oakland)
+          </span>
+        </button>
+        <div
+          className="slds-truncate"
+          title="Acme Corporation (Oakland)"
+        >
+          <a
+            href="javascript:void(0);"
+            tabIndex="-1"
+          >
+            Acme Corporation (Oakland)
+          </a>
+        </div>
+      </th>
+      <td
+        data-label="Employees"
+        role="gridcell"
+      >
+        <div
+          className="slds-truncate"
+          title="745"
+        >
+          745
+        </div>
+      </td>
+      <td
+        data-label="Phone Number"
+        role="gridcell"
+      >
+        <div
+          className="slds-truncate"
+          title="837-555-1212"
+        >
+          837-555-1212
+        </div>
+      </td>
+      <td
+        data-label="Account Owner"
+        role="gridcell"
+      >
+        <div
+          className="slds-truncate"
+          title="John Doe"
+        >
+          <a
+            href="javascript:void(0);"
+            tabIndex="-1"
+          >
+            John Doe
+          </a>
+        </div>
+      </td>
+      <td
+        data-label="Billing City"
+        role="gridcell"
+      >
+        <div
+          className="slds-truncate"
+          title="New York, NY"
+        >
+          New York, NY
+        </div>
+      </td>
+      <td
+        className="slds-cell-shrink"
+        role="gridcell"
+      >
+        <button
+          aria-haspopup="true"
+          className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+          tabIndex="-1"
+          title="More actions for Acme Corporation (Oakland)"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon slds-button__icon_hint slds-button__icon_small"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            More actions for Acme Corporation (Oakland)
+          </span>
+        </button>
+      </td>
+    </tr>
+    <tr
+      aria-expanded="false"
+      aria-level="1"
+      aria-posinset="3"
+      aria-setsize="4"
+      className="slds-hint-parent"
+      tabIndex={null}
+    >
+      <th
+        className="slds-tree__item"
+        data-label="Account Name"
+        scope="row"
+      >
+        <button
+          aria-hidden="true"
+          className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small"
+          tabIndex="-1"
+          title="Collapse Rohde Enterprises"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon slds-button__icon_small"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#chevronright"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            Expand Rohde Enterprises
+          </span>
+        </button>
+        <div
+          className="slds-truncate"
+          title="Rohde Enterprises"
+        >
+          <a
+            href="javascript:void(0);"
+            tabIndex="-1"
+          >
+            Rohde Enterprises
+          </a>
+        </div>
+      </th>
+      <td
+        data-label="Employees"
+        role="gridcell"
+      >
+        <div
+          className="slds-truncate"
+          title="6,000"
+        >
+          6,000
+        </div>
+      </td>
+      <td
+        data-label="Phone Number"
+        role="gridcell"
+      >
+        <div
+          className="slds-truncate"
+          title="837-555-1212"
+        >
+          837-555-1212
+        </div>
+      </td>
+      <td
+        data-label="Account Owner"
+        role="gridcell"
+      >
+        <div
+          className="slds-truncate"
+          title="John Doe"
+        >
+          <a
+            href="javascript:void(0);"
+            tabIndex="-1"
+          >
+            John Doe
+          </a>
+        </div>
+      </td>
+      <td
+        data-label="Billing City"
+        role="gridcell"
+      >
+        <div
+          className="slds-truncate"
+          title="New York, NY"
+        >
+          New York, NY
+        </div>
+      </td>
+      <td
+        className="slds-cell-shrink"
+        role="gridcell"
+      >
+        <button
+          aria-haspopup="true"
+          className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+          tabIndex="-1"
+          title="More actions for Rohde Enterprises"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon slds-button__icon_hint slds-button__icon_small"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            More actions for Rohde Enterprises
+          </span>
+        </button>
+      </td>
+    </tr>
+    <tr
+      aria-level="1"
+      aria-posinset="4"
+      aria-setsize="4"
+      className="slds-hint-parent"
+      tabIndex={null}
+    >
+      <th
+        className="slds-tree__item"
+        data-label="Account Name"
+        scope="row"
+      >
+        <button
+          aria-hidden="true"
+          className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small slds-is-disabled"
+          tabIndex="-1"
+          title="Expand Cheese Corp"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon slds-button__icon_small"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#chevronright"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            Collapse Cheese Corp
+          </span>
+        </button>
+        <div
+          className="slds-truncate"
+          title="Cheese Corp"
+        >
+          <a
+            href="javascript:void(0);"
+            tabIndex="-1"
+          >
+            Cheese Corp
+          </a>
+        </div>
+      </th>
+      <td
+        data-label="Employees"
+        role="gridcell"
+      >
+        <div
+          className="slds-truncate"
+          title="1,234"
+        >
+          1,234
+        </div>
+      </td>
+      <td
+        data-label="Phone Number"
+        role="gridcell"
+      >
+        <div
+          className="slds-truncate"
+          title="837-555-1212"
+        >
+          837-555-1212
+        </div>
+      </td>
+      <td
+        data-label="Account Owner"
+        role="gridcell"
+      >
+        <div
+          className="slds-truncate"
+          title="Jane Doe"
+        >
+          <a
+            href="javascript:void(0);"
+            tabIndex="-1"
+          >
+            Jane Doe
+          </a>
+        </div>
+      </td>
+      <td
+        data-label="Billing City"
+        role="gridcell"
+      >
+        <div
+          className="slds-truncate"
+          title="Paris, France"
+        >
+          Paris, France
+        </div>
+      </td>
+      <td
+        className="slds-cell-shrink"
+        role="gridcell"
+      >
+        <button
+          aria-haspopup="true"
+          className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+          tabIndex="-1"
+          title="More actions for Cheese Corp"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon slds-button__icon_hint slds-button__icon_small"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            More actions for Cheese Corp
+          </span>
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+`;
+
 exports[`treegrid default rows should remove the selection column 1`] = `
 <tbody>
   <tr

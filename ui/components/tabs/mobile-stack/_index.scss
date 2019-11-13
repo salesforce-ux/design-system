@@ -61,7 +61,7 @@
   padding: 0 $spacing-small;
 
   &:active {
-    background-color: $color-background-row-hover;
+    background-color: $color-background-row-active;
   }
 
   &:last-child {
@@ -70,7 +70,8 @@
 
   @include touch-device {
 
-    .slds-button:active {
+    .slds-button:active,
+    .slds-button:hover { // :hover is triggered by mobile on single tap or press and drag, doesn't go away unless user taps away
       color: currentColor;
     }
   }

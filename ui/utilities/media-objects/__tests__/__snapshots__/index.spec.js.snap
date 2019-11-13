@@ -1,0 +1,176 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders media object utilities renders media object with large space between figure and text 1`] = `
+<div
+  className="slds-media slds-media_large"
+>
+  <div
+    className="slds-media__figure"
+  >
+    <span
+      className="slds-avatar slds-avatar_large"
+    >
+      <img
+        alt="Person name"
+        src="/assets/images/avatar3.jpg"
+        title="User avatar"
+      />
+    </span>
+  </div>
+  <div
+    className="slds-media__body"
+  >
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat minus molestias reprehenderit consequuntur sapiente. Modi veritatis totam accusantium numquam assumenda.
+    </p>
+  </div>
+</div>
+`;
+
+exports[`renders media object utilities renders media object with left and right figure 1`] = `
+<div
+  className="slds-media"
+>
+  <div
+    className="slds-media__figure"
+  >
+    <span
+      className="slds-avatar slds-avatar_large"
+    >
+      <img
+        alt="Person name"
+        src="/assets/images/avatar3.jpg"
+        title="User avatar"
+      />
+    </span>
+  </div>
+  <div
+    className="slds-media__body"
+  >
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat minus molestias reprehenderit consequuntur sapiente. Modi veritatis totam accusantium numquam assumenda.
+    </p>
+  </div>
+  <div
+    className="slds-media__figure slds-media__figure_reverse"
+  >
+    <span
+      className="slds-avatar slds-avatar_large"
+    >
+      <img
+        alt="Person name"
+        src="/assets/images/avatar3.jpg"
+        title="User avatar"
+      />
+    </span>
+  </div>
+</div>
+`;
+
+exports[`renders media object utilities renders media object with left figure 1`] = `
+<div
+  className="slds-media"
+>
+  <div
+    className="slds-media__figure"
+  >
+    <span
+      className="slds-avatar slds-avatar_large"
+    >
+      <img
+        alt="Person name"
+        src="/assets/images/avatar3.jpg"
+        title="User avatar"
+      />
+    </span>
+  </div>
+  <div
+    className="slds-media__body"
+  >
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat minus molestias reprehenderit consequuntur sapiente. Modi veritatis totam accusantium numquam assumenda.
+    </p>
+  </div>
+</div>
+`;
+
+exports[`renders media object utilities renders media object with left figure centered 1`] = `
+<div
+  className="slds-media slds-media_center"
+>
+  <div
+    className="slds-media__figure"
+  >
+    <span
+      className="slds-avatar slds-avatar_large"
+    >
+      <img
+        alt="Person name"
+        src="/assets/images/avatar3.jpg"
+        title="User avatar"
+      />
+    </span>
+  </div>
+  <div
+    className="slds-media__body"
+  >
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat minus molestias reprehenderit consequuntur sapiente. Modi veritatis totam accusantium numquam assumenda.
+    </p>
+  </div>
+</div>
+`;
+
+exports[`renders media object utilities renders media object with right figure 1`] = `
+<div
+  className="slds-media"
+>
+  <div
+    className="slds-media__body"
+  >
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat minus molestias reprehenderit consequuntur sapiente. Modi veritatis totam accusantium numquam assumenda.
+    </p>
+  </div>
+  <div
+    className="slds-media__figure slds-media__figure_reverse"
+  >
+    <span
+      className="slds-avatar slds-avatar_large"
+    >
+      <img
+        alt="Person name"
+        src="/assets/images/avatar3.jpg"
+        title="User avatar"
+      />
+    </span>
+  </div>
+</div>
+`;
+
+exports[`renders media object utilities renders media object with small space between figure and text 1`] = `
+<div
+  className="slds-media slds-media_small"
+>
+  <div
+    className="slds-media__figure"
+  >
+    <span
+      className="slds-avatar slds-avatar_large"
+    >
+      <img
+        alt="Person name"
+        src="/assets/images/avatar3.jpg"
+        title="User avatar"
+      />
+    </span>
+  </div>
+  <div
+    className="slds-media__body"
+  >
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat minus molestias reprehenderit consequuntur sapiente. Modi veritatis totam accusantium numquam assumenda.
+    </p>
+  </div>
+</div>
+`;

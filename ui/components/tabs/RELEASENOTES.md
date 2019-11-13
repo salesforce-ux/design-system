@@ -4,6 +4,13 @@
 
 <!-- ## [Unreleased] -->
 
+## 2.11.0
+
+### Changed
+
+- For touch devices:
+  - Removed the focus styling from the button nested within `.slds-tabs-mobile__item` so the text color does not change on press for mobile (background color still changes on press)
+
 ## 2.10.0
 
 ### Changed

@@ -16,7 +16,7 @@ import { Row, HeadlessRow, DefaultRows, HeadlessRows } from '../base/example';
 
 import createHelpers from '../../../../jest.helpers';
 
-const { matchesMarkup, matchesMarkupAndStyle } = createHelpers(__dirname);
+const { matchesMarkup } = createHelpers(__dirname);
 
 describe('treegrid', () => {
   describe('treegrid component', () => {
@@ -268,14 +268,14 @@ describe('treegrid', () => {
 
 describe('deprecated treegrid', () => {
   it('renders a default DeprecatedTreeGrid', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <DeprecatedTreeGrid>
         <DeprecatedDefaultRows />
       </DeprecatedTreeGrid>
     ));
 
   it('renders an expanded DeprecatedTreeGrid', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <DeprecatedTreeGrid>
         <DeprecatedDefaultRows
           isExpanded
@@ -285,7 +285,7 @@ describe('deprecated treegrid', () => {
     ));
 
   it('renders a deeply nested DeprecatedTreeGrid', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <DeprecatedTreeGrid>
         <DeprecatedNestingRows />
       </DeprecatedTreeGrid>

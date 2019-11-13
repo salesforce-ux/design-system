@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders border utilities renders bottom border 1`] = `
+<div
+  className="slds-border_bottom"
+>
+  This should have a bottom border.
+</div>
+`;
+
+exports[`renders border utilities renders left border 1`] = `
+<div
+  className="slds-border_left"
+>
+  This should have a left border.
+</div>
+`;
+
+exports[`renders border utilities renders right border 1`] = `
+<div
+  className="slds-border_right"
+>
+  This should have a right border.
+</div>
+`;
+
+exports[`renders border utilities renders top border 1`] = `
+<div
+  className="slds-border_top"
+>
+  This should have a top border.
+</div>
+`;

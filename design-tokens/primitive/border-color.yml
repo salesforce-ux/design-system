@@ -16,7 +16,7 @@ imports:
 - ../aliases/color-palettes.yml
 props:
   COLOR_BORDER:
-    value: '{!PALETTE_COOL_GRAY_5}'
+    value: '{!PALETTE_GRAY_5}'
     comment: Default border color for UI elements.
     cssProperties:
     - 'border*'
@@ -24,11 +24,11 @@ props:
     - 'background*'
     access: global
   COLOR_BORDER_BRAND:
-    value: '{!AZURE}'
+    value: '{!BRAND_PRIMARY}'
     comment: Our product brand blue.
     access: global
   COLOR_BORDER_BRAND_DARK:
-    value: '{!SCIENCE_BLUE}'
+    value: '{!BRAND_ACCESSIBLE}'
     comment: 'Our product brand blue, darkened to meet accessibility color contrast ratios with white text.'
   COLOR_BORDER_CUSTOMER:
     value: '{!TANGERINE}'
@@ -43,7 +43,7 @@ props:
     value: '{!MAROON}'
     comment: Active border color for UI elements that have to do with destructive actions.
   COLOR_BORDER_INFO:
-    value: '{!PALETTE_COOL_GRAY_9}'
+    value: '{!PALETTE_GRAY_9}'
     comment: 'Border color for UI elements related to providing neutral information (not error, success, or warning).'
   COLOR_BORDER_ERROR:
     value: '{!FLUSH_MAHOGANY}'
@@ -56,7 +56,7 @@ props:
     value: '{!DEEP_BLUSH}'
     comment: Dark alternative border color for UI elements related to errors.
   COLOR_BORDER_OFFLINE:
-    value: '{!PALETTE_COOL_GRAY_11}'
+    value: '{!PALETTE_GRAY_11}'
     comment: Border color for UI elements related to the offline state.
   COLOR_BORDER_SUCCESS:
     value: '{!EMERALD}'
@@ -73,37 +73,37 @@ props:
     value: '{!DEEP_COVE}'
     comment: Border color to match UI elements using color-background-inverse.
   COLOR_BORDER_SEPARATOR:
-    value: '{!PALETTE_COOL_GRAY_2}'
+    value: '{!PALETTE_GRAY_2}'
     comment: Lightest separator color - used as default separator on white backgrounds.
     access: global
   COLOR_BORDER_SEPARATOR_ALT:
-    value: '{!PALETTE_COOL_GRAY_5}'
+    value: '{!PALETTE_GRAY_5}'
     comment: Medium separator color - used as default separator on light gray backgrounds.
     access: global
   COLOR_BORDER_SEPARATOR_ALT_2:
-    value: '{!PALETTE_COOL_GRAY_6}'
+    value: '{!PALETTE_GRAY_6}'
     comment: Darkest separator color - used as an alternate separator color when more differentiation is desired.
   COLOR_BORDER_SEPARATOR_INVERSE:
     value: '{!SAN_JUAN}'
     comment: 'Used as a separator on dark backgrounds, such as stage left navigation.'
     access: global
   COLOR_BORDER_ROW_SELECTED:
-    value: '{!SCIENCE_BLUE}'
+    value: '{!BRAND_ACCESSIBLE}'
     comment: Used as the border color for selected rows or items on list-like components.
     access: global
   COLOR_BORDER_ROW_SELECTED_HOVER:
-    value: '{!AZURE}'
+    value: '{!BRAND_PRIMARY}'
     comment: Used as the border color for the hover state on selected rows or items on list-like components.
     access: global
   COLOR_BORDER_SELECTION:
-    value: '{!SCIENCE_BLUE}'
+    value: '{!BRAND_ACCESSIBLE}'
     specificity: builders
     comment: Used to delineate the boundary of a selected component. Specific to builders.
   COLOR_BORDER_SELECTION_HOVER:
-    value: '{!AZURE}'
+    value: '{!BRAND_PRIMARY}'
     specificity: builders
     comment: Used to delineate the boundary of a component that is being hovered over. Specific to builders.
   COLOR_BORDER_SELECTION_ACTIVE:
-    value: '{!PALETTE_COOL_GRAY_2}'
+    value: '{!PALETTE_GRAY_2}'
     specificity: builders
     comment: Used to delineate the boundary of a component that is being clicked. Specific to builders.

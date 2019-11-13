@@ -1,11 +1,11 @@
 /* eslint-env jest */
 import React from 'react';
 import createHelpers from '../../../../jest.helpers';
-const { matchesMarkupAndStyle } = createHelpers(__dirname);
+const { matchesMarkup } = createHelpers(__dirname);
 
 describe('renders position utilities', () => {
   it('renders static utility', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <div
         className="demo-only slds-grid"
         style={{ height: '10rem', width: '20rem', padding: '2rem' }}
@@ -31,7 +31,7 @@ describe('renders position utilities', () => {
       </div>
     ));
   it('renders fixed utility', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <div
         className="demo-only slds-grid"
         style={{ height: '10rem', width: '20rem', padding: '2rem' }}
@@ -59,7 +59,7 @@ describe('renders position utilities', () => {
       </div>
     ));
   it('renders relative utility', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <div
         className="demo-only slds-grid"
         style={{ height: '10rem', width: '20rem', padding: '2rem' }}
@@ -85,7 +85,7 @@ describe('renders position utilities', () => {
       </div>
     ));
   it('renders absolute utility', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <div
         className="demo-only slds-grid"
         style={{ height: '10rem', width: '20rem', padding: '2rem' }}

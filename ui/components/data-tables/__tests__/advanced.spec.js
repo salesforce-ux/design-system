@@ -21,7 +21,7 @@ import { columns, productRows, rows } from '../advanced/example';
 
 import createHelpers from '../../../../jest.helpers';
 
-const { matchesMarkupAndStyle, matchesMarkup } = createHelpers(__dirname);
+const { matchesMarkup } = createHelpers(__dirname);
 
 const product = productRows[0];
 
@@ -160,7 +160,7 @@ describe('Advanced data table row', () => {
       </Table>
     );
 
-    return matchesMarkupAndStyle(
+    return matchesMarkup(
       wrapper
         .find('th a.slds-th__action')
         .at(1)

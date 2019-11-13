@@ -33,7 +33,9 @@ class TabBarItem extends Component {
       <li
         title={label}
         role="presentation"
-        className="lwc-tab-bar__nav-item"
+        className={classNames('lwc-tab-bar__nav-item', {
+          'lwc-is-active': isActive
+        })}
         key={`label-${iter}`}
       >
         <a
@@ -43,9 +45,7 @@ class TabBarItem extends Component {
           aria-selected={isActive}
           aria-controls={`${tabsetId}-${iter}`}
           id={`${tabsetId}-${iter}__item`}
-          className={classNames('lwc-tab-bar__nav-item-link', {
-            'lwc-is-active': isActive
-          })}
+          className="lwc-tab-bar__nav-item-link"
           onClick={e => changeActiveTab(e, iter)}
         >
           {startIcon ? (

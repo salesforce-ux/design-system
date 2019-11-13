@@ -156,7 +156,8 @@
   display: flex;
   border-bottom: $border-width-thin solid var(--lwc-c-tabset-color-border, $color-gray-5);
 
-  .lwc-tab-bar__nav-item-link {
+  .lwc-tab-bar__nav-item {
+    position: relative;
 
     &:after {
       content: '';
@@ -170,7 +171,7 @@
     /**
      * @summary modifier class for active tab
      * @selector .lwc-is-active
-     * @restrict .lwc-tab-bar__nav-item-link
+     * @restrict .lwc-tab-bar__nav-item
      * @modifier
      */
     &.lwc-is-active {

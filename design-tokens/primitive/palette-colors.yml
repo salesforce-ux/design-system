@@ -72,16 +72,19 @@ props:
     comment: "Primary brand color"
     themeable: true
     release: 2.6.0
+    access: global
   BRAND_PRIMARY_ACTIVE:
     value: "{!BRAND_PRIMARY_ACTIVE}"
     comment: "Active / Hover state of BRAND_PRIMARY"
     themeable: true
     release: 2.6.0
+    access: global
   BRAND_PRIMARY_TRANSPARENT:
     value: "rgba(21,137,238,0.1)"
     comment: "Transparent value of BRAND_PRIMARY"
     themeable: true
     release: 2.6.0
+    access: global
   BRAND_PRIMARY_TRANSPARENT_10:
     value: "rgba(21,137,238,0.1)"
     comment: "Transparent value of BRAND_PRIMARY at 10%"
@@ -97,51 +100,61 @@ props:
     comment: "Light variant of BRAND that is accessible with dark colors"
     themeable: true
     release: 2.6.0
+    access: global
   BRAND_LIGHT_ACTIVE:
     value: "{!BRAND_LIGHT_ACTIVE}"
     comment: "Active / Hover state of BRAND_LIGHT"
     themeable: true
     release: 2.6.0
+    access: global
   BRAND_DARK:
     value: "{!BRAND_DARK}"
     comment: "Dark variant of BRAND that is accessible with light colors"
     themeable: true
     release: 2.6.0
+    access: global
   BRAND_DARK_ACTIVE:
     value: "{!BRAND_DARK_ACTIVE}"
     comment: "Active / Hover state of BRAND_DARK"
     themeable: true
     release: 2.6.0
+    access: global
   BRAND_ACCESSIBLE:
     value: "{!BRAND_ACCESSIBLE}"
     comment: "Dark variant of BRAND that is accessible with white"
     themeable: true
     release: 2.6.0
+    access: global
   BRAND_ACCESSIBLE_ACTIVE:
     value: "{!BRAND_ACCESSIBLE_ACTIVE}"
     comment: "Active / Hover state of BRAND_A11Y"
     themeable: true
     release: 2.6.0
+    access: global
   BRAND_DISABLED:
     value: "{!BRAND_DISABLED}"
     comment: "Disabled state of BRAND_A11Y"
     themeable: true
     release: 2.6.0
+    access: global
   BRAND_CONTRAST:
     value: "{!BRAND_CONTRAST}"
     comment: "Variant of BRAND that is accessible with BRAND"
     themeable: true
     release: 2.6.0
+    access: global
   BRAND_CONTRAST_ACTIVE:
     value: "{!BRAND_CONTRAST_ACTIVE}"
     comment: "Active / Hover state of BRAND_CONTRAST"
     themeable: true
     release: 2.6.0
+    access: global
   BRAND_BACKGROUND_PRIMARY:
     value: "{!BRAND_BACKGROUND_PRIMARY}"
     comment: "Primary page background color"
     themeable: true
     release: 2.6.0
+    access: global
   BRAND_BACKGROUND_PRIMARY_TRANSPARENT:
     value: "rgba(176,196,223,0)"
     comment: "These RGBA values need to be updated if BRAND_BACKGROUND_PRIMARY changes, solves webkit bug"
@@ -152,6 +165,7 @@ props:
     comment: "Dark variant of BRAND_BACKGROUND_PRIMARY, used within gradient of background color"
     themeable: true
     release: 2.6.0
+    access: global
   BRAND_BACKGROUND_DARK_TRANSPARENT:
     value: "rgba(25,85,148,0)"
     comment: "These RGBA values need to be updated if BRAND_BACKGROUND_DARK changes, solves webkit bug"
@@ -237,8 +251,10 @@ props:
     comment: "Primary text link brand color"
     themeable: true
     release: 2.6.0
+    access: global
   BRAND_TEXT_LINK_ACTIVE:
     value: "{!BRAND_TEXT_LINK_ACTIVE}"
     comment: "Active / Hover state of BRAND_TEXT_LINK"
     themeable: true
     release: 2.6.0
+    access: global

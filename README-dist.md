@@ -18,11 +18,9 @@ Welcome to the [Salesforce Lightning Design System](https://www.lightningdesigns
   - styles/
     - salesforce-lightning-design-system.css (regular CSS — which should not be used within a component that already has access to the SLDS CSS within the platform — please use the scoping tool mentioned below)
     - salesforce-lightning-design-system.min.css (minified CSS)
-    - (The scoped files for -vf and -ltng have been removed from the download. If you still need a scoped file, a custom scoped file should be built using [the file scoping tool](https://tools.lightningdesignsystem.com/css-customizer))
 * design-tokens/dist/ - the Design Tokens, usable in all formats
 * scss/ - the Sass source for the Lightning Design System CSS
 * swatches/
-  - salesforce-lightning-design-system.ase
   - salesforce-lightning-design-system.clr - adobe and ios swatch formats, respectively. See [https://helpx.adobe.com/photoshop/using/customizing-color-pickers-swatches.html](https://helpx.adobe.com/photoshop/using/customizing-color-pickers-swatches.html)
 
 ## Licenses

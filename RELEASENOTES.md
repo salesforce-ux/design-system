@@ -68,7 +68,7 @@
 
 ### [Setup Assistant](https://www.lightningdesignsystem.com/components/setup-assistant)
 #### Changed
-- Updated progress examples to include `slds-media` around `slds-media__figure` and `slds-media__body` to fix icon alignment.
+- Updated progress examples to use `slds-media` around `slds-media__figure` and `slds-media__body` to fix icon alignment.
 
 ### [Slider](https://www.lightningdesignsystem.com/components/slider)
 #### Changed

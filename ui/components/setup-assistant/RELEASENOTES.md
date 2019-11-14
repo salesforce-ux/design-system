@@ -8,7 +8,7 @@
 
 ### Changed
 
-- Updated progress examples to include `slds-media` around `slds-media__figure` and `slds-media__body` to fix icon alignment.
+- Updated progress examples to use `slds-media` around `slds-media__figure` and `slds-media__body` to fix icon alignment.
 
 ## 2.8.0
 

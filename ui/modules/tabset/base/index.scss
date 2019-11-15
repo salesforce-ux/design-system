@@ -6,6 +6,9 @@
 // ------------
 @import '../../../shared/common/init';
 
+// Sizing Tokens
+$_c-tab-bar-line-height: $line-height-button;
+
 /**
  * @base
  * @name lwc-tabset
@@ -75,12 +78,30 @@
  * @selector .lwc-tab-bar__nav-item
  * @restrict .lwc-tab-bar__nav > li
  */
+.lwc-tab-bar__nav-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  line-height: $_c-tab-bar-line-height;
+}
 
+/**
+ * @summary Overflow Nav Item
+ * @selector .lwc-tab-bar__nav-item_overflow
+ * @restrict .lwc-tab-bar__nav-item
+ * @modifier
+ */
+.lwc-tab-bar__nav-item_overflow {
+  padding-left: var(--var-spacing-horizontal-small, $var-spacing-horizontal-small);
+  padding-right: var(--var-spacing-horizontal-small, $var-spacing-horizontal-small);
+
+  --lwc-c-button-color-text: $color-gray-12;
+}
 
 /**
  * @summary Link item for tabset tab
  * @selector .lwc-tab-bar__nav-item-link
- * @restrict .lwc-tab-bar__nav-item > a, .lwc-tab-bar_nav-item > button
+ * @restrict .lwc-tab-bar__nav-item > a, .lwc-tab-bar__nav-item > button
  */
 .lwc-tab-bar__nav-item-link {
   position: relative;
@@ -140,7 +161,8 @@
   display: flex;
   border-bottom: $border-width-thin solid var(--lwc-c-tabset-color-border, $color-gray-5);
 
-  .lwc-tab-bar__nav-item-link {
+  .lwc-tab-bar__nav-item {
+    position: relative;
 
     &:after {
       content: '';
@@ -154,7 +176,7 @@
     /**
      * @summary modifier class for active tab
      * @selector .lwc-is-active
-     * @restrict .lwc-tab-bar__nav-item-link
+     * @restrict .lwc-tab-bar__nav-item
      * @modifier
      */
     &.lwc-is-active {

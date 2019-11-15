@@ -5,7 +5,9 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Shadow from '../../shared/shadow/';
 import { rollupAdoptedStylesheets } from '../../shared/shadow/helpers';
+import Button from '../button';
 import ButtonIcon from '../button-icon';
+import Icon from '../icon';
 import DropdownContainer from '../dropdown-container';
 import Menu from '../menu';
 
@@ -17,6 +19,7 @@ class ButtonMenu extends Component {
     const {
       children,
       title,
+      label,
       isOpen,
       hasActions,
       length,
@@ -28,19 +31,25 @@ class ButtonMenu extends Component {
     } = this.props;
 
     const css = rollupAdoptedStylesheets([common, buttonMenu, customization]);
+    const button = label ? (
+      <Button rightIcon={<Icon size="xx-small" symbol="down" />} ariaHaspopup>
+        {label}
+      </Button>
+    ) : (
+      <ButtonIcon
+        symbol="down"
+        variant="neutral"
+        boundarySize="medium"
+        title={title}
+        hasPopup
+        isExpanded={isOpen}
+      />
+    );
 
     return (
       <Shadow.on name="button-menu" includes={css} shadow={shadow}>
         <div className="lwc-button-menu">
-          <ButtonIcon
-            symbol="down"
-            variant="neutral"
-            boundarySize="medium"
-            title={title}
-            hasPopup
-            isExpanded={isOpen}
-          />
-
+          {button}
           {isOpen && (
             <DropdownContainer
               length={length}

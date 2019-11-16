@@ -174,7 +174,7 @@
   @include button-shape;
   --lwc-c-button-color-background: var(--lwc-c-button-neutral-color-background, $color-gray-1);
   --lwc-c-button-color-border: var(--lwc-c-button-neutral-color-border, $color-border);
-  --lwc-c-button-color-text: var(--lwc-c-button-neutral-color-text, $brand-accessible);
+  --lwc-c-button-color-text: var(--lwc-c-button-neutral-color-text, var(--lwc-brand-accessible, $brand-accessible));
 
   --lwc-c-button-color-background-active: var(--lwc-c-button-neutral-color-background-active, $color-gray-2);
   --lwc-c-button-color-border-active: var(--lwc-c-button-neutral-color-border-active, $color-border);
@@ -229,4 +229,99 @@
 .lwc-button_end {
   --lwc-c-button-radius: 0 $border-radius-medium $border-radius-medium 0;
   --lwc-c-button-shadow-brand: none;
+}
+
+/**
+ * @name stateful
+ * @summary
+ * @selector .lwc-button_stateful
+ * @restrict button, a
+ * @variant
+ */
+.lwc-button_stateful {
+  @include button-shape;
+  --lwc-c-button-color-background: var(--lwc-c-button-neutral-color-background, $color-gray-1);
+  --lwc-c-button-color-border: var(--lwc-c-button-neutral-color-border, $color-border);
+  --lwc-c-button-color-text: var(--lwc-c-button-neutral-color-text, var(--lwc-brand-accessible, $brand-accessible));
+
+  --lwc-c-button-color-background-active: var(--lwc-c-button-neutral-color-background-active, $color-gray-2);
+  --lwc-c-button-color-border-active: var(--lwc-c-button-neutral-color-border-active, $color-border);
+
+  --lwc-c-button-color-background-disabled: $color-gray-1;
+  --lwc-c-button-color-border-disabled: $color-border;
+
+  // Overriding Icon defaults
+  --lwc-c-icon-color: var(--lwc-brand-accessible, $brand-accessible);
+}
+
+.lwc-button_stateful-text-not-selected,
+.lwc-button_stateful-text-selected,
+.lwc-button_stateful-text-selected-focused {
+  display: var(--lwc-c-button-stateful-display, none);
+}
+
+/**
+ * Default text state of an unselected stateful button
+ *
+ * @selector .lwc-button_stateful-text-not-selected
+ * @restrict .lwc-button_stateful span
+ */
+.lwc-button_stateful-text-not-selected {
+  --lwc-c-button-stateful-display: inline-flex;
+}
+
+/**
+ * Default text state of a selected stateful button
+ *
+ * @selector .lwc-button_stateful-text-selected
+ * @restrict .lwc-button_stateful span
+ */
+
+/**
+ * Default text state of a selected and focused stateful button
+ *
+ * @selector .lwc-button_stateful-text-selected-focused
+ * @restrict .lwc-button_stateful span
+ */
+.lwc-button_stateful-text-selected,
+.lwc-button_stateful-text-selected-focused {
+  --lwc-c-button-stateful-display: none;
+}
+
+/**
+ * @summary Hide unselected text span when stateful button is pressed
+ * @notes aria-pressed should be toggled with JavaScript
+ */
+[aria-pressed="true"] .lwc-button_stateful-text-not-selected {
+  --lwc-c-button-stateful-display: none;
+}
+
+/**
+ * @summary Show selected text span when stateful button is pressed
+ * @notes aria-pressed should be toggled with JavaScript
+ */
+[aria-pressed="true"] .lwc-button_stateful-text-selected {
+  --lwc-c-button-stateful-display: inline-flex;
+}
+
+[aria-pressed="true"]:not(:focus) {
+  --lwc-c-button-color-border: transparent;
+}
+
+/**
+ * @summary Hide selected-and-focused text span when stateful button is pressed AND hovered/focused
+ * @notes aria-pressed should be toggled with JavaScript
+ */
+[aria-pressed="true"]:hover .lwc-button_stateful-text-selected,
+[aria-pressed="true"]:focus .lwc-button_stateful-text-selected {
+  --lwc-c-button-stateful-display: none;
+}
+
+/**
+ * @summary Show selected-and-focused text span when stateful button is pressed AND hovered/focused
+ * @notes aria-pressed should be toggled with JavaScript
+ */
+[aria-pressed="true"]:hover .lwc-button_stateful-text-selected-focused,
+[aria-pressed="true"]:focus .lwc-button_stateful-text-selected-focused {
+  --lwc-c-button-stateful-display: inline-flex;
 }

@@ -2,6 +2,7 @@ import CodeView from '../../../shared/components/CodeView';
 import CodeBlock from '../../../shared/components/CodeBlock';
 import Blockquote from '../../../shared/components/Blockquote';
 import * as ButtonExamples from './base/example';
+import * as StatefulButtonExamples from './stateful/example';
 import { getDisplayElementById } from '../../shared/helpers';
 
 import { CustomElementName as ButtonElementName } from '.';
@@ -186,4 +187,57 @@ The SVG, element, or icon inside the button receives the `lwc-button__icon` clas
 
 <CodeView>
   {getDisplayElementById(ButtonExamples.examples, 'button-right-icon')}
+</CodeView>
+
+## Stateful Button
+
+Stateful Button is a type of [Toggle Button](/accessibility/patterns/togglebutton) that has three distinct states: not selected (default), selected, and selected with a hover/focus state.
+
+To create a Stateful Button, add the `lwc-button_stateful` class to `lwc-button`. Visually, this will match the [neutral variant](/modules/buttons/#Neutral) of Button.
+
+<Blockquote type="a11y" header="Accessibility Requirement">
+  Be sure to include the <code>aria-label</code> attribute with relevant action
+  text on the button (for example, "Follow"). This attribute will allow
+  assistive technologies and browsers to announce the Stateful Button as a
+  toggle. Once set, this value does not need to be updated with JavaScript
+  except for language translation.
+</Blockquote>
+
+<CodeView>
+  {getDisplayElementById(StatefulButtonExamples.examples, 'stateful-button')}
+</CodeView>
+
+Stateful Button can also render an icon on the left or right side. For icons on the right, the SVG, element, or icon inside the button receives the `lwc-button__icon_right` class, and for icons on the left, the `lwc-button__icon_left` class is used. For further information about icon rendering in buttons, see the [Button with Icons](/modules/button#With-Icons) section.
+
+<Blockquote type="note" header="JavaScript Requirement">
+  Because the icon is now owned by Button rather than its child elements,
+  JavaScript is required to change the icon symbol and/or sprite, and cannot be
+  done with CSS. The following JavaScript events are required for Stateful
+  Button: <code>mouseenter</code>, <code>mouseleave</code>, <code>focus</code>,
+  and <code>blur</code>.
+</Blockquote>
+
+Stateful Button contains three `span` elements that hide or show text content based on the state of the button. Note that these elements will only accept text content, and said content is required.
+
+### Not Selected
+
+The default state of Stateful Button is not selected. To display text for this state, use the `lwc-button_stateful-text-not-selected` class on the first child `span` element.
+
+### Selected
+
+The selected state of Stateful Button is powered by toggling `aria-pressed`; by default, `aria-pressed` is set to `false`. To display the text for this state, set `aria-pressed` to `true`, and use the `lwc-button_stateful-text-selected` class on the second child `span` element.
+
+### Selected with Hover/Focus
+
+The selected with hover/focus state of Stateful Button is handled the CSS `:hover` and `:focus` states. To display text for this state, set `aria-pressed` to `true`, and use the `lwc-button_stateful-text-selected-focused` class on the third `span` element.
+
+### Disabled
+
+Stateful Button can be set as disabled by adding the `disabled` attribute to the button. In this state, only the default non-selected state will be visible, and no changes can be made.
+
+<CodeView>
+  {getDisplayElementById(
+    StatefulButtonExamples.examples,
+    'stateful-button-disabled'
+  )}
 </CodeView>

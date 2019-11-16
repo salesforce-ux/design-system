@@ -9,6 +9,7 @@ import button from './base/index.scss';
 
 const Button = props => {
   const {
+    name,
     variant,
     size,
     use,
@@ -21,7 +22,14 @@ const Button = props => {
     customization,
     ariaControls,
     ariaExpanded,
-    ariaHaspopup
+    ariaPressed,
+    ariaLabel,
+    ariaHaspopup,
+    handleClick,
+    handleMouseEnter,
+    handleMouseLeave,
+    handleFocus,
+    handleBlur
   } = props;
 
   const css = rollupAdoptedStylesheets([common, button, customization]);
@@ -34,7 +42,8 @@ const Button = props => {
     'lwc-button_destructive-text': variant === 'destructive-text',
     'lwc-button_inverse': variant === 'inverse',
     'lwc-button_neutral': variant === 'neutral',
-    'lwc-button_success': variant === 'success'
+    'lwc-button_success': variant === 'success',
+    'lwc-button_stateful': variant === 'stateful'
   };
 
   const sizeClassName = {
@@ -76,14 +85,23 @@ const Button = props => {
 
   return (
     <Shadow.on
-      name="button"
+      name={name}
       includes={css}
       shadow={shadow}
       showSource={showSource}
       hideSourceOf={hideSourceOf}
+      onClick={handleClick}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+      onFocus={handleFocus}
+      onBlur={handleBlur}
     >
       {use === 'a' ? (
-        <a className={computedClassNames} href="javascript:void(0);">
+        <a
+          className={computedClassNames}
+          href="#"
+          onClick={e => e.preventDefault()}
+        >
           {renderLeftIcon()}
           {children}
           {renderRightIcon()}
@@ -94,6 +112,8 @@ const Button = props => {
           disabled={disabled}
           aria-controls={ariaControls}
           aria-expanded={ariaExpanded}
+          aria-pressed={ariaPressed}
+          aria-label={ariaLabel}
           aria-haspopup={ariaHaspopup}
         >
           {renderLeftIcon()}
@@ -106,6 +126,7 @@ const Button = props => {
 };
 
 Button.propTypes = {
+  name: PropTypes.string,
   // Slots
   children: PropTypes.node,
   leftIcon: PropTypes.node,
@@ -123,10 +144,20 @@ Button.propTypes = {
     'inverse',
     'neutral',
     'reset',
-    'success'
+    'success',
+    'stateful'
   ]),
+  // Events
+  handleClick: PropTypes.func,
+  handleMouseEnter: PropTypes.func,
+  handleMouseLeave: PropTypes.func,
+  handleFocus: PropTypes.func,
+  handleBlur: PropTypes.func,
+  // ARIA
   ariaControls: PropTypes.string,
   ariaExpanded: PropTypes.bool,
+  ariaPressed: PropTypes.bool,
+  ariaLabel: PropTypes.string,
   // Shadow
   shadow: PropTypes.bool,
   showSource: PropTypes.bool,
@@ -134,6 +165,7 @@ Button.propTypes = {
 };
 
 Button.defaultProps = {
+  name: 'button',
   use: 'button'
 };
 

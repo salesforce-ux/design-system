@@ -22,7 +22,6 @@ class SetupAssistantStepSummary extends React.Component {
       referenceId,
       isOpen
     } = this.props;
-    const className = classNames(('slds-media', stepProgress));
 
     const stepAction =
       action &&
@@ -99,7 +98,7 @@ class SetupAssistantStepSummary extends React.Component {
     return (
       <div className="slds-setup-assistant__step-summary">
         {stepProgress ? (
-          <div className={className}>
+          <div className="slds-media">
             <div className="slds-media__figure">{stepProgressRing}</div>
             <div className="slds-media__body slds-m-top_x-small">
               {baseStepContent}

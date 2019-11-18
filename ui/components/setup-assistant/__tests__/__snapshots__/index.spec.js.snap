@@ -31,7 +31,7 @@ exports[`Setup Assistant  renders a complete setup assistant step 1`] = `
   className="slds-setup-assistant__step-summary"
 >
   <div
-    className="isComplete number"
+    className="slds-media"
   >
     <div
       className="slds-media__figure"
@@ -181,7 +181,7 @@ exports[`Setup Assistant  renders a setup assistant step with the title as a but
   className="slds-setup-assistant__step-summary"
 >
   <div
-    className="isComplete number"
+    className="slds-media"
   >
     <div
       className="slds-media__figure"
@@ -268,7 +268,7 @@ exports[`Setup Assistant  renders a setup assistant step with title button and a
   className="slds-setup-assistant__step-summary"
 >
   <div
-    className="isComplete number"
+    className="slds-media"
   >
     <div
       className="slds-media__figure"
@@ -553,7 +553,7 @@ exports[`Setup Assistant  renders an in-progess setup assistant step 1`] = `
   className="slds-setup-assistant__step-summary"
 >
   <div
-    className="number"
+    className="slds-media"
   >
     <div
       className="slds-media__figure"
@@ -617,7 +617,7 @@ exports[`Setup Assistant  renders an in-progess setup assistant step with progre
   className="slds-setup-assistant__step-summary"
 >
   <div
-    className="number percentage"
+    className="slds-media"
   >
     <div
       className="slds-media__figure"
@@ -681,7 +681,7 @@ exports[`Setup Assistant  renders an incomplete setup assistant step 1`] = `
   className="slds-setup-assistant__step-summary"
 >
   <div
-    className="number"
+    className="slds-media"
   >
     <div
       className="slds-media__figure"

@@ -66,6 +66,10 @@
 - For mobile devices, radio button groups stack vertically to account for the limited horizontal space of mobile screens.
 <!-- ## [VERSION] -->
 
+### [Setup Assistant](https://www.lightningdesignsystem.com/components/setup-assistant)
+#### Changed
+- Updated progress examples to use `slds-media` around `slds-media__figure` and `slds-media__body` to fix icon alignment.
+
 ### [Slider](https://www.lightningdesignsystem.com/components/slider)
 #### Changed
 - For mobile devices:

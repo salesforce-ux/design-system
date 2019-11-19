@@ -1,15 +1,12 @@
 import React from 'react';
 import StatefulButton from './';
 
-export const examples = [
-  {
-    id: 'stateful-button',
-    label: 'Stateful',
-    element: <StatefulButton accessibleText="Follow" />
-  },
+export default <StatefulButton accessibleText="Follow" />;
+
+export const states = [
   {
     id: 'stateful-button-disabled',
-    label: 'Stateful (Disabled)',
+    label: 'Disabled',
     element: <StatefulButton accessibleText="Follow" disabled />
   }
 ];

@@ -1,0 +1,8 @@
+{
+  "name": "button",
+  "variant": "stateful",
+  "version": "3.0.0-dev",
+  "description": "Salesforce Lightning Design System - Button component blueprint",
+  "author": "Salesforce",
+  "license": "SEE LICENSE IN README.md"
+}

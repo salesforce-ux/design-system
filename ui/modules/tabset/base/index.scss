@@ -211,6 +211,7 @@ $_c-tab-bar-line-height: $line-height-button;
   border-top-right-radius: $border-radius-medium;
 
   .lwc-tab-bar__nav-item {
+
     &.lwc-is-active .lwc-tab-bar__nav-item-link {
       border-color: var(--lwc-c-tabset-scoped-color-border, $color-gray-5);
       background: var(--lwc-c-tabset-scoped-color-background-active, $color-gray-1);
@@ -257,6 +258,7 @@ $_c-tab-bar-line-height: $line-height-button;
   border-bottom-left-radius: $border-radius-medium;
 
   .lwc-tab-bar__nav-item {
+
     &:first-child.lwc-is-active .lwc-tab-bar__nav-item-link {
       border-top-left-radius: $border-radius-medium;
     }

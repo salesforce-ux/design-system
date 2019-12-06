@@ -263,17 +263,8 @@ $_c-tab-bar-line-height: $line-height-button;
       border-top-left-radius: $border-radius-medium;
     }
 
-    &:last-child.lwc-is-active .lwc-tab-bar__nav-item-link {
-      border-bottom-left-radius: $border-radius-medium;
-    }
-
     &.lwc-is-active .lwc-tab-bar__nav-item-link {
-      margin-right: ($border-width-thin * -1);
       background: var(--lwc-c-tabset-scoped-color-background-active, $color-gray-1);
-    }
-
-    &:last-child .lwc-tab-bar__nav-item-link {
-      margin-bottom: ($border-width-thin * -1);
     }
   }
 

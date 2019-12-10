@@ -1,7 +1,7 @@
 {
   "name": "design-system",
   "description": "Salesforce Lightning Design System",
-  "version": "3.0.0-dev",
+  "version": "3.0.0-alpha.10",
   "author": "Salesforce",
   "slds": {
     "name": "Spring ’20",

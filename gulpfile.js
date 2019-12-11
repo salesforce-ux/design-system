@@ -204,13 +204,7 @@ gulp.task('styles:test', styles.sassTest);
 gulp.task('styles:formFactors', styles.sassFormFactors);
 gulp.task(
   'styles',
-  gulp.series(
-    gulp.parallel(
-      withName('styles:sass')(styles.sass),
-      withName('styles:test')(styles.sassTest),
-      withName('styles:formFactors')(styles.sassFormFactors)
-    )
-  )
+  gulp.series(gulp.parallel('styles:sass', 'styles:test', 'styles:formFactors'))
 );
 gulp.task(
   'styles:stats',

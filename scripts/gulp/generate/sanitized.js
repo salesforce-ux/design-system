@@ -208,7 +208,10 @@ export const writeSanitizedCss = done => {
 export const writeSanitizedComponentCss = () => {
   return (
     gulp
-      .src(paths.rootPath('.css/**/index.scss'))
+      .src([
+        paths.rootPath('.css/**/index.scss'),
+        paths.rootPath('.css/**/touch.scss')
+      ])
       .pipe(gulpHelpers.writeScss({ outputStyle: 'expanded' }))
       .pipe(gulpHelpers.writePostCss([discardComments()]))
       // Need to format to ensure proper parsing

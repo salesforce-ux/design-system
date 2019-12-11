@@ -34,6 +34,7 @@ const distPath = path.resolve.bind(path, paths.dist);
 const SLDS_VERSION = packageJSON.version;
 const DISPLAY_NAME = 'Lightning Design System';
 const MODULE_NAME = 'salesforce-lightning-design-system';
+const MODULE_NAME_TOUCH = 'salesforce-lightning-design-system_touch';
 
 export const cleanBefore = () => del([paths.dist]);
 export const cleanAfter = () => del([distPath('README-dist.md')]);
@@ -153,12 +154,16 @@ export const copyUtilityReleaseNotes = () =>
 
 export const sass = () =>
   gulp
-    .src(distPath('scss/index.scss'))
+    .src([distPath('scss/index.scss'), distPath('scss/touch.scss')])
     .pipe(gulpHelpers.writeScss({ outputStyle: 'expanded' }))
     .pipe(gulpHelpers.writePostCss([discardComments()]))
     .pipe(
       gulpRename(path => {
-        path.basename = MODULE_NAME + path.basename.substring('index'.length);
+        let basename = MODULE_NAME;
+        if (path.basename === 'touch') {
+          basename = MODULE_NAME_TOUCH;
+        }
+        path.basename = basename;
         path.extname = '.css';
         return path;
       })
@@ -171,9 +176,13 @@ export const sass = () =>
  * ==================
  */
 
+// Outputs to `.css` directory
 export const generateComponentSass = () =>
   gulp
-    .src(distPath('scss/components/*/*/_index.scss'))
+    .src([
+      distPath('scss/components/*/*/_index.scss'),
+      distPath('scss/components/*/*/_touch.scss')
+    ])
     // Write message to the top of each module file
     .pipe(
       through.obj((file, enc, next) => {
@@ -184,13 +193,13 @@ export const generateComponentSass = () =>
         return next(null, newFile);
       })
     )
-    // Rename file to index.scss from _index.scss so gulp sass will compile
-    // since it won't compile _ do to it being private
+    // Rename file with removed underscore("_") so gulp sass will compile
+    // since it won't compile underscore("_") due to it being private
     .pipe(
       gulpRename(path => {
         // mixins aren't public files so we should not rename them to be
         if (!path.dirname.match(/\/mixins/)) {
-          path.basename = 'index';
+          path.basename = path.basename.substring(1);
           path.extname = '.scss';
           return path;
         }
@@ -239,7 +248,13 @@ export const writeCommon = done => writeCommonCss(done);
 
 export const minifyCss = () =>
   gulp
-    .src(distPath(`assets/styles/${MODULE_NAME}.css`), { base: distPath() })
+    .src(
+      [
+        distPath(`assets/styles/${MODULE_NAME}.css`),
+        distPath(`assets/styles/${MODULE_NAME_TOUCH}.css`)
+      ],
+      { base: distPath() }
+    )
     .pipe(gulp.dest(distPath()))
     .pipe(gulpHelpers.writeMinifyCss())
     .pipe(
@@ -252,7 +267,7 @@ export const minifyCss = () =>
 
 export const versionBlock = () =>
   gulp
-    .src(['**/*.css', 'scss/index*'], {
+    .src(['**/*.css', 'scss/index*', 'scss/touch*'], {
       base: distPath(),
       cwd: distPath()
     })
@@ -261,10 +276,18 @@ export const versionBlock = () =>
 
 export const versionInline = () =>
   gulp
-    .src(['scss/**/*.scss', '!scss/index*.scss', '!scss/vendor/**/*.*'], {
-      base: distPath(),
-      cwd: distPath()
-    })
+    .src(
+      [
+        'scss/**/*.scss',
+        '!scss/index*.scss',
+        '!scss/vendor/**/*.*',
+        '!scss/touch*'
+      ],
+      {
+        base: distPath(),
+        cwd: distPath()
+      }
+    )
     .pipe(gulpInsert.prepend(`// ${DISPLAY_NAME} ${SLDS_VERSION}\n`))
     .pipe(gulp.dest(distPath()));
 

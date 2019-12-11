@@ -69,7 +69,7 @@ export const stats = done => {
 
 export const sass = () =>
   gulp
-    .src('ui/index.scss')
+    .src(['ui/index.scss', 'ui/touch.scss'])
     .pipe(gulpPlumber())
     .pipe(gulpSourcemaps.init())
     .pipe(gulpHelpers.writeScss())

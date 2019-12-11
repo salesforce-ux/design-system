@@ -61,7 +61,9 @@ module.exports = async ({ config, mode }) => {
         },
         {
           loader: 'sass-loader',
-          options: { sourceMap: true, outputStyle: 'compressed' }
+          options: {
+            sassOptions: { sourceMap: true, outputStyle: 'compressed' }
+          }
         },
         // Reads Sass vars from files or inlined in the options property
         // needed to reset the asset paths for webpack to load them, as we

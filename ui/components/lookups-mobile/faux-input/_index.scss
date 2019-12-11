@@ -1,0 +1,39 @@
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+// A button that looks like an input. This should only be used for mobile lookups and is not supported elsewhere in SLDS. USE AT YOUR OWN RISK.
+.slds-faux-input {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+  height: $height-tappable;
+  padding: 0 $spacing-medium;
+  border-radius: $button-border-radius;
+  color: $brand-accessible;
+  background: $color-background-input;
+  appearance: none;
+  border: $border-width-thin solid $color-border-input;
+  transition: border 0.15s linear;
+
+  // Focus mimics slds-input
+  &:focus {
+    outline: 0;
+    border-color: $color-border-input-active;
+    background-color: $color-background-input-active;
+    box-shadow: $shadow-button-focus;
+  }
+}
+
+// Mimics slds-form-element__label
+.slds-faux-input_label {
+  display: inline-block;
+  padding-right: $spacing-x-small;
+  padding-top: $spacing-xx-small;
+  margin-bottom: $spacing-xxx-small;
+  font-size: $form-label-font-size;
+  color: $color-text-label;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
+}

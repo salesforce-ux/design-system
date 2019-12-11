@@ -11,6 +11,23 @@
 ## Tokens
 
 ### Changed
+- Set `access:global` to the following tokens:
+  - `brandPrimary`
+  - `brandPrimaryActive`
+  - `brandPrimaryTransparent`
+  - `brandLight`
+  - `brandLightActive`
+  - `brandDark`
+  - `brandDarkActive`
+  - `brandAccessible`
+  - `brandAccessibleActive`
+  - `brandDisabled`
+  - `brandContrast`
+  - `brandContrastActive`
+  - `brandBackgroundPrimary`
+  - `brandBackgroundDark`
+  - `brandTextLink`
+  - `brandTextLinkActive`
 - Primitive tokens now default to our warm gray color palette
   - `PALETTE_GRAY_1`: `#ffffff`
   - `PALETTE_GRAY_2`: `#fafaf9`
@@ -46,6 +63,11 @@
 ### [Checkbox Button Group](https://www.lightningdesignsystem.com/components/checkbox-button-group)
 #### Changed
 - For mobile devices, checkbox button groups stack vertically to account for the limited horizontal space of mobile screens.
+
+### [Docked Utility Bar](https://www.lightningdesignsystem.com/components/docked-utility-bar)
+#### Fixed
+- The popout indicator icon now positions itself correctly in the right-to-left context.
+<!-- ## [VERSION] -->
 
 ### [List Builder](https://www.lightningdesignsystem.com/components/list-builder)
 #### Changed

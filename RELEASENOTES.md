@@ -52,6 +52,10 @@
 #### Changed
 - For touch devices, update the line-height token of `.slds-button` to use the touch-specific token `$height-tappable` (2.75rem) which is a system-wide touch token instead of using a component-specific token.
 
+### [Chat](https://www.lightningdesignsystem.com/components/chat)
+#### Fixed
+- Fixed an issue where some message text containers would have a width equal to the message meta even though the container contained less text and should have had a smaller width.
+
 ### [Checkbox Button](https://www.lightningdesignsystem.com/components/checkbox-button)
 #### Added
 - Introduced new base blueprint for the checkbox button called `.slds-checkbox-button` which improves icon customization, state handling, and blueprint composition.

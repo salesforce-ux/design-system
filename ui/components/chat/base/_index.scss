@@ -298,6 +298,7 @@
  */
 .slds-chat-message__text_outbound-agent {
   background-color: $chat-message-color-background-outbound-agent;
+  margin-left: auto;
 }
 
 .slds-chat-message__text_outbound,
@@ -322,6 +323,7 @@
   border-radius: $border-radius-large $border-radius-large $border-radius-large 0;
   border: $color-border-warning $border-width-thin solid;
   color: $color-text-default;
+  margin-right: auto;
 
   @include deprecate('4.0', 'Please use slds-icon-text-warning modifier for slds-icon') {
 
@@ -346,6 +348,7 @@
   background-color: $chat-message-color-background-status;
   border: $color-border-destructive $border-width-thin solid;
   color: $color-text-default;
+  margin-left: auto;
 
   /**
    * @summary Element that contains feedback for why inbound message failed

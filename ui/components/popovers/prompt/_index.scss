@@ -38,10 +38,6 @@
   font-size: $font-size-5;
   line-height: $line-height-heading;
   font-weight: $font-weight-bold;
-
-  @include touch-device {
-    font-size: $font-size-7;
-  }
 }
 
 /**

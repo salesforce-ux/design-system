@@ -6,7 +6,7 @@
 @import 'dependencies/touch';
 
 // Framework
-@include has-touch {
+@media (pointer: coarse) and (hover: none) {
   @import 'components/touch';
   @import 'utilities/touch';
 }

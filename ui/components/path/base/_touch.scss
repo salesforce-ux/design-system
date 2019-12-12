@@ -1,0 +1,61 @@
+.slds-path__nav {
+
+  .slds-is-current {
+
+    &:first-child {
+
+      .slds-path__link {
+        height: calc(#{$height-tappable} - #{rem(4px)});
+      }
+    }
+  }
+
+  .slds-is-active {
+
+    &:first-child {
+
+      .slds-path__link {
+        height: $height-tappable;
+      }
+    }
+  }
+}
+
+.slds-path__item {
+  margin-left: rem(8px);
+  margin-right: rem(9px);
+
+  &:before,
+  &:after {
+    left: rem(-5px);
+    right: rem(-6px);
+  }
+
+  &:before {
+    height: calc((#{$height-tappable} / 2) + 0.0625rem);
+  }
+
+  &:after {
+    height: ($height-tappable / 2);
+  }
+
+  &:first-child {
+
+    &:before,
+    &:after {
+      left: rem(26px);
+    }
+  }
+
+  &:last-child {
+
+    &:before,
+    &:after {
+      right: rem(18px);
+    }
+  }
+}
+
+.slds-path__link {
+  height: $height-tappable;
+}

@@ -8,4 +8,5 @@
 // Framework
 @include has-touch {
   @import 'components/touch';
+  @import 'utilities/touch';
 }

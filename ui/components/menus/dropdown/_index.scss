@@ -119,11 +119,6 @@
   box-shadow: $shadow-drop-down;
   transform: translateX(-50%);
 
-  @include touch-device {
-    padding: 0;
-    font-size: $font-size-5;
-  }
-
   /**
    * @summary Positions dropdown to left side of target
    * @selector .slds-dropdown_left
@@ -375,10 +370,6 @@
   &__header {
     @include text-title;
     padding: $spacing-x-small $spacing-small;
-
-    @include touch-device {
-      font-size: $font-size-5;
-    }
   }
 
   /**
@@ -400,11 +391,6 @@
       color: $color-text-default;
       white-space: nowrap;
       cursor: pointer;
-
-      @include touch-device {
-        @include border-box-line-height($height-tappable, 0);
-        padding: 0 $spacing-small;
-      }
 
       &:hover,
       &:focus {

@@ -14,13 +14,6 @@
 
   .slds-checkbox_add-button,
   .slds-checkbox--add-button {
-    @include touch-device {
-      @include square($square-tappable);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
     /**
       * @summary Creates a custom styled checkbox
       * @selector .slds-checkbox_faux
@@ -35,10 +28,6 @@
       border-radius: $border-radius-medium;
       background-color: $color-background-input;
       cursor: pointer;
-
-      @include touch-device {
-        @include square($square-tappable-small);
-      }
 
       &:before,
       &:after {

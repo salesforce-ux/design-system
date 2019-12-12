@@ -23,17 +23,8 @@
   position: relative;
   min-height: $height-pill;
 
-  @include touch-device {
-    @include border-box-line-height($height-tappable-small);
-    padding: 0 $spacing-small;
-  }
-
   + .slds-pill {
     margin-left: $spacing-xxx-small;
-
-    @include touch-device {
-      margin-left: $spacing-xx-small;
-    }
   }
 
   &:hover {
@@ -85,10 +76,6 @@
     border-radius: $border-radius-medium;
     background-color: $color-background-input;
 
-    @include touch-device {
-      padding: $spacing-xx-small;
-    }
-
     .slds-listbox_inline {
       margin-left: 0;
       margin-right: 0;
@@ -126,10 +113,6 @@
     overflow: hidden;
     text-overflow: ellipsis;
 
-    @include touch-device {
-      font-size: $font-size-4;
-    }
-
     &:focus {
       outline: 0;
       border-radius: $border-radius-medium;
@@ -157,10 +140,6 @@
 
     ~ .slds-pill__action {
       padding-left: calc(#{$square-icon-x-small-boundary} + #{$spacing-xx-small} + 2px);
-
-      @include touch-device {
-        padding-left: calc(#{$square-icon-x-small-boundary} + #{$spacing-small} + #{$spacing-xx-small});
-      }
     }
   }
 
@@ -201,10 +180,6 @@
     top: 50%;
     left: $spacing-xxx-small;
     transform: translateY(-50%);
-
-    @include touch-device {
-      left: $spacing-small;
-    }
   }
 
   .slds-pill__remove {
@@ -212,10 +187,6 @@
     top: 50%;
     right: $spacing-xxx-small;
     transform: translateY(-50%);
-
-    @include touch-device {
-      right: $spacing-small;
-    }
   }
 }
 
@@ -234,12 +205,6 @@
   overflow: hidden;
   text-overflow: ellipsis;
   flex-grow: 1;
-
-  @include touch-device {
-    padding: 0;
-    padding-left: $spacing-small;
-    padding-right: calc(#{$square-icon-xx-small-boundary} + #{$spacing-small} + 2px);
-  }
 
   &:focus {
     outline: 0;

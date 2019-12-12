@@ -5,4 +5,6 @@
 @import 'init';
 
 // Framework
-@import 'components/touch';
+@include has-touch {
+  @import 'components/touch';
+}

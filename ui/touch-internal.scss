@@ -6,7 +6,8 @@
 @import 'init';
 
 #{$reset-wrapping-class} {
-
-  // Framework
-  @import 'components/touch';
+  @include has-touch {
+    // Framework
+    @import 'components/touch';
+  }
 }

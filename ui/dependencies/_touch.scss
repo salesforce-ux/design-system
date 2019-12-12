@@ -1,0 +1,6 @@
+// Typography
+@mixin text-heading--label-normal {
+  font-size: $font-size-4;
+  line-height: $line-height-heading;
+  color: $color-text-weak;
+}

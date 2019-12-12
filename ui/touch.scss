@@ -3,6 +3,7 @@
 
 // Lightning Design System
 @import 'init';
+@import 'dependencies/touch';
 
 // Framework
 @include has-touch {

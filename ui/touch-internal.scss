@@ -4,6 +4,7 @@
 
 // Lightning Design System
 @import 'init';
+@import 'dependencies/touch';
 
 #{$reset-wrapping-class} {
   @include has-touch {

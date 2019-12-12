@@ -29,10 +29,6 @@
       left: calc((#{$square-icon-utility-small} / 2) - 1px); // "-1px" accounts for half of line width to get true center
       width: 2px;
       background-color: $progress-bar-color-background;
-
-      @include touch-device {
-        left: calc((#{$square-tappable-xx-small} / 2) - 1px); // "-1px" accounts for half of line width to get true center
-      }
     }
 
     &:before {
@@ -69,10 +65,6 @@
     align-items: center;
     margin-top: $spacing-small;
     padding-bottom: $spacing-small;
-
-    @include touch-device {
-      font-size: $font-size-4;
-    }
   }
 
   /**

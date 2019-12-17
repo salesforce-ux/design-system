@@ -10,6 +10,7 @@ import through from 'through2';
 import Immutable from 'immutable';
 import path from 'path';
 import discardComments from 'postcss-discard-comments';
+import combineMediaQuery from 'postcss-combine-media-query';
 
 import packageJSON from '../../package.json';
 
@@ -154,16 +155,26 @@ export const copyUtilityReleaseNotes = () =>
 
 export const sass = () =>
   gulp
-    .src([distPath('scss/index.scss'), distPath('scss/touch.scss')])
+    .src([distPath('scss/index.scss')])
     .pipe(gulpHelpers.writeScss({ outputStyle: 'expanded' }))
     .pipe(gulpHelpers.writePostCss([discardComments()]))
     .pipe(
       gulpRename(path => {
-        let basename = MODULE_NAME;
-        if (path.basename === 'touch') {
-          basename = MODULE_NAME_TOUCH;
-        }
-        path.basename = basename;
+        path.basename = MODULE_NAME;
+        path.extname = '.css';
+        return path;
+      })
+    )
+    .pipe(gulp.dest(distPath('assets/styles/')));
+
+export const sassTouch = () =>
+  gulp
+    .src([distPath('scss/touch.scss')])
+    .pipe(gulpHelpers.writeScss({ outputStyle: 'expanded' }))
+    .pipe(gulpHelpers.writePostCss([discardComments(), combineMediaQuery]))
+    .pipe(
+      gulpRename(path => {
+        path.basename = MODULE_NAME_TOUCH;
         path.extname = '.css';
         return path;
       })

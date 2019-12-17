@@ -149,6 +149,7 @@
     "openport": "0.0.4",
     "plugin-error": "1.0.1",
     "postcss": "7.0.18",
+    "postcss-combine-media-query": "^1.0.0",
     "postcss-discard-comments": "4.0.2",
     "postcss-loader": "3.0.0",
     "postcss-nested-props": "2.0.0",

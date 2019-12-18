@@ -1,0 +1,395 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders truncation utilities renders single line flexbox truncation on nested grid containers 1`] = `
+<div
+  className="slds-grid"
+  style={
+    Object {
+      "width": "200px",
+    }
+  }
+>
+  <div
+    className="slds-grid slds-has-flexi-truncate"
+  >
+    <p
+      className="slds-truncate"
+      title="Long text field with many lines and truncation will look like this. Even though the text might go on for ages and ages."
+    >
+      Long text field with many lines and truncation will look like this. Even though the text might go on for ages and ages.
+    </p>
+  </div>
+</div>
+`;
+
+exports[`renders truncation utilities renders single line truncation and title attr 1`] = `
+<div
+  style={
+    Object {
+      "width": "200px",
+    }
+  }
+>
+  <p
+    className="slds-truncate"
+    title="Long text field with many lines and truncation will look like this. Even though the text might go on for ages and ages."
+  >
+    Long text field with many lines and truncation will look like this. Even though the text might go on for ages and ages.
+  </p>
+</div>
+`;
+
+exports[`renders truncation utilities renders single line truncation with a 25% max width 1`] = `
+<ul>
+  <li
+    className="slds-list__item slds-m-right_large slds-grid slds-truncate_container_25"
+  >
+    <span>
+      To:
+    </span>
+    <span
+      className="slds-m-left_xx-small slds-truncate"
+      title="Lei Chan"
+    >
+      <a
+        href="javascript:void(0);"
+      >
+        Lei Chan
+      </a>
+    </span>
+    <span
+      className="slds-m-left_xx-small slds-no-flex"
+    >
+       + 44 more
+    </span>
+  </li>
+  <li
+    className="slds-list__item slds-m-right_large slds-grid slds-truncate_container_25"
+  >
+    <span>
+      To:
+    </span>
+    <span
+      className="slds-m-left_xx-small slds-truncate"
+      title="Lei Chan with Long Name"
+    >
+      <a
+        href="javascript:void(0);"
+      >
+        Lei Chan with Long Name
+      </a>
+    </span>
+    <span
+      className="slds-m-left_xx-small slds-no-flex"
+    >
+       + 44 more
+    </span>
+  </li>
+  <li
+    className="slds-list__item slds-m-right_large slds-grid slds-truncate_container_25"
+  >
+    <span>
+      To:
+    </span>
+    <span
+      className="slds-m-left_xx-small slds-truncate"
+      title="Lei Chan with Long Name that might go on for quite some distance futher than you might expect"
+    >
+      <a
+        href="javascript:void(0);"
+      >
+        Lei Chan with Long Name that might go on for quite some distance futher than you might expect
+      </a>
+    </span>
+    <span
+      className="slds-m-left_xx-small slds-no-flex"
+    >
+       + 44 more
+    </span>
+  </li>
+</ul>
+`;
+
+exports[`renders truncation utilities renders single line truncation with a 33% max width 1`] = `
+<ul>
+  <li
+    className="slds-list__item slds-m-right_large slds-grid slds-truncate_container_33"
+  >
+    <span>
+      To:
+    </span>
+    <span
+      className="slds-m-left_xx-small slds-truncate"
+      title="Lei Chan"
+    >
+      <a
+        href="javascript:void(0);"
+      >
+        Lei Chan
+      </a>
+    </span>
+    <span
+      className="slds-m-left_xx-small slds-no-flex"
+    >
+       + 44 more
+    </span>
+  </li>
+  <li
+    className="slds-list__item slds-m-right_large slds-grid slds-truncate_container_33"
+  >
+    <span>
+      To:
+    </span>
+    <span
+      className="slds-m-left_xx-small slds-truncate"
+      title="Lei Chan with Long Name"
+    >
+      <a
+        href="javascript:void(0);"
+      >
+        Lei Chan with Long Name
+      </a>
+    </span>
+    <span
+      className="slds-m-left_xx-small slds-no-flex"
+    >
+       + 44 more
+    </span>
+  </li>
+  <li
+    className="slds-list__item slds-m-right_large slds-grid slds-truncate_container_33"
+  >
+    <span>
+      To:
+    </span>
+    <span
+      className="slds-m-left_xx-small slds-truncate"
+      title="Lei Chan with Long Name that might go on for quite some distance futher than you might expect"
+    >
+      <a
+        href="javascript:void(0);"
+      >
+        Lei Chan with Long Name that might go on for quite some distance futher than you might expect
+      </a>
+    </span>
+    <span
+      className="slds-m-left_xx-small slds-no-flex"
+    >
+       + 44 more
+    </span>
+  </li>
+</ul>
+`;
+
+exports[`renders truncation utilities renders single line truncation with a 50% max width 1`] = `
+<ul>
+  <li
+    className="slds-list__item slds-m-right_large slds-grid slds-truncate_container_50"
+  >
+    <span>
+      To:
+    </span>
+    <span
+      className="slds-m-left_xx-small slds-truncate"
+      title="Lei Chan"
+    >
+      <a
+        href="javascript:void(0);"
+      >
+        Lei Chan
+      </a>
+    </span>
+    <span
+      className="slds-m-left_xx-small slds-no-flex"
+    >
+       + 44 more
+    </span>
+  </li>
+  <li
+    className="slds-list__item slds-m-right_large slds-grid slds-truncate_container_50"
+  >
+    <span>
+      To:
+    </span>
+    <span
+      className="slds-m-left_xx-small slds-truncate"
+      title="Lei Chan with Long Name"
+    >
+      <a
+        href="javascript:void(0);"
+      >
+        Lei Chan with Long Name
+      </a>
+    </span>
+    <span
+      className="slds-m-left_xx-small slds-no-flex"
+    >
+       + 44 more
+    </span>
+  </li>
+  <li
+    className="slds-list__item slds-m-right_large slds-grid slds-truncate_container_50"
+  >
+    <span>
+      To:
+    </span>
+    <span
+      className="slds-m-left_xx-small slds-truncate"
+      title="Lei Chan with Long Name that might go on for quite some distance futher than you might expect"
+    >
+      <a
+        href="javascript:void(0);"
+      >
+        Lei Chan with Long Name that might go on for quite some distance futher than you might expect
+      </a>
+    </span>
+    <span
+      className="slds-m-left_xx-small slds-no-flex"
+    >
+       + 44 more
+    </span>
+  </li>
+</ul>
+`;
+
+exports[`renders truncation utilities renders single line truncation with a 66% max width 1`] = `
+<ul>
+  <li
+    className="slds-list__item slds-m-right_large slds-grid slds-truncate_container_66"
+  >
+    <span>
+      To:
+    </span>
+    <span
+      className="slds-m-left_xx-small slds-truncate"
+      title="Lei Chan"
+    >
+      <a
+        href="javascript:void(0);"
+      >
+        Lei Chan
+      </a>
+    </span>
+    <span
+      className="slds-m-left_xx-small slds-no-flex"
+    >
+       + 44 more
+    </span>
+  </li>
+  <li
+    className="slds-list__item slds-m-right_large slds-grid slds-truncate_container_66"
+  >
+    <span>
+      To:
+    </span>
+    <span
+      className="slds-m-left_xx-small slds-truncate"
+      title="Lei Chan with Long Name"
+    >
+      <a
+        href="javascript:void(0);"
+      >
+        Lei Chan with Long Name
+      </a>
+    </span>
+    <span
+      className="slds-m-left_xx-small slds-no-flex"
+    >
+       + 44 more
+    </span>
+  </li>
+  <li
+    className="slds-list__item slds-m-right_large slds-grid slds-truncate_container_66"
+  >
+    <span>
+      To:
+    </span>
+    <span
+      className="slds-m-left_xx-small slds-truncate"
+      title="Lei Chan with Long Name that might go on for quite some distance futher than you might expect"
+    >
+      <a
+        href="javascript:void(0);"
+      >
+        Lei Chan with Long Name that might go on for quite some distance futher than you might expect
+      </a>
+    </span>
+    <span
+      className="slds-m-left_xx-small slds-no-flex"
+    >
+       + 44 more
+    </span>
+  </li>
+</ul>
+`;
+
+exports[`renders truncation utilities renders single line truncation with a 75% max width 1`] = `
+<ul>
+  <li
+    className="slds-list__item slds-m-right_large slds-grid slds-truncate_container_75"
+  >
+    <span>
+      To:
+    </span>
+    <span
+      className="slds-m-left_xx-small slds-truncate"
+      title="Lei Chan"
+    >
+      <a
+        href="javascript:void(0);"
+      >
+        Lei Chan
+      </a>
+    </span>
+    <span
+      className="slds-m-left_xx-small slds-no-flex"
+    >
+       + 44 more
+    </span>
+  </li>
+  <li
+    className="slds-list__item slds-m-right_large slds-grid slds-truncate_container_75"
+  >
+    <span>
+      To:
+    </span>
+    <span
+      className="slds-m-left_xx-small slds-truncate"
+      title="Lei Chan with Long Name"
+    >
+      <a
+        href="javascript:void(0);"
+      >
+        Lei Chan with Long Name
+      </a>
+    </span>
+    <span
+      className="slds-m-left_xx-small slds-no-flex"
+    >
+       + 44 more
+    </span>
+  </li>
+  <li
+    className="slds-list__item slds-m-right_large slds-grid slds-truncate_container_75"
+  >
+    <span>
+      To:
+    </span>
+    <span
+      className="slds-m-left_xx-small slds-truncate"
+      title="Lei Chan with Long Name that might go on for quite some distance futher than you might expect"
+    >
+      <a
+        href="javascript:void(0);"
+      >
+        Lei Chan with Long Name that might go on for quite some distance futher than you might expect
+      </a>
+    </span>
+    <span
+      className="slds-m-left_xx-small slds-no-flex"
+    >
+       + 44 more
+    </span>
+  </li>
+</ul>
+`;

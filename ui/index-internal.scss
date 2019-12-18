@@ -7,6 +7,7 @@
 // uses to generate the scoped version of the SLDS CSS
 
 @import 'init';
+@import 'core/font';
 
 #{$reset-wrapping-class} {
 

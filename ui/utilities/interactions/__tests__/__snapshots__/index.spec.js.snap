@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders interaction utilities renders button reset 1`] = `
+<button
+  className="slds-button slds-text-link_reset"
+>
+  Button
+</button>
+`;
+
+exports[`renders interaction utilities renders hover interactions on a span 1`] = `
+<span
+  className="slds-text-link_faux"
+>
+  Span with faux link interactions
+</span>
+`;
+
+exports[`renders interaction utilities renders link reset 1`] = `
+<a
+  className="slds-text-link_reset"
+  href="javascript:void(0);"
+>
+  Link
+</a>
+`;
+
+exports[`renders interaction utilities renders link reset with halo focus 1`] = `
+<a
+  className="slds-has-blur-focus"
+  href="javascript:void(0);"
+>
+  Link with halo focus
+</a>
+`;
+
+exports[`renders interaction utilities renders link reset with text link inside 1`] = `
+<a
+  className="slds-text-link_reset"
+  href="javascript:void(0);"
+>
+  This text is a link but looks like normal text...
+  <span
+    className="slds-text-link"
+  >
+    More
+  </span>
+  .
+</a>
+`;

@@ -1,0 +1,210 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders theme utilities render alt inverse theme on a box 1`] = `
+<div
+  className="slds-box slds-theme_alt-inverse"
+>
+  <p>
+    This is a 
+    <strong>
+      default
+    </strong>
+     theme and here is a
+     
+    <a
+      href="javascript:void(0);"
+    >
+      link
+    </a>
+    .
+  </p>
+</div>
+`;
+
+exports[`renders theme utilities render default theme on a box 1`] = `
+<div
+  className="slds-box slds-theme_default"
+>
+  <p>
+    This is a 
+    <strong>
+      default
+    </strong>
+     theme and here is a
+     
+    <a
+      href="javascript:void(0);"
+    >
+      link
+    </a>
+    .
+  </p>
+</div>
+`;
+
+exports[`renders theme utilities render error theme on a box 1`] = `
+<div
+  className="slds-box slds-theme_error"
+>
+  <p>
+    This is a 
+    <strong>
+      default
+    </strong>
+     theme and here is a
+     
+    <a
+      href="javascript:void(0);"
+    >
+      link
+    </a>
+    .
+  </p>
+</div>
+`;
+
+exports[`renders theme utilities render info theme on a box 1`] = `
+<div
+  className="slds-box slds-theme_info"
+>
+  <p>
+    This is a 
+    <strong>
+      default
+    </strong>
+     theme and here is a
+     
+    <a
+      href="javascript:void(0);"
+    >
+      link
+    </a>
+    .
+  </p>
+</div>
+`;
+
+exports[`renders theme utilities render inverse theme on a box 1`] = `
+<div
+  className="slds-box slds-theme_inverse"
+>
+  <p>
+    This is a 
+    <strong>
+      default
+    </strong>
+     theme and here is a
+     
+    <a
+      href="javascript:void(0);"
+    >
+      link
+    </a>
+    .
+  </p>
+</div>
+`;
+
+exports[`renders theme utilities render offline theme on a box 1`] = `
+<div
+  className="slds-box slds-theme_offline"
+>
+  <p>
+    This is a 
+    <strong>
+      default
+    </strong>
+     theme and here is a
+     
+    <a
+      href="javascript:void(0);"
+    >
+      link
+    </a>
+    .
+  </p>
+</div>
+`;
+
+exports[`renders theme utilities render shade theme on a box 1`] = `
+<div
+  className="slds-box slds-theme_shade"
+>
+  <p>
+    This is a 
+    <strong>
+      default
+    </strong>
+     theme and here is a
+     
+    <a
+      href="javascript:void(0);"
+    >
+      link
+    </a>
+    .
+  </p>
+</div>
+`;
+
+exports[`renders theme utilities render success theme on a box 1`] = `
+<div
+  className="slds-box slds-theme_success"
+>
+  <p>
+    This is a 
+    <strong>
+      default
+    </strong>
+     theme and here is a
+     
+    <a
+      href="javascript:void(0);"
+    >
+      link
+    </a>
+    .
+  </p>
+</div>
+`;
+
+exports[`renders theme utilities render textured theme on a shaded box 1`] = `
+<div
+  className="slds-box slds-theme_shade slds-theme_alert-texture"
+>
+  <p>
+    This theme has the 
+    <strong>
+      alert texture
+    </strong>
+     added to the default theme and has a 
+    <a
+      href="javascript:void(0);"
+    >
+      link
+    </a>
+    .
+  </p>
+</div>
+`;
+
+exports[`renders theme utilities render warning theme on a box 1`] = `
+<div
+  className="slds-box slds-theme_warning"
+>
+  <p>
+    This is a 
+    <strong>
+      default
+    </strong>
+     theme and here is a
+     
+    <a
+      href="javascript:void(0);"
+    >
+      link
+    </a>
+    .
+  </p>
+</div>
+`;

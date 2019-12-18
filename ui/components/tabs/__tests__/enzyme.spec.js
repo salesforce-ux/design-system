@@ -7,7 +7,7 @@ import createHelpers from '../../../../jest.helpers';
 import { mount } from 'enzyme';
 import MobileTabs from '../mobile-stack';
 
-const { matchesMarkupAndStyle } = createHelpers(__dirname);
+const { matchesMarkup } = createHelpers(__dirname);
 
 describe('MobileTabs', () => {
   it('handles a click on a tab', () => {
@@ -17,7 +17,7 @@ describe('MobileTabs', () => {
       .at(0)
       .simulate('click');
     wrapper.update();
-    return matchesMarkupAndStyle(wrapper.html());
+    return matchesMarkup(wrapper.html());
   });
 
   it('adds the open class to the panel when tab is clicked', () => {
@@ -49,7 +49,7 @@ describe('MobileTabs', () => {
       .simulate('click');
     wrapper.update();
 
-    return matchesMarkupAndStyle(wrapper.html());
+    return matchesMarkup(wrapper.html());
   });
 
   it('adds the hidden class back to the panel when back button is pressed', () => {

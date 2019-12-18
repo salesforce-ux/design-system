@@ -27,21 +27,29 @@
   - `PALETTE_GRAY_13`: `#080707`
 
 ## Components
-### [Button Groups](https://www.lightningdesignsystem.com/components/button-groups)
-#### Added
-- New `.slds-button-group_stacked` modifier that creates a stacked layout on mobile devices to account for their limited screen width.
+### [Badges](https://www.lightningdesignsystem.com/components/badges)
+#### Changed
+- Added `display: inline-flex` and `align-items: center` to badge to center content vertically
 
 ### [Buttons](https://www.lightningdesignsystem.com/components/buttons)
 #### Changed
 - For touch devices, update the line-height token of `.slds-button` to use the touch-specific token `$height-tappable` (2.75rem) which is a system-wide touch token instead of using a component-specific token.
 
 ### [Checkbox Button](https://www.lightningdesignsystem.com/components/checkbox-button)
+#### Added
+- Introduced new base blueprint for the checkbox button called `.slds-checkbox-button` which improves icon customization, state handling, and blueprint composition.
 #### Changed
-- Update the background color of the checkbox selected state from `$color-background-success` to `$color-brand-darker` since a checkbox does not always indicate a successful state.
+- `.slds-checkbox_add-button` has been deprecated in favor of `.slds-checkbox-button` (see 'Added' above)
+- Documentation has been updated to reflect the new `.slds-checkbox-button` blueprint
+- Updated the background color of the checkbox button's selected state from `$color-background-success` to `$color-brand-darker` since a checkbox button is meant to communicate a selected state, not success.
 
 ### [Checkbox Button Group](https://www.lightningdesignsystem.com/components/checkbox-button-group)
-#### Added
-- New `.slds-checkbox_button-group_stacked` modifier that creates a stacked layout on mobile devices to account for their limited screen width.
+#### Changed
+- For mobile devices, checkbox button groups stack vertically to account for the limited horizontal space of mobile screens.
+
+### [List Builder](https://www.lightningdesignsystem.com/components/list-builder)
+#### Changed
+- List Builder now uses the new `.slds-checkbox-button` instead of the deprecated `.slds-checkbox_add-button`
 
 ### [Lookups](https://www.lightningdesignsystem.com/components/lookups)
 #### Added
@@ -54,10 +62,13 @@
 - Grouped Lookup `<input>` `role` from `combobox` to `textbox`
 
 ### [Radio Button Group](https://www.lightningdesignsystem.com/components/radio-button-group)
-
 #### Changed
 - For mobile devices, radio button groups stack vertically to account for the limited horizontal space of mobile screens.
 <!-- ## [VERSION] -->
+
+### [Setup Assistant](https://www.lightningdesignsystem.com/components/setup-assistant)
+#### Changed
+- Updated progress examples to use `slds-media` around `slds-media__figure` and `slds-media__body` to fix icon alignment.
 
 ### [Slider](https://www.lightningdesignsystem.com/components/slider)
 #### Changed
@@ -72,10 +83,12 @@
 
 ## Utilities
 ### [Line Clamp](https://www.lightningdesignsystem.com/utilities/line-clamp)
-
 #### Added
-- New `.slds-radio_button-group_stacked` modifier that creates a stacked layout on mobile devices to account for their limited screen width.
-<!-- ## [VERSION] -->
+- Added Line Clamp utility with four modifier options:
+  - `.slds-line-clamp` - clamps at 3 lines, value provided by `line-clamp` token.
+  - `.slds-line-clamp_small` - clamps at 3 lines
+  - `.slds-line-clamp_medium` - clamps at 5 lines
+  - `.slds-line-clamp_large` - clamps at 7 lines
 
 ## Release 2.10.0 - August 22, 2019
 
@@ -111,7 +124,7 @@
 #### Changed
 - Modify display of `slds-button` to `inline-flex`
 - Center contents of contained Buttons with change of `display: inline-flex` to `slds-button`
-- `justify-content: center` is now applied to the stretch variant `.slds-button_stretch`
+- `justify-content: center` is now applied to the stretch variant `.slds-button_stretch` to ensure centered text after `inline-flex` was added to `slds-button`
 - For touch devices:
   - Increase the line-height (which affects the overall visual height) to `$button-line-height-touch` (2.65rem)
   - Set the size of `.slds-button__icon` to `$square-icon-medium-content` (1rem)

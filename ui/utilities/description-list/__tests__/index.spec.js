@@ -1,11 +1,11 @@
 /* eslint-env jest */
 import React from 'react';
 import createHelpers from '../../../../jest.helpers';
-const { matchesMarkupAndStyle } = createHelpers(__dirname);
+const { matchesMarkup } = createHelpers(__dirname);
 
 describe('renders description list utilities', () => {
   it('renders description list', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <dl>
         <dt>First Label:</dt>
         <dd>Description for first label</dd>
@@ -15,7 +15,7 @@ describe('renders description list utilities', () => {
     ));
 
   it('renders description list with inline name/value pair', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <dl className="slds-dl_inline">
         <dt className="slds-dl_inline__label">First Label:</dt>
         <dd className="slds-dl_inline__detail">Description for first label</dd>
@@ -25,7 +25,7 @@ describe('renders description list utilities', () => {
     ));
 
   it('renders description list with horizontal name/value pair', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <dl className="slds-dl_horizontal">
         <dt className="slds-dl_horizontal__label">First Label:</dt>
         <dd className="slds-dl_horizontal__detail">
@@ -37,7 +37,7 @@ describe('renders description list utilities', () => {
     ));
 
   it('renders description list with inline name/value pair in narrow region', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <div className="slds-region_narrow" style={{ width: '360px' }}>
         <dl className="slds-dl_inline">
           <dt className="slds-dl_inline__label">First Label:</dt>
@@ -51,7 +51,7 @@ describe('renders description list utilities', () => {
     ));
 
   it('renders description list with horizontal name/value pair in narrow region', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <div className="slds-region_narrow" style={{ width: '360px' }}>
         <dl className="slds-dl_horizontal">
           <dt className="slds-dl_horizontal__label">First Label:</dt>

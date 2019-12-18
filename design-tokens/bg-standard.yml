@@ -577,7 +577,7 @@ props:
     value: '#3c97dd'
   VISUALFORCE_PAGE:
     value: '#fcb95b'
-  JAVASCRIPT_BUTTONS:
+  JAVASCRIPT_BUTTON:
     value: '#fcb95b'
   SALES_CADENCE_TARGET:
     value: '#54698d'

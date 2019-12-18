@@ -1,5 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Advanced data table row renders a table header hover state 1`] = `"<a class=\\"slds-th__action slds-text-link_reset\\" href=\\"javascript:void(0);\\" role=\\"button\\" tabindex=\\"-1\\"><span class=\\"slds-assistive-text\\">Sort by: </span><div class=\\"slds-grid slds-grid_vertical-align-center slds-has-flexi-truncate\\"><span class=\\"slds-truncate\\" title=\\"Account Name\\">Account Name</span><span class=\\"slds-icon_container slds-icon-utility-arrowdown\\"><svg class=\\"slds-icon slds-icon-text-default slds-is-sortable__icon \\" aria-hidden=\\"true\\"><use xlink:href=\\"/assets/icons/utility-sprite/svg/symbols.svg#arrowdown\\"></use></svg></span></div></a>"`;
+
 exports[`Advanced data table row should make every focusable element focusable when in actionableMode 1`] = `
 <tr
   className="slds-hint-parent"

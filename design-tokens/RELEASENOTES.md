@@ -4,6 +4,24 @@
 
 ### Changed
 
+- Set `access:global` to the following tokens:
+  - `brandPrimary`
+  - `brandPrimaryActive`
+  - `brandPrimaryTransparent`
+  - `brandLight`
+  - `brandLightActive`
+  - `brandDark`
+  - `brandDarkActive`
+  - `brandAccessible`
+  - `brandAccessibleActive`
+  - `brandDisabled`
+  - `brandContrast`
+  - `brandContrastActive`
+  - `brandBackgroundPrimary`
+  - `brandBackgroundDark`
+  - `brandTextLink`
+  - `brandTextLinkActive`
+
 - Primitive tokens now default to our warm gray color palette
   - `PALETTE_GRAY_1`: `#ffffff`
   - `PALETTE_GRAY_2`: `#fafaf9`

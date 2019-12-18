@@ -1,0 +1,60 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders float utilities renders float left 1`] = `
+<div
+  className="slds-clearfix"
+>
+  <div
+    className="slds-float_left"
+  >
+    <p>
+      I’m floooaaaating
+    </p>
+  </div>
+</div>
+`;
+
+exports[`renders float utilities renders float none 1`] = `
+<div
+  className="slds-float_none"
+>
+  <p>
+    I’m not floooaaaating
+  </p>
+</div>
+`;
+
+exports[`renders float utilities renders float right 1`] = `
+<div
+  className="slds-clearfix"
+>
+  <div
+    className="slds-float_right"
+  >
+    <p>
+      I’m floooaaaating
+    </p>
+  </div>
+</div>
+`;
+
+exports[`renders float utilities renders floats with a clearfix 1`] = `
+<div
+  className="slds-clearfix"
+>
+  <div
+    className="slds-float_left"
+  >
+    <p>
+      I’m floooaaaating
+    </p>
+  </div>
+  <div
+    className="slds-float_right"
+  >
+    <p>
+      I’m floooaaaating
+    </p>
+  </div>
+</div>
+`;

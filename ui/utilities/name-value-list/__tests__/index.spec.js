@@ -1,11 +1,11 @@
 /* eslint-env jest */
 import React from 'react';
 import createHelpers from '../../../../jest.helpers';
-const { matchesMarkupAndStyle } = createHelpers(__dirname);
+const { matchesMarkup } = createHelpers(__dirname);
 
 describe('renders name-value-list utilities', () => {
   it('renders horizontal name/value pair list', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <dl className="slds-list_horizontal slds-wrap">
         <dt
           className="slds-item_label slds-text-color_weak slds-truncate"
@@ -34,7 +34,7 @@ describe('renders name-value-list utilities', () => {
       </dl>
     ));
   it('renders inline name/value pair list', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <dl className="slds-list_inline">
         <dt
           className="slds-item_label slds-text-color_weak slds-truncate"
@@ -63,7 +63,7 @@ describe('renders name-value-list utilities', () => {
       </dl>
     ));
   it('renders stacked name/value pair list', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <dl className="slds-list_stacked">
         <dt
           className="slds-item_label slds-text-color_weak slds-truncate"

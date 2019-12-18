@@ -1,11 +1,11 @@
 /* eslint-env jest */
 import React from 'react';
 import createHelpers from '../../../../jest.helpers';
-const { matchesMarkupAndStyle } = createHelpers(__dirname);
+const { matchesMarkup } = createHelpers(__dirname);
 
 describe('renders scrollable utilities', () => {
   it('renders scrollable auto utility', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <div
         className="slds-scrollable"
         style={{ height: '5rem', width: '24rem' }}
@@ -35,7 +35,7 @@ describe('renders scrollable utilities', () => {
     ));
 
   it('renders scrollable x utility', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <div
         className="slds-scrollable_x"
         style={{ height: '5rem', width: '24rem' }}
@@ -65,7 +65,7 @@ describe('renders scrollable utilities', () => {
     ));
 
   it('renders scrollable y utility', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <div
         className="slds-scrollable_y"
         style={{ height: '5rem', width: '24rem' }}
@@ -95,7 +95,7 @@ describe('renders scrollable utilities', () => {
     ));
 
   it('renders scrollable none utility', () =>
-    matchesMarkupAndStyle(
+    matchesMarkup(
       <div
         className="slds-scrollable_none"
         style={{ height: '5rem', width: '24rem' }}

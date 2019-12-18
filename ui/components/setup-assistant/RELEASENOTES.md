@@ -4,6 +4,12 @@
 
 <!-- ## [Unreleased] -->
 
+## 2.11.0
+
+### Changed
+
+- Updated progress examples to use `slds-media` around `slds-media__figure` and `slds-media__body` to fix icon alignment.
+
 ## 2.8.0
 
 ### Added

@@ -4,6 +4,12 @@
 
 <!-- ## [Unreleased] -->
 
+## 2.11.0
+
+### Fixed
+
+- Fixed an issue where some message text containers would have a width equal to the message meta even though the container contained less text and should have had a smaller width.
+
 ## 2.10.0
 
 ### Changed

@@ -4,4 +4,10 @@
 
 <!-- ## [Unreleased] -->
 
+## 2.11.0
+
+### Fixed
+
+- The popout indicator icon now positions itself correctly in the right-to-left context.
+
 <!-- ## [VERSION] -->

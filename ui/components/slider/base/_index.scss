@@ -15,11 +15,6 @@
   &:hover {
     background-color: $brand-accessible-active;
   }
-
-  @include touch-device {
-    height: $height-tappable-small;
-    width: $height-tappable-small;
-  }
 }
 
 @mixin range-track {
@@ -42,12 +37,6 @@
 .slds-slider {
   display: flex;
   position: relative;
-
-  @include touch-device {
-    align-items: center;
-    margin-top: $spacing-x-small;
-    min-height: $height-tappable-small; // Make container as large as slider thumb
-  }
 }
 
 /**
@@ -70,10 +59,6 @@
   &::-webkit-slider-thumb {
     @include range-thumb;
     margin-top: calc(((#{$slider-handle-size} / 2) - (#{$slider-track-height} / 2)) * -1);
-
-    @include touch-device {
-      margin-top: calc(((#{$height-tappable-small} / 2) - (#{$slider-track-height} / 2)) * -1);
-    }
   }
 
   &::-webkit-slider-runnable-track {
@@ -203,21 +188,11 @@
 .slds-slider_vertical {
   height: ($size-x-small + $height-input);
 
-  @include touch-device {
-    align-items: initial; // We don't want to mess with the transform rotation going on below
-  }
-
   .slds-slider__range {
     width: $size-x-small;
     height: $slider-handle-size;
     transform: rotate(-90deg);
     transform-origin: ($size-x-small / 2) ($size-x-small / 2);
-
-    @include touch-device {
-      /* We nudge the range over instead of increasing the height so we can align the text value by the same amount,
-         the transform rotation makes centering via conventional means impractical */
-      margin-left: calc((#{$height-tappable-small} - #{$slider-handle-size}) / 2);
-    }
   }
 
   .slds-slider__value {
@@ -225,9 +200,5 @@
     left: 0;
     bottom: 0;
     padding: 0;
-
-    @include touch-device {
-      left: calc((#{$height-tappable-small} - #{$slider-handle-size}) / 2);
-    }
   }
 }

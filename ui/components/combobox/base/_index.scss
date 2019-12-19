@@ -153,10 +153,6 @@
 
   li + li {
     padding-left: $spacing-xxx-small;
-
-    @include touch-device {
-      padding-left: $spacing-xx-small;
-    }
   }
 }
 
@@ -193,10 +189,6 @@
  */
 .slds-listbox__option-header {
   @include text-title;
-
-  @include touch-device {
-    font-size: $font-size-5;
-  }
 }
 
 /**
@@ -270,17 +262,6 @@
   .slds-listbox__option_plain,
   .slds-listbox__option--plain {
     padding: $spacing-x-small $spacing-small;
-
-    @include touch-device {
-      @include border-box-line-height($height-tappable, 0);
-      padding-top: 0;
-      padding-bottom: 0;
-      align-items: center;
-
-      .slds-media__figure {
-        margin-right: $spacing-x-small;
-      }
-    }
   }
 
   .slds-listbox__option_term {
@@ -406,10 +387,6 @@
 .slds-listbox--object-switcher {
   flex-shrink: 0;
   padding: $spacing-xxx-small;
-
-  @include touch-device {
-    padding: 0;
-  }
 }
 
 /**
@@ -425,10 +402,6 @@
     transition: width 80ms linear;
     font-size: $font-size-2;
     color: $color-text-placeholder;
-
-    @include touch-device {
-      font-size: $font-size-5;
-    }
 
     &:focus,
     &.slds-has-focus {
@@ -533,10 +506,6 @@
   height: $height-input;
   overflow: hidden;
 
-  @include touch-device {
-    height: $height-tappable;
-  }
-
   /**
    * @summary Expanded state of a selection group
    * @selector .slds-is-expanded
@@ -549,18 +518,10 @@
 
   .slds-listbox {
     padding: 0 0 $spacing-xxx-small; // Matches horizontal spacing of each listbox item (2px)
-
-    @include touch-device {
-      padding: 0 $spacing-xx-small ($spacing-xx-small + $spacing-xxx-small);
-    }
   }
 
   .slds-listbox-item {
     padding: $spacing-xxx-small $spacing-xxx-small 0;
-
-    @include touch-device {
-      padding: ($spacing-xx-small + $spacing-xxx-small) $spacing-xxx-small 0;
-    }
   }
 
   /**
@@ -628,11 +589,6 @@
     padding-top: $spacing-xxx-small;
     padding-bottom: $spacing-xxx-small;
 
-    @include touch-device {
-      @include border-box-line-height($height-tappable, 0, $spacing-xxx-small * 2);
-      min-height: $height-tappable;
-    }
-
     &:focus,
     &:active {
       outline: 0;
@@ -677,10 +633,6 @@
   [role="listbox"] {
     display: inline-flex;
     padding: 0 $spacing-xxx-small; // Matches the vertical spacing (4px)
-
-    @include touch-device {
-      padding: 0 ($spacing-xx-small + $spacing-xxx-small); // Matches the vertical spacing (6px)
-    }
   }
 
   .slds-combobox__input-value {

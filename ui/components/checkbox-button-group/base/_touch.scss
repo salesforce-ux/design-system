@@ -1,0 +1,36 @@
+.slds-checkbox_button-group,
+.slds-checkbox--button-group {
+  display: block;
+
+  .slds-checkbox_button,
+  .slds-checkbox--button {
+    display: block;
+  }
+
+  .slds-checkbox_button + .slds-checkbox_button,
+  .slds-checkbox--button + .slds-checkbox--button {
+    border-left: 0;
+    border-top: $border-width-thin solid $color-border;
+  }
+
+  .slds-checkbox_button:first-child > .slds-checkbox_button__label,
+  .slds-checkbox--button:first-child > .slds-checkbox--button__label {
+    border-radius: $border-radius-medium $border-radius-medium 0 0;
+  }
+
+  .slds-checkbox_button:last-child > .slds-checkbox_button__label,
+  .slds-checkbox--button:last-child > .slds-checkbox--button__label {
+    border-radius: 0 0 $border-radius-medium $border-radius-medium;
+  }
+
+  .slds-checkbox_button__label,
+  .slds-checkbox--button__label {
+    display: block;
+    text-align: center;
+  }
+}
+
+.slds-checkbox_button,
+.slds-checkbox--button {
+  @include border-box-line-height($height-tappable);
+}

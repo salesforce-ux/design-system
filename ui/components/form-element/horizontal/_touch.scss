@@ -1,0 +1,33 @@
+.slds-form-element_horizontal,
+.slds-form_horizontal .slds-form-element,
+.slds-form_stacked .slds-form-element_horizontal {
+  @include mq-medium-min {
+
+    // Handle label - default behavior
+    .slds-form-element__label {
+      display: block; // Don't need flex behavior for horizontal variant
+      max-width: calc(33% - #{$square-tappable}); // Remove the width of touch icon dimensions
+      flex-basis: calc(33% - #{$square-tappable}); // Remove the width of touch icon dimensions
+      padding-top: $spacing-xx-small;
+    }
+
+    // Handle control - default behavior
+    .slds-form-element__control {
+      display: block; // Flex behavior is not needed for horizontal variant
+      min-height: 0; // Min-height only needed for stacked vertical rhythm
+    }
+
+    // Help text button icon
+    .slds-form-element__icon {
+      padding-top: 0; // Icon size is larger in touch, don't need extra spacing
+    }
+
+    .slds-checkbox__label {
+      display: block; // Horizontal variant doesn't need vertical centering / Messes up .slds-form-element__label width
+    }
+  }
+
+  .slds-button_icon {
+    vertical-align: top; // Makes our vertical spacing more predictable in horizontal variant
+  }
+}

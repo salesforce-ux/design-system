@@ -1,0 +1,16 @@
+.slds-dropdown {
+  padding: 0;
+  font-size: $font-size-5;
+
+  &__item {
+
+    > a {
+      @include border-box-line-height($height-tappable, 0);
+      padding: 0 $spacing-small;
+    }
+  }
+
+  &__header {
+    font-size: $font-size-5;
+  }
+}

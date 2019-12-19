@@ -1,0 +1,44 @@
+.slds-pill {
+  @include border-box-line-height($height-tappable-small);
+  padding: 0 $spacing-small;
+
+  + .slds-pill {
+    margin-left: $spacing-xx-small;
+  }
+
+  &__container,
+  &-container,
+  &_container {
+    padding: $spacing-xx-small;
+  }
+
+  &__label {
+    font-size: $font-size-4;
+  }
+
+  &__icon,
+  &__icon_container {
+
+    ~ .slds-pill__action {
+      padding-left: calc(#{$square-icon-x-small-boundary} + #{$spacing-small} + #{$spacing-xx-small});
+    }
+  }
+}
+
+.slds-pill_link,
+.slds-pill--link {
+
+  .slds-pill__icon_container {
+    left: $spacing-small;
+  }
+
+  .slds-pill__remove {
+    right: $spacing-small;
+  }
+}
+
+.slds-pill__action {
+  padding: 0;
+  padding-left: $spacing-small;
+  padding-right: calc(#{$square-icon-xx-small-boundary} + #{$spacing-small} + 2px);
+}

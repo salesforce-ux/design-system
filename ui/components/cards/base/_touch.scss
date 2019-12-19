@@ -1,0 +1,9 @@
+.slds-card {
+  border-color: transparent;
+  border-radius: 0;
+}
+
+.slds-card__header-title {
+  font-size: $var-font-size-6;
+  font-weight: $card-font-weight; // Ensures title is bold when there is no nested link
+}

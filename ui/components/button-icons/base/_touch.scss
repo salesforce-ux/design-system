@@ -1,0 +1,54 @@
+.slds-button_icon,
+.slds-button--icon,
+.slds-button_icon-inverse,
+.slds-button--icon-inverse,
+.slds-button_icon-container,
+.slds-button--icon-container,
+.slds-button_icon-border,
+.slds-button--icon-border,
+.slds-button_icon-border-filled,
+.slds-button--icon-border-filled,
+.slds-button_icon-border-inverse,
+.slds-button--icon-border-inverse,
+.slds-button_icon-more,
+.slds-button--icon-more,
+.slds-button_icon-error,
+.slds-button--icon-error {
+  @include square($button-icon-boundary-touch);
+}
+
+.slds-button_icon-container,
+.slds-button--icon-container,
+.slds-button_icon-border,
+.slds-button--icon-border,
+.slds-button_icon-border-filled,
+.slds-button--icon-border-filled,
+.slds-button_icon-border-inverse,
+.slds-button--icon-border-inverse,
+.slds-button_icon-brand,
+.slds-button_icon-more,
+.slds-button--icon-more,
+.slds-button_icon-container-more,
+.slds-button--icon-container-more {
+  @include square($button-icon-boundary-touch);
+}
+
+.slds-button_icon-small,
+.slds-button--icon-small {
+  @include square($button-icon-boundary-touch);
+}
+
+.slds-button_icon-x-small,
+.slds-button--icon-x-small {
+  @include square($button-icon-boundary-touch);
+}
+
+.slds-button_icon-xx-small,
+.slds-button--icon-xx-small {
+  @include square($button-icon-boundary-touch);
+}
+
+.slds-button_icon-more,
+.slds-button--icon-more {
+  @include square($button-icon-boundary-touch);
+}

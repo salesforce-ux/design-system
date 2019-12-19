@@ -1,0 +1,8 @@
+.slds-button {
+  @include border-box-line-height($height-tappable);
+  font-weight: $font-weight-bold;
+}
+
+.slds-button__icon {
+  @include square($square-icon-medium-content);
+}

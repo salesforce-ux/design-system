@@ -1,0 +1,15 @@
+.slds-map_container {
+  padding: $spacing-medium $spacing-medium 0;
+}
+
+.slds-map {
+  min-width: (rem(380px) - ($spacing-medium * 2));
+}
+
+.slds-has-coordinates {
+  max-height: none;
+}
+
+.slds-coordinates__title {
+  font-size: $font-size-6;
+}

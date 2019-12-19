@@ -6,6 +6,7 @@ import loadStories from './stories';
 import sldsTheme from './sldsTheme';
 
 import '../ui/index.scss'; // load slds css
+import '../ui/touch.scss'; // load touch stylesheet
 import './scss/ui/index.scss'; // Our custom Storybook presentation styles
 import '../shared/styles/doc.scss'; // docs styles
 

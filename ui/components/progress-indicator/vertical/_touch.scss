@@ -1,0 +1,14 @@
+.slds-progress_vertical {
+
+  .slds-progress__item {
+
+    &:before,
+    &:after {
+      left: calc((#{$square-tappable-xx-small} / 2) - 1px); // "-1px" accounts for half of line width to get true center
+    }
+  }
+
+  .slds-progress__item_content {
+    font-size: $font-size-4;
+  }
+}

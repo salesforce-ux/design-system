@@ -1,0 +1,42 @@
+@mixin range-thumb-touch {
+  height: $height-tappable-small;
+  width: $height-tappable-small;
+}
+
+.slds-slider {
+  align-items: center;
+  margin-top: $spacing-x-small;
+  min-height: $height-tappable-small; // Make container as large as slider thumb
+}
+
+.slds-slider__range {
+  // Webkit
+  &::-webkit-slider-thumb {
+    @include range-thumb-touch;
+    margin-top: calc(((#{$height-tappable-small} / 2) - (#{$slider-track-height} / 2)) * -1);
+  }
+
+  // Firefox
+  &::-moz-range-thumb {
+    @include range-thumb-touch;
+  }
+
+  // IE/Edge
+  &::-ms-thumb {
+    @include range-thumb-touch;
+  }
+}
+
+.slds-slider_vertical {
+  align-items: initial; // We don't want to mess with the transform rotation going on below
+
+  .slds-slider__range {
+    /* We nudge the range over instead of increasing the height so we can align the text value by the same amount,
+       the transform rotation makes centering via conventional means impractical */
+    margin-left: calc((#{$height-tappable-small} - #{$slider-handle-size}) / 2);
+  }
+
+  .slds-slider__value {
+    left: calc((#{$height-tappable-small} - #{$slider-handle-size}) / 2);
+  }
+}

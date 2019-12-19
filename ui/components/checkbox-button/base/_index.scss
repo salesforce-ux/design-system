@@ -21,10 +21,6 @@
   border-radius: $button-border-radius;
   color: $color-brand-darker; // Controls icon fill, not meant for text, faux styling API
   cursor: pointer;
-
-  @include touch-device {
-    @include square($square-tappable);
-  }
 }
 
 /**

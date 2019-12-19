@@ -1,0 +1,20 @@
+.slds-checkbox-button {
+  @include square($square-tappable);
+}
+
+// Deprecated selectors
+@include deprecate("4.0.0", "Use slds-checkbox-button instead") {
+
+  .slds-checkbox_add-button,
+  .slds-checkbox--add-button {
+    @include square($square-tappable);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .slds-checkbox_faux,
+    .slds-checkbox--faux {
+      @include square($square-tappable-small);
+    }
+  }
+}

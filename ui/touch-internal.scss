@@ -1,0 +1,15 @@
+/*! Lightning Design System 2.11.0-dev */
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+// Lightning Design System
+@import 'init';
+@import 'dependencies/touch';
+
+#{$reset-wrapping-class} {
+  @media (pointer: coarse) and (hover: none) {
+    // Framework
+    @import 'components/touch';
+    @import 'utilities/touch';
+  }
+}

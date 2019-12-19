@@ -14,18 +14,6 @@
   display: inline-block;
 
   /**
-   * @summary Label container of the text and faux radio
-   * @selector .slds-radio__label
-   * @restrict .slds-radio label
-   */
-  .slds-radio__label {
-    @include touch-device {
-      @include flex-vertical-center;
-      min-height: $height-tappable;
-    }
-  }
-
-  /**
    * Creates a custom styled radio button
    *
    * @selector .slds-radio_faux
@@ -41,21 +29,12 @@
     border-radius: $border-radius-circle;
     background: $color-background-input;
     transition: border $duration-quickly linear, background-color $duration-quickly linear;
-
-    @include touch-device {
-      @include square($square-tappable-x-small);
-    }
   }
 
   .slds-form-element__label {
     display: inline;
     vertical-align: middle;
     font-size: $font-size-3;
-
-    @include touch-device {
-      display: inline-flex; // In touch, .slds-form-element__label uses flex for vert centering
-      font-size: $font-size-5;
-    }
   }
 
   [type="radio"] {

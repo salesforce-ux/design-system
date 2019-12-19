@@ -1,0 +1,52 @@
+.slds-input {
+  @include border-box-line-height($height-tappable);
+
+  &[readonly] {
+    font-size: $font-size-5;
+  }
+}
+
+.slds-input-has-icon {
+
+  .slds-input__icon {
+    @include square($square-icon-medium-content);
+    margin-top: (($square-icon-medium-content / 2) * -1);
+  }
+
+  &_left,
+  &--left {
+
+    .slds-input__icon {
+      left: $spacing-x-small;
+    }
+  }
+
+  &_right,
+  &--right {
+
+    .slds-input__icon {
+      right: $spacing-x-small;
+    }
+  }
+
+  &_left-right,
+  &--left-right {
+
+    .slds-input__icon_left,
+    .slds-input__icon--left {
+      left: $spacing-x-small;
+    }
+
+    .slds-input__icon_right,
+    .slds-input__icon--right {
+      right: $spacing-x-small;
+    }
+  }
+}
+
+.slds-input__icon-group_right {
+
+  .slds-input__spinner {
+    right: calc(#{$spacing-large} + #{$spacing-xx-small});
+  }
+}

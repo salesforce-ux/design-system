@@ -1,0 +1,54 @@
+.slds-checkbox {
+
+  .slds-checkbox_faux,
+  .slds-checkbox--faux {
+    @include square($square-tappable-x-small);
+    flex-shrink: 0; // Contained within flex, we don't want checkbox to shrink
+  }
+
+  .slds-checkbox__label {
+    @include flex-vertical-center(inline-flex);
+    vertical-align: middle;  // Label is inline but with explicit size so we need to help with alignment
+    min-height: $height-tappable;
+
+    // When slds-form-element__label is inline with slds-checkbox_faux, display as inline
+    .slds-form-element__label {
+      // When in touch context, go back to flex for vertical centering within tap target area
+      display: inline-flex;
+      font-size: $font-size-5;
+    }
+  }
+
+  [type="checkbox"] {
+
+    &:checked + .slds-checkbox_faux,
+    &:checked + .slds-checkbox--faux,
+    &:checked ~ .slds-checkbox_faux,
+    &:checked ~ .slds-checkbox--faux,
+    &:checked + .slds-checkbox__label .slds-checkbox_faux,
+    &:checked + .slds-checkbox__label .slds-checkbox--faux {
+
+      &:after {
+        height: ($square-icon-small-content / 2);
+        width: $square-icon-small-content;
+        margin-top: -1px; // vertical alignment adjustment for centering
+      }
+    }
+
+    &:indeterminate + .slds-checkbox_faux:after,
+    &:indeterminate + .slds-checkbox--faux:after,
+    &:indeterminate ~ .slds-checkbox_faux:after,
+    &:indeterminate ~ .slds-checkbox--faux:after,
+    &:indeterminate + .slds-checkbox__label .slds-checkbox_faux:after,
+    &:indeterminate + .slds-checkbox__label .slds-checkbox--faux:after {
+      width: $square-icon-small-content;
+    }
+  }
+
+  &.slds-checkbox_stacked {
+
+    .slds-form-element__label {
+      font-size: $font-size-4;
+    }
+  }
+}

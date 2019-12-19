@@ -1,7 +1,6 @@
 .slds-form-element_horizontal,
 .slds-form_horizontal .slds-form-element,
 .slds-form_stacked .slds-form-element_horizontal {
-
   @include mq-medium-min {
 
     // Handle label - default behavior

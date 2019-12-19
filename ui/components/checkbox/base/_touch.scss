@@ -20,6 +20,7 @@
   }
 
   [type="checkbox"] {
+
     &:checked + .slds-checkbox_faux,
     &:checked + .slds-checkbox--faux,
     &:checked ~ .slds-checkbox_faux,

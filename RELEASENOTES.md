@@ -289,6 +289,8 @@
 - Fixed text disappearing when peaking between stage in Safari
 
 ### [Picklist](https://www.lightningdesignsystem.com/components/picklist)
+#### Added
+- Added `.slds-picklist input[readonly]` selector to fix styling of deprecated markup
 #### Changed
 - Migrated picklist HTML to use non-deprecated combobox
 

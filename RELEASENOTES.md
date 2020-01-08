@@ -115,6 +115,19 @@
   - `.slds-line-clamp_medium` - clamps at 5 lines
   - `.slds-line-clamp_large` - clamps at 7 lines
 
+## Release 2.10.2 - October 10, 2019
+
+## Components
+### [Input](https://www.lightningdesignsystem.com/components/input)
+#### Fixed
+- Resolved issue where Webkit-based browsers lost their platform-native styling
+- Resolved issue with certain cases where an input's height would change after a value was defined
+
+## Release 2.10.1 - October 2, 2019
+
+## Changed
+- All mobile/touch enhancements are now scoped `slds-is-mobile`. The scoping class should be applied to the `html/body` element.
+
 ## Release 2.10.0 - August 22, 2019
 
 - Update color swatch to latest token values

@@ -103,7 +103,7 @@
     "gulp-eslint": "5.0.0",
     "gulp-file": "0.4.0",
     "gulp-filter": "5.0.0",
-    "gulp-htmlhint": "0.3.1",
+    "gulp-htmlhint": "3.0.0",
     "gulp-if": "2.0.2",
     "gulp-ignore": "2.0.2",
     "gulp-insert": "0.5.0",

@@ -1,7 +1,7 @@
 {
   "name": "design-system",
   "description": "Salesforce Lightning Design System",
-  "version": "2.11.0-dev",
+  "version": "2.11.1",
   "author": "Salesforce",
   "slds": {
     "name": "Spring ’20",
@@ -14,7 +14,7 @@
   "private": false,
   "config": {
     "slds": {
-      "internal": true
+      "internal": false
     },
     "search": {
       "appId": "B2KKG101RI",
@@ -42,7 +42,7 @@
     "@salesforce-ux/design-system-parser": "1.0.1",
     "@salesforce-ux/design-system-previewer": "3.2.1",
     "@salesforce-ux/design-system-primitive-tokens": "0.0.7",
-    "@salesforce-ux/icons": "9.30.0",
+    "@salesforce-ux/icons": "9.31.2",
     "@salesforce-ux/instant-vrt": "2.0.0",
     "@salesforce-ux/scss-parser-aura": "3.0.4",
     "@std/esm": "0.23.2",

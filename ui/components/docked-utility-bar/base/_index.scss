@@ -79,6 +79,23 @@
     width: 4px;
     border-top: $border-width-thin solid $color-text-default;
     border-right: $border-width-thin solid $color-text-default;
+
+    // Lots of 'noflip' going on here so we handle RTL within SLDS only, not Omakase
+    //   - Omakase doesn't pick up on 'transform' which creates a visual regression in this scenario
+    //   - Icon doesn't get flipped in standard SLDS because its a pseudo element
+    @include rtl() {
+      /*! @noflip */
+      right: auto;
+
+      /*! @noflip */
+      left: 4px;
+
+      /*! @noflip */
+      border-right-width: 0;
+
+      /*! @noflip */
+      border-left: $border-width-thin solid $color-text-default;
+    }
   }
 
   &:after {
@@ -90,6 +107,21 @@
     width: 7px;
     border-right: $border-width-thin solid $color-text-default;
     transform: rotate(45deg);
+
+    @include rtl() {
+      /*! @noflip */
+      right: auto;
+
+      /*! @noflip */
+      left: 6px;
+
+      /*! @noflip */
+      border-right-width: 0;
+
+      /*! @noflip */
+      border-left: $border-width-thin solid $color-text-default;
+      transform: rotate(-45deg);
+    }
   }
 }
 

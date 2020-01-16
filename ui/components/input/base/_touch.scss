@@ -13,14 +13,14 @@
    * These are considered safe because they fall under '-webkit-appearance: textfield' by Webkit
    * which primarily renders a platform-native inner gradient.
    */
-   &[type='text'],
-   &[type='email'],
-   &[type='url'],
-   &[type='tel'] {
-      // stylelint-disable property-no-vendor-prefix
-      -webkit-appearance: none; // Remove Webkit insertion of gradient from -webkit-appearance: textfield
-      // stylelint-enable property-no-vendor-prefix
-   }
+  &[type='text'],
+  &[type='email'],
+  &[type='url'],
+  &[type='tel'] {
+    // stylelint-disable property-no-vendor-prefix
+    -webkit-appearance: none; // Remove Webkit insertion of gradient from -webkit-appearance: textfield
+    // stylelint-enable property-no-vendor-prefix
+  }
 
   /**
    * Platform-native styled inputs using 'appearance' CSS property set their own min-height and our line-height isn't recognized

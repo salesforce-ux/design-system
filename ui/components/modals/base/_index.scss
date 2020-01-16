@@ -135,7 +135,8 @@
       y: auto;
     }
 
-    &:last-child, &_has-hidden-footer {
+    &:last-child,
+    &_has-hidden-footer {
       border-bottom: {
         right-radius: $border-radius-medium;
         left-radius: $border-radius-medium;

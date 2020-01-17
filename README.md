@@ -1,4 +1,4 @@
-# README: Salesforce Lightning Design System
+# Salesforce Lightning Design System
 
 [![Build Status](https://travis-ci.org/salesforce-ux/design-system.svg?branch=master)](https://travis-ci.org/salesforce-ux/design-system)
 

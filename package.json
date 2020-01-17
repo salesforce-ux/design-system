@@ -202,7 +202,7 @@
   },
   "scripts": {
     "start": "start-storybook -c .storybook -p 9002",
-    "full-start": "npm ru build-dist && start-storybook -c .storybook -p 9002",
+    "full-start": "npm run build-dist && start-storybook -c .storybook -p 9002",
     "build": "npm run gulp -- build",
     "dist": "npm run gulp -- dist",
     "build-dist": "npm run build && npm run dist",

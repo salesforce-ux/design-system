@@ -4,6 +4,13 @@
 
 <!-- ## [Unreleased] -->
 
+## 2.10.2
+
+### Fixed
+
+- Resolved issue where Webkit-based browsers lost their platform-native styling
+- Resolved issue with certain cases where an input's height would change after a value was defined
+
 ## 2.10.0
 
 ### Added

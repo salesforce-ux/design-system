@@ -1,0 +1,162 @@
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+// ------------
+// Init
+// ------------
+@import '../../../shared/common/init';
+
+// Sizing Tokens
+$_c-progress-bar-size: 0.125rem;
+$_c-progress-bar-x-small: $_c-progress-bar-size;
+$_c-progress-bar-small: $_c-progress-bar-size * 2;
+$_c-progress-bar-medium: $_c-progress-bar-size * 4;
+$_c-progress-bar-large: $_c-progress-bar-size * 6;
+
+// color
+$_c-progress-bar-color-background: $color-gray-5;
+$_c-progress-bar-color-background-fill: $progress-bar-color-background-fill;
+$_c-progress-bar-color-background-fill-success: $progress-bar-color-background-fill-success;
+
+/**
+ * @name base
+ * @selector .lwc-progress-bar
+ * @restrict div
+ * @support dev-ready
+ * @variant
+ */
+.lwc-progress-bar {
+  @include appearance(none);
+  display: block;
+  width: 100%;
+  height: $_c-progress-bar-medium;
+  background: $_c-progress-bar-color-background;
+  border: 0;
+  position: relative;
+}
+
+/**
+  * @summary Creates a progress bar height at the smaller .125rem (2px) size
+  *
+  * @selector .lwc-progress-bar_x-small
+  * @restrict .lwc-progress-bar
+  * @modifier
+  * @group thickness
+  */
+.lwc-progress-bar_x-small {
+  height: $_c-progress-bar-x-small;
+}
+
+/**
+  * @summary Creates a progress bar height at the smaller .25rem (4px) size
+  *
+  * @selector .lwc-progress-bar_small
+  * @restrict .lwc-progress-bar
+  * @modifier
+  * @group thickness
+  */
+.lwc-progress-bar_small {
+  height: $_c-progress-bar-small;
+}
+
+/**
+  * @summary Creates a progress bar height at the smaller .5rem (8px) size
+  *
+  * @selector .lwc-progress-bar_medium
+  * @restrict .lwc-progress-bar
+  * @modifier
+  * @group thickness
+  */
+.lwc-progress-bar_medium {
+  height: $_c-progress-bar-medium;
+}
+
+/**
+  * @summary Creates a progress bar height at the smaller .75rem (12px) size
+  *
+  * @selector .lwc-progress-bar_large
+  * @restrict .lwc-progress-bar
+  * @modifier
+  * @group thickness
+  */
+.lwc-progress-bar_large {
+  height: $_c-progress-bar-large;
+}
+
+/**
+  * @summary Adds a border radius to the progress bar to give it a circular look
+  *
+  * @selector .lwc-progress-bar_circular
+  * @restrict .lwc-progress-bar
+  * @modifier
+  * @group radius
+  */
+.lwc-progress-bar_circular {
+  border-radius: $border-radius-large;
+
+  .lwc-progress-bar__value {
+    border-radius: $border-radius-large;
+  }
+}
+
+
+/**
+ * @summary Fill up blue bar inside of the progress bar
+ *
+ * @selector .lwc-progress-bar__value
+ * @restrict .lwc-progress-bar span
+ */
+.lwc-progress-bar__value {
+  display: block;
+  background: var(--lwc-progress-bar-fill-color, $_c-progress-bar-color-background-fill);
+  height: 100%;
+  width: var(--lwc-progress-bar-value, 0);
+}
+
+/**
+ * @summary Create a green progress bar
+ *
+ * @selector .lwc-progress-bar__value_success
+ * @restrict .lwc-progress-bar__value
+ * @modifier
+ * @group color
+ */
+.lwc-progress-bar__value_success {
+  --lwc-progress-bar-fill-color: $_c-progress-bar-color-background-fill-success;
+}
+
+/**
+ * @summary Create a vertical progress bar
+ *
+ * @name vertical
+ * @selector .lwc-progress-bar_vertical
+ * @restrict .lwc-progress-bar
+ * @support dev-ready
+ * @modifier
+ * @lwc
+ */
+.lwc-progress-bar_vertical {
+  height: 100%;
+  width: $_c-progress-bar-medium;
+
+  &.lwc-progress-bar_x-small {
+    width: $_c-progress-bar-x-small;
+  }
+
+  &.lwc-progress-bar_small {
+    width: $_c-progress-bar-small;
+  }
+
+  &.lwc-progress-bar_medium {
+    width: $_c-progress-bar-medium;
+  }
+
+  &.lwc-progress-bar_large {
+    width: $_c-progress-bar-large;
+  }
+
+  .lwc-progress-bar__value {
+    width: auto;
+    height: var(--lwc-progress-bar-value, 0);
+  }
+}

@@ -118,3 +118,10 @@ $mq-x-large: 1280px !default;
   }
   line-height: calc(#{$value} - #{$box-model});
 }
+
+@mixin appearance($value) {
+  /* stylelint-disable property-no-vendor-prefix */
+  -moz-appearance: $value;
+  -webkit-appearance: $value;
+  appearance: $value;
+}

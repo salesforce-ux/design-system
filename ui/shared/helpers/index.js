@@ -104,6 +104,12 @@ export const getDisplayCollectionsByType = (object, types) => {
   return collection;
 };
 
+/**
+ * @desc Get all examples for multiple components by type
+ * @param array $array - the components to check types against
+ * @param array $types - the type of examples you want
+ * @return array - array of componenet examples based on parameters
+ */
 export const getAllDisplayCollectionsByType = (array, types) => {
   let collection = [];
   if (Array.isArray(array)) {

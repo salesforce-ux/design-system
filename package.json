@@ -301,6 +301,10 @@
         "path": "ui/modules/pill/base/index.css"
       },
       {
+        "name": "@salesforce/slds/progressBar",
+        "path": "ui/modules/progress-bar/base/index.css"
+      },
+      {
         "name": "@salesforce/slds/spinner",
         "path": "ui/modules/spinner/base/index.css"
       },

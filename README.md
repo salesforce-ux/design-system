@@ -36,7 +36,7 @@ See the [annotations guide](https://github.com/salesforce-ux/design-system-inter
 
 Starts the Storybook server for local development.
 
-### `npm full-start`
+### `npm run full-start`
 
 Performs a full build and dist before starting the Storybook server. Useful for when a component or utility is added or removed from the system.
 

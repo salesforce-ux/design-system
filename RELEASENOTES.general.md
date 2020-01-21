@@ -1,6 +1,13 @@
 <!-- Release notes authoring guidelines: http://keepachangelog.com/ -->
 <!-- On release, add general notes here. In time the legacy release notes will be add to this -->
 
+## 2.11.1 - January 21, 2020
+
+## Updated
+
+- Updated node dependencies to remove vulnerabilities.
+- Updated project readme to recommend use of the Storybook development environment.
+
 ## 2.11.0 - January 9, 2020
 
 ## Added

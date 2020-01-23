@@ -161,7 +161,8 @@ export class MobileCombobox extends Component {
       isDisabled,
       // Listbox
       listboxHeadingText,
-      listboxListItemState
+      listboxListItemState,
+      listboxIsLoading
     } = this.props;
     const uniqueListboxId = _.uniqueId('example-listbox-unique-id-');
     const uniqueLabelId = _.uniqueId('example-label-unique-id-');
@@ -210,6 +211,7 @@ export class MobileCombobox extends Component {
           listboxId={uniqueListboxId}
           listItemState={listboxListItemState}
           headingText={listboxHeadingText}
+          isLoading={listboxIsLoading}
         />
       </PrimitiveCombobox>
     );

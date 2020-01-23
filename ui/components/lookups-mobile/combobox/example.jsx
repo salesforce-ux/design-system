@@ -3,7 +3,7 @@
 import React from 'react';
 import { MobileCombobox } from './';
 
-export const demoHeight = { height: '22rem' };
+export const demoHeight = { height: '24rem' };
 
 export const examples = [
   {
@@ -68,6 +68,21 @@ export const states = [
     demoStyles: demoHeight,
     element: (
       <MobileCombobox labelContent="Search" iconName="contact" isDisabled />
+    )
+  },
+  {
+    id: 'mobile-combobox-icon-value-loading',
+    label: 'Mobile Combobox - Icon with Value and Loading',
+    demoStyles: demoHeight,
+    element: (
+      <MobileCombobox
+        labelContent="Search"
+        iconName="contact"
+        defaultValue="Mel"
+        listboxHeadingText="Results for “Mel”"
+        listboxListItemState="typing"
+        listboxIsLoading
+      />
     )
   }
 ];

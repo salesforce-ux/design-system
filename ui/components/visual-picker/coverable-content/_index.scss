@@ -211,6 +211,26 @@
 }
 
 /**
+ * @name small
+ * @summary Size modifier to adjust to the size of small
+ * @selector .slds-visual-picker_small
+ * @restrict .slds-visual-picker
+ * @modifier
+ * @group size
+ */
+.slds-visual-picker_small {
+
+  .slds-visual-picker__figure,
+  .slds-visual-picker__body {
+    width: rem(136px);
+  }
+
+  .slds-visual-picker__figure {
+    height: rem(136px);
+  }
+}
+
+/**
  * @summary Text area that sits outside the visual picker
  * @selector .slds-visual-picker__body
  * @restrict .slds-visual-picker span

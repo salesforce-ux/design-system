@@ -1,0 +1,29 @@
+.slds-progress__item {
+  position: relative; // Position context for invisible tap target
+  align-items: center;
+  min-height: $height-tappable;
+
+  .slds-button {
+
+    &:before { // Create invisible tap target area
+      content: '';
+      position: absolute;
+      height: $height-tappable;
+      width: calc(100% + 8px); // 8px accounts for border width of container
+    }
+  }
+}
+
+.slds-progress__marker {
+  @include square($square-tappable-xx-small);
+  justify-content: center;
+
+  &_icon,
+  &--icon {
+
+    .slds-button__icon,
+    .slds-icon {
+      @include square($square-tappable-xx-small);
+    }
+  }
+}

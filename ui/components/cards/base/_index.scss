@@ -20,12 +20,6 @@
   background-clip: padding-box;
   box-shadow: $card-shadow;
 
-  // mobile context tweaks
-  @include touch-device {
-    border-color: transparent;
-    border-radius: 0;
-  }
-
   // Adds spacing between cards
   + .slds-card {
     margin-top: $var-spacing-vertical-medium;
@@ -60,11 +54,6 @@
 .slds-card__header-title {
   font-size: $var-font-size-5;
   line-height: $line-height-heading;
-
-  @include touch-device {
-    font-size: $var-font-size-6;
-    font-weight: $card-font-weight; // Ensures title is bold when there is no nested link
-  }
 }
 
 /**

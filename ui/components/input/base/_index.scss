@@ -19,10 +19,6 @@
   line-height: $height-input;
   min-height: calc(#{$height-input} + (#{$border-width-thin} * 2)); // For IE
 
-  @include touch-device {
-    @include border-box-line-height($height-tappable);
-  }
-
   /**
    * @selector [readonly]
    * @restrict .slds-input
@@ -33,49 +29,12 @@
     background-color: transparent;
     font-size: $input-static-font-size;
     font-weight: $input-readonly-font-weight; // This is a plain readonly input. It should not have the text treatment that static has.
-
-    @include touch-device {
-      font-size: $font-size-5;
-    }
   }
 
   &[type='search']::-ms-clear {
     display: none;
     width: 0;
     height: 0;
-  }
-
-  /*
-   * It's important to keep these selectors scoped tightly because certain input types have
-   * platform-native styles we don't want to override such as search. In the past, we have
-   * not overridden the appearance property so tread carefully.
-   *
-   * These are considered safe because they fall under '-webkit-appearance: textfield' by Webkit
-   * which primarily renders a platform-native inner gradient.
-   */
-  &[type='text'],
-  &[type='email'],
-  &[type='url'],
-  &[type='tel'] {
-    @include touch-device {
-      // stylelint-disable property-no-vendor-prefix
-      -webkit-appearance: none; // Remove Webkit insertion of gradient from -webkit-appearance: textfield
-      // stylelint-enable property-no-vendor-prefix
-    }
-  }
-
-  /**
-   * Platform-native styled inputs using 'appearance' CSS property set their own min-height and our line-height isn't recognized
-   * until a value is selected (e.x. date input). For mobile devices, this causes height discrepancies before and after selecting
-   * a value. We need to set an explicit height to keep it consistent.
-   */
-  &[type='date'],
-  &[type='datetime-local'],
-  &[type='month'],
-  &[type='time'] {
-    @include touch-device {
-      height: $height-tappable;
-    }
   }
 
   /**
@@ -162,11 +121,6 @@
     border: 0; // Re-aligns icons to center
     z-index: 2;
 
-    @include touch-device {
-      @include square($square-icon-medium-content);
-      margin-top: (($square-icon-medium-content / 2) * -1);
-    }
-
     /* @Todo - we need to be sure this is deprecated since the color sems to be the correct gray I see in specs */
     @include deprecate(
       '4.0.0',
@@ -191,10 +145,6 @@
 
     .slds-input__icon {
       left: $spacing-small;
-
-      @include touch-device {
-        left: $spacing-x-small;
-      }
     }
 
     .slds-input,
@@ -215,10 +165,6 @@
 
     .slds-input__icon {
       right: $spacing-small;
-
-      @include touch-device {
-        right: $spacing-x-small;
-      }
     }
 
     .slds-input,
@@ -245,10 +191,6 @@
     .slds-input__icon_left,
     .slds-input__icon--left {
       left: $spacing-small;
-
-      @include touch-device {
-        left: $spacing-x-small;
-      }
     }
 
     /**
@@ -260,10 +202,6 @@
     .slds-input__icon_right,
     .slds-input__icon--right {
       right: $spacing-small;
-
-      @include touch-device {
-        right: $spacing-x-small;
-      }
     }
 
     .slds-input,
@@ -313,10 +251,6 @@
   .slds-input__spinner {
     right: $spacing-large;
     left: auto;
-
-    @include touch-device {
-      right: calc(#{$spacing-large} + #{$spacing-xx-small});
-    }
   }
 }
 

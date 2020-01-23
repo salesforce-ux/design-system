@@ -2,7 +2,7 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 import autoprefixer from 'autoprefixer';
-import gulpSass from 'gulp-sass';
+import gulpSass from 'gulp-dart-sass';
 import gulpPostcss from 'gulp-postcss';
 import gulpMinifyCss from 'gulp-clean-css';
 import gulpPrettier from 'gulp-prettier';

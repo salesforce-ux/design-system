@@ -1,0 +1,12 @@
+.slds-checkbox_standalone {
+  min-height: $height-tappable;
+
+  [type="checkbox"] {
+    @include square($square-tappable); // Needs to be larger than faux checkbox for increased tap target size
+    @include vertical-center;
+  }
+
+  .slds-checkbox_faux {
+    @include vertical-center; // We vertically align with position instead of flex due to ".slds-form-element__control .slds-checkbox" display specificity
+  }
+}

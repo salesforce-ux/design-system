@@ -121,10 +121,6 @@
     font-weight: $font-weight-light;
     font-size: $font-size-7;
     line-height: $line-height-heading;
-
-    @include touch-device {
-      font-weight: $font-weight-bold;
-    }
   }
 
   /**
@@ -224,12 +220,6 @@
     position: absolute;
     top: ($square-icon-medium-boundary * -1.25);
     right: ((($square-icon-medium-boundary - $square-icon-medium-content) / 2) * -1);
-
-    @include touch-device {
-      @include square($height-tappable);
-      top: -$height-tappable;
-      right: 0;
-    }
   }
 }
 

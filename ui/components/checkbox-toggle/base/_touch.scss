@@ -1,0 +1,17 @@
+.slds-checkbox_toggle,
+.slds-checkbox--toggle {
+  padding: $spacing-xxx-small 0;
+
+  .slds-form-element__label {
+    align-items: flex-start;
+    font-size: $font-size-5;
+  }
+
+  [type="checkbox"] {
+
+    + .slds-checkbox_faux_container,
+    + .slds-checkbox--faux_container {
+      font-size: $font-size-2;
+    }
+  }
+}

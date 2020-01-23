@@ -1,0 +1,36 @@
+.slds-radio_button-group,
+.slds-radio--button-group {
+  display: block;
+
+  .slds-radio_button,
+  .slds-radio--button {
+    display: block;
+  }
+
+  .slds-radio_button + .slds-radio_button,
+  .slds-radio--button + .slds-radio--button {
+    border-left: 0;
+    border-top: $border-width-thin solid $color-border;
+  }
+
+  .slds-radio_button:first-child > .slds-radio_button__label,
+  .slds-radio--button:first-child > .slds-radio--button__label {
+    border-radius: $border-radius-medium $border-radius-medium 0 0;
+  }
+
+  .slds-radio_button:last-child > .slds-radio_button__label,
+  .slds-radio--button:last-child > .slds-radio--button__label {
+    border-radius: 0 0 $border-radius-medium $border-radius-medium;
+  }
+
+  .slds-radio_button__label,
+  .slds-radio--button__label {
+    display: block;
+    text-align: center;
+  }
+}
+
+.slds-radio_button,
+.slds-radio--button {
+  line-height: $radio-button-group-line-height-touch;
+}

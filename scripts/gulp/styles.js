@@ -7,6 +7,7 @@ import fetch from 'isomorphic-fetch';
 import gulp from 'gulp';
 import gulpPlumber from 'gulp-plumber';
 import gulpSourcemaps from 'gulp-sourcemaps';
+import combineMediaQuery from 'postcss-combine-media-query';
 
 import gulpFile from 'gulp-file';
 
@@ -69,11 +70,22 @@ export const stats = done => {
 
 export const sass = () =>
   gulp
-    .src('ui/index.scss')
+    .src(['ui/index.scss'])
     .pipe(gulpPlumber())
     .pipe(gulpSourcemaps.init())
     .pipe(gulpHelpers.writeScss())
     .pipe(gulpHelpers.writePostCss())
+    .pipe(gulpHelpers.writeMinifyCss())
+    .pipe(gulpSourcemaps.write('.'))
+    .pipe(gulp.dest('assets/styles'));
+
+export const sassTouch = () =>
+  gulp
+    .src(['ui/touch.scss'])
+    .pipe(gulpPlumber())
+    .pipe(gulpSourcemaps.init())
+    .pipe(gulpHelpers.writeScss())
+    .pipe(gulpHelpers.writePostCss([combineMediaQuery]))
     .pipe(gulpHelpers.writeMinifyCss())
     .pipe(gulpSourcemaps.write('.'))
     .pipe(gulp.dest('assets/styles'));

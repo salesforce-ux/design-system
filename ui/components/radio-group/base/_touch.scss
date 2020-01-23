@@ -1,0 +1,17 @@
+.slds-radio {
+
+  .slds-radio__label {
+    @include flex-vertical-center;
+    min-height: $height-tappable;
+  }
+
+  .slds-radio_faux,
+  .slds-radio--faux {
+    @include square($square-tappable-x-small);
+  }
+
+  .slds-form-element__label {
+    display: inline-flex; // In touch, .slds-form-element__label uses flex for vert centering
+    font-size: $font-size-5;
+  }
+}

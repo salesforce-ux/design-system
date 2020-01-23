@@ -28,23 +28,8 @@
   padding-top: $spacing-xx-small;
   margin-bottom: $spacing-xxx-small;
 
-  @include touch-device {
-    @include flex-vertical-center(inline-flex);
-    min-height: $height-tappable-small;
-    padding-top: 0;
-    margin-bottom: 0;
-    font-size: $font-size-4;
-  }
-
   &:empty {
     margin: 0;
-  }
-}
-
-// In touch, resize height of info button icon that is inline with form label
-.slds-form-element__label + .slds-form-element__icon .slds-button_icon {
-  @include touch-device {
-    height: $height-tappable-small;
   }
 }
 
@@ -78,10 +63,6 @@
   line-height: $line-height-reset;
   z-index: 1; // Helps ensure the help-text icon is clickable in all implementations
 
-  @include touch-device {
-    padding-top: 0; // Padding deprecated with increased touch target area size
-  }
-
   .slds-button_icon {
     position: relative; // Resetting position since the edit button icon to invoke inline-edit is set to position: absolute
   }
@@ -109,10 +90,6 @@
 
   .slds-form-element__static {
     width: calc(100% - #{$square-icon-small-boundary}); // Leave space for edit icon
-
-    @include touch-device {
-      width: calc(100% - #{$square-tappable});
-    }
   }
 }
 
@@ -135,12 +112,6 @@
   // We want no spacing in read only and allow line-height to handle white-space
   .slds-form-element__label {
     margin-bottom: 0;
-  }
-
-  .slds-icon {
-    @include touch-device {
-      @include square($square-tappable-x-small);
-    }
   }
 }
 
@@ -178,10 +149,6 @@
   font-weight: $input-static-font-weight;
   color: $input-static-color;
   width: 100%;
-
-  @include touch-device {
-    font-size: $font-size-5;
-  }
 
   &.slds-text-longform *:last-child {
     margin-bottom: 0;

@@ -200,15 +200,17 @@ gulp.task('sanitized:componentSass', sanitized.writeSanitizedComponentCss);
  */
 
 gulp.task('styles:sass', styles.sass);
+gulp.task('styles:sassTouch', styles.sassTouch);
 gulp.task('styles:test', styles.sassTest);
 gulp.task('styles:formFactors', styles.sassFormFactors);
 gulp.task(
   'styles',
   gulp.series(
     gulp.parallel(
-      withName('styles:sass')(styles.sass),
-      withName('styles:test')(styles.sassTest),
-      withName('styles:formFactors')(styles.sassFormFactors)
+      'styles:sass',
+      'styles:sassTouch',
+      'styles:test',
+      'styles:formFactors'
     )
   )
 );
@@ -272,6 +274,7 @@ export const watch = () =>
 
 // Framework
 gulp.task('dist:sass:framework', dist.sass);
+gulp.task('dist:sass:frameworkTouch', dist.sassTouch);
 
 // Components
 gulp.task('dist:sass:components:generate', dist.generateComponentSass);
@@ -281,6 +284,7 @@ gulp.task(
   'dist:sass',
   gulp.series(
     'dist:sass:framework',
+    'dist:sass:frameworkTouch',
     'dist:sass:components:generate',
     'dist:sass:components:common'
   )

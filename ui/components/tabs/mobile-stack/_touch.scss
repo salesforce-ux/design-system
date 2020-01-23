@@ -1,0 +1,7 @@
+.slds-tabs-mobile__item {
+
+  .slds-button:active,
+  .slds-button:hover { // :hover is triggered by mobile on single tap or press and drag, doesn't go away unless user taps away
+    color: currentColor;
+  }
+}

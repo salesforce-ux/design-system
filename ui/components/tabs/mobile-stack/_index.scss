@@ -67,14 +67,6 @@
   &:last-child {
     border-bottom: $border-width-thin solid $color-border;
   }
-
-  @include touch-device {
-
-    .slds-button:active,
-    .slds-button:hover { // :hover is triggered by mobile on single tap or press and drag, doesn't go away unless user taps away
-      color: currentColor;
-    }
-  }
 }
 
 /**

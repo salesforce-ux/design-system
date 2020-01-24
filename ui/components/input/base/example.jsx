@@ -218,6 +218,42 @@ export let examples = [
     )
   },
   {
+    id: 'date-input',
+    label: 'Date Input',
+    element: (
+      <FormElement labelContent={inputLabel} inputId={inputId}>
+        <Input id={inputId} type="date" />
+      </FormElement>
+    )
+  },
+  {
+    id: 'search-input',
+    label: 'Search Input',
+    element: (
+      <FormElement labelContent={inputLabel} inputId={inputId}>
+        <Input id={inputId} type="search" />
+      </FormElement>
+    )
+  },
+  {
+    id: 'url-input',
+    label: 'URL Input',
+    element: (
+      <FormElement labelContent={inputLabel} inputId={inputId}>
+        <Input id={inputId} type="url" />
+      </FormElement>
+    )
+  },
+  {
+    id: 'tel-input',
+    label: 'Telephone Input',
+    element: (
+      <FormElement labelContent={inputLabel} inputId={inputId}>
+        <Input id={inputId} type="tel" />
+      </FormElement>
+    )
+  },
+  {
     id: 'fixed-text',
     label: 'Fixed text',
     element: (

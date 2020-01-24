@@ -4,6 +4,7 @@ import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { Button } from '../../buttons/base/example';
 import { UtilityIcon } from '../../icons/base/example';
+import { Spinner } from '../../spinners/base/example';
 import listboxData from './listbox-data.json';
 
 const MobileLookupsListbox = props => {
@@ -36,22 +37,15 @@ const MobileLookupsListbox = props => {
         </Button>
       )}
       <ul className="slds-mobile-lookup__listbox" role="presentation">
-        <li
-          role="presentation"
-          className="slds-mobile-lookup__listbox-option_heading"
-        >
-          <div
-            id="option0"
-            className="slds-mobile-lookup__listbox-option slds-mobile-lookup__listbox-option_heading"
-            role="option"
-          >
+        <li role="presentation">
+          <div className="slds-mobile-lookup__listbox-option slds-mobile-lookup__listbox-option_heading">
             <span>{props.headingText}</span>
           </div>
         </li>
         {data.map((person, index) => (
           <li role="presentation" key={index}>
             <div
-              id={`option${index + 1}`}
+              id={`option${index}`}
               className="slds-mobile-lookup__listbox-option"
               role="option"
             >
@@ -83,6 +77,14 @@ const MobileLookupsListbox = props => {
             </div>
           </li>
         ))}
+        {props.isLoading && (
+          <li
+            role="presentation"
+            className="slds-mobile-lookup__listbox_loader"
+          >
+            <Spinner className="slds-spinner_x-small" />
+          </li>
+        )}
       </ul>
     </div>
   );
@@ -91,7 +93,9 @@ const MobileLookupsListbox = props => {
 MobileLookupsListbox.propTypes = {
   headingText: PropTypes.string,
   listItemState: PropTypes.oneOf(['default', 'selected', 'typing']),
-  listboxId: PropTypes.string
+  listboxId: PropTypes.string,
+  listboxlabelledBy: PropTypes.string,
+  isLoading: PropTypes.bool
 };
 
 MobileLookupsListbox.defaultProps = {

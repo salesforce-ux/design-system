@@ -11,7 +11,7 @@
   display: flex;
   align-items: center;
   margin-right: -($spacing-small);
-  padding: $spacing-xx-small $spacing-large $spacing-xx-small 0;
+  padding: $spacing-x-small $spacing-large $spacing-x-small 0;
   min-height: $height-tappable;
   line-height: 1.375;
   border-bottom: $border-width-thin solid #f1f2f3;
@@ -60,4 +60,9 @@
   + .slds-mobile-lookup__listbox {
     margin-top: -($spacing-xx-small);
   }
+}
+
+.slds-mobile-lookup__listbox_loader {
+  position: relative;
+  height: $height-tappable; // Spinner's component tokens are not aligned to global values so we use a sensible default instead
 }

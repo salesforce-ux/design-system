@@ -1,51 +1,50 @@
-# Salesforce Lightning Design System [![Build Status](https://travis-ci.org/salesforce-ux/design-system.svg?branch=master)](https://travis-ci.org/salesforce-ux/design-system)
+# Salesforce Lightning Design System
 
-Welcome to the [Salesforce Lightning Design System](https://www.lightningdesignsystem.com) brought to you by [Salesforce UX](https://twitter.com/salesforceux).
+[![Build Status](https://travis-ci.org/salesforce-ux/design-system.svg?branch=master)](https://travis-ci.org/salesforce-ux/design-system)
+
+Welcome to the source code repository for [Salesforce Lightning Design System](http://getslds.com/), brought to you by [Salesforce UX](https://twitter.com/salesforceux).
+
+SLDS is...
 
 * Tailored for building Salesforce apps: Using the Lightning Design System markup and CSS framework results in UIs that reflect the Salesforce Lightning look and feel.
 * Continuously updated: As long as you’re using the latest version of the Lightning Design System, your pages are always up to date with Salesforce UI changes.
 
-## Quick start
+## Getting Started
 
-1. Clone the project with `git clone https://github.com/salesforce-ux/design-system.git`
-2. Run `npm install` in the root design-system folder.
-3. Run `npm start` to launch the Previewer.
-4. Visit http://localhost:3003/local/preview
+This project utilizes Storybook for component development. If you would like to know more about Storybook or how it works, check out [their website](https://storybook.js.org/).
 
-Having trouble getting these steps to work on your machine? Follow the [troubleshooting guide](guidelines/TROUBLESHOOTING.md).
+### **Project Installation & Setup:**
 
+1. Clone the repository down locally.
+2. `cd` into the project and run `npm install` to install all project dependencies.
 
-## Previewer
+### Running the Development Environment:
 
-<img src="docs/previewer.v1.jpg" alt="previewer blueprint/variant/modifier selection" width="600px"/>
+1. Run `npm start` to start the Storybook development environment.
 
-The previewer is an interactive tool for creating blueprints.
+## Developing in Storybook
 
-It runs at the designated url on startup and is the primary means of viewing your work - it will live update as you make changes.
+Once the development server is started with `npm start`, you can load it at [http://localhost:9002](http://localhost:9002/).
 
-You can choose the blueprint, variant, and modifiers to preview as well as background color and screen size. It also previews the sass docs.
+### Annotations
 
-Everything in the design system is driven by [annotations](guidelines/ANNOTATIONS.md) and the previewer is no different. **To see any work in the previewer, you must add annotations to your code.**
-
-## Annotations
-
-See the <a href="guidelines/ANNOTATIONS.md">annotations guide</a>.
-
-## Blueprint Documentation
-
-See the <a href="guidelines/BLUEPRINT_DOCUMENTATION.md">blueprint documentation guide</a>.
+See the [annotations guide](https://github.com/salesforce-ux/design-system-internal/blob/226-summer-20/guidelines/ANNOTATIONS.md).
 
 ## Tasks
 
 ### `npm start`
 
-Start the Lightning Design System preview app.
+Starts the Storybook server for local development.
+
+### `npm run full-start`
+
+Performs a full build and dist before starting the Storybook server. Useful for when a component or utility is added or removed from the system.
 
 ### `npm run gulp -- lint`
 
 Lint the code base for syntax and stylistic errors.
 
-```bash
+```
 # Lint indentation, Sass, JavaScript files
 npm run gulp -- lint
 
@@ -74,7 +73,7 @@ npm run gulp -- lint:examples
 
 To run all the checks a pull request will run in Travis use the following command.
 
-```bash
+```
 # To run every check against all blueprints
 npm run pr-checks
 
@@ -84,7 +83,7 @@ npm run pr-checks -- --components button,path,trees
 
 ### Compilation
 
-`npm run build && npm run dist`
+`npm run build-dist`
 
 Generate the Lightning Design System into the `.dist` directory.
 
@@ -106,11 +105,11 @@ Delete temporary build and local files.
 
 ## Troubleshooting
 
-See the <a href="guidelines/TROUBLESHOOTING.md">troubleshooting guide</a>.
+See the [troubleshooting guide](https://github.com/salesforce-ux/design-system-internal/blob/226-summer-20/guidelines/TROUBLESHOOTING.md).
 
-## Contributing to the code base
+## Contributing Back to SLDS
 
-See the <a href="CONTRIBUTING.md">contributing guide</a>.
+See the [contributing guide](https://github.com/salesforce-ux/design-system-internal/blob/226-summer-20/CONTRIBUTING.md).
 
 ## Licenses
 
@@ -118,6 +117,6 @@ See the <a href="CONTRIBUTING.md">contributing guide</a>.
 * All icons and images are licensed under [Creative Commons Attribution-NoDerivatives 4.0](https://github.com/salesforce-ux/licenses/blob/master/LICENSE-icons-images.txt)
 * The Salesforce Sans font is licensed under our [font license](https://github.com/salesforce-ux/licenses/blob/master/LICENSE-font.txt)
 
-## Got feedback?
+## Got Feedback?
 
-Please open a new <a href="https://github.com/salesforce-ux/design-system/issues">GitHub Issue</a>.
+Please open a new [GitHub Issue](https://github.com/salesforce-ux/design-system/issues).

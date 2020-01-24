@@ -263,6 +263,37 @@ let Footless = props => (
   </Backdrop>
 );
 
+let HiddenFooter = props => (
+  <Backdrop>
+    <Modal aria-labelledby="modal-heading-01">
+      <ModalHeader>
+        <h2 id="modal-heading-01" className="slds-modal__title slds-hyphenate">
+          Modal Header
+        </h2>
+      </ModalHeader>
+      <ModalContent className="slds-modal__content_has-hidden-footer slds-p-around_medium">
+        <p>
+          Sit nulla est ex deserunt exercitation anim occaecat. Nostrud ullamco
+          deserunt aute id consequat veniam incididunt duis in sint irure nisi.
+          Mollit officia cillum Lorem ullamco minim nostrud elit officia tempor
+          esse quis. Cillum sunt ad dolore quis aute consequat ipsum magna
+          exercitation reprehenderit magna. Tempor cupidatat consequat elit
+          dolor adipisicing.
+        </p>
+        <p>
+          Dolor eiusmod sunt ex incididunt cillum quis nostrud velit duis sit
+          officia. Lorem aliqua enim laboris do dolor eiusmod officia. Mollit
+          incididunt nisi consectetur esse laborum eiusmod pariatur proident.
+          Eiusmod et adipisicing culpa deserunt nostrud ad veniam nulla aute
+          est. Labore esse esse cupidatat amet velit id elit consequat minim
+          ullamco mollit enim excepteur ea.
+        </p>
+      </ModalContent>
+      <ModalFooter className="slds-hide" />
+    </Modal>
+  </Backdrop>
+);
+
 /// ///////////////////////////////////////////
 // Export
 /// ///////////////////////////////////////////
@@ -327,6 +358,12 @@ export const examples = [
     label: 'Footer removed',
     demoStyles: exampleDemoStyles,
     element: <Footless />
+  },
+  {
+    id: 'hidden-footer',
+    label: 'Footer hidden but not removed (not public)',
+    demoStyles: exampleDemoStyles,
+    element: <HiddenFooter />
   },
   {
     id: 'large',

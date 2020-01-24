@@ -1,6 +1,22 @@
 <!-- Release notes authoring guidelines: http://keepachangelog.com/ -->
 <!-- On release, add general notes here. In time the legacy release notes will be add to this -->
 
+## 2.12.0 - May 8, 2020
+
+## 2.11.2 - January 23, 2020
+
+## Updated
+
+- Removed `slds-is-mobile` scoping class. Touch related styles will now be applied automatically via a feature detection media query.
+- Blueprints now use specific `_touch.scss` files for touch context styling.
+
+## 2.11.1 - January 21, 2020
+
+## Updated
+
+- Updated node dependencies to remove vulnerabilities.
+- Updated project readme to recommend use of the Storybook development environment.
+
 ## 2.11.0 - January 9, 2020
 
 ## Added

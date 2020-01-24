@@ -5,6 +5,10 @@
 <!-- ## [Unreleased] -->
 ## 2.10.0
 
+### Added
+
+- Added `.slds-picklist input[readonly]` selector to fix styling of deprecated markup
+
 ### Changed
 
 - Migrated picklist HTML to use non-deprecated combobox

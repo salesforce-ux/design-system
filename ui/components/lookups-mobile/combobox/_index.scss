@@ -1,0 +1,69 @@
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * @summary Initializes Mobile Combobox
+ *
+ * @name base
+ * @selector .slds-mobile-combobox
+ * @restrict div
+ * @variant
+ */
+.slds-mobile-combobox {
+  display: block;
+}
+
+/**
+ * @summary Container for combobox input and addons
+ *
+ * @selector .slds-mobile-combobox__header
+ * @restrict .slds-mobile-combobox
+ */
+.slds-mobile-combobox__header {
+  display: flex;
+}
+
+/**
+ * @summary __header modifier when icon is present
+ *
+ * @selector .slds-mobile-combobox__header-has-icon
+ * @restrict .slds-mobile-combobox__header
+ * @modifier
+ */
+.slds-mobile-combobox__header-has-icon {
+  position: relative;
+
+  // Styling API candidate
+  .slds-mobile-combobox__addon {
+    display: flex;
+    align-items: center;
+    margin-right: $spacing-x-small;
+  }
+}
+
+/**
+ * @summary Addon container (faux slot)
+ *
+ * @selector .slds-mobile-combobox__addon
+ * @restrict .slds-mobile-combobox__header
+ */
+.slds-mobile-combobox__addon {
+  flex-shrink: 0;
+}
+
+/**
+ * @summary Primary input container
+ *
+ * @selector .slds-mobile-combobox__input
+ * @restrict .slds-mobile-combobox__header
+ */
+.slds-mobile-combobox__input {
+  flex: 1 1 auto;
+
+  // Requirement of project that these properties are statically these
+  // mobile/touch values and not scoped to the mobile/touch feature detection
+  .slds-input {
+    @include border-box-line-height($height-tappable);
+    font-size: $font-size-5;
+  }
+}

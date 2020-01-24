@@ -9,8 +9,6 @@ import * as SubTabs from '../tabs/sub-tabs/example';
 import VerticalTabs from '../vertical-tabs/base/example';
 import { getDisplayElementById } from '../../shared/helpers';
 
-// import style from './docs/index.scss';
-
 <div className="doc lead">
   Tabs keeps related content in a single container that is shown and hidden
   through navigation.
@@ -32,8 +30,8 @@ The following markup is crucial for Accessibility
 
 - Selected tab’s anchor has `aria-selected="true"`, all other tabs’ anchors have `aria-selected="false"`
 - Selected tab’s anchor has `tabindex="0"`, all other tabs have `tabindex="-1"`
-- Each tab’s anchor has an `aria-controls` attribute whose value is the id of the associated `&lt;div role="tabpanel"&gt;`
-- Each tab panel has an `aria-labelledby` attribute whose value is the id of its associated `&lt;a role="tab"&gt;`
+- Each tab’s anchor has an `aria-controls` attribute whose value is the id of the associated `<div role="tabpanel">`
+- Each tab panel has an `aria-labelledby` attribute whose value is the id of its associated `<a role="tab">`
 
 #### Keyboard Interactions
 
@@ -58,17 +56,9 @@ When the user clicks a different tab, move the `.slds-active` class and toggle t
 
 Tabbed UIs have three parts with specific ARIA role requirements:
 
-<ul>
-  <li>- The tab list, which should have `role="tablist"`</li>
-  <li>
-    - The tabs in that list, which should each be an `&lt;a role="tab"&gt;`
-    anchor wrapped in a `&lt;li role="presentation"&gt;` list item
-  </li>
-  <li>
-    - The tab panels, which display each tab’s content and should each have
-    `role="tabpanel"`
-  </li>
-</ul>
+- The tab list, which should have `role="tablist"`
+- The tabs in that list, which should each be an `<a role="tab">` anchor wrapped in a `<li role="presentation">` list item
+- The tab panels, which display each tab’s content and should each have `role="tabpanel"`
 
 ## Base
 
@@ -89,8 +79,8 @@ The overflow tab style is provided as a tab item type that acts as a menu compon
 </Example>
 
 <Blockquote type="note" header="Implementation Guidelines">
-  The `slds-dropdown__list` element requires a
-  `slds-dropdown_length-with-icon-10` class, where 10 is the maximum number of
+  The <code>slds-dropdown__list</code> element requires a
+  <code>slds-dropdown_length-with-icon-10</code> class, where 10 is the maximum number of
   items that will be visible before having to scroll.
 </Blockquote>
 
@@ -166,7 +156,7 @@ Subtabs are used to provide an additional level of navigation below the Global N
 
 ### With Borders
 
-To add borders on either side of the subtab, add the classes `slds-border_right` and `slds-border_left`, as needed, to the `&lt;li&gt;` with class `slds-sub-tabs__item`.
+To add borders on either side of the subtab, add the classes `slds-border_right` and `slds-border_left`, as needed, to the `<li>` with class `slds-sub-tabs__item`.
 
 <CodeView style={{ height: '100px' }}>
   {getDisplayElementById(SubTabs.states, 'subtabs-borders')}
@@ -189,8 +179,8 @@ Unsaved tabs receive a blue asterisk on the tab.
 </CodeView>
 
 <Blockquote header="Additional Tag for Accessibility" type="a11y">
-  In order to inform screen readers of the unsaved state, an `&lt;abbr&gt;` tag
-  is used to render the asterisk. The `title` attribute and `aria-label` should
+  In order to inform screen readers of the unsaved state, an <code>&lt;abbr&gt;</code> tag
+  is used to render the asterisk. The <code>title</code> attribute and <code>aria-label</code> should
   read <b>"Tab Not Saved"</b>.
 </Blockquote>
 
@@ -208,7 +198,7 @@ Unsaved tabs receive a blue asterisk on the tab.
 
 The following examples of sub tab status updates should all employ the same technique to communicate that update to users of assistive technology, who would be otherwise unaware of that status change.
 
-You should use a single hidden ARIA live region for the entire sub tabs block, the contents of which gets updated each time a sub tab changes its status. The contents should contain a description of the status level and the name of the tab the status change event occured in. The markup would look something like:
+You should use a single hidden ARIA live region for the entire sub tabs block, the contents of which gets updated each time a sub tab changes its status. The contents should contain a description of the status level and the name of the tab the status change event occurred in. The markup would look something like:
 
 <CodeBlock toggleCode={false}>
   <div className="slds-assistive-text" aria-live="polite">
@@ -229,16 +219,14 @@ Unread tabs receive a red dot on the tab.
 <Blockquote header="Accessibility" type="a11y">
   In order to inform screen readers of new activity in a tab, 2 things should
   occur.
-  <br />
-  <br />
-  1. The `title` attribute and `aria-label` on the element that displays the red
+  <ul class="doc">
+    <li class="doc">The <code>title</code> attribute and <code>aria-label</code> on the element that displays the red
   dot should read <b>"New Activity"</b>. This will update the text content of the
-  tab to include the "New Activity" text: "New Activity Chat - Customer".
-  <br />
-  <br />
-  2. The hidden live region as described above, should have its content updated
+  tab to include the "New Activity" text: "New Activity Chat - Customer".</li>
+    <li class="doc">The hidden live region as described above, should have its content updated
   to <b>"New Activity in Tab: [Tab Name Here]"</b> to alert the user of new
-  activity in that particular sub tab.
+  activity in that particular sub tab.</li>
+  </ul>
 </Blockquote>
 
 <CodeBlock toggleCode={false}>
@@ -270,7 +258,7 @@ Unread and unsaved tabs receive a blue asterisk with a red dot underneath. Be su
 
 #### Warning Tab
 
-When you wish to draw attention to a particular sub tab because a warning about that tab has occured, you can use the `slds-has-warning` class to change the background color and introduce a short pulsing animation to draw attention from the user.
+When you wish to draw attention to a particular sub tab because a warning about that tab has occurred, you can use the `slds-has-warning` class to change the background color and introduce a short pulsing animation to draw attention from the user.
 
 The icon is updated to be the warning icon, to give an extra way to communicate the level of the status without relying on the use of color alone.
 
@@ -306,7 +294,7 @@ In this example we show that something inside the sub tab is about to break a se
 
 #### Error Tab
 
-When you wish to draw attention to a particular sub tab because an error or violation has occured in that tab, you can use the `slds-has-error` class to change the background color and introduce a short pulsing animation to draw attention from the user.
+When you wish to draw attention to a particular sub tab because an error or violation has occurred in that tab, you can use the `slds-has-error` class to change the background color and introduce a short pulsing animation to draw attention from the user.
 
 The icon is updated to be the error icon, to give an extra way to communicate the level of the status without relying on the use of color alone.
 
@@ -456,7 +444,7 @@ To use vertical tabs, check out the [Vertical Tabs](../vertical-tabs) component
 
 ## As a Card
 
-To style tabs as a card, add the class `slds-tabs_card` to the `&lt;div&gt;` with the class `slds-tabs_default`. See the following example for guidance on styling cards inside the tab panel content.
+To style tabs as a card, add the class `slds-tabs_card` to the `<div>` with the class `slds-tabs_default`. See the following example for guidance on styling cards inside the tab panel content.
 
 <Example title="Tabs as a Card">
   <CodeView style={{ height: '600px' }}>

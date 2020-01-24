@@ -1,0 +1,65 @@
+{
+  "default": [
+    {
+      "name": "Marcelo Garcia",
+      "title": "Design Manager"
+    },
+    {
+      "name": "Malia Peterson",
+      "title": "Lead Production Designer"
+    },
+    {
+      "name": "Paulo Farias",
+      "title": "Software Developer"
+    },
+    {
+      "name": "Roberta Brennand",
+      "title": "Project Manager"
+    }
+  ],
+  "selected": [
+    {
+      "mark": "Mel",
+      "name": "ania Duchamp",
+      "title": "Sales Account Rep"
+    },
+    {
+      "mark": "Mel",
+      "name": "any Lisboa",
+      "title": "Lead Account Admin"
+    },
+    {
+      "mark": "Mel",
+      "name": "issa Lundregen",
+      "title": "Senior Software Architect",
+      "selected": true
+    },
+    {
+      "mark": "Mel",
+      "name": "issa Barbosa",
+      "title": "Project Manager"
+    },
+    {
+      "mark": "Mel",
+      "name": " Gibson",
+      "title": "Design Manager"
+    }
+  ],
+  "typing": [
+    {
+      "mark": "Mel",
+      "name": "issa O'Kane",
+      "title": "Senior Product Manager"
+    },
+    {
+      "mark": "Mel",
+      "name": "issa Schmidt",
+      "title": "Director Project Manager"
+    },
+    {
+      "mark": "Mel",
+      "name": " Gibson",
+      "title": "Design Manager"
+    }
+  ]
+}

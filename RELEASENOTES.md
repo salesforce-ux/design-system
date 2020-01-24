@@ -63,6 +63,10 @@
 #### Changed
 - For touch devices, update the line-height token of `.slds-button` to use the touch-specific token `$height-tappable` (2.75rem) which is a system-wide touch token instead of using a component-specific token.
 
+### [Cards](https://www.lightningdesignsystem.com/components/cards)
+#### Fixed
+- Added `display: flex` to `.slds-card__header-title` to enable truncation on contained link that already has `slds-truncate`
+
 ### [Chat](https://www.lightningdesignsystem.com/components/chat)
 #### Fixed
 - Fixed an issue where some message text containers would have a width equal to the message meta even though the container contained less text and should have had a smaller width.
@@ -313,6 +317,8 @@
 - Fixed text disappearing when peaking between stage in Safari
 
 ### [Picklist](https://www.lightningdesignsystem.com/components/picklist)
+#### Added
+- Added `.slds-picklist input[readonly]` selector to fix styling of deprecated markup
 #### Changed
 - Migrated picklist HTML to use non-deprecated combobox
 

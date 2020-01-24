@@ -3,6 +3,8 @@ const path = require('path');
 const _ = require('lodash');
 const semver = require('semver');
 
+const { logWarning } = require('./helpers.js');
+
 const { arrayOfLines } = require('./helpers.js');
 const { parse: parseGeneralNotes } = require('./general.js');
 const { parse: parseTokenNotes } = require('./tokens.js');
@@ -113,22 +115,29 @@ blueprintSpaces.forEach(space => {
     const componentDirectory = path.resolve(`${directory}/${component}`);
 
     if (fs.lstatSync(componentDirectory).isDirectory()) {
-      // get RELEASENOTES.md content from each component
-      const componentReleaseNotes = fs.readFileSync(
-        path.resolve(`${componentDirectory}/RELEASENOTES.md`),
-        { encoding: 'utf-8' }
-      );
+      const componentReleaseNotesPath = `${componentDirectory}/RELEASENOTES.md`;
+      if (fs.existsSync(componentReleaseNotesPath)) {
+        // get RELEASENOTES.md content from each component
+        const componentReleaseNotes = fs.readFileSync(
+          path.resolve(componentReleaseNotesPath),
+          { encoding: 'utf-8' }
+        );
 
-      // separate component release notes by release version headers and get the last updated notes
-      const splitReleaseNotes = splitContentByVersionHeaders(
-        componentReleaseNotes,
-        {
-          component,
-          ...space
-        }
-      );
+        // separate component release notes by release version headers and get the last updated notes
+        const splitReleaseNotes = splitContentByVersionHeaders(
+          componentReleaseNotes,
+          {
+            component,
+            ...space
+          }
+        );
 
-      model.data.push(splitReleaseNotes);
+        model.data.push(splitReleaseNotes);
+      } else {
+        logWarning(
+          `${componentReleaseNotesPath} does not exist, please create a release notes file for this folder`
+        );
+      }
     }
   });
 });

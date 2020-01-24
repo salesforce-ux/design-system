@@ -38,23 +38,23 @@ jobs:
           key: dependencies-{{ checksum "package.json" }}
 
       - run:
-          name: "NPM run build"
+          name: 'NPM run build'
           command: 'npm run build'
 
       - run:
-          name: "NPM run dist:simple"
+          name: 'NPM run dist:simple'
           command: 'npm run dist:simple'
 
       - run:
-          name: "NPM run dist:write-ui"
+          name: 'NPM run dist:write-ui'
           command: 'npm run gulp -- dist:write-ui'
 
       - run:
-          name: "Copy .dist to workspace"
+          name: 'Copy .dist to workspace'
           command: 'cp -ar .dist workspace'
 
       - run:
-          name: "Copy design-tokens/dist to workspace"
+          name: 'Copy design-tokens/dist to workspace'
           command: 'cp -ar design-tokens/dist workspace/design-tokens-dist'
 
       # Persist the specified paths (workspace/echo-output) into the workspace for use in downstream job.
@@ -78,17 +78,17 @@ jobs:
           at: workspace
 
       - run:
-          name: "Set environment variables"
+          name: 'Set environment variables'
           command: |
             echo 'export SLDS_PR_NUMBER=${CIRCLE_PULL_REQUEST##*/}' >> $BASH_ENV
 
       - run:
-          name: "Copy .dist workspace files"
-          command: "cp -ar workspace/.dist ."
+          name: 'Copy .dist workspace files'
+          command: 'cp -ar workspace/.dist .'
 
       - run:
-          name: "Copy design-tokens/dist workspace files"
-          command: "cp -ar workspace/design-tokens-dist design-tokens/dist"
+          name: 'Copy design-tokens/dist workspace files'
+          command: 'cp -ar workspace/design-tokens-dist design-tokens/dist'
 
       # Download and cache dependencies
       - restore_cache:
@@ -97,7 +97,7 @@ jobs:
             # fallback to using the latest cache if no exact match is found
             - dependencies-
 
-    # run Applitools tests!
+      # run Applitools tests!
       - run:
           name: Applitools
           command: 'npx eyes-storybook'
@@ -111,4 +111,3 @@ workflows:
           context: slds-api-keys
           requires:
             - build
-

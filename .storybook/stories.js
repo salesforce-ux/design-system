@@ -1,6 +1,10 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { getDisplayElementById } from '../ui/shared/helpers';
+import {
+  getDisplayElementById,
+  getExampleStoryParams,
+  getStoryWrapperDecorator
+} from '../ui/shared/helpers';
 import {
   getComponents,
   getComponentVariants,
@@ -29,6 +33,20 @@ const createComponentStories = () => {
         <DocsPage title={componentTitle} Docs={Docs} />
       );
 
+      const getStoriesByCategory = (category, categoryExamples) => {
+        categoryExamples.forEach(example => {
+          storiesOf(`${storyTitle}/${category}`, module).add(
+            example.label,
+            () => getDisplayElementById(categoryExamples, example.id),
+            getExampleStoryParams(getStoryWrapperDecorator(example), {
+              docs: {
+                page: DocsComponent
+              }
+            })
+          );
+        });
+      };
+
       try {
         examples = require(`../ui/components/${component}/${variant}/example`);
       } catch (e) {
@@ -48,33 +66,10 @@ const createComponentStories = () => {
           }
         );
 
-        if (examples.examples) {
-          examples.examples.forEach(example => {
-            storiesOf(`${storyTitle}/Examples`, module).add(
-              example.label,
-              () => getDisplayElementById(examples.examples, example.id),
-              {
-                docs: {
-                  page: DocsComponent
-                }
-              }
-            );
-          });
-        }
+        if (examples.examples)
+          getStoriesByCategory('Examples', examples.examples);
 
-        if (examples.states) {
-          examples.states.forEach(example => {
-            storiesOf(`${storyTitle}/States`, module).add(
-              example.label,
-              () => getDisplayElementById(examples.states, example.id),
-              {
-                docs: {
-                  page: DocsComponent
-                }
-              }
-            );
-          });
-        }
+        if (examples.states) getStoriesByCategory('States', examples.states);
       }
     });
   });

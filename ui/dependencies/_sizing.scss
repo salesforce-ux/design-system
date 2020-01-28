@@ -1,6 +1,9 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
+// Creates an equal hard-set width and height for square elements
+// Note: this creates a *closed assignment* if you are modifying an open assignment
+// e.g., creating a `small` modifier for an element that sets width/height with a CSS Custom Property
 @mixin square($size) {
   width: $size;
   height: $size;

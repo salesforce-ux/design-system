@@ -190,7 +190,7 @@ $icon-bg-map: map-merge($bg-actions-map, $bg-custom-map);
  * @group sizing
  */
 .lwc-icon_x-large {
-  @include square($_c-icon-x-large);
+  --lwc-c-icon-size: $_c-icon-x-large;
 }
 
 /**
@@ -201,7 +201,7 @@ $icon-bg-map: map-merge($bg-actions-map, $bg-custom-map);
  * @group sizing
  */
 .lwc-icon_large {
-  @include square($_c-icon-large);
+  --lwc-c-icon-size: $_c-icon-large;
 }
 
 /**
@@ -212,7 +212,7 @@ $icon-bg-map: map-merge($bg-actions-map, $bg-custom-map);
  * @group sizing
  */
 .lwc-icon_medium {
-  @include square($_c-icon-medium);
+  --lwc-c-icon-size: $_c-icon-medium;
 }
 
 /**
@@ -223,7 +223,7 @@ $icon-bg-map: map-merge($bg-actions-map, $bg-custom-map);
  * @group sizing
  */
 .lwc-icon_small {
-  @include square($_c-icon-small);
+  --lwc-c-icon-size: $_c-icon-small;
 }
 
 /**
@@ -234,7 +234,7 @@ $icon-bg-map: map-merge($bg-actions-map, $bg-custom-map);
  * @group sizing
  */
 .lwc-icon_x-small {
-  @include square($_c-icon-x-small);
+  --lwc-c-icon-size: $_c-icon-x-small;
 }
 
 /**
@@ -245,7 +245,7 @@ $icon-bg-map: map-merge($bg-actions-map, $bg-custom-map);
  * @group sizing
  */
 .lwc-icon_xx-small {
-  @include square($_c-icon-xx-small);
+  --lwc-c-icon-size: $_c-icon-xx-small;
 }
 
 // ----------

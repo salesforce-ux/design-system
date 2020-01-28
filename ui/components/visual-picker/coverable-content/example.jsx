@@ -180,8 +180,35 @@ export let states = [
 
 export let examples = [
   {
+    id: 'base_small',
+    label: 'Small base',
+    element: (
+      <Fieldset>
+        <Legend>Select an app</Legend>
+        <FormElementControl>
+          <VisualPicker
+            type="radio"
+            icon
+            sprite="utility"
+            symbol="connected_apps"
+            label={<Option label="Connected App" />}
+            size="small"
+          />
+          <VisualPicker
+            type="radio"
+            icon
+            sprite="utility"
+            symbol="custom_apps"
+            label={<Option label="Custom App" />}
+            size="small"
+          />
+        </FormElementControl>
+      </Fieldset>
+    )
+  },
+  {
     id: 'base',
-    label: 'Default (medium) base',
+    label: 'Medium (default) base',
     element: (
       <Fieldset>
         <Legend>Select an app</Legend>
@@ -196,7 +223,6 @@ export let examples = [
           />
           <VisualPicker
             type="radio"
-            disabled
             icon
             sprite="utility"
             symbol="custom_apps"
@@ -224,7 +250,6 @@ export let examples = [
           />
           <VisualPicker
             type="radio"
-            disabled
             icon
             sprite="utility"
             symbol="custom_apps"
@@ -236,27 +261,34 @@ export let examples = [
     )
   },
   {
-    id: 'base_small',
-    label: 'Small base',
+    id: 'checkbox-group_small',
+    label: 'Small base with checkboxes',
     element: (
       <Fieldset>
-        <Legend>Select an app</Legend>
+        <Legend>Add the following object(s)</Legend>
         <FormElementControl>
           <VisualPicker
-            type="radio"
+            type="checkbox"
             icon
-            sprite="utility"
-            symbol="connected_apps"
-            label={<Option label="Connected App" />}
+            sprite="standard"
+            symbol="account"
+            label={<Option label="Account" />}
             size="small"
           />
           <VisualPicker
-            type="radio"
-            disabled
+            type="checkbox"
             icon
-            sprite="utility"
-            symbol="custom_apps"
-            label={<Option label="Custom App" />}
+            sprite="standard"
+            symbol="lead"
+            label={<Option label="Lead" />}
+            size="small"
+          />
+          <VisualPicker
+            type="checkbox"
+            icon
+            sprite="standard"
+            symbol="orders"
+            label={<Option label="Orders" />}
             size="small"
           />
         </FormElementControl>
@@ -265,7 +297,7 @@ export let examples = [
   },
   {
     id: 'checkbox-group',
-    label: 'Checkbox group',
+    label: 'Medium base with checkboxes',
     element: (
       <Fieldset>
         <Legend>Add the following object(s)</Legend>
@@ -300,7 +332,7 @@ export let examples = [
   },
   {
     id: 'checkbox-group_large',
-    label: 'Large checkbox group',
+    label: 'Large base with checkboxes',
     element: (
       <Fieldset>
         <Legend>Add the following object(s)</Legend>
@@ -328,41 +360,6 @@ export let examples = [
             symbol="orders"
             label={<Option label="Orders" />}
             size="large"
-          />
-        </FormElementControl>
-      </Fieldset>
-    )
-  },
-  {
-    id: 'checkbox-group_small',
-    label: 'Small checkbox group',
-    element: (
-      <Fieldset>
-        <Legend>Add the following object(s)</Legend>
-        <FormElementControl>
-          <VisualPicker
-            type="checkbox"
-            icon
-            sprite="standard"
-            symbol="account"
-            label={<Option label="Account" />}
-            size="small"
-          />
-          <VisualPicker
-            type="checkbox"
-            icon
-            sprite="standard"
-            symbol="lead"
-            label={<Option label="Lead" />}
-            size="small"
-          />
-          <VisualPicker
-            type="checkbox"
-            icon
-            sprite="standard"
-            symbol="orders"
-            label={<Option label="Orders" />}
-            size="small"
           />
         </FormElementControl>
       </Fieldset>

@@ -80,6 +80,7 @@ jobs:
       - run:
           name: 'Set environment variables'
           command: |
+            echo 'export APPLITOOLS_BATCH_ID=${CIRCLE_SHA1}' >> $BASH_ENV
             echo 'export SLDS_PR_NUMBER=${CIRCLE_PULL_REQUEST##*/}' >> $BASH_ENV
 
       - run:

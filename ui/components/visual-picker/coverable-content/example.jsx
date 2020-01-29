@@ -29,7 +29,8 @@ export let VisualPicker = props => {
         'slds-visual-picker',
         {
           'slds-visual-picker_large': props.size === 'large',
-          'slds-visual-picker_medium': props.size === 'medium'
+          'slds-visual-picker_medium': props.size === 'medium',
+          'slds-visual-picker_small': props.size === 'small'
         },
         props.className
       )}
@@ -179,8 +180,62 @@ export let states = [
 
 export let examples = [
   {
+    id: 'base_small',
+    label: 'Small base',
+    element: (
+      <Fieldset>
+        <Legend>Select an app</Legend>
+        <FormElementControl>
+          <VisualPicker
+            type="radio"
+            icon
+            sprite="utility"
+            symbol="connected_apps"
+            label={<Option label="Connected App" />}
+            size="small"
+          />
+          <VisualPicker
+            type="radio"
+            icon
+            sprite="utility"
+            symbol="custom_apps"
+            label={<Option label="Custom App" />}
+            size="small"
+          />
+        </FormElementControl>
+      </Fieldset>
+    )
+  },
+  {
+    id: 'base',
+    label: 'Medium (default) base',
+    element: (
+      <Fieldset>
+        <Legend>Select an app</Legend>
+        <FormElementControl>
+          <VisualPicker
+            type="radio"
+            icon
+            sprite="utility"
+            symbol="connected_apps"
+            label={<Option label="Connected App" />}
+            size="medium"
+          />
+          <VisualPicker
+            type="radio"
+            icon
+            sprite="utility"
+            symbol="custom_apps"
+            label={<Option label="Custom App" />}
+            size="medium"
+          />
+        </FormElementControl>
+      </Fieldset>
+    )
+  },
+  {
     id: 'base_large',
-    label: 'large base',
+    label: 'Large base',
     element: (
       <Fieldset>
         <Legend>Select an app</Legend>
@@ -195,7 +250,6 @@ export let examples = [
           />
           <VisualPicker
             type="radio"
-            disabled
             icon
             sprite="utility"
             symbol="custom_apps"
@@ -207,8 +261,43 @@ export let examples = [
     )
   },
   {
+    id: 'checkbox-group_small',
+    label: 'Small base with checkboxes',
+    element: (
+      <Fieldset>
+        <Legend>Add the following object(s)</Legend>
+        <FormElementControl>
+          <VisualPicker
+            type="checkbox"
+            icon
+            sprite="standard"
+            symbol="account"
+            label={<Option label="Account" />}
+            size="small"
+          />
+          <VisualPicker
+            type="checkbox"
+            icon
+            sprite="standard"
+            symbol="lead"
+            label={<Option label="Lead" />}
+            size="small"
+          />
+          <VisualPicker
+            type="checkbox"
+            icon
+            sprite="standard"
+            symbol="orders"
+            label={<Option label="Orders" />}
+            size="small"
+          />
+        </FormElementControl>
+      </Fieldset>
+    )
+  },
+  {
     id: 'checkbox-group',
-    label: 'Checkbox group',
+    label: 'Medium base with checkboxes',
     element: (
       <Fieldset>
         <Legend>Add the following object(s)</Legend>
@@ -243,7 +332,7 @@ export let examples = [
   },
   {
     id: 'checkbox-group_large',
-    label: 'Large checkbox group',
+    label: 'Large base with checkboxes',
     element: (
       <Fieldset>
         <Legend>Add the following object(s)</Legend>

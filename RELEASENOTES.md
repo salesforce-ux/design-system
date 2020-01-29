@@ -3,6 +3,11 @@
 
 ## Release 2.12.0 - May 8, 2020
 
+## Components
+### [Visual Picker](https://www.lightningdesignsystem.com/components/visual-picker)
+#### Changed
+- Added a small variant to visual picker
+
 ## Release 2.11.2 - January 23, 2020
 
 ## Updated

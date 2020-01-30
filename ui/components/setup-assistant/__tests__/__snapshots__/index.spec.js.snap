@@ -49,10 +49,12 @@ exports[`Setup Assistant  renders a complete setup assistant step 1`] = `
           <svg
             viewBox="-1 -1 2 2"
           >
-            <path
+            <circle
               className="slds-progress-ring__path"
-              d="M 1 0 A 1 1 0 1 1 1 -2.4492935982947064e-16 L 0 0"
+              cx="0"
+              cy="0"
               id="slds-progress-ring-path-4"
+              r="1"
             />
           </svg>
         </div>
@@ -199,10 +201,12 @@ exports[`Setup Assistant  renders a setup assistant step with the title as a but
           <svg
             viewBox="-1 -1 2 2"
           >
-            <path
+            <circle
               className="slds-progress-ring__path"
-              d="M 1 0 A 1 1 0 1 1 1 -2.4492935982947064e-16 L 0 0"
+              cx="0"
+              cy="0"
               id="slds-progress-ring-path-5"
+              r="1"
             />
           </svg>
         </div>
@@ -286,10 +290,12 @@ exports[`Setup Assistant  renders a setup assistant step with title button and a
           <svg
             viewBox="-1 -1 2 2"
           >
-            <path
+            <circle
               className="slds-progress-ring__path"
-              d="M 1 0 A 1 1 0 1 1 1 -2.4492935982947064e-16 L 0 0"
+              cx="0"
+              cy="0"
               id="slds-progress-ring-path-6"
+              r="1"
             />
           </svg>
         </div>
@@ -573,7 +579,7 @@ exports[`Setup Assistant  renders an in-progess setup assistant step 1`] = `
           >
             <path
               className="slds-progress-ring__path"
-              d="M 1 0 A 1 1 0 1 0 -0.9510565162951535 0.3090169943749475 L 0 0"
+              d="M 1 0 A 1 1 0 1 0 -0.95 0.31 L 0 0"
               id="slds-progress-ring-path-2"
             />
           </svg>
@@ -637,7 +643,7 @@ exports[`Setup Assistant  renders an in-progess setup assistant step with progre
           >
             <path
               className="slds-progress-ring__path"
-              d="M 1 0 A 1 1 0 0 0 -0.48175367410171527 -0.8763066800438636 L 0 0"
+              d="M 1 0 A 1 1 0 0 0 -0.48 -0.88 L 0 0"
               id="slds-progress-ring-path-3"
             />
           </svg>
@@ -701,7 +707,7 @@ exports[`Setup Assistant  renders an incomplete setup assistant step 1`] = `
           >
             <path
               className="slds-progress-ring__path"
-              d="M 1 0 A 1 1 0 0 0 1 -2.4492935982947064e-16 L 0 0"
+              d="M 1 0 A 1 1 0 0 0 1.00 -0.00 L 0 0"
               id="slds-progress-ring-path-1"
             />
           </svg>

@@ -2,7 +2,15 @@
 
 # Progress Ring Release Notes
 
-<!-- ## [Unreleased] -->
+## 2.12.0
+
+### Fixed
+
+- Resolved IE11 issue with positioning of the `.slds-progress-ring__progress` element by setting more explicit position settings.
+
+### Changed
+
+- Changed blueprint recommendation to use a `<circle>` element instead of a `<path>` when the completion of the progress circle is 100%. This resolves an IE11 rendering issue with completed rings.
 
 ## 2.7.0
 

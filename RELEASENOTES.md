@@ -4,6 +4,12 @@
 ## Release 2.12.0 - May 8, 2020
 
 ## Components
+### [Progress Ring](https://www.lightningdesignsystem.com/components/progress-ring)
+#### Fixed
+- Resolved IE11 issue with positioning of the `.slds-progress-ring__progress` element by setting more explicit position settings.
+#### Changed
+- Changed blueprint recommendation to use a `<circle>` element instead of a `<path>` when the completion of the progress circle is 100%. This resolves an IE11 rendering issue with completed rings.
+
 ### [Visual Picker](https://www.lightningdesignsystem.com/components/visual-picker)
 #### Changed
 - Added a small variant to visual picker

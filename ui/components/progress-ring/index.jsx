@@ -9,8 +9,8 @@ import _ from '../../shared/helpers';
 class ProgressRing extends Component {
   getCoordinatesForPercent(percent) {
     const pct = percent / 100;
-    const x = Math.cos(2 * Math.PI * pct);
-    const y = Math.sin(2 * Math.PI * pct);
+    const x = Math.cos(2 * Math.PI * pct).toFixed(2);
+    const y = Math.sin(2 * Math.PI * pct).toFixed(2);
 
     return { x, y };
   }
@@ -51,11 +51,21 @@ class ProgressRing extends Component {
           aria-valuenow={percent}
         >
           <svg viewBox="-1 -1 2 2">
-            <path
-              className="slds-progress-ring__path"
-              id={uniqueId}
-              d={`M 1 0 A 1 1 0 ${isLong} ${isSweep} ${x} ${y} L 0 0`}
-            />
+            {percent === 100 ? (
+              <circle
+                className="slds-progress-ring__path"
+                id={uniqueId}
+                cx="0"
+                cy="0"
+                r="1"
+              />
+            ) : (
+              <path
+                className="slds-progress-ring__path"
+                id={uniqueId}
+                d={`M 1 0 A 1 1 0 ${isLong} ${isSweep} ${x} ${y} L 0 0`}
+              />
+            )}
           </svg>
         </div>
 

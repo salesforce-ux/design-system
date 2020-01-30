@@ -43,6 +43,6 @@ gitP()
       }
     });
   })
-  .catch(error => {
+  .catch(err => {
     console.log(error);
   });

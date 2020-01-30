@@ -32,7 +32,7 @@ We also include size variants to fit a variety of use cases:
 
 #### Markup
 
-Each row in the expression builder is a `<fieldset>` and is contained in an `<li>` inside of a `<ul>`.
+Each row in the expression builder is a `&lt;fieldset&gt;` and is contained in an `&lt;li&gt;` inside of a `&lt;ul&gt;`.
 
 <CodeBlock toggleCode={false}>
   <ul>
@@ -48,7 +48,7 @@ Each row in the expression builder is a `<fieldset>` and is contained in an `<li
   </ul>
 </CodeBlock>
 
-The first child DOM element of the `<fieldset>` should be the `<legend>`, which includes the logic operator, such as "AND" or "OR", and assistive text describing the current rule, such as "Condition 3".
+The first child DOM element of the `&lt;fieldset&gt;` should be the `&lt;legend&gt;`, which includes the logic operator, such as "AND" or "OR", and assistive text describing the current rule, such as "Condition 3".
 
 <CodeBlock toggleCode={false}>
   <legend className="slds-expression__legend">
@@ -364,17 +364,17 @@ One example of in-context expression building is filtering. To see examples of f
 #### With an error
 
 <Blockquote type="a11y" header="Accessibility Requirement">
-  When an error message is displayed to the user, the <code>&lt;div&gt;</code>{' '}
-  containing the error message should have the <code>role="alert"</code>{' '}
-  attribute applied. This will immediately notify the user that an error has
-  occurred.
+  When an error message is displayed to the user, the{' '}
+  <code>&lt;div&gt;</code> containing the error message should
+  have the <code>role="alert"</code> attribute applied. This
+  will immediately notify the user that an error has occurred.
 </Blockquote>
 
 <Blockquote type="a11y" header="Accessibility Requirement">
   The filter button that has an error is associated to that error with the use
-  of <code>aria-describedby</code>. The value of <code>aria-describedby</code>{' '}
-  matches the ID given to the element that contains the corresponding error
-  message.
+  of <code>aria-describedby</code>. The value of{' '}
+  <code>aria-describedby</code> matches the ID given to the
+  element that contains the corresponding error message.
 </Blockquote>
 
 <Example title="Expression Builder - Filtering with error">

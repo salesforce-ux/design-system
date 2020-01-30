@@ -34,41 +34,19 @@ const Example = styled.div`
 const StoryFrame = props => {
   const { component, label, isViewport, styles, isFullBleed } = props;
 
-  const isBeingTested = new URL(window.location).searchParams.get(
-    'eyes-storybook'
-  );
-
-  const LazyLoadWrapper = props => {
-    const { children, isBeingTested } = props;
-
-    return (
-      <React.Fragment>
-        {isBeingTested === 'true' ? (
-          <Wrapper>{children}</Wrapper>
-        ) : (
-          <LazyLoad height={200} offset={100}>
-            <Wrapper>{children}</Wrapper>
-          </LazyLoad>
-        )}
-      </React.Fragment>
-    );
-  };
-
-  LazyLoadWrapper.propTypes = {
-    isBeingTested: PropTypes.bool
-  };
-
   return (
-    <LazyLoadWrapper isBeingTested={isBeingTested}>
-      <Label>{label}</Label>
-      <Example
-        isViewport={isViewport}
-        styles={styles}
-        isFullBleed={isFullBleed}
-      >
-        {component}
-      </Example>
-    </LazyLoadWrapper>
+    <LazyLoad height={200} offset={100}>
+      <Wrapper>
+        <Label>{label}</Label>
+        <Example
+          isViewport={isViewport}
+          styles={styles}
+          isFullBleed={isFullBleed}
+        >
+          {component}
+        </Example>
+      </Wrapper>
+    </LazyLoad>
   );
 };
 

@@ -55,8 +55,8 @@ When placing the icon code into your page, customize the path in the `use` attri
 
 If an icon has more than one word in the name, it should be included in the `use` attribute with the underscore separator as shown on the icon page. For example: log_a_call.
 
-You must require SLDS in your application for SVG sprites to work. If you’re using Visualforce, see [the Visualforce tutorial](/platforms/visualforce). If you’re using [Lightning components, see this documentation](/platforms/lightning).
-- You can access the SVG sprites by downloading the entire [CSS Framework or just the icons](/downloads). To include a sprite in your application, the recommended method is to place it into the page as the first element inside the `body` element. Alternatively, you can leave the sprite in the assets/icons directory and link to it from your page. To render a sprite icon, add the tiny [SVG for Everybody](https://github.com/jonathantneal/svg4everybody) script for Internet Explorer.
+You must require SLDS in your application for SVG sprites to work. If you’re using Visualforce, see <a href="/platforms/visualforce">the Visualforce tutorial</a>. If you’re using <a href="/platforms/lightning"> Lightning components, see this documentation</a>.
+- You can access the SVG sprites by downloading the entire [CSS Framework or just the icons](/downloads). To include a sprite in your application, the recommended method is to place it into the page as the first element inside the `body` element. Alternatively, you can leave the sprite in the assets/icons directory and link to it from your page. To render a sprited icon, add the tiny [SVG for Everybody](https://github.com/jonathantneal/svg4everybody) script for Internet Explorer.
 - When placed into the `body`, the SVG sprite takes up space in the page. Use either `display:none` or `position:absolute` and set both the width and height to zero.
 
 ## Types
@@ -173,7 +173,7 @@ To change the fill of an icon to the light text color, add the `slds-icon-text-l
 
 To change a background color for action, custom, or standard icons, use composed class names:
 
-`.slds-icon-[sprite name]-[icon name]`
+<code className="docs">.slds-icon-[sprite name]-[icon name]</code>
 Place the class on the `.slds-icon_container`.
 
 <CodeBlock toggleCode={false}>

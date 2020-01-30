@@ -58,8 +58,8 @@ Clicking on the icon toggle or the primary step's title will open and close that
 <Blockquote type="a11y" header="Accessibility Note">
   Since both the chevron toggle and the step's title act as a trigger to open
   and close the step's detail, ensure both the icon button and the title include
-  <code>aria-controls=[uniqueId]</code> where the <code>uniqueId</code> matches the <code>id</code> on the
-  <code>&lt;div&gt;</code> with the class <code>slds-summary-detail__content</code>.
+  `aria-controls=[uniqueId]` where the `uniqueId` matches the `id` on the
+  `&lt;div&gt;` with `class="slds-summary-detail__content".`
 </Blockquote>
 
 <Example title="Setup Assistant Hub Expandable">
@@ -75,7 +75,7 @@ If the steps have associated progress, a header is added to the card containing 
 <Blockquote type="a11y" header="Accessibility Note">
   In order to prevent duplicating information for screen reader users, the
   percentage info on the top of the progress bar is hidden using the
-  <code>slds-assistive-text</code> class.
+  `slds-assistive-text` class.
 </Blockquote>
 
 <Example title="Setup Assistant Hub Expandable">

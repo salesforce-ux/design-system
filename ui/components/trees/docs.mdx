@@ -26,7 +26,7 @@ In our example, we are using a chevron icon on tree branches to help indicate to
 
 Tree items can only contain text values, no actionable elements, apart from our toggle button, can be placed inside a Tree item.
 
-Trees can only contain a single focusable tree item and `tabindex="0"` must be placed on the `li[role="treeitem]` that takes current focus. Every other actionable and non-actionable element must be unfocused by adding `tabindex="-1"` or removing `tabindex`, respectively.
+Trees can only contain a single focusable tree item and `tabindex="0"` must be placed on the `li[role="treeitem]` that takes current focus. Every other actionable and non-actionable element must be made unfocusable by adding `tabindex="-1"` or removing `tabindex`, respectively.
 
 When implementing collapsed rows, we suggest showing the content DOM nodes within each collapsed row only once the row is expanded for performance reasons. You can additionally toggle the hidden row with `slds-show` and `slds-hide` if you intend to keep all of the content in the DOM.
 
@@ -49,7 +49,7 @@ You can add metatext (see: metatext state) to any tree item, which adds a smalle
 #### Interactions
 
 - Only a single action per tree item
-- Only 1 focused item per Tree
+- Only 1 focusabled item per Tree
 - Actionable elements in a tree item are mouse only and should not be focusable, they should be presentational and should be hidden from screen readers and keyboard users
 - Focus is placed on the entire `li[role="treeitem"]`. If that item has child items, focus must include those as well.
 

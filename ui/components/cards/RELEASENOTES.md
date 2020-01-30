@@ -3,11 +3,6 @@
 # Cards Release Notes
 
 <!-- ## [Unreleased] -->
-## 2.11.0
-
-### Fixed
-- Added `display: flex` to `.slds-card__header-title` to enable truncation on contained link that already has `slds-truncate`
-
 ## 2.10.0
 
 ### Changed

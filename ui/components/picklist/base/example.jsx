@@ -4,12 +4,6 @@
 import React from 'react';
 import Combobox from '../../combobox';
 import Listbox, { ListboxWrapper, ListboxGroup } from '../../combobox/listbox/';
-import {
-  ListboxDeprecated,
-  ListboxListDeprecated,
-  ListboxItemDeprecated,
-  ComboboxSearchInputDeprecated
-} from '../deprecated/';
 import ListboxOfSelections from '../../combobox/listbox-of-pills/';
 import { UtilityIcon } from '../../icons/base/example';
 import _ from '../../../shared/helpers';
@@ -305,45 +299,6 @@ export let states = [
         isOpen
         hasFocus
       />
-    )
-  },
-  {
-    // pulled this from `v2.2.2` to display and test #4113
-    id: 'deprecated-picklist-open',
-    label: 'Deprecated Picklist Open',
-    element: (
-      <div className="demo-only" style={{ height: '240px' }}>
-        <div className="slds-picklist slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open">
-          <ComboboxSearchInputDeprecated dropdown="open" />
-          <ListboxDeprecated className="slds-dropdown_left slds-dropdown_length-5">
-            <ListboxListDeprecated>
-              <ListboxItemDeprecated
-                isSelectable
-                text
-                title="Option A"
-                tabIndex="0"
-              >
-                Option A
-              </ListboxItemDeprecated>
-              <ListboxItemDeprecated isSelectable text title="Option B">
-                Option B
-              </ListboxItemDeprecated>
-              <ListboxItemDeprecated isSelectable text title="Option C">
-                Option C
-              </ListboxItemDeprecated>
-              <ListboxItemDeprecated isSelectable text title="Option D">
-                Option D
-              </ListboxItemDeprecated>
-              <ListboxItemDeprecated isSelectable text title="Option E">
-                Option E
-              </ListboxItemDeprecated>
-              <ListboxItemDeprecated isSelectable text title="Option F">
-                Option FGHIJKLMNOPQRSTUVWXYZ
-              </ListboxItemDeprecated>
-            </ListboxListDeprecated>
-          </ListboxDeprecated>
-        </div>
-      </div>
     )
   }
 ];

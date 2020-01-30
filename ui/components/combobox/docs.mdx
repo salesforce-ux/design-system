@@ -55,17 +55,19 @@ To toggle visibility of the `listbox`, add the class `slds-is-open` to the `slds
 It is most common to expand the `listbox` of options when a user clicks on the Combobox. For a more detailed description of interaction behaviors, see the [Interaction](#Interaction) section.
 
 <Blockquote type="a11y" header="Accessibility Requirement">
-  When toggling visibility of the Combobox, the <code>aria-expanded</code>{' '}
-  attribute needs to be toggled to <code>true</code>. Set it to{' '}
+  When toggling visibility of the Combobox, the{' '}
+  <code>aria-expanded</code> attribute needs to be toggled to{' '}
+  <code>true</code>. Set it to{' '}
   <code>false</code> again when the options are hidden.
 </Blockquote>
 
 <Blockquote type="a11y" header="Accessibility Note">
-  The <code>listbox</code> of options must be an <b>owned</b> child of the{' '}
-  <code>combobox</code>. If it cannot be a direct child of the{' '}
-  <code>combobox</code> element, then <code>aria-owns</code> must be placed on
-  the <code>combobox</code> and point to the ID of the <code>listbox</code>{' '}
-  instead.
+  The <code>listbox</code> of options must be an <b>owned</b>{' '}
+  child of the <code>combobox</code>. If it cannot be a direct
+  child of the <code>combobox</code> element, then{' '}
+  <code>aria-owns</code> must be placed on the{' '}
+  <code>combobox</code> and point to the ID of the{' '}
+  <code>listbox</code> instead.
 </Blockquote>
 
 <CodeView style={{ height: '17rem' }}>
@@ -83,9 +85,9 @@ It is most common to expand the `listbox` of options when a user clicks on the C
 
 #### Loading more options
 
-If you are dynamically loading in more items to the listbox, the very last `<li>` of the `<ul>` should receive the `role="presentation"` attribute and have the [Spinner component](/components/spinners/) injected into it.
+If you are dynamically loading in more items to the listbox, the very last `&lt;li&gt;` of the `&lt;ul&gt;` should receive the `role="presentation"` attribute and have the [Spinner component](/components/spinners/) injected into it.
 
-For layout purposes, wrap the spinner in a `<div>` with the class `slds-align_absolute-center` to position the spinner in the middle of the list item, as well as `slds-p-top_medium` to provide the appropriate amount of space for the spinner to be visible.
+For layout purposes, wrap the spinner in a `&lt;div&gt;` with the class `slds-align_absolute-center` to position the spinner in the middle of the list item, as well as `slds-p-top_medium` to provide the appropiate amount of space for the spinner to be visible.
 
 <CodeView style={{ height: '14rem' }}>
   {getDisplayElementById(BaseExamples.states, 'loading-options')}
@@ -166,7 +168,8 @@ If using a keyboard, placing focus into the Combobox input field _will not_ disp
 After focusing inside the Combobox with the keyboard, pressing the `Down` or `Enter` key will expand the collapsed Combobox and display the `listbox` options. Be sure to update `aria-expanded` to be true. This will also highlight the first option in the listbox.
 
 <Blockquote type="a11y" header="Accessibility Requirement">
-  Update <code>aria-expanded</code> to "true" when the Combobox is expanded.
+  Update <code>aria-expanded</code> to "true" when the Combobox
+  is expanded.
 </Blockquote>
 
 #### Highlighting an option
@@ -180,10 +183,12 @@ When an option from the `listbox` is "in focus", user focus never leaves the `in
 
 <Blockquote type="a11y" header="Accessibility Requirement">
   When highlighting an option with "faux focus", the{' '}
-  <code>aria-activedescendant</code> attribute on the <code>input</code> needs
-  to be set to the value of the ID of the highlighted option. The highlighted
-  option must also have <code>aria-selected="true"</code>. When no option is
-  highlighted, <code>aria-activedescendant</code> must be removed.
+  <code>aria-activedescendant</code> attribute on the{' '}
+  <code>input</code> needs to be set to the value of the ID of
+  the highlighted option. The highlighted option must also have{' '}
+  <code>aria-selected="true"</code>. When no option is
+  highlighted, <code>aria-activedescendant</code> must be
+  removed.
 </Blockquote>
 
 By typing the first letter of an option name, the first matching option will highlight. When the letter doesn't match an option, highlighting doesn't move.
@@ -199,7 +204,8 @@ To collapse the Combobox the user should be able to press the `Escape` key on th
 Pressing the `Enter` key whilst an option is highlighted will select the option as the current value and collapse the Combobox.
 
 <Blockquote type="a11y" header="Accessibility Requirement">
-  Update <code>aria-expanded</code> to "false" when the Combobox is collapsed.
+  Update <code>aria-expanded</code> to "false" when the Combobox
+  is collapsed.
 </Blockquote>
 
 ### Selecting an option
@@ -225,9 +231,10 @@ When an option becomes selected, the class `slds-is-selected` should be applied 
 When re-opening a Combobox that already has a selected value, the `listbox` should be displayed with the selected option already highlighted.
 
 <Blockquote type="a11y" header="Accessibility Requirement">
-  Be sure to re-set the <code>aria-activedescendant</code> attribute on the
-  `input` to the value of the ID of the highlighted option. The highlighted
-  option must also have <code>aria-selected="true"</code>.
+  Be sure to re-set the <code>aria-activedescendant</code>{' '}
+  attribute on the `input` to the value of the ID of the highlighted option. The
+  highlighted option must also have{' '}
+  <code>aria-selected="true"</code>.
 </Blockquote>
 
 #### Multiple selections
@@ -275,8 +282,9 @@ If no option matches, the user can complete the value of the combobox by finishi
 
 <Blockquote type="a11y" header="Accessibility Difference">
   The difference between the <strong>Base Combobox</strong> and the{' '}
-  <strong>Autocomplete Combobox</strong>, is that the text <code>input</code>{' '}
-  must have the <code>readonly</code> attribute removed and replaced with{' '}
+  <strong>Autocomplete Combobox</strong>, is that the text{' '}
+  <code>input</code> must have the{' '}
+  <code>readonly</code> attribute removed and replaced with{' '}
   <code>aria-autocomplete="list"</code>.
 </Blockquote>
 
@@ -300,9 +308,10 @@ Whilst typing, the highlighted option in the `listbox` should be the user's text
 
 <Blockquote type="a11y" header="Accessibility Requirement">
   When highlighting an option with "faux focus", the{' '}
-  <code>aria-activedescendant</code> attribute on the `input` needs to be set to
-  the value of the ID of the highlighted option. The highlighted option must
-  also have <code>aria-selected="true"</code>.
+  <code>aria-activedescendant</code> attribute on the `input`
+  needs to be set to the value of the ID of the highlighted option. The
+  highlighted option must also have{' '}
+  <code>aria-selected="true"</code>.
 </Blockquote>
 
 <CodeView style={{ height: '12rem' }}>
@@ -384,7 +393,7 @@ The options now have extra information about them, such as the type of entity an
 
 As with the Autocomplete Combobox, the user can start typing into the `input` to search for Salesforce Entities that match their search term.
 
-In the resultant displayed options, we highlight the matched term by bolding it using the `<mark>` element.
+In the resultant displayed options, we highlight the matched term by bolding it using the `&lt;mark&gt;` element.
 
 <CodeView style={{ height: '15rem' }}>
   {getDisplayElementById(AutocompleteExamples.states, 'lookup-typeahead')}
@@ -407,14 +416,15 @@ The same keyboard interactions apply from the base Combobox, but with these diff
 
 The user again can click on the desired option or press the `Enter` key with the desired option highlighted. The user can only select from the returned options; a plain text string is not a valid selection with the Entity Lookup.
 
-The selected option is still set as the value of the text `input`, but this time we make the `input` look like a dismissible pill. This `input` becomes readonly at this point, so the user can no longer type into it.
+The selected option is still set as the value of the text `input`, but this time we make the `input` look like a dismissable pill. This `input` becomes readonly at this point, so the user can no longer type into it.
 
 To remove the selected option, simply press the `Delete` key when focused inside the text `input` or click the remove "x".
 
 <Blockquote type="a11y" header="Accessibility Requirement">
-  When the option is selected, make sure to add the <code>readonly</code>{' '}
-  attribute to the text <code>input</code>. Be sure to remove it again when the
-  option is cleared.
+  When the option is selected, make sure to add the{' '}
+  <code>readonly</code> attribute to the text{' '}
+  <code>input</code>. Be sure to remove it again when the option
+  is cleared.
 </Blockquote>
 
 <CodeView>
@@ -443,14 +453,15 @@ The containing `div` of the comboboxes should have the class `slds-combobox-grou
 
 <Blockquote type="warning" header="Keep in mind">
   The grouped combobox only accepts <em>one</em> addon, in addition to the
-  primary combobox. Use the classes <code>slds-combobox_addon-start</code> and{' '}
-  <code>slds-combobox_addon-end</code> to describe the position of the form
-  element.
+  primary combobox. Use the classes{' '}
+  <code>slds-combobox_addon-start</code> and{' '}
+  <code>slds-combobox_addon-end</code> to describe the position
+  of the form element.
 </Blockquote>
 
 <Blockquote type="a11y" header="Accessibility Requirement">
-  Be sure to set <code>aria-controls</code> on the Object Switcher, which points
-  to the Search Combobox ID.
+  Be sure to set <code>aria-controls</code> on the Object
+  Switcher, which points to the Search Combobox ID.
 </Blockquote>
 
 <CodeView style={{ height: '17rem' }}>{GroupedExamples.default}</CodeView>
@@ -576,7 +587,7 @@ The key difference for `dialog` dropdowns lies in how they handle focus. In `lis
 
 ### Open Dialog
 
-To open the dialog, remove the class `slds-popover_hide` from the `<div>` with `class="slds-popover"`. Any content can go inside a `dialog` dropdown.
+To open the dialog, remove the class `slds-popover_hide` from the `&lt;div&gt;` with `class="slds-popover"`. Any content can go inside a `dialog` dropdown.
 
 <Blockquote type="a11y" header="Accessibility Note">
   When the dialog is open, be sure to change `aria-expanded` to **true** on the

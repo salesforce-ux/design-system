@@ -17,11 +17,11 @@ import { getDisplayElementById } from '../../shared/helpers';
 
 ## About Cards
 
-To initialize a card, apply the `slds-card` class to an `<article>` element.
+To initialize a card, apply the `slds-card` class to an `&lt;article&gt;` element.
 
 ### Accessibility
 
-Cards should use an underlying `<article>` element to maintain usability for some screen reader users.
+Cards should use an underlying <code>&lt;article&gt;</code> element to maintain usability for some screen reader users.
 
 ## Base Card Structure
 
@@ -102,8 +102,8 @@ The card body accommodates any layout or design, as long as its a grouping of re
 <Blockquote type="note" header="Styling Note">
   By default, the body of a card does not have padding. Components inside the
   card will be flush to the left and right edges of the card. If you need to add
-  padding, use the <code>slds-card__body_inner</code> class on the{' '}
-  <code>slds-card__body</code> element.
+  padding, use the <code>slds-card__body_inner</code> class on
+  the <code>slds-card__body</code> element.
 </Blockquote>
 
 #### Default without padding
@@ -132,8 +132,8 @@ The card footer is optional and should _**only**_ have a "View All" link that ta
 </Blockquote>
 
 <Blockquote type="note" header="Implementation Note">
-  The examples in this documentation use the <code>slds-card__footer-action</code> class on
-  the footer link <code>&lt;a&gt;</code> to force the footer's click target to span the
+  The examples in this documentation use the `slds-card__footer-action` class on
+  the footer link `&lt;a&gt;` to force the footer's click target to span the
   entire width of the card. Simply remove this class if not needed.
 </Blockquote>
 
@@ -193,7 +193,7 @@ Placing contact tiles inside of an `slds-card__body` is an example of using `sld
 
 ### Nested Cards
 
-When a card is located inside of another card body, we remove the drop shadow and border of the nested cards. You can opt into adding the border back by applying `slds-card_boundary` to the `slds-card` element.
+When a card is located inside of another card body, we remove the dropshadow and border of the nested cards. You can opt into adding the border back by applying `slds-card_boundary` to the `slds-card` element.
 
 #### No styling
 

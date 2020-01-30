@@ -14,13 +14,6 @@
   .slds-picklist {
     position: relative;
 
-    /**
-     * Actionable element inside of a picklist item
-     *
-     * @selector .slds-lookup__item-action
-     * @restrict .slds-picklist a, .slds-picklist button, .slds-picklist span
-     */
-
     // Force width on picklist
     .slds-dropdown {
       width: $size-small;
@@ -52,25 +45,6 @@
       &.slds-is-selected .slds-icon--selected {
         fill: $color-text-icon-default-hover;
         opacity: 1;
-      }
-    }
-
-    input[readonly] {
-      padding-left: $spacing-small;
-      border-color: $color-border-input;
-      background-color: $color-background-input;
-      font-size: inherit;
-      font-weight: $font-weight-regular;
-
-      &:focus,
-      &.slds-has-focus {
-        border-color: $color-border-brand-primary;
-        box-shadow: $shadow-button-focus;
-      }
-
-      &[disabled] {
-        background-color: $color-background-input-disabled;
-        border-color: $color-border-input-disabled;
       }
     }
 

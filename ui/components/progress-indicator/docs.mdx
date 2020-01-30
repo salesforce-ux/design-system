@@ -7,6 +7,8 @@ import { Step as VerticalStep, Progress as VerticalProgress } from './vertical/e
 import { Tooltip } from '../tooltips/base/example';
 import { Modal, ModalHeader, ModalContent, ModalFooter } from '../modals/base/example';
 
+// import style from './docs/index.scss';
+
 <div className="doc lead">
   A progress indicator component communicates to the user the progress of a
   particular process.
@@ -26,11 +28,11 @@ import { Modal, ModalHeader, ModalContent, ModalFooter } from '../modals/base/ex
 
 ### Implementation Requirements
 
-The `.slds-progress-bar` accepts a range from 0% to 100%, and this percentage should be applied with inline styling to the `div` with class `slds-progress-bar__value` using JavaScript. If implementing a horizontal progress indicator, set the width, otherwise set the height for vertical progress indicators.
+The <code>.slds-progress-bar</code> accepts a range from 0% to 100%, and this percentage should be applied with inline styling to the <code>div</code> with class <code>slds-progress-bar\_\_value</code> using JavaScript. If implementing a horizontal progress indicator, set the width, otherwise set the height for vertical progress indicators.
 
 ### Accessibility
 
-As the percentage of completion changes, be sure to update the `aria-valuenow` property on the `<div>` with the class `slds-progress-bar`, as well as the `slds-assistive-text` class on the `<span>`.
+As the percentage of completion changes, be sure to update the <code>aria-valuenow</code> property on the `&lt;div&gt;` with `class="slds-progress-bar"`, as well as the `slds-assistive-text` `&lt;span&gt;`.
 
 <CodeBlock toggleCode={false}>
   <div
@@ -64,12 +66,12 @@ As the percentage of completion changes, be sure to update the `aria-valuenow` p
 
 ### Active Step
 
-When a step becomes active, the `<div>` with class `.slds-progress__item` should also get the class `slds-is-active`.
+When a step becomes active, the `&lt;div&gt;` with class `.slds-progress__item` should also get the class `.slds-is-active`.
 
 <Blockquote type="a11y" header="Accessibility Requirements">
   When a step is active, be sure to append "- Active" to the hidden button text
-  in the <code>&lt;span&gt;</code> with class <code>slds-assistive-text</code>, such as "Step 1 -
-  Active".
+  in the `&lt;span&gt;` with class `slds-assistive-text`, such as `Step 1 -
+  Active`.
 </Blockquote>
 
 <Example title="Progress Indicator Active Horizontal">
@@ -86,12 +88,12 @@ When a step becomes active, the `<div>` with class `.slds-progress__item` should
 
 ### Completed Step
 
-When the step is completed, the `slds-is-active` class should be replaced with the class `slds-is-completed` on `slds-progress__item`. At that point, the `slds-progress__item` element will receive a "success" icon, providing feedback that the step has been completed.
+When the step is completed, the `.slds-is-active` class should be replaced with the class `.slds-is-completed` on `.slds-progress__item`. At that point, the `.slds-progress__item` element will receive a "success" icon, providing feedback that the step has been completed.
 
 <Blockquote type="a11y" header="Accessibility Requirements">
   When a step is completed, be sure to append "- Completed" to the hidden button
-  text in the <code>&lt;span&gt;</code> with class <code>slds-assistive-text</code>, such as "Step 2 -
-  Completed".
+  text in the `&lt;span&gt;` with class `slds-assistive-text`, such as `Step 2 -
+  Completed`.
 </Blockquote>
 
 <Example title="Progress Indicator Done Horizontal">
@@ -108,12 +110,12 @@ When the step is completed, the `slds-is-active` class should be replaced with t
 
 ### Error in a Step
 
-When an error has occurred on a step, the `<div>` with class `slds-progress__item` should also get the class `slds-has-error`.
+When an error has occurred on a step, the `&lt;div&gt;` with class `.slds-progress__item` should also get the class `.slds-has-error`.
 
 <Blockquote type="a11y" header="Accessibility Requirements">
   When a step has an error, be sure to append "- Error" to the hidden button
-  text in the <code>&lt;span&gt;</code> with class <code>slds-assistive-text</code>, such as "Step 3 -
-  Error".
+  text in the `&lt;span&gt;` with class `slds-assistive-text`, such as `Step 3 -
+  Error`.
 </Blockquote>
 
 <Example title="Progress Indicator Done Horizontal">
@@ -209,13 +211,13 @@ When an error has occurred on a step, the `<div>` with class `slds-progress__ite
 
 ## Vertical
 
-To display a vertical progress indicator, the `<div>` with class `slds-progress` should also get the class `slds-progress_vertical`. The vertical progress indicator will take up 100% of the height of its container. The step titles in the vertical variant appear next to the step, instead of in a tooltip.
+To display a vertical progress indicator, the `&lt;div&gt;` with class `.slds-progress` should also get the class `.slds-progress_vertical`. The vertical progress indicator will take up 100% of the height of its container. The step titles in the vertical variant appear next to the step, instead of in a tooltip.
 
 <Blockquote type="note" header="Implementation Note">
   The key markup difference between the horizontal and vertical variants is the
-  progress markers. Horizontal progress indicators use <code>&lt;button&gt;</code> for each
+  progress markers. Horizontal progress indicators use `&lt;button&gt;` for each
   step, whereas Vertical progress indicator steps are not interactive and
-  therefore simply use <code>&lt;div&gt;</code>.
+  therefore simply use `&lt;div&gt;`.
 </Blockquote>
 
 <Example title="Progress Indicator Vertical">
@@ -232,7 +234,7 @@ To display a vertical progress indicator, the `<div>` with class `slds-progress`
 
 ### Green Success
 
-To create a green completed step, the `slds-progress__item` element should also receive the `slds-is-completed` class. In addition, the `<span>` with class `slds-progress__marker_icon` should also get the class `slds-progress__marker_icon-success`.
+To create a green completed step, the `.slds-progress__item` element should also receive the `.slds-is-completed` class. In addition, the `&lt;span&gt;` with class `.slds-progress__marker_icon` should also get the class `slds-progress__marker_icon-success`.
 
 <Example title="Progress Indicator Vertical Success">
   <CodeView>
@@ -250,7 +252,7 @@ To create a green completed step, the `slds-progress__item` element should also 
 
 ### Error in a Step
 
-When an error has occurred on a step, the `<div>` with class `slds-progress__item` should also get the class `slds-has-error`.
+When an error has occurred on a step, the `&lt;div&gt;` with class `.slds-progress__item` should also get the class `.slds-has-error`.
 
 <Example title="Progress Indicator Vertical Success">
   <CodeView>
@@ -264,9 +266,9 @@ When an error has occurred on a step, the `<div>` with class `slds-progress__ite
   </CodeView>
 </Example>
 
-### Multi-line Step Titles
+### Multiline Step Titles
 
-The vertical progress indicator also supports multi-line step descriptions.
+The vertical progress indicator also supports multiline step descriptions.
 
 <Example title="Progress Indicator Vertical">
   <CodeView>

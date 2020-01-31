@@ -122,9 +122,9 @@ Alternatively, two classes are available to add border using css. Adding the cla
 
 **Communicating Status to Screen Readers:**
 
-When communitcatin tab status updates to the user, unread, warning, error and success notifications should  all employ the same technique to communicate that update to users of assistive technology, who would be otherwise unaware of that status change.
+When communicating tab status updates to the user, unread, warning, error and success notifications should  all employ the same technique to communicate that update to users of assistive technology, who would be otherwise unaware of that status change.
 
-You should use a single hidden ARIA live region for the entire sub tabs block, the contents of which gets updated each time a sub tab changes its status. The contents should contain a description of the status level and the name of the tab the status change event occured in. The markup would look something like:
+You should use a single hidden ARIA live region for the entire sub tabs block, the contents of which gets updated each time a sub tab changes its status. The contents should contain a description of the status level and the name of the tab the status change event occurred in. The markup would look something like:
 
 `<div className="slds-assistive-text" aria-live="polite">...</div>`
 

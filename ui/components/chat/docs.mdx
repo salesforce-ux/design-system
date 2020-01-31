@@ -62,7 +62,7 @@ A chat consists of an unordered list of possible chat items, wrapped in a `secti
 
 ### Accessibility
 
-The <code className="doc">log</code> role has an implicit <code className="doc">aria-live</code> property value of <code className="doc">polite</code>, meaning that it comes for free. It also has an implicit <code className="doc">aria-relevant</code> property value of <code className="doc">additions text</code>. Together this means any additional text, or chat items added to the list will automatically be politely announced by a screen reader
+The `log` role has an implicit `aria-live` property value of `polite`, meaning that it comes for free. It also has an implicit `aria-relevant` property value of `additions text`. Together this means any additional text, or chat items added to the list will automatically be politely announced by a screen reader
 
 ## Base
 
@@ -231,8 +231,8 @@ Inbound messages can optionally display the customers avatar. When displaying an
 <Blockquote header="Aria Hidden Avatars" type="a11y">
   Because every inbound message already includes the user's name, the user's
   avatar is redundant and therefore should be treated as decorative. For this
-  reason, we hide the avatar using `aria-hidden="true"` on the `&lt;span&gt;`
-  with `class="slds-avatar"` to avoid redundancy for screen reader users.
+  reason, we hide the avatar using <code>aria-hidden="true"</code> on the <code>&lt;span&gt;</code>
+  with <code>class="slds-avatar"</code> to avoid redundancy for screen reader users.
 </Blockquote>
 
 <Example title="Chat Inbound message with avatar">
@@ -661,7 +661,7 @@ During a chat session a number of events can occur and these are displayed to th
 
 ### Basic chat event
 
-The basic type of events that can occur include;
+The basic type of events that can occur include:
 
 - Rasing a flag
 - Lowering a flag

@@ -75,7 +75,7 @@ import _ from '../../shared/helpers';
 
 ### Structure
 
-The global header is made up of 3 distinct sections, the logo, the global search, and the global actions. Each section is wrapped in a `<div>` with the classname `slds-global-header__item`. The search region gets the modifier class `slds-global-header__item_search`. This class provides particular styling to handle the search box.
+The global header is made up of 3 distinct sections, the logo, the global search, and the global actions. Each section is wrapped in a `<div>` with the class name `slds-global-header__item`. The search region gets the modifier class `slds-global-header__item_search`. This class provides particular styling to handle the search box.
 
 <Example title="global header layout">
   <CodeBlock toggleCode={false}>
@@ -91,7 +91,7 @@ The global header is made up of 3 distinct sections, the logo, the global search
   </CodeBlock>
 </Example>
 
-In most scenarios, you will want to fix the global header to the top of the viewport. To achieve this, wrap the global header component in a `<div>` with the classname `slds-global-header_container`.
+In most scenarios, you will want to fix the global header to the top of the viewport. To achieve this, wrap the global header component in a `<div>` with the class name `slds-global-header_container`.
 
 <Example title="global header container">
   <CodeBlock toggleCode={false}>
@@ -181,7 +181,7 @@ For screen reading users, we need to provide a way to navigate over the global h
 
 ## Logo
 
-The logo region is simply a `<div>` with the classname `slds-global-header__logo`. The logo is applied as a background image with CSS. This allows us to constrain the dimensions of the logo by a max-height of 40px and a max-width of 200px.
+The logo region is simply a `<div>` with the class name `slds-global-header__logo`. The logo is applied as a background image with CSS. This allows us to constrain the dimensions of the logo by a max-height of 40px and a max-width of 200px.
 
 <CodeView toggleCode={false}>
   <div className="slds-global-header__item">
@@ -489,7 +489,7 @@ When a notification is coming through, we want to apply the `slds-incoming-notif
   The notification badge is hidden from screen readers by add the attribute{' '}
   <code>aria-hidden="true"</code> so the badge doesn't have to
   be inside the button itself. Since the badge count is hidden, we need to add
-  the count number to the button text via some hidden assisitve text. The
+  the count number to the button text via some hidden assistive text. The
   assistive text string should be updated with number of new notifications, such
   as "3 new notification". If there are no notifications, the assistive text
   should read "No notifications". The button element also requires{' '}
@@ -526,4 +526,4 @@ The notification popover is invoked when a user clicks on the notification actio
 
 #### Unread notifications
 
-When a notification item is unread, add the class `slds-global-header__notification_unread` to the `slds-global-header__notification` list item. This will provide the unread styles. In addition to adding the classname, please add a dot indicator, `<abbr class="slds-text-link slds-m-horizontal_xxx-small" title="unread">●</abbr>`, to provide visual affordance that the item is unread.
+When a notification item is unread, add the class `slds-global-header__notification_unread` to the `slds-global-header__notification` list item. This will provide the unread styles. In addition to adding the class name, please add a dot indicator, `<abbr class="slds-text-link slds-m-horizontal_xxx-small" title="unread">●</abbr>`, to provide visual affordance that the item is unread.

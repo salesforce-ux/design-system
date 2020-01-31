@@ -37,39 +37,6 @@
     height: 0;
   }
 
-  /*
-   * It's important to keep these selectors scoped tightly because certain input types have
-   * platform-native styles we don't want to override such as search. In the past, we have
-   * not overridden the appearance property so tread carefully.
-   *
-   * These are considered safe because they fall under '-webkit-appearance: textfield' by Webkit
-   * which primarily renders a platform-native inner gradient.
-   */
-  &[type='text'],
-  &[type='email'],
-  &[type='url'],
-  &[type='tel'] {
-    @include touch-device {
-      // stylelint-disable property-no-vendor-prefix
-      -webkit-appearance: none; // Remove Webkit insertion of gradient from -webkit-appearance: textfield
-      // stylelint-enable property-no-vendor-prefix
-    }
-  }
-
-  /**
-   * Platform-native styled inputs using 'appearance' CSS property set their own min-height and our line-height isn't recognized
-   * until a value is selected (e.x. date input). For mobile devices, this causes height discrepancies before and after selecting
-   * a value. We need to set an explicit height to keep it consistent.
-   */
-  &[type='date'],
-  &[type='datetime-local'],
-  &[type='month'],
-  &[type='time'] {
-    @include touch-device {
-      height: $height-tappable;
-    }
-  }
-
   /**
    * Prevents certain input types from switching to RTL layout.
    */

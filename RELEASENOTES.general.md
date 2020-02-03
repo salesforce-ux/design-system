@@ -1,5 +1,56 @@
 <!-- Release notes authoring guidelines: http://keepachangelog.com/ -->
 <!-- On release, add general notes here. In time the legacy release notes will be add to this -->
+## 2.11.3 - February 3, 2020
+
+## Fixed
+- Corrected class name in Progress Bar Circular example
+- Corrected various documentation typos and formatting in:
+  - components/activity-timeline
+  - components/alert
+  - components/app-launcher
+  - components/avatar-group
+  - components/breadcrumbs
+  - components/builder-header
+  - components/button-groups
+  - components/button-icons
+  - components/buttons
+  - components/cards
+  - components/carousel
+  - components/chat
+  - components/color-picker
+  - components/combobox
+  - components/data-tables
+  - components/datepickers
+  - components/datetime-picker
+  - components/drop-zone
+  - components/dueling-picklist
+  - components/dynamic-menu
+  - components/expandable-section
+  - components/expression
+  - components/file-selector
+  - components/form-element
+  - components/global-header
+  - components/global-navigation
+  - components/icons
+  - components/illustration
+  - components/input
+  - components/menus
+  - components/page-headers
+  - components/panels
+  - components/path
+  - components/picklist
+  - components/pills
+  - components/progress-indicator
+  - components/progress-ring
+  - components/prompt
+  - components/publishers
+  - components/scoped-notifications
+  - components/setup-assistant
+  - components/tabs
+  - components/trees
+  - utilities/borders
+  - utilities/description-list
+  - utilities/line-clamp/docs.mdx
 
 ## 2.11.2 - January 23, 2020
 

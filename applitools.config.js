@@ -9,6 +9,7 @@ module.exports = {
     : 'Stand-alone',
   // showLogs: true,
   saveDebugData: false,
+  exitcode: false,
   concurrency: 100,
   serverUrl: 'https://sfdceyesapi.applitools.com',
   include: ({ name, kind, parameters }) => {

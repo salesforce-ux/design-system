@@ -84,7 +84,7 @@ export let examples = [
   {
     id: 'circular',
     label: 'Circular',
-    element: <ProgressBar className="slds-progress-bar__cicular" value="75" />
+    element: <ProgressBar className="slds-progress-bar_circular" value="75" />
   },
   {
     id: 'thickness-x-small',

@@ -18,19 +18,19 @@ Each Activity timeline item receives its width from the parent list. It can cons
 
 ### Accessibility
 
-Text describing the type of timeline item is placed in a <code>span</code>. It is the first element in the timeline item and should be hidden with the <code>slds-assistive-text</code> class. The <code>SVG</code> image does not need the <code>slds-assistive-text</code> class.
+Text describing the type of timeline item is placed in a `span`. It is the first element in the timeline item and should be hidden with the `slds-assistive-text` class. The `SVG` image does not need the `slds-assistive-text` class.
 
 #### Markup
 
 **Button:**
 
-- <code>aria-controls</code> is used to create an association between the button and the details section. If the details section has an <code>id="email-content"</code>, then the button should have <code>aria-controls="email-content"</code>.
-- The title of the timeline item can also be used as a button to open the details section. If the details section has an <code>id="email-content"</code>, then the div with <code>slds-timeline\_\_trigger</code> should have <code>aria-controls="email-content"</code> and the click handler.
-- <code>aria-expanded</code> indicates if the details section is open or closed and is read aloud by assitive technology when the button is focused.
+- `aria-controls` is used to create an association between the button and the details section. If the details section has an `id="email-content"`, then the button should have `aria-controls="email-content"`.
+- The title of the timeline item can also be used as a button to open the details section. If the details section has an `id="email-content"`, then the div with `slds-timeline__trigger` should have `aria-controls="email-content"` and the click handler.
+- `aria-expanded` indicates if the details section is open or closed and is read aloud by assistive technology when the button is focused.
 
 **Section:**
 
-- <code>aria-hidden</code> indicates if the details section is open or closed, and if set to <code>true</code>, assistive technology hides the details section.
+- `aria-hidden` indicates if the details section is open or closed, and if set to `true`, assistive technology hides the details section.
 
 #### Keyboard Interactions
 
@@ -47,8 +47,7 @@ Text describing the type of timeline item is placed in a <code>span</code>. It i
 <Blockquote type="a11y" header="Accessibility Note">
   When the user interacts with the button to open the details section, <code>aria-expanded</code> on the button should be <code>true</code> and <code>aria-hidden</code> on the details section should be <code>false</code>.
 
-When the user interacts with the button to close the details section, <code>aria-expanded</code> on the button should be <code>false</code> and <code>aria-hidden</code> on the details section should be <code>true</code>.
-
+  When the user interacts with the button to close the details section, <code>aria-expanded</code> on the button should be <code>false</code> and <code>aria-hidden</code> on the details section should be <code>true</code>.
 </Blockquote>
 
 #### Single Item Expanded

@@ -85,9 +85,9 @@ It is most common to expand the `listbox` of options when a user clicks on the C
 
 #### Loading more options
 
-If you are dynamically loading in more items to the listbox, the very last `&lt;li&gt;` of the `&lt;ul&gt;` should receive the `role="presentation"` attribute and have the [Spinner component](/components/spinners/) injected into it.
+If you are dynamically loading in more items to the listbox, the very last `<li>` of the `<ul>` should receive the `role="presentation"` attribute and have the [Spinner component](/components/spinners/) injected into it.
 
-For layout purposes, wrap the spinner in a `&lt;div&gt;` with the class `slds-align_absolute-center` to position the spinner in the middle of the list item, as well as `slds-p-top_medium` to provide the appropiate amount of space for the spinner to be visible.
+For layout purposes, wrap the spinner in a `<div>` with the class `slds-align_absolute-center` to position the spinner in the middle of the list item, as well as `slds-p-top_medium` to provide the appropriate amount of space for the spinner to be visible.
 
 <CodeView style={{ height: '14rem' }}>
   {getDisplayElementById(BaseExamples.states, 'loading-options')}
@@ -393,7 +393,7 @@ The options now have extra information about them, such as the type of entity an
 
 As with the Autocomplete Combobox, the user can start typing into the `input` to search for Salesforce Entities that match their search term.
 
-In the resultant displayed options, we highlight the matched term by bolding it using the `&lt;mark&gt;` element.
+In the resultant displayed options, we highlight the matched term by bolding it using the `<mark>` element.
 
 <CodeView style={{ height: '15rem' }}>
   {getDisplayElementById(AutocompleteExamples.states, 'lookup-typeahead')}
@@ -416,7 +416,7 @@ The same keyboard interactions apply from the base Combobox, but with these diff
 
 The user again can click on the desired option or press the `Enter` key with the desired option highlighted. The user can only select from the returned options; a plain text string is not a valid selection with the Entity Lookup.
 
-The selected option is still set as the value of the text `input`, but this time we make the `input` look like a dismissable pill. This `input` becomes readonly at this point, so the user can no longer type into it.
+The selected option is still set as the value of the text `input`, but this time we make the `input` look like a dismissible pill. This `input` becomes readonly at this point, so the user can no longer type into it.
 
 To remove the selected option, simply press the `Delete` key when focused inside the text `input` or click the remove "x".
 
@@ -587,7 +587,7 @@ The key difference for `dialog` dropdowns lies in how they handle focus. In `lis
 
 ### Open Dialog
 
-To open the dialog, remove the class `slds-popover_hide` from the `&lt;div&gt;` with `class="slds-popover"`. Any content can go inside a `dialog` dropdown.
+To open the dialog, remove the class `slds-popover_hide` from the `<div>` with `class="slds-popover"`. Any content can go inside a `dialog` dropdown.
 
 <Blockquote type="a11y" header="Accessibility Note">
   When the dialog is open, be sure to change `aria-expanded` to **true** on the

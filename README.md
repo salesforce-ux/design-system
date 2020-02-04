@@ -1,6 +1,7 @@
 # Salesforce Lightning Design System
 
 [![Build Status](https://travis-ci.org/salesforce-ux/design-system.svg?branch=master)](https://travis-ci.org/salesforce-ux/design-system)
+[![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=salesforce-ux/design-system-internal&identifier=41938205)](https://dependabot.com)
 
 Welcome to the source code repository for [Salesforce Lightning Design System](http://getslds.com/), brought to you by [Salesforce UX](https://twitter.com/salesforceux).
 

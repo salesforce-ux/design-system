@@ -79,6 +79,7 @@ $_c-icon-action-padding-xx-small: rem(2px);
   color: var(--lwc-c-icon-color, $color-gray-9);
   border-radius: var(--lwc-c-icon-radius, $border-radius-medium);
   vertical-align: middle;
+  transform: var(--lwc-c-icon-transform, none);
 }
 
 /**
@@ -380,26 +381,4 @@ $icon-bg-map: map-merge($bg-actions-map, $bg-custom-map);
 .lwc-svg {
   @include icon-svg;
   fill: var(--lwc-c-icon-primitive-color, currentColor);
-}
-
-/**
- * @summary
- * @selector .lwc-icon-orientation_90deg
- * @restrict .lwc-icon
- * @modifier
- * @group orientation
- */
-.lwc-icon-orientation_90deg {
-  transform: rotate(90deg);
-}
-
-/**
- * @summary
- * @selector .lwc-icon-orientation_neg90deg
- * @restrict .lwc-icon
- * @modifier
- * @group orientation
- */
-.lwc-icon-orientation_neg90deg {
-  transform: rotate(-90deg);
 }

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import Button from '../button';
@@ -9,30 +9,35 @@ import {
   rollupAdoptedStylesheets,
   recursivelyCloneChildren
 } from '../../shared/shadow/helpers';
+import Heading from '../../shared/element/heading';
 
 import common from '../common/index.scss';
 import accordion from './base/index.scss';
 
 const AccordionHeader = ({
   title,
+  headingType,
   isExpanded,
   refId,
   showSource,
-  hideSourceOf
+  hideSourceOf,
+  onClick
 }) => {
+  const stateClassName = {
+    'lwc-accordion__title_is-expanded': isExpanded
+  };
+
+  const computedClassNames = classNames(stateClassName);
+
   return (
     <div className="lwc-accordion__header">
-      <h3 className="lwc-accordion__title">
+      <Heading
+        type={headingType}
+        className={classNames(computedClassNames, 'lwc-accordion__title')}
+        onClick={onClick}
+      >
         <Button
-          leftIcon={
-            <Icon
-              size="x-small"
-              symbol="switch"
-              orientation={!isExpanded && 'neg90deg'}
-              showSource={showSource}
-              hideSourceOf={hideSourceOf}
-            />
-          }
+          leftIcon={<Icon size="x-small" symbol="switch" />}
           ariaControls={refId}
           ariaExpanded={isExpanded}
           showSource={showSource}
@@ -40,7 +45,7 @@ const AccordionHeader = ({
         >
           {title}
         </Button>
-      </h3>
+      </Heading>
       {/* Temporary placeholder until button menu is done */}
       <ButtonIcon
         boundarySize="x-small"
@@ -56,6 +61,7 @@ const AccordionHeader = ({
 
 AccordionHeader.propTypes = {
   title: PropTypes.string.isRequired,
+  headingType: PropTypes.string,
   isExpanded: PropTypes.bool,
   refId: PropTypes.string.isRequired,
   showSource: PropTypes.bool,
@@ -93,9 +99,11 @@ AccordionBody.propTypes = {
 
 const AccordionSection = ({
   title,
+  headingType,
   isExpanded,
   refId,
-  position,
+  isStart,
+  isEnd,
   role,
   children,
   shadow,
@@ -103,18 +111,20 @@ const AccordionSection = ({
   hideSourceOf,
   customization
 }) => {
+  const [setIsExpanded, setIsExpandedState] = useState(isExpanded);
+
+  function toggleAccordion() {
+    setIsExpandedState(setIsExpanded !== true);
+  }
+
   const css = rollupAdoptedStylesheets([common, accordion, customization]);
 
   const positionClassName = {
-    'lwc-accordion__section_start': position === 'start',
-    'lwc-accordion__section_end': position === 'end'
+    'lwc-accordion__section_start': isStart,
+    'lwc-accordion__section_end': isEnd
   };
 
-  const stateClassName = {
-    'lwc-accordion__section_is-expanded': isExpanded
-  };
-
-  const computedClassNames = classNames(positionClassName, stateClassName);
+  const computedClassNames = classNames(positionClassName);
 
   return (
     <Shadow.on
@@ -125,18 +135,20 @@ const AccordionSection = ({
       hideSourceOf={hideSourceOf}
     >
       <section
-        className={'lwc-accordion__section ' + computedClassNames}
+        className={classNames(computedClassNames, 'lwc-accordion__section ')}
         role={role}
       >
         <AccordionHeader
           title={title}
-          isExpanded={isExpanded}
+          headingType={headingType}
+          isExpanded={setIsExpanded}
           refId={refId}
           showSource={showSource}
           hideSourceOf={hideSourceOf}
+          onClick={toggleAccordion}
         />
         <AccordionBody
-          isExpanded={isExpanded}
+          isExpanded={setIsExpanded}
           refId={refId}
           showSource={showSource}
           hideSourceOf={hideSourceOf}
@@ -150,9 +162,11 @@ const AccordionSection = ({
 
 AccordionSection.propTypes = {
   title: PropTypes.string.isRequired,
+  headingType: PropTypes.string,
   isExpanded: PropTypes.bool,
   refId: PropTypes.string.isRequired,
-  position: PropTypes.string,
+  isStart: PropTypes.bool,
+  isEnd: PropTypes.bool,
   role: PropTypes.string,
   children: PropTypes.instanceOf(Object).isRequired,
   shadow: PropTypes.bool,
@@ -160,11 +174,28 @@ AccordionSection.propTypes = {
   hideSourceOf: PropTypes.array
 };
 
-const Accordion = ({ role, children, shadow, customization }) => {
+AccordionSection.defaultProps = {
+  headingType: 'h3'
+};
+
+const Accordion = ({
+  role,
+  children,
+  shadow,
+  customization,
+  showSource,
+  hideSourceOf
+}) => {
   const css = rollupAdoptedStylesheets([common, accordion, customization]);
 
   return (
-    <Shadow.on name="accordion" includes={css} shadow={shadow}>
+    <Shadow.on
+      name="accordion"
+      includes={css}
+      shadow={shadow}
+      showSource={showSource}
+      hideSourceOf={hideSourceOf}
+    >
       <div className="lwc-accordion" role={role}>
         <slot>{children}</slot>
       </div>

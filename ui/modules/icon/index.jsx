@@ -32,7 +32,6 @@ class Icon extends Component {
       size,
       color,
       boundarySize,
-      orientation,
       shadow,
       showSource,
       hideSourceOf,
@@ -70,11 +69,6 @@ class Icon extends Component {
       'lwc-icon_unset': unset
     };
 
-    const iconOrientationClassName = {
-      'lwc-icon-orientation_90deg': orientation === '90deg',
-      'lwc-icon-orientation_neg90deg': orientation === 'neg90deg'
-    };
-
     // Remove underscores and add a dash before numbers
     const sanitizedSymbol = symbol
       .replace('_', '-')
@@ -103,7 +97,6 @@ class Icon extends Component {
               iconSizingClassName,
               iconColorClassName,
               iconModifierClassName,
-              iconOrientationClassName,
               computedClassNames
             )}
             title={title}
@@ -129,7 +122,6 @@ Icon.propTypes = {
   size: PropTypes.string,
   color: PropTypes.string,
   boundarySize: PropTypes.string,
-  orientation: PropTypes.string,
   unset: PropTypes.bool,
   shadow: PropTypes.bool,
   hideSourceOf: PropTypes.array,

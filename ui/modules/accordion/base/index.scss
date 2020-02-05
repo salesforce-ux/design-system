@@ -15,35 +15,34 @@
  * @variant
  * @support dev-ready
  */
-.lwc-accordion {
-  // Closed assignments
-  --lwc-c-accordion-header-spacing: 0;
-}
 
 /**
  * @summary Individual accordion group consisting of a header and panel
  * @selector .lwc-accordion__section
  * @restrict .lwc-accordion section
  */
-
 .lwc-accordion__section {
   border-top: var(--lwc-c-accordion-border-width, $border-width-thin) solid
     var(--lwc-c-accordion-color-border, $color-border);
   padding: $spacing-small;
 }
 
+/**
+ * @summary The order of the accordion section among other sections
+ * @selector .lwc-accordion__section_start
+ * @restrict .lwc-accordion__section
+ * @modifier
+ * @group order
+ */
 .lwc-accordion__section_start {
   border-top-width: 0;
 }
 
-.lwc-accordion__section_is-expanded {
-  --lwc-c-accordion-header-spacing: var(
-    --var-spacing-vertical-small,
-    $var-spacing-vertical-small
-  );
-}
-
-// TODO: annotate
+/**
+ * @summary Header of an accordion section
+ * @selector .lwc-accordion__header
+ * @restrict .lwc-accordion__section div
+ */
 .lwc-accordion__header {
   display: flex;
   justify-content: space-between;
@@ -54,9 +53,7 @@
  * @selector .lwc-accordion__title
  * @restrict .lwc-accordion h3
  */
-
 .lwc-accordion__title {
-  margin-bottom: var(--lwc-c-accordion-header-spacing, 0);
 
   // Button API - Closed Assignments
   --lwc-c-button-border-width: 0;
@@ -77,4 +74,21 @@
     --lwc-c-accordion-header-color-text-active,
     var(--lwc-brand-accessible-active, $brand-accessible-active)
   );
+
+  // Icon API - Closed Assignment
+  --lwc-c-icon-transform: rotate(-90deg);
+}
+
+/**
+ * @summary Invoke expanded state of accordion title
+ * @selector .lwc-accordion__title_is-expanded
+ * @restrict .lwc-accordion__title
+ * @modifier
+ * @group visibility
+ */
+.lwc-accordion__title_is-expanded {
+  margin-bottom: var(--var-spacing-vertical-small, $var-spacing-vertical-small);
+
+  // Icon API - Closed Assignment
+  --lwc-c-icon-transform: none;
 }

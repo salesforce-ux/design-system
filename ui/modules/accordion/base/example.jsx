@@ -6,7 +6,14 @@ import Card from '../../card';
 
 // Reusable Sample
 
-const AccordionSample = ({ role, children, isExpanded }) => {
+const AccordionSample = ({
+  role,
+  children,
+  isExpanded,
+  isAllExpanded,
+  showSource,
+  hideSourceOf
+}) => {
   const sampleData = [
     {
       title: 'Accordion summary',
@@ -23,18 +30,19 @@ const AccordionSample = ({ role, children, isExpanded }) => {
   ];
 
   return (
-    <Accordion role={role}>
+    <Accordion role={role} showSource={showSource} hideSourceOf={hideSourceOf}>
       {Array.isArray(sampleData) &&
         sampleData.map(({ title, content }, idx) => (
           <AccordionSection
             title={title}
             key={uniqueId('accordion-section-')}
-            isExpanded={isExpanded === idx || isExpanded === 'all'}
+            isExpanded={isExpanded === idx || isAllExpanded}
             refId={uniqueId('ref-id-')}
-            position={
-              (idx === 0 && 'start') || (idx === sampleData.length - 1 && 'end')
-            }
+            isStart={idx === 0}
+            isEnd={idx === sampleData.length - 1}
             role={role === 'list' && 'listitem'}
+            showSource={showSource}
+            hideSourceOf={hideSourceOf}
           >
             {content}
             {/* Only first section has children as example */}
@@ -48,12 +56,14 @@ const AccordionSample = ({ role, children, isExpanded }) => {
 AccordionSample.propTypes = {
   role: PropTypes.string,
   isExpanded: PropTypes.number,
-  children: PropTypes.instanceOf(Object).isRequired
+  isAllExpanded: PropTypes.bool,
+  children: PropTypes.instanceOf(Object)
 };
 
 AccordionSample.defaultProps = {
   role: 'list',
-  isExpanded: 0
+  isExpanded: 0,
+  isAllExpanded: false
 };
 
 // Default
@@ -107,6 +117,6 @@ export const states = [
   {
     id: 'multiple-sections-open',
     label: 'Multiple Sections Open',
-    element: <AccordionSample isExpanded="all" />
+    element: <AccordionSample isAllExpanded />
   }
 ];

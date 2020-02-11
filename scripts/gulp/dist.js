@@ -10,6 +10,9 @@ import through from 'through2';
 import Immutable from 'immutable';
 import path from 'path';
 import discardComments from 'postcss-discard-comments';
+import postcssLogical from 'postcss-logical';
+import dirPseudo from 'postcss-dir-pseudo-class';
+import combineSelectors from 'postcss-combine-duplicated-selectors';
 
 import packageJSON from '../../package.json';
 
@@ -155,7 +158,14 @@ export const sass = () =>
   gulp
     .src(distPath('scss/index.scss'))
     .pipe(gulpHelpers.writeScss({ outputStyle: 'expanded' }))
-    .pipe(gulpHelpers.writePostCss([discardComments()]))
+    .pipe(
+      gulpHelpers.writePostCss([
+        discardComments(),
+        postcssLogical({ preserve: true }),
+        dirPseudo(),
+        combineSelectors()
+      ])
+    )
     .pipe(
       gulpRename(path => {
         path.basename = MODULE_NAME + path.basename.substring('index'.length);
@@ -175,6 +185,14 @@ export const componentSass = () =>
     .src('ui/modules/**/index.scss')
     // Compile Sass files to CSS
     .pipe(gulpHelpers.writeScss({ outputStyle: 'expanded' }))
+    .pipe(
+      gulpHelpers.writePostCss([
+        discardComments(),
+        postcssLogical({ preserve: true }),
+        dirPseudo(),
+        combineSelectors()
+      ])
+    )
     // Write message to the top of each module file
     .pipe(
       through.obj((file, enc, next) => {

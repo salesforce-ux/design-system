@@ -5,6 +5,7 @@ import * as AdvancedExamples from './advanced/example';
 import * as HiddenHeaderExamples from './hidden-header/example';
 import * as InlineEditExamples from './inline-edit/example';
 import * as ResponsiveExamples from './responsive/example';
+import * as FixedHeaderExamples from './fixed-header/example';
 import { getAllDisplayCollectionsByType } from '../../shared/helpers';
 import StoryFrame from '../../../shared/components/StoryFrame';
 
@@ -16,7 +17,8 @@ const examples = [
   AdvancedExamples,
   HiddenHeaderExamples,
   InlineEditExamples,
-  ResponsiveExamples
+  ResponsiveExamples,
+  FixedHeaderExamples
 ];
 
 const kitchenSink = getAllDisplayCollectionsByType(examples, [

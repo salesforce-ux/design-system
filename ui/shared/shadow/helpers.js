@@ -26,13 +26,25 @@ export const createElement = (name, css) => {
 };
 
 export const rollupAdoptedStylesheets = sheets => {
-  let styleSheets = [];
-  sheets.map(sheet => {
-    let scopedCss = new CSSStyleSheet();
-    scopedCss.replaceSync(sheet);
-    styleSheets.push(scopedCss);
-  });
-  return styleSheets;
+  // if requesting constructible stylesheets
+  if (
+    document.hasOwnProperty('adoptedStyleSheets') &&
+    document.adoptedStyleSheets !== 'undefined'
+  ) {
+    let styleSheets = [];
+    sheets.map(sheet => {
+      let scopedCss = new CSSStyleSheet();
+      scopedCss.replaceSync(sheet);
+      styleSheets.push(scopedCss);
+    });
+    return styleSheets;
+  }
+
+  // default inline style tag
+  const style = document.createElement('style');
+  style.textContent = sheets.join(`\n`);
+
+  return style;
 };
 
 // recursively clone the children

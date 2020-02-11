@@ -50,7 +50,16 @@ function createElement(options) {
       useEffect(() => {
         if (node) {
           const root = node.attachShadow({ mode, delegatesFocus });
-          includes.length > 0 && (root.adoptedStyleSheets = includes);
+
+          if (includes) {
+            // if constructible stylesheets (array with length > 0)
+            if (includes.length > 0 && (root.adoptedStyleSheets = includes)) {
+              // adoptedStyleSheets set successfully
+            } else {
+              // default inline style tag
+              root.appendChild(includes);
+            }
+          }
 
           ref && typeof ref === 'function' && ref(node);
           ref && 'current' in ref && (ref.current = node);

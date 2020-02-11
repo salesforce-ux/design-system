@@ -7,7 +7,11 @@ import '../ui/index.scss'; // load slds css
 import '../shared/storybook/scss/ui/index.scss'; // Our custom Storybook presentation styles
 import '../shared/styles/doc.scss'; // docs styles
 
-const req = require.context('../ui/modules', true, /\.stories\.js$/);
+const req = require.context(
+  '../ui/modules',
+  true,
+  /^(?!.*__fixtures__).*\/.*\.stories\.js$/
+);
 
 function loadStories() {
   req.keys().forEach(filename => req(filename));
@@ -18,7 +22,8 @@ function loadStories() {
 addDecorator(withA11y);
 addParameters({
   options: {
-    theme: sldsTheme
+    theme: sldsTheme,
+    showPanel: false
   },
   backgrounds: [
     { name: 'white', value: '#fff', default: true },

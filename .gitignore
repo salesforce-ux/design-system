@@ -20,6 +20,7 @@
 !/.prettierignore
 !/.storybook
 !/.storybook-v3
+!/.circleci
 
 # Add a .gitkeep file in an empty
 # directory to check it in the repository

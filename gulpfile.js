@@ -349,6 +349,51 @@ gulp.task(
   )
 );
 
+gulp.task(
+  'dist:simple',
+  gulp.series(
+    withName('dist:clean:before')(dist.cleanBefore),
+    gulp.parallel(
+      withName('dist:copyRoot')(dist.copyRoot),
+      withName('dist:copySass')(dist.copySass),
+      withName('dist:copySassLicense')(dist.copySassLicense),
+      withName('dist:copyIcons')(dist.copyIcons),
+      withName('dist:copyIconsMeta')(dist.copyIconsMeta),
+      withName('dist:copyFonts')(dist.copyFonts),
+      withName('dist:copyFontsLicense')(dist.copyFontsLicense),
+      withName('dist:copyImages')(dist.copyImages),
+      withName('dist:copyImagesLicense')(dist.copyImagesLicense),
+      withName('dist:copyComponentReleaseNotes')(
+        dist.copyComponentReleaseNotes
+      ),
+      withName('dist:copyUtilityReleaseNotes')(dist.copyUtilityReleaseNotes),
+      withName('dist:copySwatches')(dist.copySwatches),
+      withName('dist:copyDesignTokens')(dist.copyDesignTokens),
+      withName('dist:copyComponentDesignTokens')(dist.copyComponentDesignTokens)
+    ),
+    withName('dist:componentSass')(dist.componentSass),
+    'dist:sass',
+    'dist:sass:sanitized',
+    gulp.parallel(
+      withName('dist:versionBlock')(dist.versionBlock),
+      withName('dist:versionInline')(dist.versionInline),
+      withName('dist:buildInfo')(dist.buildInfo),
+      withName('dist:packageJson')(dist.packageJson)
+    ),
+    withName('dist:minifyCss')(dist.minifyCss),
+    withName('dist:writeTokenComponentMap')(done =>
+      dist.writeTokenComponentMap().fork(done, () => done())
+    ),
+    withName('dist:writeAuraTokensMap')(done =>
+      dist.writeAuraTokensMap().fork(done, () => done())
+    ),
+    withName('dist:writeUtilityDeclarationsMap')(done =>
+      dist.writeUtilityDeclarationsMap().fork(done, () => done())
+    ),
+    withName('dist:clean:after')(dist.cleanAfter)
+  )
+);
+
 /*
  * ==================
  * Travis

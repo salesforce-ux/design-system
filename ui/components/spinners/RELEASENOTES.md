@@ -4,6 +4,11 @@
 
 <!-- ## [Unreleased] -->
 
+## 2.11.4
+
+- Moved the `will-change: transform` rule from the dots (pseudo-elements) to their parents (`.slds-spinner,
+.slds-spinner__dot-…`) to fix visual cropping of dots
+
 ## 2.10.0
 
 ### Fixed

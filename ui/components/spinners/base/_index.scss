@@ -66,6 +66,7 @@
 .slds-spinner__dot-a,
 .slds-spinner__dot-b {
   transform-origin: 50% 50%;
+  will-change: transform;
 }
 
 /**
@@ -105,7 +106,6 @@
   animation-duration: 1000ms;
   animation-iteration-count: infinite;
   transform: translate3d(0, 0, 0);
-  will-change: transform;
 }
 
 .slds-spinner__dot-a {

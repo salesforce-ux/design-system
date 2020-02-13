@@ -492,5 +492,26 @@ export let examples = [
         </CardFooter>
       </Card>
     )
+  },
+  {
+    id: 'with-long-truncated-title',
+    label: 'With long truncated title',
+    demoStyles: 'max-width: 360px;',
+    element: (
+      <Card>
+        <CardHeader
+          title="Card Header Title With Exceptionally Long Title"
+          href="javascript:void(0);"
+          symbol="account"
+          action={
+            <button className="slds-button slds-button_neutral">New</button>
+          }
+        />
+        <CardBody hasPadding>Anything can go into the card body</CardBody>
+        <CardFooter>
+          View All <span className="slds-assistive-text">Accounts</span>
+        </CardFooter>
+      </Card>
+    )
   }
 ];

@@ -1,10 +1,114 @@
+# Javascript Node CircleCI 2.0 configuration file
+#
+# Check https://circleci.com/docs/2.0/language-javascript/ for more details
+#
 version: 2.1
+
+executors:
+  slds-executor:
+    working_directory: ~/repo
+    docker:
+      - image: circleci/node:10-browsers
+    resource_class: medium+
+    # parallelism: 4
+
 jobs:
   build:
-    docker:
-      - image: alpine:3.7
+    executor: slds-executor
+
     steps:
+      - checkout
+
+      - run: mkdir -p workspace
+
+      # Download and cache dependencies
+      - restore_cache:
+          keys:
+            - dependencies-{{ checksum "package.json" }}
+            # fallback to using the latest cache if no exact match is found
+            - dependencies-
+
       - run:
-          name: Just pass
+          name: npm-install
+          command: 'npm install'
+
+      - save_cache:
+          paths:
+            - node_modules
+          key: dependencies-{{ checksum "package.json" }}
+
+      - run:
+          name: 'NPM run build'
+          command: 'npm run build'
+
+      - run:
+          name: 'NPM run dist:simple'
+          command: 'npm run dist:simple'
+
+      - run:
+          name: 'NPM run dist:write-ui'
+          command: 'npm run gulp -- dist:write-ui'
+
+      - run:
+          name: 'Copy .dist to workspace'
+          command: 'cp -ar .dist workspace'
+
+      - run:
+          name: 'Copy design-tokens/dist to workspace'
+          command: 'cp -ar design-tokens/dist workspace/design-tokens-dist'
+
+      # Persist the specified paths (workspace/echo-output) into the workspace for use in downstream job.
+      - persist_to_workspace:
+          # Must be an absolute path, or relative path from working_directory. This is a directory on the container which is
+          # taken to be the root directory of the workspace.
+          root: workspace
+          # Must be relative path from root
+          paths:
+            - .dist
+            - design-tokens-dist
+
+  applitools:
+    executor: slds-executor
+
+    steps:
+      - checkout
+
+      - attach_workspace:
+          # Must be absolute path or relative path from working_directory
+          at: workspace
+
+      - run:
+          name: 'Set environment variables'
           command: |
-            echo 'Hi, I do nothing'
+            echo 'export APPLITOOLS_BATCH_ID=${CIRCLE_SHA1}' >> $BASH_ENV
+            echo 'export SLDS_PR_NUMBER=${CIRCLE_PULL_REQUEST##*/}' >> $BASH_ENV
+
+      - run:
+          name: 'Copy .dist workspace files'
+          command: 'cp -ar workspace/.dist .'
+
+      - run:
+          name: 'Copy design-tokens/dist workspace files'
+          command: 'cp -ar workspace/design-tokens-dist design-tokens/dist'
+
+      # Download and cache dependencies
+      - restore_cache:
+          keys:
+            - dependencies-{{ checksum "package.json" }}
+            # fallback to using the latest cache if no exact match is found
+            - dependencies-
+
+      # run Applitools tests!
+      - run:
+          name: Applitools
+          command: 'npx eyes-storybook'
+
+workflows:
+  version: 2
+  build-and-test:
+    jobs:
+      - build
+      - applitools:
+          context: slds-api-keys
+          requires:
+            - build

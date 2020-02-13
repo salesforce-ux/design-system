@@ -4,6 +4,12 @@
 
 <!-- ## [Unreleased] -->
 
+## 2.12.0
+
+### Changed
+
+- Added a small variant to visual picker
+
 ## 2.7.0
 
 ### Changed

@@ -1,17 +1,17 @@
 {
   "name": "design-system",
   "description": "Salesforce Lightning Design System",
-  "version": "2.11.4",
+  "version": "2.12.0-dev",
   "author": "Salesforce",
   "slds": {
-    "name": "Spring ’20",
-    "id": "224"
+    "name": "Summer ’20",
+    "id": "226"
   },
   "important": [
     "'private' and 'config.slds.internal' should have the same value",
     "to prevent any accidental public publishes on npm and on our archive server."
   ],
-  "private": false,
+  "private": true,
   "config": {
     "slds": {
       "internal": false
@@ -19,10 +19,11 @@
     "search": {
       "appId": "B2KKG101RI",
       "apiKey": "f289c1dd954797a3e57158c04a897d46",
-      "indexName": "spring-20"
+      "indexName": "summer-20"
     }
   },
   "devDependencies": {
+    "@applitools/eyes-storybook": "3.2.2",
     "@babel/cli": "7.5.0",
     "@babel/core": "7.5.4",
     "@babel/node": "7.5.0",
@@ -121,7 +122,7 @@
     "gulp-yaml-validate": "1.0.2",
     "gulp-zip": "4.0.0",
     "husky": "0.14.3",
-    "immutable": "3.8.1",
+    "immutable": "3.8.2",
     "invariant": "2.2.4",
     "isomorphic-fetch": "2.2.1",
     "jest": "24.9.0",
@@ -207,14 +208,15 @@
     "full-start": "npm run build-dist && start-storybook -c .storybook -p 9002",
     "build": "npm run gulp -- build",
     "dist": "npm run gulp -- dist",
+    "dist:simple": "npm run gulp -- dist:simple",
     "build-dist": "npm run build && npm run dist",
     "dist:ui-json": "npm run gulp -- dist:ui-json",
-    "gulp": "babel-node --max-old-space-size=4096 ./node_modules/gulp/bin/gulp.js",
+    "gulp": "babel-node --max-old-space-size=8192 ./node_modules/gulp/bin/gulp.js",
     "lint": "npm run gulp -- lint",
     "stats": "npm run gulp -- stylestats",
     "pretest": "npm run gulp -- build",
     "test": "node -r @std/esm ./node_modules/.bin/jest",
-    "jest": "node -r @std/esm ./node_modules/.bin/jest",
+    "jest": "npm run test",
     "precommit": "npm run release-notes:hook && lint-staged",
     "pr-checks": "npm run gulp -- pr-checks",
     "compile-aura-tokens-map": "npm run gulp -- generate:auraTokensMap",

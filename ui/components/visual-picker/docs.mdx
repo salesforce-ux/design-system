@@ -17,7 +17,13 @@ import * as VisualPickers_vertical from './vertical/example';
 
 ### Base
 
-Coverable content comes in two sizes - medium or large.
+Coverable content comes in three sizes - small, medium (default) or large. The default uses radio buttons, allowing the user to pick only one. To allow multiple selections, follow the checkbox examples below.
+
+#### Small
+
+<CodeView>
+  {getDisplayElementById(VisualPickers_coverable.examples, "base_small")}
+</CodeView>
 
 #### Medium
 
@@ -38,19 +44,28 @@ Coverable content comes in two sizes - medium or large.
   {getDisplayElementById(VisualPickers_coverable.states, "disabled")}
 </CodeView>
 
-### Examples
+### Checkbox Examples
 
-#### Medium checkbox group
+To allow users to select more than one option, use checkboxes instead of radio buttons.
+
+#### Small Checkboxes
+
+<CodeView>
+  {getDisplayElementById(VisualPickers_coverable.examples, "checkbox-group_small")}
+</CodeView>
+
+#### Medium Checkboxes
 
 <CodeView>
   {getDisplayElementById(VisualPickers_coverable.examples, "checkbox-group")}
 </CodeView>
 
-#### Large checkbox group
+#### Large Checkboxes
 
 <CodeView>
   {getDisplayElementById(VisualPickers_coverable.examples, "checkbox-group_large")}
 </CodeView>
+
 ## Non Coverable Content
 
 ### Base

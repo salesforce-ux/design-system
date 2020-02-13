@@ -30,6 +30,11 @@
  * @restrict .slds-progress-ring div
  */
 .slds-progress-ring__progress {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
   transform: scale(-1, 1) rotate(-90deg);
 
   svg {
@@ -40,7 +45,7 @@
 /**
  *
  * @selector .slds-progress-ring__path
- * @restrict .slds-progress-ring__progress path
+ * @restrict .slds-progress-ring__progress path, .slds-progress-ring__progress circle
  */
 .slds-progress-ring__path {
   fill: $color-background-success;

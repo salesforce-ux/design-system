@@ -1,0 +1,116 @@
+import CodeView from "../../../shared/components/CodeView";
+import { getDisplayElementById } from "../../shared/helpers";
+import * as FauxInputExamples from "./faux-input/example";
+import * as MobileLookupListboxExamples from "./listbox/example";
+import * as MobileLookupComboboxExamples from "./combobox/example";
+
+## Faux Input
+
+### Input Only
+
+<CodeView>
+  {getDisplayElementById(FauxInputExamples.examples, "faux-input")}
+</CodeView>
+
+### Input with Label
+
+<CodeView>
+  {getDisplayElementById(FauxInputExamples.examples, "faux-input-with-label")}
+</CodeView>
+
+There are some accessibility gotchas with this component. Because this isn't an actual input but instead a button that looks like an input, the normal `for`/`id` relationship does not work.
+
+Instead, the `label` is a `span` with a unique `id`, and the `button` should have a matching `aria-labelledby` attribute.
+
+Also note: with a normal `label`/`input`, clicking on the label will bring focus to the associated input. Custom events will be needed to recreate this for the faux button.
+
+## Listbox
+
+## Recent Items
+
+<CodeView>
+  {getDisplayElementById(
+    MobileLookupListboxExamples.examples,
+    "mobile-lookup-listbox"
+  )}
+</CodeView>
+
+## Results While Typing
+
+<CodeView>
+  {getDisplayElementById(
+    MobileLookupListboxExamples.examples,
+    "mobile-lookup-listbox-typing-results"
+  )}
+</CodeView>
+
+## All Results
+
+<CodeView>
+  {getDisplayElementById(
+    MobileLookupListboxExamples.examples,
+    "mobile-lookup-listbox-all-results"
+  )}
+</CodeView>
+
+### Combobox
+
+## Default
+
+<CodeView style={MobileLookupComboboxExamples.demoHeight}>
+  {getDisplayElementById(MobileLookupComboboxExamples.examples, "default")}
+</CodeView>
+
+## With Icon
+
+<CodeView style={MobileLookupComboboxExamples.demoHeight}>
+  {getDisplayElementById(
+    MobileLookupComboboxExamples.examples,
+    "mobile-combobox-icon"
+  )}
+</CodeView>
+
+## With Icon While Typing
+
+<CodeView style={MobileLookupComboboxExamples.demoHeight}>
+  {getDisplayElementById(
+    MobileLookupComboboxExamples.examples,
+    "mobile-combobox-icon-value"
+  )}
+</CodeView>
+
+## With Icon Showing All Results
+
+<CodeView style={MobileLookupComboboxExamples.demoHeight}>
+  {getDisplayElementById(
+    MobileLookupComboboxExamples.examples,
+    "mobile-combobox-icon-results"
+  )}
+</CodeView>
+
+## With Icon Showing All Results and Selected
+
+<CodeView style={MobileLookupComboboxExamples.demoHeight}>
+  {getDisplayElementById(
+    MobileLookupComboboxExamples.examples,
+    "mobile-combobox-icon-results-selected"
+  )}
+</CodeView>
+
+## With Icon and Disabled
+
+<CodeView style={MobileLookupComboboxExamples.demoHeight}>
+  {getDisplayElementById(
+    MobileLookupComboboxExamples.states,
+    "mobile-combobox-icon-disabled"
+  )}
+</CodeView>
+
+## With Icon and Loading
+
+<CodeView style={MobileLookupComboboxExamples.demoHeight}>
+  {getDisplayElementById(
+    MobileLookupComboboxExamples.states,
+    "mobile-combobox-icon-value-loading"
+  )}
+</CodeView>

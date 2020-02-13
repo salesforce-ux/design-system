@@ -14,10 +14,12 @@ exports[`Progress Ring renders a complete ring 1`] = `
     <svg
       viewBox="-1 -1 2 2"
     >
-      <path
+      <circle
         className="slds-progress-ring__path"
-        d="M 1 0 A 1 1 0 1 1 1 -2.4492935982947064e-16 L 0 0"
+        cx="0"
+        cy="0"
         id="slds-progress-ring-path-5"
+        r="1"
       />
     </svg>
   </div>
@@ -43,7 +45,7 @@ exports[`Progress Ring renders a filling active step ring 1`] = `
     >
       <path
         className="slds-progress-ring__path"
-        d="M 1 0 A 1 1 0 0 0 0.30901699437494723 -0.9510565162951536 L 0 0"
+        d="M 1 0 A 1 1 0 0 0 0.31 -0.95 L 0 0"
         id="slds-progress-ring-path-7"
       />
     </svg>
@@ -70,7 +72,7 @@ exports[`Progress Ring renders a partially draiend ring with error 1`] = `
     >
       <path
         className="slds-progress-ring__path"
-        d="M 1 0 A 1 1 0 0 1 0.30901699437494745 0.9510565162951535 L 0 0"
+        d="M 1 0 A 1 1 0 0 1 0.31 0.95 L 0 0"
         id="slds-progress-ring-path-4"
       />
     </svg>
@@ -97,7 +99,7 @@ exports[`Progress Ring renders a partially drained ring 1`] = `
     >
       <path
         className="slds-progress-ring__path"
-        d="M 1 0 A 1 1 0 0 1 0.30901699437494745 0.9510565162951535 L 0 0"
+        d="M 1 0 A 1 1 0 0 1 0.31 0.95 L 0 0"
         id="slds-progress-ring-path-1"
       />
     </svg>
@@ -124,7 +126,7 @@ exports[`Progress Ring renders a partially filled ring 1`] = `
     >
       <path
         className="slds-progress-ring__path"
-        d="M 1 0 A 1 1 0 0 0 0.30901699437494723 -0.9510565162951536 L 0 0"
+        d="M 1 0 A 1 1 0 0 0 0.31 -0.95 L 0 0"
         id="slds-progress-ring-path-2"
       />
     </svg>
@@ -151,7 +153,7 @@ exports[`Progress Ring renders a partially filled ring with warning 1`] = `
     >
       <path
         className="slds-progress-ring__path"
-        d="M 1 0 A 1 1 0 0 0 0.30901699437494723 -0.9510565162951536 L 0 0"
+        d="M 1 0 A 1 1 0 0 0 0.31 -0.95 L 0 0"
         id="slds-progress-ring-path-3"
       />
     </svg>
@@ -178,7 +180,7 @@ exports[`Progress Ring renders an empty ring 1`] = `
     >
       <path
         className="slds-progress-ring__path"
-        d="M 1 0 A 1 1 0 0 0 1 -2.4492935982947064e-16 L 0 0"
+        d="M 1 0 A 1 1 0 0 0 1.00 -0.00 L 0 0"
         id="slds-progress-ring-path-6"
       />
     </svg>

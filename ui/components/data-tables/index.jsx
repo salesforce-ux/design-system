@@ -35,7 +35,8 @@ export const Table = props => {
     'slds-max-medium-table_stacked': props.isResponsiveStacked,
     'slds-table_resizable-cols': props.isResizable,
     'slds-table_striped': props.isStriped,
-    'slds-tree slds-table_tree': props.type === 'treegrid'
+    'slds-tree slds-table_tree': props.type === 'treegrid',
+    'slds-table_header-fixed': props.hasFixedHeader
   });
 
   const getComputedRole = () => {
@@ -161,7 +162,8 @@ ColumnTh.propTypes = {
 export const ColumnHeader = props => (
   <div
     className={classNames('slds-truncate', {
-      'slds-assistive-text': props.isAssistiveText
+      'slds-assistive-text': props.isAssistiveText,
+      'slds-cell-fixed': props.isFixedCell
     })}
     id={props.id}
     title={props.columnName}

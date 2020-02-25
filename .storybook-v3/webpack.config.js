@@ -28,7 +28,12 @@ module.exports = async ({ config, mode }) => {
         },
         {
           loader: 'postcss-loader',
-          options: { sourceMap: true }
+          options: {
+            sourceMap: true,
+            config: {
+              path: path.resolve(__dirname, '../')
+            }
+          }
         },
         {
           loader: 'resolve-url-loader',

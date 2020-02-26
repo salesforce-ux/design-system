@@ -28,7 +28,7 @@ Once the development server is started with `npm start`, you can load it at [htt
 
 ### Annotations
 
-See the [annotations guide](https://github.com/salesforce-ux/design-system-internal/blob/226-summer-20/guidelines/ANNOTATIONS.md).
+See the [annotations guide](guidelines/ANNOTATIONS.md).
 
 ## Tasks
 
@@ -105,11 +105,11 @@ Delete temporary build and local files.
 
 ## Troubleshooting
 
-See the [troubleshooting guide](https://github.com/salesforce-ux/design-system-internal/blob/226-summer-20/guidelines/TROUBLESHOOTING.md).
+See the [troubleshooting guide](guidelines/TROUBLESHOOTING.md).
 
 ## Contributing Back to SLDS
 
-See the [contributing guide](https://github.com/salesforce-ux/design-system-internal/blob/226-summer-20/CONTRIBUTING.md).
+See the [contributing guide](CONTRIBUTING.md).
 
 ## Licenses
 

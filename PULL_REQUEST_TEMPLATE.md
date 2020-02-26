@@ -1,4 +1,4 @@
-Please refer to our [Commit Guidelines](https://github.com/salesforce-ux/design-system-internal/blob/spring-19/CONTRIBUTING.md#commit-guidelines) for documenting changes.
+Please refer to our [Commit Guidelines](guidelines/COMMIT_GUIDELINES.md) for documenting changes.
 
 **Changes proposed in this pull request:**
 

@@ -56,7 +56,7 @@ Here is an example of how that may look.
 }
 ```
 
-[See classname annotations](https://github.com/salesforce-ux/design-system-internal/wiki/Documentation-Styleguide#selector-annotations)
+[See selector annotations](#selector-annotations)
 
 # Component Annotations
 
@@ -355,7 +355,7 @@ For utility annotations, we only need a way to map HTML to the classnames, this 
 
 We annotate a utility by using an `@utility` identifier and a universal selector, which acts as a catch all for utilities starting with the name of that utility, for example spacing utilities have a naming pattern that starts with .`slds-m-` where we can append a direction name and a size name. The universal selector would restrict the prefix of `.slds-m-` to all margin related spacing classes.
 
-## Selector Annotations
+# Selector Annotations
 
 The selector annotations are used to document the classname and establish its restriction rules with the `@restrict` annotation. The annotations should be added to the `_index.scss` where you have written your css declarations. The annotation block should come before each selector declaration. For example:
 

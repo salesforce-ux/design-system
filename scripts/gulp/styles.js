@@ -90,6 +90,17 @@ export const sassTouch = () =>
     .pipe(gulpSourcemaps.write('.'))
     .pipe(gulp.dest('assets/styles'));
 
+export const sassTouchDemo = () =>
+  gulp
+    .src(['ui/touch-demo.scss'])
+    .pipe(gulpPlumber())
+    .pipe(gulpSourcemaps.init())
+    .pipe(gulpHelpers.writeScss())
+    .pipe(gulpHelpers.writePostCss())
+    .pipe(gulpHelpers.writeMinifyCss())
+    .pipe(gulpSourcemaps.write('.'))
+    .pipe(gulp.dest('assets/styles'));
+
 // Quick check that all variants compile correctly to CSS
 export const sassTest = () =>
   gulp

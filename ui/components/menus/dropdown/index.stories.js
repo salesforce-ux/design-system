@@ -2,8 +2,6 @@ import { storiesOf } from '@storybook/react';
 import * as DropdownExamples from './example';
 import { getDisplayElementById } from '../../../shared/helpers';
 
-import '../../../index.scss';
-
 const stories = storiesOf('Components/Menus/Dropdown', module).add(
   'Base',
   () => DropdownExamples.default

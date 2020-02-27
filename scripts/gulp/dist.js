@@ -36,6 +36,7 @@ const SLDS_VERSION = packageJSON.version;
 const DISPLAY_NAME = 'Lightning Design System';
 const MODULE_NAME = 'salesforce-lightning-design-system';
 const MODULE_NAME_TOUCH = 'salesforce-lightning-design-system_touch';
+const MODULE_NAME_TOUCH_DEMO = 'salesforce-lightning-design-system_touch-demo';
 
 export const cleanBefore = () => del([paths.dist]);
 export const cleanAfter = () => del([distPath('README-dist.md')]);
@@ -181,6 +182,20 @@ export const sassTouch = () =>
     )
     .pipe(gulp.dest(distPath('assets/styles/')));
 
+export const sassTouchDemo = () =>
+  gulp
+    .src([distPath('scss/touch-demo.scss')])
+    .pipe(gulpHelpers.writeScss({ outputStyle: 'expanded' }))
+    .pipe(gulpHelpers.writePostCss([discardComments()]))
+    .pipe(
+      gulpRename(path => {
+        path.basename = MODULE_NAME_TOUCH_DEMO;
+        path.extname = '.css';
+        return path;
+      })
+    )
+    .pipe(gulp.dest(distPath('__internal/styles/')));
+
 /*
  * ==================
  * Compiles tmp SCSS files for every component
@@ -262,7 +277,8 @@ export const minifyCss = () =>
     .src(
       [
         distPath(`assets/styles/${MODULE_NAME}.css`),
-        distPath(`assets/styles/${MODULE_NAME_TOUCH}.css`)
+        distPath(`assets/styles/${MODULE_NAME_TOUCH}.css`),
+        distPath(`__internal/styles/${MODULE_NAME_TOUCH_DEMO}.css`)
       ],
       { base: distPath() }
     )

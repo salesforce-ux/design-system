@@ -1,6 +1,0 @@
-// This file is used to override any system variables when webpack is compiling the
-// modules stylesheets for story book etc. as they can't be reletive to the
-// assets folder, as that doesn't exist in the storybook environement
-
-$static-image-path: '../../assets/images';
-$static-font-path: '../../assets/fonts/webfonts';

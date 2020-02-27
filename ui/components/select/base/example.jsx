@@ -24,6 +24,7 @@ export let Select = props => {
       id={props.id || defaultSelectId}
       required={props.required}
       multiple={props.multiple}
+      onChange={props.onChange}
     >
       {props.children}
     </select>

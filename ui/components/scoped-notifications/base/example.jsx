@@ -42,12 +42,6 @@ ScopedNotification.propTypes = {
 export const ScopedNotificationThemed = props => {
   const { children, theme } = props;
 
-  let iconClassName;
-
-  if (theme && theme === 'light') {
-    iconClassName = 'slds-icon-text-default';
-  }
-
   return (
     <div
       className={classNames(
@@ -59,7 +53,10 @@ export const ScopedNotificationThemed = props => {
       <div className="slds-media__figure">
         <UtilityIcon
           title="information"
-          className={classNames('slds-icon_small', iconClassName)}
+          className={classNames(
+            'slds-icon_small',
+            theme && theme === 'light' && 'slds-icon-text-default'
+          )}
           assistiveText="information"
           symbol="info"
         />
@@ -71,7 +68,7 @@ export const ScopedNotificationThemed = props => {
 
 ScopedNotificationThemed.propTypes = {
   children: PropTypes.node,
-  theme: PropTypes.string
+  theme: PropTypes.oneOf(['light', 'dark'])
 };
 
 /// ///////////////////////////////////////////

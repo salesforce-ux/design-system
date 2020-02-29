@@ -40,20 +40,26 @@ ScopedNotification.propTypes = {
 };
 
 export const ScopedNotificationThemed = props => {
-  const { children } = props;
+  const { children, theme } = props;
+
+  let iconClassName;
+
+  if (theme && theme === 'light') {
+    iconClassName = 'slds-icon-text-default';
+  }
 
   return (
     <div
       className={classNames(
         'slds-scoped-notification slds-media slds-media_center',
-        props.className
+        props.theme && 'slds-scoped-notification_' + props.theme
       )}
       role="status"
     >
       <div className="slds-media__figure">
         <UtilityIcon
           title="information"
-          className={classNames('slds-icon_small', props.iconClassName)}
+          className={classNames('slds-icon_small', iconClassName)}
           assistiveText="information"
           symbol="info"
         />
@@ -64,7 +70,8 @@ export const ScopedNotificationThemed = props => {
 };
 
 ScopedNotificationThemed.propTypes = {
-  children: PropTypes.node
+  children: PropTypes.node,
+  theme: PropTypes.string
 };
 
 /// ///////////////////////////////////////////
@@ -72,7 +79,7 @@ ScopedNotificationThemed.propTypes = {
 /// ///////////////////////////////////////////
 
 export default (
-  <ScopedNotificationThemed iconClassName="slds-icon-text-default">
+  <ScopedNotificationThemed theme="light">
     <p>
       It looks as if duplicates exist for this lead.{' '}
       <a href="javascript:void(0);">View Duplicates.</a>
@@ -85,10 +92,7 @@ export let examples = [
     id: 'light-theme',
     label: 'Informational with Light Theme',
     element: (
-      <ScopedNotificationThemed
-        className="slds-scoped-notification_light"
-        iconClassName="slds-icon-text-default"
-      >
+      <ScopedNotificationThemed theme="light">
         <p>
           It looks as if duplicates exist for this lead.{' '}
           <a href="javascript:void(0);">View Duplicates.</a>
@@ -100,7 +104,7 @@ export let examples = [
     id: 'dark-theme',
     label: 'Informational with Dark theme',
     element: (
-      <ScopedNotificationThemed className="slds-scoped-notification_dark">
+      <ScopedNotificationThemed theme="dark">
         <p>
           It looks as if duplicates exist for this lead.{' '}
           <a href="javascript:void(0);">View Duplicates.</a>

@@ -11,8 +11,8 @@ const examples = [BaseExamples];
 
 const kitchenSink = getAllDisplayCollectionsByType(examples, [
   'default',
-  'examples',
-  'states'
+  'states',
+  'examples'
 ]);
 
 storiesOf('Components/Scoped Notifications', module).add(

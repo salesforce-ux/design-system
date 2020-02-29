@@ -24,7 +24,35 @@ Scoped notifications contain `role="status"` on the container to signal to the b
   {ScopedNotificationExamples.default}
 </CodeView>
 
+### States
+
+#### Informational
+
+<CodeView>
+  {getDisplayElementById(ScopedNotificationExamples.states, 'info')}
+</CodeView>
+
+#### Success
+
+<CodeView>
+  {getDisplayElementById(ScopedNotificationExamples.states, 'success')}
+</CodeView>
+
+#### Warning
+
+<CodeView>
+  {getDisplayElementById(ScopedNotificationExamples.states, 'warning')}
+</CodeView>
+
+#### Error
+
+<CodeView>
+  {getDisplayElementById(ScopedNotificationExamples.states, 'error')}
+</CodeView>
+
 ### Examples
+
+Informational Notifications default to the dark theme. For light, use the class `slds-scoped-notification_light` instead of `slds-theme_info`. An additional class, `slds-scoped-notification_dark` is also available for the dark theme to more easily toggle between them.
 
 #### Light Theme
 

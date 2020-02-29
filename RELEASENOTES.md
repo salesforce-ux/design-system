@@ -14,6 +14,20 @@
 #### Changed
 - Added a small variant to visual picker
 
+## Release 2.11.5 - February 21, 2020
+
+## Components
+### [Scoped Notifications](https://www.lightningdesignsystem.com/components/scoped-notifications)
+- Added examples for Informational, Success, Warning and Error states
+<!-- ## [VERSION] -->
+
+## Release 2.11.4 - February 21, 2020
+
+## Components
+### [Spinners](https://www.lightningdesignsystem.com/components/spinners)
+- Moved the `will-change: transform` rule from the dots (pseudo-elements) to their parents (`.slds-spinner,
+.slds-spinner__dot-…`) to fix visual cropping of dots
+
 ## Release 2.11.3 - February 3, 2020
 
 ## Fixed

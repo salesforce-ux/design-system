@@ -11,7 +11,7 @@ import {
   Step as VerticalStep,
   Progress as VerticalProgress
 } from '../progress-indicator/vertical/example';
-import { ScopedNoti } from '../scoped-notifications/base/example';
+import { ScopedNotificationThemed } from '../scoped-notifications/base/example';
 
 const sampleSubSteps = [
   {
@@ -80,10 +80,12 @@ class SetupAssistantStepDetail extends React.Component {
         <VerticalProgress value="50" hasBorders hasSuccessBar>
           {renderProgressIndicatorSteps(sampleSubSteps)}
         </VerticalProgress>
-        <ScopedNoti
-          className="slds-scoped-notification_light"
-          iconClassName="slds-icon-text-default"
-        />
+        <ScopedNotificationThemed theme="light">
+          <p>
+            It looks as if duplicates exist for this lead.{' '}
+            <a href="javascript:void(0);">View Duplicates.</a>
+          </p>
+        </ScopedNotificationThemed>
       </div>
     );
   }

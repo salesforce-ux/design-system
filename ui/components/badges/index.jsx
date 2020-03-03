@@ -7,7 +7,10 @@ export const Badge = props => (
   <span
     className={classNames('slds-badge', {
       'slds-badge_inverse': props.isInverse,
-      'slds-badge_lightest': props.isLightest
+      'slds-badge_lightest': props.isLightest,
+      'slds-theme_success': props.isSuccess,
+      'slds-theme_warning': props.isWarning,
+      'slds-theme_error': props.isError
     })}
   >
     {props.children}

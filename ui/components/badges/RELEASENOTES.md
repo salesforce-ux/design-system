@@ -3,9 +3,10 @@
 # Badges Release Notes
 
 <!-- ## [Unreleased] -->
+
 ## 2.11.5
 
-- Added examples for Success, Warning and Error states.
+- Added examples for communicating Success, Warning and Error states.
 
 ## 2.11.0
 

@@ -82,3 +82,21 @@ export let examples = [
     )
   }
 ];
+
+export let states = [
+  {
+    id: 'success',
+    label: 'Success',
+    element: <Badge isSuccess>Success badge</Badge>
+  },
+  {
+    id: 'warning',
+    label: 'Warning',
+    element: <Badge isWarning>Warning badge</Badge>
+  },
+  {
+    id: 'error',
+    label: 'Error',
+    element: <Badge isError>Error badge</Badge>
+  }
+];

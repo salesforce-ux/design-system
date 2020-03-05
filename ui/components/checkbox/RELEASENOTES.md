@@ -4,6 +4,12 @@
 
 <!-- ## [Unreleased] -->
 
+## 2.11.5
+
+### Added
+
+- Added documentation and examples for mobile/touch context
+
 ## 2.10.0
 
 ### Changed

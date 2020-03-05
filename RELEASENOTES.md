@@ -4,6 +4,11 @@
 ## Release 2.11.5 - March 5, 2020
 
 ## Components
+
+### [Checkbox](https://www.lightningdesignsystem.com/components/checkbox)
+#### Added
+- Added documentation and examples for mobile/touch context
+
 ### [Badges](https://www.lightningdesignsystem.com/components/badges)
 - Added examples for communicating Success, Warning and Error states.
 

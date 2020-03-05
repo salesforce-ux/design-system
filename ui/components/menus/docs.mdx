@@ -13,7 +13,7 @@ import { getDisplayElementById } from '../../shared/helpers';
   A Menu offers a list of actions or functions that a user can access.
 </div>
 
-<CodeView exampleOnly style={{ height: '150px' }}>
+<CodeView exampleOnly demoStyles="height: 150px;">
   <IconLeft hasLeftIcon />
 </CodeView>
 
@@ -45,7 +45,7 @@ The main thing that distinguishes menus from other popover blocks is keyboard na
 ## Base
 
 <Example title="Menu Base">
-  <CodeView style={{ height: '200px' }}>
+  <CodeView demoStyles="height: 200px;">
     <BaseMenu className="slds-dropdown_left" />
   </CodeView>
 </Example>
@@ -68,7 +68,7 @@ The main thing that distinguishes menus from other popover blocks is keyboard na
 </CodeBlock>
 
 <Example title="Menu with Subheaders">
-  <CodeView style={{ height: '300px' }}>
+  <CodeView demoStyles="height: 300px;">
     <SubHeader />
   </CodeView>
 </Example>
@@ -86,7 +86,7 @@ Icons can be included on either the left, right, or both sides of an option.
 ### Icon on the Left
 
 <Example title="Menu with Icon Left">
-  <CodeView style={{ height: '150px' }}>
+  <CodeView demoStyles="height: 150px;">
     <IconLeft hasLeftIcon />
   </CodeView>
 </Example>
@@ -94,7 +94,7 @@ Icons can be included on either the left, right, or both sides of an option.
 ### Icon on the Right
 
 <Example title="Menu with Icon Right">
-  <CodeView style={{ height: '150px' }}>
+  <CodeView demoStyles="height: 150px;">
     <IconRight />
   </CodeView>
 </Example>
@@ -108,7 +108,7 @@ Icons can be included on either the left, right, or both sides of an option.
 </Blockquote>
 
 <Example title="Menu with Double Icon">
-  <CodeView style={{ height: '150px' }}>
+  <CodeView demoStyles="height: 150px;">
     <DoubleIcon />
   </CodeView>
 </Example>
@@ -138,14 +138,14 @@ When creating a menu with selectable items:
 </CodeBlock>
 
 <Example title="Menu with Selectable Icon Left">
-  <CodeView style={{ height: '150px' }}>
+  <CodeView demoStyles="height: 150px;">
     <IconLeft isSelectable />
   </CodeView>
 </Example>
 
 ## With Status Notifications
 
-<CodeView style={{ height: '250px' }}>
+<CodeView demoStyles="height: 250px;">
   <NotificationsMenu />
 </CodeView>
 
@@ -176,7 +176,7 @@ The class is based on the `slds-has-${level}` pattern, where `${level}` correspo
 ## With Overflow Scrolling
 
 <Example title="Menu with Overflow Scrolling">
-  <CodeView style={{ height: '220px' }}>
+  <CodeView demoStyles="height: 220px;">
     <OverflowMenu className="slds-dropdown_left slds-dropdown_length-5" />
   </CodeView>
 </Example>
@@ -191,7 +191,7 @@ To force overflow scrolling after either 5, 7, or 10 items, add the modifier `sl
 
 To force overflow scrolling after either 5, 7, or 10 items with icons, add the modifier `slds-dropdown_length-with-icon-*` to the `<div>` with class `slds-dropdown` where the `*` is either 5, 7, or 10.
 
-<CodeView style={{ height: '250px' }}>
+<CodeView demoStyles="height: 250px;">
   <OverflowMenu
     isSelectable
     isSelected="true"
@@ -240,7 +240,7 @@ To create a menu with a submenu, add the `slds-has-submenu` class to the list it
 To open the submenu to the right of the main menu, add `slds-dropdown_submenu-right` to the `<div>` with the `slds-dropdown_submenu` class.
 
 <Example title="Menu with Submenu Right">
-  <CodeView style={{ height: '300px' }}>
+  <CodeView demoStyles="height: 300px;">
     <Submenu ariaExpanded="true" />
   </CodeView>
 </Example>
@@ -250,7 +250,7 @@ To open the submenu to the right of the main menu, add `slds-dropdown_submenu-ri
 To open the submenu to the left, add `slds-dropdown_submenu-left` to the `<div>` with the `slds-dropdown_submenu` class.
 
 <Example title="Menu with Submenu Left">
-  <CodeView style={{ height: '300px', marginLeft: '150px' }}>
+  <CodeView demoStyles="height: 300px; margin-left: 150px;">
     <Submenu ariaExpanded submenuClassnames="slds-dropdown_submenu-left" />
   </CodeView>
 </Example>
@@ -260,7 +260,7 @@ To open the submenu to the left, add `slds-dropdown_submenu-left` to the `<div>`
 For an overflow of action items, use the overflow menu with actions styling by adding the modifier `slds-dropdown_actions` to the `div` with class `slds-dropdown`. This pattern is typically used in conjunction with a button group.
 
 <Example title="Menu with Action Overflow">
-  <CodeView style={{ height: '150px' }}>
+  <CodeView demoStyles="height: 150px;">
     <ActionOverflow />
   </CodeView>
 </Example>
@@ -278,7 +278,7 @@ There are 3 options for the positioning of the menu dropdown -- left, right, and
 To position the dropdown to align with the right of the dropdown trigger, use `slds-dropdown_right`.
 
 <Example title="Menu Positioned Right">
-  <CodeView style={{ height: '200px', marginLeft: '90px' }}>
+  <CodeView demoStyles="height: 200px; margin-left: 90px;">
     <BaseMenu className="slds-dropdown_right" />
   </CodeView>
 </Example>
@@ -288,7 +288,7 @@ To position the dropdown to align with the right of the dropdown trigger, use `s
 To position the dropdown to sit on top of the dropdown trigger, use `slds-dropdown_bottom`.
 
 <Example title="Menu Positioned Bottom">
-  <CodeView style={{ marginLeft: '45px', marginTop: '163px' }}>
+  <CodeView demoStyles="margin-left: 45px; margin-top: 163px;">
     <BaseMenu className="slds-dropdown_bottom" />
   </CodeView>
 </Example>

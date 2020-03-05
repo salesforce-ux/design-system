@@ -9,10 +9,8 @@ import BuilderHeader from './index.jsx';
   elements. It also shows the builder type and content name.
 </div>
 
-<CodeView exampleOnly>
-  <div style={{ position: 'relative', height: '100px' }}>
-    <BuilderHeader showToolbar />
-  </div>
+<CodeView exampleOnly isViewport demoStyles="height: 132px;">
+  <BuilderHeader showToolbar />
 </CodeView>
 
 ## About Builder Header
@@ -22,10 +20,8 @@ To learn more about the Builder pattern in general, check out our [guidelines](/
 ## Base
 
 <Example title="Base">
-  <CodeView>
-    <div style={{ position: 'relative', height: '100px' }}>
-      <BuilderHeader />
-    </div>
+  <CodeView isViewport demoStyles="height: 132px;">
+    <BuilderHeader />
   </CodeView>
 </Example>
 
@@ -34,19 +30,15 @@ To learn more about the Builder pattern in general, check out our [guidelines](/
 ### With a Truncated Name
 
 <Example title="Truncated">
-  <CodeView>
-    <div style={{ position: 'relative', height: '100px' }}>
-      <BuilderHeader docName="Page Type with a very very long name that will truncate when the container is not wide enough to contain this content completely" />
-    </div>
+  <CodeView isViewport demoStyles="height: 132px;">
+    <BuilderHeader docName="Page Type with a very very long name that will truncate when the container is not wide enough to contain this content completely" />
   </CodeView>
 </Example>
 
 ### With a Toolbar
 
 <Example title="Toolbar">
-  <CodeView>
-    <div style={{ position: 'relative', height: '100px' }}>
-      <BuilderHeader showToolbar />
-    </div>
+  <CodeView isViewport demoStyles="height: 132px;">
+    <BuilderHeader showToolbar />
   </CodeView>
 </Example>

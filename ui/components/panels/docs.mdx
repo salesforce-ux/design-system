@@ -13,12 +13,12 @@ import SvgIcon from '../../shared/svg-icon';
 
 <CodeView
   exampleOnly
-  style={{
-    backgroundColor: '#fafaf9',
-    position: 'relative',
-    height: '200px',
-    overflow: 'hidden'
-  }}
+  demoStyles="
+    background-color: #fafaf9;
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+  "
 >
   <Panel size="medium" title="Panel Header" docked="left" invoke="toggle">
     A panel body accepts any layout or component
@@ -43,12 +43,12 @@ The panel should take up 100% of the height of its parent container. In most cas
 
 <Example title="Panel base">
   <CodeView
-    style={{
-      backgroundColor: '#fafaf9',
-      position: 'relative',
-      height: '600px',
-      overflow: 'hidden'
-    }}
+    demoStyles="
+      background-color: #fafaf9;
+      position: relative;
+      height: 600px;
+      overflow: hidden;
+  "
   >
     <Panel size="medium" title="Panel Header" docked="left" invoke="toggle">
       A panel body accepts any layout or component
@@ -64,12 +64,12 @@ The header of a left/right docked panel has left-aligned text by default and one
 
 <Example title="Panel base - header">
   <CodeView
-    style={{
-      backgroundColor: '#fafaf9',
-      position: 'relative',
-      height: '50px',
-      overflow: 'hidden'
-    }}
+    demoStyles="
+      background-color: #fafaf9;
+      position: relative;
+      height: 50px;
+      overflow: hidden;
+  "
   >
     <Panel size="medium" title="Panel Header" docked="left" invoke="toggle" />
   </CodeView>
@@ -81,12 +81,12 @@ To center the header title, add the class `slds-panel__header_align-center` to t
 
 <Example title="Panel base - header">
   <CodeView
-    style={{
-      backgroundColor: '#fafaf9',
-      position: 'relative',
-      height: '50px',
-      overflow: 'hidden'
-    }}
+    demoStyles="
+      background-color: #fafaf9;
+      position: relative;
+      height: 50px;
+      overflow: hidden;
+  "
   >
     <Panel
       size="medium"
@@ -124,12 +124,12 @@ The `slds-panel_docked` element can be positioned on the left or right side of a
 
 <Example title="Panel base - left dock toggle">
   <CodeView
-    style={{
-      backgroundColor: '#fafaf9',
-      position: 'relative',
-      height: '200px',
-      overflow: 'hidden'
-    }}
+    demoStyles="
+      background-color: #fafaf9;
+      position: relative;
+      height: 200px;
+      overflow: hidden;
+  "
   >
     <Panel size="medium" title="Panel Header" docked="left" invoke="toggle">
       A panel body accepts any layout or component
@@ -141,12 +141,12 @@ The `slds-panel_docked` element can be positioned on the left or right side of a
 
 <Example title="Panel base - right dock toggle">
   <CodeView
-    style={{
-      backgroundColor: '#fafaf9',
-      position: 'relative',
-      height: '200px',
-      overflow: 'hidden'
-    }}
+    demoStyles="
+      background-color: #fafaf9;
+      position: relative;
+      height: 200px;
+      overflow: hidden;
+  "
   >
     <Panel size="medium" title="Panel Header" docked="right" invoke="toggle">
       A panel body accepts any layout or component
@@ -173,12 +173,12 @@ The `slds-panel_docked` element can be positioned on the left or right side of a
 
 <Example title="Panel base - Left dock drill in">
   <CodeView
-    style={{
-      backgroundColor: '#fafaf9',
-      position: 'relative',
-      height: '200px',
-      overflow: 'hidden'
-    }}
+    demoStyles="
+      background-color: #fafaf9;
+      position: relative;
+      height: 200px;
+      overflow: hidden;
+  "
   >
     <Panel size="medium" title="Panel Header" docked="left" invoke="drill-in">
       A panel body accepts any layout or component
@@ -190,12 +190,12 @@ The `slds-panel_docked` element can be positioned on the left or right side of a
 
 <Example title="Panel base - Right dock drill in">
   <CodeView
-    style={{
-      backgroundColor: '#fafaf9',
-      position: 'relative',
-      height: '200px',
-      overflow: 'hidden'
-    }}
+    demoStyles="
+      background-color: #fafaf9;
+      position: relative;
+      height: 200px;
+      overflow: hidden;
+  "
   >
     <Panel size="medium" title="Panel Header" docked="right" invoke="drill-in">
       A panel body accepts any layout or component
@@ -240,7 +240,13 @@ Filtering lists or reports can be done by using a Filtering expressions inside o
   to the button element inside each filterable object.
 </Blockquote>
 
-<CodeView style={{backgroundColor: '#fafaf9', position: 'relative', height: '600px', overflow: 'hidden'}}>
+<CodeView
+  demoStyles="
+    background-color: #fafaf9;
+    position: relative;
+    height: 600px;
+    overflow: hidden;
+  ">
   <Panel size="medium" title="Filter" docked="right" invoke="toggle">
     <Filters>
       <ol className="slds-list_vertical slds-list_vertical-space">

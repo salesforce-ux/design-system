@@ -9,7 +9,7 @@ import * as Base from './base/example';
   Docked utility bar is a persistent bar that allows a user to continually use the app to complete tasks while expanding/collapsing utility panels.
 </div>
 
-<CodeView isViewport exampleOnly style={getDemoStylesById(Base.states, 'open')}>
+<CodeView isViewport exampleOnly demoStyles={getDemoStylesById(Base.states, 'open')}>
   {getDisplayElementById(Base.states, 'open')}
 </CodeView>
 
@@ -18,19 +18,19 @@ import * as Base from './base/example';
 Fixed bar at the bottom of viewport, that contains items.
 
 ## Base
-<CodeView isViewport style={getDemoStylesById(Base.states, 'default')}>
+<CodeView isViewport demoStyles={getDemoStylesById(Base.states, 'default')}>
   {getDisplayElementById(Base.states, 'default')}
 </CodeView>
 
 ## States
 
 ### Panel open
-<CodeView isViewport style={getDemoStylesById(Base.states, 'open')}>
+<CodeView isViewport demoStyles={getDemoStylesById(Base.states, 'open')}>
   {getDisplayElementById(Base.states, 'open')}
 </CodeView>
 
 ### Item has notification
-<CodeView isViewport style={getDemoStylesById(Base.states, 'notification')}>
+<CodeView isViewport demoStyles={getDemoStylesById(Base.states, 'notification')}>
   {getDisplayElementById(Base.states, 'notification')}
 </CodeView>
 
@@ -38,6 +38,6 @@ Fixed bar at the bottom of viewport, that contains items.
 
 If the utility bar item is active and its panel is popped open in a new window, use `.slds-utility-bar__item_pop-out` on the `.slds-utility-bar__item`. This will add a visual indicator to communicate that the panel is opened in a new window.
 
-<CodeView isViewport style={getDemoStylesById(Base.states, 'pop-out')}>
+<CodeView isViewport demoStyles={getDemoStylesById(Base.states, 'pop-out')}>
   {getDisplayElementById(Base.states, 'pop-out')}
 </CodeView>

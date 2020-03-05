@@ -11,7 +11,7 @@ import * as MultiEntity from './multi-entity/example';
   Lookup is an autocomplete combobox that will search against a database object.
 </div>
 
-<CodeView style={{height: '15rem'}} exampleOnly>
+<CodeView demoStyles="height: 15rem;" exampleOnly>
   {getDisplayElementById(Base.states, 'displaying-options-based-on-input')}
 </CodeView>
 
@@ -45,7 +45,7 @@ Lookups allow the user to have dual keyboard focus: while focus in the input sea
 
 ## Base
 
-<CodeView style={{height: '13rem'}}>
+<CodeView demoStyles="height: 13rem;">
   {Base.default}
 </CodeView>
 
@@ -53,17 +53,17 @@ Lookups allow the user to have dual keyboard focus: while focus in the input sea
 
 ### Focused
 
-<CodeView style={{height: '13rem'}}>
+<CodeView demoStyles="height: 13rem;">
   {getDisplayElementById(Base.states, 'focused')}
 </CodeView>
 
 ### Open - Item Focused
-<CodeView style={{height: '13rem'}}>
+<CodeView demoStyles="height: 13rem;">
   {getDisplayElementById(Base.states, 'open-item-focused')}
 </CodeView>
 
 ### Displaying options based on user input
-<CodeView style={{height: '14rem'}}>
+<CodeView demoStyles="height: 14rem;">
   {getDisplayElementById(Base.states, 'displaying-options-based-on-input')}
 </CodeView>
 
@@ -80,19 +80,19 @@ Lookups allow the user to have dual keyboard focus: while focus in the input sea
 
 ## Multi Entity
 
-<CodeView style={{height: '17rem'}}>
+<CodeView demoStyles="height: 17rem;">
   {MultiEntity.default}
 </CodeView>
 
 ## States
 
 ### Focused
-<CodeView style={{height: '15rem'}}>
+<CodeView demoStyles="height: 15rem;">
   {getDisplayElementById(MultiEntity.states, 'focused')}
 </CodeView>
 
 ### Open - Item Focused
-<CodeView style={{height: '15rem'}}>
+<CodeView demoStyles="height: 15rem;">
   {getDisplayElementById(MultiEntity.states, 'open-item-focused')}
 </CodeView>
 
@@ -102,6 +102,6 @@ Lookups allow the user to have dual keyboard focus: while focus in the input sea
 </CodeView>
 
 ### Focused - Option(s) Selected
-<CodeView style={{height: '15rem'}}>
+<CodeView demoStyles="height: 15rem;">
   {getDisplayElementById(MultiEntity.states, 'focused-options-selected')}
 </CodeView>

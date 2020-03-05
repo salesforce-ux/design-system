@@ -21,7 +21,7 @@ import _, { getDisplayElementById } from '../../shared/helpers';
   autocomplete or readonly, accompanied by a listbox of options.
 </div>
 
-<CodeView style={{ height: '17rem' }}>
+<CodeView demoStyles="height: 17rem;">
   {getDisplayElementById(BaseExamples.states, 'focused-open')}
 </CodeView>
 
@@ -29,7 +29,7 @@ import _, { getDisplayElementById } from '../../shared/helpers';
 
 A Base Combobox is a readonly text `input` that allows a user to select an option from a pre-defined list of options. It does not allow free form user input, nor does it allow the user to modify the selected value.
 
-<CodeView style={{ height: '17rem' }}>{BaseExamples.default}</CodeView>
+<CodeView demoStyles="height: 17rem;">{BaseExamples.default}</CodeView>
 
 ### Combobox markup
 
@@ -70,7 +70,7 @@ It is most common to expand the `listbox` of options when a user clicks on the C
   <code>listbox</code> instead.
 </Blockquote>
 
-<CodeView style={{ height: '17rem' }}>
+<CodeView demoStyles="height: 17rem;">
   {getDisplayElementById(BaseExamples.states, 'focused-open')}
 </CodeView>
 
@@ -89,7 +89,7 @@ If you are dynamically loading in more items to the listbox, the very last `<li>
 
 For layout purposes, wrap the spinner in a `<div>` with the class `slds-align_absolute-center` to position the spinner in the middle of the list item, as well as `slds-p-top_medium` to provide the appropriate amount of space for the spinner to be visible.
 
-<CodeView style={{ height: '14rem' }}>
+<CodeView demoStyles="height: 14rem;">
   {getDisplayElementById(BaseExamples.states, 'loading-options')}
 </CodeView>
 
@@ -97,7 +97,7 @@ For layout purposes, wrap the spinner in a `<div>` with the class `slds-align_ab
 
 Options within a `listbox` can be grouped together under meaningful headings. This is useful if you wish to create separation between 2 or more sets of options within a single `listbox`.
 
-<CodeView style={{ height: '18rem' }}>
+<CodeView demoStyles="height: 18rem;">
   {getDisplayElementById(BaseExamples.states, 'grouped-options')}
 </CodeView>
 
@@ -111,7 +111,7 @@ Options within a `listbox` can be grouped together under meaningful headings. Th
 
 The options in the `listbox` can have a left icon and/or metatext.
 
-<CodeView style={{ position: 'relative', height: '12rem' }}>
+<CodeView demoStyles="position: relative; height: 12rem;">
   <Listbox
     id="listbox-id-2"
     snapshot={Snapshot.PlainStylingOptions}
@@ -129,7 +129,7 @@ Options in a listbox that are disabled require these accessibility and styling c
 
 _Plain options: Example shows two disabled options with one enabled one_
 
-<CodeView style={{ position: 'relative', height: '9rem' }}>
+<CodeView demoStyles="position: relative; height: 9rem;">
   <Listbox
     id={_.uniqueId('listbox-id-')}
     snapshot={Snapshot.PlainDisabledOptions}
@@ -140,7 +140,7 @@ _Plain options: Example shows two disabled options with one enabled one_
 
 _Entity options: Example shows two disabled entity options with one enabled one_
 
-<CodeView style={{ position: 'relative', height: '9rem' }}>
+<CodeView demoStyles="position: relative; height: 9rem;">
   <Listbox
     id={_.uniqueId('listbox-id-')}
     snapshot={Snapshot.EntityDisabledOptions}
@@ -157,7 +157,7 @@ At its most basic, the `listbox` of options should be displayed when a user inte
 
 A mouse or pointer device user can click on a Combobox and the `listbox` will display automatically whilst focus is placed inside the Combobox input field.
 
-<CodeView style={{ height: '17rem' }}>
+<CodeView demoStyles="height: 17rem;">
   {getDisplayElementById(BaseExamples.states, 'focused-open')}
 </CodeView>
 
@@ -193,7 +193,7 @@ When an option from the `listbox` is "in focus", user focus never leaves the `in
 
 By typing the first letter of an option name, the first matching option will highlight. When the letter doesn't match an option, highlighting doesn't move.
 
-<CodeView style={{ height: '17rem' }}>
+<CodeView demoStyles="height: 17rem;">
   {getDisplayElementById(BaseExamples.states, 'highlighting-an-option')}
 </CodeView>
 
@@ -222,7 +222,7 @@ Upon selection the Combobox collapses, only showing the `input` field. The value
 
 When an option becomes selected, the class `slds-is-selected` should be applied to the `slds-listbox__option` element with the `role="option"`. This will provide visual feedback that the user has selected that element.
 
-<CodeView style={{ height: '17rem' }}>
+<CodeView demoStyles="height: 17rem;">
   {getDisplayElementById(BaseExamples.states, 'selecting-a-single-option')}
 </CodeView>
 
@@ -253,7 +253,7 @@ When more than one option has been selected, the value of the `input` should be 
   <Option name="Accounts" selected />
 </CodeBlock>
 
-<CodeView style={{ height: '17rem' }}>
+<CodeView demoStyles="height: 17rem;">
   {getDisplayElementById(BaseExamples.states, 'selecting-multiple-options')}
 </CodeView>
 
@@ -288,7 +288,7 @@ If no option matches, the user can complete the value of the combobox by finishi
   <code>aria-autocomplete="list"</code>.
 </Blockquote>
 
-<CodeView style={{ height: '12rem' }}>{AutocompleteExamples.default}</CodeView>
+<CodeView demoStyles="height: 12rem;">{AutocompleteExamples.default}</CodeView>
 
 ### Displaying options
 
@@ -296,7 +296,7 @@ Displaying options for the Autocomplete Combobox happens just like the base Comb
 
 When a user stops interacting with the Combobox, or selects an option, the Combobox collapses and hides the options.
 
-<CodeView style={{ height: '12rem' }}>
+<CodeView demoStyles="height: 12rem;">
   {getDisplayElementById(AutocompleteExamples.states, 'focused-open')}
 </CodeView>
 
@@ -314,7 +314,7 @@ Whilst typing, the highlighted option in the `listbox` should be the user's text
   <code>aria-selected="true"</code>.
 </Blockquote>
 
-<CodeView style={{ height: '12rem' }}>
+<CodeView demoStyles="height: 12rem;">
   {getDisplayElementById(AutocompleteExamples.states, 'typeahead')}
 </CodeView>
 
@@ -322,7 +322,7 @@ Whilst typing, the highlighted option in the `listbox` should be the user's text
 
 The options in the autocomplete `listbox` can have a right icon to indicate an option that drills in for more options.
 
-<CodeView style={{ position: 'relative', height: '10rem' }}>
+<CodeView demoStyles="position: relative; height: 10rem;">
   <Listbox
     id="listbox-id-3"
     snapshot={Snapshot.EntityStylingOptions}
@@ -338,7 +338,7 @@ The same keyboard interactions apply from the base Combobox, but with these diff
 
 - `Up` and `Down` arrows **should optionally** update the `input` value to reflect the currently selected option
 
-<CodeView style={{ height: '12rem' }}>
+<CodeView demoStyles="height: 12rem;">
   {getDisplayElementById(AutocompleteExamples.states, 'highlighting-an-option')}
 </CodeView>
 
@@ -375,7 +375,7 @@ The [Listbox of Pills](/components/pills/#Listbox-Of-Pill-Options) acts as a sin
 
 An Entity Autocomplete Combobox or Lookup, is used to search for and select Salesforce Entities.
 
-<CodeView style={{ height: '10rem' }}>
+<CodeView demoStyles="height: 10rem;">
   {getDisplayElementById(AutocompleteExamples.examples, 'lookup')}
 </CodeView>
 
@@ -385,7 +385,7 @@ Displaying options happens just like an Autocomplete Combobox, by placing user f
 
 The options now have extra information about them, such as the type of entity and any other important metadata.
 
-<CodeView style={{ height: '10rem' }}>
+<CodeView demoStyles="height: 10rem;">
   {getDisplayElementById(AutocompleteExamples.states, 'lookup-focused-open')}
 </CodeView>
 
@@ -395,7 +395,7 @@ As with the Autocomplete Combobox, the user can start typing into the `input` to
 
 In the resultant displayed options, we highlight the matched term by bolding it using the `<mark>` element.
 
-<CodeView style={{ height: '15rem' }}>
+<CodeView demoStyles="height: 15rem;">
   {getDisplayElementById(AutocompleteExamples.states, 'lookup-typeahead')}
 </CodeView>
 
@@ -405,7 +405,7 @@ The same keyboard interactions apply from the base Combobox, but with these diff
 
 - `Up` and `Down` arrows **should not** update the `input` value to reflect the currently selected option. The `input` value should only be updated upon selection.
 
-<CodeView style={{ height: '10rem' }}>
+<CodeView demoStyles="height: 10rem;">
   {getDisplayElementById(
     AutocompleteExamples.states,
     'lookup-highlighting-an-option'
@@ -464,17 +464,17 @@ The containing `div` of the comboboxes should have the class `slds-combobox-grou
   Switcher, which points to the Search Combobox ID.
 </Blockquote>
 
-<CodeView style={{ height: '17rem' }}>{GroupedExamples.default}</CodeView>
+<CodeView demoStyles="height: 17rem;">{GroupedExamples.default}</CodeView>
 
 ### User input (Typeahead)
 
-<CodeView style={{ height: '15rem' }}>
+<CodeView demoStyles="height: 15rem;">
   {getDisplayElementById(GroupedExamples.states, 'typeahead')}
 </CodeView>
 
 ### User input (Typeahead) - Loading
 
-<CodeView style={{ height: '15rem' }}>
+<CodeView demoStyles="height: 15rem;">
   {getDisplayElementById(GroupedExamples.states, 'typeahead-loading')}
 </CodeView>
 
@@ -486,7 +486,7 @@ The containing `div` of the comboboxes should have the class `slds-combobox-grou
 
 ### User input with selection(s) made
 
-<CodeView style={{ height: '15rem' }}>
+<CodeView demoStyles="height: 15rem;">
   {getDisplayElementById(GroupedExamples.states, 'selected-options-open')}
 </CodeView>
 
@@ -522,7 +522,7 @@ The containing element should receive the class `slds-combobox_object-switcher` 
 
 #### Text variant
 
-<CodeView style={{ height: '17rem' }}>
+<CodeView demoStyles="height: 17rem;">
   {getDisplayElementById(GroupedExamples.states, 'scoping-results-focused')}
 </CodeView>
 
@@ -545,7 +545,7 @@ The containing element should receive the class `slds-combobox_object-switcher` 
 
 ##### Focused
 
-<CodeView style={{ height: '13rem' }}>
+<CodeView demoStyles="height: 13rem;">
   {getDisplayElementById(
     GroupedExamples.states,
     'scoping-results-icon-focused'

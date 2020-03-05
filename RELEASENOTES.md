@@ -4,12 +4,16 @@
 ## Release 2.11.5 - March 4, 2020
 
 ## Components
+
+### [Checkbox Button Group](https://www.lightningdesignsystem.com/components/checkbox-button-group)
+#### Added
+- Added documentation and examples for mobile/touch context
+
 ### [Badges](https://www.lightningdesignsystem.com/components/badges)
 - Added examples for communicating Success, Warning and Error states.
 
 ### [Scoped Notifications](https://www.lightningdesignsystem.com/components/scoped-notifications)
 - Added examples for Informational, Success, Warning and Error states
-<!-- ## [VERSION] -->
 
 ## Release 2.11.4 - February 12, 2020
 

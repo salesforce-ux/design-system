@@ -10,13 +10,18 @@ export let MobileBlurb = props => {
 
   return (
     <Blockquote type="note">
-      On mobile devices, such as phones and other devices that have touch as the
-      primary method of interaction, {patternSpecificText}. Below is a live
-      example of what to expect in that context. No code changes are needed in
-      the Salesforce platform context as this change occurs automatically in the
-      appropriate context. For those users not on the Salesforce platform, these
-      modifications will occur automatically when the secondary touch stylesheet
-      is loaded and the device has touch as the primary method of interaction.
+      <p>
+        On mobile devices, such as phones and other devices that have touch as
+        the primary method of interaction, {patternSpecificText}.
+      </p>
+      <p>
+        Below is a live example of what to expect in that context. No code
+        changes are needed in the Salesforce platform context as this change
+        occurs automatically in the appropriate context. For those users not on
+        the Salesforce platform, these modifications will occur automatically
+        when the secondary touch stylesheet is loaded and the device has touch
+        as the primary method of interaction.
+      </p>
     </Blockquote>
   );
 };

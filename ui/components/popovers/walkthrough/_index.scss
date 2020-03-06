@@ -46,6 +46,12 @@
     color: $popover-color-text;
   }
 
+  .slds-input, 
+  .slds-select, 
+  .sld-textarea {
+    color: $color-text-default;
+  }
+
   &.slds-nubbin_top,
   &.slds-nubbin--top,
   &.slds-nubbin_top-left,

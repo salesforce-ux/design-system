@@ -15,6 +15,7 @@ import * as Inverse from './inverse/example';
 import * as Stateful from './stateful/example';
 import * as TransparentContainer from './transparent-container/example';
 import _, { getDisplayElementById } from '../../shared/helpers';
+import { MobileNotice, MobileBlurb } from '../../shared/doc-text';
 
 <div className="lead doc">
   Button icons provide the user with visual iconography that is typically used
@@ -24,11 +25,8 @@ import _, { getDisplayElementById } from '../../shared/helpers';
 <CodeView exampleOnly>
   <React.Fragment>
     <ButtonIcon iconClassName="slds-button__icon_large" assistiveText="More options" title="More Options"/>
-
     <ButtonIcon iconClassName="slds-button__icon_small" assistiveText="More options" title="More Options"/>
-
     <ButtonIcon iconClassName="slds-button__icon_x-small" assistiveText="More options" title="More Options"/>
-
   </React.Fragment>
 </CodeView>
 
@@ -43,6 +41,18 @@ Some styling variations require the button to receive additional 'container' cla
 If an icon button doesn’t include a label, use a `title` attribute to show on hover for sighted users, and a span with class `slds-assistive-text` to describe the button's action for screen readers.
 
 When using assistive text, the icon element itself should have `aria-hidden` set to `true`.
+
+### Mobile
+
+<MobileBlurb patternSpecificText="buttons will have an increased size to accommodate tapping with a finger instead of the more precise mouse cursor" />
+
+<CodeView frameOnly hideDeviceSelector>
+  <React.Fragment>
+    <ButtonIcon iconClassName="slds-button__icon_large" assistiveText="More Options" title="More Options"/>
+    <ButtonIcon iconClassName="slds-button__icon_small" assistiveText="More Options" title="More Options"/>
+    <ButtonIcon iconClassName="slds-button__icon_x-small" assistiveText="More Options" title="More Options"/>
+  </React.Fragment>
+</CodeView>
 
 ## Base
 

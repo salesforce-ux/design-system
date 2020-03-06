@@ -4,6 +4,16 @@
 
 <!-- ## [Unreleased] -->
 
+## 2.11.6
+
+### Fixed
+
+- Sizing classes are now respected in mobile/touch context 
+
+### Added
+
+- Added documentation and examples for mobile/touch context
+
 ## 2.10.0
 
 ### Changed

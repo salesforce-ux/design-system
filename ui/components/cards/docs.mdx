@@ -8,6 +8,7 @@ import * as CardExamples from './base/example';
 import * as CardEinsteinExamples from './einstein/example';
 import * as CardWrapperExamples from './wrapper/example';
 import { getDisplayElementById } from '../../shared/helpers';
+import { MobileNotice, MobileBlurb } from '../../shared/doc-text';
 
 <div className="lead doc">
   Cards are used to apply a container around a related grouping of information.
@@ -22,6 +23,14 @@ To initialize a card, apply the `slds-card` class to an `<article>` element.
 ### Accessibility
 
 Cards should use an underlying `<article>` element to maintain usability for some screen reader users.
+
+### Mobile
+
+<MobileBlurb patternSpecificText="cards will have bolded header title text, no top border, and no rounded corners" />
+
+<CodeView frameOnly>
+  {CardExamples.default}
+</CodeView>
 
 ## Base Card Structure
 
@@ -189,6 +198,10 @@ Placing contact tiles inside of an `slds-card__body` is an example of using `sld
   {getDisplayElementById(CardExamples.examples, 'related-list-tiles')}
 </CodeView>
 
+<MobileNotice docsLink="#Mobile" header="Mobile context changes" elementName="cards with tiles" />
+
+<CodeView frameOnly>{getDisplayElementById(CardExamples.examples, 'related-list-tiles')}</CodeView>
+
 ## Layout
 
 ### Nested Cards
@@ -230,6 +243,15 @@ For cards that contain Einstein related information, you can include an Einstein
 ### With Actions
 
 <CodeView>
+  {getDisplayElementById(
+    CardEinsteinExamples.states,
+    'einstein-with-icon-and-actions'
+  )}
+</CodeView>
+
+<MobileNotice docsLink="#Mobile" header="Mobile context changes" elementName="cards with Einstein theming and actions" />
+
+<CodeView frameOnly>
   {getDisplayElementById(
     CardEinsteinExamples.states,
     'einstein-with-icon-and-actions'

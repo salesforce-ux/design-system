@@ -10,6 +10,10 @@
 #### Added
 - Added documentation and examples for mobile/touch context
 
+### [Cards](https://www.lightningdesignsystem.com/components/cards)
+#### Added
+- Added documentation and examples for mobile/touch context
+
 ## Release 2.11.5 - March 5, 2020
 
 ## Components

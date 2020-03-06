@@ -122,7 +122,12 @@
   @if comparable($border, $padding) {
     $box-model: rem($border + $padding);
   } @else {
-    $box-model: rem($border) + $padding;
+    $box-model: (rem($border) + $padding);
   }
-  line-height: calc(#{$value} - #{$box-model});
+
+  @if comparable($value, $box-model) {
+    line-height: ($value - $box-model);
+  } @else {
+    line-height: (rem($value) - $box-model);
+  }
 }

@@ -5,10 +5,10 @@ import { initializeRTL } from 'storybook-addon-rtl';
 import loadStories from './stories';
 import sldsTheme from './sldsTheme';
 
-import '../ui/index.scss'; // load slds css
-import '../ui/touch.scss'; // load touch stylesheet
 import './scss/ui/index.scss'; // Our custom Storybook presentation styles
-import '../shared/styles/doc.scss'; // docs styles
+import '../ui/index.scss'; // SLDS stylesheet
+import '../ui/touch.scss'; // SLDS touch stylesheet (with media/feature query)
+import '../ui/touch-demo.scss'; // SLDS touch stylesheet for documentation site (without media/feature query)
 
 initializeRTL();
 

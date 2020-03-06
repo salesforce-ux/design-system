@@ -3,6 +3,7 @@ import CodeBlock from '../../../shared/components/CodeBlock';
 import Blockquote from '../../../shared/components/Blockquote';
 import { getDisplayElementById } from '../../shared/helpers';
 import * as PathExamples from './base/example';
+import { MobileNotice, MobileBlurb } from '../../shared/doc-text';
 
 <div className="lead doc">
   The Path communicates to the user the progress of a particular process.
@@ -43,6 +44,14 @@ The markup structure is identical, just some attributes change their values.
 - For both with and without Path Stage Coaching variants, the following keyboard navigation applies
 - `left` and `right` arrow keys move focus _and_ selection, with `aria-selected="true"`
 
+### Mobile
+
+<MobileBlurb patternSpecificText="elements of path will have an increased size to accommodate tapping with a finger instead of the more precise mouse cursor" />
+
+<CodeView frameOnly>
+  {getDisplayElementById(PathExamples.states, 'later-stage')}
+</CodeView>
+
 ## Examples
 
 ### Base
@@ -65,7 +74,7 @@ The markup structure is identical, just some attributes change their values.
 
 ### With visible tooltip
 
-<CodeView>
+<CodeView style={{minHeight: '5rem'}}>
   {getDisplayElementById(PathExamples.states, 'with-visible-tooltip')}
 </CodeView>
 

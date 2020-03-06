@@ -14,14 +14,25 @@
 #### Changed
 - Added a small variant to visual picker
 
-## Release 2.11.5 - February 21, 2020
+## Release 2.11.5 - March 5, 2020
 
 ## Components
+### [Badges](https://www.lightningdesignsystem.com/components/badges)
+- Added examples for communicating Success, Warning and Error states.
+
+### [Checkbox Button Group](https://www.lightningdesignsystem.com/components/checkbox-button-group)
+#### Added
+- Added documentation and examples for mobile/touch context
+
+### [Path](https://www.lightningdesignsystem.com/components/path)
+#### Added
+- Added documentation and examples for mobile/touch context
+
 ### [Scoped Notifications](https://www.lightningdesignsystem.com/components/scoped-notifications)
 - Added examples for Informational, Success, Warning and Error states
 <!-- ## [VERSION] -->
 
-## Release 2.11.4 - February 21, 2020
+## Release 2.11.4 - February 12, 2020
 
 ## Components
 ### [Spinners](https://www.lightningdesignsystem.com/components/spinners)

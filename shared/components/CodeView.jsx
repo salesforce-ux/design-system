@@ -8,6 +8,7 @@ import StyledDemo from './StyledDemo';
 import classNames from 'classnames';
 
 import '../styles/doc.scss';
+import SLDSFrame from './SLDSFrame';
 
 class CodeView extends React.Component {
   renderChildren() {
@@ -38,10 +39,15 @@ class CodeView extends React.Component {
   }
 
   render() {
-    const { position, toggleCode, exampleOnly } = this.props;
-
-    return (
-      <div className="docs-codeblock">
+    const {
+      position,
+      toggleCode,
+      exampleOnly,
+      frameOnly,
+      hideDeviceSelector
+    } = this.props;
+    let content = (
+      <React.Fragment>
         {position === 'bottom' ? this.renderChildren() : null}
         {!exampleOnly && (
           <CodeBlock language="html" toggleCode={toggleCode}>
@@ -49,6 +55,24 @@ class CodeView extends React.Component {
           </CodeBlock>
         )}
         {position === 'top' ? this.renderChildren() : null}
+      </React.Fragment>
+    );
+
+    if (frameOnly) {
+      content = (
+        <SLDSFrame hideDeviceSelector={hideDeviceSelector}>
+          {this.props.children}
+        </SLDSFrame>
+      );
+    }
+
+    return (
+      <div
+        className={classNames('docs-codeblock', {
+          'docs-codeblock_frame': frameOnly
+        })}
+      >
+        {content}
       </div>
     );
   }
@@ -61,11 +85,14 @@ CodeView.propTypes = {
   isViewport: PropTypes.bool,
   isMobile: PropTypes.bool,
   toggleCode: PropTypes.bool,
-  exampleOnly: PropTypes.bool
+  exampleOnly: PropTypes.bool,
+  frameOnly: PropTypes.bool,
+  hideDeviceSelector: PropTypes.bool
 };
 
 CodeView.defaultProps = {
-  position: 'bottom'
+  position: 'bottom',
+  frameOnly: false
 };
 
 export default CodeView;

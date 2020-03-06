@@ -3,6 +3,8 @@ const paths = require('../scripts/helpers/paths');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const addClasses = require('rehype-add-classes');
 
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+
 const tags = [
   'p',
   'div',
@@ -30,8 +32,28 @@ const tags = [
 ];
 const tagsString = tags.reduce((tags, tag) => `${tags},${tag}`);
 
+const commonRules = [
+  {
+    loader: 'css-loader',
+    options: { importLoaders: 2, url: false }
+  },
+  {
+    loader: 'postcss-loader',
+    options: { sourceMap: true }
+  },
+  {
+    loader: 'sass-loader',
+    options: {
+      sassOptions: { sourceMap: true, outputStyle: 'compressed' }
+    }
+  }
+];
+
+const extractRules = ['extract-loader'].concat(commonRules);
+
 module.exports = async ({ config, mode }) => {
   config.module.rules.push(
+    // Sass file import/require rules
     {
       test: /\.scss$/,
       include: [
@@ -40,49 +62,70 @@ module.exports = async ({ config, mode }) => {
         path.resolve(__dirname, '../shared'),
         path.resolve(__dirname, '../assets')
       ],
-      use: [
+      oneOf: [
+        // touch demo
         {
-          loader: path.resolve(
-            __dirname,
-            '../scripts/compile/lwc-style-loader.js'
-          )
+          test: /touch-demo\.scss$/,
+          use: [
+            {
+              loader: 'file-loader',
+              options: {
+                name:
+                  'assets/__internal/styles/salesforce-lightning-design-system_touch-demo.min.css'
+              }
+            }
+          ].concat(extractRules)
         },
+        // storybook styles
         {
-          loader: 'css-loader',
-          options: { importLoaders: 2 }
+          test: /scss\/ui\/index\.scss$/,
+          use: [
+            {
+              loader: 'file-loader',
+              options: {
+                name: 'slds-storybook.build.css'
+              }
+            }
+          ].concat(extractRules)
         },
+        // SLDS stylesheet
         {
-          loader: 'postcss-loader',
-          options: { sourceMap: true }
+          test: /\/ui\/index\.scss$/,
+          use: [
+            {
+              loader: 'file-loader',
+              options: {
+                name: 'assets/styles/salesforce-lightning-design-system.min.css'
+              }
+            }
+          ].concat(extractRules)
         },
+        // touch stylesheet (with media/feature query)
         {
-          loader: 'resolve-url-loader',
-          options: { sourceMap: true }
+          test: /\/ui\/touch\.scss$/,
+          use: [
+            {
+              loader: 'file-loader',
+              options: {
+                name:
+                  'assets/styles/salesforce-lightning-design-system_touch.min.css'
+              }
+            }
+          ].concat(extractRules)
         },
+        // everything else
         {
-          loader: 'sass-loader',
-          options: {
-            sassOptions: { sourceMap: true, outputStyle: 'compressed' }
-          }
-        },
-        // Reads Sass vars from files or inlined in the options property
-        // needed to reset the asset paths for webpack to load them, as we
-        // assume we're loading from the assets folder with a relative path
-        // from the compile css monolith to the assets, like fonts
-        {
-          loader: '@epegzz/sass-vars-loader',
-          options: {
-            syntax: 'scss',
-            files: [path.resolve(__dirname, './scss/framework/config.scss')]
-          }
+          use: [MiniCssExtractPlugin.loader].concat(commonRules)
         }
       ]
     },
+
     {
       test: /\.css$/,
       include: path.resolve(__dirname, '../ui'),
       use: ['raw-loader']
     },
+
     {
       test: /\.mdx$/,
       use: [
@@ -98,6 +141,13 @@ module.exports = async ({ config, mode }) => {
       ]
     }
   );
+
+  config.plugins.push(
+    new MiniCssExtractPlugin({
+      filename: '[name]-slds.build.css',
+      chunkFilename: '[name].build.css'
+    })
+  );
   config.plugins.push(
     new CopyWebpackPlugin([
       {
@@ -110,5 +160,6 @@ module.exports = async ({ config, mode }) => {
       }
     ])
   );
+
   return config;
 };

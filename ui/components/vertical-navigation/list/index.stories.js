@@ -2,8 +2,6 @@ import { storiesOf } from '@storybook/react';
 import * as ListExamples from './example';
 import { getDisplayElementById } from '../../../shared/helpers';
 
-import '../../../index.scss';
-
 const stories = storiesOf('Components/Vertical Navigation/List', module).add(
   'Base',
   () => ListExamples.default

@@ -1,0 +1,117 @@
+[
+  {
+    "id": "iphone-11-pro-max",
+    "description": "iPhone 11 Pro Max",
+    "dimensions": {
+      "width": 414,
+      "height": 896
+    }
+  },
+  {
+    "id": "iphone-11-pro",
+    "description": "iPhone 11 Pro",
+    "dimensions": {
+      "width": 375,
+      "height": 812
+    }
+  },
+  {
+    "id": "iphone-11",
+    "description": "iPhone 11",
+    "dimensions": {
+      "width": 414,
+      "height": 896
+    }
+  },
+  {
+    "id": "iphone-xr",
+    "description": "iPhone XR",
+    "dimensions": {
+      "width": 414,
+      "height": 896
+    }
+  },
+  {
+    "id": "iphone-x",
+    "description": "iPhone X",
+    "dimensions": {
+      "width": 375,
+      "height": 812
+    }
+  },
+  {
+    "id": "iphone-8-plus",
+    "description": "iPhone 8 Plus",
+    "dimensions": {
+      "width": 414,
+      "height": 736
+    }
+  },
+  {
+    "id": "iphone-8",
+    "description": "iPhone 8",
+    "dimensions": {
+      "width": 375,
+      "height": 667
+    }
+  },
+
+  {
+    "id": "ipad-pro",
+    "description": "iPad Pro",
+    "dimensions": {
+      "width": 1024,
+      "height": 1366
+    }
+  },
+  {
+    "id": "ipad",
+    "description": "iPad 3rd & 4th Generation",
+    "dimensions": {
+      "width": 768,
+      "height": 1024
+    }
+  },
+
+  {
+    "id": "pixel-3xl",
+    "description": "Google Pixel 3 XL",
+    "dimensions": {
+      "width": 412,
+      "height": 847
+    }
+  },
+  {
+    "id": "pixel-3",
+    "description": "Google Pixel 3",
+    "dimensions": {
+      "width": 412,
+      "height": 824
+    }
+  },
+  {
+    "id": "pixel-2xl",
+    "description": "Google Pixel 2 XL",
+    "dimensions": {
+      "width": 412,
+      "height": 732
+    }
+  },
+  {
+    "id": "pixel",
+    "description": "Google Pixel",
+    "dimensions": {
+      "width": 412,
+      "height": 732
+    }
+  },
+
+  {
+    "id": "galaxy-s9",
+    "description": "Samsung Galaxy S8/S8+/S9/S9+",
+    "dimensions": {
+      "width": 360,
+      "height": 740
+    }
+  }
+]

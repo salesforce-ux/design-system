@@ -1,6 +1,7 @@
 import * as Base from './base/example.jsx';
 import CodeView from '../../../shared/components/CodeView';
 import { getDisplayElementById } from '../../shared/helpers';
+import { MobileNotice, MobileBlurb } from '../../shared/doc-text';
 
 <div className="doc lead">
   A styled checkable input that communicates if an option is being added to a
@@ -43,6 +44,14 @@ The states of the checkbox button are styled with the following classes:
 When implementing this blueprint, monitor the state of the checkbox `<input>` and apply the appropriate state class listed in the above chart based on the current state of the checkbox `<input>`.
 
 It is possible to change the icon used within the checkbox button, see [Different Icons](#different-icon) for more details.
+
+### Mobile
+
+<MobileBlurb patternSpecificText="checkbox buttons will have an increased size to accommodate tapping with a finger instead of the more precise mouse cursor" />
+
+<CodeView frameOnly hideDeviceSelector>
+  {Base.default}
+</CodeView>
 
 ## Base
 

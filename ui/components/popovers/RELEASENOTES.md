@@ -3,6 +3,11 @@
 # Popovers Release Notes
 
 <!-- ## [Unreleased] -->
+## 2.12.0
+
+### Fixed
+
+- Fixed the text color in form inputs for the Walkthrough variation.
 
 ## 2.10.0
 

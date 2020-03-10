@@ -1,0 +1,213 @@
+import CodeView from '../../../shared/components/CodeView';
+import CodeBlock from '../../../shared/components/CodeBlock';
+import Blockquote from '../../../shared/components/Blockquote';
+import * as InputExamples from '../input/base/example';
+import { getDisplayElementById } from '../../shared/helpers';
+
+import { CustomElementName as InputElementName } from '.';
+
+<div className="doc lead">
+  Text inputs are used for freeform data entry.
+</div>
+
+<CodeView exampleOnly>
+  {InputExamples.default}
+</CodeView>
+
+## About Inputs
+Inputs are a component that allows for freeform single-line text entry that uses the `<input>` HTML element. The Input component includes support for the following HTML5 input types: `text`, `password`, `email`, `tel`, `url`, and `search`.
+
+To use the base version of the component, wrap a `<div>` with the `lwc-input` class; this will act as the component wrapper. Contained within this wrapper is an `<input>` with the class `lwc-input_control`. This wrapper is in place to include elements such as icons, help text, error messages, and other symbols.
+
+### Usage with Labels
+Whenever possible, use Labels whenever you use an Input. This approach is not only the best way to identify what the Input is for—especially helpful for screen readers—but it also automatically adds basic functionality provided by the browser, such as focus.
+
+Labels use the `<label>` HTML element with the class `lwc-label`. When using a Label, place it _outside_ of the `lwc-input` wrapper. For more information on how to associate a Label with an Input, please reference the [Label]() documentation.
+
+<Blockquote header="A note about Shadow DOM">
+  If you have Shadow DOM turned on, the Label must be <em>inside</em> the Input's shadow boundary. Placing it outside the shadow boundary, or giving the Label a shadow boundary, will sever the ability for the two elements to communicate with each other.
+</Blockquote>
+
+<CodeView>
+  {InputExamples.default}
+</CodeView>
+
+### Usage without Labels
+While using a Label with an Input is the recommended approach, there may be cases when no Label is desired. In this case, add the class `lwc-assistive-text` to the Label. This will visually hide the Label text but allow screen readers to properly read the value.
+
+<CodeView>
+  {getDisplayElementById(InputExamples.examples, 'no-label')}
+</CodeView>
+
+## States
+Inputs have six distinct states: Default, required, disabled, error, read only, and static. Each state, with the exclusion of disabled and static, automatically receives a focus state when a user taps, clicks, or otherwise selects the Input.
+
+<Blockquote header="State management">
+  While Inputs can change state depending on the use case, each individual Input should be in only one distinct state at a time.
+</Blockquote>
+
+### Required
+When an Input is required, prepend the `<abbr>` element with the class `lwc-label_required` and a `title` of "Required" to the Label text. This element will only contain the asterisk (*) character, and when hovered over with a cursor, the browser will display the text in the `title` attribute.
+
+Also, add the `required` attribute to the `<input>` element. This attribute does not require a value, as simply having the attribute present—or setting `required=""`—will set the Input as required. If values are given to this attribute, no matter the value, the browser will interpret this as `true`, and therefore set the Input as required.
+
+<CodeView>
+  {getDisplayElementById(InputExamples.states, 'required')}
+</CodeView>
+
+### Disabled
+When an Input is disabled and cannot be interacted with by the end user, add the `disabled` attribute to the `<input>` element. Similar to required Inputs, the `disabled` attribute does not require a value, as simply having the attribute present—or setting `disabled=""`—will set the Input as disabled.
+
+<CodeView>
+  {getDisplayElementById(InputExamples.states, 'disabled')}
+</CodeView>
+
+### Error
+When an Input has an error, add the class `lwc-input_has-error` and `aria-invalid="true"` to the `<input>` element; this will set the proper styling on the Input, as well as indicate that the value entered does not conform to what is expected.
+
+To assist users in diagnosing and resolving the error, a field-level error message should be associated with the Input. Within the Input wrapper (`lwc-input`), add a `<div>` HTML element with the classes `lwc-input_help-text` and `lwc-input_error-text`. Place any information related to the error or how to resolve the error within this element.
+
+Both the error text and the `<input>` need to be linked with a unique identifier to ensure the message can be read by assistive technologies, such as a screen reader. To do this, add the identifier to the `aria-describedby` attribute on the`<input>` and `id` attribute on the error message.
+
+<CodeView>
+  {getDisplayElementById(InputExamples.states, 'error')}
+</CodeView>
+
+### Read Only
+When an Input is in a read only state, add the attribute `readonly` to the `<input>`. This designates the Input as not editable by the end user unless some other action—for example, inline edit mode is toggled on—is taken.
+
+<CodeView>
+  {getDisplayElementById(InputExamples.states, 'readonly')}
+</CodeView>
+
+### Static
+When an Input is in a static state, the structure of the component changes drastically. Replace the `<label>` HTML element with a `<span>` with the class `lwc-label`, and replace the `<input>` element with a `<span>` with the class `lwc-input_control_static`. This provides better accessibility for screen readers and keyboard navigators.
+
+The main difference between this state and read only is that static is locked to its current value and cannot be updated. It also loses the ability to be focused, as the browser no longer applies the built-in functionality it received when it was an `<input>` element.
+
+<CodeView>
+  {getDisplayElementById(InputExamples.states, 'static')}
+</CodeView>
+
+## Examples
+
+### Password
+<CodeView>
+  {getDisplayElementById(InputExamples.examples, 'password-with-value')}
+</CodeView>
+
+### Email
+On desktop, this Input will look and behave exactly like a standard text Input; on a touch device, however, the keyboard will change to facilitate email address input (for example, on iOS the "@" character will appear next to the space bar).
+
+<CodeView>
+  {getDisplayElementById(InputExamples.examples, 'email-with-value')}
+</CodeView>
+
+### Telephone
+On desktop, this Input will look and behave exactly like a standard text Input; on a touch device, however, the keyboard will change to a number pad to facilitate phone number input. Please note that special formatting, such as placing an area code in parenthesis, is not automatically handled by this Input type.
+
+<CodeView>
+  {getDisplayElementById(InputExamples.examples, 'tel-with-value')}
+</CodeView>
+
+### URL
+On desktop, this Input will look and behave exactly like a standard text Input; on a touch device, however, the keyboard will remove the space bar—as this is an invalid character for a URL—and replace it with the period, backslash, and ".com" button.
+
+<CodeView>
+  {getDisplayElementById(InputExamples.examples, 'url-with-value')}
+</CodeView>
+
+### Search
+Search Inputs are text fields designed for search queries, and function identically to standard text Inputs.
+
+<CodeView>
+  {getDisplayElementById(InputExamples.examples, 'search-with-value')}
+</CodeView>
+
+### Icons
+
+<Blockquote type="warning">
+  Inputs with icons cannot be used simultaneously with symbols.
+</Blockquote>
+
+#### Prefixed Icons
+To add an icon at the front of an Input, add the class `lwc-input_has-prefix-icon` to the `lwc-input` wrapper. Before the HTML `<input>` element, add a `<div>` with the class `lwc-input_icon-wrapper_prefix`; this wrapper will contain the icon of your choice.
+
+<CodeView>
+  {getDisplayElementById(InputExamples.examples, 'prefix-icon')}
+</CodeView>
+
+#### Suffixed Icons
+To add an icon at the end of an Input, add the class `lwc-input_has-suffix-icon` to the `lwc-input` wrapper. After the HTML `<input>` element, add a `<div>` with the class `lwc-input_icon-wrapper_suffix`; This wrapper will contain the icon of your choice.
+
+<CodeView>
+  {getDisplayElementById(InputExamples.examples, 'suffix-icon')}
+</CodeView>
+
+### Clear Button Icon
+Clear Button Icons can be added to Inputs—generally Search Inputs—to clear the text within. This should be treated the same as a Suffixed Icon, replacing the Icon component with a Button Icon.
+
+<CodeView>
+  {getDisplayElementById(InputExamples.examples, 'clear-button')}
+</CodeView>
+
+### Loading Spinner
+A Loading Spinner can be added to Inputs to show the user that some action is in progress. While adding a Spinner to the front of an Input is allowed, it is recommended to add it to the end. This should be treated the same as Suffixed Icon, replacing the Icon component with a Spinner.
+
+<CodeView>
+  {getDisplayElementById(InputExamples.examples, 'loading-spinner')}
+</CodeView>
+
+### Clear Button and Loading Spinner
+It is possible to add both a clear Button Icon alongside a Loading Spinner. This should be treated the same as Suffixed Icon, adding the Spinner component before or after the Button Icon.
+
+<CodeView>
+  {getDisplayElementById(InputExamples.examples, 'clear-button-and-loading-spinner')}
+</CodeView>
+
+### Inline Help
+When additional information about what the form expects, such as the format for a phone number, is necessary, use an inline help message that is associated with the Input. Within the Input wrapper (`lwc-input`), add a `<div>` HTML element with the classes `lwc-input_help-text`. Place any information related to the input within this element.
+
+<CodeView>
+  {getDisplayElementById(InputExamples.examples, 'inline-help')}
+</CodeView>
+
+### Symbols
+<Blockquote type="warning">
+  Symbols cannot be used simultaneously with icons.
+</Blockquote>
+
+Prefix and suffix symbols are used to modify the meaning of Inputs, or to give the usage context more clarity. For example, one can designate a currency symbol (e.g., <abbr title="United States Dollar">$</abbr>, <abbr title="British Pound Sterling">£</abbr>) at the beginning of an Input, or a unit of measurement (e.g., <abbr title="Centimeters">cm</abbr>, <abbr title="Inches">in</abbr>). When using either of these symbols, add `aria-describedby` to the Input; this attribute should contain the `id`s of the Label, prefixed symbol, and suffixed symbol—whichever symbols are used—as a space-separated list.
+
+To ensure that assistive technology can read these properly, it is suggested to follow this order:
+- Label
+- Prefix Symbol
+- Suffix Symbol
+
+#### Prefix Symbol
+To use a prefix symbol, add a `<span>` with the class `lwc-input_addon` that contains your desired symbol before the Input element. This element must have a unique `id` that is referenced in the `aria-describedby` attribute on the Input.
+
+<CodeView>
+  {getDisplayElementById(InputExamples.examples, 'prefix')}
+</CodeView>
+
+#### Suffix Symbol
+To use a suffix symbol, add a `<span>` with the class `lwc-input_addon` that contains your desired symbol after the Input element. This element must have a unique `id` that is referenced in the `aria-describedby` attribute on the Input.
+
+<CodeView>
+  {getDisplayElementById(InputExamples.examples, 'suffix')}
+</CodeView>
+
+#### Prefix and Suffix Symbol
+To use both a prefix symbol and suffix symbol, add a `<span>` with the class `lwc-input_addon` that contains your desired symbol before and after the Input element. These elements must have a unique `id`s that are referenced in the `aria-describedby` attribute on the Input.
+
+<CodeView>
+  {getDisplayElementById(InputExamples.examples, 'prefix-and-suffix')}
+</CodeView>
+
+### Right to Left
+Inputs and their associated elements support right to left languages natively. To trigger this, add `dir="rtl`" to a parent element—ideally `html`. In the example below, the `dir` attribute is applied to the component's custom element.
+
+<CodeView>
+  {getDisplayElementById(InputExamples.examples, 'rtl')}
+</CodeView>

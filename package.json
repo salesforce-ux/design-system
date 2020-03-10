@@ -296,6 +296,10 @@
         "path": "ui/modules/icon/base/index.css"
       },
       {
+        "name": "@salesforce/slds/input",
+        "path": "ui/modules/icon/base/index.css"
+      },
+      {
         "name": "@salesforce/slds/menu",
         "path": "ui/modules/menu/base/index.css"
       },

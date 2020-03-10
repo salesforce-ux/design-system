@@ -1,0 +1,47 @@
+import CodeView from '../../../shared/components/CodeView';
+import CodeBlock from '../../../shared/components/CodeBlock';
+import Blockquote from '../../../shared/components/Blockquote';
+import * as LabelExamples from './base/example';
+import * as InputExamples from '../input/base/example';
+import { getDisplayElementById } from '../../shared/helpers';
+
+import { CustomElementName as LabelElementName } from '.';
+
+<div className="doc lead">
+  Labels are text identifiers for input elements.
+</div>
+
+<CodeView exampleOnly>
+  {LabelExamples.default}
+</CodeView>
+
+# About Labels
+Labels are a sub-component that uses the `<label>` HTML element with the class `lwc-label`. Use this component in conjunction with input elements, such as Input and Checkbox. It should not, however, be used alone nor as a heading.
+
+<CodeView>
+  {LabelExamples.default}
+</CodeView>
+
+Labels and inputs are connected via the `for` and `id` attributes, respectfully. This value must be the same for both elements and not used elsewhere. This connection allows for screen readers to associate inputs with their label, as well as provides input focus functionality when clicking on them.
+
+<CodeView>
+  {InputExamples.default}
+</CodeView>
+
+## Static
+Certain inputs have a static state which doesn't allow modifications by end users. In this state, the HTML input element becomes an non-semantic element such as a `<span>`. When this occurs, the label must also use a `<span>` rather than a standard `<label>` HTML element.
+
+<CodeView>
+  {getDisplayElementById(LabelExamples.examples, 'static')}
+</CodeView>
+
+<Blockquote type="accessibility" header="Accessibility Note">
+  While, stylistically, the static input looks the same, much of the build-in behavior is lost. Included in this is input focusing when clicking on the label. Static state inputs generally do not have a focus style. One must add this functionality manually.
+</Blockquote>
+
+## Required
+When an input is required, prepend the `<abbr>` element with the class `lwc-label_required` and a `title` of "Required". This element will only contain the asterisk (*) character, and when hovered over with a cursor, the browser will display the text in the `title` attribute.
+
+<CodeView>
+  {getDisplayElementById(LabelExamples.states, 'required')}
+</CodeView>

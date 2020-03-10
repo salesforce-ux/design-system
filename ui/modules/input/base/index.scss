@@ -1,0 +1,233 @@
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+@import '../../../shared/common/init';
+
+/**
+ * @summary Parent container for text inputs. Controls Custom Properties for Form Layout
+ * @selector .lwc-input
+ */
+.lwc-input {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+/**
+ * @summary Parent container modifier for text inputs with icons at the inline start
+ * @selector .lwc-input_has-prefix-icon
+ * @restrict .lwc-input
+ */
+.lwc-input_has-prefix-icon {
+  --lwc-c-input-padding-inline-start: $spacing-x-large;
+}
+
+/**
+ * @summary Parent container modifier for text inputs with icons at the inline end
+ * @selector .lwc-input_has-suffix-icon
+ * @restrict .lwc-input
+ */
+.lwc-input_has-suffix-icon {
+  --lwc-c-input-padding-inline-end: $spacing-x-large;
+}
+
+.lwc-input_has-prefix-icon,
+.lwc-input_has-suffix-icon {
+  --lwc-c-icon-primitive-color: $color-text-input-icon;
+  --lwc-c-icon-pointer-events: none;
+}
+
+/**
+ * @summary Text input element
+ * @selector .lwc-input_control
+ */
+.lwc-input_control {
+  appearance: none;
+  display: inline-block;
+  width: 100%;
+  padding-inline-end: var(--lwc-c-input-padding-inline-end, $spacing-medium);
+  padding-inline-start: var(--lwc-c-input-padding-inline-start, $spacing-small);
+  font-family: var(--lwc-c-input-font-family, $font-family);
+  font-size: var(--lwc-c-input-font-size, $font-size-3);
+  line-height: var(--lwc-c-input-line-height, $height-input);
+  color: var(--lwc-c-input-text-color, $color-text-default);
+  background-color: var(--lwc-c-input-background-color, $color-background-input);
+  border: $border-width-thin solid var(--lwc-c-input-border-color, $color-border-input);
+  border-radius: $border-radius-medium;
+  transition: border $duration-quickly linear, background-color $duration-quickly linear;
+  box-shadow: var(--lwc-c-input-box-shadow, none);
+
+  &::placeholder {
+    color: var(--lwc-c-input-text-color-placeholder, $color-text-placeholder);
+    font-weight: $font-weight-regular;
+  }
+
+  &::selection {
+    background-color: var(--lwc-c-input-background-color-selection, $color-background-selection);
+    text-shadow: none;
+    color: var(--lwc-c-input-color-selection, $color-text-default);
+  }
+
+  &:not([disabled]):focus,
+  &:not([disabled]):active {
+    --lwc-c-input-background-color: $color-background-input-active;
+    --lwc-c-input-border-color: $color-border-input-active;
+    --lwc-c-input-box-shadow: $shadow-button-focus;
+  }
+
+  &[disabled] {
+    --lwc-c-input-background-color: $color-background-input-disabled;
+    --lwc-c-input-border-color: $color-border-input-disabled;
+    cursor: not-allowed;
+    user-select: none;
+  }
+
+  &[readonly] {
+    --lwc-c-input-padding-inline-start: 0;
+    --lwc-c-input-border-color: transparent;
+    --lwc-c-input-background-color: transparent;
+    font-size: $input-static-font-size;
+    font-weight: $input-readonly-font-weight;
+  }
+
+  // Hide extra UI added by the browser—specifically the close icon—for Search inputs
+  &[type="search"]::-webkit-search-decoration,
+  &[type="search"]::-webkit-search-cancel-button,
+  &[type="search"]::-webkit-search-results-button,
+  &[type="search"]::-webkit-search-results-decoration {
+    display: none;
+  }
+}
+
+/**
+ * @summary Use on an input when said input is in an error state
+ * @selector .lwc-input_has-error
+ * @restrict .lwc-input_control
+ */
+.lwc-input_has-error {
+  border-color: $color-border-error;
+  box-shadow: $color-border-error 0 0 0 $border-width-thin inset;
+
+  &:focus,
+  &:active {
+    border-color: $color-border-error;
+    box-shadow: $color-border-error 0 0 0 $border-width-thin inset, var(--lwc-c-input-box-shadow);
+  }
+}
+
+/**
+ * @summary Replacement class for input control element when in static state
+ * @selector .lwc-input_control_static
+ * @restrict span
+ */
+.lwc-input_control_static {
+  display: inline-block;
+  width: 100%;
+  font-size: $input-static-font-size;
+  font-weight: $input-static-font-weight;
+  color: $input-static-color;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+/**
+ * @summary Creates inline help text below the text input
+ * @selector .lwc-input_help-text
+ */
+.lwc-input_help-text {
+  display: block;
+  margin-block-start: $spacing-xxx-small;
+  font-size: $font-size-2;
+}
+
+/**
+ * @summary Creates inline error text below the text input
+ * @selector .lwc-input_error-text
+ * @restrict .lwc-input_help-text
+ */
+.lwc-input_error-text {
+  color: $color-text-error;
+}
+
+/**
+ * @summary Wrapper for icons at the horizontal start (left in LTR) of the input
+ * @selector .lwc-input_icon-wrapper_prefix
+ */
+.lwc-input_icon-wrapper_prefix {
+  left: var(--lwc-c-input-icon-wrapper-inset-inline-start, $spacing-small);
+
+  [dir="rtl"] & {
+    right: var(--lwc-c-input-icon-wrapper-inset-inline-start, $spacing-small);
+    left: unset;
+  }
+}
+
+@supports (inset-inline-start: 0) {
+
+  .lwc-input_icon-wrapper_prefix {
+    left: unset;
+    inset-inline-start: var(--lwc-c-input-icon-wrapper-inset-inline-start, $spacing-small);
+  }
+}
+
+/**
+ * @summary Wrapper for icons at the horizontal end (right in LTR) of the input
+ * @selector .lwc-input_icon-wrapper_suffix
+ */
+.lwc-input_icon-wrapper_suffix {
+  right: var(--lwc-c-input-icon-wrapper-inset-inline-end, $spacing-small);
+
+  [dir="rtl"] & {
+    right: unset;
+    left: var(--lwc-c-input-icon-wrapper-inset-inline-end, $spacing-small);
+  }
+}
+
+@supports (inset-inline-end: 0) {
+
+  .lwc-input_icon-wrapper_suffix {
+    right: unset;
+    inset-inline-end: var(--lwc-c-input-icon-wrapper-inset-inline-end, $spacing-small);
+  }
+}
+
+[class^="lwc-input_icon-wrapper_"] {
+  position: absolute;
+  transform: translateY(rem(2px));
+}
+
+/**
+ * @summary Creates prefixed and/or suffixed symbol at the horizontal start of the input container
+ * @selector .lwc-input_addon
+ */
+.lwc-input_addon {
+  margin: 0 $spacing-x-small;
+}
+
+/**
+ * @summary
+ * @selector .lwc-input_group_suffix
+ */
+.lwc-input_group_suffix {
+  --lwc-c-button-icon-color: $color-text-input-icon;
+  position: absolute;
+  display: flex;
+  right: $spacing-small;
+
+  [dir="rtl"] & {
+    right: unset;
+    left: $spacing-small;
+  }
+
+  * + * {
+    margin-inline-start: $spacing-x-small;
+  }
+}
+
+@supports (inset-inline-end: 0) {
+
+  .lwc-input_group_suffix {
+    right: unset;
+    inset-inline-end: $spacing-small;
+  }
+}

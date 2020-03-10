@@ -76,10 +76,14 @@ $_c-icon-action-padding-xx-small: rem(2px);
 .lwc-icon {
   @include icon-base;
   @include square(var(--lwc-c-icon-size, $_c-icon-x-small));
+  // position: var(--lwc-c-icon-position, initial);
+  // right: var(--lwc-c-icon-position-right, initial);
+  // left: var(--lwc-c-icon-position-left, initial);
   color: var(--lwc-c-icon-color, $color-gray-9);
   border-radius: var(--lwc-c-icon-radius, $border-radius-medium);
   vertical-align: middle;
   transform: var(--lwc-c-icon-transform, none);
+  pointer-events: var(--lwc-c-icon-pointer-events, auto);
 }
 
 /**

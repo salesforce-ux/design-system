@@ -1,0 +1,38 @@
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+// ------------
+// Init
+// ------------
+@import '../../../shared/common/init';
+
+/**
+ * @summary
+ * @selector .lwc-label
+ */
+.lwc-label {
+  display: flex;
+  color: $color-text-label;
+  font-family: $font-family;
+  font-size: $form-label-font-size;
+  padding: $spacing-xxx-small $spacing-x-small 0 0;
+  margin-bottom: $spacing-xxx-small;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
+
+  &::selection {
+    background-color: $color-background-selection;
+    text-shadow: none;
+    color: $color-text-default;
+  }
+}
+
+/**
+ * @summary
+ * @selector .lwc-label_required
+ */
+.lwc-label_required {
+  color: $color-text-error;
+  margin: 0 $spacing-xx-small 0 $spacing-xxx-small;
+}

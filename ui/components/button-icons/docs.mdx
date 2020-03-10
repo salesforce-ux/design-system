@@ -121,12 +121,14 @@ The stateful inverse button works just like the stateful button. It requires the
 <CodeView toggleCode={false}>{Stateful.default}</CodeView>
 
 <Blockquote type="a11y" header="Accessibility Note">
-  For accessibility, implement the <a href="http://w3c.github.io/aria-practices/#button">ARIA Toggle Button</a> concept.
+  <p>
+    For accessibility, implement the <a href="http://w3c.github.io/aria-practices/#button">ARIA Toggle Button</a> concept.
+  </p>
 
   <ul className="slds-list_dotted">
     <li>Similar to a mute button, the button represents a pressed or unpressed state.</li>
     <li>Button text doesn't change per state</li>
-    <li><code className="doc">aria-pressed</code> is set to <code className="doc">true</code> or <code className="doc">false</code>, depending on its state</li>
+    <li><code>aria-pressed</code> is set to <code>true</code> or <code>false</code>, depending on its state</li>
   </ul>
 </Blockquote>
 

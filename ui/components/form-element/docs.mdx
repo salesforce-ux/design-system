@@ -182,13 +182,15 @@ The `<input>` element should also have the HTML attribute `required` or `require
 If an error has occurred while submitting a form, the form element with an error should provide feedback. The `slds-has-error` class is placed on the `<div class="slds-form-element">` element. Then, the error message for the user is placed in a `<div>` with the `slds-form-element__help` class.
 
 <Blockquote type="a11y" header="Accessibility requirement">
-  When a form element displays feedback notifying the user of an error, the
-  error string should be linked to the element by adding the{' '}
-  <code>aria-describedby</code> attribute to the{' '}
-  <code>&lt;input&gt;</code>. The `aria-describedby` attribute
-  must reference the id of the error message. This configuration allows screen
-  readers to read the associated error message when the invalid field is
-  focused.
+  <p>
+    When a form element displays feedback notifying the user of an error, the
+    error string should be linked to the element by adding the{' '}
+    <code>aria-describedby</code> attribute to the{' '}
+    <code>&lt;input&gt;</code>. The `aria-describedby` attribute
+    must reference the id of the error message. This configuration allows screen
+    readers to read the associated error message when the invalid field is
+    focused.
+  </p>
 </Blockquote>
 
 <Example title="Form Element - Error">
@@ -361,11 +363,13 @@ Though an address form is utilizing the `slds-form-element_compound` class, we n
 A record form is a series of rows created by `slds-form__row`. Inside of each row contains up to 2 inline-editable form element. Each item inside of `slds-form__row` is required to be wrapped in a `<div>` with the class `slds-form__item`.
 
 <Blockquote type="a11y" header="Accessibility Requirement">
-  Due to the nature of how the record form is composed, we need to notify screen
-  readers that this is a list by adding <code>role="list"</code>{' '}
-  to the <code>slds-form</code> element. Every column inside of
-  each row should get <code>role="listitem"</code> to identify
-  itself as items of the list.
+  <p>
+    Due to the nature of how the record form is composed, we need to notify screen
+    readers that this is a list by adding <code>role="list"</code>{' '}
+    to the <code>slds-form</code> element. Every column inside of
+    each row should get <code>role="listitem"</code> to identify
+    itself as items of the list.
+  </p>
 </Blockquote>
 
 #### View Mode

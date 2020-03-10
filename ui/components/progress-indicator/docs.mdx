@@ -67,9 +67,11 @@ As the percentage of completion changes, be sure to update the `aria-valuenow` p
 When a step becomes active, the `<div>` with class `.slds-progress__item` should also get the class `.slds-is-active`.
 
 <Blockquote type="a11y" header="Accessibility Requirements">
-  When a step is active, be sure to append "- Active" to the hidden button text
-  in the `&lt;span&gt;` with class `slds-assistive-text`, such as `Step 1 -
-  Active`.
+  <p>
+    When a step is active, be sure to append "- Active" to the hidden button text
+    in the `&lt;span&gt;` with class `slds-assistive-text`, such as `Step 1 -
+    Active`.
+  </p>
 </Blockquote>
 
 <Example title="Progress Indicator Active Horizontal">
@@ -89,9 +91,11 @@ When a step becomes active, the `<div>` with class `.slds-progress__item` should
 When the step is completed, the `.slds-is-active` class should be replaced with the class `.slds-is-completed` on `.slds-progress__item`. At that point, the `.slds-progress__item` element will receive a "success" icon, providing feedback that the step has been completed.
 
 <Blockquote type="a11y" header="Accessibility Requirements">
-  When a step is completed, be sure to append "- Completed" to the hidden button
-  text in the `&lt;span&gt;` with class `slds-assistive-text`, such as `Step 2 -
-  Completed`.
+  <p>
+    When a step is completed, be sure to append "- Completed" to the hidden button
+    text in the `&lt;span&gt;` with class `slds-assistive-text`, such as `Step 2 -
+    Completed`.
+  </p>
 </Blockquote>
 
 <Example title="Progress Indicator Done Horizontal">
@@ -111,9 +115,11 @@ When the step is completed, the `.slds-is-active` class should be replaced with 
 When an error has occurred on a step, the `<div>` with class `.slds-progress__item` should also get the class `.slds-has-error`.
 
 <Blockquote type="a11y" header="Accessibility Requirements">
-  When a step has an error, be sure to append "- Error" to the hidden button
-  text in the `&lt;span&gt;` with class `slds-assistive-text`, such as `Step 3 -
-  Error`.
+  <p>
+    When a step has an error, be sure to append "- Error" to the hidden button
+    text in the `&lt;span&gt;` with class `slds-assistive-text`, such as `Step 3 -
+    Error`.
+  </p>
 </Blockquote>
 
 <Example title="Progress Indicator Done Horizontal">
@@ -131,9 +137,11 @@ When an error has occurred on a step, the `<div>` with class `.slds-progress__it
 ### Step Title Tooltip
 
 <Blockquote type="a11y" header="Accessibility Requirements">
-  When a step's tooltip is visible, the step's button needs the{' '}
-  <code>aria-describedby</code> attribute, whose value should be
-  the <code>id</code> of the associated tooltip.
+  <p>
+    When a step's tooltip is visible, the step's button needs the{' '}
+    <code>aria-describedby</code> attribute, whose value should be
+    the <code>id</code> of the associated tooltip.
+  </p>
 </Blockquote>
 
 <Example title="Progress Indicator Tooltip Horizontal">
@@ -212,10 +220,12 @@ When an error has occurred on a step, the `<div>` with class `.slds-progress__it
 To display a vertical progress indicator, the `<div>` with class `.slds-progress` should also get the class `.slds-progress_vertical`. The vertical progress indicator will take up 100% of the height of its container. The step titles in the vertical variant appear next to the step, instead of in a tooltip.
 
 <Blockquote type="note" header="Implementation Note">
-  The key markup difference between the horizontal and vertical variants is the
-  progress markers. Horizontal progress indicators use `&lt;button&gt;` for each
-  step, whereas Vertical progress indicator steps are not interactive and
-  therefore simply use `&lt;div&gt;`.
+  <p>
+    The key markup difference between the horizontal and vertical variants is the
+    progress markers. Horizontal progress indicators use `&lt;button&gt;` for each
+    step, whereas Vertical progress indicator steps are not interactive and
+    therefore simply use `&lt;div&gt;`.
+  </p>
 </Blockquote>
 
 <Example title="Progress Indicator Vertical">

@@ -53,8 +53,10 @@ The main thing that distinguishes menus from other popover blocks is keyboard na
 ## With Subheaders
 
 <Blockquote type="a11y" header="Accessible Role">
-  A subheading must have <code>role="separator"</code> on the <code>&lt;li&gt;</code> and the content
-  inside the <code>&lt;li&gt;</code> should be in a <code>&lt;span&gt;</code>.
+  <p>
+    A subheading must have <code>role="separator"</code> on the <code>&lt;li&gt;</code> and the content
+    inside the <code>&lt;li&gt;</code> should be in a <code>&lt;span&gt;</code>.
+  </p>
 </Blockquote>
 
 <CodeBlock toggleCode={false}>
@@ -78,9 +80,11 @@ The main thing that distinguishes menus from other popover blocks is keyboard na
 Icons can be included on either the left, right, or both sides of an option.
 
 <Blockquote type="a11y" header="Accessibility Note">
-  If using one of the icons to indicate selection (e.g. checkmarks), be sure to
-  check out the <a href="#With-Selectable-Items">Menus with Selectable Items</a>{' '}
-  docs for the Accessibility implications
+  <p>
+    If using one of the icons to indicate selection (e.g. checkmarks), be sure to
+    check out the <a href="#With-Selectable-Items">Menus with Selectable Items</a>{' '}
+    docs for the Accessibility implications.
+  </p>
 </Blockquote>
 
 ### Icon on the Left
@@ -102,9 +106,11 @@ Icons can be included on either the left, right, or both sides of an option.
 ### Double Icon
 
 <Blockquote type="a11y" header="Accessibility Note">
-  If using one of the icons to indicate selection (e.g. checkmarks), be sure to
-  check out the <a href="#With-Selectable-Items">Menus with Selectable Items</a>{' '}
-  docs
+  <p>
+    If using one of the icons to indicate selection (e.g. checkmarks), be sure to
+    check out the <a href="#With-Selectable-Items">Menus with Selectable Items</a>{' '}
+    docs.
+  </p>
 </Blockquote>
 
 <Example title="Menu with Double Icon">
@@ -124,9 +130,11 @@ When creating a menu with selectable items:
 - Items that have been selected need `aria-checked="true"` on the `<a>` element
 
 <Blockquote type="a11y" header="Revealing Icons for Selected Items">
-  A selected item reveals its icon when the class <code>slds-is-selected</code> is applied
-  to the <code>&lt;li&gt;</code> and <code>aria-checked="true"</code> is applied to its
-  <code>menuitemcheckbox</code> or <code>menuitemradio</code> child.
+  <p>
+    A selected item reveals its icon when the class <code>slds-is-selected</code> is applied
+    to the <code>&lt;li&gt;</code> and <code>aria-checked="true"</code> is applied to its
+    <code>menuitemcheckbox</code> or <code>menuitemradio</code> child.
+  </p>
 </Blockquote>
 
 <CodeBlock toggleCode={false}>
@@ -169,8 +177,10 @@ The class is based on the `slds-has-${level}` pattern, where `${level}` correspo
 </CodeBlock>
 
 <Blockquote type="note" header="Warning Icon">
-  For warning level menu items it is required that you switch the icon to use
-  the <code>currentColor</code> variant for icons.
+  <p>
+    For warning level menu items it is required that you switch the icon to use
+    the <code>currentColor</code> variant for icons.
+  </p>
 </Blockquote>
 
 ## With Overflow Scrolling
@@ -204,12 +214,14 @@ To force overflow scrolling after either 5, 7, or 10 items with icons, add the m
 To create a menu with a submenu, add the `slds-has-submenu` class to the list item, `<li>`, that will open the submenu.
 
 <Blockquote type="a11y" header="Accessibility Note">
-  Any menu item that opens a submenu must have <code>aria-haspop="true"</code> on the
-  <code>&lt;a&gt;</code> within the <code>&lt;li&gt;</code>. In order to open the submenu, set
-  <code>aria-expanded</code> to <code>true</code> on that <code>&lt;a&gt;</code> when the user clicks or hovers over the list item, or presses enter while focused on the list item.
-  Additionally, the submenu should have <code>role="menu"</code> and an <code>aria-label</code>
-  attribute whose value matches the name of the <code>&lt;li&gt;</code> that opened the
-  submenu.
+  <p>
+    Any menu item that opens a submenu must have <code>aria-haspop="true"</code> on the{' '}
+    <code>&lt;a&gt;</code> within the <code>&lt;li&gt;</code>. In order to open the submenu, set{' '}
+    <code>aria-expanded</code> to <code>true</code> on that <code>&lt;a&gt;</code> when the user clicks or hovers over the list item, or presses enter while focused on the list item.
+    Additionally, the submenu should have <code>role="menu"</code> and an <code>aria-label</code>{' '}
+    attribute whose value matches the name of the <code>&lt;li&gt;</code> that opened the
+    submenu.
+  </p>
 </Blockquote>
 
 <CodeBlock toggleCode={false}>

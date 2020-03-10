@@ -100,11 +100,13 @@ By default, the expression builder starts with one condition. The default option
 The expression builder has a one row minimum requirement. Therefore, clicking the delete button on a single row will only clear any populated values from the inputs.
 
 <Blockquote header="Label Note" type="note">
-  Be sure to show labels above all inputs. By default "Take Action When" is the
-  label for the mode combobox. However, this should be updated based on the
-  product or persona to best match the use case. Similarly, use “Resource”,
-  “Operator”, and “Value” as labels in each row, but, when relevant, replace
-  “Resource” with a more specific label for your use case (e.g. “Field”).
+  <p>
+    Be sure to show labels above all inputs. By default "Take Action When" is the
+    label for the mode combobox. However, this should be updated based on the
+    product or persona to best match the use case. Similarly, use “Resource”,
+    “Operator”, and “Value” as labels in each row, but, when relevant, replace
+    “Resource” with a more specific label for your use case (e.g. “Field”).
+  </p>
 </Blockquote>
 
 ### Initial State
@@ -200,8 +202,10 @@ To create more complex expressions, the user can add an expression group to crea
 5.  If a group is added but the first, default rule has not been altered, the first rule is replaced by the group
 
 <Blockquote header="Label Note" type="note">
-  The values in the group mode combobox get "for This Group" appended, ex. "All
-  Conditions are Met for This Group"
+  <p>
+    The values in the group mode combobox get "for This Group" appended, ex. "All
+    Conditions are Met for This Group"
+  </p>
 </Blockquote>
 
 <Example title="Expression Builder - With Expression Group">
@@ -279,12 +283,14 @@ Users can also validate the syntax to check for errors.
 Use the narrow variant for in-context expression building, where users are able to immediately preview the results of their conditional logic, like a list or report.
 
 <Blockquote type="a11y" header="Accessibility Requirement">
-  Be sure to use assistive text to improve the clarity of what the user might be
-  editing. For example, add{' '}
-  <code>
-    <span className="slds-assistive-text">Edit filter:</span>
-  </code>{' '}
-  to each expression button element.
+  <p>
+      Be sure to use assistive text to improve the clarity of what the user might be
+      editing. For example, add{' '}
+      <code>
+        <span className="slds-assistive-text">Edit filter:</span>
+      </code>{' '}
+      to each expression button element.
+  </p>
 </Blockquote>
 
 <Example title="Expression Builder - Narrow Variant">
@@ -371,10 +377,12 @@ One example of in-context expression building is filtering. To see examples of f
 </Blockquote>
 
 <Blockquote type="a11y" header="Accessibility Requirement">
-  The filter button that has an error is associated to that error with the use
-  of <code>aria-describedby</code>. The value of{' '}
-  <code>aria-describedby</code> matches the ID given to the
-  element that contains the corresponding error message.
+  <p>
+    The filter button that has an error is associated to that error with the use
+    of <code>aria-describedby</code>. The value of{' '}
+    <code>aria-describedby</code> matches the ID given to the
+    element that contains the corresponding error message.
+  </p>
 </Blockquote>
 
 <Example title="Expression Builder - Filtering with error">

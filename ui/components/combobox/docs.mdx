@@ -55,19 +55,23 @@ To toggle visibility of the `listbox`, add the class `slds-is-open` to the `slds
 It is most common to expand the `listbox` of options when a user clicks on the Combobox. For a more detailed description of interaction behaviors, see the [Interaction](#Interaction) section.
 
 <Blockquote type="a11y" header="Accessibility Requirement">
-  When toggling visibility of the Combobox, the{' '}
-  <code>aria-expanded</code> attribute needs to be toggled to{' '}
-  <code>true</code>. Set it to{' '}
-  <code>false</code> again when the options are hidden.
+  <p>
+    When toggling visibility of the Combobox, the{' '}
+    <code>aria-expanded</code> attribute needs to be toggled to{' '}
+    <code>true</code>. Set it to{' '}
+    <code>false</code> again when the options are hidden.
+  </p>
 </Blockquote>
 
 <Blockquote type="a11y" header="Accessibility Note">
-  The <code>listbox</code> of options must be an <b>owned</b>{' '}
-  child of the <code>combobox</code>. If it cannot be a direct
-  child of the <code>combobox</code> element, then{' '}
-  <code>aria-owns</code> must be placed on the{' '}
-  <code>combobox</code> and point to the ID of the{' '}
-  <code>listbox</code> instead.
+  <p>
+    The <code>listbox</code> of options must be an <b>owned</b>{' '}
+    child of the <code>combobox</code>. If it cannot be a direct
+    child of the <code>combobox</code> element, then{' '}
+    <code>aria-owns</code> must be placed on the{' '}
+    <code>combobox</code> and point to the ID of the{' '}
+    <code>listbox</code> instead.
+  </p>
 </Blockquote>
 
 <CodeView demoStyles="height: 17rem;">
@@ -168,8 +172,10 @@ If using a keyboard, placing focus into the Combobox input field _will not_ disp
 After focusing inside the Combobox with the keyboard, pressing the `Down` or `Enter` key will expand the collapsed Combobox and display the `listbox` options. Be sure to update `aria-expanded` to be true. This will also highlight the first option in the listbox.
 
 <Blockquote type="a11y" header="Accessibility Requirement">
-  Update <code>aria-expanded</code> to "true" when the Combobox
-  is expanded.
+  <p>
+    Update <code>aria-expanded</code> to "true" when the Combobox
+    is expanded.
+  </p>
 </Blockquote>
 
 #### Highlighting an option
@@ -182,13 +188,15 @@ To Highlight an option in the `Listbox` use the `Up` and `Down` arrow keys to cy
 When an option from the `listbox` is "in focus", user focus never leaves the `input` field, since we manually create a programmatic or "faux focus" state that highlights the selected option and associates it to the `input`.
 
 <Blockquote type="a11y" header="Accessibility Requirement">
-  When highlighting an option with "faux focus", the{' '}
-  <code>aria-activedescendant</code> attribute on the{' '}
-  <code>input</code> needs to be set to the value of the ID of
-  the highlighted option. The highlighted option must also have{' '}
-  <code>aria-selected="true"</code>. When no option is
-  highlighted, <code>aria-activedescendant</code> must be
-  removed.
+  <p>
+    When highlighting an option with "faux focus", the{' '}
+    <code>aria-activedescendant</code> attribute on the{' '}
+    <code>input</code> needs to be set to the value of the ID of
+    the highlighted option. The highlighted option must also have{' '}
+    <code>aria-selected="true"</code>. When no option is
+    highlighted, <code>aria-activedescendant</code> must be
+    removed.
+  </p>
 </Blockquote>
 
 By typing the first letter of an option name, the first matching option will highlight. When the letter doesn't match an option, highlighting doesn't move.
@@ -204,8 +212,10 @@ To collapse the Combobox the user should be able to press the `Escape` key on th
 Pressing the `Enter` key whilst an option is highlighted will select the option as the current value and collapse the Combobox.
 
 <Blockquote type="a11y" header="Accessibility Requirement">
-  Update <code>aria-expanded</code> to "false" when the Combobox
-  is collapsed.
+  <p>
+    Update <code>aria-expanded</code> to "false" when the Combobox
+    is collapsed.
+  </p>
 </Blockquote>
 
 ### Selecting an option
@@ -231,10 +241,12 @@ When an option becomes selected, the class `slds-is-selected` should be applied 
 When re-opening a Combobox that already has a selected value, the `listbox` should be displayed with the selected option already highlighted.
 
 <Blockquote type="a11y" header="Accessibility Requirement">
-  Be sure to re-set the <code>aria-activedescendant</code>{' '}
-  attribute on the `input` to the value of the ID of the highlighted option. The
-  highlighted option must also have{' '}
-  <code>aria-selected="true"</code>.
+  <p>
+    Be sure to re-set the <code>aria-activedescendant</code>{' '}
+    attribute on the `input` to the value of the ID of the highlighted option. The
+    highlighted option must also have{' '}
+    <code>aria-selected="true"</code>.
+  </p>
 </Blockquote>
 
 #### Multiple selections
@@ -242,11 +254,13 @@ When re-opening a Combobox that already has a selected value, the `listbox` shou
 When more than one option has been selected, the value of the `input` should be updated with the total number of selected items, such as "3 options selected".
 
 <Blockquote type="a11y" header="Accessibility Note">
-  The value of the Combobox is the only way you can communicate what option was
-  selected to a screen reader. Given that the option names don't appear in the
-  set value, adding "Current Selection:" to each selected option name allows a
-  screen reader user to understand that the option was already selected from the
-  list.
+  <p>
+    The value of the Combobox is the only way you can communicate what option was
+    selected to a screen reader. Given that the option names don't appear in the
+    set value, adding "Current Selection:" to each selected option name allows a
+    screen reader user to understand that the option was already selected from the
+    list.
+  </p>
 </Blockquote>
 
 <CodeBlock toggleCode={false}>
@@ -281,11 +295,13 @@ An autocomplete Combobox also allows a user to select an option from a list, but
 If no option matches, the user can complete the value of the combobox by finishing their own text entry.
 
 <Blockquote type="a11y" header="Accessibility Difference">
-  The difference between the <strong>Base Combobox</strong> and the{' '}
-  <strong>Autocomplete Combobox</strong>, is that the text{' '}
-  <code>input</code> must have the{' '}
-  <code>readonly</code> attribute removed and replaced with{' '}
-  <code>aria-autocomplete="list"</code>.
+  <p>
+    The difference between the <strong>Base Combobox</strong> and the{' '}
+    <strong>Autocomplete Combobox</strong>, is that the text{' '}
+    <code>input</code> must have the{' '}
+    <code>readonly</code> attribute removed and replaced with{' '}
+    <code>aria-autocomplete="list"</code>.
+  </p>
 </Blockquote>
 
 <CodeView demoStyles="height: 12rem;">{AutocompleteExamples.default}</CodeView>
@@ -307,11 +323,13 @@ If an option from the pre-populated `listbox` isn't what the user wants, they ca
 Whilst typing, the highlighted option in the `listbox` should be the user's text string.
 
 <Blockquote type="a11y" header="Accessibility Requirement">
-  When highlighting an option with "faux focus", the{' '}
-  <code>aria-activedescendant</code> attribute on the `input`
-  needs to be set to the value of the ID of the highlighted option. The
-  highlighted option must also have{' '}
-  <code>aria-selected="true"</code>.
+  <p>
+    When highlighting an option with "faux focus", the{' '}
+    <code>aria-activedescendant</code> attribute on the `input`
+    needs to be set to the value of the ID of the highlighted option. The
+    highlighted option must also have{' '}
+    <code>aria-selected="true"</code>.
+  </p>
 </Blockquote>
 
 <CodeView demoStyles="height: 12rem;">
@@ -421,10 +439,12 @@ The selected option is still set as the value of the text `input`, but this time
 To remove the selected option, simply press the `Delete` key when focused inside the text `input` or click the remove "x".
 
 <Blockquote type="a11y" header="Accessibility Requirement">
-  When the option is selected, make sure to add the{' '}
-  <code>readonly</code> attribute to the text{' '}
-  <code>input</code>. Be sure to remove it again when the option
-  is cleared.
+  <p>
+    When the option is selected, make sure to add the{' '}
+    <code>readonly</code> attribute to the text{' '}
+    <code>input</code>. Be sure to remove it again when the option
+    is cleared.
+  </p>
 </Blockquote>
 
 <CodeView>
@@ -452,16 +472,20 @@ The Grouped Comboboxes should be used when a Combobox has another Combobox appen
 The containing `div` of the comboboxes should have the class `slds-combobox-group` on it.
 
 <Blockquote type="warning" header="Keep in mind">
-  The grouped combobox only accepts <em>one</em> addon, in addition to the
-  primary combobox. Use the classes{' '}
-  <code>slds-combobox_addon-start</code> and{' '}
-  <code>slds-combobox_addon-end</code> to describe the position
-  of the form element.
+  <p>
+    The grouped combobox only accepts <em>one</em> addon, in addition to the
+    primary combobox. Use the classes{' '}
+    <code>slds-combobox_addon-start</code> and{' '}
+    <code>slds-combobox_addon-end</code> to describe the position
+    of the form element.
+  </p>
 </Blockquote>
 
 <Blockquote type="a11y" header="Accessibility Requirement">
-  Be sure to set <code>aria-controls</code> on the Object
-  Switcher, which points to the Search Combobox ID.
+  <p>
+    Be sure to set <code>aria-controls</code> on the Object
+    Switcher, which points to the Search Combobox ID.
+  </p>
 </Blockquote>
 
 <CodeView demoStyles="height: 17rem;">{GroupedExamples.default}</CodeView>
@@ -529,12 +553,14 @@ The containing element should receive the class `slds-combobox_object-switcher` 
 #### Icon variant
 
 <Blockquote type="a11y" header="Accessibility Note">
-  When a selection is made, the currently selected items should be prepended
-  with a{' '}
-  <code>
-    &lt;span className="slds-assistive-text"&gt;Current Selection:&lt;/span&gt;
-  </code>{' '}
-  to inform screen readers of its current selection.
+  <p>
+    When a selection is made, the currently selected items should be prepended
+    with a{' '}
+    <code>
+      &lt;span className="slds-assistive-text"&gt;Current Selection:&lt;/span&gt;
+    </code>{' '}
+    to inform screen readers of its current selection.
+  </p>
 </Blockquote>
 
 ##### Blurred
@@ -590,8 +616,10 @@ The key difference for `dialog` dropdowns lies in how they handle focus. In `lis
 To open the dialog, remove the class `slds-popover_hide` from the `<div>` with `class="slds-popover"`. Any content can go inside a `dialog` dropdown.
 
 <Blockquote type="a11y" header="Accessibility Note">
-  When the dialog is open, be sure to change `aria-expanded` to **true** on the
-  combobox `&lt;div&gt;` with `class="slds-combobox"`.
+  <p>
+    When the dialog is open, be sure to change `aria-expanded` to **true** on the
+    combobox `&lt;div&gt;` with `class="slds-combobox"`.
+  </p>
 </Blockquote>
 
 <CodeView>{getDisplayElementById(Dialog.states, 'open')}</CodeView>
@@ -620,11 +648,13 @@ To open the dialog, remove the class `slds-popover_hide` from the `<div>` with `
 Below is an example of a `dialog` combobox where users can make multiple selections using checkboxes. The main difference between the **dialog variant** of a multi-select combobox and the [multi-select Entity Autocomplete](/components/combobox/#Multiple-selection-2) involves the behavior after a selection is made. A `dialog` will not close after each selection, since it is a focus trap, while the `listbox` dropdown of the Entity Autocomplete example closes after each selection made, forcing users to re-open the listbox if they need to make another selection.
 
 <Blockquote type="note" header="Dueling Picklist vs. Multi Select Combobox">
-  We recommend using the{' '}
-  <a href="/components/dueling-picklist/"> Dueling Picklist</a> when there are
-  many items to choose from, such as “Select Country”. Use a multiselect
-  combobox with a dialog when you have less horizontal real estate available and
-  fewer items to select from.
+  <p>
+    We recommend using the{' '}
+    <a href="/components/dueling-picklist/"> Dueling Picklist</a> when there are
+    many items to choose from, such as “Select Country”. Use a multiselect
+    combobox with a dialog when you have less horizontal real estate available and
+    fewer items to select from.
+  </p>
 </Blockquote>
 
 ##### Open

@@ -9,11 +9,11 @@ class Blockquote extends React.Component {
     const { type } = this.props;
     return (
       // types include: note (default), a11y, warning
-      <blockquote className={`doc site-blockquote_${type}`}>
+      <blockquote className={`doc site-blockquote site-blockquote_${type}`}>
         {this.props.header ? (
-          <p className="doc lead">{this.props.header}</p>
+          <h4 className="lead">{this.props.header}</h4>
         ) : null}
-        <p className="doc">{this.props.children}</p>
+        <div className="doc">{this.props.children}</div>
       </blockquote>
     );
   }

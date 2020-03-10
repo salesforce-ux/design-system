@@ -163,14 +163,16 @@ Chat messages are comprised of the message text, and message meta data including
 ### Inbound messages
 
 <Blockquote header="Use of aria-label" type="a11y">
-  Each message meta data wrapper has <code className="doc">aria-label</code>{' '}
-  added, which we can use to form more human sounding messages as they arrive,{' '}
-  <b>
-    "Hi, my CloudWidget only speaks French said Taylor Watson-Rice at 4:59 PM"
-  </b>
-  . A screen reader, when <code className="doc">aria-label</code> is applied to
-  an element, will only announce the contents of the label, not the text content
-  held in it.
+  <p>
+    Each message meta data wrapper has <code>aria-label</code>{' '}
+    added, which we can use to form more human sounding messages as they arrive,{' '}
+    <b>
+      "Hi, my CloudWidget only speaks French said Taylor Watson-Rice at 4:59 PM"
+    </b>
+    . A screen reader, when <code>aria-label</code> is applied to
+    an element, will only announce the contents of the label, not the text content
+    held in it.
+  </p>
 </Blockquote>
 
 <Example title="Chat Inbound message">
@@ -229,10 +231,12 @@ Consecutive messages only display name and time meta data once
 Inbound messages can optionally display the customers avatar. When displaying an avatar in inbound messages, be sure to apply the `slds-chat-message_faux-avatar` modifier to any consecutive `slds-chat-message` containers, to ensure correct alignment where the avatar is missing.
 
 <Blockquote header="Aria Hidden Avatars" type="a11y">
-  Because every inbound message already includes the user's name, the user's
-  avatar is redundant and therefore should be treated as decorative. For this
-  reason, we hide the avatar using <code>aria-hidden="true"</code> on the <code>&lt;span&gt;</code>
-  with <code>class="slds-avatar"</code> to avoid redundancy for screen reader users.
+  <p>
+    Because every inbound message already includes the user's name, the user's
+    avatar is redundant and therefore should be treated as decorative. For this
+    reason, we hide the avatar using <code>aria-hidden="true"</code> on the <code>&lt;span&gt;</code>
+    with <code>class="slds-avatar"</code> to avoid redundancy for screen reader users.
+  </p>
 </Blockquote>
 
 <Example title="Chat Inbound message with avatar">
@@ -306,11 +310,13 @@ During a chat an agent can request the customer upload a file attachment to be s
 It is also possible to display an image preview when sending a supported file format, such as a JPEG. This is accomplished by using the [File](files/) component within Chat.
 
 <Blockquote header="Contrast" type="a11y">
-  When using actions without a title, it's important to use the{' '}
-  <code className="doc">slds-file__title_scrim</code> class in conjunction with{' '}
-  <code className="doc">slds-file__title</code> to ensure proper contrast.
-  Without this, it can be difficult for users to see the action icons when the
-  image being sent is predominantly light in color.
+  <p>
+    When using actions without a title, it's important to use the{' '}
+    <code>slds-file__title_scrim</code> class in conjunction with{' '}
+    <code>slds-file__title</code> to ensure proper contrast.
+    Without this, it can be difficult for users to see the action icons when the
+    image being sent is predominantly light in color.
+  </p>
 </Blockquote>
 
 <Example title="Chat inbound message with image attachment preview">
@@ -449,11 +455,13 @@ When sending or receiving a portrait-orientation image, use the `slds-file__figu
 Whilst chatting with customers, agents can see when a customer is typing a response by using the [Dynamic Icon, Typing](/components/dynamic-icons).
 
 <Blockquote header="Assistive text" type="a11y">
-  It's important to set descriptive assistive text to the typing icon, as this
-  is the only means a screen reader user will know a customer is currently
-  typing. The assistive text, because it is text content, will be announced as
-  the icon is added to the DOM. As an example, we use{' '}
-  <b>"Customer is typing"</b>
+  <p>
+    It's important to set descriptive assistive text to the typing icon, as this
+    is the only means a screen reader user will know a customer is currently
+    typing. The assistive text, because it is text content, will be announced as
+    the icon is added to the DOM. As an example, we use{' '}
+    <b>"Customer is typing"</b>
+  </p>
 </Blockquote>
 
 <CodeView>
@@ -478,11 +486,13 @@ Whilst chatting with customers, agents can see when a customer is typing a respo
 We can take that experience one step further when the sneak peek feature is enabled. This allows agents to see what customers are typing in real time, as they type it.
 
 <Blockquote header="aria-hidden" type="a11y">
-  When the sneak peek feature is active, we take care to try and reduce the
-  verbosity a screen reader user will encounter. As they will hear the final
-  message once it is typed, we have found it is preferred to use{' '}
-  <code className="doc">aria-hidden="true"</code> on the text they are currently
-  typing, to reduce noise.
+  <p>
+    When the sneak peek feature is active, we take care to try and reduce the
+    verbosity a screen reader user will encounter. As they will hear the final
+    message once it is typed, we have found it is preferred to use{' '}
+    <code>aria-hidden="true"</code> on the text they are currently
+    typing, to reduce noise.
+  </p>
 </Blockquote>
 
 <CodeView>
@@ -626,12 +636,14 @@ If a customer tries sending a message that is not supported, it will appear as a
 If the agent attempts to send a message that can't be delivered, a message delivery failure indication appears beneath the original message text, along with an option to resend.
 
 <Blockquote header="Role alert" type="a11y">
-  Message delivery failures have the addition <code>role="alert"</code> to their
-  container. A chat log has an <code>aria-live="polite"</code> value, but we
-  would like to inform agents of errors immediately. The{' '}
-  <code>role="alert"</code> attribute comes with an implicit{' '}
-  <code>aria-live</code> value of <code>assertive</code> which will achieve
-  this.
+  <p>
+    Message delivery failures have the addition <code>role="alert"</code> to their
+    container. A chat log has an <code>aria-live="polite"</code> value, but we
+    would like to inform agents of errors immediately. The{' '}
+    <code>role="alert"</code> attribute comes with an implicit{' '}
+    <code>aria-live</code> value of <code>assertive</code> which will achieve
+    this.
+  </p>
 </Blockquote>
 
 <Example title="Chat Outbound message with delivery failure">
@@ -761,11 +773,13 @@ Sometimes an agent might add a message to an event for another agent to read.
 In the event of an error occurring during the chat, an error event can be displayed to the agent. This is done by adding the `.slds-has-error` modifier class.
 
 <Blockquote header="Role alert" type="a11y">
-  Event errors have the addition <code>role="alert"</code> to their container. A
-  chat log has a <code>aria-live="polite"</code> value, but we would like to
-  inform agents of errors immediately. The <code>role="alert"</code> attribute
-  comes with an implicit <code>aria-live</code> value of <code>assertive</code>{' '}
-  which will achieve this.
+  <p>
+    Event errors have the addition <code>role="alert"</code> to their container. A
+    chat log has a <code>aria-live="polite"</code> value, but we would like to
+    inform agents of errors immediately. The <code>role="alert"</code> attribute
+    comes with an implicit <code>aria-live</code> value of <code>assertive</code>{' '}
+    which will achieve this.
+  </p>
 </Blockquote>
 
 <Example title="Chat event error">

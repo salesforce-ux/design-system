@@ -382,10 +382,12 @@ The favorites action is used to "favorite" a commonly used page within a user's 
 When pressed, apply the class `slds-is-selected` to the `slds-global-actions__favorites-action` button element.
 
 <Blockquote type="a11y" header="Accessibility Requirement">
-  When the favorites action is pressed, we need to toggle the{' '}
-  <code>aria-pressed</code> attribute to{' '}
-  <code>true</code>. This will inform a screen reader that the
-  button has been pressed.
+  <p>
+    When the favorites action is pressed, we need to toggle the{' '}
+    <code>aria-pressed</code> attribute to{' '}
+    <code>true</code>. This will inform a screen reader that the
+    button has been pressed.
+  </p>
 </Blockquote>
 
 <CodeView>
@@ -481,15 +483,17 @@ Notifications are a way to notify a user about a global change within the applic
 When a notification is coming through, we want to apply the `slds-incoming-notification` class to both the `slds-global-actions__notifications` button, as well as the `slds-notification-badge`. This will initiate the animation that there is a new incoming notification. A notification badge will also need to receive the `slds-show-notification` class, this ensures the badge becomes visible for the incoming animation to work. The `slds-show-notification` class should also be applied if a user has unread notifications upon their return to their application.
 
 <Blockquote type="a11y" header="Accessibility Note">
-  The notification badge is hidden from screen readers by add the attribute{' '}
-  <code>aria-hidden="true"</code> so the badge doesn't have to
-  be inside the button itself. Since the badge count is hidden, we need to add
-  the count number to the button text via some hidden assistive text. The
-  assistive text string should be updated with number of new notifications, such
-  as "3 new notification". If there are no notifications, the assistive text
-  should read "No notifications". The button element also requires{' '}
-  <code>aria-live="assertive"</code> to announce any count
-  updates.
+  <p>
+    The notification badge is hidden from screen readers by add the attribute{' '}
+    <code>aria-hidden="true"</code> so the badge doesn't have to
+    be inside the button itself. Since the badge count is hidden, we need to add
+    the count number to the button text via some hidden assistive text. The
+    assistive text string should be updated with number of new notifications, such
+    as "3 new notification". If there are no notifications, the assistive text
+    should read "No notifications". The button element also requires{' '}
+    <code>aria-live="assertive"</code> to announce any count
+    updates.
+  </p>
 </Blockquote>
 
 <CodeView>

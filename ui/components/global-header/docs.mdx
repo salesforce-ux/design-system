@@ -19,7 +19,7 @@ import _ from '../../shared/helpers';
   all contexts in the Salesforce ecosystem (internal or 3rd party).
 </div>
 
-<CodeView exampleOnly style={{ position: 'relative', height: '20.25rem' }}>
+<CodeView exampleOnly demoStyles="position: relative; height: 20.25rem;">
   <GlobalHeader
     globalSearch={
       <ComboboxGroup
@@ -126,7 +126,7 @@ For screen reading users, we need to provide a way to navigate over the global h
 ## Base
 
 <Example title="base global header">
-  <CodeView style={{ position: 'relative', height: '21.25rem' }}>
+  <CodeView demoStyles="position: relative; height: 21.25rem;">
     <GlobalHeader
       globalSearch={
         <ComboboxGroup
@@ -194,7 +194,7 @@ The global search component is used for application wide search. The form elemen
 ### Default
 
 <Example title="Global Header Search Default State">
-  <CodeView style={{ position: 'relative', height: '3.5rem' }}>
+  <CodeView demoStyles="position: relative; height: 3.5rem;">
     <GlobalHeader
       globalSearch={
         <ComboboxGroup
@@ -246,7 +246,7 @@ The global search component is used for application wide search. The form elemen
 ### Focused and expanded
 
 <Example title="Global Header Search Expanded State">
-  <CodeView style={{ position: 'relative', height: '21rem' }}>
+  <CodeView demoStyles="position: relative; height: 21rem;">
     <GlobalHeader
       globalSearch={
         <ComboboxGroup
@@ -300,7 +300,7 @@ The global search component is used for application wide search. The form elemen
 ### Active and typing
 
 <Example title="Global Header Search Active State">
-  <CodeView style={{ position: 'relative', height: '21rem' }}>
+  <CodeView demoStyles="position: relative; height: 21rem;">
     <GlobalHeader
       globalSearch={
         <ComboboxGroup
@@ -409,13 +409,13 @@ If the favorites action needs to become disabled, apply the `disabled` attribute
 The favorites popover is invoked when a user clicks on the dropdown arrow action icon inside of the favorites button group. The favorites popover is implemented as a [Popover - Dynamic Menu Variant](/components/dynamic-menu/) component, please refer to the accessibility guidelines on the Popover component page for implementation guidance.
 
 <CodeView
-  style={{
-    display: 'flex',
-    justifyContent: 'flex-end',
-    alignItems: 'flex-start',
-    height: '16rem',
-    minWidth: '400px'
-  }}
+  demoStyles="
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    height: 16rem;
+    min-width: 400px;
+  "
 >
   <GlobalActions showFavoritesPopup />
 </CodeView>
@@ -433,13 +433,13 @@ The favorites popover is invoked when a user clicks on the dropdown arrow action
 When the global task action is invoked, a menu inside of a dropdown becomes visible. Please refer to the accessibility section of the [Menus component](/components/menus) for implementation guidelines.
 
 <CodeView
-  style={{
-    display: 'flex',
-    justifyContent: 'flex-end',
-    alignItems: 'flex-start',
-    height: '16rem',
-    minWidth: '400px'
-  }}
+  demoStyles="
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    height: 16rem;
+    min-width: 400px;
+  "
 >
   <GlobalActions showTaskMenu />
 </CodeView>
@@ -464,12 +464,9 @@ When the global task action is invoked, a menu inside of a dropdown becomes visi
 
 Notifications are a way to notify a user about a global change within the application. This is commonly used to communicate a Chatter mention/reply or a status update on an opportunity pipeline.
 
-<div
-  className="docs-codeblock-example"
-  style={{ position: 'relative', height: '7.5rem' }}
->
-  <GlobalHeader playground />
-</div>
+<CodeView isViewport exampleOnly demoStyles="position: relative; height: 7.5rem;">
+    <GlobalHeader playground />
+</CodeView>
 
 #### No notifications
 
@@ -505,18 +502,17 @@ When a notification is coming through, we want to apply the `slds-incoming-notif
 
 The notification popover is invoked when a user clicks on the notification action icon. The notification popover is implemented as a [Popover component](/components/popovers), please refer to the accessibility guidelines on the Popover component page for implementation guidance.
 
-<div
-  className="docs-codeblock-example"
-  style={{
-    display: 'flex',
-    justifyContent: 'flex-end',
-    alignItems: 'flex-start',
-    height: '25rem',
-    minWidth: '400px'
-  }}
->
-  <GlobalActions showNotification notificationCount="3" showNotificationPopup />
-</div>
+<CodeView exampleOnly
+  demoStyles="
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    height: 25rem;
+    min-width: 400px;
+    "
+  >
+    <GlobalActions showNotification notificationCount="3" showNotificationPopup />
+</CodeView>
 
 <CodeBlock>
   <GlobalNotifications />

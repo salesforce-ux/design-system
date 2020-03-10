@@ -12,7 +12,7 @@ import SLDSFrame from './SLDSFrame';
 
 class CodeView extends React.Component {
   renderChildren() {
-    const { style, isViewport, isMobile } = this.props;
+    const { demoStyles, isViewport, isMobile } = this.props;
 
     return (
       <div
@@ -21,13 +21,13 @@ class CodeView extends React.Component {
           'docs-codeblock-example_mobile': isMobile
         })}
       >
-        {style ? (
+        {demoStyles ? (
           <StyledDemo
             className={classNames({
               'demo-only_viewport': isViewport,
               'slds-is-mobile': isMobile
             })}
-            styles={style}
+            styles={demoStyles}
           >
             {this.props.children}
           </StyledDemo>
@@ -81,7 +81,7 @@ class CodeView extends React.Component {
 CodeView.propTypes = {
   children: PropTypes.node,
   position: PropTypes.oneOf(['top', 'bottom']),
-  style: PropTypes.string,
+  demoStyles: PropTypes.string,
   isViewport: PropTypes.bool,
   isMobile: PropTypes.bool,
   toggleCode: PropTypes.bool,

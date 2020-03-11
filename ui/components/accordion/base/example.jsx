@@ -218,6 +218,7 @@ export let examples = [
   {
     id: 'long-heading-truncated',
     label: 'Long Section Heading with Truncation for larger screens',
+    demoStyles: 'max-width: 500px;',
     element: (
       <Card>
         <Accordion>

@@ -18,6 +18,10 @@
 #### Added
 - Added documentation and examples for mobile/touch context
 
+### [Checkbox Toggle](https://www.lightningdesignsystem.com/components/checkbox-toggle)
+#### Added
+- Added documentation and examples for mobile/touch context
+
 ## Release 2.11.5 - March 5, 2020
 
 ## Components

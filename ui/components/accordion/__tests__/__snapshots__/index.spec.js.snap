@@ -30,7 +30,7 @@ exports[`renders a base accordion 1`] = `
               />
             </svg>
             <span
-              className="slds-truncate"
+              className="slds-accordion__summary-content"
               title="Accordion summary"
             >
               Accordion summary
@@ -73,7 +73,7 @@ exports[`renders a base accordion 1`] = `
               />
             </svg>
             <span
-              className="slds-truncate"
+              className="slds-accordion__summary-content"
               title="Accordion summary"
             >
               Accordion summary
@@ -116,7 +116,7 @@ exports[`renders a base accordion 1`] = `
               />
             </svg>
             <span
-              className="slds-truncate"
+              className="slds-accordion__summary-content"
               title="Accordion summary"
             >
               Accordion summary
@@ -166,7 +166,7 @@ exports[`renders a nested accordion 1`] = `
               />
             </svg>
             <span
-              className="slds-truncate"
+              className="slds-accordion__summary-content"
               title="Accordion summary"
             >
               Accordion summary
@@ -208,7 +208,7 @@ exports[`renders a nested accordion 1`] = `
                       />
                     </svg>
                     <span
-                      className="slds-truncate"
+                      className="slds-accordion__summary-content"
                       title="Nested accordion summary"
                     >
                       Nested accordion summary
@@ -251,7 +251,7 @@ exports[`renders a nested accordion 1`] = `
                       />
                     </svg>
                     <span
-                      className="slds-truncate"
+                      className="slds-accordion__summary-content"
                       title="Nested accordion summary"
                     >
                       Nested accordion summary
@@ -298,7 +298,7 @@ exports[`renders a nested accordion 1`] = `
               />
             </svg>
             <span
-              className="slds-truncate"
+              className="slds-accordion__summary-content"
               title="Accordion summary"
             >
               Accordion summary
@@ -341,7 +341,7 @@ exports[`renders a nested accordion 1`] = `
               />
             </svg>
             <span
-              className="slds-truncate"
+              className="slds-accordion__summary-content"
               title="Accordion summary"
             >
               Accordion summary
@@ -394,7 +394,7 @@ exports[`renders a styled accordion 1`] = `
                 />
               </svg>
               <span
-                className="slds-truncate"
+                className="slds-accordion__summary-content"
                 title="Accordion summary"
               >
                 Accordion summary
@@ -437,7 +437,7 @@ exports[`renders a styled accordion 1`] = `
                 />
               </svg>
               <span
-                className="slds-truncate"
+                className="slds-accordion__summary-content"
                 title="Accordion summary"
               >
                 Accordion summary
@@ -480,7 +480,7 @@ exports[`renders a styled accordion 1`] = `
                 />
               </svg>
               <span
-                className="slds-truncate"
+                className="slds-accordion__summary-content"
                 title="Accordion summary"
               >
                 Accordion summary
@@ -531,7 +531,7 @@ exports[`renders an accordion with action overflow 1`] = `
               />
             </svg>
             <span
-              className="slds-truncate"
+              className="slds-accordion__summary-content"
               title="Accordion summary"
             >
               Accordion summary
@@ -657,7 +657,7 @@ exports[`renders an accordion with action overflow 1`] = `
               />
             </svg>
             <span
-              className="slds-truncate"
+              className="slds-accordion__summary-content"
               title="Accordion summary"
             >
               Accordion summary
@@ -783,7 +783,7 @@ exports[`renders an accordion with action overflow 1`] = `
               />
             </svg>
             <span
-              className="slds-truncate"
+              className="slds-accordion__summary-content"
               title="Accordion summary"
             >
               Accordion summary
@@ -916,7 +916,7 @@ exports[`renders an accordion with multiple sections open 1`] = `
               />
             </svg>
             <span
-              className="slds-truncate"
+              className="slds-accordion__summary-content"
               title="Accordion summary"
             >
               Accordion summary
@@ -959,7 +959,7 @@ exports[`renders an accordion with multiple sections open 1`] = `
               />
             </svg>
             <span
-              className="slds-truncate"
+              className="slds-accordion__summary-content"
               title="Accordion summary"
             >
               Accordion summary
@@ -1002,7 +1002,7 @@ exports[`renders an accordion with multiple sections open 1`] = `
               />
             </svg>
             <span
-              className="slds-truncate"
+              className="slds-accordion__summary-content"
               title="Accordion summary"
             >
               Accordion summary
@@ -1052,7 +1052,7 @@ exports[`renders an accordion with section one open 1`] = `
               />
             </svg>
             <span
-              className="slds-truncate"
+              className="slds-accordion__summary-content"
               title="Accordion summary"
             >
               Accordion summary
@@ -1095,7 +1095,7 @@ exports[`renders an accordion with section one open 1`] = `
               />
             </svg>
             <span
-              className="slds-truncate"
+              className="slds-accordion__summary-content"
               title="Accordion summary"
             >
               Accordion summary
@@ -1138,7 +1138,7 @@ exports[`renders an accordion with section one open 1`] = `
               />
             </svg>
             <span
-              className="slds-truncate"
+              className="slds-accordion__summary-content"
               title="Accordion summary"
             >
               Accordion summary
@@ -1188,7 +1188,7 @@ exports[`renders an accordion with section three open 1`] = `
               />
             </svg>
             <span
-              className="slds-truncate"
+              className="slds-accordion__summary-content"
               title="Accordion summary"
             >
               Accordion summary
@@ -1231,7 +1231,7 @@ exports[`renders an accordion with section three open 1`] = `
               />
             </svg>
             <span
-              className="slds-truncate"
+              className="slds-accordion__summary-content"
               title="Accordion summary"
             >
               Accordion summary
@@ -1274,7 +1274,7 @@ exports[`renders an accordion with section three open 1`] = `
               />
             </svg>
             <span
-              className="slds-truncate"
+              className="slds-accordion__summary-content"
               title="Accordion summary"
             >
               Accordion summary
@@ -1324,7 +1324,7 @@ exports[`renders an accordion with section two open 1`] = `
               />
             </svg>
             <span
-              className="slds-truncate"
+              className="slds-accordion__summary-content"
               title="Accordion summary"
             >
               Accordion summary
@@ -1367,7 +1367,7 @@ exports[`renders an accordion with section two open 1`] = `
               />
             </svg>
             <span
-              className="slds-truncate"
+              className="slds-accordion__summary-content"
               title="Accordion summary"
             >
               Accordion summary
@@ -1410,7 +1410,7 @@ exports[`renders an accordion with section two open 1`] = `
               />
             </svg>
             <span
-              className="slds-truncate"
+              className="slds-accordion__summary-content"
               title="Accordion summary"
             >
               Accordion summary

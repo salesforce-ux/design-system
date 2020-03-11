@@ -81,6 +81,17 @@
 }
 
 /**
+ * @summary Text of summary title for each expandable panel inside of an accordion
+ * @selector .slds-accordion__summary-content
+ * @restrict .slds-accordion__summary-action span
+ */
+.slds-accordion__summary-content {
+  @include mq-large-min {
+    @include truncate;
+  }
+}
+
+/**
  * @summary Each expandable panel inside of an accordion
  * @selector .slds-accordion__section
  * @restrict .slds-accordion section

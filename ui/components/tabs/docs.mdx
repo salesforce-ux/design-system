@@ -79,9 +79,11 @@ The overflow tab style is provided as a tab item type that acts as a menu compon
 </Example>
 
 <Blockquote type="note" header="Implementation Guidelines">
-  The <code>slds-dropdown__list</code> element requires a
-  <code>slds-dropdown_length-with-icon-10</code> class, where 10 is the maximum number of
-  items that will be visible before having to scroll.
+  <p>
+    The <code>slds-dropdown__list</code> element requires a
+    <code>slds-dropdown_length-with-icon-10</code> class, where 10 is the maximum number of
+    items that will be visible before having to scroll.
+  </p>
 </Blockquote>
 
 ## With Icon
@@ -179,9 +181,11 @@ Unsaved tabs receive a blue asterisk on the tab.
 </CodeView>
 
 <Blockquote header="Additional Tag for Accessibility" type="a11y">
-  In order to inform screen readers of the unsaved state, an <code>&lt;abbr&gt;</code> tag
-  is used to render the asterisk. The <code>title</code> attribute and <code>aria-label</code> should
-  read <b>"Tab Not Saved"</b>.
+  <p>
+    In order to inform screen readers of the unsaved state, an <code>&lt;abbr&gt;</code> tag
+    is used to render the asterisk. The <code>title</code> attribute and <code>aria-label</code> should
+    read <b>"Tab Not Saved"</b>.
+  </p>
 </Blockquote>
 
 <CodeBlock toggleCode={false}>
@@ -217,18 +221,22 @@ Unread tabs receive a red dot on the tab.
 </CodeView>
 
 <Blockquote header="Accessibility" type="a11y">
-  In order to inform screen readers of new activity in a tab, 2 things should
-  occur.
-  <br />
-  <br />
-  1. The <code>title</code> attribute and <code>aria-label</code> on the element that displays the red
-  dot should read <b>"New Activity"</b>. This will update the text content of the
-  tab to include the "New Activity" text: "New Activity Chat - Customer".
-  <br />
-  <br />
-  2. The hidden live region as described above, should have its content updated
-  to <b>"New Activity in Tab: [Tab Name Here]"</b> to alert the user of new
-  activity in that particular sub tab.
+  <p>
+    In order to inform screen readers of new activity in a tab, 2 things should
+    occur.
+  </p>
+  <ol class="slds-list_ordered">
+    <li>
+      The <code>title</code> attribute and <code>aria-label</code> on the element that displays the red
+      dot should read <b>"New Activity"</b>. This will update the text content of the
+      tab to include the "New Activity" text: "New Activity Chat - Customer".
+    </li>
+    <li>
+      The hidden live region as described above, should have its content updated
+      to <b>"New Activity in Tab: [Tab Name Here]"</b> to alert the user of new
+      activity in that particular sub tab.
+    </li>
+  </ol>
 </Blockquote>
 
 <CodeBlock toggleCode={false}>
@@ -254,8 +262,10 @@ Unread and unsaved tabs receive a blue asterisk with a red dot underneath. Be su
 </CodeView>
 
 <Blockquote header="Accessibility" type="a11y">
-  Don't forget to update the hidden live region with which sub tab has new
-  activity
+  <p>
+    Don't forget to update the hidden live region with which sub tab has new
+    activity
+  </p>
 </Blockquote>
 
 #### Warning Tab
@@ -271,9 +281,11 @@ In this example we show that something inside the sub tab is about to break a se
 </CodeView>
 
 <Blockquote header="Accessibility" type="a11y">
-  Update the hidden live region with a message that informs the user of the
-  status level, the warning and the offending sub tab{' '}
-  <b>[level]: [message] in tab: [tab_name]</b>
+  <p>
+    Update the hidden live region with a message that informs the user of the
+    status level, the warning and the offending sub tab{' '}
+    <b>[level]: [message] in tab: [tab_name]</b>
+  </p>
 </Blockquote>
 
 <CodeBlock toggleCode={false}>
@@ -307,9 +319,11 @@ In this example we show that something inside the sub tab has broken an SLA agre
 </CodeView>
 
 <Blockquote header="Accessibility" type="a11y">
-  Update the hidden live region with a message that informs the user of the
-  status level, the error or violation and the offending sub tab{' '}
-  <b>[level]: [message] in tab: [tab_name]</b>
+  <p>
+    Update the hidden live region with a message that informs the user of the
+    status level, the error or violation and the offending sub tab{' '}
+    <b>[level]: [message] in tab: [tab_name]</b>
+  </p>
 </Blockquote>
 
 <CodeBlock toggleCode={false}>
@@ -341,9 +355,11 @@ The icon is updated to be the success icon, to give an extra way to communicate 
 </CodeView>
 
 <Blockquote header="Accessibility" type="a11y">
-  Update the hidden live region with a message that informs the user that the
-  status level has been successfully cleared and the sub tab it was cleared from{' '}
-  <b>[level]: [message] in tab: [tab_name]</b>
+  <p>
+    Update the hidden live region with a message that informs the user that the
+    status level has been successfully cleared and the sub tab it was cleared from{' '}
+    <b>[level]: [message] in tab: [tab_name]</b>
+  </p>
 </Blockquote>
 
 <CodeBlock toggleCode={false}>
@@ -461,9 +477,11 @@ For mobile, tabs become stacked and act as buttons that drill in to see the tab'
 Mobile tabs consist of two parts, the tabs, which are represented via buttons, and their associated panels. When clicking on one of the buttons, the associated panel will slide in from right-to-left.
 
 <Blockquote header="Focus Management" type="a11y">
-  When a user selects a tab button, focus should be placed on the back button of
-  the panel that slides into view. When the user clicks the back button, focus
-  should be placed on the button that was just pressed.
+  <p>
+    When a user selects a tab button, focus should be placed on the back button of
+    the panel that slides into view. When the user clicks the back button, focus
+    should be placed on the button that was just pressed.
+  </p>
 </Blockquote>
 
 <Example title="Tabs Mobile Base">

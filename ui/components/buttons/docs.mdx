@@ -204,18 +204,21 @@ The stateful button requires the `slds-button_stateful` class and the `slds-butt
 The button contains three spans with classes that hide or show the content of the spans based on the class on the button. Each span contains text and a corresponding icon. The SVG will have the `slds-button__icon_left` class setting the icon on the left.
 
 <Blockquote type="a11y" header="Accessibility Requirement">
-  Be sure to include the attribute <code>aria-live="assertive"</code> on the button. The
-  <code>aria-live="assertive"</code> attribute means the value of the <code>&lt;span&gt;</code> inside
-  the button will be spoken whenever it changes.
+  <p>
+    Be sure to include the attribute <code>aria-live="assertive"</code> on the button. The{' '}
+    <code>aria-live="assertive"</code> attribute means the value of the <code>&lt;span&gt;</code> inside the button will be spoken whenever it changes.
+  </p>
 </Blockquote>
 
 <Blockquote type="note" header="JavaScript Requirement">
-  When the user clicks the button, use JavaScript to toggle the class from{' '}
-  <code>slds-not-selected</code> to{' '}
-  <code>slds-is-selected-clicked</code>. As soon as focus leaves
-  the button, use JavaScript to toggle the class from{' '}
-  <code>slds-is-selected-clicked</code> to{' '}
-  <code>slds-is-selected</code>.
+  <p>
+    When the user clicks the button, use JavaScript to toggle the class from{' '}
+    <code>slds-not-selected</code> to{' '}
+    <code>slds-is-selected-clicked</code>. As soon as focus leaves
+    the button, use JavaScript to toggle the class from{' '}
+    <code>slds-is-selected-clicked</code> to{' '}
+    <code>slds-is-selected</code>.
+  </p>
 </Blockquote>
 
 ### Not Selected
@@ -249,14 +252,18 @@ The Dual Stateful button requires the `slds-button_dual-stateful` class, along w
 The button contains two spans. Each span contains display text and a corresponding SVG icon with the class `slds-button__icon-left` and has classes that hide or show the contents. By default, the first span with the class `slds-text-is-not-pressed` is displayed; when the class `slds-is-pressed` is applied to the parent button, the span with the class `slds-text-is-pressed` is displayed.
 
 <Blockquote type="a11y" header="Accessibility Requirement">
-  Be sure to include the attribute <code>aria-live="assertive"</code> on the button. The <code>aria-live="assertive"</code> attribute means the value of the <code>&lt;span&gt;</code> inside
-  the button will be spoken whenever it changes.
+  <p>
+    Be sure to include the attribute <code>aria-live="assertive"</code> on the button. The <code>aria-live="assertive"</code> attribute means the value of the <code>&lt;span&gt;</code> inside
+    the button will be spoken whenever it changes.
+  </p>
 </Blockquote>
 
 <Blockquote type="note" header="JavaScript Requirement">
-  When the user clicks the button, use JavaScript to toggle the{' '}
-  <code>slds-is-pressed</code> class on or off, depending on the
-  previous state. Remember, only the pressed state requires this class.
+  <p>
+    When the user clicks the button, use JavaScript to toggle the{' '}
+    <code>slds-is-pressed</code> class on or off, depending on the
+    previous state. Remember, only the pressed state requires this class.
+  </p>
 </Blockquote>
 
 ### Not Pressed

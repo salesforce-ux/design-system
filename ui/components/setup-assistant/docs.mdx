@@ -56,10 +56,12 @@ Includes all the features of Setup Assistant Base + Progress, but also includes 
 Clicking on the icon toggle or the primary step's title will open and close that step's details. If a primary step's substeps have been started, the primary step's progress ring turns blue to indicate the amount of progress made on the substeps.
 
 <Blockquote type="a11y" header="Accessibility Note">
-  Since both the chevron toggle and the step's title act as a trigger to open
-  and close the step's detail, ensure both the icon button and the title include
-  <code>aria-controls=[uniqueId]</code> where the <code>uniqueId</code> matches the <code>id</code> on the
-  <code>&lt;div&gt;</code> with <code>class="slds-summary-detail__content"</code>.
+  <p>
+    Since both the chevron toggle and the step's title act as a trigger to open
+    and close the step's detail, ensure both the icon button and the title include
+    <code>aria-controls=[uniqueId]</code> where the <code>uniqueId</code> matches the <code>id</code> on the
+    <code>&lt;div&gt;</code> with <code>class="slds-summary-detail__content"</code>.
+  </p>
 </Blockquote>
 
 <Example title="Setup Assistant Hub Expandable">
@@ -73,9 +75,11 @@ Clicking on the icon toggle or the primary step's title will open and close that
 If the steps have associated progress, a header is added to the card containing the steps. This header indicates overall progress on this Setup Assistant and utilizes the [Descriptive Progress Bar](../progress-bar)
 
 <Blockquote type="a11y" header="Accessibility Note">
-  In order to prevent duplicating information for screen reader users, the
-  percentage info on the top of the progress bar is hidden using the
-  <code>slds-assistive-text</code> class.
+  <p>
+    In order to prevent duplicating information for screen reader users, the
+    percentage info on the top of the progress bar is hidden using the
+    <code>slds-assistive-text</code> class.
+  </p>
 </Blockquote>
 
 <Example title="Setup Assistant Hub Expandable">

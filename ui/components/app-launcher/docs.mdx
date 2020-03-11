@@ -31,7 +31,9 @@ The 2 sections are implemented as [Expandable Sections](/components/expandable-s
 When the tile description is too long to fit on 2 lines, a "more" `button` is shown after an ellipsis. Text truncation isn't handled via CSS in the case of an App Launcher Tile due to the responsive nature of the tile size.
 
 <Blockquote type="note" header="Truncate via JavaScript">
-  Multi-line truncation can only be done via JavaScript. You should calculate how many characters will fit over a maximum of 2 lines, depending on the tile width and trim the string accordingly.
+  <p>
+    Multi-line truncation can only be done via JavaScript. You should calculate how many characters will fit over a maximum of 2 lines, depending on the tile width and trim the string accordingly.
+  </p>
 </Blockquote>
 
 On hover or focus, the more `button` will display the full description using a [Tooltip](/components/tooltips)
@@ -45,7 +47,9 @@ On hover or focus, the more `button` will display the full description using a [
 App tiles can be re-ordered via mouse drag and drop or with the keyboard via the use of the grab handle button under the avatar. The grab handle button is implemented as a [Stateful Icon Button](/components/button-icons/#Stateful)
 
 <Blockquote type="a11y" header="Communicating to assistive technology">
-  When implementing drag and drop it is important to be able to communicate what is happening visually on the screen to assistive technology users. We do this via an Assertive Live Region, which is placed before the list of tiles, and has <code className="docs">aria-live="assertive"</code>
+  <p>
+    When implementing drag and drop it is important to be able to communicate what is happening visually on the screen to assistive technology users. We do this via an Assertive Live Region, which is placed before the list of tiles, and has <code>aria-live="assertive"</code>
+  </p>
 </Blockquote>
 
 ### Tile grabbed

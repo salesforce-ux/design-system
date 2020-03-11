@@ -63,8 +63,10 @@ This component is essentially 2 ARIA listboxes side by side, so we follow the [A
 A Dueling Picklist should have a group label, similar to using a `fieldset` and `legend` on grouped form controls. To achieve this, wrap the Dueling Picklist in an `slds-form-element` and add a `div` with the same class names that are applied to a `legend` element in a fieldset, `slds-form-element__label slds-form-element__legend`.
 
 <Blockquote header="Labeling the group" type="a11y">
-  It is important that the <code>slds-form-element</code> <code>&lt;div&gt;</code> has the <code>role="group"</code> attribute applied, along with <code>aria-labelledby</code>, whose value is
-  the ID of the visible group label.
+  <p>
+    It is important that the <code>slds-form-element</code> <code>&lt;div&gt;</code> has the <code>role="group"</code> attribute applied, along with <code>aria-labelledby</code>, whose value is
+    the ID of the visible group label.
+  </p>
 </Blockquote>
 
 <Example title="Dueling Picklist With Group Label">
@@ -84,10 +86,12 @@ To make the dueling picklist responsive or use it within narrow regions, apply t
 </Example>
 
 <Blockquote header="Adjusting Height" type="note">
-  To adjust the height of the listboxes, set the height using an inline style on
-  _both_ of the <code>&lt;div&gt;</code>s with class <code>slds-dueling-picklist__column</code>. If
-  you are setting it based on a maximum number of items being shown before
-  scrolling, you can set <code>height = (2.25rem * numItems) + 1rem</code>.
+  <p>
+    To adjust the height of the listboxes, set the height using an inline style on
+    _both_ of the <code>&lt;div&gt;</code>s with class <code>slds-dueling-picklist__column</code>. If
+    you are setting it based on a maximum number of items being shown before
+    scrolling, you can set <code>height = (2.25rem * numItems) + 1rem</code>.
+  </p>
 </Blockquote>
 
 <CodeBlock toggleCode={false}>
@@ -117,8 +121,10 @@ To make the dueling picklist responsive or use it within narrow regions, apply t
 If the user needs to select multiple options for a field, like a list of languages supported, then use a dueling picklist without the re-order arrows on the right.
 
 <Blockquote header="Helpful Assistive Text" type="a11y">
-  The assistive text content in the <code>option-drag-label</code> <code>&lt;div&gt;</code> should
-  provide clear instructions on how to drag and drop with a keyboard.
+  <p>
+    The assistive text content in the <code>option-drag-label</code> <code>&lt;div&gt;</code> should
+    provide clear instructions on how to drag and drop with a keyboard.
+  </p>
 </Blockquote>
 
 <Example title="Dueling Picklist">
@@ -130,9 +136,11 @@ If the user needs to select multiple options for a field, like a list of languag
 ### Selected Item
 
 <Blockquote header="Aria Selected" type="a11y">
-  <code>aria-selected</code> should be placed on each{' '}
-  <code>role="option"</code>, and set to{' '}
-  <code>true</code> when the item is selected.
+  <p>
+    <code>aria-selected</code> should be placed on each{' '}
+    <code>role="option"</code>, and set to{' '}
+    <code>true</code> when the item is selected.
+  </p>
 </Blockquote>
 
 <Example title="Dueling Picklist with Item Selected">
@@ -152,9 +160,11 @@ If the user needs to select multiple options for a field, like a list of languag
 ### Dropped Items
 
 <Blockquote type="a11y" header="Aria Live">
-  The <code>drag-live-region</code> <code>&lt;div&gt;</code> with <code>aria-live="assertive"</code> should
-  update as items are moved to provide context about the state and location of
-  the items.
+  <p>
+    The <code>drag-live-region</code> <code>&lt;div&gt;</code> with <code>aria-live="assertive"</code> should
+    update as items are moved to provide context about the state and location of
+    the items.
+  </p>
 </Blockquote>
 
 <CodeBlock toggleCode={false}>
@@ -180,10 +190,12 @@ If the user needs to select multiple options for a field, like a list of languag
 If items are not able to be removed or reordered from the selected list, a lock icon appears next to the item name.
 
 <Blockquote type="a11y" header="Aria Disabled and Assistive Text">
-  For each locked item, <code>aria-disabled="true"</code> must
-  be applied to <code>.slds-listbox__option</code> and assistive
-  text (<code>.slds-assistive-text</code>) must be added to{' '}
-  <code>.slds-icon_container</code>.
+  <p>
+    For each locked item, <code>aria-disabled="true"</code> must
+    be applied to <code>.slds-listbox__option</code> and assistive
+    text (<code>.slds-assistive-text</code>) must be added to{' '}
+    <code>.slds-icon_container</code>.
+  </p>
 </Blockquote>
 
 <Example title="Dueling Picklist with a Locked Item">
@@ -205,9 +217,11 @@ If the order of the selected options matters, include the vertical arrows to the
 The following examples show the process of selecting an item, moving it within a list, and dropping it in a final position.
 
 <Blockquote type="a11y" header="Aria Live">
-  Pay attention to the <code>drag-live-region</code> <code>&lt;div&gt;</code> with
-  <code>aria-live="assertive"</code>. This should update as items are moved to provide
-  context about the state and location of the items at all times.
+  <p>
+    Pay attention to the <code>drag-live-region</code> <code>&lt;div&gt;</code> with
+    <code>aria-live="assertive"</code>. This should update as items are moved to provide
+    context about the state and location of the items at all times.
+  </p>
 </Blockquote>
 
 #### Item Selected
@@ -249,16 +263,20 @@ Within a list, users are able to drag and drop an item.
 If the user is not able to interact with the dueling picklist, then it should be marked as disabled.
 
 <Blockquote type="a11y" header="Aria Disabled">
-  In disabled mode, both list boxes{' '}
-  <code>ul[role=listbox]</code> should receive{' '}
-  <code>aria-disabled="true"</code>, and all directional buttons
-  should receive the <code>disabled</code> attribute.
+  <p>
+    In disabled mode, both list boxes{' '}
+    <code>ul[role=listbox]</code> should receive{' '}
+    <code>aria-disabled="true"</code>, and all directional buttons
+    should receive the <code>disabled</code> attribute.
+  </p>
 </Blockquote>
 
 <Blockquote type="note" header="Utility Class">
-  The class <code>slds-is-disabled</code> should also be applied
-  to the divs with the class{' '}
-  <code>slds-dueling-list_options</code>.
+  <p>
+    The class <code>slds-is-disabled</code> should also be applied
+    to the divs with the class{' '}
+    <code>slds-dueling-list_options</code>.
+  </p>
 </Blockquote>
 
 <Example title="Dueling Picklist Disabled">

@@ -24,6 +24,10 @@
 #### Added
 - Added documentation and examples for mobile/touch context
 
+### [Progress Indicator](https://www.lightningdesignsystem.com/components/progress-indicator)
+#### Added
+- Added documentation and examples for mobile/touch context
+
 ## Release 2.11.6 - March 11, 2020
 
 ## Components

@@ -1,6 +1,7 @@
 import CodeView from '../../../shared/components/CodeView';
 import * as Base from './base/example';
 import { getDisplayElementById } from '../../shared/helpers';
+import { MobileNotice, MobileBlurb } from '../../shared/doc-text';
 
 <div className="doc lead">
   An input range slider lets the user specify a numeric value which must be between two specified values.
@@ -27,6 +28,14 @@ The slider component is built using a native input form element with the attribu
 - The `slds-slider__value` span should be updated with the current value of the `<input>`
 - The `slds-slider__value` element must have `aria-hidden=true` to hide from screen readers as they understand that value already from the `<input>`
 - The class `slds-assistive-text` can be placed on the `<label>`, or either `<span>` within the `<label>`, to visually hide the either value (or both).
+
+### Mobile
+
+<MobileBlurb patternSpecificText="sliders will have an increased size to accommodate using a finger instead of the more precise mouse cursor" />
+
+<CodeView frameOnly hideDeviceSelector>
+  {Base.default}
+</CodeView>
 
 ## Base
 

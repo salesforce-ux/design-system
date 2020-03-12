@@ -36,6 +36,10 @@
 #### Added
 - Added documentation and examples for mobile/touch context
 
+### [Slider](https://www.lightningdesignsystem.com/components/slider)
+#### Added
+- Added documentation and examples for mobile/touch context
+
 ## Release 2.11.6 - March 11, 2020
 
 ## Components

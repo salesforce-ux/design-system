@@ -18,6 +18,10 @@
 #### Changed
 - Added a small variant to visual picker
 
+## Utilities
+### [Line Clamp](https://www.lightningdesignsystem.com/utilities/line-clamp)
+- Added Line Clamp x-small modifier that clamps at 2 lines.
+
 ## Release 2.11.5 - March 5, 2020
 
 ## Components

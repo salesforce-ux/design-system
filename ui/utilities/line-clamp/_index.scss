@@ -25,6 +25,16 @@
 }
 
 /**
+ * @summary Sets line clamp for x-small multi-line truncation
+ *
+ * @selector .slds-line-clamp_x-small
+ * @modifier
+ */
+.slds-line-clamp_x-small {
+  @include clamp(2);
+}
+
+/**
  * @summary Sets line clamp for small multi-line truncation
  *
  * @selector .slds-line-clamp_small

@@ -14,6 +14,7 @@ When applied to text-based elements, Line Clamp allows for configurable multi-li
 SLDS supports four different line clamp limits:
 
 - `slds-line-clamp` - truncation is determined by a token, default will truncate at 3 lines of content
+- `slds-line-clamp_x-small` - truncates at 2 lines of content
 - `slds-line-clamp_small` - truncates at 3 lines of content
 - `slds-line-clamp_medium` - truncates at 5 lines of content
 - `slds-line-clamp_large` - truncates at 7 lines of content
@@ -36,6 +37,14 @@ The `slds-line-clamp` class name will truncate text after three lines. The value
 
 <CodeView style={getDemoStylesById(Base.examples, 'default')}>
   {getDisplayElementById(Base.examples, 'default')}
+</CodeView>
+
+### X-Small
+
+The `slds-line-clamp_x-small` class name will truncate text after two lines.
+
+<CodeView style={getDemoStylesById(Base.examples, 'x-small')}>
+  {getDisplayElementById(Base.examples, 'x-small')}
 </CodeView>
 
 ### Small

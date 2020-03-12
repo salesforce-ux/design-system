@@ -2,6 +2,10 @@
 
 # Line Clamp Release Notes
 
+## 2.12.0
+
+- Added Line Clamp x-small modifier that clamps at 2 lines.
+
 ## 2.11.0
 
 ### Added

@@ -3,6 +3,7 @@ import CodeBlock from '../../../shared/components/CodeBlock';
 import Blockquote from '../../../shared/components/Blockquote';
 import * as InputExamples from './base/example';
 import { getDisplayElementById } from '../../shared/helpers';
+import { MobileNotice, MobileBlurb } from '../../shared/doc-text';
 
 <div className="doc lead">
   Text inputs are used for freeform data entry
@@ -38,6 +39,12 @@ If you need some type of field level help and if your tooltips are available on 
 on the icon, assistive technology reads out the content of the tooltip. If the tooltip has an `id="help"`, then the `<button>` containing the icon should have `aria-describedby="help"`.
 
 In some cases, the read-only field state is swapped and has no `<input>`. This is called `static` in the examples. In that case, don’t use a `<label>`. This provides better accessibility for screen readers and keyboard navigators. Instead, use a `<span>` with the `.slds-form-element__label` class. Instead of an `<input>`, use the `.slds-form-element__static` class inside the `.slds-form-element__control` wrapper.
+
+<MobileBlurb patternSpecificText="inputs will have an increased size to accommodate tapping with a finger instead of the more precise mouse cursor" />
+
+<CodeView frameOnly hideDeviceSelector>
+  {InputExamples.default}
+</CodeView>
 
 ## States
 

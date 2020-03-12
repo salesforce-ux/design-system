@@ -8,6 +8,10 @@
 #### Added
 - Added documentation and examples for mobile/touch context
 
+### [Input](https://www.lightningdesignsystem.com/components/input)
+#### Added
+- Added documentation and examples for mobile/touch context
+
 ## Release 2.11.6 - March 11, 2020
 
 ## Components

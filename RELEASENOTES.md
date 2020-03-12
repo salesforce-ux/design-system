@@ -28,6 +28,10 @@
 #### Added
 - Added documentation and examples for mobile/touch context
 
+### [Radio Button Group](https://www.lightningdesignsystem.com/components/radio-button-group)
+#### Added
+- Added documentation and examples for mobile/touch context
+
 ## Release 2.11.6 - March 11, 2020
 
 ## Components

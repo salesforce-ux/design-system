@@ -2,6 +2,7 @@ import CodeView from '../../../shared/components/CodeView';
 import CodeBlock from '../../../shared/components/CodeBlock';
 import Blockquote from '../../../shared/components/Blockquote';
 import { getDisplayElementById } from '../../shared/helpers';
+import { MobileNotice, MobileBlurb } from '../../shared/doc-text';
 import * as RadioButtonGroupExamples from './base/example';
 
 <div className="lead doc">
@@ -13,6 +14,14 @@ import * as RadioButtonGroupExamples from './base/example';
 ## Default
 
 <CodeView>{RadioButtonGroupExamples.default}</CodeView>
+
+### Mobile
+
+<MobileBlurb patternSpecificText="radio button groups will have an increased size to accommodate tapping with a finger instead of the more precise mouse cursor, and also become stacked" />
+
+<CodeView frameOnly hideDeviceSelector>
+  {RadioButtonGroupExamples.default}
+</CodeView>
 
 ## States
 

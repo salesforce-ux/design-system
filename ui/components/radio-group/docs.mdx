@@ -3,6 +3,7 @@ import DisplayColumn from '../../../shared/components/DisplayColumn';
 import DisplayGrid from '../../../shared/components/DisplayGrid';
 import Blockquote from '../../../shared/components/Blockquote';
 import { getDisplayElementById } from '../../shared/helpers';
+import { MobileNotice, MobileBlurb } from '../../shared/doc-text';
 import * as Base from './base/example';
 
 <div className="doc lead">
@@ -26,6 +27,14 @@ Custom radio buttons are created by applying the `.slds-radio` class to a `<labe
 When a radio group is required, the `<fieldset>` should receive the class `.slds-is-required`. The `<legend>` should then get `<abbr class="required" title="required">*</abbr>` added to the DOM for visual indication that the radio group is required.
 
 When disabling a radio button, either the entire group must be disabled or if only some radio buttons are disabled, then the checked radio button cannot be disabled.
+
+### Mobile
+
+<MobileBlurb patternSpecificText="radio groups will have an increased size to accommodate tapping with a finger instead of the more precise mouse cursor" />
+
+<CodeView frameOnly hideDeviceSelector>
+  {Base.default}
+</CodeView>
 
 ## Base
 

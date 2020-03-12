@@ -16,6 +16,10 @@
 #### Added
 - Added documentation and examples for mobile/touch context
 
+### [Pills](https://www.lightningdesignsystem.com/components/pills)
+#### Added
+- Added documentation and examples for mobile/touch context
+
 ## Release 2.11.6 - March 11, 2020
 
 ## Components

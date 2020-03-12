@@ -2,6 +2,7 @@ import CodeView from '../../../shared/components/CodeView';
 import CodeBlock from '../../../shared/components/CodeBlock';
 import Blockquote from '../../../shared/components/Blockquote';
 import { getDisplayElementById } from '../../shared/helpers';
+import { MobileNotice, MobileBlurb } from '../../shared/doc-text';
 import * as PillsExamplesBase from './base/example';
 import * as PillsExamplesListbox from './listbox-of-pill-options/example';
 
@@ -30,6 +31,14 @@ Additionally, a pill can have an icon or image that sits to the left-hand side o
 You may also want the functionality to remove the pill as a selection. An "X" icon is normally used and will sit to the right-hand side of the `.slds-pill__label`. That icon should receive the class `.slds-pill__remove`.
 
 A `.slds-pill_container` can be used as a visual container for multiple pill(s).
+
+### Mobile
+
+<MobileBlurb patternSpecificText="pills will have an increased size to accommodate tapping with a finger instead of the more precise mouse cursor" />
+
+<CodeView frameOnly hideDeviceSelector>
+  {getDisplayElementById(PillsExamplesBase.examples, 'icon')}
+</CodeView>
 
 ## Base
 

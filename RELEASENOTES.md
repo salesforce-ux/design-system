@@ -20,6 +20,10 @@
 #### Added
 - Added documentation and examples for mobile/touch context
 
+### [Popovers](https://www.lightningdesignsystem.com/components/popovers)
+#### Added
+- Added documentation and examples for mobile/touch context
+
 ## Release 2.11.6 - March 11, 2020
 
 ## Components

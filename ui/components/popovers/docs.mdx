@@ -12,6 +12,7 @@ import * as FeatureExamples from './feature/example';
 import * as PreviewPanelExamples from './panels/example';
 import * as PromptExamples from './prompt/example';
 import { getDisplayElementById } from '../../shared/helpers';
+import { MobileNotice, MobileBlurb } from '../../shared/doc-text';
 
 <div className="doc lead">
   A popover is a non-modal dialog. The component should be paired with a clickable trigger element and contain at least one focusable element.
@@ -48,6 +49,14 @@ This is due to the focus moving and trapping nature of non-modal dialogs. You **
   - Apply the `aria-labelledby` attribute to the `dialog` element and set the value to be the ID of the main Heading element in the Popover (if it provides a good and meaningful title to the `dialog`)
   - If no Heading element is present, use the `aria-label` attribute and set the value to be a meaningful title of the `dialog`
 - The `dialog` should be described where possible. This can be achieved by applying the `aria-describedby` attribute to the `dialog` element and set the value to be the id of the Popover body
+
+### Mobile
+
+<MobileBlurb patternSpecificText="popovers will have increased close button size to accommodate tapping with a finger instead of the more precise mouse cursor" />
+
+<CodeView frameOnly hideDeviceSelector>
+  {getDisplayElementById(NubbinExamples.states, 'bottom')}
+</CodeView>
 
 ## Base
 
@@ -293,6 +302,12 @@ This is due to the focus moving and trapping nature of non-modal dialogs. You **
 ### Prompt
 
 <CodeView>
+  {PromptExamples.default}
+</CodeView>
+
+<MobileNotice docsLink="#Mobile" header="Mobile context changes" elementName="prompts" />
+
+<CodeView frameOnly hideDeviceSelector>
   {PromptExamples.default}
 </CodeView>
 

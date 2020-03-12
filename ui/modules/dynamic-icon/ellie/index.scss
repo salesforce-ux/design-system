@@ -1,0 +1,127 @@
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+// Improve readability of steps and animations
+// scss-lint:disable SpaceBetweenParens SingleLinePerProperty
+
+// ------------
+// Init
+// ------------
+@import '../../../shared/common/init';
+
+// Setup
+$_c-icon-ellie-size: rem(14px);
+$_c-icon-ellie-color: #00a0e3;
+$_c-icon-ellie-inner-color: $color-background-alt;
+$_c-icon-ellie-outer-timing-function: cubic-bezier(0.44, 0.05, 0.55, 0.95); // https://easings.net/en#easeInOutSine
+$_c-icon-ellie-inner-timing-function: cubic-bezier(0.44, 0.05, 0.55, 0.95); // https://easings.net/en#easeInOutSine
+
+/**
+ * @name ellie
+ * @selector .lwc-icon-ellie
+ * @restrict span
+ * @support dev-ready
+ * @variant
+ */
+.lwc-icon-ellie {
+  width: $_c-icon-ellie-size;
+  height: $_c-icon-ellie-size;
+  display: inline-block;
+  overflow: hidden;
+  will-change: transform;
+  animation: lwc-icon-ellie-pop 0.3s ease-in 2s 1 both;
+
+  /**
+   * @summary Add `lwc-is-paused` to pause the icon animation.
+   *
+   * @selector .lwc-is-paused
+   * @restrict .lwc-icon-ellie
+   */
+  &.lwc-is-paused {
+
+    &,
+    .lwc-icon-ellie_circle-outer,
+    .lwc-icon-ellie_circle-inner {
+      animation-play-state: paused;
+    }
+  }
+
+  /**
+   * @summary Add `lwc-is-static` to display without animation.
+   *
+   * @selector .lwc-is-static
+   * @restrict .lwc-icon-ellie
+   */
+  &.lwc-is-static {
+
+    &,
+    .lwc-icon-ellie_circle-inner,
+    .lwc-icon-ellie_circle-outer {
+      animation: none;
+    }
+  }
+
+  svg {
+    width: $_c-icon-ellie-size;
+    vertical-align: top;
+    color: $_c-icon-ellie-color;
+  }
+}
+
+/**
+  * @summary This is the icon's larger outer circle shape
+  *
+  * @selector .lwc-icon-ellie_circle-outer
+  * @restrict .lwc-icon-ellie circle
+  */
+.lwc-icon-ellie_circle-outer {
+  fill: currentColor;
+  stroke: currentColor;
+  stroke-width: 4px;
+  will-change: transform;
+  animation: lwc-icon-ellie-circle-outer $_c-icon-ellie-outer-timing-function 0.6s 2.3s 4 alternate;
+}
+
+/**
+  * @summary This is the icon's smaller inner circle shape
+  *
+  * @selector .lwc-icon-ellie_circle-inner
+  * @restrict .lwc-icon-ellie circle
+  */
+.lwc-icon-ellie_circle-inner {
+  fill: $_c-icon-ellie-inner-color;
+  stroke: $_c-icon-ellie-inner-color;
+  stroke-width: 1px;
+  will-change: transform;
+  animation: lwc-icon-ellie-circle-inner $_c-icon-ellie-inner-timing-function 0.6s 2.3s 4 alternate;
+}
+
+@include reduced-motion {
+
+  .lwc-icon-ellie,
+  .lwc-icon-ellie_circle-inner,
+  .lwc-icon-ellie_circle-outer {
+    animation: none;
+  }
+}
+
+// Animations
+// stylelint-disable
+@include keyframes(lwc-icon-ellie-pop) {
+  0%   { transform: scale(0.2); }
+  70%  { transform: scale(1.1); }
+  90%  { transform: scale(0.7); }
+  100% { transform: scale(1); }
+}
+
+@include keyframes(lwc-icon-ellie-circle-inner) {
+  to {
+    stroke-width: 4px;
+  }
+}
+
+@include keyframes(lwc-icon-ellie-circle-outer) {
+  to {
+    stroke-width: 3px;
+  }
+}

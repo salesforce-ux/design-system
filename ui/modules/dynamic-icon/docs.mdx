@@ -1,0 +1,29 @@
+import CodeView from '../../../shared/components/CodeView';
+import { getDisplayElementById } from '../../shared/helpers';
+import * as EllieExamples from './ellie/example';
+
+<div className="lead doc">
+  A set of delightful animated icons
+</div>
+
+<CodeView exampleOnly>
+  {EllieExamples.default}
+</CodeView>
+
+## Ellie
+
+<CodeView>
+  {EllieExamples.default}
+</CodeView>
+
+### Paused
+
+<CodeView>
+  {getDisplayElementById(EllieExamples.states, 'paused')}
+</CodeView>
+
+### Static
+
+<CodeView>
+  {getDisplayElementById(EllieExamples.states, 'static')}
+</CodeView>

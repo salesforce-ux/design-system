@@ -292,6 +292,10 @@
         "path": "ui/modules/dropdown-container/index.css"
       },
       {
+        "name": "@salesforce/slds/dynamicIconEllie",
+        "path": "ui/modules/dynamic-icon/ellie/index.css"
+      },
+      {
         "name": "@salesforce/slds/icon",
         "path": "ui/modules/icon/base/index.css"
       },

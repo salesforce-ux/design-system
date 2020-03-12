@@ -4,6 +4,10 @@
 ## Release 2.12.0 - May 8, 2020
 
 ## Components
+### [Buttons](https://www.lightningdesignsystem.com/components/buttons)
+#### Changed
+- Changed disabled inverse button text color to 50% opacity.
+
 ### [Popovers](https://www.lightningdesignsystem.com/components/popovers)
 #### Fixed
 - Fixed the text color in form inputs for the Walkthrough variation.

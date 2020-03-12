@@ -69,7 +69,7 @@ props:
     comment: Text color for a button that has a parent element that has a hover state. This is the default text/icon color for that button before its parent has been hovered over.
     access: global
   COLOR_TEXT_BUTTON_INVERSE_DISABLED:
-    value: '{!WHITE_TRANSPARENT_15}'
+    value: '{!WHITE_TRANSPARENT_50}'
     comment: Text color for a button that has a parent element that has a hover state. This is the default text/icon color for that button before its parent has been hovered over.
     access: global
 

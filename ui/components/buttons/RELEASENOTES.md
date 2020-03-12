@@ -4,6 +4,12 @@
 
 <!-- ## [Unreleased] -->
 
+## 2.12.0
+
+### Changed
+
+- Changed disabled inverse button text color to 50% opacity.
+
 ## 2.11.0
 
 ### Changed

@@ -1,5 +1,6 @@
 import CodeView from '../../../shared/components/CodeView.jsx';
 import { getDisplayElementById } from '../../shared/helpers';
+import { MobileNotice, MobileBlurb } from '../../shared/doc-text';
 import * as Base from './example';
 
 <div className="doc lead">
@@ -14,10 +15,24 @@ In our framework, all headings (`h1`–`h6`) are reset to the base (body text) s
   {getDisplayElementById(Base.examples, 'body-default')}
 </CodeView>
 
+### Mobile
+
+<MobileBlurb patternSpecificText="text helpers will have an increased text size" />
+
+<CodeView frameOnly hideDeviceSelector>
+  {getDisplayElementById(Base.examples, 'body-default')}
+</CodeView>
+
 ## Examples
 
 ### Body Size - Small
 <CodeView>
+  {getDisplayElementById(Base.examples, 'body-small')}
+</CodeView>
+
+<MobileNotice docsLink="#Mobile" header="Mobile context changes" elementName="elements with the small body text-size helper class" />
+
+<CodeView frameOnly hideDeviceSelector>
   {getDisplayElementById(Base.examples, 'body-small')}
 </CodeView>
 
@@ -26,13 +41,31 @@ In our framework, all headings (`h1`–`h6`) are reset to the base (body text) s
   {getDisplayElementById(Base.examples, 'heading-large')}
 </CodeView>
 
+<MobileNotice docsLink="#Mobile" header="Mobile context changes" elementName="elements with the large heading text-size helper class" />
+
+<CodeView frameOnly hideDeviceSelector>
+  {getDisplayElementById(Base.examples, 'heading-large')}
+</CodeView>
+
 ### Heading Size - Medium
 <CodeView>
   {getDisplayElementById(Base.examples, 'heading-medium')}
 </CodeView>
 
+<MobileNotice docsLink="#Mobile" header="Mobile context changes" elementName="elements with the medium heading text-size helper class" />
+
+<CodeView frameOnly hideDeviceSelector>
+  {getDisplayElementById(Base.examples, 'heading-medium')}
+</CodeView>
+
 ### Heading Size - Small
 <CodeView>
+  {getDisplayElementById(Base.examples, 'heading-small')}
+</CodeView>
+
+<MobileNotice docsLink="#Mobile" header="Mobile context changes" elementName="elements with the small heading text-size helper class" />
+
+<CodeView frameOnly hideDeviceSelector>
   {getDisplayElementById(Base.examples, 'heading-small')}
 </CodeView>
 

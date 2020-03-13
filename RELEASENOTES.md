@@ -40,6 +40,11 @@
 #### Added
 - Added documentation and examples for mobile/touch context
 
+## Utilities
+### [Text Utility](https://www.lightningdesignsystem.com/utilities/text)
+#### Added
+- Added documentation and examples for mobile/touch context
+
 ## Release 2.11.6 - March 11, 2020
 
 ## Components

@@ -1,13 +1,14 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import * as EllieExamples from './ellie/example';
+import * as EqExamples from './eq/example';
 import { getAllDisplayCollectionsByType } from '../../shared/helpers';
 import StoryFrame from '../../../shared/components/StoryFrame';
 
 import DocsPage from '../../../.storybook/components/DocsPage';
 import Docs from './docs.mdx';
 
-const examples = [EllieExamples];
+const examples = [EllieExamples, EqExamples];
 
 const kitchenSink = getAllDisplayCollectionsByType(examples, [
   'default',

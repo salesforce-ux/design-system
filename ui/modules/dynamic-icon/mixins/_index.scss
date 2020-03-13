@@ -1,0 +1,13 @@
+@mixin eq-bar-y-size-position($height, $max) {
+  y: $max - $height;
+  height: $height;
+}
+
+@mixin eq-bar-size-init($max, $bars...) {
+  @for $i from 0 to length($bars) {
+
+    &:nth-of-type(#{$i + 1}) {
+      @include eq-bar-y-size-position(nth($bars, $i + 1), $max);
+    }
+  }
+}

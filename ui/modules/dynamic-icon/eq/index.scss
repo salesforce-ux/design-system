@@ -1,0 +1,82 @@
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+// ------------
+// Init
+// ------------
+@import '../../../shared/common/init';
+@import '../mixins/index';
+
+$_c-icon-eq-size: rem(14px);
+$_c-icon-eq-bar-height-min: rem(3px);
+$_c-icon-eq-bar-height-max: $_c-icon-eq-size;
+
+$_c-icon-eq-bar1-height: $_c-icon-eq-bar-height-min * 3;
+$_c-icon-eq-bar2-height: $_c-icon-eq-bar-height-max;
+$_c-icon-eq-bar3-height: $_c-icon-eq-bar-height-min * 4;
+
+/**
+ * @name eq
+ * @selector .lwc-icon-eq
+ * @restrict div
+ * @support dev-ready
+ * @variant
+ */
+.lwc-icon-eq {
+  width: $_c-icon-eq-size;
+  height: $_c-icon-eq-size;
+
+  svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+/**
+ * @summary Vertical bar for equalizer icon
+ *
+ * @selector .lwc-icon-eq__bar
+ * @restrict .lwc-icon-eq div
+ */
+.lwc-icon-eq__bar {
+  width: rem(4px);
+  height: $_c-icon-eq-bar-height-min * 3;
+  fill: $brand-accessible;
+  transform: scaleY(1);
+  transform-origin: bottom;
+  animation: lwc-icon-eq 0.25s ease-in-out infinite alternate;
+  will-change: transform;
+
+  @include eq-bar-y-size-position($_c-icon-eq-bar-height-min, $_c-icon-eq-bar-height-max);
+
+  &:nth-of-type(1) {
+    x: 0;
+  }
+
+  &:nth-of-type(2) {
+    x: rem(5px);
+    animation-duration: 0.65s;
+  }
+
+  &:nth-of-type(3) {
+    x: rem(10px);
+    animation-duration: 0.35s;
+  }
+}
+
+@include reduced-motion {
+
+  .lwc-icon-eq__bar {
+    animation: none;
+
+    @include eq-bar-size-init($_c-icon-eq-bar-height-max, $_c-icon-eq-bar1-height, $_c-icon-eq-bar2-height, $_c-icon-eq-bar3-height);
+  }
+}
+
+@include keyframes(lwc-icon-eq) {
+
+  to {
+    transform: scaleY(#{$_c-icon-eq-bar-height-max / $_c-icon-eq-bar-height-min});
+  }
+}

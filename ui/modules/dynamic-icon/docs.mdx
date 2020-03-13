@@ -1,5 +1,6 @@
 import CodeView from '../../../shared/components/CodeView';
 import { getDisplayElementById } from '../../shared/helpers';
+import * as EqExamples from './eq/example';
 import * as EllieExamples from './ellie/example';
 
 <div className="lead doc">
@@ -26,4 +27,10 @@ import * as EllieExamples from './ellie/example';
 
 <CodeView>
   {getDisplayElementById(EllieExamples.states, 'static')}
+</CodeView>
+
+## Eq
+
+<CodeView>
+  {EqExamples.default}
 </CodeView>

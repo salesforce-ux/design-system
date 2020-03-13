@@ -15,6 +15,7 @@ import * as GroupedExamples from './grouped/example';
 import * as Snapshot from './snapshots.data';
 import * as Dialog from './dialog/example';
 import _, { getDisplayElementById } from '../../shared/helpers';
+import { MobileNotice, MobileBlurb } from '../../shared/doc-text';
 
 <div className="lead doc">
   A widget that provides a user with an input field that is either an
@@ -47,6 +48,14 @@ A Base Combobox is a readonly text `input` that allows a user to select an optio
   - `aria-controls=""` which points to the ID of the `listbox`. It informs assistive technology what DOM node the `input` controls, in terms of visibility and / or content
   - `type` attribute set to be `text` as it's not a search field
   - `readonly`
+
+### Mobile
+
+<MobileBlurb patternSpecificText="comboboxes and the available options will have an increased size to accommodate tapping with a finger instead of the more precise mouse cursor" />
+
+<CodeView frameStyles={{ height: '20rem' }} frameOnly hideDeviceSelector>
+  {getDisplayElementById(BaseExamples.states, 'focused-open')}
+</CodeView>
 
 ### Displaying options
 
@@ -465,6 +474,15 @@ Multiple selection is handled the same as the Base and Autocomplete Combobox, a 
   )}
 </CodeView>
 
+<MobileNotice docsLink="#Mobile" header="Mobile context changes" elementName="comboboxes with multiple selection" />
+
+<CodeView frameOnly hideDeviceSelector>
+  {getDisplayElementById(
+    AutocompleteExamples.states,
+    'lookup-multiple-options'
+  )}
+</CodeView>
+
 ## Grouped Comboboxes (Cross-entity / Polymorphic)
 
 The Grouped Comboboxes should be used when a Combobox has another Combobox appended or prepended to itself.
@@ -489,6 +507,10 @@ The containing `div` of the comboboxes should have the class `slds-combobox-grou
 </Blockquote>
 
 <CodeView demoStyles="height: 17rem;">{GroupedExamples.default}</CodeView>
+
+<MobileNotice docsLink="#Mobile" header="Mobile context changes" elementName="grouped comboboxes (cross-entity / polymorphic)" />
+
+<CodeView frameStyles={{ height: '21rem' }} frameOnly hideDeviceSelector>{GroupedExamples.default}</CodeView>
 
 ### User input (Typeahead)
 

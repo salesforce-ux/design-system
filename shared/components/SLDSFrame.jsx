@@ -1,5 +1,6 @@
 import React from 'react';
-import Frame from 'react-frame-component';
+import Frame, { FrameContextConsumer } from 'react-frame-component';
+import { StyleSheetManager } from 'styled-components';
 import PropTypes from 'prop-types';
 import { FormElement } from '../../ui/components/form-element';
 import { Select } from '../../ui/components/select/base/example';
@@ -13,7 +14,13 @@ devices.map((value, index) => {
 
 export default class SLDSFrame extends React.Component {
   render() {
-    const { children, hideDeviceSelector } = this.props;
+    const { children, hideDeviceSelector, frameStyles } = this.props;
+
+    let fixedHeight = false;
+    // if frameStyles has a height value then we want to disable automatic height resizing
+    if (frameStyles && frameStyles.hasOwnProperty('height')) {
+      fixedHeight = true;
+    }
 
     const randomId = Math.random()
       .toString(36)
@@ -34,40 +41,56 @@ export default class SLDSFrame extends React.Component {
         : null;
 
       iframe.style.width = newFrameWidth;
-      iframe.contentWindow.resizeIframe();
+
+      // only resize if fixed height isn't requested
+      if (!fixedHeight) {
+        iframe.contentWindow.resizeIframe();
+      }
     };
+
+    const initialContent =
+      `
+      <!DOCTYPE html>
+      <html>
+        <head>
+          <link rel="stylesheet" type="text/css" href="/assets/styles/salesforce-lightning-design-system.min.css" />
+          <link rel="stylesheet" type="text/css" href="/assets/__internal/styles/salesforce-lightning-design-system_touch-demo.min.css" />
+          <style type="text/css">
+            html { background: transparent !important; padding: 1rem; }
+          </style>
+        </head>
+        <body>
+          <div></div>` +
+      (fixedHeight
+        ? ``
+        : `<script>
+            function resizeIframe() {
+              const offsetHeight = document.documentElement.offsetHeight;
+              const frameHeight = offsetHeight + (window.frameElement.offsetHeight - window.frameElement.clientHeight);
+              window.frameElement.style.height =  Math.ceil(frameHeight) + "px";
+            }
+
+            window.parent.addEventListener("resize", resizeIframe);
+            setTimeout(resizeIframe, 250);
+          </script>`) +
+      `</body>
+      </html>`;
 
     return (
       <React.Fragment>
         <Frame
           className="docs-mobile_frame"
           id={frameId}
-          initialContent='
-          <!DOCTYPE html>
-          <html>
-            <head>
-              <link rel="stylesheet" type="text/css" href="/assets/styles/salesforce-lightning-design-system.min.css" />
-              <link rel="stylesheet" type="text/css" href="/assets/__internal/styles/salesforce-lightning-design-system_touch-demo.min.css" />
-              <style type="text/css">
-                html { background: transparent !important; padding: 1rem; }
-              </style>
-            </head>
-            <body>
-              <div></div>
-              <script>
-                function resizeIframe() {
-                  const offsetHeight = document.documentElement.offsetHeight;
-                  const frameHeight = offsetHeight + (window.frameElement.offsetHeight - window.frameElement.clientHeight);
-                  window.frameElement.style.height =  Math.ceil(frameHeight) + "px";
-                }
-
-                window.parent.addEventListener("resize", resizeIframe);
-                setTimeout(resizeIframe, 250);
-              </script>
-            </body>
-          </html>'
+          initialContent={initialContent}
+          style={frameStyles}
         >
-          {children}
+          <FrameContextConsumer>
+            {frameContext => (
+              <StyleSheetManager target={frameContext.document.head}>
+                <React.Fragment>{children}</React.Fragment>
+              </StyleSheetManager>
+            )}
+          </FrameContextConsumer>
         </Frame>
 
         {!hideDeviceSelector && (
@@ -98,5 +121,6 @@ export default class SLDSFrame extends React.Component {
 }
 
 SLDSFrame.propTypes = {
-  hideDeviceSelector: PropTypes.bool
+  hideDeviceSelector: PropTypes.bool,
+  frameStyles: PropTypes.object
 };

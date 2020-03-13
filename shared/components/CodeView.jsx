@@ -44,8 +44,10 @@ class CodeView extends React.Component {
       toggleCode,
       exampleOnly,
       frameOnly,
+      frameStyles,
       hideDeviceSelector
     } = this.props;
+
     let content = (
       <React.Fragment>
         {position === 'bottom' ? this.renderChildren() : null}
@@ -60,7 +62,10 @@ class CodeView extends React.Component {
 
     if (frameOnly) {
       content = (
-        <SLDSFrame hideDeviceSelector={hideDeviceSelector}>
+        <SLDSFrame
+          hideDeviceSelector={hideDeviceSelector}
+          frameStyles={frameStyles}
+        >
           {this.props.children}
         </SLDSFrame>
       );
@@ -87,6 +92,7 @@ CodeView.propTypes = {
   toggleCode: PropTypes.bool,
   exampleOnly: PropTypes.bool,
   frameOnly: PropTypes.bool,
+  frameStyles: PropTypes.object,
   hideDeviceSelector: PropTypes.bool
 };
 

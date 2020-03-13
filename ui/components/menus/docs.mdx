@@ -8,6 +8,7 @@ import * as DropdownHeight from '../menus/dropdown-height/example';
 import { Submenu } from '../menus/submenu/example';
 import { DoctypeIcon } from '../icons/doctype/example';
 import { getDisplayElementById } from '../../shared/helpers';
+import { MobileNotice, MobileBlurb } from '../../shared/doc-text';
 
 <div className="doc lead">
   A Menu offers a list of actions or functions that a user can access.
@@ -41,6 +42,14 @@ The main thing that distinguishes menus from other popover blocks is keyboard na
 - Tab key closes the menu and moves focus to the next focusable element on the page
 - Esc key closes the menu and moves focus back to the menu trigger
 - Any character key moves focus to the next menu item that starts with that character, if applicable
+
+### Mobile
+
+<MobileBlurb patternSpecificText="menus will have an increased button size to accommodate tapping with a finger instead of the more precise mouse cursor as well as larger text size" />
+
+<CodeView frameOnly hideDeviceSelector frameStyles={{ height: '14rem' }}>
+  <IconLeft hasLeftIcon />
+</CodeView>
 
 ## Base
 

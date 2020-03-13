@@ -20,6 +20,10 @@
 #### Added
 - Added documentation and examples for mobile/touch context
 
+### [Menus](https://www.lightningdesignsystem.com/components/menus)
+#### Added
+- Added documentation and examples for mobile/touch context
+
 ### [Pills](https://www.lightningdesignsystem.com/components/pills)
 #### Added
 - Added documentation and examples for mobile/touch context

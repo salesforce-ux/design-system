@@ -3,14 +3,23 @@
 # Cards Release Notes
 
 <!-- ## [Unreleased] -->
+
+## 2.11.6
+
+### Added
+
+- Added documentation and examples for mobile/touch context
+
 ## 2.11.0
 
 ### Fixed
+
 - Added `display: flex` to `.slds-card__header-title` to enable truncation on contained link that already has `slds-truncate`
 
 ## 2.10.0
 
 ### Changed
+
 - Visually remove border and set border-radius to zero for touch devices
 - For touch devices:
   - Set font size of `.slds-card__header-title` to `$var-font-size-6` (1.125rem)

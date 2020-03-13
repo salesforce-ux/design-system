@@ -35,10 +35,13 @@ export let MobileNotice = props => {
 
   return (
     <Blockquote type="note" header={header}>
-      Please be aware that in a mobile context <strong>{elementName}</strong>{' '}
-      will automatically change slightly as shown in the example below. For more
-      details{' '}
-      <a href={docsLink}>please see the mobile specific documentation</a> above.
+      <p>
+        Please be aware that in a mobile context <strong>{elementName}</strong>{' '}
+        will automatically change slightly as shown in the example below. For
+        more details{' '}
+        <a href={docsLink}>please see the mobile specific documentation</a>{' '}
+        above.
+      </p>
     </Blockquote>
   );
 };

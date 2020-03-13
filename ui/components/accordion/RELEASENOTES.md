@@ -4,6 +4,9 @@
 
 <!-- ## [Unreleased] -->
 
+## 2.11.5
+- Replaced `slds-truncate` with specific selector `slds-accordion__summary-content` in Accordion title so content will only truncate for larger screens
+
 ## 2.10.0
 
 ### Added

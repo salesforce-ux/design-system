@@ -19,7 +19,7 @@ import _ from '../../shared/helpers';
   all contexts in the Salesforce ecosystem (internal or 3rd party).
 </div>
 
-<CodeView exampleOnly style={{ position: 'relative', height: '20.25rem' }}>
+<CodeView exampleOnly demoStyles="position: relative; height: 20.25rem;">
   <GlobalHeader
     globalSearch={
       <ComboboxGroup
@@ -126,7 +126,7 @@ For screen reading users, we need to provide a way to navigate over the global h
 ## Base
 
 <Example title="base global header">
-  <CodeView style={{ position: 'relative', height: '21.25rem' }}>
+  <CodeView demoStyles="position: relative; height: 21.25rem;">
     <GlobalHeader
       globalSearch={
         <ComboboxGroup
@@ -194,7 +194,7 @@ The global search component is used for application wide search. The form elemen
 ### Default
 
 <Example title="Global Header Search Default State">
-  <CodeView style={{ position: 'relative', height: '3.5rem' }}>
+  <CodeView demoStyles="position: relative; height: 3.5rem;">
     <GlobalHeader
       globalSearch={
         <ComboboxGroup
@@ -246,7 +246,7 @@ The global search component is used for application wide search. The form elemen
 ### Focused and expanded
 
 <Example title="Global Header Search Expanded State">
-  <CodeView style={{ position: 'relative', height: '21rem' }}>
+  <CodeView demoStyles="position: relative; height: 21rem;">
     <GlobalHeader
       globalSearch={
         <ComboboxGroup
@@ -300,7 +300,7 @@ The global search component is used for application wide search. The form elemen
 ### Active and typing
 
 <Example title="Global Header Search Active State">
-  <CodeView style={{ position: 'relative', height: '21rem' }}>
+  <CodeView demoStyles="position: relative; height: 21rem;">
     <GlobalHeader
       globalSearch={
         <ComboboxGroup
@@ -382,10 +382,12 @@ The favorites action is used to "favorite" a commonly used page within a user's 
 When pressed, apply the class `slds-is-selected` to the `slds-global-actions__favorites-action` button element.
 
 <Blockquote type="a11y" header="Accessibility Requirement">
-  When the favorites action is pressed, we need to toggle the{' '}
-  <code>aria-pressed</code> attribute to{' '}
-  <code>true</code>. This will inform a screen reader that the
-  button has been pressed.
+  <p>
+    When the favorites action is pressed, we need to toggle the{' '}
+    <code>aria-pressed</code> attribute to{' '}
+    <code>true</code>. This will inform a screen reader that the
+    button has been pressed.
+  </p>
 </Blockquote>
 
 <CodeView>
@@ -409,13 +411,13 @@ If the favorites action needs to become disabled, apply the `disabled` attribute
 The favorites popover is invoked when a user clicks on the dropdown arrow action icon inside of the favorites button group. The favorites popover is implemented as a [Popover - Dynamic Menu Variant](/components/dynamic-menu/) component, please refer to the accessibility guidelines on the Popover component page for implementation guidance.
 
 <CodeView
-  style={{
-    display: 'flex',
-    justifyContent: 'flex-end',
-    alignItems: 'flex-start',
-    height: '16rem',
-    minWidth: '400px'
-  }}
+  demoStyles="
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    height: 16rem;
+    min-width: 400px;
+  "
 >
   <GlobalActions showFavoritesPopup />
 </CodeView>
@@ -433,13 +435,13 @@ The favorites popover is invoked when a user clicks on the dropdown arrow action
 When the global task action is invoked, a menu inside of a dropdown becomes visible. Please refer to the accessibility section of the [Menus component](/components/menus) for implementation guidelines.
 
 <CodeView
-  style={{
-    display: 'flex',
-    justifyContent: 'flex-end',
-    alignItems: 'flex-start',
-    height: '16rem',
-    minWidth: '400px'
-  }}
+  demoStyles="
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    height: 16rem;
+    min-width: 400px;
+  "
 >
   <GlobalActions showTaskMenu />
 </CodeView>
@@ -464,12 +466,9 @@ When the global task action is invoked, a menu inside of a dropdown becomes visi
 
 Notifications are a way to notify a user about a global change within the application. This is commonly used to communicate a Chatter mention/reply or a status update on an opportunity pipeline.
 
-<div
-  className="docs-codeblock-example"
-  style={{ position: 'relative', height: '7.5rem' }}
->
-  <GlobalHeader playground />
-</div>
+<CodeView isViewport exampleOnly demoStyles="position: relative; height: 7.5rem;">
+    <GlobalHeader playground />
+</CodeView>
 
 #### No notifications
 
@@ -484,15 +483,17 @@ Notifications are a way to notify a user about a global change within the applic
 When a notification is coming through, we want to apply the `slds-incoming-notification` class to both the `slds-global-actions__notifications` button, as well as the `slds-notification-badge`. This will initiate the animation that there is a new incoming notification. A notification badge will also need to receive the `slds-show-notification` class, this ensures the badge becomes visible for the incoming animation to work. The `slds-show-notification` class should also be applied if a user has unread notifications upon their return to their application.
 
 <Blockquote type="a11y" header="Accessibility Note">
-  The notification badge is hidden from screen readers by add the attribute{' '}
-  <code>aria-hidden="true"</code> so the badge doesn't have to
-  be inside the button itself. Since the badge count is hidden, we need to add
-  the count number to the button text via some hidden assistive text. The
-  assistive text string should be updated with number of new notifications, such
-  as "3 new notification". If there are no notifications, the assistive text
-  should read "No notifications". The button element also requires{' '}
-  <code>aria-live="assertive"</code> to announce any count
-  updates.
+  <p>
+    The notification badge is hidden from screen readers by add the attribute{' '}
+    <code>aria-hidden="true"</code> so the badge doesn't have to
+    be inside the button itself. Since the badge count is hidden, we need to add
+    the count number to the button text via some hidden assistive text. The
+    assistive text string should be updated with number of new notifications, such
+    as "3 new notification". If there are no notifications, the assistive text
+    should read "No notifications". The button element also requires{' '}
+    <code>aria-live="assertive"</code> to announce any count
+    updates.
+  </p>
 </Blockquote>
 
 <CodeView>
@@ -505,18 +506,17 @@ When a notification is coming through, we want to apply the `slds-incoming-notif
 
 The notification popover is invoked when a user clicks on the notification action icon. The notification popover is implemented as a [Popover component](/components/popovers), please refer to the accessibility guidelines on the Popover component page for implementation guidance.
 
-<div
-  className="docs-codeblock-example"
-  style={{
-    display: 'flex',
-    justifyContent: 'flex-end',
-    alignItems: 'flex-start',
-    height: '25rem',
-    minWidth: '400px'
-  }}
->
-  <GlobalActions showNotification notificationCount="3" showNotificationPopup />
-</div>
+<CodeView exampleOnly
+  demoStyles="
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    height: 25rem;
+    min-width: 400px;
+    "
+  >
+    <GlobalActions showNotification notificationCount="3" showNotificationPopup />
+</CodeView>
 
 <CodeBlock>
   <GlobalNotifications />

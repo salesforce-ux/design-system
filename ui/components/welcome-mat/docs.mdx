@@ -10,7 +10,7 @@ import { getDisplayElementById, getDemoStylesById } from '../../shared/helpers';
   A Welcome Mat provides a series of unordered items a user can click to learn about a thematic topic.
 </div>
 
-<CodeView exampleOnly isViewport style={getDemoStylesById(WelcomeMat.examples, 'with-completed-tiles')}>
+<CodeView exampleOnly isViewport demoStyles={getDemoStylesById(WelcomeMat.examples, 'with-completed-tiles')}>
   {getDisplayElementById(WelcomeMat.examples, "with-completed-tiles")}
 </CodeView>
 
@@ -23,7 +23,7 @@ import { getDisplayElementById, getDemoStylesById } from '../../shared/helpers';
 
 ## Base
 
-<CodeView isViewport style={getDemoStylesById(WelcomeMat.examples, 'default')}>
+<CodeView isViewport demoStyles={getDemoStylesById(WelcomeMat.examples, 'default')}>
   {getDisplayElementById(WelcomeMat.examples, "default")}
 </CodeView>
 
@@ -35,7 +35,7 @@ As users complete items in the list, the list updates to show as completed.
 
 As tiles are completed, they move to the bottom of the list, and get a modifier class of `slds-welcome-mat__tile_complete`.
 
-<CodeView isViewport style={getDemoStylesById(WelcomeMat.examples, 'with-completed-tiles')}>
+<CodeView isViewport demoStyles={getDemoStylesById(WelcomeMat.examples, 'with-completed-tiles')}>
   {getDisplayElementById(WelcomeMat.examples, "with-completed-tiles")}
 </CodeView>
 
@@ -45,7 +45,7 @@ The Trailhead Connected variant should only be used when users can achieve a bad
 
 Only Trailhead connected mats may have the Trailhead font for the header.
 
-<CodeView isViewport style={getDemoStylesById(WelcomeMat.examples, 'default')}>
+<CodeView isViewport demoStyles={getDemoStylesById(WelcomeMat.examples, 'default')}>
   {getDisplayElementById(WelcomeMatTrailhead.examples, "default")}
 </CodeView>
 
@@ -57,7 +57,7 @@ When a class of `slds-welcome-mat__info-progress_complete` is added to the `.sld
 
 Additionally, the progress indicator should be replaced with a button to view the badge on the user's Trailblazer profile page.
 
-<CodeView isViewport style={getDemoStylesById(WelcomeMatTrailhead.examples, 'trailhead-complete')}>
+<CodeView isViewport demoStyles={getDemoStylesById(WelcomeMatTrailhead.examples, 'trailhead-complete')}>
   {getDisplayElementById(WelcomeMatTrailhead.examples, "trailhead-complete")}
 </CodeView>
 
@@ -66,13 +66,13 @@ In the event your displayed steps are informational rather than actionable, you 
 
 The tile container background changes from gray to white, which is done by applying the modifier class of `slds-welcome-mat__tiles_info-only` to the `slds-welcome-mat__tiles` element. Since the tiles aren't actionable, also apply the modifier class of `slds-welcome-mat__tile-info-only` to each `slds-welcome-mat__tile` element.
 
-<CodeView isViewport style={getDemoStylesById(InfoOnly.examples, 'default')}>
+<CodeView isViewport demoStyles={getDemoStylesById(InfoOnly.examples, 'default')}>
   {getDisplayElementById(InfoOnly.examples, "default")}
 </CodeView>
 
 ### Splash
 The Splash variant is a singular interstitial modal. It removes the actionable/content column and allows the background image to span the full-width. Make sure that the areas of your background image behind your text provide enough contrast to ensure accessibility.
 
-<CodeView isViewport style={getDemoStylesById(Splash.examples, 'default')}>
+<CodeView isViewport demoStyles={getDemoStylesById(Splash.examples, 'default')}>
   {getDisplayElementById(Splash.examples, "default")}
 </CodeView>

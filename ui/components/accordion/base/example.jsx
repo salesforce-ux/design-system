@@ -44,7 +44,10 @@ export const AccordionSection = props => (
               sprite="utility"
               symbol="switch"
             />
-            <span className="slds-truncate" title={props.summary}>
+            <span
+              className="slds-accordion__summary-content"
+              title={props.summary}
+            >
               {props.summary}
             </span>
           </button>
@@ -214,13 +217,13 @@ export let states = [
 export let examples = [
   {
     id: 'long-heading-truncated',
-    label: 'Long Section Heading with Truncation',
-    demoStyles: 'width: 500px;',
+    label: 'Long Section Heading with Truncation for larger screens',
+    demoStyles: 'max-width: 500px;',
     element: (
       <Card>
         <Accordion>
           <AccordionSection
-            summary="Accordion summary Accordion summary Accordion summary Accordion summary Accordion summary"
+            summary="Accordion summary Accordion summary Accordion summary Accordion summary Accordion summary Accordion summary Accordion summary Accordion summary Accordion summary Accordion summary"
             isOpen
             referenceId={referenceId01}
           >

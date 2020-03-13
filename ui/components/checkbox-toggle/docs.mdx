@@ -2,6 +2,7 @@ import CodeView from '../../../shared/components/CodeView';
 import CodeBlock from '../../../shared/components/CodeBlock';
 import Blockquote from '../../../shared/components/Blockquote';
 import { getDisplayElementById } from '../../shared/helpers';
+import { MobileNotice, MobileBlurb } from '../../shared/doc-text';
 import * as CheckboxToggleExamples from './base/example';
 
 <div className="lead doc">
@@ -34,6 +35,14 @@ The following JavaScript demonstrates how to set a checkbox to be indeterminate:
 var checkbox = document.getElementById('checkbox-indeterminate-01');
 checkbox.indeterminate = true;
 ```
+
+### Mobile
+
+<MobileBlurb patternSpecificText="checkbox toggles will have an increased label text size" />
+
+<CodeView frameOnly hideDeviceSelector>
+  {CheckboxToggleExamples.default}
+</CodeView>
 
 ## Base
 

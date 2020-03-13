@@ -9,11 +9,14 @@ import { getDisplayElementById } from '../../shared/helpers';
   A Tooltip is a small piece of contextual information about an element on the screen, which is displayed when a user hovers or focuses on the element it is describing. It is not focusable and cannot contain focusable content.
 </div>
 
-<CodeView exampleOnly style={{
-          paddingLeft: '1rem',
-          paddingTop: '1rem',
-          position: 'relative'
-        }}>
+<CodeView
+  exampleOnly
+  demoStyles="
+    padding-left: 1rem;
+    padding-top: 1rem;
+    position: relative;
+  "
+>
   {getDisplayElementById(Base.examples, 'button-icon')}
 </CodeView>
 
@@ -31,40 +34,40 @@ When using a link as the focusable element to show a tooltip, add a `<div>` at t
 
 ## Base
 
-<CodeView style={{
-          paddingLeft: '2rem',
-          paddingTop: '5rem',
-          position: 'relative'
-        }}>
+<CodeView demoStyles="
+          padding-left: 2rem;
+          padding-top: 5rem;
+          position: relative;
+        ">
   {Base.default}
 </CodeView>
 
 ## Examples
 
 ### As an icon link
-<CodeView style={{
-          paddingLeft: '2rem',
-          paddingTop: '6.75rem',
-          position: 'relative'
-        }}>
+<CodeView demoStyles="
+          padding-left: 2rem;
+          padding-top: 6.75rem;
+          position: relative;
+        ">
   {getDisplayElementById(Base.examples, 'link')}
 </CodeView>
 
 ### As a Button Icon
-<CodeView style={{
-          paddingLeft: '2rem',
-          paddingTop: '5rem',
-          position: 'relative'
-        }}>
+<CodeView demoStyles="
+          padding-left: 2rem;
+          padding-top: 5rem;
+          position: relative;
+        ">
   {getDisplayElementById(Base.examples, 'button-icon')}
 </CodeView>
 
 ### As a Button
-<CodeView style={{
-          paddingLeft: '2rem',
-          paddingTop: '5rem',
-          position: 'relative'
-        }}>
+<CodeView demoStyles="
+          padding-left: 2rem;
+          padding-top: 5rem;
+          position: relative;
+        ">
   {getDisplayElementById(Base.examples, 'button')}
 </CodeView>
 

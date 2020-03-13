@@ -10,7 +10,7 @@ import {
 } from '../../ui/shared/helpers';
 
 const StyledCodeView = props => (
-  <CodeView style={getDemoStylesById(props.collection, props.exampleId)}>
+  <CodeView demoStyles={getDemoStylesById(props.collection, props.exampleId)}>
     {getDisplayElementById(props.collection, props.exampleId)}
   </CodeView>
 );

@@ -26,11 +26,39 @@
 ### [Line Clamp](https://www.lightningdesignsystem.com/utilities/line-clamp)
 - Added Line Clamp x-small modifier that clamps at 2 lines.
 
+## Release 2.11.6 - March 11, 2020
+
+## Components
+### [Button Icons](https://www.lightningdesignsystem.com/components/button-icons)
+#### Fixed
+- Sizing classes are now respected in mobile/touch context 
+#### Added
+- Added documentation and examples for mobile/touch context
+
+### [Cards](https://www.lightningdesignsystem.com/components/cards)
+#### Added
+- Added documentation and examples for mobile/touch context
+
+### [Checkbox Button](https://www.lightningdesignsystem.com/components/checkbox-button)
+#### Added
+- Added documentation and examples for mobile/touch context
+
+### [Checkbox Toggle](https://www.lightningdesignsystem.com/components/checkbox-toggle)
+#### Added
+- Added documentation and examples for mobile/touch context
+
 ## Release 2.11.5 - March 5, 2020
 
 ## Components
+### [Accordion](https://www.lightningdesignsystem.com/components/accordion)
+- Replaced `slds-truncate` with specific selector `slds-accordion__summary-content` in Accordion title so content will only truncate for larger screens
+
 ### [Badges](https://www.lightningdesignsystem.com/components/badges)
 - Added examples for communicating Success, Warning and Error states.
+
+### [Checkbox](https://www.lightningdesignsystem.com/components/checkbox)
+#### Added
+- Added documentation and examples for mobile/touch context
 
 ### [Checkbox Button Group](https://www.lightningdesignsystem.com/components/checkbox-button-group)
 #### Added

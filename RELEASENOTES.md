@@ -24,6 +24,10 @@
 #### Added
 - Added documentation and examples for mobile/touch context
 
+### [Modals](https://www.lightningdesignsystem.com/components/modals)
+#### Added
+- Added documentation and examples for mobile/touch context
+
 ### [Pills](https://www.lightningdesignsystem.com/components/pills)
 #### Added
 - Added documentation and examples for mobile/touch context

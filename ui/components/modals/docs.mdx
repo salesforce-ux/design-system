@@ -1,6 +1,7 @@
 import * as Base from './base/example.jsx';
 import CodeView from '../../../shared/components/CodeView';
 import { getDisplayElementById, getDemoStylesById } from '../../shared/helpers';
+import { MobileNotice, MobileBlurb } from '../../shared/doc-text';
 
 <div className="doc lead">
   Modals are used to display content in a layer above the app. This paradigm is used in cases such as the creation or editing of a record, as well as various types of messaging and wizards.
@@ -43,6 +44,14 @@ Modals, by definition, trap focus. This means that if a user presses Tab or Shif
 - Tab key at bottom of modal cycles focus back to first focusable element at top of modal
 - Shift+Tab keys at top of modal cycle focus back to last focusable element at bottom of modal
 - Enter key submits modal’s form data, if applicable
+
+### Mobile
+
+<MobileBlurb patternSpecificText="modals will have buttons of increased size to accommodate tapping with a finger instead of the more precise mouse cursor" />
+
+<CodeView frameOnly hideDeviceSelector frameStyles={{ height: '640px' }}>
+  { Base.default }
+</CodeView>
 
 ## Base
 <CodeView isViewport demoStyles={getDemoStylesById(Base.examples, 'default')}>

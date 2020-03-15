@@ -10,6 +10,5 @@ rules:
   prefer-const: ['off']
   react/jsx-fragments: ['off']
   react/jsx-handler-names: ['off']
-  lines-between-class-members: ['off']
   dot-notation: ['off']
   no-prototype-builtins: ['off']

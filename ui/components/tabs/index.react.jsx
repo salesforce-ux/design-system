@@ -46,6 +46,7 @@ class TabItem extends React.Component {
       'aria-controls': this.props['aria-controls'] || this.props.id
     });
   }
+
   renderDefault(tabIndex, leftIcon, rightIcon) {
     const { flavor, current, id, title } = this.props;
     return (
@@ -66,6 +67,7 @@ class TabItem extends React.Component {
       </a>
     );
   }
+
   render() {
     const {
       className,
@@ -126,6 +128,7 @@ class Tabs extends React.Component {
     super(props);
     this.state = { currentTab: this.props.selectedIndex };
   }
+
   tabs() {
     return React.Children.map(this.props.children, (c, i) => {
       return React.cloneElement(c, {
@@ -134,6 +137,7 @@ class Tabs extends React.Component {
       });
     });
   }
+
   currentPanel() {
     return React.Children.map(this.props.children, (c, i) => {
       if (c.type === TabItemOverflow) {
@@ -159,6 +163,7 @@ class Tabs extends React.Component {
       }
     });
   }
+
   render() {
     const { flavor, panel, size, isCard, selectedIndex, ...rest } = this.props;
     const composedClassName = classNames(`slds-tabs_${flavor}`, {

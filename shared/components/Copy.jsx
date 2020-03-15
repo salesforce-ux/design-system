@@ -16,14 +16,17 @@ class Copy extends React.PureComponent {
       show: false
     };
   }
+
   componentDidMount() {
     this.setState({
       show: isCopySupported()
     });
   }
+
   componentWillUnmount() {
     window.clearTimeout(this.copyTimer);
   }
+
   copyToClipboard() {
     const range = document.createRange();
     const selection = window.getSelection();
@@ -53,6 +56,7 @@ class Copy extends React.PureComponent {
       }
     );
   }
+
   renderButton() {
     const { copied } = this.state;
     const title = copied ? 'Copied' : 'Copy to Clipboard';
@@ -73,6 +77,7 @@ class Copy extends React.PureComponent {
       </button>
     );
   }
+
   render() {
     if (!this.state.show) return null;
     return (

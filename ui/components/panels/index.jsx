@@ -129,6 +129,7 @@ class Panel extends Component {
       hasCenterTitle,
       isInvokedByTab
     } = this.props;
+
     return (
       <Container
         docked={docked}
@@ -171,11 +172,13 @@ export class PanelPlayground extends Component {
       visible: true
     };
   }
+
   handleVisibility() {
     this.setState({
       visible: !this.state.visible
     });
   }
+
   render() {
     const {
       size = 'medium',

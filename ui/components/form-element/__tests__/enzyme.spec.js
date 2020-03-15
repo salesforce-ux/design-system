@@ -14,21 +14,21 @@ describe('Record Detail', () => {
   it('render option as an array of strings with line breaks', () => {
     const wrapper = mount(<RecordDetailField value={['a', 'b', 'c']} />);
     expect(wrapper.find('.slds-form-element__static').html()).toBe(
-      `<div class=\"slds-form-element__static\">a<br>b<br>c<br></div>`
+      `<div class="slds-form-element__static">a<br>b<br>c<br></div>`
     );
   });
   it('render option as a React element if type is richtext', () => {
     const foo = <div>test</div>;
     const wrapper = mount(<RecordDetailField value={foo} type="richtext" />);
     expect(wrapper.find('.slds-form-element__static').html()).toBe(
-      `<div class=\"slds-form-element__static\"><div>test</div></div>`
+      `<div class="slds-form-element__static"><div>test</div></div>`
     );
   });
   it('render option as a React element if type is checkbox', () => {
     const foo = <div>test</div>;
     const wrapper = mount(<RecordDetailField value={foo} type="checkbox" />);
     expect(wrapper.find('.slds-form-element__static').html()).toBe(
-      `<div class=\"slds-form-element__static\"><div>test</div></div>`
+      `<div class="slds-form-element__static"><div>test</div></div>`
     );
   });
 });

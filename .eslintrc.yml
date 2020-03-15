@@ -7,7 +7,6 @@ extends:
   - prettier/react
 rules:
   react/jsx-key: ['error']
-  no-useless-escape: ['off']
   prefer-const: ['off']
   react/jsx-fragments: ['off']
   react/jsx-handler-names: ['off']

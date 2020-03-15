@@ -8,3 +8,10 @@ extends:
 rules:
   react/jsx-key: ['error']
   no-useless-escape: ['off']
+  prefer-const: ['off']
+  react/jsx-fragments: ['off']
+  react/jsx-curly-brace-presence: ['off']
+  react/jsx-handler-names: ['off']
+  lines-between-class-members: ['off']
+  dot-notation: ['off']
+  no-prototype-builtins: ['off']

@@ -46,7 +46,6 @@
     "@salesforce-ux/icons": "9.31.2",
     "@salesforce-ux/instant-vrt": "2.0.0",
     "@salesforce-ux/scss-parser-aura": "3.0.5",
-    "@std/esm": "0.23.2",
     "@storybook/addon-a11y": "5.3.8",
     "@storybook/addon-backgrounds": "5.3.8",
     "@storybook/addon-docs": "5.3.8",
@@ -95,7 +94,7 @@
     "fs-extra": "2.1.2",
     "futurize": "1.2.0",
     "glob": "7.1.1",
-    "gulp": "4.0.0",
+    "gulp": "4.0.2",
     "gulp-autoprefixer": "7.0.1",
     "gulp-axe-webdriver": "3.1.3",
     "gulp-cached": "1.1.1",
@@ -127,7 +126,7 @@
     "immutable": "3.8.2",
     "invariant": "2.2.4",
     "isomorphic-fetch": "2.2.1",
-    "jest": "24.9.0",
+    "jest": "25.1.0",
     "js-beautify": "1.6.12",
     "js-yaml": "3.13.1",
     "lint-staged": "4.0.4",
@@ -219,8 +218,7 @@
     "lint": "npm run gulp -- lint",
     "stats": "npm run gulp -- stylestats",
     "pretest": "npm run gulp -- build",
-    "test": "node -r @std/esm ./node_modules/.bin/jest",
-    "jest": "npm run test",
+    "test": "jest",
     "precommit": "npm run release-notes:hook && lint-staged",
     "pr-checks": "npm run gulp -- pr-checks",
     "compile-aura-tokens-map": "npm run gulp -- generate:auraTokensMap",
@@ -254,10 +252,6 @@
       "<rootDir>/node_modules/",
       "<rootDir>/shared/vendor/prism/"
     ]
-  },
-  "@std/esm": {
-    "cjs": true,
-    "esm": "js"
   },
   "lwc": {
     "modules": [

@@ -23,7 +23,7 @@ storiesOf('Components/Docked Composer', module).add(
         <StoryFrame
           component={component}
           label={label}
-          styles={`height: 32rem`}
+          styles="height: 32rem"
           key={`kitchen-sink-${label}-${idx}`}
         />
       ))

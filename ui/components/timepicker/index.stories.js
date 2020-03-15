@@ -23,7 +23,7 @@ storiesOf('Components/Timepicker', module).add(
         <StoryFrame
           component={component}
           label={label}
-          styles={`min-height: 18rem`}
+          styles="min-height: 18rem"
           key={`kitchen-sink-${label}-${idx}`}
         />
       ))

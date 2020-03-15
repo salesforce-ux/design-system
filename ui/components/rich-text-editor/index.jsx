@@ -173,7 +173,7 @@ export const RteFormula = props => {
       <div className="slds-rich-text-editor__col slds-rich-text-editor__col_grow">
         <FormElement
           hasHiddenLabel
-          labelContent={'Insert operator'}
+          labelContent="Insert operator"
           inputId={inputId}
         >
           <Input id={inputId} placeholder="Insert operator" />

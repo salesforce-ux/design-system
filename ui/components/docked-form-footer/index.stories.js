@@ -23,7 +23,7 @@ storiesOf('Components/Docked Form Footer', module).add(
         <StoryFrame
           component={component}
           label={label}
-          styles={`height: 14rem`}
+          styles="height: 14rem"
           key={`kitchen-sink-${label}-${idx}`}
         />
       ))

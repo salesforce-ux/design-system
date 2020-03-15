@@ -62,7 +62,7 @@ export const ExpressionNarrowGroup = props => (
         iconClassName="slds-button__icon_hint"
         symbol="delete"
         assistiveText="Remove Group"
-        title={'Remove Group'}
+        title="Remove Group"
       />
     </div>
     <ExpressionOptions isInFilter optionSelected={props.optionSelected} />

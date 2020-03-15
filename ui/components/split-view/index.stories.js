@@ -23,7 +23,7 @@ storiesOf('Components/Split View', module).add(
         <StoryFrame
           component={component}
           label={label}
-          styles={`overflow: hidden`}
+          styles="overflow: hidden"
           key={`kitchen-sink-${label}-${idx}`}
         />
       ))

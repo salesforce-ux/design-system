@@ -25,7 +25,7 @@ storiesOf('Components/Lookups', module).add(
         <StoryFrame
           component={component}
           label={label}
-          styles={`min-height: 20em`}
+          styles="min-height: 20em"
           key={`kitchen-sink-${label}-${idx}`}
         />
       ))

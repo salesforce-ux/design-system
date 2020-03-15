@@ -92,7 +92,7 @@ export const ExpressionCustom = props => {
 
   return (
     <div className="slds-expression__custom-logic">
-      <FormElement labelContent={'Custom Logic'} inputId={inputId}>
+      <FormElement labelContent="Custom Logic" inputId={inputId}>
         <Input id={inputId} defaultValue={props.defaultValue} />
       </FormElement>
     </div>

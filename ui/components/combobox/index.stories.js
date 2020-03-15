@@ -35,7 +35,7 @@ storiesOf('Components/Combobox', module).add(
         <StoryFrame
           component={component}
           label={label}
-          styles={`height: 17rem;`}
+          styles="height: 17rem;"
           key={`kitchen-sink-${label}-${idx}`}
         />
       ))

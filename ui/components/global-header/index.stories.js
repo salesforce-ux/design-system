@@ -23,7 +23,7 @@ storiesOf('Components/Global Header', module).add(
         <StoryFrame
           component={component}
           isViewport
-          styles={`height: 340px;`}
+          styles="height: 340px;"
           label={label}
           key={`kitchen-sink-${label}-${idx}`}
         />

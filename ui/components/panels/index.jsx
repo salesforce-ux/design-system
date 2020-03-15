@@ -71,7 +71,7 @@ export const Header = props => {
           <HeaderButton
             title={props.title}
             handleVisibility={props.handleVisibility}
-            symbol={'back'}
+            symbol="back"
           />
           <HeaderTitle title={props.title} />
         </React.Fragment>
@@ -82,7 +82,7 @@ export const Header = props => {
           <HeaderButton
             title={props.title}
             handleVisibility={props.handleVisibility}
-            symbol={'back'}
+            symbol="back"
           />
           <HeaderTitle title={props.title} />
           <HeaderButton

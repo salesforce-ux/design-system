@@ -31,7 +31,7 @@ storiesOf('Components/Tabs', module).add(
         <StoryFrame
           component={component}
           label={label}
-          styles={`min-height: 10rem`}
+          styles="min-height: 10rem"
           key={`kitchen-sink-${label}-${idx}`}
         />
       ))

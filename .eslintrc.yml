@@ -10,7 +10,6 @@ rules:
   no-useless-escape: ['off']
   prefer-const: ['off']
   react/jsx-fragments: ['off']
-  react/jsx-curly-brace-presence: ['off']
   react/jsx-handler-names: ['off']
   lines-between-class-members: ['off']
   dot-notation: ['off']

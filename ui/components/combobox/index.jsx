@@ -100,7 +100,7 @@ const ComboboxInput = props => {
               : 'Select an Option'
             : props.placeholder
         }
-        readOnly={props['readonly']}
+        readOnly={props.readonly}
         defaultValue={props.value}
         tabIndex={props.tabIndex}
         onFocus={e => props.toggleFocus(e)}
@@ -212,7 +212,7 @@ export default class Combobox extends Component {
               leftInputIcon={leftInputIcon}
               rightInputIcon={rightInputIcon}
               tabIndex={tabIndex}
-              readonly={this.props['readonly']}
+              readonly={this.props.readonly}
               autoFocus={autoFocus}
               aria-controls={this.props['aria-controls']}
               aria-activedescendant={this.props['aria-activedescendant']}
@@ -355,7 +355,7 @@ export class ComboboxGroup extends Component {
                 leftInputIcon={leftInputIcon}
                 rightInputIcon={rightInputIcon}
                 tabIndex={tabIndex}
-                readonly={this.props['readonly']}
+                readonly={this.props.readonly}
                 aria-controls={this.props['aria-controls']}
                 aria-activedescendant={this.props['aria-activedescendant']}
                 autoFocus={autoFocus}

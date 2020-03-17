@@ -8,7 +8,7 @@ executors:
   slds-executor:
     working_directory: ~/repo
     docker:
-      - image: circleci/node:10-browsers
+      - image: circleci/node:12-browsers
     resource_class: medium+
     # parallelism: 4
 

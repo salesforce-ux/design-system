@@ -71,7 +71,7 @@ export const Header = props => {
           <HeaderButton
             title={props.title}
             handleVisibility={props.handleVisibility}
-            symbol={'back'}
+            symbol="back"
           />
           <HeaderTitle title={props.title} />
         </React.Fragment>
@@ -82,7 +82,7 @@ export const Header = props => {
           <HeaderButton
             title={props.title}
             handleVisibility={props.handleVisibility}
-            symbol={'back'}
+            symbol="back"
           />
           <HeaderTitle title={props.title} />
           <HeaderButton
@@ -129,6 +129,7 @@ class Panel extends Component {
       hasCenterTitle,
       isInvokedByTab
     } = this.props;
+
     return (
       <Container
         docked={docked}
@@ -171,11 +172,13 @@ export class PanelPlayground extends Component {
       visible: true
     };
   }
+
   handleVisibility() {
     this.setState({
       visible: !this.state.visible
     });
   }
+
   render() {
     const {
       size = 'medium',

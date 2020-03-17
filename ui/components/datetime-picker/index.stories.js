@@ -23,7 +23,7 @@ storiesOf('Components/Datetime Picker', module).add(
         <StoryFrame
           component={component}
           label={label}
-          styles={`height: 25rem`}
+          styles="height: 25rem"
           key={`kitchen-sink-${label}-${idx}`}
         />
       ))

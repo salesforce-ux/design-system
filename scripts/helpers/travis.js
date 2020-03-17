@@ -44,8 +44,6 @@ export const jest = () =>
   spawn(
     'node',
     [
-      '-r',
-      '@std/esm',
       './node_modules/.bin/jest',
       '--color',
       '--bail',

@@ -22,6 +22,7 @@ class SvgIcon extends React.Component {
       </svg>
     );
   }
+
   getHref() {
     if (!(this.props.sprite && this.props.symbol)) {
       return;

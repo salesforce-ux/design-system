@@ -35,9 +35,9 @@ const HeadRowData = props => (
         checked={props.checked}
         groupId={checkboxRadioGroupHeaderId}
         hideLabel
-        id={'checkbox-all'}
-        label={'Select all'}
-        labelId={'check-button-label-all'}
+        id="checkbox-all"
+        label="Select all"
+        labelId="check-button-label-all"
       />
     </ColumnTh>
     <ColumnTh>

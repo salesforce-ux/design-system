@@ -86,6 +86,7 @@ export class TreeListItem extends Component {
       return branchLabel;
     }
   }
+
   render() {
     const {
       ariaLevel,
@@ -96,6 +97,7 @@ export class TreeListItem extends Component {
       itemLabel,
       metaTextLabel
     } = this.props;
+
     return (
       <li
         aria-expanded={isBranch ? isExpanded || false : null}

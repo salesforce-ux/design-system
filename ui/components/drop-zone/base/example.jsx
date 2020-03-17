@@ -68,15 +68,15 @@ export const DropZoneContainer = props => (
             className="slds-button_icon-x-small"
             theme="brand"
             symbol="move"
-            assistiveText={'Move'}
-            title={'Move'}
+            assistiveText="Move"
+            title="Move"
           />
           <ButtonIcon
             className="slds-button_icon-x-small"
             theme="brand"
             symbol="close"
-            assistiveText={'Close'}
-            title={'Close'}
+            assistiveText="Close"
+            title="Close"
           />
         </ButtonGroup>
       </div>

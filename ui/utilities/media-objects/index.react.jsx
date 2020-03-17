@@ -34,6 +34,7 @@ class Component extends React.Component {
       </div>
     );
   }
+
   renderFigure(figure, className) {
     if (!figure) return null;
     className = classNames('slds-media__figure', className);

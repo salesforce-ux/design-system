@@ -24,7 +24,7 @@ storiesOf('Components/Progress Bar', module).add(
         <StoryFrame
           component={component}
           label={label}
-          styles={`height: 6rem`}
+          styles="height: 6rem"
           key={`kitchen-sink-${label}-${idx}`}
         />
       ))

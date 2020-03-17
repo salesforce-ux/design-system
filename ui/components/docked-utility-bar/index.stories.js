@@ -23,7 +23,7 @@ storiesOf('Components/Docked Utility Bar', module).add(
         <StoryFrame
           component={component}
           label={label}
-          styles={`height: 34rem; overflow: hidden`}
+          styles="height: 34rem; overflow: hidden"
           key={`kitchen-sink-${label}-${idx}`}
         />
       ))

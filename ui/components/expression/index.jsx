@@ -35,7 +35,7 @@ export const ExpressionOptions = props => {
         id={_.uniqueId('combobox-id-')}
         aria-controls={listboxId}
         label={props.label}
-        value={selected && selected['value']}
+        value={selected && selected.value}
         readonly
         inputIconPosition="right"
         rightInputIcon={
@@ -51,13 +51,11 @@ export const ExpressionOptions = props => {
           <Listbox
             id={listboxId}
             hasUniqueId
-            snapshot={
-              selected ? selected['snapshot'] : Snapshot.ConditionsOptions
-            }
+            snapshot={selected ? selected.snapshot : Snapshot.ConditionsOptions}
             type="plain"
             count={
               selected
-                ? Object.keys(selected['snapshot']).length
+                ? Object.keys(selected.snapshot).length
                 : Object.keys(Snapshot.ConditionsOptions).length
             }
             visualSelection
@@ -92,7 +90,7 @@ export const ExpressionCustom = props => {
 
   return (
     <div className="slds-expression__custom-logic">
-      <FormElement labelContent={'Custom Logic'} inputId={inputId}>
+      <FormElement labelContent="Custom Logic" inputId={inputId}>
         <Input id={inputId} defaultValue={props.defaultValue} />
       </FormElement>
     </div>
@@ -287,7 +285,7 @@ ExpressionRow.propTypes = {
   isGroup: PropTypes.bool,
   groupName: function(props, propName) {
     if (
-      props['isGroup'] &&
+      props.isGroup &&
       (props[propName] === undefined || typeof props[propName] !== 'string')
     ) {
       return new Error(

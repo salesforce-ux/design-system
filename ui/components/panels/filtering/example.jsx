@@ -74,15 +74,14 @@ export let FilterObject = props => {
           disabled={props.disabled}
         >
           <span className="slds-assistive-text">Edit filter:</span>
-          {props.type &&
-            props.operator && (
-              <span className="slds-show">
-                <span>
-                  <strong>{props.operator + ' '}</strong>
-                </span>
-                <span className="slds-text-body_small">{props.type}</span>
+          {props.type && props.operator && (
+            <span className="slds-show">
+              <span>
+                <strong>{props.operator + ' '}</strong>
               </span>
-            )}
+              <span className="slds-text-body_small">{props.type}</span>
+            </span>
+          )}
           {props.type && !props.operator ? (
             <span className="slds-show slds-text-body_small">{props.type}</span>
           ) : null}
@@ -92,7 +91,7 @@ export let FilterObject = props => {
           <ButtonIcon
             className="slds-button_icon slds-button_icon-small"
             iconClassName="slds-button__icon_hint"
-            symbol={'delete'}
+            symbol="delete"
             assistiveText={
               props.type
                 ? 'Remove filter: ' + props.type + ' ' + props.children

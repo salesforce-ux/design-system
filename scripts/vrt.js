@@ -34,10 +34,8 @@ const statOrDownload = (url, filepath) =>
 
 const readFile = filepath =>
   new Task((rej, res) =>
-    fs.readFile(
-      filepath,
-      'utf-8',
-      (err, contents) => (err ? rej(err) : res(contents))
+    fs.readFile(filepath, 'utf-8', (err, contents) =>
+      err ? rej(err) : res(contents)
     )
   );
 

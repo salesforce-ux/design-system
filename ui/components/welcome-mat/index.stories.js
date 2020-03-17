@@ -31,7 +31,7 @@ storiesOf('Components/Welcome Mat', module).add(
         <StoryFrame
           component={component}
           label={label}
-          styles={`height: 48rem`}
+          styles="height: 48rem"
           key={`kitchen-sink-${label}-${idx}`}
         />
       ))

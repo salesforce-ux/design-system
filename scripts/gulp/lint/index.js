@@ -69,7 +69,7 @@ export const javascript = (files, options) =>
 
 export const javascriptTest = () =>
   gulp
-    .src(['test/**/*.{js,jsx}', '**/*.spec.{js,jsx}'])
+    .src(['test/**/*.{js,jsx}', '!**/*.spec.{js,jsx}'])
     .pipe(cache('lintjs'))
     .pipe(eslint())
     .pipe(eslint.format('codeframe'))

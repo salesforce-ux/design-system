@@ -17,15 +17,15 @@ export default (
     <ButtonIcon
       className="slds-button_icon-small slds-input__button_decrement"
       symbol="ban"
-      assistiveText={'Decrement counter'}
-      title={'Decrement counter'}
+      assistiveText="Decrement counter"
+      title="Decrement counter"
     />
-    <Input id="default1" type="number" placeholder={'1'} />
+    <Input id="default1" type="number" placeholder="1" />
     <ButtonIcon
       className="slds-button_icon-small slds-input__button_increment"
       symbol="new"
-      assistiveText={'Increment counter'}
-      title={'Increment counter'}
+      assistiveText="Increment counter"
+      title="Increment counter"
     />
   </FormElement>
 );
@@ -43,16 +43,16 @@ export let states = [
         <ButtonIcon
           className="slds-button_icon-small slds-input__button_decrement"
           symbol="ban"
-          assistiveText={'Decrement counter'}
-          title={'Decrement counter'}
+          assistiveText="Decrement counter"
+          title="Decrement counter"
           disabled
         />
-        <Input id="state-disabled" type="number" placeholder={'1'} disabled />
+        <Input id="state-disabled" type="number" placeholder="1" disabled />
         <ButtonIcon
           className="slds-button_icon-small slds-input__button_increment"
           symbol="new"
-          assistiveText={'Increment counter'}
-          title={'Increment counter'}
+          assistiveText="Increment counter"
+          title="Increment counter"
           disabled
         />
       </FormElement>
@@ -67,7 +67,7 @@ export let states = [
         inputId="state-read-only"
         labelClassName="slds-m-right_none"
       >
-        <Input id="state-read-only" type="text" placeholder={'1'} readOnly />
+        <Input id="state-read-only" type="text" placeholder="1" readOnly />
       </FormElement>
     )
   },
@@ -84,15 +84,15 @@ export let states = [
         <ButtonIcon
           className="slds-button_icon-small slds-input__button_decrement"
           symbol="ban"
-          assistiveText={'Decrement counter'}
-          title={'Decrement counter'}
+          assistiveText="Decrement counter"
+          title="Decrement counter"
         />
-        <Input id="state-required" type="number" placeholder={'1'} required />
+        <Input id="state-required" type="number" placeholder="1" required />
         <ButtonIcon
           className="slds-button_icon-small slds-input__button_increment"
           symbol="new"
-          assistiveText={'Increment counter'}
-          title={'Increment counter'}
+          assistiveText="Increment counter"
+          title="Increment counter"
         />
       </FormElement>
     )
@@ -113,21 +113,21 @@ export let states = [
         <ButtonIcon
           className="slds-button_icon-small slds-input__button_decrement"
           symbol="ban"
-          assistiveText={'Decrement counter'}
-          title={'Decrement counter'}
+          assistiveText="Decrement counter"
+          title="Decrement counter"
         />
         <Input
           id="state-error"
           type="number"
-          placeholder={'1'}
+          placeholder="1"
           required
-          aria-describedby={'state-error-1'}
+          aria-describedby="state-error-1"
         />
         <ButtonIcon
           className="slds-button_icon-small slds-input__button_increment"
           symbol="new"
-          assistiveText={'Increment counter'}
-          title={'Increment counter'}
+          assistiveText="Increment counter"
+          title="Increment counter"
         />
       </FormElement>
     )
@@ -148,15 +148,15 @@ export let examples = [
         <ButtonIcon
           className="slds-button_icon-small slds-input__button_decrement"
           symbol="ban"
-          assistiveText={'Decrement counter'}
-          title={'Decrement counter'}
+          assistiveText="Decrement counter"
+          title="Decrement counter"
         />
-        <Input id="example-centered" type="number" placeholder={'1'} />
+        <Input id="example-centered" type="number" placeholder="1" />
         <ButtonIcon
           className="slds-button_icon-small slds-input__button_increment"
           symbol="new"
-          assistiveText={'Increment counter'}
-          title={'Increment counter'}
+          assistiveText="Increment counter"
+          title="Increment counter"
         />
       </FormElement>
     )

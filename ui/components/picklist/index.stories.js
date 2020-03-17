@@ -23,7 +23,7 @@ storiesOf('Components/Picklist', module).add(
         <StoryFrame
           component={component}
           label={label}
-          styles={`min-height: 12rem`}
+          styles="min-height: 12rem"
           key={`kitchen-sink-${label}-${idx}`}
         />
       ))

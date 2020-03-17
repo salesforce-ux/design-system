@@ -207,7 +207,7 @@ export const DeprecatedCombobox = props => {
                       : 'Select an Option'
                     : props.placeholder
                 }
-                readOnly={props['readonly']}
+                readOnly={props.readonly}
                 defaultValue={props.value}
                 tabIndex={props.tabIndex}
               />

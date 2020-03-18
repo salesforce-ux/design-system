@@ -23,7 +23,7 @@
     }
   },
   "devDependencies": {
-    "@applitools/eyes-storybook": "3.2.2",
+    "@applitools/eyes-storybook": "3.3.1",
     "@babel/cli": "7.8.4",
     "@babel/core": "7.8.4",
     "@babel/node": "7.8.4",

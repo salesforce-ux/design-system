@@ -3,6 +3,8 @@
 
 ## Release 2.12.0 - May 8, 2020
 
+- Updated Icons to 9.32.0
+
 ## Components
 ### [Buttons](https://www.lightningdesignsystem.com/components/buttons)
 #### Changed

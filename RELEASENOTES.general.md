@@ -3,6 +3,8 @@
 
 ## 2.12.0 - May 8, 2020
 
+- Updated Icons to 9.32.0
+
 ## 2.11.6 - March 11, 2020
 
 ## 2.11.5 - March 5, 2020
@@ -12,6 +14,7 @@
 ## 2.11.3 - February 3, 2020
 
 ## Fixed
+
 - Corrected class name in Progress Bar Circular example
 - Corrected various documentation typos and formatting in:
   - components/activity-timeline

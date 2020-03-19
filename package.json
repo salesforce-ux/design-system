@@ -43,7 +43,7 @@
     "@salesforce-ux/design-system-parser": "1.0.1",
     "@salesforce-ux/design-system-previewer": "3.2.3",
     "@salesforce-ux/design-system-primitive-tokens": "0.0.7",
-    "@salesforce-ux/icons": "9.31.2",
+    "@salesforce-ux/icons": "9.32.0",
     "@salesforce-ux/instant-vrt": "2.0.0",
     "@salesforce-ux/scss-parser-aura": "3.0.5",
     "@storybook/addon-a11y": "5.3.8",

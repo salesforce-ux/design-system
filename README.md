@@ -20,7 +20,9 @@ This project utilizes Storybook for component development. If you would like to 
 
 ### Running the Development Environment:
 
-1. Run `npm start` to start the Storybook development environment.
+If you've just installed the project, you will need to run `npm run full-start` to first perform a full build, which is necessary for Storybook to operate.
+
+Whenever you add or remove a component, you'll want to perform this full-start. Otherwise, you can just run `npm start` to start the Storybook server without a build.
 
 ## Developing in Storybook
 

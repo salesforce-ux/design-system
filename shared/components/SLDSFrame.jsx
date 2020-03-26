@@ -28,9 +28,11 @@ export default class SLDSFrame extends React.Component {
     const frameId = 'example-frame-' + randomId;
     const selectId = 'device-selector-' + randomId;
 
+    const defaultDeviceID = 'iphone-11';
+
     const setWidth = event => {
       const target = event.target;
-      const deviceId = target.value;
+      const deviceId = target.value || defaultDeviceID;
       const deviceSearchIndex = devicesMap[deviceId];
       const deviceData = devices[deviceSearchIndex];
 
@@ -43,7 +45,7 @@ export default class SLDSFrame extends React.Component {
       iframe.style.width = newFrameWidth;
 
       // only resize if fixed height isn't requested
-      if (!fixedHeight) {
+      if (!fixedHeight && iframe.contentWindow.resizeIframe) {
         iframe.contentWindow.resizeIframe();
       }
     };
@@ -83,6 +85,7 @@ export default class SLDSFrame extends React.Component {
           id={frameId}
           initialContent={initialContent}
           style={frameStyles}
+          onLoad={setWidth}
         >
           <FrameContextConsumer>
             {frameContext => (
@@ -102,10 +105,16 @@ export default class SLDSFrame extends React.Component {
                 inputId={selectId}
               >
                 <Select id={selectId} onChange={setWidth}>
-                  <option value="">No device</option>
+                  <option value="no-device">No device</option>
                   {devices.map((value, index) => {
+                    const isSelected = value.id === defaultDeviceID;
+
                     return (
-                      <option key={index} value={value.id}>
+                      <option
+                        key={index}
+                        value={value.id}
+                        selected={isSelected}
+                      >
                         {value.description}
                       </option>
                     );

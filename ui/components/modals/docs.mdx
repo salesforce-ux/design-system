@@ -4,19 +4,22 @@ import { getDisplayElementById, getDemoStylesById } from '../../shared/helpers';
 import { MobileNotice, MobileBlurb } from '../../shared/doc-text';
 
 <div className="doc lead">
-  Modals are used to display content in a layer above the app. This paradigm is used in cases such as the creation or editing of a record, as well as various types of messaging and wizards.
+  Modals are used to display content in a layer above the app. This paradigm is
+  used in cases such as the creation or editing of a record, as well as various
+  types of messaging and wizards.
 </div>
 
 <CodeView exampleOnly isViewport demoStyles="height: 640px;">
-  { Base.default }
+  {Base.default}
 </CodeView>
 
 ## About Modals
+
 Default modals are used in the vast majority of cases. They are as wide as 50% of the viewport, but include a minimum and maximum width to avoid going too narrow or too wide.
 
 Modals always have an equal amount of space at the top and bottom to account for the height of the close button.
 
-Modals grow according to how much content is within, but once the modal  full height (including the previously mentioned space on top and bottom), the content area will begin to scroll. (This scrolling is currently not available in Salesforce1 Mobile.)
+Modals grow according to how much content is within, but once the modal full height (including the previously mentioned space on top and bottom), the content area will begin to scroll. (This scrolling is currently not available in Salesforce1 Mobile.)
 
 Modals can have a tagline in the header, simply by adding a paragraph after the heading.
 
@@ -31,15 +34,18 @@ These are modals that require a linearly directional paradigm of navigation (“
 If you're using a Modal for a system alert that the user must acknowledge, consider using a [Prompt](/components/prompt).
 
 ### Accessibility
+
 Modals, by definition, trap focus. This means that if a user presses Tab or Shift+Tab while their keyboard focus is in the modal, their focus should stay in and cycle through the modal’s content. Focus shouldn’t return to the underlying page until the user presses the Esc key, presses an explicit “Cancel” or “Close” button in the modal, or performs another action that closes the modal.
 
 #### Expected markup
+
 - Modal has `role="dialog"`
 - When the modal is open, everything behind it has HTML attribute `aria-hidden="true"`, so assistive technology won't read out the underlying page. The best way to do this is to give the modal and the page separate wrapper elements and toggle `aria-hidden="true"`/`aria-hidden="false"` on the main page's wrapper depending on whether or not the modal is open.
 - Modal contains an HTML heading
 - Modal has an `aria-labelledby` attribute whose value is the id of the modal’s heading
 
 #### Expected keyboard interactions
+
 - Esc key closes the modal and moves focus to whatever triggered the modal to open
 - Tab key at bottom of modal cycles focus back to first focusable element at top of modal
 - Shift+Tab keys at top of modal cycle focus back to last focusable element at bottom of modal
@@ -49,48 +55,59 @@ Modals, by definition, trap focus. This means that if a user presses Tab or Shif
 
 <MobileBlurb patternSpecificText="modals will have buttons of increased size to accommodate tapping with a finger instead of the more precise mouse cursor" />
 
-<CodeView frameOnly hideDeviceSelector frameStyles={{ height: '640px' }}>
-  { Base.default }
+<CodeView frameOnly frameStyles={{ height: '640px' }}>
+  {Base.default}
 </CodeView>
 
 ## Base
+
 <CodeView isViewport demoStyles={getDemoStylesById(Base.examples, 'default')}>
-{ getDisplayElementById(Base.examples, 'default') }
+  {getDisplayElementById(Base.examples, 'default')}
 </CodeView>
 
 ## Examples
 
 ### Taglines
+
 <CodeView isViewport demoStyles={getDemoStylesById(Base.examples, 'taglines')}>
-{ getDisplayElementById(Base.examples, 'taglines') }
+  {getDisplayElementById(Base.examples, 'taglines')}
 </CodeView>
 
 ### Headless
+
 <CodeView isViewport demoStyles={getDemoStylesById(Base.examples, 'headless')}>
-{ getDisplayElementById(Base.examples, 'headless') }
+  {getDisplayElementById(Base.examples, 'headless')}
 </CodeView>
 
 ### Footless
+
 <CodeView isViewport demoStyles={getDemoStylesById(Base.examples, 'footless')}>
-{ getDisplayElementById(Base.examples, 'footless') }
+  {getDisplayElementById(Base.examples, 'footless')}
 </CodeView>
 
 ### Directional
-<CodeView isViewport demoStyles={getDemoStylesById(Base.examples, 'directional')}>
-{ getDisplayElementById(Base.examples, 'directional') }
+
+<CodeView
+  isViewport
+  demoStyles={getDemoStylesById(Base.examples, 'directional')}
+>
+  {getDisplayElementById(Base.examples, 'directional')}
 </CodeView>
 
 ### Small Modal
+
 <CodeView isViewport demoStyles={getDemoStylesById(Base.examples, 'small')}>
-{ getDisplayElementById(Base.examples, 'small') }
+  {getDisplayElementById(Base.examples, 'small')}
 </CodeView>
 
 ### Medium Modal
+
 <CodeView isViewport demoStyles={getDemoStylesById(Base.examples, 'medium')}>
-  { getDisplayElementById(Base.examples, 'medium') }
+  {getDisplayElementById(Base.examples, 'medium')}
 </CodeView>
 
 ### Large Modal
+
 <CodeView isViewport demoStyles={getDemoStylesById(Base.examples, 'large')}>
-  { getDisplayElementById(Base.examples, 'large') }
+  {getDisplayElementById(Base.examples, 'large')}
 </CodeView>

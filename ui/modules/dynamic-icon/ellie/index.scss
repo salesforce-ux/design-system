@@ -8,6 +8,7 @@
 // Init
 // ------------
 @import '../../../shared/common/init';
+@import '../mixins/index';
 
 // Setup
 $_c-icon-ellie-size: rem(14px);
@@ -57,7 +58,7 @@ $_c-icon-ellie-inner-timing-function: cubic-bezier(0.44, 0.05, 0.55, 0.95); // h
     &,
     .lwc-icon-ellie_circle-inner,
     .lwc-icon-ellie_circle-outer {
-      animation: none;
+      @include static-zero-duration;
     }
   }
 
@@ -101,7 +102,7 @@ $_c-icon-ellie-inner-timing-function: cubic-bezier(0.44, 0.05, 0.55, 0.95); // h
   .lwc-icon-ellie,
   .lwc-icon-ellie_circle-inner,
   .lwc-icon-ellie_circle-outer {
-    animation: none;
+    @include static-zero-duration;
   }
 }
 

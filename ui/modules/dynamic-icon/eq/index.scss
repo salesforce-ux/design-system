@@ -68,8 +68,7 @@ $_c-icon-eq-bar3-height: $_c-icon-eq-bar-height-min * 4;
 @include reduced-motion {
 
   .lwc-icon-eq__bar {
-    animation: none;
-
+    @include static-zero-duration;
     @include eq-bar-size-init($_c-icon-eq-bar-height-max, $_c-icon-eq-bar1-height, $_c-icon-eq-bar2-height, $_c-icon-eq-bar3-height);
   }
 }

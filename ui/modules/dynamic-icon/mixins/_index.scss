@@ -11,3 +11,8 @@
     }
   }
 }
+
+@mixin static-zero-duration {
+  animation-duration: 0s;
+  animation-iteration-count: 1;
+}

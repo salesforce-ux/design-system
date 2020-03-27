@@ -3,7 +3,7 @@
 
 ## 2.12.0 - May 8, 2020
 
-- Updated Icons to 9.32.0
+- Updated Icons to 9.33.0
 
 ## 2.11.6 - March 11, 2020
 

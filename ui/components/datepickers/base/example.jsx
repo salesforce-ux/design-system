@@ -65,9 +65,9 @@ let DatepickerHeader = props => (
         Pick a Year
       </label>
       <Select>
-        <option>2014</option>
-        <option>2015</option>
-        <option>2016</option>
+        <option>2020</option>
+        <option>2021</option>
+        <option>2022</option>
       </Select>
     </div>
   </div>
@@ -106,7 +106,9 @@ let Day = props => (
     aria-disabled={props['aria-disabled']}
     aria-selected={props['aria-selected']}
     aria-current={props['aria-current']}
-    className={props.className}
+    className={classNames(props.className, {
+      'slds-day_adjacent-month': props.isAdjacentMonth
+    })}
     role="gridcell"
     tabIndex={props.tabIndex}
   >
@@ -132,11 +134,7 @@ export let DatePicker = props => (
       </thead>
       <tbody>
         <Week>
-          <Day
-            aria-disabled="true"
-            aria-selected="false"
-            className="slds-disabled-text"
-          >
+          <Day aria-selected="false" isAdjacentMonth>
             31
           </Day>
           <Day aria-selected="false" tabIndex="0">
@@ -306,66 +304,62 @@ export let DatePicker = props => (
             30
           </Day>
           <Day
-            aria-disabled="true"
             aria-selected={
               props.dateSelected !== 'single' && props.dateRange === 'week-5'
                 ? 'true'
                 : 'false'
             }
             className={classNames(
-              'slds-disabled-text',
               props.dateSelected !== 'single' && props.dateRange === 'week-5'
                 ? 'slds-is-selected slds-is-selected-multi'
                 : null
             )}
+            isAdjacentMonth
           >
             1
           </Day>
           <Day
-            aria-disabled="true"
             aria-selected={
               props.dateSelected !== 'single' && props.dateRange === 'week-5'
                 ? 'true'
                 : 'false'
             }
             className={classNames(
-              'slds-disabled-text',
               props.dateSelected !== 'single' && props.dateRange === 'week-5'
                 ? 'slds-is-selected slds-is-selected-multi'
                 : null
             )}
+            isAdjacentMonth
           >
             2
           </Day>
           <Day
-            aria-disabled="true"
             aria-selected={
               props.dateSelected !== 'single' && props.dateRange === 'week-5'
                 ? 'true'
                 : 'false'
             }
             className={classNames(
-              'slds-disabled-text',
               props.dateSelected !== 'single' && props.dateRange === 'week-5'
                 ? 'slds-is-selected slds-is-selected-multi'
                 : null
             )}
+            isAdjacentMonth
           >
             3
           </Day>
           <Day
-            aria-disabled="true"
             aria-selected={
               props.dateSelected !== 'single' && props.dateRange === 'week-5'
                 ? 'true'
                 : 'false'
             }
             className={classNames(
-              'slds-disabled-text',
               props.dateSelected !== 'single' && props.dateRange === 'week-5'
                 ? 'slds-is-selected slds-is-selected-multi'
                 : null
             )}
+            isAdjacentMonth
           >
             4
           </Day>
@@ -415,7 +409,7 @@ export let states = [
           <DatePicker todayActive dateSelected="single" dateRange="week-4" />
         }
       >
-        <Input id={dateInputId} placeholder=" " defaultValue="06/24/2014" />
+        <Input id={dateInputId} placeholder=" " defaultValue="06/24/2020" />
         <ButtonIcon
           className="slds-input__icon slds-input__icon_right"
           symbol="event"

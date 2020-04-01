@@ -16,7 +16,7 @@
 
 ### Fixed
 
-- Added text treatments for `<ins>` and `<del>
+- Added text treatments for `<ins>` and `<del>`
 
 ## 2.7.5
 

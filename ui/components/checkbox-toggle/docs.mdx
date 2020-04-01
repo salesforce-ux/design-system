@@ -6,11 +6,15 @@ import { MobileNotice, MobileBlurb } from '../../shared/doc-text';
 import * as CheckboxToggleExamples from './base/example';
 
 <div className="lead doc">
-  A checkable input that communicates if an option is true, false or indeterminate
+  A checkable input that communicates if an option is true, false or
+  indeterminate
 </div>
 
 <CodeView exampleOnly>
-  {getDisplayElementById(CheckboxToggleExamples.states, 'checkbox-toggle-checked')}
+  {getDisplayElementById(
+    CheckboxToggleExamples.states,
+    'checkbox-toggle-checked'
+  )}
 </CodeView>
 
 ## About Checkbox Toggle
@@ -21,7 +25,7 @@ The ability to style checkboxes with CSS varies across browsers. To ensure that 
 
 Groups of checkboxes should be marked up using the fieldset and legend element. This helps someone using assistive technology to understand the question they're answering with the group of checkboxes. The fieldset is placed around the whole group and the legend contains the question.
 
-Custom checkboxes are created by applying the `.slds-checkbox` class to a `<label>` element. To remain accessible to all user agents, place `<input>` with `type="checkbox"` inside the `<label>` element.  The `<input>` is then visually hidden, and the styling is placed on a span with the `.slds-checkbox_faux` class. The styling of the span changes based on whether the checkbox is selected or focused by using a pseudo-element. A second span with `.slds-form-element__label` contains the label text.
+Custom checkboxes are created by applying the `.slds-checkbox` class to a `<label>` element. To remain accessible to all user agents, place `<input>` with `type="checkbox"` inside the `<label>` element. The `<input>` is then visually hidden, and the styling is placed on a span with the `.slds-checkbox_faux` class. The styling of the span changes based on whether the checkbox is selected or focused by using a pseudo-element. A second span with `.slds-form-element__label` contains the label text.
 
 When a single checkbox is required, `<div class="slds-checkbox">` should get `<abbr class="required" title="required">*</abbr>` added to the DOM, directly before the `<input type="checkbox" />` for visual indication that the checkbox is required.
 
@@ -40,28 +44,30 @@ checkbox.indeterminate = true;
 
 <MobileBlurb patternSpecificText="checkbox toggles will have an increased label text size" />
 
-<CodeView frameOnly hideDeviceSelector>
-  {CheckboxToggleExamples.default}
-</CodeView>
+<CodeView frameOnly>{CheckboxToggleExamples.default}</CodeView>
 
 ## Base
 
-<CodeView>
-  {CheckboxToggleExamples.default}
-</CodeView>
+<CodeView>{CheckboxToggleExamples.default}</CodeView>
 
 ### States
 
 #### Checked
 
 <CodeView>
-  {getDisplayElementById(CheckboxToggleExamples.states, 'checkbox-toggle-checked')}
+  {getDisplayElementById(
+    CheckboxToggleExamples.states,
+    'checkbox-toggle-checked'
+  )}
 </CodeView>
 
 #### Disabled
 
 <CodeView>
-  {getDisplayElementById(CheckboxToggleExamples.states, 'checkbox-toggle-disabled')}
+  {getDisplayElementById(
+    CheckboxToggleExamples.states,
+    'checkbox-toggle-disabled'
+  )}
 </CodeView>
 
 #### Right to Left

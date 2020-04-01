@@ -36,23 +36,19 @@ A `.slds-pill_container` can be used as a visual container for multiple pill(s).
 
 <MobileBlurb patternSpecificText="pills will have an increased size to accommodate tapping with a finger instead of the more precise mouse cursor" />
 
-<CodeView frameOnly hideDeviceSelector>
+<CodeView frameOnly>
   {getDisplayElementById(PillsExamplesBase.examples, 'icon')}
 </CodeView>
 
 ## Base
 
-<CodeView>
-  {PillsExamplesBase.default}
-</CodeView>
+<CodeView>{PillsExamplesBase.default}</CodeView>
 
 ### Examples
 
 #### With Icon
 
-<CodeView>
-  {getDisplayElementById(PillsExamplesBase.examples, 'icon')}
-</CodeView>
+<CodeView>{getDisplayElementById(PillsExamplesBase.examples, 'icon')}</CodeView>
 
 #### With Avatar
 
@@ -70,9 +66,7 @@ A `.slds-pill_container` can be used as a visual container for multiple pill(s).
 
 #### Error
 
-<CodeView>
-  {getDisplayElementById(PillsExamplesBase.states, 'error')}
-</CodeView>
+<CodeView>{getDisplayElementById(PillsExamplesBase.states, 'error')}</CodeView>
 
 #### Truncated
 
@@ -84,9 +78,7 @@ The pills component will respect the width of its parent and truncate if necessa
 
 ## Listbox Of Pill Options
 
-<CodeView>
-  {PillsExamplesListbox.default}
-</CodeView>
+<CodeView>{PillsExamplesListbox.default}</CodeView>
 
 A Listbox of Pills is a way to display a list of selected options when performing user input, usually from a multi-select [Combobox](/components/combobox), [Lookup](/components/lookups) or [Picklist](/components/picklist).
 
@@ -125,13 +117,19 @@ A Listbox of Pills is a way to display a list of selected options when performin
 #### With Icon
 
 <CodeView>
-  {getDisplayElementById(PillsExamplesListbox.examples, 'listbox-pill-with-icon')}
+  {getDisplayElementById(
+    PillsExamplesListbox.examples,
+    'listbox-pill-with-icon'
+  )}
 </CodeView>
 
 #### With Avatar
 
 <CodeView>
-  {getDisplayElementById(PillsExamplesListbox.examples, 'listbox-pill-with-avatar')}
+  {getDisplayElementById(
+    PillsExamplesListbox.examples,
+    'listbox-pill-with-avatar'
+  )}
 </CodeView>
 
 ### Layout

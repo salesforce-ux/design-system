@@ -7,6 +7,10 @@
 
 // Framework
 @media (pointer: coarse) and (hover: none) {
+  body {
+    font-size: $font-size-5;
+  }
+
   @import 'components/touch';
   @import 'utilities/touch';
 }

@@ -10,6 +10,10 @@
 #### Added
 - Added documentation and examples for mobile/touch context
 
+### [Datepickers](https://www.lightningdesignsystem.com/components/datepickers)
+#### Changed
+- Replaced `slds-disabled-text` with specific selector `slds-day_adjacent-month` for dates outside of current month, so that they will be selectable but with a different text color that meets accessibility requirements.
+
 ### [Form Element](https://www.lightningdesignsystem.com/components/form-element)
 #### Added
 - Added documentation and examples for mobile/touch context
@@ -541,7 +545,7 @@
 ## Components
 ### [Rich Text Editor](https://www.lightningdesignsystem.com/components/rich-text-editor)
 #### Fixed
-- Added text treatments for `<ins>` and `<del>
+- Added text treatments for `<ins>` and `<del>`
 
 ## Release 2.9.4 - July 3, 2019
 

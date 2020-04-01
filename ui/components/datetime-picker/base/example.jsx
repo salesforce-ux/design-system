@@ -163,7 +163,7 @@ export let states = [
                   <Input
                     id={dateInputId}
                     placeholder=" "
-                    defaultValue="06/24/2014"
+                    defaultValue="06/24/2020"
                   />
                   <ButtonIcon
                     className="slds-input__icon slds-input__icon_right"
@@ -217,7 +217,7 @@ export let states = [
                   <Input
                     id={dateInputId}
                     placeholder=" "
-                    defaultValue="06/24/2014"
+                    defaultValue="06/24/2020"
                   />
                   <ButtonIcon
                     className="slds-input__icon slds-input__icon_right"

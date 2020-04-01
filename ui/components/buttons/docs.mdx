@@ -75,7 +75,7 @@ Use these with caution - dictation software users may not be able to properly id
 
 <MobileBlurb patternSpecificText="buttons will have an increased size to accommodate tapping with a finger instead of the more precise mouse cursor" />
 
-<CodeView frameOnly hideDeviceSelector>
+<CodeView frameOnly>
   <React.Fragment>
     {getDisplayElementById(ButtonExamples.examples, 'base-link')}
     {getDisplayElementById(ButtonExamples.examples, 'neutral-link')}
@@ -185,9 +185,13 @@ The SVG, element, or icon inside the button receives the `slds-button__icon` cla
 
 <CodeView>{IconExamples.default}</CodeView>
 
-<MobileNotice docsLink="#Mobile" header="Mobile context changes" elementName="button icons" />
+<MobileNotice
+  docsLink="#Mobile"
+  header="Mobile context changes"
+  elementName="button icons"
+/>
 
-<CodeView frameOnly hideDeviceSelector>{IconExamples.default}</CodeView>
+<CodeView frameOnly>{IconExamples.default}</CodeView>
 
 ### Right Icon
 
@@ -205,19 +209,19 @@ The button contains three spans with classes that hide or show the content of th
 
 <Blockquote type="a11y" header="Accessibility Requirement">
   <p>
-    Be sure to include the attribute <code>aria-live="assertive"</code> on the button. The{' '}
-    <code>aria-live="assertive"</code> attribute means the value of the <code>&lt;span&gt;</code> inside the button will be spoken whenever it changes.
+    Be sure to include the attribute <code>aria-live="assertive"</code> on the
+    button. The <code>aria-live="assertive"</code> attribute means the value of
+    the <code>&lt;span&gt;</code> inside the button will be spoken whenever it
+    changes.
   </p>
 </Blockquote>
 
 <Blockquote type="note" header="JavaScript Requirement">
   <p>
     When the user clicks the button, use JavaScript to toggle the class from{' '}
-    <code>slds-not-selected</code> to{' '}
-    <code>slds-is-selected-clicked</code>. As soon as focus leaves
-    the button, use JavaScript to toggle the class from{' '}
-    <code>slds-is-selected-clicked</code> to{' '}
-    <code>slds-is-selected</code>.
+    <code>slds-not-selected</code> to <code>slds-is-selected-clicked</code>. As
+    soon as focus leaves the button, use JavaScript to toggle the class from{' '}
+    <code>slds-is-selected-clicked</code> to <code>slds-is-selected</code>.
   </p>
 </Blockquote>
 
@@ -253,16 +257,18 @@ The button contains two spans. Each span contains display text and a correspondi
 
 <Blockquote type="a11y" header="Accessibility Requirement">
   <p>
-    Be sure to include the attribute <code>aria-live="assertive"</code> on the button. The <code>aria-live="assertive"</code> attribute means the value of the <code>&lt;span&gt;</code> inside
-    the button will be spoken whenever it changes.
+    Be sure to include the attribute <code>aria-live="assertive"</code> on the
+    button. The <code>aria-live="assertive"</code> attribute means the value of
+    the <code>&lt;span&gt;</code> inside the button will be spoken whenever it
+    changes.
   </p>
 </Blockquote>
 
 <Blockquote type="note" header="JavaScript Requirement">
   <p>
     When the user clicks the button, use JavaScript to toggle the{' '}
-    <code>slds-is-pressed</code> class on or off, depending on the
-    previous state. Remember, only the pressed state requires this class.
+    <code>slds-is-pressed</code> class on or off, depending on the previous
+    state. Remember, only the pressed state requires this class.
   </p>
 </Blockquote>
 

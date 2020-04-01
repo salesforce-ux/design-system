@@ -47,7 +47,7 @@ The main thing that distinguishes menus from other popover blocks is keyboard na
 
 <MobileBlurb patternSpecificText="menus will have an increased button size to accommodate tapping with a finger instead of the more precise mouse cursor as well as larger text size" />
 
-<CodeView frameOnly hideDeviceSelector frameStyles={{ height: '14rem' }}>
+<CodeView frameOnly frameStyles={{ height: '14rem' }}>
   <IconLeft hasLeftIcon />
 </CodeView>
 
@@ -63,8 +63,9 @@ The main thing that distinguishes menus from other popover blocks is keyboard na
 
 <Blockquote type="a11y" header="Accessible Role">
   <p>
-    A subheading must have <code>role="separator"</code> on the <code>&lt;li&gt;</code> and the content
-    inside the <code>&lt;li&gt;</code> should be in a <code>&lt;span&gt;</code>.
+    A subheading must have <code>role="separator"</code> on the{' '}
+    <code>&lt;li&gt;</code> and the content inside the <code>&lt;li&gt;</code>{' '}
+    should be in a <code>&lt;span&gt;</code>.
   </p>
 </Blockquote>
 
@@ -90,9 +91,10 @@ Icons can be included on either the left, right, or both sides of an option.
 
 <Blockquote type="a11y" header="Accessibility Note">
   <p>
-    If using one of the icons to indicate selection (e.g. checkmarks), be sure to
-    check out the <a href="#With-Selectable-Items">Menus with Selectable Items</a>{' '}
-    docs for the Accessibility implications.
+    If using one of the icons to indicate selection (e.g. checkmarks), be sure
+    to check out the{' '}
+    <a href="#With-Selectable-Items">Menus with Selectable Items</a> docs for
+    the Accessibility implications.
   </p>
 </Blockquote>
 
@@ -116,9 +118,9 @@ Icons can be included on either the left, right, or both sides of an option.
 
 <Blockquote type="a11y" header="Accessibility Note">
   <p>
-    If using one of the icons to indicate selection (e.g. checkmarks), be sure to
-    check out the <a href="#With-Selectable-Items">Menus with Selectable Items</a>{' '}
-    docs.
+    If using one of the icons to indicate selection (e.g. checkmarks), be sure
+    to check out the{' '}
+    <a href="#With-Selectable-Items">Menus with Selectable Items</a> docs.
   </p>
 </Blockquote>
 
@@ -140,8 +142,9 @@ When creating a menu with selectable items:
 
 <Blockquote type="a11y" header="Revealing Icons for Selected Items">
   <p>
-    A selected item reveals its icon when the class <code>slds-is-selected</code> is applied
-    to the <code>&lt;li&gt;</code> and <code>aria-checked="true"</code> is applied to its
+    A selected item reveals its icon when the class{' '}
+    <code>slds-is-selected</code> is applied to the <code>&lt;li&gt;</code> and{' '}
+    <code>aria-checked="true"</code> is applied to its
     <code>menuitemcheckbox</code> or <code>menuitemradio</code> child.
   </p>
 </Blockquote>
@@ -224,12 +227,14 @@ To create a menu with a submenu, add the `slds-has-submenu` class to the list it
 
 <Blockquote type="a11y" header="Accessibility Note">
   <p>
-    Any menu item that opens a submenu must have <code>aria-haspop="true"</code> on the{' '}
-    <code>&lt;a&gt;</code> within the <code>&lt;li&gt;</code>. In order to open the submenu, set{' '}
-    <code>aria-expanded</code> to <code>true</code> on that <code>&lt;a&gt;</code> when the user clicks or hovers over the list item, or presses enter while focused on the list item.
-    Additionally, the submenu should have <code>role="menu"</code> and an <code>aria-label</code>{' '}
-    attribute whose value matches the name of the <code>&lt;li&gt;</code> that opened the
-    submenu.
+    Any menu item that opens a submenu must have <code>aria-haspop="true"</code>{' '}
+    on the <code>&lt;a&gt;</code> within the <code>&lt;li&gt;</code>. In order
+    to open the submenu, set <code>aria-expanded</code> to <code>true</code> on
+    that <code>&lt;a&gt;</code> when the user clicks or hovers over the list
+    item, or presses enter while focused on the list item. Additionally, the
+    submenu should have <code>role="menu"</code> and an <code>aria-label</code>{' '}
+    attribute whose value matches the name of the <code>&lt;li&gt;</code> that
+    opened the submenu.
   </p>
 </Blockquote>
 

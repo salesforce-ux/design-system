@@ -72,7 +72,7 @@ Labels must have the `for` attribute applied, and its value must match the ID of
 
 <MobileBlurb patternSpecificText="form elements will have an increased size of label and info icon" />
 
-<CodeView frameOnly hideDeviceSelector>
+<CodeView frameOnly>
   <FormElement
     labelContent="Form Label"
     inputId="form-element-showcase-01"
@@ -154,9 +154,13 @@ The button icon is **_required_** to be wrapped in a `<div>` with the class `sld
 
 </Example>
 
-<MobileNotice docsLink="#Mobile" header="Mobile context changes" elementName="form elements with a help text icon" />
+<MobileNotice
+  docsLink="#Mobile"
+  header="Mobile context changes"
+  elementName="form elements with a help text icon"
+/>
 
-<CodeView frameOnly hideDeviceSelector>
+<CodeView frameOnly>
   <FormElement labelContent="Status" inputId="form-element-help-01m" hasTooltip>
     <Input id="form-element-help-01m" placeholder="Placeholder Text" />
   </FormElement>
@@ -212,11 +216,10 @@ If an error has occurred while submitting a form, the form element with an error
   <p>
     When a form element displays feedback notifying the user of an error, the
     error string should be linked to the element by adding the{' '}
-    <code>aria-describedby</code> attribute to the{' '}
-    <code>&lt;input&gt;</code>. The `aria-describedby` attribute
-    must reference the id of the error message. This configuration allows screen
-    readers to read the associated error message when the invalid field is
-    focused.
+    <code>aria-describedby</code> attribute to the <code>&lt;input&gt;</code>.
+    The `aria-describedby` attribute must reference the id of the error message.
+    This configuration allows screen readers to read the associated error
+    message when the invalid field is focused.
   </p>
 </Blockquote>
 
@@ -391,11 +394,10 @@ A record form is a series of rows created by `slds-form__row`. Inside of each ro
 
 <Blockquote type="a11y" header="Accessibility Requirement">
   <p>
-    Due to the nature of how the record form is composed, we need to notify screen
-    readers that this is a list by adding <code>role="list"</code>{' '}
-    to the <code>slds-form</code> element. Every column inside of
-    each row should get <code>role="listitem"</code> to identify
-    itself as items of the list.
+    Due to the nature of how the record form is composed, we need to notify
+    screen readers that this is a list by adding <code>role="list"</code> to the{' '}
+    <code>slds-form</code> element. Every column inside of each row should get{' '}
+    <code>role="listitem"</code> to identify itself as items of the list.
   </p>
 </Blockquote>
 
@@ -420,9 +422,13 @@ When you want the form elements inside of your record form to be stacked. Each `
   </CodeView>
 </Example>
 
-<MobileNotice docsLink="#Mobile" header="Mobile context changes" elementName="form elements within a record form with stacked alignment" />
+<MobileNotice
+  docsLink="#Mobile"
+  header="Mobile context changes"
+  elementName="form elements within a record form with stacked alignment"
+/>
 
-<CodeView frameOnly hideDeviceSelector>
+<CodeView frameOnly>
   <RecordDetail
     snapshot={Snapshot.ObjectFieldTypes}
     isViewMode
@@ -446,9 +452,13 @@ By adding the class `slds-form-element_horizontal` to every `slds-form-element`,
   </CodeView>
 </Example>
 
-<MobileNotice docsLink="#Mobile" header="Mobile context changes" elementName="form elements within a record form with horizontal alignment" />
+<MobileNotice
+  docsLink="#Mobile"
+  header="Mobile context changes"
+  elementName="form elements within a record form with horizontal alignment"
+/>
 
-<CodeView frameOnly hideDeviceSelector>
+<CodeView frameOnly>
   <RecordDetail
     snapshot={Snapshot.ObjectFieldTypesHorizontal}
     isViewMode

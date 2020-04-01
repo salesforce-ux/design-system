@@ -6,9 +6,17 @@
 - Moved font-size declaration on touch devices to the touch CSS file
 
 ## Components
+### [Accordion](https://www.lightningdesignsystem.com/components/accordion)
+#### Changed
+- Adapted line height on accordion buttons to function better with multi-line instances.
+
 ### [Combobox](https://www.lightningdesignsystem.com/components/combobox)
 #### Added
 - Added documentation and examples for mobile/touch context
+
+### [Data Tables](https://www.lightningdesignsystem.com/components/data-tables)
+#### Changed
+- Updated height and width dimensions on touch version of `slds-th__action-button`
 
 ### [Datepickers](https://www.lightningdesignsystem.com/components/datepickers)
 #### Changed
@@ -88,7 +96,8 @@
 
 ## Components
 ### [Accordion](https://www.lightningdesignsystem.com/components/accordion)
-- Replaced `slds-truncate` with specific selector `slds-accordion__summary-content` in Accordion title so content will only truncate for larger screens
+#### Changed
+- Replaced `slds-truncate` with specific selector `slds-accordion__summary-content` in Accordion title so content will only truncate for larger screens.
 
 ### [Badges](https://www.lightningdesignsystem.com/components/badges)
 - Added examples for communicating Success, Warning and Error states.
@@ -693,7 +702,7 @@
 ## Components
 ### [Accordion](https://www.lightningdesignsystem.com/components/accordion)
 #### Changed
-- Updated Accordion title to respond to user's densification settings
+- Updated Accordion title to respond to user's densification settings.
 
 ### [Alert](https://www.lightningdesignsystem.com/components/alert)
 #### Fixed
@@ -968,7 +977,7 @@
 ## Components
 ### [Accordion](https://www.lightningdesignsystem.com/components/accordion)
 #### Removed
-- Removed hard coded text sizing utility class, `slds-text-heading_small`, from the `slds-accordion__summary-heading` element
+- Removed hard coded text sizing utility class, `slds-text-heading_small`, from the `slds-accordion__summary-heading` element.
 
 ### [Alert](https://www.lightningdesignsystem.com/components/alert)
 #### Changed

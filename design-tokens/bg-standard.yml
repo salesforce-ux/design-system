@@ -673,9 +673,37 @@ props:
     value: '#969492'
   CUSTOMER_LIFECYCLE_ANALYTICS:
     value: '#9274DF'
-  REPLY_COMPONENT:
+  EINSTEIN_REPLIES:
     value: '#F88965'
   CASE_WRAP_UP:
     value: '#F2CF5B'
   WEBCART:
     value: '#04844B'
+  SCHEDULING_CONSTRAINTS:
+    value: '#EB7092'
+  SCHEDULING_POLICY:
+    value: '#EB7092'
+  SHIFT_PREFERENCES:
+    value: '#EB7092'
+  SHIFT_TEMPLATE:
+    value: '#EB7092'
+  REPLY_TEXT:
+    value: '#F88965'
+  EMPLOYEE:
+    value: '#00A1E0'
+  EMPLOYEE_ASSET:
+    value: '#00A1E0'
+  EMPLOYEE_CONTACT:
+    value: '#00A1E0'
+  EMPLOYEE_JOB:
+    value: '#00A1E0'
+  EMPLOYEE_JOB_POSITION:
+    value: '#00A1E0'
+  EMPLOYEE_ORGANIZATION:
+    value: '#00A1E0'
+  JOB_FAMILY:
+    value: '#00A1E0'
+  JOB_POSITION:
+    value: '#00A1E0'
+  WORK_CONTRACT:
+    value: '#00A1E0'

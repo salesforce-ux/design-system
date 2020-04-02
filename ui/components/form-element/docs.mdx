@@ -18,6 +18,7 @@ import * as HorizontalExamples from './horizontal/example';
 import * as CompoundExamples from './compound/example';
 import * as AddressExamples from './address/example';
 import { getDisplayElementById } from '../../shared/helpers';
+import { MobileNotice, MobileBlurb } from '../../shared/doc-text';
 
 <div className="doc lead">
   A Form Element contains an HTML input element paired with a label.
@@ -66,6 +67,24 @@ There are many types of input elements that can be used in the Form Element, inc
 ### Accessibility
 
 Labels must have the `for` attribute applied, and its value must match the ID of the associated form element, like `<input id="unique-id-of-input" />`. This association ensures that assistive technology informs users about what information to enter where.
+
+### Mobile
+
+<MobileBlurb patternSpecificText="form elements will have an increased size of label and info icon" />
+
+<CodeView frameOnly>
+  <FormElement
+    labelContent="Form Label"
+    inputId="form-element-showcase-01"
+    isRequired
+  >
+    <Input
+      id="form-element-showcase-01"
+      placeholder="Placeholder Text"
+      required
+    />
+  </FormElement>
+</CodeView>
 
 ## Base
 
@@ -135,6 +154,18 @@ The button icon is **_required_** to be wrapped in a `<div>` with the class `sld
 
 </Example>
 
+<MobileNotice
+  docsLink="#Mobile"
+  header="Mobile context changes"
+  elementName="form elements with a help text icon"
+/>
+
+<CodeView frameOnly>
+  <FormElement labelContent="Status" inputId="form-element-help-01m" hasTooltip>
+    <Input id="form-element-help-01m" placeholder="Placeholder Text" />
+  </FormElement>
+</CodeView>
+
 #### Showing tooltip
 
 The help text icon uses a tooltip to show the help text information. Please see [Tooltips](/components/tooltips/) for implementation details.
@@ -185,11 +216,10 @@ If an error has occurred while submitting a form, the form element with an error
   <p>
     When a form element displays feedback notifying the user of an error, the
     error string should be linked to the element by adding the{' '}
-    <code>aria-describedby</code> attribute to the{' '}
-    <code>&lt;input&gt;</code>. The `aria-describedby` attribute
-    must reference the id of the error message. This configuration allows screen
-    readers to read the associated error message when the invalid field is
-    focused.
+    <code>aria-describedby</code> attribute to the <code>&lt;input&gt;</code>.
+    The `aria-describedby` attribute must reference the id of the error message.
+    This configuration allows screen readers to read the associated error
+    message when the invalid field is focused.
   </p>
 </Blockquote>
 
@@ -221,7 +251,7 @@ If your form has more than one form element, you can switch the direction of `sl
 
 ### Stacked
 
-To vertically stack `lt;label&gt;` and `lt;input&gt;` pairs, place `slds-form-element_stacked` on the `div` with the class of `slds-form-element` for optimal spacing.
+To vertically stack <code>&lt;label&gt;</code> and <code>&lt;input&gt;</code> pairs, place `slds-form-element_stacked` on the `div` with the class of `slds-form-element` for optimal spacing.
 
 <Example title="Form Layout - Stacked">
   <CodeView>
@@ -364,11 +394,10 @@ A record form is a series of rows created by `slds-form__row`. Inside of each ro
 
 <Blockquote type="a11y" header="Accessibility Requirement">
   <p>
-    Due to the nature of how the record form is composed, we need to notify screen
-    readers that this is a list by adding <code>role="list"</code>{' '}
-    to the <code>slds-form</code> element. Every column inside of
-    each row should get <code>role="listitem"</code> to identify
-    itself as items of the list.
+    Due to the nature of how the record form is composed, we need to notify
+    screen readers that this is a list by adding <code>role="list"</code> to the{' '}
+    <code>slds-form</code> element. Every column inside of each row should get{' '}
+    <code>role="listitem"</code> to identify itself as items of the list.
   </p>
 </Blockquote>
 
@@ -393,6 +422,21 @@ When you want the form elements inside of your record form to be stacked. Each `
   </CodeView>
 </Example>
 
+<MobileNotice
+  docsLink="#Mobile"
+  header="Mobile context changes"
+  elementName="form elements within a record form with stacked alignment"
+/>
+
+<CodeView frameOnly>
+  <RecordDetail
+    snapshot={Snapshot.ObjectFieldTypes}
+    isViewMode
+    hasInlineEdit
+    direction="stacked"
+  />
+</CodeView>
+
 ##### Horizontal Alignment
 
 By adding the class `slds-form-element_horizontal` to every `slds-form-element`, your form can switch from stacked to left-aligned, horizontal labels in order to reduce vertical space.
@@ -407,6 +451,21 @@ By adding the class `slds-form-element_horizontal` to every `slds-form-element`,
     />
   </CodeView>
 </Example>
+
+<MobileNotice
+  docsLink="#Mobile"
+  header="Mobile context changes"
+  elementName="form elements within a record form with horizontal alignment"
+/>
+
+<CodeView frameOnly>
+  <RecordDetail
+    snapshot={Snapshot.ObjectFieldTypesHorizontal}
+    isViewMode
+    hasInlineEdit
+    direction="horizontal"
+  />
+</CodeView>
 
 #### Edit Mode
 

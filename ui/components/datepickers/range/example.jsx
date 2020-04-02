@@ -98,7 +98,7 @@ export let states = [
                   <Input
                     id={dateRangeInputId01}
                     placeholder=" "
-                    defaultValue="06/24/2014"
+                    defaultValue="06/24/2020"
                   />
                   <ButtonIcon
                     className="slds-input__icon slds-input__icon_right"
@@ -149,7 +149,7 @@ export let states = [
                   <Input
                     id={dateRangeInputId01}
                     placeholder=" "
-                    defaultValue="06/24/2014"
+                    defaultValue="06/24/2020"
                   />
                   <ButtonIcon
                     className="slds-input__icon slds-input__icon_right"
@@ -170,7 +170,7 @@ export let states = [
                   <Input
                     id={dateRangeInputId02}
                     placeholder=" "
-                    defaultValue="06/27/2014"
+                    defaultValue="06/27/2020"
                   />
                   <ButtonIcon
                     className="slds-input__icon slds-input__icon_right"
@@ -207,7 +207,7 @@ export let states = [
                   <Input
                     id={dateRangeInputId01}
                     placeholder=" "
-                    defaultValue="06/24/2014"
+                    defaultValue="06/24/2020"
                   />
                   <ButtonIcon
                     className="slds-input__icon slds-input__icon_right"
@@ -233,7 +233,7 @@ export let states = [
                   <Input
                     id={dateRangeInputId02}
                     placeholder=" "
-                    defaultValue="06/29/2014"
+                    defaultValue="06/29/2020"
                   />
                   <ButtonIcon
                     className="slds-input__icon slds-input__icon_right"
@@ -270,7 +270,7 @@ export let states = [
                   <Input
                     id={dateRangeInputId01}
                     placeholder=" "
-                    defaultValue="06/24/2014"
+                    defaultValue="06/24/2020"
                   />
                   <ButtonIcon
                     className="slds-input__icon slds-input__icon_right"
@@ -296,7 +296,7 @@ export let states = [
                   <Input
                     id={dateRangeInputId02}
                     placeholder=" "
-                    defaultValue="06/30/2014"
+                    defaultValue="06/30/2020"
                   />
                   <ButtonIcon
                     className="slds-input__icon slds-input__icon_right"
@@ -333,7 +333,7 @@ export let states = [
                   <Input
                     id={dateRangeInputId01}
                     placeholder=" "
-                    defaultValue="06/24/2014"
+                    defaultValue="06/24/2020"
                   />
                   <ButtonIcon
                     className="slds-input__icon slds-input__icon_right"
@@ -352,7 +352,7 @@ export let states = [
                   <Input
                     id={dateRangeInputId02}
                     placeholder=" "
-                    defaultValue="06/30/2014"
+                    defaultValue="06/30/2020"
                   />
                   <ButtonIcon
                     className="slds-input__icon slds-input__icon_right"

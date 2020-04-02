@@ -3,14 +3,11 @@ import CodeBlock from '../../../shared/components/CodeBlock';
 import Blockquote from '../../../shared/components/Blockquote';
 import * as InputExamples from './base/example';
 import { getDisplayElementById } from '../../shared/helpers';
+import { MobileNotice, MobileBlurb } from '../../shared/doc-text';
 
-<div className="doc lead">
-  Text inputs are used for freeform data entry
-</div>
+<div className="doc lead">Text inputs are used for freeform data entry</div>
 
-<CodeView exampleOnly>
-  {InputExamples.default}
-</CodeView>
+<CodeView exampleOnly>{InputExamples.default}</CodeView>
 
 ## About Inputs
 
@@ -38,6 +35,10 @@ If you need some type of field level help and if your tooltips are available on 
 on the icon, assistive technology reads out the content of the tooltip. If the tooltip has an `id="help"`, then the `<button>` containing the icon should have `aria-describedby="help"`.
 
 In some cases, the read-only field state is swapped and has no `<input>`. This is called `static` in the examples. In that case, don’t use a `<label>`. This provides better accessibility for screen readers and keyboard navigators. Instead, use a `<span>` with the `.slds-form-element__label` class. Instead of an `<input>`, use the `.slds-form-element__static` class inside the `.slds-form-element__control` wrapper.
+
+<MobileBlurb patternSpecificText="inputs will have an increased size to accommodate tapping with a finger instead of the more precise mouse cursor" />
+
+<CodeView frameOnly>{InputExamples.default}</CodeView>
 
 ## States
 
@@ -67,9 +68,7 @@ In some cases, the read-only field state is swapped and has no `<input>`. This i
 
 ### Read Only
 
-<CodeView>
-  {getDisplayElementById(InputExamples.states, 'read-only')}
-</CodeView>
+<CodeView>{getDisplayElementById(InputExamples.states, 'read-only')}</CodeView>
 
 ## Examples
 
@@ -112,6 +111,7 @@ In some cases, the read-only field state is swapped and has no `<input>`. This i
 When using the fixed text variants for prepending or appending symbols to inputs, please be sure to use `aria-labelledby` on the input, that points to the ids of the label, prepended text and appended text as a space separated list.
 
 The IDs must appear in that order:
+
 1. label,
 2. prepended
 3. then appended.
@@ -119,7 +119,6 @@ The IDs must appear in that order:
 The reason we do this is to create a better association between the input and the supporting labels around it.
 
 By only using the traditional `label[for]` method, the fixed text is never read out in the context of editing the input value. With using the `aria-labelledby` attribute we can create a better label with all the visual labels associated with it, in a relevant order, that is read by assistive technology when the user needs it; when they're editing the value.
-
 
 <CodeView>
   {getDisplayElementById(InputExamples.examples, 'fixed-text')}

@@ -1,5 +1,6 @@
 import CodeView from "../../../shared/components/CodeView";
 import { getDisplayElementById } from "../../shared/helpers";
+import { MobileNotice, MobileBlurb } from '../../shared/doc-text';
 import * as MapExamples from "./base/example";
 
 <div className="lead doc">A map component is used to find a location</div>
@@ -7,6 +8,14 @@ import * as MapExamples from "./base/example";
 ## Base
 
 <CodeView>{MapExamples.default}</CodeView>
+
+### Mobile
+
+<MobileBlurb patternSpecificText="maps will have increased header text size along with other small adjustments" />
+
+<CodeView frameOnly>
+  {MapExamples.default}
+</CodeView>
 
 ## States
 

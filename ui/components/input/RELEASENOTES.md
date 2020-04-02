@@ -4,6 +4,12 @@
 
 <!-- ## [Unreleased] -->
 
+## 2.12.0
+
+### Fixed
+
+- Resolved issue where Chrome on Android was rendering misaligned text for date-related input types.
+
 ## 2.10.2
 
 ### Fixed

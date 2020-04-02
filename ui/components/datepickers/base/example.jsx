@@ -395,6 +395,17 @@ export default (
   </FormElement>
 );
 
+export const examples = [
+  {
+    id: 'mobile',
+    label: 'Mobile',
+    element: (
+      <FormElement labelContent="Date" inputId={dateInputId}>
+        <Input id={dateInputId} type="datetime-local" />
+      </FormElement>
+    )
+  }
+];
 export let states = [
   {
     id: 'datepicker-day-selected',

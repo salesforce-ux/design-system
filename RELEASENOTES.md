@@ -10,6 +10,10 @@
 #### Changed
 - Changed disabled inverse button text color to 50% opacity.
 
+### [Input](https://www.lightningdesignsystem.com/components/input)
+#### Fixed
+- Resolved issue where Chrome on Android was rendering misaligned text for date-related input types.
+
 ### [Popovers](https://www.lightningdesignsystem.com/components/popovers)
 #### Fixed
 - Fixed the text color in form inputs for the Walkthrough variation.

@@ -4,6 +4,12 @@
 
 <!-- ## [Unreleased] -->
 
+## 2.11.7
+
+### Changed
+
+- Updated height and width dimensions on touch version of `slds-th__action-button`
+
 ## 2.10.0
 
 ### Changed

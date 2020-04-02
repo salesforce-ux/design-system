@@ -7,12 +7,11 @@ import { getDisplayElementById } from '../../shared/helpers';
 import { MobileNotice, MobileBlurb } from '../../shared/doc-text';
 
 <div className="doc lead">
-  A checkable input that communicates if an option is true, false or indeterminate
+  A checkable input that communicates if an option is true, false or
+  indeterminate
 </div>
 
-<CodeView exampleOnly>
-  {CheckboxExamples.default}
-</CodeView>
+<CodeView exampleOnly>{CheckboxExamples.default}</CodeView>
 
 ## About Checkbox
 
@@ -34,9 +33,7 @@ As SLDS checkboxes rely on the `:checked` pseudo selector, and the indeterminate
 
 <MobileBlurb patternSpecificText="checkboxes will have an increased size to accommodate tapping with a finger instead of the more precise mouse cursor, as well as having larger label text" />
 
-<CodeView frameOnly hideDeviceSelector>
-  {CheckboxExamples.default}
-</CodeView>
+<CodeView frameOnly>{CheckboxExamples.default}</CodeView>
 
 ## Base
 
@@ -44,9 +41,7 @@ The base variant of a checkbox is a single boolean value. The base checkbox is c
 
 The [form element variant](#Form-Element) accommodates a top level label and additional functionality such as like help text and read only mode. Help text is not supported on a single checkbox.
 
-<CodeView>
-  {CheckboxExamples.default}
-</CodeView>
+<CodeView>{CheckboxExamples.default}</CodeView>
 
 ### States
 
@@ -58,9 +53,7 @@ The [form element variant](#Form-Element) accommodates a top level label and add
 
 #### Error
 
-<CodeView>
-  {getDisplayElementById(CheckboxExamples.states, 'error')}
-</CodeView>
+<CodeView>{getDisplayElementById(CheckboxExamples.states, 'error')}</CodeView>
 
 #### Disabled
 
@@ -78,9 +71,7 @@ The [form element variant](#Form-Element) accommodates a top level label and add
 
 #### Group
 
-<CodeView>
-  {getDisplayElementById(CheckboxExamples.examples, 'group')}
-</CodeView>
+<CodeView>{getDisplayElementById(CheckboxExamples.examples, 'group')}</CodeView>
 
 ##### Required
 
@@ -102,15 +93,11 @@ The [form element variant](#Form-Element) accommodates a top level label and add
 
 #### RTL (right to left direction)
 
-<CodeView>
-  {getDisplayElementById(CheckboxExamples.examples, 'rtl')}
-</CodeView>
+<CodeView>{getDisplayElementById(CheckboxExamples.examples, 'rtl')}</CodeView>
 
 ## Form Element
 
-<CodeView>
-  {CheckboxFormElementExamples.default}
-</CodeView>
+<CodeView>{CheckboxFormElementExamples.default}</CodeView>
 
 ### States
 
@@ -129,7 +116,10 @@ The [form element variant](#Form-Element) accommodates a top level label and add
 #### Checked and Disabled
 
 <CodeView>
-  {getDisplayElementById(CheckboxFormElementExamples.states, 'checked-disabled')}
+  {getDisplayElementById(
+    CheckboxFormElementExamples.states,
+    'checked-disabled'
+  )}
 </CodeView>
 
 #### Error
@@ -151,13 +141,19 @@ View mode is the read only state of a checkbox form element.
 #### Unchecked
 
 <CodeView>
-  {getDisplayElementById(CheckboxFormElementExamples.states, 'view-mode-unchecked')}
+  {getDisplayElementById(
+    CheckboxFormElementExamples.states,
+    'view-mode-unchecked'
+  )}
 </CodeView>
 
 #### Checked
 
 <CodeView>
-  {getDisplayElementById(CheckboxFormElementExamples.states, 'view-mode-checked')}
+  {getDisplayElementById(
+    CheckboxFormElementExamples.states,
+    'view-mode-checked'
+  )}
 </CodeView>
 
 ### Examples
@@ -165,17 +161,26 @@ View mode is the read only state of a checkbox form element.
 #### With help text
 
 <CodeView>
-  {getDisplayElementById(CheckboxFormElementExamples.examples, 'help-text-icon')}
+  {getDisplayElementById(
+    CheckboxFormElementExamples.examples,
+    'help-text-icon'
+  )}
 </CodeView>
 
 #### Required with help text
 
 <CodeView>
-  {getDisplayElementById(CheckboxFormElementExamples.examples, 'required-help-text-icon')}
+  {getDisplayElementById(
+    CheckboxFormElementExamples.examples,
+    'required-help-text-icon'
+  )}
 </CodeView>
 
 #### Required with help text with tooltip
 
 <CodeView>
-  {getDisplayElementById(CheckboxFormElementExamples.examples, 'required-help-text-icon-tooltip')}
+  {getDisplayElementById(
+    CheckboxFormElementExamples.examples,
+    'required-help-text-icon-tooltip'
+  )}
 </CodeView>

@@ -6,6 +6,7 @@ import { Step as BaseStep, Progress as BaseProgress } from './base/example';
 import { Step as VerticalStep, Progress as VerticalProgress } from './vertical/example';
 import { Tooltip } from '../tooltips/base/example';
 import { Modal, ModalHeader, ModalContent, ModalFooter } from '../modals/base/example';
+import { MobileNotice, MobileBlurb } from '../../shared/doc-text';
 
 <div className="doc lead">
   A progress indicator component communicates to the user the progress of a
@@ -45,6 +46,20 @@ As the percentage of completion changes, be sure to update the `aria-valuenow` p
     </span>
   </div>
 </CodeBlock>
+
+### Mobile
+
+<MobileBlurb patternSpecificText="progress indicators will have increased actionable area sizes to accommodate tapping with a finger instead of the more precise mouse cursor" />
+
+<CodeView frameOnly>
+  <BaseProgress value="50">
+    <BaseStep done>Step 1</BaseStep>
+    <BaseStep done>Step 2</BaseStep>
+    <BaseStep active>Step 3</BaseStep>
+    <BaseStep>Step 4</BaseStep>
+    <BaseStep>Step 5</BaseStep>
+  </BaseProgress>
+</CodeView>
 
 ## Base
 

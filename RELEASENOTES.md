@@ -50,6 +50,11 @@
 - Updated height and width dimensions on touch version of `slds-th__action-button`
 
 ### [Datepickers](https://www.lightningdesignsystem.com/components/datepickers)
+#### Fixed
+- Resolved incorrect spacing when nested in a data table by increasing specificity of certain `slds-datepicker` specific CSS selectors
+<!-- ## [VERSION] -->
+
+### [Datepickers](https://www.lightningdesignsystem.com/components/datepickers)
 #### Changed
 - Replaced `slds-disabled-text` with specific selector `slds-day_adjacent-month` for dates outside of current month, so that they will be selectable but with a different text color that meets accessibility requirements.
 

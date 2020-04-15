@@ -5,6 +5,8 @@
 
 - Updated Icons to 9.34.0
 
+## 2.11.8 - April 15, 2020
+
 ## 2.11.7 - April 2, 2020
 
 - Moved font-size declaration on touch devices to the touch CSS file

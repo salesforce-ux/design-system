@@ -1,6 +1,8 @@
 <!-- Release notes authoring guidelines: http://keepachangelog.com/ -->
 <!-- On release, add general notes here. In time the legacy release notes will be add to this -->
 
+## 2.11.8 - April 15, 2020
+
 ## 2.11.7 - April 2, 2020
 
 - Moved font-size declaration on touch devices to the touch CSS file

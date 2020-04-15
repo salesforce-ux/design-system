@@ -32,6 +32,14 @@
 ### [Line Clamp](https://www.lightningdesignsystem.com/utilities/line-clamp)
 - Added Line Clamp x-small modifier that clamps at 2 lines.
 
+## Release 2.11.8 - April 15, 2020
+
+## Components
+### [Data Tables](https://www.lightningdesignsystem.com/components/data-tables)
+#### Changed
+- Adjusted positioning for `slds-th__action-button` for better vertical alignment and made additional
+  changes to support appearance in the touch implementation
+
 ## Release 2.11.7 - April 2, 2020
 
 - Moved font-size declaration on touch devices to the touch CSS file

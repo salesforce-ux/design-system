@@ -373,9 +373,9 @@
    */
   &-button {
     position: absolute;
+    transform: translateY(-50%);
     top: 50%;
     right: $spacing-xx-small;
-    margin-top: ($spacing-x-small * -1);
   }
 }
 

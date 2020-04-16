@@ -1,8 +1,13 @@
 {
   "name": "design-system",
   "description": "Salesforce Lightning Design System",
+  "keywords": ["Salesforce", "Lightning Design System", "Design System", "CSS"],
+  "homepage": "https://lightningdesignsystem.com",
   "version": "2.12.0-rc.1",
   "author": "Salesforce",
+  "bugs": {
+    "url": "https://github.com/salesforce-ux/design-system/issues"
+  },
   "slds": {
     "name": "Summer ’20",
     "id": "226"
@@ -196,10 +201,6 @@
   },
   "optionalDependencies": {
     "fsevents": "*"
-  },
-  "engines": {
-    "node": "^12.0.0",
-    "npm": "^6.0.0"
   },
   "license": "SEE LICENSE IN README.md",
   "repository": {

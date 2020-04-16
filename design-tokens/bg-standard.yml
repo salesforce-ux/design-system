@@ -707,3 +707,5 @@ props:
     value: '#00A1E0'
   WORK_CONTRACT:
     value: '#00A1E0'
+  SCHEDULE_OBJECTIVE:
+    value: '#2A739E'

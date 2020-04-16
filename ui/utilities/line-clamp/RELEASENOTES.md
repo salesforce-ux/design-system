@@ -4,13 +4,15 @@
 
 ## 2.12.0
 
-- Added Line Clamp x-small modifier that clamps at 2 lines.
+### Added
+
+- Added an X-Small modifier that truncates text after two lines.
 
 ## 2.11.0
 
 ### Added
 
-- Added Line Clamp utility with four modifier options:
+- Added the Line Clamp utility with four modifier options:
   - `.slds-line-clamp` - clamps at 3 lines, value provided by `line-clamp` token.
   - `.slds-line-clamp_small` - clamps at 3 lines
   - `.slds-line-clamp_medium` - clamps at 5 lines

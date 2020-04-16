@@ -8,7 +8,7 @@
 ## Components
 ### [Buttons](https://www.lightningdesignsystem.com/components/buttons)
 #### Changed
-- Changed disabled inverse button text color to 50% opacity.
+- Set the inverse button text color to 50% opacity when the button is disabled.
 
 ### [Input](https://www.lightningdesignsystem.com/components/input)
 #### Fixed
@@ -20,17 +20,18 @@
 
 ### [Progress Ring](https://www.lightningdesignsystem.com/components/progress-ring)
 #### Fixed
-- Resolved IE11 issue with positioning of the `.slds-progress-ring__progress` element by setting more explicit position settings.
+- Resolved an IE11 issue with positioning of the `.slds-progress-ring__progress` element by setting more explicit position settings.
 #### Changed
-- Changed blueprint recommendation to use a `<circle>` element instead of a `<path>` when the completion of the progress circle is 100%. This resolves an IE11 rendering issue with completed rings.
+- Set the blueprint recommendation to use a `<circle>` element instead of a `<path>` element when the completion of the progress circle is 100%. This change resolves an IE11 rendering issue with completed rings.
 
 ### [Visual Picker](https://www.lightningdesignsystem.com/components/visual-picker)
-#### Changed
-- Added a small variant to visual picker
+#### Added
+- Added a Small variant to the visual picker
 
 ## Utilities
 ### [Line Clamp](https://www.lightningdesignsystem.com/utilities/line-clamp)
-- Added Line Clamp x-small modifier that clamps at 2 lines.
+#### Added
+- Added an X-Small modifier that truncates text after two lines.
 
 ## Release 2.11.8 - April 15, 2020
 
@@ -345,7 +346,7 @@
 ## Utilities
 ### [Line Clamp](https://www.lightningdesignsystem.com/utilities/line-clamp)
 #### Added
-- Added Line Clamp utility with four modifier options:
+- Added the Line Clamp utility with four modifier options:
   - `.slds-line-clamp` - clamps at 3 lines, value provided by `line-clamp` token.
   - `.slds-line-clamp_small` - clamps at 3 lines
   - `.slds-line-clamp_medium` - clamps at 5 lines
@@ -1375,7 +1376,7 @@
 
 ### [Visual Picker](https://www.lightningdesignsystem.com/components/visual-picker)
 #### Changed
-- Updated disabled visual picker UI to be more apparent and better match established conventions for disabled UI
+- Updated the disabled visual picker UI to be more apparent and a better match to the established conventions for disabled UI
 
 ### [Welcome Mat](https://www.lightningdesignsystem.com/components/welcome-mat)
 #### Changed

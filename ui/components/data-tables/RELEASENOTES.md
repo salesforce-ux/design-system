@@ -18,6 +18,7 @@
 
 ### Changed
 
+- Adjusted positioning for resize handle for better usability on touch devices, and made the handle visible in all cases
 - Adjusted positioning for `slds-th__action-button` for better vertical alignment and made additional
   changes to support appearance in the touch implementation
 

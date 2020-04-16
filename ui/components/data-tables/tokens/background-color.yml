@@ -21,3 +21,6 @@ props:
   TABLE_COLOR_BACKGROUND_HEADER_FOCUS:
     value: '{!PALETTE_GRAY_1}'
     comment: Focused state for table header cells
+  TABLE_COLOR_BACKGROUND_HEADER_RESIZABLE_HANDLE:
+    value: '{!PALETTE_GRAY_7}'
+    comment: Resizable handle color for table header cells

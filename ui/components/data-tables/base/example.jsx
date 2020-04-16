@@ -2,7 +2,6 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 import React from 'react';
-import PropTypes from 'prop-types';
 
 import {
   Table,
@@ -14,70 +13,11 @@ import {
   TBodyTr,
   RowTh,
   Td,
-  ReadOnlyCell
+  ReadOnlyCell,
+  cellContentTextLong,
+  HeadRowData,
+  RowData
 } from '../index';
-
-/// ////////////////////////////////////////
-// Partial(s)
-/// ////////////////////////////////////////
-
-let HeadRowData = props => (
-  <THeadTr>
-    <ColumnTh>
-      <ColumnHeader columnName="Opportunity Name" />
-    </ColumnTh>
-    <ColumnTh>
-      <ColumnHeader columnName="Account Name" />
-    </ColumnTh>
-    <ColumnTh>
-      <ColumnHeader columnName="Close Date" />
-    </ColumnTh>
-    <ColumnTh>
-      <ColumnHeader columnName="Stage" />
-    </ColumnTh>
-    <ColumnTh>
-      <ColumnHeader columnName="Confidence" />
-    </ColumnTh>
-    <ColumnTh>
-      <ColumnHeader columnName="Amount" />
-    </ColumnTh>
-    <ColumnTh>
-      <ColumnHeader columnName="Contact" />
-    </ColumnTh>
-  </THeadTr>
-);
-
-let RowData = props => (
-  <TBodyTr>
-    <RowTh data-label="Opportunity Name">
-      <ReadOnlyCell cellText={props.title} cellLink="javascript:void(0);" />
-    </RowTh>
-    <Td data-label="Account Name" type="base">
-      <ReadOnlyCell cellText="Cloudhub" />
-    </Td>
-    <Td data-label="Close Date" type="base">
-      <ReadOnlyCell cellText="4/14/2015" />
-    </Td>
-    <Td data-label="Prospecting" type="base">
-      <ReadOnlyCell cellText="Prospecting" />
-    </Td>
-    <Td data-label="Confidence" type="base">
-      <ReadOnlyCell cellText="20%" />
-    </Td>
-    <Td data-label="Amount" type="base">
-      <ReadOnlyCell cellText="$25k" />
-    </Td>
-    <Td data-label="Contact" type="base">
-      <ReadOnlyCell
-        cellLink="javascript:void(0);"
-        cellText="jrogers@cloudhub.com"
-      />
-    </Td>
-  </TBodyTr>
-);
-RowData.propTypes = {
-  title: PropTypes.string
-};
 
 /// ///////////////////////////////////////////
 // Export
@@ -219,6 +159,76 @@ export let examples = [
           <RowData title="Cloudhub" />
           <RowData title="Cloudhub + Anypoint Connectors" />
           <RowData title="Cloudhub" />
+        </TBody>
+      </Table>
+    )
+  },
+  {
+    id: 'cell-content-truncated',
+    label: 'Cell content truncated',
+    demoStyles: 'max-width: 600px;',
+    element: (
+      <Table isBordered isStriped hasCellBuffer isFixedLayout type="base">
+        <THead>
+          <THeadTr>
+            <ColumnTh>
+              <ColumnHeader columnName="Typical Column Header" />
+            </ColumnTh>
+            <ColumnTh>
+              <ColumnHeader columnName="Truncated, no wrap" />
+            </ColumnTh>
+            <ColumnTh>
+              <ColumnHeader columnName="Typical Column Header" />
+            </ColumnTh>
+          </THeadTr>
+        </THead>
+        <TBody>
+          <TBodyTr>
+            <RowTh data-label="Typical Column Header">
+              <ReadOnlyCell cellText="Typical cell content" />
+            </RowTh>
+            <Td data-label="Truncated, no wrap" type="base" hasWrap>
+              <ReadOnlyCell cellText={cellContentTextLong} />
+            </Td>
+            <Td data-label="Typical Column Header" type="base">
+              <ReadOnlyCell cellText="Typical cell content" />
+            </Td>
+          </TBodyTr>
+        </TBody>
+      </Table>
+    )
+  },
+  {
+    id: 'cell-content-wrapped',
+    label: 'Cell content wrapped',
+    demoStyles: 'max-width: 600px;',
+    element: (
+      <Table isBordered isStriped hasCellBuffer isFixedLayout type="base">
+        <THead>
+          <THeadTr>
+            <ColumnTh>
+              <ColumnHeader columnName="Typical Column Header" />
+            </ColumnTh>
+            <ColumnTh>
+              <ColumnHeader columnName="Wrapped, line clamped" />
+            </ColumnTh>
+            <ColumnTh>
+              <ColumnHeader columnName="Typical Column Header" />
+            </ColumnTh>
+          </THeadTr>
+        </THead>
+        <TBody>
+          <TBodyTr>
+            <RowTh data-label="Typical Column Header">
+              <ReadOnlyCell cellText="Typical cell content" />
+            </RowTh>
+            <Td data-label="Wrapped, line clamped" type="base" hasWrap>
+              <ReadOnlyCell cellText={cellContentTextLong} hasWrap />
+            </Td>
+            <Td data-label="Typical Column Header" type="base">
+              <ReadOnlyCell cellText="Typical cell content" />
+            </Td>
+          </TBodyTr>
         </TBody>
       </Table>
     )

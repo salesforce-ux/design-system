@@ -4086,6 +4086,24 @@ exports[`Td component should apply the right aligned class 1`] = `
 </td>
 `;
 
+exports[`Td component should have truncated text 1`] = `
+<td
+  className={null}
+  role={null}
+>
+  <div
+    className="slds-truncate"
+    title="Cell content that is very long.
+It also has a line break.
+It has more than one line break"
+  >
+    Cell content that is very long.
+It also has a line break.
+It has more than one line break
+  </div>
+</td>
+`;
+
 exports[`Td component should render with children 1`] = `
 <td
   className={null}
@@ -4134,5 +4152,23 @@ exports[`Td component should set tabindex 1`] = `
   tabIndex="0"
 >
   <div />
+</td>
+`;
+
+exports[`Td component should wrap and line clamp text 1`] = `
+<td
+  className="slds-cell-wrap"
+  role={null}
+>
+  <div
+    className="slds-line-clamp"
+    title="Cell content that is very long.
+It also has a line break.
+It has more than one line break"
+  >
+    Cell content that is very long.
+It also has a line break.
+It has more than one line break
+  </div>
 </td>
 `;

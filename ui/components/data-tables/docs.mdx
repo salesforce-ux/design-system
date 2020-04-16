@@ -1,7 +1,7 @@
 import CodeView from '../../../shared/components/CodeView';
 import CodeBlock from '../../../shared/components/CodeBlock';
 import Blockquote from '../../../shared/components/Blockquote';
-import { getDisplayElementById } from '../../shared/helpers';
+import { getDisplayElementById, getDemoStylesById } from '../../shared/helpers';
 import * as SimpleTableExamples from './base/example';
 import * as AdvancedTableExamples from './advanced/example';
 import * as InlineEditTableExamples from './inline-edit/example';
@@ -243,4 +243,26 @@ For the purposes of these docs, the Default state of Inline Edit is representati
 
 <CodeView demoStyles="overflow: hidden;">
   {getDisplayElementById(InlineEditTableExamples.states, 'header-cell-marked')}
+</CodeView>
+
+### Cell Content
+
+As a default method, wrap any table cell content in a `<div>`.
+
+#### Truncated
+
+Add the `slds-truncate` class to truncate any content that might overflow the tables cell area.
+
+<CodeView demoStyles={getDemoStylesById(SimpleTableExamples.examples, 'cell-content-truncated')}>
+  {getDisplayElementById(SimpleTableExamples.examples, 'cell-content-truncated')}
+</CodeView>
+
+#### Wrapped
+
+In those cases where long cell content is anticipated, use the `slds-cell-wrap` class on the cell `<td>` to have the text wrap within the cell’s width.
+
+Also, use the `slds-line-clamp` class on the content-wrapping `<div>` to clamp, or truncate, the cell content after a certain amount of lines. Other [line clamping classes](/utilities/line-clamp) can be used in place for various line clamping limits. The clamping limit can also be changed by reassigning a value to the `line-clamp` token.
+
+<CodeView demoStyles={getDemoStylesById(SimpleTableExamples.examples, 'cell-content-wrapped')}>
+  {getDisplayElementById(SimpleTableExamples.examples, 'cell-content-wrapped')}
 </CodeView>

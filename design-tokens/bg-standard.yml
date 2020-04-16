@@ -631,3 +631,81 @@ props:
     value: '#3c97dd'
   SETTINGS:
     value: '#04844b'
+  ASSET_ACTION_SOURCE:
+    value: '#317A92'
+  ASSET_ACTION:
+    value: '#317A92'
+  ASSET_DOWNTIME_PERIOD:
+    value: '#317A92'
+  ASSET_OBJECT:
+    value: '#317A92'
+  ASSET_STATE_PERIOD:
+    value: '#317A92'
+  SEGMENTS:
+    value: '#F28B00'
+  DATA_MODEL:
+    value: '#EB7092'
+  DATA_STREAMS:
+    value: '#EF6E64'
+  ACTIVATIONS:
+    value: '#B070E6'
+  EXPENSE_REPORT_ENTRY:
+    value: '#3A3180'
+  EXPENSE_REPORT:
+    value: '#3A3180'
+  EXPENSE:
+    value: '#3A3180'
+  WORK_PLAN_RULE:
+    value: '#449488'
+  WORK_PLAN:
+    value: '#449488'
+  WORK_PLAN_TEMPLATE_ENTRY:
+    value: '#449488'
+  WORK_PLAN_TEMPLATE:
+    value: '#449488'
+  WORK_STEP:
+    value: '#449488'
+  WORK_STEP_TEMPLATE:
+    value: '#449488'
+  CALL_COACHING:
+    value: '#3C97DD'
+  CANCEL_CHECKOUT:
+    value: '#969492'
+  CUSTOMER_LIFECYCLE_ANALYTICS:
+    value: '#9274DF'
+  EINSTEIN_REPLIES:
+    value: '#F88965'
+  CASE_WRAP_UP:
+    value: '#F2CF5B'
+  WEBCART:
+    value: '#04844B'
+  SCHEDULING_CONSTRAINTS:
+    value: '#EB7092'
+  SCHEDULING_POLICY:
+    value: '#EB7092'
+  SHIFT_PREFERENCES:
+    value: '#EB7092'
+  SHIFT_TEMPLATE:
+    value: '#EB7092'
+  REPLY_TEXT:
+    value: '#F88965'
+  EMPLOYEE:
+    value: '#00A1E0'
+  EMPLOYEE_ASSET:
+    value: '#00A1E0'
+  EMPLOYEE_CONTACT:
+    value: '#00A1E0'
+  EMPLOYEE_JOB:
+    value: '#00A1E0'
+  EMPLOYEE_JOB_POSITION:
+    value: '#00A1E0'
+  EMPLOYEE_ORGANIZATION:
+    value: '#00A1E0'
+  JOB_FAMILY:
+    value: '#00A1E0'
+  JOB_POSITION:
+    value: '#00A1E0'
+  WORK_CONTRACT:
+    value: '#00A1E0'
+  SCHEDULE_OBJECTIVE:
+    value: '#2A739E'

@@ -4,6 +4,19 @@
 
 <!-- ## [Unreleased] -->
 
+## 2.11.8
+
+### Changed
+
+- Adjusted positioning for `slds-th__action-button` for better vertical alignment and made additional
+  changes to support appearance in the touch implementation
+
+## 2.11.7
+
+### Changed
+
+- Updated height and width dimensions on touch version of `slds-th__action-button`
+
 ## 2.10.0
 
 ### Changed

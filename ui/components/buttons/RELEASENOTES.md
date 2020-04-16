@@ -8,7 +8,7 @@
 
 ### Changed
 
-- Changed disabled inverse button text color to 50% opacity.
+- Set the inverse button text color to 50% opacity when the button is disabled.
 
 ## 2.11.0
 

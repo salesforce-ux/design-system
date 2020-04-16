@@ -6,12 +6,12 @@
 
 ## 2.12.0
 
-### Changed
+### Added
 
-- Added a small variant to visual picker
+- Added a Small variant to the visual picker
 
 ## 2.7.0
 
 ### Changed
 
-- Updated disabled visual picker UI to be more apparent and better match established conventions for disabled UI
+- Updated the disabled visual picker UI to be more apparent and a better match to the established conventions for disabled UI

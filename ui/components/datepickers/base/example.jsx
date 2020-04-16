@@ -47,7 +47,7 @@ let DatepickerHeader = props => (
         aria-atomic="true"
         aria-live="assertive"
         className="slds-align-middle"
-        id="month"
+        id={`${props.idPrefix}-month`}
       >
         June
       </h2>
@@ -61,39 +61,42 @@ let DatepickerHeader = props => (
       </div>
     </div>
     <div className="slds-shrink-none">
-      <label className="slds-assistive-text" htmlFor="select-01">
+      <label
+        className="slds-assistive-text"
+        htmlFor={`${props.idPrefix}_select`}
+      >
         Pick a Year
       </label>
-      <Select>
-        <option>2014</option>
-        <option>2015</option>
-        <option>2016</option>
+      <Select id={`${props.idPrefix}_select`}>
+        <option>2020</option>
+        <option>2021</option>
+        <option>2022</option>
       </Select>
     </div>
   </div>
 );
 
 let Weekdays = props => (
-  <tr id="weekdays">
-    <th id="Sunday" scope="col">
+  <tr id={`${props.idPrefix}-weekdays`}>
+    <th id={`${props.idPrefix}-Sunday`} scope="col">
       <abbr title="Sunday">Sun</abbr>
     </th>
-    <th id="Monday" scope="col">
+    <th id={`${props.idPrefix}-Monday`} scope="col">
       <abbr title="Monday">Mon</abbr>
     </th>
-    <th id="Tuesday" scope="col">
+    <th id={`${props.idPrefix}-Tuesday`} scope="col">
       <abbr title="Tuesday">Tue</abbr>
     </th>
-    <th id="Wednesday" scope="col">
+    <th id={`${props.idPrefix}-Wednesday`} scope="col">
       <abbr title="Wednesday">Wed</abbr>
     </th>
-    <th id="Thursday" scope="col">
+    <th id={`${props.idPrefix}-Thursday`} scope="col">
       <abbr title="Thursday">Thu</abbr>
     </th>
-    <th id="Friday" scope="col">
+    <th id={`${props.idPrefix}-Friday`} scope="col">
       <abbr title="Friday">Fri</abbr>
     </th>
-    <th id="Saturday" scope="col">
+    <th id={`${props.idPrefix}-Saturday`} scope="col">
       <abbr title="Saturday">Sat</abbr>
     </th>
   </tr>
@@ -106,12 +109,27 @@ let Day = props => (
     aria-disabled={props['aria-disabled']}
     aria-selected={props['aria-selected']}
     aria-current={props['aria-current']}
-    className={props.className}
+    className={classNames(props.className, {
+      'slds-day_adjacent-month': props.isAdjacentMonth
+    })}
     role="gridcell"
     tabIndex={props.tabIndex}
   >
     <span className="slds-day">{props.children}</span>
   </td>
+);
+
+export let SimpleTable = props => (
+  <table className="slds-table">
+    <tr>
+      <th>Name</th>
+      <th>Date</th>
+    </tr>
+    <tr>
+      <td>Order</td>
+      <td>{props.children}</td>
+    </tr>
+  </table>
 );
 
 /* -----------------------------------------------------------------------------
@@ -120,23 +138,19 @@ let Day = props => (
 
 export let DatePicker = props => (
   <DatepickerContainer className="slds-dropdown slds-dropdown_left">
-    <DatepickerHeader />
+    <DatepickerHeader idPrefix={props.idPrefix} />
     <table
-      aria-labelledby="month"
+      aria-labelledby={`${props.idPrefix}-month`}
       aria-multiselectable="true"
       className="slds-datepicker__month"
       role="grid"
     >
       <thead>
-        <Weekdays />
+        <Weekdays idPrefix={props.idPrefix} />
       </thead>
       <tbody>
         <Week>
-          <Day
-            aria-disabled="true"
-            aria-selected="false"
-            className="slds-disabled-text"
-          >
+          <Day aria-selected="false" isAdjacentMonth>
             31
           </Day>
           <Day aria-selected="false" tabIndex="0">
@@ -306,66 +320,62 @@ export let DatePicker = props => (
             30
           </Day>
           <Day
-            aria-disabled="true"
             aria-selected={
               props.dateSelected !== 'single' && props.dateRange === 'week-5'
                 ? 'true'
                 : 'false'
             }
             className={classNames(
-              'slds-disabled-text',
               props.dateSelected !== 'single' && props.dateRange === 'week-5'
                 ? 'slds-is-selected slds-is-selected-multi'
                 : null
             )}
+            isAdjacentMonth
           >
             1
           </Day>
           <Day
-            aria-disabled="true"
             aria-selected={
               props.dateSelected !== 'single' && props.dateRange === 'week-5'
                 ? 'true'
                 : 'false'
             }
             className={classNames(
-              'slds-disabled-text',
               props.dateSelected !== 'single' && props.dateRange === 'week-5'
                 ? 'slds-is-selected slds-is-selected-multi'
                 : null
             )}
+            isAdjacentMonth
           >
             2
           </Day>
           <Day
-            aria-disabled="true"
             aria-selected={
               props.dateSelected !== 'single' && props.dateRange === 'week-5'
                 ? 'true'
                 : 'false'
             }
             className={classNames(
-              'slds-disabled-text',
               props.dateSelected !== 'single' && props.dateRange === 'week-5'
                 ? 'slds-is-selected slds-is-selected-multi'
                 : null
             )}
+            isAdjacentMonth
           >
             3
           </Day>
           <Day
-            aria-disabled="true"
             aria-selected={
               props.dateSelected !== 'single' && props.dateRange === 'week-5'
                 ? 'true'
                 : 'false'
             }
             className={classNames(
-              'slds-disabled-text',
               props.dateSelected !== 'single' && props.dateRange === 'week-5'
                 ? 'slds-is-selected slds-is-selected-multi'
                 : null
             )}
+            isAdjacentMonth
           >
             4
           </Day>
@@ -373,6 +383,41 @@ export let DatePicker = props => (
       </tbody>
     </table>
   </DatepickerContainer>
+);
+
+export let DatePickerElement = props => (
+  <FormElement
+    formElementClassName={
+      'slds-dropdown-trigger slds-dropdown-trigger_click' +
+      (props.isOpen && ' slds-is-open')
+    }
+    labelContent={props.labelContent}
+    inputId={props.dateInputId}
+    hasRightIcon
+    hasError={props.hasError}
+    dropdown={
+      <DatePicker
+        idPrefix={props.idPrefix}
+        todayActive={props.todayActive}
+        todayActiveInRange={props.todayActiveInRange}
+        dateSelected={props.dateSelected}
+        dateRange={props.dateRange}
+        dateRangeMulti={props.dateRangeMulti}
+      />
+    }
+  >
+    <Input
+      id={props.dateInputId}
+      placeholder=" "
+      defaultValue={props.defaultValue}
+    />
+    <ButtonIcon
+      className="slds-input__icon slds-input__icon_right"
+      symbol="event"
+      assistiveText="Select a date"
+      title="Select a date"
+    />
+  </FormElement>
 );
 
 /* -----------------------------------------------------------------------------
@@ -384,21 +429,13 @@ export const Context = props => (
 );
 
 export default (
-  <FormElement
-    formElementClassName="slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open"
+  <DatePickerElement
+    idPrefix="defaulPicker"
     labelContent="Date"
-    inputId={dateInputId}
-    hasRightIcon
-    dropdown={<DatePicker todayActive />}
-  >
-    <Input id={dateInputId} placeholder=" " />
-    <ButtonIcon
-      className="slds-input__icon slds-input__icon_right"
-      symbol="event"
-      assistiveText="Select a date"
-      title="Select a date"
-    />
-  </FormElement>
+    dateInputId={dateInputId + '-default'}
+    isOpen
+    todayActive
+  />
 );
 
 export let states = [
@@ -406,45 +443,91 @@ export let states = [
     id: 'datepicker-day-selected',
     label: 'Date selected',
     element: (
-      <FormElement
-        formElementClassName="slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open"
+      <DatePickerElement
+        idPrefix="pickerDaySelected"
         labelContent="Date"
-        inputId={dateInputId}
-        hasRightIcon
-        dropdown={
-          <DatePicker todayActive dateSelected="single" dateRange="week-4" />
-        }
-      >
-        <Input id={dateInputId} placeholder=" " defaultValue="06/24/2014" />
-        <ButtonIcon
-          className="slds-input__icon slds-input__icon_right"
-          symbol="event"
-          assistiveText="Select a date"
-          title="Select a date"
-        />
-      </FormElement>
+        dateInputId={dateInputId + '-day_selected'}
+        isOpen
+        todayActive
+        dateSelected="single"
+        dateRange="week-4"
+        defaultValue="06/24/2020"
+      />
     )
   },
   {
     id: 'datepicker-with-error',
     label: 'Date Picker has Error',
     element: (
-      <FormElement
-        formElementClassName="slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open"
-        hasError
+      <DatePickerElement
+        idPrefix="pickerWithError"
         labelContent="Date"
-        inputId={dateInputId}
-        hasRightIcon
-        dropdown={<DatePicker todayActive />}
-      >
-        <Input id={dateInputId} placeholder=" " />
-        <ButtonIcon
-          className="slds-input__icon slds-input__icon_right"
-          symbol="event"
-          assistiveText="Select a date"
-          title="Select a date"
-        />
+        dateInputId={dateInputId + '-error'}
+        isOpen
+        todayActive
+        hasError
+      />
+    )
+  }
+];
+
+export let examples = [
+  {
+    id: 'mobile',
+    label: 'Mobile',
+    element: (
+      <FormElement labelContent="Date" inputId={dateInputId + '-mobile'}>
+        <Input id={dateInputId + '-mobile'} type="datetime-local" />
       </FormElement>
+    )
+  },
+  {
+    id: 'datepicker-in-datatable',
+    label: 'Datepicker in a Data Table',
+    element: (
+      <SimpleTable>
+        <DatePickerElement
+          idPrefix="pickerInTable"
+          labelContent="Date"
+          dateInputId={dateInputId + '-table'}
+          isOpen
+          todayActive
+        />
+      </SimpleTable>
+    )
+  },
+  {
+    id: 'datepicker-in-datatable_date-selected',
+    label: 'Datepicker with date selected in a Data Table',
+    element: (
+      <SimpleTable>
+        <DatePickerElement
+          idPrefix="pickerInTable-selected"
+          labelContent="Date"
+          dateInputId={dateInputId + '-table'}
+          isOpen
+          todayActive
+          dateSelected="single"
+          dateRange="week-4"
+          defaultValue="06/24/2020"
+        />
+      </SimpleTable>
+    )
+  },
+  {
+    id: 'datepicker-in-datatable_with-error',
+    label: 'Datepicker with an error in a Data Table',
+    element: (
+      <SimpleTable>
+        <DatePickerElement
+          idPrefix="pickerInTable-error"
+          labelContent="Date"
+          dateInputId={dateInputId + '-table'}
+          isOpen
+          todayActive
+          hasError
+        />
+      </SimpleTable>
     )
   }
 ];

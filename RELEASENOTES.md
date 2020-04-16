@@ -3,10 +3,16 @@
 
 ## Release 2.12.0 - May 8, 2020
 
+- Updated Icons to 9.35.0
+
 ## Components
 ### [Buttons](https://www.lightningdesignsystem.com/components/buttons)
 #### Changed
-- Changed disabled inverse button text color to 50% opacity.
+- Set the inverse button text color to 50% opacity when the button is disabled.
+
+### [Input](https://www.lightningdesignsystem.com/components/input)
+#### Fixed
+- Resolved issue where Chrome on Android was rendering misaligned text for date-related input types.
 
 ### [Popovers](https://www.lightningdesignsystem.com/components/popovers)
 #### Fixed
@@ -14,17 +20,101 @@
 
 ### [Progress Ring](https://www.lightningdesignsystem.com/components/progress-ring)
 #### Fixed
-- Resolved IE11 issue with positioning of the `.slds-progress-ring__progress` element by setting more explicit position settings.
+- Resolved an IE11 issue with positioning of the `.slds-progress-ring__progress` element by setting more explicit position settings.
 #### Changed
-- Changed blueprint recommendation to use a `<circle>` element instead of a `<path>` when the completion of the progress circle is 100%. This resolves an IE11 rendering issue with completed rings.
+- Set the blueprint recommendation to use a `<circle>` element instead of a `<path>` element when the completion of the progress circle is 100%. This change resolves an IE11 rendering issue with completed rings.
 
 ### [Visual Picker](https://www.lightningdesignsystem.com/components/visual-picker)
-#### Changed
-- Added a small variant to visual picker
+#### Added
+- Added a Small variant to the visual picker
 
 ## Utilities
 ### [Line Clamp](https://www.lightningdesignsystem.com/utilities/line-clamp)
-- Added Line Clamp x-small modifier that clamps at 2 lines.
+#### Added
+- Added an X-Small modifier that truncates text after two lines.
+
+## Release 2.11.8 - April 15, 2020
+
+## Components
+### [Data Tables](https://www.lightningdesignsystem.com/components/data-tables)
+#### Changed
+- Adjusted positioning for `slds-th__action-button` for better vertical alignment and made additional
+  changes to support appearance in the touch implementation
+
+## Release 2.11.7 - April 2, 2020
+
+- Moved font-size declaration on touch devices to the touch CSS file
+
+## Components
+### [Accordion](https://www.lightningdesignsystem.com/components/accordion)
+#### Changed
+- Adapted line height on accordion buttons to function better with multi-line instances.
+
+### [Combobox](https://www.lightningdesignsystem.com/components/combobox)
+#### Added
+- Added documentation and examples for mobile/touch context
+
+### [Data Tables](https://www.lightningdesignsystem.com/components/data-tables)
+#### Changed
+- Updated height and width dimensions on touch version of `slds-th__action-button`
+
+### [Datepickers](https://www.lightningdesignsystem.com/components/datepickers)
+#### Fixed
+- Resolved incorrect spacing when nested in a data table by increasing specificity of certain `slds-datepicker` specific CSS selectors
+<!-- ## [VERSION] -->
+
+### [Datepickers](https://www.lightningdesignsystem.com/components/datepickers)
+#### Changed
+- Replaced `slds-disabled-text` with specific selector `slds-day_adjacent-month` for dates outside of current month, so that they will be selectable but with a different text color that meets accessibility requirements.
+
+### [Form Element](https://www.lightningdesignsystem.com/components/form-element)
+#### Added
+- Added documentation and examples for mobile/touch context
+
+### [Input](https://www.lightningdesignsystem.com/components/input)
+#### Added
+- Added documentation and examples for mobile/touch context
+
+### [Map](https://www.lightningdesignsystem.com/components/map)
+#### Added
+- Added documentation and examples for mobile/touch context
+
+### [Menus](https://www.lightningdesignsystem.com/components/menus)
+#### Added
+- Added documentation and examples for mobile/touch context
+
+### [Modals](https://www.lightningdesignsystem.com/components/modals)
+#### Added
+- Added documentation and examples for mobile/touch context
+
+### [Pills](https://www.lightningdesignsystem.com/components/pills)
+#### Added
+- Added documentation and examples for mobile/touch context
+
+### [Popovers](https://www.lightningdesignsystem.com/components/popovers)
+#### Added
+- Added documentation and examples for mobile/touch context
+
+### [Progress Indicator](https://www.lightningdesignsystem.com/components/progress-indicator)
+#### Added
+- Added documentation and examples for mobile/touch context
+
+### [Radio Button Group](https://www.lightningdesignsystem.com/components/radio-button-group)
+#### Added
+- Added documentation and examples for mobile/touch context
+
+### [Radio Group](https://www.lightningdesignsystem.com/components/radio-group)
+#### Added
+- Added documentation and examples for mobile/touch context
+
+### [Slider](https://www.lightningdesignsystem.com/components/slider)
+#### Added
+- Added documentation and examples for mobile/touch context
+
+## Utilities
+### [Text Utility](https://www.lightningdesignsystem.com/utilities/text)
+#### Added
+- Added documentation and examples for mobile/touch context
 
 ## Release 2.11.6 - March 11, 2020
 
@@ -51,7 +141,8 @@
 
 ## Components
 ### [Accordion](https://www.lightningdesignsystem.com/components/accordion)
-- Replaced `slds-truncate` with specific selector `slds-accordion__summary-content` in Accordion title so content will only truncate for larger screens
+#### Changed
+- Replaced `slds-truncate` with specific selector `slds-accordion__summary-content` in Accordion title so content will only truncate for larger screens.
 
 ### [Badges](https://www.lightningdesignsystem.com/components/badges)
 - Added examples for communicating Success, Warning and Error states.
@@ -255,7 +346,7 @@
 ## Utilities
 ### [Line Clamp](https://www.lightningdesignsystem.com/utilities/line-clamp)
 #### Added
-- Added Line Clamp utility with four modifier options:
+- Added the Line Clamp utility with four modifier options:
   - `.slds-line-clamp` - clamps at 3 lines, value provided by `line-clamp` token.
   - `.slds-line-clamp_small` - clamps at 3 lines
   - `.slds-line-clamp_medium` - clamps at 5 lines
@@ -514,7 +605,7 @@
 ## Components
 ### [Rich Text Editor](https://www.lightningdesignsystem.com/components/rich-text-editor)
 #### Fixed
-- Added text treatments for `<ins>` and `<del>
+- Added text treatments for `<ins>` and `<del>`
 
 ## Release 2.9.4 - July 3, 2019
 
@@ -662,7 +753,7 @@
 ## Components
 ### [Accordion](https://www.lightningdesignsystem.com/components/accordion)
 #### Changed
-- Updated Accordion title to respond to user's densification settings
+- Updated Accordion title to respond to user's densification settings.
 
 ### [Alert](https://www.lightningdesignsystem.com/components/alert)
 #### Fixed
@@ -937,7 +1028,7 @@
 ## Components
 ### [Accordion](https://www.lightningdesignsystem.com/components/accordion)
 #### Removed
-- Removed hard coded text sizing utility class, `slds-text-heading_small`, from the `slds-accordion__summary-heading` element
+- Removed hard coded text sizing utility class, `slds-text-heading_small`, from the `slds-accordion__summary-heading` element.
 
 ### [Alert](https://www.lightningdesignsystem.com/components/alert)
 #### Changed
@@ -1285,7 +1376,7 @@
 
 ### [Visual Picker](https://www.lightningdesignsystem.com/components/visual-picker)
 #### Changed
-- Updated disabled visual picker UI to be more apparent and better match established conventions for disabled UI
+- Updated the disabled visual picker UI to be more apparent and a better match to the established conventions for disabled UI
 
 ### [Welcome Mat](https://www.lightningdesignsystem.com/components/welcome-mat)
 #### Changed

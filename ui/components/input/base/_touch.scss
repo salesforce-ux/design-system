@@ -22,6 +22,16 @@
     // stylelint-enable property-no-vendor-prefix
   }
 
+  // Temporary fix for misaligned selection for datepickers in Android
+  &[type='date'],
+  &[type='datetime'],
+  &[type='datetime-local'],
+  &[type='time'],
+  &[type='week'],
+  &[type='month'] {
+    display: inline-flex;
+  }
+
   /**
    * Platform-native styled inputs using 'appearance' CSS property set their own min-height and our line-height isn't recognized
    * until a value is selected (e.x. date input). For mobile devices, this causes height discrepancies before and after selecting

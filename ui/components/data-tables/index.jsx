@@ -12,6 +12,67 @@ import { Checkbox } from '../checkbox/base/example';
 import { Radio } from '../radio-group/base/example';
 import { UtilityIcon } from '../icons/base/example';
 
+export const cellContentTextLong =
+  'Cell content that is very long.\nIt also has a line break.\nIt has more than one line break';
+
+export const HeadRowData = props => (
+  <THeadTr>
+    <ColumnTh>
+      <ColumnHeader columnName="Opportunity Name" />
+    </ColumnTh>
+    <ColumnTh>
+      <ColumnHeader columnName="Account Name" />
+    </ColumnTh>
+    <ColumnTh>
+      <ColumnHeader columnName="Close Date" />
+    </ColumnTh>
+    <ColumnTh>
+      <ColumnHeader columnName="Stage" />
+    </ColumnTh>
+    <ColumnTh>
+      <ColumnHeader columnName="Confidence" />
+    </ColumnTh>
+    <ColumnTh>
+      <ColumnHeader columnName="Amount" />
+    </ColumnTh>
+    <ColumnTh>
+      <ColumnHeader columnName="Contact" />
+    </ColumnTh>
+  </THeadTr>
+);
+
+export const RowData = props => (
+  <TBodyTr>
+    <RowTh data-label="Opportunity Name">
+      <ReadOnlyCell cellText={props.title} cellLink="javascript:void(0);" />
+    </RowTh>
+    <Td data-label="Account Name" type="base">
+      <ReadOnlyCell cellText="Cloudhub" />
+    </Td>
+    <Td data-label="Close Date" type="base">
+      <ReadOnlyCell cellText="4/14/2015" />
+    </Td>
+    <Td data-label="Prospecting" type="base">
+      <ReadOnlyCell cellText="Prospecting" />
+    </Td>
+    <Td data-label="Confidence" type="base">
+      <ReadOnlyCell cellText="20%" />
+    </Td>
+    <Td data-label="Amount" type="base">
+      <ReadOnlyCell cellText="$25k" />
+    </Td>
+    <Td data-label="Contact" type="base">
+      <ReadOnlyCell
+        cellLink="javascript:void(0);"
+        cellText="jrogers@cloudhub.com"
+      />
+    </Td>
+  </TBodyTr>
+);
+RowData.propTypes = {
+  title: PropTypes.string
+};
+
 export const InlineEditTableContainer = props => (
   <div className="slds-table_edit_container slds-is-relative">
     {props.children}
@@ -128,7 +189,8 @@ export const ColumnTh = props => {
       props.sortDirection === 'ascending' ||
       props.sortDirection === 'descending',
     'slds-is-sorted_asc': props.sortDirection === 'ascending',
-    'slds-is-sorted_desc': props.sortDirection === 'descending'
+    'slds-is-sorted_desc': props.sortDirection === 'descending',
+    'slds-cell-wrap': props.hasWrap
   });
 
   return (
@@ -481,7 +543,8 @@ export const Td = props => {
     'slds-cell-error': props.isErrorCell,
     'slds-text-align_right': props.isRightAligned,
     'slds-cell-shrink': props.isShrunken,
-    'slds-has-error': props.hasError
+    'slds-has-error': props.hasError,
+    'slds-cell-wrap': props.hasWrap
   });
 
   const getComputedRole = () => {
@@ -535,7 +598,8 @@ export const RowTh = props => {
     'slds-cell-edit': props.isEditable,
     'slds-has-focus': props.hasFocus,
     'slds-tree__item': props.type === 'treegrid',
-    'slds-is-hovered': props.isItemHovered
+    'slds-is-hovered': props.isItemHovered,
+    'slds-cell-wrap': props.hasWrap
   });
 
   return (
@@ -647,14 +711,22 @@ ErrorCell.propTypes = {
 /**
  * @name ReadOnlyCell - Cell content common to all readonly data grid cell
  */
-export const ReadOnlyCell = props => (
-  <div className="slds-truncate" title={props.cellText}>
-    {props.cellLink ? (
-      <a href={props.cellLink} tabIndex={props.actionableMode ? '0' : '-1'}>
-        {props.cellText}
+export const ReadOnlyCell = ({
+  hasWrap,
+  cellText,
+  cellLink,
+  actionableMode
+}) => (
+  <div
+    className={classNames(hasWrap ? 'slds-line-clamp' : 'slds-truncate')}
+    title={cellText}
+  >
+    {cellLink ? (
+      <a href={cellLink} tabIndex={actionableMode ? '0' : '-1'}>
+        {cellText}
       </a>
     ) : (
-      props.cellText
+      cellText
     )}
   </div>
 );

@@ -86,7 +86,7 @@
    * @modifier
    */
   .slds-cell-wrap {
-    white-space: normal;
+    white-space: pre-line;
     overflow-wrap: break-word;
     word-wrap: break-word;
   }
@@ -386,8 +386,15 @@
  * @selector .slds-has-button-menu
  * @restrict .slds-table_fixed-layout th
  */
-.slds-has-button-menu .slds-th__action {
-  padding-right: $spacing-large;
+.slds-has-button-menu {
+
+  .slds-th__action {
+    padding-right: $spacing-x-large;
+  }
+
+  .slds-th__action-button {
+    right: $spacing-small;
+  }
 }
 
 /**
@@ -479,11 +486,7 @@ $max-column-support: 15;
  * @restrict .slds-table_resizable-cols th
  */
 .slds-is-resizable {
-
-  .slds-th__action:hover,
-  .slds-th__action:focus {
-    box-shadow: $color-border-separator-alt ($spacing-xx-small * -1) 0 0 inset;
-  }
+  position: relative;
 }
 
 /**
@@ -502,22 +505,11 @@ $max-column-support: 15;
    * @restrict .slds-resizable span
    */
   &__handle {
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: $spacing-xx-small;
+    width: $spacing-large;
     height: 100%;
-    background: $color-background-button-brand;
-    display: block;
-    cursor: col-resize;
-    opacity: 0;
-    z-index: $z-index-popup;
-
-    &:hover,
-    &:focus,
-    &:active {
-      opacity: 1;
-    }
+    position: absolute;
+    top: 0;
+    right: -$spacing-small;
   }
 
   /**
@@ -529,15 +521,49 @@ $max-column-support: 15;
   &__divider {
     position: absolute;
     right: 0;
-    height: 100vh;
-    width: 1px;
-    background: $color-background-button-brand;
-  }
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    cursor: col-resize;
+    z-index: $z-index-popup;
 
-  // No idea what this does
-  // It looks like it would make the resizable handle show up when the input in the header has focus?
-  &__input:focus ~ .slds-resizable__handle {
-    opacity: 1;
+    &:before,
+    &:after {
+      height: 100%;
+      content: ' ';
+      display: block;
+      position: absolute;
+      top: 0;
+      right: $spacing-small;
+    }
+
+    &:before {
+      background-color: $table-color-background-header-resizable-handle;
+      height: 100%;
+      width: $border-width-thin;
+    }
+
+    &:after {
+      background-color: $color-background-button-brand;
+      width: $border-width-thin;
+      height: 100vh;
+      opacity: 0;
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+
+      &:before {
+        background-color: $color-background-button-brand;
+        width: $spacing-xx-small;
+      }
+
+      &:after {
+        opacity: 1;
+      }
+    }
   }
 }
 

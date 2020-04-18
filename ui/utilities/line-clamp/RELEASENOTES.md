@@ -4,6 +4,10 @@
 
 ## 2.12.0
 
+### Changed
+
+- Changed `white-space` property to `pre-line` in `slds-line-clamp` in consideration of content that has pre-formatted line breaks.
+
 ### Added
 
 - Added an X-Small modifier that truncates text after two lines.

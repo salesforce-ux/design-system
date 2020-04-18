@@ -4,10 +4,21 @@
 
 <!-- ## [Unreleased] -->
 
+## 2.12.0
+
+### Changed
+
+- Changed `white-space` property to `pre-line` in `slds-cell-wrap` for cell content that has pre-formatted line breaks.
+
+### Added
+
+- Added documentation and examples for wrapping, line clamping and truncating table cell content.
+
 ## 2.11.8
 
 ### Changed
 
+- Adjusted positioning for resize handle for better usability on touch devices, and made the handle visible in all cases
 - Adjusted positioning for `slds-th__action-button` for better vertical alignment and made additional
   changes to support appearance in the touch implementation
 

@@ -24,7 +24,8 @@ import {
   ErrorCell,
   ReadOnlyCell,
   EditableCell,
-  EditPopover
+  EditPopover,
+  cellContentTextLong
 } from '../';
 import { StandardIcon } from '../../icons/standard/example';
 
@@ -504,6 +505,20 @@ describe('Td component', () => {
     matchesMarkup(
       <Td type="advanced">
         <div />
+      </Td>
+    ));
+
+  it('should have truncated text', () =>
+    matchesMarkup(
+      <Td type="base">
+        <ReadOnlyCell cellText={cellContentTextLong} />
+      </Td>
+    ));
+
+  it('should wrap and line clamp text', () =>
+    matchesMarkup(
+      <Td type="base" hasWrap>
+        <ReadOnlyCell cellText={cellContentTextLong} hasWrap />
       </Td>
     ));
 });

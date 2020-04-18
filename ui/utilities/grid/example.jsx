@@ -573,7 +573,7 @@ export let examples = [
   {
     id: 'vertical-align-start',
     label: 'Grid Vertical Align start',
-    demoStyles: `.slds-grid { height: 200px; }`,
+    demoStyles: '.slds-grid { height: 200px; }',
     element: (
       <Grid className="slds-grid_vertical-align-start">
         <Column>1</Column>
@@ -585,7 +585,7 @@ export let examples = [
   {
     id: 'vertical-align-center',
     label: 'Grid Vertical Align center',
-    demoStyles: `.slds-grid { height: 200px; }`,
+    demoStyles: '.slds-grid { height: 200px; }',
     element: (
       <Grid className="slds-grid_vertical-align-center">
         <Column>1</Column>
@@ -597,7 +597,7 @@ export let examples = [
   {
     id: 'vertical-align-end',
     label: 'Grid Vertical Align end',
-    demoStyles: `.slds-grid { height: 200px; }`,
+    demoStyles: '.slds-grid { height: 200px; }',
     element: (
       <Grid className="slds-grid_vertical-align-end">
         <Column>1</Column>
@@ -609,7 +609,7 @@ export let examples = [
   {
     id: 'vertical-align-absolute-center',
     label: 'Grid Vertical Align absolute center',
-    demoStyles: `.slds-grid { height: 200px; }`,
+    demoStyles: '.slds-grid { height: 200px; }',
     element: (
       <Grid className="slds-grid_vertical-align-center slds-grid_align-center">
         <Column>1</Column>
@@ -621,7 +621,7 @@ export let examples = [
   {
     id: 'vertical-align-individual',
     label: 'Grid Vertical Align individual',
-    demoStyles: `.slds-grid { height: 200px; }`,
+    demoStyles: '.slds-grid { height: 200px; }',
     element: (
       <Grid>
         <Column className="slds-align-top">1</Column>

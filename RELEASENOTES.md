@@ -10,6 +10,12 @@
 #### Changed
 - Set the inverse button text color to 50% opacity when the button is disabled.
 
+### [Data Tables](https://www.lightningdesignsystem.com/components/data-tables)
+#### Changed
+- Changed `white-space` property to `pre-line` in `slds-cell-wrap` for cell content that has pre-formatted line breaks.
+#### Added
+- Added documentation and examples for wrapping, line clamping and truncating table cell content.
+
 ### [Input](https://www.lightningdesignsystem.com/components/input)
 #### Fixed
 - Resolved issue where Chrome on Android was rendering misaligned text for date-related input types.
@@ -30,6 +36,8 @@
 
 ## Utilities
 ### [Line Clamp](https://www.lightningdesignsystem.com/utilities/line-clamp)
+#### Changed
+- Changed `white-space` property to `pre-line` in `slds-line-clamp` in consideration of content that has pre-formatted line breaks.
 #### Added
 - Added an X-Small modifier that truncates text after two lines.
 
@@ -38,6 +46,7 @@
 ## Components
 ### [Data Tables](https://www.lightningdesignsystem.com/components/data-tables)
 #### Changed
+- Adjusted positioning for resize handle for better usability on touch devices, and made the handle visible in all cases
 - Adjusted positioning for `slds-th__action-button` for better vertical alignment and made additional
   changes to support appearance in the touch implementation
 

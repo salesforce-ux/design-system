@@ -13,6 +13,8 @@
 ### [Data Tables](https://www.lightningdesignsystem.com/components/data-tables)
 #### Changed
 - Changed `white-space` property to `pre-line` in `slds-cell-wrap` for cell content that has pre-formatted line breaks.
+- Adjusted positioning for resize handle for better usability on touch devices, and made the handle visible in all cases
+- Removed styles from `slds-is-resizable`
 #### Added
 - Added documentation and examples for wrapping, line clamping and truncating table cell content.
 
@@ -46,7 +48,6 @@
 ## Components
 ### [Data Tables](https://www.lightningdesignsystem.com/components/data-tables)
 #### Changed
-- Adjusted positioning for resize handle for better usability on touch devices, and made the handle visible in all cases
 - Adjusted positioning for `slds-th__action-button` for better vertical alignment and made additional
   changes to support appearance in the touch implementation
 

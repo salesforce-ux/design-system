@@ -20,6 +20,8 @@
 !/.prettierignore
 !/.storybook
 !/.circleci
+!/.npmrc
+!/.nvmrc
 
 # Add a .gitkeep file in an empty
 # directory to check it in the repository

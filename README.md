@@ -25,6 +25,14 @@ If you've just installed the project, you will need to run `npm run full-start` 
 
 Whenever you add or remove a component, you'll want to perform this full-start. Otherwise, you can just run `npm start` to start the Storybook server without a build.
 
+### Configuring Node and NVM
+
+Node v12 is recommended for use with the Design System repository, and [NVM](http://nvm.sh/) is the recommended choice for managing multiple versions of Node on your computer.
+
+A .nvmrc file is included in this project to aid in local development. To utilize it for setting your project's node version, run `nvm use` in the root of the directory. 
+Additionally, you can set up a deeper shell integration for automatically invoking the nvmrc file when you change into the project directory by 
+[following these instructions](https://github.com/nvm-sh/nvm#deeper-shell-integration).
+
 ## Developing in Storybook
 
 Once the development server is started with `npm start`, you can load it at [http://localhost:9002](http://localhost:9002/).

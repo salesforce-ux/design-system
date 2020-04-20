@@ -8,7 +8,7 @@ executors:
   slds-executor:
     working_directory: ~/repo
     docker:
-      - image: circleci/node:10-browsers
+      - image: circleci/node:12-browsers
     resource_class: medium+
     # parallelism: 4
 
@@ -25,8 +25,6 @@ jobs:
       - restore_cache:
           keys:
             - dependencies-{{ checksum "package.json" }}
-            # fallback to using the latest cache if no exact match is found
-            - dependencies-
 
       - run:
           name: npm-install

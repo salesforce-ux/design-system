@@ -485,9 +485,7 @@ $max-column-support: 15;
  * @selector .slds-is-resizable
  * @restrict .slds-table_resizable-cols th
  */
-.slds-is-resizable {
-  position: relative;
-}
+
 
 /**
  * Resizable handle
@@ -509,7 +507,7 @@ $max-column-support: 15;
     height: 100%;
     position: absolute;
     top: 0;
-    right: -$spacing-small;
+    right: ($spacing-small * -1);
   }
 
   /**

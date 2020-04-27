@@ -263,6 +263,9 @@
         "name": "@salesforce/slds/legacy",
         "path": "assets/styles/salesforce-lightning-design-system-imports.sanitized.css"
       }
+    ],
+    "expose": [
+      "@salesforce/slds/legacy"
     ]
   }
 }

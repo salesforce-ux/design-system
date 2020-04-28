@@ -4,6 +4,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import _ from '../../shared/helpers';
 
 const Input = props => {
   const {
@@ -25,10 +26,12 @@ const Input = props => {
     'slds-input_counter': type === 'number'
   };
 
+  const uniqueId = _.uniqueId('text-input-unique-id-');
+
   return (
     <input
       {...props}
-      id={id}
+      id={id || uniqueId}
       className={classNames('slds-input', computedClassNames, className)}
       type={type}
       placeholder={placeholder}
@@ -44,7 +47,6 @@ const Input = props => {
 };
 
 Input.defaultProps = {
-  id: 'text-input-id-1',
   type: 'text'
 };
 

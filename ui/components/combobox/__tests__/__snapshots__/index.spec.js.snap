@@ -2061,7 +2061,7 @@ exports[`render combobox render grouped combobox 1`] = `
                     autoComplete="off"
                     className="slds-input slds-combobox__input slds-combobox__input-value"
                     defaultValue="Accounts"
-                    id="text-input-id-1"
+                    id="text-input-unique-id-37"
                     onBlur={[Function]}
                     onFocus={[Function]}
                     placeholder=" "
@@ -2629,7 +2629,7 @@ exports[`render combobox render grouped combobox displaying options based on use
                     autoComplete="off"
                     className="slds-input slds-combobox__input slds-combobox__input-value"
                     defaultValue="Accounts"
-                    id="text-input-id-1"
+                    id="text-input-unique-id-39"
                     onBlur={[Function]}
                     onFocus={[Function]}
                     placeholder=" "
@@ -3213,7 +3213,7 @@ exports[`render combobox render grouped combobox with selections made in collaps
                     autoComplete="off"
                     className="slds-input slds-combobox__input slds-combobox__input-value"
                     defaultValue="Accounts"
-                    id="text-input-id-1"
+                    id="text-input-unique-id-41"
                     onBlur={[Function]}
                     onFocus={[Function]}
                     placeholder=" "
@@ -4228,7 +4228,7 @@ exports[`render combobox render grouped combobox with selections made in expande
                     autoComplete="off"
                     className="slds-input slds-combobox__input slds-combobox__input-value"
                     defaultValue="Accounts"
-                    id="text-input-id-1"
+                    id="text-input-unique-id-43"
                     onBlur={[Function]}
                     onFocus={[Function]}
                     placeholder=" "

@@ -317,23 +317,27 @@ export let DeprecatedListboxItem = props => (
  * @name ListboxItemOption
  * @prop {string}  className - A CSS class for the outer element
  */
-export let DeprecatedListboxOption = props => (
-  <div
-    id={props.id || 'listbox-option-unique-id'}
-    className={classNames(
-      'slds-media slds-listbox__option',
-      {
-        'slds-listbox__option_plain': props.type === 'plain',
-        'slds-listbox__option_entity': props.type === 'entity'
-      },
-      props.className
-    )}
-    role="option"
-    tabIndex={props.tabIndex}
-  >
-    {props.children}
-  </div>
-);
+export let DeprecatedListboxOption = props => {
+  const uniqueId = _.uniqueId('listbox-option-unique-id-');
+
+  return (
+    <div
+      id={props.id || uniqueId}
+      className={classNames(
+        'slds-media slds-listbox__option',
+        {
+          'slds-listbox__option_plain': props.type === 'plain',
+          'slds-listbox__option_entity': props.type === 'entity'
+        },
+        props.className
+      )}
+      role="option"
+      tabIndex={props.tabIndex}
+    >
+      {props.children}
+    </div>
+  );
+};
 
 /**
  * An entity option is a type of listbox option, it contains a standard icon,

@@ -11,19 +11,19 @@ const examples = [BaseExamples];
 
 const kitchenSink = getAllDisplayCollectionsByType(examples, [
   'default',
-  'examples',
-  'states'
+  'states',
+  'examples'
 ]);
 
 storiesOf('Components/Datetime Picker', module).add(
   'Kitchen Sink',
   () =>
     kitchenSink.map((element, idx) =>
-      element.map(({ label, component }) => (
+      element.map(({ label, component, demoStyles }) => (
         <StoryFrame
           component={component}
           label={label}
-          styles="height: 25rem"
+          styles={demoStyles || 'height: 26rem;'}
           key={`kitchen-sink-${label}-${idx}`}
         />
       ))

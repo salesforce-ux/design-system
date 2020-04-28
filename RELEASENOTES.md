@@ -3,8 +3,6 @@
 
 ## Release 2.12.0 - May 8, 2020
 
-- Updated Icons to 9.35.0
-
 ## Components
 ### [Buttons](https://www.lightningdesignsystem.com/components/buttons)
 #### Changed
@@ -41,6 +39,10 @@
 - Changed `white-space` property to `pre-line` in `slds-line-clamp` in consideration of content that has pre-formatted line breaks.
 #### Added
 - Added an X-Small modifier that truncates text after two lines.
+
+## Release 2.11.9 - April 27, 2020
+
+- Updated Icons to 9.35.0
 
 ## Release 2.11.8 - April 15, 2020
 

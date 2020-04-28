@@ -1,5 +1,6 @@
 <!-- Release notes authoring guidelines: http://keepachangelog.com/ -->
 <!-- On release, add general notes here. In time the legacy release notes will be add to this -->
+## 2.11.9 - April 27, 2020
 
 ## 2.12.0 - May 8, 2020
 

@@ -8,7 +8,7 @@ import gulp from 'gulp';
 import gulpRename from 'gulp-rename';
 import through from 'through2';
 import discardComments from 'postcss-discard-comments';
-import { toList } from '@salesforce-ux/design-system-previewer/lib/tree';
+import { toList } from '../../../shared/utils/tree';
 import paths from '../../helpers/paths';
 import * as gulpHelpers from '../../helpers/gulp';
 import { uiJson } from '../../ui';

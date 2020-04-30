@@ -126,6 +126,7 @@
     "gulp-util": "3.0.8",
     "gulp-yaml-validate": "1.0.2",
     "gulp-zip": "4.0.0",
+    "husky": "4.2.5",
     "immutable": "3.8.2",
     "isomorphic-fetch": "2.2.1",
     "jest": "25.3.0",
@@ -202,7 +203,6 @@
     "stats": "npm run gulp -- stylestats",
     "pretest": "npm run gulp -- build",
     "test": "jest",
-    "precommit": "npm run release-notes:hook && lint-staged",
     "pr-checks": "npm run gulp -- pr-checks",
     "compile-aura-tokens-map": "npm run gulp -- generate:auraTokensMap",
     "compile-token-component-map": "npm run gulp -- generate:tokenComponentMap",
@@ -218,6 +218,11 @@
         "prettier --single-quote --write",
         "git add"
       ]
+    }
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run release-notes:hook && lint-staged"
     }
   },
   "jest": {

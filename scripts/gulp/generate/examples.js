@@ -1,10 +1,8 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-import { toList } from '@salesforce-ux/design-system-previewer/lib/tree';
 import Task from 'data.task';
 import Immutable from 'immutable';
-import glob from 'glob';
 import gulp from 'gulp';
 import gulpInsert from 'gulp-insert';
 import path from 'path';

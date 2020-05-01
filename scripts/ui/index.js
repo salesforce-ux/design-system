@@ -15,7 +15,7 @@ const createParser = require('@salesforce-ux/design-system-parser');
 const {
   mapTree,
   toList
-} = require('@salesforce-ux/design-system-previewer/lib/tree');
+} = require('../../shared/utils/tree');
 
 const getComments = require('./comments');
 const getShowcase = require('./showcase');

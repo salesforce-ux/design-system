@@ -1,5 +1,5 @@
 const Either = require('data.either');
-const { toList } = require('@salesforce-ux/design-system-previewer/lib/tree');
+const { toList } = require('../shared/utils/tree');
 
 const find = (list, f) => Either.fromNullable(list.find(f));
 

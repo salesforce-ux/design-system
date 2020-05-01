@@ -66,10 +66,6 @@ git push origin <topic-branch-name>
 
 Follow the ['Quick Start' instructions](README.md#quick-start) in our README.
 
-## Using the Previewer
-
-[Learn more about the Previewer](REAMDE.md#previewer) in our README.
-
 ## Annotations
 
 See the <a href="guidelines/ANNOTATIONS.md">annotations guide</a>.

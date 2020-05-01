@@ -54,6 +54,6 @@ The global doc styles live in `./shared/styles/doc.scss`.
 
 ### View Docs
 
-Docs will live-reload in the previewer. Make sure you click the "Documentation" button in the top right of the page to see them. It will fall back to older documentation if there is an error. Leave the web inspector console open to see if there are errors in compilation.
+Docs will live-reload in Storybook. Make sure you click the "Docs" button in the top left of the blueprint page to see them. Leave the web inspector console open to see if there are errors in compilation.
 
 Docs will also appear on the website. We don't recommend this setup, but if you insist, you can clone the site repository and leave it running. You do not have to restart the site server, but you do have to refresh the page to see changes.

@@ -46,3 +46,47 @@ export const getUtils = () =>
  * @param {string} name - utility name to get the data for
  */
 export const getUtil = name => ui.getIn(['utilities', name]);
+
+/**
+ * Returns array of components filtered by the criteria passed in
+ * @param {array} criteria - array of criteria objects used to filter component results,
+ *    ex. [ { path: ['annotations', 'layout'], type: <'exists','match','contains'>, value: <value> }, {...} ]
+ */
+export const getComponentsByCriteria = criteria => {
+  const components = ui.get('components');
+  let componentsFiltered = I.Map();
+
+  // iterate over all criteria
+  criteria.forEach(criterion => {
+    let filterRule;
+
+    switch (criterion.type) {
+      // exact match
+      case 'match':
+        filterRule = item => {
+          return item.getIn(criterion.path) === criterion.value;
+        };
+        break;
+
+      // contains matching
+      case 'contains':
+        filterRule = item =>
+          item.getIn(criterion.path).includes(criterion.value);
+        break;
+
+      // exists is default behavior
+      default:
+        filterRule = item => item.getIn(criterion.path);
+    }
+
+    // concatenate new results for each criterion
+    componentsFiltered = componentsFiltered.mergeDeep(
+      components.filter(filterRule)
+    );
+  });
+
+  return componentsFiltered
+    .keySeq()
+    .sort()
+    .toArray();
+};

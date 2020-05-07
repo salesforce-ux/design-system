@@ -7,7 +7,7 @@ module.exports = {
   batchName: process.env.CIRCLECI
     ? `PR #${process.env.SLDS_PR_NUMBER}`
     : 'Stand-alone',
-  // showLogs: true,
+  showLogs: true,
   saveDebugData: false,
   exitcode: false,
   concurrency: 100,

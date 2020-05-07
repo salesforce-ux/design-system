@@ -192,6 +192,7 @@
   },
   "scripts": {
     "start": "start-storybook -c .storybook -p 9002",
+    "start:mobile": "STORYBOOK_STORIES_TYPE='mobile' start-storybook -c .storybook -p 9003",
     "full-start": "npm run build-dist && start-storybook -c .storybook -p 9002",
     "build": "npm run gulp -- build",
     "dist": "npm run gulp -- dist",

@@ -1141,7 +1141,7 @@ The following issues have now been resolved:
 
 **SITE IA/ENHANCEMENTS**
 
-- New and improved [Messaging Guidelines](/guidelines/messaging-overview)
+- New and improved [Messaging Guidelines](/guidelines/messaging/overview)
 
 ## Release [2.2.1] - January 9, 2017
 

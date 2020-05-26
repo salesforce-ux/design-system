@@ -178,7 +178,7 @@
   color: currentColor;
   border: 0;
   text-transform: inherit; // For button menu to inherit the parents text-transform
-  z-index: 1; // For sub tab notification background coloring
+  z-index: 1; // For subtab notification background coloring
 
   &:hover,
   &:focus {

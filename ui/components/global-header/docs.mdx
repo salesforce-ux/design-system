@@ -19,7 +19,7 @@ import _ from '../../shared/helpers';
   all contexts in the Salesforce ecosystem (internal or 3rd party).
 </div>
 
-<CodeView exampleOnly demoStyles="position: relative; height: 20.25rem;">
+<CodeView isViewport exampleOnly demoStyles="position: relative; height: 20.25rem;">
   <GlobalHeader
     globalSearch={
       <ComboboxGroup
@@ -76,7 +76,7 @@ import _ from '../../shared/helpers';
 The global header is made up of 3 distinct sections, the logo, the global search, and the global actions. Each section is wrapped in a `<div>` with the class name `slds-global-header__item`. The search region gets the modifier class `slds-global-header__item_search`. This class provides particular styling to handle the search box.
 
 <Example title="global header layout">
-  <CodeBlock toggleCode={false}>
+  <CodeBlock>
     <header className="slds-global-header_container">
       <div className="slds-global-header">
         <div className="slds-global-header__item">...</div>
@@ -104,7 +104,7 @@ In most scenarios, you will want to fix the global header to the top of the view
 For screen reading users, we need to provide a way to navigate over the global header and directly to content regions. For this scenario, we need to provide two links above the global header that provides navigation to landmarks within the app. These links are visually hidden by default but become visible when focused.
 
 <Example title="global header jump links">
-  <CodeBlock toggleCode={false}>
+  <CodeBlock>
     <header className="slds-global-header_container">
       <a
         href="javascript:void(0);"
@@ -126,7 +126,7 @@ For screen reading users, we need to provide a way to navigate over the global h
 ## Base
 
 <Example title="base global header">
-  <CodeView demoStyles="position: relative; height: 21.25rem;">
+  <CodeView isViewport demoStyles="position: relative; height: 21.25rem;">
     <GlobalHeader
       globalSearch={
         <ComboboxGroup
@@ -181,7 +181,7 @@ For screen reading users, we need to provide a way to navigate over the global h
 
 The logo region is simply a `<div>` with the class name `slds-global-header__logo`. The logo is applied as a background image with CSS. This allows us to constrain the dimensions of the logo by a max-height of 40px and a max-width of 200px.
 
-<CodeView toggleCode={false}>
+<CodeView isViewport toggleCode={false} demoStyles="padding: 0.5rem 0; min-height: 3.5rem;">
   <div className="slds-global-header__item">
     <Logo />
   </div>
@@ -194,7 +194,7 @@ The global search component is used for application wide search. The form elemen
 ### Default
 
 <Example title="Global Header Search Default State">
-  <CodeView demoStyles="position: relative; height: 3.5rem;">
+  <CodeView isViewport demoStyles="position: relative; height: 5.5rem;">
     <GlobalHeader
       globalSearch={
         <ComboboxGroup
@@ -246,7 +246,7 @@ The global search component is used for application wide search. The form elemen
 ### Focused and expanded
 
 <Example title="Global Header Search Expanded State">
-  <CodeView demoStyles="position: relative; height: 21rem;">
+  <CodeView isViewport demoStyles="position: relative; height: 21rem;">
     <GlobalHeader
       globalSearch={
         <ComboboxGroup
@@ -300,7 +300,7 @@ The global search component is used for application wide search. The form elemen
 ### Active and typing
 
 <Example title="Global Header Search Active State">
-  <CodeView demoStyles="position: relative; height: 21rem;">
+  <CodeView isViewport demoStyles="position: relative; height: 21rem;">
     <GlobalHeader
       globalSearch={
         <ComboboxGroup
@@ -359,11 +359,9 @@ The global actions bar holds application wide task actions that will persist wit
 
 The global actions bar is located in the right region of the global header.
 
-<div className="docs-codeblock-example">
-  <div style={{ position: 'relative', height: '3.125rem' }}>
+<CodeView isViewport exampleOnly demoStyles="position: relative; height: 3.125rem;">
     <GlobalHeader />
-  </div>
-</div>
+</CodeView>
 
 ### Favorites
 
@@ -372,9 +370,11 @@ The favorites action is used to "favorite" a commonly used page within a user's 
 #### Not pressed
 
 <CodeView>
-  <li className="slds-global-actions__item">
-    <Favorites />
-  </li>
+  <ul className="slds-global-actions">
+    <li className="slds-global-actions__item">
+      <Favorites />
+    </li>
+  </ul>
 </CodeView>
 
 #### Pressed
@@ -391,9 +391,11 @@ When pressed, apply the class `slds-is-selected` to the `slds-global-actions__fa
 </Blockquote>
 
 <CodeView>
-  <li className="slds-global-actions__item">
-    <Favorites favoritesClicked />
-  </li>
+  <ul className="slds-global-actions">
+    <li className="slds-global-actions__item">
+      <Favorites favoritesClicked />
+    </li>
+  </ul>
 </CodeView>
 
 #### Disabled
@@ -401,9 +403,11 @@ When pressed, apply the class `slds-is-selected` to the `slds-global-actions__fa
 If the favorites action needs to become disabled, apply the `disabled` attribute and the class `slds-is-disabled` to the button with `class="slds-global-actions_favorites-action"`.
 
 <CodeView>
-  <li className="slds-global-actions__item">
-    <Favorites favoritesDisabled />
-  </li>
+  <ul className="slds-global-actions">
+    <li className="slds-global-actions__item">
+      <Favorites favoritesDisabled />
+    </li>
+  </ul>
 </CodeView>
 
 #### Favorites popover
@@ -425,9 +429,11 @@ The favorites popover is invoked when a user clicks on the dropdown arrow action
 ### Task
 
 <CodeView>
-  <li className="slds-global-actions__item">
-    <Task />
-  </li>
+  <ul className="slds-global-actions">
+    <li className="slds-global-actions__item">
+      <Task />
+    </li>
+  </ul>
 </CodeView>
 
 #### Task menu
@@ -449,17 +455,21 @@ When the global task action is invoked, a menu inside of a dropdown becomes visi
 ### Help
 
 <CodeView>
-  <li className="slds-global-actions__item">
-    <Help />
-  </li>
+  <ul className="slds-global-actions">
+    <li className="slds-global-actions__item">
+      <Help />
+    </li>
+  </ul>
 </CodeView>
 
 ### Setup
 
 <CodeView>
-  <li className="slds-global-actions__item">
-    <Setup />
-  </li>
+  <ul className="slds-global-actions">
+    <li className="slds-global-actions__item">
+      <Setup />
+    </li>
+  </ul>
 </CodeView>
 
 ### Notifications
@@ -473,9 +483,11 @@ Notifications are a way to notify a user about a global change within the applic
 #### No notifications
 
 <CodeView>
-  <li className="slds-global-actions__item">
-    <Notifications />
-  </li>
+  <ul className="slds-global-actions">
+    <li className="slds-global-actions__item">
+      <Notifications />
+    </li>
+  </ul>
 </CodeView>
 
 #### New notifications
@@ -497,9 +509,11 @@ When a notification is coming through, we want to apply the `slds-incoming-notif
 </Blockquote>
 
 <CodeView>
-  <li className="slds-global-actions__item">
-    <Notifications showNotification notificationCount="1" />
-  </li>
+  <ul className="slds-global-actions">
+    <li className="slds-global-actions__item">
+      <Notifications showNotification notificationCount="1" />
+    </li>
+  </ul>
 </CodeView>
 
 #### Notification Popover

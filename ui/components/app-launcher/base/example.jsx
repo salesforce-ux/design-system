@@ -280,7 +280,7 @@ export const appTiles = [
     figureClass: 'slds-icon-custom-50',
     grabbed: false,
     initials: 'CS',
-    label: 'Customer Support Communitiy'
+    label: 'Customer Support Community'
   }
 ];
 

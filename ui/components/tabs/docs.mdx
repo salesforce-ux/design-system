@@ -108,7 +108,7 @@ An icon can be used to communicate when a tab contains a validation error that n
 
 ## With Nested Scoped Tabs
 
-If nesting tabs within tabs, the second set should be rendered as Scoped Tabs to help differentiate between tab sets.
+If nesting tabs within tabs, the second set should be rendered as [Scoped Tabs](/components/scoped-tabs) to help differentiate between tab sets.
 
 <Example title="Tabs with Nested Scoped Tabs">
   <CodeView demoStyles="height: 200px;">
@@ -138,7 +138,7 @@ Tabs come with three size modifiers: default, medium, and large. Each size step 
 
 ## Subtabs
 
-Subtabs are used to provide an additional level of navigation below the Global Navigation Tab Bar. Use these tabs when users need to work across multiple sub-pages within a single navigation item.
+Subtabs are used to provide an additional level of navigation below the [Global Navigation](/components/global-navigation) Tab Bar. Use these tabs when users need to work across multiple sub-pages within a single navigation item.
 
 <CodeView demoStyles="height: 100px;">{SubTabs.default}</CodeView>
 
@@ -147,7 +147,7 @@ Subtabs are used to provide an additional level of navigation below the Global N
 - The first tab within the Subtab Bar is always the default content for the parent navigation item. To differentiate this tab from other sub-navigation tabs, this tab cannot be closed.
 - When opening a navigation item for the first time, the default sub-navigation tab can be assumed; don’t show the Subtab Bar.
   - When opening the first additional sub-navigation tab, a new tab bar is inserted containing both the default tab and the new sub-navigation tab.
-- All sub tabs are closed when the parent navigation item is closed.
+- All subtabs are closed when the parent navigation item is closed.
 - Subtabs can optionally include a tab menu for additional controls.
 
 ### With Focus
@@ -200,9 +200,9 @@ Unsaved tabs receive a blue asterisk on the tab.
 
 #### Communicating Status to Screen Readers
 
-The following examples of sub tab status updates should all employ the same technique to communicate that update to users of assistive technology, who would be otherwise unaware of that status change.
+The following examples of subtab status updates should all employ the same technique to communicate that update to users of assistive technology, who would be otherwise unaware of that status change.
 
-You should use a single hidden ARIA live region for the entire sub tabs block, the contents of which gets updated each time a sub tab changes its status. The contents should contain a description of the status level and the name of the tab the status change event occurred in. The markup would look something like:
+You should use a single hidden ARIA live region for the entire subtabs block, the contents of which gets updated each time a subtab changes its status. The contents should contain a description of the status level and the name of the tab the status change event occurred in. The markup would look something like:
 
 <CodeBlock toggleCode={false}>
   <div className="slds-assistive-text" aria-live="polite">
@@ -234,7 +234,7 @@ Unread tabs receive a red dot on the tab.
     <li>
       The hidden live region as described above, should have its content updated
       to <b>"New Activity in Tab: [Tab Name Here]"</b> to alert the user of new
-      activity in that particular sub tab.
+      activity in that particular subtab.
     </li>
   </ol>
 </Blockquote>
@@ -263,18 +263,18 @@ Unread and unsaved tabs receive a blue asterisk with a red dot underneath. Be su
 
 <Blockquote header="Accessibility" type="a11y">
   <p>
-    Don't forget to update the hidden live region with which sub tab has new
+    Don't forget to update the hidden live region with which subtab has new
     activity
   </p>
 </Blockquote>
 
 #### Warning Tab
 
-When you wish to draw attention to a particular sub tab because a warning about that tab has occurred, you can use the `slds-has-warning` class to change the background color and introduce a short pulsing animation to draw attention from the user.
+When you wish to draw attention to a particular subtab because a warning about that tab has occurred, you can use the `slds-has-warning` class to change the background color and introduce a short pulsing animation to draw attention from the user.
 
 The icon is updated to be the warning icon, to give an extra way to communicate the level of the status without relying on the use of color alone.
 
-In this example we show that something inside the sub tab is about to break a service level agreement in 30 seconds, and we wish to draw the users attention to it to take action.
+In this example we show that something inside the subtab is about to break a service level agreement in 30 seconds, and we wish to draw the users attention to it to take action.
 
 <CodeView demoStyles="height: 100px;">
   {getDisplayElementById(SubTabs.states, 'warning')}
@@ -283,7 +283,7 @@ In this example we show that something inside the sub tab is about to break a se
 <Blockquote header="Accessibility" type="a11y">
   <p>
     Update the hidden live region with a message that informs the user of the
-    status level, the warning and the offending sub tab{' '}
+    status level, the warning and the offending subtab{' '}
     <b>[level]: [message] in tab: [tab_name]</b>
   </p>
 </Blockquote>
@@ -308,11 +308,11 @@ In this example we show that something inside the sub tab is about to break a se
 
 #### Error Tab
 
-When you wish to draw attention to a particular sub tab because an error or violation has occurred in that tab, you can use the `slds-has-error` class to change the background color and introduce a short pulsing animation to draw attention from the user.
+When you wish to draw attention to a particular subtab because an error or violation has occurred in that tab, you can use the `slds-has-error` class to change the background color and introduce a short pulsing animation to draw attention from the user.
 
 The icon is updated to be the error icon, to give an extra way to communicate the level of the status without relying on the use of color alone.
 
-In this example we show that something inside the sub tab has broken an SLA agreement, and we wish to draw the users attention to it to take action.
+In this example we show that something inside the subtab has broken an SLA agreement, and we wish to draw the users attention to it to take action.
 
 <CodeView demoStyles="height: 100px;">
   {getDisplayElementById(SubTabs.states, 'error')}
@@ -321,7 +321,7 @@ In this example we show that something inside the sub tab has broken an SLA agre
 <Blockquote header="Accessibility" type="a11y">
   <p>
     Update the hidden live region with a message that informs the user of the
-    status level, the error or violation and the offending sub tab{' '}
+    status level, the error or violation and the offending subtab{' '}
     <b>[level]: [message] in tab: [tab_name]</b>
   </p>
 </Blockquote>
@@ -346,7 +346,7 @@ In this example we show that something inside the sub tab has broken an SLA agre
 
 #### Success Tab
 
-When you wish to draw attention to a particular sub tab because a warning or violation has been cleared in the sub tab, you can use the `slds-has-success` class to change the background color and introduce a short pulsing animation to draw attention from the user.
+When you wish to draw attention to a particular subtab because a warning or violation has been cleared in the subtab, you can use the `slds-has-success` class to change the background color and introduce a short pulsing animation to draw attention from the user.
 
 The icon is updated to be the success icon, to give an extra way to communicate the level of the status without relying on the use of color alone.
 
@@ -357,7 +357,7 @@ The icon is updated to be the success icon, to give an extra way to communicate 
 <Blockquote header="Accessibility" type="a11y">
   <p>
     Update the hidden live region with a message that informs the user that the
-    status level has been successfully cleared and the sub tab it was cleared from{' '}
+    status level has been successfully cleared and the subtab it was cleared from{' '}
     <b>[level]: [message] in tab: [tab_name]</b>
   </p>
 </Blockquote>
@@ -456,7 +456,7 @@ Overflowing subtabs are contained in a More dropdown.
 
 ## Vertical
 
-To use vertical tabs, check out the [Vertical Tabs](../vertical-tabs) component
+To use vertical tabs, check out the [Vertical Tabs](../vertical-tabs) component.
 
 <Example title="Tabs as Vertical">{VerticalTabs}</Example>
 

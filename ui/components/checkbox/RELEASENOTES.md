@@ -32,8 +32,8 @@
 
 ### Added
 
-- Added unchecked image based checkbox example [view mode checkbox - unchecked](components/checkbox/?state=view-mode-unchecked&variant=form-element)
-- Added checked image based checkbox example [view mode checkbox - checked](components/checkbox/?state=view-mode-checked&variant=form-element)
+- Added unchecked image based checkbox example [view mode checkbox - unchecked](/components/checkbox/?state=view-mode-unchecked&variant=form-element)
+- Added checked image based checkbox example [view mode checkbox - checked](/components/checkbox/?state=view-mode-checked&variant=form-element)
 
 ## 2.7.0
 

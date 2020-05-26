@@ -30,7 +30,7 @@
 ### Added
 
 - Added examples of icon use in default tabs
-- Sub Tabs can now show 3 different statuses to alert users - error, success, and warning
+- Subtabs can now show 3 different statuses to alert users - error, success, and warning
 
 ### Removed
 
@@ -56,5 +56,5 @@
 
 ### Fixed
 - Updated `slds-tabs-mobile` to have a white background by default, instead of a transparent background.
-- Improved the color contrast of the text of a sub tab when it is in focus
-- HTML validation error on sub tab indicators, swapped a `div` for a `span`
+- Improved the color contrast of the text of a subtab when it is in focus
+- HTML validation error on subtab indicators, swapped a `div` for a `span`

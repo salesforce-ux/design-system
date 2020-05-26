@@ -4,13 +4,27 @@
 ## 2.13.0 - May 21, 2020
 
 - Corrected various documentation typos and formatting in:
+  - components/app-launcher
+  - components/button-icons
+  - components/dueling-picklist
+  - components/global-header
+  - components/global-navigation
+  - components/lookups
+  - components/menus
+  - components/panels
   - components/picklist
   - components/popovers
+  - components/progress-indicator
   - components/prompt
   - components/publishers
+  - components/setup-assistant
+  - components/spinners
+  - components/tabs
   - components/tiles
+  - components/toast
   - components/trees
   - components/vertical-tabs
+- Fixed broken links in earlier release notes
 
 ## 2.12.0 - April 28, 2020
 

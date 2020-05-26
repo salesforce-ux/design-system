@@ -12,7 +12,8 @@ import { getDisplayElementById } from '../../shared/helpers';
 </CodeView>
 
 ## About Toast
-#### Accessibility
+
+### Accessibility
 
 Notifications should contain `role="status"` on the container to signal to assistive technology that they require the user’s attention. Historically the role of `alert` would be used, but because you can invoke multiple toasts, assertive alerts would override previous toasts in the screen reader's speech queue. Role of `status` is a polite live region, which does not clear the queue, reducing the risk of a toast message being missed.
 

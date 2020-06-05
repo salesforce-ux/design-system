@@ -4,6 +4,7 @@
 import del from 'del';
 import glob from 'glob';
 import gulp from 'gulp';
+import gulpFile from 'gulp-file';
 import path from 'path';
 import touch from 'touch';
 import { argv } from 'yargs';
@@ -18,6 +19,10 @@ import * as sanitized from './scripts/gulp/generate/sanitized';
 
 import paths from './scripts/helpers/paths';
 import * as travis from './scripts/helpers/travis';
+
+import { extractVars } from './scripts/var-extract';
+
+const distPath = path.resolve.bind(path, paths.dist);
 
 const getComponents = key => {
   if (!argv.components) return ['.html/*.html'];
@@ -221,13 +226,29 @@ gulp.task(
   gulp.series('styles', withName('styles:stats')(styles.stats))
 );
 
+/**
+ * ==================
+ * Vars
+ * ==================
+ */
+
+gulp.task('vars', cb => {
+  gulpFile('css-vars.json', JSON.stringify(extractVars())).pipe(
+    gulp.dest(distPath())
+  );
+  cb();
+});
+
 /*
  * ==================
  * Builds
  * ==================
  */
 
-gulp.task('build', gulp.series('clean', 'generate:tokens:all', 'styles'));
+gulp.task(
+  'build',
+  gulp.series('clean', 'generate:tokens:all', 'styles', 'vars')
+);
 
 /*
  * ==================

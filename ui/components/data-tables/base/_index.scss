@@ -576,6 +576,19 @@ $max-column-support: 15;
       }
     }
   }
+
+  // Handles making the handle + divider visible during keyboard navigation
+  &__input:focus ~ &__handle &__divider {
+
+    &:before {
+      background-color: $color-background-button-brand;
+      width: $spacing-xx-small;
+    }
+
+    &:after {
+      opacity: 1;
+    }
+  }
 }
 
 @import 'blame';

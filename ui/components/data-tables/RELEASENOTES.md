@@ -4,6 +4,12 @@
 
 <!-- ## [Unreleased] -->
 
+## 2.12.1
+
+### Changed
+
+- Updated styles for resize handle if final column is resizable.
+
 ## 2.12.0
 
 ### Changed

@@ -12,6 +12,45 @@ executors:
     resource_class: medium+
     # parallelism: 4
 
+commands:
+  vrt_set-env-vars:
+    description: 'Set VRT/Applitools environment variables'
+    steps:
+      - run:
+          name: 'Set environment variables'
+          command: |
+            echo 'export APPLITOOLS_BATCH_ID=${CIRCLE_SHA1}' >> $BASH_ENV
+            echo 'export SLDS_PR_NUMBER=${CIRCLE_PULL_REQUEST##*/}' >> $BASH_ENV
+            echo 'export APPLITOOLS_DONT_CLOSE_BATCHES="true"' >> $BASH_ENV
+            echo 'export APPLITOOLS_BATCH_NOTIFY="true"' >> $BASH_ENV
+
+  vrt_close-batch:
+    description: 'Notify Applitools that tests have completed'
+    steps:
+      - run:
+          name: 'Applitools: close batch'
+          command: |
+            echo 'set server="sfdceyesapi.applitools.com"'
+            echo 'set apikey=$APPLITOOLS_API_KEY'
+            echo 'set batchid=$APPLITOOLS_BATCH_ID'
+            echo 'set url="https://$server/api/sessions/batches/$batchid/close/bypointerid/?apiKey=$apikey'
+            echo 'curl --request DELETE --dump-header - $url'
+
+  copy-dist:
+    description: 'Copy .dist files from workspace'
+    steps:
+      - run:
+          name: 'Copy .dist workspace files'
+          command: 'cp -ar workspace/.dist .'
+
+  copy-tokens:
+    description: 'Copy design-tokens/dist from workspace'
+    steps:
+      - run:
+          name: 'Copy design-tokens/dist workspace files'
+          command: 'cp -ar workspace/design-tokens-dist design-tokens/dist'
+
+
 jobs:
   build:
     executor: slds-executor
@@ -75,19 +114,9 @@ jobs:
           # Must be absolute path or relative path from working_directory
           at: workspace
 
-      - run:
-          name: 'Set environment variables'
-          command: |
-            echo 'export APPLITOOLS_BATCH_ID=${CIRCLE_SHA1}' >> $BASH_ENV
-            echo 'export SLDS_PR_NUMBER=${CIRCLE_PULL_REQUEST##*/}' >> $BASH_ENV
-
-      - run:
-          name: 'Copy .dist workspace files'
-          command: 'cp -ar workspace/.dist .'
-
-      - run:
-          name: 'Copy design-tokens/dist workspace files'
-          command: 'cp -ar workspace/design-tokens-dist design-tokens/dist'
+      - vrt_set-env-vars
+      - copy-dist
+      - copy-tokens
 
       # Download and cache dependencies
       - restore_cache:
@@ -101,6 +130,38 @@ jobs:
           name: Applitools
           command: 'npx eyes-storybook'
 
+  applitools-mobile:
+    executor: slds-executor
+
+    steps:
+      - checkout
+
+      - attach_workspace:
+          # Must be absolute path or relative path from working_directory
+          at: workspace
+
+      - vrt_set-env-vars
+      - copy-dist
+      - copy-tokens
+
+      # Download and cache dependencies
+      - restore_cache:
+          keys:
+            - dependencies-{{ checksum "package.json" }}
+            # fallback to using the latest cache if no exact match is found
+            - dependencies-
+
+      # run Applitools tests!
+      - run:
+          name: Applitools (mobile)
+          command: 'STORYBOOK_STORIES_TYPE=mobile npx eyes-storybook --conf applitools.mobile.config.js'
+
+  applitools-close-batch:
+    executor: slds-executor
+
+    steps:
+      - vrt_close-batch
+
 workflows:
   version: 2
   build-and-test:
@@ -110,3 +171,12 @@ workflows:
           context: slds-api-keys
           requires:
             - build
+      - applitools-mobile:
+          context: slds-api-keys
+          requires:
+            - build
+      - applitools-close-batch:
+          context: slds-api-keys
+          requires:
+            - applitools
+            - applitools-mobile

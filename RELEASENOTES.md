@@ -12,15 +12,24 @@
   - components/lookups
   - components/menus
   - components/panels
+  - components/picklist
+  - components/popovers
   - components/progress-indicator
+  - components/prompt
+  - components/publishers
   - components/setup-assistant
   - components/spinners
   - components/tabs
+  - components/tiles
   - components/toast
+  - components/trees
   - components/vertical-tabs
 - Fixed broken links in earlier release notes
 
 ## Components
+### [Breadcrumbs](https://www.lightningdesignsystem.com/components/breadcrumbs)
+- Added the brand expression specific Styling API
+
 ### [Datetime Picker](https://www.lightningdesignsystem.com/components/datetime-picker)
 #### Changed
 - Datetime Picker blueprints no longer use the deprecated variant `.slds-form_compound` on its parent `.slds-form`. Instead, it now uses `.slds-form-element_compound` on its parent `.slds-form-element`.
@@ -30,7 +39,28 @@
 - The compound form now wraps when the width of its parent container is smaller than the combined width of the form elements. This prevents the issue of input values becoming cutoff and unreadable due to shrinking compound form elements in a container with a small width.
 - When `.slds-form-element` is a child of `.slds-form-element_compound`, it now uses margins instead of padding for its horizontal spacing. This fixes the issue of dropdowns being incorrectly offset because the dropdown uses the extra space created by padding as its positioning reference.
 
+## Release 2.12.2 - June 10, 2020
+
+## Components
+### [Combobox](https://www.lightningdesignsystem.com/components/combobox)
+#### Changed
+- Removed `<span class="slds-assistive-text">Current Selection:</span>` from Listbox options
+- Updated guidance documentation regarding the usage of `aria-selected` and `aria-checked`
+#### Added
+- Added `aria-checked="true"` to Listbox options when selected
+
+## Release 2.12.1 - May 7, 2020
+
+- Updated Icons to 9.36.1
+
+## Components
+### [Data Tables](https://www.lightningdesignsystem.com/components/data-tables)
+#### Changed
+- Updated styles for resize handle if final column is resizable.
+
 ## Release 2.12.0 - April 28, 2020
+
+- Updated Icons to 9.35.0
 
 ## Components
 ### [Buttons](https://www.lightningdesignsystem.com/components/buttons)
@@ -70,8 +100,6 @@
 - Added an X-Small modifier that truncates text after two lines.
 
 ## Release 2.11.9 - April 27, 2020
-
-- Updated Icons to 9.35.0
 
 ## Release 2.11.8 - April 15, 2020
 

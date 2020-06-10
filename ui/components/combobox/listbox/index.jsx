@@ -76,6 +76,7 @@ export const ListboxOption = props => (
   <div
     aria-selected={props.focused ? 'true' : null}
     aria-disabled={props.isDisabled ? 'true' : null}
+    aria-checked={props.selected ? 'true' : null}
     id={props.id || 'please-provide-a-unique-id'}
     className={classNames(
       'slds-media slds-listbox__option',
@@ -223,6 +224,7 @@ export const Option = props => (
     label={props.label}
     focused={props.focused}
     isDisabled={props.isDisabled}
+    selected={props.selected}
     className={classNames(
       'slds-media_small',
       {
@@ -262,9 +264,6 @@ export const Option = props => (
               : props.name
           }
         >
-          {props.selected && (
-            <span className="slds-assistive-text">Current Selection:</span>
-          )}{' '}
           {props.term ? (
             <span>
               {props.beforeTerm}

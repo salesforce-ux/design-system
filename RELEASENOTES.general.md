@@ -1,6 +1,8 @@
 <!-- Release notes authoring guidelines: http://keepachangelog.com/ -->
 <!-- On release, add general notes here. In time the legacy release notes will be add to this -->
 
+## 2.12.2 - June 11, 2020
+
 ## 2.12.1 - May 7, 2020
 
 - Updated Icons to 9.36.1

@@ -4,6 +4,12 @@
 
 <!-- ## [Unreleased] -->
 
+## 2.12.2
+
+- For touch devices, fixed an issue with button icons being the incorrect height if using custom elements.
+
+### Fixed
+
 ## 2.11.7
 
 ### Added

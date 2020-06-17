@@ -4,6 +4,12 @@
 
 <!-- ## [Unreleased] -->
 
+## 2.13.0
+
+### Added
+
+- Added the brand expression specific Styling API to Avatar.
+
 ## 2.7.0
 
 ### Changed

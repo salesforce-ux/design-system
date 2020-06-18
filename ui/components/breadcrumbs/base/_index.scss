@@ -40,7 +40,7 @@
     &:first-child {
 
       > a {
-        --sds-c-breadcrumbs-spacing-horizontal-start: 0;
+        padding-left: 0;
       }
 
       &:before {

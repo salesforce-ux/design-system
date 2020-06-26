@@ -31,9 +31,19 @@
 #### Added
 - Added the brand expression specific Styling API to Accordion.
 
+### [Alert](https://www.lightningdesignsystem.com/components/alert)
+#### Added
+- Added the brand expression specific Styling API
+
 ### [Avatar](https://www.lightningdesignsystem.com/components/avatar)
 #### Added
 - Added the brand expression specific Styling API to Avatar.
+
+### [Badges](https://www.lightningdesignsystem.com/components/badges)
+#### Added
+- Added the brand expression specific Styling API to Badge.
+#### Fixed
+- Fixed inconsistent heights between variants when border isn't present.
 
 ### [Breadcrumbs](https://www.lightningdesignsystem.com/components/breadcrumbs)
 - Added the brand expression specific Styling API

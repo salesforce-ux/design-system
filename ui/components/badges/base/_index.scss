@@ -11,13 +11,16 @@
  * @variant
  */
 .slds-badge {
-  background-color: $color-background-dark;
+  background-color: var(--sds-c-badge-color-background, $color-background-dark);
   padding: $spacing-xx-small $spacing-x-small;
-  border-radius: $border-radius-pill;
-  font-size: $font-size-2;
+  border-width: var(--sds-c-badge-sizing-border, $border-width-thin);
+  border-style: solid;
+  border-color: var(--sds-c-badge-color-border, transparent);
+  border-radius: var(--sds-c-badge-radius-border, $border-radius-pill);
+  font-size: var(--sds-c-badge-font-size, $font-size-2);
   font-weight: $font-weight-bold;
-  line-height: normal;
-  color: $color-text-default;
+  line-height: var(--sds-c-badge-line-height, normal);
+  color: var(--sds-c-badge-color-text, $color-text-default);
   white-space: nowrap;
   display: inline-flex;
   align-items: center;
@@ -40,8 +43,11 @@
  * @group color
  */
 .slds-badge_inverse {
-  background-color: $badge-color-background-inverse;
-  color: $color-text-inverse;
+  /* @css-var-fallback background-color */
+  --sds-c-badge-color-background: var(--sds-c-badge-inverse-color-background, #{$badge-color-background-inverse});
+
+  /* @css-var-fallback color */
+  --sds-c-badge-color-text: var(--sds-c-badge-inverse-color-text, #{$color-text-inverse});
 }
 
 /**
@@ -53,11 +59,11 @@
  * @group color
  */
 .slds-badge_lightest {
-  border: $border-width-thin solid $color-border;
-  background-color: $badge-color-background-lightest;
-  font-size: $font-size-2;
-  text-transform: none;
-  letter-spacing: normal;
+  /* @css-var-fallback background-color */
+  --sds-c-badge-color-background: var(--sds-c-badge-lightest-color-background, #{$badge-color-background-lightest});
+
+  /* @css-var-fallback border-color */
+  --sds-c-badge-color-border: var(--sds-c-badge-lightest-color-border, #{$color-border});
 }
 
 /**
@@ -68,7 +74,7 @@
  * @modifier
  */
 .slds-badge__icon {
-  color: $color-text-icon-default;
+  color: var(--sds-c-badge-icon-color-foreground, $color-text-icon-default);
   vertical-align: middle;
   display: inline-flex;
   align-items: center;

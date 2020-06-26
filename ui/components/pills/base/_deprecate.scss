@@ -1,0 +1,50 @@
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+   * Container to hold pill(s) with borders
+   *
+   * @selector .slds-pill__container, .slds-pill-container
+   * @restrict div
+   * @deprecated
+   */
+@include deprecate('4.0.0', 'Use .slds-pill_container') {
+
+  .slds-pill__container,
+  .slds-pill-container {
+    display: flex;
+    min-height: calc(#{$height-input} + 2px);
+    padding: $spacing-xxx-small;
+    border: $border-width-thin solid $color-border;
+    border-radius: $border-radius-medium;
+    background-color: $color-background-input;
+
+    .slds-listbox_inline {
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+}
+
+/**
+   * Container to hold pill(s) with no borders
+   *
+   * @selector .slds-pill_container_bare
+   * @restrict .slds-pill_container
+   * @modifier
+   * @deprecated
+   */
+@include deprecate('4.0.0') {
+
+  .slds-pill__container_bare,
+  .slds-pill__container--bare,
+  .slds-pill_container_bare,
+  .slds-pill_container--bare {
+    @include deprecate('4.0.0');
+    display: flex;
+    padding: $spacing-xxx-small;
+    border: 0;
+    border-radius: 0;
+    background-color: transparent;
+  }
+}

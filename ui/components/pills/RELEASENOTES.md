@@ -3,6 +3,15 @@
 # Pills Release Notes
 
 <!-- ## [Unreleased] -->
+## 2.13.0
+
+### Added
+
+- Added the brand expression specific Styling API to Pill.
+
+### Changed
+
+- Removed redundant `border-radius` on `.slds-pill:focus`
 
 ## 2.11.7
 

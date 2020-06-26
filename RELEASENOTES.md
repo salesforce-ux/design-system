@@ -58,6 +58,12 @@
 #### Added
 - Added the brand expression specific Styling API
 
+### [Pills](https://www.lightningdesignsystem.com/components/pills)
+#### Added
+- Added the brand expression specific Styling API to Pill.
+#### Changed
+- Removed redundant `border-radius` on `.slds-pill:focus`
+
 ### [Toast](https://www.lightningdesignsystem.com/components/toast)
 #### Added
 - Added the brand expression specific Styling API

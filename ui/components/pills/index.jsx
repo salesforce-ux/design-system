@@ -13,19 +13,12 @@ export let Pill = props => (
     >
       <span className="slds-pill__label">{props.label || 'Pill Label'}</span>
     </a>
-    <ButtonIcon
-      className="slds-button_icon slds-pill__remove"
-      symbol="close"
-      assistiveText="Remove"
-      title="Remove"
-    />
+    <ButtonIcon className="slds-button_icon slds-pill__remove" symbol="close" assistiveText="Remove" title="Remove" />
   </span>
 );
 
 export let PillContainer = props => (
-  <div className={classNames('slds-pill_container', props.className)}>
-    {props.children}
-  </div>
+  <div className={classNames('slds-pill_container', props.className)}>{props.children}</div>
 );
 
 export let ListboxPill = props => (
@@ -36,31 +29,19 @@ export let ListboxPill = props => (
     aria-selected="true"
   >
     {props.children}
-    <span
-      className="slds-pill__label"
-      title={props.label || 'Full pill label verbiage mirrored here'}
-    >
+    <span className="slds-pill__label" title={props.label || 'Full pill label verbiage mirrored here'}>
       {props.label || 'Pill Label'}
     </span>
     <span className="slds-icon_container slds-pill__remove" title="Remove">
-      <SvgIcon
-        className="slds-icon slds-icon_x-small slds-icon-text-default"
-        sprite="utility"
-        symbol="close"
-      />
-      <span className="slds-assistive-text">
-        Press delete or backspace to remove
-      </span>
+      <SvgIcon className="slds-icon slds-icon_x-small slds-icon-text-default" sprite="utility" symbol="close" />
+      <span className="slds-assistive-text">Press delete or backspace to remove</span>
     </span>
   </span>
 );
 
 export let ListboxPills = props => (
   <ul
-    className={classNames(
-      'slds-listbox slds-listbox_horizontal',
-      props.className
-    )}
+    className={classNames('slds-listbox slds-listbox_horizontal', props.className)}
     role="listbox"
     aria-label="Selected Options:"
     aria-orientation="horizontal"

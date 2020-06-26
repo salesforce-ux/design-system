@@ -49,7 +49,7 @@
   @include tab-notification-pulsing-animation;
 
   /**
-   * @summary Success notification on a sub tab
+   * @summary Success notification on a subtab
    *
    * @selector .slds-has-success
    * @restrict .slds-sub-tabs__item
@@ -63,7 +63,7 @@
   }
 
   /**
-   * @summary Error notification on a sub tab
+   * @summary Error notification on a subtab
    *
    * @selector .slds-has-error
    * @restrict .slds-sub-tabs__item
@@ -90,7 +90,7 @@
   }
 
   /**
-   * @summary Warning notification on a sub tab
+   * @summary Warning notification on a subtab
    *
    * @selector .slds-has-warning
    * @restrict .slds-sub-tabs__item

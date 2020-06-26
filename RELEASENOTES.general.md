@@ -1,6 +1,30 @@
 <!-- Release notes authoring guidelines: http://keepachangelog.com/ -->
 <!-- On release, add general notes here. In time the legacy release notes will be add to this -->
 
+## 2.12.3 - June 19, 2020
+
+- Corrected various documentation typos and formatting in:
+  - components/app-launcher
+  - components/button-icons
+  - components/global-header
+  - components/global-navigation
+  - components/lookups
+  - components/menus
+  - components/panels
+  - components/picklist
+  - components/popovers
+  - components/progress-indicator
+  - components/prompt
+  - components/publishers
+  - components/setup-assistant
+  - components/spinners
+  - components/tabs
+  - components/tiles
+  - components/toast
+  - components/trees
+  - components/vertical-tabs
+- Fixed broken links in earlier release notes
+
 ## 2.12.2 - June 11, 2020
 
 ## 2.12.1 - May 7, 2020

@@ -550,7 +550,7 @@ exports[`renders a default app launcher 1`] = `
                     >
                       <abbr
                         className="slds-avatar__initials slds-icon-custom-50"
-                        title="Customer Support Communitiy"
+                        title="Customer Support Community"
                       >
                         CS
                       </abbr>
@@ -586,7 +586,7 @@ exports[`renders a default app launcher 1`] = `
                     <a
                       href="javascript:void(0);"
                     >
-                      Customer Support Communitiy
+                      Customer Support Community
                     </a>
                     <p>
                       Areas of Focus are used to track customer support for your...
@@ -1295,7 +1295,7 @@ exports[`renders a dropped app launcher 1`] = `
                     >
                       <abbr
                         className="slds-avatar__initials slds-icon-custom-50"
-                        title="Customer Support Communitiy"
+                        title="Customer Support Community"
                       >
                         CS
                       </abbr>
@@ -1331,7 +1331,7 @@ exports[`renders a dropped app launcher 1`] = `
                     <a
                       href="javascript:void(0);"
                     >
-                      Customer Support Communitiy
+                      Customer Support Community
                     </a>
                     <p>
                       Areas of Focus are used to track customer support for your...
@@ -2040,7 +2040,7 @@ exports[`renders a grabbed app launcher 1`] = `
                     >
                       <abbr
                         className="slds-avatar__initials slds-icon-custom-50"
-                        title="Customer Support Communitiy"
+                        title="Customer Support Community"
                       >
                         CS
                       </abbr>
@@ -2076,7 +2076,7 @@ exports[`renders a grabbed app launcher 1`] = `
                     <a
                       href="javascript:void(0);"
                     >
-                      Customer Support Communitiy
+                      Customer Support Community
                     </a>
                     <p>
                       Areas of Focus are used to track customer support for your...
@@ -2785,7 +2785,7 @@ exports[`renders a moved app launcher 1`] = `
                     >
                       <abbr
                         className="slds-avatar__initials slds-icon-custom-50"
-                        title="Customer Support Communitiy"
+                        title="Customer Support Community"
                       >
                         CS
                       </abbr>
@@ -2821,7 +2821,7 @@ exports[`renders a moved app launcher 1`] = `
                     <a
                       href="javascript:void(0);"
                     >
-                      Customer Support Communitiy
+                      Customer Support Community
                     </a>
                     <p>
                       Areas of Focus are used to track customer support for your...

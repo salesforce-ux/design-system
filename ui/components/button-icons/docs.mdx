@@ -160,7 +160,7 @@ The stateful inverse button works just like the stateful button. It requires the
 
 Stateful icons can be toggled on and off and will retain their state. JavaScript is used to add the `slds-is-selected` class to the button when activated.
 
-<CodeView toggleCode={true}>
+<CodeView>
   {getDisplayElementById(Stateful.states, 'button-icon-stateful-selected')}
 </CodeView>
 
@@ -168,7 +168,7 @@ Stateful icons can be toggled on and off and will retain their state. JavaScript
 
 You can disable a stateful button icon by applying the `disabled` attribute to the `.slds-button_icon`. This will apply our disabled UI to the button icon, and freeze the button icon either in its selected or unselected state.
 
-<CodeView toggleCode={true}>
+<CodeView>
   <Fragment>
     {getDisplayElementById(Stateful.states, 'button-icon-stateful-disabled')}
     {getDisplayElementById(
@@ -186,13 +186,13 @@ The bare variant can be displayed in three other sizes—`large`, `small`, `x-sm
 
 <CodeBlock toggleCode={false}>
   <button>
-    <svg className="...slds-button__icon_{size}">...</svg>
+    <svg className="... slds-button__icon_{size}">...</svg>
     ...
   </button>
 </CodeBlock>
 
 <Example title="Sizes">
-  <CodeView toggleCode={true}>
+  <CodeView>
     <Fragment>
       <ButtonIcon
         iconClassName="slds-button__icon_large"
@@ -218,11 +218,11 @@ The bare variant can be displayed in three other sizes—`large`, `small`, `x-sm
 Contained variants can be displayed in three smaller sizes—`small`, `x-small`, `xx-small`—by adding a sizing class on the `<button>`.
 
 <CodeBlock toggleCode={false}>
-  <button className="...slds-button_icon-{size}">...</button>
+  <button className="... slds-button_icon-{size}">...</button>
 </CodeBlock>
 
 <Example title="Sizes">
-  <CodeView toggleCode={true}>
+  <CodeView>
     <Fragment>
       <ButtonIcon
         className="slds-button_icon-border slds-button_icon-small"
@@ -260,19 +260,19 @@ To create a disabled button, append the `disabled` attribute to the `<button>`.
 <DisplayGrid>
   <DisplayColumn>
     <strong>Base</strong>
-    <CodeView toggleCode={true}>
+    <CodeView>
       {getDisplayElementById(Base.states, 'bare-disabled')}
     </CodeView>
   </DisplayColumn>
   <DisplayColumn>
     <strong>Brand</strong>
-    <CodeView toggleCode={true}>
+    <CodeView>
       {getDisplayElementById(Brand.states, 'disabled')}
     </CodeView>
   </DisplayColumn>
   <DisplayColumn>
     <strong>Transparent container</strong>
-    <CodeView toggleCode={true}>
+    <CodeView>
       <TransparentContainer.Context>
         {getDisplayElementById(TransparentContainer.states, 'disabled')}
       </TransparentContainer.Context>
@@ -280,7 +280,7 @@ To create a disabled button, append the `disabled` attribute to the `<button>`.
   </DisplayColumn>
   <DisplayColumn>
     <strong>Inverse</strong>
-    <CodeView toggleCode={true}>
+    <CodeView>
       <Inverse.Context>
         {getDisplayElementById(Inverse.states, 'disabled')}
       </Inverse.Context>
@@ -288,7 +288,7 @@ To create a disabled button, append the `disabled` attribute to the `<button>`.
   </DisplayColumn>
   <DisplayColumn>
     <strong>Bordered filled container</strong>
-    <CodeView toggleCode={true}>
+    <CodeView>
       <BorderedFilled.Context>
         {getDisplayElementById(BorderedFilled.states, 'disabled')}
       </BorderedFilled.Context>
@@ -296,7 +296,7 @@ To create a disabled button, append the `disabled` attribute to the `<button>`.
   </DisplayColumn>
   <DisplayColumn>
     <strong>Bordered transparent</strong>
-    <CodeView toggleCode={true}>
+    <CodeView>
       <BorderedTransparent.Context>
         {getDisplayElementById(BorderedTransparent.states, 'disabled')}
       </BorderedTransparent.Context>
@@ -304,7 +304,7 @@ To create a disabled button, append the `disabled` attribute to the `<button>`.
   </DisplayColumn>
   <DisplayColumn>
     <strong>Bordered inverse</strong>
-    <CodeView toggleCode={true}>
+    <CodeView>
       <BorderedInverse.Context>
         {getDisplayElementById(BorderedInverse.states, 'disabled')}
       </BorderedInverse.Context>
@@ -338,13 +338,13 @@ A parent class, `slds-hint-parent`, must be put on any wrapper, and `slds-button
 <DisplayGrid>
   <DisplayColumn>
     <strong>Base</strong>
-    <CodeView toggleCode={true}>
+    <CodeView>
       {getDisplayElementById(Base.examples, 'hint-hover')}
     </CodeView>
   </DisplayColumn>
   <DisplayColumn>
     <strong>Transparent container</strong>
-    <CodeView toggleCode={true}>
+    <CodeView>
       <TransparentContainer.Context>
         {getDisplayElementById(TransparentContainer.examples, 'hint-hover')}
       </TransparentContainer.Context>
@@ -352,7 +352,7 @@ A parent class, `slds-hint-parent`, must be put on any wrapper, and `slds-button
   </DisplayColumn>
   <DisplayColumn>
     <strong>Bordered filled container</strong>
-    <CodeView toggleCode={true}>
+    <CodeView>
       <BorderedFilled.Context>
         {getDisplayElementById(BorderedFilled.examples, 'hint-hover')}
       </BorderedFilled.Context>
@@ -360,7 +360,7 @@ A parent class, `slds-hint-parent`, must be put on any wrapper, and `slds-button
   </DisplayColumn>
   <DisplayColumn>
     <strong>Bordered transparent</strong>
-    <CodeView toggleCode={true}>
+    <CodeView>
       <BorderedTransparent.Context>
         {getDisplayElementById(BorderedTransparent.examples, 'hint-hover')}
       </BorderedTransparent.Context>
@@ -386,7 +386,7 @@ In the case of inverse, use the `slds-button__icon_inverse-hint` class on the bu
 <DisplayGrid>
   <DisplayColumn>
     <strong>Inverse</strong>
-    <CodeView toggleCode={true}>
+    <CodeView>
       <Inverse.Context>
         {getDisplayElementById(Inverse.examples, 'hint-hover')}
       </Inverse.Context>
@@ -394,7 +394,7 @@ In the case of inverse, use the `slds-button__icon_inverse-hint` class on the bu
   </DisplayColumn>
   <DisplayColumn>
     <strong>Bordered inverse</strong>
-    <CodeView toggleCode={true}>
+    <CodeView>
       <BorderedInverse.Context>
         {getDisplayElementById(BorderedInverse.examples, 'hint-hover')}
       </BorderedInverse.Context>
@@ -419,7 +419,7 @@ If the button opens a menu, add `slds-button_icon-more` class to the `<button>` 
 <DisplayGrid>
   <DisplayColumn>
     <strong>Transparent container</strong>
-    <CodeView toggleCode={true}>
+    <CodeView>
       <TransparentContainer.Context>
         {getDisplayElementById(TransparentContainer.examples, 'with-dropdown')}
       </TransparentContainer.Context>
@@ -427,7 +427,7 @@ If the button opens a menu, add `slds-button_icon-more` class to the `<button>` 
   </DisplayColumn>
   <DisplayColumn>
     <strong>Inverse</strong>
-    <CodeView toggleCode={true}>
+    <CodeView>
       <Inverse.Context>
         {getDisplayElementById(Inverse.examples, 'with-dropdown')}
       </Inverse.Context>
@@ -435,7 +435,7 @@ If the button opens a menu, add `slds-button_icon-more` class to the `<button>` 
   </DisplayColumn>
   <DisplayColumn>
     <strong>Bordered filled container</strong>
-    <CodeView toggleCode={true}>
+    <CodeView>
       <BorderedFilled.Context>
         {getDisplayElementById(BorderedFilled.examples, 'with-dropdown')}
       </BorderedFilled.Context>
@@ -443,7 +443,7 @@ If the button opens a menu, add `slds-button_icon-more` class to the `<button>` 
   </DisplayColumn>
   <DisplayColumn>
     <strong>Bordered inverse</strong>
-    <CodeView toggleCode={true}>
+    <CodeView>
       <BorderedInverse.Context>
         {getDisplayElementById(BorderedFilled.examples, 'with-dropdown')}
       </BorderedInverse.Context>

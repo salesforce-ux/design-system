@@ -84,8 +84,8 @@ When a step becomes active, the `<div>` with class `.slds-progress__item` should
 <Blockquote type="a11y" header="Accessibility Requirements">
   <p>
     When a step is active, be sure to append "- Active" to the hidden button text
-    in the `&lt;span&gt;` with class `slds-assistive-text`, such as `Step 1 -
-    Active`.
+    in the <code>&lt;span&gt;</code> with class <code>slds-assistive-text</code>, such as <code>Step 1 -
+    Active</code>.
   </p>
 </Blockquote>
 
@@ -108,8 +108,8 @@ When the step is completed, the `.slds-is-active` class should be replaced with 
 <Blockquote type="a11y" header="Accessibility Requirements">
   <p>
     When a step is completed, be sure to append "- Completed" to the hidden button
-    text in the `&lt;span&gt;` with class `slds-assistive-text`, such as `Step 2 -
-    Completed`.
+    text in the <code>&lt;span&gt;</code> with class <code>slds-assistive-text</code>, such as <code>Step 2 -
+    Completed</code>.
   </p>
 </Blockquote>
 
@@ -132,8 +132,8 @@ When an error has occurred on a step, the `<div>` with class `.slds-progress__it
 <Blockquote type="a11y" header="Accessibility Requirements">
   <p>
     When a step has an error, be sure to append "- Error" to the hidden button
-    text in the `&lt;span&gt;` with class `slds-assistive-text`, such as `Step 3 -
-    Error`.
+    text in the <code>&lt;span&gt;</code> with class <code>slds-assistive-text</code>, such as <code>Step 3 -
+    Error</code>.
   </p>
 </Blockquote>
 
@@ -190,7 +190,7 @@ When an error has occurred on a step, the `<div>` with class `.slds-progress__it
 ### In a Modal
 
 <Example title="Progress Indicator Horizontal in Modal">
-  <CodeView demoStyles="height: 640px;">
+  <CodeView isViewport demoStyles="height: 640px;">
     <div>
       <Modal className="slds-modal_large" aria-labelledby="header43">
         <ModalHeader>
@@ -237,9 +237,9 @@ To display a vertical progress indicator, the `<div>` with class `.slds-progress
 <Blockquote type="note" header="Implementation Note">
   <p>
     The key markup difference between the horizontal and vertical variants is the
-    progress markers. Horizontal progress indicators use `&lt;button&gt;` for each
+    progress markers. Horizontal progress indicators use <code>&lt;button&gt;</code> for each
     step, whereas Vertical progress indicator steps are not interactive and
-    therefore simply use `&lt;div&gt;`.
+    therefore simply use <code>&lt;div&gt;</code>.
   </p>
 </Blockquote>
 
@@ -299,8 +299,7 @@ The vertical progress indicator also supports multiline step descriptions.
       <VerticalStep done>Step 1</VerticalStep>
       <VerticalStep active>Step 2</VerticalStep>
       <VerticalStep>
-        Step 3: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-        eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Step 3: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  Praesent eget pellentesque lacus. Suspendisse euismod magna nec nulla ornare viverra. Sed pretium, eros ullamcorper scelerisque placerat, nunc velit volutpat libero, a semper lacus urna eget nibh. Maecenas eget tortor pulvinar, scelerisque nibh sed, fringilla erat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Ut ultricies dui turpis, at posuere dolor convallis vitae.
       </VerticalStep>
       <VerticalStep>Step 4</VerticalStep>
       <VerticalStep>Step 5</VerticalStep>

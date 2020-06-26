@@ -47,6 +47,9 @@
 - The compound form now wraps when the width of its parent container is smaller than the combined width of the form elements. This prevents the issue of input values becoming cutoff and unreadable due to shrinking compound form elements in a container with a small width.
 - When `.slds-form-element` is a child of `.slds-form-element_compound`, it now uses margins instead of padding for its horizontal spacing. This fixes the issue of dropdowns being incorrectly offset because the dropdown uses the extra space created by padding as its positioning reference.
 
+### [Icons](https://www.lightningdesignsystem.com/components/icons)
+- Added the brand expression specific Styling API
+
 ### [Modals](https://www.lightningdesignsystem.com/components/modals)
 #### Added
 - Added the brand expression specific Styling API

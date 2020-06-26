@@ -4,6 +4,10 @@
 
 <!-- ## [Unreleased] -->
 
+## 2.13.0
+
+- Added the brand expression specific Styling API
+
 ## 2.9.0
 
 ### Added

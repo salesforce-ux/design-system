@@ -38,6 +38,10 @@
 ### [Breadcrumbs](https://www.lightningdesignsystem.com/components/breadcrumbs)
 - Added the brand expression specific Styling API
 
+### [Buttons](https://www.lightningdesignsystem.com/components/buttons)
+#### Added
+- Added the brand expression specific Styling API
+
 ### [Datetime Picker](https://www.lightningdesignsystem.com/components/datetime-picker)
 #### Changed
 - Datetime Picker blueprints no longer use the deprecated variant `.slds-form_compound` on its parent `.slds-form`. Instead, it now uses `.slds-form-element_compound` on its parent `.slds-form-element`.

@@ -40,14 +40,33 @@
  * @group interaction
  */
 .slds-button_dual-stateful.slds-is-pressed {
-  @include button;
-  @include button-brand;
+  /**
+   * Styling API uses button-brand identifier instead of button_dual-stateful
+   * because dual stateful is a brand variant underneath the hood and therefore
+   * should pick up any styling customizations made to the brand variant.
+   */
+  @include button-shape(brand);
 
-  &[disabled],
-  &:disabled {
-    background: $brand-disabled;
-    border-color: $brand-disabled;
-    color: $color-text-button-brand-disabled;
+  /* @css-var-fallback background-color */
+  --sds-c-button-color-background: var(--sds-c-button-brand-color-background, #{$brand-accessible});
+
+  /* @css-var-fallback border-color */
+  --sds-c-button-color-border: var(--sds-c-button-brand-color-border, #{$brand-accessible});
+
+  /* @css-var-fallback color */
+  --sds-c-button-color-text: var(--sds-c-button-brand-color-text, #{$color-text-brand-primary});
+
+  // Since dual-stateful has a high specificity, we have to be explicit with pseudo-class
+  &:focus,
+  &:hover {
+    /* @css-var-fallback background-color */
+    --sds-c-button-color-background: var(--sds-c-button-brand-color-background-hover, #{$brand-accessible-active});
+
+    /* @css-var-fallback border-color */
+    --sds-c-button-color-border: var(--sds-c-button-brand-color-border-hover, #{$brand-accessible-active});
+
+    /* @css-var-fallback color */
+    --sds-c-button-color-text: var(--sds-c-button-brand-color-text-hover, #{$color-text-brand-primary});
   }
 
   .slds-text-not-pressed {

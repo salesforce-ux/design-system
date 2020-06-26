@@ -51,11 +51,15 @@
 #### Added
 - Added the brand expression specific Styling API
 
+### [Toast](https://www.lightningdesignsystem.com/components/toast)
+#### Added
+- Added the brand expression specific Styling API
+
 ### [Tooltips](https://www.lightningdesignsystem.com/components/tooltips)
 #### Added
 - Added the brand expression specific Styling API
 
-## Release 2.12.2 - June 24, 2020
+## Release 2.12.2 - June 25, 2020
 
 ## Components
 ### [Combobox](https://www.lightningdesignsystem.com/components/combobox)

@@ -32,12 +32,15 @@
   display: inline-flex;
   align-items: center;
   position: relative;
-  background: $color-background-toast;
+  background: var(--sds-c-toast-color-background, $color-background-toast);
   font-weight: $font-weight-light;
-  border-radius: $border-radius-medium;
+  border-radius: var(--sds-c-toast-radius-border, $border-radius-medium);
   margin: $spacing-x-small;
-  padding: $spacing-small $spacing-xx-large $spacing-small $spacing-large;
-  min-width: rem(480px);
+  padding-top: var(--sds-c-toast-spacing-vertical-start, $spacing-small);
+  padding-right: var(--sds-c-toast-spacing-horizontal-end, $spacing-xx-large);
+  padding-bottom: var(--sds-c-toast-spacing-vertical-end, $spacing-small);
+  padding-left: var(--sds-c-toast-spacing-horizontal-start, $spacing-large);
+  min-width: var(--sds-c-toast-sizing-min-width, rem(480px));
   text-align: left;
   justify-content: flex-start;
 

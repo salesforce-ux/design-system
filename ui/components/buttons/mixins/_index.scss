@@ -2,10 +2,10 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 @mixin button-shape($api-variant) {
-  /* @css-var-fallback padding-left */
+  /*! @css-var-fallback padding-left */
   --sds-c-button-spacing-horizontal-start: var(--sds-c-button-#{$api-variant}-spacing-horizontal-start, #{$spacing-medium});
 
-  /* @css-var-fallback padding-right */
+  /*! @css-var-fallback padding-right */
   --sds-c-button-spacing-horizontal-end: var(--sds-c-button-#{$api-variant}-spacing-horizontal-end, #{$spacing-medium});
   transition: border 0.15s linear;
 }

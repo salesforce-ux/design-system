@@ -47,25 +47,25 @@
    */
   @include button-shape(brand);
 
-  /* @css-var-fallback background-color */
+  /*! @css-var-fallback background-color */
   --sds-c-button-color-background: var(--sds-c-button-brand-color-background, #{$brand-accessible});
 
-  /* @css-var-fallback border-color */
+  /*! @css-var-fallback border-color */
   --sds-c-button-color-border: var(--sds-c-button-brand-color-border, #{$brand-accessible});
 
-  /* @css-var-fallback color */
+  /*! @css-var-fallback color */
   --sds-c-button-color-text: var(--sds-c-button-brand-color-text, #{$color-text-brand-primary});
 
   // Since dual-stateful has a high specificity, we have to be explicit with pseudo-class
   &:focus,
   &:hover {
-    /* @css-var-fallback background-color */
+    /*! @css-var-fallback background-color */
     --sds-c-button-color-background: var(--sds-c-button-brand-color-background-hover, #{$brand-accessible-active});
 
-    /* @css-var-fallback border-color */
+    /*! @css-var-fallback border-color */
     --sds-c-button-color-border: var(--sds-c-button-brand-color-border-hover, #{$brand-accessible-active});
 
-    /* @css-var-fallback color */
+    /*! @css-var-fallback color */
     --sds-c-button-color-text: var(--sds-c-button-brand-color-text-hover, #{$color-text-brand-primary});
   }
 

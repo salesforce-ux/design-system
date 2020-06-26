@@ -14,10 +14,10 @@
  */
 .slds-button_neutral.slds-is-selected,
 .slds-button--neutral.slds-is-selected {
-  /* @css-var-fallback background-color */
+  /*! @css-var-fallback background-color */
   --sds-c-button-color-background: transparent;
 
-  /* @css-var-fallback border-color */
+  /*! @css-var-fallback border-color */
   --sds-c-button-color-border: transparent;
 
   /**
@@ -27,15 +27,15 @@
    */
   &:hover:not([disabled]),
   &:focus:not([disabled]) {
-    /* @css-var-fallback background-color */
+    /*! @css-var-fallback background-color */
     --sds-c-button-color-background: var(--sds-c-button-neutral-color-background, #{$color-background-button-default-hover});
 
-    /* @css-var-fallback border-color */
+    /*! @css-var-fallback border-color */
     --sds-c-button-color-border: var(--sds-c-button-neutral-color-border-hover, #{$color-border-primary});
   }
 
   &:active:not([disabled]) {
-    /* @css-var-fallback background-color */
+    /*! @css-var-fallback background-color */
     --sds-c-button-color-background: var(--sds-c-button-neutral-color-background-active, #{$color-background-button-default-active});
   }
 }

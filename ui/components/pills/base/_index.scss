@@ -33,14 +33,14 @@
   }
 
   &:hover {
-    /* @css-var-fallback background-color */
+    /*! @css-var-fallback background-color */
     --sds-c-pill-color-background: var(--sds-c-pill-color-background-hover, $color-background-button-default-hover);
   }
 
   &:focus {
     outline: 0;
 
-    /* @css-var-fallback border-color */
+    /*! @css-var-fallback border-color */
     --sds-c-pill-color-border: var(--sds-c-pill-color-border-active, #{$color-border-input-active});
     box-shadow: var(--sds-c-pill-shadow-active, $shadow-button-focus);
   }
@@ -58,14 +58,14 @@
    */
   &_bare,
   &--bare {
-    /* @css-var-fallback background-color */
+    /*! @css-var-fallback background-color */
     --sds-c-pill-color-background: transparent;
 
-    /* @css-var-fallback border-width */
+    /*! @css-var-fallback border-width */
     --sds-c-pill-sizing-border: 0;
 
     &:hover {
-      /* @css-var-fallback background-color */
+      /*! @css-var-fallback background-color */
       --sds-c-pill-color-background-hover: transparent;
     }
   }
@@ -206,7 +206,7 @@
   &:focus {
     outline: 0;
 
-    /* @css-var-fallback border-color */
+    /*! @css-var-fallback border-color */
     --sds-c-pill-color-border: var(--sds-c-pill-action-color-border, $color-border-input-active);
     box-shadow: var(--sds-c-pill-action-shadow, $shadow-button-focus);
   }
@@ -220,10 +220,10 @@
  * @modifier
  */
 .slds-has-error {
-  /* @css-var-fallback border-color */
+  /*! @css-var-fallback border-color */
   --sds-c-pill-color-border: var(--sds-c-pill-error-color-border, #{$color-border-error});
 
-  /* @css-var-fallback border-color */
+  /*! @css-var-fallback border-color */
   --sds-c-pill-color-border-active: var(--sds-c-pill-error-color-border-active, #{$color-border-error});
 
   .slds-pill__label {

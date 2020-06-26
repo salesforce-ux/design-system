@@ -43,12 +43,12 @@
     }
 
     &:active {
-      /* @css-var-fallback color */
+      /*! @css-var-fallback color */
       --sds-c-alert-color-text: var(--sds-c-alert-color-text-active, #{$color-text-link-inverse-active});
     }
 
     &[disabled] {
-      /* @css-var-fallback color */
+      /*! @css-var-fallback color */
       --sds-c-alert-color-text: var(--sds-c-alert-color-text-disabled, #{$color-text-link-inverse-disabled});
     }
   }

@@ -44,13 +44,13 @@
 
   &:hover,
   &:focus {
-    /* @css-var-fallback background-color */
+    /*! @css-var-fallback background-color */
     --sds-c-button-color-background: var(--sds-c-button-color-background-hover, transparent);
 
-    /* @css-var-fallback border-color */
+    /*! @css-var-fallback border-color */
     --sds-c-button-color-border: var(--sds-c-button-color-border-hover, transparent);
 
-    /* @css-var-fallback color */
+    /*! @css-var-fallback color */
     --sds-c-button-color-text: var(--sds-c-button-color-text-hover, #{$brand-accessible-active});
   }
 
@@ -60,25 +60,25 @@
   }
 
   &:active {
-    /* @css-var-fallback background-color */
+    /*! @css-var-fallback background-color */
     --sds-c-button-color-background: var(--sds-c-button-color-background-active, transparent);
 
-    /* @css-var-fallback border-color */
+    /*! @css-var-fallback border-color */
     --sds-c-button-color-border: var(--sds-c-button-color-border-active, transparent);
 
-    /* @css-var-fallback color */
+    /*! @css-var-fallback color */
     --sds-c-button-color-text: var(--sds-c-button-color-text-active, #{$brand-accessible-active});
   }
 
   &[disabled],
   &:disabled {
-    /* @css-var-fallback background-color */
+    /*! @css-var-fallback background-color */
     --sds-c-button-color-background: var(--sds-c-button-color-background-disabled, transparent);
 
-    /* @css-var-fallback border-color */
+    /*! @css-var-fallback border-color */
     --sds-c-button-color-border: var(--sds-c-button-color-border-disabled, transparent);
 
-    /* @css-var-fallback color */
+    /*! @css-var-fallback color */
     --sds-c-button-color-text: var(--sds-c-button-color-text-disabled, #{$color-text-button-default-disabled});
     cursor: default;
 
@@ -166,28 +166,28 @@ a.slds-button--inverse:focus {
 .slds-button--neutral {
   @include button-shape(neutral);
 
-  /* @css-var-fallback background-color */
+  /*! @css-var-fallback background-color */
   --sds-c-button-color-background: var(--sds-c-button-neutral-color-background, #{$button-color-background-primary});
 
-  /* @css-var-fallback background-color */
+  /*! @css-var-fallback background-color */
   --sds-c-button-color-background-hover: var(--sds-c-button-neutral-color-background, #{$color-background-button-default-hover});
 
-  /* @css-var-fallback background-color */
+  /*! @css-var-fallback background-color */
   --sds-c-button-color-background-active: var(--sds-c-button-neutral-color-background-active, #{$color-background-button-default-active});
 
-  /* @css-var-fallback background-color */
+  /*! @css-var-fallback background-color */
   --sds-c-button-color-background-disabled: var(--sds-c-button-neutral-color-background-disabled, #{$color-background-button-default-disabled});
 
-  /* @css-var-fallback border-color */
+  /*! @css-var-fallback border-color */
   --sds-c-button-color-border: var(--sds-c-button-neutral-color-border, #{$color-border-primary});
 
-  /* @css-var-fallback border-color */
+  /*! @css-var-fallback border-color */
   --sds-c-button-color-border-hover: var(--sds-c-button-neutral-color-border-hover, #{$color-border-primary});
 
-  /* @css-var-fallback border-color */
+  /*! @css-var-fallback border-color */
   --sds-c-button-color-border-active: var(--sds-c-button-neutral-color-border-active, #{$color-border-primary});
 
-  /* @css-var-fallback border-color */
+  /*! @css-var-fallback border-color */
   --sds-c-button-color-border-disabled: var(--sds-c-button-neutral-color-border-disabled, #{$color-border-primary});
 }
 
@@ -203,40 +203,40 @@ a.slds-button--inverse:focus {
 .slds-button--brand {
   @include button-shape(brand);
 
-  /* @css-var-fallback background-color */
+  /*! @css-var-fallback background-color */
   --sds-c-button-color-background: var(--sds-c-button-brand-color-background, #{$brand-accessible});
 
-  /* @css-var-fallback background-color */
+  /*! @css-var-fallback background-color */
   --sds-c-button-color-background-hover: var(--sds-c-button-brand-color-background-hover, #{$brand-accessible-active});
 
-  /* @css-var-fallback background-color */
+  /*! @css-var-fallback background-color */
   --sds-c-button-color-background-active: var(--sds-c-button-brand-color-background-active, #{$brand-accessible-active});
 
-  /* @css-var-fallback background-color */
+  /*! @css-var-fallback background-color */
   --sds-c-button-color-background-disabled: var(--sds-c-button-brand-color-background-disabled, #{$brand-disabled});
 
-  /* @css-var-fallback border-color */
+  /*! @css-var-fallback border-color */
   --sds-c-button-color-border: var(--sds-c-button-brand-color-border, #{$brand-accessible});
 
-  /* @css-var-fallback border-color */
+  /*! @css-var-fallback border-color */
   --sds-c-button-color-border-hover: var(--sds-c-button-brand-color-border-hover, #{$brand-accessible-active});
 
-  /* @css-var-fallback border-color */
+  /*! @css-var-fallback border-color */
   --sds-c-button-color-border-active: var(--sds-c-button-brand-color-border-active, #{$brand-accessible-active});
 
-  /* @css-var-fallback border-color */
+  /*! @css-var-fallback border-color */
   --sds-c-button-color-border-disabled: var(--sds-c-button-brand-color-border-disabled, #{$brand-disabled});
 
-  /* @css-var-fallback color */
+  /*! @css-var-fallback color */
   --sds-c-button-color-text: var(--sds-c-button-brand-color-text, #{$color-text-brand-primary});
 
-  /* @css-var-fallback color */
+  /*! @css-var-fallback color */
   --sds-c-button-color-text-hover: var(--sds-c-button-brand-color-text-hover, #{$color-text-brand-primary});
 
-  /* @css-var-fallback color */
+  /*! @css-var-fallback color */
   --sds-c-button-color-text-active: var(--sds-c-button-brand-color-text-active, #{$color-text-brand-primary});
 
-  /* @css-var-fallback color */
+  /*! @css-var-fallback color */
   --sds-c-button-color-text-disabled: var(--sds-c-button-brand-color-text-disabled, #{$color-text-button-brand-disabled});
 }
 
@@ -251,31 +251,31 @@ a.slds-button--inverse:focus {
 .slds-button_outline-brand {
   @include button-shape(outline-brand);
 
-  /* @css-var-fallback background-color */
+  /*! @css-var-fallback background-color */
   --sds-c-button-color-background: var(--sds-c-button-outline-brand-color-background, #{$button-color-background-primary});
 
-  /* @css-var-fallback background-color */
+  /*! @css-var-fallback background-color */
   --sds-c-button-color-background-hover: var(--sds-c-button-outline-brand-color-background-hover, #{$color-background-button-default-hover});
 
-  /* @css-var-fallback background-color */
+  /*! @css-var-fallback background-color */
   --sds-c-button-color-background-active: var(--sds-c-button-outline-brand-color-background-active, #{$color-background-button-default-active});
 
-  /* @css-var-fallback background-color */
+  /*! @css-var-fallback background-color */
   --sds-c-button-color-background-disabled: var(--sds-c-button-outline-brand-color-background-disabled, #{$color-background-button-default-disabled});
 
-  /* @css-var-fallback border-color */
+  /*! @css-var-fallback border-color */
   --sds-c-button-color-border: var(--sds-c-button-outline-brand-color-border, #{$brand-accessible});
 
-  /* @css-var-fallback border-color */
+  /*! @css-var-fallback border-color */
   --sds-c-button-color-border-hover: var(--sds-c-button-outline-brand-color-border-hover, #{$brand-accessible});
 
-  /* @css-var-fallback border-color */
+  /*! @css-var-fallback border-color */
   --sds-c-button-color-border-active: var(--sds-c-button-outline-brand-color-border-active, #{$brand-accessible});
 
-  /* @css-var-fallback border-color */
+  /*! @css-var-fallback border-color */
   --sds-c-button-color-border-disabled: var(--sds-c-button-outline-brand-color-border-disabled, #{$color-border});
 
-  /* @css-var-fallback color */
+  /*! @css-var-fallback color */
   --sds-c-button-color-text-disabled: var(--sds-c-button-outline-brand-color-text-disabled, #{$color-text-button-default-disabled});
 }
 
@@ -291,28 +291,28 @@ a.slds-button--inverse:focus {
 .slds-button--inverse {
   @include button-shape(inverse);
 
-  /* @css-var-fallback background-color */
+  /*! @css-var-fallback background-color */
   --sds-c-button-color-background: var(--sds-c-button-inverse-color-background, #{$color-background-button-inverse});
 
-  /* @css-var-fallback background-color */
+  /*! @css-var-fallback background-color */
   --sds-c-button-color-background-hover: var(--sds-c-button-inverse-color-background-hover, #{$color-background-button-default-hover});
 
-  /* @css-var-fallback background-color */
+  /*! @css-var-fallback background-color */
   --sds-c-button-color-background-active: var(--sds-c-button-inverse-color-background-active, #{$color-background-button-default-hover});
 
-  /* @css-var-fallback background-color */
+  /*! @css-var-fallback background-color */
   --sds-c-button-color-background-disabled: var(--sds-c-button-inverse-color-background-disabled, #{$color-background-button-inverse-disabled});
 
-  /* @css-var-fallback border-color */
+  /*! @css-var-fallback border-color */
   --sds-c-button-color-border: var(--sds-c-button-inverse-color-border, #{$button-color-border-primary});
 
-  /* @css-var-fallback border-color */
+  /*! @css-var-fallback border-color */
   --sds-c-button-color-border-hover: var(--sds-c-button-inverse-color-border-hover, #{$button-color-border-primary});
 
-  /* @css-var-fallback border-color */
+  /*! @css-var-fallback border-color */
   --sds-c-button-color-border-active: var(--sds-c-button-inverse-color-border-active, #{$button-color-border-primary});
 
-  /* @css-var-fallback border-color */
+  /*! @css-var-fallback border-color */
   --sds-c-button-color-border-disabled: var(--sds-c-button-inverse-color-border-disabled, #{$color-border-button-inverse-disabled});
 }
 
@@ -358,40 +358,40 @@ a.slds-button--inverse:focus {
 .slds-button--destructive {
   @include button-shape(destructive);
 
-  /* @css-var-fallback background-color */
+  /*! @css-var-fallback background-color */
   --sds-c-button-color-background: var(--sds-c-button-destructive-color-background, #{$color-background-destructive});
 
-  /* @css-var-fallback background-color */
+  /*! @css-var-fallback background-color */
   --sds-c-button-color-background-hover: var(--sds-c-button-destructive-color-background-hover, #{$color-background-destructive-hover});
 
-  /* @css-var-fallback background-color */
+  /*! @css-var-fallback background-color */
   --sds-c-button-color-background-active: var(--sds-c-button-destructive-color-background-active, #{$color-background-destructive-active});
 
-  /* @css-var-fallback background-color */
+  /*! @css-var-fallback background-color */
   --sds-c-button-color-background-disabled: var(--sds-c-button-destructive-color-background-disabled, #{$brand-disabled});
 
-  /* @css-var-fallback border-color */
+  /*! @css-var-fallback border-color */
   --sds-c-button-color-border: var(--sds-c-button-destructive-color-border, #{$color-background-destructive});
 
-  /* @css-var-fallback border-color */
+  /*! @css-var-fallback border-color */
   --sds-c-button-color-border-hover: var(--sds-c-button-destructive-color-border-hover, #{$color-background-destructive});
 
-  /* @css-var-fallback border-color */
+  /*! @css-var-fallback border-color */
   --sds-c-button-color-border-active: var(--sds-c-button-destructive-color-border-active, #{$color-border-destructive-active});
 
-  /* @css-var-fallback border-color */
+  /*! @css-var-fallback border-color */
   --sds-c-button-color-border-disabled: var(--sds-c-button-destructive-color-border-disabled, #{$brand-disabled});
 
-  /* @css-var-fallback color */
+  /*! @css-var-fallback color */
   --sds-c-button-color-text: var(--sds-c-button-destructive-color-text, #{$color-text-inverse});
 
-  /* @css-var-fallback color */
+  /*! @css-var-fallback color */
   --sds-c-button-color-text-hover: var(--sds-c-button-destructive-color-text-hover, #{$color-text-inverse});
 
-  /* @css-var-fallback color */
+  /*! @css-var-fallback color */
   --sds-c-button-color-text-active: var(--sds-c-button-destructive-color-text-active, #{$color-text-inverse});
 
-  /* @css-var-fallback color */
+  /*! @css-var-fallback color */
   --sds-c-button-color-text-disabled: var(--sds-c-button-destructive-color-text-disabled, #{$color-text-button-brand-disabled});
 }
 
@@ -406,40 +406,40 @@ a.slds-button--inverse:focus {
 .slds-button_text-destructive {
   @include button-shape(text-destructive);
 
-  /* @css-var-fallback background-color */
+  /*! @css-var-fallback background-color */
   --sds-c-button-color-background: var(--sds-c-button-text-destructive-color-background, #{$button-color-background-primary});
 
-  /* @css-var-fallback background-color */
+  /*! @css-var-fallback background-color */
   --sds-c-button-color-background-hover: var(--sds-c-button-text-destructive-color-background-hover, #{$color-background-button-default-hover});
 
-  /* @css-var-fallback background-color */
+  /*! @css-var-fallback background-color */
   --sds-c-button-color-background-active: var(--sds-c-button-text-destructive-color-background-active, #{$color-background-button-default-active});
 
-  /* @css-var-fallback background-color */
+  /*! @css-var-fallback background-color */
   --sds-c-button-color-background-disbled: var(--sds-c-button-text-destructive-color-background-disabled, #{$color-background-button-default-disabled});
 
-  /* @css-var-fallback border-color */
+  /*! @css-var-fallback border-color */
   --sds-c-button-color-border: var(--sds-c-button-text-destructive-color-border, #{$button-color-border-primary});
 
-  /* @css-var-fallback border-color */
+  /*! @css-var-fallback border-color */
   --sds-c-button-color-border-hover: var(--sds-c-button-text-destructive-color-border-hover, #{$button-color-border-primary});
 
-  /* @css-var-fallback border-color */
+  /*! @css-var-fallback border-color */
   --sds-c-button-color-border-active: var(--sds-c-button-text-destructive-color-border-active, #{$button-color-border-primary});
 
-  /* @css-var-fallback border-color */
+  /*! @css-var-fallback border-color */
   --sds-c-button-color-border-disabled: var(--sds-c-button-text-destructive-color-border-disabled, #{$button-color-border-primary});
 
-  /* @css-var-fallback color */
+  /*! @css-var-fallback color */
   --sds-c-button-color-text: var(--sds-c-button-text-destructive-color-text, #{$color-text-destructive});
 
-  /* @css-var-fallback color */
+  /*! @css-var-fallback color */
   --sds-c-button-color-text-hover: var(--sds-c-button-text-destructive-color-text-hover, #{$color-text-destructive-hover});
 
-  /* @css-var-fallback color */
+  /*! @css-var-fallback color */
   --sds-c-button-color-text-active: var(--sds-c-button-text-destructive-color-text-active, #{$color-text-destructive-hover});
 
-  /* @css-var-fallback color */
+  /*! @css-var-fallback color */
   --sds-c-button-color-text-disabled: var(--sds-c-button-text-destructive-color-text-disabled, #{$color-text-button-default-disabled});
 }
 
@@ -455,40 +455,40 @@ a.slds-button--inverse:focus {
 .slds-button--success {
   @include button-shape(success);
 
-  /* @css-var-fallback background-color */
+  /*! @css-var-fallback background-color */
   --sds-c-button-color-background: var(--sds-c-button-success-color-background, #{$color-background-button-success});
 
-  /* @css-var-fallback background-color */
+  /*! @css-var-fallback background-color */
   --sds-c-button-color-background-hover: var(--sds-c-button-success-color-background-hover, #{$color-background-button-success-hover});
 
-  /* @css-var-fallback background-color */
+  /*! @css-var-fallback background-color */
   --sds-c-button-color-background-active: var(--sds-c-button-success-color-background-active, #{$color-background-button-success-active});
 
-  /* @css-var-fallback background-color */
+  /*! @css-var-fallback background-color */
   --sds-c-button-color-background-disabled: var(--sds-c-button-success-color-background-disabled, #{$brand-disabled});
 
-  /* @css-var-fallback border-color */
+  /*! @css-var-fallback border-color */
   --sds-c-button-color-border: var(--sds-c-button-success-color-border, #{$color-border-success});
 
-  /* @css-var-fallback border-color */
+  /*! @css-var-fallback border-color */
   --sds-c-button-color-border-hover: var(--sds-c-button-success-color-border-hover, #{$color-border-success-dark});
 
-  /* @css-var-fallback border-color */
+  /*! @css-var-fallback border-color */
   --sds-c-button-color-border-active: var(--sds-c-button-success-color-border-active, #{$color-border-success-dark});
 
-  /* @css-var-fallback border-color */
+  /*! @css-var-fallback border-color */
   --sds-c-button-color-border-disabled: var(--sds-c-button-success-color-border-disabled, #{$brand-disabled});
 
-  /* @css-var-fallback color */
+  /*! @css-var-fallback color */
   --sds-c-button-color-text: var(--sds-c-button-success-color-text, #{$color-text-default});
 
-  /* @css-var-fallback color */
+  /*! @css-var-fallback color */
   --sds-c-button-color-text-hover: var(--sds-c-button-success-color-text-hover, #{$color-text-inverse});
 
-  /* @css-var-fallback color */
+  /*! @css-var-fallback color */
   --sds-c-button-color-text-active: var(--sds-c-button-success-color-text-active, #{$color-text-inverse});
 
-  /* @css-var-fallback color */
+  /*! @css-var-fallback color */
   --sds-c-button-color-text-disabled: var(--sds-c-button-success-color-text-disabled, #{$color-text-button-brand-disabled});
 }
 

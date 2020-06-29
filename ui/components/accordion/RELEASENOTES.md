@@ -4,6 +4,12 @@
 
 <!-- ## [Unreleased] -->
 
+## 2.13.0
+
+### Added
+
+- Added the brand expression specific Styling API to Accordion.
+
 ## 2.11.7
 
 ### Changed

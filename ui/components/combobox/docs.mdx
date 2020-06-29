@@ -92,7 +92,9 @@ It is most common to expand the `listbox` of options when a user clicks on the C
 - A `listbox` has the ability to group options together under a visual heading or label. This means the `role="listbox"` attribute is placed on a common parent element, which can wrap multiple lists (or groups) of options
   - When a `listbox` has no option groups, the `ul` element has `role="presentation"` to remove it from the Accessibility Tree
 - Every `option` has `aria-selected="false"` by default
-- Disabled `option`s should have `aria-disabled="true"` applied along with [a class on the icon in an entity option](#Disabled-listbox-items).
+- Focused `option`s should have `aria-selected="true"`
+- Chosen `options`s should have `aria-checked="true"`
+- Disabled `option`s should have `aria-disabled="true"` applied along with [a class on the icon in an entity option](#Disabled-listbox-items)
 
 #### Loading more options
 
@@ -254,16 +256,6 @@ When re-opening a Combobox that already has a selected value, the `listbox` shou
 #### Multiple selections
 
 When more than one option has been selected, the value of the `input` should be updated with the total number of selected items, such as "3 options selected".
-
-<Blockquote type="a11y" header="Accessibility Note">
-  <p>
-    The value of the Combobox is the only way you can communicate what option
-    was selected to a screen reader. Given that the option names don't appear in
-    the set value, adding "Current Selection:" to each selected option name
-    allows a screen reader user to understand that the option was already
-    selected from the list.
-  </p>
-</Blockquote>
 
 <CodeBlock toggleCode={false}>
   <Option name="Accounts" selected />
@@ -572,18 +564,6 @@ The containing element should receive the class `slds-combobox_object-switcher` 
 </CodeView>
 
 #### Icon variant
-
-<Blockquote type="a11y" header="Accessibility Note">
-  <p>
-    When a selection is made, the currently selected items should be prepended
-    with a{' '}
-    <code>
-      &lt;span className="slds-assistive-text"&gt;Current
-      Selection:&lt;/span&gt;
-    </code>{' '}
-    to inform screen readers of its current selection.
-  </p>
-</Blockquote>
 
 ##### Blurred
 

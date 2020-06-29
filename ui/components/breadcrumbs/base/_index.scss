@@ -16,7 +16,7 @@
    * @restrict .slds-breadcrumb li
    */
   .slds-list__item,
-  &__item {
+  .slds-breadcrumb__item {
     position: relative;
 
     &:before {
@@ -27,7 +27,10 @@
 
     > a {
       display: block;
-      padding: 0 $spacing-x-small;
+      padding-top: 0;
+      padding-right: var(--sds-c-breadcrumbs-spacing-horizontal-end, $spacing-x-small);
+      padding-bottom: 0;
+      padding-left: var(--sds-c-breadcrumbs-spacing-horizontal-start, $spacing-x-small);
 
       &:hover {
         text-decoration: none;
@@ -37,7 +40,7 @@
     &:first-child {
 
       > a {
-        padding-left: 0;
+        --sds-c-breadcrumbs-spacing-horizontal-start: 0;
       }
 
       &:before {
@@ -47,6 +50,6 @@
   }
 
   .slds-dropdown-trigger {
-    margin-right: $spacing-x-small;
+    margin-right: var(--sds-c-breadcrumbs-spacing-horizontal-end, $spacing-x-small);
   }
 }

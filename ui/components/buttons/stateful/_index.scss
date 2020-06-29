@@ -14,17 +14,29 @@
  */
 .slds-button_neutral.slds-is-selected,
 .slds-button--neutral.slds-is-selected {
-  border-color: transparent;
-  background-color: transparent;
+  /*! @css-var-fallback background-color */
+  --sds-c-button-color-background: transparent;
 
+  /*! @css-var-fallback border-color */
+  --sds-c-button-color-border: transparent;
+
+  /**
+   * Styling API uses button-neutral identifier instead of button_stateful
+   * because stateful is a neutral variant underneath the hood and therefore
+   * should pick up any styling customizations made to the brand variant.
+   */
   &:hover:not([disabled]),
   &:focus:not([disabled]) {
-    border-color: $button-color-border-primary;
-    background-color: $color-background-button-default-hover;
+    /*! @css-var-fallback background-color */
+    --sds-c-button-color-background: var(--sds-c-button-neutral-color-background, #{$color-background-button-default-hover});
+
+    /*! @css-var-fallback border-color */
+    --sds-c-button-color-border: var(--sds-c-button-neutral-color-border-hover, #{$color-border-primary});
   }
 
   &:active:not([disabled]) {
-    background-color: $color-background-button-default-active;
+    /*! @css-var-fallback background-color */
+    --sds-c-button-color-background: var(--sds-c-button-neutral-color-background-active, #{$color-background-button-default-active});
   }
 }
 

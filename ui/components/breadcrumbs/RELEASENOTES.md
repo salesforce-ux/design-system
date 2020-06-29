@@ -3,9 +3,15 @@
 # Breadcrumbs Release Notes
 
 <!-- ## [Unreleased] -->
+
+## 2.13.0
+
+- Added the brand expression specific Styling API
+
 ## 2.8.4
 
 ### Fixed
+
 - Adjusted typographic styling for breadcrumb items.
 
 ## 2.8.0

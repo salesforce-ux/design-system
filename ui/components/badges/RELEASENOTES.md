@@ -4,6 +4,16 @@
 
 <!-- ## [Unreleased] -->
 
+## 2.13.0
+
+### Added
+
+- Added the brand expression specific Styling API to Badge.
+
+### Fixed
+
+- Fixed inconsistent heights between variants when border isn't present.
+
 ## 2.11.5
 
 - Added examples for communicating Success, Warning and Error states.

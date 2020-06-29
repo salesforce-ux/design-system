@@ -8,13 +8,25 @@ import {
 import {
   getComponents,
   getComponentVariants,
-  getUtils
+  getUtils,
+  getComponentsByCriteria
 } from '../shared/utils/annotations';
 import { makeTitle } from '../shared/utils/text-formatting';
 import DocsPage from './components/DocsPage';
 
-const createComponentStories = () => {
-  const componentList = getComponents();
+const createComponentStories = type => {
+  let componentList;
+
+  switch (type) {
+    case 'mobile':
+      componentList = getComponentsByCriteria([
+        { path: ['annotations', 'layout'] }
+      ]);
+      break;
+
+    default:
+      componentList = getComponents();
+  }
 
   // create stories for each component / variant from example files
   componentList.forEach(component => {
@@ -22,6 +34,13 @@ const createComponentStories = () => {
 
     const componentTitle = makeTitle(component);
     const variants = getComponentVariants(component);
+
+    // try to load the kitchen sink
+    try {
+      require(`../ui/components/${component}/index.stories.js`);
+    } catch (e) {
+      console.warn(`Component Kitchen Sink not found for ${componentTitle}`);
+    }
 
     // load each component variant
     variants.forEach(variant => {
@@ -119,4 +138,13 @@ export default () => {
 
   createComponentStories();
   createUtilStories();
+};
+
+/**
+ * This function uses our annotations-based ui.json to programmatically add
+ * stories from our example files.
+ */
+export const mobileStories = () => {
+  // load mobile stories (layout === responsive || adaptive)
+  createComponentStories('mobile');
 };

@@ -16,10 +16,10 @@
   overflow: hidden;
   display: inline-block;
   vertical-align: middle;
-  border-radius: $border-radius-medium;
+  border-radius: var(--sds-c-avatar-radius-border, $border-radius-medium);
   line-height: $line-height-reset;
   font-size: $font-size-heading-small;
-  color: $color-text-inverse;
+  color: var(--sds-c-avatar-color-text, $color-text-inverse);
 
   &:hover,
   &:focus:hover {
@@ -221,12 +221,12 @@
  * @group color
  */
 .slds-avatar__initials_inverse {
-  background-color: $color-background;
-  color: $color-text-weak;
+  background-color: var(--sds-c-avatar-initials-inverse-color-background, $color-background);
+  color: var(--sds-c-avatar-initials-inverse-color-text, $color-text-weak);
   text-shadow: none;
 
   // combat abbr override styling in avatar
   &:hover {
-    color: $color-text-weak;
+    color: var(--sds-c-avatar-initials-inverse-color-text, $color-text-weak);
   }
 }

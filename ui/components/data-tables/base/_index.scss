@@ -473,11 +473,24 @@ $max-column-support: 15;
  * @selector .slds-table_resizable-cols
  * @restrict .slds-table_fixed-layout
  */
+
 .slds-table_resizable-cols thead th,
 .slds-table--resizable-cols thead th {
   padding: 0; // Reset padding so actionable link bleeds to edge
-}
 
+  &:last-of-type .slds-resizable__handle {
+    width: $spacing-small;
+    right: 0;
+
+    .slds-resizable__divider {
+
+      &:before,
+      &:after {
+        right: 0;
+      }
+    }
+  }
+}
 
 /**
  * Provide an indicator that resizing is available
@@ -561,6 +574,19 @@ $max-column-support: 15;
       &:after {
         opacity: 1;
       }
+    }
+  }
+
+  // Handles making the handle + divider visible during keyboard navigation
+  &__input:focus ~ &__handle &__divider {
+
+    &:before {
+      background-color: $color-background-button-brand;
+      width: $spacing-xx-small;
+    }
+
+    &:after {
+      opacity: 1;
     }
   }
 }

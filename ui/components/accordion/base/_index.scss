@@ -20,7 +20,9 @@
  * @restrict .slds-accordion li
  */
 .slds-accordion__list-item {
-  border-top: $border-width-thin solid $color-border;
+  border-top-width: var(--sds-c-accordion-sizing-border, $border-width-thin);
+  border-top-style: solid;
+  border-top-color: var(--sds-c-accordion-color-border, $color-border);
 
   &:first-child {
     border-top: 0;
@@ -45,8 +47,8 @@
   display: flex;
   flex-grow: 1;
   min-width: 0;
-  font-size: $var-font-size-5;
-  line-height: $line-height-heading;
+  font-size: var(--sds-c-accordion-heading-font-size, $var-font-size-5);
+  line-height: var(--sds-c-accordion-heading-line-height, $line-height-heading);
 
   .slds-button:focus {
     text-decoration: underline;
@@ -97,7 +99,10 @@
  * @restrict .slds-accordion section
  */
 .slds-accordion__section {
-  padding: $spacing-small;
+  padding-top: var(--sds-c-accordion-section-spacing-vertical-start, $spacing-small);
+  padding-right: var(--sds-c-accordion-section-spacing-horizontal-end, $spacing-small);
+  padding-bottom: var(--sds-c-accordion-section-spacing-vertical-end, $spacing-small);
+  padding-left: var(--sds-c-accordion-section-spacing-horizontal-start, $spacing-small);
 }
 
 /**

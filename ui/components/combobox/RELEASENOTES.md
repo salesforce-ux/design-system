@@ -4,6 +4,17 @@
 
 <!-- ## [Unreleased] -->
 
+## 2.12.2
+
+### Changed
+
+- Removed `<span class="slds-assistive-text">Current Selection:</span>` from Listbox options
+- Updated guidance documentation regarding the usage of `aria-selected` and `aria-checked`
+
+### Added
+
+- Added `aria-checked="true"` to Listbox options when selected
+
 ## 2.11.7
 
 ### Added

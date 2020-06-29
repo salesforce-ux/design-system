@@ -8,7 +8,7 @@
     "CSS"
   ],
   "homepage": "https://lightningdesignsystem.com",
-  "version": "2.13.0-alpha.1",
+  "version": "2.13.0-alpha.2",
   "author": "Salesforce",
   "bugs": {
     "url": "https://github.com/salesforce-ux/design-system/issues"
@@ -52,7 +52,7 @@
     "@salesforce-ux/design-system-markup": "2.0.2",
     "@salesforce-ux/design-system-parser": "1.1.0",
     "@salesforce-ux/design-system-primitive-tokens": "0.0.8",
-    "@salesforce-ux/icons": "9.35.1",
+    "@salesforce-ux/icons": "9.36.1",
     "@salesforce-ux/instant-vrt": "2.0.0",
     "@salesforce-ux/scss-parser-aura": "3.0.5",
     "@storybook/addon-a11y": "5.3.18",
@@ -193,6 +193,7 @@
   },
   "scripts": {
     "start": "start-storybook -c .storybook -p 9002",
+    "start:mobile": "STORYBOOK_STORIES_TYPE='mobile' start-storybook -c .storybook -p 9003",
     "full-start": "npm run build-dist && start-storybook -c .storybook -p 9002",
     "build": "npm run gulp -- build",
     "dist": "npm run gulp -- dist",

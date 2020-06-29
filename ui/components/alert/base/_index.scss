@@ -11,16 +11,47 @@
  */
 .slds-notify_alert,
 .slds-notify--alert {
-  @include inverse-text;
+  position: relative;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  position: relative;
-  background: rgba($color-background-toast, 0.95);
-  font-weight: $font-weight-light;
-  padding: $spacing-x-small $spacing-x-large $spacing-x-small $spacing-x-small;
-  text-align: center;
   width: 100%;
+  padding-top: var(--sds-c-alert-spacing-vertical-start, $spacing-x-small);
+  padding-right: var(--sds-c-alert-spacing-horizontal-end, $spacing-x-large);
+  padding-bottom: var(--sds-c-alert-spacing-vertical-end, $spacing-x-small);
+  padding-left: var(--sds-c-alert-spacing-horizontal-start, $spacing-x-small);
+  color: var(--sds-c-alert-color-text, $color-text-inverse);
+  font-weight: var(--sds-c-alert-font-weight, $font-weight-light);
+  text-align: center;
+  background-color: var(--sds-c-alert-color-background, $color-background-toast);
+
+  // Text links within an Alert
+  a {
+    color: currentColor;
+    border: $border-width-thin solid transparent;
+    border-radius: $border-radius-medium;
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
+      outline: 0;
+    }
+
+    &:focus {
+      box-shadow: 0 0 3px $color-border-link-focus-inverse;
+      border: $border-width-thin solid $color-border-link-focus-inverse;
+    }
+
+    &:active {
+      /*! @css-var-fallback color */
+      --sds-c-alert-color-text: var(--sds-c-alert-color-text-active, #{$color-text-link-inverse-active});
+    }
+
+    &[disabled] {
+      /*! @css-var-fallback color */
+      --sds-c-alert-color-text: var(--sds-c-alert-color-text-disabled, #{$color-text-link-inverse-disabled});
+    }
+  }
 
   /**
    * @summary Alert close button
@@ -28,11 +59,11 @@
    * @restrict .slds-notify_alert div
    */
   .slds-notify__close {
-    float: right;
     position: absolute;
     top: 50%;
     right: $spacing-small;
     margin-left: $spacing-xx-small;
+    float: right;
     transform: translateY(-50%);
   }
 }

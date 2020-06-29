@@ -2,7 +2,7 @@ import { configure, addDecorator, addParameters } from '@storybook/react';
 import { withA11y } from '@storybook/addon-a11y';
 import { initializeRTL } from 'storybook-addon-rtl';
 
-import loadStories from './stories';
+import loadStories, { mobileStories } from './stories';
 import sldsTheme from './sldsTheme';
 
 import './scss/ui/index.scss'; // Our custom Storybook presentation styles
@@ -26,4 +26,13 @@ addParameters({
   ]
 });
 
-configure(loadStories, module);
+// decide which stories to load based on environment variable value
+let whatToLoad = loadStories;
+
+switch (process.env.STORYBOOK_STORIES_TYPE) {
+  case 'mobile':
+    whatToLoad = mobileStories;
+    break;
+}
+
+configure(whatToLoad, module);

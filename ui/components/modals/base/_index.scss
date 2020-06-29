@@ -52,11 +52,6 @@
   }
 
   &__header,
-  &__content {
-    background: $color-background-alt;
-  }
-
-  &__header,
   &__footer {
     flex-shrink: 0;
   }
@@ -71,21 +66,21 @@
    */
   &__header {
     position: relative;
-    border: {
-      top: {
-        right-radius: $border-radius-medium;
-        left-radius: $border-radius-medium;
-      }
-      bottom: $border-width-thick solid $color-border;
-    }
-    padding: $spacing-medium;
+    border-top-right-radius: var(--sds-c-modal-radius-border, $border-radius-medium);
+    border-top-left-radius: var(--sds-c-modal-radius-border, $border-radius-medium);
+    border-bottom-width: var(--sds-c-modal-sizing-border, $border-width-thick);
+    border-bottom-style: solid;
+    border-bottom-color: var(--sds-c-modal-color-border, $color-border);
+    background-color: var(--sds-c-modal-header-color-background, $color-background-alt);
+    padding-top: var(--sds-c-modal-header-sizing-vertical-start, $spacing-medium);
+    padding-right: var(--sds-c-modal-header-sizing-horizontal-end, $spacing-medium);
+    padding-bottom: var(--sds-c-modal-header-sizing-vertical-end, $spacing-medium);
+    padding-left: var(--sds-c-modal-header-sizing-horizontal-start, $spacing-medium);
     text-align: center;
 
     + .slds-modal__menu {
-      border-top: {
-        left-radius: 0;
-        right-radius: 0;
-      }
+      border-top-right-radius: 0;
+      border-top-left-radius: 0;
     }
   }
 
@@ -103,12 +98,8 @@
 
   &__header_empty + .slds-modal__content,
   &__header--empty + .slds-modal__content {
-    border: {
-      top: {
-        right-radius: $border-radius-medium;
-        left-radius: $border-radius-medium;
-      }
-    }
+    border-top-right-radius: var(--sds-c-modal-radius-border, $border-radius-medium);
+    border-top-left-radius: var(--sds-c-modal-radius-border, $border-radius-medium);
   }
 
   /**
@@ -118,9 +109,9 @@
     * @restrict .slds-modal__header h2
     */
   .slds-modal__title {
-    font-weight: $font-weight-light;
-    font-size: $font-size-7;
-    line-height: $line-height-heading;
+    font-weight: var(--sds-c-modal-heading-font-weight, $font-weight-light);
+    font-size: var(--sds-c-modal-heading-font-size, $font-size-7);
+    line-height: var(--sds-c-modal-line-height, $line-height-heading);
   }
 
   /**
@@ -131,17 +122,15 @@
    * @required
    */
   &__content {
-    overflow: hidden {
-      y: auto;
-    }
+    background: var(--sds-c-modal-content-color-background, $color-background-alt);
+    overflow: hidden;
+    overflow-y: auto;
 
     &:last-child,
     &_has-hidden-footer {
-      border-bottom: {
-        right-radius: $border-radius-medium;
-        left-radius: $border-radius-medium;
-      }
-      box-shadow: $shadow-drop-down;
+      border-bottom-right-radius: var(--sds-c-modal-radius-border, $border-radius-medium);
+      border-bottom-left-radius: var(--sds-c-modal-radius-border, $border-radius-medium);
+      box-shadow: var(--sds-c-modal-shadow, $shadow-drop-down);
     }
   }
 
@@ -177,17 +166,18 @@
    * @required
    */
   &__footer {
-    border: {
-      top: $border-width-thick solid $color-border;
-      bottom: {
-        right-radius: $border-radius-medium;
-        left-radius: $border-radius-medium;
-      }
-    }
-    padding: $spacing-small $spacing-medium;
-    background-color: $color-background;
+    border-bottom-right-radius: var(--sds-c-modal-radius-border, $border-radius-medium);
+    border-bottom-left-radius: var(--sds-c-modal-radius-border, $border-radius-medium);
+    border-top-width: var(--sds-c-modal-sizing-border, $border-width-thick);
+    border-top-style: solid;
+    border-top-color: var(--sds-c-modal-color-border, $color-border);
+    background-color: var(--sds-c-modal-footer-color-background, $color-background);
+    padding-top: var(--sds-c-modal-footer-sizing-vertical-start, $spacing-small);
+    padding-right: var(--sds-c-modal-footer-sizing-horizontal-end, $spacing-medium);
+    padding-bottom: var(--sds-c-modal-footer-sizing-vertical-end, $spacing-small);
+    padding-left: var(--sds-c-modal-footer-sizing-horizontal-start, $spacing-medium);
     text-align: right;
-    box-shadow: $shadow-drop-down;
+    box-shadow: var(--sds-c-modal-shadow, $shadow-drop-down);
 
     /**
      * Makes buttons inside the footer spread to both left and right.
@@ -235,7 +225,7 @@
   right: 0;
   bottom: 0;
   left: 0;
-  background: $color-background-temp-modal-tint;
+  background: var(--sds-c-backdrop-color-background, $color-background-temp-modal-tint);
   z-index: $z-index-modal;
 
   /**

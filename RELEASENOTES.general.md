@@ -1,7 +1,7 @@
 <!-- Release notes authoring guidelines: http://keepachangelog.com/ -->
 <!-- On release, add general notes here. In time the legacy release notes will be add to this -->
 
-## 2.13.0 - May 21, 2020
+## 2.13.0 - June 18, 2020
 
 - Corrected various documentation typos and formatting in:
   - components/app-launcher
@@ -26,11 +26,15 @@
   - components/vertical-tabs
 - Fixed broken links in earlier release notes
 
+## 2.12.1 - May 7, 2020
+
+- Updated Icons to 9.36.1
+
 ## 2.12.0 - April 28, 2020
 
-## 2.11.9 - April 27, 2020
-
 - Updated Icons to 9.35.0
+
+## 2.11.9 - April 27, 2020
 
 ## 2.11.8 - April 15, 2020
 

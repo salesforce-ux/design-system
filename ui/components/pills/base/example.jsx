@@ -19,11 +19,7 @@ export let states = [
       <Pill className="slds-has-error">
         <span className="slds-pill__icon_container">
           <span className="slds-icon_container" title="Error">
-            <SvgIcon
-              className="slds-icon slds-icon-text-error"
-              sprite="utility"
-              symbol="error"
-            />
+            <SvgIcon className="slds-icon slds-icon-text-error" sprite="utility" symbol="error" />
             <span className="slds-assistive-text">Warning</span>
           </span>
         </span>
@@ -49,10 +45,7 @@ export let examples = [
     element: (
       <Pill>
         <span className="slds-pill__icon_container">
-          <span
-            className="slds-icon_container slds-icon-standard-account"
-            title="Account"
-          >
+          <span className="slds-icon_container slds-icon-standard-account" title="Account">
             <SvgIcon className="slds-icon" sprite="standard" symbol="account" />
             <span className="slds-assistive-text">Account</span>
           </span>
@@ -67,11 +60,7 @@ export let examples = [
       <Pill>
         <span className="slds-pill__icon_container">
           <span className="slds-avatar slds-avatar_circle" title="User avatar">
-            <img
-              alt="Person name"
-              src="/assets/images/avatar2.jpg"
-              title="User avatar"
-            />
+            <img alt="Person name" src="/assets/images/avatar2.jpg" title="User avatar" />
           </span>
         </span>
       </Pill>
@@ -82,6 +71,17 @@ export let examples = [
     label: 'Pill with Container',
     element: (
       <PillContainer>
+        <Pill />
+        <Pill />
+        <Pill />
+      </PillContainer>
+    )
+  },
+  {
+    id: 'container-bare',
+    label: 'Pill with Bare Container - Deprecated',
+    element: (
+      <PillContainer className="slds-pill_container_bare">
         <Pill />
         <Pill />
         <Pill />

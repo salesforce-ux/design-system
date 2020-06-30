@@ -4,6 +4,12 @@
 
 <!-- ## [Unreleased] -->
 
+## 2.12.3
+
+### Fixed
+
+- Resolved issue where radio buttons would not retain their shape and appeared squished.
+
 ## 2.11.7
 
 ### Added

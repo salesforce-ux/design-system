@@ -24,6 +24,7 @@
     @include square($square-icon-medium-content);
     display: inline-block;
     position: relative;
+    flex-shrink: 0;
     vertical-align: middle;
     border: $border-width-thin solid $color-border-input;
     border-radius: $border-radius-circle;

@@ -2,6 +2,7 @@ import CodeView from '../../../shared/components/CodeView';
 import CodeBlock from '../../../shared/components/CodeBlock';
 import Example from '../../../shared/components/Example';
 import Blockquote from '../../../shared/components/Blockquote';
+import StyleApiTable from '../../../shared/components/StyleApiTable';
 import { UtilityIcon } from './base/example';
 import { ActionIcon } from './action/example';
 import { CustomIcon } from './custom/example';
@@ -11,7 +12,15 @@ import * as UtilityIconExamples from '../icons/base/example';
 import { getDisplayElementById } from '../../shared/helpers';
 
 <div className="doc lead">
-  Icons provide visual context and enhance usability. Read more in the <a href="/guidelines/iconography" title="Iconography Guidelines">Iconography design guideline</a> and for a full list of icons available, visit the <a href="/icons" title="Icons">Icons page</a>.
+  Icons provide visual context and enhance usability. Read more in the{' '}
+  <a href="/guidelines/iconography" title="Iconography Guidelines">
+    Iconography design guideline
+  </a>{' '}
+  and for a full list of icons available, visit the{' '}
+  <a href="/icons" title="Icons">
+    Icons page
+  </a>
+  .
 </div>
 
 <CodeView exampleOnly>
@@ -21,6 +30,10 @@ import { getDisplayElementById } from '../../shared/helpers';
 ## About Icons
 
 Five separate SVG sprites are used to create icons — [action](/icons/#action), [custom](/icons/#custom), [doctype](/icons/#doctype), [standard ](/icons/#standard) and [utility](/icons/#utility). Link to the icon SVG sprite by targeting the icon’s hash/ID value in the use href attribute. (You can find the values on the [icon page](/icons/).)
+
+### Style API
+
+<StyleApiTable component="icons" />
 
 ## Accessibility
 
@@ -56,6 +69,7 @@ When placing the icon code into your page, customize the path in the `use` attri
 If an icon has more than one word in the name, it should be included in the `use` attribute with the underscore separator as shown on the icon page. For example: log_a_call.
 
 You must require SLDS in your application for SVG sprites to work. If you’re using Visualforce, see <a href="/platforms/visualforce">the Visualforce tutorial</a>. If you’re using <a href="/platforms/lightning"> Lightning components, see this documentation</a>.
+
 - You can access the SVG sprites by downloading the entire [CSS Framework or just the icons](/resources/downloads). To include a sprite in your application, the recommended method is to place it into the page as the first element inside the `body` element. Alternatively, you can leave the sprite in the assets/icons directory and link to it from your page. To render a sprite icon, add the tiny [SVG for Everybody](https://github.com/jonathantneal/svg4everybody) script for Internet Explorer.
 - When placed into the `body`, the SVG sprite takes up space in the page. Use either `display:none` or `position:absolute` and set both the width and height to zero.
 

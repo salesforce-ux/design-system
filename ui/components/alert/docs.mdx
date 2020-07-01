@@ -5,38 +5,52 @@ import { Alert } from './base/example';
 import ButtonIcon from '../button-icons/';
 import { UtilityIcon } from '../icons/base/example';
 import Blockquote from '../../../shared/components/Blockquote';
+import StyleApiTable from '../../../shared/components/StyleApiTable';
 
 <div className="doc lead">
-  Alert banners communicate a state that affects the entire system, not just a feature or page. It persists over a session and appears without the user initiating the action.
+  Alert banners communicate a state that affects the entire system, not just a
+  feature or page. It persists over a session and appears without the user
+  initiating the action.
 </div>
 
 <CodeView exampleOnly>
   <Alert type="info">
-      <UtilityIcon
-        containerClassName="slds-m-right_x-small"
-        className="slds-icon_x-small"
-        assistiveText={false}
-        symbol="user"
-      />
-      <h2>
-        Logged in as John Smith (johnsmith@acme.com).{' '}
-        <a href="javascript:void(0);">Log out</a>
-      </h2>
-    </Alert>
+    <UtilityIcon
+      containerClassName="slds-m-right_x-small"
+      className="slds-icon_x-small"
+      assistiveText={false}
+      symbol="user"
+    />
+    <h2>
+      Logged in as John Smith (johnsmith@acme.com).{' '}
+      <a href="javascript:void(0);">Log out</a>
+    </h2>
+  </Alert>
 </CodeView>
 
 ## About Alert
 
+### Style API
+
+<StyleApiTable component="alert" />
+
 ### Accessibility
 
 #### Role
+
 Alert notifications should contain `role="alert"` on the container to signal to assistive technology that they require the user’s immediate attention.
 
 <CodeBlock toggleCode={false}>
-  <div className="slds-notify slds-notify_alert slds-theme_alert-texture slds-theme_info" role="alert">...</div>
+  <div
+    className="slds-notify slds-notify_alert slds-theme_alert-texture slds-theme_info"
+    role="alert"
+  >
+    ...
+  </div>
 </CodeBlock>
 
 #### Assistive Text
+
 Use a span with the class `slds-assistive-text` to let the user know what type of notification it is.
 
 <CodeBlock toggleCode={false}>

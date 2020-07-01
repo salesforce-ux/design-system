@@ -29,6 +29,7 @@ import {
   writeSanitizedComponentCss,
   writeCommonCss
 } from './generate/sanitized';
+import { extractVars } from '../var-extract';
 
 const distPath = path.resolve.bind(path, paths.dist);
 
@@ -265,6 +266,19 @@ export const writeSanitizedComponents = done =>
  */
 
 export const writeCommon = done => writeCommonCss(done);
+
+/*
+ * ==================
+ * Parses CSS Vars from compiled code
+ * ==================
+ */
+export const extractStyleAPIVars = done => {
+  gulpFile('css-vars.json', JSON.stringify(extractVars())).pipe(
+    gulp.dest(distPath())
+  );
+
+  if (done) done();
+};
 
 /*
  * ==================

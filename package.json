@@ -95,6 +95,7 @@
     "eslint-plugin-standard": "4.0.1",
     "express": "4.17.1",
     "extract-loader": "4.0.3",
+    "fast-glob": "3.2.4",
     "file-loader": "5.0.2",
     "fs-extra": "2.1.2",
     "futurize": "1.2.0",

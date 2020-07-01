@@ -20,8 +20,6 @@ import * as sanitized from './scripts/gulp/generate/sanitized';
 import paths from './scripts/helpers/paths';
 import * as travis from './scripts/helpers/travis';
 
-import { extractVars } from './scripts/var-extract';
-
 const distPath = path.resolve.bind(path, paths.dist);
 
 const getComponents = key => {
@@ -226,29 +224,13 @@ gulp.task(
   gulp.series('styles', withName('styles:stats')(styles.stats))
 );
 
-/**
- * ==================
- * Vars
- * ==================
- */
-
-gulp.task('vars', cb => {
-  gulpFile('css-vars.json', JSON.stringify(extractVars())).pipe(
-    gulp.dest(distPath())
-  );
-  cb();
-});
-
 /*
  * ==================
  * Builds
  * ==================
  */
 
-gulp.task(
-  'build',
-  gulp.series('clean', 'generate:tokens:all', 'styles', 'vars')
-);
+gulp.task('build', gulp.series('clean', 'generate:tokens:all', 'styles'));
 
 /*
  * ==================
@@ -360,6 +342,7 @@ gulp.task(
       withName('dist:packageJson')(dist.packageJson)
     ),
     withName('dist:minifyCss')(dist.minifyCss),
+    withName('dist:extractStyleAPIVars')(dist.extractStyleAPIVars),
     withName('dist:writeUI')(dist.writeUI),
     withName('dist:writeLibrary')(dist.writeLibrary),
     withName('dist:writeTokenComponentMap')(done =>

@@ -1,39 +1,51 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-const sass = require('sass');
+const fs = require('fs');
+const glob = require('fast-glob');
 const css = require('css');
-const path = require('path');
 
 const extractVars = () => {
-  const result = sass.renderSync({ file: path.resolve('./ui/index.scss') });
-  const cssString = result.css.toString();
-  const obj = css.parse(cssString);
-  const ssObjects = obj.stylesheet.rules;
-  const rules = ssObjects.filter(rule => rule.type === 'rule');
-
+  const files = glob.sync('.dist/css/**/index.css');
   const list = {};
 
-  rules.map(rule => {
-    const filtered = rule.declarations.filter(dec =>
-      dec.value ? dec.value.match(/var\(/) : false
-    );
+  const makeList = rules => {
+    let componentList = [];
 
-    if (filtered.length > 0) {
-      const selectorBase = rule.selectors[0]
-        .replace(/_+.*/, '')
-        .replace(/\s.*/, '')
-        .replace('.slds-', '');
+    rules.map(rule => {
+      const filtered = rule.declarations.filter(dec => {
+        if (!dec.value) return false;
 
-      const vars = rule.declarations
-        .filter(dec => (dec.value ? dec.value.match(/var\(/) : false))
-        .map(dec => dec.value.match(/(--.*?),/)[1]);
+        // match on var values that are not custom props
+        if (dec.value.match(/var\(/) && !dec.property.match(/^--/)) {
+          return true;
+        }
 
-      if (list[selectorBase]) {
-        list[selectorBase] = list[selectorBase].concat(vars);
-      } else {
-        list[selectorBase] = vars;
+        return false;
+      });
+
+      if (filtered.length > 0) {
+        const vars = rule.declarations
+          .filter(dec => (dec.value ? dec.value.match(/var\(/) : false))
+          .map(dec => dec.value.match(/(--.*?),/)[1]);
+
+        componentList = componentList.concat(vars);
       }
+    });
+
+    return componentList;
+  };
+
+  files.forEach(file => {
+    const fileContents = fs.readFileSync(file, 'utf-8');
+    const componentName = file.split('/')[2];
+    const ast = css.parse(fileContents);
+    const rules = ast.stylesheet.rules.filter(rule => rule.type === 'rule');
+
+    const componentList = makeList(rules);
+
+    if (componentList.length > 0) {
+      list[componentName] = [...new Set(componentList)];
     }
   });
 

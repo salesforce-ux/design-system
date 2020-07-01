@@ -4,7 +4,6 @@
 import del from 'del';
 import glob from 'glob';
 import gulp from 'gulp';
-import gulpFile from 'gulp-file';
 import path from 'path';
 import touch from 'touch';
 import { argv } from 'yargs';
@@ -19,8 +18,6 @@ import * as sanitized from './scripts/gulp/generate/sanitized';
 
 import paths from './scripts/helpers/paths';
 import * as travis from './scripts/helpers/travis';
-
-const distPath = path.resolve.bind(path, paths.dist);
 
 const getComponents = key => {
   if (!argv.components) return ['.html/*.html'];

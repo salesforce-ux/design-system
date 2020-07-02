@@ -43,7 +43,7 @@
 .slds-tabs-mobile {
   display: flex;
   flex-direction: column;
-  background-color: $color-background-alt;
+  background-color: var(--sds-c-tabs-mobile-color-background, $color-background-alt);
 }
 
 /**

@@ -74,6 +74,14 @@
 #### Changed
 - Removed redundant `border-radius` on `.slds-pill:focus`
 
+### [Scoped Tabs](https://www.lightningdesignsystem.com/components/scoped-tabs)
+#### Added
+- Added the brand expression specific Styling API
+
+### [Tabs](https://www.lightningdesignsystem.com/components/tabs)
+#### Added
+- Added the brand expression specific Styling API
+
 ### [Toast](https://www.lightningdesignsystem.com/components/toast)
 #### Added
 - Added the brand expression specific Styling API
@@ -81,8 +89,10 @@
 ### [Tooltips](https://www.lightningdesignsystem.com/components/tooltips)
 #### Added
 - Added the brand expression specific Styling API
+#### Changed
+- Updated blueprint examples from anchor links to more semantically correct buttons
 
-## Release 2.12.2 - June 25, 2020
+## Release 2.12.2 - June 30, 2020
 
 ## Components
 ### [Combobox](https://www.lightningdesignsystem.com/components/combobox)

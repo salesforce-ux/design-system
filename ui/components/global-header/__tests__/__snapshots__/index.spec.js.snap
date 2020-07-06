@@ -4739,7 +4739,13 @@ exports[`Global Header renders global header 1`] = `
     >
       <div
         className="slds-global-header__logo"
-      />
+      >
+        <span
+          class="slds-assistive-text"
+        >
+          Salesforce
+        </span>
+      </div>
     </div>
     <div
       className="slds-global-header__item slds-global-header__item_search"
@@ -4947,7 +4953,13 @@ exports[`Global Header renders global header 1`] = `
 exports[`Global Header renders global header logo 1`] = `
 <div
   className="slds-global-header__logo"
-/>
+>
+  <span
+    class="slds-assistive-text"
+  >
+    Salesforce
+  </span>
+</div>
 `;
 
 exports[`Global Header renders skip link 1`] = `

@@ -76,7 +76,7 @@ export const PathTrack = props => {
           />
         ) : null}
 
-        <div className="slds-path__scroller" role="application">
+        <div className="slds-path__scroller">
           <div className="slds-path__scroller_inner">
             <ul
               className="slds-path__nav"

@@ -92,7 +92,7 @@
 #### Changed
 - Updated blueprint examples from anchor links to more semantically correct buttons
 
-## Release 2.12.2 - July 2, 2020
+## Release 2.12.2 - July 6, 2020
 
 ## Components
 ### [Combobox](https://www.lightningdesignsystem.com/components/combobox)

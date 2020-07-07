@@ -3,6 +3,12 @@
 # Global Header Release Notes
 
 <!-- ## [Unreleased] -->
+## 2.12.3
+
+### Changed
+
+- Added assistive text for the logo.
+
 
 ## 2.8.0
 

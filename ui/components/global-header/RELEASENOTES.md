@@ -7,7 +7,7 @@
 
 ### Changed
 
-- Added assistive text for the company name on the logo.
+- Added assistive text for the logo.
 
 
 ## 2.8.0

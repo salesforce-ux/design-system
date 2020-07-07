@@ -2898,7 +2898,7 @@ export let states = [
   },
   {
     id: 'sub-tabs-open',
-    label: 'Sub Tabs - Open',
+    label: 'Subtabs - Open',
     element: (
       <div className="demo-only" style={{ height: '8rem' }}>
         <ContextTabBar>

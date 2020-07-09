@@ -2,11 +2,11 @@
 
 # Progress Ring Release Notes
 
-## 2.12.3
+## 2.13.0
 
 ### Changed
 
-- Added sizing instructions to ensure a correct ratio. 
+- Added sizing instructions to ensure a correct ratio.
 
 ## 2.12.0
 

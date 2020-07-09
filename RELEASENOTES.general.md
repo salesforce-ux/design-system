@@ -1,7 +1,7 @@
 <!-- Release notes authoring guidelines: http://keepachangelog.com/ -->
 <!-- On release, add general notes here. In time the legacy release notes will be add to this -->
 
-## 2.12.3 - June 19, 2020
+## 2.12.3 - July 9, 2020
 
 - Corrected various documentation typos and formatting in:
   - components/app-launcher

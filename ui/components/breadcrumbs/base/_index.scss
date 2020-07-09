@@ -28,9 +28,11 @@
     > a {
       display: block;
       padding-top: 0;
-      padding-right: var(--sds-c-breadcrumbs-spacing-horizontal-end, $spacing-x-small);
+      // @todo re-evaluate styling api exposure for box-model
+      padding-right: $spacing-x-small;
       padding-bottom: 0;
-      padding-left: var(--sds-c-breadcrumbs-spacing-horizontal-start, $spacing-x-small);
+      // @todo re-evaluate styling api exposure for box-model
+      padding-left: $spacing-x-small;
 
       &:hover {
         text-decoration: none;
@@ -40,7 +42,8 @@
     &:first-child {
 
       > a {
-        --sds-c-breadcrumbs-spacing-horizontal-start: 0;
+        // @todo re-evaluate styling api reassignment
+        padding-left: 0;
       }
 
       &:before {
@@ -50,6 +53,7 @@
   }
 
   .slds-dropdown-trigger {
-    margin-right: var(--sds-c-breadcrumbs-spacing-horizontal-end, $spacing-x-small);
+    // @todo re-evaluate styling api exposure for box-model
+    margin-right: $spacing-x-small;
   }
 }

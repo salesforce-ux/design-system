@@ -16,10 +16,11 @@
   align-items: center;
   justify-content: center;
   width: 100%;
-  padding-top: var(--sds-c-alert-spacing-vertical-start, $spacing-x-small);
-  padding-right: var(--sds-c-alert-spacing-horizontal-end, $spacing-x-large);
-  padding-bottom: var(--sds-c-alert-spacing-vertical-end, $spacing-x-small);
-  padding-left: var(--sds-c-alert-spacing-horizontal-start, $spacing-x-small);
+  // @todo re-evaluate styling api exposure for box-model
+  padding-top: $spacing-x-small;
+  padding-right: $spacing-x-large;
+  padding-bottom: $spacing-x-small;
+  padding-left: $spacing-x-small;
   color: var(--sds-c-alert-color-text, $color-text-inverse);
   font-weight: var(--sds-c-alert-font-weight, $font-weight-light);
   text-align: center;
@@ -43,13 +44,13 @@
     }
 
     &:active {
-      /*! @css-var-fallback color */
-      --sds-c-alert-color-text: var(--sds-c-alert-color-text-active, #{$color-text-link-inverse-active});
+      // @todo re-evaluate styling api reassignment
+      color: var(--sds-c-alert-color-text-active, $color-text-link-inverse-active);
     }
 
     &[disabled] {
-      /*! @css-var-fallback color */
-      --sds-c-alert-color-text: var(--sds-c-alert-color-text-disabled, #{$color-text-link-inverse-disabled});
+      // @todo re-evaluate styling api reassignment
+      color: var(--sds-c-alert-color-text-disabled, $color-text-link-inverse-disabled);
     }
   }
 

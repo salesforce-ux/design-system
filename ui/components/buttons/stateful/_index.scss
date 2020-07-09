@@ -14,11 +14,11 @@
  */
 .slds-button_neutral.slds-is-selected,
 .slds-button--neutral.slds-is-selected {
-  /*! @css-var-fallback background-color */
-  --sds-c-button-color-background: transparent;
+  // @todo re-evaluate styling api reassignment
+  background-color: transparent;
 
-  /*! @css-var-fallback border-color */
-  --sds-c-button-color-border: transparent;
+  // @todo re-evaluate styling api reassignment
+  border-color: transparent;
 
   /**
    * Styling API uses button-neutral identifier instead of button_stateful
@@ -27,16 +27,16 @@
    */
   &:hover:not([disabled]),
   &:focus:not([disabled]) {
-    /*! @css-var-fallback background-color */
-    --sds-c-button-color-background: var(--sds-c-button-neutral-color-background, #{$color-background-button-default-hover});
+    // @todo re-evaluate styling api reassignment
+    background-color: var(--sds-c-button-neutral-color-background, $color-background-button-default-hover);
 
-    /*! @css-var-fallback border-color */
-    --sds-c-button-color-border: var(--sds-c-button-neutral-color-border-hover, #{$color-border-primary});
+    // @todo re-evaluate styling api reassignment
+    border-color: var(--sds-c-button-neutral-color-border-hover, $color-border-primary);
   }
 
   &:active:not([disabled]) {
-    /*! @css-var-fallback background-color */
-    --sds-c-button-color-background: var(--sds-c-button-neutral-color-background-active, #{$color-background-button-default-active});
+    // @todo re-evaluate styling api reassignment
+    background-color: var(--sds-c-button-neutral-color-background-active, $color-background-button-default-active);
   }
 }
 

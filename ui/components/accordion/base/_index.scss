@@ -99,10 +99,11 @@
  * @restrict .slds-accordion section
  */
 .slds-accordion__section {
-  padding-top: var(--sds-c-accordion-section-spacing-vertical-start, $spacing-small);
-  padding-right: var(--sds-c-accordion-section-spacing-horizontal-end, $spacing-small);
-  padding-bottom: var(--sds-c-accordion-section-spacing-vertical-end, $spacing-small);
-  padding-left: var(--sds-c-accordion-section-spacing-horizontal-start, $spacing-small);
+  // @todo re-evaluate styling api exposure for box-model
+  padding-top: $spacing-small;
+  padding-right: $spacing-small;
+  padding-bottom: $spacing-small;
+  padding-left: $spacing-small;
 }
 
 /**

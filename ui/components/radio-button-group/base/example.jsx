@@ -48,7 +48,7 @@ const ExampleRadioButtonGroup = ({
   hasError
 }) => {
   const exampleName = uniqueId('example-unique-name-');
-  const exampleErrorId = uniqueId('example-unique-id');
+  const exampleErrorId = 'error_01';
 
   return (
     <Fieldset className={hasError && 'slds-has-error'}>

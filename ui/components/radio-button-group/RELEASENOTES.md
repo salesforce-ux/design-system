@@ -4,6 +4,12 @@
 
 <!-- ## [Unreleased] -->
 
+## 2.13.0
+
+### Changed
+
+- Updated the ID  on the error messaging to maintain consistency with the Lightning Web Component implementation.
+
 ## 2.11.7
 
 ### Added

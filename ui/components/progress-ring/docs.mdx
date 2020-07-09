@@ -18,6 +18,12 @@ The Progress Ring component renders a svg-based progress ring.
 
 Content (typically iconography) can be rendered inside the progress ring. For the current supported size of this progress ring, xxs sized icons should be used.
 
+<Blockquote type="note" header="Styling Note">
+  <p>
+    If you plan to override the size properties of Progress Ring, use discrete values rather than percentages (ie. 4rem, not 40%). The inner structure of Progress Ring requires the container dimensions to remain square with an 1:1 aspect ratio, which isn't achievable with percentage values in most contexts.
+  </p>
+</Blockquote>
+
 ### Implementation Guidelines
 
 #### Defining Completeness

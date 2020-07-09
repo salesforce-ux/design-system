@@ -223,6 +223,19 @@ export let examples = [
         Stretched Neutral Link
       </Button>
     )
+  },
+  /**
+   * This is not best practice, use .slds-button_full-width or .slds-button_stretch
+   * instead, this accounts for test coverage of legacy overrides by customers.
+   */
+  {
+    id: 'base-centering',
+    label: 'Base Centering',
+    element: (
+      <Button isNeutral style={{ width: '400px' }}>
+        I should be centered
+      </Button>
+    )
   }
 ];
 

@@ -4,6 +4,9 @@
 @mixin button-shape($api-variant) {
   padding-left: $spacing-medium; // @todo re-evaluate styling api exposure for box-model
   padding-right: $spacing-medium; // @todo re-evaluate styling api exposure for box-model
+  text-align: center;
+  vertical-align: middle;
+  justify-content: center;
   transition: border 0.15s linear;
 }
 

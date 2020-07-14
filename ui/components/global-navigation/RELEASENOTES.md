@@ -3,6 +3,13 @@
 # Global Navigation Release Notes
 
 <!-- ## [Unreleased] -->
+
+## 2.13.0
+
+### Changed
+
+- Adjusted color of unsaved tab indicator asterisk to comply with accessibility color contrast rules
+
 ## 2.8.3
 
 ### Fixed

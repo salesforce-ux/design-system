@@ -6,7 +6,6 @@
 - Corrected various documentation typos and formatting in:
   - components/app-launcher
   - components/button-icons
-  - components/dueling-picklist
   - components/global-header
   - components/global-navigation
   - components/lookups
@@ -61,6 +60,10 @@
 - The compound form now wraps when the width of its parent container is smaller than the combined width of the form elements. This prevents the issue of input values becoming cutoff and unreadable due to shrinking compound form elements in a container with a small width.
 - When `.slds-form-element` is a child of `.slds-form-element_compound`, it now uses margins instead of padding for its horizontal spacing. This fixes the issue of dropdowns being incorrectly offset because the dropdown uses the extra space created by padding as its positioning reference.
 
+### [Global Navigation](https://www.lightningdesignsystem.com/components/global-navigation)
+#### Changed
+- Adjusted color of unsaved tab indicator asterisk to comply with accessibility color contrast rules
+
 ### [Icons](https://www.lightningdesignsystem.com/components/icons)
 - Added the brand expression specific Styling API
 
@@ -68,11 +71,19 @@
 #### Added
 - Added the brand expression specific Styling API
 
+### [Path](https://www.lightningdesignsystem.com/components/path)
+#### Changed
+- Removed `role="application"` from `slds-path__scroller`.
+
 ### [Pills](https://www.lightningdesignsystem.com/components/pills)
 #### Added
 - Added the brand expression specific Styling API to Pill.
 #### Changed
 - Removed redundant `border-radius` on `.slds-pill:focus`
+
+### [Progress Ring](https://www.lightningdesignsystem.com/components/progress-ring)
+#### Changed
+- Added sizing instructions to ensure a correct ratio.
 
 ### [Scoped Tabs](https://www.lightningdesignsystem.com/components/scoped-tabs)
 #### Added
@@ -92,7 +103,14 @@
 #### Changed
 - Updated blueprint examples from anchor links to more semantically correct buttons
 
-## Release 2.12.2 - July 6, 2020
+## Release 2.12.3 - July 13, 2020
+
+## Components
+### [Global Header](https://www.lightningdesignsystem.com/components/global-header)
+#### Changed
+- Added assistive text for the logo.
+
+## Release 2.12.2 - June 11, 2020
 
 ## Components
 ### [Combobox](https://www.lightningdesignsystem.com/components/combobox)

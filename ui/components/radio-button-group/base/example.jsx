@@ -62,19 +62,19 @@ const ExampleRadioButtonGroup = ({
       </Legend>
       <FormElementControl>
         <RadioButtonGroup className={modifier}>
-          <RadioButton id="monday" name={exampleName} disabled={disabled}>
+          <RadioButton id="monday" name={exampleName} disabled={disabled} errorId={exampleErrorId}>
             Mon
           </RadioButton>
-          <RadioButton id="tuesday" name={exampleName} disabled={disabled}>
+          <RadioButton id="tuesday" name={exampleName} disabled={disabled} errorId={exampleErrorId}>
             Tue
           </RadioButton>
-          <RadioButton id="wednesday" name={exampleName} disabled={disabled}>
+          <RadioButton id="wednesday" name={exampleName} disabled={disabled} errorId={exampleErrorId}>
             Wed
           </RadioButton>
-          <RadioButton id="thursday" name={exampleName} disabled={disabled}>
+          <RadioButton id="thursday" name={exampleName} disabled={disabled} errorId={exampleErrorId}>
             Thu
           </RadioButton>
-          <RadioButton id="friday" name={exampleName} disabled={disabled}>
+          <RadioButton id="friday" name={exampleName} disabled={disabled} errorId={exampleErrorId}>
             Fri
           </RadioButton>
         </RadioButtonGroup>

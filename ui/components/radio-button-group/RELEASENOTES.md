@@ -8,7 +8,8 @@
 
 ### Changed
 
-- Updated the ID  on the error messaging to maintain consistency with the Lightning Web Component implementation.
+- Updated the ID  on the error messaging to maintain consistency with the Radio Button blueprint.
+- Added `aria-describedby="error_01"` to the inputs to improve accessibility in the error state.
 
 ## 2.11.7
 

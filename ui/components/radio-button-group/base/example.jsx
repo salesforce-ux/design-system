@@ -48,7 +48,7 @@ const ExampleRadioButtonGroup = ({
   hasError
 }) => {
   const exampleName = uniqueId('example-unique-name-');
-  const exampleErrorId = uniqueId('example-unique-id');
+  const exampleErrorId = uniqueId('error-unique-id-');
 
   return (
     <Fieldset className={hasError && 'slds-has-error'}>
@@ -62,19 +62,19 @@ const ExampleRadioButtonGroup = ({
       </Legend>
       <FormElementControl>
         <RadioButtonGroup className={modifier}>
-          <RadioButton id="monday" name={exampleName} disabled={disabled}>
+          <RadioButton id="monday" name={exampleName} disabled={disabled} errorId={hasError && exampleErrorId}>
             Mon
           </RadioButton>
-          <RadioButton id="tuesday" name={exampleName} disabled={disabled}>
+          <RadioButton id="tuesday" name={exampleName} disabled={disabled} errorId={hasError && exampleErrorId}>
             Tue
           </RadioButton>
-          <RadioButton id="wednesday" name={exampleName} disabled={disabled}>
+          <RadioButton id="wednesday" name={exampleName} disabled={disabled} errorId={hasError && exampleErrorId}>
             Wed
           </RadioButton>
-          <RadioButton id="thursday" name={exampleName} disabled={disabled}>
+          <RadioButton id="thursday" name={exampleName} disabled={disabled} errorId={hasError && exampleErrorId}>
             Thu
           </RadioButton>
-          <RadioButton id="friday" name={exampleName} disabled={disabled}>
+          <RadioButton id="friday" name={exampleName} disabled={disabled} errorId={hasError && exampleErrorId}>
             Fri
           </RadioButton>
         </RadioButtonGroup>

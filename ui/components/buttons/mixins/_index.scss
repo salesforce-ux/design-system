@@ -2,8 +2,8 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 @mixin button-shape($api-variant) {
-  padding-left: $spacing-medium; // @todo re-evaluate styling api exposure for box-model
-  padding-right: $spacing-medium; // @todo re-evaluate styling api exposure for box-model
+  padding-left: var(--sds-c-button-#{$api-variant}-spacing-inline-start, $spacing-medium);
+  padding-right: var(--sds-c-button-#{$api-variant}-spacing-inline-end, $spacing-medium);
   text-align: center;
   vertical-align: middle;
   justify-content: center;

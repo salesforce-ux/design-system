@@ -16,11 +16,10 @@
   align-items: center;
   justify-content: center;
   width: 100%;
-  // @todo re-evaluate styling api exposure for box-model
-  padding-top: $spacing-x-small;
-  padding-right: $spacing-x-large;
-  padding-bottom: $spacing-x-small;
-  padding-left: $spacing-x-small;
+  padding-top: var(--sds-c-alert-spacing-block-start, $spacing-x-small);
+  padding-right: var(--sds-c-alert-spacing-inline-end, $spacing-x-large);
+  padding-bottom: var(--sds-c-alert-spacing-block-end, $spacing-x-small);
+  padding-left: var(--sds-c-alert-spacing-inline-start, $spacing-x-small);
   color: var(--sds-c-alert-color-text, $color-text-inverse);
   font-weight: var(--sds-c-alert-font-weight, $font-weight-light);
   text-align: center;

@@ -16,7 +16,10 @@
   justify-content: space-between;
   line-height: var(--sds-c-pill-line-height, $line-height-text);
   max-width: 100%; // Required to make the container shrink when truncated
-  padding: $spacing-xxx-small; // @todo re-evaluate styling api exposure for box-model
+  padding-top: var(--sds-c-pill-spacing-block-start, $spacing-xxx-small);
+  padding-right: var(--sds-c-pill-spacing-inline-end, $spacing-xxx-small);
+  padding-bottom: var(--sds-c-pill-spacing-block-end, $spacing-xxx-small);
+  padding-left: var(--sds-c-pill-spacing-inline-start, $spacing-xxx-small);
   border-width: var(--sds-c-pill-sizing-border, $border-width-thin);
   border-style: solid;
   border-color: var(--sds-c-pill-color-border, $color-border);
@@ -69,7 +72,10 @@
   &_container {
     display: flex;
     min-height: calc(#{$height-input} + 2px);
-    padding: $spacing-xxx-small; // @todo re-evaluate styling api exposure for box-model
+    padding-top: var(--sds-c-pill-container-spacing-block-start, $spacing-xxx-small);
+    padding-right: var(--sds-c-pill-container-spacing-inline-end, $spacing-xxx-small);
+    padding-bottom: var(--sds-c-pill-container-spacing-block-end, $spacing-xxx-small);
+    padding-left: var(--sds-c-pill-container-spacing-inline-start, $spacing-xxx-small);
     border-width: var(--sds-c-pill-sizing-border, $border-width-thin);
     border-style: solid;
     border-color: var(--sds-c-pill-color-border, $color-border);
@@ -177,8 +183,10 @@
  * @restrict .slds-pill_link a
  */
 .slds-pill__action {
-  padding: $spacing-xxx-small; // @todo re-evaluate styling api exposure for box-model
-  padding-right: calc(#{$square-icon-xx-small-boundary} + #{$spacing-xx-small} + 2px); // @todo re-evaluate styling api exposure for box-model
+  padding-top: var(--sds-c-pill-spacing-block-start, $spacing-xxx-small);
+  padding-right: calc(#{$square-icon-xx-small-boundary} + var(--sds-c-pill-spacing-inline-end, #{$spacing-xxx-small}) + 2px);
+  padding-bottom: var(--sds-c-pill-spacing-block-end, $spacing-xxx-small);
+  padding-left: var(--sds-c-pill-spacing-inline-start, $spacing-xxx-small);
   border-width: var(--sds-c-pill-sizing-border, $border-width-thin);
   border-style: solid;
   border-color: var(--sds-c-pill-color-border, $color-border);

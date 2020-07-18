@@ -16,7 +16,10 @@
   position: relative;
   display: inline-flex;
   align-items: center;
-  padding: 0; // @todo re-evaluate styling api exposure for box-model
+  padding-top: 0;
+  padding-right: var(--sds-c-button-spacing-inline-end, 0);
+  padding-bottom: 0;
+  padding-left: var(--sds-c-button-spacing-inline-start, 0);
   background-color: var(--sds-c-button-color-background, transparent);
   background-clip: border-box;
   border-color: var(--sds-c-button-color-border, transparent);

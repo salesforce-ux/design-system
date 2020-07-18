@@ -36,11 +36,10 @@
   font-weight: $font-weight-light;
   border-radius: var(--sds-c-toast-radius-border, $border-radius-medium);
   margin: $spacing-x-small;
-  // @todo re-evaluate styling api exposure for box-model
-  padding-top: $spacing-small;
-  padding-right: $spacing-xx-large;
-  padding-bottom: $spacing-small;
-  padding-left: $spacing-large;
+  padding-top: var(--sds-c-toast-spacing-block-start, $spacing-small);
+  padding-right: var(--sds-c-toast-spacing-inline-end, $spacing-xx-large);
+  padding-bottom: var(--sds-c-toast-spacing-block-end, $spacing-small);
+  padding-left: var(--sds-c-toast-spacing-inline-start, $spacing-large);
   min-width: var(--sds-c-toast-sizing-min-width, rem(480px));
   text-align: left;
   justify-content: flex-start;

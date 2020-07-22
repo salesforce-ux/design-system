@@ -45,8 +45,6 @@
   // @todo re-evaluate styling api reassignment
   &:hover,
   &:focus {
-    background-color: var(--sds-c-button-color-background-hover, transparent);
-    border-color: var(--sds-c-button-color-border-hover, transparent);
     color: var(--sds-c-button-color-text-hover, $brand-accessible-active);
   }
 
@@ -57,16 +55,12 @@
 
   // @todo re-evaluate styling api reassignment
   &:active {
-    background-color: var(--sds-c-button-color-background-active, transparent);
-    border-color: var(--sds-c-button-color-border-active, transparent);
     color: var(--sds-c-button-color-text-active, $brand-accessible-active);
   }
 
   // @todo re-evaluate styling api reassignment
   &[disabled],
   &:disabled {
-    background-color: var(--sds-c-button-color-background-disabled, transparent);
-    border-color: var(--sds-c-button-color-border-disabled, transparent);
     color: var(--sds-c-button-color-text-disabled, $color-text-button-default-disabled);
     cursor: default;
 

@@ -7,8 +7,8 @@ Welcome to the source code repository for [Salesforce Lightning Design System](h
 
 SLDS is...
 
-* Tailored for building Salesforce apps: Using the Lightning Design System markup and CSS framework results in UIs that reflect the Salesforce Lightning look and feel.
-* Continuously updated: As long as you’re using the latest version of the Lightning Design System, your pages are always up to date with Salesforce UI changes.
+- Tailored for building Salesforce apps: Using the Lightning Design System markup and CSS framework results in UIs that reflect the Salesforce Lightning look and feel.
+- Continuously updated: As long as you’re using the latest version of the Lightning Design System, your pages are always up to date with Salesforce UI changes.
 
 ## Getting Started
 
@@ -21,16 +21,16 @@ This project utilizes Storybook for component development. If you would like to 
 
 ### Running the Development Environment:
 
-If you've just installed the project, you will need to run `npm run full-start` to first perform a full build, which is necessary for Storybook to operate.
+The Storybook development environment can be started by running `npm start`
 
-Whenever you add or remove a component, you'll want to perform this full-start. Otherwise, you can just run `npm start` to start the Storybook server without a build.
+Whenever you add, remove, or alter a component's css annotation metadata, you'll need to restart Storybook to see those changes.
 
 ### Configuring Node and NVM
 
 Node v12 is recommended for use with the Design System repository, and [NVM](http://nvm.sh/) is the recommended choice for managing multiple versions of Node on your computer.
 
-A .nvmrc file is included in this project to aid in local development. To utilize it for setting your project's node version, run `nvm use` in the root of the directory. 
-Additionally, you can set up a deeper shell integration for automatically invoking the nvmrc file when you change into the project directory by 
+A .nvmrc file is included in this project to aid in local development. To utilize it for setting your project's node version, run `nvm use` in the root of the directory.
+Additionally, you can set up a deeper shell integration for automatically invoking the nvmrc file when you change into the project directory by
 [following these instructions](https://github.com/nvm-sh/nvm#deeper-shell-integration).
 
 ## Developing in Storybook
@@ -46,10 +46,6 @@ See the [annotations guide](https://github.com/salesforce-ux/design-system-inter
 ### `npm start`
 
 Starts the Storybook server for local development.
-
-### `npm run full-start`
-
-Performs a full build and dist before starting the Storybook server. Useful for when a component or utility is added or removed from the system.
 
 ### `npm run gulp -- lint`
 
@@ -124,9 +120,9 @@ See the [contributing guide](https://github.com/salesforce-ux/design-system-inte
 
 ## Licenses
 
-* Source code is licensed under [BSD 3-Clause](https://git.io/sfdc-license)
-* All icons and images are licensed under [Creative Commons Attribution-NoDerivatives 4.0](https://github.com/salesforce-ux/licenses/blob/master/LICENSE-icons-images.txt)
-* The Salesforce Sans font is licensed under our [font license](https://github.com/salesforce-ux/licenses/blob/master/LICENSE-font.txt)
+- Source code is licensed under [BSD 3-Clause](https://git.io/sfdc-license)
+- All icons and images are licensed under [Creative Commons Attribution-NoDerivatives 4.0](https://github.com/salesforce-ux/licenses/blob/master/LICENSE-icons-images.txt)
+- The Salesforce Sans font is licensed under our [font license](https://github.com/salesforce-ux/licenses/blob/master/LICENSE-font.txt)
 
 ## Got Feedback?
 

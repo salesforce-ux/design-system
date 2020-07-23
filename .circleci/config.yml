@@ -74,8 +74,8 @@ jobs:
           key: dependencies-{{ checksum "package.json" }}
 
       - run:
-          name: 'NPM run build'
-          command: 'npm run build'
+          name: 'Build Tokens'
+          command: 'npm run gulp -- generate:tokens:all'
 
       - run:
           name: 'Copy design-tokens/dist to workspace'

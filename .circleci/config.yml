@@ -78,18 +78,6 @@ jobs:
           command: 'npm run build'
 
       - run:
-          name: 'NPM run dist:simple'
-          command: 'npm run dist:simple'
-
-      - run:
-          name: 'NPM run dist:write-ui'
-          command: 'npm run gulp -- dist:write-ui'
-
-      - run:
-          name: 'Copy .dist to workspace'
-          command: 'cp -ar .dist workspace'
-
-      - run:
           name: 'Copy design-tokens/dist to workspace'
           command: 'cp -ar design-tokens/dist workspace/design-tokens-dist'
 
@@ -100,7 +88,6 @@ jobs:
           root: workspace
           # Must be relative path from root
           paths:
-            - .dist
             - design-tokens-dist
 
   applitools:
@@ -114,7 +101,6 @@ jobs:
           at: workspace
 
       - vrt_set-env-vars
-      - prepare-storybook
       - copy-tokens
 
       # Download and cache dependencies
@@ -123,6 +109,8 @@ jobs:
             - dependencies-{{ checksum "package.json" }}
             # fallback to using the latest cache if no exact match is found
             - dependencies-
+
+      - prepare-storybook
 
       # run Applitools tests!
       - run:
@@ -140,7 +128,6 @@ jobs:
           at: workspace
 
       - vrt_set-env-vars
-      - prepare-storybook
       - copy-tokens
 
       # Download and cache dependencies
@@ -149,6 +136,8 @@ jobs:
             - dependencies-{{ checksum "package.json" }}
             # fallback to using the latest cache if no exact match is found
             - dependencies-
+
+      - prepare-storybook
 
       # run Applitools tests!
       - run:

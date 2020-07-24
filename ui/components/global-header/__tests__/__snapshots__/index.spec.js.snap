@@ -4741,7 +4741,7 @@ exports[`Global Header renders global header 1`] = `
         className="slds-global-header__logo"
       >
         <span
-          class="slds-assistive-text"
+          className="slds-assistive-text"
         >
           Salesforce
         </span>
@@ -4955,7 +4955,7 @@ exports[`Global Header renders global header logo 1`] = `
   className="slds-global-header__logo"
 >
   <span
-    class="slds-assistive-text"
+    className="slds-assistive-text"
   >
     Salesforce
   </span>

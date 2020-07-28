@@ -1,7 +1,7 @@
 <!-- Release notes authoring guidelines: http://keepachangelog.com/ -->
 <!-- On release, add general notes here. In time the legacy release notes will be add to this -->
 
-## 2.13.0 - July 23, 2020
+## 2.13.0 - July 30, 2020
 
 - Added opacity override for placeholder text in inputs for Firefox browser
 
@@ -26,6 +26,8 @@
   - components/trees
   - components/vertical-tabs
 - Fixed broken links in earlier release notes
+
+- Updated Icons to 9.37.0
 
 ## 2.12.2 - June 11, 2020
 

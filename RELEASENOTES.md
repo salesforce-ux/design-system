@@ -3,28 +3,6 @@
 
 ## Release 2.13.0 - July 23, 2020
 
-- Corrected various documentation typos and formatting in:
-  - components/app-launcher
-  - components/button-icons
-  - components/global-header
-  - components/global-navigation
-  - components/lookups
-  - components/menus
-  - components/panels
-  - components/picklist
-  - components/popovers
-  - components/progress-indicator
-  - components/prompt
-  - components/publishers
-  - components/setup-assistant
-  - components/spinners
-  - components/tabs
-  - components/tiles
-  - components/toast
-  - components/trees
-  - components/vertical-tabs
-- Fixed broken links in earlier release notes
-
 ## Components
 ### [Accordion](https://www.lightningdesignsystem.com/components/accordion)
 #### Added
@@ -107,12 +85,38 @@
 #### Changed
 - Updated blueprint examples from anchor links to more semantically correct buttons
 
-## Release 2.12.3 - July 23, 2020
+## Release 2.12.3 - June 19, 2020
+
+- Corrected various documentation typos and formatting in:
+  - components/app-launcher
+  - components/button-icons
+  - components/global-header
+  - components/global-navigation
+  - components/lookups
+  - components/menus
+  - components/panels
+  - components/picklist
+  - components/popovers
+  - components/progress-indicator
+  - components/prompt
+  - components/publishers
+  - components/setup-assistant
+  - components/spinners
+  - components/tabs
+  - components/tiles
+  - components/toast
+  - components/trees
+  - components/vertical-tabs
+- Fixed broken links in earlier release notes
 
 ## Components
 ### [Global Header](https://www.lightningdesignsystem.com/components/global-header)
 #### Changed
 - Added assistive text for the logo.
+
+### [Radio Group](https://www.lightningdesignsystem.com/components/radio-group)
+#### Fixed
+- Resolved issue where radio buttons would not retain their shape and appeared squished.
 
 ## Release 2.12.2 - June 11, 2020
 
@@ -123,6 +127,10 @@
 - Updated guidance documentation regarding the usage of `aria-selected` and `aria-checked`
 #### Added
 - Added `aria-checked="true"` to Listbox options when selected
+
+### [Form Element](https://www.lightningdesignsystem.com/components/form-element)
+- For touch devices, fixed an issue with button icons being the incorrect height if using custom elements.
+#### Fixed
 
 ## Release 2.12.1 - May 7, 2020
 

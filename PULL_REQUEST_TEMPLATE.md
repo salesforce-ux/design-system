@@ -11,6 +11,7 @@ Please refer to our [Commit Guidelines](https://github.com/salesforce-ux/design-
 * [ ] Tested on **desktop** (see [supported browsers](https://www.lightningdesignsystem.com/faq/#what-browsers-are-supported))
 * [ ] Tested on **mobile** (for responsive or mobile-specific features)
 * [ ] Confirm **Accessibility**
+* [ ] Confirm **RTL**
 
 #### Feature
 

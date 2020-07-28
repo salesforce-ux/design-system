@@ -6,9 +6,17 @@
   font-size: $font-size-4;
 }
 
-// In touch, resize height of info button icon that is inline with form label
-.slds-form-element__label + .slds-form-element__icon .slds-button_icon {
+// This is a workaround for our current DOM structure and dealing with custom elements, it's not perfect
+// but it's a solution that doesn't require CSS combinators and works within our limits. Issue cropped
+// up with our help icon next to a label.
+.slds-form-element__icon .slds-button_icon {
+  // Resize height of our button icons in form elements...
   height: $height-tappable-small;
+
+  // ...unless that icon is being used in a form control and should have a larger tap target
+  .slds-form-element__control & {
+    height: $height-tappable;
+  }
 }
 
 .slds-form-element__icon {

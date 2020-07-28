@@ -11,4 +11,12 @@
   .slds-progress__item_content {
     font-size: $font-size-4;
   }
+
+  .slds-progress__marker {
+    width: $square-tappable-xx-small;
+
+    .slds-icon {
+      @include square($square-tappable-xx-small);
+    }
+  }
 }

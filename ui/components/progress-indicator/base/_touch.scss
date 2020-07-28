@@ -6,24 +6,23 @@
   .slds-button {
 
     &:before { // Create invisible tap target area
-      content: '';
       position: absolute;
-      height: $height-tappable;
       width: calc(100% + 8px); // 8px accounts for border width of container
+      height: $height-tappable;
+      content: '';
     }
   }
 }
 
 .slds-progress__marker {
   @include square($square-tappable-xx-small);
-  justify-content: center;
+  line-height: 1;
+}
 
-  &_icon,
-  &--icon {
+.slds-progress__marker_icon {
+  @include square($square-tappable-small);
 
-    .slds-button__icon,
-    .slds-icon {
-      @include square($square-tappable-xx-small);
-    }
+  .slds-button__icon {
+    @include square($square-tappable-xx-small);
   }
 }

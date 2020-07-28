@@ -3,6 +3,8 @@
 
 ## 2.13.0 - July 23, 2020
 
+- Added opacity override for placeholder text in inputs for Firefox browser
+
 - Corrected various documentation typos and formatting in:
   - components/app-launcher
   - components/button-icons

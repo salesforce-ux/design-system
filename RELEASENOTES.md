@@ -29,6 +29,10 @@
 #### Added
 - Added the brand expression specific Styling API
 
+### [Combobox](https://www.lightningdesignsystem.com/components/combobox)
+#### Changed
+- The assistive text for the listbox of pills has been moved out of the individual pills to remove repetition for users with screenreaders.
+
 ### [Datetime Picker](https://www.lightningdesignsystem.com/components/datetime-picker)
 #### Changed
 - Datetime Picker blueprints no longer use the deprecated variant `.slds-form_compound` on its parent `.slds-form`. Instead, it now uses `.slds-form-element_compound` on its parent `.slds-form-element`.
@@ -45,6 +49,14 @@
 ### [Icons](https://www.lightningdesignsystem.com/components/icons)
 - Added the brand expression specific Styling API
 
+### [List Builder](https://www.lightningdesignsystem.com/components/list-builder)
+#### Changed
+- The assistive text for the listbox of pills has been moved out of the individual pills to remove repetition for users with screenreaders.
+
+### [Lookups](https://www.lightningdesignsystem.com/components/lookups)
+#### Changed
+- The assistive text for the listbox of pills has been moved out of the individual pills to remove repetition for users with screenreaders.
+
 ### [Modals](https://www.lightningdesignsystem.com/components/modals)
 #### Added
 - Added the brand expression specific Styling API
@@ -54,6 +66,8 @@
 - Removed `role="application"` from `slds-path__scroller`.
 
 ### [Pills](https://www.lightningdesignsystem.com/components/pills)
+#### Changed
+- The assistive text for the listbox of pills has been moved out of the individual pills to remove repetition for users with screenreaders.
 #### Added
 - Added the brand expression specific Styling API to Pill.
 #### Changed

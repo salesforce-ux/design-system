@@ -17,9 +17,16 @@ export let Pill = props => (
   </span>
 );
 
-export let PillContainer = props => (
-  <div className={classNames('slds-pill_container', props.className)}>{props.children}</div>
-);
+export let PillContainer = props => {
+  return (
+    <div className={classNames('slds-pill_container', props.className)}>
+      {props.type === 'listbox' && (
+        <div className="slds-assistive-text" id={props.id}>Press delete or backspace to remove</div>
+      )}
+      {props.children}
+    </div>
+  );
+};
 
 export let ListboxPill = props => (
   <span
@@ -34,7 +41,6 @@ export let ListboxPill = props => (
     </span>
     <span className="slds-icon_container slds-pill__remove" title="Remove">
       <SvgIcon className="slds-icon slds-icon_x-small slds-icon-text-default" sprite="utility" symbol="close" />
-      <span className="slds-assistive-text">Press delete or backspace to remove</span>
     </span>
   </span>
 );
@@ -45,6 +51,7 @@ export let ListboxPills = props => (
     role="listbox"
     aria-label="Selected Options:"
     aria-orientation="horizontal"
+    aria-describedby={props.id}
   >
     {props.children}
   </ul>

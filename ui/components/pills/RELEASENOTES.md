@@ -5,6 +5,10 @@
 <!-- ## [Unreleased] -->
 ## 2.13.0
 
+### Changed
+
+- The assistive text for the listbox of pills has been moved out of the individual pills to remove repetition for users with screenreaders.
+
 ### Added
 
 - Added the brand expression specific Styling API to Pill.

@@ -392,11 +392,6 @@ exports[`render combobox render autocomplete combobox with mutliple selections 1
                   xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#close"
                 />
               </svg>
-              <span
-                className="slds-assistive-text"
-              >
-                Press delete or backspace to remove
-              </span>
             </span>
           </span>
         </li>
@@ -427,11 +422,6 @@ exports[`render combobox render autocomplete combobox with mutliple selections 1
                   xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#close"
                 />
               </svg>
-              <span
-                className="slds-assistive-text"
-              >
-                Press delete or backspace to remove
-              </span>
             </span>
           </span>
         </li>
@@ -1309,11 +1299,6 @@ exports[`render combobox render autocomplete entity combobox with mutliple selec
                   xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#close"
                 />
               </svg>
-              <span
-                className="slds-assistive-text"
-              >
-                Press delete or backspace to remove
-              </span>
             </span>
           </span>
         </li>
@@ -1362,11 +1347,6 @@ exports[`render combobox render autocomplete entity combobox with mutliple selec
                   xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#close"
                 />
               </svg>
-              <span
-                className="slds-assistive-text"
-              >
-                Press delete or backspace to remove
-              </span>
             </span>
           </span>
         </li>
@@ -3809,11 +3789,6 @@ exports[`render combobox render grouped combobox with selections made in collaps
                   xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#close"
                 />
               </svg>
-              <span
-                className="slds-assistive-text"
-              >
-                Press delete or backspace to remove
-              </span>
             </span>
           </span>
         </li>
@@ -3862,11 +3837,6 @@ exports[`render combobox render grouped combobox with selections made in collaps
                   xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#close"
                 />
               </svg>
-              <span
-                className="slds-assistive-text"
-              >
-                Press delete or backspace to remove
-              </span>
             </span>
           </span>
         </li>
@@ -3915,11 +3885,6 @@ exports[`render combobox render grouped combobox with selections made in collaps
                   xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#close"
                 />
               </svg>
-              <span
-                className="slds-assistive-text"
-              >
-                Press delete or backspace to remove
-              </span>
             </span>
           </span>
         </li>
@@ -3968,11 +3933,6 @@ exports[`render combobox render grouped combobox with selections made in collaps
                   xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#close"
                 />
               </svg>
-              <span
-                className="slds-assistive-text"
-              >
-                Press delete or backspace to remove
-              </span>
             </span>
           </span>
         </li>
@@ -4021,11 +3981,6 @@ exports[`render combobox render grouped combobox with selections made in collaps
                   xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#close"
                 />
               </svg>
-              <span
-                className="slds-assistive-text"
-              >
-                Press delete or backspace to remove
-              </span>
             </span>
           </span>
         </li>
@@ -4074,11 +4029,6 @@ exports[`render combobox render grouped combobox with selections made in collaps
                   xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#close"
                 />
               </svg>
-              <span
-                className="slds-assistive-text"
-              >
-                Press delete or backspace to remove
-              </span>
             </span>
           </span>
         </li>
@@ -4127,11 +4077,6 @@ exports[`render combobox render grouped combobox with selections made in collaps
                   xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#close"
                 />
               </svg>
-              <span
-                className="slds-assistive-text"
-              >
-                Press delete or backspace to remove
-              </span>
             </span>
           </span>
         </li>
@@ -4180,11 +4125,6 @@ exports[`render combobox render grouped combobox with selections made in collaps
                   xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#close"
                 />
               </svg>
-              <span
-                className="slds-assistive-text"
-              >
-                Press delete or backspace to remove
-              </span>
             </span>
           </span>
         </li>
@@ -4813,11 +4753,6 @@ exports[`render combobox render grouped combobox with selections made in expande
                   xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#close"
                 />
               </svg>
-              <span
-                className="slds-assistive-text"
-              >
-                Press delete or backspace to remove
-              </span>
             </span>
           </span>
         </li>
@@ -4866,11 +4801,6 @@ exports[`render combobox render grouped combobox with selections made in expande
                   xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#close"
                 />
               </svg>
-              <span
-                className="slds-assistive-text"
-              >
-                Press delete or backspace to remove
-              </span>
             </span>
           </span>
         </li>
@@ -4919,11 +4849,6 @@ exports[`render combobox render grouped combobox with selections made in expande
                   xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#close"
                 />
               </svg>
-              <span
-                className="slds-assistive-text"
-              >
-                Press delete or backspace to remove
-              </span>
             </span>
           </span>
         </li>
@@ -4972,11 +4897,6 @@ exports[`render combobox render grouped combobox with selections made in expande
                   xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#close"
                 />
               </svg>
-              <span
-                className="slds-assistive-text"
-              >
-                Press delete or backspace to remove
-              </span>
             </span>
           </span>
         </li>
@@ -5025,11 +4945,6 @@ exports[`render combobox render grouped combobox with selections made in expande
                   xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#close"
                 />
               </svg>
-              <span
-                className="slds-assistive-text"
-              >
-                Press delete or backspace to remove
-              </span>
             </span>
           </span>
         </li>
@@ -5078,11 +4993,6 @@ exports[`render combobox render grouped combobox with selections made in expande
                   xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#close"
                 />
               </svg>
-              <span
-                className="slds-assistive-text"
-              >
-                Press delete or backspace to remove
-              </span>
             </span>
           </span>
         </li>
@@ -5131,11 +5041,6 @@ exports[`render combobox render grouped combobox with selections made in expande
                   xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#close"
                 />
               </svg>
-              <span
-                className="slds-assistive-text"
-              >
-                Press delete or backspace to remove
-              </span>
             </span>
           </span>
         </li>
@@ -5184,11 +5089,6 @@ exports[`render combobox render grouped combobox with selections made in expande
                   xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#close"
                 />
               </svg>
-              <span
-                className="slds-assistive-text"
-              >
-                Press delete or backspace to remove
-              </span>
             </span>
           </span>
         </li>
@@ -5547,11 +5447,6 @@ exports[`render combobox render multiple selections in a closed combobox 1`] = `
                   xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#close"
                 />
               </svg>
-              <span
-                className="slds-assistive-text"
-              >
-                Press delete or backspace to remove
-              </span>
             </span>
           </span>
         </li>
@@ -5582,11 +5477,6 @@ exports[`render combobox render multiple selections in a closed combobox 1`] = `
                   xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#close"
                 />
               </svg>
-              <span
-                className="slds-assistive-text"
-              >
-                Press delete or backspace to remove
-              </span>
             </span>
           </span>
         </li>
@@ -7397,11 +7287,6 @@ exports[`render deprecated combobox renders a base combobox with closed options 
                   xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#close"
                 />
               </svg>
-              <span
-                className="slds-assistive-text"
-              >
-                Press delete or backspace to remove
-              </span>
             </span>
           </span>
         </li>
@@ -7450,11 +7335,6 @@ exports[`render deprecated combobox renders a base combobox with closed options 
                   xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#close"
                 />
               </svg>
-              <span
-                className="slds-assistive-text"
-              >
-                Press delete or backspace to remove
-              </span>
             </span>
           </span>
         </li>
@@ -8450,11 +8330,6 @@ exports[`render deprecated combobox renders a multi-entity combobox with focused
                   xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#close"
                 />
               </svg>
-              <span
-                className="slds-assistive-text"
-              >
-                Press delete or backspace to remove
-              </span>
             </span>
           </span>
         </li>
@@ -8503,11 +8378,6 @@ exports[`render deprecated combobox renders a multi-entity combobox with focused
                   xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#close"
                 />
               </svg>
-              <span
-                className="slds-assistive-text"
-              >
-                Press delete or backspace to remove
-              </span>
             </span>
           </span>
         </li>
@@ -8860,11 +8730,6 @@ exports[`render deprecated combobox renders a multi-entity combobox with options
                 xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#close"
               />
             </svg>
-            <span
-              className="slds-assistive-text"
-            >
-              Press delete or backspace to remove
-            </span>
           </span>
         </span>
       </li>
@@ -8913,11 +8778,6 @@ exports[`render deprecated combobox renders a multi-entity combobox with options
                 xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#close"
               />
             </svg>
-            <span
-              className="slds-assistive-text"
-            >
-              Press delete or backspace to remove
-            </span>
           </span>
         </span>
       </li>
@@ -9473,11 +9333,6 @@ exports[`render deprecated combobox renders a readonly combobox with closed opti
                   xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#close"
                 />
               </svg>
-              <span
-                className="slds-assistive-text"
-              >
-                Press delete or backspace to remove
-              </span>
             </span>
           </span>
         </li>
@@ -9508,11 +9363,6 @@ exports[`render deprecated combobox renders a readonly combobox with closed opti
                   xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#close"
                 />
               </svg>
-              <span
-                className="slds-assistive-text"
-              >
-                Press delete or backspace to remove
-              </span>
             </span>
           </span>
         </li>
@@ -10979,11 +10829,6 @@ exports[`render deprecated combobox renders an inline listbox combobox with focu
                     xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#close"
                   />
                 </svg>
-                <span
-                  className="slds-assistive-text"
-                >
-                  Press delete or backspace to remove
-                </span>
               </span>
             </span>
           </li>
@@ -11032,11 +10877,6 @@ exports[`render deprecated combobox renders an inline listbox combobox with focu
                     xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#close"
                   />
                 </svg>
-                <span
-                  className="slds-assistive-text"
-                >
-                  Press delete or backspace to remove
-                </span>
               </span>
             </span>
           </li>
@@ -11259,11 +11099,6 @@ exports[`render deprecated combobox renders an inline listbox combobox with opti
                     xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#close"
                   />
                 </svg>
-                <span
-                  className="slds-assistive-text"
-                >
-                  Press delete or backspace to remove
-                </span>
               </span>
             </span>
           </li>
@@ -11312,11 +11147,6 @@ exports[`render deprecated combobox renders an inline listbox combobox with opti
                     xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#close"
                   />
                 </svg>
-                <span
-                  className="slds-assistive-text"
-                >
-                  Press delete or backspace to remove
-                </span>
               </span>
             </span>
           </li>

@@ -3412,11 +3412,6 @@ exports[`List Builder renders a list builder with filtered results 1`] = `
                           xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#close"
                         />
                       </svg>
-                      <span
-                        className="slds-assistive-text"
-                      >
-                        Press delete or backspace to remove
-                      </span>
                     </span>
                   </span>
                 </li>
@@ -3447,11 +3442,6 @@ exports[`List Builder renders a list builder with filtered results 1`] = `
                           xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#close"
                         />
                       </svg>
-                      <span
-                        className="slds-assistive-text"
-                      >
-                        Press delete or backspace to remove
-                      </span>
                     </span>
                   </span>
                 </li>
@@ -6149,11 +6139,6 @@ exports[`List Builder renders a list builder with items selected 1`] = `
                           xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#close"
                         />
                       </svg>
-                      <span
-                        className="slds-assistive-text"
-                      >
-                        Press delete or backspace to remove
-                      </span>
                     </span>
                   </span>
                 </li>

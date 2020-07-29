@@ -2223,11 +2223,6 @@ exports[`Lookup - Multi-Entity renders a multi-entity lookup with focus and opti
                   xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#close"
                 />
               </svg>
-              <span
-                className="slds-assistive-text"
-              >
-                Press delete or backspace to remove
-              </span>
             </span>
           </span>
         </li>
@@ -2276,11 +2271,6 @@ exports[`Lookup - Multi-Entity renders a multi-entity lookup with focus and opti
                   xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#close"
                 />
               </svg>
-              <span
-                className="slds-assistive-text"
-              >
-                Press delete or backspace to remove
-              </span>
             </span>
           </span>
         </li>
@@ -2910,11 +2900,6 @@ exports[`Lookup - Multi-Entity renders a multi-entity lookup with options select
                   xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#close"
                 />
               </svg>
-              <span
-                className="slds-assistive-text"
-              >
-                Press delete or backspace to remove
-              </span>
             </span>
           </span>
         </li>
@@ -2963,11 +2948,6 @@ exports[`Lookup - Multi-Entity renders a multi-entity lookup with options select
                   xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#close"
                 />
               </svg>
-              <span
-                className="slds-assistive-text"
-              >
-                Press delete or backspace to remove
-              </span>
             </span>
           </span>
         </li>

@@ -1,12 +1,15 @@
 <!-- Release notes authoring guidelines: http://keepachangelog.com/ -->
 <!-- On release, add general notes here. In time the legacy release notes will be add to this -->
 
-## 2.13.0 - June 18, 2020
+## 2.13.0 - July 30, 2020
+
+- Added opacity override for placeholder text in inputs for Firefox browser
+
+## 2.12.3 - June 19, 2020
 
 - Corrected various documentation typos and formatting in:
   - components/app-launcher
   - components/button-icons
-  - components/dueling-picklist
   - components/global-header
   - components/global-navigation
   - components/lookups
@@ -25,6 +28,10 @@
   - components/trees
   - components/vertical-tabs
 - Fixed broken links in earlier release notes
+
+- Updated Icons to 9.37.0
+
+## 2.12.2 - June 11, 2020
 
 ## 2.12.1 - May 7, 2020
 

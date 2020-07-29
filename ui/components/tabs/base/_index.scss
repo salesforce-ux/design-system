@@ -39,7 +39,6 @@
   border-bottom: $border-width-thin solid $color-border;
 }
 
-
 /**
  * @summary Styles each list item as a single tab
  * @selector .slds-tabs_default__item
@@ -71,10 +70,10 @@
    */
   &.slds-active,
   &.slds-is-active {
-    color: $color-text-action-label-active;
+    color: var(--sds-c-tabs-item-color-text-active, $color-text-action-label-active);
 
     &:after {
-      background-color: $brand-primary;
+      background-color: var(--sds-c-tabs-item-color-border-active, $brand-primary);
       height: rem(3px);
     }
 
@@ -90,7 +89,7 @@
 
   &:hover:after {
     height: rem(2px);
-    background-color: $brand-primary-active;
+    background-color: var(--sds-c-tabs-item-color-border-hover, $brand-primary-active);
     transition: height 300ms;
   }
 
@@ -106,7 +105,7 @@
 
     &:after {
       height: ($border-width-thick + 1);
-      background-color: $brand-primary;
+      background-color: var(--sds-c-tabs-item-color-border-active, $brand-primary);
     }
   }
 

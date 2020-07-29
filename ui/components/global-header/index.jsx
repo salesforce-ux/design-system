@@ -22,7 +22,7 @@ export const SkipLink = () => (
   </React.Fragment>
 );
 
-export const Logo = () => <div className="slds-global-header__logo" />;
+export const Logo = () => <div className="slds-global-header__logo"><span className="slds-assistive-text">Salesforce</span></div>;
 
 class GlobalHeader extends Component {
   constructor() {

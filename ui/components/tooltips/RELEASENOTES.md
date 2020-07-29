@@ -9,6 +9,9 @@
 ### Added
 - Added the brand expression specific Styling API
 
+### Changed
+- Updated blueprint examples from anchor links to more semantically correct buttons
+
 ## 2.8.0
 
 ### Added

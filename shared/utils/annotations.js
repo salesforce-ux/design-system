@@ -1,5 +1,5 @@
 import I from 'immutable';
-import uiJson from '../../.dist/ui.json';
+import uiJson from '../../.generated/ui.json';
 import { toList } from './tree';
 
 const ui = I.fromJS(uiJson);

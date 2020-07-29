@@ -99,10 +99,10 @@
  * @restrict .slds-accordion section
  */
 .slds-accordion__section {
-  padding-top: var(--sds-c-accordion-section-spacing-vertical-start, $spacing-small);
-  padding-right: var(--sds-c-accordion-section-spacing-horizontal-end, $spacing-small);
-  padding-bottom: var(--sds-c-accordion-section-spacing-vertical-end, $spacing-small);
-  padding-left: var(--sds-c-accordion-section-spacing-horizontal-start, $spacing-small);
+  padding-top: var(--sds-c-accordion-section-spacing-block-start, $spacing-small);
+  padding-right: var(--sds-c-accordion-section-spacing-inline-end, $spacing-small);
+  padding-bottom: var(--sds-c-accordion-section-spacing-block-end, $spacing-small);
+  padding-left: var(--sds-c-accordion-section-spacing-inline-start, $spacing-small);
 }
 
 /**

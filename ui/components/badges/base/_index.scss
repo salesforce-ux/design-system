@@ -43,11 +43,11 @@
  * @group color
  */
 .slds-badge_inverse {
-  /*! @css-var-fallback background-color */
-  --sds-c-badge-color-background: var(--sds-c-badge-inverse-color-background, #{$badge-color-background-inverse});
+  // @todo re-evaluate styling api reassignment
+  background-color: var(--sds-c-badge-inverse-color-background, $badge-color-background-inverse);
 
-  /*! @css-var-fallback color */
-  --sds-c-badge-color-text: var(--sds-c-badge-inverse-color-text, #{$color-text-inverse});
+  // @todo re-evaluate styling api reassignment
+  color: var(--sds-c-badge-inverse-color-text, $color-text-inverse);
 }
 
 /**
@@ -59,11 +59,11 @@
  * @group color
  */
 .slds-badge_lightest {
-  /*! @css-var-fallback background-color */
-  --sds-c-badge-color-background: var(--sds-c-badge-lightest-color-background, #{$badge-color-background-lightest});
+  // @todo re-evaluate styling api reassignment
+  background-color: var(--sds-c-badge-lightest-color-background, $badge-color-background-lightest);
 
-  /*! @css-var-fallback border-color */
-  --sds-c-badge-color-border: var(--sds-c-badge-lightest-color-border, #{$color-border});
+  // @todo re-evaluate styling api reassignment
+  border-color: var(--sds-c-badge-lightest-color-border, $color-border);
 }
 
 /**

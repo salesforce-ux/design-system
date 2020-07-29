@@ -93,7 +93,7 @@ export let ModalFooter = props => (
 // State Constructor(s)
 /// ///////////////////////////////////////////
 
-let Taglines = props => (
+export let Taglines = props => (
   <Backdrop>
     <Modal aria-labelledby="modal-heading-01">
       <ModalHeader>
@@ -133,7 +133,7 @@ let Taglines = props => (
   </Backdrop>
 );
 
-let ModalSizes = props => (
+export let ModalSizes = props => (
   <Backdrop>
     <Modal
       className={classNames(
@@ -178,7 +178,7 @@ ModalSizes.propTypes = {
   size: PropTypes.oneOf(['small', 'medium', 'large'])
 };
 
-let Directional = props => (
+export let Directional = props => (
   <Backdrop>
     <Modal aria-labelledby="modal-heading-01">
       <ModalHeader>
@@ -216,7 +216,7 @@ let Directional = props => (
   </Backdrop>
 );
 
-let Headless = props => (
+export let Headless = props => (
   <Backdrop>
     <Modal aria-label="Meaningful description of the modal content">
       <ModalHeader className="slds-modal__header_empty" />
@@ -246,7 +246,7 @@ let Headless = props => (
   </Backdrop>
 );
 
-let Footless = props => (
+export let Footless = props => (
   <Backdrop>
     <Modal aria-labelledby="modal-heading-01">
       <ModalHeader>
@@ -276,7 +276,7 @@ let Footless = props => (
   </Backdrop>
 );
 
-let HiddenFooter = props => (
+export let HiddenFooter = props => (
   <Backdrop>
     <Modal aria-labelledby="modal-heading-01">
       <ModalHeader>
@@ -307,7 +307,7 @@ let HiddenFooter = props => (
   </Backdrop>
 );
 
-const Menu = () => {
+export const Menu = () => {
   const uniqueIDHeading = uniqueId('modal-heading-unique-id-');
   const uniqueIDContent = uniqueId('modal-content-unique-id-');
 

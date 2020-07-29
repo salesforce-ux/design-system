@@ -4,6 +4,12 @@
 
 <!-- ## [Unreleased] -->
 
+## 2.13.0
+
+### Changed
+
+- Removed `role="application"` from `slds-path__scroller`.
+
 ## 2.11.5
 
 ### Added

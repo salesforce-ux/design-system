@@ -709,3 +709,49 @@ props:
     value: '#00A1E0'
   SCHEDULE_OBJECTIVE:
     value: '#2A739E'
+  ASSET_WARRANTY:
+    value: '#54698D'
+  CHECKOUT:
+    value: '#04844b'
+  DATA_MAPPING:
+    value: '#061C3F'
+  FILTER_CRITERIA_RULE:
+    value: '#2a739e'
+  FILTER_CRITERIA:
+    value: '#2a739e'
+  LOCATION_PERMIT:
+    value: '#34B59D'
+  MAINTENANCE_WORK_RULE:
+    value: '#2A739E'
+  PRICE_BOOK_ENTRIES:
+    value: '#04844b'
+  PRICE_BOOKS:
+    value: '#04844b'
+  PRICING_WORKSPACE:
+    value: '#04844B'
+  PROCESS_EXCEPTION:
+    value: '#F5A623'
+  PRODUCT_WARRANTY_TERM:
+    value: '#B781D3'
+  PRODUCT_WORKSPACE:
+    value: '#04844B'
+  PRODUCTS:
+    value: '#04844b'
+  SECTION:
+    value: '#969492'
+  SHIFT_PATTERN_ENTRY:
+    value: '#eb7092'
+  SHIFT_PATTERN:
+    value: '#eb7092'
+  SLIDER:
+    value: '#969492'
+  TOGGLE:
+    value: '#969492'
+  TRAILHEAD_ALT:
+    value: '#00396B'
+  VARIATION_ATTRIBUTE_SETUP:
+    value: '#04844B'
+  VARIATION_PRODUCTS:
+    value: '#04844b'
+  WARRANTY_TEAM:
+    value: '#0079BC'

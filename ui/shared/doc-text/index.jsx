@@ -17,10 +17,10 @@ export let MobileBlurb = props => {
       <p>
         Below is a live example of what to expect in that context. No code
         changes are needed in the Salesforce platform context as this change
-        occurs automatically in the appropriate context. For those users not on
-        the Salesforce platform, these modifications will occur automatically
-        when the secondary touch stylesheet is loaded and the device has touch
-        as the primary method of interaction.
+        occurs automatically in Salesforce native mobile applications. For
+        those users not on the Salesforce platform, these modifications will
+        occur automatically when the secondary touch stylesheet is loaded and
+        the device has touch as the primary method of interaction.
       </p>
     </Blockquote>
   );

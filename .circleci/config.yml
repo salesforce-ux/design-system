@@ -36,12 +36,12 @@ commands:
             echo 'set url="https://$server/api/sessions/batches/$batchid/close/bypointerid/?apiKey=$apikey'
             echo 'curl --request DELETE --dump-header - $url'
 
-  copy-dist:
-    description: 'Copy .dist files from workspace'
+  prepare-storybook:
+    description: 'Runs storybook:prepare script to generate data needed for Storybook'
     steps:
       - run:
-          name: 'Copy .dist workspace files'
-          command: 'cp -ar workspace/.dist .'
+          name: 'storybook:prepare'
+          command: 'npm run storybook:prepare'
 
   copy-tokens:
     description: 'Copy design-tokens/dist from workspace'
@@ -49,7 +49,6 @@ commands:
       - run:
           name: 'Copy design-tokens/dist workspace files'
           command: 'cp -ar workspace/design-tokens-dist design-tokens/dist'
-
 
 jobs:
   build:
@@ -75,20 +74,8 @@ jobs:
           key: dependencies-{{ checksum "package.json" }}
 
       - run:
-          name: 'NPM run build'
-          command: 'npm run build'
-
-      - run:
-          name: 'NPM run dist:simple'
-          command: 'npm run dist:simple'
-
-      - run:
-          name: 'NPM run dist:write-ui'
-          command: 'npm run gulp -- dist:write-ui'
-
-      - run:
-          name: 'Copy .dist to workspace'
-          command: 'cp -ar .dist workspace'
+          name: 'Build Tokens'
+          command: 'npm run gulp -- generate:tokens:all'
 
       - run:
           name: 'Copy design-tokens/dist to workspace'
@@ -101,7 +88,6 @@ jobs:
           root: workspace
           # Must be relative path from root
           paths:
-            - .dist
             - design-tokens-dist
 
   applitools:
@@ -115,7 +101,6 @@ jobs:
           at: workspace
 
       - vrt_set-env-vars
-      - copy-dist
       - copy-tokens
 
       # Download and cache dependencies
@@ -124,6 +109,8 @@ jobs:
             - dependencies-{{ checksum "package.json" }}
             # fallback to using the latest cache if no exact match is found
             - dependencies-
+
+      - prepare-storybook
 
       # run Applitools tests!
       - run:
@@ -141,7 +128,6 @@ jobs:
           at: workspace
 
       - vrt_set-env-vars
-      - copy-dist
       - copy-tokens
 
       # Download and cache dependencies
@@ -150,6 +136,8 @@ jobs:
             - dependencies-{{ checksum "package.json" }}
             # fallback to using the latest cache if no exact match is found
             - dependencies-
+
+      - prepare-storybook
 
       # run Applitools tests!
       - run:

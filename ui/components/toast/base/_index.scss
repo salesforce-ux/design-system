@@ -36,10 +36,10 @@
   font-weight: $font-weight-light;
   border-radius: var(--sds-c-toast-radius-border, $border-radius-medium);
   margin: $spacing-x-small;
-  padding-top: var(--sds-c-toast-spacing-vertical-start, $spacing-small);
-  padding-right: var(--sds-c-toast-spacing-horizontal-end, $spacing-xx-large);
-  padding-bottom: var(--sds-c-toast-spacing-vertical-end, $spacing-small);
-  padding-left: var(--sds-c-toast-spacing-horizontal-start, $spacing-large);
+  padding-top: var(--sds-c-toast-spacing-block-start, $spacing-small);
+  padding-right: var(--sds-c-toast-spacing-inline-end, $spacing-xx-large);
+  padding-bottom: var(--sds-c-toast-spacing-block-end, $spacing-small);
+  padding-left: var(--sds-c-toast-spacing-inline-start, $spacing-large);
   min-width: var(--sds-c-toast-sizing-min-width, rem(480px));
   text-align: left;
   justify-content: flex-start;

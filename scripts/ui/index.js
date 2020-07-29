@@ -12,10 +12,7 @@ const Either = require('data.either');
 const { Right, Left } = Either;
 
 const createParser = require('@salesforce-ux/design-system-parser');
-const {
-  mapTree,
-  toList
-} = require('../../shared/utils/tree');
+const { mapTree, toList } = require('../../shared/utils/tree');
 
 const getComments = require('./comments');
 const getShowcase = require('./showcase');
@@ -89,6 +86,15 @@ const uiJson = () =>
     .chain(json => new Task((rej, res) => json))
     .fork(y => y);
 
+/**
+ * Basic UIJson Data - sans showcase and doc paths
+ */
+const uiJsonBasic = () =>
+  uiFromComments()
+    .map(x => JSON.stringify(x, null, 2))
+    .chain(json => new Task((rej, res) => json))
+    .fork(y => y);
+
 const writeToDist = () =>
   ui()
     .map(x => JSON.stringify(x, null, 2))
@@ -105,6 +111,7 @@ const writeToDist = () =>
 module.exports = {
   ui,
   uiJson,
+  uiJsonBasic,
   isVariant,
   variants,
   writeToDist,

@@ -48,9 +48,9 @@ export default (
   <div
     style={{ paddingLeft: '2rem', paddingTop: '5rem', position: 'relative' }}
   >
-    <a href="javascript:void(0)" aria-describedby="help">
+    <Button aria-describedby="help" aria-disabled="true">
       Help Text
-    </a>
+    </Button>
     <Tooltip
       className="slds-nubbin_bottom-left"
       id="help"
@@ -132,7 +132,7 @@ export let examples = [
           position: 'relative'
         }}
       >
-        <Button isNeutral aria-describedby="help">
+        <Button isNeutral aria-describedby="help" aria-disabled="true">
           Button
         </Button>
         <Tooltip
@@ -156,9 +156,9 @@ export let examples = [
           position: 'relative'
         }}
       >
-        <a href="javascript:void(0)" aria-describedby="help">
+        <Button aria-describedby="help" aria-disabled="true">
           Help Text
-        </a>
+        </Button>
         <Tooltip
           className={[
             'slds-nubbin_bottom-left',
@@ -183,9 +183,9 @@ export let examples = [
           position: 'relative'
         }}
       >
-        <a href="javascript:void(0)" aria-describedby="help">
+        <Button aria-describedby="help" aria-disabled="true">
           Help Text
-        </a>
+        </Button>
         <Tooltip
           className={[
             'slds-nubbin_bottom-left',
@@ -210,9 +210,9 @@ export let examples = [
           position: 'relative'
         }}
       >
-        <a href="javascript:void(0)" aria-describedby="help">
+        <Button aria-describedby="help" aria-disabled="true">
           Help Text
-        </a>
+        </Button>
         <Tooltip
           className={[
             'slds-nubbin_bottom-left',
@@ -237,9 +237,9 @@ export let examples = [
           position: 'relative'
         }}
       >
-        <a href="javascript:void(0)" aria-describedby="help">
+        <Button aria-describedby="help" aria-disabled="true">
           Help Text
-        </a>
+        </Button>
         <Tooltip
           className={[
             'slds-nubbin_bottom-left',
@@ -264,9 +264,9 @@ export let examples = [
           position: 'relative'
         }}
       >
-        <a href="javascript:void(0)" aria-describedby="help">
+        <Button aria-describedby="help" aria-disabled="true">
           Help Text
-        </a>
+        </Button>
         <Tooltip
           className={['slds-nubbin_bottom-left', 'slds-rise-from-ground'].join(
             ' '
@@ -290,9 +290,9 @@ export let examples = [
           position: 'relative'
         }}
       >
-        <a href="javascript:void(0)" aria-describedby="help">
+        <Button aria-describedby="help" aria-disabled="true">
           Help Text
-        </a>
+        </Button>
         <Tooltip
           className={['slds-nubbin_bottom-left', 'slds-fall-into-ground'].join(
             ' '

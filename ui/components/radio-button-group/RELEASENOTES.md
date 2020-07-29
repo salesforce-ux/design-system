@@ -4,6 +4,12 @@
 
 <!-- ## [Unreleased] -->
 
+## 2.13.0
+
+### Changed
+
+- Added `aria-describedby="error_01"` to the inputs to improve accessibility in the error state.
+
 ## 2.11.7
 
 ### Added

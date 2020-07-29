@@ -101,7 +101,7 @@ In most scenarios, you will want to fix the global header to the top of the view
 
 ### Accessibility
 
-For screen reading users, we need to provide a way to navigate over the global header and directly to content regions. For this scenario, we need to provide two links above the global header that provides navigation to landmarks within the app. These links are visually hidden by default but become visible when focused.
+For screen reading users, we need to provide a way to navigate over the global header and directly to content regions. For this scenario, we provide two links above the global header that provides navigation to landmarks within the app. These links are visually hidden by default but become visible when focused.
 
 <Example title="global header jump links">
   <CodeBlock>
@@ -179,7 +179,7 @@ For screen reading users, we need to provide a way to navigate over the global h
 
 ## Logo
 
-The logo region is simply a `<div>` with the class name `slds-global-header__logo`. The logo is applied as a background image with CSS. This allows us to constrain the dimensions of the logo by a max-height of 40px and a max-width of 200px.
+The logo region is a `<div>` with the class name `slds-global-header__logo` wrapped around a span with assistive text for the logo. This inner span has the class name `slds-assistive-text` and is required to meet accessibility guidelines. The logo is applied as a background image to the div with CSS. This allows us to constrain the dimensions of the logo by a max-height of 40px and a max-width of 200px.
 
 <CodeView isViewport toggleCode={false} demoStyles="padding: 0.5rem 0; min-height: 3.5rem;">
   <div className="slds-global-header__item">
@@ -360,7 +360,7 @@ The global actions bar holds application wide task actions that will persist wit
 The global actions bar is located in the right region of the global header.
 
 <CodeView isViewport exampleOnly demoStyles="position: relative; height: 3.125rem;">
-    <GlobalHeader />
+  <GlobalHeader />
 </CodeView>
 
 ### Favorites

@@ -4,6 +4,11 @@
 
 <!-- ## [Unreleased] -->
 
+## 2.13.0
+
+### Added
+- Added `max-width` Styling API endpoint called `--sds-c-tree-sizing-max-width`
+
 ## 2.10.0
 
 ### Added

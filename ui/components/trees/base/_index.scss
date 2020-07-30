@@ -18,7 +18,7 @@
 .slds-tree_container {
   @include deprecate('4.0.0', '.slds-tree-container is deprecated, use .slds-tree_container instead.');
   min-width: rem(120px);
-  max-width: rem(400px);
+  max-width: var(--sds-c-tree-sizing-max-width, rem(400px));
 
   > .slds-text-heading_label,
   > .slds-text-heading--label {

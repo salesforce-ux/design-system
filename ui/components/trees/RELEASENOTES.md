@@ -7,7 +7,10 @@
 ## 2.13.0
 
 ### Added
-- Added `max-width` Styling API endpoint called `--sds-c-tree-sizing-max-width`
+- Added `aria-disabled` to `treeitem` that are disabled and updated text color to represent disabled state.
+
+### Changed
+- Deprecated the usage of `.slds-is-disabled` in favor of `.slds-is-hidden` to hide chevron icon, use `aria-disabled` instead if you need to represent a disabled state.
 
 ## 2.10.0
 

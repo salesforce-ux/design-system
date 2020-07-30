@@ -9,6 +9,8 @@
 ### [Accordion](https://www.lightningdesignsystem.com/components/accordion)
 #### Added
 - Added the brand expression specific Styling API to Accordion.
+#### Changed
+- Updated heading elements from h3 to h2.
 
 ### [Alert](https://www.lightningdesignsystem.com/components/alert)
 #### Added
@@ -107,7 +109,9 @@
 
 ### [Trees](https://www.lightningdesignsystem.com/components/trees)
 #### Added
-- Added `max-width` Styling API endpoint called `--sds-c-tree-sizing-max-width`
+- Added `aria-disabled` to `treeitem` that are disabled and updated text color to represent disabled state.
+#### Changed
+- Deprecated the usage of `.slds-is-disabled` in favor of `.slds-is-hidden` to hide chevron icon, use `aria-disabled` instead if you need to represent a disabled state.
 
 ## Release 2.12.3 - June 19, 2020
 

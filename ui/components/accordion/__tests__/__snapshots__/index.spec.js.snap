@@ -13,7 +13,7 @@ exports[`renders a base accordion 1`] = `
       <div
         className="slds-accordion__summary"
       >
-        <h3
+        <h2
           className="slds-accordion__summary-heading"
         >
           <button
@@ -36,7 +36,7 @@ exports[`renders a base accordion 1`] = `
               Accordion summary
             </span>
           </button>
-        </h3>
+        </h2>
       </div>
       <div
         className="slds-accordion__content"
@@ -56,7 +56,7 @@ exports[`renders a base accordion 1`] = `
       <div
         className="slds-accordion__summary"
       >
-        <h3
+        <h2
           className="slds-accordion__summary-heading"
         >
           <button
@@ -79,7 +79,7 @@ exports[`renders a base accordion 1`] = `
               Accordion summary
             </span>
           </button>
-        </h3>
+        </h2>
       </div>
       <div
         className="slds-accordion__content"
@@ -99,7 +99,7 @@ exports[`renders a base accordion 1`] = `
       <div
         className="slds-accordion__summary"
       >
-        <h3
+        <h2
           className="slds-accordion__summary-heading"
         >
           <button
@@ -122,7 +122,7 @@ exports[`renders a base accordion 1`] = `
               Accordion summary
             </span>
           </button>
-        </h3>
+        </h2>
       </div>
       <div
         className="slds-accordion__content"
@@ -149,7 +149,7 @@ exports[`renders a nested accordion 1`] = `
       <div
         className="slds-accordion__summary"
       >
-        <h3
+        <h2
           className="slds-accordion__summary-heading"
         >
           <button
@@ -172,7 +172,7 @@ exports[`renders a nested accordion 1`] = `
               Accordion summary
             </span>
           </button>
-        </h3>
+        </h2>
       </div>
       <div
         className="slds-accordion__content"
@@ -191,7 +191,7 @@ exports[`renders a nested accordion 1`] = `
               <div
                 className="slds-accordion__summary"
               >
-                <h3
+                <h2
                   className="slds-accordion__summary-heading"
                 >
                   <button
@@ -214,7 +214,7 @@ exports[`renders a nested accordion 1`] = `
                       Nested accordion summary
                     </span>
                   </button>
-                </h3>
+                </h2>
               </div>
               <div
                 className="slds-accordion__content"
@@ -234,7 +234,7 @@ exports[`renders a nested accordion 1`] = `
               <div
                 className="slds-accordion__summary"
               >
-                <h3
+                <h2
                   className="slds-accordion__summary-heading"
                 >
                   <button
@@ -257,7 +257,7 @@ exports[`renders a nested accordion 1`] = `
                       Nested accordion summary
                     </span>
                   </button>
-                </h3>
+                </h2>
               </div>
               <div
                 className="slds-accordion__content"
@@ -281,7 +281,7 @@ exports[`renders a nested accordion 1`] = `
       <div
         className="slds-accordion__summary"
       >
-        <h3
+        <h2
           className="slds-accordion__summary-heading"
         >
           <button
@@ -304,7 +304,7 @@ exports[`renders a nested accordion 1`] = `
               Accordion summary
             </span>
           </button>
-        </h3>
+        </h2>
       </div>
       <div
         className="slds-accordion__content"
@@ -324,7 +324,7 @@ exports[`renders a nested accordion 1`] = `
       <div
         className="slds-accordion__summary"
       >
-        <h3
+        <h2
           className="slds-accordion__summary-heading"
         >
           <button
@@ -347,7 +347,7 @@ exports[`renders a nested accordion 1`] = `
               Accordion summary
             </span>
           </button>
-        </h3>
+        </h2>
       </div>
       <div
         className="slds-accordion__content"
@@ -377,7 +377,7 @@ exports[`renders a styled accordion 1`] = `
         <div
           className="slds-accordion__summary"
         >
-          <h3
+          <h2
             className="slds-accordion__summary-heading"
           >
             <button
@@ -400,7 +400,7 @@ exports[`renders a styled accordion 1`] = `
                 Accordion summary
               </span>
             </button>
-          </h3>
+          </h2>
         </div>
         <div
           className="slds-accordion__content"
@@ -420,7 +420,7 @@ exports[`renders a styled accordion 1`] = `
         <div
           className="slds-accordion__summary"
         >
-          <h3
+          <h2
             className="slds-accordion__summary-heading"
           >
             <button
@@ -443,7 +443,7 @@ exports[`renders a styled accordion 1`] = `
                 Accordion summary
               </span>
             </button>
-          </h3>
+          </h2>
         </div>
         <div
           className="slds-accordion__content"
@@ -463,7 +463,7 @@ exports[`renders a styled accordion 1`] = `
         <div
           className="slds-accordion__summary"
         >
-          <h3
+          <h2
             className="slds-accordion__summary-heading"
           >
             <button
@@ -486,7 +486,7 @@ exports[`renders a styled accordion 1`] = `
                 Accordion summary
               </span>
             </button>
-          </h3>
+          </h2>
         </div>
         <div
           className="slds-accordion__content"
@@ -514,7 +514,7 @@ exports[`renders an accordion with action overflow 1`] = `
       <div
         className="slds-accordion__summary"
       >
-        <h3
+        <h2
           className="slds-accordion__summary-heading"
         >
           <button
@@ -537,7 +537,7 @@ exports[`renders an accordion with action overflow 1`] = `
               Accordion summary
             </span>
           </button>
-        </h3>
+        </h2>
         <div
           className="slds-dropdown-trigger slds-dropdown-trigger_click"
         >
@@ -640,7 +640,7 @@ exports[`renders an accordion with action overflow 1`] = `
       <div
         className="slds-accordion__summary"
       >
-        <h3
+        <h2
           className="slds-accordion__summary-heading"
         >
           <button
@@ -663,7 +663,7 @@ exports[`renders an accordion with action overflow 1`] = `
               Accordion summary
             </span>
           </button>
-        </h3>
+        </h2>
         <div
           className="slds-dropdown-trigger slds-dropdown-trigger_click"
         >
@@ -766,7 +766,7 @@ exports[`renders an accordion with action overflow 1`] = `
       <div
         className="slds-accordion__summary"
       >
-        <h3
+        <h2
           className="slds-accordion__summary-heading"
         >
           <button
@@ -789,7 +789,7 @@ exports[`renders an accordion with action overflow 1`] = `
               Accordion summary
             </span>
           </button>
-        </h3>
+        </h2>
         <div
           className="slds-dropdown-trigger slds-dropdown-trigger_click"
         >
@@ -899,7 +899,7 @@ exports[`renders an accordion with multiple sections open 1`] = `
       <div
         className="slds-accordion__summary"
       >
-        <h3
+        <h2
           className="slds-accordion__summary-heading"
         >
           <button
@@ -922,7 +922,7 @@ exports[`renders an accordion with multiple sections open 1`] = `
               Accordion summary
             </span>
           </button>
-        </h3>
+        </h2>
       </div>
       <div
         className="slds-accordion__content"
@@ -942,7 +942,7 @@ exports[`renders an accordion with multiple sections open 1`] = `
       <div
         className="slds-accordion__summary"
       >
-        <h3
+        <h2
           className="slds-accordion__summary-heading"
         >
           <button
@@ -965,7 +965,7 @@ exports[`renders an accordion with multiple sections open 1`] = `
               Accordion summary
             </span>
           </button>
-        </h3>
+        </h2>
       </div>
       <div
         className="slds-accordion__content"
@@ -985,7 +985,7 @@ exports[`renders an accordion with multiple sections open 1`] = `
       <div
         className="slds-accordion__summary"
       >
-        <h3
+        <h2
           className="slds-accordion__summary-heading"
         >
           <button
@@ -1008,7 +1008,7 @@ exports[`renders an accordion with multiple sections open 1`] = `
               Accordion summary
             </span>
           </button>
-        </h3>
+        </h2>
       </div>
       <div
         className="slds-accordion__content"
@@ -1035,7 +1035,7 @@ exports[`renders an accordion with section one open 1`] = `
       <div
         className="slds-accordion__summary"
       >
-        <h3
+        <h2
           className="slds-accordion__summary-heading"
         >
           <button
@@ -1058,7 +1058,7 @@ exports[`renders an accordion with section one open 1`] = `
               Accordion summary
             </span>
           </button>
-        </h3>
+        </h2>
       </div>
       <div
         className="slds-accordion__content"
@@ -1078,7 +1078,7 @@ exports[`renders an accordion with section one open 1`] = `
       <div
         className="slds-accordion__summary"
       >
-        <h3
+        <h2
           className="slds-accordion__summary-heading"
         >
           <button
@@ -1101,7 +1101,7 @@ exports[`renders an accordion with section one open 1`] = `
               Accordion summary
             </span>
           </button>
-        </h3>
+        </h2>
       </div>
       <div
         className="slds-accordion__content"
@@ -1121,7 +1121,7 @@ exports[`renders an accordion with section one open 1`] = `
       <div
         className="slds-accordion__summary"
       >
-        <h3
+        <h2
           className="slds-accordion__summary-heading"
         >
           <button
@@ -1144,7 +1144,7 @@ exports[`renders an accordion with section one open 1`] = `
               Accordion summary
             </span>
           </button>
-        </h3>
+        </h2>
       </div>
       <div
         className="slds-accordion__content"
@@ -1171,7 +1171,7 @@ exports[`renders an accordion with section three open 1`] = `
       <div
         className="slds-accordion__summary"
       >
-        <h3
+        <h2
           className="slds-accordion__summary-heading"
         >
           <button
@@ -1194,7 +1194,7 @@ exports[`renders an accordion with section three open 1`] = `
               Accordion summary
             </span>
           </button>
-        </h3>
+        </h2>
       </div>
       <div
         className="slds-accordion__content"
@@ -1214,7 +1214,7 @@ exports[`renders an accordion with section three open 1`] = `
       <div
         className="slds-accordion__summary"
       >
-        <h3
+        <h2
           className="slds-accordion__summary-heading"
         >
           <button
@@ -1237,7 +1237,7 @@ exports[`renders an accordion with section three open 1`] = `
               Accordion summary
             </span>
           </button>
-        </h3>
+        </h2>
       </div>
       <div
         className="slds-accordion__content"
@@ -1257,7 +1257,7 @@ exports[`renders an accordion with section three open 1`] = `
       <div
         className="slds-accordion__summary"
       >
-        <h3
+        <h2
           className="slds-accordion__summary-heading"
         >
           <button
@@ -1280,7 +1280,7 @@ exports[`renders an accordion with section three open 1`] = `
               Accordion summary
             </span>
           </button>
-        </h3>
+        </h2>
       </div>
       <div
         className="slds-accordion__content"
@@ -1307,7 +1307,7 @@ exports[`renders an accordion with section two open 1`] = `
       <div
         className="slds-accordion__summary"
       >
-        <h3
+        <h2
           className="slds-accordion__summary-heading"
         >
           <button
@@ -1330,7 +1330,7 @@ exports[`renders an accordion with section two open 1`] = `
               Accordion summary
             </span>
           </button>
-        </h3>
+        </h2>
       </div>
       <div
         className="slds-accordion__content"
@@ -1350,7 +1350,7 @@ exports[`renders an accordion with section two open 1`] = `
       <div
         className="slds-accordion__summary"
       >
-        <h3
+        <h2
           className="slds-accordion__summary-heading"
         >
           <button
@@ -1373,7 +1373,7 @@ exports[`renders an accordion with section two open 1`] = `
               Accordion summary
             </span>
           </button>
-        </h3>
+        </h2>
       </div>
       <div
         className="slds-accordion__content"
@@ -1393,7 +1393,7 @@ exports[`renders an accordion with section two open 1`] = `
       <div
         className="slds-accordion__summary"
       >
-        <h3
+        <h2
           className="slds-accordion__summary-heading"
         >
           <button
@@ -1416,7 +1416,7 @@ exports[`renders an accordion with section two open 1`] = `
               Accordion summary
             </span>
           </button>
-        </h3>
+        </h2>
       </div>
       <div
         className="slds-accordion__content"

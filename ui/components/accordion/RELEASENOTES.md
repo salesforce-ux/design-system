@@ -10,6 +10,10 @@
 
 - Added the brand expression specific Styling API to Accordion.
 
+### Changed
+
+- Updated heading elements from h3 to h2.
+
 ## 2.11.7
 
 ### Changed

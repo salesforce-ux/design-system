@@ -2,10 +2,12 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 import React from 'react';
+import PropTypes from 'prop-types';
 import SvgIcon from '../../../shared/svg-icon';
 import classNames from 'classnames';
 import { ActionOverflow } from '../../menus/action-overflow/example';
 import Card from '../../cards/';
+import Heading from '../../../shared/heading';
 
 const referenceId01 = 'accordion-details-01';
 const referenceId02 = 'accordion-details-02';
@@ -19,16 +21,21 @@ export const Accordion = props => (
   </ul>
 );
 
+Accordion.propTypes = {
+  className: PropTypes.string,
+  children: PropTypes.node
+};
+
 export const AccordionSection = props => (
   <li className="slds-accordion__list-item">
     <section
       className={classNames(
         'slds-accordion__section',
-        props.isOpen ? 'slds-is-open' : null
+        props.isOpen && 'slds-is-open'
       )}
     >
       <div className={classNames('slds-accordion__summary', props.className)}>
-        <h3
+        <Heading level="2"
           className={classNames(
             'slds-accordion__summary-heading',
             props.className
@@ -51,7 +58,7 @@ export const AccordionSection = props => (
               {props.summary}
             </span>
           </button>
-        </h3>
+        </Heading>
         {props.hasActionOverflow && (
           <ActionOverflow position="right" dropdownIsOpen={false} />
         )}
@@ -66,6 +73,15 @@ export const AccordionSection = props => (
     </section>
   </li>
 );
+
+AccordionSection.propTypes = {
+  isOpen: PropTypes.bool,
+  className: PropTypes.string,
+  referenceId: PropTypes.string,
+  summary: PropTypes.string,
+  hasActionOverflow: PropTypes.bool,
+  children: PropTypes.node
+};
 
 export const AccordionExample = () => (
   <Accordion>

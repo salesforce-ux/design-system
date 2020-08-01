@@ -29,7 +29,7 @@
   - components/vertical-tabs
 - Fixed broken links in earlier release notes
 
-- Updated Icons to 9.37.0
+- Updated Icons to 9.37.1
 
 ## 2.12.2 - June 11, 2020
 

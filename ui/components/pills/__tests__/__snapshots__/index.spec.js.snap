@@ -164,6 +164,86 @@ exports[`Pill - Listbox of Pills renders a listbox of pills - bare 1`] = `
 </div>
 `;
 
+exports[`Pill - Listbox of Pills renders a listbox of pills - group 1`] = `
+<div>
+  <div
+    class="slds-combobox_container"
+  />
+  <div
+    className="slds-listbox_selection-group"
+  >
+    <ul
+      aria-label="Selected Options:"
+      aria-orientation="horizontal"
+      className="slds-listbox slds-listbox_horizontal"
+      role="listbox"
+    >
+      <li
+        className="slds-listbox-item"
+        role="presentation"
+      >
+        <span
+          aria-selected="true"
+          className="slds-pill"
+          role="option"
+          tabIndex="0"
+        >
+          <span
+            className="slds-pill__label"
+            title="Full pill label verbiage mirrored here"
+          >
+            Pill Label
+          </span>
+          <span
+            className="slds-icon_container slds-pill__remove"
+            title="Remove"
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-icon slds-icon_x-small slds-icon-text-default"
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#close"
+              />
+            </svg>
+          </span>
+        </span>
+      </li>
+      <li
+        className="slds-listbox-item"
+        role="presentation"
+      >
+        <span
+          aria-selected="true"
+          className="slds-pill"
+          role="option"
+        >
+          <span
+            className="slds-pill__label"
+            title="Full pill label verbiage mirrored here"
+          >
+            Pill Label
+          </span>
+          <span
+            className="slds-icon_container slds-pill__remove"
+            title="Remove"
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-icon slds-icon_x-small slds-icon-text-default"
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#close"
+              />
+            </svg>
+          </span>
+        </span>
+      </li>
+    </ul>
+  </div>
+</div>
+`;
+
 exports[`Pill - Listbox of Pills renders a listbox of pills with an avatar 1`] = `
 <div
   className="slds-pill_container"

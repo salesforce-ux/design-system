@@ -43,4 +43,7 @@ describe('Pill - Listbox of Pills', () => {
 
   it('renders a listbox of pills - bare', () =>
     matchesMarkup(getDisplayElementById(ListboxOfPillOptions.examples, 'listbox-pill-bare')));
+
+    it('renders a listbox of pills - group', () =>
+      matchesMarkup(getDisplayElementById(ListboxOfPillOptions.examples, 'listbox-pill-group')));
 });

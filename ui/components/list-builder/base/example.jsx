@@ -269,7 +269,7 @@ TwoColumnRowData.propTypes = {
 };
 
 let FilteredItem = props => (
-  <PillContainer className="slds-pill_container_bare">
+  <PillContainer variant="container-bare">
     <ListboxPills>
       <ListboxPillsItem>
         <ListboxPill label="Analytics" tabIndex="0" />
@@ -279,7 +279,7 @@ let FilteredItem = props => (
 );
 
 let FilteredItems = props => (
-  <PillContainer className="slds-pill_container_bare">
+  <PillContainer variant="container-bare">
     <ListboxPills>
       <ListboxPillsItem>
         <ListboxPill label="Option A" tabIndex="0" />

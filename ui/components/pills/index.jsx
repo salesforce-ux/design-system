@@ -19,12 +19,18 @@ export let Pill = props => (
 
 export let PillContainer = props => {
   return (
-    <div className={classNames('slds-pill_container', props.className)}>
-      {props.type === 'listbox' && (
-        <div className="slds-assistive-text" id={props.id}>Press delete or backspace to remove</div>
-      )}
-      {props.children}
-    </div>
+    <div className={classNames(
+      {
+        'slds-pill_container': props.variant !== 'listbox-group',
+        'slds-listbox_selection-group' : props.variant === "listbox-group",
+        'slds-pill_container_bare': props.variant === "container-bare"
+        }
+      )}>
+        {props.type === 'listbox' && (
+          <div className="slds-assistive-text" id={props.id}>Press delete or backspace to remove</div>
+        )}
+        {props.children}
+      </div>
   );
 };
 

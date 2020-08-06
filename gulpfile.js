@@ -15,6 +15,7 @@ import * as tokens from './scripts/gulp/generate/tokens';
 import * as lint from './scripts/gulp/lint';
 import * as styles from './scripts/gulp/styles';
 import * as sanitized from './scripts/gulp/generate/sanitized';
+import { generateUIJson } from './scripts/generate-ui';
 
 import paths from './scripts/helpers/paths';
 import * as travis from './scripts/helpers/travis';
@@ -221,6 +222,19 @@ gulp.task(
 gulp.task(
   'styles:stats',
   gulp.series('styles', withName('styles:stats')(styles.stats))
+);
+
+/*
+ * ==================
+ * Storybook
+ * ==================
+ */
+gulp.task('storybook:prepare:ui', done => {
+  generateUIJson({ suppressOutput: true, callback: done });
+});
+gulp.task(
+  'storybook:prepare',
+  gulp.series('storybook:prepare:ui', 'styles:extractStyleHooks')
 );
 
 /*

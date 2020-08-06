@@ -194,7 +194,7 @@
     "url": "git@github.com:salesforce-ux/design-system.git"
   },
   "scripts": {
-    "storybook:prepare": "node scripts/generate-ui",
+    "storybook:prepare": "npm run gulp -- storybook:prepare",
     "start": "npm run storybook:prepare && start-storybook -c .storybook -p 9002",
     "start:mobile": "STORYBOOK_STORIES_TYPE='mobile' start-storybook -c .storybook -p 9003",
     "build": "npm run gulp -- build",

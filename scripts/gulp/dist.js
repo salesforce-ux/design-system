@@ -29,7 +29,6 @@ import {
   writeSanitizedComponentCss,
   writeCommonCss
 } from './generate/sanitized';
-import { extractVars } from '../var-extract';
 
 const distPath = path.resolve.bind(path, paths.dist);
 
@@ -149,6 +148,14 @@ export const copyUtilityReleaseNotes = () =>
     })
     .pipe(gulp.dest(distPath('__internal/release-notes')));
 
+export const copyStylingHooksMetadata = () =>
+  gulp
+    .src('metadata/**', {
+      base: path.resolve(paths.generated),
+      cwd: path.resolve(paths.generated)
+    })
+    .pipe(gulp.dest(distPath()));
+
 /*
  * ==================
  * Compiles monolithic version of SLDS
@@ -266,19 +273,6 @@ export const writeSanitizedComponents = done =>
  */
 
 export const writeCommon = done => writeCommonCss(done);
-
-/*
- * ==================
- * Parses CSS Vars from compiled code
- * ==================
- */
-export const extractStyleAPIVars = done => {
-  gulpFile('css-vars.json', JSON.stringify(extractVars())).pipe(
-    gulp.dest(distPath())
-  );
-
-  if (done) done();
-};
 
 /*
  * ==================

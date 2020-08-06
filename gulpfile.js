@@ -202,18 +202,20 @@ gulp.task('sanitized:componentSass', sanitized.writeSanitizedComponentCss);
 gulp.task('styles:sass', styles.sass);
 gulp.task('styles:sassTouch', styles.sassTouch);
 gulp.task('styles:sassTouchDemo', styles.sassTouchDemo);
-gulp.task('styles:test', styles.sassTest);
 gulp.task('styles:formFactors', styles.sassFormFactors);
+gulp.task('styles:componentCSS', styles.componentCSS);
+gulp.task('styles:extractStyleHooks', styles.extractStyleHooks);
+gulp.task('styles:test', styles.sassTest);
 gulp.task(
   'styles',
   gulp.series(
-    gulp.parallel(
-      'styles:sass',
-      'styles:sassTouch',
-      'styles:sassTouchDemo',
-      'styles:test',
-      'styles:formFactors'
-    )
+    'styles:sass',
+    'styles:sassTouch',
+    'styles:sassTouchDemo',
+    'styles:formFactors',
+    'styles:componentCSS',
+    'styles:extractStyleHooks',
+    'styles:test'
   )
 );
 gulp.task(
@@ -328,7 +330,10 @@ gulp.task(
       withName('dist:copyUtilityReleaseNotes')(dist.copyUtilityReleaseNotes),
       withName('dist:copySwatches')(dist.copySwatches),
       withName('dist:copyDesignTokens')(dist.copyDesignTokens),
-      withName('dist:copyComponentDesignTokens')(dist.copyComponentDesignTokens)
+      withName('dist:copyComponentDesignTokens')(
+        dist.copyComponentDesignTokens
+      ),
+      withName('dist:copyStylingHooksMetadata')(dist.copyStylingHooksMetadata)
     ),
     'dist:sass',
     'dist:sass:sanitized',
@@ -339,7 +344,6 @@ gulp.task(
       withName('dist:packageJson')(dist.packageJson)
     ),
     withName('dist:minifyCss')(dist.minifyCss),
-    withName('dist:extractStyleAPIVars')(dist.extractStyleAPIVars),
     withName('dist:writeUI')(dist.writeUI),
     withName('dist:writeLibrary')(dist.writeLibrary),
     withName('dist:writeTokenComponentMap')(done =>

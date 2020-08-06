@@ -8,44 +8,56 @@ const { compileModularCSS } = require('./compile/modular-css');
 /**
  * Parses through generated modular CSS files and extracts vars
  */
-const extractVarsFromSLDS = () => {
+const extractVarsFromSLDS = (props = {}) => {
+  const { callback, suppressOutput } = props;
   const cssFolderExists = fs.existsSync('./.generated/css');
 
   // if there's no css folder yet, generate it!
   if (!cssFolderExists) {
-    compileModularCSS();
+    compileModularCSS({ suppressOutput });
   }
 
-  console.log('=> Clearing out Metadata');
+  // logging
+  if (!suppressOutput) {
+    console.log('=> Clearing out Metadata');
+  }
   fs.emptyDirSync('.generated/metadata');
 
-  const cssFiles = glob.sync(
-    './.generated/css/(components|utilities)/**/index.css'
-  );
+  // getting list of components and utilities to parse
+  const componentList = fs
+    .readdirSync('./.generated/css/components')
+    .map(name => `./.generated/css/components/${name}/**/index.css`);
+  const utilityList = fs
+    .readdirSync('./.generated/css/utilities')
+    .map(name => `./.generated/css/utilities/${name}/**/index.css`);
 
-  cssFiles.map(filename => {
-    const cssContent = readFileSync(filename).toString();
-    const varsData = extractVarsFromCSS(cssContent);
+  // parse through all variants of each component / util
+  componentList.concat(utilityList).map(fileGlob => {
+    const cssFiles = glob.sync(fileGlob);
+    let varsData = {};
+
+    cssFiles.map(filename => {
+      const cssContent = readFileSync(filename).toString();
+      const fileVars = extractVarsFromCSS(cssContent);
+
+      if (Object.keys(fileVars).length > 0) {
+        varsData = Object.assign(fileVars, varsData);
+      }
+    });
 
     if (Object.keys(varsData).length > 0) {
-      const outFile = filename
-        .replace('/css/', '/metadata/')
-        .replace('index.css', 'styling-hooks.json');
+      const fileParts = fileGlob.match(/generated\/css\/(.*?)\/(.*?)\//);
+      const itemType = fileParts[1];
+      const itemName = fileParts[2];
+      const outFile = `./.generated/metadata/${itemType}/${itemName}/styling-hooks.json`;
 
       fs.ensureFile(outFile, () => {
-        fs.writeFile(
-          outFile,
-          JSON.stringify(varsData),
-          'utf8',
-          varsWriteErr => {
-            if (varsWriteErr) {
-              console.error(varsWriteErr);
-            }
-          }
-        );
+        fs.writeFileSync(outFile, JSON.stringify(varsData), 'utf8');
       });
     }
   });
+
+  if (callback) callback();
 };
 
 /**
@@ -93,8 +105,6 @@ const extractVarsFromCSS = cssContent => {
   return list;
 };
 
-extractVarsFromSLDS();
-
 module.exports = {
-  extractVarsFromCSS
+  extractVarsFromSLDS
 };

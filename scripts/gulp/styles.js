@@ -13,6 +13,8 @@ import gulpFile from 'gulp-file';
 
 import paths from '../helpers/paths';
 import * as gulpHelpers from '../helpers/gulp';
+import { compileModularCSS } from '../compile/modular-css';
+import { extractVarsFromSLDS } from '../var-extract';
 
 export const stats = done => {
   console.log('Gathering stats...');
@@ -100,6 +102,18 @@ export const sassTouchDemo = () =>
     .pipe(gulpHelpers.writeMinifyCss())
     .pipe(gulpSourcemaps.write('.'))
     .pipe(gulp.dest('assets/styles'));
+
+export const componentCSS = done =>
+  gulp.task(
+    'generate:compileModularCSS',
+    compileModularCSS({ suppressStdout: true, callback: done })
+  );
+
+export const extractStyleHooks = done =>
+  gulp.task(
+    'generate:extractStyleHooks',
+    extractVarsFromSLDS({ suppressOutput: true, callback: done })
+  );
 
 // Quick check that all variants compile correctly to CSS
 export const sassTest = () =>

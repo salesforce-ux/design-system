@@ -5,8 +5,12 @@ const fs = require('fs-extra');
 const glob = require('fast-glob');
 const sass = require('sass');
 
-const compileModularCSS = () => {
-  console.log('=> Clearing out .generated/css');
+const compileModularCSS = (props = {}) => {
+  const { suppressStdout, callback } = props;
+
+  if (!suppressStdout) {
+    console.log('=> Clearing out .generated/css');
+  }
   fs.emptyDirSync('.generated/css');
 
   const moduleFiles = glob.sync('./ui/(components|utilities)/**/*_index.scss', {
@@ -22,11 +26,13 @@ const compileModularCSS = () => {
     const outFile = `.generated/css/${pathBase}/index.css`;
 
     // console output
-    process.stdout.clearLine();
-    process.stdout.cursorTo(0);
-    process.stdout.write(
-      `=> Processing ${i + 1}/${moduleFileCount} - ${filename}`
-    );
+    if (!suppressStdout) {
+      process.stdout.clearLine();
+      process.stdout.cursorTo(0);
+      process.stdout.write(
+        `=> Processing ${i + 1}/${moduleFileCount} - ${filename}`
+      );
+    }
 
     const css = sass
       .renderSync({
@@ -41,7 +47,11 @@ const compileModularCSS = () => {
     fs.writeFileSync(outFile, css, 'utf8');
   });
 
-  process.stdout.write(`\n=> Generation Complete\n`);
+  if (!suppressStdout) {
+    process.stdout.write(`\n=> Generation Complete\n`);
+  }
+
+  if (callback) callback();
 };
 
 module.exports = {

@@ -2,14 +2,12 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 import React, { Component } from 'react';
-
-import vars from '../../.dist/css-vars.json';
 import { propTypes } from '../../scripts/var-metadata';
 
 class StyleApiTable extends Component {
   render() {
-    const { component } = this.props;
-    const componentVars = vars[component];
+    const { name, type } = this.props;
+    const vars = require(`../../.generated/metadata/${type}s/${name}/styling-hooks.json`);
 
     return (
       <div>
@@ -29,8 +27,8 @@ class StyleApiTable extends Component {
             </tr>
           </thead>
           <tbody>
-            {componentVars.map((varName, i) => {
-              const trimmedVar = varName.replace(`--sds-c-${component}-`, '');
+            {Object.keys(vars).map((varName, i) => {
+              const trimmedVar = varName.replace(`--sds-c-${name}-`, '');
               let propType = null;
               let valueTypes = null;
 

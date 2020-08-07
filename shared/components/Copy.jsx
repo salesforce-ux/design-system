@@ -59,22 +59,25 @@ class Copy extends React.PureComponent {
 
   renderButton() {
     const { copied } = this.state;
-    const title = copied ? 'Copied' : 'Copy to Clipboard';
+    const assistiveText = copied ? 'Copied' : '';
     return (
-      <button
-        className="slds-button slds-button_icon-container doc-copy-to-clipboard"
-        onClick={() => this.copyToClipboard()}
-        title={title}
-      >
-        <SvgIcon
-          sprite="utility"
-          symbol={copied ? 'check' : 'copy_to_clipboard'}
-          className="slds-button__icon"
-        />
+      <React.Fragment>
+        <button
+          className="slds-button slds-button_icon-container doc-copy-to-clipboard"
+          onClick={() => this.copyToClipboard()}
+          aria-label='Copy to Clipboard'
+          title='Copy to Clipboard'
+        >
+          <SvgIcon
+            sprite="utility"
+            symbol={copied ? 'check' : 'copy_to_clipboard'}
+            className="slds-button__icon"
+          />
+        </button>
         <span aria-live="polite" className="slds-assistive-text">
-          {title}
+          {assistiveText}
         </span>
-      </button>
+      </React.Fragment>
     );
   }
 

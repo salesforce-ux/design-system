@@ -8,7 +8,7 @@
 
 ### Added
 
-- Added the brand expression specific Styling API
+- Added the brand expression specific Styling Hooks
 
 ## 2.11.0
 
@@ -45,6 +45,7 @@
 ## 2.7.0
 
 ### Added
+
 - Added `slds-tabs_medium` and `slds-tabs_large` to modify the `font-size` and spacing of the tab items
 - Added animation when activating a tab item
 - Added `slds-tabs_default__overflow-button` to tabs with overflow so the Button Menu component can be slotted inside the tab item
@@ -54,6 +55,7 @@
 - Animations and transitions for `:hover` and `slds-is-active` states.
 
 ### Changed
+
 - Replaced spacing tokens with variable spacing tokens to respond to a user's densification setting
 - Removed title caps from tab items
 - Removed letter spacing from tab items
@@ -61,6 +63,7 @@
 - Changed HTML on [Tabs with Overflow](/components/scoped-tabs/?example=overflowing-items&variant=base) example so a Button Menu component is the trigger for the overflow menu
 
 ### Fixed
+
 - Updated `slds-tabs-mobile` to have a white background by default, instead of a transparent background.
 - Improved the color contrast of the text of a subtab when it is in focus
 - HTML validation error on subtab indicators, swapped a `div` for a `span`

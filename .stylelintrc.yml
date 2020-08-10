@@ -19,7 +19,7 @@ rules:
       resolveNestedSelectors: true
   "custom-property-pattern":
     # "-g-" left out specifically to ensure 228 is component-level only, we can updated
-    # to ^sds-[c|g]-([a-z][a-z0-9]*)(-[a-z0-9]+)*$ when theming gets added to the Styling API
+    # to ^sds-[c|g]-([a-z][a-z0-9]*)(-[a-z0-9]+)*$ when theming gets added to Styling Hooks
     - "^sds-c-([a-z][a-z0-9]*)(-[a-z0-9]+)*$"
     -
       message: "All component custom properties must begin with '--sds-c-' and be kebab-case"

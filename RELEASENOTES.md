@@ -8,30 +8,30 @@
 ## Components
 ### [Accordion](https://www.lightningdesignsystem.com/components/accordion)
 #### Added
-- Added the brand expression specific Styling API to Accordion.
+- Added the brand expression specific Styling Hooks to Accordion.
 #### Changed
 - Updated heading elements from h3 to h2.
 
 ### [Alert](https://www.lightningdesignsystem.com/components/alert)
 #### Added
-- Added the brand expression specific Styling API
+- Added the brand expression specific Styling Hooks
 
 ### [Avatar](https://www.lightningdesignsystem.com/components/avatar)
 #### Added
-- Added the brand expression specific Styling API to Avatar.
+- Added the brand expression specific Styling Hooks to Avatar.
 
 ### [Badges](https://www.lightningdesignsystem.com/components/badges)
 #### Added
-- Added the brand expression specific Styling API to Badge.
+- Added the brand expression specific Styling Hooks to Badge.
 #### Fixed
 - Fixed inconsistent heights between variants when border isn't present.
 
 ### [Breadcrumbs](https://www.lightningdesignsystem.com/components/breadcrumbs)
-- Added the brand expression specific Styling API
+- Added the brand expression specific Styling Hooks
 
 ### [Buttons](https://www.lightningdesignsystem.com/components/buttons)
 #### Added
-- Added the brand expression specific Styling API
+- Added the brand expression specific Styling Hooks
 
 ### [Combobox](https://www.lightningdesignsystem.com/components/combobox)
 #### Changed
@@ -51,7 +51,7 @@
 - Adjusted color of unsaved tab indicator asterisk to comply with accessibility color contrast rules
 
 ### [Icons](https://www.lightningdesignsystem.com/components/icons)
-- Added the brand expression specific Styling API
+- Added the brand expression specific Styling Hooks
 
 ### [List Builder](https://www.lightningdesignsystem.com/components/list-builder)
 #### Changed
@@ -63,7 +63,7 @@
 
 ### [Modals](https://www.lightningdesignsystem.com/components/modals)
 #### Added
-- Added the brand expression specific Styling API
+- Added the brand expression specific Styling Hooks
 
 ### [Path](https://www.lightningdesignsystem.com/components/path)
 #### Changed
@@ -75,7 +75,7 @@
 - Addressed layout inconsistencies for touch styles
 - Clarified documentation around when linked pills can be used
 #### Added
-- Added the brand expression specific Styling API to Pill.
+- Added the brand expression specific Styling Hooks to Pill.
 - Added example for Listbox of Pills in Group
 #### Changed
 - Removed redundant `border-radius` on `.slds-pill:focus`
@@ -94,19 +94,19 @@
 
 ### [Scoped Tabs](https://www.lightningdesignsystem.com/components/scoped-tabs)
 #### Added
-- Added the brand expression specific Styling API
+- Added the brand expression specific Styling Hooks
 
 ### [Tabs](https://www.lightningdesignsystem.com/components/tabs)
 #### Added
-- Added the brand expression specific Styling API
+- Added the brand expression specific Styling Hooks
 
 ### [Toast](https://www.lightningdesignsystem.com/components/toast)
 #### Added
-- Added the brand expression specific Styling API
+- Added the brand expression specific Styling Hooks
 
 ### [Tooltips](https://www.lightningdesignsystem.com/components/tooltips)
 #### Added
-- Added the brand expression specific Styling API
+- Added the brand expression specific Styling Hooks
 #### Changed
 - Updated blueprint examples from anchor links to more semantically correct buttons
 
@@ -139,7 +139,7 @@
   - components/trees
   - components/vertical-tabs
 - Fixed broken links in earlier release notes
-- Updated Icons to 9.37.0
+- Updated Icons to 9.37.1
 
 ## Components
 ### [Global Header](https://www.lightningdesignsystem.com/components/global-header)

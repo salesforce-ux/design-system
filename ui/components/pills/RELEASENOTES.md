@@ -3,6 +3,7 @@
 # Pills Release Notes
 
 <!-- ## [Unreleased] -->
+
 ## 2.13.0
 
 ### Changed
@@ -13,7 +14,7 @@
 
 ### Added
 
-- Added the brand expression specific Styling API to Pill.
+- Added the brand expression specific Styling Hooks to Pill.
 - Added example for Listbox of Pills in Group
 
 ### Changed

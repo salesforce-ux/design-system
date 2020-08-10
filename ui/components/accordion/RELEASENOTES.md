@@ -8,7 +8,7 @@
 
 ### Added
 
-- Added the brand expression specific Styling API to Accordion.
+- Added the brand expression specific Styling Hooks to Accordion.
 
 ### Changed
 

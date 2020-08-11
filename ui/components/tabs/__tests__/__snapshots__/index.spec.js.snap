@@ -4093,6 +4093,7 @@ exports[`Subtabs renders dirty overflowed subtab 1`] = `
         >
           <button
             className="slds-button slds-button_icon slds-button_icon-container slds-button_icon-x-small"
+            onClick={[Function]}
             tabIndex="-1"
             title="Close 00071938"
           >
@@ -4159,6 +4160,7 @@ exports[`Subtabs renders dirty overflowed subtab 1`] = `
         >
           <button
             className="slds-button slds-button_icon slds-button_icon-container slds-button_icon-x-small"
+            onClick={[Function]}
             tabIndex="-1"
             title="Close 00071939"
           >
@@ -4404,6 +4406,7 @@ exports[`Subtabs renders dirty overflowed subtab with notification 1`] = `
         >
           <button
             className="slds-button slds-button_icon slds-button_icon-container slds-button_icon-x-small"
+            onClick={[Function]}
             tabIndex="-1"
             title="Close 00071938"
           >
@@ -4470,6 +4473,7 @@ exports[`Subtabs renders dirty overflowed subtab with notification 1`] = `
         >
           <button
             className="slds-button slds-button_icon slds-button_icon-container slds-button_icon-x-small"
+            onClick={[Function]}
             tabIndex="-1"
             title="Close 00071939"
           >
@@ -4725,6 +4729,7 @@ exports[`Subtabs renders overflowed subtab 1`] = `
         >
           <button
             className="slds-button slds-button_icon slds-button_icon-container slds-button_icon-x-small"
+            onClick={[Function]}
             tabIndex="-1"
             title="Close 00071938"
           >
@@ -4791,6 +4796,7 @@ exports[`Subtabs renders overflowed subtab 1`] = `
         >
           <button
             className="slds-button slds-button_icon slds-button_icon-container slds-button_icon-x-small"
+            onClick={[Function]}
             tabIndex="-1"
             title="Close 00071939"
           >
@@ -5020,6 +5026,7 @@ exports[`Subtabs renders overflowed subtab with notification 1`] = `
         >
           <button
             className="slds-button slds-button_icon slds-button_icon-container slds-button_icon-x-small"
+            onClick={[Function]}
             tabIndex="-1"
             title="Close 00071938"
           >
@@ -5086,6 +5093,7 @@ exports[`Subtabs renders overflowed subtab with notification 1`] = `
         >
           <button
             className="slds-button slds-button_icon slds-button_icon-container slds-button_icon-x-small"
+            onClick={[Function]}
             tabIndex="-1"
             title="Close 00071939"
           >
@@ -5318,6 +5326,7 @@ exports[`Subtabs renders subtab with notification and dirty 1`] = `
       >
         <button
           className="slds-button slds-button_icon slds-button_icon-container slds-button_icon-x-small"
+          onClick={[Function]}
           tabIndex="0"
           title="Close 00071938"
         >
@@ -5397,6 +5406,7 @@ exports[`Subtabs renders subtab with notification and dirty 1`] = `
       >
         <button
           className="slds-button slds-button_icon slds-button_icon-container slds-button_icon-x-small"
+          onClick={[Function]}
           tabIndex="-1"
           title="Close Chat - Customer"
         >
@@ -5484,6 +5494,7 @@ exports[`Subtabs should render a subtab 1`] = `
   >
     <button
       className="slds-button slds-button_icon slds-button_icon-container slds-button_icon-x-small"
+      onClick={[Function]}
       tabIndex="-1"
       title="Close Subtab Name"
     >
@@ -5557,6 +5568,7 @@ exports[`Subtabs should render a success subtab 1`] = `
   >
     <button
       className="slds-button slds-button_icon slds-button_icon-inverse slds-button_icon-container slds-button_icon-x-small"
+      onClick={[Function]}
       tabIndex="-1"
       title="Close Subtab Name"
     >
@@ -5630,6 +5642,7 @@ exports[`Subtabs should render a warning subtab 1`] = `
   >
     <button
       className="slds-button slds-button_icon slds-button_icon-container slds-button_icon-x-small"
+      onClick={[Function]}
       tabIndex="-1"
       title="Close Subtab Name"
     >
@@ -5703,6 +5716,7 @@ exports[`Subtabs should render an error subtab 1`] = `
   >
     <button
       className="slds-button slds-button_icon slds-button_icon-inverse slds-button_icon-container slds-button_icon-x-small"
+      onClick={[Function]}
       tabIndex="-1"
       title="Close Subtab Name"
     >

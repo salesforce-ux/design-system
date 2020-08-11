@@ -85,6 +85,7 @@ exports[`Base Progress Indicator renders a done base step 1`] = `
 >
   <button
     className="slds-button slds-button_icon slds-progress__marker slds-progress__marker_icon"
+    onClick={[Function]}
     title="Step 1 - Completed"
   >
     <svg
@@ -147,6 +148,7 @@ exports[`Base Progress Indicator renders an error base step 1`] = `
 >
   <button
     className="slds-button slds-button_icon slds-progress__marker slds-progress__marker_icon"
+    onClick={[Function]}
     title="Step 1 - Error"
   >
     <svg

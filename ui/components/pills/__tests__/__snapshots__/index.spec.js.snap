@@ -479,6 +479,7 @@ exports[`Pill renders a pill 1`] = `
   </a>
   <button
     className="slds-button slds-button_icon slds-button_icon slds-pill__remove"
+    onClick={[Function]}
     title="Remove"
   >
     <svg
@@ -518,6 +519,7 @@ exports[`Pill renders a pill in a container - bare (deprecated) 1`] = `
     </a>
     <button
       className="slds-button slds-button_icon slds-button_icon slds-pill__remove"
+      onClick={[Function]}
       title="Remove"
     >
       <svg
@@ -551,6 +553,7 @@ exports[`Pill renders a pill in a container - bare (deprecated) 1`] = `
     </a>
     <button
       className="slds-button slds-button_icon slds-button_icon slds-pill__remove"
+      onClick={[Function]}
       title="Remove"
     >
       <svg
@@ -584,6 +587,7 @@ exports[`Pill renders a pill in a container - bare (deprecated) 1`] = `
     </a>
     <button
       className="slds-button slds-button_icon slds-button_icon slds-pill__remove"
+      onClick={[Function]}
       title="Remove"
     >
       <svg
@@ -624,6 +628,7 @@ exports[`Pill renders a pill in a container 1`] = `
     </a>
     <button
       className="slds-button slds-button_icon slds-button_icon slds-pill__remove"
+      onClick={[Function]}
       title="Remove"
     >
       <svg
@@ -657,6 +662,7 @@ exports[`Pill renders a pill in a container 1`] = `
     </a>
     <button
       className="slds-button slds-button_icon slds-button_icon slds-pill__remove"
+      onClick={[Function]}
       title="Remove"
     >
       <svg
@@ -690,6 +696,7 @@ exports[`Pill renders a pill in a container 1`] = `
     </a>
     <button
       className="slds-button slds-button_icon slds-button_icon slds-pill__remove"
+      onClick={[Function]}
       title="Remove"
     >
       <svg
@@ -730,6 +737,7 @@ exports[`Pill renders a pill that is truncated 1`] = `
     </a>
     <button
       className="slds-button slds-button_icon slds-button_icon slds-pill__remove"
+      onClick={[Function]}
       title="Remove"
     >
       <svg
@@ -781,6 +789,7 @@ exports[`Pill renders a pill with an avatar 1`] = `
   </a>
   <button
     className="slds-button slds-button_icon slds-button_icon slds-pill__remove"
+    onClick={[Function]}
     title="Remove"
   >
     <svg
@@ -839,6 +848,7 @@ exports[`Pill renders a pill with an error 1`] = `
   </a>
   <button
     className="slds-button slds-button_icon slds-button_icon slds-pill__remove"
+    onClick={[Function]}
     title="Remove"
   >
     <svg
@@ -897,6 +907,7 @@ exports[`Pill renders a pill with an icon 1`] = `
   </a>
   <button
     className="slds-button slds-button_icon slds-button_icon slds-pill__remove"
+    onClick={[Function]}
     title="Remove"
   >
     <svg

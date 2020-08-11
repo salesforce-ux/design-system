@@ -1,13 +1,9 @@
 /* eslint-env jest */
 import React from 'react';
-import { Accordion, AccordionSection } from '../base/example';
-import createHelpers from '../../../../jest.helpers';
+import Accordion, { AccordionSection } from '../';
+import Card from '../../cards/';
 
-const referenceId01 = 'accordion-details-01';
-const referenceId02 = 'accordion-details-02';
-const referenceId03 = 'accordion-details-03';
-const referenceId04 = 'accordion-details-04';
-const referenceId05 = 'accordion-details-05';
+import createHelpers from '../../../../jest.helpers';
 
 const { matchesMarkup } = createHelpers(__dirname);
 
@@ -17,21 +13,19 @@ it('renders a base accordion', () =>
       <AccordionSection
         summary="Accordion summary"
         isOpen
-        referenceId={referenceId01}
+        referenceId="referenceId-01"
       >
         Accordion details - A
       </AccordionSection>
       <AccordionSection
         summary="Accordion summary"
-        isOpen={false}
-        referenceId={referenceId02}
+        referenceId="referenceId-02"
       >
         Accordion details - B
       </AccordionSection>
       <AccordionSection
         summary="Accordion summary"
-        isOpen={false}
-        referenceId={referenceId03}
+        referenceId="referenceId-03"
       >
         Accordion details - C
       </AccordionSection>
@@ -44,21 +38,19 @@ it('renders an accordion with section one open', () =>
       <AccordionSection
         summary="Accordion summary"
         isOpen
-        referenceId={referenceId01}
+        referenceId="referenceId-01"
       >
         Accordion details - A
       </AccordionSection>
       <AccordionSection
         summary="Accordion summary"
-        isOpen={false}
-        referenceId={referenceId02}
+        referenceId="referenceId-02"
       >
         Accordion details - B
       </AccordionSection>
       <AccordionSection
         summary="Accordion summary"
-        isOpen={false}
-        referenceId={referenceId03}
+        referenceId="referenceId-03"
       >
         Accordion details - C
       </AccordionSection>
@@ -70,22 +62,20 @@ it('renders an accordion with section two open', () =>
     <Accordion>
       <AccordionSection
         summary="Accordion summary"
-        isOpen={false}
-        referenceId={referenceId01}
+        referenceId="referenceId-01"
       >
         Accordion details - A
       </AccordionSection>
       <AccordionSection
         summary="Accordion summary"
         isOpen
-        referenceId={referenceId02}
+        referenceId="referenceId-02"
       >
         Accordion details - B
       </AccordionSection>
       <AccordionSection
         summary="Accordion summary"
-        isOpen={false}
-        referenceId={referenceId03}
+        referenceId="referenceId-03"
       >
         Accordion details - C
       </AccordionSection>
@@ -97,22 +87,20 @@ it('renders an accordion with section three open', () =>
     <Accordion>
       <AccordionSection
         summary="Accordion summary"
-        isOpen={false}
-        referenceId={referenceId01}
+        referenceId="referenceId-01"
       >
         Accordion details - A
       </AccordionSection>
       <AccordionSection
         summary="Accordion summary"
-        isOpen={false}
-        referenceId={referenceId02}
+        referenceId="referenceId-02"
       >
         Accordion details - B
       </AccordionSection>
       <AccordionSection
         summary="Accordion summary"
         isOpen
-        referenceId={referenceId03}
+        referenceId="referenceId-03"
       >
         Accordion details - C
       </AccordionSection>
@@ -125,21 +113,20 @@ it('renders an accordion with multiple sections open', () =>
       <AccordionSection
         summary="Accordion summary"
         isOpen
-        referenceId={referenceId01}
+        referenceId="referenceId-01"
       >
         Accordion details - A
       </AccordionSection>
       <AccordionSection
         summary="Accordion summary"
-        isOpen={false}
-        referenceId={referenceId02}
+        referenceId="referenceId-02"
       >
         Accordion details - B
       </AccordionSection>
       <AccordionSection
         summary="Accordion summary"
         isOpen
-        referenceId={referenceId03}
+        referenceId="referenceId-03"
       >
         Accordion details - C
       </AccordionSection>
@@ -148,31 +135,29 @@ it('renders an accordion with multiple sections open', () =>
 
 it('renders a styled accordion', () =>
   matchesMarkup(
-    <div className="slds-card">
+    <Card>
       <Accordion>
         <AccordionSection
           summary="Accordion summary"
           isOpen
-          referenceId={referenceId01}
+          referenceId="referenceId-01"
         >
           Accordion details - A
         </AccordionSection>
         <AccordionSection
           summary="Accordion summary"
-          isOpen={false}
-          referenceId={referenceId02}
+          referenceId="referenceId-02"
         >
           Accordion details - B
         </AccordionSection>
         <AccordionSection
           summary="Accordion summary"
-          isOpen={false}
-          referenceId={referenceId03}
+          referenceId="referenceId-03"
         >
           Accordion details - C
         </AccordionSection>
       </Accordion>
-    </div>
+    </Card>
   ));
 
 it('renders a nested accordion', () =>
@@ -181,20 +166,19 @@ it('renders a nested accordion', () =>
       <AccordionSection
         summary="Accordion summary"
         isOpen
-        referenceId={referenceId01}
+        referenceId="referenceId-01"
       >
         <Accordion>
           <AccordionSection
             summary="Nested accordion summary"
             isOpen
-            referenceId={referenceId04}
+            referenceId="referenceId-02"
           >
             Accordion details - A
           </AccordionSection>
           <AccordionSection
             summary="Nested accordion summary"
-            isOpen={false}
-            referenceId={referenceId05}
+            referenceId="referenceId-03"
           >
             Accordion details - B
           </AccordionSection>
@@ -202,15 +186,13 @@ it('renders a nested accordion', () =>
       </AccordionSection>
       <AccordionSection
         summary="Accordion summary"
-        isOpen={false}
-        referenceId={referenceId02}
+        referenceId="referenceId-04"
       >
         Accordion details - B
       </AccordionSection>
       <AccordionSection
         summary="Accordion summary"
-        isOpen={false}
-        referenceId={referenceId03}
+        referenceId="referenceId-05"
       >
         Accordion details - C
       </AccordionSection>
@@ -224,23 +206,21 @@ it('renders an accordion with action overflow', () =>
         summary="Accordion summary"
         hasActionOverflow
         isOpen
-        referenceId={referenceId01}
+        referenceId="referenceId-01"
       >
         Accordion details - A
       </AccordionSection>
       <AccordionSection
         summary="Accordion summary"
         hasActionOverflow
-        isOpen={false}
-        referenceId={referenceId02}
+        referenceId="referenceId-02"
       >
         Accordion details - B
       </AccordionSection>
       <AccordionSection
         summary="Accordion summary"
         hasActionOverflow
-        isOpen={false}
-        referenceId={referenceId03}
+        referenceId="referenceId-03"
       >
         Accordion details - C
       </AccordionSection>

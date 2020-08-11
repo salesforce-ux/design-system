@@ -5318,6 +5318,7 @@ exports[`renders a swatches only color picker 1`] = `
   <button
     aria-haspopup="true"
     className="slds-button slds-button_icon slds-button_icon-border-filled"
+    onClick={[Function]}
     title="Show More"
   >
     <svg
@@ -7454,6 +7455,7 @@ exports[`renders an opened swatches only color picker 1`] = `
     <button
       aria-haspopup="true"
       className="slds-button slds-button_icon slds-button_icon-border-filled"
+      onClick={[Function]}
       title="Show More"
     >
       <svg

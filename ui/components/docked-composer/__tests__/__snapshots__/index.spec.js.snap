@@ -55,6 +55,7 @@ exports[`renders a closed and focused docked composer 1`] = `
       >
         <button
           className="slds-button slds-button_icon slds-button_icon"
+          onClick={[Function]}
           title="Minimize window"
         >
           <svg
@@ -73,6 +74,7 @@ exports[`renders a closed and focused docked composer 1`] = `
         </button>
         <button
           className="slds-button slds-button_icon slds-button_icon"
+          onClick={[Function]}
           title="Expand Composer"
         >
           <svg
@@ -91,6 +93,7 @@ exports[`renders a closed and focused docked composer 1`] = `
         </button>
         <button
           className="slds-button slds-button_icon slds-button_icon"
+          onClick={[Function]}
           title="Close"
         >
           <svg
@@ -193,6 +196,7 @@ exports[`renders a closed docked composer 1`] = `
       >
         <button
           className="slds-button slds-button_icon slds-button_icon"
+          onClick={[Function]}
           title="Minimize window"
         >
           <svg
@@ -211,6 +215,7 @@ exports[`renders a closed docked composer 1`] = `
         </button>
         <button
           className="slds-button slds-button_icon slds-button_icon"
+          onClick={[Function]}
           title="Expand Composer"
         >
           <svg
@@ -229,6 +234,7 @@ exports[`renders a closed docked composer 1`] = `
         </button>
         <button
           className="slds-button slds-button_icon slds-button_icon"
+          onClick={[Function]}
           title="Close"
         >
           <svg
@@ -326,6 +332,7 @@ exports[`renders a docked composer 1`] = `
       >
         <button
           className="slds-button slds-button_icon slds-button_icon"
+          onClick={[Function]}
           title="Minimize window"
         >
           <svg
@@ -344,6 +351,7 @@ exports[`renders a docked composer 1`] = `
         </button>
         <button
           className="slds-button slds-button_icon slds-button_icon"
+          onClick={[Function]}
           title="Expand Composer"
         >
           <svg
@@ -362,6 +370,7 @@ exports[`renders a docked composer 1`] = `
         </button>
         <button
           className="slds-button slds-button_icon slds-button_icon"
+          onClick={[Function]}
           title="Close"
         >
           <svg
@@ -598,6 +607,7 @@ exports[`renders a docked composer with multiple composer overflow 1`] = `
       >
         <button
           className="slds-button slds-button_icon slds-button_icon"
+          onClick={[Function]}
           title="Minimize window"
         >
           <svg
@@ -616,6 +626,7 @@ exports[`renders a docked composer with multiple composer overflow 1`] = `
         </button>
         <button
           className="slds-button slds-button_icon slds-button_icon"
+          onClick={[Function]}
           title="Expand Composer"
         >
           <svg
@@ -634,6 +645,7 @@ exports[`renders a docked composer with multiple composer overflow 1`] = `
         </button>
         <button
           className="slds-button slds-button_icon slds-button_icon"
+          onClick={[Function]}
           title="Close"
         >
           <svg
@@ -744,6 +756,7 @@ exports[`renders a docked composer with popout 1`] = `
             >
               <button
                 className="slds-button slds-button_icon slds-button_icon"
+                onClick={[Function]}
                 title="Minimize window"
               >
                 <svg
@@ -762,6 +775,7 @@ exports[`renders a docked composer with popout 1`] = `
               </button>
               <button
                 className="slds-button slds-button_icon slds-button_icon"
+                onClick={[Function]}
                 title="Expand Composer"
               >
                 <svg
@@ -780,6 +794,7 @@ exports[`renders a docked composer with popout 1`] = `
               </button>
               <button
                 className="slds-button slds-button_icon slds-button_icon"
+                onClick={[Function]}
                 title="Close"
               >
                 <svg
@@ -883,6 +898,7 @@ exports[`renders a docked composer with single composer open 1`] = `
       >
         <button
           className="slds-button slds-button_icon slds-button_icon"
+          onClick={[Function]}
           title="Minimize window"
         >
           <svg
@@ -901,6 +917,7 @@ exports[`renders a docked composer with single composer open 1`] = `
         </button>
         <button
           className="slds-button slds-button_icon slds-button_icon"
+          onClick={[Function]}
           title="Expand Composer"
         >
           <svg
@@ -919,6 +936,7 @@ exports[`renders a docked composer with single composer open 1`] = `
         </button>
         <button
           className="slds-button slds-button_icon slds-button_icon"
+          onClick={[Function]}
           title="Close"
         >
           <svg
@@ -1016,6 +1034,7 @@ exports[`renders a focused docked composer 1`] = `
       >
         <button
           className="slds-button slds-button_icon slds-button_icon"
+          onClick={[Function]}
           title="Minimize window"
         >
           <svg
@@ -1034,6 +1053,7 @@ exports[`renders a focused docked composer 1`] = `
         </button>
         <button
           className="slds-button slds-button_icon slds-button_icon"
+          onClick={[Function]}
           title="Expand Composer"
         >
           <svg
@@ -1052,6 +1072,7 @@ exports[`renders a focused docked composer 1`] = `
         </button>
         <button
           className="slds-button slds-button_icon slds-button_icon"
+          onClick={[Function]}
           title="Close"
         >
           <svg

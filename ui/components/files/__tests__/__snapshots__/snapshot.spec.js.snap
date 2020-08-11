@@ -608,6 +608,7 @@ exports[`File Component renders image with actions and no title 1`] = `
         >
           <button
             className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-button_icon-inverse"
+            onClick={[Function]}
             title="Download"
           >
             <svg
@@ -627,6 +628,7 @@ exports[`File Component renders image with actions and no title 1`] = `
           <button
             aria-haspopup="true"
             className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-button_icon-inverse"
+            onClick={[Function]}
             title="More Actions"
           >
             <svg
@@ -757,6 +759,7 @@ exports[`File Component renders image with title and actions 1`] = `
       >
         <button
           className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small"
+          onClick={[Function]}
           title="Download"
         >
           <svg
@@ -776,6 +779,7 @@ exports[`File Component renders image with title and actions 1`] = `
         <button
           aria-haspopup="true"
           className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small"
+          onClick={[Function]}
           title="More Actions"
         >
           <svg

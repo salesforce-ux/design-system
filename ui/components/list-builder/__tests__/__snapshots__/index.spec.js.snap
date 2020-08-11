@@ -24,6 +24,7 @@ exports[`List Builder Inline Edit renders a default list builder with inline edi
       >
         <button
           className="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse"
+          onClick={[Function]}
           title="Close"
         >
           <svg
@@ -460,6 +461,7 @@ exports[`List Builder Inline Edit renders a default list builder with inline edi
                   >
                     <button
                       className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+                      onClick={[Function]}
                       title="Show More"
                     >
                       <svg
@@ -591,6 +593,7 @@ exports[`List Builder Inline Edit renders a default list builder with inline edi
                   >
                     <button
                       className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+                      onClick={[Function]}
                       title="Show More"
                     >
                       <svg
@@ -689,6 +692,7 @@ exports[`List Builder renders a default list builder 1`] = `
       >
         <button
           className="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse"
+          onClick={[Function]}
           title="Close"
         >
           <svg
@@ -1932,6 +1936,7 @@ exports[`List Builder renders a list builder with default items disabled 1`] = `
       >
         <button
           className="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse"
+          onClick={[Function]}
           title="Close"
         >
           <svg
@@ -3183,6 +3188,7 @@ exports[`List Builder renders a list builder with filtered results 1`] = `
       >
         <button
           className="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse"
+          onClick={[Function]}
           title="Close"
         >
           <svg
@@ -3875,6 +3881,7 @@ exports[`List Builder renders a list builder with hidden header 1`] = `
       >
         <button
           className="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse"
+          onClick={[Function]}
           title="Close"
         >
           <svg
@@ -4659,6 +4666,7 @@ exports[`List Builder renders a list builder with items disabled 1`] = `
       >
         <button
           className="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse"
+          onClick={[Function]}
           title="Close"
         >
           <svg
@@ -5910,6 +5918,7 @@ exports[`List Builder renders a list builder with items selected 1`] = `
       >
         <button
           className="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse"
+          onClick={[Function]}
           title="Close"
         >
           <svg

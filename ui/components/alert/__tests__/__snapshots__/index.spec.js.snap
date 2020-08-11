@@ -37,6 +37,7 @@ exports[`renders a base alert 1`] = `
   >
     <button
       className="slds-button slds-button_icon slds-button_icon-small slds-button_icon-inverse"
+      onClick={[Function]}
       title="Close"
     >
       <svg
@@ -93,6 +94,7 @@ exports[`renders a error alert 1`] = `
   >
     <button
       className="slds-button slds-button_icon slds-button_icon-small slds-button_icon-inverse"
+      onClick={[Function]}
       title="Close"
     >
       <svg
@@ -150,6 +152,7 @@ exports[`renders a offline alert 1`] = `
   >
     <button
       className="slds-button slds-button_icon slds-button_icon-small slds-button_icon-inverse"
+      onClick={[Function]}
       title="Close"
     >
       <svg
@@ -207,6 +210,7 @@ exports[`renders a warning alert 1`] = `
   >
     <button
       className="slds-button slds-button_icon slds-button_icon-small"
+      onClick={[Function]}
       title="Close"
     >
       <svg

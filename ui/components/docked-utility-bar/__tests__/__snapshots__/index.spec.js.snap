@@ -71,6 +71,7 @@ exports[`Base Docked Utility Bar  renders a base docked utility bar with closed 
       >
         <button
           className="slds-button slds-button_icon slds-button_icon"
+          onClick={[Function]}
           title="Close Panel"
         >
           <svg
@@ -151,6 +152,7 @@ exports[`Base Docked Utility Bar  renders a base docked utility bar with opened 
       >
         <button
           className="slds-button slds-button_icon slds-button_icon"
+          onClick={[Function]}
           title="Close Panel"
         >
           <svg
@@ -308,6 +310,7 @@ exports[`Base Docked Utility Bar - Utility Bar Panel renders a default utility b
     >
       <button
         className="slds-button slds-button_icon slds-button_icon"
+        onClick={[Function]}
         title="Close Panel"
       >
         <svg
@@ -375,6 +378,7 @@ exports[`Base Docked Utility Bar - Utility Bar Panel renders an open utility bar
     >
       <button
         className="slds-button slds-button_icon slds-button_icon"
+        onClick={[Function]}
         title="Close Panel"
       >
         <svg

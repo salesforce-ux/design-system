@@ -17,6 +17,7 @@ exports[`Composed Welcome Mat Snapshots renders a deprecated welcome mat 1`] = `
     >
       <button
         className="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse"
+        onClick={[Function]}
         title="Close"
       >
         <svg
@@ -430,6 +431,7 @@ exports[`Composed Welcome Mat Snapshots renders a splash welcome mat 1`] = `
     >
       <button
         className="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse"
+        onClick={[Function]}
         title="Close"
       >
         <svg
@@ -547,6 +549,7 @@ exports[`Composed Welcome Mat Snapshots renders a trailhead welcome mat 1`] = `
     >
       <button
         className="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse"
+        onClick={[Function]}
         title="Close"
       >
         <svg
@@ -1038,6 +1041,7 @@ exports[`Composed Welcome Mat Snapshots renders a welcome mat 1`] = `
     >
       <button
         className="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse"
+        onClick={[Function]}
         title="Close"
       >
         <svg
@@ -1499,6 +1503,7 @@ exports[`Composed Welcome Mat Snapshots renders an info-only welcome mat 1`] = `
     >
       <button
         className="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse"
+        onClick={[Function]}
         title="Close"
       >
         <svg

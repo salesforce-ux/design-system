@@ -1417,6 +1417,7 @@ exports[`render combobox render autocomplete entity combobox with single selecti
           />
           <button
             className="slds-button slds-button_icon slds-input__icon slds-input__icon_right"
+            onClick={[Function]}
             title="Remove selected option"
           >
             <svg
@@ -10627,6 +10628,7 @@ exports[`render deprecated combobox renders an inline listbox combobox with clos
             />
             <button
               className="slds-button slds-button_icon slds-input__icon slds-input__icon_right"
+              onClick={[Function]}
               title="Remove selected option"
             >
               <svg

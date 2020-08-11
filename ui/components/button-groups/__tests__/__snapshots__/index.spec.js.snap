@@ -79,6 +79,7 @@ exports[`renders a button group with overflow open 1`] = `
       <button
         aria-haspopup="true"
         className="slds-button slds-button_icon slds-button_icon-border-filled"
+        onClick={[Function]}
         title="Show More"
       >
         <svg
@@ -196,6 +197,7 @@ exports[`renders a row a button icons spaced out 1`] = `
       <button
         aria-haspopup="true"
         className="slds-button slds-button_icon slds-button_icon-more"
+        onClick={[Function]}
         title="More Options"
       >
         <svg
@@ -231,6 +233,7 @@ exports[`renders a row a button icons spaced out 1`] = `
       <button
         aria-haspopup="true"
         className="slds-button slds-button_icon slds-button_icon-more"
+        onClick={[Function]}
         title="More Options"
       >
         <svg
@@ -262,6 +265,7 @@ exports[`renders a row a button icons spaced out 1`] = `
   >
     <button
       className="slds-button slds-button_icon slds-button_icon-border-filled"
+      onClick={[Function]}
     >
       <svg
         aria-hidden={true}
@@ -283,6 +287,7 @@ exports[`renders a row a button icons spaced out 1`] = `
   >
     <button
       className="slds-button slds-button_icon slds-button_icon-border-filled"
+      onClick={[Function]}
     >
       <svg
         aria-hidden={true}
@@ -308,6 +313,7 @@ exports[`renders a row a button icons spaced out 1`] = `
     >
       <button
         className="slds-button slds-button_icon slds-button_icon-border-filled"
+        onClick={[Function]}
       >
         <svg
           aria-hidden={true}
@@ -325,6 +331,7 @@ exports[`renders a row a button icons spaced out 1`] = `
       </button>
       <button
         className="slds-button slds-button_icon slds-button_icon-border-filled"
+        onClick={[Function]}
       >
         <svg
           aria-hidden={true}
@@ -395,6 +402,7 @@ exports[`renders a single brand button with brand button icon dropdown 1`] = `
     <button
       aria-haspopup="true"
       className="slds-button slds-button_icon slds-button_icon-brand"
+      onClick={[Function]}
       title="More Actions"
     >
       <svg

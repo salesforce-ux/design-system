@@ -19,6 +19,7 @@ exports[`deprecated treegrid renders a deeply nested DeprecatedTreeGrid 1`] = `
         >
           <button
             className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small slds-m-right_x-small slds-shrink-none slds-table_tree__toggle"
+            onClick={[Function]}
             tabIndex="-1"
             title="Expand all rows"
           >
@@ -91,6 +92,7 @@ exports[`deprecated treegrid renders a deeply nested DeprecatedTreeGrid 1`] = `
         <button
           aria-haspopup="true"
           className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+          onClick={[Function]}
           tabIndex="-1"
           title="Show More"
         >
@@ -127,6 +129,7 @@ exports[`deprecated treegrid renders a deeply nested DeprecatedTreeGrid 1`] = `
         <button
           aria-hidden="true"
           className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small slds-is-disabled"
+          onClick={[Function]}
           tabIndex="-1"
           title="Expand Rewis Inc"
         >
@@ -212,6 +215,7 @@ exports[`deprecated treegrid renders a deeply nested DeprecatedTreeGrid 1`] = `
         <button
           aria-haspopup="true"
           className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+          onClick={[Function]}
           tabIndex="-1"
           title="More actions for Rewis Inc"
         >
@@ -247,6 +251,7 @@ exports[`deprecated treegrid renders a deeply nested DeprecatedTreeGrid 1`] = `
         <button
           aria-hidden="true"
           className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small"
+          onClick={[Function]}
           tabIndex="-1"
           title="Collapse Acme Corporation"
         >
@@ -332,6 +337,7 @@ exports[`deprecated treegrid renders a deeply nested DeprecatedTreeGrid 1`] = `
         <button
           aria-haspopup="true"
           className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+          onClick={[Function]}
           tabIndex="-1"
           title="More actions for Acme Corporation"
         >
@@ -367,6 +373,7 @@ exports[`deprecated treegrid renders a deeply nested DeprecatedTreeGrid 1`] = `
         <button
           aria-hidden="true"
           className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small"
+          onClick={[Function]}
           tabIndex="-1"
           title="Collapse Acme Corporation (Bay Area)"
         >
@@ -452,6 +459,7 @@ exports[`deprecated treegrid renders a deeply nested DeprecatedTreeGrid 1`] = `
         <button
           aria-haspopup="true"
           className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+          onClick={[Function]}
           tabIndex="-1"
           title="More actions for Acme Corporation (Bay Area)"
         >
@@ -486,6 +494,7 @@ exports[`deprecated treegrid renders a deeply nested DeprecatedTreeGrid 1`] = `
         <button
           aria-hidden="true"
           className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small slds-is-disabled"
+          onClick={[Function]}
           tabIndex="-1"
           title="Expand Acme Corporation (Oakland)"
         >
@@ -571,6 +580,7 @@ exports[`deprecated treegrid renders a deeply nested DeprecatedTreeGrid 1`] = `
         <button
           aria-haspopup="true"
           className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+          onClick={[Function]}
           tabIndex="-1"
           title="More actions for Acme Corporation (Oakland)"
         >
@@ -605,6 +615,7 @@ exports[`deprecated treegrid renders a deeply nested DeprecatedTreeGrid 1`] = `
         <button
           aria-hidden="true"
           className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small slds-is-disabled"
+          onClick={[Function]}
           tabIndex="-1"
           title="Expand Acme Corporation (San Francisco)"
         >
@@ -690,6 +701,7 @@ exports[`deprecated treegrid renders a deeply nested DeprecatedTreeGrid 1`] = `
         <button
           aria-haspopup="true"
           className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+          onClick={[Function]}
           tabIndex="-1"
           title="More actions for Acme Corporation (San Francisco)"
         >
@@ -725,6 +737,7 @@ exports[`deprecated treegrid renders a deeply nested DeprecatedTreeGrid 1`] = `
         <button
           aria-hidden="true"
           className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small"
+          onClick={[Function]}
           tabIndex="-1"
           title="Collapse Acme Corporation (East)"
         >
@@ -810,6 +823,7 @@ exports[`deprecated treegrid renders a deeply nested DeprecatedTreeGrid 1`] = `
         <button
           aria-haspopup="true"
           className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+          onClick={[Function]}
           tabIndex="-1"
           title="More actions for Acme Corporation (East)"
         >
@@ -844,6 +858,7 @@ exports[`deprecated treegrid renders a deeply nested DeprecatedTreeGrid 1`] = `
         <button
           aria-hidden="true"
           className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small slds-is-disabled"
+          onClick={[Function]}
           tabIndex="-1"
           title="Expand Acme Corporation (NY)"
         >
@@ -929,6 +944,7 @@ exports[`deprecated treegrid renders a deeply nested DeprecatedTreeGrid 1`] = `
         <button
           aria-haspopup="true"
           className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+          onClick={[Function]}
           tabIndex="-1"
           title="More actions for Acme Corporation (NY)"
         >
@@ -964,6 +980,7 @@ exports[`deprecated treegrid renders a deeply nested DeprecatedTreeGrid 1`] = `
         <button
           aria-hidden="true"
           className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small"
+          onClick={[Function]}
           tabIndex="-1"
           title="Collapse Acme Corporation (VA)"
         >
@@ -1049,6 +1066,7 @@ exports[`deprecated treegrid renders a deeply nested DeprecatedTreeGrid 1`] = `
         <button
           aria-haspopup="true"
           className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+          onClick={[Function]}
           tabIndex="-1"
           title="More actions for Acme Corporation (VA)"
         >
@@ -1084,6 +1102,7 @@ exports[`deprecated treegrid renders a deeply nested DeprecatedTreeGrid 1`] = `
         <button
           aria-hidden="true"
           className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small"
+          onClick={[Function]}
           tabIndex="-1"
           title="Collapse Allied Technologies"
         >
@@ -1169,6 +1188,7 @@ exports[`deprecated treegrid renders a deeply nested DeprecatedTreeGrid 1`] = `
         <button
           aria-haspopup="true"
           className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+          onClick={[Function]}
           tabIndex="-1"
           title="More actions for Allied Technologies"
         >
@@ -1203,6 +1223,7 @@ exports[`deprecated treegrid renders a deeply nested DeprecatedTreeGrid 1`] = `
         <button
           aria-hidden="true"
           className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small slds-is-disabled"
+          onClick={[Function]}
           tabIndex="-1"
           title="Expand Allied Technologies (UV)"
         >
@@ -1288,6 +1309,7 @@ exports[`deprecated treegrid renders a deeply nested DeprecatedTreeGrid 1`] = `
         <button
           aria-haspopup="true"
           className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+          onClick={[Function]}
           tabIndex="-1"
           title="More actions for Allied Technologies (UV)"
         >
@@ -1323,6 +1345,7 @@ exports[`deprecated treegrid renders a deeply nested DeprecatedTreeGrid 1`] = `
         <button
           aria-hidden="true"
           className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small"
+          onClick={[Function]}
           tabIndex="-1"
           title="Collapse Rohde Enterprises"
         >
@@ -1408,6 +1431,7 @@ exports[`deprecated treegrid renders a deeply nested DeprecatedTreeGrid 1`] = `
         <button
           aria-haspopup="true"
           className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+          onClick={[Function]}
           tabIndex="-1"
           title="More actions for Rohde Enterprises"
         >
@@ -1442,6 +1466,7 @@ exports[`deprecated treegrid renders a deeply nested DeprecatedTreeGrid 1`] = `
         <button
           aria-hidden="true"
           className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small slds-is-disabled"
+          onClick={[Function]}
           tabIndex="-1"
           title="Expand Rohde Enterprises (UCA)"
         >
@@ -1527,6 +1552,7 @@ exports[`deprecated treegrid renders a deeply nested DeprecatedTreeGrid 1`] = `
         <button
           aria-haspopup="true"
           className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+          onClick={[Function]}
           tabIndex="-1"
           title="More actions for Rohde Enterprises (UCA)"
         >
@@ -1562,6 +1588,7 @@ exports[`deprecated treegrid renders a deeply nested DeprecatedTreeGrid 1`] = `
         <button
           aria-hidden="true"
           className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small"
+          onClick={[Function]}
           tabIndex="-1"
           title="Collapse Tech Labs"
         >
@@ -1647,6 +1674,7 @@ exports[`deprecated treegrid renders a deeply nested DeprecatedTreeGrid 1`] = `
         <button
           aria-haspopup="true"
           className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+          onClick={[Function]}
           tabIndex="-1"
           title="More actions for Tech Labs"
         >
@@ -1681,6 +1709,7 @@ exports[`deprecated treegrid renders a deeply nested DeprecatedTreeGrid 1`] = `
         <button
           aria-hidden="true"
           className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small slds-is-disabled"
+          onClick={[Function]}
           tabIndex="-1"
           title="Expand Opportunity Resources Inc"
         >
@@ -1766,6 +1795,7 @@ exports[`deprecated treegrid renders a deeply nested DeprecatedTreeGrid 1`] = `
         <button
           aria-haspopup="true"
           className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+          onClick={[Function]}
           tabIndex="-1"
           title="More actions for Opportunity Resources Inc"
         >
@@ -1808,6 +1838,7 @@ exports[`deprecated treegrid renders a default DeprecatedTreeGrid 1`] = `
         >
           <button
             className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small slds-m-right_x-small slds-shrink-none slds-table_tree__toggle"
+            onClick={[Function]}
             tabIndex="-1"
             title="Expand all rows"
           >
@@ -1880,6 +1911,7 @@ exports[`deprecated treegrid renders a default DeprecatedTreeGrid 1`] = `
         <button
           aria-haspopup="true"
           className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+          onClick={[Function]}
           tabIndex="-1"
           title="Show More"
         >
@@ -1916,6 +1948,7 @@ exports[`deprecated treegrid renders a default DeprecatedTreeGrid 1`] = `
         <button
           aria-hidden="true"
           className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small slds-is-disabled"
+          onClick={[Function]}
           tabIndex="-1"
           title="Expand Rewis Inc"
         >
@@ -2001,6 +2034,7 @@ exports[`deprecated treegrid renders a default DeprecatedTreeGrid 1`] = `
         <button
           aria-haspopup="true"
           className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+          onClick={[Function]}
           tabIndex="-1"
           title="More actions for Rewis Inc"
         >
@@ -2036,6 +2070,7 @@ exports[`deprecated treegrid renders a default DeprecatedTreeGrid 1`] = `
         <button
           aria-hidden="true"
           className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small"
+          onClick={[Function]}
           tabIndex="-1"
           title="Collapse Acme Corporation"
         >
@@ -2121,6 +2156,7 @@ exports[`deprecated treegrid renders a default DeprecatedTreeGrid 1`] = `
         <button
           aria-haspopup="true"
           className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+          onClick={[Function]}
           tabIndex="-1"
           title="More actions for Acme Corporation"
         >
@@ -2156,6 +2192,7 @@ exports[`deprecated treegrid renders a default DeprecatedTreeGrid 1`] = `
         <button
           aria-hidden="true"
           className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small"
+          onClick={[Function]}
           tabIndex="-1"
           title="Collapse Rohde Enterprises"
         >
@@ -2241,6 +2278,7 @@ exports[`deprecated treegrid renders a default DeprecatedTreeGrid 1`] = `
         <button
           aria-haspopup="true"
           className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+          onClick={[Function]}
           tabIndex="-1"
           title="More actions for Rohde Enterprises"
         >
@@ -2275,6 +2313,7 @@ exports[`deprecated treegrid renders a default DeprecatedTreeGrid 1`] = `
         <button
           aria-hidden="true"
           className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small slds-is-disabled"
+          onClick={[Function]}
           tabIndex="-1"
           title="Expand Cheese Corp"
         >
@@ -2360,6 +2399,7 @@ exports[`deprecated treegrid renders a default DeprecatedTreeGrid 1`] = `
         <button
           aria-haspopup="true"
           className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+          onClick={[Function]}
           tabIndex="-1"
           title="More actions for Cheese Corp"
         >
@@ -2402,6 +2442,7 @@ exports[`deprecated treegrid renders an expanded DeprecatedTreeGrid 1`] = `
         >
           <button
             className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small slds-m-right_x-small slds-shrink-none slds-table_tree__toggle"
+            onClick={[Function]}
             tabIndex="-1"
             title="Expand all rows"
           >
@@ -2474,6 +2515,7 @@ exports[`deprecated treegrid renders an expanded DeprecatedTreeGrid 1`] = `
         <button
           aria-haspopup="true"
           className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+          onClick={[Function]}
           tabIndex="-1"
           title="Show More"
         >
@@ -2510,6 +2552,7 @@ exports[`deprecated treegrid renders an expanded DeprecatedTreeGrid 1`] = `
         <button
           aria-hidden="true"
           className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small slds-is-disabled"
+          onClick={[Function]}
           tabIndex="-1"
           title="Expand Rewis Inc"
         >
@@ -2595,6 +2638,7 @@ exports[`deprecated treegrid renders an expanded DeprecatedTreeGrid 1`] = `
         <button
           aria-haspopup="true"
           className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+          onClick={[Function]}
           tabIndex="-1"
           title="More actions for Rewis Inc"
         >
@@ -2630,6 +2674,7 @@ exports[`deprecated treegrid renders an expanded DeprecatedTreeGrid 1`] = `
         <button
           aria-hidden="true"
           className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small"
+          onClick={[Function]}
           tabIndex="-1"
           title="Collapse Acme Corporation"
         >
@@ -2715,6 +2760,7 @@ exports[`deprecated treegrid renders an expanded DeprecatedTreeGrid 1`] = `
         <button
           aria-haspopup="true"
           className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+          onClick={[Function]}
           tabIndex="-1"
           title="More actions for Acme Corporation"
         >
@@ -2749,6 +2795,7 @@ exports[`deprecated treegrid renders an expanded DeprecatedTreeGrid 1`] = `
         <button
           aria-hidden="true"
           className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small slds-is-disabled"
+          onClick={[Function]}
           tabIndex="-1"
           title="Expand Acme Corporation (Oakland)"
         >
@@ -2834,6 +2881,7 @@ exports[`deprecated treegrid renders an expanded DeprecatedTreeGrid 1`] = `
         <button
           aria-haspopup="true"
           className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+          onClick={[Function]}
           tabIndex="-1"
           title="More actions for Acme Corporation (Oakland)"
         >
@@ -2869,6 +2917,7 @@ exports[`deprecated treegrid renders an expanded DeprecatedTreeGrid 1`] = `
         <button
           aria-hidden="true"
           className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small"
+          onClick={[Function]}
           tabIndex="-1"
           title="Collapse Rohde Enterprises"
         >
@@ -2954,6 +3003,7 @@ exports[`deprecated treegrid renders an expanded DeprecatedTreeGrid 1`] = `
         <button
           aria-haspopup="true"
           className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+          onClick={[Function]}
           tabIndex="-1"
           title="More actions for Rohde Enterprises"
         >
@@ -2988,6 +3038,7 @@ exports[`deprecated treegrid renders an expanded DeprecatedTreeGrid 1`] = `
         <button
           aria-hidden="true"
           className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small slds-is-disabled"
+          onClick={[Function]}
           tabIndex="-1"
           title="Expand Cheese Corp"
         >
@@ -3073,6 +3124,7 @@ exports[`deprecated treegrid renders an expanded DeprecatedTreeGrid 1`] = `
         <button
           aria-haspopup="true"
           className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+          onClick={[Function]}
           tabIndex="-1"
           title="More actions for Cheese Corp"
         >
@@ -3114,6 +3166,7 @@ exports[`treegrid default rows should remove the selection column 1`] = `
       <button
         aria-hidden="true"
         className="slds-button slds-button_icon slds-button_icon-x-small slds-m-right_x-small slds-is-disabled"
+        onClick={[Function]}
         tabIndex="-1"
         title="Expand Rewis Inc"
       >
@@ -3208,6 +3261,7 @@ exports[`treegrid default rows should remove the selection column 1`] = `
       <button
         aria-haspopup="true"
         className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+        onClick={[Function]}
         tabIndex="-1"
         title="More actions for Rewis Inc"
       >
@@ -3243,6 +3297,7 @@ exports[`treegrid default rows should remove the selection column 1`] = `
       <button
         aria-hidden="true"
         className="slds-button slds-button_icon slds-button_icon-x-small slds-m-right_x-small slds-is-disabled"
+        onClick={[Function]}
         tabIndex="-1"
         title="Expand Acme Corporation"
       >
@@ -3337,6 +3392,7 @@ exports[`treegrid default rows should remove the selection column 1`] = `
       <button
         aria-haspopup="true"
         className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+        onClick={[Function]}
         tabIndex="-1"
         title="More actions for Acme Corporation"
       >
@@ -3374,6 +3430,7 @@ exports[`treegrid default rows should remove the selection column 1`] = `
       <button
         aria-hidden="true"
         className="slds-button slds-button_icon slds-button_icon-x-small slds-m-right_x-small"
+        onClick={[Function]}
         tabIndex="-1"
         title="Expand Rohde Enterprises"
       >
@@ -3468,6 +3525,7 @@ exports[`treegrid default rows should remove the selection column 1`] = `
       <button
         aria-haspopup="true"
         className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+        onClick={[Function]}
         tabIndex="-1"
         title="More actions for Rohde Enterprises"
       >
@@ -3503,6 +3561,7 @@ exports[`treegrid default rows should remove the selection column 1`] = `
       <button
         aria-hidden="true"
         className="slds-button slds-button_icon slds-button_icon-x-small slds-m-right_x-small slds-is-disabled"
+        onClick={[Function]}
         tabIndex="-1"
         title="Expand Cheese Corp"
       >
@@ -3597,6 +3656,7 @@ exports[`treegrid default rows should remove the selection column 1`] = `
       <button
         aria-haspopup="true"
         className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+        onClick={[Function]}
         tabIndex="-1"
         title="More actions for Cheese Corp"
       >
@@ -3673,6 +3733,7 @@ exports[`treegrid default rows should render with children 1`] = `
       <button
         aria-hidden="true"
         className="slds-button slds-button_icon slds-button_icon-x-small slds-m-right_x-small slds-is-disabled"
+        onClick={[Function]}
         tabIndex="-1"
         title="Expand Rewis Inc"
       >
@@ -3767,6 +3828,7 @@ exports[`treegrid default rows should render with children 1`] = `
       <button
         aria-haspopup="true"
         className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+        onClick={[Function]}
         tabIndex="-1"
         title="More actions for Rewis Inc"
       >
@@ -3838,6 +3900,7 @@ exports[`treegrid default rows should render with children 1`] = `
       <button
         aria-hidden="true"
         className="slds-button slds-button_icon slds-button_icon-x-small slds-m-right_x-small slds-is-disabled"
+        onClick={[Function]}
         tabIndex="-1"
         title="Expand Acme Corporation"
       >
@@ -3932,6 +3995,7 @@ exports[`treegrid default rows should render with children 1`] = `
       <button
         aria-haspopup="true"
         className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+        onClick={[Function]}
         tabIndex="-1"
         title="More actions for Acme Corporation"
       >
@@ -4005,6 +4069,7 @@ exports[`treegrid default rows should render with children 1`] = `
       <button
         aria-hidden="true"
         className="slds-button slds-button_icon slds-button_icon-x-small slds-m-right_x-small"
+        onClick={[Function]}
         tabIndex="-1"
         title="Expand Rohde Enterprises"
       >
@@ -4099,6 +4164,7 @@ exports[`treegrid default rows should render with children 1`] = `
       <button
         aria-haspopup="true"
         className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+        onClick={[Function]}
         tabIndex="-1"
         title="More actions for Rohde Enterprises"
       >
@@ -4170,6 +4236,7 @@ exports[`treegrid default rows should render with children 1`] = `
       <button
         aria-hidden="true"
         className="slds-button slds-button_icon slds-button_icon-x-small slds-m-right_x-small slds-is-disabled"
+        onClick={[Function]}
         tabIndex="-1"
         title="Expand Cheese Corp"
       >
@@ -4264,6 +4331,7 @@ exports[`treegrid default rows should render with children 1`] = `
       <button
         aria-haspopup="true"
         className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+        onClick={[Function]}
         tabIndex="-1"
         title="More actions for Cheese Corp"
       >
@@ -4340,6 +4408,7 @@ exports[`treegrid default rows should show a selected row 1`] = `
       <button
         aria-hidden="true"
         className="slds-button slds-button_icon slds-button_icon-x-small slds-m-right_x-small slds-is-disabled"
+        onClick={[Function]}
         tabIndex="-1"
         title="Expand Rewis Inc"
       >
@@ -4434,6 +4503,7 @@ exports[`treegrid default rows should show a selected row 1`] = `
       <button
         aria-haspopup="true"
         className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+        onClick={[Function]}
         tabIndex="-1"
         title="More actions for Rewis Inc"
       >
@@ -4505,6 +4575,7 @@ exports[`treegrid default rows should show a selected row 1`] = `
       <button
         aria-hidden="true"
         className="slds-button slds-button_icon slds-button_icon-x-small slds-m-right_x-small slds-is-disabled"
+        onClick={[Function]}
         tabIndex="-1"
         title="Expand Acme Corporation"
       >
@@ -4599,6 +4670,7 @@ exports[`treegrid default rows should show a selected row 1`] = `
       <button
         aria-haspopup="true"
         className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+        onClick={[Function]}
         tabIndex="-1"
         title="More actions for Acme Corporation"
       >
@@ -4672,6 +4744,7 @@ exports[`treegrid default rows should show a selected row 1`] = `
       <button
         aria-hidden="true"
         className="slds-button slds-button_icon slds-button_icon-x-small slds-m-right_x-small"
+        onClick={[Function]}
         tabIndex="-1"
         title="Expand Rohde Enterprises"
       >
@@ -4766,6 +4839,7 @@ exports[`treegrid default rows should show a selected row 1`] = `
       <button
         aria-haspopup="true"
         className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+        onClick={[Function]}
         tabIndex="-1"
         title="More actions for Rohde Enterprises"
       >
@@ -4837,6 +4911,7 @@ exports[`treegrid default rows should show a selected row 1`] = `
       <button
         aria-hidden="true"
         className="slds-button slds-button_icon slds-button_icon-x-small slds-m-right_x-small slds-is-disabled"
+        onClick={[Function]}
         tabIndex="-1"
         title="Expand Cheese Corp"
       >
@@ -4931,6 +5006,7 @@ exports[`treegrid default rows should show a selected row 1`] = `
       <button
         aria-haspopup="true"
         className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+        onClick={[Function]}
         tabIndex="-1"
         title="More actions for Cheese Corp"
       >
@@ -5007,6 +5083,7 @@ exports[`treegrid default rows should show expanded row 1`] = `
       <button
         aria-hidden="true"
         className="slds-button slds-button_icon slds-button_icon-x-small slds-m-right_x-small slds-is-disabled"
+        onClick={[Function]}
         tabIndex="-1"
         title="Expand Rewis Inc"
       >
@@ -5101,6 +5178,7 @@ exports[`treegrid default rows should show expanded row 1`] = `
       <button
         aria-haspopup="true"
         className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+        onClick={[Function]}
         tabIndex="-1"
         title="More actions for Rewis Inc"
       >
@@ -5173,6 +5251,7 @@ exports[`treegrid default rows should show expanded row 1`] = `
       <button
         aria-hidden="true"
         className="slds-button slds-button_icon slds-button_icon-x-small slds-m-right_x-small"
+        onClick={[Function]}
         tabIndex="-1"
         title="Collapse Acme Corporation"
       >
@@ -5267,6 +5346,7 @@ exports[`treegrid default rows should show expanded row 1`] = `
       <button
         aria-haspopup="true"
         className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+        onClick={[Function]}
         tabIndex="-1"
         title="More actions for Acme Corporation"
       >
@@ -5340,6 +5420,7 @@ exports[`treegrid default rows should show expanded row 1`] = `
       <button
         aria-hidden="true"
         className="slds-button slds-button_icon slds-button_icon-x-small slds-m-right_x-small"
+        onClick={[Function]}
         tabIndex="-1"
         title="Expand Rohde Enterprises"
       >
@@ -5434,6 +5515,7 @@ exports[`treegrid default rows should show expanded row 1`] = `
       <button
         aria-haspopup="true"
         className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+        onClick={[Function]}
         tabIndex="-1"
         title="More actions for Rohde Enterprises"
       >
@@ -5505,6 +5587,7 @@ exports[`treegrid default rows should show expanded row 1`] = `
       <button
         aria-hidden="true"
         className="slds-button slds-button_icon slds-button_icon-x-small slds-m-right_x-small slds-is-disabled"
+        onClick={[Function]}
         tabIndex="-1"
         title="Expand Cheese Corp"
       >
@@ -5599,6 +5682,7 @@ exports[`treegrid default rows should show expanded row 1`] = `
       <button
         aria-haspopup="true"
         className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+        onClick={[Function]}
         tabIndex="-1"
         title="More actions for Cheese Corp"
       >
@@ -5637,6 +5721,7 @@ exports[`treegrid headless row should hide the selection column 1`] = `
     <button
       aria-hidden="true"
       className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small slds-is-disabled"
+      onClick={[Function]}
       tabIndex="-1"
       title="Expand foo"
     >
@@ -5678,6 +5763,7 @@ exports[`treegrid headless row should hide the selection column 1`] = `
     <button
       aria-haspopup="true"
       className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+      onClick={[Function]}
       tabIndex="-1"
       title="More actions for foo"
     >
@@ -5750,6 +5836,7 @@ exports[`treegrid headless row should render 1`] = `
     <button
       aria-hidden="true"
       className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small slds-is-disabled"
+      onClick={[Function]}
       tabIndex="-1"
       title="Expand foo"
     >
@@ -5791,6 +5878,7 @@ exports[`treegrid headless row should render 1`] = `
     <button
       aria-haspopup="true"
       className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+      onClick={[Function]}
       tabIndex="-1"
       title="More actions for foo"
     >
@@ -5864,6 +5952,7 @@ exports[`treegrid headless row should set expanded to false 1`] = `
     <button
       aria-hidden="true"
       className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small"
+      onClick={[Function]}
       tabIndex="-1"
       title="Expand foo"
     >
@@ -5905,6 +5994,7 @@ exports[`treegrid headless row should set expanded to false 1`] = `
     <button
       aria-haspopup="true"
       className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+      onClick={[Function]}
       tabIndex="-1"
       title="More actions for foo"
     >
@@ -5978,6 +6068,7 @@ exports[`treegrid headless row should set expanded to true 1`] = `
     <button
       aria-hidden="true"
       className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small"
+      onClick={[Function]}
       tabIndex="-1"
       title="Collapse foo"
     >
@@ -6019,6 +6110,7 @@ exports[`treegrid headless row should set expanded to true 1`] = `
     <button
       aria-haspopup="true"
       className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+      onClick={[Function]}
       tabIndex="-1"
       title="More actions for foo"
     >
@@ -6093,6 +6185,7 @@ exports[`treegrid headless row should set selected to false 1`] = `
     <button
       aria-hidden="true"
       className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small slds-is-disabled"
+      onClick={[Function]}
       tabIndex="-1"
       title="Expand foo"
     >
@@ -6134,6 +6227,7 @@ exports[`treegrid headless row should set selected to false 1`] = `
     <button
       aria-haspopup="true"
       className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+      onClick={[Function]}
       tabIndex="-1"
       title="More actions for foo"
     >
@@ -6208,6 +6302,7 @@ exports[`treegrid headless row should set selected to true and check the box 1`]
     <button
       aria-hidden="true"
       className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small slds-is-disabled"
+      onClick={[Function]}
       tabIndex="-1"
       title="Expand foo"
     >
@@ -6249,6 +6344,7 @@ exports[`treegrid headless row should set selected to true and check the box 1`]
     <button
       aria-haspopup="true"
       className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+      onClick={[Function]}
       tabIndex="-1"
       title="More actions for foo"
     >
@@ -6288,6 +6384,7 @@ exports[`treegrid headless rows should remove the selection column 1`] = `
       <button
         aria-hidden="true"
         className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small slds-is-disabled"
+        onClick={[Function]}
         tabIndex="-1"
         title="Expand Rewis Inc"
       >
@@ -6329,6 +6426,7 @@ exports[`treegrid headless rows should remove the selection column 1`] = `
       <button
         aria-haspopup="true"
         className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+        onClick={[Function]}
         tabIndex="-1"
         title="More actions for Rewis Inc"
       >
@@ -6364,6 +6462,7 @@ exports[`treegrid headless rows should remove the selection column 1`] = `
       <button
         aria-hidden="true"
         className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small slds-is-disabled"
+        onClick={[Function]}
         tabIndex="-1"
         title="Expand Acme Corporation"
       >
@@ -6405,6 +6504,7 @@ exports[`treegrid headless rows should remove the selection column 1`] = `
       <button
         aria-haspopup="true"
         className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+        onClick={[Function]}
         tabIndex="-1"
         title="More actions for Acme Corporation"
       >
@@ -6441,6 +6541,7 @@ exports[`treegrid headless rows should remove the selection column 1`] = `
       <button
         aria-hidden="true"
         className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small"
+        onClick={[Function]}
         tabIndex="-1"
         title="Expand Rohde Enterprises"
       >
@@ -6482,6 +6583,7 @@ exports[`treegrid headless rows should remove the selection column 1`] = `
       <button
         aria-haspopup="true"
         className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+        onClick={[Function]}
         tabIndex="-1"
         title="More actions for Rohde Enterprises"
       >
@@ -6517,6 +6619,7 @@ exports[`treegrid headless rows should remove the selection column 1`] = `
       <button
         aria-hidden="true"
         className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small slds-is-disabled"
+        onClick={[Function]}
         tabIndex="-1"
         title="Expand Cheese Corp"
       >
@@ -6558,6 +6661,7 @@ exports[`treegrid headless rows should remove the selection column 1`] = `
       <button
         aria-haspopup="true"
         className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+        onClick={[Function]}
         tabIndex="-1"
         title="More actions for Cheese Corp"
       >
@@ -6634,6 +6738,7 @@ exports[`treegrid headless rows should render 1`] = `
       <button
         aria-hidden="true"
         className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small slds-is-disabled"
+        onClick={[Function]}
         tabIndex="-1"
         title="Expand Rewis Inc"
       >
@@ -6675,6 +6780,7 @@ exports[`treegrid headless rows should render 1`] = `
       <button
         aria-haspopup="true"
         className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+        onClick={[Function]}
         tabIndex="-1"
         title="More actions for Rewis Inc"
       >
@@ -6746,6 +6852,7 @@ exports[`treegrid headless rows should render 1`] = `
       <button
         aria-hidden="true"
         className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small slds-is-disabled"
+        onClick={[Function]}
         tabIndex="-1"
         title="Expand Acme Corporation"
       >
@@ -6787,6 +6894,7 @@ exports[`treegrid headless rows should render 1`] = `
       <button
         aria-haspopup="true"
         className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+        onClick={[Function]}
         tabIndex="-1"
         title="More actions for Acme Corporation"
       >
@@ -6859,6 +6967,7 @@ exports[`treegrid headless rows should render 1`] = `
       <button
         aria-hidden="true"
         className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small"
+        onClick={[Function]}
         tabIndex="-1"
         title="Expand Rohde Enterprises"
       >
@@ -6900,6 +7009,7 @@ exports[`treegrid headless rows should render 1`] = `
       <button
         aria-haspopup="true"
         className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+        onClick={[Function]}
         tabIndex="-1"
         title="More actions for Rohde Enterprises"
       >
@@ -6971,6 +7081,7 @@ exports[`treegrid headless rows should render 1`] = `
       <button
         aria-hidden="true"
         className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small slds-is-disabled"
+        onClick={[Function]}
         tabIndex="-1"
         title="Expand Cheese Corp"
       >
@@ -7012,6 +7123,7 @@ exports[`treegrid headless rows should render 1`] = `
       <button
         aria-haspopup="true"
         className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+        onClick={[Function]}
         tabIndex="-1"
         title="More actions for Cheese Corp"
       >
@@ -7088,6 +7200,7 @@ exports[`treegrid headless rows should show a selected row 1`] = `
       <button
         aria-hidden="true"
         className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small slds-is-disabled"
+        onClick={[Function]}
         tabIndex="-1"
         title="Expand Rewis Inc"
       >
@@ -7129,6 +7242,7 @@ exports[`treegrid headless rows should show a selected row 1`] = `
       <button
         aria-haspopup="true"
         className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+        onClick={[Function]}
         tabIndex="-1"
         title="More actions for Rewis Inc"
       >
@@ -7200,6 +7314,7 @@ exports[`treegrid headless rows should show a selected row 1`] = `
       <button
         aria-hidden="true"
         className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small slds-is-disabled"
+        onClick={[Function]}
         tabIndex="-1"
         title="Expand Acme Corporation"
       >
@@ -7241,6 +7356,7 @@ exports[`treegrid headless rows should show a selected row 1`] = `
       <button
         aria-haspopup="true"
         className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+        onClick={[Function]}
         tabIndex="-1"
         title="More actions for Acme Corporation"
       >
@@ -7313,6 +7429,7 @@ exports[`treegrid headless rows should show a selected row 1`] = `
       <button
         aria-hidden="true"
         className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small"
+        onClick={[Function]}
         tabIndex="-1"
         title="Expand Rohde Enterprises"
       >
@@ -7354,6 +7471,7 @@ exports[`treegrid headless rows should show a selected row 1`] = `
       <button
         aria-haspopup="true"
         className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+        onClick={[Function]}
         tabIndex="-1"
         title="More actions for Rohde Enterprises"
       >
@@ -7425,6 +7543,7 @@ exports[`treegrid headless rows should show a selected row 1`] = `
       <button
         aria-hidden="true"
         className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small slds-is-disabled"
+        onClick={[Function]}
         tabIndex="-1"
         title="Expand Cheese Corp"
       >
@@ -7466,6 +7585,7 @@ exports[`treegrid headless rows should show a selected row 1`] = `
       <button
         aria-haspopup="true"
         className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+        onClick={[Function]}
         tabIndex="-1"
         title="More actions for Cheese Corp"
       >
@@ -7542,6 +7662,7 @@ exports[`treegrid headless rows should show expanded row 1`] = `
       <button
         aria-hidden="true"
         className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small slds-is-disabled"
+        onClick={[Function]}
         tabIndex="-1"
         title="Expand Rewis Inc"
       >
@@ -7583,6 +7704,7 @@ exports[`treegrid headless rows should show expanded row 1`] = `
       <button
         aria-haspopup="true"
         className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+        onClick={[Function]}
         tabIndex="-1"
         title="More actions for Rewis Inc"
       >
@@ -7655,6 +7777,7 @@ exports[`treegrid headless rows should show expanded row 1`] = `
       <button
         aria-hidden="true"
         className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small"
+        onClick={[Function]}
         tabIndex="-1"
         title="Collapse Acme Corporation"
       >
@@ -7696,6 +7819,7 @@ exports[`treegrid headless rows should show expanded row 1`] = `
       <button
         aria-haspopup="true"
         className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+        onClick={[Function]}
         tabIndex="-1"
         title="More actions for Acme Corporation"
       >
@@ -7768,6 +7892,7 @@ exports[`treegrid headless rows should show expanded row 1`] = `
       <button
         aria-hidden="true"
         className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small"
+        onClick={[Function]}
         tabIndex="-1"
         title="Expand Rohde Enterprises"
       >
@@ -7809,6 +7934,7 @@ exports[`treegrid headless rows should show expanded row 1`] = `
       <button
         aria-haspopup="true"
         className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+        onClick={[Function]}
         tabIndex="-1"
         title="More actions for Rohde Enterprises"
       >
@@ -7880,6 +8006,7 @@ exports[`treegrid headless rows should show expanded row 1`] = `
       <button
         aria-hidden="true"
         className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small slds-is-disabled"
+        onClick={[Function]}
         tabIndex="-1"
         title="Expand Cheese Corp"
       >
@@ -7921,6 +8048,7 @@ exports[`treegrid headless rows should show expanded row 1`] = `
       <button
         aria-haspopup="true"
         className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+        onClick={[Function]}
         tabIndex="-1"
         title="More actions for Cheese Corp"
       >
@@ -7959,6 +8087,7 @@ exports[`treegrid row should remove the selection column 1`] = `
     <button
       aria-hidden="true"
       className="slds-button slds-button_icon slds-button_icon-x-small slds-m-right_x-small slds-is-disabled"
+      onClick={[Function]}
       tabIndex="-1"
       title="Expand Rewis Inc"
     >
@@ -8053,6 +8182,7 @@ exports[`treegrid row should remove the selection column 1`] = `
     <button
       aria-haspopup="true"
       className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+      onClick={[Function]}
       tabIndex="-1"
       title="More actions for Rewis Inc"
     >
@@ -8125,6 +8255,7 @@ exports[`treegrid row should render 1`] = `
     <button
       aria-hidden="true"
       className="slds-button slds-button_icon slds-button_icon-x-small slds-m-right_x-small slds-is-disabled"
+      onClick={[Function]}
       tabIndex="-1"
       title="Expand Rewis Inc"
     >
@@ -8219,6 +8350,7 @@ exports[`treegrid row should render 1`] = `
     <button
       aria-haspopup="true"
       className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+      onClick={[Function]}
       tabIndex="-1"
       title="More actions for Rewis Inc"
     >
@@ -8293,6 +8425,7 @@ exports[`treegrid row should select the row and check the box 1`] = `
     <button
       aria-hidden="true"
       className="slds-button slds-button_icon slds-button_icon-x-small slds-m-right_x-small slds-is-disabled"
+      onClick={[Function]}
       tabIndex="-1"
       title="Expand Rewis Inc"
     >
@@ -8387,6 +8520,7 @@ exports[`treegrid row should select the row and check the box 1`] = `
     <button
       aria-haspopup="true"
       className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+      onClick={[Function]}
       tabIndex="-1"
       title="More actions for Rewis Inc"
     >
@@ -8460,6 +8594,7 @@ exports[`treegrid row should set aria-expanded on row  1`] = `
     <button
       aria-hidden="true"
       className="slds-button slds-button_icon slds-button_icon-x-small slds-m-right_x-small"
+      onClick={[Function]}
       tabIndex="-1"
       title="Collapse Rewis Inc"
     >
@@ -8554,6 +8689,7 @@ exports[`treegrid row should set aria-expanded on row  1`] = `
     <button
       aria-haspopup="true"
       className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+      onClick={[Function]}
       tabIndex="-1"
       title="More actions for Rewis Inc"
     >
@@ -8627,6 +8763,7 @@ exports[`treegrid row should set aria-expanded to false on row  1`] = `
     <button
       aria-hidden="true"
       className="slds-button slds-button_icon slds-button_icon-x-small slds-m-right_x-small"
+      onClick={[Function]}
       tabIndex="-1"
       title="Expand Rewis Inc"
     >
@@ -8721,6 +8858,7 @@ exports[`treegrid row should set aria-expanded to false on row  1`] = `
     <button
       aria-haspopup="true"
       className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+      onClick={[Function]}
       tabIndex="-1"
       title="More actions for Rewis Inc"
     >
@@ -8795,6 +8933,7 @@ exports[`treegrid row should set selection of the row to false 1`] = `
     <button
       aria-hidden="true"
       className="slds-button slds-button_icon slds-button_icon-x-small slds-m-right_x-small slds-is-disabled"
+      onClick={[Function]}
       tabIndex="-1"
       title="Expand Rewis Inc"
     >
@@ -8889,6 +9028,7 @@ exports[`treegrid row should set selection of the row to false 1`] = `
     <button
       aria-haspopup="true"
       className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+      onClick={[Function]}
       tabIndex="-1"
       title="More actions for Rewis Inc"
     >
@@ -8961,6 +9101,7 @@ exports[`treegrid row should set tabindex on the row 1`] = `
     <button
       aria-hidden="true"
       className="slds-button slds-button_icon slds-button_icon-x-small slds-m-right_x-small slds-is-disabled"
+      onClick={[Function]}
       tabIndex="-1"
       title="Expand Rewis Inc"
     >
@@ -9055,6 +9196,7 @@ exports[`treegrid row should set tabindex on the row 1`] = `
     <button
       aria-haspopup="true"
       className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+      onClick={[Function]}
       tabIndex="-1"
       title="More actions for Rewis Inc"
     >

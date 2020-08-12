@@ -41,31 +41,31 @@
  */
 .slds-button_dual-stateful.slds-is-pressed {
   /**
-   * Styling API uses button-brand identifier instead of button_dual-stateful
+   * Styling Hooks uses button-brand identifier instead of button_dual-stateful
    * because dual stateful is a brand variant underneath the hood and therefore
    * should pick up any styling customizations made to the brand variant.
    */
   @include button-shape(brand);
 
-  // @todo re-evaluate styling api reassignment
+  // @todo re-evaluate Styling Hooks reassignment
   background-color: var(--sds-c-button-brand-color-background, $brand-accessible);
 
-  // @todo re-evaluate styling api reassignment
+  // @todo re-evaluate Styling Hooks reassignment
   border-color: var(--sds-c-button-brand-color-border, $brand-accessible);
 
-  // @todo re-evaluate styling api reassignment
+  // @todo re-evaluate Styling Hooks reassignment
   color: var(--sds-c-button-brand-color-text, $color-text-brand-primary);
 
   // Since dual-stateful has a high specificity, we have to be explicit with pseudo-class
   &:focus,
   &:hover {
-    // @todo re-evaluate styling api reassignment
+    // @todo re-evaluate Styling Hooks reassignment
     background-color: var(--sds-c-button-brand-color-background-hover, $brand-accessible-active);
 
-    // @todo re-evaluate styling api reassignment
+    // @todo re-evaluate Styling Hooks reassignment
     border-color: var(--sds-c-button-brand-color-border-hover, $brand-accessible-active);
 
-    // @todo re-evaluate styling api reassignment
+    // @todo re-evaluate Styling Hooks reassignment
     color: var(--sds-c-button-brand-color-text-hover, $color-text-brand-primary);
   }
 

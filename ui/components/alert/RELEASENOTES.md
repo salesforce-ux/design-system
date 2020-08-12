@@ -7,7 +7,8 @@
 ## 2.13.0
 
 ### Added
-- Added the brand expression specific Styling API
+
+- Added the brand expression specific Styling Hooks
 
 ## 2.8.0
 

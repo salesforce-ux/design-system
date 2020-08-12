@@ -16,8 +16,8 @@ import { StandardIcon } from '../../icons/standard/example';
 /// ////////////////////////////////////////
 
 export default (
-  <PillContainer>
-    <ListboxPills>
+  <PillContainer type="listbox" id="listbox-pill-default">
+    <ListboxPills id="listbox-pill-default">
       <ListboxPillsItem>
         <ListboxPill tabIndex="0" />
       </ListboxPillsItem>
@@ -33,8 +33,8 @@ export let examples = [
     id: 'listbox-pill-with-icon',
     label: 'With icon',
     element: (
-      <PillContainer>
-        <ListboxPills>
+      <PillContainer type="listbox" id="listbox-pill-with-icon">
+        <ListboxPills id="listbox-pill-with-icon">
           <ListboxPillsItem>
             <ListboxPill tabIndex="0">
               <StandardIcon
@@ -62,8 +62,8 @@ export let examples = [
     id: 'listbox-pill-with-avatar',
     label: 'With avatar',
     element: (
-      <PillContainer>
-        <ListboxPills>
+      <PillContainer type="listbox" id="listbox-pill-with-avatar">
+        <ListboxPills id="listbox-pill-with-avatar">
           <ListboxPillsItem>
             <ListboxPill tabIndex="0">
               <Avatar className="slds-avatar_x-small slds-pill__icon_container">
@@ -94,8 +94,8 @@ export let examples = [
     id: 'listbox-pill-bare',
     label: 'Bare',
     element: (
-      <PillContainer>
-        <ListboxPills>
+      <PillContainer type="listbox" id="listbox-pills-bare">
+        <ListboxPills id="listbox-pills-bare">
           <ListboxPillsItem>
             <ListboxPill className="slds-pill_bare" tabIndex="0" />
           </ListboxPillsItem>
@@ -104,6 +104,25 @@ export let examples = [
           </ListboxPillsItem>
         </ListboxPills>
       </PillContainer>
+    )
+  },
+  {
+    id: 'listbox-pill-group',
+    label: 'Grouped',
+    element: (
+      <div>
+        <div class="slds-combobox_container" />
+        <PillContainer variant="listbox-group">
+          <ListboxPills>
+            <ListboxPillsItem>
+              <ListboxPill tabIndex="0" />
+            </ListboxPillsItem>
+            <ListboxPillsItem>
+              <ListboxPill />
+            </ListboxPillsItem>
+          </ListboxPills>
+        </PillContainer>
+      </div>
     )
   }
 ];

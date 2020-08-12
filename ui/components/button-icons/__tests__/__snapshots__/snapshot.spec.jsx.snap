@@ -3,6 +3,7 @@
 exports[`bare button icon renders a button icon 1`] = `
 <button
   className="slds-button slds-button_icon"
+  onClick={[Function]}
 >
   <svg
     aria-hidden={true}
@@ -24,6 +25,7 @@ exports[`bare button icon renders a disabled button icon 1`] = `
 <button
   className="slds-button slds-button_icon"
   disabled={true}
+  onClick={[Function]}
 >
   <svg
     aria-hidden={true}
@@ -44,6 +46,7 @@ exports[`bare button icon renders a disabled button icon 1`] = `
 exports[`brand button icon renders a button icon 1`] = `
 <button
   className="slds-button slds-button_icon slds-button_icon-brand"
+  onClick={[Function]}
 >
   <svg
     aria-hidden={true}
@@ -65,6 +68,7 @@ exports[`brand button icon renders a disabled button icon 1`] = `
 <button
   className="slds-button slds-button_icon slds-button_icon-brand"
   disabled={true}
+  onClick={[Function]}
 >
   <svg
     aria-hidden={true}
@@ -85,6 +89,7 @@ exports[`brand button icon renders a disabled button icon 1`] = `
 exports[`button icon on inversed background renders a button icon 1`] = `
 <button
   className="slds-button slds-button_icon slds-button_icon-inverse"
+  onClick={[Function]}
 >
   <svg
     aria-hidden={true}
@@ -106,6 +111,7 @@ exports[`button icon on inversed background renders a disabled button icon 1`] =
 <button
   className="slds-button slds-button_icon slds-button_icon-inverse"
   disabled={true}
+  onClick={[Function]}
 >
   <svg
     aria-hidden={true}
@@ -126,6 +132,7 @@ exports[`button icon on inversed background renders a disabled button icon 1`] =
 exports[`button icon with bordered filled container renders a button icon 1`] = `
 <button
   className="slds-button slds-button_icon slds-button_icon-border-filled"
+  onClick={[Function]}
 >
   <svg
     aria-hidden={true}
@@ -147,6 +154,7 @@ exports[`button icon with bordered filled container renders a disabled button ic
 <button
   className="slds-button slds-button_icon slds-button_icon-border-filled"
   disabled={true}
+  onClick={[Function]}
 >
   <svg
     aria-hidden={true}
@@ -167,6 +175,7 @@ exports[`button icon with bordered filled container renders a disabled button ic
 exports[`button icon with bordered transparent container renders a button icon 1`] = `
 <button
   className="slds-button slds-button_icon slds-button_icon-border"
+  onClick={[Function]}
 >
   <svg
     aria-hidden={true}
@@ -188,6 +197,7 @@ exports[`button icon with bordered transparent container renders a disabled butt
 <button
   className="slds-button slds-button_icon slds-button_icon-border"
   disabled={true}
+  onClick={[Function]}
 >
   <svg
     aria-hidden={true}
@@ -208,6 +218,7 @@ exports[`button icon with bordered transparent container renders a disabled butt
 exports[`button icon with container renders a button icon 1`] = `
 <button
   className="slds-button slds-button_icon slds-button_icon-container"
+  onClick={[Function]}
 >
   <svg
     aria-hidden={true}
@@ -229,6 +240,7 @@ exports[`button icon with container renders a disabled button icon 1`] = `
 <button
   className="slds-button slds-button_icon slds-button_icon-container"
   disabled={true}
+  onClick={[Function]}
 >
   <svg
     aria-hidden={true}
@@ -250,6 +262,7 @@ exports[`button menu icon for dropdowns renders a button menu icon 1`] = `
 <button
   aria-haspopup="true"
   className="slds-button slds-button_icon slds-button_icon-more"
+  onClick={[Function]}
 >
   <svg
     aria-hidden={true}
@@ -279,6 +292,7 @@ exports[`button menu icon for dropdowns renders a button menu icon on inversed b
 <button
   aria-haspopup="true"
   className="slds-button slds-button_icon slds-button_icon-container-more slds-button_icon-inverse"
+  onClick={[Function]}
 >
   <svg
     aria-hidden={true}
@@ -309,6 +323,7 @@ exports[`stateful button icon renders a disabled stateful button icon 1`] = `
   aria-pressed="true"
   className="slds-button slds-button_icon slds-button_icon-border-filled"
   disabled={true}
+  onClick={[Function]}
   title="Pin"
 >
   <svg
@@ -332,6 +347,7 @@ exports[`stateful button icon renders a selected disabled stateful button icon 1
   aria-pressed="true"
   className="slds-button slds-button_icon slds-is-selected slds-button_icon-border-filled"
   disabled={true}
+  onClick={[Function]}
   title="Pin"
 >
   <svg
@@ -355,6 +371,7 @@ exports[`stateful button icon renders a selected stateful button icon 1`] = `
   aria-pressed="true"
   className="slds-button slds-button_icon slds-is-selected slds-button_icon-border-filled"
   disabled={false}
+  onClick={[Function]}
   title="Like"
 >
   <svg
@@ -378,6 +395,7 @@ exports[`stateful button icon renders the stateful button icon 1`] = `
   aria-pressed="false"
   className="slds-button slds-button_icon slds-button_icon-border-filled"
   disabled={false}
+  onClick={[Function]}
   title="Like"
 >
   <svg

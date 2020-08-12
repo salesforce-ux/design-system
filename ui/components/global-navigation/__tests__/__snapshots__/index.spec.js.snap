@@ -49,6 +49,7 @@ exports[`ContextTab should render a ContextTab with a set icon icon 1`] = `
     <button
       aria-haspopup="true"
       className="slds-button slds-button_icon slds-button_icon-current-color slds-button_icon-container slds-button_icon-x-small"
+      onClick={[Function]}
       tabIndex="-1"
       title="Actions for Tab Name"
     >
@@ -189,6 +190,7 @@ exports[`ContextTab should render a ContextTab with a set icon icon 1`] = `
   >
     <button
       className="slds-button slds-button_icon slds-button_icon-current-color slds-button_icon-container slds-button_icon-x-small"
+      onClick={[Function]}
       tabIndex="-1"
       title="Close Tab Name"
     >
@@ -265,6 +267,7 @@ exports[`ContextTab should render a ContextTab with an unread indicator 1`] = `
     <button
       aria-haspopup="true"
       className="slds-button slds-button_icon slds-button_icon-current-color slds-button_icon-container slds-button_icon-x-small"
+      onClick={[Function]}
       tabIndex="-1"
       title="Actions for Tab Name"
     >
@@ -405,6 +408,7 @@ exports[`ContextTab should render a ContextTab with an unread indicator 1`] = `
   >
     <button
       className="slds-button slds-button_icon slds-button_icon-current-color slds-button_icon-container slds-button_icon-x-small"
+      onClick={[Function]}
       tabIndex="-1"
       title="Close Tab Name"
     >
@@ -483,6 +487,7 @@ exports[`ContextTab should render a ContextTab with an unsaved indicator 1`] = `
     <button
       aria-haspopup="true"
       className="slds-button slds-button_icon slds-button_icon-current-color slds-button_icon-container slds-button_icon-x-small"
+      onClick={[Function]}
       tabIndex="-1"
       title="Actions for Tab Name"
     >
@@ -623,6 +628,7 @@ exports[`ContextTab should render a ContextTab with an unsaved indicator 1`] = `
   >
     <button
       className="slds-button slds-button_icon slds-button_icon-current-color slds-button_icon-container slds-button_icon-x-small"
+      onClick={[Function]}
       tabIndex="-1"
       title="Close Tab Name"
     >
@@ -697,6 +703,7 @@ exports[`ContextTab should render a ContextTab with status level 1`] = `
     <button
       aria-haspopup="true"
       className="slds-button slds-button_icon slds-button_icon-inverse slds-button_icon-container slds-button_icon-x-small"
+      onClick={[Function]}
       tabIndex="-1"
       title="Actions for Tab Name"
     >
@@ -837,6 +844,7 @@ exports[`ContextTab should render a ContextTab with status level 1`] = `
   >
     <button
       className="slds-button slds-button_icon slds-button_icon-inverse slds-button_icon-container slds-button_icon-x-small"
+      onClick={[Function]}
       tabIndex="-1"
       title="Close Tab Name"
     >
@@ -889,6 +897,7 @@ exports[`ContextTab should render a ContextTab without an icon 1`] = `
     <button
       aria-haspopup="true"
       className="slds-button slds-button_icon slds-button_icon-current-color slds-button_icon-container slds-button_icon-x-small"
+      onClick={[Function]}
       tabIndex="-1"
       title="Actions for Tab Name"
     >
@@ -1029,6 +1038,7 @@ exports[`ContextTab should render a ContextTab without an icon 1`] = `
   >
     <button
       className="slds-button slds-button_icon slds-button_icon-current-color slds-button_icon-container slds-button_icon-x-small"
+      onClick={[Function]}
       tabIndex="-1"
       title="Close Tab Name"
     >
@@ -1099,6 +1109,7 @@ exports[`ContextTab should render a default ContextTab 1`] = `
     <button
       aria-haspopup="true"
       className="slds-button slds-button_icon slds-button_icon-current-color slds-button_icon-container slds-button_icon-x-small"
+      onClick={[Function]}
       tabIndex="-1"
       title="Actions for Tab Name"
     >
@@ -1239,6 +1250,7 @@ exports[`ContextTab should render a default ContextTab 1`] = `
   >
     <button
       className="slds-button slds-button_icon slds-button_icon-current-color slds-button_icon-container slds-button_icon-x-small"
+      onClick={[Function]}
       tabIndex="-1"
       title="Close Tab Name"
     >
@@ -1309,6 +1321,7 @@ exports[`ContextTab should render an active ContextTab 1`] = `
     <button
       aria-haspopup="true"
       className="slds-button slds-button_icon slds-button_icon-current-color slds-button_icon-container slds-button_icon-x-small"
+      onClick={[Function]}
       tabIndex="0"
       title="Actions for Tab Name"
     >
@@ -1449,6 +1462,7 @@ exports[`ContextTab should render an active ContextTab 1`] = `
   >
     <button
       className="slds-button slds-button_icon slds-button_icon-current-color slds-button_icon-container slds-button_icon-x-small"
+      onClick={[Function]}
       tabIndex="0"
       title="Close Tab Name"
     >
@@ -1937,6 +1951,7 @@ exports[`Navigation Tab Bar renders a context tab 1`] = `
     <button
       aria-haspopup="true"
       className="slds-button slds-button_icon slds-button_icon-current-color slds-button_icon-container slds-button_icon-x-small"
+      onClick={[Function]}
       tabIndex="-1"
       title="Actions for Tab Item 1"
     >
@@ -2077,6 +2092,7 @@ exports[`Navigation Tab Bar renders a context tab 1`] = `
   >
     <button
       className="slds-button slds-button_icon slds-button_icon-current-color slds-button_icon-container slds-button_icon-x-small"
+      onClick={[Function]}
       tabIndex="-1"
       title="Close Tab Item 1"
     >
@@ -2303,6 +2319,7 @@ exports[`Navigation Tab Bar renders an unread context tab 1`] = `
     <button
       aria-haspopup="true"
       className="slds-button slds-button_icon slds-button_icon-current-color slds-button_icon-container slds-button_icon-x-small"
+      onClick={[Function]}
       tabIndex="-1"
       title="Actions for Tab Item 1"
     >
@@ -2443,6 +2460,7 @@ exports[`Navigation Tab Bar renders an unread context tab 1`] = `
   >
     <button
       className="slds-button slds-button_icon slds-button_icon-current-color slds-button_icon-container slds-button_icon-x-small"
+      onClick={[Function]}
       tabIndex="-1"
       title="Close Tab Item 1"
     >
@@ -2521,6 +2539,7 @@ exports[`Navigation Tab Bar renders an unsaved context tab 1`] = `
     <button
       aria-haspopup="true"
       className="slds-button slds-button_icon slds-button_icon-current-color slds-button_icon-container slds-button_icon-x-small"
+      onClick={[Function]}
       tabIndex="-1"
       title="Actions for Tab Item 1"
     >
@@ -2661,6 +2680,7 @@ exports[`Navigation Tab Bar renders an unsaved context tab 1`] = `
   >
     <button
       className="slds-button slds-button_icon slds-button_icon-current-color slds-button_icon-container slds-button_icon-x-small"
+      onClick={[Function]}
       tabIndex="-1"
       title="Close Tab Item 1"
     >
@@ -2939,6 +2959,7 @@ exports[`renders a global-navigation with sub-tabs 1`] = `
           <button
             aria-haspopup="true"
             className="slds-button slds-button_icon slds-button_icon-container slds-button_icon-x-small"
+            onClick={[Function]}
             title="Open object switcher menu"
           >
             <svg
@@ -3076,6 +3097,7 @@ exports[`renders a global-navigation with sub-tabs 1`] = `
         >
           <button
             className="slds-button slds-button_icon slds-button_icon-container slds-button_icon-small"
+            onClick={[Function]}
             title="Open a New Tab"
           >
             <svg
@@ -3153,6 +3175,7 @@ exports[`renders a global-navigation with sub-tabs 1`] = `
             <button
               aria-haspopup="true"
               className="slds-button slds-button_icon slds-button_icon-current-color slds-button_icon-container slds-button_icon-x-small"
+              onClick={[Function]}
               tabIndex="0"
               title="Actions for Home"
             >
@@ -3293,6 +3316,7 @@ exports[`renders a global-navigation with sub-tabs 1`] = `
           >
             <button
               className="slds-button slds-button_icon slds-button_icon-current-color slds-button_icon-container slds-button_icon-x-small"
+              onClick={[Function]}
               tabIndex="0"
               title="Close Home"
             >
@@ -3360,6 +3384,7 @@ exports[`renders a global-navigation with sub-tabs 1`] = `
             <button
               aria-haspopup="true"
               className="slds-button slds-button_icon slds-button_icon-current-color slds-button_icon-container slds-button_icon-x-small"
+              onClick={[Function]}
               tabIndex="-1"
               title="Actions for Tab Item 1"
             >
@@ -3500,6 +3525,7 @@ exports[`renders a global-navigation with sub-tabs 1`] = `
           >
             <button
               className="slds-button slds-button_icon slds-button_icon-current-color slds-button_icon-container slds-button_icon-x-small"
+              onClick={[Function]}
               tabIndex="-1"
               title="Close Tab Item 1"
             >
@@ -3567,6 +3593,7 @@ exports[`renders a global-navigation with sub-tabs 1`] = `
             <button
               aria-haspopup="true"
               className="slds-button slds-button_icon slds-button_icon-current-color slds-button_icon-container slds-button_icon-x-small"
+              onClick={[Function]}
               tabIndex="-1"
               title="Actions for Tab Item 2"
             >
@@ -3707,6 +3734,7 @@ exports[`renders a global-navigation with sub-tabs 1`] = `
           >
             <button
               className="slds-button slds-button_icon slds-button_icon-current-color slds-button_icon-container slds-button_icon-x-small"
+              onClick={[Function]}
               tabIndex="-1"
               title="Close Tab Item 2"
             >
@@ -3789,6 +3817,7 @@ exports[`renders a global-navigation with sub-tabs 1`] = `
           >
             <button
               className="slds-button slds-button_icon slds-button_icon-container slds-button_icon-x-small"
+              onClick={[Function]}
               tabIndex="0"
               title="Close 00071938"
             >
@@ -3855,6 +3884,7 @@ exports[`renders a global-navigation with sub-tabs 1`] = `
           >
             <button
               className="slds-button slds-button_icon slds-button_icon-container slds-button_icon-x-small"
+              onClick={[Function]}
               tabIndex="-1"
               title="Close Chat - Customer"
             >
@@ -4006,6 +4036,7 @@ exports[`renders an overflowed global-navigation with dropdown, unread, and unsa
           <button
             aria-haspopup="true"
             className="slds-button slds-button_icon slds-button_icon-container slds-button_icon-x-small"
+            onClick={[Function]}
             title="Open object switcher menu"
           >
             <svg
@@ -4143,6 +4174,7 @@ exports[`renders an overflowed global-navigation with dropdown, unread, and unsa
         >
           <button
             className="slds-button slds-button_icon slds-button_icon-container slds-button_icon-small"
+            onClick={[Function]}
             title="Open a New Tab"
           >
             <svg
@@ -4220,6 +4252,7 @@ exports[`renders an overflowed global-navigation with dropdown, unread, and unsa
             <button
               aria-haspopup="true"
               className="slds-button slds-button_icon slds-button_icon-current-color slds-button_icon-container slds-button_icon-x-small"
+              onClick={[Function]}
               tabIndex="0"
               title="Actions for Home"
             >
@@ -4360,6 +4393,7 @@ exports[`renders an overflowed global-navigation with dropdown, unread, and unsa
           >
             <button
               className="slds-button slds-button_icon slds-button_icon-current-color slds-button_icon-container slds-button_icon-x-small"
+              onClick={[Function]}
               tabIndex="0"
               title="Close Home"
             >
@@ -4427,6 +4461,7 @@ exports[`renders an overflowed global-navigation with dropdown, unread, and unsa
             <button
               aria-haspopup="true"
               className="slds-button slds-button_icon slds-button_icon-current-color slds-button_icon-container slds-button_icon-x-small"
+              onClick={[Function]}
               tabIndex="-1"
               title="Actions for Tab Item 1"
             >
@@ -4567,6 +4602,7 @@ exports[`renders an overflowed global-navigation with dropdown, unread, and unsa
           >
             <button
               className="slds-button slds-button_icon slds-button_icon-current-color slds-button_icon-container slds-button_icon-x-small"
+              onClick={[Function]}
               tabIndex="-1"
               title="Close Tab Item 1"
             >
@@ -4634,6 +4670,7 @@ exports[`renders an overflowed global-navigation with dropdown, unread, and unsa
             <button
               aria-haspopup="true"
               className="slds-button slds-button_icon slds-button_icon-current-color slds-button_icon-container slds-button_icon-x-small"
+              onClick={[Function]}
               tabIndex="-1"
               title="Actions for Tab Item 2"
             >
@@ -4774,6 +4811,7 @@ exports[`renders an overflowed global-navigation with dropdown, unread, and unsa
           >
             <button
               className="slds-button slds-button_icon slds-button_icon-current-color slds-button_icon-container slds-button_icon-x-small"
+              onClick={[Function]}
               tabIndex="-1"
               title="Close Tab Item 2"
             >

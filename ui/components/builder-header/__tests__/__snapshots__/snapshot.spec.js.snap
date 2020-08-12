@@ -440,6 +440,7 @@ exports[`render builder header render base builder header with toolbar 1`] = `
       >
         <button
           className="slds-button slds-button_icon slds-button_icon-border"
+          onClick={[Function]}
           tabIndex="0"
           title="Undo"
         >
@@ -459,6 +460,7 @@ exports[`render builder header render base builder header with toolbar 1`] = `
         </button>
         <button
           className="slds-button slds-button_icon slds-button_icon-border"
+          onClick={[Function]}
           tabIndex="-1"
           title="Redo"
         >
@@ -487,6 +489,7 @@ exports[`render builder header render base builder header with toolbar 1`] = `
       >
         <button
           className="slds-button slds-button_icon slds-button_icon-border"
+          onClick={[Function]}
           tabIndex="-1"
           title="Cut"
         >
@@ -506,6 +509,7 @@ exports[`render builder header render base builder header with toolbar 1`] = `
         </button>
         <button
           className="slds-button slds-button_icon slds-button_icon-border"
+          onClick={[Function]}
           tabIndex="-1"
           title="Copy"
         >
@@ -525,6 +529,7 @@ exports[`render builder header render base builder header with toolbar 1`] = `
         </button>
         <button
           className="slds-button slds-button_icon slds-button_icon-border"
+          onClick={[Function]}
           tabIndex="-1"
           title="Paste"
         >

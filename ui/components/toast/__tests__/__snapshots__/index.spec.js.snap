@@ -33,6 +33,7 @@ exports[`Toast renders a default toast for info 1`] = `
     >
       <button
         className="slds-button slds-button_icon slds-button_icon-inverse"
+        onClick={[Function]}
         title="Close"
       >
         <svg
@@ -100,6 +101,7 @@ exports[`Toast renders a relative toast 1`] = `
     >
       <button
         className="slds-button slds-button_icon slds-button_icon-inverse"
+        onClick={[Function]}
         title="Close"
       >
         <svg
@@ -154,6 +156,7 @@ exports[`Toast renders a success toast 1`] = `
     >
       <button
         className="slds-button slds-button_icon slds-button_icon-inverse"
+        onClick={[Function]}
         title="Close"
       >
         <svg
@@ -221,6 +224,7 @@ exports[`Toast renders a toast with an icon 1`] = `
     >
       <button
         className="slds-button slds-button_icon slds-button_icon-inverse"
+        onClick={[Function]}
         title="Close"
       >
         <svg
@@ -275,6 +279,7 @@ exports[`Toast renders a warning toast 1`] = `
     >
       <button
         className="slds-button slds-button_icon slds-button_icon-inverse"
+        onClick={[Function]}
         title="Close"
       >
         <svg
@@ -329,6 +334,7 @@ exports[`Toast renders an error toast 1`] = `
     >
       <button
         className="slds-button slds-button_icon slds-button_icon-inverse"
+        onClick={[Function]}
         title="Close"
       >
         <svg
@@ -383,6 +389,7 @@ exports[`Toast renders an info toast 1`] = `
     >
       <button
         className="slds-button slds-button_icon slds-button_icon-inverse"
+        onClick={[Function]}
         title="Close"
       >
         <svg

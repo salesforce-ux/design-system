@@ -7,6 +7,7 @@ exports[`Base Menu renders a base menu to the bottom 1`] = `
   <button
     aria-haspopup="true"
     className="slds-button slds-button_icon slds-button_icon-border-filled"
+    onClick={[Function]}
     title="Show More"
   >
     <svg
@@ -115,6 +116,7 @@ exports[`Base Menu renders a base menu to the left 1`] = `
   <button
     aria-haspopup="true"
     className="slds-button slds-button_icon slds-button_icon-border-filled"
+    onClick={[Function]}
     title="Show More"
   >
     <svg
@@ -223,6 +225,7 @@ exports[`Base Menu renders a base menu to the right 1`] = `
   <button
     aria-haspopup="true"
     className="slds-button slds-button_icon slds-button_icon-border-filled"
+    onClick={[Function]}
     title="Show More"
   >
     <svg
@@ -331,6 +334,7 @@ exports[`Menu with submenu renders a closed submenu 1`] = `
   <button
     aria-haspopup="true"
     className="slds-button slds-button_icon slds-button_icon-border-filled"
+    onClick={[Function]}
     title="Show More"
   >
     <svg
@@ -509,6 +513,7 @@ exports[`Menu with submenu renders an open submenu 1`] = `
   <button
     aria-haspopup="true"
     className="slds-button slds-button_icon slds-button_icon-border-filled"
+    onClick={[Function]}
     title="Show More"
   >
     <svg

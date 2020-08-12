@@ -4,6 +4,12 @@
 
 <!-- ## [Unreleased] -->
 
+## 2.13.0
+
+## Fixed
+
+- Addressed issue where button icons in progress items were misaligned for mobile/touch
+
 ## 2.11.7
 
 ### Added

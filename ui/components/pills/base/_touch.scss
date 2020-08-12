@@ -1,6 +1,6 @@
 .slds-pill {
   @include border-box-line-height($height-tappable-small);
-  padding: 0 $spacing-small;
+  padding: 0 $spacing-x-small;
 
   + .slds-pill {
     margin-left: $spacing-xx-small;
@@ -20,7 +20,7 @@
   &__icon_container {
 
     ~ .slds-pill__action {
-      padding-left: calc(#{$square-icon-x-small-boundary} + #{$spacing-small} + #{$spacing-xx-small});
+      padding-left: calc(#{$square-icon-x-small-boundary} + #{$spacing-x-small});
     }
   }
 }
@@ -28,17 +28,31 @@
 .slds-pill_link,
 .slds-pill--link {
 
+  padding: 0;
+
   .slds-pill__icon_container {
-    left: $spacing-small;
+    left: $spacing-xx-small;
   }
 
   .slds-pill__remove {
-    right: $spacing-small;
+    right: 0;
+    width: $square-tappable-small;
+    height: $square-tappable-small;
+    margin: 0;
+    border: 0;
+  }
+
+  &__icon,
+  &__icon_container {
+
+    ~ .slds-pill__action {
+      padding-left: calc(#{$square-icon-x-small-boundary} + #{$spacing-x-small});
+    }
   }
 }
 
 .slds-pill__action {
   padding: 0;
-  padding-left: $spacing-small;
-  padding-right: calc(#{$square-icon-xx-small-boundary} + #{$spacing-small} + 2px);
+  padding-left: $spacing-x-small;
+  padding-right: $square-tappable-small;
 }

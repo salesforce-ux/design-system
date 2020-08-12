@@ -679,11 +679,11 @@ props:
     value: '#F2CF5B'
   WEBCART:
     value: '#04844B'
-  SCHEDULING_CONSTRAINTS:
+  SCHEDULING_CONSTRAINT:
     value: '#EB7092'
   SCHEDULING_POLICY:
     value: '#EB7092'
-  SHIFT_PREFERENCES:
+  SHIFT_PREFERENCE:
     value: '#EB7092'
   SHIFT_TEMPLATE:
     value: '#EB7092'
@@ -753,5 +753,5 @@ props:
     value: '#04844B'
   VARIATION_PRODUCTS:
     value: '#04844b'
-  WARRANTY_TEAM:
+  WARRANTY_TERM:
     value: '#0079BC'

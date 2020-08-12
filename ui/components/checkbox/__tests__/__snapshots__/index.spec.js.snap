@@ -183,6 +183,7 @@ exports[`Checkbox renders checkbox with help text icon 1`] = `
   >
     <button
       className="slds-button slds-button_icon"
+      onClick={[Function]}
     >
       <svg
         aria-hidden={true}

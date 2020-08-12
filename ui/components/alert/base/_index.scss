@@ -43,12 +43,12 @@
     }
 
     &:active {
-      // @todo re-evaluate styling api reassignment
+      // @todo re-evaluate Styling Hooks reassignment
       color: var(--sds-c-alert-color-text-active, $color-text-link-inverse-active);
     }
 
     &[disabled] {
-      // @todo re-evaluate styling api reassignment
+      // @todo re-evaluate Styling Hooks reassignment
       color: var(--sds-c-alert-color-text-disabled, $color-text-link-inverse-disabled);
     }
   }

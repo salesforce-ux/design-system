@@ -204,6 +204,7 @@ exports[`Page Header renders the page header title with a list view switcher 1`]
           <button
             aria-haspopup="true"
             className="slds-button slds-button_icon slds-button_icon-small"
+            onClick={[Function]}
             title="Switch list view"
           >
             <svg
@@ -592,6 +593,7 @@ exports[`Renders a page header renders deprecated object home page header 1`] = 
           <button
             aria-haspopup="true"
             className="slds-button slds-button_icon slds-button_icon-border-filled"
+            onClick={[Function]}
             title="More Actions"
           >
             <svg
@@ -633,6 +635,7 @@ exports[`Renders a page header renders deprecated object home page header 1`] = 
         <button
           aria-haspopup="true"
           className="slds-button slds-button_icon slds-button_icon-more"
+          onClick={[Function]}
           title="List View Controls"
         >
           <svg
@@ -664,6 +667,7 @@ exports[`Renders a page header renders deprecated object home page header 1`] = 
         <button
           aria-haspopup="true"
           className="slds-button slds-button_icon slds-button_icon-more"
+          onClick={[Function]}
           title="Change view"
         >
           <svg
@@ -691,6 +695,7 @@ exports[`Renders a page header renders deprecated object home page header 1`] = 
       </div>
       <button
         className="slds-button slds-button_icon slds-m-left_xx-small slds-button_icon-border-filled"
+        onClick={[Function]}
         title="Edit List"
       >
         <svg
@@ -709,6 +714,7 @@ exports[`Renders a page header renders deprecated object home page header 1`] = 
       </button>
       <button
         className="slds-button slds-button_icon slds-m-left_xx-small slds-button_icon-border-filled"
+        onClick={[Function]}
         title="Refresh"
       >
         <svg
@@ -731,6 +737,7 @@ exports[`Renders a page header renders deprecated object home page header 1`] = 
       >
         <button
           className="slds-button slds-button_icon slds-button_icon-border-filled"
+          onClick={[Function]}
           title="Charts"
         >
           <svg
@@ -749,6 +756,7 @@ exports[`Renders a page header renders deprecated object home page header 1`] = 
         </button>
         <button
           className="slds-button slds-button_icon slds-button_icon-border-filled"
+          onClick={[Function]}
           title="Filters"
         >
           <svg
@@ -898,6 +906,7 @@ exports[`Renders a page header renders deprecated record home page header 1`] = 
           <button
             aria-haspopup="true"
             className="slds-button slds-button_icon slds-button_icon-border-filled"
+            onClick={[Function]}
             title="More Actions"
           >
             <svg
@@ -948,6 +957,7 @@ exports[`Renders a page header renders deprecated record home page header 1`] = 
         <button
           aria-haspopup="true"
           className="slds-button slds-button_icon slds-button_icon"
+          onClick={[Function]}
           title="More Actions"
         >
           <svg
@@ -1067,6 +1077,7 @@ exports[`Renders a page header renders deprecated related list home page header 
           <button
             aria-haspopup="true"
             className="slds-button slds-button_icon slds-button_icon-border-filled"
+            onClick={[Function]}
             title="More Actions"
           >
             <svg
@@ -1108,6 +1119,7 @@ exports[`Renders a page header renders deprecated related list home page header 
         <button
           aria-haspopup="true"
           className="slds-button slds-button_icon slds-button_icon-more"
+          onClick={[Function]}
           title="Change view"
         >
           <svg
@@ -1139,6 +1151,7 @@ exports[`Renders a page header renders deprecated related list home page header 
       >
         <button
           className="slds-button slds-button_icon slds-button_icon-border"
+          onClick={[Function]}
           title="Chart"
         >
           <svg
@@ -1157,6 +1170,7 @@ exports[`Renders a page header renders deprecated related list home page header 
         </button>
         <button
           className="slds-button slds-button_icon slds-button_icon-border"
+          onClick={[Function]}
           title="Filter List"
         >
           <svg
@@ -1179,6 +1193,7 @@ exports[`Renders a page header renders deprecated related list home page header 
           <button
             aria-haspopup="true"
             className="slds-button slds-button_icon slds-button_icon-more"
+            onClick={[Function]}
             title="Sort"
           >
             <svg
@@ -1338,6 +1353,7 @@ exports[`Renders a page header renders deprecated vertical record home page head
             <button
               aria-haspopup="true"
               className="slds-button slds-button_icon slds-button_icon-border-filled"
+              onClick={[Function]}
               title="More Actions"
             >
               <svg
@@ -1553,6 +1569,7 @@ exports[`Renders a page header renders object home page header 1`] = `
                 <button
                   aria-haspopup="true"
                   className="slds-button slds-button_icon slds-button_icon-small"
+                  onClick={[Function]}
                   title="Switch list view"
                 >
                   <svg
@@ -1601,6 +1618,7 @@ exports[`Renders a page header renders object home page header 1`] = `
                 <button
                   aria-haspopup="true"
                   className="slds-button slds-button_icon slds-button_icon-border-filled"
+                  onClick={[Function]}
                   title="More Actions"
                 >
                   <svg
@@ -1651,6 +1669,7 @@ exports[`Renders a page header renders object home page header 1`] = `
             <button
               aria-haspopup="true"
               className="slds-button slds-button_icon slds-button_icon-more"
+              onClick={[Function]}
               title="List View Controls"
             >
               <svg
@@ -1686,6 +1705,7 @@ exports[`Renders a page header renders object home page header 1`] = `
             <button
               aria-haspopup="true"
               className="slds-button slds-button_icon slds-button_icon-more"
+              onClick={[Function]}
               title="Change view"
             >
               <svg
@@ -1717,6 +1737,7 @@ exports[`Renders a page header renders object home page header 1`] = `
         >
           <button
             className="slds-button slds-button_icon slds-button_icon-border-filled"
+            onClick={[Function]}
             title="Edit List"
           >
             <svg
@@ -1739,6 +1760,7 @@ exports[`Renders a page header renders object home page header 1`] = `
         >
           <button
             className="slds-button slds-button_icon slds-button_icon-border-filled"
+            onClick={[Function]}
             title="Refresh List"
           >
             <svg
@@ -1765,6 +1787,7 @@ exports[`Renders a page header renders object home page header 1`] = `
             <li>
               <button
                 className="slds-button slds-button_icon slds-button_icon-border-filled"
+                onClick={[Function]}
                 title="Charts"
               >
                 <svg
@@ -1785,6 +1808,7 @@ exports[`Renders a page header renders object home page header 1`] = `
             <li>
               <button
                 className="slds-button slds-button_icon slds-button_icon-border-filled"
+                onClick={[Function]}
                 title="Filters"
               >
                 <svg
@@ -1953,6 +1977,7 @@ exports[`Renders a page header renders record home page header 1`] = `
                 <button
                   aria-haspopup="true"
                   className="slds-button slds-button_icon slds-button_icon-border-filled"
+                  onClick={[Function]}
                   title="More Actions"
                 >
                   <svg
@@ -2015,6 +2040,7 @@ exports[`Renders a page header renders record home page header 1`] = `
               <button
                 aria-haspopup="true"
                 className="slds-button slds-button_icon slds-button_icon"
+                onClick={[Function]}
                 title="More Actions"
               >
                 <svg
@@ -2170,6 +2196,7 @@ exports[`Renders a page header renders related list home page header 1`] = `
                 <button
                   aria-haspopup="true"
                   className="slds-button slds-button_icon slds-button_icon-border-filled"
+                  onClick={[Function]}
                   title="More Actions"
                 >
                   <svg
@@ -2220,6 +2247,7 @@ exports[`Renders a page header renders related list home page header 1`] = `
             <button
               aria-haspopup="true"
               className="slds-button slds-button_icon slds-button_icon-more"
+              onClick={[Function]}
               title="Change view"
             >
               <svg
@@ -2255,6 +2283,7 @@ exports[`Renders a page header renders related list home page header 1`] = `
             <li>
               <button
                 className="slds-button slds-button_icon slds-button_icon-border"
+                onClick={[Function]}
                 title="Chart"
               >
                 <svg
@@ -2275,6 +2304,7 @@ exports[`Renders a page header renders related list home page header 1`] = `
             <li>
               <button
                 className="slds-button slds-button_icon slds-button_icon-border"
+                onClick={[Function]}
                 title="Filter List"
               >
                 <svg
@@ -2299,6 +2329,7 @@ exports[`Renders a page header renders related list home page header 1`] = `
                 <button
                   aria-haspopup="true"
                   className="slds-button slds-button_icon slds-button_icon-more"
+                  onClick={[Function]}
                   title="Sort List"
                 >
                   <svg
@@ -2459,6 +2490,7 @@ exports[`Renders a page header renders vertical record home page header 1`] = `
           <button
             aria-haspopup="true"
             className="slds-button slds-button_icon slds-button_icon-border-filled"
+            onClick={[Function]}
             title="More Actions"
           >
             <svg
@@ -2515,6 +2547,7 @@ exports[`Renders a page header renders vertical record home page header 1`] = `
             <button
               aria-haspopup="true"
               className="slds-button slds-button_icon slds-button_icon"
+              onClick={[Function]}
               title="More Actions"
             >
               <svg

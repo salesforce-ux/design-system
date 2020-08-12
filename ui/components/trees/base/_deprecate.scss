@@ -19,6 +19,22 @@
   }
 
   /**
+  * @name item-disabled
+  * @summary When a branch doesn't have children, apply slds-is-disabled to the button icon
+  * @selector .slds-is-disabled
+  * @restrict .slds-tree__item button
+  * @modifier
+  * @group interactions
+  * @deprecated
+  */
+  @include deprecate('4.0.0', '.slds-is-disabled is deprecated in .slds-tree__item, use .slds-is-hidden instead') {
+
+    .slds-tree__item .slds-is-disabled {
+      visibility: hidden;
+    }
+  }
+
+  /**
    * @name item-selected
    * @summary Selected state for a tree item
    * @selector .slds-is-selected

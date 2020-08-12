@@ -32,27 +32,18 @@ export const TreeItem = props => {
       <ButtonIcon
         aria-hidden="true"
         assistiveText={`Expand ${props.itemLabel}`}
-        className={classNames(
-          'slds-m-right_x-small',
-          (!props.isBranch || props.isDisabled) && 'slds-is-disabled'
-        )}
+        className={classNames('slds-m-right_x-small', (!props.isBranch || props.isDisabled) && 'slds-hidden')}
         iconClassName="slds-button__icon_small"
         symbol="chevronright"
         tabIndex="-1"
         title={`Expand ${props.itemLabel}`}
       />
       <span className="slds-has-flexi-truncate">
-        <span
-          className="slds-tree__item-label slds-truncate"
-          title={props.itemLabel}
-        >
+        <span className="slds-tree__item-label slds-truncate" title={props.itemLabel}>
           {renderLabel(props.itemLabel)}
         </span>
         {props.metaTextLabel && (
-          <span
-            className="slds-tree__item-meta slds-truncate"
-            title={props.metaTextLabel}
-          >
+          <span className="slds-tree__item-meta slds-truncate" title={props.metaTextLabel}>
             <span className="slds-assistive-text">:</span>
             {renderLabel(props.metaTextLabel)}
           </span>
@@ -88,24 +79,15 @@ export class TreeListItem extends Component {
   }
 
   render() {
-    const {
-      ariaLevel,
-      tabIndex,
-      isBranch,
-      isExpanded,
-      isSelected,
-      itemLabel,
-      metaTextLabel
-    } = this.props;
+    const { ariaLevel, tabIndex, isBranch, isExpanded, isSelected, isDisabled, itemLabel, metaTextLabel } = this.props;
 
     return (
       <li
         aria-expanded={isBranch ? isExpanded || false : null}
-        aria-label={
-          isBranch ? this.getBranchAriaLabel(itemLabel, metaTextLabel) : null
-        }
+        aria-label={isBranch ? this.getBranchAriaLabel(itemLabel, metaTextLabel) : null}
         aria-level={ariaLevel}
         aria-selected={isSelected}
+        aria-disabled={isDisabled}
         role="treeitem"
         tabIndex={tabIndex}
       >
@@ -140,12 +122,7 @@ TreeHeader.propTypes = {
 };
 
 export const TreeList = props => (
-  <ul
-    aria-labelledby={props.headerId}
-    className="slds-tree"
-    id={props.id}
-    role="tree"
-  >
+  <ul aria-labelledby={props.headerId} className="slds-tree" id={props.id} role="tree">
     {props.children}
   </ul>
 );
@@ -164,9 +141,7 @@ TreeGroup.propTypes = {
   children: PropTypes.node
 };
 
-export const TreeContainer = props => (
-  <div className="slds-tree_container">{props.children}</div>
-);
+export const TreeContainer = props => <div className="slds-tree_container">{props.children}</div>;
 
 TreeContainer.displayName = 'TreeContainer';
 TreeContainer.propTypes = {

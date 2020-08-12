@@ -38,26 +38,6 @@ The content itself is contained within a div with the class `slds-accordion__con
 
 Content visibility is toggled via a [Button](/components/buttons) in the H3 heading. To make accordion content visible, the section is given the class `slds-is-open`, the button is changed from `aria-expanded="false"` to `aria-expanded="true"`, and the hidden attribute is removed from the content div.
 
-## States
-
-### Section 1 - Open
-
-<CodeView>{getDisplayElementById(Base.states, 'section-one-open')}</CodeView>
-
-### Section 2 - Open
-
-<CodeView>{getDisplayElementById(Base.states, 'section-two-open')}</CodeView>
-
-### Section 3 - Open
-
-<CodeView>{getDisplayElementById(Base.states, 'section-three-open')}</CodeView>
-
-### Multiple Sections - Open
-
-<CodeView>
-  {getDisplayElementById(Base.states, 'multiple-sections-open')}
-</CodeView>
-
 ## Examples
 
 ### With Action Overflow Menu
@@ -71,5 +51,11 @@ Content visibility is toggled via a [Button](/components/buttons) in the H3 head
 <CodeView>{getDisplayElementById(Base.examples, 'styled')}</CodeView>
 
 ### Nested
+<CodeView>
+  { getDisplayElementById(Base.examples, 'nested-accordions') }
+</CodeView>
 
-<CodeView>{getDisplayElementById(Base.examples, 'nested-accordions')}</CodeView>
+### Heading with Truncation
+<CodeView>
+  { getDisplayElementById(Base.examples, 'long-heading-truncated')}
+</CodeView>

@@ -47,6 +47,7 @@ exports[`renders a overflow menu as the first breadcrumb 1`] = `
         <button
           aria-haspopup="true"
           className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+          onClick={[Function]}
           title="Show More"
         >
           <svg

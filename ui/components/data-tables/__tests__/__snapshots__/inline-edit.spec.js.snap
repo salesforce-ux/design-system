@@ -12,6 +12,7 @@ exports[`Inline edit data table row should enable focusing on focusable elements
       aria-hidden="true"
       className="slds-button slds-button_icon slds-button_icon-error slds-m-horizontal_xxx-small slds-hidden"
       id="error-00"
+      onClick={[Function]}
       tabIndex="0"
       title="Item 0 has errors"
     >
@@ -84,6 +85,7 @@ exports[`Inline edit data table row should enable focusing on focusable elements
       </a>
       <button
         className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
+        onClick={[Function]}
         tabIndex="0"
         title="Edit Name of Acme"
       >
@@ -119,6 +121,7 @@ exports[`Inline edit data table row should enable focusing on focusable elements
       </span>
       <button
         className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
+        onClick={[Function]}
         tabIndex="0"
         title="Edit Account Name of Acme"
       >
@@ -153,6 +156,7 @@ exports[`Inline edit data table row should enable focusing on focusable elements
       </span>
       <button
         className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
+        onClick={[Function]}
         tabIndex="0"
         title="Edit Close Date of Acme"
       >
@@ -187,6 +191,7 @@ exports[`Inline edit data table row should enable focusing on focusable elements
       </span>
       <button
         className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
+        onClick={[Function]}
         tabIndex="0"
         title="Edit Stage of Acme"
       >
@@ -223,6 +228,7 @@ exports[`Inline edit data table row should enable focusing on focusable elements
       <button
         className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
         disabled={true}
+        onClick={[Function]}
         tabIndex="0"
         title="Edit Confidence of Acme"
       >
@@ -257,6 +263,7 @@ exports[`Inline edit data table row should enable focusing on focusable elements
       </span>
       <button
         className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
+        onClick={[Function]}
         tabIndex="0"
         title="Edit Amount of Acme"
       >
@@ -291,6 +298,7 @@ exports[`Inline edit data table row should enable focusing on focusable elements
       </span>
       <button
         className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
+        onClick={[Function]}
         tabIndex="0"
         title="Edit Contact of Acme"
       >
@@ -317,6 +325,7 @@ exports[`Inline edit data table row should enable focusing on focusable elements
     <button
       aria-haspopup="true"
       className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+      onClick={[Function]}
       tabIndex="0"
       title="More actions for Acme"
     >
@@ -350,6 +359,7 @@ exports[`Inline edit data table row should render 1`] = `
       aria-hidden="true"
       className="slds-button slds-button_icon slds-button_icon-error slds-m-horizontal_xxx-small slds-hidden"
       id="error-00"
+      onClick={[Function]}
       tabIndex="-1"
       title="Item 0 has errors"
     >
@@ -422,6 +432,7 @@ exports[`Inline edit data table row should render 1`] = `
       </a>
       <button
         className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
+        onClick={[Function]}
         tabIndex="-1"
         title="Edit Name of Acme"
       >
@@ -457,6 +468,7 @@ exports[`Inline edit data table row should render 1`] = `
       </span>
       <button
         className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
+        onClick={[Function]}
         tabIndex="-1"
         title="Edit Account Name of Acme"
       >
@@ -491,6 +503,7 @@ exports[`Inline edit data table row should render 1`] = `
       </span>
       <button
         className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
+        onClick={[Function]}
         tabIndex="-1"
         title="Edit Close Date of Acme"
       >
@@ -525,6 +538,7 @@ exports[`Inline edit data table row should render 1`] = `
       </span>
       <button
         className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
+        onClick={[Function]}
         tabIndex="-1"
         title="Edit Stage of Acme"
       >
@@ -561,6 +575,7 @@ exports[`Inline edit data table row should render 1`] = `
       <button
         className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
         disabled={true}
+        onClick={[Function]}
         tabIndex="-1"
         title="Edit Confidence of Acme"
       >
@@ -595,6 +610,7 @@ exports[`Inline edit data table row should render 1`] = `
       </span>
       <button
         className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
+        onClick={[Function]}
         tabIndex="-1"
         title="Edit Amount of Acme"
       >
@@ -629,6 +645,7 @@ exports[`Inline edit data table row should render 1`] = `
       </span>
       <button
         className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
+        onClick={[Function]}
         tabIndex="-1"
         title="Edit Contact of Acme"
       >
@@ -655,6 +672,7 @@ exports[`Inline edit data table row should render 1`] = `
     <button
       aria-haspopup="true"
       className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+      onClick={[Function]}
       tabIndex="-1"
       title="More actions for Acme"
     >
@@ -688,6 +706,7 @@ exports[`Inline edit data table row should set a focusable cell 1`] = `
       aria-hidden="true"
       className="slds-button slds-button_icon slds-button_icon-error slds-m-horizontal_xxx-small slds-hidden"
       id="error-00"
+      onClick={[Function]}
       tabIndex="-1"
       title="Item 0 has errors"
     >
@@ -760,6 +779,7 @@ exports[`Inline edit data table row should set a focusable cell 1`] = `
       </a>
       <button
         className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
+        onClick={[Function]}
         tabIndex="-1"
         title="Edit Name of Acme"
       >
@@ -795,6 +815,7 @@ exports[`Inline edit data table row should set a focusable cell 1`] = `
       </span>
       <button
         className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
+        onClick={[Function]}
         tabIndex="-1"
         title="Edit Account Name of Acme"
       >
@@ -829,6 +850,7 @@ exports[`Inline edit data table row should set a focusable cell 1`] = `
       </span>
       <button
         className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
+        onClick={[Function]}
         tabIndex="-1"
         title="Edit Close Date of Acme"
       >
@@ -863,6 +885,7 @@ exports[`Inline edit data table row should set a focusable cell 1`] = `
       </span>
       <button
         className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
+        onClick={[Function]}
         tabIndex="-1"
         title="Edit Stage of Acme"
       >
@@ -899,6 +922,7 @@ exports[`Inline edit data table row should set a focusable cell 1`] = `
       <button
         className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
         disabled={true}
+        onClick={[Function]}
         tabIndex="-1"
         title="Edit Confidence of Acme"
       >
@@ -933,6 +957,7 @@ exports[`Inline edit data table row should set a focusable cell 1`] = `
       </span>
       <button
         className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
+        onClick={[Function]}
         tabIndex="-1"
         title="Edit Amount of Acme"
       >
@@ -967,6 +992,7 @@ exports[`Inline edit data table row should set a focusable cell 1`] = `
       </span>
       <button
         className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
+        onClick={[Function]}
         tabIndex="-1"
         title="Edit Contact of Acme"
       >
@@ -993,6 +1019,7 @@ exports[`Inline edit data table row should set a focusable cell 1`] = `
     <button
       aria-haspopup="true"
       className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+      onClick={[Function]}
       tabIndex="-1"
       title="More actions for Acme"
     >
@@ -1026,6 +1053,7 @@ exports[`Inline edit data table row should set a focused cell 1`] = `
       aria-hidden="true"
       className="slds-button slds-button_icon slds-button_icon-error slds-m-horizontal_xxx-small slds-hidden"
       id="error-00"
+      onClick={[Function]}
       tabIndex="-1"
       title="Item 0 has errors"
     >
@@ -1098,6 +1126,7 @@ exports[`Inline edit data table row should set a focused cell 1`] = `
       </a>
       <button
         className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
+        onClick={[Function]}
         tabIndex="-1"
         title="Edit Name of Acme"
       >
@@ -1133,6 +1162,7 @@ exports[`Inline edit data table row should set a focused cell 1`] = `
       </span>
       <button
         className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
+        onClick={[Function]}
         tabIndex="-1"
         title="Edit Account Name of Acme"
       >
@@ -1167,6 +1197,7 @@ exports[`Inline edit data table row should set a focused cell 1`] = `
       </span>
       <button
         className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
+        onClick={[Function]}
         tabIndex="-1"
         title="Edit Close Date of Acme"
       >
@@ -1201,6 +1232,7 @@ exports[`Inline edit data table row should set a focused cell 1`] = `
       </span>
       <button
         className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
+        onClick={[Function]}
         tabIndex="-1"
         title="Edit Stage of Acme"
       >
@@ -1237,6 +1269,7 @@ exports[`Inline edit data table row should set a focused cell 1`] = `
       <button
         className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
         disabled={true}
+        onClick={[Function]}
         tabIndex="-1"
         title="Edit Confidence of Acme"
       >
@@ -1271,6 +1304,7 @@ exports[`Inline edit data table row should set a focused cell 1`] = `
       </span>
       <button
         className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
+        onClick={[Function]}
         tabIndex="-1"
         title="Edit Amount of Acme"
       >
@@ -1305,6 +1339,7 @@ exports[`Inline edit data table row should set a focused cell 1`] = `
       </span>
       <button
         className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
+        onClick={[Function]}
         tabIndex="-1"
         title="Edit Contact of Acme"
       >
@@ -1331,6 +1366,7 @@ exports[`Inline edit data table row should set a focused cell 1`] = `
     <button
       aria-haspopup="true"
       className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+      onClick={[Function]}
       tabIndex="-1"
       title="More actions for Acme"
     >
@@ -1364,6 +1400,7 @@ exports[`Inline edit data table row should set a locked cell 1`] = `
       aria-hidden="true"
       className="slds-button slds-button_icon slds-button_icon-error slds-m-horizontal_xxx-small slds-hidden"
       id="error-00"
+      onClick={[Function]}
       tabIndex="-1"
       title="Item 0 has errors"
     >
@@ -1436,6 +1473,7 @@ exports[`Inline edit data table row should set a locked cell 1`] = `
       </a>
       <button
         className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
+        onClick={[Function]}
         tabIndex="-1"
         title="Edit Name of Acme"
       >
@@ -1473,6 +1511,7 @@ exports[`Inline edit data table row should set a locked cell 1`] = `
       <button
         className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
         disabled={true}
+        onClick={[Function]}
         tabIndex="-1"
         title="Edit Account Name of Acme"
       >
@@ -1507,6 +1546,7 @@ exports[`Inline edit data table row should set a locked cell 1`] = `
       </span>
       <button
         className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
+        onClick={[Function]}
         tabIndex="-1"
         title="Edit Close Date of Acme"
       >
@@ -1541,6 +1581,7 @@ exports[`Inline edit data table row should set a locked cell 1`] = `
       </span>
       <button
         className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
+        onClick={[Function]}
         tabIndex="-1"
         title="Edit Stage of Acme"
       >
@@ -1577,6 +1618,7 @@ exports[`Inline edit data table row should set a locked cell 1`] = `
       <button
         className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
         disabled={true}
+        onClick={[Function]}
         tabIndex="-1"
         title="Edit Confidence of Acme"
       >
@@ -1611,6 +1653,7 @@ exports[`Inline edit data table row should set a locked cell 1`] = `
       </span>
       <button
         className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
+        onClick={[Function]}
         tabIndex="-1"
         title="Edit Amount of Acme"
       >
@@ -1645,6 +1688,7 @@ exports[`Inline edit data table row should set a locked cell 1`] = `
       </span>
       <button
         className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
+        onClick={[Function]}
         tabIndex="-1"
         title="Edit Contact of Acme"
       >
@@ -1671,6 +1715,7 @@ exports[`Inline edit data table row should set a locked cell 1`] = `
     <button
       aria-haspopup="true"
       className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+      onClick={[Function]}
       tabIndex="-1"
       title="More actions for Acme"
     >
@@ -1705,6 +1750,7 @@ exports[`Inline edit data table row should set a selected row and check the chec
       aria-hidden="true"
       className="slds-button slds-button_icon slds-button_icon-error slds-m-horizontal_xxx-small slds-hidden"
       id="error-00"
+      onClick={[Function]}
       tabIndex="-1"
       title="Item 0 has errors"
     >
@@ -1778,6 +1824,7 @@ exports[`Inline edit data table row should set a selected row and check the chec
       </a>
       <button
         className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
+        onClick={[Function]}
         tabIndex="-1"
         title="Edit Name of Acme"
       >
@@ -1813,6 +1860,7 @@ exports[`Inline edit data table row should set a selected row and check the chec
       </span>
       <button
         className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
+        onClick={[Function]}
         tabIndex="-1"
         title="Edit Account Name of Acme"
       >
@@ -1847,6 +1895,7 @@ exports[`Inline edit data table row should set a selected row and check the chec
       </span>
       <button
         className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
+        onClick={[Function]}
         tabIndex="-1"
         title="Edit Close Date of Acme"
       >
@@ -1881,6 +1930,7 @@ exports[`Inline edit data table row should set a selected row and check the chec
       </span>
       <button
         className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
+        onClick={[Function]}
         tabIndex="-1"
         title="Edit Stage of Acme"
       >
@@ -1917,6 +1967,7 @@ exports[`Inline edit data table row should set a selected row and check the chec
       <button
         className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
         disabled={true}
+        onClick={[Function]}
         tabIndex="-1"
         title="Edit Confidence of Acme"
       >
@@ -1951,6 +2002,7 @@ exports[`Inline edit data table row should set a selected row and check the chec
       </span>
       <button
         className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
+        onClick={[Function]}
         tabIndex="-1"
         title="Edit Amount of Acme"
       >
@@ -1985,6 +2037,7 @@ exports[`Inline edit data table row should set a selected row and check the chec
       </span>
       <button
         className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
+        onClick={[Function]}
         tabIndex="-1"
         title="Edit Contact of Acme"
       >
@@ -2011,6 +2064,7 @@ exports[`Inline edit data table row should set a selected row and check the chec
     <button
       aria-haspopup="true"
       className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+      onClick={[Function]}
       tabIndex="-1"
       title="More actions for Acme"
     >
@@ -2044,6 +2098,7 @@ exports[`Inline edit data table row should show a cell edit 1`] = `
       aria-hidden="true"
       className="slds-button slds-button_icon slds-button_icon-error slds-m-horizontal_xxx-small slds-hidden"
       id="error-00"
+      onClick={[Function]}
       tabIndex="-1"
       title="Item 0 has errors"
     >
@@ -2116,6 +2171,7 @@ exports[`Inline edit data table row should show a cell edit 1`] = `
       </a>
       <button
         className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
+        onClick={[Function]}
         tabIndex="-1"
         title="Edit Name of Acme"
       >
@@ -2152,6 +2208,7 @@ exports[`Inline edit data table row should show a cell edit 1`] = `
       </span>
       <button
         className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
+        onClick={[Function]}
         tabIndex="-1"
         title="Edit Account Name of Acme"
       >
@@ -2229,6 +2286,7 @@ exports[`Inline edit data table row should show a cell edit 1`] = `
       </span>
       <button
         className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
+        onClick={[Function]}
         tabIndex="-1"
         title="Edit Close Date of Acme"
       >
@@ -2263,6 +2321,7 @@ exports[`Inline edit data table row should show a cell edit 1`] = `
       </span>
       <button
         className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
+        onClick={[Function]}
         tabIndex="-1"
         title="Edit Stage of Acme"
       >
@@ -2299,6 +2358,7 @@ exports[`Inline edit data table row should show a cell edit 1`] = `
       <button
         className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
         disabled={true}
+        onClick={[Function]}
         tabIndex="-1"
         title="Edit Confidence of Acme"
       >
@@ -2333,6 +2393,7 @@ exports[`Inline edit data table row should show a cell edit 1`] = `
       </span>
       <button
         className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
+        onClick={[Function]}
         tabIndex="-1"
         title="Edit Amount of Acme"
       >
@@ -2367,6 +2428,7 @@ exports[`Inline edit data table row should show a cell edit 1`] = `
       </span>
       <button
         className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
+        onClick={[Function]}
         tabIndex="-1"
         title="Edit Contact of Acme"
       >
@@ -2393,6 +2455,7 @@ exports[`Inline edit data table row should show a cell edit 1`] = `
     <button
       aria-haspopup="true"
       className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+      onClick={[Function]}
       tabIndex="-1"
       title="More actions for Acme"
     >
@@ -2426,6 +2489,7 @@ exports[`Inline edit data table row should show a cell edit with required field 
       aria-hidden="true"
       className="slds-button slds-button_icon slds-button_icon-error slds-m-horizontal_xxx-small slds-hidden"
       id="error-00"
+      onClick={[Function]}
       tabIndex="-1"
       title="Item 0 has errors"
     >
@@ -2498,6 +2562,7 @@ exports[`Inline edit data table row should show a cell edit with required field 
       </a>
       <button
         className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
+        onClick={[Function]}
         tabIndex="-1"
         title="Edit Name of Acme"
       >
@@ -2534,6 +2599,7 @@ exports[`Inline edit data table row should show a cell edit with required field 
       </span>
       <button
         className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
+        onClick={[Function]}
         tabIndex="-1"
         title="Edit Account Name of Acme"
       >
@@ -2618,6 +2684,7 @@ exports[`Inline edit data table row should show a cell edit with required field 
       </span>
       <button
         className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
+        onClick={[Function]}
         tabIndex="-1"
         title="Edit Close Date of Acme"
       >
@@ -2652,6 +2719,7 @@ exports[`Inline edit data table row should show a cell edit with required field 
       </span>
       <button
         className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
+        onClick={[Function]}
         tabIndex="-1"
         title="Edit Stage of Acme"
       >
@@ -2688,6 +2756,7 @@ exports[`Inline edit data table row should show a cell edit with required field 
       <button
         className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
         disabled={true}
+        onClick={[Function]}
         tabIndex="-1"
         title="Edit Confidence of Acme"
       >
@@ -2722,6 +2791,7 @@ exports[`Inline edit data table row should show a cell edit with required field 
       </span>
       <button
         className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
+        onClick={[Function]}
         tabIndex="-1"
         title="Edit Amount of Acme"
       >
@@ -2756,6 +2826,7 @@ exports[`Inline edit data table row should show a cell edit with required field 
       </span>
       <button
         className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
+        onClick={[Function]}
         tabIndex="-1"
         title="Edit Contact of Acme"
       >
@@ -2782,6 +2853,7 @@ exports[`Inline edit data table row should show a cell edit with required field 
     <button
       aria-haspopup="true"
       className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+      onClick={[Function]}
       tabIndex="-1"
       title="More actions for Acme"
     >
@@ -2815,6 +2887,7 @@ exports[`Inline edit data table row should show a cell edit with required field 
       aria-hidden="true"
       className="slds-button slds-button_icon slds-button_icon-error slds-m-horizontal_xxx-small slds-hidden"
       id="error-00"
+      onClick={[Function]}
       tabIndex="-1"
       title="Item 0 has errors"
     >
@@ -2887,6 +2960,7 @@ exports[`Inline edit data table row should show a cell edit with required field 
       </a>
       <button
         className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
+        onClick={[Function]}
         tabIndex="-1"
         title="Edit Name of Acme"
       >
@@ -2923,6 +2997,7 @@ exports[`Inline edit data table row should show a cell edit with required field 
       </span>
       <button
         className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
+        onClick={[Function]}
         tabIndex="-1"
         title="Edit Account Name of Acme"
       >
@@ -3013,6 +3088,7 @@ exports[`Inline edit data table row should show a cell edit with required field 
       </span>
       <button
         className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
+        onClick={[Function]}
         tabIndex="-1"
         title="Edit Close Date of Acme"
       >
@@ -3047,6 +3123,7 @@ exports[`Inline edit data table row should show a cell edit with required field 
       </span>
       <button
         className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
+        onClick={[Function]}
         tabIndex="-1"
         title="Edit Stage of Acme"
       >
@@ -3083,6 +3160,7 @@ exports[`Inline edit data table row should show a cell edit with required field 
       <button
         className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
         disabled={true}
+        onClick={[Function]}
         tabIndex="-1"
         title="Edit Confidence of Acme"
       >
@@ -3117,6 +3195,7 @@ exports[`Inline edit data table row should show a cell edit with required field 
       </span>
       <button
         className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
+        onClick={[Function]}
         tabIndex="-1"
         title="Edit Amount of Acme"
       >
@@ -3151,6 +3230,7 @@ exports[`Inline edit data table row should show a cell edit with required field 
       </span>
       <button
         className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
+        onClick={[Function]}
         tabIndex="-1"
         title="Edit Contact of Acme"
       >
@@ -3177,6 +3257,7 @@ exports[`Inline edit data table row should show a cell edit with required field 
     <button
       aria-haspopup="true"
       className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+      onClick={[Function]}
       tabIndex="-1"
       title="More actions for Acme"
     >
@@ -3210,6 +3291,7 @@ exports[`Inline edit data table row should show a edited cell 1`] = `
       aria-hidden="true"
       className="slds-button slds-button_icon slds-button_icon-error slds-m-horizontal_xxx-small slds-hidden"
       id="error-00"
+      onClick={[Function]}
       tabIndex="-1"
       title="Item 0 has errors"
     >
@@ -3282,6 +3364,7 @@ exports[`Inline edit data table row should show a edited cell 1`] = `
       </a>
       <button
         className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
+        onClick={[Function]}
         tabIndex="-1"
         title="Edit Name of Acme"
       >
@@ -3317,6 +3400,7 @@ exports[`Inline edit data table row should show a edited cell 1`] = `
       </span>
       <button
         className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
+        onClick={[Function]}
         tabIndex="-1"
         title="Edit Account Name of Acme"
       >
@@ -3351,6 +3435,7 @@ exports[`Inline edit data table row should show a edited cell 1`] = `
       </span>
       <button
         className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
+        onClick={[Function]}
         tabIndex="-1"
         title="Edit Close Date of Acme"
       >
@@ -3385,6 +3470,7 @@ exports[`Inline edit data table row should show a edited cell 1`] = `
       </span>
       <button
         className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
+        onClick={[Function]}
         tabIndex="-1"
         title="Edit Stage of Acme"
       >
@@ -3421,6 +3507,7 @@ exports[`Inline edit data table row should show a edited cell 1`] = `
       <button
         className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
         disabled={true}
+        onClick={[Function]}
         tabIndex="-1"
         title="Edit Confidence of Acme"
       >
@@ -3455,6 +3542,7 @@ exports[`Inline edit data table row should show a edited cell 1`] = `
       </span>
       <button
         className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
+        onClick={[Function]}
         tabIndex="-1"
         title="Edit Amount of Acme"
       >
@@ -3489,6 +3577,7 @@ exports[`Inline edit data table row should show a edited cell 1`] = `
       </span>
       <button
         className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
+        onClick={[Function]}
         tabIndex="-1"
         title="Edit Contact of Acme"
       >
@@ -3515,6 +3604,7 @@ exports[`Inline edit data table row should show a edited cell 1`] = `
     <button
       aria-haspopup="true"
       className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+      onClick={[Function]}
       tabIndex="-1"
       title="More actions for Acme"
     >
@@ -3548,6 +3638,7 @@ exports[`Inline edit data table row should show an errored cell 1`] = `
       aria-hidden={null}
       className="slds-button slds-button_icon slds-button_icon-error slds-m-horizontal_xxx-small"
       id="error-00"
+      onClick={[Function]}
       tabIndex="-1"
       title="Item 0 has errors"
     >
@@ -3620,6 +3711,7 @@ exports[`Inline edit data table row should show an errored cell 1`] = `
       </a>
       <button
         className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
+        onClick={[Function]}
         tabIndex="-1"
         title="Edit Name of Acme"
       >
@@ -3655,6 +3747,7 @@ exports[`Inline edit data table row should show an errored cell 1`] = `
       </span>
       <button
         className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
+        onClick={[Function]}
         tabIndex="-1"
         title="Edit Account Name of Acme"
       >
@@ -3689,6 +3782,7 @@ exports[`Inline edit data table row should show an errored cell 1`] = `
       </span>
       <button
         className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
+        onClick={[Function]}
         tabIndex="-1"
         title="Edit Close Date of Acme"
       >
@@ -3723,6 +3817,7 @@ exports[`Inline edit data table row should show an errored cell 1`] = `
       </span>
       <button
         className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
+        onClick={[Function]}
         tabIndex="-1"
         title="Edit Stage of Acme"
       >
@@ -3759,6 +3854,7 @@ exports[`Inline edit data table row should show an errored cell 1`] = `
       <button
         className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
         disabled={true}
+        onClick={[Function]}
         tabIndex="-1"
         title="Edit Confidence of Acme"
       >
@@ -3793,6 +3889,7 @@ exports[`Inline edit data table row should show an errored cell 1`] = `
       </span>
       <button
         className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
+        onClick={[Function]}
         tabIndex="-1"
         title="Edit Amount of Acme"
       >
@@ -3827,6 +3924,7 @@ exports[`Inline edit data table row should show an errored cell 1`] = `
       </span>
       <button
         className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
+        onClick={[Function]}
         tabIndex="-1"
         title="Edit Contact of Acme"
       >
@@ -3853,6 +3951,7 @@ exports[`Inline edit data table row should show an errored cell 1`] = `
     <button
       aria-haspopup="true"
       className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+      onClick={[Function]}
       tabIndex="-1"
       title="More actions for Acme"
     >

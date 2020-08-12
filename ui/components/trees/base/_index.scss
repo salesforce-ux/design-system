@@ -18,7 +18,7 @@
 .slds-tree_container {
   @include deprecate('4.0.0', '.slds-tree-container is deprecated, use .slds-tree_container instead.');
   min-width: rem(120px);
-  max-width: rem(400px);
+  max-width: var(--sds-c-tree-sizing-max-width, rem(400px));
 
   > .slds-text-heading_label,
   > .slds-text-heading--label {
@@ -58,18 +58,6 @@
 }
 
 /**
- * @name item-disabled
- * @summary When a branch doesn't have children, apply slds-is-disabled to the button icon
- * @selector .slds-is-disabled
- * @restrict .slds-tree__item button
- * @modifier
- * @group interactions
- */
-.slds-tree__item .slds-is-disabled {
-  visibility: hidden;
-}
-
-/**
  * @summary Styles the focus and selected state for any tree item that has role="treeitem"
  * @selector [role="treeitem"]
  * @restrict .slds-tree li
@@ -90,6 +78,15 @@
 
   @include rtl() {
     box-shadow: $brand-primary -4px 0 0 inset;
+  }
+}
+
+.slds-tree [aria-disabled="true"] {
+  color: $color-text-button-default-disabled;
+
+  .slds-tree__item {
+    background-color: transparent;
+    cursor: default;
   }
 }
 

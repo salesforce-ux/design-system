@@ -81,7 +81,7 @@ export let examples = [
     id: 'container-bare',
     label: 'Pill with Bare Container - Deprecated',
     element: (
-      <PillContainer className="slds-pill_container_bare">
+      <PillContainer variant="container-bare">
         <Pill />
         <Pill />
         <Pill />

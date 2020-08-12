@@ -337,6 +337,7 @@ exports[`Chat Images and Files renders an inbound chat message item with file an
             >
               <button
                 className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small"
+                onClick={[Function]}
                 title="Download"
               >
                 <svg
@@ -356,6 +357,7 @@ exports[`Chat Images and Files renders an inbound chat message item with file an
               <button
                 aria-haspopup="true"
                 className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small"
+                onClick={[Function]}
                 title="More Actions"
               >
                 <svg
@@ -440,6 +442,7 @@ exports[`Chat Images and Files renders an inbound chat message item with image a
             >
               <button
                 className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-button_icon-inverse"
+                onClick={[Function]}
                 title="Download"
               >
                 <svg
@@ -459,6 +462,7 @@ exports[`Chat Images and Files renders an inbound chat message item with image a
               <button
                 aria-haspopup="true"
                 className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-button_icon-inverse"
+                onClick={[Function]}
                 title="More Actions"
               >
                 <svg
@@ -543,6 +547,7 @@ exports[`Chat Images and Files renders an inbound chat message item with portrai
             >
               <button
                 className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-button_icon-inverse"
+                onClick={[Function]}
                 title="Download"
               >
                 <svg
@@ -562,6 +567,7 @@ exports[`Chat Images and Files renders an inbound chat message item with portrai
               <button
                 aria-haspopup="true"
                 className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-button_icon-inverse"
+                onClick={[Function]}
                 title="More Actions"
               >
                 <svg
@@ -686,6 +692,7 @@ exports[`Chat Images and Files renders an inbound chat message item with portrai
             >
               <button
                 className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small"
+                onClick={[Function]}
                 title="Download"
               >
                 <svg
@@ -705,6 +712,7 @@ exports[`Chat Images and Files renders an inbound chat message item with portrai
               <button
                 aria-haspopup="true"
                 className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small"
+                onClick={[Function]}
                 title="More Actions"
               >
                 <svg
@@ -819,6 +827,7 @@ exports[`Chat Images and Files renders an outbound chat message item with file a
             >
               <button
                 className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small"
+                onClick={[Function]}
                 title="Download"
               >
                 <svg
@@ -838,6 +847,7 @@ exports[`Chat Images and Files renders an outbound chat message item with file a
               <button
                 aria-haspopup="true"
                 className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small"
+                onClick={[Function]}
                 title="More Actions"
               >
                 <svg
@@ -912,6 +922,7 @@ exports[`Chat Images and Files renders an outbound chat message item with image 
             >
               <button
                 className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-button_icon-inverse"
+                onClick={[Function]}
                 title="Download"
               >
                 <svg
@@ -931,6 +942,7 @@ exports[`Chat Images and Files renders an outbound chat message item with image 
               <button
                 aria-haspopup="true"
                 className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-button_icon-inverse"
+                onClick={[Function]}
                 title="More Actions"
               >
                 <svg
@@ -1005,6 +1017,7 @@ exports[`Chat Images and Files renders an outbound chat message item with portra
             >
               <button
                 className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-button_icon-inverse"
+                onClick={[Function]}
                 title="Download"
               >
                 <svg
@@ -1024,6 +1037,7 @@ exports[`Chat Images and Files renders an outbound chat message item with portra
               <button
                 aria-haspopup="true"
                 className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-button_icon-inverse"
+                onClick={[Function]}
                 title="More Actions"
               >
                 <svg
@@ -1138,6 +1152,7 @@ exports[`Chat Images and Files renders an outbound chat message item with portra
             >
               <button
                 className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small"
+                onClick={[Function]}
                 title="Download"
               >
                 <svg
@@ -1157,6 +1172,7 @@ exports[`Chat Images and Files renders an outbound chat message item with portra
               <button
                 aria-haspopup="true"
                 className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small"
+                onClick={[Function]}
                 title="More Actions"
               >
                 <svg

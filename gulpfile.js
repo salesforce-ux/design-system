@@ -15,6 +15,7 @@ import * as tokens from './scripts/gulp/generate/tokens';
 import * as lint from './scripts/gulp/lint';
 import * as styles from './scripts/gulp/styles';
 import * as sanitized from './scripts/gulp/generate/sanitized';
+import { generateUIJson } from './scripts/generate-ui';
 
 import paths from './scripts/helpers/paths';
 import * as travis from './scripts/helpers/travis';
@@ -202,23 +203,38 @@ gulp.task('sanitized:componentSass', sanitized.writeSanitizedComponentCss);
 gulp.task('styles:sass', styles.sass);
 gulp.task('styles:sassTouch', styles.sassTouch);
 gulp.task('styles:sassTouchDemo', styles.sassTouchDemo);
-gulp.task('styles:test', styles.sassTest);
 gulp.task('styles:formFactors', styles.sassFormFactors);
+gulp.task('styles:componentCSS', styles.componentCSS);
+gulp.task('styles:extractStyleHooks', styles.extractStyleHooks);
+gulp.task('styles:test', styles.sassTest);
 gulp.task(
   'styles',
   gulp.series(
-    gulp.parallel(
-      'styles:sass',
-      'styles:sassTouch',
-      'styles:sassTouchDemo',
-      'styles:test',
-      'styles:formFactors'
-    )
+    'styles:sass',
+    'styles:sassTouch',
+    'styles:sassTouchDemo',
+    'styles:formFactors',
+    'styles:componentCSS',
+    'styles:extractStyleHooks',
+    'styles:test'
   )
 );
 gulp.task(
   'styles:stats',
   gulp.series('styles', withName('styles:stats')(styles.stats))
+);
+
+/*
+ * ==================
+ * Storybook
+ * ==================
+ */
+gulp.task('storybook:prepare:ui', done => {
+  generateUIJson({ suppressOutput: true, callback: done });
+});
+gulp.task(
+  'storybook:prepare',
+  gulp.series('storybook:prepare:ui', 'styles:extractStyleHooks')
 );
 
 /*
@@ -328,7 +344,10 @@ gulp.task(
       withName('dist:copyUtilityReleaseNotes')(dist.copyUtilityReleaseNotes),
       withName('dist:copySwatches')(dist.copySwatches),
       withName('dist:copyDesignTokens')(dist.copyDesignTokens),
-      withName('dist:copyComponentDesignTokens')(dist.copyComponentDesignTokens)
+      withName('dist:copyComponentDesignTokens')(
+        dist.copyComponentDesignTokens
+      ),
+      withName('dist:copyStylingHooksMetadata')(dist.copyStylingHooksMetadata)
     ),
     'dist:sass',
     'dist:sass:sanitized',

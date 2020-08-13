@@ -76,6 +76,7 @@
     "classnames": "2.2.6",
     "conventional-changelog": "1.1.4",
     "copy-webpack-plugin": "5.1.1",
+    "css": "2.2.4",
     "css-loader": "3.5.2",
     "cssstats": "3.4.1",
     "data.either": "1.5.2",
@@ -95,6 +96,7 @@
     "eslint-plugin-standard": "4.0.1",
     "express": "4.17.1",
     "extract-loader": "4.0.3",
+    "fast-glob": "3.2.4",
     "file-loader": "5.0.2",
     "fs-extra": "2.1.2",
     "futurize": "1.2.0",
@@ -192,7 +194,7 @@
     "url": "git@github.com:salesforce-ux/design-system.git"
   },
   "scripts": {
-    "storybook:prepare": "node scripts/generate-ui",
+    "storybook:prepare": "npm run gulp -- storybook:prepare",
     "start": "npm run storybook:prepare && start-storybook -c .storybook -p 9002",
     "start:mobile": "STORYBOOK_STORIES_TYPE='mobile' start-storybook -c .storybook -p 9003",
     "build": "npm run gulp -- build",

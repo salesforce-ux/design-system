@@ -2,11 +2,14 @@ import CodeView from '../../../shared/components/CodeView';
 import DisplayColumn from '../../../shared/components/DisplayColumn';
 import DisplayGrid from '../../../shared/components/DisplayGrid';
 import Blockquote from '../../../shared/components/Blockquote';
+import StyleApiTable from '../../../shared/components/StyleApiTable';
 import * as Base from './base/example';
 import { getDisplayElementById } from '../../shared/helpers';
 
 <div className="doc lead">
-  A Tooltip is a small piece of contextual information about an element on the screen, which is displayed when a user hovers or focuses on the element it is describing. It is not focusable and cannot contain focusable content.
+  A Tooltip is a small piece of contextual information about an element on the
+  screen, which is displayed when a user hovers or focuses on the element it is
+  describing. It is not focusable and cannot contain focusable content.
 </div>
 
 <CodeView
@@ -26,6 +29,10 @@ Nubbins are indicators that inform the user of the direction of the content asso
 
 Learn more about how to use them at the [Nubbins documentation](/components/popovers/#flavor-nubbins).
 
+### Styling Hooks
+
+<StyleApiTable name="tooltips" type="component" />
+
 ### Accessibility
 
 Showing the tooltip on hover or on keyboard focus of a focusable element ensures that all users can access it, even if they aren’t using a mouse. Examples of focusable elements include links, buttons, and inputs. Give the tooltip an ID and use that as the value of the `aria-describedby` attribute of the DOM element it describes. This helps users of assistive technology read the tooltip content.
@@ -34,40 +41,51 @@ When using a link as the focusable element to show a tooltip, add a `<div>` at t
 
 ## Base
 
-<CodeView demoStyles="
+<CodeView
+  demoStyles="
           padding-left: 2rem;
           padding-top: 5rem;
           position: relative;
-        ">
+        "
+>
   {Base.default}
 </CodeView>
 
 ## Examples
 
 ### As an icon link
-<CodeView demoStyles="
+
+<CodeView
+  demoStyles="
           padding-left: 2rem;
           padding-top: 6.75rem;
           position: relative;
-        ">
+        "
+>
   {getDisplayElementById(Base.examples, 'link')}
 </CodeView>
 
 ### As a Button Icon
-<CodeView demoStyles="
+
+<CodeView
+  demoStyles="
           padding-left: 2rem;
           padding-top: 5rem;
           position: relative;
-        ">
+        "
+>
   {getDisplayElementById(Base.examples, 'button-icon')}
 </CodeView>
 
 ### As a Button
-<CodeView demoStyles="
+
+<CodeView
+  demoStyles="
           padding-left: 2rem;
           padding-top: 5rem;
           position: relative;
-        ">
+        "
+>
   {getDisplayElementById(Base.examples, 'button')}
 </CodeView>
 

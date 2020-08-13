@@ -6,12 +6,13 @@ global:
   category: fill
   type: color
   cssProperties:
-  - 'background'
-  - 'color'
-  - 'fill'
+    - 'background'
+    - 'color'
+    - 'fill'
+
 imports:
-- "../../../../design-tokens/aliases/colors.yml"
-- "../../../../design-tokens/aliases/color-palettes.yml"
+  - '../../../../design-tokens/aliases/colors.yml'
+  - '../../../../design-tokens/aliases/color-palettes.yml'
 props:
   GLOBAL_ACTION_FILL_HOVER:
     value: '{!SCIENCE_BLUE}'

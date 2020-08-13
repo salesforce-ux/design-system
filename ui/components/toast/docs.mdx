@@ -1,10 +1,12 @@
 import CodeView from '../../../shared/components/CodeView';
 import Blockquote from '../../../shared/components/Blockquote';
+import StyleApiTable from '../../../shared/components/StyleApiTable';
 import * as Base from './base/example';
 import { getDisplayElementById } from '../../shared/helpers';
 
 <div className="doc lead">
-  Toast serves as a feedback & confirmation mechanism after the user takes an action.
+  Toast serves as a feedback & confirmation mechanism after the user takes an
+  action.
 </div>
 
 <CodeView exampleOnly demoStyles="height: 4rem;">
@@ -12,6 +14,10 @@ import { getDisplayElementById } from '../../shared/helpers';
 </CodeView>
 
 ## About Toast
+
+### Styling Hooks
+
+<StyleApiTable name="toast" type="component" />
 
 ### Accessibility
 
@@ -21,9 +27,7 @@ Use a span with `slds-assistive-text` to let the user know what type of notifica
 
 ## Base
 
-<CodeView demoStyles="height: 4rem;">
-  {Base.default}
-</CodeView>
+<CodeView demoStyles="height: 4rem;">{Base.default}</CodeView>
 
 ## States
 

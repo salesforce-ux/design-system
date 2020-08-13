@@ -148,6 +148,14 @@ export const copyUtilityReleaseNotes = () =>
     })
     .pipe(gulp.dest(distPath('__internal/release-notes')));
 
+export const copyStylingHooksMetadata = () =>
+  gulp
+    .src('metadata/**', {
+      base: path.resolve(paths.generated),
+      cwd: path.resolve(paths.generated)
+    })
+    .pipe(gulp.dest(distPath()));
+
 /*
  * ==================
  * Compiles monolithic version of SLDS

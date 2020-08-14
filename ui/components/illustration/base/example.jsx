@@ -48,9 +48,10 @@ export const IllustrationText = props => (
         <p className="slds-text-body_regular">
           {props.message}{' '}
           <a
-            href="javascript:void(0);"
+            href="#"
             className="slds-truncate"
             title={props.secondaryCTA}
+            onClick={e => e.preventDefault()}
           >
             {props.secondaryCTA}
           </a>
@@ -69,9 +70,10 @@ export const IllustrationCTA = props => (
       <header>
         <h2>
           <a
-            href="javascript:void(0);"
+            href="#"
             className="slds-card__header-link slds-truncate"
             title="Today's Tasks"
+            onClick={e => e.preventDefault()}
           >
             <span className="slds-text-heading_small">Today's Tasks</span>
           </a>
@@ -80,7 +82,7 @@ export const IllustrationCTA = props => (
     </div>
     {props.children}
     <footer className="slds-card__footer">
-      {props.link && <a href="javascript:void(0);">View All</a>}
+      {props.link && <a href="#" onClick={e => e.preventDefault()}>View All</a>}
       {props.button && <button className={props.button}>Create Task</button>}
     </footer>
   </article>

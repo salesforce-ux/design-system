@@ -162,7 +162,7 @@ export let examples = [
     id: 'linked-avatar',
     label: 'Wrapped in a link',
     element: (
-      <a href="javascript:void(0);">
+      <a href="#" onClick={e => e.preventDefault()}>
         <Avatar>
           <img
             alt="Person name"

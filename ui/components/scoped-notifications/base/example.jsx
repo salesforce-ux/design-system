@@ -79,7 +79,7 @@ export default (
   <ScopedNotificationThemed theme="light">
     <p>
       It looks as if duplicates exist for this lead.{' '}
-      <a href="javascript:void(0);">View Duplicates.</a>
+      <a href="#" onClick={e => e.preventDefault()}>View Duplicates.</a>
     </p>
   </ScopedNotificationThemed>
 );
@@ -92,7 +92,7 @@ export let examples = [
       <ScopedNotificationThemed theme="light">
         <p>
           It looks as if duplicates exist for this lead.{' '}
-          <a href="javascript:void(0);">View Duplicates.</a>
+          <a href="#" onClick={e => e.preventDefault()}>View Duplicates.</a>
         </p>
       </ScopedNotificationThemed>
     )
@@ -104,7 +104,7 @@ export let examples = [
       <ScopedNotificationThemed theme="dark">
         <p>
           It looks as if duplicates exist for this lead.{' '}
-          <a href="javascript:void(0);">View Duplicates.</a>
+          <a href="#" onClick={e => e.preventDefault()}>View Duplicates.</a>
         </p>
       </ScopedNotificationThemed>
     )
@@ -119,7 +119,7 @@ export let states = [
       <ScopedNotification type="info">
         <p>
           It looks as if duplicates exist for this lead.{' '}
-          <a href="javascript:void(0);">View Duplicates.</a>
+          <a href="#" onClick={e => e.preventDefault()}>View Duplicates.</a>
         </p>
       </ScopedNotification>
     )
@@ -131,7 +131,7 @@ export let states = [
       <ScopedNotification type="success">
         <p>
           Success! Your entry has been duplicated.{' '}
-          <a href="javascript:void(0);">View Duplicates.</a>
+          <a href="#" onClick={e => e.preventDefault()}>View Duplicates.</a>
         </p>
       </ScopedNotification>
     )
@@ -143,7 +143,7 @@ export let states = [
       <ScopedNotification type="warning">
         <p>
           It looks as if duplicates exist for this lead.{' '}
-          <a href="javascript:void(0);">View Duplicates.</a>
+          <a href="#" onClick={e => e.preventDefault()}>View Duplicates.</a>
         </p>
       </ScopedNotification>
     )
@@ -155,7 +155,7 @@ export let states = [
       <ScopedNotification type="error">
         <p>
           It looks as if duplicates exist for this lead.{' '}
-          <a href="javascript:void(0);">View Duplicates.</a>
+          <a href="#" onClick={e => e.preventDefault()}>View Duplicates.</a>
         </p>
       </ScopedNotification>
     )

@@ -103,7 +103,7 @@ export const RecordHome = props => (
               Field 3
             </PageHeaderDetailTitle>
             <PageHeaderDetailBody title="Hyperlink">
-              <a href="javascript:void(0);">Hyperlink</a>
+              <a href="#" onClick={e => e.preventDefault()}>Hyperlink</a>
             </PageHeaderDetailBody>
           </PageHeaderDetailItem>
           <PageHeaderDetailItem>

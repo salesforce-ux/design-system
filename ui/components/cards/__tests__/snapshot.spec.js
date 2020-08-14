@@ -19,13 +19,14 @@ describe('Card Article', () => {
 describe('Card Header', () => {
   it('renders a simple card header', () =>
     matchesMarkup(
-      <CardHeader title="Card Header" href="javascript:void(0);" />
+      <CardHeader title="Card Header" href="#" onClick={e => e.preventDefault()} />
     ));
   it('renders a card header with icon', () =>
     matchesMarkup(
       <CardHeader
         title="Card Header"
-        href="javascript:void(0);"
+        href="#"
+        onClick={e => e.preventDefault()}
         symbol="contact"
       />
     ));
@@ -33,7 +34,8 @@ describe('Card Header', () => {
     matchesMarkup(
       <CardHeader
         title="Card Header"
-        href="javascript:void(0);"
+        href="#"
+        onClick={e => e.preventDefault()}
         action={
           <button className="slds-button slds-button_neutral">New</button>
         }
@@ -43,7 +45,8 @@ describe('Card Header', () => {
     matchesMarkup(
       <CardHeader
         title="Card Header"
-        href="javascript:void(0);"
+        href="#"
+        onClick={e => e.preventDefault()}
         symbol="contact"
         action={
           <button className="slds-button slds-button_neutral">New</button>
@@ -88,7 +91,8 @@ describe('Card', () => {
       <Card>
         <CardHeader
           title="Card Header"
-          href="javascript:void(0);"
+          href="#"
+          onClick={e => e.preventDefault()}
           symbol="contact"
         />
         <CardBody />
@@ -100,7 +104,8 @@ describe('Card', () => {
       <Card>
         <CardHeader
           title="Card Header"
-          href="javascript:void(0);"
+          href="#"
+          onClick={e => e.preventDefault()}
           symbol="contact"
         />
         <CardBody>Anything can go into the card body</CardBody>
@@ -111,7 +116,8 @@ describe('Card', () => {
       <Card>
         <CardHeader
           title="Card Header"
-          href="javascript:void(0);"
+          href="#"
+          onClick={e => e.preventDefault()}
           symbol="contact"
         />
         <CardBody>Anything can go into the card body</CardBody>
@@ -123,7 +129,8 @@ describe('Card', () => {
       <Card>
         <CardHeader
           title="Card Header"
-          href="javascript:void(0);"
+          href="#"
+          onClick={e => e.preventDefault()}
           symbol="contact"
         />
         <CardBody>Anything can go into the card body</CardBody>
@@ -137,7 +144,8 @@ describe('Card', () => {
       <Card>
         <CardHeader
           title="Card Header"
-          href="javascript:void(0);"
+          href="#"
+          onClick={e => e.preventDefault()}
           symbol="contact"
           className="slds-assistive-text"
         />

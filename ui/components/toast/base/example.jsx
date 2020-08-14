@@ -67,7 +67,7 @@ export default (
       <div className="slds-notify__content">
         <h2 className="slds-text-heading_small">
           26 potential duplicate leads were found.{' '}
-          <a href="javascript:void(0);">Select Leads to Merge</a>
+          <a href="#" onClick={e => e.preventDefault()}>Select Leads to Merge</a>
         </h2>
       </div>
     </Toast>
@@ -89,7 +89,7 @@ export let states = [
           />
           <div className="slds-notify__content">
             <h2 className="slds-text-heading_small ">
-              Account <a href="javascript:void(0);">ACME - 100</a> widgets was
+              Account <a href="#" onClick={e => e.preventDefault()}>ACME - 100</a> widgets was
               created.
             </h2>
           </div>
@@ -112,7 +112,7 @@ export let states = [
           <div className="slds-notify__content">
             <h2 className="slds-text-heading_small ">
               Can’t share file “report-q3.pdf” with the{' '}
-              <a href="javascript:void(0);">selected users</a>.
+              <a href="#" onClick={e => e.preventDefault()}>selected users</a>.
             </h2>
           </div>
         </Toast>
@@ -134,7 +134,7 @@ export let states = [
           <div className="slds-notify__content">
             <h2 className="slds-text-heading_small ">
               Can’t save lead “Sally Wong” because{' '}
-              <a href="javascript:void(0);">another lead</a> has the same name.
+              <a href="#" onClick={e => e.preventDefault()}>another lead</a> has the same name.
             </h2>
           </div>
         </Toast>
@@ -160,7 +160,7 @@ export let states = [
             </h2>
             <p>
               Here's some detail of{' '}
-              <a href="javascript:void(0);">what happened</a>, being very
+              <a href="#" onClick={e => e.preventDefault()}>what happened</a>, being very
               descriptive and transparent.
             </p>
           </div>
@@ -180,7 +180,7 @@ export let examples = [
           <Toast type="info" containerClassName="slds-is-absolute">
             <div className="slds-notify__content">
               <h2 className="slds-text-heading_small">
-                26 potential <a href="javascript:void(0);">
+                26 potential <a href="#" onClick={e => e.preventDefault()}>
                   duplicate leads
                 </a>{' '}
                 were found.

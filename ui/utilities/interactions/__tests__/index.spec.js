@@ -6,14 +6,14 @@ const { matchesMarkup } = createHelpers(__dirname);
 describe('renders interaction utilities', () => {
   it('renders link reset', () =>
     matchesMarkup(
-      <a href="javascript:void(0);" className="slds-text-link_reset">
+      <a href="#" onClick={e => e.preventDefault()} className="slds-text-link_reset">
         Link
       </a>
     ));
 
   it('renders link reset with text link inside', () =>
     matchesMarkup(
-      <a href="javascript:void(0);" className="slds-text-link_reset">
+      <a href="#" onClick={e => e.preventDefault()} className="slds-text-link_reset">
         This text is a link but looks like normal text...
         <span className="slds-text-link">More</span>.
       </a>
@@ -21,7 +21,7 @@ describe('renders interaction utilities', () => {
 
   it('renders link reset with halo focus', () =>
     matchesMarkup(
-      <a href="javascript:void(0);" className="slds-has-blur-focus">
+      <a href="#" onClick={e => e.preventDefault()} className="slds-has-blur-focus">
         Link with halo focus
       </a>
     ));

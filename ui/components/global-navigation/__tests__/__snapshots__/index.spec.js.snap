@@ -9,8 +9,9 @@ exports[`ContextTab should render a ContextTab with a set icon icon 1`] = `
     aria-controls="tabpanel-id"
     aria-selected="false"
     className="slds-context-bar__label-action"
-    href="javascript:void(0);"
+    href="#"
     id="tab-id"
+    onClick={[Function]}
     role="tab"
     tabIndex="-1"
     title="Tab Name"
@@ -78,7 +79,8 @@ exports[`ContextTab should render a ContextTab with a set icon icon 1`] = `
           role="presentation"
         >
           <a
-            href="javascript:void(0);"
+            href="#"
+            onClick={[Function]}
             role="menuitem"
             tabIndex="-1"
           >
@@ -105,7 +107,8 @@ exports[`ContextTab should render a ContextTab with a set icon icon 1`] = `
           role="presentation"
         >
           <a
-            href="javascript:void(0);"
+            href="#"
+            onClick={[Function]}
             role="menuitem"
             tabIndex="-1"
           >
@@ -132,7 +135,8 @@ exports[`ContextTab should render a ContextTab with a set icon icon 1`] = `
           role="presentation"
         >
           <a
-            href="javascript:void(0);"
+            href="#"
+            onClick={[Function]}
             role="menuitem"
             tabIndex="-1"
           >
@@ -159,7 +163,8 @@ exports[`ContextTab should render a ContextTab with a set icon icon 1`] = `
           role="presentation"
         >
           <a
-            href="javascript:void(0);"
+            href="#"
+            onClick={[Function]}
             role="menuitem"
             tabIndex="-1"
           >
@@ -219,8 +224,9 @@ exports[`ContextTab should render a ContextTab with an unread indicator 1`] = `
     aria-controls="tabpanel-id"
     aria-selected="false"
     className="slds-context-bar__label-action"
-    href="javascript:void(0);"
+    href="#"
     id="tab-id"
+    onClick={[Function]}
     role="tab"
     tabIndex="-1"
     title="Tab Name"
@@ -294,7 +300,8 @@ exports[`ContextTab should render a ContextTab with an unread indicator 1`] = `
           role="presentation"
         >
           <a
-            href="javascript:void(0);"
+            href="#"
+            onClick={[Function]}
             role="menuitem"
             tabIndex="-1"
           >
@@ -321,7 +328,8 @@ exports[`ContextTab should render a ContextTab with an unread indicator 1`] = `
           role="presentation"
         >
           <a
-            href="javascript:void(0);"
+            href="#"
+            onClick={[Function]}
             role="menuitem"
             tabIndex="-1"
           >
@@ -348,7 +356,8 @@ exports[`ContextTab should render a ContextTab with an unread indicator 1`] = `
           role="presentation"
         >
           <a
-            href="javascript:void(0);"
+            href="#"
+            onClick={[Function]}
             role="menuitem"
             tabIndex="-1"
           >
@@ -375,7 +384,8 @@ exports[`ContextTab should render a ContextTab with an unread indicator 1`] = `
           role="presentation"
         >
           <a
-            href="javascript:void(0);"
+            href="#"
+            onClick={[Function]}
             role="menuitem"
             tabIndex="-1"
           >
@@ -435,8 +445,9 @@ exports[`ContextTab should render a ContextTab with an unsaved indicator 1`] = `
     aria-controls="tabpanel-id"
     aria-selected="false"
     className="slds-context-bar__label-action"
-    href="javascript:void(0);"
+    href="#"
     id="tab-id"
+    onClick={[Function]}
     role="tab"
     tabIndex="-1"
     title="Tab Name"
@@ -512,7 +523,8 @@ exports[`ContextTab should render a ContextTab with an unsaved indicator 1`] = `
           role="presentation"
         >
           <a
-            href="javascript:void(0);"
+            href="#"
+            onClick={[Function]}
             role="menuitem"
             tabIndex="-1"
           >
@@ -539,7 +551,8 @@ exports[`ContextTab should render a ContextTab with an unsaved indicator 1`] = `
           role="presentation"
         >
           <a
-            href="javascript:void(0);"
+            href="#"
+            onClick={[Function]}
             role="menuitem"
             tabIndex="-1"
           >
@@ -566,7 +579,8 @@ exports[`ContextTab should render a ContextTab with an unsaved indicator 1`] = `
           role="presentation"
         >
           <a
-            href="javascript:void(0);"
+            href="#"
+            onClick={[Function]}
             role="menuitem"
             tabIndex="-1"
           >
@@ -593,7 +607,8 @@ exports[`ContextTab should render a ContextTab with an unsaved indicator 1`] = `
           role="presentation"
         >
           <a
-            href="javascript:void(0);"
+            href="#"
+            onClick={[Function]}
             role="menuitem"
             tabIndex="-1"
           >
@@ -653,8 +668,9 @@ exports[`ContextTab should render a ContextTab with status level 1`] = `
     aria-controls="tabpanel-id"
     aria-selected="false"
     className="slds-context-bar__label-action"
-    href="javascript:void(0);"
+    href="#"
     id="tab-id"
+    onClick={[Function]}
     role="tab"
     tabIndex="-1"
     title="Tab Name"
@@ -726,7 +742,8 @@ exports[`ContextTab should render a ContextTab with status level 1`] = `
           role="presentation"
         >
           <a
-            href="javascript:void(0);"
+            href="#"
+            onClick={[Function]}
             role="menuitem"
             tabIndex="-1"
           >
@@ -753,7 +770,8 @@ exports[`ContextTab should render a ContextTab with status level 1`] = `
           role="presentation"
         >
           <a
-            href="javascript:void(0);"
+            href="#"
+            onClick={[Function]}
             role="menuitem"
             tabIndex="-1"
           >
@@ -780,7 +798,8 @@ exports[`ContextTab should render a ContextTab with status level 1`] = `
           role="presentation"
         >
           <a
-            href="javascript:void(0);"
+            href="#"
+            onClick={[Function]}
             role="menuitem"
             tabIndex="-1"
           >
@@ -807,7 +826,8 @@ exports[`ContextTab should render a ContextTab with status level 1`] = `
           role="presentation"
         >
           <a
-            href="javascript:void(0);"
+            href="#"
+            onClick={[Function]}
             role="menuitem"
             tabIndex="-1"
           >
@@ -867,8 +887,9 @@ exports[`ContextTab should render a ContextTab without an icon 1`] = `
     aria-controls="tabpanel-id"
     aria-selected="false"
     className="slds-context-bar__label-action"
-    href="javascript:void(0);"
+    href="#"
     id="tab-id"
+    onClick={[Function]}
     role="tab"
     tabIndex="-1"
     title="Tab Name"
@@ -918,7 +939,8 @@ exports[`ContextTab should render a ContextTab without an icon 1`] = `
           role="presentation"
         >
           <a
-            href="javascript:void(0);"
+            href="#"
+            onClick={[Function]}
             role="menuitem"
             tabIndex="-1"
           >
@@ -945,7 +967,8 @@ exports[`ContextTab should render a ContextTab without an icon 1`] = `
           role="presentation"
         >
           <a
-            href="javascript:void(0);"
+            href="#"
+            onClick={[Function]}
             role="menuitem"
             tabIndex="-1"
           >
@@ -972,7 +995,8 @@ exports[`ContextTab should render a ContextTab without an icon 1`] = `
           role="presentation"
         >
           <a
-            href="javascript:void(0);"
+            href="#"
+            onClick={[Function]}
             role="menuitem"
             tabIndex="-1"
           >
@@ -999,7 +1023,8 @@ exports[`ContextTab should render a ContextTab without an icon 1`] = `
           role="presentation"
         >
           <a
-            href="javascript:void(0);"
+            href="#"
+            onClick={[Function]}
             role="menuitem"
             tabIndex="-1"
           >
@@ -1059,8 +1084,9 @@ exports[`ContextTab should render a default ContextTab 1`] = `
     aria-controls="tabpanel-id"
     aria-selected="false"
     className="slds-context-bar__label-action"
-    href="javascript:void(0);"
+    href="#"
     id="tab-id"
+    onClick={[Function]}
     role="tab"
     tabIndex="-1"
     title="Tab Name"
@@ -1128,7 +1154,8 @@ exports[`ContextTab should render a default ContextTab 1`] = `
           role="presentation"
         >
           <a
-            href="javascript:void(0);"
+            href="#"
+            onClick={[Function]}
             role="menuitem"
             tabIndex="-1"
           >
@@ -1155,7 +1182,8 @@ exports[`ContextTab should render a default ContextTab 1`] = `
           role="presentation"
         >
           <a
-            href="javascript:void(0);"
+            href="#"
+            onClick={[Function]}
             role="menuitem"
             tabIndex="-1"
           >
@@ -1182,7 +1210,8 @@ exports[`ContextTab should render a default ContextTab 1`] = `
           role="presentation"
         >
           <a
-            href="javascript:void(0);"
+            href="#"
+            onClick={[Function]}
             role="menuitem"
             tabIndex="-1"
           >
@@ -1209,7 +1238,8 @@ exports[`ContextTab should render a default ContextTab 1`] = `
           role="presentation"
         >
           <a
-            href="javascript:void(0);"
+            href="#"
+            onClick={[Function]}
             role="menuitem"
             tabIndex="-1"
           >
@@ -1269,8 +1299,9 @@ exports[`ContextTab should render an active ContextTab 1`] = `
     aria-controls="tabpanel-id"
     aria-selected="true"
     className="slds-context-bar__label-action"
-    href="javascript:void(0);"
+    href="#"
     id="tab-id"
+    onClick={[Function]}
     role="tab"
     tabIndex="0"
     title="Tab Name"
@@ -1338,7 +1369,8 @@ exports[`ContextTab should render an active ContextTab 1`] = `
           role="presentation"
         >
           <a
-            href="javascript:void(0);"
+            href="#"
+            onClick={[Function]}
             role="menuitem"
             tabIndex="-1"
           >
@@ -1365,7 +1397,8 @@ exports[`ContextTab should render an active ContextTab 1`] = `
           role="presentation"
         >
           <a
-            href="javascript:void(0);"
+            href="#"
+            onClick={[Function]}
             role="menuitem"
             tabIndex="-1"
           >
@@ -1392,7 +1425,8 @@ exports[`ContextTab should render an active ContextTab 1`] = `
           role="presentation"
         >
           <a
-            href="javascript:void(0);"
+            href="#"
+            onClick={[Function]}
             role="menuitem"
             tabIndex="-1"
           >
@@ -1419,7 +1453,8 @@ exports[`ContextTab should render an active ContextTab 1`] = `
           role="presentation"
         >
           <a
-            href="javascript:void(0);"
+            href="#"
+            onClick={[Function]}
             role="menuitem"
             tabIndex="-1"
           >
@@ -1514,7 +1549,8 @@ exports[`ContextTabBarOverflow should render a ContextTabBarOverflow 1`] = `
         role="presentation"
       >
         <a
-          href="javascript:void(0);"
+          href="#"
+          onClick={[Function]}
           role="menuitem"
           tabIndex="-1"
         >
@@ -1554,7 +1590,8 @@ exports[`ContextTabBarOverflow should render a ContextTabBarOverflow 1`] = `
         role="presentation"
       >
         <a
-          href="javascript:void(0);"
+          href="#"
+          onClick={[Function]}
           role="menuitem"
           tabIndex="-1"
         >
@@ -1639,7 +1676,8 @@ exports[`ContextTabBarOverflow should render a ContextTabBarOverflow with a stat
       >
         <a
           className="slds-has-error"
-          href="javascript:void(0);"
+          href="#"
+          onClick={[Function]}
           role="menuitem"
           tabIndex="-1"
         >
@@ -1683,7 +1721,8 @@ exports[`ContextTabBarOverflow should render a ContextTabBarOverflow with a stat
         role="presentation"
       >
         <a
-          href="javascript:void(0);"
+          href="#"
+          onClick={[Function]}
           role="menuitem"
           tabIndex="-1"
         >
@@ -1768,7 +1807,8 @@ exports[`ContextTabBarOverflow should render a ContextTabBarOverflow with a stat
       >
         <a
           className="slds-has-warning"
-          href="javascript:void(0);"
+          href="#"
+          onClick={[Function]}
           role="menuitem"
           tabIndex="-1"
         >
@@ -1812,7 +1852,8 @@ exports[`ContextTabBarOverflow should render a ContextTabBarOverflow with a stat
         role="presentation"
       >
         <a
-          href="javascript:void(0);"
+          href="#"
+          onClick={[Function]}
           role="menuitem"
           tabIndex="-1"
         >
@@ -1897,8 +1938,9 @@ exports[`Navigation Tab Bar renders a context tab 1`] = `
     aria-controls="context-tab-panel-2"
     aria-selected="false"
     className="slds-context-bar__label-action"
-    href="javascript:void(0);"
+    href="#"
     id="context-tab-id-2"
+    onClick={[Function]}
     role="tab"
     tabIndex="-1"
     title="Tab Item 1"
@@ -1966,7 +2008,8 @@ exports[`Navigation Tab Bar renders a context tab 1`] = `
           role="presentation"
         >
           <a
-            href="javascript:void(0);"
+            href="#"
+            onClick={[Function]}
             role="menuitem"
             tabIndex="-1"
           >
@@ -1993,7 +2036,8 @@ exports[`Navigation Tab Bar renders a context tab 1`] = `
           role="presentation"
         >
           <a
-            href="javascript:void(0);"
+            href="#"
+            onClick={[Function]}
             role="menuitem"
             tabIndex="-1"
           >
@@ -2020,7 +2064,8 @@ exports[`Navigation Tab Bar renders a context tab 1`] = `
           role="presentation"
         >
           <a
-            href="javascript:void(0);"
+            href="#"
+            onClick={[Function]}
             role="menuitem"
             tabIndex="-1"
           >
@@ -2047,7 +2092,8 @@ exports[`Navigation Tab Bar renders a context tab 1`] = `
           role="presentation"
         >
           <a
-            href="javascript:void(0);"
+            href="#"
+            onClick={[Function]}
             role="menuitem"
             tabIndex="-1"
           >
@@ -2155,7 +2201,8 @@ exports[`Navigation Tab Bar renders an overflow tab 1`] = `
         role="presentation"
       >
         <a
-          href="javascript:void(0);"
+          href="#"
+          onClick={[Function]}
           role="menuitem"
           tabIndex="-1"
         >
@@ -2208,7 +2255,8 @@ exports[`Navigation Tab Bar renders an overflow tab 1`] = `
         role="presentation"
       >
         <a
-          href="javascript:void(0);"
+          href="#"
+          onClick={[Function]}
           role="menuitem"
           tabIndex="-1"
         >
@@ -2257,8 +2305,9 @@ exports[`Navigation Tab Bar renders an unread context tab 1`] = `
     aria-controls="context-tab-panel-2"
     aria-selected="false"
     className="slds-context-bar__label-action"
-    href="javascript:void(0);"
+    href="#"
     id="context-tab-id-2"
+    onClick={[Function]}
     role="tab"
     tabIndex="-1"
     title="Tab Item 1"
@@ -2332,7 +2381,8 @@ exports[`Navigation Tab Bar renders an unread context tab 1`] = `
           role="presentation"
         >
           <a
-            href="javascript:void(0);"
+            href="#"
+            onClick={[Function]}
             role="menuitem"
             tabIndex="-1"
           >
@@ -2359,7 +2409,8 @@ exports[`Navigation Tab Bar renders an unread context tab 1`] = `
           role="presentation"
         >
           <a
-            href="javascript:void(0);"
+            href="#"
+            onClick={[Function]}
             role="menuitem"
             tabIndex="-1"
           >
@@ -2386,7 +2437,8 @@ exports[`Navigation Tab Bar renders an unread context tab 1`] = `
           role="presentation"
         >
           <a
-            href="javascript:void(0);"
+            href="#"
+            onClick={[Function]}
             role="menuitem"
             tabIndex="-1"
           >
@@ -2413,7 +2465,8 @@ exports[`Navigation Tab Bar renders an unread context tab 1`] = `
           role="presentation"
         >
           <a
-            href="javascript:void(0);"
+            href="#"
+            onClick={[Function]}
             role="menuitem"
             tabIndex="-1"
           >
@@ -2473,8 +2526,9 @@ exports[`Navigation Tab Bar renders an unsaved context tab 1`] = `
     aria-controls="context-tab-panel-2"
     aria-selected="false"
     className="slds-context-bar__label-action"
-    href="javascript:void(0);"
+    href="#"
     id="context-tab-id-2"
+    onClick={[Function]}
     role="tab"
     tabIndex="-1"
     title="Tab Item 1"
@@ -2550,7 +2604,8 @@ exports[`Navigation Tab Bar renders an unsaved context tab 1`] = `
           role="presentation"
         >
           <a
-            href="javascript:void(0);"
+            href="#"
+            onClick={[Function]}
             role="menuitem"
             tabIndex="-1"
           >
@@ -2577,7 +2632,8 @@ exports[`Navigation Tab Bar renders an unsaved context tab 1`] = `
           role="presentation"
         >
           <a
-            href="javascript:void(0);"
+            href="#"
+            onClick={[Function]}
             role="menuitem"
             tabIndex="-1"
           >
@@ -2604,7 +2660,8 @@ exports[`Navigation Tab Bar renders an unsaved context tab 1`] = `
           role="presentation"
         >
           <a
-            href="javascript:void(0);"
+            href="#"
+            onClick={[Function]}
             role="menuitem"
             tabIndex="-1"
           >
@@ -2631,7 +2688,8 @@ exports[`Navigation Tab Bar renders an unsaved context tab 1`] = `
           role="presentation"
         >
           <a
-            href="javascript:void(0);"
+            href="#"
+            onClick={[Function]}
             role="menuitem"
             tabIndex="-1"
           >
@@ -2924,7 +2982,8 @@ exports[`renders a global-navigation with sub-tabs 1`] = `
       >
         <a
           className="slds-context-bar__label-action"
-          href="javascript:void(0);"
+          href="#"
+          onClick={[Function]}
         >
           <span
             className="slds-truncate"
@@ -2968,7 +3027,8 @@ exports[`renders a global-navigation with sub-tabs 1`] = `
               role="presentation"
             >
               <a
-                href="javascript:void(0);"
+                href="#"
+                onClick={[Function]}
                 role="menuitem"
                 tabIndex="-1"
               >
@@ -3002,7 +3062,8 @@ exports[`renders a global-navigation with sub-tabs 1`] = `
               role="presentation"
             >
               <a
-                href="javascript:void(0);"
+                href="#"
+                onClick={[Function]}
                 role="menuitem"
                 tabIndex="-1"
               >
@@ -3036,7 +3097,8 @@ exports[`renders a global-navigation with sub-tabs 1`] = `
               role="presentation"
             >
               <a
-                href="javascript:void(0);"
+                href="#"
+                onClick={[Function]}
                 role="menuitem"
                 tabIndex="-1"
               >
@@ -3113,8 +3175,9 @@ exports[`renders a global-navigation with sub-tabs 1`] = `
             aria-controls="context-tab-panel-1"
             aria-selected="true"
             className="slds-context-bar__label-action"
-            href="javascript:void(0);"
+            href="#"
             id="context-tab-id-1"
+            onClick={[Function]}
             role="tab"
             tabIndex="0"
             title="Home"
@@ -3182,7 +3245,8 @@ exports[`renders a global-navigation with sub-tabs 1`] = `
                   role="presentation"
                 >
                   <a
-                    href="javascript:void(0);"
+                    href="#"
+                    onClick={[Function]}
                     role="menuitem"
                     tabIndex="-1"
                   >
@@ -3209,7 +3273,8 @@ exports[`renders a global-navigation with sub-tabs 1`] = `
                   role="presentation"
                 >
                   <a
-                    href="javascript:void(0);"
+                    href="#"
+                    onClick={[Function]}
                     role="menuitem"
                     tabIndex="-1"
                   >
@@ -3236,7 +3301,8 @@ exports[`renders a global-navigation with sub-tabs 1`] = `
                   role="presentation"
                 >
                   <a
-                    href="javascript:void(0);"
+                    href="#"
+                    onClick={[Function]}
                     role="menuitem"
                     tabIndex="-1"
                   >
@@ -3263,7 +3329,8 @@ exports[`renders a global-navigation with sub-tabs 1`] = `
                   role="presentation"
                 >
                   <a
-                    href="javascript:void(0);"
+                    href="#"
+                    onClick={[Function]}
                     role="menuitem"
                     tabIndex="-1"
                   >
@@ -3320,8 +3387,9 @@ exports[`renders a global-navigation with sub-tabs 1`] = `
             aria-controls="context-tab-panel-2"
             aria-selected="false"
             className="slds-context-bar__label-action"
-            href="javascript:void(0);"
+            href="#"
             id="context-tab-id-2"
+            onClick={[Function]}
             role="tab"
             tabIndex="-1"
             title="Tab Item 1"
@@ -3389,7 +3457,8 @@ exports[`renders a global-navigation with sub-tabs 1`] = `
                   role="presentation"
                 >
                   <a
-                    href="javascript:void(0);"
+                    href="#"
+                    onClick={[Function]}
                     role="menuitem"
                     tabIndex="-1"
                   >
@@ -3416,7 +3485,8 @@ exports[`renders a global-navigation with sub-tabs 1`] = `
                   role="presentation"
                 >
                   <a
-                    href="javascript:void(0);"
+                    href="#"
+                    onClick={[Function]}
                     role="menuitem"
                     tabIndex="-1"
                   >
@@ -3443,7 +3513,8 @@ exports[`renders a global-navigation with sub-tabs 1`] = `
                   role="presentation"
                 >
                   <a
-                    href="javascript:void(0);"
+                    href="#"
+                    onClick={[Function]}
                     role="menuitem"
                     tabIndex="-1"
                   >
@@ -3470,7 +3541,8 @@ exports[`renders a global-navigation with sub-tabs 1`] = `
                   role="presentation"
                 >
                   <a
-                    href="javascript:void(0);"
+                    href="#"
+                    onClick={[Function]}
                     role="menuitem"
                     tabIndex="-1"
                   >
@@ -3527,8 +3599,9 @@ exports[`renders a global-navigation with sub-tabs 1`] = `
             aria-controls="context-tab-panel-3"
             aria-selected="false"
             className="slds-context-bar__label-action"
-            href="javascript:void(0);"
+            href="#"
             id="context-tab-id-3"
+            onClick={[Function]}
             role="tab"
             tabIndex="-1"
             title="Tab Item 2"
@@ -3596,7 +3669,8 @@ exports[`renders a global-navigation with sub-tabs 1`] = `
                   role="presentation"
                 >
                   <a
-                    href="javascript:void(0);"
+                    href="#"
+                    onClick={[Function]}
                     role="menuitem"
                     tabIndex="-1"
                   >
@@ -3623,7 +3697,8 @@ exports[`renders a global-navigation with sub-tabs 1`] = `
                   role="presentation"
                 >
                   <a
-                    href="javascript:void(0);"
+                    href="#"
+                    onClick={[Function]}
                     role="menuitem"
                     tabIndex="-1"
                   >
@@ -3650,7 +3725,8 @@ exports[`renders a global-navigation with sub-tabs 1`] = `
                   role="presentation"
                 >
                   <a
-                    href="javascript:void(0);"
+                    href="#"
+                    onClick={[Function]}
                     role="menuitem"
                     tabIndex="-1"
                   >
@@ -3677,7 +3753,8 @@ exports[`renders a global-navigation with sub-tabs 1`] = `
                   role="presentation"
                 >
                   <a
-                    href="javascript:void(0);"
+                    href="#"
+                    onClick={[Function]}
                     role="menuitem"
                     tabIndex="-1"
                   >
@@ -3750,8 +3827,9 @@ exports[`renders a global-navigation with sub-tabs 1`] = `
             aria-controls="subtab-tabpanel-01"
             aria-selected="true"
             className="slds-tabs_default__link slds-p-horizontal_xx-small"
-            href="javascript:void(0);"
+            href="#"
             id="subtab-tabitem-01"
+            onClick={[Function]}
             role="tab"
             tabIndex="0"
             title="00071938"
@@ -3816,8 +3894,9 @@ exports[`renders a global-navigation with sub-tabs 1`] = `
             aria-controls="subtab-tabpanel-02"
             aria-selected="false"
             className="slds-tabs_default__link slds-p-horizontal_xx-small"
-            href="javascript:void(0);"
+            href="#"
             id="subtab-tabitem-02"
+            onClick={[Function]}
             role="tab"
             tabIndex="-1"
             title="Chat - Customer"
@@ -3991,7 +4070,8 @@ exports[`renders an overflowed global-navigation with dropdown, unread, and unsa
       >
         <a
           className="slds-context-bar__label-action"
-          href="javascript:void(0);"
+          href="#"
+          onClick={[Function]}
         >
           <span
             className="slds-truncate"
@@ -4035,7 +4115,8 @@ exports[`renders an overflowed global-navigation with dropdown, unread, and unsa
               role="presentation"
             >
               <a
-                href="javascript:void(0);"
+                href="#"
+                onClick={[Function]}
                 role="menuitem"
                 tabIndex="-1"
               >
@@ -4069,7 +4150,8 @@ exports[`renders an overflowed global-navigation with dropdown, unread, and unsa
               role="presentation"
             >
               <a
-                href="javascript:void(0);"
+                href="#"
+                onClick={[Function]}
                 role="menuitem"
                 tabIndex="-1"
               >
@@ -4103,7 +4185,8 @@ exports[`renders an overflowed global-navigation with dropdown, unread, and unsa
               role="presentation"
             >
               <a
-                href="javascript:void(0);"
+                href="#"
+                onClick={[Function]}
                 role="menuitem"
                 tabIndex="-1"
               >
@@ -4180,8 +4263,9 @@ exports[`renders an overflowed global-navigation with dropdown, unread, and unsa
             aria-controls="context-tab-panel-1"
             aria-selected="true"
             className="slds-context-bar__label-action"
-            href="javascript:void(0);"
+            href="#"
             id="context-tab-id-1"
+            onClick={[Function]}
             role="tab"
             tabIndex="0"
             title="Home"
@@ -4249,7 +4333,8 @@ exports[`renders an overflowed global-navigation with dropdown, unread, and unsa
                   role="presentation"
                 >
                   <a
-                    href="javascript:void(0);"
+                    href="#"
+                    onClick={[Function]}
                     role="menuitem"
                     tabIndex="-1"
                   >
@@ -4276,7 +4361,8 @@ exports[`renders an overflowed global-navigation with dropdown, unread, and unsa
                   role="presentation"
                 >
                   <a
-                    href="javascript:void(0);"
+                    href="#"
+                    onClick={[Function]}
                     role="menuitem"
                     tabIndex="-1"
                   >
@@ -4303,7 +4389,8 @@ exports[`renders an overflowed global-navigation with dropdown, unread, and unsa
                   role="presentation"
                 >
                   <a
-                    href="javascript:void(0);"
+                    href="#"
+                    onClick={[Function]}
                     role="menuitem"
                     tabIndex="-1"
                   >
@@ -4330,7 +4417,8 @@ exports[`renders an overflowed global-navigation with dropdown, unread, and unsa
                   role="presentation"
                 >
                   <a
-                    href="javascript:void(0);"
+                    href="#"
+                    onClick={[Function]}
                     role="menuitem"
                     tabIndex="-1"
                   >
@@ -4387,8 +4475,9 @@ exports[`renders an overflowed global-navigation with dropdown, unread, and unsa
             aria-controls="context-tab-panel-2"
             aria-selected="false"
             className="slds-context-bar__label-action"
-            href="javascript:void(0);"
+            href="#"
             id="context-tab-id-2"
+            onClick={[Function]}
             role="tab"
             tabIndex="-1"
             title="Tab Item 1"
@@ -4456,7 +4545,8 @@ exports[`renders an overflowed global-navigation with dropdown, unread, and unsa
                   role="presentation"
                 >
                   <a
-                    href="javascript:void(0);"
+                    href="#"
+                    onClick={[Function]}
                     role="menuitem"
                     tabIndex="-1"
                   >
@@ -4483,7 +4573,8 @@ exports[`renders an overflowed global-navigation with dropdown, unread, and unsa
                   role="presentation"
                 >
                   <a
-                    href="javascript:void(0);"
+                    href="#"
+                    onClick={[Function]}
                     role="menuitem"
                     tabIndex="-1"
                   >
@@ -4510,7 +4601,8 @@ exports[`renders an overflowed global-navigation with dropdown, unread, and unsa
                   role="presentation"
                 >
                   <a
-                    href="javascript:void(0);"
+                    href="#"
+                    onClick={[Function]}
                     role="menuitem"
                     tabIndex="-1"
                   >
@@ -4537,7 +4629,8 @@ exports[`renders an overflowed global-navigation with dropdown, unread, and unsa
                   role="presentation"
                 >
                   <a
-                    href="javascript:void(0);"
+                    href="#"
+                    onClick={[Function]}
                     role="menuitem"
                     tabIndex="-1"
                   >
@@ -4594,8 +4687,9 @@ exports[`renders an overflowed global-navigation with dropdown, unread, and unsa
             aria-controls="context-tab-panel-3"
             aria-selected="false"
             className="slds-context-bar__label-action"
-            href="javascript:void(0);"
+            href="#"
             id="context-tab-id-3"
+            onClick={[Function]}
             role="tab"
             tabIndex="-1"
             title="Tab Item 2"
@@ -4663,7 +4757,8 @@ exports[`renders an overflowed global-navigation with dropdown, unread, and unsa
                   role="presentation"
                 >
                   <a
-                    href="javascript:void(0);"
+                    href="#"
+                    onClick={[Function]}
                     role="menuitem"
                     tabIndex="-1"
                   >
@@ -4690,7 +4785,8 @@ exports[`renders an overflowed global-navigation with dropdown, unread, and unsa
                   role="presentation"
                 >
                   <a
-                    href="javascript:void(0);"
+                    href="#"
+                    onClick={[Function]}
                     role="menuitem"
                     tabIndex="-1"
                   >
@@ -4717,7 +4813,8 @@ exports[`renders an overflowed global-navigation with dropdown, unread, and unsa
                   role="presentation"
                 >
                   <a
-                    href="javascript:void(0);"
+                    href="#"
+                    onClick={[Function]}
                     role="menuitem"
                     tabIndex="-1"
                   >
@@ -4744,7 +4841,8 @@ exports[`renders an overflowed global-navigation with dropdown, unread, and unsa
                   role="presentation"
                 >
                   <a
-                    href="javascript:void(0);"
+                    href="#"
+                    onClick={[Function]}
                     role="menuitem"
                     tabIndex="-1"
                   >
@@ -4849,7 +4947,8 @@ exports[`renders an overflowed global-navigation with dropdown, unread, and unsa
                 role="presentation"
               >
                 <a
-                  href="javascript:void(0);"
+                  href="#"
+                  onClick={[Function]}
                   role="menuitem"
                   tabIndex="-1"
                 >
@@ -4902,7 +5001,8 @@ exports[`renders an overflowed global-navigation with dropdown, unread, and unsa
                 role="presentation"
               >
                 <a
-                  href="javascript:void(0);"
+                  href="#"
+                  onClick={[Function]}
                   role="menuitem"
                   tabIndex="-1"
                 >

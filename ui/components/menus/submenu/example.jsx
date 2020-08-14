@@ -39,10 +39,11 @@ export let MenuItemHasSubmenu = props => {
     >
       <a
         role="menuitem"
-        href="javascript:void(0);"
+        href="#"
         aria-haspopup="true"
         aria-expanded={ariaExpanded}
         tabIndex={tabIndex || '-1'}
+        onClick={e => e.preventDefault()}
       >
         <span className="slds-truncate" title={title || itemName}>
           {props.itemName}

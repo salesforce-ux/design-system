@@ -17,7 +17,7 @@ it('renders a base alert', () =>
       />
       <h2>
         Logged in as John Smith (johnsmith@acme.com).{' '}
-        <a href="javascript:void(0);">Log out</a>
+        <a href="#" onClick={e => e.preventDefault()}>Log out</a>
       </h2>
     </Alert>
   ));
@@ -33,7 +33,7 @@ it('renders a warning alert', () =>
       />
       <h2>
         Your browser is outdated. Your Salesforce experience may be degraded.{' '}
-        <a href="javascript:void(0);">More Information</a>
+        <a href="#" onClick={e => e.preventDefault()}>More Information</a>
       </h2>
     </Alert>
   ));
@@ -49,7 +49,7 @@ it('renders a error alert', () =>
       />
       <h2>
         Your browser is currently not supported. Your Salesforce may be
-        degraded. <a href="javascript:void(0);">More Information</a>
+        degraded. <a href="#" onClick={e => e.preventDefault()}>More Information</a>
       </h2>
     </Alert>
   ));
@@ -65,7 +65,7 @@ it('renders a offline alert', () =>
       />
       <h2>
         You are in offline mode.{' '}
-        <a href="javascript:void(0);">More Information</a>
+        <a href="#" onClick={e => e.preventDefault()}>More Information</a>
       </h2>
     </Alert>
   ));

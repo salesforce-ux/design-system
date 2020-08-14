@@ -64,10 +64,10 @@ export let VisualPicker = props => {
                 <SvgIcon
                   className={classNames(
                     'slds-icon slds-icon-' +
-                      props.sprite +
-                      '-' +
-                      props.symbol +
-                      ' slds-icon_large',
+                    props.sprite +
+                    '-' +
+                    props.symbol +
+                    ' slds-icon_large',
                     { 'slds-icon-text-default': props.sprite === 'utility' }
                   )}
                   sprite={props.sprite || 'action'}
@@ -77,14 +77,14 @@ export let VisualPicker = props => {
             </span>
           </span>
         ) : (
-          <span
-            className={classNames(
-              'slds-visual-picker__figure slds-visual-picker__text slds-align_absolute-center'
-            )}
-          >
-            {props.children}
-          </span>
-        )}
+            <span
+              className={classNames(
+                'slds-visual-picker__figure slds-visual-picker__text slds-align_absolute-center'
+              )}
+            >
+              {props.children}
+            </span>
+          )}
         {props.label ? (
           <span className="slds-visual-picker__body">{props.label}</span>
         ) : null}
@@ -104,11 +104,12 @@ export let VisualPicker = props => {
 
 export let VisualPickerMediaObject = props => (
   <a
-    href="javascript:void(0);"
+    href="#"
     className={classNames(
       'slds-box slds-box_link slds-box_x-small slds-media',
       props.className
     )}
+    onClick={e => e.preventDefault()}
   >
     <div className="slds-media__figure slds-media__figure_fixed-width slds-align_absolute-center slds-m-left_xx-small">
       <UtilityIcon className="slds-icon-text-default" symbol="knowledge_base" />

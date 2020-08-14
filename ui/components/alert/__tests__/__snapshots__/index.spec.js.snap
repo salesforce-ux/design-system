@@ -27,7 +27,8 @@ exports[`renders a base alert 1`] = `
     Logged in as John Smith (johnsmith@acme.com).
      
     <a
-      href="javascript:void(0);"
+      href="#"
+      onClick={[Function]}
     >
       Log out
     </a>
@@ -83,7 +84,8 @@ exports[`renders a error alert 1`] = `
   <h2>
     Your browser is currently not supported. Your Salesforce may be degraded. 
     <a
-      href="javascript:void(0);"
+      href="#"
+      onClick={[Function]}
     >
       More Information
     </a>
@@ -140,7 +142,8 @@ exports[`renders a offline alert 1`] = `
     You are in offline mode.
      
     <a
-      href="javascript:void(0);"
+      href="#"
+      onClick={[Function]}
     >
       More Information
     </a>
@@ -197,7 +200,8 @@ exports[`renders a warning alert 1`] = `
     Your browser is outdated. Your Salesforce experience may be degraded.
      
     <a
-      href="javascript:void(0);"
+      href="#"
+      onClick={[Function]}
     >
       More Information
     </a>

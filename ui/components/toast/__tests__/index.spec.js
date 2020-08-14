@@ -13,7 +13,7 @@ describe('Toast', () => {
         <div className="slds-notify__content">
           <h2 className="slds-text-heading_small">
             26 potential duplicate leads were found.{' '}
-            <a href="javascript:void(0);">Select Leads to Merge</a>
+            <a href="#" onClick={e => e.preventDefault()}>Select Leads to Merge</a>
           </h2>
         </div>
       </Toast>
@@ -25,7 +25,7 @@ describe('Toast', () => {
         <div className="slds-notify__content">
           <h2 className="slds-text-heading_small">
             26 potential duplicate leads were found.{' '}
-            <a href="javascript:void(0);">Select Leads to Merge</a>
+            <a href="#" onClick={e => e.preventDefault()}>Select Leads to Merge</a>
           </h2>
         </div>
       </Toast>
@@ -36,7 +36,7 @@ describe('Toast', () => {
         <div className="slds-notify__content">
           <h2 className="slds-text-heading_small">
             26 potential duplicate leads were found.{' '}
-            <a href="javascript:void(0);">Select Leads to Merge</a>
+            <a href="#" onClick={e => e.preventDefault()}>Select Leads to Merge</a>
           </h2>
         </div>
       </Toast>
@@ -47,7 +47,7 @@ describe('Toast', () => {
         <div className="slds-notify__content">
           <h2 className="slds-text-heading_small">
             26 potential duplicate leads were found.{' '}
-            <a href="javascript:void(0);">Select Leads to Merge</a>
+            <a href="#" onClick={e => e.preventDefault()}>Select Leads to Merge</a>
           </h2>
         </div>
       </Toast>
@@ -58,7 +58,7 @@ describe('Toast', () => {
         <div className="slds-notify__content">
           <h2 className="slds-text-heading_small">
             26 potential duplicate leads were found.{' '}
-            <a href="javascript:void(0);">Select Leads to Merge</a>
+            <a href="#" onClick={e => e.preventDefault()}>Select Leads to Merge</a>
           </h2>
         </div>
       </Toast>
@@ -74,7 +74,7 @@ describe('Toast', () => {
         />
         <div className="slds-notify__content">
           <h2 className="slds-text-heading_small ">
-            Account <a href="javascript:void(0);">ACME - 100</a> widgets was
+            Account <a href="#" onClick={e => e.preventDefault()}>ACME - 100</a> widgets was
             created.
           </h2>
         </div>
@@ -91,7 +91,7 @@ describe('Toast', () => {
         />
         <div className="slds-notify__content">
           <h2 className="slds-text-heading_small ">
-            Account <a href="javascript:void(0);">ACME - 100</a> widgets was
+            Account <a href="#" onClick={e => e.preventDefault()}>ACME - 100</a> widgets was
             created.
           </h2>
         </div>

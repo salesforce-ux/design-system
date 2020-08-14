@@ -29,7 +29,7 @@ const iconCases = (
 
 const ViewAll = () => (
   <dd className="slds-m-top_x-small slds-text-align_right">
-    <a href="javascript:void(0);" title="View all Opportunities">
+    <a href="#" onClick={e => e.preventDefault()} title="View all Opportunities">
       View All
     </a>
   </dd>
@@ -61,7 +61,7 @@ export default (
             className="slds-text-heading_medium slds-hyphenate"
             id="panel-heading-id"
           >
-            <a href="javascript:void(0);">Tesla Motors</a>
+            <a href="#" onClick={e => e.preventDefault()}>Tesla Motors</a>
           </h2>
         </div>
       </header>
@@ -100,7 +100,7 @@ export default (
               </p>
             </dt>
             <dd>
-              <a href="javascript:void(0);">212-345-3485</a>
+              <a href="#" onClick={e => e.preventDefault()}>212-345-3485</a>
             </dd>
           </dl>
         </div>
@@ -116,7 +116,7 @@ export default (
               </p>
             </dt>
             <dd>
-              <a href="javascript:void(0);">teslamotors.com</a>
+              <a href="#" onClick={e => e.preventDefault()}>teslamotors.com</a>
             </dd>
           </dl>
         </div>
@@ -132,7 +132,7 @@ export default (
               </p>
             </dt>
             <dd>
-              <a href="javascript:void(0);">Jeff Maguire</a>
+              <a href="#" onClick={e => e.preventDefault()}>Jeff Maguire</a>
             </dd>
           </dl>
         </div>
@@ -150,7 +150,7 @@ export default (
         {/* Opportunity One */}
         <dd className="slds-m-top_x-small">
           <p className="slds-truncate" title="Tesla - Mule ESB">
-            <a href="javascript:void(0);">Tesla - Mule ESB</a>
+            <a href="#" onClick={e => e.preventDefault()}>Tesla - Mule ESB</a>
           </p>
           <dl className="slds-list_horizontal slds-wrap slds-text-body_small">
             <dt
@@ -182,7 +182,7 @@ export default (
         {/* Opportunity Two */}
         <dd className="slds-m-top_x-small">
           <p className="slds-truncate" title="Tesla - Anypoint Studios">
-            <a href="javascript:void(0);">Tesla - Anypoint Studios</a>
+            <a href="#" onClick={e => e.preventDefault()}>Tesla - Anypoint Studios</a>
           </p>
           <dl className="slds-list_horizontal slds-wrap slds-text-body_small">
             <dt
@@ -223,7 +223,7 @@ export default (
         {/* Case One */}
         <dd className="slds-m-top_x-small">
           <p className="slds-truncate" title="Tesla - Anypoint Studios">
-            <a href="javascript:void(0);">Tesla - Anypoint Studios</a>
+            <a href="#" onClick={e => e.preventDefault()}>Tesla - Anypoint Studios</a>
           </p>
           <dl className="slds-list_horizontal slds-wrap slds-text-body_small">
             <dt

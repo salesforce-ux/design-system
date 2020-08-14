@@ -66,7 +66,7 @@ let PanelHeader = props => (
         className="slds-truncate slds-text-heading_small"
         title="Follow up on '15 contact"
       >
-        <a href="javascript:void(0);">Follow up on '15 contact</a>
+        <a href="#" onClick={e => e.preventDefault()}>Follow up on '15 contact</a>
       </h2>
       <p className="slds-truncate slds-text-body_small" title="Jun 18">
         Jun 18

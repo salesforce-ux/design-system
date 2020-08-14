@@ -55,8 +55,8 @@ const ActionsConditional = props => {
       <ActionsMenu iconColor={props.iconColor} />
     </div>
   ) : (
-    <ActionsMenu iconColor={props.iconColor} />
-  );
+      <ActionsMenu iconColor={props.iconColor} />
+    );
 };
 
 ActionsConditional.propTypes = {
@@ -201,7 +201,7 @@ export class File extends Component {
           {/*
             aXe is reporting an a11y violation where it says the <a> does not detect any discernible text when using <Spinner>, despite this not being the case (Spinner has "Loading" in .slds-assistive-text). To prevent this from breaking the build, we're excluding `.slds-file figure > a` from aXe linting. Tread carefully.
           */}
-          <a href="javascript:void(0);" className={figureClasses}>
+          <a href="#" className={figureClasses} onClick={e => e.preventDefault()}>
             {hasOverlay && <div className="slds-file_overlay" />}
 
             {this.fileContents()}
@@ -282,8 +282,9 @@ File.defaultProps = {
  */
 export const AttachmentLink = props => (
   <a
-    href="javascript:void(0);"
+    href="#"
     className="slds-media slds-box slds-grow slds-text-link_reset"
+    onClick={e => e.preventDefault()}
   >
     <div className="slds-media__figure slds-medium-show">
       <div className="slds-file slds-size_small">

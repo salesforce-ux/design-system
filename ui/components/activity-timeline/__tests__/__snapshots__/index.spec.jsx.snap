@@ -62,7 +62,8 @@ exports[`Activity Timeline Expandable renders a full expanded details section wi
         title="Lei Chan"
       >
         <a
-          href="javascript:void(0);"
+          href="#"
+          onClick={[Function]}
         >
           Lei Chan
         </a>
@@ -81,7 +82,8 @@ exports[`Activity Timeline Expandable renders a full expanded details section wi
         title="Tesla Cloudhub + Anypoint Connectors"
       >
         <a
-          href="javascript:void(0);"
+          href="#"
+          onClick={[Function]}
         >
           Tesla Cloudhub + Anypoint Connectors
         </a>
@@ -138,7 +140,8 @@ exports[`Activity Timeline Expandable renders a full expanded details section wi
         title="Lei Chan"
       >
         <a
-          href="javascript:void(0);"
+          href="#"
+          onClick={[Function]}
         >
           Lei Chan
         </a>
@@ -157,7 +160,8 @@ exports[`Activity Timeline Expandable renders a full expanded details section wi
         title="Tesla Cloudhub + Anypoint Connectors"
       >
         <a
-          href="javascript:void(0);"
+          href="#"
+          onClick={[Function]}
         >
           Tesla Cloudhub + Anypoint Connectors
         </a>
@@ -179,7 +183,7 @@ exports[`Activity Timeline Expandable renders a full expanded details section wi
 </article>
 `;
 
-exports[`Activity Timeline Expandable renders a hover state 1`] = `"<div class=\\"slds-grid slds-grid_align-spread slds-timeline__trigger\\"><div class=\\"slds-grid slds-grid_vertical-align-center slds-truncate_container_75 slds-no-space\\"><h3 class=\\"slds-truncate\\" title=\\"Mobile conversation on Monday\\"><a href=\\"javascript:void(0);\\"><strong>Mobile conversation on Monday</strong></a></h3></div><div class=\\"slds-timeline__actions slds-timeline__actions_inline\\"><p class=\\"slds-timeline__date\\">10:00am | 3/23/17</p><button class=\\"slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small\\" aria-haspopup=\\"true\\" title=\\"More Options for this item\\"><svg class=\\"slds-button__icon\\" aria-hidden=\\"true\\"><use xlink:href=\\"/assets/icons/utility-sprite/svg/symbols.svg#down\\"></use></svg><span class=\\"slds-assistive-text\\">More Options for this item</span></button></div></div>"`;
+exports[`Activity Timeline Expandable renders a hover state 1`] = `"<div class=\\"slds-grid slds-grid_align-spread slds-timeline__trigger\\"><div class=\\"slds-grid slds-grid_vertical-align-center slds-truncate_container_75 slds-no-space\\"><h3 class=\\"slds-truncate\\" title=\\"Mobile conversation on Monday\\"><a href=\\"#\\"><strong>Mobile conversation on Monday</strong></a></h3></div><div class=\\"slds-timeline__actions slds-timeline__actions_inline\\"><p class=\\"slds-timeline__date\\">10:00am | 3/23/17</p><button class=\\"slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small\\" aria-haspopup=\\"true\\" title=\\"More Options for this item\\"><svg class=\\"slds-button__icon\\" aria-hidden=\\"true\\"><use xlink:href=\\"/assets/icons/utility-sprite/svg/symbols.svg#down\\"></use></svg><span class=\\"slds-assistive-text\\">More Options for this item</span></button></div></div>"`;
 
 exports[`Activity Timeline Expandable renders a narrow timeline item 1`] = `
 <div
@@ -243,7 +247,8 @@ exports[`Activity Timeline Expandable renders a narrow timeline item 1`] = `
             title="Mobile conversation on Monday"
           >
             <a
-              href="javascript:void(0);"
+              href="#"
+              onClick={[Function]}
             >
               <strong>
                 Mobile conversation on Monday
@@ -284,7 +289,8 @@ exports[`Activity Timeline Expandable renders a narrow timeline item 1`] = `
         className="slds-m-horizontal_xx-small"
       >
         <a
-          href="javascript:void(0);"
+          href="#"
+          onClick={[Function]}
         >
           You
         </a>
@@ -292,7 +298,8 @@ exports[`Activity Timeline Expandable renders a narrow timeline item 1`] = `
         logged a call with
          
         <a
-          href="javascript:void(0);"
+          href="#"
+          onClick={[Function]}
         >
           Adam Chan
         </a>
@@ -319,7 +326,8 @@ exports[`Activity Timeline Expandable renders a narrow timeline item 1`] = `
               title="Adam Chan"
             >
               <a
-                href="javascript:void(0);"
+                href="#"
+                onClick={[Function]}
               >
                 Adam Chan
               </a>
@@ -338,7 +346,8 @@ exports[`Activity Timeline Expandable renders a narrow timeline item 1`] = `
               title="Tesla Cloudhub + Anypoint Connectors"
             >
               <a
-                href="javascript:void(0);"
+                href="#"
+                onClick={[Function]}
               >
                 Tesla Cloudhub + Anypoint Connectors
               </a>
@@ -449,7 +458,8 @@ exports[`Activity Timeline Expandable renders a task timeline item 1`] = `
             title="Mobile conversation on Monday"
           >
             <a
-              href="javascript:void(0);"
+              href="#"
+              onClick={[Function]}
             >
               <strong>
                 Mobile conversation on Monday
@@ -490,7 +500,8 @@ exports[`Activity Timeline Expandable renders a task timeline item 1`] = `
         className="slds-m-horizontal_xx-small"
       >
         <a
-          href="javascript:void(0);"
+          href="#"
+          onClick={[Function]}
         >
           You
         </a>
@@ -498,7 +509,8 @@ exports[`Activity Timeline Expandable renders a task timeline item 1`] = `
         created a task with
          
         <a
-          href="javascript:void(0);"
+          href="#"
+          onClick={[Function]}
         >
           Adam Chan
         </a>
@@ -525,7 +537,8 @@ exports[`Activity Timeline Expandable renders a task timeline item 1`] = `
               title="Adam Chan"
             >
               <a
-                href="javascript:void(0);"
+                href="#"
+                onClick={[Function]}
               >
                 Adam Chan
               </a>
@@ -544,7 +557,8 @@ exports[`Activity Timeline Expandable renders a task timeline item 1`] = `
               title="Tesla Cloudhub + Anypoint Connectors"
             >
               <a
-                href="javascript:void(0);"
+                href="#"
+                onClick={[Function]}
               >
                 Tesla Cloudhub + Anypoint Connectors
               </a>
@@ -647,7 +661,8 @@ exports[`Activity Timeline Expandable renders a timeline item 1`] = `
             title="Mobile conversation on Monday"
           >
             <a
-              href="javascript:void(0);"
+              href="#"
+              onClick={[Function]}
             >
               <strong>
                 Mobile conversation on Monday
@@ -688,7 +703,8 @@ exports[`Activity Timeline Expandable renders a timeline item 1`] = `
         className="slds-m-horizontal_xx-small"
       >
         <a
-          href="javascript:void(0);"
+          href="#"
+          onClick={[Function]}
         >
           You
         </a>
@@ -696,7 +712,8 @@ exports[`Activity Timeline Expandable renders a timeline item 1`] = `
         logged a call with
          
         <a
-          href="javascript:void(0);"
+          href="#"
+          onClick={[Function]}
         >
           Adam Chan
         </a>
@@ -723,7 +740,8 @@ exports[`Activity Timeline Expandable renders a timeline item 1`] = `
               title="Adam Chan"
             >
               <a
-                href="javascript:void(0);"
+                href="#"
+                onClick={[Function]}
               >
                 Adam Chan
               </a>
@@ -742,7 +760,8 @@ exports[`Activity Timeline Expandable renders a timeline item 1`] = `
               title="Tesla Cloudhub + Anypoint Connectors"
             >
               <a
-                href="javascript:void(0);"
+                href="#"
+                onClick={[Function]}
               >
                 Tesla Cloudhub + Anypoint Connectors
               </a>
@@ -831,7 +850,8 @@ exports[`Activity Timeline Expandable renders a timeline item trigger with a tas
       title="Send EBC Follow Up Details"
     >
       <a
-        href="javascript:void(0);"
+        href="#"
+        onClick={[Function]}
       >
         <strong>
           Send EBC Follow Up Details
@@ -882,7 +902,8 @@ exports[`Activity Timeline Expandable renders a timeline item trigger with icons
       title="EBC Follow Up Details"
     >
       <a
-        href="javascript:void(0);"
+        href="#"
+        onClick={[Function]}
       >
         <strong>
           EBC Follow Up Details
@@ -973,7 +994,8 @@ exports[`Activity Timeline Expandable renders a timeline item trigger with no ic
       title="EBC Follow Up Details"
     >
       <a
-        href="javascript:void(0);"
+        href="#"
+        onClick={[Function]}
       >
         <strong>
           EBC Follow Up Details
@@ -1098,7 +1120,8 @@ exports[`Activity Timeline Expandable renders a timeline item with icons 1`] = `
             title="Mobile conversation on Monday"
           >
             <a
-              href="javascript:void(0);"
+              href="#"
+              onClick={[Function]}
             >
               <strong>
                 Mobile conversation on Monday
@@ -1179,7 +1202,8 @@ exports[`Activity Timeline Expandable renders a timeline item with icons 1`] = `
         className="slds-m-horizontal_xx-small"
       >
         <a
-          href="javascript:void(0);"
+          href="#"
+          onClick={[Function]}
         >
           You
         </a>
@@ -1187,7 +1211,8 @@ exports[`Activity Timeline Expandable renders a timeline item with icons 1`] = `
         created a task with
          
         <a
-          href="javascript:void(0);"
+          href="#"
+          onClick={[Function]}
         >
           Adam Chan
         </a>
@@ -1214,7 +1239,8 @@ exports[`Activity Timeline Expandable renders a timeline item with icons 1`] = `
               title="Adam Chan"
             >
               <a
-                href="javascript:void(0);"
+                href="#"
+                onClick={[Function]}
               >
                 Adam Chan
               </a>
@@ -1233,7 +1259,8 @@ exports[`Activity Timeline Expandable renders a timeline item with icons 1`] = `
               title="Tesla Cloudhub + Anypoint Connectors"
             >
               <a
-                href="javascript:void(0);"
+                href="#"
+                onClick={[Function]}
               >
                 Tesla Cloudhub + Anypoint Connectors
               </a>
@@ -1273,7 +1300,8 @@ exports[`Activity Timeline Expandable renders a timeline media body 1`] = `
         title="EBC Follow Up Details"
       >
         <a
-          href="javascript:void(0);"
+          href="#"
+          onClick={[Function]}
         >
           <strong>
             EBC Follow Up Details
@@ -1314,7 +1342,8 @@ exports[`Activity Timeline Expandable renders a timeline media body 1`] = `
     className="slds-m-horizontal_xx-small"
   >
     <a
-      href="javascript:void(0);"
+      href="#"
+      onClick={[Function]}
     >
       You
     </a>
@@ -1322,7 +1351,8 @@ exports[`Activity Timeline Expandable renders a timeline media body 1`] = `
     created a task with
      
     <a
-      href="javascript:void(0);"
+      href="#"
+      onClick={[Function]}
     >
       Charlie Gomez
     </a>
@@ -1410,7 +1440,8 @@ exports[`Activity Timeline Expandable renders an expanded timeline item 1`] = `
             title="Mobile conversation on Monday"
           >
             <a
-              href="javascript:void(0);"
+              href="#"
+              onClick={[Function]}
             >
               <strong>
                 Mobile conversation on Monday
@@ -1451,7 +1482,8 @@ exports[`Activity Timeline Expandable renders an expanded timeline item 1`] = `
         className="slds-m-horizontal_xx-small"
       >
         <a
-          href="javascript:void(0);"
+          href="#"
+          onClick={[Function]}
         >
           You
         </a>
@@ -1459,7 +1491,8 @@ exports[`Activity Timeline Expandable renders an expanded timeline item 1`] = `
         logged a call with
          
         <a
-          href="javascript:void(0);"
+          href="#"
+          onClick={[Function]}
         >
           Adam Chan
         </a>
@@ -1486,7 +1519,8 @@ exports[`Activity Timeline Expandable renders an expanded timeline item 1`] = `
               title="Adam Chan"
             >
               <a
-                href="javascript:void(0);"
+                href="#"
+                onClick={[Function]}
               >
                 Adam Chan
               </a>
@@ -1505,7 +1539,8 @@ exports[`Activity Timeline Expandable renders an expanded timeline item 1`] = `
               title="Tesla Cloudhub + Anypoint Connectors"
             >
               <a
-                href="javascript:void(0);"
+                href="#"
+                onClick={[Function]}
               >
                 Tesla Cloudhub + Anypoint Connectors
               </a>
@@ -1575,7 +1610,8 @@ exports[`Activity Timeline Expandable renders simple timeline subtext 1`] = `
   className="slds-m-horizontal_xx-small"
 >
   <a
-    href="javascript:void(0);"
+    href="#"
+    onClick={[Function]}
   >
     You
   </a>
@@ -1583,7 +1619,8 @@ exports[`Activity Timeline Expandable renders simple timeline subtext 1`] = `
   created a task with
    
   <a
-    href="javascript:void(0);"
+    href="#"
+    onClick={[Function]}
   >
     Charlie Gomez
   </a>
@@ -1672,7 +1709,8 @@ exports[`Activity Timeline Expandable renders the deprecated combined timeline 1
                     title="Review proposals for EBC deck with larger team and have marketing review this"
                   >
                     <a
-                      href="javascript:void(0);"
+                      href="#"
+                      onClick={[Function]}
                     >
                       Review proposals for EBC deck with larger team and have marketing review this
                     </a>
@@ -1692,7 +1730,8 @@ exports[`Activity Timeline Expandable renders the deprecated combined timeline 1
                         className="slds-text-body_small"
                       >
                         <a
-                          href="javascript:void(0);"
+                          href="#"
+                          onClick={[Function]}
                         >
                           Lei Chan
                         </a>
@@ -1710,7 +1749,8 @@ exports[`Activity Timeline Expandable renders the deprecated combined timeline 1
                         className="slds-text-body_small"
                       >
                         <a
-                          href="javascript:void(0);"
+                          href="#"
+                          onClick={[Function]}
                         >
                           Betty Mason
                         </a>
@@ -1800,7 +1840,8 @@ exports[`Activity Timeline Expandable renders the deprecated combined timeline 1
                 title="Company One — EBC Meeting"
               >
                 <a
-                  href="javascript:void(0);"
+                  href="#"
+                  onClick={[Function]}
                 >
                   Company One — EBC Meeting
                 </a>
@@ -1826,7 +1867,8 @@ exports[`Activity Timeline Expandable renders the deprecated combined timeline 1
                     className="slds-text-body_small"
                   >
                     <a
-                      href="javascript:void(0);"
+                      href="#"
+                      onClick={[Function]}
                     >
                       Feb 23, 2015 11:00am–12:00pm
                     </a>
@@ -1844,7 +1886,8 @@ exports[`Activity Timeline Expandable renders the deprecated combined timeline 1
                     className="slds-text-body_small"
                   >
                     <a
-                      href="javascript:void(0);"
+                      href="#"
+                      onClick={[Function]}
                     >
                       300 Pike St, San Francisco CA
                     </a>
@@ -1862,26 +1905,30 @@ exports[`Activity Timeline Expandable renders the deprecated combined timeline 1
                     className="slds-text-body_small"
                   >
                     <a
-                      href="javascript:void(0);"
+                      href="#"
+                      onClick={[Function]}
                     >
                       Lei Chan
                     </a>
                     ,
                     <a
-                      href="javascript:void(0);"
+                      href="#"
+                      onClick={[Function]}
                     >
                       Jason Dewar
                     </a>
                     ,
                     <a
-                      href="javascript:void(0);"
+                      href="#"
+                      onClick={[Function]}
                     >
                       Gwen Jones
                     </a>
                      and
                      
                     <a
-                      href="javascript:void(0);"
+                      href="#"
+                      onClick={[Function]}
                     >
                       Pete Schaffer
                     </a>
@@ -1969,7 +2016,8 @@ exports[`Activity Timeline Expandable renders the deprecated combined timeline 1
                 title="Mobile conversation on Monday"
               >
                 <a
-                  href="javascript:void(0);"
+                  href="#"
+                  onClick={[Function]}
                 >
                   Mobile conversation on Monday
                 </a>
@@ -1995,7 +2043,8 @@ exports[`Activity Timeline Expandable renders the deprecated combined timeline 1
                     className="slds-text-body_small"
                   >
                     <a
-                      href="javascript:void(0);"
+                      href="#"
+                      onClick={[Function]}
                     >
                       Lei Chan
                     </a>
@@ -2013,7 +2062,8 @@ exports[`Activity Timeline Expandable renders the deprecated combined timeline 1
                     className="slds-text-body_small"
                   >
                     <a
-                      href="javascript:void(0);"
+                      href="#"
+                      onClick={[Function]}
                     >
                       Betty Mason
                     </a>
@@ -2101,7 +2151,8 @@ exports[`Activity Timeline Expandable renders the deprecated combined timeline 1
                 title="Mobile conversation on Monday"
               >
                 <a
-                  href="javascript:void(0);"
+                  href="#"
+                  onClick={[Function]}
                 >
                   Mobile conversation on Monday
                 </a>
@@ -2128,7 +2179,8 @@ exports[`Activity Timeline Expandable renders the deprecated combined timeline 1
                     title="Lei Chan with Long Name that might go on for quite some distance futher than you might expect"
                   >
                     <a
-                      href="javascript:void(0);"
+                      href="#"
+                      onClick={[Function]}
                     >
                       Lei Chan with Long Name that might go on for quite some distance futher than you might expect
                     </a>
@@ -2152,7 +2204,8 @@ exports[`Activity Timeline Expandable renders the deprecated combined timeline 1
                     className="slds-text-body_small"
                   >
                     <a
-                      href="javascript:void(0);"
+                      href="#"
+                      onClick={[Function]}
                     >
                       Jason Dewar
                     </a>
@@ -2236,7 +2289,8 @@ exports[`Activity Timeline Expandable renders timeline subtext with extra text a
   className="slds-m-horizontal_xx-small"
 >
   <a
-    href="javascript:void(0);"
+    href="#"
+    onClick={[Function]}
   >
     You
   </a>
@@ -2244,7 +2298,8 @@ exports[`Activity Timeline Expandable renders timeline subtext with extra text a
   created a task with
    
   <a
-    href="javascript:void(0);"
+    href="#"
+    onClick={[Function]}
   >
     Charlie Gomez
   </a>

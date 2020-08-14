@@ -28,7 +28,8 @@ let Notification = props => {
       <div className="slds-notification__body" id={bodyUniqueId}>
         <a
           className="slds-notification__target slds-media"
-          href="javascript:void(0);"
+          href="#"
+          onClick={e => e.preventDefault()}
         >
           <StandardIcon
             containerClassName="slds-media__figure"

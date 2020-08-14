@@ -7,9 +7,10 @@ export let Pill = props => (
   <span className={classNames('slds-pill slds-pill_link', props.className)}>
     {props.children}
     <a
-      href="javascript:void(0);"
+      href="#"
       className="slds-pill__action"
       title={props.label || 'Full pill label verbiage mirrored here'}
+      onClick={e => e.preventDefault()}
     >
       <span className="slds-pill__label">{props.label || 'Pill Label'}</span>
     </a>

@@ -8,7 +8,7 @@ export let examples = [
     id: 'reset',
     label: 'Link reset',
     element: (
-      <a href="javascript:void(0);" className="slds-text-link_reset">
+      <a href="#" onClick={e => e.preventDefault()} className="slds-text-link_reset">
         Link
       </a>
     )
@@ -17,7 +17,7 @@ export let examples = [
     id: 'link',
     label: 'Link reset with text link inside',
     element: (
-      <a href="javascript:void(0);" className="slds-text-link_reset">
+      <a href="#" onClick={e => e.preventDefault()} className="slds-text-link_reset">
         This text is a link but looks like normal text...<span className="slds-text-link">More</span>.
       </a>
     )
@@ -26,7 +26,7 @@ export let examples = [
     id: 'halo-focus',
     label: 'Link reset with halo focus',
     element: (
-      <a href="javascript:void(0);" className="slds-has-blur-focus">
+      <a href="#" onClick={e => e.preventDefault()} className="slds-has-blur-focus">
         Link with halo focus
       </a>
     )

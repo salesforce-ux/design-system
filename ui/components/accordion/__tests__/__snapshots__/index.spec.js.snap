@@ -572,7 +572,8 @@ exports[`renders an accordion with action overflow 1`] = `
                 role="presentation"
               >
                 <a
-                  href="javascript:void(0);"
+                  href="#"
+                  onClick={[Function]}
                   role="menuitem"
                   tabIndex="0"
                 >
@@ -589,7 +590,8 @@ exports[`renders an accordion with action overflow 1`] = `
                 role="presentation"
               >
                 <a
-                  href="javascript:void(0);"
+                  href="#"
+                  onClick={[Function]}
                   role="menuitem"
                   tabIndex="-1"
                 >
@@ -606,7 +608,8 @@ exports[`renders an accordion with action overflow 1`] = `
                 role="presentation"
               >
                 <a
-                  href="javascript:void(0);"
+                  href="#"
+                  onClick={[Function]}
                   role="menuitem"
                   tabIndex="-1"
                 >
@@ -698,7 +701,8 @@ exports[`renders an accordion with action overflow 1`] = `
                 role="presentation"
               >
                 <a
-                  href="javascript:void(0);"
+                  href="#"
+                  onClick={[Function]}
                   role="menuitem"
                   tabIndex="0"
                 >
@@ -715,7 +719,8 @@ exports[`renders an accordion with action overflow 1`] = `
                 role="presentation"
               >
                 <a
-                  href="javascript:void(0);"
+                  href="#"
+                  onClick={[Function]}
                   role="menuitem"
                   tabIndex="-1"
                 >
@@ -732,7 +737,8 @@ exports[`renders an accordion with action overflow 1`] = `
                 role="presentation"
               >
                 <a
-                  href="javascript:void(0);"
+                  href="#"
+                  onClick={[Function]}
                   role="menuitem"
                   tabIndex="-1"
                 >
@@ -824,7 +830,8 @@ exports[`renders an accordion with action overflow 1`] = `
                 role="presentation"
               >
                 <a
-                  href="javascript:void(0);"
+                  href="#"
+                  onClick={[Function]}
                   role="menuitem"
                   tabIndex="0"
                 >
@@ -841,7 +848,8 @@ exports[`renders an accordion with action overflow 1`] = `
                 role="presentation"
               >
                 <a
-                  href="javascript:void(0);"
+                  href="#"
+                  onClick={[Function]}
                   role="menuitem"
                   tabIndex="-1"
                 >
@@ -858,7 +866,8 @@ exports[`renders an accordion with action overflow 1`] = `
                 role="presentation"
               >
                 <a
-                  href="javascript:void(0);"
+                  href="#"
+                  onClick={[Function]}
                   role="menuitem"
                   tabIndex="-1"
                 >

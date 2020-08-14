@@ -17,15 +17,15 @@ describe('renders horizontal list utilities', () => {
     matchesMarkup(
       <ul className="slds-list_horizontal">
         <li>
-          <a href="javascript:void(0);">
+          <a href="#" onClick={e => e.preventDefault()}>
             Horizontal List with inline level links
           </a>
         </li>
         <li>
-          <a href="javascript:void(0);">List Item</a>
+          <a href="#" onClick={e => e.preventDefault()}>List Item</a>
         </li>
         <li>
-          <a href="javascript:void(0);">List Item</a>
+          <a href="#" onClick={e => e.preventDefault()}>List Item</a>
         </li>
       </ul>
     ));
@@ -34,15 +34,15 @@ describe('renders horizontal list utilities', () => {
     matchesMarkup(
       <ul className="slds-list_horizontal slds-has-block-links">
         <li>
-          <a href="javascript:void(0);">
+          <a href="#" onClick={e => e.preventDefault()}>
             Horizontal List with block level links
           </a>
         </li>
         <li>
-          <a href="javascript:void(0);">List Item</a>
+          <a href="#" onClick={e => e.preventDefault()}>List Item</a>
         </li>
         <li>
-          <a href="javascript:void(0);">List Item</a>
+          <a href="#" onClick={e => e.preventDefault()}>List Item</a>
         </li>
       </ul>
     ));
@@ -51,15 +51,15 @@ describe('renders horizontal list utilities', () => {
     matchesMarkup(
       <ul className="slds-list_horizontal slds-has-block-links_space">
         <li>
-          <a href="javascript:void(0);">
+          <a href="#" onClick={e => e.preventDefault()}>
             Horizontal List with block level links and space
           </a>
         </li>
         <li>
-          <a href="javascript:void(0);">List Item</a>
+          <a href="#" onClick={e => e.preventDefault()}>List Item</a>
         </li>
         <li>
-          <a href="javascript:void(0);">List Item</a>
+          <a href="#" onClick={e => e.preventDefault()}>List Item</a>
         </li>
       </ul>
     ));
@@ -68,15 +68,15 @@ describe('renders horizontal list utilities', () => {
     matchesMarkup(
       <ul className="slds-list_horizontal slds-has-inline-block-links">
         <li>
-          <a href="javascript:void(0);">
+          <a href="#" onClick={e => e.preventDefault()}>
             Horizontal List with inline-block level links
           </a>
         </li>
         <li>
-          <a href="javascript:void(0);">List Item</a>
+          <a href="#" onClick={e => e.preventDefault()}>List Item</a>
         </li>
         <li>
-          <a href="javascript:void(0);">List Item</a>
+          <a href="#" onClick={e => e.preventDefault()}>List Item</a>
         </li>
       </ul>
     ));
@@ -85,15 +85,15 @@ describe('renders horizontal list utilities', () => {
     matchesMarkup(
       <ul className="slds-list_horizontal slds-has-inline-block-links_space">
         <li>
-          <a href="javascript:void(0);">
+          <a href="#" onClick={e => e.preventDefault()}>
             Horizontal List with inline-block level links and space
           </a>
         </li>
         <li>
-          <a href="javascript:void(0);">List Item</a>
+          <a href="#" onClick={e => e.preventDefault()}>List Item</a>
         </li>
         <li>
-          <a href="javascript:void(0);">List Item</a>
+          <a href="#" onClick={e => e.preventDefault()}>List Item</a>
         </li>
       </ul>
     ));
@@ -113,15 +113,15 @@ describe('renders horizontal list utilities', () => {
     matchesMarkup(
       <ul className="slds-list_horizontal slds-has-dividers_left slds-has-block-links">
         <li className="slds-item">
-          <a href="javascript:void(0);">
+          <a href="#" onClick={e => e.preventDefault()}>
             Horizontal List with block level links and dot dividers
           </a>
         </li>
         <li className="slds-item">
-          <a href="javascript:void(0);">List Item</a>
+          <a href="#" onClick={e => e.preventDefault()}>List Item</a>
         </li>
         <li className="slds-item">
-          <a href="javascript:void(0);">List Item</a>
+          <a href="#" onClick={e => e.preventDefault()}>List Item</a>
         </li>
       </ul>
     ));
@@ -130,15 +130,15 @@ describe('renders horizontal list utilities', () => {
     matchesMarkup(
       <ul className="slds-list_horizontal slds-has-dividers_left slds-has-block-links_space">
         <li className="slds-item">
-          <a href="javascript:void(0);">
+          <a href="#" onClick={e => e.preventDefault()}>
             Horizontal List with block level links and dot dividers with space
           </a>
         </li>
         <li className="slds-item">
-          <a href="javascript:void(0);">List Item</a>
+          <a href="#" onClick={e => e.preventDefault()}>List Item</a>
         </li>
         <li className="slds-item">
-          <a href="javascript:void(0);">List Item</a>
+          <a href="#" onClick={e => e.preventDefault()}>List Item</a>
         </li>
       </ul>
     ));
@@ -158,15 +158,15 @@ describe('renders horizontal list utilities', () => {
     matchesMarkup(
       <ul className="slds-list_horizontal slds-has-dividers_right slds-has-block-links">
         <li className="slds-item">
-          <a href="javascript:void(0);">
+          <a href="#" onClick={e => e.preventDefault()}>
             Horizontal List with block level links and dot dividers
           </a>
         </li>
         <li className="slds-item">
-          <a href="javascript:void(0);">List Item</a>
+          <a href="#" onClick={e => e.preventDefault()}>List Item</a>
         </li>
         <li className="slds-item">
-          <a href="javascript:void(0);">List Item</a>
+          <a href="#" onClick={e => e.preventDefault()}>List Item</a>
         </li>
       </ul>
     ));
@@ -175,15 +175,15 @@ describe('renders horizontal list utilities', () => {
     matchesMarkup(
       <ul className="slds-list_horizontal slds-has-dividers_right slds-has-block-links_space">
         <li className="slds-item">
-          <a href="javascript:void(0);">
+          <a href="#" onClick={e => e.preventDefault()}>
             Horizontal List with block level links and dot dividers with space
           </a>
         </li>
         <li className="slds-item">
-          <a href="javascript:void(0);">List Item</a>
+          <a href="#" onClick={e => e.preventDefault()}>List Item</a>
         </li>
         <li className="slds-item">
-          <a href="javascript:void(0);">List Item</a>
+          <a href="#" onClick={e => e.preventDefault()}>List Item</a>
         </li>
       </ul>
     ));

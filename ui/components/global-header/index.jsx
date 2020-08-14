@@ -8,14 +8,16 @@ import GlobalActions from './global-actions/';
 export const SkipLink = () => (
   <React.Fragment>
     <a
-      href="javascript:void(0);"
+      href="#"
       className="slds-assistive-text slds-assistive-text_focus"
+      onClick={e => e.preventDefault()}
     >
       Skip to Navigation
     </a>
     <a
-      href="javascript:void(0);"
+      href="#"
       className="slds-assistive-text slds-assistive-text_focus"
+      onClick={e => e.preventDefault()}
     >
       Skip to Main Content
     </a>

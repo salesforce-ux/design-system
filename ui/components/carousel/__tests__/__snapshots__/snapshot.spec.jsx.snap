@@ -47,7 +47,8 @@ exports[`renders a carousel, auto-play disabled 1`] = `
       >
         <a
           className="slds-carousel__panel-action slds-text-link_reset"
-          href="javascript:void(0);"
+          href="#"
+          onClick={[Function]}
           tabIndex="0"
         >
           <div
@@ -81,7 +82,8 @@ exports[`renders a carousel, auto-play disabled 1`] = `
       >
         <a
           className="slds-carousel__panel-action slds-text-link_reset"
-          href="javascript:void(0);"
+          href="#"
+          onClick={[Function]}
           tabIndex="-1"
         >
           <div
@@ -115,7 +117,8 @@ exports[`renders a carousel, auto-play disabled 1`] = `
       >
         <a
           className="slds-carousel__panel-action slds-text-link_reset"
-          href="javascript:void(0);"
+          href="#"
+          onClick={[Function]}
           tabIndex="-1"
         >
           <div
@@ -153,8 +156,9 @@ exports[`renders a carousel, auto-play disabled 1`] = `
           aria-controls="content-id-01"
           aria-selected="true"
           className="slds-carousel__indicator-action slds-is-active"
-          href="javascript:void(0);"
+          href="#"
           id="indicator-id-01"
+          onClick={[Function]}
           role="tab"
           tabIndex="0"
           title="Visit App Exchange tab"
@@ -174,8 +178,9 @@ exports[`renders a carousel, auto-play disabled 1`] = `
           aria-controls="content-id-02"
           aria-selected="false"
           className="slds-carousel__indicator-action"
-          href="javascript:void(0);"
+          href="#"
           id="indicator-id-02"
+          onClick={[Function]}
           role="tab"
           tabIndex="-1"
           title="Click to Customize tab"
@@ -195,8 +200,9 @@ exports[`renders a carousel, auto-play disabled 1`] = `
           aria-controls="content-id-03"
           aria-selected="false"
           className="slds-carousel__indicator-action"
-          href="javascript:void(0);"
+          href="#"
           id="indicator-id-03"
+          onClick={[Function]}
           role="tab"
           tabIndex="-1"
           title="Download SalesforceA tab"
@@ -260,7 +266,8 @@ exports[`renders a carousel, auto-play enabled 1`] = `
       >
         <a
           className="slds-carousel__panel-action slds-text-link_reset"
-          href="javascript:void(0);"
+          href="#"
+          onClick={[Function]}
           tabIndex="0"
         >
           <div
@@ -294,7 +301,8 @@ exports[`renders a carousel, auto-play enabled 1`] = `
       >
         <a
           className="slds-carousel__panel-action slds-text-link_reset"
-          href="javascript:void(0);"
+          href="#"
+          onClick={[Function]}
           tabIndex="-1"
         >
           <div
@@ -328,7 +336,8 @@ exports[`renders a carousel, auto-play enabled 1`] = `
       >
         <a
           className="slds-carousel__panel-action slds-text-link_reset"
-          href="javascript:void(0);"
+          href="#"
+          onClick={[Function]}
           tabIndex="-1"
         >
           <div
@@ -366,8 +375,9 @@ exports[`renders a carousel, auto-play enabled 1`] = `
           aria-controls="content-id-01"
           aria-selected="true"
           className="slds-carousel__indicator-action slds-is-active"
-          href="javascript:void(0);"
+          href="#"
           id="indicator-id-01"
+          onClick={[Function]}
           role="tab"
           tabIndex="0"
           title="Visit App Exchange tab"
@@ -387,8 +397,9 @@ exports[`renders a carousel, auto-play enabled 1`] = `
           aria-controls="content-id-02"
           aria-selected="false"
           className="slds-carousel__indicator-action"
-          href="javascript:void(0);"
+          href="#"
           id="indicator-id-02"
+          onClick={[Function]}
           role="tab"
           tabIndex="-1"
           title="Click to Customize tab"
@@ -408,8 +419,9 @@ exports[`renders a carousel, auto-play enabled 1`] = `
           aria-controls="content-id-03"
           aria-selected="false"
           className="slds-carousel__indicator-action"
-          href="javascript:void(0);"
+          href="#"
           id="indicator-id-03"
+          onClick={[Function]}
           role="tab"
           tabIndex="-1"
           title="Download SalesforceA tab"
@@ -450,7 +462,8 @@ exports[`renders a carousel, first tab active 1`] = `
       >
         <a
           className="slds-carousel__panel-action slds-text-link_reset"
-          href="javascript:void(0);"
+          href="#"
+          onClick={[Function]}
           tabIndex="0"
         >
           <div
@@ -484,7 +497,8 @@ exports[`renders a carousel, first tab active 1`] = `
       >
         <a
           className="slds-carousel__panel-action slds-text-link_reset"
-          href="javascript:void(0);"
+          href="#"
+          onClick={[Function]}
           tabIndex="-1"
         >
           <div
@@ -518,7 +532,8 @@ exports[`renders a carousel, first tab active 1`] = `
       >
         <a
           className="slds-carousel__panel-action slds-text-link_reset"
-          href="javascript:void(0);"
+          href="#"
+          onClick={[Function]}
           tabIndex="-1"
         >
           <div
@@ -556,8 +571,9 @@ exports[`renders a carousel, first tab active 1`] = `
           aria-controls="content-id-01"
           aria-selected="true"
           className="slds-carousel__indicator-action slds-is-active"
-          href="javascript:void(0);"
+          href="#"
           id="indicator-id-01"
+          onClick={[Function]}
           role="tab"
           tabIndex="0"
           title="Visit App Exchange tab"
@@ -577,8 +593,9 @@ exports[`renders a carousel, first tab active 1`] = `
           aria-controls="content-id-02"
           aria-selected="false"
           className="slds-carousel__indicator-action"
-          href="javascript:void(0);"
+          href="#"
           id="indicator-id-02"
+          onClick={[Function]}
           role="tab"
           tabIndex="-1"
           title="Click to Customize tab"
@@ -598,8 +615,9 @@ exports[`renders a carousel, first tab active 1`] = `
           aria-controls="content-id-03"
           aria-selected="false"
           className="slds-carousel__indicator-action"
-          href="javascript:void(0);"
+          href="#"
           id="indicator-id-03"
+          onClick={[Function]}
           role="tab"
           tabIndex="-1"
           title="Download SalesforceA tab"
@@ -640,7 +658,8 @@ exports[`renders a carousel, second tab active 1`] = `
       >
         <a
           className="slds-carousel__panel-action slds-text-link_reset"
-          href="javascript:void(0);"
+          href="#"
+          onClick={[Function]}
           tabIndex="-1"
         >
           <div
@@ -674,7 +693,8 @@ exports[`renders a carousel, second tab active 1`] = `
       >
         <a
           className="slds-carousel__panel-action slds-text-link_reset"
-          href="javascript:void(0);"
+          href="#"
+          onClick={[Function]}
           tabIndex="0"
         >
           <div
@@ -708,7 +728,8 @@ exports[`renders a carousel, second tab active 1`] = `
       >
         <a
           className="slds-carousel__panel-action slds-text-link_reset"
-          href="javascript:void(0);"
+          href="#"
+          onClick={[Function]}
           tabIndex="-1"
         >
           <div
@@ -746,8 +767,9 @@ exports[`renders a carousel, second tab active 1`] = `
           aria-controls="content-id-01"
           aria-selected="false"
           className="slds-carousel__indicator-action"
-          href="javascript:void(0);"
+          href="#"
           id="indicator-id-01"
+          onClick={[Function]}
           role="tab"
           tabIndex="-1"
           title="Visit App Exchange tab"
@@ -767,8 +789,9 @@ exports[`renders a carousel, second tab active 1`] = `
           aria-controls="content-id-02"
           aria-selected="true"
           className="slds-carousel__indicator-action slds-is-active"
-          href="javascript:void(0);"
+          href="#"
           id="indicator-id-02"
+          onClick={[Function]}
           role="tab"
           tabIndex="0"
           title="Click to Customize tab"
@@ -788,8 +811,9 @@ exports[`renders a carousel, second tab active 1`] = `
           aria-controls="content-id-03"
           aria-selected="false"
           className="slds-carousel__indicator-action"
-          href="javascript:void(0);"
+          href="#"
           id="indicator-id-03"
+          onClick={[Function]}
           role="tab"
           tabIndex="-1"
           title="Download SalesforceA tab"
@@ -830,7 +854,8 @@ exports[`renders a carousel, third tab active 1`] = `
       >
         <a
           className="slds-carousel__panel-action slds-text-link_reset"
-          href="javascript:void(0);"
+          href="#"
+          onClick={[Function]}
           tabIndex="-1"
         >
           <div
@@ -864,7 +889,8 @@ exports[`renders a carousel, third tab active 1`] = `
       >
         <a
           className="slds-carousel__panel-action slds-text-link_reset"
-          href="javascript:void(0);"
+          href="#"
+          onClick={[Function]}
           tabIndex="-1"
         >
           <div
@@ -898,7 +924,8 @@ exports[`renders a carousel, third tab active 1`] = `
       >
         <a
           className="slds-carousel__panel-action slds-text-link_reset"
-          href="javascript:void(0);"
+          href="#"
+          onClick={[Function]}
           tabIndex="0"
         >
           <div
@@ -936,8 +963,9 @@ exports[`renders a carousel, third tab active 1`] = `
           aria-controls="content-id-01"
           aria-selected="false"
           className="slds-carousel__indicator-action"
-          href="javascript:void(0);"
+          href="#"
           id="indicator-id-01"
+          onClick={[Function]}
           role="tab"
           tabIndex="-1"
           title="Visit App Exchange tab"
@@ -957,8 +985,9 @@ exports[`renders a carousel, third tab active 1`] = `
           aria-controls="content-id-02"
           aria-selected="false"
           className="slds-carousel__indicator-action"
-          href="javascript:void(0);"
+          href="#"
           id="indicator-id-02"
+          onClick={[Function]}
           role="tab"
           tabIndex="-1"
           title="Click to Customize tab"
@@ -978,8 +1007,9 @@ exports[`renders a carousel, third tab active 1`] = `
           aria-controls="content-id-03"
           aria-selected="true"
           className="slds-carousel__indicator-action slds-is-active"
-          href="javascript:void(0);"
+          href="#"
           id="indicator-id-03"
+          onClick={[Function]}
           role="tab"
           tabIndex="0"
           title="Download SalesforceA tab"

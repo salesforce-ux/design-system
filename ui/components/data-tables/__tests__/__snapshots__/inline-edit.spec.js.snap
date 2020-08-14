@@ -75,8 +75,9 @@ exports[`Inline edit data table row should enable focusing on focusable elements
     >
       <a
         className="slds-truncate"
-        href="javascript:void(0);"
+        href="#"
         id="link-00"
+        onClick={[Function]}
         tabIndex="0"
         title="Acme"
       >
@@ -413,8 +414,9 @@ exports[`Inline edit data table row should render 1`] = `
     >
       <a
         className="slds-truncate"
-        href="javascript:void(0);"
+        href="#"
         id="link-00"
+        onClick={[Function]}
         tabIndex="-1"
         title="Acme"
       >
@@ -751,8 +753,9 @@ exports[`Inline edit data table row should set a focusable cell 1`] = `
     >
       <a
         className="slds-truncate"
-        href="javascript:void(0);"
+        href="#"
         id="link-00"
+        onClick={[Function]}
         tabIndex="-1"
         title="Acme"
       >
@@ -1089,8 +1092,9 @@ exports[`Inline edit data table row should set a focused cell 1`] = `
     >
       <a
         className="slds-truncate"
-        href="javascript:void(0);"
+        href="#"
         id="link-00"
+        onClick={[Function]}
         tabIndex="-1"
         title="Acme"
       >
@@ -1427,8 +1431,9 @@ exports[`Inline edit data table row should set a locked cell 1`] = `
     >
       <a
         className="slds-truncate"
-        href="javascript:void(0);"
+        href="#"
         id="link-00"
+        onClick={[Function]}
         tabIndex="-1"
         title="Acme"
       >
@@ -1769,8 +1774,9 @@ exports[`Inline edit data table row should set a selected row and check the chec
     >
       <a
         className="slds-truncate"
-        href="javascript:void(0);"
+        href="#"
         id="link-00"
+        onClick={[Function]}
         tabIndex="-1"
         title="Acme"
       >
@@ -2107,8 +2113,9 @@ exports[`Inline edit data table row should show a cell edit 1`] = `
     >
       <a
         className="slds-truncate"
-        href="javascript:void(0);"
+        href="#"
         id="link-00"
+        onClick={[Function]}
         tabIndex="-1"
         title="Acme"
       >
@@ -2489,8 +2496,9 @@ exports[`Inline edit data table row should show a cell edit with required field 
     >
       <a
         className="slds-truncate"
-        href="javascript:void(0);"
+        href="#"
         id="link-00"
+        onClick={[Function]}
         tabIndex="-1"
         title="Acme"
       >
@@ -2878,8 +2886,9 @@ exports[`Inline edit data table row should show a cell edit with required field 
     >
       <a
         className="slds-truncate"
-        href="javascript:void(0);"
+        href="#"
         id="link-00"
+        onClick={[Function]}
         tabIndex="-1"
         title="Acme"
       >
@@ -3273,8 +3282,9 @@ exports[`Inline edit data table row should show a edited cell 1`] = `
     >
       <a
         className="slds-truncate"
-        href="javascript:void(0);"
+        href="#"
         id="link-00"
+        onClick={[Function]}
         tabIndex="-1"
         title="Acme"
       >
@@ -3611,8 +3621,9 @@ exports[`Inline edit data table row should show an errored cell 1`] = `
     >
       <a
         className="slds-truncate"
-        href="javascript:void(0);"
+        href="#"
         id="link-00"
+        onClick={[Function]}
         tabIndex="-1"
         title="Acme"
       >

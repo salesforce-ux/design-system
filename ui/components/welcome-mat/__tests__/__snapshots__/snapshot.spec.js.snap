@@ -102,7 +102,8 @@ exports[`Composed Welcome Mat Snapshots renders a deprecated welcome mat 1`] = `
         >
           <a
             className="slds-box slds-box_link slds-box_x-small slds-media"
-            href="javascript:void(0);"
+            href="#"
+            onClick={[Function]}
           >
             <div
               className="slds-media__figure slds-media__figure_fixed-width slds-align_absolute-center slds-m-left_xx-small"
@@ -164,7 +165,8 @@ exports[`Composed Welcome Mat Snapshots renders a deprecated welcome mat 1`] = `
         >
           <a
             className="slds-box slds-box_link slds-box_x-small slds-media"
-            href="javascript:void(0);"
+            href="#"
+            onClick={[Function]}
           >
             <div
               className="slds-media__figure slds-media__figure_fixed-width slds-align_absolute-center slds-m-left_xx-small"
@@ -226,7 +228,8 @@ exports[`Composed Welcome Mat Snapshots renders a deprecated welcome mat 1`] = `
         >
           <a
             className="slds-box slds-box_link slds-box_x-small slds-media"
-            href="javascript:void(0);"
+            href="#"
+            onClick={[Function]}
           >
             <div
               className="slds-media__figure slds-media__figure_fixed-width slds-align_absolute-center slds-m-left_xx-small"
@@ -288,7 +291,8 @@ exports[`Composed Welcome Mat Snapshots renders a deprecated welcome mat 1`] = `
         >
           <a
             className="slds-box slds-box_link slds-box_x-small slds-media"
-            href="javascript:void(0);"
+            href="#"
+            onClick={[Function]}
           >
             <div
               className="slds-media__figure slds-media__figure_fixed-width slds-align_absolute-center slds-m-left_xx-small"
@@ -350,7 +354,8 @@ exports[`Composed Welcome Mat Snapshots renders a deprecated welcome mat 1`] = `
         >
           <a
             className="slds-box slds-box_link slds-box_x-small slds-media"
-            href="javascript:void(0);"
+            href="#"
+            onClick={[Function]}
           >
             <div
               className="slds-media__figure slds-media__figure_fixed-width slds-align_absolute-center slds-m-left_xx-small"
@@ -668,7 +673,8 @@ exports[`Composed Welcome Mat Snapshots renders a trailhead welcome mat 1`] = `
             >
               <a
                 className="slds-box slds-box_link slds-media"
-                href="javascript:void(0);"
+                href="#"
+                onClick={[Function]}
               >
                 <div
                   className="slds-media__figure slds-media__figure_fixed-width slds-align_absolute-center"
@@ -738,7 +744,8 @@ exports[`Composed Welcome Mat Snapshots renders a trailhead welcome mat 1`] = `
             >
               <a
                 className="slds-box slds-box_link slds-media"
-                href="javascript:void(0);"
+                href="#"
+                onClick={[Function]}
               >
                 <div
                   className="slds-media__figure slds-media__figure_fixed-width slds-align_absolute-center"
@@ -808,7 +815,8 @@ exports[`Composed Welcome Mat Snapshots renders a trailhead welcome mat 1`] = `
             >
               <a
                 className="slds-box slds-box_link slds-media"
-                href="javascript:void(0);"
+                href="#"
+                onClick={[Function]}
               >
                 <div
                   className="slds-media__figure slds-media__figure_fixed-width slds-align_absolute-center"
@@ -878,7 +886,8 @@ exports[`Composed Welcome Mat Snapshots renders a trailhead welcome mat 1`] = `
             >
               <a
                 className="slds-box slds-box_link slds-media"
-                href="javascript:void(0);"
+                href="#"
+                onClick={[Function]}
               >
                 <div
                   className="slds-media__figure slds-media__figure_fixed-width slds-align_absolute-center"
@@ -948,7 +957,8 @@ exports[`Composed Welcome Mat Snapshots renders a trailhead welcome mat 1`] = `
             >
               <a
                 className="slds-box slds-box_link slds-media"
-                href="javascript:void(0);"
+                href="#"
+                onClick={[Function]}
               >
                 <div
                   className="slds-media__figure slds-media__figure_fixed-width slds-align_absolute-center"
@@ -1129,7 +1139,8 @@ exports[`Composed Welcome Mat Snapshots renders a welcome mat 1`] = `
             >
               <a
                 className="slds-box slds-box_link slds-media"
-                href="javascript:void(0);"
+                href="#"
+                onClick={[Function]}
               >
                 <div
                   className="slds-media__figure slds-media__figure_fixed-width slds-align_absolute-center"
@@ -1199,7 +1210,8 @@ exports[`Composed Welcome Mat Snapshots renders a welcome mat 1`] = `
             >
               <a
                 className="slds-box slds-box_link slds-media"
-                href="javascript:void(0);"
+                href="#"
+                onClick={[Function]}
               >
                 <div
                   className="slds-media__figure slds-media__figure_fixed-width slds-align_absolute-center"
@@ -1269,7 +1281,8 @@ exports[`Composed Welcome Mat Snapshots renders a welcome mat 1`] = `
             >
               <a
                 className="slds-box slds-box_link slds-media"
-                href="javascript:void(0);"
+                href="#"
+                onClick={[Function]}
               >
                 <div
                   className="slds-media__figure slds-media__figure_fixed-width slds-align_absolute-center"
@@ -1339,7 +1352,8 @@ exports[`Composed Welcome Mat Snapshots renders a welcome mat 1`] = `
             >
               <a
                 className="slds-box slds-box_link slds-media"
-                href="javascript:void(0);"
+                href="#"
+                onClick={[Function]}
               >
                 <div
                   className="slds-media__figure slds-media__figure_fixed-width slds-align_absolute-center"
@@ -1409,7 +1423,8 @@ exports[`Composed Welcome Mat Snapshots renders a welcome mat 1`] = `
             >
               <a
                 className="slds-box slds-box_link slds-media"
-                href="javascript:void(0);"
+                href="#"
+                onClick={[Function]}
               >
                 <div
                   className="slds-media__figure slds-media__figure_fixed-width slds-align_absolute-center"
@@ -2252,7 +2267,8 @@ exports[`Welcome Mat Tile Component renders a complete tile 1`] = `
 >
   <a
     className="slds-box slds-box_link slds-media"
-    href="javascript:void(0);"
+    href="#"
+    onClick={[Function]}
   >
     <div
       className="slds-media__figure slds-media__figure_fixed-width slds-align_absolute-center"
@@ -2325,7 +2341,8 @@ exports[`Welcome Mat Tile Component renders a default tile 1`] = `
 >
   <a
     className="slds-box slds-box_link slds-media"
-    href="javascript:void(0);"
+    href="#"
+    onClick={[Function]}
   >
     <div
       className="slds-media__figure slds-media__figure_fixed-width slds-align_absolute-center"

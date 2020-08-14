@@ -12,7 +12,8 @@ exports[`renders a base breadcrumb 1`] = `
       className="slds-breadcrumb__item"
     >
       <a
-        href="javascript:void(0);"
+        href="#"
+        onClick={[Function]}
       >
         Parent Entity
       </a>
@@ -21,7 +22,8 @@ exports[`renders a base breadcrumb 1`] = `
       className="slds-breadcrumb__item"
     >
       <a
-        href="javascript:void(0);"
+        href="#"
+        onClick={[Function]}
       >
         Parent Record Name
       </a>
@@ -75,7 +77,8 @@ exports[`renders a overflow menu as the first breadcrumb 1`] = `
               role="presentation"
             >
               <a
-                href="javascript:void(0);"
+                href="#"
+                onClick={[Function]}
                 role="menuitem"
                 tabIndex="0"
               >
@@ -92,7 +95,8 @@ exports[`renders a overflow menu as the first breadcrumb 1`] = `
               role="presentation"
             >
               <a
-                href="javascript:void(0);"
+                href="#"
+                onClick={[Function]}
                 role="menuitem"
                 tabIndex="-1"
               >
@@ -109,7 +113,8 @@ exports[`renders a overflow menu as the first breadcrumb 1`] = `
               role="presentation"
             >
               <a
-                href="javascript:void(0);"
+                href="#"
+                onClick={[Function]}
                 role="menuitem"
                 tabIndex="-1"
               >
@@ -129,7 +134,8 @@ exports[`renders a overflow menu as the first breadcrumb 1`] = `
       className="slds-breadcrumb__item"
     >
       <a
-        href="javascript:void(0);"
+        href="#"
+        onClick={[Function]}
       >
         Parent Entity
       </a>
@@ -138,7 +144,8 @@ exports[`renders a overflow menu as the first breadcrumb 1`] = `
       className="slds-breadcrumb__item"
     >
       <a
-        href="javascript:void(0);"
+        href="#"
+        onClick={[Function]}
       >
         Parent Record Name
       </a>

@@ -61,7 +61,8 @@ exports[`Chat Images and Files renders a loading inbound chat message item with 
           <figure>
             <a
               className="slds-file__crop slds-file__crop_4-by-3"
-              href="javascript:void(0);"
+              href="#"
+              onClick={[Function]}
             >
               <div
                 className="slds-spinner slds-spinner_medium"
@@ -165,7 +166,8 @@ exports[`Chat Images and Files renders a loading inbound chat message item with 
           <figure>
             <a
               className="slds-file__crop slds-file__crop_4-by-3"
-              href="javascript:void(0);"
+              href="#"
+              onClick={[Function]}
             >
               <div
                 className="slds-spinner slds-spinner_medium"
@@ -275,7 +277,8 @@ exports[`Chat Images and Files renders an inbound chat message item with file an
           <figure>
             <a
               className="slds-file__crop slds-file__crop_4-by-3"
-              href="javascript:void(0);"
+              href="#"
+              onClick={[Function]}
             >
               <span
                 className="slds-assistive-text"
@@ -418,7 +421,8 @@ exports[`Chat Images and Files renders an inbound chat message item with image a
           <figure>
             <a
               className="slds-file__figure"
-              href="javascript:void(0);"
+              href="#"
+              onClick={[Function]}
             >
               <span
                 className="slds-assistive-text"
@@ -521,7 +525,8 @@ exports[`Chat Images and Files renders an inbound chat message item with portrai
           <figure>
             <a
               className="slds-file__figure slds-file__figure_portrait"
-              href="javascript:void(0);"
+              href="#"
+              onClick={[Function]}
             >
               <span
                 className="slds-assistive-text"
@@ -624,7 +629,8 @@ exports[`Chat Images and Files renders an inbound chat message item with portrai
           <figure>
             <a
               className="slds-file__figure"
-              href="javascript:void(0);"
+              href="#"
+              onClick={[Function]}
             >
               <span
                 className="slds-assistive-text"
@@ -757,7 +763,8 @@ exports[`Chat Images and Files renders an outbound chat message item with file a
           <figure>
             <a
               className="slds-file__crop slds-file__crop_4-by-3"
-              href="javascript:void(0);"
+              href="#"
+              onClick={[Function]}
             >
               <span
                 className="slds-assistive-text"
@@ -890,7 +897,8 @@ exports[`Chat Images and Files renders an outbound chat message item with image 
           <figure>
             <a
               className="slds-file__figure"
-              href="javascript:void(0);"
+              href="#"
+              onClick={[Function]}
             >
               <span
                 className="slds-assistive-text"
@@ -983,7 +991,8 @@ exports[`Chat Images and Files renders an outbound chat message item with portra
           <figure>
             <a
               className="slds-file__figure slds-file__figure_portrait"
-              href="javascript:void(0);"
+              href="#"
+              onClick={[Function]}
             >
               <span
                 className="slds-assistive-text"
@@ -1076,7 +1085,8 @@ exports[`Chat Images and Files renders an outbound chat message item with portra
           <figure>
             <a
               className="slds-file__figure"
-              href="javascript:void(0);"
+              href="#"
+              onClick={[Function]}
             >
               <span
                 className="slds-assistive-text"

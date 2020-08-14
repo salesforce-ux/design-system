@@ -153,7 +153,7 @@ export const examples = [
             <ChatMessage>
               <ChatMessageBody isPast name="Andy Martinez" timeStamp="4:59 PM">
                 Hello, me again. I tried following this guide{' '}
-                <a href="javascript:void(0)">
+                <a href="#" onClick={e => e.preventDefault()}>
                   https://www.somehelpsite.com/CloudWidget-speaks-french
                 </a>
               </ChatMessageBody>

@@ -17,8 +17,9 @@ exports[`Default Tabs renders default tabs 1`] = `
         aria-controls="tab-default-1"
         aria-selected={true}
         className="slds-tabs_default__link"
-        href="javascript:void(0);"
+        href="#"
         id="tab-default-1__item"
+        onClick={[Function]}
         role="tab"
         tabIndex={0}
       >
@@ -34,8 +35,9 @@ exports[`Default Tabs renders default tabs 1`] = `
         aria-controls="tab-default-2"
         aria-selected={false}
         className="slds-tabs_default__link"
-        href="javascript:void(0);"
+        href="#"
         id="tab-default-2__item"
+        onClick={[Function]}
         role="tab"
         tabIndex={-1}
       >
@@ -51,8 +53,9 @@ exports[`Default Tabs renders default tabs 1`] = `
         aria-controls="tab-default-3"
         aria-selected={false}
         className="slds-tabs_default__link"
-        href="javascript:void(0);"
+        href="#"
         id="tab-default-3__item"
+        onClick={[Function]}
         role="tab"
         tabIndex={-1}
       >
@@ -112,8 +115,9 @@ exports[`Default Tabs renders default tabs with error 1`] = `
           aria-controls="tab-default-1"
           aria-selected={true}
           className="slds-tabs_default__link"
-          href="javascript:void(0);"
+          href="#"
           id="tab-default-1__item"
+          onClick={[Function]}
           role="tab"
           tabIndex={0}
         >
@@ -129,8 +133,9 @@ exports[`Default Tabs renders default tabs with error 1`] = `
           aria-controls="tab-default-2"
           aria-selected={false}
           className="slds-tabs_default__link"
-          href="javascript:void(0);"
+          href="#"
           id="tab-default-2__item"
+          onClick={[Function]}
           role="tab"
           tabIndex={-1}
         >
@@ -168,8 +173,9 @@ exports[`Default Tabs renders default tabs with error 1`] = `
           aria-controls="tab-default-3"
           aria-selected={false}
           className="slds-tabs_default__link"
-          href="javascript:void(0);"
+          href="#"
           id="tab-default-3__item"
+          onClick={[Function]}
           role="tab"
           tabIndex={-1}
         >
@@ -185,8 +191,9 @@ exports[`Default Tabs renders default tabs with error 1`] = `
           aria-controls="tab-default-4"
           aria-selected={false}
           className="slds-tabs_default__link"
-          href="javascript:void(0);"
+          href="#"
           id="tab-default-4__item"
+          onClick={[Function]}
           role="tab"
           tabIndex={-1}
         >
@@ -263,8 +270,9 @@ exports[`Default Tabs renders default tabs with icons 1`] = `
           aria-controls="tab-default-1"
           aria-selected={true}
           className="slds-tabs_default__link"
-          href="javascript:void(0);"
+          href="#"
           id="tab-default-1__item"
+          onClick={[Function]}
           role="tab"
           tabIndex={0}
         >
@@ -297,8 +305,9 @@ exports[`Default Tabs renders default tabs with icons 1`] = `
           aria-controls="tab-default-2"
           aria-selected={false}
           className="slds-tabs_default__link"
-          href="javascript:void(0);"
+          href="#"
           id="tab-default-2__item"
+          onClick={[Function]}
           role="tab"
           tabIndex={-1}
         >
@@ -331,8 +340,9 @@ exports[`Default Tabs renders default tabs with icons 1`] = `
           aria-controls="tab-default-3"
           aria-selected={false}
           className="slds-tabs_default__link"
-          href="javascript:void(0);"
+          href="#"
           id="tab-default-3__item"
+          onClick={[Function]}
           role="tab"
           tabIndex={-1}
         >
@@ -365,8 +375,9 @@ exports[`Default Tabs renders default tabs with icons 1`] = `
           aria-controls="tab-default-4"
           aria-selected={false}
           className="slds-tabs_default__link"
-          href="javascript:void(0);"
+          href="#"
           id="tab-default-4__item"
+          onClick={[Function]}
           role="tab"
           tabIndex={-1}
         >
@@ -399,8 +410,9 @@ exports[`Default Tabs renders default tabs with icons 1`] = `
           aria-controls="tab-default-5"
           aria-selected={false}
           className="slds-tabs_default__link"
-          href="javascript:void(0);"
+          href="#"
           id="tab-default-5__item"
+          onClick={[Function]}
           role="tab"
           tabIndex={-1}
         >
@@ -458,7 +470,8 @@ exports[`Default Tabs renders default tabs with icons 1`] = `
                 role="presentation"
               >
                 <a
-                  href="javascript:void(0);"
+                  href="#"
+                  onClick={[Function]}
                   role="menuitem"
                   tabIndex="-1"
                 >
@@ -500,7 +513,8 @@ exports[`Default Tabs renders default tabs with icons 1`] = `
                 role="presentation"
               >
                 <a
-                  href="javascript:void(0);"
+                  href="#"
+                  onClick={[Function]}
                   role="menuitem"
                   tabIndex="-1"
                 >
@@ -542,7 +556,8 @@ exports[`Default Tabs renders default tabs with icons 1`] = `
                 role="presentation"
               >
                 <a
-                  href="javascript:void(0);"
+                  href="#"
+                  onClick={[Function]}
                   role="menuitem"
                   tabIndex="-1"
                 >
@@ -655,8 +670,9 @@ exports[`Default Tabs renders default tabs with nested scoped tabs 1`] = `
         aria-controls="tab-default-1"
         aria-selected={true}
         className="slds-tabs_default__link"
-        href="javascript:void(0);"
+        href="#"
         id="tab-default-1__item"
+        onClick={[Function]}
         role="tab"
         tabIndex={0}
       >
@@ -672,8 +688,9 @@ exports[`Default Tabs renders default tabs with nested scoped tabs 1`] = `
         aria-controls="tab-default-2"
         aria-selected={false}
         className="slds-tabs_default__link"
-        href="javascript:void(0);"
+        href="#"
         id="tab-default-2__item"
+        onClick={[Function]}
         role="tab"
         tabIndex={-1}
       >
@@ -689,8 +706,9 @@ exports[`Default Tabs renders default tabs with nested scoped tabs 1`] = `
         aria-controls="tab-default-3"
         aria-selected={false}
         className="slds-tabs_default__link"
-        href="javascript:void(0);"
+        href="#"
         id="tab-default-3__item"
+        onClick={[Function]}
         role="tab"
         tabIndex={-1}
       >
@@ -720,8 +738,9 @@ exports[`Default Tabs renders default tabs with nested scoped tabs 1`] = `
             aria-controls="tab-scoped-1"
             aria-selected={true}
             className="slds-tabs_scoped__link"
-            href="javascript:void(0);"
+            href="#"
             id="tab-scoped-1__item"
+            onClick={[Function]}
             role="tab"
             tabIndex={0}
           >
@@ -737,8 +756,9 @@ exports[`Default Tabs renders default tabs with nested scoped tabs 1`] = `
             aria-controls="tab-scoped-2"
             aria-selected={false}
             className="slds-tabs_scoped__link"
-            href="javascript:void(0);"
+            href="#"
             id="tab-scoped-2__item"
+            onClick={[Function]}
             role="tab"
             tabIndex={-1}
           >
@@ -754,8 +774,9 @@ exports[`Default Tabs renders default tabs with nested scoped tabs 1`] = `
             aria-controls="tab-scoped-3"
             aria-selected={false}
             className="slds-tabs_scoped__link"
-            href="javascript:void(0);"
+            href="#"
             id="tab-scoped-3__item"
+            onClick={[Function]}
             role="tab"
             tabIndex={-1}
           >
@@ -833,8 +854,9 @@ exports[`Default Tabs renders default tabs with overflowing tab items 1`] = `
           aria-controls="tab-default-1"
           aria-selected={true}
           className="slds-tabs_default__link"
-          href="javascript:void(0);"
+          href="#"
           id="tab-default-1__item"
+          onClick={[Function]}
           role="tab"
           tabIndex={0}
         >
@@ -850,8 +872,9 @@ exports[`Default Tabs renders default tabs with overflowing tab items 1`] = `
           aria-controls="tab-default-2"
           aria-selected={false}
           className="slds-tabs_default__link"
-          href="javascript:void(0);"
+          href="#"
           id="tab-default-2__item"
+          onClick={[Function]}
           role="tab"
           tabIndex={-1}
         >
@@ -867,8 +890,9 @@ exports[`Default Tabs renders default tabs with overflowing tab items 1`] = `
           aria-controls="tab-default-3"
           aria-selected={false}
           className="slds-tabs_default__link"
-          href="javascript:void(0);"
+          href="#"
           id="tab-default-3__item"
+          onClick={[Function]}
           role="tab"
           tabIndex={-1}
         >
@@ -884,8 +908,9 @@ exports[`Default Tabs renders default tabs with overflowing tab items 1`] = `
           aria-controls="tab-default-4"
           aria-selected={false}
           className="slds-tabs_default__link"
-          href="javascript:void(0);"
+          href="#"
           id="tab-default-4__item"
+          onClick={[Function]}
           role="tab"
           tabIndex={-1}
         >
@@ -901,8 +926,9 @@ exports[`Default Tabs renders default tabs with overflowing tab items 1`] = `
           aria-controls="tab-default-5"
           aria-selected={false}
           className="slds-tabs_default__link"
-          href="javascript:void(0);"
+          href="#"
           id="tab-default-5__item"
+          onClick={[Function]}
           role="tab"
           tabIndex={-1}
         >
@@ -943,7 +969,8 @@ exports[`Default Tabs renders default tabs with overflowing tab items 1`] = `
                 role="presentation"
               >
                 <a
-                  href="javascript:void(0);"
+                  href="#"
+                  onClick={[Function]}
                   role="menuitem"
                   tabIndex="-1"
                 >
@@ -960,7 +987,8 @@ exports[`Default Tabs renders default tabs with overflowing tab items 1`] = `
                 role="presentation"
               >
                 <a
-                  href="javascript:void(0);"
+                  href="#"
+                  onClick={[Function]}
                   role="menuitem"
                   tabIndex="-1"
                 >
@@ -977,7 +1005,8 @@ exports[`Default Tabs renders default tabs with overflowing tab items 1`] = `
                 role="presentation"
               >
                 <a
-                  href="javascript:void(0);"
+                  href="#"
+                  onClick={[Function]}
                   role="menuitem"
                   tabIndex="-1"
                 >
@@ -1065,8 +1094,9 @@ exports[`Default Tabs renders large sized default tabs 1`] = `
         aria-controls="tab-default-1"
         aria-selected={true}
         className="slds-tabs_default__link"
-        href="javascript:void(0);"
+        href="#"
         id="tab-default-1__item"
+        onClick={[Function]}
         role="tab"
         tabIndex={0}
       >
@@ -1082,8 +1112,9 @@ exports[`Default Tabs renders large sized default tabs 1`] = `
         aria-controls="tab-default-2"
         aria-selected={false}
         className="slds-tabs_default__link"
-        href="javascript:void(0);"
+        href="#"
         id="tab-default-2__item"
+        onClick={[Function]}
         role="tab"
         tabIndex={-1}
       >
@@ -1099,8 +1130,9 @@ exports[`Default Tabs renders large sized default tabs 1`] = `
         aria-controls="tab-default-3"
         aria-selected={false}
         className="slds-tabs_default__link"
-        href="javascript:void(0);"
+        href="#"
         id="tab-default-3__item"
+        onClick={[Function]}
         role="tab"
         tabIndex={-1}
       >
@@ -1152,8 +1184,9 @@ exports[`Default Tabs renders medium sized default tabs 1`] = `
         aria-controls="tab-default-1"
         aria-selected={true}
         className="slds-tabs_default__link"
-        href="javascript:void(0);"
+        href="#"
         id="tab-default-1__item"
+        onClick={[Function]}
         role="tab"
         tabIndex={0}
       >
@@ -1169,8 +1202,9 @@ exports[`Default Tabs renders medium sized default tabs 1`] = `
         aria-controls="tab-default-2"
         aria-selected={false}
         className="slds-tabs_default__link"
-        href="javascript:void(0);"
+        href="#"
         id="tab-default-2__item"
+        onClick={[Function]}
         role="tab"
         tabIndex={-1}
       >
@@ -1186,8 +1220,9 @@ exports[`Default Tabs renders medium sized default tabs 1`] = `
         aria-controls="tab-default-3"
         aria-selected={false}
         className="slds-tabs_default__link"
-        href="javascript:void(0);"
+        href="#"
         id="tab-default-3__item"
+        onClick={[Function]}
         role="tab"
         tabIndex={-1}
       >
@@ -1239,8 +1274,9 @@ exports[`Default Tabs renders tabs as a card 1`] = `
         aria-controls="tab-default-1"
         aria-selected={true}
         className="slds-tabs_default__link"
-        href="javascript:void(0);"
+        href="#"
         id="tab-default-1__item"
+        onClick={[Function]}
         role="tab"
         tabIndex={0}
       >
@@ -1256,8 +1292,9 @@ exports[`Default Tabs renders tabs as a card 1`] = `
         aria-controls="tab-default-2"
         aria-selected={false}
         className="slds-tabs_default__link"
-        href="javascript:void(0);"
+        href="#"
         id="tab-default-2__item"
+        onClick={[Function]}
         role="tab"
         tabIndex={-1}
       >
@@ -1273,8 +1310,9 @@ exports[`Default Tabs renders tabs as a card 1`] = `
         aria-controls="tab-default-3"
         aria-selected={false}
         className="slds-tabs_default__link"
-        href="javascript:void(0);"
+        href="#"
         id="tab-default-3__item"
+        onClick={[Function]}
         role="tab"
         tabIndex={-1}
       >
@@ -1327,7 +1365,8 @@ exports[`Default Tabs renders tabs as a card 1`] = `
             >
               <a
                 className="slds-card__header-link slds-truncate"
-                href="javascript:void(0);"
+                href="#"
+                onClick={[Function]}
                 title="Card Header"
               >
                 <span>
@@ -1364,7 +1403,8 @@ exports[`Default Tabs renders tabs as a card 1`] = `
       >
         <a
           className="slds-card__footer-action"
-          href="javascript:void(0);"
+          href="#"
+          onClick={[Function]}
         >
           View All 
           <span
@@ -1414,7 +1454,8 @@ exports[`Default Tabs renders tabs as a card 1`] = `
             >
               <a
                 className="slds-card__header-link slds-truncate"
-                href="javascript:void(0);"
+                href="#"
+                onClick={[Function]}
                 title="Card Header"
               >
                 <span>
@@ -1451,7 +1492,8 @@ exports[`Default Tabs renders tabs as a card 1`] = `
       >
         <a
           className="slds-card__footer-action"
-          href="javascript:void(0);"
+          href="#"
+          onClick={[Function]}
         >
           View All 
           <span
@@ -1501,7 +1543,8 @@ exports[`Default Tabs renders tabs as a card 1`] = `
             >
               <a
                 className="slds-card__header-link slds-truncate"
-                href="javascript:void(0);"
+                href="#"
+                onClick={[Function]}
                 title="Card Header"
               >
                 <span>
@@ -1544,7 +1587,8 @@ exports[`Default Tabs renders tabs as a card 1`] = `
       >
         <a
           className="slds-card__footer-action"
-          href="javascript:void(0);"
+          href="#"
+          onClick={[Function]}
         >
           View All 
           <span
@@ -3311,7 +3355,8 @@ exports[`SubtabOverflow should render a SubtabOverflow 1`] = `
           role="presentation"
         >
           <a
-            href="javascript:void(0);"
+            href="#"
+            onClick={[Function]}
             role="menuitem"
             tabIndex="-1"
           >
@@ -3351,7 +3396,8 @@ exports[`SubtabOverflow should render a SubtabOverflow 1`] = `
           role="presentation"
         >
           <a
-            href="javascript:void(0);"
+            href="#"
+            onClick={[Function]}
             role="menuitem"
             tabIndex="-1"
           >
@@ -3440,7 +3486,8 @@ exports[`SubtabOverflow should render a error SubtabOverflow 1`] = `
         >
           <a
             className="slds-has-error"
-            href="javascript:void(0);"
+            href="#"
+            onClick={[Function]}
             role="menuitem"
             tabIndex="-1"
           >
@@ -3484,7 +3531,8 @@ exports[`SubtabOverflow should render a error SubtabOverflow 1`] = `
           role="presentation"
         >
           <a
-            href="javascript:void(0);"
+            href="#"
+            onClick={[Function]}
             role="menuitem"
             tabIndex="-1"
           >
@@ -3573,7 +3621,8 @@ exports[`SubtabOverflow should render a success SubtabOverflow 1`] = `
         >
           <a
             className="slds-has-success"
-            href="javascript:void(0);"
+            href="#"
+            onClick={[Function]}
             role="menuitem"
             tabIndex="-1"
           >
@@ -3617,7 +3666,8 @@ exports[`SubtabOverflow should render a success SubtabOverflow 1`] = `
           role="presentation"
         >
           <a
-            href="javascript:void(0);"
+            href="#"
+            onClick={[Function]}
             role="menuitem"
             tabIndex="-1"
           >
@@ -3706,7 +3756,8 @@ exports[`SubtabOverflow should render a warning SubtabOverflow 1`] = `
         >
           <a
             className="slds-has-warning"
-            href="javascript:void(0);"
+            href="#"
+            onClick={[Function]}
             role="menuitem"
             tabIndex="-1"
           >
@@ -3750,7 +3801,8 @@ exports[`SubtabOverflow should render a warning SubtabOverflow 1`] = `
           role="presentation"
         >
           <a
-            href="javascript:void(0);"
+            href="#"
+            onClick={[Function]}
             role="menuitem"
             tabIndex="-1"
           >
@@ -3838,7 +3890,8 @@ exports[`SubtabOverflow should render an open SubtabOverflow 1`] = `
           role="presentation"
         >
           <a
-            href="javascript:void(0);"
+            href="#"
+            onClick={[Function]}
             role="menuitem"
             tabIndex="-1"
           >
@@ -3878,7 +3931,8 @@ exports[`SubtabOverflow should render an open SubtabOverflow 1`] = `
           role="presentation"
         >
           <a
-            href="javascript:void(0);"
+            href="#"
+            onClick={[Function]}
             role="menuitem"
             tabIndex="-1"
           >
@@ -3966,7 +4020,8 @@ exports[`SubtabOverflow should render an open SubtabOverflow with no icon on the
           role="presentation"
         >
           <a
-            href="javascript:void(0);"
+            href="#"
+            onClick={[Function]}
             role="menuitem"
             tabIndex="-1"
           >
@@ -3988,7 +4043,8 @@ exports[`SubtabOverflow should render an open SubtabOverflow with no icon on the
           role="presentation"
         >
           <a
-            href="javascript:void(0);"
+            href="#"
+            onClick={[Function]}
             role="menuitem"
             tabIndex="-1"
           >
@@ -4054,8 +4110,9 @@ exports[`Subtabs renders dirty overflowed subtab 1`] = `
           aria-controls="subtab-tabpanel-01"
           aria-selected="false"
           className="slds-tabs_default__link slds-p-horizontal_xx-small"
-          href="javascript:void(0);"
+          href="#"
           id="subtab-tabitem-01"
+          onClick={[Function]}
           role="tab"
           tabIndex="-1"
           title="00071938"
@@ -4120,8 +4177,9 @@ exports[`Subtabs renders dirty overflowed subtab 1`] = `
           aria-controls="subtab-tabpanel-02"
           aria-selected="false"
           className="slds-tabs_default__link slds-p-horizontal_xx-small"
-          href="javascript:void(0);"
+          href="#"
           id="subtab-tabitem-02"
+          onClick={[Function]}
           role="tab"
           tabIndex="-1"
           title="00071939"
@@ -4232,7 +4290,8 @@ exports[`Subtabs renders dirty overflowed subtab 1`] = `
                 role="presentation"
               >
                 <a
-                  href="javascript:void(0);"
+                  href="#"
+                  onClick={[Function]}
                   role="menuitem"
                   tabIndex="-1"
                 >
@@ -4280,7 +4339,8 @@ exports[`Subtabs renders dirty overflowed subtab 1`] = `
                 role="presentation"
               >
                 <a
-                  href="javascript:void(0);"
+                  href="#"
+                  onClick={[Function]}
                   role="menuitem"
                   tabIndex="-1"
                 >
@@ -4365,8 +4425,9 @@ exports[`Subtabs renders dirty overflowed subtab with notification 1`] = `
           aria-controls="subtab-tabpanel-01"
           aria-selected="false"
           className="slds-tabs_default__link slds-p-horizontal_xx-small"
-          href="javascript:void(0);"
+          href="#"
           id="subtab-tabitem-01"
+          onClick={[Function]}
           role="tab"
           tabIndex="-1"
           title="00071938"
@@ -4431,8 +4492,9 @@ exports[`Subtabs renders dirty overflowed subtab with notification 1`] = `
           aria-controls="subtab-tabpanel-02"
           aria-selected="false"
           className="slds-tabs_default__link slds-p-horizontal_xx-small"
-          href="javascript:void(0);"
+          href="#"
           id="subtab-tabitem-02"
+          onClick={[Function]}
           role="tab"
           tabIndex="-1"
           title="00071939"
@@ -4548,7 +4610,8 @@ exports[`Subtabs renders dirty overflowed subtab with notification 1`] = `
                 role="presentation"
               >
                 <a
-                  href="javascript:void(0);"
+                  href="#"
+                  onClick={[Function]}
                   role="menuitem"
                   tabIndex="-1"
                 >
@@ -4601,7 +4664,8 @@ exports[`Subtabs renders dirty overflowed subtab with notification 1`] = `
                 role="presentation"
               >
                 <a
-                  href="javascript:void(0);"
+                  href="#"
+                  onClick={[Function]}
                   role="menuitem"
                   tabIndex="-1"
                 >
@@ -4686,8 +4750,9 @@ exports[`Subtabs renders overflowed subtab 1`] = `
           aria-controls="subtab-tabpanel-01"
           aria-selected="false"
           className="slds-tabs_default__link slds-p-horizontal_xx-small"
-          href="javascript:void(0);"
+          href="#"
           id="subtab-tabitem-01"
+          onClick={[Function]}
           role="tab"
           tabIndex="-1"
           title="00071938"
@@ -4752,8 +4817,9 @@ exports[`Subtabs renders overflowed subtab 1`] = `
           aria-controls="subtab-tabpanel-02"
           aria-selected="false"
           className="slds-tabs_default__link slds-p-horizontal_xx-small"
-          href="javascript:void(0);"
+          href="#"
           id="subtab-tabitem-02"
+          onClick={[Function]}
           role="tab"
           tabIndex="-1"
           title="00071939"
@@ -4856,7 +4922,8 @@ exports[`Subtabs renders overflowed subtab 1`] = `
                 role="presentation"
               >
                 <a
-                  href="javascript:void(0);"
+                  href="#"
+                  onClick={[Function]}
                   role="menuitem"
                   tabIndex="-1"
                 >
@@ -4896,7 +4963,8 @@ exports[`Subtabs renders overflowed subtab 1`] = `
                 role="presentation"
               >
                 <a
-                  href="javascript:void(0);"
+                  href="#"
+                  onClick={[Function]}
                   role="menuitem"
                   tabIndex="-1"
                 >
@@ -4981,8 +5049,9 @@ exports[`Subtabs renders overflowed subtab with notification 1`] = `
           aria-controls="subtab-tabpanel-01"
           aria-selected="false"
           className="slds-tabs_default__link slds-p-horizontal_xx-small"
-          href="javascript:void(0);"
+          href="#"
           id="subtab-tabitem-01"
+          onClick={[Function]}
           role="tab"
           tabIndex="-1"
           title="00071938"
@@ -5047,8 +5116,9 @@ exports[`Subtabs renders overflowed subtab with notification 1`] = `
           aria-controls="subtab-tabpanel-02"
           aria-selected="false"
           className="slds-tabs_default__link slds-p-horizontal_xx-small"
-          href="javascript:void(0);"
+          href="#"
           id="subtab-tabitem-02"
+          onClick={[Function]}
           role="tab"
           tabIndex="-1"
           title="00071939"
@@ -5157,7 +5227,8 @@ exports[`Subtabs renders overflowed subtab with notification 1`] = `
                 role="presentation"
               >
                 <a
-                  href="javascript:void(0);"
+                  href="#"
+                  onClick={[Function]}
                   role="menuitem"
                   tabIndex="-1"
                 >
@@ -5203,7 +5274,8 @@ exports[`Subtabs renders overflowed subtab with notification 1`] = `
                 role="presentation"
               >
                 <a
-                  href="javascript:void(0);"
+                  href="#"
+                  onClick={[Function]}
                   role="menuitem"
                   tabIndex="-1"
                 >
@@ -5279,8 +5351,9 @@ exports[`Subtabs renders subtab with notification and dirty 1`] = `
         aria-controls="subtab-tabpanel-01"
         aria-selected="true"
         className="slds-tabs_default__link slds-p-horizontal_xx-small"
-        href="javascript:void(0);"
+        href="#"
         id="subtab-tabitem-01"
+        onClick={[Function]}
         role="tab"
         tabIndex="0"
         title="00071938"
@@ -5345,8 +5418,9 @@ exports[`Subtabs renders subtab with notification and dirty 1`] = `
         aria-controls="subtab-tabpanel-02"
         aria-selected="false"
         className="slds-tabs_default__link slds-p-horizontal_xx-small"
-        href="javascript:void(0);"
+        href="#"
         id="subtab-tabitem-02"
+        onClick={[Function]}
         role="tab"
         tabIndex="-1"
         title="Chat - Customer"
@@ -5445,8 +5519,9 @@ exports[`Subtabs should render a subtab 1`] = `
     aria-controls="tabpanel-id"
     aria-selected="false"
     className="slds-tabs_default__link slds-p-horizontal_xx-small"
-    href="javascript:void(0);"
+    href="#"
     id="tab-id"
+    onClick={[Function]}
     role="tab"
     tabIndex="-1"
     title="Subtab Name"
@@ -5514,8 +5589,9 @@ exports[`Subtabs should render a success subtab 1`] = `
     aria-controls="tabpanel-id"
     aria-selected="false"
     className="slds-tabs_default__link slds-p-horizontal_xx-small"
-    href="javascript:void(0);"
+    href="#"
     id="tab-id"
+    onClick={[Function]}
     role="tab"
     tabIndex="-1"
     title="Subtab Name"
@@ -5587,8 +5663,9 @@ exports[`Subtabs should render a warning subtab 1`] = `
     aria-controls="tabpanel-id"
     aria-selected="false"
     className="slds-tabs_default__link slds-p-horizontal_xx-small"
-    href="javascript:void(0);"
+    href="#"
     id="tab-id"
+    onClick={[Function]}
     role="tab"
     tabIndex="-1"
     title="Subtab Name"
@@ -5660,8 +5737,9 @@ exports[`Subtabs should render an error subtab 1`] = `
     aria-controls="tabpanel-id"
     aria-selected="false"
     className="slds-tabs_default__link slds-p-horizontal_xx-small"
-    href="javascript:void(0);"
+    href="#"
     id="tab-id"
+    onClick={[Function]}
     role="tab"
     tabIndex="-1"
     title="Subtab Name"

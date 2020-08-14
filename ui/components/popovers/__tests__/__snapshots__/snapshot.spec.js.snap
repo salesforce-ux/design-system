@@ -1152,7 +1152,8 @@ exports[`renders a warning popover 1`] = `
       Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore.
        
       <a
-        href="javascript:void(0);"
+        href="#"
+        onClick={[Function]}
         title="Learn More"
       >
         Learn More
@@ -1231,7 +1232,8 @@ exports[`renders a warning popover with footer 1`] = `
       Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore.
        
       <a
-        href="javascript:void(0);"
+        href="#"
+        onClick={[Function]}
         title="Learn More"
       >
         Learn More
@@ -1462,7 +1464,8 @@ exports[`renders an error popover 1`] = `
       Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore.
        
       <a
-        href="javascript:void(0);"
+        href="#"
+        onClick={[Function]}
         title="Learn More"
       >
         Learn More
@@ -1541,7 +1544,8 @@ exports[`renders an error popover with footer 1`] = `
       Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore.
        
       <a
-        href="javascript:void(0);"
+        href="#"
+        onClick={[Function]}
         title="Learn More"
       >
         Learn More

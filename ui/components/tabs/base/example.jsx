@@ -208,10 +208,11 @@ export const TabsWithCards = () => (
         <CardHeader
           symbol="contact"
           title="Card Header"
-          href="javascript:void(0);"
+          href="#"
           action={
             <button className="slds-button slds-button_neutral">New</button>
           }
+          onClick={e => e.preventDefault()}
         />
         <CardBody hasPadding>
           This is a card inside an <code className="doc">
@@ -227,10 +228,11 @@ export const TabsWithCards = () => (
         <CardHeader
           symbol="contact"
           title="Card Header"
-          href="javascript:void(0);"
+          href="#"
           action={
             <button className="slds-button slds-button_neutral">New</button>
           }
+          onClick={e => e.preventDefault()}
         />
         <CardBody hasPadding>
           This is a card inside an <code className="doc">
@@ -246,10 +248,11 @@ export const TabsWithCards = () => (
         <CardHeader
           symbol="contact"
           title="Card Header"
-          href="javascript:void(0);"
+          href="#"
           action={
             <button className="slds-button slds-button_neutral">New</button>
           }
+          onClick={e => e.preventDefault()}
         />
         <CardBody hasPadding>
           This is a card inside an <code className="doc">

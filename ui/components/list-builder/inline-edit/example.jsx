@@ -18,8 +18,9 @@ import {
 let Th = props => (
   <th className={props.className} scope={props.scope} style={props.style}>
     <a
-      href="javascript:void(0);"
+      href="#"
       className="slds-th__action slds-text-link_reset"
+      onClick={e => e.preventDefault()}
     >
       <span className="slds-assistive-text">Sort Column</span>
       <span className="slds-truncate" title={props.title}>

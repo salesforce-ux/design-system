@@ -8,8 +8,8 @@ export const RelatedListDeprecated = () => (
     <div className="slds-grid">
       <div className="slds-col slds-has-flexi-truncate">
         <BreadCrumbs className="slds-m-bottom_xx-small">
-          <Crumb href="javascript:void(0);">Accounts</Crumb>
-          <Crumb href="javascript:void(0);">Company One</Crumb>
+          <Crumb href="#" onClick={e => e.preventDefault()}>Accounts</Crumb>
+          <Crumb href="#" onClick={e => e.preventDefault()}>Company One</Crumb>
         </BreadCrumbs>
         <h1
           className="slds-page-header__title slds-truncate"

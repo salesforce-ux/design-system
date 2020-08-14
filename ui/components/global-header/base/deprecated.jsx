@@ -355,13 +355,13 @@ export const GlobalHeaderDeprecated = props => (
     className={classNames('slds-global-header_container', props.className)}
   >
     <a
-      href="javascript:void(0);"
+      href="#" onClick={e => e.preventDefault()}
       className="slds-assistive-text slds-assistive-text_focus"
     >
       Skip to Navigation
     </a>
     <a
-      href="javascript:void(0);"
+      href="#" onClick={e => e.preventDefault()}
       className="slds-assistive-text slds-assistive-text_focus"
     >
       Skip to Main Content

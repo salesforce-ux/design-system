@@ -73,7 +73,8 @@ exports[`List Builder Inline Edit renders a default list builder with inline edi
                   >
                     <a
                       className="slds-th__action slds-text-link_reset"
-                      href="javascript:void(0);"
+                      href="#"
+                      onClick={[Function]}
                     >
                       <span
                         className="slds-assistive-text"
@@ -107,7 +108,8 @@ exports[`List Builder Inline Edit renders a default list builder with inline edi
                   >
                     <a
                       className="slds-th__action slds-text-link_reset"
-                      href="javascript:void(0);"
+                      href="#"
+                      onClick={[Function]}
                     >
                       <span
                         className="slds-assistive-text"
@@ -141,7 +143,8 @@ exports[`List Builder Inline Edit renders a default list builder with inline edi
                   >
                     <a
                       className="slds-th__action slds-text-link_reset"
-                      href="javascript:void(0);"
+                      href="#"
+                      onClick={[Function]}
                     >
                       <span
                         className="slds-assistive-text"
@@ -175,7 +178,8 @@ exports[`List Builder Inline Edit renders a default list builder with inline edi
                   >
                     <a
                       className="slds-th__action slds-text-link_reset"
-                      href="javascript:void(0);"
+                      href="#"
+                      onClick={[Function]}
                     >
                       <span
                         className="slds-assistive-text"
@@ -209,7 +213,8 @@ exports[`List Builder Inline Edit renders a default list builder with inline edi
                   >
                     <a
                       className="slds-th__action slds-text-link_reset"
-                      href="javascript:void(0);"
+                      href="#"
+                      onClick={[Function]}
                     >
                       <span
                         className="slds-assistive-text"
@@ -243,7 +248,8 @@ exports[`List Builder Inline Edit renders a default list builder with inline edi
                   >
                     <a
                       className="slds-th__action slds-text-link_reset"
-                      href="javascript:void(0);"
+                      href="#"
+                      onClick={[Function]}
                     >
                       <span
                         className="slds-assistive-text"
@@ -277,7 +283,8 @@ exports[`List Builder Inline Edit renders a default list builder with inline edi
                   >
                     <a
                       className="slds-th__action slds-text-link_reset"
-                      href="javascript:void(0);"
+                      href="#"
+                      onClick={[Function]}
                     >
                       <span
                         className="slds-assistive-text"
@@ -311,7 +318,8 @@ exports[`List Builder Inline Edit renders a default list builder with inline edi
                   >
                     <a
                       className="slds-th__action slds-text-link_reset"
-                      href="javascript:void(0);"
+                      href="#"
+                      onClick={[Function]}
                     >
                       <span
                         className="slds-assistive-text"
@@ -924,7 +932,8 @@ exports[`List Builder renders a default list builder 1`] = `
                     >
                       <a
                         className="slds-th__action slds-text-link_reset"
-                        href="javascript:void(0);"
+                        href="#"
+                        onClick={[Function]}
                         role="button"
                         tabIndex="-1"
                       >
@@ -986,7 +995,8 @@ exports[`List Builder renders a default list builder 1`] = `
                     >
                       <a
                         className="slds-th__action slds-text-link_reset"
-                        href="javascript:void(0);"
+                        href="#"
+                        onClick={[Function]}
                         role="button"
                         tabIndex="-1"
                       >
@@ -1048,7 +1058,8 @@ exports[`List Builder renders a default list builder 1`] = `
                     >
                       <a
                         className="slds-th__action slds-text-link_reset"
-                        href="javascript:void(0);"
+                        href="#"
+                        onClick={[Function]}
                         role="button"
                         tabIndex="-1"
                       >
@@ -1110,7 +1121,8 @@ exports[`List Builder renders a default list builder 1`] = `
                     >
                       <a
                         className="slds-th__action slds-text-link_reset"
-                        href="javascript:void(0);"
+                        href="#"
+                        onClick={[Function]}
                         role="button"
                         tabIndex="-1"
                       >
@@ -2167,7 +2179,8 @@ exports[`List Builder renders a list builder with default items disabled 1`] = `
                     >
                       <a
                         className="slds-th__action slds-text-link_reset"
-                        href="javascript:void(0);"
+                        href="#"
+                        onClick={[Function]}
                         role="button"
                         tabIndex="-1"
                       >
@@ -2229,7 +2242,8 @@ exports[`List Builder renders a list builder with default items disabled 1`] = `
                     >
                       <a
                         className="slds-th__action slds-text-link_reset"
-                        href="javascript:void(0);"
+                        href="#"
+                        onClick={[Function]}
                         role="button"
                         tabIndex="-1"
                       >
@@ -2291,7 +2305,8 @@ exports[`List Builder renders a list builder with default items disabled 1`] = `
                     >
                       <a
                         className="slds-th__action slds-text-link_reset"
-                        href="javascript:void(0);"
+                        href="#"
+                        onClick={[Function]}
                         role="button"
                         tabIndex="-1"
                       >
@@ -2353,7 +2368,8 @@ exports[`List Builder renders a list builder with default items disabled 1`] = `
                     >
                       <a
                         className="slds-th__action slds-text-link_reset"
-                        href="javascript:void(0);"
+                        href="#"
+                        onClick={[Function]}
                         role="button"
                         tabIndex="-1"
                       >
@@ -3490,7 +3506,8 @@ exports[`List Builder renders a list builder with filtered results 1`] = `
                     >
                       <a
                         className="slds-th__action slds-text-link_reset"
-                        href="javascript:void(0);"
+                        href="#"
+                        onClick={[Function]}
                         role="button"
                         tabIndex="-1"
                       >
@@ -3552,7 +3569,8 @@ exports[`List Builder renders a list builder with filtered results 1`] = `
                     >
                       <a
                         className="slds-th__action slds-text-link_reset"
-                        href="javascript:void(0);"
+                        href="#"
+                        onClick={[Function]}
                         role="button"
                         tabIndex="-1"
                       >
@@ -3614,7 +3632,8 @@ exports[`List Builder renders a list builder with filtered results 1`] = `
                     >
                       <a
                         className="slds-th__action slds-text-link_reset"
-                        href="javascript:void(0);"
+                        href="#"
+                        onClick={[Function]}
                         role="button"
                         tabIndex="-1"
                       >
@@ -3676,7 +3695,8 @@ exports[`List Builder renders a list builder with filtered results 1`] = `
                     >
                       <a
                         className="slds-th__action slds-text-link_reset"
-                        href="javascript:void(0);"
+                        href="#"
+                        onClick={[Function]}
                         role="button"
                         tabIndex="-1"
                       >
@@ -4894,7 +4914,8 @@ exports[`List Builder renders a list builder with items disabled 1`] = `
                     >
                       <a
                         className="slds-th__action slds-text-link_reset"
-                        href="javascript:void(0);"
+                        href="#"
+                        onClick={[Function]}
                         role="button"
                         tabIndex="-1"
                       >
@@ -4956,7 +4977,8 @@ exports[`List Builder renders a list builder with items disabled 1`] = `
                     >
                       <a
                         className="slds-th__action slds-text-link_reset"
-                        href="javascript:void(0);"
+                        href="#"
+                        onClick={[Function]}
                         role="button"
                         tabIndex="-1"
                       >
@@ -5018,7 +5040,8 @@ exports[`List Builder renders a list builder with items disabled 1`] = `
                     >
                       <a
                         className="slds-th__action slds-text-link_reset"
-                        href="javascript:void(0);"
+                        href="#"
+                        onClick={[Function]}
                         role="button"
                         tabIndex="-1"
                       >
@@ -5080,7 +5103,8 @@ exports[`List Builder renders a list builder with items disabled 1`] = `
                     >
                       <a
                         className="slds-th__action slds-text-link_reset"
-                        href="javascript:void(0);"
+                        href="#"
+                        onClick={[Function]}
                         role="button"
                         tabIndex="-1"
                       >
@@ -6187,7 +6211,8 @@ exports[`List Builder renders a list builder with items selected 1`] = `
                     >
                       <a
                         className="slds-th__action slds-text-link_reset"
-                        href="javascript:void(0);"
+                        href="#"
+                        onClick={[Function]}
                         role="button"
                         tabIndex="-1"
                       >
@@ -6249,7 +6274,8 @@ exports[`List Builder renders a list builder with items selected 1`] = `
                     >
                       <a
                         className="slds-th__action slds-text-link_reset"
-                        href="javascript:void(0);"
+                        href="#"
+                        onClick={[Function]}
                         role="button"
                         tabIndex="-1"
                       >
@@ -6311,7 +6337,8 @@ exports[`List Builder renders a list builder with items selected 1`] = `
                     >
                       <a
                         className="slds-th__action slds-text-link_reset"
-                        href="javascript:void(0);"
+                        href="#"
+                        onClick={[Function]}
                         role="button"
                         tabIndex="-1"
                       >
@@ -6373,7 +6400,8 @@ exports[`List Builder renders a list builder with items selected 1`] = `
                     >
                       <a
                         className="slds-th__action slds-text-link_reset"
-                        href="javascript:void(0);"
+                        href="#"
+                        onClick={[Function]}
                         role="button"
                         tabIndex="-1"
                       >

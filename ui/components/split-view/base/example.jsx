@@ -207,11 +207,12 @@ let Row = props => (
     role="presentation"
   >
     <a
-      href="javascript:void(0);"
+      href="#"
       aria-selected={!!props.selected}
       role="option"
       className="slds-split-view__list-item-action slds-grow slds-has-flexi-truncate"
       tabIndex={props.tabIndex}
+      onClick={e => e.preventDefault()}
     >
       {props.unread ? (
         <abbr

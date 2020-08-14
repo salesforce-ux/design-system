@@ -452,7 +452,8 @@ exports[`renders a docked composer with multiple composer overflow 1`] = `
           role="presentation"
         >
           <a
-            href="javascript:void(0);"
+            href="#"
+            onClick={[Function]}
             role="menuitem"
             tabIndex="-1"
           >
@@ -486,7 +487,8 @@ exports[`renders a docked composer with multiple composer overflow 1`] = `
           role="presentation"
         >
           <a
-            href="javascript:void(0);"
+            href="#"
+            onClick={[Function]}
             role="menuitem"
             tabIndex="-1"
           >
@@ -520,7 +522,8 @@ exports[`renders a docked composer with multiple composer overflow 1`] = `
           role="presentation"
         >
           <a
-            href="javascript:void(0);"
+            href="#"
+            onClick={[Function]}
             role="menuitem"
             tabIndex="-1"
           >

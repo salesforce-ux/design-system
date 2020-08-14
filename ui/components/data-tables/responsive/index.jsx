@@ -101,7 +101,7 @@ const RowData = props => (
     <Td data-label="Contact" type="base">
       <ReadOnlyCell
         actionableMode
-        cellLink="javascript:void(0);"
+        cellLink
         cellText="jrogers@cloudhub.com"
       />
     </Td>

@@ -69,7 +69,7 @@ export const Row = props => (
           props.isExpanded ? `Collapse ${props.name}` : `Expand ${props.name}`
         }
       />
-      <ReadOnlyCell cellLink="javascript:void(0);" cellText={props.name} />
+      <ReadOnlyCell cellLink cellText={props.name} />
     </RowTh>
     <Td data-label="Employees" type="treegrid">
       <ReadOnlyCell cellText={props.employees} />
@@ -78,7 +78,7 @@ export const Row = props => (
       <ReadOnlyCell cellText={props.phone} />
     </Td>
     <Td data-label="Account Owner" type="treegrid">
-      <ReadOnlyCell cellLink="javascript:void(0);" cellText={props.owner} />
+      <ReadOnlyCell cellLink cellText={props.owner} />
     </Td>
     <Td data-label="Billing City" type="treegrid">
       <ReadOnlyCell cellText={props.city} />
@@ -137,7 +137,7 @@ export const HeadlessRow = props => (
           props.isExpanded ? `Collapse ${props.name}` : `Expand ${props.name}`
         }
       />
-      <ReadOnlyCell cellLink="javascript:void(0);" cellText={props.name} />
+      <ReadOnlyCell cellLink cellText={props.name} />
     </RowTh>
     <Td type="treegrid" style={{ width: '3.25rem' }}>
       <RowActionsCell rowName={props.name} />

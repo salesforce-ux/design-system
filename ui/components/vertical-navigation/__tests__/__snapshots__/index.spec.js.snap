@@ -60,7 +60,8 @@ exports[`Vertical Nav List Group renders a list item 1`] = `
 >
   <a
     className="slds-nav-vertical__action"
-    href="javascript:void(0);"
+    href="#"
+    onClick={[Function]}
   >
     Item One
   </a>
@@ -104,7 +105,8 @@ exports[`Vertical Nav List Group renders an active list item 1`] = `
   <a
     aria-current={true}
     className="slds-nav-vertical__action"
-    href="javascript:void(0);"
+    href="#"
+    onClick={[Function]}
   >
      Item One
   </a>

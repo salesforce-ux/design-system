@@ -69,7 +69,7 @@ export const InlineEditTr = props => (
       <EditableCell
         actionableMode={props.actionableMode}
         buttonText={'Edit Name of ' + props.recordName}
-        cellLink="javascript:void(0);"
+        cellLink
         cellText={props.recordName}
         index={props.index}
       />

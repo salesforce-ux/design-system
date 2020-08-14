@@ -164,7 +164,8 @@ exports[`Setup Assistant  renders a setup assistant step with a link action and 
       className="slds-media__figure slds-media__figure_reverse"
     >
       <a
-        href="javascript:void(0);"
+        href="#"
+        onClick={[Function]}
       >
         Add Users
       </a>
@@ -464,7 +465,8 @@ exports[`Setup Assistant  renders a step detail 1`] = `
             className="slds-grid slds-grid_align-end slds-size_1-of-4"
           >
             <a
-              href="javascript:void(0);"
+              href="#"
+              onClick={[Function]}
             >
               View in Trailhead
             </a>
@@ -544,7 +546,8 @@ exports[`Setup Assistant  renders a step detail 1`] = `
         It looks as if duplicates exist for this lead.
          
         <a
-          href="javascript:void(0);"
+          href="#"
+          onClick={[Function]}
         >
           View Duplicates.
         </a>

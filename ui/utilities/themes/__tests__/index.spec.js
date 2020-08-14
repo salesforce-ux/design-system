@@ -9,7 +9,7 @@ describe('renders theme utilities', () => {
       <div className="slds-box slds-theme_default">
         <p>
           This is a <strong>default</strong> theme and here is a{' '}
-          <a href="javascript:void(0);">link</a>.
+          <a href="#" onClick={e => e.preventDefault()}>link</a>.
         </p>
       </div>
     ));
@@ -19,7 +19,7 @@ describe('renders theme utilities', () => {
       <div className="slds-box slds-theme_shade">
         <p>
           This is a <strong>default</strong> theme and here is a{' '}
-          <a href="javascript:void(0);">link</a>.
+          <a href="#" onClick={e => e.preventDefault()}>link</a>.
         </p>
       </div>
     ));
@@ -29,7 +29,7 @@ describe('renders theme utilities', () => {
       <div className="slds-box slds-theme_inverse">
         <p>
           This is a <strong>default</strong> theme and here is a{' '}
-          <a href="javascript:void(0);">link</a>.
+          <a href="#" onClick={e => e.preventDefault()}>link</a>.
         </p>
       </div>
     ));
@@ -39,7 +39,7 @@ describe('renders theme utilities', () => {
       <div className="slds-box slds-theme_alt-inverse">
         <p>
           This is a <strong>default</strong> theme and here is a{' '}
-          <a href="javascript:void(0);">link</a>.
+          <a href="#" onClick={e => e.preventDefault()}>link</a>.
         </p>
       </div>
     ));
@@ -49,7 +49,7 @@ describe('renders theme utilities', () => {
       <div className="slds-box slds-theme_success">
         <p>
           This is a <strong>default</strong> theme and here is a{' '}
-          <a href="javascript:void(0);">link</a>.
+          <a href="#" onClick={e => e.preventDefault()}>link</a>.
         </p>
       </div>
     ));
@@ -59,7 +59,7 @@ describe('renders theme utilities', () => {
       <div className="slds-box slds-theme_info">
         <p>
           This is a <strong>default</strong> theme and here is a{' '}
-          <a href="javascript:void(0);">link</a>.
+          <a href="#" onClick={e => e.preventDefault()}>link</a>.
         </p>
       </div>
     ));
@@ -69,7 +69,7 @@ describe('renders theme utilities', () => {
       <div className="slds-box slds-theme_warning">
         <p>
           This is a <strong>default</strong> theme and here is a{' '}
-          <a href="javascript:void(0);">link</a>.
+          <a href="#" onClick={e => e.preventDefault()}>link</a>.
         </p>
       </div>
     ));
@@ -79,7 +79,7 @@ describe('renders theme utilities', () => {
       <div className="slds-box slds-theme_error">
         <p>
           This is a <strong>default</strong> theme and here is a{' '}
-          <a href="javascript:void(0);">link</a>.
+          <a href="#" onClick={e => e.preventDefault()}>link</a>.
         </p>
       </div>
     ));
@@ -89,7 +89,7 @@ describe('renders theme utilities', () => {
       <div className="slds-box slds-theme_offline">
         <p>
           This is a <strong>default</strong> theme and here is a{' '}
-          <a href="javascript:void(0);">link</a>.
+          <a href="#" onClick={e => e.preventDefault()}>link</a>.
         </p>
       </div>
     ));
@@ -99,7 +99,7 @@ describe('renders theme utilities', () => {
       <div className="slds-box slds-theme_shade slds-theme_alert-texture">
         <p>
           This theme has the <strong>alert texture</strong> added to the default
-          theme and has a <a href="javascript:void(0);">link</a>.
+          theme and has a <a href="#" onClick={e => e.preventDefault()}>link</a>.
         </p>
       </div>
     ));

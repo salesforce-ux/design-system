@@ -20,7 +20,7 @@ export let examples = [
     id: 'linked-avatar-initials',
     label: 'Wrapped in a link',
     element: (
-      <a href="javascript:void(0);">
+      <a href="#" onClick={e => e.preventDefault()}>
         <Avatar>
           <AvatarInitials
             iconClassName="slds-icon-standard-account"

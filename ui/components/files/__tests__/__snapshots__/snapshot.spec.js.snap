@@ -3,7 +3,8 @@
 exports[`File Component renders a link attachment 1`] = `
 <a
   className="slds-media slds-box slds-grow slds-text-link_reset"
-  href="javascript:void(0);"
+  href="#"
+  onClick={[Function]}
 >
   <div
     className="slds-media__figure slds-medium-show"
@@ -55,7 +56,8 @@ exports[`File Component renders base component 1`] = `
     <figure>
       <a
         className="slds-file__crop"
-        href="javascript:void(0);"
+        href="#"
+        onClick={[Function]}
       >
         <span
           className="slds-assistive-text"
@@ -125,7 +127,8 @@ exports[`File Component renders fewer than 3 file attachments 1`] = `
       <figure>
         <a
           className="slds-file__crop"
-          href="javascript:void(0);"
+          href="#"
+          onClick={[Function]}
         >
           <span
             className="slds-assistive-text"
@@ -189,7 +192,8 @@ exports[`File Component renders fewer than 3 file attachments 1`] = `
       <figure>
         <a
           className="slds-file__crop"
-          href="javascript:void(0);"
+          href="#"
+          onClick={[Function]}
         >
           <span
             className="slds-assistive-text"
@@ -275,7 +279,8 @@ exports[`File Component renders file in loading state with title 1`] = `
     <figure>
       <a
         className="slds-file__crop"
-        href="javascript:void(0);"
+        href="#"
+        onClick={[Function]}
       >
         <div
           className="slds-spinner slds-spinner_medium"
@@ -353,7 +358,8 @@ exports[`File Component renders file in loding state without title 1`] = `
     <figure>
       <a
         className="slds-file__crop"
-        href="javascript:void(0);"
+        href="#"
+        onClick={[Function]}
       >
         <div
           className="slds-spinner slds-spinner_medium"
@@ -391,7 +397,8 @@ exports[`File Component renders file with external icon 1`] = `
     <figure>
       <a
         className="slds-file__crop"
-        href="javascript:void(0);"
+        href="#"
+        onClick={[Function]}
       >
         <span
           className="slds-assistive-text"
@@ -498,7 +505,8 @@ exports[`File Component renders icon (no image) with title 1`] = `
     <figure>
       <a
         className="slds-file__crop"
-        href="javascript:void(0);"
+        href="#"
+        onClick={[Function]}
       >
         <span
           className="slds-assistive-text"
@@ -583,7 +591,8 @@ exports[`File Component renders image with actions and no title 1`] = `
     <figure>
       <a
         className="slds-file__crop"
-        href="javascript:void(0);"
+        href="#"
+        onClick={[Function]}
       >
         <span
           className="slds-assistive-text"
@@ -664,7 +673,8 @@ exports[`File Component renders image with no title 1`] = `
     <figure>
       <a
         className="slds-file__crop"
-        href="javascript:void(0);"
+        href="#"
+        onClick={[Function]}
       >
         <span
           className="slds-assistive-text"
@@ -695,7 +705,8 @@ exports[`File Component renders image with title and actions 1`] = `
     <figure>
       <a
         className="slds-file__crop"
-        href="javascript:void(0);"
+        href="#"
+        onClick={[Function]}
       >
         <span
           className="slds-assistive-text"
@@ -811,7 +822,8 @@ exports[`File Component renders more than 3 file attachments 1`] = `
       <figure>
         <a
           className="slds-file__crop"
-          href="javascript:void(0);"
+          href="#"
+          onClick={[Function]}
         >
           <span
             className="slds-assistive-text"
@@ -875,7 +887,8 @@ exports[`File Component renders more than 3 file attachments 1`] = `
       <figure>
         <a
           className="slds-file__crop"
-          href="javascript:void(0);"
+          href="#"
+          onClick={[Function]}
         >
           <span
             className="slds-assistive-text"
@@ -953,7 +966,8 @@ exports[`File Component renders more than 3 file attachments 1`] = `
       <figure>
         <a
           className="slds-file__crop"
-          href="javascript:void(0);"
+          href="#"
+          onClick={[Function]}
         >
           <div
             className="slds-file_overlay"

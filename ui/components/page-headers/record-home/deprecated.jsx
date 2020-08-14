@@ -77,7 +77,7 @@ export const RecordHomeDeprecated = () => (
         <p className="slds-text-title slds-truncate" title="Field 3">
           Field 3
         </p>
-        <a href="javascript:void(0);">Hyperlink</a>
+        <a href="#" onClick={e => e.preventDefault()}>Hyperlink</a>
       </li>
       <li className="slds-page-header__detail-block">
         <p className="slds-text-title slds-truncate" title="Field 4">

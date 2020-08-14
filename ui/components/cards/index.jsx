@@ -28,17 +28,18 @@ export const CardHeader = props => {
           <h2 className="slds-card__header-title">
             {href ? (
               <a
-                href={href}
+                href="#"
                 className="slds-card__header-link slds-truncate"
                 title={title}
+                onClick={e => e.preventDefault()}
               >
                 <span>{title}</span>
               </a>
             ) : (
-              <span className="slds-truncate" title={title}>
-                <span className="slds-text-heading_small">{title}</span>
-              </span>
-            )}
+                <span className="slds-truncate" title={title}>
+                  <span className="slds-text-heading_small">{title}</span>
+                </span>
+              )}
           </h2>
         </div>
         {action && <div className="slds-no-flex">{action}</div>}
@@ -77,8 +78,9 @@ export const CardFooter = props => {
       {props.children && (
         <a
           className="slds-card__footer-action"
-          href="javascript:void(0);"
+          href="#"
           tabIndex={linkTabIndex}
+          onClick={e => e.preventDefault()}
         >
           {props.children}
         </a>

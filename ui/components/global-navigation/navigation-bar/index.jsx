@@ -50,9 +50,10 @@ export const NavBarItem = props => {
   return (
     <li className={computedClassNames}>
       <a
-        href="javascript:void(0);"
+        href="#"
         className="slds-context-bar__label-action"
         title={label}
+        onClick={e => e.preventDefault()}
       >
         {isActive && <span className="slds-assistive-text">Current Page:</span>}
         <span className="slds-truncate" title={label}>
@@ -129,8 +130,8 @@ export let ContextBar = props => {
               <NavBarItem label="Menu Item" />
             </React.Fragment>
           ) : (
-            children
-          )}
+              children
+            )}
         </ul>
       </nav>
     </div>

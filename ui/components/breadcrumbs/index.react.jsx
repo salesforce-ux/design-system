@@ -3,15 +3,12 @@
 
 import React from 'react';
 import classNames from 'classnames';
-import PropTypes from 'prop-types';
 
 const Crumb = props => (
   <li className={classNames('slds-breadcrumb__item', props.className)}>
-    {props.hasMenu ? props.children : <a href={props.href}>{props.children}</a>}
+    {props.hasMenu ? props.children : <a href="#" onClick={e => e.preventDefault()}>{props.children}</a>}
   </li>
 );
-
-Crumb.propTypes = { href: PropTypes.string };
 
 const BreadCrumbs = props => (
   <nav role="navigation" aria-label="Breadcrumbs">

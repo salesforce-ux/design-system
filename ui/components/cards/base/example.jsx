@@ -49,7 +49,7 @@ const bodyTable = (
     <TBody>
       <TBodyTr>
         <RowTh>
-          <ReadOnlyCell cellLink="javascript:void(0);" cellText="Amy Choi" />
+          <ReadOnlyCell cellLink cellText="Amy Choi" />
         </RowTh>
         <Td type="advanced">
           <ReadOnlyCell cellText="Company One" />
@@ -120,7 +120,7 @@ export const CardWithDataTable = props => (
   <Card>
     <CardHeader
       title="Contacts (1)"
-      href="javascript:void(0);"
+      href
       symbol="contact"
       action={headerAction}
     />
@@ -135,7 +135,7 @@ export const CardWithTiles = props => (
   <Card>
     <CardHeader
       title="Contacts (3)"
-      href="javascript:void(0);"
+      href
       symbol="contact"
       action={headerAction}
     />
@@ -150,7 +150,7 @@ export const NestedCards = props => (
   <Card>
     <CardHeader
       title="Outer Card Header"
-      href="javascript:void(0);"
+      href
       symbol="contact"
       action={headerAction}
     />
@@ -158,7 +158,7 @@ export const NestedCards = props => (
       <Card>
         <CardHeader
           title="Contacts"
-          href="javascript:void(0);"
+          href
           symbol="contact"
           action={headerAction}
         />
@@ -173,7 +173,7 @@ export const NestedCards = props => (
       <Card>
         <CardHeader
           title="Contacts"
-          href="javascript:void(0);"
+          href
           symbol="contact"
           action={headerAction}
         />
@@ -188,7 +188,7 @@ export const NestedCards = props => (
       <Card hasCardBoundary>
         <CardHeader
           title="Contacts"
-          href="javascript:void(0);"
+          href
           symbol="contact"
           action={headerAction}
         />
@@ -203,7 +203,7 @@ export const NestedCards = props => (
       <Card hasCardBoundary>
         <CardHeader
           title="Contacts"
-          href="javascript:void(0);"
+          href
           symbol="contact"
           action={headerAction}
         />
@@ -227,7 +227,7 @@ export const WrappedCards = props => (
     <Card>
       <CardHeader
         title="Contacts"
-        href="javascript:void(0);"
+        href
         symbol="contact"
         action={headerAction}
       />
@@ -242,7 +242,7 @@ export const WrappedCards = props => (
     <Card hasCardBoundary>
       <CardHeader
         title="Contacts"
-        href="javascript:void(0);"
+        href
         symbol="contact"
         action={headerAction}
       />
@@ -261,7 +261,7 @@ export default (
   <Card>
     <CardHeader
       title="Accounts"
-      href="javascript:void(0);"
+      href
       symbol="account"
       action={<button className="slds-button slds-button_neutral">New</button>}
     />
@@ -280,7 +280,7 @@ export let states = [
       <Card>
         <CardHeader
           title="Card Header"
-          href="javascript:void(0);"
+          href
           symbol="contact"
           action={
             <button className="slds-button slds-button_neutral">New</button>
@@ -296,7 +296,7 @@ export let states = [
     label: 'Empty with illustration',
     element: (
       <Card>
-        <CardHeader title="Tasks" href="javascript:void(0);" symbol="task" />
+        <CardHeader title="Tasks" href symbol="task" />
         <CardBody hasPadding>
           <Illustration>
             <NoTask />
@@ -314,7 +314,7 @@ export let states = [
     label: 'Loading',
     element: (
       <Card>
-        <CardHeader title="Tasks" href="javascript:void(0);" symbol="task" />
+        <CardHeader title="Tasks" href symbol="task" />
         <CardBody hasPadding>
           <Spinner className="slds-spinner_small" />
         </CardBody>
@@ -358,7 +358,7 @@ export let examples = [
       <Card>
         <CardHeader
           title="Card Header"
-          href="javascript:void(0);"
+          href
           className="slds-assistive-text"
         />
         <CardBody hasPadding>Anything can go into the card body</CardBody>
@@ -375,7 +375,7 @@ export let examples = [
       <Card>
         <CardHeader
           title="Accounts"
-          href="javascript:void(0);"
+          href
           symbol="account"
         />
         <CardBody>Card Body</CardBody>
@@ -389,7 +389,7 @@ export let examples = [
       <Card>
         <CardHeader
           title="Accounts"
-          href="javascript:void(0);"
+          href
           symbol="account"
         />
         <CardBody hasPadding>Card Body with Padding</CardBody>
@@ -403,7 +403,7 @@ export let examples = [
       <Card>
         <CardHeader
           title="Accounts"
-          href="javascript:void(0);"
+          href
           showIcon
           symbol="account"
         />
@@ -419,7 +419,7 @@ export let examples = [
       <Card>
         <CardHeader
           title="Accounts"
-          href="javascript:void(0);"
+          href
           showIcon
           symbol="account"
         />
@@ -437,14 +437,14 @@ export let examples = [
       <Card>
         <CardHeader
           title="Outer Card Header"
-          href="javascript:void(0);"
+          href
           symbol="account"
         />
         <CardBody hasPadding>
           <Card>
             <CardHeader
               title="Card Header"
-              href="javascript:void(0);"
+              href
               symbol="account"
             />
             <CardBody hasPadding>
@@ -468,14 +468,14 @@ export let examples = [
       <Card>
         <CardHeader
           title="Outer Card Header"
-          href="javascript:void(0);"
+          href
           symbol="account"
         />
         <CardBody hasPadding>
           <Card hasCardBoundary>
             <CardHeader
               title="Card Header"
-              href="javascript:void(0);"
+              href
               symbol="account"
             />
             <CardBody hasPadding>
@@ -501,7 +501,7 @@ export let examples = [
       <Card>
         <CardHeader
           title="Card Header Title With Exceptionally Long Title"
-          href="javascript:void(0);"
+          href
           symbol="account"
           action={
             <button className="slds-button slds-button_neutral">New</button>

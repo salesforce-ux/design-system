@@ -30,7 +30,7 @@ export default (
     <p>
       Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
       tempor incididunt ut labore et dolore.{' '}
-      <a href="javascript:void(0);" title="Learn More">
+      <a href="#" onClick={e => e.preventDefault()} title="Learn More">
         Learn More
       </a>
     </p>
@@ -60,7 +60,7 @@ export let examples = [
         <p>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
           eiusmod tempor incididunt ut labore et dolore.{' '}
-          <a href="javascript:void(0);" title="Learn More">
+          <a href="#" onClick={e => e.preventDefault()} title="Learn More">
             Learn More
           </a>
         </p>

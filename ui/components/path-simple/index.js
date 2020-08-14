@@ -15,7 +15,8 @@ export const PathSimple = () => (
             aria-selected="false"
             tabIndex="-1"
             role="tab"
-            href="javascript:void(0);"
+            href="#"
+            onClick={e => e.preventDefault()}
             aria-live="assertive"
           >
             <span className="slds-tabs--path__stage">
@@ -38,7 +39,8 @@ export const PathSimple = () => (
             aria-selected="false"
             tabIndex="-1"
             role="tab"
-            href="javascript:void(0);"
+            href="#"
+            onClick={e => e.preventDefault()}
             aria-live="assertive"
           >
             <span className="slds-tabs--path__stage">
@@ -61,7 +63,8 @@ export const PathSimple = () => (
             aria-selected="false"
             tabIndex="-1"
             role="tab"
-            href="javascript:void(0);"
+            href="#"
+            onClick={e => e.preventDefault()}
             aria-live="assertive"
           >
             <span className="slds-tabs--path__stage">
@@ -83,7 +86,8 @@ export const PathSimple = () => (
             aria-selected="false"
             tabIndex="-1"
             role="tab"
-            href="javascript:void(0);"
+            href="#"
+            onClick={e => e.preventDefault()}
             aria-live="assertive"
           >
             <span className="slds-tabs--path__stage">
@@ -105,7 +109,8 @@ export const PathSimple = () => (
             aria-selected="false"
             tabIndex="-1"
             role="tab"
-            href="javascript:void(0);"
+            href="#"
+            onClick={e => e.preventDefault()}
             aria-live="assertive"
           >
             <span className="slds-tabs--path__stage">
@@ -153,7 +158,8 @@ export const PathSimpleCoaching = () => (
             aria-selected="false"
             tabIndex="-1"
             role="tab"
-            href="javascript:void(0);"
+            href="#"
+            onClick={e => e.preventDefault()}
             aria-live="assertive"
           >
             <span className="slds-tabs--path__stage">
@@ -176,7 +182,8 @@ export const PathSimpleCoaching = () => (
             aria-selected="false"
             tabIndex="-1"
             role="tab"
-            href="javascript:void(0);"
+            href="#"
+            onClick={e => e.preventDefault()}
             aria-live="assertive"
           >
             <span className="slds-tabs--path__stage">
@@ -199,7 +206,8 @@ export const PathSimpleCoaching = () => (
             aria-selected="false"
             tabIndex="-1"
             role="tab"
-            href="javascript:void(0);"
+            href="#"
+            onClick={e => e.preventDefault()}
             aria-live="assertive"
           >
             <span className="slds-tabs--path__stage">
@@ -221,7 +229,8 @@ export const PathSimpleCoaching = () => (
             aria-selected="false"
             tabIndex="-1"
             role="tab"
-            href="javascript:void(0);"
+            href="#"
+            onClick={e => e.preventDefault()}
             aria-live="assertive"
           >
             <span className="slds-tabs--path__stage">
@@ -243,7 +252,8 @@ export const PathSimpleCoaching = () => (
             aria-selected="false"
             tabIndex="-1"
             role="tab"
-            href="javascript:void(0);"
+            href="#"
+            onClick={e => e.preventDefault()}
             aria-live="assertive"
           >
             <span className="slds-tabs--path__stage">
@@ -292,7 +302,8 @@ export const PathSimpleCoachingVisible = () => (
               aria-selected="false"
               tabIndex="-1"
               role="tab"
-              href="javascript:void(0);"
+              href="#"
+              onClick={e => e.preventDefault()}
               aria-live="assertive"
             >
               <span className="slds-tabs--path__stage">
@@ -318,7 +329,8 @@ export const PathSimpleCoachingVisible = () => (
               aria-selected="false"
               tabIndex="-1"
               role="tab"
-              href="javascript:void(0);"
+              href="#"
+              onClick={e => e.preventDefault()}
               aria-live="assertive"
             >
               <span className="slds-tabs--path__stage">
@@ -344,7 +356,8 @@ export const PathSimpleCoachingVisible = () => (
               aria-selected="false"
               tabIndex="-1"
               role="tab"
-              href="javascript:void(0);"
+              href="#"
+              onClick={e => e.preventDefault()}
               aria-live="assertive"
             >
               <span className="slds-tabs--path__stage">
@@ -369,7 +382,8 @@ export const PathSimpleCoachingVisible = () => (
               aria-selected="false"
               tabIndex="-1"
               role="tab"
-              href="javascript:void(0);"
+              href="#"
+              onClick={e => e.preventDefault()}
               aria-live="assertive"
             >
               <span className="slds-tabs--path__stage">
@@ -394,7 +408,8 @@ export const PathSimpleCoachingVisible = () => (
               aria-selected="false"
               tabIndex="-1"
               role="tab"
-              href="javascript:void(0);"
+              href="#"
+              onClick={e => e.preventDefault()}
               aria-live="assertive"
             >
               <span className="slds-tabs--path__stage">
@@ -448,7 +463,7 @@ export const PathSimpleCoachingVisible = () => (
               Key Fields This Stage
             </h2>
             <span className="slds-text-body--small">
-              <a href="javascript:void(0);">Edit</a>
+              <a href="#" onClick={e => e.preventDefault()}>Edit</a>
             </span>
           </div>
           <dl className="slds-dl--horizontal">
@@ -468,7 +483,7 @@ export const PathSimpleCoachingVisible = () => (
               Support Engineer
             </dt>
             <dd className="slds-coach__value slds-dl--horizontal__detail">
-              <a href="javascript:void(0);">Jack Arthur</a>
+              <a href="#" onClick={e => e.preventDefault()}>Jack Arthur</a>
             </dd>
           </dl>
         </div>
@@ -479,19 +494,19 @@ export const PathSimpleCoachingVisible = () => (
           <div className="slds-text-longform slds-p-top--medium">
             <p>
               Regularly cross-sell related products using{' '}
-              <a href="javascript:void(0);">
+              <a href="#" onClick={e => e.preventDefault()}>
                 cross-sell tactics and principles
               </a>.
             </p>
             <p>
               Prepare demo deck using the{' '}
-              <a href="javascript:void(0);">latest template</a> and review with
+              <a href="#" onClick={e => e.preventDefault()}>latest template</a> and review with
               Marketing and Sales teams. Review demo copy with Legal and Doc
               team.
             </p>
             <p>
               Look up{' '}
-              <a href="javascript:void(0);">needs analysis principles</a> and
+              <a href="#" onClick={e => e.preventDefault()}>needs analysis principles</a> and
               review selling plan with Sales Engineer.
             </p>
           </div>
@@ -511,7 +526,7 @@ export const PathSimpleCoachingVisible = () => (
               Key Fields This Stage
             </h2>
             <span className="slds-text-body--small">
-              <a href="javascript:void(0);">Edit</a>
+              <a href="#" onClick={e => e.preventDefault()}>Edit</a>
             </span>
           </div>
           <dl className="slds-dl--horizontal">
@@ -529,7 +544,7 @@ export const PathSimpleCoachingVisible = () => (
               Key Buyer
             </dt>
             <dd className="slds-coach__value slds-dl--horizontal__detail">
-              <a href="javascript:void(0);">-</a>
+              <a href="#" onClick={e => e.preventDefault()}>-</a>
             </dd>
           </dl>
         </div>
@@ -540,7 +555,7 @@ export const PathSimpleCoachingVisible = () => (
           <div className="slds-text-longform slds-p-top--medium">
             <p>
               Check out the latest Negotiation and Review tactics on our{' '}
-              <a href="javascript:void(0);">online portal here</a>.
+              <a href="#" onClick={e => e.preventDefault()}>online portal here</a>.
             </p>
             <p>
               Review Quote with the Legal and Marketing team and be sure to
@@ -587,7 +602,8 @@ export const PathSimpleDifferentStage = () => (
               aria-selected="false"
               tabIndex="-1"
               role="tab"
-              href="javascript:void(0);"
+              href="#"
+              onClick={e => e.preventDefault()}
               aria-live="assertive"
             >
               <span className="slds-tabs--path__stage">
@@ -613,7 +629,8 @@ export const PathSimpleDifferentStage = () => (
               aria-selected="false"
               tabIndex="-1"
               role="tab"
-              href="javascript:void(0);"
+              href="#"
+              onClick={e => e.preventDefault()}
               aria-live="assertive"
             >
               <span className="slds-tabs--path__stage">
@@ -639,7 +656,8 @@ export const PathSimpleDifferentStage = () => (
               aria-selected="false"
               tabIndex="-1"
               role="tab"
-              href="javascript:void(0);"
+              href="#"
+              onClick={e => e.preventDefault()}
               aria-live="assertive"
             >
               <span className="slds-tabs--path__stage">
@@ -664,7 +682,8 @@ export const PathSimpleDifferentStage = () => (
               aria-selected="false"
               tabIndex="-1"
               role="tab"
-              href="javascript:void(0);"
+              href="#"
+              onClick={e => e.preventDefault()}
               aria-live="assertive"
             >
               <span className="slds-tabs--path__stage">
@@ -689,7 +708,8 @@ export const PathSimpleDifferentStage = () => (
               aria-selected="false"
               tabIndex="-1"
               role="tab"
-              href="javascript:void(0);"
+              href="#"
+              onClick={e => e.preventDefault()}
               aria-live="assertive"
             >
               <span className="slds-tabs--path__stage">
@@ -738,7 +758,7 @@ export const PathSimpleDifferentStage = () => (
               Key Fields This Stage
             </h2>
             <span className="slds-text-body--small">
-              <a href="javascript:void(0);">Edit</a>
+              <a href="#" onClick={e => e.preventDefault()}>Edit</a>
             </span>
           </div>
           <dl className="slds-dl--horizontal">
@@ -758,7 +778,7 @@ export const PathSimpleDifferentStage = () => (
               Support Engineer
             </dt>
             <dd className="slds-coach__value slds-dl--horizontal__detail">
-              <a href="javascript:void(0);">Jack Arthur</a>
+              <a href="#" onClick={e => e.preventDefault()}>Jack Arthur</a>
             </dd>
           </dl>
         </div>
@@ -769,19 +789,19 @@ export const PathSimpleDifferentStage = () => (
           <div className="slds-text-longform slds-p-top--medium">
             <p>
               Regularly cross-sell related products using{' '}
-              <a href="javascript:void(0);">
+              <a href="#" onClick={e => e.preventDefault()}>
                 cross-sell tactics and principles
               </a>.
             </p>
             <p>
               Prepare demo deck using the{' '}
-              <a href="javascript:void(0);">latest template</a> and review with
+              <a href="#" onClick={e => e.preventDefault()}>latest template</a> and review with
               Marketing and Sales teams. Review demo copy with Legal and Doc
               team.
             </p>
             <p>
               Look up{' '}
-              <a href="javascript:void(0);">needs analysis principles</a> and
+              <a href="#" onClick={e => e.preventDefault()}>needs analysis principles</a> and
               review selling plan with Sales Engineer.
             </p>
           </div>
@@ -801,7 +821,7 @@ export const PathSimpleDifferentStage = () => (
               Key Fields This Stage
             </h2>
             <span className="slds-text-body--small">
-              <a href="javascript:void(0);">Edit</a>
+              <a href="#" onClick={e => e.preventDefault()}>Edit</a>
             </span>
           </div>
           <dl className="slds-dl--horizontal">
@@ -819,7 +839,7 @@ export const PathSimpleDifferentStage = () => (
               Key Buyer
             </dt>
             <dd className="slds-coach__value slds-dl--horizontal__detail">
-              <a href="javascript:void(0);">-</a>
+              <a href="#" onClick={e => e.preventDefault()}>-</a>
             </dd>
           </dl>
         </div>
@@ -830,7 +850,7 @@ export const PathSimpleDifferentStage = () => (
           <div className="slds-text-longform slds-p-top--medium">
             <p>
               Check out the latest Negotiation and Review tactics on our{' '}
-              <a href="javascript:void(0);">online portal here</a>.
+              <a href="#" onClick={e => e.preventDefault()}>online portal here</a>.
             </p>
             <p>
               Review Quote with the Legal and Marketing team and be sure to
@@ -876,7 +896,8 @@ export const PathSimpleLost = () => (
             aria-selected="false"
             tabIndex="-1"
             role="tab"
-            href="javascript:void(0);"
+            href="#"
+            onClick={e => e.preventDefault()}
             aria-live="assertive"
           >
             <span className="slds-tabs--path__stage">
@@ -899,7 +920,8 @@ export const PathSimpleLost = () => (
             aria-selected="false"
             tabIndex="-1"
             role="tab"
-            href="javascript:void(0);"
+            href="#"
+            onClick={e => e.preventDefault()}
             aria-live="assertive"
           >
             <span className="slds-tabs--path__stage">
@@ -922,7 +944,8 @@ export const PathSimpleLost = () => (
             aria-selected="false"
             tabIndex="-1"
             role="tab"
-            href="javascript:void(0);"
+            href="#"
+            onClick={e => e.preventDefault()}
             aria-live="assertive"
           >
             <span className="slds-tabs--path__stage">
@@ -944,7 +967,8 @@ export const PathSimpleLost = () => (
             aria-selected="false"
             tabIndex="-1"
             role="tab"
-            href="javascript:void(0);"
+            href="#"
+            onClick={e => e.preventDefault()}
             aria-live="assertive"
           >
             <span className="slds-tabs--path__stage">
@@ -963,7 +987,8 @@ export const PathSimpleLost = () => (
             aria-selected="false"
             tabIndex="-1"
             role="tab"
-            href="javascript:void(0);"
+            href="#"
+            onClick={e => e.preventDefault()}
             aria-live="assertive"
           >
             <span className="slds-tabs--path__stage">
@@ -1006,7 +1031,8 @@ export const PathSimpleWon = () => (
             aria-selected="false"
             tabIndex="-1"
             role="tab"
-            href="javascript:void(0);"
+            href="#"
+            onClick={e => e.preventDefault()}
             aria-live="assertive"
           >
             <span className="slds-tabs--path__stage">
@@ -1029,7 +1055,8 @@ export const PathSimpleWon = () => (
             aria-selected="false"
             tabIndex="-1"
             role="tab"
-            href="javascript:void(0);"
+            href="#"
+            onClick={e => e.preventDefault()}
             aria-live="assertive"
           >
             <span className="slds-tabs--path__stage">
@@ -1052,7 +1079,8 @@ export const PathSimpleWon = () => (
             aria-selected="false"
             tabIndex="-1"
             role="tab"
-            href="javascript:void(0);"
+            href="#"
+            onClick={e => e.preventDefault()}
             aria-live="assertive"
           >
             <span className="slds-tabs--path__stage">
@@ -1074,7 +1102,8 @@ export const PathSimpleWon = () => (
             aria-selected="false"
             tabIndex="-1"
             role="tab"
-            href="javascript:void(0);"
+            href="#"
+            onClick={e => e.preventDefault()}
             aria-live="assertive"
           >
             <span className="slds-tabs--path__stage">
@@ -1096,7 +1125,8 @@ export const PathSimpleWon = () => (
             aria-selected="false"
             tabIndex="-1"
             role="tab"
-            href="javascript:void(0);"
+            href="#"
+            onClick={e => e.preventDefault()}
             aria-live="assertive"
           >
             <span className="slds-tabs--path__stage">

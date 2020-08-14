@@ -46,8 +46,9 @@ const NavItem = props => (
   <li className="slds-builder-header__nav-item">
     {!props.dropdown ? (
       <a
-        href="javascript:void(0);"
+        href="#"
         className="slds-builder-header__item-action slds-media slds-media_center"
+        onClick={e => e.preventDefault()}
       >
         <span className="slds-media__figure">
           <UtilityIcon
@@ -65,34 +66,34 @@ const NavItem = props => (
         </span>
       </a>
     ) : (
-      <button
-        className="slds-button slds-builder-header__item-action slds-media slds-media_center"
-        aria-haspopup="true"
-        title="Click to open menu"
-      >
-        <span className="slds-media__figure">
-          <UtilityIcon
-            containerClassName="slds-current-color"
-            className="slds-icon_x-small"
-            symbol={props.symbol}
-            assistiveText={false}
-            title={false}
-          />
-        </span>
-        <span className="slds-media__body">
-          <span className="slds-truncate" title="Dropdown">
-            Dropdown
+        <button
+          className="slds-button slds-builder-header__item-action slds-media slds-media_center"
+          aria-haspopup="true"
+          title="Click to open menu"
+        >
+          <span className="slds-media__figure">
+            <UtilityIcon
+              containerClassName="slds-current-color"
+              className="slds-icon_x-small"
+              symbol={props.symbol}
+              assistiveText={false}
+              title={false}
+            />
           </span>
-          <UtilityIcon
-            containerClassName="slds-current-color slds-m-left_small"
-            className="slds-icon_x-small"
-            symbol="chevrondown"
-            assistiveText={false}
-            title={false}
-          />
-        </span>
-      </button>
-    )}
+          <span className="slds-media__body">
+            <span className="slds-truncate" title="Dropdown">
+              Dropdown
+          </span>
+            <UtilityIcon
+              containerClassName="slds-current-color slds-m-left_small"
+              className="slds-icon_x-small"
+              symbol="chevrondown"
+              assistiveText={false}
+              title={false}
+            />
+          </span>
+        </button>
+      )}
   </li>
 );
 
@@ -127,8 +128,9 @@ Name.defaultProps = {
 const BackLink = props => (
   <div className="slds-builder-header__utilities-item">
     <a
-      href="javascript:void(0);"
+      href="#"
       className="slds-builder-header__item-action slds-media slds-media_center"
+      onClick={e => e.preventDefault()}
     >
       <div className="slds-media__figure">
         <UtilityIcon
@@ -150,8 +152,9 @@ const BackLink = props => (
 const Help = props => (
   <div className="slds-builder-header__utilities-item">
     <a
-      href="javascript:void(0);"
+      href="#"
       className="slds-builder-header__item-action slds-media slds-media_center"
+      onClick={e => e.preventDefault()}
     >
       <div className="slds-media__figure">
         <UtilityIcon

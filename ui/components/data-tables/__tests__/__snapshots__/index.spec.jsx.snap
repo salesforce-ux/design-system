@@ -140,7 +140,8 @@ exports[`AdvancedDataTableHead component should check the select all column head
     >
       <a
         className="slds-th__action slds-text-link_reset"
-        href="javascript:void(0);"
+        href="#"
+        onClick={[Function]}
         role="button"
         tabIndex="-1"
       >
@@ -283,7 +284,8 @@ exports[`AdvancedDataTableHead component should hide all the resize controls 1`]
     >
       <a
         className="slds-th__action slds-text-link_reset"
-        href="javascript:void(0);"
+        href="#"
+        onClick={[Function]}
         role="button"
         tabIndex="-1"
       >
@@ -528,7 +530,8 @@ exports[`AdvancedDataTableHead component should hide row level actions header 1`
     >
       <a
         className="slds-th__action slds-text-link_reset"
-        href="javascript:void(0);"
+        href="#"
+        onClick={[Function]}
         role="button"
         tabIndex="-1"
       >
@@ -606,7 +609,8 @@ exports[`AdvancedDataTableHead component should hide select column header 1`] = 
     >
       <a
         className="slds-th__action slds-text-link_reset"
-        href="javascript:void(0);"
+        href="#"
+        onClick={[Function]}
         role="button"
         tabIndex="-1"
       >
@@ -821,7 +825,8 @@ exports[`AdvancedDataTableHead component should render 1`] = `
     >
       <a
         className="slds-th__action slds-text-link_reset"
-        href="javascript:void(0);"
+        href="#"
+        onClick={[Function]}
         role="button"
         tabIndex="-1"
       >
@@ -964,7 +969,8 @@ exports[`AdvancedDataTableHead component should render enable actionable mode 1`
     >
       <a
         className="slds-th__action slds-text-link_reset"
-        href="javascript:void(0);"
+        href="#"
+        onClick={[Function]}
         role="button"
         tabIndex="0"
       >
@@ -1124,7 +1130,8 @@ exports[`AdvancedDataTableHead component should render error column header and s
     >
       <a
         className="slds-th__action slds-text-link_reset"
-        href="javascript:void(0);"
+        href="#"
+        onClick={[Function]}
         role="button"
         tabIndex="-1"
       >
@@ -1267,7 +1274,8 @@ exports[`AdvancedDataTableHead component should render menus 1`] = `
     >
       <a
         className="slds-th__action slds-text-link_reset"
-        href="javascript:void(0);"
+        href="#"
+        onClick={[Function]}
         role="button"
         tabIndex="-1"
       >
@@ -1430,7 +1438,8 @@ exports[`AdvancedDataTableHead component should set a main column width 1`] = `
     >
       <a
         className="slds-th__action slds-text-link_reset"
-        href="javascript:void(0);"
+        href="#"
+        onClick={[Function]}
         role="button"
         tabIndex="-1"
       >
@@ -1573,7 +1582,8 @@ exports[`AdvancedDataTableHead component should set a single column width 1`] = 
     >
       <a
         className="slds-th__action slds-text-link_reset"
-        href="javascript:void(0);"
+        href="#"
+        onClick={[Function]}
         role="button"
         tabIndex="-1"
       >
@@ -1716,7 +1726,8 @@ exports[`AdvancedDataTableHead component should set sort direction 1`] = `
     >
       <a
         className="slds-th__action slds-text-link_reset"
-        href="javascript:void(0);"
+        href="#"
+        onClick={[Function]}
         role="button"
         tabIndex="-1"
       >
@@ -1867,7 +1878,8 @@ exports[`AdvancedDataTableHead component should should pass hasFocus when suppli
     >
       <a
         className="slds-th__action slds-text-link_reset"
-        href="javascript:void(0);"
+        href="#"
+        onClick={[Function]}
         role="button"
         tabIndex="-1"
       >
@@ -1980,7 +1992,8 @@ exports[`AdvancedDataTableHead component should swap the select column to the si
     >
       <a
         className="slds-th__action slds-text-link_reset"
-        href="javascript:void(0);"
+        href="#"
+        onClick={[Function]}
         role="button"
         tabIndex="-1"
       >
@@ -2578,6 +2591,7 @@ exports[`EditableCell component should render a cell text as link 1`] = `
     className="slds-truncate"
     href="#"
     id="link-0undefined"
+    onClick={[Function]}
     tabIndex="-1"
     title="cell text"
   >
@@ -2613,6 +2627,7 @@ exports[`EditableCell component should set tabindex to 0 on focusable elements w
     className="slds-truncate"
     href="#"
     id="link-0undefined"
+    onClick={[Function]}
     tabIndex="0"
     title="cell text"
   >
@@ -2974,7 +2989,8 @@ Array [
 exports[`InteractiveColumnHeader component should hide the resize controls when isResizable is false 1`] = `
 <a
   className="slds-th__action slds-text-link_reset"
-  href="javascript:void(0);"
+  href="#"
+  onClick={[Function]}
   role="button"
   tabIndex="-1"
 >
@@ -3052,7 +3068,8 @@ exports[`InteractiveColumnHeader component should render a header icon when supp
 Array [
   <a
     className="slds-th__action slds-text-link_reset"
-    href="javascript:void(0);"
+    href="#"
+    onClick={[Function]}
     role="button"
     tabIndex="-1"
   >
@@ -3125,7 +3142,8 @@ exports[`InteractiveColumnHeader component should render the component 1`] = `
 Array [
   <a
     className="slds-th__action slds-text-link_reset"
-    href="javascript:void(0);"
+    href="#"
+    onClick={[Function]}
     role="button"
     tabIndex="-1"
   >
@@ -3185,7 +3203,8 @@ exports[`InteractiveColumnHeader component should render the sort direction when
 Array [
   <a
     className="slds-th__action slds-text-link_reset"
-    href="javascript:void(0);"
+    href="#"
+    onClick={[Function]}
     role="button"
     tabIndex="-1"
   >
@@ -3253,7 +3272,8 @@ exports[`InteractiveColumnHeader component should set tabindex to 0 on focusable
 Array [
   <a
     className="slds-th__action slds-text-link_reset"
-    href="javascript:void(0);"
+    href="#"
+    onClick={[Function]}
     role="button"
     tabIndex="0"
   >
@@ -3313,7 +3333,8 @@ exports[`InteractiveColumnHeader component should show a action menu when hasMen
 Array [
   <a
     className="slds-th__action slds-text-link_reset"
-    href="javascript:void(0);"
+    href="#"
+    onClick={[Function]}
     role="button"
     tabIndex="-1"
   >
@@ -3405,6 +3426,7 @@ exports[`ReadOnlyCell component should set linkable cell text 1`] = `
 >
   <a
     href="#"
+    onClick={[Function]}
     tabIndex="-1"
   >
     cell text
@@ -3419,6 +3441,7 @@ exports[`ReadOnlyCell component should set tabindex to 0 on links in actionableM
 >
   <a
     href="#"
+    onClick={[Function]}
     tabIndex="0"
   >
     cell text

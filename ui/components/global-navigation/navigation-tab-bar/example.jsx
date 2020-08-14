@@ -59,7 +59,7 @@ export let ContextTab = props => (
     role="presentation"
   >
     <a
-      href="javascript:void(0);"
+      href="#"
       className="slds-context-bar__label-action"
       role="tab"
       title={props.title}
@@ -67,6 +67,7 @@ export let ContextTab = props => (
       tabIndex={props.itemActive ? '0' : '-1'}
       aria-controls={props.tabPanelId}
       id={props.id}
+      onClick={e => e.preventDefault()}
     >
       <IndicatorContainer>
         {props.itemUnsaved && <IndicatorUnsaved title="Tab Not Saved" />}
@@ -203,8 +204,9 @@ export let ContextTabBar = props => (
         )}
       >
         <a
-          href="javascript:void(0);"
+          href="#"
           className="slds-context-bar__label-action"
+          onClick={e => e.preventDefault()}
         >
           <span className="slds-truncate" title="Object">
             Object

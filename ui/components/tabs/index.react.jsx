@@ -52,12 +52,13 @@ class TabItem extends React.Component {
     return (
       <a
         className={`slds-tabs_${flavor}__link`}
-        href="javascript:void(0);"
+        href="#"
         role="tab"
         tabIndex={tabIndex}
         aria-selected={current}
         aria-controls={id}
         id={`${id}__item`}
+        onClick={e => e.preventDefault()}
       >
         {leftIcon && <span className="slds-tabs__left-icon">{leftIcon}</span>}
         {title}

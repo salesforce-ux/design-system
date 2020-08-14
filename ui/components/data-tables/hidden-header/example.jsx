@@ -30,14 +30,14 @@ export default (
     <TBody>
       <TBodyTr>
         <Td data-label="Opportunity Name" type="base">
-          <ReadOnlyCell cellText="Cloudhub" cellLink="javascript:void(0);" />
+          <ReadOnlyCell cellText="Cloudhub" cellLink />
         </Td>
       </TBodyTr>
       <TBodyTr>
         <Td data-label="Opportunity Name" type="base">
           <ReadOnlyCell
             cellText="Cloudhub + Anypoint Connectors"
-            cellLink="javascript:void(0);"
+            cellLink
           />
         </Td>
       </TBodyTr>

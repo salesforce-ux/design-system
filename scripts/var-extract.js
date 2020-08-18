@@ -87,8 +87,9 @@ const extractVarsFromCSS = cssContent => {
       const vars = rule.declarations
         .filter(dec => (dec.value ? dec.value.match(/var\(/) : false))
         .map(dec => {
-          const cssVar = dec.value.match(/(--.*?),/)[1];
-          const fallback = dec.value.match(/,\s(.*)\)/)[1];
+          const cssVar = dec.value.match(/(--.*?)[,|\)]/)[1];
+          const fallbackMatch = dec.value.match(/,\s(.*)\)/);
+          const fallback = fallbackMatch ? fallbackMatch[1] : '';
 
           return {
             [cssVar]: fallback
@@ -106,5 +107,6 @@ const extractVarsFromCSS = cssContent => {
 };
 
 module.exports = {
+  extractVarsFromCSS,
   extractVarsFromSLDS
 };

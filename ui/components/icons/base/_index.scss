@@ -17,7 +17,7 @@
   display: inline-block;
   border-radius: var(--sds-c-icon-radius-border, $border-radius-medium);
   line-height: $line-height-reset;
-  background-color: var(--sds-c-icon-color-background, transparent);
+  background-color: var(--sds-c-icon-color-background);
 
   /**
    * @summary Circle container for icons

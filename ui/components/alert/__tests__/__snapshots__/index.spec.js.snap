@@ -2,7 +2,7 @@
 
 exports[`renders a base alert 1`] = `
 <div
-  className="slds-notify slds-notify_alert slds-theme_alert-texture slds-theme_info"
+  className="slds-notify slds-notify_alert"
   role="alert"
 >
   <span
@@ -24,8 +24,7 @@ exports[`renders a base alert 1`] = `
     </svg>
   </span>
   <h2>
-    Logged in as John Smith (johnsmith@acme.com).
-     
+    Logged in as John Smith (johnsmith@acme.com). 
     <a
       href="#"
       onClick={[Function]}
@@ -60,7 +59,7 @@ exports[`renders a base alert 1`] = `
 
 exports[`renders a error alert 1`] = `
 <div
-  className="slds-notify slds-notify_alert slds-theme_alert-texture slds-theme_error"
+  className="slds-notify slds-notify_alert slds-alert_error"
   role="alert"
 >
   <span
@@ -117,7 +116,7 @@ exports[`renders a error alert 1`] = `
 
 exports[`renders a offline alert 1`] = `
 <div
-  className="slds-notify slds-notify_alert slds-theme_alert-texture slds-theme_offline"
+  className="slds-notify slds-notify_alert slds-alert_offline"
   role="alert"
 >
   <span
@@ -139,8 +138,7 @@ exports[`renders a offline alert 1`] = `
     </svg>
   </span>
   <h2>
-    You are in offline mode.
-     
+    You are in offline mode. 
     <a
       href="#"
       onClick={[Function]}
@@ -175,7 +173,7 @@ exports[`renders a offline alert 1`] = `
 
 exports[`renders a warning alert 1`] = `
 <div
-  className="slds-notify slds-notify_alert slds-theme_alert-texture slds-theme_warning"
+  className="slds-notify slds-notify_alert slds-alert_warning"
   role="alert"
 >
   <span
@@ -197,8 +195,7 @@ exports[`renders a warning alert 1`] = `
     </svg>
   </span>
   <h2>
-    Your browser is outdated. Your Salesforce experience may be degraded.
-     
+    Your browser is outdated. Your Salesforce experience may be degraded. 
     <a
       href="#"
       onClick={[Function]}

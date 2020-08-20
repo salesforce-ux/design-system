@@ -4,6 +4,11 @@
 
 <!-- ## [Unreleased] -->
 
+## 2.14.0
+
+### Changed
+Refactored the component markup to function with or without theme utility classes.
+
 ## 2.13.0
 
 ### Added

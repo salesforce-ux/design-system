@@ -42,8 +42,8 @@ export const Context = props => (
 
 export const BreadcrumbsBase = props => (
   <BreadCrumbs>
-    <Crumb href="javascript:void(0);">Parent Entity</Crumb>
-    <Crumb href="javascript:void(0);">Parent Record Name</Crumb>
+    <Crumb>Parent Entity</Crumb>
+    <Crumb>Parent Record Name</Crumb>
   </BreadCrumbs>
 );
 
@@ -53,8 +53,8 @@ export const BreadcrumbsWithOverflow = props => (
     <Crumb hasMenu>
       <BreadcrumbMenu />
     </Crumb>
-    <Crumb href="javascript:void(0);">Parent Entity</Crumb>
-    <Crumb href="javascript:void(0);">Parent Record Name</Crumb>
+    <Crumb>Parent Entity</Crumb>
+    <Crumb>Parent Record Name</Crumb>
   </BreadCrumbs>
 );
 

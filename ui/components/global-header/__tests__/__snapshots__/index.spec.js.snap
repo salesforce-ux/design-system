@@ -6,13 +6,15 @@ exports[`Deprecated Global Header renders a deprecated global header 1`] = `
 >
   <a
     className="slds-assistive-text slds-assistive-text_focus"
-    href="javascript:void(0);"
+    href="#"
+    onClick={[Function]}
   >
     Skip to Navigation
   </a>
   <a
     className="slds-assistive-text slds-assistive-text_focus"
-    href="javascript:void(0);"
+    href="#"
+    onClick={[Function]}
   >
     Skip to Main Content
   </a>
@@ -425,13 +427,15 @@ exports[`Deprecated Global Header renders a deprecated global header with action
 >
   <a
     className="slds-assistive-text slds-assistive-text_focus"
-    href="javascript:void(0);"
+    href="#"
+    onClick={[Function]}
   >
     Skip to Navigation
   </a>
   <a
     className="slds-assistive-text slds-assistive-text_focus"
-    href="javascript:void(0);"
+    href="#"
+    onClick={[Function]}
   >
     Skip to Main Content
   </a>
@@ -761,7 +765,8 @@ exports[`Deprecated Global Header renders a deprecated global header with action
               role="presentation"
             >
               <a
-                href="javascript:void(0);"
+                href="#"
+                onClick={[Function]}
                 role="menuitem"
                 tabIndex="0"
               >
@@ -787,7 +792,8 @@ exports[`Deprecated Global Header renders a deprecated global header with action
               role="presentation"
             >
               <a
-                href="javascript:void(0);"
+                href="#"
+                onClick={[Function]}
                 role="menuitem"
                 tabIndex="-1"
               >
@@ -813,7 +819,8 @@ exports[`Deprecated Global Header renders a deprecated global header with action
               role="presentation"
             >
               <a
-                href="javascript:void(0);"
+                href="#"
+                onClick={[Function]}
                 role="menuitem"
                 tabIndex="-1"
               >
@@ -939,13 +946,15 @@ exports[`Deprecated Global Header renders a deprecated global header with favori
 >
   <a
     className="slds-assistive-text slds-assistive-text_focus"
-    href="javascript:void(0);"
+    href="#"
+    onClick={[Function]}
   >
     Skip to Navigation
   </a>
   <a
     className="slds-assistive-text slds-assistive-text_focus"
-    href="javascript:void(0);"
+    href="#"
+    onClick={[Function]}
   >
     Skip to Main Content
   </a>
@@ -1360,13 +1369,15 @@ exports[`Deprecated Global Header renders a deprecated global header with favori
 >
   <a
     className="slds-assistive-text slds-assistive-text_focus"
-    href="javascript:void(0);"
+    href="#"
+    onClick={[Function]}
   >
     Skip to Navigation
   </a>
   <a
     className="slds-assistive-text slds-assistive-text_focus"
-    href="javascript:void(0);"
+    href="#"
+    onClick={[Function]}
   >
     Skip to Main Content
   </a>
@@ -1779,13 +1790,15 @@ exports[`Deprecated Global Header renders a deprecated global header with search
 >
   <a
     className="slds-assistive-text slds-assistive-text_focus"
-    href="javascript:void(0);"
+    href="#"
+    onClick={[Function]}
   >
     Skip to Navigation
   </a>
   <a
     className="slds-assistive-text slds-assistive-text_focus"
-    href="javascript:void(0);"
+    href="#"
+    onClick={[Function]}
   >
     Skip to Main Content
   </a>
@@ -2198,13 +2211,15 @@ exports[`Deprecated Global Header renders a deprecated global header with search
 >
   <a
     className="slds-assistive-text slds-assistive-text_focus"
-    href="javascript:void(0);"
+    href="#"
+    onClick={[Function]}
   >
     Skip to Navigation
   </a>
   <a
     className="slds-assistive-text slds-assistive-text_focus"
-    href="javascript:void(0);"
+    href="#"
+    onClick={[Function]}
   >
     Skip to Main Content
   </a>
@@ -2663,13 +2678,15 @@ exports[`Deprecated Global Header renders a deprecated global header with setup 
 >
   <a
     className="slds-assistive-text slds-assistive-text_focus"
-    href="javascript:void(0);"
+    href="#"
+    onClick={[Function]}
   >
     Skip to Navigation
   </a>
   <a
     className="slds-assistive-text slds-assistive-text_focus"
-    href="javascript:void(0);"
+    href="#"
+    onClick={[Function]}
   >
     Skip to Main Content
   </a>
@@ -3047,7 +3064,8 @@ exports[`Deprecated Global Header renders a deprecated global header with setup 
               role="presentation"
             >
               <a
-                href="javascript:void(0);"
+                href="#"
+                onClick={[Function]}
                 role="menuitem"
                 tabIndex="0"
               >
@@ -3131,7 +3149,8 @@ exports[`Deprecated Global Header renders deprecated global action menu 1`] = `
       role="presentation"
     >
       <a
-        href="javascript:void(0);"
+        href="#"
+        onClick={[Function]}
         role="menuitem"
         tabIndex="0"
       >
@@ -3157,7 +3176,8 @@ exports[`Deprecated Global Header renders deprecated global action menu 1`] = `
       role="presentation"
     >
       <a
-        href="javascript:void(0);"
+        href="#"
+        onClick={[Function]}
         role="menuitem"
         tabIndex="-1"
       >
@@ -3183,7 +3203,8 @@ exports[`Deprecated Global Header renders deprecated global action menu 1`] = `
       role="presentation"
     >
       <a
-        href="javascript:void(0);"
+        href="#"
+        onClick={[Function]}
         role="menuitem"
         tabIndex="-1"
       >
@@ -3229,7 +3250,8 @@ exports[`Deprecated Global Header renders deprecated global action setup menu 1`
       role="presentation"
     >
       <a
-        href="javascript:void(0);"
+        href="#"
+        onClick={[Function]}
         role="menuitem"
         tabIndex="0"
       >
@@ -4668,7 +4690,8 @@ exports[`Global Actions Bar renders task item with dialog menu 1`] = `
         role="presentation"
       >
         <a
-          href="javascript:void(0);"
+          href="#"
+          onClick={[Function]}
           role="menuitem"
           tabIndex="0"
         >
@@ -4703,7 +4726,8 @@ exports[`Global Actions Bar renders task item with dialog menu 1`] = `
         role="presentation"
       >
         <a
-          href="javascript:void(0);"
+          href="#"
+          onClick={[Function]}
           role="menuitem"
           tabIndex="0"
         >
@@ -4738,7 +4762,8 @@ exports[`Global Actions Bar renders task item with dialog menu 1`] = `
         role="presentation"
       >
         <a
-          href="javascript:void(0);"
+          href="#"
+          onClick={[Function]}
           role="menuitem"
           tabIndex="0"
         >
@@ -4779,13 +4804,15 @@ exports[`Global Header renders global header 1`] = `
 >
   <a
     className="slds-assistive-text slds-assistive-text_focus"
-    href="javascript:void(0);"
+    href="#"
+    onClick={[Function]}
   >
     Skip to Navigation
   </a>
   <a
     className="slds-assistive-text slds-assistive-text_focus"
-    href="javascript:void(0);"
+    href="#"
+    onClick={[Function]}
   >
     Skip to Main Content
   </a>
@@ -5029,13 +5056,15 @@ exports[`Global Header renders skip link 1`] = `
 Array [
   <a
     className="slds-assistive-text slds-assistive-text_focus"
-    href="javascript:void(0);"
+    href="#"
+    onClick={[Function]}
   >
     Skip to Navigation
   </a>,
   <a
     className="slds-assistive-text slds-assistive-text_focus"
-    href="javascript:void(0);"
+    href="#"
+    onClick={[Function]}
   >
     Skip to Main Content
   </a>,

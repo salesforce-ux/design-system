@@ -29,7 +29,7 @@ export default defaultComponent;
 export let examples = [
   {
     id: 'default',
-    label: 'Default',
+    label: 'Default (Info Only)',
     demoStyles: exampleDemoStyles,
     element: defaultComponent
   }

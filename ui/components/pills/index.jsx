@@ -7,30 +7,38 @@ export let Pill = props => (
   <span className={classNames('slds-pill slds-pill_link', props.className)}>
     {props.children}
     <a
-      href="javascript:void(0);"
+      href="#"
       className="slds-pill__action"
       title={props.label || 'Full pill label verbiage mirrored here'}
+      onClick={e => e.preventDefault()}
     >
       <span className="slds-pill__label">{props.label || 'Pill Label'}</span>
     </a>
-    <ButtonIcon className="slds-button_icon slds-pill__remove" symbol="close" assistiveText="Remove" title="Remove" />
+    <ButtonIcon
+      className="slds-button_icon slds-pill__remove"
+      symbol="close"
+      assistiveText="Remove"
+      title="Remove"
+    />
   </span>
 );
 
 export let PillContainer = props => {
   return (
-    <div className={classNames(
-      {
+    <div
+      className={classNames({
         'slds-pill_container': props.variant !== 'listbox-group',
-        'slds-listbox_selection-group' : props.variant === "listbox-group",
-        'slds-pill_container_bare': props.variant === "container-bare"
-        }
-      )}>
-        {props.type === 'listbox' && (
-          <div className="slds-assistive-text" id={props.id}>Press delete or backspace to remove</div>
-        )}
-        {props.children}
-      </div>
+        'slds-listbox_selection-group': props.variant === 'listbox-group',
+        'slds-pill_container_bare': props.variant === 'container-bare'
+      })}
+    >
+      {props.type === 'listbox' && (
+        <div className="slds-assistive-text" id={props.id}>
+          Press delete or backspace to remove
+        </div>
+      )}
+      {props.children}
+    </div>
   );
 };
 
@@ -42,18 +50,28 @@ export let ListboxPill = props => (
     aria-selected="true"
   >
     {props.children}
-    <span className="slds-pill__label" title={props.label || 'Full pill label verbiage mirrored here'}>
+    <span
+      className="slds-pill__label"
+      title={props.label || 'Full pill label verbiage mirrored here'}
+    >
       {props.label || 'Pill Label'}
     </span>
     <span className="slds-icon_container slds-pill__remove" title="Remove">
-      <SvgIcon className="slds-icon slds-icon_x-small slds-icon-text-default" sprite="utility" symbol="close" />
+      <SvgIcon
+        className="slds-icon slds-icon_x-small slds-icon-text-default"
+        sprite="utility"
+        symbol="close"
+      />
     </span>
   </span>
 );
 
 export let ListboxPills = props => (
   <ul
-    className={classNames('slds-listbox slds-listbox_horizontal', props.className)}
+    className={classNames(
+      'slds-listbox slds-listbox_horizontal',
+      props.className
+    )}
     role="listbox"
     aria-label="Selected Options:"
     aria-orientation="horizontal"

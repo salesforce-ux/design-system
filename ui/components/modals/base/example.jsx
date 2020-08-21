@@ -104,7 +104,10 @@ export let Taglines = props => (
           Here&rsquo;s a tagline if you need it. It is allowed to extend across
           mulitple lines, so I&rsquo;m making up content to show that to you. It
           is allowed to{' '}
-          <a href="javascript:void(0);">contain links or be a link</a>.
+          <a href="#" onClick={e => e.preventDefault()}>
+            contain links or be a link
+          </a>
+          .
         </p>
       </ModalHeader>
       <ModalContent className="slds-p-around_medium">

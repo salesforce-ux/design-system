@@ -37,7 +37,7 @@ export const AdvancedDataTableTr = props => (
     >
       <ReadOnlyCell
         actionableMode={props.actionableMode}
-        cellLink="javascript:void(0);"
+        cellLink
         cellText={props.recordName}
       />
     </RowTh>
@@ -75,7 +75,7 @@ export const AdvancedDataTableTr = props => (
     <Td type="advanced">
       <ReadOnlyCell
         actionableMode={props.actionableMode}
-        cellLink="javascript:void(0);"
+        cellLink
         cellText={props.contact}
       />
     </Td>
@@ -161,7 +161,7 @@ export const ProductItemDetailsCell = props => (
   >
     <ReadOnlyCell
       actionableMode={props.actionableMode}
-      cellLink="javascript:void(0);"
+      cellLink
       cellText={props.productName}
     />
     <ul>

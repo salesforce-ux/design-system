@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Advanced data table row renders a table header hover state 1`] = `"<a class=\\"slds-th__action slds-text-link_reset\\" href=\\"javascript:void(0);\\" role=\\"button\\" tabindex=\\"-1\\"><span class=\\"slds-assistive-text\\">Sort by: </span><div class=\\"slds-grid slds-grid_vertical-align-center slds-has-flexi-truncate\\"><span class=\\"slds-truncate\\" title=\\"Account Name\\">Account Name</span><span class=\\"slds-icon_container slds-icon-utility-arrowdown\\"><svg class=\\"slds-icon slds-icon-text-default slds-is-sortable__icon \\" aria-hidden=\\"true\\"><use xlink:href=\\"/assets/icons/utility-sprite/svg/symbols.svg#arrowdown\\"></use></svg></span></div></a>"`;
+exports[`Advanced data table row renders a table header hover state 1`] = `"<a class=\\"slds-th__action slds-text-link_reset\\" href=\\"#\\" role=\\"button\\" tabindex=\\"-1\\"><span class=\\"slds-assistive-text\\">Sort by: </span><div class=\\"slds-grid slds-grid_vertical-align-center slds-has-flexi-truncate\\"><span class=\\"slds-truncate\\" title=\\"Account Name\\">Account Name</span><span class=\\"slds-icon_container slds-icon-utility-arrowdown\\"><svg class=\\"slds-icon slds-icon-text-default slds-is-sortable__icon \\" aria-hidden=\\"true\\"><use xlink:href=\\"/assets/icons/utility-sprite/svg/symbols.svg#arrowdown\\"></use></svg></span></div></a>"`;
 
 exports[`Advanced data table row should make every focusable element focusable when in actionableMode 1`] = `
 <tr
@@ -47,7 +47,8 @@ exports[`Advanced data table row should make every focusable element focusable w
       title="Acme"
     >
       <a
-        href="javascript:void(0);"
+        href="#"
+        onClick={[Function]}
         tabIndex="0"
       >
         Acme
@@ -118,7 +119,8 @@ exports[`Advanced data table row should make every focusable element focusable w
       title="Art V"
     >
       <a
-        href="javascript:void(0);"
+        href="#"
+        onClick={[Function]}
         tabIndex="0"
       >
         Art V
@@ -199,7 +201,8 @@ exports[`Advanced data table row should remove the row actions column 1`] = `
       title="Acme"
     >
       <a
-        href="javascript:void(0);"
+        href="#"
+        onClick={[Function]}
         tabIndex="-1"
       >
         Acme
@@ -270,7 +273,8 @@ exports[`Advanced data table row should remove the row actions column 1`] = `
       title="Art V"
     >
       <a
-        href="javascript:void(0);"
+        href="#"
+        onClick={[Function]}
         tabIndex="-1"
       >
         Art V
@@ -325,7 +329,8 @@ exports[`Advanced data table row should render a table row 1`] = `
       title="Acme"
     >
       <a
-        href="javascript:void(0);"
+        href="#"
+        onClick={[Function]}
         tabIndex="-1"
       >
         Acme
@@ -396,7 +401,8 @@ exports[`Advanced data table row should render a table row 1`] = `
       title="Art V"
     >
       <a
-        href="javascript:void(0);"
+        href="#"
+        onClick={[Function]}
         tabIndex="-1"
       >
         Art V
@@ -479,7 +485,8 @@ exports[`Advanced data table row should select the row 1`] = `
       title="Acme"
     >
       <a
-        href="javascript:void(0);"
+        href="#"
+        onClick={[Function]}
         tabIndex="-1"
       >
         Acme
@@ -550,7 +557,8 @@ exports[`Advanced data table row should select the row 1`] = `
       title="Art V"
     >
       <a
-        href="javascript:void(0);"
+        href="#"
+        onClick={[Function]}
         tabIndex="-1"
       >
         Art V
@@ -633,7 +641,8 @@ exports[`Advanced data table row should select the row with a radio button 1`] =
       title="Acme"
     >
       <a
-        href="javascript:void(0);"
+        href="#"
+        onClick={[Function]}
         tabIndex="-1"
       >
         Acme
@@ -704,7 +713,8 @@ exports[`Advanced data table row should select the row with a radio button 1`] =
       title="Art V"
     >
       <a
-        href="javascript:void(0);"
+        href="#"
+        onClick={[Function]}
         tabIndex="-1"
       >
         Art V
@@ -785,7 +795,8 @@ exports[`Advanced data table row should show amount scores 1`] = `
       title="Acme"
     >
       <a
-        href="javascript:void(0);"
+        href="#"
+        onClick={[Function]}
         tabIndex="-1"
       >
         Acme
@@ -903,7 +914,8 @@ exports[`Advanced data table row should show amount scores 1`] = `
       title="Art V"
     >
       <a
-        href="javascript:void(0);"
+        href="#"
+        onClick={[Function]}
         tabIndex="-1"
       >
         Art V
@@ -984,7 +996,8 @@ exports[`Advanced data table row should show record name cell in first row as fo
       title="Acme"
     >
       <a
-        href="javascript:void(0);"
+        href="#"
+        onClick={[Function]}
         tabIndex="-1"
       >
         Acme
@@ -1055,7 +1068,8 @@ exports[`Advanced data table row should show record name cell in first row as fo
       title="Art V"
     >
       <a
-        href="javascript:void(0);"
+        href="#"
+        onClick={[Function]}
         tabIndex="-1"
       >
         Art V
@@ -1136,7 +1150,8 @@ exports[`Advanced data table row should swap row selection to a radio button 1`]
       title="Acme"
     >
       <a
-        href="javascript:void(0);"
+        href="#"
+        onClick={[Function]}
         tabIndex="-1"
       >
         Acme
@@ -1207,7 +1222,8 @@ exports[`Advanced data table row should swap row selection to a radio button 1`]
       title="Art V"
     >
       <a
-        href="javascript:void(0);"
+        href="#"
+        onClick={[Function]}
         tabIndex="-1"
       >
         Art V
@@ -1293,7 +1309,8 @@ exports[`Product data table product items details cell should make focusable ele
       title="Baseball Cap"
     >
       <a
-        href="javascript:void(0);"
+        href="#"
+        onClick={[Function]}
         tabIndex="0"
       >
         Baseball Cap
@@ -1365,7 +1382,8 @@ exports[`Product data table product items details cell should render 1`] = `
       title="Baseball Cap"
     >
       <a
-        href="javascript:void(0);"
+        href="#"
+        onClick={[Function]}
         tabIndex="-1"
       >
         Baseball Cap
@@ -1517,7 +1535,8 @@ exports[`Product data table row should make focusable elements focusable in acti
           title="Baseball Cap"
         >
           <a
-            href="javascript:void(0);"
+            href="#"
+            onClick={[Function]}
             tabIndex="0"
           >
             Baseball Cap
@@ -1675,7 +1694,8 @@ exports[`Product data table row should render 1`] = `
           title="Baseball Cap"
         >
           <a
-            href="javascript:void(0);"
+            href="#"
+            onClick={[Function]}
             tabIndex="-1"
           >
             Baseball Cap

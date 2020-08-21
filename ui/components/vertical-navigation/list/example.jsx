@@ -48,9 +48,10 @@ export let NavVerticalItem = props => (
     )}
   >
     <a
-      href="javascript:void(0);"
+      href="#"
       className="slds-nav-vertical__action"
       aria-current={props.active}
+      onClick={e => e.preventDefault()}
     >
       {props.children}
     </a>

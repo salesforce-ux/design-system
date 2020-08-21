@@ -62,7 +62,7 @@ export const RecordDetailField = props => {
           </Avatar>
         )}
         {link ? (
-          <a href="javascript:void(0);">
+          <a href="#" onClick={e => e.preventDefault()}>
             {typeof value === 'object'
               ? value.map(option => (
                   <React.Fragment key={option}>
@@ -73,8 +73,8 @@ export const RecordDetailField = props => {
               : value}
           </a>
         ) : typeof value === 'object' &&
-        type !== 'richtext' &&
-        type !== 'checkbox' ? (
+          type !== 'richtext' &&
+          type !== 'checkbox' ? (
           value.map(option => (
             <React.Fragment key={option}>
               {option}

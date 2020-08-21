@@ -28,12 +28,13 @@ const CarouselIndicator = props => (
         props.isActive && 'slds-is-active',
         props.className
       )}
-      href="javascript:void(0);"
+      href="#"
       role="tab"
       tabIndex={props.isActive ? '0' : '-1'}
       aria-selected={props.isActive ? 'true' : 'false'}
       aria-controls={props.contentId}
       title={props.title}
+      onClick={e => e.preventDefault()}
     >
       <span className="slds-assistive-text">{props.title}</span>
     </a>
@@ -52,9 +53,10 @@ const CarouselPanel = props => (
     aria-labelledby={props.indicatorId}
   >
     <a
-      href="javascript:void(0);"
+      href="#"
       className="slds-carousel__panel-action slds-text-link_reset"
       tabIndex={props.isActive ? '0' : '-1'}
+      onClick={e => e.preventDefault()}
     >
       <div className="slds-carousel__image">
         <img src={props.src} alt={props.title} />

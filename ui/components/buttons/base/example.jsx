@@ -51,14 +51,19 @@ export let Button = props => {
   return (
     <React.Fragment>
       {use === 'a' ? (
-        <a className={classNameList} {...rest} href="javascript:void(0);">
+        <a
+          className={classNameList}
+          {...rest}
+          href="#"
+          onClick={e => e.preventDefault()}
+        >
           {props.children}
         </a>
       ) : (
-          <button className={classNameList} disabled={disabled} {...rest}>
-            {props.children}
-          </button>
-        )}
+        <button className={classNameList} disabled={disabled} {...rest}>
+          {props.children}
+        </button>
+      )}
     </React.Fragment>
   );
 };

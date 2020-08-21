@@ -108,7 +108,8 @@ exports[`renders a button group with overflow open 1`] = `
             role="presentation"
           >
             <a
-              href="javascript:void(0);"
+              href="#"
+              onClick={[Function]}
               role="menuitem"
               tabIndex="0"
             >
@@ -125,7 +126,8 @@ exports[`renders a button group with overflow open 1`] = `
             role="presentation"
           >
             <a
-              href="javascript:void(0);"
+              href="#"
+              onClick={[Function]}
               role="menuitem"
               tabIndex="-1"
             >
@@ -142,7 +144,8 @@ exports[`renders a button group with overflow open 1`] = `
             role="presentation"
           >
             <a
-              href="javascript:void(0);"
+              href="#"
+              onClick={[Function]}
               role="menuitem"
               tabIndex="-1"
             >

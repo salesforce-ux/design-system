@@ -48,7 +48,12 @@ const renderStepAction = action => {
     return (
       <CheckboxToggle title={action.title} isBare checked={action.checked} />
     );
-  else return <a href="javascript:void(0);">{action.title}</a>;
+  else
+    return (
+      <a href="#" onClick={e => e.preventDefault()}>
+        {action.title}
+      </a>
+    );
 };
 
 const renderProgressIndicatorSteps = steps => {
@@ -83,7 +88,9 @@ class SetupAssistantStepDetail extends React.Component {
         <ScopedNotificationThemed theme="light">
           <p>
             It looks as if duplicates exist for this lead.{' '}
-            <a href="javascript:void(0);">View Duplicates.</a>
+            <a href="#" onClick={e => e.preventDefault()}>
+              View Duplicates.
+            </a>
           </p>
         </ScopedNotificationThemed>
       </div>

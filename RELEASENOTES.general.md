@@ -1,6 +1,8 @@
 <!-- Release notes authoring guidelines: http://keepachangelog.com/ -->
 <!-- On release, add general notes here. In time the legacy release notes will be add to this -->
 
+# 2.14.0 - January 8, 2021
+
 ## 2.13.0 - August 20, 2020
 
 - Added opacity override for placeholder text in inputs for Firefox browser

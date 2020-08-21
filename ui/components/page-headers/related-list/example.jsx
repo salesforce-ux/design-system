@@ -27,8 +27,12 @@ export const RelatedList = props => (
     <PageHeaderRow>
       <PageHeaderColumn type="title">
         <BreadCrumbs className="slds-m-bottom_xx-small">
-          <Crumb href="javascript:void(0);">Accounts</Crumb>
-          <Crumb href="javascript:void(0);">Company One</Crumb>
+          <Crumb href="#" onClick={e => e.preventDefault()}>
+            Accounts
+          </Crumb>
+          <Crumb href="#" onClick={e => e.preventDefault()}>
+            Company One
+          </Crumb>
         </BreadCrumbs>
         <PageHeaderTitle titleText="Contacts (will truncate)" />
       </PageHeaderColumn>

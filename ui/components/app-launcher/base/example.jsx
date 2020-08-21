@@ -118,9 +118,10 @@ export let AppLauncherModal = props => (
                   key={i}
                 >
                   <a
-                    href="javascript:void(0);"
+                    href="#"
                     className="slds-truncate"
                     title={tile.label}
+                    onClick={e => e.preventDefault()}
                   >
                     {tile.label}
                   </a>
@@ -165,7 +166,9 @@ export const AppLauncherTile = props => (
       </div>
     </div>
     <div className="slds-app-launcher__tile-body">
-      <a href="javascript:void(0);">{props.label}</a>
+      <a href="#" onClick={e => e.preventDefault()}>
+        {props.label}
+      </a>
       <p>
         {props.description}{' '}
         {props.hasTooltip && (

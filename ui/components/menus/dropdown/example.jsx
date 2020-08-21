@@ -124,9 +124,10 @@ export let MenuItem = props => {
       <a
         aria-checked={ariaChecked}
         className={getComputedClassnames()}
-        href="javascript:void(0);"
+        href="#"
         role={isSelectable ? 'menuitemcheckbox' : 'menuitem'}
         tabIndex={tabIndex || '-1'}
+        onClick={e => e.preventDefault()}
       >
         <span className="slds-truncate" title={title || children}>
           {isSelectable ? (

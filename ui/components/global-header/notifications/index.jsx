@@ -32,7 +32,8 @@ const NotificationItem = props => (
       <div className="slds-media__body">
         <div className="slds-grid slds-grid_align-spread">
           <a
-            href="javascript:void(0);"
+            href="#"
+            onClick={e => e.preventDefault()}
             className="slds-text-link_reset slds-has-flexi-truncate"
           >
             <h3

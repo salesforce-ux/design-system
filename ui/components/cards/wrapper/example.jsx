@@ -10,7 +10,7 @@ export default (
     <Card>
       <CardHeader
         title="Contacts"
-        href="javascript:void(0);"
+        href
         symbol="contact"
         action={
           <button className="slds-button slds-button_neutral">New</button>
@@ -27,7 +27,7 @@ export default (
     <Card hasCardBoundary>
       <CardHeader
         title="Contacts"
-        href="javascript:void(0);"
+        href
         symbol="contact"
         action={
           <button className="slds-button slds-button_neutral">New</button>
@@ -55,7 +55,7 @@ export let examples = [
             <Card>
               <CardHeader
                 title="Contacts"
-                href="javascript:void(0);"
+                href
                 symbol="contact"
                 action={
                   <button className="slds-button slds-button_neutral">
@@ -74,7 +74,7 @@ export let examples = [
             <Card hasCardBoundary>
               <CardHeader
                 title="Contacts"
-                href="javascript:void(0);"
+                href
                 symbol="contact"
                 action={
                   <button className="slds-button slds-button_neutral">

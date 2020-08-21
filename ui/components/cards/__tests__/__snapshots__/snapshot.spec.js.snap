@@ -44,7 +44,8 @@ exports[`Card Footer renders a card footer with content 1`] = `
 >
   <a
     className="slds-card__footer-action"
-    href="javascript:void(0);"
+    href="#"
+    onClick={[Function]}
   >
     View All 
     <span
@@ -77,7 +78,8 @@ exports[`Card Header renders a card header with action 1`] = `
       >
         <a
           className="slds-card__header-link slds-truncate"
-          href="javascript:void(0);"
+          href="#"
+          onClick={[Function]}
           title="Card Header"
         >
           <span>
@@ -136,7 +138,8 @@ exports[`Card Header renders a card header with icon 1`] = `
       >
         <a
           className="slds-card__header-link slds-truncate"
-          href="javascript:void(0);"
+          href="#"
+          onClick={[Function]}
           title="Card Header"
         >
           <span>
@@ -186,7 +189,8 @@ exports[`Card Header renders a card header with icon and action 1`] = `
       >
         <a
           className="slds-card__header-link slds-truncate"
-          href="javascript:void(0);"
+          href="#"
+          onClick={[Function]}
           title="Card Header"
         >
           <span>
@@ -223,7 +227,8 @@ exports[`Card Header renders a simple card header 1`] = `
       >
         <a
           className="slds-card__header-link slds-truncate"
-          href="javascript:void(0);"
+          href="#"
+          onClick={[Function]}
           title="Card Header"
         >
           <span>
@@ -276,7 +281,8 @@ exports[`Card renders a base card empty 1`] = `
         >
           <a
             className="slds-card__header-link slds-truncate"
-            href="javascript:void(0);"
+            href="#"
+            onClick={[Function]}
             title="Card Header"
           >
             <span>
@@ -336,7 +342,8 @@ exports[`Card renders a base card with content in footer 1`] = `
         >
           <a
             className="slds-card__header-link slds-truncate"
-            href="javascript:void(0);"
+            href="#"
+            onClick={[Function]}
             title="Card Header"
           >
             <span>
@@ -357,7 +364,8 @@ exports[`Card renders a base card with content in footer 1`] = `
   >
     <a
       className="slds-card__footer-action"
-      href="javascript:void(0);"
+      href="#"
+      onClick={[Function]}
     >
       View All 
       <span
@@ -410,7 +418,8 @@ exports[`Card renders a base card with empty footer 1`] = `
         >
           <a
             className="slds-card__header-link slds-truncate"
-            href="javascript:void(0);"
+            href="#"
+            onClick={[Function]}
             title="Card Header"
           >
             <span>
@@ -472,7 +481,8 @@ exports[`Card renders a base card with header visibly hidden 1`] = `
         >
           <a
             className="slds-card__header-link slds-truncate"
-            href="javascript:void(0);"
+            href="#"
+            onClick={[Function]}
             title="Card Header"
           >
             <span>
@@ -493,7 +503,8 @@ exports[`Card renders a base card with header visibly hidden 1`] = `
   >
     <a
       className="slds-card__footer-action"
-      href="javascript:void(0);"
+      href="#"
+      onClick={[Function]}
     >
       View All 
       <span
@@ -546,7 +557,8 @@ exports[`Card renders a base card without a footer 1`] = `
         >
           <a
             className="slds-card__header-link slds-truncate"
-            href="javascript:void(0);"
+            href="#"
+            onClick={[Function]}
             title="Card Header"
           >
             <span>
@@ -587,7 +599,8 @@ exports[`Einstein Card renders a base einstein card 1`] = `
           >
             <a
               className="slds-card__header-link"
-              href="javascript:void(0);"
+              href="#"
+              onClick={[Function]}
               title="Einstein (10+)"
             >
               <span
@@ -614,7 +627,8 @@ exports[`Einstein Card renders a base einstein card 1`] = `
   >
     <a
       className="slds-card__footer-action"
-      href="javascript:void(0);"
+      href="#"
+      onClick={[Function]}
     >
       View All
        
@@ -650,7 +664,8 @@ exports[`Einstein Card renders an einstein card with actions 1`] = `
           >
             <a
               className="slds-card__header-link"
-              href="javascript:void(0);"
+              href="#"
+              onClick={[Function]}
               title="Einstein (10+)"
             >
               <span
@@ -726,7 +741,8 @@ exports[`Einstein Card renders an einstein card with actions 1`] = `
   >
     <a
       className="slds-card__footer-action"
-      href="javascript:void(0);"
+      href="#"
+      onClick={[Function]}
     >
       View All
        
@@ -778,7 +794,8 @@ exports[`Einstein Card renders an einstein card with icon 1`] = `
           >
             <a
               className="slds-card__header-link"
-              href="javascript:void(0);"
+              href="#"
+              onClick={[Function]}
               title="Einstein (10+)"
             >
               <span
@@ -805,7 +822,8 @@ exports[`Einstein Card renders an einstein card with icon 1`] = `
   >
     <a
       className="slds-card__footer-action"
-      href="javascript:void(0);"
+      href="#"
+      onClick={[Function]}
     >
       View All
        
@@ -857,7 +875,8 @@ exports[`Einstein Card renders an einstein card with icon and actions 1`] = `
           >
             <a
               className="slds-card__header-link"
-              href="javascript:void(0);"
+              href="#"
+              onClick={[Function]}
               title="Einstein (10+)"
             >
               <span
@@ -933,7 +952,8 @@ exports[`Einstein Card renders an einstein card with icon and actions 1`] = `
   >
     <a
       className="slds-card__footer-action"
-      href="javascript:void(0);"
+      href="#"
+      onClick={[Function]}
     >
       View All
        

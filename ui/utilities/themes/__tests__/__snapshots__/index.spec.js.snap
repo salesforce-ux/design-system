@@ -12,7 +12,8 @@ exports[`renders theme utilities render alt inverse theme on a box 1`] = `
      theme and here is a
      
     <a
-      href="javascript:void(0);"
+      href="#"
+      onClick={[Function]}
     >
       link
     </a>
@@ -33,7 +34,8 @@ exports[`renders theme utilities render default theme on a box 1`] = `
      theme and here is a
      
     <a
-      href="javascript:void(0);"
+      href="#"
+      onClick={[Function]}
     >
       link
     </a>
@@ -54,7 +56,8 @@ exports[`renders theme utilities render error theme on a box 1`] = `
      theme and here is a
      
     <a
-      href="javascript:void(0);"
+      href="#"
+      onClick={[Function]}
     >
       link
     </a>
@@ -75,7 +78,8 @@ exports[`renders theme utilities render info theme on a box 1`] = `
      theme and here is a
      
     <a
-      href="javascript:void(0);"
+      href="#"
+      onClick={[Function]}
     >
       link
     </a>
@@ -96,7 +100,8 @@ exports[`renders theme utilities render inverse theme on a box 1`] = `
      theme and here is a
      
     <a
-      href="javascript:void(0);"
+      href="#"
+      onClick={[Function]}
     >
       link
     </a>
@@ -117,7 +122,8 @@ exports[`renders theme utilities render offline theme on a box 1`] = `
      theme and here is a
      
     <a
-      href="javascript:void(0);"
+      href="#"
+      onClick={[Function]}
     >
       link
     </a>
@@ -138,7 +144,8 @@ exports[`renders theme utilities render shade theme on a box 1`] = `
      theme and here is a
      
     <a
-      href="javascript:void(0);"
+      href="#"
+      onClick={[Function]}
     >
       link
     </a>
@@ -159,7 +166,8 @@ exports[`renders theme utilities render success theme on a box 1`] = `
      theme and here is a
      
     <a
-      href="javascript:void(0);"
+      href="#"
+      onClick={[Function]}
     >
       link
     </a>
@@ -179,7 +187,8 @@ exports[`renders theme utilities render textured theme on a shaded box 1`] = `
     </strong>
      added to the default theme and has a 
     <a
-      href="javascript:void(0);"
+      href="#"
+      onClick={[Function]}
     >
       link
     </a>
@@ -200,7 +209,8 @@ exports[`renders theme utilities render warning theme on a box 1`] = `
      theme and here is a
      
     <a
-      href="javascript:void(0);"
+      href="#"
+      onClick={[Function]}
     >
       link
     </a>

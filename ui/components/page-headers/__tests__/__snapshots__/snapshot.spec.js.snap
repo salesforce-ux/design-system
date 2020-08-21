@@ -991,7 +991,8 @@ exports[`Renders a page header renders deprecated record home page header 1`] = 
         Field 3
       </p>
       <a
-        href="javascript:void(0);"
+        href="#"
+        onClick={[Function]}
       >
         Hyperlink
       </a>
@@ -1036,7 +1037,8 @@ exports[`Renders a page header renders deprecated related list home page header 
             className="slds-breadcrumb__item"
           >
             <a
-              href="javascript:void(0);"
+              href="#"
+              onClick={[Function]}
             >
               Accounts
             </a>
@@ -1045,7 +1047,8 @@ exports[`Renders a page header renders deprecated related list home page header 
             className="slds-breadcrumb__item"
           >
             <a
-              href="javascript:void(0);"
+              href="#"
+              onClick={[Function]}
             >
               Company One
             </a>
@@ -1405,7 +1408,8 @@ exports[`Renders a page header renders deprecated vertical record home page head
           title="Hyperlink"
         >
           <a
-            href="javascript:void(0);"
+            href="#"
+            onClick={[Function]}
           >
             Hyperlink
           </a>
@@ -2080,7 +2084,8 @@ exports[`Renders a page header renders record home page header 1`] = `
             title="Hyperlink"
           >
             <a
-              href="javascript:void(0);"
+              href="#"
+              onClick={[Function]}
             >
               Hyperlink
             </a>
@@ -2129,7 +2134,8 @@ exports[`Renders a page header renders related list home page header 1`] = `
             className="slds-breadcrumb__item"
           >
             <a
-              href="javascript:void(0);"
+              href="#"
+              onClick={[Function]}
             >
               Accounts
             </a>
@@ -2138,7 +2144,8 @@ exports[`Renders a page header renders related list home page header 1`] = `
             className="slds-breadcrumb__item"
           >
             <a
-              href="javascript:void(0);"
+              href="#"
+              onClick={[Function]}
             >
               Company One
             </a>
@@ -2527,7 +2534,8 @@ exports[`Renders a page header renders vertical record home page header 1`] = `
           title="Burlington Textile Weaving Plant Generator"
         >
           <a
-            href="javascript:void(0);"
+            href="#"
+            onClick={[Function]}
           >
             Burlington Textile Weaving Plant Generator
           </a>
@@ -2627,7 +2635,8 @@ exports[`Renders a page header renders vertical record home page header 1`] = `
               className="slds-media__body"
             >
               <a
-                href="javascript:void(0);"
+                href="#"
+                onClick={[Function]}
               >
                 Jeanette Gomez
               </a>

@@ -99,7 +99,7 @@ const Row = props => (
         }
       />
       <div className="slds-truncate" title={props.name}>
-        <a href="javascript:void(0);" tabIndex="-1">
+        <a href="#" onClick={e => e.preventDefault()} tabIndex="-1">
           {props.name}
         </a>
       </div>
@@ -116,7 +116,7 @@ const Row = props => (
     </td>
     <td data-label="Account Owner" role="gridcell">
       <div className="slds-truncate" title={props.owner}>
-        <a href="javascript:void(0);" tabIndex="-1">
+        <a href="#" onClick={e => e.preventDefault()} tabIndex="-1">
           {props.owner}
         </a>
       </div>

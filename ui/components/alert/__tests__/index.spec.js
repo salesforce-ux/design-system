@@ -1,24 +1,26 @@
 /* eslint-env jest */
 import React from 'react';
-import { Alert } from '../base/example';
+import Alert from '../';
 import { UtilityIcon } from '../../icons/base/example';
+import EmptyLink from '../../../shared/empty-link/';
+import Heading from '../../../shared/heading/';
 import createHelpers from '../../../../jest.helpers';
 
 const { matchesMarkup } = createHelpers(__dirname);
 
 it('renders a base alert', () =>
   matchesMarkup(
-    <Alert type="info">
+    <Alert>
       <UtilityIcon
         containerClassName="slds-m-right_x-small"
         className="slds-icon_x-small"
         assistiveText={false}
         symbol="user"
       />
-      <h2>
+      <Heading level="2">
         Logged in as John Smith (johnsmith@acme.com).{' '}
-        <a href="javascript:void(0);">Log out</a>
-      </h2>
+        <EmptyLink>Log out</EmptyLink>
+      </Heading>
     </Alert>
   ));
 
@@ -31,10 +33,10 @@ it('renders a warning alert', () =>
         assistiveText={false}
         symbol="warning"
       />
-      <h2>
+      <Heading level="2">
         Your browser is outdated. Your Salesforce experience may be degraded.{' '}
-        <a href="javascript:void(0);">More Information</a>
-      </h2>
+        <EmptyLink>More Information</EmptyLink>
+      </Heading>
     </Alert>
   ));
 
@@ -47,10 +49,10 @@ it('renders a error alert', () =>
         assistiveText={false}
         symbol="error"
       />
-      <h2>
+      <Heading level="2">
         Your browser is currently not supported. Your Salesforce may be
-        degraded. <a href="javascript:void(0);">More Information</a>
-      </h2>
+        degraded. <EmptyLink>More Information</EmptyLink>
+      </Heading>
     </Alert>
   ));
 
@@ -63,9 +65,8 @@ it('renders a offline alert', () =>
         assistiveText={false}
         symbol="offline"
       />
-      <h2>
-        You are in offline mode.{' '}
-        <a href="javascript:void(0);">More Information</a>
-      </h2>
+      <Heading level="2">
+        You are in offline mode. <EmptyLink>More Information</EmptyLink>
+      </Heading>
     </Alert>
   ));

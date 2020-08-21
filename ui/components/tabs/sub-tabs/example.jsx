@@ -40,11 +40,12 @@ export const Subtab = props => (
       aria-controls={props.tabPanelId}
       aria-selected={props.active ? 'true' : 'false'}
       className="slds-tabs_default__link slds-p-horizontal_xx-small"
-      href="javascript:void(0);"
+      href="#"
       id={props.tabItemId}
       role="tab"
       tabIndex={props.active ? '0' : '-1'}
       title={props.title}
+      onClick={e => e.preventDefault()}
     >
       <IndicatorContainer>
         {props.itemUnsaved && <IndicatorUnsaved />}

@@ -33,7 +33,8 @@ export let states = [
             >
               <a
                 className="slds-tabs_default__link"
-                href="javascript:void(0);"
+                href="#"
+                onClick={e => e.preventDefault()}
                 role="tab"
                 tabIndex="0"
                 aria-selected="true"
@@ -50,7 +51,8 @@ export let states = [
             >
               <a
                 className="slds-tabs_default__link"
-                href="javascript:void(0);"
+                href="#"
+                onClick={e => e.preventDefault()}
                 role="tab"
                 tabIndex="-1"
                 aria-selected="false"
@@ -67,7 +69,8 @@ export let states = [
             >
               <a
                 className="slds-tabs_default__link"
-                href="javascript:void(0);"
+                href="#"
+                onClick={e => e.preventDefault()}
                 role="tab"
                 tabIndex="-1"
                 aria-selected="false"
@@ -84,7 +87,8 @@ export let states = [
             >
               <a
                 className="slds-tabs_default__link"
-                href="javascript:void(0);"
+                href="#"
+                onClick={e => e.preventDefault()}
                 role="tab"
                 tabIndex="-1"
                 aria-selected="false"
@@ -101,7 +105,8 @@ export let states = [
             >
               <a
                 className="slds-tabs_default__link"
-                href="javascript:void(0);"
+                href="#"
+                onClick={e => e.preventDefault()}
                 role="tab"
                 tabIndex="-1"
                 aria-selected="false"
@@ -118,7 +123,8 @@ export let states = [
             >
               <a
                 className="slds-tabs_default__link"
-                href="javascript:void(0);"
+                href="#"
+                onClick={e => e.preventDefault()}
                 role="tab"
                 tabIndex="-1"
                 aria-selected="false"
@@ -135,7 +141,8 @@ export let states = [
             >
               <a
                 className="slds-tabs_default__link"
-                href="javascript:void(0);"
+                href="#"
+                onClick={e => e.preventDefault()}
                 role="tab"
                 tabIndex="-1"
                 aria-selected="false"
@@ -152,7 +159,8 @@ export let states = [
             >
               <a
                 className="slds-tabs_default__link"
-                href="javascript:void(0);"
+                href="#"
+                onClick={e => e.preventDefault()}
                 role="tab"
                 tabIndex="-1"
                 aria-selected="false"
@@ -169,7 +177,8 @@ export let states = [
             >
               <a
                 className="slds-tabs_default__link"
-                href="javascript:void(0);"
+                href="#"
+                onClick={e => e.preventDefault()}
                 role="tab"
                 tabIndex="-1"
                 aria-selected="false"
@@ -186,7 +195,8 @@ export let states = [
             >
               <a
                 className="slds-tabs_default__link"
-                href="javascript:void(0);"
+                href="#"
+                onClick={e => e.preventDefault()}
                 role="tab"
                 tabIndex="-1"
                 aria-selected="false"
@@ -203,7 +213,8 @@ export let states = [
             >
               <a
                 className="slds-tabs_default__link"
-                href="javascript:void(0);"
+                href="#"
+                onClick={e => e.preventDefault()}
                 role="tab"
                 tabIndex="-1"
                 aria-selected="false"
@@ -220,7 +231,8 @@ export let states = [
             >
               <a
                 className="slds-tabs_default__link"
-                href="javascript:void(0);"
+                href="#"
+                onClick={e => e.preventDefault()}
                 role="tab"
                 tabIndex="-1"
                 aria-selected="false"
@@ -363,7 +375,8 @@ export let states = [
             >
               <a
                 className="slds-tabs_scoped__link"
-                href="javascript:void(0);"
+                href="#"
+                onClick={e => e.preventDefault()}
                 role="tab"
                 tabIndex="0"
                 aria-selected="true"
@@ -380,7 +393,8 @@ export let states = [
             >
               <a
                 className="slds-tabs_scoped__link"
-                href="javascript:void(0);"
+                href="#"
+                onClick={e => e.preventDefault()}
                 role="tab"
                 tabIndex="-1"
                 aria-selected="false"
@@ -397,7 +411,8 @@ export let states = [
             >
               <a
                 className="slds-tabs_scoped__link"
-                href="javascript:void(0);"
+                href="#"
+                onClick={e => e.preventDefault()}
                 role="tab"
                 tabIndex="-1"
                 aria-selected="false"
@@ -414,7 +429,8 @@ export let states = [
             >
               <a
                 className="slds-tabs_scoped__link"
-                href="javascript:void(0);"
+                href="#"
+                onClick={e => e.preventDefault()}
                 role="tab"
                 tabIndex="-1"
                 aria-selected="false"
@@ -431,7 +447,8 @@ export let states = [
             >
               <a
                 className="slds-tabs_scoped__link"
-                href="javascript:void(0);"
+                href="#"
+                onClick={e => e.preventDefault()}
                 role="tab"
                 tabIndex="-1"
                 aria-selected="false"
@@ -448,7 +465,8 @@ export let states = [
             >
               <a
                 className="slds-tabs_scoped__link"
-                href="javascript:void(0);"
+                href="#"
+                onClick={e => e.preventDefault()}
                 role="tab"
                 tabIndex="-1"
                 aria-selected="false"
@@ -465,7 +483,8 @@ export let states = [
             >
               <a
                 className="slds-tabs_scoped__link"
-                href="javascript:void(0);"
+                href="#"
+                onClick={e => e.preventDefault()}
                 role="tab"
                 tabIndex="-1"
                 aria-selected="false"
@@ -482,7 +501,8 @@ export let states = [
             >
               <a
                 className="slds-tabs_scoped__link"
-                href="javascript:void(0);"
+                href="#"
+                onClick={e => e.preventDefault()}
                 role="tab"
                 tabIndex="-1"
                 aria-selected="false"
@@ -499,7 +519,8 @@ export let states = [
             >
               <a
                 className="slds-tabs_scoped__link"
-                href="javascript:void(0);"
+                href="#"
+                onClick={e => e.preventDefault()}
                 role="tab"
                 tabIndex="-1"
                 aria-selected="false"
@@ -516,7 +537,8 @@ export let states = [
             >
               <a
                 className="slds-tabs_scoped__link"
-                href="javascript:void(0);"
+                href="#"
+                onClick={e => e.preventDefault()}
                 role="tab"
                 tabIndex="-1"
                 aria-selected="false"
@@ -533,7 +555,8 @@ export let states = [
             >
               <a
                 className="slds-tabs_scoped__link"
-                href="javascript:void(0);"
+                href="#"
+                onClick={e => e.preventDefault()}
                 role="tab"
                 tabIndex="-1"
                 aria-selected="false"
@@ -550,7 +573,8 @@ export let states = [
             >
               <a
                 className="slds-tabs_scoped__link"
-                href="javascript:void(0);"
+                href="#"
+                onClick={e => e.preventDefault()}
                 role="tab"
                 tabIndex="-1"
                 aria-selected="false"

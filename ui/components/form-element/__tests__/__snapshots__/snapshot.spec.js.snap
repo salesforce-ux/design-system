@@ -2126,7 +2126,8 @@ exports[`Horizontal Form Element renders deprecated horizontal form elements - v
               />
             </span>
             <a
-              href="javascript:void(0);"
+              href="#"
+              onClick={[Function]}
             >
               Jack Rogers
             </a>
@@ -2172,7 +2173,8 @@ exports[`Horizontal Form Element renders deprecated horizontal form elements - v
             className="slds-form-element__static"
           >
             <a
-              href="javascript:void(0);"
+              href="#"
+              onClick={[Function]}
             >
               Salesforce Lightning Design System
             </a>
@@ -2587,7 +2589,8 @@ exports[`Horizontal Form Element renders deprecated horizontal form elements - v
             className="slds-form-element__static"
           >
             <a
-              href="javascript:void(0);"
+              href="#"
+              onClick={[Function]}
             >
               525 S. Lexington Ave
               <br />
@@ -2638,7 +2641,8 @@ exports[`Horizontal Form Element renders deprecated horizontal form elements - v
             className="slds-form-element__static"
           >
             <a
-              href="javascript:void(0);"
+              href="#"
+              onClick={[Function]}
             >
               312 Constitution Place
               <br />
@@ -2962,7 +2966,8 @@ exports[`Stacked Form Element renders deprecated stacked form elements - edit mo
               />
             </span>
             <a
-              href="javascript:void(0);"
+              href="#"
+              onClick={[Function]}
             >
               Jack Rogers
             </a>
@@ -3008,7 +3013,8 @@ exports[`Stacked Form Element renders deprecated stacked form elements - edit mo
             className="slds-form-element__static"
           >
             <a
-              href="javascript:void(0);"
+              href="#"
+              onClick={[Function]}
             >
               Salesforce Lightning Design System
             </a>
@@ -3423,7 +3429,8 @@ exports[`Stacked Form Element renders deprecated stacked form elements - edit mo
             className="slds-form-element__static"
           >
             <a
-              href="javascript:void(0);"
+              href="#"
+              onClick={[Function]}
             >
               525 S. Lexington Ave
               <br />
@@ -3474,7 +3481,8 @@ exports[`Stacked Form Element renders deprecated stacked form elements - edit mo
             className="slds-form-element__static"
           >
             <a
-              href="javascript:void(0);"
+              href="#"
+              onClick={[Function]}
             >
               312 Constitution Place
               <br />
@@ -3600,7 +3608,8 @@ exports[`Stacked Form Element renders deprecated stacked form elements - view mo
               />
             </span>
             <a
-              href="javascript:void(0);"
+              href="#"
+              onClick={[Function]}
             >
               Jack Rogers
             </a>
@@ -3646,7 +3655,8 @@ exports[`Stacked Form Element renders deprecated stacked form elements - view mo
             className="slds-form-element__static"
           >
             <a
-              href="javascript:void(0);"
+              href="#"
+              onClick={[Function]}
             >
               Salesforce Lightning Design System
             </a>
@@ -4061,7 +4071,8 @@ exports[`Stacked Form Element renders deprecated stacked form elements - view mo
             className="slds-form-element__static"
           >
             <a
-              href="javascript:void(0);"
+              href="#"
+              onClick={[Function]}
             >
               525 S. Lexington Ave
               <br />
@@ -4112,7 +4123,8 @@ exports[`Stacked Form Element renders deprecated stacked form elements - view mo
             className="slds-form-element__static"
           >
             <a
-              href="javascript:void(0);"
+              href="#"
+              onClick={[Function]}
             >
               312 Constitution Place
               <br />

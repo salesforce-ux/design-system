@@ -152,7 +152,8 @@ exports[`deprecated treegrid renders a deeply nested DeprecatedTreeGrid 1`] = `
           title="Rewis Inc"
         >
           <a
-            href="javascript:void(0);"
+            href="#"
+            onClick={[Function]}
             tabIndex="-1"
           >
             Rewis Inc
@@ -190,7 +191,8 @@ exports[`deprecated treegrid renders a deeply nested DeprecatedTreeGrid 1`] = `
           title="Jane Doe"
         >
           <a
-            href="javascript:void(0);"
+            href="#"
+            onClick={[Function]}
             tabIndex="-1"
           >
             Jane Doe
@@ -274,7 +276,8 @@ exports[`deprecated treegrid renders a deeply nested DeprecatedTreeGrid 1`] = `
           title="Acme Corporation"
         >
           <a
-            href="javascript:void(0);"
+            href="#"
+            onClick={[Function]}
             tabIndex="-1"
           >
             Acme Corporation
@@ -312,7 +315,8 @@ exports[`deprecated treegrid renders a deeply nested DeprecatedTreeGrid 1`] = `
           title="John Doe"
         >
           <a
-            href="javascript:void(0);"
+            href="#"
+            onClick={[Function]}
             tabIndex="-1"
           >
             John Doe
@@ -396,7 +400,8 @@ exports[`deprecated treegrid renders a deeply nested DeprecatedTreeGrid 1`] = `
           title="Acme Corporation (Bay Area)"
         >
           <a
-            href="javascript:void(0);"
+            href="#"
+            onClick={[Function]}
             tabIndex="-1"
           >
             Acme Corporation (Bay Area)
@@ -434,7 +439,8 @@ exports[`deprecated treegrid renders a deeply nested DeprecatedTreeGrid 1`] = `
           title="John Doe"
         >
           <a
-            href="javascript:void(0);"
+            href="#"
+            onClick={[Function]}
             tabIndex="-1"
           >
             John Doe
@@ -517,7 +523,8 @@ exports[`deprecated treegrid renders a deeply nested DeprecatedTreeGrid 1`] = `
           title="Acme Corporation (Oakland)"
         >
           <a
-            href="javascript:void(0);"
+            href="#"
+            onClick={[Function]}
             tabIndex="-1"
           >
             Acme Corporation (Oakland)
@@ -555,7 +562,8 @@ exports[`deprecated treegrid renders a deeply nested DeprecatedTreeGrid 1`] = `
           title="John Doe"
         >
           <a
-            href="javascript:void(0);"
+            href="#"
+            onClick={[Function]}
             tabIndex="-1"
           >
             John Doe
@@ -638,7 +646,8 @@ exports[`deprecated treegrid renders a deeply nested DeprecatedTreeGrid 1`] = `
           title="Acme Corporation (San Francisco)"
         >
           <a
-            href="javascript:void(0);"
+            href="#"
+            onClick={[Function]}
             tabIndex="-1"
           >
             Acme Corporation (San Francisco)
@@ -676,7 +685,8 @@ exports[`deprecated treegrid renders a deeply nested DeprecatedTreeGrid 1`] = `
           title="Jane Doe"
         >
           <a
-            href="javascript:void(0);"
+            href="#"
+            onClick={[Function]}
             tabIndex="-1"
           >
             Jane Doe
@@ -760,7 +770,8 @@ exports[`deprecated treegrid renders a deeply nested DeprecatedTreeGrid 1`] = `
           title="Acme Corporation (East)"
         >
           <a
-            href="javascript:void(0);"
+            href="#"
+            onClick={[Function]}
             tabIndex="-1"
           >
             Acme Corporation (East)
@@ -798,7 +809,8 @@ exports[`deprecated treegrid renders a deeply nested DeprecatedTreeGrid 1`] = `
           title="John Doe"
         >
           <a
-            href="javascript:void(0);"
+            href="#"
+            onClick={[Function]}
             tabIndex="-1"
           >
             John Doe
@@ -881,7 +893,8 @@ exports[`deprecated treegrid renders a deeply nested DeprecatedTreeGrid 1`] = `
           title="Acme Corporation (NY)"
         >
           <a
-            href="javascript:void(0);"
+            href="#"
+            onClick={[Function]}
             tabIndex="-1"
           >
             Acme Corporation (NY)
@@ -919,7 +932,8 @@ exports[`deprecated treegrid renders a deeply nested DeprecatedTreeGrid 1`] = `
           title="Jane Doe"
         >
           <a
-            href="javascript:void(0);"
+            href="#"
+            onClick={[Function]}
             tabIndex="-1"
           >
             Jane Doe
@@ -1003,7 +1017,8 @@ exports[`deprecated treegrid renders a deeply nested DeprecatedTreeGrid 1`] = `
           title="Acme Corporation (VA)"
         >
           <a
-            href="javascript:void(0);"
+            href="#"
+            onClick={[Function]}
             tabIndex="-1"
           >
             Acme Corporation (VA)
@@ -1041,7 +1056,8 @@ exports[`deprecated treegrid renders a deeply nested DeprecatedTreeGrid 1`] = `
           title="John Doe"
         >
           <a
-            href="javascript:void(0);"
+            href="#"
+            onClick={[Function]}
             tabIndex="-1"
           >
             John Doe
@@ -1125,7 +1141,8 @@ exports[`deprecated treegrid renders a deeply nested DeprecatedTreeGrid 1`] = `
           title="Allied Technologies"
         >
           <a
-            href="javascript:void(0);"
+            href="#"
+            onClick={[Function]}
             tabIndex="-1"
           >
             Allied Technologies
@@ -1163,7 +1180,8 @@ exports[`deprecated treegrid renders a deeply nested DeprecatedTreeGrid 1`] = `
           title="Jane Doe"
         >
           <a
-            href="javascript:void(0);"
+            href="#"
+            onClick={[Function]}
             tabIndex="-1"
           >
             Jane Doe
@@ -1246,7 +1264,8 @@ exports[`deprecated treegrid renders a deeply nested DeprecatedTreeGrid 1`] = `
           title="Allied Technologies (UV)"
         >
           <a
-            href="javascript:void(0);"
+            href="#"
+            onClick={[Function]}
             tabIndex="-1"
           >
             Allied Technologies (UV)
@@ -1284,7 +1303,8 @@ exports[`deprecated treegrid renders a deeply nested DeprecatedTreeGrid 1`] = `
           title="John Doe"
         >
           <a
-            href="javascript:void(0);"
+            href="#"
+            onClick={[Function]}
             tabIndex="-1"
           >
             John Doe
@@ -1368,7 +1388,8 @@ exports[`deprecated treegrid renders a deeply nested DeprecatedTreeGrid 1`] = `
           title="Rohde Enterprises"
         >
           <a
-            href="javascript:void(0);"
+            href="#"
+            onClick={[Function]}
             tabIndex="-1"
           >
             Rohde Enterprises
@@ -1406,7 +1427,8 @@ exports[`deprecated treegrid renders a deeply nested DeprecatedTreeGrid 1`] = `
           title="John Doe"
         >
           <a
-            href="javascript:void(0);"
+            href="#"
+            onClick={[Function]}
             tabIndex="-1"
           >
             John Doe
@@ -1489,7 +1511,8 @@ exports[`deprecated treegrid renders a deeply nested DeprecatedTreeGrid 1`] = `
           title="Rohde Enterprises (UCA)"
         >
           <a
-            href="javascript:void(0);"
+            href="#"
+            onClick={[Function]}
             tabIndex="-1"
           >
             Rohde Enterprises (UCA)
@@ -1527,7 +1550,8 @@ exports[`deprecated treegrid renders a deeply nested DeprecatedTreeGrid 1`] = `
           title="John Doe"
         >
           <a
-            href="javascript:void(0);"
+            href="#"
+            onClick={[Function]}
             tabIndex="-1"
           >
             John Doe
@@ -1611,7 +1635,8 @@ exports[`deprecated treegrid renders a deeply nested DeprecatedTreeGrid 1`] = `
           title="Tech Labs"
         >
           <a
-            href="javascript:void(0);"
+            href="#"
+            onClick={[Function]}
             tabIndex="-1"
           >
             Tech Labs
@@ -1649,7 +1674,8 @@ exports[`deprecated treegrid renders a deeply nested DeprecatedTreeGrid 1`] = `
           title="John Doe"
         >
           <a
-            href="javascript:void(0);"
+            href="#"
+            onClick={[Function]}
             tabIndex="-1"
           >
             John Doe
@@ -1732,7 +1758,8 @@ exports[`deprecated treegrid renders a deeply nested DeprecatedTreeGrid 1`] = `
           title="Opportunity Resources Inc"
         >
           <a
-            href="javascript:void(0);"
+            href="#"
+            onClick={[Function]}
             tabIndex="-1"
           >
             Opportunity Resources Inc
@@ -1770,7 +1797,8 @@ exports[`deprecated treegrid renders a deeply nested DeprecatedTreeGrid 1`] = `
           title="John Doe"
         >
           <a
-            href="javascript:void(0);"
+            href="#"
+            onClick={[Function]}
             tabIndex="-1"
           >
             John Doe
@@ -1971,7 +1999,8 @@ exports[`deprecated treegrid renders a default DeprecatedTreeGrid 1`] = `
           title="Rewis Inc"
         >
           <a
-            href="javascript:void(0);"
+            href="#"
+            onClick={[Function]}
             tabIndex="-1"
           >
             Rewis Inc
@@ -2009,7 +2038,8 @@ exports[`deprecated treegrid renders a default DeprecatedTreeGrid 1`] = `
           title="Jane Doe"
         >
           <a
-            href="javascript:void(0);"
+            href="#"
+            onClick={[Function]}
             tabIndex="-1"
           >
             Jane Doe
@@ -2093,7 +2123,8 @@ exports[`deprecated treegrid renders a default DeprecatedTreeGrid 1`] = `
           title="Acme Corporation"
         >
           <a
-            href="javascript:void(0);"
+            href="#"
+            onClick={[Function]}
             tabIndex="-1"
           >
             Acme Corporation
@@ -2131,7 +2162,8 @@ exports[`deprecated treegrid renders a default DeprecatedTreeGrid 1`] = `
           title="John Doe"
         >
           <a
-            href="javascript:void(0);"
+            href="#"
+            onClick={[Function]}
             tabIndex="-1"
           >
             John Doe
@@ -2215,7 +2247,8 @@ exports[`deprecated treegrid renders a default DeprecatedTreeGrid 1`] = `
           title="Rohde Enterprises"
         >
           <a
-            href="javascript:void(0);"
+            href="#"
+            onClick={[Function]}
             tabIndex="-1"
           >
             Rohde Enterprises
@@ -2253,7 +2286,8 @@ exports[`deprecated treegrid renders a default DeprecatedTreeGrid 1`] = `
           title="John Doe"
         >
           <a
-            href="javascript:void(0);"
+            href="#"
+            onClick={[Function]}
             tabIndex="-1"
           >
             John Doe
@@ -2336,7 +2370,8 @@ exports[`deprecated treegrid renders a default DeprecatedTreeGrid 1`] = `
           title="Cheese Corp"
         >
           <a
-            href="javascript:void(0);"
+            href="#"
+            onClick={[Function]}
             tabIndex="-1"
           >
             Cheese Corp
@@ -2374,7 +2409,8 @@ exports[`deprecated treegrid renders a default DeprecatedTreeGrid 1`] = `
           title="Jane Doe"
         >
           <a
-            href="javascript:void(0);"
+            href="#"
+            onClick={[Function]}
             tabIndex="-1"
           >
             Jane Doe
@@ -2575,7 +2611,8 @@ exports[`deprecated treegrid renders an expanded DeprecatedTreeGrid 1`] = `
           title="Rewis Inc"
         >
           <a
-            href="javascript:void(0);"
+            href="#"
+            onClick={[Function]}
             tabIndex="-1"
           >
             Rewis Inc
@@ -2613,7 +2650,8 @@ exports[`deprecated treegrid renders an expanded DeprecatedTreeGrid 1`] = `
           title="Jane Doe"
         >
           <a
-            href="javascript:void(0);"
+            href="#"
+            onClick={[Function]}
             tabIndex="-1"
           >
             Jane Doe
@@ -2697,7 +2735,8 @@ exports[`deprecated treegrid renders an expanded DeprecatedTreeGrid 1`] = `
           title="Acme Corporation"
         >
           <a
-            href="javascript:void(0);"
+            href="#"
+            onClick={[Function]}
             tabIndex="-1"
           >
             Acme Corporation
@@ -2735,7 +2774,8 @@ exports[`deprecated treegrid renders an expanded DeprecatedTreeGrid 1`] = `
           title="John Doe"
         >
           <a
-            href="javascript:void(0);"
+            href="#"
+            onClick={[Function]}
             tabIndex="-1"
           >
             John Doe
@@ -2818,7 +2858,8 @@ exports[`deprecated treegrid renders an expanded DeprecatedTreeGrid 1`] = `
           title="Acme Corporation (Oakland)"
         >
           <a
-            href="javascript:void(0);"
+            href="#"
+            onClick={[Function]}
             tabIndex="-1"
           >
             Acme Corporation (Oakland)
@@ -2856,7 +2897,8 @@ exports[`deprecated treegrid renders an expanded DeprecatedTreeGrid 1`] = `
           title="John Doe"
         >
           <a
-            href="javascript:void(0);"
+            href="#"
+            onClick={[Function]}
             tabIndex="-1"
           >
             John Doe
@@ -2940,7 +2982,8 @@ exports[`deprecated treegrid renders an expanded DeprecatedTreeGrid 1`] = `
           title="Rohde Enterprises"
         >
           <a
-            href="javascript:void(0);"
+            href="#"
+            onClick={[Function]}
             tabIndex="-1"
           >
             Rohde Enterprises
@@ -2978,7 +3021,8 @@ exports[`deprecated treegrid renders an expanded DeprecatedTreeGrid 1`] = `
           title="John Doe"
         >
           <a
-            href="javascript:void(0);"
+            href="#"
+            onClick={[Function]}
             tabIndex="-1"
           >
             John Doe
@@ -3061,7 +3105,8 @@ exports[`deprecated treegrid renders an expanded DeprecatedTreeGrid 1`] = `
           title="Cheese Corp"
         >
           <a
-            href="javascript:void(0);"
+            href="#"
+            onClick={[Function]}
             tabIndex="-1"
           >
             Cheese Corp
@@ -3099,7 +3144,8 @@ exports[`deprecated treegrid renders an expanded DeprecatedTreeGrid 1`] = `
           title="Jane Doe"
         >
           <a
-            href="javascript:void(0);"
+            href="#"
+            onClick={[Function]}
             tabIndex="-1"
           >
             Jane Doe
@@ -3189,7 +3235,8 @@ exports[`treegrid default rows should remove the selection column 1`] = `
         title="Rewis Inc"
       >
         <a
-          href="javascript:void(0);"
+          href="#"
+          onClick={[Function]}
           tabIndex="-1"
         >
           Rewis Inc
@@ -3230,7 +3277,8 @@ exports[`treegrid default rows should remove the selection column 1`] = `
         title="Jane Doe"
       >
         <a
-          href="javascript:void(0);"
+          href="#"
+          onClick={[Function]}
           tabIndex="-1"
         >
           Jane Doe
@@ -3320,7 +3368,8 @@ exports[`treegrid default rows should remove the selection column 1`] = `
         title="Acme Corporation"
       >
         <a
-          href="javascript:void(0);"
+          href="#"
+          onClick={[Function]}
           tabIndex="-1"
         >
           Acme Corporation
@@ -3361,7 +3410,8 @@ exports[`treegrid default rows should remove the selection column 1`] = `
         title="John Doe"
       >
         <a
-          href="javascript:void(0);"
+          href="#"
+          onClick={[Function]}
           tabIndex="-1"
         >
           John Doe
@@ -3453,7 +3503,8 @@ exports[`treegrid default rows should remove the selection column 1`] = `
         title="Rohde Enterprises"
       >
         <a
-          href="javascript:void(0);"
+          href="#"
+          onClick={[Function]}
           tabIndex="-1"
         >
           Rohde Enterprises
@@ -3494,7 +3545,8 @@ exports[`treegrid default rows should remove the selection column 1`] = `
         title="John Doe"
       >
         <a
-          href="javascript:void(0);"
+          href="#"
+          onClick={[Function]}
           tabIndex="-1"
         >
           John Doe
@@ -3584,7 +3636,8 @@ exports[`treegrid default rows should remove the selection column 1`] = `
         title="Cheese Corp"
       >
         <a
-          href="javascript:void(0);"
+          href="#"
+          onClick={[Function]}
           tabIndex="-1"
         >
           Cheese Corp
@@ -3625,7 +3678,8 @@ exports[`treegrid default rows should remove the selection column 1`] = `
         title="Jane Doe"
       >
         <a
-          href="javascript:void(0);"
+          href="#"
+          onClick={[Function]}
           tabIndex="-1"
         >
           Jane Doe
@@ -3756,7 +3810,8 @@ exports[`treegrid default rows should render with children 1`] = `
         title="Rewis Inc"
       >
         <a
-          href="javascript:void(0);"
+          href="#"
+          onClick={[Function]}
           tabIndex="-1"
         >
           Rewis Inc
@@ -3797,7 +3852,8 @@ exports[`treegrid default rows should render with children 1`] = `
         title="Jane Doe"
       >
         <a
-          href="javascript:void(0);"
+          href="#"
+          onClick={[Function]}
           tabIndex="-1"
         >
           Jane Doe
@@ -3923,7 +3979,8 @@ exports[`treegrid default rows should render with children 1`] = `
         title="Acme Corporation"
       >
         <a
-          href="javascript:void(0);"
+          href="#"
+          onClick={[Function]}
           tabIndex="-1"
         >
           Acme Corporation
@@ -3964,7 +4021,8 @@ exports[`treegrid default rows should render with children 1`] = `
         title="John Doe"
       >
         <a
-          href="javascript:void(0);"
+          href="#"
+          onClick={[Function]}
           tabIndex="-1"
         >
           John Doe
@@ -4092,7 +4150,8 @@ exports[`treegrid default rows should render with children 1`] = `
         title="Rohde Enterprises"
       >
         <a
-          href="javascript:void(0);"
+          href="#"
+          onClick={[Function]}
           tabIndex="-1"
         >
           Rohde Enterprises
@@ -4133,7 +4192,8 @@ exports[`treegrid default rows should render with children 1`] = `
         title="John Doe"
       >
         <a
-          href="javascript:void(0);"
+          href="#"
+          onClick={[Function]}
           tabIndex="-1"
         >
           John Doe
@@ -4259,7 +4319,8 @@ exports[`treegrid default rows should render with children 1`] = `
         title="Cheese Corp"
       >
         <a
-          href="javascript:void(0);"
+          href="#"
+          onClick={[Function]}
           tabIndex="-1"
         >
           Cheese Corp
@@ -4300,7 +4361,8 @@ exports[`treegrid default rows should render with children 1`] = `
         title="Jane Doe"
       >
         <a
-          href="javascript:void(0);"
+          href="#"
+          onClick={[Function]}
           tabIndex="-1"
         >
           Jane Doe
@@ -4431,7 +4493,8 @@ exports[`treegrid default rows should show a selected row 1`] = `
         title="Rewis Inc"
       >
         <a
-          href="javascript:void(0);"
+          href="#"
+          onClick={[Function]}
           tabIndex="-1"
         >
           Rewis Inc
@@ -4472,7 +4535,8 @@ exports[`treegrid default rows should show a selected row 1`] = `
         title="Jane Doe"
       >
         <a
-          href="javascript:void(0);"
+          href="#"
+          onClick={[Function]}
           tabIndex="-1"
         >
           Jane Doe
@@ -4598,7 +4662,8 @@ exports[`treegrid default rows should show a selected row 1`] = `
         title="Acme Corporation"
       >
         <a
-          href="javascript:void(0);"
+          href="#"
+          onClick={[Function]}
           tabIndex="-1"
         >
           Acme Corporation
@@ -4639,7 +4704,8 @@ exports[`treegrid default rows should show a selected row 1`] = `
         title="John Doe"
       >
         <a
-          href="javascript:void(0);"
+          href="#"
+          onClick={[Function]}
           tabIndex="-1"
         >
           John Doe
@@ -4767,7 +4833,8 @@ exports[`treegrid default rows should show a selected row 1`] = `
         title="Rohde Enterprises"
       >
         <a
-          href="javascript:void(0);"
+          href="#"
+          onClick={[Function]}
           tabIndex="-1"
         >
           Rohde Enterprises
@@ -4808,7 +4875,8 @@ exports[`treegrid default rows should show a selected row 1`] = `
         title="John Doe"
       >
         <a
-          href="javascript:void(0);"
+          href="#"
+          onClick={[Function]}
           tabIndex="-1"
         >
           John Doe
@@ -4934,7 +5002,8 @@ exports[`treegrid default rows should show a selected row 1`] = `
         title="Cheese Corp"
       >
         <a
-          href="javascript:void(0);"
+          href="#"
+          onClick={[Function]}
           tabIndex="-1"
         >
           Cheese Corp
@@ -4975,7 +5044,8 @@ exports[`treegrid default rows should show a selected row 1`] = `
         title="Jane Doe"
       >
         <a
-          href="javascript:void(0);"
+          href="#"
+          onClick={[Function]}
           tabIndex="-1"
         >
           Jane Doe
@@ -5106,7 +5176,8 @@ exports[`treegrid default rows should show expanded row 1`] = `
         title="Rewis Inc"
       >
         <a
-          href="javascript:void(0);"
+          href="#"
+          onClick={[Function]}
           tabIndex="-1"
         >
           Rewis Inc
@@ -5147,7 +5218,8 @@ exports[`treegrid default rows should show expanded row 1`] = `
         title="Jane Doe"
       >
         <a
-          href="javascript:void(0);"
+          href="#"
+          onClick={[Function]}
           tabIndex="-1"
         >
           Jane Doe
@@ -5274,7 +5346,8 @@ exports[`treegrid default rows should show expanded row 1`] = `
         title="Acme Corporation"
       >
         <a
-          href="javascript:void(0);"
+          href="#"
+          onClick={[Function]}
           tabIndex="-1"
         >
           Acme Corporation
@@ -5315,7 +5388,8 @@ exports[`treegrid default rows should show expanded row 1`] = `
         title="John Doe"
       >
         <a
-          href="javascript:void(0);"
+          href="#"
+          onClick={[Function]}
           tabIndex="-1"
         >
           John Doe
@@ -5443,7 +5517,8 @@ exports[`treegrid default rows should show expanded row 1`] = `
         title="Rohde Enterprises"
       >
         <a
-          href="javascript:void(0);"
+          href="#"
+          onClick={[Function]}
           tabIndex="-1"
         >
           Rohde Enterprises
@@ -5484,7 +5559,8 @@ exports[`treegrid default rows should show expanded row 1`] = `
         title="John Doe"
       >
         <a
-          href="javascript:void(0);"
+          href="#"
+          onClick={[Function]}
           tabIndex="-1"
         >
           John Doe
@@ -5610,7 +5686,8 @@ exports[`treegrid default rows should show expanded row 1`] = `
         title="Cheese Corp"
       >
         <a
-          href="javascript:void(0);"
+          href="#"
+          onClick={[Function]}
           tabIndex="-1"
         >
           Cheese Corp
@@ -5651,7 +5728,8 @@ exports[`treegrid default rows should show expanded row 1`] = `
         title="Jane Doe"
       >
         <a
-          href="javascript:void(0);"
+          href="#"
+          onClick={[Function]}
           tabIndex="-1"
         >
           Jane Doe
@@ -5744,7 +5822,8 @@ exports[`treegrid headless row should hide the selection column 1`] = `
       title="foo"
     >
       <a
-        href="javascript:void(0);"
+        href="#"
+        onClick={[Function]}
         tabIndex="-1"
       >
         foo
@@ -5859,7 +5938,8 @@ exports[`treegrid headless row should render 1`] = `
       title="foo"
     >
       <a
-        href="javascript:void(0);"
+        href="#"
+        onClick={[Function]}
         tabIndex="-1"
       >
         foo
@@ -5975,7 +6055,8 @@ exports[`treegrid headless row should set expanded to false 1`] = `
       title="foo"
     >
       <a
-        href="javascript:void(0);"
+        href="#"
+        onClick={[Function]}
         tabIndex="-1"
       >
         foo
@@ -6091,7 +6172,8 @@ exports[`treegrid headless row should set expanded to true 1`] = `
       title="foo"
     >
       <a
-        href="javascript:void(0);"
+        href="#"
+        onClick={[Function]}
         tabIndex="-1"
       >
         foo
@@ -6208,7 +6290,8 @@ exports[`treegrid headless row should set selected to false 1`] = `
       title="foo"
     >
       <a
-        href="javascript:void(0);"
+        href="#"
+        onClick={[Function]}
         tabIndex="-1"
       >
         foo
@@ -6325,7 +6408,8 @@ exports[`treegrid headless row should set selected to true and check the box 1`]
       title="foo"
     >
       <a
-        href="javascript:void(0);"
+        href="#"
+        onClick={[Function]}
         tabIndex="-1"
       >
         foo
@@ -6407,7 +6491,8 @@ exports[`treegrid headless rows should remove the selection column 1`] = `
         title="Rewis Inc"
       >
         <a
-          href="javascript:void(0);"
+          href="#"
+          onClick={[Function]}
           tabIndex="-1"
         >
           Rewis Inc
@@ -6485,7 +6570,8 @@ exports[`treegrid headless rows should remove the selection column 1`] = `
         title="Acme Corporation"
       >
         <a
-          href="javascript:void(0);"
+          href="#"
+          onClick={[Function]}
           tabIndex="-1"
         >
           Acme Corporation
@@ -6564,7 +6650,8 @@ exports[`treegrid headless rows should remove the selection column 1`] = `
         title="Rohde Enterprises"
       >
         <a
-          href="javascript:void(0);"
+          href="#"
+          onClick={[Function]}
           tabIndex="-1"
         >
           Rohde Enterprises
@@ -6642,7 +6729,8 @@ exports[`treegrid headless rows should remove the selection column 1`] = `
         title="Cheese Corp"
       >
         <a
-          href="javascript:void(0);"
+          href="#"
+          onClick={[Function]}
           tabIndex="-1"
         >
           Cheese Corp
@@ -6761,7 +6849,8 @@ exports[`treegrid headless rows should render 1`] = `
         title="Rewis Inc"
       >
         <a
-          href="javascript:void(0);"
+          href="#"
+          onClick={[Function]}
           tabIndex="-1"
         >
           Rewis Inc
@@ -6875,7 +6964,8 @@ exports[`treegrid headless rows should render 1`] = `
         title="Acme Corporation"
       >
         <a
-          href="javascript:void(0);"
+          href="#"
+          onClick={[Function]}
           tabIndex="-1"
         >
           Acme Corporation
@@ -6990,7 +7080,8 @@ exports[`treegrid headless rows should render 1`] = `
         title="Rohde Enterprises"
       >
         <a
-          href="javascript:void(0);"
+          href="#"
+          onClick={[Function]}
           tabIndex="-1"
         >
           Rohde Enterprises
@@ -7104,7 +7195,8 @@ exports[`treegrid headless rows should render 1`] = `
         title="Cheese Corp"
       >
         <a
-          href="javascript:void(0);"
+          href="#"
+          onClick={[Function]}
           tabIndex="-1"
         >
           Cheese Corp
@@ -7223,7 +7315,8 @@ exports[`treegrid headless rows should show a selected row 1`] = `
         title="Rewis Inc"
       >
         <a
-          href="javascript:void(0);"
+          href="#"
+          onClick={[Function]}
           tabIndex="-1"
         >
           Rewis Inc
@@ -7337,7 +7430,8 @@ exports[`treegrid headless rows should show a selected row 1`] = `
         title="Acme Corporation"
       >
         <a
-          href="javascript:void(0);"
+          href="#"
+          onClick={[Function]}
           tabIndex="-1"
         >
           Acme Corporation
@@ -7452,7 +7546,8 @@ exports[`treegrid headless rows should show a selected row 1`] = `
         title="Rohde Enterprises"
       >
         <a
-          href="javascript:void(0);"
+          href="#"
+          onClick={[Function]}
           tabIndex="-1"
         >
           Rohde Enterprises
@@ -7566,7 +7661,8 @@ exports[`treegrid headless rows should show a selected row 1`] = `
         title="Cheese Corp"
       >
         <a
-          href="javascript:void(0);"
+          href="#"
+          onClick={[Function]}
           tabIndex="-1"
         >
           Cheese Corp
@@ -7685,7 +7781,8 @@ exports[`treegrid headless rows should show expanded row 1`] = `
         title="Rewis Inc"
       >
         <a
-          href="javascript:void(0);"
+          href="#"
+          onClick={[Function]}
           tabIndex="-1"
         >
           Rewis Inc
@@ -7800,7 +7897,8 @@ exports[`treegrid headless rows should show expanded row 1`] = `
         title="Acme Corporation"
       >
         <a
-          href="javascript:void(0);"
+          href="#"
+          onClick={[Function]}
           tabIndex="-1"
         >
           Acme Corporation
@@ -7915,7 +8013,8 @@ exports[`treegrid headless rows should show expanded row 1`] = `
         title="Rohde Enterprises"
       >
         <a
-          href="javascript:void(0);"
+          href="#"
+          onClick={[Function]}
           tabIndex="-1"
         >
           Rohde Enterprises
@@ -8029,7 +8128,8 @@ exports[`treegrid headless rows should show expanded row 1`] = `
         title="Cheese Corp"
       >
         <a
-          href="javascript:void(0);"
+          href="#"
+          onClick={[Function]}
           tabIndex="-1"
         >
           Cheese Corp
@@ -8110,7 +8210,8 @@ exports[`treegrid row should remove the selection column 1`] = `
       title="Rewis Inc"
     >
       <a
-        href="javascript:void(0);"
+        href="#"
+        onClick={[Function]}
         tabIndex="-1"
       >
         Rewis Inc
@@ -8151,7 +8252,8 @@ exports[`treegrid row should remove the selection column 1`] = `
       title="Jane Doe"
     >
       <a
-        href="javascript:void(0);"
+        href="#"
+        onClick={[Function]}
         tabIndex="-1"
       >
         Jane Doe
@@ -8278,7 +8380,8 @@ exports[`treegrid row should render 1`] = `
       title="Rewis Inc"
     >
       <a
-        href="javascript:void(0);"
+        href="#"
+        onClick={[Function]}
         tabIndex="-1"
       >
         Rewis Inc
@@ -8319,7 +8422,8 @@ exports[`treegrid row should render 1`] = `
       title="Jane Doe"
     >
       <a
-        href="javascript:void(0);"
+        href="#"
+        onClick={[Function]}
         tabIndex="-1"
       >
         Jane Doe
@@ -8448,7 +8552,8 @@ exports[`treegrid row should select the row and check the box 1`] = `
       title="Rewis Inc"
     >
       <a
-        href="javascript:void(0);"
+        href="#"
+        onClick={[Function]}
         tabIndex="-1"
       >
         Rewis Inc
@@ -8489,7 +8594,8 @@ exports[`treegrid row should select the row and check the box 1`] = `
       title="Jane Doe"
     >
       <a
-        href="javascript:void(0);"
+        href="#"
+        onClick={[Function]}
         tabIndex="-1"
       >
         Jane Doe
@@ -8617,7 +8723,8 @@ exports[`treegrid row should set aria-expanded on row  1`] = `
       title="Rewis Inc"
     >
       <a
-        href="javascript:void(0);"
+        href="#"
+        onClick={[Function]}
         tabIndex="-1"
       >
         Rewis Inc
@@ -8658,7 +8765,8 @@ exports[`treegrid row should set aria-expanded on row  1`] = `
       title="Jane Doe"
     >
       <a
-        href="javascript:void(0);"
+        href="#"
+        onClick={[Function]}
         tabIndex="-1"
       >
         Jane Doe
@@ -8786,7 +8894,8 @@ exports[`treegrid row should set aria-expanded to false on row  1`] = `
       title="Rewis Inc"
     >
       <a
-        href="javascript:void(0);"
+        href="#"
+        onClick={[Function]}
         tabIndex="-1"
       >
         Rewis Inc
@@ -8827,7 +8936,8 @@ exports[`treegrid row should set aria-expanded to false on row  1`] = `
       title="Jane Doe"
     >
       <a
-        href="javascript:void(0);"
+        href="#"
+        onClick={[Function]}
         tabIndex="-1"
       >
         Jane Doe
@@ -8956,7 +9066,8 @@ exports[`treegrid row should set selection of the row to false 1`] = `
       title="Rewis Inc"
     >
       <a
-        href="javascript:void(0);"
+        href="#"
+        onClick={[Function]}
         tabIndex="-1"
       >
         Rewis Inc
@@ -8997,7 +9108,8 @@ exports[`treegrid row should set selection of the row to false 1`] = `
       title="Jane Doe"
     >
       <a
-        href="javascript:void(0);"
+        href="#"
+        onClick={[Function]}
         tabIndex="-1"
       >
         Jane Doe
@@ -9124,7 +9236,8 @@ exports[`treegrid row should set tabindex on the row 1`] = `
       title="Rewis Inc"
     >
       <a
-        href="javascript:void(0);"
+        href="#"
+        onClick={[Function]}
         tabIndex="-1"
       >
         Rewis Inc
@@ -9165,7 +9278,8 @@ exports[`treegrid row should set tabindex on the row 1`] = `
       title="Jane Doe"
     >
       <a
-        href="javascript:void(0);"
+        href="#"
+        onClick={[Function]}
         tabIndex="-1"
       >
         Jane Doe

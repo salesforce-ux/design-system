@@ -30,7 +30,8 @@ exports[`renders vertical list utiltiies renders bottom dividers on list items w
     className="slds-item"
   >
     <a
-      href="javascript:void(0);"
+      href="#"
+      onClick={[Function]}
     >
       List item with link and bottom divider
     </a>
@@ -39,7 +40,8 @@ exports[`renders vertical list utiltiies renders bottom dividers on list items w
     className="slds-item"
   >
     <a
-      href="javascript:void(0);"
+      href="#"
+      onClick={[Function]}
     >
       List Item
     </a>
@@ -48,7 +50,8 @@ exports[`renders vertical list utiltiies renders bottom dividers on list items w
     className="slds-item"
   >
     <a
-      href="javascript:void(0);"
+      href="#"
+      onClick={[Function]}
     >
       List Item
     </a>
@@ -86,7 +89,8 @@ exports[`renders vertical list utiltiies renders bottom dividers on padded list 
     className="slds-item"
   >
     <a
-      href="javascript:void(0);"
+      href="#"
+      onClick={[Function]}
     >
       List item with link and bottom divider with space
     </a>
@@ -95,7 +99,8 @@ exports[`renders vertical list utiltiies renders bottom dividers on padded list 
     className="slds-item"
   >
     <a
-      href="javascript:void(0);"
+      href="#"
+      onClick={[Function]}
     >
       List Item
     </a>
@@ -104,7 +109,8 @@ exports[`renders vertical list utiltiies renders bottom dividers on padded list 
     className="slds-item"
   >
     <a
-      href="javascript:void(0);"
+      href="#"
+      onClick={[Function]}
     >
       List Item
     </a>
@@ -158,7 +164,8 @@ exports[`renders vertical list utiltiies renders dividers around the list items 
     className="slds-item"
   >
     <a
-      href="javascript:void(0);"
+      href="#"
+      onClick={[Function]}
     >
       List item with link and around divider
     </a>
@@ -167,7 +174,8 @@ exports[`renders vertical list utiltiies renders dividers around the list items 
     className="slds-item"
   >
     <a
-      href="javascript:void(0);"
+      href="#"
+      onClick={[Function]}
     >
       List Item
     </a>
@@ -176,7 +184,8 @@ exports[`renders vertical list utiltiies renders dividers around the list items 
     className="slds-item"
   >
     <a
-      href="javascript:void(0);"
+      href="#"
+      onClick={[Function]}
     >
       List Item
     </a>
@@ -214,7 +223,8 @@ exports[`renders vertical list utiltiies renders dividers around the padded list
     className="slds-item"
   >
     <a
-      href="javascript:void(0);"
+      href="#"
+      onClick={[Function]}
     >
       List item with link and around divider with space
     </a>
@@ -223,7 +233,8 @@ exports[`renders vertical list utiltiies renders dividers around the padded list
     className="slds-item"
   >
     <a
-      href="javascript:void(0);"
+      href="#"
+      onClick={[Function]}
     >
       List Item
     </a>
@@ -232,7 +243,8 @@ exports[`renders vertical list utiltiies renders dividers around the padded list
     className="slds-item"
   >
     <a
-      href="javascript:void(0);"
+      href="#"
+      onClick={[Function]}
     >
       List Item
     </a>
@@ -264,7 +276,8 @@ exports[`renders vertical list utiltiies renders list items with interactions 1`
     className="slds-item slds-is-selected"
   >
     <a
-      href="javascript:void(0);"
+      href="#"
+      onClick={[Function]}
     >
       List item
     </a>
@@ -273,7 +286,8 @@ exports[`renders vertical list utiltiies renders list items with interactions 1`
     className="slds-item"
   >
     <a
-      href="javascript:void(0);"
+      href="#"
+      onClick={[Function]}
     >
       List item
     </a>
@@ -349,7 +363,8 @@ exports[`renders vertical list utiltiies renders top dividers on list items with
     className="slds-item"
   >
     <a
-      href="javascript:void(0);"
+      href="#"
+      onClick={[Function]}
     >
       List item with link and top divider
     </a>
@@ -358,7 +373,8 @@ exports[`renders vertical list utiltiies renders top dividers on list items with
     className="slds-item"
   >
     <a
-      href="javascript:void(0);"
+      href="#"
+      onClick={[Function]}
     >
       List Item
     </a>
@@ -367,7 +383,8 @@ exports[`renders vertical list utiltiies renders top dividers on list items with
     className="slds-item"
   >
     <a
-      href="javascript:void(0);"
+      href="#"
+      onClick={[Function]}
     >
       List Item
     </a>
@@ -405,7 +422,8 @@ exports[`renders vertical list utiltiies renders top dividers on padded list ite
     className="slds-item"
   >
     <a
-      href="javascript:void(0);"
+      href="#"
+      onClick={[Function]}
     >
       List item with link and top divider
     </a>
@@ -414,7 +432,8 @@ exports[`renders vertical list utiltiies renders top dividers on padded list ite
     className="slds-item"
   >
     <a
-      href="javascript:void(0);"
+      href="#"
+      onClick={[Function]}
     >
       List Item
     </a>
@@ -423,7 +442,8 @@ exports[`renders vertical list utiltiies renders top dividers on padded list ite
     className="slds-item"
   >
     <a
-      href="javascript:void(0);"
+      href="#"
+      onClick={[Function]}
     >
       List Item
     </a>
@@ -451,21 +471,24 @@ exports[`renders vertical list utiltiies renders unordered list with block links
 >
   <li>
     <a
-      href="javascript:void(0);"
+      href="#"
+      onClick={[Function]}
     >
       Vertical List with links
     </a>
   </li>
   <li>
     <a
-      href="javascript:void(0);"
+      href="#"
+      onClick={[Function]}
     >
       List Item
     </a>
   </li>
   <li>
     <a
-      href="javascript:void(0);"
+      href="#"
+      onClick={[Function]}
     >
       List Item
     </a>
@@ -479,21 +502,24 @@ exports[`renders vertical list utiltiies renders unordered list with inline-bloc
 >
   <li>
     <a
-      href="javascript:void(0);"
+      href="#"
+      onClick={[Function]}
     >
       Vertical List with links
     </a>
   </li>
   <li>
     <a
-      href="javascript:void(0);"
+      href="#"
+      onClick={[Function]}
     >
       List Item
     </a>
   </li>
   <li>
     <a
-      href="javascript:void(0);"
+      href="#"
+      onClick={[Function]}
     >
       List Item
     </a>
@@ -505,21 +531,24 @@ exports[`renders vertical list utiltiies renders unordered list with links 1`] =
 <ul>
   <li>
     <a
-      href="javascript:void(0);"
+      href="#"
+      onClick={[Function]}
     >
       Vertical List with links
     </a>
   </li>
   <li>
     <a
-      href="javascript:void(0);"
+      href="#"
+      onClick={[Function]}
     >
       List Item
     </a>
   </li>
   <li>
     <a
-      href="javascript:void(0);"
+      href="#"
+      onClick={[Function]}
     >
       List Item
     </a>
@@ -533,21 +562,24 @@ exports[`renders vertical list utiltiies renders unordered list with padded bloc
 >
   <li>
     <a
-      href="javascript:void(0);"
+      href="#"
+      onClick={[Function]}
     >
       Vertical List with links
     </a>
   </li>
   <li>
     <a
-      href="javascript:void(0);"
+      href="#"
+      onClick={[Function]}
     >
       List Item
     </a>
   </li>
   <li>
     <a
-      href="javascript:void(0);"
+      href="#"
+      onClick={[Function]}
     >
       List Item
     </a>
@@ -561,21 +593,24 @@ exports[`renders vertical list utiltiies renders unordered list with padded inli
 >
   <li>
     <a
-      href="javascript:void(0);"
+      href="#"
+      onClick={[Function]}
     >
       Vertical List with links
     </a>
   </li>
   <li>
     <a
-      href="javascript:void(0);"
+      href="#"
+      onClick={[Function]}
     >
       List Item
     </a>
   </li>
   <li>
     <a
-      href="javascript:void(0);"
+      href="#"
+      onClick={[Function]}
     >
       List Item
     </a>

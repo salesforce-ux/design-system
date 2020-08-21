@@ -208,15 +208,14 @@ export const TabsWithCards = () => (
         <CardHeader
           symbol="contact"
           title="Card Header"
-          href="javascript:void(0);"
+          href="#"
           action={
             <button className="slds-button slds-button_neutral">New</button>
           }
+          onClick={e => e.preventDefault()}
         />
         <CardBody hasPadding>
-          This is a card inside an <code className="doc">
-            .slds-tabs_card
-          </code>{' '}
+          This is a card inside an <code className="doc">.slds-tabs_card</code>{' '}
           to show how styling is removed when cards are nested inside.
         </CardBody>
         <CardFooter>
@@ -227,15 +226,14 @@ export const TabsWithCards = () => (
         <CardHeader
           symbol="contact"
           title="Card Header"
-          href="javascript:void(0);"
+          href="#"
           action={
             <button className="slds-button slds-button_neutral">New</button>
           }
+          onClick={e => e.preventDefault()}
         />
         <CardBody hasPadding>
-          This is a card inside an <code className="doc">
-            .slds-tabs_card
-          </code>{' '}
+          This is a card inside an <code className="doc">.slds-tabs_card</code>{' '}
           to show how styling is removed when cards are nested inside.
         </CardBody>
         <CardFooter>
@@ -246,15 +244,14 @@ export const TabsWithCards = () => (
         <CardHeader
           symbol="contact"
           title="Card Header"
-          href="javascript:void(0);"
+          href="#"
           action={
             <button className="slds-button slds-button_neutral">New</button>
           }
+          onClick={e => e.preventDefault()}
         />
         <CardBody hasPadding>
-          This is a card inside an <code className="doc">
-            .slds-tabs_card
-          </code>{' '}
+          This is a card inside an <code className="doc">.slds-tabs_card</code>{' '}
           to illustrate how
           <code className="doc">.slds-card_boundary</code> adds a rounded border
           when desired.

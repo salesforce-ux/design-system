@@ -468,7 +468,8 @@ exports[`Pill renders a pill 1`] = `
 >
   <a
     className="slds-pill__action"
-    href="javascript:void(0);"
+    href="#"
+    onClick={[Function]}
     title="Full pill label verbiage mirrored here"
   >
     <span
@@ -508,7 +509,8 @@ exports[`Pill renders a pill in a container - bare (deprecated) 1`] = `
   >
     <a
       className="slds-pill__action"
-      href="javascript:void(0);"
+      href="#"
+      onClick={[Function]}
       title="Full pill label verbiage mirrored here"
     >
       <span
@@ -542,7 +544,8 @@ exports[`Pill renders a pill in a container - bare (deprecated) 1`] = `
   >
     <a
       className="slds-pill__action"
-      href="javascript:void(0);"
+      href="#"
+      onClick={[Function]}
       title="Full pill label verbiage mirrored here"
     >
       <span
@@ -576,7 +579,8 @@ exports[`Pill renders a pill in a container - bare (deprecated) 1`] = `
   >
     <a
       className="slds-pill__action"
-      href="javascript:void(0);"
+      href="#"
+      onClick={[Function]}
       title="Full pill label verbiage mirrored here"
     >
       <span
@@ -617,7 +621,8 @@ exports[`Pill renders a pill in a container 1`] = `
   >
     <a
       className="slds-pill__action"
-      href="javascript:void(0);"
+      href="#"
+      onClick={[Function]}
       title="Full pill label verbiage mirrored here"
     >
       <span
@@ -651,7 +656,8 @@ exports[`Pill renders a pill in a container 1`] = `
   >
     <a
       className="slds-pill__action"
-      href="javascript:void(0);"
+      href="#"
+      onClick={[Function]}
       title="Full pill label verbiage mirrored here"
     >
       <span
@@ -685,7 +691,8 @@ exports[`Pill renders a pill in a container 1`] = `
   >
     <a
       className="slds-pill__action"
-      href="javascript:void(0);"
+      href="#"
+      onClick={[Function]}
       title="Full pill label verbiage mirrored here"
     >
       <span
@@ -726,7 +733,8 @@ exports[`Pill renders a pill that is truncated 1`] = `
   >
     <a
       className="slds-pill__action"
-      href="javascript:void(0);"
+      href="#"
+      onClick={[Function]}
       title="Pill label that is longer than the area that contains it"
     >
       <span
@@ -778,7 +786,8 @@ exports[`Pill renders a pill with an avatar 1`] = `
   </span>
   <a
     className="slds-pill__action"
-    href="javascript:void(0);"
+    href="#"
+    onClick={[Function]}
     title="Full pill label verbiage mirrored here"
   >
     <span
@@ -837,7 +846,8 @@ exports[`Pill renders a pill with an error 1`] = `
   </span>
   <a
     className="slds-pill__action"
-    href="javascript:void(0);"
+    href="#"
+    onClick={[Function]}
     title="Full pill label verbiage mirrored here"
   >
     <span
@@ -896,7 +906,8 @@ exports[`Pill renders a pill with an icon 1`] = `
   </span>
   <a
     className="slds-pill__action"
-    href="javascript:void(0);"
+    href="#"
+    onClick={[Function]}
     title="Full pill label verbiage mirrored here"
   >
     <span

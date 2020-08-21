@@ -87,8 +87,9 @@ exports[`renders a base color picker with custom tab selected 1`] = `
               aria-controls="color-picker-default"
               aria-selected={false}
               className="slds-tabs_default__link"
-              href="javascript:void(0);"
+              href="#"
               id="color-picker-default__item"
+              onClick={[Function]}
               role="tab"
               tabIndex={-1}
             >
@@ -104,8 +105,9 @@ exports[`renders a base color picker with custom tab selected 1`] = `
               aria-controls="color-picker-custom"
               aria-selected={true}
               className="slds-tabs_default__link"
-              href="javascript:void(0);"
+              href="#"
               id="color-picker-custom__item"
+              onClick={[Function]}
               role="tab"
               tabIndex={0}
             >
@@ -1139,8 +1141,9 @@ exports[`renders a base color picker with custom tab selected in error state 1`]
               aria-controls="color-picker-default"
               aria-selected={false}
               className="slds-tabs_default__link"
-              href="javascript:void(0);"
+              href="#"
               id="color-picker-default__item"
+              onClick={[Function]}
               role="tab"
               tabIndex={-1}
             >
@@ -1156,8 +1159,9 @@ exports[`renders a base color picker with custom tab selected in error state 1`]
               aria-controls="color-picker-custom"
               aria-selected={true}
               className="slds-tabs_default__link"
-              href="javascript:void(0);"
+              href="#"
               id="color-picker-custom__item"
+              onClick={[Function]}
               role="tab"
               tabIndex={0}
             >
@@ -2205,8 +2209,9 @@ exports[`renders a base color picker with summary error 1`] = `
               aria-controls="color-picker-default"
               aria-selected={true}
               className="slds-tabs_default__link"
-              href="javascript:void(0);"
+              href="#"
               id="color-picker-default__item"
+              onClick={[Function]}
               role="tab"
               tabIndex={0}
             >
@@ -2222,8 +2227,9 @@ exports[`renders a base color picker with summary error 1`] = `
               aria-controls="color-picker-custom"
               aria-selected={false}
               className="slds-tabs_default__link"
-              href="javascript:void(0);"
+              href="#"
               id="color-picker-custom__item"
+              onClick={[Function]}
               role="tab"
               tabIndex={-1}
             >
@@ -3519,8 +3525,9 @@ exports[`renders a default base color picker 1`] = `
               aria-controls="color-picker-default"
               aria-selected={true}
               className="slds-tabs_default__link"
-              href="javascript:void(0);"
+              href="#"
               id="color-picker-default__item"
+              onClick={[Function]}
               role="tab"
               tabIndex={0}
             >
@@ -3536,8 +3543,9 @@ exports[`renders a default base color picker 1`] = `
               aria-controls="color-picker-custom"
               aria-selected={false}
               className="slds-tabs_default__link"
-              href="javascript:void(0);"
+              href="#"
               id="color-picker-custom__item"
+              onClick={[Function]}
               role="tab"
               tabIndex={-1}
             >

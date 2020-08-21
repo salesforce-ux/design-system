@@ -19,7 +19,7 @@ export default (
               className="slds-list_vertical slds-has-block-links_space slds-has-dividers_bottom"
             >
               <li className="slds-item">
-                <a role="menuitem" href="javascript:void(0)">
+                <a role="menuitem" href="#" onClick={e => e.preventDefault()}>
                   <p className="slds-truncate" title="Post">
                     <span className="slds-icon_container slds-icon_container_circle slds-icon-action-share-post slds-m-right_medium">
                       <SvgIcon
@@ -34,7 +34,7 @@ export default (
                 </a>
               </li>
               <li className="slds-item">
-                <a role="menuitem" href="javascript:void(0)">
+                <a role="menuitem" href="#" onClick={e => e.preventDefault()}>
                   <p className="slds-truncate" title="New Task">
                     <span className="slds-icon_container slds-icon_container_circle slds-icon-action-new-task slds-m-right_medium">
                       <SvgIcon
@@ -49,7 +49,7 @@ export default (
                 </a>
               </li>
               <li className="slds-item">
-                <a role="menuitem" href="javascript:void(0)">
+                <a role="menuitem" href="#" onClick={e => e.preventDefault()}>
                   <p className="slds-truncate" title="New Contact">
                     <span className="slds-icon_container slds-icon_container_circle slds-icon-action-new-contact slds-m-right_medium">
                       <SvgIcon
@@ -64,7 +64,7 @@ export default (
                 </a>
               </li>
               <li className="slds-item">
-                <a role="menuitem" href="javascript:void(0)">
+                <a role="menuitem" href="#" onClick={e => e.preventDefault()}>
                   <p className="slds-truncate" title="New Opportunity">
                     <span className="slds-icon_container slds-icon_container_circle slds-icon-action-new-opportunity slds-m-right_medium">
                       <SvgIcon
@@ -79,7 +79,7 @@ export default (
                 </a>
               </li>
               <li className="slds-item">
-                <a role="menuitem" href="javascript:void(0)">
+                <a role="menuitem" href="#" onClick={e => e.preventDefault()}>
                   <p className="slds-truncate" title="Convert">
                     <span className="slds-icon_container slds-icon_container_circle slds-icon-action-lead-convert slds-m-right_medium">
                       <SvgIcon
@@ -94,7 +94,7 @@ export default (
                 </a>
               </li>
               <li className="slds-item">
-                <a role="menuitem" href="javascript:void(0)">
+                <a role="menuitem" href="#" onClick={e => e.preventDefault()}>
                   <p className="slds-truncate" title="Edit">
                     <span className="slds-icon_container slds-icon_container_circle slds-icon-action-edit slds-m-right_medium">
                       <SvgIcon
@@ -109,7 +109,7 @@ export default (
                 </a>
               </li>
               <li className="slds-item">
-                <a role="menuitem" href="javascript:void(0)">
+                <a role="menuitem" href="#" onClick={e => e.preventDefault()}>
                   <p className="slds-truncate" title="Post">
                     <span className="slds-icon_container slds-icon_container_circle slds-icon-action-share-post slds-m-right_medium">
                       <SvgIcon
@@ -124,7 +124,7 @@ export default (
                 </a>
               </li>
               <li className="slds-item">
-                <a role="menuitem" href="javascript:void(0)">
+                <a role="menuitem" href="#" onClick={e => e.preventDefault()}>
                   <p className="slds-truncate" title="New Task">
                     <span className="slds-icon_container slds-icon_container_circle slds-icon-action-new-task slds-m-right_medium">
                       <SvgIcon
@@ -139,7 +139,7 @@ export default (
                 </a>
               </li>
               <li className="slds-item">
-                <a role="menuitem" href="javascript:void(0)">
+                <a role="menuitem" href="#" onClick={e => e.preventDefault()}>
                   <p className="slds-truncate" title="New Contact">
                     <span className="slds-icon_container slds-icon_container_circle slds-icon-action-new-contact slds-m-right_medium">
                       <SvgIcon
@@ -154,7 +154,7 @@ export default (
                 </a>
               </li>
               <li className="slds-item">
-                <a role="menuitem" href="javascript:void(0)">
+                <a role="menuitem" href="#" onClick={e => e.preventDefault()}>
                   <p className="slds-truncate" title="New Opportunity">
                     <span className="slds-icon_container slds-icon_container_circle slds-icon-action-new-opportunity slds-m-right_medium">
                       <SvgIcon
@@ -169,7 +169,7 @@ export default (
                 </a>
               </li>
               <li className="slds-item">
-                <a role="menuitem" href="javascript:void(0)">
+                <a role="menuitem" href="#" onClick={e => e.preventDefault()}>
                   <p className="slds-truncate" title="Convert">
                     <span className="slds-icon_container slds-icon_container_circle slds-icon-action-lead-convert slds-m-right_medium">
                       <SvgIcon
@@ -184,7 +184,7 @@ export default (
                 </a>
               </li>
               <li className="slds-item">
-                <a role="menuitem" href="javascript:void(0)">
+                <a role="menuitem" href="#" onClick={e => e.preventDefault()}>
                   <p className="slds-truncate" title="Edit">
                     <span className="slds-icon_container slds-icon_container_circle slds-icon-action-edit slds-m-right_medium">
                       <SvgIcon
@@ -199,7 +199,7 @@ export default (
                 </a>
               </li>
               <li className="slds-item">
-                <a role="menuitem" href="javascript:void(0)">
+                <a role="menuitem" href="#" onClick={e => e.preventDefault()}>
                   <p className="slds-truncate" title="Post">
                     <span className="slds-icon_container slds-icon_container_circle slds-icon-action-share-post slds-m-right_medium">
                       <SvgIcon
@@ -214,7 +214,7 @@ export default (
                 </a>
               </li>
               <li className="slds-item">
-                <a role="menuitem" href="javascript:void(0)">
+                <a role="menuitem" href="#" onClick={e => e.preventDefault()}>
                   <p className="slds-truncate" title="New Task">
                     <span className="slds-icon_container slds-icon_container_circle slds-icon-action-new-task slds-m-right_medium">
                       <SvgIcon
@@ -229,7 +229,7 @@ export default (
                 </a>
               </li>
               <li className="slds-item">
-                <a role="menuitem" href="javascript:void(0)">
+                <a role="menuitem" href="#" onClick={e => e.preventDefault()}>
                   <p className="slds-truncate" title="New Contact">
                     <span className="slds-icon_container slds-icon_container_circle slds-icon-action-new-contact slds-m-right_medium">
                       <SvgIcon
@@ -244,7 +244,7 @@ export default (
                 </a>
               </li>
               <li className="slds-item">
-                <a role="menuitem" href="javascript:void(0)">
+                <a role="menuitem" href="#" onClick={e => e.preventDefault()}>
                   <p className="slds-truncate" title="New Opportunity">
                     <span className="slds-icon_container slds-icon_container_circle slds-icon-action-new-opportunity slds-m-right_medium">
                       <SvgIcon
@@ -259,7 +259,7 @@ export default (
                 </a>
               </li>
               <li className="slds-item">
-                <a role="menuitem" href="javascript:void(0)">
+                <a role="menuitem" href="#" onClick={e => e.preventDefault()}>
                   <p className="slds-truncate" title="Convert">
                     <span className="slds-icon_container slds-icon_container_circle slds-icon-action-lead-convert slds-m-right_medium">
                       <SvgIcon
@@ -274,7 +274,7 @@ export default (
                 </a>
               </li>
               <li className="slds-item">
-                <a role="menuitem" href="javascript:void(0)">
+                <a role="menuitem" href="#" onClick={e => e.preventDefault()}>
                   <p className="slds-truncate" title="Edit">
                     <span className="slds-icon_container slds-icon_container_circle slds-icon-action-edit slds-m-right_medium">
                       <SvgIcon

@@ -38,11 +38,12 @@ export const PackageThree = [
 
 export let VisualPickerMediaObject = props => (
   <a
-    href="javascript:void(0);"
+    href="#"
     className={classNames(
       'slds-box slds-box_link slds-box_x-small slds-media',
       props.className
     )}
+    onClick={e => e.preventDefault()}
   >
     <div className="slds-media__figure slds-media__figure_fixed-width slds-align_absolute-center slds-m-left_xx-small">
       <UtilityIcon className="slds-icon-text-default" symbol="knowledge_base" />

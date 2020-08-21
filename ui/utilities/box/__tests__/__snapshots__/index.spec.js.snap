@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders box utilities renders actionable box with interactions 1`] = `"<a href=\\"javascript:void(0);\\" class=\\"slds-box slds-box_link\\" style=\\"display: block;\\"><p>This is an actionable box with interactions.</p></a>"`;
+exports[`renders box utilities renders actionable box with interactions 1`] = `"<a href=\\"#\\" class=\\"slds-box slds-box_link\\" style=\\"display: block;\\"><p>This is an actionable box with interactions.</p></a>"`;
 
 exports[`renders box utilities renders box 1`] = `
 <div

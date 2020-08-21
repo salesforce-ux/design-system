@@ -46,8 +46,9 @@ const NavItem = props => (
   <li className="slds-builder-header__nav-item">
     {!props.dropdown ? (
       <a
-        href="javascript:void(0);"
+        href="#"
         className="slds-builder-header__item-action slds-media slds-media_center"
+        onClick={e => e.preventDefault()}
       >
         <span className="slds-media__figure">
           <UtilityIcon
@@ -127,8 +128,9 @@ Name.defaultProps = {
 const BackLink = props => (
   <div className="slds-builder-header__utilities-item">
     <a
-      href="javascript:void(0);"
+      href="#"
       className="slds-builder-header__item-action slds-media slds-media_center"
+      onClick={e => e.preventDefault()}
     >
       <div className="slds-media__figure">
         <UtilityIcon
@@ -150,8 +152,9 @@ const BackLink = props => (
 const Help = props => (
   <div className="slds-builder-header__utilities-item">
     <a
-      href="javascript:void(0);"
+      href="#"
       className="slds-builder-header__item-action slds-media slds-media_center"
+      onClick={e => e.preventDefault()}
     >
       <div className="slds-media__figure">
         <UtilityIcon

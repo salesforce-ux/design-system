@@ -30,7 +30,9 @@ class SetupAssistantStepSummary extends React.Component {
       ) : action.type === 'toggle' ? (
         <CheckboxToggle title={action.title} isBare checked={action.checked} />
       ) : (
-        <a href="javascript:void(0);">{action.title}</a>
+        <a href="#" onClick={e => e.preventDefault()}>
+          {action.title}
+        </a>
       ));
 
     const stepProgressRing =

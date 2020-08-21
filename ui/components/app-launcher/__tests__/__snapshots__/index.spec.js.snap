@@ -182,7 +182,8 @@ exports[`renders a default app launcher 1`] = `
                     className="slds-app-launcher__tile-body"
                   >
                     <a
-                      href="javascript:void(0);"
+                      href="#"
+                      onClick={[Function]}
                     >
                       Sales Cloud
                     </a>
@@ -265,7 +266,8 @@ exports[`renders a default app launcher 1`] = `
                     className="slds-app-launcher__tile-body"
                   >
                     <a
-                      href="javascript:void(0);"
+                      href="#"
+                      onClick={[Function]}
                     >
                       Marketing Cloud
                     </a>
@@ -348,7 +350,8 @@ exports[`renders a default app launcher 1`] = `
                     className="slds-app-launcher__tile-body"
                   >
                     <a
-                      href="javascript:void(0);"
+                      href="#"
+                      onClick={[Function]}
                     >
                       HR Concierge
                     </a>
@@ -425,7 +428,8 @@ exports[`renders a default app launcher 1`] = `
                     className="slds-app-launcher__tile-body"
                   >
                     <a
-                      href="javascript:void(0);"
+                      href="#"
+                      onClick={[Function]}
                     >
                       My Money
                     </a>
@@ -508,7 +512,8 @@ exports[`renders a default app launcher 1`] = `
                     className="slds-app-launcher__tile-body"
                   >
                     <a
-                      href="javascript:void(0);"
+                      href="#"
+                      onClick={[Function]}
                     >
                       Call Center
                     </a>
@@ -591,7 +596,8 @@ exports[`renders a default app launcher 1`] = `
                     className="slds-app-launcher__tile-body"
                   >
                     <a
-                      href="javascript:void(0);"
+                      href="#"
+                      onClick={[Function]}
                     >
                       Customer Support Community
                     </a>
@@ -668,7 +674,8 @@ exports[`renders a default app launcher 1`] = `
               >
                 <a
                   className="slds-truncate"
-                  href="javascript:void(0);"
+                  href="#"
+                  onClick={[Function]}
                   title="Accounts"
                 >
                   Accounts
@@ -679,7 +686,8 @@ exports[`renders a default app launcher 1`] = `
               >
                 <a
                   className="slds-truncate"
-                  href="javascript:void(0);"
+                  href="#"
+                  onClick={[Function]}
                   title="Announcements"
                 >
                   Announcements
@@ -690,7 +698,8 @@ exports[`renders a default app launcher 1`] = `
               >
                 <a
                   className="slds-truncate"
-                  href="javascript:void(0);"
+                  href="#"
+                  onClick={[Function]}
                   title="Approvals"
                 >
                   Approvals
@@ -701,7 +710,8 @@ exports[`renders a default app launcher 1`] = `
               >
                 <a
                   className="slds-truncate"
-                  href="javascript:void(0);"
+                  href="#"
+                  onClick={[Function]}
                   title="Campaigns"
                 >
                   Campaigns
@@ -712,7 +722,8 @@ exports[`renders a default app launcher 1`] = `
               >
                 <a
                   className="slds-truncate"
-                  href="javascript:void(0);"
+                  href="#"
+                  onClick={[Function]}
                   title="Cases"
                 >
                   Cases
@@ -723,7 +734,8 @@ exports[`renders a default app launcher 1`] = `
               >
                 <a
                   className="slds-truncate"
-                  href="javascript:void(0);"
+                  href="#"
+                  onClick={[Function]}
                   title="Coaching"
                 >
                   Coaching
@@ -734,7 +746,8 @@ exports[`renders a default app launcher 1`] = `
               >
                 <a
                   className="slds-truncate"
-                  href="javascript:void(0);"
+                  href="#"
+                  onClick={[Function]}
                   title="Contacts"
                 >
                   Contacts
@@ -934,7 +947,8 @@ exports[`renders a dropped app launcher 1`] = `
                     className="slds-app-launcher__tile-body"
                   >
                     <a
-                      href="javascript:void(0);"
+                      href="#"
+                      onClick={[Function]}
                     >
                       Marketing Cloud
                     </a>
@@ -1017,7 +1031,8 @@ exports[`renders a dropped app launcher 1`] = `
                     className="slds-app-launcher__tile-body"
                   >
                     <a
-                      href="javascript:void(0);"
+                      href="#"
+                      onClick={[Function]}
                     >
                       HR Concierge
                     </a>
@@ -1094,7 +1109,8 @@ exports[`renders a dropped app launcher 1`] = `
                     className="slds-app-launcher__tile-body"
                   >
                     <a
-                      href="javascript:void(0);"
+                      href="#"
+                      onClick={[Function]}
                     >
                       My Money
                     </a>
@@ -1177,7 +1193,8 @@ exports[`renders a dropped app launcher 1`] = `
                     className="slds-app-launcher__tile-body"
                   >
                     <a
-                      href="javascript:void(0);"
+                      href="#"
+                      onClick={[Function]}
                     >
                       Sales Cloud
                     </a>
@@ -1260,7 +1277,8 @@ exports[`renders a dropped app launcher 1`] = `
                     className="slds-app-launcher__tile-body"
                   >
                     <a
-                      href="javascript:void(0);"
+                      href="#"
+                      onClick={[Function]}
                     >
                       Call Center
                     </a>
@@ -1343,7 +1361,8 @@ exports[`renders a dropped app launcher 1`] = `
                     className="slds-app-launcher__tile-body"
                   >
                     <a
-                      href="javascript:void(0);"
+                      href="#"
+                      onClick={[Function]}
                     >
                       Customer Support Community
                     </a>
@@ -1420,7 +1439,8 @@ exports[`renders a dropped app launcher 1`] = `
               >
                 <a
                   className="slds-truncate"
-                  href="javascript:void(0);"
+                  href="#"
+                  onClick={[Function]}
                   title="Accounts"
                 >
                   Accounts
@@ -1431,7 +1451,8 @@ exports[`renders a dropped app launcher 1`] = `
               >
                 <a
                   className="slds-truncate"
-                  href="javascript:void(0);"
+                  href="#"
+                  onClick={[Function]}
                   title="Announcements"
                 >
                   Announcements
@@ -1442,7 +1463,8 @@ exports[`renders a dropped app launcher 1`] = `
               >
                 <a
                   className="slds-truncate"
-                  href="javascript:void(0);"
+                  href="#"
+                  onClick={[Function]}
                   title="Approvals"
                 >
                   Approvals
@@ -1453,7 +1475,8 @@ exports[`renders a dropped app launcher 1`] = `
               >
                 <a
                   className="slds-truncate"
-                  href="javascript:void(0);"
+                  href="#"
+                  onClick={[Function]}
                   title="Campaigns"
                 >
                   Campaigns
@@ -1464,7 +1487,8 @@ exports[`renders a dropped app launcher 1`] = `
               >
                 <a
                   className="slds-truncate"
-                  href="javascript:void(0);"
+                  href="#"
+                  onClick={[Function]}
                   title="Cases"
                 >
                   Cases
@@ -1475,7 +1499,8 @@ exports[`renders a dropped app launcher 1`] = `
               >
                 <a
                   className="slds-truncate"
-                  href="javascript:void(0);"
+                  href="#"
+                  onClick={[Function]}
                   title="Coaching"
                 >
                   Coaching
@@ -1486,7 +1511,8 @@ exports[`renders a dropped app launcher 1`] = `
               >
                 <a
                   className="slds-truncate"
-                  href="javascript:void(0);"
+                  href="#"
+                  onClick={[Function]}
                   title="Contacts"
                 >
                   Contacts
@@ -1686,7 +1712,8 @@ exports[`renders a grabbed app launcher 1`] = `
                     className="slds-app-launcher__tile-body"
                   >
                     <a
-                      href="javascript:void(0);"
+                      href="#"
+                      onClick={[Function]}
                     >
                       Sales Cloud
                     </a>
@@ -1769,7 +1796,8 @@ exports[`renders a grabbed app launcher 1`] = `
                     className="slds-app-launcher__tile-body"
                   >
                     <a
-                      href="javascript:void(0);"
+                      href="#"
+                      onClick={[Function]}
                     >
                       Marketing Cloud
                     </a>
@@ -1852,7 +1880,8 @@ exports[`renders a grabbed app launcher 1`] = `
                     className="slds-app-launcher__tile-body"
                   >
                     <a
-                      href="javascript:void(0);"
+                      href="#"
+                      onClick={[Function]}
                     >
                       HR Concierge
                     </a>
@@ -1929,7 +1958,8 @@ exports[`renders a grabbed app launcher 1`] = `
                     className="slds-app-launcher__tile-body"
                   >
                     <a
-                      href="javascript:void(0);"
+                      href="#"
+                      onClick={[Function]}
                     >
                       My Money
                     </a>
@@ -2012,7 +2042,8 @@ exports[`renders a grabbed app launcher 1`] = `
                     className="slds-app-launcher__tile-body"
                   >
                     <a
-                      href="javascript:void(0);"
+                      href="#"
+                      onClick={[Function]}
                     >
                       Call Center
                     </a>
@@ -2095,7 +2126,8 @@ exports[`renders a grabbed app launcher 1`] = `
                     className="slds-app-launcher__tile-body"
                   >
                     <a
-                      href="javascript:void(0);"
+                      href="#"
+                      onClick={[Function]}
                     >
                       Customer Support Community
                     </a>
@@ -2172,7 +2204,8 @@ exports[`renders a grabbed app launcher 1`] = `
               >
                 <a
                   className="slds-truncate"
-                  href="javascript:void(0);"
+                  href="#"
+                  onClick={[Function]}
                   title="Accounts"
                 >
                   Accounts
@@ -2183,7 +2216,8 @@ exports[`renders a grabbed app launcher 1`] = `
               >
                 <a
                   className="slds-truncate"
-                  href="javascript:void(0);"
+                  href="#"
+                  onClick={[Function]}
                   title="Announcements"
                 >
                   Announcements
@@ -2194,7 +2228,8 @@ exports[`renders a grabbed app launcher 1`] = `
               >
                 <a
                   className="slds-truncate"
-                  href="javascript:void(0);"
+                  href="#"
+                  onClick={[Function]}
                   title="Approvals"
                 >
                   Approvals
@@ -2205,7 +2240,8 @@ exports[`renders a grabbed app launcher 1`] = `
               >
                 <a
                   className="slds-truncate"
-                  href="javascript:void(0);"
+                  href="#"
+                  onClick={[Function]}
                   title="Campaigns"
                 >
                   Campaigns
@@ -2216,7 +2252,8 @@ exports[`renders a grabbed app launcher 1`] = `
               >
                 <a
                   className="slds-truncate"
-                  href="javascript:void(0);"
+                  href="#"
+                  onClick={[Function]}
                   title="Cases"
                 >
                   Cases
@@ -2227,7 +2264,8 @@ exports[`renders a grabbed app launcher 1`] = `
               >
                 <a
                   className="slds-truncate"
-                  href="javascript:void(0);"
+                  href="#"
+                  onClick={[Function]}
                   title="Coaching"
                 >
                   Coaching
@@ -2238,7 +2276,8 @@ exports[`renders a grabbed app launcher 1`] = `
               >
                 <a
                   className="slds-truncate"
-                  href="javascript:void(0);"
+                  href="#"
+                  onClick={[Function]}
                   title="Contacts"
                 >
                   Contacts
@@ -2438,7 +2477,8 @@ exports[`renders a moved app launcher 1`] = `
                     className="slds-app-launcher__tile-body"
                   >
                     <a
-                      href="javascript:void(0);"
+                      href="#"
+                      onClick={[Function]}
                     >
                       Marketing Cloud
                     </a>
@@ -2521,7 +2561,8 @@ exports[`renders a moved app launcher 1`] = `
                     className="slds-app-launcher__tile-body"
                   >
                     <a
-                      href="javascript:void(0);"
+                      href="#"
+                      onClick={[Function]}
                     >
                       HR Concierge
                     </a>
@@ -2598,7 +2639,8 @@ exports[`renders a moved app launcher 1`] = `
                     className="slds-app-launcher__tile-body"
                   >
                     <a
-                      href="javascript:void(0);"
+                      href="#"
+                      onClick={[Function]}
                     >
                       Sales Cloud
                     </a>
@@ -2681,7 +2723,8 @@ exports[`renders a moved app launcher 1`] = `
                     className="slds-app-launcher__tile-body"
                   >
                     <a
-                      href="javascript:void(0);"
+                      href="#"
+                      onClick={[Function]}
                     >
                       My Money
                     </a>
@@ -2764,7 +2807,8 @@ exports[`renders a moved app launcher 1`] = `
                     className="slds-app-launcher__tile-body"
                   >
                     <a
-                      href="javascript:void(0);"
+                      href="#"
+                      onClick={[Function]}
                     >
                       Call Center
                     </a>
@@ -2847,7 +2891,8 @@ exports[`renders a moved app launcher 1`] = `
                     className="slds-app-launcher__tile-body"
                   >
                     <a
-                      href="javascript:void(0);"
+                      href="#"
+                      onClick={[Function]}
                     >
                       Customer Support Community
                     </a>
@@ -2924,7 +2969,8 @@ exports[`renders a moved app launcher 1`] = `
               >
                 <a
                   className="slds-truncate"
-                  href="javascript:void(0);"
+                  href="#"
+                  onClick={[Function]}
                   title="Accounts"
                 >
                   Accounts
@@ -2935,7 +2981,8 @@ exports[`renders a moved app launcher 1`] = `
               >
                 <a
                   className="slds-truncate"
-                  href="javascript:void(0);"
+                  href="#"
+                  onClick={[Function]}
                   title="Announcements"
                 >
                   Announcements
@@ -2946,7 +2993,8 @@ exports[`renders a moved app launcher 1`] = `
               >
                 <a
                   className="slds-truncate"
-                  href="javascript:void(0);"
+                  href="#"
+                  onClick={[Function]}
                   title="Approvals"
                 >
                   Approvals
@@ -2957,7 +3005,8 @@ exports[`renders a moved app launcher 1`] = `
               >
                 <a
                   className="slds-truncate"
-                  href="javascript:void(0);"
+                  href="#"
+                  onClick={[Function]}
                   title="Campaigns"
                 >
                   Campaigns
@@ -2968,7 +3017,8 @@ exports[`renders a moved app launcher 1`] = `
               >
                 <a
                   className="slds-truncate"
-                  href="javascript:void(0);"
+                  href="#"
+                  onClick={[Function]}
                   title="Cases"
                 >
                   Cases
@@ -2979,7 +3029,8 @@ exports[`renders a moved app launcher 1`] = `
               >
                 <a
                   className="slds-truncate"
-                  href="javascript:void(0);"
+                  href="#"
+                  onClick={[Function]}
                   title="Coaching"
                 >
                   Coaching
@@ -2990,7 +3041,8 @@ exports[`renders a moved app launcher 1`] = `
               >
                 <a
                   className="slds-truncate"
-                  href="javascript:void(0);"
+                  href="#"
+                  onClick={[Function]}
                   title="Contacts"
                 >
                   Contacts
@@ -3198,7 +3250,8 @@ exports[`renders a search app launcher 1`] = `
                     className="slds-app-launcher__tile-body"
                   >
                     <a
-                      href="javascript:void(0);"
+                      href="#"
+                      onClick={[Function]}
                     >
                       <span>
                         <mark>
@@ -3280,7 +3333,8 @@ exports[`renders a search app launcher 1`] = `
               >
                 <a
                   className="slds-truncate"
-                  href="javascript:void(0);"
+                  href="#"
+                  onClick={[Function]}
                   title={
                     <span>
                       <mark>
@@ -3303,7 +3357,8 @@ exports[`renders a search app launcher 1`] = `
               >
                 <a
                   className="slds-truncate"
-                  href="javascript:void(0);"
+                  href="#"
+                  onClick={[Function]}
                   title={
                     <span>
                       <mark>
@@ -3381,7 +3436,8 @@ exports[`renders an app tile with a tooltip 1`] = `
     className="slds-app-launcher__tile-body"
   >
     <a
-      href="javascript:void(0);"
+      href="#"
+      onClick={[Function]}
     >
       Sales Cloud
     </a>

@@ -99,11 +99,7 @@ const RowData = props => (
       <ReadOnlyCell cellText="$25k" />
     </Td>
     <Td data-label="Contact" type="base">
-      <ReadOnlyCell
-        actionableMode
-        cellLink="javascript:void(0);"
-        cellText="jrogers@cloudhub.com"
-      />
+      <ReadOnlyCell actionableMode cellLink cellText="jrogers@cloudhub.com" />
     </Td>
     <Td data-label="Actions" isShrunken type="base">
       <ButtonIcon

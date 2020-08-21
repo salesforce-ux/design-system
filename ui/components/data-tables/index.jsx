@@ -44,7 +44,7 @@ export const HeadRowData = props => (
 export const RowData = props => (
   <TBodyTr>
     <RowTh data-label="Opportunity Name">
-      <ReadOnlyCell cellText={props.title} cellLink="javascript:void(0);" />
+      <ReadOnlyCell cellText={props.title} cellLink />
     </RowTh>
     <Td data-label="Account Name" type="base">
       <ReadOnlyCell cellText="Cloudhub" />
@@ -62,10 +62,7 @@ export const RowData = props => (
       <ReadOnlyCell cellText="$25k" />
     </Td>
     <Td data-label="Contact" type="base">
-      <ReadOnlyCell
-        cellLink="javascript:void(0);"
-        cellText="jrogers@cloudhub.com"
-      />
+      <ReadOnlyCell cellLink cellText="jrogers@cloudhub.com" />
     </Td>
   </TBodyTr>
 );
@@ -141,7 +138,8 @@ Table.propTypes = {
   isStriped: PropTypes.bool,
   selectionType: PropTypes.oneOf(['multiple', 'single']),
   style: PropTypes.object,
-  type: PropTypes.oneOf(['advanced', 'base', 'treegrid']).isRequired
+  type: PropTypes.oneOf(['advanced', 'base', 'treegrid']).isRequired,
+  hasFixedHeader: PropTypes.bool
 };
 
 export const THead = props => {
@@ -215,7 +213,8 @@ ColumnTh.propTypes = {
   isRightAligned: PropTypes.bool,
   isSortable: PropTypes.bool,
   sortDirection: PropTypes.oneOf(['ascending', 'descending', 'none']),
-  style: PropTypes.object // used for setting column width when columns are resizable
+  style: PropTypes.object, // used for setting column width when columns are resizable,
+  hasWrap: PropTypes.bool
 };
 
 /**
@@ -237,7 +236,8 @@ ColumnHeader.displayName = 'ColumnHeader';
 ColumnHeader.propTypes = {
   columnName: PropTypes.string.isRequired,
   id: PropTypes.string,
-  isAssistiveText: PropTypes.bool
+  isAssistiveText: PropTypes.bool,
+  isFixedCell: PropTypes.bool
 };
 ColumnHeader.defaultProps = {
   columnName: 'Column Name'
@@ -309,9 +309,10 @@ export let InteractiveColumnHeader = props => {
       {props.isSortable ? (
         <a
           className="slds-th__action slds-text-link_reset"
-          href="javascript:void(0);"
+          href="#"
           role="button"
           tabIndex={tabIndex}
+          onClick={e => e.preventDefault()}
         >
           <span className="slds-assistive-text">Sort by: </span>
           {renderHeaderText()}
@@ -587,7 +588,8 @@ Td.propTypes = {
   isShrunken: PropTypes.bool,
   style: PropTypes.object,
   tabIndex: PropTypes.oneOf(['0', '-1']),
-  type: PropTypes.oneOf(['advanced', 'base', 'treegrid']).isRequired
+  type: PropTypes.oneOf(['advanced', 'base', 'treegrid']).isRequired,
+  hasWrap: PropTypes.bool
 };
 
 /**
@@ -620,7 +622,9 @@ RowTh.propTypes = {
   hasFocus: PropTypes.bool,
   isEditable: PropTypes.bool,
   tabIndex: PropTypes.oneOf(['0', '-1']),
-  type: PropTypes.oneOf(['base', 'advanced', 'treegrid'])
+  type: PropTypes.oneOf(['base', 'advanced', 'treegrid']),
+  isItemHovered: PropTypes.bool,
+  hasWrap: PropTypes.bool
 };
 
 /**
@@ -722,7 +726,13 @@ export const ReadOnlyCell = ({
     title={cellText}
   >
     {cellLink ? (
-      <a href={cellLink} tabIndex={actionableMode ? '0' : '-1'}>
+      <a
+        href="#"
+        tabIndex={actionableMode ? '0' : '-1'}
+        onClick={e => {
+          e.preventDefault();
+        }}
+      >
         {cellText}
       </a>
     ) : (
@@ -733,8 +743,9 @@ export const ReadOnlyCell = ({
 ReadOnlyCell.displayName = 'ReadOnlyCell';
 ReadOnlyCell.propTypes = {
   actionableMode: IsDependentOn('cellLink', PropTypes.bool),
-  cellLink: PropTypes.string,
-  cellText: PropTypes.string.isRequired
+  cellLink: PropTypes.bool,
+  cellText: PropTypes.string.isRequired,
+  hasWrap: PropTypes.bool
 };
 
 /**
@@ -746,10 +757,11 @@ export const EditableCell = props => (
       {props.cellLink ? (
         <a
           className="slds-truncate"
-          href={props.cellLink}
+          href="#"
           id={`link-0${props.index}`}
           tabIndex={props.actionableMode ? '0' : '-1'}
           title={props.cellText}
+          onClick={e => e.preventDefault()}
         >
           {props.cellText}
         </a>
@@ -780,7 +792,7 @@ EditableCell.displayName = 'EditableCell';
 EditableCell.propTypes = {
   actionableMode: PropTypes.bool,
   buttonText: PropTypes.string.isRequired,
-  cellLink: PropTypes.string,
+  cellLink: PropTypes.bool,
   cellText: PropTypes.string.isRequired,
   hasError: IsDependentOn('showEdit', PropTypes.bool),
   index: PropTypes.number,

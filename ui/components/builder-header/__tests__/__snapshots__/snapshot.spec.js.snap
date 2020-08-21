@@ -48,7 +48,8 @@ exports[`render builder header render base builder header 1`] = `
         >
           <a
             className="slds-builder-header__item-action slds-media slds-media_center"
-            href="javascript:void(0);"
+            href="#"
+            onClick={[Function]}
           >
             <span
               className="slds-media__figure"
@@ -153,7 +154,8 @@ exports[`render builder header render base builder header 1`] = `
       >
         <a
           className="slds-builder-header__item-action slds-media slds-media_center"
-          href="javascript:void(0);"
+          href="#"
+          onClick={[Function]}
         >
           <div
             className="slds-media__figure"
@@ -184,7 +186,8 @@ exports[`render builder header render base builder header 1`] = `
       >
         <a
           className="slds-builder-header__item-action slds-media slds-media_center"
-          href="javascript:void(0);"
+          href="#"
+          onClick={[Function]}
         >
           <div
             className="slds-media__figure"
@@ -263,7 +266,8 @@ exports[`render builder header render base builder header with toolbar 1`] = `
         >
           <a
             className="slds-builder-header__item-action slds-media slds-media_center"
-            href="javascript:void(0);"
+            href="#"
+            onClick={[Function]}
           >
             <span
               className="slds-media__figure"
@@ -368,7 +372,8 @@ exports[`render builder header render base builder header with toolbar 1`] = `
       >
         <a
           className="slds-builder-header__item-action slds-media slds-media_center"
-          href="javascript:void(0);"
+          href="#"
+          onClick={[Function]}
         >
           <div
             className="slds-media__figure"
@@ -399,7 +404,8 @@ exports[`render builder header render base builder header with toolbar 1`] = `
       >
         <a
           className="slds-builder-header__item-action slds-media slds-media_center"
-          href="javascript:void(0);"
+          href="#"
+          onClick={[Function]}
         >
           <div
             className="slds-media__figure"
@@ -630,7 +636,8 @@ exports[`render builder header render base builder header with truncated name 1`
         >
           <a
             className="slds-builder-header__item-action slds-media slds-media_center"
-            href="javascript:void(0);"
+            href="#"
+            onClick={[Function]}
           >
             <span
               className="slds-media__figure"
@@ -735,7 +742,8 @@ exports[`render builder header render base builder header with truncated name 1`
       >
         <a
           className="slds-builder-header__item-action slds-media slds-media_center"
-          href="javascript:void(0);"
+          href="#"
+          onClick={[Function]}
         >
           <div
             className="slds-media__figure"
@@ -766,7 +774,8 @@ exports[`render builder header render base builder header with truncated name 1`
       >
         <a
           className="slds-builder-header__item-action slds-media slds-media_center"
-          href="javascript:void(0);"
+          href="#"
+          onClick={[Function]}
         >
           <div
             className="slds-media__figure"

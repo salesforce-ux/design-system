@@ -8,7 +8,11 @@ export default (
     <div className="slds-wizard" role="navigation">
       <ol className="slds-wizard__list">
         <li className="slds-wizard__item slds-is-active">
-          <a href="javascript:void(0);" className="slds-wizard__link">
+          <a
+            href="#"
+            onClick={e => e.preventDefault()}
+            className="slds-wizard__link"
+          >
             <span className="slds-wizard__marker" />
             <span
               className="slds-wizard__label slds-truncate"
@@ -19,7 +23,11 @@ export default (
           </a>
         </li>
         <li className="slds-wizard__item slds-is-active">
-          <a href="javascript:void(0);" className="slds-wizard__link">
+          <a
+            href="#"
+            onClick={e => e.preventDefault()}
+            className="slds-wizard__link"
+          >
             <span className="slds-wizard__marker" />
             <span className="slds-wizard__label slds-truncate" title="Actions">
               Actions
@@ -27,7 +35,11 @@ export default (
           </a>
         </li>
         <li className="slds-wizard__item slds-is-active">
-          <a href="javascript:void(0);" className="slds-wizard__link">
+          <a
+            href="#"
+            onClick={e => e.preventDefault()}
+            className="slds-wizard__link"
+          >
             <span className="slds-wizard__marker" />
             <span
               className="slds-wizard__label slds-truncate"
@@ -38,7 +50,11 @@ export default (
           </a>
         </li>
         <li className="slds-wizard__item">
-          <a href="javascript:void(0);" className="slds-wizard__link">
+          <a
+            href="#"
+            onClick={e => e.preventDefault()}
+            className="slds-wizard__link"
+          >
             <span className="slds-wizard__marker" />
             <span className="slds-wizard__label slds-truncate" title="Review">
               Review
@@ -46,7 +62,11 @@ export default (
           </a>
         </li>
         <li className="slds-wizard__item">
-          <a href="javascript:void(0);" className="slds-wizard__link">
+          <a
+            href="#"
+            onClick={e => e.preventDefault()}
+            className="slds-wizard__link"
+          >
             <span className="slds-wizard__marker" />
             <span className="slds-wizard__label slds-truncate" title="Invite">
               Invite

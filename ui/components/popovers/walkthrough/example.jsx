@@ -253,7 +253,9 @@ export let examples = [
               Title
             </h2>
             <p>Text that describes the action</p>
-            <a href="javascript:void(0);">Take Action</a>
+            <a href="#" onClick={e => e.preventDefault()}>
+              Take Action
+            </a>
             <p className="slds-m-top_medium slds-text-title">Step 3 of 4</p>
           </div>
         </div>

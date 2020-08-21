@@ -197,8 +197,9 @@ exports[`Lookup - Advanced Modal renders a lookup with modal 1`] = `
                   scope="row"
                 >
                   <a
-                    href="javascript:void(0);"
+                    href="#"
                     id="s01"
+                    onClick={[Function]}
                     role="option"
                   >
                     <div
@@ -247,8 +248,9 @@ exports[`Lookup - Advanced Modal renders a lookup with modal 1`] = `
                   scope="row"
                 >
                   <a
-                    href="javascript:void(0);"
+                    href="#"
                     id="s02"
+                    onClick={[Function]}
                     role="option"
                   >
                     <div
@@ -297,8 +299,9 @@ exports[`Lookup - Advanced Modal renders a lookup with modal 1`] = `
                   scope="row"
                 >
                   <a
-                    href="javascript:void(0);"
+                    href="#"
                     id="s03"
+                    onClick={[Function]}
                     role="option"
                   >
                     <div
@@ -347,8 +350,9 @@ exports[`Lookup - Advanced Modal renders a lookup with modal 1`] = `
                   scope="row"
                 >
                   <a
-                    href="javascript:void(0);"
+                    href="#"
                     id="s04"
+                    onClick={[Function]}
                     role="option"
                   >
                     <div
@@ -397,8 +401,9 @@ exports[`Lookup - Advanced Modal renders a lookup with modal 1`] = `
                   scope="row"
                 >
                   <a
-                    href="javascript:void(0);"
+                    href="#"
                     id="s05"
+                    onClick={[Function]}
                     role="option"
                   >
                     <div

@@ -43,21 +43,24 @@ export const RecordHomeVerticalDeprecated = () => (
                 className="slds-button__icon_stateful slds-button__icon_left"
                 sprite="utility"
                 symbol="add"
-              />Follow
+              />
+              Follow
             </span>
             <span className="slds-text-selected">
               <SvgIcon
                 className="slds-button__icon_stateful slds-button__icon_left"
                 sprite="utility"
                 symbol="check"
-              />Following
+              />
+              Following
             </span>
             <span className="slds-text-selected-focus">
               <SvgIcon
                 className="slds-button__icon_stateful slds-button__icon_left"
                 sprite="utility"
                 symbol="close"
-              />Unfollow
+              />
+              Unfollow
             </span>
           </button>
           <div
@@ -93,7 +96,9 @@ export const RecordHomeVerticalDeprecated = () => (
         <li className="slds-item">
           <div className="slds-text-title slds-m-bottom_xx-small">Field 2</div>
           <div className="slds-text-body_regular" title="Hyperlink">
-            <a href="javascript:void(0);">Hyperlink</a>
+            <a href="#" onClick={e => e.preventDefault()}>
+              Hyperlink
+            </a>
           </div>
         </li>
         <li className="slds-item">

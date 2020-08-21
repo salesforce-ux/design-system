@@ -25,19 +25,23 @@ export let List = props => (
       title="Lei Chan"
       className={'slds-truncate_container_' + props.width}
     >
-      <a href="javascript:void(0);">Lei Chan</a>
+      <a href="#" onClick={e => e.preventDefault()}>
+        Lei Chan
+      </a>
     </ListItem>
     <ListItem
       title="Lei Chan with Long Name"
       className={'slds-truncate_container_' + props.width}
     >
-      <a href="javascript:void(0);">Lei Chan with Long Name</a>
+      <a href="#" onClick={e => e.preventDefault()}>
+        Lei Chan with Long Name
+      </a>
     </ListItem>
     <ListItem
       title="Lei Chan with Long Name that might go on for quite some distance futher than you might expect"
       className={'slds-truncate_container_' + props.width}
     >
-      <a href="javascript:void(0);">
+      <a href="#" onClick={e => e.preventDefault()}>
         Lei Chan with Long Name that might go on for quite some distance futher
         than you might expect
       </a>

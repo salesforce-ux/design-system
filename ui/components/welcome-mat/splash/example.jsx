@@ -29,7 +29,7 @@ export default defaultComponent;
 export let examples = [
   {
     id: 'default',
-    label: 'Default',
+    label: 'Default (Splash)',
     demoStyles: exampleDemoStyles,
     element: defaultComponent
   }

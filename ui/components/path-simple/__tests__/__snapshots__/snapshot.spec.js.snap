@@ -21,8 +21,9 @@ exports[`SimplePath renders the legacy Simple Path 1`] = `
           aria-live="assertive"
           aria-selected="false"
           className="slds-tabs--path__link"
-          href="javascript:void(0);"
+          href="#"
           id="tabs-path-96"
+          onClick={[Function]}
           role="tab"
           tabIndex="-1"
         >
@@ -59,8 +60,9 @@ exports[`SimplePath renders the legacy Simple Path 1`] = `
           aria-live="assertive"
           aria-selected="false"
           className="slds-tabs--path__link"
-          href="javascript:void(0);"
+          href="#"
           id="tabs-path-97"
+          onClick={[Function]}
           role="tab"
           tabIndex="-1"
         >
@@ -97,8 +99,9 @@ exports[`SimplePath renders the legacy Simple Path 1`] = `
           aria-live="assertive"
           aria-selected="false"
           className="slds-tabs--path__link"
-          href="javascript:void(0);"
+          href="#"
           id="tabs-path-98"
+          onClick={[Function]}
           role="tab"
           tabIndex="-1"
         >
@@ -130,8 +133,9 @@ exports[`SimplePath renders the legacy Simple Path 1`] = `
           aria-live="assertive"
           aria-selected="false"
           className="slds-tabs--path__link"
-          href="javascript:void(0);"
+          href="#"
           id="tabs-path-99"
+          onClick={[Function]}
           role="tab"
           tabIndex="-1"
         >
@@ -163,8 +167,9 @@ exports[`SimplePath renders the legacy Simple Path 1`] = `
           aria-live="assertive"
           aria-selected="false"
           className="slds-tabs--path__link"
-          href="javascript:void(0);"
+          href="#"
           id="tabs-path-100"
+          onClick={[Function]}
           role="tab"
           tabIndex="-1"
         >
@@ -244,8 +249,9 @@ exports[`SimplePath renders the legacy Simple Path in Lost state 1`] = `
           aria-live="assertive"
           aria-selected="false"
           className="slds-tabs--path__link"
-          href="javascript:void(0);"
+          href="#"
           id="tabs-path-116"
+          onClick={[Function]}
           role="tab"
           tabIndex="-1"
         >
@@ -282,8 +288,9 @@ exports[`SimplePath renders the legacy Simple Path in Lost state 1`] = `
           aria-live="assertive"
           aria-selected="false"
           className="slds-tabs--path__link"
-          href="javascript:void(0);"
+          href="#"
           id="tabs-path-117"
+          onClick={[Function]}
           role="tab"
           tabIndex="-1"
         >
@@ -320,8 +327,9 @@ exports[`SimplePath renders the legacy Simple Path in Lost state 1`] = `
           aria-live="assertive"
           aria-selected="false"
           className="slds-tabs--path__link"
-          href="javascript:void(0);"
+          href="#"
           id="tabs-path-118"
+          onClick={[Function]}
           role="tab"
           tabIndex="-1"
         >
@@ -353,8 +361,9 @@ exports[`SimplePath renders the legacy Simple Path in Lost state 1`] = `
           aria-live="assertive"
           aria-selected="false"
           className="slds-tabs--path__link"
-          href="javascript:void(0);"
+          href="#"
           id="tabs-path-119"
+          onClick={[Function]}
           role="tab"
           tabIndex="-1"
         >
@@ -386,8 +395,9 @@ exports[`SimplePath renders the legacy Simple Path in Lost state 1`] = `
           aria-live="assertive"
           aria-selected="false"
           className="slds-tabs--path__link"
-          href="javascript:void(0);"
+          href="#"
           id="tabs-path-120"
+          onClick={[Function]}
           role="tab"
           tabIndex="-1"
         >
@@ -459,8 +469,9 @@ exports[`SimplePath renders the legacy Simple Path in Won state 1`] = `
           aria-live="assertive"
           aria-selected="false"
           className="slds-tabs--path__link"
-          href="javascript:void(0);"
+          href="#"
           id="tabs-path-121"
+          onClick={[Function]}
           role="tab"
           tabIndex="-1"
         >
@@ -497,8 +508,9 @@ exports[`SimplePath renders the legacy Simple Path in Won state 1`] = `
           aria-live="assertive"
           aria-selected="false"
           className="slds-tabs--path__link"
-          href="javascript:void(0);"
+          href="#"
           id="tabs-path-122"
+          onClick={[Function]}
           role="tab"
           tabIndex="-1"
         >
@@ -535,8 +547,9 @@ exports[`SimplePath renders the legacy Simple Path in Won state 1`] = `
           aria-live="assertive"
           aria-selected="false"
           className="slds-tabs--path__link"
-          href="javascript:void(0);"
+          href="#"
           id="tabs-path-123"
+          onClick={[Function]}
           role="tab"
           tabIndex="-1"
         >
@@ -568,8 +581,9 @@ exports[`SimplePath renders the legacy Simple Path in Won state 1`] = `
           aria-live="assertive"
           aria-selected="false"
           className="slds-tabs--path__link"
-          href="javascript:void(0);"
+          href="#"
           id="tabs-path-124"
+          onClick={[Function]}
           role="tab"
           tabIndex="-1"
         >
@@ -601,8 +615,9 @@ exports[`SimplePath renders the legacy Simple Path in Won state 1`] = `
           aria-live="assertive"
           aria-selected="false"
           className="slds-tabs--path__link"
-          href="javascript:void(0);"
+          href="#"
           id="tabs-path-125"
+          onClick={[Function]}
           role="tab"
           tabIndex="-1"
         >
@@ -677,8 +692,9 @@ exports[`SimplePath renders the legacy Simple Path in a different stage 1`] = `
             aria-live="assertive"
             aria-selected="false"
             className="slds-tabs--path__link"
-            href="javascript:void(0);"
+            href="#"
             id="tabs-path-111"
+            onClick={[Function]}
             role="tab"
             tabIndex="-1"
           >
@@ -715,8 +731,9 @@ exports[`SimplePath renders the legacy Simple Path in a different stage 1`] = `
             aria-live="assertive"
             aria-selected="false"
             className="slds-tabs--path__link"
-            href="javascript:void(0);"
+            href="#"
             id="tabs-path-112"
+            onClick={[Function]}
             role="tab"
             tabIndex="-1"
           >
@@ -753,8 +770,9 @@ exports[`SimplePath renders the legacy Simple Path in a different stage 1`] = `
             aria-live="assertive"
             aria-selected="false"
             className="slds-tabs--path__link"
-            href="javascript:void(0);"
+            href="#"
             id="tabs-path-113"
+            onClick={[Function]}
             role="tab"
             tabIndex="-1"
           >
@@ -786,8 +804,9 @@ exports[`SimplePath renders the legacy Simple Path in a different stage 1`] = `
             aria-live="assertive"
             aria-selected="false"
             className="slds-tabs--path__link"
-            href="javascript:void(0);"
+            href="#"
             id="tabs-path-114"
+            onClick={[Function]}
             role="tab"
             tabIndex="-1"
           >
@@ -819,8 +838,9 @@ exports[`SimplePath renders the legacy Simple Path in a different stage 1`] = `
             aria-live="assertive"
             aria-selected="false"
             className="slds-tabs--path__link"
-            href="javascript:void(0);"
+            href="#"
             id="tabs-path-115"
+            onClick={[Function]}
             role="tab"
             tabIndex="-1"
           >
@@ -895,7 +915,8 @@ exports[`SimplePath renders the legacy Simple Path in a different stage 1`] = `
             className="slds-text-body--small"
           >
             <a
-              href="javascript:void(0);"
+              href="#"
+              onClick={[Function]}
             >
               Edit
             </a>
@@ -933,7 +954,8 @@ exports[`SimplePath renders the legacy Simple Path in a different stage 1`] = `
             className="slds-coach__value slds-dl--horizontal__detail"
           >
             <a
-              href="javascript:void(0);"
+              href="#"
+              onClick={[Function]}
             >
               Jack Arthur
             </a>
@@ -955,7 +977,8 @@ exports[`SimplePath renders the legacy Simple Path in a different stage 1`] = `
             Regularly cross-sell related products using
              
             <a
-              href="javascript:void(0);"
+              href="#"
+              onClick={[Function]}
             >
               cross-sell tactics and principles
             </a>
@@ -965,7 +988,8 @@ exports[`SimplePath renders the legacy Simple Path in a different stage 1`] = `
             Prepare demo deck using the
              
             <a
-              href="javascript:void(0);"
+              href="#"
+              onClick={[Function]}
             >
               latest template
             </a>
@@ -975,7 +999,8 @@ exports[`SimplePath renders the legacy Simple Path in a different stage 1`] = `
             Look up
              
             <a
-              href="javascript:void(0);"
+              href="#"
+              onClick={[Function]}
             >
               needs analysis principles
             </a>
@@ -1009,7 +1034,8 @@ exports[`SimplePath renders the legacy Simple Path in a different stage 1`] = `
             className="slds-text-body--small"
           >
             <a
-              href="javascript:void(0);"
+              href="#"
+              onClick={[Function]}
             >
               Edit
             </a>
@@ -1047,7 +1073,8 @@ exports[`SimplePath renders the legacy Simple Path in a different stage 1`] = `
             className="slds-coach__value slds-dl--horizontal__detail"
           >
             <a
-              href="javascript:void(0);"
+              href="#"
+              onClick={[Function]}
             >
               -
             </a>
@@ -1069,7 +1096,8 @@ exports[`SimplePath renders the legacy Simple Path in a different stage 1`] = `
             Check out the latest Negotiation and Review tactics on our
              
             <a
-              href="javascript:void(0);"
+              href="#"
+              onClick={[Function]}
             >
               online portal here
             </a>
@@ -1137,8 +1165,9 @@ exports[`SimplePath renders the legacy Simple Path with Coaching 1`] = `
           aria-live="assertive"
           aria-selected="false"
           className="slds-tabs--path__link"
-          href="javascript:void(0);"
+          href="#"
           id="tabs-path-101"
+          onClick={[Function]}
           role="tab"
           tabIndex="-1"
         >
@@ -1175,8 +1204,9 @@ exports[`SimplePath renders the legacy Simple Path with Coaching 1`] = `
           aria-live="assertive"
           aria-selected="false"
           className="slds-tabs--path__link"
-          href="javascript:void(0);"
+          href="#"
           id="tabs-path-102"
+          onClick={[Function]}
           role="tab"
           tabIndex="-1"
         >
@@ -1213,8 +1243,9 @@ exports[`SimplePath renders the legacy Simple Path with Coaching 1`] = `
           aria-live="assertive"
           aria-selected="false"
           className="slds-tabs--path__link"
-          href="javascript:void(0);"
+          href="#"
           id="tabs-path-103"
+          onClick={[Function]}
           role="tab"
           tabIndex="-1"
         >
@@ -1246,8 +1277,9 @@ exports[`SimplePath renders the legacy Simple Path with Coaching 1`] = `
           aria-live="assertive"
           aria-selected="false"
           className="slds-tabs--path__link"
-          href="javascript:void(0);"
+          href="#"
           id="tabs-path-104"
+          onClick={[Function]}
           role="tab"
           tabIndex="-1"
         >
@@ -1279,8 +1311,9 @@ exports[`SimplePath renders the legacy Simple Path with Coaching 1`] = `
           aria-live="assertive"
           aria-selected="false"
           className="slds-tabs--path__link"
-          href="javascript:void(0);"
+          href="#"
           id="tabs-path-105"
+          onClick={[Function]}
           role="tab"
           tabIndex="-1"
         >
@@ -1363,8 +1396,9 @@ exports[`SimplePath renders the legacy Simple Path with Visible Coaching 1`] = `
             aria-live="assertive"
             aria-selected="false"
             className="slds-tabs--path__link"
-            href="javascript:void(0);"
+            href="#"
             id="tabs-path-106"
+            onClick={[Function]}
             role="tab"
             tabIndex="-1"
           >
@@ -1401,8 +1435,9 @@ exports[`SimplePath renders the legacy Simple Path with Visible Coaching 1`] = `
             aria-live="assertive"
             aria-selected="false"
             className="slds-tabs--path__link"
-            href="javascript:void(0);"
+            href="#"
             id="tabs-path-107"
+            onClick={[Function]}
             role="tab"
             tabIndex="-1"
           >
@@ -1439,8 +1474,9 @@ exports[`SimplePath renders the legacy Simple Path with Visible Coaching 1`] = `
             aria-live="assertive"
             aria-selected="false"
             className="slds-tabs--path__link"
-            href="javascript:void(0);"
+            href="#"
             id="tabs-path-108"
+            onClick={[Function]}
             role="tab"
             tabIndex="-1"
           >
@@ -1472,8 +1508,9 @@ exports[`SimplePath renders the legacy Simple Path with Visible Coaching 1`] = `
             aria-live="assertive"
             aria-selected="false"
             className="slds-tabs--path__link"
-            href="javascript:void(0);"
+            href="#"
             id="tabs-path-109"
+            onClick={[Function]}
             role="tab"
             tabIndex="-1"
           >
@@ -1505,8 +1542,9 @@ exports[`SimplePath renders the legacy Simple Path with Visible Coaching 1`] = `
             aria-live="assertive"
             aria-selected="false"
             className="slds-tabs--path__link"
-            href="javascript:void(0);"
+            href="#"
             id="tabs-path-110"
+            onClick={[Function]}
             role="tab"
             tabIndex="-1"
           >
@@ -1589,7 +1627,8 @@ exports[`SimplePath renders the legacy Simple Path with Visible Coaching 1`] = `
             className="slds-text-body--small"
           >
             <a
-              href="javascript:void(0);"
+              href="#"
+              onClick={[Function]}
             >
               Edit
             </a>
@@ -1627,7 +1666,8 @@ exports[`SimplePath renders the legacy Simple Path with Visible Coaching 1`] = `
             className="slds-coach__value slds-dl--horizontal__detail"
           >
             <a
-              href="javascript:void(0);"
+              href="#"
+              onClick={[Function]}
             >
               Jack Arthur
             </a>
@@ -1649,7 +1689,8 @@ exports[`SimplePath renders the legacy Simple Path with Visible Coaching 1`] = `
             Regularly cross-sell related products using
              
             <a
-              href="javascript:void(0);"
+              href="#"
+              onClick={[Function]}
             >
               cross-sell tactics and principles
             </a>
@@ -1659,7 +1700,8 @@ exports[`SimplePath renders the legacy Simple Path with Visible Coaching 1`] = `
             Prepare demo deck using the
              
             <a
-              href="javascript:void(0);"
+              href="#"
+              onClick={[Function]}
             >
               latest template
             </a>
@@ -1669,7 +1711,8 @@ exports[`SimplePath renders the legacy Simple Path with Visible Coaching 1`] = `
             Look up
              
             <a
-              href="javascript:void(0);"
+              href="#"
+              onClick={[Function]}
             >
               needs analysis principles
             </a>
@@ -1703,7 +1746,8 @@ exports[`SimplePath renders the legacy Simple Path with Visible Coaching 1`] = `
             className="slds-text-body--small"
           >
             <a
-              href="javascript:void(0);"
+              href="#"
+              onClick={[Function]}
             >
               Edit
             </a>
@@ -1741,7 +1785,8 @@ exports[`SimplePath renders the legacy Simple Path with Visible Coaching 1`] = `
             className="slds-coach__value slds-dl--horizontal__detail"
           >
             <a
-              href="javascript:void(0);"
+              href="#"
+              onClick={[Function]}
             >
               -
             </a>
@@ -1763,7 +1808,8 @@ exports[`SimplePath renders the legacy Simple Path with Visible Coaching 1`] = `
             Check out the latest Negotiation and Review tactics on our
              
             <a
-              href="javascript:void(0);"
+              href="#"
+              onClick={[Function]}
             >
               online portal here
             </a>

@@ -79,12 +79,12 @@ You are able to navigate between panels but interacting with the `slds-carousel_
       </div>
       <ul className="slds-carousel__indicators" role="tablist">
         <li className="slds-carousel__indicator" role="presentation">
-          <a id="indicator-id-01" className="slds-carousel__indicator-action" href="javascript:void(0);" role="tab" tabIndex="-1" aria-selected="false" aria-controls="content-id-01" title="Visit App Exchange tab">
+          <a id="indicator-id-01" className="slds-carousel__indicator-action" href="#" onClick={e => e.preventDefault()} role="tab" tabIndex="-1" aria-selected="false" aria-controls="content-id-01" title="Visit App Exchange tab">
             ...
           </a>
         </li>
         <li className="slds-carousel__indicator" role="presentation">
-          <a id="indicator-id-02" className="slds-carousel__indicator-action slds-is-active" href="javascript:void(0);" role="tab" tabIndex="0" aria-selected="true" aria-controls="content-id-02" title="Click to Customize tab">
+          <a id="indicator-id-02" className="slds-carousel__indicator-action slds-is-active" href="#" onClick={e => e.preventDefault()} role="tab" tabIndex="0" aria-selected="true" aria-controls="content-id-02" title="Click to Customize tab">
             ...
           </a>
         </li>

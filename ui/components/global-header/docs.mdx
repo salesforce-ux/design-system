@@ -107,13 +107,15 @@ For screen reading users, we need to provide a way to navigate over the global h
   <CodeBlock>
     <header className="slds-global-header_container">
       <a
-        href="javascript:void(0);"
+        href="#"
+        onClick={e => e.preventDefault()}
         className="slds-assistive-text slds-assistive-text_focus"
       >
         Skip to Navigation
       </a>
       <a
-        href="javascript:void(0);"
+        href="#"
+        onClick={e => e.preventDefault()}
         className="slds-assistive-text slds-assistive-text_focus"
       >
         Skip to Main Content

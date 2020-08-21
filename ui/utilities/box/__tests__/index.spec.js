@@ -36,7 +36,8 @@ describe('renders box utilities', () => {
   it('renders actionable box with interactions', () => {
     const el = mount(
       <a
-        href="javascript:void(0);"
+        href="#"
+        onClick={e => e.preventDefault()}
         className="slds-box slds-box_link"
         style={{ display: 'block' }}
       >

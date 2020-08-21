@@ -58,7 +58,7 @@ export const states = [
               >
                 Hi, my CloudWidget only speaks French and I'm having a lot of
                 trouble. I've followed this article but it doesn't work{' '}
-                <a href="javascript:void(0)">
+                <a href="#" onClick={e => e.preventDefault()}>
                   https://www.somehelpsite.com/CloudWidget-speaks-french
                 </a>
               </ChatMessageBody>
@@ -136,7 +136,9 @@ export const states = [
                   symbol="attachment"
                   title="Attachment"
                 />
-                <a href="javascript:void(0)">filename_of_attachment.jpg</a>
+                <a href="#" onClick={e => e.preventDefault()}>
+                  filename_of_attachment.jpg
+                </a>
               </ChatMessageBody>
             </ChatMessage>
           </ChatListItem>
@@ -222,7 +224,9 @@ export const states = [
                 Hi Taylor, thank you for contacting Widget Support. Can you
                 please tell me what language you are trying to program on your
                 CloudWidget?{' '}
-                <a href="javascript:void(0)">http://www.cloud.widget</a>
+                <a href="#" onClick={e => e.preventDefault()}>
+                  http://www.cloud.widget
+                </a>
               </ChatMessageBody>
             </ChatMessage>
           </ChatListItem>

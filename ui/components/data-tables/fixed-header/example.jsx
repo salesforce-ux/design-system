@@ -131,6 +131,12 @@ let Container = props => (
   </div>
 );
 
+Container.propTypes = {
+  tabIndex: PropTypes.number,
+  id: PropTypes.string,
+  children: PropTypes.node
+};
+
 let HeadRowData = props => (
   <THeadTr>
     {columns.map((label, i) => {
@@ -146,10 +152,7 @@ let HeadRowData = props => (
 let RowData = props => (
   <TBodyTr>
     <RowTh data-label={columns[0]}>
-      <ReadOnlyCell
-        cellText={props.recordName}
-        cellLink="javascript:void(0);"
-      />
+      <ReadOnlyCell cellText={props.recordName} cellLink />
     </RowTh>
     <Td data-label={columns[1]} type="base">
       <ReadOnlyCell cellText={props.accountName} />
@@ -167,12 +170,19 @@ let RowData = props => (
       <ReadOnlyCell cellText={props.amount} />
     </Td>
     <Td data-label={columns[6]} type="base">
-      <ReadOnlyCell cellLink="javascript:void(0);" cellText={props.contact} />
+      <ReadOnlyCell cellLink cellText={props.contact} />
     </Td>
   </TBodyTr>
 );
 RowData.propTypes = {
-  title: PropTypes.string
+  title: PropTypes.string,
+  recordName: PropTypes.string,
+  accountName: PropTypes.string,
+  closeDate: PropTypes.string,
+  stage: PropTypes.string,
+  confidence: PropTypes.string,
+  amount: PropTypes.string,
+  contact: PropTypes.string
 };
 
 let TableFixedHeader = props => (
@@ -210,21 +220,21 @@ export let examples = [
   {
     id: 'data-table-fixed-header',
     label: 'With fixed header',
-    element: <TableFixedHeader />
+    element: <TableFixedHeader type="base" />
   },
   {
     id: 'data-table-fixed-header_with-vertical-borders',
     label: 'With fixed header and vertical borders',
-    element: <TableFixedHeader isColBordered />
+    element: <TableFixedHeader isColBordered type="base" />
   },
   {
     id: 'data-table-fixed-header-bordered',
     label: 'With fixed header (bordered)',
-    element: <TableFixedHeader isBordered />
+    element: <TableFixedHeader isBordered type="base" />
   },
   {
     id: 'data-table-fixed-header-bordered_with-vertical-borders',
     label: 'With fixed header and vertical borders (bordered)',
-    element: <TableFixedHeader isColBordered isBordered />
+    element: <TableFixedHeader isColBordered isBordered type="base" />
   }
 ];

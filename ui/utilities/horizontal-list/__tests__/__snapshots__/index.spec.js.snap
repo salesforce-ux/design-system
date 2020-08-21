@@ -6,21 +6,24 @@ exports[`renders horizontal list utilities renders horizonta list with block lin
 >
   <li>
     <a
-      href="javascript:void(0);"
+      href="#"
+      onClick={[Function]}
     >
       Horizontal List with block level links
     </a>
   </li>
   <li>
     <a
-      href="javascript:void(0);"
+      href="#"
+      onClick={[Function]}
     >
       List Item
     </a>
   </li>
   <li>
     <a
-      href="javascript:void(0);"
+      href="#"
+      onClick={[Function]}
     >
       List Item
     </a>
@@ -52,7 +55,8 @@ exports[`renders horizontal list utilities renders horizontal list with block li
     className="slds-item"
   >
     <a
-      href="javascript:void(0);"
+      href="#"
+      onClick={[Function]}
     >
       Horizontal List with block level links and dot dividers
     </a>
@@ -61,7 +65,8 @@ exports[`renders horizontal list utilities renders horizontal list with block li
     className="slds-item"
   >
     <a
-      href="javascript:void(0);"
+      href="#"
+      onClick={[Function]}
     >
       List Item
     </a>
@@ -70,7 +75,8 @@ exports[`renders horizontal list utilities renders horizontal list with block li
     className="slds-item"
   >
     <a
-      href="javascript:void(0);"
+      href="#"
+      onClick={[Function]}
     >
       List Item
     </a>
@@ -86,7 +92,8 @@ exports[`renders horizontal list utilities renders horizontal list with block li
     className="slds-item"
   >
     <a
-      href="javascript:void(0);"
+      href="#"
+      onClick={[Function]}
     >
       Horizontal List with block level links and dot dividers
     </a>
@@ -95,7 +102,8 @@ exports[`renders horizontal list utilities renders horizontal list with block li
     className="slds-item"
   >
     <a
-      href="javascript:void(0);"
+      href="#"
+      onClick={[Function]}
     >
       List Item
     </a>
@@ -104,7 +112,8 @@ exports[`renders horizontal list utilities renders horizontal list with block li
     className="slds-item"
   >
     <a
-      href="javascript:void(0);"
+      href="#"
+      onClick={[Function]}
     >
       List Item
     </a>
@@ -118,21 +127,24 @@ exports[`renders horizontal list utilities renders horizontal list with inline l
 >
   <li>
     <a
-      href="javascript:void(0);"
+      href="#"
+      onClick={[Function]}
     >
       Horizontal List with inline level links
     </a>
   </li>
   <li>
     <a
-      href="javascript:void(0);"
+      href="#"
+      onClick={[Function]}
     >
       List Item
     </a>
   </li>
   <li>
     <a
-      href="javascript:void(0);"
+      href="#"
+      onClick={[Function]}
     >
       List Item
     </a>
@@ -146,21 +158,24 @@ exports[`renders horizontal list utilities renders horizontal list with inline-b
 >
   <li>
     <a
-      href="javascript:void(0);"
+      href="#"
+      onClick={[Function]}
     >
       Horizontal List with inline-block level links
     </a>
   </li>
   <li>
     <a
-      href="javascript:void(0);"
+      href="#"
+      onClick={[Function]}
     >
       List Item
     </a>
   </li>
   <li>
     <a
-      href="javascript:void(0);"
+      href="#"
+      onClick={[Function]}
     >
       List Item
     </a>
@@ -196,21 +211,24 @@ exports[`renders horizontal list utilities renders horizontal list with padded b
 >
   <li>
     <a
-      href="javascript:void(0);"
+      href="#"
+      onClick={[Function]}
     >
       Horizontal List with block level links and space
     </a>
   </li>
   <li>
     <a
-      href="javascript:void(0);"
+      href="#"
+      onClick={[Function]}
     >
       List Item
     </a>
   </li>
   <li>
     <a
-      href="javascript:void(0);"
+      href="#"
+      onClick={[Function]}
     >
       List Item
     </a>
@@ -226,7 +244,8 @@ exports[`renders horizontal list utilities renders horizontal list with padded b
     className="slds-item"
   >
     <a
-      href="javascript:void(0);"
+      href="#"
+      onClick={[Function]}
     >
       Horizontal List with block level links and dot dividers with space
     </a>
@@ -235,7 +254,8 @@ exports[`renders horizontal list utilities renders horizontal list with padded b
     className="slds-item"
   >
     <a
-      href="javascript:void(0);"
+      href="#"
+      onClick={[Function]}
     >
       List Item
     </a>
@@ -244,7 +264,8 @@ exports[`renders horizontal list utilities renders horizontal list with padded b
     className="slds-item"
   >
     <a
-      href="javascript:void(0);"
+      href="#"
+      onClick={[Function]}
     >
       List Item
     </a>
@@ -260,7 +281,8 @@ exports[`renders horizontal list utilities renders horizontal list with padded b
     className="slds-item"
   >
     <a
-      href="javascript:void(0);"
+      href="#"
+      onClick={[Function]}
     >
       Horizontal List with block level links and dot dividers with space
     </a>
@@ -269,7 +291,8 @@ exports[`renders horizontal list utilities renders horizontal list with padded b
     className="slds-item"
   >
     <a
-      href="javascript:void(0);"
+      href="#"
+      onClick={[Function]}
     >
       List Item
     </a>
@@ -278,7 +301,8 @@ exports[`renders horizontal list utilities renders horizontal list with padded b
     className="slds-item"
   >
     <a
-      href="javascript:void(0);"
+      href="#"
+      onClick={[Function]}
     >
       List Item
     </a>
@@ -292,21 +316,24 @@ exports[`renders horizontal list utilities renders horizontal list with padded i
 >
   <li>
     <a
-      href="javascript:void(0);"
+      href="#"
+      onClick={[Function]}
     >
       Horizontal List with inline-block level links and space
     </a>
   </li>
   <li>
     <a
-      href="javascript:void(0);"
+      href="#"
+      onClick={[Function]}
     >
       List Item
     </a>
   </li>
   <li>
     <a
-      href="javascript:void(0);"
+      href="#"
+      onClick={[Function]}
     >
       List Item
     </a>

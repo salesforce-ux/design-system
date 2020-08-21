@@ -25,7 +25,9 @@ export let Tile = props => (
           className="slds-tile__title slds-truncate"
           title={props.title || 'Title'}
         >
-          <a href="javascript:void(0);">{props.title || 'Title'}</a>
+          <a href="#" onClick={e => e.preventDefault()}>
+            {props.title || 'Title'}
+          </a>
         </h3>
         <div className="slds-shrink-none">
           <ButtonIcon
@@ -43,7 +45,9 @@ export let Tile = props => (
         className="slds-tile__title slds-truncate"
         title={props.title || 'Title'}
       >
-        <a href="javascript:void(0);">{props.title || 'Title'}</a>
+        <a href="#" onClick={e => e.preventDefault()}>
+          {props.title || 'Title'}
+        </a>
       </h3>
     )}
     <div className="slds-tile__detail">
@@ -70,7 +74,9 @@ export let TileMedia = props => (
             className="slds-tile__title slds-truncate"
             title={props.title || 'Title'}
           >
-            <a href="javascript:void(0);">{props.title || 'Title'}</a>
+            <a href="#" onClick={e => e.preventDefault()}>
+              {props.title || 'Title'}
+            </a>
           </h3>
           <div className="slds-shrink-none">
             <ButtonIcon
@@ -88,7 +94,9 @@ export let TileMedia = props => (
           className="slds-tile__title slds-truncate"
           title={props.title || 'Title'}
         >
-          <a href="javascript:void(0);">{props.title || 'Title'}</a>
+          <a href="#" onClick={e => e.preventDefault()}>
+            {props.title || 'Title'}
+          </a>
         </h3>
       )}
       <div className="slds-tile__detail">
@@ -281,7 +289,9 @@ export let examples = [
             <Tile title="Anypoint Connectors" className="slds-tile_board">
               <p className="slds-text-heading_medium">$500,000</p>
               <p className="slds-truncate" title="Company One">
-                <a href="javascript:void(0);">Company One</a>
+                <a href="#" onClick={e => e.preventDefault()}>
+                  Company One
+                </a>
               </p>
               <p className="slds-truncate" title="Closing 9/30/2015">
                 Closing 9/30/2015
@@ -292,7 +302,9 @@ export let examples = [
             <Tile title="Cloudhub" className="slds-tile_board">
               <p className="slds-text-heading_medium">$185,000</p>
               <p className="slds-truncate" title="Company Two">
-                <a href="javascript:void(0);">Company Two</a>
+                <a href="#" onClick={e => e.preventDefault()}>
+                  Company Two
+                </a>
               </p>
               <p
                 className="slds-truncate slds-has-alert"
@@ -317,7 +329,9 @@ export let examples = [
             <Tile title="600 Widgets" className="slds-tile_board">
               <p className="slds-text-heading_medium">$35,000</p>
               <p className="slds-truncate" title="Company Three">
-                <a href="javascript:void(0);">Company Three</a>
+                <a href="#" onClick={e => e.preventDefault()}>
+                  Company Three
+                </a>
               </p>
               <p className="slds-truncate" title="Closing 10/12/2015">
                 Closing 10/12/2015

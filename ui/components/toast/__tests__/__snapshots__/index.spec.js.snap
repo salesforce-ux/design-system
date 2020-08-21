@@ -22,7 +22,8 @@ exports[`Toast renders a default toast for info 1`] = `
         26 potential duplicate leads were found.
          
         <a
-          href="javascript:void(0);"
+          href="#"
+          onClick={[Function]}
         >
           Select Leads to Merge
         </a>
@@ -89,7 +90,8 @@ exports[`Toast renders a relative toast 1`] = `
       >
         Account 
         <a
-          href="javascript:void(0);"
+          href="#"
+          onClick={[Function]}
         >
           ACME - 100
         </a>
@@ -145,7 +147,8 @@ exports[`Toast renders a success toast 1`] = `
         26 potential duplicate leads were found.
          
         <a
-          href="javascript:void(0);"
+          href="#"
+          onClick={[Function]}
         >
           Select Leads to Merge
         </a>
@@ -212,7 +215,8 @@ exports[`Toast renders a toast with an icon 1`] = `
       >
         Account 
         <a
-          href="javascript:void(0);"
+          href="#"
+          onClick={[Function]}
         >
           ACME - 100
         </a>
@@ -268,7 +272,8 @@ exports[`Toast renders a warning toast 1`] = `
         26 potential duplicate leads were found.
          
         <a
-          href="javascript:void(0);"
+          href="#"
+          onClick={[Function]}
         >
           Select Leads to Merge
         </a>
@@ -323,7 +328,8 @@ exports[`Toast renders an error toast 1`] = `
         26 potential duplicate leads were found.
          
         <a
-          href="javascript:void(0);"
+          href="#"
+          onClick={[Function]}
         >
           Select Leads to Merge
         </a>
@@ -378,7 +384,8 @@ exports[`Toast renders an info toast 1`] = `
         26 potential duplicate leads were found.
          
         <a
-          href="javascript:void(0);"
+          href="#"
+          onClick={[Function]}
         >
           Select Leads to Merge
         </a>

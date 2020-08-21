@@ -2,63 +2,45 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 import React from 'react';
-import ButtonIcon from '../../button-icons/';
+import Alert from '../';
 import { UtilityIcon } from '../../icons/base/example';
-import classNames from 'classnames';
-
-/// ///////////////////////////////////////////
-// State Constructor(s)
-/// ///////////////////////////////////////////
-
-export let Alert = props => {
-  const { className, type, children } = props;
-
-  return (
-    <div
-      className={classNames(
-        'slds-notify slds-notify_alert slds-theme_alert-texture',
-        className,
-        type ? 'slds-theme_' + type : null
-      )}
-      role="alert"
-    >
-      <span className="slds-assistive-text">{type || 'info'}</span>
-      {children}
-      <div className="slds-notify__close">
-        <ButtonIcon
-          className={classNames(
-            type !== 'warning' && 'slds-button_icon-inverse'
-          )}
-          symbol="close"
-          assistiveText="Close"
-          title="Close"
-          size="small"
-        />
-      </div>
-    </div>
-  );
-};
-
-/// ///////////////////////////////////////////
-// Export
-/// ///////////////////////////////////////////
+import EmptyLink from '../../../shared/empty-link/';
+import Heading from '../../../shared/heading/';
 
 export default (
-  <Alert type="info">
+  <Alert>
     <UtilityIcon
       containerClassName="slds-m-right_x-small"
       className="slds-icon_x-small"
       assistiveText={false}
       symbol="user"
     />
-    <h2>
+    <Heading level="2">
       Logged in as John Smith (johnsmith@acme.com).{' '}
-      <a href="javascript:void(0);">Log out</a>
-    </h2>
+      <EmptyLink>Log out</EmptyLink>
+    </Heading>
   </Alert>
 );
 
 export let states = [
+  {
+    id: 'theme-info',
+    label: 'Default (Theme Class  - Deprecated)',
+    element: (
+      <Alert isLegacy>
+        <UtilityIcon
+          containerClassName="slds-m-right_x-small"
+          className="slds-icon_x-small"
+          assistiveText={false}
+          symbol="user"
+        />
+        <Heading level="2">
+          Logged in as John Smith (johnsmith@acme.com).{' '}
+          <EmptyLink>Log out</EmptyLink>
+        </Heading>
+      </Alert>
+    )
+  },
   {
     id: 'warning',
     label: 'Warning',
@@ -70,10 +52,28 @@ export let states = [
           assistiveText={false}
           symbol="warning"
         />
-        <h2>
+        <Heading level="2">
           Your browser is outdated. Your Salesforce experience may be degraded.{' '}
-          <a href="javascript:void(0);">More Information</a>
-        </h2>
+          <EmptyLink>More Information</EmptyLink>
+        </Heading>
+      </Alert>
+    )
+  },
+  {
+    id: 'theme-warning',
+    label: 'Warning (Theme Class  - Deprecated)',
+    element: (
+      <Alert type="warning" isLegacy>
+        <UtilityIcon
+          containerClassName="slds-m-right_x-small"
+          className="slds-icon_x-small"
+          assistiveText={false}
+          symbol="warning"
+        />
+        <Heading level="2">
+          Your browser is outdated. Your Salesforce experience may be degraded.{' '}
+          <EmptyLink>More Information</EmptyLink>
+        </Heading>
       </Alert>
     )
   },
@@ -88,10 +88,28 @@ export let states = [
           assistiveText={false}
           symbol="error"
         />
-        <h2>
+        <Heading level="2">
           Your browser is currently not supported. Your Salesforce may be
-          degraded. <a href="javascript:void(0);">More Information</a>
-        </h2>
+          degraded. <EmptyLink>More Information</EmptyLink>
+        </Heading>
+      </Alert>
+    )
+  },
+  {
+    id: 'theme-error',
+    label: 'Error (Theme Class  - Deprecated)',
+    element: (
+      <Alert type="error" isLegacy>
+        <UtilityIcon
+          containerClassName="slds-m-right_x-small"
+          className="slds-icon_x-small"
+          assistiveText={false}
+          symbol="error"
+        />
+        <Heading level="2">
+          Your browser is currently not supported. Your Salesforce may be
+          degraded. <EmptyLink>More Information</EmptyLink>
+        </Heading>
       </Alert>
     )
   },
@@ -106,10 +124,26 @@ export let states = [
           assistiveText={false}
           symbol="offline"
         />
-        <h2>
-          You are in offline mode.{' '}
-          <a href="javascript:void(0);">More Information</a>
-        </h2>
+        <Heading level="2">
+          You are in offline mode. <EmptyLink>More Information</EmptyLink>
+        </Heading>
+      </Alert>
+    )
+  },
+  {
+    id: 'theme-offline',
+    label: 'Offline (Theme Class  - Deprecated)',
+    element: (
+      <Alert type="offline" isLegacy>
+        <UtilityIcon
+          containerClassName="slds-m-right_x-small"
+          className="slds-icon_x-small"
+          assistiveText={false}
+          symbol="offline"
+        />
+        <Heading level="2">
+          You are in offline mode. <EmptyLink>More Information</EmptyLink>
+        </Heading>
       </Alert>
     )
   }

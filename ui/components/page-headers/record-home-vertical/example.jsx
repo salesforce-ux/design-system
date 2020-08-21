@@ -58,7 +58,7 @@ export const RecordHomeVertical = props => (
             title="Burlington Textile Weaving Plant Generator"
             isVertical
           >
-            <a href="javascript:void(0);">
+            <a href="#" onClick={e => e.preventDefault()}>
               Burlington Textile Weaving Plant Generator
             </a>
           </PageHeaderDetailBody>
@@ -108,7 +108,9 @@ export const RecordHomeVertical = props => (
                 </Avatar>
               </div>
               <div className="slds-media__body">
-                <a href="javascript:void(0);">Jeanette Gomez</a>
+                <a href="#" onClick={e => e.preventDefault()}>
+                  Jeanette Gomez
+                </a>
               </div>
             </div>
           </PageHeaderDetailBody>

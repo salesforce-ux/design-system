@@ -101,7 +101,12 @@ export default (
             <tbody>
               <tr>
                 <th scope="row">
-                  <a id="s01" href="javascript:void(0);" role="option">
+                  <a
+                    id="s01"
+                    href="#"
+                    onClick={e => e.preventDefault()}
+                    role="option"
+                  >
                     <div className="slds-truncate" title="Acme Landscape">
                       <SvgIcon
                         className="slds-icon slds-icon-standard-account slds-icon_small slds-m-right_x-small"
@@ -130,7 +135,12 @@ export default (
               </tr>
               <tr>
                 <th scope="row">
-                  <a id="s02" href="javascript:void(0);" role="option">
+                  <a
+                    id="s02"
+                    href="#"
+                    onClick={e => e.preventDefault()}
+                    role="option"
+                  >
                     <div className="slds-truncate" title="ACME Construction">
                       <SvgIcon
                         className="slds-icon slds-icon-standard-account slds-icon_small slds-m-right_x-small"
@@ -159,7 +169,12 @@ export default (
               </tr>
               <tr>
                 <th scope="row">
-                  <a id="s03" href="javascript:void(0);" role="option">
+                  <a
+                    id="s03"
+                    href="#"
+                    onClick={e => e.preventDefault()}
+                    role="option"
+                  >
                     <div className="slds-truncate" title="Action Sports">
                       <SvgIcon
                         className="slds-icon slds-icon-standard-account slds-icon_small slds-m-right_x-small"
@@ -188,7 +203,12 @@ export default (
               </tr>
               <tr>
                 <th scope="row">
-                  <a id="s04" href="javascript:void(0);" role="option">
+                  <a
+                    id="s04"
+                    href="#"
+                    onClick={e => e.preventDefault()}
+                    role="option"
+                  >
                     <div className="slds-truncate" title="Moderno Bistro">
                       <SvgIcon
                         className="slds-icon slds-icon-standard-account slds-icon_small slds-m-right_x-small"
@@ -217,7 +237,12 @@ export default (
               </tr>
               <tr>
                 <th scope="row">
-                  <a id="s05" href="javascript:void(0);" role="option">
+                  <a
+                    id="s05"
+                    href="#"
+                    onClick={e => e.preventDefault()}
+                    role="option"
+                  >
                     <div className="slds-truncate" title="Cozy Kitchen">
                       <SvgIcon
                         className="slds-icon slds-icon-standard-account slds-icon_small slds-m-right_x-small"

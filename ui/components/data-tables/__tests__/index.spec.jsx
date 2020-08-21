@@ -611,11 +611,11 @@ describe('ReadOnlyCell component', () => {
     matchesMarkup(<ReadOnlyCell cellText="cell text" />));
 
   it('should set linkable cell text', () =>
-    matchesMarkup(<ReadOnlyCell cellLink="#" cellText="cell text" />));
+    matchesMarkup(<ReadOnlyCell cellLink cellText="cell text" />));
 
   it('should set tabindex to 0 on links in actionableMode', () =>
     matchesMarkup(
-      <ReadOnlyCell actionableMode cellLink="#" cellText="cell text" />
+      <ReadOnlyCell actionableMode cellLink cellText="cell text" />
     ));
 });
 
@@ -629,7 +629,7 @@ describe('EditableCell component', () => {
     matchesMarkup(
       <EditableCell
         buttonText="Edit field of cell text"
-        cellLink="#"
+        cellLink
         cellText="cell text"
       />
     ));
@@ -639,7 +639,7 @@ describe('EditableCell component', () => {
       <EditableCell
         actionableMode
         buttonText="Edit field of cell text"
-        cellLink="#"
+        cellLink
         cellText="cell text"
       />
     ));

@@ -47,13 +47,13 @@ class VerticalTabs extends React.Component {
               >
                 <a
                   className="slds-vertical-tabs__link"
-                  href="javascript:void(0)"
+                  href="#"
                   role="tab"
                   tabIndex={tabIndex}
                   aria-selected={isAriaSelected}
                   aria-controls={ariaControlId}
                   id={tabNavId}
-                  onClick={this.handleTabClick}
+                  onClick={e => e.preventDefault()}
                 >
                   <span className="slds-vertical-tabs__left-icon">
                     {tab.leftIcon}

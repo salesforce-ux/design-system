@@ -97,7 +97,9 @@ export let examples = [
             <p>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua.{' '}
-              <a href="javascript:void(0);">Learn more</a>
+              <a href="#" onClick={e => e.preventDefault()}>
+                Learn more
+              </a>
             </p>
           </div>
         </div>

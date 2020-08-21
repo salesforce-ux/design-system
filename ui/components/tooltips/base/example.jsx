@@ -73,7 +73,7 @@ export let examples = [
           position: 'relative'
         }}
       >
-        <a href="javascript:void(0)" aria-describedby="help">
+        <a href="#" onClick={e => e.preventDefault()} aria-describedby="help">
           <UtilityIcon
             className="slds-icon slds-icon_xx-small slds-icon-text-default"
             symbol="info"

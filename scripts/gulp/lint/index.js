@@ -89,7 +89,8 @@ export const html = () =>
           'filterUnits',
           'gradientTransform',
           'stdDeviation',
-          'autoComplete'
+          'autoComplete',
+          'srcDoc'
         ],
         'attr-no-duplication': true,
         'attr-unsafe-chars': true,

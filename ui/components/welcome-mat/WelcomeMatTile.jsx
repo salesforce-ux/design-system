@@ -60,8 +60,9 @@ class WelcomeMatTile extends React.Component {
           <div className="slds-media">{renderMediaObject()}</div>
         ) : (
           <a
-            href="javascript:void(0);"
+            href="#"
             className="slds-box slds-box_link slds-media"
+            onClick={e => e.preventDefault()}
           >
             {renderMediaObject()}
           </a>

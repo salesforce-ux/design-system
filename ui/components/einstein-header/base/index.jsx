@@ -76,9 +76,10 @@ export const EinsteinHeader = props => (
           >
             {props.hasLink ? (
               <a
-                href="javascript:void(0);"
+                href="#"
                 className="slds-card__header-link"
                 title={props.headerTitle || 'Einstein'}
+                onClick={e => e.preventDefault()}
               >
                 <span className="slds-text-heading_small">
                   {props.headerTitle || 'Einstein'}

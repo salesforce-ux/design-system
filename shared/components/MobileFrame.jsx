@@ -21,7 +21,7 @@ class MobileFrame extends React.Component {
         className="docs-mobile_iframe"
         title="Mobile frame/container used for testing purposes"
         style={styles}
-        srcdoc={content}
+        srcDoc={content}
       />
     );
   }

@@ -115,7 +115,7 @@ export const TimelineTrigger = props => (
         <Checkbox hideLabel label={`Mark ${props.title} complete`} />
       )}
       <h3 className="slds-truncate" title={props.title}>
-        <a href="javascript:void(0);">
+        <a href="#" onClick={e => e.preventDefault()}>
           <strong>{props.title}</strong>
         </a>
       </h3>
@@ -132,8 +132,14 @@ export const TimelineTrigger = props => (
 
 export const TimelineSubtext = props => (
   <p className="slds-m-horizontal_xx-small">
-    <a href="javascript:void(0);">{props.subtext.you}</a> {props.subtext.action}{' '}
-    <a href="javascript:void(0);">{props.subtext.to}</a> {props.subtext.extra}
+    <a href="#" onClick={e => e.preventDefault()}>
+      {props.subtext.you}
+    </a>{' '}
+    {props.subtext.action}{' '}
+    <a href="#" onClick={e => e.preventDefault()}>
+      {props.subtext.to}
+    </a>{' '}
+    {props.subtext.extra}
   </p>
 );
 
@@ -157,9 +163,11 @@ export const TimelineItem = props => (
   <div
     className={classNames(
       'slds-timeline__item_expandable',
-      `${props.type === 'log_a_call'
-        ? 'slds-timeline__item_call'
-        : 'slds-timeline__item_' + props.type}`,
+      `${
+        props.type === 'log_a_call'
+          ? 'slds-timeline__item_call'
+          : 'slds-timeline__item_' + props.type
+      }`,
       { 'slds-is-open': props.isExpanded },
       props.className
     )}
@@ -192,7 +200,9 @@ export let FieldInfoListItem = props => (
   <li className="slds-grid slds-grid_vertical slds-size_1-of-2 slds-p-bottom_small">
     <span className="slds-text-title slds-p-bottom_x-small">{props.label}</span>
     <span className="slds-text-body_medium slds-truncate" title={props.content}>
-      <a href="javascript:void(0);">{props.content}</a>
+      <a href="#" onClick={e => e.preventDefault()}>
+        {props.content}
+      </a>
     </span>
   </li>
 );

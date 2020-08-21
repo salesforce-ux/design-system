@@ -1941,7 +1941,8 @@ exports[`Activity Timeline Expandable renders the deprecated combined timeline 1
                     >
                       Gwen Jones
                     </a>
-                     and
+                     
+                    and
                      
                     <a
                       href="#"

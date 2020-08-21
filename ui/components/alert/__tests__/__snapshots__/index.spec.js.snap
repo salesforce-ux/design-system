@@ -24,7 +24,8 @@ exports[`renders a base alert 1`] = `
     </svg>
   </span>
   <h2>
-    Logged in as John Smith (johnsmith@acme.com). 
+    Logged in as John Smith (johnsmith@acme.com).
+     
     <a
       href="#"
       onClick={[Function]}
@@ -198,7 +199,8 @@ exports[`renders a warning alert 1`] = `
     </svg>
   </span>
   <h2>
-    Your browser is outdated. Your Salesforce experience may be degraded. 
+    Your browser is outdated. Your Salesforce experience may be degraded.
+     
     <a
       href="#"
       onClick={[Function]}

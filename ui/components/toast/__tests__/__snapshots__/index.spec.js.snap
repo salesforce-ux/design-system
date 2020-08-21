@@ -88,14 +88,16 @@ exports[`Toast renders a relative toast 1`] = `
       <h2
         className="slds-text-heading_small "
       >
-        Account 
+        Account
+         
         <a
           href="#"
           onClick={[Function]}
         >
           ACME - 100
         </a>
-         widgets was created.
+         
+        widgets was created.
       </h2>
     </div>
     <div
@@ -213,14 +215,16 @@ exports[`Toast renders a toast with an icon 1`] = `
       <h2
         className="slds-text-heading_small "
       >
-        Account 
+        Account
+         
         <a
           href="#"
           onClick={[Function]}
         >
           ACME - 100
         </a>
-         widgets was created.
+         
+        widgets was created.
       </h2>
     </div>
     <div

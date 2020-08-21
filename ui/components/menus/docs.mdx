@@ -180,7 +180,8 @@ The class is based on the `slds-has-${level}` pattern, where `${level}` correspo
 <CodeBlock toggleCode={false}>
   <a
     className="slds-has-warning"
-    href="javascript:void(0);"
+    href="#"
+    onClick={e => e.preventDefault()}
     role="menuitem"
     tabIndex="-1"
   >
@@ -242,7 +243,8 @@ To create a menu with a submenu, add the `slds-has-submenu` class to the list it
   <li className="slds-dropdown__item slds-has-submenu" role="presentation">
     <a
       role="menuitem"
-      href="javascript:void(0);"
+      href="#"
+      onClick={e => e.preventDefault()}
       aria-haspopup="true"
       aria-expanded="true"
       tabIndex="-1"

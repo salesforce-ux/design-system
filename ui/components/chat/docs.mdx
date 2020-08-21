@@ -298,7 +298,7 @@ During a chat an agent can request the customer upload a file attachment to be s
                 symbol="attachment"
                 title="Attachment"
               />
-              <a href="javascript:void(0)">filename_of_attachment.jpg</a>
+              <a href="#" onClick={e => e.preventDefault()}>filename_of_attachment.jpg</a>
             </ChatMessageBody>
           </ChatMessage>
         </ChatListItem>
@@ -534,7 +534,7 @@ Outbound messages come in 2 forms. Ones that are written by the agent in the cur
               Hi Taylor, thank you for contacting Widget Support. Can you please
               tell me what language you are trying to program on your
               CloudWidget?{' '}
-              <a href="javascript:void(0)">http://www/cloud.widget</a>
+              <a href="#" onClick={e => e.preventDefault()}>http://www/cloud.widget</a>
             </ChatMessageBody>
           </ChatMessage>
         </ChatListItem>

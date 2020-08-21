@@ -47,7 +47,8 @@ The card header can have an icon, a title and actions. The icon and title are lo
     <Card>
       <CardHeader
         title="Accounts"
-        href="javascript:void(0);"
+        href="#"
+        onClick={e => e.preventDefault()}
         symbol="account"
       />
     </Card>
@@ -79,7 +80,8 @@ The actions row of a card header typically accommodates a single action for the 
     <Card>
       <CardHeader
         title="Accounts"
-        href="javascript:void(0);"
+        href="#"
+        onClick={e => e.preventDefault()}
         symbol="account"
         action={
           <button className="slds-button slds-button_neutral">New</button>
@@ -96,7 +98,8 @@ The actions row of a card header typically accommodates a single action for the 
     <Card>
       <CardHeader
         title="Accounts"
-        href="javascript:void(0);"
+        href="#"
+        onClick={e => e.preventDefault()}
         symbol="account"
         action={<ActionOverflow position="right" />}
       />

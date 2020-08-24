@@ -332,16 +332,25 @@ PathCoaching.defaultProps = {
   pathGuidance: [
     <p key="guidance-1">
       Regularly cross-sell related products using{' '}
-      <a href="#" onClick={e => e.preventDefault()}>cross-sell tactics and principles</a>.
+      <a href="#" onClick={e => e.preventDefault()}>
+        cross-sell tactics and principles
+      </a>
+      .
     </p>,
     <p key="guidance-2">
       Prepare demo deck using the{' '}
-      <a href="#" onClick={e => e.preventDefault()}>latest template</a> and review with
-      Marketing and Sales teams. Review demo copy with Legal and Doc team.
+      <a href="#" onClick={e => e.preventDefault()}>
+        latest template
+      </a>{' '}
+      and review with Marketing and Sales teams. Review demo copy with Legal and
+      Doc team.
     </p>,
     <p key="guidance-3">
-      Look up <a href="#" onClick={e => e.preventDefault()}>needs analysis principles</a> and
-      review selling plan with Sales Engineer.
+      Look up{' '}
+      <a href="#" onClick={e => e.preventDefault()}>
+        needs analysis principles
+      </a>{' '}
+      and review selling plan with Sales Engineer.
     </p>
   ]
 };

@@ -691,6 +691,7 @@ exports[`Einstein Card renders an einstein card with actions 1`] = `
         <button
           aria-pressed="false"
           className="slds-button slds-button_icon slds-button_icon-border-filled"
+          onClick={[Function]}
           title="Email"
         >
           <svg
@@ -710,6 +711,7 @@ exports[`Einstein Card renders an einstein card with actions 1`] = `
         <button
           aria-pressed="false"
           className="slds-button slds-button_icon slds-button_icon-border-filled"
+          onClick={[Function]}
           title="Edit"
         >
           <svg
@@ -900,6 +902,7 @@ exports[`Einstein Card renders an einstein card with icon and actions 1`] = `
         <button
           aria-pressed="false"
           className="slds-button slds-button_icon slds-button_icon-border-filled"
+          onClick={[Function]}
           title="Email"
         >
           <svg
@@ -919,6 +922,7 @@ exports[`Einstein Card renders an einstein card with icon and actions 1`] = `
         <button
           aria-pressed="false"
           className="slds-button slds-button_icon slds-button_icon-border-filled"
+          onClick={[Function]}
           title="Edit"
         >
           <svg

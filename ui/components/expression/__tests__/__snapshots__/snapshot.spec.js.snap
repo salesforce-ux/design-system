@@ -632,6 +632,7 @@ exports[`Expression Base renders the default expression 1`] = `
               >
                 <button
                   className="slds-button slds-button_icon slds-button_icon-border-filled"
+                  onClick={[Function]}
                   title="Delete Condition 1"
                 >
                   <svg
@@ -1323,6 +1324,7 @@ exports[`Expression Base renders the disabled initial state 1`] = `
                 <button
                   className="slds-button slds-button_icon slds-button_icon-border-filled"
                   disabled={true}
+                  onClick={[Function]}
                   title="Delete Condition 1"
                 >
                   <svg
@@ -2011,6 +2013,7 @@ exports[`Expression Base renders with a custom logic value 1`] = `
               >
                 <button
                   className="slds-button slds-button_icon slds-button_icon-border-filled"
+                  onClick={[Function]}
                   title="Delete Condition 1"
                 >
                   <svg
@@ -2714,6 +2717,7 @@ exports[`Expression Base renders with a resource selected 1`] = `
               >
                 <button
                   className="slds-button slds-button_icon slds-button_icon-border-filled"
+                  onClick={[Function]}
                   title="Delete Condition 1"
                 >
                   <svg
@@ -3417,6 +3421,7 @@ exports[`Expression Base renders with all option selected 1`] = `
               >
                 <button
                   className="slds-button slds-button_icon slds-button_icon-border-filled"
+                  onClick={[Function]}
                   title="Delete Condition 1"
                 >
                   <svg
@@ -4120,6 +4125,7 @@ exports[`Expression Base renders with always option selected 1`] = `
               >
                 <button
                   className="slds-button slds-button_icon slds-button_icon-border-filled"
+                  onClick={[Function]}
                   title="Delete Condition 1"
                 >
                   <svg
@@ -4823,6 +4829,7 @@ exports[`Expression Base renders with any option selected 1`] = `
               >
                 <button
                   className="slds-button slds-button_icon slds-button_icon-border-filled"
+                  onClick={[Function]}
                   title="Delete Condition 1"
                 >
                   <svg
@@ -5534,6 +5541,7 @@ exports[`Expression Base renders with custom logic 1`] = `
               >
                 <button
                   className="slds-button slds-button_icon slds-button_icon-border-filled"
+                  onClick={[Function]}
                   title="Delete Condition 1"
                 >
                   <svg
@@ -6237,6 +6245,7 @@ exports[`Expression Base renders with custom option selected 1`] = `
               >
                 <button
                   className="slds-button slds-button_icon slds-button_icon-border-filled"
+                  onClick={[Function]}
                   title="Delete Condition 1"
                 >
                   <svg
@@ -6940,6 +6949,7 @@ exports[`Expression Base renders with formula option selected 1`] = `
               >
                 <button
                   className="slds-button slds-button_icon slds-button_icon-border-filled"
+                  onClick={[Function]}
                   title="Delete Condition 1"
                 >
                   <svg
@@ -7631,6 +7641,7 @@ exports[`Expression Base renders with legend text 1`] = `
               >
                 <button
                   className="slds-button slds-button_icon slds-button_icon-border-filled"
+                  onClick={[Function]}
                   title="Delete Condition 1"
                 >
                   <svg
@@ -8920,6 +8931,7 @@ exports[`Expression Formula renders the default expression formula variant 1`] =
             >
               <button
                 className="slds-button slds-button_icon slds-button_icon-container"
+                onClick={[Function]}
                 title="Help"
               >
                 <svg
@@ -10096,6 +10108,7 @@ exports[`Expression Formula renders the default expression formula with an optio
             >
               <button
                 className="slds-button slds-button_icon slds-button_icon-container"
+                onClick={[Function]}
                 title="Help"
               >
                 <svg
@@ -11025,6 +11038,7 @@ exports[`Expression Group renders the default expression group with a row 1`] = 
                 >
                   <button
                     className="slds-button slds-button_icon slds-button_icon-border-filled"
+                    onClick={[Function]}
                     title="Delete Condition 1"
                   >
                     <svg
@@ -13328,6 +13342,7 @@ exports[`Expression List renders the default expression list 1`] = `
             >
               <button
                 className="slds-button slds-button_icon slds-button_icon-border-filled"
+                onClick={[Function]}
                 title="Delete Condition 1"
               >
                 <svg
@@ -13425,6 +13440,7 @@ exports[`Expression Narrow Group renders the default expression narrow group 1`]
     </span>
     <button
       className="slds-button slds-button_icon slds-button_icon slds-button_icon-small"
+      onClick={[Function]}
       title="Remove Group"
     >
       <svg
@@ -13677,6 +13693,7 @@ exports[`Expression Narrow Group renders the default expression narrow group 1`]
         </button>
         <button
           className="slds-button slds-button_icon slds-button_icon slds-button_icon-small"
+          onClick={[Function]}
           title="Remove greater than \\"1000\\""
         >
           <svg
@@ -13735,6 +13752,7 @@ exports[`Expression Narrow Group renders the default expression narrow with opti
     </span>
     <button
       className="slds-button slds-button_icon slds-button_icon slds-button_icon-small"
+      onClick={[Function]}
       title="Remove Group"
     >
       <svg
@@ -14002,6 +14020,7 @@ exports[`Expression Narrow Group renders the default expression narrow with opti
         </button>
         <button
           className="slds-button slds-button_icon slds-button_icon slds-button_icon-small"
+          onClick={[Function]}
           title="Remove greater than \\"1000\\""
         >
           <svg
@@ -14300,6 +14319,7 @@ exports[`Expression Narrow renders the default expression narrow variant 1`] = `
           </button>
           <button
             className="slds-button slds-button_icon slds-button_icon slds-button_icon-small"
+            onClick={[Function]}
             title="Remove greater than \\"1000\\""
           >
             <svg
@@ -14627,6 +14647,7 @@ exports[`Expression Narrow renders the default expression narrow with option sel
           </button>
           <button
             className="slds-button slds-button_icon slds-button_icon slds-button_icon-small"
+            onClick={[Function]}
             title="Remove greater than \\"1000\\""
           >
             <svg
@@ -15951,6 +15972,7 @@ exports[`Expression Row renders the default row 1`] = `
           >
             <button
               className="slds-button slds-button_icon slds-button_icon-border-filled"
+              onClick={[Function]}
               title="Delete Condition 1"
             >
               <svg
@@ -16391,6 +16413,7 @@ exports[`Expression Row renders the default row in a group 1`] = `
           >
             <button
               className="slds-button slds-button_icon slds-button_icon-border-filled"
+              onClick={[Function]}
               title="Delete Condition 1 of group name"
             >
               <svg
@@ -16846,6 +16869,7 @@ exports[`Expression Row renders the default row with a resource selected 1`] = `
           >
             <button
               className="slds-button slds-button_icon slds-button_icon-border-filled"
+              onClick={[Function]}
               title="Delete Condition 1"
             >
               <svg
@@ -17294,6 +17318,7 @@ exports[`Expression Row renders the default row with an error 1`] = `
           >
             <button
               className="slds-button slds-button_icon slds-button_icon-border-filled"
+              onClick={[Function]}
               title="Delete Condition 1"
             >
               <svg
@@ -17735,6 +17760,7 @@ exports[`Expression Row renders the default row with button disabled 1`] = `
             <button
               className="slds-button slds-button_icon slds-button_icon-border-filled"
               disabled={true}
+              onClick={[Function]}
               title="Delete Condition 1"
             >
               <svg
@@ -18177,6 +18203,7 @@ exports[`Expression Row renders the default row with input disabled 1`] = `
           >
             <button
               className="slds-button slds-button_icon slds-button_icon-border-filled"
+              onClick={[Function]}
               title="Delete Condition 1"
             >
               <svg
@@ -18620,6 +18647,7 @@ exports[`Expression Row renders the default row with inputs and button disabled 
             <button
               className="slds-button slds-button_icon slds-button_icon-border-filled"
               disabled={true}
+              onClick={[Function]}
               title="Delete Condition 1"
             >
               <svg
@@ -19063,6 +19091,7 @@ exports[`Expression Row renders the default row with legend text and sassistive 
           >
             <button
               className="slds-button slds-button_icon slds-button_icon-border-filled"
+              onClick={[Function]}
               title="Delete Condition 1"
             >
               <svg

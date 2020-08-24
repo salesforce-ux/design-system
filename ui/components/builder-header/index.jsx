@@ -66,34 +66,34 @@ const NavItem = props => (
         </span>
       </a>
     ) : (
-        <button
-          className="slds-button slds-builder-header__item-action slds-media slds-media_center"
-          aria-haspopup="true"
-          title="Click to open menu"
-        >
-          <span className="slds-media__figure">
-            <UtilityIcon
-              containerClassName="slds-current-color"
-              className="slds-icon_x-small"
-              symbol={props.symbol}
-              assistiveText={false}
-              title={false}
-            />
+      <button
+        className="slds-button slds-builder-header__item-action slds-media slds-media_center"
+        aria-haspopup="true"
+        title="Click to open menu"
+      >
+        <span className="slds-media__figure">
+          <UtilityIcon
+            containerClassName="slds-current-color"
+            className="slds-icon_x-small"
+            symbol={props.symbol}
+            assistiveText={false}
+            title={false}
+          />
+        </span>
+        <span className="slds-media__body">
+          <span className="slds-truncate" title="Dropdown">
+            Dropdown
           </span>
-          <span className="slds-media__body">
-            <span className="slds-truncate" title="Dropdown">
-              Dropdown
-          </span>
-            <UtilityIcon
-              containerClassName="slds-current-color slds-m-left_small"
-              className="slds-icon_x-small"
-              symbol="chevrondown"
-              assistiveText={false}
-              title={false}
-            />
-          </span>
-        </button>
-      )}
+          <UtilityIcon
+            containerClassName="slds-current-color slds-m-left_small"
+            className="slds-icon_x-small"
+            symbol="chevrondown"
+            assistiveText={false}
+            title={false}
+          />
+        </span>
+      </button>
+    )}
   </li>
 );
 

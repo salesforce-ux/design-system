@@ -134,6 +134,7 @@ exports[`Advanced data table row should make every focusable element focusable w
     <button
       aria-haspopup="true"
       className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+      onClick={[Function]}
       tabIndex="0"
       title="More actions for Acme"
     >
@@ -415,6 +416,7 @@ exports[`Advanced data table row should render a table row 1`] = `
     <button
       aria-haspopup="true"
       className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+      onClick={[Function]}
       tabIndex="-1"
       title="More actions for Acme"
     >
@@ -570,6 +572,7 @@ exports[`Advanced data table row should select the row 1`] = `
     <button
       aria-haspopup="true"
       className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+      onClick={[Function]}
       tabIndex="-1"
       title="More actions for Acme"
     >
@@ -725,6 +728,7 @@ exports[`Advanced data table row should select the row with a radio button 1`] =
     <button
       aria-haspopup="true"
       className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+      onClick={[Function]}
       tabIndex="-1"
       title="More actions for Acme"
     >
@@ -925,6 +929,7 @@ exports[`Advanced data table row should show amount scores 1`] = `
     <button
       aria-haspopup="true"
       className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+      onClick={[Function]}
       tabIndex="-1"
       title="More actions for Acme"
     >
@@ -1078,6 +1083,7 @@ exports[`Advanced data table row should show record name cell in first row as fo
     <button
       aria-haspopup="true"
       className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+      onClick={[Function]}
       tabIndex="-1"
       title="More actions for Acme"
     >
@@ -1231,6 +1237,7 @@ exports[`Advanced data table row should swap row selection to a radio button 1`]
     <button
       aria-haspopup="true"
       className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+      onClick={[Function]}
       tabIndex="-1"
       title="More actions for Acme"
     >
@@ -1633,6 +1640,7 @@ exports[`Product data table row should make focusable elements focusable in acti
     <button
       aria-haspopup="true"
       className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+      onClick={[Function]}
       tabIndex="0"
       title="More actions for Baseball Cap"
     >
@@ -1791,6 +1799,7 @@ exports[`Product data table row should render 1`] = `
     <button
       aria-haspopup="true"
       className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+      onClick={[Function]}
       tabIndex="-1"
       title="More actions for Baseball Cap"
     >

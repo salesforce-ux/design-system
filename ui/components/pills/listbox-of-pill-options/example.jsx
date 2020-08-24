@@ -105,5 +105,24 @@ export let examples = [
         </ListboxPills>
       </PillContainer>
     )
+  },
+  {
+    id: 'listbox-pill-group',
+    label: 'Grouped',
+    element: (
+      <div>
+        <div class="slds-combobox_container" />
+        <PillContainer variant="listbox-group">
+          <ListboxPills>
+            <ListboxPillsItem>
+              <ListboxPill tabIndex="0" />
+            </ListboxPillsItem>
+            <ListboxPillsItem>
+              <ListboxPill />
+            </ListboxPillsItem>
+          </ListboxPills>
+        </PillContainer>
+      </div>
+    )
   }
 ];

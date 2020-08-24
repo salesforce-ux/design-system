@@ -6,7 +6,13 @@ import classNames from 'classnames';
 
 const Crumb = props => (
   <li className={classNames('slds-breadcrumb__item', props.className)}>
-    {props.hasMenu ? props.children : <a href="#" onClick={e => e.preventDefault()}>{props.children}</a>}
+    {props.hasMenu ? (
+      props.children
+    ) : (
+      <a href="#" onClick={e => e.preventDefault()}>
+        {props.children}
+      </a>
+    )}
   </li>
 );
 

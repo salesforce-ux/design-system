@@ -23,7 +23,9 @@ export let ActivityTimelineItemCall = props => (
         figureLeftClassName="slds-timeline__icon"
       >
         <h3 className="slds-truncate" title="Mobile conversation on Monday">
-          <a href="#" onClick={e => e.preventDefault()}>Mobile conversation on Monday</a>
+          <a href="#" onClick={e => e.preventDefault()}>
+            Mobile conversation on Monday
+          </a>
         </h3>
         <p
           className="slds-truncate"
@@ -35,13 +37,17 @@ export let ActivityTimelineItemCall = props => (
           <li className="slds-m-right_large">
             <span className="slds-text-title">Name:</span>
             <span className="slds-text-body_small">
-              <a href="#" onClick={e => e.preventDefault()}>Lei Chan</a>
+              <a href="#" onClick={e => e.preventDefault()}>
+                Lei Chan
+              </a>
             </span>
           </li>
           <li className="slds-m-right_large">
             <span className="slds-text-title">Assigned to:</span>
             <span className="slds-text-body_small">
-              <a href="#" onClick={e => e.preventDefault()}>Betty Mason</a>
+              <a href="#" onClick={e => e.preventDefault()}>
+                Betty Mason
+              </a>
             </span>
           </li>
         </ul>
@@ -67,7 +73,9 @@ export let ActivityTimelineItemEmail = props => (
         figureLeftClassName="slds-timeline__icon"
       >
         <h3 className="slds-truncate" title="Mobile conversation on Monday">
-          <a href="#" onClick={e => e.preventDefault()}>Mobile conversation on Monday</a>
+          <a href="#" onClick={e => e.preventDefault()}>
+            Mobile conversation on Monday
+          </a>
         </h3>
         <p
           className="slds-truncate"
@@ -96,7 +104,9 @@ export let ActivityTimelineItemEmail = props => (
           <li className="slds-m-right_large">
             <span className="slds-text-title">From:</span>
             <span className="slds-text-body_small">
-              <a href="#" onClick={e => e.preventDefault()}>Jason Dewar</a>
+              <a href="#" onClick={e => e.preventDefault()}>
+                Jason Dewar
+              </a>
             </span>
           </li>
         </ul>
@@ -122,7 +132,9 @@ export let ActivityTimelineItemEvent = props => (
         figureLeftClassName="slds-timeline__icon"
       >
         <h3 className="slds-truncate" title="Company One — EBC Meeting">
-          <a href="#" onClick={e => e.preventDefault()}>Company One — EBC Meeting</a>
+          <a href="#" onClick={e => e.preventDefault()}>
+            Company One — EBC Meeting
+          </a>
         </h3>
         <p
           className="slds-truncate"
@@ -144,16 +156,29 @@ export let ActivityTimelineItemEvent = props => (
           <li className="slds-m-right_large">
             <span className="slds-text-title">Location:</span>
             <span className="slds-text-body_small">
-              <a href="#" onClick={e => e.preventDefault()}>300 Pike St, San Francisco CA</a>
+              <a href="#" onClick={e => e.preventDefault()}>
+                300 Pike St, San Francisco CA
+              </a>
             </span>
           </li>
           <li className="slds-m-right_large">
             <span className="slds-text-title">Name:</span>
             <span className="slds-text-body_small">
-              <a href="#" onClick={e => e.preventDefault()}>Lei Chan</a>,
-              <a href="#" onClick={e => e.preventDefault()}>Jason Dewar</a>,
-              <a href="#" onClick={e => e.preventDefault()}>Gwen Jones</a> and{' '}
-              <a href="#" onClick={e => e.preventDefault()}>Pete Schaffer</a>
+              <a href="#" onClick={e => e.preventDefault()}>
+                Lei Chan
+              </a>
+              ,
+              <a href="#" onClick={e => e.preventDefault()}>
+                Jason Dewar
+              </a>
+              ,
+              <a href="#" onClick={e => e.preventDefault()}>
+                Gwen Jones
+              </a>{' '}
+              and{' '}
+              <a href="#" onClick={e => e.preventDefault()}>
+                Pete Schaffer
+              </a>
             </span>
           </li>
         </ul>
@@ -195,13 +220,17 @@ export let ActivityTimelineItemTask = props => (
             <li className="slds-m-right_large">
               <span className="slds-text-title">Contact:</span>
               <span className="slds-text-body_small">
-                <a href="#" onClick={e => e.preventDefault()}>Lei Chan</a>
+                <a href="#" onClick={e => e.preventDefault()}>
+                  Lei Chan
+                </a>
               </span>
             </li>
             <li className="slds-m-right_large">
               <span className="slds-text-title">Assigned to:</span>
               <span className="slds-text-body_small">
-                <a href="#" onClick={e => e.preventDefault()}>Betty Mason</a>
+                <a href="#" onClick={e => e.preventDefault()}>
+                  Betty Mason
+                </a>
               </span>
             </li>
           </ul>

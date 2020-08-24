@@ -19,7 +19,7 @@
   justify-content: center;
   border: $border-width-thin solid $button-color-border-primary;
   border-radius: $button-border-radius;
-  color: $color-brand-darker; // Controls icon fill, not meant for text, faux styling API
+  color: $color-brand-darker; // Controls icon fill, not meant for text, faux Styling Hooks
   cursor: pointer;
 }
 
@@ -33,7 +33,7 @@
 .slds-checkbox-button_is-checked {
   background-color: $color-brand-darker;
   border-color: transparent;
-  color: $color-text-brand-primary; // Controls icon fill, not meant for text, faux styling API
+  color: $color-text-brand-primary; // Controls icon fill, not meant for text, faux Styling Hooks
 }
 
 /**
@@ -46,14 +46,14 @@
 .slds-checkbox-button_is-disabled {
   background-color: $color-background-button-default-disabled;
   border-color: $button-color-border-primary;
-  color: $color-text-icon-default-disabled; // Controls icon fill, not meant for text, faux styling API
+  color: $color-text-icon-default-disabled; // Controls icon fill, not meant for text, faux Styling Hooks
   cursor: default;
 
   // If checked && disabled
   &.slds-checkbox-button_is-checked {
     background-color: $color-background-button-brand-disabled;
     border-color: $color-border-button-brand-disabled;
-    color: $color-text-button-brand-disabled; // Controls icon fill, not meant for text, faux styling API
+    color: $color-text-button-brand-disabled; // Controls icon fill, not meant for text, faux Styling Hooks
   }
 }
 

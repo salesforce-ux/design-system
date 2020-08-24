@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`extractVarsFromCSS extracts vars from var function value with fallback 1`] = `
+Object {
+  "--sds-c-icon-color-background": "transparent",
+}
+`;
+
+exports[`extractVarsFromCSS extracts vars from var function value with no fallback 1`] = `
+Object {
+  "--sds-c-icon-color-background": "",
+}
+`;

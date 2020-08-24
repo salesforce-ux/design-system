@@ -24,6 +24,7 @@ exports[`Lookup - Advanced Modal renders a lookup with modal 1`] = `
       >
         <button
           className="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse"
+          onClick={[Function]}
           title="Close"
         >
           <svg
@@ -107,6 +108,7 @@ exports[`Lookup - Advanced Modal renders a lookup with modal 1`] = `
                   >
                     <button
                       className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small"
+                      onClick={[Function]}
                       title="Filter List"
                     >
                       <svg
@@ -125,6 +127,7 @@ exports[`Lookup - Advanced Modal renders a lookup with modal 1`] = `
                     </button>
                     <button
                       className="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small"
+                      onClick={[Function]}
                       title="Sort"
                     >
                       <svg
@@ -4300,6 +4303,7 @@ exports[`Lookup renders a lookup with option selected 1`] = `
           />
           <button
             className="slds-button slds-button_icon slds-input__icon slds-input__icon_right"
+            onClick={[Function]}
             title="Remove selected option"
           >
             <svg

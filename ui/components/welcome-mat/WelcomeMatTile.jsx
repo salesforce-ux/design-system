@@ -59,14 +59,14 @@ class WelcomeMatTile extends React.Component {
         {isInfoOnly ? (
           <div className="slds-media">{renderMediaObject()}</div>
         ) : (
-            <a
-              href="#"
-              className="slds-box slds-box_link slds-media"
-              onClick={e => e.preventDefault()}
-            >
-              {renderMediaObject()}
-            </a>
-          )}
+          <a
+            href="#"
+            className="slds-box slds-box_link slds-media"
+            onClick={e => e.preventDefault()}
+          >
+            {renderMediaObject()}
+          </a>
+        )}
       </li>
     );
   }

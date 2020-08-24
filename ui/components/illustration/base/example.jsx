@@ -43,24 +43,22 @@ export const IllustrationText = props => (
     {props.heading && (
       <h3 className="slds-text-heading_medium">{props.heading}</h3>
     )}
-    {props.message &&
-      props.secondaryCTA && (
-        <p className="slds-text-body_regular">
-          {props.message}{' '}
-          <a
-            href="#"
-            className="slds-truncate"
-            title={props.secondaryCTA}
-            onClick={e => e.preventDefault()}
-          >
-            {props.secondaryCTA}
-          </a>
-        </p>
-      )}
-    {props.message &&
-      !props.secondaryCTA && (
-        <p className="slds-text-body_regular">{props.message}</p>
-      )}
+    {props.message && props.secondaryCTA && (
+      <p className="slds-text-body_regular">
+        {props.message}{' '}
+        <a
+          href="#"
+          className="slds-truncate"
+          title={props.secondaryCTA}
+          onClick={e => e.preventDefault()}
+        >
+          {props.secondaryCTA}
+        </a>
+      </p>
+    )}
+    {props.message && !props.secondaryCTA && (
+      <p className="slds-text-body_regular">{props.message}</p>
+    )}
   </div>
 );
 
@@ -82,7 +80,11 @@ export const IllustrationCTA = props => (
     </div>
     {props.children}
     <footer className="slds-card__footer">
-      {props.link && <a href="#" onClick={e => e.preventDefault()}>View All</a>}
+      {props.link && (
+        <a href="#" onClick={e => e.preventDefault()}>
+          View All
+        </a>
+      )}
       {props.button && <button className={props.button}>Create Task</button>}
     </footer>
   </article>

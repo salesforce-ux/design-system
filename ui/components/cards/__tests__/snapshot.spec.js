@@ -19,7 +19,11 @@ describe('Card Article', () => {
 describe('Card Header', () => {
   it('renders a simple card header', () =>
     matchesMarkup(
-      <CardHeader title="Card Header" href="#" onClick={e => e.preventDefault()} />
+      <CardHeader
+        title="Card Header"
+        href="#"
+        onClick={e => e.preventDefault()}
+      />
     ));
   it('renders a card header with icon', () =>
     matchesMarkup(

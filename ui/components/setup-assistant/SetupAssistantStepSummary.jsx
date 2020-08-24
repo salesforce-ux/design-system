@@ -30,8 +30,10 @@ class SetupAssistantStepSummary extends React.Component {
       ) : action.type === 'toggle' ? (
         <CheckboxToggle title={action.title} isBare checked={action.checked} />
       ) : (
-            <a href="#" onClick={e => e.preventDefault()}>{action.title}</a>
-          ));
+        <a href="#" onClick={e => e.preventDefault()}>
+          {action.title}
+        </a>
+      ));
 
     const stepProgressRing =
       stepProgress &&
@@ -48,15 +50,15 @@ class SetupAssistantStepSummary extends React.Component {
           />
         </ProgressRing>
       ) : (
-          <ProgressRing
-            className="slds-progress-ring_large"
-            percent={isActiveStep ? stepProgress.percentage : 0}
-            isActiveStep={isActiveStep}
-            isFilling
-          >
-            {stepProgress.number}
-          </ProgressRing>
-        ));
+        <ProgressRing
+          className="slds-progress-ring_large"
+          percent={isActiveStep ? stepProgress.percentage : 0}
+          isActiveStep={isActiveStep}
+          isFilling
+        >
+          {stepProgress.number}
+        </ProgressRing>
+      ));
 
     const baseStepContent = (
       <div className="slds-media">
@@ -71,8 +73,8 @@ class SetupAssistantStepSummary extends React.Component {
                 {title}
               </Button>
             ) : (
-                title
-              )}
+              title
+            )}
           </h3>
           <p>{description}</p>
         </div>
@@ -105,8 +107,8 @@ class SetupAssistantStepSummary extends React.Component {
             </div>
           </div>
         ) : (
-            baseStepContent
-          )}
+          baseStepContent
+        )}
       </div>
     );
   }

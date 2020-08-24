@@ -8,7 +8,7 @@
 
 ### Added
 
-- Added the brand expression specific Styling API to Badge.
+- Added the brand expression specific Styling Hooks to Badge.
 
 ### Fixed
 

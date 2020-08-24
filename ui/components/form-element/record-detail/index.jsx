@@ -65,25 +65,25 @@ export const RecordDetailField = props => {
           <a href="#" onClick={e => e.preventDefault()}>
             {typeof value === 'object'
               ? value.map(option => (
-                <React.Fragment key={option}>
-                  {option}
-                  <br />
-                </React.Fragment>
-              ))
+                  <React.Fragment key={option}>
+                    {option}
+                    <br />
+                  </React.Fragment>
+                ))
               : value}
           </a>
         ) : typeof value === 'object' &&
           type !== 'richtext' &&
           type !== 'checkbox' ? (
-              value.map(option => (
-                <React.Fragment key={option}>
-                  {option}
-                  <br />
-                </React.Fragment>
-              ))
-            ) : (
-              value
-            )}
+          value.map(option => (
+            <React.Fragment key={option}>
+              {option}
+              <br />
+            </React.Fragment>
+          ))
+        ) : (
+          value
+        )}
         {timestamp && <React.Fragment>, {timestamp}</React.Fragment>}
       </FormElementStatic>
       {hasInlineEdit && (
@@ -131,40 +131,40 @@ class RecordDetail extends Component {
       >
         {isViewMode
           ? snapshot.rows.map(row => (
-            <RecordDetailRow key={_.uniqueId(row.fields.length)}>
-              {Object.keys(row.fields).map(field => (
-                <RecordDetailItem key={row.fields[field].label}>
-                  {row.fields[field].type && (
-                    <RecordDetailField
-                      type={row.fields[field].type}
-                      label={row.fields[field].label}
-                      value={row.fields[field].value}
-                      isRequired={row.fields[field].isRequired}
-                      hasTooltip={row.fields[field].hasTooltip}
-                      avatar={row.fields[field].avatar}
-                      link={row.fields[field].link}
-                      timestamp={row.fields[field].timestamp}
-                      hasInlineEdit={hasInlineEdit}
-                      isHorizontal={
-                        !isDeprecated && direction === 'horizontal'
-                      }
-                      isStacked={!isDeprecated && direction === 'stacked'}
-                      column={row.fields[field].column}
-                    />
-                  )}
-                </RecordDetailItem>
-              ))}
-            </RecordDetailRow>
-          ))
+              <RecordDetailRow key={_.uniqueId(row.fields.length)}>
+                {Object.keys(row.fields).map(field => (
+                  <RecordDetailItem key={row.fields[field].label}>
+                    {row.fields[field].type && (
+                      <RecordDetailField
+                        type={row.fields[field].type}
+                        label={row.fields[field].label}
+                        value={row.fields[field].value}
+                        isRequired={row.fields[field].isRequired}
+                        hasTooltip={row.fields[field].hasTooltip}
+                        avatar={row.fields[field].avatar}
+                        link={row.fields[field].link}
+                        timestamp={row.fields[field].timestamp}
+                        hasInlineEdit={hasInlineEdit}
+                        isHorizontal={
+                          !isDeprecated && direction === 'horizontal'
+                        }
+                        isStacked={!isDeprecated && direction === 'stacked'}
+                        column={row.fields[field].column}
+                      />
+                    )}
+                  </RecordDetailItem>
+                ))}
+              </RecordDetailRow>
+            ))
           : snapshot.rows.map((row, i) => (
-            <RecordDetailRow key={_.uniqueId(`detail-row-${i}-`)}>
-              {Object.keys(row.fields).map(field => (
-                <RecordDetailItem key={row.fields[field].label}>
-                  {row.fields[field].component && row.fields[field].component}
-                </RecordDetailItem>
-              ))}
-            </RecordDetailRow>
-          ))}
+              <RecordDetailRow key={_.uniqueId(`detail-row-${i}-`)}>
+                {Object.keys(row.fields).map(field => (
+                  <RecordDetailItem key={row.fields[field].label}>
+                    {row.fields[field].component && row.fields[field].component}
+                  </RecordDetailItem>
+                ))}
+              </RecordDetailRow>
+            ))}
       </div>
     );
   }

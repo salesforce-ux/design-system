@@ -81,7 +81,11 @@ const Header = props => (
     <div className="slds-grid slds-grid_vertical-align-center slds-col_bump-left">
       <span className="slds-box slds-box_xx-small slds-theme_default">30</span>
       <span className="slds-m-horizontal_x-small">Days left in trial</span>
-      <a href="#" onClick={e => e.preventDefault()} className="slds-button slds-button_success">
+      <a
+        href="#"
+        onClick={e => e.preventDefault()}
+        className="slds-button slds-button_success"
+      >
         Subscribe Now
       </a>
     </div>

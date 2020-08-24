@@ -36,10 +36,10 @@ export const CardHeader = props => {
                 <span>{title}</span>
               </a>
             ) : (
-                <span className="slds-truncate" title={title}>
-                  <span className="slds-text-heading_small">{title}</span>
-                </span>
-              )}
+              <span className="slds-truncate" title={title}>
+                <span className="slds-text-heading_small">{title}</span>
+              </span>
+            )}
           </h2>
         </div>
         {action && <div className="slds-no-flex">{action}</div>}

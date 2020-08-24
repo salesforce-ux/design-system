@@ -13,7 +13,8 @@ import classNames from 'classnames';
 const image = (
   <a
     className="slds-avatar slds-avatar_circle slds-avatar_medium"
-    href="#" onClick={e => e.preventDefault()}
+    href="#"
+    onClick={e => e.preventDefault()}
   >
     <img
       alt="Person name"

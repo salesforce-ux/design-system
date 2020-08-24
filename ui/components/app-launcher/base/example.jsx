@@ -166,7 +166,9 @@ export const AppLauncherTile = props => (
       </div>
     </div>
     <div className="slds-app-launcher__tile-body">
-      <a href="#" onClick={e => e.preventDefault()}>{props.label}</a>
+      <a href="#" onClick={e => e.preventDefault()}>
+        {props.label}
+      </a>
       <p>
         {props.description}{' '}
         {props.hasTooltip && (
@@ -303,7 +305,7 @@ export const appTilesSearch = [
 /*
  * Helpers to position the App Tile for each state (ie. moved, dropped, etc.)
  */
-const moveItemPosition = function (arr, from, to) {
+const moveItemPosition = function(arr, from, to) {
   let copyArr = arr.slice(0);
   copyArr.splice(to, 0, copyArr.splice(from, 1)[0]);
   return copyArr;

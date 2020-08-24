@@ -20,6 +20,7 @@
   padding-right: var(--sds-c-button-spacing-inline-end, 0);
   padding-bottom: 0;
   padding-left: var(--sds-c-button-spacing-inline-start, 0);
+  background: none; // Reset underlying styles like VF
   background-color: var(--sds-c-button-color-background, transparent);
   background-clip: border-box;
   border-color: var(--sds-c-button-color-border, transparent);
@@ -42,7 +43,7 @@
     text-decoration: none;
   }
 
-  // @todo re-evaluate styling api reassignment
+  // @todo re-evaluate Styling Hooks reassignment
   &:hover,
   &:focus {
     color: var(--sds-c-button-color-text-hover, $brand-accessible-active);
@@ -53,12 +54,12 @@
     box-shadow: var(--sds-c-button-shadow-focus, $shadow-button-focus);
   }
 
-  // @todo re-evaluate styling api reassignment
+  // @todo re-evaluate Styling Hooks reassignment
   &:active {
     color: var(--sds-c-button-color-text-active, $brand-accessible-active);
   }
 
-  // @todo re-evaluate styling api reassignment
+  // @todo re-evaluate Styling Hooks reassignment
   &[disabled],
   &:disabled {
     color: var(--sds-c-button-color-text-disabled, $color-text-button-default-disabled);
@@ -143,26 +144,26 @@ a.slds-button--inverse:focus {
 .slds-button--neutral {
   @include button-shape(neutral);
 
-  // @todo re-evaluate styling api reassignment
+  // @todo re-evaluate Styling Hooks reassignment
   background-color: var(--sds-c-button-neutral-color-background, $button-color-background-primary);
 
-  // @todo re-evaluate styling api reassignment
+  // @todo re-evaluate Styling Hooks reassignment
   border-color: var(--sds-c-button-neutral-color-border, $color-border-primary);
 
-  // @todo re-evaluate styling api reassignment
+  // @todo re-evaluate Styling Hooks reassignment
   &:hover,
   &:focus {
     background-color: var(--sds-c-button-neutral-color-background-hover, $color-background-button-default-hover);
     border-color: var(--sds-c-button-neutral-color-border-hover, $color-border-primary);
   }
 
-  // @todo re-evaluate styling api reassignment
+  // @todo re-evaluate Styling Hooks reassignment
   &:active {
     background-color: var(--sds-c-button-neutral-color-background-active, $color-background-button-default-active);
     border-color: var(--sds-c-button-neutral-color-border-active, $color-border-primary);
   }
 
-  // @todo re-evaluate styling api reassignment
+  // @todo re-evaluate Styling Hooks reassignment
   &[disabled],
   &:disabled {
     background-color: var(--sds-c-button-neutral-color-background-disabled, $color-background-button-default-disabled);
@@ -182,16 +183,16 @@ a.slds-button--inverse:focus {
 .slds-button--brand {
   @include button-shape(brand);
 
-  // @todo re-evaluate styling api reassignment
+  // @todo re-evaluate Styling Hooks reassignment
   background-color: var(--sds-c-button-brand-color-background, $brand-accessible);
 
-  // @todo re-evaluate styling api reassignment
+  // @todo re-evaluate Styling Hooks reassignment
   border-color: var(--sds-c-button-brand-color-border, $brand-accessible);
 
-  // @todo re-evaluate styling api reassignment
+  // @todo re-evaluate Styling Hooks reassignment
   color: var(--sds-c-button-brand-color-text, $color-text-brand-primary);
 
-  // @todo re-evaluate styling api reassignment
+  // @todo re-evaluate Styling Hooks reassignment
   &:hover,
   &:focus {
     background-color: var(--sds-c-button-brand-color-background-hover, $brand-accessible-active);
@@ -199,14 +200,14 @@ a.slds-button--inverse:focus {
     color: var(--sds-c-button-brand-color-text-hover, $color-text-brand-primary);
   }
 
-  // @todo re-evaluate styling api reassignment
+  // @todo re-evaluate Styling Hooks reassignment
   &:active {
     background-color: var(--sds-c-button-brand-color-background-active, $brand-accessible-active);
     border-color: var(--sds-c-button-brand-color-border-active, $brand-accessible-active);
     color: var(--sds-c-button-brand-color-text-active, $color-text-brand-primary);
   }
 
-  // @todo re-evaluate styling api reassignment
+  // @todo re-evaluate Styling Hooks reassignment
   &[disabled],
   &:disabled {
     background-color: var(--sds-c-button-brand-color-background-disabled, $brand-disabled);
@@ -226,29 +227,35 @@ a.slds-button--inverse:focus {
 .slds-button_outline-brand {
   @include button-shape(outline-brand);
 
-  // @todo re-evaluate styling api reassignment
+  // @todo re-evaluate Styling Hooks reassignment
   background-color: var(--sds-c-button-outline-brand-color-background, $button-color-background-primary);
 
-  // @todo re-evaluate styling api reassignment
+  // @todo re-evaluate Styling Hooks reassignment
   border-color: var(--sds-c-button-outline-brand-color-border, $brand-accessible);
 
-  // @todo re-evaluate styling api reassignment
+  // @todo re-evaluate Styling Hooks reassignment
   &:hover,
   &:focus {
     background-color: var(--sds-c-button-outline-brand-color-background-hover, $color-background-button-default-hover);
     border-color: var(--sds-c-button-outline-brand-color-border-hover, $brand-accessible);
   }
 
-  // @todo re-evaluate styling api reassignment
+  // @todo re-evaluate Styling Hooks reassignment
   &:active {
-    background-color: var(--sds-c-button-outline-brand-color-background-active, $color-background-button-default-active);
+    background-color: var(
+      --sds-c-button-outline-brand-color-background-active,
+      $color-background-button-default-active
+    );
     border-color: var(--sds-c-button-outline-brand-color-border-active, $brand-accessible);
   }
 
-  // @todo re-evaluate styling api reassignment
+  // @todo re-evaluate Styling Hooks reassignment
   &[disabled],
   &:disabled {
-    background-color: var(--sds-c-button-outline-brand-color-background-disabled, $color-background-button-default-disabled);
+    background-color: var(
+      --sds-c-button-outline-brand-color-background-disabled,
+      $color-background-button-default-disabled
+    );
     border-color: var(--sds-c-button-outline-brand-color-border-disabled, $color-border);
     color: var(--sds-c-button-outline-brand-color-text-disabled, $color-text-button-default-disabled);
   }
@@ -266,26 +273,26 @@ a.slds-button--inverse:focus {
 .slds-button--inverse {
   @include button-shape(inverse);
 
-  // @todo re-evaluate styling api reassignment
+  // @todo re-evaluate Styling Hooks reassignment
   background-color: var(--sds-c-button-inverse-color-background, $color-background-button-inverse);
 
-  // @todo re-evaluate styling api reassignment
+  // @todo re-evaluate Styling Hooks reassignment
   border-color: var(--sds-c-button-inverse-color-border, $button-color-border-primary);
 
-  // @todo re-evaluate styling api reassignment
+  // @todo re-evaluate Styling Hooks reassignment
   &:hover,
   &:focus {
     background-color: var(--sds-c-button-inverse-color-background-hover, $color-background-button-default-hover);
     border-color: var(--sds-c-button-inverse-color-border-hover, $button-color-border-primary);
   }
 
-  // @todo re-evaluate styling api reassignment
+  // @todo re-evaluate Styling Hooks reassignment
   &:active {
     background-color: var(--sds-c-button-inverse-color-background-active, $color-background-button-default-hover);
     border-color: var(--sds-c-button-inverse-color-border-active, $button-color-border-primary);
   }
 
-  // @todo re-evaluate styling api reassignment
+  // @todo re-evaluate Styling Hooks reassignment
   &[disabled],
   &:disabled {
     background-color: var(--sds-c-button-inverse-color-background-disabled, $color-background-button-inverse-disabled);
@@ -335,16 +342,16 @@ a.slds-button--inverse:focus {
 .slds-button--destructive {
   @include button-shape(destructive);
 
-  // @todo re-evaluate styling api reassignment
+  // @todo re-evaluate Styling Hooks reassignment
   background-color: var(--sds-c-button-destructive-color-background, $color-background-destructive);
 
-  // @todo re-evaluate styling api reassignment
+  // @todo re-evaluate Styling Hooks reassignment
   border-color: var(--sds-c-button-destructive-color-border, $color-background-destructive);
 
-  // @todo re-evaluate styling api reassignment
+  // @todo re-evaluate Styling Hooks reassignment
   color: var(--sds-c-button-destructive-color-text, $color-text-inverse);
 
-  // @todo re-evaluate styling api reassignment
+  // @todo re-evaluate Styling Hooks reassignment
   &:hover,
   &:focus {
     background-color: var(--sds-c-button-destructive-color-background-hover, $color-background-destructive-hover);
@@ -352,14 +359,14 @@ a.slds-button--inverse:focus {
     color: var(--sds-c-button-destructive-color-text-hover, $color-text-inverse);
   }
 
-  // @todo re-evaluate styling api reassignment
+  // @todo re-evaluate Styling Hooks reassignment
   &:active {
     background-color: var(--sds-c-button-destructive-color-background-active, $color-background-destructive-active);
     border-color: var(--sds-c-button-destructive-color-border-active, $color-border-destructive-active);
     color: var(--sds-c-button-destructive-color-text-active, $color-text-inverse);
   }
 
-  // @todo re-evaluate styling api reassignment
+  // @todo re-evaluate Styling Hooks reassignment
   &[disabled],
   &:disabled {
     background-color: var(--sds-c-button-destructive-color-background-disabled, $brand-disabled);
@@ -379,34 +386,43 @@ a.slds-button--inverse:focus {
 .slds-button_text-destructive {
   @include button-shape(text-destructive);
 
-  // @todo re-evaluate styling api reassignment
+  // @todo re-evaluate Styling Hooks reassignment
   background-color: var(--sds-c-button-text-destructive-color-background, $button-color-background-primary);
 
-  // @todo re-evaluate styling api reassignment
+  // @todo re-evaluate Styling Hooks reassignment
   border-color: var(--sds-c-button-text-destructive-color-border, $button-color-border-primary);
 
-  // @todo re-evaluate styling api reassignment
+  // @todo re-evaluate Styling Hooks reassignment
   color: var(--sds-c-button-text-destructive-color-text, $color-text-destructive);
 
-  // @todo re-evaluate styling api reassignment
+  // @todo re-evaluate Styling Hooks reassignment
   &:hover,
   &:focus {
-    background-color: var(--sds-c-button-text-destructive-color-background-hover, $color-background-button-default-hover);
+    background-color: var(
+      --sds-c-button-text-destructive-color-background-hover,
+      $color-background-button-default-hover
+    );
     border-color: var(--sds-c-button-text-destructive-color-border-hover, $button-color-border-primary);
     color: var(--sds-c-button-text-destructive-color-text-hover, $color-text-destructive-hover);
   }
 
-  // @todo re-evaluate styling api reassignment
+  // @todo re-evaluate Styling Hooks reassignment
   &:active {
-    background-color: var(--sds-c-button-text-destructive-color-background-active, $color-background-button-default-active);
+    background-color: var(
+      --sds-c-button-text-destructive-color-background-active,
+      $color-background-button-default-active
+    );
     border-color: var(--sds-c-button-text-destructive-color-border-active, $button-color-border-primary);
     color: var(--sds-c-button-text-destructive-color-text-active, $color-text-destructive-hover);
   }
 
-  // @todo re-evaluate styling api reassignment
+  // @todo re-evaluate Styling Hooks reassignment
   &[disabled],
   &:disabled {
-    background-color: var(--sds-c-button-text-destructive-color-background-disabled, $color-background-button-default-disabled);
+    background-color: var(
+      --sds-c-button-text-destructive-color-background-disabled,
+      $color-background-button-default-disabled
+    );
     border-color: var(--sds-c-button-text-destructive-color-border-disabled, $button-color-border-primary);
     color: var(--sds-c-button-text-destructive-color-text-disabled, $color-text-button-default-disabled);
   }
@@ -424,16 +440,16 @@ a.slds-button--inverse:focus {
 .slds-button--success {
   @include button-shape(success);
 
-  // @todo re-evaluate styling api reassignment
+  // @todo re-evaluate Styling Hooks reassignment
   background-color: var(--sds-c-button-success-color-background, $color-background-button-success);
 
-  // @todo re-evaluate styling api reassignment
+  // @todo re-evaluate Styling Hooks reassignment
   border-color: var(--sds-c-button-success-color-border, $color-border-success);
 
-  // @todo re-evaluate styling api reassignment
+  // @todo re-evaluate Styling Hooks reassignment
   color: var(--sds-c-button-success-color-text, $color-text-default);
 
-  // @todo re-evaluate styling api reassignment
+  // @todo re-evaluate Styling Hooks reassignment
   &:hover,
   &:focus {
     background-color: var(--sds-c-button-success-color-background-hover, $color-background-button-success-hover);
@@ -441,14 +457,14 @@ a.slds-button--inverse:focus {
     color: var(--sds-c-button-success-color-text-hover, $color-text-inverse);
   }
 
-  // @todo re-evaluate styling api reassignment
+  // @todo re-evaluate Styling Hooks reassignment
   &:active {
     background-color: var(--sds-c-button-success-color-background-active, $color-background-button-success-active);
     border-color: var(--sds-c-button-success-color-border-active, $color-border-success-dark);
     color: var(--sds-c-button-success-color-text-active, $color-text-inverse);
   }
 
-  // @todo re-evaluate styling api reassignment
+  // @todo re-evaluate Styling Hooks reassignment
   &[disabled],
   &:disabled {
     background-color: var(--sds-c-button-success-color-background-disabled, $brand-disabled);

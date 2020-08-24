@@ -29,10 +29,15 @@ export let states = [
               <PostContent>
                 <p>
                   Hey there! Here's the latest demo presentation{' '}
-                  <a href="#" title="Jenna Davis" onClick={e => e.preventDefault()}>
+                  <a
+                    href="#"
+                    title="Jenna Davis"
+                    onClick={e => e.preventDefault()}
+                  >
                     @Jenna Davis
-                  </a>, let me know if there are any changes. I've updated
-                  slides 3-8 and slides 16-18 slides with new product shots.
+                  </a>
+                  , let me know if there are any changes. I've updated slides
+                  3-8 and slides 16-18 slides with new product shots.
                 </p>
               </PostContent>
               <div className="slds-post__payload">
@@ -63,10 +68,15 @@ export let states = [
               <PostContent>
                 <p>
                   Hey there! Here's the latest demo presentation{' '}
-                  <a href="#" title="Jenna Davis" onClick={e => e.preventDefault()}>
+                  <a
+                    href="#"
+                    title="Jenna Davis"
+                    onClick={e => e.preventDefault()}
+                  >
                     @Jenna Davis
-                  </a>, let me know if there are any changes. I've updated
-                  slides 3-8 and slides 16-18 slides with new product shots.
+                  </a>
+                  , let me know if there are any changes. I've updated slides
+                  3-8 and slides 16-18 slides with new product shots.
                 </p>
               </PostContent>
               <div className="slds-post__payload">

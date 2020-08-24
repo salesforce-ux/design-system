@@ -20,7 +20,8 @@ export const ToggleButton = props => (
     <button
       {...props}
       className="slds-button doc-toggle-code__button"
-      aria-live="polite"
+      aria-pressed={props.open}
+      aria-label="Show Code"
     >
       {props.open ? 'Hide ' : 'Show '} Code
     </button>

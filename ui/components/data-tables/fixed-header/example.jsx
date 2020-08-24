@@ -135,7 +135,7 @@ Container.propTypes = {
   tabIndex: PropTypes.number,
   id: PropTypes.string,
   children: PropTypes.node
-}
+};
 
 let HeadRowData = props => (
   <THeadTr>
@@ -152,10 +152,7 @@ let HeadRowData = props => (
 let RowData = props => (
   <TBodyTr>
     <RowTh data-label={columns[0]}>
-      <ReadOnlyCell
-        cellText={props.recordName}
-        cellLink
-      />
+      <ReadOnlyCell cellText={props.recordName} cellLink />
     </RowTh>
     <Td data-label={columns[1]} type="base">
       <ReadOnlyCell cellText={props.accountName} />

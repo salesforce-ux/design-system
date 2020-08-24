@@ -4,6 +4,7 @@ import CodeView from '../../../shared/components/CodeView';
 import DisplayColumn from '../../../shared/components/DisplayColumn';
 import DisplayGrid from '../../../shared/components/DisplayGrid';
 import { UtilityIcon } from '../icons/base/example';
+import StyleApiTable from '../../../shared/components/StyleApiTable';
 import * as Base from './base/example';
 import { InverseBadge, LightestBadge, Badge, BadgeIcon } from './index';
 import { getDisplayElementById } from '../../shared/helpers';
@@ -12,32 +13,32 @@ import { getDisplayElementById } from '../../shared/helpers';
   Badges are labels which hold small amounts of information.
 </div>
 
-<CodeView exampleOnly>
-  {Base.default}
-</CodeView>
+<CodeView exampleOnly>{Base.default}</CodeView>
 
 ## About Badges
 
 Badges are composed of text inside a `span` element and may include inline/inline-block elements and/or icons.
 
+### Styling Hooks
+
+<StyleApiTable name="badges" type="component" />
+
 ### Colors
 
 There are six different color badges you can use.
 
-| Badge | class | description |
-| ----- | ----- | ----------- |
-| <Badge key="1">Default Badge</Badge>| `.slds-badge`| This is the default badge. You probably want to use this one unless you fall into a specific use-case.|
-| <InverseBadge key="2">Darker Badge</InverseBadge>| `.slds-badge_inverse`| This badge is used when you need higher contrast than our default badge.|
-| <LightestBadge key="3">Lightest Badge</LightestBadge>| `.slds-badge_lightest`| This badge is used when you need higher contrast, such as on colored backgrounds.|
-| <Badge key="4" isSuccess>Success Badge</Badge>| `.slds-badge .slds-theme_success`| This is a badge used to communicate success.|
-| <Badge key="5" isWarning>Warning Badge</Badge>| `.slds-badge .slds-theme_warning`| This is a badge used to communicate a warning.|
-| <Badge key="6" isError>Error Badge</Badge>| `.slds-badge .slds-theme_error`| This is a badge used to communicate an error.|
+| Badge                                                 | class                             | description                                                                                            |
+| ----------------------------------------------------- | --------------------------------- | ------------------------------------------------------------------------------------------------------ |
+| <Badge key="1">Default Badge</Badge>                  | `.slds-badge`                     | This is the default badge. You probably want to use this one unless you fall into a specific use-case. |
+| <InverseBadge key="2">Darker Badge</InverseBadge>     | `.slds-badge_inverse`             | This badge is used when you need higher contrast than our default badge.                               |
+| <LightestBadge key="3">Lightest Badge</LightestBadge> | `.slds-badge_lightest`            | This badge is used when you need higher contrast, such as on colored backgrounds.                      |
+| <Badge key="4" isSuccess>Success Badge</Badge>        | `.slds-badge .slds-theme_success` | This is a badge used to communicate success.                                                           |
+| <Badge key="5" isWarning>Warning Badge</Badge>        | `.slds-badge .slds-theme_warning` | This is a badge used to communicate a warning.                                                         |
+| <Badge key="6" isError>Error Badge</Badge>            | `.slds-badge .slds-theme_error`   | This is a badge used to communicate an error.                                                          |
 
 ## Base
 
-<CodeView toggleCode={false}>
-  {Base.default}
-</CodeView>
+<CodeView toggleCode={false}>{Base.default}</CodeView>
 
 ## Badges with Icons
 
@@ -86,7 +87,6 @@ When using inverse themed badges, add the `slds-badge__icon_inverse` class to `s
     </CodeView>
   </DisplayColumn>
 </DisplayGrid>
-
 
 ## Badges with Nested Elements
 

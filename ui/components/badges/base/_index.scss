@@ -43,10 +43,10 @@
  * @group color
  */
 .slds-badge_inverse {
-  // @todo re-evaluate styling api reassignment
+  // @todo re-evaluate Styling Hooks reassignment
   background-color: var(--sds-c-badge-inverse-color-background, $badge-color-background-inverse);
 
-  // @todo re-evaluate styling api reassignment
+  // @todo re-evaluate Styling Hooks reassignment
   color: var(--sds-c-badge-inverse-color-text, $color-text-inverse);
 }
 
@@ -59,10 +59,10 @@
  * @group color
  */
 .slds-badge_lightest {
-  // @todo re-evaluate styling api reassignment
+  // @todo re-evaluate Styling Hooks reassignment
   background-color: var(--sds-c-badge-lightest-color-background, $badge-color-background-lightest);
 
-  // @todo re-evaluate styling api reassignment
+  // @todo re-evaluate Styling Hooks reassignment
   border-color: var(--sds-c-badge-lightest-color-border, $color-border);
 }
 

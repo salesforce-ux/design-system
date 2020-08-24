@@ -33,12 +33,18 @@
   }
 
   &:hover {
-    background-color: var(--sds-c-pill-color-background-hover, $color-background-button-default-hover); // @todo re-evaluate styling api reassignment
+    background-color: var(
+      --sds-c-pill-color-background-hover,
+      $color-background-button-default-hover
+    ); // @todo re-evaluate Styling Hooks reassignment
   }
 
   &:focus {
     outline: 0;
-    border-color: var(--sds-c-pill-color-border-active, $color-border-input-active); // @todo re-evaluate styling api reassignment
+    border-color: var(
+      --sds-c-pill-color-border-active,
+      $color-border-input-active
+    ); // @todo re-evaluate Styling Hooks reassignment
     box-shadow: var(--sds-c-pill-shadow-active, $shadow-button-focus);
   }
 
@@ -55,11 +61,11 @@
    */
   &_bare,
   &--bare {
-    background-color: transparent; // @todo re-evaluate styling api reassignment
-    border-width: 0; // @todo re-evaluate styling api reassignment
+    background-color: transparent; // @todo re-evaluate Styling Hooks reassignment
+    border-width: 0; // @todo re-evaluate Styling Hooks reassignment
 
     &:hover {
-      background-color: transparent; // @todo re-evaluate styling api reassignment
+      background-color: transparent; // @todo re-evaluate Styling Hooks reassignment
     }
   }
 
@@ -184,7 +190,9 @@
  */
 .slds-pill__action {
   padding-top: var(--sds-c-pill-spacing-block-start, $spacing-xxx-small);
-  padding-right: calc(#{$square-icon-xx-small-boundary} + var(--sds-c-pill-spacing-inline-end, #{$spacing-xxx-small}) + 2px);
+  padding-right: calc(
+    #{$square-icon-xx-small-boundary} + var(--sds-c-pill-spacing-inline-end, #{$spacing-xxx-small}) + 2px
+  );
   padding-bottom: var(--sds-c-pill-spacing-block-end, $spacing-xxx-small);
   padding-left: var(--sds-c-pill-spacing-inline-start, $spacing-xxx-small);
   border-width: var(--sds-c-pill-sizing-border, $border-width-thin);
@@ -198,8 +206,11 @@
 
   &:focus {
     outline: 0;
-    border-color: var(--sds-c-pill-action-color-border, $color-border-input-active); // @todo re-evaluate styling api reassignment
-    box-shadow: var(--sds-c-pill-action-shadow, $shadow-button-focus); // @todo re-evaluate styling api reassignment
+    border-color: var(
+      --sds-c-pill-action-color-border,
+      $color-border-input-active
+    ); // @todo re-evaluate Styling Hooks reassignment
+    box-shadow: var(--sds-c-pill-action-shadow, $shadow-button-focus); // @todo re-evaluate Styling Hooks reassignment
   }
 }
 
@@ -211,10 +222,16 @@
  * @modifier
  */
 .slds-has-error {
-  border-color: var(--sds-c-pill-error-color-border, $color-border-error); // @todo re-evaluate styling api reassignment
+  border-color: var(
+    --sds-c-pill-error-color-border,
+    $color-border-error
+  ); // @todo re-evaluate Styling Hooks reassignment
 
   &:active {
-    border-color: var(--sds-c-pill-error-color-border-active, $color-border-error); // @todo re-evaluate styling api reassignment
+    border-color: var(
+      --sds-c-pill-error-color-border-active,
+      $color-border-error
+    ); // @todo re-evaluate Styling Hooks reassignment
   }
 
   .slds-pill__label {

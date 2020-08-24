@@ -138,8 +138,8 @@ export let NavVerticalSection = props => {
           {sectionContent}
         </div>
       ) : (
-          sectionContent
-        )}
+        sectionContent
+      )}
     </div>
   );
 };

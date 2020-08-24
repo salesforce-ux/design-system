@@ -12,7 +12,8 @@ Refactored the component markup to function with or without theme utility classe
 ## 2.13.0
 
 ### Added
-- Added the brand expression specific Styling API
+
+- Added the brand expression specific Styling Hooks
 
 ## 2.8.0
 

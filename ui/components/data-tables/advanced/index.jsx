@@ -68,10 +68,10 @@ export const AdvancedDataTableTr = props => (
         </div>
       </Td>
     ) : (
-        <Td type="advanced">
-          <ReadOnlyCell cellText={props.amount} />
-        </Td>
-      )}
+      <Td type="advanced">
+        <ReadOnlyCell cellText={props.amount} />
+      </Td>
+    )}
     <Td type="advanced">
       <ReadOnlyCell
         actionableMode={props.actionableMode}

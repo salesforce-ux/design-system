@@ -1311,6 +1311,7 @@ exports[`AdvancedDataTableHead component should render menus 1`] = `
       <button
         aria-haspopup="true"
         className="slds-button slds-button_icon slds-th__action-button slds-button_icon-x-small"
+        onClick={[Function]}
         tabIndex="-1"
         title="Show Name column actions"
       >
@@ -2531,6 +2532,7 @@ exports[`EditableCell component should lock the cell 1`] = `
   <button
     className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
     disabled={true}
+    onClick={[Function]}
     tabIndex="-1"
     title="Edit field of cell text"
   >
@@ -2563,6 +2565,7 @@ exports[`EditableCell component should render 1`] = `
   </span>
   <button
     className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
+    onClick={[Function]}
     tabIndex="-1"
     title="Edit field of cell text"
   >
@@ -2599,6 +2602,7 @@ exports[`EditableCell component should render a cell text as link 1`] = `
   </a>
   <button
     className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
+    onClick={[Function]}
     tabIndex="-1"
     title="Edit field of cell text"
   >
@@ -2635,6 +2639,7 @@ exports[`EditableCell component should set tabindex to 0 on focusable elements w
   </a>
   <button
     className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
+    onClick={[Function]}
     tabIndex="0"
     title="Edit field of cell text"
   >
@@ -2668,6 +2673,7 @@ Array [
     </span>
     <button
       className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
+      onClick={[Function]}
       tabIndex="-1"
       title="Edit field of cell text"
     >
@@ -2751,6 +2757,7 @@ Array [
     </span>
     <button
       className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
+      onClick={[Function]}
       tabIndex="-1"
       title="Edit field of cell text"
     >
@@ -2828,6 +2835,7 @@ Array [
     </span>
     <button
       className="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small"
+      onClick={[Function]}
       tabIndex="-1"
       title="Edit field of cell text"
     >
@@ -2905,6 +2913,7 @@ Array [
     aria-hidden={null}
     className="slds-button slds-button_icon slds-button_icon-error slds-m-horizontal_xxx-small"
     id="error-01"
+    onClick={[Function]}
     tabIndex="-1"
     title="Item 1 has errors"
   >
@@ -2934,6 +2943,7 @@ Array [
     aria-hidden="true"
     className="slds-button slds-button_icon slds-button_icon-error slds-m-horizontal_xxx-small slds-hidden"
     id="error-01"
+    onClick={[Function]}
     tabIndex="-1"
     title="Item 1 has errors"
   >
@@ -2963,6 +2973,7 @@ Array [
     aria-hidden={null}
     className="slds-button slds-button_icon slds-button_icon-error slds-m-horizontal_xxx-small"
     id="error-01"
+    onClick={[Function]}
     tabIndex="0"
     title="Item 1 has errors"
   >
@@ -3370,6 +3381,7 @@ Array [
   <button
     aria-haspopup="true"
     className="slds-button slds-button_icon slds-th__action-button slds-button_icon-x-small"
+    onClick={[Function]}
     tabIndex="-1"
     title="Show Column Name column actions"
   >
@@ -3498,6 +3510,7 @@ exports[`RowActionsCell component should render 1`] = `
 <button
   aria-haspopup="true"
   className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+  onClick={[Function]}
   tabIndex="-1"
   title="More actions for row name"
 >
@@ -3521,6 +3534,7 @@ exports[`RowActionsCell component should set tabindex to 0 when in actionable mo
 <button
   aria-haspopup="true"
   className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+  onClick={[Function]}
   tabIndex="0"
   title="More actions for row name"
 >

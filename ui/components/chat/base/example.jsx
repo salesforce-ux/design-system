@@ -136,7 +136,9 @@ export const states = [
                   symbol="attachment"
                   title="Attachment"
                 />
-                <a href="#" onClick={e => e.preventDefault()}>filename_of_attachment.jpg</a>
+                <a href="#" onClick={e => e.preventDefault()}>
+                  filename_of_attachment.jpg
+                </a>
               </ChatMessageBody>
             </ChatMessage>
           </ChatListItem>
@@ -222,7 +224,9 @@ export const states = [
                 Hi Taylor, thank you for contacting Widget Support. Can you
                 please tell me what language you are trying to program on your
                 CloudWidget?{' '}
-                <a href="#" onClick={e => e.preventDefault()}>http://www.cloud.widget</a>
+                <a href="#" onClick={e => e.preventDefault()}>
+                  http://www.cloud.widget
+                </a>
               </ChatMessageBody>
             </ChatMessage>
           </ChatListItem>

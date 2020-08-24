@@ -35,10 +35,7 @@ export default (
       </TBodyTr>
       <TBodyTr>
         <Td data-label="Opportunity Name" type="base">
-          <ReadOnlyCell
-            cellText="Cloudhub + Anypoint Connectors"
-            cellLink
-          />
+          <ReadOnlyCell cellText="Cloudhub + Anypoint Connectors" cellLink />
         </Td>
       </TBodyTr>
     </TBody>

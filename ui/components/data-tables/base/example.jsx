@@ -97,10 +97,7 @@ export let examples = [
         <TBody>
           <TBodyTr>
             <Td data-label="Opportunity Name" type="base">
-              <ReadOnlyCell
-                cellLink
-                cellText="Cloudhub"
-              />
+              <ReadOnlyCell cellLink cellText="Cloudhub" />
             </Td>
           </TBodyTr>
           <TBodyTr>

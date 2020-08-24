@@ -7,6 +7,7 @@ exports[`Base Tree - Branch Item renders a tree branch item with a label passed 
   <button
     aria-hidden="true"
     className="slds-button slds-button_icon slds-m-right_x-small"
+    onClick={[Function]}
     tabIndex="-1"
     title="Expand Tree Item"
   >
@@ -44,6 +45,7 @@ exports[`Base Tree - Branch Item renders a tree branch item with metatext 1`] = 
   <button
     aria-hidden="true"
     className="slds-button slds-button_icon slds-m-right_x-small"
+    onClick={[Function]}
     tabIndex="-1"
     title="Expand Tree Item"
   >
@@ -98,6 +100,7 @@ exports[`Base Tree - List Item for Branches renders a tree list item at index 0,
     <button
       aria-hidden="true"
       className="slds-button slds-button_icon slds-m-right_x-small"
+      onClick={[Function]}
       tabIndex="-1"
       title="Expand Test Branch"
     >
@@ -142,6 +145,7 @@ exports[`Base Tree - List Item for Branches renders a tree list item for a branc
     <button
       aria-hidden="true"
       className="slds-button slds-button_icon slds-m-right_x-small"
+      onClick={[Function]}
       tabIndex="-1"
       title="Expand Test Branch"
     >
@@ -188,6 +192,7 @@ exports[`Base Tree - List Item for Branches renders a tree list item for a branc
     <button
       aria-hidden="true"
       className="slds-button slds-button_icon slds-m-right_x-small"
+      onClick={[Function]}
       tabIndex="-1"
       title="Expand Test Branch"
     >
@@ -232,6 +237,7 @@ exports[`Base Tree - List Item for Branches renders a tree list item for a branc
     <button
       aria-hidden="true"
       className="slds-button slds-button_icon slds-m-right_x-small"
+      onClick={[Function]}
       tabIndex="-1"
       title="Expand Test Branch"
     >
@@ -287,6 +293,7 @@ exports[`Base Tree - List Item for Branches renders a tree list item for a branc
     <button
       aria-hidden="true"
       className="slds-button slds-button_icon slds-m-right_x-small"
+      onClick={[Function]}
       tabIndex="-1"
       title="Expand Test Branch"
     >
@@ -331,6 +338,7 @@ exports[`Base Tree - List Item for individual Items renders a default tree list 
     <button
       aria-hidden="true"
       className="slds-button slds-button_icon slds-m-right_x-small slds-hidden"
+      onClick={[Function]}
       tabIndex="-1"
       title="Expand Tree Item"
     >
@@ -377,6 +385,7 @@ exports[`Base Tree - List Item for individual Items renders a tree list item tha
     <button
       aria-hidden="true"
       className="slds-button slds-button_icon slds-m-right_x-small slds-hidden"
+      onClick={[Function]}
       tabIndex="-1"
       title="Expand Tree Item"
     >
@@ -421,6 +430,7 @@ exports[`Base Tree - List Item for individual Items renders a tree list item wit
     <button
       aria-hidden="true"
       className="slds-button slds-button_icon slds-m-right_x-small slds-hidden"
+      onClick={[Function]}
       tabIndex="-1"
       title="Expand Tree Item"
     >
@@ -465,6 +475,7 @@ exports[`Base Tree - List Item for individual Items renders a tree list item wit
     <button
       aria-hidden="true"
       className="slds-button slds-button_icon slds-m-right_x-small slds-hidden"
+      onClick={[Function]}
       tabIndex="-1"
       title="Expand Test Item"
     >
@@ -521,6 +532,7 @@ exports[`Base Tree - List Item for individual Items renders a tree list item wit
     <button
       aria-hidden="true"
       className="slds-button slds-button_icon slds-m-right_x-small slds-hidden"
+      onClick={[Function]}
       tabIndex="-1"
       title="Expand Tree Item"
     >
@@ -593,6 +605,7 @@ exports[`Base Tree - Tree Group renders a tree group with children 1`] = `
       <button
         aria-hidden="true"
         className="slds-button slds-button_icon slds-m-right_x-small slds-hidden"
+        onClick={[Function]}
         tabIndex="-1"
         title="Expand Tree Item"
       >
@@ -648,6 +661,7 @@ exports[`Base Tree - Tree Item renders a default tree item 1`] = `
   <button
     aria-hidden="true"
     className="slds-button slds-button_icon slds-m-right_x-small slds-hidden"
+    onClick={[Function]}
     tabIndex="-1"
     title="Expand Tree Item"
   >
@@ -685,6 +699,7 @@ exports[`Base Tree - Tree Item renders a tree item with a label passed in 1`] = 
   <button
     aria-hidden="true"
     className="slds-button slds-button_icon slds-m-right_x-small slds-hidden"
+    onClick={[Function]}
     tabIndex="-1"
     title="Expand Tree Item Label"
   >
@@ -722,6 +737,7 @@ exports[`Base Tree - Tree Item renders a tree item with children 1`] = `
   <button
     aria-hidden="true"
     className="slds-button slds-button_icon slds-m-right_x-small slds-hidden"
+    onClick={[Function]}
     tabIndex="-1"
     title="Expand Tree Item"
   >
@@ -760,6 +776,7 @@ exports[`Base Tree - Tree Item renders a tree item with marked term 1`] = `
   <button
     aria-hidden="true"
     className="slds-button slds-button_icon slds-m-right_x-small slds-hidden"
+    onClick={[Function]}
     tabIndex="-1"
     title="Expand lightning button"
   >
@@ -803,6 +820,7 @@ exports[`Base Tree - Tree Item renders a tree item with marked term in metatext 
   <button
     aria-hidden="true"
     className="slds-button slds-button_icon slds-m-right_x-small slds-hidden"
+    onClick={[Function]}
     tabIndex="-1"
     title="Expand lightning button"
   >
@@ -863,6 +881,7 @@ exports[`Base Tree - Tree Item renders a tree item with metatext 1`] = `
   <button
     aria-hidden="true"
     className="slds-button slds-button_icon slds-m-right_x-small slds-hidden"
+    onClick={[Function]}
     tabIndex="-1"
     title="Expand Tree Item"
   >
@@ -930,6 +949,7 @@ exports[`Base Tree - Tree List renders a tree list with children 1`] = `
       <button
         aria-hidden="true"
         className="slds-button slds-button_icon slds-m-right_x-small slds-hidden"
+        onClick={[Function]}
         tabIndex="-1"
         title="Expand Tree Item"
       >
@@ -990,6 +1010,7 @@ exports[`tree renders a base Tree with metatext 1`] = `
         <button
           aria-hidden="true"
           className="slds-button slds-button_icon slds-m-right_x-small slds-hidden"
+          onClick={[Function]}
           tabIndex="-1"
           title="Expand Tree Item"
         >
@@ -1031,6 +1052,7 @@ exports[`tree renders a base Tree with metatext 1`] = `
         <button
           aria-hidden="true"
           className="slds-button slds-button_icon slds-m-right_x-small"
+          onClick={[Function]}
           tabIndex="-1"
           title="Expand Tree Branch"
         >
@@ -1074,6 +1096,7 @@ exports[`tree renders a base Tree with metatext 1`] = `
             <button
               aria-hidden="true"
               className="slds-button slds-button_icon slds-m-right_x-small slds-hidden"
+              onClick={[Function]}
               tabIndex="-1"
               title="Expand Tree Item"
             >
@@ -1128,6 +1151,7 @@ exports[`tree renders a base Tree with metatext 1`] = `
         <button
           aria-hidden="true"
           className="slds-button slds-button_icon slds-m-right_x-small"
+          onClick={[Function]}
           tabIndex="-1"
           title="Expand Tree Branch"
         >
@@ -1182,6 +1206,7 @@ exports[`tree renders a base Tree with metatext 1`] = `
             <button
               aria-hidden="true"
               className="slds-button slds-button_icon slds-m-right_x-small slds-hidden"
+              onClick={[Function]}
               tabIndex="-1"
               title="Expand Tree Item"
             >
@@ -1225,6 +1250,7 @@ exports[`tree renders a base Tree with metatext 1`] = `
         <button
           aria-hidden="true"
           className="slds-button slds-button_icon slds-m-right_x-small slds-hidden"
+          onClick={[Function]}
           tabIndex="-1"
           title="Expand Tree Item with a Really Really Long Name That Should Truncate"
         >

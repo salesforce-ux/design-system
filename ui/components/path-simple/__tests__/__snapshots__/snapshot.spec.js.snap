@@ -993,7 +993,8 @@ exports[`SimplePath renders the legacy Simple Path in a different stage 1`] = `
             >
               latest template
             </a>
-             and review with Marketing and Sales teams. Review demo copy with Legal and Doc team.
+             
+            and review with Marketing and Sales teams. Review demo copy with Legal and Doc team.
           </p>
           <p>
             Look up
@@ -1004,7 +1005,8 @@ exports[`SimplePath renders the legacy Simple Path in a different stage 1`] = `
             >
               needs analysis principles
             </a>
-             and review selling plan with Sales Engineer.
+             
+            and review selling plan with Sales Engineer.
           </p>
         </div>
       </div>
@@ -1705,7 +1707,8 @@ exports[`SimplePath renders the legacy Simple Path with Visible Coaching 1`] = `
             >
               latest template
             </a>
-             and review with Marketing and Sales teams. Review demo copy with Legal and Doc team.
+             
+            and review with Marketing and Sales teams. Review demo copy with Legal and Doc team.
           </p>
           <p>
             Look up
@@ -1716,7 +1719,8 @@ exports[`SimplePath renders the legacy Simple Path with Visible Coaching 1`] = `
             >
               needs analysis principles
             </a>
-             and review selling plan with Sales Engineer.
+             
+            and review selling plan with Sales Engineer.
           </p>
         </div>
       </div>

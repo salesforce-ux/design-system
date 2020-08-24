@@ -262,18 +262,16 @@ export default (
     style={{ display: 'flex', width: '20rem', height: '37.5rem' }}
   >
     <SplitView>
-      {results
-        .slice(0, 5)
-        .map((result, i) => (
-          <Row
-            key={i}
-            colOne={result.colOne}
-            colTwo={result.colTwo}
-            colThree={result.colThree}
-            colFour={result.colFour}
-            tabIndex={i === 0 ? 0 : -1}
-          />
-        ))}
+      {results.slice(0, 5).map((result, i) => (
+        <Row
+          key={i}
+          colOne={result.colOne}
+          colTwo={result.colTwo}
+          colThree={result.colThree}
+          colFour={result.colFour}
+          tabIndex={i === 0 ? 0 : -1}
+        />
+      ))}
     </SplitView>
   </div>
 );
@@ -288,19 +286,17 @@ export let states = [
         style={{ display: 'flex', width: '20rem', height: '37.5rem' }}
       >
         <SplitView>
-          {results
-            .slice(0, 5)
-            .map((result, i) => (
-              <Row
-                key={i}
-                selected={result.selected}
-                colOne={result.colOne}
-                colTwo={result.colTwo}
-                colThree={result.colThree}
-                colFour={result.colFour}
-                tabIndex={i === 0 ? 0 : -1}
-              />
-            ))}
+          {results.slice(0, 5).map((result, i) => (
+            <Row
+              key={i}
+              selected={result.selected}
+              colOne={result.colOne}
+              colTwo={result.colTwo}
+              colThree={result.colThree}
+              colFour={result.colFour}
+              tabIndex={i === 0 ? 0 : -1}
+            />
+          ))}
         </SplitView>
       </div>
     )

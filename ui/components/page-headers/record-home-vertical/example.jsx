@@ -108,7 +108,9 @@ export const RecordHomeVertical = props => (
                 </Avatar>
               </div>
               <div className="slds-media__body">
-                <a href="#" onClick={e => e.preventDefault()}>Jeanette Gomez</a>
+                <a href="#" onClick={e => e.preventDefault()}>
+                  Jeanette Gomez
+                </a>
               </div>
             </div>
           </PageHeaderDetailBody>

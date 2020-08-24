@@ -356,11 +356,7 @@ export let examples = [
     label: 'Visibly hidden card header',
     element: (
       <Card>
-        <CardHeader
-          title="Card Header"
-          href
-          className="slds-assistive-text"
-        />
+        <CardHeader title="Card Header" href className="slds-assistive-text" />
         <CardBody hasPadding>Anything can go into the card body</CardBody>
         <CardFooter>
           View All <span className="slds-assistive-text">Accounts</span>
@@ -373,11 +369,7 @@ export let examples = [
     label: 'Body with no padding',
     element: (
       <Card>
-        <CardHeader
-          title="Accounts"
-          href
-          symbol="account"
-        />
+        <CardHeader title="Accounts" href symbol="account" />
         <CardBody>Card Body</CardBody>
       </Card>
     )
@@ -387,11 +379,7 @@ export let examples = [
     label: 'Body with padding',
     element: (
       <Card>
-        <CardHeader
-          title="Accounts"
-          href
-          symbol="account"
-        />
+        <CardHeader title="Accounts" href symbol="account" />
         <CardBody hasPadding>Card Body with Padding</CardBody>
       </Card>
     )
@@ -401,12 +389,7 @@ export let examples = [
     label: 'No footer',
     element: (
       <Card>
-        <CardHeader
-          title="Accounts"
-          href
-          showIcon
-          symbol="account"
-        />
+        <CardHeader title="Accounts" href showIcon symbol="account" />
         <CardBody hasPadding>Card Body</CardBody>
         <CardFooter />
       </Card>
@@ -417,12 +400,7 @@ export let examples = [
     label: 'Has footer',
     element: (
       <Card>
-        <CardHeader
-          title="Accounts"
-          href
-          showIcon
-          symbol="account"
-        />
+        <CardHeader title="Accounts" href showIcon symbol="account" />
         <CardBody hasPadding>Card Body</CardBody>
         <CardFooter>
           View All <span className="slds-assistive-text">Accounts</span>
@@ -435,18 +413,10 @@ export let examples = [
     label: 'Nested with no boundary',
     element: (
       <Card>
-        <CardHeader
-          title="Outer Card Header"
-          href
-          symbol="account"
-        />
+        <CardHeader title="Outer Card Header" href symbol="account" />
         <CardBody hasPadding>
           <Card>
-            <CardHeader
-              title="Card Header"
-              href
-              symbol="account"
-            />
+            <CardHeader title="Card Header" href symbol="account" />
             <CardBody hasPadding>
               This is a nested card with no styling (default)
             </CardBody>
@@ -466,18 +436,10 @@ export let examples = [
     label: 'Nested with boundary',
     element: (
       <Card>
-        <CardHeader
-          title="Outer Card Header"
-          href
-          symbol="account"
-        />
+        <CardHeader title="Outer Card Header" href symbol="account" />
         <CardBody hasPadding>
           <Card hasCardBoundary>
-            <CardHeader
-              title="Card Header"
-              href
-              symbol="account"
-            />
+            <CardHeader title="Card Header" href symbol="account" />
             <CardBody hasPadding>
               This is a card inside an `slds-card` to illustrate how
               `slds-card_boundary` adds a rounded border when desired.

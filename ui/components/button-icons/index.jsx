@@ -78,6 +78,10 @@ class ButtonIcon extends Component {
 
     return (
       <button
+        onClick={e => {
+          // Temporary fix to stop Action Menus from triggering Accordion Section toggling
+          e.stopPropagation();
+        }}
         id={id}
         className={classNames(
           'slds-button slds-button_icon',

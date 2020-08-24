@@ -62,10 +62,7 @@ export const RowData = props => (
       <ReadOnlyCell cellText="$25k" />
     </Td>
     <Td data-label="Contact" type="base">
-      <ReadOnlyCell
-        cellLink
-        cellText="jrogers@cloudhub.com"
-      />
+      <ReadOnlyCell cellLink cellText="jrogers@cloudhub.com" />
     </Td>
   </TBodyTr>
 );
@@ -321,8 +318,8 @@ export let InteractiveColumnHeader = props => {
           {renderHeaderText()}
         </a>
       ) : (
-          <div className="slds-th__action">{renderHeaderText()}</div>
-        )}
+        <div className="slds-th__action">{renderHeaderText()}</div>
+      )}
 
       {props.sortDirection && (
         <span
@@ -426,11 +423,11 @@ export const AdvancedDataTableHead = props => {
                 isAssistiveText
               />
             ) : (
-                <SelectAllColumnHeader
-                  actionableMode={props.actionableMode}
-                  checked={props.selectAll}
-                />
-              )}
+              <SelectAllColumnHeader
+                actionableMode={props.actionableMode}
+                checked={props.selectAll}
+              />
+            )}
           </ColumnTh>
         )}
 
@@ -646,16 +643,16 @@ export const SelectRowCell = props => (
         tabIndex={props.inputTabIndex}
       />
     ) : (
-        <Checkbox
-          checked={props.checked}
-          groupId="column-group-header"
-          hideLabel
-          id={`checkbox-0${props.index}`}
-          label={`Select item ${props.index}`}
-          labelId={`check-button-label-0${props.index}`}
-          tabIndex={props.inputTabIndex}
-        />
-      )}
+      <Checkbox
+        checked={props.checked}
+        groupId="column-group-header"
+        hideLabel
+        id={`checkbox-0${props.index}`}
+        label={`Select item ${props.index}`}
+        labelId={`check-button-label-0${props.index}`}
+        tabIndex={props.inputTabIndex}
+      />
+    )}
   </React.Fragment>
 );
 SelectRowCell.displayName = 'SelectRowCell';
@@ -724,19 +721,25 @@ export const ReadOnlyCell = ({
   cellLink,
   actionableMode
 }) => (
-    <div
-      className={classNames(hasWrap ? 'slds-line-clamp' : 'slds-truncate')}
-      title={cellText}
-    >
-      {cellLink ? (
-        <a href="#" tabIndex={actionableMode ? '0' : '-1'} onClick={e => { e.preventDefault() }}>
-          {cellText}
-        </a>
-      ) : (
-          cellText
-        )}
-    </div>
-  );
+  <div
+    className={classNames(hasWrap ? 'slds-line-clamp' : 'slds-truncate')}
+    title={cellText}
+  >
+    {cellLink ? (
+      <a
+        href="#"
+        tabIndex={actionableMode ? '0' : '-1'}
+        onClick={e => {
+          e.preventDefault();
+        }}
+      >
+        {cellText}
+      </a>
+    ) : (
+      cellText
+    )}
+  </div>
+);
 ReadOnlyCell.displayName = 'ReadOnlyCell';
 ReadOnlyCell.propTypes = {
   actionableMode: IsDependentOn('cellLink', PropTypes.bool),
@@ -763,10 +766,10 @@ export const EditableCell = props => (
           {props.cellText}
         </a>
       ) : (
-          <span className="slds-truncate" title={props.cellText}>
-            {props.cellText}
-          </span>
-        )}
+        <span className="slds-truncate" title={props.cellText}>
+          {props.cellText}
+        </span>
+      )}
       <ButtonIcon
         assistiveText={props.buttonText}
         className="slds-cell-edit__button slds-m-left_x-small"

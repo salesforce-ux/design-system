@@ -5,6 +5,7 @@ exports[`Summary-Detail renders a closed summary-detail action 1`] = `
   aria-controls="test-id-4"
   aria-expanded="false"
   className="slds-button slds-button_icon slds-m-right_x-small"
+  onClick={[Function]}
   title="Toggle details for Summary Title"
 >
   <svg
@@ -28,6 +29,7 @@ exports[`Summary-Detail renders an open summary-detail action 1`] = `
   aria-controls="test-id-3"
   aria-expanded="true"
   className="slds-button slds-button_icon slds-m-right_x-small"
+  onClick={[Function]}
   title="Toggle details for Summary Title"
 >
   <svg

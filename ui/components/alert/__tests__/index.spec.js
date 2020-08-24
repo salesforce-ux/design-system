@@ -18,7 +18,8 @@ it('renders a base alert', () =>
         symbol="user"
       />
       <Heading level="2">
-        Logged in as John Smith (johnsmith@acme.com). <EmptyLink>Log out</EmptyLink>
+        Logged in as John Smith (johnsmith@acme.com).{' '}
+        <EmptyLink>Log out</EmptyLink>
       </Heading>
     </Alert>
   ));
@@ -33,7 +34,8 @@ it('renders a warning alert', () =>
         symbol="warning"
       />
       <Heading level="2">
-        Your browser is outdated. Your Salesforce experience may be degraded. <EmptyLink>More Information</EmptyLink>
+        Your browser is outdated. Your Salesforce experience may be degraded.{' '}
+        <EmptyLink>More Information</EmptyLink>
       </Heading>
     </Alert>
   ));
@@ -48,7 +50,8 @@ it('renders a error alert', () =>
         symbol="error"
       />
       <Heading level="2">
-        Your browser is currently not supported. Your Salesforce may be degraded. <EmptyLink>More Information</EmptyLink>
+        Your browser is currently not supported. Your Salesforce may be
+        degraded. <EmptyLink>More Information</EmptyLink>
       </Heading>
     </Alert>
   ));

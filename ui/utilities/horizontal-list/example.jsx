@@ -26,10 +26,14 @@ export let examples = [
           </a>
         </li>
         <li>
-          <a href="#" onClick={e => e.preventDefault()}>List Item</a>
+          <a href="#" onClick={e => e.preventDefault()}>
+            List Item
+          </a>
         </li>
         <li>
-          <a href="#" onClick={e => e.preventDefault()}>List Item</a>
+          <a href="#" onClick={e => e.preventDefault()}>
+            List Item
+          </a>
         </li>
       </ul>
     )
@@ -45,10 +49,14 @@ export let examples = [
           </a>
         </li>
         <li>
-          <a href="#" onClick={e => e.preventDefault()}>List Item</a>
+          <a href="#" onClick={e => e.preventDefault()}>
+            List Item
+          </a>
         </li>
         <li>
-          <a href="#" onClick={e => e.preventDefault()}>List Item</a>
+          <a href="#" onClick={e => e.preventDefault()}>
+            List Item
+          </a>
         </li>
       </ul>
     )
@@ -64,10 +72,14 @@ export let examples = [
           </a>
         </li>
         <li>
-          <a href="#" onClick={e => e.preventDefault()}>List Item</a>
+          <a href="#" onClick={e => e.preventDefault()}>
+            List Item
+          </a>
         </li>
         <li>
-          <a href="#" onClick={e => e.preventDefault()}>List Item</a>
+          <a href="#" onClick={e => e.preventDefault()}>
+            List Item
+          </a>
         </li>
       </ul>
     )
@@ -83,10 +95,14 @@ export let examples = [
           </a>
         </li>
         <li>
-          <a href="#" onClick={e => e.preventDefault()}>List Item</a>
+          <a href="#" onClick={e => e.preventDefault()}>
+            List Item
+          </a>
         </li>
         <li>
-          <a href="#" onClick={e => e.preventDefault()}>List Item</a>
+          <a href="#" onClick={e => e.preventDefault()}>
+            List Item
+          </a>
         </li>
       </ul>
     )
@@ -102,10 +118,14 @@ export let examples = [
           </a>
         </li>
         <li>
-          <a href="#" onClick={e => e.preventDefault()}>List Item</a>
+          <a href="#" onClick={e => e.preventDefault()}>
+            List Item
+          </a>
         </li>
         <li>
-          <a href="#" onClick={e => e.preventDefault()}>List Item</a>
+          <a href="#" onClick={e => e.preventDefault()}>
+            List Item
+          </a>
         </li>
       </ul>
     )
@@ -134,10 +154,14 @@ export let examples = [
           </a>
         </li>
         <li className="slds-item">
-          <a href="#" onClick={e => e.preventDefault()}>List Item</a>
+          <a href="#" onClick={e => e.preventDefault()}>
+            List Item
+          </a>
         </li>
         <li className="slds-item">
-          <a href="#" onClick={e => e.preventDefault()}>List Item</a>
+          <a href="#" onClick={e => e.preventDefault()}>
+            List Item
+          </a>
         </li>
       </ul>
     )
@@ -153,10 +177,14 @@ export let examples = [
           </a>
         </li>
         <li className="slds-item">
-          <a href="#" onClick={e => e.preventDefault()}>List Item</a>
+          <a href="#" onClick={e => e.preventDefault()}>
+            List Item
+          </a>
         </li>
         <li className="slds-item">
-          <a href="#" onClick={e => e.preventDefault()}>List Item</a>
+          <a href="#" onClick={e => e.preventDefault()}>
+            List Item
+          </a>
         </li>
       </ul>
     )
@@ -185,10 +213,14 @@ export let examples = [
           </a>
         </li>
         <li className="slds-item">
-          <a href="#" onClick={e => e.preventDefault()}>List Item</a>
+          <a href="#" onClick={e => e.preventDefault()}>
+            List Item
+          </a>
         </li>
         <li className="slds-item">
-          <a href="#" onClick={e => e.preventDefault()}>List Item</a>
+          <a href="#" onClick={e => e.preventDefault()}>
+            List Item
+          </a>
         </li>
       </ul>
     )
@@ -204,10 +236,14 @@ export let examples = [
           </a>
         </li>
         <li className="slds-item">
-          <a href="#" onClick={e => e.preventDefault()}>List Item</a>
+          <a href="#" onClick={e => e.preventDefault()}>
+            List Item
+          </a>
         </li>
         <li className="slds-item">
-          <a href="#" onClick={e => e.preventDefault()}>List Item</a>
+          <a href="#" onClick={e => e.preventDefault()}>
+            List Item
+          </a>
         </li>
       </ul>
     )

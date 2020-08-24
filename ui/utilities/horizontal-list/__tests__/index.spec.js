@@ -22,10 +22,14 @@ describe('renders horizontal list utilities', () => {
           </a>
         </li>
         <li>
-          <a href="#" onClick={e => e.preventDefault()}>List Item</a>
+          <a href="#" onClick={e => e.preventDefault()}>
+            List Item
+          </a>
         </li>
         <li>
-          <a href="#" onClick={e => e.preventDefault()}>List Item</a>
+          <a href="#" onClick={e => e.preventDefault()}>
+            List Item
+          </a>
         </li>
       </ul>
     ));
@@ -39,10 +43,14 @@ describe('renders horizontal list utilities', () => {
           </a>
         </li>
         <li>
-          <a href="#" onClick={e => e.preventDefault()}>List Item</a>
+          <a href="#" onClick={e => e.preventDefault()}>
+            List Item
+          </a>
         </li>
         <li>
-          <a href="#" onClick={e => e.preventDefault()}>List Item</a>
+          <a href="#" onClick={e => e.preventDefault()}>
+            List Item
+          </a>
         </li>
       </ul>
     ));
@@ -56,10 +64,14 @@ describe('renders horizontal list utilities', () => {
           </a>
         </li>
         <li>
-          <a href="#" onClick={e => e.preventDefault()}>List Item</a>
+          <a href="#" onClick={e => e.preventDefault()}>
+            List Item
+          </a>
         </li>
         <li>
-          <a href="#" onClick={e => e.preventDefault()}>List Item</a>
+          <a href="#" onClick={e => e.preventDefault()}>
+            List Item
+          </a>
         </li>
       </ul>
     ));
@@ -73,10 +85,14 @@ describe('renders horizontal list utilities', () => {
           </a>
         </li>
         <li>
-          <a href="#" onClick={e => e.preventDefault()}>List Item</a>
+          <a href="#" onClick={e => e.preventDefault()}>
+            List Item
+          </a>
         </li>
         <li>
-          <a href="#" onClick={e => e.preventDefault()}>List Item</a>
+          <a href="#" onClick={e => e.preventDefault()}>
+            List Item
+          </a>
         </li>
       </ul>
     ));
@@ -90,10 +106,14 @@ describe('renders horizontal list utilities', () => {
           </a>
         </li>
         <li>
-          <a href="#" onClick={e => e.preventDefault()}>List Item</a>
+          <a href="#" onClick={e => e.preventDefault()}>
+            List Item
+          </a>
         </li>
         <li>
-          <a href="#" onClick={e => e.preventDefault()}>List Item</a>
+          <a href="#" onClick={e => e.preventDefault()}>
+            List Item
+          </a>
         </li>
       </ul>
     ));
@@ -118,10 +138,14 @@ describe('renders horizontal list utilities', () => {
           </a>
         </li>
         <li className="slds-item">
-          <a href="#" onClick={e => e.preventDefault()}>List Item</a>
+          <a href="#" onClick={e => e.preventDefault()}>
+            List Item
+          </a>
         </li>
         <li className="slds-item">
-          <a href="#" onClick={e => e.preventDefault()}>List Item</a>
+          <a href="#" onClick={e => e.preventDefault()}>
+            List Item
+          </a>
         </li>
       </ul>
     ));
@@ -135,10 +159,14 @@ describe('renders horizontal list utilities', () => {
           </a>
         </li>
         <li className="slds-item">
-          <a href="#" onClick={e => e.preventDefault()}>List Item</a>
+          <a href="#" onClick={e => e.preventDefault()}>
+            List Item
+          </a>
         </li>
         <li className="slds-item">
-          <a href="#" onClick={e => e.preventDefault()}>List Item</a>
+          <a href="#" onClick={e => e.preventDefault()}>
+            List Item
+          </a>
         </li>
       </ul>
     ));
@@ -163,10 +191,14 @@ describe('renders horizontal list utilities', () => {
           </a>
         </li>
         <li className="slds-item">
-          <a href="#" onClick={e => e.preventDefault()}>List Item</a>
+          <a href="#" onClick={e => e.preventDefault()}>
+            List Item
+          </a>
         </li>
         <li className="slds-item">
-          <a href="#" onClick={e => e.preventDefault()}>List Item</a>
+          <a href="#" onClick={e => e.preventDefault()}>
+            List Item
+          </a>
         </li>
       </ul>
     ));
@@ -180,10 +212,14 @@ describe('renders horizontal list utilities', () => {
           </a>
         </li>
         <li className="slds-item">
-          <a href="#" onClick={e => e.preventDefault()}>List Item</a>
+          <a href="#" onClick={e => e.preventDefault()}>
+            List Item
+          </a>
         </li>
         <li className="slds-item">
-          <a href="#" onClick={e => e.preventDefault()}>List Item</a>
+          <a href="#" onClick={e => e.preventDefault()}>
+            List Item
+          </a>
         </li>
       </ul>
     ));

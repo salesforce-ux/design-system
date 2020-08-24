@@ -185,7 +185,8 @@ exports[`renders theme utilities render textured theme on a shaded box 1`] = `
     <strong>
       alert texture
     </strong>
-     added to the default theme and has a 
+     added to the default theme and has a
+     
     <a
       href="#"
       onClick={[Function]}

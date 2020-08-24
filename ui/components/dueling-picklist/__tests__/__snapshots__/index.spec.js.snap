@@ -2988,6 +2988,7 @@ exports[`renders a dueling picklist with tooltip 1`] = `
   >
     <button
       className="slds-button slds-button_icon"
+      onClick={[Function]}
     >
       <svg
         aria-hidden={true}
@@ -3619,6 +3620,7 @@ exports[`renders a required dueling picklist with tooltip 1`] = `
   >
     <button
       className="slds-button slds-button_icon"
+      onClick={[Function]}
     >
       <svg
         aria-hidden={true}

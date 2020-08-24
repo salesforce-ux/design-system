@@ -130,8 +130,8 @@ export let ContextBar = props => {
               <NavBarItem label="Menu Item" />
             </React.Fragment>
           ) : (
-              children
-            )}
+            children
+          )}
         </ul>
       </nav>
     </div>

@@ -86,10 +86,10 @@ export const EinsteinHeader = props => (
                 </span>
               </a>
             ) : (
-                <span className="slds-text-heading_small">
-                  {props.headerTitle || 'Einstein'}
-                </span>
-              )}
+              <span className="slds-text-heading_small">
+                {props.headerTitle || 'Einstein'}
+              </span>
+            )}
           </h2>
         </div>
       </div>

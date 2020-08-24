@@ -259,6 +259,7 @@ exports[`Deprecated Global Header renders a deprecated global header 1`] = `
         <button
           aria-pressed="false"
           className="slds-button slds-button_icon slds-button_icon slds-button_icon-container slds-button_icon-small slds-global-header__button_icon-favorites"
+          onClick={[Function]}
           title="Toggle Favorites"
         >
           <svg
@@ -281,6 +282,7 @@ exports[`Deprecated Global Header renders a deprecated global header 1`] = `
           <button
             aria-haspopup="true"
             className="slds-button slds-button_icon slds-button_icon slds-button_icon-container slds-button_icon-small slds-global-header__button_icon slds-m-left_none"
+            onClick={[Function]}
             title="View Favorites"
           >
             <svg
@@ -305,6 +307,7 @@ exports[`Deprecated Global Header renders a deprecated global header 1`] = `
         <button
           aria-haspopup="true"
           className="slds-button slds-button_icon slds-button_icon slds-button_icon-small slds-button_icon-container slds-button_icon-x-small slds-global-header__button_icon-actions slds-m-horizontal_xx-small"
+          onClick={[Function]}
           title="Global Actions"
         >
           <svg
@@ -328,6 +331,7 @@ exports[`Deprecated Global Header renders a deprecated global header 1`] = `
         <button
           aria-haspopup="true"
           className="slds-button slds-button_icon slds-button_icon slds-button_icon-container slds-button_icon-small slds-global-header__button_icon"
+          onClick={[Function]}
           title="Help and Training"
         >
           <svg
@@ -351,6 +355,7 @@ exports[`Deprecated Global Header renders a deprecated global header 1`] = `
         <button
           aria-haspopup="true"
           className="slds-button slds-button_icon slds-button_icon slds-button_icon-container slds-button_icon-small slds-global-header__button_icon"
+          onClick={[Function]}
           title="Setup"
         >
           <svg
@@ -374,6 +379,7 @@ exports[`Deprecated Global Header renders a deprecated global header 1`] = `
         <button
           aria-haspopup="true"
           className="slds-button slds-button_icon slds-button_icon slds-button_icon-container slds-button_icon-small slds-global-header__button_icon"
+          onClick={[Function]}
           title="Notifications"
         >
           <svg
@@ -674,6 +680,7 @@ exports[`Deprecated Global Header renders a deprecated global header with action
         <button
           aria-pressed="false"
           className="slds-button slds-button_icon slds-button_icon slds-button_icon-container slds-button_icon-small slds-global-header__button_icon-favorites"
+          onClick={[Function]}
           title="Toggle Favorites"
         >
           <svg
@@ -696,6 +703,7 @@ exports[`Deprecated Global Header renders a deprecated global header with action
           <button
             aria-haspopup="true"
             className="slds-button slds-button_icon slds-button_icon slds-button_icon-container slds-button_icon-small slds-global-header__button_icon slds-m-left_none"
+            onClick={[Function]}
             title="View Favorites"
           >
             <svg
@@ -720,6 +728,7 @@ exports[`Deprecated Global Header renders a deprecated global header with action
         <button
           aria-haspopup="true"
           className="slds-button slds-button_icon slds-button_icon slds-button_icon-small slds-button_icon-container slds-button_icon-x-small slds-global-header__button_icon-actions slds-m-horizontal_xx-small"
+          onClick={[Function]}
           title="Global Actions"
         >
           <svg
@@ -841,6 +850,7 @@ exports[`Deprecated Global Header renders a deprecated global header with action
         <button
           aria-haspopup="true"
           className="slds-button slds-button_icon slds-button_icon slds-button_icon-container slds-button_icon-small slds-global-header__button_icon"
+          onClick={[Function]}
           title="Help and Training"
         >
           <svg
@@ -864,6 +874,7 @@ exports[`Deprecated Global Header renders a deprecated global header with action
         <button
           aria-haspopup="true"
           className="slds-button slds-button_icon slds-button_icon slds-button_icon-container slds-button_icon-small slds-global-header__button_icon"
+          onClick={[Function]}
           title="Setup"
         >
           <svg
@@ -887,6 +898,7 @@ exports[`Deprecated Global Header renders a deprecated global header with action
         <button
           aria-haspopup="true"
           className="slds-button slds-button_icon slds-button_icon slds-button_icon-container slds-button_icon-small slds-global-header__button_icon"
+          onClick={[Function]}
           title="Notifications"
         >
           <svg
@@ -1188,6 +1200,7 @@ exports[`Deprecated Global Header renders a deprecated global header with favori
           aria-pressed="false"
           className="slds-button slds-button_icon slds-button_icon slds-button_icon-container slds-button_icon-small slds-global-header__button_icon-favorites slds-is-disabled"
           disabled={true}
+          onClick={[Function]}
           title="Toggle Favorites"
         >
           <svg
@@ -1211,6 +1224,7 @@ exports[`Deprecated Global Header renders a deprecated global header with favori
             aria-haspopup="true"
             className="slds-button slds-button_icon slds-button_icon slds-button_icon-container slds-button_icon-small slds-global-header__button_icon slds-m-left_none"
             disabled={true}
+            onClick={[Function]}
             title="View Favorites"
           >
             <svg
@@ -1235,6 +1249,7 @@ exports[`Deprecated Global Header renders a deprecated global header with favori
         <button
           aria-haspopup="true"
           className="slds-button slds-button_icon slds-button_icon slds-button_icon-small slds-button_icon-container slds-button_icon-x-small slds-global-header__button_icon-actions slds-m-horizontal_xx-small"
+          onClick={[Function]}
           title="Global Actions"
         >
           <svg
@@ -1258,6 +1273,7 @@ exports[`Deprecated Global Header renders a deprecated global header with favori
         <button
           aria-haspopup="true"
           className="slds-button slds-button_icon slds-button_icon slds-button_icon-container slds-button_icon-small slds-global-header__button_icon"
+          onClick={[Function]}
           title="Help and Training"
         >
           <svg
@@ -1281,6 +1297,7 @@ exports[`Deprecated Global Header renders a deprecated global header with favori
         <button
           aria-haspopup="true"
           className="slds-button slds-button_icon slds-button_icon slds-button_icon-container slds-button_icon-small slds-global-header__button_icon"
+          onClick={[Function]}
           title="Setup"
         >
           <svg
@@ -1304,6 +1321,7 @@ exports[`Deprecated Global Header renders a deprecated global header with favori
         <button
           aria-haspopup="true"
           className="slds-button slds-button_icon slds-button_icon slds-button_icon-container slds-button_icon-small slds-global-header__button_icon"
+          onClick={[Function]}
           title="Notifications"
         >
           <svg
@@ -1604,6 +1622,7 @@ exports[`Deprecated Global Header renders a deprecated global header with favori
         <button
           aria-pressed="true"
           className="slds-button slds-button_icon slds-button_icon slds-button_icon-container slds-button_icon-small slds-global-header__button_icon-favorites slds-is-selected"
+          onClick={[Function]}
           title="Toggle Favorites"
         >
           <svg
@@ -1626,6 +1645,7 @@ exports[`Deprecated Global Header renders a deprecated global header with favori
           <button
             aria-haspopup="true"
             className="slds-button slds-button_icon slds-button_icon slds-button_icon-container slds-button_icon-small slds-global-header__button_icon slds-m-left_none"
+            onClick={[Function]}
             title="View Favorites"
           >
             <svg
@@ -1650,6 +1670,7 @@ exports[`Deprecated Global Header renders a deprecated global header with favori
         <button
           aria-haspopup="true"
           className="slds-button slds-button_icon slds-button_icon slds-button_icon-small slds-button_icon-container slds-button_icon-x-small slds-global-header__button_icon-actions slds-m-horizontal_xx-small"
+          onClick={[Function]}
           title="Global Actions"
         >
           <svg
@@ -1673,6 +1694,7 @@ exports[`Deprecated Global Header renders a deprecated global header with favori
         <button
           aria-haspopup="true"
           className="slds-button slds-button_icon slds-button_icon slds-button_icon-container slds-button_icon-small slds-global-header__button_icon"
+          onClick={[Function]}
           title="Help and Training"
         >
           <svg
@@ -1696,6 +1718,7 @@ exports[`Deprecated Global Header renders a deprecated global header with favori
         <button
           aria-haspopup="true"
           className="slds-button slds-button_icon slds-button_icon slds-button_icon-container slds-button_icon-small slds-global-header__button_icon"
+          onClick={[Function]}
           title="Setup"
         >
           <svg
@@ -1719,6 +1742,7 @@ exports[`Deprecated Global Header renders a deprecated global header with favori
         <button
           aria-haspopup="true"
           className="slds-button slds-button_icon slds-button_icon slds-button_icon-container slds-button_icon-small slds-global-header__button_icon"
+          onClick={[Function]}
           title="Notifications"
         >
           <svg
@@ -2019,6 +2043,7 @@ exports[`Deprecated Global Header renders a deprecated global header with search
         <button
           aria-pressed="false"
           className="slds-button slds-button_icon slds-button_icon slds-button_icon-container slds-button_icon-small slds-global-header__button_icon-favorites"
+          onClick={[Function]}
           title="Toggle Favorites"
         >
           <svg
@@ -2041,6 +2066,7 @@ exports[`Deprecated Global Header renders a deprecated global header with search
           <button
             aria-haspopup="true"
             className="slds-button slds-button_icon slds-button_icon slds-button_icon-container slds-button_icon-small slds-global-header__button_icon slds-m-left_none"
+            onClick={[Function]}
             title="View Favorites"
           >
             <svg
@@ -2065,6 +2091,7 @@ exports[`Deprecated Global Header renders a deprecated global header with search
         <button
           aria-haspopup="true"
           className="slds-button slds-button_icon slds-button_icon slds-button_icon-small slds-button_icon-container slds-button_icon-x-small slds-global-header__button_icon-actions slds-m-horizontal_xx-small"
+          onClick={[Function]}
           title="Global Actions"
         >
           <svg
@@ -2088,6 +2115,7 @@ exports[`Deprecated Global Header renders a deprecated global header with search
         <button
           aria-haspopup="true"
           className="slds-button slds-button_icon slds-button_icon slds-button_icon-container slds-button_icon-small slds-global-header__button_icon"
+          onClick={[Function]}
           title="Help and Training"
         >
           <svg
@@ -2111,6 +2139,7 @@ exports[`Deprecated Global Header renders a deprecated global header with search
         <button
           aria-haspopup="true"
           className="slds-button slds-button_icon slds-button_icon slds-button_icon-container slds-button_icon-small slds-global-header__button_icon"
+          onClick={[Function]}
           title="Setup"
         >
           <svg
@@ -2134,6 +2163,7 @@ exports[`Deprecated Global Header renders a deprecated global header with search
         <button
           aria-haspopup="true"
           className="slds-button slds-button_icon slds-button_icon slds-button_icon-container slds-button_icon-small slds-global-header__button_icon"
+          onClick={[Function]}
           title="Notifications"
         >
           <svg
@@ -2480,6 +2510,7 @@ exports[`Deprecated Global Header renders a deprecated global header with search
         <button
           aria-pressed="false"
           className="slds-button slds-button_icon slds-button_icon slds-button_icon-container slds-button_icon-small slds-global-header__button_icon-favorites"
+          onClick={[Function]}
           title="Toggle Favorites"
         >
           <svg
@@ -2502,6 +2533,7 @@ exports[`Deprecated Global Header renders a deprecated global header with search
           <button
             aria-haspopup="true"
             className="slds-button slds-button_icon slds-button_icon slds-button_icon-container slds-button_icon-small slds-global-header__button_icon slds-m-left_none"
+            onClick={[Function]}
             title="View Favorites"
           >
             <svg
@@ -2526,6 +2558,7 @@ exports[`Deprecated Global Header renders a deprecated global header with search
         <button
           aria-haspopup="true"
           className="slds-button slds-button_icon slds-button_icon slds-button_icon-small slds-button_icon-container slds-button_icon-x-small slds-global-header__button_icon-actions slds-m-horizontal_xx-small"
+          onClick={[Function]}
           title="Global Actions"
         >
           <svg
@@ -2549,6 +2582,7 @@ exports[`Deprecated Global Header renders a deprecated global header with search
         <button
           aria-haspopup="true"
           className="slds-button slds-button_icon slds-button_icon slds-button_icon-container slds-button_icon-small slds-global-header__button_icon"
+          onClick={[Function]}
           title="Help and Training"
         >
           <svg
@@ -2572,6 +2606,7 @@ exports[`Deprecated Global Header renders a deprecated global header with search
         <button
           aria-haspopup="true"
           className="slds-button slds-button_icon slds-button_icon slds-button_icon-container slds-button_icon-small slds-global-header__button_icon"
+          onClick={[Function]}
           title="Setup"
         >
           <svg
@@ -2595,6 +2630,7 @@ exports[`Deprecated Global Header renders a deprecated global header with search
         <button
           aria-haspopup="true"
           className="slds-button slds-button_icon slds-button_icon slds-button_icon-container slds-button_icon-small slds-global-header__button_icon"
+          onClick={[Function]}
           title="Notifications"
         >
           <svg
@@ -2895,6 +2931,7 @@ exports[`Deprecated Global Header renders a deprecated global header with setup 
         <button
           aria-pressed="false"
           className="slds-button slds-button_icon slds-button_icon slds-button_icon-container slds-button_icon-small slds-global-header__button_icon-favorites"
+          onClick={[Function]}
           title="Toggle Favorites"
         >
           <svg
@@ -2917,6 +2954,7 @@ exports[`Deprecated Global Header renders a deprecated global header with setup 
           <button
             aria-haspopup="true"
             className="slds-button slds-button_icon slds-button_icon slds-button_icon-container slds-button_icon-small slds-global-header__button_icon slds-m-left_none"
+            onClick={[Function]}
             title="View Favorites"
           >
             <svg
@@ -2941,6 +2979,7 @@ exports[`Deprecated Global Header renders a deprecated global header with setup 
         <button
           aria-haspopup="true"
           className="slds-button slds-button_icon slds-button_icon slds-button_icon-small slds-button_icon-container slds-button_icon-x-small slds-global-header__button_icon-actions slds-m-horizontal_xx-small"
+          onClick={[Function]}
           title="Global Actions"
         >
           <svg
@@ -2964,6 +3003,7 @@ exports[`Deprecated Global Header renders a deprecated global header with setup 
         <button
           aria-haspopup="true"
           className="slds-button slds-button_icon slds-button_icon slds-button_icon-container slds-button_icon-small slds-global-header__button_icon"
+          onClick={[Function]}
           title="Help and Training"
         >
           <svg
@@ -2987,6 +3027,7 @@ exports[`Deprecated Global Header renders a deprecated global header with setup 
         <button
           aria-haspopup="true"
           className="slds-button slds-button_icon slds-button_icon slds-button_icon-container slds-button_icon-small slds-global-header__button_icon"
+          onClick={[Function]}
           title="Setup"
         >
           <svg
@@ -3045,6 +3086,7 @@ exports[`Deprecated Global Header renders a deprecated global header with setup 
         <button
           aria-haspopup="true"
           className="slds-button slds-button_icon slds-button_icon slds-button_icon-container slds-button_icon-small slds-global-header__button_icon"
+          onClick={[Function]}
           title="Notifications"
         >
           <svg
@@ -3883,6 +3925,7 @@ exports[`Global Actions Bar renders favorites item 1`] = `
     </button>
     <button
       className="slds-button slds-button_icon slds-global-actions__favorites-more slds-button_icon slds-button_icon-border slds-button_icon-small"
+      onClick={[Function]}
       title="View Favorites"
     >
       <svg
@@ -3933,6 +3976,7 @@ exports[`Global Actions Bar renders favorites item that is disabled 1`] = `
     </button>
     <button
       className="slds-button slds-button_icon slds-global-actions__favorites-more slds-button_icon slds-button_icon-border slds-button_icon-small"
+      onClick={[Function]}
       title="View Favorites"
     >
       <svg
@@ -3982,6 +4026,7 @@ exports[`Global Actions Bar renders favorites item that is selected 1`] = `
     </button>
     <button
       className="slds-button slds-button_icon slds-global-actions__favorites-more slds-button_icon slds-button_icon-border slds-button_icon-small"
+      onClick={[Function]}
       title="View Favorites"
     >
       <svg
@@ -4031,6 +4076,7 @@ exports[`Global Actions Bar renders favorites item with dialog menu 1`] = `
     </button>
     <button
       className="slds-button slds-button_icon slds-global-actions__favorites-more slds-button_icon slds-button_icon-border slds-button_icon-small"
+      onClick={[Function]}
       title="View Favorites"
     >
       <svg
@@ -4261,6 +4307,7 @@ exports[`Global Actions Bar renders global actions bar 1`] = `
         </button>
         <button
           className="slds-button slds-button_icon slds-global-actions__favorites-more slds-button_icon slds-button_icon-border slds-button_icon-small"
+          onClick={[Function]}
           title="View Favorites"
         >
           <svg
@@ -4289,6 +4336,7 @@ exports[`Global Actions Bar renders global actions bar 1`] = `
       <button
         aria-haspopup="true"
         className="slds-button slds-button_icon slds-button_icon slds-button_icon-container slds-button_icon-small slds-global-actions__task slds-global-actions__item-action"
+        onClick={[Function]}
         title="Global Actions"
       >
         <svg
@@ -4316,6 +4364,7 @@ exports[`Global Actions Bar renders global actions bar 1`] = `
       <button
         aria-haspopup="true"
         className="slds-button slds-button_icon slds-button_icon slds-button_icon-container slds-button_icon-small slds-global-actions__help slds-global-actions__item-action"
+        onClick={[Function]}
         title="Help and Training"
       >
         <svg
@@ -4343,6 +4392,7 @@ exports[`Global Actions Bar renders global actions bar 1`] = `
       <button
         aria-haspopup="true"
         className="slds-button slds-button_icon slds-button_icon slds-button_icon-container slds-button_icon-small slds-global-actions__setup slds-global-actions__item-action"
+        onClick={[Function]}
         title="Setup"
       >
         <svg
@@ -4371,6 +4421,7 @@ exports[`Global Actions Bar renders global actions bar 1`] = `
         aria-atomic="true"
         aria-live="assertive"
         className="slds-button slds-button_icon slds-button_icon slds-button_icon-container slds-button_icon-small slds-global-actions__notifications slds-global-actions__item-action"
+        onClick={[Function]}
         title="no new notifications"
       >
         <svg
@@ -4426,6 +4477,7 @@ exports[`Global Actions Bar renders help item 1`] = `
   <button
     aria-haspopup="true"
     className="slds-button slds-button_icon slds-button_icon slds-button_icon-container slds-button_icon-small slds-global-actions__help slds-global-actions__item-action"
+    onClick={[Function]}
     title="Help and Training"
   >
     <svg
@@ -4453,6 +4505,7 @@ exports[`Global Actions Bar renders notification item 1`] = `
     aria-atomic="true"
     aria-live="assertive"
     className="slds-button slds-button_icon slds-button_icon slds-button_icon-container slds-button_icon-small slds-global-actions__notifications slds-global-actions__item-action"
+    onClick={[Function]}
     title="no new notifications"
   >
     <svg
@@ -4484,6 +4537,7 @@ exports[`Global Actions Bar renders notification item with 1 notification 1`] = 
     aria-atomic="true"
     aria-live="assertive"
     className="slds-button slds-button_icon slds-button_icon slds-button_icon-container slds-button_icon-small slds-global-actions__notifications slds-global-actions__item-action"
+    onClick={[Function]}
     title="1 new notifications"
   >
     <svg
@@ -4517,6 +4571,7 @@ exports[`Global Actions Bar renders notification item with dialog menu 1`] = `
     aria-atomic="true"
     aria-live="assertive"
     className="slds-button slds-button_icon slds-button_icon slds-button_icon-container slds-button_icon-small slds-global-actions__notifications slds-global-actions__item-action"
+    onClick={[Function]}
     title="no new notifications"
   >
     <svg
@@ -4547,6 +4602,7 @@ exports[`Global Actions Bar renders setup item 1`] = `
   <button
     aria-haspopup="true"
     className="slds-button slds-button_icon slds-button_icon slds-button_icon-container slds-button_icon-small slds-global-actions__setup slds-global-actions__item-action"
+    onClick={[Function]}
     title="Setup"
   >
     <svg
@@ -4573,6 +4629,7 @@ exports[`Global Actions Bar renders task item 1`] = `
   <button
     aria-haspopup="true"
     className="slds-button slds-button_icon slds-button_icon slds-button_icon-container slds-button_icon-small slds-global-actions__task slds-global-actions__item-action"
+    onClick={[Function]}
     title="Global Actions"
   >
     <svg
@@ -4599,6 +4656,7 @@ exports[`Global Actions Bar renders task item with dialog menu 1`] = `
   <button
     aria-haspopup="true"
     className="slds-button slds-button_icon slds-button_icon slds-button_icon-container slds-button_icon-small slds-global-actions__task slds-global-actions__item-action"
+    onClick={[Function]}
     title="Global Actions"
   >
     <svg
@@ -4814,6 +4872,7 @@ exports[`Global Header renders global header 1`] = `
               </button>
               <button
                 className="slds-button slds-button_icon slds-global-actions__favorites-more slds-button_icon slds-button_icon-border slds-button_icon-small"
+                onClick={[Function]}
                 title="View Favorites"
               >
                 <svg
@@ -4842,6 +4901,7 @@ exports[`Global Header renders global header 1`] = `
             <button
               aria-haspopup="true"
               className="slds-button slds-button_icon slds-button_icon slds-button_icon-container slds-button_icon-small slds-global-actions__task slds-global-actions__item-action"
+              onClick={[Function]}
               title="Global Actions"
             >
               <svg
@@ -4869,6 +4929,7 @@ exports[`Global Header renders global header 1`] = `
             <button
               aria-haspopup="true"
               className="slds-button slds-button_icon slds-button_icon slds-button_icon-container slds-button_icon-small slds-global-actions__help slds-global-actions__item-action"
+              onClick={[Function]}
               title="Help and Training"
             >
               <svg
@@ -4896,6 +4957,7 @@ exports[`Global Header renders global header 1`] = `
             <button
               aria-haspopup="true"
               className="slds-button slds-button_icon slds-button_icon slds-button_icon-container slds-button_icon-small slds-global-actions__setup slds-global-actions__item-action"
+              onClick={[Function]}
               title="Setup"
             >
               <svg
@@ -4924,6 +4986,7 @@ exports[`Global Header renders global header 1`] = `
               aria-atomic="true"
               aria-live="assertive"
               className="slds-button slds-button_icon slds-button_icon slds-button_icon-container slds-button_icon-small slds-global-actions__notifications slds-global-actions__item-action"
+              onClick={[Function]}
               title="no new notifications"
             >
               <svg

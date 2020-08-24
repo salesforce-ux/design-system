@@ -12,15 +12,19 @@ const Alert = props => {
   );
   const alertLegacyTypeClass = classNames(
     isLegacy && 'slds-theme_alert-texture',
-    (type === 'info' && isLegacy) && 'slds-theme_info',
-    (type === 'warning' && isLegacy) && 'slds-theme_warning',
-    (type === 'error' && isLegacy) && 'slds-theme_error',
-    (type === 'offline' && isLegacy) && 'slds-theme_offline'
+    type === 'info' && isLegacy && 'slds-theme_info',
+    type === 'warning' && isLegacy && 'slds-theme_warning',
+    type === 'error' && isLegacy && 'slds-theme_error',
+    type === 'offline' && isLegacy && 'slds-theme_offline'
   );
 
   return (
     <div
-      className={classNames('slds-notify slds-notify_alert', alertTypeClass, alertLegacyTypeClass)}
+      className={classNames(
+        'slds-notify slds-notify_alert',
+        alertTypeClass,
+        alertLegacyTypeClass
+      )}
       role="alert"
     >
       <span className="slds-assistive-text">{type}</span>

@@ -8,6 +8,7 @@ exports[`Activity Timeline Expandable renders a collapsed timeline media figure 
     aria-controls="event-figure"
     aria-expanded="false"
     className="slds-button slds-button_icon"
+    onClick={[Function]}
     title="Toggle details for undefined"
   >
     <svg
@@ -203,6 +204,7 @@ exports[`Activity Timeline Expandable renders a narrow timeline item 1`] = `
       <button
         aria-controls="call-item"
         className="slds-button slds-button_icon"
+        onClick={[Function]}
         title="Toggle details for Mobile conversation on Monday"
       >
         <svg
@@ -267,6 +269,7 @@ exports[`Activity Timeline Expandable renders a narrow timeline item 1`] = `
           <button
             aria-haspopup="true"
             className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+            onClick={[Function]}
             title="More Options for this item"
           >
             <svg
@@ -390,6 +393,7 @@ exports[`Activity Timeline Expandable renders a task timeline item 1`] = `
       <button
         aria-controls="call-item"
         className="slds-button slds-button_icon"
+        onClick={[Function]}
         title="Toggle details for Mobile conversation on Monday"
       >
         <svg
@@ -478,6 +482,7 @@ exports[`Activity Timeline Expandable renders a task timeline item 1`] = `
           <button
             aria-haspopup="true"
             className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+            onClick={[Function]}
             title="More Options for this item"
           >
             <svg
@@ -617,6 +622,7 @@ exports[`Activity Timeline Expandable renders a timeline item 1`] = `
       <button
         aria-controls="call-item"
         className="slds-button slds-button_icon"
+        onClick={[Function]}
         title="Toggle details for Mobile conversation on Monday"
       >
         <svg
@@ -681,6 +687,7 @@ exports[`Activity Timeline Expandable renders a timeline item 1`] = `
           <button
             aria-haspopup="true"
             className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+            onClick={[Function]}
             title="More Options for this item"
           >
             <svg
@@ -870,6 +877,7 @@ exports[`Activity Timeline Expandable renders a timeline item trigger with a tas
     <button
       aria-haspopup="true"
       className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+      onClick={[Function]}
       title="More Options for this item"
     >
       <svg
@@ -962,6 +970,7 @@ exports[`Activity Timeline Expandable renders a timeline item trigger with icons
     <button
       aria-haspopup="true"
       className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+      onClick={[Function]}
       title="More Options for this item"
     >
       <svg
@@ -1014,6 +1023,7 @@ exports[`Activity Timeline Expandable renders a timeline item trigger with no ic
     <button
       aria-haspopup="true"
       className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+      onClick={[Function]}
       title="More Options for this item"
     >
       <svg
@@ -1052,6 +1062,7 @@ exports[`Activity Timeline Expandable renders a timeline item with icons 1`] = `
       <button
         aria-controls="call-item"
         className="slds-button slds-button_icon"
+        onClick={[Function]}
         title="Toggle details for Mobile conversation on Monday"
       >
         <svg
@@ -1180,6 +1191,7 @@ exports[`Activity Timeline Expandable renders a timeline item with icons 1`] = `
           <button
             aria-haspopup="true"
             className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+            onClick={[Function]}
             title="More Options for this item"
           >
             <svg
@@ -1320,6 +1332,7 @@ exports[`Activity Timeline Expandable renders a timeline media body 1`] = `
       <button
         aria-haspopup="true"
         className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+        onClick={[Function]}
         title="More Options for this item"
       >
         <svg
@@ -1396,6 +1409,7 @@ exports[`Activity Timeline Expandable renders an expanded timeline item 1`] = `
         aria-controls="call-item"
         aria-expanded="true"
         className="slds-button slds-button_icon"
+        onClick={[Function]}
         title="Toggle details for Mobile conversation on Monday"
       >
         <svg
@@ -1460,6 +1474,7 @@ exports[`Activity Timeline Expandable renders an expanded timeline item 1`] = `
           <button
             aria-haspopup="true"
             className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+            onClick={[Function]}
             title="More Options for this item"
           >
             <svg
@@ -1573,6 +1588,7 @@ exports[`Activity Timeline Expandable renders an expanded timeline media figure 
     aria-controls="event-figure"
     aria-expanded="true"
     className="slds-button slds-button_icon"
+    onClick={[Function]}
     title="Toggle details for undefined"
   >
     <svg
@@ -1776,6 +1792,7 @@ exports[`Activity Timeline Expandable renders the deprecated combined timeline 1
             <button
               aria-haspopup="true"
               className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+              onClick={[Function]}
               title="More Options for Task, Review proposals"
             >
               <svg
@@ -1924,7 +1941,8 @@ exports[`Activity Timeline Expandable renders the deprecated combined timeline 1
                     >
                       Gwen Jones
                     </a>
-                     and
+                     
+                    and
                      
                     <a
                       href="#"
@@ -1952,6 +1970,7 @@ exports[`Activity Timeline Expandable renders the deprecated combined timeline 1
             <button
               aria-haspopup="true"
               className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+              onClick={[Function]}
               title="More Options for Event, Company One"
             >
               <svg
@@ -2087,6 +2106,7 @@ exports[`Activity Timeline Expandable renders the deprecated combined timeline 1
             <button
               aria-haspopup="true"
               className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+              onClick={[Function]}
               title="More Options for Call, Mobile conversation"
             >
               <svg
@@ -2229,6 +2249,7 @@ exports[`Activity Timeline Expandable renders the deprecated combined timeline 1
             <button
               aria-haspopup="true"
               className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+              onClick={[Function]}
               title="More Options for Email, Mobile conversation"
             >
               <svg
@@ -2265,6 +2286,7 @@ exports[`Activity Timeline Expandable renders timeline actions 1`] = `
   <button
     aria-haspopup="true"
     className="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+    onClick={[Function]}
     title="More Options for Call, Mobile conversation"
   >
     <svg

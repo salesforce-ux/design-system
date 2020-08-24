@@ -180,8 +180,9 @@ export default (
               Hey there! Here's the latest demo presentation{' '}
               <a href="#" title="Jenna Davis" onClick={e => e.preventDefault()}>
                 @Jenna Davis
-              </a>, let me know if there are any changes. I've updated slides
-              3-8 and slides 16-18 slides with new product shots.
+              </a>
+              , let me know if there are any changes. I've updated slides 3-8
+              and slides 16-18 slides with new product shots.
             </p>
           </PostContent>
           <PostFooter>
@@ -207,10 +208,15 @@ export let states = [
               <PostContent>
                 <p>
                   Hey there! Here's the latest demo presentation{' '}
-                  <a href="#" title="Jenna Davis" onClick={e => e.preventDefault()}>
+                  <a
+                    href="#"
+                    title="Jenna Davis"
+                    onClick={e => e.preventDefault()}
+                  >
                     @Jenna Davis
-                  </a>, let me know if there are any changes. I've updated
-                  slides 3-8 and slides 16-18 slides with new product shots.
+                  </a>
+                  , let me know if there are any changes. I've updated slides
+                  3-8 and slides 16-18 slides with new product shots.
                 </p>
               </PostContent>
               <PostFooter>
@@ -220,7 +226,10 @@ export let states = [
             </Post>
             <Comments>
               <div className="slds-p-horizontal_medium slds-p-vertical_x-small">
-                <a href="#" onClick={e => e.preventDefault()}>You</a> liked this post
+                <a href="#" onClick={e => e.preventDefault()}>
+                  You
+                </a>{' '}
+                liked this post
               </div>
             </Comments>
           </li>
@@ -243,10 +252,15 @@ export let examples = [
               <PostContent>
                 <p>
                   Hey there! Here's the latest demo presentation{' '}
-                  <a href="#" title="Jenna Davis" onClick={e => e.preventDefault()}>
+                  <a
+                    href="#"
+                    title="Jenna Davis"
+                    onClick={e => e.preventDefault()}
+                  >
                     @Jenna Davis
-                  </a>, let me know if there are any changes. I've updated
-                  slides 3-8 and slides 16-18 slides with new product shots.
+                  </a>
+                  , let me know if there are any changes. I've updated slides
+                  3-8 and slides 16-18 slides with new product shots.
                 </p>
               </PostContent>
               <div className="slds-post__payload">
@@ -277,10 +291,15 @@ export let examples = [
               <PostContent>
                 <p>
                   Hey there! Here's the latest demo presentation{' '}
-                  <a href="#" title="Jenna Davis" onClick={e => e.preventDefault()}>
+                  <a
+                    href="#"
+                    title="Jenna Davis"
+                    onClick={e => e.preventDefault()}
+                  >
                     @Jenna Davis
-                  </a>, let me know if there are any changes. I've updated
-                  slides 3-8 and slides 16-18 slides with new product shots.
+                  </a>
+                  , let me know if there are any changes. I've updated slides
+                  3-8 and slides 16-18 slides with new product shots.
                 </p>
               </PostContent>
               <div className="slds-post__payload">
@@ -324,10 +343,15 @@ export let examples = [
               <PostContent>
                 <p>
                   Hey there! Here's the latest demo presentation{' '}
-                  <a href="#" title="Jenna Davis" onClick={e => e.preventDefault()}>
+                  <a
+                    href="#"
+                    title="Jenna Davis"
+                    onClick={e => e.preventDefault()}
+                  >
                     @Jenna Davis
-                  </a>, let me know if there are any changes. I've updated
-                  slides 3-8 and slides 16-18 slides with new product shots.
+                  </a>
+                  , let me know if there are any changes. I've updated slides
+                  3-8 and slides 16-18 slides with new product shots.
                 </p>
               </PostContent>
               <PostFooter>
@@ -356,10 +380,15 @@ export let examples = [
               <PostContent>
                 <p>
                   Here's the latest demo presentation{' '}
-                  <a href="#" title="Jenna Davis" onClick={e => e.preventDefault()}>
+                  <a
+                    href="#"
+                    title="Jenna Davis"
+                    onClick={e => e.preventDefault()}
+                  >
                     @Jenna Davis
-                  </a>, let me know if there are any changes. I've updated
-                  slides 3-8 and slides 16-18 slides with new product shots.
+                  </a>
+                  , let me know if there are any changes. I've updated slides
+                  3-8 and slides 16-18 slides with new product shots.
                 </p>
               </PostContent>
               <PostFooter>
@@ -396,10 +425,15 @@ export let examples = [
               <PostContent>
                 <p>
                   Here's the latest demo presentation{' '}
-                  <a href="#" title="Jenna Davis" onClick={e => e.preventDefault()}>
+                  <a
+                    href="#"
+                    title="Jenna Davis"
+                    onClick={e => e.preventDefault()}
+                  >
                     @Jenna Davis
-                  </a>, let me know if there are any changes. I've updated
-                  slides 3-8 and slides 16-18 slides with new product shots.
+                  </a>
+                  , let me know if there are any changes. I've updated slides
+                  3-8 and slides 16-18 slides with new product shots.
                 </p>
               </PostContent>
               <PostFooter>
@@ -439,10 +473,15 @@ export let examples = [
                 </h3>
                 <p>
                   Hey there! Here's the latest demo presentation{' '}
-                  <a href="#" title="Jenna Davis" onClick={e => e.preventDefault()}>
+                  <a
+                    href="#"
+                    title="Jenna Davis"
+                    onClick={e => e.preventDefault()}
+                  >
                     @Jenna Davis
-                  </a>, let me know if there are any changes. I've updated
-                  slides 3-8 and slides 16-18 slides with new product shots.
+                  </a>
+                  , let me know if there are any changes. I've updated slides
+                  3-8 and slides 16-18 slides with new product shots.
                 </p>
               </PostContent>
               <PostFooter>

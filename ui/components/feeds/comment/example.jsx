@@ -37,7 +37,9 @@ export let CommentHeader = props => (
   <header className="slds-media slds-media_center">
     <div className="slds-grid slds-grid_align-spread slds-has-flexi-truncate">
       <p className="slds-truncate" title="Jenna Davis">
-        <a href="#" onClick={e => e.preventDefault()}>Jenna Davis</a>
+        <a href="#" onClick={e => e.preventDefault()}>
+          Jenna Davis
+        </a>
       </p>
       <ButtonIcon
         className="slds-button_icon-border slds-button_icon-x-small"

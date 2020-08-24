@@ -25,6 +25,7 @@ exports[`renders a default app launcher 1`] = `
       >
         <button
           className="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse"
+          onClick={[Function]}
           title="Close"
         >
           <svg
@@ -158,6 +159,7 @@ exports[`renders a default app launcher 1`] = `
                         aria-pressed="false"
                         className="slds-button slds-button_icon"
                         disabled={false}
+                        onClick={[Function]}
                         title="Reorder"
                       >
                         <svg
@@ -241,6 +243,7 @@ exports[`renders a default app launcher 1`] = `
                         aria-pressed="false"
                         className="slds-button slds-button_icon"
                         disabled={false}
+                        onClick={[Function]}
                         title="Reorder"
                       >
                         <svg
@@ -324,6 +327,7 @@ exports[`renders a default app launcher 1`] = `
                         aria-pressed="false"
                         className="slds-button slds-button_icon"
                         disabled={false}
+                        onClick={[Function]}
                         title="Reorder"
                       >
                         <svg
@@ -401,6 +405,7 @@ exports[`renders a default app launcher 1`] = `
                         aria-pressed="false"
                         className="slds-button slds-button_icon"
                         disabled={false}
+                        onClick={[Function]}
                         title="Reorder"
                       >
                         <svg
@@ -484,6 +489,7 @@ exports[`renders a default app launcher 1`] = `
                         aria-pressed="false"
                         className="slds-button slds-button_icon"
                         disabled={false}
+                        onClick={[Function]}
                         title="Reorder"
                       >
                         <svg
@@ -567,6 +573,7 @@ exports[`renders a default app launcher 1`] = `
                         aria-pressed="false"
                         className="slds-button slds-button_icon"
                         disabled={false}
+                        onClick={[Function]}
                         title="Reorder"
                       >
                         <svg
@@ -783,6 +790,7 @@ exports[`renders a dropped app launcher 1`] = `
       >
         <button
           className="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse"
+          onClick={[Function]}
           title="Close"
         >
           <svg
@@ -916,6 +924,7 @@ exports[`renders a dropped app launcher 1`] = `
                         aria-pressed="false"
                         className="slds-button slds-button_icon"
                         disabled={false}
+                        onClick={[Function]}
                         title="Reorder"
                       >
                         <svg
@@ -999,6 +1008,7 @@ exports[`renders a dropped app launcher 1`] = `
                         aria-pressed="false"
                         className="slds-button slds-button_icon"
                         disabled={false}
+                        onClick={[Function]}
                         title="Reorder"
                       >
                         <svg
@@ -1076,6 +1086,7 @@ exports[`renders a dropped app launcher 1`] = `
                         aria-pressed="false"
                         className="slds-button slds-button_icon"
                         disabled={false}
+                        onClick={[Function]}
                         title="Reorder"
                       >
                         <svg
@@ -1159,6 +1170,7 @@ exports[`renders a dropped app launcher 1`] = `
                         aria-pressed="false"
                         className="slds-button slds-button_icon"
                         disabled={false}
+                        onClick={[Function]}
                         title="Reorder"
                       >
                         <svg
@@ -1242,6 +1254,7 @@ exports[`renders a dropped app launcher 1`] = `
                         aria-pressed="false"
                         className="slds-button slds-button_icon"
                         disabled={false}
+                        onClick={[Function]}
                         title="Reorder"
                       >
                         <svg
@@ -1325,6 +1338,7 @@ exports[`renders a dropped app launcher 1`] = `
                         aria-pressed="false"
                         className="slds-button slds-button_icon"
                         disabled={false}
+                        onClick={[Function]}
                         title="Reorder"
                       >
                         <svg
@@ -1541,6 +1555,7 @@ exports[`renders a grabbed app launcher 1`] = `
       >
         <button
           className="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse"
+          onClick={[Function]}
           title="Close"
         >
           <svg
@@ -1674,6 +1689,7 @@ exports[`renders a grabbed app launcher 1`] = `
                         aria-pressed="true"
                         className="slds-button slds-button_icon slds-is-selected"
                         disabled={false}
+                        onClick={[Function]}
                         title="Reorder"
                       >
                         <svg
@@ -1757,6 +1773,7 @@ exports[`renders a grabbed app launcher 1`] = `
                         aria-pressed="false"
                         className="slds-button slds-button_icon"
                         disabled={false}
+                        onClick={[Function]}
                         title="Reorder"
                       >
                         <svg
@@ -1840,6 +1857,7 @@ exports[`renders a grabbed app launcher 1`] = `
                         aria-pressed="false"
                         className="slds-button slds-button_icon"
                         disabled={false}
+                        onClick={[Function]}
                         title="Reorder"
                       >
                         <svg
@@ -1917,6 +1935,7 @@ exports[`renders a grabbed app launcher 1`] = `
                         aria-pressed="false"
                         className="slds-button slds-button_icon"
                         disabled={false}
+                        onClick={[Function]}
                         title="Reorder"
                       >
                         <svg
@@ -2000,6 +2019,7 @@ exports[`renders a grabbed app launcher 1`] = `
                         aria-pressed="false"
                         className="slds-button slds-button_icon"
                         disabled={false}
+                        onClick={[Function]}
                         title="Reorder"
                       >
                         <svg
@@ -2083,6 +2103,7 @@ exports[`renders a grabbed app launcher 1`] = `
                         aria-pressed="false"
                         className="slds-button slds-button_icon"
                         disabled={false}
+                        onClick={[Function]}
                         title="Reorder"
                       >
                         <svg
@@ -2299,6 +2320,7 @@ exports[`renders a moved app launcher 1`] = `
       >
         <button
           className="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse"
+          onClick={[Function]}
           title="Close"
         >
           <svg
@@ -2432,6 +2454,7 @@ exports[`renders a moved app launcher 1`] = `
                         aria-pressed="false"
                         className="slds-button slds-button_icon"
                         disabled={false}
+                        onClick={[Function]}
                         title="Reorder"
                       >
                         <svg
@@ -2515,6 +2538,7 @@ exports[`renders a moved app launcher 1`] = `
                         aria-pressed="false"
                         className="slds-button slds-button_icon"
                         disabled={false}
+                        onClick={[Function]}
                         title="Reorder"
                       >
                         <svg
@@ -2592,6 +2616,7 @@ exports[`renders a moved app launcher 1`] = `
                         aria-pressed="true"
                         className="slds-button slds-button_icon slds-is-selected"
                         disabled={false}
+                        onClick={[Function]}
                         title="Reorder"
                       >
                         <svg
@@ -2675,6 +2700,7 @@ exports[`renders a moved app launcher 1`] = `
                         aria-pressed="false"
                         className="slds-button slds-button_icon"
                         disabled={false}
+                        onClick={[Function]}
                         title="Reorder"
                       >
                         <svg
@@ -2758,6 +2784,7 @@ exports[`renders a moved app launcher 1`] = `
                         aria-pressed="false"
                         className="slds-button slds-button_icon"
                         disabled={false}
+                        onClick={[Function]}
                         title="Reorder"
                       >
                         <svg
@@ -2841,6 +2868,7 @@ exports[`renders a moved app launcher 1`] = `
                         aria-pressed="false"
                         className="slds-button slds-button_icon"
                         disabled={false}
+                        onClick={[Function]}
                         title="Reorder"
                       >
                         <svg
@@ -3057,6 +3085,7 @@ exports[`renders a search app launcher 1`] = `
       >
         <button
           className="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse"
+          onClick={[Function]}
           title="Close"
         >
           <svg
@@ -3198,6 +3227,7 @@ exports[`renders a search app launcher 1`] = `
                         aria-pressed="false"
                         className="slds-button slds-button_icon"
                         disabled={false}
+                        onClick={[Function]}
                         title="Reorder"
                       >
                         <svg
@@ -3383,6 +3413,7 @@ exports[`renders an app tile with a tooltip 1`] = `
         aria-pressed="false"
         className="slds-button slds-button_icon"
         disabled={false}
+        onClick={[Function]}
         title="Reorder"
       >
         <svg

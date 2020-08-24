@@ -4,11 +4,17 @@
 
 <!-- ## [Unreleased] -->
 
+## 2.13.1
+
+### Fixed
+
+- Added `background` shorthand and set to `initial` to recreated existing behavior that relied on the shorthand to apply initial values to unspecified values.
+
 ## 2.13.0
 
 ### Added
 
-- Added the brand expression specific Styling API
+- Added the brand expression specific Styling Hooks
 
 ## 2.12.0
 

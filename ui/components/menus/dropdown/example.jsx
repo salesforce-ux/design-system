@@ -50,18 +50,18 @@ export let Trigger = props => (
     {props.triggerIcon ? (
       props.triggerIcon
     ) : (
-        <ButtonIcon
-          className={classNames(
-            props.inverse
-              ? 'slds-button_icon-border-inverse'
-              : 'slds-button_icon-border-filled'
-          )}
-          symbol="down"
-          assistiveText="Show More"
-          title="Show More"
-          aria-haspopup="true"
-        />
-      )}
+      <ButtonIcon
+        className={classNames(
+          props.inverse
+            ? 'slds-button_icon-border-inverse'
+            : 'slds-button_icon-border-filled'
+        )}
+        symbol="down"
+        assistiveText="Show More"
+        title="Show More"
+        aria-haspopup="true"
+      />
+    )}
     {props.children}
   </div>
 );
@@ -137,8 +137,8 @@ export let MenuItem = props => {
               symbol="check"
             />
           ) : (
-              iconLeft
-            )}
+            iconLeft
+          )}
           {children}
         </span>
         {iconRight || null}

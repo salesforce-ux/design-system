@@ -164,6 +164,86 @@ exports[`Pill - Listbox of Pills renders a listbox of pills - bare 1`] = `
 </div>
 `;
 
+exports[`Pill - Listbox of Pills renders a listbox of pills - group 1`] = `
+<div>
+  <div
+    class="slds-combobox_container"
+  />
+  <div
+    className="slds-listbox_selection-group"
+  >
+    <ul
+      aria-label="Selected Options:"
+      aria-orientation="horizontal"
+      className="slds-listbox slds-listbox_horizontal"
+      role="listbox"
+    >
+      <li
+        className="slds-listbox-item"
+        role="presentation"
+      >
+        <span
+          aria-selected="true"
+          className="slds-pill"
+          role="option"
+          tabIndex="0"
+        >
+          <span
+            className="slds-pill__label"
+            title="Full pill label verbiage mirrored here"
+          >
+            Pill Label
+          </span>
+          <span
+            className="slds-icon_container slds-pill__remove"
+            title="Remove"
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-icon slds-icon_x-small slds-icon-text-default"
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#close"
+              />
+            </svg>
+          </span>
+        </span>
+      </li>
+      <li
+        className="slds-listbox-item"
+        role="presentation"
+      >
+        <span
+          aria-selected="true"
+          className="slds-pill"
+          role="option"
+        >
+          <span
+            className="slds-pill__label"
+            title="Full pill label verbiage mirrored here"
+          >
+            Pill Label
+          </span>
+          <span
+            className="slds-icon_container slds-pill__remove"
+            title="Remove"
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-icon slds-icon_x-small slds-icon-text-default"
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#close"
+              />
+            </svg>
+          </span>
+        </span>
+      </li>
+    </ul>
+  </div>
+</div>
+`;
+
 exports[`Pill - Listbox of Pills renders a listbox of pills with an avatar 1`] = `
 <div
   className="slds-pill_container"
@@ -400,6 +480,7 @@ exports[`Pill renders a pill 1`] = `
   </a>
   <button
     className="slds-button slds-button_icon slds-button_icon slds-pill__remove"
+    onClick={[Function]}
     title="Remove"
   >
     <svg
@@ -440,6 +521,7 @@ exports[`Pill renders a pill in a container - bare (deprecated) 1`] = `
     </a>
     <button
       className="slds-button slds-button_icon slds-button_icon slds-pill__remove"
+      onClick={[Function]}
       title="Remove"
     >
       <svg
@@ -474,6 +556,7 @@ exports[`Pill renders a pill in a container - bare (deprecated) 1`] = `
     </a>
     <button
       className="slds-button slds-button_icon slds-button_icon slds-pill__remove"
+      onClick={[Function]}
       title="Remove"
     >
       <svg
@@ -508,6 +591,7 @@ exports[`Pill renders a pill in a container - bare (deprecated) 1`] = `
     </a>
     <button
       className="slds-button slds-button_icon slds-button_icon slds-pill__remove"
+      onClick={[Function]}
       title="Remove"
     >
       <svg
@@ -549,6 +633,7 @@ exports[`Pill renders a pill in a container 1`] = `
     </a>
     <button
       className="slds-button slds-button_icon slds-button_icon slds-pill__remove"
+      onClick={[Function]}
       title="Remove"
     >
       <svg
@@ -583,6 +668,7 @@ exports[`Pill renders a pill in a container 1`] = `
     </a>
     <button
       className="slds-button slds-button_icon slds-button_icon slds-pill__remove"
+      onClick={[Function]}
       title="Remove"
     >
       <svg
@@ -617,6 +703,7 @@ exports[`Pill renders a pill in a container 1`] = `
     </a>
     <button
       className="slds-button slds-button_icon slds-button_icon slds-pill__remove"
+      onClick={[Function]}
       title="Remove"
     >
       <svg
@@ -658,6 +745,7 @@ exports[`Pill renders a pill that is truncated 1`] = `
     </a>
     <button
       className="slds-button slds-button_icon slds-button_icon slds-pill__remove"
+      onClick={[Function]}
       title="Remove"
     >
       <svg
@@ -710,6 +798,7 @@ exports[`Pill renders a pill with an avatar 1`] = `
   </a>
   <button
     className="slds-button slds-button_icon slds-button_icon slds-pill__remove"
+    onClick={[Function]}
     title="Remove"
   >
     <svg
@@ -769,6 +858,7 @@ exports[`Pill renders a pill with an error 1`] = `
   </a>
   <button
     className="slds-button slds-button_icon slds-button_icon slds-pill__remove"
+    onClick={[Function]}
     title="Remove"
   >
     <svg
@@ -828,6 +918,7 @@ exports[`Pill renders a pill with an icon 1`] = `
   </a>
   <button
     className="slds-button slds-button_icon slds-button_icon slds-pill__remove"
+    onClick={[Function]}
     title="Remove"
   >
     <svg

@@ -11,6 +11,7 @@ export let Button = props => {
   const {
     className,
     disabled,
+    isReset,
     isBrand,
     isNeutral,
     isOutlineBrand,
@@ -30,6 +31,7 @@ export let Button = props => {
   var classNameList = classNames(
     'slds-button',
     {
+      'slds-button_reset': isReset,
       'slds-button_brand': isBrand,
       'slds-button_neutral': isNeutral,
       'slds-button_outline-brand': isOutlineBrand,
@@ -49,14 +51,19 @@ export let Button = props => {
   return (
     <React.Fragment>
       {use === 'a' ? (
-        <a className={classNameList} {...rest} href="#" onClick={e => e.preventDefault()}>
+        <a
+          className={classNameList}
+          {...rest}
+          href="#"
+          onClick={e => e.preventDefault()}
+        >
           {props.children}
         </a>
       ) : (
-          <button className={classNameList} disabled={disabled} {...rest}>
-            {props.children}
-          </button>
-        )}
+        <button className={classNameList} disabled={disabled} {...rest}>
+          {props.children}
+        </button>
+      )}
     </React.Fragment>
   );
 };
@@ -66,6 +73,7 @@ Button.displayName = 'Button';
 Button.propTypes = {
   className: PropTypes.string,
   disabled: PropTypes.bool,
+  isReset: PropTypes.bool,
   isBrand: PropTypes.bool,
   isNeutral: PropTypes.bool,
   isOutlineBrand: PropTypes.bool,
@@ -78,7 +86,8 @@ Button.propTypes = {
   isFirst: PropTypes.bool,
   isMiddle: PropTypes.bool,
   isLast: PropTypes.bool,
-  use: CannotBeSetWith('disabled', PropTypes.oneOf(['a']))
+  use: CannotBeSetWith('disabled', PropTypes.oneOf(['a'])),
+  children: PropTypes.node
 };
 
 /// ////////////////////////////////////////

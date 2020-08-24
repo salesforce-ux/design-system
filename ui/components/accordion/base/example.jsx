@@ -2,107 +2,29 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 import React from 'react';
-import PropTypes from 'prop-types';
-import SvgIcon from '../../../shared/svg-icon';
-import classNames from 'classnames';
-import { ActionOverflow } from '../../menus/action-overflow/example';
+import uniqueId from 'lodash.uniqueid';
+import Accordion, { AccordionSection } from '../';
+import { ActionOverflow } from '../../../components/menus/action-overflow/example';
 import Card from '../../cards/';
-import Heading from '../../../shared/heading';
-
-const referenceId01 = 'accordion-details-01';
-const referenceId02 = 'accordion-details-02';
-const referenceId03 = 'accordion-details-03';
-const referenceId04 = 'accordion-details-04';
-const referenceId05 = 'accordion-details-05';
-
-export const Accordion = props => (
-  <ul className={classNames('slds-accordion', props.className)}>
-    {props.children}
-  </ul>
-);
-
-Accordion.propTypes = {
-  className: PropTypes.string,
-  children: PropTypes.node
-};
-
-export const AccordionSection = props => (
-  <li className="slds-accordion__list-item">
-    <section
-      className={classNames(
-        'slds-accordion__section',
-        props.isOpen && 'slds-is-open'
-      )}
-    >
-      <div className={classNames('slds-accordion__summary', props.className)}>
-        <Heading level="2"
-          className={classNames(
-            'slds-accordion__summary-heading',
-            props.className
-          )}
-        >
-          <button
-            aria-controls={props.referenceId}
-            aria-expanded={props.isOpen}
-            className="slds-button slds-button_reset slds-accordion__summary-action"
-          >
-            <SvgIcon
-              className="slds-accordion__summary-action-icon slds-button__icon slds-button__icon_left"
-              sprite="utility"
-              symbol="switch"
-            />
-            <span
-              className="slds-accordion__summary-content"
-              title={props.summary}
-            >
-              {props.summary}
-            </span>
-          </button>
-        </Heading>
-        {props.hasActionOverflow && (
-          <ActionOverflow position="right" dropdownIsOpen={false} />
-        )}
-      </div>
-      <div
-        hidden={!props.isOpen}
-        className={classNames('slds-accordion__content', props.className)}
-        id={props.referenceId}
-      >
-        {props.children}
-      </div>
-    </section>
-  </li>
-);
-
-AccordionSection.propTypes = {
-  isOpen: PropTypes.bool,
-  className: PropTypes.string,
-  referenceId: PropTypes.string,
-  summary: PropTypes.string,
-  hasActionOverflow: PropTypes.bool,
-  children: PropTypes.node
-};
 
 export const AccordionExample = () => (
   <Accordion>
     <AccordionSection
       summary="Accordion summary"
       isOpen
-      referenceId={referenceId01}
+      referenceId={uniqueId('referenceId-')}
     >
       Accordion details - A
     </AccordionSection>
     <AccordionSection
       summary="Accordion summary"
-      isOpen={false}
-      referenceId={referenceId02}
+      referenceId={uniqueId('referenceId-')}
     >
       Accordion details - B
     </AccordionSection>
     <AccordionSection
       summary="Accordion summary"
-      isOpen={false}
-      referenceId={referenceId03}
+      referenceId={uniqueId('referenceId-')}
     >
       Accordion details - C
     </AccordionSection>
@@ -120,21 +42,19 @@ export let states = [
         <AccordionSection
           summary="Accordion summary"
           isOpen
-          referenceId={referenceId01}
+          referenceId={uniqueId('referenceId-')}
         >
           Accordion details - A
         </AccordionSection>
         <AccordionSection
           summary="Accordion summary"
-          isOpen={false}
-          referenceId={referenceId02}
+          referenceId={uniqueId('referenceId-')}
         >
           Accordion details - B
         </AccordionSection>
         <AccordionSection
           summary="Accordion summary"
-          isOpen={false}
-          referenceId={referenceId03}
+          referenceId={uniqueId('referenceId-')}
         >
           Accordion details - C
         </AccordionSection>
@@ -148,22 +68,20 @@ export let states = [
       <Accordion>
         <AccordionSection
           summary="Accordion summary"
-          isOpen={false}
-          referenceId={referenceId01}
+          referenceId={uniqueId('referenceId-')}
         >
           Accordion details - A
         </AccordionSection>
         <AccordionSection
           summary="Accordion summary"
           isOpen
-          referenceId={referenceId02}
+          referenceId={uniqueId('referenceId-')}
         >
           Accordion details - B
         </AccordionSection>
         <AccordionSection
           summary="Accordion summary"
-          isOpen={false}
-          referenceId={referenceId03}
+          referenceId={uniqueId('referenceId-')}
         >
           Accordion details - C
         </AccordionSection>
@@ -177,22 +95,20 @@ export let states = [
       <Accordion>
         <AccordionSection
           summary="Accordion summary"
-          isOpen={false}
-          referenceId={referenceId01}
+          referenceId={uniqueId('referenceId-')}
         >
           Accordion details - A
         </AccordionSection>
         <AccordionSection
           summary="Accordion summary"
-          isOpen={false}
-          referenceId={referenceId02}
+          referenceId={uniqueId('referenceId-')}
         >
           Accordion details - B
         </AccordionSection>
         <AccordionSection
           summary="Accordion summary"
           isOpen
-          referenceId={referenceId03}
+          referenceId={uniqueId('referenceId-')}
         >
           Accordion details - C
         </AccordionSection>
@@ -207,21 +123,20 @@ export let states = [
         <AccordionSection
           summary="Accordion summary"
           isOpen
-          referenceId={referenceId01}
+          referenceId={uniqueId('referenceId-')}
         >
           Accordion details - A
         </AccordionSection>
         <AccordionSection
           summary="Accordion summary"
-          isOpen={false}
-          referenceId={referenceId02}
+          referenceId={uniqueId('referenceId-')}
         >
           Accordion details - B
         </AccordionSection>
         <AccordionSection
           summary="Accordion summary"
           isOpen
-          referenceId={referenceId03}
+          referenceId={uniqueId('referenceId-')}
         >
           Accordion details - C
         </AccordionSection>
@@ -241,21 +156,19 @@ export let examples = [
           <AccordionSection
             summary="Accordion summary Accordion summary Accordion summary Accordion summary Accordion summary Accordion summary Accordion summary Accordion summary Accordion summary Accordion summary"
             isOpen
-            referenceId={referenceId01}
+            referenceId={uniqueId('referenceId-')}
           >
             Accordion details - A
           </AccordionSection>
           <AccordionSection
             summary="Accordion summary"
-            isOpen={false}
-            referenceId={referenceId02}
+            referenceId={uniqueId('referenceId-')}
           >
             Accordion details - B
           </AccordionSection>
           <AccordionSection
             summary="Accordion summary"
-            isOpen={false}
-            referenceId={referenceId03}
+            referenceId={uniqueId('referenceId-')}
           >
             Accordion details - C
           </AccordionSection>
@@ -271,20 +184,19 @@ export let examples = [
         <AccordionSection
           summary="Accordion summary"
           isOpen
-          referenceId={referenceId01}
+          referenceId={uniqueId('referenceId-')}
         >
           <Accordion>
             <AccordionSection
               summary="Nested accordion summary"
               isOpen
-              referenceId={referenceId04}
+              referenceId={uniqueId('referenceId-')}
             >
               Accordion details - A
             </AccordionSection>
             <AccordionSection
               summary="Nested accordion summary"
-              isOpen={false}
-              referenceId={referenceId05}
+              referenceId={uniqueId('referenceId-')}
             >
               Accordion details - B
             </AccordionSection>
@@ -292,15 +204,13 @@ export let examples = [
         </AccordionSection>
         <AccordionSection
           summary="Accordion summary"
-          isOpen={false}
-          referenceId={referenceId02}
+          referenceId={uniqueId('referenceId-')}
         >
           Accordion details - B
         </AccordionSection>
         <AccordionSection
           summary="Accordion summary"
-          isOpen={false}
-          referenceId={referenceId03}
+          referenceId={uniqueId('referenceId-')}
         >
           Accordion details - C
         </AccordionSection>
@@ -316,21 +226,19 @@ export let examples = [
           <AccordionSection
             summary="Accordion summary"
             isOpen
-            referenceId={referenceId01}
+            referenceId={uniqueId('referenceId-')}
           >
             Accordion details - A
           </AccordionSection>
           <AccordionSection
             summary="Accordion summary"
-            isOpen={false}
-            referenceId={referenceId02}
+            referenceId={uniqueId('referenceId-')}
           >
             Accordion details - B
           </AccordionSection>
           <AccordionSection
             summary="Accordion summary"
-            isOpen={false}
-            referenceId={referenceId03}
+            referenceId={uniqueId('referenceId-')}
           >
             Accordion details - C
           </AccordionSection>
@@ -345,25 +253,29 @@ export let examples = [
       <Accordion>
         <AccordionSection
           summary="Accordion summary"
-          hasActionOverflow
+          actionMenu={
+            <ActionOverflow position="right" dropdownIsOpen={false} />
+          }
           isOpen
-          referenceId={referenceId01}
+          referenceId={uniqueId('referenceId-')}
         >
           Accordion details - A
         </AccordionSection>
         <AccordionSection
           summary="Accordion summary"
-          hasActionOverflow
-          isOpen={false}
-          referenceId={referenceId02}
+          actionMenu={
+            <ActionOverflow position="right" dropdownIsOpen={false} />
+          }
+          referenceId={uniqueId('referenceId-')}
         >
           Accordion details - B
         </AccordionSection>
         <AccordionSection
           summary="Accordion summary"
-          hasActionOverflow
-          isOpen={false}
-          referenceId={referenceId03}
+          actionMenu={
+            <ActionOverflow position="right" dropdownIsOpen={false} />
+          }
+          referenceId={uniqueId('referenceId-')}
         >
           Accordion details - C
         </AccordionSection>

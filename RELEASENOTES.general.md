@@ -1,6 +1,10 @@
 <!-- Release notes authoring guidelines: http://keepachangelog.com/ -->
 <!-- On release, add general notes here. In time the legacy release notes will be add to this -->
 
+## 2.13.1 - August 26, 2020
+
+- Added proper font-size change to mobile demos on the site
+
 ## 2.13.0 - August 20, 2020
 
 - Added opacity override for placeholder text in inputs for Firefox browser

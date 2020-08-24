@@ -4,6 +4,12 @@
 
 <!-- ## [Unreleased] -->
 
+## 2.13.1
+
+### Changed
+
+- Removed Mobile example under Stacked Alignment and Horizontal Alignment examples, as they did not conform to the specification.
+
 ## 2.13.0
 
 ### Changed

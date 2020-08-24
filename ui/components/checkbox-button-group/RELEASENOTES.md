@@ -4,6 +4,12 @@
 
 <!-- ## [Unreleased] -->
 
+## 2.13.1
+
+### Fixed
+
+- Fixed issue where mobile text size wasn't accurately sized.
+
 ## 2.11.5
 
 ### Added

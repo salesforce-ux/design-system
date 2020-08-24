@@ -3,6 +3,11 @@
 # Form Element Release Notes
 
 <!-- ## [Unreleased] -->
+## 2.14.0
+
+### Fixed
+
+- Adjusted space between the form label and the information button icon for Mobile.
 
 ## 2.13.0
 

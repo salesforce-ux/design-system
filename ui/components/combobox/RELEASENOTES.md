@@ -4,11 +4,17 @@
 
 <!-- ## [Unreleased] -->
 
+## 2.13.1
+
+### Fixed
+
+- Fixed erroneous camelcasing of `autocomplete` attribute.
+
 ## 2.13.0
 
 ### Changed
 
-- The assistive text for the listbox of pills has been moved out of the individual pills to remove repetition for users with screenreaders.
+- The assistive text for the listbox of pills has been moved out of the individual pills to remove repetition for users with screen readers.
 
 ## 2.12.2
 

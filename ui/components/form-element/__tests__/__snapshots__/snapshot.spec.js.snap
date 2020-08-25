@@ -1049,7 +1049,7 @@ exports[`Horizontal Form Element renders deprecated horizontal form elements - e
                 <input
                   aria-autocomplete="list"
                   aria-controls="listbox-id-01"
-                  autoComplete="off"
+                  autocomplete="off"
                   className="slds-input slds-combobox__input slds-combobox__input-value"
                   defaultValue="Salesforce Lightning Design System"
                   id="combobox-id-01"
@@ -1163,7 +1163,7 @@ exports[`Horizontal Form Element renders deprecated horizontal form elements - e
                 <input
                   aria-autocomplete={null}
                   aria-controls="listbox-id-02"
-                  autoComplete="off"
+                  autocomplete="off"
                   className="slds-input slds-combobox__input slds-combobox__input-value"
                   defaultValue="In Progress"
                   id="combobox-id-02"

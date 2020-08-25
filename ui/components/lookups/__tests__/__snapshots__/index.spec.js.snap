@@ -516,7 +516,7 @@ exports[`Lookup - Multi-Entity renders a default multi-entity lookup 1`] = `
                   <input
                     aria-autocomplete={null}
                     aria-controls="objectswitcher-listbox-id-01"
-                    autoComplete="off"
+                    autocomplete="off"
                     className="slds-input slds-combobox__input slds-combobox__input-value"
                     defaultValue="Accounts"
                     id="combobox-id-1"
@@ -798,7 +798,7 @@ exports[`Lookup - Multi-Entity renders a default multi-entity lookup 1`] = `
             <input
               aria-autocomplete="list"
               aria-controls="listbox-id-1"
-              autoComplete="off"
+              autocomplete="off"
               className="slds-input slds-combobox__input"
               id="combobox-id-1"
               onBlur={[Function]}
@@ -1085,7 +1085,7 @@ exports[`Lookup - Multi-Entity renders a multi-entity lookup with focus 1`] = `
                   <input
                     aria-autocomplete={null}
                     aria-controls="objectswitcher-listbox-id-01"
-                    autoComplete="off"
+                    autocomplete="off"
                     className="slds-input slds-combobox__input slds-combobox__input-value"
                     defaultValue="Accounts"
                     id="combobox-id-2"
@@ -1367,7 +1367,7 @@ exports[`Lookup - Multi-Entity renders a multi-entity lookup with focus 1`] = `
             <input
               aria-autocomplete="list"
               aria-controls="listbox-id-1"
-              autoComplete="off"
+              autocomplete="off"
               className="slds-input slds-combobox__input slds-has-focus"
               id="combobox-id-1"
               onBlur={[Function]}
@@ -1654,7 +1654,7 @@ exports[`Lookup - Multi-Entity renders a multi-entity lookup with focus and opti
                   <input
                     aria-autocomplete={null}
                     aria-controls="objectswitcher-listbox-id-01"
-                    autoComplete="off"
+                    autocomplete="off"
                     className="slds-input slds-combobox__input slds-combobox__input-value"
                     defaultValue="Accounts"
                     id="combobox-id-5"
@@ -1936,7 +1936,7 @@ exports[`Lookup - Multi-Entity renders a multi-entity lookup with focus and opti
             <input
               aria-autocomplete="list"
               aria-controls="listbox-id-4"
-              autoComplete="off"
+              autocomplete="off"
               className="slds-input slds-combobox__input slds-has-focus"
               id="combobox-id-4"
               onBlur={[Function]}
@@ -2331,7 +2331,7 @@ exports[`Lookup - Multi-Entity renders a multi-entity lookup with options select
                   <input
                     aria-autocomplete={null}
                     aria-controls="objectswitcher-listbox-id-01"
-                    autoComplete="off"
+                    autocomplete="off"
                     className="slds-input slds-combobox__input slds-combobox__input-value"
                     defaultValue="Accounts"
                     id="combobox-id-4"
@@ -2613,7 +2613,7 @@ exports[`Lookup - Multi-Entity renders a multi-entity lookup with options select
             <input
               aria-autocomplete="list"
               aria-controls="listbox-id-3"
-              autoComplete="off"
+              autocomplete="off"
               className="slds-input slds-combobox__input slds-has-focus"
               id="combobox-id-3"
               onBlur={[Function]}
@@ -3008,7 +3008,7 @@ exports[`Lookup - Multi-Entity renders an open multi-entity lookup with focus on
                   <input
                     aria-autocomplete={null}
                     aria-controls="objectswitcher-listbox-id-01"
-                    autoComplete="off"
+                    autocomplete="off"
                     className="slds-input slds-combobox__input slds-combobox__input-value"
                     defaultValue="Accounts"
                     id="combobox-id-3"
@@ -3291,7 +3291,7 @@ exports[`Lookup - Multi-Entity renders an open multi-entity lookup with focus on
               aria-activedescendant="option1"
               aria-autocomplete="list"
               aria-controls="listbox-id-2"
-              autoComplete="off"
+              autocomplete="off"
               className="slds-input slds-combobox__input slds-has-focus"
               id="combobox-id-2"
               onBlur={[Function]}
@@ -3560,7 +3560,7 @@ exports[`Lookup renders a default lookup 1`] = `
           <input
             aria-autocomplete="list"
             aria-controls="listbox-id-1"
-            autoComplete="off"
+            autocomplete="off"
             className="slds-input slds-combobox__input"
             id="combobox-id-1"
             onBlur={[Function]}
@@ -3775,7 +3775,7 @@ exports[`Lookup renders a lookup displaying options based on user input 1`] = `
             aria-activedescendant="option1"
             aria-autocomplete="list"
             aria-controls="listbox-id-4"
-            autoComplete="off"
+            autocomplete="off"
             className="slds-input slds-combobox__input slds-has-focus slds-combobox__input-value"
             defaultValue="salesforce"
             id="combobox-id-4"
@@ -4053,7 +4053,7 @@ exports[`Lookup renders a lookup with focus 1`] = `
           <input
             aria-autocomplete="list"
             aria-controls="listbox-id-2"
-            autoComplete="off"
+            autocomplete="off"
             className="slds-input slds-combobox__input slds-has-focus"
             id="combobox-id-2"
             onBlur={[Function]}
@@ -4285,7 +4285,7 @@ exports[`Lookup renders a lookup with option selected 1`] = `
           <input
             aria-autocomplete={null}
             aria-controls="listbox-id-5"
-            autoComplete="off"
+            autocomplete="off"
             className="slds-input slds-combobox__input slds-combobox__input-value"
             defaultValue="Salesforce.com, Inc."
             id="combobox-id-5"
@@ -4460,7 +4460,7 @@ exports[`Lookup renders an open lookup with focus on an item 1`] = `
             aria-activedescendant="option1"
             aria-autocomplete="list"
             aria-controls="listbox-id-3"
-            autoComplete="off"
+            autocomplete="off"
             className="slds-input slds-combobox__input slds-has-focus"
             id="combobox-id-3"
             onBlur={[Function]}

@@ -90,7 +90,7 @@ const ComboboxInput = props => {
         aria-controls={
           props['aria-controls'] || 'please-provide-listbox-id-here'
         }
-        autoComplete="off"
+        autocomplete="off"
         role="textbox"
         type="text"
         placeholder={

@@ -6,7 +6,6 @@ export const LakeMountain = props => (
     viewBox="0 0 505 319"
     aria-hidden="true"
     xmlns="http://www.w3.org/2000/svg"
-    xmlnsXlink="http://www.w3.org/1999/xlink"
   >
     <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
       <g transform="translate(-48.000000, -60.000000)">
@@ -304,7 +303,6 @@ export const FishingDeals = props => (
     viewBox="0 0 466 297"
     aria-hidden="true"
     xmlns="http://www.w3.org/2000/svg"
-    xmlnsXlink="http://www.w3.org/1999/xlink"
   >
     <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
       <g transform="translate(-69.000000, -68.000000)">
@@ -779,7 +777,6 @@ export const NoEvents = props => (
     viewBox="0 0 396 237"
     aria-hidden="true"
     xmlns="http://www.w3.org/2000/svg"
-    xmlnsXlink="http://www.w3.org/1999/xlink"
   >
     <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
       <g transform="translate(-102.000000, -79.000000)">
@@ -1090,7 +1087,6 @@ export const NoTask = props => (
     viewBox="0 0 454 182"
     aria-hidden="true"
     xmlns="http://www.w3.org/2000/svg"
-    xmlnsXlink="http://www.w3.org/1999/xlink"
   >
     <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
       <g transform="translate(-73.000000, -110.000000)">
@@ -1392,7 +1388,6 @@ export const Setup = props => (
     viewBox="0 0 396 245"
     aria-hidden="true"
     xmlns="http://www.w3.org/2000/svg"
-    xmlnsXlink="http://www.w3.org/1999/xlink"
   >
     <defs>
       <rect x="77" y="47" width="20" height="28" />

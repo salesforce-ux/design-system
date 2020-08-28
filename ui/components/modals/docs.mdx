@@ -34,10 +34,6 @@ These are modals that require a linearly directional paradigm of navigation (“
 
 If you're using a Modal for a system alert that the user must acknowledge, consider using a [Prompt](/components/prompt).
 
-### Styling Hooks
-
-<StyleApiTable name="modals" type="component" />
-
 ### Accessibility
 
 Modals, by definition, trap focus. This means that if a user presses Tab or Shift+Tab while their keyboard focus is in the modal, their focus should stay in and cycle through the modal’s content. Focus shouldn’t return to the underlying page until the user presses the Esc key, presses an explicit “Cancel” or “Close” button in the modal, or performs another action that closes the modal.
@@ -116,3 +112,7 @@ Modals, by definition, trap focus. This means that if a user presses Tab or Shif
 <CodeView isViewport demoStyles={getDemoStylesById(Base.examples, 'large')}>
   {getDisplayElementById(Base.examples, 'large')}
 </CodeView>
+
+### Styling Hooks Overview
+
+<StyleApiTable name="modals" type="component" />

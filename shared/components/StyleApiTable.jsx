@@ -2,6 +2,8 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 import React, { Component } from 'react';
+import classNames from 'classnames';
+
 import { propTypes } from '../../scripts/var-metadata';
 
 const getPropTypeData = (name, varName) => {
@@ -43,9 +45,10 @@ class StyleApiTable extends Component {
           </p>
         </div>
 
-        <table className="slds-table">
+        <table className="slds-table hooks-table slds-no-row-hover">
           <thead>
             <tr>
+              <th>Category</th>
               <th>Styling Hook Name</th>
               <th>Value Type(s)</th>
               <th>Fallback Value</th>
@@ -68,11 +71,24 @@ class StyleApiTable extends Component {
 
               return (
                 <>
-                  <tr key={`${category}-${i}`}>
-                    <td colspan="3">{category}</td>
-                  </tr>
                   {categoryVars.map((varData, ii) => (
-                    <tr key={`${category}-${i}-${ii}`}>
+                    <tr
+                      key={`${category}-${i}-${ii}`}
+                      className={classNames({
+                        'hooks-table__section': ii === 0,
+                        'hooks-table__section_end':
+                          ii === categoryVars.length - 1
+                      })}
+                    >
+                      {ii === 0 ? (
+                        <td
+                          className="hooks-table__col-category"
+                          scope="rowgroup"
+                          rowspan={categoryVars.length}
+                        >
+                          {category}
+                        </td>
+                      ) : null}
                       <td>{varData.name}</td>
                       <td>
                         {varData.types.map((type, x) => (

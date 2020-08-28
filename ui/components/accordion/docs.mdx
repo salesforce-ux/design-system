@@ -16,10 +16,6 @@ import * as Base from './base/example';
 
 Accordions are composed of a list of longer blocks of text, with a header button to toggle the visibility of each block.
 
-### Styling Hooks
-
-<StyleApiTable name="accordion" type="component" />
-
 ## Accessibility
 
 Availability of accordion content to assistive technology requires the use of `aria-controls` and toggling `aria-expanded` as regions are expanded and collapsed.
@@ -51,11 +47,15 @@ Content visibility is toggled via a [Button](/components/buttons) in the H3 head
 <CodeView>{getDisplayElementById(Base.examples, 'styled')}</CodeView>
 
 ### Nested
-<CodeView>
-  { getDisplayElementById(Base.examples, 'nested-accordions') }
-</CodeView>
+
+<CodeView>{getDisplayElementById(Base.examples, 'nested-accordions')}</CodeView>
 
 ### Heading with Truncation
+
 <CodeView>
-  { getDisplayElementById(Base.examples, 'long-heading-truncated')}
+  {getDisplayElementById(Base.examples, 'long-heading-truncated')}
 </CodeView>
+
+### Styling Hooks Overview
+
+<StyleApiTable name="accordion" type="component" />

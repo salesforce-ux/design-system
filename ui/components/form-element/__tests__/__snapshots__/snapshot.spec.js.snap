@@ -1476,7 +1476,7 @@ exports[`Horizontal Form Element renders deprecated horizontal form elements - e
               className="slds-assistive-text"
               id="option-drag-label"
             >
-              Press space bar when on an item, to move it within the list. CMD plus left and right arrow keys, to move items between lists.
+              Press space bar when on an item, to move it within the list. Cmd/Ctrl plus left and right arrow keys, to move items between lists.
             </div>
             <div
               className="slds-dueling-list__column slds-dueling-list__column_responsive"

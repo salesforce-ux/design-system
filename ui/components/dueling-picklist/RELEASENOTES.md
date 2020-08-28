@@ -4,6 +4,12 @@
 
 <!-- ## [Unreleased] -->
 
+## 2.13.1
+
+### Fixed
+
+- Keyboard interaction examples were only showing Mac-specific instructions (Cmd), changed to be more general (Cmd/Ctrl)
+
 ## 2.10.0
 
 ### Fixed

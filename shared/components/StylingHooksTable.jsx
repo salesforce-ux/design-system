@@ -118,7 +118,7 @@ class StylingHooksTable extends Component {
                         <ButtonIcon
                           className="slds-button_icon-border-filled slds-button_icon-x-small slds-m-right_small"
                           symbol="copy_to_clipboard"
-                          assistiveText="Copy to Clipboard"
+                          assistiveText={`Copy ${varData.name} to Clipboard`}
                           aria-haspopup="false"
                           title="Copy to Clipboard"
                           onClick={() => this.copyToClipboard(varData.name)}

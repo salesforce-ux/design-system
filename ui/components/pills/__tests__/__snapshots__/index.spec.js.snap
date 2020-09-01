@@ -167,7 +167,7 @@ exports[`Pill - Listbox of Pills renders a listbox of pills - bare 1`] = `
 exports[`Pill - Listbox of Pills renders a listbox of pills - group 1`] = `
 <div>
   <div
-    class="slds-combobox_container"
+    className="slds-combobox_container"
   />
   <div
     className="slds-listbox_selection-group"

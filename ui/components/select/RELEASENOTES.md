@@ -4,6 +4,12 @@
 
 <!-- ## [Unreleased] -->
 
+## 2.13.2
+### Fixed
+
+- Small improvements to the UI text.
+
+
 ## 2.8.4
 
 ### Fixed

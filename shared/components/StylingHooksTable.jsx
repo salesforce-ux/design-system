@@ -4,6 +4,8 @@
 import React, { Component } from 'react';
 import classNames from 'classnames';
 
+import ButtonIcon from '../../ui/components/button-icons';
+
 import { propTypes } from '../../scripts/var-metadata';
 
 const getPropTypeData = (name, varName) => {
@@ -24,7 +26,30 @@ const getPropTypeData = (name, varName) => {
   };
 };
 
-class StyleApiTable extends Component {
+class StylingHooksTable extends Component {
+  copyToClipboard(str) {
+    const el = document.createElement('textarea');
+    el.value = str;
+    el.setAttribute('readonly', '');
+    el.style.position = 'absolute';
+    el.style.left = '-9999px';
+    document.body.appendChild(el);
+
+    const selected =
+      document.getSelection().rangeCount > 0
+        ? document.getSelection().getRangeAt(0)
+        : false;
+    el.select();
+
+    document.execCommand('copy');
+    document.body.removeChild(el);
+
+    if (selected) {
+      document.getSelection().removeAllRanges();
+      document.getSelection().addRange(selected);
+    }
+  }
+
   render() {
     const { name, type } = this.props;
     const vars = require(`../../.generated/metadata/${type}s/${name}/styling-hooks.json`);
@@ -89,7 +114,18 @@ class StyleApiTable extends Component {
                           {category}
                         </td>
                       ) : null}
-                      <td>{varData.name}</td>
+                      <td>
+                        <ButtonIcon
+                          className="slds-button_icon-border-filled slds-button_icon-x-small slds-m-right_small"
+                          symbol="copy_to_clipboard"
+                          assistiveText={`Copy ${varData.name} to Clipboard`}
+                          aria-haspopup="false"
+                          title="Copy to Clipboard"
+                          onClick={() => this.copyToClipboard(varData.name)}
+                        />
+
+                        {varData.name}
+                      </td>
                       <td>
                         {varData.types.map((type, x) => (
                           <a
@@ -113,4 +149,4 @@ class StyleApiTable extends Component {
   }
 }
 
-export default StyleApiTable;
+export default StylingHooksTable;

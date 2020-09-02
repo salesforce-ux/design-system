@@ -98,7 +98,7 @@ export let Taglines = props => (
     <Modal aria-labelledby="modal-heading-01">
       <ModalHeader>
         <h2 id="modal-heading-01" className="slds-modal__title slds-hyphenate">
-          Modal Header
+          Modal header
         </h2>
         <p className="slds-m-top_x-small">
           Here&rsquo;s a tagline if you need it. It is allowed to extend across
@@ -145,7 +145,7 @@ export let ModalSizes = props => (
     >
       <ModalHeader>
         <h2 id="modal-heading-01" className="slds-modal__title slds-hyphenate">
-          Modal Header
+          Modal header
         </h2>
       </ModalHeader>
       <ModalContent className="slds-p-around_medium">
@@ -183,7 +183,7 @@ export let Directional = props => (
     <Modal aria-labelledby="modal-heading-01">
       <ModalHeader>
         <h2 id="modal-heading-01" className="slds-modal__title slds-hyphenate">
-          Modal Header
+          Modal header
         </h2>
       </ModalHeader>
       <ModalContent className="slds-p-around_medium">
@@ -251,7 +251,7 @@ export let Footless = props => (
     <Modal aria-labelledby="modal-heading-01">
       <ModalHeader>
         <h2 id="modal-heading-01" className="slds-modal__title slds-hyphenate">
-          Modal Header
+          Modal header
         </h2>
       </ModalHeader>
       <ModalContent className="slds-p-around_medium">
@@ -281,7 +281,7 @@ export let HiddenFooter = props => (
     <Modal aria-labelledby="modal-heading-01">
       <ModalHeader>
         <h2 id="modal-heading-01" className="slds-modal__title slds-hyphenate">
-          Modal Header
+          Modal header
         </h2>
       </ModalHeader>
       <ModalContent className="slds-modal__content_has-hidden-footer slds-p-around_medium">
@@ -322,7 +322,7 @@ export const Menu = () => {
             id={uniqueIDHeading}
             className="slds-modal__title slds-hyphenate"
           >
-            Modal Header
+            Modal header
           </Heading>
         </ModalHeader>
         <ModalMenu className="slds-p-around_medium" id={uniqueIDContent}>
@@ -358,7 +358,7 @@ const defaultComponent = (
     <Modal aria-labelledby="modal-heading-01">
       <ModalHeader>
         <h2 id="modal-heading-01" className="slds-modal__title slds-hyphenate">
-          Modal Header
+          Modal header
         </h2>
       </ModalHeader>
       <ModalContent className="slds-p-around_medium">

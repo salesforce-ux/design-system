@@ -9,6 +9,7 @@
 ### Fixed
 
 - Fixed issue where mobile text size wasn't accurately sized.
+- Small improvements to the UI text.
 
 ## 2.13.0
 

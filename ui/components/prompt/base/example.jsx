@@ -23,7 +23,7 @@ export default (
         closeButton={false}
       >
         <h2 className="slds-text-heading_medium" id="prompt-heading-id">
-          Service Unavailable
+          Service unavailable
         </h2>
       </ModalHeader>
 
@@ -42,7 +42,7 @@ export default (
       </ModalContent>
 
       <ModalFooter className="slds-theme_default">
-        <button className="slds-button slds-button_neutral">Okay</button>
+        <button className="slds-button slds-button_neutral">Got It</button>
       </ModalFooter>
     </Modal>
     <div className="slds-backdrop slds-backdrop_open" />

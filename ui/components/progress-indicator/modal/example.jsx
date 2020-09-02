@@ -19,7 +19,7 @@ export default (
     <Modal className="slds-modal_large" aria-labelledby="header43">
       <ModalHeader>
         <h2 id="header43" className="slds-text-heading_medium">
-          Modal Header
+          Modal header
         </h2>
       </ModalHeader>
       <ModalContent className="slds-grow slds-p-around_medium" />

@@ -285,13 +285,14 @@ export let examples = [
         labelId="inline-text-label"
         labelContent={inputLabel}
         inputId={inputId}
+        errorId={errorId}
+        inlineMessage="ex: (415)111-2222"
       >
         <Input
           id={inputId}
           placeholder={placeholderText}
-          aria-labelledby="inline-text-label"
+          aria-describedby={errorId}
         />
-        <div className="slds-form-element__help">ex: (415)111-2222</div>
       </FormElement>
     )
   },

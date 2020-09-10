@@ -12,6 +12,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 // pulled this file's contents from `v2.2.2` to display and test #4113
 
 import React from 'react';
+import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import SvgIcon from '../../../shared/svg-icon';
 import ButtonIcon from '../../button-icons/';
@@ -79,7 +80,11 @@ export const ListboxItemDeprecated = props => {
   );
 };
 
-export const ComboboxSearchInputDeprecated = props => (
+export const ComboboxSearchInputDeprecated = ({
+  autocomplete,
+  dropdown,
+  placeholder
+}) => (
   <FormElement>
     <FormElementLabel labelContent="Categories" inputId="text-input-01" />
     <FormElementControl className="slds-input-has-icon slds-input-has-icon_right slds-picklist__input">
@@ -87,20 +92,20 @@ export const ComboboxSearchInputDeprecated = props => (
         id="text-input-01"
         className="slds-lookup__search-input slds-input"
         type="text" // changed to pass aria test on deprecated markup, originally set to: "search"
-        placeholder={props.placeholder || 'Select an Option'}
+        placeholder={placeholder}
         aria-owns="option-list-01"
         role="textbox" // changed to pass aria test on deprecated markup, originally set to: "combobox"
         // removed below to pass aria test on deprecated markup, originally set to: "combobox"
         // aria-expanded={props.dropdown === 'open' ? 'true' : 'false'}
-        readOnly={!props.autocomplete}
-        aria-autocomplete={props.autocomplete ? 'list' : null}
+        readOnly={!autocomplete}
+        aria-autocomplete={autocomplete ? 'list' : null}
       />
-      {!props.autocomplete ? (
+      {!autocomplete ? (
         <ButtonIcon
           className="slds-input__icon slds-text-color_default"
           symbol="down"
           assistiveText="Expand category options"
-          aria-expanded={props.dropdown === 'open' ? 'true' : 'false'}
+          aria-expanded={dropdown === 'open' ? 'true' : 'false'}
           iconClassName="slds-button__icon"
           tabIndex="-1"
         />
@@ -108,3 +113,13 @@ export const ComboboxSearchInputDeprecated = props => (
     </FormElementControl>
   </FormElement>
 );
+
+ComboboxSearchInputDeprecated.propTypes = {
+  autocomplete: PropTypes.bool,
+  dropdown: PropTypes.string,
+  placeholder: PropTypes.string
+};
+
+ComboboxSearchInputDeprecated.defaultProps = {
+  placeholder: 'Select an Option…'
+};

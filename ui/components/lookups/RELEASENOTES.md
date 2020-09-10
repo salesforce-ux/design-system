@@ -6,6 +6,12 @@
 
 <!-- ## [VERSION] -->
 
+## 2.13.1
+
+### Fixed
+
+- Small improvements to the UI text.
+
 ## 2.13.0
 
 ### Changed

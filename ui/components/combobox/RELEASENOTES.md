@@ -9,6 +9,7 @@
 ### Fixed
 
 - Fixed erroneous camelcasing of `autocomplete` attribute.
+- Small improvements to the UI text.
 
 ## 2.13.0
 

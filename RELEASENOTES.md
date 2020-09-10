@@ -25,10 +25,15 @@
 ### [Combobox](https://www.lightningdesignsystem.com/components/combobox)
 #### Fixed
 - Fixed erroneous camelcasing of `autocomplete` attribute.
+- Small improvements to the UI text.
 
 ### [Dueling Picklist](https://www.lightningdesignsystem.com/components/dueling-picklist)
 #### Fixed
 - Keyboard interaction examples were only showing Mac-specific instructions (Cmd), changed to be more general (Cmd/Ctrl)
+
+### [Expression](https://www.lightningdesignsystem.com/components/expression)
+#### Fixed
+- Small improvements to the UI text.
 
 ### [Form Element](https://www.lightningdesignsystem.com/components/form-element)
 #### Changed
@@ -47,6 +52,10 @@
   - Moved `.slds-form-element__help` out of `.slds-form-element__control`, it is supposed to be a sibling in the markup structure.
   - Added `aria-describedby` to `input` which uses the `id` of the help message.
 
+### [Lookups](https://www.lightningdesignsystem.com/components/lookups)
+#### Fixed
+- Small improvements to the UI text.
+
 ### [Menus](https://www.lightningdesignsystem.com/components/menus)
 #### Changed
 - Removed Mobile examples as they did not conform to the specification.
@@ -54,6 +63,10 @@
 ### [Modals](https://www.lightningdesignsystem.com/components/modals)
 #### Fixed
 - Fixed issue where mobile text size wasn't accurately sized.
+- Small improvements to the UI text.
+
+### [Picklist](https://www.lightningdesignsystem.com/components/picklist)
+#### Fixed
 - Small improvements to the UI text.
 
 ### [Popovers](https://www.lightningdesignsystem.com/components/popovers)

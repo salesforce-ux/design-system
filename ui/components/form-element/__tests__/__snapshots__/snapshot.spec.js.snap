@@ -1169,7 +1169,7 @@ exports[`Horizontal Form Element renders deprecated horizontal form elements - e
                   id="combobox-id-02"
                   onBlur={[Function]}
                   onFocus={[Function]}
-                  placeholder="Select an Option"
+                  placeholder="Select an Option…"
                   readOnly={true}
                   role="textbox"
                   type="text"

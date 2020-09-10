@@ -476,7 +476,7 @@ exports[`Lookup - Multi-Entity renders a default multi-entity lookup 1`] = `
     className="slds-form-element__label"
     htmlFor="combobox-id-1"
   >
-    Relate to
+    Relate To
   </label>
   <div
     className="slds-form-element__control"
@@ -1045,7 +1045,7 @@ exports[`Lookup - Multi-Entity renders a multi-entity lookup with focus 1`] = `
     className="slds-form-element__label"
     htmlFor="combobox-id-1"
   >
-    Relate to
+    Relate To
   </label>
   <div
     className="slds-form-element__control"
@@ -1614,7 +1614,7 @@ exports[`Lookup - Multi-Entity renders a multi-entity lookup with focus and opti
     className="slds-form-element__label"
     htmlFor="combobox-id-4"
   >
-    Relate to
+    Relate To
   </label>
   <div
     className="slds-form-element__control"
@@ -2291,7 +2291,7 @@ exports[`Lookup - Multi-Entity renders a multi-entity lookup with options select
     className="slds-form-element__label"
     htmlFor="combobox-id-3"
   >
-    Relate to
+    Relate To
   </label>
   <div
     className="slds-form-element__control"
@@ -2968,7 +2968,7 @@ exports[`Lookup - Multi-Entity renders an open multi-entity lookup with focus on
     className="slds-form-element__label"
     htmlFor="combobox-id-2"
   >
-    Relate to
+    Relate To
   </label>
   <div
     className="slds-form-element__control"
@@ -3539,7 +3539,7 @@ exports[`Lookup renders a default lookup 1`] = `
     className="slds-form-element__label"
     htmlFor="combobox-id-1"
   >
-    Relate to
+    Relate To
   </label>
   <div
     className="slds-form-element__control"
@@ -3753,7 +3753,7 @@ exports[`Lookup renders a lookup displaying options based on user input 1`] = `
     className="slds-form-element__label"
     htmlFor="combobox-id-4"
   >
-    Relate to
+    Relate To
   </label>
   <div
     className="slds-form-element__control"
@@ -4032,7 +4032,7 @@ exports[`Lookup renders a lookup with focus 1`] = `
     className="slds-form-element__label"
     htmlFor="combobox-id-2"
   >
-    Relate to
+    Relate To
   </label>
   <div
     className="slds-form-element__control"
@@ -4246,7 +4246,7 @@ exports[`Lookup renders a lookup with option selected 1`] = `
     className="slds-form-element__label"
     htmlFor="combobox-id-5"
   >
-    Relate to
+    Relate To
   </label>
   <div
     className="slds-form-element__control"
@@ -4291,7 +4291,7 @@ exports[`Lookup renders a lookup with option selected 1`] = `
             id="combobox-id-5"
             onBlur={[Function]}
             onFocus={[Function]}
-            placeholder="Select an Option"
+            placeholder="Select an Option…"
             readOnly={true}
             role="textbox"
             type="text"
@@ -4438,7 +4438,7 @@ exports[`Lookup renders an open lookup with focus on an item 1`] = `
     className="slds-form-element__label"
     htmlFor="combobox-id-3"
   >
-    Relate to
+    Relate To
   </label>
   <div
     className="slds-form-element__control"

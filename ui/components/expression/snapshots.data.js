@@ -12,7 +12,7 @@ export const ConditionsOptions = {
     name: 'Always (No Criteria)'
   },
   conditionOption5: {
-    name: 'Formula Evaluates To True'
+    name: 'Formula Evaluates to True'
   }
 };
 
@@ -130,7 +130,7 @@ export const OptionsAll = {
     name: 'Always (No Criteria)'
   },
   conditionOption5: {
-    name: 'Formula Evaluates To True'
+    name: 'Formula Evaluates to True'
   }
 };
 
@@ -150,7 +150,7 @@ export const OptionsAny = {
     name: 'Always (No Criteria)'
   },
   conditionOption5: {
-    name: 'Formula Evaluates To True'
+    name: 'Formula Evaluates to True'
   }
 };
 
@@ -170,7 +170,7 @@ export const OptionsCustom = {
     name: 'Always (No Criteria)'
   },
   conditionOption5: {
-    name: 'Formula Evaluates To True'
+    name: 'Formula Evaluates to True'
   }
 };
 
@@ -190,7 +190,7 @@ export const OptionsAlways = {
     focused: true
   },
   conditionOption5: {
-    name: 'Formula Evaluates To True'
+    name: 'Formula Evaluates to True'
   }
 };
 
@@ -208,7 +208,7 @@ export const OptionsFormula = {
     name: 'Always (No Criteria)'
   },
   conditionOption5: {
-    name: 'Formula Evaluates To True',
+    name: 'Formula Evaluates to True',
     selected: true,
     focused: true
   }
@@ -230,7 +230,7 @@ export const OptionsAnyInGroup = {
     name: 'Always (No Criteria)'
   },
   conditionOption5: {
-    name: 'Formula Evaluates To True'
+    name: 'Formula Evaluates to True'
   }
 };
 
@@ -253,7 +253,7 @@ export const OptionSelected = {
   },
   formula: {
     snapshot: OptionsFormula,
-    value: 'Formula Evaluates To True'
+    value: 'Formula Evaluates to True'
   },
   group: {
     snapshot: OptionsAnyInGroup,

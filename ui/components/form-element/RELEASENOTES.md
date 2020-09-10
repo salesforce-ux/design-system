@@ -10,6 +10,10 @@
 
 - Removed Mobile example under Stacked Alignment and Horizontal Alignment examples, as they did not conform to the specification.
 
+### Fixed
+
+- Small improvements to the UI text.
+
 ## 2.13.0
 
 ### Changed

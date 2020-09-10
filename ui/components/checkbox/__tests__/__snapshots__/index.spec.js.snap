@@ -336,7 +336,7 @@ exports[`Form Element Standalone Checkbox renders form element standalone checkb
       className="slds-required"
       title="required"
     >
-      * 
+      *
        
     </abbr>
     Form Element Label

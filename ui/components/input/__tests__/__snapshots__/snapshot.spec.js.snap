@@ -35,7 +35,7 @@ exports[`Input renders an input that has an error 1`] = `
       className="slds-required"
       title="required"
     >
-      * 
+      *
        
     </abbr>
     Input Label
@@ -74,7 +74,7 @@ exports[`Input renders an input that has an error with icon 1`] = `
       className="slds-required"
       title="required"
     >
-      * 
+      *
        
     </abbr>
     Input Label
@@ -170,7 +170,7 @@ exports[`Input renders an input that is required 1`] = `
       className="slds-required"
       title="required"
     >
-      * 
+      *
        
     </abbr>
     Input Label
@@ -426,7 +426,7 @@ exports[`Input renders an input with field level help 1`] = `
         <div
           className="slds-popover__body"
         >
-          Some helpful information
+          Some helpful information.
         </div>
       </div>
     </div>

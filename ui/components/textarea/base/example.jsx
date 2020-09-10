@@ -75,7 +75,7 @@ export let states = [
         inputId={textareaId}
         isRequired
         errorId="error-01"
-        inlineMessage="This field is required"
+        inlineMessage="Enter a value."
       >
         <Textarea id={textareaId} required aria-describedby="error-01" />
       </FormElement>

@@ -82,6 +82,10 @@
 #### Fixed
 - Fixed issue where mobile text size wasn't accurately sized.
 
+### [Textarea](https://www.lightningdesignsystem.com/components/textarea)
+#### Fixed
+- Small improvements to the UI text.
+
 ## Release 2.13.0 - August 20, 2020
 
 - Added opacity override for placeholder text in inputs for Firefox browser

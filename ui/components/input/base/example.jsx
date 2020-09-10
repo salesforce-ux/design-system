@@ -15,7 +15,7 @@ import {
 const inputLabel = 'Input Label';
 const inputId = 'text-input-id-1';
 const errorId = 'error-message-unique-id';
-const placeholderText = 'Placeholder Text';
+const placeholderText = 'Placeholder text…';
 
 let Required = props => (
   <FormElement labelContent={inputLabel} inputId={inputId} isRequired>
@@ -30,7 +30,7 @@ let ErrorState = props => (
     inputId={inputId}
     errorId={props.errorId}
     isRequired
-    inlineMessage="This field is required"
+    inlineMessage="Enter a value."
   >
     <Input
       id={inputId}
@@ -49,7 +49,7 @@ let ErrorIcon = props => (
     hasLeftIcon
     errorId={props.errorId}
     isRequired
-    inlineMessage="This field is required"
+    inlineMessage="Enter a value."
   >
     <SvgIcon className="slds-input__icon" sprite="utility" symbol="error" />
     <Input

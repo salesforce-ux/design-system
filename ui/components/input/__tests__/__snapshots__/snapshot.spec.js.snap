@@ -16,7 +16,7 @@ exports[`Input renders a default input 1`] = `
     <input
       className="slds-input"
       id="text-input-id-1"
-      placeholder="Placeholder Text"
+      placeholder="Placeholder text…"
       type="text"
     />
   </div>
@@ -48,7 +48,7 @@ exports[`Input renders an input that has an error 1`] = `
       aria-invalid="true"
       className="slds-input"
       id="text-input-id-1"
-      placeholder="Placeholder Text"
+      placeholder="Placeholder text…"
       required={true}
       type="text"
     />
@@ -57,7 +57,7 @@ exports[`Input renders an input that has an error 1`] = `
     className="slds-form-element__help"
     id="error-message-unique-id"
   >
-    This field is required
+    Enter a value.
   </div>
 </div>
 `;
@@ -95,7 +95,7 @@ exports[`Input renders an input that has an error with icon 1`] = `
       aria-invalid="true"
       className="slds-input"
       id="text-input-id-1"
-      placeholder="Placeholder Text"
+      placeholder="Placeholder text…"
       required={true}
       type="text"
     />
@@ -104,7 +104,7 @@ exports[`Input renders an input that has an error with icon 1`] = `
     className="slds-form-element__help"
     id="error-message-unique-id"
   >
-    This field is required
+    Enter a value.
   </div>
 </div>
 `;
@@ -126,7 +126,7 @@ exports[`Input renders an input that is disabled 1`] = `
       className="slds-input"
       disabled={true}
       id="text-input-id-1"
-      placeholder="Placeholder Text"
+      placeholder="Placeholder text…"
       type="text"
     />
   </div>
@@ -181,7 +181,7 @@ exports[`Input renders an input that is required 1`] = `
     <input
       className="slds-input"
       id="text-input-id-1"
-      placeholder="Placeholder Text"
+      placeholder="Placeholder text…"
       required={true}
       type="text"
     />
@@ -324,7 +324,7 @@ exports[`Input renders an input with clear button and spinner 1`] = `
     <input
       className="slds-input"
       id="text-input-id-1"
-      placeholder="Placeholder Text"
+      placeholder="Placeholder text…"
       type="text"
     />
     <div
@@ -436,7 +436,7 @@ exports[`Input renders an input with field level help 1`] = `
       <input
         className="slds-input"
         id="text-input-id-1"
-        placeholder="Placeholder Text"
+        placeholder="Placeholder text…"
         type="text"
       />
     </div>
@@ -468,7 +468,7 @@ exports[`Input renders an input with fixed text 1`] = `
       aria-labelledby="fixed-text-label fixed-text-addon-pre fixed-text-addon-post"
       className="slds-input"
       id="text-input-id-1"
-      placeholder="Placeholder Text"
+      placeholder="Placeholder text…"
       type="text"
     />
     <span
@@ -500,7 +500,7 @@ exports[`Input renders an input with inline help 1`] = `
       aria-invalid="true"
       className="slds-input"
       id="text-input-id-1"
-      placeholder="Placeholder Text"
+      placeholder="Placeholder text…"
       type="text"
     />
   </div>
@@ -537,7 +537,7 @@ exports[`Input renders an input with left icon 1`] = `
     <input
       className="slds-input"
       id="text-input-id-1"
-      placeholder="Placeholder Text"
+      placeholder="Placeholder text…"
       type="text"
     />
   </div>
@@ -568,7 +568,7 @@ exports[`Input renders an input with left icon and clear button 1`] = `
     <input
       className="slds-input"
       id="text-input-id-1"
-      placeholder="Placeholder Text"
+      placeholder="Placeholder text…"
       type="text"
     />
     <button
@@ -618,7 +618,7 @@ exports[`Input renders an input with right icon 1`] = `
     <input
       className="slds-input"
       id="text-input-id-1"
-      placeholder="Placeholder Text"
+      placeholder="Placeholder text…"
       type="text"
     />
   </div>

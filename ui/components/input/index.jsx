@@ -18,12 +18,14 @@ const Input = props => {
     required,
     role,
     tabIndex,
-    isBare
+    isBare,
+    hasBorders
   } = props;
 
   const computedClassNames = {
     'slds-input_bare': isBare,
-    'slds-input_counter': type === 'number'
+    'slds-input_counter': type === 'number',
+    'slds-input_borders': readOnly && hasBorders
   };
 
   const uniqueId = _.uniqueId('text-input-unique-id-');
@@ -82,7 +84,9 @@ Input.propTypes = {
   disabled: PropTypes.bool,
   required: PropTypes.bool,
   role: PropTypes.string,
-  tabIndex: PropTypes.string
+  tabIndex: PropTypes.string,
+  isBare: PropTypes.bool,
+  hasBorders: PropTypes.bool
 };
 
 export default Input;

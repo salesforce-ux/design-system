@@ -69,7 +69,7 @@ let Disabled = props => (
 
 let Readonly = props => (
   <FormElement labelContent={inputLabel} inputId={inputId}>
-    <Input id={inputId} readOnly defaultValue="Read Only" placeholder="" />
+    <Input id={inputId} readOnly hasBorders={props.hasBorders} defaultValue="Read Only" placeholder="" />
   </FormElement>
 );
 
@@ -108,6 +108,11 @@ export let states = [
     id: 'read-only',
     label: 'Readonly',
     element: <Readonly />
+  },
+  {
+    id: 'read-only-borders',
+    label: 'Readonly with borders',
+    element: <Readonly hasBorders />
   },
   {
     id: 'static',
@@ -314,6 +319,15 @@ export let examples = [
           <Input id={inputId} placeholder={placeholderText} />
         </FormElement>
       </div>
+    )
+  },
+  {
+    id: 'bare',
+    label: 'Bare',
+    element: (
+      <FormElement labelContent={inputLabel} inputId={inputId}>
+        <Input id={inputId} isBare placeholder={placeholderText} />
+      </FormElement>
     )
   }
 ];

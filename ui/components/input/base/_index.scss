@@ -13,28 +13,82 @@
  * @variant
  */
 .slds-input {
-  @include form-states;
   display: inline-block;
-  padding: 0 $spacing-medium 0 $spacing-small;
+  padding-top: 0;
+  padding-right: var(--sds-c-input-spacing-horizontal-end, $spacing-medium);
+  padding-bottom: 0;
+  padding-left: var(--sds-c-input-spacing-horizontal-start, $spacing-small);
+  width: 100%;
+  min-height: calc($height-input + ($border-width-thin * 2)); // For IE
   line-height: $height-input;
-  min-height: calc(#{$height-input} + (#{$border-width-thin} * 2)); // For IE
+  border: $border-width-thin solid var(--sds-c-input-color-border, $color-border-input);
+  border-radius: var(--sds-c-input-radius-border, $border-radius-medium);
+  background-color: var(--sds-c-input-color-background, $color-background-input);
+  box-shadow: var(--sds-c-input-shadow, none);
+  transition: border $duration-quickly linear, background-color $duration-quickly linear;
+
+  &:focus,
+  &:active {
+    /*! @css-var-fallback border-color */
+    // --sds-c-input-color-border: var(--sds-c-input-color-border-focus, #{$color-border-input-active});
+    border-color: var(--sds-c-input-color-border-focus, #{$color-border-input-active});
+
+    /*! @css-var-fallback background-color */
+    // --sds-c-input-background-color: var(--sds-c-input-color-background-focus, #{$color-background-input-active});
+    background-color: var(--sds-c-input-color-background-focus, #{$color-background-input-active});
+
+    /*! @css-var-fallback box-shadow */
+    // --sds-c-input-shadow: var(--sds-c-input-shadow-focus, 0 0 3px #{$brand-accessible});
+    box-shadow: var(--sds-c-input-shadow-focus, 0 0 3px #{$brand-accessible});
+    outline: 0;
+  }
+
+  &[disabled],
+  &.slds-is-disabled {
+    background-color: $color-background-input-disabled;
+    border-color: $color-border-input-disabled;
+    cursor: not-allowed;
+    user-select: none;
+
+    &:focus,
+    &:active {
+      box-shadow: none;
+    }
+  }
 
   /**
    * @selector [readonly]
    * @restrict .slds-input
    */
   &[readonly] {
-    padding-left: 0;
-    border-color: transparent;
-    background-color: transparent;
+    /*! @css-var-fallback padding-left */
+    // --sds-c-input-spacing-horizontal-start: var(--sds-c-input-spacing-horizontal-start-readonly, 0);
+    padding-left: var(--sds-c-input-spacing-horizontal-start-readonly, 0);
+
+    /*! @css-var-fallback border-color */
+    // --sds-c-input-color-border: var(--sds-c-input-color-border-readonly, transparent);
+    border-color: var(--sds-c-input-color-border-readonly, transparent);
+
+    /*! @css-var-fallback background-color */
+    // --sds-c-input-color-background: var(--sds-c-input-color-background-readonly, transparent);
+    background-color: var(--sds-c-input-color-background-readonly, transparent);
     font-size: $input-static-font-size;
-    font-weight: $input-readonly-font-weight; // This is a plain readonly input. It should not have the text treatment that static has.
+    // TODO: This is a plain readonly input. It should not have the text treatment that static has.
+    font-weight: $input-readonly-font-weight;
   }
 
   &[type='search']::-ms-clear {
     display: none;
     width: 0;
     height: 0;
+  }
+
+  // Hide extra UI added by the browser—specifically the close icon—for Search inputs
+  &[type="search"]::-webkit-search-decoration,
+  &[type="search"]::-webkit-search-cancel-button,
+  &[type="search"]::-webkit-search-results-button,
+  &[type="search"]::-webkit-search-results-decoration {
+    display: none;
   }
 
   /**
@@ -54,21 +108,27 @@
    * @restrict .slds-input, input, textarea
    * @modifier
    */
-  &_bare,
-  &--bare {
+
+  &.slds-input_bare,
+  &.slds-input--bare {
+    /*! @css-var-fallback background-color */
+    // --sds-c-input-color-background: transparent;
     background-color: transparent;
+
+    /*! @css-var-fallback padding-right */
+    // --sds-c-input-spacing-horizontal-end: 0;
+    padding-right: 0;
+
+    /*! @css-var-fallback padding-left */
+    // --sds-c-input-spacing-horizontal-start: #{$spacing-small};
+    padding-left: $spacing-small;
     border: 0;
-    padding: {
-      top: 0;
-      bottom: 0;
-      left: $spacing-small;
-    }
     color: $color-text-default;
-    line-height: $height-input;
 
     &:focus,
     &:active {
-      outline: 0;
+      /*! @css-var-fallback box-shadow */
+      // --sds-c-input-shadow: none;
       box-shadow: none;
     }
   }
@@ -82,7 +142,7 @@
    */
   &_height,
   &--height {
-    min-height: calc(#{$height-input} + (#{$border-width-thin} * 2)); // For IE
+    min-height: calc($height-input + ($border-width-thin * 2)); // For IE
   }
 }
 
@@ -93,7 +153,12 @@
  * @restrict .slds-input
  */
 .slds-input_borders {
-  padding-left: $spacing-small;
+  /*! @css-var-fallback padding-right */
+  // --sds-c-input-spacing-horizontal-start: #{$spacing-small};
+  padding-right: $spacing-small;
+
+  /*! @css-var-fallback border-color */
+  // --sds-c-input-color-border: #{$color-border-input};
   border-color: $color-border-input;
 }
 
@@ -120,14 +185,6 @@
     line-height: 1;
     border: 0; // Re-aligns icons to center
     z-index: 2;
-
-    /* @Todo - we need to be sure this is deprecated since the color sems to be the correct gray I see in specs */
-    @include deprecate(
-      '4.0.0',
-      'Use .slds-icon-text-default on the SVG icon instead'
-    ) {
-      fill: $color-text-input-icon;
-    }
   }
 
   .slds-input__icon:not(button) {
@@ -140,8 +197,8 @@
    * @selector .slds-input-has-icon_left
    * @restrict .slds-input-has-icon
    */
-  &_left,
-  &--left {
+  &.slds-input-has-icon_left,
+  &.slds-input-has-icon--left {
 
     .slds-input__icon {
       left: $spacing-small;
@@ -150,6 +207,8 @@
     .slds-input,
     .slds-input_bare,
     .slds-input--bare {
+      /*! @css-var-fallback padding-left */
+      // --sds-c-input-spacing-horizontal-start: #{$spacing-x-large};
       padding-left: $spacing-x-large;
     }
   }
@@ -160,8 +219,8 @@
    * @selector .slds-input-has-icon_right
    * @restrict .slds-input-has-icon
    */
-  &_right,
-  &--right {
+  &.slds-input-has-icon_right,
+  &.slds-input-has-icon--right {
 
     .slds-input__icon {
       right: $spacing-small;
@@ -170,6 +229,8 @@
     .slds-input,
     .slds-input_bare,
     .slds-input--bare {
+      /*! @css-var-fallback padding-right */
+      // --sds-c-input-spacing-horizontal-end: #{$spacing-x-large};
       padding-right: $spacing-x-large;
     }
   }
@@ -180,8 +241,8 @@
    * @selector .slds-input-has-icon_left-right
    * @restrict .slds-input-has-icon
    */
-  &_left-right,
-  &--left-right {
+  &.slds-input-has-icon_left-right,
+  &.slds-input-has-icon--left-right {
     /**
      * @summary Hook for .slds-input-has-icon--left-right
      *
@@ -207,7 +268,13 @@
     .slds-input,
     .slds-input_bare,
     .slds-input--bare {
-      padding: 0 $spacing-x-large;
+      /*! @css-var-fallback padding-left */
+      // --sds-c-input-spacing-horizontal-start: #{$spacing-x-large};
+      padding-left: $spacing-x-large;
+
+      /*! @css-var-fallback padding-right */
+      // --sds-c-input-spacing-horizontal-end: #{$spacing-x-large};
+      padding-right: $spacing-x-large;
     }
   }
 
@@ -216,6 +283,8 @@
     .slds-input,
     .slds-input_bare,
     .slds-input--bare {
+      /*! @css-var-fallback padding-right */
+      // --sds-c-input-spacing-horizontal-end: (#{$spacing-xx-large} + #{$spacing-x-small});
       padding-right: ($spacing-xx-large + $spacing-x-small);
     }
   }
@@ -264,15 +333,20 @@
   display: flex;
 }
 
-.slds-input:required:focus {
-  box-shadow: $shadow-button-focus;
+.slds-has-error .slds-input {
+  border-color: $color-border-error;
+  box-shadow: $color-border-error 0 0 0 $border-width-thin inset;
+  background-color: $color-background-input;
+  background-clip: padding-box;
+
+  &:focus,
+  &:active {
+    border-color: $color-border-error;
+    box-shadow: $color-border-error 0 0 0 $border-width-thin inset, $shadow-button-focus;
+  }
 }
 
-.slds-has-error {
-  @include form-input-error('.slds-input');
-
-  .slds-input__icon {
-    fill: $color-text-error;
-    color: $color-text-error;
-  }
+.slds-has-error .slds-input__icon {
+  fill: $color-text-error;
+  color: $color-text-error;
 }

@@ -3,7 +3,7 @@
 
 ## Release 2.13.2 - September 23, 2020
 
-- Added added icons synonym metadata to SLDS dist
+- Added icons synonym metadata to SLDS dist
 
 ## Release 2.13.1 - September 18, 2020
 
@@ -39,6 +39,10 @@
 - Removed Mobile example under Stacked Alignment and Horizontal Alignment examples, as they did not conform to the specification.
 #### Fixed
 - Small improvements to the UI text.
+
+### [Icons](https://www.lightningdesignsystem.com/components/icons)
+#### Added
+- `slds-current-color` to restricted classes.
 
 ### [Illustration](https://www.lightningdesignsystem.com/components/illustration)
 #### Fixed
@@ -393,7 +397,7 @@
 ## Components
 ### [Button Icons](https://www.lightningdesignsystem.com/components/button-icons)
 #### Fixed
-- Sizing classes are now respected in mobile/touch context 
+- Sizing classes are now respected in mobile/touch context
 #### Added
 - Added documentation and examples for mobile/touch context
 

@@ -82,7 +82,12 @@ class CodeBlock extends Component {
       <div className="docs-codeblock-source">
         <ul className="docs-codeblock__action-bar">
           <li>
-            <Copy key="copy" className="site-code_copy" text={this.getCode()} />
+            <Copy
+              key="copy"
+              className="slds-button_icon-container"
+              containerClassName="site-code_copy"
+              text={this.getCode()}
+            />
           </li>
           {toggleCode && (
             <li>

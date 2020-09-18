@@ -19,18 +19,37 @@
 ### [Combobox](https://www.lightningdesignsystem.com/components/combobox)
 #### Fixed
 - Fixed erroneous camelcasing of `autocomplete` attribute.
+- Small improvements to the UI text.
 
 ### [Dueling Picklist](https://www.lightningdesignsystem.com/components/dueling-picklist)
 #### Fixed
 - Keyboard interaction examples were only showing Mac-specific instructions (Cmd), changed to be more general (Cmd/Ctrl)
 
+### [Expression](https://www.lightningdesignsystem.com/components/expression)
+#### Fixed
+- Small improvements to the UI text.
+
 ### [Form Element](https://www.lightningdesignsystem.com/components/form-element)
 #### Changed
 - Removed Mobile example under Stacked Alignment and Horizontal Alignment examples, as they did not conform to the specification.
+#### Fixed
+- Small improvements to the UI text.
 
 ### [Illustration](https://www.lightningdesignsystem.com/components/illustration)
 #### Fixed
 - Removed `Xlink` namespace. It was deprecated in the SVG 2 specification.
+
+### [Input](https://www.lightningdesignsystem.com/components/input)
+#### Fixed
+- For inline help example:
+  - Removed unnecessary `aria-labelledby` from `input`. A `label` was already associated with the `input`.
+  - Moved `.slds-form-element__help` out of `.slds-form-element__control`, it is supposed to be a sibling in the markup structure.
+  - Added `aria-describedby` to `input` which uses the `id` of the help message.
+- Small improvements to the UI text.
+
+### [Lookups](https://www.lightningdesignsystem.com/components/lookups)
+#### Fixed
+- Small improvements to the UI text.
 
 ### [Menus](https://www.lightningdesignsystem.com/components/menus)
 #### Changed
@@ -39,16 +58,30 @@
 ### [Modals](https://www.lightningdesignsystem.com/components/modals)
 #### Fixed
 - Fixed issue where mobile text size wasn't accurately sized.
+- Small improvements to the UI text.
+
+### [Picklist](https://www.lightningdesignsystem.com/components/picklist)
+#### Fixed
+- Small improvements to the UI text.
 
 ### [Popovers](https://www.lightningdesignsystem.com/components/popovers)
 #### Changed
 - Removed Mobile examples as they did not conform to the specification.
+
+### [Prompt](https://www.lightningdesignsystem.com/components/prompt)
+#### Fixed
+- Small improvements to the UI text.
+<!-- ## [VERSION] -->
 
 ### [Radio Button Group](https://www.lightningdesignsystem.com/components/radio-button-group)
 #### Fixed
 - Fixed issue where mobile text size wasn't accurately sized.
 
 ### [Select](https://www.lightningdesignsystem.com/components/select)
+#### Fixed
+- Small improvements to the UI text.
+
+### [Textarea](https://www.lightningdesignsystem.com/components/textarea)
 #### Fixed
 - Small improvements to the UI text.
 
@@ -59,30 +92,30 @@
 ## Components
 ### [Accordion](https://www.lightningdesignsystem.com/components/accordion)
 #### Added
-- Added the brand expression specific Styling Hooks to Accordion.
+- Enabled styling hooks for accordion. See accordion's styling hooks overview table for a full listing of the currently available hooks.
 #### Changed
 - Updated heading elements from h3 to h2.
 
 ### [Alert](https://www.lightningdesignsystem.com/components/alert)
 #### Added
-- Added the brand expression specific Styling Hooks
+- Enabled styling hooks for alert. See alert's styling hooks overview table for a full listing of the currently available hooks.
 
 ### [Avatar](https://www.lightningdesignsystem.com/components/avatar)
 #### Added
-- Added the brand expression specific Styling Hooks to Avatar.
+- Enabled styling hooks for avatar. See avatar's styling hooks overview table for a full listing of the currently available hooks.
 
 ### [Badges](https://www.lightningdesignsystem.com/components/badges)
 #### Added
-- Added the brand expression specific Styling Hooks to Badge.
+- Enabled styling hooks for badge. See badge's styling hooks overview table for a full listing of the currently available hooks.
 #### Fixed
 - Fixed inconsistent heights between variants when border isn't present.
 
 ### [Breadcrumbs](https://www.lightningdesignsystem.com/components/breadcrumbs)
-- Added the brand expression specific Styling Hooks
+- Enabled styling hooks for breadcrumb. See breadcrumb's styling hooks overview table for a full listing of the currently available hooks.
 
 ### [Buttons](https://www.lightningdesignsystem.com/components/buttons)
 #### Added
-- Added the brand expression specific Styling Hooks
+- Enabled styling hooks for button. See button's styling hooks overview table for a full listing of the currently available hooks.
 
 ### [Combobox](https://www.lightningdesignsystem.com/components/combobox)
 #### Changed
@@ -102,7 +135,7 @@
 - Adjusted color of unsaved tab indicator asterisk to comply with accessibility color contrast rules
 
 ### [Icons](https://www.lightningdesignsystem.com/components/icons)
-- Added the brand expression specific Styling Hooks
+- Enabled styling hooks for icon. See icon's styling hooks overview table for a full listing of the currently available hooks.
 
 ### [List Builder](https://www.lightningdesignsystem.com/components/list-builder)
 #### Changed
@@ -114,7 +147,7 @@
 
 ### [Modals](https://www.lightningdesignsystem.com/components/modals)
 #### Added
-- Added the brand expression specific Styling Hooks
+- Enabled styling hooks for modal. See modal's styling hooks overview table for a full listing of the currently available hooks.
 
 ### [Path](https://www.lightningdesignsystem.com/components/path)
 #### Changed
@@ -126,7 +159,7 @@
 - Addressed layout inconsistencies for touch styles
 - Clarified documentation around when linked pills can be used
 #### Added
-- Added the brand expression specific Styling Hooks to Pill.
+- Enabled styling hooks for pill. See pill's styling hooks overview table for a full listing of the currently available hooks.
 - Added example for Listbox of Pills in Group
 #### Changed
 - Removed redundant `border-radius` on `.slds-pill:focus`
@@ -145,19 +178,19 @@
 
 ### [Scoped Tabs](https://www.lightningdesignsystem.com/components/scoped-tabs)
 #### Added
-- Added the brand expression specific Styling Hooks
+- Enabled styling hooks for scoped tab. See scoped tab's styling hooks overview table for a full listing of the currently available hooks.
 
 ### [Tabs](https://www.lightningdesignsystem.com/components/tabs)
 #### Added
-- Added the brand expression specific Styling Hooks
+- Enabled styling hooks for tab. See tab's styling hooks overview table for a full listing of the currently available hooks.
 
 ### [Toast](https://www.lightningdesignsystem.com/components/toast)
 #### Added
-- Added the brand expression specific Styling Hooks
+- Enabled styling hooks for toast. See toast's styling hooks overview table for a full listing of the currently available hooks.
 
 ### [Tooltips](https://www.lightningdesignsystem.com/components/tooltips)
 #### Added
-- Added the brand expression specific Styling Hooks
+- Enabled styling hooks for tooltip. See tooltip's styling hooks overview table for a full listing of the currently available hooks.
 #### Changed
 - Updated blueprint examples from anchor links to more semantically correct buttons
 
@@ -212,8 +245,8 @@
 - Added `aria-checked="true"` to Listbox options when selected
 
 ### [Form Element](https://www.lightningdesignsystem.com/components/form-element)
-- For touch devices, fixed an issue with button icons being the incorrect height if using custom elements.
 #### Fixed
+- For touch devices, fixed an issue with button icons being the incorrect height if using custom elements.
 
 ## Release 2.12.1 - May 7, 2020
 
@@ -1007,7 +1040,7 @@
 
 ### [Breadcrumbs](https://www.lightningdesignsystem.com/components/breadcrumbs)
 #### Changed
-- Added bold font weight to '.slds-breadcrumb__item`.
+- Added bold font weight to '.slds-breadcrumb\_\_item`.
 #### Removed
 - Removed `.slds-text-title_caps` from breadcrumb list item.
 

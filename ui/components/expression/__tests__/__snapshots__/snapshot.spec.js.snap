@@ -45,7 +45,7 @@ exports[`Expression Base renders the default expression 1`] = `
                 id="combobox-id-1"
                 onBlur={[Function]}
                 onFocus={[Function]}
-                placeholder="Select an Option"
+                placeholder="Select…"
                 readOnly={true}
                 role="textbox"
                 type="text"
@@ -202,9 +202,9 @@ exports[`Expression Base renders the default expression 1`] = `
                     >
                       <span
                         className="slds-truncate"
-                        title="Formula Evaluates To True"
+                        title="Formula Evaluates to True"
                       >
-                        Formula Evaluates To True
+                        Formula Evaluates to True
                       </span>
                     </span>
                   </div>
@@ -269,7 +269,7 @@ exports[`Expression Base renders the default expression 1`] = `
                         id="combobox-id-2"
                         onBlur={[Function]}
                         onFocus={[Function]}
-                        placeholder="Select an Option"
+                        placeholder="Select…"
                         readOnly={true}
                         role="textbox"
                         type="text"
@@ -449,7 +449,7 @@ exports[`Expression Base renders the default expression 1`] = `
                         id="combobox-id-3"
                         onBlur={[Function]}
                         onFocus={[Function]}
-                        placeholder="Select an Option"
+                        placeholder="Select…"
                         readOnly={true}
                         role="textbox"
                         type="text"
@@ -734,7 +734,7 @@ exports[`Expression Base renders the disabled initial state 1`] = `
                 id="combobox-id-4"
                 onBlur={[Function]}
                 onFocus={[Function]}
-                placeholder="Select an Option"
+                placeholder="Select…"
                 readOnly={true}
                 role="textbox"
                 type="text"
@@ -891,9 +891,9 @@ exports[`Expression Base renders the disabled initial state 1`] = `
                     >
                       <span
                         className="slds-truncate"
-                        title="Formula Evaluates To True"
+                        title="Formula Evaluates to True"
                       >
-                        Formula Evaluates To True
+                        Formula Evaluates to True
                       </span>
                     </span>
                   </div>
@@ -958,7 +958,7 @@ exports[`Expression Base renders the disabled initial state 1`] = `
                         id="combobox-id-5"
                         onBlur={[Function]}
                         onFocus={[Function]}
-                        placeholder="Select an Option"
+                        placeholder="Select…"
                         readOnly={true}
                         role="textbox"
                         type="text"
@@ -1139,7 +1139,7 @@ exports[`Expression Base renders the disabled initial state 1`] = `
                         id="combobox-id-6"
                         onBlur={[Function]}
                         onFocus={[Function]}
-                        placeholder="Select an Option"
+                        placeholder="Select…"
                         readOnly={true}
                         role="textbox"
                         type="text"
@@ -1426,7 +1426,7 @@ exports[`Expression Base renders with a custom logic value 1`] = `
                 id="combobox-id-31"
                 onBlur={[Function]}
                 onFocus={[Function]}
-                placeholder="Select an Option"
+                placeholder="Select…"
                 readOnly={true}
                 role="textbox"
                 type="text"
@@ -1583,9 +1583,9 @@ exports[`Expression Base renders with a custom logic value 1`] = `
                     >
                       <span
                         className="slds-truncate"
-                        title="Formula Evaluates To True"
+                        title="Formula Evaluates to True"
                       >
-                        Formula Evaluates To True
+                        Formula Evaluates to True
                       </span>
                     </span>
                   </div>
@@ -1650,7 +1650,7 @@ exports[`Expression Base renders with a custom logic value 1`] = `
                         id="combobox-id-32"
                         onBlur={[Function]}
                         onFocus={[Function]}
-                        placeholder="Select an Option"
+                        placeholder="Select…"
                         readOnly={true}
                         role="textbox"
                         type="text"
@@ -1830,7 +1830,7 @@ exports[`Expression Base renders with a custom logic value 1`] = `
                         id="combobox-id-33"
                         onBlur={[Function]}
                         onFocus={[Function]}
-                        placeholder="Select an Option"
+                        placeholder="Select…"
                         readOnly={true}
                         role="textbox"
                         type="text"
@@ -2115,7 +2115,7 @@ exports[`Expression Base renders with a resource selected 1`] = `
                 id="combobox-id-28"
                 onBlur={[Function]}
                 onFocus={[Function]}
-                placeholder="Select an Option"
+                placeholder="Select…"
                 readOnly={true}
                 role="textbox"
                 type="text"
@@ -2272,9 +2272,9 @@ exports[`Expression Base renders with a resource selected 1`] = `
                     >
                       <span
                         className="slds-truncate"
-                        title="Formula Evaluates To True"
+                        title="Formula Evaluates to True"
                       >
-                        Formula Evaluates To True
+                        Formula Evaluates to True
                       </span>
                     </span>
                   </div>
@@ -2340,7 +2340,7 @@ exports[`Expression Base renders with a resource selected 1`] = `
                         id="combobox-id-29"
                         onBlur={[Function]}
                         onFocus={[Function]}
-                        placeholder="Select an Option"
+                        placeholder="Select…"
                         readOnly={true}
                         role="textbox"
                         type="text"
@@ -2534,7 +2534,7 @@ exports[`Expression Base renders with a resource selected 1`] = `
                         id="combobox-id-30"
                         onBlur={[Function]}
                         onFocus={[Function]}
-                        placeholder="Select an Option"
+                        placeholder="Select…"
                         readOnly={true}
                         role="textbox"
                         type="text"
@@ -2820,7 +2820,7 @@ exports[`Expression Base renders with all option selected 1`] = `
                 id="combobox-id-16"
                 onBlur={[Function]}
                 onFocus={[Function]}
-                placeholder="Select an Option"
+                placeholder="Select…"
                 readOnly={true}
                 role="textbox"
                 type="text"
@@ -2991,9 +2991,9 @@ exports[`Expression Base renders with all option selected 1`] = `
                     >
                       <span
                         className="slds-truncate"
-                        title="Formula Evaluates To True"
+                        title="Formula Evaluates to True"
                       >
-                        Formula Evaluates To True
+                        Formula Evaluates to True
                       </span>
                     </span>
                   </div>
@@ -3058,7 +3058,7 @@ exports[`Expression Base renders with all option selected 1`] = `
                         id="combobox-id-17"
                         onBlur={[Function]}
                         onFocus={[Function]}
-                        placeholder="Select an Option"
+                        placeholder="Select…"
                         readOnly={true}
                         role="textbox"
                         type="text"
@@ -3238,7 +3238,7 @@ exports[`Expression Base renders with all option selected 1`] = `
                         id="combobox-id-18"
                         onBlur={[Function]}
                         onFocus={[Function]}
-                        placeholder="Select an Option"
+                        placeholder="Select…"
                         readOnly={true}
                         role="textbox"
                         type="text"
@@ -3524,7 +3524,7 @@ exports[`Expression Base renders with always option selected 1`] = `
                 id="combobox-id-22"
                 onBlur={[Function]}
                 onFocus={[Function]}
-                placeholder="Select an Option"
+                placeholder="Select…"
                 readOnly={true}
                 role="textbox"
                 type="text"
@@ -3695,9 +3695,9 @@ exports[`Expression Base renders with always option selected 1`] = `
                     >
                       <span
                         className="slds-truncate"
-                        title="Formula Evaluates To True"
+                        title="Formula Evaluates to True"
                       >
-                        Formula Evaluates To True
+                        Formula Evaluates to True
                       </span>
                     </span>
                   </div>
@@ -3762,7 +3762,7 @@ exports[`Expression Base renders with always option selected 1`] = `
                         id="combobox-id-23"
                         onBlur={[Function]}
                         onFocus={[Function]}
-                        placeholder="Select an Option"
+                        placeholder="Select…"
                         readOnly={true}
                         role="textbox"
                         type="text"
@@ -3942,7 +3942,7 @@ exports[`Expression Base renders with always option selected 1`] = `
                         id="combobox-id-24"
                         onBlur={[Function]}
                         onFocus={[Function]}
-                        placeholder="Select an Option"
+                        placeholder="Select…"
                         readOnly={true}
                         role="textbox"
                         type="text"
@@ -4228,7 +4228,7 @@ exports[`Expression Base renders with any option selected 1`] = `
                 id="combobox-id-13"
                 onBlur={[Function]}
                 onFocus={[Function]}
-                placeholder="Select an Option"
+                placeholder="Select…"
                 readOnly={true}
                 role="textbox"
                 type="text"
@@ -4399,9 +4399,9 @@ exports[`Expression Base renders with any option selected 1`] = `
                     >
                       <span
                         className="slds-truncate"
-                        title="Formula Evaluates To True"
+                        title="Formula Evaluates to True"
                       >
-                        Formula Evaluates To True
+                        Formula Evaluates to True
                       </span>
                     </span>
                   </div>
@@ -4466,7 +4466,7 @@ exports[`Expression Base renders with any option selected 1`] = `
                         id="combobox-id-14"
                         onBlur={[Function]}
                         onFocus={[Function]}
-                        placeholder="Select an Option"
+                        placeholder="Select…"
                         readOnly={true}
                         role="textbox"
                         type="text"
@@ -4646,7 +4646,7 @@ exports[`Expression Base renders with any option selected 1`] = `
                         id="combobox-id-15"
                         onBlur={[Function]}
                         onFocus={[Function]}
-                        placeholder="Select an Option"
+                        placeholder="Select…"
                         readOnly={true}
                         role="textbox"
                         type="text"
@@ -4931,7 +4931,7 @@ exports[`Expression Base renders with custom logic 1`] = `
                 id="combobox-id-7"
                 onBlur={[Function]}
                 onFocus={[Function]}
-                placeholder="Select an Option"
+                placeholder="Select…"
                 readOnly={true}
                 role="textbox"
                 type="text"
@@ -5088,9 +5088,9 @@ exports[`Expression Base renders with custom logic 1`] = `
                     >
                       <span
                         className="slds-truncate"
-                        title="Formula Evaluates To True"
+                        title="Formula Evaluates to True"
                       >
-                        Formula Evaluates To True
+                        Formula Evaluates to True
                       </span>
                     </span>
                   </div>
@@ -5178,7 +5178,7 @@ exports[`Expression Base renders with custom logic 1`] = `
                         id="combobox-id-8"
                         onBlur={[Function]}
                         onFocus={[Function]}
-                        placeholder="Select an Option"
+                        placeholder="Select…"
                         readOnly={true}
                         role="textbox"
                         type="text"
@@ -5358,7 +5358,7 @@ exports[`Expression Base renders with custom logic 1`] = `
                         id="combobox-id-9"
                         onBlur={[Function]}
                         onFocus={[Function]}
-                        placeholder="Select an Option"
+                        placeholder="Select…"
                         readOnly={true}
                         role="textbox"
                         type="text"
@@ -5644,7 +5644,7 @@ exports[`Expression Base renders with custom option selected 1`] = `
                 id="combobox-id-19"
                 onBlur={[Function]}
                 onFocus={[Function]}
-                placeholder="Select an Option"
+                placeholder="Select…"
                 readOnly={true}
                 role="textbox"
                 type="text"
@@ -5815,9 +5815,9 @@ exports[`Expression Base renders with custom option selected 1`] = `
                     >
                       <span
                         className="slds-truncate"
-                        title="Formula Evaluates To True"
+                        title="Formula Evaluates to True"
                       >
-                        Formula Evaluates To True
+                        Formula Evaluates to True
                       </span>
                     </span>
                   </div>
@@ -5882,7 +5882,7 @@ exports[`Expression Base renders with custom option selected 1`] = `
                         id="combobox-id-20"
                         onBlur={[Function]}
                         onFocus={[Function]}
-                        placeholder="Select an Option"
+                        placeholder="Select…"
                         readOnly={true}
                         role="textbox"
                         type="text"
@@ -6062,7 +6062,7 @@ exports[`Expression Base renders with custom option selected 1`] = `
                         id="combobox-id-21"
                         onBlur={[Function]}
                         onFocus={[Function]}
-                        placeholder="Select an Option"
+                        placeholder="Select…"
                         readOnly={true}
                         role="textbox"
                         type="text"
@@ -6344,11 +6344,11 @@ exports[`Expression Base renders with formula option selected 1`] = `
                 aria-controls="listbox-id-25"
                 autocomplete="off"
                 className="slds-input slds-combobox__input slds-combobox__input-value"
-                defaultValue="Formula Evaluates To True"
+                defaultValue="Formula Evaluates to True"
                 id="combobox-id-25"
                 onBlur={[Function]}
                 onFocus={[Function]}
-                placeholder="Select an Option"
+                placeholder="Select…"
                 readOnly={true}
                 role="textbox"
                 type="text"
@@ -6519,9 +6519,9 @@ exports[`Expression Base renders with formula option selected 1`] = `
                     >
                       <span
                         className="slds-truncate"
-                        title="Formula Evaluates To True"
+                        title="Formula Evaluates to True"
                       >
-                        Formula Evaluates To True
+                        Formula Evaluates to True
                       </span>
                     </span>
                   </div>
@@ -6586,7 +6586,7 @@ exports[`Expression Base renders with formula option selected 1`] = `
                         id="combobox-id-26"
                         onBlur={[Function]}
                         onFocus={[Function]}
-                        placeholder="Select an Option"
+                        placeholder="Select…"
                         readOnly={true}
                         role="textbox"
                         type="text"
@@ -6766,7 +6766,7 @@ exports[`Expression Base renders with formula option selected 1`] = `
                         id="combobox-id-27"
                         onBlur={[Function]}
                         onFocus={[Function]}
-                        placeholder="Select an Option"
+                        placeholder="Select…"
                         readOnly={true}
                         role="textbox"
                         type="text"
@@ -7051,7 +7051,7 @@ exports[`Expression Base renders with legend text 1`] = `
                 id="combobox-id-10"
                 onBlur={[Function]}
                 onFocus={[Function]}
-                placeholder="Select an Option"
+                placeholder="Select…"
                 readOnly={true}
                 role="textbox"
                 type="text"
@@ -7208,9 +7208,9 @@ exports[`Expression Base renders with legend text 1`] = `
                     >
                       <span
                         className="slds-truncate"
-                        title="Formula Evaluates To True"
+                        title="Formula Evaluates to True"
                       >
-                        Formula Evaluates To True
+                        Formula Evaluates to True
                       </span>
                     </span>
                   </div>
@@ -7278,7 +7278,7 @@ exports[`Expression Base renders with legend text 1`] = `
                         id="combobox-id-11"
                         onBlur={[Function]}
                         onFocus={[Function]}
-                        placeholder="Select an Option"
+                        placeholder="Select…"
                         readOnly={true}
                         role="textbox"
                         type="text"
@@ -7458,7 +7458,7 @@ exports[`Expression Base renders with legend text 1`] = `
                         id="combobox-id-12"
                         onBlur={[Function]}
                         onFocus={[Function]}
-                        placeholder="Select an Option"
+                        placeholder="Select…"
                         readOnly={true}
                         role="textbox"
                         type="text"
@@ -7856,7 +7856,7 @@ exports[`Expression Formula renders the default expression formula variant 1`] =
                 id="combobox-id-67"
                 onBlur={[Function]}
                 onFocus={[Function]}
-                placeholder="Select an Option"
+                placeholder="Select…"
                 readOnly={true}
                 role="textbox"
                 type="text"
@@ -8013,9 +8013,9 @@ exports[`Expression Formula renders the default expression formula variant 1`] =
                     >
                       <span
                         className="slds-truncate"
-                        title="Formula Evaluates To True"
+                        title="Formula Evaluates to True"
                       >
-                        Formula Evaluates To True
+                        Formula Evaluates to True
                       </span>
                     </span>
                   </div>
@@ -9015,11 +9015,11 @@ exports[`Expression Formula renders the default expression formula with an optio
                 aria-controls="listbox-id-70"
                 autocomplete="off"
                 className="slds-input slds-combobox__input slds-combobox__input-value"
-                defaultValue="Formula Evaluates To True"
+                defaultValue="Formula Evaluates to True"
                 id="combobox-id-72"
                 onBlur={[Function]}
                 onFocus={[Function]}
-                placeholder="Select an Option"
+                placeholder="Select…"
                 readOnly={true}
                 role="textbox"
                 type="text"
@@ -9190,9 +9190,9 @@ exports[`Expression Formula renders the default expression formula with an optio
                     >
                       <span
                         className="slds-truncate"
-                        title="Formula Evaluates To True"
+                        title="Formula Evaluates to True"
                       >
-                        Formula Evaluates To True
+                        Formula Evaluates to True
                       </span>
                     </span>
                   </div>
@@ -10205,7 +10205,7 @@ exports[`Expression Group renders the default expression group 1`] = `
                   id="combobox-id-56"
                   onBlur={[Function]}
                   onFocus={[Function]}
-                  placeholder="Select an Option"
+                  placeholder="Select…"
                   readOnly={true}
                   role="textbox"
                   type="text"
@@ -10362,9 +10362,9 @@ exports[`Expression Group renders the default expression group 1`] = `
                       >
                         <span
                           className="slds-truncate"
-                          title="Formula Evaluates To True"
+                          title="Formula Evaluates to True"
                         >
-                          Formula Evaluates To True
+                          Formula Evaluates to True
                         </span>
                       </span>
                     </div>
@@ -10448,7 +10448,7 @@ exports[`Expression Group renders the default expression group with a row 1`] = 
                   id="combobox-id-64"
                   onBlur={[Function]}
                   onFocus={[Function]}
-                  placeholder="Select an Option"
+                  placeholder="Select…"
                   readOnly={true}
                   role="textbox"
                   type="text"
@@ -10605,9 +10605,9 @@ exports[`Expression Group renders the default expression group with a row 1`] = 
                       >
                         <span
                           className="slds-truncate"
-                          title="Formula Evaluates To True"
+                          title="Formula Evaluates to True"
                         >
-                          Formula Evaluates To True
+                          Formula Evaluates to True
                         </span>
                       </span>
                     </div>
@@ -10675,7 +10675,7 @@ exports[`Expression Group renders the default expression group with a row 1`] = 
                           id="combobox-id-65"
                           onBlur={[Function]}
                           onFocus={[Function]}
-                          placeholder="Select an Option"
+                          placeholder="Select…"
                           readOnly={true}
                           role="textbox"
                           type="text"
@@ -10855,7 +10855,7 @@ exports[`Expression Group renders the default expression group with a row 1`] = 
                           id="combobox-id-66"
                           onBlur={[Function]}
                           onFocus={[Function]}
-                          placeholder="Select an Option"
+                          placeholder="Select…"
                           readOnly={true}
                           role="textbox"
                           type="text"
@@ -11134,7 +11134,7 @@ exports[`Expression Group renders the default expression group with all option s
                   id="combobox-id-59"
                   onBlur={[Function]}
                   onFocus={[Function]}
-                  placeholder="Select an Option"
+                  placeholder="Select…"
                   readOnly={true}
                   role="textbox"
                   type="text"
@@ -11305,9 +11305,9 @@ exports[`Expression Group renders the default expression group with all option s
                       >
                         <span
                           className="slds-truncate"
-                          title="Formula Evaluates To True"
+                          title="Formula Evaluates to True"
                         >
-                          Formula Evaluates To True
+                          Formula Evaluates to True
                         </span>
                       </span>
                     </div>
@@ -11392,7 +11392,7 @@ exports[`Expression Group renders the default expression group with always optio
                   id="combobox-id-60"
                   onBlur={[Function]}
                   onFocus={[Function]}
-                  placeholder="Select an Option"
+                  placeholder="Select…"
                   readOnly={true}
                   role="textbox"
                   type="text"
@@ -11563,9 +11563,9 @@ exports[`Expression Group renders the default expression group with always optio
                       >
                         <span
                           className="slds-truncate"
-                          title="Formula Evaluates To True"
+                          title="Formula Evaluates to True"
                         >
-                          Formula Evaluates To True
+                          Formula Evaluates to True
                         </span>
                       </span>
                     </div>
@@ -11650,7 +11650,7 @@ exports[`Expression Group renders the default expression group with any option s
                   id="combobox-id-58"
                   onBlur={[Function]}
                   onFocus={[Function]}
-                  placeholder="Select an Option"
+                  placeholder="Select…"
                   readOnly={true}
                   role="textbox"
                   type="text"
@@ -11821,9 +11821,9 @@ exports[`Expression Group renders the default expression group with any option s
                       >
                         <span
                           className="slds-truncate"
-                          title="Formula Evaluates To True"
+                          title="Formula Evaluates to True"
                         >
-                          Formula Evaluates To True
+                          Formula Evaluates to True
                         </span>
                       </span>
                     </div>
@@ -11908,7 +11908,7 @@ exports[`Expression Group renders the default expression group with custom optio
                   id="combobox-id-61"
                   onBlur={[Function]}
                   onFocus={[Function]}
-                  placeholder="Select an Option"
+                  placeholder="Select…"
                   readOnly={true}
                   role="textbox"
                   type="text"
@@ -12079,9 +12079,9 @@ exports[`Expression Group renders the default expression group with custom optio
                       >
                         <span
                           className="slds-truncate"
-                          title="Formula Evaluates To True"
+                          title="Formula Evaluates to True"
                         >
-                          Formula Evaluates To True
+                          Formula Evaluates to True
                         </span>
                       </span>
                     </div>
@@ -12162,11 +12162,11 @@ exports[`Expression Group renders the default expression group with formula opti
                   aria-controls="listbox-id-62"
                   autocomplete="off"
                   className="slds-input slds-combobox__input slds-combobox__input-value"
-                  defaultValue="Formula Evaluates To True"
+                  defaultValue="Formula Evaluates to True"
                   id="combobox-id-62"
                   onBlur={[Function]}
                   onFocus={[Function]}
-                  placeholder="Select an Option"
+                  placeholder="Select…"
                   readOnly={true}
                   role="textbox"
                   type="text"
@@ -12337,9 +12337,9 @@ exports[`Expression Group renders the default expression group with formula opti
                       >
                         <span
                           className="slds-truncate"
-                          title="Formula Evaluates To True"
+                          title="Formula Evaluates to True"
                         >
-                          Formula Evaluates To True
+                          Formula Evaluates to True
                         </span>
                       </span>
                     </div>
@@ -12424,7 +12424,7 @@ exports[`Expression Group renders the default expression group with group option
                   id="combobox-id-63"
                   onBlur={[Function]}
                   onFocus={[Function]}
-                  placeholder="Select an Option"
+                  placeholder="Select…"
                   readOnly={true}
                   role="textbox"
                   type="text"
@@ -12595,9 +12595,9 @@ exports[`Expression Group renders the default expression group with group option
                       >
                         <span
                           className="slds-truncate"
-                          title="Formula Evaluates To True"
+                          title="Formula Evaluates to True"
                         >
-                          Formula Evaluates To True
+                          Formula Evaluates to True
                         </span>
                       </span>
                     </div>
@@ -12684,7 +12684,7 @@ exports[`Expression Group renders the default expression group with legend text 
                   id="combobox-id-57"
                   onBlur={[Function]}
                   onFocus={[Function]}
-                  placeholder="Select an Option"
+                  placeholder="Select…"
                   readOnly={true}
                   role="textbox"
                   type="text"
@@ -12841,9 +12841,9 @@ exports[`Expression Group renders the default expression group with legend text 
                       >
                         <span
                           className="slds-truncate"
-                          title="Formula Evaluates To True"
+                          title="Formula Evaluates to True"
                         >
-                          Formula Evaluates To True
+                          Formula Evaluates to True
                         </span>
                       </span>
                     </div>
@@ -12979,7 +12979,7 @@ exports[`Expression List renders the default expression list 1`] = `
                       id="combobox-id-54"
                       onBlur={[Function]}
                       onFocus={[Function]}
-                      placeholder="Select an Option"
+                      placeholder="Select…"
                       readOnly={true}
                       role="textbox"
                       type="text"
@@ -13159,7 +13159,7 @@ exports[`Expression List renders the default expression list 1`] = `
                       id="combobox-id-55"
                       onBlur={[Function]}
                       onFocus={[Function]}
-                      placeholder="Select an Option"
+                      placeholder="Select…"
                       readOnly={true}
                       role="textbox"
                       type="text"
@@ -13494,7 +13494,7 @@ exports[`Expression Narrow Group renders the default expression narrow group 1`]
                 id="combobox-id-79"
                 onBlur={[Function]}
                 onFocus={[Function]}
-                placeholder="Select an Option"
+                placeholder="Select…"
                 readOnly={true}
                 role="textbox"
                 type="text"
@@ -13651,9 +13651,9 @@ exports[`Expression Narrow Group renders the default expression narrow group 1`]
                     >
                       <span
                         className="slds-truncate"
-                        title="Formula Evaluates To True"
+                        title="Formula Evaluates to True"
                       >
-                        Formula Evaluates To True
+                        Formula Evaluates to True
                       </span>
                     </span>
                   </div>
@@ -13807,7 +13807,7 @@ exports[`Expression Narrow Group renders the default expression narrow with opti
                 id="combobox-id-80"
                 onBlur={[Function]}
                 onFocus={[Function]}
-                placeholder="Select an Option"
+                placeholder="Select…"
                 readOnly={true}
                 role="textbox"
                 type="text"
@@ -13978,9 +13978,9 @@ exports[`Expression Narrow Group renders the default expression narrow with opti
                     >
                       <span
                         className="slds-truncate"
-                        title="Formula Evaluates To True"
+                        title="Formula Evaluates to True"
                       >
-                        Formula Evaluates To True
+                        Formula Evaluates to True
                       </span>
                     </span>
                   </div>
@@ -14117,7 +14117,7 @@ exports[`Expression Narrow renders the default expression narrow variant 1`] = `
                     id="combobox-id-77"
                     onBlur={[Function]}
                     onFocus={[Function]}
-                    placeholder="Select an Option"
+                    placeholder="Select…"
                     readOnly={true}
                     role="textbox"
                     type="text"
@@ -14274,9 +14274,9 @@ exports[`Expression Narrow renders the default expression narrow variant 1`] = `
                         >
                           <span
                             className="slds-truncate"
-                            title="Formula Evaluates To True"
+                            title="Formula Evaluates to True"
                           >
-                            Formula Evaluates To True
+                            Formula Evaluates to True
                           </span>
                         </span>
                       </div>
@@ -14431,7 +14431,7 @@ exports[`Expression Narrow renders the default expression narrow with option sel
                     id="combobox-id-78"
                     onBlur={[Function]}
                     onFocus={[Function]}
-                    placeholder="Select an Option"
+                    placeholder="Select…"
                     readOnly={true}
                     role="textbox"
                     type="text"
@@ -14602,9 +14602,9 @@ exports[`Expression Narrow renders the default expression narrow with option sel
                         >
                           <span
                             className="slds-truncate"
-                            title="Formula Evaluates To True"
+                            title="Formula Evaluates to True"
                           >
-                            Formula Evaluates To True
+                            Formula Evaluates to True
                           </span>
                         </span>
                       </div>
@@ -14738,7 +14738,7 @@ exports[`Expression Options renders the default expression options 1`] = `
               id="combobox-id-50"
               onBlur={[Function]}
               onFocus={[Function]}
-              placeholder="Select an Option"
+              placeholder="Select…"
               readOnly={true}
               role="textbox"
               type="text"
@@ -14895,9 +14895,9 @@ exports[`Expression Options renders the default expression options 1`] = `
                   >
                     <span
                       className="slds-truncate"
-                      title="Formula Evaluates To True"
+                      title="Formula Evaluates to True"
                     >
-                      Formula Evaluates To True
+                      Formula Evaluates to True
                     </span>
                   </span>
                 </div>
@@ -14948,7 +14948,7 @@ exports[`Expression Options renders the default expression options in a filter 1
               id="combobox-id-52"
               onBlur={[Function]}
               onFocus={[Function]}
-              placeholder="Select an Option"
+              placeholder="Select…"
               readOnly={true}
               role="textbox"
               type="text"
@@ -15105,9 +15105,9 @@ exports[`Expression Options renders the default expression options in a filter 1
                   >
                     <span
                       className="slds-truncate"
-                      title="Formula Evaluates To True"
+                      title="Formula Evaluates to True"
                     >
-                      Formula Evaluates To True
+                      Formula Evaluates to True
                     </span>
                   </span>
                 </div>
@@ -15158,7 +15158,7 @@ exports[`Expression Options renders the default expression options with a label 
               id="combobox-id-51"
               onBlur={[Function]}
               onFocus={[Function]}
-              placeholder="Select an Option"
+              placeholder="Select…"
               readOnly={true}
               role="textbox"
               type="text"
@@ -15315,9 +15315,9 @@ exports[`Expression Options renders the default expression options with a label 
                   >
                     <span
                       className="slds-truncate"
-                      title="Formula Evaluates To True"
+                      title="Formula Evaluates to True"
                     >
-                      Formula Evaluates To True
+                      Formula Evaluates to True
                     </span>
                   </span>
                 </div>
@@ -15369,7 +15369,7 @@ exports[`Expression Options renders the default expression options with an optio
               id="combobox-id-53"
               onBlur={[Function]}
               onFocus={[Function]}
-              placeholder="Select an Option"
+              placeholder="Select…"
               readOnly={true}
               role="textbox"
               type="text"
@@ -15540,9 +15540,9 @@ exports[`Expression Options renders the default expression options with an optio
                   >
                     <span
                       className="slds-truncate"
-                      title="Formula Evaluates To True"
+                      title="Formula Evaluates to True"
                     >
-                      Formula Evaluates To True
+                      Formula Evaluates to True
                     </span>
                   </span>
                 </div>
@@ -15609,7 +15609,7 @@ exports[`Expression Row renders the default row 1`] = `
                     id="combobox-id-34"
                     onBlur={[Function]}
                     onFocus={[Function]}
-                    placeholder="Select an Option"
+                    placeholder="Select…"
                     readOnly={true}
                     role="textbox"
                     type="text"
@@ -15789,7 +15789,7 @@ exports[`Expression Row renders the default row 1`] = `
                     id="combobox-id-35"
                     onBlur={[Function]}
                     onFocus={[Function]}
-                    placeholder="Select an Option"
+                    placeholder="Select…"
                     readOnly={true}
                     role="textbox"
                     type="text"
@@ -16050,7 +16050,7 @@ exports[`Expression Row renders the default row in a group 1`] = `
                     id="combobox-id-38"
                     onBlur={[Function]}
                     onFocus={[Function]}
-                    placeholder="Select an Option"
+                    placeholder="Select…"
                     readOnly={true}
                     role="textbox"
                     type="text"
@@ -16230,7 +16230,7 @@ exports[`Expression Row renders the default row in a group 1`] = `
                     id="combobox-id-39"
                     onBlur={[Function]}
                     onFocus={[Function]}
-                    placeholder="Select an Option"
+                    placeholder="Select…"
                     readOnly={true}
                     role="textbox"
                     type="text"
@@ -16492,7 +16492,7 @@ exports[`Expression Row renders the default row with a resource selected 1`] = `
                     id="combobox-id-46"
                     onBlur={[Function]}
                     onFocus={[Function]}
-                    placeholder="Select an Option"
+                    placeholder="Select…"
                     readOnly={true}
                     role="textbox"
                     type="text"
@@ -16686,7 +16686,7 @@ exports[`Expression Row renders the default row with a resource selected 1`] = `
                     id="combobox-id-47"
                     onBlur={[Function]}
                     onFocus={[Function]}
-                    placeholder="Select an Option"
+                    placeholder="Select…"
                     readOnly={true}
                     role="textbox"
                     type="text"
@@ -16947,7 +16947,7 @@ exports[`Expression Row renders the default row with an error 1`] = `
                     id="combobox-id-48"
                     onBlur={[Function]}
                     onFocus={[Function]}
-                    placeholder="Select an Option"
+                    placeholder="Select…"
                     readOnly={true}
                     role="textbox"
                     type="text"
@@ -17127,7 +17127,7 @@ exports[`Expression Row renders the default row with an error 1`] = `
                     id="combobox-id-49"
                     onBlur={[Function]}
                     onFocus={[Function]}
-                    placeholder="Select an Option"
+                    placeholder="Select…"
                     readOnly={true}
                     role="textbox"
                     type="text"
@@ -17396,7 +17396,7 @@ exports[`Expression Row renders the default row with button disabled 1`] = `
                     id="combobox-id-42"
                     onBlur={[Function]}
                     onFocus={[Function]}
-                    placeholder="Select an Option"
+                    placeholder="Select…"
                     readOnly={true}
                     role="textbox"
                     type="text"
@@ -17576,7 +17576,7 @@ exports[`Expression Row renders the default row with button disabled 1`] = `
                     id="combobox-id-43"
                     onBlur={[Function]}
                     onFocus={[Function]}
-                    placeholder="Select an Option"
+                    placeholder="Select…"
                     readOnly={true}
                     role="textbox"
                     type="text"
@@ -17838,7 +17838,7 @@ exports[`Expression Row renders the default row with input disabled 1`] = `
                     id="combobox-id-40"
                     onBlur={[Function]}
                     onFocus={[Function]}
-                    placeholder="Select an Option"
+                    placeholder="Select…"
                     readOnly={true}
                     role="textbox"
                     type="text"
@@ -18019,7 +18019,7 @@ exports[`Expression Row renders the default row with input disabled 1`] = `
                     id="combobox-id-41"
                     onBlur={[Function]}
                     onFocus={[Function]}
-                    placeholder="Select an Option"
+                    placeholder="Select…"
                     readOnly={true}
                     role="textbox"
                     type="text"
@@ -18281,7 +18281,7 @@ exports[`Expression Row renders the default row with inputs and button disabled 
                     id="combobox-id-44"
                     onBlur={[Function]}
                     onFocus={[Function]}
-                    placeholder="Select an Option"
+                    placeholder="Select…"
                     readOnly={true}
                     role="textbox"
                     type="text"
@@ -18462,7 +18462,7 @@ exports[`Expression Row renders the default row with inputs and button disabled 
                     id="combobox-id-45"
                     onBlur={[Function]}
                     onFocus={[Function]}
-                    placeholder="Select an Option"
+                    placeholder="Select…"
                     readOnly={true}
                     role="textbox"
                     type="text"
@@ -18728,7 +18728,7 @@ exports[`Expression Row renders the default row with legend text and sassistive 
                     id="combobox-id-36"
                     onBlur={[Function]}
                     onFocus={[Function]}
-                    placeholder="Select an Option"
+                    placeholder="Select…"
                     readOnly={true}
                     role="textbox"
                     type="text"
@@ -18908,7 +18908,7 @@ exports[`Expression Row renders the default row with legend text and sassistive 
                     id="combobox-id-37"
                     onBlur={[Function]}
                     onFocus={[Function]}
-                    placeholder="Select an Option"
+                    placeholder="Select…"
                     readOnly={true}
                     role="textbox"
                     type="text"

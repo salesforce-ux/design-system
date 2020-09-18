@@ -6,7 +6,7 @@
 
 ## 2.13.0
 
-- Added the brand expression specific Styling Hooks
+- Enabled styling hooks for breadcrumb. See breadcrumb's styling hooks overview table for a full listing of the currently available hooks.
 
 ## 2.8.4
 
@@ -18,7 +18,7 @@
 
 ### Changed
 
-- Added bold font weight to '.slds-breadcrumb__item`.
+- Added bold font weight to '.slds-breadcrumb\_\_item`.
 
 ### Removed
 

@@ -74,7 +74,7 @@ exports[`Compound Form Element render compound form element wrapper with require
       className="slds-required"
       title="required"
     >
-      * 
+      *
        
     </abbr>
   </legend>
@@ -199,7 +199,7 @@ exports[`Compound Form Element renders address compound form element 1`] = `
               className="slds-textarea"
               defaultValue="525 S. Lexington Ave"
               id="form-element-id-04"
-              placeholder="Placeholder Text"
+              placeholder="Placeholder text…"
               required={true}
             />
           </div>
@@ -418,7 +418,7 @@ exports[`Form Element Composition renders form element with input that has an er
       className="slds-required"
       title="required"
     >
-      * 
+      *
        
     </abbr>
     Form label
@@ -456,7 +456,7 @@ exports[`Form Element Composition renders form element with input that is requir
       className="slds-required"
       title="required"
     >
-      * 
+      *
        
     </abbr>
     Form label
@@ -632,7 +632,7 @@ exports[`Form Element renders form element as a fieldset with required asterisk 
       className="slds-required"
       title="required"
     >
-      * 
+      *
        
     </abbr>
     Fieldset legend
@@ -717,7 +717,7 @@ exports[`Form Element renders form element fieldset legend with required asteris
     className="slds-required"
     title="required"
   >
-    * 
+    *
      
   </abbr>
   content
@@ -820,7 +820,7 @@ exports[`Form Element renders form element help text icon with a tooltip 1`] = `
     <div
       className="slds-popover__body"
     >
-      Some helpful information
+      Some helpful information.
     </div>
   </div>
 </div>
@@ -897,7 +897,7 @@ exports[`Form Element renders form element label with required asterisk 1`] = `
     className="slds-required"
     title="required"
   >
-    * 
+    *
      
   </abbr>
   Form label
@@ -912,7 +912,7 @@ exports[`Form Element renders form element label with required asterisk 2`] = `
     className="slds-required"
     title="required"
   >
-    * 
+    *
      
   </abbr>
   Form label
@@ -998,7 +998,7 @@ exports[`Horizontal Form Element renders deprecated horizontal form elements - e
             className="slds-required"
             title="required"
           >
-            * 
+            *
              
           </abbr>
           Assigned To
@@ -1169,7 +1169,7 @@ exports[`Horizontal Form Element renders deprecated horizontal form elements - e
                   id="combobox-id-02"
                   onBlur={[Function]}
                   onFocus={[Function]}
-                  placeholder="Select an Option"
+                  placeholder="Select an Option…"
                   readOnly={true}
                   role="textbox"
                   type="text"
@@ -1762,7 +1762,7 @@ exports[`Horizontal Form Element renders deprecated horizontal form elements - e
             className="slds-required"
             title="required"
           >
-            * 
+            *
              
           </abbr>
           Billing Address
@@ -1814,7 +1814,7 @@ exports[`Horizontal Form Element renders deprecated horizontal form elements - e
                     className="slds-textarea"
                     defaultValue="525 S. Lexington Ave"
                     id="form-element-id-04"
-                    placeholder="Placeholder Text"
+                    placeholder="Placeholder text…"
                     required={true}
                   />
                 </div>
@@ -1953,7 +1953,7 @@ exports[`Horizontal Form Element renders deprecated horizontal form elements - e
                     className="slds-textarea"
                     defaultValue="312 Constitution Place"
                     id="form-element-id-09"
-                    placeholder="Placeholder Text"
+                    placeholder="Placeholder text…"
                   />
                 </div>
               </div>
@@ -2074,7 +2074,7 @@ exports[`Horizontal Form Element renders deprecated horizontal form elements - e
             className="slds-textarea"
             defaultValue="Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Etiam porta sem malesuada magna mollis euismod."
             id="form-element-id-14"
-            placeholder="Placeholder Text"
+            placeholder="Placeholder text…"
           />
         </div>
       </div>
@@ -2105,7 +2105,7 @@ exports[`Horizontal Form Element renders deprecated horizontal form elements - v
             className="slds-required"
             title="required"
           >
-            * 
+            *
              
           </abbr>
           Assigned To
@@ -2553,7 +2553,7 @@ exports[`Horizontal Form Element renders deprecated horizontal form elements - v
             className="slds-required"
             title="required"
           >
-            * 
+            *
              
           </abbr>
           Billing Address
@@ -2770,7 +2770,7 @@ exports[`Horizontal Form Element renders simple horizontal form elements 1`] = `
       <input
         className="slds-input"
         id="horizontal-input-id-01"
-        placeholder="Placeholder Text"
+        placeholder="Placeholder text…"
         type="text"
       />
     </div>
@@ -2790,7 +2790,7 @@ exports[`Horizontal Form Element renders simple horizontal form elements 1`] = `
       <textarea
         className="slds-textarea"
         id="horizontal-input-id-02"
-        placeholder="Placeholder Text"
+        placeholder="Placeholder text…"
       />
     </div>
   </div>
@@ -2800,7 +2800,7 @@ exports[`Horizontal Form Element renders simple horizontal form elements 1`] = `
     <legend
       className="slds-form-element__legend slds-form-element__label"
     >
-      Checkbox Group label
+      Checkbox Group Label
     </legend>
     <div
       className="slds-form-element__control"
@@ -2861,7 +2861,7 @@ exports[`Horizontal Form Element renders simple horizontal form elements 1`] = `
     <legend
       className="slds-form-element__legend slds-form-element__label"
     >
-      Radio Group label
+      Radio Group Label
     </legend>
     <div
       className="slds-form-element__control"
@@ -2886,7 +2886,7 @@ exports[`Horizontal Form Element renders simple horizontal form elements 1`] = `
           <span
             className="slds-form-element__label"
           >
-            Lead Generation
+            Lead generation
           </span>
         </label>
       </span>
@@ -2910,7 +2910,7 @@ exports[`Horizontal Form Element renders simple horizontal form elements 1`] = `
           <span
             className="slds-form-element__label"
           >
-            Education Leads
+            Education leads
           </span>
         </label>
       </span>
@@ -2941,7 +2941,7 @@ exports[`Stacked Form Element renders deprecated stacked form elements - edit mo
             className="slds-required"
             title="required"
           >
-            * 
+            *
              
           </abbr>
           Assigned To
@@ -3389,7 +3389,7 @@ exports[`Stacked Form Element renders deprecated stacked form elements - edit mo
             className="slds-required"
             title="required"
           >
-            * 
+            *
              
           </abbr>
           Billing Address
@@ -3579,7 +3579,7 @@ exports[`Stacked Form Element renders deprecated stacked form elements - view mo
             className="slds-required"
             title="required"
           >
-            * 
+            *
              
           </abbr>
           Assigned To
@@ -4027,7 +4027,7 @@ exports[`Stacked Form Element renders deprecated stacked form elements - view mo
             className="slds-required"
             title="required"
           >
-            * 
+            *
              
           </abbr>
           Billing Address
@@ -4214,7 +4214,7 @@ exports[`Stacked Form Element renders simple stacked form elements 1`] = `
       <input
         className="slds-input"
         id="stacked-input-id-01"
-        placeholder="Placeholder Text"
+        placeholder="Placeholder text…"
         type="text"
       />
     </div>
@@ -4234,7 +4234,7 @@ exports[`Stacked Form Element renders simple stacked form elements 1`] = `
       <textarea
         className="slds-textarea"
         id="stacked-input-id-02"
-        placeholder="Placeholder Text"
+        placeholder="Placeholder text…"
       />
     </div>
   </div>
@@ -4244,7 +4244,7 @@ exports[`Stacked Form Element renders simple stacked form elements 1`] = `
     <legend
       className="slds-form-element__legend slds-form-element__label"
     >
-      Checkbox Group label
+      Checkbox Group Label
     </legend>
     <div
       className="slds-form-element__control"
@@ -4305,7 +4305,7 @@ exports[`Stacked Form Element renders simple stacked form elements 1`] = `
     <legend
       className="slds-form-element__legend slds-form-element__label"
     >
-      Radio Group label
+      Radio Group Label
     </legend>
     <div
       className="slds-form-element__control"
@@ -4330,7 +4330,7 @@ exports[`Stacked Form Element renders simple stacked form elements 1`] = `
           <span
             className="slds-form-element__label"
           >
-            Lead Generation
+            Lead generation
           </span>
         </label>
       </span>
@@ -4354,7 +4354,7 @@ exports[`Stacked Form Element renders simple stacked form elements 1`] = `
           <span
             className="slds-form-element__label"
           >
-            Education Leads
+            Education leads
           </span>
         </label>
       </span>

@@ -10,17 +10,21 @@
 
 - Removed Mobile example under Stacked Alignment and Horizontal Alignment examples, as they did not conform to the specification.
 
+### Fixed
+
+- Small improvements to the UI text.
+
 ## 2.13.0
 
 ### Changed
 
 - The compound form now wraps when the width of its parent container is smaller than the combined width of the form elements. This prevents the issue of input values becoming cutoff and unreadable due to shrinking compound form elements in a container with a small width.
 - When `.slds-form-element` is a child of `.slds-form-element_compound`, it now uses margins instead of padding for its horizontal spacing. This fixes the issue of dropdowns being incorrectly offset because the dropdown uses the extra space created by padding as its positioning reference.
+
 ## 2.12.2
 
-- For touch devices, fixed an issue with button icons being the incorrect height if using custom elements.
-
 ### Fixed
+- For touch devices, fixed an issue with button icons being the incorrect height if using custom elements.
 
 ## 2.11.7
 

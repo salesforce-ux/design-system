@@ -9,12 +9,13 @@
 ### Fixed
 
 - Fixed issue where mobile text size wasn't accurately sized.
+- Small improvements to the UI text.
 
 ## 2.13.0
 
 ### Added
 
-- Added the brand expression specific Styling Hooks
+- Enabled styling hooks for modal. See modal's styling hooks overview table for a full listing of the currently available hooks.
 
 ## 2.11.7
 

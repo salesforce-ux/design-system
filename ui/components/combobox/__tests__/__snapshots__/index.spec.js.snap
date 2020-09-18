@@ -34,7 +34,7 @@ exports[`Combobox with a Dialog dropdown renders a closed, readonly dialog combo
             id="combobox-id-01"
             onBlur={[Function]}
             onFocus={[Function]}
-            placeholder="Select an Option"
+            placeholder="Select an Option…"
             readOnly={true}
             role="textbox"
             type="text"
@@ -119,7 +119,7 @@ exports[`Combobox with a Dialog dropdown renders an open, readonly dialog combob
             id="combobox-id-01"
             onBlur={[Function]}
             onFocus={[Function]}
-            placeholder="Select an Option"
+            placeholder="Select an Option…"
             readOnly={true}
             role="textbox"
             type="text"
@@ -178,7 +178,7 @@ exports[`render combobox render autocomplete combobox with mutliple selections 1
     className="slds-form-element__label"
     htmlFor="combobox-id-01"
   >
-    Relate to
+    Relate To
   </label>
   <div
     className="slds-form-element__control"
@@ -439,7 +439,7 @@ exports[`render combobox render autocomplete combobox with single selection 1`] 
     className="slds-form-element__label"
     htmlFor="combobox-id-01"
   >
-    Relate to
+    Relate To
   </label>
   <div
     className="slds-form-element__control"
@@ -630,7 +630,7 @@ exports[`render combobox render autocomplete entity combobox 1`] = `
     className="slds-form-element__label"
     htmlFor="combobox-id-01"
   >
-    Relate to
+    Relate To
   </label>
   <div
     className="slds-form-element__control"
@@ -801,7 +801,7 @@ exports[`render combobox render autocomplete entity combobox displaying options 
     className="slds-form-element__label"
     htmlFor="combobox-id-01"
   >
-    Relate to
+    Relate To
   </label>
   <div
     className="slds-form-element__control"
@@ -1085,7 +1085,7 @@ exports[`render combobox render autocomplete entity combobox with mutliple selec
     className="slds-form-element__label"
     htmlFor="combobox-id-01"
   >
-    Relate to
+    Relate To
   </label>
   <div
     className="slds-form-element__control"
@@ -1364,7 +1364,7 @@ exports[`render combobox render autocomplete entity combobox with single selecti
     className="slds-form-element__label"
     htmlFor="combobox-id-01"
   >
-    Relate to
+    Relate To
   </label>
   <div
     className="slds-form-element__control"
@@ -1409,7 +1409,7 @@ exports[`render combobox render autocomplete entity combobox with single selecti
             id="combobox-id-01"
             onBlur={[Function]}
             onFocus={[Function]}
-            placeholder="Select an Option"
+            placeholder="Select an Option…"
             readOnly={true}
             role="textbox"
             tabIndex="-1"
@@ -1557,7 +1557,7 @@ exports[`render combobox render base combobox 1`] = `
     className="slds-form-element__label"
     htmlFor="combobox-id-01"
   >
-    Relate to
+    Relate To
   </label>
   <div
     className="slds-form-element__control"
@@ -1584,7 +1584,7 @@ exports[`render combobox render base combobox 1`] = `
             id="combobox-id-01"
             onBlur={[Function]}
             onFocus={[Function]}
-            placeholder="Select an Option"
+            placeholder="Select an Option…"
             readOnly={true}
             role="textbox"
             type="text"
@@ -1845,7 +1845,7 @@ exports[`render combobox render combobox with displaying options based on user i
     className="slds-form-element__label"
     htmlFor="combobox-id-01"
   >
-    Relate to
+    Relate To
   </label>
   <div
     className="slds-form-element__control"
@@ -2016,7 +2016,7 @@ exports[`render combobox render grouped combobox 1`] = `
     className="slds-form-element__label"
     htmlFor="combobox-id-01"
   >
-    Relate to
+    Relate To
   </label>
   <div
     className="slds-form-element__control"
@@ -2584,7 +2584,7 @@ exports[`render combobox render grouped combobox displaying options based on use
     className="slds-form-element__label"
     htmlFor="combobox-id-01"
   >
-    Relate to
+    Relate To
   </label>
   <div
     className="slds-form-element__control"
@@ -3168,7 +3168,7 @@ exports[`render combobox render grouped combobox with selections made in collaps
     className="slds-form-element__label"
     htmlFor="combobox-id-01"
   >
-    Relate to
+    Relate To
   </label>
   <div
     className="slds-form-element__control"
@@ -4143,7 +4143,7 @@ exports[`render combobox render grouped combobox with selections made in expande
     className="slds-form-element__label"
     htmlFor="combobox-id-01"
   >
-    Relate to
+    Relate To
   </label>
   <div
     className="slds-form-element__control"
@@ -5107,7 +5107,7 @@ exports[`render combobox render multiple selections in a closed combobox 1`] = `
     className="slds-form-element__label"
     htmlFor="combobox-id-01"
   >
-    Relate to
+    Relate To
   </label>
   <div
     className="slds-form-element__control"
@@ -5134,7 +5134,7 @@ exports[`render combobox render multiple selections in a closed combobox 1`] = `
             id="combobox-id-01"
             onBlur={[Function]}
             onFocus={[Function]}
-            placeholder="Select an Option"
+            placeholder="Select an Option…"
             readOnly={true}
             role="textbox"
             type="text"
@@ -5495,7 +5495,7 @@ exports[`render combobox render single selection in an open combobox 1`] = `
     className="slds-form-element__label"
     htmlFor="combobox-id-01"
   >
-    Relate to
+    Relate To
   </label>
   <div
     className="slds-form-element__control"
@@ -5523,7 +5523,7 @@ exports[`render combobox render single selection in an open combobox 1`] = `
             id="combobox-id-01"
             onBlur={[Function]}
             onFocus={[Function]}
-            placeholder="Select an Option"
+            placeholder="Select an Option…"
             readOnly={true}
             role="textbox"
             type="text"
@@ -5798,7 +5798,7 @@ exports[`render combobox renders autocomplete combobox 1`] = `
     className="slds-form-element__label"
     htmlFor="combobox-id-01"
   >
-    Relate to
+    Relate To
   </label>
   <div
     className="slds-form-element__control"
@@ -5949,7 +5949,7 @@ exports[`render combobox renders different styles of options in the listbox 1`] 
     className="slds-form-element__label"
     htmlFor="combobox-id-01"
   >
-    Relate to
+    Relate To
   </label>
   <div
     className="slds-form-element__control"
@@ -5976,7 +5976,7 @@ exports[`render combobox renders different styles of options in the listbox 1`] 
             id="combobox-id-01"
             onBlur={[Function]}
             onFocus={[Function]}
-            placeholder="Select an Option"
+            placeholder="Select an Option…"
             readOnly={true}
             role="textbox"
             type="text"
@@ -6181,7 +6181,7 @@ exports[`render combobox renders different styles of options in the listbox with
     className="slds-form-element__label"
     htmlFor="combobox-id-01"
   >
-    Relate to
+    Relate To
   </label>
   <div
     className="slds-form-element__control"
@@ -6208,7 +6208,7 @@ exports[`render combobox renders different styles of options in the listbox with
             id="combobox-id-01"
             onBlur={[Function]}
             onFocus={[Function]}
-            placeholder="Select an Option"
+            placeholder="Select an Option…"
             readOnly={true}
             role="textbox"
             type="text"
@@ -6691,7 +6691,7 @@ exports[`render combobox renders groups in a listbox 1`] = `
     className="slds-form-element__label"
     htmlFor="combobox-id-01"
   >
-    Relate to
+    Relate To
   </label>
   <div
     className="slds-form-element__control"
@@ -6717,7 +6717,7 @@ exports[`render combobox renders groups in a listbox 1`] = `
             id="combobox-id-01"
             onBlur={[Function]}
             onFocus={[Function]}
-            placeholder="Select an Option"
+            placeholder="Select an Option…"
             readOnly={true}
             role="textbox"
             type="text"
@@ -8826,7 +8826,7 @@ exports[`render deprecated combobox renders a readonly combobox 1`] = `
               autoComplete="off"
               className="slds-input slds-combobox__input"
               id="combobox-unique-id-16"
-              placeholder="Select an Option"
+              placeholder="Select an Option…"
               readOnly={true}
               role="textbox"
               type="text"
@@ -8999,7 +8999,7 @@ exports[`render deprecated combobox renders a readonly combobox with closed opti
               className="slds-input slds-combobox__input slds-combobox__input-value"
               defaultValue="Option A"
               id="combobox-unique-id-21"
-              placeholder="Select an Option"
+              placeholder="Select an Option…"
               readOnly={true}
               role="textbox"
               type="text"
@@ -9172,7 +9172,7 @@ exports[`render deprecated combobox renders a readonly combobox with closed opti
               className="slds-input slds-combobox__input slds-combobox__input-value"
               defaultValue="2 Options Selected"
               id="combobox-unique-id-22"
-              placeholder="Select an Option"
+              placeholder="Select an Option…"
               readOnly={true}
               role="textbox"
               type="text"
@@ -9412,7 +9412,7 @@ exports[`render deprecated combobox renders a readonly combobox with focus 1`] =
               autoComplete="off"
               className="slds-input slds-combobox__input"
               id="combobox-unique-id-17"
-              placeholder="Select an Option"
+              placeholder="Select an Option…"
               readOnly={true}
               role="textbox"
               type="text"
@@ -9585,7 +9585,7 @@ exports[`render deprecated combobox renders a readonly combobox with open item f
               autoComplete="off"
               className="slds-input slds-combobox__input"
               id="combobox-unique-id-18"
-              placeholder="Select an Option"
+              placeholder="Select an Option…"
               readOnly={true}
               role="textbox"
               type="text"
@@ -9758,7 +9758,7 @@ exports[`render deprecated combobox renders a readonly combobox with open option
               className="slds-input slds-combobox__input slds-combobox__input-value"
               defaultValue="Option A"
               id="combobox-unique-id-19"
-              placeholder="Select an Option"
+              placeholder="Select an Option…"
               readOnly={true}
               role="textbox"
               type="text"
@@ -9931,7 +9931,7 @@ exports[`render deprecated combobox renders a readonly combobox with open option
               className="slds-input slds-combobox__input slds-combobox__input-value"
               defaultValue="2 Options Selected"
               id="combobox-unique-id-20"
-              placeholder="Select an Option"
+              placeholder="Select an Option…"
               readOnly={true}
               role="textbox"
               type="text"

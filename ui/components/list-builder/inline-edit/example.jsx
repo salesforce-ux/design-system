@@ -84,7 +84,7 @@ export default (
   <div className="demo-only" style={{ height: '640px' }}>
     <Modal className="slds-modal_large">
       <ModalHeader>
-        <h2 className="slds-text-heading_medium">Edit All Products</h2>
+        <h2 className="slds-text-heading_medium">Edit all products</h2>
         <p className="slds-m-top_x-small">
           Edit the details of the products associated with your opportunity
         </p>

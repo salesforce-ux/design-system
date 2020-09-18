@@ -8,7 +8,7 @@
 
 ### Added
 
-- Added the brand expression specific Styling Hooks
+- Enabled styling hooks for alert. See alert's styling hooks overview table for a full listing of the currently available hooks.
 
 ## 2.8.0
 

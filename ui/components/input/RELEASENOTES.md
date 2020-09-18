@@ -4,6 +4,16 @@
 
 <!-- ## [Unreleased] -->
 
+## 2.13.1
+
+### Fixed
+
+- For inline help example:
+  - Removed unnecessary `aria-labelledby` from `input`. A `label` was already associated with the `input`.
+  - Moved `.slds-form-element__help` out of `.slds-form-element__control`, it is supposed to be a sibling in the markup structure.
+  - Added `aria-describedby` to `input` which uses the `id` of the help message.
+- Small improvements to the UI text.
+
 ## 2.12.0
 
 ### Fixed

@@ -1,10 +1,13 @@
 <!-- Release notes authoring guidelines: http://keepachangelog.com/ -->
 <!-- On release, add general notes here. In time the legacy release notes will be add to this -->
 
-## 2.13.1 - September 2, 2020
+## 2.13.2 - Upcoming
+
+- Updated @salesforce-ux/icons to 9.38.0 and added icons synonym metadata to SLDS dist
+
+## 2.13.1 - September 11, 2020
 
 - Added proper font-size change to mobile demos on the site
-- Updated @salesforce-ux/icons to 9.38.0 and added icons synonym metadata to SLDS dist
 
 ## 2.13.0 - August 20, 2020
 

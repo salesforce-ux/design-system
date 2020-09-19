@@ -4,6 +4,13 @@
 
 <!-- ## [Unreleased] -->
 
+## 2.14.0
+
+### Added
+
+- Added Styling Hook for box-shadow
+- Added Styling Hook for block level padding
+
 ## 2.13.1
 
 ### Fixed

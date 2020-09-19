@@ -16,9 +16,9 @@
   position: relative;
   display: inline-flex;
   align-items: center;
-  padding-top: 0;
+  padding-top: var(--sds-c-button-spacing-block-start, 0);
   padding-right: var(--sds-c-button-spacing-inline-end, 0);
-  padding-bottom: 0;
+  padding-bottom: var(--sds-c-button-spacing-block-end, 0);
   padding-left: var(--sds-c-button-spacing-inline-start, 0);
   background: none; // Reset underlying styles like VF
   background-color: var(--sds-c-button-color-background, transparent);
@@ -27,6 +27,7 @@
   border-style: solid;
   border-width: var(--sds-c-button-sizing-border, $border-width-thin);
   border-radius: var(--sds-c-button-radius-border, $button-border-radius);
+  box-shadow: var(--sds-c-button-shadow);
   line-height: var(--sds-c-button-line-height, $line-height-button);
   text-decoration: none;
   color: var(--sds-c-button-color-text, $brand-accessible);

@@ -4,6 +4,12 @@
 
 <!-- ## [Unreleased] -->
 
+# 2.14.0
+
+### Added
+
+- Added `slds-cell_action-mode` class for styling cells in Action mode
+
 ## 2.12.1
 
 ### Changed

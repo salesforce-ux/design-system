@@ -104,7 +104,7 @@
  * Listbox container
  * @name listbox
  * @selector .slds-listbox
- * @restrict ul
+ * @restrict .slds-dropdown ul, .slds-dueling-list__options ul, .slds-pill_container ul, .slds-listbox_selection-group ul, .slds-combobox_container ul, .slds-form-element__control ul, .slds-popover__body ul
  * @support dev-ready
  * @variant
  */
@@ -155,6 +155,13 @@
     padding-left: $spacing-xxx-small;
   }
 }
+
+/**
+ * Listbox item
+ *
+ * @selector .slds-listbox__item
+ * @restrict .slds-listbox > li
+ */
 
 /**
  * Choosable option within listbox

@@ -172,10 +172,10 @@
     border-top-style: solid;
     border-top-color: var(--sds-c-modal-color-border, $color-border);
     background-color: var(--sds-c-modal-footer-color-background, $color-background);
-    padding-top: var(--sds-c-header-footer-spacing-block-start, $spacing-small);
-    padding-right: var(--sds-c-header-footer-spacing-inline-end, $spacing-medium);
-    padding-bottom: var(--sds-c-header-footer-spacing-block-end, $spacing-small);
-    padding-left: var(--sds-c-header-footer-spacing-inline-start, $spacing-medium);
+    padding-top: var(--sds-c-modal-footer-spacing-block-start, $spacing-small);
+    padding-right: var(--sds-c-modal-footer-spacing-inline-end, $spacing-medium);
+    padding-bottom: var(--sds-c-modal-footer-spacing-block-end, $spacing-small);
+    padding-left: var(--sds-c-modal-footer-spacing-inline-start, $spacing-medium);
     text-align: right;
     box-shadow: var(--sds-c-modal-shadow, $shadow-drop-down);
 

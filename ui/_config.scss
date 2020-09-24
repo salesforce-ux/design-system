@@ -9,7 +9,7 @@
 ///
 /// @type String
 /// @access private
-$app-version: '2.13.0';
+$app-version: "2.13.1";
 
 /// Debug mode (uncomment to activate)
 /// Turn on to output deprecation warnings during development
@@ -21,12 +21,12 @@ $app-version: '2.13.0';
 /// Image Path
 ///
 /// @type String
-$static-image-path: '../images' !default;
+$static-image-path: "../images" !default;
 
 /// Font Path
 ///
 /// @type String
-$static-font-path: '../fonts/webfonts' !default;
+$static-font-path: "../fonts/webfonts" !default;
 
 /// Load webfonts
 ///
@@ -41,10 +41,10 @@ $slds-load-webfonts: true !default;
 ///
 /// @type map
 $breakpoints: (
-  'x-small': $mq-x-small,
-  'small': $mq-small,
-  'medium': $mq-medium,
-  'large': $mq-large
+  "x-small": $mq-x-small,
+  "small": $mq-small,
+  "medium": $mq-medium,
+  "large": $mq-large
 ) !default;
 
 /// Grid Column Support
@@ -59,4 +59,4 @@ $grid-columns: (1, 2, 3, 4, 5, 6, 7, 8, 12) !default;
 ///  #{$reset-wrapping-class} .foo { ... } // outputs .slds .foo { ... }
 ///
 /// @type String
-$reset-wrapping-class: '.slds' !default;
+$reset-wrapping-class: ".slds" !default;

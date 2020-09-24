@@ -46,7 +46,7 @@ exports[`renders a default app launcher 1`] = `
           className="slds-text-heading_medium"
           id="header43"
         >
-          App Launcher
+          App launcher
         </h2>
         <div
           className="slds-app-launcher__header-search"
@@ -811,7 +811,7 @@ exports[`renders a dropped app launcher 1`] = `
           className="slds-text-heading_medium"
           id="header43"
         >
-          App Launcher
+          App launcher
         </h2>
         <div
           className="slds-app-launcher__header-search"
@@ -1576,7 +1576,7 @@ exports[`renders a grabbed app launcher 1`] = `
           className="slds-text-heading_medium"
           id="header43"
         >
-          App Launcher
+          App launcher
         </h2>
         <div
           className="slds-app-launcher__header-search"
@@ -2341,7 +2341,7 @@ exports[`renders a moved app launcher 1`] = `
           className="slds-text-heading_medium"
           id="header43"
         >
-          App Launcher
+          App launcher
         </h2>
         <div
           className="slds-app-launcher__header-search"
@@ -3106,7 +3106,7 @@ exports[`renders a search app launcher 1`] = `
           className="slds-text-heading_medium"
           id="header43"
         >
-          App Launcher
+          App launcher
         </h2>
         <div
           className="slds-app-launcher__header-search"

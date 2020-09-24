@@ -2,6 +2,7 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 import React from 'react';
+import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import {
   FormElement,
@@ -21,9 +22,19 @@ export let Textarea = props => (
     {...props}
     id={props.id || textareaId}
     className={classNames('slds-textarea', props.className)}
-    placeholder={props.placeholder || 'Placeholder Text'}
+    placeholder={props.placeholder}
   />
 );
+
+Textarea.propTypes = {
+  id: PropTypes.string,
+  className: PropTypes.string,
+  placeholder: PropTypes.string
+};
+
+Textarea.defaultProps = {
+  placeholder: 'Placeholder text…'
+};
 
 /// ///////////////////////////////////////////
 // Export
@@ -64,7 +75,7 @@ export let states = [
         inputId={textareaId}
         isRequired
         errorId="error-01"
-        inlineMessage="This field is required"
+        inlineMessage="Enter a value."
       >
         <Textarea id={textareaId} required aria-describedby="error-01" />
       </FormElement>

@@ -46,7 +46,7 @@ exports[`Prompt renders a default prompt 1`] = `
           className="slds-text-heading_medium"
           id="prompt-heading-id"
         >
-          Service Unavailable
+          Service unavailable
         </h2>
       </header>
       <div
@@ -63,7 +63,7 @@ exports[`Prompt renders a default prompt 1`] = `
         <button
           className="slds-button slds-button_neutral"
         >
-          Okay
+          Got It
         </button>
       </footer>
     </div>

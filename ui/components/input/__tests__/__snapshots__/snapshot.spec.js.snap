@@ -1,0 +1,626 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Input renders a default input 1`] = `
+<div
+  className="slds-form-element"
+>
+  <label
+    className="slds-form-element__label"
+    htmlFor="text-input-id-1"
+  >
+    Input Label
+  </label>
+  <div
+    className="slds-form-element__control"
+  >
+    <input
+      className="slds-input"
+      id="text-input-id-1"
+      placeholder="Placeholder text…"
+      type="text"
+    />
+  </div>
+</div>
+`;
+
+exports[`Input renders an input that has an error 1`] = `
+<div
+  className="slds-form-element slds-has-error"
+>
+  <label
+    className="slds-form-element__label"
+    htmlFor="text-input-id-1"
+  >
+    <abbr
+      className="slds-required"
+      title="required"
+    >
+      *
+       
+    </abbr>
+    Input Label
+  </label>
+  <div
+    className="slds-form-element__control"
+  >
+    <input
+      aria-describedby="error-message-unique-id"
+      aria-invalid="true"
+      className="slds-input"
+      id="text-input-id-1"
+      placeholder="Placeholder text…"
+      required={true}
+      type="text"
+    />
+  </div>
+  <div
+    className="slds-form-element__help"
+    id="error-message-unique-id"
+  >
+    Enter a value.
+  </div>
+</div>
+`;
+
+exports[`Input renders an input that has an error with icon 1`] = `
+<div
+  className="slds-form-element slds-has-error"
+>
+  <label
+    className="slds-form-element__label"
+    htmlFor="text-input-id-1"
+  >
+    <abbr
+      className="slds-required"
+      title="required"
+    >
+      *
+       
+    </abbr>
+    Input Label
+  </label>
+  <div
+    className="slds-form-element__control slds-input-has-icon slds-input-has-icon_left"
+  >
+    <svg
+      aria-hidden={true}
+      className="slds-input__icon"
+    >
+      <use
+        xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#error"
+      />
+    </svg>
+    <input
+      aria-describedby="error-message-unique-id"
+      aria-invalid="true"
+      className="slds-input"
+      id="text-input-id-1"
+      placeholder="Placeholder text…"
+      required={true}
+      type="text"
+    />
+  </div>
+  <div
+    className="slds-form-element__help"
+    id="error-message-unique-id"
+  >
+    Enter a value.
+  </div>
+</div>
+`;
+
+exports[`Input renders an input that is disabled 1`] = `
+<div
+  className="slds-form-element"
+>
+  <label
+    className="slds-form-element__label"
+    htmlFor="text-input-id-1"
+  >
+    Input Label
+  </label>
+  <div
+    className="slds-form-element__control"
+  >
+    <input
+      className="slds-input"
+      disabled={true}
+      id="text-input-id-1"
+      placeholder="Placeholder text…"
+      type="text"
+    />
+  </div>
+</div>
+`;
+
+exports[`Input renders an input that is read only 1`] = `
+<div
+  className="slds-form-element"
+>
+  <label
+    className="slds-form-element__label"
+    htmlFor="text-input-id-1"
+  >
+    Input Label
+  </label>
+  <div
+    className="slds-form-element__control"
+  >
+    <input
+      className="slds-input"
+      defaultValue="Read Only"
+      id="text-input-id-1"
+      placeholder=""
+      readOnly={true}
+      type="text"
+    />
+  </div>
+</div>
+`;
+
+exports[`Input renders an input that is required 1`] = `
+<div
+  className="slds-form-element"
+>
+  <label
+    className="slds-form-element__label"
+    htmlFor="text-input-id-1"
+  >
+    <abbr
+      className="slds-required"
+      title="required"
+    >
+      *
+       
+    </abbr>
+    Input Label
+  </label>
+  <div
+    className="slds-form-element__control"
+  >
+    <input
+      className="slds-input"
+      id="text-input-id-1"
+      placeholder="Placeholder text…"
+      required={true}
+      type="text"
+    />
+  </div>
+</div>
+`;
+
+exports[`Input renders an input that is the date type 1`] = `
+<div
+  className="slds-form-element"
+>
+  <label
+    className="slds-form-element__label"
+    htmlFor="text-input-id-1"
+  >
+    Input Label
+  </label>
+  <div
+    className="slds-form-element__control"
+  >
+    <input
+      className="slds-input"
+      id="text-input-id-1"
+      type="date"
+    />
+  </div>
+</div>
+`;
+
+exports[`Input renders an input that is the email type 1`] = `
+<div
+  className="slds-form-element"
+>
+  <label
+    className="slds-form-element__label"
+    htmlFor="input-email"
+  >
+    Email
+  </label>
+  <div
+    className="slds-form-element__control"
+  >
+    <input
+      className="slds-input"
+      id="input-email"
+      placeholder="E-Mail"
+      type="email"
+    />
+  </div>
+</div>
+`;
+
+exports[`Input renders an input that is the search type 1`] = `
+<div
+  className="slds-form-element"
+>
+  <label
+    className="slds-form-element__label"
+    htmlFor="text-input-id-1"
+  >
+    Input Label
+  </label>
+  <div
+    className="slds-form-element__control"
+  >
+    <input
+      className="slds-input"
+      id="text-input-id-1"
+      type="search"
+    />
+  </div>
+</div>
+`;
+
+exports[`Input renders an input that is the tel type 1`] = `
+<div
+  className="slds-form-element"
+>
+  <label
+    className="slds-form-element__label"
+    htmlFor="text-input-id-1"
+  >
+    Input Label
+  </label>
+  <div
+    className="slds-form-element__control"
+  >
+    <input
+      className="slds-input"
+      id="text-input-id-1"
+      type="tel"
+    />
+  </div>
+</div>
+`;
+
+exports[`Input renders an input that is the url type 1`] = `
+<div
+  className="slds-form-element"
+>
+  <label
+    className="slds-form-element__label"
+    htmlFor="text-input-id-1"
+  >
+    Input Label
+  </label>
+  <div
+    className="slds-form-element__control"
+  >
+    <input
+      className="slds-input"
+      id="text-input-id-1"
+      type="url"
+    />
+  </div>
+</div>
+`;
+
+exports[`Input renders an input with clear button and spinner 1`] = `
+<div
+  className="slds-form-element"
+>
+  <label
+    className="slds-form-element__label"
+    htmlFor="text-input-id-1"
+  >
+    Input Label
+  </label>
+  <div
+    className="slds-form-element__control slds-input-has-icon slds-input-has-icon_left-right slds-input-has-icon_group-right"
+  >
+    <svg
+      aria-hidden={true}
+      className="slds-icon slds-input__icon slds-input__icon_left slds-icon-text-default"
+    >
+      <use
+        xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#search"
+      />
+    </svg>
+    <input
+      className="slds-input"
+      id="text-input-id-1"
+      placeholder="Placeholder text…"
+      type="text"
+    />
+    <div
+      className="slds-input__icon-group slds-input__icon-group_right"
+    >
+      <div
+        className="slds-spinner slds-spinner_brand slds-spinner_x-small slds-input__spinner"
+        role="status"
+      >
+        <span
+          className="slds-assistive-text"
+        >
+          Loading
+        </span>
+        <div
+          className="slds-spinner__dot-a"
+        />
+        <div
+          className="slds-spinner__dot-b"
+        />
+      </div>
+      <button
+        className="slds-button slds-button_icon slds-input__icon slds-input__icon_right"
+        onClick={[Function]}
+        title="Clear"
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-icon-text-light"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#clear"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          Clear
+        </span>
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Input renders an input with field level help 1`] = `
+<div
+  style={
+    Object {
+      "paddingTop": "3rem",
+      "position": "relative",
+    }
+  }
+>
+  <div
+    className="slds-form-element"
+  >
+    <label
+      className="slds-form-element__label"
+      htmlFor="text-input-id-1"
+    >
+      Input Label
+    </label>
+    <div
+      className="slds-form-element__icon"
+    >
+      <button
+        aria-describedby="help"
+        className="slds-button slds-button_icon"
+        onClick={[Function]}
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#info"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          Help
+        </span>
+      </button>
+      <div
+        className="slds-popover slds-popover_tooltip slds-nubbin_bottom-left"
+        id="help"
+        role="tooltip"
+        style={
+          Object {
+            "left": "-15px",
+            "position": "absolute",
+            "top": "-45px",
+            "width": "170px",
+          }
+        }
+      >
+        <div
+          className="slds-popover__body"
+        >
+          Some helpful information.
+        </div>
+      </div>
+    </div>
+    <div
+      className="slds-form-element__control"
+    >
+      <input
+        className="slds-input"
+        id="text-input-id-1"
+        placeholder="Placeholder text…"
+        type="text"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Input renders an input with fixed text 1`] = `
+<div
+  className="slds-form-element"
+>
+  <label
+    className="slds-form-element__label"
+    htmlFor="text-input-id-1"
+    id="fixed-text-label"
+  >
+    Input Label
+  </label>
+  <div
+    className="slds-form-element__control slds-input-has-fixed-addon"
+  >
+    <span
+      className="slds-form-element__addon"
+      id="fixed-text-addon-pre"
+    >
+      $
+    </span>
+    <input
+      aria-labelledby="fixed-text-label fixed-text-addon-pre fixed-text-addon-post"
+      className="slds-input"
+      id="text-input-id-1"
+      placeholder="Placeholder text…"
+      type="text"
+    />
+    <span
+      className="slds-form-element__addon"
+      id="fixed-text-addon-post"
+    >
+      euro
+    </span>
+  </div>
+</div>
+`;
+
+exports[`Input renders an input with inline help 1`] = `
+<div
+  className="slds-form-element"
+>
+  <label
+    className="slds-form-element__label"
+    htmlFor="text-input-id-1"
+    id="inline-text-label"
+  >
+    Input Label
+  </label>
+  <div
+    className="slds-form-element__control"
+  >
+    <input
+      aria-describedby="error-message-unique-id"
+      aria-invalid="true"
+      className="slds-input"
+      id="text-input-id-1"
+      placeholder="Placeholder text…"
+      type="text"
+    />
+  </div>
+  <div
+    className="slds-form-element__help"
+    id="error-message-unique-id"
+  >
+    ex: (415)111-2222
+  </div>
+</div>
+`;
+
+exports[`Input renders an input with left icon 1`] = `
+<div
+  className="slds-form-element"
+>
+  <label
+    className="slds-form-element__label"
+    htmlFor="text-input-id-1"
+  >
+    Input Label
+  </label>
+  <div
+    className="slds-form-element__control slds-input-has-icon slds-input-has-icon_left"
+  >
+    <svg
+      aria-hidden={true}
+      className="slds-icon slds-input__icon slds-input__icon_left slds-icon-text-default"
+    >
+      <use
+        xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#search"
+      />
+    </svg>
+    <input
+      className="slds-input"
+      id="text-input-id-1"
+      placeholder="Placeholder text…"
+      type="text"
+    />
+  </div>
+</div>
+`;
+
+exports[`Input renders an input with left icon and clear button 1`] = `
+<div
+  className="slds-form-element"
+>
+  <label
+    className="slds-form-element__label"
+    htmlFor="text-input-id-1"
+  >
+    Input Label
+  </label>
+  <div
+    className="slds-form-element__control slds-input-has-icon slds-input-has-icon_left-right"
+  >
+    <svg
+      aria-hidden={true}
+      className="slds-icon slds-input__icon slds-input__icon_left slds-icon-text-default"
+    >
+      <use
+        xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#search"
+      />
+    </svg>
+    <input
+      className="slds-input"
+      id="text-input-id-1"
+      placeholder="Placeholder text…"
+      type="text"
+    />
+    <button
+      className="slds-button slds-button_icon slds-input__icon slds-input__icon_right"
+      onClick={[Function]}
+      title="Clear"
+    >
+      <svg
+        aria-hidden={true}
+        className="slds-button__icon slds-icon-text-light"
+      >
+        <use
+          xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#clear"
+        />
+      </svg>
+      <span
+        className="slds-assistive-text"
+      >
+        Clear
+      </span>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Input renders an input with right icon 1`] = `
+<div
+  className="slds-form-element"
+>
+  <label
+    className="slds-form-element__label"
+    htmlFor="text-input-id-1"
+  >
+    Input Label
+  </label>
+  <div
+    className="slds-form-element__control slds-input-has-icon slds-input-has-icon_right"
+  >
+    <svg
+      aria-hidden={true}
+      className="slds-icon slds-input__icon slds-input__icon_right slds-icon-text-default"
+    >
+      <use
+        xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#search"
+      />
+    </svg>
+    <input
+      className="slds-input"
+      id="text-input-id-1"
+      placeholder="Placeholder text…"
+      type="text"
+    />
+  </div>
+</div>
+`;

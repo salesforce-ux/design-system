@@ -303,7 +303,7 @@ export default (
     >
       <ModalHeader>
         <h2 id="id-of-modalheader-h2" className="slds-text-heading_medium">
-          Add Products
+          Add products
         </h2>
         <p className="slds-m-top_x-small">Pricebook: Salesforce Products</p>
       </ModalHeader>
@@ -346,7 +346,7 @@ export let states = [
         >
           <ModalHeader>
             <h2 id="id-of-modalheader-h2" className="slds-text-heading_medium">
-              Add Products
+              Add products
             </h2>
             <p className="slds-m-top_x-small">Pricebook: Salesforce Products</p>
           </ModalHeader>
@@ -391,7 +391,7 @@ export let states = [
         >
           <ModalHeader>
             <h2 id="id-of-modalheader-h2" className="slds-text-heading_medium">
-              Add Products
+              Add products
             </h2>
             <p className="slds-m-top_x-small">Pricebook: Salesforce Products</p>
           </ModalHeader>
@@ -434,7 +434,7 @@ export let states = [
         >
           <ModalHeader>
             <h2 id="id-of-modalheader-h2" className="slds-text-heading_medium">
-              Add Products
+              Add products
             </h2>
             <p className="slds-m-top_x-small">Pricebook: Salesforce Products</p>
           </ModalHeader>
@@ -479,7 +479,7 @@ export let examples = [
         >
           <ModalHeader>
             <h2 id="id-of-modalheader-h2" className="slds-text-heading_medium">
-              Add Products
+              Add products
             </h2>
             <p className="slds-m-top_x-small">Pricebook: Salesforce Products</p>
           </ModalHeader>
@@ -518,7 +518,7 @@ export let examples = [
         >
           <ModalHeader>
             <h2 id="id-of-modalheader-h2" className="slds-text-heading_medium">
-              Add Products
+              Add products
             </h2>
             <p className="slds-m-top_x-small">Pricebook: Salesforce Products</p>
           </ModalHeader>

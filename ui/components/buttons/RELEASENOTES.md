@@ -15,13 +15,14 @@
 
 ### Fixed
 
-- Added `background` shorthand and set to `initial` to recreated existing behavior that relied on the shorthand to apply initial values to unspecified values.
+- Added `background` shorthand and set to `initial` to recreate existing behavior that relied on the shorthand to apply initial values to unspecified values.
+- Fixed issue where mobile text size wasn't accurately sized.
 
 ## 2.13.0
 
 ### Added
 
-- Added the brand expression specific Styling Hooks
+- Enabled styling hooks for button. See button's styling hooks overview table for a full listing of the currently available hooks.
 
 ## 2.12.0
 

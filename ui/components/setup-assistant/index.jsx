@@ -135,7 +135,7 @@ const renderExpandableSteps = steps => {
 
 export const SetupAssistantStep = props => (
   <li className="slds-setup-assistant__item">
-    <article className="slds-setup-assistant__step" key={props.key}>
+    <article className="slds-setup-assistant__step">
       {props.children}
     </article>
   </li>

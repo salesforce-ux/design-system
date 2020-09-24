@@ -1,7 +1,7 @@
 import CodeView from '../../../shared/components/CodeView';
 import Blockquote from '../../../shared/components/Blockquote';
 import { getDisplayElementById } from '../../shared/helpers';
-import StyleApiTable from '../../../shared/components/StyleApiTable';
+import StylingHooksTable from '../../../shared/components/StylingHooksTable';
 import * as Base from './base/example';
 
 <div className="doc lead">
@@ -15,10 +15,6 @@ import * as Base from './base/example';
 ## About Accordions
 
 Accordions are composed of a list of longer blocks of text, with a header button to toggle the visibility of each block.
-
-### Styling Hooks
-
-<StyleApiTable name="accordion" type="component" />
 
 ## Accessibility
 
@@ -51,11 +47,15 @@ Content visibility is toggled via a [Button](/components/buttons) in the H3 head
 <CodeView>{getDisplayElementById(Base.examples, 'styled')}</CodeView>
 
 ### Nested
-<CodeView>
-  { getDisplayElementById(Base.examples, 'nested-accordions') }
-</CodeView>
+
+<CodeView>{getDisplayElementById(Base.examples, 'nested-accordions')}</CodeView>
 
 ### Heading with Truncation
+
 <CodeView>
-  { getDisplayElementById(Base.examples, 'long-heading-truncated')}
+  {getDisplayElementById(Base.examples, 'long-heading-truncated')}
 </CodeView>
+
+## Styling Hooks Overview
+
+<StylingHooksTable name="accordion" type="component" />

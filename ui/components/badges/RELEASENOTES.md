@@ -8,7 +8,7 @@
 
 ### Added
 
-- Added the brand expression specific Styling Hooks to Badge.
+- Enabled styling hooks for badge. See badge's styling hooks overview table for a full listing of the currently available hooks.
 
 ### Fixed
 

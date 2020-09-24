@@ -53,7 +53,7 @@ Select.propTypes = {
 let Required = props => (
   <FormElement labelContent={selectLabel} inputId={defaultSelectId} isRequired>
     <Select id={defaultSelectId} required>
-      <option value="">Please select</option>
+      <option value="">Select…</option>
       <option>Option One</option>
       <option>Option Two</option>
       <option>Option Three</option>
@@ -68,10 +68,10 @@ let ErrorState = props => (
     inputId={defaultSelectId}
     errorId={errorId}
     isRequired
-    inlineMessage="This field is required"
+    inlineMessage="Select an option."
   >
     <Select id={defaultSelectId} aria-describedby={errorId} required>
-      <option value="">Please select</option>
+      <option value="">Select…</option>
       <option>Option One</option>
       <option>Option Two</option>
       <option>Option Three</option>
@@ -82,7 +82,7 @@ let ErrorState = props => (
 let Disabled = props => (
   <FormElement labelContent={selectLabel} inputId={defaultSelectId}>
     <Select id={defaultSelectId} disabled>
-      <option value="">Please select</option>
+      <option value="">Select…</option>
       <option>Option One</option>
       <option>Option Two</option>
       <option>Option Three</option>
@@ -107,7 +107,7 @@ let MultipleNarrow = props => (
 export default (
   <FormElement labelContent={selectLabel} inputId={defaultSelectId}>
     <Select id={defaultSelectId}>
-      <option value="">Please select</option>
+      <option value="">Select…</option>
       <option>Option One</option>
       <option>Option Two</option>
       <option>Option Three</option>

@@ -97,7 +97,7 @@ export default class SLDSFrame extends React.Component {
         </Frame>
 
         {!hideDeviceSelector && (
-          <ul class="docs-codeblock__action-bar docs-codeblock__device-selector">
+          <ul className="docs-codeblock__action-bar docs-codeblock__device-selector">
             <li>
               <FormElement
                 isHorizontal

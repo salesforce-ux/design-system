@@ -2,6 +2,7 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 import React from 'react';
+import classnames from 'classnames';
 import SvgIcon from '../../ui/shared/svg-icon/';
 
 const isCopySupported = () =>
@@ -63,10 +64,14 @@ class Copy extends React.PureComponent {
     return (
       <React.Fragment>
         <button
-          className="slds-button slds-button_icon-container doc-copy-to-clipboard"
+          className={classnames(
+            'doc-copy-to-clipboard',
+            'slds-button',
+            this.props.className
+          )}
           onClick={() => this.copyToClipboard()}
-          aria-label='Copy to Clipboard'
-          title='Copy to Clipboard'
+          aria-label="Copy to Clipboard"
+          title="Copy to Clipboard"
         >
           <SvgIcon
             sprite="utility"
@@ -84,7 +89,7 @@ class Copy extends React.PureComponent {
   render() {
     if (!this.state.show) return null;
     return (
-      <div className={this.props.className}>
+      <span className={this.props.containerClassName}>
         {this.renderButton()}
         <pre
           aria-hidden="true"
@@ -93,7 +98,7 @@ class Copy extends React.PureComponent {
             this.copyNode = node;
           }}
         />
-      </div>
+      </span>
     );
   }
 }

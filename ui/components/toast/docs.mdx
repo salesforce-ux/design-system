@@ -1,6 +1,6 @@
 import CodeView from '../../../shared/components/CodeView';
 import Blockquote from '../../../shared/components/Blockquote';
-import StyleApiTable from '../../../shared/components/StyleApiTable';
+import StylingHooksTable from '../../../shared/components/StylingHooksTable';
 import * as Base from './base/example';
 import { getDisplayElementById } from '../../shared/helpers';
 
@@ -14,10 +14,6 @@ import { getDisplayElementById } from '../../shared/helpers';
 </CodeView>
 
 ## About Toast
-
-### Styling Hooks
-
-<StyleApiTable name="toast" type="component" />
 
 ### Accessibility
 
@@ -62,3 +58,7 @@ Use a span with `slds-assistive-text` to let the user know what type of notifica
 <CodeView demoStyles="height: 4rem;">
   {getDisplayElementById(Base.examples, 'small')}
 </CodeView>
+
+## Styling Hooks Overview
+
+<StylingHooksTable name="toast" type="component" />

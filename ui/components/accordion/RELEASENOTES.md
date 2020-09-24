@@ -8,7 +8,7 @@
 
 ### Added
 
-- Added the brand expression specific Styling Hooks to Accordion.
+- Enabled styling hooks for accordion. See accordion's styling hooks overview table for a full listing of the currently available hooks.
 
 ### Changed
 

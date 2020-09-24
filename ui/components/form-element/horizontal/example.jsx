@@ -78,7 +78,7 @@ export let examples = [
           inputId="horizontal-input-id-01"
           isHorizontal
         >
-          <Input id="horizontal-input-id-01" placeholder="Placeholder Text" />
+          <Input id="horizontal-input-id-01" placeholder="Placeholder text…" />
         </FormElement>
         <FormElement
           labelContent="Textarea Input"
@@ -87,19 +87,19 @@ export let examples = [
         >
           <Textarea
             id="horizontal-input-id-02"
-            placeholder="Placeholder Text"
+            placeholder="Placeholder text…"
           />
         </FormElement>
-        <Fieldset label="Checkbox Group label" isHorizontal>
+        <Fieldset label="Checkbox Group Label" isHorizontal>
           <Checkbox label="All opportunities owned by you" name="default" />
           <Checkbox
             label="All contacts in the account owned by you"
             name="default"
           />
         </Fieldset>
-        <Fieldset label="Radio Group label" isHorizontal>
-          <Radio label="Lead Generation" name="options" />
-          <Radio label="Education Leads" name="options" />
+        <Fieldset label="Radio Group Label" isHorizontal>
+          <Radio label="Lead generation" name="options" />
+          <Radio label="Education leads" name="options" />
         </Fieldset>
       </div>
     )

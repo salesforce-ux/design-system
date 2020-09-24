@@ -15,7 +15,7 @@ export default (
   <div className="demo-only" style={{ height: '640px' }}>
     <Modal className="slds-modal_large">
       <ModalHeader>
-        <h2 className="slds-text-heading_medium">Account Name</h2>
+        <h2 className="slds-text-heading_medium">Account name</h2>
       </ModalHeader>
 
       <ModalContent>

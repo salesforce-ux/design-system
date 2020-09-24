@@ -204,7 +204,7 @@ export const DeprecatedCombobox = props => {
                   !props.placeholder
                     ? props.autocomplete
                       ? 'Search Salesforce'
-                      : 'Select an Option'
+                      : 'Select an Option…'
                     : props.placeholder
                 }
                 readOnly={props.readonly}

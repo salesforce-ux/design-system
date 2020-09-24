@@ -111,7 +111,7 @@ export let examples = [
     label: 'Grouped',
     element: (
       <div>
-        <div class="slds-combobox_container" />
+        <div className="slds-combobox_container" />
         <PillContainer variant="listbox-group">
           <ListboxPills>
             <ListboxPillsItem>

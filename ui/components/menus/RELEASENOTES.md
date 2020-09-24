@@ -4,6 +4,12 @@
 
 <!-- ## [Unreleased] -->
 
+## 2.13.1
+
+### Changed
+
+- Removed Mobile examples as they did not conform to the specification.
+
 ## 2.11.7
 
 ### Added

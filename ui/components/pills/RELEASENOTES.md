@@ -14,7 +14,7 @@
 
 ### Added
 
-- Added the brand expression specific Styling Hooks to Pill.
+- Enabled styling hooks for pill. See pill's styling hooks overview table for a full listing of the currently available hooks.
 - Added example for Listbox of Pills in Group
 
 ### Changed

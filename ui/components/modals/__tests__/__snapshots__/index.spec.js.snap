@@ -39,7 +39,7 @@ Array [
           className="slds-modal__title slds-hyphenate"
           id="modal-heading-01"
         >
-          Modal Header
+          Modal header
         </h2>
         <p
           className="slds-m-top_x-small"
@@ -127,7 +127,7 @@ Array [
           className="slds-modal__title slds-hyphenate"
           id="modal-heading-01"
         >
-          Modal Header
+          Modal header
         </h2>
       </header>
       <div
@@ -188,7 +188,7 @@ Array [
           className="slds-modal__title slds-hyphenate"
           id="modal-heading-unique-id-1"
         >
-          Modal Header
+          Modal header
         </h2>
       </header>
       <div
@@ -252,7 +252,7 @@ Array [
           className="slds-modal__title slds-hyphenate"
           id="modal-heading-01"
         >
-          Modal Header
+          Modal header
         </h2>
       </header>
       <div
@@ -327,7 +327,7 @@ Array [
           className="slds-modal__title slds-hyphenate"
           id="modal-heading-01"
         >
-          Modal Header
+          Modal header
         </h2>
       </header>
       <div
@@ -460,7 +460,7 @@ Array [
           className="slds-modal__title slds-hyphenate"
           id="modal-heading-01"
         >
-          Modal Header
+          Modal header
         </h2>
       </header>
       <div
@@ -535,7 +535,7 @@ Array [
           className="slds-modal__title slds-hyphenate"
           id="modal-heading-01"
         >
-          Modal Header
+          Modal header
         </h2>
       </header>
       <div
@@ -610,7 +610,7 @@ Array [
           className="slds-modal__title slds-hyphenate"
           id="modal-heading-01"
         >
-          Modal Header
+          Modal header
         </h2>
       </header>
       <div

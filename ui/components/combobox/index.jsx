@@ -90,14 +90,14 @@ const ComboboxInput = props => {
         aria-controls={
           props['aria-controls'] || 'please-provide-listbox-id-here'
         }
-        autoComplete="off"
+        autocomplete="off"
         role="textbox"
         type="text"
         placeholder={
           !props.placeholder
             ? props.autocomplete
               ? 'Search...'
-              : 'Select an Option'
+              : 'Select an Option…'
             : props.placeholder
         }
         readOnly={props.readonly}
@@ -228,7 +228,7 @@ export default class Combobox extends Component {
 }
 
 Combobox.defaultProps = {
-  label: 'Relate to'
+  label: 'Relate To'
 };
 
 Combobox.propTypes = {
@@ -372,7 +372,7 @@ export class ComboboxGroup extends Component {
 }
 
 ComboboxGroup.defaultProps = {
-  label: 'Relate to'
+  label: 'Relate To'
 };
 
 ComboboxGroup.propTypes = {

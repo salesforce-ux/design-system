@@ -56,7 +56,7 @@ Here is an example of how that may look.
 }
 ```
 
-[See classname annotations](https://github.com/salesforce-ux/design-system-internal/wiki/Documentation-Styleguide#selector-annotations)
+[See selector annotations](#selector-annotations)
 
 # Component Annotations
 

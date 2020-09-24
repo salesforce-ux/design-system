@@ -29,7 +29,7 @@ exports[`renders a default dueling picklist 1`] = `
         className="slds-assistive-text"
         id="option-drag-label"
       >
-        Press space bar when on an item, to move it within the list. CMD plus left and right arrow keys, to move items between lists.
+        Press space bar when on an item, to move it within the list. Cmd/Ctrl plus left and right arrow keys, to move items between lists.
       </div>
       <div
         className="slds-dueling-list__column"
@@ -327,7 +327,7 @@ exports[`renders a default dueling picklist with no reordering 1`] = `
         className="slds-assistive-text"
         id="option-drag-label"
       >
-        Press space bar when on an item, to move it within the list. CMD plus left and right arrow keys, to move items between lists.
+        Press space bar when on an item, to move it within the list. Cmd/Ctrl plus left and right arrow keys, to move items between lists.
       </div>
       <div
         className="slds-dueling-list__column"
@@ -585,7 +585,7 @@ exports[`renders a disabled dueling picklist 1`] = `
         className="slds-assistive-text"
         id="option-drag-label"
       >
-        Press space bar when on an item, to move it within the list. CMD plus left and right arrow keys, to move items between lists.
+        Press space bar when on an item, to move it within the list. Cmd/Ctrl plus left and right arrow keys, to move items between lists.
       </div>
       <div
         className="slds-dueling-list__column"
@@ -889,7 +889,7 @@ exports[`renders a dueling picklist with a dropped option 1`] = `
         className="slds-assistive-text"
         id="option-drag-label"
       >
-        Press space bar when on an item, to move it within the list. CMD plus left and right arrow keys, to move items between lists.
+        Press space bar when on an item, to move it within the list. Cmd/Ctrl plus left and right arrow keys, to move items between lists.
       </div>
       <div
         className="slds-dueling-list__column"
@@ -1485,7 +1485,7 @@ exports[`renders a dueling picklist with a required option 1`] = `
         className="slds-assistive-text"
         id="option-drag-label"
       >
-        Press space bar when on an item, to move it within the list. CMD plus left and right arrow keys, to move items between lists. Required items must remain in the second category.
+        Press space bar when on an item, to move it within the list. Cmd/Ctrl plus left and right arrow keys, to move items between lists.
       </div>
       <div
         className="slds-dueling-list__column"
@@ -1808,7 +1808,7 @@ exports[`renders a dueling picklist with a selected option 1`] = `
         className="slds-assistive-text"
         id="option-drag-label"
       >
-        Press space bar when on an item, to move it within the list. CMD plus left and right arrow keys, to move items between lists.
+        Press space bar when on an item, to move it within the list. Cmd/Ctrl plus left and right arrow keys, to move items between lists.
       </div>
       <div
         className="slds-dueling-list__column"
@@ -2702,7 +2702,7 @@ exports[`renders a dueling picklist with multiple selected options 1`] = `
         className="slds-assistive-text"
         id="option-drag-label"
       >
-        Press space bar when on an item, to move it within the list. CMD plus left and right arrow keys, to move items between lists.
+        Press space bar when on an item, to move it within the list. Cmd/Ctrl plus left and right arrow keys, to move items between lists.
       </div>
       <div
         className="slds-dueling-list__column"
@@ -3022,7 +3022,7 @@ exports[`renders a dueling picklist with tooltip 1`] = `
         className="slds-assistive-text"
         id="option-drag-label"
       >
-        Press space bar when on an item, to move it within the list. CMD plus left and right arrow keys, to move items between lists.
+        Press space bar when on an item, to move it within the list. Cmd/Ctrl plus left and right arrow keys, to move items between lists.
       </div>
       <div
         className="slds-dueling-list__column"
@@ -3327,7 +3327,7 @@ exports[`renders a required dueling picklist 1`] = `
         className="slds-assistive-text"
         id="option-drag-label"
       >
-        Press space bar when on an item, to move it within the list. CMD plus left and right arrow keys, to move items between lists.
+        Press space bar when on an item, to move it within the list. Cmd/Ctrl plus left and right arrow keys, to move items between lists.
       </div>
       <div
         className="slds-dueling-list__column"
@@ -3654,7 +3654,7 @@ exports[`renders a required dueling picklist with tooltip 1`] = `
         className="slds-assistive-text"
         id="option-drag-label"
       >
-        Press space bar when on an item, to move it within the list. CMD plus left and right arrow keys, to move items between lists.
+        Press space bar when on an item, to move it within the list. Cmd/Ctrl plus left and right arrow keys, to move items between lists.
       </div>
       <div
         className="slds-dueling-list__column"
@@ -3952,7 +3952,7 @@ exports[`renders a responsive dueling picklist 1`] = `
         className="slds-assistive-text"
         id="option-drag-label"
       >
-        Press space bar when on an item, to move it within the list. CMD plus left and right arrow keys, to move items between lists.
+        Press space bar when on an item, to move it within the list. Cmd/Ctrl plus left and right arrow keys, to move items between lists.
       </div>
       <div
         className="slds-dueling-list__column slds-dueling-list__column_responsive"
@@ -4250,7 +4250,7 @@ exports[`renders a responsive non-reorderable dueling picklist 1`] = `
         className="slds-assistive-text"
         id="option-drag-label"
       >
-        Press space bar when on an item, to move it within the list. CMD plus left and right arrow keys, to move items between lists.
+        Press space bar when on an item, to move it within the list. Cmd/Ctrl plus left and right arrow keys, to move items between lists.
       </div>
       <div
         className="slds-dueling-list__column slds-dueling-list__column_responsive"

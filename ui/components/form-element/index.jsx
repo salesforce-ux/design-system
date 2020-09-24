@@ -98,7 +98,7 @@ export const FormElementLabel = props => {
     >
       {isRequired && (
         <abbr className="slds-required" title="required">
-          * {' '}
+          *{' '}
         </abbr>
       )}
       {labelContent}
@@ -122,7 +122,7 @@ export const FormElementSpanFauxLabel = props => {
     <span id={labelId} className="slds-form-element__label">
       {isRequired && (
         <abbr className="slds-required" title="required">
-          * {' '}
+          *{' '}
         </abbr>
       )}
       {children}
@@ -157,7 +157,7 @@ export const FormElementTooltip = props => {
             width: '170px'
           }}
         >
-          Some helpful information
+          Some helpful information.
         </Tooltip>
       )}
     </div>
@@ -271,7 +271,7 @@ export const Legend = props => {
       >
         {isRequired && (
           <abbr className="slds-required" title="required">
-            * {' '}
+            *{' '}
           </abbr>
         )}
         {children}
@@ -293,25 +293,25 @@ Legend.propTypes = {
 };
 
 /**
-* Generic Form Element
-* @name FormElement
-* @prop {string}  formElementClassName - Classnames to be added to the overall Form Element wrapper
-* @prop {string}  formControlClassName - Classnames to be added to the Form Element Control
-* @prop {boolean} isRequired - If true, required asterisk is added to element
-* @prop {string}  labelId - ID of the label
-* @prop {string}  labelClassName - Classnames to be added to the Form Element Label
-* @prop {object}  labelContent - Content of the label, can be a simple string or full object
-* @prop {boolean} hasHiddenLabel - If true, label is hidden using slds-assistive-text class
-* @prop {string}  inputId - ID of the input, used for the label's htmlFor
-* @prop {boolean} hasLeftIcon - Adds icon placement specific classes
-* @prop {boolean} hasRightIcon - Adds icon placement specific classes
-* @prop {boolean} hasRightIconGroup - Adds icon placement specific class when input has two icons on the right
-* @prop {string}  errorId - ID of the error message
-* @prop {boolean} hasTooltip - If true, displays tooltop
-* @prop {string}  inlineMessage - Message placed under the input, either inline help or error message
-* @prop {string}  role - Role of the Form Element Wrapper
-* @prop {object}  dropdown - Content shown as a dropdown of the Form Element
-*/
+ * Generic Form Element
+ * @name FormElement
+ * @prop {string}  formElementClassName - Classnames to be added to the overall Form Element wrapper
+ * @prop {string}  formControlClassName - Classnames to be added to the Form Element Control
+ * @prop {boolean} isRequired - If true, required asterisk is added to element
+ * @prop {string}  labelId - ID of the label
+ * @prop {string}  labelClassName - Classnames to be added to the Form Element Label
+ * @prop {object}  labelContent - Content of the label, can be a simple string or full object
+ * @prop {boolean} hasHiddenLabel - If true, label is hidden using slds-assistive-text class
+ * @prop {string}  inputId - ID of the input, used for the label's htmlFor
+ * @prop {boolean} hasLeftIcon - Adds icon placement specific classes
+ * @prop {boolean} hasRightIcon - Adds icon placement specific classes
+ * @prop {boolean} hasRightIconGroup - Adds icon placement specific class when input has two icons on the right
+ * @prop {string}  errorId - ID of the error message
+ * @prop {boolean} hasTooltip - If true, displays tooltop
+ * @prop {string}  inlineMessage - Message placed under the input, either inline help or error message
+ * @prop {string}  role - Role of the Form Element Wrapper
+ * @prop {object}  dropdown - Content shown as a dropdown of the Form Element
+ */
 export const FormElement = props => {
   const {
     formElementClassName,

@@ -63,7 +63,7 @@ export let examples = [
         <ExpressionRow
           legendText="AND"
           conditionName="Condition 2"
-          errorMessage="Input has error"
+          errorMessage="Enter a value"
           hasError
         />
       </Expression>

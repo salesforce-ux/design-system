@@ -1,7 +1,18 @@
 <!-- Release notes authoring guidelines: http://keepachangelog.com/ -->
 <!-- On release, add general notes here. In time the legacy release notes will be add to this -->
 
-# 2.14.0 - January 8, 2021
+## 2.14.0 - Upcoming
+
+## 2.13.2 - September 23, 2020
+
+- Added added icons synonym metadata to SLDS dist
+
+## 2.13.1 - September 18, 2020
+
+- In Summer ’21, all BEM notation with double dashes will no longer be available in SLDS 2.13.0 and later versions. For your styles to continue working with SLDS 2.13.0 and later versions, replace `--` with `_` in your CSS. For more information see the [Salesforce Winter `21 release notes](https://releasenotes.docs.salesforce.com/en-us/winter21/release-notes/rn_slds_bem_deprecate.htm).
+
+- Updated @salesforce-ux/icons to 9.38.0
+- Added proper font-size change to mobile demos on the site
 
 ## 2.13.0 - August 20, 2020
 

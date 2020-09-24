@@ -44,7 +44,7 @@ exports[`List Builder Inline Edit renders a default list builder with inline edi
         <h2
           className="slds-text-heading_medium"
         >
-          Edit All Products
+          Edit all products
         </h2>
         <p
           className="slds-m-top_x-small"
@@ -721,7 +721,7 @@ exports[`List Builder renders a default list builder 1`] = `
           className="slds-text-heading_medium"
           id="id-of-modalheader-h2"
         >
-          Add Products
+          Add products
         </h2>
         <p
           className="slds-m-top_x-small"
@@ -1969,7 +1969,7 @@ exports[`List Builder renders a list builder with default items disabled 1`] = `
           className="slds-text-heading_medium"
           id="id-of-modalheader-h2"
         >
-          Add Products
+          Add products
         </h2>
         <p
           className="slds-m-top_x-small"
@@ -3225,7 +3225,7 @@ exports[`List Builder renders a list builder with filtered results 1`] = `
           className="slds-text-heading_medium"
           id="id-of-modalheader-h2"
         >
-          Add Products
+          Add products
         </h2>
         <p
           className="slds-m-top_x-small"
@@ -3922,7 +3922,7 @@ exports[`List Builder renders a list builder with hidden header 1`] = `
           className="slds-text-heading_medium"
           id="id-of-modalheader-h2"
         >
-          Add Products
+          Add products
         </h2>
         <p
           className="slds-m-top_x-small"
@@ -4707,7 +4707,7 @@ exports[`List Builder renders a list builder with items disabled 1`] = `
           className="slds-text-heading_medium"
           id="id-of-modalheader-h2"
         >
-          Add Products
+          Add products
         </h2>
         <p
           className="slds-m-top_x-small"
@@ -5963,7 +5963,7 @@ exports[`List Builder renders a list builder with items selected 1`] = `
           className="slds-text-heading_medium"
           id="id-of-modalheader-h2"
         >
-          Add Products
+          Add products
         </h2>
         <p
           className="slds-m-top_x-small"

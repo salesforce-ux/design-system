@@ -33,7 +33,7 @@
     }
   },
   "devDependencies": {
-    "@applitools/eyes-storybook": "3.4.0",
+    "@applitools/eyes-storybook": "3.8.8",
     "@babel/cli": "7.8.4",
     "@babel/core": "7.9.0",
     "@babel/node": "7.8.7",
@@ -52,7 +52,7 @@
     "@salesforce-ux/design-system-markup": "2.0.2",
     "@salesforce-ux/design-system-parser": "1.1.0",
     "@salesforce-ux/design-system-primitive-tokens": "0.0.8",
-    "@salesforce-ux/icons": "9.37.1",
+    "@salesforce-ux/icons": "9.38.0",
     "@salesforce-ux/instant-vrt": "2.0.0",
     "@salesforce-ux/scss-parser-aura": "3.0.5",
     "@storybook/addon-a11y": "5.3.18",

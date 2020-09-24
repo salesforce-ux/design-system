@@ -1,6 +1,8 @@
 /* overriding the story iframe showcase styles to accommodate Touch devices */
 
-html { background: transparent !important; }
+html {
+  background: transparent !important;
+}
 
 .sb-show-main {
   padding: 2rem;
@@ -17,4 +19,37 @@ html { background: transparent !important; }
 .lazyload-placeholder {
   background-color: #f2f2f2;
   margin: 1.25rem 0;
+}
+
+// Styling Hooks Table
+.slds-table.hooks-table {
+  color: #16325c;
+
+  th {
+    background-color: #f3f2f2;
+  }
+
+  td {
+    padding-top: 0.375rem;
+    padding-bottom: 0.375rem;
+  }
+
+  .hooks-table__section {
+    td {
+      padding-top: 0.75rem;
+    }
+
+    &_end td {
+      padding-bottom: 0.75rem;
+    }
+
+    &:not(:first-child) {
+      border-top: 2px solid #dedbda;
+    }
+  }
+
+  .hooks-table__col-category {
+    vertical-align: top;
+    font-weight: bold;
+  }
 }

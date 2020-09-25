@@ -205,6 +205,10 @@ Refactored the component markup to function with or without theme utility classe
 #### Added
 - Enabled styling hooks for scoped tab. See scoped tab's styling hooks overview table for a full listing of the currently available hooks.
 
+### [Slider](https://www.lightningdesignsystem.com/components/slider)
+#### Added
+- Added the brand expression specific Styling API to Slider.
+
 ### [Tabs](https://www.lightningdesignsystem.com/components/tabs)
 #### Added
 - Enabled styling hooks for tab. See tab's styling hooks overview table for a full listing of the currently available hooks.

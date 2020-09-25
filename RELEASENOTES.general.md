@@ -1,6 +1,8 @@
 <!-- Release notes authoring guidelines: http://keepachangelog.com/ -->
 <!-- On release, add general notes here. In time the legacy release notes will be add to this -->
 
+## 2.13.3 - September 24, 2020
+
 ## 2.13.2 - September 23, 2020
 
 - Added added icons synonym metadata to SLDS dist

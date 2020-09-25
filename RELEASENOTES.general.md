@@ -3,6 +3,8 @@
 
 ## 2.14.0 - Upcoming
 
+## 2.13.3 - September 24, 2020
+
 ## 2.13.2 - September 23, 2020
 
 - Added added icons synonym metadata to SLDS dist

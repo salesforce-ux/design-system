@@ -21,6 +21,45 @@ Refactored the component markup to function with or without theme utility classe
 #### Added
 - Enabled styling hooks for Inputs. See Input's styling hooks overview table for a full listing of the currently available hooks.
 
+## Release 2.13.3 - September 24, 2020
+
+## Components
+### [Alert](https://www.lightningdesignsystem.com/components/alert)
+#### Changed
+- Treat Styling Hooks targeting text color as an element, previously referred to as a property. e.g. `--sds-c-alert-color-text` => `--sds-c-alert-text-color`.
+
+### [Avatar](https://www.lightningdesignsystem.com/components/avatar)
+#### Changed
+- Treat Styling Hooks targeting text color as an element, previously referred to as a property. e.g. `--sds-c-avatar-initials-color-text` => `--sds-c-avatar-initials-text-color`.
+
+### [Badges](https://www.lightningdesignsystem.com/components/badges)
+#### Changed
+- Treat Styling Hooks targeting text color as an element, previously referred to as a property. e.g. `--sds-c-badge-color-text` => `--sds-c-badge-text-color`.
+
+### [Buttons](https://www.lightningdesignsystem.com/components/buttons)
+#### Changed
+- Treat Styling Hooks targeting text color as an element, previously referred to as a property. e.g. `--sds-c-button-color-text` => `--sds-c-button-text-color`.
+
+### [Modals](https://www.lightningdesignsystem.com/components/modals)
+#### Fixed
+- Fixed incorrect styling hooks on footer.
+
+### [Pills](https://www.lightningdesignsystem.com/components/pills)
+#### Changed
+- Treat Styling Hooks targeting text color as an element, previously referred to as a property. e.g. `--sds-c-pill-color-text` => `--sds-c-pill-text-color`.
+
+### [Scoped Tabs](https://www.lightningdesignsystem.com/components/scoped-tabs)
+#### Changed
+- Treat Styling Hooks targeting text color as an element, previously referred to as a property. e.g. `--sds-c-tabs-scoped-color-text` => `--sds-c-tabs-scoped-text-color`.
+
+### [Tabs](https://www.lightningdesignsystem.com/components/tabs)
+#### Changed
+- Treat Styling Hooks targeting text color as an element, previously referred to as a property. e.g. `--sds-c-tabs-item-color-text` => `--sds-c-tabs-item-text-color`.
+
+### [Tooltips](https://www.lightningdesignsystem.com/components/tooltips)
+#### Changed
+- Treat Styling Hooks targeting text color as an element, previously referred to as a property. e.g. `--sds-c-tooltip-color-text` => `--sds-c-tooltip-text-color`.
+
 ## Release 2.13.2 - September 23, 2020
 
 - Added added icons synonym metadata to SLDS dist
@@ -59,6 +98,10 @@ Refactored the component markup to function with or without theme utility classe
 - Removed Mobile example under Stacked Alignment and Horizontal Alignment examples, as they did not conform to the specification.
 #### Fixed
 - Small improvements to the UI text.
+
+### [Icons](https://www.lightningdesignsystem.com/components/icons)
+#### Added
+- `slds-current-color` to restricted classes.
 
 ### [Illustration](https://www.lightningdesignsystem.com/components/illustration)
 #### Fixed

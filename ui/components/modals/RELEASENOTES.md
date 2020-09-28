@@ -4,6 +4,12 @@
 
 <!-- ## [Unreleased] -->
 
+## 2.13.3
+
+### Fixed
+
+- Fixed incorrect styling hooks on footer.
+
 ## 2.13.1
 
 ### Fixed

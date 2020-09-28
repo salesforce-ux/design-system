@@ -40,12 +40,10 @@ $slds-load-webfonts: true !default;
 /// Breakpoints
 ///
 /// @type map
-$breakpoints: (
-  "x-small": $mq-x-small,
-  "small": $mq-small,
-  "medium": $mq-medium,
-  "large": $mq-large
-) !default;
+$breakpoints: ("x-small": $mq-x-small,
+"small": $mq-small,
+"medium": $mq-medium,
+"large": $mq-large) !default;
 
 /// Grid Column Support
 ///

@@ -5,15 +5,23 @@
   @include appearance(none);
   width: $slider-handle-size;
   height: $slider-handle-size;
-  border-radius: 50%;
-  background: $brand-accessible;
+  border-radius: var(--sds-c-slider-thumb-radius-border, $border-radius-circle);
+  background: none; // Reset underlying styles
+  background-color: var(
+    --sds-c-slider-thumb-color-background,
+    $brand-accessible
+  );
   border: 0;
   box-shadow: $slider-handle-shadow;
   cursor: pointer;
   transition: background 0.15s ease-in-out;
 
   &:hover {
-    background-color: $brand-accessible-active;
+    // @todo re-evaluate Styling Hooks reassignment
+    background-color: var(
+      --sds-c-slider-thumb-color-background-hover,
+      #{$brand-accessible-active}
+    );
   }
 }
 
@@ -21,8 +29,12 @@
   width: 100%;
   height: $slider-track-height;
   cursor: pointer;
-  background: $slider-track-color-background;
-  border-radius: $border-radius-small;
+  background: none; // Reset underlying styles
+  background-color: var(
+    --sds-c-slider-track-color-background,
+    $slider-track-color-background
+  );
+  border-radius: var(--sds-c-slider-track-radius-border, $border-radius-small);
 }
 
 /**
@@ -48,7 +60,8 @@
 .slds-slider__range {
   @include appearance(none);
   width: 100%;
-  background: transparent;
+  background: none; // Reset underlying styles
+  background-color: transparent;
   border-radius: $border-radius-small;
 
   &:focus {
@@ -58,7 +71,9 @@
   // Webkit
   &::-webkit-slider-thumb {
     @include range-thumb;
-    margin-top: calc(((#{$slider-handle-size} / 2) - (#{$slider-track-height} / 2)) * -1);
+    margin-top: calc(
+      ((#{$slider-handle-size} / 2) - (#{$slider-track-height} / 2)) * -1
+    );
   }
 
   &::-webkit-slider-runnable-track {
@@ -88,51 +103,83 @@
   }
 
   &:focus::-webkit-slider-thumb {
-    background-color: $brand-accessible-active;
+    // @todo re-evaluate Styling Hooks reassignment
+    background-color: var(
+      --sds-c-slider-thumb-color-background-active,
+      #{$brand-accessible-active}
+    );
     box-shadow: $shadow-button-focus;
   }
 
   &:active::-webkit-slider-thumb {
-    background-color: $brand-accessible-active;
+    // @todo re-evaluate Styling Hooks reassignment
+    background-color: var(
+      --sds-c-slider-thumb-color-background-active,
+      #{$brand-accessible-active}
+    );
   }
 
   &:focus::-moz-range-thumb {
-    background-color: $brand-accessible-active;
+    // @todo re-evaluate Styling Hooks reassignment
+    background-color: var(
+      --sds-c-slider-thumb-color-background-active,
+      #{$brand-accessible-active}
+    );
     box-shadow: $shadow-button-focus;
   }
 
   &:active::-moz-range-thumb {
-    background-color: $brand-accessible-active;
+    // @todo re-evaluate Styling Hooks reassignment
+    background-color: var(
+      --sds-c-slider-thumb-color-background-active,
+      #{$brand-accessible-active}
+    );
   }
 
   &[disabled] {
 
     &::-webkit-slider-thumb {
-      background-color: $slider-color-background-disabled;
+      // @todo re-evaluate Styling Hooks reassignment
+      background-color: var(
+        --sds-c-slider-thumb-color-background-disabled,
+        #{$slider-color-background-disabled}
+      );
       cursor: default;
     }
 
     &::-webkit-slider-runnable-track {
-      background-color: $slider-color-background-disabled;
+      // @todo re-evaluate Styling Hooks reassignment
+      background-color: var(
+        --sds-c-slider-track-color-background-disabled,
+        #{$slider-color-background-disabled}
+      );
       cursor: default;
     }
 
     &::-moz-range-thumb {
-      background-color: $slider-color-background-disabled;
+      // @todo re-evaluate Styling Hooks reassignment
+      background-color: var(
+        --sds-c-slider-thumb-color-background-disabled,
+        #{$slider-color-background-disabled}
+      );
       cursor: default;
     }
 
     &::-moz-range-track {
-      background-color: $slider-color-background-disabled;
+      // @todo re-evaluate Styling Hooks reassignment
+      background-color: var(
+        --sds-c-slider-track-color-background-disabled,
+        #{$slider-color-background-disabled}
+      );
     }
 
     &::-ms-thumb {
-      background-color: $slider-color-background-disabled;
+      background-color: $slider-color-background-disabled; // leaving this out of API since it's for legacy IE/Edge
       cursor: default;
     }
 
     &::-ms-track {
-      background-color: $slider-color-background-disabled;
+      background-color: $slider-color-background-disabled; // leaving this out of API since it's for legacy IE/Edge
       cursor: default;
     }
   }

@@ -19,7 +19,7 @@
   padding-bottom: 0;
   padding-left: var(--sds-c-input-spacing-horizontal-start, $spacing-small);
   width: 100%;
-  min-height: calc($height-input + ($border-width-thin * 2)); // For IE
+  min-height: calc(#{$height-input} + (#{$border-width-thin} * 2)); // For IE
   line-height: $height-input;
   border: $border-width-thin solid var(--sds-c-input-color-border, $color-border-input);
   border-radius: var(--sds-c-input-radius-border, $border-radius-medium);
@@ -142,7 +142,7 @@
    */
   &_height,
   &--height {
-    min-height: calc($height-input + ($border-width-thin * 2)); // For IE
+    min-height: calc(#{$height-input} + (#{$border-width-thin} * 2)); // For IE
   }
 }
 

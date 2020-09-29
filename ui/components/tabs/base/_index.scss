@@ -70,7 +70,7 @@
    */
   &.slds-active,
   &.slds-is-active {
-    color: var(--sds-c-tabs-item-text-color-active, $color-text-action-label-active);
+    color: var(--sds-c-tabs-item-color-text-active, $color-text-action-label-active);
 
     &:after {
       background-color: var(--sds-c-tabs-item-color-border-active, $brand-primary);

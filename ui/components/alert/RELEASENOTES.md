@@ -3,11 +3,6 @@
 # Alert Release Notes
 
 <!-- ## [Unreleased] -->
-## 2.13.3
-
-### Changed
-
-- Treat Styling Hooks targeting text color as an element, previously referred to as a property. e.g. `--sds-c-alert-color-text` => `--sds-c-alert-text-color`.
 
 ## 2.13.0
 

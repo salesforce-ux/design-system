@@ -236,6 +236,6 @@
 
   .slds-pill__label {
     font-weight: $font-weight-bold;
-    color: var(--sds-c-pill-error-text-color, $color-text-error);
+    color: var(--sds-c-pill-error-color-text, $color-text-error);
   }
 }

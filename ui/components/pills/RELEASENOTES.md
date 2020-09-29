@@ -3,11 +3,6 @@
 # Pills Release Notes
 
 <!-- ## [Unreleased] -->
-## 2.13.3
-
-### Changed
-
-- Treat Styling Hooks targeting text color as an element, previously referred to as a property. e.g. `--sds-c-pill-color-text` => `--sds-c-pill-text-color`.
 
 ## 2.13.0
 

@@ -20,7 +20,7 @@
   padding-right: var(--sds-c-alert-spacing-inline-end, $spacing-x-large);
   padding-bottom: var(--sds-c-alert-spacing-block-end, $spacing-x-small);
   padding-left: var(--sds-c-alert-spacing-inline-start, $spacing-x-small);
-  color: var(--sds-c-alert-text-color, $color-text-inverse);
+  color: var(--sds-c-alert-color-text, $color-text-inverse);
   font-weight: var(--sds-c-alert-font-weight, $font-weight-light);
   text-align: center;
   background-color: var(--sds-c-alert-color-background, $color-background-toast);
@@ -44,12 +44,12 @@
 
     &:active {
       // @todo re-evaluate Styling Hooks reassignment
-      color: var(--sds-c-alert-text-color-active, $color-text-link-inverse-active);
+      color: var(--sds-c-alert-color-text-active, $color-text-link-inverse-active);
     }
 
     &[disabled] {
       // @todo re-evaluate Styling Hooks reassignment
-      color: var(--sds-c-alert-text-color-disabled, $color-text-link-inverse-disabled);
+      color: var(--sds-c-alert-color-text-disabled, $color-text-link-inverse-disabled);
     }
   }
 

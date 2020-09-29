@@ -4,17 +4,6 @@
 
 <!-- ## [Unreleased] -->
 
-## 2.13.3
-
-### Added
-
-- Added Styling Hook for box-shadow
-- Added Styling Hook for block level padding
-
-### Changed
-
-- Treat Styling Hooks targeting text color as an element, previously referred to as a property. e.g. `--sds-c-button-color-text` => `--sds-c-button-text-color`.
-
 ## 2.13.1
 
 ### Fixed

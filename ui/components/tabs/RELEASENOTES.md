@@ -3,6 +3,11 @@
 # Tabs Release Notes
 
 <!-- ## [Unreleased] -->
+## 2.13.3
+
+### Changed
+
+- Treat Styling Hooks targeting text color as an element, previously referred to as a property. e.g. `--sds-c-tabs-item-color-text` => `--sds-c-tabs-item-text-color`.
 
 ## 2.13.0
 

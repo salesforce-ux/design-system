@@ -21,6 +21,14 @@ Refactored the component markup to function with or without theme utility classe
 #### Added
 - Enabled styling hooks for Inputs. See Input's styling hooks overview table for a full listing of the currently available hooks.
 
+### [Slider](https://www.lightningdesignsystem.com/components/slider)
+#### Added
+- Enabled styling hooks for slider. See slider's styling hooks overview table for a full listing of the currently available hooks.
+
+## Release 2.13.5 - September 30, 2020
+
+## Release 2.13.4 - September 29, 2020
+
 ## Release 2.13.3 - September 24, 2020
 
 ## Components
@@ -247,10 +255,6 @@ Refactored the component markup to function with or without theme utility classe
 ### [Scoped Tabs](https://www.lightningdesignsystem.com/components/scoped-tabs)
 #### Added
 - Enabled styling hooks for scoped tab. See scoped tab's styling hooks overview table for a full listing of the currently available hooks.
-
-### [Slider](https://www.lightningdesignsystem.com/components/slider)
-#### Added
-- Added the brand expression specific Styling API to Slider.
 
 ### [Tabs](https://www.lightningdesignsystem.com/components/tabs)
 #### Added

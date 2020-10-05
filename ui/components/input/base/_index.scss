@@ -109,8 +109,8 @@
    * @modifier
    */
 
-  &.slds-input_bare,
-  &.slds-input--bare {
+  &_bare,
+  &--bare {
     /*! @css-var-fallback background-color */
     // --sds-c-input-color-background: transparent;
     background-color: transparent;
@@ -197,8 +197,8 @@
    * @selector .slds-input-has-icon_left
    * @restrict .slds-input-has-icon
    */
-  &.slds-input-has-icon_left,
-  &.slds-input-has-icon--left {
+  &_left,
+  &--left {
 
     .slds-input__icon {
       left: $spacing-small;
@@ -219,8 +219,8 @@
    * @selector .slds-input-has-icon_right
    * @restrict .slds-input-has-icon
    */
-  &.slds-input-has-icon_right,
-  &.slds-input-has-icon--right {
+  &_right,
+  &--right {
 
     .slds-input__icon {
       right: $spacing-small;
@@ -241,8 +241,8 @@
    * @selector .slds-input-has-icon_left-right
    * @restrict .slds-input-has-icon
    */
-  &.slds-input-has-icon_left-right,
-  &.slds-input-has-icon--left-right {
+  &_left-right,
+  &--left-right {
     /**
      * @summary Hook for .slds-input-has-icon--left-right
      *

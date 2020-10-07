@@ -4,6 +4,17 @@
 
 <!-- ## [Unreleased] -->
 
+## 2.14.0
+
+## Added
+
+- Added Styling Hook for the background color of Accordion headings.
+- Added Styling Hooks for default text color, as well as hover/focus states, of Accordion headings.
+
+## Changed
+
+- The Accordion heading button will now take up all available space, allowing for a larger hit target to toggle the Accordion functionality.
+
 ## 2.13.0
 
 ### Added

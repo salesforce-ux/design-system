@@ -36,7 +36,7 @@ const AccordionSection = props => {
   }
 
   return (
-    <li className="slds-accordion__list-item" onClick={toggleAccordionSection}>
+    <li className="slds-accordion__list-item">
       <section
         className={classNames(
           'slds-accordion__section',
@@ -51,6 +51,7 @@ const AccordionSection = props => {
               title={props.summary}
               isReset
               className="slds-accordion__summary-action"
+              onClick={toggleAccordionSection}
             >
               <SvgIcon
                 className="slds-accordion__summary-action-icon slds-button__icon slds-button__icon_left"

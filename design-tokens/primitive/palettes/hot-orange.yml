@@ -1,0 +1,65 @@
+# Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+# Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+global:
+  type: color
+  category: color
+  cssProperties:
+  - background-color
+  - 'border*color'
+  - box-shadow
+  - fill
+  - color
+  scope: global
+  primitive: true
+imports:
+- ../../aliases/color-palettes.yml
+props:
+  PALETTE_HOT_ORANGE_10:
+    value: '{!PALETTE_HOT_ORANGE_10}'
+    comment: "Hot Orange 10"
+    release: 2.14.0
+  PALETTE_HOT_ORANGE_15:
+    value: '{!PALETTE_HOT_ORANGE_15}'
+    comment: "Hot Orange 15"
+    release: 2.14.0
+  PALETTE_HOT_ORANGE_20:
+    value: '{!PALETTE_HOT_ORANGE_20}'
+    comment: "Hot Orange 20"
+    release: 2.14.0
+  PALETTE_HOT_ORANGE_30:
+    value: '{!PALETTE_HOT_ORANGE_30}'
+    comment: "Hot Orange 30"
+    release: 2.14.0
+  PALETTE_HOT_ORANGE_40:
+    value: '{!PALETTE_HOT_ORANGE_40}'
+    comment: "Hot Orange 40"
+    release: 2.14.0
+  PALETTE_HOT_ORANGE_50:
+    value: '{!PALETTE_HOT_ORANGE_50}'
+    comment: "Hot Orange 50"
+    release: 2.14.0
+  PALETTE_HOT_ORANGE_60:
+    value: '{!PALETTE_HOT_ORANGE_60}'
+    comment: "Hot Orange 60"
+    release: 2.14.0
+  PALETTE_HOT_ORANGE_65:
+    value: '{!PALETTE_HOT_ORANGE_65}'
+    comment: "Hot Orange 65"
+    release: 2.14.0
+  PALETTE_HOT_ORANGE_70:
+    value: '{!PALETTE_HOT_ORANGE_70}'
+    comment: "Hot Orange 70"
+    release: 2.14.0
+  PALETTE_HOT_ORANGE_80:
+    value: '{!PALETTE_HOT_ORANGE_80}'
+    comment: "Hot Orange 80"
+    release: 2.14.0
+  PALETTE_HOT_ORANGE_90:
+    value: '{!PALETTE_HOT_ORANGE_90}'
+    comment: "Hot Orange 90"
+    release: 2.14.0
+  PALETTE_HOT_ORANGE_95:
+    value: '{!PALETTE_HOT_ORANGE_95}'
+    comment: "Hot Orange 95"
+    release: 2.14.0

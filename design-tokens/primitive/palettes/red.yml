@@ -1,0 +1,65 @@
+# Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+# Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+global:
+  type: color
+  category: color
+  cssProperties:
+  - background-color
+  - 'border*color'
+  - box-shadow
+  - fill
+  - color
+  scope: global
+  primitive: true
+imports:
+- ../../aliases/color-palettes.yml
+props:
+  PALETTE_RED_10:
+    value: '{!PALETTE_RED_10}'
+    comment: "Red 10"
+    release: 2.14.0
+  PALETTE_RED_15:
+    value: '{!PALETTE_RED_15}'
+    comment: "Red 15"
+    release: 2.14.0
+  PALETTE_RED_20:
+    value: '{!PALETTE_RED_20}'
+    comment: "Red 20"
+    release: 2.14.0
+  PALETTE_RED_30:
+    value: '{!PALETTE_RED_30}'
+    comment: "Red 30"
+    release: 2.14.0
+  PALETTE_RED_40:
+    value: '{!PALETTE_RED_40}'
+    comment: "Red 40"
+    release: 2.14.0
+  PALETTE_RED_50:
+    value: '{!PALETTE_RED_50}'
+    comment: "Red 50"
+    release: 2.14.0
+  PALETTE_RED_60:
+    value: '{!PALETTE_RED_60}'
+    comment: "Red 60"
+    release: 2.14.0
+  PALETTE_RED_65:
+    value: '{!PALETTE_RED_65}'
+    comment: "Red 65"
+    release: 2.14.0
+  PALETTE_RED_70:
+    value: '{!PALETTE_RED_70}'
+    comment: "Red 70"
+    release: 2.14.0
+  PALETTE_RED_80:
+    value: '{!PALETTE_RED_80}'
+    comment: "Red 80"
+    release: 2.14.0
+  PALETTE_RED_90:
+    value: '{!PALETTE_RED_90}'
+    comment: "Red 90"
+    release: 2.14.0
+  PALETTE_RED_95:
+    value: '{!PALETTE_RED_95}'
+    comment: "Red 95"
+    release: 2.14.0

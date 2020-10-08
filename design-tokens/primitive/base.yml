@@ -2,6 +2,18 @@
 # Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 imports:
+- ./palettes/blue.yml
+- ./palettes/cloud-blue.yml
+- ./palettes/green.yml
+- ./palettes/hot-orange.yml
+- ./palettes/indigo.yml
+- ./palettes/orange.yml
+- ./palettes/pink.yml
+- ./palettes/purple.yml
+- ./palettes/red.yml
+- ./palettes/teal.yml
+- ./palettes/violet.yml
+- ./palettes/yellow.yml
 - ./background-color.yml
 - ./border-color.yml
 - ./border-radius.yml

@@ -1,0 +1,65 @@
+# Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+# Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+global:
+  type: color
+  category: color
+  cssProperties:
+  - background-color
+  - 'border*color'
+  - box-shadow
+  - fill
+  - color
+  scope: global
+  primitive: true
+imports:
+- ../../aliases/color-palettes.yml
+props:
+  PALETTE_INDIGO_10:
+    value: '{!PALETTE_INDIGO_10}'
+    comment: "Indigo 10"
+    release: 2.14.0
+  PALETTE_INDIGO_15:
+    value: '{!PALETTE_INDIGO_15}'
+    comment: "Indigo 15"
+    release: 2.14.0
+  PALETTE_INDIGO_20:
+    value: '{!PALETTE_INDIGO_20}'
+    comment: "Indigo 20"
+    release: 2.14.0
+  PALETTE_INDIGO_30:
+    value: '{!PALETTE_INDIGO_30}'
+    comment: "Indigo 30"
+    release: 2.14.0
+  PALETTE_INDIGO_40:
+    value: '{!PALETTE_INDIGO_40}'
+    comment: "Indigo 40"
+    release: 2.14.0
+  PALETTE_INDIGO_50:
+    value: '{!PALETTE_INDIGO_50}'
+    comment: "Indigo 50"
+    release: 2.14.0
+  PALETTE_INDIGO_60:
+    value: '{!PALETTE_INDIGO_60}'
+    comment: "Indigo 60"
+    release: 2.14.0
+  PALETTE_INDIGO_65:
+    value: '{!PALETTE_INDIGO_65}'
+    comment: "Indigo 65"
+    release: 2.14.0
+  PALETTE_INDIGO_70:
+    value: '{!PALETTE_INDIGO_70}'
+    comment: "Indigo 70"
+    release: 2.14.0
+  PALETTE_INDIGO_80:
+    value: '{!PALETTE_INDIGO_80}'
+    comment: "Indigo 80"
+    release: 2.14.0
+  PALETTE_INDIGO_90:
+    value: '{!PALETTE_INDIGO_90}'
+    comment: "Indigo 90"
+    release: 2.14.0
+  PALETTE_INDIGO_95:
+    value: '{!PALETTE_INDIGO_95}'
+    comment: "Indigo 95"
+    release: 2.14.0

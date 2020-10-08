@@ -1,0 +1,65 @@
+# Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+# Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+global:
+  type: color
+  category: color
+  cssProperties:
+  - background-color
+  - 'border*color'
+  - box-shadow
+  - fill
+  - color
+  scope: global
+  primitive: true
+imports:
+- ../../aliases/color-palettes.yml
+props:
+  PALETTE_YELLOW_10:
+    value: '{!PALETTE_YELLOW_10}'
+    comment: "Yellow 10"
+    release: 2.14.0
+  PALETTE_YELLOW_15:
+    value: '{!PALETTE_YELLOW_15}'
+    comment: "Yellow 15"
+    release: 2.14.0
+  PALETTE_YELLOW_20:
+    value: '{!PALETTE_YELLOW_20}'
+    comment: "Yellow 20"
+    release: 2.14.0
+  PALETTE_YELLOW_30:
+    value: '{!PALETTE_YELLOW_30}'
+    comment: "Yellow 30"
+    release: 2.14.0
+  PALETTE_YELLOW_40:
+    value: '{!PALETTE_YELLOW_40}'
+    comment: "Yellow 40"
+    release: 2.14.0
+  PALETTE_YELLOW_50:
+    value: '{!PALETTE_YELLOW_50}'
+    comment: "Yellow 50"
+    release: 2.14.0
+  PALETTE_YELLOW_60:
+    value: '{!PALETTE_YELLOW_60}'
+    comment: "Yellow 60"
+    release: 2.14.0
+  PALETTE_YELLOW_65:
+    value: '{!PALETTE_YELLOW_65}'
+    comment: "Yellow 65"
+    release: 2.14.0
+  PALETTE_YELLOW_70:
+    value: '{!PALETTE_YELLOW_70}'
+    comment: "Yellow 70"
+    release: 2.14.0
+  PALETTE_YELLOW_80:
+    value: '{!PALETTE_YELLOW_80}'
+    comment: "Yellow 80"
+    release: 2.14.0
+  PALETTE_YELLOW_90:
+    value: '{!PALETTE_YELLOW_90}'
+    comment: "Yellow 90"
+    release: 2.14.0
+  PALETTE_YELLOW_95:
+    value: '{!PALETTE_YELLOW_95}'
+    comment: "Yellow 95"
+    release: 2.14.0

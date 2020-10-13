@@ -1,6 +1,6 @@
 import CodeView from '../../../shared/components/CodeView';
 import { getDisplayElementById } from '../../shared/helpers';
-import StyleApiTable from '../../../shared/components/StyleApiTable';
+import StylingHooksTable from '../../../shared/components/StylingHooksTable';
 import * as Base from './base/example';
 import * as Initials from './initials/example';
 
@@ -13,10 +13,6 @@ import * as Initials from './initials/example';
 ## About Avatar
 
 An avatar can be circular or a rounded rectangle, depending on usage. The default is a rounded rectangle and requires `.slds-avatar` as the base class.
-
-### Styling Hooks
-
-<StyleApiTable name="avatar" type="component" />
 
 ### Examples
 
@@ -109,3 +105,7 @@ Use a circle for all people-oriented objects that could potentially render as av
 <CodeView toggleCode={false}>
   {getDisplayElementById(Base.examples, 'large-image')}
 </CodeView>
+
+## Styling Hooks Overview
+
+<StylingHooksTable name="avatar" type="component" />

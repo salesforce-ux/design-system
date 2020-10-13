@@ -6,7 +6,6 @@ export const NoAccess = props => (
     viewBox="0 0 454 212"
     aria-hidden="true"
     xmlns="http://www.w3.org/2000/svg"
-    xmlnsXlink="http://www.w3.org/1999/xlink"
   >
     <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
       <g transform="translate(-70.000000, -95.000000)">
@@ -407,7 +406,6 @@ export const NoConnection = props => (
     viewBox="0 0 454 265"
     aria-hidden="true"
     xmlns="http://www.w3.org/2000/svg"
-    xmlnsXlink="http://www.w3.org/1999/xlink"
   >
     <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
       <g transform="translate(-77.000000, -60.000000)">
@@ -754,7 +752,6 @@ export const NotAvailableInLightning = props => (
     viewBox="0 0 470 267"
     aria-hidden="true"
     xmlns="http://www.w3.org/2000/svg"
-    xmlnsXlink="http://www.w3.org/1999/xlink"
   >
     <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
       <g transform="translate(-65.000000, -66.000000)">
@@ -1009,7 +1006,6 @@ export const PageNotAvailable = props => (
     viewBox="0 0 470 229"
     aria-hidden="true"
     xmlns="http://www.w3.org/2000/svg"
-    xmlnsXlink="http://www.w3.org/1999/xlink"
   >
     <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
       <g transform="translate(-65.000000, -89.000000)">
@@ -1394,7 +1390,6 @@ export const WalkthroughNotAvailable = props => (
     viewBox="0 0 424 253"
     aria-hidden="true"
     xmlns="http://www.w3.org/2000/svg"
-    xmlnsXlink="http://www.w3.org/1999/xlink"
   >
     <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
       <g transform="translate(-90.000000, -75.000000)">

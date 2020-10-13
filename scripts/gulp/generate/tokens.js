@@ -89,5 +89,7 @@ export const copyDesignPrimitiveAliases = () =>
 // Copy @salesforce-ux/design-system-primitive-token tokens to design-tokens folder
 export const copyDesignPrimitiveTokens = () =>
   gulp
-    .src(path.resolve(paths.designPrimitiveTokens, 'design-tokens/primitive/*'))
+    .src(
+      path.resolve(paths.designPrimitiveTokens, 'design-tokens/primitive/**')
+    )
     .pipe(gulp.dest(path.resolve(paths.designTokens, 'primitive')));

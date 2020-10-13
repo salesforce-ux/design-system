@@ -6,7 +6,6 @@ export const GoneFishing = props => (
     viewBox="0 0 466 263"
     aria-hidden="true"
     xmlns="http://www.w3.org/2000/svg"
-    xmlnsXlink="http://www.w3.org/1999/xlink"
   >
     <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
       <g transform="translate(-69.000000, -67.000000)">
@@ -293,7 +292,6 @@ export const NoAccess2 = props => (
     viewBox="0 0 454 234"
     aria-hidden="true"
     xmlns="http://www.w3.org/2000/svg"
-    xmlnsXlink="http://www.w3.org/1999/xlink"
   >
     <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
       <g transform="translate(2.000000, 2.000000)">
@@ -680,7 +678,6 @@ export const NoContent = props => (
     viewBox="0 0 454 213"
     aria-hidden="true"
     xmlns="http://www.w3.org/2000/svg"
-    xmlnsXlink="http://www.w3.org/1999/xlink"
   >
     <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
       <g transform="translate(-70.000000, -94.000000)">
@@ -1082,7 +1079,6 @@ export const NoPreview = props => (
     viewBox="0 0 272 146"
     aria-hidden="true"
     xmlns="http://www.w3.org/2000/svg"
-    xmlnsXlink="http://www.w3.org/1999/xlink"
   >
     <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
       <g transform="translate(-14.000000, -27.000000)">
@@ -1420,7 +1416,6 @@ export const Preview = props => (
     viewBox="0 0 272 146"
     aria-hidden="true"
     xmlns="http://www.w3.org/2000/svg"
-    xmlnsXlink="http://www.w3.org/1999/xlink"
   >
     <defs>
       <circle vectorEffect="non-scaling-stroke" cx="60" cy="60" r="60" />
@@ -1948,7 +1943,6 @@ export const Research = props => (
     viewBox="0 0 493 266"
     aria-hidden="true"
     xmlns="http://www.w3.org/2000/svg"
-    xmlnsXlink="http://www.w3.org/1999/xlink"
   >
     <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
       <g transform="translate(-54.000000, -75.000000)">

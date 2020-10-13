@@ -4,17 +4,31 @@
 
 <!-- ## [Unreleased] -->
 
+## 2.14.0
+
+### Added
+
+- Added Styling Hook for box-shadow
+- Added Styling Hook for block level padding
+
+## 2.13.3
+
+### Changed
+
+- Treat Styling Hooks targeting text color as an element, previously referred to as a property. e.g. `--sds-c-button-color-text` => `--sds-c-button-text-color`.
+
 ## 2.13.1
 
 ### Fixed
 
-- Added `background` shorthand and set to `initial` to recreated existing behavior that relied on the shorthand to apply initial values to unspecified values.
+- Added `background` shorthand and set to `initial` to recreate existing behavior that relied on the shorthand to apply initial values to unspecified values.
+- Fixed issue where mobile text size wasn't accurately sized.
 
 ## 2.13.0
 
 ### Added
 
-- Added the brand expression specific Styling Hooks
+- Enabled styling hooks for button. See button's styling hooks overview table for a full listing of the currently available hooks.
 
 ## 2.12.0
 

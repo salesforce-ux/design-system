@@ -40,12 +40,12 @@ exports[`Expression Base renders the default expression 1`] = `
               <input
                 aria-autocomplete={null}
                 aria-controls="listbox-id-1"
-                autoComplete="off"
+                autocomplete="off"
                 className="slds-input slds-combobox__input"
                 id="combobox-id-1"
                 onBlur={[Function]}
                 onFocus={[Function]}
-                placeholder="Select an Option"
+                placeholder="Select…"
                 readOnly={true}
                 role="textbox"
                 type="text"
@@ -202,9 +202,9 @@ exports[`Expression Base renders the default expression 1`] = `
                     >
                       <span
                         className="slds-truncate"
-                        title="Formula Evaluates To True"
+                        title="Formula Evaluates to True"
                       >
-                        Formula Evaluates To True
+                        Formula Evaluates to True
                       </span>
                     </span>
                   </div>
@@ -264,12 +264,12 @@ exports[`Expression Base renders the default expression 1`] = `
                       <input
                         aria-autocomplete={null}
                         aria-controls="listbox-id-2"
-                        autoComplete="off"
+                        autocomplete="off"
                         className="slds-input slds-combobox__input"
                         id="combobox-id-2"
                         onBlur={[Function]}
                         onFocus={[Function]}
-                        placeholder="Select an Option"
+                        placeholder="Select…"
                         readOnly={true}
                         role="textbox"
                         type="text"
@@ -444,12 +444,12 @@ exports[`Expression Base renders the default expression 1`] = `
                       <input
                         aria-autocomplete={null}
                         aria-controls="listbox-id-3"
-                        autoComplete="off"
+                        autocomplete="off"
                         className="slds-input slds-combobox__input"
                         id="combobox-id-3"
                         onBlur={[Function]}
                         onFocus={[Function]}
-                        placeholder="Select an Option"
+                        placeholder="Select…"
                         readOnly={true}
                         role="textbox"
                         type="text"
@@ -729,12 +729,12 @@ exports[`Expression Base renders the disabled initial state 1`] = `
               <input
                 aria-autocomplete={null}
                 aria-controls="listbox-id-4"
-                autoComplete="off"
+                autocomplete="off"
                 className="slds-input slds-combobox__input"
                 id="combobox-id-4"
                 onBlur={[Function]}
                 onFocus={[Function]}
-                placeholder="Select an Option"
+                placeholder="Select…"
                 readOnly={true}
                 role="textbox"
                 type="text"
@@ -891,9 +891,9 @@ exports[`Expression Base renders the disabled initial state 1`] = `
                     >
                       <span
                         className="slds-truncate"
-                        title="Formula Evaluates To True"
+                        title="Formula Evaluates to True"
                       >
-                        Formula Evaluates To True
+                        Formula Evaluates to True
                       </span>
                     </span>
                   </div>
@@ -953,12 +953,12 @@ exports[`Expression Base renders the disabled initial state 1`] = `
                       <input
                         aria-autocomplete={null}
                         aria-controls="listbox-id-5"
-                        autoComplete="off"
+                        autocomplete="off"
                         className="slds-input slds-combobox__input"
                         id="combobox-id-5"
                         onBlur={[Function]}
                         onFocus={[Function]}
-                        placeholder="Select an Option"
+                        placeholder="Select…"
                         readOnly={true}
                         role="textbox"
                         type="text"
@@ -1133,13 +1133,13 @@ exports[`Expression Base renders the disabled initial state 1`] = `
                       <input
                         aria-autocomplete={null}
                         aria-controls="listbox-id-6"
-                        autoComplete="off"
+                        autocomplete="off"
                         className="slds-input slds-combobox__input"
                         disabled={true}
                         id="combobox-id-6"
                         onBlur={[Function]}
                         onFocus={[Function]}
-                        placeholder="Select an Option"
+                        placeholder="Select…"
                         readOnly={true}
                         role="textbox"
                         type="text"
@@ -1421,12 +1421,12 @@ exports[`Expression Base renders with a custom logic value 1`] = `
               <input
                 aria-autocomplete={null}
                 aria-controls="listbox-id-31"
-                autoComplete="off"
+                autocomplete="off"
                 className="slds-input slds-combobox__input"
                 id="combobox-id-31"
                 onBlur={[Function]}
                 onFocus={[Function]}
-                placeholder="Select an Option"
+                placeholder="Select…"
                 readOnly={true}
                 role="textbox"
                 type="text"
@@ -1583,9 +1583,9 @@ exports[`Expression Base renders with a custom logic value 1`] = `
                     >
                       <span
                         className="slds-truncate"
-                        title="Formula Evaluates To True"
+                        title="Formula Evaluates to True"
                       >
-                        Formula Evaluates To True
+                        Formula Evaluates to True
                       </span>
                     </span>
                   </div>
@@ -1645,12 +1645,12 @@ exports[`Expression Base renders with a custom logic value 1`] = `
                       <input
                         aria-autocomplete={null}
                         aria-controls="listbox-id-32"
-                        autoComplete="off"
+                        autocomplete="off"
                         className="slds-input slds-combobox__input"
                         id="combobox-id-32"
                         onBlur={[Function]}
                         onFocus={[Function]}
-                        placeholder="Select an Option"
+                        placeholder="Select…"
                         readOnly={true}
                         role="textbox"
                         type="text"
@@ -1825,12 +1825,12 @@ exports[`Expression Base renders with a custom logic value 1`] = `
                       <input
                         aria-autocomplete={null}
                         aria-controls="listbox-id-33"
-                        autoComplete="off"
+                        autocomplete="off"
                         className="slds-input slds-combobox__input"
                         id="combobox-id-33"
                         onBlur={[Function]}
                         onFocus={[Function]}
-                        placeholder="Select an Option"
+                        placeholder="Select…"
                         readOnly={true}
                         role="textbox"
                         type="text"
@@ -2110,12 +2110,12 @@ exports[`Expression Base renders with a resource selected 1`] = `
               <input
                 aria-autocomplete={null}
                 aria-controls="listbox-id-28"
-                autoComplete="off"
+                autocomplete="off"
                 className="slds-input slds-combobox__input"
                 id="combobox-id-28"
                 onBlur={[Function]}
                 onFocus={[Function]}
-                placeholder="Select an Option"
+                placeholder="Select…"
                 readOnly={true}
                 role="textbox"
                 type="text"
@@ -2272,9 +2272,9 @@ exports[`Expression Base renders with a resource selected 1`] = `
                     >
                       <span
                         className="slds-truncate"
-                        title="Formula Evaluates To True"
+                        title="Formula Evaluates to True"
                       >
-                        Formula Evaluates To True
+                        Formula Evaluates to True
                       </span>
                     </span>
                   </div>
@@ -2334,13 +2334,13 @@ exports[`Expression Base renders with a resource selected 1`] = `
                       <input
                         aria-autocomplete={null}
                         aria-controls="listbox-id-29"
-                        autoComplete="off"
+                        autocomplete="off"
                         className="slds-input slds-combobox__input slds-combobox__input-value"
                         defaultValue="Resource 1"
                         id="combobox-id-29"
                         onBlur={[Function]}
                         onFocus={[Function]}
-                        placeholder="Select an Option"
+                        placeholder="Select…"
                         readOnly={true}
                         role="textbox"
                         type="text"
@@ -2529,12 +2529,12 @@ exports[`Expression Base renders with a resource selected 1`] = `
                       <input
                         aria-autocomplete={null}
                         aria-controls="listbox-id-30"
-                        autoComplete="off"
+                        autocomplete="off"
                         className="slds-input slds-combobox__input"
                         id="combobox-id-30"
                         onBlur={[Function]}
                         onFocus={[Function]}
-                        placeholder="Select an Option"
+                        placeholder="Select…"
                         readOnly={true}
                         role="textbox"
                         type="text"
@@ -2814,13 +2814,13 @@ exports[`Expression Base renders with all option selected 1`] = `
               <input
                 aria-autocomplete={null}
                 aria-controls="listbox-id-16"
-                autoComplete="off"
+                autocomplete="off"
                 className="slds-input slds-combobox__input slds-combobox__input-value"
                 defaultValue="All Conditions Are Met"
                 id="combobox-id-16"
                 onBlur={[Function]}
                 onFocus={[Function]}
-                placeholder="Select an Option"
+                placeholder="Select…"
                 readOnly={true}
                 role="textbox"
                 type="text"
@@ -2991,9 +2991,9 @@ exports[`Expression Base renders with all option selected 1`] = `
                     >
                       <span
                         className="slds-truncate"
-                        title="Formula Evaluates To True"
+                        title="Formula Evaluates to True"
                       >
-                        Formula Evaluates To True
+                        Formula Evaluates to True
                       </span>
                     </span>
                   </div>
@@ -3053,12 +3053,12 @@ exports[`Expression Base renders with all option selected 1`] = `
                       <input
                         aria-autocomplete={null}
                         aria-controls="listbox-id-17"
-                        autoComplete="off"
+                        autocomplete="off"
                         className="slds-input slds-combobox__input"
                         id="combobox-id-17"
                         onBlur={[Function]}
                         onFocus={[Function]}
-                        placeholder="Select an Option"
+                        placeholder="Select…"
                         readOnly={true}
                         role="textbox"
                         type="text"
@@ -3233,12 +3233,12 @@ exports[`Expression Base renders with all option selected 1`] = `
                       <input
                         aria-autocomplete={null}
                         aria-controls="listbox-id-18"
-                        autoComplete="off"
+                        autocomplete="off"
                         className="slds-input slds-combobox__input"
                         id="combobox-id-18"
                         onBlur={[Function]}
                         onFocus={[Function]}
-                        placeholder="Select an Option"
+                        placeholder="Select…"
                         readOnly={true}
                         role="textbox"
                         type="text"
@@ -3518,13 +3518,13 @@ exports[`Expression Base renders with always option selected 1`] = `
               <input
                 aria-autocomplete={null}
                 aria-controls="listbox-id-22"
-                autoComplete="off"
+                autocomplete="off"
                 className="slds-input slds-combobox__input slds-combobox__input-value"
                 defaultValue="Always (No Criteria)"
                 id="combobox-id-22"
                 onBlur={[Function]}
                 onFocus={[Function]}
-                placeholder="Select an Option"
+                placeholder="Select…"
                 readOnly={true}
                 role="textbox"
                 type="text"
@@ -3695,9 +3695,9 @@ exports[`Expression Base renders with always option selected 1`] = `
                     >
                       <span
                         className="slds-truncate"
-                        title="Formula Evaluates To True"
+                        title="Formula Evaluates to True"
                       >
-                        Formula Evaluates To True
+                        Formula Evaluates to True
                       </span>
                     </span>
                   </div>
@@ -3757,12 +3757,12 @@ exports[`Expression Base renders with always option selected 1`] = `
                       <input
                         aria-autocomplete={null}
                         aria-controls="listbox-id-23"
-                        autoComplete="off"
+                        autocomplete="off"
                         className="slds-input slds-combobox__input"
                         id="combobox-id-23"
                         onBlur={[Function]}
                         onFocus={[Function]}
-                        placeholder="Select an Option"
+                        placeholder="Select…"
                         readOnly={true}
                         role="textbox"
                         type="text"
@@ -3937,12 +3937,12 @@ exports[`Expression Base renders with always option selected 1`] = `
                       <input
                         aria-autocomplete={null}
                         aria-controls="listbox-id-24"
-                        autoComplete="off"
+                        autocomplete="off"
                         className="slds-input slds-combobox__input"
                         id="combobox-id-24"
                         onBlur={[Function]}
                         onFocus={[Function]}
-                        placeholder="Select an Option"
+                        placeholder="Select…"
                         readOnly={true}
                         role="textbox"
                         type="text"
@@ -4222,13 +4222,13 @@ exports[`Expression Base renders with any option selected 1`] = `
               <input
                 aria-autocomplete={null}
                 aria-controls="listbox-id-13"
-                autoComplete="off"
+                autocomplete="off"
                 className="slds-input slds-combobox__input slds-combobox__input-value"
                 defaultValue="Any Condition Is Met"
                 id="combobox-id-13"
                 onBlur={[Function]}
                 onFocus={[Function]}
-                placeholder="Select an Option"
+                placeholder="Select…"
                 readOnly={true}
                 role="textbox"
                 type="text"
@@ -4399,9 +4399,9 @@ exports[`Expression Base renders with any option selected 1`] = `
                     >
                       <span
                         className="slds-truncate"
-                        title="Formula Evaluates To True"
+                        title="Formula Evaluates to True"
                       >
-                        Formula Evaluates To True
+                        Formula Evaluates to True
                       </span>
                     </span>
                   </div>
@@ -4461,12 +4461,12 @@ exports[`Expression Base renders with any option selected 1`] = `
                       <input
                         aria-autocomplete={null}
                         aria-controls="listbox-id-14"
-                        autoComplete="off"
+                        autocomplete="off"
                         className="slds-input slds-combobox__input"
                         id="combobox-id-14"
                         onBlur={[Function]}
                         onFocus={[Function]}
-                        placeholder="Select an Option"
+                        placeholder="Select…"
                         readOnly={true}
                         role="textbox"
                         type="text"
@@ -4641,12 +4641,12 @@ exports[`Expression Base renders with any option selected 1`] = `
                       <input
                         aria-autocomplete={null}
                         aria-controls="listbox-id-15"
-                        autoComplete="off"
+                        autocomplete="off"
                         className="slds-input slds-combobox__input"
                         id="combobox-id-15"
                         onBlur={[Function]}
                         onFocus={[Function]}
-                        placeholder="Select an Option"
+                        placeholder="Select…"
                         readOnly={true}
                         role="textbox"
                         type="text"
@@ -4926,12 +4926,12 @@ exports[`Expression Base renders with custom logic 1`] = `
               <input
                 aria-autocomplete={null}
                 aria-controls="listbox-id-7"
-                autoComplete="off"
+                autocomplete="off"
                 className="slds-input slds-combobox__input"
                 id="combobox-id-7"
                 onBlur={[Function]}
                 onFocus={[Function]}
-                placeholder="Select an Option"
+                placeholder="Select…"
                 readOnly={true}
                 role="textbox"
                 type="text"
@@ -5088,9 +5088,9 @@ exports[`Expression Base renders with custom logic 1`] = `
                     >
                       <span
                         className="slds-truncate"
-                        title="Formula Evaluates To True"
+                        title="Formula Evaluates to True"
                       >
-                        Formula Evaluates To True
+                        Formula Evaluates to True
                       </span>
                     </span>
                   </div>
@@ -5173,12 +5173,12 @@ exports[`Expression Base renders with custom logic 1`] = `
                       <input
                         aria-autocomplete={null}
                         aria-controls="listbox-id-8"
-                        autoComplete="off"
+                        autocomplete="off"
                         className="slds-input slds-combobox__input"
                         id="combobox-id-8"
                         onBlur={[Function]}
                         onFocus={[Function]}
-                        placeholder="Select an Option"
+                        placeholder="Select…"
                         readOnly={true}
                         role="textbox"
                         type="text"
@@ -5353,12 +5353,12 @@ exports[`Expression Base renders with custom logic 1`] = `
                       <input
                         aria-autocomplete={null}
                         aria-controls="listbox-id-9"
-                        autoComplete="off"
+                        autocomplete="off"
                         className="slds-input slds-combobox__input"
                         id="combobox-id-9"
                         onBlur={[Function]}
                         onFocus={[Function]}
-                        placeholder="Select an Option"
+                        placeholder="Select…"
                         readOnly={true}
                         role="textbox"
                         type="text"
@@ -5638,13 +5638,13 @@ exports[`Expression Base renders with custom option selected 1`] = `
               <input
                 aria-autocomplete={null}
                 aria-controls="listbox-id-19"
-                autoComplete="off"
+                autocomplete="off"
                 className="slds-input slds-combobox__input slds-combobox__input-value"
                 defaultValue="Custom Logic Is Met"
                 id="combobox-id-19"
                 onBlur={[Function]}
                 onFocus={[Function]}
-                placeholder="Select an Option"
+                placeholder="Select…"
                 readOnly={true}
                 role="textbox"
                 type="text"
@@ -5815,9 +5815,9 @@ exports[`Expression Base renders with custom option selected 1`] = `
                     >
                       <span
                         className="slds-truncate"
-                        title="Formula Evaluates To True"
+                        title="Formula Evaluates to True"
                       >
-                        Formula Evaluates To True
+                        Formula Evaluates to True
                       </span>
                     </span>
                   </div>
@@ -5877,12 +5877,12 @@ exports[`Expression Base renders with custom option selected 1`] = `
                       <input
                         aria-autocomplete={null}
                         aria-controls="listbox-id-20"
-                        autoComplete="off"
+                        autocomplete="off"
                         className="slds-input slds-combobox__input"
                         id="combobox-id-20"
                         onBlur={[Function]}
                         onFocus={[Function]}
-                        placeholder="Select an Option"
+                        placeholder="Select…"
                         readOnly={true}
                         role="textbox"
                         type="text"
@@ -6057,12 +6057,12 @@ exports[`Expression Base renders with custom option selected 1`] = `
                       <input
                         aria-autocomplete={null}
                         aria-controls="listbox-id-21"
-                        autoComplete="off"
+                        autocomplete="off"
                         className="slds-input slds-combobox__input"
                         id="combobox-id-21"
                         onBlur={[Function]}
                         onFocus={[Function]}
-                        placeholder="Select an Option"
+                        placeholder="Select…"
                         readOnly={true}
                         role="textbox"
                         type="text"
@@ -6342,13 +6342,13 @@ exports[`Expression Base renders with formula option selected 1`] = `
               <input
                 aria-autocomplete={null}
                 aria-controls="listbox-id-25"
-                autoComplete="off"
+                autocomplete="off"
                 className="slds-input slds-combobox__input slds-combobox__input-value"
-                defaultValue="Formula Evaluates To True"
+                defaultValue="Formula Evaluates to True"
                 id="combobox-id-25"
                 onBlur={[Function]}
                 onFocus={[Function]}
-                placeholder="Select an Option"
+                placeholder="Select…"
                 readOnly={true}
                 role="textbox"
                 type="text"
@@ -6519,9 +6519,9 @@ exports[`Expression Base renders with formula option selected 1`] = `
                     >
                       <span
                         className="slds-truncate"
-                        title="Formula Evaluates To True"
+                        title="Formula Evaluates to True"
                       >
-                        Formula Evaluates To True
+                        Formula Evaluates to True
                       </span>
                     </span>
                   </div>
@@ -6581,12 +6581,12 @@ exports[`Expression Base renders with formula option selected 1`] = `
                       <input
                         aria-autocomplete={null}
                         aria-controls="listbox-id-26"
-                        autoComplete="off"
+                        autocomplete="off"
                         className="slds-input slds-combobox__input"
                         id="combobox-id-26"
                         onBlur={[Function]}
                         onFocus={[Function]}
-                        placeholder="Select an Option"
+                        placeholder="Select…"
                         readOnly={true}
                         role="textbox"
                         type="text"
@@ -6761,12 +6761,12 @@ exports[`Expression Base renders with formula option selected 1`] = `
                       <input
                         aria-autocomplete={null}
                         aria-controls="listbox-id-27"
-                        autoComplete="off"
+                        autocomplete="off"
                         className="slds-input slds-combobox__input"
                         id="combobox-id-27"
                         onBlur={[Function]}
                         onFocus={[Function]}
-                        placeholder="Select an Option"
+                        placeholder="Select…"
                         readOnly={true}
                         role="textbox"
                         type="text"
@@ -7046,12 +7046,12 @@ exports[`Expression Base renders with legend text 1`] = `
               <input
                 aria-autocomplete={null}
                 aria-controls="listbox-id-10"
-                autoComplete="off"
+                autocomplete="off"
                 className="slds-input slds-combobox__input"
                 id="combobox-id-10"
                 onBlur={[Function]}
                 onFocus={[Function]}
-                placeholder="Select an Option"
+                placeholder="Select…"
                 readOnly={true}
                 role="textbox"
                 type="text"
@@ -7208,9 +7208,9 @@ exports[`Expression Base renders with legend text 1`] = `
                     >
                       <span
                         className="slds-truncate"
-                        title="Formula Evaluates To True"
+                        title="Formula Evaluates to True"
                       >
-                        Formula Evaluates To True
+                        Formula Evaluates to True
                       </span>
                     </span>
                   </div>
@@ -7273,12 +7273,12 @@ exports[`Expression Base renders with legend text 1`] = `
                       <input
                         aria-autocomplete={null}
                         aria-controls="listbox-id-11"
-                        autoComplete="off"
+                        autocomplete="off"
                         className="slds-input slds-combobox__input"
                         id="combobox-id-11"
                         onBlur={[Function]}
                         onFocus={[Function]}
-                        placeholder="Select an Option"
+                        placeholder="Select…"
                         readOnly={true}
                         role="textbox"
                         type="text"
@@ -7453,12 +7453,12 @@ exports[`Expression Base renders with legend text 1`] = `
                       <input
                         aria-autocomplete={null}
                         aria-controls="listbox-id-12"
-                        autoComplete="off"
+                        autocomplete="off"
                         className="slds-input slds-combobox__input"
                         id="combobox-id-12"
                         onBlur={[Function]}
                         onFocus={[Function]}
-                        placeholder="Select an Option"
+                        placeholder="Select…"
                         readOnly={true}
                         role="textbox"
                         type="text"
@@ -7851,12 +7851,12 @@ exports[`Expression Formula renders the default expression formula variant 1`] =
               <input
                 aria-autocomplete={null}
                 aria-controls="listbox-id-67"
-                autoComplete="off"
+                autocomplete="off"
                 className="slds-input slds-combobox__input"
                 id="combobox-id-67"
                 onBlur={[Function]}
                 onFocus={[Function]}
-                placeholder="Select an Option"
+                placeholder="Select…"
                 readOnly={true}
                 role="textbox"
                 type="text"
@@ -8013,9 +8013,9 @@ exports[`Expression Formula renders the default expression formula variant 1`] =
                     >
                       <span
                         className="slds-truncate"
-                        title="Formula Evaluates To True"
+                        title="Formula Evaluates to True"
                       >
-                        Formula Evaluates To True
+                        Formula Evaluates to True
                       </span>
                     </span>
                   </div>
@@ -8116,7 +8116,7 @@ exports[`Expression Formula renders the default expression formula variant 1`] =
                                 <input
                                   aria-autocomplete={null}
                                   aria-controls="objectswitcher-listbox-id-1"
-                                  autoComplete="off"
+                                  autocomplete="off"
                                   className="slds-input slds-combobox__input slds-combobox__input-value"
                                   defaultValue="Apex"
                                   id="combobox-id-69"
@@ -8338,7 +8338,7 @@ exports[`Expression Formula renders the default expression formula variant 1`] =
                           <input
                             aria-autocomplete="list"
                             aria-controls="listbox-id-68"
-                            autoComplete="off"
+                            autocomplete="off"
                             className="slds-input slds-combobox__input"
                             id="combobox-id-68"
                             onBlur={[Function]}
@@ -8543,7 +8543,7 @@ exports[`Expression Formula renders the default expression formula variant 1`] =
                                 <input
                                   aria-autocomplete={null}
                                   aria-controls="objectswitcher-listbox-id-2"
-                                  autoComplete="off"
+                                  autocomplete="off"
                                   className="slds-input slds-combobox__input slds-combobox__input-value"
                                   defaultValue="Apex"
                                   id="combobox-id-71"
@@ -8765,7 +8765,7 @@ exports[`Expression Formula renders the default expression formula variant 1`] =
                           <input
                             aria-autocomplete="list"
                             aria-controls="listbox-id-69"
-                            autoComplete="off"
+                            autocomplete="off"
                             className="slds-input slds-combobox__input"
                             id="combobox-id-70"
                             onBlur={[Function]}
@@ -9013,13 +9013,13 @@ exports[`Expression Formula renders the default expression formula with an optio
               <input
                 aria-autocomplete={null}
                 aria-controls="listbox-id-70"
-                autoComplete="off"
+                autocomplete="off"
                 className="slds-input slds-combobox__input slds-combobox__input-value"
-                defaultValue="Formula Evaluates To True"
+                defaultValue="Formula Evaluates to True"
                 id="combobox-id-72"
                 onBlur={[Function]}
                 onFocus={[Function]}
-                placeholder="Select an Option"
+                placeholder="Select…"
                 readOnly={true}
                 role="textbox"
                 type="text"
@@ -9190,9 +9190,9 @@ exports[`Expression Formula renders the default expression formula with an optio
                     >
                       <span
                         className="slds-truncate"
-                        title="Formula Evaluates To True"
+                        title="Formula Evaluates to True"
                       >
-                        Formula Evaluates To True
+                        Formula Evaluates to True
                       </span>
                     </span>
                   </div>
@@ -9293,7 +9293,7 @@ exports[`Expression Formula renders the default expression formula with an optio
                                 <input
                                   aria-autocomplete={null}
                                   aria-controls="objectswitcher-listbox-id-3"
-                                  autoComplete="off"
+                                  autocomplete="off"
                                   className="slds-input slds-combobox__input slds-combobox__input-value"
                                   defaultValue="Apex"
                                   id="combobox-id-74"
@@ -9515,7 +9515,7 @@ exports[`Expression Formula renders the default expression formula with an optio
                           <input
                             aria-autocomplete="list"
                             aria-controls="listbox-id-71"
-                            autoComplete="off"
+                            autocomplete="off"
                             className="slds-input slds-combobox__input"
                             id="combobox-id-73"
                             onBlur={[Function]}
@@ -9720,7 +9720,7 @@ exports[`Expression Formula renders the default expression formula with an optio
                                 <input
                                   aria-autocomplete={null}
                                   aria-controls="objectswitcher-listbox-id-4"
-                                  autoComplete="off"
+                                  autocomplete="off"
                                   className="slds-input slds-combobox__input slds-combobox__input-value"
                                   defaultValue="Apex"
                                   id="combobox-id-76"
@@ -9942,7 +9942,7 @@ exports[`Expression Formula renders the default expression formula with an optio
                           <input
                             aria-autocomplete="list"
                             aria-controls="listbox-id-72"
-                            autoComplete="off"
+                            autocomplete="off"
                             className="slds-input slds-combobox__input"
                             id="combobox-id-75"
                             onBlur={[Function]}
@@ -10200,12 +10200,12 @@ exports[`Expression Group renders the default expression group 1`] = `
                 <input
                   aria-autocomplete={null}
                   aria-controls="listbox-id-56"
-                  autoComplete="off"
+                  autocomplete="off"
                   className="slds-input slds-combobox__input"
                   id="combobox-id-56"
                   onBlur={[Function]}
                   onFocus={[Function]}
-                  placeholder="Select an Option"
+                  placeholder="Select…"
                   readOnly={true}
                   role="textbox"
                   type="text"
@@ -10362,9 +10362,9 @@ exports[`Expression Group renders the default expression group 1`] = `
                       >
                         <span
                           className="slds-truncate"
-                          title="Formula Evaluates To True"
+                          title="Formula Evaluates to True"
                         >
-                          Formula Evaluates To True
+                          Formula Evaluates to True
                         </span>
                       </span>
                     </div>
@@ -10443,12 +10443,12 @@ exports[`Expression Group renders the default expression group with a row 1`] = 
                 <input
                   aria-autocomplete={null}
                   aria-controls="listbox-id-64"
-                  autoComplete="off"
+                  autocomplete="off"
                   className="slds-input slds-combobox__input"
                   id="combobox-id-64"
                   onBlur={[Function]}
                   onFocus={[Function]}
-                  placeholder="Select an Option"
+                  placeholder="Select…"
                   readOnly={true}
                   role="textbox"
                   type="text"
@@ -10605,9 +10605,9 @@ exports[`Expression Group renders the default expression group with a row 1`] = 
                       >
                         <span
                           className="slds-truncate"
-                          title="Formula Evaluates To True"
+                          title="Formula Evaluates to True"
                         >
-                          Formula Evaluates To True
+                          Formula Evaluates to True
                         </span>
                       </span>
                     </div>
@@ -10670,12 +10670,12 @@ exports[`Expression Group renders the default expression group with a row 1`] = 
                         <input
                           aria-autocomplete={null}
                           aria-controls="listbox-id-65"
-                          autoComplete="off"
+                          autocomplete="off"
                           className="slds-input slds-combobox__input"
                           id="combobox-id-65"
                           onBlur={[Function]}
                           onFocus={[Function]}
-                          placeholder="Select an Option"
+                          placeholder="Select…"
                           readOnly={true}
                           role="textbox"
                           type="text"
@@ -10850,12 +10850,12 @@ exports[`Expression Group renders the default expression group with a row 1`] = 
                         <input
                           aria-autocomplete={null}
                           aria-controls="listbox-id-66"
-                          autoComplete="off"
+                          autocomplete="off"
                           className="slds-input slds-combobox__input"
                           id="combobox-id-66"
                           onBlur={[Function]}
                           onFocus={[Function]}
-                          placeholder="Select an Option"
+                          placeholder="Select…"
                           readOnly={true}
                           role="textbox"
                           type="text"
@@ -11128,13 +11128,13 @@ exports[`Expression Group renders the default expression group with all option s
                 <input
                   aria-autocomplete={null}
                   aria-controls="listbox-id-59"
-                  autoComplete="off"
+                  autocomplete="off"
                   className="slds-input slds-combobox__input slds-combobox__input-value"
                   defaultValue="All Conditions Are Met"
                   id="combobox-id-59"
                   onBlur={[Function]}
                   onFocus={[Function]}
-                  placeholder="Select an Option"
+                  placeholder="Select…"
                   readOnly={true}
                   role="textbox"
                   type="text"
@@ -11305,9 +11305,9 @@ exports[`Expression Group renders the default expression group with all option s
                       >
                         <span
                           className="slds-truncate"
-                          title="Formula Evaluates To True"
+                          title="Formula Evaluates to True"
                         >
-                          Formula Evaluates To True
+                          Formula Evaluates to True
                         </span>
                       </span>
                     </div>
@@ -11386,13 +11386,13 @@ exports[`Expression Group renders the default expression group with always optio
                 <input
                   aria-autocomplete={null}
                   aria-controls="listbox-id-60"
-                  autoComplete="off"
+                  autocomplete="off"
                   className="slds-input slds-combobox__input slds-combobox__input-value"
                   defaultValue="Always (No Criteria)"
                   id="combobox-id-60"
                   onBlur={[Function]}
                   onFocus={[Function]}
-                  placeholder="Select an Option"
+                  placeholder="Select…"
                   readOnly={true}
                   role="textbox"
                   type="text"
@@ -11563,9 +11563,9 @@ exports[`Expression Group renders the default expression group with always optio
                       >
                         <span
                           className="slds-truncate"
-                          title="Formula Evaluates To True"
+                          title="Formula Evaluates to True"
                         >
-                          Formula Evaluates To True
+                          Formula Evaluates to True
                         </span>
                       </span>
                     </div>
@@ -11644,13 +11644,13 @@ exports[`Expression Group renders the default expression group with any option s
                 <input
                   aria-autocomplete={null}
                   aria-controls="listbox-id-58"
-                  autoComplete="off"
+                  autocomplete="off"
                   className="slds-input slds-combobox__input slds-combobox__input-value"
                   defaultValue="Any Condition Is Met"
                   id="combobox-id-58"
                   onBlur={[Function]}
                   onFocus={[Function]}
-                  placeholder="Select an Option"
+                  placeholder="Select…"
                   readOnly={true}
                   role="textbox"
                   type="text"
@@ -11821,9 +11821,9 @@ exports[`Expression Group renders the default expression group with any option s
                       >
                         <span
                           className="slds-truncate"
-                          title="Formula Evaluates To True"
+                          title="Formula Evaluates to True"
                         >
-                          Formula Evaluates To True
+                          Formula Evaluates to True
                         </span>
                       </span>
                     </div>
@@ -11902,13 +11902,13 @@ exports[`Expression Group renders the default expression group with custom optio
                 <input
                   aria-autocomplete={null}
                   aria-controls="listbox-id-61"
-                  autoComplete="off"
+                  autocomplete="off"
                   className="slds-input slds-combobox__input slds-combobox__input-value"
                   defaultValue="Custom Logic Is Met"
                   id="combobox-id-61"
                   onBlur={[Function]}
                   onFocus={[Function]}
-                  placeholder="Select an Option"
+                  placeholder="Select…"
                   readOnly={true}
                   role="textbox"
                   type="text"
@@ -12079,9 +12079,9 @@ exports[`Expression Group renders the default expression group with custom optio
                       >
                         <span
                           className="slds-truncate"
-                          title="Formula Evaluates To True"
+                          title="Formula Evaluates to True"
                         >
-                          Formula Evaluates To True
+                          Formula Evaluates to True
                         </span>
                       </span>
                     </div>
@@ -12160,13 +12160,13 @@ exports[`Expression Group renders the default expression group with formula opti
                 <input
                   aria-autocomplete={null}
                   aria-controls="listbox-id-62"
-                  autoComplete="off"
+                  autocomplete="off"
                   className="slds-input slds-combobox__input slds-combobox__input-value"
-                  defaultValue="Formula Evaluates To True"
+                  defaultValue="Formula Evaluates to True"
                   id="combobox-id-62"
                   onBlur={[Function]}
                   onFocus={[Function]}
-                  placeholder="Select an Option"
+                  placeholder="Select…"
                   readOnly={true}
                   role="textbox"
                   type="text"
@@ -12337,9 +12337,9 @@ exports[`Expression Group renders the default expression group with formula opti
                       >
                         <span
                           className="slds-truncate"
-                          title="Formula Evaluates To True"
+                          title="Formula Evaluates to True"
                         >
-                          Formula Evaluates To True
+                          Formula Evaluates to True
                         </span>
                       </span>
                     </div>
@@ -12418,13 +12418,13 @@ exports[`Expression Group renders the default expression group with group option
                 <input
                   aria-autocomplete={null}
                   aria-controls="listbox-id-63"
-                  autoComplete="off"
+                  autocomplete="off"
                   className="slds-input slds-combobox__input slds-combobox__input-value"
                   defaultValue="Any Condition Is Met in This Group"
                   id="combobox-id-63"
                   onBlur={[Function]}
                   onFocus={[Function]}
-                  placeholder="Select an Option"
+                  placeholder="Select…"
                   readOnly={true}
                   role="textbox"
                   type="text"
@@ -12595,9 +12595,9 @@ exports[`Expression Group renders the default expression group with group option
                       >
                         <span
                           className="slds-truncate"
-                          title="Formula Evaluates To True"
+                          title="Formula Evaluates to True"
                         >
-                          Formula Evaluates To True
+                          Formula Evaluates to True
                         </span>
                       </span>
                     </div>
@@ -12679,12 +12679,12 @@ exports[`Expression Group renders the default expression group with legend text 
                 <input
                   aria-autocomplete={null}
                   aria-controls="listbox-id-57"
-                  autoComplete="off"
+                  autocomplete="off"
                   className="slds-input slds-combobox__input"
                   id="combobox-id-57"
                   onBlur={[Function]}
                   onFocus={[Function]}
-                  placeholder="Select an Option"
+                  placeholder="Select…"
                   readOnly={true}
                   role="textbox"
                   type="text"
@@ -12841,9 +12841,9 @@ exports[`Expression Group renders the default expression group with legend text 
                       >
                         <span
                           className="slds-truncate"
-                          title="Formula Evaluates To True"
+                          title="Formula Evaluates to True"
                         >
-                          Formula Evaluates To True
+                          Formula Evaluates to True
                         </span>
                       </span>
                     </div>
@@ -12974,12 +12974,12 @@ exports[`Expression List renders the default expression list 1`] = `
                     <input
                       aria-autocomplete={null}
                       aria-controls="listbox-id-54"
-                      autoComplete="off"
+                      autocomplete="off"
                       className="slds-input slds-combobox__input"
                       id="combobox-id-54"
                       onBlur={[Function]}
                       onFocus={[Function]}
-                      placeholder="Select an Option"
+                      placeholder="Select…"
                       readOnly={true}
                       role="textbox"
                       type="text"
@@ -13154,12 +13154,12 @@ exports[`Expression List renders the default expression list 1`] = `
                     <input
                       aria-autocomplete={null}
                       aria-controls="listbox-id-55"
-                      autoComplete="off"
+                      autocomplete="off"
                       className="slds-input slds-combobox__input"
                       id="combobox-id-55"
                       onBlur={[Function]}
                       onFocus={[Function]}
-                      placeholder="Select an Option"
+                      placeholder="Select…"
                       readOnly={true}
                       role="textbox"
                       type="text"
@@ -13489,12 +13489,12 @@ exports[`Expression Narrow Group renders the default expression narrow group 1`]
               <input
                 aria-autocomplete={null}
                 aria-controls="listbox-id-75"
-                autoComplete="off"
+                autocomplete="off"
                 className="slds-input slds-combobox__input"
                 id="combobox-id-79"
                 onBlur={[Function]}
                 onFocus={[Function]}
-                placeholder="Select an Option"
+                placeholder="Select…"
                 readOnly={true}
                 role="textbox"
                 type="text"
@@ -13651,9 +13651,9 @@ exports[`Expression Narrow Group renders the default expression narrow group 1`]
                     >
                       <span
                         className="slds-truncate"
-                        title="Formula Evaluates To True"
+                        title="Formula Evaluates to True"
                       >
-                        Formula Evaluates To True
+                        Formula Evaluates to True
                       </span>
                     </span>
                   </div>
@@ -13801,13 +13801,13 @@ exports[`Expression Narrow Group renders the default expression narrow with opti
               <input
                 aria-autocomplete={null}
                 aria-controls="listbox-id-76"
-                autoComplete="off"
+                autocomplete="off"
                 className="slds-input slds-combobox__input slds-combobox__input-value"
                 defaultValue="Any Condition Is Met"
                 id="combobox-id-80"
                 onBlur={[Function]}
                 onFocus={[Function]}
-                placeholder="Select an Option"
+                placeholder="Select…"
                 readOnly={true}
                 role="textbox"
                 type="text"
@@ -13978,9 +13978,9 @@ exports[`Expression Narrow Group renders the default expression narrow with opti
                     >
                       <span
                         className="slds-truncate"
-                        title="Formula Evaluates To True"
+                        title="Formula Evaluates to True"
                       >
-                        Formula Evaluates To True
+                        Formula Evaluates to True
                       </span>
                     </span>
                   </div>
@@ -14112,12 +14112,12 @@ exports[`Expression Narrow renders the default expression narrow variant 1`] = `
                   <input
                     aria-autocomplete={null}
                     aria-controls="listbox-id-73"
-                    autoComplete="off"
+                    autocomplete="off"
                     className="slds-input slds-combobox__input"
                     id="combobox-id-77"
                     onBlur={[Function]}
                     onFocus={[Function]}
-                    placeholder="Select an Option"
+                    placeholder="Select…"
                     readOnly={true}
                     role="textbox"
                     type="text"
@@ -14274,9 +14274,9 @@ exports[`Expression Narrow renders the default expression narrow variant 1`] = `
                         >
                           <span
                             className="slds-truncate"
-                            title="Formula Evaluates To True"
+                            title="Formula Evaluates to True"
                           >
-                            Formula Evaluates To True
+                            Formula Evaluates to True
                           </span>
                         </span>
                       </div>
@@ -14425,13 +14425,13 @@ exports[`Expression Narrow renders the default expression narrow with option sel
                   <input
                     aria-autocomplete={null}
                     aria-controls="listbox-id-74"
-                    autoComplete="off"
+                    autocomplete="off"
                     className="slds-input slds-combobox__input slds-combobox__input-value"
                     defaultValue="All Conditions Are Met"
                     id="combobox-id-78"
                     onBlur={[Function]}
                     onFocus={[Function]}
-                    placeholder="Select an Option"
+                    placeholder="Select…"
                     readOnly={true}
                     role="textbox"
                     type="text"
@@ -14602,9 +14602,9 @@ exports[`Expression Narrow renders the default expression narrow with option sel
                         >
                           <span
                             className="slds-truncate"
-                            title="Formula Evaluates To True"
+                            title="Formula Evaluates to True"
                           >
-                            Formula Evaluates To True
+                            Formula Evaluates to True
                           </span>
                         </span>
                       </div>
@@ -14733,12 +14733,12 @@ exports[`Expression Options renders the default expression options 1`] = `
             <input
               aria-autocomplete={null}
               aria-controls="listbox-id-50"
-              autoComplete="off"
+              autocomplete="off"
               className="slds-input slds-combobox__input"
               id="combobox-id-50"
               onBlur={[Function]}
               onFocus={[Function]}
-              placeholder="Select an Option"
+              placeholder="Select…"
               readOnly={true}
               role="textbox"
               type="text"
@@ -14895,9 +14895,9 @@ exports[`Expression Options renders the default expression options 1`] = `
                   >
                     <span
                       className="slds-truncate"
-                      title="Formula Evaluates To True"
+                      title="Formula Evaluates to True"
                     >
-                      Formula Evaluates To True
+                      Formula Evaluates to True
                     </span>
                   </span>
                 </div>
@@ -14943,12 +14943,12 @@ exports[`Expression Options renders the default expression options in a filter 1
             <input
               aria-autocomplete={null}
               aria-controls="listbox-id-52"
-              autoComplete="off"
+              autocomplete="off"
               className="slds-input slds-combobox__input"
               id="combobox-id-52"
               onBlur={[Function]}
               onFocus={[Function]}
-              placeholder="Select an Option"
+              placeholder="Select…"
               readOnly={true}
               role="textbox"
               type="text"
@@ -15105,9 +15105,9 @@ exports[`Expression Options renders the default expression options in a filter 1
                   >
                     <span
                       className="slds-truncate"
-                      title="Formula Evaluates To True"
+                      title="Formula Evaluates to True"
                     >
-                      Formula Evaluates To True
+                      Formula Evaluates to True
                     </span>
                   </span>
                 </div>
@@ -15153,12 +15153,12 @@ exports[`Expression Options renders the default expression options with a label 
             <input
               aria-autocomplete={null}
               aria-controls="listbox-id-51"
-              autoComplete="off"
+              autocomplete="off"
               className="slds-input slds-combobox__input"
               id="combobox-id-51"
               onBlur={[Function]}
               onFocus={[Function]}
-              placeholder="Select an Option"
+              placeholder="Select…"
               readOnly={true}
               role="textbox"
               type="text"
@@ -15315,9 +15315,9 @@ exports[`Expression Options renders the default expression options with a label 
                   >
                     <span
                       className="slds-truncate"
-                      title="Formula Evaluates To True"
+                      title="Formula Evaluates to True"
                     >
-                      Formula Evaluates To True
+                      Formula Evaluates to True
                     </span>
                   </span>
                 </div>
@@ -15363,13 +15363,13 @@ exports[`Expression Options renders the default expression options with an optio
             <input
               aria-autocomplete={null}
               aria-controls="listbox-id-53"
-              autoComplete="off"
+              autocomplete="off"
               className="slds-input slds-combobox__input slds-combobox__input-value"
               defaultValue="All Conditions Are Met"
               id="combobox-id-53"
               onBlur={[Function]}
               onFocus={[Function]}
-              placeholder="Select an Option"
+              placeholder="Select…"
               readOnly={true}
               role="textbox"
               type="text"
@@ -15540,9 +15540,9 @@ exports[`Expression Options renders the default expression options with an optio
                   >
                     <span
                       className="slds-truncate"
-                      title="Formula Evaluates To True"
+                      title="Formula Evaluates to True"
                     >
-                      Formula Evaluates To True
+                      Formula Evaluates to True
                     </span>
                   </span>
                 </div>
@@ -15604,12 +15604,12 @@ exports[`Expression Row renders the default row 1`] = `
                   <input
                     aria-autocomplete={null}
                     aria-controls="listbox-id-34"
-                    autoComplete="off"
+                    autocomplete="off"
                     className="slds-input slds-combobox__input"
                     id="combobox-id-34"
                     onBlur={[Function]}
                     onFocus={[Function]}
-                    placeholder="Select an Option"
+                    placeholder="Select…"
                     readOnly={true}
                     role="textbox"
                     type="text"
@@ -15784,12 +15784,12 @@ exports[`Expression Row renders the default row 1`] = `
                   <input
                     aria-autocomplete={null}
                     aria-controls="listbox-id-35"
-                    autoComplete="off"
+                    autocomplete="off"
                     className="slds-input slds-combobox__input"
                     id="combobox-id-35"
                     onBlur={[Function]}
                     onFocus={[Function]}
-                    placeholder="Select an Option"
+                    placeholder="Select…"
                     readOnly={true}
                     role="textbox"
                     type="text"
@@ -16045,12 +16045,12 @@ exports[`Expression Row renders the default row in a group 1`] = `
                   <input
                     aria-autocomplete={null}
                     aria-controls="listbox-id-38"
-                    autoComplete="off"
+                    autocomplete="off"
                     className="slds-input slds-combobox__input"
                     id="combobox-id-38"
                     onBlur={[Function]}
                     onFocus={[Function]}
-                    placeholder="Select an Option"
+                    placeholder="Select…"
                     readOnly={true}
                     role="textbox"
                     type="text"
@@ -16225,12 +16225,12 @@ exports[`Expression Row renders the default row in a group 1`] = `
                   <input
                     aria-autocomplete={null}
                     aria-controls="listbox-id-39"
-                    autoComplete="off"
+                    autocomplete="off"
                     className="slds-input slds-combobox__input"
                     id="combobox-id-39"
                     onBlur={[Function]}
                     onFocus={[Function]}
-                    placeholder="Select an Option"
+                    placeholder="Select…"
                     readOnly={true}
                     role="textbox"
                     type="text"
@@ -16486,13 +16486,13 @@ exports[`Expression Row renders the default row with a resource selected 1`] = `
                   <input
                     aria-autocomplete={null}
                     aria-controls="listbox-id-46"
-                    autoComplete="off"
+                    autocomplete="off"
                     className="slds-input slds-combobox__input slds-combobox__input-value"
                     defaultValue="Resource 1"
                     id="combobox-id-46"
                     onBlur={[Function]}
                     onFocus={[Function]}
-                    placeholder="Select an Option"
+                    placeholder="Select…"
                     readOnly={true}
                     role="textbox"
                     type="text"
@@ -16681,12 +16681,12 @@ exports[`Expression Row renders the default row with a resource selected 1`] = `
                   <input
                     aria-autocomplete={null}
                     aria-controls="listbox-id-47"
-                    autoComplete="off"
+                    autocomplete="off"
                     className="slds-input slds-combobox__input"
                     id="combobox-id-47"
                     onBlur={[Function]}
                     onFocus={[Function]}
-                    placeholder="Select an Option"
+                    placeholder="Select…"
                     readOnly={true}
                     role="textbox"
                     type="text"
@@ -16942,12 +16942,12 @@ exports[`Expression Row renders the default row with an error 1`] = `
                   <input
                     aria-autocomplete={null}
                     aria-controls="listbox-id-48"
-                    autoComplete="off"
+                    autocomplete="off"
                     className="slds-input slds-combobox__input"
                     id="combobox-id-48"
                     onBlur={[Function]}
                     onFocus={[Function]}
-                    placeholder="Select an Option"
+                    placeholder="Select…"
                     readOnly={true}
                     role="textbox"
                     type="text"
@@ -17122,12 +17122,12 @@ exports[`Expression Row renders the default row with an error 1`] = `
                   <input
                     aria-autocomplete={null}
                     aria-controls="listbox-id-49"
-                    autoComplete="off"
+                    autocomplete="off"
                     className="slds-input slds-combobox__input"
                     id="combobox-id-49"
                     onBlur={[Function]}
                     onFocus={[Function]}
-                    placeholder="Select an Option"
+                    placeholder="Select…"
                     readOnly={true}
                     role="textbox"
                     type="text"
@@ -17391,12 +17391,12 @@ exports[`Expression Row renders the default row with button disabled 1`] = `
                   <input
                     aria-autocomplete={null}
                     aria-controls="listbox-id-42"
-                    autoComplete="off"
+                    autocomplete="off"
                     className="slds-input slds-combobox__input"
                     id="combobox-id-42"
                     onBlur={[Function]}
                     onFocus={[Function]}
-                    placeholder="Select an Option"
+                    placeholder="Select…"
                     readOnly={true}
                     role="textbox"
                     type="text"
@@ -17571,12 +17571,12 @@ exports[`Expression Row renders the default row with button disabled 1`] = `
                   <input
                     aria-autocomplete={null}
                     aria-controls="listbox-id-43"
-                    autoComplete="off"
+                    autocomplete="off"
                     className="slds-input slds-combobox__input"
                     id="combobox-id-43"
                     onBlur={[Function]}
                     onFocus={[Function]}
-                    placeholder="Select an Option"
+                    placeholder="Select…"
                     readOnly={true}
                     role="textbox"
                     type="text"
@@ -17833,12 +17833,12 @@ exports[`Expression Row renders the default row with input disabled 1`] = `
                   <input
                     aria-autocomplete={null}
                     aria-controls="listbox-id-40"
-                    autoComplete="off"
+                    autocomplete="off"
                     className="slds-input slds-combobox__input"
                     id="combobox-id-40"
                     onBlur={[Function]}
                     onFocus={[Function]}
-                    placeholder="Select an Option"
+                    placeholder="Select…"
                     readOnly={true}
                     role="textbox"
                     type="text"
@@ -18013,13 +18013,13 @@ exports[`Expression Row renders the default row with input disabled 1`] = `
                   <input
                     aria-autocomplete={null}
                     aria-controls="listbox-id-41"
-                    autoComplete="off"
+                    autocomplete="off"
                     className="slds-input slds-combobox__input"
                     disabled={true}
                     id="combobox-id-41"
                     onBlur={[Function]}
                     onFocus={[Function]}
-                    placeholder="Select an Option"
+                    placeholder="Select…"
                     readOnly={true}
                     role="textbox"
                     type="text"
@@ -18276,12 +18276,12 @@ exports[`Expression Row renders the default row with inputs and button disabled 
                   <input
                     aria-autocomplete={null}
                     aria-controls="listbox-id-44"
-                    autoComplete="off"
+                    autocomplete="off"
                     className="slds-input slds-combobox__input"
                     id="combobox-id-44"
                     onBlur={[Function]}
                     onFocus={[Function]}
-                    placeholder="Select an Option"
+                    placeholder="Select…"
                     readOnly={true}
                     role="textbox"
                     type="text"
@@ -18456,13 +18456,13 @@ exports[`Expression Row renders the default row with inputs and button disabled 
                   <input
                     aria-autocomplete={null}
                     aria-controls="listbox-id-45"
-                    autoComplete="off"
+                    autocomplete="off"
                     className="slds-input slds-combobox__input"
                     disabled={true}
                     id="combobox-id-45"
                     onBlur={[Function]}
                     onFocus={[Function]}
-                    placeholder="Select an Option"
+                    placeholder="Select…"
                     readOnly={true}
                     role="textbox"
                     type="text"
@@ -18723,12 +18723,12 @@ exports[`Expression Row renders the default row with legend text and sassistive 
                   <input
                     aria-autocomplete={null}
                     aria-controls="listbox-id-36"
-                    autoComplete="off"
+                    autocomplete="off"
                     className="slds-input slds-combobox__input"
                     id="combobox-id-36"
                     onBlur={[Function]}
                     onFocus={[Function]}
-                    placeholder="Select an Option"
+                    placeholder="Select…"
                     readOnly={true}
                     role="textbox"
                     type="text"
@@ -18903,12 +18903,12 @@ exports[`Expression Row renders the default row with legend text and sassistive 
                   <input
                     aria-autocomplete={null}
                     aria-controls="listbox-id-37"
-                    autoComplete="off"
+                    autocomplete="off"
                     className="slds-input slds-combobox__input"
                     id="combobox-id-37"
                     onBlur={[Function]}
                     onFocus={[Function]}
-                    placeholder="Select an Option"
+                    placeholder="Select…"
                     readOnly={true}
                     role="textbox"
                     type="text"

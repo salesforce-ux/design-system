@@ -5,6 +5,10 @@
 @import 'init';
 @import 'dependencies/touch';
 
+body {
+  font-size: $font-size-5;
+}
+
 // Framework
 @import 'components/touch';
 @import 'utilities/touch';

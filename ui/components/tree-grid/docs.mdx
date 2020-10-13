@@ -6,7 +6,7 @@ import { getDisplayElementById } from '../../shared/helpers';
   A tree is visualization of a structure hierarchy. A branch can be expanded or collapsed.
 </div>
 
-<CodeView exampleOnly demoStyles="height: 12rem;">
+<CodeView exampleOnly demoStyles="overflow: hidden;">
   {Base.default}
 </CodeView>
 
@@ -60,7 +60,7 @@ The tree grid comes with a very specific keyboard interaction model which **must
 
 ## Base
 
-<CodeView>
+<CodeView demoStyles="overflow: hidden;">
   {Base.default}
 </CodeView>
 
@@ -68,19 +68,19 @@ The tree grid comes with a very specific keyboard interaction model which **must
 
 #### Expanded
 
-<CodeView>
+<CodeView demoStyles="overflow: hidden;">
   {getDisplayElementById(Base.states, 'expanded')}
 </CodeView>
 
 #### Selected row
 
-<CodeView>
+<CodeView demoStyles="overflow: hidden;">
   {getDisplayElementById(Base.states, 'selected-row')}
 </CodeView>
 
 #### Deeply nested branches
 
-<CodeView>
+<CodeView demoStyles="overflow: hidden;">
   {getDisplayElementById(Base.states, 'deep-nesting')}
 </CodeView>
 
@@ -88,61 +88,61 @@ The tree grid comes with a very specific keyboard interaction model which **must
 
 ### Headless
 
-<CodeView>
+<CodeView demoStyles="overflow: hidden;">
   {getDisplayElementById(Base.examples, 'treegrid-headless')}
 </CodeView>
 
 ### Headless with selected row
 
-<CodeView>
+<CodeView demoStyles="overflow: hidden;">
   {getDisplayElementById(Base.examples, 'treegrid-headless-selected-row')}
 </CodeView>
 
 ### Headless with no borders
 
-<CodeView>
+<CodeView demoStyles="overflow: hidden;">
   {getDisplayElementById(Base.examples, 'treegrid-headless-no-borders')}
 </CodeView>
 
 ### Headless with no borders and a selected row
 
-<CodeView>
+<CodeView demoStyles="overflow: hidden;">
   {getDisplayElementById(Base.examples, 'treegrid-headless-no-borders-selected-row')}
 </CodeView>
 
 ### Single select
 
-<CodeView>
+<CodeView demoStyles="overflow: hidden;">
   {getDisplayElementById(Base.examples, 'treegrid-single-select')}
 </CodeView>
 
 ### Single select with a selected row
 
-<CodeView>
+<CodeView demoStyles="overflow: hidden;">
   {getDisplayElementById(Base.examples, 'treegrid-single-select-selected-row')}
 </CodeView>
 
 ### Single select headless
 
-<CodeView>
+<CodeView demoStyles="overflow: hidden;">
   {getDisplayElementById(Base.examples, 'treegrid-single-select-headless')}
 </CodeView>
 
 ### Single select headless with selected row
 
-<CodeView>
+<CodeView demoStyles="overflow: hidden;">
   {getDisplayElementById(Base.examples, 'treegrid-single-select-headless-selected')}
 </CodeView>
 
 ### Single select headless with no borders
 
-<CodeView>
+<CodeView demoStyles="overflow: hidden;">
   {getDisplayElementById(Base.examples, 'treegrid-single-select-headless-no-borders')}
 </CodeView>
 
 ### Single select headless with no borders and a selected row
 
-<CodeView>
+<CodeView demoStyles="overflow: hidden;">
   {getDisplayElementById(Base.examples, 'treegrid-single-select-headless-no-borders-with-selected')}
 </CodeView>
 
@@ -153,7 +153,7 @@ The tree grid comes with a very specific keyboard interaction model which **must
 
 When a branch doesn't have children, apply `slds-is-disabled` to the corresponding `slds-button_icon` element.
 
-<CodeView>
+<CodeView demoStyles="overflow: hidden;">
   {getDisplayElementById(Base.examples, 'item-disabled')}
 </CodeView>
 
@@ -161,6 +161,6 @@ When a branch doesn't have children, apply `slds-is-disabled` to the correspondi
 
 When a tree item is hovered, apply `slds-is-hovered` to `slds-tree__item` element`.
 
-<CodeView>
+<CodeView demoStyles="overflow: hidden;">
   {getDisplayElementById(Base.examples, 'item-hovered')}
 </CodeView>

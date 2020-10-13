@@ -29,9 +29,9 @@ export default (
         <button className="slds-button slds-button_neutral">Save</button>
         <h2
           className="slds-text-heading_medium slds-truncate"
-          title="New Contact"
+          title="New contact"
         >
-          New Contact
+          New contact
         </h2>
       </ModalHeader>
       <ModalContent>

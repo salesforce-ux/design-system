@@ -3,6 +3,11 @@
 # Pills Release Notes
 
 <!-- ## [Unreleased] -->
+## 2.13.3
+
+### Changed
+
+- Treat Styling Hooks targeting text color as an element, previously referred to as a property. e.g. `--sds-c-pill-color-text` => `--sds-c-pill-text-color`.
 
 ## 2.13.0
 
@@ -14,7 +19,7 @@
 
 ### Added
 
-- Added the brand expression specific Styling Hooks to Pill.
+- Enabled styling hooks for pill. See pill's styling hooks overview table for a full listing of the currently available hooks.
 - Added example for Listbox of Pills in Group
 
 ### Changed

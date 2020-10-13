@@ -1,0 +1,65 @@
+# Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+# Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+global:
+  type: color
+  category: color
+  cssProperties:
+  - background-color
+  - 'border*color'
+  - box-shadow
+  - fill
+  - color
+  scope: global
+  primitive: true
+imports:
+- ../../aliases/color-palettes.yml
+props:
+  PALETTE_GREEN_10:
+    value: '{!PALETTE_GREEN_10}'
+    comment: "Green 10"
+    release: 2.14.0
+  PALETTE_GREEN_15:
+    value: '{!PALETTE_GREEN_15}'
+    comment: "Green 15"
+    release: 2.14.0
+  PALETTE_GREEN_20:
+    value: '{!PALETTE_GREEN_20}'
+    comment: "Green 20"
+    release: 2.14.0
+  PALETTE_GREEN_30:
+    value: '{!PALETTE_GREEN_30}'
+    comment: "Green 30"
+    release: 2.14.0
+  PALETTE_GREEN_40:
+    value: '{!PALETTE_GREEN_40}'
+    comment: "Green 40"
+    release: 2.14.0
+  PALETTE_GREEN_50:
+    value: '{!PALETTE_GREEN_50}'
+    comment: "Green 50"
+    release: 2.14.0
+  PALETTE_GREEN_60:
+    value: '{!PALETTE_GREEN_60}'
+    comment: "Green 60"
+    release: 2.14.0
+  PALETTE_GREEN_65:
+    value: '{!PALETTE_GREEN_65}'
+    comment: "Green 65"
+    release: 2.14.0
+  PALETTE_GREEN_70:
+    value: '{!PALETTE_GREEN_70}'
+    comment: "Green 70"
+    release: 2.14.0
+  PALETTE_GREEN_80:
+    value: '{!PALETTE_GREEN_80}'
+    comment: "Green 80"
+    release: 2.14.0
+  PALETTE_GREEN_90:
+    value: '{!PALETTE_GREEN_90}'
+    comment: "Green 90"
+    release: 2.14.0
+  PALETTE_GREEN_95:
+    value: '{!PALETTE_GREEN_95}'
+    comment: "Green 95"
+    release: 2.14.0

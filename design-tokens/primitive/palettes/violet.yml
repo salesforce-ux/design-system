@@ -1,0 +1,65 @@
+# Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+# Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+global:
+  type: color
+  category: color
+  cssProperties:
+  - background-color
+  - 'border*color'
+  - box-shadow
+  - fill
+  - color
+  scope: global
+  primitive: true
+imports:
+- ../../aliases/color-palettes.yml
+props:
+  PALETTE_VIOLET_10:
+    value: '{!PALETTE_VIOLET_10}'
+    comment: "Violet 10"
+    release: 2.14.0
+  PALETTE_VIOLET_15:
+    value: '{!PALETTE_VIOLET_15}'
+    comment: "Violet 15"
+    release: 2.14.0
+  PALETTE_VIOLET_20:
+    value: '{!PALETTE_VIOLET_20}'
+    comment: "Violet 20"
+    release: 2.14.0
+  PALETTE_VIOLET_30:
+    value: '{!PALETTE_VIOLET_30}'
+    comment: "Violet 30"
+    release: 2.14.0
+  PALETTE_VIOLET_40:
+    value: '{!PALETTE_VIOLET_40}'
+    comment: "Violet 40"
+    release: 2.14.0
+  PALETTE_VIOLET_50:
+    value: '{!PALETTE_VIOLET_50}'
+    comment: "Violet 50"
+    release: 2.14.0
+  PALETTE_VIOLET_60:
+    value: '{!PALETTE_VIOLET_60}'
+    comment: "Violet 60"
+    release: 2.14.0
+  PALETTE_VIOLET_65:
+    value: '{!PALETTE_VIOLET_65}'
+    comment: "Violet 65"
+    release: 2.14.0
+  PALETTE_VIOLET_70:
+    value: '{!PALETTE_VIOLET_70}'
+    comment: "Violet 70"
+    release: 2.14.0
+  PALETTE_VIOLET_80:
+    value: '{!PALETTE_VIOLET_80}'
+    comment: "Violet 80"
+    release: 2.14.0
+  PALETTE_VIOLET_90:
+    value: '{!PALETTE_VIOLET_90}'
+    comment: "Violet 90"
+    release: 2.14.0
+  PALETTE_VIOLET_95:
+    value: '{!PALETTE_VIOLET_95}'
+    comment: "Violet 95"
+    release: 2.14.0

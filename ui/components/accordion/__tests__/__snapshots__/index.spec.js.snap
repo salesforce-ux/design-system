@@ -6,7 +6,6 @@ exports[`renders a base accordion 1`] = `
 >
   <li
     className="slds-accordion__list-item"
-    onClick={[Function]}
   >
     <section
       className="slds-accordion__section slds-is-open"
@@ -21,6 +20,7 @@ exports[`renders a base accordion 1`] = `
             aria-controls="referenceId-01"
             aria-expanded={true}
             className="slds-button slds-button_reset slds-accordion__summary-action"
+            onClick={[Function]}
             title="Accordion summary"
           >
             <svg
@@ -50,7 +50,6 @@ exports[`renders a base accordion 1`] = `
   </li>
   <li
     className="slds-accordion__list-item"
-    onClick={[Function]}
   >
     <section
       className="slds-accordion__section"
@@ -65,6 +64,7 @@ exports[`renders a base accordion 1`] = `
             aria-controls="referenceId-02"
             aria-expanded={false}
             className="slds-button slds-button_reset slds-accordion__summary-action"
+            onClick={[Function]}
             title="Accordion summary"
           >
             <svg
@@ -94,7 +94,6 @@ exports[`renders a base accordion 1`] = `
   </li>
   <li
     className="slds-accordion__list-item"
-    onClick={[Function]}
   >
     <section
       className="slds-accordion__section"
@@ -109,6 +108,7 @@ exports[`renders a base accordion 1`] = `
             aria-controls="referenceId-03"
             aria-expanded={false}
             className="slds-button slds-button_reset slds-accordion__summary-action"
+            onClick={[Function]}
             title="Accordion summary"
           >
             <svg
@@ -145,7 +145,6 @@ exports[`renders a nested accordion 1`] = `
 >
   <li
     className="slds-accordion__list-item"
-    onClick={[Function]}
   >
     <section
       className="slds-accordion__section slds-is-open"
@@ -160,6 +159,7 @@ exports[`renders a nested accordion 1`] = `
             aria-controls="referenceId-01"
             aria-expanded={true}
             className="slds-button slds-button_reset slds-accordion__summary-action"
+            onClick={[Function]}
             title="Accordion summary"
           >
             <svg
@@ -188,7 +188,6 @@ exports[`renders a nested accordion 1`] = `
         >
           <li
             className="slds-accordion__list-item"
-            onClick={[Function]}
           >
             <section
               className="slds-accordion__section slds-is-open"
@@ -203,6 +202,7 @@ exports[`renders a nested accordion 1`] = `
                     aria-controls="referenceId-02"
                     aria-expanded={true}
                     className="slds-button slds-button_reset slds-accordion__summary-action"
+                    onClick={[Function]}
                     title="Nested accordion summary"
                   >
                     <svg
@@ -232,7 +232,6 @@ exports[`renders a nested accordion 1`] = `
           </li>
           <li
             className="slds-accordion__list-item"
-            onClick={[Function]}
           >
             <section
               className="slds-accordion__section"
@@ -247,6 +246,7 @@ exports[`renders a nested accordion 1`] = `
                     aria-controls="referenceId-03"
                     aria-expanded={false}
                     className="slds-button slds-button_reset slds-accordion__summary-action"
+                    onClick={[Function]}
                     title="Nested accordion summary"
                   >
                     <svg
@@ -280,7 +280,6 @@ exports[`renders a nested accordion 1`] = `
   </li>
   <li
     className="slds-accordion__list-item"
-    onClick={[Function]}
   >
     <section
       className="slds-accordion__section"
@@ -295,6 +294,7 @@ exports[`renders a nested accordion 1`] = `
             aria-controls="referenceId-04"
             aria-expanded={false}
             className="slds-button slds-button_reset slds-accordion__summary-action"
+            onClick={[Function]}
             title="Accordion summary"
           >
             <svg
@@ -324,7 +324,6 @@ exports[`renders a nested accordion 1`] = `
   </li>
   <li
     className="slds-accordion__list-item"
-    onClick={[Function]}
   >
     <section
       className="slds-accordion__section"
@@ -339,6 +338,7 @@ exports[`renders a nested accordion 1`] = `
             aria-controls="referenceId-05"
             aria-expanded={false}
             className="slds-button slds-button_reset slds-accordion__summary-action"
+            onClick={[Function]}
             title="Accordion summary"
           >
             <svg
@@ -378,7 +378,6 @@ exports[`renders a styled accordion 1`] = `
   >
     <li
       className="slds-accordion__list-item"
-      onClick={[Function]}
     >
       <section
         className="slds-accordion__section slds-is-open"
@@ -393,6 +392,7 @@ exports[`renders a styled accordion 1`] = `
               aria-controls="referenceId-01"
               aria-expanded={true}
               className="slds-button slds-button_reset slds-accordion__summary-action"
+              onClick={[Function]}
               title="Accordion summary"
             >
               <svg
@@ -422,7 +422,6 @@ exports[`renders a styled accordion 1`] = `
     </li>
     <li
       className="slds-accordion__list-item"
-      onClick={[Function]}
     >
       <section
         className="slds-accordion__section"
@@ -437,6 +436,7 @@ exports[`renders a styled accordion 1`] = `
               aria-controls="referenceId-02"
               aria-expanded={false}
               className="slds-button slds-button_reset slds-accordion__summary-action"
+              onClick={[Function]}
               title="Accordion summary"
             >
               <svg
@@ -466,7 +466,6 @@ exports[`renders a styled accordion 1`] = `
     </li>
     <li
       className="slds-accordion__list-item"
-      onClick={[Function]}
     >
       <section
         className="slds-accordion__section"
@@ -481,6 +480,7 @@ exports[`renders a styled accordion 1`] = `
               aria-controls="referenceId-03"
               aria-expanded={false}
               className="slds-button slds-button_reset slds-accordion__summary-action"
+              onClick={[Function]}
               title="Accordion summary"
             >
               <svg
@@ -518,7 +518,6 @@ exports[`renders an accordion with action overflow 1`] = `
 >
   <li
     className="slds-accordion__list-item"
-    onClick={[Function]}
   >
     <section
       className="slds-accordion__section slds-is-open"
@@ -533,6 +532,7 @@ exports[`renders an accordion with action overflow 1`] = `
             aria-controls="referenceId-01"
             aria-expanded={true}
             className="slds-button slds-button_reset slds-accordion__summary-action"
+            onClick={[Function]}
             title="Accordion summary"
           >
             <svg
@@ -562,7 +562,6 @@ exports[`renders an accordion with action overflow 1`] = `
   </li>
   <li
     className="slds-accordion__list-item"
-    onClick={[Function]}
   >
     <section
       className="slds-accordion__section"
@@ -577,6 +576,7 @@ exports[`renders an accordion with action overflow 1`] = `
             aria-controls="referenceId-02"
             aria-expanded={false}
             className="slds-button slds-button_reset slds-accordion__summary-action"
+            onClick={[Function]}
             title="Accordion summary"
           >
             <svg
@@ -606,7 +606,6 @@ exports[`renders an accordion with action overflow 1`] = `
   </li>
   <li
     className="slds-accordion__list-item"
-    onClick={[Function]}
   >
     <section
       className="slds-accordion__section"
@@ -621,6 +620,7 @@ exports[`renders an accordion with action overflow 1`] = `
             aria-controls="referenceId-03"
             aria-expanded={false}
             className="slds-button slds-button_reset slds-accordion__summary-action"
+            onClick={[Function]}
             title="Accordion summary"
           >
             <svg
@@ -657,7 +657,6 @@ exports[`renders an accordion with multiple sections open 1`] = `
 >
   <li
     className="slds-accordion__list-item"
-    onClick={[Function]}
   >
     <section
       className="slds-accordion__section slds-is-open"
@@ -672,6 +671,7 @@ exports[`renders an accordion with multiple sections open 1`] = `
             aria-controls="referenceId-01"
             aria-expanded={true}
             className="slds-button slds-button_reset slds-accordion__summary-action"
+            onClick={[Function]}
             title="Accordion summary"
           >
             <svg
@@ -701,7 +701,6 @@ exports[`renders an accordion with multiple sections open 1`] = `
   </li>
   <li
     className="slds-accordion__list-item"
-    onClick={[Function]}
   >
     <section
       className="slds-accordion__section"
@@ -716,6 +715,7 @@ exports[`renders an accordion with multiple sections open 1`] = `
             aria-controls="referenceId-02"
             aria-expanded={false}
             className="slds-button slds-button_reset slds-accordion__summary-action"
+            onClick={[Function]}
             title="Accordion summary"
           >
             <svg
@@ -745,7 +745,6 @@ exports[`renders an accordion with multiple sections open 1`] = `
   </li>
   <li
     className="slds-accordion__list-item"
-    onClick={[Function]}
   >
     <section
       className="slds-accordion__section slds-is-open"
@@ -760,6 +759,7 @@ exports[`renders an accordion with multiple sections open 1`] = `
             aria-controls="referenceId-03"
             aria-expanded={true}
             className="slds-button slds-button_reset slds-accordion__summary-action"
+            onClick={[Function]}
             title="Accordion summary"
           >
             <svg
@@ -796,7 +796,6 @@ exports[`renders an accordion with section one open 1`] = `
 >
   <li
     className="slds-accordion__list-item"
-    onClick={[Function]}
   >
     <section
       className="slds-accordion__section slds-is-open"
@@ -811,6 +810,7 @@ exports[`renders an accordion with section one open 1`] = `
             aria-controls="referenceId-01"
             aria-expanded={true}
             className="slds-button slds-button_reset slds-accordion__summary-action"
+            onClick={[Function]}
             title="Accordion summary"
           >
             <svg
@@ -840,7 +840,6 @@ exports[`renders an accordion with section one open 1`] = `
   </li>
   <li
     className="slds-accordion__list-item"
-    onClick={[Function]}
   >
     <section
       className="slds-accordion__section"
@@ -855,6 +854,7 @@ exports[`renders an accordion with section one open 1`] = `
             aria-controls="referenceId-02"
             aria-expanded={false}
             className="slds-button slds-button_reset slds-accordion__summary-action"
+            onClick={[Function]}
             title="Accordion summary"
           >
             <svg
@@ -884,7 +884,6 @@ exports[`renders an accordion with section one open 1`] = `
   </li>
   <li
     className="slds-accordion__list-item"
-    onClick={[Function]}
   >
     <section
       className="slds-accordion__section"
@@ -899,6 +898,7 @@ exports[`renders an accordion with section one open 1`] = `
             aria-controls="referenceId-03"
             aria-expanded={false}
             className="slds-button slds-button_reset slds-accordion__summary-action"
+            onClick={[Function]}
             title="Accordion summary"
           >
             <svg
@@ -935,7 +935,6 @@ exports[`renders an accordion with section three open 1`] = `
 >
   <li
     className="slds-accordion__list-item"
-    onClick={[Function]}
   >
     <section
       className="slds-accordion__section"
@@ -950,6 +949,7 @@ exports[`renders an accordion with section three open 1`] = `
             aria-controls="referenceId-01"
             aria-expanded={false}
             className="slds-button slds-button_reset slds-accordion__summary-action"
+            onClick={[Function]}
             title="Accordion summary"
           >
             <svg
@@ -979,7 +979,6 @@ exports[`renders an accordion with section three open 1`] = `
   </li>
   <li
     className="slds-accordion__list-item"
-    onClick={[Function]}
   >
     <section
       className="slds-accordion__section"
@@ -994,6 +993,7 @@ exports[`renders an accordion with section three open 1`] = `
             aria-controls="referenceId-02"
             aria-expanded={false}
             className="slds-button slds-button_reset slds-accordion__summary-action"
+            onClick={[Function]}
             title="Accordion summary"
           >
             <svg
@@ -1023,7 +1023,6 @@ exports[`renders an accordion with section three open 1`] = `
   </li>
   <li
     className="slds-accordion__list-item"
-    onClick={[Function]}
   >
     <section
       className="slds-accordion__section slds-is-open"
@@ -1038,6 +1037,7 @@ exports[`renders an accordion with section three open 1`] = `
             aria-controls="referenceId-03"
             aria-expanded={true}
             className="slds-button slds-button_reset slds-accordion__summary-action"
+            onClick={[Function]}
             title="Accordion summary"
           >
             <svg
@@ -1074,7 +1074,6 @@ exports[`renders an accordion with section two open 1`] = `
 >
   <li
     className="slds-accordion__list-item"
-    onClick={[Function]}
   >
     <section
       className="slds-accordion__section"
@@ -1089,6 +1088,7 @@ exports[`renders an accordion with section two open 1`] = `
             aria-controls="referenceId-01"
             aria-expanded={false}
             className="slds-button slds-button_reset slds-accordion__summary-action"
+            onClick={[Function]}
             title="Accordion summary"
           >
             <svg
@@ -1118,7 +1118,6 @@ exports[`renders an accordion with section two open 1`] = `
   </li>
   <li
     className="slds-accordion__list-item"
-    onClick={[Function]}
   >
     <section
       className="slds-accordion__section slds-is-open"
@@ -1133,6 +1132,7 @@ exports[`renders an accordion with section two open 1`] = `
             aria-controls="referenceId-02"
             aria-expanded={true}
             className="slds-button slds-button_reset slds-accordion__summary-action"
+            onClick={[Function]}
             title="Accordion summary"
           >
             <svg
@@ -1162,7 +1162,6 @@ exports[`renders an accordion with section two open 1`] = `
   </li>
   <li
     className="slds-accordion__list-item"
-    onClick={[Function]}
   >
     <section
       className="slds-accordion__section"
@@ -1177,6 +1176,7 @@ exports[`renders an accordion with section two open 1`] = `
             aria-controls="referenceId-03"
             aria-expanded={false}
             className="slds-button slds-button_reset slds-accordion__summary-action"
+            onClick={[Function]}
             title="Accordion summary"
           >
             <svg

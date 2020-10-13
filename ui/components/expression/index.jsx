@@ -20,22 +20,30 @@ import * as Snapshot from './snapshots.data';
 import classNames from 'classnames';
 import _ from '../../shared/helpers';
 
-export const ExpressionOptions = props => {
+// Private
+const placeholderText = 'Select…';
+
+export const ExpressionOptions = ({
+  optionSelected,
+  isInFilter,
+  label,
+  placeholderText
+}) => {
   const listboxId = _.uniqueId('listbox-id-');
-  const selected =
-    props.optionSelected && Snapshot.OptionSelected[props.optionSelected];
+  const selected = optionSelected && Snapshot.OptionSelected[optionSelected];
 
   return (
     <div
       className={classNames(
-        props.isInFilter ? 'slds-m-vertical_small' : 'slds-expression__options'
+        isInFilter ? 'slds-m-vertical_small' : 'slds-expression__options'
       )}
     >
       <Combobox
         id={_.uniqueId('combobox-id-')}
         aria-controls={listboxId}
-        label={props.label}
+        label={label}
         value={selected && selected.value}
+        placeholder={placeholderText}
         readonly
         inputIconPosition="right"
         rightInputIcon={
@@ -78,11 +86,13 @@ ExpressionOptions.propTypes = {
     'formula',
     'always',
     'group'
-  ])
+  ]),
+  placeholderText: PropTypes.string
 };
 
 ExpressionOptions.defaultProps = {
-  label: 'Take Action When'
+  label: 'Take Action When',
+  placeholderText: placeholderText
 };
 
 export const ExpressionCustom = props => {
@@ -139,7 +149,18 @@ ExpressionCol.propTypes = {
   children: PropTypes.node
 };
 
-export const ExpressionRow = props => {
+export const ExpressionRow = ({
+  isGroup,
+  groupName,
+  conditionName,
+  placeholderText,
+  resourceIsSelected,
+  inputIsDisabled,
+  hasError,
+  errorMessage,
+  buttonIsDisabled,
+  legendText
+}) => {
   const listboxId1 = _.uniqueId('listbox-id-');
   const listboxId2 = _.uniqueId('listbox-id-');
   const inputLabel = 'Value';
@@ -149,16 +170,14 @@ export const ExpressionRow = props => {
   return (
     <li
       className={classNames('slds-expression__row', {
-        'slds-expression__row_group': props.isGroup
+        'slds-expression__row_group': isGroup
       })}
     >
       <fieldset>
         <ExpressionLegend
-          legendText={props.legendText}
+          legendText={legendText}
           assistiveText={
-            props.isGroup
-              ? props.conditionName + ' of ' + props.groupName
-              : props.conditionName
+            isGroup ? conditionName + ' of ' + groupName : conditionName
           }
         />
         <div className="slds-grid slds-gutters_xx-small">
@@ -167,9 +186,10 @@ export const ExpressionRow = props => {
               id={_.uniqueId('combobox-id-')}
               aria-controls={listboxId1}
               label="Resource"
+              placeholder={placeholderText}
               readonly
               inputIconPosition="right"
-              value={props.resourceIsSelected && 'Resource 1'}
+              value={resourceIsSelected && 'Resource 1'}
               formClassName="slds-has-error"
               errorId={errorId}
               rightInputIcon={
@@ -186,7 +206,7 @@ export const ExpressionRow = props => {
                   id={listboxId1}
                   hasUniqueId
                   snapshot={
-                    props.resourceIsSelected
+                    resourceIsSelected
                       ? Snapshot.ResourceSelected
                       : Snapshot.ResourceOptions
                   }
@@ -204,9 +224,10 @@ export const ExpressionRow = props => {
               id={_.uniqueId('combobox-id-')}
               aria-controls={listboxId2}
               label="Operator"
+              placeholder={placeholderText}
               readonly
               inputIconPosition="right"
-              isDisabled={props.inputIsDisabled}
+              isDisabled={inputIsDisabled}
               rightInputIcon={
                 <UtilityIcon
                   symbol="down"
@@ -232,16 +253,16 @@ export const ExpressionRow = props => {
           </ExpressionCol>
           <ExpressionCol>
             <FormElement
-              hasError={props.hasError}
+              hasError={hasError}
               labelContent={inputLabel}
               inputId={inputId}
-              errorId={props.errorMessage && errorId}
-              inlineMessage={props.errorMessage}
+              errorId={errorMessage && errorId}
+              inlineMessage={errorMessage}
             >
               <Input
-                disabled={props.inputIsDisabled}
+                disabled={inputIsDisabled}
                 id={inputId}
-                aria-describedby={props.errorMessage && errorId}
+                aria-describedby={errorMessage && errorId}
               />
             </FormElement>
           </ExpressionCol>
@@ -252,22 +273,16 @@ export const ExpressionRow = props => {
                 <ButtonIcon
                   theme="neutral"
                   symbol="delete"
-                  disabled={props.buttonIsDisabled}
+                  disabled={buttonIsDisabled}
                   assistiveText={
-                    props.isGroup
-                      ? 'Delete ' +
-                        props.conditionName +
-                        ' of ' +
-                        props.groupName
-                      : 'Delete ' + props.conditionName
+                    isGroup
+                      ? 'Delete ' + conditionName + ' of ' + groupName
+                      : 'Delete ' + conditionName
                   }
                   title={
-                    props.isGroup
-                      ? 'Delete ' +
-                        props.conditionName +
-                        ' of ' +
-                        props.groupName
-                      : 'Delete ' + props.conditionName
+                    isGroup
+                      ? 'Delete ' + conditionName + ' of ' + groupName
+                      : 'Delete ' + conditionName
                   }
                 />
               </FormElementControl>
@@ -296,11 +311,13 @@ ExpressionRow.propTypes = {
   inputIsDisabled: PropTypes.bool,
   buttonIsDisabled: PropTypes.bool,
   resourceIsSelected: PropTypes.bool,
-  errorMessage: PropTypes.string
+  errorMessage: PropTypes.string,
+  placeholderText: PropTypes.string
 };
 
 ExpressionRow.defaultProps = {
-  conditionName: 'Condition 1'
+  conditionName: 'Condition 1',
+  placeholderText: placeholderText
 };
 
 export const ExpressionGroup = props => (

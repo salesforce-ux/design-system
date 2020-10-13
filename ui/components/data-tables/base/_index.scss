@@ -151,6 +151,17 @@
   [role="gridcell"]:focus,
   [role="gridcell"].slds-has-focus {
     box-shadow: $brand-accessible 0 0 0 1px inset;
+
+    /**
+    * Use when cells are in action mode
+    *
+    * @selector .slds-cell_action-mode
+    * @restrict .slds-table th, .slds-table td
+    * @modifier
+    */
+    &.slds-cell_action-mode {
+      border-bottom: 3px solid $color-border-brand-dark;
+    }
   }
 
   th:active,

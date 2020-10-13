@@ -1,6 +1,6 @@
 import * as Base from './base/example.jsx';
 import CodeView from '../../../shared/components/CodeView';
-import StyleApiTable from '../../../shared/components/StyleApiTable';
+import StylingHooksTable from '../../../shared/components/StylingHooksTable';
 import { getDisplayElementById, getDemoStylesById } from '../../shared/helpers';
 import { MobileNotice, MobileBlurb } from '../../shared/doc-text';
 
@@ -33,10 +33,6 @@ Large modals call for large amounts of content. The height follows the same beha
 These are modals that require a linearly directional paradigm of navigation (“Next” and “Back”, etc.) — the actionable buttons in the modal footer live on the left and right, rather than all on the right. These can either be within a large or default modal, depending on the use case.
 
 If you're using a Modal for a system alert that the user must acknowledge, consider using a [Prompt](/components/prompt).
-
-### Styling Hooks
-
-<StyleApiTable name="modals" type="component" />
 
 ### Accessibility
 
@@ -116,3 +112,7 @@ Modals, by definition, trap focus. This means that if a user presses Tab or Shif
 <CodeView isViewport demoStyles={getDemoStylesById(Base.examples, 'large')}>
   {getDisplayElementById(Base.examples, 'large')}
 </CodeView>
+
+## Styling Hooks Overview
+
+<StylingHooksTable name="modals" type="component" />

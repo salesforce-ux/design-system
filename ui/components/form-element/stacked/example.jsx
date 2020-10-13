@@ -75,25 +75,25 @@ export let examples = [
           inputId="stacked-input-id-01"
           isStacked
         >
-          <Input id="stacked-input-id-01" placeholder="Placeholder Text" />
+          <Input id="stacked-input-id-01" placeholder="Placeholder text…" />
         </FormElement>
         <FormElement
           labelContent="Textarea Input"
           inputId="stacked-input-id-02"
           isStacked
         >
-          <Textarea id="stacked-input-id-02" placeholder="Placeholder Text" />
+          <Textarea id="stacked-input-id-02" placeholder="Placeholder text…" />
         </FormElement>
-        <Fieldset label="Checkbox Group label" isStacked>
+        <Fieldset label="Checkbox Group Label" isStacked>
           <Checkbox label="All opportunities owned by you" name="default" />
           <Checkbox
             label="All contacts in the account owned by you"
             name="default"
           />
         </Fieldset>
-        <Fieldset label="Radio Group label" isStacked>
-          <Radio label="Lead Generation" name="options" />
-          <Radio label="Education Leads" name="options" />
+        <Fieldset label="Radio Group Label" isStacked>
+          <Radio label="Lead generation" name="options" />
+          <Radio label="Education leads" name="options" />
         </Fieldset>
       </div>
     )

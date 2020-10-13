@@ -334,6 +334,7 @@ gulp.task(
       withName('dist:copySassLicense')(dist.copySassLicense),
       withName('dist:copyIcons')(dist.copyIcons),
       withName('dist:copyIconsMeta')(dist.copyIconsMeta),
+      withName('dist:copyIconsSynonyms')(dist.copyIconsSynonyms),
       withName('dist:copyFonts')(dist.copyFonts),
       withName('dist:copyFontsLicense')(dist.copyFontsLicense),
       withName('dist:copyImages')(dist.copyImages),

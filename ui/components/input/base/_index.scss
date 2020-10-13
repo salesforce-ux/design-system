@@ -19,7 +19,7 @@
   padding-bottom: 0;
   padding-left: var(--sds-c-input-spacing-horizontal-start, $spacing-small);
   width: 100%;
-  min-height: calc($height-input + ($border-width-thin * 2)); // For IE
+  min-height: calc(#{$height-input} + (#{$border-width-thin} * 2)); // For IE
   line-height: $height-input;
   border: $border-width-thin solid var(--sds-c-input-color-border, $color-border-input);
   border-radius: var(--sds-c-input-radius-border, $border-radius-medium);
@@ -109,8 +109,8 @@
    * @modifier
    */
 
-  &.slds-input_bare,
-  &.slds-input--bare {
+  &_bare,
+  &--bare {
     /*! @css-var-fallback background-color */
     // --sds-c-input-color-background: transparent;
     background-color: transparent;
@@ -142,7 +142,7 @@
    */
   &_height,
   &--height {
-    min-height: calc($height-input + ($border-width-thin * 2)); // For IE
+    min-height: calc(#{$height-input} + (#{$border-width-thin} * 2)); // For IE
   }
 }
 
@@ -197,8 +197,8 @@
    * @selector .slds-input-has-icon_left
    * @restrict .slds-input-has-icon
    */
-  &.slds-input-has-icon_left,
-  &.slds-input-has-icon--left {
+  &_left,
+  &--left {
 
     .slds-input__icon {
       left: $spacing-small;
@@ -219,8 +219,8 @@
    * @selector .slds-input-has-icon_right
    * @restrict .slds-input-has-icon
    */
-  &.slds-input-has-icon_right,
-  &.slds-input-has-icon--right {
+  &_right,
+  &--right {
 
     .slds-input__icon {
       right: $spacing-small;
@@ -241,8 +241,8 @@
    * @selector .slds-input-has-icon_left-right
    * @restrict .slds-input-has-icon
    */
-  &.slds-input-has-icon_left-right,
-  &.slds-input-has-icon--left-right {
+  &_left-right,
+  &--left-right {
     /**
      * @summary Hook for .slds-input-has-icon--left-right
      *

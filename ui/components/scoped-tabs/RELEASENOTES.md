@@ -3,12 +3,17 @@
 # Scoped Tabs Release Notes
 
 <!-- ## [Unreleased] -->
+## 2.13.3
+
+### Changed
+
+- Treat Styling Hooks targeting text color as an element, previously referred to as a property. e.g. `--sds-c-tabs-scoped-color-text` => `--sds-c-tabs-scoped-text-color`.
 
 ## 2.13.0
 
 ### Added
 
-- Added the brand expression specific Styling Hooks
+- Enabled styling hooks for scoped tab. See scoped tab's styling hooks overview table for a full listing of the currently available hooks.
 
 ## 2.7.0
 

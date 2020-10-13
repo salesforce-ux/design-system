@@ -281,5 +281,61 @@ export let examples = [
         </AccordionSection>
       </Accordion>
     )
+  },
+  {
+    id: 'section-background-color',
+    label: 'Accordion Section - Background Color',
+    demoStyles: '--sds-c-accordion-summary-color-background: lightblue',
+    element: (
+      <Accordion>
+        <AccordionSection
+          summary="Accordion summary"
+          isOpen
+          referenceId={uniqueId('referenceId-')}
+        >
+          Accordion details - A
+        </AccordionSection>
+        <AccordionSection
+          summary="Accordion summary"
+          referenceId={uniqueId('referenceId-')}
+        >
+          Accordion details - B
+        </AccordionSection>
+        <AccordionSection
+          summary="Accordion summary"
+          referenceId={uniqueId('referenceId-')}
+        >
+          Accordion details - C
+        </AccordionSection>
+      </Accordion>
+    )
+  },
+  {
+    id: 'section-background-color',
+    label: 'Accordion Section - Text Color',
+    demoStyles: '--sds-c-accordion-heading-text-color: green; --sds-c-accordion-heading-text-color-hover: red',
+    element: (
+      <Accordion>
+        <AccordionSection
+          summary="Accordion summary"
+          isOpen
+          referenceId={uniqueId('referenceId-')}
+        >
+          Accordion details - A
+        </AccordionSection>
+        <AccordionSection
+          summary="Accordion summary"
+          referenceId={uniqueId('referenceId-')}
+        >
+          Accordion details - B
+        </AccordionSection>
+        <AccordionSection
+          summary="Accordion summary"
+          referenceId={uniqueId('referenceId-')}
+        >
+          Accordion details - C
+        </AccordionSection>
+      </Accordion>
+    )
   }
 ];

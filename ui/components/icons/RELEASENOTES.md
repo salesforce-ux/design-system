@@ -4,9 +4,15 @@
 
 <!-- ## [Unreleased] -->
 
+## 2.13.1
+
+### Added
+
+- `slds-current-color` to restricted classes.
+
 ## 2.13.0
 
-- Added the brand expression specific Styling Hooks
+- Enabled styling hooks for icon. See icon's styling hooks overview table for a full listing of the currently available hooks.
 
 ## 2.9.0
 

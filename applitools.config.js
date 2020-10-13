@@ -24,6 +24,7 @@ module.exports = {
   browser: [
     { width: resolution.width, height: resolution.height, name: 'firefox' },
     { width: resolution.width, height: resolution.height, name: 'chrome' },
+    { width: resolution.width, height: resolution.height, name: 'safari' },
     // {
     //   deviceName: 'iPhone X',
     //   screenOrientation: 'portrait',
@@ -34,7 +35,7 @@ module.exports = {
     //   screenOrientation: 'landscape',
     //   name: 'chrome' // optional, just to make it explicit this is browser emulation and not a real device. Only chrome is supported for device emulation.
     // },
-    // { width: resolution.width, height: resolution.height, name: 'ie11' },
-    { width: resolution.width, height: resolution.height, name: 'edge' }
+    { width: resolution.width, height: resolution.height, name: 'ie11' },
+    { width: resolution.width, height: resolution.height, name: 'edgechromium' }
   ]
 };

@@ -20,7 +20,7 @@
   font-size: var(--sds-c-badge-font-size, $font-size-2);
   font-weight: $font-weight-bold;
   line-height: var(--sds-c-badge-line-height, normal);
-  color: var(--sds-c-badge-color-text, $color-text-default);
+  color: var(--sds-c-badge-text-color, $color-text-default);
   white-space: nowrap;
   display: inline-flex;
   align-items: center;
@@ -47,7 +47,7 @@
   background-color: var(--sds-c-badge-inverse-color-background, $badge-color-background-inverse);
 
   // @todo re-evaluate Styling Hooks reassignment
-  color: var(--sds-c-badge-inverse-color-text, $color-text-inverse);
+  color: var(--sds-c-badge-inverse-text-color, $color-text-inverse);
 }
 
 /**

@@ -1,12 +1,11 @@
 import CodeView from "../../../shared/components/CodeView";
 import CodeBlock from "../../../shared/components/CodeBlock";
 import Example from "../../../shared/components/Example";
-import Alert from "./";
 import ButtonIcon from "../button-icons/";
 import { UtilityIcon } from "../icons/base/example";
 import Blockquote from "../../../shared/components/Blockquote";
-import StyleApiTable from "../../../shared/components/StyleApiTable";
 import { getDisplayElementById } from "../../shared/helpers";
+import StylingHooksTable from "../../../shared/components/StylingHooksTable";
 import * as Base from "./base/example";
 
 <div className="doc lead">
@@ -18,10 +17,6 @@ import * as Base from "./base/example";
 <CodeView exampleOnly>{Base.default}</CodeView>
 
 ## About Alert
-
-### Styling Hooks
-
-<StyleApiTable name="alert" type="component" />
 
 ### Accessibility
 
@@ -68,3 +63,7 @@ Use the error variant when you need to alert the user about an error in the syst
 Use the offline alert to let the user know that they are not connected to the internet.
 
 <CodeView>{getDisplayElementById(Base.states, "offline")}</CodeView>
+
+## Styling Hooks Overview
+
+<StylingHooksTable name="alert" type="component" />

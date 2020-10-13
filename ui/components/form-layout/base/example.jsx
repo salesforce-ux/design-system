@@ -29,7 +29,7 @@ export const Form = props => (
     </FormElement>
     <fieldset className="slds-form-element">
       <legend className="slds-form-element__legend slds-form-element__label">
-        Checkbox Group label
+        Checkbox Group Label
       </legend>
       <div className="slds-form-element__control">
         <Checkbox label="All opportunities owned by you" name="default" />
@@ -41,11 +41,11 @@ export const Form = props => (
     </fieldset>
     <fieldset className="slds-form-element">
       <legend className="slds-form-element__legend slds-form-element__label">
-        Radio Group label
+        Radio Group Label
       </legend>
       <div className="slds-form-element__control">
-        <Radio label="Lead Generation" name="options" />
-        <Radio label="Education Leads" name="options" />
+        <Radio label="Lead generation" name="options" />
+        <Radio label="Education leads" name="options" />
       </div>
     </fieldset>
   </div>

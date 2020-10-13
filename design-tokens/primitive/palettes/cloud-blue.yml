@@ -1,0 +1,65 @@
+# Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+# Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+global:
+  type: color
+  category: color
+  cssProperties:
+  - background-color
+  - 'border*color'
+  - box-shadow
+  - fill
+  - color
+  scope: global
+  primitive: true
+imports:
+- ../../aliases/color-palettes.yml
+props:
+  PALETTE_CLOUD_BLUE_10:
+    value: '{!PALETTE_CLOUD_BLUE_10}'
+    comment: "Cloud Blue 10"
+    release: 2.14.0
+  PALETTE_CLOUD_BLUE_15:
+    value: '{!PALETTE_CLOUD_BLUE_15}'
+    comment: "Cloud Blue 15"
+    release: 2.14.0
+  PALETTE_CLOUD_BLUE_20:
+    value: '{!PALETTE_CLOUD_BLUE_20}'
+    comment: "Cloud Blue 20"
+    release: 2.14.0
+  PALETTE_CLOUD_BLUE_30:
+    value: '{!PALETTE_CLOUD_BLUE_30}'
+    comment: "Cloud Blue 30"
+    release: 2.14.0
+  PALETTE_CLOUD_BLUE_40:
+    value: '{!PALETTE_CLOUD_BLUE_40}'
+    comment: "Cloud Blue 40"
+    release: 2.14.0
+  PALETTE_CLOUD_BLUE_50:
+    value: '{!PALETTE_CLOUD_BLUE_50}'
+    comment: "Cloud Blue 50"
+    release: 2.14.0
+  PALETTE_CLOUD_BLUE_60:
+    value: '{!PALETTE_CLOUD_BLUE_60}'
+    comment: "Cloud Blue 60"
+    release: 2.14.0
+  PALETTE_CLOUD_BLUE_65:
+    value: '{!PALETTE_CLOUD_BLUE_65}'
+    comment: "Cloud Blue 65"
+    release: 2.14.0
+  PALETTE_CLOUD_BLUE_70:
+    value: '{!PALETTE_CLOUD_BLUE_70}'
+    comment: "Cloud Blue 70"
+    release: 2.14.0
+  PALETTE_CLOUD_BLUE_80:
+    value: '{!PALETTE_CLOUD_BLUE_80}'
+    comment: "Cloud Blue 80"
+    release: 2.14.0
+  PALETTE_CLOUD_BLUE_90:
+    value: '{!PALETTE_CLOUD_BLUE_90}'
+    comment: "Cloud Blue 90"
+    release: 2.14.0
+  PALETTE_CLOUD_BLUE_95:
+    value: '{!PALETTE_CLOUD_BLUE_95}'
+    comment: "Cloud Blue 95"
+    release: 2.14.0

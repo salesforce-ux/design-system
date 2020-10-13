@@ -12,7 +12,7 @@ export const Context = props => (
 
 export default (
   <MapContainer
-    heading="Salesforce Locations In United States (9)"
+    heading="Salesforce locations in United States (9)"
     multipleCoordinates
   />
 );
@@ -23,7 +23,7 @@ export let states = [
     label: 'First Coordinate Selected',
     element: (
       <MapContainer
-        heading="Salesforce Locations In United States (9)"
+        heading="Salesforce locations in United States (9)"
         multipleCoordinates
         selection="0"
       />
@@ -34,7 +34,7 @@ export let states = [
     label: 'Second Coordinate Selected',
     element: (
       <MapContainer
-        heading="Salesforce Locations In United States (9)"
+        heading="Salesforce locations in United States (9)"
         multipleCoordinates
         selection="1"
       />
@@ -59,7 +59,7 @@ export let examples = [
     element: (
       <React.Fragment>
         <Map
-          heading="Salesforce Locations In United States (9)"
+          heading="Salesforce locations in United States (9)"
           multipleCoordinates
           footer
         />

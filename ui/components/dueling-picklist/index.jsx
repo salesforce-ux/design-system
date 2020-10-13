@@ -16,6 +16,8 @@ import {
 // Partial(s)
 /// ////////////////////////////////////////
 
+const exampleInteractionText = "Press space bar when on an item, to move it within the list. Cmd/Ctrl plus left and right arrow keys, to move items between lists.";
+
 export const MultiSelect = props => {
   return (
     <SimpleFormElementWrapper
@@ -260,8 +262,7 @@ Demo.propTypes = {
 
 export const DefaultSnapShot = {
   liveRegionText: '',
-  optionDragLabel:
-    'Press space bar when on an item, to move it within the list. CMD plus left and right arrow keys, to move items between lists.',
+  optionDragLabel: exampleInteractionText,
   selectionGroups: [
     {
       label: 'First Category',
@@ -314,8 +315,7 @@ export const DefaultSnapShot = {
 
 export const DisabledSnapShot = {
   liveRegionText: '',
-  optionDragLabel:
-    'Press space bar when on an item, to move it within the list. CMD plus left and right arrow keys, to move items between lists.',
+  optionDragLabel: exampleInteractionText,
   selectionGroups: [
     {
       label: 'First Category',
@@ -368,8 +368,7 @@ export const DisabledSnapShot = {
 
 export const LockedSnapShot = {
   liveRegionText: '',
-  optionDragLabel:
-    'Press space bar when on an item, to move it within the list. CMD plus left and right arrow keys, to move items between lists. Required items must remain in the second category.',
+  optionDragLabel: exampleInteractionText,
   selectionGroups: [
     {
       label: 'First Category',
@@ -423,8 +422,7 @@ export const LockedSnapShot = {
 
 export const SelectedSnapShot = {
   liveRegionText: '',
-  optionDragLabel:
-    'Press space bar when on an item, to move it within the list. CMD plus left and right arrow keys, to move items between lists.',
+  optionDragLabel: exampleInteractionText,
   selectionGroups: [
     {
       label: 'First Category',
@@ -477,8 +475,7 @@ export const SelectedSnapShot = {
 
 export const MultiSelectedSnapShot = {
   liveRegionText: '',
-  optionDragLabel:
-    'Press space bar when on an item, to move it within the list. CMD plus left and right arrow keys, to move items between lists.',
+  optionDragLabel: exampleInteractionText,
   selectionGroups: [
     {
       label: 'First Category',
@@ -638,8 +635,7 @@ export const MovedInSnapShot = {
 
 export const DroppedSnapShot = {
   liveRegionText: 'Option 5: final position 1 of 2.',
-  optionDragLabel:
-    'Press space bar when on an item, to move it within the list. CMD plus left and right arrow keys, to move items between lists.',
+  optionDragLabel: exampleInteractionText,
   selectionGroups: [
     {
       label: 'First Category',
@@ -692,8 +688,7 @@ export const DroppedSnapShot = {
 
 export const MoveToSnapShot = {
   liveRegionText: 'Option 3: Moved to Second Category.',
-  optionDragLabel:
-    'Press space bar when on an item, to move it within the list. CMD plus left and right arrow keys, to move items between lists.',
+  optionDragLabel: exampleInteractionText,
   selectionGroups: [
     {
       label: 'First Category',
@@ -746,8 +741,7 @@ export const MoveToSnapShot = {
 
 export const CountriesSnapshot = {
   liveRegionText: '',
-  optionDragLabel:
-    'Press space bar when on an item, to move it within the list. CMD plus left and right arrow keys, to move items between lists.',
+  optionDragLabel: exampleInteractionText,
   selectionGroups: [
     {
       label: 'Available Languages',
@@ -806,8 +800,7 @@ export const CountriesSnapshot = {
 
 export const SelectedCountriesSnapshot = {
   liveRegionText: '',
-  optionDragLabel:
-    'Press space bar when on an item, to move it within the list. CMD plus left and right arrow keys, to move items between lists.',
+  optionDragLabel: exampleInteractionText,
   selectionGroups: [
     {
       label: 'Available Languages',
@@ -866,8 +859,7 @@ export const SelectedCountriesSnapshot = {
 
 export const MultipleSelectedCountriesSnapshot = {
   liveRegionText: '',
-  optionDragLabel:
-    'Press space bar when on an item, to move it within the list. CMD plus left and right arrow keys, to move items between lists.',
+  optionDragLabel: exampleInteractionText,
   selectionGroups: [
     {
       label: 'Available Languages',
@@ -926,8 +918,7 @@ export const MultipleSelectedCountriesSnapshot = {
 
 export const DroppedCountriesSnapshot = {
   liveRegionText: 'Arabic and German: Moved to Selected Languages.',
-  optionDragLabel:
-    'Press space bar when on an item, to move it within the list. CMD plus left and right arrow keys, to move items between lists.',
+  optionDragLabel: exampleInteractionText,
   selectionGroups: [
     {
       label: 'Available Languages',

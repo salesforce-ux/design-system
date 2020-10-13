@@ -3,12 +3,17 @@
 # Badges Release Notes
 
 <!-- ## [Unreleased] -->
+## 2.13.3
+
+### Changed
+
+- Treat Styling Hooks targeting text color as an element, previously referred to as a property. e.g. `--sds-c-badge-color-text` => `--sds-c-badge-text-color`.
 
 ## 2.13.0
 
 ### Added
 
-- Added the brand expression specific Styling Hooks to Badge.
+- Enabled styling hooks for badge. See badge's styling hooks overview table for a full listing of the currently available hooks.
 
 ### Fixed
 

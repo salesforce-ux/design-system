@@ -32,7 +32,7 @@ import { MobileNotice, MobileBlurb } from '../../shared/doc-text';
   >
     <Input
       id="form-element-showcase-01"
-      placeholder="Placeholder Text"
+      placeholder="Placeholder text…"
       required
     />
   </FormElement>
@@ -80,7 +80,7 @@ Labels must have the `for` attribute applied, and its value must match the ID of
   >
     <Input
       id="form-element-showcase-01"
-      placeholder="Placeholder Text"
+      placeholder="Placeholder text…"
       required
     />
   </FormElement>
@@ -91,7 +91,7 @@ Labels must have the `for` attribute applied, and its value must match the ID of
 <Example title="Form Element - Base">
   <CodeView>
     <FormElement labelContent="Form Label" inputId="form-element-01">
-      <Input id="form-element-01" placeholder="Placeholder Text" />
+      <Input id="form-element-01" placeholder="Placeholder text…" />
     </FormElement>
   </CodeView>
 </Example>
@@ -148,7 +148,7 @@ The button icon is **_required_** to be wrapped in a `<div>` with the class `sld
 
 <CodeView>
   <FormElement labelContent="Status" inputId="form-element-help-01" hasTooltip>
-    <Input id="form-element-help-01" placeholder="Placeholder Text" />
+    <Input id="form-element-help-01" placeholder="Placeholder text…" />
   </FormElement>
 </CodeView>
 
@@ -162,7 +162,7 @@ The button icon is **_required_** to be wrapped in a `<div>` with the class `sld
 
 <CodeView frameOnly>
   <FormElement labelContent="Status" inputId="form-element-help-01m" hasTooltip>
-    <Input id="form-element-help-01m" placeholder="Placeholder Text" />
+    <Input id="form-element-help-01m" placeholder="Placeholder text…" />
   </FormElement>
 </CodeView>
 
@@ -181,7 +181,7 @@ The help text icon uses a tooltip to show the help text information. Please see 
   >
     <Input
       id="tooltip-showing-form-element-help-01"
-      placeholder="Placeholder Text"
+      placeholder="Placeholder text…"
     />
   </FormElement>
 </CodeView>
@@ -202,7 +202,7 @@ The `<input>` element should also have the HTML attribute `required` or `require
 
 <CodeView>
   <FormElement labelContent="Form Label" inputId="form-element-03" isRequired>
-    <Input id="form-element-03" placeholder="Placeholder Text" required />
+    <Input id="form-element-03" placeholder="Placeholder text…" required />
   </FormElement>
 </CodeView>
 
@@ -232,11 +232,11 @@ If an error has occurred while submitting a form, the form element with an error
     inputId="form-element-05"
     errorId="form-error-01"
     isRequired
-    inlineMessage="This field is required"
+    inlineMessage="Enter a value."
   >
     <Input
       id="form-element-05"
-      placeholder="Placeholder Text"
+      placeholder="Placeholder text…"
       required
       aria-describedby="form-error-01"
     />
@@ -307,7 +307,7 @@ When using `slds-form-element_horizontal`, you might find that the 33/66% distri
           >
             <Input
               id="single-form-element-id-02"
-              placeholder="Placeholder Text"
+              placeholder="Placeholder text…"
             />
           </FormElement>
         </RecordDetailItem>
@@ -320,7 +320,7 @@ When using `slds-form-element_horizontal`, you might find that the 33/66% distri
           >
             <Input
               id="single-form-element-id-03"
-              placeholder="Placeholder Text"
+              placeholder="Placeholder text…"
             />
           </FormElement>
         </RecordDetailItem>
@@ -336,7 +336,7 @@ When using `slds-form-element_horizontal`, you might find that the 33/66% distri
           >
             <Textarea
               id="single-form-element-id-04"
-              placeholder="Placeholder Text"
+              placeholder="Placeholder text…"
               defaultValue="Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Etiam porta sem malesuada magna mollis euismod."
             />
           </FormElement>
@@ -422,21 +422,6 @@ When you want the form elements inside of your record form to be stacked. Each `
   </CodeView>
 </Example>
 
-<MobileNotice
-  docsLink="#Mobile"
-  header="Mobile context changes"
-  elementName="form elements within a record form with stacked alignment"
-/>
-
-<CodeView frameOnly>
-  <RecordDetail
-    snapshot={Snapshot.ObjectFieldTypes}
-    isViewMode
-    hasInlineEdit
-    direction="stacked"
-  />
-</CodeView>
-
 ##### Horizontal Alignment
 
 By adding the class `slds-form-element_horizontal` to every `slds-form-element`, your form can switch from stacked to left-aligned, horizontal labels in order to reduce vertical space.
@@ -451,21 +436,6 @@ By adding the class `slds-form-element_horizontal` to every `slds-form-element`,
     />
   </CodeView>
 </Example>
-
-<MobileNotice
-  docsLink="#Mobile"
-  header="Mobile context changes"
-  elementName="form elements within a record form with horizontal alignment"
-/>
-
-<CodeView frameOnly>
-  <RecordDetail
-    snapshot={Snapshot.ObjectFieldTypesHorizontal}
-    isViewMode
-    hasInlineEdit
-    direction="horizontal"
-  />
-</CodeView>
 
 #### Edit Mode
 

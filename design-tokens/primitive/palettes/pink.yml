@@ -1,0 +1,65 @@
+# Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+# Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+global:
+  type: color
+  category: color
+  cssProperties:
+  - background-color
+  - 'border*color'
+  - box-shadow
+  - fill
+  - color
+  scope: global
+  primitive: true
+imports:
+- ../../aliases/color-palettes.yml
+props:
+  PALETTE_PINK_10:
+    value: '{!PALETTE_PINK_10}'
+    comment: "Pink 10"
+    release: 2.14.0
+  PALETTE_PINK_15:
+    value: '{!PALETTE_PINK_15}'
+    comment: "Pink 15"
+    release: 2.14.0
+  PALETTE_PINK_20:
+    value: '{!PALETTE_PINK_20}'
+    comment: "Pink 20"
+    release: 2.14.0
+  PALETTE_PINK_30:
+    value: '{!PALETTE_PINK_30}'
+    comment: "Pink 30"
+    release: 2.14.0
+  PALETTE_PINK_40:
+    value: '{!PALETTE_PINK_40}'
+    comment: "Pink 40"
+    release: 2.14.0
+  PALETTE_PINK_50:
+    value: '{!PALETTE_PINK_50}'
+    comment: "Pink 50"
+    release: 2.14.0
+  PALETTE_PINK_60:
+    value: '{!PALETTE_PINK_60}'
+    comment: "Pink 60"
+    release: 2.14.0
+  PALETTE_PINK_65:
+    value: '{!PALETTE_PINK_65}'
+    comment: "Pink 65"
+    release: 2.14.0
+  PALETTE_PINK_70:
+    value: '{!PALETTE_PINK_70}'
+    comment: "Pink 70"
+    release: 2.14.0
+  PALETTE_PINK_80:
+    value: '{!PALETTE_PINK_80}'
+    comment: "Pink 80"
+    release: 2.14.0
+  PALETTE_PINK_90:
+    value: '{!PALETTE_PINK_90}'
+    comment: "Pink 90"
+    release: 2.14.0
+  PALETTE_PINK_95:
+    value: '{!PALETTE_PINK_95}'
+    comment: "Pink 95"
+    release: 2.14.0

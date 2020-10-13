@@ -36,6 +36,15 @@
  */
 .slds-accordion__summary {
   display: flex;
+  margin-top: calc(var(--sds-c-accordion-section-spacing-block-start, #{$spacing-small}) * -1);
+  margin-right: calc(var(--sds-c-accordion-section-spacing-inline-end, #{$spacing-small}) * -1);
+  margin-bottom: calc(var(--sds-c-accordion-section-spacing-block-end, #{$spacing-small}) * -1);
+  margin-left: calc(var(--sds-c-accordion-section-spacing-inline-start, #{$spacing-small}) * -1);
+  padding-top: var(--sds-c-accordion-section-spacing-block-start, $spacing-small);
+  padding-right: var(--sds-c-accordion-section-spacing-inline-end, $spacing-small);
+  padding-bottom: var(--sds-c-accordion-section-spacing-block-end, $spacing-small);
+  padding-left: var(--sds-c-accordion-section-spacing-inline-start, $spacing-small);
+  background-color: var(--sds-c-accordion-summary-color-background, transparent);
 }
 
 /**
@@ -47,6 +56,7 @@
   display: flex;
   flex-grow: 1;
   min-width: 0;
+  color: var(--sds-c-accordion-heading-text-color, $color-text-default);
   font-size: var(--sds-c-accordion-heading-font-size, $var-font-size-5);
   line-height: var(--sds-c-accordion-heading-line-height, $line-height-heading);
 
@@ -66,6 +76,19 @@
   flex-grow: 1;
   align-items: center;
   min-width: 0;
+  margin-top: calc(var(--sds-c-accordion-section-spacing-block-start, #{$spacing-small}) * -1);
+  margin-right: calc(var(--sds-c-accordion-section-spacing-inline-end, #{$spacing-small}) * -1);
+  margin-bottom: calc(var(--sds-c-accordion-section-spacing-block-end, #{$spacing-small}) * -1);
+  margin-left: calc(var(--sds-c-accordion-section-spacing-inline-start, #{$spacing-small}) * -1);
+  padding-top: var(--sds-c-accordion-section-spacing-block-start, $spacing-small);
+  padding-right: var(--sds-c-accordion-section-spacing-inline-end, $spacing-small);
+  padding-bottom: var(--sds-c-accordion-section-spacing-block-end, $spacing-small);
+  padding-left: var(--sds-c-accordion-section-spacing-inline-start, $spacing-small);
+
+  &:hover,
+  &:focus {
+    color: var(--sds-c-accordion-heading-text-color-hover, var(--sds-c-button-text-color-hover, $brand-accessible-active));
+  }
 }
 
 /**
@@ -128,7 +151,7 @@
 .slds-is-open {
 
   > .slds-accordion__summary {
-    margin-bottom: $spacing-small;
+    margin-bottom: 0;
 
     .slds-accordion__summary-action-icon {
       transform: rotate(0deg);

@@ -4,167 +4,510 @@
 #
 version: 2.1
 
+orbs:
+  node: circleci/node@4.0.1
+  heroku: circleci/heroku@1.2.2
+  aws-s3: circleci/aws-s3@2.0.0
+  browser-tools: circleci/browser-tools@1.0.1
+
 executors:
   slds-executor:
-    working_directory: ~/repo
     docker:
-      - image: circleci/node:12-browsers
-    resource_class: medium+
-    # parallelism: 4
+      - image: cimg/node:lts
 
 commands:
-  vrt_set-env-vars:
-    description: 'Set VRT/Applitools environment variables'
+  cached-checkout:
+    description: 'Cached checkout'
+    steps:
+      - restore_cache:
+          keys:
+            - source-v1-{{ .Branch }}-{{ .Revision }}
+            - source-v1-{{ .Branch }}-
+            - source-v1-
+
+      - checkout
+
+      - save_cache:
+          key: source-v1-{{ .Branch }}-{{ .Revision }}
+          paths:
+            - ".git"
+
+  build-tokens:
+    description: 'Build tokens'
+    steps:
+      - run:
+          name: 'Build Tokens'
+          command: 'npm run gulp -- generate:tokens:all'
+
+  copy-tokens-to-workspace:
+    description: 'Copy design-tokens to workspace'
+    steps:
+      - run:
+          name: 'Compress design-tokens'
+          command: 'tar -cvf workspace/design-tokens.tar design-tokens/'
+
+  copy-tokens-from-workspace:
+    description: 'Copy design-tokens from workspace'
+    steps:
+      - run:
+          name: 'Decompress design-tokens'
+          command: 'tar -xvf workspace/design-tokens.tar'
+
+  set-heroku-app-name:
+    description: 'Set Heroku app name environment variable'
+    steps:
+      # if on default branch without a tag
+      #   then publish to UPCOMING
+      #
+      # if on default branch and tag of X.X.X-*
+      #   then publish to CORE-MAIN
+      #
+      # if on any branch and tag of X.X.X
+      #   then publish to CORE-PATCH
+      #
+      # All other cases publish to the review app
+      - run:
+          name: Set which app to deploy to on Heroku
+          command: |
+            export CURRENT_DEFAULT_BRANCH=`git remote show origin | grep "HEAD branch" | cut -d ":" -f 2 | xargs`
+            if [[ "${CIRCLE_BRANCH}" = "${CURRENT_DEFAULT_BRANCH}" ]] ; then
+              if [[ "${CIRCLE_TAG}" =~ ^\d+\.\d+\.\d+-.+$ ]] ; then
+                echo "Publishing to CORE-MAIN..."
+                echo 'export HEROKU_APP_NAME=${HEROKU_APP_CORE_MAIN}' >> $BASH_ENV
+              else
+                echo "Publishing to UPCOMING..."
+                echo 'export HEROKU_APP_NAME=${HEROKU_APP_UPCOMING}' >> $BASH_ENV
+              fi
+            elif [[ "${CIRCLE_TAG}" =~ ^\d+\.\d+\.\d+$ ]] ; then
+              echo "Publishing to CORE-PATCH..."
+              echo 'export HEROKU_APP_NAME=${HEROKU_APP_CORE_PATCH}' >> $BASH_ENV
+            else
+              echo "Publishing to pull-request review app..."
+              echo 'export HEROKU_APP_NAME=slds-review-site-pr-${CIRCLE_PULL_REQUEST##*/}' >> $BASH_ENV
+            fi
+
+  prepare-vrt:
+    description: 'Prepare VRT environment'
+    steps:
+      - cached-checkout
+
+      - attach_workspace:
+          at: workspace
+
+      - vrt-set-env-vars
+      - add-applitools
+      - node/install-packages
+      - browser-tools/install-chrome
+      - browser-tools/install-chromedriver
+
+      - run:
+          name: 'Prepare Storybook'
+          command: 'npm run storybook:prepare'
+
+  vrt-set-env-vars:
+    description: 'Set VRT environment variables'
     steps:
       - run:
           name: 'Set environment variables'
           command: |
             echo 'export APPLITOOLS_BATCH_ID=${CIRCLE_SHA1}' >> $BASH_ENV
-            echo 'export SLDS_PR_NUMBER=${CIRCLE_PULL_REQUEST##*/}' >> $BASH_ENV
+            echo 'export APPLITOOLS_BATCH_NAME="PR #${CIRCLE_PULL_REQUEST##*/} (${CIRCLE_USERNAME})"' >> $BASH_ENV
+            echo 'export PR_NUMBER=${CIRCLE_PULL_REQUEST##*/}' >> $BASH_ENV
             echo 'export APPLITOOLS_DONT_CLOSE_BATCHES="true"' >> $BASH_ENV
             echo 'export APPLITOOLS_BATCH_NOTIFY="true"' >> $BASH_ENV
+            echo 'export REVIEW_APP_NAME=slds-storybook-pr-${CIRCLE_PULL_REQUEST##*/}' >> $BASH_ENV
 
-  vrt_close-batch:
+  vrt-close-batch:
     description: 'Notify Applitools that tests have completed'
     steps:
       - run:
           name: 'Applitools: close batch'
           command: |
-            echo 'set server="sfdceyesapi.applitools.com"'
-            echo 'set apikey=$APPLITOOLS_API_KEY'
-            echo 'set batchid=$APPLITOOLS_BATCH_ID'
-            echo 'set url="https://$server/api/sessions/batches/$batchid/close/bypointerid/?apiKey=$apikey'
-            echo 'curl --request DELETE --dump-header - $url'
+            export GITHUB_SERVER=github.com
+            url="https://salesforceuxeyesapi.applitools.com/api/externals/github/servers/${GITHUB_SERVER}/commit/${CIRCLE_SHA1}/complete?apiKey=${APPLITOOLS_API_KEY}"
+            curl -X POST $url -H "Content-Type: application/json" --data "{'serverId': '${GITHUB_SERVER}', 'commitSha': '${CIRCLE_SHA1}'}" -v -L
 
-  prepare-storybook:
-    description: 'Runs storybook:prepare script to generate data needed for Storybook'
+  add-applitools:
+    description: 'Add Applitools eyes-storybook module'
     steps:
       - run:
-          name: 'storybook:prepare'
-          command: 'npm run storybook:prepare'
+          name: Add Applitools eyes-storybook module
+          command: 'npm i @applitools/eyes-storybook@latest --save-dev --package-lock-only'
 
-  copy-tokens:
-    description: 'Copy design-tokens/dist from workspace'
+  launch-static-storybook:
+    description: 'Launch local static Storybook server'
     steps:
+      - attach_workspace:
+          at: workspace
       - run:
-          name: 'Copy design-tokens/dist workspace files'
-          command: 'cp -ar workspace/design-tokens-dist design-tokens/dist'
+          name: Decompress Storybook archive
+          command: 'tar -xvf workspace/storybook.tar.gz'
+      - run:
+          name: Start server
+          command: 'npx http-server .out'
+          background: true
+      - run:
+          name: Poll until server is up
+          shell: /bin/sh
+          command: 'curl --connect-timeout 2 --max-time 2 --retry 50 --retry-delay 0 --retry-max-time 300 --retry-connrefused --ipv4 -q "http://localhost:8080"'
 
 jobs:
-  build:
+  # Build SLDS styles
+  prepare:
     executor: slds-executor
+    resource_class: small
 
     steps:
-      - checkout
+      - cached-checkout
 
       - run: mkdir -p workspace
 
-      # Download and cache dependencies
-      - restore_cache:
-          keys:
-            - dependencies-{{ checksum "package.json" }}
+      - node/install-packages
+
+      # Gulp tasks (need to clean-up and not run through `npm run`)
+      - build-tokens
+      - copy-tokens-to-workspace
 
       - run:
-          name: npm-install
-          command: 'npm install'
-
-      - save_cache:
-          paths:
-            - node_modules
-          key: dependencies-{{ checksum "package.json" }}
+          name: Compile styles
+          command: 'npm run gulp -- styles'
 
       - run:
-          name: 'Build Tokens'
-          command: 'npm run gulp -- generate:tokens:all'
+          name: 'Compress styles'
+          command: 'tar -cvf workspace/styles.tar assets/styles/'
 
       - run:
-          name: 'Copy design-tokens/dist to workspace'
-          command: 'cp -ar design-tokens/dist workspace/design-tokens-dist'
+          name: 'Compress generated metadata'
+          command: 'tar -cvf workspace/metadata.tar .generated/metadata/'
 
-      # Persist the specified paths (workspace/echo-output) into the workspace for use in downstream job.
       - persist_to_workspace:
-          # Must be an absolute path, or relative path from working_directory. This is a directory on the container which is
-          # taken to be the root directory of the workspace.
           root: workspace
-          # Must be relative path from root
           paths:
-            - design-tokens-dist
+            - design-tokens.tar
+            - styles.tar
+            - metadata.tar
 
-  applitools:
+  # Build SLDS .dist
+  framework-build:
     executor: slds-executor
+    resource_class: xlarge
+    # parallelism: 4
 
     steps:
-      - checkout
+      - cached-checkout
 
       - attach_workspace:
-          # Must be absolute path or relative path from working_directory
           at: workspace
 
-      - vrt_set-env-vars
-      - copy-tokens
+      - copy-tokens-from-workspace
 
-      # Download and cache dependencies
-      - restore_cache:
-          keys:
-            - dependencies-{{ checksum "package.json" }}
-            # fallback to using the latest cache if no exact match is found
-            - dependencies-
+      - run:
+          name: 'Decompress styles'
+          command: 'tar -xvf workspace/styles.tar'
 
-      - prepare-storybook
+      - run:
+          name: 'Decompress metadata'
+          command: 'tar -xvf workspace/metadata.tar'
+
+      - node/install-packages
+
+      - run:
+          name: 'Install rsync'
+          command: 'sudo apt-get update && sudo apt-get install rsync'
+
+      # .dist generation process
+      - run:
+          name: Copy root files
+          command: |
+              mkdir .dist
+              cp package.json README-dist.md RELEASENOTES* .dist/
+      - run:
+          name: Copy Sass files
+          command: |
+              mkdir .dist/scss
+              rsync -rRmv --include '*.scss' --exclude '*.*' ui/./ .dist/scss/
+              cp assets/licenses/License-for-Sass.txt .dist/scss/
+      - run:
+          name: Copy Icon files
+          command: |
+              mkdir -p .dist/assets/icons
+              cp -r node_modules/@salesforce-ux/icons/dist/salesforce-lightning-design-system-icons/ .dist/assets/icons/
+              cp node_modules/@salesforce-ux/icons/dist/ui.icons.json .dist/
+      - run:
+          name: Copy Font files
+          command: |
+              mkdir .dist/assets/fonts
+              cp -r assets/fonts/ .dist/assets/fonts/
+              cp assets/licenses/License-for-font.txt .dist/assets/fonts/
+      - run:
+          name: Copy Image files
+          command: |
+              mkdir .dist/assets/images
+              cp -r assets/images/ .dist/assets/images/
+              cp assets/licenses/License-for-images.txt .dist/assets/images/
+      - run:
+          name: Copy design token files
+          command: |
+              cp -r design-tokens/ .dist/
+              rsync -rRmv --include '*.yml' --exclude '*.*' ui/./components/**/tokens/ .dist/ui/
+      - run:
+          name: Copy Styling Hooks metadata
+          command: |
+              mkdir .dist/metadata
+              cp -r .generated/metadata/ .dist/
+
+      #
+      - run:
+          name: 'dist:sass'
+          command: 'npm run gulp -- dist:sass'
+
+      # Version and build info injection
+      - run:
+          name: Add version block
+          command: 'npm run gulp -- dist:versionBlock'
+      - run:
+          name: Add version inline
+          command: 'npm run gulp -- dist:versionInline'
+      - run:
+          name: Add build info
+          command: 'npm run gulp -- dist:buildInfo'
+      - run:
+          name: Generate releaseable package.json
+          command: 'npm run gulp -- dist:packageJson'
+
+      #
+      - run:
+          name: Minify CSS
+          command: 'npm run gulp -- dist:minifyCss'
+
+      - run:
+          name: Generate UI library
+          command: |
+            npm run gulp -- dist:writeUI
+            npm run gulp -- dist:writeLibrary
+
+      - run:
+          name: Delete .dist/README-dist.md
+          command: 'rm .dist/README-dist.md'
+
+      ####
+      - run:
+          name: Compress .dist
+          command: |
+            tar -cvf workspace/design-system-dist.tar .dist/
+            cd .dist && zip -r dist . && mv dist.zip ../workspace/ && cd ..
+
+      - persist_to_workspace:
+          root: workspace
+          paths:
+            - design-system-dist.tar
+            - dist.zip
+
+  # Publish to S3 & trigger database update
+  populate-database:
+    executor: slds-executor
+    resource_class: small
+
+    steps:
+      - attach_workspace:
+          at: workspace
+
+      - aws-s3/copy:
+          from: workspace/dist.zip
+          to: 's3://sldsbuilds/design-system/${CIRCLE_SHA1}/'
+
+      - run:
+          name: Trigger database update via API
+          command: |
+            export VERSION_FROM_TAG=$([[ ${CIRCLE_TAG} -eq "v" ]] && echo ${CIRCLE_TAG:1:20} || echo ${CIRCLE_TAG})
+            curl --location --request POST 'https://api-load.lightningdesignsystem.com/reload?token=${DSE_API_LOAD_TOKEN}' \
+            --header 'Content-Type: application/json' \
+            --data-raw '{
+                "sha": "${CIRCLE_SHA1}",
+                "version": "${VERSION_FROM_TAG}"
+            }'
+
+  # Build static Storybook
+  build-storybook:
+    executor: slds-executor
+    resource_class: medium+
+
+    steps:
+      - cached-checkout
+      - attach_workspace:
+          at: workspace
+      - copy-tokens-from-workspace
+      - node/install-packages
+
+      - run:
+          name: Build static Storybook
+          command: 'npm run storybook:build'
+
+      - run:
+          name: Archive static Storybook
+          command: 'tar -czvf workspace/storybook.tar.gz .out/ Procfile composer.json'
+
+      - persist_to_workspace:
+          root: workspace
+          paths:
+            - storybook.tar.gz
+
+  # Publish Storybook to Heroku review app
+  publish-pr-storybook:
+    executor: slds-executor
+    resource_class: small
+
+    steps:
+      - attach_workspace:
+          at: workspace
+
+      - vrt-set-env-vars
+
+      # Heroku
+      - heroku/install
+      - run:
+          name: 'Install Heroku Build CLI plugin'
+          command: 'heroku plugins:install heroku-builds'
+
+      - run:
+          name: 'Deploy to Heroku Review App'
+          command: |
+            heroku buildpacks -a ${REVIEW_APP_NAME} | grep "heroku/php" || heroku buildpacks:set heroku/php -a ${REVIEW_APP_NAME}
+            heroku builds:create --source-tar workspace/storybook.tar.gz -a ${REVIEW_APP_NAME}
+
+  # Build & publish SLDS review site for pull-request
+  publish-pr-site:
+    executor: slds-executor
+    resource_class: small
+
+    steps:
+      - add_ssh_keys:
+          fingerprints:
+            - "20:aa:56:b6:f4:c9:f7:b9:9e:04:24:61:0c:b0:80:65"
+
+      - run:
+          name: Checkout design-system-site
+          command: |
+            mkdir -p ~/.ssh
+            ssh-keyscan github.com >> ~/.ssh/known_hosts
+            git clone git@github.com:salesforce-ux/design-system-site.git .
+
+      - attach_workspace:
+          at: workspace
+
+      - run:
+          name: 'Decompress SLDS .dist'
+          command: |
+            mkdir -p .slds
+            tar -xvf workspace/design-system-dist.tar --directory .slds
+
+      - node/install-packages
+
+      - run:
+          name: 'Build static site'
+          command: 'npm run build'
+          environment:
+            SLDS__FRAMEWORK__PATH: .slds/.dist/
+
+      # Heroku
+      - heroku/install
+      - run:
+          name: 'Install Heroku Build CLI plugin'
+          command: 'heroku plugins:install heroku-builds'
+
+      - run:
+          name: 'Generate site tarball'
+          command: |
+            echo '{}' > composer.json
+            echo 'web: vendor/bin/heroku-php-nginx .www' > Procfile
+            tar -czvf site-next.tar.gz .www/ Procfile composer.json
+
+      - set-heroku-app-name
+
+      - run:
+          name: 'Deploy to Heroku app'
+          command: 'heroku builds:create --source-tar site-next.tar.gz -a ${HEROKU_APP_NAME}'
+
+  #
+  vrt-desktop:
+    executor: slds-executor
+    resource_class: large
+
+    steps:
+      - prepare-vrt
 
       # run Applitools tests!
       - run:
           name: Applitools
-          command: 'npx eyes-storybook'
+          command: 'npx eyes-storybook' # -u https://${REVIEW_APP_NAME}.herokuapp.com
+          no_output_timeout: 20m
 
-  applitools-mobile:
+  vrt-mobile:
     executor: slds-executor
+    resource_class: large
 
     steps:
-      - checkout
-
-      - attach_workspace:
-          # Must be absolute path or relative path from working_directory
-          at: workspace
-
-      - vrt_set-env-vars
-      - copy-tokens
-
-      # Download and cache dependencies
-      - restore_cache:
-          keys:
-            - dependencies-{{ checksum "package.json" }}
-            # fallback to using the latest cache if no exact match is found
-            - dependencies-
-
-      - prepare-storybook
+      - prepare-vrt
 
       # run Applitools tests!
       - run:
           name: Applitools (mobile)
-          command: 'STORYBOOK_STORIES_TYPE=mobile npx eyes-storybook --conf applitools.mobile.config.js'
+          command: 'STORYBOOK_STORIES_TYPE=mobile npx eyes-storybook --conf applitools.mobile.config.js' #  -u https://${REVIEW_APP_NAME}.herokuapp.com
+          no_output_timeout: 20m
 
-  applitools-close-batch:
+  vrt-close:
     executor: slds-executor
+    resource_class: small
 
     steps:
-      - vrt_close-batch
+      - vrt-close-batch
 
 workflows:
   version: 2
-  build-and-test:
+  CI:
     jobs:
-      - build
-      - applitools:
-          context: slds-api-keys
+      - prepare
+      - build-storybook:
+          # do not run for main version branches
+          filters:
+            branches:
+              ignore: /^\d{3}-(summer|spring|winter)-\d{2}$/
           requires:
-            - build
-      - applitools-mobile:
-          context: slds-api-keys
+            - prepare
+      - publish-pr-storybook:
           requires:
-            - build
-      - applitools-close-batch:
-          context: slds-api-keys
+            - build-storybook
+      - framework-build:
           requires:
-            - applitools
-            - applitools-mobile
+            - prepare
+      - publish-pr-site:
+          requires:
+            - framework-build
+      - populate-database:
+          context: ux-eng-keys
+          requires:
+            - framework-build
+          # only on the main version branches with a public release tag (X.X.X)
+          filters:
+            tags:
+              only: /^\d+\.\d+\.\d+$/
+            branches:
+              only: /^\d{3}-(summer|spring|winter)-\d{2}$/
+      - vrt-desktop:
+          context: ux-eng-keys
+          # do not run for main version branches
+          filters:
+            branches:
+              ignore: /^\d{3}-(summer|spring|winter)-\d{2}$/
+      # - vrt-mobile:
+      #     context: ux-eng-keys
+      #     # do not run for main version branches
+      #     filters:
+      #       branches:
+      #         ignore: /^\d{3}-(summer|spring|winter)-\d{2}$/
+      - vrt-close:
+          context: ux-eng-keys
+          requires:
+            - vrt-desktop
+            # - vrt-mobile
+

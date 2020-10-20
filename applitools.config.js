@@ -1,41 +1,46 @@
-const resolution = { width: 1366, height: 768 };
+const prompt = require('prompt-sync')({sigint: true});
+const branch = require('git-branch');
+
+const resolution = { width: 1024, height: 768 };
+const currentBranch = branch.sync();
 
 module.exports = {
-  appName: 'SLDS (design-system-internal) [V2]',
-  envName: 'version 2',
-  // batchId: process.env.APPLITOOLS_BATCH_ID,
-  batchName: process.env.CIRCLECI
-    ? `PR #${process.env.SLDS_PR_NUMBER}`
-    : 'Stand-alone',
-  showLogs: true,
-  saveDebugData: false,
+  appName: 'SLDS',
+  matchLevel: 'Strict',
+  ignoreDisplacements: true,
+  accessibilityValidation: {
+    level: 'AA',
+    guidelinesVersion: 'WCAG_2_0'
+  },
+  properties: [
+    { name: 'Group', value: 'desktop' }
+  ],
+  batchName: process.env.CI
+        ? undefined
+        : prompt(`Please provide a batch name for this run: `) + ` (${process.env.LOGNAME})`,
+  branchName: process.env.CI
+        ? undefined
+        : `localRun/${process.env.LOGNAME}/${currentBranch}`,
+  parentBranchName: process.env.CI
+        ? undefined
+        : `localRun/${currentBranch}`,
+  showLogs: process.env.CI,
+  // saveDebugData: false,
   exitcode: false,
   concurrency: 100,
-  serverUrl: 'https://sfdceyesapi.applitools.com',
+  serverUrl: 'https://salesforceuxeyesapi.applitools.com',
   include: ({ name, kind, parameters }) => {
     return /^Kitchen Sink/.test(name);
   },
-  // storybookConfigDir: `.storybook-v3`,
-  runInDocker: true,
-  // puppeteerOptions: {
-  //   args: ['--no-sandbox']
-  // },
+  puppeteerOptions: process.env.CIRCLECI
+        ? { executablePath: '/usr/bin/google-chrome' }
+        : undefined,
   waitBeforeScreenshot: 250,
   browser: [
     { width: resolution.width, height: resolution.height, name: 'firefox' },
     { width: resolution.width, height: resolution.height, name: 'chrome' },
     { width: resolution.width, height: resolution.height, name: 'safari' },
-    // {
-    //   deviceName: 'iPhone X',
-    //   screenOrientation: 'portrait',
-    //   name: 'chrome' // optional, just to make it explicit this is browser emulation and not a real device. Only chrome is supported for device emulation.
-    // },
-    // {
-    //   deviceName: 'Pixel 2',
-    //   screenOrientation: 'landscape',
-    //   name: 'chrome' // optional, just to make it explicit this is browser emulation and not a real device. Only chrome is supported for device emulation.
-    // },
-    { width: resolution.width, height: resolution.height, name: 'ie11' },
+    // { width: resolution.width, height: resolution.height, name: 'ie11' },
     { width: resolution.width, height: resolution.height, name: 'edgechromium' }
   ]
 };

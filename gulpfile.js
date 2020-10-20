@@ -215,26 +215,12 @@ gulp.task(
     'styles:sassTouchDemo',
     'styles:formFactors',
     'styles:componentCSS',
-    'styles:extractStyleHooks',
-    'styles:test'
+    'styles:extractStyleHooks'
   )
 );
 gulp.task(
   'styles:stats',
   gulp.series('styles', withName('styles:stats')(styles.stats))
-);
-
-/*
- * ==================
- * Storybook
- * ==================
- */
-gulp.task('storybook:prepare:ui', done => {
-  generateUIJson({ suppressOutput: true, callback: done });
-});
-gulp.task(
-  'storybook:prepare',
-  gulp.series('storybook:prepare:ui', 'styles:extractStyleHooks')
 );
 
 /*
@@ -251,11 +237,13 @@ gulp.task('build', gulp.series('clean', 'generate:tokens:all', 'styles'));
  * ==================
  */
 
+gulp.task('dist:clean:before', dist.cleanBefore);
+
 gulp.task(
   'dist:ui-json',
   gulp.series(
     'generate:tokens:all',
-    withName('dist:clean:before')(dist.cleanBefore),
+    'dist:clean:before',
     withName('dist:writeUI')(dist.writeUI),
     withName('dist:clean:after')(dist.cleanAfter)
   )
@@ -324,43 +312,66 @@ gulp.task(
   )
 );
 
+// Circle CI task definitions
+gulp.task('dist:copyRoot', dist.copyRoot);
+gulp.task('dist:copySass', dist.copySass);
+gulp.task('dist:copySassLicense', dist.copySassLicense);
+gulp.task('dist:copyIcons', dist.copyIcons);
+gulp.task('dist:copyIconsMeta', dist.copyIconsMeta);
+gulp.task('dist:copyFonts', dist.copyFonts);
+gulp.task('dist:copyFontsLicense', dist.copyFontsLicense);
+gulp.task('dist:copyImages', dist.copyImages);
+gulp.task('dist:copyImagesLicense', dist.copyImagesLicense);
+gulp.task('dist:copyDesignTokens', dist.copyDesignTokens);
+gulp.task('dist:copyComponentDesignTokens', dist.copyComponentDesignTokens);
+
+gulp.task('dist:copyStylingHooksMetadata', dist.copyStylingHooksMetadata);
+
+gulp.task('dist:versionBlock', dist.versionBlock);
+gulp.task('dist:versionInline', dist.versionInline);
+gulp.task('dist:buildInfo', dist.buildInfo);
+gulp.task('dist:packageJson', dist.packageJson);
+
+gulp.task('dist:minifyCss', dist.minifyCss);
+
+gulp.task('dist:writeUI', dist.writeUI);
+gulp.task('dist:writeLibrary', dist.writeLibrary);
+
 gulp.task(
   'dist',
   gulp.series(
     withName('dist:clean:before')(dist.cleanBefore),
     gulp.parallel(
-      withName('dist:copyRoot')(dist.copyRoot),
-      withName('dist:copySass')(dist.copySass),
-      withName('dist:copySassLicense')(dist.copySassLicense),
-      withName('dist:copyIcons')(dist.copyIcons),
-      withName('dist:copyIconsMeta')(dist.copyIconsMeta),
+      'dist:copyRoot',
+      'dist:copySass',
+      'dist:copySassLicense',
+      'dist:copyIcons',
+      'dist:copyIconsMeta',
       withName('dist:copyIconsSynonyms')(dist.copyIconsSynonyms),
-      withName('dist:copyFonts')(dist.copyFonts),
-      withName('dist:copyFontsLicense')(dist.copyFontsLicense),
-      withName('dist:copyImages')(dist.copyImages),
-      withName('dist:copyImagesLicense')(dist.copyImagesLicense),
+      'dist:copyFonts',
+      'dist:copyFontsLicense',
+      'dist:copyImages',
+      'dist:copyImagesLicense',
       withName('dist:copyComponentReleaseNotes')(
         dist.copyComponentReleaseNotes
       ),
       withName('dist:copyUtilityReleaseNotes')(dist.copyUtilityReleaseNotes),
       withName('dist:copySwatches')(dist.copySwatches),
-      withName('dist:copyDesignTokens')(dist.copyDesignTokens),
-      withName('dist:copyComponentDesignTokens')(
-        dist.copyComponentDesignTokens
-      ),
-      withName('dist:copyStylingHooksMetadata')(dist.copyStylingHooksMetadata)
+      'dist:copyDesignTokens',
+      'dist:copyComponentDesignTokens',
+      'dist:copyStylingHooksMetadata'
     ),
     'dist:sass',
     'dist:sass:sanitized',
     gulp.parallel(
-      withName('dist:versionBlock')(dist.versionBlock),
-      withName('dist:versionInline')(dist.versionInline),
-      withName('dist:buildInfo')(dist.buildInfo),
-      withName('dist:packageJson')(dist.packageJson)
+      'dist:versionBlock',
+      'dist:versionInline',
+      'dist:buildInfo',
+      'dist:packageJson'
     ),
-    withName('dist:minifyCss')(dist.minifyCss),
-    withName('dist:writeUI')(dist.writeUI),
-    withName('dist:writeLibrary')(dist.writeLibrary),
+    'dist:minifyCss',
+    'dist:writeUI',
+    'dist:writeLibrary',
     withName('dist:writeTokenComponentMap')(done =>
       dist.writeTokenComponentMap().fork(done, () => done())
     ),
@@ -464,5 +475,27 @@ gulp.task(
     withName('travis:jest')(travis.jest),
     'generate:examples:wrapped',
     'lint:examples'
+  )
+);
+
+/*
+ * ==================
+ * Storybook
+ * ==================
+ */
+gulp.task('storybook:prepare:ui', done => {
+  generateUIJson({ suppressOutput: true, callback: done });
+});
+gulp.task(
+  'storybook:prepare',
+  gulp.series(
+    'storybook:prepare:ui',
+    'generate:tokens:all',
+    'styles:extractStyleHooks'
+  ),
+  gulp.parallel(
+    'styles:componentCSS',
+    'dist:copyIcons',
+    'dist:copyFonts'
   )
 );

@@ -1,1 +1,1 @@
-web: npx http-server .out
+web: vendor/bin/heroku-php-nginx .out

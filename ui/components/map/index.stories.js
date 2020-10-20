@@ -32,6 +32,11 @@ storiesOf('Components/Map', module).add(
   {
     docs: {
       page: () => <DocsPage title="Map" Docs={Docs} />
+    },
+    eyes: {
+      ignoreRegions: [
+        { selector: '.slds-map' }
+      ],
     }
   }
 );

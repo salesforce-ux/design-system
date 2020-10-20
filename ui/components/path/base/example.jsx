@@ -1,7 +1,7 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 import React, { Component, Fragment } from 'react';
-import MobileFrame from '../../../../shared/components/MobileFrame';
+import SLDSFrame from '../../../../shared/components/SLDSFrame';
 
 import { Tooltip } from '../../tooltips/base/example';
 
@@ -429,9 +429,9 @@ export const states = [
     id: 'mobile-default',
     label: 'Mobile: default',
     element: (
-      <MobileFrame>
+      <SLDSFrame hideDeviceSelector>
         <PathBase />
-      </MobileFrame>
+      </SLDSFrame>
     )
   }
 ];

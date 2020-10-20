@@ -308,7 +308,7 @@ TokenMaps.removeDataInScss = scssComponentsMap =>
 TokenMaps.sanitizePath = path => path.replace(paths.root, '');
 
 TokenMaps.sanitizeRawToken = token => ({
-  scope: token.scope || 'global',
+  scope: token.scope || '',
   category: token.category,
   comment: token.comment,
   type: token.type,

@@ -42,10 +42,10 @@
   &:focus {
     outline: 0;
     border-color: var(
-      --sds-c-pill-color-border-active,
+      --sds-c-pill-color-border-focus,
       $color-border-input-active
     ); // @todo re-evaluate Styling Hooks reassignment
-    box-shadow: var(--sds-c-pill-shadow-active, $shadow-button-focus);
+    box-shadow: var(--sds-c-pill-shadow-focus, $shadow-button-focus);
   }
 
   a {

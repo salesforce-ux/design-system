@@ -111,7 +111,7 @@
   .slds-modal__title {
     font-weight: var(--sds-c-modal-heading-font-weight, $font-weight-light);
     font-size: var(--sds-c-modal-heading-font-size, $font-size-7);
-    line-height: var(--sds-c-modal-line-height, $line-height-heading);
+    line-height: var(--sds-c-modal-heading-line-height, $line-height-heading);
   }
 
   /**

@@ -3,6 +3,12 @@
 # Pills Release Notes
 
 <!-- ## [Unreleased] -->
+## 2.14.0
+
+### Changed
+
+- Fixed incorrect styling hooks on focus state, suffix is now using `-focus` vs `-active`.
+
 ## 2.13.3
 
 ### Changed

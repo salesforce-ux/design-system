@@ -3,6 +3,11 @@
 # Modals Release Notes
 
 <!-- ## [Unreleased] -->
+## 2.14.0
+
+### Fixed
+
+- Fixed incorrect styling hooks on heading
 
 ## 2.13.3
 

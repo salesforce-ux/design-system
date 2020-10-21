@@ -4,6 +4,13 @@
 ## Release 2.14.0 - Upcoming
 
 ## Components
+### [Accordion](https://www.lightningdesignsystem.com/components/accordion)
+## Added
+- Added Styling Hook for the background color of Accordion headings.
+- Added Styling Hooks for default text color, as well as hover/focus states, of Accordion headings.
+## Changed
+- The Accordion heading button will now take up all available space, allowing for a larger hit target to toggle the Accordion functionality.
+
 ### [Alert](https://www.lightningdesignsystem.com/components/alert)
 #### Changed
 Refactored the component markup to function with or without theme utility classes.
@@ -20,6 +27,14 @@ Refactored the component markup to function with or without theme utility classe
 ### [Input](https://www.lightningdesignsystem.com/components/input)
 #### Added
 - Enabled styling hooks for Inputs. See Input's styling hooks overview table for a full listing of the currently available hooks.
+
+### [Modals](https://www.lightningdesignsystem.com/components/modals)
+#### Fixed
+- Fixed incorrect styling hooks on heading
+
+### [Pills](https://www.lightningdesignsystem.com/components/pills)
+#### Changed
+- Fixed incorrect styling hooks on focus state, suffix is now using `-focus` vs `-active`.
 
 ### [Slider](https://www.lightningdesignsystem.com/components/slider)
 #### Added

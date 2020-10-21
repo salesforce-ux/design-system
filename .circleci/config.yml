@@ -441,6 +441,7 @@ jobs:
             echo "=============================="
             echo ${HEROKU_APP_NAME}
             echo "=============================="
+            heroku buildpacks -a ${HEROKU_APP_NAME} | grep "heroku/php" || heroku buildpacks:set heroku/php -a ${HEROKU_APP_NAME}
             heroku builds:create --source-tar site-next.tar.gz -a ${HEROKU_APP_NAME}
 
   #

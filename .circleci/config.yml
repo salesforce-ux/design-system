@@ -22,8 +22,6 @@ commands:
       - restore_cache:
           keys:
             - source-v1-{{ .Branch }}-{{ .Revision }}
-            - source-v1-{{ .Branch }}-
-            - source-v1-
 
       - checkout
 
@@ -85,6 +83,16 @@ commands:
               echo "Publishing to pull-request review app..."
               echo 'export HEROKU_APP_NAME=slds-review-site-pr-${CIRCLE_PULL_REQUEST##*/}' >> $BASH_ENV
             fi
+            source $BASH_ENV
+            echo $HEROKU_APP_NAME > workspace/heroku-app-name.txt
+
+      - run:
+          name: Show HEROKU_APP_NAME value
+          command: |
+            echo "=============================="
+            echo ${HEROKU_APP_NAME}
+            echo "=============================="
+            cat workspace/heroku-app-name.txt
 
   prepare-vrt:
     description: 'Prepare VRT environment'
@@ -159,8 +167,8 @@ jobs:
 
     steps:
       - cached-checkout
-
       - run: mkdir -p workspace
+      - set-heroku-app-name
 
       - node/install-packages
 
@@ -186,6 +194,7 @@ jobs:
             - design-tokens.tar
             - styles.tar
             - metadata.tar
+            - heroku-app-name.txt
 
   # Build SLDS .dist
   framework-build:
@@ -353,7 +362,7 @@ jobs:
             - storybook.tar.gz
 
   # Publish Storybook to Heroku review app
-  publish-pr-storybook:
+  publish-storybook:
     executor: slds-executor
     resource_class: small
 
@@ -372,11 +381,14 @@ jobs:
       - run:
           name: 'Deploy to Heroku Review App'
           command: |
+            echo "=============================="
+            echo ${REVIEW_APP_NAME}
+            echo "=============================="
             heroku buildpacks -a ${REVIEW_APP_NAME} | grep "heroku/php" || heroku buildpacks:set heroku/php -a ${REVIEW_APP_NAME}
             heroku builds:create --source-tar workspace/storybook.tar.gz -a ${REVIEW_APP_NAME}
 
-  # Build & publish SLDS review site for pull-request
-  publish-pr-site:
+  # Build & publish SLDS site (review app or upcoming/core-main/core-patch)
+  publish-site:
     executor: slds-executor
     resource_class: small
 
@@ -422,11 +434,14 @@ jobs:
             echo 'web: vendor/bin/heroku-php-nginx .www' > Procfile
             tar -czvf site-next.tar.gz .www/ Procfile composer.json
 
-      - set-heroku-app-name
-
       - run:
           name: 'Deploy to Heroku app'
-          command: 'heroku builds:create --source-tar site-next.tar.gz -a ${HEROKU_APP_NAME}'
+          command: |
+            export HEROKU_APP_NAME=$(cat workspace/heroku-app-name.txt)
+            echo "=============================="
+            echo ${HEROKU_APP_NAME}
+            echo "=============================="
+            heroku builds:create --source-tar site-next.tar.gz -a ${HEROKU_APP_NAME}
 
   #
   vrt-desktop:
@@ -474,13 +489,13 @@ workflows:
               ignore: /^\d{3}-(summer|spring|winter)-\d{2}$/
           requires:
             - prepare
-      - publish-pr-storybook:
+      - publish-storybook:
           requires:
             - build-storybook
       - framework-build:
           requires:
             - prepare
-      - publish-pr-site:
+      - publish-site:
           requires:
             - framework-build
       - populate-database:

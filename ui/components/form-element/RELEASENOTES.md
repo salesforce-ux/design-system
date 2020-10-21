@@ -4,6 +4,12 @@
 
 <!-- ## [Unreleased] -->
 
+## 2.13.7
+
+### Changed
+
+- Revert compound form to its existing behavior of not wrapping to prevent unwanted side-effects in existing layouts.
+
 ## 2.13.1
 
 ### Changed

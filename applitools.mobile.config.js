@@ -1,30 +1,46 @@
+const prompt = require('prompt-sync')({sigint: true});
+const branch = require('git-branch');
+
+const currentBranch = branch.sync();
+
 module.exports = {
-  appName: 'SLDS [V2.mobile]',
-  envName: 'V2 - Mobile',
-  // batchId: process.env.APPLITOOLS_BATCH_ID,
-  batchName: process.env.CIRCLECI
-    ? `PR #${process.env.SLDS_PR_NUMBER}`
-    : 'Stand-alone',
-  showLogs: false,
-  saveDebugData: false,
+  appName: 'SLDS',
+  matchLevel: 'Strict',
+  ignoreDisplacements: true,
+  accessibilityValidation: {
+    level: 'AA',
+    guidelinesVersion: 'WCAG_2_0'
+  },
+  properties: [
+    { name: 'Group', value: 'mobile' }
+  ],
+  batchName: process.env.CI
+        ? undefined
+        : prompt(`Please provide a batch name for this run: `) + ` (${process.env.LOGNAME})`,
+  branchName: process.env.CI
+        ? undefined
+        : `localRun/${process.env.LOGNAME}/${currentBranch}`,
+  parentBranchName: process.env.CI
+        ? undefined
+        : `localRun/${currentBranch}`,
+  showLogs: process.env.CI,
+  // saveDebugData: false,
   exitcode: false,
   concurrency: 100,
-  serverUrl: 'https://sfdceyesapi.applitools.com',
+  serverUrl: 'https://salesforceuxeyesapi.applitools.com',
   include: ({ name, kind, parameters }) => {
     return /^Kitchen Sink/.test(name);
   },
-  // storybookConfigDir: `.storybook-v3`,
+  puppeteerOptions: process.env.CIRCLECI
+        ? { executablePath: '/usr/bin/google-chrome' }
+        : undefined,
   waitBeforeScreenshot: 250,
   browser: [
     {
-      deviceName: 'iPhone X',
-      screenOrientation: 'portrait',
-      name: 'chrome' // optional, just to make it explicit this is browser emulation and not a real device. Only chrome is supported for device emulation.
-    },
-    {
-      deviceName: 'Pixel 2',
-      screenOrientation: 'portrait',
-      name: 'chrome' // optional, just to make it explicit this is browser emulation and not a real device. Only chrome is supported for device emulation.
+      iosDeviceInfo: {
+        deviceName: 'iPhone XR',
+        screenOrientation: 'portrait',
+      }
     }
   ]
 };

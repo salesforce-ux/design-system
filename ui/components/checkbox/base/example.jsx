@@ -48,6 +48,7 @@ export let Checkbox = props => {
             ? props.labelId + ' ' + props.groupId
             : null
         }
+        ref={el => el && (el.indeterminate = props.isIndeterminate)}
       />
       <label
         className={classNames('slds-checkbox__label')}
@@ -82,14 +83,19 @@ export let Checkbox = props => {
 // State Constructor(s)
 /// ///////////////////////////////////////////
 
-export let Indeterminate = props => (
-  <FormElement>
-    <Checkbox
-      id="checkbox-indeterminate-01"
-      label="Indeterminate Checkbox Label"
-    />
-  </FormElement>
-);
+export let Indeterminate = props => {
+  const uniqueId = _.uniqueId('checkbox-unique-id-');
+
+  return (
+    <FormElement>
+      <Checkbox
+        id={uniqueId}
+        label="Indeterminate Checkbox Label"
+        isIndeterminate
+      />
+    </FormElement>
+  );
+};
 
 export let Required = props => (
   <FormElement>
@@ -210,6 +216,11 @@ export let states = [
     id: 'checked-and-disabled',
     label: 'Checked and Disabled',
     element: <CheckedDisabled />
+  },
+  {
+    id: 'indeterminate',
+    label: 'Indeterminate',
+    element: <Indeterminate />
   }
 ];
 

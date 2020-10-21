@@ -1,6 +1,8 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
+@import 'deprecate';
+
 /**
  * @summary Initializes checkbox
  *
@@ -26,9 +28,16 @@
     display: inline-block;
     position: relative;
     vertical-align: middle;
-    border: $border-width-thin solid $color-border-input;
-    border-radius: $border-radius-small;
-    background: $color-background-input;
+    // @todo consider shared hooks for inputs
+    border-radius: var(--sds-c-checkbox-radius-border, $border-radius-small);
+    // @todo consider shared hooks for inputs
+    border-width: $border-width-thin;
+    border-style: solid;
+    // @todo consider shared hooks for inputs
+    border-color: var(--sds-c-checkbox-color-border, $color-border-input);
+    // @todo consider shared hooks for inputs
+    background-color: var(--sds-c-checkbox-color-background, $color-background-input);
+    box-shadow: var(--sds-c-checkbox-shadow);
     transition: border $duration-quickly linear, background-color $duration-quickly linear;
   }
 
@@ -63,6 +72,24 @@
     &:checked ~ .slds-checkbox--faux,
     &:checked + .slds-checkbox__label .slds-checkbox_faux,
     &:checked + .slds-checkbox__label .slds-checkbox--faux {
+      /**
+       * @todo re-evaluate Styling Hooks reassignment
+       * @todo consider shared hooks / This shouldn't be required after reassignment is implemented
+       *
+       * Reassignment Workaround
+       *
+       * We want the checked state to have its own hooks but if these hooks are not used, it should
+       * fallback to the base styles. Since reassignments are not currently supported, we have to
+       * put in a workaround to mimic the reassignment behavior. If we don't, properties that
+       * do not inherit (e.g. background-color) will use its initial value if the hook is not defined.
+       *
+       * When reassignments work, this should change to:
+       * --sds-c-checkbox-color-border: var(--sds-c-checkbox-color-border-checked);
+       *
+       * Until reassignment is supported, we mimic it by falling back to the base hook and its fallback
+       */
+      border-color: var(--sds-c-checkbox-color-border-checked, var(--sds-c-checkbox-color-border, $color-border-input));
+      background-color: var(--sds-c-checkbox-color-background-checked, var(--sds-c-checkbox-color-background, $color-background-input));
 
       &:after {
         display: block;
@@ -75,9 +102,10 @@
         /*! @noflip */
         left: 50%;
         transform: translate3d(-50%, -50%, 0) rotate(-45deg);
-        border-bottom: $border-width-thick solid $brand-accessible;
+        border-bottom: $border-width-thick solid var(--sds-c-checkbox-mark-color-foreground, $brand-accessible);
+
         /*! @noflip */
-        border-left: $border-width-thick solid $brand-accessible;
+        border-left: $border-width-thick solid var(--sds-c-checkbox-mark-color-foreground, $brand-accessible);
       }
     }
 
@@ -89,9 +117,10 @@
       ~ .slds-checkbox--faux,
       + .slds-checkbox__label .slds-checkbox_faux,
       + .slds-checkbox__label .slds-checkbox--faux {
-        content: '';
-        border-color: $color-border-input-active;
-        box-shadow: $shadow-button-focus;
+        // @todo re-evaluate Styling Hooks reassignment
+        // @todo consider shared hooks for inputs
+        border-color: var(--sds-c-checkbox-color-border-focus, $color-border-input-active);
+        box-shadow: var(--sds-c-checkbox-shadow-focus, 0 0 3px #0070d2);
       }
 
       &:checked > .slds-checkbox_faux,
@@ -100,9 +129,21 @@
       &:checked ~ .slds-checkbox--faux,
       &:checked + .slds-checkbox__label .slds-checkbox_faux,
       &:checked + .slds-checkbox__label .slds-checkbox--faux {
-        border-color: $color-border-input-active;
-        background-color: $color-background-input;
+        // @todo re-evaluate Styling Hooks reassignment
+        // @todo consider shared hooks for inputs
+        border-color: var(--sds-c-checkbox-color-border-focus, $color-border-input-active);
       }
+    }
+
+    &:indeterminate + .slds-checkbox_faux,
+    &:indeterminate + .slds-checkbox--faux,
+    &:indeterminate ~ .slds-checkbox_faux,
+    &:indeterminate ~ .slds-checkbox--faux,
+    &:indeterminate + .slds-checkbox__label .slds-checkbox_faux,
+    &:indeterminate + .slds-checkbox__label .slds-checkbox--faux {
+      // Reassignment Workaround - See :checked for explanation
+      border-color: var(--sds-c-checkbox-color-border-checked, var(--sds-c-checkbox-color-border, $color-border-input));
+      background-color: var(--sds-c-checkbox-color-background-checked, var(--sds-c-checkbox-color-background, $color-background-input));
     }
 
     &:indeterminate + .slds-checkbox_faux:after,
@@ -115,13 +156,14 @@
       display: block;
       position: absolute;
       top: 50%;
+
       /*! @noflip */
       left: 50%;
       width: $square-icon-x-small-content;
       height: 2px;
-      background: $brand-accessible;
       border: 0;
       transform: translate3d(-50%, -50%, 0);
+      background: var(--sds-c-checkbox-mark-color-foreground, $brand-accessible);;
     }
 
     &[disabled] {
@@ -132,44 +174,16 @@
       ~ .slds-checkbox--faux,
       + .slds-checkbox__label .slds-checkbox_faux,
       + .slds-checkbox__label .slds-checkbox--faux {
-        background-color: $color-background-input-disabled;
+        // @todo consider shared hooks for inputs
         border-color: $color-border-input-disabled;
+        // @todo consider shared hooks for inputs
+        background-color: $color-background-input-disabled;
 
         &:after {
+          // @todo consider shared hooks for inputs
           border-color: $color-gray-8;
         }
       }
-    }
-  }
-
-  /**
-   * @name stacked
-   * @summary stacks label over checkbox
-   * @selector .slds-checkbox_stacked
-   * @restrict .slds-checkbox
-   * @modifier
-   * @group layout
-   * @deprecated
-   */
-  &.slds-checkbox_stacked {
-
-    .slds-checkbox__label {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-    }
-
-    .slds-form-element__label {
-      font-size: $font-size-2;
-    }
-
-    .slds-checkbox_faux {
-      order: 1;
-      margin-bottom: 1px;
-    }
-
-    .slds-required {
-      float: left;
     }
   }
 }
@@ -193,7 +207,6 @@
   &:checked + .slds-checkbox__label .slds-checkbox_faux,
   &:checked + .slds-checkbox__label .slds-checkbox--faux {
     border-color: $color-border-error;
-    background-color: $color-background-input;
 
     &:after {
       border-color: $color-background-error;

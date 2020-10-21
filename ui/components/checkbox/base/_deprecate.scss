@@ -1,0 +1,37 @@
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+   * @name stacked
+   * @summary stacks label over checkbox
+   * @selector .slds-checkbox_stacked
+   * @restrict .slds-checkbox
+   * @modifier
+   * @group layout
+   * @deprecated
+   */
+@include deprecate('4.0.0') {
+  // Needs reasoning in second arg for anyone with historical context - JB
+
+  .slds-checkbox.slds-checkbox_stacked {
+
+    .slds-checkbox__label {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .slds-form-element__label {
+      font-size: $font-size-2;
+    }
+
+    .slds-checkbox_faux {
+      order: 1;
+      margin-bottom: 1px;
+    }
+
+    .slds-required {
+      float: left;
+    }
+  }
+}

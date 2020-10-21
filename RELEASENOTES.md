@@ -20,6 +20,10 @@ Refactored the component markup to function with or without theme utility classe
 - Added Styling Hook for box-shadow
 - Added Styling Hook for block level padding
 
+### [Checkbox](https://www.lightningdesignsystem.com/components/checkbox)
+#### Added
+- Enabled styling hooks for checkbox. See checkbox's styling hooks overview table for a full listing of the currently available hooks.
+
 ### [Form Element](https://www.lightningdesignsystem.com/components/form-element)
 #### Fixed
 - Adjusted space between the form label and the information button icon for Mobile.
@@ -39,10 +43,6 @@ Refactored the component markup to function with or without theme utility classe
 ### [Slider](https://www.lightningdesignsystem.com/components/slider)
 #### Added
 - Enabled styling hooks for slider. See slider's styling hooks overview table for a full listing of the currently available hooks.
-
-## Release 2.13.5 - September 30, 2020
-
-## Release 2.13.4 - September 29, 2020
 
 ## Release 2.13.3 - September 24, 2020
 

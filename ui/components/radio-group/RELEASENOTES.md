@@ -4,6 +4,12 @@
 
 <!-- ## [Unreleased] -->
 
+## 2.14.0
+
+### Added
+
+- Enabled Styling Hooks for Radio Group. See Radio Group's Styling Hooks overview table for a full listing of the currently available hooks.
+
 ## 2.12.3
 
 ### Fixed

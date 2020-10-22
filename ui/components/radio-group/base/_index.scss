@@ -26,9 +26,11 @@
     position: relative;
     flex-shrink: 0;
     vertical-align: middle;
-    border: $border-width-thin solid $color-border-input;
+    border: $border-width-thin solid var(--sds-c-radio-color-border, $color-border-input);
     border-radius: $border-radius-circle;
-    background: $color-background-input;
+    background: none;
+    background-color: var(--sds-c-radio-color-background, $color-background-input);
+    box-shadow: var(--sds-c-radio-shadow);
     transition: border $duration-quickly linear, background-color $duration-quickly linear;
   }
 
@@ -53,8 +55,11 @@
     &:checked ~ .slds-radio--faux,
     &:checked + .slds-radio__label .slds-radio_faux,
     &:checked + .slds-radio__label .slds-radio--faux {
-      background: $color-background-input;
+      border-color: var(--sds-c-radio-color-border-checked, var(--sds-c-radio-color-border, $color-border-input));
+      background: none;
+      background-color: var(--sds-c-radio-color-background-checked, var(--sds-c-radio-color-background, $color-background-input));
 
+      // Radio Button Selected Mark
       &:after {
         @include square(0.5rem);
         content: '';
@@ -65,7 +70,8 @@
         left: 50%;
         transform: translate3d(-50%, -50%, 0);
         border-radius: $border-radius-circle;
-        background: $brand-accessible;
+        background: none;
+        background-color: var(--sds-c-radio-mark-color-foreground, $brand-accessible);
       }
     }
 
@@ -75,8 +81,8 @@
     &:focus ~ .slds-radio--faux,
     &:focus + .slds-radio__label .slds-radio_faux,
     &:focus + .slds-radio__label .slds-radio--faux {
-      border-color: $color-border-input-active;
-      box-shadow: $shadow-button-focus;
+      border-color: var(--sds-c-radio-color-border-focus, $color-border-input-active);
+      box-shadow: var(--sds-c-radio-shadow-focus, $shadow-button-focus);
     }
 
     &[disabled] {
@@ -117,7 +123,8 @@
   &:checked ~ .slds-radio--faux,
   &:checked + .slds-radio__label .slds-radio_faux,
   &:checked + .slds-radio__label .slds-radio--faux {
-    background: $color-background-input;
+    background: none;
+    background-color: var(--sds-c-radio-color-background-checked, var(--sds-c-radio-color-background, $color-background-input));
 
     &:after {
       background: $color-background-error;

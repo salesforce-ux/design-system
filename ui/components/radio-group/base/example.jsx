@@ -2,6 +2,7 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 import React from 'react';
+import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import _ from '../../../shared/helpers';
 import { FormElementControl } from '../../form-element/';
@@ -16,6 +17,11 @@ export let Fieldset = props => (
   </fieldset>
 );
 
+Fieldset.propTypes = {
+  className: PropTypes.string,
+  children: PropTypes.node.isRequired
+}
+
 export let Legend = props => (
   <legend
     className={classNames(
@@ -26,6 +32,11 @@ export let Legend = props => (
     {props.children}
   </legend>
 );
+
+Legend.propTypes = {
+  className: PropTypes.string,
+  children: PropTypes.node.isRequired
+}
 
 export let Radio = props => {
   const uniqueId = _.uniqueId('radio-');
@@ -67,6 +78,20 @@ export let Radio = props => {
     </span>
   );
 };
+
+Radio.propTypes = {
+  className: PropTypes.string,
+  id: PropTypes.string,
+  name: PropTypes.string,
+  disabled: PropTypes.bool,
+  checked: PropTypes.bool,
+  tabIndex: PropTypes.oneOf(['-1', '0']),
+  errorId: PropTypes.string,
+  labelId: PropTypes.string,
+  groupId: PropTypes.string,
+  hideLabel: PropTypes.bool,
+  label: PropTypes.string
+}
 
 /// ///////////////////////////////////////////
 // Export
@@ -171,6 +196,87 @@ export let states = [
           </FormElementControl>
         </Fieldset>
       </div>
+    )
+  }
+];
+
+export const examples = [
+  {
+    id: 'styling-hooks',
+    label: 'Styling Hooks Test',
+    demoStyles:
+      `
+      --sds-c-radio-color-border: black;
+      --sds-c-radio-color-background: orange;
+      --sds-c-radio-mark-color-foreground: black;
+      --sds-c-radio-color-border-focus: gray;
+      --sds-c-radio-shadow-focus: 0 0 3px red;
+      `,
+    element: (
+      <Fieldset>
+        <Legend>Radio Group Label</Legend>
+        <FormElementControl>
+          <Radio label="Radio Label One" name="hooks" />
+          <Radio label="Radio Label Two" name="hooks" />
+        </FormElementControl>
+      </Fieldset>
+    )
+  },
+  {
+    id: 'styling-hooks-checked',
+    label: 'Styling Hooks Test - Checked',
+    demoStyles:
+      `
+      --sds-c-radio-color-border: red;
+      --sds-c-radio-color-background: gold;
+      --sds-c-radio-mark-color-foreground: gold;
+      --sds-c-radio-color-border-focus: gray;
+      --sds-c-radio-shadow-focus: 0 0 3px red;
+      --sds-c-radio-color-border-checked: gold;
+      --sds-c-radio-color-background-checked: red;
+      `,
+    element: (
+      <Fieldset>
+        <Legend>Radio Group Label</Legend>
+        <FormElementControl>
+          <Radio checked label="Radio Label One" name="hooks-checked" />
+          <Radio label="Radio Label Two" name="hooks-checked" />
+        </FormElementControl>
+      </Fieldset>
+    )
+  },
+  {
+    id: 'styling-hooks-error',
+    label: 'Styling Hooks Test - Error',
+    demoStyles:
+      `
+      --sds-c-radio-color-border: black;
+      --sds-c-radio-color-background: orange;
+      --sds-c-radio-mark-color-foreground: black;
+      --sds-c-radio-color-border-focus: gray;
+      --sds-c-radio-shadow-focus: 0 0 3px red;
+      `,
+    element: (
+      <Fieldset className="slds-has-error">
+        <Legend>
+          <abbr className="slds-required" title="required">
+            *
+          </abbr>{' '}
+          Radio Group Label
+        </Legend>
+        <FormElementControl>
+          <Radio
+            errorId="hooks-error"
+            checked
+            label="Radio Label One"
+            name="hooks-error"
+          />
+          <Radio errorId="hooks-error" label="Radio Label Two" name="hooks-error" />
+        </FormElementControl>
+        <div id="hooks-error" className="slds-form-element__help">
+          This field is required
+        </div>
+      </Fieldset>
     )
   }
 ];

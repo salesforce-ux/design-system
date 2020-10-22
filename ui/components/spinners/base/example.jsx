@@ -2,21 +2,39 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 import React from 'react';
+import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 /// ////////////////////////////////////////
 // Partial(s)
 /// ////////////////////////////////////////
 
-const Demo = props => (
-  <div
-    className={classNames('demo-only', props.className)}
-    style={{ height: '6rem' }}
-    dir={props.dir}
-  >
-    {props.children}
-  </div>
-);
+const Demo = ({ className, dir, children, hasBackgroundColor }) => {
+  const demoStyles = {
+    height: '6rem',
+    backgroundColor: hasBackgroundColor && '#16325c',
+    // Needed for positioning reference of spinner's absoulte positioning. <StoryFrame> is only used
+    // in the kitchen sink (which contains positioning reference) so we need coverage for the individual
+    // story pages for now.
+    position: 'relative'
+  };
+  return (
+    <div
+      className={classNames('demo-only', className)}
+      style={demoStyles}
+      dir={dir}
+    >
+      {children}
+    </div>
+  );
+};
+
+Demo.propTypes = {
+  className: PropTypes.string,
+  dir: PropTypes.oneOf(['ltr', 'rtl']),
+  children: PropTypes.node,
+  hasBackgroundColor: PropTypes.bool
+};
 
 export let SpinnerContainer = props => (
   <div className={classNames('slds-spinner_container', props.className)}>
@@ -37,7 +55,7 @@ export let Spinner = props => (
 /// ///////////////////////////////////////////
 
 export default (
-  <Demo className="demo-only demo-only_viewport">
+  <Demo className="demo-only_viewport">
     <Spinner className="slds-spinner_medium" />
   </Demo>
 );
@@ -71,7 +89,7 @@ export let examples = [
     description:
       'Here, the regular spinner container is used making the dark background look lighter. The spinner container will position itself to the closest positioned parent. So if you want it to spin over a single component, the class <code>.slds-is-relative</code> can be added to the parent.',
     element: (
-      <Demo className="demo--inverse">
+      <Demo className="demo--inverse" hasBackgroundColor>
         <SpinnerContainer>
           <Spinner className="slds-spinner_medium" />
         </SpinnerContainer>
@@ -84,7 +102,7 @@ export let examples = [
     description:
       'The spinner container may be used with a container with fixed positioning by adding the <code>.slds-is-fixed</code> class to the container. This may be needed if you are dynamically loading portions of a component after the spinner is showing.',
     element: (
-      <Demo className="demo-only demo-only_viewport demo--inverse">
+      <Demo className="demo-only_viewport demo--inverse" hasBackgroundColor>
         <SpinnerContainer className="slds-is-fixed">
           <Spinner className="slds-spinner_medium" />
         </SpinnerContainer>
@@ -95,14 +113,11 @@ export let examples = [
     id: 'inverse',
     label: 'On inverse background',
     element: (
-      <div
-        className="demo-only"
-        style={{ backgroundColor: '#16325c', height: '6rem' }}
-      >
+      <Demo className="demo-only" hasBackgroundColor>
         <SpinnerContainer>
           <Spinner className="slds-spinner_medium slds-spinner_inverse" />
         </SpinnerContainer>
-      </div>
+      </Demo>
     )
   },
   {

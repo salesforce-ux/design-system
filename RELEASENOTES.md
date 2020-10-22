@@ -44,6 +44,14 @@ Refactored the component markup to function with or without theme utility classe
 #### Added
 - Enabled styling hooks for slider. See slider's styling hooks overview table for a full listing of the currently available hooks.
 
+### [Spinners](https://www.lightningdesignsystem.com/components/spinners)
+#### Fixed
+- Added demo `background-color` to with-container and fixed-container examples
+
+## Release 2.13.5 - September 30, 2020
+
+## Release 2.13.4 - September 29, 2020
+
 ## Release 2.13.3 - September 24, 2020
 
 ## Components

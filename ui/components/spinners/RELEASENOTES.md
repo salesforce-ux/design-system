@@ -4,6 +4,12 @@
 
 <!-- ## [Unreleased] -->
 
+## 2.14.0
+
+### Fixed
+
+- Added demo `background-color` to with-container and fixed-container examples
+
 ## 2.11.4
 
 - Moved the `will-change: transform` rule from the dots (pseudo-elements) to their parents (`.slds-spinner,

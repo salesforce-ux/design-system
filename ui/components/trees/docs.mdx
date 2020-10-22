@@ -1,6 +1,7 @@
 import CodeView from '../../../shared/components/CodeView';
 import CodeBlock from '../../../shared/components/CodeBlock';
 import Blockquote from '../../../shared/components/Blockquote';
+import StylingHooksTable from '../../../shared/components/StylingHooksTable';
 import * as TreeExamples from './base/example';
 import { getDisplayElementById } from '../../shared/helpers';
 
@@ -128,3 +129,7 @@ Upon typing in the input the tree should start filtering immediately, expanding 
 <CodeView>
   {getDisplayElementById(TreeExamples.examples, 'filterabled-tree')}
 </CodeView>
+
+## Styling Hooks Overview
+
+<StylingHooksTable name="trees" type="component" />

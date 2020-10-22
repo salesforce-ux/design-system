@@ -1,6 +1,8 @@
 <!-- Release notes authoring guidelines: http://keepachangelog.com/ -->
 <!-- On release, add general notes here. In time the legacy release notes will be add to this -->
 
+## 2.13.7 - October 21, 2020
+
 ## 2.13.6 - October 14, 2020
 
 ## 2.13.5 - September 30, 2020

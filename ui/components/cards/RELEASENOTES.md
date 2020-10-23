@@ -3,6 +3,11 @@
 # Cards Release Notes
 
 <!-- ## [Unreleased] -->
+## 2.14.0
+
+### Added
+
+- Enabled styling hooks for Cards. See Card's styling hooks overview table for a full listing of the currently available hooks.
 
 ## 2.11.6
 

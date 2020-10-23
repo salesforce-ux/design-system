@@ -1330,7 +1330,7 @@ exports[`Default Tabs renders tabs as a card 1`] = `
       className="slds-card"
     >
       <div
-        className="slds-card__header slds-grid"
+        className="slds-card__header"
       >
         <header
           className="slds-media slds-media_center slds-has-flexi-truncate"
@@ -1419,7 +1419,7 @@ exports[`Default Tabs renders tabs as a card 1`] = `
       className="slds-card"
     >
       <div
-        className="slds-card__header slds-grid"
+        className="slds-card__header"
       >
         <header
           className="slds-media slds-media_center slds-has-flexi-truncate"
@@ -1508,7 +1508,7 @@ exports[`Default Tabs renders tabs as a card 1`] = `
       className="slds-card slds-card_boundary"
     >
       <div
-        className="slds-card__header slds-grid"
+        className="slds-card__header"
       >
         <header
           className="slds-media slds-media_center slds-has-flexi-truncate"

@@ -13,7 +13,6 @@
   // Make cards inside these elements render invisibly.
   .slds-card,
   .slds-card-wrapper {
-    background: $card-color-background;
     border: 0;
     box-shadow: none;
   }
@@ -26,13 +25,14 @@
 .slds-tabs--default {
   /**
    * @summary Used to bring back the border on a card when needed
-   *
    * @selector .slds-card_boundary
    * @restrict .slds-card
    */
   .slds-card_boundary {
-    border: $border-width-thin solid $card-color-border;
-    border-radius: $border-radius-medium;
+    border-width: var(--sds-c-card-sizing-border, $border-width-thin);
+    border-style: solid;
+    border-color: var(--sds-c-card-color-border, $card-color-border);
+    border-radius: var(--sds-c-card-radius-border, $border-radius-medium);
   }
 }
 
@@ -44,11 +44,13 @@
  */
 .slds-tabs_card,
 .slds-tabs_card.slds-tabs_card {
-  background: $card-color-background;
   padding: $var-spacing-vertical-small $var-spacing-horizontal-medium; // Use card tokens to keep this tab style looking like a card
-  box-shadow: $card-shadow;
-  border: $border-width-thin solid $card-color-border;
-  border-radius: $border-radius-medium;
+  background: var(--sds-c-card-color-background, $card-color-background);
+  border-width: var(--sds-c-card-sizing-border, $border-width-thin);
+  border-style: solid;
+  border-color: var(--sds-c-card-color-border, $card-color-border);
+  border-radius: var(--sds-c-card-radius-border, $border-radius-medium);
+  box-shadow: var(--sds-c-card-shadow, $card-shadow);
 
   // This removes the padding for the plain cards when inside a padded tabset
   .slds-card,
@@ -78,20 +80,30 @@
 .slds-card-wrapper {
 
   .slds-card_boundary {
-    border: $border-width-thin solid $card-color-border;
-    border-radius: $border-radius-medium;
+    border-width: var(--sds-c-card-sizing-border, $border-width-thin);
+    border-style: solid;
+    border-color: var(--sds-c-card-color-border, $card-color-border);
+    border-radius: var(--sds-c-card-radius-border, $border-radius-medium);
 
     .slds-card__header {
-      padding: $var-spacing-vertical-small $var-spacing-horizontal-medium 0;
+      padding-top: var(--sds-c-card-header-spacing-block-start, var(--sds-c-card-header-spacing-block, $var-spacing-vertical-small));
+      padding-right: var(--sds-c-card-header-spacing-inline-end, var(--sds-c-card-header-spacing-inline, $var-spacing-horizontal-medium));
+      padding-bottom: var(--sds-c-card-header-spacing-block-end, var(--sds-c-card-header-spacing-block, 0));
+      padding-left: var(--sds-c-card-header-spacing-inline-start, var(--sds-c-card-header-spacing-inline, $var-spacing-horizontal-medium));
     }
 
     .slds-card__body_inner,
     .slds-card__body--inner {
-      padding: 0 $var-spacing-horizontal-medium;
+      padding: 0;
+      padding-right: var(--sds-c-card-body-spacing-inline-end, var(--sds-c-card-body-spacing-inline, $var-spacing-horizontal-medium));
+      padding-left: var(--sds-c-card-body-spacing-inline-start, var(--sds-c-card-body-spacing-inline, $var-spacing-horizontal-medium));
     }
 
     .slds-card__footer {
-      padding: $var-spacing-vertical-small $var-spacing-horizontal-medium;
+      padding-top: var(--sds-c-card-footer-spacing-block-start, var(--sds-c-card-footer-spacing-block, $var-spacing-vertical-small));
+      padding-right: var(--sds-c-card-footer-spacing-inline-end, var(--sds-c-card-footer-spacing-inline, $var-spacing-horizontal-medium));
+      padding-bottom: var(--sds-c-card-footer-spacing-block-end, var(--sds-c-card-footer-spacing-block, $var-spacing-vertical-small));
+      padding-left: var(--sds-c-card-footer-spacing-inline-start, var(--sds-c-card-footer-spacing-inline, $var-spacing-horizontal-medium));
     }
   }
 }

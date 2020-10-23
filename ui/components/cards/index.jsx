@@ -12,7 +12,7 @@ export const CardHeader = props => {
   const { className, title, href, symbol, action } = props;
 
   return (
-    <div className={classNames('slds-card__header slds-grid', className)}>
+    <div className={classNames('slds-card__header', className)}>
       <header className="slds-media slds-media_center slds-has-flexi-truncate">
         {symbol && (
           <div className="slds-media__figure">

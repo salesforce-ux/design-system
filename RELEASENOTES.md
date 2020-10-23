@@ -20,6 +20,10 @@ Refactored the component markup to function with or without theme utility classe
 - Added Styling Hook for box-shadow
 - Added Styling Hook for block level padding
 
+### [Cards](https://www.lightningdesignsystem.com/components/cards)
+#### Added
+- Enabled styling hooks for Cards. See Card's styling hooks overview table for a full listing of the currently available hooks.
+
 ### [Checkbox](https://www.lightningdesignsystem.com/components/checkbox)
 #### Added
 - Enabled styling hooks for checkbox. See checkbox's styling hooks overview table for a full listing of the currently available hooks.
@@ -40,6 +44,10 @@ Refactored the component markup to function with or without theme utility classe
 #### Changed
 - Fixed incorrect styling hooks on focus state, suffix is now using `-focus` vs `-active`.
 
+### [Radio Group](https://www.lightningdesignsystem.com/components/radio-group)
+#### Added
+- Enabled Styling Hooks for Radio Group. See Radio Group's Styling Hooks overview table for a full listing of the currently available hooks.
+
 ### [Slider](https://www.lightningdesignsystem.com/components/slider)
 #### Added
 - Enabled styling hooks for slider. See slider's styling hooks overview table for a full listing of the currently available hooks.
@@ -47,6 +55,9 @@ Refactored the component markup to function with or without theme utility classe
 ### [Spinners](https://www.lightningdesignsystem.com/components/spinners)
 #### Fixed
 - Added demo `background-color` to with-container and fixed-container examples
+
+### [Tabs](https://www.lightningdesignsystem.com/components/tabs)
+- Removed white `background-color` from `.slds-tabs_default` to expose surface color of the tabs parent container.
 
 ## Release 2.13.5 - September 30, 2020
 

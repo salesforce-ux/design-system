@@ -65,7 +65,7 @@ exports[`Card Footer renders an empty card footer 1`] = `
 
 exports[`Card Header renders a card header with action 1`] = `
 <div
-  className="slds-card__header slds-grid"
+  className="slds-card__header"
 >
   <header
     className="slds-media slds-media_center slds-has-flexi-truncate"
@@ -103,7 +103,7 @@ exports[`Card Header renders a card header with action 1`] = `
 
 exports[`Card Header renders a card header with icon 1`] = `
 <div
-  className="slds-card__header slds-grid"
+  className="slds-card__header"
 >
   <header
     className="slds-media slds-media_center slds-has-flexi-truncate"
@@ -154,7 +154,7 @@ exports[`Card Header renders a card header with icon 1`] = `
 
 exports[`Card Header renders a card header with icon and action 1`] = `
 <div
-  className="slds-card__header slds-grid"
+  className="slds-card__header"
 >
   <header
     className="slds-media slds-media_center slds-has-flexi-truncate"
@@ -214,7 +214,7 @@ exports[`Card Header renders a card header with icon and action 1`] = `
 
 exports[`Card Header renders a simple card header 1`] = `
 <div
-  className="slds-card__header slds-grid"
+  className="slds-card__header"
 >
   <header
     className="slds-media slds-media_center slds-has-flexi-truncate"
@@ -246,7 +246,7 @@ exports[`Card renders a base card empty 1`] = `
   className="slds-card"
 >
   <div
-    className="slds-card__header slds-grid"
+    className="slds-card__header"
   >
     <header
       className="slds-media slds-media_center slds-has-flexi-truncate"
@@ -307,7 +307,7 @@ exports[`Card renders a base card with content in footer 1`] = `
   className="slds-card"
 >
   <div
-    className="slds-card__header slds-grid"
+    className="slds-card__header"
   >
     <header
       className="slds-media slds-media_center slds-has-flexi-truncate"
@@ -383,7 +383,7 @@ exports[`Card renders a base card with empty footer 1`] = `
   className="slds-card"
 >
   <div
-    className="slds-card__header slds-grid"
+    className="slds-card__header"
   >
     <header
       className="slds-media slds-media_center slds-has-flexi-truncate"
@@ -446,7 +446,7 @@ exports[`Card renders a base card with header visibly hidden 1`] = `
   className="slds-card"
 >
   <div
-    className="slds-card__header slds-grid slds-assistive-text"
+    className="slds-card__header slds-assistive-text"
   >
     <header
       className="slds-media slds-media_center slds-has-flexi-truncate"
@@ -522,7 +522,7 @@ exports[`Card renders a base card without a footer 1`] = `
   className="slds-card"
 >
   <div
-    className="slds-card__header slds-grid"
+    className="slds-card__header"
   >
     <header
       className="slds-media slds-media_center slds-has-flexi-truncate"

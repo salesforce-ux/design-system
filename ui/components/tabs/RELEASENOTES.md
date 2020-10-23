@@ -3,6 +3,10 @@
 # Tabs Release Notes
 
 <!-- ## [Unreleased] -->
+## 2.14.0
+
+- Removed white `background-color` from `.slds-tabs_default` to expose surface color of the tabs parent container.
+
 ## 2.13.3
 
 ### Changed

@@ -20,7 +20,7 @@ export let Fieldset = props => (
 Fieldset.propTypes = {
   className: PropTypes.string,
   children: PropTypes.node.isRequired
-}
+};
 
 export let Legend = props => (
   <legend
@@ -36,7 +36,7 @@ export let Legend = props => (
 Legend.propTypes = {
   className: PropTypes.string,
   children: PropTypes.node.isRequired
-}
+};
 
 export let Radio = props => {
   const uniqueId = _.uniqueId('radio-');
@@ -91,7 +91,7 @@ Radio.propTypes = {
   groupId: PropTypes.string,
   hideLabel: PropTypes.bool,
   label: PropTypes.string
-}
+};
 
 /// ///////////////////////////////////////////
 // Export
@@ -204,8 +204,7 @@ export const examples = [
   {
     id: 'styling-hooks',
     label: 'Styling Hooks Test',
-    demoStyles:
-      `
+    demoStyles: `
       --sds-c-radio-color-border: black;
       --sds-c-radio-color-background: orange;
       --sds-c-radio-mark-color-foreground: black;
@@ -225,8 +224,7 @@ export const examples = [
   {
     id: 'styling-hooks-checked',
     label: 'Styling Hooks Test - Checked',
-    demoStyles:
-      `
+    demoStyles: `
       --sds-c-radio-color-border: red;
       --sds-c-radio-color-background: gold;
       --sds-c-radio-mark-color-foreground: gold;
@@ -248,8 +246,7 @@ export const examples = [
   {
     id: 'styling-hooks-error',
     label: 'Styling Hooks Test - Error',
-    demoStyles:
-      `
+    demoStyles: `
       --sds-c-radio-color-border: black;
       --sds-c-radio-color-background: orange;
       --sds-c-radio-mark-color-foreground: black;
@@ -271,7 +268,11 @@ export const examples = [
             label="Radio Label One"
             name="hooks-error"
           />
-          <Radio errorId="hooks-error" label="Radio Label Two" name="hooks-error" />
+          <Radio
+            errorId="hooks-error"
+            label="Radio Label Two"
+            name="hooks-error"
+          />
         </FormElementControl>
         <div id="hooks-error" className="slds-form-element__help">
           This field is required

@@ -16,20 +16,6 @@ executors:
       - image: cimg/node:lts
 
 commands:
-  cached-checkout:
-    description: 'Cached checkout'
-    steps:
-      - restore_cache:
-          keys:
-            - source-v1-{{ .Branch }}-{{ .Revision }}
-
-      - checkout
-
-      - save_cache:
-          key: source-v1-{{ .Branch }}-{{ .Revision }}
-          paths:
-            - ".git"
-
   build-tokens:
     description: 'Build tokens'
     steps:
@@ -97,7 +83,7 @@ commands:
   prepare-vrt:
     description: 'Prepare VRT environment'
     steps:
-      - cached-checkout
+      - checkout
 
       - attach_workspace:
           at: workspace
@@ -166,7 +152,7 @@ jobs:
     resource_class: small
 
     steps:
-      - cached-checkout
+      - checkout
       - run: mkdir -p workspace
       - set-heroku-app-name
 
@@ -203,7 +189,7 @@ jobs:
     # parallelism: 4
 
     steps:
-      - cached-checkout
+      - checkout
 
       - attach_workspace:
           at: workspace
@@ -342,7 +328,7 @@ jobs:
     resource_class: medium+
 
     steps:
-      - cached-checkout
+      - checkout
       - attach_workspace:
           at: workspace
       - copy-tokens-from-workspace

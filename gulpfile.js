@@ -318,10 +318,17 @@ gulp.task('dist:copySass', dist.copySass);
 gulp.task('dist:copySassLicense', dist.copySassLicense);
 gulp.task('dist:copyIcons', dist.copyIcons);
 gulp.task('dist:copyIconsMeta', dist.copyIconsMeta);
+
+gulp.task('dist:copyIconsSynonyms', dist.copyIconsSynonyms);
+
 gulp.task('dist:copyFonts', dist.copyFonts);
 gulp.task('dist:copyFontsLicense', dist.copyFontsLicense);
 gulp.task('dist:copyImages', dist.copyImages);
 gulp.task('dist:copyImagesLicense', dist.copyImagesLicense);
+
+gulp.task('dist:copyComponentReleaseNotes', dist.copyComponentReleaseNotes);
+gulp.task('dist:copyUtilityReleaseNotes', dist.copyUtilityReleaseNotes);
+
 gulp.task('dist:copyDesignTokens', dist.copyDesignTokens);
 gulp.task('dist:copyComponentDesignTokens', dist.copyComponentDesignTokens);
 
@@ -337,6 +344,16 @@ gulp.task('dist:minifyCss', dist.minifyCss);
 gulp.task('dist:writeUI', dist.writeUI);
 gulp.task('dist:writeLibrary', dist.writeLibrary);
 
+gulp.task('dist:writeTokenComponentMap', done =>
+  dist.writeTokenComponentMap().fork(done, () => done())
+);
+gulp.task('dist:writeAuraTokensMap', done =>
+  dist.writeAuraTokensMap().fork(done, () => done())
+);
+gulp.task('dist:writeUtilityDeclarationsMap', done =>
+  dist.writeUtilityDeclarationsMap().fork(done, () => done())
+);
+
 gulp.task(
   'dist',
   gulp.series(
@@ -347,15 +364,13 @@ gulp.task(
       'dist:copySassLicense',
       'dist:copyIcons',
       'dist:copyIconsMeta',
-      withName('dist:copyIconsSynonyms')(dist.copyIconsSynonyms),
+      'dist:copyIconsSynonyms',
       'dist:copyFonts',
       'dist:copyFontsLicense',
       'dist:copyImages',
       'dist:copyImagesLicense',
-      withName('dist:copyComponentReleaseNotes')(
-        dist.copyComponentReleaseNotes
-      ),
-      withName('dist:copyUtilityReleaseNotes')(dist.copyUtilityReleaseNotes),
+      'dist:copyComponentReleaseNotes',
+      'dist:copyUtilityReleaseNotes',
       withName('dist:copySwatches')(dist.copySwatches),
       'dist:copyDesignTokens',
       'dist:copyComponentDesignTokens',
@@ -372,15 +387,9 @@ gulp.task(
     'dist:minifyCss',
     'dist:writeUI',
     'dist:writeLibrary',
-    withName('dist:writeTokenComponentMap')(done =>
-      dist.writeTokenComponentMap().fork(done, () => done())
-    ),
-    withName('dist:writeAuraTokensMap')(done =>
-      dist.writeAuraTokensMap().fork(done, () => done())
-    ),
-    withName('dist:writeUtilityDeclarationsMap')(done =>
-      dist.writeUtilityDeclarationsMap().fork(done, () => done())
-    ),
+    'dist:writeTokenComponentMap',
+    'dist:writeAuraTokensMap',
+    'dist:writeUtilityDeclarationsMap',
     withName('dist:clean:after')(dist.cleanAfter)
   )
 );

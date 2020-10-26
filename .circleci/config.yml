@@ -55,14 +55,14 @@ commands:
           command: |
             export CURRENT_DEFAULT_BRANCH=`git remote show origin | grep "HEAD branch" | cut -d ":" -f 2 | xargs`
             if [[ "${CIRCLE_BRANCH}" = "${CURRENT_DEFAULT_BRANCH}" ]] ; then
-              if [[ "${CIRCLE_TAG}" =~ ^\d+\.\d+\.\d+-.+$ ]] ; then
+              if [[ "${CIRCLE_TAG}" =~ ^v\d+\.\d+\.\d+-.+$ ]] ; then
                 echo "Publishing to CORE-MAIN..."
                 echo 'export HEROKU_APP_NAME=${HEROKU_APP_CORE_MAIN}' >> $BASH_ENV
               else
                 echo "Publishing to UPCOMING..."
                 echo 'export HEROKU_APP_NAME=${HEROKU_APP_UPCOMING}' >> $BASH_ENV
               fi
-            elif [[ "${CIRCLE_TAG}" =~ ^\d+\.\d+\.\d+$ ]] ; then
+            elif [[ "${CIRCLE_TAG}" =~ ^v\d+\.\d+\.\d+$ ]] ; then
               echo "Publishing to CORE-PATCH..."
               echo 'export HEROKU_APP_NAME=${HEROKU_APP_CORE_PATCH}' >> $BASH_ENV
             else
@@ -214,32 +214,41 @@ jobs:
       - run:
           name: Copy root files
           command: |
-              mkdir .dist
+              mkdir -p .dist
               cp package.json README-dist.md RELEASENOTES* .dist/
       - run:
           name: Copy Sass files
           command: |
-              mkdir .dist/scss
+              mkdir -p .dist/scss
               rsync -rRmv --include '*.scss' --exclude '*.*' ui/./ .dist/scss/
               cp assets/licenses/License-for-Sass.txt .dist/scss/
       - run:
           name: Copy Icon files
           command: |
               mkdir -p .dist/assets/icons
+              mkdir -p .dist/metadata/icons
               cp -r node_modules/@salesforce-ux/icons/dist/salesforce-lightning-design-system-icons/ .dist/assets/icons/
               cp node_modules/@salesforce-ux/icons/dist/ui.icons.json .dist/
+              cp node_modules/@salesforce-ux/icons/dist/*-icons-metadata.json .dist/metadata/icons/
       - run:
           name: Copy Font files
           command: |
-              mkdir .dist/assets/fonts
+              mkdir -p .dist/assets/fonts
               cp -r assets/fonts/ .dist/assets/fonts/
               cp assets/licenses/License-for-font.txt .dist/assets/fonts/
       - run:
           name: Copy Image files
           command: |
-              mkdir .dist/assets/images
+              mkdir -p .dist/assets/images
               cp -r assets/images/ .dist/assets/images/
               cp assets/licenses/License-for-images.txt .dist/assets/images/
+
+      - run:
+          name: Copy various release notes
+          command: |
+              mkdir -p .dist/__internal/release-notes
+              rsync -rRmv --include 'RELEASENOTES.md' --exclude '*.*' ui/./components/ .dist/__internal/release-notes/
+              rsync -rRmv --include 'RELEASENOTES.md' --exclude '*.*' ui/./utilities/ .dist/__internal/release-notes/
       - run:
           name: Copy design token files
           command: |
@@ -248,7 +257,7 @@ jobs:
       - run:
           name: Copy Styling Hooks metadata
           command: |
-              mkdir .dist/metadata
+              mkdir -p .dist/metadata
               cp -r .generated/metadata/ .dist/
 
       #
@@ -280,6 +289,10 @@ jobs:
           command: |
             npm run gulp -- dist:writeUI
             npm run gulp -- dist:writeLibrary
+
+      - run:
+          name: Generate various maps
+          command: 'npm run gulp -- dist:writeTokenComponentMap dist:writeAuraTokensMap dist:writeUtilityDeclarationsMap'
 
       - run:
           name: Delete .dist/README-dist.md
@@ -492,9 +505,9 @@ workflows:
           # only on the main version branches with a public release tag (X.X.X)
           filters:
             tags:
-              only: /^\d+\.\d+\.\d+$/
+              only: /^v\d+\.\d+\.\d+$/
             branches:
-              only: /^\d{3}-(summer|spring|winter)-\d{2}$/
+              ignore: /.*/
       - vrt-desktop:
           context: ux-eng-keys
           # do not run for main version branches

@@ -1,6 +1,7 @@
 import CodeView from '../../../shared/components/CodeView';
 import CodeBlock from '../../../shared/components/CodeBlock';
 import Blockquote from '../../../shared/components/Blockquote';
+import StylingHooksTable from '../../../shared/components/StylingHooksTable';
 import { getDisplayElementById } from '../../shared/helpers';
 import { MobileNotice, MobileBlurb } from '../../shared/doc-text';
 import * as CheckboxToggleExamples from './base/example';
@@ -75,3 +76,7 @@ checkbox.indeterminate = true;
 <CodeView>
   {getDisplayElementById(CheckboxToggleExamples.states, 'checkbox-toggle-rtl')}
 </CodeView>
+
+## Styling Hooks Overview
+
+<StylingHooksTable name="checkbox-toggle" type="component" />

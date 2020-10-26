@@ -28,6 +28,10 @@ Refactored the component markup to function with or without theme utility classe
 #### Added
 - Enabled styling hooks for checkbox. See checkbox's styling hooks overview table for a full listing of the currently available hooks.
 
+### [Checkbox Toggle](https://www.lightningdesignsystem.com/components/checkbox-toggle)
+#### Added
+- Enabled styling hooks for checkbox toggle. See checkbox toggle's styling hooks overview table for a full listing of the currently available hooks.
+
 ### [Form Element](https://www.lightningdesignsystem.com/components/form-element)
 #### Fixed
 - Adjusted space between the form label and the information button icon for Mobile.

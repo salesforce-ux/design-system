@@ -52,6 +52,10 @@ Refactored the component markup to function with or without theme utility classe
 #### Added
 - Enabled Styling Hooks for Radio Group. See Radio Group's Styling Hooks overview table for a full listing of the currently available hooks.
 
+### [Select](https://www.lightningdesignsystem.com/components/select)
+#### Added
+- Enabled styling hooks for select. See select's styling hooks overview table for a full listing of the currently available hooks.
+
 ### [Slider](https://www.lightningdesignsystem.com/components/slider)
 #### Added
 - Enabled styling hooks for slider. See slider's styling hooks overview table for a full listing of the currently available hooks.

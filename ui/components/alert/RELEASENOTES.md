@@ -3,6 +3,10 @@
 # Alert Release Notes
 
 <!-- ## [Unreleased] -->
+## 2.14.0
+
+- Fix incorrect Styling Hook name for `--sds-c-alert-text-color-warning`.
+
 ## 2.13.3
 
 ### Changed

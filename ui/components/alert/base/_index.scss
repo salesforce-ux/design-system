@@ -68,17 +68,17 @@ $alert-gradient-size-background: 64px 64px;
  */
 .slds-alert_warning {
   /*! @css-var-fallback background-color */
-  background-color: var(--sds-c-alert-color-background-warning, #{$color-background-warning});
+  background-color: var(--sds-c-alert-color-background-warning, $color-background-warning);
   // --sds-c-alert-color-background: var(--sds-c-alert-color-background-warning, #{$color-background-warning});
 
   /*! @css-var-fallback color */
-  color: var(--sds-c-alert-color-text-warning, #{$color-text-default});
+  color: var(--sds-c-alert-text-color-warning, $color-text-default);
   // --sds-c-alert-color-text: var(--sds-c-alert-color-text-warning, #{$color-text-default});
 
   .slds-icon,
   .slds-button__icon {
     /*! @css-var-fallback fill */
-    fill: var(--sds-c-alert-icon-color-foreground-warning, #{$color-gray-10});
+    fill: var(--sds-c-alert-icon-color-foreground-warning, $color-gray-10);
     // --sds-c-icon-color-foreground: var(--sds-c-alert-icon-color-foreground-warning, #{$color-gray-10});
   }
 }
@@ -90,7 +90,7 @@ $alert-gradient-size-background: 64px 64px;
  */
 .slds-alert_error {
   /*! @css-var-fallback background-color */
-  background-color: var(--sds-c-alert-color-background-error, #{$color-background-toast-error});
+  background-color: var(--sds-c-alert-color-background-error, $color-background-toast-error);
   // --sds-c-alert-color-background: var(--sds-c-alert-color-background-error, #{$color-background-toast-error});
 }
 

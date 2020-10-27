@@ -12,6 +12,9 @@
 - The Accordion heading button will now take up all available space, allowing for a larger hit target to toggle the Accordion functionality.
 
 ### [Alert](https://www.lightningdesignsystem.com/components/alert)
+- Fix incorrect Styling Hook name for `--sds-c-alert-text-color-warning`.
+
+### [Alert](https://www.lightningdesignsystem.com/components/alert)
 #### Changed
 Refactored the component markup to function with or without theme utility classes.
 

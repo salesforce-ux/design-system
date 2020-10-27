@@ -11,14 +11,65 @@
  * @variant
  */
 .slds-textarea {
-  @include form-states;
   // stylelint-disable property-no-vendor-prefix
   -webkit-appearance: none; // // Scope to WebKit UA styling to remove unwanted inner-shadow
   // stylelint-enable property-no-vendor-prefix
+  min-height: var(--sds-c-textarea-sizing-min-height);
+  width: 100%;
+  padding-top: var(--sds-c-textarea-spacing-block-start, $spacing-x-small);
+  padding-right: var(--sds-c-textarea-spacing-inline-end, $spacing-small);
+  padding-bottom: var(--sds-c-textarea-spacing-block-end, $spacing-x-small);
+  padding-left: var(--sds-c-textarea-spacing-inline-start, $spacing-small);
+  background-color: var(--sds-c-textarea-color-background, $color-background-input);
+  color: var(--sds-c-textarea-text-color);
+  border: $border-width-thin solid var(--sds-c-textarea-color-border, $color-border-input);
+  border-radius: var(--sds-c-textarea-radius-border, $border-radius-medium);
+  box-shadow: var(--sds-c-textarea-shadow);
   resize: vertical;
-  padding: $spacing-x-small $spacing-small;
+  transition: border $duration-quickly linear,
+    background-color $duration-quickly linear;
+
+  &:required {
+    box-shadow: none;
+  }
+
+  &:focus,
+  &:active {
+    outline: 0;
+    color: var(--sds-c-textarea-text-color-focus);
+    background-color: var(--sds-c-textarea-color-background-focus, $color-background-input-active);
+    border-color: var(--sds-c-textarea-color-border-focus, $color-border-input-active);
+    box-shadow: var(--sds-c-textarea-shadow-focus, $shadow-button-focus);
+  }
+
+  &[disabled],
+  &.slds-is-disabled {
+    background-color: $color-background-input-disabled;
+    border-color: $color-border-input-disabled;
+    color: inherit;
+    cursor: not-allowed;
+    user-select: none;
+
+    &:focus,
+    &:active {
+      box-shadow: none;
+    }
+  }
 }
 
-.slds-has-error {
-  @include form-input-error('.slds-textarea');
+.slds-has-error .slds-textarea {
+  background-color: var(--sds-c-textarea-color-background, $color-background-input);
+  border-color: $color-border-error;
+  color: var(--sds-c-textarea-text-color);
+  box-shadow: $color-border-error 0 0 0 $border-width-thin inset;
+  background-clip: padding-box;
+
+  &:focus,
+  &:active {
+    // Due to specificity brought on by error class, we have to redeclare color and background-color
+    color: var(--sds-c-textarea-text-color-focus);
+    background-color: var(--sds-c-textarea-color-background-focus, $color-background-input-active);
+    box-shadow: $color-border-error 0 0 0 $border-width-thin inset,
+      $shadow-button-focus;
+  }
 }

@@ -70,6 +70,10 @@ Refactored the component markup to function with or without theme utility classe
 ### [Tabs](https://www.lightningdesignsystem.com/components/tabs)
 - Removed white `background-color` from `.slds-tabs_default` to expose surface color of the tabs parent container.
 
+### [Textarea](https://www.lightningdesignsystem.com/components/textarea)
+#### Added
+- Enabled styling hooks for textarea. See textarea's styling hooks overview table for a full listing of the currently available hooks.
+
 ## Release 2.13.5 - September 30, 2020
 
 ## Release 2.13.4 - September 29, 2020

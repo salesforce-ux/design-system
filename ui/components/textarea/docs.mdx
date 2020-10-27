@@ -1,4 +1,5 @@
 import CodeView from '../../../shared/components/CodeView';
+import StylingHooksTable from '../../../shared/components/StylingHooksTable';
 import { getDisplayElementById } from '../../shared/helpers';
 import Blockquote from '../../../shared/components/Blockquote';
 import * as Textareas from './base/example';
@@ -46,3 +47,7 @@ You can style the HTML `<textarea>` element to align with the Salesforce brand b
 <CodeView>
   {getDisplayElementById(Textareas.states, "read-only")}
 </CodeView>
+
+## Styling Hooks Overview
+
+<StylingHooksTable name="textarea" type="component" />

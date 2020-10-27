@@ -4,6 +4,12 @@
 
 <!-- ## [Unreleased] -->
 
+## 2.14.0
+
+### Added
+
+- Enabled styling hooks for textarea. See textarea's styling hooks overview table for a full listing of the currently available hooks.
+
 ## 2.13.1
 
 ### Fixed

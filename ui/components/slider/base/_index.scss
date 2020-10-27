@@ -8,19 +8,19 @@
   border-radius: var(--sds-c-slider-thumb-radius-border, $border-radius-circle);
   background: none; // Reset underlying styles
   background-color: var(
-    --sds-c-slider-thumb-color-background,
+    --sds-c-slider-thumb-color-foreground,
     $brand-accessible
   );
   border: 0;
-  box-shadow: $slider-handle-shadow;
+  box-shadow: var(--sds-c-slider-thumb-shadow, $slider-handle-shadow);
   cursor: pointer;
   transition: background 0.15s ease-in-out;
 
   &:hover {
     // @todo re-evaluate Styling Hooks reassignment
     background-color: var(
-      --sds-c-slider-thumb-color-background-hover,
-      #{$brand-accessible-active}
+      --sds-c-slider-thumb-color-foreground-hover,
+      $brand-accessible-active
     );
   }
 }
@@ -105,81 +105,65 @@
   &:focus::-webkit-slider-thumb {
     // @todo re-evaluate Styling Hooks reassignment
     background-color: var(
-      --sds-c-slider-thumb-color-background-active,
-      #{$brand-accessible-active}
+      --sds-c-slider-thumb-color-foreground-focus,
+      $brand-accessible-active
     );
-    box-shadow: $shadow-button-focus;
+    box-shadow: var(--sds-c-slider-thumb-shadow-focus, $shadow-button-focus);
   }
 
   &:active::-webkit-slider-thumb {
     // @todo re-evaluate Styling Hooks reassignment
     background-color: var(
-      --sds-c-slider-thumb-color-background-active,
-      #{$brand-accessible-active}
+      --sds-c-slider-thumb-color-foreground-active,
+      $brand-accessible-active
     );
   }
 
   &:focus::-moz-range-thumb {
     // @todo re-evaluate Styling Hooks reassignment
     background-color: var(
-      --sds-c-slider-thumb-color-background-active,
-      #{$brand-accessible-active}
+      --sds-c-slider-thumb-color-foreground-focus,
+      $brand-accessible-active
     );
-    box-shadow: $shadow-button-focus;
+    box-shadow: var(--sds-c-slider-thumb-shadow-focus, $shadow-button-focus);
   }
 
   &:active::-moz-range-thumb {
     // @todo re-evaluate Styling Hooks reassignment
     background-color: var(
-      --sds-c-slider-thumb-color-background-active,
-      #{$brand-accessible-active}
+      --sds-c-slider-thumb-color-foreground-active,
+      $brand-accessible-active
     );
   }
 
   &[disabled] {
 
     &::-webkit-slider-thumb {
-      // @todo re-evaluate Styling Hooks reassignment
-      background-color: var(
-        --sds-c-slider-thumb-color-background-disabled,
-        #{$slider-color-background-disabled}
-      );
+      background-color: $slider-color-background-disabled;
       cursor: default;
     }
 
     &::-webkit-slider-runnable-track {
-      // @todo re-evaluate Styling Hooks reassignment
-      background-color: var(
-        --sds-c-slider-track-color-background-disabled,
-        #{$slider-color-background-disabled}
-      );
+      background-color: $slider-color-background-disabled;
       cursor: default;
     }
 
     &::-moz-range-thumb {
-      // @todo re-evaluate Styling Hooks reassignment
-      background-color: var(
-        --sds-c-slider-thumb-color-background-disabled,
-        #{$slider-color-background-disabled}
-      );
+      background-color: $slider-color-background-disabled;
       cursor: default;
     }
 
     &::-moz-range-track {
-      // @todo re-evaluate Styling Hooks reassignment
-      background-color: var(
-        --sds-c-slider-track-color-background-disabled,
-        #{$slider-color-background-disabled}
-      );
+      background-color: $slider-color-background-disabled;
     }
 
     &::-ms-thumb {
-      background-color: $slider-color-background-disabled; // leaving this out of API since it's for legacy IE/Edge
+      background-color: $slider-color-background-disabled;
       cursor: default;
     }
 
     &::-ms-track {
-      background-color: $slider-color-background-disabled; // leaving this out of API since it's for legacy IE/Edge
+      background-color: $slider-color-background-disabled;
       cursor: default;
     }
   }

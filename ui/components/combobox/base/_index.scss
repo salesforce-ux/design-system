@@ -81,7 +81,8 @@
   flex: 1 1 auto;
 }
 
-[role="combobox"] input[readonly] {
+[role="combobox"] input[readonly],
+input[readonly][role="combobox"] {
   padding-left: $spacing-small;
   border-color: $color-border-input;
   background-color: $color-background-input;

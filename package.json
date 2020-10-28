@@ -53,7 +53,7 @@
     "@salesforce-ux/design-system-primitive-tokens": "0.0.9",
     "@salesforce-ux/icons": "9.38.0",
     "@salesforce-ux/instant-vrt": "2.0.0",
-    "@salesforce-ux/scss-parser-aura": "3.0.5",
+    "@salesforce-ux/scss-parser-aura": "3.1.0",
     "@storybook/addon-a11y": "5.3.18",
     "@storybook/addon-backgrounds": "5.3.18",
     "@storybook/addon-docs": "5.3.18",

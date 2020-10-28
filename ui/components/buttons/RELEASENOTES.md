@@ -11,6 +11,10 @@
 - Added Styling Hook for box-shadow
 - Added Styling Hook for block level padding
 
+### Removed
+
+- Removed component-level styling hooks for disabled states. These will be handled at the global level.
+
 ## 2.13.3
 
 ### Changed

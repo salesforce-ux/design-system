@@ -11,6 +11,16 @@
   &[disabled],
   &:disabled {
     color: $color-text-button-default-disabled;
+
+    /**
+     * Since slds-button_icon crosses paths with slds-button,
+     * we need to declare this property so slds-button's disabled
+     * state doesn't remove the border we want. slds-button has
+     * to declare its disabled properties and values to prevent
+     * its associated component-level styling hooks from overriding
+     * the disabled values.
+     */
+    border-color: $button-color-border-primary;
   }
 }
 

@@ -60,10 +60,12 @@
     color: var(--sds-c-button-text-color-active, $brand-accessible-active);
   }
 
-  // @todo re-evaluate Styling Hooks reassignment
   &[disabled],
   &:disabled {
-    color: var(--sds-c-button-text-color-disabled, $color-text-button-default-disabled);
+    // @todo: global shared disabled button hooks
+    background-color: transparent;
+    border-color: transparent;
+    color: $color-text-button-default-disabled;
     cursor: default;
 
     * {
@@ -149,26 +151,26 @@ a.slds-button--inverse:focus {
   background-color: var(--sds-c-button-neutral-color-background, $button-color-background-primary);
 
   // @todo re-evaluate Styling Hooks reassignment
-  border-color: var(--sds-c-button-neutral-color-border, $color-border-primary);
+  border-color: var(--sds-c-button-neutral-color-border, $button-color-border-primary);
 
   // @todo re-evaluate Styling Hooks reassignment
   &:hover,
   &:focus {
     background-color: var(--sds-c-button-neutral-color-background-hover, $color-background-button-default-hover);
-    border-color: var(--sds-c-button-neutral-color-border-hover, $color-border-primary);
+    border-color: var(--sds-c-button-neutral-color-border-hover, $button-color-border-primary);
   }
 
   // @todo re-evaluate Styling Hooks reassignment
   &:active {
     background-color: var(--sds-c-button-neutral-color-background-active, $color-background-button-default-active);
-    border-color: var(--sds-c-button-neutral-color-border-active, $color-border-primary);
+    border-color: var(--sds-c-button-neutral-color-border-active, $button-color-border-primary);
   }
 
-  // @todo re-evaluate Styling Hooks reassignment
   &[disabled],
   &:disabled {
-    background-color: var(--sds-c-button-neutral-color-background-disabled, $color-background-button-default-disabled);
-    border-color: var(--sds-c-button-neutral-color-border-disabled, $color-border-primary);
+    // @todo: global shared disabled button hooks
+    background-color: $color-background-button-default-disabled;
+    border-color: $button-color-border-primary;
   }
 }
 
@@ -208,12 +210,12 @@ a.slds-button--inverse:focus {
     color: var(--sds-c-button-brand-text-color-active, $color-text-brand-primary);
   }
 
-  // @todo re-evaluate Styling Hooks reassignment
   &[disabled],
   &:disabled {
-    background-color: var(--sds-c-button-brand-color-background-disabled, $brand-disabled);
-    border-color: var(--sds-c-button-brand-color-border-disabled, $brand-disabled);
-    color: var(--sds-c-button-brand-text-color-disabled, $color-text-button-brand-disabled);
+    // @todo: global shared disabled button hooks
+    background-color: $brand-disabled;
+    border-color: $brand-disabled;
+    color: $color-text-button-brand-disabled;
   }
 }
 
@@ -250,15 +252,11 @@ a.slds-button--inverse:focus {
     border-color: var(--sds-c-button-outline-brand-color-border-active, $brand-accessible);
   }
 
-  // @todo re-evaluate Styling Hooks reassignment
   &[disabled],
   &:disabled {
-    background-color: var(
-      --sds-c-button-outline-brand-color-background-disabled,
-      $color-background-button-default-disabled
-    );
-    border-color: var(--sds-c-button-outline-brand-color-border-disabled, $color-border);
-    color: var(--sds-c-button-outline-brand-text-color-disabled, $color-text-button-default-disabled);
+    // @todo: global shared disabled button hooks
+    background-color: $color-background-button-default-disabled;
+    border-color: $color-border;
   }
 }
 
@@ -293,11 +291,11 @@ a.slds-button--inverse:focus {
     border-color: var(--sds-c-button-inverse-color-border-active, $button-color-border-primary);
   }
 
-  // @todo re-evaluate Styling Hooks reassignment
   &[disabled],
   &:disabled {
-    background-color: var(--sds-c-button-inverse-color-background-disabled, $color-background-button-inverse-disabled);
-    border-color: var(--sds-c-button-inverse-color-border-disabled, $color-border-button-inverse-disabled);
+    // @todo: global shared disabled button hooks
+    background-color: $color-background-button-inverse-disabled;
+    border-color: $color-border-button-inverse-disabled;
   }
 }
 
@@ -327,7 +325,7 @@ a.slds-button--inverse:focus {
   &[disabled],
   &:disabled {
     // Make sure disabled buttons don't inherit hover states
-    color: var(--sds-c-button-inverse-text-color-disabled, $color-text-button-inverse-disabled);
+    color: $color-text-button-inverse-disabled;
   }
 }
 
@@ -367,12 +365,12 @@ a.slds-button--inverse:focus {
     color: var(--sds-c-button-destructive-text-color-active, $color-text-inverse);
   }
 
-  // @todo re-evaluate Styling Hooks reassignment
   &[disabled],
   &:disabled {
-    background-color: var(--sds-c-button-destructive-color-background-disabled, $brand-disabled);
-    border-color: var(--sds-c-button-destructive-color-border-disabled, $brand-disabled);
-    color: var(--sds-c-button-destructive-text-color-disabled, $color-text-button-brand-disabled);
+    // @todo: global shared disabled button hooks
+    background-color: $brand-disabled;
+    border-color: $brand-disabled;
+    color: $color-text-button-brand-disabled;
   }
 }
 
@@ -417,15 +415,12 @@ a.slds-button--inverse:focus {
     color: var(--sds-c-button-text-destructive-text-color-active, $color-text-destructive-hover);
   }
 
-  // @todo re-evaluate Styling Hooks reassignment
   &[disabled],
   &:disabled {
-    background-color: var(
-      --sds-c-button-text-destructive-color-background-disabled,
-      $color-background-button-default-disabled
-    );
-    border-color: var(--sds-c-button-text-destructive-color-border-disabled, $button-color-border-primary);
-    color: var(--sds-c-button-text-destructive-text-color-disabled, $color-text-button-default-disabled);
+    // @todo: global shared disabled button hooks
+    background-color: $color-background-button-default-disabled;
+    border-color: $button-color-border-primary;
+    color: $color-text-button-default-disabled;
   }
 }
 
@@ -465,12 +460,12 @@ a.slds-button--inverse:focus {
     color: var(--sds-c-button-success-text-color-active, $color-text-inverse);
   }
 
-  // @todo re-evaluate Styling Hooks reassignment
   &[disabled],
   &:disabled {
-    background-color: var(--sds-c-button-success-color-background-disabled, $brand-disabled);
-    border-color: var(--sds-c-button-success-color-border-disabled, $brand-disabled);
-    color: var(--sds-c-button-success-text-color-disabled, $color-text-button-brand-disabled);
+    // @todo: global shared disabled button hooks
+    background-color: $brand-disabled;
+    border-color: $brand-disabled;
+    color: $color-text-button-brand-disabled;
   }
 }
 

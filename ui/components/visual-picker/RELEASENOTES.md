@@ -4,6 +4,12 @@
 
 <!-- ## [Unreleased] -->
 
+## 2.14.0
+
+### Fixed
+
+- Changed checkmark vertical positioning
+
 ## 2.12.0
 
 ### Added

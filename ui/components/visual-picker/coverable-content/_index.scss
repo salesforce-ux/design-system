@@ -113,7 +113,7 @@
         right: 0;
         border-color: transparent;
         border-style: solid;
-        border-radius: 0.5rem;
+        border-radius: 0 $border-radius-medium 0 0;
         border-width: 1rem;
         border-right-color: $color-brand;
         border-top-color: $color-brand;

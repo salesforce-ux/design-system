@@ -132,7 +132,7 @@ export let examples = [
   },
   {
     id: 'horizontal-list-left',
-    label: 'Left',
+    label: 'Divider on Left',
     element: (
       <ul className="slds-list_horizontal slds-has-dividers_left">
         <li className="slds-item">
@@ -145,7 +145,7 @@ export let examples = [
   },
   {
     id: 'horizontal-list-link-left',
-    label: 'Left with link',
+    label: 'Divider on Left with link',
     element: (
       <ul className="slds-list_horizontal slds-has-dividers_left slds-has-block-links">
         <li className="slds-item">
@@ -168,7 +168,7 @@ export let examples = [
   },
   {
     id: 'horizontal-list-link-space-left',
-    label: 'Left with link space',
+    label: 'Divider on Left with link space',
     element: (
       <ul className="slds-list_horizontal slds-has-dividers_left slds-has-block-links_space">
         <li className="slds-item">
@@ -191,7 +191,7 @@ export let examples = [
   },
   {
     id: 'horizontal-list-right',
-    label: 'Right',
+    label: 'Divider on Right',
     element: (
       <ul className="slds-list_horizontal slds-has-dividers_right">
         <li className="slds-item">
@@ -204,7 +204,7 @@ export let examples = [
   },
   {
     id: 'horizontal-list-link-right',
-    label: 'Right with link',
+    label: 'Divider on Right with link',
     element: (
       <ul className="slds-list_horizontal slds-has-dividers_right slds-has-block-links">
         <li className="slds-item">
@@ -227,12 +227,35 @@ export let examples = [
   },
   {
     id: 'horizontal-list-link-space-right',
-    label: 'Right with link space',
+    label: 'Divider on Right with link space',
     element: (
       <ul className="slds-list_horizontal slds-has-dividers_right slds-has-block-links_space">
         <li className="slds-item">
           <a href="#" onClick={e => e.preventDefault()}>
             Horizontal List with block level links and dot dividers with space
+          </a>
+        </li>
+        <li className="slds-item">
+          <a href="#" onClick={e => e.preventDefault()}>
+            List Item
+          </a>
+        </li>
+        <li className="slds-item">
+          <a href="#" onClick={e => e.preventDefault()}>
+            List Item
+          </a>
+        </li>
+      </ul>
+    )
+  },
+  {
+    id: 'horizontal-list-large',
+    label: 'List with large spacing',
+    element: (
+      <ul className="slds-list_horizontal slds-list_horizontal-large">
+        <li className="slds-item">
+          <a href="#" onClick={e => e.preventDefault()}>
+            Horizontal List with large spacing between links
           </a>
         </li>
         <li className="slds-item">

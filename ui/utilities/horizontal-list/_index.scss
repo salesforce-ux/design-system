@@ -17,7 +17,8 @@
 .slds-list_horizontal-large,
 .slds-list--horizontal-large {
 
-  > .slds-list__item > a {
+  > .slds-list__item > a,
+  > .slds-item > a {
     padding: $spacing-small $spacing-medium;
   }
 }

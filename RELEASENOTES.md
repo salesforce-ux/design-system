@@ -27,6 +27,7 @@ Refactored the component markup to function with or without theme utility classe
 - Added Styling Hook for block level padding
 #### Removed
 - Removed component-level styling hooks for disabled states. These will be handled at the global level.
+- Removed `--sds-c-button-inverse-color-border-focus`.
 
 ### [Cards](https://www.lightningdesignsystem.com/components/cards)
 #### Added

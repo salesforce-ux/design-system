@@ -319,7 +319,7 @@ a.slds-button--inverse:focus {
   &:focus {
     outline: none;
     box-shadow: var(--sds-c-button-inverse-shadow-focus, $shadow-button-focus-inverse);
-    border: $border-width-thin solid var(--sds-c-button-inverse-color-border-focus, $color-border-button-focus-inverse);
+    border: $border-width-thin solid $color-border-button-focus-inverse;
   }
 
   &[disabled],

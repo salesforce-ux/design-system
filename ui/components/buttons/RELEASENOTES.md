@@ -14,6 +14,7 @@
 ### Removed
 
 - Removed component-level styling hooks for disabled states. These will be handled at the global level.
+- Removed `--sds-c-button-inverse-color-border-focus`.
 
 ## 2.13.3
 

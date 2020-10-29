@@ -7,10 +7,7 @@
   height: $slider-handle-size;
   border-radius: var(--sds-c-slider-thumb-radius-border, $border-radius-circle);
   background: none; // Reset underlying styles
-  background-color: var(
-    --sds-c-slider-thumb-color-foreground,
-    $brand-accessible
-  );
+  background-color: var(--sds-c-slider-thumb-color-foreground, $brand-accessible);
   border: 0;
   box-shadow: var(--sds-c-slider-thumb-shadow, $slider-handle-shadow);
   cursor: pointer;
@@ -18,10 +15,7 @@
 
   &:hover {
     // @todo re-evaluate Styling Hooks reassignment
-    background-color: var(
-      --sds-c-slider-thumb-color-foreground-hover,
-      $brand-accessible-active
-    );
+    background-color: var(--sds-c-slider-thumb-color-foreground-hover, $brand-accessible-active);
   }
 }
 
@@ -30,10 +24,7 @@
   height: $slider-track-height;
   cursor: pointer;
   background: none; // Reset underlying styles
-  background-color: var(
-    --sds-c-slider-track-color-background,
-    $slider-track-color-background
-  );
+  background-color: var(--sds-c-slider-track-color-background, $slider-track-color-background);
   border-radius: var(--sds-c-slider-track-radius-border, $border-radius-small);
 }
 
@@ -71,9 +62,7 @@
   // Webkit
   &::-webkit-slider-thumb {
     @include range-thumb;
-    margin-top: calc(
-      ((#{$slider-handle-size} / 2) - (#{$slider-track-height} / 2)) * -1
-    );
+    margin-top: calc(((#{$slider-handle-size} / 2) - (#{$slider-track-height} / 2)) * -1);
   }
 
   &::-webkit-slider-runnable-track {
@@ -104,36 +93,24 @@
 
   &:focus::-webkit-slider-thumb {
     // @todo re-evaluate Styling Hooks reassignment
-    background-color: var(
-      --sds-c-slider-thumb-color-foreground-focus,
-      $brand-accessible-active
-    );
+    background-color: var(--sds-c-slider-thumb-color-foreground-focus, $brand-accessible-active);
     box-shadow: var(--sds-c-slider-thumb-shadow-focus, $shadow-button-focus);
   }
 
   &:active::-webkit-slider-thumb {
     // @todo re-evaluate Styling Hooks reassignment
-    background-color: var(
-      --sds-c-slider-thumb-color-foreground-active,
-      $brand-accessible-active
-    );
+    background-color: var(--sds-c-slider-thumb-color-foreground-active, $brand-accessible-active);
   }
 
   &:focus::-moz-range-thumb {
     // @todo re-evaluate Styling Hooks reassignment
-    background-color: var(
-      --sds-c-slider-thumb-color-foreground-focus,
-      $brand-accessible-active
-    );
+    background-color: var(--sds-c-slider-thumb-color-foreground-focus, $brand-accessible-active);
     box-shadow: var(--sds-c-slider-thumb-shadow-focus, $shadow-button-focus);
   }
 
   &:active::-moz-range-thumb {
     // @todo re-evaluate Styling Hooks reassignment
-    background-color: var(
-      --sds-c-slider-thumb-color-foreground-active,
-      $brand-accessible-active
-    );
+    background-color: var(--sds-c-slider-thumb-color-foreground-active, $brand-accessible-active);
   }
 
   &[disabled] {

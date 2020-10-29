@@ -245,10 +245,7 @@ a.slds-button--inverse:focus {
 
   // @todo re-evaluate Styling Hooks reassignment
   &:active {
-    background-color: var(
-      --sds-c-button-outline-brand-color-background-active,
-      $color-background-button-default-active
-    );
+    background-color: var(--sds-c-button-outline-brand-color-background-active, $color-background-button-default-active);
     border-color: var(--sds-c-button-outline-brand-color-border-active, $brand-accessible);
   }
 
@@ -397,20 +394,14 @@ a.slds-button--inverse:focus {
   // @todo re-evaluate Styling Hooks reassignment
   &:hover,
   &:focus {
-    background-color: var(
-      --sds-c-button-text-destructive-color-background-hover,
-      $color-background-button-default-hover
-    );
+    background-color: var(--sds-c-button-text-destructive-color-background-hover, $color-background-button-default-hover);
     border-color: var(--sds-c-button-text-destructive-color-border-hover, $button-color-border-primary);
     color: var(--sds-c-button-text-destructive-text-color-hover, $color-text-destructive-hover);
   }
 
   // @todo re-evaluate Styling Hooks reassignment
   &:active {
-    background-color: var(
-      --sds-c-button-text-destructive-color-background-active,
-      $color-background-button-default-active
-    );
+    background-color: var(--sds-c-button-text-destructive-color-background-active, $color-background-button-default-active);
     border-color: var(--sds-c-button-text-destructive-color-border-active, $button-color-border-primary);
     color: var(--sds-c-button-text-destructive-text-color-active, $color-text-destructive-hover);
   }

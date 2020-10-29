@@ -163,7 +163,7 @@
       height: 2px;
       border: 0;
       transform: translate3d(-50%, -50%, 0);
-      background: var(--sds-c-checkbox-mark-color-foreground, $brand-accessible);;
+      background: var(--sds-c-checkbox-mark-color-foreground, $brand-accessible);
     }
 
     &[disabled] {

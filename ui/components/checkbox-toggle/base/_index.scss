@@ -197,10 +197,7 @@
         + .slds-checkbox--faux_container .slds-checkbox--faux {
           // @todo re-evaluate Styling Hooks reassignment
           // @todo consider shared hooks for inputs
-          background-color: var(
-            --sds-c-checkbox-toggle-color-background-checked-focus,
-            $brand-accessible-active
-          );
+          background-color: var(--sds-c-checkbox-toggle-color-background-checked-focus, $brand-accessible-active);
         }
       }
     }

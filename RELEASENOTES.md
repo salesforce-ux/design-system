@@ -12,7 +12,10 @@
 - The Accordion heading button will now take up all available space, allowing for a larger hit target to toggle the Accordion functionality.
 
 ### [Alert](https://www.lightningdesignsystem.com/components/alert)
+#### Fixed
 - Fix incorrect Styling Hook name for `--sds-c-alert-text-color-warning`.
+#### Removed
+- Removed component level styling hooks for status states.
 
 ### [Alert](https://www.lightningdesignsystem.com/components/alert)
 #### Changed
@@ -89,6 +92,10 @@ Refactored the component markup to function with or without theme utility classe
 ### [Toast](https://www.lightningdesignsystem.com/components/toast)
 #### Added
 - Added `--sds-c-toast-text-color` which allows you to customize the text color.
+
+### [Visual Picker](https://www.lightningdesignsystem.com/components/visual-picker)
+#### Fixed
+- Changed checkmark vertical positioning
 
 ## Release 2.13.5 - September 30, 2020
 

@@ -55,8 +55,8 @@ $alert-gradient-size-background: 64px 64px;
     }
 
     &[disabled] {
-      // @todo re-evaluate Styling Hooks reassignment
-      color: var(--sds-c-alert-text-color-disabled, $color-text-link-inverse-disabled);
+      // @TODO: declare at shared/global level
+      color: $color-text-link-inverse-disabled;
     }
   }
 }
@@ -67,19 +67,17 @@ $alert-gradient-size-background: 64px 64px;
  * @restrict .slds-notify_alert
  */
 .slds-alert_warning {
-  /*! @css-var-fallback background-color */
-  background-color: var(--sds-c-alert-color-background-warning, $color-background-warning);
-  // --sds-c-alert-color-background: var(--sds-c-alert-color-background-warning, #{$color-background-warning});
+  // @TODO: declare at sub-system level (SLDS)
+  background-color: $color-background-warning;
 
-  /*! @css-var-fallback color */
-  color: var(--sds-c-alert-text-color-warning, $color-text-default);
+  // @TODO: declare at sub-system level (SLDS)
+  color: $color-text-default;
   // --sds-c-alert-color-text: var(--sds-c-alert-color-text-warning, #{$color-text-default});
 
   .slds-icon,
   .slds-button__icon {
-    /*! @css-var-fallback fill */
-    fill: var(--sds-c-alert-icon-color-foreground-warning, $color-gray-10);
-    // --sds-c-icon-color-foreground: var(--sds-c-alert-icon-color-foreground-warning, #{$color-gray-10});
+    // @TODO: declare at sub-system level (SLDS)
+    fill: $color-gray-10;
   }
 }
 
@@ -89,9 +87,8 @@ $alert-gradient-size-background: 64px 64px;
  * @restrict .slds-notify_alert
  */
 .slds-alert_error {
-  /*! @css-var-fallback background-color */
-  background-color: var(--sds-c-alert-color-background-error, $color-background-toast-error);
-  // --sds-c-alert-color-background: var(--sds-c-alert-color-background-error, #{$color-background-toast-error});
+  // @TODO: declare at sub-system level (SLDS)
+  background-color: $color-background-toast-error;
 }
 
 /**
@@ -100,9 +97,8 @@ $alert-gradient-size-background: 64px 64px;
  * @restrict .slds-notify_alert
  */
 .slds-alert_offline {
-  /*! @css-var-fallback background-color */
-  background-color: var(--sds-c-alert-color-background-offline, #444);
-  // --sds-c-alert-color-background: var(--sds-c-alert-color-background-offline, #444);
+  // @TODO: declare at sub-system level (SLDS)
+  background-color: #444;
 }
 
 /**

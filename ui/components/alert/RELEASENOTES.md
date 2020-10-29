@@ -5,7 +5,13 @@
 <!-- ## [Unreleased] -->
 ## 2.14.0
 
+### Fixed
+
 - Fix incorrect Styling Hook name for `--sds-c-alert-text-color-warning`.
+
+### Removed
+
+- Removed component level styling hooks for status states.
 
 ## 2.13.3
 

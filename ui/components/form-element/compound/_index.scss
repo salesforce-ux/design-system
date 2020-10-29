@@ -15,7 +15,6 @@
 
   .slds-form-element__row {
     display: flex;
-    flex-wrap: wrap;
     margin-bottom: $spacing-xx-small;
     margin-left: ($spacing-xx-small * -1);
     margin-right: ($spacing-xx-small * -1);
@@ -26,12 +25,10 @@
   }
 
   .slds-form-element {
-    /* This class is often the positioning context of .slds-dropdown. If we use
-     * padding then .slds-dropdown is slightly offset. Margins don't collapse
-     * in a flex container so we retain our desired spacing that padding provides
-     * and keep the dropdown positioned correctly without an offset.
+    /* Internal examples may have incorrectly offset dropdowns, this will need to be fixed, not an issue
+     * of this padding implementation.
      */
-    margin-left: $spacing-xx-small;
-    margin-right: $spacing-xx-small;
+    padding-left: $spacing-xx-small;
+    padding-right: $spacing-xx-small;
   }
 }

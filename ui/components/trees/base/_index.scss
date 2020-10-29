@@ -84,9 +84,14 @@
 .slds-tree [aria-disabled="true"] {
   color: $color-text-button-default-disabled;
 
-  .slds-tree__item {
+  .slds-tree__item.slds-is-hovered,
+  .slds-tree__item:hover {
     background-color: transparent;
     cursor: default;
+  }
+
+  .slds-tree__item-meta {
+    color: inherit;
   }
 }
 

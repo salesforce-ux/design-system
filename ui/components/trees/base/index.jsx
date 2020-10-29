@@ -23,7 +23,10 @@ export const DefaultTree = () => (
         </TreeListItem>
       </TreeGroup>
     </TreeListItem>
-    <TreeListItem ariaLevel={1} itemLabel="Tree Item with a Really Really Long Name That Should Truncate">
+    <TreeListItem
+      ariaLevel={1}
+      itemLabel="Tree Item with a Really Really Long Name That Should Truncate"
+    >
       <TreeItem itemLabel="Tree Item with a Really Really Long Name That Should Truncate" />
     </TreeListItem>
   </React.Fragment>
@@ -51,7 +54,10 @@ export const ExpandedTree = () => (
         </TreeListItem>
       </TreeGroup>
     </TreeListItem>
-    <TreeListItem ariaLevel={1} itemLabel="Tree Item with a Really Really Long Name That Should Truncate">
+    <TreeListItem
+      ariaLevel={1}
+      itemLabel="Tree Item with a Really Really Long Name That Should Truncate"
+    >
       <TreeItem itemLabel="Tree Item with a Really Really Long Name That Should Truncate" />
     </TreeListItem>
   </React.Fragment>
@@ -114,7 +120,12 @@ export const DeeplyNestedTree = () => (
                 </TreeListItem>
               </TreeGroup>
             </TreeListItem>
-            <TreeListItem ariaLevel={3} isBranch isExpanded itemLabel="Tree Branch">
+            <TreeListItem
+              ariaLevel={3}
+              isBranch
+              isExpanded
+              itemLabel="Tree Branch"
+            >
               <TreeItem isBranch itemLabel="Tree Branch" />
               <TreeGroup>
                 <TreeListItem ariaLevel={4}>
@@ -126,7 +137,12 @@ export const DeeplyNestedTree = () => (
                 <TreeListItem ariaLevel={4}>
                   <TreeItem />
                 </TreeListItem>
-                <TreeListItem ariaLevel={4} isBranch isExpanded itemLabel="Tree Branch">
+                <TreeListItem
+                  ariaLevel={4}
+                  isBranch
+                  isExpanded
+                  itemLabel="Tree Branch"
+                >
                   <TreeItem isBranch itemLabel="Tree Branch" />
                   <TreeGroup>
                     <TreeListItem ariaLevel={5}>
@@ -187,8 +203,17 @@ export const MetaTextTree = () => (
         </TreeListItem>
       </TreeGroup>
     </TreeListItem>
-    <TreeListItem ariaLevel={1} isBranch itemLabel="Tree Branch" metaTextLabel="Tree Branch Metatext">
-      <TreeItem isBranch itemLabel="Tree Branch" metaTextLabel="Tree Branch Metatext" />
+    <TreeListItem
+      ariaLevel={1}
+      isBranch
+      itemLabel="Tree Branch"
+      metaTextLabel="Tree Branch Metatext"
+    >
+      <TreeItem
+        isBranch
+        itemLabel="Tree Branch"
+        metaTextLabel="Tree Branch Metatext"
+      />
       <TreeGroup>
         <TreeListItem ariaLevel={2}>
           <TreeItem />
@@ -223,7 +248,10 @@ export const TreeWithItemHovered = () => (
         </TreeListItem>
       </TreeGroup>
     </TreeListItem>
-    <TreeListItem ariaLevel={1} itemLabel="Tree Item with a Really Really Long Name That Should Truncate">
+    <TreeListItem
+      ariaLevel={1}
+      itemLabel="Tree Item with a Really Really Long Name That Should Truncate"
+    >
       <TreeItem itemLabel="Tree Item with a Really Really Long Name That Should Truncate" />
     </TreeListItem>
   </React.Fragment>
@@ -236,7 +264,12 @@ export const TreeWithItemDisabled = () => (
       <TreeItem />
     </TreeListItem>
     <TreeListItem ariaLevel={1} isBranch isDisabled itemLabel="Tree Branch">
-      <TreeItem isBranch isDisabled itemLabel="Tree Branch" />
+      <TreeItem
+        isBranch
+        isDisabled
+        itemLabel="Tree Branch"
+        metaTextLabel="Tree Branch Metatext"
+      />
       <TreeGroup>
         <TreeListItem ariaLevel={2}>
           <TreeItem />
@@ -244,14 +277,21 @@ export const TreeWithItemDisabled = () => (
       </TreeGroup>
     </TreeListItem>
     <TreeListItem ariaLevel={1} tabIndex={0} isBranch itemLabel="Tree Branch">
-      <TreeItem isBranch itemLabel="Tree Branch" />
+      <TreeItem
+        isBranch
+        itemLabel="Tree Branch"
+        metaTextLabel="Tree Branch Metatext"
+      />
       <TreeGroup>
         <TreeListItem ariaLevel={2}>
           <TreeItem />
         </TreeListItem>
       </TreeGroup>
     </TreeListItem>
-    <TreeListItem ariaLevel={1} itemLabel="Tree Item with a Really Really Long Name That Should Truncate">
+    <TreeListItem
+      ariaLevel={1}
+      itemLabel="Tree Item with a Really Really Long Name That Should Truncate"
+    >
       <TreeItem itemLabel="Tree Item with a Really Really Long Name That Should Truncate" />
     </TreeListItem>
   </React.Fragment>

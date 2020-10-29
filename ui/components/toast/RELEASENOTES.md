@@ -4,6 +4,12 @@
 
 <!-- ## [Unreleased] -->
 
+## 2.14.0
+
+### Added
+
+- Added `--sds-c-toast-text-color` which allows you to customize the text color.
+
 ## 2.13.0
 
 ### Added

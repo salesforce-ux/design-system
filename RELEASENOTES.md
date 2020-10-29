@@ -79,6 +79,10 @@ Refactored the component markup to function with or without theme utility classe
 #### Added
 - Enabled styling hooks for textarea. See textarea's styling hooks overview table for a full listing of the currently available hooks.
 
+### [Toast](https://www.lightningdesignsystem.com/components/toast)
+#### Added
+- Added `--sds-c-toast-text-color` which allows you to customize the text color.
+
 ## Release 2.13.5 - September 30, 2020
 
 ## Release 2.13.4 - September 29, 2020

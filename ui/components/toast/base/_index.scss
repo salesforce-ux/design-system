@@ -32,7 +32,9 @@
   display: inline-flex;
   align-items: center;
   position: relative;
-  background: var(--sds-c-toast-color-background, $color-background-toast);
+  background: none; // reset
+  background-color: var(--sds-c-toast-color-background, $color-background-toast);
+  color: var(--sds-c-toast-text-color);
   font-weight: $font-weight-light;
   border-radius: var(--sds-c-toast-radius-border, $border-radius-medium);
   margin: $spacing-x-small;

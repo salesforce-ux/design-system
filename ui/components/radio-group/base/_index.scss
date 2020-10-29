@@ -13,11 +13,19 @@
 .slds-radio {
   display: inline-block;
 
+
+  /**
+   * Creates a label for radio button
+   *
+   * @selector .slds-radio__label
+   * @restrict .slds-radio label
+   */
+
   /**
    * Creates a custom styled radio button
    *
    * @selector .slds-radio_faux
-   * @restrict [class*='slds-radio'] span
+   * @restrict .slds-radio__label span
    */
   .slds-radio_faux,
   .slds-radio--faux {

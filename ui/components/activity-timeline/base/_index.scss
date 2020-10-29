@@ -4,13 +4,20 @@
 @import 'deprecate';
 
 /**
- * @summary Create each expandable activity timeline item in a list
+ * @summary Initializes activity timeline
  *
  * @name base
- * @selector .slds-timeline__item_expandable
- * @restrict div
+ * @selector .slds-timeline
+ * @restrict ul
  * @support dev-ready
  * @variant
+ */
+
+/**
+ * @summary Create each expandable activity timeline item in a list
+ *
+ * @selector .slds-timeline__item_expandable
+ * @restrict .slds-timeline div
  */
 .slds-timeline__item_expandable {
   position: relative;

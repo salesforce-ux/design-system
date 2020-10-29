@@ -3,6 +3,7 @@
 
 ## 2.14.0 - Upcoming
 
+- Corrected the syntax for various stylesheet annotations so that they will properly appear in the Overview of CSS Classes section for their respective blueprint.
 - Updated to Icons v9.39.0 and added new icon design token colors
 
 ## 2.13.7 - October 21, 2020

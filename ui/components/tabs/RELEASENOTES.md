@@ -5,6 +5,12 @@
 <!-- ## [Unreleased] -->
 ## 2.14.0
 
+### Added
+
+- Added additional styling hooks. See tab's styling hooks overview table for a full listing of the currently available hooks.
+
+### Changed
+
 - Removed white `background-color` from `.slds-tabs_default` to expose surface color of the tabs parent container.
 
 ## 2.13.3

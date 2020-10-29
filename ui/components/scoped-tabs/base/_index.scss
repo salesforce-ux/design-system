@@ -33,8 +33,8 @@
   @include tabs-nav;
   background-color: $color-gray-2;
   border: $border-width-thin solid $color-border-button-default;
-  border-top-left-radius: var(--sds-c-tabs-scoped-radius-border, $border-radius-medium);
-  border-top-right-radius: var(--sds-c-tabs-scoped-radius-border, $border-radius-medium);
+  border-top-left-radius: $border-radius-medium;
+  border-top-right-radius: $border-radius-medium;
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
 }
@@ -73,8 +73,8 @@
   border-top: 0;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
-  border-bottom-right-radius: var(--sds-c-tabs-scoped-radius-border, $border-radius-medium);
-  border-bottom-left-radius: var(--sds-c-tabs-scoped-radius-border, $border-radius-medium);
+  border-bottom-right-radius: $border-radius-medium;
+  border-bottom-left-radius: $border-radius-medium;
   padding: $spacing-medium;
 }
 
@@ -137,7 +137,7 @@
   background-color: $color-background-alt;
   border-color: $color-border;
   font-weight: $tabs-font-weight;
-  color: var(--sds-c-tabs-scoped-text-color-active, $color-text-action-label-active);
+  color: $color-text-action-label-active;
 
   &:focus {
     text-decoration: underline;

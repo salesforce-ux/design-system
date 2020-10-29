@@ -60,6 +60,10 @@ Refactored the component markup to function with or without theme utility classe
 #### Added
 - Enabled Styling Hooks for Radio Group. See Radio Group's Styling Hooks overview table for a full listing of the currently available hooks.
 
+### [Scoped Tabs](https://www.lightningdesignsystem.com/components/scoped-tabs)
+#### Removed
+- Removed variant specific styling hooks for scoped tabs.
+
 ### [Select](https://www.lightningdesignsystem.com/components/select)
 #### Added
 - Enabled styling hooks for select. See select's styling hooks overview table for a full listing of the currently available hooks.
@@ -73,6 +77,9 @@ Refactored the component markup to function with or without theme utility classe
 - Added demo `background-color` to with-container and fixed-container examples
 
 ### [Tabs](https://www.lightningdesignsystem.com/components/tabs)
+#### Added
+- Added additional styling hooks. See tab's styling hooks overview table for a full listing of the currently available hooks.
+#### Changed
 - Removed white `background-color` from `.slds-tabs_default` to expose surface color of the tabs parent container.
 
 ### [Textarea](https://www.lightningdesignsystem.com/components/textarea)

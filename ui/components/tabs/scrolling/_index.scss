@@ -31,6 +31,7 @@
     top: 0;
     bottom: 0;
     background-color: $color-background-alt;
+    align-items: center;
   }
 }
 
@@ -39,12 +40,16 @@
 
   .slds-has-overflow .slds-tabs__nav-scroller_inner,
   .slds-has-overflow .slds-tabs__nav-scroller--inner {
-    border-bottom: $border-width-thin solid $color-border;
+    border-bottom-width: var(--sds-c-tabs-list-sizing-border, $border-width-thin);
+    border-bottom-style: solid;
+    border-bottom-color: var(--sds-c-tabs-list-color-border, $color-border);
   }
 
   .slds-tab__scroll-controls {
-    padding: calc(#{$spacing-xx-small} - #{$border-width-thin}) $border-width-thin calc(#{$spacing-xx-small} - #{$border-width-thin}) $spacing-x-small;
-    border-bottom: $border-width-thin solid $color-border;
+    padding: calc(#{$spacing-xx-small} - var(--sds-c-tabs-list-sizing-border, #{$border-width-thin})) $border-width-thin calc(#{$spacing-xx-small} - var(--sds-c-tabs-list-sizing-border, #{$border-width-thin})) $spacing-x-small;
+    border-bottom-width: var(--sds-c-tabs-list-sizing-border, $border-width-thin);
+    border-bottom-style: solid;
+    border-bottom-color: var(--sds-c-tabs-list-color-border, $color-border);
   }
 }
 

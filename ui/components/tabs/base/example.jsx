@@ -376,5 +376,30 @@ export let examples = [
     id: 'card-look',
     label: 'Tab Card-look',
     element: <TabsWithCards />
+  },
+  {
+    id: 'styling-hooks',
+    label: 'Styling Hooks',
+    demoStyles: `
+      --sds-c-tabs-list-sizing-border: 5px;
+      --sds-c-tabs-list-color-border: red;
+      --sds-c-tabs-item-color-border-hover: pink;
+      --sds-c-tabs-item-color-border-active: purple;
+      --sds-c-tabs-item-text-color: red;
+      --sds-c-tabs-item-text-color-active: purple;
+    `,
+    element: (
+      <Tabs>
+        <Tabs.Item title="Item One" id="tab-default-1">
+          Item One Content
+        </Tabs.Item>
+        <Tabs.Item title="Item Two" id="tab-default-2">
+          Item Two Content
+        </Tabs.Item>
+        <Tabs.Item title="Item Three" id="tab-default-3">
+          Item Three Content
+        </Tabs.Item>
+      </Tabs>
+    )
   }
 ];

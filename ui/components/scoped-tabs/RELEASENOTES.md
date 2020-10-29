@@ -3,6 +3,12 @@
 # Scoped Tabs Release Notes
 
 <!-- ## [Unreleased] -->
+## 2.14.0
+
+### Removed
+
+- Removed variant specific styling hooks for scoped tabs.
+
 ## 2.13.3
 
 ### Changed

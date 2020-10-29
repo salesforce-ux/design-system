@@ -14,7 +14,8 @@
  */
 .slds-tabs_default,
 .slds-tabs--default {
-  @include tabs;
+  display: block;
+  width: 100%;
 
   /**
    * @summary A tab item that has an overflow menu
@@ -34,8 +35,11 @@
  */
 .slds-tabs_default__nav,
 .slds-tabs--default__nav {
-  @include tabs-nav;
-  border-bottom: $border-width-thin solid $color-border;
+  display: flex;
+  align-items: flex-start;
+  border-bottom-width: var(--sds-c-tabs-list-sizing-border, $border-width-thin);
+  border-bottom-style: solid;
+  border-bottom-color: var(--sds-c-tabs-list-color-border, $color-border);
 }
 
 /**
@@ -45,10 +49,13 @@
  */
 .slds-tabs_default__item,
 .slds-tabs--default__item {
-  color: $color-text-action-label;
+  color: var(--sds-c-tabs-item-text-color, $color-text-action-label);
   position: relative;
-  padding: 0 $spacing-small;
-  margin-bottom: ($border-width-thin * -1);
+  padding-top: var(--sds-c-tabs-item-spacing-block-start, var(--sds-c-tabs-item-spacing-block, 0));
+  padding-right: var(--sds-c-tabs-item-spacing-inline-end, var(--sds-c-tabs-item-spacing-inline, $spacing-small));
+  padding-bottom: var(--sds-c-tabs-item-spacing-block-end, var(--sds-c-tabs-item-spacing-block, 0));
+  padding-left: var(--sds-c-tabs-item-spacing-inline-start, var(--sds-c-tabs-item-spacing-inline, $spacing-small));
+  margin-bottom: calc(var(--sds-c-tabs-list-sizing-border, #{$border-width-thin}) * -1);
 
   &:after {
     display: block;
@@ -73,7 +80,7 @@
 
     &:after {
       background-color: var(--sds-c-tabs-item-color-border-active, $brand-primary);
-      height: rem(3px);
+      height: calc(var(--sds-c-tabs-list-sizing-border, #{$border-width-thin}) + 2px);
     }
 
     .slds-tabs_default__link,
@@ -87,9 +94,8 @@
   }
 
   &:hover:after {
-    height: rem(2px);
+    height: calc(var(--sds-c-tabs-list-sizing-border, #{$border-width-thin}) + 1px);
     background-color: var(--sds-c-tabs-item-color-border-hover, $brand-primary-active);
-    transition: height 300ms;
   }
 
   /**
@@ -103,7 +109,7 @@
     outline: 0;
 
     &:after {
-      height: ($border-width-thick + 1);
+      height: calc(var(--sds-c-tabs-list-sizing-border, #{$border-width-thick}) + 1px);
       background-color: var(--sds-c-tabs-item-color-border-active, $brand-primary);
     }
   }
@@ -170,13 +176,20 @@
  */
 .slds-tabs_default__link,
 .slds-tabs--default__link {
-  @include tabs-link;
-  height: $line-height-tab;
-  line-height: $line-height-tab;
+  @include truncate;
+  display: block;
+  text-decoration: none;
+  cursor: pointer; // needed in case links have no href & use JS
+  height: var(--sds-c-tabs-item-sizing-height, $line-height-tab);
+  line-height: var(--sds-c-tabs-item-line-height, $line-height-tab);
   color: currentColor;
   border: 0;
   text-transform: inherit; // For button menu to inherit the parents text-transform
   z-index: 1; // For subtab notification background coloring
+
+  &:focus {
+    outline: 0;
+  }
 
   &:hover,
   &:focus {
@@ -197,12 +210,12 @@
  */
 .slds-tabs_default__overflow-button {
   display: inline-flex;
-  height: $line-height-tab;
-  line-height: $line-height-tab;
+  height: var(--sds-c-tabs-item-sizing-height, $line-height-tab);
+  line-height: var(--sds-c-tabs-item-line-height, $line-height-tab);
 
   .slds-button {
     line-height: inherit;
-    color: $color-text-action-label;
+    color: var(--sds-c-tabs-item-text-color, $color-text-action-label);
     box-shadow: none;
 
     &:focus {
@@ -226,7 +239,11 @@
  */
 .slds-tabs_default__content,
 .slds-tabs--default__content {
-  @include tabs-content;
+  position: relative;
+  padding-top: var(--sds-c-tabs-panel-spacing-block-start, var(--sds-c-tabs-panel-spacing-block, $spacing-small));
+  padding-right: var(--sds-c-tabs-panel-spacing-inline-end, var(--sds-c-tabs-panel-spacing-inline, 0));
+  padding-bottom: var(--sds-c-tabs-panel-spacing-block-end, var(--sds-c-tabs-panel-spacing-block, $spacing-small));
+  padding-left: var(--sds-c-tabs-panel-spacing-inline-start, var(--sds-c-tabs-panel-spacing-inline, 0));
 }
 
 /**

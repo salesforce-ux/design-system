@@ -4,6 +4,12 @@
 
 <!-- ## [Unreleased] -->
 
+## 2.13.6
+
+### Fixed
+
+- Fixed the issue with metatext not appearing disabled if the tree item was disabled.
+
 ## 2.13.0
 
 ### Added

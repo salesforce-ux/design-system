@@ -11,10 +11,16 @@ import {
 } from '../index';
 
 import { MetaTextTree } from '../base/index';
-
 import createHelpers from '../../../../jest.helpers';
+/**
+ * Diverging from how we define our examples in our test spec. Instead of
+ * recreating the components, we pull in examples from our source of truth
+ */
+import * as Trees from '../base/example';
+import { getDisplayElementById } from '../../../shared/helpers';
 
 const { matchesMarkup } = createHelpers(__dirname);
+
 describe('tree', () => {
   it('renders a base Tree with metatext', () =>
     matchesMarkup(
@@ -25,6 +31,8 @@ describe('tree', () => {
         </TreeList>
       </TreeContainer>
     ));
+  it('renders a base Tree with disabled tree items', () =>
+    matchesMarkup(getDisplayElementById(Trees.states, 'item-disabled')));
 });
 
 describe('Base Tree - Tree Item', () => {

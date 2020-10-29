@@ -104,6 +104,20 @@ Refactored the component markup to function with or without theme utility classe
 #### Fixed
 - Changed checkmark vertical positioning
 
+## Release 2.13.7 - October 21, 2020
+
+## Components
+### [Form Element](https://www.lightningdesignsystem.com/components/form-element)
+#### Changed
+- Revert compound form to its existing behavior of not wrapping to prevent unwanted side-effects in existing layouts.
+
+## Release 2.13.6 - October 14, 2020
+
+## Components
+### [Trees](https://www.lightningdesignsystem.com/components/trees)
+#### Fixed
+- Fixed the issue with metatext not appearing disabled if the tree item was disabled.
+
 ## Release 2.13.5 - September 30, 2020
 
 ## Release 2.13.4 - September 29, 2020

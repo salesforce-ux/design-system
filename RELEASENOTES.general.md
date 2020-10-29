@@ -5,6 +5,10 @@
 
 - Updated to Icons v9.39.0 and added new icon design token colors
 
+## 2.13.7 - October 21, 2020
+
+## 2.13.6 - October 14, 2020
+
 ## 2.13.5 - September 30, 2020
 
 ## 2.13.4 - September 29, 2020

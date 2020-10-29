@@ -755,3 +755,56 @@ props:
     value: '#04844b'
   WARRANTY_TERM:
     value: '#0079BC'
+  PAYMENT_GATEWAY:
+    value: '#0B827C'
+  SERIALIZED_PRODUCT:
+    value: '#2A739E'
+  SERIALIZED_PRODUCT_TRANSACTION:
+    value: '#2A739E'
+  TRAVEL_MODE:
+    value: '#45C173'
+  ADJUST_VALUE:
+    value: '#47B46C'
+  SWARM_REQUEST:
+    value: '#E26E8C'
+  HOLIDAY_OPERATING_HOURS:
+    value: '#6B9EE2'
+  KEY_DATES:
+    value: '#6B9EE2'
+  PRODUCT_SERVICE_CAMPAIGN:
+    value: '#2A739E'
+  PRODUCT_SERVICE_CAMPAIGN_ITEM:
+    value: '#2A739E'
+  RECIPE:
+    value: '#0176d3'
+  COLLECTION:
+    value: '#F2CF5B'
+  IMMUNIZATION:
+    value: '#EB7092'
+  OBSERVATION_COMPONENT:
+    value: '#7F8DE1'
+  SERVICE_REQUEST:
+    value: '#1589E4'
+  SERVICE_REQUEST_DETAIL:
+    value: '#34BECD'
+  PRACTITIONER_ROLE:
+    value: '#EB7092'
+  DEVICE:
+    value: '#7F8DE1'
+  ACTIVATION_TARGET:
+    value: '#dc71d1'
+  VIDEO:
+    value: '#B070E6'
+  FORM:
+    value: '#6EC06E'
+  GUIDANCE_CENTER:
+    value: '#7F8DE1'
+  RECORD_SIGNATURE_TASK:
+    value: '#EB7092'
+  CUSTOM_COMPONENT_TASK:
+    value: '#8A76F0'
+  PROCEDURE:
+    value: '#1589E4'
+  PROCEDURE_DETAIL:
+    value: '#34BECD'
+  

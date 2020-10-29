@@ -3,6 +3,8 @@
 
 ## Release 2.14.0 - Upcoming
 
+- Updated to Icons v9.39.0 and added new icon design token colors
+
 ## Components
 ### [Accordion](https://www.lightningdesignsystem.com/components/accordion)
 ## Added
@@ -143,7 +145,7 @@ Refactored the component markup to function with or without theme utility classe
 
 ## Release 2.13.2 - September 23, 2020
 
-- Added added icons synonym metadata to SLDS dist
+- Added icons synonym metadata to SLDS dist
 
 ## Release 2.13.1 - September 18, 2020
 

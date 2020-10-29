@@ -87,7 +87,7 @@
 
   &:hover,
   &:focus {
-    color: var(--sds-c-accordion-heading-text-color-hover, var(--sds-c-button-text-color-hover, $brand-accessible-active));
+    color: var(--sds-c-accordion-heading-text-color-hover, $brand-accessible-active);
   }
 }
 

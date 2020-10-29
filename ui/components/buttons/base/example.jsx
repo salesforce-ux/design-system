@@ -245,6 +245,11 @@ export let examples = [
         I should be centered
       </Button>
     )
+  },
+  {
+    id: 'reset',
+    label: 'Reset',
+    element: <Button isReset>Reset Button</Button>
   }
 ];
 

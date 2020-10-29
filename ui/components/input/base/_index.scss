@@ -24,22 +24,24 @@
   border: $border-width-thin solid var(--sds-c-input-color-border, $color-border-input);
   border-radius: var(--sds-c-input-radius-border, $border-radius-medium);
   background-color: var(--sds-c-input-color-background, $color-background-input);
-  box-shadow: var(--sds-c-input-shadow, none);
+  color: var(--sds-c-input-text-color);
+  box-shadow: var(--sds-c-input-shadow);
   transition: border $duration-quickly linear, background-color $duration-quickly linear;
 
   &:focus,
   &:active {
     /*! @css-var-fallback border-color */
     // --sds-c-input-color-border: var(--sds-c-input-color-border-focus, #{$color-border-input-active});
-    border-color: var(--sds-c-input-color-border-focus, #{$color-border-input-active});
+    border-color: var(--sds-c-input-color-border-focus, $color-border-input-active);
 
     /*! @css-var-fallback background-color */
     // --sds-c-input-background-color: var(--sds-c-input-color-background-focus, #{$color-background-input-active});
-    background-color: var(--sds-c-input-color-background-focus, #{$color-background-input-active});
+    background-color: var(--sds-c-input-color-background-focus, var(--sds-c-input-color-background, $color-background-input-active));
+    color: var(--sds-c-input-text-color-focus);
 
     /*! @css-var-fallback box-shadow */
     // --sds-c-input-shadow: var(--sds-c-input-shadow-focus, 0 0 3px #{$brand-accessible});
-    box-shadow: var(--sds-c-input-shadow-focus, 0 0 3px #{$brand-accessible});
+    box-shadow: var(--sds-c-input-shadow-focus, 0 0 3px $brand-accessible);
     outline: 0;
   }
 
@@ -47,6 +49,7 @@
   &.slds-is-disabled {
     background-color: $color-background-input-disabled;
     border-color: $color-border-input-disabled;
+    color: $color-text-input-disabled;
     cursor: not-allowed;
     user-select: none;
 
@@ -61,17 +64,9 @@
    * @restrict .slds-input
    */
   &[readonly] {
-    /*! @css-var-fallback padding-left */
-    // --sds-c-input-spacing-horizontal-start: var(--sds-c-input-spacing-horizontal-start-readonly, 0);
-    padding-left: var(--sds-c-input-spacing-horizontal-start-readonly, 0);
-
-    /*! @css-var-fallback border-color */
-    // --sds-c-input-color-border: var(--sds-c-input-color-border-readonly, transparent);
-    border-color: var(--sds-c-input-color-border-readonly, transparent);
-
-    /*! @css-var-fallback background-color */
-    // --sds-c-input-color-background: var(--sds-c-input-color-background-readonly, transparent);
-    background-color: var(--sds-c-input-color-background-readonly, transparent);
+    padding-left: 0;
+    border-color: transparent;
+    background-color: transparent;
     font-size: $input-static-font-size;
     // TODO: This is a plain readonly input. It should not have the text treatment that static has.
     font-weight: $input-readonly-font-weight;
@@ -336,7 +331,8 @@
 .slds-has-error .slds-input {
   border-color: $color-border-error;
   box-shadow: $color-border-error 0 0 0 $border-width-thin inset;
-  background-color: $color-background-input;
+  background-color: var(--sds-c-input-color-background, $color-background-input);
+  color: var(--sds-c-input-text-color);
   background-clip: padding-box;
 
   &:focus,

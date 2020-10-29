@@ -47,6 +47,10 @@ Refactored the component markup to function with or without theme utility classe
 #### Fixed
 - Adjusted space between the form label and the information button icon for Mobile.
 
+### [Icons](https://www.lightningdesignsystem.com/components/icons)
+#### Removed
+- Removed hooks for modifying the status states of icons at the component level.
+
 ### [Input](https://www.lightningdesignsystem.com/components/input)
 #### Added
 - Enabled styling hooks for Inputs. See Input's styling hooks overview table for a full listing of the currently available hooks.

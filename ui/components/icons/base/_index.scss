@@ -180,7 +180,7 @@ $bg-standard-map: map-merge($task2-monkey-patch, $bg-standard-map);
 * @group color
 */
 .slds-icon-text-warning {
-  fill: var(--sds-c-icon-color-foreground-warning, $color-text-warning);
+  fill: $color-text-warning;
 }
 
 /**
@@ -192,7 +192,7 @@ $bg-standard-map: map-merge($task2-monkey-patch, $bg-standard-map);
 * @group color
 */
 .slds-icon-text-success {
-  fill: var(--sds-c-icon-color-foreground-success, $color-text-success);
+  fill: $color-text-success;
 }
 
 /**
@@ -204,7 +204,7 @@ $bg-standard-map: map-merge($task2-monkey-patch, $bg-standard-map);
 * @group color
 */
 .slds-icon-text-error {
-  fill: var(--sds-c-icon-color-foreground-error, $color-text-error);
+  fill: $color-text-error;
 }
 
 /**
@@ -214,7 +214,7 @@ $bg-standard-map: map-merge($task2-monkey-patch, $bg-standard-map);
 * @group color
 */
 .slds-icon-text-light {
-  fill: var(--sds-c-icon-color-foreground-light, $color-text-input-icon);
+  fill: $color-text-input-icon;
 }
 
 /**

@@ -4,6 +4,12 @@
 
 <!-- ## [Unreleased] -->
 
+## 2.14.0
+
+### Removed
+
+- Removed hooks for modifying the status states of icons at the component level.
+
 ## 2.13.1
 
 ### Added

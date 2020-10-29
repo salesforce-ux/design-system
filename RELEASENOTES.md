@@ -46,6 +46,9 @@ Refactored the component markup to function with or without theme utility classe
 - Enabled styling hooks for Inputs. See Input's styling hooks overview table for a full listing of the currently available hooks.
 
 ### [Modals](https://www.lightningdesignsystem.com/components/modals)
+#### Added
+- Added styling hooks for text color that let you set the `color` for the whole modal or a specific section.
+- Added styling hooks for background color that let you set the `background-color` for the whole modal or a specific section.
 #### Fixed
 - Fixed incorrect styling hooks on heading
 

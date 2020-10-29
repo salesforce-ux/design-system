@@ -5,6 +5,11 @@
 <!-- ## [Unreleased] -->
 ## 2.14.0
 
+### Added
+
+- Added styling hooks for text color that let you set the `color` for the whole modal or a specific section.
+- Added styling hooks for background color that let you set the `background-color` for the whole modal or a specific section.
+
 ### Fixed
 
 - Fixed incorrect styling hooks on heading

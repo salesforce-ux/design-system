@@ -1,9 +1,39 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-@include deprecate('4.0.0', 'Please use slds-backdrop instead') {
+/**
+ * Originally this deprecate file was not being imported, therefore the
+ * below rule was not outputted. Commenting out to keep existing behavior
+ * since this is deprecated and nothing broke with its absence.
+ */
+// @include deprecate('4.0.0', 'Please use slds-backdrop instead') {
 
-  .slds-modal-backdrop {
-    @include backdrop;
+//   .slds-modal-backdrop {
+//     @include backdrop;
+//   }
+// }
+
+@include deprecate('4.0.0', 'Please use slds-modal__content instead') {
+  /**
+   * Creates the shaded menu area for the modal.
+   *
+   * @selector .slds-modal__menu
+   * @restrict .slds-modal div
+   * @notes Either `.slds-modal__menu` or `.slds-modal__content` must be used. If you’re using this class, you do not need the other. This should be nested immediately inside `.slds-modal_container` and immediately after `.slds-modal__header`.
+   * @required
+   */
+  .slds-modal__menu {
+    position: relative;
+    border-radius: $border-radius-medium;
+    padding: $spacing-medium;
+    background-color: $color-background;
+
+    @include mq-medium-max {
+
+      .slds-button {
+        width: 100%;
+        margin: $spacing-xxx-small 0;
+      }
+    }
   }
 }

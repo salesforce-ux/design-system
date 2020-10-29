@@ -1,6 +1,8 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
+@import 'deprecate';
+
 /**
  * @name base
  * @selector .slds-modal
@@ -71,7 +73,8 @@
     border-bottom-width: var(--sds-c-modal-sizing-border, $border-width-thick);
     border-bottom-style: solid;
     border-bottom-color: var(--sds-c-modal-color-border, $color-border);
-    background-color: var(--sds-c-modal-header-color-background, $color-background-alt);
+    background-color: var(--sds-c-modal-header-color-background, var(--sds-c-modal-color-background, $color-background-alt));
+    color: var(--sds-c-modal-header-text-color, var(--sds-c-modal-text-color));
     padding-top: var(--sds-c-modal-header-spacing-block-start, $spacing-medium);
     padding-right: var(--sds-c-modal-header-spacing-inline-end, $spacing-medium);
     padding-bottom: var(--sds-c-modal-header-spacing-block-end, $spacing-medium);
@@ -122,7 +125,8 @@
    * @required
    */
   &__content {
-    background: var(--sds-c-modal-content-color-background, $color-background-alt);
+    background-color: var(--sds-c-modal-content-color-background, var(--sds-c-modal-color-background, $color-background-alt));
+    color: var(--sds-c-modal-content-text-color, var(--sds-c-modal-text-color));
     overflow: hidden;
     overflow-y: auto;
 
@@ -134,28 +138,7 @@
     }
   }
 
-  /**
-   * Creates the shaded menu area for the modal.
-   *
-   * @selector .slds-modal__menu
-   * @restrict .slds-modal div
-   * @notes Either `.slds-modal__menu` or `.slds-modal__content` must be used. If you’re using this class, you do not need the other. This should be nested immediately inside `.slds-modal_container` and immediately after `.slds-modal__header`.
-   * @required
-   */
-  &__menu {
-    position: relative;
-    border-radius: $border-radius-medium;
-    padding: $spacing-medium;
-    background-color: $color-background;
 
-    @include mq-medium-max {
-
-      .slds-button {
-        width: 100%;
-        margin: $spacing-xxx-small 0;
-      }
-    }
-  }
 
   /**
    * Creates the Modal Footer container.
@@ -171,7 +154,8 @@
     border-top-width: var(--sds-c-modal-sizing-border, $border-width-thick);
     border-top-style: solid;
     border-top-color: var(--sds-c-modal-color-border, $color-border);
-    background-color: var(--sds-c-modal-footer-color-background, $color-background);
+    background-color: var(--sds-c-modal-footer-color-background, var(--sds-c-modal-color-background, $color-background));
+    color: var(--sds-c-modal-footer-text-color, var(--sds-c-modal-text-color));
     padding-top: var(--sds-c-modal-footer-spacing-block-start, $spacing-small);
     padding-right: var(--sds-c-modal-footer-spacing-inline-end, $spacing-medium);
     padding-bottom: var(--sds-c-modal-footer-spacing-block-end, $spacing-small);

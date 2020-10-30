@@ -1,4 +1,9 @@
 const makeTitle = string => {
+  // break out to avoid issues if string is falsey
+  if (!string) {
+    return;
+  }
+
   const words = string.split(/-/);
   let title;
 

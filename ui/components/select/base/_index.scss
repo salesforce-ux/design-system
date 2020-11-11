@@ -104,6 +104,19 @@
     }
   }
 
+  &:before,
+  &:after {
+    position: absolute;
+    content: '';
+    display: block;
+    right: $spacing-x-small;
+    width: 0;
+    height: 0;
+    border-left: 3px solid transparent;
+    border-right: 3px solid transparent;
+    pointer-events: none;
+  }
+
   &:before {
     border-bottom: 5px solid currentColor;
     top: calc((#{$line-height-button-small} / 2) - 6px);

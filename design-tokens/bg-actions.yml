@@ -406,3 +406,5 @@ props:
     value: '#0070d2'
   ACTION_BUG:
     value: '#EF6E5D'
+  ACTION_ADJUST_VALUE:
+    value: '#47B46C'

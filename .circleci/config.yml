@@ -144,6 +144,17 @@ commands:
           name: Add Applitools eyes-storybook module
           command: 'npm i @applitools/eyes-storybook@latest --save-dev --package-lock-only'
 
+  install-gh-cli:
+    description: 'Install Github CLI'
+    steps:
+      - run:
+          name: Install Github CLI
+          command: |
+            sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-key C99B11DEB97541F0
+            sudo apt-add-repository https://cli.github.com/packages
+            sudo apt update
+            sudo apt install gh
+
   launch-static-storybook:
     description: 'Launch local static Storybook server'
     steps:
@@ -170,6 +181,21 @@ jobs:
     steps:
       - checkout
       - run: mkdir -p workspace
+      - install-gh-cli
+
+      - run:
+          name: Retrieve Github deployments
+          command: |
+            gh api /repos/salesforce-ux/design-system-internal/deployments --field ref=${CIRCLE_SHA1} --method GET | jq "map({ status: .statuses_url, url: .payload.web_url})" > workspace/gh-deployments.json
+
+      - run:
+          name: Set Github deployments to "in progress"
+          command: |
+            for row in $(jq -r '.[] | @base64' workspace/gh-deployments.json); do
+              export STATUS_URL=$(echo ${row} | base64 --decode | jq -r ".status" | sed 's/https:\/\/api.github.com//')
+              gh api ${STATUS_URL} -f state=in_progress -H "Accept: application/vnd.github.flash-preview+json"
+            done
+
       - set-heroku-app-name
 
       - node/install-packages
@@ -198,6 +224,7 @@ jobs:
             - styles.tar
             - metadata.tar
             - heroku-app-name.txt
+            - gh-deployments.json
 
   # Build SLDS .dist
   framework-build:
@@ -371,8 +398,23 @@ jobs:
           command: 'npm run storybook:build'
 
       - run:
+          name: 'Generate custom Nginx config'
+          command: |
+            cat > nginx_app.conf\<<'EOF'
+            # Redirect all non-SSL requests
+            if ($http_x_forwarded_proto != 'https') {
+              return 301 https://$host$request_uri;
+            }
+
+            location / {
+              index  index.php index.html index.htm;
+            }
+            EOF
+            cat nginx_app.conf
+
+      - run:
           name: Archive static Storybook
-          command: 'tar -czvf workspace/storybook.tar.gz .out/ Procfile composer.json'
+          command: 'tar -czvf workspace/storybook.tar.gz .out/ Procfile composer.json nginx_app.conf'
 
       - persist_to_workspace:
           root: workspace
@@ -404,6 +446,16 @@ jobs:
             echo "=============================="
             heroku buildpacks -a ${REVIEW_APP_NAME} | grep "heroku/php" || heroku buildpacks:set heroku/php -a ${REVIEW_APP_NAME}
             heroku builds:create --source-tar workspace/storybook.tar.gz -a ${REVIEW_APP_NAME}
+
+      - install-gh-cli
+      - run:
+          name: Set Github deployments to "success"
+          command: |
+            for row in $(jq -r '.[] | select(.url | contains("storybook")) | @base64' workspace/gh-deployments.json); do
+              export STATUS_URL=$(echo ${row} | base64 --decode | jq -r ".status" | sed 's/https:\/\/api.github.com//')
+              export SITE_URL=$(echo ${row} | base64 --decode | jq -r ".url")
+              gh api ${STATUS_URL} -f state=success -f environment_url=${SITE_URL} -H "Accept: application/vnd.github.ant-man-preview+json"
+            done
 
   # Build & publish SLDS site (review app or upcoming/core-main/core-patch)
   publish-site:
@@ -450,8 +502,19 @@ jobs:
           name: 'Generate site tarball'
           command: |
             echo '{}' > composer.json
-            echo 'web: vendor/bin/heroku-php-nginx .www' > Procfile
-            tar -czvf site-next.tar.gz .www/ Procfile composer.json
+            echo 'web: vendor/bin/heroku-php-nginx -C nginx_app.conf .www' > Procfile
+            cat > nginx_app.conf\<<'EOF'
+            # Redirect all non-SSL requests
+            if ($http_x_forwarded_proto != 'https') {
+              return 301 https://$host$request_uri;
+            }
+
+            location / {
+              index  index.php index.html index.htm;
+            }
+            EOF
+            cat nginx_app.conf
+            tar -czvf site-next.tar.gz .www/ Procfile composer.json nginx_app.conf
 
       - run:
           name: 'Deploy to Heroku app'
@@ -462,6 +525,16 @@ jobs:
             echo "=============================="
             heroku buildpacks -a ${HEROKU_APP_NAME} | grep "heroku/php" || heroku buildpacks:set heroku/php -a ${HEROKU_APP_NAME}
             heroku builds:create --source-tar site-next.tar.gz -a ${HEROKU_APP_NAME}
+
+      - install-gh-cli
+      - run:
+          name: Set Github deployments to "success"
+          command: |
+            for row in $(jq -r '.[] | select(.url | contains("review-site")) | @base64' workspace/gh-deployments.json); do
+              export STATUS_URL=$(echo ${row} | base64 --decode | jq -r ".status" | sed 's/https:\/\/api.github.com//')
+              export SITE_URL=$(echo ${row} | base64 --decode | jq -r ".url")
+              gh api ${STATUS_URL} -f state=success -f environment_url=${SITE_URL} -H "Accept: application/vnd.github.ant-man-preview+json"
+            done
 
   #
   vrt-desktop:

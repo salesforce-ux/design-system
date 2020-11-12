@@ -350,6 +350,10 @@ jobs:
             tar -cvf workspace/design-system-dist.tar .dist/
             cd .dist && zip -r dist . && mv dist.zip ../workspace/ && cd ..
 
+      - aws-s3/copy:
+          from: workspace/dist.zip
+          to: 's3://sldsbuilds/design-system/${CIRCLE_SHA1}/'
+
       - persist_to_workspace:
           root: workspace
           paths:
@@ -362,13 +366,6 @@ jobs:
     resource_class: small
 
     steps:
-      - attach_workspace:
-          at: workspace
-
-      - aws-s3/copy:
-          from: workspace/dist.zip
-          to: 's3://sldsbuilds/design-system/${CIRCLE_SHA1}/'
-
       - run:
           name: Trigger database update via API
           command: |

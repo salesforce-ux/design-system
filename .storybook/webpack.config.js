@@ -39,7 +39,21 @@ const commonRules = [
   },
   {
     loader: 'postcss-loader',
-    options: { sourceMap: true }
+    options: {
+      ident: 'postcss',
+      sourceMap: true,
+      plugins: (loader) => {
+        // if requesting the SLDS version for IE11/Edge Legacy
+        if (process.env.STORYBOOK_SLDS_VERSION === 'legacy') {
+          return [
+            require('@salesforce-ux/postcss-annotations-parser'),
+            require('@salesforce-ux/postcss-css-variable-value')
+          ];
+        }
+
+        return [require('autoprefixer')];
+      }
+    }
   },
   {
     loader: 'sass-loader',

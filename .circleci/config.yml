@@ -16,6 +16,18 @@ executors:
       - image: cimg/node:lts
 
 commands:
+  install-postcss-plugins:
+    description: 'Install PostCSS plugins from Github Package Registry'
+    steps:
+      - run:
+          name: 'Create .npmrc'
+          command: |
+            echo "//npm.pkg.github.com/:_authToken=${GITHUB_PACKAGES_TOKEN}" > .npmrc
+            echo "registry=https://npm.pkg.github.com/salesforce-ux" >> .npmrc
+      - run:
+          name: 'Install PostCSS plugins'
+          command: 'npm i -D @salesforce-ux/postcss-annotations-parser @salesforce-ux/postcss-css-variable-value'
+
   build-tokens:
     description: 'Build tokens'
     steps:
@@ -75,10 +87,13 @@ commands:
       - run:
           name: Show HEROKU_APP_NAME value
           command: |
-            echo "=============================="
-            echo ${HEROKU_APP_NAME}
+            echo
+            echo "CIRCLE_PULL_REQUEST = ${CIRCLE_PULL_REQUEST}"
+            echo
             echo "=============================="
             cat workspace/heroku-app-name.txt
+            echo "=============================="
+            echo
 
   prepare-vrt:
     description: 'Prepare VRT environment'
@@ -91,6 +106,7 @@ commands:
       - vrt-set-env-vars
       - add-applitools
       - node/install-packages
+      - install-postcss-plugins
       - browser-tools/install-chrome
       - browser-tools/install-chromedriver
 
@@ -157,6 +173,7 @@ jobs:
       - set-heroku-app-name
 
       - node/install-packages
+      - install-postcss-plugins
 
       # Gulp tasks (need to clean-up and not run through `npm run`)
       - build-tokens
@@ -205,6 +222,7 @@ jobs:
           command: 'tar -xvf workspace/metadata.tar'
 
       - node/install-packages
+      - install-postcss-plugins
 
       - run:
           name: 'Install rsync'
@@ -346,6 +364,7 @@ jobs:
           at: workspace
       - copy-tokens-from-workspace
       - node/install-packages
+      - install-postcss-plugins
 
       - run:
           name: Build static Storybook
@@ -413,6 +432,7 @@ jobs:
             tar -xvf workspace/design-system-dist.tar --directory .slds
 
       - node/install-packages
+      - install-postcss-plugins
 
       - run:
           name: 'Build static site'
@@ -470,6 +490,19 @@ jobs:
           command: 'STORYBOOK_STORIES_TYPE=mobile npx eyes-storybook --conf applitools.mobile.config.js' #  -u https://${REVIEW_APP_NAME}.herokuapp.com
           no_output_timeout: 20m
 
+  vrt-legacy:
+    executor: slds-executor
+    resource_class: large
+
+    steps:
+      - prepare-vrt
+
+      # run Applitools tests!
+      - run:
+          name: Applitools (legacy)
+          command: 'STORYBOOK_SLDS_VERSION=legacy npx eyes-storybook --conf applitools.legacy.config.js' # -u https://${REVIEW_APP_NAME}.herokuapp.com
+          no_output_timeout: 20m
+
   vrt-close:
     executor: slds-executor
     resource_class: small
@@ -481,8 +514,10 @@ workflows:
   version: 2
   CI:
     jobs:
-      - prepare
+      - prepare:
+          context: ux-eng-keys
       - build-storybook:
+          context: ux-eng-keys
           # do not run for main version branches
           filters:
             branches:
@@ -490,12 +525,15 @@ workflows:
           requires:
             - prepare
       - publish-storybook:
+          context: ux-eng-keys
           requires:
             - build-storybook
       - framework-build:
+          context: ux-eng-keys
           requires:
             - prepare
       - publish-site:
+          context: ux-eng-keys
           requires:
             - framework-build
       - populate-database:
@@ -514,15 +552,22 @@ workflows:
           filters:
             branches:
               ignore: /^\d{3}-(summer|spring|winter)-\d{2}$/
-      # - vrt-mobile:
-      #     context: ux-eng-keys
-      #     # do not run for main version branches
-      #     filters:
-      #       branches:
-      #         ignore: /^\d{3}-(summer|spring|winter)-\d{2}$/
+      - vrt-mobile:
+          context: ux-eng-keys
+          # do not run for main version branches
+          filters:
+            branches:
+              ignore: /^\d{3}-(summer|spring|winter)-\d{2}$/
+      - vrt-legacy:
+          context: ux-eng-keys
+          # do not run for main version branches
+          filters:
+            branches:
+              ignore: /^\d{3}-(summer|spring|winter)-\d{2}$/
       - vrt-close:
           context: ux-eng-keys
           requires:
             - vrt-desktop
-            # - vrt-mobile
+            - vrt-mobile
+            - vrt-legacy
 

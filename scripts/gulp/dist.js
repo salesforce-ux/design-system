@@ -11,6 +11,8 @@ import Immutable from 'immutable';
 import path from 'path';
 import discardComments from 'postcss-discard-comments';
 import combineMediaQuery from 'postcss-combine-media-query';
+import annotationsParser from '@salesforce-ux/postcss-annotations-parser';
+import cssVariableValue from '@salesforce-ux/postcss-css-variable-value';
 
 import packageJSON from '../../package.json';
 
@@ -37,6 +39,7 @@ const DISPLAY_NAME = 'Lightning Design System';
 const MODULE_NAME = 'salesforce-lightning-design-system';
 const MODULE_NAME_TOUCH = 'salesforce-lightning-design-system_touch';
 const MODULE_NAME_TOUCH_DEMO = 'salesforce-lightning-design-system_touch-demo';
+const MODULE_NAME_LEGACY = 'salesforce-lightning-design-system-legacy';
 
 export const cleanBefore = () => del([paths.dist]);
 export const cleanAfter = () => del([distPath('README-dist.md')]);
@@ -211,6 +214,20 @@ export const sassTouchDemo = () =>
     )
     .pipe(gulp.dest(distPath('__internal/styles/')));
 
+export const cssVarFallbacks = () =>
+  gulp
+    .src([distPath('scss/index.scss')])
+    .pipe(gulpHelpers.writeScss({ outputStyle: 'expanded' }))
+    .pipe(gulpHelpers.writePostCss([annotationsParser(), cssVariableValue(), discardComments()]))
+    .pipe(
+      gulpRename(path => {
+        path.basename = MODULE_NAME_LEGACY;
+        path.extname = '.css';
+        return path;
+      })
+    )
+    .pipe(gulp.dest(distPath('assets/styles/')));
+
 /*
  * ==================
  * Compiles tmp SCSS files for every component
@@ -293,7 +310,8 @@ export const minifyCss = () =>
       [
         distPath(`assets/styles/${MODULE_NAME}.css`),
         distPath(`assets/styles/${MODULE_NAME_TOUCH}.css`),
-        distPath(`__internal/styles/${MODULE_NAME_TOUCH_DEMO}.css`)
+        distPath(`__internal/styles/${MODULE_NAME_TOUCH_DEMO}.css`),
+        distPath(`assets/styles/${MODULE_NAME_LEGACY}.css`)
       ],
       { base: distPath() }
     )

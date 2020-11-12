@@ -8,8 +8,11 @@ import gulp from 'gulp';
 import gulpPlumber from 'gulp-plumber';
 import gulpSourcemaps from 'gulp-sourcemaps';
 import combineMediaQuery from 'postcss-combine-media-query';
+import annotationsParser from '@salesforce-ux/postcss-annotations-parser';
+import cssVariableValue from '@salesforce-ux/postcss-css-variable-value';
 
 import gulpFile from 'gulp-file';
+import gulpRename from 'gulp-rename';
 
 import paths from '../helpers/paths';
 import * as gulpHelpers from '../helpers/gulp';
@@ -114,6 +117,18 @@ export const extractStyleHooks = done =>
     'generate:extractStyleHooks',
     extractVarsFromSLDS({ suppressOutput: true, callback: done })
   );
+
+export const cssVarFallbacks = () =>
+  gulp
+    .src(['ui/index.scss'])
+    .pipe(gulpPlumber())
+    .pipe(gulpSourcemaps.init())
+    .pipe(gulpRename('index-css-variable-fallbacks.css'))
+    .pipe(gulpHelpers.writeScss())
+    .pipe(gulpHelpers.writePostCss([annotationsParser(), cssVariableValue()]))
+    .pipe(gulpHelpers.writeMinifyCss())
+    .pipe(gulpSourcemaps.write('.'))
+    .pipe(gulp.dest('assets/styles'));
 
 // Quick check that all variants compile correctly to CSS
 export const sassTest = () =>

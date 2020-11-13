@@ -66,6 +66,7 @@ commands:
           name: Set which app to deploy to on Heroku
           command: |
             export CURRENT_DEFAULT_BRANCH=`git remote show origin | grep "HEAD branch" | cut -d ":" -f 2 | xargs`
+            echo 'export HEROKU_RELEASE_STORYBOOK_APP_NAME=false' >> $BASH_ENV
             if [[ "${CIRCLE_BRANCH}" = "${CURRENT_DEFAULT_BRANCH}" ]] ; then
               if [[ "${CIRCLE_TAG}" =~ ^v\d+\.\d+\.\d+-.+$ ]] ; then
                 echo "Publishing to CORE-MAIN..."
@@ -73,16 +74,20 @@ commands:
               else
                 echo "Publishing to UPCOMING..."
                 echo 'export HEROKU_APP_NAME=${HEROKU_APP_UPCOMING}' >> $BASH_ENV
+                echo 'export HEROKU_RELEASE_STORYBOOK_APP_NAME=storybook-upcoming' >> $BASH_ENV
               fi
             elif [[ "${CIRCLE_TAG}" =~ ^v\d+\.\d+\.\d+$ ]] ; then
               echo "Publishing to CORE-PATCH..."
               echo 'export HEROKU_APP_NAME=${HEROKU_APP_CORE_PATCH}' >> $BASH_ENV
+              echo 'export HEROKU_RELEASE_STORYBOOK_APP_NAME=storybook-core-patch' >> $BASH_ENV
             else
               echo "Publishing to pull-request review app..."
               echo 'export HEROKU_APP_NAME=slds-review-site-pr-${CIRCLE_PULL_REQUEST##*/}' >> $BASH_ENV
+              echo 'export HEROKU_RELEASE_STORYBOOK_APP_NAME=true' >> $BASH_ENV
             fi
             source $BASH_ENV
             echo $HEROKU_APP_NAME > workspace/heroku-app-name.txt
+            echo $HEROKU_RELEASE_STORYBOOK_APP_NAME > workspace/heroku-release-storybook-app-name.txt
 
       - run:
           name: Show HEROKU_APP_NAME value
@@ -224,6 +229,7 @@ jobs:
             - styles.tar
             - metadata.tar
             - heroku-app-name.txt
+            - heroku-release-storybook-app-name.txt
             - gh-deployments.json
 
   # Build SLDS .dist
@@ -427,6 +433,14 @@ jobs:
       - attach_workspace:
           at: workspace
 
+      - run:
+          name: 'Only proceed if we have a Storybook app to update'
+          command: |
+            export HEROKU_RELEASE_STORYBOOK_APP_NAME=$(cat workspace/heroku-release-storybook-app-name.txt)
+            if [[ ${HEROKU_RELEASE_STORYBOOK_APP_NAME} == "false" ]]; then
+            circleci step halt
+            fi
+
       - vrt-set-env-vars
 
       # Heroku
@@ -436,13 +450,19 @@ jobs:
           command: 'heroku plugins:install heroku-builds'
 
       - run:
-          name: 'Deploy to Heroku Review App'
+          name: 'Deploy to Heroku'
           command: |
+            export HEROKU_RELEASE_STORYBOOK_APP_NAME=$(cat workspace/heroku-release-storybook-app-name.txt)
+            if [[ ${HEROKU_RELEASE_STORYBOOK_APP_NAME} != "false" &&  ${PR_NUMBER} == "" ]]; then
+            export PUBLISH_STORYBOOK_TO=${HEROKU_RELEASE_STORYBOOK_APP_NAME}
+            else
+            export PUBLISH_STORYBOOK_TO=${REVIEW_APP_NAME}
+            fi
             echo "=============================="
-            echo ${REVIEW_APP_NAME}
+            echo ${PUBLISH_STORYBOOK_TO}
             echo "=============================="
-            heroku buildpacks -a ${REVIEW_APP_NAME} | grep "heroku/php" || heroku buildpacks:set heroku/php -a ${REVIEW_APP_NAME}
-            heroku builds:create --source-tar workspace/storybook.tar.gz -a ${REVIEW_APP_NAME}
+            heroku buildpacks -a ${PUBLISH_STORYBOOK_TO} | grep "heroku/php" || heroku buildpacks:set heroku/php -a ${PUBLISH_STORYBOOK_TO}
+            heroku builds:create --source-tar workspace/storybook.tar.gz -a ${PUBLISH_STORYBOOK_TO}
 
       - install-gh-cli
       - run:
@@ -590,8 +610,8 @@ workflows:
           context: ux-eng-keys
           # do not run for main version branches
           filters:
-            branches:
-              ignore: /^\d{3}-(summer|spring|winter)-\d{2}$/
+            tags:
+              ignore: /^v\d+\.\d+\.\d+-.+$/
           requires:
             - prepare
       - publish-storybook:

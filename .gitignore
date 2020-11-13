@@ -60,3 +60,6 @@ coverage
 
 # Legacy folders
 /git_modules
+
+# Local postcss packages
+install-postcss.sh

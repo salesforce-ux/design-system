@@ -38,7 +38,6 @@
  * @restrict .slds-card div
  */
 .slds-card__header {
-  display: flex;
   padding-top: var(--sds-c-card-header-spacing-block-start, var(--sds-c-card-header-spacing-block, $var-spacing-vertical-small));
   padding-right: var(--sds-c-card-header-spacing-inline-end, var(--sds-c-card-header-spacing-inline, $var-spacing-horizontal-medium));
   padding-bottom: var(--sds-c-card-header-spacing-block-end, var(--sds-c-card-header-spacing-block, 0));

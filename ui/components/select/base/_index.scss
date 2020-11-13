@@ -61,20 +61,6 @@
       padding: $spacing-x-small;
     }
   }
-
-  .slds-has-error {
-
-    .slds-select {
-      border-color: $color-border-error;
-      box-shadow: $color-border-error 0 0 0 $border-width-thin inset;
-      background-clip: padding-box;
-
-      &:focus,
-      &:active {
-        box-shadow: $color-border-error 0 0 0 $border-width-thin inset, $shadow-button-focus;
-      }
-    }
-  }
 }
 
 /**
@@ -125,5 +111,19 @@
   &:after {
     border-top: 5px solid currentColor;
     bottom: calc((#{$line-height-button-small} / 2) - 6px);
+  }
+}
+
+.slds-has-error {
+
+  .slds-select {
+    border-color: $color-border-error;
+    box-shadow: $color-border-error 0 0 0 $border-width-thin inset;
+    background-clip: padding-box;
+
+    &:focus,
+    &:active {
+      box-shadow: $color-border-error 0 0 0 $border-width-thin inset, $shadow-button-focus;
+    }
   }
 }

@@ -30,6 +30,9 @@ storiesOf('Components/Path', module).add(
   {
     docs: {
       page: () => <DocsPage title="Path" Docs={Docs} />
+    },
+    eyes: {
+      waitBeforeScreenshot: ".docs-mobile_frame.slds-resize-done"
     }
   }
 );

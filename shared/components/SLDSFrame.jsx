@@ -67,9 +67,11 @@ export default class SLDSFrame extends React.Component {
         ? ``
         : `<script>
             function resizeIframe() {
+              window.frameElement.classList.remove('slds-resize-done');
               const offsetHeight = document.documentElement.offsetHeight;
               const frameHeight = offsetHeight + (window.frameElement.offsetHeight - window.frameElement.clientHeight);
               window.frameElement.style.height =  Math.ceil(frameHeight) + "px";
+              window.frameElement.classList.add('slds-resize-done');
             }
 
             window.parent.addEventListener("resize", resizeIframe);

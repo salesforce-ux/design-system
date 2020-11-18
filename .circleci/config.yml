@@ -16,18 +16,6 @@ executors:
       - image: cimg/node:lts
 
 commands:
-  install-postcss-plugins:
-    description: 'Install PostCSS plugins from Github Package Registry'
-    steps:
-      - run:
-          name: 'Create .npmrc'
-          command: |
-            echo "//npm.pkg.github.com/:_authToken=${GITHUB_PACKAGES_TOKEN}" > .npmrc
-            echo "registry=https://npm.pkg.github.com/salesforce-ux" >> .npmrc
-      - run:
-          name: 'Install PostCSS plugins'
-          command: 'npm i -D @salesforce-ux/postcss-annotations-parser @salesforce-ux/postcss-css-variable-value'
-
   build-tokens:
     description: 'Build tokens'
     steps:
@@ -111,7 +99,6 @@ commands:
       - vrt-set-env-vars
       - add-applitools
       - node/install-packages
-      - install-postcss-plugins
       - browser-tools/install-chrome
       - browser-tools/install-chromedriver
 
@@ -204,7 +191,6 @@ jobs:
       - set-heroku-app-name
 
       - node/install-packages
-      - install-postcss-plugins
 
       # Gulp tasks (need to clean-up and not run through `npm run`)
       - build-tokens
@@ -255,7 +241,6 @@ jobs:
           command: 'tar -xvf workspace/metadata.tar'
 
       - node/install-packages
-      - install-postcss-plugins
 
       - run:
           name: 'Install rsync'
@@ -394,7 +379,6 @@ jobs:
           at: workspace
       - copy-tokens-from-workspace
       - node/install-packages
-      - install-postcss-plugins
 
       - run:
           name: Build static Storybook
@@ -501,7 +485,6 @@ jobs:
             tar -xvf workspace/design-system-dist.tar --directory .slds
 
       - node/install-packages
-      - install-postcss-plugins
 
       - run:
           name: 'Build static site'

@@ -628,6 +628,14 @@
 
       ul {
         list-style: square;
+
+        ul {
+          list-style: disc;
+
+          ul {
+            list-style: circle;
+          }
+        }
       }
     }
 
@@ -646,6 +654,14 @@
 
       ol {
         list-style: lower-roman;
+
+        ol {
+          list-style: decimal;
+
+          ol {
+            list-style: lower-alpha;
+          }
+        }
       }
     }
 

@@ -2,6 +2,12 @@
 
 # Rich Text Editor Release Notes
 
+## 2.14.0
+
+### Added
+
+- Increased nesting styles for Rich Text Editor output from 3 levels to 5 levels deep.
+
 ## 2.10.0
 
 ### Added

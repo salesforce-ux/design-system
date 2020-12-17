@@ -9,3 +9,12 @@ export const Context = props => (
 );
 
 export default <BuilderHeader showToolbar />;
+
+export let states = [
+  {
+    id: 'menu-open-with-toolbar',
+    label: 'Menu open with toolbar',
+    isOpen: true,
+    element: <BuilderHeader openDropDown showToolbar />
+  }
+];

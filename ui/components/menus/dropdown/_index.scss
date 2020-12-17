@@ -118,6 +118,7 @@
   background: $color-background-alt;
   box-shadow: $shadow-drop-down;
   transform: translateX(-50%);
+  color: $color-text-default;
 
   /**
    * @summary Positions dropdown to left side of target
@@ -317,6 +318,7 @@
   &--inverse {
     background: $color-background-inverse;
     border-color: $color-border-inverse;
+    color: $color-text-inverse;
 
     .slds-dropdown__item > a {
       color: $color-text-inverse;

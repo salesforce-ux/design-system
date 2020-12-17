@@ -24,7 +24,7 @@ storiesOf('Components/Builder Header', module).add(
         <StoryFrame
           component={component}
           label={label}
-          styles="height: 100px;"
+          styles="height: 220px;"
           key={`kitchen-sink-${label}-${idx}`}
         />
       ))

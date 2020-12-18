@@ -4,6 +4,12 @@
 
 <!-- ## [Unreleased] -->
 
+## 2.14.0
+
+### Changed
+
+- Added default text color to dropdown menus to fix issue with dropdowns inheriting font color from parent blueprints
+
 ## 2.13.1
 
 ### Changed

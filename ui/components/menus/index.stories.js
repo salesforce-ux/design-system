@@ -33,6 +33,7 @@ storiesOf('Components/Menus', module).add(
         <StoryFrame
           component={component}
           label={label}
+          styles="height: 300px;"
           key={`kitchen-sink-${label}-${idx}`}
         />
       ))

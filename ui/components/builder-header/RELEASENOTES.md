@@ -4,6 +4,13 @@
 
 <!-- ## [Unreleased] -->
 
+## 2.14.0
+
+### Fixed
+
+- Fixed issue with non-link text color in Builder Header menu dropdowns by adding default text color
+  - Added an example with an open menu to demonstrate this pattern
+
 ## 2.9.0
 
 ### Fixed

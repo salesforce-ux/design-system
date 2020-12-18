@@ -7,6 +7,8 @@ import SvgIcon from '../../shared/svg-icon';
 import ButtonIcon from '../button-icons/';
 import { UtilityIcon } from '../icons/base/example';
 
+import { Menu, MenuList, MenuItem } from '../menus/dropdown/example';
+
 /**
  * App name and logo
  */
@@ -28,13 +30,39 @@ const Logo = () => (
 );
 
 /**
+ * Dropdown menu in header
+ */
+const BuilderMenu = () => (
+  <Menu className="slds-dropdown_right slds-dropdown_actions">
+    <MenuList ariaLabel="Show More">
+      <li
+        className="slds-dropdown__header slds-truncate"
+        role="presentation"
+        tabIndex="0"
+      >
+        Menu Header
+      </li>
+      <MenuItem>Menu Item One</MenuItem>
+      <MenuItem>Menu Item Two</MenuItem>
+      <MenuItem>Menu Item Three</MenuItem>
+    </MenuList>
+  </Menu>
+);
+
+/**
  * Navigation list in header
  */
 const Nav = props => (
   <nav className="slds-builder-header__item slds-builder-header__nav">
     <ul className="slds-builder-header__nav-list">
       <NavItem symbol="settings" />
-      <NavItem symbol="page" dropdown />
+      {props.showDropDown && (
+        <NavItem
+          symbol="page"
+          showDropDown={props.showDropDown}
+          openDropDown={props.openDropDown}
+        />
+      )}
     </ul>
   </nav>
 );
@@ -43,58 +71,63 @@ const Nav = props => (
  * Navigation item in header
  */
 const NavItem = props => (
-  <li className="slds-builder-header__nav-item">
-    {!props.dropdown ? (
-      <a
-        href="#"
-        className="slds-builder-header__item-action slds-media slds-media_center"
-        onClick={e => e.preventDefault()}
-      >
-        <span className="slds-media__figure">
-          <UtilityIcon
-            containerClassName="slds-current-color"
-            className="slds-icon_x-small"
-            symbol={props.symbol}
-            assistiveText={false}
-            title={false}
-          />
-        </span>
-        <span className="slds-media__body">
-          <span className="slds-truncate" title="Link">
-            Link
+  <>
+    {!props.showDropDown ? (
+      <li className="slds-builder-header__nav-item">
+        <a
+          href="#"
+          className="slds-builder-header__item-action slds-media slds-media_center"
+          onClick={e => e.preventDefault()}
+        >
+          <span className="slds-media__figure">
+            <UtilityIcon
+              containerClassName="slds-current-color"
+              className="slds-icon_x-small"
+              symbol={props.symbol}
+              assistiveText={false}
+              title={false}
+            />
           </span>
-        </span>
-      </a>
+          <span className="slds-media__body">
+            <span className="slds-truncate" title="Link">
+              Link
+            </span>
+          </span>
+        </a>
+      </li>
     ) : (
-      <button
-        className="slds-button slds-builder-header__item-action slds-media slds-media_center"
-        aria-haspopup="true"
-        title="Click to open menu"
-      >
-        <span className="slds-media__figure">
-          <UtilityIcon
-            containerClassName="slds-current-color"
-            className="slds-icon_x-small"
-            symbol={props.symbol}
-            assistiveText={false}
-            title={false}
-          />
-        </span>
-        <span className="slds-media__body">
-          <span className="slds-truncate" title="Dropdown">
-            Dropdown
+      <li className="slds-builder-header__nav-item slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open">
+        <button
+          className="slds-button slds-builder-header__item-action slds-media slds-media_center"
+          aria-haspopup="true"
+          title="Click to open menu"
+        >
+          <span className="slds-media__figure">
+            <UtilityIcon
+              containerClassName="slds-current-color"
+              className="slds-icon_x-small"
+              symbol={props.symbol}
+              assistiveText={false}
+              title={false}
+            />
           </span>
-          <UtilityIcon
-            containerClassName="slds-current-color slds-m-left_small"
-            className="slds-icon_x-small"
-            symbol="chevrondown"
-            assistiveText={false}
-            title={false}
-          />
-        </span>
-      </button>
+          <span className="slds-media__body">
+            <span className="slds-truncate" title="Dropdown">
+              Dropdown
+            </span>
+            <UtilityIcon
+              containerClassName="slds-current-color slds-m-left_small"
+              className="slds-icon_x-small"
+              symbol="chevrondown"
+              assistiveText={false}
+              title={false}
+            />
+          </span>
+        </button>
+        {props.openDropDown && <BuilderMenu />}
+      </li>
     )}
-  </li>
+  </>
 );
 
 /**
@@ -263,13 +296,13 @@ class BuilderToolbar extends Component {
  */
 class BuilderHeader extends Component {
   render() {
-    const { showToolbar, docName } = this.props;
+    const { showToolbar, docName, showDropDown, openDropDown } = this.props;
 
     return (
       <div className="slds-builder-header_container">
         <header className="slds-builder-header">
           <Logo />
-          <Nav />
+          <Nav showDropDown={showDropDown} openDropDown={openDropDown} />
           <Name label={docName} />
           <div className="slds-builder-header__item slds-builder-header__utilities">
             <BackLink />
@@ -281,5 +314,9 @@ class BuilderHeader extends Component {
     );
   }
 }
+
+BuilderHeader.defaultProps = {
+  showDropDown: true
+};
 
 export default BuilderHeader;

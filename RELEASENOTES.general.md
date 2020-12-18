@@ -1,7 +1,7 @@
 <!-- Release notes authoring guidelines: http://keepachangelog.com/ -->
 <!-- On release, add general notes here. In time the legacy release notes will be add to this -->
 
-## 2.14.0 - Upcoming
+## 2.14.0 - December 16, 2020
 
 - Corrected the syntax for various stylesheet annotations so that they will properly appear in the Overview of CSS Classes section for their respective blueprint.
 - Updated to Icons v9.39.0 and added new icon design token colors

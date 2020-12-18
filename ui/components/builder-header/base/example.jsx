@@ -8,4 +8,13 @@ export const Context = props => (
   <div style={{ position: 'relative', height: '100px' }}>{props.children}</div>
 );
 
-export default <BuilderHeader />;
+export default <BuilderHeader showDropDown />;
+
+export let states = [
+  {
+    id: 'menu-open',
+    label: 'Menu open',
+    isOpen: true,
+    element: <BuilderHeader showDropDown openDropDown />
+  }
+];

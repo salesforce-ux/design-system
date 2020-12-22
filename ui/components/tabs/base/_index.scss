@@ -159,6 +159,10 @@
     .slds-indicator_unread {
       margin-left: -0.35rem; // random but matches spec
     }
+
+    .slds-indicator_unsaved {
+      color: $brand-accessible-active;
+    }
   }
 
   &.slds-has-notification {

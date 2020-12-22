@@ -3,8 +3,9 @@
 # Tabs Release Notes
 
 <!-- ## [Unreleased] -->
-## 2.14.0
+## 2.15.0
 
+- Adjusted color of unsaved tab indicator asterisk to comply with accessibility color contrast rules for active tabs and tabs with notifications.
 ### Added
 
 - Added additional styling hooks. See tab's styling hooks overview table for a full listing of the currently available hooks.

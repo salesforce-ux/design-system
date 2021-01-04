@@ -4,6 +4,12 @@
 
 <!-- ## [Unreleased] -->
 
+## 2.14
+
+### Fixed
+
+- Fixed typo in CSS Class Overview table for .slds-datepicker__filter_month
+
 ## 2.11.7
 
 ### Fixed

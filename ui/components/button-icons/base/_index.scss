@@ -28,7 +28,9 @@
 .slds-button_icon-more,
 .slds-button--icon-more,
 .slds-button_icon-error,
-.slds-button--icon-error {
+.slds-button--icon-error,
+.slds-button_icon-warning,
+.slds-button--icon-warning {
   line-height: $line-height-reset;
   vertical-align: middle;
   justify-content: center;
@@ -163,6 +165,22 @@
   &:active,
   &:focus {
     color: $color-text-error;
+  }
+}
+
+/**
+ * @summary Warning state - Typically used in conjunction with an warning tooltip
+ * @selector .slds-button_icon-warning
+ * @restrict .slds-button_icon
+ */
+.slds-button_icon-warning,
+.slds-button--icon-warning {
+
+  &,
+  &:hover,
+  &:active,
+  &:focus {
+    color: $color-text-warning;
   }
 }
 

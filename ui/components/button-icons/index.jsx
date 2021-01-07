@@ -99,7 +99,8 @@ class ButtonIcon extends Component {
             'slds-button_icon-xx-small': size === 'xx-small'
           },
           {
-            'slds-button_icon-error': feedback === 'error'
+            'slds-button_icon-error': feedback === 'error',
+            'slds-button_icon-warning': feedback === 'warning'
           },
           {
             'slds-button_first': isFirst,

@@ -20,6 +20,18 @@ export let states = [
     )
   },
   {
+    id: 'warning',
+    label: 'Warning',
+    element: (
+      <ButtonIcon
+        feedback="warning"
+        symbol="warning"
+        title="Warning"
+        assistiveText="Warning"
+      />
+    )
+  },
+  {
     id: 'bare-disabled',
     label: 'Disabled',
     element: <ButtonIcon assistiveText="Settings" disabled title="Settings" />

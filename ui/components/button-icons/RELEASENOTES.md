@@ -4,11 +4,16 @@
 
 <!-- ## [Unreleased] -->
 
+## 2.15.0
+
+### Added
+
+- Added `slds-button_icon-warning` class to properly style Warning state icons
 ## 2.11.6
 
 ### Fixed
 
-- Sizing classes are now respected in mobile/touch context 
+- Sizing classes are now respected in mobile/touch context
 
 ### Added
 

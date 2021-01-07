@@ -4,6 +4,12 @@
 
 <!-- ## [Unreleased] -->
 
+## 2.15.0
+
+### Fixed
+
+- Fixed incorrect annotations for `.slds-page-header__col-title`, `.slds-page-header__col-actions`, `.slds-page-header__col-meta`, `.slds-page-header__col-controls`, and `.slds-page-header__col-details`.
+
 ## 2.8.0
 
 ### Changed

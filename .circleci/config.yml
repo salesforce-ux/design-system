@@ -273,11 +273,15 @@ jobs:
           name: Trigger database update via API
           command: |
             export VERSION_FROM_TAG=$([[ ${CIRCLE_TAG} -eq "v" ]] && echo ${CIRCLE_TAG:1:20} || echo ${CIRCLE_TAG})
-            curl --location --request POST 'https://api-load.lightningdesignsystem.com/reload?token=${DSE_API_LOAD_TOKEN}' \
+            export SALESFORCE_VERSION=$(cat package.json | jq -r .slds.id)
+            export VERSION_FROM_PACKAGE=$(cat package.json | jq -r .version)
+            curl --location --request PATCH 'https://design-systems-api.herokuapp.com/v1/release' \
             --header 'Content-Type: application/json' \
+            --header 'Authorization: Bearer ${DSE_API_RELEASE_TOKEN}' \
             --data-raw '{
                 "sha": "${CIRCLE_SHA1}",
-                "version": "${VERSION_FROM_TAG}"
+                "version": "${VERSION_FROM_TAG}",
+                "salesforce_version": "${SALESFORCE_VERSION}"
             }'
 
   # Build static Storybook

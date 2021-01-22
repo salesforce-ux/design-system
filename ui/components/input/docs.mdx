@@ -4,6 +4,7 @@ import Blockquote from '../../../shared/components/Blockquote';
 import * as InputExamples from './base/example';
 import { getDisplayElementById } from '../../shared/helpers';
 import { MobileNotice, MobileBlurb } from '../../shared/doc-text';
+import StylingHooksTable from '../../../shared/components/StylingHooksTable';
 
 <div className="doc lead">Text inputs are used for freeform data entry</div>
 
@@ -137,3 +138,7 @@ By only using the traditional `label[for]` method, the fixed text is never read 
 <CodeView>
   {getDisplayElementById(InputExamples.examples, 'field-level-help')}
 </CodeView>
+
+## Styling Hooks Overview
+
+<StylingHooksTable name="input" type="component" />

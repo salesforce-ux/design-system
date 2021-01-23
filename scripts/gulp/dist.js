@@ -214,11 +214,11 @@ export const sassTouchDemo = () =>
     )
     .pipe(gulp.dest(distPath('__internal/styles/')));
 
-export const cssVarFallbacks = () =>
+export const cssLegacy = () =>
   gulp
-    .src([distPath('scss/index.scss')])
+    .src([distPath('scss/legacy.scss')])
     .pipe(gulpHelpers.writeScss({ outputStyle: 'expanded' }))
-    .pipe(gulpHelpers.writePostCss([annotationsParser(), cssVariableValue(), discardComments()]))
+    .pipe(gulpHelpers.writePostCss([annotationsParser({ preserve: false }), cssVariableValue({ preserve: false }), discardComments()]))
     .pipe(
       gulpRename(path => {
         path.basename = MODULE_NAME_LEGACY;
@@ -327,7 +327,7 @@ export const minifyCss = () =>
 
 export const versionBlock = () =>
   gulp
-    .src(['**/*.css', 'scss/index*', 'scss/touch*'], {
+    .src(['**/*.css', 'scss/index*', 'scss/touch*', 'scss/legacy*'], {
       base: distPath(),
       cwd: distPath()
     })

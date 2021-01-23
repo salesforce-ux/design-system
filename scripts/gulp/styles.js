@@ -118,14 +118,14 @@ export const extractStyleHooks = done =>
     extractVarsFromSLDS({ suppressOutput: true, callback: done })
   );
 
-export const cssVarFallbacks = () =>
+export const cssLegacy = () =>
   gulp
-    .src(['ui/index.scss'])
+    .src(['ui/legacy.scss'])
     .pipe(gulpPlumber())
     .pipe(gulpSourcemaps.init())
     .pipe(gulpRename('index-css-variable-fallbacks.css'))
     .pipe(gulpHelpers.writeScss())
-    .pipe(gulpHelpers.writePostCss([annotationsParser(), cssVariableValue()]))
+    .pipe(gulpHelpers.writePostCss([annotationsParser({ preserve: false }), cssVariableValue({ preserve: false })]))
     .pipe(gulpHelpers.writeMinifyCss())
     .pipe(gulpSourcemaps.write('.'))
     .pipe(gulp.dest('assets/styles'));

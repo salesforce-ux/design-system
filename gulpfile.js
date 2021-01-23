@@ -203,7 +203,7 @@ gulp.task('sanitized:componentSass', sanitized.writeSanitizedComponentCss);
 gulp.task('styles:sass', styles.sass);
 gulp.task('styles:sassTouch', styles.sassTouch);
 gulp.task('styles:sassTouchDemo', styles.sassTouchDemo);
-gulp.task('styles:cssVarFallbacks', styles.cssVarFallbacks);
+gulp.task('styles:legacy', styles.cssLegacy);
 gulp.task('styles:formFactors', styles.sassFormFactors);
 gulp.task('styles:componentCSS', styles.componentCSS);
 gulp.task('styles:extractStyleHooks', styles.extractStyleHooks);
@@ -214,7 +214,7 @@ gulp.task(
     'styles:sass',
     'styles:sassTouch',
     'styles:sassTouchDemo',
-    'styles:cssVarFallbacks',
+    'styles:legacy',
     'styles:formFactors',
     'styles:componentCSS',
     'styles:extractStyleHooks'
@@ -284,7 +284,7 @@ export const watch = () =>
 gulp.task('dist:sass:framework', dist.sass);
 gulp.task('dist:sass:frameworkTouch', dist.sassTouch);
 gulp.task('dist:sass:frameworkTouchDemo', dist.sassTouchDemo);
-gulp.task('dist:sass:frameworkCssVarFallbacks', dist.cssVarFallbacks);
+gulp.task('dist:sass:frameworkCssLegacy', dist.cssLegacy);
 
 // Components
 gulp.task('dist:sass:components:generate', dist.generateComponentSass);
@@ -296,7 +296,7 @@ gulp.task(
     'dist:sass:framework',
     'dist:sass:frameworkTouch',
     'dist:sass:frameworkTouchDemo',
-    'dist:sass:frameworkCssVarFallbacks',
+    'dist:sass:frameworkCssLegacy',
     'dist:sass:components:generate',
     'dist:sass:components:common'
   )

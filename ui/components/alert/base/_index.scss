@@ -25,7 +25,7 @@ $alert-gradient-size-background: 64px 64px;
   padding-bottom: var(--sds-c-alert-spacing-block-end, $spacing-x-small);
   padding-left: var(--sds-c-alert-spacing-inline-start, $spacing-x-small);
   color: var(--sds-c-alert-text-color, $color-text-inverse);
-  font-weight: var(--sds-c-alert-font-weight, $font-weight-light);
+  font-weight: var(--sds-c-alert-font-weight);
   text-align: center;
   background-color: var(--sds-c-alert-color-background, $color-background-toast);
   background-image: var(--sds-c-alert-image-background, $alert-gradient);

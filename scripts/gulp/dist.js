@@ -91,20 +91,6 @@ export const copyIconsSynonyms = () =>
     })
     .pipe(gulp.dest(distPath('metadata/icons')));
 
-export const copyFonts = () =>
-  gulp
-    .src('fonts/**/*', {
-      cwd: paths.assets
-    })
-    .pipe(gulp.dest(distPath('assets/fonts')));
-
-export const copyFontsLicense = () =>
-  gulp
-    .src('licenses/License-for-font.txt', {
-      cwd: paths.assets
-    })
-    .pipe(gulp.dest(distPath('assets/fonts')));
-
 export const copyImages = () =>
   gulp
     .src('images/**/*', {

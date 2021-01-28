@@ -327,8 +327,6 @@ gulp.task('dist:copyIconsMeta', dist.copyIconsMeta);
 
 gulp.task('dist:copyIconsSynonyms', dist.copyIconsSynonyms);
 
-gulp.task('dist:copyFonts', dist.copyFonts);
-gulp.task('dist:copyFontsLicense', dist.copyFontsLicense);
 gulp.task('dist:copyImages', dist.copyImages);
 gulp.task('dist:copyImagesLicense', dist.copyImagesLicense);
 
@@ -371,8 +369,6 @@ gulp.task(
       'dist:copyIcons',
       'dist:copyIconsMeta',
       'dist:copyIconsSynonyms',
-      'dist:copyFonts',
-      'dist:copyFontsLicense',
       'dist:copyImages',
       'dist:copyImagesLicense',
       'dist:copyComponentReleaseNotes',
@@ -418,8 +414,6 @@ gulp.task(
       withName('dist:copySassLicense')(dist.copySassLicense),
       withName('dist:copyIcons')(dist.copyIcons),
       withName('dist:copyIconsMeta')(dist.copyIconsMeta),
-      withName('dist:copyFonts')(dist.copyFonts),
-      withName('dist:copyFontsLicense')(dist.copyFontsLicense),
       withName('dist:copyImages')(dist.copyImages),
       withName('dist:copyImagesLicense')(dist.copyImagesLicense),
       withName('dist:copyComponentReleaseNotes')(
@@ -508,5 +502,8 @@ gulp.task(
     'generate:tokens:all',
     'styles:extractStyleHooks'
   ),
-  gulp.parallel('styles:componentCSS', 'dist:copyIcons', 'dist:copyFonts')
+  gulp.parallel(
+    'styles:componentCSS',
+    'dist:copyIcons'
+  )
 );

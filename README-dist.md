@@ -12,7 +12,6 @@ Welcome to the [Salesforce Lightning Design System](https://www.lightningdesigns
 ## Contents
 
 * assets/
-  - fonts/ - the Salesforce Sans font
   - icons/ - PNG, SVG and SVG spritemap versions of icons
   - images/ - including spinners
   - styles/
@@ -27,4 +26,3 @@ Welcome to the [Salesforce Lightning Design System](https://www.lightningdesigns
 
 * Source code is licensed under [BSD 3-Clause](https://git.io/sfdc-license)
 * All icons and images are licensed under [Creative Commons Attribution-NoDerivatives 4.0](https://github.com/salesforce-ux/licenses/blob/master/LICENSE-icons-images.txt)
-* The Salesforce Sans font is licensed under our [font license](https://github.com/salesforce-ux/licenses/blob/master/LICENSE-font.txt)

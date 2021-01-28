@@ -7,13 +7,12 @@ imports:
 - ../../aliases/spacing.yml
 props:
   FONT_FAMILY_BODY:
-    value: "'Salesforce Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif"
+    value: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'"
     type: font
     category: font
     cssProperties:
     - font
     - font-family
-    comment: "font-face should be 'Salesforce Sans'."
   FONT_WEIGHT_LIGHT:
     value: '300'
     type: number
@@ -21,7 +20,6 @@ props:
     cssProperties:
     - font
     - font-weight
-    comment: Salesforce Sans Light
   FONT_WEIGHT_REGULAR:
     value: '400'
     type: number
@@ -29,7 +27,6 @@ props:
     cssProperties:
     - font
     - font-weight
-    comment: Salesforce Sans Regular
   FONT_WEIGHT_BOLD:
     value: '700'
     type: number
@@ -37,7 +34,6 @@ props:
     cssProperties:
     - font
     - font-weight
-    comment: Salesforce Sans Bold
   FONT_SIZE_X_SMALL:
     value: 0.625rem
     type: size

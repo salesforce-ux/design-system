@@ -3,6 +3,7 @@
 
 
 ## 2.15.0 - Upcoming
+- Removed Salesforce Sans as the default typeface and replaced it with OS-specific defaults.
 
 ## 2.14.1 - January 8, 2021
 ## 2.14.0 - December 16, 2020

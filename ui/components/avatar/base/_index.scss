@@ -153,7 +153,6 @@
 .slds-avatar--large {
   @include square($square-icon-large-boundary);
   font-size: $font-size-6;
-  font-weight: $font-weight-light;
   line-height: $line-height-heading;
 
   .slds-icon {

@@ -16,6 +16,7 @@ props:
     value: '{!FONT_WEIGHT_LIGHT}'
     comment: Use for large headings only.
     access: global
+    deprecated: true
   FONT_WEIGHT_REGULAR:
     value: '{!FONT_WEIGHT_REGULAR}'
     comment: Most all body copy.

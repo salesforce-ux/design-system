@@ -2,5 +2,5 @@
 # Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 aliases:
-  SANS_SERIF: "'Salesforce Sans', Arial, sans-serif"
+  SANS_SERIF: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'"
   MONOSPACE: "Consolas, Menlo, Monaco, Courier, monospace"

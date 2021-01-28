@@ -4,6 +4,7 @@ const css = require('css');
 const { readFileSync } = require('fs-extra');
 
 const { compileModularCSS } = require('./compile/modular-css');
+const { propTypes } = require('./var-metadata');
 
 /**
  * Parses through generated modular CSS files and extracts vars
@@ -98,7 +99,24 @@ const extractVarsFromCSS = cssContent => {
 
       vars.forEach(cssVar => {
         const varName = Object.keys(cssVar)[0];
-        list[varName] = cssVar[varName];
+        if (varName) {
+          const categories = Object.keys(propTypes);
+
+          const matchedCategory = categories.find(option => {
+            if (varName.includes(option)) {
+              return option;
+            }
+          });
+
+          list[varName] = { fallBackValue: cssVar[varName] };
+
+          if (matchedCategory) {
+            list[varName].category = propTypes[matchedCategory].type;
+            list[varName].valueType = propTypes[
+              matchedCategory
+            ].valueTypes.join('');
+          }
+        }
       });
     }
   });

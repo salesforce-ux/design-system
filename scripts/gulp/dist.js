@@ -13,6 +13,7 @@ import discardComments from 'postcss-discard-comments';
 import combineMediaQuery from 'postcss-combine-media-query';
 import annotationsParser from '@salesforce-ux/postcss-annotations-parser';
 import cssVariableValue from '@salesforce-ux/postcss-css-variable-value';
+import convertDataUri from './plugins/data-uri';
 
 import packageJSON from '../../package.json';
 
@@ -218,10 +219,30 @@ export const cssLegacy = () =>
   gulp
     .src([distPath('scss/legacy.scss')])
     .pipe(gulpHelpers.writeScss({ outputStyle: 'expanded' }))
-    .pipe(gulpHelpers.writePostCss([annotationsParser({ preserve: false }), cssVariableValue({ preserve: false }), discardComments()]))
+    .pipe(
+      gulpHelpers.writePostCss([
+        annotationsParser({ preserve: false }),
+        cssVariableValue({ preserve: false }),
+        discardComments()
+      ])
+    )
     .pipe(
       gulpRename(path => {
         path.basename = MODULE_NAME_LEGACY;
+        path.extname = '.css';
+        return path;
+      })
+    )
+    .pipe(gulp.dest(distPath('assets/styles/')));
+
+export const cssOffline = () =>
+  gulp
+    .src([distPath('scss/index.scss')])
+    .pipe(gulpHelpers.writeScss({ outputStyle: 'expanded' }))
+    .pipe(gulpHelpers.writePostCss([discardComments(), convertDataUri()]))
+    .pipe(
+      gulpRename(path => {
+        path.basename = `${MODULE_NAME}-offline`;
         path.extname = '.css';
         return path;
       })
@@ -311,7 +332,8 @@ export const minifyCss = () =>
         distPath(`assets/styles/${MODULE_NAME}.css`),
         distPath(`assets/styles/${MODULE_NAME_TOUCH}.css`),
         distPath(`__internal/styles/${MODULE_NAME_TOUCH_DEMO}.css`),
-        distPath(`assets/styles/${MODULE_NAME_LEGACY}.css`)
+        distPath(`assets/styles/${MODULE_NAME_LEGACY}.css`),
+        distPath(`assets/styles/${MODULE_NAME}-offline.css`)
       ],
       { base: distPath() }
     )

@@ -18,6 +18,7 @@ import paths from '../helpers/paths';
 import * as gulpHelpers from '../helpers/gulp';
 import { compileModularCSS } from '../compile/modular-css';
 import { extractVarsFromSLDS } from '../var-extract';
+import convertDataUri from './plugins/data-uri';
 
 export const stats = done => {
   console.log('Gathering stats...');
@@ -27,15 +28,15 @@ export const stats = done => {
   );
 
   const getDiff = (base, source) => {
-    const sanitizedBase = base.replace(/(kB)/, '');
-    const sanitizedSource = source.replace(/(kB)/, '');
+    const sanitizedBase = base.replace(/(KB)/, '');
+    const sanitizedSource = source.replace(/(KB)/, '');
     const percentage = Math.round(
       ((sanitizedSource - sanitizedBase) / sanitizedBase) * 100
     );
     if (base > source) {
-      return `${sanitizedSource - sanitizedBase}kB (${percentage}%)`;
+      return `${sanitizedSource - sanitizedBase}KB (${percentage}%)`;
     } else {
-      return `${sanitizedSource - sanitizedBase}kB (${percentage}%)`;
+      return `${sanitizedSource - sanitizedBase}KB (${percentage}%)`;
     }
   };
 
@@ -125,7 +126,24 @@ export const cssLegacy = () =>
     .pipe(gulpSourcemaps.init())
     .pipe(gulpRename('index-css-variable-fallbacks.css'))
     .pipe(gulpHelpers.writeScss())
-    .pipe(gulpHelpers.writePostCss([annotationsParser({ preserve: false }), cssVariableValue({ preserve: false })]))
+    .pipe(
+      gulpHelpers.writePostCss([
+        annotationsParser({ preserve: false }),
+        cssVariableValue({ preserve: false })
+      ])
+    )
+    .pipe(gulpHelpers.writeMinifyCss())
+    .pipe(gulpSourcemaps.write('.'))
+    .pipe(gulp.dest('assets/styles'));
+
+export const offline = () =>
+  gulp
+    .src(['ui/index.scss'])
+    .pipe(gulpPlumber())
+    .pipe(gulpSourcemaps.init())
+    .pipe(gulpRename('index-offline.css'))
+    .pipe(gulpHelpers.writeScss())
+    .pipe(gulpHelpers.writePostCss([convertDataUri()]))
     .pipe(gulpHelpers.writeMinifyCss())
     .pipe(gulpSourcemaps.write('.'))
     .pipe(gulp.dest('assets/styles'));

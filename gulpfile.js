@@ -207,6 +207,7 @@ gulp.task('styles:legacy', styles.cssLegacy);
 gulp.task('styles:formFactors', styles.sassFormFactors);
 gulp.task('styles:componentCSS', styles.componentCSS);
 gulp.task('styles:extractStyleHooks', styles.extractStyleHooks);
+gulp.task('styles:offline', styles.offline);
 gulp.task('styles:test', styles.sassTest);
 gulp.task(
   'styles',
@@ -220,10 +221,8 @@ gulp.task(
     'styles:extractStyleHooks'
   )
 );
-gulp.task(
-  'styles:stats',
-  gulp.series('styles', withName('styles:stats')(styles.stats))
-);
+
+gulp.task('styles:stats', styles.stats);
 
 /*
  * ==================
@@ -285,6 +284,7 @@ gulp.task('dist:sass:framework', dist.sass);
 gulp.task('dist:sass:frameworkTouch', dist.sassTouch);
 gulp.task('dist:sass:frameworkTouchDemo', dist.sassTouchDemo);
 gulp.task('dist:sass:frameworkCssLegacy', dist.cssLegacy);
+gulp.task('dist:sass:frameworkOffline', dist.cssOffline);
 
 // Components
 gulp.task('dist:sass:components:generate', dist.generateComponentSass);
@@ -296,6 +296,8 @@ gulp.task(
     'dist:sass:framework',
     'dist:sass:frameworkTouch',
     'dist:sass:frameworkTouchDemo',
+    'dist:sass:frameworkCssLegacy',
+    'dist:sass:frameworkOffline',
     'dist:sass:frameworkCssLegacy',
     'dist:sass:components:generate',
     'dist:sass:components:common'
@@ -506,9 +508,5 @@ gulp.task(
     'generate:tokens:all',
     'styles:extractStyleHooks'
   ),
-  gulp.parallel(
-    'styles:componentCSS',
-    'dist:copyIcons',
-    'dist:copyFonts'
-  )
+  gulp.parallel('styles:componentCSS', 'dist:copyIcons', 'dist:copyFonts')
 );

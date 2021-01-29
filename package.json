@@ -263,5 +263,7 @@
       "@salesforce/slds/legacy"
     ]
   },
-  "dependencies": {}
+  "dependencies": {
+    "svg4everybody": "^2.1.9"
+  }
 }

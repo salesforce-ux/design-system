@@ -1,0 +1,108 @@
+daemon off;
+# Heroku dynos have at least 4 cores
+worker_processes <%= ENV['NGINX_WORKERS'] || 4 %>;
+events {
+  use epoll;
+  accept_mutex on;
+  worker_connections <%= ENV['NGINX_WORKER_CONNECTIONS'] || 1024 %>;
+}
+
+http {
+  gzip on;
+  gzip_comp_level 2;
+  gzip_min_length 512;
+
+  server_tokens off;
+
+  log_format main '$time_iso8601 - $status $request - client IP: $http_x_forwarded_for - <%= ENV['DYNO'] %> to $upstream_addr - upstream status: $upstream_status, upstream_response_time $upstream_response_time, request_time $request_time';
+  access_log /dev/stdout main;
+  error_log /dev/stdout notice;
+  log_not_found on;
+  include mime.types;
+
+  default_type application/octet-stream;
+  sendfile on;
+
+  # Must read the body in 5 seconds.
+  client_body_timeout <%= ENV['NGINX_CLIENT_BODY_TIMEOUT'] || 5 %>;
+
+  # handle SNI
+  proxy_ssl_server_name on;
+  # resolver needs to be set because we're using dynamic proxy_pass
+  resolver 8.8.8.8;
+
+  # map possible Vouch destinations
+  map $host $vouch_destination {
+    default           vouch.lightningdesignsystem.com;
+  }
+
+  server {
+    listen <%= ENV["PORT"] %>;
+    server_name *.herokuapp.com;
+
+    error_page 404 /404.html;
+
+    port_in_redirect off;
+
+    # Redirect all non-SSL requests
+    if ($http_x_forwarded_proto != 'https') {
+      return 301 https://$host$request_uri;
+    }
+
+    root /app/.www;
+
+    location / {
+        index  index.html index.htm;
+    }
+  }
+
+  server {
+    listen <%= ENV["PORT"] %>;
+    server_name ~^storybook\..*\.lightningdesignsystem\.com$;
+
+    error_page 404 /404.html;
+
+    port_in_redirect off;
+
+    # Redirect all non-SSL requests
+    if ($http_x_forwarded_proto != 'https') {
+      return 301 https://$host$request_uri;
+    }
+
+    # auth request / SSO
+    auth_request /validate;
+
+    location = /validate {
+        # This address is where Vouch will be listening on
+        proxy_pass https://$vouch_destination/validate;
+        proxy_pass_request_body off; # no need to send the POST body
+
+        proxy_ssl_name $vouch_destination;
+        proxy_set_header x-forwarded-host $host;
+        proxy_set_header Host $vouch_destination;
+        proxy_set_header Content-Length "";
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+
+        # these return values are passed to the @error401 call
+        auth_request_set $auth_resp_jwt $upstream_http_x_vouch_jwt;
+        auth_request_set $auth_resp_err $upstream_http_x_vouch_err;
+        auth_request_set $auth_resp_failcount $upstream_http_x_vouch_failcount;
+    }
+
+    # if validate returns `401 not authorized` then forward the request to the error401block
+    error_page 401 = @error401;
+
+    # If the user is not logged in, redirect them to Vouch's login URL
+    location @error401 {
+        return 302 https://$vouch_destination/login?url=https://$http_host$request_uri&vouch-failcount=$auth_resp_failcount&X-Vouch-Token=$auth_resp_jwt&error=$auth_resp_err;
+    }
+
+    root /app/.www;
+
+    location / {
+      index  index.html index.htm;
+    }
+  }
+}

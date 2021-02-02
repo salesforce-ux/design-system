@@ -157,7 +157,7 @@ commands:
           command: 'tar -xvf workspace/storybook.tar.gz'
       - run:
           name: Start server
-          command: 'npx http-server .out'
+          command: 'npx http-server .www'
           background: true
       - run:
           name: Poll until server is up
@@ -297,23 +297,8 @@ jobs:
           command: 'npm run storybook:build'
 
       - run:
-          name: 'Generate custom Nginx config'
-          command: |
-            cat > nginx_app.conf\<<'EOF'
-            # Redirect all non-SSL requests
-            if ($http_x_forwarded_proto != 'https') {
-              return 301 https://$host$request_uri;
-            }
-
-            location / {
-              index  index.php index.html index.htm;
-            }
-            EOF
-            cat nginx_app.conf
-
-      - run:
           name: Archive static Storybook
-          command: 'tar -czvf workspace/storybook.tar.gz .out/ Procfile composer.json nginx_app.conf'
+          command: 'tar -czvf workspace/storybook.tar.gz .www/ Procfile config/nginx.conf.erb heroku-start.sh app.json'
 
       - persist_to_workspace:
           root: workspace
@@ -357,7 +342,7 @@ jobs:
             echo "=============================="
             echo ${PUBLISH_STORYBOOK_TO}
             echo "=============================="
-            heroku buildpacks -a ${PUBLISH_STORYBOOK_TO} | grep "heroku/php" || heroku buildpacks:set heroku/php -a ${PUBLISH_STORYBOOK_TO}
+            heroku buildpacks -a ${PUBLISH_STORYBOOK_TO} | grep "https://github.com/salesforce-ux/heroku-buildpack-nginx.git#dse" || heroku buildpacks:set https://github.com/salesforce-ux/heroku-buildpack-nginx.git#dse -a ${PUBLISH_STORYBOOK_TO}
             heroku builds:create --source-tar workspace/storybook.tar.gz -a ${PUBLISH_STORYBOOK_TO}
 
       - install-gh-cli
@@ -413,20 +398,7 @@ jobs:
       - run:
           name: 'Generate site tarball'
           command: |
-            echo '{}' > composer.json
-            echo 'web: vendor/bin/heroku-php-nginx -C nginx_app.conf .www' > Procfile
-            cat > nginx_app.conf\<<'EOF'
-            # Redirect all non-SSL requests
-            if ($http_x_forwarded_proto != 'https') {
-              return 301 https://$host$request_uri;
-            }
-
-            location / {
-              index  index.php index.html index.htm;
-            }
-            EOF
-            cat nginx_app.conf
-            tar -czvf site-next.tar.gz .www/ Procfile composer.json nginx_app.conf
+            tar -czvf site-next.tar.gz .www/ Procfile config/nginx.conf.erb heroku-start.sh app.json
 
       - run:
           name: 'Deploy to Heroku app'
@@ -435,7 +407,7 @@ jobs:
             echo "=============================="
             echo ${HEROKU_APP_NAME}
             echo "=============================="
-            heroku buildpacks -a ${HEROKU_APP_NAME} | grep "heroku/php" || heroku buildpacks:set heroku/php -a ${HEROKU_APP_NAME}
+            heroku buildpacks -a ${HEROKU_APP_NAME} | grep "https://github.com/salesforce-ux/heroku-buildpack-nginx.git#dse" || heroku buildpacks:set https://github.com/salesforce-ux/heroku-buildpack-nginx.git#dse -a ${HEROKU_APP_NAME}
             heroku builds:create --source-tar site-next.tar.gz -a ${HEROKU_APP_NAME}
 
       - install-gh-cli

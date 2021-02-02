@@ -1,0 +1,1 @@
+bin/start-nginx-solo

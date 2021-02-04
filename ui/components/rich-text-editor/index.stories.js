@@ -19,10 +19,11 @@ storiesOf('Components/Rich Text Editor', module).add(
   'Kitchen Sink',
   () =>
     kitchenSink.map((element, idx) =>
-      element.map(({ label, component }) => (
+      element.map(({ demoStyles, label, component }) => (
         <StoryFrame
           component={component}
           label={label}
+          styles={demoStyles}
           key={`kitchen-sink-${label}-${idx}`}
         />
       ))

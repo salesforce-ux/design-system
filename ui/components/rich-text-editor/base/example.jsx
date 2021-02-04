@@ -2,6 +2,7 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 import React from 'react';
+import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { Tooltip } from '../../tooltips/base/example';
 import {
@@ -28,6 +29,11 @@ export let Demo = props => (
     {props.children}
   </div>
 );
+
+Demo.propTypes = {
+  children: PropTypes.node,
+  className: PropTypes.string
+};
 
 let TextInputExample = props => (
   <div>
@@ -454,6 +460,46 @@ export let examples = [
             <RteClearFormatting />
           </RteToolbar>
           <RteTextarea label="Compose note" placeholder="Compose Note..." />
+        </RichTextEditor>
+      </Demo>
+    )
+  },
+  {
+    id: 'styling-hooks-rte-min-height',
+    label: 'Styling Hooks - Base (Min Height)',
+    demoStyles:
+      `
+        --sds-c-textarea-sizing-min-height: 3rem;
+      `,
+    element: (
+      <Demo>
+        <RichTextEditor>
+          <RteToolbar>
+            <RteFormatText tabIndexSetting="0" />
+            <RteFormatBody />
+            <RteClearFormatting />
+          </RteToolbar>
+          <RteTextarea placeholder="Compose text..." />
+        </RichTextEditor>
+      </Demo>
+    )
+  },
+  {
+    id: 'styling-hooks-rte-max-height',
+    label: 'Styling Hooks - Base (Max Height)',
+    demoStyles:
+      `
+        --sds-c-textarea-sizing-max-height: 10rem;
+      `,
+    element: (
+      <Demo>
+        <RichTextEditor>
+          <RteToolbar>
+            <RteFormatText tabIndexSetting="0" />
+            <RteFormatBody />
+            <RteClearFormatting />
+          </RteToolbar>
+          <RteTextarea text={<TextInputExample />} />
         </RichTextEditor>
       </Demo>
     )

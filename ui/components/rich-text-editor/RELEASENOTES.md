@@ -2,6 +2,10 @@
 
 # Rich Text Editor Release Notes
 
+## 2.15.0
+
+### Added
+- Enabled styling hooks for Rich Text Editor. See Rich Text Editor's styling hooks overview table for a full listing of the currently available hooks.
 ## 2.14.0
 
 ### Added

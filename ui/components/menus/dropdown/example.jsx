@@ -306,28 +306,47 @@ export const IconRight = props => (
   </Trigger>
 );
 
-export const ActionOverflow = props => (
-  <Trigger
-    className="slds-is-open"
-    triggerIcon={
-      <ButtonIcon
-        className="slds-button_icon-border-filled slds-button_icon-x-small"
-        symbol="down"
-        assistiveText="Show More"
-        aria-haspopup="true"
-        title="Show More"
-      />
-    }
-  >
-    <Menu className="slds-dropdown_left slds-dropdown_actions">
-      <MenuList ariaLabel="Show More">
-        <MenuItem tabIndex="0">Action One</MenuItem>
-        <MenuItem>Action Two</MenuItem>
-        <MenuItem>Action Three</MenuItem>
-      </MenuList>
-    </Menu>
-  </Trigger>
-);
+export const ActionOverflow = ({ size, position }) => {
+  const positionClassNames = classNames({
+    'slds-dropdown_left': position === 'left',
+    'slds-dropdown_right': position === 'right',
+    'slds-dropdown_bottom': position === 'bottom'
+  });
+
+  return (
+    <Trigger
+      className="slds-is-open"
+      triggerIcon={
+        <ButtonIcon
+          className="slds-button_icon-border-filled"
+          symbol="down"
+          assistiveText="Show More"
+          aria-haspopup="true"
+          title="Show More"
+          size={size}
+        />
+      }
+    >
+      <Menu className={classNames(positionClassNames, 'slds-dropdown_actions')}>
+        <MenuList ariaLabel="Show More">
+          <MenuItem tabIndex="0">Action One</MenuItem>
+          <MenuItem>Action Two</MenuItem>
+          <MenuItem>Action Three</MenuItem>
+        </MenuList>
+      </Menu>
+    </Trigger>
+  );
+};
+
+ActionOverflow.propTypes = {
+  position: PropTypes.string,
+  size: PropTypes.string
+};
+
+ActionOverflow.defaultProps = {
+  position: 'left',
+  size: 'x-small'
+};
 
 export const NotificationsMenu = props => (
   <Trigger isOpen>

@@ -44,8 +44,8 @@ class ButtonIcon extends Component {
         variant = null;
       }
       /**
-     * Inverse - Bare/Bordered on Inverse Background
-     */
+       * Inverse - Bare/Bordered on Inverse Background
+       */
     } else if (theme === 'inverse') {
       variant = 'slds-button_icon-inverse';
 
@@ -54,8 +54,8 @@ class ButtonIcon extends Component {
         size = null;
       }
       /**
-     * Brand
-     */
+       * Brand
+       */
     } else if (theme === 'brand') {
       variant = 'slds-button_icon-brand';
 
@@ -63,8 +63,8 @@ class ButtonIcon extends Component {
         size = null;
       }
       /**
-     * Transparent - Bordered with Transparent Container
-     */
+       * Transparent - Bordered with Transparent Container
+       */
     } else if (theme === 'transparent') {
       variant = 'slds-button_icon-border';
 

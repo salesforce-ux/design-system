@@ -81,7 +81,7 @@ exports[`render builder header render base builder header 1`] = `
           </a>
         </li>
         <li
-          className="slds-builder-header__nav-item"
+          className="slds-builder-header__nav-item slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open"
         >
           <button
             aria-haspopup="true"
@@ -299,7 +299,7 @@ exports[`render builder header render base builder header with toolbar 1`] = `
           </a>
         </li>
         <li
-          className="slds-builder-header__nav-item"
+          className="slds-builder-header__nav-item slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open"
         >
           <button
             aria-haspopup="true"
@@ -669,7 +669,7 @@ exports[`render builder header render base builder header with truncated name 1`
           </a>
         </li>
         <li
-          className="slds-builder-header__nav-item"
+          className="slds-builder-header__nav-item slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open"
         >
           <button
             aria-haspopup="true"

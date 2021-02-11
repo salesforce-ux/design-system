@@ -4,6 +4,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import uniqueId from 'lodash.uniqueid';
 import ButtonIcon from '../button-icons/';
 
 /**
@@ -21,23 +22,40 @@ export const Container = props => {
         props.isVisible ? 'slds-is-open' : 'slds-hidden'
       )}
       aria-hidden={!props.isVisible}
+      id={props.id}
     >
       {props.children}
     </div>
   );
 };
 
-export const HeaderButton = props => (
-  <ButtonIcon
-    key="panel-header-close-button"
-    className={`slds-panel__${props.symbol}`}
-    symbol={props.symbol}
-    size="small"
-    assistiveText={`Collapse ${props.title}`}
-    title={`Collapse ${props.title}`}
-    onClick={props.handleVisibility}
-  />
+export const HeaderActions = ({ children }) => (
+  <div className="slds-panel__header-actions">{children}</div>
 );
+
+export const HeaderButton = ({ symbol, handleVisibility, title }) => {
+  const computedClassNames = classNames({
+    'slds-panel__back': symbol === 'back' || symbol === 'chevronleft',
+    'slds-panel__close': symbol === 'close'
+  });
+  return (
+    <ButtonIcon
+      key="panel-header-close-button"
+      className={computedClassNames}
+      symbol={symbol}
+      size="small"
+      assistiveText={`Collapse ${title}`}
+      title={`Collapse ${title}`}
+      onClick={handleVisibility}
+    />
+  );
+};
+
+HeaderButton.propTypes = {
+  symbol: PropTypes.oneOf(['back', 'chevronleft', 'close']),
+  handleVisibility: PropTypes.func,
+  title: PropTypes.string
+};
 
 export const HeaderTitle = props => (
   <h2
@@ -55,42 +73,48 @@ export const HeaderTitle = props => (
 export const Header = props => {
   let closeSymbol = 'close';
   let headerContent = (
-    <React.Fragment>
+    <>
       <HeaderTitle title={props.title} />
-      <HeaderButton
-        title={props.title}
-        handleVisibility={props.handleVisibility}
-        symbol={closeSymbol}
-      />
-    </React.Fragment>
+      <HeaderActions>
+        {props.headerActions}
+        <HeaderButton
+          title={props.title}
+          handleVisibility={props.handleVisibility}
+          symbol={closeSymbol}
+        />
+      </HeaderActions>
+    </>
   );
   if (props.invoke === 'drill-in') {
     if (props.isInvokedByTab) {
       headerContent = (
-        <React.Fragment>
+        <>
           <HeaderButton
             title={props.title}
             handleVisibility={props.handleVisibility}
-            symbol="back"
+            symbol={props.iconBack}
           />
           <HeaderTitle title={props.title} />
-        </React.Fragment>
+        </>
       );
     } else {
       headerContent = (
-        <React.Fragment>
+        <>
           <HeaderButton
             title={props.title}
             handleVisibility={props.handleVisibility}
-            symbol="back"
+            symbol={props.iconBack}
           />
           <HeaderTitle title={props.title} />
-          <HeaderButton
-            title={props.title}
-            handleVisibility={props.handleVisibility}
-            symbol={closeSymbol}
-          />
-        </React.Fragment>
+          <HeaderActions>
+            {props.headerActions}
+            <HeaderButton
+              title={props.title}
+              handleVisibility={props.handleVisibility}
+              symbol={closeSymbol}
+            />
+          </HeaderActions>
+        </>
       );
     }
   }
@@ -106,6 +130,45 @@ export const Header = props => {
       {props.customHeader ? props.customHeader : headerContent}
     </div>
   );
+};
+
+/**
+ * Deprecated Panel Header for testing only
+ */
+export const HeaderDeprecated = ({
+  title,
+  closeSymbol,
+  hasCenterTitle,
+  customHeader
+}) => (
+  <div
+    className={classNames(
+      'slds-panel__header',
+      hasCenterTitle && 'slds-panel__header_align-center',
+      customHeader && 'slds-panel__header_custom'
+    )}
+  >
+    {customHeader ? (
+      customHeader
+    ) : (
+      <>
+        <HeaderTitle title={title} />
+        <HeaderButton title={title} symbol={closeSymbol} />
+      </>
+    )}
+  </div>
+);
+
+HeaderDeprecated.propTypes = {
+  title: PropTypes.string,
+  closeSymbol: PropTypes.string,
+  hasCenterTitle: PropTypes.bool,
+  customHeader: PropTypes.node
+};
+
+HeaderDeprecated.defaultProps = {
+  title: 'Deprecated Panel Header',
+  closeSymbol: 'close'
 };
 
 /**
@@ -127,7 +190,11 @@ class Panel extends Component {
       children,
       isAnimated,
       hasCenterTitle,
-      isInvokedByTab
+      isInvokedByTab,
+      iconBack,
+      headerActions,
+      headerSlot,
+      id
     } = this.props;
 
     return (
@@ -138,16 +205,23 @@ class Panel extends Component {
         invoke={invoke}
         isVisible={isVisible}
         isAnimated={isAnimated}
+        id={id}
       >
-        <Header
-          title={title}
-          docked={docked}
-          invoke={invoke}
-          customHeader={customHeader}
-          handleVisibility={handleVisibility}
-          hasCenterTitle={hasCenterTitle}
-          isInvokedByTab={isInvokedByTab}
-        />
+        {headerSlot ? (
+          headerSlot
+        ) : (
+          <Header
+            title={title}
+            docked={docked}
+            invoke={invoke}
+            customHeader={customHeader}
+            handleVisibility={handleVisibility}
+            hasCenterTitle={hasCenterTitle}
+            isInvokedByTab={isInvokedByTab}
+            iconBack={iconBack}
+            headerActions={headerActions}
+          />
+        )}
         <Body>{children}</Body>
       </Container>
     );
@@ -159,7 +233,15 @@ Panel.propTypes = {
   docked: PropTypes.oneOf(['left', 'right', 'bottom']),
   invoke: PropTypes.oneOf(['drill-in', 'toggle']),
   hasCenterTitle: PropTypes.bool,
-  isInvokedByTab: PropTypes.bool
+  isInvokedByTab: PropTypes.bool,
+  iconBack: PropTypes.string,
+  headerActions: PropTypes.node,
+  headerSlot: PropTypes.node,
+  id: PropTypes.string
+};
+
+Panel.defaultProps = {
+  iconBack: 'chevronleft'
 };
 
 export default Panel;
@@ -181,36 +263,53 @@ export class PanelPlayground extends Component {
 
   render() {
     const {
-      size = 'medium',
-      title = 'Panel Header',
-      docked = 'left',
-      invoke = 'toggle',
+      size,
+      title,
+      docked,
+      invoke,
       drawer,
-      hasCenterTitle = false
+      hasCenterTitle,
+      icon,
+      iconTitle,
+      children
     } = this.props;
+
+    const exampleId = uniqueId('example-unique-id-');
+
+    const headerComputedClassnames = classNames(
+      'demo-only-element',
+      'slds-theme_default',
+      'slds-border_bottom',
+      'slds-p-around_small',
+      {
+        'slds-text-align_right': docked === 'right'
+      }
+    );
+
+    const demoContainerStyles = {
+      backgroundColor: '#fafaf9',
+      position: 'relative',
+      height: '600px',
+      overflow: 'hidden',
+      display: 'flex',
+      flexDirection: docked == 'right' && 'row-reverse'
+    };
+
     return (
-      <div className="docs-codeblock-example">
-        <header
-          className="slds-size_1-of-1 slds-is-relative slds-theme_default slds-border_bottom slds-p-around_small"
-          style={{ zIndex: '1' }}
-        >
+      <>
+        <header className={headerComputedClassnames} style={{ zIndex: '1' }}>
           <ButtonIcon
             theme="neutral"
             selected={this.state.visible}
-            symbol="filterList"
+            symbol={icon}
+            title={iconTitle}
             className="slds-button_icon-border"
             onClick={() => this.handleVisibility()}
+            aria-expanded={this.state.visible}
+            aria-controls={exampleId}
           />
         </header>
-        <div
-          style={{
-            backgroundColor: '#fafaf9',
-            position: 'relative',
-            height: '600px',
-            overflow: 'hidden',
-            display: 'flex'
-          }}
-        >
+        <div className="demo-only-element" style={demoContainerStyles}>
           <Panel
             isVisible={this.state.visible}
             size={size}
@@ -220,12 +319,38 @@ export class PanelPlayground extends Component {
             drawer={drawer}
             handleVisibility={this.handleVisibility}
             hasCenterTitle={hasCenterTitle}
+            id={exampleId}
           >
-            A panel body accepts any layout or component
+            {children}
           </Panel>
-          <div className="slds-col slds-p-around_medium">Page Content</div>
+          <div className="demo-only-content slds-col slds-p-around_medium">
+            This section is demo-only content representing a custom layout in
+            conjunction with the panel. It is not a part of the blueprint.
+          </div>
         </div>
-      </div>
+      </>
     );
   }
 }
+
+PanelPlayground.propTypes = {
+  size: PropTypes.string,
+  title: PropTypes.string,
+  docked: PropTypes.string,
+  invoke: PropTypes.string,
+  drawer: PropTypes.bool,
+  hasCenterTitle: PropTypes.bool,
+  icon: PropTypes.string,
+  iconTitle: PropTypes.string,
+  children: PropTypes.node
+};
+
+PanelPlayground.defaultProps = {
+  size: 'medium',
+  title: 'Panel Header',
+  docked: 'left',
+  invoke: 'toggle',
+  icon: 'toggle_panel_left',
+  iconTitle: 'Toggle panel',
+  children: 'A panel body accepts any layout or component'
+};

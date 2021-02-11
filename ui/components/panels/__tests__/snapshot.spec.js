@@ -2,6 +2,8 @@
 import React from 'react';
 import createHelpers from '../../../../jest.helpers';
 import Panel from '../';
+import { getDisplayElementById } from '../../../shared/helpers';
+import { examples } from '../base/example';
 
 const { matchesMarkup } = createHelpers(__dirname);
 
@@ -218,4 +220,8 @@ describe('render Panel component', () => {
         </Panel>
       </div>
     ));
+  it('renders Base Panel with secondary actions', () =>
+    matchesMarkup(getDisplayElementById(examples, 'with-secondary-actions')));
+  it('renders Base Panel with the deprecated header', () =>
+    matchesMarkup(getDisplayElementById(examples, 'deprecated-panel-header')));
 });

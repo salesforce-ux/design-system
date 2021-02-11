@@ -5,14 +5,15 @@
 <!-- ## [Unreleased] -->
 ## 2.15.0
 
-- Adjusted color of unsaved tab indicator asterisk to comply with accessibility color contrast rules for active tabs and tabs with notifications.
 ### Added
 
 - Added additional styling hooks. See tab's styling hooks overview table for a full listing of the currently available hooks.
 
 ### Changed
 
+- Adjusted color of unsaved tab indicator asterisk to comply with accessibility color contrast rules for active tabs and tabs with notification.
 - Removed white `background-color` from `.slds-tabs_default` to expose surface color of the tabs parent container.
+- The `back` icon present in tabs on mobile has been replaced by `chevronleft`. This is an inherited change from panels and it makes the icon consistent between the drilled-in states.
 
 ## 2.13.3
 

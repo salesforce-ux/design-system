@@ -111,7 +111,6 @@
 .slds-panel__header_align-center {
   padding: $spacing-small $spacing-xx-large;
 
-
   .slds-panel__header-title {
     text-align: center;
   }
@@ -130,6 +129,23 @@
     right: auto;
     top: 50%;
     margin-top: (($square-icon-small-boundary / 2) * -1);
+  }
+}
+
+/**
+ * @summary Container for secondary actions that affect the entire panel
+ * @selector .slds-panel__header-actions
+ * @restrict .slds-panel__header div
+ */
+.slds-panel__header-actions {
+  display: flex;
+  align-items: center;
+  margin-left: $spacing-x-small;
+
+  .slds-panel__close {
+    // Zero out margins if in header-actions, otherwise leave pre-existing margins so legacy panel__close works
+    margin-left: 0;
+    margin-right: 0;
   }
 }
 

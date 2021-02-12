@@ -477,14 +477,15 @@ workflows:
     jobs:
       - prepare:
           context: ux-eng-keys
+          filters:
+            tags:
+              only: /.*/
       - build-storybook:
           context: ux-eng-keys
-          # do not run for main version branches
+          # do not run for future version tags (X.X.X-*)
           filters:
             tags:
               ignore: /^v\d+\.\d+\.\d+-.+$/
-            branches:
-              ignore: /.*/
           requires:
             - prepare
       - publish-storybook:
@@ -495,10 +496,16 @@ workflows:
           context: ux-eng-keys
           requires:
             - prepare
+          filters:
+            tags:
+              only: /.*/
       - publish-site:
           context: ux-eng-keys
           requires:
             - framework-build
+          filters:
+            tags:
+              only: /.*/
       - populate-database:
           context: ux-eng-keys
           requires:

@@ -25,6 +25,7 @@ export let Button = props => {
     isMiddle,
     isLast,
     use,
+    innerRef,
     ...rest
   } = props;
 
@@ -60,7 +61,12 @@ export let Button = props => {
           {props.children}
         </a>
       ) : (
-        <button className={classNameList} disabled={disabled} {...rest}>
+        <button
+          className={classNameList}
+          disabled={disabled}
+          {...rest}
+          ref={innerRef}
+        >
           {props.children}
         </button>
       )}

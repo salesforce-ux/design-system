@@ -2,6 +2,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import * as BaseExamples from './base/example';
 import * as ToolbarExamples from './toolbar/example';
+import { DEMO_STYLES } from './base/example';
 import { getAllDisplayCollectionsByType } from '../../shared/helpers';
 import StoryFrame from '../../../shared/components/StoryFrame';
 
@@ -20,11 +21,11 @@ storiesOf('Components/Builder Header', module).add(
   'Kitchen Sink',
   () =>
     kitchenSink.map((element, idx) =>
-      element.map(({ label, component }) => (
+      element.map(({ demoStyles, label, component }) => (
         <StoryFrame
           component={component}
           label={label}
-          styles="height: 220px;"
+          styles={demoStyles || DEMO_STYLES}
           key={`kitchen-sink-${label}-${idx}`}
         />
       ))

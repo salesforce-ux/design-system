@@ -28,6 +28,7 @@ class ButtonIcon extends Component {
       isMiddle,
       isLast,
       useCurrentColor,
+      innerRef,
       ...rest
     } = this.props;
 
@@ -111,6 +112,7 @@ class ButtonIcon extends Component {
           className
         )}
         aria-haspopup={hasDropdown ? 'true' : this.props['aria-haspopup']}
+        ref={innerRef}
         {...rest}
       >
         <SvgIcon

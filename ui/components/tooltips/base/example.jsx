@@ -7,34 +7,43 @@ import classNames from 'classnames';
 import ButtonIcon from '../../button-icons/';
 import { UtilityIcon } from '../../icons/base/example';
 import { Button } from '../../buttons/base/example';
+import { getNubbinClass } from '../../../shared/helpers';
 
 const tooltipContent =
   'Sit nulla est ex deserunt exercitation anim occaecat. Nostrud ullamco deserunt aute id consequat veniam incididunt duis in sint irure nisi.';
 
-export let Tooltip = props => (
-  <div
-    className={classNames('slds-popover slds-popover_tooltip', props.className)}
-    role="tooltip"
-    id={props.id}
-    style={props.style}
-  >
-    <div className="slds-popover__body">
-      {props.children}
-      {props.hasLearnMore && (
-        <div className="slds-m-top_x-small" aria-hidden="true">
-          Click{' '}
-          <UtilityIcon
-            className="slds-icon slds-icon_xx-small"
-            symbol="info"
-            assistiveText="Help"
-            title="Help"
-          />{' '}
-          to learn more.
-        </div>
-      )}
+export let Tooltip = props => {
+  const computedClassnames = classNames(
+    'slds-popover slds-popover_tooltip',
+    props.className,
+    props.nubbinPosition && getNubbinClass(props.nubbinPosition)
+  );
+
+  return (
+    <div
+      className={computedClassnames}
+      role="tooltip"
+      id={props.id}
+      style={props.style}
+    >
+      <div className="slds-popover__body">
+        {props.children}
+        {props.hasLearnMore && (
+          <div className="slds-m-top_x-small" aria-hidden="true">
+            Click{' '}
+            <UtilityIcon
+              className="slds-icon slds-icon_xx-small"
+              symbol="info"
+              assistiveText="Help"
+              title="Help"
+            />{' '}
+            to learn more.
+          </div>
+        )}
+      </div>
     </div>
-  </div>
-);
+  );
+};
 
 Tooltip.propTypes = {
   children: PropTypes.node,

@@ -16,4 +16,6 @@ describe('render builder header', () => {
     ));
   it('render base builder header with toolbar', () =>
     matchesMarkup(<BuilderHeader showToolbar />));
+  it('render base builder header with toolbar and status with alert', () =>
+    matchesMarkup(<BuilderHeader hasStatus hasWarning hasError showToolbar />));
 });

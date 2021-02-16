@@ -154,6 +154,39 @@ export const getExampleStoryParams = (...paramObjects) =>
     return { ...prev, ...next };
   }, {});
 
+/**
+ * @desc Return the nubbin position class
+ * @param {string} position Accepts declarative location e.g. "top left", 'bottom right', 'top', etc
+ * @return Classname as a string
+ */
+export const getNubbinClass = position => {
+  const nubbinPositionArray = position.split(' ');
+  const nubbinComputedClass = 'slds-nubbin_' + nubbinPositionArray.join('-');
+  return nubbinComputedClass;
+};
+
+/**
+ * @desc Factory for creating custom React prop-types
+ * @param {boolean} isRequired Sets the prop-type to required
+ * @param {function} callback Prop-type validation logic
+ */
+export const createCustomPropType = (isRequired, callback) => {
+  // The factory returns a custom prop type
+  return function(props, propName, componentName) {
+    const prop = props[propName];
+    if (prop == null) {
+      // Prop is missing
+      if (isRequired) {
+        // Prop is required but wasn't specified. Throw an error.
+        throw new Error();
+      }
+      // Prop is optional. Do nothing.
+    } else {
+      callback(props, propName, componentName);
+    }
+  };
+};
+
 export default {
   omit,
   range,

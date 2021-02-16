@@ -234,7 +234,6 @@ exports[`Prompt popover renders base without position 1`] = `
 >
   <button
     className="slds-button slds-button_icon slds-button_icon-small slds-float_right slds-popover__close"
-    onClick={[Function]}
     title="Close dialog"
   >
     <svg
@@ -332,7 +331,6 @@ exports[`Prompt popover renders positioned bottom center 1`] = `
 >
   <button
     className="slds-button slds-button_icon slds-button_icon-small slds-float_right slds-popover__close"
-    onClick={[Function]}
     title="Close dialog"
   >
     <svg
@@ -430,7 +428,6 @@ exports[`Prompt popover renders positioned bottom left 1`] = `
 >
   <button
     className="slds-button slds-button_icon slds-button_icon-small slds-float_right slds-popover__close"
-    onClick={[Function]}
     title="Close dialog"
   >
     <svg
@@ -528,7 +525,6 @@ exports[`Prompt popover renders positioned bottom right 1`] = `
 >
   <button
     className="slds-button slds-button_icon slds-button_icon-small slds-float_right slds-popover__close"
-    onClick={[Function]}
     title="Close dialog"
   >
     <svg
@@ -626,7 +622,6 @@ exports[`Prompt popover renders positioned top center 1`] = `
 >
   <button
     className="slds-button slds-button_icon slds-button_icon-small slds-float_right slds-popover__close"
-    onClick={[Function]}
     title="Close dialog"
   >
     <svg
@@ -724,7 +719,6 @@ exports[`Prompt popover renders positioned top left 1`] = `
 >
   <button
     className="slds-button slds-button_icon slds-button_icon-small slds-float_right slds-popover__close"
-    onClick={[Function]}
     title="Close dialog"
   >
     <svg
@@ -822,7 +816,6 @@ exports[`Prompt popover renders positioned top right 1`] = `
 >
   <button
     className="slds-button slds-button_icon slds-button_icon-small slds-float_right slds-popover__close"
-    onClick={[Function]}
     title="Close dialog"
   >
     <svg
@@ -920,7 +913,6 @@ exports[`renders a feature popover 1`] = `
 >
   <button
     className="slds-button slds-button_icon slds-button_icon-small slds-float_right slds-popover__close slds-button_icon-inverse"
-    onClick={[Function]}
     title="Close dialog"
   >
     <svg
@@ -968,7 +960,6 @@ exports[`renders a large popover 1`] = `
 >
   <button
     className="slds-button slds-button_icon slds-button_icon-small slds-float_right slds-popover__close"
-    onClick={[Function]}
     title="Close dialog"
   >
     <svg
@@ -1005,7 +996,6 @@ exports[`renders a small popover 1`] = `
 >
   <button
     className="slds-button slds-button_icon slds-button_icon-small slds-float_right slds-popover__close"
-    onClick={[Function]}
     title="Close dialog"
   >
     <svg
@@ -1043,7 +1033,6 @@ exports[`renders a walkthrough popover 1`] = `
 >
   <button
     className="slds-button slds-button_icon slds-button_icon-small slds-float_right slds-popover__close slds-button_icon-inverse"
-    onClick={[Function]}
     title="Close dialog"
   >
     <svg
@@ -1104,7 +1093,6 @@ exports[`renders a warning popover 1`] = `
 >
   <button
     className="slds-button slds-button_icon slds-button_icon-small slds-float_right slds-popover__close"
-    onClick={[Function]}
     title="Close dialog"
   >
     <svg
@@ -1185,7 +1173,6 @@ exports[`renders a warning popover with footer 1`] = `
 >
   <button
     className="slds-button slds-button_icon slds-button_icon-small slds-float_right slds-popover__close"
-    onClick={[Function]}
     title="Close dialog"
   >
     <svg
@@ -1276,7 +1263,6 @@ exports[`renders an action popover 1`] = `
 >
   <button
     className="slds-button slds-button_icon slds-button_icon-small slds-float_right slds-popover__close slds-button_icon-inverse"
-    onClick={[Function]}
     title="Close dialog"
   >
     <svg
@@ -1420,7 +1406,6 @@ exports[`renders an error popover 1`] = `
 >
   <button
     className="slds-button slds-button_icon slds-button_icon-small slds-float_right slds-popover__close slds-button_icon-inverse"
-    onClick={[Function]}
     title="Close dialog"
   >
     <svg
@@ -1501,7 +1486,6 @@ exports[`renders an error popover with footer 1`] = `
 >
   <button
     className="slds-button slds-button_icon slds-button_icon-small slds-float_right slds-popover__close slds-button_icon-inverse"
-    onClick={[Function]}
     title="Close dialog"
   >
     <svg

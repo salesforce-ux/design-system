@@ -1,16 +1,17 @@
 import CodeView from '../../../shared/components/CodeView';
-import CodeBlock from '../../../shared/components/CodeBlock';
-import Example from '../../../shared/components/Example';
 import Blockquote from '../../../shared/components/Blockquote';
-import BuilderHeader from './index.jsx';
+import { getDisplayElementById } from '../../shared/helpers';
+import * as BaseExamples from './base/example';
+import * as ToolbarExamples from './toolbar/example';
+import { DEMO_STYLES } from './base/example';
 
 <div className="doc lead">
   Every builder needs a builder header, which contains basic navigation
   elements. It also shows the builder type and content name.
 </div>
 
-<CodeView exampleOnly isViewport demoStyles="height: 132px;">
-  <BuilderHeader showToolbar />
+<CodeView exampleOnly isViewport demoStyles={DEMO_STYLES}>
+  {ToolbarExamples.default}
 </CodeView>
 
 ## About Builder Header
@@ -19,34 +20,102 @@ To learn more about the Builder pattern in general, check out our [guidelines](/
 
 ## Base
 
-<Example title="Base">
-  <CodeView isViewport demoStyles="height: 132px;">
-    <BuilderHeader />
-  </CodeView>
-</Example>
+<CodeView isViewport demoStyles={DEMO_STYLES}>
+  {BaseExamples.default}
+</CodeView>
 
 ## With open dropdown menu
 
-<Example title="Dropdown Open">
-  <CodeView isViewport demoStyles="height: 220px;">
-    <BuilderHeader openDropDown />
-  </CodeView>
-</Example>
+<CodeView isViewport demoStyles={DEMO_STYLES}>
+  {getDisplayElementById(BaseExamples.states, 'menu-open')}
+</CodeView>
+
+## With tooltip
+
+Use hover text to show where the builder has launched from. If the builder launches from only one location, hover text should read "Back."
+
+<Blockquote type="a11y" header="Accessibility Note">
+  <p>
+    The back action's <code>aria-describedby</code> attribute must share the
+    same value as the tooltip's <code>ID</code>.
+  </p>
+</Blockquote>
+
+<CodeView isViewport demoStyles={DEMO_STYLES}>
+  {getDisplayElementById(BaseExamples.states, 'has-tooltip')}
+</CodeView>
 
 ## Variations
 
 ### With a Truncated Name
 
-<Example title="Truncated">
-  <CodeView isViewport demoStyles="height: 132px;">
-    <BuilderHeader docName="Page Type with a very very long name that will truncate when the container is not wide enough to contain this content completely" />
-  </CodeView>
-</Example>
+<CodeView isViewport demoStyles={DEMO_STYLES}>
+  {getDisplayElementById(BaseExamples.states, 'with-truncation')}
+</CodeView>
 
 ### With a Toolbar
 
-<Example title="Toolbar">
-  <CodeView isViewport demoStyles="height: 132px;">
-    <BuilderHeader showToolbar />
-  </CodeView>
-</Example>
+<CodeView isViewport demoStyles={DEMO_STYLES}>
+  {ToolbarExamples.default}
+</CodeView>
+
+### With Status text
+
+Use status text and alerts with action buttons to reinforce status notifications, warnings, and errors.
+
+A status text can include:
+
+- A file (version) state, such as active, inactive, draft (e.g. "Inactive - Modified a few seconds ago")
+- Action, plus Last Modified Time, represented with [relativeDateTime](https://developer.salesforce.com/docs/component-library/bundle/lightning:relativeDateTime/example). (e.g. "Saved 1 day ago")
+
+When the user hovers or focuses status text, use a tooltip to communicate additional details (e.g., Version 2 saved by Johnny Appleseed Today 9:00 AM).
+
+<Blockquote type="a11y" header="Accessibility Note">
+  <p>
+    The status text's <code>aria-describedby</code> attribute must share the
+    same value as the tooltip's <code>ID</code>.
+  </p>
+</Blockquote>
+
+<CodeView isViewport demoStyles={DEMO_STYLES}>
+  {getDisplayElementById(ToolbarExamples.states, 'has-status-text')}
+</CodeView>
+
+### With Alert
+
+If the canvas or a canvas element generates a warning or error, an alert icon appears in the toolbar. Clicking or accessing by keyboard a popover's trigger element opens the popover.
+
+<Blockquote type="a11y" header="Accessibility Note">
+  <p>
+    When a popover is invoked, keyboard focus is moved into the popover and
+    remains trapped until it is closed by the <strong>close button</strong> or{' '}
+    <strong>escape</strong> key. After the popover is closed, focus is returned
+    to the original triggering element.
+  </p>
+</Blockquote>
+
+#### Warning
+
+<CodeView isViewport demoStyles={DEMO_STYLES}>
+  {getDisplayElementById(
+    ToolbarExamples.states,
+    'has-status-text-with-warning'
+  )}
+</CodeView>
+
+#### Error
+
+When a user attempts to perform an action (e.g. save) and errors are present, an error popover is invoked and actions are disabled.
+
+<CodeView isViewport demoStyles={DEMO_STYLES}>
+  {getDisplayElementById(ToolbarExamples.states, 'has-status-text-with-error')}
+</CodeView>
+
+#### Warning and Error
+
+<CodeView isViewport demoStyles={DEMO_STYLES}>
+  {getDisplayElementById(
+    ToolbarExamples.states,
+    'has-status-text-with-warning-and-error'
+  )}
+</CodeView>

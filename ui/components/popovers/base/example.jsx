@@ -4,8 +4,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import _ from '../../../shared/helpers';
-
+import _, { getNubbinClass } from '../../../shared/helpers';
 import ButtonIcon from '../../button-icons/';
 import SvgIcon from '../../../shared/svg-icon';
 
@@ -17,6 +16,26 @@ export let Popover = props => {
   const headingUniqueId = _.uniqueId('dialog-heading-id-');
   const bodyUniqueId = _.uniqueId('dialog-body-id-');
 
+  const computedClassnames = classNames(
+    'slds-popover',
+    props.className,
+    props.nubbinPosition && getNubbinClass(props.nubbinPosition),
+    props.isFullWidth && 'slds-popover_full-width',
+    props.isHidden && 'slds-popover_hide',
+    props.isWarning && 'slds-popover_warning',
+    props.isError && 'slds-popover_error'
+  );
+
+  const computedBodyClassnames = classNames(
+    'slds-popover__body',
+    props.bodyClassName,
+    props.isWarning && 'slds-popover_warning__body',
+    props.isError && 'slds-popover_error__body',
+    {
+      'slds-popover__body_small': props.size === 'small'
+    }
+  );
+
   return (
     <section
       aria-describedby={bodyUniqueId}
@@ -24,15 +43,11 @@ export let Popover = props => {
       aria-labelledby={
         !props.header && props.headerTitle ? headingUniqueId : props.headingId
       }
-      className={classNames(
-        'slds-popover',
-        props.className,
-        props.isFullWidth && 'slds-popover_full-width',
-        props.isHidden && 'slds-popover_hide'
-      )}
+      className={computedClassnames}
       id={props.popoverId}
       role="dialog"
       style={props.style}
+      ref={props.innerRef}
     >
       {props.closeButton ? (
         <ButtonIcon
@@ -43,6 +58,7 @@ export let Popover = props => {
           )}
           symbol="close"
           title="Close dialog"
+          onClick={props.onClose}
         />
       ) : null}
       {!props.header && props.headerTitle ? (
@@ -56,16 +72,7 @@ export let Popover = props => {
       ) : (
         props.header
       )}
-      <div
-        className={classNames(
-          'slds-popover__body',
-          {
-            'slds-popover__body_small': props.size === 'small'
-          },
-          props.bodyClassName
-        )}
-        id={bodyUniqueId}
-      >
+      <div className={computedBodyClassnames} id={bodyUniqueId}>
         {props.children}
       </div>
       {props.footer ? (
@@ -100,6 +107,7 @@ Popover.propTypes = {
   inverse: PropTypes.bool,
   isFullWidth: PropTypes.bool,
   isHidden: PropTypes.bool,
+  nubbinPosition: PropTypes.string,
   popoverId: PropTypes.string,
   size: PropTypes.oneOf(['small']),
   style: PropTypes.object,

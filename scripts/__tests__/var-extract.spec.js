@@ -10,7 +10,7 @@ describe('extractVarsFromCSS', () => {
     const styleHookName = Object.keys(actual)[0];
 
     expect(styleHookName).toEqual('--sds-c-icon-color-background');
-    expect(actual[styleHookName].fallBackValue).toEqual('transparent');
+    expect(actual[styleHookName].fallbackValue).toEqual('transparent');
     expect(actual[styleHookName].category).toEqual('Color');
     expect(actual[styleHookName].valueType).toEqual('Color');
   });
@@ -23,6 +23,6 @@ describe('extractVarsFromCSS', () => {
     const styleHookName = Object.keys(actual)[0];
 
     expect(styleHookName).toEqual('--sds-c-icon-color-background');
-    expect(actual[styleHookName].fallBackValue).toEqual('');
+    expect(actual[styleHookName].fallbackValue).toEqual('');
   });
 });

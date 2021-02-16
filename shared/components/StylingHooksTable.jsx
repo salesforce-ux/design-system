@@ -69,7 +69,7 @@ class StylingHooksTable extends Component {
                   .map(varName => {
                     return {
                       name: varName,
-                      value: vars[varName],
+                      value: vars[varName].fallbackValue,
                       types: getPropTypeData(name, varName).valueTypes || []
                     };
                   });

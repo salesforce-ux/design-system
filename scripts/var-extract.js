@@ -108,7 +108,7 @@ const extractVarsFromCSS = cssContent => {
             }
           });
 
-          list[varName] = { fallBackValue: cssVar[varName] };
+          list[varName] = { fallbackValue: cssVar[varName] };
 
           if (matchedCategory) {
             list[varName].category = propTypes[matchedCategory].type;

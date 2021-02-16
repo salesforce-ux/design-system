@@ -18,7 +18,8 @@ until [ "$selection" = "0" ]; do
   echo ""
   echo "    	1  -  Upcoming"
   echo "    	2  -  Core patch"
-  echo "    	3  -  Public/Core main"
+  echo "    	3  -  Core main"
+  echo "    	4  -  Production"
   echo "    	0  -  Exit"
   echo ""
   echo -n "  Enter selection: "
@@ -26,8 +27,9 @@ until [ "$selection" = "0" ]; do
   echo ""
   case $selection in
     1 ) clear ; HEROKU_APP_NAME=upcoming-doc-site ; robots_index=false ; break ;;
-    2 ) clear ; HEROKU_APP_NAME=core-patch-doc-site ; robots_index=true ; break ;;
+    2 ) clear ; HEROKU_APP_NAME=core-patch-doc-site ; robots_index=false ; break ;;
     3 ) clear ; HEROKU_APP_NAME=core-main-doc-site ; robots_index=false ; break ;;
+    4 ) clear ; HEROKU_APP_NAME=design-system-site-prod ; robots_index=true ; break ;;
     0 ) clear ; exit ;;
     * ) clear ; incorrect_selection ;;
   esac

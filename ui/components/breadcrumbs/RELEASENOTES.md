@@ -4,6 +4,9 @@
 
 <!-- ## [Unreleased] -->
 
+## 2.15.0
+
+- Added Kinetic styles and demo functionality for Breadcrumbs
 ## 2.13.0
 
 - Enabled styling hooks for breadcrumb. See breadcrumb's styling hooks overview table for a full listing of the currently available hooks.

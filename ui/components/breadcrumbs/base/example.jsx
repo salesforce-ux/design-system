@@ -40,16 +40,23 @@ export const Context = props => (
   </div>
 );
 
-export const BreadcrumbsBase = props => (
-  <BreadCrumbs>
+export const BreadcrumbsBase = ({ kineticsEnabled }) => (
+  <BreadCrumbs
+    kxScopeBreadcrumbsItem={kineticsEnabled}
+    kxTypeUnderline={kineticsEnabled}
+  >
     <Crumb>Parent Entity</Crumb>
     <Crumb>Parent Record Name</Crumb>
   </BreadCrumbs>
 );
 
 /* for snapshot tests */
-export const BreadcrumbsWithOverflow = props => (
-  <BreadCrumbs listClassNames="slds-grid_vertical-align-center">
+export const BreadcrumbsWithOverflow = ({ kineticsEnabled }) => (
+  <BreadCrumbs
+    kxScopeBreadcrumbsItem={kineticsEnabled}
+    kxTypeUnderline={kineticsEnabled}
+    listClassNames="slds-grid_vertical-align-center"
+  >
     <Crumb hasMenu>
       <BreadcrumbMenu />
     </Crumb>
@@ -68,8 +75,23 @@ export default <BreadcrumbsBase />;
 /* export for site examples */
 export let states = [
   {
-    id: 'overflow-breadcrumbs',
-    label: 'Breadcrumbs with Overflow Menu',
+    id: 'breadcrumbs-overflow',
+    label: 'With Overflow Menu',
+    demoStyles: 'height: 200px;',
     element: <BreadcrumbsWithOverflow />
+  }
+];
+
+export let examples = [
+  {
+    id: 'kinetics-breadcrumbs-base',
+    label: 'Base (Kinetics)',
+    element: <BreadcrumbsBase kineticsEnabled />
+  },
+  {
+    id: 'kinetics-breadcrumbs-overflow',
+    label: 'With Overflow Menu (Kinetics)',
+    demoStyles: 'height: 200px;',
+    element: <BreadcrumbsWithOverflow kineticsEnabled />
   }
 ];

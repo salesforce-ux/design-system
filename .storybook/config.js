@@ -35,7 +35,10 @@ switch (process.env.STORYBOOK_STORIES_TYPE) {
     whatToLoad = mobileStories;
     break;
 }
-if (navigator.userAgent.indexOf('MSIE') !== -1 || navigator.appVersion.indexOf('Trident/') > 0) {
+if (
+  navigator.userAgent.indexOf('MSIE') !== -1 ||
+  navigator.appVersion.indexOf('Trident/') > 0
+) {
   svg4everybody();
 }
 

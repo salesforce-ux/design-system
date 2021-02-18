@@ -80,8 +80,8 @@ $_ellie-frameset: (
   }
 
   circle:nth-child(2n) {
-    fill: #fff;
-    stroke: #fff;
+    fill: $color-gray-1;
+    stroke: $color-gray-1;
     stroke-width: 1px;
   }
 }

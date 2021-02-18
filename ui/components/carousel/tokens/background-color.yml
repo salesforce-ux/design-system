@@ -20,8 +20,8 @@ props:
     value: '{!PALETTE_GRAY_2}'
     comment: Default hover background for carousel navigation indicators
   CAROUSEL_INDICATOR_COLOR_BACKGROUND_FOCUS:
-    value: '{!ENDEAVOUR}'
+    value: '{!PALETTE_BLUE_30}'
     comment: Default focus background for carousel navigation indicators
   CAROUSEL_INDICATOR_COLOR_BACKGROUND_ACTIVE:
-    value: '{!SCIENCE_BLUE}'
+    value: '{!PALETTE_BLUE_50}'
     comment: Default background for active state on carousel navigation indicators

@@ -29,7 +29,7 @@ props:
     value: '{!OFFSET_NONE} 1px 1px {!OFFSET_NONE} {!BLACK_TRANSPARENT_05}'
     comment: Shadow for buttons.
   SHADOW_FOCUS_INSET:
-    value: '{!OFFSET_NONE} {!OFFSET_NONE} {!OFFSET_X_SMALL}px {!OFFSET_X_SMALL}px {!AZURE} inset'
+    value: '{!OFFSET_NONE} {!OFFSET_NONE} {!OFFSET_X_SMALL}px {!OFFSET_X_SMALL}px {!PALETTE_BLUE_60} inset'
     comment: Inset shadow for editable grid
   SHADOW_IMAGE:
     value: '{!OFFSET_NONE} 1px 1px {!BLACK_TRANSPARENT_16}'

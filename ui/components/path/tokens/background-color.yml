@@ -13,22 +13,22 @@ imports:
 
 props:
   COLOR_BACKGROUND_PATH_COMPLETE:
-    value: '{!EMERALD}'
+    value: '{!PALETTE_GREEN_70}'
     comment: The background color for Salespath stages that are complete.
   COLOR_BACKGROUND_PATH_COMPLETE_HOVER:
-    value: '{!SALEM}'
+    value: '{!PALETTE_GREEN_50}'
     comment: The hover background color for Salespath stages that are complete.
   COLOR_BACKGROUND_PATH_ACTIVE:
-    value: '{!ENDEAVOUR}'
+    value: '{!PALETTE_BLUE_30}'
     comment: The background color for Salespath stages that are the active stage.
   COLOR_BACKGROUND_PATH_ACTIVE_HOVER:
-    value: '{!MIDNIGHT_BLUE}'
+    value: '{!PALETTE_BLUE_20}'
     comment: The hover background color for Salespath stages that are the active stage.
   COLOR_BACKGROUND_PATH_STEP_ACTION_ACTIVE:
-    value: '{!DEEP_COVE}'
+    value: '{!PALETTE_BLUE_10}'
     comment: The background color for the step action arrow that are the active stage
   COLOR_BACKGROUND_PATH_STEP_ACTION_CURRENT:
-    value: '{!ENDEAVOUR}'
+    value: '{!PALETTE_BLUE_30}'
     comment: The background color for the step action arrow that are the current stage
   COLOR_BACKGROUND_PATH_CURRENT:
     value: '{!PALETTE_GRAY_1}'
@@ -43,10 +43,10 @@ props:
     value: '{!PALETTE_GRAY_5}'
     comment: The hover background color for Salespath stages that have not been completed.
   COLOR_BACKGROUND_PATH_LOST:
-    value: '{!FLUSH_MAHOGANY}'
+    value: '{!PALETTE_RED_50}'
     comment: The background color for the final stage of a Salespath when it has been lost.
   COLOR_BACKGROUND_PATH_WON:
-    value: '{!SALEM}'
+    value: '{!PALETTE_GREEN_50}'
     comment: The background color for the final stage of a Salespath when it has been lost.
   COLOR_BACKGROUND_GUIDANCE:
     value: '{!PALETTE_GRAY_1}'

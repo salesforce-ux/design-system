@@ -15,15 +15,15 @@ props:
   COLOR_BORDER_PRIMARY:
     value: '{!PALETTE_COOL_GRAY_5}'
   COLOR_BORDER_BRAND_PRIMARY:
-    value: '{!AZURE}'
+    value: '{!PALETTE_BLUE_60}'
   COLOR_BORDER_BRAND_PRIMARY_HOVER:
-    value: '{!SCIENCE_BLUE}'
+    value: '{!PALETTE_BLUE_50}'
   COLOR_BORDER_BRAND_PRIMARY_FOCUS:
-    value: '{!SCIENCE_BLUE}'
+    value: '{!PALETTE_BLUE_50}'
   COLOR_BORDER_BRAND_PRIMARY_ACTIVE:
-    value: '{!MIDNIGHT_BLUE}'
+    value: '{!PALETTE_BLUE_20}'
   COLOR_BORDER_HINT:
-    value: '{!SAN_JUAN}'
+    value: '{!PALETTE_BLUE_20}'
     specificity: builders
     comment: Used to delineate the boundary of a specific region. Specific to builders.
   COLOR_STROKE_DISABLED:
@@ -37,30 +37,30 @@ props:
     - stroke
     comment: Stroke color for our global header buttons.
   COLOR_STROKE_BRAND:
-    value: '{!SCIENCE_BLUE}'
+    value: '{!PALETTE_BLUE_50}'
     cssProperties:
     - stroke
     comment: Our product brand blue.
   COLOR_STROKE_BRAND_HOVER:
-    value: '{!SCIENCE_BLUE}'
+    value: '{!PALETTE_BLUE_50}'
     cssProperties:
     - stroke
     comment: Hover stroke color for our product brand blue.
   COLOR_STROKE_BRAND_ACTIVE:
-    value: '{!BISCAY}'
+    value: '{!PALETTE_BLUE_20}'
     cssProperties:
     - stroke
     comment: Active stroke color for our product brand blue.
   COLOR_BORDER_CANVAS_ELEMENT_SELECTION:
-    value: '{!MALIBU}'
+    value: '{!PALETTE_CLOUD_BLUE_70}'
     specificity: builders
     comment: Used to delineate the boundary of a selected canvas element. Specific to builders.
   COLOR_BORDER_CANVAS_ELEMENT_SELECTION_HOVER:
-    value: '{!ENDEAVOUR}'
+    value: '{!PALETTE_BLUE_30}'
     specificity: builders
     comment: Used to delineate the boundary of a selected canvas element that is being hovered over. Specific to builders.
   COLOR_BORDER_BUTTON_BRAND:
-    value: '{!SCIENCE_BLUE}'
+    value: '{!PALETTE_BLUE_50}'
     comment: Border color for brandable primary button
     access: global
   COLOR_BORDER_BUTTON_FOCUS_INVERSE:

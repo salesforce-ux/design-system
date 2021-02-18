@@ -14,16 +14,16 @@ imports:
 - "../../../../design-tokens/aliases/color-palettes.yml"
 props:
   SLIDER_HANDLE_COLOR_BACKGROUND:
-    value: '{!AZURE}'
+    value: '{!PALETTE_BLUE_60}'
   SLIDER_HANDLE_COLOR_BACKGROUND_HOVER:
-    value: '{!SCIENCE_BLUE}'
+    value: '{!PALETTE_BLUE_50}'
   SLIDER_HANDLE_COLOR_BACKGROUND_FOCUS:
-    value: '{!SCIENCE_BLUE}'
+    value: '{!PALETTE_BLUE_50}'
   SLIDER_HANDLE_COLOR_BACKGROUND_ACTIVE:
-    value: '{!SCIENCE_BLUE}'
+    value: '{!PALETTE_BLUE_50}'
   SLIDER_TRACK_COLOR_BACKGROUND:
     value: '{!PALETTE_GRAY_4}'
   SLIDER_TRACK_COLOR_BACKGROUND_FILL:
-    value: '{!AZURE}'
+    value: '{!PALETTE_BLUE_60}'
   SLIDER_COLOR_BACKGROUND_DISABLED:
     value: '{!PALETTE_GRAY_4}'

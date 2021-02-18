@@ -156,7 +156,7 @@ props:
     release: 2.6.0
     access: global
   BRAND_BACKGROUND_PRIMARY_TRANSPARENT:
-    value: "rgba(176,196,223,0)"
+    value: "rgba(238,244,255,0)"
     comment: "These RGBA values need to be updated if BRAND_BACKGROUND_PRIMARY changes, solves webkit bug"
     themeable: true
     release: 2.6.0
@@ -167,7 +167,7 @@ props:
     release: 2.6.0
     access: global
   BRAND_BACKGROUND_DARK_TRANSPARENT:
-    value: "rgba(25,85,148,0)"
+    value: "rgba(1,68,134,0)"
     comment: "These RGBA values need to be updated if BRAND_BACKGROUND_DARK changes, solves webkit bug"
     themeable: true
     release: 2.6.0
@@ -227,22 +227,22 @@ props:
     themeable: true
     release: 2.6.0
   BRAND_HEADER_CONTRAST_COOL:
-    value: "#005583"
+    value: "{!PALETTE_BLUE_30}"
     comment: "Variant of BRAND_HEADER_CONTRAST that provides a cool color"
     themeable: true
     release: 2.6.0
   BRAND_HEADER_CONTRAST_COOL_ACTIVE:
-    value: "#005583"
+    value: "{!PALETTE_BLUE_30}"
     comment: "Active / Hover state of BRAND_HEADER_CONTRAST_COOL"
     themeable: true
     release: 2.6.0
   BRAND_HEADER_CONTRAST_WARM:
-    value: "#BF0201"
+    value: "{!PALETTE_RED_40}"
     comment: "Variant of BRAND_HEADER_CONTRAST that provides a warm color"
     themeable: true
     release: 2.6.0
   BRAND_HEADER_CONTRAST_WARM_ACTIVE:
-    value: "#ac0000"
+    value: "{!PALETTE_RED_40}"
     comment: "Active / Hover state of BRAND_HEADER_CONTRAST_WARM"
     themeable: true
     release: 2.6.0

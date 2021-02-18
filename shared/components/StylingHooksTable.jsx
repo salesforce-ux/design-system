@@ -1,14 +1,14 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-import React, { Component } from "react";
-import classNames from "classnames";
+import React, { Component } from 'react';
+import classNames from 'classnames';
 
-import Copy from "../../shared/components/Copy";
-import { propTypes } from "../../scripts/var-metadata";
+import Copy from '../../shared/components/Copy';
+import { propTypes } from '../../scripts/var-metadata';
 
 const getPropTypeData = (name, varName) => {
-  const trimmedVar = varName.replace(`--sds-c-${name}-`, "");
+  const trimmedVar = varName.replace(`--sds-c-${name}-`, '');
   let propType = null;
   let valueTypes = null;
 
@@ -42,7 +42,7 @@ class StylingHooksTable extends Component {
         <div className="slds-m-bottom_large">
           <p className="doc">
             Use these CSS Custom Properties as hooks to customize this SLDS
-            component with your own style. For more information,{" "}
+            component with your own style. For more information,{' '}
             <a href="/platforms/lightning/styling-hooks/">
               read the technical documentation
             </a>
@@ -80,8 +80,8 @@ class StylingHooksTable extends Component {
                       <tr
                         key={`${category}-${i}-${ii}`}
                         className={classNames({
-                          "hooks-table__section": ii === 0,
-                          "hooks-table__section_end":
+                          'hooks-table__section': ii === 0,
+                          'hooks-table__section_end':
                             ii === categoryVars.length - 1
                         })}
                       >

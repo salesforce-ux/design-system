@@ -24,53 +24,53 @@ props:
     - 'background*'
     access: global
   COLOR_BORDER_BRAND:
-    value: '{!BRAND_PRIMARY}'
+    value: '{!PALETTE_BLUE_60}'
     comment: Our product brand blue.
     access: global
   COLOR_BORDER_BRAND_DARK:
-    value: '{!BRAND_ACCESSIBLE}'
+    value: '{!PALETTE_BLUE_30}'
     comment: 'Our product brand blue, darkened to meet accessibility color contrast ratios with white text.'
   COLOR_BORDER_CUSTOMER:
-    value: '{!TANGERINE}'
+    value: '{!PALETTE_ORANGE_70}'
     comment: Border color for UI elements related to the concept of an external user or customer.
   COLOR_BORDER_DESTRUCTIVE:
-    value: '{!FLUSH_MAHOGANY}'
+    value: '{!PALETTE_RED_50}'
     comment: Border color for UI elements that have to do with destructive actions.
   COLOR_BORDER_DESTRUCTIVE_HOVER:
-    value: '{!TABASCO}'
+    value: '{!PALETTE_RED_40}'
     comment: Hover border color for UI elements that have to do with destructive actions.
   COLOR_BORDER_DESTRUCTIVE_ACTIVE:
-    value: '{!MAROON}'
+    value: '{!PALETTE_RED_30}'
     comment: Active border color for UI elements that have to do with destructive actions.
   COLOR_BORDER_INFO:
     value: '{!PALETTE_GRAY_9}'
     comment: 'Border color for UI elements related to providing neutral information (not error, success, or warning).'
   COLOR_BORDER_ERROR:
-    value: '{!FLUSH_MAHOGANY}'
+    value: '{!PALETTE_RED_50}'
     comment: Border color for UI elements that have to do with errors.
     access: global
   COLOR_BORDER_ERROR_ALT:
-    value: '{!DEEP_BLUSH}'
+    value: '{!PALETTE_RED_70}'
     comment: Alternative border color for UI elements related to errors.
   COLOR_BORDER_ERROR_DARK:
-    value: '{!DEEP_BLUSH}'
+    value: '{!PALETTE_RED_70}'
     comment: Dark alternative border color for UI elements related to errors.
   COLOR_BORDER_OFFLINE:
     value: '{!PALETTE_GRAY_11}'
     comment: Border color for UI elements related to the offline state.
   COLOR_BORDER_SUCCESS:
-    value: '{!EMERALD}'
+    value: '{!PALETTE_GREEN_80}'
     comment: Border color for UI elements that have to do with success.
     access: global
   COLOR_BORDER_SUCCESS_DARK:
-    value: '{!SALEM}'
+    value: '{!PALETTE_GREEN_50}'
     comment: Dark alternative border color for UI elements that have to do with success.
   COLOR_BORDER_WARNING:
-    value: '{!KOROMIKO}'
+    value: '{!PALETTE_ORANGE_70}'
     comment: Border color for UI elements that have to do with warnings.
     access: global
   COLOR_BORDER_INVERSE:
-    value: '{!DEEP_COVE}'
+    value: '{!PALETTE_BLUE_10}'
     comment: Border color to match UI elements using color-background-inverse.
   COLOR_BORDER_SEPARATOR:
     value: '{!PALETTE_GRAY_2}'
@@ -84,23 +84,23 @@ props:
     value: '{!PALETTE_GRAY_6}'
     comment: Darkest separator color - used as an alternate separator color when more differentiation is desired.
   COLOR_BORDER_SEPARATOR_INVERSE:
-    value: '{!SAN_JUAN}'
+    value: '{!PALETTE_BLUE_20}'
     comment: 'Used as a separator on dark backgrounds, such as stage left navigation.'
     access: global
   COLOR_BORDER_ROW_SELECTED:
-    value: '{!BRAND_ACCESSIBLE}'
+    value: '{!PALETTE_BLUE_50}'
     comment: Used as the border color for selected rows or items on list-like components.
     access: global
   COLOR_BORDER_ROW_SELECTED_HOVER:
-    value: '{!BRAND_PRIMARY}'
+    value: '{!PALETTE_BLUE_60}'
     comment: Used as the border color for the hover state on selected rows or items on list-like components.
     access: global
   COLOR_BORDER_SELECTION:
-    value: '{!BRAND_ACCESSIBLE}'
+    value: '{!PALETTE_BLUE_50}'
     specificity: builders
     comment: Used to delineate the boundary of a selected component. Specific to builders.
   COLOR_BORDER_SELECTION_HOVER:
-    value: '{!BRAND_PRIMARY}'
+    value: '{!PALETTE_BLUE_60}'
     specificity: builders
     comment: Used to delineate the boundary of a component that is being hovered over. Specific to builders.
   COLOR_BORDER_SELECTION_ACTIVE:

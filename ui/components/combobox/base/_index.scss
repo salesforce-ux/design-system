@@ -33,7 +33,7 @@
 
     .slds-combobox__input-value,
     .slds-combobox__input-value:focus {
-      box-shadow: 0 0 0 2px #fff inset, 0 0 0 3px $color-border inset;
+      box-shadow: 0 0 0 2px $color-gray-1 inset, 0 0 0 3px $color-border inset;
     }
   }
 
@@ -644,6 +644,6 @@ input[readonly][role="combobox"] {
   }
 
   .slds-combobox__input-value {
-    box-shadow: 0 0 0 2px #fff inset, 0 0 0 3px $color-border inset;
+    box-shadow: 0 0 0 2px $color-gray-1 inset, 0 0 0 3px $color-border inset;
   }
 }

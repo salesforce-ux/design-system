@@ -11,11 +11,11 @@ global:
   - 'border*'
   - box-shadow
 imports:
-- ../../../../design-tokens/aliases/color-palettes.yml
-- ../../../../design-tokens/aliases/colors.yml
+- "../../../../design-tokens/aliases/color-palettes.yml"
+- "../../../../design-tokens/aliases/colors.yml"
 props:
   WELCOME_MAT_TEXT_COLOR_INFO:
-    value: '{!MIDNIGHT_BLUE}'
+    value: '{!PALETTE_BLUE_20}'
     comment: Text color for the Info section
 
   WELCOME_MAT_BACKGROUND_IMAGE_INFO:
@@ -24,7 +24,7 @@ props:
     comment: Background Image Path for the Welcome Mat Info section
 
   WELCOME_MAT_BACKGROUND_COLOR_INFO:
-    value: '#CAE6F1'
+    value: '{!PALETTE_CLOUD_BLUE_90}'
     comment: Background overflow color for the Welcome Mat Info section
 
   WELCOME_MAT_COLOR_BACKGROUND_PROGRESS_BAR:

@@ -467,8 +467,7 @@ export let examples = [
   {
     id: 'styling-hooks-rte-min-height',
     label: 'Styling Hooks - Base (Min Height)',
-    demoStyles:
-      `
+    demoStyles: `
         --sds-c-textarea-sizing-min-height: 3rem;
       `,
     element: (
@@ -487,8 +486,7 @@ export let examples = [
   {
     id: 'styling-hooks-rte-max-height',
     label: 'Styling Hooks - Base (Max Height)',
-    demoStyles:
-      `
+    demoStyles: `
         --sds-c-textarea-sizing-max-height: 10rem;
       `,
     element: (

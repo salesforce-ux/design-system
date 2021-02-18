@@ -16,7 +16,7 @@ props:
     comment: Input disabled text
     access: global
   COLOR_TEXT_INPUT_FOCUS_INVERSE:
-    value: '{!BISCAY}'
+    value: '{!PALETTE_BLUE_20}'
     comment: Typed input text
     access: global
   COLOR_TEXT_INPUT_ICON:
@@ -24,7 +24,7 @@ props:
     comment: Input icon
     access: global
   COLOR_TEXT_TAB_LABEL:
-    value: '{!BISCAY}'
+    value: '{!PALETTE_BLUE_20}'
     comment: Color for default text in a tab group.
     access: global
   COLOR_TEXT_BUTTON_BRAND:
@@ -44,15 +44,15 @@ props:
     comment: Text color for brandable primary button - disabled state
     access: global
   COLOR_TEXT_BUTTON_DEFAULT:
-    value: '{!SCIENCE_BLUE}'
+    value: '{!PALETTE_BLUE_50}'
     comment: Text color for default secondary button
     access: global
   COLOR_TEXT_BUTTON_DEFAULT_HOVER:
-    value: '{!SCIENCE_BLUE}'
+    value: '{!PALETTE_BLUE_50}'
     comment: Text color for default secondary button - hover state
     access: global
   COLOR_TEXT_BUTTON_DEFAULT_ACTIVE:
-    value: '{!SCIENCE_BLUE}'
+    value: '{!PALETTE_BLUE_50}'
     comment: Text color for default secondary button - active state
     access: global
   COLOR_TEXT_BUTTON_DEFAULT_DISABLED:
@@ -78,11 +78,11 @@ props:
     comment: Icon color for a button that has a parent element that has a hover state. This is the default text/icon color for that button before its parent has been hovered over.
     access: global
   COLOR_TEXT_ICON_DEFAULT_HOVER:
-    value: '{!SCIENCE_BLUE}'
+    value: '{!PALETTE_BLUE_50}'
     comment: Default icon color - hover state.
     access: global
   COLOR_TEXT_ICON_DEFAULT_ACTIVE:
-    value: '{!MIDNIGHT_BLUE}'
+    value: '{!PALETTE_BLUE_20}'
     comment: Default icon color - active state.
     access: global
   COLOR_TEXT_ICON_DEFAULT_DISABLED:

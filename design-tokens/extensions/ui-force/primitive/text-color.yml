@@ -13,7 +13,7 @@ imports:
 - ../../../aliases/color-palettes.yml
 props:
   COLOR_TEXT_DEFAULT:
-    value: '{!BISCAY}'
+    value: '{!PALETTE_BLUE_20}'
     comment: Body text color
     access: global
   COLOR_TEXT_ICON_DEFAULT:
@@ -41,7 +41,7 @@ props:
     comment: Action label text color
     access: global
   COLOR_TEXT_ACTION_LABEL_ACTIVE:
-    value: '{!BISCAY}'
+    value: '{!PALETTE_BLUE_20}'
     comment: Action label active text color
     access: global
   COLOR_TEXT_LINK:

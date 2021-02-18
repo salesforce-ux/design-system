@@ -13,7 +13,7 @@ imports:
 - ../../../aliases/color-palettes.yml
 props:
   COLOR_TEXT_PRIMARY:
-    value: '{!BISCAY}'
+    value: '{!PALETTE_BLUE_20}'
     comment: Primary body text color
   COLOR_TEXT_SECONDARY:
     value: '{!PALETTE_COOL_GRAY_9}'
@@ -38,7 +38,7 @@ props:
     comment: Color for text on toast messages.
     access: global
   COLOR_TEXT_PILL:
-    value: '{!SCIENCE_BLUE}'
+    value: '{!PALETTE_BLUE_50}'
     comment: Text color for pills.
     access: global
   COLOR_TEXT_BROWSER:
@@ -50,15 +50,15 @@ props:
     comment: Top bar active icon color
     access: global
   COLOR_TEXT_LINK_PRIMARY:
-    value: "{!SCIENCE_BLUE}"
+    value: '{!PALETTE_BLUE_50}'
   COLOR_TEXT_LINK_PRIMARY_HOVER:
-    value: "{!SCIENCE_BLUE}"
+    value: '{!PALETTE_BLUE_50}'
   COLOR_TEXT_LINK_PRIMARY_ACTIVE:
-    value: "{!MIDNIGHT_BLUE}"
+    value: '{!PALETTE_BLUE_20}'
   COLOR_TEXT_LINK_PRIMARY_FOCUS:
-    value: "{!SCIENCE_BLUE}"
+    value: '{!PALETTE_BLUE_50}'
   COLOR_TEXT_INVERSE_ACTIVE:
-    value: '{!MALIBU}'
+    value: '{!PALETTE_CLOUD_BLUE_70}'
     comment: Active state on a standalone link on a dark background.
     access: global
   COLOR_TEXT_INVERSE_HOVER:
@@ -66,19 +66,19 @@ props:
     comment: Hover state on a standalone link on a dark background.
     access: global
   COLOR_TEXT_TAB_LABEL_SELECTED:
-    value: '{!SCIENCE_BLUE}'
+    value: '{!PALETTE_BLUE_50}'
     comment: Color for text on a selected tab in a tab group.
     access: global
   COLOR_TEXT_TAB_LABEL_HOVER:
-    value: '{!ENDEAVOUR}'
+    value: '{!PALETTE_BLUE_30}'
     comment: Color for text in hover state in a tab group.
     access: global
   COLOR_TEXT_TAB_LABEL_FOCUS:
-    value: '{!ENDEAVOUR}'
+    value: '{!PALETTE_BLUE_30}'
     comment: Color for text in focus state in a tab group.
     access: global
   COLOR_TEXT_TAB_LABEL_ACTIVE:
-    value: '{!MIDNIGHT_BLUE}'
+    value: '{!PALETTE_BLUE_20}'
     comment: Color for text in active state in a tab group.
     access: global
   COLOR_TEXT_TAB_LABEL_DISABLED:
@@ -86,7 +86,7 @@ props:
     comment: Color for disabled text in a tab group.
     access: global
   COLOR_TEXT_ICON_BRAND:
-    value: '{!SCIENCE_BLUE}'
+    value: '{!PALETTE_BLUE_50}'
     comment: Color for non-interactive icons that represent a selected item in a list
     access: global
   COLOR_TEXT_ICON_UTILITY:

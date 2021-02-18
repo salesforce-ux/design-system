@@ -195,7 +195,7 @@
   &.slds-global-actions__item-action,
   &.slds-global-actions__item-action:hover,
   &.slds-global-actions__item-action:active {
-    color: #fff;
+    color: $color-gray-1;
   }
 
   .slds-button__icon {
@@ -230,7 +230,7 @@
   top: rem(4px * -1);
   right: rem(4px * -1);
   background: $brand-header-contrast-warm;
-  color: #fff;
+  color: $color-gray-1;
   border-radius: $border-radius-pill;
   min-width: 1rem;
   min-height: 1rem;

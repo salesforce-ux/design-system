@@ -20,8 +20,8 @@ props:
     value: '{!PALETTE_GRAY_5}'
     comment: The background color for the Progress Bar
   PROGRESS_BAR_COLOR_BACKGROUND_FILL:
-    value: '{!MALIBU}'
+    value: '{!PALETTE_CLOUD_BLUE_70}'
     comment: The background color of the fill for the Progress Bar
   PROGRESS_BAR_COLOR_BACKGROUND_FILL_SUCCESS:
-    value: '{!EMERALD}'
+    value: '{!PALETTE_GREEN_50}'
     comment: The success background color of the fill for the Progress Bar

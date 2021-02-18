@@ -13,9 +13,9 @@ imports:
 - "../../../../design-tokens/aliases/colors.yml"
 props:
   BUTTON_COLOR_BORDER_PRIMARY:
-    value: '{!GEYSER}'
+    value: '{!PALETTE_GRAY_3}'
   BUTTON_COLOR_BORDER_BRAND_PRIMARY:
-    value: '{!SCIENCE_BLUE}'
+    value: '{!PALETTE_BLUE_50}'
     deprecated: true
   BUTTON_COLOR_BORDER_SECONDARY:
     value: '{!WHITE_TRANSPARENT_80}'

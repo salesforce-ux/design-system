@@ -15,8 +15,8 @@ props:
     value: '{!PALETTE_GRAY_1}'
     comment: Used as a separator between dark colors like the stages of salespath.
   COLOR_BORDER_PATH_CURRENT:
-    value: '{!ENDEAVOUR}'
+    value: '{!PALETTE_BLUE_30}'
     comment: Used as a border color for the active Path step.
   COLOR_BORDER_PATH_CURRENT_HOVER:
-    value: '{!MIDNIGHT_BLUE}'
+    value: '{!PALETTE_BLUE_20}'
     comment: Used as a border color for the current path step on hover.

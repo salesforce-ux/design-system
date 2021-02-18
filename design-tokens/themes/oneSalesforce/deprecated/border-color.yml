@@ -18,13 +18,13 @@ props:
     value: '{!PALETTE_GRAY_5}'
   ## STROKES
   COLOR_STROKE_BRAND:
-    value: '{!SCIENCE_BLUE}'
+    value: '{!PALETTE_BLUE_50}'
     comment: Our product brand blue.
   COLOR_STROKE_BRAND_HOVER:
-    value: '{!SCIENCE_BLUE}'
+    value: '{!PALETTE_BLUE_50}'
     comment: Hover stroke color for our product brand blue.
   COLOR_STROKE_BRAND_ACTIVE:
-    value: '{!BISCAY}'
+    value: '{!PALETTE_BLUE_20}'
     comment: Active stroke color for our product brand blue.
   COLOR_STROKE_DISABLED:
     value: '{!PALETTE_GRAY_4}'

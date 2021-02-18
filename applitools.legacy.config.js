@@ -12,19 +12,18 @@ module.exports = {
     level: 'AA',
     guidelinesVersion: 'WCAG_2_0'
   },
-  properties: [
-    { name: 'Group', value: 'legacy' }
-  ],
+  properties: [{ name: 'Group', value: 'legacy' }],
   batchName: process.env.CI
     ? undefined
-    : prompt(`Please provide a batch name for this run: `) + ` (${process.env.LOGNAME})`,
+    : prompt(`Please provide a batch name for this run: `) +
+      ` (${process.env.LOGNAME})`,
   branchName: process.env.CI
     ? undefined
     : `localRun/${process.env.LOGNAME}/${currentBranch}`,
   parentBranchName: process.env.CI
     ? undefined
-    // : `localRun/${currentBranch}`,
-    : 'salesforce-ux/design-system-internal/232-summer-21',
+    : // : `localRun/${currentBranch}`,
+      'salesforce-ux/design-system-internal/232-summer-21',
   showLogs: process.env.CI,
   // saveDebugData: false,
   exitcode: false,

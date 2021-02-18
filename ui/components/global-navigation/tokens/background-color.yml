@@ -14,7 +14,7 @@ props:
     value: '{!WHITE}'
     comment: Default context bar background color.
   COLOR_BACKGROUND_CONTEXT_BAR_BRAND_ACCENT:
-    value: '{!CERULEAN}'
+    value: '{!PALETTE_CLOUD_BLUE_60}'
     comment: Brand color in context bar for default theme
   COLOR_BACKGROUND_CONTEXT_TAB_BAR_ITEM:
     value: '{!WHITE}'

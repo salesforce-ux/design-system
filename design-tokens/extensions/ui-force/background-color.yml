@@ -17,7 +17,7 @@ props:
     comment: Color of the spinner dot.
 
   COLOR_BACKGROUND_NOTIFICATION_BADGE:
-    value: '{!FLUSH_MAHOGANY}'
+    value: '{!PALETTE_RED_50}'
     comment: Notifications badge background color.
     access: global
   COLOR_BACKGROUND_NOTIFICATION_NEW:
@@ -25,7 +25,7 @@ props:
     comment: Background color for a new notification list item.
     access: global
   COLOR_BACKGROUND_REMINDER:
-    value: '{!LINK_WATER}'
+    value: '{!PALETTE_GRAY_2}'
     comment: Background color for reminder notification
     release: 2.5.0
   COLOR_BACKGROUND_REMINDER_HOVER:
@@ -74,7 +74,7 @@ props:
     comment: Disabled input
     access: global
   COLOR_BACKGROUND_INPUT_ERROR:
-    value: '{!PIPPIN}'
+    value: '{!PALETTE_PINK_90}'
     comment: Background color for input field that has encountered an error.
     access: global
   COLOR_BACKGROUND_PILL:
@@ -86,24 +86,24 @@ props:
     comment: Color of mask overlay that sits on top of an image when text is present.
 
   COLOR_BACKGROUND_BUTTON_SUCCESS:
-    value: '{!EMERALD}'
+    value: '{!PALETTE_GREEN_70}'
     comment: Background color for success buttons
   COLOR_BACKGROUND_BUTTON_SUCCESS_HOVER:
-    value: '{!SALEM}'
+    value: '{!PALETTE_GREEN_50}'
     comment: Hovered background color for success buttons
   COLOR_BACKGROUND_BUTTON_SUCCESS_ACTIVE:
-    value: '{!SALEM}'
+    value: '{!PALETTE_GREEN_50}'
     comment: Active background color for success buttons
   COLOR_BACKGROUND_TOAST:
     value: '{!PALETTE_COOL_GRAY_9}'
     comment: Background color for toast messaging.
     access: global
   COLOR_BACKGROUND_TOAST_SUCCESS:
-    value: '{!SALEM}'
+    value: '{!PALETTE_GREEN_50}'
     comment: Background color for success toast messaging.
     access: global
   COLOR_BACKGROUND_TOAST_ERROR:
-    value: '{!FLUSH_MAHOGANY}'
+    value: '{!PALETTE_RED_50}'
     comment: Background color for error toast messaging.
     access: global
   FILL_HEADER_BUTTON:
@@ -112,12 +112,12 @@ props:
     cssProperties:
     - fill
   FILL_HEADER_BUTTON_HOVER:
-    value: '{!ENDEAVOUR}'
+    value: '{!PALETTE_BLUE_30}'
     comment: 'Hovered header button icon color'
     cssProperties:
     - fill
   FILL_HEADER_BUTTON_FOCUS:
-    value: '{!SCIENCE_BLUE}'
+    value: '{!PALETTE_BLUE_50}'
     comment: 'Focused header button icon color'
     cssProperties:
     - fill

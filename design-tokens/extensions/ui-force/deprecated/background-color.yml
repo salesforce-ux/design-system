@@ -24,13 +24,13 @@ props:
   COLOR_CONTRAST_SECONDARY:
     value: '{!PALETTE_COOL_GRAY_1}'
   COLOR_BACKGROUND_BRAND_PRIMARY:
-    value: '{!SCIENCE_BLUE}'
+    value: '{!PALETTE_BLUE_50}'
   COLOR_BACKGROUND_BRAND_PRIMARY_HOVER:
-    value: '{!ENDEAVOUR}'
+    value: '{!PALETTE_BLUE_30}'
   COLOR_BACKGROUND_BRAND_PRIMARY_FOCUS:
-    value: '{!ENDEAVOUR}'
+    value: '{!PALETTE_BLUE_30}'
   COLOR_BACKGROUND_BRAND_PRIMARY_ACTIVE:
-    value: '{!MIDNIGHT_BLUE}'
+    value: '{!PALETTE_BLUE_20}'
   PAGE_COLOR_BACKGROUND_PRIMARY:
     value: '{!PALETTE_COOL_GRAY_1}'
     comment: 'Winter 18 token, this has been deprecated. Please use BRAND_BACKGROUND_PRIMARY instead.'
@@ -42,7 +42,7 @@ props:
     comment: 'Secondary top bar background color (child browser, file preview, etc.)'
     access: global
   COLOR_BACKGROUND_CHROME_MOBILE:
-    value: '{!SCIENCE_BLUE}'
+    value: '{!PALETTE_BLUE_50}'
     comment: Background color for default mobile chrome (ex. global header)
     access: global
   COLOR_BACKGROUND_CHROME_DESKTOP:
@@ -50,19 +50,19 @@ props:
     comment: Background color for default desktop chrome (ex. global header)
     access: global
   COLOR_BACKGROUND_NOTIFICATION_BADGE_HOVER:
-    value: '{!ENDEAVOUR}'
+    value: '{!PALETTE_BLUE_30}'
     comment: Notifications badge background color.
     access: global
   COLOR_BACKGROUND_NOTIFICATION_BADGE_FOCUS:
-    value: '{!ENDEAVOUR}'
+    value: '{!PALETTE_BLUE_30}'
     comment: Notifications badge background color.
     access: global
   COLOR_BACKGROUND_NOTIFICATION_BADGE_ACTIVE:
-    value: '{!MIDNIGHT_BLUE}'
+    value: '{!PALETTE_BLUE_20}'
     comment: Notifications badge background color.
     access: global
   COLOR_BACKGROUND_ORG_SWITCHER_ARROW:
-    value: '{!DEEP_COVE}'
+    value: '{!PALETTE_BLUE_10}'
     comment: Stage left org switcher dropdown arrow background color.
   COLOR_BACKGROUND_PAYLOAD:
     value: '{!PALETTE_COOL_GRAY_2}'
@@ -72,7 +72,7 @@ props:
     value: '{!PALETTE_COOL_GRAY_4}'
     comment: Hover color for utility bar item.
   COLOR_BACKGROUND_UTILITY_BAR_ACTIVE:
-    value: '{!AZURE}'
+    value: '{!PALETTE_BLUE_60}'
     comment: Active color for utility bar item.
   COLOR_BACKGROUND_SHADE_DARK:
     value: '{!PALETTE_COOL_GRAY_5}'
@@ -88,37 +88,37 @@ props:
     value: '{!WHITE_TRANSPARENT_75}'
     comment: The color of the mask overlay that appears when you enter a modal state.
   COLOR_BACKGROUND_TOGGLE_ACTIVE:
-    value: '{!SCIENCE_BLUE}'
+    value: '{!PALETTE_BLUE_30}'
     comment: Active toggle background color.
   COLOR_BACKGROUND_TOGGLE_ACTIVE_HOVER:
-    value: '{!ENDEAVOUR}'
+    value: '{!PALETTE_BLUE_30}'
     comment: Hovered active toggle background color.
   COLOR_BACKGROUND_INPUT_CHECKBOX:
     value: '{!WHITE}'
     comment: Default checkboxes
     access: 'global'
   COLOR_BACKGROUND_INPUT_CHECKBOX_SELECTED:
-    value: '{!AZURE}'
+    value: '{!PALETTE_BLUE_60}'
     comment: Selected checkboxes
     access: 'global'
   COLOR_BACKGROUND_INPUT_SEARCH:
     value: '{!BLACK_TRANSPARENT_16}'
     comment: Background color for search input fields.
   COLOR_BACKGROUND_ERROR_ALT:
-    value: '{!DEEP_BLUSH}'
+    value: '{!PALETTE_RED_70}'
     comment: Alternative color for UI elements related to errors.
   COLOR_BACKGROUND_ACTIONBAR_ICON_UTILITY:
     value: '{!PALETTE_COOL_GRAY_9}'
     comment: Background for utility icons that live in the action bar on mobile.
   COLOR_BACKGROUND_INDICATOR_DOT:
-    value: '{!BISCAY}'
+    value: '{!PALETTE_BLUE_20}'
     comment: Color of the indicator dot.
   COLOR_BACKGROUND_MODAL:
     value: '{!WHITE}'
     comment: Standard modal header
     access: global
   COLOR_BACKGROUND_MODAL_BRAND:
-    value: '{!SCIENCE_BLUE}'
+    value: '{!PALETTE_BLUE_30}'
     comment: Brandable modal header
     access: global
   COLOR_BACKGROUND_NOTIFICATION:
@@ -138,17 +138,17 @@ props:
     comment: Active button backgrounds on modal headers
     access: global
   FILL_BRAND:
-    value: '{!SCIENCE_BLUE}'
+    value: '{!PALETTE_BLUE_50}'
     comment: 'Brand fill color'
     cssProperties:
     - fill
   FILL_BRAND_HOVER:
-    value: '{!ENDEAVOUR}'
+    value: '{!PALETTE_BLUE_30}'
     comment: 'Brand hover fill color'
     cssProperties:
     - fill
   FILL_BRAND_ACTIVE:
-    value: '{!BISCAY}'
+    value: '{!PALETTE_BLUE_20}'
     comment: 'Brand active fill color'
     cssProperties:
     - fill

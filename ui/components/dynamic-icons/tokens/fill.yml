@@ -15,5 +15,5 @@ imports:
   - '../../../../design-tokens/aliases/color-palettes.yml'
 props:
   GLOBAL_ACTION_FILL_HOVER:
-    value: '{!SCIENCE_BLUE}'
+    value: '{!PALETTE_BLUE_30}'
     comment: 'Brand fill color'

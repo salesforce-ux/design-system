@@ -53,7 +53,7 @@ $_eq-bar-height-max: 14px;
   left: 0;
   width: fix-ie-rounding(4);
   height: rem($_eq-bar-height-min) * 3;
-  background: #0070d2;
+  background: $brand-accessible;
   transform: scaleY(1);
   transform-origin: bottom;
 

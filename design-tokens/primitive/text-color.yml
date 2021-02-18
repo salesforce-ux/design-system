@@ -30,16 +30,16 @@ props:
     comment: Action label active text color
     access: global
   COLOR_TEXT_BRAND:
-    value: '{!BRAND_PRIMARY}'
+    value: '{!PALETTE_BLUE_60}'
     comment: Our product brand blue.
     access: global
 
   COLOR_TEXT_CUSTOMER:
-    value: '{!TANGERINE}'
+    value: '{!PALETTE_ORANGE_70}'
     comment: Customer text used in anchor subtitle
 
   COLOR_TEXT_ERROR:
-    value: '{!FLUSH_MAHOGANY}'
+    value: '{!PALETTE_RED_50}'
     comment: Error text for inputs and error misc
     access: global
   COLOR_TEXT_INVERSE:
@@ -55,15 +55,15 @@ props:
     comment: Link text (508)
     access: global
   COLOR_TEXT_LINK_ACTIVE:
-    value: '{!MIDNIGHT_BLUE}'
+    value: '{!PALETTE_BLUE_20}'
     comment: Active link text
     access: global
   COLOR_TEXT_LINK_DISABLED:
-    value: '{!BISCAY}'
+    value: '{!PALETTE_BLUE_20}'
     comment: Disabled link text
     access: global
   COLOR_TEXT_LINK_FOCUS:
-    value: '{!ENDEAVOUR}'
+    value: '{!PALETTE_BLUE_30}'
     comment: Focus link text
     access: global
   COLOR_TEXT_LINK_HOVER:
@@ -92,11 +92,11 @@ props:
     access: global
 
   COLOR_TEXT_WARNING:
-    value: '{!KOROMIKO}'
+    value: '{!PALETTE_ORANGE_70}'
     comment: Color for texts or icons that are related to warnings on a dark background.
 
   COLOR_TEXT_WARNING_ALT:
-    value: '{!CINNAMON}'
+    value: '{!PALETTE_YELLOW_40}'
     comment: Color for texts that are related to warnings on a light background.
 
   COLOR_TEXT_WEAK:
@@ -121,18 +121,18 @@ props:
     comment: Input placeholder text on dark backgrounds.
     access: global
   COLOR_TEXT_REQUIRED:
-    value: '{!FLUSH_MAHOGANY}'
+    value: '{!PALETTE_RED_50}'
     comment: Color of required field marker.
     access: global
   COLOR_TEXT_SUCCESS:
-    value: '{!FOREST_GREEN}'
+    value: '{!PALETTE_GREEN_50}'
     comment: Text color for success text.
   COLOR_TEXT_SUCCESS_INVERSE:
-    value: '{!EMERALD}'
+    value: '{!PALETTE_GREEN_70}'
     comment: Text color for success text on dark backgrounds.
   COLOR_TEXT_DESTRUCTIVE:
-    value: '{!FLUSH_MAHOGANY}'
+    value: '{!PALETTE_RED_50}'
     comment: Text color for destructive actions
   COLOR_TEXT_DESTRUCTIVE_HOVER:
-    value: '{!MEXICAN_RED}'
+    value: '{!PALETTE_RED_40}'
     comment: Text color for destructive actions - hover state

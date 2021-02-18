@@ -4,10 +4,12 @@ global:
   cssProperties:
   - stroke
   - fill
+imports:
+- "../../../../design-tokens/aliases/color-palettes.yml"
 props:
   ILLUSTRATION_COLOR_PRIMARY:
-    value: '#8cd3f8'
+    value: '{!PALETTE_CLOUD_BLUE_80}'
     comment: Primary color for illustrations
   ILLUSTRATION_COLOR_SECONDARY:
-    value: '#c2e8ff'
+    value: '{!PALETTE_CLOUD_BLUE_90}'
     comment: Secondary color for illustrations

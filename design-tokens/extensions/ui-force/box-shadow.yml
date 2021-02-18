@@ -15,7 +15,7 @@ props:
     value: '{!OFFSET_NONE} {!OFFSET_X_SMALL}px {!OFFSET_SMALL}px {!OFFSET_NONE} {!BLACK_TRANSPARENT_20}'
     comment: Shadow for notifications that should be elevated above other components but under modals.
   SHADOW_BUTTON_FOCUS:
-    value: '{!OFFSET_NONE} {!OFFSET_NONE} {!OFFSET_SMALL}px {!SCIENCE_BLUE}'
+    value: '{!OFFSET_NONE} {!OFFSET_NONE} {!OFFSET_SMALL}px {!PALETTE_BLUE_50}'
     comment: Custom glow for focus states on UI elements with explicit containers.
     access: global
   SHADOW_BUTTON_FOCUS_INVERSE:

@@ -11,8 +11,8 @@ imports:
 
 props:
   COLOR_TEXT_PATH_CURRENT:
-    value: '{!ENDEAVOUR}'
+    value: '{!PALETTE_BLUE_30}'
     comment: Used as a text color for the active Path step.
   COLOR_TEXT_PATH_CURRENT_HOVER:
-    value: '{!MIDNIGHT_BLUE}'
+    value: '{!PALETTE_BLUE_20}'
     comment: Used as a text hover color for the active Path step.

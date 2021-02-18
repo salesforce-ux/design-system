@@ -120,7 +120,7 @@
         // @todo re-evaluate Styling Hooks reassignment
         // @todo consider shared hooks for inputs
         border-color: var(--sds-c-checkbox-color-border-focus, $color-border-input-active);
-        box-shadow: var(--sds-c-checkbox-shadow-focus, 0 0 3px #0070d2);
+        box-shadow: var(--sds-c-checkbox-shadow-focus, 0 0 3px $brand-accessible);
       }
 
       &:checked > .slds-checkbox_faux,

@@ -502,8 +502,5 @@ gulp.task(
     'generate:tokens:all',
     'styles:extractStyleHooks'
   ),
-  gulp.parallel(
-    'styles:componentCSS',
-    'dist:copyIcons'
-  )
+  gulp.parallel('styles:componentCSS', 'dist:copyIcons')
 );

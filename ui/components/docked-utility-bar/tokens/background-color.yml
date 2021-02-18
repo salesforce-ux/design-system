@@ -11,7 +11,7 @@ imports:
 - "../../../../design-tokens/aliases/color-palettes.yml"
 props:
   UTILITY_BAR_COLOR_BACKGROUND_NOTIFICATION_BADGE:
-    value: '{!VALENCIA}'
+    value: '{!PALETTE_RED_60}'
     comment: Utility bar notifications badge background color.
   UTILITY_BAR_COLOR_BACKGROUND_NOTIFICATION_FOCUS:
     value: '{!PALETTE_GRAY_6}'

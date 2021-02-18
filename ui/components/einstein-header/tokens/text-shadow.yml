@@ -4,7 +4,9 @@ global:
   category: text-shadow
   cssProperties:
   - text-shadow
+imports:
+- "../../../../design-tokens/aliases/color-palettes.yml"
 props:
   EINSTEIN_HEADER_TEXT_SHADOW:
-    value: '#9EDAFF'
+    value: '{!PALETTE_CLOUD_BLUE_90}'
     comment: Text shadow color for Einstein header background to make text more readable

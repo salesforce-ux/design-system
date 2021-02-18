@@ -5,7 +5,7 @@ global:
   cssProperties:
   - 'background*'
 imports:
-- "../../../../design-tokens/aliases/colors.yml"
+- "../../../../design-tokens/aliases/color-palettes.yml"
 props:
   EINSTEIN_HEADER_BACKGROUND:
     value: '/assets/images/einstein-headers/einstein-header-background.svg'
@@ -14,5 +14,5 @@ props:
     value: '/assets/images/einstein-headers/einstein-figure.svg'
     type: string
   EINSTEIN_HEADER_BACKGROUND_COLOR:
-    value: '#95CBFC'
+    value: '{!PALETTE_CLOUD_BLUE_80}'
     comment: Background color for Einstein header

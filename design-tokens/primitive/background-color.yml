@@ -34,17 +34,17 @@ props:
     release: 1.0.0
     access: global
   COLOR_BACKGROUND_ALT_INVERSE:
-    value: '{!BISCAY}'
+    value: '{!PALETTE_BLUE_20}'
     comment: Alternative background color for dark portions of the app.
     release: 1.0.0
     access: global
   COLOR_BACKGROUND_INVERSE:
-    value: '{!DEEP_COVE}'
+    value: '{!PALETTE_BLUE_10}'
     comment: Default background color for dark portions of the app (like Stage Left or tooltips).
     release: 1.0.0
     access: global
   COLOR_BACKGROUND_INVERSE_LIGHT:
-    value: '{!BISCAY}'
+    value: '{!PALETTE_BLUE_20}'
     comment: Light variant of COLOR_BACKGROUND_INVERSE.
     release: 2.8.0
 
@@ -61,12 +61,12 @@ props:
     comment: Used as the background color for selected rows or items on list-like components.
     access: global
   COLOR_BACKGROUND_ROW_NEW:
-    value: '{!SNOWY_MINT}'
+    value: '{!PALETTE_GREEN_90}'
     comment: Used as the background color for the new state on rows or items on list-like components.
     access: global
 
   COLOR_BACKGROUND_CUSTOMER:
-    value: '{!TANGERINE}'
+    value: '{!PALETTE_ORANGE_70}'
     comment: Background color for UI elements related to the concept of an external user or customer.
   COLOR_BACKGROUND_HIGHLIGHT:
     value: '{!LEMON_CHIFFON}'
@@ -77,7 +77,7 @@ props:
     comment: Background color for highlighting text in search results.
 
   COLOR_BACKGROUND_SELECTION:
-    value: '{!PATTEN_BLUE}'
+    value: '{!PALETTE_BLUE_95}'
     comment: Background color for text selected with a mouse.
 
   COLOR_BACKGROUND_STENCIL:
@@ -93,50 +93,51 @@ props:
     comment: The color of the mask overlay that appears when you enter a modal state.
 
   COLOR_BRAND:
-    value: '{!BRAND_PRIMARY}'
+    value: '{!PALETTE_BLUE_60}'
     comment: Our product brand blue.
     access: global
   COLOR_BRAND_DARK:
-    value: '{!BRAND_ACCESSIBLE}'
+    value: '{!PALETTE_BLUE_50}'
     comment: 'Our product brand blue, darkened to meet accessibility color contrast ratios with white text.'
     access: global
+
   COLOR_BRAND_DARKER:
-    value: '{!ENDEAVOUR}'
+    value: '{!PALETTE_BLUE_30}'
     comment: 'Our product brand blue, darkened even further.'
 
   COLOR_BACKGROUND_DESTRUCTIVE:
-    value: '{!FLUSH_MAHOGANY}'
+    value: '{!PALETTE_RED_40}'
     comment: Color for UI elements related to destructive actions.
   COLOR_BACKGROUND_DESTRUCTIVE_HOVER:
-    value: '{!TABASCO}'
+    value: '{!PALETTE_RED_40}'
     comment: Hover color for UI elements related to destructive actions.
   COLOR_BACKGROUND_DESTRUCTIVE_ACTIVE:
-    value: '{!MAROON}'
+    value: '{!PALETTE_RED_30}'
     comment: Active color for UI elements related to destructive actions.
   COLOR_BACKGROUND_INFO:
     value: '{!PALETTE_GRAY_9}'
     comment: 'Background color for UI elements related to providing neutral information (not error, success, or warning).'
   COLOR_BACKGROUND_ERROR:
-    value: '{!VALENCIA}'
+    value: '{!PALETTE_RED_60}'
     comment: Color for UI elements related to errors.
   COLOR_BACKGROUND_ERROR_DARK:
-    value: '{!FLUSH_MAHOGANY}'
+    value: '{!PALETTE_RED_40}'
     comment: Dark color for UI elements related to errors. Accessible with white text.
   COLOR_BACKGROUND_OFFLINE:
     value: '{!PALETTE_GRAY_11}'
     comment: Color for UI elements related to the offline state.
   COLOR_BACKGROUND_SUCCESS:
-    value: '{!EMERALD}'
+    value: '{!PALETTE_GREEN_70}'
     comment: Color for UI elements that have to do with success.
   COLOR_BACKGROUND_SUCCESS_DARK:
-    value: '{!SALEM}'
+    value: '{!PALETTE_GREEN_50}'
     comment: Dark color for UI elements that have to do with success. Accessible with white text.
   COLOR_BACKGROUND_SUCCESS_DARKER:
-    value: '{!KAITOKE_GREEN}'
+    value: '{!PALETTE_GREEN_30}'
     comment: Darker color for UI elements that have to do with success. Accessible with white text.
   COLOR_BACKGROUND_WARNING:
-    value: '{!KOROMIKO}'
+    value: '{!PALETTE_ORANGE_70}'
     comment: Color for UI elements that have to do with warning.
   COLOR_BACKGROUND_WARNING_DARK:
-    value: '{!SUNSHADE}'
+    value: '{!PALETTE_ORANGE_70}'
     comment: Dark Color for UI elements that have to do with warning.

@@ -12,7 +12,7 @@ import {
 } from '../';
 import { Demo, InlineEditTr } from './';
 
-import { Popover } from '../../popovers/base/example';
+import { Popover } from '../../popovers/base-legacy/example';
 import { FeedbackHeader } from '../../popovers/error/example';
 
 const headingUniqueId = _.uniqueId('dialog-heading-id-');

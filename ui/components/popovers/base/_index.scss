@@ -19,10 +19,28 @@
 }
 
 /**
- * @summary Applies syles for primary content area of popover
+ * @summary Applies styles for meta content of popover
+ * @selector .slds-popover__meta
+ * @restrict .slds-popover
+ */
+.slds-popover__meta {
+  margin-bottom: $spacing-small;
+}
+
+/**
+ * @summary Applies styles for primary content area of popover
  * @selector .slds-popover__body
  * @restrict .slds-popover div
  */
+
+.slds-popover__body {
+  padding: $spacing-x-small $spacing-small;
+
+  .slds-popover__header {
+    padding: 0 0 $spacing-x-small 0;
+  }
+}
+
 .slds-popover__body,
 .slds-popover__header,
 .slds-popover__footer {
@@ -37,7 +55,7 @@
  * @restrict .slds-popover header, .slds-popover div
  */
 .slds-popover__header {
-  border-bottom: $border-width-thin solid $color-border;
+  border-bottom: 0;
 }
 
 /**
@@ -47,6 +65,10 @@
  */
 .slds-popover__footer {
   border-top: $border-width-thin solid $color-border;
+  background-color: $color-background;
+  border-bottom-left-radius: inherit;
+  border-bottom-right-radius: inherit;
+  padding: $spacing-x-small $spacing-small;
 }
 
 /**
@@ -149,4 +171,33 @@
  */
 .slds-popover_hide {
   display: none;
+}
+
+
+/**
+* @summary Applies styles for dark variant of popover
+* @selector .slds-popover_dark
+* @restrict .slds-popover
+* @modifier
+*/
+.slds-popover_dark {
+  background-color: $brand-background-dark;
+  color: $color-text-brand-primary;
+
+  .slds-badge {
+    background-color: $color-background-alt;
+  }
+
+  .slds-popover__close {
+    color: $color-text-brand-primary;
+  }
+
+  .slds-icon-text-default {
+    fill: $color-background-alt;
+  }
+
+  .slds-popover__footer {
+    border-top-color: $color-border-inverse;
+    background-color: $color-background-alt-inverse;
+  }
 }

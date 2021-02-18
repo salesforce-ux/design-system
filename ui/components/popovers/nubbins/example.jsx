@@ -38,62 +38,102 @@ let Popover = props => (
 export let states = [
   {
     id: 'left',
-    label: 'Left',
+    label: 'Nubbin Left',
     element: <Popover nubbinPosition="left" />
   },
   {
     id: 'left-top',
-    label: 'Left (top)',
+    label: 'Nubbin Left (top)',
     element: <Popover nubbinPosition="left-top" />
   },
   {
+    id: 'left-top-corner',
+    label: 'Nubbin Left (top corner)',
+    element: <Popover nubbinPosition="left-top-corner" />
+  },
+  {
     id: 'left-bottom',
-    label: 'Left (bottom)',
+    label: 'Nubbin Left (bottom)',
     element: <Popover nubbinPosition="left-bottom" />
   },
   {
+    id: 'left-bottom-corner',
+    label: 'Nubbin Left (bottom corner)',
+    element: <Popover nubbinPosition="left-bottom-corner" />
+  },
+  {
     id: 'top',
-    label: 'Top',
+    label: 'Nubbin Top',
     element: <Popover nubbinPosition="top" />
   },
   {
     id: 'top-left',
-    label: 'Top (left)',
+    label: 'Nubbin Top (left)',
     element: <Popover nubbinPosition="top-left" />
   },
   {
+    id: 'top-left-corner',
+    label: 'Nubbin Top (left corner)',
+    element: <Popover nubbinPosition="top-left-corner" />
+  },
+  {
     id: 'top-right',
-    label: 'Top (right)',
+    label: 'Nubbin Top (right)',
     element: <Popover nubbinPosition="top-right" />
   },
   {
+    id: 'top-right-corner',
+    label: 'Nubbin Top (right corner)',
+    element: <Popover nubbinPosition="top-right-corner" />
+  },
+  {
     id: 'right',
-    label: 'Right',
+    label: 'Nubbin Right',
     element: <Popover nubbinPosition="right" />
   },
   {
     id: 'right-top',
-    label: 'Right (top)',
+    label: 'Nubbin Right (top)',
     element: <Popover nubbinPosition="right-top" />
   },
   {
+    id: 'right-top-corner',
+    label: 'Nubbin Right (top corner)',
+    element: <Popover nubbinPosition="right-top-corner" />
+  },
+  {
     id: 'right-bottom',
-    label: 'Right (bottom)',
+    label: 'Nubbin Right (bottom)',
     element: <Popover nubbinPosition="right-bottom" />
   },
   {
+    id: 'right-bottom-corner',
+    label: 'Nubbin Right (bottom corner)',
+    element: <Popover nubbinPosition="right-bottom-corner" />
+  },
+  {
     id: 'bottom',
-    label: 'Bottom',
+    label: 'Nubbin Bottom',
     element: <Popover nubbinPosition="bottom" />
   },
   {
     id: 'bottom-left',
-    label: 'Bottom (left)',
+    label: 'Nubbin Bottom (left)',
     element: <Popover nubbinPosition="bottom-left" />
   },
   {
+    id: 'bottom-left-corner',
+    label: 'Nubbin Bottom (left corner)',
+    element: <Popover nubbinPosition="bottom-left-corner" />
+  },
+  {
     id: 'bottom-right',
-    label: 'Bottom (right)',
+    label: 'Nubbin Bottom (right)',
     element: <Popover nubbinPosition="bottom-right" />
+  },
+  {
+    id: 'bottom-right-corner',
+    label: 'Nubbin Bottom (right corner)',
+    element: <Popover nubbinPosition="bottom-right-corner" />
   }
 ];

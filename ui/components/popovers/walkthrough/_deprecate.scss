@@ -1,0 +1,120 @@
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * Walkthrough components are used to provide an interactive and educational prospect experience for setup.
+ *
+ * @summary Initializes a walkthrough non-modal dialog
+ *
+ * @name walkthrough
+ * @selector .slds-popover_walkthrough
+ * @restrict .slds-popover
+ * @support dev-ready
+ * @variant
+ * @deprecated
+ */
+@include deprecate('4.0.0', 'Use .slds-popover_dark instead.') {
+
+  .slds-popover_walkthrough,
+  .slds-popover--walkthrough {
+    @include inverse-text(
+      $support: (
+        'borders',
+        'text-utilities',
+        'icons'
+      )
+    );
+    background: $popover-walkthrough-color-background;
+    border-color: $popover-walkthrough-color-background;
+
+    a {
+      text-decoration: underline;
+    }
+
+    .slds-popover__header {
+      background-color: $popover-walkthrough-header-color-background;
+      background-image: url($popover-walkthrough-header-image);
+      background-repeat: no-repeat;
+      background-position: bottom;
+      background-size: contain;
+      border-color: inherit;
+      padding: $spacing-small $spacing-medium;
+      text-shadow: 0 0 4px $popover-walkthrough-color-background;
+    }
+
+    .slds-popover__body,
+    .slds-popover__footer {
+      padding: $spacing-medium;
+    }
+
+    .slds-popover__footer {
+      background-color: inherit;
+      border: 0;
+    }
+
+    .slds-text-title {
+      color: $popover-color-text;
+    }
+
+    .slds-input,
+    .slds-select,
+    .slds-textarea {
+      color: $color-text-default;
+    }
+
+    &.slds-nubbin_top,
+    &.slds-nubbin--top,
+    &.slds-nubbin_top-left,
+    &.slds-nubbin--top-left,
+    &.slds-nubbin_top-right,
+    &.slds-nubbin--top-right,
+    &.slds-nubbin_left-top,
+    &.slds-nubbin--left-top,
+    &.slds-nubbin_right-top,
+    &.slds-nubbin--right-top {
+
+      &:before {
+        background-color: $popover-walkthrough-header-color-background;
+      }
+    }
+  }
+}
+
+/**
+  * Alternate background for walkthrough non-modal dialog
+  *
+  * @selector .slds-popover_walkthrough-alt
+  * @restrict .slds-popover_walkthrough
+  * @modifier
+  * @deprecated
+  */
+@include deprecate('4.0.0', 'Use .slds-popover_dark instead.') {
+
+  .slds-popover_walkthrough-alt,
+  .slds-popover_feature {
+    border-color: $popover-walkthrough-color-background-alt;
+    background-color: $popover-walkthrough-color-background-alt;
+    background-image: url($popover-walkthrough-alt-image);
+    background-repeat: no-repeat;
+    background-size: 100% rem(36px);
+    background-position: bottom;
+    padding-bottom: $spacing-large;
+    color: $color-text-inverse;
+
+    .slds-text-heading_small {
+      margin-bottom: $spacing-x-small;
+    }
+
+    &.slds-nubbin_bottom,
+    &.slds-nubbin--bottom,
+    &.slds-nubbin_bottom-left,
+    &.slds-nubbin--bottom-left,
+    &.slds-nubbin_bottom-right,
+    &.slds-nubbin--bottom-right {
+
+      &:before {
+        background-color: $popover-walkthrough-alt-nubbin-color-background;
+      }
+    }
+  }
+}

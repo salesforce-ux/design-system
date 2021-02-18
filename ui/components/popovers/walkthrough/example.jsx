@@ -3,7 +3,7 @@
 
 import React from 'react';
 import SvgIcon from '../../../shared/svg-icon';
-import { Popover } from '../base/example';
+import { Popover } from '../base-legacy/example';
 import _ from '../../../shared/helpers';
 
 const headingUniqueId = _.uniqueId('dialog-heading-id-');
@@ -65,7 +65,7 @@ export default (
 export let examples = [
   {
     id: 'micro-setup',
-    label: 'Micro Setup',
+    label: 'Deprecated – Micro Setup',
     element: (
       <Popover
         className="slds-popover_walkthrough slds-nubbin_left"
@@ -84,7 +84,7 @@ export let examples = [
   },
   {
     id: 'micro-setup-alternate',
-    label: 'Micro Setup - Alternate',
+    label: 'Deprecated – Micro Setup - Alternate',
     element: (
       <Popover
         className="slds-popover_walkthrough slds-nubbin_left"
@@ -103,7 +103,7 @@ export let examples = [
   },
   {
     id: 'micro-setup-in-page',
-    label: 'Micro Setup - In Page',
+    label: 'Deprecated – Micro Setup - In Page',
     element: (
       <Popover
         className="slds-popover_walkthrough slds-nubbin_bottom"
@@ -122,7 +122,7 @@ export let examples = [
   },
   {
     id: 'micro-setup-inline-form',
-    label: 'Micro Setup - Inline Form',
+    label: 'Deprecated – Micro Setup - Inline Form',
     element: (
       <Popover
         className="slds-popover_walkthrough slds-nubbin_left"
@@ -157,7 +157,7 @@ export let examples = [
   },
   {
     id: 'action-popover',
-    label: 'Action Popover',
+    label: 'Deprecated – Action Popover',
     element: (
       <Popover
         className="slds-popover_walkthrough slds-popover_walkthrough-alt slds-nubbin_left"
@@ -191,7 +191,7 @@ export let examples = [
   },
   {
     id: 'action-popover-heading',
-    label: 'Action Popover - With Heading',
+    label: 'Deprecated – Action Popover - With Heading',
     element: (
       <Popover
         className="slds-popover_walkthrough slds-popover_walkthrough-alt slds-nubbin_left"
@@ -226,7 +226,7 @@ export let examples = [
   },
   {
     id: 'action-popover-with-link',
-    label: 'Action Popover - With Link',
+    label: 'Deprecated – Action Popover - With Link',
     element: (
       <Popover
         className="slds-popover_walkthrough slds-popover_walkthrough-alt slds-nubbin_left"

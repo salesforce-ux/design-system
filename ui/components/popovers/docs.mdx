@@ -4,6 +4,7 @@ import Blockquote from '../../../shared/components/Blockquote';
 import DisplayColumn from '../../../shared/components/DisplayColumn';
 import DisplayGrid from '../../../shared/components/DisplayGrid';
 import * as PopoverExamples from './base/example';
+import * as BrandExamples from './brand/example';
 import * as NubbinExamples from './nubbins/example';
 import * as ErrorExamples from './error/example';
 import * as WarningExamples from './warning/example';
@@ -53,15 +54,19 @@ Panel Popovers can be shown on mouse hover but for keyboard or screen reader use
 
 <CodeView>{PopoverExamples.default}</CodeView>
 
-## With Header
+### With Header
 
 <CodeView>{getDisplayElementById(PopoverExamples.examples, 'header')}</CodeView>
 
-## With Footer
+### With Footer
 
 <CodeView>{getDisplayElementById(PopoverExamples.examples, 'footer')}</CodeView>
 
-## Scrolling region with max-height
+### With Badge
+
+<CodeView>{getDisplayElementById(PopoverExamples.examples, 'badge')}</CodeView>
+
+### Scrolling region with max-height
 
 <CodeView>
   {getDisplayElementById(PopoverExamples.examples, 'scrolling')}
@@ -315,4 +320,16 @@ Panel Popovers can be shown on mouse hover but for keyboard or screen reader use
 
 <CodeView demoStyles="height: 250px;">
   {getDisplayElementById(PromptExamples.examples, 'bottom-left')}
+</CodeView>
+
+#### With brand color and footer
+
+<CodeView demoStyles="height: 250px;">
+  {getDisplayElementById(PromptExamples.examples, 'brand-with-footer')}
+</CodeView>
+
+#### With brand color - no footer
+
+<CodeView demoStyles="height: 250px;">
+  {getDisplayElementById(PromptExamples.examples, 'brand-without-footer')}
 </CodeView>

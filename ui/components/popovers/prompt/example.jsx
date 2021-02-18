@@ -6,6 +6,7 @@ import SvgIcon from '../../../shared/svg-icon';
 import { Popover } from '../base/example';
 import _ from '../../../shared/helpers';
 import classNames from 'classnames';
+export const demoHeight = 'height: 13rem;';
 
 const headingUniqueId = _.uniqueId('dialog-heading-id-');
 
@@ -70,13 +71,16 @@ export let Prompt = props => {
         computedPositionClassNames,
         props.className
       )}
+      bodyClassName={props.bodyClassName}
       headingId={headingUniqueId}
       footer={
-        <Footer
-          dismissButtonLabel="Dismiss"
-          actionLinkText="Learn more"
-          brandButtonLabel="Save"
-        />
+        props.showFooter && (
+          <Footer
+            dismissButtonLabel="Dismiss"
+            actionLinkText="Learn more"
+            brandButtonLabel="Save"
+          />
+        )
       }
       closeButton
     >
@@ -85,7 +89,10 @@ export let Prompt = props => {
           <div className="slds-media__figure">
             <span className="slds-icon_container" title={props.assistiveText}>
               <SvgIcon
-                className="slds-icon slds-icon_small slds-icon-text-default"
+                className={classNames(
+                  'slds-icon slds-icon_small slds-icon-text-default',
+                  props.iconClassName
+                )}
                 sprite="utility"
                 symbol={props.symbol}
               />
@@ -117,31 +124,64 @@ export let examples = [
   {
     id: 'top-left',
     label: 'Positioned: top left',
-    element: <Prompt symbol="prompt" position="top-left" />
+    demoStyles: demoHeight,
+    element: <Prompt symbol="prompt" showFooter position="top-left" />
   },
   {
     id: 'top-center',
     label: 'Positioned: top center',
-    element: <Prompt symbol="prompt" position="top" />
+    demoStyles: demoHeight,
+    element: <Prompt symbol="prompt" showFooter position="top" />
   },
   {
     id: 'top-right',
     label: 'Positioned: top right',
-    element: <Prompt symbol="prompt" position="top-right" />
+    demoStyles: demoHeight,
+    element: <Prompt symbol="prompt" showFooter position="top-right" />
   },
   {
     id: 'bottom-right',
     label: 'Positioned: bottom right',
-    element: <Prompt symbol="prompt" position="bottom-right" />
+    demoStyles: demoHeight,
+    element: <Prompt symbol="prompt" showFooter position="bottom-right" />
   },
   {
     id: 'bottom-center',
     label: 'Positioned: bottom center',
-    element: <Prompt symbol="prompt" position="bottom" />
+    demoStyles: demoHeight,
+    element: <Prompt symbol="prompt" showFooter position="bottom" />
   },
   {
     id: 'bottom-left',
     label: 'Positioned: bottom left',
-    element: <Prompt symbol="prompt" position="bottom-left" />
+    demoStyles: demoHeight,
+    element: <Prompt symbol="prompt" showFooter position="bottom-left" />
+  },
+  {
+    id: 'brand-with-footer',
+    label: 'Prompt: branded with footer',
+    demoStyles: demoHeight,
+    element: (
+      <Prompt
+        symbol="prompt"
+        position="top"
+        showFooter
+        className="slds-popover_brand"
+        iconClassName="slds-popover__icon"
+      />
+    )
+  },
+  {
+    id: 'brand-without-footer',
+    label: 'Prompt: branded without footer',
+    demoStyles: demoHeight,
+    element: (
+      <Prompt
+        symbol="prompt"
+        position="top"
+        className="slds-popover_brand slds-popover_brand-bottom"
+        iconClassName="slds-popover__icon"
+      />
+    )
   }
 ];

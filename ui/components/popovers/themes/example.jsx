@@ -35,22 +35,22 @@ let Popover = props => (
 export let states = [
   {
     id: 'info',
-    label: 'Info',
+    label: 'Theme: Info',
     element: <Popover theme="info" />
   },
   {
     id: 'error',
-    label: 'Error',
+    label: 'Theme: Error',
     element: <Popover theme="error" />
   },
   {
     id: 'warning',
-    label: 'Warning',
+    label: 'Theme: Warning',
     element: <Popover theme="warning" />
   },
   {
     id: 'success',
-    label: 'Success',
+    label: 'Theme: Success',
     element: <Popover theme="success" />
   }
 ];

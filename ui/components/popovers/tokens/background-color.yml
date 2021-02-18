@@ -10,7 +10,6 @@ global:
 imports:
 - "../../../../design-tokens/aliases/colors.yml"
 - "../../../../design-tokens/aliases/color-palettes.yml"
-
 props:
   POPOVER_WALKTHROUGH_COLOR_BACKGROUND:
     value: '{!PALETTE_BLUE_10}'

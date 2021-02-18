@@ -2,7 +2,7 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 import React from 'react';
-import { Popover } from '../base/example';
+import { Popover } from '../base-legacy/example';
 import { FeedbackHeader, FeedbackFooter } from '../error/example';
 import _ from '../../../shared/helpers';
 
@@ -39,8 +39,36 @@ export default (
 
 export let examples = [
   {
+    id: 'with-top-nubbin',
+    label: 'Warning With Top Nubbin',
+    element: (
+      <Popover
+        className="slds-popover_warning slds-nubbin_top"
+        bodyClassName="slds-popover_warning__body"
+        headingId={headingUniqueId}
+        header={
+          <FeedbackHeader
+            headingId={headingUniqueId}
+            title="Review warning"
+            symbol="warning"
+            iconDefault
+          />
+        }
+        closeButton
+      >
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore.{' '}
+          <a href="#" onClick={e => e.preventDefault()} title="Learn More">
+            Learn More
+          </a>
+        </p>
+      </Popover>
+    )
+  },
+  {
     id: 'with-footer',
-    label: 'With Footer',
+    label: 'Warning With Footer',
     element: (
       <Popover
         className="slds-popover_warning slds-nubbin_bottom-left"

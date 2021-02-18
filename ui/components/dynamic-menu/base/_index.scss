@@ -9,6 +9,13 @@
  * @support dev-ready
  */
 
+.slds-dynamic-menu {
+
+  .slds-popover__footer {
+    background-color: transparent;
+  }
+}
+
 /**
  * @summary Headers styles for dynamic menu
  * @selector .slds-dynamic-menu__header

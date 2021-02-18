@@ -1,0 +1,211 @@
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * Prompt components are used to provide an interactive custom message.
+ *
+ * @summary Initializes a brand popover
+ *
+ * @name brand
+ * @selector .slds-popover_brand
+ * @restrict .slds-popover
+ * @support dev-ready
+ * @variant
+ */
+
+.slds-popover_brand {
+
+  .slds-popover__footer {
+    background-color: transparent;
+    border-color: transparent;
+  }
+
+  .slds-popover__icon {
+    fill: $brand-accessible;
+  }
+
+  &.slds-popover_brand-dark {
+
+    .slds-popover__icon {
+      fill: $color-border-inverse;
+    }
+  }
+}
+
+@mixin brand-nubbin($position, $location: "after", $color: transparent) {
+  $offset: $nubbin-triangle-offset;
+
+  @if($position == "top") {
+    margin-top: $offset;
+    background: linear-gradient(-45deg, transparent 50%, $color 50%, $color);
+  }
+
+  @else if($position == "right") {
+    margin-right: $offset;
+    background: linear-gradient(45deg, transparent 50%, $color 50%, $color);
+  }
+
+  @else if($position == "bottom") {
+    margin-bottom: $offset;
+    background: linear-gradient(135deg, transparent 50%, $color 50%, $color);
+  }
+
+  @else if($position == "left") {
+    margin-left: $offset;
+    background: linear-gradient(-135deg, transparent 50%, $color 50%, $color);
+  }
+}
+
+/**
+  * @summary Applies popover brand styles to top
+  * @selector .slds-popover_brand-top
+  * @restrict .slds-popover_brand
+  */
+.slds-popover_brand-top {
+  border-top-width: $popover-brand-border-width;
+  border-top-color: $brand-accessible;
+
+  &.slds-nubbin_top:before,
+  &.slds-nubbin_top-left:before,
+  &.slds-nubbin_top-left-corner:before,
+  &.slds-nubbin_top-right:before,
+  &.slds-nubbin_top-right-corner:before {
+    @include brand-nubbin($position: "top", $location: "before", $color: $brand-accessible);
+  }
+
+  &.slds-nubbin_top:after,
+  &.slds-nubbin_top-left:after,
+  &.slds-nubbin_top-left-corner:after,
+  &.slds-nubbin_top-right:after,
+  &.slds-nubbin_top-right-corner:after {
+    @include brand-nubbin($position: "top");
+
+    /* TODO: there isn't currently a top dropshadow behind the popover, so this looks weird */
+  }
+
+  &.slds-popover_brand-dark {
+    border-top-color: $color-border-inverse;
+
+    &.slds-nubbin_top:before,
+    &.slds-nubbin_top-left:before,
+    &.slds-nubbin_top-left-corner:before,
+    &.slds-nubbin_top-right:before,
+    &.slds-nubbin_top-right-corner:before {
+      @include brand-nubbin($position: "top", $location: "before", $color: $color-border-inverse);
+    }
+  }
+}
+
+/**
+  * @summary Applies popover brand styles to left
+  * @selector .slds-popover_brand-left
+  * @restrict .slds-popover_brand
+  */
+.slds-popover_brand-left {
+  border-left-width: $popover-brand-border-width;
+  border-left-color: $brand-accessible;
+
+  &.slds-nubbin_left:before,
+  &.slds-nubbin_left-top:before,
+  &.slds-nubbin_left-top-corner:before,
+  &.slds-nubbin_left-bottom:before,
+  &.slds-nubbin_left-bottom-corner:before {
+    @include brand-nubbin($position: "left", $location: "before", $color: $brand-accessible);
+  }
+
+  &.slds-nubbin_left:after,
+  &.slds-nubbin_left-top:after,
+  &.slds-nubbin_left-top-corner:after,
+  &.slds-nubbin_left-bottom:after,
+  &.slds-nubbin_left-bottom-corner:after {
+    @include brand-nubbin($position: "left");
+  }
+
+  &.slds-popover_brand-dark {
+    border-left-color: $color-border-inverse;
+
+    &.slds-nubbin_left:before,
+    &.slds-nubbin_left-top:before,
+    &.slds-nubbin_left-top-corner:before,
+    &.slds-nubbin_left-bottom:before,
+    &.slds-nubbin_left-bottom-corner:before {
+      @include brand-nubbin($position: "left", $location: "before", $color: $color-border-inverse);
+    }
+  }
+}
+
+/**
+  * @summary Applies popover brand styles to bottom
+  * @selector .slds-popover_brand-bottom
+  * @restrict .slds-popover_brand
+  */
+.slds-popover_brand-bottom {
+  border-bottom-width: $popover-brand-border-width;
+  border-bottom-color: $brand-accessible;
+
+  &.slds-nubbin_bottom:before,
+  &.slds-nubbin_bottom-left:before,
+  &.slds-nubbin_bottom-left-corner:before,
+  &.slds-nubbin_bottom-right:before,
+  &.slds-nubbin_bottom-right-corner:before {
+    @include brand-nubbin($position: "bottom", $location: "before", $color: $brand-accessible);
+  }
+
+  &.slds-nubbin_bottom:after,
+  &.slds-nubbin_bottom-left:after,
+  &.slds-nubbin_bottom-left-corner:after,
+  &.slds-nubbin_bottom-right:after,
+  &.slds-nubbin_bottom-right-corner:after {
+    @include brand-nubbin($position: "bottom");
+  }
+
+  &.slds-popover_brand-dark {
+    border-bottom-color: $color-border-inverse;
+
+    &.slds-nubbin_bottom:before,
+    &.slds-nubbin_bottom-left:before,
+    &.slds-nubbin_bottom-left-corner:before,
+    &.slds-nubbin_bottom-right:before,
+    &.slds-nubbin_bottom-right-corner:before {
+      @include brand-nubbin($position: "bottom", $location: "before", $color: $color-border-inverse);
+    }
+  }
+}
+
+/**
+  * @summary Applies popover brand styles to right
+  * @selector .slds-popover_brand-right
+  * @restrict .slds-popover_brand
+  */
+.slds-popover_brand-right {
+  border-right-width: $popover-brand-border-width;
+  border-right-color: $brand-accessible;
+
+  &.slds-nubbin_right:before,
+  &.slds-nubbin_right-top:before,
+  &.slds-nubbin_right-top-corner:before,
+  &.slds-nubbin_right-bottom:before,
+  &.slds-nubbin_right-bottom-corner:before {
+    @include brand-nubbin($position: "right", $location: "before", $color: $brand-accessible);
+  }
+
+  &.slds-nubbin_right:after,
+  &.slds-nubbin_right-top:after,
+  &.slds-nubbin_right-top-corner:after,
+  &.slds-nubbin_right-bottom:after,
+  &.slds-nubbin_right-bottom-corner:after {
+    @include brand-nubbin($position: "right");
+  }
+
+  &.slds-popover_brand-dark {
+    border-right-color: $color-border-inverse;
+
+    &.slds-nubbin_right:before,
+    &.slds-nubbin_right-top:before,
+    &.slds-nubbin_right-top-corner:before,
+    &.slds-nubbin_right-bottom:before,
+    &.slds-nubbin_right-bottom-corner:before {
+      @include brand-nubbin($position: "right", $location: "before", $color: $color-border-inverse);
+    }
+  }
+}

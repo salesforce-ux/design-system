@@ -34,7 +34,7 @@ export default (
 export let examples = [
   {
     id: 'icon-text',
-    label: 'With icon and text',
+    label: 'Deprecated – With icon and text',
     element: (
       <Popover
         className="slds-popover_walkthrough slds-popover_feature slds-nubbin_left"
@@ -68,7 +68,7 @@ export let examples = [
   },
   {
     id: 'icon-header-text-link',
-    label: 'With icon, header, text, and link',
+    label: 'Deprecated – With icon, header, text, and link',
     element: (
       <Popover
         className="slds-popover_walkthrough slds-popover_feature slds-nubbin_left"
@@ -108,7 +108,7 @@ export let examples = [
   },
   {
     id: 'icon-header-text',
-    label: 'With icon, header, and text',
+    label: 'Deprecated – With icon, header, and text',
     element: (
       <Popover
         className="slds-popover_walkthrough slds-popover_feature slds-nubbin_left"
@@ -145,7 +145,7 @@ export let examples = [
   },
   {
     id: 'icon-header-text-footer',
-    label: 'With icon, header, text, and footer',
+    label: 'Deprecated – With icon, header, text, and footer',
     element: (
       <Popover
         className="slds-popover_walkthrough slds-popover_feature slds-nubbin_left"

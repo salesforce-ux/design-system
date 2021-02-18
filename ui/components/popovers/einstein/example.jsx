@@ -3,7 +3,7 @@
 
 import React from 'react';
 import _ from '../../../shared/helpers';
-import { Popover } from '../base/example';
+import { Popover } from '../base-legacy/example';
 import { EinsteinHeader } from '../../einstein-header/base';
 
 const headingUniqueId = _.uniqueId('dialog-heading-id-');

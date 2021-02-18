@@ -19,13 +19,8 @@
     padding: $spacing-medium;
   }
 
-  /**
-    * @summary Applies styles for footer area of popover
-    * @selector .slds-popover__footer
-    * @restrict .slds-popover footer
-    */
   .slds-popover__footer {
-    border-top: $border-width-thick solid $brand-dark;
+    border-top: inherit;
   }
 }
 

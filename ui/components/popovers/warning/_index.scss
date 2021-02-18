@@ -48,4 +48,20 @@
       background-color: $color-background-warning;
     }
   }
+
+  .slds-popover__body {
+    padding-left: 2.5rem;
+  }
+
+  .slds-popover__footer {
+    background-color: transparent;
+
+    .slds-button {
+      text-decoration: none;
+
+      &.slds-button_neutral {
+        color: $brand-accessible;
+      }
+    }
+  }
 }

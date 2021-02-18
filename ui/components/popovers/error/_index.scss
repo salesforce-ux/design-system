@@ -22,6 +22,19 @@
   .slds-popover__header {
     background-color: $color-background-error-dark;
     color: $color-text-inverse;
+    padding-left: $spacing-small;
+  }
+
+  .slds-popover__footer {
+    background-color: transparent;
+
+    .slds-button {
+      text-decoration: none;
+
+      &.slds-button_neutral {
+        color: $brand-accessible;
+      }
+    }
   }
 
   &.slds-nubbin_top,
@@ -38,6 +51,10 @@
     &:before {
       background-color: $color-background-error-dark;
     }
+  }
+
+  .slds-popover__body {
+    padding-left: 2.5rem;
   }
 }
 

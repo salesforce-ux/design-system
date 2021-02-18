@@ -6,6 +6,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import _, { getNubbinClass } from '../../../shared/helpers';
 import ButtonIcon from '../../button-icons/';
+import { Badge, LightestBadge } from '../../badges/';
 import SvgIcon from '../../../shared/svg-icon';
 
 /// ///////////////////////////////////////////
@@ -61,20 +62,54 @@ export let Popover = props => {
           onClick={props.onClose}
         />
       ) : null}
-      {!props.header && props.headerTitle ? (
-        <Header
-          assistiveText={props.headerAssistiveText}
-          className={props.headerClassName}
-          id={headingUniqueId}
-          symbol={props.headerIconName}
-          title={props.headerTitle || 'Heading Title'}
-        />
-      ) : (
-        props.header
-      )}
+
       <div className={computedBodyClassnames} id={bodyUniqueId}>
-        {props.children}
+        {props.badgeTitle ? (
+          <div className="slds-popover__meta">
+            {props.badgeVariant && props.badgeVariant === 'light' ? (
+              <LightestBadge>{props.badgeTitle}</LightestBadge>
+            ) : (
+              <Badge>{props.badgeTitle}</Badge>
+            )}
+          </div>
+        ) : null}
+
+        <div className="slds-media">
+          {props.iconName ? (
+            <div className="slds-media__figure">
+              <span
+                className="slds-icon_container"
+                title={props.iconAssistiveText}
+              >
+                <SvgIcon
+                  className="slds-icon slds-icon_small slds-icon-text-default"
+                  sprite="utility"
+                  symbol={props.iconName}
+                />
+                <span className="slds-assistive-text">
+                  {props.iconAssistiveText}
+                </span>
+              </span>
+            </div>
+          ) : null}
+
+          <div className="slds-media__body">
+            {!props.header && props.headerTitle ? (
+              <Header
+                assistiveText={props.headerAssistiveText}
+                className={props.headerClassName}
+                id={headingUniqueId}
+                title={props.headerTitle || 'Heading Title'}
+              />
+            ) : (
+              props.header
+            )}
+
+            {props.children}
+          </div>
+        </div>
       </div>
+
       {props.footer ? (
         <footer
           className={classNames(
@@ -92,6 +127,7 @@ export let Popover = props => {
 
 Popover.propTypes = {
   bodyClassName: PropTypes.string,
+  badgeTitle: PropTypes.string,
   children: PropTypes.node,
   className: PropTypes.string,
   closeButton: PropTypes.bool,
@@ -101,7 +137,8 @@ Popover.propTypes = {
   header: PropTypes.node,
   headerAssistiveText: PropTypes.string,
   headerClassName: PropTypes.string,
-  headerIconName: PropTypes.string,
+  iconName: PropTypes.string,
+  iconAssistiveText: PropTypes.string,
   headerTitle: PropTypes.string,
   headingId: PropTypes.string,
   inverse: PropTypes.bool,
@@ -116,19 +153,6 @@ Popover.propTypes = {
 
 let Header = props => (
   <header className={classNames('slds-popover__header', props.className)}>
-    {props.symbol ? (
-      <span
-        className="slds-icon_container slds-m-right_small"
-        title={props.assistiveText}
-      >
-        <SvgIcon
-          className="slds-icon slds-icon_small slds-icon-text-default"
-          sprite="utility"
-          symbol={props.symbol}
-        />
-        <span className="slds-assistive-text">{props.assistiveText}</span>
-      </span>
-    ) : null}
     <h2 className="slds-text-heading_small" id={props.id}>
       {props.title}
     </h2>
@@ -166,14 +190,99 @@ export let examples = [
     )
   },
   {
+    id: 'with-icon',
+    label: 'With icon',
+    element: (
+      <Popover
+        className="slds-nubbin_left"
+        closeButton
+        headerTitle="Header Title"
+        iconName="favorite"
+        iconAssistiveText="Assistive text here"
+      >
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+      </Popover>
+    )
+  },
+  {
     id: 'footer',
     label: 'With Footer',
     element: (
       <Popover
         className="slds-nubbin_left"
         closeButton
-        footer={<p>Footer Item</p>}
+        footer={
+          <div class="slds-grid slds-grid_vertical-align-center">
+            <button class="slds-button slds-button_neutral slds-col_bump-left">
+              Learn More
+            </button>
+          </div>
+        }
         title="Dialog Title"
+      >
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+      </Popover>
+    )
+  },
+  {
+    id: 'with-icon-footer',
+    label: 'With icon and footer',
+    element: (
+      <Popover
+        className="slds-nubbin_left"
+        closeButton
+        headerTitle="Header Title"
+        iconName="favorite"
+        iconAssistiveText="Assistive text here"
+        footer={
+          <div class="slds-grid slds-grid_vertical-align-center">
+            <button class="slds-button slds-button_neutral slds-col_bump-left">
+              Learn More
+            </button>
+          </div>
+        }
+      >
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+      </Popover>
+    )
+  },
+  {
+    id: 'badge',
+    label: 'With Badge',
+    element: (
+      <Popover
+        className="slds-nubbin_left slds-popover_large"
+        closeButton
+        headerTitle="Header Title"
+        badgeTitle="Admin Notice"
+      >
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+      </Popover>
+    )
+  },
+  {
+    id: 'badge-icon',
+    label: 'With Badge and icon',
+    element: (
+      <Popover
+        className="slds-nubbin_left slds-popover_large"
+        closeButton
+        headerTitle="Header Title"
+        badgeTitle="Admin Notice"
+        iconName="favorite"
+        iconAssistiveText="Assistive text here"
       >
         <p>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
@@ -275,6 +384,149 @@ export let examples = [
         className="slds-nubbin_left slds-popover_full-width"
         closeButton
         headerTitle="Header Title"
+      >
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+      </Popover>
+    )
+  },
+  {
+    id: 'no-close-button',
+    label: 'No Close Button',
+    element: (
+      <Popover className="slds-nubbin_left" headerTitle="Header Title">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+      </Popover>
+    )
+  },
+  {
+    id: 'dark-base',
+    label: 'Base [dark]',
+    element: (
+      <Popover className="slds-popover_dark slds-nubbin_left" closeButton>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+      </Popover>
+    )
+  },
+  {
+    id: 'dark-header',
+    label: 'With Header [dark]',
+    element: (
+      <Popover
+        className="slds-popover_dark slds-nubbin_left"
+        closeButton
+        headerTitle="Header Title"
+      >
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+      </Popover>
+    )
+  },
+  {
+    id: 'dark-with-icon',
+    label: 'With icon [dark]',
+    element: (
+      <Popover
+        className="slds-popover_dark slds-nubbin_left"
+        closeButton
+        headerTitle="Header Title"
+        iconName="favorite"
+        iconAssistiveText="Assistive text here"
+      >
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+      </Popover>
+    )
+  },
+  {
+    id: 'dark-footer',
+    label: 'With Footer [dark]',
+    element: (
+      <Popover
+        className="slds-popover_dark slds-nubbin_left"
+        closeButton
+        footer={
+          <div class="slds-grid slds-grid_vertical-align-center">
+            <button class="slds-button slds-button_brand slds-col_bump-left">
+              Learn More
+            </button>
+          </div>
+        }
+        title="Dialog Title"
+      >
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+      </Popover>
+    )
+  },
+  {
+    id: 'dark-with-icon-footer',
+    label: 'With icon and footer [dark]',
+    element: (
+      <Popover
+        className="slds-popover_dark slds-nubbin_left"
+        closeButton
+        headerTitle="Header Title"
+        iconName="favorite"
+        iconAssistiveText="Assistive text here"
+        footer={
+          <div class="slds-grid slds-grid_vertical-align-center">
+            <button class="slds-button slds-button_brand slds-col_bump-left">
+              Learn More
+            </button>
+          </div>
+        }
+      >
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+      </Popover>
+    )
+  },
+  {
+    id: 'dark-badge',
+    label: 'With Badge [dark]',
+    element: (
+      <Popover
+        className="slds-popover_dark slds-nubbin_left slds-popover_large"
+        closeButton
+        headerTitle="Header Title"
+        badgeTitle="Admin Notice"
+        badgeVariant="light"
+      >
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+      </Popover>
+    )
+  },
+  {
+    id: 'dark-badge-icon',
+    label: 'With Badge and icon [dark]',
+    element: (
+      <Popover
+        className="slds-popover_dark slds-nubbin_left slds-popover_large"
+        closeButton
+        headerTitle="Header Title"
+        badgeTitle="Admin Notice"
+        iconName="favorite"
+        iconAssistiveText="Assistive text here"
       >
         <p>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do

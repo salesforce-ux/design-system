@@ -17,3 +17,9 @@ props:
   NUBBIN_SIZE_DEFAULT:
     value: 1rem
     comment: Tooltip nubbin square size
+  NUBBIN_TRIANGLE_OFFSET:
+    value: -0.1875rem
+    comment: Tooltip nubbin offset for branded popovers
+  POPOVER_BRAND_BORDER_WIDTH:
+    value: 0.25rem
+    comment: The default border width for Branded Popover

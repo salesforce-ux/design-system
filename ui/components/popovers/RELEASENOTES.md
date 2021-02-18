@@ -4,6 +4,33 @@
 
 <!-- ## [Unreleased] -->
 
+## 2.15.0
+
+### Changed
+
+- Base popovers
+    - Footer background is now explicitly set to `$color-background` design token
+    - Moved `slds-popover__header` into `slds-popover__body` and added a [Media Object](/utilities/media-objects/) wrapper to match prompt popover variant
+    - Added variant with icon
+    - Removed `slds-popover__header` bottom border
+    - Added variant with badge above header
+- Warning feedback state
+    - Footer background color is now explicitly set to transparent
+    - Body is now indented to align with header
+- Error feedback state
+    - Footer background color is now explicitly set to transparent
+    - Body is now indented to align with header
+- Prompt variant
+    - Footer top border changed to match default popover border color and width
+- Walkthrough variant
+    - Removed header background image
+    - Changed footer background color to `$palette-blue-20`
+
+### Added
+
+- Added light and dark Brand variants, including new selectors `.slds-popover_brand, .slds-popover_brand-dark, .slds-popover_brand-top, .slds-popover_brand-left, .slds-popover_brand-bottom, .slds-popover_brand-right`
+- Added new Prompt branded variants
+
 ## 2.13.1
 
 ### Changed

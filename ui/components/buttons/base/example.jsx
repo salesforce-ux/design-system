@@ -7,7 +7,7 @@ import classNames from 'classnames';
 
 import { CannotBeSetWith } from '../../../shared/helpers';
 
-export let Button = props => {
+export const Button = props => {
   const {
     className,
     disabled,
@@ -24,12 +24,19 @@ export let Button = props => {
     isFirst,
     isMiddle,
     isLast,
+    onClick,
+    kxScopeButton,
+    kxTypeUnderline,
     use,
     innerRef,
     ...rest
   } = props;
+  const pointerRef = { current: { offsetX: '50%', offsetY: '50%' } };
+  const requestRef = { current: null };
+  const previousTimeRef = { current: null };
+  const buttonRef = innerRef || { current: null };
 
-  var classNameList = classNames(
+  let classNameList = classNames(
     'slds-button',
     {
       'slds-button_reset': isReset,
@@ -49,23 +56,74 @@ export let Button = props => {
     className
   );
 
+  const setCoordProps = element => {
+    const { offsetX, offsetY } = pointerRef.current;
+    element.style.setProperty(
+      '--slds-kx-button-pointer-position-x',
+      `${offsetX}px`
+    );
+    if (!kxTypeUnderline)
+      element.style.setProperty(
+        '--slds-kx-button-pointer-position-y',
+        `${offsetY}px`
+      );
+  };
+
+  const handleMove = ({ offsetX, offsetY }) => {
+    pointerRef.current = { offsetX, offsetY };
+  };
+
+  const handleEnter = event => {
+    requestRef.current = window.requestAnimationFrame(timestamp => {
+      animate(timestamp, buttonRef.current);
+    });
+    buttonRef.current.addEventListener('mousemove', handleMove);
+  };
+
+  const handleLeave = () => {
+    window.cancelAnimationFrame(requestRef.current);
+    buttonRef.current.removeEventListener('mousemove', handleMove);
+  };
+
+  const animate = (timestamp, element) => {
+    if (previousTimeRef.current !== undefined) setCoordProps(element);
+    previousTimeRef.current = timestamp;
+    requestRef.current = window.requestAnimationFrame(timestamp => {
+      animate(timestamp, element);
+    });
+  };
+
   return (
     <React.Fragment>
       {use === 'a' ? (
         <a
+          ref={buttonRef}
           className={classNameList}
-          {...rest}
           href="#"
+          {...rest}
           onClick={e => e.preventDefault()}
+          {...kxScopeButton && {
+            'kx-scope': 'button',
+            onMouseEnter: handleEnter,
+            onMouseLeave: handleLeave
+          }}
+          {...kxTypeUnderline && { 'kx-type': 'underline' }}
         >
           {props.children}
         </a>
       ) : (
         <button
+          ref={buttonRef}
           className={classNameList}
           disabled={disabled}
           {...rest}
-          ref={innerRef}
+          onClick={e => e.preventDefault()}
+          {...kxScopeButton && {
+            'kx-scope': 'button',
+            onMouseEnter: handleEnter,
+            onMouseLeave: handleLeave
+          }}
+          {...kxTypeUnderline && { 'kx-type': 'underline' }}
         >
           {props.children}
         </button>
@@ -103,6 +161,15 @@ Button.propTypes = {
 export default <Button>Button</Button>;
 
 export let examples = [
+  {
+    id: 'base-kinetics',
+    label: 'Base (Kinetics)',
+    element: (
+      <Button kxScopeButton kxTypeUnderline>
+        Kinetics Button
+      </Button>
+    )
+  },
   {
     id: 'neutral',
     label: 'Neutral',

@@ -8,6 +8,7 @@ exports[`Style Encapsulation Markup & Classes renders a encapsulated button with
   <div>
     <button
       className="slds-button slds-button_neutral slds-button_first"
+      onClick={[Function]}
     >
       First
     </button>
@@ -23,6 +24,7 @@ exports[`Style Encapsulation Markup & Classes renders a encapsulated button with
   <div>
     <button
       className="slds-button slds-button_neutral slds-button_first"
+      onClick={[Function]}
     >
       Last
     </button>
@@ -38,6 +40,7 @@ exports[`Style Encapsulation Markup & Classes renders a encapsulated button with
   <div>
     <button
       className="slds-button slds-button_neutral slds-button_middle"
+      onClick={[Function]}
     >
       Middle
     </button>
@@ -60,16 +63,19 @@ exports[`renders a button group with overflow open 1`] = `
   >
     <button
       className="slds-button slds-button_neutral"
+      onClick={[Function]}
     >
       Refresh
     </button>
     <button
       className="slds-button slds-button_neutral"
+      onClick={[Function]}
     >
       Edit
     </button>
     <button
       className="slds-button slds-button_neutral"
+      onClick={[Function]}
     >
       Save
     </button>
@@ -171,16 +177,19 @@ exports[`renders a default button group 1`] = `
 >
   <button
     className="slds-button slds-button_neutral"
+    onClick={[Function]}
   >
     Refresh
   </button>
   <button
     className="slds-button slds-button_neutral"
+    onClick={[Function]}
   >
     Edit
   </button>
   <button
     className="slds-button slds-button_neutral"
+    onClick={[Function]}
   >
     Save
   </button>
@@ -364,6 +373,7 @@ exports[`renders a row a buttons spaced out 1`] = `
   >
     <button
       className="slds-button slds-button_neutral"
+      onClick={[Function]}
     >
       Refresh
     </button>
@@ -373,6 +383,7 @@ exports[`renders a row a buttons spaced out 1`] = `
   >
     <button
       className="slds-button slds-button_neutral"
+      onClick={[Function]}
     >
       Edit
     </button>
@@ -382,6 +393,7 @@ exports[`renders a row a buttons spaced out 1`] = `
   >
     <button
       className="slds-button slds-button_brand"
+      onClick={[Function]}
     >
       Save
     </button>
@@ -396,6 +408,7 @@ exports[`renders a single brand button with brand button icon dropdown 1`] = `
 >
   <button
     className="slds-button slds-button_brand"
+    onClick={[Function]}
   >
     Save
   </button>

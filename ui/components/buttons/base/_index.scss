@@ -1,8 +1,8 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-@import 'deprecate';
-@import '../mixins/index';
+@import "deprecate";
+@import "../mixins/index";
 
 /**
  * @summary This neutralizes all the base styles making it look like a text link
@@ -96,6 +96,50 @@
   // Add spacing when another button is adjacent to it
   + .slds-button {
     margin-left: $spacing-xx-small;
+  }
+}
+
+// Kinetic styles for Base Button
+[kx-scope="button"][kx-type="underline"] {
+  will-change: color, transform;
+  transition: $kx-duration-normal $kx-ease-out;
+  transition-property: transform, color;
+
+  &:active {
+    transform: scale(0.95);
+
+    @media (prefers-reduced-motion: reduce) {
+      transform: none;
+    }
+  }
+
+  &:after {
+    will-change: transform-origin, transform;
+    content: "";
+    position: absolute;
+    // zero united value needed for calc to use the value in calculation
+    top: calc(var(--sds-c-button-spacing-block-start, 0rem) + var(--sds-c-button-line-height, #{$line-height-button}) * 0.8); // stylelint-disable length-zero-no-unit
+    height: rem(1px);
+    width: 100%;
+    background: var(--sds-c-button-text-color-hover, $brand-accessible-active);
+    background-position: left top;
+    transform: scaleX(0);
+    transform-origin: var(--slds-kx-button-pointer-position-x, 50%) 0;
+    transition: transform $kx-duration-normal $kx-ease-out;
+
+    @media (prefers-reduced-motion: reduce) {
+      transition: none;
+    }
+  }
+
+  &:hover:after,
+  &:focus:after {
+    transform: scaleX(1);
+  }
+
+  &[disabled]:after,
+  &:disabled:after {
+    display: none;
   }
 }
 
@@ -220,8 +264,8 @@ a.slds-button--inverse:focus {
 }
 
 /**
- * @name outline-brand
- * @summary Creates the outlined button with the brand color
+* @name outline-brand
+* @summary Creates the outlined button with the brand color
  * @selector .slds-button_outline-brand
  * @restrict .slds-button
  * @modifier

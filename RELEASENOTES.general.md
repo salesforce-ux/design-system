@@ -2,6 +2,7 @@
 <!-- On release, add general notes here. In time the legacy release notes will be add to this -->
 
 ## 2.15.0 - Upcoming
+
 - Removed Salesforce Sans as the default typeface and replaced it with OS-specific defaults.
 - Updated many of our design tokens and other colors to utilize the new Salesforce Color System. For more information, [read our article on Medium about this system](https://medium.com/salesforce-ux/the-salesforce-color-system-c7c6b5b9c577).
 ## 2.14.2 - February 5, 2021

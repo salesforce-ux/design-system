@@ -4,6 +4,12 @@
 
 <!-- ## [Unreleased] -->
 
+## 2.15.0
+
+### Added
+
+- Added Kinetic styles and demo functionality for Button Base
+
 ## 2.14.0
 
 ### Added

@@ -1,0 +1,75 @@
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+  Kinetic tokens, served as Sass variable
+*/
+
+/*
+  Speed Multiplier
+*/
+$kx-speed-multiplier: 1;
+
+/*
+  Reduced Motion Multipliers
+*/
+$kx-reduced-motion-multiplier-os: 1;
+$kx-reduced-motion-multiplier-simulation: 1;
+$kx-reduced-motion-multiplier: calc(#{$kx-reduced-motion-multiplier-os} * #{$kx-reduced-motion-multiplier-simulation});
+
+/*
+  Duration Tokens
+*/
+// These initial values are used for the reset functionality in JS.
+// The user cannot manipulate these values using the global config panel.
+$kx-duration-x-long-init: 600ms; // was 1200
+$kx-duration-long-init: 400ms; // was 600
+$kx-duration-normal-init: 250ms; // was 300
+$kx-duration-short-init: 150ms;
+$kx-duration-x-short-init: 75ms;
+
+// These values are used to calculate the final, multiplier-modified values for durations.
+// The user can manipulate these values using the global config panel.
+$kx-duration-x-long-base: $kx-duration-x-long-init;
+$kx-duration-long-base: $kx-duration-long-init;
+$kx-duration-normal-base: $kx-duration-normal-init;
+$kx-duration-short-base: $kx-duration-short-init;
+$kx-duration-x-short-base: $kx-duration-x-short-init;
+
+// These are the multiplier-modified values for durations.
+// Use these (e.g. $kx-duration-normal when you want to access a “final” duration value.
+$kx-duration-x-long: calc(#{$kx-reduced-motion-multiplier} * #{$kx-duration-x-long-base} / #{$kx-speed-multiplier});
+$kx-duration-long: calc(#{$kx-reduced-motion-multiplier} * #{$kx-duration-long-base} / #{$kx-speed-multiplier});
+$kx-duration-normal: calc(#{$kx-reduced-motion-multiplier} * #{$kx-duration-normal-base} / #{$kx-speed-multiplier});
+$kx-duration-short: calc(#{$kx-reduced-motion-multiplier} * #{$kx-duration-short-base} / #{$kx-speed-multiplier});
+$kx-duration-x-short: calc(#{$kx-reduced-motion-multiplier} * #{$kx-duration-x-short-base} / #{$kx-speed-multiplier});
+
+/*
+  Easing Tokens
+*/
+// These initial values are used for the reset functionality in JS.
+// The user cannot manipulate these values using the global config panel.
+$kx-ease-none-init: cubic-bezier(0, 0, 1, 1);
+$kx-ease-in-init: cubic-bezier(0.3, 0, 1, 0.3); // was (0.5, 0, 1, 0.5)
+$kx-ease-out-init: cubic-bezier(0, 0.3, 0.15, 1); // was (0, 0.5, 0.5, 1)
+$kx-ease-in-out-init: cubic-bezier(0.3, 0, 0.15, 1); // was (0.5, 0, 0.5, 1)
+$kx-ease-under-init: cubic-bezier(0.7, 0, 0.7, -0.75); // was (0.5, -0.5, 0.25, 1)
+$kx-ease-over-init: cubic-bezier(0.3, 1.75, 0.3, 1); // was (0.25, 0, 0.5, 1.5)
+
+
+// These are the multiplier-modified values for durations.
+// Use these (e.g. $kx-duration-normal when you want to access a “final” duration value.
+$kx-ease-none: #{$kx-ease-none-init};
+$kx-ease-in: #{$kx-ease-in-init};
+$kx-ease-out: #{$kx-ease-out-init};
+$kx-ease-in-out: #{$kx-ease-in-out-init};
+$kx-ease-under: #{$kx-ease-under-init};
+$kx-ease-over: #{$kx-ease-over-init};
+
+// Pattern based custom kinetics-easing-variable-controls
+$kx-ease-ripple: cubic-bezier(0.35, 0.01, 0.62, 0.99);
+
+
+@media screen and (prefers-reduced-motion: reduce) {
+  $kx-reduced-motion-multiplier-os: 0;
+}

@@ -139,6 +139,7 @@
  */
 .slds-panel__header-actions {
   display: flex;
+  flex-shrink: 0; // Prevent actions from shrinking and fix layout in IE11
   align-items: center;
   margin-left: $spacing-x-small;
 

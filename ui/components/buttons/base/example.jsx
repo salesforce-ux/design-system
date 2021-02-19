@@ -7,6 +7,10 @@ import classNames from 'classnames';
 
 import { CannotBeSetWith } from '../../../shared/helpers';
 
+const KX_SCOPE_BUTTON = 'button';
+const KX_TYPE_RIPPLE = 'ripple';
+const KX_TYPE_UNDERLINE = 'underline';
+
 export const Button = props => {
   const {
     className,
@@ -25,8 +29,8 @@ export const Button = props => {
     isMiddle,
     isLast,
     onClick,
-    kxScopeButton,
-    kxTypeUnderline,
+    kxScope,
+    kxType,
     use,
     innerRef,
     ...rest
@@ -35,6 +39,8 @@ export const Button = props => {
   const requestRef = { current: null };
   const previousTimeRef = { current: null };
   const buttonRef = innerRef || { current: null };
+  const kxTypeUnderline = kxType && kxType === KX_TYPE_UNDERLINE;
+  const kxTypeRipple = kxType && kxType === KX_TYPE_RIPPLE;
 
   let classNameList = classNames(
     'slds-button',
@@ -73,7 +79,7 @@ export const Button = props => {
     pointerRef.current = { offsetX, offsetY };
   };
 
-  const handleEnter = event => {
+  const handleEnter = () => {
     requestRef.current = window.requestAnimationFrame(timestamp => {
       animate(timestamp, buttonRef.current);
     });
@@ -93,6 +99,26 @@ export const Button = props => {
     });
   };
 
+  const setIsRippling = (element, doRipple) => {
+    element.classList.toggle('slds-kx-is-animating-from-click', doRipple);
+  };
+
+  const handleClick = event => {
+    const { target: buttonElement } = event;
+    event.persist();
+    if (onClick) onClick(event);
+    if (buttonElement.tagName === 'A') event.preventDefault();
+    if (!kxTypeRipple) return; // conditionally short circuit the handler since it is not kinetics type ripple
+    const { offsetX, offsetY } = event.nativeEvent;
+    pointerRef.current = { offsetX, offsetY };
+    setCoordProps(buttonElement);
+    setIsRippling(buttonElement, true);
+  };
+
+  const handleRippleEnd = event => {
+    setIsRippling(event.target, false);
+  };
+
   return (
     <React.Fragment>
       {use === 'a' ? (
@@ -101,13 +127,16 @@ export const Button = props => {
           className={classNameList}
           href="#"
           {...rest}
-          onClick={e => e.preventDefault()}
-          {...kxScopeButton && {
-            'kx-scope': 'button',
-            onMouseEnter: handleEnter,
-            onMouseLeave: handleLeave
-          }}
-          {...kxTypeUnderline && { 'kx-type': 'underline' }}
+          onClick={handleClick}
+          {...kxScope && { 'kx-scope': kxScope }}
+          {...kxType && { 'kx-type': kxType }}
+          {...kxScope &&
+            kxScope.startsWith(KX_SCOPE_BUTTON) && {
+              onMouseEnter: handleEnter,
+              onMouseLeave: handleLeave
+            }}
+          {...kxType &&
+            kxType === KX_TYPE_RIPPLE && { onAnimationEnd: handleRippleEnd }}
         >
           {props.children}
         </a>
@@ -117,13 +146,16 @@ export const Button = props => {
           className={classNameList}
           disabled={disabled}
           {...rest}
-          onClick={e => e.preventDefault()}
-          {...kxScopeButton && {
-            'kx-scope': 'button',
-            onMouseEnter: handleEnter,
-            onMouseLeave: handleLeave
-          }}
-          {...kxTypeUnderline && { 'kx-type': 'underline' }}
+          onClick={handleClick}
+          {...kxScope && { 'kx-scope': kxScope }}
+          {...kxType && { 'kx-type': kxType }}
+          {...kxScope &&
+            kxScope.startsWith(KX_SCOPE_BUTTON) && {
+              onMouseEnter: handleEnter,
+              onMouseLeave: handleLeave
+            }}
+          {...kxType &&
+            kxType === KX_TYPE_RIPPLE && { onAnimationEnd: handleRippleEnd }}
         >
           {props.children}
         </button>
@@ -150,6 +182,8 @@ Button.propTypes = {
   isFirst: PropTypes.bool,
   isMiddle: PropTypes.bool,
   isLast: PropTypes.bool,
+  kxScope: PropTypes.string,
+  kxType: PropTypes.string,
   use: CannotBeSetWith('disabled', PropTypes.oneOf(['a'])),
   children: PropTypes.node
 };
@@ -165,7 +199,7 @@ export let examples = [
     id: 'base-kinetics',
     label: 'Base (Kinetics)',
     element: (
-      <Button kxScopeButton kxTypeUnderline>
+      <Button kxScope="button" kxType="underline">
         Kinetics Button
       </Button>
     )
@@ -176,14 +210,41 @@ export let examples = [
     element: <Button isNeutral>Neutral Button</Button>
   },
   {
+    id: 'neutral-kinetics',
+    label: 'Neutral (Kinetics)',
+    element: (
+      <Button isNeutral kxScope="button-neutral" kxType="ripple">
+        Kinetics Neutral Button
+      </Button>
+    )
+  },
+  {
     id: 'brand',
     label: 'Brand',
     element: <Button isBrand>Brand Button</Button>
   },
   {
+    id: 'brand-kinetics',
+    label: 'Brand (Kinetics)',
+    element: (
+      <Button isBrand kxScope="button-brand" kxType="ripple">
+        Kinetics Brand Button
+      </Button>
+    )
+  },
+  {
     id: 'outline-brand',
     label: 'Outline Brand',
     element: <Button isOutlineBrand>Outline Brand Button</Button>
+  },
+  {
+    id: 'outline-brand-kinetics',
+    label: 'Outline Brand (Kinetics)',
+    element: (
+      <Button isOutlineBrand kxScope="button-outline" kxType="ripple">
+        Kinetics Outline Brand Button
+      </Button>
+    )
   },
   {
     id: 'inverse',
@@ -195,9 +256,29 @@ export let examples = [
     )
   },
   {
+    id: 'inverse-kinetics',
+    label: 'Inverse (Kinetics)',
+    element: (
+      <div style={{ backgroundColor: '#16325c', padding: '0.5rem' }}>
+        <Button isInverse kxScope="button-neutral" kxType="ripple">
+          Kinetics Inverse Button
+        </Button>
+      </div>
+    )
+  },
+  {
     id: 'destructive',
     label: 'Destructive',
     element: <Button isDestructive>Destructive Button</Button>
+  },
+  {
+    id: 'destructive-kinetics',
+    label: 'Destructive (Kinetics)',
+    element: (
+      <Button isDestructive kxScope="button-filled" kxType="ripple">
+        Kinetics Destructive Button
+      </Button>
+    )
   },
   {
     id: 'text-destructive',
@@ -210,11 +291,29 @@ export let examples = [
     element: <Button isSuccess>Success Button</Button>
   },
   {
+    id: 'success-kinetics',
+    label: 'Success (Kinetics)',
+    element: (
+      <Button isSuccess kxScope="button-filled" kxType="ripple">
+        Kinetics Success Button
+      </Button>
+    )
+  },
+  {
     id: 'stretch',
     label: 'Stretch',
     element: (
       <Button isStretch isNeutral>
         Stretched Neutral Button
+      </Button>
+    )
+  },
+  {
+    id: 'stretch-kinetics',
+    label: 'Stretch (Kinetics)',
+    element: (
+      <Button isStretch isNeutral kxScope="button-neutral" kxType="ripple">
+        Kinetics Stretched Neutral Button
       </Button>
     )
   },
@@ -333,11 +432,29 @@ export let states = [
     element: <Button disabled>Button</Button>
   },
   {
+    id: 'base-kinetics-disabled',
+    label: 'Base (Kinetics) - Disabled',
+    element: (
+      <Button kxScope="button" kxType="underline" disabled>
+        Kinetics Button
+      </Button>
+    )
+  },
+  {
     id: 'neutral-disabled',
     label: 'Neutral - Disabled',
     element: (
       <Button isNeutral disabled>
         Neutral Button
+      </Button>
+    )
+  },
+  {
+    id: 'neutral-kinetics-disabled',
+    label: 'Neutral (Kinetics) - Disabled',
+    element: (
+      <Button isNeutral kxScope="button-neutral" kxType="ripple" disabled>
+        Kinetics Neutral Button
       </Button>
     )
   },
@@ -351,11 +468,29 @@ export let states = [
     )
   },
   {
+    id: 'brand-kinetics-disabled',
+    label: 'Brand (Kinetics) - Disabled',
+    element: (
+      <Button isBrand kxScope="button-brand" kxType="ripple" disabled>
+        Kinetics Brand Button
+      </Button>
+    )
+  },
+  {
     id: 'outline-brand-disabled',
     label: 'Outline Brand - Disabled',
     element: (
       <Button isOutlineBrand disabled>
         Outline Brand Button
+      </Button>
+    )
+  },
+  {
+    id: 'outline-brand-kinetics-disabled',
+    label: 'Outline Brand (Kinetics) - Disabled',
+    element: (
+      <Button isOutlineBrand kxScope="button-outline" kxType="ripple" disabled>
+        Kinetics Outline Brand Button
       </Button>
     )
   },

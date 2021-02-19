@@ -4,8 +4,12 @@
 ## Release 2.15.0 - Upcoming
 
 - Removed Salesforce Sans as the default typeface and replaced it with OS-specific defaults.
+- Updated many of our design tokens and other colors to utilize the new Salesforce Color System. For more information, [read our article on Medium about this system](https://medium.com/salesforce-ux/the-salesforce-color-system-c7c6b5b9c577).
 
 ## Components
+### [Breadcrumbs](https://www.lightningdesignsystem.com/components/breadcrumbs)
+- Added Kinetic styles and demo functionality for Breadcrumbs
+
 ### [Builder Header](https://www.lightningdesignsystem.com/components/builder-header)
 #### Changed
 - Updates to top bar:
@@ -30,7 +34,7 @@
 
 ### [Buttons](https://www.lightningdesignsystem.com/components/buttons)
 #### Added
-- Added Kinetic styles and demo functionality for Button Base
+- Added Kinetic styles and demo functionality for Button Base, Brand, Neutral, Inverse, Outline Brand, Destructive and Success
 
 ### [Page Headers](https://www.lightningdesignsystem.com/components/page-headers)
 #### Fixed

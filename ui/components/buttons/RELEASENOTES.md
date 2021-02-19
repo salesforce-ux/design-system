@@ -8,7 +8,7 @@
 
 ### Added
 
-- Added Kinetic styles and demo functionality for Button Base
+- Added Kinetic styles and demo functionality for Button Base, Brand, Neutral, Inverse, Outline Brand, Destructive and Success
 
 ## 2.14.0
 

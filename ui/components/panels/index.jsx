@@ -148,9 +148,7 @@ export const HeaderDeprecated = ({
       customHeader && 'slds-panel__header_custom'
     )}
   >
-    {customHeader ? (
-      customHeader
-    ) : (
+    {customHeader || (
       <>
         <HeaderTitle title={title} />
         <HeaderButton title={title} symbol={closeSymbol} />
@@ -207,9 +205,7 @@ class Panel extends Component {
         isAnimated={isAnimated}
         id={id}
       >
-        {headerSlot ? (
-          headerSlot
-        ) : (
+        {headerSlot || (
           <Header
             title={title}
             docked={docked}
@@ -292,7 +288,7 @@ export class PanelPlayground extends Component {
       height: '600px',
       overflow: 'hidden',
       display: 'flex',
-      flexDirection: docked == 'right' && 'row-reverse'
+      flexDirection: docked === 'right' && 'row-reverse'
     };
 
     return (

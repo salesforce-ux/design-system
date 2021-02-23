@@ -2,7 +2,7 @@ import React, { Children, useState, useRef, useEffect } from 'react';
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 import uniqueId from 'lodash.uniqueid';
-import { Popover } from './base/example';
+import { Popover } from './base-legacy/example';
 import { FeedbackHeader } from './error/example';
 import { createCustomPropType } from '../../shared/helpers';
 import EmptyLink from '../../shared/empty-link/';

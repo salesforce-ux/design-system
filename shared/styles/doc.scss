@@ -21,6 +21,7 @@ $light-gray-border-color: #f2f2f2;
 .docs-mobile_frame {
   border: solid 2px $light-gray-border-color;
   width: 100%;
+  max-width: 100%; /* prevents the iframe from expanding beyond its container */
   background-color: #d2d2cf1f;
 }
 

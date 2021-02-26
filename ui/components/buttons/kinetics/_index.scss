@@ -1,0 +1,252 @@
+// Kinetics vars
+$kx-button-ripple-size: 20px;
+$kx-button-pointer-position: 50%;
+$kx-button-gradient-size: 140px;
+
+// Kinetic styles for Base Button
+[kx-scope="button"][kx-type="underline"] {
+  will-change: color, transform;
+  transition: $kx-duration-normal $kx-ease-out;
+  transition-property: transform, color;
+
+  &:active {
+    transform: scale(0.95);
+
+    @media (prefers-reduced-motion: reduce) {
+      transform: none;
+    }
+  }
+
+  &:after {
+    will-change: transform-origin, transform;
+    content: "";
+    position: absolute;
+    // zero united value needed for calc to use the value in calculation
+    top: calc(var(--sds-c-button-spacing-block-start, 0rem) + var(--sds-c-button-line-height, #{$line-height-button}) * 0.8); // stylelint-disable length-zero-no-unit
+    height: rem(1px);
+    width: 100%;
+    background: var(--sds-c-button-text-color-hover, $brand-accessible-active);
+    background-position: left top;
+    transform: scaleX(0);
+    transform-origin: var(--slds-kx-button-pointer-position-x, #{$kx-button-pointer-position}) 0;
+    transition: transform $kx-duration-normal $kx-ease-out;
+
+    @media (prefers-reduced-motion: reduce) {
+      transition: none;
+    }
+  }
+
+  &:hover:after,
+  &:focus:after {
+    transform: scaleX(1);
+  }
+
+  &[disabled],
+  &:disabled {
+    cursor: default;
+
+    &:after {
+      display: none;
+    }
+
+    &,
+    * {
+      pointer-events: none;
+    }
+  }
+}
+
+// Kinetic styles for "bordered" buttons
+[kx-scope="button-brand"],
+[kx-scope="button-neutral"],
+[kx-scope="button-outline"],
+[kx-scope="button-filled"] {
+  position: relative;
+  overflow: hidden;
+
+  transition: transform $kx-duration-short $kx-ease-in-out;
+
+  &:hover,
+  &:active {
+    transition: transform $kx-duration-short $kx-ease-in-out;
+  }
+
+  @media (hover: none) {
+
+    &:active {
+      transform: scale(0.97);
+
+      @media (prefers-reduced-motion: reduce) {
+        transform: none;
+      }
+    }
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+
+    &:hover {
+      transform: scale(1);
+
+      @media (prefers-reduced-motion: reduce) {
+        transform: none;
+      }
+    }
+
+    &:active {
+      transform: scale(0.97);
+    }
+  }
+}
+
+// Kinetic styles for Brand Button
+[kx-scope="button-brand"] {
+  // These purposefully override the interaction states to facilitate the Kinetics effect
+  // kinetics overrides the darker $brand-accessible-active color with $brand-accessible
+  // and the $brand-accessible-active color is then used in the hover gradient.
+  &:focus,
+  &:hover,
+  &:active {
+    background-color: var(--sds-c-button-brand-color-background, $brand-accessible);
+    border-color: transparent;
+  }
+
+  // Kinetics Button Brand hover gradient
+  &:hover:before {
+    content: "";
+    position: absolute;
+    left: var(--slds-kx-button-pointer-position-x, #{$kx-button-pointer-position});
+    top: var(--slds-kx-button-pointer-position-y, #{$kx-button-pointer-position});
+    width: var(--slds-kx-button-gradient-size, #{$kx-button-gradient-size});
+    height: var(--slds-kx-button-gradient-size, #{$kx-button-gradient-size});
+    opacity: 0.75;
+    z-index: -1;
+    background: radial-gradient(circle closest-side, var(--slds-kx-button-gradient-color, $brand-accessible-active), transparent);
+    transform: translate(-50%, -50%);
+  }
+
+  &[disabled]:before,
+  &:disabled:before {
+    display: none;
+  }
+}
+
+// Ripple
+[kx-scope^="button-"][kx-type="ripple"] {
+
+  &:focus {
+    transition: transform $kx-duration-short $kx-ease-in-out,
+      box-shadow $kx-duration-short $kx-ease-none $kx-duration-short,
+      border-color $kx-duration-short $kx-ease-none $kx-duration-short;
+
+    @media (prefers-reduced-motion: reduce) {
+      transition: none;
+    }
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    width: var(--slds-kx-button-ripple-size, #{$kx-button-ripple-size});
+    height: var(--slds-kx-button-ripple-size, #{$kx-button-ripple-size});
+    left: calc(
+      var(--slds-kx-button-pointer-position-x, #{$kx-button-pointer-position}) - var(--slds-kx-button-ripple-size, #{$kx-button-ripple-size}) / 2
+    );
+    top: calc(
+      var(--slds-kx-button-pointer-position-y, #{$kx-button-pointer-position}) - var(--slds-kx-button-ripple-size, #{$kx-button-ripple-size}) / 2
+    );
+    border-radius: $border-radius-circle;
+    opacity: 0;
+  }
+
+  &.slds-kx-is-animating-from-click {
+
+    &:after {
+      animation: slds-kx-button_ripple $kx-duration-normal $kx-ease-ripple;
+
+      @media (prefers-reduced-motion: reduce) {
+        animation: none;
+      }
+    }
+  }
+
+  &[disabled],
+  &:disabled {
+
+    &:after {
+      display: none;
+    }
+  }
+}
+
+// Kinetic styles for Brand and filled backgrounds
+[kx-scope="button-brand"],
+[kx-scope="button-filled"] {
+
+  &[kx-type="ripple"] {
+
+    &:after {
+      background-color: $color-background-light;
+    }
+  }
+
+  &[disabled],
+  &:disabled {
+    // @todo: global shared disabled button hooks
+    background-color: $brand-disabled;
+    border-color: $brand-disabled;
+    color: $color-text-button-brand-disabled;
+  }
+}
+
+// Kinetic styles for Neutral/Outline and light backgrounds
+[kx-scope="button-neutral"] {
+
+  &:focus,
+  &:hover,
+  &:active {
+    // These purposefully overrides the interaction states to facilitate the Kinetics effect
+    background-color: var(--sds-c-button-neutral-color-background-hover, $button-color-background-primary);
+    border-color: var(--sds-c-button-brand-color-border-hover, $brand-accessible);
+  }
+}
+
+[kx-scope="button-outline"] {
+
+  &:focus,
+  &:hover,
+  &:active {
+    // This purposefully overrides the interaction states to facilitate the Kinetics effect
+    background-color: var(--sds-c-button-outline-brand-color-background, $button-color-background-primary);
+  }
+}
+
+[kx-scope="button-neutral"],
+[kx-scope="button-outline"] {
+
+  &[kx-type="ripple"] {
+
+    &:after {
+      background-color: var(--sds-c-button-brand-color-background, $brand-accessible);
+    }
+  }
+
+  &[disabled],
+  &:disabled {
+    // @todo: global shared disabled button hooks
+    background-color: $color-background-button-default-disabled;
+    border-color: $button-color-border-primary;
+  }
+}
+
+@keyframes slds-kx-button_ripple {
+
+  0% {
+    opacity: 0.35;
+    transform: scale(1);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(7);
+  }
+}

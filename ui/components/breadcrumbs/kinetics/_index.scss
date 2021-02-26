@@ -1,0 +1,47 @@
+// Styles specific to Kinetic Breadcrumbs
+[kx-scope='breadcrumbs-item'][kx-type='underline'] {
+
+  > a {
+    position: relative;
+    will-change: color, transform;
+    transition: transform $kx-duration-normal $kx-ease-out;
+    margin-right: var(--sds-c-breadcrumbs-spacing-inline-end, $spacing-x-small);
+    margin-left: var(--sds-c-breadcrumbs-spacing-inline-start, $spacing-x-small);
+    padding-right: 0;
+    padding-left: 0;
+
+    &:active {
+      transform: scale(0.95);
+
+      @media (prefers-reduced-motion: reduce) {
+        transform: none;
+      }
+    }
+  }
+
+  > a:after {
+    will-change: transform-origin, transform;
+    content: '';
+    position: absolute;
+    top: 80%; // CAUTION: magic number, refactor to calc() if line-height and padding props get added to breadcrumbs
+    left: 0%;
+    height: rem(1px);
+    width: 100%;
+    background: $color-brand-dark;
+    background-position: left top;
+    transform: scaleX(0);
+    transform-origin: var(--slds-kx-breadcrumbs-pointer-position-x, 50%) 0;
+    transition: transform $kx-duration-normal $kx-ease-out;
+  }
+
+  > a:hover:after {
+    transform: scaleX(1);
+  }
+
+  &:first-child {
+
+    > a {
+      margin-left: 0;
+    }
+  }
+}

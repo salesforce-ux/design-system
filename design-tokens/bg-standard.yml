@@ -807,4 +807,45 @@ props:
     value: '#1589E4'
   PROCEDURE_DETAIL:
     value: '#34BECD'
-  
+  AGENT_HOME:
+    value: '#00396B'
+  AGGREGATION_POLICY:
+    value: '#1589ee'
+  BUNDLE_CONFIG:
+    value: '#1589ee'
+  BUNDLE_POLICY:
+    value: '#1589ee'
+  CALCULATED_INSIGHTS:
+    value: '#54a7f8'
+  CAPACITY_PLAN:
+    value: '#EB7092'
+  CARE_REQUEST_REVIEWER:
+    value: '#4bc076'
+  DOCUMENT_REFERENCE:
+    value: '#2a739e'
+  DURATION_DOWNSCALE:
+    value: '#1589ee'
+  MEDICATION_INGREDIENT:
+    value: '#34becd'
+  ORCHESTRATOR:
+    value: '#006EB3'
+  PRODUCT_QUANTITY_RULES:
+    value: '#769ED9'
+  PROMOTIONS:
+    value: '#04844B'
+  PROPAGATION_POLICY:
+    value: '#1589ee'
+  RESTRICTION_POLICY:
+    value: '#1589ee'
+  SELLING_MODEL:
+    value: '#ad7bee'
+  SERVICE_TERRITORY_POLICY:
+    value: '#1589ee'
+  SHIFT_SCHEDULING_OPERATION:
+    value: '#EB7092'
+  SORT_POLICY:
+    value: '#1589ee'
+  SWARM_SESSION:
+    value: '#F5675B'
+  WORK_FORECAST:
+    value: '#FCB95B'

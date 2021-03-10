@@ -63,3 +63,4 @@ coverage
 
 # Local postcss packages
 install-postcss.sh
+applitools.*.local.js

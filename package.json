@@ -74,6 +74,7 @@
     "babel-loader": "8.1.0",
     "babel-polyfill": "6.26.0",
     "body-parser": "1.19.0",
+    "chalk": "4.1.0",
     "classnames": "2.2.6",
     "conventional-changelog": "1.1.4",
     "copy-webpack-plugin": "5.1.1",
@@ -83,6 +84,7 @@
     "data.either": "1.5.2",
     "data.task": "3.1.2",
     "del": "2.2.2",
+    "enquirer": "2.3.6",
     "enzyme": "3.11.0",
     "enzyme-adapter-react-16": "1.15.2",
     "eslint": "6.8.0",
@@ -160,7 +162,6 @@
     "postcss-scss": "3.0.2",
     "precss": "3.1.2",
     "prettier": "1.17.0",
-    "prompt-sync": "4.2.0",
     "prop-types": "15.7.2",
     "puppeteer": "5.4.1",
     "raw-loader": "4.0.1",
@@ -221,7 +222,10 @@
     "storybook:build": "npm run storybook:prepare && build-storybook -c .storybook -s .dist/ -o .www",
     "release-notes:compile": "node ./scripts/release-notes/index.js",
     "release-notes:hook": "node ./scripts/release-notes/hook.js",
-    "heroku-postbuild": "npm run build && npm run dist && npm run storybook:build"
+    "heroku-postbuild": "npm run build && npm run dist && npm run storybook:build",
+    "local:vrt": "npm run storybook:prepare && node ./applitools.prompts.js && npx @applitools/eyes-storybook --conf applitools.config.local.js",
+    "local:vrt:mobile": "npm run storybook:prepare && node ./applitools.prompts.js -t mobile && STORYBOOK_STORIES_TYPE='mobile' npx @applitools/eyes-storybook --conf applitools.mobile.config.local.js",
+    "local:vrt:legacy": "npm run storybook:prepare && node ./applitools.prompts.js -t legacy && npx @applitools/eyes-storybook --conf applitools.legacy.config.local.js"
   },
   "lint-staged": {
     "linters": {

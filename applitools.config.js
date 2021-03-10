@@ -1,10 +1,10 @@
-const prompt = require('prompt-sync')({sigint: true});
 const branch = require('git-branch');
-
 const resolution = { width: 1024, height: 768 };
+
 const currentBranch = branch.sync();
 
 module.exports = {
+  apiKey: process.env.APPLITOOLS_API_KEY,
   appName: 'SLDS',
   matchLevel: 'Strict',
   ignoreDisplacements: true,
@@ -17,20 +17,23 @@ module.exports = {
   ],
   batchName: process.env.CI
         ? undefined
-        : prompt(`Please provide a batch name for this run: `) + ` (${process.env.LOGNAME})`,
+        : '',
   branchName: process.env.CI
         ? undefined
         : `localRun/${process.env.LOGNAME}/${currentBranch}`,
   parentBranchName: process.env.CI
         ? undefined
         : `localRun/${currentBranch}`,
-  showLogs: process.env.CI,
+  showLogs: process.env.CI || false,
+  showStorybookOutput: process.env.CI || false,
   // saveDebugData: false,
   exitcode: false,
-  concurrency: 100,
+  testConcurrency: 100,
   serverUrl: 'https://salesforceuxeyesapi.applitools.com',
-  include: ({ name, kind, parameters }) => {
-    return /^Kitchen Sink/.test(name);
+  testBlueprintPattern: '.*',
+  testNamePattern: '^Kitchen Sink',
+  include: function ({ name, kind, parameters }) {
+    return new RegExp(this.testBlueprintPattern, 'gi').test(kind) && new RegExp(this.testNamePattern, 'gi').test(name);
   },
   puppeteerOptions: process.env.CIRCLECI
         ? { executablePath: '/usr/bin/google-chrome' }
@@ -40,7 +43,6 @@ module.exports = {
     { width: resolution.width, height: resolution.height, name: 'firefox' },
     { width: resolution.width, height: resolution.height, name: 'chrome' },
     { width: resolution.width, height: resolution.height, name: 'safari' },
-    // { width: resolution.width, height: resolution.height, name: 'ie11' },
     { width: resolution.width, height: resolution.height, name: 'edgechromium' }
   ]
 };

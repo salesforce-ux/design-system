@@ -56,15 +56,10 @@ commands:
             export CURRENT_DEFAULT_BRANCH=`git remote show origin | grep "HEAD branch" | cut -d ":" -f 2 | xargs`
             echo 'export HEROKU_RELEASE_STORYBOOK_APP_NAME=false' >> $BASH_ENV
             if [[ "${CIRCLE_BRANCH}" = "${CURRENT_DEFAULT_BRANCH}" ]] ; then
-              if [[ "${CIRCLE_TAG}" =~ ^v\d+\.\d+\.\d+-.+$ ]] ; then
-                echo "Publishing to CORE-MAIN..."
-                echo 'export HEROKU_APP_NAME=${HEROKU_APP_CORE_MAIN}' >> $BASH_ENV
-              else
-                echo "Publishing to UPCOMING..."
-                echo 'export HEROKU_APP_NAME=${HEROKU_APP_UPCOMING}' >> $BASH_ENV
-                echo 'export HEROKU_RELEASE_STORYBOOK_APP_NAME=storybook-upcoming' >> $BASH_ENV
-              fi
-            elif [[ "${CIRCLE_TAG}" =~ ^v\d+\.\d+\.\d+$ ]] ; then
+              echo "Publishing to UPCOMING..."
+              echo "Publishing to CORE-MAIN..."
+              echo 'export HEROKU_APP_NAME=${HEROKU_APP_CORE_MAIN}' >> $BASH_ENV
+            elif [[ ${CIRCLE_TAG} =~ ^v[0-9]+\.[0-9]+\.[0-9]+$ ]] ; then
               echo "Publishing to CORE-PATCH..."
               echo 'export HEROKU_APP_NAME=${HEROKU_APP_CORE_PATCH}' >> $BASH_ENV
               echo 'export HEROKU_RELEASE_STORYBOOK_APP_NAME=storybook-core-patch' >> $BASH_ENV
@@ -157,7 +152,7 @@ commands:
           command: 'tar -xvf workspace/storybook.tar.gz'
       - run:
           name: Start server
-          command: 'npx http-server .out'
+          command: 'npx http-server .www'
           background: true
       - run:
           name: Poll until server is up
@@ -275,7 +270,7 @@ jobs:
             export VERSION_FROM_TAG=$([[ ${CIRCLE_TAG} -eq "v" ]] && echo ${CIRCLE_TAG:1:20} || echo ${CIRCLE_TAG})
             export SALESFORCE_VERSION=$(cat package.json | jq -r .slds.id)
             export VERSION_FROM_PACKAGE=$(cat package.json | jq -r .version)
-            curl --location --request PATCH 'https://design-systems-api.herokuapp.com/v1/release' \
+            curl --location --request PATCH 'https://api.lightningdesignsystem.com/v1/release' \
             --header 'Content-Type: application/json' \
             --header 'Authorization: Bearer ${DSE_API_RELEASE_TOKEN}' \
             --data-raw '{
@@ -301,23 +296,8 @@ jobs:
           command: 'npm run storybook:build'
 
       - run:
-          name: 'Generate custom Nginx config'
-          command: |
-            cat > nginx_app.conf\<<'EOF'
-            # Redirect all non-SSL requests
-            if ($http_x_forwarded_proto != 'https') {
-              return 301 https://$host$request_uri;
-            }
-
-            location / {
-              index  index.php index.html index.htm;
-            }
-            EOF
-            cat nginx_app.conf
-
-      - run:
           name: Archive static Storybook
-          command: 'tar -czvf workspace/storybook.tar.gz .out/ Procfile composer.json nginx_app.conf'
+          command: 'tar -czvf workspace/storybook.tar.gz .www/ Procfile config/nginx.conf.erb heroku-start.sh app.json'
 
       - persist_to_workspace:
           root: workspace
@@ -361,7 +341,7 @@ jobs:
             echo "=============================="
             echo ${PUBLISH_STORYBOOK_TO}
             echo "=============================="
-            heroku buildpacks -a ${PUBLISH_STORYBOOK_TO} | grep "heroku/php" || heroku buildpacks:set heroku/php -a ${PUBLISH_STORYBOOK_TO}
+            heroku buildpacks -a ${PUBLISH_STORYBOOK_TO} | grep "https://github.com/salesforce-ux/heroku-buildpack-nginx.git#dse" || heroku buildpacks:set https://github.com/salesforce-ux/heroku-buildpack-nginx.git#dse -a ${PUBLISH_STORYBOOK_TO}
             heroku builds:create --source-tar workspace/storybook.tar.gz -a ${PUBLISH_STORYBOOK_TO}
 
       - install-gh-cli
@@ -417,20 +397,7 @@ jobs:
       - run:
           name: 'Generate site tarball'
           command: |
-            echo '{}' > composer.json
-            echo 'web: vendor/bin/heroku-php-nginx -C nginx_app.conf .www' > Procfile
-            cat > nginx_app.conf\<<'EOF'
-            # Redirect all non-SSL requests
-            if ($http_x_forwarded_proto != 'https') {
-              return 301 https://$host$request_uri;
-            }
-
-            location / {
-              index  index.php index.html index.htm;
-            }
-            EOF
-            cat nginx_app.conf
-            tar -czvf site-next.tar.gz .www/ Procfile composer.json nginx_app.conf
+            tar -czvf site-next.tar.gz .www/ Procfile config/nginx.conf.erb heroku-start.sh app.json
 
       - run:
           name: 'Deploy to Heroku app'
@@ -439,7 +406,7 @@ jobs:
             echo "=============================="
             echo ${HEROKU_APP_NAME}
             echo "=============================="
-            heroku buildpacks -a ${HEROKU_APP_NAME} | grep "heroku/php" || heroku buildpacks:set heroku/php -a ${HEROKU_APP_NAME}
+            heroku buildpacks -a ${HEROKU_APP_NAME} | grep "https://github.com/salesforce-ux/heroku-buildpack-nginx.git#dse" || heroku buildpacks:set https://github.com/salesforce-ux/heroku-buildpack-nginx.git#dse -a ${HEROKU_APP_NAME}
             heroku builds:create --source-tar site-next.tar.gz -a ${HEROKU_APP_NAME}
 
       - install-gh-cli
@@ -538,10 +505,10 @@ workflows:
           context: ux-eng-keys
           requires:
             - framework-build
-          # only on the main version branches with a public release tag (X.X.X)
+          # update for all tagged versions (X.X.X[-*])
           filters:
             tags:
-              only: /^v\d+\.\d+\.\d+$/
+              only: /^v\d+\.\d+\.\d+.*/
             branches:
               ignore: /.*/
       - vrt-desktop:

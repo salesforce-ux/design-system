@@ -217,7 +217,7 @@
     "compile-aura-tokens-map": "npm run gulp -- generate:auraTokensMap",
     "compile-token-component-map": "npm run gulp -- generate:tokenComponentMap",
     "storybook:heroku": "npm run storybook:prepare && start-storybook -c .storybook -p 9002",
-    "storybook:build": "npm run storybook:prepare && build-storybook -c .storybook -s .dist/ -o .out",
+    "storybook:build": "npm run storybook:prepare && build-storybook -c .storybook -s .dist/ -o .www",
     "release-notes:compile": "node ./scripts/release-notes/index.js",
     "release-notes:hook": "node ./scripts/release-notes/hook.js",
     "heroku-postbuild": "npm run build && npm run dist && npm run storybook:build"

@@ -25,6 +25,14 @@ const getPropTypeData = (name, varName) => {
   };
 };
 
+const formatType = type => {
+  let formattedType = type.toLowerCase();
+  if (formattedType === 'color') {
+    formattedType += '_value'; // MDN adds _value to color data type page, this discrepancy is unique
+  }
+  return formattedType;
+};
+
 class StylingHooksTable extends Component {
   render() {
     const { name, type } = this.props;
@@ -109,14 +117,17 @@ class StylingHooksTable extends Component {
                           </div>
                         </td>
                         <td>
-                          {varData.types.map((type, x) => (
-                            <a
-                              key={`${category}-${i}-${ii}-${x}`}
-                              href={`https://developer.mozilla.org/en-US/docs/Web/CSS/${type.toLowerCase()}`}
-                            >
-                              {type}
-                            </a>
-                          ))}
+                          {varData.types.map((type, x) => {
+                            const formattedType = formatType(type);
+                            return (
+                              <a
+                                key={`${category}-${i}-${ii}-${x}`}
+                                href={`https://developer.mozilla.org/en-US/docs/Web/CSS/${formattedType}`}
+                              >
+                                {type}
+                              </a>
+                            );
+                          })}
                         </td>
                         <td>{varData.value}</td>
                       </tr>

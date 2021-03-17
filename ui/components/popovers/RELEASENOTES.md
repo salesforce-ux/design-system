@@ -30,6 +30,7 @@
 
 - Added light and dark Brand variants, including new selectors `.slds-popover_brand, .slds-popover_brand-dark, .slds-popover_brand-top, .slds-popover_brand-left, .slds-popover_brand-bottom, .slds-popover_brand-right`
 - Added new Prompt branded variants
+- Enabled styling hooks for popovers. See popovers' styling hooks overview table for a full listing of the currently available hooks.
 
 ## 2.13.1
 

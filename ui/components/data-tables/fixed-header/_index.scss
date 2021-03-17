@@ -1,9 +1,17 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-// This code creates the fixed header (faux header) used in the inline-edit data-table. I don't think we'll surface this for customers as it's very complex when scrolling horizontally and requires some other code for containers, etc
+/**
+ * @summary Creates fixed header for inline-edit data-table
+ *
+ * @name fixed-header
+ * @selector .slds-table_header-fixed_container
+ * @restrict div
+ * @variant
+ */
 .slds-table_header-fixed_container,
 .slds-table--header-fixed_container {
+  // This code creates the fixed header (faux header) used in the inline-edit data-table. I don't think we'll surface this for customers as it's very complex when scrolling horizontally and requires some other code for containers, etc
   position: relative;
   padding-top: 2rem; // This matches the height of the hover state w/border
   background-color: $table-color-background-header; // This has to exist due to pixel paint diffs between the headers

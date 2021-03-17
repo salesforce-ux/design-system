@@ -4,6 +4,11 @@
 
 <!-- ## [Unreleased] -->
 
+## 2.15.0
+
+### Changed
+
+- Changed `product_quantity_rules` icon's color from light blue to salem green (#04844B)
 ## 2.14.0
 
 ### Removed

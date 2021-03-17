@@ -36,6 +36,10 @@
 #### Added
 - Added Kinetic styles and demo functionality for Button Base, Brand, Neutral, Inverse, Outline Brand, Destructive and Success
 
+### [Icons](https://www.lightningdesignsystem.com/components/icons)
+#### Changed
+- Changed `product_quantity_rules` icon's color from light blue to salem green (#04844B)
+
 ### [Page Headers](https://www.lightningdesignsystem.com/components/page-headers)
 #### Fixed
 - Fixed incorrect annotations for `.slds-page-header__col-title`, `.slds-page-header__col-actions`, `.slds-page-header__col-meta`, `.slds-page-header__col-controls`, and `.slds-page-header__col-details`.

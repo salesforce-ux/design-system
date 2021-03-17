@@ -830,7 +830,7 @@ props:
   ORCHESTRATOR:
     value: '#006EB3'
   PRODUCT_QUANTITY_RULES:
-    value: '#769ED9'
+    value: '#04844B'
   PROMOTIONS:
     value: '#04844B'
   PROPAGATION_POLICY:

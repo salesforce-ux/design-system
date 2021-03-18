@@ -63,7 +63,7 @@
   // Requirement of project that these properties are statically these
   // mobile/touch values and not scoped to the mobile/touch feature detection
   .slds-input {
-    @include border-box-line-height($height-tappable);
+    line-height: border-box-line-height($height-tappable);
     font-size: $font-size-5;
   }
 }

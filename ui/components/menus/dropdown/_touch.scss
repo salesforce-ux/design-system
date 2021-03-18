@@ -5,7 +5,7 @@
   &__item {
 
     > a {
-      @include border-box-line-height($height-tappable, 0);
+      line-height: border-box-line-height($height-tappable, 0);
       padding: 0 $spacing-small;
     }
   }

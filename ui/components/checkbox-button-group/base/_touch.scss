@@ -32,5 +32,5 @@
 
 .slds-checkbox_button,
 .slds-checkbox--button {
-  @include border-box-line-height($height-tappable);
+  line-height: border-box-line-height($height-tappable);
 }

@@ -1,5 +1,5 @@
 .slds-input {
-  @include border-box-line-height($height-tappable);
+  line-height: border-box-line-height($height-tappable);
 
   &[readonly] {
     font-size: $font-size-5;

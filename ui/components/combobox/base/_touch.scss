@@ -15,7 +15,7 @@
 
   .slds-listbox__option_plain,
   .slds-listbox__option--plain {
-    @include border-box-line-height($height-tappable, 0);
+    line-height: border-box-line-height($height-tappable, 0);
     padding-top: 0;
     padding-bottom: 0;
     align-items: center;
@@ -54,7 +54,7 @@
 .slds-has-object-switcher {
 
   .slds-combobox__input {
-    @include border-box-line-height($height-tappable, 0, $spacing-xxx-small * 2);
+    line-height: border-box-line-height($height-tappable, 0, $spacing-xxx-small * 2);
     min-height: $height-tappable;
   }
 }

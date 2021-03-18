@@ -61,3 +61,24 @@
 
   @return $number;
 }
+
+// Calculate value line-height as if it has box-sizing: border-box behavior
+// Useful for blueprints that rely on line-height for their overall height
+@function border-box-line-height($value, $border: $border-width-thin * 2, $padding: 0) {
+  @if unitless($border) {
+    $border: 0px; // stylelint-disable length-zero-no-unit
+  }
+  $box-model: 0;
+
+  @if comparable($border, $padding) {
+    $box-model: rem($border + $padding);
+  } @else {
+    $box-model: (rem($border) + $padding);
+  }
+
+  @if comparable($value, $box-model) {
+    @return ($value - $box-model);
+  } @else {
+    @return (rem($value) - $box-model);
+  }
+}

@@ -10,6 +10,10 @@
 
 - Added Kinetic styles and demo functionality for Button Base, Brand, Neutral, Inverse, Outline Brand, Destructive and Success
 
+### Changed
+
+- Changed `line-height` assignment in touch styles to use Styling Hook assignment of `--sds-c-button-line-height`.
+
 ## 2.14.0
 
 ### Added

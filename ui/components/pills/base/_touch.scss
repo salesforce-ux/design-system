@@ -1,5 +1,5 @@
 .slds-pill {
-  @include border-box-line-height($height-tappable-small);
+  line-height: border-box-line-height($height-tappable-small);
   padding: 0 $spacing-x-small;
 
   + .slds-pill {

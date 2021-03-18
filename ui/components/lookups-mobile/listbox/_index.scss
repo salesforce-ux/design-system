@@ -47,7 +47,7 @@
 }
 
 .slds-mobile-lookup__listbox_trigger {
-  @include border-box-line-height($height-tappable);
+  line-height: border-box-line-height($height-tappable);
   justify-content: unset;
   font-size: $font-size-5;
   font-weight: $font-weight-bold;

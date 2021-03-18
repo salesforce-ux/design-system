@@ -35,6 +35,8 @@
 ### [Buttons](https://www.lightningdesignsystem.com/components/buttons)
 #### Added
 - Added Kinetic styles and demo functionality for Button Base, Brand, Neutral, Inverse, Outline Brand, Destructive and Success
+#### Changed
+- Changed `line-height` assignment in touch styles to use Styling Hook assignment of `--sds-c-button-line-height`.
 
 ### [Drop Zone](https://www.lightningdesignsystem.com/components/drop-zone)
 #### Changed

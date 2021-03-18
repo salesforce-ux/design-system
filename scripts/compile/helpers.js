@@ -3,13 +3,14 @@
 
 const I = require('immutable-ext');
 const Either = require('data.either');
-const path = require('path');
 const { ui, variants } = require('../ui');
 
 const FOLDERNAME = '__internal';
 
-const webpackPath = prefix => filepath =>
-  path.join(prefix, filepath.replace(/^\.\//, '').concat('.js'));
+const webpackPath = prefix => filepath => {
+  const pathSegments = filepath.concat('.js').split('/');
+  return `${prefix}/${pathSegments.join('/')}`;
+};
 
 const setKeyIfExists = (keypath, fixFilePath) => (entry, item) =>
   Either.fromNullable(item.get(keypath)).fold(

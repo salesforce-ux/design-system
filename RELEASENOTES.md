@@ -98,6 +98,8 @@
 - Removed white `background-color` from `.slds-tabs_default` to expose surface color of the tabs parent container.
 - The `back` icon present in tabs on mobile has been replaced by `chevronleft`. This is an inherited change from panels and it makes the icon consistent between the drilled-in states.
 
+## Release 2.14.3 - March 18, 2021
+
 ## Release 2.14.2 - February 5, 2021
 
 ## Release 2.14.1 - January 8, 2021

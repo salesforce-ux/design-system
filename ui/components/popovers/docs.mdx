@@ -340,7 +340,7 @@ Panel Popovers can be shown on mouse hover but for keyboard or screen reader use
 <Blockquote header="A Note About z-index">
   <p>By default, Popovers use the <code>$z-index-dialog</code> (<a href="/design-tokens/#category-z-index">value of 6000</a>) token. This allows the Popover to appear above the element that triggered it, and in the vast majority of cases should work well out of the box. However, depending on where the Popover code lives when it's triggered, layout issues could arise.</p>
 
-  <p>For this particular use case, the <code>--slds-c-popover-zindex</code> <a href="/platforms/lightning/styling-hooks/">Styling Hook</a> allows developers to change the z-index value. <strong>Please note</strong>: when this value is changed, the responsibility is on the developer to maintain the CSS stacking order.</p>
+  <p>For this particular use case, the <code>--slds-c-popover-position-zindex</code> <a href="/platforms/lightning/styling-hooks/">Styling Hook</a> allows developers to change the z-index value. <strong>Please note</strong>: when this value is changed, the responsibility is on the developer to maintain the CSS stacking order.</p>
 </Blockquote>
 
 <StylingHooksTable name="popovers" type="component" />

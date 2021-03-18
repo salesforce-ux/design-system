@@ -4,6 +4,12 @@
 
 <!-- ## [Unreleased] -->
 
+## 2.15.0
+
+## Added
+
+- Responsive variant now grows to use up the available horizontal space.
+
 ## 2.13.1
 
 ### Fixed

@@ -40,6 +40,10 @@
 #### Changed
 - Changed `flex-basis` to `auto` for the drop zone label to fix a layout issue in IE11
 
+### [Dueling Picklist](https://www.lightningdesignsystem.com/components/dueling-picklist)
+## Added
+- Responsive variant now grows to use up the available horizontal space.
+
 ### [Icons](https://www.lightningdesignsystem.com/components/icons)
 #### Changed
 - Changed `product_quantity_rules` icon's color from light blue to salem green (#04844B)
@@ -80,6 +84,7 @@
 #### Added
 - Added light and dark Brand variants, including new selectors `.slds-popover_brand, .slds-popover_brand-dark, .slds-popover_brand-top, .slds-popover_brand-left, .slds-popover_brand-bottom, .slds-popover_brand-right`
 - Added new Prompt branded variants
+- Enabled styling hooks for popovers. See popovers' styling hooks overview table for a full listing of the currently available hooks.
 
 ### [Rich Text Editor](https://www.lightningdesignsystem.com/components/rich-text-editor)
 #### Added

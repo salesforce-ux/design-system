@@ -45,7 +45,7 @@
  * @restrict .slds-dueling-list__column
  */
 .slds-dueling-list__column_responsive {
-  flex: 0 1 $size-small;
+  flex: 1 1 $size-small;
   flex-wrap: wrap;
   overflow: hidden;
   min-width: $size-xx-small;

@@ -5,7 +5,8 @@ const pkg = require('./package.json');
 
 const yargs = require('yargs');
 
-const argv = yargs.option('type', {
+const argv = yargs
+  .option('type', {
     alias: 't',
     describe: 'provide the type of run (standard, legacy, mobile)',
     demandOption: true,
@@ -13,8 +14,7 @@ const argv = yargs.option('type', {
     type: 'string'
   })
   .help()
-  .alias('help', 'h')
-  .argv;
+  .alias('help', 'h').argv;
 
 let runType = '';
 
@@ -125,22 +125,24 @@ async function ask() {
       name: 'showLogs',
       message: `Would you like to show Applitools output logs?\n `
     }
-  ])
-    .catch(console.error);
-};
+  ]).catch(console.error);
+}
 
 const chalk = require('chalk');
-console.log(chalk.blue(`\n
+console.log(
+  chalk.blue(`\n
 ██████╗ ███████╗███████╗    ██╗   ██╗██████╗ ████████╗
 ██╔══██╗██╔════╝██╔════╝    ██║   ██║██╔══██╗╚══██╔══╝
 ██║  ██║███████╗█████╗      ██║   ██║██████╔╝   ██║
 ██║  ██║╚════██║██╔══╝      ╚██╗ ██╔╝██╔══██╗   ██║
 ██████╔╝███████║███████╗     ╚████╔╝ ██║  ██║   ██║
-╚═════╝ ╚══════╝╚══════╝      ╚═══╝  ╚═╝  ╚═╝   ╚═╝  \n`));
+╚═════╝ ╚══════╝╚══════╝      ╚═══╝  ╚═╝  ╚═╝   ╚═╝  \n`)
+);
 
 // Special note when running mobile VRT
 if (argv.type === 'mobile') {
-  console.log(chalk.inverse(`
+  console.log(
+    chalk.inverse(`
 ╓───────────────────────────────────────────────────────╖
 ║                                                       ║
 ║   Please keep in mind that the mobile                 ║
@@ -150,14 +152,17 @@ if (argv.type === 'mobile') {
 ║   > npm run start:mobile                              ║
 ║                                                       ║
 ╙───────────────────────────────────────────────────────╜
-\n`));
+\n`)
+  );
 }
 
 ask().then(async answers => {
   const template = require(`./applitools.${runType}config`);
 
   // add proper full "kind" search regular expression
-  answers.testBlueprintPattern = `${answers.testKindPattern}${answers.testKindSubPattern}$`;
+  answers.testBlueprintPattern = `${answers.testKindPattern}${
+    answers.testKindSubPattern
+  }$`;
 
   const userConfig = Object.keys(answers).reduce((acc, key) => {
     if (key in template) {
@@ -168,24 +173,26 @@ ask().then(async answers => {
 
   const config = Object.assign(template, userConfig);
 
-  const parsedConfig = Object.keys(config).map(key => {
-    const value = config[key];
-    const type = typeof value;
+  const parsedConfig = Object.keys(config)
+    .map(key => {
+      const value = config[key];
+      const type = typeof value;
 
-    if (type === 'object') {
-      return `${key}: ${JSON.stringify(value, null, 4)}`;
-    } else if (type === 'string') {
-      return `${key}: '${value}'`
-    } else {
-      return `${key}: ${value}`;
-    }
-  }).join(',\n  ');
+      if (type === 'object') {
+        return `${key}: ${JSON.stringify(value, null, 4)}`;
+      } else if (type === 'string') {
+        return `${key}: '${value}'`;
+      } else {
+        return `${key}: ${value}`;
+      }
+    })
+    .join(',\n  ');
 
   const configExport = `
 module.exports = {
   ${parsedConfig}
 }
-  `
+  `;
 
   await fs.writeFile(`./applitools.${runType}config.local.js`, configExport);
 });

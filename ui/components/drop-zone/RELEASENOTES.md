@@ -4,6 +4,12 @@
 
 <!-- ## [Unreleased] -->
 
+## 2.15.0
+
+### Changed
+
+- Changed `flex-basis` to `auto` for the drop zone label to fix a layout issue in IE11
+
 ## 2.7.0
 
 ### Added

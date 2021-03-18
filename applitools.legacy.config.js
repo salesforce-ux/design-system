@@ -13,15 +13,11 @@ module.exports = {
     guidelinesVersion: 'WCAG_2_0'
   },
   properties: [{ name: 'Group', value: 'legacy' }],
-  batchName: process.env.CI
-        ? undefined
-        : '',
+  batchName: process.env.CI ? undefined : '',
   branchName: process.env.CI
     ? undefined
     : `localRun/${process.env.LOGNAME}/${currentBranch}`,
-  parentBranchName: process.env.CI
-        ? undefined
-        : `localRun/${currentBranch}`,
+  parentBranchName: process.env.CI ? undefined : `localRun/${currentBranch}`,
   showLogs: process.env.CI || false,
   showStorybookOutput: process.env.CI || false,
   // saveDebugData: false,
@@ -30,8 +26,11 @@ module.exports = {
   serverUrl: 'https://salesforceuxeyesapi.applitools.com',
   testBlueprintPattern: '.*',
   testNamePattern: '^Kitchen Sink',
-  include: function ({ name, kind, parameters }) {
-    return new RegExp(this.testBlueprintPattern, 'gi').test(kind) && new RegExp(this.testNamePattern, 'gi').test(name);
+  include: function({ name, kind, parameters }) {
+    return (
+      new RegExp(this.testBlueprintPattern, 'gi').test(kind) &&
+      new RegExp(this.testNamePattern, 'gi').test(name)
+    );
   },
   puppeteerOptions: process.env.CIRCLECI
     ? { executablePath: '/usr/bin/google-chrome' }

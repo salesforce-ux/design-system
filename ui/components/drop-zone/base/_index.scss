@@ -64,6 +64,10 @@
     opacity: 0;
     background: $color-background-brand-primary;
   }
+
+  .slds-media__body {
+    flex-basis: auto; // Fix IE11 bug
+  }
 }
 
 /**

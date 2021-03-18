@@ -36,6 +36,10 @@
 #### Added
 - Added Kinetic styles and demo functionality for Button Base, Brand, Neutral, Inverse, Outline Brand, Destructive and Success
 
+### [Drop Zone](https://www.lightningdesignsystem.com/components/drop-zone)
+#### Changed
+- Changed `flex-basis` to `auto` for the drop zone label to fix a layout issue in IE11
+
 ### [Icons](https://www.lightningdesignsystem.com/components/icons)
 #### Changed
 - Changed `product_quantity_rules` icon's color from light blue to salem green (#04844B)

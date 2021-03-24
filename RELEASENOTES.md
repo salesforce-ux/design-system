@@ -46,6 +46,10 @@
 ## Added
 - Responsive variant now grows to use up the available horizontal space.
 
+### [Expandable Section](https://www.lightningdesignsystem.com/components/expandable-section)
+#### Fixed
+- Added missing annotation for `.slds-section__title-action-icon`
+
 ### [Icons](https://www.lightningdesignsystem.com/components/icons)
 #### Changed
 - Changed `product_quantity_rules` icon's color from light blue to salem green (#04844B)

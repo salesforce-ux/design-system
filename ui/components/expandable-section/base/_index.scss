@@ -71,6 +71,12 @@
     height: 0;
   }
 
+  /**
+   * @summary The icon element adjacent to the title
+   *
+   * @selector .slds-section__title-action-icon
+   * @restrict .slds-section__title-action
+   */
   &__title-action-icon {
     transform: rotate(-90deg);
   }

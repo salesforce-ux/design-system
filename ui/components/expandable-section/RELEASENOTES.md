@@ -4,6 +4,12 @@
 
 <!-- ## [Unreleased] -->
 
+## 2.15.0
+
+### Fixed
+
+- Added missing annotation for `.slds-section__title-action-icon`
+
 ## 2.7.0
 
 ### Changed

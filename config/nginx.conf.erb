@@ -26,6 +26,9 @@ http {
   # Must read the body in 5 seconds.
   client_body_timeout <%= ENV['NGINX_CLIENT_BODY_TIMEOUT'] || 5 %>;
 
+  # CACHING
+  proxy_cache_path cache/nginx levels=1:2 keys_zone=STATIC:10m inactive=7d use_temp_path=off;
+
   # handle SNI
   proxy_ssl_server_name on;
   # resolver needs to be set because we're using dynamic proxy_pass
@@ -43,6 +46,11 @@ http {
     error_page 404 /404.html;
 
     port_in_redirect off;
+
+    gzip on;
+    gzip_proxied any;
+    gzip_comp_level 4;
+    gzip_types text/css application/javascript image/svg+xml;
 
     # Redirect all non-SSL requests
     if ($http_x_forwarded_proto != 'https') {
@@ -63,6 +71,11 @@ http {
     error_page 404 /404.html;
 
     port_in_redirect off;
+
+    gzip on;
+    gzip_proxied any;
+    gzip_comp_level 4;
+    gzip_types text/css application/javascript image/svg+xml;
 
     # Redirect all non-SSL requests
     if ($http_x_forwarded_proto != 'https') {
@@ -100,6 +113,12 @@ http {
     }
 
     root /app/.www;
+
+    location /assets {
+      proxy_cache STATIC;
+      proxy_ignore_headers Cache-Control;
+      proxy_cache_valid 60m;
+    }
 
     location / {
       index  index.html index.htm;

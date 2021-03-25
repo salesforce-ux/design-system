@@ -3,6 +3,7 @@ const glob = require('fast-glob');
 const css = require('css');
 const { readFileSync } = require('fs-extra');
 
+const { filterObject } = require('../shared/utils/objects');
 const { compileModularCSS } = require('./compile/modular-css');
 const { propTypes } = require('./var-metadata');
 
@@ -12,6 +13,7 @@ const { propTypes } = require('./var-metadata');
 const extractVarsFromSLDS = (props = {}) => {
   const { callback, suppressOutput } = props;
   const cssFolderExists = fs.existsSync('./.generated/css');
+  const varsAllowPattern = /^--sds-c/;
 
   // if there's no css folder yet, generate it!
   if (!cssFolderExists) {
@@ -39,7 +41,9 @@ const extractVarsFromSLDS = (props = {}) => {
 
     cssFiles.map(filename => {
       const cssContent = readFileSync(filename).toString();
-      const fileVars = extractVarsFromCSS(cssContent);
+      const fileVars = extractVarsFromCSS(cssContent, {
+        allowPattern: varsAllowPattern
+      });
 
       if (Object.keys(fileVars).length > 0) {
         varsData = Object.assign(fileVars, varsData);
@@ -67,9 +71,10 @@ const extractVarsFromSLDS = (props = {}) => {
  * @param {string} cssData
  * @returns {object}
  */
-const extractVarsFromCSS = cssContent => {
+const extractVarsFromCSS = (cssContent, options = {}) => {
   const ast = css.parse(cssContent);
   const rules = ast.stylesheet.rules.filter(rule => rule.type === 'rule');
+  const { allowPattern } = options;
   let list = {};
 
   rules.map(rule => {
@@ -121,7 +126,9 @@ const extractVarsFromCSS = cssContent => {
     }
   });
 
-  return list;
+  return allowPattern
+    ? filterObject(list, key => RegExp(allowPattern).test(key))
+    : list;
 };
 
 module.exports = {

@@ -86,7 +86,7 @@
     - Footer top border changed to match default popover border color and width
 - Walkthrough variant
     - Removed header background image
-    - Changed footer background color to `$palette-blue-20`
+    - Footer background color is now explicitly set to transparent
 #### Added
 - Added light and dark Brand variants, including new selectors `.slds-popover_brand, .slds-popover_brand-dark, .slds-popover_brand-top, .slds-popover_brand-left, .slds-popover_brand-bottom, .slds-popover_brand-right`
 - Added new Prompt branded variants

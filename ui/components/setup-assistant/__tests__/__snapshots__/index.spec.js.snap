@@ -251,6 +251,7 @@ exports[`Setup Assistant  renders a setup assistant step with the title as a but
               aria-controls="test-detail-action-1"
               aria-expanded="false"
               className="slds-button slds-button_reset"
+              onClick={[Function]}
             >
               Configure user settings for this org
             </button>
@@ -340,6 +341,7 @@ exports[`Setup Assistant  renders a setup assistant step with title button and a
               aria-controls="test-detail-action-1"
               aria-expanded="true"
               className="slds-button slds-button_reset"
+              onClick={[Function]}
             >
               Configure user settings for this org
             </button>
@@ -492,6 +494,7 @@ exports[`Setup Assistant  renders a step detail 1`] = `
           >
             <button
               className="slds-button slds-button_outline-brand"
+              onClick={[Function]}
             >
               Add Users
             </button>

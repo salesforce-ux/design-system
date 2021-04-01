@@ -4112,124 +4112,132 @@ exports[`Global Actions Bar renders favorites item with dialog menu 1`] = `
       id="dialog-body-id-1"
     >
       <div
-        aria-orientation={null}
-        id="listbox-unique-id"
-        role="listbox"
+        className="slds-media"
       >
-        <ul
-          aria-label="My Favorites"
-          className="slds-listbox slds-listbox_vertical slds-dropdown_length-10"
-          role="group"
+        <div
+          className="slds-media__body"
         >
-          <li
-            className="slds-listbox__item"
-            role="presentation"
+          <div
+            aria-orientation={null}
+            id="listbox-unique-id"
+            role="listbox"
           >
-            <div
-              className="slds-media slds-listbox__option slds-listbox__option_plain"
-              role="presentation"
+            <ul
+              aria-label="My Favorites"
+              className="slds-listbox slds-listbox_vertical slds-dropdown_length-10"
+              role="group"
             >
-              <h3
-                className="slds-listbox__option-header"
+              <li
+                className="slds-listbox__item"
                 role="presentation"
               >
-                My Favorites
-              </h3>
-            </div>
-          </li>
-          <li
-            className="slds-listbox__item"
-            role="presentation"
-          >
-            <div
-              className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
-              id="listbox-option-id-1"
-              role="option"
-              tabIndex="0"
-            >
-              <span
-                className="slds-media__figure"
-              >
-                <span
-                  className="slds-icon_container slds-icon-standard-account"
-                  title={null}
+                <div
+                  className="slds-media slds-listbox__option slds-listbox__option_plain"
+                  role="presentation"
                 >
-                  <svg
-                    aria-hidden={true}
-                    className="slds-icon slds-icon_small"
+                  <h3
+                    className="slds-listbox__option-header"
+                    role="presentation"
                   >
-                    <use
-                      xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#account"
-                    />
-                  </svg>
-                </span>
-              </span>
-              <span
-                className="slds-media__body"
+                    My Favorites
+                  </h3>
+                </div>
+              </li>
+              <li
+                className="slds-listbox__item"
+                role="presentation"
               >
-                <span
-                  className="slds-listbox__option-text slds-listbox__option-text_entity"
+                <div
+                  className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
+                  id="listbox-option-id-1"
+                  role="option"
+                  tabIndex="0"
                 >
-                  Acme
-                </span>
-                <span
-                  className="slds-listbox__option-meta slds-listbox__option-meta_entity"
-                >
-                  Account
-                   •
-                   
-                   San Francisco
-                </span>
-              </span>
-            </div>
-          </li>
-          <li
-            className="slds-listbox__item"
-            role="presentation"
-          >
-            <div
-              className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
-              id="listbox-option-id-2"
-              role="option"
-              tabIndex={null}
-            >
-              <span
-                className="slds-media__figure"
-              >
-                <span
-                  className="slds-icon_container slds-icon-standard-account"
-                  title={null}
-                >
-                  <svg
-                    aria-hidden={true}
-                    className="slds-icon slds-icon_small"
+                  <span
+                    className="slds-media__figure"
                   >
-                    <use
-                      xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#account"
-                    />
-                  </svg>
-                </span>
-              </span>
-              <span
-                className="slds-media__body"
+                    <span
+                      className="slds-icon_container slds-icon-standard-account"
+                      title={null}
+                    >
+                      <svg
+                        aria-hidden={true}
+                        className="slds-icon slds-icon_small"
+                      >
+                        <use
+                          xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#account"
+                        />
+                      </svg>
+                    </span>
+                  </span>
+                  <span
+                    className="slds-media__body"
+                  >
+                    <span
+                      className="slds-listbox__option-text slds-listbox__option-text_entity"
+                    >
+                      Acme
+                    </span>
+                    <span
+                      className="slds-listbox__option-meta slds-listbox__option-meta_entity"
+                    >
+                      Account
+                       •
+                       
+                       San Francisco
+                    </span>
+                  </span>
+                </div>
+              </li>
+              <li
+                className="slds-listbox__item"
+                role="presentation"
               >
-                <span
-                  className="slds-listbox__option-text slds-listbox__option-text_entity"
+                <div
+                  className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
+                  id="listbox-option-id-2"
+                  role="option"
+                  tabIndex={null}
                 >
-                  Edge SLA
-                </span>
-                <span
-                  className="slds-listbox__option-meta slds-listbox__option-meta_entity"
-                >
-                  Account
-                   •
-                   
-                   San Francisco
-                </span>
-              </span>
-            </div>
-          </li>
-        </ul>
+                  <span
+                    className="slds-media__figure"
+                  >
+                    <span
+                      className="slds-icon_container slds-icon-standard-account"
+                      title={null}
+                    >
+                      <svg
+                        aria-hidden={true}
+                        className="slds-icon slds-icon_small"
+                      >
+                        <use
+                          xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#account"
+                        />
+                      </svg>
+                    </span>
+                  </span>
+                  <span
+                    className="slds-media__body"
+                  >
+                    <span
+                      className="slds-listbox__option-text slds-listbox__option-text_entity"
+                    >
+                      Edge SLA
+                    </span>
+                    <span
+                      className="slds-listbox__option-meta slds-listbox__option-meta_entity"
+                    >
+                      Account
+                       •
+                       
+                       San Francisco
+                    </span>
+                  </span>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
     <footer

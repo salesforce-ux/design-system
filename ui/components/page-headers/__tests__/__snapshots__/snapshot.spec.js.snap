@@ -840,6 +840,7 @@ exports[`Renders a page header renders deprecated record home page header 1`] = 
       <button
         aria-live="assertive"
         className="slds-button slds-button_neutral slds-button_stateful slds-not-selected"
+        onClick={[Function]}
       >
         <span
           className="slds-text-not-selected"
@@ -1611,6 +1612,7 @@ exports[`Renders a page header renders object home page header 1`] = `
             <li>
               <button
                 className="slds-button slds-button_neutral"
+                onClick={[Function]}
               >
                 New
               </button>
@@ -1905,6 +1907,7 @@ exports[`Renders a page header renders record home page header 1`] = `
           <button
             aria-live="assertive"
             className="slds-button slds-button_neutral slds-button_stateful slds-not-selected"
+            onClick={[Function]}
           >
             <span
               className="slds-text-not-selected"
@@ -1956,6 +1959,7 @@ exports[`Renders a page header renders record home page header 1`] = `
             <li>
               <button
                 className="slds-button slds-button_neutral"
+                onClick={[Function]}
               >
                 Edit
               </button>
@@ -1963,6 +1967,7 @@ exports[`Renders a page header renders record home page header 1`] = `
             <li>
               <button
                 className="slds-button slds-button_neutral"
+                onClick={[Function]}
               >
                 Delete
               </button>
@@ -1970,6 +1975,7 @@ exports[`Renders a page header renders record home page header 1`] = `
             <li>
               <button
                 className="slds-button slds-button_neutral"
+                onClick={[Function]}
               >
                 Clone
               </button>
@@ -2192,6 +2198,7 @@ exports[`Renders a page header renders related list home page header 1`] = `
             <li>
               <button
                 className="slds-button slds-button_neutral"
+                onClick={[Function]}
               >
                 Add Contact
               </button>
@@ -2435,6 +2442,7 @@ exports[`Renders a page header renders vertical record home page header 1`] = `
       <button
         aria-live="assertive"
         className="slds-button slds-button_neutral slds-button_stateful slds-not-selected"
+        onClick={[Function]}
       >
         <span
           className="slds-text-not-selected"
@@ -2482,6 +2490,7 @@ exports[`Renders a page header renders vertical record home page header 1`] = `
         <li>
           <button
             className="slds-button slds-button_neutral"
+            onClick={[Function]}
           >
             Edit
           </button>
@@ -2489,6 +2498,7 @@ exports[`Renders a page header renders vertical record home page header 1`] = `
         <li>
           <button
             className="slds-button slds-button_neutral"
+            onClick={[Function]}
           >
             Delete
           </button>

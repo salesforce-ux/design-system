@@ -324,7 +324,7 @@ export let InteractiveColumnHeader = props => {
       {props.sortDirection && (
         <span
           className="slds-assistive-text"
-          aria-live="assertive"
+          aria-live="polite"
           aria-atomic="true"
         >
           Sorted {props.sortDirection}

@@ -267,6 +267,8 @@ jobs:
     resource_class: small
 
     steps:
+      - checkout
+
       - run:
           name: Trigger database update via API
           command: |
@@ -538,4 +540,3 @@ workflows:
             - vrt-desktop
             - vrt-mobile
             - vrt-legacy
-

@@ -268,15 +268,13 @@ jobs:
 
     steps:
       - checkout
-      - attach_workspace:
-          at: workspace
 
       - run:
           name: Trigger database update via API
           command: |
             export VERSION_FROM_TAG=$([[ ${CIRCLE_TAG} =~ ^v.* ]] && echo ${CIRCLE_TAG:1:20} || echo ${CIRCLE_TAG})
-            export SALESFORCE_VERSION=$(cat workspace/package.json | jq -r .slds.id)
-            export VERSION_FROM_PACKAGE=$(cat workspace/package.json | jq -r .version)
+            export SALESFORCE_VERSION=$(cat package.json | jq -r .slds.id)
+            export VERSION_FROM_PACKAGE=$(cat package.json | jq -r .version)
             curl --location --request PATCH 'https://api.lightningdesignsystem.com/v1/release' \
             --header 'Content-Type: application/json' \
             --header 'Authorization: Bearer ${DSE_API_RELEASE_TOKEN}' \
@@ -542,4 +540,3 @@ workflows:
             - vrt-desktop
             - vrt-mobile
             - vrt-legacy
-

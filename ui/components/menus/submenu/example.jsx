@@ -69,19 +69,17 @@ export const Context = props => (
   </div>
 );
 
-export const Submenu = props => (
-  <Trigger className="slds-is-open">
+export const Submenu = ({ ariaExpanded, parentIsOpen, submenuClassnames }) => (
+  <Trigger isOpen={parentIsOpen}>
     <Menu className="slds-dropdown_left">
       <MenuList ariaLabel="Show More">
         <MenuItem tabIndex="0">Menu Item One</MenuItem>
         <MenuItem>Menu Item Two</MenuItem>
         <MenuItemHasSubmenu
-          ariaExpanded={props.ariaExpanded}
+          ariaExpanded={ariaExpanded}
           iconRight={RightIcon}
           itemName="Menu Item Three"
-          submenuClassnames={
-            props.submenuClassnames || 'slds-dropdown_submenu-right'
-          }
+          submenuClassnames={submenuClassnames || 'slds-dropdown_submenu-right'}
         />
       </MenuList>
     </Menu>
@@ -92,4 +90,4 @@ export const Submenu = props => (
 // Export
 /// ///////////////////////////////////////////
 
-export default <Submenu ariaExpanded />;
+export default <Submenu parentIsOpen ariaExpanded />;

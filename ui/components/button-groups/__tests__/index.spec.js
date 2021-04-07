@@ -33,7 +33,7 @@ it('renders a button group with overflow open', () =>
         <Button isNeutral>Refresh</Button>
         <Button isNeutral>Edit</Button>
         <Button isNeutral>Save</Button>
-        <Trigger className="slds-button_last slds-is-open">
+        <Trigger className="slds-button_last" isOpen>
           <Menu className="slds-dropdown_right slds-dropdown_actions">
             <MenuList>
               <MenuItem tabIndex="0">Overflow Item One</MenuItem>

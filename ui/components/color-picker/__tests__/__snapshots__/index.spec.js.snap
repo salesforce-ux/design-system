@@ -5390,6 +5390,7 @@ exports[`renders a swatches only color picker 1`] = `
   className="slds-dropdown-trigger slds-dropdown-trigger_click"
 >
   <button
+    aria-expanded="false"
     aria-haspopup="true"
     className="slds-button slds-button_icon slds-button_icon-border-filled"
     onClick={[Function]}
@@ -7560,6 +7561,7 @@ exports[`renders an opened swatches only color picker 1`] = `
     className="slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open"
   >
     <button
+      aria-expanded="true"
       aria-haspopup="true"
       className="slds-button slds-button_icon slds-button_icon-border-filled"
       onClick={[Function]}

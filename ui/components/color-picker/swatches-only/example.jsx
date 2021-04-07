@@ -23,7 +23,7 @@ export const states = [
     label: 'Open',
     element: (
       <div style={{ height: '12rem' }}>
-        <Trigger className="slds-is-open">
+        <Trigger isOpen>
           <div className="slds-dropdown slds-dropdown_left">
             <div className="slds-color-picker slds-color-picker_swatches-only">
               <div className="slds-color-picker__selector">

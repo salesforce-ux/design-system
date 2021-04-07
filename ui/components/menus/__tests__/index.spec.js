@@ -21,9 +21,10 @@ describe('Base Menu', () => {
 });
 
 describe('Menu with submenu', () => {
-  it('renders a closed submenu', () => matchesMarkup(<Submenu />));
+  it('renders a closed submenu', () => matchesMarkup(<Submenu parentIsOpen />));
 
-  it('renders an open submenu', () => matchesMarkup(<Submenu ariaExpanded />));
+  it('renders an open submenu', () =>
+    matchesMarkup(<Submenu parentIsOpen ariaExpanded />));
 });
 
 describe('MenuItem', () => {

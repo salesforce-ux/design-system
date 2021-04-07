@@ -65,7 +65,7 @@ export let states = [
         <Button isNeutral>Refresh</Button>
         <Button isNeutral>Edit</Button>
         <Button isNeutral>Save</Button>
-        <Trigger className="slds-button_last" ariaExpanded="false" />
+        <Trigger className="slds-button_last" />
       </ButtonGroup>
     )
   },
@@ -78,7 +78,7 @@ export let states = [
           <Button isNeutral>Refresh</Button>
           <Button isNeutral>Edit</Button>
           <Button isNeutral>Save</Button>
-          <Trigger className="slds-button_last slds-is-open">
+          <Trigger className="slds-button_last" isOpen>
             <Menu className="slds-dropdown_right slds-dropdown_actions">
               <MenuList>
                 <MenuItem tabIndex="0">Overflow Item One</MenuItem>

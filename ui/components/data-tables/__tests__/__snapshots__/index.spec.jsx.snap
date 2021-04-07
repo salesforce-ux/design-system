@@ -1691,15 +1691,15 @@ exports[`AdvancedDataTableHead component should set sort direction 1`] = `
           <input
             aria-labelledby="check-select-all-label column-group-header"
             defaultChecked={null}
-            id="checkbox-unique-id-15"
+            id="checkbox-unique-id-1"
             name="options"
             tabIndex="-1"
             type="checkbox"
-            value="checkbox-unique-id-15"
+            value="checkbox-unique-id-1"
           />
           <label
             className="slds-checkbox__label"
-            htmlFor="checkbox-unique-id-15"
+            htmlFor="checkbox-unique-id-1"
             id="check-select-all-label"
           >
             <span
@@ -1763,7 +1763,7 @@ exports[`AdvancedDataTableHead component should set sort direction 1`] = `
       </a>
       <span
         aria-atomic="true"
-        aria-live="assertive"
+        aria-live="polite"
         className="slds-assistive-text"
       >
         Sorted 
@@ -1775,7 +1775,7 @@ exports[`AdvancedDataTableHead component should set sort direction 1`] = `
         <input
           aria-label="Name column width"
           className="slds-resizable__input slds-assistive-text"
-          id="cell-resize-handle-21"
+          id="cell-resize-handle-1"
           max="1000"
           min="20"
           tabIndex="-1"
@@ -3298,7 +3298,7 @@ Array [
   </a>,
   <span
     aria-atomic="true"
-    aria-live="assertive"
+    aria-live="polite"
     className="slds-assistive-text"
   >
     Sorted 
@@ -3310,7 +3310,7 @@ Array [
     <input
       aria-label="Column Name column width"
       className="slds-resizable__input slds-assistive-text"
-      id="cell-resize-handle-7"
+      id="cell-resize-handle-1"
       max="1000"
       min="20"
       tabIndex="-1"

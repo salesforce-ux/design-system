@@ -633,6 +633,7 @@ exports[`Renders a page header renders deprecated object home page header 1`] = 
         className="slds-dropdown-trigger slds-dropdown-trigger_click slds-m-left_x-small"
       >
         <button
+          aria-expanded="false"
           aria-haspopup="true"
           className="slds-button slds-button_icon slds-button_icon-more"
           onClick={[Function]}
@@ -665,6 +666,7 @@ exports[`Renders a page header renders deprecated object home page header 1`] = 
         className="slds-dropdown-trigger slds-dropdown-trigger_click slds-m-left_xx-small"
       >
         <button
+          aria-expanded="false"
           aria-haspopup="true"
           className="slds-button slds-button_icon slds-button_icon-more"
           onClick={[Function]}
@@ -1121,6 +1123,7 @@ exports[`Renders a page header renders deprecated related list home page header 
         className="slds-dropdown-trigger slds-dropdown-trigger_click"
       >
         <button
+          aria-expanded="false"
           aria-haspopup="true"
           className="slds-button slds-button_icon slds-button_icon-more"
           onClick={[Function]}
@@ -1195,6 +1198,7 @@ exports[`Renders a page header renders deprecated related list home page header 
           className="slds-dropdown-trigger slds-dropdown-trigger_click slds-button_last"
         >
           <button
+            aria-expanded="false"
             aria-haspopup="true"
             className="slds-button slds-button_icon slds-button_icon-more"
             onClick={[Function]}
@@ -1673,6 +1677,7 @@ exports[`Renders a page header renders object home page header 1`] = `
             className="slds-dropdown-trigger slds-dropdown-trigger_click"
           >
             <button
+              aria-expanded="false"
               aria-haspopup="true"
               className="slds-button slds-button_icon slds-button_icon-more"
               onClick={[Function]}
@@ -1709,6 +1714,7 @@ exports[`Renders a page header renders object home page header 1`] = `
             className="slds-dropdown-trigger slds-dropdown-trigger_click"
           >
             <button
+              aria-expanded="false"
               aria-haspopup="true"
               className="slds-button slds-button_icon slds-button_icon-more"
               onClick={[Function]}
@@ -2259,6 +2265,7 @@ exports[`Renders a page header renders related list home page header 1`] = `
             className="slds-dropdown-trigger slds-dropdown-trigger_click"
           >
             <button
+              aria-expanded="false"
               aria-haspopup="true"
               className="slds-button slds-button_icon slds-button_icon-more"
               onClick={[Function]}
@@ -2341,6 +2348,7 @@ exports[`Renders a page header renders related list home page header 1`] = `
                 className="slds-dropdown-trigger slds-dropdown-trigger_click"
               >
                 <button
+                  aria-expanded="false"
                   aria-haspopup="true"
                   className="slds-button slds-button_icon slds-button_icon-more"
                   onClick={[Function]}

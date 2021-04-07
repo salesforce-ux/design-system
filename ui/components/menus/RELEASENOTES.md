@@ -4,6 +4,12 @@
 
 <!-- ## [Unreleased] -->
 
+## 2.15.1
+
+### Added
+
+- Added `aria-expanded` attribute to menu triggers with value dependent on menu's open state
+
 ## 2.14.0
 
 ### Changed

@@ -2,6 +2,12 @@
 
 # Progress Ring Release Notes
 
+## 2.15.1
+
+### Changed
+
+- Completed progress rings now use `color-background-success-dark` design token.
+
 ## 2.13.0
 
 ### Changed

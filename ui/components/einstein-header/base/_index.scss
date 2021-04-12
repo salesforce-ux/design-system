@@ -1,6 +1,7 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
+// Annotation in cards/einstein/index.scss
 .slds-einstein-header {
   position: relative;
   background-color: $einstein-header-background-color;
@@ -18,8 +19,13 @@
     color: currentColor;
   }
 
-  &__figure,
-  &__figure:last-child {
+  /**
+   * @summary Einstein themed card header figure
+   * @selector .slds-einstein-header__figure
+   * @restrict .slds-einstein-header
+  */
+  .slds-einstein-header__figure,
+  .slds-einstein-header__figure:last-child {
     margin-bottom: calc((#{$spacing-small} + 5px) * -1);
     height: rem(76px);
     background-image: url($einstein-header-figure);
@@ -27,7 +33,12 @@
     background-repeat: no-repeat;
   }
 
-  &__actions {
+  /**
+   * @summary Einstein themed card header actions
+   * @selector .slds-einstein-header__actions
+   * @restrict .slds-einstein-header
+  */
+  .slds-einstein-header__actions {
     padding-left: $spacing-medium;
     display: flex;
     align-items: center;
@@ -40,6 +51,7 @@
   }
 }
 
+// Annotation in popovers/einstein/index.scss
 .slds-popover_einstein {
 
   &.slds-nubbin_top,

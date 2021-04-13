@@ -9372,6 +9372,44 @@ exports[`treegrid treegrid component should render 1`] = `
 </table>
 `;
 
+exports[`treegrid treegrid component should render a caption with aria-label 1`] = `
+<table
+  aria-label="Example caption"
+  aria-multiselectable={null}
+  className="slds-table slds-table_edit slds-tree slds-table_tree"
+  role="treegrid"
+>
+  <tr />
+</table>
+`;
+
+exports[`treegrid treegrid component should render a caption with aria-labelledby 1`] = `
+Array [
+  <h2
+    id="element-with-table-label"
+  >
+    Example tree grid
+  </h2>,
+  <h3
+    id="other-element-with-table-label"
+  >
+    Using 
+    <code>
+      aria-labelledby
+    </code>
+    , instead of aria-label
+  </h3>,
+  <table
+    aria-labelledby="element-with-table-label other-element-with-table-label"
+    aria-multiselectable={null}
+    className="slds-table slds-table_edit slds-tree slds-table_tree"
+    role="treegrid"
+  >
+    <tr />
+  </table>,
+]
+`;
+
 exports[`treegrid treegrid component should set aria-multiselectable to true 1`] = `
 <table
   aria-multiselectable="true"

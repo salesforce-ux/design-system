@@ -148,6 +148,7 @@ let ProductList = props => (
         isResizable
         selectionType="multiple"
         type="advanced"
+        ariaLabel="Example product list"
       >
         <THead>
           <THeadTr>
@@ -175,6 +176,7 @@ let SingleColumnProductList = props => {
           isBordered
           selectionType="multiple"
           type="advanced"
+          ariaLabel="Example single column product list"
         >
           <THead isHidden={props.hasHiddenHeader}>
             <THeadTr>

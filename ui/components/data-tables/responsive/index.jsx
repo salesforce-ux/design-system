@@ -123,7 +123,12 @@ RowData.propTypes = {
 /// ///////////////////////////////////////////
 
 export const Stacked = props => (
-  <Table isBordered isResponsiveStacked type="base">
+  <Table
+    isBordered
+    isResponsiveStacked
+    type="base"
+    ariaLabel="Example stacked table"
+  >
     <THead>
       <HeadRowData />
     </THead>
@@ -135,7 +140,12 @@ export const Stacked = props => (
 );
 
 export const Horizontal = props => (
-  <Table isBordered isResponsive type="base">
+  <Table
+    isBordered
+    isResponsive
+    type="base"
+    ariaLabel="Example horizontal table"
+  >
     <THead>
       <HeadRowData />
     </THead>

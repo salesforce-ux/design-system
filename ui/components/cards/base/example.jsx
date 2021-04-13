@@ -29,7 +29,14 @@ const headerAction = (
 );
 
 const bodyTable = (
-  <Table isFixedLayout isBordered hasNoRowHover hasCellBuffer type="advanced">
+  <Table
+    isFixedLayout
+    isBordered
+    hasNoRowHover
+    hasCellBuffer
+    type="advanced"
+    ariaLabel="Example table in a Card"
+  >
     <THead>
       <THeadTr>
         <ColumnTh>

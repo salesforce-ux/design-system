@@ -61,6 +61,26 @@ describe('treegrid', () => {
           <tr />
         </TreeGrid>
       ));
+
+    it('should render a caption with aria-label', () =>
+      matchesMarkup(
+        <TreeGrid ariaLabel="Example caption">
+          <tr />
+        </TreeGrid>
+      ));
+
+    it('should render a caption with aria-labelledby', () =>
+      matchesMarkup(
+        <>
+          <h2 id="element-with-table-label">Example tree grid</h2>
+          <h3 id="other-element-with-table-label">
+            Using <code>aria-labelledby</code>, instead of aria-label
+          </h3>
+          <TreeGrid ariaLabelledBy="element-with-table-label other-element-with-table-label">
+            <tr />
+          </TreeGrid>
+        </>
+      ));
   });
 
   describe('row', () => {

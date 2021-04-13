@@ -91,6 +91,25 @@ describe('Data table component', () => {
 
   it('should render a table with passed styles', () =>
     matchesMarkup(<Table style={{ width: '10rem' }} type="base" />));
+
+  it('should render a table with a caption with aria-label', () =>
+    matchesMarkup(<Table type="base" ariaLabel="Example caption" />));
+
+  it('should render a table with a caption with aria-labelledby', () =>
+    matchesMarkup(
+      <>
+        <h2 id="element-with-table-label">
+          Example data table of Opportunities
+        </h2>
+        <h3 id="other-element-with-table-label">
+          Using <code>aria-labelledby</code>, instead of aria-label
+        </h3>
+        <Table
+          type="base"
+          ariaLabelledBy="element-with-table-label other-element-with-table-label"
+        />
+      </>
+    ));
 });
 
 describe('THead Component', () => {

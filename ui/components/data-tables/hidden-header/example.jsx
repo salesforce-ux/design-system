@@ -19,7 +19,13 @@ import {
 /// ///////////////////////////////////////////
 
 export default (
-  <Table isBordered hasCellBuffer hasHiddenHeader type="base">
+  <Table
+    isBordered
+    hasCellBuffer
+    hasHiddenHeader
+    type="base"
+    ariaLabel="Example table of Opportunities with hidden header"
+  >
     <THead isHidden>
       <THeadTr>
         <ColumnTh>

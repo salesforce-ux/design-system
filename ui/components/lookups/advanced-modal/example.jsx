@@ -54,6 +54,7 @@ export default (
             className="slds-table slds-table_bordered slds-table_cell-buffer slds-no-row-hover"
             role="listbox"
             id="lookup-grouped-table-id-1"
+            aria-label="Example table for advanced modal lookup"
           >
             <thead>
               <tr>

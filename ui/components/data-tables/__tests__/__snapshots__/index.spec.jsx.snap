@@ -1691,15 +1691,15 @@ exports[`AdvancedDataTableHead component should set sort direction 1`] = `
           <input
             aria-labelledby="check-select-all-label column-group-header"
             defaultChecked={null}
-            id="checkbox-unique-id-1"
+            id="checkbox-unique-id-15"
             name="options"
             tabIndex="-1"
             type="checkbox"
-            value="checkbox-unique-id-1"
+            value="checkbox-unique-id-15"
           />
           <label
             className="slds-checkbox__label"
-            htmlFor="checkbox-unique-id-1"
+            htmlFor="checkbox-unique-id-15"
             id="check-select-all-label"
           >
             <span
@@ -1775,7 +1775,7 @@ exports[`AdvancedDataTableHead component should set sort direction 1`] = `
         <input
           aria-label="Name column width"
           className="slds-resizable__input slds-assistive-text"
-          id="cell-resize-handle-1"
+          id="cell-resize-handle-21"
           max="1000"
           min="20"
           tabIndex="-1"
@@ -2224,6 +2224,40 @@ exports[`Data table component should render a base table 1`] = `
   className="slds-table"
   role={null}
 />
+`;
+
+exports[`Data table component should render a table with a caption with aria-label 1`] = `
+<table
+  aria-label="Example caption"
+  aria-multiselectable={null}
+  className="slds-table"
+  role={null}
+/>
+`;
+
+exports[`Data table component should render a table with a caption with aria-labelledby 1`] = `
+Array [
+  <h2
+    id="element-with-table-label"
+  >
+    Example data table of Opportunities
+  </h2>,
+  <h3
+    id="other-element-with-table-label"
+  >
+    Using 
+    <code>
+      aria-labelledby
+    </code>
+    , instead of aria-label
+  </h3>,
+  <table
+    aria-labelledby="element-with-table-label other-element-with-table-label"
+    aria-multiselectable={null}
+    className="slds-table"
+    role={null}
+  />,
+]
 `;
 
 exports[`Data table component should render a table with borders 1`] = `
@@ -3310,7 +3344,7 @@ Array [
     <input
       aria-label="Column Name column width"
       className="slds-resizable__input slds-assistive-text"
-      id="cell-resize-handle-1"
+      id="cell-resize-handle-7"
       max="1000"
       min="20"
       tabIndex="-1"

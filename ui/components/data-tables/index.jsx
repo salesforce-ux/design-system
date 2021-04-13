@@ -116,6 +116,8 @@ export const Table = props => {
       className={computedStyles}
       role={getComputedRole()}
       style={props.style}
+      {...props.ariaLabelledBy && { [`aria-labelledby`]: props.ariaLabelledBy }}
+      {...props.ariaLabel && { [`aria-label`]: props.ariaLabel }}
     >
       {props.children}
     </table>
@@ -123,6 +125,7 @@ export const Table = props => {
 };
 Table.displayName = 'Table';
 Table.propTypes = {
+  caption: PropTypes.string,
   children: PropTypes.node,
   hasCellBuffer: PropTypes.bool,
   hasHiddenHeader: PropTypes.bool,

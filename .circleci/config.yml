@@ -68,7 +68,7 @@ commands:
               echo 'export HEROKU_RELEASE_STORYBOOK_APP_NAME=storybook-core-patch' >> $BASH_ENV
             else
               echo "Publishing to pull-request review app..."
-              echo 'export HEROKU_APP_NAME=slds-review-site-pr-${CIRCLE_PULL_REQUEST##*/}' >> $BASH_ENV
+              echo 'export HEROKU_APP_NAME=slds-review-site-pr-${PR_NUMBER}' >> $BASH_ENV
               echo 'export HEROKU_RELEASE_STORYBOOK_APP_NAME=true' >> $BASH_ENV
             fi
             source $BASH_ENV
@@ -79,7 +79,7 @@ commands:
           name: Show HEROKU_APP_NAME value
           command: |
             echo
-            echo "CIRCLE_PULL_REQUEST = ${CIRCLE_PULL_REQUEST}"
+            echo "PR_NUMBER = ${PR_NUMBER}"
             echo
             echo "=============================="
             cat workspace/heroku-app-name.txt
@@ -110,12 +110,12 @@ commands:
       - run:
           name: 'Set environment variables'
           command: |
+            echo 'export PR_NUMBER=$(cat workspace/gh-pr-num.txt)' >> $BASH_ENV
             echo 'export APPLITOOLS_BATCH_ID=${CIRCLE_SHA1}' >> $BASH_ENV
-            echo 'export APPLITOOLS_BATCH_NAME="PR #${CIRCLE_PULL_REQUEST##*/} (${CIRCLE_USERNAME})"' >> $BASH_ENV
-            echo 'export PR_NUMBER=${CIRCLE_PULL_REQUEST##*/}' >> $BASH_ENV
+            echo 'export APPLITOOLS_BATCH_NAME="PR #${PR_NUMBER} (${CIRCLE_USERNAME})"' >> $BASH_ENV
             echo 'export APPLITOOLS_DONT_CLOSE_BATCHES="true"' >> $BASH_ENV
             echo 'export APPLITOOLS_BATCH_NOTIFY="true"' >> $BASH_ENV
-            echo 'export REVIEW_APP_NAME=slds-storybook-pr-${CIRCLE_PULL_REQUEST##*/}' >> $BASH_ENV
+            echo 'export REVIEW_APP_NAME=slds-storybook-pr-${PR_NUMBER}' >> $BASH_ENV
 
   vrt-close-batch:
     description: 'Notify Applitools that tests have completed'
@@ -186,6 +186,12 @@ jobs:
               gh api ${STATUS_URL} -f state=in_progress -H "Accept: application/vnd.github.flash-preview+json"
             done
 
+      - run:
+          name: Get Github pull-request number
+          command: |
+            gh api /repos/salesforce-ux/design-system-internal/commits/${CIRCLE_SHA1}/pulls -H "Accept: application/vnd.github.groot-preview+json" | jq -r '.[].number' > workspace/gh-pr-num.txt
+            echo 'export PR_NUMBER=$(cat workspace/gh-pr-num.txt)' >> $BASH_ENV
+
       - set-heroku-app-name
 
       - node/install-packages
@@ -215,6 +221,7 @@ jobs:
             - heroku-app-name.txt
             - heroku-release-storybook-app-name.txt
             - gh-deployments.json
+            - gh-pr-num.txt
 
   # Build SLDS .dist
   framework-build:

@@ -1,7 +1,9 @@
 <!-- Release notes authoring guidelines: http://keepachangelog.com/ -->
 <!-- On release, add general notes here. In time the legacy release notes will be add to this -->
 
-## 2.15.0 - March 25, 2020
+## 2.15.1 - April 12, 2021
+
+## 2.15.0 - March 25, 2021
 
 - Removed Salesforce Sans as the default typeface and replaced it with OS-specific defaults.
 - Updated many of our design tokens and other colors to utilize the new Salesforce Color System. For more information, [read our article on Medium about this system](https://medium.com/salesforce-ux/the-salesforce-color-system-c7c6b5b9c577).

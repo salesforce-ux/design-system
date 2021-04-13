@@ -36,7 +36,14 @@ const formatType = type => {
 class StylingHooksTable extends Component {
   render() {
     const { name, type } = this.props;
-    const vars = require(`../../.generated/metadata/${type}s/${name}/styling-hooks.json`);
+    
+    let vars;
+    try {
+      vars = require(`../../.generated/metadata/${type}s/${name}/styling-hooks.json`);
+    } catch (error) {
+      console.error(error);
+      return null;
+    }
 
     const categories = Object.keys(vars)
       .map(varName => {

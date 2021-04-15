@@ -156,7 +156,7 @@ props:
     release: 2.6.0
     access: global
   BRAND_BACKGROUND_PRIMARY_TRANSPARENT:
-    value: "rgba(238,244,255,0)"
+    value: "rgba(176,196,223,0)"
     comment: "These RGBA values need to be updated if BRAND_BACKGROUND_PRIMARY changes, solves webkit bug"
     themeable: true
     release: 2.6.0

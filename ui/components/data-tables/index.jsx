@@ -125,7 +125,8 @@ export const Table = props => {
 };
 Table.displayName = 'Table';
 Table.propTypes = {
-  caption: PropTypes.string,
+  ariaLabel: PropTypes.string,
+  ariaLabelledBy: PropTypes.string,
   children: PropTypes.node,
   hasCellBuffer: PropTypes.bool,
   hasHiddenHeader: PropTypes.bool,

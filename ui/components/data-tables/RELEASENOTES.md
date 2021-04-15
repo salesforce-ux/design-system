@@ -6,7 +6,7 @@
 
 # 2.15.2
 
-- Added `<caption>`, and alternatively, `aria-labelledby` and `aria-label` to allow adding additional table context for screen readers
+- Added `aria-label`, and alternatively, `aria-labelledby` to allow adding additional table context for screen readers
 # 2.14.0
 
 ### Added

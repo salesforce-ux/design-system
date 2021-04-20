@@ -80,9 +80,10 @@ exports[`renders a button group with overflow open 1`] = `
       Save
     </button>
     <div
-      className="slds-dropdown-trigger slds-dropdown-trigger_click slds-button_last slds-is-open"
+      className="slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open slds-button_last"
     >
       <button
+        aria-expanded="true"
         aria-haspopup="true"
         className="slds-button slds-button_icon slds-button_icon-border-filled"
         onClick={[Function]}
@@ -207,6 +208,7 @@ exports[`renders a row a button icons spaced out 1`] = `
       className="slds-dropdown-trigger slds-dropdown-trigger_clicked"
     >
       <button
+        aria-expanded="false"
         aria-haspopup="true"
         className="slds-button slds-button_icon slds-button_icon-more"
         onClick={[Function]}
@@ -243,6 +245,7 @@ exports[`renders a row a button icons spaced out 1`] = `
       className="slds-dropdown-trigger slds-dropdown-trigger_clicked"
     >
       <button
+        aria-expanded="false"
         aria-haspopup="true"
         className="slds-button slds-button_icon slds-button_icon-more"
         onClick={[Function]}

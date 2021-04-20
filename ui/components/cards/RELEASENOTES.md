@@ -3,6 +3,12 @@
 # Cards Release Notes
 
 <!-- ## [Unreleased] -->
+
+## 2.15.1
+
+### Added
+
+- Added annotations for Einstein themed cards
 ## 2.14.0
 
 ### Added

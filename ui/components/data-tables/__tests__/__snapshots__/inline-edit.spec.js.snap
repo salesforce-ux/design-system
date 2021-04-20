@@ -2251,28 +2251,36 @@ exports[`Inline edit data table row should show a cell edit 1`] = `
         id="dialog-body-id-1"
       >
         <div
-          className="slds-form-element slds-grid slds-wrap"
+          className="slds-media"
         >
-          <label
-            className="slds-form-element__label slds-form-element__label_edit slds-no-flex"
-            htmlFor="company-01"
-          >
-            <span
-              className="slds-assistive-text"
-            >
-              Company
-            </span>
-          </label>
           <div
-            className="slds-form-element__control slds-grow"
+            className="slds-media__body"
           >
-            <input
-              aria-describedby={null}
-              className="slds-input"
-              defaultValue="Acme Enterprises"
-              id="company-01"
-              type="text"
-            />
+            <div
+              className="slds-form-element slds-grid slds-wrap"
+            >
+              <label
+                className="slds-form-element__label slds-form-element__label_edit slds-no-flex"
+                htmlFor="company-01"
+              >
+                <span
+                  className="slds-assistive-text"
+                >
+                  Company
+                </span>
+              </label>
+              <div
+                className="slds-form-element__control slds-grow"
+              >
+                <input
+                  aria-describedby={null}
+                  className="slds-input"
+                  defaultValue="Acme Enterprises"
+                  id="company-01"
+                  type="text"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -2643,35 +2651,43 @@ exports[`Inline edit data table row should show a cell edit with required field 
         id="dialog-body-id-2"
       >
         <div
-          className="slds-form-element slds-grid slds-wrap"
+          className="slds-media"
         >
-          <label
-            className="slds-form-element__label slds-form-element__label_edit slds-no-flex"
-            htmlFor="company-01"
-          >
-            <abbr
-              className="slds-required"
-              title="required"
-            >
-              *
-            </abbr>
-            <span
-              className="slds-assistive-text"
-            >
-              Company
-            </span>
-          </label>
           <div
-            className="slds-form-element__control slds-grow"
+            className="slds-media__body"
           >
-            <input
-              aria-describedby={null}
-              className="slds-input"
-              defaultValue="Acme Enterprises"
-              id="company-01"
-              required={true}
-              type="text"
-            />
+            <div
+              className="slds-form-element slds-grid slds-wrap"
+            >
+              <label
+                className="slds-form-element__label slds-form-element__label_edit slds-no-flex"
+                htmlFor="company-01"
+              >
+                <abbr
+                  className="slds-required"
+                  title="required"
+                >
+                  *
+                </abbr>
+                <span
+                  className="slds-assistive-text"
+                >
+                  Company
+                </span>
+              </label>
+              <div
+                className="slds-form-element__control slds-grow"
+              >
+                <input
+                  aria-describedby={null}
+                  className="slds-input"
+                  defaultValue="Acme Enterprises"
+                  id="company-01"
+                  required={true}
+                  type="text"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -3042,41 +3058,49 @@ exports[`Inline edit data table row should show a cell edit with required field 
         id="dialog-body-id-3"
       >
         <div
-          className="slds-form-element slds-grid slds-wrap slds-has-error"
+          className="slds-media"
         >
-          <label
-            className="slds-form-element__label slds-form-element__label_edit slds-no-flex"
-            htmlFor="company-01"
-          >
-            <abbr
-              className="slds-required"
-              title="required"
-            >
-              *
-            </abbr>
-            <span
-              className="slds-assistive-text"
-            >
-              Company
-            </span>
-          </label>
           <div
-            className="slds-form-element__control slds-grow"
+            className="slds-media__body"
           >
-            <input
-              aria-describedby="error-message-01"
-              className="slds-input"
-              defaultValue="Acme Enterprises"
-              id="company-01"
-              required={true}
-              type="text"
-            />
-          </div>
-          <div
-            className="slds-form-element__help"
-            id="error-message-01"
-          >
-            This field is required
+            <div
+              className="slds-form-element slds-grid slds-wrap slds-has-error"
+            >
+              <label
+                className="slds-form-element__label slds-form-element__label_edit slds-no-flex"
+                htmlFor="company-01"
+              >
+                <abbr
+                  className="slds-required"
+                  title="required"
+                >
+                  *
+                </abbr>
+                <span
+                  className="slds-assistive-text"
+                >
+                  Company
+                </span>
+              </label>
+              <div
+                className="slds-form-element__control slds-grow"
+              >
+                <input
+                  aria-describedby="error-message-01"
+                  className="slds-input"
+                  defaultValue="Acme Enterprises"
+                  id="company-01"
+                  required={true}
+                  type="text"
+                />
+              </div>
+              <div
+                className="slds-form-element__help"
+                id="error-message-01"
+              >
+                This field is required
+              </div>
+            </div>
           </div>
         </div>
       </div>

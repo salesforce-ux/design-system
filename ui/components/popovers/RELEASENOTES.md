@@ -24,7 +24,7 @@
     - Footer top border changed to match default popover border color and width
 - Walkthrough variant
     - Removed header background image
-    - Changed footer background color to `$palette-blue-20`
+    - Footer background color is now explicitly set to transparent
 
 ### Added
 

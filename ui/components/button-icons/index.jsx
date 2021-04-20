@@ -27,6 +27,7 @@ class ButtonIcon extends Component {
       isFirst,
       isMiddle,
       isLast,
+      isOpen,
       useCurrentColor,
       innerRef,
       ...rest
@@ -112,6 +113,7 @@ class ButtonIcon extends Component {
           className
         )}
         aria-haspopup={hasDropdown ? 'true' : this.props['aria-haspopup']}
+        {...hasDropdown && { [`aria-expanded`]: isOpen ? 'true' : 'false' }}
         ref={innerRef}
         {...rest}
       >

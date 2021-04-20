@@ -105,6 +105,7 @@ exports[`Activity Timeline Expandable renders a full expanded details section wi
   </div>
   <button
     className="slds-button slds-button_neutral slds-m-top_small"
+    onClick={[Function]}
   >
     <svg
       aria-hidden={true}

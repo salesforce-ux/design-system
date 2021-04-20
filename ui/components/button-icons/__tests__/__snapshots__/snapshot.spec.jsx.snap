@@ -260,6 +260,7 @@ exports[`button icon with container renders a disabled button icon 1`] = `
 
 exports[`button menu icon for dropdowns renders a button menu icon 1`] = `
 <button
+  aria-expanded="false"
   aria-haspopup="true"
   className="slds-button slds-button_icon slds-button_icon-more"
   onClick={[Function]}
@@ -290,6 +291,7 @@ exports[`button menu icon for dropdowns renders a button menu icon 1`] = `
 
 exports[`button menu icon for dropdowns renders a button menu icon on inversed background 1`] = `
 <button
+  aria-expanded="false"
   aria-haspopup="true"
   className="slds-button slds-button_icon slds-button_icon-container-more slds-button_icon-inverse"
   onClick={[Function]}

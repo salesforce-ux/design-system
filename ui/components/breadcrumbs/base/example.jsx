@@ -23,7 +23,7 @@ const moreIcon = (
 );
 
 let BreadcrumbMenu = props => (
-  <Trigger className="slds-is-open" triggerIcon={moreIcon}>
+  <Trigger isOpen triggerIcon={moreIcon}>
     <Menu className="slds-dropdown_left slds-dropdown_actions">
       <MenuList>
         <MenuItem tabIndex="0">Menu Item One</MenuItem>

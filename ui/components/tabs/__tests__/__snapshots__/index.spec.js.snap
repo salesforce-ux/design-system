@@ -447,6 +447,7 @@ exports[`Default Tabs renders default tabs with icons 1`] = `
           <button
             aria-haspopup={true}
             className="slds-button"
+            onClick={[Function]}
           >
             More
             <svg
@@ -946,6 +947,7 @@ exports[`Default Tabs renders default tabs with overflowing tab items 1`] = `
           <button
             aria-haspopup={true}
             className="slds-button"
+            onClick={[Function]}
           >
             More
             <svg
@@ -2730,6 +2732,7 @@ exports[`Mobile stacked tabs renders a tab 1`] = `
 exports[`Mobile stacked tabs renders a tab button 1`] = `
 <button
   className="slds-button slds-button_full-width"
+  onClick={[Function]}
 >
   <span
     className="slds-truncate"
@@ -2819,6 +2822,7 @@ exports[`Mobile stacked tabs renders nested mobile tabs 1`] = `
     >
       <button
         className="slds-button slds-button_full-width"
+        onClick={[Function]}
       >
         <span
           className="slds-truncate"
@@ -2841,6 +2845,7 @@ exports[`Mobile stacked tabs renders nested mobile tabs 1`] = `
     >
       <button
         className="slds-button slds-button_full-width"
+        onClick={[Function]}
       >
         <span
           className="slds-truncate"
@@ -2863,6 +2868,7 @@ exports[`Mobile stacked tabs renders nested mobile tabs 1`] = `
     >
       <button
         className="slds-button slds-button_full-width"
+        onClick={[Function]}
       >
         <span
           className="slds-truncate"
@@ -2924,6 +2930,7 @@ exports[`Mobile stacked tabs renders nested mobile tabs 1`] = `
         >
           <button
             className="slds-button slds-button_full-width"
+            onClick={[Function]}
           >
             <span
               className="slds-truncate"
@@ -2946,6 +2953,7 @@ exports[`Mobile stacked tabs renders nested mobile tabs 1`] = `
         >
           <button
             className="slds-button slds-button_full-width"
+            onClick={[Function]}
           >
             <span
               className="slds-truncate"
@@ -2968,6 +2976,7 @@ exports[`Mobile stacked tabs renders nested mobile tabs 1`] = `
         >
           <button
             className="slds-button slds-button_full-width"
+            onClick={[Function]}
           >
             <span
               className="slds-truncate"
@@ -2997,6 +3006,7 @@ exports[`Mobile stacked tabs renders nested mobile tabs 1`] = `
         >
           <button
             className="slds-button slds-button_full-width"
+            onClick={[Function]}
           >
             <span
               className="slds-truncate"
@@ -3019,6 +3029,7 @@ exports[`Mobile stacked tabs renders nested mobile tabs 1`] = `
         >
           <button
             className="slds-button slds-button_full-width"
+            onClick={[Function]}
           >
             <span
               className="slds-truncate"
@@ -3318,6 +3329,7 @@ exports[`SubtabOverflow should render a SubtabOverflow 1`] = `
     <button
       aria-haspopup="true"
       className="slds-button"
+      onClick={[Function]}
       title="More Tab Items"
     >
       <span
@@ -3448,6 +3460,7 @@ exports[`SubtabOverflow should render a error SubtabOverflow 1`] = `
     <button
       aria-haspopup="true"
       className="slds-button"
+      onClick={[Function]}
       title="More Tab Items"
     >
       <span
@@ -3583,6 +3596,7 @@ exports[`SubtabOverflow should render a success SubtabOverflow 1`] = `
     <button
       aria-haspopup="true"
       className="slds-button"
+      onClick={[Function]}
       title="More Tab Items"
     >
       <span
@@ -3718,6 +3732,7 @@ exports[`SubtabOverflow should render a warning SubtabOverflow 1`] = `
     <button
       aria-haspopup="true"
       className="slds-button"
+      onClick={[Function]}
       title="More Tab Items"
     >
       <span
@@ -3853,6 +3868,7 @@ exports[`SubtabOverflow should render an open SubtabOverflow 1`] = `
     <button
       aria-haspopup="true"
       className="slds-button"
+      onClick={[Function]}
       title="More Tab Items"
     >
       <span
@@ -3983,6 +3999,7 @@ exports[`SubtabOverflow should render an open SubtabOverflow with no icon on the
     <button
       aria-haspopup="true"
       className="slds-button"
+      onClick={[Function]}
       title="More Tab Items"
     >
       <span
@@ -4247,6 +4264,7 @@ exports[`Subtabs renders dirty overflowed subtab 1`] = `
           <button
             aria-haspopup="true"
             className="slds-button"
+            onClick={[Function]}
             title="More Tab Items"
           >
             <span
@@ -4564,6 +4582,7 @@ exports[`Subtabs renders dirty overflowed subtab with notification 1`] = `
           <button
             aria-haspopup="true"
             className="slds-button"
+            onClick={[Function]}
             title="More Tab Items"
           >
             <span
@@ -4891,6 +4910,7 @@ exports[`Subtabs renders overflowed subtab 1`] = `
           <button
             aria-haspopup="true"
             className="slds-button"
+            onClick={[Function]}
             title="More Tab Items"
           >
             <span
@@ -5192,6 +5212,7 @@ exports[`Subtabs renders overflowed subtab with notification 1`] = `
           <button
             aria-haspopup="true"
             className="slds-button"
+            onClick={[Function]}
             title="More Tab Items"
           >
             <span

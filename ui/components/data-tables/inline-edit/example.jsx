@@ -68,6 +68,7 @@ export const InlineEditTableFocusedCell = () => (
       selectionType="multiple"
       style={{ width: '66.75rem' }}
       type="advanced"
+      ariaLabel="Example inline edit table"
     >
       <Thead
         actionableMode
@@ -106,6 +107,7 @@ export default (
       selectionType="multiple"
       style={{ width: '66.75rem' }}
       type="advanced"
+      ariaLabel="Example default inline edit table with cell focused"
     >
       <Thead columns={columns} hasErrorColumn mainColumnWidth="8.75rem" />
       <TBody>
@@ -145,6 +147,7 @@ export let states = [
           selectionType="multiple"
           style={{ width: '66.75rem' }}
           type="advanced"
+          ariaLabel="Example inline edit table in actionable mode with checkbox cell focused"
         >
           <Thead
             actionableMode
@@ -184,6 +187,7 @@ export let states = [
           selectionType="multiple"
           style={{ width: '66.75rem' }}
           type="advanced"
+          ariaLabel="Example inline edit table in navigation mode with cell focused"
         >
           <Thead columns={columns} hasErrorColumn mainColumnWidth="8.75rem" />
           <TBody>
@@ -215,6 +219,7 @@ export let states = [
           selectionType="multiple"
           style={{ width: '66.75rem' }}
           type="advanced"
+          ariaLabel="Example inline edit table in actionable mode with cell edit"
         >
           <Thead
             actionableMode
@@ -255,6 +260,7 @@ export let states = [
           selectionType="multiple"
           style={{ width: '66.75rem' }}
           type="advanced"
+          ariaLabel="Example inline edit table in actionable mode with required cell edit"
         >
           <Thead
             actionableMode
@@ -296,6 +302,7 @@ export let states = [
           selectionType="multiple"
           style={{ width: '66.75rem' }}
           type="advanced"
+          ariaLabel="Example inline edit table in actionable mode with cell error"
         >
           <Thead
             actionableMode
@@ -338,6 +345,7 @@ export let states = [
           selectionType="multiple"
           style={{ width: '66.75rem' }}
           type="advanced"
+          ariaLabel="Example inline edit table in actionable mode with cell edited"
         >
           <Thead
             actionableMode
@@ -374,6 +382,7 @@ export let states = [
           selectionType="multiple"
           style={{ width: '66.75rem' }}
           type="advanced"
+          ariaLabel="Example inline edit table in actionable mode with cell edited in selected row"
         >
           <Thead
             actionableMode
@@ -411,6 +420,7 @@ export let states = [
           selectionType="multiple"
           style={{ width: '66.75rem' }}
           type="advanced"
+          ariaLabel="Example inline edit table in actionable mode with cell error on save"
         >
           <Thead
             actionableMode
@@ -453,6 +463,7 @@ export let states = [
           selectionType="multiple"
           style={{ width: '66.75rem' }}
           type="advanced"
+          ariaLabel="Example inline edit table in actionable mode with cell error on save in selected row"
         >
           <Thead
             actionableMode
@@ -492,6 +503,7 @@ export let states = [
             selectionType="multiple"
             style={{ width: '66.75rem' }}
             type="advanced"
+            ariaLabel="Example inline edit table in actionable mode with error indicator focused"
           >
             <Thead
               actionableMode
@@ -553,6 +565,7 @@ export let states = [
           selectionType="multiple"
           style={{ width: '66.75rem' }}
           type="advanced"
+          ariaLabel="Example inline edit table in navigation mode with header cell focused"
         >
           <Thead
             columns={columns}
@@ -594,6 +607,7 @@ export let states = [
           selectionType="multiple"
           style={{ width: '66.75rem' }}
           type="advanced"
+          ariaLabel="Example inline edit table in navigation mode with header cell marked"
         >
           <Thead
             columns={columns}

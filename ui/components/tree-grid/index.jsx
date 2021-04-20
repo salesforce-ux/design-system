@@ -6,22 +6,35 @@ import PropTypes from 'prop-types';
 
 import { Table } from '../data-tables';
 
-export const TreeGrid = props => {
+export const TreeGrid = ({
+  ariaLabel,
+  ariaLabelledBy,
+  children,
+  hasHiddenHeader,
+  isBordered,
+  isFixedLayout,
+  isResizable,
+  selectionType
+}) => {
   return (
     <Table
-      hasHiddenHeader={props.hasHiddenHeader}
-      isBordered={props.isBordered}
+      ariaLabel={ariaLabel}
+      ariaLabelledBy={ariaLabelledBy}
+      hasHiddenHeader={hasHiddenHeader}
+      isBordered={isBordered}
       isEditable
-      isFixedLayout={props.isFixedLayout}
-      isResizable={props.isResizable}
-      selectionType={props.selectionType}
+      isFixedLayout={isFixedLayout}
+      isResizable={isResizable}
+      selectionType={selectionType}
       type="treegrid"
     >
-      {props.children}
+      {children}
     </Table>
   );
 };
 TreeGrid.propTypes = {
+  ariaLabel: PropTypes.string,
+  ariaLabelledBy: PropTypes.string,
   children: PropTypes.node,
   hasHiddenHeader: PropTypes.bool,
   isBordered: PropTypes.bool,

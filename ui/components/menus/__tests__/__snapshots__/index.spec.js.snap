@@ -5,6 +5,7 @@ exports[`Base Menu renders a base menu to the bottom 1`] = `
   className="slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open"
 >
   <button
+    aria-expanded="true"
     aria-haspopup="true"
     className="slds-button slds-button_icon slds-button_icon-border-filled"
     onClick={[Function]}
@@ -118,6 +119,7 @@ exports[`Base Menu renders a base menu to the left 1`] = `
   className="slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open"
 >
   <button
+    aria-expanded="true"
     aria-haspopup="true"
     className="slds-button slds-button_icon slds-button_icon-border-filled"
     onClick={[Function]}
@@ -231,6 +233,7 @@ exports[`Base Menu renders a base menu to the right 1`] = `
   className="slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open"
 >
   <button
+    aria-expanded="true"
     aria-haspopup="true"
     className="slds-button slds-button_icon slds-button_icon-border-filled"
     onClick={[Function]}
@@ -344,6 +347,7 @@ exports[`Menu with submenu renders a closed submenu 1`] = `
   className="slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open"
 >
   <button
+    aria-expanded="true"
     aria-haspopup="true"
     className="slds-button slds-button_icon slds-button_icon-border-filled"
     onClick={[Function]}
@@ -530,6 +534,7 @@ exports[`Menu with submenu renders an open submenu 1`] = `
   className="slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open"
 >
   <button
+    aria-expanded="true"
     aria-haspopup="true"
     className="slds-button slds-button_icon slds-button_icon-border-filled"
     onClick={[Function]}

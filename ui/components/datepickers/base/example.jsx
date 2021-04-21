@@ -120,7 +120,7 @@ let Day = props => (
 );
 
 export let SimpleTable = props => (
-  <table className="slds-table">
+  <table className="slds-table" aria-label="Example table for datepicker">
     <tr>
       <th>Name</th>
       <th>Date</th>

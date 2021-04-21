@@ -4,6 +4,9 @@
 
 <!-- ## [Unreleased] -->
 
+# 2.15.2
+
+- Added `aria-label`, and alternatively, `aria-labelledby` to allow adding additional table context for screen readers
 # 2.14.0
 
 ### Added

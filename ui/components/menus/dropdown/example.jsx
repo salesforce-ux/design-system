@@ -37,32 +37,37 @@ const ListIcon = (
 );
 
 /* ! deprecate for ButtonIcon/menu/<ButtonMenu /> */
-export let Trigger = props => (
+export let Trigger = ({
+  children,
+  className,
+  inverse,
+  isOpen,
+  triggerIcon
+}) => (
   <div
     className={classNames(
       'slds-dropdown-trigger slds-dropdown-trigger_click',
       {
-        'slds-is-open': props.isOpen
+        'slds-is-open': isOpen
       },
-      props.className
+      className
     )}
   >
-    {props.triggerIcon ? (
-      props.triggerIcon
-    ) : (
+    {triggerIcon || (
       <ButtonIcon
         className={classNames(
-          props.inverse
+          inverse
             ? 'slds-button_icon-border-inverse'
             : 'slds-button_icon-border-filled'
         )}
+        aria-expanded={isOpen ? 'true' : 'false'}
         symbol="down"
         assistiveText="Show More"
         title="Show More"
         aria-haspopup="true"
       />
     )}
-    {props.children}
+    {children}
   </div>
 );
 
@@ -157,7 +162,7 @@ MenuItem.propTypes = {
 /// ///////////////////////////////////////////
 
 export const BaseMenu = props => (
-  <Trigger className="slds-is-open">
+  <Trigger isOpen>
     <Menu className={classNames(props.className)}>
       <MenuList ariaLabel="Show More">
         <MenuItem tabIndex="0">Menu Item One</MenuItem>
@@ -171,7 +176,7 @@ export const BaseMenu = props => (
 );
 
 export const OverflowMenu = props => (
-  <Trigger className="slds-is-open">
+  <Trigger isOpen>
     <Menu className={classNames(props.className)}>
       <MenuList ariaLabel="Show More">
         <MenuItem
@@ -196,7 +201,7 @@ export const OverflowMenu = props => (
 );
 
 export const SubHeader = props => (
-  <Trigger className="slds-is-open">
+  <Trigger isOpen>
     <Menu className="slds-dropdown_left slds-dropdown_small">
       <MenuList ariaLabel="Show More">
         <li
@@ -223,7 +228,7 @@ export const SubHeader = props => (
 );
 
 export const IconLeft = props => (
-  <Trigger className="slds-is-open">
+  <Trigger isOpen>
     <Menu className="slds-dropdown_left slds-dropdown_small">
       <MenuList ariaLabel="Show More">
         <MenuItem
@@ -270,7 +275,7 @@ export const IconLeft = props => (
 );
 
 export const DoubleIcon = props => (
-  <Trigger className="slds-is-open">
+  <Trigger isOpen>
     <Menu className="slds-dropdown_left slds-dropdown_small">
       <MenuList ariaLabel="Show More">
         <MenuItem
@@ -293,7 +298,7 @@ export const DoubleIcon = props => (
 );
 
 export const IconRight = props => (
-  <Trigger className="slds-is-open">
+  <Trigger isOpen>
     <Menu className="slds-dropdown_left slds-dropdown_small">
       <MenuList ariaLabel="Show More">
         <MenuItem iconRight={TableIcon} tabIndex="0">
@@ -315,7 +320,7 @@ export const ActionOverflow = ({ size, position }) => {
 
   return (
     <Trigger
-      className="slds-is-open"
+      isOpen
       triggerIcon={
         <ButtonIcon
           className="slds-button_icon-border-filled"
@@ -442,7 +447,7 @@ export const Context = props => (
 );
 
 export default (
-  <Trigger className="slds-is-open">
+  <Trigger isOpen>
     <Menu className="slds-dropdown_left">
       <MenuList ariaLabel="Show More">
         <MenuItem tabIndex="0">Menu Item One</MenuItem>
@@ -491,7 +496,7 @@ export let examples = [
     label: 'RTL support - Center aligned',
     element: (
       <div dir="rtl" style={{ width: '10rem' }}>
-        <Trigger className="slds-is-open">
+        <Trigger isOpen>
           <Menu>
             <MenuList ariaLabel="Show More">
               <MenuItem tabIndex="0">Menu Item One</MenuItem>
@@ -510,7 +515,7 @@ export let examples = [
     label: 'RTL support - Left aligned',
     element: (
       <div dir="rtl" style={{ width: '10rem' }}>
-        <Trigger className="slds-is-open">
+        <Trigger isOpen>
           <Menu className="slds-dropdown_left">
             <MenuList ariaLabel="Show More">
               <MenuItem tabIndex="0">Menu Item One</MenuItem>
@@ -529,7 +534,7 @@ export let examples = [
     label: 'RTL support - Right aligned',
     element: (
       <div dir="rtl" style={{ width: '10rem' }}>
-        <Trigger className="slds-is-open">
+        <Trigger isOpen>
           <Menu className="slds-dropdown_right">
             <MenuList ariaLabel="Show More">
               <MenuItem tabIndex="0">Menu Item One</MenuItem>

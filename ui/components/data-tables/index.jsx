@@ -116,6 +116,8 @@ export const Table = props => {
       className={computedStyles}
       role={getComputedRole()}
       style={props.style}
+      {...props.ariaLabelledBy && { [`aria-labelledby`]: props.ariaLabelledBy }}
+      {...props.ariaLabel && { [`aria-label`]: props.ariaLabel }}
     >
       {props.children}
     </table>
@@ -123,6 +125,8 @@ export const Table = props => {
 };
 Table.displayName = 'Table';
 Table.propTypes = {
+  ariaLabel: PropTypes.string,
+  ariaLabelledBy: PropTypes.string,
   children: PropTypes.node,
   hasCellBuffer: PropTypes.bool,
   hasHiddenHeader: PropTypes.bool,
@@ -324,7 +328,7 @@ export let InteractiveColumnHeader = props => {
       {props.sortDirection && (
         <span
           className="slds-assistive-text"
-          aria-live="assertive"
+          aria-live="polite"
           aria-atomic="true"
         >
           Sorted {props.sortDirection}

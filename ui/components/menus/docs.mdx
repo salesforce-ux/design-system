@@ -28,6 +28,7 @@ The target HTML element and dropdown need to be wrapped in the class `.slds-drop
 #### Markup
 
 - The menu trigger is a focusable element (`<a>` or `<button>`) with `aria-haspopup="true"`
+- The menu trigger has the `aria-expanded` attribute applied and the value is set to `"true"` or `"false"` depending on if the menu is open or not.
 - The menu has `role="menu"` and an `aria-label` attribute whose value is the name of the menu trigger
 - The menu items have `role="menuitem"`, `role="menuitemcheckbox"`, or `role="menuitemradio"`, depending on the selection options
 

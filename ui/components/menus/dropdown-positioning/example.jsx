@@ -25,7 +25,7 @@ const settingsIcon = (
 
 let TopLeft = props => (
   <div className="demo-only" style={{ height: '185px', paddingLeft: '2rem' }}>
-    <Trigger className="slds-is-open" triggerIcon={settingsIcon}>
+    <Trigger isOpen triggerIcon={settingsIcon}>
       <Menu className="slds-dropdown_left slds-nubbin_top-left">
         <MenuList>
           <MenuItem tabIndex="0">Menu Item One</MenuItem>
@@ -39,7 +39,7 @@ let TopLeft = props => (
 
 let Top = props => (
   <div className="demo-only" style={{ height: '185px', textAlign: 'center' }}>
-    <Trigger className="slds-is-open" triggerIcon={settingsIcon}>
+    <Trigger isOpen triggerIcon={settingsIcon}>
       <Menu className="slds-nubbin_top">
         <MenuList>
           <MenuItem tabIndex="0">Menu Item One</MenuItem>
@@ -56,7 +56,7 @@ let TopRight = props => (
     className="demo-only"
     style={{ height: '185px', textAlign: 'right', paddingRight: '2rem' }}
   >
-    <Trigger className="slds-is-open" triggerIcon={settingsIcon}>
+    <Trigger isOpen triggerIcon={settingsIcon}>
       <Menu className="slds-dropdown_right slds-nubbin_top-right">
         <MenuList>
           <MenuItem tabIndex="0">Menu Item One</MenuItem>
@@ -73,7 +73,7 @@ let BottomLeft = props => (
     className="demo-only slds-grid slds-grid_vertical-align-end"
     style={{ height: '185px', paddingLeft: '2rem' }}
   >
-    <Trigger className="slds-is-open" triggerIcon={settingsIcon}>
+    <Trigger isOpen triggerIcon={settingsIcon}>
       <Menu className="slds-dropdown_bottom slds-dropdown_left slds-nubbin_bottom-left">
         <MenuList>
           <MenuItem tabIndex="0">Menu Item One</MenuItem>
@@ -90,7 +90,7 @@ let Bottom = props => (
     className="demo-only slds-grid slds-grid_vertical-align-end slds-grid_align-center"
     style={{ height: '185px' }}
   >
-    <Trigger className="slds-is-open" triggerIcon={settingsIcon}>
+    <Trigger isOpen triggerIcon={settingsIcon}>
       <Menu className="slds-dropdown_bottom slds-nubbin_bottom">
         <MenuList>
           <MenuItem tabIndex="0">Menu Item One</MenuItem>
@@ -107,7 +107,7 @@ let BottomRight = props => (
     className="demo-only slds-grid slds-grid_vertical-align-end slds-grid_align-end"
     style={{ height: '185px', paddingRight: '2rem' }}
   >
-    <Trigger className="slds-is-open" triggerIcon={settingsIcon}>
+    <Trigger isOpen triggerIcon={settingsIcon}>
       <Menu className="slds-dropdown_bottom slds-dropdown_right slds-nubbin_bottom-right">
         <MenuList>
           <MenuItem tabIndex="0">Menu Item One</MenuItem>

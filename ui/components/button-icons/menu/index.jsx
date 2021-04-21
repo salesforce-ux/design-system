@@ -42,7 +42,12 @@ export const ButtonMenu = props => {
       {label ? (
         <ButtonText label={label} assistiveText={assistiveText} />
       ) : (
-        <ButtonIcon hasDropdown symbol={symbol} assistiveText={assistiveText} />
+        <ButtonIcon
+          isOpen
+          hasDropdown
+          symbol={symbol}
+          assistiveText={assistiveText}
+        />
       )}
       {children}
     </div>

@@ -261,6 +261,7 @@ exports[`Scoped Tabs render scoped tabs with overflowing items 1`] = `
           <button
             aria-haspopup={true}
             className="slds-button"
+            onClick={[Function]}
           >
             More
             <svg

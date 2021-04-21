@@ -49,7 +49,7 @@ it('renders a swatches only color picker', () =>
 it('renders an opened swatches only color picker', () =>
   matchesMarkup(
     <div style={{ height: '12rem' }}>
-      <Trigger className="slds-is-open">
+      <Trigger isOpen>
         <div className="slds-dropdown slds-dropdown--left">
           <div className="slds-color-picker slds-color-picker_swatches-only">
             <div className="slds-color-picker__selector">

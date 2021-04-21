@@ -661,6 +661,7 @@ exports[`Expression Base renders the default expression 1`] = `
   >
     <button
       className="slds-button slds-button_neutral"
+      onClick={[Function]}
     >
       <svg
         aria-hidden={true}
@@ -674,6 +675,7 @@ exports[`Expression Base renders the default expression 1`] = `
     </button>
     <button
       className="slds-button slds-button_neutral"
+      onClick={[Function]}
     >
       <svg
         aria-hidden={true}
@@ -1353,6 +1355,7 @@ exports[`Expression Base renders the disabled initial state 1`] = `
   >
     <button
       className="slds-button slds-button_neutral"
+      onClick={[Function]}
     >
       <svg
         aria-hidden={true}
@@ -1366,6 +1369,7 @@ exports[`Expression Base renders the disabled initial state 1`] = `
     </button>
     <button
       className="slds-button slds-button_neutral"
+      onClick={[Function]}
     >
       <svg
         aria-hidden={true}
@@ -2042,6 +2046,7 @@ exports[`Expression Base renders with a custom logic value 1`] = `
   >
     <button
       className="slds-button slds-button_neutral"
+      onClick={[Function]}
     >
       <svg
         aria-hidden={true}
@@ -2055,6 +2060,7 @@ exports[`Expression Base renders with a custom logic value 1`] = `
     </button>
     <button
       className="slds-button slds-button_neutral"
+      onClick={[Function]}
     >
       <svg
         aria-hidden={true}
@@ -2746,6 +2752,7 @@ exports[`Expression Base renders with a resource selected 1`] = `
   >
     <button
       className="slds-button slds-button_neutral"
+      onClick={[Function]}
     >
       <svg
         aria-hidden={true}
@@ -2759,6 +2766,7 @@ exports[`Expression Base renders with a resource selected 1`] = `
     </button>
     <button
       className="slds-button slds-button_neutral"
+      onClick={[Function]}
     >
       <svg
         aria-hidden={true}
@@ -3450,6 +3458,7 @@ exports[`Expression Base renders with all option selected 1`] = `
   >
     <button
       className="slds-button slds-button_neutral"
+      onClick={[Function]}
     >
       <svg
         aria-hidden={true}
@@ -3463,6 +3472,7 @@ exports[`Expression Base renders with all option selected 1`] = `
     </button>
     <button
       className="slds-button slds-button_neutral"
+      onClick={[Function]}
     >
       <svg
         aria-hidden={true}
@@ -4154,6 +4164,7 @@ exports[`Expression Base renders with always option selected 1`] = `
   >
     <button
       className="slds-button slds-button_neutral"
+      onClick={[Function]}
     >
       <svg
         aria-hidden={true}
@@ -4167,6 +4178,7 @@ exports[`Expression Base renders with always option selected 1`] = `
     </button>
     <button
       className="slds-button slds-button_neutral"
+      onClick={[Function]}
     >
       <svg
         aria-hidden={true}
@@ -4858,6 +4870,7 @@ exports[`Expression Base renders with any option selected 1`] = `
   >
     <button
       className="slds-button slds-button_neutral"
+      onClick={[Function]}
     >
       <svg
         aria-hidden={true}
@@ -4871,6 +4884,7 @@ exports[`Expression Base renders with any option selected 1`] = `
     </button>
     <button
       className="slds-button slds-button_neutral"
+      onClick={[Function]}
     >
       <svg
         aria-hidden={true}
@@ -5570,6 +5584,7 @@ exports[`Expression Base renders with custom logic 1`] = `
   >
     <button
       className="slds-button slds-button_neutral"
+      onClick={[Function]}
     >
       <svg
         aria-hidden={true}
@@ -5583,6 +5598,7 @@ exports[`Expression Base renders with custom logic 1`] = `
     </button>
     <button
       className="slds-button slds-button_neutral"
+      onClick={[Function]}
     >
       <svg
         aria-hidden={true}
@@ -6274,6 +6290,7 @@ exports[`Expression Base renders with custom option selected 1`] = `
   >
     <button
       className="slds-button slds-button_neutral"
+      onClick={[Function]}
     >
       <svg
         aria-hidden={true}
@@ -6287,6 +6304,7 @@ exports[`Expression Base renders with custom option selected 1`] = `
     </button>
     <button
       className="slds-button slds-button_neutral"
+      onClick={[Function]}
     >
       <svg
         aria-hidden={true}
@@ -6978,6 +6996,7 @@ exports[`Expression Base renders with formula option selected 1`] = `
   >
     <button
       className="slds-button slds-button_neutral"
+      onClick={[Function]}
     >
       <svg
         aria-hidden={true}
@@ -6991,6 +7010,7 @@ exports[`Expression Base renders with formula option selected 1`] = `
     </button>
     <button
       className="slds-button slds-button_neutral"
+      onClick={[Function]}
     >
       <svg
         aria-hidden={true}
@@ -7670,6 +7690,7 @@ exports[`Expression Base renders with legend text 1`] = `
   >
     <button
       className="slds-button slds-button_neutral"
+      onClick={[Function]}
     >
       <svg
         aria-hidden={true}
@@ -7683,6 +7704,7 @@ exports[`Expression Base renders with legend text 1`] = `
     </button>
     <button
       className="slds-button slds-button_neutral"
+      onClick={[Function]}
     >
       <svg
         aria-hidden={true}
@@ -7704,6 +7726,7 @@ exports[`Expression Buttons renders the default expression buttons 1`] = `
 >
   <button
     className="slds-button slds-button_neutral"
+    onClick={[Function]}
   >
     <svg
       aria-hidden={true}
@@ -7717,6 +7740,7 @@ exports[`Expression Buttons renders the default expression buttons 1`] = `
   </button>
   <button
     className="slds-button slds-button_neutral"
+    onClick={[Function]}
   >
     <svg
       aria-hidden={true}
@@ -7737,6 +7761,7 @@ exports[`Expression Buttons renders the default expression buttons in a group 1`
 >
   <button
     className="slds-button slds-button_neutral"
+    onClick={[Function]}
   >
     <svg
       aria-hidden={true}
@@ -8971,6 +8996,7 @@ exports[`Expression Formula renders the default expression formula variant 1`] =
   >
     <button
       className="slds-button slds-button_neutral"
+      onClick={[Function]}
     >
       Check Syntax
     </button>
@@ -10148,6 +10174,7 @@ exports[`Expression Formula renders the default expression formula with an optio
   >
     <button
       className="slds-button slds-button_neutral"
+      onClick={[Function]}
     >
       Check Syntax
     </button>
@@ -10382,6 +10409,7 @@ exports[`Expression Group renders the default expression group 1`] = `
     >
       <button
         className="slds-button slds-button_neutral"
+        onClick={[Function]}
       >
         <svg
           aria-hidden={true}
@@ -11067,6 +11095,7 @@ exports[`Expression Group renders the default expression group with a row 1`] = 
     >
       <button
         className="slds-button slds-button_neutral"
+        onClick={[Function]}
       >
         <svg
           aria-hidden={true}
@@ -11325,6 +11354,7 @@ exports[`Expression Group renders the default expression group with all option s
     >
       <button
         className="slds-button slds-button_neutral"
+        onClick={[Function]}
       >
         <svg
           aria-hidden={true}
@@ -11583,6 +11613,7 @@ exports[`Expression Group renders the default expression group with always optio
     >
       <button
         className="slds-button slds-button_neutral"
+        onClick={[Function]}
       >
         <svg
           aria-hidden={true}
@@ -11841,6 +11872,7 @@ exports[`Expression Group renders the default expression group with any option s
     >
       <button
         className="slds-button slds-button_neutral"
+        onClick={[Function]}
       >
         <svg
           aria-hidden={true}
@@ -12099,6 +12131,7 @@ exports[`Expression Group renders the default expression group with custom optio
     >
       <button
         className="slds-button slds-button_neutral"
+        onClick={[Function]}
       >
         <svg
           aria-hidden={true}
@@ -12357,6 +12390,7 @@ exports[`Expression Group renders the default expression group with formula opti
     >
       <button
         className="slds-button slds-button_neutral"
+        onClick={[Function]}
       >
         <svg
           aria-hidden={true}
@@ -12615,6 +12649,7 @@ exports[`Expression Group renders the default expression group with group option
     >
       <button
         className="slds-button slds-button_neutral"
+        onClick={[Function]}
       >
         <svg
           aria-hidden={true}
@@ -12861,6 +12896,7 @@ exports[`Expression Group renders the default expression group with legend text 
     >
       <button
         className="slds-button slds-button_neutral"
+        onClick={[Function]}
       >
         <svg
           aria-hidden={true}
@@ -13374,6 +13410,7 @@ exports[`Expression Narrow Footer renders the default expression narrow footer 1
 >
   <button
     className="slds-button slds-button_neutral"
+    onClick={[Function]}
   >
     <svg
       aria-hidden={true}
@@ -13394,6 +13431,7 @@ exports[`Expression Narrow Footer renders the default expression narrow footer w
 >
   <button
     className="slds-button slds-button_neutral"
+    onClick={[Function]}
   >
     <svg
       aria-hidden={true}
@@ -13407,6 +13445,7 @@ exports[`Expression Narrow Footer renders the default expression narrow footer w
   </button>
   <button
     className="slds-button slds-button_neutral"
+    onClick={[Function]}
   >
     <svg
       aria-hidden={true}
@@ -13718,6 +13757,7 @@ exports[`Expression Narrow Group renders the default expression narrow group 1`]
   >
     <button
       className="slds-button slds-button_neutral"
+      onClick={[Function]}
     >
       <svg
         aria-hidden={true}
@@ -14045,6 +14085,7 @@ exports[`Expression Narrow Group renders the default expression narrow with opti
   >
     <button
       className="slds-button slds-button_neutral"
+      onClick={[Function]}
     >
       <svg
         aria-hidden={true}
@@ -14344,6 +14385,7 @@ exports[`Expression Narrow renders the default expression narrow variant 1`] = `
     >
       <button
         className="slds-button slds-button_neutral"
+        onClick={[Function]}
       >
         <svg
           aria-hidden={true}
@@ -14357,6 +14399,7 @@ exports[`Expression Narrow renders the default expression narrow variant 1`] = `
       </button>
       <button
         className="slds-button slds-button_neutral"
+        onClick={[Function]}
       >
         <svg
           aria-hidden={true}
@@ -14672,6 +14715,7 @@ exports[`Expression Narrow renders the default expression narrow with option sel
     >
       <button
         className="slds-button slds-button_neutral"
+        onClick={[Function]}
       >
         <svg
           aria-hidden={true}
@@ -14685,6 +14729,7 @@ exports[`Expression Narrow renders the default expression narrow with option sel
       </button>
       <button
         className="slds-button slds-button_neutral"
+        onClick={[Function]}
       >
         <svg
           aria-hidden={true}

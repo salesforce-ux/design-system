@@ -11,7 +11,7 @@ import { Trigger, Menu, MenuList, MenuItem } from '../dropdown/example';
 
 let Length5 = props => (
   <div className="demo-only" style={{ height: '260px' }}>
-    <Trigger className="slds-is-open">
+    <Trigger isOpen>
       <Menu className="slds-dropdown_left slds-dropdown_small">
         <MenuList className="slds-dropdown_length-5">
           <MenuItem tabIndex="0">Menu Item One</MenuItem>
@@ -32,7 +32,7 @@ let Length5 = props => (
 
 let Length7 = props => (
   <div className="demo-only" style={{ height: '300px' }}>
-    <Trigger className="slds-is-open">
+    <Trigger isOpen>
       <Menu className="slds-dropdown_left slds-dropdown_small">
         <MenuList className="slds-dropdown_length-7">
           <MenuItem tabIndex="0">Menu Item One</MenuItem>
@@ -53,7 +53,7 @@ let Length7 = props => (
 
 let Length10 = props => (
   <div className="demo-only" style={{ height: '430px' }}>
-    <Trigger className="slds-is-open">
+    <Trigger isOpen>
       <Menu className="slds-dropdown_left slds-dropdown_small">
         <MenuList className="slds-dropdown_length-10">
           <MenuItem tabIndex="0">Menu Item One</MenuItem>
@@ -74,7 +74,7 @@ let Length10 = props => (
 
 let IconLength5 = props => (
   <div className="demo-only" style={{ height: '260px' }}>
-    <Trigger className="slds-is-open">
+    <Trigger isOpen>
       <Menu className="slds-dropdown_left slds-dropdown_small">
         <MenuList className="slds-dropdown_length-with-icon-5">
           <MenuItem tabIndex="0">
@@ -165,7 +165,7 @@ let IconLength5 = props => (
 
 let IconLength7 = props => (
   <div className="demo-only" style={{ height: '320px' }}>
-    <Trigger className="slds-is-open">
+    <Trigger isOpen>
       <Menu className="slds-dropdown_left slds-dropdown_small">
         <MenuList className="slds-dropdown_length-with-icon-7">
           <MenuItem tabIndex="0">
@@ -256,7 +256,7 @@ let IconLength7 = props => (
 
 let IconLength10 = props => (
   <div className="demo-only" style={{ height: '450px' }}>
-    <Trigger className="slds-is-open">
+    <Trigger isOpen>
       <Menu className="slds-dropdown_left slds-dropdown_small">
         <MenuList className="slds-dropdown_length-with-icon-10">
           <MenuItem tabIndex="0">

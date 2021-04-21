@@ -42,6 +42,7 @@ let ProductList = props => (
     <table
       role="grid"
       className="slds-table slds-table_fixed-layout slds-table_bordered slds-no-row-hover slds-table_cell-buffer"
+      aria-label="Example product list"
     >
       <thead>
         <tr>

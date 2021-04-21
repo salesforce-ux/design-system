@@ -488,6 +488,7 @@ exports[`Composed Welcome Mat Snapshots renders a splash welcome mat 1`] = `
               >
                 <button
                   className="slds-button slds-button_brand"
+                  onClick={[Function]}
                 >
                   Learn More
                 </button>
@@ -1570,6 +1571,7 @@ exports[`Composed Welcome Mat Snapshots renders an info-only welcome mat 1`] = `
               >
                 <button
                   className="slds-button slds-button_brand"
+                  onClick={[Function]}
                 >
                   Learn More
                 </button>
@@ -2096,6 +2098,7 @@ exports[`Welcome Mat Helper Components renders WelcomeMatInfoActions 1`] = `
 >
   <button
     className="slds-button slds-button_brand"
+    onClick={[Function]}
   >
     Learn More
   </button>
@@ -2177,6 +2180,7 @@ Array [
   >
     <button
       className="slds-button slds-button_brand"
+      onClick={[Function]}
     >
       Learn More
     </button>
@@ -2224,6 +2228,7 @@ exports[`Welcome Mat Helper Components renders WelcomeMatSampleActions 1`] = `
 Array [
   <button
     className="slds-button slds-button_brand"
+    onClick={[Function]}
   >
     Learn More
   </button>,

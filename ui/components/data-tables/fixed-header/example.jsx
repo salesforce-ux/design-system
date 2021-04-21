@@ -220,21 +220,42 @@ export let examples = [
   {
     id: 'data-table-fixed-header',
     label: 'With fixed header',
-    element: <TableFixedHeader type="base" />
+    element: (
+      <TableFixedHeader type="base" ariaLabel="Example fixed header table" />
+    )
   },
   {
     id: 'data-table-fixed-header_with-vertical-borders',
     label: 'With fixed header and vertical borders',
-    element: <TableFixedHeader isColBordered type="base" />
+    element: (
+      <TableFixedHeader
+        isColBordered
+        type="base"
+        ariaLabel="Example fixed header table with vertical borders"
+      />
+    )
   },
   {
     id: 'data-table-fixed-header-bordered',
     label: 'With fixed header (bordered)',
-    element: <TableFixedHeader isBordered type="base" />
+    element: (
+      <TableFixedHeader
+        isBordered
+        type="base"
+        ariaLabel="Example fixed header bordered table"
+      />
+    )
   },
   {
     id: 'data-table-fixed-header-bordered_with-vertical-borders',
     label: 'With fixed header and vertical borders (bordered)',
-    element: <TableFixedHeader isColBordered isBordered type="base" />
+    element: (
+      <TableFixedHeader
+        isColBordered
+        isBordered
+        type="base"
+        ariaLabel="Example fixed header bordered table with vertical borders"
+      />
+    )
   }
 ];

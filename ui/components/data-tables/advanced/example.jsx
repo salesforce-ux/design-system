@@ -146,6 +146,7 @@ export default (
     isResizable
     selectionType="multiple"
     type="advanced"
+    ariaLabel="Example default advanced table of Opportunities"
   >
     <Thead columns={columns} />
     <TBody>
@@ -172,6 +173,7 @@ export let states = [
         isResizable
         selectionType="multiple"
         type="advanced"
+        ariaLabel="Example advanced table of Opportunities with cell focused"
       >
         <Thead columns={columns} />
         <TBody>
@@ -198,6 +200,7 @@ export let states = [
         isResizable
         selectionType="multiple"
         type="advanced"
+        ariaLabel="Example advanced table of Opportunities in actionable mode"
       >
         <Thead actionableMode columns={columns} />
         <TBody>
@@ -224,6 +227,7 @@ export let states = [
         isResizable
         selectionType="multiple"
         type="advanced"
+        ariaLabel="Example advanced table of Opportunities in actionable mode with row selected"
       >
         <Thead actionableMode columns={columns} />
         <TBody>
@@ -250,6 +254,7 @@ export let states = [
         isResizable
         selectionType="multiple"
         type="advanced"
+        ariaLabel="Example advanced table of Opportunities in actionable mode with all rows selected"
       >
         <Thead actionableMode columns={columns} selectAll />
         <TBody>
@@ -276,6 +281,7 @@ export let states = [
         isResizable
         selectionType="multiple"
         type="advanced"
+        ariaLabel="Example advanced table of Opportunities in actionable mode with ascending column sorting"
       >
         <Thead columns={columns} actionableMode sortDirection="ascending" />
         <TBody>
@@ -302,6 +308,7 @@ export let states = [
         isResizable
         selectionType="multiple"
         type="advanced"
+        ariaLabel="Example advanced table of Opportunities in actionable mode with descending column sorting"
       >
         <Thead columns={columns} actionableMode sortDirection="descending" />
         <TBody>
@@ -328,6 +335,7 @@ export let states = [
         isResizable
         selectionType="multiple"
         type="advanced"
+        ariaLabel="Example advanced table of Opportunities in actionable mode with resized column"
       >
         <Thead columns={columns} actionableMode singleColumnWidth="300px" />
         <TBody>
@@ -357,6 +365,7 @@ export let examples = [
         isResizable
         selectionType="multiple"
         type="advanced"
+        ariaLabel="Example advanced table of Opportunities with header icon and menu button"
       >
         <Thead
           columnHeaderIcons={columnHeaderIcons}
@@ -386,6 +395,7 @@ export let examples = [
         isResizable
         selectionType="multiple"
         type="advanced"
+        ariaLabel="Example advanced table of Opportunities with header menu button"
       >
         <Thead columns={columns} hasMenus />
         <TBody>
@@ -411,6 +421,7 @@ export let examples = [
         isResizable
         selectionType="multiple"
         type="advanced"
+        ariaLabel="Example advanced table of Opportunities with cell icon"
       >
         <Thead columns={columns} />
         <TBody>
@@ -437,6 +448,7 @@ export let examples = [
         isResizable
         selectionType="multiple"
         type="advanced"
+        ariaLabel="Example advanced table as product listing"
       >
         <Thead columns={productColumns} actionableMode hasNoRowSelection />
         <TBody>
@@ -457,7 +469,13 @@ export let examples = [
     id: 'radio-group',
     label: 'Radio Group',
     element: (
-      <Table isBordered isFixedLayout isResizable type="advanced">
+      <Table
+        isBordered
+        isFixedLayout
+        isResizable
+        type="advanced"
+        ariaLabel="Example advanced table as radio group"
+      >
         <Thead columns={columns} hasSingleRowSelect />
         <TBody>
           {rows.map((row, i) => (
@@ -476,7 +494,13 @@ export let examples = [
     id: 'data-table-no-borders',
     label: 'No borders',
     element: (
-      <Table isFixedLayout isResizable selectionType="multiple" type="advanced">
+      <Table
+        isFixedLayout
+        isResizable
+        selectionType="multiple"
+        type="advanced"
+        ariaLabel="Example advanced table with no borders"
+      >
         <Thead columns={columns} />
         <TBody>
           {rows.map((row, i) => (
@@ -500,6 +524,7 @@ export let examples = [
         isBordered
         selectionType="multiple"
         type="advanced"
+        ariaLabel="Example advanced headless table"
       >
         <Thead isHidden columns={columns} />
         <TBody>
@@ -519,7 +544,12 @@ export let examples = [
     id: 'data-table-headless-no-borders',
     label: 'Headless with no borders',
     element: (
-      <Table hasHiddenHeader selectionType="multiple" type="advanced">
+      <Table
+        hasHiddenHeader
+        selectionType="multiple"
+        type="advanced"
+        ariaLabel="Example advanced headless border-less table"
+      >
         <Thead isHidden columns={columns} />
         <TBody>
           {rows.map((row, i) => (

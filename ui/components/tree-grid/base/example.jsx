@@ -460,7 +460,13 @@ HeadlessRows.propTypes = {
 /// ///////////////////////////////////////////
 
 export default (
-  <TreeGrid isBordered isFixedLayout isResizable selectionType="multiple">
+  <TreeGrid
+    isBordered
+    isFixedLayout
+    isResizable
+    selectionType="multiple"
+    ariaLabel="Example default tree grid"
+  >
     <AdvancedDataTableHead columns={columns} hasMenus />
     <DefaultRows isExpanded={false} />
   </TreeGrid>
@@ -471,7 +477,13 @@ export let states = [
     id: 'expanded',
     label: 'Expanded',
     element: (
-      <TreeGrid isBordered isFixedLayout isResizable selectionType="multiple">
+      <TreeGrid
+        isBordered
+        isFixedLayout
+        isResizable
+        selectionType="multiple"
+        ariaLabel="Example expanded tree grid"
+      >
         <AdvancedDataTableHead columns={columns} hasMenus />
         <DefaultRows isExpanded additionalItem={<ExpandedRow />} />
       </TreeGrid>
@@ -481,7 +493,13 @@ export let states = [
     id: 'selected-row',
     label: 'Selected row',
     element: (
-      <TreeGrid isBordered isFixedLayout isResizable selectionType="multiple">
+      <TreeGrid
+        isBordered
+        isFixedLayout
+        isResizable
+        selectionType="multiple"
+        ariaLabel="Example tree grid with selected row"
+      >
         <AdvancedDataTableHead columns={columns} hasMenus />
         <DefaultRows
           isExpanded
@@ -495,7 +513,13 @@ export let states = [
     id: 'deep-nesting',
     label: 'Deeply nested branches',
     element: (
-      <TreeGrid isBordered isFixedLayout isResizable selectionType="multiple">
+      <TreeGrid
+        isBordered
+        isFixedLayout
+        isResizable
+        selectionType="multiple"
+        ariaLabel="Example tree grid with deep nesting"
+      >
         <AdvancedDataTableHead columns={columns} hasMenus />
         <DeepNestingRows />
       </TreeGrid>
@@ -508,7 +532,12 @@ export let examples = [
     id: 'treegrid-headless',
     label: 'Headless',
     element: (
-      <TreeGrid isBordered selectionType="multiple" hasHiddenHeader>
+      <TreeGrid
+        isBordered
+        selectionType="multiple"
+        hasHiddenHeader
+        ariaLabel="Example headless tree grid"
+      >
         <AdvancedDataTableHead
           columns={headlessColumns}
           hasSingleRowSelect
@@ -522,7 +551,12 @@ export let examples = [
     id: 'treegrid-headless-selected-row',
     label: 'Headless with selected row',
     element: (
-      <TreeGrid isBordered selectionType="multiple" hasHiddenHeader>
+      <TreeGrid
+        isBordered
+        selectionType="multiple"
+        hasHiddenHeader
+        ariaLabel="Example headless tree grid with selected row"
+      >
         <AdvancedDataTableHead
           columns={headlessColumns}
           hasSingleRowSelect
@@ -536,7 +570,11 @@ export let examples = [
     id: 'treegrid-headless-no-borders',
     label: 'Headless with no borders',
     element: (
-      <TreeGrid selectionType="multiple" hasHiddenHeader>
+      <TreeGrid
+        selectionType="multiple"
+        hasHiddenHeader
+        ariaLabel="Example headless border-less tree grid"
+      >
         <AdvancedDataTableHead
           hasSingleRowSelect
           columns={headlessColumns}
@@ -550,7 +588,11 @@ export let examples = [
     id: 'treegrid-headless-no-borders-selected-row',
     label: 'Headless with no borders and a selected row',
     element: (
-      <TreeGrid selectionType="multiple" hasHiddenHeader>
+      <TreeGrid
+        selectionType="multiple"
+        hasHiddenHeader
+        ariaLabel="Example headless border-less tree grid with selected row"
+      >
         <AdvancedDataTableHead
           hasSingleRowSelect
           columns={headlessColumns}
@@ -564,7 +606,12 @@ export let examples = [
     id: 'treegrid-single-select',
     label: 'Single select',
     element: (
-      <TreeGrid isBordered isFixedLayout isResizable>
+      <TreeGrid
+        isBordered
+        isFixedLayout
+        isResizable
+        ariaLabel="Example single select tree grid"
+      >
         <AdvancedDataTableHead hasNoRowSelection columns={columns} hasMenus />
         <DefaultRows isExpanded={false} hasSingleRowSelection />
       </TreeGrid>
@@ -574,7 +621,12 @@ export let examples = [
     id: 'treegrid-single-select-selected-row',
     label: 'Single select with a selected row',
     element: (
-      <TreeGrid isBordered isFixedLayout isResizable>
+      <TreeGrid
+        isBordered
+        isFixedLayout
+        isResizable
+        ariaLabel="Example single select tree grid with selected row"
+      >
         <AdvancedDataTableHead hasNoRowSelection columns={columns} hasMenus />
         <DefaultRows isExpanded={false} hasSelectedRow hasSingleRowSelection />
       </TreeGrid>
@@ -584,7 +636,11 @@ export let examples = [
     id: 'treegrid-single-select-headless',
     label: 'Single select headless',
     element: (
-      <TreeGrid isBordered hasHiddenHeader>
+      <TreeGrid
+        isBordered
+        hasHiddenHeader
+        ariaLabel="Example headless single select tree grid"
+      >
         <AdvancedDataTableHead
           hasNoRowSelection
           columns={headlessColumns}
@@ -598,7 +654,11 @@ export let examples = [
     id: 'treegrid-single-select-headless-selected',
     label: 'Single select headless with selected row',
     element: (
-      <TreeGrid isBordered hasHiddenHeader>
+      <TreeGrid
+        isBordered
+        hasHiddenHeader
+        ariaLabel="Example single select tree grid with selected row"
+      >
         <AdvancedDataTableHead
           hasNoRowSelection
           columns={headlessColumns}
@@ -612,7 +672,10 @@ export let examples = [
     id: 'treegrid-single-select-headless-no-borders',
     label: 'Single select headless with no borders',
     element: (
-      <TreeGrid hasHiddenHeader>
+      <TreeGrid
+        hasHiddenHeader
+        ariaLabel="Example headless border-less single select tree grid"
+      >
         <AdvancedDataTableHead
           hasNoRowSelection
           columns={headlessColumns}
@@ -626,7 +689,10 @@ export let examples = [
     id: 'treegrid-single-select-headless-no-borders-with-selected',
     label: 'Single select headless with no borders and a selected row',
     element: (
-      <TreeGrid hasHiddenHeader>
+      <TreeGrid
+        hasHiddenHeader
+        ariaLabel="Example headless border-less single select tree grid with selected row"
+      >
         <AdvancedDataTableHead
           hasNoRowSelection
           columns={headlessColumns}
@@ -640,7 +706,13 @@ export let examples = [
     id: 'item-disabled',
     label: 'Item Disabled',
     element: (
-      <TreeGrid isBordered isFixedLayout isResizable selectionType="multiple">
+      <TreeGrid
+        isBordered
+        isFixedLayout
+        isResizable
+        selectionType="multiple"
+        ariaLabel="Example tree grid with disabled item"
+      >
         <AdvancedDataTableHead columns={columns} hasMenus />
         <DefaultRows isExpanded={false} />
       </TreeGrid>
@@ -650,7 +722,13 @@ export let examples = [
     id: 'item-hovered',
     label: 'Item Hovered',
     element: (
-      <TreeGrid isBordered isFixedLayout isResizable selectionType="multiple">
+      <TreeGrid
+        isBordered
+        isFixedLayout
+        isResizable
+        selectionType="multiple"
+        ariaLabel="Example tree grid with hovered item"
+      >
         <AdvancedDataTableHead columns={columns} hasMenus />
         <TBody>
           <Row

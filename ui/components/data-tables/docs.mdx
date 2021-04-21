@@ -19,7 +19,21 @@ Data tables are an enhanced version of an HTML table and are used to display tab
 To initialize a data table, apply the `slds-table` class to the `table` element. This class creates a `table` with formatted cells and allows you to use data table utilities.
 
 ### Accessibility
+
+#### Headers
 To create an accessible table, the top row of column headers (`th`) are placed in a `thead`. Each one receives the `scope="col"` attribute. The first non-actionable (meaning that doesn't contain a checkbox or menu) column in each row should be marked as a th with a `scope="row"` attribute.
+
+#### Labeling
+To give additional context, like a caption or description, to a table for screen readers, the attributes `aria-labelledby` or `aria-label` can be used on the `table` element.
+
+For `aria-label`, set the description as the attribute value.  Alternatively, if another element, or elements, can serve this purpose for the table, then set the value of `aria-labelledby` with the `id` of the element[s].
+
+This example shows `aria-labelledby` set with the `id`s of two separate elements to make up the label.
+
+<CodeView>
+  {getDisplayElementById(SimpleTableExamples.examples, 'data-table-aria-labelledby')}
+</CodeView>
+
 
 ## Base
 

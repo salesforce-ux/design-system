@@ -1763,7 +1763,7 @@ exports[`AdvancedDataTableHead component should set sort direction 1`] = `
       </a>
       <span
         aria-atomic="true"
-        aria-live="assertive"
+        aria-live="polite"
         className="slds-assistive-text"
       >
         Sorted 
@@ -2226,6 +2226,40 @@ exports[`Data table component should render a base table 1`] = `
 />
 `;
 
+exports[`Data table component should render a table with a caption with aria-label 1`] = `
+<table
+  aria-label="Example caption"
+  aria-multiselectable={null}
+  className="slds-table"
+  role={null}
+/>
+`;
+
+exports[`Data table component should render a table with a caption with aria-labelledby 1`] = `
+Array [
+  <h2
+    id="element-with-table-label"
+  >
+    Example data table of Opportunities
+  </h2>,
+  <h3
+    id="other-element-with-table-label"
+  >
+    Using 
+    <code>
+      aria-labelledby
+    </code>
+    , instead of aria-label
+  </h3>,
+  <table
+    aria-labelledby="element-with-table-label other-element-with-table-label"
+    aria-multiselectable={null}
+    className="slds-table"
+    role={null}
+  />,
+]
+`;
+
 exports[`Data table component should render a table with borders 1`] = `
 <table
   aria-multiselectable={null}
@@ -2379,28 +2413,36 @@ exports[`EditPopover component should render 1`] = `
     id="dialog-body-id-4"
   >
     <div
-      className="slds-form-element slds-grid slds-wrap"
+      className="slds-media"
     >
-      <label
-        className="slds-form-element__label slds-form-element__label_edit slds-no-flex"
-        htmlFor="company-01"
-      >
-        <span
-          className="slds-assistive-text"
-        >
-          Company
-        </span>
-      </label>
       <div
-        className="slds-form-element__control slds-grow"
+        className="slds-media__body"
       >
-        <input
-          aria-describedby={null}
-          className="slds-input"
-          defaultValue="Acme Enterprises"
-          id="company-01"
-          type="text"
-        />
+        <div
+          className="slds-form-element slds-grid slds-wrap"
+        >
+          <label
+            className="slds-form-element__label slds-form-element__label_edit slds-no-flex"
+            htmlFor="company-01"
+          >
+            <span
+              className="slds-assistive-text"
+            >
+              Company
+            </span>
+          </label>
+          <div
+            className="slds-form-element__control slds-grow"
+          >
+            <input
+              aria-describedby={null}
+              className="slds-input"
+              defaultValue="Acme Enterprises"
+              id="company-01"
+              type="text"
+            />
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -2425,35 +2467,43 @@ exports[`EditPopover component should set field required 1`] = `
     id="dialog-body-id-5"
   >
     <div
-      className="slds-form-element slds-grid slds-wrap"
+      className="slds-media"
     >
-      <label
-        className="slds-form-element__label slds-form-element__label_edit slds-no-flex"
-        htmlFor="company-01"
-      >
-        <abbr
-          className="slds-required"
-          title="required"
-        >
-          *
-        </abbr>
-        <span
-          className="slds-assistive-text"
-        >
-          Company
-        </span>
-      </label>
       <div
-        className="slds-form-element__control slds-grow"
+        className="slds-media__body"
       >
-        <input
-          aria-describedby={null}
-          className="slds-input"
-          defaultValue="Acme Enterprises"
-          id="company-01"
-          required={true}
-          type="text"
-        />
+        <div
+          className="slds-form-element slds-grid slds-wrap"
+        >
+          <label
+            className="slds-form-element__label slds-form-element__label_edit slds-no-flex"
+            htmlFor="company-01"
+          >
+            <abbr
+              className="slds-required"
+              title="required"
+            >
+              *
+            </abbr>
+            <span
+              className="slds-assistive-text"
+            >
+              Company
+            </span>
+          </label>
+          <div
+            className="slds-form-element__control slds-grow"
+          >
+            <input
+              aria-describedby={null}
+              className="slds-input"
+              defaultValue="Acme Enterprises"
+              id="company-01"
+              required={true}
+              type="text"
+            />
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -2478,41 +2528,49 @@ exports[`EditPopover component should show error 1`] = `
     id="dialog-body-id-6"
   >
     <div
-      className="slds-form-element slds-grid slds-wrap slds-has-error"
+      className="slds-media"
     >
-      <label
-        className="slds-form-element__label slds-form-element__label_edit slds-no-flex"
-        htmlFor="company-01"
-      >
-        <abbr
-          className="slds-required"
-          title="required"
-        >
-          *
-        </abbr>
-        <span
-          className="slds-assistive-text"
-        >
-          Company
-        </span>
-      </label>
       <div
-        className="slds-form-element__control slds-grow"
+        className="slds-media__body"
       >
-        <input
-          aria-describedby="error-message-01"
-          className="slds-input"
-          defaultValue="Acme Enterprises"
-          id="company-01"
-          required={true}
-          type="text"
-        />
-      </div>
-      <div
-        className="slds-form-element__help"
-        id="error-message-01"
-      >
-        This field is required
+        <div
+          className="slds-form-element slds-grid slds-wrap slds-has-error"
+        >
+          <label
+            className="slds-form-element__label slds-form-element__label_edit slds-no-flex"
+            htmlFor="company-01"
+          >
+            <abbr
+              className="slds-required"
+              title="required"
+            >
+              *
+            </abbr>
+            <span
+              className="slds-assistive-text"
+            >
+              Company
+            </span>
+          </label>
+          <div
+            className="slds-form-element__control slds-grow"
+          >
+            <input
+              aria-describedby="error-message-01"
+              className="slds-input"
+              defaultValue="Acme Enterprises"
+              id="company-01"
+              required={true}
+              type="text"
+            />
+          </div>
+          <div
+            className="slds-form-element__help"
+            id="error-message-01"
+          >
+            This field is required
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -2709,34 +2767,42 @@ Array [
       id="dialog-body-id-3"
     >
       <div
-        className="slds-form-element slds-grid slds-wrap slds-has-error"
+        className="slds-media"
       >
-        <label
-          className="slds-form-element__label slds-form-element__label_edit slds-no-flex"
-          htmlFor="company-01"
+        <div
+          className="slds-media__body"
         >
-          <span
-            className="slds-assistive-text"
+          <div
+            className="slds-form-element slds-grid slds-wrap slds-has-error"
           >
-            Company
-          </span>
-        </label>
-        <div
-          className="slds-form-element__control slds-grow"
-        >
-          <input
-            aria-describedby="error-message-01"
-            className="slds-input"
-            defaultValue="Acme Enterprises"
-            id="company-01"
-            type="text"
-          />
-        </div>
-        <div
-          className="slds-form-element__help"
-          id="error-message-01"
-        >
-          This field is required
+            <label
+              className="slds-form-element__label slds-form-element__label_edit slds-no-flex"
+              htmlFor="company-01"
+            >
+              <span
+                className="slds-assistive-text"
+              >
+                Company
+              </span>
+            </label>
+            <div
+              className="slds-form-element__control slds-grow"
+            >
+              <input
+                aria-describedby="error-message-01"
+                className="slds-input"
+                defaultValue="Acme Enterprises"
+                id="company-01"
+                type="text"
+              />
+            </div>
+            <div
+              className="slds-form-element__help"
+              id="error-message-01"
+            >
+              This field is required
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -2793,28 +2859,36 @@ Array [
       id="dialog-body-id-1"
     >
       <div
-        className="slds-form-element slds-grid slds-wrap"
+        className="slds-media"
       >
-        <label
-          className="slds-form-element__label slds-form-element__label_edit slds-no-flex"
-          htmlFor="company-01"
-        >
-          <span
-            className="slds-assistive-text"
-          >
-            Company
-          </span>
-        </label>
         <div
-          className="slds-form-element__control slds-grow"
+          className="slds-media__body"
         >
-          <input
-            aria-describedby={null}
-            className="slds-input"
-            defaultValue="Acme Enterprises"
-            id="company-01"
-            type="text"
-          />
+          <div
+            className="slds-form-element slds-grid slds-wrap"
+          >
+            <label
+              className="slds-form-element__label slds-form-element__label_edit slds-no-flex"
+              htmlFor="company-01"
+            >
+              <span
+                className="slds-assistive-text"
+              >
+                Company
+              </span>
+            </label>
+            <div
+              className="slds-form-element__control slds-grow"
+            >
+              <input
+                aria-describedby={null}
+                className="slds-input"
+                defaultValue="Acme Enterprises"
+                id="company-01"
+                type="text"
+              />
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -2871,35 +2945,43 @@ Array [
       id="dialog-body-id-2"
     >
       <div
-        className="slds-form-element slds-grid slds-wrap"
+        className="slds-media"
       >
-        <label
-          className="slds-form-element__label slds-form-element__label_edit slds-no-flex"
-          htmlFor="company-01"
-        >
-          <abbr
-            className="slds-required"
-            title="required"
-          >
-            *
-          </abbr>
-          <span
-            className="slds-assistive-text"
-          >
-            Company
-          </span>
-        </label>
         <div
-          className="slds-form-element__control slds-grow"
+          className="slds-media__body"
         >
-          <input
-            aria-describedby={null}
-            className="slds-input"
-            defaultValue="Acme Enterprises"
-            id="company-01"
-            required={true}
-            type="text"
-          />
+          <div
+            className="slds-form-element slds-grid slds-wrap"
+          >
+            <label
+              className="slds-form-element__label slds-form-element__label_edit slds-no-flex"
+              htmlFor="company-01"
+            >
+              <abbr
+                className="slds-required"
+                title="required"
+              >
+                *
+              </abbr>
+              <span
+                className="slds-assistive-text"
+              >
+                Company
+              </span>
+            </label>
+            <div
+              className="slds-form-element__control slds-grow"
+            >
+              <input
+                aria-describedby={null}
+                className="slds-input"
+                defaultValue="Acme Enterprises"
+                id="company-01"
+                required={true}
+                type="text"
+              />
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -3250,7 +3332,7 @@ Array [
   </a>,
   <span
     aria-atomic="true"
-    aria-live="assertive"
+    aria-live="polite"
     className="slds-assistive-text"
   >
     Sorted 

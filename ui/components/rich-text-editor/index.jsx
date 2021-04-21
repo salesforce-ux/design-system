@@ -1,14 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { ButtonGroupList } from '../button-groups/list/example';
 import PropTypes from 'prop-types';
 import ButtonIcon from '../button-icons/';
 import SvgIcon from '../../shared/svg-icon';
+import Combobox from '../combobox';
 import {
-  DeprecatedCombobox,
-  DeprecatedListbox,
-  DeprecatedListboxItem,
-  DeprecatedOption
-} from '../combobox/deprecated/';
+  PlainFontOptions,
+  PlainFontSizeOptions
+} from '../combobox/snapshots.data';
+import Listbox from '../combobox/listbox/';
 import { Listbox as NewListbox } from '../combobox/listbox';
 import { ComboboxGroup } from '../combobox/';
 import { IconObjectSwitcher } from '../combobox/object-switcher/';
@@ -19,10 +19,6 @@ import Input from '../input/';
 import classNames from 'classnames';
 import _ from '../../shared/helpers';
 
-const listboxOptionId01 = 'listbox-option-unique-id-01';
-const listboxOptionId02 = 'listbox-option-unique-id-02';
-const listboxOptionId03 = 'listbox-option-unique-id-03';
-const listboxOptionId04 = 'listbox-option-unique-id-04';
 export const richTextEditorLabelId01 = 'rich-text-editor-unique-id-01';
 
 /// ////////////////////////////////////////
@@ -74,11 +70,11 @@ export let RteToolbar = props => (
 );
 
 export const RteFormula = props => {
-  const listboxId1 = _.uniqueId('listbox-id-');
-  const listboxId2 = _.uniqueId('listbox-id-');
-  const primaryComboboxId1 = _.uniqueId('primary-combobox-id-');
-  const primaryComboboxId2 = _.uniqueId('primary-combobox-id-');
-  const inputId = _.uniqueId('text-input-id-');
+  const [listboxId1] = useState(_.uniqueId('example-unique-id-'));
+  const [listboxId2] = useState(_.uniqueId('example-unique-id-'));
+  const [primaryComboboxId1] = useState(_.uniqueId('example-unique-id-'));
+  const [primaryComboboxId2] = useState(_.uniqueId('example-unique-id-'));
+  const [inputId] = useState(_.uniqueId('example-unique-id-'));
 
   return (
     <React.Fragment>
@@ -191,86 +187,112 @@ export const RteFormula = props => {
   );
 };
 
-export const FontFamilyDropdown = props => (
-  <DeprecatedListbox
-    listboxClassName="slds-dropdown slds-dropdown_fluid"
-    vertical
-    id="family-listbox"
-  >
-    <DeprecatedListboxItem>
-      <DeprecatedOption
-        id={listboxOptionId01}
-        title="Times New Roman"
-        focused={props.focused}
-        selected={props.selected}
-        hideIcon
-      />
-    </DeprecatedListboxItem>
-    <DeprecatedListboxItem>
-      <DeprecatedOption id={listboxOptionId02} title="Arial" hideIcon />
-    </DeprecatedListboxItem>
-  </DeprecatedListbox>
+export const FontFamilyDropdown = ({ listboxData, id }) => (
+  <Listbox
+    id={id}
+    snapshot={listboxData}
+    type="plain"
+    count={3}
+    hideIcons
+    className="slds-dropdown_fluid slds-dropdown_left"
+  />
 );
 
-const FontSizeDropdown = props => (
-  <DeprecatedListbox
-    listboxClassName="slds-dropdown slds-dropdown_fluid"
-    vertical
-    id="size-listbox"
-  >
-    <DeprecatedListboxItem>
-      <DeprecatedOption
-        id={listboxOptionId03}
-        title="12px"
-        focused={props.focused}
-        selected={props.selected}
-        hideIcon
-      />
-    </DeprecatedListboxItem>
-    <DeprecatedListboxItem>
-      <DeprecatedOption id={listboxOptionId04} title="14px" hideIcon />
-    </DeprecatedListboxItem>
-  </DeprecatedListbox>
-);
+FontFamilyDropdown.propTypes = {
+  listboxData: PropTypes.object.isRequired,
+  id: PropTypes.string
+};
 
-export let RteFormatFont = props => (
-  <div
-    className="slds-grid slds-rich-text-editor__spacing-wrapper"
-    role="group"
-    aria-label="Format font family &amp; size"
-  >
-    <div className="slds-rich-text-editor__select">
-      <DeprecatedCombobox
-        className="slds-rich-text-editor__select_x-small"
-        id="font-family"
-        inputIcon="right"
-        inputIconRightSymbol="down"
-        value="Font"
-        label="Choose a Font"
-        hideLabel
-        readonly
-        aria-controls="family-listbox"
-        listbox={<FontFamilyDropdown />}
-      />
+const FontSizeDropdown = ({ listboxData, id }) => {
+  return (
+    <Listbox
+      id={id}
+      snapshot={listboxData}
+      type="plain"
+      count={6}
+      hideIcons
+      className="slds-dropdown_fluid slds-dropdown_left"
+    />
+  );
+};
+
+FontSizeDropdown.propTypes = {
+  listboxData: PropTypes.object.isRequired,
+  id: PropTypes.string
+};
+
+export let RteFormatFont = props => {
+  const [comboboxId] = useState(_.uniqueId('example-unique-id-'));
+  const [listboxId] = useState(_.uniqueId('example-unique-id-'));
+  const [comboboxId2] = useState(_.uniqueId('example-unique-id-'));
+  const [listboxId2] = useState(_.uniqueId('example-unique-id-'));
+
+  return (
+    <div
+      className="slds-grid slds-rich-text-editor__spacing-wrapper"
+      role="group"
+      aria-label="Format font family &amp; size"
+    >
+      <div className="slds-rich-text-editor__select">
+        <Combobox
+          className="slds-rich-text-editor__select_x-small"
+          id={comboboxId}
+          aria-controls={listboxId}
+          label="Choose a Font"
+          hideLabel
+          inputIconPosition="right"
+          rightInputIcon={
+            <UtilityIcon
+              symbol="down"
+              className="slds-icon slds-icon_x-small slds-icon-text-default"
+              containerClassName="slds-input__icon slds-input__icon_right"
+              assistiveText={false}
+              title={false}
+            />
+          }
+          results={
+            <FontFamilyDropdown listboxData={PlainFontOptions} id={listboxId} />
+          }
+          resultsType="listbox"
+          hasInteractions
+          readonly
+          value="Font"
+        />
+      </div>
+
+      <div className="slds-rich-text-editor__select">
+        <Combobox
+          className="slds-rich-text-editor__select_xx-small"
+          id={comboboxId2}
+          aria-controls={listboxId2}
+          label="Choose a Font Size"
+          hideLabel
+          inputIconPosition="right"
+          rightInputIcon={
+            <UtilityIcon
+              symbol="down"
+              className="slds-icon slds-icon_x-small slds-icon-text-default"
+              containerClassName="slds-input__icon slds-input__icon_right"
+              assistiveText={false}
+              title={false}
+            />
+          }
+          results={
+            <FontSizeDropdown
+              listboxData={PlainFontSizeOptions}
+              id={listboxId2}
+            />
+          }
+          resultsType="listbox"
+          hasInteractions
+          readonly
+          value="Size"
+          tabIndex="-1"
+        />
+      </div>
     </div>
-
-    <div className="slds-rich-text-editor__select">
-      <DeprecatedCombobox
-        className="slds-rich-text-editor__select_xx-small"
-        id="font-size"
-        inputIcon="right"
-        inputIconRightSymbol="down"
-        value="Size"
-        label="Choose a Font Size"
-        hideLabel
-        readonly
-        aria-controls="size-listbox"
-        tabIndex="-1"
-        listbox={<FontSizeDropdown />}
-      />
-    </div>
-  </div>
-);
+  );
+};
 
 export let RteFormatText = props => (
   <ButtonGroupList aria-label="Format text">

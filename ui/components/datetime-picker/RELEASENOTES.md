@@ -4,6 +4,12 @@
 
 <!-- ## [Unreleased] -->
 
+## 2.16.0
+
+### Changed
+
+- Removed the usage of the deprecated combobox. The Datetime Picker now uses the current combobox.
+
 ## 2.13.0
 
 ### Changed

@@ -496,384 +496,826 @@ exports[`renders a RTE editor with an error 1`] = `
 </div>
 `;
 
-exports[`renders a RTE editor with an error and non-readonly combobox 1`] = `
+exports[`renders a RTE output with font options and toolbar 1`] = `
 <div
-  className="slds-form-element"
+  className="demo-only"
+  style={
+    Object {
+      "minHeight": "180px",
+    }
+  }
 >
   <div
-    className="slds-form-element__control"
+    className="slds-form-element"
   >
     <div
-      className="slds-rich-text-editor slds-grid slds-grid_vertical slds-nowrap slds-has-error"
+      className="slds-form-element__control"
     >
       <div
-        className="slds-rich-text-editor__toolbar slds-shrink-none"
-        role="toolbar"
+        className="slds-rich-text-editor slds-grid slds-grid_vertical slds-nowrap"
       >
         <div
-          aria-label="Format font family & size"
-          className="slds-grid slds-rich-text-editor__spacing-wrapper"
-          role="group"
+          className="slds-rich-text-editor__toolbar slds-shrink-none"
+          role="toolbar"
         >
           <div
-            className="slds-rich-text-editor__select"
+            aria-label="Format font family & size"
+            className="slds-grid slds-rich-text-editor__spacing-wrapper"
+            role="group"
           >
             <div
-              className="slds-form-element"
+              className="slds-rich-text-editor__select"
             >
-              <label
-                className="slds-form-element__label slds-assistive-text"
-                htmlFor="font-family"
-              >
-                Choose a Font
-              </label>
               <div
-                className="slds-form-element__control"
+                className="slds-form-element"
               >
+                <label
+                  className="slds-form-element__label slds-assistive-text"
+                  htmlFor="example-unique-id-1"
+                >
+                  Choose a Font
+                </label>
                 <div
-                  className="slds-combobox_container"
+                  className="slds-form-element__control"
                 >
                   <div
-                    aria-expanded="false"
-                    aria-haspopup="listbox"
-                    className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click slds-rich-text-editor__select_x-small"
-                    role="combobox"
+                    className="slds-combobox_container"
                   >
                     <div
-                      className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
-                      role="none"
+                      aria-expanded="false"
+                      aria-haspopup="listbox"
+                      className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click slds-rich-text-editor__select_x-small"
+                      role="combobox"
                     >
-                      <input
-                        aria-autocomplete={null}
-                        aria-controls="family-listbox"
-                        autoComplete="off"
-                        className="slds-input slds-combobox__input slds-combobox__input-value"
-                        defaultValue="Font"
-                        id="font-family"
-                        placeholder="Select an Option…"
-                        readOnly={true}
-                        role="textbox"
-                        type="text"
-                      />
-                      <span
-                        className="slds-icon_container slds-icon-utility-down slds-input__icon slds-input__icon_right"
-                        title="Description of icon when needed"
+                      <div
+                        className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
+                        role="none"
                       >
-                        <svg
-                          aria-hidden={true}
-                          className="slds-icon slds-icon slds-icon_x-small slds-icon-text-default"
-                        >
-                          <use
-                            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
-                          />
-                        </svg>
+                        <input
+                          aria-autocomplete={null}
+                          aria-controls="example-unique-id-2"
+                          autocomplete="off"
+                          className="slds-input slds-combobox__input slds-combobox__input-value"
+                          defaultValue="Font"
+                          id="example-unique-id-1"
+                          onBlur={[Function]}
+                          onFocus={[Function]}
+                          placeholder="Select an Option…"
+                          readOnly={true}
+                          role="textbox"
+                          type="text"
+                        />
                         <span
-                          className="slds-assistive-text"
+                          className="slds-icon_container slds-icon-utility-down slds-input__icon slds-input__icon_right"
+                          title={null}
                         >
-                          Description of icon when needed
+                          <svg
+                            aria-hidden={true}
+                            className="slds-icon slds-icon slds-icon_x-small slds-icon-text-default"
+                          >
+                            <use
+                              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+                            />
+                          </svg>
                         </span>
-                      </span>
-                    </div>
-                    <div
-                      aria-orientation={null}
-                      className="slds-dropdown slds-dropdown_fluid"
-                      id="family-listbox"
-                      role="listbox"
-                    >
-                      <ul
-                        className="slds-listbox slds-listbox_vertical"
-                        role="presentation"
+                      </div>
+                      <div
+                        aria-orientation={null}
+                        className="slds-dropdown slds-dropdown_length-5 slds-dropdown_fluid slds-dropdown_left"
+                        id="example-unique-id-2"
+                        role="listbox"
                       >
-                        <li
-                          className="slds-listbox__item"
+                        <ul
+                          className="slds-listbox slds-listbox_vertical"
                           role="presentation"
                         >
-                          <div
-                            className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-media_center"
-                            id="listbox-option-unique-id-01"
-                            role="option"
+                          <li
+                            className="slds-listbox__item"
+                            role="presentation"
                           >
-                            <span
-                              className="slds-media__body"
+                            <div
+                              aria-checked={null}
+                              aria-disabled={null}
+                              aria-selected={null}
+                              className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
+                              id="option1"
+                              role="option"
                             >
                               <span
-                                className="slds-truncate"
-                                title="Times New Roman"
+                                className="slds-media__body"
                               >
-                                 
-                                Times New Roman
+                                <span
+                                  className="slds-truncate"
+                                  title="Arial"
+                                >
+                                  Arial
+                                </span>
                               </span>
-                            </span>
-                          </div>
-                        </li>
-                        <li
-                          className="slds-listbox__item"
+                            </div>
+                          </li>
+                          <li
+                            className="slds-listbox__item"
+                            role="presentation"
+                          >
+                            <div
+                              aria-checked={null}
+                              aria-disabled={null}
+                              aria-selected={null}
+                              className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
+                              id="option2"
+                              role="option"
+                            >
+                              <span
+                                className="slds-media__body"
+                              >
+                                <span
+                                  className="slds-truncate"
+                                  title="Georgia"
+                                >
+                                  Georgia
+                                </span>
+                              </span>
+                            </div>
+                          </li>
+                          <li
+                            className="slds-listbox__item"
+                            role="presentation"
+                          >
+                            <div
+                              aria-checked={null}
+                              aria-disabled={null}
+                              aria-selected={null}
+                              className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
+                              id="option3"
+                              role="option"
+                            >
+                              <span
+                                className="slds-media__body"
+                              >
+                                <span
+                                  className="slds-truncate"
+                                  title="Times New Roman"
+                                >
+                                  Times New Roman
+                                </span>
+                              </span>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              className="slds-rich-text-editor__select"
+            >
+              <div
+                className="slds-form-element"
+              >
+                <label
+                  className="slds-form-element__label slds-assistive-text"
+                  htmlFor="example-unique-id-3"
+                >
+                  Choose a Font Size
+                </label>
+                <div
+                  className="slds-form-element__control"
+                >
+                  <div
+                    className="slds-combobox_container"
+                  >
+                    <div
+                      aria-expanded="false"
+                      aria-haspopup="listbox"
+                      className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click slds-rich-text-editor__select_xx-small"
+                      role="combobox"
+                    >
+                      <div
+                        className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
+                        role="none"
+                      >
+                        <input
+                          aria-autocomplete={null}
+                          aria-controls="example-unique-id-4"
+                          autocomplete="off"
+                          className="slds-input slds-combobox__input slds-combobox__input-value"
+                          defaultValue="Size"
+                          id="example-unique-id-3"
+                          onBlur={[Function]}
+                          onFocus={[Function]}
+                          placeholder="Select an Option…"
+                          readOnly={true}
+                          role="textbox"
+                          tabIndex="-1"
+                          type="text"
+                        />
+                        <span
+                          className="slds-icon_container slds-icon-utility-down slds-input__icon slds-input__icon_right"
+                          title={null}
+                        >
+                          <svg
+                            aria-hidden={true}
+                            className="slds-icon slds-icon slds-icon_x-small slds-icon-text-default"
+                          >
+                            <use
+                              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+                            />
+                          </svg>
+                        </span>
+                      </div>
+                      <div
+                        aria-orientation={null}
+                        className="slds-dropdown slds-dropdown_length-5 slds-dropdown_fluid slds-dropdown_left"
+                        id="example-unique-id-4"
+                        role="listbox"
+                      >
+                        <ul
+                          className="slds-listbox slds-listbox_vertical"
                           role="presentation"
                         >
-                          <div
-                            className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-media_center"
-                            id="listbox-option-unique-id-02"
-                            role="option"
+                          <li
+                            className="slds-listbox__item"
+                            role="presentation"
                           >
-                            <span
-                              className="slds-media__body"
+                            <div
+                              aria-checked={null}
+                              aria-disabled={null}
+                              aria-selected={null}
+                              className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
+                              id="option1"
+                              role="option"
                             >
                               <span
-                                className="slds-truncate"
-                                title="Arial"
+                                className="slds-media__body"
                               >
-                                 
-                                Arial
+                                <span
+                                  className="slds-truncate"
+                                  title="8px"
+                                >
+                                  8px
+                                </span>
                               </span>
-                            </span>
-                          </div>
-                        </li>
-                      </ul>
+                            </div>
+                          </li>
+                          <li
+                            className="slds-listbox__item"
+                            role="presentation"
+                          >
+                            <div
+                              aria-checked={null}
+                              aria-disabled={null}
+                              aria-selected={null}
+                              className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
+                              id="option2"
+                              role="option"
+                            >
+                              <span
+                                className="slds-media__body"
+                              >
+                                <span
+                                  className="slds-truncate"
+                                  title="10px"
+                                >
+                                  10px
+                                </span>
+                              </span>
+                            </div>
+                          </li>
+                          <li
+                            className="slds-listbox__item"
+                            role="presentation"
+                          >
+                            <div
+                              aria-checked={null}
+                              aria-disabled={null}
+                              aria-selected={null}
+                              className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
+                              id="option3"
+                              role="option"
+                            >
+                              <span
+                                className="slds-media__body"
+                              >
+                                <span
+                                  className="slds-truncate"
+                                  title="12px"
+                                >
+                                  12px
+                                </span>
+                              </span>
+                            </div>
+                          </li>
+                          <li
+                            className="slds-listbox__item"
+                            role="presentation"
+                          >
+                            <div
+                              aria-checked={null}
+                              aria-disabled={null}
+                              aria-selected={null}
+                              className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
+                              id="option4"
+                              role="option"
+                            >
+                              <span
+                                className="slds-media__body"
+                              >
+                                <span
+                                  className="slds-truncate"
+                                  title="14px"
+                                >
+                                  14px
+                                </span>
+                              </span>
+                            </div>
+                          </li>
+                          <li
+                            className="slds-listbox__item"
+                            role="presentation"
+                          >
+                            <div
+                              aria-checked={null}
+                              aria-disabled={null}
+                              aria-selected={null}
+                              className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
+                              id="option5"
+                              role="option"
+                            >
+                              <span
+                                className="slds-media__body"
+                              >
+                                <span
+                                  className="slds-truncate"
+                                  title="16px"
+                                >
+                                  16px
+                                </span>
+                              </span>
+                            </div>
+                          </li>
+                          <li
+                            className="slds-listbox__item"
+                            role="presentation"
+                          >
+                            <div
+                              aria-checked={null}
+                              aria-disabled={null}
+                              aria-selected={null}
+                              className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
+                              id="option6"
+                              role="option"
+                            >
+                              <span
+                                className="slds-media__body"
+                              >
+                                <span
+                                  className="slds-truncate"
+                                  title="24px"
+                                >
+                                  24px
+                                </span>
+                              </span>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div
-            className="slds-rich-text-editor__select"
+          <ul
+            aria-label="Format text"
+            className="slds-button-group-list"
           >
-            <div
-              className="slds-form-element"
-            >
-              <label
-                className="slds-form-element__label slds-assistive-text"
-                htmlFor="font-size"
+            <li>
+              <button
+                aria-describedby={null}
+                className="slds-button slds-button_icon slds-button_icon-border-filled"
+                onClick={[Function]}
+                tabIndex="-1"
               >
-                Choose a Font Size
-              </label>
-              <div
-                className="slds-form-element__control"
-              >
-                <div
-                  className="slds-combobox_container"
+                <svg
+                  aria-hidden={true}
+                  className="slds-button__icon"
                 >
-                  <div
-                    aria-expanded="false"
-                    aria-haspopup="listbox"
-                    className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click slds-rich-text-editor__select_xx-small"
-                    role="combobox"
-                  >
-                    <div
-                      className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
-                      role="none"
-                    >
-                      <input
-                        aria-autocomplete={null}
-                        aria-controls="size-listbox"
-                        autoComplete="off"
-                        className="slds-input slds-combobox__input slds-combobox__input-value"
-                        defaultValue="Size"
-                        id="font-size"
-                        placeholder="Select an Option…"
-                        readOnly={true}
-                        role="textbox"
-                        tabIndex="-1"
-                        type="text"
-                      />
-                      <span
-                        className="slds-icon_container slds-icon-utility-down slds-input__icon slds-input__icon_right"
-                        title="Description of icon when needed"
-                      >
-                        <svg
-                          aria-hidden={true}
-                          className="slds-icon slds-icon slds-icon_x-small slds-icon-text-default"
-                        >
-                          <use
-                            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
-                          />
-                        </svg>
-                        <span
-                          className="slds-assistive-text"
-                        >
-                          Description of icon when needed
-                        </span>
-                      </span>
-                    </div>
-                    <div
-                      aria-orientation={null}
-                      className="slds-dropdown slds-dropdown_fluid"
-                      id="size-listbox"
-                      role="listbox"
-                    >
-                      <ul
-                        className="slds-listbox slds-listbox_vertical"
-                        role="presentation"
-                      >
-                        <li
-                          className="slds-listbox__item"
-                          role="presentation"
-                        >
-                          <div
-                            className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-media_center"
-                            id="listbox-option-unique-id-03"
-                            role="option"
-                          >
-                            <span
-                              className="slds-media__body"
-                            >
-                              <span
-                                className="slds-truncate"
-                                title="12px"
-                              >
-                                 
-                                12px
-                              </span>
-                            </span>
-                          </div>
-                        </li>
-                        <li
-                          className="slds-listbox__item"
-                          role="presentation"
-                        >
-                          <div
-                            className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-media_center"
-                            id="listbox-option-unique-id-04"
-                            role="option"
-                          >
-                            <span
-                              className="slds-media__body"
-                            >
-                              <span
-                                className="slds-truncate"
-                                title="14px"
-                              >
-                                 
-                                14px
-                              </span>
-                            </span>
-                          </div>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+                  <use
+                    xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#bold"
+                  />
+                </svg>
+                <span
+                  className="slds-assistive-text"
+                >
+                  Bold
+                </span>
+              </button>
+            </li>
+            <li>
+              <button
+                className="slds-button slds-button_icon slds-button_icon-border-filled"
+                onClick={[Function]}
+                tabIndex="-1"
+              >
+                <svg
+                  aria-hidden={true}
+                  className="slds-button__icon"
+                >
+                  <use
+                    xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#italic"
+                  />
+                </svg>
+                <span
+                  className="slds-assistive-text"
+                >
+                  Italic
+                </span>
+              </button>
+            </li>
+            <li>
+              <button
+                className="slds-button slds-button_icon slds-button_icon-border-filled"
+                onClick={[Function]}
+                tabIndex="-1"
+              >
+                <svg
+                  aria-hidden={true}
+                  className="slds-button__icon"
+                >
+                  <use
+                    xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#underline"
+                  />
+                </svg>
+                <span
+                  className="slds-assistive-text"
+                >
+                  Underline
+                </span>
+              </button>
+            </li>
+            <li>
+              <button
+                className="slds-button slds-button_icon slds-button_icon-border-filled"
+                onClick={[Function]}
+                tabIndex="-1"
+              >
+                <svg
+                  aria-hidden={true}
+                  className="slds-button__icon"
+                >
+                  <use
+                    xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#strikethrough"
+                  />
+                </svg>
+                <span
+                  className="slds-assistive-text"
+                >
+                  Strike Through
+                </span>
+              </button>
+            </li>
+          </ul>
+          <ul
+            aria-label="Format background & text color"
+            className="slds-button-group-list"
+          >
+            <li>
+              <button
+                aria-haspopup="true"
+                className="slds-button slds-button_icon slds-button_icon-more slds-button_icon-more-filled"
+                tabIndex="-1"
+              >
+                <svg
+                  aria-hidden={true}
+                  className="slds-button__icon"
+                >
+                  <use
+                    xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#text_background_color"
+                  />
+                </svg>
+                <svg
+                  aria-hidden={true}
+                  className="slds-button__icon slds-button__icon_x-small"
+                >
+                  <use
+                    xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+                  />
+                </svg>
+                <span
+                  className="slds-assistive-text"
+                >
+                  Background Color
+                </span>
+              </button>
+            </li>
+            <li>
+              <button
+                aria-haspopup="true"
+                className="slds-button slds-button_icon slds-button_icon-more slds-button_icon-more-filled"
+                tabIndex="-1"
+              >
+                <svg
+                  aria-hidden={true}
+                  className="slds-button__icon"
+                >
+                  <use
+                    xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#text_color"
+                  />
+                </svg>
+                <svg
+                  aria-hidden={true}
+                  className="slds-button__icon slds-button__icon_x-small"
+                >
+                  <use
+                    xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+                  />
+                </svg>
+                <span
+                  className="slds-assistive-text"
+                >
+                  Text Color
+                </span>
+              </button>
+            </li>
+          </ul>
+          <ul
+            aria-label="Format body"
+            className="slds-button-group-list"
+          >
+            <li>
+              <button
+                className="slds-button slds-button_icon slds-button_icon-border-filled"
+                onClick={[Function]}
+                tabIndex="-1"
+              >
+                <svg
+                  aria-hidden={true}
+                  className="slds-button__icon"
+                >
+                  <use
+                    xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#richtextbulletedlist"
+                  />
+                </svg>
+                <span
+                  className="slds-assistive-text"
+                >
+                  Bulleted List
+                </span>
+              </button>
+            </li>
+            <li>
+              <button
+                className="slds-button slds-button_icon slds-button_icon-border-filled"
+                onClick={[Function]}
+                tabIndex="-1"
+              >
+                <svg
+                  aria-hidden={true}
+                  className="slds-button__icon"
+                >
+                  <use
+                    xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#richtextnumberedlist"
+                  />
+                </svg>
+                <span
+                  className="slds-assistive-text"
+                >
+                  Numbered List
+                </span>
+              </button>
+            </li>
+            <li>
+              <button
+                className="slds-button slds-button_icon slds-button_icon-border-filled"
+                onClick={[Function]}
+                tabIndex="-1"
+              >
+                <svg
+                  aria-hidden={true}
+                  className="slds-button__icon"
+                >
+                  <use
+                    xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#richtextindent"
+                  />
+                </svg>
+                <span
+                  className="slds-assistive-text"
+                >
+                  Indent
+                </span>
+              </button>
+            </li>
+            <li>
+              <button
+                className="slds-button slds-button_icon slds-button_icon-border-filled"
+                onClick={[Function]}
+                tabIndex="-1"
+              >
+                <svg
+                  aria-hidden={true}
+                  className="slds-button__icon"
+                >
+                  <use
+                    xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#richtextoutdent"
+                  />
+                </svg>
+                <span
+                  className="slds-assistive-text"
+                >
+                  Outdent
+                </span>
+              </button>
+            </li>
+          </ul>
+          <ul
+            aria-label="Align text"
+            className="slds-button-group-list"
+          >
+            <li>
+              <button
+                className="slds-button slds-button_icon slds-button_icon-border-filled"
+                onClick={[Function]}
+                tabIndex="-1"
+              >
+                <svg
+                  aria-hidden={true}
+                  className="slds-button__icon"
+                >
+                  <use
+                    xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#left_align_text"
+                  />
+                </svg>
+                <span
+                  className="slds-assistive-text"
+                >
+                  Left Align Text
+                </span>
+              </button>
+            </li>
+            <li>
+              <button
+                className="slds-button slds-button_icon slds-button_icon-border-filled"
+                onClick={[Function]}
+                tabIndex="-1"
+              >
+                <svg
+                  aria-hidden={true}
+                  className="slds-button__icon"
+                >
+                  <use
+                    xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#center_align_text"
+                  />
+                </svg>
+                <span
+                  className="slds-assistive-text"
+                >
+                  Center Align Text
+                </span>
+              </button>
+            </li>
+            <li>
+              <button
+                className="slds-button slds-button_icon slds-button_icon-border-filled"
+                onClick={[Function]}
+                tabIndex="-1"
+              >
+                <svg
+                  aria-hidden={true}
+                  className="slds-button__icon"
+                >
+                  <use
+                    xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#right_align_text"
+                  />
+                </svg>
+                <span
+                  className="slds-assistive-text"
+                >
+                  Right Align Text
+                </span>
+              </button>
+            </li>
+          </ul>
+          <ul
+            aria-label="Insert content"
+            className="slds-button-group-list"
+            role={null}
+          >
+            <li
+              role={null}
+            >
+              <button
+                className="slds-button slds-button_icon slds-button_icon-border-filled"
+                onClick={[Function]}
+                role={null}
+                tabIndex="-1"
+              >
+                <svg
+                  aria-hidden={true}
+                  className="slds-button__icon"
+                >
+                  <use
+                    xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#emoji"
+                  />
+                </svg>
+                <span
+                  className="slds-assistive-text"
+                >
+                  Add Emoji
+                </span>
+              </button>
+            </li>
+            <li
+              role={null}
+            >
+              <button
+                className="slds-button slds-button_icon slds-button_icon-border-filled"
+                onClick={[Function]}
+                role={null}
+                tabIndex="-1"
+              >
+                <svg
+                  aria-hidden={true}
+                  className="slds-button__icon"
+                >
+                  <use
+                    xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#image"
+                  />
+                </svg>
+                <span
+                  className="slds-assistive-text"
+                >
+                  Add Image
+                </span>
+              </button>
+            </li>
+            <li
+              role={null}
+            >
+              <button
+                className="slds-button slds-button_icon slds-button_icon-border-filled"
+                onClick={[Function]}
+                role={null}
+                tabIndex="-1"
+              >
+                <svg
+                  aria-hidden={true}
+                  className="slds-button__icon"
+                >
+                  <use
+                    xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#link"
+                  />
+                </svg>
+                <span
+                  className="slds-assistive-text"
+                >
+                  Add Link
+                </span>
+              </button>
+            </li>
+          </ul>
+          <ul
+            aria-label="Remove Formatting"
+            className="slds-button-group-list"
+            role={null}
+          >
+            <li
+              role={null}
+            >
+              <button
+                className="slds-button slds-button_icon slds-button_icon-border-filled"
+                onClick={[Function]}
+                role={null}
+                tabIndex="-1"
+              >
+                <svg
+                  aria-hidden={true}
+                  className="slds-button__icon"
+                >
+                  <use
+                    xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#remove_formatting"
+                  />
+                </svg>
+                <span
+                  className="slds-assistive-text"
+                >
+                  Remove Formatting
+                </span>
+              </button>
+            </li>
+          </ul>
         </div>
         <div
-          className="slds-rich-text-editor__select"
+          className="slds-rich-text-editor__textarea slds-grid"
         >
           <div
-            className="slds-form-element"
+            aria-label="Compose email"
+            className="slds-rich-text-area__content slds-text-color_weak slds-grow"
+            contentEditable="true"
+            suppressContentEditableWarning={true}
           >
-            <label
-              className="slds-form-element__label slds-assistive-text"
-              htmlFor="font-family"
-            >
-              Choose a Font
-            </label>
-            <div
-              className="slds-form-element__control"
-            >
-              <div
-                className="slds-combobox_container"
-              >
-                <div
-                  aria-expanded="false"
-                  aria-haspopup="listbox"
-                  className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click slds-rich-text-editor__select_x-small"
-                  role="combobox"
-                >
-                  <div
-                    className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
-                    role="none"
-                  >
-                    <input
-                      aria-autocomplete={null}
-                      aria-controls="family-listbox"
-                      autoComplete="off"
-                      className="slds-input slds-combobox__input slds-combobox__input-value"
-                      defaultValue="Font"
-                      id="font-family"
-                      placeholder="Select an Option…"
-                      role="textbox"
-                      type="text"
-                    />
-                    <span
-                      className="slds-icon_container slds-icon-utility-down slds-input__icon slds-input__icon_right"
-                      title="Description of icon when needed"
-                    >
-                      <svg
-                        aria-hidden={true}
-                        className="slds-icon slds-icon slds-icon_x-small slds-icon-text-default"
-                      >
-                        <use
-                          xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
-                        />
-                      </svg>
-                      <span
-                        className="slds-assistive-text"
-                      >
-                        Description of icon when needed
-                      </span>
-                    </span>
-                  </div>
-                  <div
-                    aria-orientation={null}
-                    className="slds-dropdown slds-dropdown_fluid"
-                    id="family-listbox"
-                    role="listbox"
-                  >
-                    <ul
-                      className="slds-listbox slds-listbox_vertical"
-                      role="presentation"
-                    >
-                      <li
-                        className="slds-listbox__item"
-                        role="presentation"
-                      >
-                        <div
-                          className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-media_center"
-                          id="listbox-option-unique-id-01"
-                          role="option"
-                        >
-                          <span
-                            className="slds-media__body"
-                          >
-                            <span
-                              className="slds-truncate"
-                              title="Times New Roman"
-                            >
-                               
-                              Times New Roman
-                            </span>
-                          </span>
-                        </div>
-                      </li>
-                      <li
-                        className="slds-listbox__item"
-                        role="presentation"
-                      >
-                        <div
-                          className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-media_center"
-                          id="listbox-option-unique-id-02"
-                          role="option"
-                        >
-                          <span
-                            className="slds-media__body"
-                          >
-                            <span
-                              className="slds-truncate"
-                              title="Arial"
-                            >
-                               
-                              Arial
-                            </span>
-                          </span>
-                        </div>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
+            Compose Email...
           </div>
         </div>
       </div>
@@ -1178,7 +1620,7 @@ exports[`renders an RTE toolbar in a narrow space 1`] = `
               >
                 <label
                   className="slds-form-element__label slds-assistive-text"
-                  htmlFor="font-family"
+                  htmlFor="example-unique-id-5"
                 >
                   Choose a Font
                 </label>
@@ -1200,11 +1642,13 @@ exports[`renders an RTE toolbar in a narrow space 1`] = `
                       >
                         <input
                           aria-autocomplete={null}
-                          aria-controls="family-listbox"
-                          autoComplete="off"
+                          aria-controls="example-unique-id-6"
+                          autocomplete="off"
                           className="slds-input slds-combobox__input slds-combobox__input-value"
                           defaultValue="Font"
-                          id="font-family"
+                          id="example-unique-id-5"
+                          onBlur={[Function]}
+                          onFocus={[Function]}
                           placeholder="Select an Option…"
                           readOnly={true}
                           role="textbox"
@@ -1212,7 +1656,7 @@ exports[`renders an RTE toolbar in a narrow space 1`] = `
                         />
                         <span
                           className="slds-icon_container slds-icon-utility-down slds-input__icon slds-input__icon_right"
-                          title="Description of icon when needed"
+                          title={null}
                         >
                           <svg
                             aria-hidden={true}
@@ -1222,17 +1666,12 @@ exports[`renders an RTE toolbar in a narrow space 1`] = `
                               xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
                             />
                           </svg>
-                          <span
-                            className="slds-assistive-text"
-                          >
-                            Description of icon when needed
-                          </span>
                         </span>
                       </div>
                       <div
                         aria-orientation={null}
-                        className="slds-dropdown slds-dropdown_fluid"
-                        id="family-listbox"
+                        className="slds-dropdown slds-dropdown_length-5 slds-dropdown_fluid slds-dropdown_left"
+                        id="example-unique-id-6"
                         role="listbox"
                       >
                         <ul
@@ -1244,30 +1683,11 @@ exports[`renders an RTE toolbar in a narrow space 1`] = `
                             role="presentation"
                           >
                             <div
-                              className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-media_center"
-                              id="listbox-option-unique-id-01"
-                              role="option"
-                            >
-                              <span
-                                className="slds-media__body"
-                              >
-                                <span
-                                  className="slds-truncate"
-                                  title="Times New Roman"
-                                >
-                                   
-                                  Times New Roman
-                                </span>
-                              </span>
-                            </div>
-                          </li>
-                          <li
-                            className="slds-listbox__item"
-                            role="presentation"
-                          >
-                            <div
-                              className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-media_center"
-                              id="listbox-option-unique-id-02"
+                              aria-checked={null}
+                              aria-disabled={null}
+                              aria-selected={null}
+                              className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
+                              id="option1"
                               role="option"
                             >
                               <span
@@ -1277,8 +1697,55 @@ exports[`renders an RTE toolbar in a narrow space 1`] = `
                                   className="slds-truncate"
                                   title="Arial"
                                 >
-                                   
                                   Arial
+                                </span>
+                              </span>
+                            </div>
+                          </li>
+                          <li
+                            className="slds-listbox__item"
+                            role="presentation"
+                          >
+                            <div
+                              aria-checked={null}
+                              aria-disabled={null}
+                              aria-selected={null}
+                              className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
+                              id="option2"
+                              role="option"
+                            >
+                              <span
+                                className="slds-media__body"
+                              >
+                                <span
+                                  className="slds-truncate"
+                                  title="Georgia"
+                                >
+                                  Georgia
+                                </span>
+                              </span>
+                            </div>
+                          </li>
+                          <li
+                            className="slds-listbox__item"
+                            role="presentation"
+                          >
+                            <div
+                              aria-checked={null}
+                              aria-disabled={null}
+                              aria-selected={null}
+                              className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
+                              id="option3"
+                              role="option"
+                            >
+                              <span
+                                className="slds-media__body"
+                              >
+                                <span
+                                  className="slds-truncate"
+                                  title="Times New Roman"
+                                >
+                                  Times New Roman
                                 </span>
                               </span>
                             </div>
@@ -1298,7 +1765,7 @@ exports[`renders an RTE toolbar in a narrow space 1`] = `
               >
                 <label
                   className="slds-form-element__label slds-assistive-text"
-                  htmlFor="font-size"
+                  htmlFor="example-unique-id-7"
                 >
                   Choose a Font Size
                 </label>
@@ -1320,11 +1787,13 @@ exports[`renders an RTE toolbar in a narrow space 1`] = `
                       >
                         <input
                           aria-autocomplete={null}
-                          aria-controls="size-listbox"
-                          autoComplete="off"
+                          aria-controls="example-unique-id-8"
+                          autocomplete="off"
                           className="slds-input slds-combobox__input slds-combobox__input-value"
                           defaultValue="Size"
-                          id="font-size"
+                          id="example-unique-id-7"
+                          onBlur={[Function]}
+                          onFocus={[Function]}
                           placeholder="Select an Option…"
                           readOnly={true}
                           role="textbox"
@@ -1333,7 +1802,7 @@ exports[`renders an RTE toolbar in a narrow space 1`] = `
                         />
                         <span
                           className="slds-icon_container slds-icon-utility-down slds-input__icon slds-input__icon_right"
-                          title="Description of icon when needed"
+                          title={null}
                         >
                           <svg
                             aria-hidden={true}
@@ -1343,17 +1812,12 @@ exports[`renders an RTE toolbar in a narrow space 1`] = `
                               xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
                             />
                           </svg>
-                          <span
-                            className="slds-assistive-text"
-                          >
-                            Description of icon when needed
-                          </span>
                         </span>
                       </div>
                       <div
                         aria-orientation={null}
-                        className="slds-dropdown slds-dropdown_fluid"
-                        id="size-listbox"
+                        className="slds-dropdown slds-dropdown_length-5 slds-dropdown_fluid slds-dropdown_left"
+                        id="example-unique-id-8"
                         role="listbox"
                       >
                         <ul
@@ -1365,8 +1829,59 @@ exports[`renders an RTE toolbar in a narrow space 1`] = `
                             role="presentation"
                           >
                             <div
-                              className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-media_center"
-                              id="listbox-option-unique-id-03"
+                              aria-checked={null}
+                              aria-disabled={null}
+                              aria-selected={null}
+                              className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
+                              id="option1"
+                              role="option"
+                            >
+                              <span
+                                className="slds-media__body"
+                              >
+                                <span
+                                  className="slds-truncate"
+                                  title="8px"
+                                >
+                                  8px
+                                </span>
+                              </span>
+                            </div>
+                          </li>
+                          <li
+                            className="slds-listbox__item"
+                            role="presentation"
+                          >
+                            <div
+                              aria-checked={null}
+                              aria-disabled={null}
+                              aria-selected={null}
+                              className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
+                              id="option2"
+                              role="option"
+                            >
+                              <span
+                                className="slds-media__body"
+                              >
+                                <span
+                                  className="slds-truncate"
+                                  title="10px"
+                                >
+                                  10px
+                                </span>
+                              </span>
+                            </div>
+                          </li>
+                          <li
+                            className="slds-listbox__item"
+                            role="presentation"
+                          >
+                            <div
+                              aria-checked={null}
+                              aria-disabled={null}
+                              aria-selected={null}
+                              className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
+                              id="option3"
                               role="option"
                             >
                               <span
@@ -1376,7 +1891,6 @@ exports[`renders an RTE toolbar in a narrow space 1`] = `
                                   className="slds-truncate"
                                   title="12px"
                                 >
-                                   
                                   12px
                                 </span>
                               </span>
@@ -1387,8 +1901,11 @@ exports[`renders an RTE toolbar in a narrow space 1`] = `
                             role="presentation"
                           >
                             <div
-                              className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-media_center"
-                              id="listbox-option-unique-id-04"
+                              aria-checked={null}
+                              aria-disabled={null}
+                              aria-selected={null}
+                              className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
+                              id="option4"
                               role="option"
                             >
                               <span
@@ -1398,8 +1915,55 @@ exports[`renders an RTE toolbar in a narrow space 1`] = `
                                   className="slds-truncate"
                                   title="14px"
                                 >
-                                   
                                   14px
+                                </span>
+                              </span>
+                            </div>
+                          </li>
+                          <li
+                            className="slds-listbox__item"
+                            role="presentation"
+                          >
+                            <div
+                              aria-checked={null}
+                              aria-disabled={null}
+                              aria-selected={null}
+                              className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
+                              id="option5"
+                              role="option"
+                            >
+                              <span
+                                className="slds-media__body"
+                              >
+                                <span
+                                  className="slds-truncate"
+                                  title="16px"
+                                >
+                                  16px
+                                </span>
+                              </span>
+                            </div>
+                          </li>
+                          <li
+                            className="slds-listbox__item"
+                            role="presentation"
+                          >
+                            <div
+                              aria-checked={null}
+                              aria-disabled={null}
+                              aria-selected={null}
+                              className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
+                              id="option6"
+                              role="option"
+                            >
+                              <span
+                                className="slds-media__body"
+                              >
+                                <span
+                                  className="slds-truncate"
+                                  title="24px"
+                                >
+                                  24px
                                 </span>
                               </span>
                             </div>

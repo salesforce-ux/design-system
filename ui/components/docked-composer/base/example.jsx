@@ -432,6 +432,7 @@ export let examples = [
                   </div>
                 </div>
                 <div className="slds-form-element__row">
+                  {/* Docked Composer uses a deprecated design pattern, this is a correct usage of DeprecatedCombobox */}
                   <DeprecatedCombobox
                     formClassName="slds-size_1-of-2"
                     autocomplete

@@ -102,6 +102,62 @@ export const EntityOptionsFocused = {
   }
 };
 
+export const EntityOptionsLabel = {
+  option0: {
+    name: 'My Favorites',
+    label: true
+  },
+  option1: {
+    name: 'Burlington Textiles Corp of America',
+    entityMeta: true,
+    entityType: 'Account',
+    entityField: 'Burlington, NC',
+    tabIndex: 0
+  },
+  option2: {
+    name: 'Dickenson plc',
+    entityMeta: true,
+    entityType: 'Account',
+    entityField: 'Lawrence, KS'
+  },
+  option3: {
+    name: 'Edge Communications',
+    entityMeta: true,
+    entityType: 'Account',
+    entityField: 'Austin, TX'
+  },
+  option4: {
+    name: 'Express Logistics and Transport',
+    entityMeta: true,
+    entityType: 'Account',
+    entityField: 'Portland, OR'
+  },
+  option5: {
+    name: 'GenePoint',
+    entityMeta: true,
+    entityType: 'Account',
+    entityField: 'Mountain View, CA'
+  },
+  option6: {
+    name: 'Grand Hotels & Resorts Ltd',
+    entityMeta: true,
+    entityType: 'Account',
+    entityField: 'Chicago, IL'
+  },
+  option7: {
+    name: 'Pyramid Construction Inc.',
+    entityMeta: true,
+    entityType: 'Account',
+    entityField: 'Paris'
+  },
+  option8: {
+    name: 'United Oil & Gas Corp.',
+    entityMeta: true,
+    entityType: 'Account',
+    entityField: 'New York, NY'
+  }
+};
+
 export const EntityOptionsTypeahead = {
   option1: {
     term: 'Salesforce',
@@ -442,6 +498,121 @@ export const EntityStylingOptions = {
     entityField: 'Alexandria, VA',
     rightIcon: 'chevronright',
     rightIconAssistiveText: 'Has further options'
+  }
+};
+
+export const PlainTimeOptions = {
+  option1: {
+    name: '7:00am'
+  },
+  option2: {
+    name: '8:00am'
+  },
+  option3: {
+    name: '9:00am'
+  },
+  option4: {
+    name: '10:00am'
+  },
+  option5: {
+    name: '11:00am'
+  },
+  option6: {
+    name: '12:00pm'
+  }
+};
+
+export const PlainTimeOptionsFocused = {
+  option1: {
+    name: '7:00am'
+  },
+  option2: {
+    name: '8:00am',
+    focused: true,
+    tabIndex: 0
+  },
+  option3: {
+    name: '9:00am'
+  },
+  option4: {
+    name: '10:00am'
+  },
+  option5: {
+    name: '11:00am'
+  },
+  option6: {
+    name: '12:00pm'
+  }
+};
+
+export const PlainTimeOptionsSelected = {
+  option1: {
+    name: '7:00am'
+  },
+  option2: {
+    name: '8:00am',
+    focused: true,
+    selected: true
+  },
+  option3: {
+    name: '9:00am'
+  },
+  option4: {
+    name: '10:00am'
+  },
+  option5: {
+    name: '11:00am'
+  },
+  option6: {
+    name: '12:00pm'
+  }
+};
+
+export const PlainFontOptions = {
+  option1: {
+    name: 'Arial'
+  },
+  option2: {
+    name: 'Georgia'
+  },
+  option3: {
+    name: 'Times New Roman'
+  }
+};
+
+export const PlainFontSizeOptions = {
+  option1: {
+    name: '8px'
+  },
+  option2: {
+    name: '10px'
+  },
+  option3: {
+    name: '12px'
+  },
+  option4: {
+    name: '14px'
+  },
+  option5: {
+    name: '16px'
+  },
+  option6: {
+    name: '24px'
+  }
+};
+
+export const PlainGenericOptions = {
+  option1: {
+    name: 'Option A'
+  },
+  option2: {
+    name: 'Option B'
+  },
+  option3: {
+    name: 'Option C'
+  },
+  option4: {
+    name: 'Option D'
   }
 };
 

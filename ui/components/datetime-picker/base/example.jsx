@@ -1,16 +1,17 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-import React from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import _ from '../../../shared/helpers';
+import Combobox from '../../combobox';
+import Listbox from '../../combobox/listbox/';
 import {
-  DeprecatedCombobox,
-  DeprecatedListbox,
-  DeprecatedListboxItem,
-  DeprecatedOption
-} from '../../combobox/deprecated/';
+  PlainTimeOptions,
+  PlainTimeOptionsSelected
+} from '../../combobox/snapshots.data';
+import { UtilityIcon } from '../../icons/base/example';
 import { DatePicker } from '../../datepickers/base/example';
 import ButtonIcon from '../../button-icons/';
 import { FormElement } from '../../form-element';
@@ -23,11 +24,31 @@ import Input from '../../input/';
 const ExampleDatetimePicker = ({
   dropdown,
   dropdownIsOpen,
-  listboxIsOpen,
-  dateDefaultValue,
-  timeDefaultValue
+  hasFocus,
+  isOpen,
+  listboxData,
+  dateDefaultValue
 }) => {
-  const uniqueId = _.uniqueId('text-input-unique-id-');
+  const focusedRef = useRef();
+  const [focusedId, setFocusedId] = useState('');
+  const [focusedValue, setFocusedValue] = useState('');
+  const [uniqueId] = useState(_.uniqueId('example-unique-id-'));
+  const [comboboxId] = useState(_.uniqueId('example-unique-id-'));
+  const [listboxId] = useState(_.uniqueId('example-unique-id-'));
+
+  useEffect(() => {
+    if (focusedRef.current) {
+      if ('id' in focusedRef.current && focusedRef.current.id) {
+        setFocusedId(focusedRef.current.id);
+      }
+      if (
+        'ariaChecked' in focusedRef.current &&
+        focusedRef.current.ariaChecked
+      ) {
+        setFocusedValue(focusedRef.current.textContent);
+      }
+    }
+  }, []);
 
   const computedClassNames = {
     'slds-is-open': dropdownIsOpen
@@ -54,7 +75,7 @@ const ExampleDatetimePicker = ({
               >
                 <Input
                   id={uniqueId}
-                  placeholder=" "
+                  placeholder="Select a date…"
                   defaultValue={dateDefaultValue}
                 />
                 <ButtonIcon
@@ -64,17 +85,39 @@ const ExampleDatetimePicker = ({
                   title="Select a date"
                 />
               </FormElement>
-              <DeprecatedCombobox
-                label="Time"
+
+              <Combobox
+                id={comboboxId}
+                aria-controls={listboxId}
+                aria-activedescendant={focusedId}
                 autocomplete
-                isOpen={listboxIsOpen}
-                className="slds-combobox-picklist slds-timepicker"
-                inputIcon="right"
-                inputIconRightSymbol="clock"
-                inputIconRightAssistiveText={false}
-                placeholder=" "
-                listbox={<ListboxDropdown optionSelected />}
-                value={timeDefaultValue}
+                label="Time"
+                placeholder="Select a time…"
+                inputIconPosition="right"
+                rightInputIcon={
+                  <UtilityIcon
+                    symbol="clock"
+                    className="slds-icon slds-icon_x-small slds-icon-text-default"
+                    containerClassName="slds-input__icon slds-input__icon_right"
+                    assistiveText={false}
+                    title={false}
+                  />
+                }
+                results={
+                  <Listbox
+                    className="slds-dropdown_fluid slds-dropdown_left"
+                    id={listboxId}
+                    snapshot={listboxData}
+                    type="plain"
+                    count={6}
+                    focusedRef={focusedRef}
+                  />
+                }
+                resultsType="listbox"
+                hasInteractions
+                hasFocus={hasFocus}
+                isOpen={isOpen}
+                value={focusedValue}
               />
             </div>
           </div>
@@ -87,9 +130,11 @@ const ExampleDatetimePicker = ({
 ExampleDatetimePicker.propTypes = {
   dropdown: PropTypes.node,
   dropdownIsOpen: PropTypes.bool,
+  hasFocus: PropTypes.bool,
+  isOpen: PropTypes.bool,
   listboxIsOpen: PropTypes.bool,
-  dateDefaultValue: PropTypes.string,
-  timeDefaultValue: PropTypes.string
+  listboxData: PropTypes.object.isRequired,
+  dateDefaultValue: PropTypes.string
 };
 
 ExampleDatetimePicker.defaultProps = {
@@ -97,63 +142,24 @@ ExampleDatetimePicker.defaultProps = {
   dropdownIsOpen: true
 };
 
-const ListboxDropdown = props => (
-  <DeprecatedListbox
-    listboxClassName="slds-dropdown slds-dropdown_fluid slds-dropdown_length-5"
-    vertical
-  >
-    <DeprecatedListboxItem>
-      <DeprecatedOption title="6:00am" />
-    </DeprecatedListboxItem>
-    <DeprecatedListboxItem>
-      <DeprecatedOption title="7:00am" />
-    </DeprecatedListboxItem>
-    <DeprecatedListboxItem>
-      <DeprecatedOption title="8:00am" selected={props.optionSelected} />
-    </DeprecatedListboxItem>
-    <DeprecatedListboxItem>
-      <DeprecatedOption title="9:00am" />
-    </DeprecatedListboxItem>
-    <DeprecatedListboxItem>
-      <DeprecatedOption title="10:00am" />
-    </DeprecatedListboxItem>
-    <DeprecatedListboxItem>
-      <DeprecatedOption title="11:00am" />
-    </DeprecatedListboxItem>
-    <DeprecatedListboxItem>
-      <DeprecatedOption title="12:00pm" />
-    </DeprecatedListboxItem>
-    <DeprecatedListboxItem>
-      <DeprecatedOption title="1:00pm" />
-    </DeprecatedListboxItem>
-    <DeprecatedListboxItem>
-      <DeprecatedOption title="2:00pm" />
-    </DeprecatedListboxItem>
-    <DeprecatedListboxItem>
-      <DeprecatedOption title="3:00pm" />
-    </DeprecatedListboxItem>
-    <DeprecatedListboxItem>
-      <DeprecatedOption title="4:00pm" />
-    </DeprecatedListboxItem>
-    <DeprecatedListboxItem>
-      <DeprecatedOption title="5:00pm" />
-    </DeprecatedListboxItem>
-  </DeprecatedListbox>
-);
-
 /* -----------------------------------------------------------------------------
     Exports
 ----------------------------------------------------------------------------- */
 
 // Default
-export default <ExampleDatetimePicker />;
+export default <ExampleDatetimePicker listboxData={PlainTimeOptions} />;
 
 export const examples = [
   {
     id: 'small-width-container',
     label: 'Small Width Container',
     demoStyles: 'height: auto; width: 200px; border: 1px dashed #ddd;',
-    element: <ExampleDatetimePicker dropdownIsOpen={false} />
+    element: (
+      <ExampleDatetimePicker
+        dropdownIsOpen={false}
+        listboxData={PlainTimeOptions}
+      />
+    )
   }
 ];
 
@@ -167,6 +173,7 @@ export let states = [
           <DatePicker todayActive dateSelected="single" dateRange="week-4" />
         }
         dateDefaultValue="06/24/2020"
+        listboxData={PlainTimeOptions}
       />
     )
   },
@@ -177,12 +184,18 @@ export let states = [
     element: (
       <ExampleDatetimePicker
         dropdown={
-          <DatePicker todayActive dateSelected="single" dateRange="week-4" />
+          <DatePicker
+            todayActive
+            dateSelected="single"
+            dateRange="week-4"
+            value="8:00am"
+          />
         }
         dropdownIsOpen={false}
-        listboxIsOpen
-        timeDefaultValue="8:00am"
         dateDefaultValue="06/24/2020"
+        isOpen
+        hasFocus
+        listboxData={PlainTimeOptionsSelected}
       />
     )
   }

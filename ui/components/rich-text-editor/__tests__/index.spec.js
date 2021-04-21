@@ -14,10 +14,10 @@ import {
   RteAlignText,
   RteInsertContent,
   RteClearFormatting,
-  RteTextarea,
-  FontFamilyDropdown
+  RteTextarea
 } from '../';
-import { DeprecatedCombobox } from '../../combobox/deprecated';
+import { getDisplayElementById } from '../../../shared/helpers';
+import * as RTE from '../base/example';
 
 const { matchesMarkup } = createHelpers(__dirname);
 
@@ -36,21 +36,8 @@ const IndentedOutputText = props => (
   </ol>
 );
 
-const ComboboxNonReadOnly = props => (
-  <div className="slds-rich-text-editor__select">
-    <DeprecatedCombobox
-      className="slds-rich-text-editor__select_x-small"
-      id="font-family"
-      inputIcon="right"
-      inputIconRightSymbol="down"
-      value="Font"
-      label="Choose a Font"
-      hideLabel
-      aria-controls="family-listbox"
-      listbox={<FontFamilyDropdown />}
-    />
-  </div>
-);
+it('renders a RTE output with font options and toolbar', () =>
+  matchesMarkup(getDisplayElementById(RTE.examples, 'email')));
 
 it('renders an RTE toolbar in a narrow space', () =>
   matchesMarkup(
@@ -115,16 +102,6 @@ it('renders a RTE editor with an error', () =>
       >
         This field is required
       </div>
-    </RichTextEditor>
-  ));
-
-it('renders a RTE editor with an error and non-readonly combobox', () =>
-  matchesMarkup(
-    <RichTextEditor className="slds-has-error">
-      <RteToolbar>
-        <RteFormatFont />
-        <ComboboxNonReadOnly />
-      </RteToolbar>
     </RichTextEditor>
   ));
 

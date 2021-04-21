@@ -744,7 +744,7 @@ exports[`List Builder renders a default list builder 1`] = `
             >
               <label
                 className="slds-form-element__label slds-assistive-text"
-                htmlFor="combobox-unique-id-1"
+                htmlFor="example-unique-id-1"
               >
                 Search
               </label>
@@ -766,9 +766,12 @@ exports[`List Builder renders a default list builder 1`] = `
                     >
                       <input
                         aria-autocomplete="list"
-                        autoComplete="off"
+                        aria-controls="example-unique-id-2"
+                        autocomplete="off"
                         className="slds-input slds-combobox__input"
-                        id="combobox-unique-id-1"
+                        id="example-unique-id-1"
+                        onBlur={[Function]}
+                        onFocus={[Function]}
                         placeholder="Search Salesforce"
                         role="textbox"
                         type="text"
@@ -789,8 +792,8 @@ exports[`List Builder renders a default list builder 1`] = `
                     </div>
                     <div
                       aria-orientation={null}
-                      className="slds-dropdown slds-dropdown_fluid"
-                      id="listbox-unique-id"
+                      className="slds-dropdown slds-dropdown_length-5 slds-dropdown_fluid"
+                      id="example-unique-id-2"
                       role="listbox"
                     >
                       <ul
@@ -802,42 +805,21 @@ exports[`List Builder renders a default list builder 1`] = `
                           role="presentation"
                         >
                           <div
-                            className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
-                            id="listbox-option-unique-id-01"
+                            aria-checked={null}
+                            aria-disabled={null}
+                            aria-selected={null}
+                            className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
+                            id="option1"
                             role="option"
                           >
-                            <span
-                              className="slds-media__figure"
-                            >
-                              <span
-                                className="slds-icon_container slds-icon-standard-account"
-                                title={null}
-                              >
-                                <svg
-                                  aria-hidden={true}
-                                  className="slds-icon slds-icon_small"
-                                >
-                                  <use
-                                    xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#account"
-                                  />
-                                </svg>
-                              </span>
-                            </span>
                             <span
                               className="slds-media__body"
                             >
                               <span
-                                className="slds-listbox__option-text slds-listbox__option-text_entity"
+                                className="slds-truncate"
+                                title="Option A"
                               >
-                                Acme
-                              </span>
-                              <span
-                                className="slds-listbox__option-meta slds-listbox__option-meta_entity"
-                              >
-                                Account
-                                 •
-                                 
-                                 San Francisco
+                                Option A
                               </span>
                             </span>
                           </div>
@@ -847,42 +829,69 @@ exports[`List Builder renders a default list builder 1`] = `
                           role="presentation"
                         >
                           <div
-                            className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
-                            id="listbox-option-unique-id-02"
+                            aria-checked={null}
+                            aria-disabled={null}
+                            aria-selected={null}
+                            className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
+                            id="option2"
                             role="option"
                           >
-                            <span
-                              className="slds-media__figure"
-                            >
-                              <span
-                                className="slds-icon_container slds-icon-standard-account"
-                                title={null}
-                              >
-                                <svg
-                                  aria-hidden={true}
-                                  className="slds-icon slds-icon_small"
-                                >
-                                  <use
-                                    xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#account"
-                                  />
-                                </svg>
-                              </span>
-                            </span>
                             <span
                               className="slds-media__body"
                             >
                               <span
-                                className="slds-listbox__option-text slds-listbox__option-text_entity"
+                                className="slds-truncate"
+                                title="Option B"
                               >
-                                Salesforce.com, Inc.
+                                Option B
                               </span>
+                            </span>
+                          </div>
+                        </li>
+                        <li
+                          className="slds-listbox__item"
+                          role="presentation"
+                        >
+                          <div
+                            aria-checked={null}
+                            aria-disabled={null}
+                            aria-selected={null}
+                            className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
+                            id="option3"
+                            role="option"
+                          >
+                            <span
+                              className="slds-media__body"
+                            >
                               <span
-                                className="slds-listbox__option-meta slds-listbox__option-meta_entity"
+                                className="slds-truncate"
+                                title="Option C"
                               >
-                                Account
-                                 •
-                                 
-                                 San Francisco
+                                Option C
+                              </span>
+                            </span>
+                          </div>
+                        </li>
+                        <li
+                          className="slds-listbox__item"
+                          role="presentation"
+                        >
+                          <div
+                            aria-checked={null}
+                            aria-disabled={null}
+                            aria-selected={null}
+                            className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
+                            id="option4"
+                            role="option"
+                          >
+                            <span
+                              className="slds-media__body"
+                            >
+                              <span
+                                className="slds-truncate"
+                                title="Option D"
+                              >
+                                Option D
                               </span>
                             </span>
                           </div>
@@ -1191,184 +1200,6 @@ exports[`List Builder renders a default list builder 1`] = `
                       className="slds-text-align_right"
                       role="gridcell"
                       tabIndex="0"
-                    >
-                      <label
-                        className="slds-checkbox-button"
-                        htmlFor="example-unique-id-1"
-                      >
-                        <input
-                          className="slds-assistive-text"
-                          defaultChecked={false}
-                          id="example-unique-id-1"
-                          onBlur={[Function]}
-                          onChange={[Function]}
-                          onFocus={[Function]}
-                          tabIndex={-1}
-                          type="checkbox"
-                          value="example-unique-id-1"
-                        />
-                        <span
-                          className="slds-icon_container slds-icon-utility-add slds-current-color"
-                          title="Description of icon when needed"
-                        >
-                          <svg
-                            aria-hidden={true}
-                            className="slds-icon slds-icon_x-small"
-                          >
-                            <use
-                              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#add"
-                            />
-                          </svg>
-                          <span
-                            className="slds-assistive-text"
-                          >
-                            Add product
-                          </span>
-                        </span>
-                      </label>
-                    </td>
-                    <th
-                      className={null}
-                      scope="row"
-                    >
-                      <div
-                        className="slds-truncate"
-                        title="Analytics"
-                      >
-                        Analytics
-                      </div>
-                    </th>
-                    <td
-                      className={null}
-                      role="gridcell"
-                    >
-                      <div
-                        className="slds-truncate"
-                        title="ANTLY"
-                      >
-                        ANTLY
-                      </div>
-                    </td>
-                    <td
-                      className={null}
-                      role="gridcell"
-                    >
-                      <div
-                        className="slds-truncate"
-                        title="5000.00"
-                      >
-                        5000.00
-                      </div>
-                    </td>
-                    <td
-                      className={null}
-                      role="gridcell"
-                    >
-                      <div
-                        className="slds-truncate"
-                        title="Analytics Product"
-                      >
-                        Analytics Product
-                      </div>
-                    </td>
-                  </tr>
-                  <tr
-                    aria-selected={false}
-                    className="slds-hint-parent"
-                  >
-                    <td
-                      className="slds-text-align_right"
-                      role="gridcell"
-                      tabIndex={null}
-                    >
-                      <label
-                        className="slds-checkbox-button"
-                        htmlFor="example-unique-id-2"
-                      >
-                        <input
-                          className="slds-assistive-text"
-                          defaultChecked={false}
-                          id="example-unique-id-2"
-                          onBlur={[Function]}
-                          onChange={[Function]}
-                          onFocus={[Function]}
-                          tabIndex={-1}
-                          type="checkbox"
-                          value="example-unique-id-2"
-                        />
-                        <span
-                          className="slds-icon_container slds-icon-utility-add slds-current-color"
-                          title="Description of icon when needed"
-                        >
-                          <svg
-                            aria-hidden={true}
-                            className="slds-icon slds-icon_x-small"
-                          >
-                            <use
-                              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#add"
-                            />
-                          </svg>
-                          <span
-                            className="slds-assistive-text"
-                          >
-                            Add product
-                          </span>
-                        </span>
-                      </label>
-                    </td>
-                    <th
-                      className={null}
-                      scope="row"
-                    >
-                      <div
-                        className="slds-truncate"
-                        title="Analytics"
-                      >
-                        Analytics
-                      </div>
-                    </th>
-                    <td
-                      className={null}
-                      role="gridcell"
-                    >
-                      <div
-                        className="slds-truncate"
-                        title="ANTLY"
-                      >
-                        ANTLY
-                      </div>
-                    </td>
-                    <td
-                      className={null}
-                      role="gridcell"
-                    >
-                      <div
-                        className="slds-truncate"
-                        title="5000.00"
-                      >
-                        5000.00
-                      </div>
-                    </td>
-                    <td
-                      className={null}
-                      role="gridcell"
-                    >
-                      <div
-                        className="slds-truncate"
-                        title="Analytics Product"
-                      >
-                        Analytics Product
-                      </div>
-                    </td>
-                  </tr>
-                  <tr
-                    aria-selected={false}
-                    className="slds-hint-parent"
-                  >
-                    <td
-                      className="slds-text-align_right"
-                      role="gridcell"
-                      tabIndex={null}
                     >
                       <label
                         className="slds-checkbox-button"
@@ -1895,6 +1726,184 @@ exports[`List Builder renders a default list builder 1`] = `
                       </div>
                     </td>
                   </tr>
+                  <tr
+                    aria-selected={false}
+                    className="slds-hint-parent"
+                  >
+                    <td
+                      className="slds-text-align_right"
+                      role="gridcell"
+                      tabIndex={null}
+                    >
+                      <label
+                        className="slds-checkbox-button"
+                        htmlFor="example-unique-id-9"
+                      >
+                        <input
+                          className="slds-assistive-text"
+                          defaultChecked={false}
+                          id="example-unique-id-9"
+                          onBlur={[Function]}
+                          onChange={[Function]}
+                          onFocus={[Function]}
+                          tabIndex={-1}
+                          type="checkbox"
+                          value="example-unique-id-9"
+                        />
+                        <span
+                          className="slds-icon_container slds-icon-utility-add slds-current-color"
+                          title="Description of icon when needed"
+                        >
+                          <svg
+                            aria-hidden={true}
+                            className="slds-icon slds-icon_x-small"
+                          >
+                            <use
+                              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#add"
+                            />
+                          </svg>
+                          <span
+                            className="slds-assistive-text"
+                          >
+                            Add product
+                          </span>
+                        </span>
+                      </label>
+                    </td>
+                    <th
+                      className={null}
+                      scope="row"
+                    >
+                      <div
+                        className="slds-truncate"
+                        title="Analytics"
+                      >
+                        Analytics
+                      </div>
+                    </th>
+                    <td
+                      className={null}
+                      role="gridcell"
+                    >
+                      <div
+                        className="slds-truncate"
+                        title="ANTLY"
+                      >
+                        ANTLY
+                      </div>
+                    </td>
+                    <td
+                      className={null}
+                      role="gridcell"
+                    >
+                      <div
+                        className="slds-truncate"
+                        title="5000.00"
+                      >
+                        5000.00
+                      </div>
+                    </td>
+                    <td
+                      className={null}
+                      role="gridcell"
+                    >
+                      <div
+                        className="slds-truncate"
+                        title="Analytics Product"
+                      >
+                        Analytics Product
+                      </div>
+                    </td>
+                  </tr>
+                  <tr
+                    aria-selected={false}
+                    className="slds-hint-parent"
+                  >
+                    <td
+                      className="slds-text-align_right"
+                      role="gridcell"
+                      tabIndex={null}
+                    >
+                      <label
+                        className="slds-checkbox-button"
+                        htmlFor="example-unique-id-10"
+                      >
+                        <input
+                          className="slds-assistive-text"
+                          defaultChecked={false}
+                          id="example-unique-id-10"
+                          onBlur={[Function]}
+                          onChange={[Function]}
+                          onFocus={[Function]}
+                          tabIndex={-1}
+                          type="checkbox"
+                          value="example-unique-id-10"
+                        />
+                        <span
+                          className="slds-icon_container slds-icon-utility-add slds-current-color"
+                          title="Description of icon when needed"
+                        >
+                          <svg
+                            aria-hidden={true}
+                            className="slds-icon slds-icon_x-small"
+                          >
+                            <use
+                              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#add"
+                            />
+                          </svg>
+                          <span
+                            className="slds-assistive-text"
+                          >
+                            Add product
+                          </span>
+                        </span>
+                      </label>
+                    </td>
+                    <th
+                      className={null}
+                      scope="row"
+                    >
+                      <div
+                        className="slds-truncate"
+                        title="Analytics"
+                      >
+                        Analytics
+                      </div>
+                    </th>
+                    <td
+                      className={null}
+                      role="gridcell"
+                    >
+                      <div
+                        className="slds-truncate"
+                        title="ANTLY"
+                      >
+                        ANTLY
+                      </div>
+                    </td>
+                    <td
+                      className={null}
+                      role="gridcell"
+                    >
+                      <div
+                        className="slds-truncate"
+                        title="5000.00"
+                      >
+                        5000.00
+                      </div>
+                    </td>
+                    <td
+                      className={null}
+                      role="gridcell"
+                    >
+                      <div
+                        className="slds-truncate"
+                        title="Analytics Product"
+                      >
+                        Analytics Product
+                      </div>
+                    </td>
+                  </tr>
                 </tbody>
               </table>
             </div>
@@ -1992,7 +2001,7 @@ exports[`List Builder renders a list builder with default items disabled 1`] = `
             >
               <label
                 className="slds-form-element__label slds-assistive-text"
-                htmlFor="combobox-unique-id-6"
+                htmlFor="example-unique-id-44"
               >
                 Search
               </label>
@@ -2014,9 +2023,12 @@ exports[`List Builder renders a list builder with default items disabled 1`] = `
                     >
                       <input
                         aria-autocomplete="list"
-                        autoComplete="off"
+                        aria-controls="example-unique-id-45"
+                        autocomplete="off"
                         className="slds-input slds-combobox__input"
-                        id="combobox-unique-id-6"
+                        id="example-unique-id-44"
+                        onBlur={[Function]}
+                        onFocus={[Function]}
                         placeholder="Search Salesforce"
                         role="textbox"
                         type="text"
@@ -2037,8 +2049,8 @@ exports[`List Builder renders a list builder with default items disabled 1`] = `
                     </div>
                     <div
                       aria-orientation={null}
-                      className="slds-dropdown slds-dropdown_fluid"
-                      id="listbox-unique-id"
+                      className="slds-dropdown slds-dropdown_length-5 slds-dropdown_fluid"
+                      id="example-unique-id-45"
                       role="listbox"
                     >
                       <ul
@@ -2050,42 +2062,21 @@ exports[`List Builder renders a list builder with default items disabled 1`] = `
                           role="presentation"
                         >
                           <div
-                            className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
-                            id="listbox-option-unique-id-01"
+                            aria-checked={null}
+                            aria-disabled={null}
+                            aria-selected={null}
+                            className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
+                            id="option1"
                             role="option"
                           >
-                            <span
-                              className="slds-media__figure"
-                            >
-                              <span
-                                className="slds-icon_container slds-icon-standard-account"
-                                title={null}
-                              >
-                                <svg
-                                  aria-hidden={true}
-                                  className="slds-icon slds-icon_small"
-                                >
-                                  <use
-                                    xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#account"
-                                  />
-                                </svg>
-                              </span>
-                            </span>
                             <span
                               className="slds-media__body"
                             >
                               <span
-                                className="slds-listbox__option-text slds-listbox__option-text_entity"
+                                className="slds-truncate"
+                                title="Option A"
                               >
-                                Acme
-                              </span>
-                              <span
-                                className="slds-listbox__option-meta slds-listbox__option-meta_entity"
-                              >
-                                Account
-                                 •
-                                 
-                                 San Francisco
+                                Option A
                               </span>
                             </span>
                           </div>
@@ -2095,42 +2086,69 @@ exports[`List Builder renders a list builder with default items disabled 1`] = `
                           role="presentation"
                         >
                           <div
-                            className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
-                            id="listbox-option-unique-id-02"
+                            aria-checked={null}
+                            aria-disabled={null}
+                            aria-selected={null}
+                            className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
+                            id="option2"
                             role="option"
                           >
-                            <span
-                              className="slds-media__figure"
-                            >
-                              <span
-                                className="slds-icon_container slds-icon-standard-account"
-                                title={null}
-                              >
-                                <svg
-                                  aria-hidden={true}
-                                  className="slds-icon slds-icon_small"
-                                >
-                                  <use
-                                    xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#account"
-                                  />
-                                </svg>
-                              </span>
-                            </span>
                             <span
                               className="slds-media__body"
                             >
                               <span
-                                className="slds-listbox__option-text slds-listbox__option-text_entity"
+                                className="slds-truncate"
+                                title="Option B"
                               >
-                                Salesforce.com, Inc.
+                                Option B
                               </span>
+                            </span>
+                          </div>
+                        </li>
+                        <li
+                          className="slds-listbox__item"
+                          role="presentation"
+                        >
+                          <div
+                            aria-checked={null}
+                            aria-disabled={null}
+                            aria-selected={null}
+                            className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
+                            id="option3"
+                            role="option"
+                          >
+                            <span
+                              className="slds-media__body"
+                            >
                               <span
-                                className="slds-listbox__option-meta slds-listbox__option-meta_entity"
+                                className="slds-truncate"
+                                title="Option C"
                               >
-                                Account
-                                 •
-                                 
-                                 San Francisco
+                                Option C
+                              </span>
+                            </span>
+                          </div>
+                        </li>
+                        <li
+                          className="slds-listbox__item"
+                          role="presentation"
+                        >
+                          <div
+                            aria-checked={null}
+                            aria-disabled={null}
+                            aria-selected={null}
+                            className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
+                            id="option4"
+                            role="option"
+                          >
+                            <span
+                              className="slds-media__body"
+                            >
+                              <span
+                                className="slds-truncate"
+                                title="Option D"
+                              >
+                                Option D
                               </span>
                             </span>
                           </div>
@@ -2442,19 +2460,19 @@ exports[`List Builder renders a list builder with default items disabled 1`] = `
                     >
                       <label
                         className="slds-checkbox-button"
-                        htmlFor="example-unique-id-34"
+                        htmlFor="example-unique-id-46"
                       >
                         <input
                           className="slds-assistive-text"
                           defaultChecked={false}
                           disabled={null}
-                          id="example-unique-id-34"
+                          id="example-unique-id-46"
                           onBlur={[Function]}
                           onChange={[Function]}
                           onFocus={[Function]}
                           tabIndex={-1}
                           type="checkbox"
-                          value="example-unique-id-34"
+                          value="example-unique-id-46"
                         />
                         <span
                           className="slds-icon_container slds-icon-utility-add slds-current-color"
@@ -2532,19 +2550,19 @@ exports[`List Builder renders a list builder with default items disabled 1`] = `
                     >
                       <label
                         className="slds-checkbox-button slds-checkbox-button_is-checked slds-checkbox-button_is-disabled"
-                        htmlFor="example-unique-id-35"
+                        htmlFor="example-unique-id-47"
                       >
                         <input
                           className="slds-assistive-text"
                           defaultChecked={true}
                           disabled={true}
-                          id="example-unique-id-35"
+                          id="example-unique-id-47"
                           onBlur={[Function]}
                           onChange={[Function]}
                           onFocus={[Function]}
                           tabIndex={-1}
                           type="checkbox"
-                          value="example-unique-id-35"
+                          value="example-unique-id-47"
                         />
                         <span
                           className="slds-icon_container slds-icon-utility-check slds-current-color"
@@ -2622,19 +2640,19 @@ exports[`List Builder renders a list builder with default items disabled 1`] = `
                     >
                       <label
                         className="slds-checkbox-button"
-                        htmlFor="example-unique-id-36"
+                        htmlFor="example-unique-id-48"
                       >
                         <input
                           className="slds-assistive-text"
                           defaultChecked={false}
                           disabled={null}
-                          id="example-unique-id-36"
+                          id="example-unique-id-48"
                           onBlur={[Function]}
                           onChange={[Function]}
                           onFocus={[Function]}
                           tabIndex={-1}
                           type="checkbox"
-                          value="example-unique-id-36"
+                          value="example-unique-id-48"
                         />
                         <span
                           className="slds-icon_container slds-icon-utility-add slds-current-color"
@@ -2712,19 +2730,19 @@ exports[`List Builder renders a list builder with default items disabled 1`] = `
                     >
                       <label
                         className="slds-checkbox-button slds-checkbox-button_is-checked slds-checkbox-button_is-disabled"
-                        htmlFor="example-unique-id-37"
+                        htmlFor="example-unique-id-49"
                       >
                         <input
                           className="slds-assistive-text"
                           defaultChecked={true}
                           disabled={true}
-                          id="example-unique-id-37"
+                          id="example-unique-id-49"
                           onBlur={[Function]}
                           onChange={[Function]}
                           onFocus={[Function]}
                           tabIndex={-1}
                           type="checkbox"
-                          value="example-unique-id-37"
+                          value="example-unique-id-49"
                         />
                         <span
                           className="slds-icon_container slds-icon-utility-check slds-current-color"
@@ -2802,19 +2820,19 @@ exports[`List Builder renders a list builder with default items disabled 1`] = `
                     >
                       <label
                         className="slds-checkbox-button"
-                        htmlFor="example-unique-id-38"
+                        htmlFor="example-unique-id-50"
                       >
                         <input
                           className="slds-assistive-text"
                           defaultChecked={false}
                           disabled={null}
-                          id="example-unique-id-38"
+                          id="example-unique-id-50"
                           onBlur={[Function]}
                           onChange={[Function]}
                           onFocus={[Function]}
                           tabIndex={-1}
                           type="checkbox"
-                          value="example-unique-id-38"
+                          value="example-unique-id-50"
                         />
                         <span
                           className="slds-icon_container slds-icon-utility-add slds-current-color"
@@ -2892,19 +2910,19 @@ exports[`List Builder renders a list builder with default items disabled 1`] = `
                     >
                       <label
                         className="slds-checkbox-button slds-checkbox-button_is-checked slds-checkbox-button_is-disabled"
-                        htmlFor="example-unique-id-39"
+                        htmlFor="example-unique-id-51"
                       >
                         <input
                           className="slds-assistive-text"
                           defaultChecked={true}
                           disabled={true}
-                          id="example-unique-id-39"
+                          id="example-unique-id-51"
                           onBlur={[Function]}
                           onChange={[Function]}
                           onFocus={[Function]}
                           tabIndex={-1}
                           type="checkbox"
-                          value="example-unique-id-39"
+                          value="example-unique-id-51"
                         />
                         <span
                           className="slds-icon_container slds-icon-utility-check slds-current-color"
@@ -2982,19 +3000,19 @@ exports[`List Builder renders a list builder with default items disabled 1`] = `
                     >
                       <label
                         className="slds-checkbox-button"
-                        htmlFor="example-unique-id-40"
+                        htmlFor="example-unique-id-52"
                       >
                         <input
                           className="slds-assistive-text"
                           defaultChecked={false}
                           disabled={null}
-                          id="example-unique-id-40"
+                          id="example-unique-id-52"
                           onBlur={[Function]}
                           onChange={[Function]}
                           onFocus={[Function]}
                           tabIndex={-1}
                           type="checkbox"
-                          value="example-unique-id-40"
+                          value="example-unique-id-52"
                         />
                         <span
                           className="slds-icon_container slds-icon-utility-add slds-current-color"
@@ -3072,19 +3090,19 @@ exports[`List Builder renders a list builder with default items disabled 1`] = `
                     >
                       <label
                         className="slds-checkbox-button slds-checkbox-button_is-checked slds-checkbox-button_is-disabled"
-                        htmlFor="example-unique-id-41"
+                        htmlFor="example-unique-id-53"
                       >
                         <input
                           className="slds-assistive-text"
                           defaultChecked={true}
                           disabled={true}
-                          id="example-unique-id-41"
+                          id="example-unique-id-53"
                           onBlur={[Function]}
                           onChange={[Function]}
                           onFocus={[Function]}
                           tabIndex={-1}
                           type="checkbox"
-                          value="example-unique-id-41"
+                          value="example-unique-id-53"
                         />
                         <span
                           className="slds-icon_container slds-icon-utility-check slds-current-color"
@@ -3248,7 +3266,7 @@ exports[`List Builder renders a list builder with filtered results 1`] = `
             >
               <label
                 className="slds-form-element__label slds-assistive-text"
-                htmlFor="combobox-unique-id-3"
+                htmlFor="example-unique-id-21"
               >
                 Search
               </label>
@@ -3270,9 +3288,12 @@ exports[`List Builder renders a list builder with filtered results 1`] = `
                     >
                       <input
                         aria-autocomplete="list"
-                        autoComplete="off"
+                        aria-controls="example-unique-id-22"
+                        autocomplete="off"
                         className="slds-input slds-combobox__input"
-                        id="combobox-unique-id-3"
+                        id="example-unique-id-21"
+                        onBlur={[Function]}
+                        onFocus={[Function]}
                         placeholder="Search Salesforce"
                         role="textbox"
                         type="text"
@@ -3293,8 +3314,8 @@ exports[`List Builder renders a list builder with filtered results 1`] = `
                     </div>
                     <div
                       aria-orientation={null}
-                      className="slds-dropdown slds-dropdown_fluid"
-                      id="listbox-unique-id"
+                      className="slds-dropdown slds-dropdown_length-5 slds-dropdown_fluid"
+                      id="example-unique-id-22"
                       role="listbox"
                     >
                       <ul
@@ -3306,42 +3327,21 @@ exports[`List Builder renders a list builder with filtered results 1`] = `
                           role="presentation"
                         >
                           <div
-                            className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
-                            id="listbox-option-unique-id-01"
+                            aria-checked={null}
+                            aria-disabled={null}
+                            aria-selected={null}
+                            className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
+                            id="option1"
                             role="option"
                           >
-                            <span
-                              className="slds-media__figure"
-                            >
-                              <span
-                                className="slds-icon_container slds-icon-standard-account"
-                                title={null}
-                              >
-                                <svg
-                                  aria-hidden={true}
-                                  className="slds-icon slds-icon_small"
-                                >
-                                  <use
-                                    xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#account"
-                                  />
-                                </svg>
-                              </span>
-                            </span>
                             <span
                               className="slds-media__body"
                             >
                               <span
-                                className="slds-listbox__option-text slds-listbox__option-text_entity"
+                                className="slds-truncate"
+                                title="Option A"
                               >
-                                Acme
-                              </span>
-                              <span
-                                className="slds-listbox__option-meta slds-listbox__option-meta_entity"
-                              >
-                                Account
-                                 •
-                                 
-                                 San Francisco
+                                Option A
                               </span>
                             </span>
                           </div>
@@ -3351,42 +3351,69 @@ exports[`List Builder renders a list builder with filtered results 1`] = `
                           role="presentation"
                         >
                           <div
-                            className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
-                            id="listbox-option-unique-id-02"
+                            aria-checked={null}
+                            aria-disabled={null}
+                            aria-selected={null}
+                            className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
+                            id="option2"
                             role="option"
                           >
-                            <span
-                              className="slds-media__figure"
-                            >
-                              <span
-                                className="slds-icon_container slds-icon-standard-account"
-                                title={null}
-                              >
-                                <svg
-                                  aria-hidden={true}
-                                  className="slds-icon slds-icon_small"
-                                >
-                                  <use
-                                    xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#account"
-                                  />
-                                </svg>
-                              </span>
-                            </span>
                             <span
                               className="slds-media__body"
                             >
                               <span
-                                className="slds-listbox__option-text slds-listbox__option-text_entity"
+                                className="slds-truncate"
+                                title="Option B"
                               >
-                                Salesforce.com, Inc.
+                                Option B
                               </span>
+                            </span>
+                          </div>
+                        </li>
+                        <li
+                          className="slds-listbox__item"
+                          role="presentation"
+                        >
+                          <div
+                            aria-checked={null}
+                            aria-disabled={null}
+                            aria-selected={null}
+                            className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
+                            id="option3"
+                            role="option"
+                          >
+                            <span
+                              className="slds-media__body"
+                            >
                               <span
-                                className="slds-listbox__option-meta slds-listbox__option-meta_entity"
+                                className="slds-truncate"
+                                title="Option C"
                               >
-                                Account
-                                 •
-                                 
-                                 San Francisco
+                                Option C
+                              </span>
+                            </span>
+                          </div>
+                        </li>
+                        <li
+                          className="slds-listbox__item"
+                          role="presentation"
+                        >
+                          <div
+                            aria-checked={null}
+                            aria-disabled={null}
+                            aria-selected={null}
+                            className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
+                            id="option4"
+                            role="option"
+                          >
+                            <span
+                              className="slds-media__body"
+                            >
+                              <span
+                                className="slds-truncate"
+                                title="Option D"
+                              >
+                                Option D
                               </span>
                             </span>
                           </div>
@@ -3770,18 +3797,18 @@ exports[`List Builder renders a list builder with filtered results 1`] = `
                     >
                       <label
                         className="slds-checkbox-button"
-                        htmlFor="example-unique-id-17"
+                        htmlFor="example-unique-id-23"
                       >
                         <input
                           className="slds-assistive-text"
                           defaultChecked={false}
-                          id="example-unique-id-17"
+                          id="example-unique-id-23"
                           onBlur={[Function]}
                           onChange={[Function]}
                           onFocus={[Function]}
                           tabIndex={-1}
                           type="checkbox"
-                          value="example-unique-id-17"
+                          value="example-unique-id-23"
                         />
                         <span
                           className="slds-icon_container slds-icon-utility-add slds-current-color"
@@ -3945,7 +3972,7 @@ exports[`List Builder renders a list builder with hidden header 1`] = `
             >
               <label
                 className="slds-form-element__label slds-assistive-text"
-                htmlFor="combobox-unique-id-2"
+                htmlFor="example-unique-id-11"
               >
                 Search
               </label>
@@ -3967,9 +3994,12 @@ exports[`List Builder renders a list builder with hidden header 1`] = `
                     >
                       <input
                         aria-autocomplete="list"
-                        autoComplete="off"
+                        aria-controls="example-unique-id-12"
+                        autocomplete="off"
                         className="slds-input slds-combobox__input"
-                        id="combobox-unique-id-2"
+                        id="example-unique-id-11"
+                        onBlur={[Function]}
+                        onFocus={[Function]}
                         placeholder="Search Salesforce"
                         role="textbox"
                         type="text"
@@ -3990,8 +4020,8 @@ exports[`List Builder renders a list builder with hidden header 1`] = `
                     </div>
                     <div
                       aria-orientation={null}
-                      className="slds-dropdown slds-dropdown_fluid"
-                      id="listbox-unique-id"
+                      className="slds-dropdown slds-dropdown_length-5 slds-dropdown_fluid"
+                      id="example-unique-id-12"
                       role="listbox"
                     >
                       <ul
@@ -4003,42 +4033,21 @@ exports[`List Builder renders a list builder with hidden header 1`] = `
                           role="presentation"
                         >
                           <div
-                            className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
-                            id="listbox-option-unique-id-01"
+                            aria-checked={null}
+                            aria-disabled={null}
+                            aria-selected={null}
+                            className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
+                            id="option1"
                             role="option"
                           >
-                            <span
-                              className="slds-media__figure"
-                            >
-                              <span
-                                className="slds-icon_container slds-icon-standard-account"
-                                title={null}
-                              >
-                                <svg
-                                  aria-hidden={true}
-                                  className="slds-icon slds-icon_small"
-                                >
-                                  <use
-                                    xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#account"
-                                  />
-                                </svg>
-                              </span>
-                            </span>
                             <span
                               className="slds-media__body"
                             >
                               <span
-                                className="slds-listbox__option-text slds-listbox__option-text_entity"
+                                className="slds-truncate"
+                                title="Option A"
                               >
-                                Acme
-                              </span>
-                              <span
-                                className="slds-listbox__option-meta slds-listbox__option-meta_entity"
-                              >
-                                Account
-                                 •
-                                 
-                                 San Francisco
+                                Option A
                               </span>
                             </span>
                           </div>
@@ -4048,42 +4057,69 @@ exports[`List Builder renders a list builder with hidden header 1`] = `
                           role="presentation"
                         >
                           <div
-                            className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
-                            id="listbox-option-unique-id-02"
+                            aria-checked={null}
+                            aria-disabled={null}
+                            aria-selected={null}
+                            className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
+                            id="option2"
                             role="option"
                           >
-                            <span
-                              className="slds-media__figure"
-                            >
-                              <span
-                                className="slds-icon_container slds-icon-standard-account"
-                                title={null}
-                              >
-                                <svg
-                                  aria-hidden={true}
-                                  className="slds-icon slds-icon_small"
-                                >
-                                  <use
-                                    xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#account"
-                                  />
-                                </svg>
-                              </span>
-                            </span>
                             <span
                               className="slds-media__body"
                             >
                               <span
-                                className="slds-listbox__option-text slds-listbox__option-text_entity"
+                                className="slds-truncate"
+                                title="Option B"
                               >
-                                Salesforce.com, Inc.
+                                Option B
                               </span>
+                            </span>
+                          </div>
+                        </li>
+                        <li
+                          className="slds-listbox__item"
+                          role="presentation"
+                        >
+                          <div
+                            aria-checked={null}
+                            aria-disabled={null}
+                            aria-selected={null}
+                            className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
+                            id="option3"
+                            role="option"
+                          >
+                            <span
+                              className="slds-media__body"
+                            >
                               <span
-                                className="slds-listbox__option-meta slds-listbox__option-meta_entity"
+                                className="slds-truncate"
+                                title="Option C"
                               >
-                                Account
-                                 •
-                                 
-                                 San Francisco
+                                Option C
+                              </span>
+                            </span>
+                          </div>
+                        </li>
+                        <li
+                          className="slds-listbox__item"
+                          role="presentation"
+                        >
+                          <div
+                            aria-checked={null}
+                            aria-disabled={null}
+                            aria-selected={null}
+                            className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
+                            id="option4"
+                            role="option"
+                          >
+                            <span
+                              className="slds-media__body"
+                            >
+                              <span
+                                className="slds-truncate"
+                                title="Option D"
+                              >
+                                Option D
                               </span>
                             </span>
                           </div>
@@ -4158,250 +4194,6 @@ exports[`List Builder renders a list builder with hidden header 1`] = `
                         }
                       }
                       tabIndex="0"
-                    >
-                      <label
-                        className="slds-checkbox-button"
-                        htmlFor="example-unique-id-9"
-                      >
-                        <input
-                          className="slds-assistive-text"
-                          defaultChecked={false}
-                          id="example-unique-id-9"
-                          onBlur={[Function]}
-                          onChange={[Function]}
-                          onFocus={[Function]}
-                          tabIndex={-1}
-                          type="checkbox"
-                          value="example-unique-id-9"
-                        />
-                        <span
-                          className="slds-icon_container slds-icon-utility-add slds-current-color"
-                          title="Description of icon when needed"
-                        >
-                          <svg
-                            aria-hidden={true}
-                            className="slds-icon slds-icon_x-small"
-                          >
-                            <use
-                              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#add"
-                            />
-                          </svg>
-                          <span
-                            className="slds-assistive-text"
-                          >
-                            Add product
-                          </span>
-                        </span>
-                      </label>
-                    </td>
-                    <td
-                      className={null}
-                      role="gridcell"
-                    >
-                      <div
-                        className="slds-truncate"
-                        title="Analytics"
-                      >
-                        Analytics
-                      </div>
-                    </td>
-                  </tr>
-                  <tr
-                    aria-selected={false}
-                    className="slds-hint-parent"
-                  >
-                    <td
-                      className="slds-text-align_right"
-                      role="gridcell"
-                      style={
-                        Object {
-                          "width": "3.75rem",
-                        }
-                      }
-                      tabIndex="-1"
-                    >
-                      <label
-                        className="slds-checkbox-button"
-                        htmlFor="example-unique-id-10"
-                      >
-                        <input
-                          className="slds-assistive-text"
-                          defaultChecked={false}
-                          id="example-unique-id-10"
-                          onBlur={[Function]}
-                          onChange={[Function]}
-                          onFocus={[Function]}
-                          tabIndex={-1}
-                          type="checkbox"
-                          value="example-unique-id-10"
-                        />
-                        <span
-                          className="slds-icon_container slds-icon-utility-add slds-current-color"
-                          title="Description of icon when needed"
-                        >
-                          <svg
-                            aria-hidden={true}
-                            className="slds-icon slds-icon_x-small"
-                          >
-                            <use
-                              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#add"
-                            />
-                          </svg>
-                          <span
-                            className="slds-assistive-text"
-                          >
-                            Add product
-                          </span>
-                        </span>
-                      </label>
-                    </td>
-                    <td
-                      className={null}
-                      role="gridcell"
-                    >
-                      <div
-                        className="slds-truncate"
-                        title="Analytics"
-                      >
-                        Analytics
-                      </div>
-                    </td>
-                  </tr>
-                  <tr
-                    aria-selected={false}
-                    className="slds-hint-parent"
-                  >
-                    <td
-                      className="slds-text-align_right"
-                      role="gridcell"
-                      style={
-                        Object {
-                          "width": "3.75rem",
-                        }
-                      }
-                      tabIndex="-1"
-                    >
-                      <label
-                        className="slds-checkbox-button"
-                        htmlFor="example-unique-id-11"
-                      >
-                        <input
-                          className="slds-assistive-text"
-                          defaultChecked={false}
-                          id="example-unique-id-11"
-                          onBlur={[Function]}
-                          onChange={[Function]}
-                          onFocus={[Function]}
-                          tabIndex={-1}
-                          type="checkbox"
-                          value="example-unique-id-11"
-                        />
-                        <span
-                          className="slds-icon_container slds-icon-utility-add slds-current-color"
-                          title="Description of icon when needed"
-                        >
-                          <svg
-                            aria-hidden={true}
-                            className="slds-icon slds-icon_x-small"
-                          >
-                            <use
-                              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#add"
-                            />
-                          </svg>
-                          <span
-                            className="slds-assistive-text"
-                          >
-                            Add product
-                          </span>
-                        </span>
-                      </label>
-                    </td>
-                    <td
-                      className={null}
-                      role="gridcell"
-                    >
-                      <div
-                        className="slds-truncate"
-                        title="Analytics"
-                      >
-                        Analytics
-                      </div>
-                    </td>
-                  </tr>
-                  <tr
-                    aria-selected={false}
-                    className="slds-hint-parent"
-                  >
-                    <td
-                      className="slds-text-align_right"
-                      role="gridcell"
-                      style={
-                        Object {
-                          "width": "3.75rem",
-                        }
-                      }
-                      tabIndex="-1"
-                    >
-                      <label
-                        className="slds-checkbox-button"
-                        htmlFor="example-unique-id-12"
-                      >
-                        <input
-                          className="slds-assistive-text"
-                          defaultChecked={false}
-                          id="example-unique-id-12"
-                          onBlur={[Function]}
-                          onChange={[Function]}
-                          onFocus={[Function]}
-                          tabIndex={-1}
-                          type="checkbox"
-                          value="example-unique-id-12"
-                        />
-                        <span
-                          className="slds-icon_container slds-icon-utility-add slds-current-color"
-                          title="Description of icon when needed"
-                        >
-                          <svg
-                            aria-hidden={true}
-                            className="slds-icon slds-icon_x-small"
-                          >
-                            <use
-                              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#add"
-                            />
-                          </svg>
-                          <span
-                            className="slds-assistive-text"
-                          >
-                            Add product
-                          </span>
-                        </span>
-                      </label>
-                    </td>
-                    <td
-                      className={null}
-                      role="gridcell"
-                    >
-                      <div
-                        className="slds-truncate"
-                        title="Analytics"
-                      >
-                        Analytics
-                      </div>
-                    </td>
-                  </tr>
-                  <tr
-                    aria-selected={false}
-                    className="slds-hint-parent"
-                  >
-                    <td
-                      className="slds-text-align_right"
-                      role="gridcell"
-                      style={
-                        Object {
-                          "width": "3.75rem",
-                        }
-                      }
-                      tabIndex="-1"
                     >
                       <label
                         className="slds-checkbox-button"
@@ -4633,6 +4425,250 @@ exports[`List Builder renders a list builder with hidden header 1`] = `
                       </div>
                     </td>
                   </tr>
+                  <tr
+                    aria-selected={false}
+                    className="slds-hint-parent"
+                  >
+                    <td
+                      className="slds-text-align_right"
+                      role="gridcell"
+                      style={
+                        Object {
+                          "width": "3.75rem",
+                        }
+                      }
+                      tabIndex="-1"
+                    >
+                      <label
+                        className="slds-checkbox-button"
+                        htmlFor="example-unique-id-17"
+                      >
+                        <input
+                          className="slds-assistive-text"
+                          defaultChecked={false}
+                          id="example-unique-id-17"
+                          onBlur={[Function]}
+                          onChange={[Function]}
+                          onFocus={[Function]}
+                          tabIndex={-1}
+                          type="checkbox"
+                          value="example-unique-id-17"
+                        />
+                        <span
+                          className="slds-icon_container slds-icon-utility-add slds-current-color"
+                          title="Description of icon when needed"
+                        >
+                          <svg
+                            aria-hidden={true}
+                            className="slds-icon slds-icon_x-small"
+                          >
+                            <use
+                              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#add"
+                            />
+                          </svg>
+                          <span
+                            className="slds-assistive-text"
+                          >
+                            Add product
+                          </span>
+                        </span>
+                      </label>
+                    </td>
+                    <td
+                      className={null}
+                      role="gridcell"
+                    >
+                      <div
+                        className="slds-truncate"
+                        title="Analytics"
+                      >
+                        Analytics
+                      </div>
+                    </td>
+                  </tr>
+                  <tr
+                    aria-selected={false}
+                    className="slds-hint-parent"
+                  >
+                    <td
+                      className="slds-text-align_right"
+                      role="gridcell"
+                      style={
+                        Object {
+                          "width": "3.75rem",
+                        }
+                      }
+                      tabIndex="-1"
+                    >
+                      <label
+                        className="slds-checkbox-button"
+                        htmlFor="example-unique-id-18"
+                      >
+                        <input
+                          className="slds-assistive-text"
+                          defaultChecked={false}
+                          id="example-unique-id-18"
+                          onBlur={[Function]}
+                          onChange={[Function]}
+                          onFocus={[Function]}
+                          tabIndex={-1}
+                          type="checkbox"
+                          value="example-unique-id-18"
+                        />
+                        <span
+                          className="slds-icon_container slds-icon-utility-add slds-current-color"
+                          title="Description of icon when needed"
+                        >
+                          <svg
+                            aria-hidden={true}
+                            className="slds-icon slds-icon_x-small"
+                          >
+                            <use
+                              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#add"
+                            />
+                          </svg>
+                          <span
+                            className="slds-assistive-text"
+                          >
+                            Add product
+                          </span>
+                        </span>
+                      </label>
+                    </td>
+                    <td
+                      className={null}
+                      role="gridcell"
+                    >
+                      <div
+                        className="slds-truncate"
+                        title="Analytics"
+                      >
+                        Analytics
+                      </div>
+                    </td>
+                  </tr>
+                  <tr
+                    aria-selected={false}
+                    className="slds-hint-parent"
+                  >
+                    <td
+                      className="slds-text-align_right"
+                      role="gridcell"
+                      style={
+                        Object {
+                          "width": "3.75rem",
+                        }
+                      }
+                      tabIndex="-1"
+                    >
+                      <label
+                        className="slds-checkbox-button"
+                        htmlFor="example-unique-id-19"
+                      >
+                        <input
+                          className="slds-assistive-text"
+                          defaultChecked={false}
+                          id="example-unique-id-19"
+                          onBlur={[Function]}
+                          onChange={[Function]}
+                          onFocus={[Function]}
+                          tabIndex={-1}
+                          type="checkbox"
+                          value="example-unique-id-19"
+                        />
+                        <span
+                          className="slds-icon_container slds-icon-utility-add slds-current-color"
+                          title="Description of icon when needed"
+                        >
+                          <svg
+                            aria-hidden={true}
+                            className="slds-icon slds-icon_x-small"
+                          >
+                            <use
+                              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#add"
+                            />
+                          </svg>
+                          <span
+                            className="slds-assistive-text"
+                          >
+                            Add product
+                          </span>
+                        </span>
+                      </label>
+                    </td>
+                    <td
+                      className={null}
+                      role="gridcell"
+                    >
+                      <div
+                        className="slds-truncate"
+                        title="Analytics"
+                      >
+                        Analytics
+                      </div>
+                    </td>
+                  </tr>
+                  <tr
+                    aria-selected={false}
+                    className="slds-hint-parent"
+                  >
+                    <td
+                      className="slds-text-align_right"
+                      role="gridcell"
+                      style={
+                        Object {
+                          "width": "3.75rem",
+                        }
+                      }
+                      tabIndex="-1"
+                    >
+                      <label
+                        className="slds-checkbox-button"
+                        htmlFor="example-unique-id-20"
+                      >
+                        <input
+                          className="slds-assistive-text"
+                          defaultChecked={false}
+                          id="example-unique-id-20"
+                          onBlur={[Function]}
+                          onChange={[Function]}
+                          onFocus={[Function]}
+                          tabIndex={-1}
+                          type="checkbox"
+                          value="example-unique-id-20"
+                        />
+                        <span
+                          className="slds-icon_container slds-icon-utility-add slds-current-color"
+                          title="Description of icon when needed"
+                        >
+                          <svg
+                            aria-hidden={true}
+                            className="slds-icon slds-icon_x-small"
+                          >
+                            <use
+                              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#add"
+                            />
+                          </svg>
+                          <span
+                            className="slds-assistive-text"
+                          >
+                            Add product
+                          </span>
+                        </span>
+                      </label>
+                    </td>
+                    <td
+                      className={null}
+                      role="gridcell"
+                    >
+                      <div
+                        className="slds-truncate"
+                        title="Analytics"
+                      >
+                        Analytics
+                      </div>
+                    </td>
+                  </tr>
                 </tbody>
               </table>
             </div>
@@ -4730,7 +4766,7 @@ exports[`List Builder renders a list builder with items disabled 1`] = `
             >
               <label
                 className="slds-form-element__label slds-assistive-text"
-                htmlFor="combobox-unique-id-5"
+                htmlFor="example-unique-id-34"
               >
                 Search
               </label>
@@ -4752,9 +4788,12 @@ exports[`List Builder renders a list builder with items disabled 1`] = `
                     >
                       <input
                         aria-autocomplete="list"
-                        autoComplete="off"
+                        aria-controls="example-unique-id-35"
+                        autocomplete="off"
                         className="slds-input slds-combobox__input"
-                        id="combobox-unique-id-5"
+                        id="example-unique-id-34"
+                        onBlur={[Function]}
+                        onFocus={[Function]}
                         placeholder="Search Salesforce"
                         role="textbox"
                         type="text"
@@ -4775,8 +4814,8 @@ exports[`List Builder renders a list builder with items disabled 1`] = `
                     </div>
                     <div
                       aria-orientation={null}
-                      className="slds-dropdown slds-dropdown_fluid"
-                      id="listbox-unique-id"
+                      className="slds-dropdown slds-dropdown_length-5 slds-dropdown_fluid"
+                      id="example-unique-id-35"
                       role="listbox"
                     >
                       <ul
@@ -4788,42 +4827,21 @@ exports[`List Builder renders a list builder with items disabled 1`] = `
                           role="presentation"
                         >
                           <div
-                            className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
-                            id="listbox-option-unique-id-01"
+                            aria-checked={null}
+                            aria-disabled={null}
+                            aria-selected={null}
+                            className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
+                            id="option1"
                             role="option"
                           >
-                            <span
-                              className="slds-media__figure"
-                            >
-                              <span
-                                className="slds-icon_container slds-icon-standard-account"
-                                title={null}
-                              >
-                                <svg
-                                  aria-hidden={true}
-                                  className="slds-icon slds-icon_small"
-                                >
-                                  <use
-                                    xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#account"
-                                  />
-                                </svg>
-                              </span>
-                            </span>
                             <span
                               className="slds-media__body"
                             >
                               <span
-                                className="slds-listbox__option-text slds-listbox__option-text_entity"
+                                className="slds-truncate"
+                                title="Option A"
                               >
-                                Acme
-                              </span>
-                              <span
-                                className="slds-listbox__option-meta slds-listbox__option-meta_entity"
-                              >
-                                Account
-                                 •
-                                 
-                                 San Francisco
+                                Option A
                               </span>
                             </span>
                           </div>
@@ -4833,42 +4851,69 @@ exports[`List Builder renders a list builder with items disabled 1`] = `
                           role="presentation"
                         >
                           <div
-                            className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
-                            id="listbox-option-unique-id-02"
+                            aria-checked={null}
+                            aria-disabled={null}
+                            aria-selected={null}
+                            className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
+                            id="option2"
                             role="option"
                           >
-                            <span
-                              className="slds-media__figure"
-                            >
-                              <span
-                                className="slds-icon_container slds-icon-standard-account"
-                                title={null}
-                              >
-                                <svg
-                                  aria-hidden={true}
-                                  className="slds-icon slds-icon_small"
-                                >
-                                  <use
-                                    xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#account"
-                                  />
-                                </svg>
-                              </span>
-                            </span>
                             <span
                               className="slds-media__body"
                             >
                               <span
-                                className="slds-listbox__option-text slds-listbox__option-text_entity"
+                                className="slds-truncate"
+                                title="Option B"
                               >
-                                Salesforce.com, Inc.
+                                Option B
                               </span>
+                            </span>
+                          </div>
+                        </li>
+                        <li
+                          className="slds-listbox__item"
+                          role="presentation"
+                        >
+                          <div
+                            aria-checked={null}
+                            aria-disabled={null}
+                            aria-selected={null}
+                            className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
+                            id="option3"
+                            role="option"
+                          >
+                            <span
+                              className="slds-media__body"
+                            >
                               <span
-                                className="slds-listbox__option-meta slds-listbox__option-meta_entity"
+                                className="slds-truncate"
+                                title="Option C"
                               >
-                                Account
-                                 •
-                                 
-                                 San Francisco
+                                Option C
+                              </span>
+                            </span>
+                          </div>
+                        </li>
+                        <li
+                          className="slds-listbox__item"
+                          role="presentation"
+                        >
+                          <div
+                            aria-checked={null}
+                            aria-disabled={null}
+                            aria-selected={null}
+                            className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
+                            id="option4"
+                            role="option"
+                          >
+                            <span
+                              className="slds-media__body"
+                            >
+                              <span
+                                className="slds-truncate"
+                                title="Option D"
+                              >
+                                Option D
                               </span>
                             </span>
                           </div>
@@ -5180,19 +5225,19 @@ exports[`List Builder renders a list builder with items disabled 1`] = `
                     >
                       <label
                         className="slds-checkbox-button slds-checkbox-button_is-disabled"
-                        htmlFor="example-unique-id-26"
+                        htmlFor="example-unique-id-36"
                       >
                         <input
                           className="slds-assistive-text"
                           defaultChecked={false}
                           disabled={true}
-                          id="example-unique-id-26"
+                          id="example-unique-id-36"
                           onBlur={[Function]}
                           onChange={[Function]}
                           onFocus={[Function]}
                           tabIndex={-1}
                           type="checkbox"
-                          value="example-unique-id-26"
+                          value="example-unique-id-36"
                         />
                         <span
                           className="slds-icon_container slds-icon-utility-add slds-current-color"
@@ -5270,19 +5315,19 @@ exports[`List Builder renders a list builder with items disabled 1`] = `
                     >
                       <label
                         className="slds-checkbox-button"
-                        htmlFor="example-unique-id-27"
+                        htmlFor="example-unique-id-37"
                       >
                         <input
                           className="slds-assistive-text"
                           defaultChecked={false}
                           disabled={null}
-                          id="example-unique-id-27"
+                          id="example-unique-id-37"
                           onBlur={[Function]}
                           onChange={[Function]}
                           onFocus={[Function]}
                           tabIndex={-1}
                           type="checkbox"
-                          value="example-unique-id-27"
+                          value="example-unique-id-37"
                         />
                         <span
                           className="slds-icon_container slds-icon-utility-add slds-current-color"
@@ -5360,19 +5405,19 @@ exports[`List Builder renders a list builder with items disabled 1`] = `
                     >
                       <label
                         className="slds-checkbox-button slds-checkbox-button_is-disabled"
-                        htmlFor="example-unique-id-28"
+                        htmlFor="example-unique-id-38"
                       >
                         <input
                           className="slds-assistive-text"
                           defaultChecked={false}
                           disabled={true}
-                          id="example-unique-id-28"
+                          id="example-unique-id-38"
                           onBlur={[Function]}
                           onChange={[Function]}
                           onFocus={[Function]}
                           tabIndex={-1}
                           type="checkbox"
-                          value="example-unique-id-28"
+                          value="example-unique-id-38"
                         />
                         <span
                           className="slds-icon_container slds-icon-utility-add slds-current-color"
@@ -5450,19 +5495,19 @@ exports[`List Builder renders a list builder with items disabled 1`] = `
                     >
                       <label
                         className="slds-checkbox-button"
-                        htmlFor="example-unique-id-29"
+                        htmlFor="example-unique-id-39"
                       >
                         <input
                           className="slds-assistive-text"
                           defaultChecked={false}
                           disabled={null}
-                          id="example-unique-id-29"
+                          id="example-unique-id-39"
                           onBlur={[Function]}
                           onChange={[Function]}
                           onFocus={[Function]}
                           tabIndex={-1}
                           type="checkbox"
-                          value="example-unique-id-29"
+                          value="example-unique-id-39"
                         />
                         <span
                           className="slds-icon_container slds-icon-utility-add slds-current-color"
@@ -5540,19 +5585,19 @@ exports[`List Builder renders a list builder with items disabled 1`] = `
                     >
                       <label
                         className="slds-checkbox-button slds-checkbox-button_is-disabled"
-                        htmlFor="example-unique-id-30"
+                        htmlFor="example-unique-id-40"
                       >
                         <input
                           className="slds-assistive-text"
                           defaultChecked={false}
                           disabled={true}
-                          id="example-unique-id-30"
+                          id="example-unique-id-40"
                           onBlur={[Function]}
                           onChange={[Function]}
                           onFocus={[Function]}
                           tabIndex={-1}
                           type="checkbox"
-                          value="example-unique-id-30"
+                          value="example-unique-id-40"
                         />
                         <span
                           className="slds-icon_container slds-icon-utility-add slds-current-color"
@@ -5630,19 +5675,19 @@ exports[`List Builder renders a list builder with items disabled 1`] = `
                     >
                       <label
                         className="slds-checkbox-button"
-                        htmlFor="example-unique-id-31"
+                        htmlFor="example-unique-id-41"
                       >
                         <input
                           className="slds-assistive-text"
                           defaultChecked={false}
                           disabled={null}
-                          id="example-unique-id-31"
+                          id="example-unique-id-41"
                           onBlur={[Function]}
                           onChange={[Function]}
                           onFocus={[Function]}
                           tabIndex={-1}
                           type="checkbox"
-                          value="example-unique-id-31"
+                          value="example-unique-id-41"
                         />
                         <span
                           className="slds-icon_container slds-icon-utility-add slds-current-color"
@@ -5720,19 +5765,19 @@ exports[`List Builder renders a list builder with items disabled 1`] = `
                     >
                       <label
                         className="slds-checkbox-button slds-checkbox-button_is-disabled"
-                        htmlFor="example-unique-id-32"
+                        htmlFor="example-unique-id-42"
                       >
                         <input
                           className="slds-assistive-text"
                           defaultChecked={false}
                           disabled={true}
-                          id="example-unique-id-32"
+                          id="example-unique-id-42"
                           onBlur={[Function]}
                           onChange={[Function]}
                           onFocus={[Function]}
                           tabIndex={-1}
                           type="checkbox"
-                          value="example-unique-id-32"
+                          value="example-unique-id-42"
                         />
                         <span
                           className="slds-icon_container slds-icon-utility-add slds-current-color"
@@ -5810,19 +5855,19 @@ exports[`List Builder renders a list builder with items disabled 1`] = `
                     >
                       <label
                         className="slds-checkbox-button"
-                        htmlFor="example-unique-id-33"
+                        htmlFor="example-unique-id-43"
                       >
                         <input
                           className="slds-assistive-text"
                           defaultChecked={false}
                           disabled={null}
-                          id="example-unique-id-33"
+                          id="example-unique-id-43"
                           onBlur={[Function]}
                           onChange={[Function]}
                           onFocus={[Function]}
                           tabIndex={-1}
                           type="checkbox"
-                          value="example-unique-id-33"
+                          value="example-unique-id-43"
                         />
                         <span
                           className="slds-icon_container slds-icon-utility-add slds-current-color"
@@ -5986,7 +6031,7 @@ exports[`List Builder renders a list builder with items selected 1`] = `
             >
               <label
                 className="slds-form-element__label slds-assistive-text"
-                htmlFor="combobox-unique-id-4"
+                htmlFor="example-unique-id-24"
               >
                 Search
               </label>
@@ -6008,9 +6053,12 @@ exports[`List Builder renders a list builder with items selected 1`] = `
                     >
                       <input
                         aria-autocomplete="list"
-                        autoComplete="off"
+                        aria-controls="example-unique-id-25"
+                        autocomplete="off"
                         className="slds-input slds-combobox__input"
-                        id="combobox-unique-id-4"
+                        id="example-unique-id-24"
+                        onBlur={[Function]}
+                        onFocus={[Function]}
                         placeholder="Search Salesforce"
                         role="textbox"
                         type="text"
@@ -6031,8 +6079,8 @@ exports[`List Builder renders a list builder with items selected 1`] = `
                     </div>
                     <div
                       aria-orientation={null}
-                      className="slds-dropdown slds-dropdown_fluid"
-                      id="listbox-unique-id"
+                      className="slds-dropdown slds-dropdown_length-5 slds-dropdown_fluid"
+                      id="example-unique-id-25"
                       role="listbox"
                     >
                       <ul
@@ -6044,42 +6092,21 @@ exports[`List Builder renders a list builder with items selected 1`] = `
                           role="presentation"
                         >
                           <div
-                            className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
-                            id="listbox-option-unique-id-01"
+                            aria-checked={null}
+                            aria-disabled={null}
+                            aria-selected={null}
+                            className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
+                            id="option1"
                             role="option"
                           >
-                            <span
-                              className="slds-media__figure"
-                            >
-                              <span
-                                className="slds-icon_container slds-icon-standard-account"
-                                title={null}
-                              >
-                                <svg
-                                  aria-hidden={true}
-                                  className="slds-icon slds-icon_small"
-                                >
-                                  <use
-                                    xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#account"
-                                  />
-                                </svg>
-                              </span>
-                            </span>
                             <span
                               className="slds-media__body"
                             >
                               <span
-                                className="slds-listbox__option-text slds-listbox__option-text_entity"
+                                className="slds-truncate"
+                                title="Option A"
                               >
-                                Acme
-                              </span>
-                              <span
-                                className="slds-listbox__option-meta slds-listbox__option-meta_entity"
-                              >
-                                Account
-                                 •
-                                 
-                                 San Francisco
+                                Option A
                               </span>
                             </span>
                           </div>
@@ -6089,42 +6116,69 @@ exports[`List Builder renders a list builder with items selected 1`] = `
                           role="presentation"
                         >
                           <div
-                            className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
-                            id="listbox-option-unique-id-02"
+                            aria-checked={null}
+                            aria-disabled={null}
+                            aria-selected={null}
+                            className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
+                            id="option2"
                             role="option"
                           >
-                            <span
-                              className="slds-media__figure"
-                            >
-                              <span
-                                className="slds-icon_container slds-icon-standard-account"
-                                title={null}
-                              >
-                                <svg
-                                  aria-hidden={true}
-                                  className="slds-icon slds-icon_small"
-                                >
-                                  <use
-                                    xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#account"
-                                  />
-                                </svg>
-                              </span>
-                            </span>
                             <span
                               className="slds-media__body"
                             >
                               <span
-                                className="slds-listbox__option-text slds-listbox__option-text_entity"
+                                className="slds-truncate"
+                                title="Option B"
                               >
-                                Salesforce.com, Inc.
+                                Option B
                               </span>
+                            </span>
+                          </div>
+                        </li>
+                        <li
+                          className="slds-listbox__item"
+                          role="presentation"
+                        >
+                          <div
+                            aria-checked={null}
+                            aria-disabled={null}
+                            aria-selected={null}
+                            className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
+                            id="option3"
+                            role="option"
+                          >
+                            <span
+                              className="slds-media__body"
+                            >
                               <span
-                                className="slds-listbox__option-meta slds-listbox__option-meta_entity"
+                                className="slds-truncate"
+                                title="Option C"
                               >
-                                Account
-                                 •
-                                 
-                                 San Francisco
+                                Option C
+                              </span>
+                            </span>
+                          </div>
+                        </li>
+                        <li
+                          className="slds-listbox__item"
+                          role="presentation"
+                        >
+                          <div
+                            aria-checked={null}
+                            aria-disabled={null}
+                            aria-selected={null}
+                            className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
+                            id="option4"
+                            role="option"
+                          >
+                            <span
+                              className="slds-media__body"
+                            >
+                              <span
+                                className="slds-truncate"
+                                title="Option D"
+                              >
+                                Option D
                               </span>
                             </span>
                           </div>
@@ -6478,18 +6532,18 @@ exports[`List Builder renders a list builder with items selected 1`] = `
                     >
                       <label
                         className="slds-checkbox-button slds-checkbox-button_is-checked"
-                        htmlFor="example-unique-id-18"
+                        htmlFor="example-unique-id-26"
                       >
                         <input
                           className="slds-assistive-text"
                           defaultChecked={true}
-                          id="example-unique-id-18"
+                          id="example-unique-id-26"
                           onBlur={[Function]}
                           onChange={[Function]}
                           onFocus={[Function]}
                           tabIndex={-1}
                           type="checkbox"
-                          value="example-unique-id-18"
+                          value="example-unique-id-26"
                         />
                         <span
                           className="slds-icon_container slds-icon-utility-check slds-current-color"
@@ -6567,18 +6621,18 @@ exports[`List Builder renders a list builder with items selected 1`] = `
                     >
                       <label
                         className="slds-checkbox-button"
-                        htmlFor="example-unique-id-19"
+                        htmlFor="example-unique-id-27"
                       >
                         <input
                           className="slds-assistive-text"
                           defaultChecked={false}
-                          id="example-unique-id-19"
+                          id="example-unique-id-27"
                           onBlur={[Function]}
                           onChange={[Function]}
                           onFocus={[Function]}
                           tabIndex={-1}
                           type="checkbox"
-                          value="example-unique-id-19"
+                          value="example-unique-id-27"
                         />
                         <span
                           className="slds-icon_container slds-icon-utility-add slds-current-color"
@@ -6656,18 +6710,18 @@ exports[`List Builder renders a list builder with items selected 1`] = `
                     >
                       <label
                         className="slds-checkbox-button"
-                        htmlFor="example-unique-id-20"
+                        htmlFor="example-unique-id-28"
                       >
                         <input
                           className="slds-assistive-text"
                           defaultChecked={false}
-                          id="example-unique-id-20"
+                          id="example-unique-id-28"
                           onBlur={[Function]}
                           onChange={[Function]}
                           onFocus={[Function]}
                           tabIndex={-1}
                           type="checkbox"
-                          value="example-unique-id-20"
+                          value="example-unique-id-28"
                         />
                         <span
                           className="slds-icon_container slds-icon-utility-add slds-current-color"
@@ -6745,18 +6799,18 @@ exports[`List Builder renders a list builder with items selected 1`] = `
                     >
                       <label
                         className="slds-checkbox-button"
-                        htmlFor="example-unique-id-21"
+                        htmlFor="example-unique-id-29"
                       >
                         <input
                           className="slds-assistive-text"
                           defaultChecked={false}
-                          id="example-unique-id-21"
+                          id="example-unique-id-29"
                           onBlur={[Function]}
                           onChange={[Function]}
                           onFocus={[Function]}
                           tabIndex={-1}
                           type="checkbox"
-                          value="example-unique-id-21"
+                          value="example-unique-id-29"
                         />
                         <span
                           className="slds-icon_container slds-icon-utility-add slds-current-color"
@@ -6834,18 +6888,18 @@ exports[`List Builder renders a list builder with items selected 1`] = `
                     >
                       <label
                         className="slds-checkbox-button"
-                        htmlFor="example-unique-id-22"
+                        htmlFor="example-unique-id-30"
                       >
                         <input
                           className="slds-assistive-text"
                           defaultChecked={false}
-                          id="example-unique-id-22"
+                          id="example-unique-id-30"
                           onBlur={[Function]}
                           onChange={[Function]}
                           onFocus={[Function]}
                           tabIndex={-1}
                           type="checkbox"
-                          value="example-unique-id-22"
+                          value="example-unique-id-30"
                         />
                         <span
                           className="slds-icon_container slds-icon-utility-add slds-current-color"
@@ -6923,18 +6977,18 @@ exports[`List Builder renders a list builder with items selected 1`] = `
                     >
                       <label
                         className="slds-checkbox-button"
-                        htmlFor="example-unique-id-23"
+                        htmlFor="example-unique-id-31"
                       >
                         <input
                           className="slds-assistive-text"
                           defaultChecked={false}
-                          id="example-unique-id-23"
+                          id="example-unique-id-31"
                           onBlur={[Function]}
                           onChange={[Function]}
                           onFocus={[Function]}
                           tabIndex={-1}
                           type="checkbox"
-                          value="example-unique-id-23"
+                          value="example-unique-id-31"
                         />
                         <span
                           className="slds-icon_container slds-icon-utility-add slds-current-color"
@@ -7012,18 +7066,18 @@ exports[`List Builder renders a list builder with items selected 1`] = `
                     >
                       <label
                         className="slds-checkbox-button"
-                        htmlFor="example-unique-id-24"
+                        htmlFor="example-unique-id-32"
                       >
                         <input
                           className="slds-assistive-text"
                           defaultChecked={false}
-                          id="example-unique-id-24"
+                          id="example-unique-id-32"
                           onBlur={[Function]}
                           onChange={[Function]}
                           onFocus={[Function]}
                           tabIndex={-1}
                           type="checkbox"
-                          value="example-unique-id-24"
+                          value="example-unique-id-32"
                         />
                         <span
                           className="slds-icon_container slds-icon-utility-add slds-current-color"
@@ -7101,18 +7155,18 @@ exports[`List Builder renders a list builder with items selected 1`] = `
                     >
                       <label
                         className="slds-checkbox-button"
-                        htmlFor="example-unique-id-25"
+                        htmlFor="example-unique-id-33"
                       >
                         <input
                           className="slds-assistive-text"
                           defaultChecked={false}
-                          id="example-unique-id-25"
+                          id="example-unique-id-33"
                           onBlur={[Function]}
                           onChange={[Function]}
                           onFocus={[Function]}
                           tabIndex={-1}
                           type="checkbox"
-                          value="example-unique-id-25"
+                          value="example-unique-id-33"
                         />
                         <span
                           className="slds-icon_container slds-icon-utility-add slds-current-color"

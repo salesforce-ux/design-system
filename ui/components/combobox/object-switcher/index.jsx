@@ -92,7 +92,7 @@ export class IconObjectSwitcher extends Component {
       >
         <Combobox
           id={id}
-          className="slds-has-icon-only"
+          containerClassName="slds-has-icon-only"
           aria-controls={listboxId || listboxId02}
           comboboxAriaControls={comboboxAriaControls}
           label={label || 'Filter Search by:'}

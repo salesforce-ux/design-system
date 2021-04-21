@@ -1,59 +1,81 @@
 import React from 'react';
-import {
-  DeprecatedCombobox,
-  DeprecatedListbox,
-  DeprecatedListboxItem,
-  DeprecatedEntityOption
-} from '../../combobox/deprecated/';
+import PropTypes from 'prop-types';
+import Combobox from '../../combobox';
+import Listbox from '../../combobox/listbox/';
+import { UtilityIcon } from '../../icons/base/example';
 import ButtonIcon from '../../button-icons/';
 import { Popover } from '../../popovers/base/example';
 import SvgIcon from '../../../shared/svg-icon';
 import _ from '../../../shared/helpers';
+import { EntityOptionsLabel } from '../../combobox/snapshots.data';
 
 /* -----------------------------------------------------------------------------
     Data
 ----------------------------------------------------------------------------- */
-const accounts = [
-  'Acme',
-  'Edge SLA',
-  'Express Logistics SLA',
-  'GenePoint Lab Generators',
-  'GenePoint SLA',
-  'Pyramid Emergency Generators',
-  'United Oil Installations',
-  'United Oil Plant Standby Generators',
-  'University of AZ Installations',
-  'University of AZ Portable Generators'
-];
 
-export const ListboxList = props => (
-  <DeprecatedListbox
-    className="slds-dropdown_length-10"
-    vertical
-    aria-label="My Favorites"
-  >
-    <DeprecatedListboxItem>
-      <div
-        className="slds-media slds-listbox__option slds-listbox__option_plain"
-        role="presentation"
-      >
-        <h3 className="slds-listbox__option-header" role="presentation">
-          My Favorites
-        </h3>
-      </div>
-    </DeprecatedListboxItem>
-    {accounts.slice(0, props.length).map((value, i) => (
-      <DeprecatedListboxItem key={value}>
-        <DeprecatedEntityOption
-          id={_.uniqueId('listbox-option-id-')}
-          entityTitle={value}
-          entityMeta
-          tabIndex={i === 0 && !props.isCombobox ? '0' : null}
+const ListboxList = ({ ariaLabel, id, length, listboxData }) => {
+  const listboxId = _.uniqueId('example-unique-id-');
+
+  return (
+    <Listbox
+      id={id || listboxId}
+      snapshot={listboxData}
+      type="entity"
+      count={length}
+      hideIcons
+      staticListbox
+      aria-label={ariaLabel}
+    />
+  );
+};
+
+ListboxList.propTypes = {
+  ariaLabel: PropTypes.string,
+  id: PropTypes.string,
+  length: PropTypes.number,
+  listboxData: PropTypes.object
+};
+
+ListboxList.defaultProps = {
+  ariaLabel: 'My Favorites',
+  length: 8
+};
+
+const ExampleCombobox = ({ listboxData }) => {
+  const comboboxId = _.uniqueId('example-unique-id-');
+  const listboxId = _.uniqueId('example-unique-id-');
+
+  return (
+    <Combobox
+      inputContainerClassName="slds-m-around_small"
+      id={comboboxId}
+      aria-controls={listboxId}
+      autocomplete
+      label="Search"
+      hideLabel
+      placeholder="Search Favorites"
+      inputIconPosition="right"
+      rightInputIcon={
+        <UtilityIcon
+          symbol="search"
+          className="slds-icon slds-icon_x-small slds-icon-text-default"
+          containerClassName="slds-input__icon slds-input__icon_right"
+          assistiveText={false}
+          title={false}
         />
-      </DeprecatedListboxItem>
-    ))}
-  </DeprecatedListbox>
-);
+      }
+      results={<ListboxList id={listboxId} listboxData={listboxData} />}
+      resultsType="listbox"
+      hasInteractions
+      staticListbox
+      isOpen
+    />
+  );
+};
+
+ExampleCombobox.propTypes = {
+  listboxData: PropTypes.object
+};
 
 export const Footer = props => (
   <ul>
@@ -163,7 +185,7 @@ export let states = [
           title="Show Favorites"
         />
         <DynamicMenu>
-          <ListboxList length="1" />
+          <ListboxList length={2} listboxData={EntityOptionsLabel} />
         </DynamicMenu>
       </div>
     )
@@ -183,7 +205,7 @@ export let states = [
           title="Show Favorites"
         />
         <DynamicMenu>
-          <ListboxList length="6" />
+          <ListboxList length={6} listboxData={EntityOptionsLabel} />
         </DynamicMenu>
       </div>
     )
@@ -203,17 +225,7 @@ export let states = [
           title="Show Favorites"
         />
         <DynamicMenu>
-          <DeprecatedCombobox
-            autocomplete
-            isOpen
-            placeholder="Search Favorites"
-            hideLabel
-            inputIcon="right"
-            inputIconRightSymbol="search"
-            inputContainerClassName="slds-m-around_small"
-            listbox={<ListboxList length="12" isCombobox />}
-            staticListbox
-          />
+          <ExampleCombobox listboxData={EntityOptionsLabel} />
         </DynamicMenu>
       </div>
     )

@@ -1,7 +1,7 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import {
   Modal,
@@ -10,12 +10,11 @@ import {
   ModalFooter
 } from '../../modals/base/example';
 import { CheckboxButton } from '../../checkbox-button/';
-import {
-  DeprecatedCombobox,
-  DeprecatedListbox,
-  DeprecatedListboxItem,
-  DeprecatedEntityOption
-} from '../../combobox/deprecated/';
+import Combobox from '../../combobox';
+import Listbox from '../../combobox/listbox/';
+import { PlainGenericOptions } from '../../combobox/snapshots.data';
+import { UtilityIcon } from '../../icons/base/example';
+import _ from '../../../shared/helpers';
 import {
   Table,
   THead,
@@ -40,8 +39,6 @@ import {
     Variables and Objects
 ----------------------------------------------------------------------------- */
 
-const listboxOptionId01 = 'listbox-option-unique-id-01';
-const listboxOptionId02 = 'listbox-option-unique-id-02';
 const columns = ['Name', 'Product Code', 'List Price', 'Product Family'];
 const singleColumn = ['Product Name'];
 const rows = [
@@ -99,44 +96,53 @@ const rows = [
     Private
 ----------------------------------------------------------------------------- */
 
-const ListboxDropdown = props => (
-  <DeprecatedListbox
-    listboxClassName="slds-dropdown slds-dropdown_fluid"
-    vertical
-  >
-    <DeprecatedListboxItem>
-      <DeprecatedEntityOption
-        id={listboxOptionId01}
-        entityTitle="Acme"
-        entityMeta
-        focused={props.focused}
-      />
-    </DeprecatedListboxItem>
-    <DeprecatedListboxItem>
-      <DeprecatedEntityOption
-        id={listboxOptionId02}
-        entityTitle="Salesforce.com, Inc."
-        entityMeta
-      />
-    </DeprecatedListboxItem>
-  </DeprecatedListbox>
-);
+let ProductListHeader = ({ selectedFilters, itemsSelected }) => {
+  const [comboboxId] = useState(_.uniqueId('example-unique-id-'));
+  const [listboxId] = useState(_.uniqueId('example-unique-id-'));
 
-let ProductListHeader = props => (
-  <div className="slds-p-vertical_x-small slds-p-horizontal_large slds-shrink-none slds-theme_shade">
-    <DeprecatedCombobox
-      autocomplete
-      hideLabel
-      inputIcon="right"
-      inputIconRightSymbol="search"
-      listbox={<ListboxDropdown />}
-    />
-    {props.selectedFilters ? props.selectedFilters : null}
-    <div className="slds-text-title slds-m-top_x-small" aria-live="polite">
-      {props.itemsSelected || '0'} Item(s) Selected
+  return (
+    <div className="slds-p-vertical_x-small slds-p-horizontal_large slds-shrink-none slds-theme_shade">
+      <Combobox
+        id={comboboxId}
+        aria-controls={listboxId}
+        autocomplete
+        label="Search"
+        hideLabel
+        placeholder="Search Salesforce"
+        inputIconPosition="right"
+        rightInputIcon={
+          <UtilityIcon
+            symbol="search"
+            className="slds-icon slds-icon_x-small slds-icon-text-default"
+            containerClassName="slds-input__icon slds-input__icon_right"
+            assistiveText={false}
+            title={false}
+          />
+        }
+        results={
+          <Listbox
+            id={listboxId}
+            snapshot={PlainGenericOptions}
+            type="plain"
+            count={8}
+            hideIcons
+          />
+        }
+        resultsType="listbox"
+        hasInteractions
+      />
+      {selectedFilters || null}
+      <div className="slds-text-title slds-m-top_x-small" aria-live="polite">
+        {itemsSelected || '0'} Item(s) Selected
+      </div>
     </div>
-  </div>
-);
+  );
+};
+
+ProductListHeader.propTypes = {
+  selectedFilters: PropTypes.node,
+  itemsSelected: PropTypes.string
+};
 
 let ProductList = props => (
   <div className="slds-scrollable slds-grow">

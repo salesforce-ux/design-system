@@ -12,7 +12,7 @@ import { FormElement } from '../form-element/';
 /**
  * Combobox Container
  */
-const DeprecatedCombobox = props => (
+const ComboboxContainer = props => (
   <div
     className={classNames(
       'slds-combobox_container',
@@ -48,7 +48,8 @@ const ComboboxFormElement = props => (
       'slds-combobox',
       !props.staticListbox &&
         'slds-dropdown-trigger slds-dropdown-trigger_click',
-      props.isOpen && 'slds-is-open'
+      props.isOpen && 'slds-is-open',
+      props.className
     )}
     aria-controls={props['aria-controls']}
     aria-expanded={props.isOpen ? 'true' : 'false'}
@@ -151,6 +152,7 @@ export default class Combobox extends Component {
       autoFocus,
       className,
       comboboxAriaControls,
+      containerClassName,
       results,
       resultsType,
       formClassName,
@@ -191,12 +193,16 @@ export default class Combobox extends Component {
         isStacked={isStacked}
         column={column}
       >
-        <DeprecatedCombobox className={className} hasSelection={hasSelection}>
+        <ComboboxContainer
+          className={containerClassName}
+          hasSelection={hasSelection}
+        >
           <ComboboxFormElement
             aria-controls={comboboxAriaControls}
             staticListbox={staticListbox}
             isOpen={isOpen || this.state.focused}
             resultsType={resultsType}
+            className={className}
           >
             <ComboboxInput
               id={id}
@@ -220,7 +226,7 @@ export default class Combobox extends Component {
             />
             {results}
           </ComboboxFormElement>
-        </DeprecatedCombobox>
+        </ComboboxContainer>
         {listboxOfSelections}
       </FormElement>
     );
@@ -234,6 +240,8 @@ Combobox.defaultProps = {
 Combobox.propTypes = {
   autocomplete: PropTypes.bool,
   autoFocus: PropTypes.bool,
+  className: PropTypes.string,
+  containerClassName: PropTypes.string,
   results: PropTypes.element.isRequired,
   resultsType: PropTypes.oneOf(['listbox', 'dialog']).isRequired,
   formClassName: PropTypes.string,
@@ -335,7 +343,7 @@ export class ComboboxGroup extends Component {
       >
         <ComboboxGroupContainer hasSelection={hasSelection}>
           {addonPosition === 'start' && addon}
-          <DeprecatedCombobox comboboxPosition={comboboxPosition}>
+          <ComboboxContainer comboboxPosition={comboboxPosition}>
             <ComboboxFormElement
               isOpen={isOpen || this.state.focused}
               id={comboboxID}
@@ -362,7 +370,7 @@ export class ComboboxGroup extends Component {
               />
               {results}
             </ComboboxFormElement>
-          </DeprecatedCombobox>
+          </ComboboxContainer>
           {addonPosition === 'end' && addon}
         </ComboboxGroupContainer>
         {hasSelection && listboxOfSelections}

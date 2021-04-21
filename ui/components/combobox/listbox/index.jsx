@@ -72,26 +72,29 @@ export const ListboxItemHeading = props => (
 /**
  * Listbox Option
  */
-export const ListboxOption = props => (
-  <div
-    aria-selected={props.focused ? 'true' : null}
-    aria-disabled={props.isDisabled ? 'true' : null}
-    aria-checked={props.selected ? 'true' : null}
-    id={props.id || 'please-provide-a-unique-id'}
-    className={classNames(
-      'slds-media slds-listbox__option',
-      {
-        'slds-listbox__option_plain': props.type === 'plain',
-        'slds-listbox__option_entity': props.type === 'entity'
-      },
-      props.className
-    )}
-    role={props.label ? 'presentation' : 'option'}
-    tabIndex={props.tabIndex}
-  >
-    {props.children}
-  </div>
-);
+export const ListboxOption = props => {
+  return (
+    <div
+      ref={props.focusedRef}
+      aria-selected={props.focused ? 'true' : null}
+      aria-disabled={props.isDisabled ? 'true' : null}
+      aria-checked={props.selected ? 'true' : null}
+      id={props.id || 'please-provide-a-unique-id'}
+      className={classNames(
+        'slds-media slds-listbox__option',
+        {
+          'slds-listbox__option_plain': props.type === 'plain',
+          'slds-listbox__option_entity': props.type === 'entity'
+        },
+        props.className
+      )}
+      role={props.label ? 'presentation' : 'option'}
+      tabIndex={props.tabIndex}
+    >
+      {props.children}
+    </div>
+  );
+};
 
 /**
  * Listbox Option Icon
@@ -219,6 +222,7 @@ export const TypeaheadTermOption = props => (
  */
 export const Option = props => (
   <ListboxOption
+    focusedRef={props.focusedRef}
     type="plain"
     id={props.id}
     label={props.label}
@@ -235,7 +239,7 @@ export const Option = props => (
       props.className
     )}
   >
-    {!props.label && (
+    {!props.label && !props.hideIcons && (
       <span className="slds-media__figure slds-listbox__option-icon">
         {(props.selected || props.icon) && (
           <UtilityIcon
@@ -307,6 +311,8 @@ export class Listbox extends Component {
           tabIndex={option.tabIndex}
           selected={option.selected}
           focused={option.focused}
+          // False boolean translate to string "false", so we have to pass in null to prevent ref from erroring
+          focusedRef={option.focused ? this.props.focusedRef : null}
           name={option.name}
           label={option.label}
           entityMeta={option.entityMeta}
@@ -335,6 +341,8 @@ export class Listbox extends Component {
           name={option.name}
           selected={option.selected}
           focused={option.focused}
+          // False boolean translate to string "false", so we have to pass in null to prevent ref from erroring
+          focusedRef={option.focused ? this.props.focusedRef : null}
           tabIndex={option.tabIndex}
           visualSelection={this.props.visualSelection}
           term={option.term}
@@ -344,6 +352,7 @@ export class Listbox extends Component {
           icon={option.icon}
           meta={option.meta}
           isDisabled={option.isDisabled}
+          hideIcons={this.props.hideIcons}
         />
       </ListboxItem>
     );
@@ -357,13 +366,14 @@ export class Listbox extends Component {
       snapshot,
       loading,
       count = 1,
-      className = 'slds-dropdown_fluid'
+      className = 'slds-dropdown_fluid',
+      staticListbox
     } = this.props;
     return (
       <ListboxWrapper
         id={id}
         className={classNames(
-          'slds-dropdown',
+          { 'slds-dropdown': !staticListbox },
           type === 'entity'
             ? 'slds-dropdown_length-with-icon-7'
             : 'slds-dropdown_length-5',
@@ -403,7 +413,8 @@ Listbox.propTypes = {
   snapshot: PropTypes.object.isRequired,
   count: PropTypes.number,
   meta: PropTypes.string,
-  icon: PropTypes.string
+  icon: PropTypes.string,
+  staticListbox: PropTypes.bool
 };
 
 export default Listbox;

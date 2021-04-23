@@ -4,7 +4,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import _ from '../../shared/helpers';
 
 const Input = props => {
   const {
@@ -28,12 +27,10 @@ const Input = props => {
     'slds-input_borders': readOnly && hasBorders
   };
 
-  const uniqueId = _.uniqueId('text-input-unique-id-');
-
   return (
     <input
       {...props}
-      id={id || uniqueId}
+      id={id}
       className={classNames('slds-input', computedClassNames, className)}
       type={type}
       placeholder={placeholder}

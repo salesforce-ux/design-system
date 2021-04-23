@@ -45,6 +45,7 @@ class CodeView extends React.Component {
       exampleOnly,
       frameOnly,
       frameStyles,
+      frameTitle,
       hideDeviceSelector
     } = this.props;
 
@@ -65,6 +66,7 @@ class CodeView extends React.Component {
         <SLDSFrame
           hideDeviceSelector={hideDeviceSelector}
           frameStyles={frameStyles}
+          frameTitle={frameTitle || 'Example mobile styles'}
         >
           {this.props.children}
         </SLDSFrame>
@@ -93,6 +95,7 @@ CodeView.propTypes = {
   exampleOnly: PropTypes.bool,
   frameOnly: PropTypes.bool,
   frameStyles: PropTypes.object,
+  frameTitle: PropTypes.string,
   hideDeviceSelector: PropTypes.bool
 };
 

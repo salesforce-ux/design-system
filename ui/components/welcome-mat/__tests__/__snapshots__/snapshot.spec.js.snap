@@ -71,6 +71,7 @@ exports[`Composed Welcome Mat Snapshots renders a deprecated welcome mat 1`] = `
             </p>
           </div>
           <div
+            aria-label="{{Placeholder for description of progress bar}}"
             aria-valuemax="100"
             aria-valuemin="0"
             aria-valuenow={0}
@@ -645,6 +646,7 @@ exports[`Composed Welcome Mat Snapshots renders a trailhead welcome mat 1`] = `
                 </p>
               </div>
               <div
+                aria-label="{{Placeholder for description of progress bar}}"
                 aria-valuemax="100"
                 aria-valuemin="0"
                 aria-valuenow={0}
@@ -1112,6 +1114,7 @@ exports[`Composed Welcome Mat Snapshots renders a welcome mat 1`] = `
                 </p>
               </div>
               <div
+                aria-label="{{Placeholder for description of progress bar}}"
                 aria-valuemax="100"
                 aria-valuemin="0"
                 aria-valuenow={0}
@@ -1908,6 +1911,7 @@ Array [
     </p>
   </div>,
   <div
+    aria-label="{{Placeholder for description of progress bar}}"
     aria-valuemax="100"
     aria-valuemin="0"
     aria-valuenow={0}
@@ -1961,6 +1965,7 @@ Array [
     </p>
   </div>,
   <div
+    aria-label="{{Placeholder for description of progress bar}}"
     aria-valuemax="100"
     aria-valuemin="0"
     aria-valuenow={40}
@@ -2014,6 +2019,7 @@ Array [
     </p>
   </div>,
   <div
+    aria-label="{{Placeholder for description of progress bar}}"
     aria-valuemax="100"
     aria-valuemin="0"
     aria-valuenow={0}
@@ -2067,6 +2073,7 @@ Array [
     </p>
   </div>,
   <div
+    aria-label="{{Placeholder for description of progress bar}}"
     aria-valuemax="100"
     aria-valuemin="0"
     aria-valuenow={0}
@@ -2531,6 +2538,7 @@ Array [
     </p>
   </div>,
   <div
+    aria-label="{{Placeholder for description of progress bar}}"
     aria-valuemax="100"
     aria-valuemin="0"
     aria-valuenow={0}
@@ -2614,6 +2622,7 @@ Array [
     </p>
   </div>,
   <div
+    aria-label="{{Placeholder for description of progress bar}}"
     aria-valuemax="100"
     aria-valuemin="0"
     aria-valuenow={40}
@@ -2697,6 +2706,7 @@ Array [
     </p>
   </div>,
   <div
+    aria-label="{{Placeholder for description of progress bar}}"
     aria-valuemax="100"
     aria-valuemin="0"
     aria-valuenow={0}
@@ -2780,6 +2790,7 @@ Array [
     </p>
   </div>,
   <div
+    aria-label="{{Placeholder for description of progress bar}}"
     aria-valuemax="100"
     aria-valuemin="0"
     aria-valuenow={0}

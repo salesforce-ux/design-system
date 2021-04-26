@@ -20,6 +20,9 @@ export const ProgressBar = props => {
       aria-valuemax="100"
       aria-valuenow={props.value}
       aria-labelledby={props['aria-labelledby']}
+      aria-label={
+        props['aria-label'] || '{{Placeholder for description of progress bar}}'
+      }
       role="progressbar"
     >
       <span

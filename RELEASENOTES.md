@@ -20,6 +20,14 @@
 #### Changed
 Removed the usage of the deprecated combobox. The Picklist now uses the current combobox.
 
+### [Progress Bar](https://www.lightningdesignsystem.com/components/progress-bar)
+#### Added
+- Added `aria-label` attribute to the div with role of `progressbar` to meet accessibility requirements.
+
+### [Progress Indicator](https://www.lightningdesignsystem.com/components/progress-indicator)
+#### Added
+- Added `aria-label` attribute to the div with role of `progressbar` to meet accessibility requirements.
+
 ### [Rich Text Editor](https://www.lightningdesignsystem.com/components/rich-text-editor)
 #### Changed
 - Removed the usage of the deprecated combobox. The Rich Text Editor now uses the current combobox.
@@ -28,6 +36,10 @@ Removed the usage of the deprecated combobox. The Picklist now uses the current 
 #### Changed
 - Removed the usage of the deprecated combobox. The Timepicker now uses the current combobox.
 <!-- ## [VERSION] -->
+
+### [Welcome Mat](https://www.lightningdesignsystem.com/components/welcome-mat)
+#### Added
+- Added `aria-label` attribute to the div with role of `progressbar` to meet accessibility requirements.
 
 ## Release 2.15.3 - April 15, 2021
 

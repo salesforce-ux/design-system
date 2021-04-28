@@ -4,7 +4,7 @@
 import React, { Component } from 'react';
 import classNames from 'classnames';
 
-let tokenValue = 'rgb(176, 196, 223)';
+let tokenValue = '#eef4ff'; // BRAND_BACKGROUND_PRIMARY from design-tokens/aliases/color-palettes.yml
 
 export const BrandBand = props => (
   <div

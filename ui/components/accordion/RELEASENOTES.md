@@ -4,6 +4,12 @@
 
 <!-- ## [Unreleased] -->
 
+## 2.16.0
+
+## Added
+
+- Added link to accessibility keyboard interaction guidelines.
+
 ## 2.14.0
 
 ## Added

@@ -4,6 +4,10 @@
 ## Release 2.16.0 - Upcoming
 
 ## Components
+### [Accordion](https://www.lightningdesignsystem.com/components/accordion)
+## Added
+- Added link to accessibility keyboard interaction guidelines.
+
 ### [Datetime Picker](https://www.lightningdesignsystem.com/components/datetime-picker)
 #### Changed
 - Removed the usage of the deprecated combobox. The Datetime Picker now uses the current combobox.

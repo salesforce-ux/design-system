@@ -4,6 +4,12 @@
 
 <!-- ## [Unreleased] -->
 
+## 2.15.6
+
+### Fixed
+
+- Corrected accessibility information regarding the usage of the `role` attribute.
+
 ## 2.14.0
 
 ### Added

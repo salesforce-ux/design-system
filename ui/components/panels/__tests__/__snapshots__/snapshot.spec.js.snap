@@ -729,6 +729,7 @@ exports[`render Panel component renders Base Panel with secondary actions 1`] = 
         className="slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open"
       >
         <button
+          aria-expanded="true"
           aria-haspopup="true"
           className="slds-button slds-button_icon slds-button_icon-small slds-button_icon-border-filled"
           onClick={[Function]}

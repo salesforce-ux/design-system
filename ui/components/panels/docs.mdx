@@ -51,6 +51,14 @@ The panel should take up 100% of the height of its parent container. In most cas
   </p>
 </Blockquote>
 
+### Accessibility
+
+When managing the visibility of the panel, there are a few essential accessibility elements to make sure are in place:
+
+- When the panel is not visible, set its `aria-hidden` attribute to `true`, and when visible, set `aria-hidden` to `false`.
+- If the panel's visibility is triggered by an element, the triggering element must be focusable with `aria-controls` set to the unique ID of the panel and `aria-expanded` set to either `true` or `false` depending on the visibility of the panel.
+- When toggling a panel open, place the user's focus inside the first focusable element within the panel that isn't the close button. If the close button is the only focusable element, place focus there. Return focus to the triggering element when the panel closes.
+
 ## Base
 
 <Example title="Panel base">
@@ -113,6 +121,12 @@ To center the header title, add the class `slds-panel__header_align-center` to t
 ### Secondary Actions
 
 Secondary actions provide a compact way to offer additional actions without the need for a dedicated action toolbar. Actions in the menu apply to the entire component.
+
+<Blockquote type="a11y" header="Accessibility Requirement">
+  <p>
+    Secondary actions use the <a href="/components/menus/#Accessibility">menu component</a>. All of the <a href="/components/menus/#Accessibility">accessibility guidelines</a> for the menu component are pertinent within the context of secondary actions.
+  </p>
+</Blockquote>
 
 <CodeView
   demoStyles={getDemoStylesById(Base.examples, 'with-secondary-actions')}
@@ -244,7 +258,7 @@ Filtering lists or reports can be done by using a Filtering expressions inside o
     Make sure to use assistive text to improve the clarity of what you might be
     editing, for example, add{' '}
     <code>
-      <span className="slds-assistive-text">Edit filter:</span>
+     &lt;span className="slds-assistive-text"&gt;Edit filter:&lt;/span&gt;
     </code>{' '}
     to the button element inside each filterable object.
   </p>

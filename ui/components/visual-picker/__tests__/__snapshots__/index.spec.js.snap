@@ -17,7 +17,7 @@ exports[`renders a coverable content visual picker 1`] = `
     >
       <input
         id="visual-picker-7"
-        name="options"
+        name="example-unique-name-3"
         type="radio"
         value="visual-picker-7"
       />
@@ -72,7 +72,7 @@ exports[`renders a coverable content visual picker 1`] = `
     >
       <input
         id="visual-picker-8"
-        name="options"
+        name="example-unique-name-3"
         type="radio"
         value="visual-picker-8"
       />
@@ -143,7 +143,7 @@ exports[`renders a coverable content visual picker with checkbox group 1`] = `
     >
       <input
         id="visual-picker-11"
-        name="options"
+        name="example-unique-name-5"
         type="checkbox"
         value="visual-picker-11"
       />
@@ -198,7 +198,7 @@ exports[`renders a coverable content visual picker with checkbox group 1`] = `
     >
       <input
         id="visual-picker-12"
-        name="options"
+        name="example-unique-name-5"
         type="checkbox"
         value="visual-picker-12"
       />
@@ -253,7 +253,7 @@ exports[`renders a coverable content visual picker with checkbox group 1`] = `
     >
       <input
         id="visual-picker-13"
-        name="options"
+        name="example-unique-name-5"
         type="checkbox"
         value="visual-picker-13"
       />
@@ -324,7 +324,7 @@ exports[`renders a disabled coverable content visual picker 1`] = `
     >
       <input
         id="visual-picker-9"
-        name="options"
+        name="example-unique-name-4"
         type="checkbox"
         value="visual-picker-9"
       />
@@ -380,7 +380,7 @@ exports[`renders a disabled coverable content visual picker 1`] = `
       <input
         disabled={true}
         id="visual-picker-10"
-        name="options"
+        name="example-unique-name-4"
         type="checkbox"
         value="visual-picker-10"
       />
@@ -451,7 +451,7 @@ exports[`renders a disabled non-coverable content visual picker 1`] = `
     >
       <input
         id="visual-picker-17"
-        name="options"
+        name="example-unique-name-7"
         type="radio"
         value="visual-picker-17"
       />
@@ -507,7 +507,7 @@ exports[`renders a disabled non-coverable content visual picker 1`] = `
     >
       <input
         id="visual-picker-18"
-        name="options"
+        name="example-unique-name-7"
         type="radio"
         value="visual-picker-18"
       />
@@ -564,7 +564,7 @@ exports[`renders a disabled non-coverable content visual picker 1`] = `
       <input
         disabled={true}
         id="visual-picker-19"
-        name="options"
+        name="example-unique-name-7"
         type="radio"
         value="visual-picker-19"
       />
@@ -636,7 +636,7 @@ exports[`renders a disabled vertical visual picker 1`] = `
     >
       <input
         id="visual-picker-4"
-        name="options"
+        name="example-unique-name-2"
         type="radio"
         value="visual-picker-4"
       />
@@ -678,7 +678,7 @@ exports[`renders a disabled vertical visual picker 1`] = `
     >
       <input
         id="visual-picker-5"
-        name="options"
+        name="example-unique-name-2"
         type="radio"
         value="visual-picker-5"
       />
@@ -721,7 +721,7 @@ exports[`renders a disabled vertical visual picker 1`] = `
       <input
         disabled={true}
         id="visual-picker-6"
-        name="options"
+        name="example-unique-name-2"
         type="radio"
         value="visual-picker-6"
       />
@@ -834,7 +834,7 @@ exports[`renders a non-coverable content visual picker 1`] = `
     >
       <input
         id="visual-picker-14"
-        name="options"
+        name="example-unique-name-6"
         type="radio"
         value="visual-picker-14"
       />
@@ -890,7 +890,7 @@ exports[`renders a non-coverable content visual picker 1`] = `
     >
       <input
         id="visual-picker-15"
-        name="options"
+        name="example-unique-name-6"
         type="radio"
         value="visual-picker-15"
       />
@@ -946,7 +946,7 @@ exports[`renders a non-coverable content visual picker 1`] = `
     >
       <input
         id="visual-picker-16"
-        name="options"
+        name="example-unique-name-6"
         type="radio"
         value="visual-picker-16"
       />
@@ -1018,7 +1018,7 @@ exports[`renders a vertical visual picker 1`] = `
     >
       <input
         id="visual-picker-1"
-        name="options"
+        name="example-unique-name-1"
         type="radio"
         value="visual-picker-1"
       />
@@ -1060,7 +1060,7 @@ exports[`renders a vertical visual picker 1`] = `
     >
       <input
         id="visual-picker-2"
-        name="options"
+        name="example-unique-name-1"
         type="radio"
         value="visual-picker-2"
       />
@@ -1102,7 +1102,7 @@ exports[`renders a vertical visual picker 1`] = `
     >
       <input
         id="visual-picker-3"
-        name="options"
+        name="example-unique-name-1"
         type="radio"
         value="visual-picker-3"
       />

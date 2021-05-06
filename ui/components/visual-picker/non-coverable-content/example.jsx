@@ -6,7 +6,10 @@ import classNames from 'classnames';
 import _ from '../../../shared/helpers';
 import { Fieldset, Legend } from '../../radio-group/base/example';
 import { FormElementControl } from '../../form-element';
-import { VisualPicker } from '../coverable-content/example';
+import {
+  VisualPicker,
+  VisualPickerContainer
+} from '../coverable-content/example';
 import { UtilityIcon } from '../../icons/base/example';
 
 export const PackageOne = [
@@ -62,24 +65,26 @@ export default (
   <Fieldset>
     <Legend>Select a plan</Legend>
     <FormElementControl>
-      <VisualPicker type="radio" size="medium" label={PackageOne}>
-        <span>
-          <span className="slds-text-heading_large">$30</span>
-          <span className="slds-text-title">USD/user/month *</span>
-        </span>
-      </VisualPicker>
-      <VisualPicker type="radio" size="medium" label={PackageTwo}>
-        <span>
-          <span className="slds-text-heading_large">$150</span>
-          <span className="slds-text-title">USD/user/month *</span>
-        </span>
-      </VisualPicker>
-      <VisualPicker type="radio" size="medium" label={PackageThree}>
-        <span>
-          <span className="slds-text-heading_large">$300</span>
-          <span className="slds-text-title">USD/user/month *</span>
-        </span>
-      </VisualPicker>
+      <VisualPickerContainer hasIcon={false}>
+        <VisualPicker size="medium" label={PackageOne}>
+          <span>
+            <span className="slds-text-heading_large">$30</span>
+            <span className="slds-text-title">USD/user/month *</span>
+          </span>
+        </VisualPicker>
+        <VisualPicker size="medium" label={PackageTwo}>
+          <span>
+            <span className="slds-text-heading_large">$150</span>
+            <span className="slds-text-title">USD/user/month *</span>
+          </span>
+        </VisualPicker>
+        <VisualPicker size="medium" label={PackageThree}>
+          <span>
+            <span className="slds-text-heading_large">$300</span>
+            <span className="slds-text-title">USD/user/month *</span>
+          </span>
+        </VisualPicker>
+      </VisualPickerContainer>
     </FormElementControl>
   </Fieldset>
 );
@@ -92,29 +97,26 @@ export let states = [
       <Fieldset>
         <Legend>Select a plan</Legend>
         <FormElementControl>
-          <VisualPicker type="radio" size="medium" label={PackageOne}>
-            <span>
-              <span className="slds-text-heading_large">$30</span>
-              <span className="slds-text-title">USD/user/month *</span>
-            </span>
-          </VisualPicker>
-          <VisualPicker type="radio" size="medium" label={PackageTwo}>
-            <span>
-              <span className="slds-text-heading_large">$150</span>
-              <span className="slds-text-title">USD/user/month *</span>
-            </span>
-          </VisualPicker>
-          <VisualPicker
-            type="radio"
-            size="medium"
-            disabled
-            label={PackageThree}
-          >
-            <span>
-              <span className="slds-text-heading_large">$300</span>
-              <span className="slds-text-title">USD/user/month *</span>
-            </span>
-          </VisualPicker>
+          <VisualPickerContainer hasIcon={false}>
+            <VisualPicker size="medium" label={PackageOne}>
+              <span>
+                <span className="slds-text-heading_large">$30</span>
+                <span className="slds-text-title">USD/user/month *</span>
+              </span>
+            </VisualPicker>
+            <VisualPicker size="medium" label={PackageTwo}>
+              <span>
+                <span className="slds-text-heading_large">$150</span>
+                <span className="slds-text-title">USD/user/month *</span>
+              </span>
+            </VisualPicker>
+            <VisualPicker size="medium" disabled label={PackageThree}>
+              <span>
+                <span className="slds-text-heading_large">$300</span>
+                <span className="slds-text-title">USD/user/month *</span>
+              </span>
+            </VisualPicker>
+          </VisualPickerContainer>
         </FormElementControl>
       </Fieldset>
     )

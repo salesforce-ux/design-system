@@ -517,11 +517,11 @@ workflows:
           requires:
             - framework-build
           # update for all tagged versions (X.X.X[-*])
-          filters:
-            tags:
-              only: /^v\d+\.\d+\.\d+.*/
-            branches:
-              ignore: /.*/
+          # filters:
+          #   tags:
+          #     only: /^v\d+\.\d+\.\d+.*/
+          #   branches:
+          #     ignore: /.*/
       - vrt-desktop:
           context: ux-eng-keys
           # do not run for main version branches

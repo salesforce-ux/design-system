@@ -3227,7 +3227,7 @@ exports[`treegrid default rows should remove the selection column 1`] = `
         <span
           className="slds-assistive-text"
         >
-          Collapse Rewis Inc
+          Expand Rewis Inc
         </span>
       </button>
       <div
@@ -3360,7 +3360,7 @@ exports[`treegrid default rows should remove the selection column 1`] = `
         <span
           className="slds-assistive-text"
         >
-          Collapse Acme Corporation
+          Expand Acme Corporation
         </span>
       </button>
       <div
@@ -3495,7 +3495,7 @@ exports[`treegrid default rows should remove the selection column 1`] = `
         <span
           className="slds-assistive-text"
         >
-          Collapse Rohde Enterprises
+          Expand Rohde Enterprises
         </span>
       </button>
       <div
@@ -3628,7 +3628,7 @@ exports[`treegrid default rows should remove the selection column 1`] = `
         <span
           className="slds-assistive-text"
         >
-          Collapse Cheese Corp
+          Expand Cheese Corp
         </span>
       </button>
       <div
@@ -3802,7 +3802,7 @@ exports[`treegrid default rows should render with children 1`] = `
         <span
           className="slds-assistive-text"
         >
-          Collapse Rewis Inc
+          Expand Rewis Inc
         </span>
       </button>
       <div
@@ -3971,7 +3971,7 @@ exports[`treegrid default rows should render with children 1`] = `
         <span
           className="slds-assistive-text"
         >
-          Collapse Acme Corporation
+          Expand Acme Corporation
         </span>
       </button>
       <div
@@ -4142,7 +4142,7 @@ exports[`treegrid default rows should render with children 1`] = `
         <span
           className="slds-assistive-text"
         >
-          Collapse Rohde Enterprises
+          Expand Rohde Enterprises
         </span>
       </button>
       <div
@@ -4311,7 +4311,7 @@ exports[`treegrid default rows should render with children 1`] = `
         <span
           className="slds-assistive-text"
         >
-          Collapse Cheese Corp
+          Expand Cheese Corp
         </span>
       </button>
       <div
@@ -4485,7 +4485,7 @@ exports[`treegrid default rows should show a selected row 1`] = `
         <span
           className="slds-assistive-text"
         >
-          Collapse Rewis Inc
+          Expand Rewis Inc
         </span>
       </button>
       <div
@@ -4654,7 +4654,7 @@ exports[`treegrid default rows should show a selected row 1`] = `
         <span
           className="slds-assistive-text"
         >
-          Collapse Acme Corporation
+          Expand Acme Corporation
         </span>
       </button>
       <div
@@ -4825,7 +4825,7 @@ exports[`treegrid default rows should show a selected row 1`] = `
         <span
           className="slds-assistive-text"
         >
-          Collapse Rohde Enterprises
+          Expand Rohde Enterprises
         </span>
       </button>
       <div
@@ -4994,7 +4994,7 @@ exports[`treegrid default rows should show a selected row 1`] = `
         <span
           className="slds-assistive-text"
         >
-          Collapse Cheese Corp
+          Expand Cheese Corp
         </span>
       </button>
       <div
@@ -5168,7 +5168,7 @@ exports[`treegrid default rows should show expanded row 1`] = `
         <span
           className="slds-assistive-text"
         >
-          Collapse Rewis Inc
+          Expand Rewis Inc
         </span>
       </button>
       <div
@@ -5338,7 +5338,7 @@ exports[`treegrid default rows should show expanded row 1`] = `
         <span
           className="slds-assistive-text"
         >
-          Expand Acme Corporation
+          Collapse Acme Corporation
         </span>
       </button>
       <div
@@ -5509,7 +5509,7 @@ exports[`treegrid default rows should show expanded row 1`] = `
         <span
           className="slds-assistive-text"
         >
-          Collapse Rohde Enterprises
+          Expand Rohde Enterprises
         </span>
       </button>
       <div
@@ -5678,7 +5678,7 @@ exports[`treegrid default rows should show expanded row 1`] = `
         <span
           className="slds-assistive-text"
         >
-          Collapse Cheese Corp
+          Expand Cheese Corp
         </span>
       </button>
       <div
@@ -5814,7 +5814,7 @@ exports[`treegrid headless row should hide the selection column 1`] = `
       <span
         className="slds-assistive-text"
       >
-        Collapse foo
+        Expand foo
       </span>
     </button>
     <div
@@ -5930,7 +5930,7 @@ exports[`treegrid headless row should render 1`] = `
       <span
         className="slds-assistive-text"
       >
-        Collapse foo
+        Expand foo
       </span>
     </button>
     <div
@@ -6047,7 +6047,7 @@ exports[`treegrid headless row should set expanded to false 1`] = `
       <span
         className="slds-assistive-text"
       >
-        Collapse foo
+        Expand foo
       </span>
     </button>
     <div
@@ -6164,7 +6164,7 @@ exports[`treegrid headless row should set expanded to true 1`] = `
       <span
         className="slds-assistive-text"
       >
-        Expand foo
+        Collapse foo
       </span>
     </button>
     <div
@@ -6282,7 +6282,7 @@ exports[`treegrid headless row should set selected to false 1`] = `
       <span
         className="slds-assistive-text"
       >
-        Collapse foo
+        Expand foo
       </span>
     </button>
     <div
@@ -6400,7 +6400,7 @@ exports[`treegrid headless row should set selected to true and check the box 1`]
       <span
         className="slds-assistive-text"
       >
-        Collapse foo
+        Expand foo
       </span>
     </button>
     <div
@@ -6483,7 +6483,7 @@ exports[`treegrid headless rows should remove the selection column 1`] = `
         <span
           className="slds-assistive-text"
         >
-          Collapse Rewis Inc
+          Expand Rewis Inc
         </span>
       </button>
       <div
@@ -6562,7 +6562,7 @@ exports[`treegrid headless rows should remove the selection column 1`] = `
         <span
           className="slds-assistive-text"
         >
-          Collapse Acme Corporation
+          Expand Acme Corporation
         </span>
       </button>
       <div
@@ -6642,7 +6642,7 @@ exports[`treegrid headless rows should remove the selection column 1`] = `
         <span
           className="slds-assistive-text"
         >
-          Collapse Rohde Enterprises
+          Expand Rohde Enterprises
         </span>
       </button>
       <div
@@ -6721,7 +6721,7 @@ exports[`treegrid headless rows should remove the selection column 1`] = `
         <span
           className="slds-assistive-text"
         >
-          Collapse Cheese Corp
+          Expand Cheese Corp
         </span>
       </button>
       <div
@@ -6841,7 +6841,7 @@ exports[`treegrid headless rows should render 1`] = `
         <span
           className="slds-assistive-text"
         >
-          Collapse Rewis Inc
+          Expand Rewis Inc
         </span>
       </button>
       <div
@@ -6956,7 +6956,7 @@ exports[`treegrid headless rows should render 1`] = `
         <span
           className="slds-assistive-text"
         >
-          Collapse Acme Corporation
+          Expand Acme Corporation
         </span>
       </button>
       <div
@@ -7072,7 +7072,7 @@ exports[`treegrid headless rows should render 1`] = `
         <span
           className="slds-assistive-text"
         >
-          Collapse Rohde Enterprises
+          Expand Rohde Enterprises
         </span>
       </button>
       <div
@@ -7187,7 +7187,7 @@ exports[`treegrid headless rows should render 1`] = `
         <span
           className="slds-assistive-text"
         >
-          Collapse Cheese Corp
+          Expand Cheese Corp
         </span>
       </button>
       <div
@@ -7307,7 +7307,7 @@ exports[`treegrid headless rows should show a selected row 1`] = `
         <span
           className="slds-assistive-text"
         >
-          Collapse Rewis Inc
+          Expand Rewis Inc
         </span>
       </button>
       <div
@@ -7422,7 +7422,7 @@ exports[`treegrid headless rows should show a selected row 1`] = `
         <span
           className="slds-assistive-text"
         >
-          Collapse Acme Corporation
+          Expand Acme Corporation
         </span>
       </button>
       <div
@@ -7538,7 +7538,7 @@ exports[`treegrid headless rows should show a selected row 1`] = `
         <span
           className="slds-assistive-text"
         >
-          Collapse Rohde Enterprises
+          Expand Rohde Enterprises
         </span>
       </button>
       <div
@@ -7653,7 +7653,7 @@ exports[`treegrid headless rows should show a selected row 1`] = `
         <span
           className="slds-assistive-text"
         >
-          Collapse Cheese Corp
+          Expand Cheese Corp
         </span>
       </button>
       <div
@@ -7773,7 +7773,7 @@ exports[`treegrid headless rows should show expanded row 1`] = `
         <span
           className="slds-assistive-text"
         >
-          Collapse Rewis Inc
+          Expand Rewis Inc
         </span>
       </button>
       <div
@@ -7889,7 +7889,7 @@ exports[`treegrid headless rows should show expanded row 1`] = `
         <span
           className="slds-assistive-text"
         >
-          Expand Acme Corporation
+          Collapse Acme Corporation
         </span>
       </button>
       <div
@@ -8005,7 +8005,7 @@ exports[`treegrid headless rows should show expanded row 1`] = `
         <span
           className="slds-assistive-text"
         >
-          Collapse Rohde Enterprises
+          Expand Rohde Enterprises
         </span>
       </button>
       <div
@@ -8120,7 +8120,7 @@ exports[`treegrid headless rows should show expanded row 1`] = `
         <span
           className="slds-assistive-text"
         >
-          Collapse Cheese Corp
+          Expand Cheese Corp
         </span>
       </button>
       <div
@@ -8202,7 +8202,7 @@ exports[`treegrid row should remove the selection column 1`] = `
       <span
         className="slds-assistive-text"
       >
-        Collapse Rewis Inc
+        Expand Rewis Inc
       </span>
     </button>
     <div
@@ -8372,7 +8372,7 @@ exports[`treegrid row should render 1`] = `
       <span
         className="slds-assistive-text"
       >
-        Collapse Rewis Inc
+        Expand Rewis Inc
       </span>
     </button>
     <div
@@ -8544,7 +8544,7 @@ exports[`treegrid row should select the row and check the box 1`] = `
       <span
         className="slds-assistive-text"
       >
-        Collapse Rewis Inc
+        Expand Rewis Inc
       </span>
     </button>
     <div
@@ -8715,7 +8715,7 @@ exports[`treegrid row should set aria-expanded on row  1`] = `
       <span
         className="slds-assistive-text"
       >
-        Expand Rewis Inc
+        Collapse Rewis Inc
       </span>
     </button>
     <div
@@ -8886,7 +8886,7 @@ exports[`treegrid row should set aria-expanded to false on row  1`] = `
       <span
         className="slds-assistive-text"
       >
-        Collapse Rewis Inc
+        Expand Rewis Inc
       </span>
     </button>
     <div
@@ -9058,7 +9058,7 @@ exports[`treegrid row should set selection of the row to false 1`] = `
       <span
         className="slds-assistive-text"
       >
-        Collapse Rewis Inc
+        Expand Rewis Inc
       </span>
     </button>
     <div
@@ -9228,7 +9228,7 @@ exports[`treegrid row should set tabindex on the row 1`] = `
       <span
         className="slds-assistive-text"
       >
-        Collapse Rewis Inc
+        Expand Rewis Inc
       </span>
     </button>
     <div

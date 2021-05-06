@@ -56,7 +56,7 @@ export const Row = props => (
       <ButtonIcon
         aria-hidden="true"
         assistiveText={
-          props.isExpanded ? `Expand ${props.name}` : `Collapse ${props.name}`
+          props.isExpanded ? `Collapse ${props.name}` : `Expand ${props.name}`
         }
         className={classNames('slds-button_icon-x-small slds-m-right_x-small', {
           'slds-is-disabled':
@@ -121,7 +121,7 @@ export const HeadlessRow = props => (
       <ButtonIcon
         aria-hidden="true"
         assistiveText={
-          props.isExpanded ? `Expand ${props.name}` : `Collapse ${props.name}`
+          props.isExpanded ? `Collapse ${props.name}` : `Expand ${props.name}`
         }
         className={classNames(
           'slds-button_icon slds-button_icon-x-small slds-m-right_x-small',

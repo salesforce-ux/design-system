@@ -311,28 +311,32 @@ export const IconRight = props => (
   </Trigger>
 );
 
-export const ActionOverflow = ({ size, position }) => {
-  const positionClassNames = classNames({
-    'slds-dropdown_left': position === 'left',
-    'slds-dropdown_right': position === 'right',
-    'slds-dropdown_bottom': position === 'bottom'
-  });
+export const ActionOverflow = ({ isOpen, size, position }) => {
+  const menuClassNames = classNames(
+    {
+      'slds-dropdown_left': position === 'left',
+      'slds-dropdown_right': position === 'right',
+      'slds-dropdown_bottom': position === 'bottom'
+    },
+    'slds-dropdown_actions'
+  );
 
   return (
     <Trigger
-      isOpen
+      isOpen={isOpen}
       triggerIcon={
         <ButtonIcon
           className="slds-button_icon-border-filled"
           symbol="down"
           assistiveText="Show More"
           aria-haspopup="true"
+          aria-expanded={isOpen ? 'true' : 'false'}
           title="Show More"
           size={size}
         />
       }
     >
-      <Menu className={classNames(positionClassNames, 'slds-dropdown_actions')}>
+      <Menu className={menuClassNames}>
         <MenuList ariaLabel="Show More">
           <MenuItem tabIndex="0">Action One</MenuItem>
           <MenuItem>Action Two</MenuItem>
@@ -344,6 +348,7 @@ export const ActionOverflow = ({ size, position }) => {
 };
 
 ActionOverflow.propTypes = {
+  isOpen: PropTypes.bool,
   position: PropTypes.string,
   size: PropTypes.string
 };
@@ -484,7 +489,7 @@ export let examples = [
   {
     id: 'action-overflow',
     label: 'Overflow menu with actions',
-    element: <ActionOverflow />
+    element: <ActionOverflow isOpen />
   },
   {
     id: 'notifications-menu',

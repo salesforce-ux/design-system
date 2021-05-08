@@ -2,7 +2,10 @@
 import React from 'react';
 import { Fieldset, Legend } from '../../radio-group/base/example';
 import { FormElementControl } from '../../form-element';
-import { VisualPicker } from '../coverable-content/example';
+import {
+  VisualPicker,
+  VisualPickerContainer
+} from '../coverable-content/example';
 import {
   VisualPickerMediaObject,
   PackageOne,
@@ -18,39 +21,41 @@ it('renders a vertical visual picker', () =>
     <Fieldset>
       <Legend>Select an option</Legend>
       <FormElementControl>
-        <VisualPicker className="slds-visual-picker_vertical" type="radio">
-          <span>
-            <span className="slds-text-heading_medium slds-m-bottom_x-small">
-              Item Text
+        <VisualPickerContainer hasIcon={false}>
+          <VisualPicker className="slds-visual-picker_vertical">
+            <span>
+              <span className="slds-text-heading_medium slds-m-bottom_x-small">
+                Item Text
+              </span>
+              <span className="slds-text-title">
+                Some optional item description to help the user better
+                understand what this option is about.
+              </span>
             </span>
-            <span className="slds-text-title">
-              Some optional item description to help the user better understand
-              what this option is about.
+          </VisualPicker>
+          <VisualPicker className="slds-visual-picker_vertical">
+            <span>
+              <span className="slds-text-heading_medium slds-m-bottom_x-small">
+                Item Text
+              </span>
+              <span className="slds-text-title">
+                Some optional item description to help the user better
+                understand what this option is about.
+              </span>
             </span>
-          </span>
-        </VisualPicker>
-        <VisualPicker className="slds-visual-picker_vertical" type="radio">
-          <span>
-            <span className="slds-text-heading_medium slds-m-bottom_x-small">
-              Item Text
+          </VisualPicker>
+          <VisualPicker className="slds-visual-picker_vertical">
+            <span>
+              <span className="slds-text-heading_medium slds-m-bottom_x-small">
+                Item Text
+              </span>
+              <span className="slds-text-title">
+                Some optional item description to help the user better
+                understand what this option is about.
+              </span>
             </span>
-            <span className="slds-text-title">
-              Some optional item description to help the user better understand
-              what this option is about.
-            </span>
-          </span>
-        </VisualPicker>
-        <VisualPicker className="slds-visual-picker_vertical" type="radio">
-          <span>
-            <span className="slds-text-heading_medium slds-m-bottom_x-small">
-              Item Text
-            </span>
-            <span className="slds-text-title">
-              Some optional item description to help the user better understand
-              what this option is about.
-            </span>
-          </span>
-        </VisualPicker>
+          </VisualPicker>
+        </VisualPickerContainer>
       </FormElementControl>
     </Fieldset>
   ));
@@ -60,43 +65,41 @@ it('renders a disabled vertical visual picker', () =>
     <Fieldset>
       <Legend>Select an option</Legend>
       <FormElementControl>
-        <VisualPicker className="slds-visual-picker_vertical" type="radio">
-          <span>
-            <span className="slds-text-heading_medium slds-m-bottom_x-small">
-              Item Text
+        <VisualPickerContainer hasIcon={false}>
+          <VisualPicker className="slds-visual-picker_vertical">
+            <span>
+              <span className="slds-text-heading_medium slds-m-bottom_x-small">
+                Item Text
+              </span>
+              <span className="slds-text-title">
+                Some optional item description to help the user better
+                understand what this option is about.
+              </span>
             </span>
-            <span className="slds-text-title">
-              Some optional item description to help the user better understand
-              what this option is about.
+          </VisualPicker>
+          <VisualPicker className="slds-visual-picker_vertical">
+            <span>
+              <span className="slds-text-heading_medium slds-m-bottom_x-small">
+                Item Text
+              </span>
+              <span className="slds-text-title">
+                Some optional item description to help the user better
+                understand what this option is about.
+              </span>
             </span>
-          </span>
-        </VisualPicker>
-        <VisualPicker className="slds-visual-picker_vertical" type="radio">
-          <span>
-            <span className="slds-text-heading_medium slds-m-bottom_x-small">
-              Item Text
+          </VisualPicker>
+          <VisualPicker className="slds-visual-picker_vertical" disabled>
+            <span>
+              <span className="slds-text-heading_medium slds-m-bottom_x-small">
+                Item Text
+              </span>
+              <span className="slds-text-title">
+                Some optional item description to help the user better
+                understand what this option is about.
+              </span>
             </span>
-            <span className="slds-text-title">
-              Some optional item description to help the user better understand
-              what this option is about.
-            </span>
-          </span>
-        </VisualPicker>
-        <VisualPicker
-          className="slds-visual-picker_vertical"
-          type="radio"
-          disabled
-        >
-          <span>
-            <span className="slds-text-heading_medium slds-m-bottom_x-small">
-              Item Text
-            </span>
-            <span className="slds-text-title">
-              Some optional item description to help the user better understand
-              what this option is about.
-            </span>
-          </span>
-        </VisualPicker>
+          </VisualPicker>
+        </VisualPickerContainer>
       </FormElementControl>
     </Fieldset>
   ));
@@ -106,22 +109,14 @@ it('renders a coverable content visual picker', () =>
     <Fieldset>
       <Legend>Select an app</Legend>
       <FormElementControl>
-        <VisualPicker
-          type="radio"
-          icon
-          sprite="utility"
-          symbol="connected_apps"
-          label="Connected App"
-          size="medium"
-        />
-        <VisualPicker
-          type="radio"
-          icon
-          sprite="utility"
-          symbol="custom_apps"
-          label="Custom App"
-          size="medium"
-        />
+        <VisualPickerContainer>
+          <VisualPicker
+            symbol="connected_apps"
+            label="Connected App"
+            size="medium"
+          />
+          <VisualPicker symbol="custom_apps" label="Custom App" size="medium" />
+        </VisualPickerContainer>
       </FormElementControl>
     </Fieldset>
   ));
@@ -131,23 +126,19 @@ it('renders a disabled coverable content visual picker', () =>
     <Fieldset>
       <Legend>Select an app</Legend>
       <FormElementControl>
-        <VisualPicker
-          type="checkbox"
-          icon
-          sprite="utility"
-          symbol="connected_apps"
-          label="Connected App"
-          size="medium"
-        />
-        <VisualPicker
-          type="checkbox"
-          disabled
-          icon
-          sprite="utility"
-          symbol="custom_apps"
-          label="Custom App"
-          size="medium"
-        />
+        <VisualPickerContainer type="checkbox">
+          <VisualPicker
+            symbol="connected_apps"
+            label="Connected App"
+            size="medium"
+          />
+          <VisualPicker
+            disabled
+            symbol="custom_apps"
+            label="Custom App"
+            size="medium"
+          />
+        </VisualPickerContainer>
       </FormElementControl>
     </Fieldset>
   ));
@@ -157,30 +148,11 @@ it('renders a coverable content visual picker with checkbox group', () =>
     <Fieldset>
       <Legend>Add the following object(s)</Legend>
       <FormElementControl>
-        <VisualPicker
-          type="checkbox"
-          icon
-          sprite="standard"
-          symbol="account"
-          label="Account"
-          size="medium"
-        />
-        <VisualPicker
-          type="checkbox"
-          icon
-          sprite="standard"
-          symbol="lead"
-          label="Lead"
-          size="medium"
-        />
-        <VisualPicker
-          type="checkbox"
-          icon
-          sprite="standard"
-          symbol="orders"
-          label="Orders"
-          size="medium"
-        />
+        <VisualPickerContainer type="checkbox" sprite="standard">
+          <VisualPicker symbol="account" label="Account" size="medium" />
+          <VisualPicker symbol="lead" label="Lead" size="medium" />
+          <VisualPicker symbol="orders" label="Orders" size="medium" />
+        </VisualPickerContainer>
       </FormElementControl>
     </Fieldset>
   ));
@@ -190,24 +162,26 @@ it('renders a non-coverable content visual picker', () =>
     <Fieldset>
       <Legend>Select a plan</Legend>
       <FormElementControl>
-        <VisualPicker type="radio" size="medium" label={PackageOne}>
-          <span>
-            <span className="slds-text-heading_large">$30</span>
-            <span className="slds-text-title">USD/user/month *</span>
-          </span>
-        </VisualPicker>
-        <VisualPicker type="radio" size="medium" label={PackageTwo}>
-          <span>
-            <span className="slds-text-heading_large">$150</span>
-            <span className="slds-text-title">USD/user/month *</span>
-          </span>
-        </VisualPicker>
-        <VisualPicker type="radio" size="medium" label={PackageThree}>
-          <span>
-            <span className="slds-text-heading_large">$300</span>
-            <span className="slds-text-title">USD/user/month *</span>
-          </span>
-        </VisualPicker>
+        <VisualPickerContainer hasIcon={false}>
+          <VisualPicker size="medium" label={PackageOne}>
+            <span>
+              <span className="slds-text-heading_large">$30</span>
+              <span className="slds-text-title">USD/user/month *</span>
+            </span>
+          </VisualPicker>
+          <VisualPicker size="medium" label={PackageTwo}>
+            <span>
+              <span className="slds-text-heading_large">$150</span>
+              <span className="slds-text-title">USD/user/month *</span>
+            </span>
+          </VisualPicker>
+          <VisualPicker size="medium" label={PackageThree}>
+            <span>
+              <span className="slds-text-heading_large">$300</span>
+              <span className="slds-text-title">USD/user/month *</span>
+            </span>
+          </VisualPicker>
+        </VisualPickerContainer>
       </FormElementControl>
     </Fieldset>
   ));
@@ -217,24 +191,26 @@ it('renders a disabled non-coverable content visual picker', () =>
     <Fieldset>
       <Legend>Select a plan</Legend>
       <FormElementControl>
-        <VisualPicker type="radio" size="medium" label={PackageOne}>
-          <span>
-            <span className="slds-text-heading_large">$30</span>
-            <span className="slds-text-title">USD/user/month *</span>
-          </span>
-        </VisualPicker>
-        <VisualPicker type="radio" size="medium" label={PackageTwo}>
-          <span>
-            <span className="slds-text-heading_large">$150</span>
-            <span className="slds-text-title">USD/user/month *</span>
-          </span>
-        </VisualPicker>
-        <VisualPicker type="radio" size="medium" disabled label={PackageThree}>
-          <span>
-            <span className="slds-text-heading_large">$300</span>
-            <span className="slds-text-title">USD/user/month *</span>
-          </span>
-        </VisualPicker>
+        <VisualPickerContainer hasIcon={false}>
+          <VisualPicker size="medium" label={PackageOne}>
+            <span>
+              <span className="slds-text-heading_large">$30</span>
+              <span className="slds-text-title">USD/user/month *</span>
+            </span>
+          </VisualPicker>
+          <VisualPicker size="medium" label={PackageTwo}>
+            <span>
+              <span className="slds-text-heading_large">$150</span>
+              <span className="slds-text-title">USD/user/month *</span>
+            </span>
+          </VisualPicker>
+          <VisualPicker size="medium" disabled label={PackageThree}>
+            <span>
+              <span className="slds-text-heading_large">$300</span>
+              <span className="slds-text-title">USD/user/month *</span>
+            </span>
+          </VisualPicker>
+        </VisualPickerContainer>
       </FormElementControl>
     </Fieldset>
   ));

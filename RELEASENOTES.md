@@ -45,6 +45,20 @@ Removed the usage of the deprecated combobox. The Picklist now uses the current 
 #### Added
 - Added `aria-label` attribute to the div with role of `progressbar` to meet accessibility requirements.
 
+## Release 2.15.6 - May 7, 2021
+
+## Components
+### [Toast](https://www.lightningdesignsystem.com/components/toast)
+#### Fixed
+- Corrected accessibility information regarding the usage of the `role` attribute.
+
+## Release 2.15.5 - April 29, 2021
+
+## Components
+### [Buttons](https://www.lightningdesignsystem.com/components/buttons)
+#### Added
+- Added `aria-pressed` attribute to stateful Button variants
+
 ## Release 2.15.4 - April 27, 2021
 
 ## Release 2.15.3 - April 15, 2021

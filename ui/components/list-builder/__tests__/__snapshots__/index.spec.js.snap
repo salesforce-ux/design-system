@@ -63,6 +63,7 @@ exports[`List Builder Inline Edit renders a default list builder with inline edi
             className="slds-scrollable"
           >
             <table
+              aria-label="Example product list"
               className="slds-table slds-table_fixed-layout slds-table_bordered slds-no-row-hover slds-table_cell-buffer"
               role="grid"
             >
@@ -917,6 +918,7 @@ exports[`List Builder renders a default list builder 1`] = `
               className="slds-scrollable_none"
             >
               <table
+                aria-label="Example product list"
                 aria-multiselectable="true"
                 className="slds-table slds-no-row-hover slds-table_bordered slds-table_fixed-layout slds-table_resizable-cols"
                 role="grid"
@@ -2174,6 +2176,7 @@ exports[`List Builder renders a list builder with default items disabled 1`] = `
               className="slds-scrollable_none"
             >
               <table
+                aria-label="Example product list"
                 aria-multiselectable="true"
                 className="slds-table slds-no-row-hover slds-table_bordered slds-table_fixed-layout slds-table_resizable-cols"
                 role="grid"
@@ -3511,6 +3514,7 @@ exports[`List Builder renders a list builder with filtered results 1`] = `
               className="slds-scrollable_none"
             >
               <table
+                aria-label="Example product list"
                 aria-multiselectable="true"
                 className="slds-table slds-no-row-hover slds-table_bordered slds-table_fixed-layout slds-table_resizable-cols"
                 role="grid"
@@ -4145,6 +4149,7 @@ exports[`List Builder renders a list builder with hidden header 1`] = `
               className="slds-scrollable_none"
             >
               <table
+                aria-label="Example single column product list"
                 aria-multiselectable="true"
                 className="slds-table slds-table_header-hidden slds-no-row-hover slds-table_bordered"
                 role="grid"
@@ -4939,6 +4944,7 @@ exports[`List Builder renders a list builder with items disabled 1`] = `
               className="slds-scrollable_none"
             >
               <table
+                aria-label="Example product list"
                 aria-multiselectable="true"
                 className="slds-table slds-no-row-hover slds-table_bordered slds-table_fixed-layout slds-table_resizable-cols"
                 role="grid"
@@ -6246,6 +6252,7 @@ exports[`List Builder renders a list builder with items selected 1`] = `
               className="slds-scrollable_none"
             >
               <table
+                aria-label="Example product list"
                 aria-multiselectable="true"
                 className="slds-table slds-no-row-hover slds-table_bordered slds-table_fixed-layout slds-table_resizable-cols"
                 role="grid"

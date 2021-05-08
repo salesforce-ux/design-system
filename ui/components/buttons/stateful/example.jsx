@@ -16,7 +16,10 @@ export let StatefulButton = props => {
     isSelectedClicked
   } = props;
   const [buttonSelected, setButtonSelected] = useState(
-    isSelected || isSelectedClicked
+    (typeof isNotSelected !== 'undefined' &&
+      Boolean(isNotSelected) === false) ||
+      isSelected ||
+      isSelectedClicked
   );
   const [buttonFocused, setButtonFocused] = useState(isSelectedClicked);
 

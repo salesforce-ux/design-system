@@ -841,8 +841,11 @@ exports[`Renders a page header renders deprecated record home page header 1`] = 
     >
       <button
         aria-live="assertive"
+        aria-pressed="false"
         className="slds-button slds-button_neutral slds-button_stateful slds-not-selected"
+        onBlur={[Function]}
         onClick={[Function]}
+        onFocus={[Function]}
       >
         <span
           className="slds-text-not-selected"
@@ -1912,8 +1915,11 @@ exports[`Renders a page header renders record home page header 1`] = `
         >
           <button
             aria-live="assertive"
+            aria-pressed="false"
             className="slds-button slds-button_neutral slds-button_stateful slds-not-selected"
+            onBlur={[Function]}
             onClick={[Function]}
+            onFocus={[Function]}
           >
             <span
               className="slds-text-not-selected"
@@ -2449,8 +2455,11 @@ exports[`Renders a page header renders vertical record home page header 1`] = `
     >
       <button
         aria-live="assertive"
+        aria-pressed="false"
         className="slds-button slds-button_neutral slds-button_stateful slds-not-selected"
+        onBlur={[Function]}
         onClick={[Function]}
+        onFocus={[Function]}
       >
         <span
           className="slds-text-not-selected"

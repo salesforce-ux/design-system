@@ -36,7 +36,7 @@ export let examples = [
         title="Panel Header"
         docked="left"
         invoke="toggle"
-        headerActions={<ActionOverflow size="small" position="right" />}
+        headerActions={<ActionOverflow position="right" size="small" isOpen />}
       >
         A panel body accepts any layout or component
       </Panel>
@@ -62,7 +62,7 @@ export let examples = [
         title="Panel Header"
         docked="left"
         invoke="drill-in"
-        headerActions={<ActionOverflow size="small" position="right" />}
+        headerActions={<ActionOverflow size="small" position="right" isOpen />}
       >
         A panel body accepts any layout or component
       </Panel>

@@ -1,6 +1,8 @@
 <!-- Release notes authoring guidelines: http://keepachangelog.com/ -->
 <!-- On release, add general notes here. In time the legacy release notes will be add to this -->
 
+## 2.15.6 - May 7, 2021
+
 ## 2.15.5 - April 29, 2021
 
 ## 2.15.4 - April 27, 2021

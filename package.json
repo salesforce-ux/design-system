@@ -14,8 +14,8 @@
     "url": "https://github.com/salesforce-ux/design-system/issues"
   },
   "slds": {
-    "name": "Summer ’21",
-    "id": "232"
+    "name": "Winter ’21",
+    "id": "234"
   },
   "important": [
     "'private' and 'config.slds.internal' should have the same value",
@@ -33,6 +33,7 @@
     }
   },
   "devDependencies": {
+    "@applitools/eyes-playwright": "1.7.0",
     "@babel/cli": "7.8.4",
     "@babel/core": "7.9.0",
     "@babel/node": "7.8.7",
@@ -50,7 +51,7 @@
     "@salesforce-ux/create-snap": "0.0.7",
     "@salesforce-ux/design-system-markup": "2.0.2",
     "@salesforce-ux/design-system-parser": "1.1.0",
-    "@salesforce-ux/design-system-primitive-tokens": "^0.2.2",
+    "@salesforce-ux/design-system-primitive-tokens": "0.2.2",
     "@salesforce-ux/icons": "9.40.4",
     "@salesforce-ux/instant-vrt": "2.0.0",
     "@salesforce-ux/postcss-annotations-parser": "0.1.1",
@@ -66,6 +67,7 @@
     "@storybook/theming": "5.3.18",
     "async": "2.3.0",
     "autoprefixer": "9.7.6",
+    "ava": "3.15.0",
     "axe-core": "3.5.3",
     "axe-webdriverjs": "2.3.0",
     "babel-core": "7.0.0-bridge.0",
@@ -81,6 +83,7 @@
     "css": "2.2.4",
     "css-loader": "3.5.2",
     "cssstats": "3.4.1",
+    "csv-file-to-json": "4.0.3",
     "data.either": "1.5.2",
     "data.task": "3.1.2",
     "del": "2.2.2",
@@ -104,6 +107,7 @@
     "fs-extra": "2.1.2",
     "futurize": "1.2.0",
     "git-branch": "2.0.1",
+    "github-api": "3.4.0",
     "glob": "7.1.6",
     "gulp": "4.0.2",
     "gulp-autoprefixer": "7.0.1",
@@ -151,8 +155,9 @@
     "lodash.uniqueid": "4.0.1",
     "lodash.upperfirst": "4.3.1",
     "mdxc": "1.1.2",
-    "mime": "^2.5.0",
+    "mime": "2.5.0",
     "mini-css-extract-plugin": "0.9.0",
+    "playwright": "1.9.2",
     "plugin-error": "1.0.1",
     "postcss": "8.2.4",
     "postcss-combine-media-query": "1.0.1",
@@ -225,7 +230,9 @@
     "heroku-postbuild": "npm run build && npm run dist && npm run storybook:build",
     "local:vrt": "npm run storybook:prepare && node ./applitools.prompts.js && npx @applitools/eyes-storybook --conf applitools.config.local.js",
     "local:vrt:mobile": "npm run storybook:prepare && node ./applitools.prompts.js -t mobile && STORYBOOK_STORIES_TYPE='mobile' npx @applitools/eyes-storybook --conf applitools.mobile.config.local.js",
-    "local:vrt:legacy": "npm run storybook:prepare && node ./applitools.prompts.js -t legacy && npx @applitools/eyes-storybook --conf applitools.legacy.config.local.js"
+    "local:vrt:legacy": "npm run storybook:prepare && node ./applitools.prompts.js -t legacy && npx @applitools/eyes-storybook --conf applitools.legacy.config.local.js",
+    "release:site": "./release.sh",
+    "release:site:validate": "SLDS_VALIDATION_URL=https://design-system-site-stage.herokuapp.com npx ava __tests__/site/test.spec.js"
   },
   "lint-staged": {
     "linters": {

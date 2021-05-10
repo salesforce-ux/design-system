@@ -5,7 +5,7 @@
 version: 2.1
 
 orbs:
-  node: circleci/node@4.0.1
+  node: circleci/node@4.3.0
   heroku: circleci/heroku@1.2.2
   aws-s3: circleci/aws-s3@2.0.0
   browser-tools: circleci/browser-tools@1.0.1
@@ -37,9 +37,15 @@ commands:
           name: 'Decompress design-tokens'
           command: 'tar -xvf workspace/design-tokens.tar'
 
+  set-github-pr-number:
+    description: 'Set Github pull-request number environment variable'
+    steps:
+      - run: echo 'export PR_NUMBER=$(cat workspace/gh-pr-num.txt)' >> $BASH_ENV
+
   set-heroku-app-name:
     description: 'Set Heroku app name environment variable'
     steps:
+      - set-github-pr-number
       # if on default branch without a tag
       #   then publish to UPCOMING
       #
@@ -74,9 +80,12 @@ commands:
             echo $HEROKU_APP_NAME > workspace/heroku-app-name.txt
             echo $HEROKU_RELEASE_STORYBOOK_APP_NAME > workspace/heroku-release-storybook-app-name.txt
 
+      - run: printenv | sort
+
       - run:
           name: Show HEROKU_APP_NAME value
           command: |
+            echo "gh-pr-num.txt = $(cat workspace/gh-pr-num.txt)"
             echo
             echo "PR_NUMBER = ${PR_NUMBER}"
             echo
@@ -93,6 +102,7 @@ commands:
       - attach_workspace:
           at: workspace
 
+      - node/install-npm
       - vrt-set-env-vars
       - add-applitools
       - node/install-packages
@@ -106,10 +116,12 @@ commands:
   vrt-set-env-vars:
     description: 'Set VRT environment variables'
     steps:
+      - set-github-pr-number
+      - run: printenv | sort
+
       - run:
           name: 'Set environment variables'
           command: |
-            echo 'export PR_NUMBER=$(cat workspace/gh-pr-num.txt)' >> $BASH_ENV
             echo 'export APPLITOOLS_BATCH_ID=${CIRCLE_SHA1}' >> $BASH_ENV
             echo 'export APPLITOOLS_BATCH_NAME="PR #${PR_NUMBER} (${CIRCLE_USERNAME})"' >> $BASH_ENV
             echo 'export APPLITOOLS_DONT_CLOSE_BATCHES="true"' >> $BASH_ENV
@@ -162,8 +174,8 @@ commands:
           command: 'curl --connect-timeout 2 --max-time 2 --retry 50 --retry-delay 0 --retry-max-time 300 --retry-connrefused --ipv4 -q "http://localhost:8080"'
 
 jobs:
-  # Build SLDS styles
-  prepare:
+  # Init bits & bobs subsequent jobs require
+  init:
     executor: slds-executor
     resource_class: small
 
@@ -188,11 +200,27 @@ jobs:
       - run:
           name: Get Github pull-request number
           command: |
-            gh api /repos/salesforce-ux/design-system-internal/commits/${CIRCLE_SHA1}/pulls -H "Accept: application/vnd.github.groot-preview+json" | jq -r '.[].number' > workspace/gh-pr-num.txt
-            echo 'export PR_NUMBER=$(cat workspace/gh-pr-num.txt)' >> $BASH_ENV
+            gh api /repos/salesforce-ux/design-system-internal/commits/${CIRCLE_SHA1}/pulls -H "Accept: application/vnd.github.groot-preview+json" | jq -r '.[].number' > workspace/gh-pr-num.txt && cat workspace/gh-pr-num.txt
+
+      - persist_to_workspace:
+          root: workspace
+          paths:
+            - gh-deployments.json
+            - gh-pr-num.txt
+
+  # Build SLDS styles
+  prepare:
+    executor: slds-executor
+    resource_class: small
+
+    steps:
+      - checkout
+      - attach_workspace:
+          at: workspace
 
       - set-heroku-app-name
 
+      - node/install-npm
       - node/install-packages
 
       # Gulp tasks (need to clean-up and not run through `npm run`)
@@ -219,8 +247,6 @@ jobs:
             - metadata.tar
             - heroku-app-name.txt
             - heroku-release-storybook-app-name.txt
-            - gh-deployments.json
-            - gh-pr-num.txt
 
   # Build SLDS .dist
   framework-build:
@@ -244,6 +270,7 @@ jobs:
           name: 'Decompress metadata'
           command: 'tar -xvf workspace/metadata.tar'
 
+      - node/install-npm
       - node/install-packages
 
       - run:
@@ -283,11 +310,11 @@ jobs:
             export VERSION_FROM_PACKAGE=$(cat package.json | jq -r .version)
             curl --location --request PATCH 'https://api.lightningdesignsystem.com/v1/release' \
             --header 'Content-Type: application/json' \
-            --header 'Authorization: Bearer ${DSE_API_RELEASE_TOKEN}' \
+            --header 'Authorization: Bearer '"$DSE_API_RELEASE_TOKEN"'' \
             --data-raw '{
-                "sha": "${CIRCLE_SHA1}",
-                "version": "${VERSION_FROM_TAG}",
-                "salesforce_version": "${SALESFORCE_VERSION}"
+                "sha": "'"$CIRCLE_SHA1"'",
+                "version":"'"$VERSION_FROM_TAG"'",
+                "salesforce_version": "'"$SALESFORCE_VERSION"'"
             }'
 
   # Build static Storybook
@@ -300,6 +327,7 @@ jobs:
       - attach_workspace:
           at: workspace
       - copy-tokens-from-workspace
+      - node/install-npm
       - node/install-packages
 
       - run:
@@ -391,6 +419,7 @@ jobs:
             mkdir -p .slds
             tar -xvf workspace/design-system-dist.tar --directory .slds
 
+      - node/install-npm
       - node/install-packages
 
       - run:
@@ -481,11 +510,15 @@ workflows:
   version: 2
   CI:
     jobs:
+      - init:
+          context: ux-eng-keys
       - prepare:
           context: ux-eng-keys
           filters:
             tags:
               only: /.*/
+          requires:
+            - init
       - build-storybook:
           context: ux-eng-keys
           # do not run for future version tags (X.X.X-*)
@@ -528,18 +561,24 @@ workflows:
           filters:
             branches:
               ignore: /^\d{3}-(summer|spring|winter)-\d{2}$/
+          requires:
+            - init
       - vrt-mobile:
           context: ux-eng-keys
           # do not run for main version branches
           filters:
             branches:
               ignore: /^\d{3}-(summer|spring|winter)-\d{2}$/
+          requires:
+            - init
       - vrt-legacy:
           context: ux-eng-keys
           # do not run for main version branches
           filters:
             branches:
               ignore: /^\d{3}-(summer|spring|winter)-\d{2}$/
+          requires:
+            - init
       - vrt-close:
           context: ux-eng-keys
           requires:

@@ -50,6 +50,7 @@ Panel Popovers can be shown on mouse hover but for keyboard or screen reader use
   - Apply the `aria-labelledby` attribute to the `dialog` element and set the value to be the ID of the main Heading element in the Popover (if it provides a good and meaningful title to the `dialog`)
   - If no Heading element is present, use the `aria-label` attribute and set the value to be a meaningful title of the `dialog`
 - The `dialog` should be described where possible. This can be achieved by applying the `aria-describedby` attribute to the `dialog` element and set the value to be the id of the Popover body
+- The triggering element **must** have `aria-haspopup="true"` when the popover is opened and `aria-haspopup="false"` when the popover is closed
 
 ## Base
 

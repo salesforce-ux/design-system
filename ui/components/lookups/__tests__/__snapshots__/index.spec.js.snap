@@ -93,6 +93,7 @@ exports[`Lookup - Advanced Modal renders a lookup with modal 1`] = `
             </div>
           </div>
           <table
+            aria-label="Example table for advanced modal lookup"
             className="slds-table slds-table_bordered slds-table_cell-buffer slds-no-row-hover"
             id="lookup-grouped-table-id-1"
             role="listbox"

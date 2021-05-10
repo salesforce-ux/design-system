@@ -113,6 +113,7 @@ exports[`Button  renders an outline brand button 1`] = `
 exports[`Dual Stateful Button renders a disabled dual stateful button 1`] = `
 <button
   aria-live="assertive"
+  aria-pressed="false"
   className="slds-button slds-button_neutral slds-button_dual-stateful"
   disabled={true}
   onClick={[Function]}
@@ -149,6 +150,7 @@ exports[`Dual Stateful Button renders a disabled dual stateful button 1`] = `
 exports[`Dual Stateful Button renders a not-pressed dual stateful button 1`] = `
 <button
   aria-live="assertive"
+  aria-pressed="false"
   className="slds-button slds-button_neutral slds-button_dual-stateful"
   onClick={[Function]}
 >
@@ -184,6 +186,7 @@ exports[`Dual Stateful Button renders a not-pressed dual stateful button 1`] = `
 exports[`Dual Stateful Button renders a pressed dual stateful button 1`] = `
 <button
   aria-live="assertive"
+  aria-pressed="true"
   className="slds-button slds-button_neutral slds-button_dual-stateful slds-is-pressed"
   onClick={[Function]}
 >
@@ -219,8 +222,11 @@ exports[`Dual Stateful Button renders a pressed dual stateful button 1`] = `
 exports[`Stateful Button  renders a not-selected stateful button 1`] = `
 <button
   aria-live="assertive"
+  aria-pressed="false"
   className="slds-button slds-button_neutral slds-button_stateful slds-not-selected"
+  onBlur={[Function]}
   onClick={[Function]}
+  onFocus={[Function]}
 >
   <span
     className="slds-text-not-selected"
@@ -267,8 +273,11 @@ exports[`Stateful Button  renders a not-selected stateful button 1`] = `
 exports[`Stateful Button  renders a selected and focused stateful button 1`] = `
 <button
   aria-live="assertive"
+  aria-pressed="true"
   className="slds-button slds-button_neutral slds-button_stateful slds-is-selected-clicked"
+  onBlur={[Function]}
   onClick={[Function]}
+  onFocus={[Function]}
 >
   <span
     className="slds-text-not-selected"
@@ -315,8 +324,11 @@ exports[`Stateful Button  renders a selected and focused stateful button 1`] = `
 exports[`Stateful Button  renders a selected stateful button 1`] = `
 <button
   aria-live="assertive"
+  aria-pressed="true"
   className="slds-button slds-button_neutral slds-button_stateful slds-is-selected"
+  onBlur={[Function]}
   onClick={[Function]}
+  onFocus={[Function]}
 >
   <span
     className="slds-text-not-selected"

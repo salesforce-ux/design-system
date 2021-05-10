@@ -3,6 +3,11 @@
 # Buttons Release Notes
 
 <!-- ## [Unreleased] -->
+## 2.15.5
+
+### Added
+
+- Added `aria-pressed` attribute to stateful Button variants
 
 ## 2.15.0
 

@@ -20,7 +20,20 @@ export const Option = props => (
   </span>
 );
 
-export let VisualPicker = props => {
+export const VisualPicker = ({
+  name,
+  id,
+  hasIcon,
+  type,
+  sprite,
+  symbol,
+  label,
+  size,
+  children,
+  checked,
+  disabled,
+  className
+}) => {
   const uniqueId = _.uniqueId('visual-picker-');
 
   return (
@@ -28,23 +41,23 @@ export let VisualPicker = props => {
       className={classNames(
         'slds-visual-picker',
         {
-          'slds-visual-picker_large': props.size === 'large',
-          'slds-visual-picker_medium': props.size === 'medium',
-          'slds-visual-picker_small': props.size === 'small'
+          'slds-visual-picker_large': size === 'large',
+          'slds-visual-picker_medium': size === 'medium',
+          'slds-visual-picker_small': size === 'small'
         },
-        props.className
+        className
       )}
     >
       <input
-        type={props.type}
+        type={type}
         id={uniqueId}
         value={uniqueId}
-        name="options"
-        defaultChecked={props.checked}
-        disabled={props.disabled}
+        name={name}
+        defaultChecked={checked}
+        disabled={disabled}
       />
       <label htmlFor={uniqueId}>
-        {props.icon ? (
+        {hasIcon ? (
           <span
             className={classNames(
               'slds-visual-picker__figure slds-visual-picker__icon slds-align_absolute-center'
@@ -64,14 +77,14 @@ export let VisualPicker = props => {
                 <SvgIcon
                   className={classNames(
                     'slds-icon slds-icon-' +
-                      props.sprite +
+                      sprite +
                       '-' +
-                      props.symbol +
+                      symbol +
                       ' slds-icon_large',
-                    { 'slds-icon-text-default': props.sprite === 'utility' }
+                    { 'slds-icon-text-default': sprite === 'utility' }
                   )}
-                  sprite={props.sprite || 'action'}
-                  symbol={props.symbol}
+                  sprite={sprite || 'action'}
+                  symbol={symbol}
                 />
               </span>
             </span>
@@ -82,13 +95,13 @@ export let VisualPicker = props => {
               'slds-visual-picker__figure slds-visual-picker__text slds-align_absolute-center'
             )}
           >
-            {props.children}
+            {children}
           </span>
         )}
-        {props.label ? (
-          <span className="slds-visual-picker__body">{props.label}</span>
+        {label ? (
+          <span className="slds-visual-picker__body">{label}</span>
         ) : null}
-        {!props.icon ? (
+        {!hasIcon ? (
           <span className="slds-icon_container slds-visual-picker__text-check">
             <SvgIcon
               className="slds-icon slds-icon-text-check slds-icon_x-small"
@@ -120,6 +133,31 @@ export let VisualPickerMediaObject = props => (
   </a>
 );
 
+// Helper container that populates and manages shared properties among <VisualPicker>
+export const VisualPickerContainer = ({ children, type, sprite, hasIcon }) => {
+  const name = _.uniqueId('example-unique-name-');
+
+  const childrenWithProps = React.Children.map(children, child => {
+    if (React.isValidElement(child)) {
+      return React.cloneElement(child, {
+        name: name,
+        type: type,
+        sprite: hasIcon && sprite,
+        hasIcon: hasIcon
+      });
+    }
+    return child;
+  });
+
+  return <>{childrenWithProps}</>;
+};
+
+VisualPickerContainer.defaultProps = {
+  type: 'radio',
+  sprite: 'utility',
+  hasIcon: true
+};
+
 /// ////////////////////////////////////////
 // Export
 /// ////////////////////////////////////////
@@ -128,22 +166,18 @@ export default (
   <Fieldset>
     <Legend>Select an app</Legend>
     <FormElementControl>
-      <VisualPicker
-        type="radio"
-        icon
-        sprite="utility"
-        symbol="connected_apps"
-        label={<Option label="Connected App" />}
-        size="medium"
-      />
-      <VisualPicker
-        type="radio"
-        icon
-        sprite="utility"
-        symbol="custom_apps"
-        label={<Option label="Custom App" />}
-        size="medium"
-      />
+      <VisualPickerContainer>
+        <VisualPicker
+          symbol="connected_apps"
+          label={<Option label="Connected App" />}
+          size="medium"
+        />
+        <VisualPicker
+          symbol="custom_apps"
+          label={<Option label="Custom App" />}
+          size="medium"
+        />
+      </VisualPickerContainer>
     </FormElementControl>
   </Fieldset>
 );
@@ -156,23 +190,19 @@ export let states = [
       <Fieldset>
         <Legend>Select an app</Legend>
         <FormElementControl>
-          <VisualPicker
-            type="radio"
-            icon
-            sprite="utility"
-            symbol="connected_apps"
-            label={<Option label="Connected App" />}
-            size="medium"
-          />
-          <VisualPicker
-            type="radio"
-            disabled
-            icon
-            sprite="utility"
-            symbol="custom_apps"
-            label={<Option label="Custom App" />}
-            size="medium"
-          />
+          <VisualPickerContainer>
+            <VisualPicker
+              symbol="connected_apps"
+              label={<Option label="Connected App" />}
+              size="medium"
+            />
+            <VisualPicker
+              disabled
+              symbol="custom_apps"
+              label={<Option label="Custom App" />}
+              size="medium"
+            />
+          </VisualPickerContainer>
         </FormElementControl>
       </Fieldset>
     )
@@ -187,22 +217,18 @@ export let examples = [
       <Fieldset>
         <Legend>Select an app</Legend>
         <FormElementControl>
-          <VisualPicker
-            type="radio"
-            icon
-            sprite="utility"
-            symbol="connected_apps"
-            label={<Option label="Connected App" />}
-            size="small"
-          />
-          <VisualPicker
-            type="radio"
-            icon
-            sprite="utility"
-            symbol="custom_apps"
-            label={<Option label="Custom App" />}
-            size="small"
-          />
+          <VisualPickerContainer>
+            <VisualPicker
+              symbol="connected_apps"
+              label={<Option label="Connected App" />}
+              size="small"
+            />
+            <VisualPicker
+              symbol="custom_apps"
+              label={<Option label="Custom App" />}
+              size="small"
+            />
+          </VisualPickerContainer>
         </FormElementControl>
       </Fieldset>
     )
@@ -214,22 +240,18 @@ export let examples = [
       <Fieldset>
         <Legend>Select an app</Legend>
         <FormElementControl>
-          <VisualPicker
-            type="radio"
-            icon
-            sprite="utility"
-            symbol="connected_apps"
-            label={<Option label="Connected App" />}
-            size="medium"
-          />
-          <VisualPicker
-            type="radio"
-            icon
-            sprite="utility"
-            symbol="custom_apps"
-            label={<Option label="Custom App" />}
-            size="medium"
-          />
+          <VisualPickerContainer>
+            <VisualPicker
+              symbol="connected_apps"
+              label={<Option label="Connected App" />}
+              size="medium"
+            />
+            <VisualPicker
+              symbol="custom_apps"
+              label={<Option label="Custom App" />}
+              size="medium"
+            />
+          </VisualPickerContainer>
         </FormElementControl>
       </Fieldset>
     )
@@ -241,22 +263,18 @@ export let examples = [
       <Fieldset>
         <Legend>Select an app</Legend>
         <FormElementControl>
-          <VisualPicker
-            type="radio"
-            icon
-            sprite="utility"
-            symbol="connected_apps"
-            label={<Option label="Connected App" />}
-            size="large"
-          />
-          <VisualPicker
-            type="radio"
-            icon
-            sprite="utility"
-            symbol="custom_apps"
-            label={<Option label="Custom App" />}
-            size="large"
-          />
+          <VisualPickerContainer>
+            <VisualPicker
+              symbol="connected_apps"
+              label={<Option label="Connected App" />}
+              size="large"
+            />
+            <VisualPicker
+              symbol="custom_apps"
+              label={<Option label="Custom App" />}
+              size="large"
+            />
+          </VisualPickerContainer>
         </FormElementControl>
       </Fieldset>
     )
@@ -268,30 +286,23 @@ export let examples = [
       <Fieldset>
         <Legend>Add the following object(s)</Legend>
         <FormElementControl>
-          <VisualPicker
-            type="checkbox"
-            icon
-            sprite="standard"
-            symbol="account"
-            label={<Option label="Account" />}
-            size="small"
-          />
-          <VisualPicker
-            type="checkbox"
-            icon
-            sprite="standard"
-            symbol="lead"
-            label={<Option label="Lead" />}
-            size="small"
-          />
-          <VisualPicker
-            type="checkbox"
-            icon
-            sprite="standard"
-            symbol="orders"
-            label={<Option label="Orders" />}
-            size="small"
-          />
+          <VisualPickerContainer sprite="standard" type="checkbox">
+            <VisualPicker
+              symbol="account"
+              label={<Option label="Account" />}
+              size="small"
+            />
+            <VisualPicker
+              symbol="lead"
+              label={<Option label="Lead" />}
+              size="small"
+            />
+            <VisualPicker
+              symbol="orders"
+              label={<Option label="Orders" />}
+              size="small"
+            />
+          </VisualPickerContainer>
         </FormElementControl>
       </Fieldset>
     )
@@ -303,30 +314,23 @@ export let examples = [
       <Fieldset>
         <Legend>Add the following object(s)</Legend>
         <FormElementControl>
-          <VisualPicker
-            type="checkbox"
-            icon
-            sprite="standard"
-            symbol="account"
-            label={<Option label="Account" />}
-            size="medium"
-          />
-          <VisualPicker
-            type="checkbox"
-            icon
-            sprite="standard"
-            symbol="lead"
-            label={<Option label="Lead" />}
-            size="medium"
-          />
-          <VisualPicker
-            type="checkbox"
-            icon
-            sprite="standard"
-            symbol="orders"
-            label={<Option label="Orders" />}
-            size="medium"
-          />
+          <VisualPickerContainer sprite="standard" type="checkbox">
+            <VisualPicker
+              symbol="account"
+              label={<Option label="Account" />}
+              size="medium"
+            />
+            <VisualPicker
+              symbol="lead"
+              label={<Option label="Lead" />}
+              size="medium"
+            />
+            <VisualPicker
+              symbol="orders"
+              label={<Option label="Orders" />}
+              size="medium"
+            />
+          </VisualPickerContainer>
         </FormElementControl>
       </Fieldset>
     )
@@ -338,30 +342,23 @@ export let examples = [
       <Fieldset>
         <Legend>Add the following object(s)</Legend>
         <FormElementControl>
-          <VisualPicker
-            type="checkbox"
-            icon
-            sprite="standard"
-            symbol="account"
-            label={<Option label="Account" />}
-            size="large"
-          />
-          <VisualPicker
-            type="checkbox"
-            icon
-            sprite="standard"
-            symbol="lead"
-            label={<Option label="Lead" />}
-            size="large"
-          />
-          <VisualPicker
-            type="checkbox"
-            icon
-            sprite="standard"
-            symbol="orders"
-            label={<Option label="Orders" />}
-            size="large"
-          />
+          <VisualPickerContainer sprite="standard" type="checkbox">
+            <VisualPicker
+              symbol="account"
+              label={<Option label="Account" />}
+              size="large"
+            />
+            <VisualPicker
+              symbol="lead"
+              label={<Option label="Lead" />}
+              size="large"
+            />
+            <VisualPicker
+              symbol="orders"
+              label={<Option label="Orders" />}
+              size="large"
+            />
+          </VisualPickerContainer>
         </FormElementControl>
       </Fieldset>
     )

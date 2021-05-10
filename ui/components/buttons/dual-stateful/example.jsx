@@ -1,7 +1,7 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import SvgIcon from '../../../shared/svg-icon';
 import classNames from 'classnames';
@@ -43,15 +43,18 @@ PressedText.propTypes = {
 
 const DualStatefulButton = props => {
   const { isDisabled, isPressed } = props;
+  const [buttonSelected, setButtonSelected] = useState(isPressed);
 
   return (
     <Button
       isNeutral
       className={classNames('slds-button_dual-stateful', {
-        'slds-is-pressed': isPressed
+        'slds-is-pressed': buttonSelected
       })}
       disabled={isDisabled}
       aria-live="assertive"
+      aria-pressed={Boolean(buttonSelected).toString()}
+      onClick={() => setButtonSelected(!buttonSelected)}
     >
       <DefaultText>Follow</DefaultText>
       <PressedText>Following</PressedText>

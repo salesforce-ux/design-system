@@ -1,7 +1,7 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import SvgIcon from '../../../shared/svg-icon';
 import classNames from 'classnames';
@@ -15,17 +15,28 @@ export let StatefulButton = props => {
     isSelected,
     isSelectedClicked
   } = props;
+  const [buttonSelected, setButtonSelected] = useState(
+    (typeof isNotSelected !== 'undefined' &&
+      Boolean(isNotSelected) === false) ||
+      isSelected ||
+      isSelectedClicked
+  );
+  const [buttonFocused, setButtonFocused] = useState(isSelectedClicked);
 
   return (
     <Button
       className={classNames('slds-button_stateful', className, {
-        'slds-not-selected': isNotSelected,
-        'slds-is-selected': isSelected,
-        'slds-is-selected-clicked': isSelectedClicked
+        'slds-not-selected': !buttonSelected,
+        'slds-is-selected': buttonSelected && !buttonFocused,
+        'slds-is-selected-clicked': buttonSelected && buttonFocused
       })}
       disabled={disabled}
       aria-live="assertive"
+      aria-pressed={Boolean(buttonSelected).toString()}
       isNeutral
+      onBlur={() => setButtonFocused(false)}
+      onFocus={() => setButtonFocused(true)}
+      onClick={() => setButtonSelected(!buttonSelected)}
     >
       <span className="slds-text-not-selected">
         <SvgIcon

@@ -30,6 +30,7 @@ export let examples = [
     id: 'with-secondary-actions',
     label: 'With Secondary Actions',
     demoStyles: `${sharedDemoStyles} height: 240px;`,
+    storybookStyles: true,
     element: (
       <Panel
         size="medium"
@@ -46,6 +47,7 @@ export let examples = [
     id: 'with-drilled-in-left',
     label: 'With Drilled-In State - Position Left',
     demoStyles: `${sharedDemoStyles} height: 200px;`,
+    storybookStyles: true,
     element: (
       <Panel size="medium" title="Panel Header" docked="left" invoke="drill-in">
         A panel body accepts any layout or component
@@ -56,6 +58,7 @@ export let examples = [
     id: 'with-drilled-in-left-secondary-actions',
     label: 'With Drilled-In State & Secondary Actions - Position left',
     demoStyles: `${sharedDemoStyles} height: 200px;`,
+    storybookStyles: true,
     element: (
       <Panel
         size="medium"
@@ -72,6 +75,7 @@ export let examples = [
     id: 'with-drilled-in-right',
     label: 'With Drilled-In State - Position Right',
     demoStyles: `${sharedDemoStyles} height: 200px;`,
+    storybookStyles: true,
     element: (
       <Panel
         size="medium"

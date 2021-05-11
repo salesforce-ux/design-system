@@ -1,36 +1,9 @@
-import React from 'react';
-import { storiesOf } from '@storybook/react';
 import * as InputExamples from './base/example';
-import { getAllDisplayCollectionsByType } from '../../shared/helpers';
-import StoryFrame from '../../../shared/components/StoryFrame';
-
-import DocsPage from '../../../.storybook/components/DocsPage';
+import { generateStories } from '../../shared/helpers';
 import Docs from './docs.mdx';
 
 const examples = [InputExamples];
 
-const kitchenSink = getAllDisplayCollectionsByType(examples, [
-  'default',
-  'examples',
-  'states'
-]);
+const patternName = 'Input';
 
-storiesOf('Components/Input', module).add(
-  'Kitchen Sink',
-  () =>
-    kitchenSink.map((element, idx) =>
-      element.map(({ demoStyles, label, component }) => (
-        <StoryFrame
-          component={component}
-          label={label}
-          key={`kitchen-sink-${label}-${idx}`}
-          styles={demoStyles}
-        />
-      ))
-    ),
-  {
-    docs: {
-      page: () => <DocsPage title="Input" Docs={Docs} />
-    }
-  }
-);
+generateStories(patternName, examples, ['default', 'examples', 'states'], Docs);

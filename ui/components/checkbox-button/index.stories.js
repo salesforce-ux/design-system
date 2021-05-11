@@ -1,35 +1,9 @@
-import React from 'react';
-import { storiesOf } from '@storybook/react';
 import * as Base from './base/example.jsx';
-import { getAllDisplayCollectionsByType } from '../../shared/helpers';
-import StoryFrame from '../../../shared/components/StoryFrame';
-
-import DocsPage from '../../../.storybook/components/DocsPage';
+import { generateStories } from '../../shared/helpers';
 import Docs from './docs.mdx';
 
 const examples = [Base];
 
-const kitchenSink = getAllDisplayCollectionsByType(examples, [
-  'default',
-  'examples',
-  'states'
-]);
+const patternName = 'Checkbox Button';
 
-storiesOf('Components/Checkbox Button', module).add(
-  'Kitchen Sink',
-  () =>
-    kitchenSink.map((element, idx) =>
-      element.map(({ label, component }) => (
-        <StoryFrame
-          component={component}
-          label={label}
-          key={`kitchen-sink-${label}-${idx}`}
-        />
-      ))
-    ),
-  {
-    docs: {
-      page: () => <DocsPage title="Checkbox Button" Docs={Docs} />
-    }
-  }
-);
+generateStories(patternName, examples, ['default', 'examples', 'states'], Docs);

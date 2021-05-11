@@ -45,19 +45,27 @@ export const BrandBody = props =>
 // Export
 /// ///////////////////////////////////////////
 
-export default (
-  <Popover
-    className="slds-popover_brand slds-popover_brand-top slds-nubbin_top"
-    title="Dialog Title"
-    closeButton
-    inverse
-  >
-    <BrandBody />
-  </Popover>
-);
+export default [
+  {
+    context: 'brand',
+    id: 'brand-default',
+    label: 'Branded – default',
+    element: (
+      <Popover
+        className="slds-popover_brand slds-popover_brand-top slds-nubbin_top"
+        title="Dialog Title"
+        closeButton
+        inverse
+      >
+        <BrandBody />
+      </Popover>
+    )
+  }
+];
 
 export let examples = [
   {
+    context: 'brand',
     id: 'brand-right',
     label: 'Branded with right nubbin',
     element: (
@@ -72,6 +80,7 @@ export let examples = [
     )
   },
   {
+    context: 'brand',
     id: 'brand-bottom',
     label: 'Branded with bottom nubbin',
     element: (
@@ -86,6 +95,7 @@ export let examples = [
     )
   },
   {
+    context: 'brand',
     id: 'brand-left',
     label: 'Branded with left nubbin',
     element: (
@@ -100,6 +110,7 @@ export let examples = [
     )
   },
   {
+    context: 'brand',
     id: 'brand-top-dark',
     label: 'Branded with top nubbin (dark)',
     element: (
@@ -114,6 +125,7 @@ export let examples = [
     )
   },
   {
+    context: 'brand',
     id: 'brand-right-dark',
     label: 'Branded with right nubbin (dark)',
     element: (
@@ -128,6 +140,7 @@ export let examples = [
     )
   },
   {
+    context: 'brand',
     id: 'brand-bottom-dark',
     label: 'Branded with bottom nubbin (dark)',
     element: (
@@ -142,6 +155,7 @@ export let examples = [
     )
   },
   {
+    context: 'brand',
     id: 'brand-left-dark',
     label: 'Branded with left nubbin (dark)',
     element: (

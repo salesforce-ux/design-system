@@ -150,6 +150,7 @@ export let examples = [
     id: 'long-heading-truncated',
     label: 'Long Section Heading with Truncation for larger screens',
     demoStyles: 'max-width: 500px;',
+    storybookStyles: true,
     element: (
       <Card>
         <Accordion>
@@ -286,6 +287,7 @@ export let examples = [
     id: 'section-background-color',
     label: 'Accordion Section - Background Color',
     demoStyles: '--sds-c-accordion-summary-color-background: lightblue',
+    storybookStyles: true,
     element: (
       <Accordion>
         <AccordionSection
@@ -314,6 +316,7 @@ export let examples = [
     id: 'section-background-color',
     label: 'Accordion Section - Text Color',
     demoStyles: '--sds-c-accordion-heading-text-color: green; --sds-c-accordion-heading-text-color-hover: red',
+    storybookStyles: true,
     element: (
       <Accordion>
         <AccordionSection

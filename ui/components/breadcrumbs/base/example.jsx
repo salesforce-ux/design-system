@@ -78,6 +78,7 @@ export let states = [
     id: 'breadcrumbs-overflow',
     label: 'With Overflow Menu',
     demoStyles: 'height: 200px;',
+    storybookStyles: true,
     element: <BreadcrumbsWithOverflow />
   }
 ];
@@ -92,6 +93,7 @@ export let examples = [
     id: 'kinetics-breadcrumbs-overflow',
     label: 'With Overflow Menu (Kinetics)',
     demoStyles: 'height: 200px;',
+    storybookStyles: true,
     element: <BreadcrumbsWithOverflow kineticsEnabled />
   }
 ];

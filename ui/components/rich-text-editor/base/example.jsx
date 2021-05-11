@@ -470,6 +470,7 @@ export let examples = [
     demoStyles: `
         --sds-c-textarea-sizing-min-height: 3rem;
       `,
+    storybookStyles: true,
     element: (
       <Demo>
         <RichTextEditor>
@@ -489,6 +490,7 @@ export let examples = [
     demoStyles: `
         --sds-c-textarea-sizing-max-height: 10rem;
       `,
+    storybookStyles: true,
     element: (
       <Demo>
         <RichTextEditor>

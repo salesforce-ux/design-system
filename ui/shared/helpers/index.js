@@ -13,6 +13,10 @@ import IsDependentOn from './prop-types/is-dependent-on';
 import CannotBeSetWith from './prop-types/cannot-be-set-with';
 import StoryWrapper from '../../../shared/components/StoryWrapper';
 
+import { storiesOf } from '@storybook/react';
+import StoryFrame from '../../../shared/components/StoryFrame';
+import DocsPage from '../../../.storybook/components/DocsPage';
+
 // SHIM Lodash because it caches in node_modules and generates id's that are always incrementing
 const uniqueId = (() => {
   const PREFIXES = {};
@@ -52,27 +56,77 @@ export const getDisplayExampleById = (collection, id, key) => {
       )} has broken schema that requires an array of example/state objects with 'id' and 'element' properties`
     );
 
-  const elementObj = collection.filter(example => example.id === id);
-  if (elementObj && elementObj[0]) {
-    return elementObj[0][key] || elementObj[0];
+  // if an ID was provided then search for it in the collection
+  if (id !== undefined) {
+    const elementObj = collection.filter(example => example.id === id);
+
+    if (elementObj && elementObj[0]) {
+      return elementObj[0][key] || elementObj[0];
+    } else {
+      throw new Error(`No display element with id "${id}" found`);
+    }
   } else {
-    throw new Error(`No display element with id "${id}" found`);
+    // if no ID was provided then we simply return the first item of the array
+    return collection[0][key];
   }
 };
 
 // Get a component example in doc block from the exported states and examples objects
-export const getDisplayElementById = (collection, id) =>
-  getDisplayExampleById(collection, id, 'element');
+export const getDisplayElementById = (collection, id) => {
+  // if collection is an array, continue as expected
+  if (Array.isArray(collection)) {
+    return getDisplayExampleById(collection, id, 'element');
+  }
+
+  // if collection is not an array simply return it (probably a React element)
+  return collection;
+}
 
 // Get a component example's styles in doc block from the exported states and examples objects
 export const getDemoStylesById = (collection, id) =>
   getDisplayExampleById(collection, id, 'demoStyles');
 
+export const capitalize = str => {
+  if (typeof str === 'string') {
+    return str.replace(/^\w/, c => c.toUpperCase());
+  } else {
+    return '';
+  }
+};
+
+function union(setA, setB) {
+  let _union = new Set(setA);
+  for (let elem of setB) {
+    _union.add(elem);
+  }
+  return _union;
+}
+
+/**
+ * @desc Get all contexts for examples for a single component
+ * @param object $object - the object to get contexts from
+ * @return array - array of example contexts
+ */
+export const getExampleContexts = object => {
+  let contexts = [];
+
+  object.map(group => {
+    const groupSet = new Set(
+      group.map(example =>
+        example.context === undefined ? 'kitchen' : example.context
+      )
+    );
+    contexts = [...union(groupSet, new Set(contexts))];
+  });
+
+  return contexts;
+};
+
 /**
  * @desc Get all examples for a single component by type
  * @param object $object - the object to check types against
  * @param array $types - the type of examples you want
- * @return array - array of componenet examples based parameters
+ * @return array - array of component examples based parameters
  */
 export const getDisplayCollectionsByType = (object, types) => {
   let collection = [];
@@ -81,13 +135,24 @@ export const getDisplayCollectionsByType = (object, types) => {
       if (object.hasOwnProperty(type)) {
         if (Array.isArray(object[type])) {
           object[type].map(element => {
-            const { id, demoStyles, label, demoProps } = element;
+            const {
+              id,
+              demoStyles,
+              storybookStyles,
+              label,
+              demoProps,
+              deprecated,
+              context
+            } = element;
             return collection.push({
               id: id,
               component: getDisplayElementById(object[type], id),
               label,
               demoStyles,
-              demoProps
+              storybookStyles,
+              demoProps,
+              deprecated,
+              context
             });
           });
         } else {
@@ -108,7 +173,7 @@ export const getDisplayCollectionsByType = (object, types) => {
  * @desc Get all examples for multiple components by type
  * @param array $array - the components to check types against
  * @param array $types - the type of examples you want
- * @return array - array of componenet examples based on parameters
+ * @return array - array of component examples based on parameters
  */
 export const getAllDisplayCollectionsByType = (array, types) => {
   let collection = [];
@@ -185,6 +250,70 @@ export const createCustomPropType = (isRequired, callback) => {
       callback(props, propName, componentName);
     }
   };
+};
+
+/**
+ *
+ */
+export const generateStories = (
+  patternName,
+  examples,
+  collections,
+  Docs,
+  options = {
+    defaultDemoStyles: '',
+    isFullBleed: false,
+    isViewport: false,
+    eyes: undefined
+  }
+) => {
+  // retrieve examples by type
+  const kitchenSink = getAllDisplayCollectionsByType(examples, collections);
+
+  // retrieve contexts defined in examples definition files
+  const contexts = getExampleContexts(kitchenSink);
+
+  return contexts.map(context => {
+    storiesOf(`Components/${patternName}`, module).add(
+      `${capitalize(context)} Sink`,
+      () =>
+        kitchenSink.map((element, idx) => {
+          const kitchen = element.filter(el =>
+            context === 'kitchen'
+              ? el.context === context || el.context === undefined
+              : el.context === context
+          );
+
+          return kitchen.map(({ label, component, storybookStyles, demoStyles }) => {
+            // if storybookStyles is a boolean true then we use the same styles defined in demoStyles
+            let storyStyles;
+            if (storybookStyles === true) {
+              storyStyles = demoStyles || '';
+            } else {
+              storyStyles = storybookStyles || '';
+            }
+            storyStyles = options.defaultDemoStyles + storyStyles;
+
+            return (
+              <StoryFrame
+                component={component}
+                label={label}
+                key={`${context}-sink-${label}-${idx}`}
+                styles={storyStyles}
+                isFullBleed={options.isFullBleed}
+                isViewport={options.isViewport}
+              />
+            )
+          });
+        }),
+      {
+        docs: {
+          page: () => <DocsPage title={patternName} Docs={Docs} />
+        },
+        eyes: options.eyes
+      }
+    );
+  });
 };
 
 export default {

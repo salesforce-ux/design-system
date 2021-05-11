@@ -154,6 +154,7 @@ export const examples = [
     id: 'small-width-container',
     label: 'Small Width Container',
     demoStyles: 'height: auto; width: 200px; border: 1px dashed #ddd;',
+    storybookStyles: true,
     element: (
       <ExampleDatetimePicker
         dropdownIsOpen={false}
@@ -181,6 +182,7 @@ export let states = [
     id: 'time-selection',
     label: 'Time selected',
     demoStyles: 'height: 20rem;',
+    storybookStyles: true,
     element: (
       <ExampleDatetimePicker
         dropdown={

@@ -30,7 +30,7 @@ import { MobileNotice, MobileBlurb } from '../../shared/doc-text';
 
 A Base Combobox is a readonly text `input` that allows a user to select an option from a pre-defined list of options. It does not allow free form user input, nor does it allow the user to modify the selected value.
 
-<CodeView demoStyles="height: 17rem;">{BaseExamples.default}</CodeView>
+<CodeView demoStyles="height: 17rem;">{getDisplayElementById(BaseExamples.default)}</CodeView>
 
 ### Combobox markup
 
@@ -297,7 +297,7 @@ If no option matches, the user can complete the value of the combobox by finishi
   </p>
 </Blockquote>
 
-<CodeView demoStyles="height: 12rem;">{AutocompleteExamples.default}</CodeView>
+<CodeView demoStyles="height: 12rem;">{getDisplayElementById(AutocompleteExamples.default)}</CodeView>
 
 ### Displaying options
 
@@ -491,7 +491,7 @@ The containing `div` of the comboboxes should have the class `slds-combobox-grou
   </p>
 </Blockquote>
 
-<CodeView demoStyles="height: 17rem;">{GroupedExamples.default}</CodeView>
+<CodeView demoStyles="height: 17rem;">{getDisplayElementById(GroupedExamples.default)}</CodeView>
 
 <MobileNotice
   docsLink="#Mobile"
@@ -500,7 +500,7 @@ The containing `div` of the comboboxes should have the class `slds-combobox-grou
 />
 
 <CodeView frameStyles={{ height: '21rem' }} frameOnly frameTitle="Example mobile styles for grouped comboboxes">
-  {GroupedExamples.default}
+  {getDisplayElementById(GroupedExamples.default)}
 </CodeView>
 
 ### User input (Typeahead)
@@ -611,7 +611,7 @@ The key difference for `dialog` dropdowns lies in how they handle focus. In `lis
   </ol>
 </Blockquote>
 
-<CodeView>{Dialog.default}</CodeView>
+<CodeView>{getDisplayElementById(Dialog.default)}</CodeView>
 
 ### Open Dialog
 

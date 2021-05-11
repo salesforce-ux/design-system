@@ -14,6 +14,13 @@ class CodeView extends React.Component {
   renderChildren() {
     const { demoStyles, isViewport, isMobile } = this.props;
 
+    // 2021.05.04 [FB] – handle default examples that have metadata without modifying existing MDX files
+    let children = this.props.children;
+
+    if (Array.isArray(this.props.children)) {
+      children = this.props.children[0].element;
+    }
+
     return (
       <div
         className={classNames('docs-codeblock-example', {
@@ -29,10 +36,10 @@ class CodeView extends React.Component {
             })}
             styles={demoStyles}
           >
-            {this.props.children}
+            {children}
           </StyledDemo>
         ) : (
-          this.props.children
+          children
         )}
       </div>
     );
@@ -49,12 +56,19 @@ class CodeView extends React.Component {
       hideDeviceSelector
     } = this.props;
 
+    // 2021.05.04 [FB] – handle default examples that have metadata without modifying existing MDX files
+    let children = this.props.children;
+
+    if (Array.isArray(this.props.children)) {
+      children = this.props.children[0].element;
+    }
+
     let content = (
       <React.Fragment>
         {position === 'bottom' ? this.renderChildren() : null}
         {!exampleOnly && (
           <CodeBlock language="html" toggleCode={toggleCode}>
-            {this.props.children}
+            {children}
           </CodeBlock>
         )}
         {position === 'top' ? this.renderChildren() : null}
@@ -68,7 +82,7 @@ class CodeView extends React.Component {
           frameStyles={frameStyles}
           frameTitle={frameTitle || 'Example mobile styles'}
         >
-          {this.props.children}
+          {children}
         </SLDSFrame>
       );
     }

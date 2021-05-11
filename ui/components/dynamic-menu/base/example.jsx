@@ -13,7 +13,7 @@ import { EntityOptionsLabel } from '../../combobox/snapshots.data';
     Data
 ----------------------------------------------------------------------------- */
 
-const ListboxList = ({ ariaLabel, id, length, listboxData }) => {
+export const ListboxList = ({ ariaLabel, id, length, listboxData = EntityOptionsLabel }) => {
   const listboxId = _.uniqueId('example-unique-id-');
 
   return (

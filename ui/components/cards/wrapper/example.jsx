@@ -124,6 +124,7 @@ export let examples = [
       --sds-c-card-footer-font-size: 0.75rem;
       --sds-c-card-footer-text-align: right;
     `,
+    storybookStyles: true,
     element: (
       <div className="slds-card-wrapper">
         <Tabs selectedIndex={0}>

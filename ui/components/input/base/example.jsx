@@ -388,10 +388,14 @@ export let examples = [
   {
     id: 'field-level-help',
     label: 'Field level help',
-    demoStyles: {
-      paddingTop: '3rem',
-      position: 'relative'
-    },
+    demoStyles: `
+      padding-top: 3rem;
+      position: relative;
+    `,
+    storybookStyles: `
+      padding-top: 4rem;
+      position: relative;
+    `,
     element: <FieldLevelHelp />
   },
   {

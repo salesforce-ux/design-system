@@ -13,26 +13,36 @@ const headingUniqueId = _.uniqueId('dialog-heading-id-');
 // Export
 /// ///////////////////////////////////////////
 
-export default (
-  <Popover
-    className="slds-popover_walkthrough slds-popover_feature slds-nubbin_left"
-    title="Dialog Title"
-    closeButton
-    inverse
-  >
-    <div className="slds-media">
-      <div className="slds-media__body">
-        <p className="slds-text-heading_small">
-          Shelly, it seems you frequent this record. Try favoriting it for easy
-          access.
-        </p>
-      </div>
-    </div>
-  </Popover>
-);
+export default [
+  {
+    context: 'Feature',
+    deprecated: true,
+    id: 'feature-default',
+    label: 'Deprecated – Feature default',
+    element: (
+      <Popover
+        className="slds-popover_walkthrough slds-popover_feature slds-nubbin_left"
+        title="Dialog Title"
+        closeButton
+        inverse
+      >
+        <div className="slds-media">
+          <div className="slds-media__body">
+            <p className="slds-text-heading_small">
+              Shelly, it seems you frequent this record. Try favoriting it for
+              easy access.
+            </p>
+          </div>
+        </div>
+      </Popover>
+    )
+  }
+];
 
 export let examples = [
   {
+    context: 'Feature',
+    deprecated: true,
     id: 'icon-text',
     label: 'Deprecated – With icon and text',
     element: (
@@ -67,6 +77,8 @@ export let examples = [
     )
   },
   {
+    context: 'Feature',
+    deprecated: true,
     id: 'icon-header-text-link',
     label: 'Deprecated – With icon, header, text, and link',
     element: (
@@ -107,6 +119,8 @@ export let examples = [
     )
   },
   {
+    context: 'Feature',
+    deprecated: true,
     id: 'icon-header-text',
     label: 'Deprecated – With icon, header, and text',
     element: (
@@ -144,6 +158,8 @@ export let examples = [
     )
   },
   {
+    context: 'Feature',
+    deprecated: true,
     id: 'icon-header-text-footer',
     label: 'Deprecated – With icon, header, text, and footer',
     element: (

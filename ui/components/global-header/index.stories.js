@@ -1,37 +1,20 @@
-import React from 'react';
-import { storiesOf } from '@storybook/react';
 import * as Base from './base/example';
-import { getAllDisplayCollectionsByType } from '../../shared/helpers';
-import StoryFrame from '../../../shared/components/StoryFrame';
-
-import DocsPage from '../../../.storybook/components/DocsPage';
+import { generateStories } from '../../shared/helpers';
 import Docs from './docs.mdx';
 
 const examples = [Base];
 
-const kitchenSink = getAllDisplayCollectionsByType(examples, [
-  'default',
-  'examples',
-  'states'
-]);
+const patternName = 'Global Header';
 
-storiesOf('Components/Global Header', module).add(
-  'Kitchen Sink',
-  () =>
-    kitchenSink.map((element, idx) =>
-      element.map(({ label, component }) => (
-        <StoryFrame
-          component={component}
-          isViewport
-          styles="height: 340px;"
-          label={label}
-          key={`kitchen-sink-${label}-${idx}`}
-        />
-      ))
-    ),
-  {
-    docs: {
-      page: () => <DocsPage title="Global Header" Docs={Docs} />
-    }
-  }
+const storyOptions = {
+  defaultDemoStyles: 'height: 340px;',
+  isViewport: true
+}
+
+generateStories(
+  patternName,
+  examples,
+  ['default', 'examples', 'states'],
+  Docs,
+  storyOptions
 );

@@ -11,7 +11,7 @@ import { getDisplayElementById } from '../../shared/helpers';
 </div>
 
 <CodeView exampleOnly demoStyles="height: 15rem;">
-  {NavExamples.default}
+  {getDisplayElementById(NavExamples.default)}
 </CodeView>
 
 ## About Navigation Bar
@@ -24,7 +24,7 @@ The navigation bar is composed of a wrapper and 2 required regions:
 The markup should follow the order listed above for proper keyboard interaction set by the 508 compliance standards. Each included region inside the wrapper of `.slds-context-bar` needs the appropriate ordering class name, e.g. `.slds-context-bar__primary`.
 
 <CodeView demoStyles="height: 16rem;">
-  {NavExamples.default}
+  {getDisplayElementById(NavExamples.default)}
 </CodeView>
 
 ### Items on the Navigation Bar
@@ -115,7 +115,7 @@ Alternatively, two classes are available to add border using css. Adding the cla
 ## About Navigation Tab Bar
 
 <CodeView>
-  {NavTabBarExamples.default}
+  {getDisplayElementById(NavTabBarExamples.default)}
 </CodeView>
 
 ### Accessibility

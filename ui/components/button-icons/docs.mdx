@@ -80,18 +80,18 @@ When using assistive text, the icon element itself should have `aria-hidden` set
 
 ## Base
 
-<CodeView toggleCode={false}>{Base.default}</CodeView>
+<CodeView toggleCode={false}>{getDisplayElementById(Base.default)}</CodeView>
 
 ## Variations
 
 ### Brand
 
-<CodeView toggleCode={false}>{Brand.default}</CodeView>
+<CodeView toggleCode={false}>{getDisplayElementById(Brand.default)}</CodeView>
 
 ### Inverse
 
 <CodeView toggleCode={false}>
-  <Inverse.Context>{Inverse.default}</Inverse.Context>
+  <Inverse.Context>{getDisplayElementById(Inverse.default)}</Inverse.Context>
 </CodeView>
 
 ### Icon Containers
@@ -109,21 +109,21 @@ Use the inverse button on dark backgrounds by adding the `slds-button_inverse` c
     <strong>Bare - transparent container</strong>
     <CodeView toggleCode={false}>
       <TransparentContainer.Context>
-        {TransparentContainer.default}
+        {getDisplayElementById(TransparentContainer.default)}
       </TransparentContainer.Context>
     </CodeView>
   </DisplayColumn>
   <DisplayColumn>
     <strong>Bordered - filled container</strong>
     <CodeView toggleCode={false}>
-      <BorderedFilled.Context>{BorderedFilled.default}</BorderedFilled.Context>
+      <BorderedFilled.Context>{getDisplayElementById(BorderedFilled.default)}</BorderedFilled.Context>
     </CodeView>
   </DisplayColumn>
   <DisplayColumn>
     <strong>Bordered - transparent container</strong>
     <CodeView toggleCode={false}>
       <BorderedTransparent.Context>
-        {BorderedTransparent.default}
+        {getDisplayElementById(BorderedTransparent.default)}
       </BorderedTransparent.Context>
     </CodeView>
   </DisplayColumn>
@@ -131,7 +131,7 @@ Use the inverse button on dark backgrounds by adding the `slds-button_inverse` c
     <strong>Bordered inverse - transparent container</strong>
     <CodeView toggleCode={false}>
       <BorderedInverse.Context>
-        {BorderedInverse.default}
+        {getDisplayElementById(BorderedInverse.default)}
       </BorderedInverse.Context>
     </CodeView>
   </DisplayColumn>
@@ -142,7 +142,7 @@ Use the inverse button on dark backgrounds by adding the `slds-button_inverse` c
 The stateful button requires the `slds-button_icon-border` class in addition to the `slds-button` class.
 The stateful inverse button works just like the stateful button. It requires the `slds-button_icon-border-inverse` class in addition to the `slds-button` class.
 
-<CodeView toggleCode={false}>{Stateful.default}</CodeView>
+<CodeView toggleCode={false}>{getDisplayElementById(Stateful.default)}</CodeView>
 
 <Blockquote type="a11y" header="Accessibility Note">
   <p>

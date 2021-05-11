@@ -163,14 +163,20 @@ let Header = props => (
 // Export
 /// ///////////////////////////////////////////
 
-export default (
-  <Popover className="slds-nubbin_left" closeButton title="Dialog Title">
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua.
-    </p>
-  </Popover>
-);
+export default [
+  {
+    id: 'popover-default',
+    label: 'Popover – default',
+    element: (
+      <Popover className="slds-nubbin_left" closeButton title="Dialog Title">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+      </Popover>
+    )
+  }
+];
 
 export let examples = [
   {

@@ -30,6 +30,7 @@ export let states = [
     id: 'truncated',
     label: 'Truncated',
     demoStyles: 'width: 220px;',
+    storybookStyles: true,
     element: (
       <PillContainer>
         <Pill label="Pill label that is longer than the area that contains it" />

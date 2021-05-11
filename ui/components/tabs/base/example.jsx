@@ -388,6 +388,7 @@ export let examples = [
       --sds-c-tabs-item-text-color: red;
       --sds-c-tabs-item-text-color-active: purple;
     `,
+    storybookStyles: true,
     element: (
       <Tabs>
         <Tabs.Item title="Item One" id="tab-default-1">

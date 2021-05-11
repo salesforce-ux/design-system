@@ -75,9 +75,25 @@ const createComponentStories = type => {
       }
 
       if (examples) {
+        // defaults when default example is basic without metadata
+        let defaultExample = () => examples.default;
+        let defaultExampleParams = undefined;
+
+        // if we have an array for the default example definition
+        if (Array.isArray(examples.default)) {
+          defaultExample = () =>
+            getDisplayElementById(examples.default, examples.default[0].id);
+          defaultExampleParams = () =>
+            getExampleStoryParams(
+              getStoryWrapperDecorator(examples.default[0])
+            );
+        }
+
+        // generate default example story
         storiesOf(storyTitle, module).add(
           variantTitle,
-          () => examples.default,
+          defaultExample,
+          defaultExampleParams,
           {
             docs: {
               page: DocsComponent

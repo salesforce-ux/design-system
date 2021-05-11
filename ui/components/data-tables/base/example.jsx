@@ -210,6 +210,7 @@ export let examples = [
     id: 'cell-content-truncated',
     label: 'Cell content truncated',
     demoStyles: 'max-width: 600px;',
+    storybookStyles: true,
     element: (
       <Table
         isBordered
@@ -254,6 +255,7 @@ export let examples = [
     id: 'cell-content-wrapped',
     label: 'Cell content wrapped',
     demoStyles: 'max-width: 600px;',
+    storybookStyles: true,
     element: (
       <Table
         isBordered

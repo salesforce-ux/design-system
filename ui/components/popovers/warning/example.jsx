@@ -12,33 +12,41 @@ const headingUniqueId = _.uniqueId('dialog-heading-id-');
 // Export
 /// ///////////////////////////////////////////
 
-export default (
-  <Popover
-    className="slds-popover_warning slds-nubbin_bottom-left"
-    headingId={headingUniqueId}
-    bodyClassName="slds-popover_warning__body"
-    header={
-      <FeedbackHeader
+export default [
+  {
+    context: 'Warning',
+    id: 'warning-default',
+    label: 'Warning – default',
+    element: (
+      <Popover
+        className="slds-popover_warning slds-nubbin_bottom-left"
         headingId={headingUniqueId}
-        title="Review warning"
-        symbol="warning"
-        iconDefault
-      />
-    }
-    closeButton
-  >
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore.{' '}
-      <a href="#" onClick={e => e.preventDefault()} title="Learn More">
-        Learn More
-      </a>
-    </p>
-  </Popover>
-);
+        bodyClassName="slds-popover_warning__body"
+        header={
+          <FeedbackHeader
+            headingId={headingUniqueId}
+            title="Review warning"
+            symbol="warning"
+            iconDefault
+          />
+        }
+        closeButton
+      >
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore.{' '}
+          <a href="#" onClick={e => e.preventDefault()} title="Learn More">
+            Learn More
+          </a>
+        </p>
+      </Popover>
+    )
+  }
+];
 
 export let examples = [
   {
+    context: 'Warning',
     id: 'with-top-nubbin',
     label: 'Warning With Top Nubbin',
     element: (
@@ -67,6 +75,7 @@ export let examples = [
     )
   },
   {
+    context: 'Warning',
     id: 'with-footer',
     label: 'Warning With Footer',
     element: (

@@ -1,5 +1,3 @@
-import React from 'react';
-import { storiesOf } from '@storybook/react';
 import * as EllieExamples from './ellie/example';
 import * as EqExamples from './eq/example';
 import * as GlobalActionHelpExamples from './global-action-help/example';
@@ -8,10 +6,7 @@ import * as StrengthExamples from './strength/example';
 import * as TrendExamples from './trend/example';
 import * as TypingExamples from './typing/example';
 import * as WaffleExamples from './waffle/example';
-import { getAllDisplayCollectionsByType } from '../../shared/helpers';
-import StoryFrame from '../../../shared/components/StoryFrame';
-
-import DocsPage from '../../../.storybook/components/DocsPage';
+import { generateStories } from '../../shared/helpers';
 import Docs from './docs.mdx';
 
 const examples = [
@@ -25,27 +20,6 @@ const examples = [
   WaffleExamples
 ];
 
-const kitchenSink = getAllDisplayCollectionsByType(examples, [
-  'default',
-  'examples',
-  'states'
-]);
+const patternName = 'Dynamic Icons';
 
-storiesOf('Components/Dynamic Icons', module).add(
-  'Kitchen Sink',
-  () =>
-    kitchenSink.map((element, idx) =>
-      element.map(({ label, component }) => (
-        <StoryFrame
-          component={component}
-          label={label}
-          key={`kitchen-sink-${label}-${idx}`}
-        />
-      ))
-    ),
-  {
-    docs: {
-      page: () => <DocsPage title="Dynamic Icons" Docs={Docs} />
-    }
-  }
-);
+generateStories(patternName, examples, ['default', 'examples', 'states'], Docs);

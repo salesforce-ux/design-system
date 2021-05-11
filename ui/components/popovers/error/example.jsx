@@ -47,32 +47,40 @@ export let FeedbackFooter = props => (
 // Export
 /// ///////////////////////////////////////////
 
-export default (
-  <Popover
-    className="slds-popover_error slds-nubbin_bottom-left"
-    headingId={headingUniqueId}
-    header={
-      <FeedbackHeader
+export default [
+  {
+    context: 'Error',
+    id: 'error-default',
+    label: 'Error – default',
+    element: (
+      <Popover
+        className="slds-popover_error slds-nubbin_bottom-left"
         headingId={headingUniqueId}
-        title="Resolve error"
-        symbol="error"
-      />
-    }
-    closeButton
-    inverse
-  >
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore.{' '}
-      <a href="#" onClick={e => e.preventDefault()} title="Learn More">
-        Learn More
-      </a>
-    </p>
-  </Popover>
-);
+        header={
+          <FeedbackHeader
+            headingId={headingUniqueId}
+            title="Resolve error"
+            symbol="error"
+          />
+        }
+        closeButton
+        inverse
+      >
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore.{' '}
+          <a href="#" onClick={e => e.preventDefault()} title="Learn More">
+            Learn More
+          </a>
+        </p>
+      </Popover>
+    )
+  }
+];
 
 export let examples = [
   {
+    context: 'Error',
     id: 'with-top-nubbin',
     label: 'Error With Top Nubbin',
     element: (
@@ -100,6 +108,7 @@ export let examples = [
     )
   },
   {
+    context: 'Error',
     id: 'with-footer',
     label: 'Error With Footer',
     element: (

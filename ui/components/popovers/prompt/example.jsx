@@ -118,49 +118,70 @@ export let Prompt = props => {
 // Export
 /// ///////////////////////////////////////////
 
-export default <Prompt symbol="prompt" />;
+export default [
+  {
+    context: 'Prompt',
+    id: 'prompt-default',
+    label: 'Prompt – default',
+    element: <Prompt symbol="prompt" />
+  }
+];
 
 export let examples = [
   {
+    context: 'Prompt',
     id: 'top-left',
     label: 'Positioned: top left',
     demoStyles: demoHeight,
+    storybookStyles: true,
     element: <Prompt symbol="prompt" showFooter position="top-left" />
   },
   {
+    context: 'Prompt',
     id: 'top-center',
     label: 'Positioned: top center',
     demoStyles: demoHeight,
+    storybookStyles: true,
     element: <Prompt symbol="prompt" showFooter position="top" />
   },
   {
+    context: 'Prompt',
     id: 'top-right',
     label: 'Positioned: top right',
     demoStyles: demoHeight,
+    storybookStyles: true,
     element: <Prompt symbol="prompt" showFooter position="top-right" />
   },
   {
+    context: 'Prompt',
     id: 'bottom-right',
     label: 'Positioned: bottom right',
     demoStyles: demoHeight,
+    storybookStyles: true,
     element: <Prompt symbol="prompt" showFooter position="bottom-right" />
   },
   {
+    context: 'Prompt',
     id: 'bottom-center',
     label: 'Positioned: bottom center',
     demoStyles: demoHeight,
+    storybookStyles: true,
     element: <Prompt symbol="prompt" showFooter position="bottom" />
   },
   {
+    context: 'Prompt',
     id: 'bottom-left',
     label: 'Positioned: bottom left',
     demoStyles: demoHeight,
+    storybookStyles: true,
     element: <Prompt symbol="prompt" showFooter position="bottom-left" />
   },
   {
+    context: 'Prompt',
     id: 'brand-with-footer',
     label: 'Prompt: branded with footer',
     demoStyles: demoHeight,
+    storybookStyles: true,
     element: (
       <Prompt
         symbol="prompt"
@@ -172,9 +193,11 @@ export let examples = [
     )
   },
   {
+    context: 'Prompt',
     id: 'brand-without-footer',
     label: 'Prompt: branded without footer',
     demoStyles: demoHeight,
+    storybookStyles: true,
     element: (
       <Prompt
         symbol="prompt"

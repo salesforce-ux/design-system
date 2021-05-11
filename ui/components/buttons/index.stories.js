@@ -1,13 +1,8 @@
-import React from 'react';
-import { storiesOf } from '@storybook/react';
 import * as ButtonExamples from './base/example';
 import * as IconExamples from './with-icon/example';
 import * as StatefulExamples from './stateful/example';
 import * as DualStatefulExamples from './dual-stateful/example';
-import { getAllDisplayCollectionsByType } from '../../shared/helpers';
-import StoryFrame from '../../../shared/components/StoryFrame';
-
-import DocsPage from '../../../.storybook/components/DocsPage';
+import { generateStories } from '../../shared/helpers';
 import Docs from './docs.mdx';
 
 const examples = [
@@ -17,27 +12,6 @@ const examples = [
   IconExamples
 ];
 
-const kitchenSink = getAllDisplayCollectionsByType(examples, [
-  'default',
-  'examples',
-  'states'
-]);
+const patternName = 'Buttons';
 
-storiesOf('Components/Buttons', module).add(
-  'Kitchen Sink',
-  () =>
-    kitchenSink.map((element, idx) =>
-      element.map(({ label, component }) => (
-        <StoryFrame
-          component={component}
-          label={label}
-          key={`kitchen-sink-${label}-${idx}`}
-        />
-      ))
-    ),
-  {
-    docs: {
-      page: () => <DocsPage title="Buttons" Docs={Docs} />
-    }
-  }
-);
+generateStories(patternName, examples, ['default', 'examples', 'states'], Docs);

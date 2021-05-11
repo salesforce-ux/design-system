@@ -12,7 +12,7 @@ import * as Integrated from './integrated/example';
 </div>
 
 <CodeView exampleOnly>
-  {Base.default}
+  {getDisplayElementById(Base.default)}
 </CodeView>
 
 ## About File Selector
@@ -26,7 +26,7 @@ When implementing this component, pay special attention to the following:
 
 ## Base
 <CodeView>
-  {Base.default}
+  {getDisplayElementById(Base.default)}
 </CodeView>
 
 ## States
@@ -53,7 +53,7 @@ Multi Line / Image
 Use as a dedicated dropzone for image files only. May require a cropping control.
 
 <CodeView>
-  {Image.default}
+  {getDisplayElementById(Image.default)}
 </CodeView>
 
 ## States
@@ -80,7 +80,7 @@ Invisible Dropzone (Container)
 Use when an entire container should be droppable. The container should have a visible boundary, like a modal, composer, or page.
 
 <CodeView>
-  {Integrated.default}
+  {getDisplayElementById(Integrated.default)}
 </CodeView>
 
 ## States

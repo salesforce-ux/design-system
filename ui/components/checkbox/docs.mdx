@@ -12,7 +12,7 @@ import { MobileNotice, MobileBlurb } from '../../shared/doc-text';
   indeterminate
 </div>
 
-<CodeView exampleOnly>{CheckboxExamples.default}</CodeView>
+<CodeView exampleOnly>{getDisplayElementById(CheckboxExamples.default)}</CodeView>
 
 ## About Checkbox
 
@@ -34,7 +34,7 @@ As SLDS checkboxes rely on the `:checked` pseudo selector, and the indeterminate
 
 <MobileBlurb patternSpecificText="checkboxes will have an increased size to accommodate tapping with a finger instead of the more precise mouse cursor, as well as having larger label text" />
 
-<CodeView frameOnly frameTitle="Example mobile styles for checkboxes">{CheckboxExamples.default}</CodeView>
+<CodeView frameOnly frameTitle="Example mobile styles for checkboxes">{getDisplayElementById(CheckboxExamples.default)}</CodeView>
 
 ## Base
 
@@ -42,7 +42,7 @@ The base variant of a checkbox is a single boolean value. The base checkbox is c
 
 The [form element variant](#Form-Element) accommodates a top level label and additional functionality such as like help text and read only mode. Help text is not supported on a single checkbox.
 
-<CodeView>{CheckboxExamples.default}</CodeView>
+<CodeView>{getDisplayElementById(CheckboxExamples.default)}</CodeView>
 
 ### States
 
@@ -98,7 +98,7 @@ The [form element variant](#Form-Element) accommodates a top level label and add
 
 ## Form Element
 
-<CodeView>{CheckboxFormElementExamples.default}</CodeView>
+<CodeView>{getDisplayElementById(CheckboxFormElementExamples.default)}</CodeView>
 
 ### States
 

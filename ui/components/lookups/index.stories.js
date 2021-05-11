@@ -1,38 +1,21 @@
-import React from 'react';
-import { storiesOf } from '@storybook/react';
 import * as BaseExamples from './base/example';
 import * as AdvancedModalExamples from './advanced-modal/example';
 import * as MultiEntityExamples from './multi-entity/example';
-import { getAllDisplayCollectionsByType } from '../../shared/helpers';
-import StoryFrame from '../../../shared/components/StoryFrame';
-
-import DocsPage from '../../../.storybook/components/DocsPage';
+import { generateStories } from '../../shared/helpers';
 import Docs from './docs.mdx';
 
 const examples = [BaseExamples, AdvancedModalExamples, MultiEntityExamples];
 
-const kitchenSink = getAllDisplayCollectionsByType(examples, [
-  'default',
-  'examples',
-  'states'
-]);
+const patternName = 'Lookups';
 
-storiesOf('Components/Lookups', module).add(
-  'Kitchen Sink',
-  () =>
-    kitchenSink.map((element, idx) =>
-      element.map(({ label, component }) => (
-        <StoryFrame
-          component={component}
-          label={label}
-          styles="min-height: 20em"
-          key={`kitchen-sink-${label}-${idx}`}
-        />
-      ))
-    ),
-  {
-    docs: {
-      page: () => <DocsPage title="Lookups" Docs={Docs} />
-    }
-  }
+const storyOptions = {
+  defaultDemoStyles: 'min-height: 20em;'
+}
+
+generateStories(
+  patternName,
+  examples,
+  ['default', 'examples', 'states'],
+  Docs,
+  storyOptions
 );

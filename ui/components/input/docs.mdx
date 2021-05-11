@@ -8,7 +8,7 @@ import StylingHooksTable from '../../../shared/components/StylingHooksTable';
 
 <div className="doc lead">Text inputs are used for freeform data entry</div>
 
-<CodeView exampleOnly>{InputExamples.default}</CodeView>
+<CodeView exampleOnly>{getDisplayElementById(InputExamples.default)}</CodeView>
 
 ## About Inputs
 
@@ -41,7 +41,7 @@ In some cases, the read-only field state is swapped and has no `<input>`. This i
 
 <MobileBlurb patternSpecificText="inputs will have an increased size to accommodate tapping with a finger instead of the more precise mouse cursor" />
 
-<CodeView frameOnly frameTitle="Example mobile styles for inputs">{InputExamples.default}</CodeView>
+<CodeView frameOnly frameTitle="Example mobile styles for inputs">{getDisplayElementById(InputExamples.default)}</CodeView>
 
 ## States
 

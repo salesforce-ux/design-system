@@ -21,12 +21,21 @@
 
 ## Release 2.15.2 - April 13, 2021
 
+## Components
+### [Data Tables](https://www.lightningdesignsystem.com/components/data-tables)
+#### Added
+- Added `aria-label`, and alternatively, `aria-labelledby` to allow adding additional table context for screen readers
+
 ## Release 2.15.1 - April 12, 2021
 
 ## Components
 ### [Cards](https://www.lightningdesignsystem.com/components/cards)
 #### Added
 - Added annotations for Einstein themed cards
+
+### [Data Tables](https://www.lightningdesignsystem.com/components/data-tables)
+#### Changed
+- Changed the `aria-live` value from `assertive` to `polite`
 
 ### [Menus](https://www.lightningdesignsystem.com/components/menus)
 #### Added
@@ -197,6 +206,10 @@ Refactored the component markup to function with or without theme utility classe
 ### [Checkbox Toggle](https://www.lightningdesignsystem.com/components/checkbox-toggle)
 #### Added
 - Enabled styling hooks for checkbox toggle. See checkbox toggle's styling hooks overview table for a full listing of the currently available hooks.
+
+### [Data Tables](https://www.lightningdesignsystem.com/components/data-tables)
+#### Added
+- Added `slds-cell_action-mode` class for styling cells in Action mode
 
 ### [Form Element](https://www.lightningdesignsystem.com/components/form-element)
 #### Fixed

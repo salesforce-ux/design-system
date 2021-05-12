@@ -14,7 +14,8 @@ until [ "$selection" = "0" ]; do
   echo "    	2  -  Core patch"
   echo "    	3  -  Core main"
   echo "    	4  -  Staging (for release)"
-  echo "    	5  -  Build site only"
+  echo "    	5  -  Staging (for archive)"
+  echo "    	6  -  Build site only"
   echo "    	0  -  Exit"
   echo ""
   echo -n "  Enter selection: "
@@ -25,7 +26,8 @@ until [ "$selection" = "0" ]; do
     2 ) clear ; HEROKU_APP_NAME=core-patch-doc-site ; robots_index=false ; VALIDATION_URL=https://core-patch.lightningdesignsystem.com/ ; break ;;
     3 ) clear ; HEROKU_APP_NAME=core-main-doc-site ; robots_index=false ; VALIDATION_URL=https://core-main.lightningdesignsystem.com/ ; break ;;
     4 ) clear ; HEROKU_APP_NAME=design-system-site-stage ; robots_index=true ; VALIDATION_URL=https://design-system-site-stage.herokuapp.com ; break ;;
-    5 ) clear ; build_site_only=true ; robots_index=true ; break ;;
+    5 ) clear ; HEROKU_APP_NAME=design-system-site-stage ; robots_index=false ; VALIDATION_URL=https://design-system-site-stage.herokuapp.com ; break ;;
+    6 ) clear ; build_site_only=true ; robots_index=true ; break ;;
     0 ) clear ; exit ;;
     * ) clear ; incorrect_selection ;;
   esac

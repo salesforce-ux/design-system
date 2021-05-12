@@ -7,7 +7,7 @@ import lintspaces from 'gulp-lintspaces';
 import eslint from 'gulp-eslint';
 import stylelint from 'gulp-stylelint';
 import htmlhint from 'gulp-htmlhint';
-import yamlValidate from 'gulp-yaml-validate';
+import yamlValidate from './validate-yaml.js';
 
 import tokenlint from '../plugins/lint-tokens';
 

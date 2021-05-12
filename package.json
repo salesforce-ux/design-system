@@ -273,8 +273,5 @@
     "expose": [
       "@salesforce/slds/legacy"
     ]
-  },
-  "dependencies": {
-    "svg4everybody": "^2.1.9"
   }
 }

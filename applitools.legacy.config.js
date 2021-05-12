@@ -32,6 +32,7 @@ module.exports = {
     ? { executablePath: '/usr/bin/google-chrome' }
     : undefined,
   waitBeforeScreenshot: 250,
+  fakeIE: true,
   browser: [
     // { width: resolution.width, height: resolution.height, name: 'edgelegacy' },
     { width: resolution.width, height: resolution.height, name: 'ie11' }

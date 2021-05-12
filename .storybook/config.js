@@ -1,7 +1,6 @@
 import { configure, addDecorator, addParameters } from '@storybook/react';
 import { withA11y } from '@storybook/addon-a11y';
 import { initializeRTL } from 'storybook-addon-rtl';
-import svg4everybody from 'svg4everybody';
 
 import loadStories, { mobileStories } from './stories';
 import sldsTheme from './sldsTheme';
@@ -34,12 +33,6 @@ switch (process.env.STORYBOOK_STORIES_TYPE) {
   case 'mobile':
     whatToLoad = mobileStories;
     break;
-}
-if (
-  navigator.userAgent.indexOf('MSIE') !== -1 ||
-  navigator.appVersion.indexOf('Trident/') > 0
-) {
-  svg4everybody();
 }
 
 configure(whatToLoad, module);

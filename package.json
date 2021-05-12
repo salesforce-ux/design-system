@@ -232,7 +232,7 @@
     "local:vrt:mobile": "npm run storybook:prepare && node ./applitools.prompts.js -t mobile && STORYBOOK_STORIES_TYPE='mobile' npx @applitools/eyes-storybook --conf applitools.mobile.config.local.js",
     "local:vrt:legacy": "npm run storybook:prepare && node ./applitools.prompts.js -t legacy && npx @applitools/eyes-storybook --conf applitools.legacy.config.local.js",
     "release:site": "./release.sh",
-    "release:site:validate": "SLDS_VALIDATION_URL=https://design-system-site-stage.herokuapp.com npx ava __tests__/site/test.spec.js"
+    "release:site:validate": "SLDS_VALIDATION_URL=https://design-system-site-stage.herokuapp.com npx ava __tests__/site/site-validation.ava.js"
   },
   "lint-staged": {
     "linters": {

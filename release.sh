@@ -115,7 +115,7 @@ if [ "$build_site_only" = false ]; then
 
   # Validate staged site
   echo "» Validating site..."
-  SLDS_VALIDATION_URL=${VALIDATION_URL} npx ava __tests__/site/test.spec.js
+  SLDS_VALIDATION_URL=${VALIDATION_URL} npx ava __tests__/site/site-validation.ava.js
 fi
 
 # Exit back to parent directory

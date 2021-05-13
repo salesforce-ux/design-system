@@ -4,6 +4,12 @@
 
 <!-- ## [Unreleased] -->
 
+## 2.16.0
+
+### Changed
+
+- Switched the variant of the progress bar used in setup assistant from success to base.
+
 ## 2.11.0
 
 ### Changed

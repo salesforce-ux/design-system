@@ -36,6 +36,10 @@ Removed the usage of the deprecated combobox. The Picklist now uses the current 
 #### Changed
 - Removed the usage of the deprecated combobox. The Rich Text Editor now uses the current combobox.
 
+### [Setup Assistant](https://www.lightningdesignsystem.com/components/setup-assistant)
+#### Changed
+- Switched the variant of the progress bar used in setup assistant from success to base.
+
 ### [Timepicker](https://www.lightningdesignsystem.com/components/timepicker)
 #### Changed
 - Removed the usage of the deprecated combobox. The Timepicker now uses the current combobox.

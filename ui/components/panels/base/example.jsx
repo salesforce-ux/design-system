@@ -84,6 +84,11 @@ export let examples = [
     )
   },
   {
+    id: 'drawer',
+    label: 'Open as a drawer',
+    element: <PanelPlayground drawer />
+  },
+  {
     id: 'deprecated-panel-header',
     label: 'DEPRECATED - Panel Header',
     element: (

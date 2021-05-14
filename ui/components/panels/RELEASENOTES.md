@@ -4,6 +4,12 @@
 
 <!-- ## [Unreleased] -->
 
+## 2.15.7
+
+### Added
+
+- Added `aria-pressed` attribute to Panel toggle button
+
 ## 2.15.0
 
 ### Added

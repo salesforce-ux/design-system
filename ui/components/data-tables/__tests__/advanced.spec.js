@@ -26,6 +26,14 @@ const { matchesMarkup } = createHelpers(__dirname);
 const product = productRows[0];
 
 describe('Advanced data table row', () => {
+  it('should render a table header row', () =>
+    matchesMarkup(<Thead columns={columns} actionableMode />));
+
+  it('should render a table header row with ascending sort', () =>
+    matchesMarkup(
+      <Thead columns={columns} actionableMode sortDirection="ascending" />
+    ));
+
   it('should render a table row', () =>
     matchesMarkup(
       <AdvancedDataTableTr

@@ -51,13 +51,7 @@ export const PrimitiveCombobox = ({
       labelId={labelId}
       hasRightIcon={!!slotInputIcon}
     >
-      <div
-        className="slds-mobile-combobox"
-        id={uniqueComboboxId}
-        role="combobox"
-        aria-expanded={ariaExpanded}
-        aria-haspopup={ariaHasPopup}
-      >
+      <div className="slds-mobile-combobox" id={uniqueComboboxId}>
         <div className={headerClassNames}>
           {slotAddon && (
             <div className="slds-mobile-combobox__addon">{slotAddon}</div>
@@ -67,7 +61,7 @@ export const PrimitiveCombobox = ({
               id={uniqueInputId}
               placeholder={placeholder}
               autoComplete="off"
-              role="textbox"
+              role="combobox"
               readOnly={isReadOnly}
               disabled={isDisabled}
               defaultValue={defaultValue}
@@ -77,6 +71,8 @@ export const PrimitiveCombobox = ({
               aria-activedescendant={ariaActivedescendant}
               aria-autocomplete={ariaAutocomplete}
               aria-controls={ariaControls}
+              aria-expanded={ariaExpanded}
+              aria-haspopup={ariaHasPopup}
             />
             {slotInputIcon}
           </div>

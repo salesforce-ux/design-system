@@ -1,7 +1,7 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-import React, { Component } from 'react';
+import React, { Component, useContext } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import ButtonIcon from '../button-icons/';
@@ -42,23 +42,33 @@ const ComboboxGroupContainer = props => (
 /**
  * Combobox
  */
-const ComboboxFormElement = props => (
-  <div
-    className={classNames(
-      'slds-combobox',
-      !props.staticListbox &&
-        'slds-dropdown-trigger slds-dropdown-trigger_click',
-      props.isOpen && 'slds-is-open',
-      props.className
-    )}
-    aria-controls={props['aria-controls']}
-    aria-expanded={props.isOpen ? 'true' : 'false'}
-    aria-haspopup={props.resultsType}
-    id={props.id}
-    role="combobox"
-  >
-    {props.children}
-  </div>
+
+const ComboboxFormContext = React.createContext({
+  isOpen: false
+});
+
+const ComboboxFormElement = ({
+  children,
+  className,
+  id,
+  isOpen,
+  staticListbox,
+  ...props
+}) => (
+  <ComboboxFormContext.Provider value={{ isOpen }}>
+    <div
+      className={classNames(
+        'slds-combobox',
+        !staticListbox && 'slds-dropdown-trigger slds-dropdown-trigger_click',
+        isOpen && 'slds-is-open',
+        className
+      )}
+      aria-controls={props['aria-controls']}
+      id={id}
+    >
+      {children}
+    </div>
+  </ComboboxFormContext.Provider>
 );
 
 /**
@@ -67,6 +77,7 @@ const ComboboxFormElement = props => (
 const ComboboxInput = props => {
   const hasInputIcon =
     props.leftInputIcon || props.rightInputIcon || props.showCloseButton;
+  const { isOpen } = useContext(ComboboxFormContext);
 
   return (
     <div
@@ -92,7 +103,9 @@ const ComboboxInput = props => {
           props['aria-controls'] || 'please-provide-listbox-id-here'
         }
         autocomplete="off"
-        role="textbox"
+        role="combobox"
+        aria-expanded={isOpen ? 'true' : 'false'}
+        aria-haspopup={props.resultsType}
         type="text"
         placeholder={
           !props.placeholder
@@ -201,7 +214,6 @@ export default class Combobox extends Component {
             aria-controls={comboboxAriaControls}
             staticListbox={staticListbox}
             isOpen={isOpen || this.state.focused}
-            resultsType={resultsType}
             className={className}
           >
             <ComboboxInput
@@ -223,6 +235,7 @@ export default class Combobox extends Component {
               aria-controls={this.props['aria-controls']}
               aria-activedescendant={this.props['aria-activedescendant']}
               isDisabled={isDisabled}
+              resultsType={resultsType}
             />
             {results}
           </ComboboxFormElement>
@@ -347,7 +360,6 @@ export class ComboboxGroup extends Component {
             <ComboboxFormElement
               isOpen={isOpen || this.state.focused}
               id={comboboxID}
-              resultsType={resultsType}
             >
               <ComboboxInput
                 id={id}
@@ -367,6 +379,7 @@ export class ComboboxGroup extends Component {
                 aria-controls={this.props['aria-controls']}
                 aria-activedescendant={this.props['aria-activedescendant']}
                 autoFocus={autoFocus}
+                resultsType={resultsType}
               />
               {results}
             </ComboboxFormElement>

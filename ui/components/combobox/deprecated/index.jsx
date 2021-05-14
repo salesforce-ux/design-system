@@ -131,9 +131,6 @@ export const DeprecatedCombobox = props => {
               },
               props.className
             )}
-            aria-expanded={props.isOpen ? 'true' : 'false'}
-            aria-haspopup="listbox"
-            role="combobox"
           >
             <div
               className={classNames(
@@ -197,8 +194,10 @@ export const DeprecatedCombobox = props => {
                     ? props['aria-controls'] || props.listboxId
                     : null
                 }
+                aria-expanded={props.isOpen ? 'true' : 'false'}
+                aria-haspopup="listbox"
                 autoComplete="off"
-                role="textbox"
+                role="combobox"
                 type="text"
                 placeholder={
                   !props.placeholder

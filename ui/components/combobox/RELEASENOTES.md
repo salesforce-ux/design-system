@@ -4,6 +4,12 @@
 
 <!-- ## [Unreleased] -->
 
+## 2.16.0
+
+### Changed
+
+- Updated to ARIA 1.2 compliance where these attributes are moved to the text input: `role="combobox"`, `aria-expanded`, `aria-haspopup="listbox"`.
+
 ## 2.13.1
 
 ### Fixed

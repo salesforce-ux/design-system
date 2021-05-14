@@ -7,6 +7,8 @@
 ### Changed
 
 - Removed the usage of the deprecated combobox. The Rich Text Editor now uses the current combobox.
+- Updated [combobox](/components/combobox) to ARIA 1.2 compliance.
+
 ## 2.15.0
 
 ### Added

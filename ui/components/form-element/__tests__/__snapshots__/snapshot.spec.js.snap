@@ -1037,10 +1037,7 @@ exports[`Horizontal Form Element renders deprecated horizontal form elements - e
             className="slds-combobox_container"
           >
             <div
-              aria-expanded="false"
-              aria-haspopup="listbox"
               className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click"
-              role="combobox"
             >
               <div
                 className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
@@ -1049,6 +1046,8 @@ exports[`Horizontal Form Element renders deprecated horizontal form elements - e
                 <input
                   aria-autocomplete="list"
                   aria-controls="listbox-id-01"
+                  aria-expanded="false"
+                  aria-haspopup="listbox"
                   autocomplete="off"
                   className="slds-input slds-combobox__input slds-combobox__input-value"
                   defaultValue="Salesforce Lightning Design System"
@@ -1056,7 +1055,7 @@ exports[`Horizontal Form Element renders deprecated horizontal form elements - e
                   onBlur={[Function]}
                   onFocus={[Function]}
                   placeholder="Search..."
-                  role="textbox"
+                  role="combobox"
                   type="text"
                 />
                 <button
@@ -1151,10 +1150,7 @@ exports[`Horizontal Form Element renders deprecated horizontal form elements - e
             className="slds-combobox_container"
           >
             <div
-              aria-expanded="false"
-              aria-haspopup="listbox"
               className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click"
-              role="combobox"
             >
               <div
                 className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
@@ -1163,6 +1159,8 @@ exports[`Horizontal Form Element renders deprecated horizontal form elements - e
                 <input
                   aria-autocomplete={null}
                   aria-controls="listbox-id-02"
+                  aria-expanded="false"
+                  aria-haspopup="listbox"
                   autocomplete="off"
                   className="slds-input slds-combobox__input slds-combobox__input-value"
                   defaultValue="In Progress"
@@ -1171,7 +1169,7 @@ exports[`Horizontal Form Element renders deprecated horizontal form elements - e
                   onFocus={[Function]}
                   placeholder="Select an Option…"
                   readOnly={true}
-                  role="textbox"
+                  role="combobox"
                   type="text"
                 />
                 <span

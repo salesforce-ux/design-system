@@ -8,6 +8,10 @@
 ## Added
 - Added link to accessibility keyboard interaction guidelines.
 
+### [Combobox](https://www.lightningdesignsystem.com/components/combobox)
+#### Changed
+- Updated to ARIA 1.2 compliance where these attributes are moved to the text input: `role="combobox"`, `aria-expanded`, `aria-haspopup="listbox"`.
+
 ### [Datetime Picker](https://www.lightningdesignsystem.com/components/datetime-picker)
 #### Changed
 - Removed the usage of the deprecated combobox. The Datetime Picker now uses the current combobox.
@@ -19,6 +23,11 @@
 ### [List Builder](https://www.lightningdesignsystem.com/components/list-builder)
 #### Changed
 - Removed the usage of the deprecated combobox. The List Builder now uses the current combobox.
+- Updated [combobox](/components/combobox) to ARIA 1.2 compliance.
+
+### [Lookups](https://www.lightningdesignsystem.com/components/lookups)
+#### Changed
+- Updated [combobox](/components/combobox) to ARIA 1.2 compliance.
 
 ### [Picklist](https://www.lightningdesignsystem.com/components/picklist)
 #### Changed
@@ -35,6 +44,7 @@ Removed the usage of the deprecated combobox. The Picklist now uses the current 
 ### [Rich Text Editor](https://www.lightningdesignsystem.com/components/rich-text-editor)
 #### Changed
 - Removed the usage of the deprecated combobox. The Rich Text Editor now uses the current combobox.
+- Updated [combobox](/components/combobox) to ARIA 1.2 compliance.
 
 ### [Setup Assistant](https://www.lightningdesignsystem.com/components/setup-assistant)
 #### Changed

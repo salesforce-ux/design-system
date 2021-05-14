@@ -35,15 +35,15 @@ A Base Combobox is a readonly text `input` that allows a user to select an optio
 ### Combobox markup
 
 - A Combobox must come with an associated `label` element, with an appropriate `for` attribute
-- `slds-combobox` acts as the root node to the composite Combobox widget. It takes the `role="combobox"` attribute as a result
-  - `aria-haspopup="listbox"` attribute is then applied to indicate the Combobox will display a popup, of type `listbox`
-  - `aria-expanded="true|false"` attribute is applied to describe whether the popup of `listbox` is currently visible or not
+- `slds-combobox` acts as the root node to the composite Combobox widget.
 - The element `slds-combobox__form-element` between the `combobox` and its `input` must have `role="none"`
 
 ### Input markup
 
-- The `input` is an `input` with a role of `textbox`. The role is implicit on inputs, but in this case it doesn't hurt to be explicit
+- The `input` is an `input` with a role of `combobox`. The role is implicit on inputs, but in this case it doesn't hurt to be explicit
 - The `input` has the following attributes:
+  - `aria-haspopup="listbox"` to indicate the Combobox will display a popup, of type `listbox`.
+  - `aria-expanded="true|false"` to describe whether the popup of `listbox` is currently visible or not.
   - `autocomplete="off"` to remove the browsers' suggestions from the `input`
   - `aria-controls=""` which points to the ID of the `listbox`. It informs assistive technology what DOM node the `input` controls, in terms of visibility and / or content
   - `type` attribute set to be `text` as it's not a search field

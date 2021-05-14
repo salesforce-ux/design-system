@@ -756,10 +756,7 @@ exports[`List Builder renders a default list builder 1`] = `
                   className="slds-combobox_container"
                 >
                   <div
-                    aria-expanded="false"
-                    aria-haspopup="listbox"
                     className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click"
-                    role="combobox"
                   >
                     <div
                       className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
@@ -768,13 +765,15 @@ exports[`List Builder renders a default list builder 1`] = `
                       <input
                         aria-autocomplete="list"
                         aria-controls="example-unique-id-2"
+                        aria-expanded="false"
+                        aria-haspopup="listbox"
                         autocomplete="off"
                         className="slds-input slds-combobox__input"
                         id="example-unique-id-1"
                         onBlur={[Function]}
                         onFocus={[Function]}
                         placeholder="Search Salesforce"
-                        role="textbox"
+                        role="combobox"
                         type="text"
                       />
                       <span
@@ -2014,10 +2013,7 @@ exports[`List Builder renders a list builder with default items disabled 1`] = `
                   className="slds-combobox_container"
                 >
                   <div
-                    aria-expanded="false"
-                    aria-haspopup="listbox"
                     className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click"
-                    role="combobox"
                   >
                     <div
                       className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
@@ -2026,13 +2022,15 @@ exports[`List Builder renders a list builder with default items disabled 1`] = `
                       <input
                         aria-autocomplete="list"
                         aria-controls="example-unique-id-45"
+                        aria-expanded="false"
+                        aria-haspopup="listbox"
                         autocomplete="off"
                         className="slds-input slds-combobox__input"
                         id="example-unique-id-44"
                         onBlur={[Function]}
                         onFocus={[Function]}
                         placeholder="Search Salesforce"
-                        role="textbox"
+                        role="combobox"
                         type="text"
                       />
                       <span
@@ -3280,10 +3278,7 @@ exports[`List Builder renders a list builder with filtered results 1`] = `
                   className="slds-combobox_container"
                 >
                   <div
-                    aria-expanded="false"
-                    aria-haspopup="listbox"
                     className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click"
-                    role="combobox"
                   >
                     <div
                       className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
@@ -3292,13 +3287,15 @@ exports[`List Builder renders a list builder with filtered results 1`] = `
                       <input
                         aria-autocomplete="list"
                         aria-controls="example-unique-id-22"
+                        aria-expanded="false"
+                        aria-haspopup="listbox"
                         autocomplete="off"
                         className="slds-input slds-combobox__input"
                         id="example-unique-id-21"
                         onBlur={[Function]}
                         onFocus={[Function]}
                         placeholder="Search Salesforce"
-                        role="textbox"
+                        role="combobox"
                         type="text"
                       />
                       <span
@@ -3987,10 +3984,7 @@ exports[`List Builder renders a list builder with hidden header 1`] = `
                   className="slds-combobox_container"
                 >
                   <div
-                    aria-expanded="false"
-                    aria-haspopup="listbox"
                     className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click"
-                    role="combobox"
                   >
                     <div
                       className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
@@ -3999,13 +3993,15 @@ exports[`List Builder renders a list builder with hidden header 1`] = `
                       <input
                         aria-autocomplete="list"
                         aria-controls="example-unique-id-12"
+                        aria-expanded="false"
+                        aria-haspopup="listbox"
                         autocomplete="off"
                         className="slds-input slds-combobox__input"
                         id="example-unique-id-11"
                         onBlur={[Function]}
                         onFocus={[Function]}
                         placeholder="Search Salesforce"
-                        role="textbox"
+                        role="combobox"
                         type="text"
                       />
                       <span
@@ -4782,10 +4778,7 @@ exports[`List Builder renders a list builder with items disabled 1`] = `
                   className="slds-combobox_container"
                 >
                   <div
-                    aria-expanded="false"
-                    aria-haspopup="listbox"
                     className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click"
-                    role="combobox"
                   >
                     <div
                       className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
@@ -4794,13 +4787,15 @@ exports[`List Builder renders a list builder with items disabled 1`] = `
                       <input
                         aria-autocomplete="list"
                         aria-controls="example-unique-id-35"
+                        aria-expanded="false"
+                        aria-haspopup="listbox"
                         autocomplete="off"
                         className="slds-input slds-combobox__input"
                         id="example-unique-id-34"
                         onBlur={[Function]}
                         onFocus={[Function]}
                         placeholder="Search Salesforce"
-                        role="textbox"
+                        role="combobox"
                         type="text"
                       />
                       <span
@@ -6048,10 +6043,7 @@ exports[`List Builder renders a list builder with items selected 1`] = `
                   className="slds-combobox_container"
                 >
                   <div
-                    aria-expanded="false"
-                    aria-haspopup="listbox"
                     className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click"
-                    role="combobox"
                   >
                     <div
                       className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
@@ -6060,13 +6052,15 @@ exports[`List Builder renders a list builder with items selected 1`] = `
                       <input
                         aria-autocomplete="list"
                         aria-controls="example-unique-id-25"
+                        aria-expanded="false"
+                        aria-haspopup="listbox"
                         autocomplete="off"
                         className="slds-input slds-combobox__input"
                         id="example-unique-id-24"
                         onBlur={[Function]}
                         onFocus={[Function]}
                         placeholder="Search Salesforce"
-                        role="textbox"
+                        role="combobox"
                         type="text"
                       />
                       <span

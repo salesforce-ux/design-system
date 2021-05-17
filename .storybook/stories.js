@@ -83,7 +83,7 @@ const createComponentStories = type => {
         if (Array.isArray(examples.default)) {
           defaultExample = () =>
             getDisplayElementById(examples.default, examples.default[0].id);
-          defaultExampleParams = () =>
+          defaultExampleParams =
             getExampleStoryParams(
               getStoryWrapperDecorator(examples.default[0])
             );

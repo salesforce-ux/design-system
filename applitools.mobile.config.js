@@ -30,7 +30,7 @@ module.exports = {
   puppeteerOptions: process.env.CIRCLECI
     ? { executablePath: '/usr/bin/google-chrome' }
     : undefined,
-  waitBeforeScreenshot: 250,
+  waitBeforeScreenshot: 1000,
   browser: [
     {
       iosDeviceInfo: {

@@ -284,6 +284,1118 @@ exports[`Advanced data table row should remove the row actions column 1`] = `
 </tr>
 `;
 
+exports[`Advanced data table row should render a table header row 1`] = `
+<thead
+  className={null}
+>
+  <tr
+    className="slds-line-height_reset"
+  >
+    <th
+      aria-sort={null}
+      className="slds-text-align_right"
+      scope="col"
+      style={
+        Object {
+          "width": "3.25rem",
+        }
+      }
+    >
+      <span
+        className="slds-assistive-text"
+        id="column-group-header"
+      >
+        Choose a row
+      </span>
+      <div
+        className="slds-th__action slds-th__action_form"
+      >
+        <div
+          className="slds-checkbox"
+        >
+          <input
+            aria-labelledby="check-select-all-label column-group-header"
+            defaultChecked={null}
+            id="checkbox-unique-id-1"
+            name="options"
+            tabIndex="0"
+            type="checkbox"
+            value="checkbox-unique-id-1"
+          />
+          <label
+            className="slds-checkbox__label"
+            htmlFor="checkbox-unique-id-1"
+            id="check-select-all-label"
+          >
+            <span
+              className="slds-checkbox_faux"
+            />
+            <span
+              className="slds-form-element__label slds-assistive-text"
+            >
+              Select All
+            </span>
+          </label>
+        </div>
+      </div>
+    </th>
+    <th
+      aria-label="Name"
+      aria-sort="none"
+      className="slds-is-resizable slds-is-sortable"
+      scope="col"
+      style={
+        Object {
+          "width": null,
+        }
+      }
+    >
+      <a
+        className="slds-th__action slds-text-link_reset"
+        href="#"
+        onClick={[Function]}
+        role="button"
+        tabIndex="0"
+      >
+        <span
+          className="slds-assistive-text"
+        >
+          Sort by: 
+        </span>
+        <div
+          className="slds-grid slds-grid_vertical-align-center slds-has-flexi-truncate"
+        >
+          <span
+            className="slds-truncate"
+            title="Name"
+          >
+            Name
+          </span>
+          <span
+            className="slds-icon_container slds-icon-utility-arrowdown"
+            title={null}
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-icon slds-icon-text-default slds-is-sortable__icon "
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#arrowdown"
+              />
+            </svg>
+          </span>
+        </div>
+      </a>
+      <div
+        className="slds-resizable"
+      >
+        <input
+          aria-label="Name column width"
+          className="slds-resizable__input slds-assistive-text"
+          id="cell-resize-handle-1"
+          max="1000"
+          min="20"
+          tabIndex="0"
+          type="range"
+        />
+        <span
+          className="slds-resizable__handle"
+        >
+          <span
+            className="slds-resizable__divider"
+          />
+        </span>
+      </div>
+    </th>
+    <th
+      aria-label="Account Name"
+      aria-sort="none"
+      className="slds-is-resizable slds-is-sortable"
+      scope="col"
+      style={
+        Object {
+          "width": null,
+        }
+      }
+    >
+      <a
+        className="slds-th__action slds-text-link_reset"
+        href="#"
+        onClick={[Function]}
+        role="button"
+        tabIndex="0"
+      >
+        <span
+          className="slds-assistive-text"
+        >
+          Sort by: 
+        </span>
+        <div
+          className="slds-grid slds-grid_vertical-align-center slds-has-flexi-truncate"
+        >
+          <span
+            className="slds-truncate"
+            title="Account Name"
+          >
+            Account Name
+          </span>
+          <span
+            className="slds-icon_container slds-icon-utility-arrowdown"
+            title={null}
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-icon slds-icon-text-default slds-is-sortable__icon "
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#arrowdown"
+              />
+            </svg>
+          </span>
+        </div>
+      </a>
+      <div
+        className="slds-resizable"
+      >
+        <input
+          aria-label="Account Name column width"
+          className="slds-resizable__input slds-assistive-text"
+          id="cell-resize-handle-2"
+          max="1000"
+          min="20"
+          tabIndex="0"
+          type="range"
+        />
+        <span
+          className="slds-resizable__handle"
+        >
+          <span
+            className="slds-resizable__divider"
+          />
+        </span>
+      </div>
+    </th>
+    <th
+      aria-label="Close Date"
+      aria-sort="none"
+      className="slds-is-resizable slds-is-sortable"
+      scope="col"
+      style={
+        Object {
+          "width": null,
+        }
+      }
+    >
+      <a
+        className="slds-th__action slds-text-link_reset"
+        href="#"
+        onClick={[Function]}
+        role="button"
+        tabIndex="0"
+      >
+        <span
+          className="slds-assistive-text"
+        >
+          Sort by: 
+        </span>
+        <div
+          className="slds-grid slds-grid_vertical-align-center slds-has-flexi-truncate"
+        >
+          <span
+            className="slds-truncate"
+            title="Close Date"
+          >
+            Close Date
+          </span>
+          <span
+            className="slds-icon_container slds-icon-utility-arrowdown"
+            title={null}
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-icon slds-icon-text-default slds-is-sortable__icon "
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#arrowdown"
+              />
+            </svg>
+          </span>
+        </div>
+      </a>
+      <div
+        className="slds-resizable"
+      >
+        <input
+          aria-label="Close Date column width"
+          className="slds-resizable__input slds-assistive-text"
+          id="cell-resize-handle-3"
+          max="1000"
+          min="20"
+          tabIndex="0"
+          type="range"
+        />
+        <span
+          className="slds-resizable__handle"
+        >
+          <span
+            className="slds-resizable__divider"
+          />
+        </span>
+      </div>
+    </th>
+    <th
+      aria-label="Stage"
+      aria-sort="none"
+      className="slds-is-resizable slds-is-sortable"
+      scope="col"
+      style={
+        Object {
+          "width": null,
+        }
+      }
+    >
+      <a
+        className="slds-th__action slds-text-link_reset"
+        href="#"
+        onClick={[Function]}
+        role="button"
+        tabIndex="0"
+      >
+        <span
+          className="slds-assistive-text"
+        >
+          Sort by: 
+        </span>
+        <div
+          className="slds-grid slds-grid_vertical-align-center slds-has-flexi-truncate"
+        >
+          <span
+            className="slds-truncate"
+            title="Stage"
+          >
+            Stage
+          </span>
+          <span
+            className="slds-icon_container slds-icon-utility-arrowdown"
+            title={null}
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-icon slds-icon-text-default slds-is-sortable__icon "
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#arrowdown"
+              />
+            </svg>
+          </span>
+        </div>
+      </a>
+      <div
+        className="slds-resizable"
+      >
+        <input
+          aria-label="Stage column width"
+          className="slds-resizable__input slds-assistive-text"
+          id="cell-resize-handle-4"
+          max="1000"
+          min="20"
+          tabIndex="0"
+          type="range"
+        />
+        <span
+          className="slds-resizable__handle"
+        >
+          <span
+            className="slds-resizable__divider"
+          />
+        </span>
+      </div>
+    </th>
+    <th
+      aria-label="Confidence"
+      aria-sort="none"
+      className="slds-is-resizable slds-is-sortable"
+      scope="col"
+      style={
+        Object {
+          "width": null,
+        }
+      }
+    >
+      <a
+        className="slds-th__action slds-text-link_reset"
+        href="#"
+        onClick={[Function]}
+        role="button"
+        tabIndex="0"
+      >
+        <span
+          className="slds-assistive-text"
+        >
+          Sort by: 
+        </span>
+        <div
+          className="slds-grid slds-grid_vertical-align-center slds-has-flexi-truncate"
+        >
+          <span
+            className="slds-truncate"
+            title="Confidence"
+          >
+            Confidence
+          </span>
+          <span
+            className="slds-icon_container slds-icon-utility-arrowdown"
+            title={null}
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-icon slds-icon-text-default slds-is-sortable__icon "
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#arrowdown"
+              />
+            </svg>
+          </span>
+        </div>
+      </a>
+      <div
+        className="slds-resizable"
+      >
+        <input
+          aria-label="Confidence column width"
+          className="slds-resizable__input slds-assistive-text"
+          id="cell-resize-handle-5"
+          max="1000"
+          min="20"
+          tabIndex="0"
+          type="range"
+        />
+        <span
+          className="slds-resizable__handle"
+        >
+          <span
+            className="slds-resizable__divider"
+          />
+        </span>
+      </div>
+    </th>
+    <th
+      aria-label="Amount"
+      aria-sort="none"
+      className="slds-is-resizable slds-is-sortable"
+      scope="col"
+      style={
+        Object {
+          "width": null,
+        }
+      }
+    >
+      <a
+        className="slds-th__action slds-text-link_reset"
+        href="#"
+        onClick={[Function]}
+        role="button"
+        tabIndex="0"
+      >
+        <span
+          className="slds-assistive-text"
+        >
+          Sort by: 
+        </span>
+        <div
+          className="slds-grid slds-grid_vertical-align-center slds-has-flexi-truncate"
+        >
+          <span
+            className="slds-truncate"
+            title="Amount"
+          >
+            Amount
+          </span>
+          <span
+            className="slds-icon_container slds-icon-utility-arrowdown"
+            title={null}
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-icon slds-icon-text-default slds-is-sortable__icon "
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#arrowdown"
+              />
+            </svg>
+          </span>
+        </div>
+      </a>
+      <div
+        className="slds-resizable"
+      >
+        <input
+          aria-label="Amount column width"
+          className="slds-resizable__input slds-assistive-text"
+          id="cell-resize-handle-6"
+          max="1000"
+          min="20"
+          tabIndex="0"
+          type="range"
+        />
+        <span
+          className="slds-resizable__handle"
+        >
+          <span
+            className="slds-resizable__divider"
+          />
+        </span>
+      </div>
+    </th>
+    <th
+      aria-label="Contact"
+      aria-sort="none"
+      className="slds-is-resizable slds-is-sortable"
+      scope="col"
+      style={
+        Object {
+          "width": null,
+        }
+      }
+    >
+      <a
+        className="slds-th__action slds-text-link_reset"
+        href="#"
+        onClick={[Function]}
+        role="button"
+        tabIndex="0"
+      >
+        <span
+          className="slds-assistive-text"
+        >
+          Sort by: 
+        </span>
+        <div
+          className="slds-grid slds-grid_vertical-align-center slds-has-flexi-truncate"
+        >
+          <span
+            className="slds-truncate"
+            title="Contact"
+          >
+            Contact
+          </span>
+          <span
+            className="slds-icon_container slds-icon-utility-arrowdown"
+            title={null}
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-icon slds-icon-text-default slds-is-sortable__icon "
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#arrowdown"
+              />
+            </svg>
+          </span>
+        </div>
+      </a>
+      <div
+        className="slds-resizable"
+      >
+        <input
+          aria-label="Contact column width"
+          className="slds-resizable__input slds-assistive-text"
+          id="cell-resize-handle-7"
+          max="1000"
+          min="20"
+          tabIndex="0"
+          type="range"
+        />
+        <span
+          className="slds-resizable__handle"
+        >
+          <span
+            className="slds-resizable__divider"
+          />
+        </span>
+      </div>
+    </th>
+    <th
+      aria-sort={null}
+      className=""
+      scope="col"
+      style={
+        Object {
+          "width": "3.25rem",
+        }
+      }
+    >
+      <div
+        className="slds-truncate slds-assistive-text"
+        title="Actions"
+      >
+        Actions
+      </div>
+    </th>
+  </tr>
+</thead>
+`;
+
+exports[`Advanced data table row should render a table header row with ascending sort 1`] = `
+<thead
+  className={null}
+>
+  <tr
+    className="slds-line-height_reset"
+  >
+    <th
+      aria-sort={null}
+      className="slds-text-align_right"
+      scope="col"
+      style={
+        Object {
+          "width": "3.25rem",
+        }
+      }
+    >
+      <span
+        className="slds-assistive-text"
+        id="column-group-header"
+      >
+        Choose a row
+      </span>
+      <div
+        className="slds-th__action slds-th__action_form"
+      >
+        <div
+          className="slds-checkbox"
+        >
+          <input
+            aria-labelledby="check-select-all-label column-group-header"
+            defaultChecked={null}
+            id="checkbox-unique-id-2"
+            name="options"
+            tabIndex="0"
+            type="checkbox"
+            value="checkbox-unique-id-2"
+          />
+          <label
+            className="slds-checkbox__label"
+            htmlFor="checkbox-unique-id-2"
+            id="check-select-all-label"
+          >
+            <span
+              className="slds-checkbox_faux"
+            />
+            <span
+              className="slds-form-element__label slds-assistive-text"
+            >
+              Select All
+            </span>
+          </label>
+        </div>
+      </div>
+    </th>
+    <th
+      aria-label="Name"
+      aria-sort="ascending"
+      className="slds-is-resizable slds-is-sortable slds-is-sorted slds-is-sorted_asc"
+      scope="col"
+      style={
+        Object {
+          "width": null,
+        }
+      }
+    >
+      <a
+        className="slds-th__action slds-text-link_reset"
+        href="#"
+        onClick={[Function]}
+        role="button"
+        tabIndex="0"
+      >
+        <span
+          className="slds-assistive-text"
+        >
+          Sort by: 
+        </span>
+        <div
+          className="slds-grid slds-grid_vertical-align-center slds-has-flexi-truncate"
+        >
+          <span
+            className="slds-truncate"
+            title="Name"
+          >
+            Name
+          </span>
+          <span
+            className="slds-icon_container slds-icon-utility-arrowdown"
+            title={null}
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-icon slds-icon-text-default slds-is-sortable__icon "
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#arrowdown"
+              />
+            </svg>
+          </span>
+        </div>
+      </a>
+      <span
+        aria-atomic="true"
+        aria-live="polite"
+        className="slds-assistive-text"
+      >
+        Sorted 
+        ascending
+      </span>
+      <div
+        className="slds-resizable"
+      >
+        <input
+          aria-label="Name column width"
+          className="slds-resizable__input slds-assistive-text"
+          id="cell-resize-handle-8"
+          max="1000"
+          min="20"
+          tabIndex="0"
+          type="range"
+        />
+        <span
+          className="slds-resizable__handle"
+        >
+          <span
+            className="slds-resizable__divider"
+          />
+        </span>
+      </div>
+    </th>
+    <th
+      aria-label="Account Name"
+      aria-sort="none"
+      className="slds-is-resizable slds-is-sortable"
+      scope="col"
+      style={
+        Object {
+          "width": null,
+        }
+      }
+    >
+      <a
+        className="slds-th__action slds-text-link_reset"
+        href="#"
+        onClick={[Function]}
+        role="button"
+        tabIndex="0"
+      >
+        <span
+          className="slds-assistive-text"
+        >
+          Sort by: 
+        </span>
+        <div
+          className="slds-grid slds-grid_vertical-align-center slds-has-flexi-truncate"
+        >
+          <span
+            className="slds-truncate"
+            title="Account Name"
+          >
+            Account Name
+          </span>
+          <span
+            className="slds-icon_container slds-icon-utility-arrowdown"
+            title={null}
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-icon slds-icon-text-default slds-is-sortable__icon "
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#arrowdown"
+              />
+            </svg>
+          </span>
+        </div>
+      </a>
+      <div
+        className="slds-resizable"
+      >
+        <input
+          aria-label="Account Name column width"
+          className="slds-resizable__input slds-assistive-text"
+          id="cell-resize-handle-9"
+          max="1000"
+          min="20"
+          tabIndex="0"
+          type="range"
+        />
+        <span
+          className="slds-resizable__handle"
+        >
+          <span
+            className="slds-resizable__divider"
+          />
+        </span>
+      </div>
+    </th>
+    <th
+      aria-label="Close Date"
+      aria-sort="none"
+      className="slds-is-resizable slds-is-sortable"
+      scope="col"
+      style={
+        Object {
+          "width": null,
+        }
+      }
+    >
+      <a
+        className="slds-th__action slds-text-link_reset"
+        href="#"
+        onClick={[Function]}
+        role="button"
+        tabIndex="0"
+      >
+        <span
+          className="slds-assistive-text"
+        >
+          Sort by: 
+        </span>
+        <div
+          className="slds-grid slds-grid_vertical-align-center slds-has-flexi-truncate"
+        >
+          <span
+            className="slds-truncate"
+            title="Close Date"
+          >
+            Close Date
+          </span>
+          <span
+            className="slds-icon_container slds-icon-utility-arrowdown"
+            title={null}
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-icon slds-icon-text-default slds-is-sortable__icon "
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#arrowdown"
+              />
+            </svg>
+          </span>
+        </div>
+      </a>
+      <div
+        className="slds-resizable"
+      >
+        <input
+          aria-label="Close Date column width"
+          className="slds-resizable__input slds-assistive-text"
+          id="cell-resize-handle-10"
+          max="1000"
+          min="20"
+          tabIndex="0"
+          type="range"
+        />
+        <span
+          className="slds-resizable__handle"
+        >
+          <span
+            className="slds-resizable__divider"
+          />
+        </span>
+      </div>
+    </th>
+    <th
+      aria-label="Stage"
+      aria-sort="none"
+      className="slds-is-resizable slds-is-sortable"
+      scope="col"
+      style={
+        Object {
+          "width": null,
+        }
+      }
+    >
+      <a
+        className="slds-th__action slds-text-link_reset"
+        href="#"
+        onClick={[Function]}
+        role="button"
+        tabIndex="0"
+      >
+        <span
+          className="slds-assistive-text"
+        >
+          Sort by: 
+        </span>
+        <div
+          className="slds-grid slds-grid_vertical-align-center slds-has-flexi-truncate"
+        >
+          <span
+            className="slds-truncate"
+            title="Stage"
+          >
+            Stage
+          </span>
+          <span
+            className="slds-icon_container slds-icon-utility-arrowdown"
+            title={null}
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-icon slds-icon-text-default slds-is-sortable__icon "
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#arrowdown"
+              />
+            </svg>
+          </span>
+        </div>
+      </a>
+      <div
+        className="slds-resizable"
+      >
+        <input
+          aria-label="Stage column width"
+          className="slds-resizable__input slds-assistive-text"
+          id="cell-resize-handle-11"
+          max="1000"
+          min="20"
+          tabIndex="0"
+          type="range"
+        />
+        <span
+          className="slds-resizable__handle"
+        >
+          <span
+            className="slds-resizable__divider"
+          />
+        </span>
+      </div>
+    </th>
+    <th
+      aria-label="Confidence"
+      aria-sort="none"
+      className="slds-is-resizable slds-is-sortable"
+      scope="col"
+      style={
+        Object {
+          "width": null,
+        }
+      }
+    >
+      <a
+        className="slds-th__action slds-text-link_reset"
+        href="#"
+        onClick={[Function]}
+        role="button"
+        tabIndex="0"
+      >
+        <span
+          className="slds-assistive-text"
+        >
+          Sort by: 
+        </span>
+        <div
+          className="slds-grid slds-grid_vertical-align-center slds-has-flexi-truncate"
+        >
+          <span
+            className="slds-truncate"
+            title="Confidence"
+          >
+            Confidence
+          </span>
+          <span
+            className="slds-icon_container slds-icon-utility-arrowdown"
+            title={null}
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-icon slds-icon-text-default slds-is-sortable__icon "
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#arrowdown"
+              />
+            </svg>
+          </span>
+        </div>
+      </a>
+      <div
+        className="slds-resizable"
+      >
+        <input
+          aria-label="Confidence column width"
+          className="slds-resizable__input slds-assistive-text"
+          id="cell-resize-handle-12"
+          max="1000"
+          min="20"
+          tabIndex="0"
+          type="range"
+        />
+        <span
+          className="slds-resizable__handle"
+        >
+          <span
+            className="slds-resizable__divider"
+          />
+        </span>
+      </div>
+    </th>
+    <th
+      aria-label="Amount"
+      aria-sort="none"
+      className="slds-is-resizable slds-is-sortable"
+      scope="col"
+      style={
+        Object {
+          "width": null,
+        }
+      }
+    >
+      <a
+        className="slds-th__action slds-text-link_reset"
+        href="#"
+        onClick={[Function]}
+        role="button"
+        tabIndex="0"
+      >
+        <span
+          className="slds-assistive-text"
+        >
+          Sort by: 
+        </span>
+        <div
+          className="slds-grid slds-grid_vertical-align-center slds-has-flexi-truncate"
+        >
+          <span
+            className="slds-truncate"
+            title="Amount"
+          >
+            Amount
+          </span>
+          <span
+            className="slds-icon_container slds-icon-utility-arrowdown"
+            title={null}
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-icon slds-icon-text-default slds-is-sortable__icon "
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#arrowdown"
+              />
+            </svg>
+          </span>
+        </div>
+      </a>
+      <div
+        className="slds-resizable"
+      >
+        <input
+          aria-label="Amount column width"
+          className="slds-resizable__input slds-assistive-text"
+          id="cell-resize-handle-13"
+          max="1000"
+          min="20"
+          tabIndex="0"
+          type="range"
+        />
+        <span
+          className="slds-resizable__handle"
+        >
+          <span
+            className="slds-resizable__divider"
+          />
+        </span>
+      </div>
+    </th>
+    <th
+      aria-label="Contact"
+      aria-sort="none"
+      className="slds-is-resizable slds-is-sortable"
+      scope="col"
+      style={
+        Object {
+          "width": null,
+        }
+      }
+    >
+      <a
+        className="slds-th__action slds-text-link_reset"
+        href="#"
+        onClick={[Function]}
+        role="button"
+        tabIndex="0"
+      >
+        <span
+          className="slds-assistive-text"
+        >
+          Sort by: 
+        </span>
+        <div
+          className="slds-grid slds-grid_vertical-align-center slds-has-flexi-truncate"
+        >
+          <span
+            className="slds-truncate"
+            title="Contact"
+          >
+            Contact
+          </span>
+          <span
+            className="slds-icon_container slds-icon-utility-arrowdown"
+            title={null}
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-icon slds-icon-text-default slds-is-sortable__icon "
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#arrowdown"
+              />
+            </svg>
+          </span>
+        </div>
+      </a>
+      <div
+        className="slds-resizable"
+      >
+        <input
+          aria-label="Contact column width"
+          className="slds-resizable__input slds-assistive-text"
+          id="cell-resize-handle-14"
+          max="1000"
+          min="20"
+          tabIndex="0"
+          type="range"
+        />
+        <span
+          className="slds-resizable__handle"
+        >
+          <span
+            className="slds-resizable__divider"
+          />
+        </span>
+      </div>
+    </th>
+    <th
+      aria-sort={null}
+      className=""
+      scope="col"
+      style={
+        Object {
+          "width": "3.25rem",
+        }
+      }
+    >
+      <div
+        className="slds-truncate slds-assistive-text"
+        title="Actions"
+      >
+        Actions
+      </div>
+    </th>
+  </tr>
+</thead>
+`;
+
 exports[`Advanced data table row should render a table row 1`] = `
 <tr
   className="slds-hint-parent"

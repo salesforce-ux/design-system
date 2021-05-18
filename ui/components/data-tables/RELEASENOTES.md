@@ -4,10 +4,19 @@
 
 <!-- ## [Unreleased] -->
 
-# 2.15.2
+## 2.15.2
+
+### Added
 
 - Added `aria-label`, and alternatively, `aria-labelledby` to allow adding additional table context for screen readers
-# 2.14.0
+
+## 2.15.1
+
+### Changed
+
+- Changed the `aria-live` value from `assertive` to `polite`
+
+## 2.14.0
 
 ### Added
 

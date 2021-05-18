@@ -50,6 +50,7 @@ Panel Popovers can be shown on mouse hover but for keyboard or screen reader use
   - Apply the `aria-labelledby` attribute to the `dialog` element and set the value to be the ID of the main Heading element in the Popover (if it provides a good and meaningful title to the `dialog`)
   - If no Heading element is present, use the `aria-label` attribute and set the value to be a meaningful title of the `dialog`
 - The `dialog` should be described where possible. This can be achieved by applying the `aria-describedby` attribute to the `dialog` element and set the value to be the id of the Popover body
+- The triggering element **must** have `aria-haspopup="true"` when the popover is opened and `aria-haspopup="false"` when the popover is closed
 
 ## Base
 
@@ -343,5 +344,3 @@ Panel Popovers can be shown on mouse hover but for keyboard or screen reader use
   <p>For this particular use case, the <code>--slds-c-popover-position-zindex</code> <a href="/platforms/lightning/styling-hooks/">Styling Hook</a> allows developers to change the z-index value. <strong>Please note</strong>: when this value is changed, the responsibility is on the developer to maintain the CSS stacking order.</p>
 
 </Blockquote>
-
-<StylingHooksTable name="popovers" type="component" />

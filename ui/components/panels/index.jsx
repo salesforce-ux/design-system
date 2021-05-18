@@ -1,7 +1,7 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import uniqueId from 'lodash.uniqueid';
@@ -174,55 +174,49 @@ HeaderDeprecated.defaultProps = {
  */
 const Body = props => <div className="slds-panel__body">{props.children}</div>;
 
-class Panel extends Component {
-  render() {
-    const {
-      size,
-      title,
-      docked,
-      invoke,
-      drawer,
-      isVisible = true,
-      handleVisibility,
-      customHeader,
-      children,
-      isAnimated,
-      hasCenterTitle,
-      isInvokedByTab,
-      iconBack,
-      headerActions,
-      headerSlot,
-      id
-    } = this.props;
-
-    return (
-      <Container
+const Panel = ({
+  size,
+  title,
+  docked,
+  invoke,
+  drawer,
+  isVisible = true,
+  handleVisibility,
+  customHeader,
+  children,
+  isAnimated,
+  hasCenterTitle,
+  isInvokedByTab,
+  iconBack,
+  headerActions,
+  headerSlot,
+  id
+}) => (
+  <Container
+    docked={docked}
+    drawer={drawer}
+    size={size}
+    invoke={invoke}
+    isVisible={isVisible}
+    isAnimated={isAnimated}
+    id={id}
+  >
+    {headerSlot || (
+      <Header
+        title={title}
         docked={docked}
-        drawer={drawer}
-        size={size}
         invoke={invoke}
-        isVisible={isVisible}
-        isAnimated={isAnimated}
-        id={id}
-      >
-        {headerSlot || (
-          <Header
-            title={title}
-            docked={docked}
-            invoke={invoke}
-            customHeader={customHeader}
-            handleVisibility={handleVisibility}
-            hasCenterTitle={hasCenterTitle}
-            isInvokedByTab={isInvokedByTab}
-            iconBack={iconBack}
-            headerActions={headerActions}
-          />
-        )}
-        <Body>{children}</Body>
-      </Container>
-    );
-  }
-}
+        customHeader={customHeader}
+        handleVisibility={handleVisibility}
+        hasCenterTitle={hasCenterTitle}
+        isInvokedByTab={isInvokedByTab}
+        iconBack={iconBack}
+        headerActions={headerActions}
+      />
+    )}
+    <Body>{children}</Body>
+  </Container>
+);
 
 Panel.propTypes = {
   size: PropTypes.oneOf(['small', 'medium', 'large', 'x-large', 'full']),
@@ -242,92 +236,79 @@ Panel.defaultProps = {
 
 export default Panel;
 
-export class PanelPlayground extends Component {
-  constructor() {
-    super();
-    this.handleVisibility = this.handleVisibility.bind(this);
-    this.state = {
-      visible: true
-    };
-  }
+export const PanelPlayground = ({
+  size,
+  title,
+  docked,
+  invoke,
+  drawer,
+  hasCenterTitle,
+  icon,
+  iconTitle,
+  children
+}) => {
+  const [isVisible, setVisibility] = useState(true);
 
-  handleVisibility() {
-    this.setState({
-      visible: !this.state.visible
-    });
-  }
+  const exampleId = uniqueId('example-unique-id-');
 
-  render() {
-    const {
-      size,
-      title,
-      docked,
-      invoke,
-      drawer,
-      hasCenterTitle,
-      icon,
-      iconTitle,
-      children
-    } = this.props;
+  const headerComputedClassnames = classNames(
+    'demo-only-element',
+    'slds-theme_default',
+    'slds-border_bottom',
+    'slds-p-around_small',
+    {
+      'slds-text-align_right': docked === 'right'
+    }
+  );
 
-    const exampleId = uniqueId('example-unique-id-');
+  const handleVisibility = () => setVisibility(!isVisible);
 
-    const headerComputedClassnames = classNames(
-      'demo-only-element',
-      'slds-theme_default',
-      'slds-border_bottom',
-      'slds-p-around_small',
-      {
-        'slds-text-align_right': docked === 'right'
-      }
-    );
+  const demoContainerStyles = {
+    backgroundColor: '#fafaf9',
+    position: 'relative',
+    height: '600px',
+    overflow: 'hidden',
+    display: 'flex',
+    flexDirection: docked === 'right' && 'row-reverse'
+  };
 
-    const demoContainerStyles = {
-      backgroundColor: '#fafaf9',
-      position: 'relative',
-      height: '600px',
-      overflow: 'hidden',
-      display: 'flex',
-      flexDirection: docked === 'right' && 'row-reverse'
-    };
-
-    return (
-      <>
-        <header className={headerComputedClassnames} style={{ zIndex: '1' }}>
-          <ButtonIcon
-            theme="neutral"
-            selected={this.state.visible}
-            symbol={icon}
-            title={iconTitle}
-            className="slds-button_icon-border"
-            onClick={() => this.handleVisibility()}
-            aria-expanded={this.state.visible}
-            aria-controls={exampleId}
-          />
-        </header>
-        <div className="demo-only-element" style={demoContainerStyles}>
-          <Panel
-            isVisible={this.state.visible}
-            size={size}
-            title={title}
-            docked={docked}
-            invoke={invoke}
-            drawer={drawer}
-            handleVisibility={this.handleVisibility}
-            hasCenterTitle={hasCenterTitle}
-            id={exampleId}
-          >
-            {children}
-          </Panel>
-          <div className="demo-only-content slds-col slds-p-around_medium">
-            This section is demo-only content representing a custom layout in
-            conjunction with the panel. It is not a part of the blueprint.
-          </div>
+  return (
+    <>
+      <header className={headerComputedClassnames} style={{ zIndex: '1' }}>
+        <ButtonIcon
+          theme="neutral"
+          selected={isVisible}
+          symbol={icon}
+          title={iconTitle}
+          className="slds-button_icon-border"
+          onClick={handleVisibility}
+          aria-expanded={isVisible}
+          aria-controls={exampleId}
+          aria-pressed={isVisible}
+        />
+      </header>
+      <div className="demo-only-element" style={demoContainerStyles}>
+        <Panel
+          isVisible={isVisible}
+          size={size}
+          title={title}
+          docked={docked}
+          invoke={invoke}
+          drawer={drawer}
+          handleVisibility={handleVisibility}
+          hasCenterTitle={hasCenterTitle}
+          id={exampleId}
+        >
+          {children}
+        </Panel>
+        <div className="demo-only-content slds-col slds-p-around_medium">
+          This section is demo-only content representing a custom layout in
+          conjunction with the panel. It is not a part of the blueprint.
         </div>
-      </>
-    );
-  }
-}
+      </div>
+    </>
+  );
+};
 
 PanelPlayground.propTypes = {
   size: PropTypes.string,

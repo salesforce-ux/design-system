@@ -9,7 +9,7 @@ const patternName = 'Progress Bar';
 
 const storyOptions = {
   defaultDemoStyles: 'height: 6rem;'
-}
+};
 
 generateStories(
   patternName,

@@ -121,14 +121,16 @@ let Day = props => (
 
 export let SimpleTable = props => (
   <table className="slds-table" aria-label="Example table for datepicker">
-    <tr>
-      <th>Name</th>
-      <th>Date</th>
-    </tr>
-    <tr>
-      <td>Order</td>
-      <td>{props.children}</td>
-    </tr>
+    <tbody>
+      <tr>
+        <th>Name</th>
+        <th>Date</th>
+      </tr>
+      <tr>
+        <td>Order</td>
+        <td>{props.children}</td>
+      </tr>
+    </tbody>
   </table>
 );
 
@@ -395,6 +397,7 @@ export let DatePickerElement = props => (
     inputId={props.dateInputId}
     hasRightIcon
     hasError={props.hasError}
+    isRequired={props.isRequired}
     dropdown={
       <DatePicker
         idPrefix={props.idPrefix}
@@ -465,6 +468,35 @@ export let states = [
         dateInputId={dateInputId + '-error'}
         isOpen
         todayActive
+        hasError
+      />
+    )
+  },
+  {
+    id: 'datepicker-required',
+    label: 'Date Picker - required',
+    element: (
+      <DatePickerElement
+        idPrefix="pickerRequired"
+        labelContent="Date"
+        dateInputId={dateInputId + '-required'}
+        isOpen
+        todayActive
+        isRequired
+      />
+    )
+  },
+  {
+    id: 'datepicker-required-with-error',
+    label: 'Date Picker - required with error',
+    element: (
+      <DatePickerElement
+        idPrefix="pickerRequired"
+        labelContent="Date"
+        dateInputId={dateInputId + '-required'}
+        isOpen
+        todayActive
+        isRequired
         hasError
       />
     )

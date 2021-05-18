@@ -10,7 +10,7 @@ const patternName = 'Builder Header';
 
 const storyOptions = {
   defaultDemoStyles: DEMO_STYLES
-}
+};
 
 generateStories(
   patternName,

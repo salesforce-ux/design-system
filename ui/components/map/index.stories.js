@@ -9,7 +9,7 @@ const patternName = 'Map';
 const storyOptions = {
   defaultDemoStyles: 'min-height: 500px;',
   isFullBleed: true
-}
+};
 
 generateStories(
   patternName,

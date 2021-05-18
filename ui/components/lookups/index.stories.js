@@ -10,7 +10,7 @@ const patternName = 'Lookups';
 
 const storyOptions = {
   defaultDemoStyles: 'min-height: 20em;'
-}
+};
 
 generateStories(
   patternName,

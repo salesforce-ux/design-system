@@ -8,7 +8,7 @@ const patternName = 'Docked Utility Bar';
 
 const storyOptions = {
   defaultDemoStyles: 'height: 34rem; overflow: hidden;'
-}
+};
 
 generateStories(
   patternName,

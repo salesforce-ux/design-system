@@ -10,7 +10,7 @@ const storyOptions = {
   eyes: {
     waitBeforeScreenshot: '.docs-mobile_frame.slds-resize-done'
   }
-}
+};
 
 generateStories(
   patternName,

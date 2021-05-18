@@ -24,7 +24,7 @@ let Required = () => {
     <FormElement labelContent={inputLabel} inputId={inputId} isRequired>
       <Input id={inputId} placeholder={placeholderText} required />
     </FormElement>
-  )
+  );
 };
 
 let ErrorState = () => {
@@ -47,7 +47,7 @@ let ErrorState = () => {
         aria-describedby={errorId}
       />
     </FormElement>
-  )
+  );
 };
 
 let ErrorIcon = () => {
@@ -72,7 +72,7 @@ let ErrorIcon = () => {
         aria-describedby={errorId}
       />
     </FormElement>
-  )
+  );
 };
 
 let Disabled = () => {
@@ -82,7 +82,7 @@ let Disabled = () => {
     <FormElement labelContent={inputLabel} inputId={inputId}>
       <Input id={inputId} placeholder={placeholderText} disabled />
     </FormElement>
-  )
+  );
 };
 
 let Readonly = props => {
@@ -90,9 +90,15 @@ let Readonly = props => {
 
   return (
     <FormElement labelContent={inputLabel} inputId={inputId}>
-      <Input id={inputId} readOnly hasBorders={props.hasBorders} defaultValue="Read Only" placeholder="" />
+      <Input
+        id={inputId}
+        readOnly
+        hasBorders={props.hasBorders}
+        defaultValue="Read Only"
+        placeholder=""
+      />
     </FormElement>
-  )
+  );
 };
 
 let LeftIcon = () => {
@@ -107,7 +113,7 @@ let LeftIcon = () => {
       />
       <Input id={inputId} placeholder={placeholderText} />
     </FormElement>
-  )
+  );
 };
 
 let RightIcon = () => {
@@ -122,8 +128,8 @@ let RightIcon = () => {
       />
       <Input id={inputId} placeholder={placeholderText} />
     </FormElement>
-  )
-}
+  );
+};
 
 let DoubleIcon = () => {
   const inputId = uniqueId('text-input-id-');
@@ -149,8 +155,8 @@ let DoubleIcon = () => {
         title="Clear"
       />
     </FormElement>
-  )
-}
+  );
+};
 
 let DoubleIconSpinner = () => {
   const inputId = uniqueId('text-input-id-');
@@ -180,8 +186,8 @@ let DoubleIconSpinner = () => {
         />
       </div>
     </FormElement>
-  )
-}
+  );
+};
 
 let InputWithType = props => {
   const inputId = uniqueId(`${props.type}-input-id-`);
@@ -190,18 +196,18 @@ let InputWithType = props => {
     <FormElement labelContent={props.label} inputId={inputId}>
       <Input id={inputId} type={props.type} placeholder={props.placeholder} />
     </FormElement>
-  )
-}
+  );
+};
 
 InputWithType.propTypes = {
   type: PropTypes.string,
   label: PropTypes.string,
   placeholder: PropTypes.string
-}
+};
 
 InputWithType.defaultProps = {
   label: 'Input Label'
-}
+};
 
 let FixedText = () => {
   const inputId = uniqueId('text-input-id-');
@@ -215,7 +221,7 @@ let FixedText = () => {
     >
       <span className="slds-form-element__addon" id="fixed-text-addon-pre">
         $
-        </span>
+      </span>
       <Input
         id={inputId}
         placeholder={placeholderText}
@@ -223,10 +229,10 @@ let FixedText = () => {
       />
       <span className="slds-form-element__addon" id="fixed-text-addon-post">
         euro
-        </span>
+      </span>
     </FormElement>
-  )
-}
+  );
+};
 
 let InlineHelp = () => {
   const inputId = uniqueId('text-input-id-');
@@ -246,8 +252,8 @@ let InlineHelp = () => {
         aria-describedby={errorId}
       />
     </FormElement>
-  )
-}
+  );
+};
 
 const FieldLevelHelp = () => {
   const inputId = uniqueId('text-input-id-');
@@ -261,8 +267,8 @@ const FieldLevelHelp = () => {
     >
       <Input id={inputId} placeholder={placeholderText} />
     </FormElement>
-  )
-}
+  );
+};
 
 const Bare = () => {
   const inputId = uniqueId('text-input-id-');
@@ -271,16 +277,16 @@ const Bare = () => {
     <FormElement labelContent={inputLabel} inputId={inputId}>
       <Input id={inputId} isBare placeholder={placeholderText} />
     </FormElement>
-  )
-}
+  );
+};
 
 /// ///////////////////////////////////////////
 // Export
 /// ///////////////////////////////////////////
 
 export default (
-  <FormElement labelContent={inputLabel} inputId='text-input-id-0'>
-    <Input id='text-input-id-0' placeholder={placeholderText} />
+  <FormElement labelContent={inputLabel} inputId="text-input-id-0">
+    <Input id="text-input-id-0" placeholder={placeholderText} />
   </FormElement>
 );
 

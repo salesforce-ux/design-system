@@ -21,4 +21,13 @@ describe('Timepicker', () => {
 
   it('renders a listbox with a selected item', () =>
     matchesMarkup(getDisplayElementById(Timepicker.states, 'time-selection')));
+
+  it('renders required state', () =>
+    matchesMarkup(getDisplayElementById(Timepicker.states, 'required')));
+
+  it('renders error state', () =>
+    matchesMarkup(getDisplayElementById(Timepicker.states, 'error')));
+
+  it('renders required plus error state', () =>
+    matchesMarkup(getDisplayElementById(Timepicker.states, 'required-error')));
 });

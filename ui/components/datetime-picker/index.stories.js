@@ -8,7 +8,7 @@ const patternName = 'Datetime Picker';
 
 const storyOptions = {
   defaultDemoStyles: 'height: 26rem;'
-}
+};
 
 generateStories(
   patternName,

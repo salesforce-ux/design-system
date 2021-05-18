@@ -26,7 +26,7 @@ exports[`Datetime Picker renders a default datetime picker 1`] = `
           >
             <label
               className="slds-form-element__label"
-              htmlFor="text-input-unique-id-1"
+              htmlFor="example-unique-id-1"
             >
               Date
             </label>
@@ -35,7 +35,7 @@ exports[`Datetime Picker renders a default datetime picker 1`] = `
             >
               <input
                 className="slds-input"
-                id="text-input-unique-id-1"
+                id="example-unique-id-1"
                 placeholder="Select a date…"
                 type="text"
               />
@@ -653,7 +653,7 @@ exports[`Datetime Picker renders a default datetime picker 1`] = `
           >
             <label
               className="slds-form-element__label"
-              htmlFor="example-unique-id-1"
+              htmlFor="example-unique-id-2"
             >
               Time
             </label>
@@ -661,7 +661,7 @@ exports[`Datetime Picker renders a default datetime picker 1`] = `
               className="slds-form-element__control"
             >
               <div
-                className="slds-combobox_container slds-timepicker"
+                className="slds-combobox_container"
               >
                 <div
                   aria-expanded="false"
@@ -674,12 +674,13 @@ exports[`Datetime Picker renders a default datetime picker 1`] = `
                     role="none"
                   >
                     <input
-                      aria-activedescendant="option2"
+                      aria-activedescendant=""
                       aria-autocomplete="list"
-                      aria-controls="example-unique-id-2"
+                      aria-controls="example-unique-id-3"
                       autocomplete="off"
                       className="slds-input slds-combobox__input"
-                      id="example-unique-id-1"
+                      defaultValue=""
+                      id="example-unique-id-2"
                       onBlur={[Function]}
                       onFocus={[Function]}
                       placeholder="Select a time…"
@@ -702,8 +703,8 @@ exports[`Datetime Picker renders a default datetime picker 1`] = `
                   </div>
                   <div
                     aria-orientation={null}
-                    className="slds-dropdown slds-dropdown_length-5 slds-dropdown_fluid"
-                    id="example-unique-id-2"
+                    className="slds-dropdown slds-dropdown_length-5 slds-dropdown_fluid slds-dropdown_left"
+                    id="example-unique-id-3"
                     role="listbox"
                   >
                     <ul
@@ -742,30 +743,16 @@ exports[`Datetime Picker renders a default datetime picker 1`] = `
                         role="presentation"
                       >
                         <div
-                          aria-checked="true"
+                          aria-checked={null}
                           aria-disabled={null}
-                          aria-selected="true"
-                          className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-is-selected slds-has-focus"
+                          aria-selected={null}
+                          className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                           id="option2"
                           role="option"
                         >
                           <span
                             className="slds-media__figure slds-listbox__option-icon"
-                          >
-                            <span
-                              className="slds-icon_container slds-icon-utility-check slds-current-color"
-                              title={null}
-                            >
-                              <svg
-                                aria-hidden={true}
-                                className="slds-icon slds-icon_x-small"
-                              >
-                                <use
-                                  xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#check"
-                                />
-                              </svg>
-                            </span>
-                          </span>
+                          />
                           <span
                             className="slds-media__body"
                           >
@@ -925,7 +912,7 @@ exports[`Datetime Picker renders with a date selection 1`] = `
           >
             <label
               className="slds-form-element__label"
-              htmlFor="text-input-unique-id-7"
+              htmlFor="example-unique-id-7"
             >
               Date
             </label>
@@ -935,7 +922,7 @@ exports[`Datetime Picker renders with a date selection 1`] = `
               <input
                 className="slds-input"
                 defaultValue="06/24/2020"
-                id="text-input-unique-id-7"
+                id="example-unique-id-7"
                 placeholder="Select a date…"
                 type="text"
               />
@@ -1553,7 +1540,7 @@ exports[`Datetime Picker renders with a date selection 1`] = `
           >
             <label
               className="slds-form-element__label"
-              htmlFor="example-unique-id-5"
+              htmlFor="example-unique-id-8"
             >
               Time
             </label>
@@ -1561,7 +1548,7 @@ exports[`Datetime Picker renders with a date selection 1`] = `
               className="slds-form-element__control"
             >
               <div
-                className="slds-combobox_container slds-timepicker"
+                className="slds-combobox_container"
               >
                 <div
                   aria-expanded="false"
@@ -1574,12 +1561,13 @@ exports[`Datetime Picker renders with a date selection 1`] = `
                     role="none"
                   >
                     <input
-                      aria-activedescendant="option2"
+                      aria-activedescendant=""
                       aria-autocomplete="list"
-                      aria-controls="example-unique-id-6"
+                      aria-controls="example-unique-id-9"
                       autocomplete="off"
                       className="slds-input slds-combobox__input"
-                      id="example-unique-id-5"
+                      defaultValue=""
+                      id="example-unique-id-8"
                       onBlur={[Function]}
                       onFocus={[Function]}
                       placeholder="Select a time…"
@@ -1602,8 +1590,8 @@ exports[`Datetime Picker renders with a date selection 1`] = `
                   </div>
                   <div
                     aria-orientation={null}
-                    className="slds-dropdown slds-dropdown_length-5 slds-dropdown_fluid"
-                    id="example-unique-id-6"
+                    className="slds-dropdown slds-dropdown_length-5 slds-dropdown_fluid slds-dropdown_left"
+                    id="example-unique-id-9"
                     role="listbox"
                   >
                     <ul
@@ -1642,30 +1630,1810 @@ exports[`Datetime Picker renders with a date selection 1`] = `
                         role="presentation"
                       >
                         <div
-                          aria-checked="true"
+                          aria-checked={null}
                           aria-disabled={null}
-                          aria-selected="true"
-                          className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-is-selected slds-has-focus"
+                          aria-selected={null}
+                          className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                           id="option2"
                           role="option"
                         >
                           <span
                             className="slds-media__figure slds-listbox__option-icon"
+                          />
+                          <span
+                            className="slds-media__body"
                           >
                             <span
-                              className="slds-icon_container slds-icon-utility-check slds-current-color"
-                              title={null}
+                              className="slds-truncate"
+                              title="8:00am"
                             >
-                              <svg
-                                aria-hidden={true}
-                                className="slds-icon slds-icon_x-small"
-                              >
-                                <use
-                                  xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#check"
-                                />
-                              </svg>
+                              8:00am
                             </span>
                           </span>
+                        </div>
+                      </li>
+                      <li
+                        className="slds-listbox__item"
+                        role="presentation"
+                      >
+                        <div
+                          aria-checked={null}
+                          aria-disabled={null}
+                          aria-selected={null}
+                          className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
+                          id="option3"
+                          role="option"
+                        >
+                          <span
+                            className="slds-media__figure slds-listbox__option-icon"
+                          />
+                          <span
+                            className="slds-media__body"
+                          >
+                            <span
+                              className="slds-truncate"
+                              title="9:00am"
+                            >
+                              9:00am
+                            </span>
+                          </span>
+                        </div>
+                      </li>
+                      <li
+                        className="slds-listbox__item"
+                        role="presentation"
+                      >
+                        <div
+                          aria-checked={null}
+                          aria-disabled={null}
+                          aria-selected={null}
+                          className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
+                          id="option4"
+                          role="option"
+                        >
+                          <span
+                            className="slds-media__figure slds-listbox__option-icon"
+                          />
+                          <span
+                            className="slds-media__body"
+                          >
+                            <span
+                              className="slds-truncate"
+                              title="10:00am"
+                            >
+                              10:00am
+                            </span>
+                          </span>
+                        </div>
+                      </li>
+                      <li
+                        className="slds-listbox__item"
+                        role="presentation"
+                      >
+                        <div
+                          aria-checked={null}
+                          aria-disabled={null}
+                          aria-selected={null}
+                          className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
+                          id="option5"
+                          role="option"
+                        >
+                          <span
+                            className="slds-media__figure slds-listbox__option-icon"
+                          />
+                          <span
+                            className="slds-media__body"
+                          >
+                            <span
+                              className="slds-truncate"
+                              title="11:00am"
+                            >
+                              11:00am
+                            </span>
+                          </span>
+                        </div>
+                      </li>
+                      <li
+                        className="slds-listbox__item"
+                        role="presentation"
+                      >
+                        <div
+                          aria-checked={null}
+                          aria-disabled={null}
+                          aria-selected={null}
+                          className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
+                          id="option6"
+                          role="option"
+                        >
+                          <span
+                            className="slds-media__figure slds-listbox__option-icon"
+                          />
+                          <span
+                            className="slds-media__body"
+                          >
+                            <span
+                              className="slds-truncate"
+                              title="12:00pm"
+                            >
+                              12:00pm
+                            </span>
+                          </span>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </fieldset>
+</div>
+`;
+
+exports[`Datetime Picker renders with a required plus error state 1`] = `
+<div
+  className="slds-form"
+>
+  <fieldset
+    className="slds-form-element slds-form-element_compound slds-has-error"
+  >
+    <legend
+      className="slds-form-element__label slds-form-element__legend"
+    >
+      <abbr
+        className="slds-required"
+        title="required"
+      >
+        *
+         
+      </abbr>
+      Date and Time
+    </legend>
+    <div
+      className="slds-form-element__control"
+    >
+      <div
+        className="slds-form-element__group"
+      >
+        <div
+          className="slds-form-element__row"
+        >
+          <div
+            className="slds-form-element slds-has-error slds-dropdown-trigger slds-dropdown-trigger_click"
+          >
+            <label
+              className="slds-form-element__label"
+              htmlFor="example-unique-id-19"
+            >
+              Date
+            </label>
+            <div
+              className="slds-form-element__control slds-input-has-icon slds-input-has-icon_right"
+            >
+              <input
+                aria-describedby="example-unique-id-19-error"
+                aria-invalid="true"
+                className="slds-input"
+                id="example-unique-id-19"
+                placeholder="Select a date…"
+                type="text"
+              />
+              <button
+                className="slds-button slds-button_icon slds-input__icon slds-input__icon_right"
+                onClick={[Function]}
+                title="Select a date"
+              >
+                <svg
+                  aria-hidden={true}
+                  className="slds-button__icon"
+                >
+                  <use
+                    xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#event"
+                  />
+                </svg>
+                <span
+                  className="slds-assistive-text"
+                >
+                  Select a date
+                </span>
+              </button>
+            </div>
+            <div
+              aria-hidden="false"
+              aria-label="Date picker: June"
+              className="slds-datepicker slds-dropdown slds-dropdown_left"
+              role="dialog"
+            >
+              <div
+                className="slds-datepicker__filter slds-grid"
+              >
+                <div
+                  className="slds-datepicker__filter_month slds-grid slds-grid_align-spread slds-grow"
+                >
+                  <div
+                    className="slds-align-middle"
+                  >
+                    <button
+                      className="slds-button slds-button_icon slds-button_icon-container"
+                      onClick={[Function]}
+                      title="Previous Month"
+                    >
+                      <svg
+                        aria-hidden={true}
+                        className="slds-button__icon"
+                      >
+                        <use
+                          xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#left"
+                        />
+                      </svg>
+                      <span
+                        className="slds-assistive-text"
+                      >
+                        Previous Month
+                      </span>
+                    </button>
+                  </div>
+                  <h2
+                    aria-atomic="true"
+                    aria-live="assertive"
+                    className="slds-align-middle"
+                    id="undefined-month"
+                  >
+                    June
+                  </h2>
+                  <div
+                    className="slds-align-middle"
+                  >
+                    <button
+                      className="slds-button slds-button_icon slds-button_icon-container"
+                      onClick={[Function]}
+                      title="Next Month"
+                    >
+                      <svg
+                        aria-hidden={true}
+                        className="slds-button__icon"
+                      >
+                        <use
+                          xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#right"
+                        />
+                      </svg>
+                      <span
+                        className="slds-assistive-text"
+                      >
+                        Next Month
+                      </span>
+                    </button>
+                  </div>
+                </div>
+                <div
+                  className="slds-shrink-none"
+                >
+                  <label
+                    className="slds-assistive-text"
+                    htmlFor="undefined_select"
+                  >
+                    Pick a Year
+                  </label>
+                  <div
+                    className="slds-select_container"
+                  >
+                    <select
+                      className="slds-select"
+                      id="undefined_select"
+                    >
+                      <option>
+                        2020
+                      </option>
+                      <option>
+                        2021
+                      </option>
+                      <option>
+                        2022
+                      </option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <table
+                aria-labelledby="undefined-month"
+                aria-multiselectable="true"
+                className="slds-datepicker__month"
+                role="grid"
+              >
+                <thead>
+                  <tr
+                    id="undefined-weekdays"
+                  >
+                    <th
+                      id="undefined-Sunday"
+                      scope="col"
+                    >
+                      <abbr
+                        title="Sunday"
+                      >
+                        Sun
+                      </abbr>
+                    </th>
+                    <th
+                      id="undefined-Monday"
+                      scope="col"
+                    >
+                      <abbr
+                        title="Monday"
+                      >
+                        Mon
+                      </abbr>
+                    </th>
+                    <th
+                      id="undefined-Tuesday"
+                      scope="col"
+                    >
+                      <abbr
+                        title="Tuesday"
+                      >
+                        Tue
+                      </abbr>
+                    </th>
+                    <th
+                      id="undefined-Wednesday"
+                      scope="col"
+                    >
+                      <abbr
+                        title="Wednesday"
+                      >
+                        Wed
+                      </abbr>
+                    </th>
+                    <th
+                      id="undefined-Thursday"
+                      scope="col"
+                    >
+                      <abbr
+                        title="Thursday"
+                      >
+                        Thu
+                      </abbr>
+                    </th>
+                    <th
+                      id="undefined-Friday"
+                      scope="col"
+                    >
+                      <abbr
+                        title="Friday"
+                      >
+                        Fri
+                      </abbr>
+                    </th>
+                    <th
+                      id="undefined-Saturday"
+                      scope="col"
+                    >
+                      <abbr
+                        title="Saturday"
+                      >
+                        Sat
+                      </abbr>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td
+                      aria-selected="false"
+                      className="slds-day_adjacent-month"
+                      role="gridcell"
+                    >
+                      <span
+                        className="slds-day"
+                      >
+                        31
+                      </span>
+                    </td>
+                    <td
+                      aria-selected="false"
+                      className=""
+                      role="gridcell"
+                      tabIndex="0"
+                    >
+                      <span
+                        className="slds-day"
+                      >
+                        1
+                      </span>
+                    </td>
+                    <td
+                      aria-selected="false"
+                      className=""
+                      role="gridcell"
+                    >
+                      <span
+                        className="slds-day"
+                      >
+                        2
+                      </span>
+                    </td>
+                    <td
+                      aria-selected="false"
+                      className=""
+                      role="gridcell"
+                    >
+                      <span
+                        className="slds-day"
+                      >
+                        3
+                      </span>
+                    </td>
+                    <td
+                      aria-selected="false"
+                      className=""
+                      role="gridcell"
+                    >
+                      <span
+                        className="slds-day"
+                      >
+                        4
+                      </span>
+                    </td>
+                    <td
+                      aria-selected="false"
+                      className=""
+                      role="gridcell"
+                    >
+                      <span
+                        className="slds-day"
+                      >
+                        5
+                      </span>
+                    </td>
+                    <td
+                      aria-selected="false"
+                      className=""
+                      role="gridcell"
+                    >
+                      <span
+                        className="slds-day"
+                      >
+                        6
+                      </span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td
+                      aria-selected="false"
+                      className=""
+                      role="gridcell"
+                    >
+                      <span
+                        className="slds-day"
+                      >
+                        7
+                      </span>
+                    </td>
+                    <td
+                      aria-selected="false"
+                      className=""
+                      role="gridcell"
+                    >
+                      <span
+                        className="slds-day"
+                      >
+                        8
+                      </span>
+                    </td>
+                    <td
+                      aria-selected="false"
+                      className=""
+                      role="gridcell"
+                    >
+                      <span
+                        className="slds-day"
+                      >
+                        9
+                      </span>
+                    </td>
+                    <td
+                      aria-selected="false"
+                      className=""
+                      role="gridcell"
+                    >
+                      <span
+                        className="slds-day"
+                      >
+                        10
+                      </span>
+                    </td>
+                    <td
+                      aria-selected="false"
+                      className=""
+                      role="gridcell"
+                    >
+                      <span
+                        className="slds-day"
+                      >
+                        11
+                      </span>
+                    </td>
+                    <td
+                      aria-selected="false"
+                      className=""
+                      role="gridcell"
+                    >
+                      <span
+                        className="slds-day"
+                      >
+                        12
+                      </span>
+                    </td>
+                    <td
+                      aria-selected="false"
+                      className=""
+                      role="gridcell"
+                    >
+                      <span
+                        className="slds-day"
+                      >
+                        13
+                      </span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td
+                      aria-selected="false"
+                      className=""
+                      role="gridcell"
+                    >
+                      <span
+                        className="slds-day"
+                      >
+                        14
+                      </span>
+                    </td>
+                    <td
+                      aria-selected="false"
+                      className=""
+                      role="gridcell"
+                    >
+                      <span
+                        className="slds-day"
+                      >
+                        15
+                      </span>
+                    </td>
+                    <td
+                      aria-selected="false"
+                      className=""
+                      role="gridcell"
+                    >
+                      <span
+                        className="slds-day"
+                      >
+                        16
+                      </span>
+                    </td>
+                    <td
+                      aria-selected="false"
+                      className=""
+                      role="gridcell"
+                    >
+                      <span
+                        className="slds-day"
+                      >
+                        17
+                      </span>
+                    </td>
+                    <td
+                      aria-current="date"
+                      aria-selected="false"
+                      className="slds-is-today"
+                      role="gridcell"
+                    >
+                      <span
+                        className="slds-day"
+                      >
+                        18
+                      </span>
+                    </td>
+                    <td
+                      aria-selected="false"
+                      className=""
+                      role="gridcell"
+                    >
+                      <span
+                        className="slds-day"
+                      >
+                        19
+                      </span>
+                    </td>
+                    <td
+                      aria-selected="false"
+                      className=""
+                      role="gridcell"
+                    >
+                      <span
+                        className="slds-day"
+                      >
+                        20
+                      </span>
+                    </td>
+                  </tr>
+                  <tr
+                    className=""
+                  >
+                    <td
+                      aria-selected="false"
+                      className=""
+                      role="gridcell"
+                    >
+                      <span
+                        className="slds-day"
+                      >
+                        21
+                      </span>
+                    </td>
+                    <td
+                      aria-selected="false"
+                      className=""
+                      role="gridcell"
+                    >
+                      <span
+                        className="slds-day"
+                      >
+                        22
+                      </span>
+                    </td>
+                    <td
+                      aria-selected="false"
+                      className=""
+                      role="gridcell"
+                    >
+                      <span
+                        className="slds-day"
+                      >
+                        23
+                      </span>
+                    </td>
+                    <td
+                      aria-selected="false"
+                      className=""
+                      role="gridcell"
+                    >
+                      <span
+                        className="slds-day"
+                      >
+                        24
+                      </span>
+                    </td>
+                    <td
+                      aria-selected="false"
+                      className=""
+                      role="gridcell"
+                    >
+                      <span
+                        className="slds-day"
+                      >
+                        25
+                      </span>
+                    </td>
+                    <td
+                      aria-selected="false"
+                      className=""
+                      role="gridcell"
+                    >
+                      <span
+                        className="slds-day"
+                      >
+                        26
+                      </span>
+                    </td>
+                    <td
+                      aria-selected="false"
+                      className=""
+                      role="gridcell"
+                    >
+                      <span
+                        className="slds-day"
+                      >
+                        27
+                      </span>
+                    </td>
+                  </tr>
+                  <tr
+                    className=""
+                  >
+                    <td
+                      aria-selected="false"
+                      className=""
+                      role="gridcell"
+                    >
+                      <span
+                        className="slds-day"
+                      >
+                        28
+                      </span>
+                    </td>
+                    <td
+                      aria-selected="false"
+                      className=""
+                      role="gridcell"
+                    >
+                      <span
+                        className="slds-day"
+                      >
+                        29
+                      </span>
+                    </td>
+                    <td
+                      aria-selected="false"
+                      className=""
+                      role="gridcell"
+                    >
+                      <span
+                        className="slds-day"
+                      >
+                        30
+                      </span>
+                    </td>
+                    <td
+                      aria-selected="false"
+                      className="slds-day_adjacent-month"
+                      role="gridcell"
+                    >
+                      <span
+                        className="slds-day"
+                      >
+                        1
+                      </span>
+                    </td>
+                    <td
+                      aria-selected="false"
+                      className="slds-day_adjacent-month"
+                      role="gridcell"
+                    >
+                      <span
+                        className="slds-day"
+                      >
+                        2
+                      </span>
+                    </td>
+                    <td
+                      aria-selected="false"
+                      className="slds-day_adjacent-month"
+                      role="gridcell"
+                    >
+                      <span
+                        className="slds-day"
+                      >
+                        3
+                      </span>
+                    </td>
+                    <td
+                      aria-selected="false"
+                      className="slds-day_adjacent-month"
+                      role="gridcell"
+                    >
+                      <span
+                        className="slds-day"
+                      >
+                        4
+                      </span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <button
+                className="slds-button slds-align_absolute-center slds-text-link"
+              >
+                Today
+              </button>
+            </div>
+          </div>
+          <div
+            className="slds-form-element"
+          >
+            <label
+              className="slds-form-element__label"
+              htmlFor="example-unique-id-20"
+            >
+              Time
+            </label>
+            <div
+              className="slds-form-element__control"
+            >
+              <div
+                className="slds-combobox_container"
+              >
+                <div
+                  aria-expanded="false"
+                  aria-haspopup="listbox"
+                  className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click"
+                  role="combobox"
+                >
+                  <div
+                    className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
+                    role="none"
+                  >
+                    <input
+                      aria-activedescendant=""
+                      aria-autocomplete="list"
+                      aria-controls="example-unique-id-21"
+                      autocomplete="off"
+                      className="slds-input slds-combobox__input"
+                      defaultValue=""
+                      id="example-unique-id-20"
+                      onBlur={[Function]}
+                      onFocus={[Function]}
+                      placeholder="Select a time…"
+                      role="textbox"
+                      type="text"
+                    />
+                    <span
+                      className="slds-icon_container slds-icon-utility-clock slds-input__icon slds-input__icon_right"
+                      title={null}
+                    >
+                      <svg
+                        aria-hidden={true}
+                        className="slds-icon slds-icon slds-icon_x-small slds-icon-text-default slds-icon-text-error"
+                      >
+                        <use
+                          xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#clock"
+                        />
+                      </svg>
+                    </span>
+                  </div>
+                  <div
+                    aria-orientation={null}
+                    className="slds-dropdown slds-dropdown_length-5 slds-dropdown_fluid slds-dropdown_left"
+                    id="example-unique-id-21"
+                    role="listbox"
+                  >
+                    <ul
+                      className="slds-listbox slds-listbox_vertical"
+                      role="presentation"
+                    >
+                      <li
+                        className="slds-listbox__item"
+                        role="presentation"
+                      >
+                        <div
+                          aria-checked={null}
+                          aria-disabled={null}
+                          aria-selected={null}
+                          className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
+                          id="option1"
+                          role="option"
+                        >
+                          <span
+                            className="slds-media__figure slds-listbox__option-icon"
+                          />
+                          <span
+                            className="slds-media__body"
+                          >
+                            <span
+                              className="slds-truncate"
+                              title="7:00am"
+                            >
+                              7:00am
+                            </span>
+                          </span>
+                        </div>
+                      </li>
+                      <li
+                        className="slds-listbox__item"
+                        role="presentation"
+                      >
+                        <div
+                          aria-checked={null}
+                          aria-disabled={null}
+                          aria-selected={null}
+                          className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
+                          id="option2"
+                          role="option"
+                        >
+                          <span
+                            className="slds-media__figure slds-listbox__option-icon"
+                          />
+                          <span
+                            className="slds-media__body"
+                          >
+                            <span
+                              className="slds-truncate"
+                              title="8:00am"
+                            >
+                              8:00am
+                            </span>
+                          </span>
+                        </div>
+                      </li>
+                      <li
+                        className="slds-listbox__item"
+                        role="presentation"
+                      >
+                        <div
+                          aria-checked={null}
+                          aria-disabled={null}
+                          aria-selected={null}
+                          className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
+                          id="option3"
+                          role="option"
+                        >
+                          <span
+                            className="slds-media__figure slds-listbox__option-icon"
+                          />
+                          <span
+                            className="slds-media__body"
+                          >
+                            <span
+                              className="slds-truncate"
+                              title="9:00am"
+                            >
+                              9:00am
+                            </span>
+                          </span>
+                        </div>
+                      </li>
+                      <li
+                        className="slds-listbox__item"
+                        role="presentation"
+                      >
+                        <div
+                          aria-checked={null}
+                          aria-disabled={null}
+                          aria-selected={null}
+                          className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
+                          id="option4"
+                          role="option"
+                        >
+                          <span
+                            className="slds-media__figure slds-listbox__option-icon"
+                          />
+                          <span
+                            className="slds-media__body"
+                          >
+                            <span
+                              className="slds-truncate"
+                              title="10:00am"
+                            >
+                              10:00am
+                            </span>
+                          </span>
+                        </div>
+                      </li>
+                      <li
+                        className="slds-listbox__item"
+                        role="presentation"
+                      >
+                        <div
+                          aria-checked={null}
+                          aria-disabled={null}
+                          aria-selected={null}
+                          className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
+                          id="option5"
+                          role="option"
+                        >
+                          <span
+                            className="slds-media__figure slds-listbox__option-icon"
+                          />
+                          <span
+                            className="slds-media__body"
+                          >
+                            <span
+                              className="slds-truncate"
+                              title="11:00am"
+                            >
+                              11:00am
+                            </span>
+                          </span>
+                        </div>
+                      </li>
+                      <li
+                        className="slds-listbox__item"
+                        role="presentation"
+                      >
+                        <div
+                          aria-checked={null}
+                          aria-disabled={null}
+                          aria-selected={null}
+                          className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
+                          id="option6"
+                          role="option"
+                        >
+                          <span
+                            className="slds-media__figure slds-listbox__option-icon"
+                          />
+                          <span
+                            className="slds-media__body"
+                          >
+                            <span
+                              className="slds-truncate"
+                              title="12:00pm"
+                            >
+                              12:00pm
+                            </span>
+                          </span>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="slds-form-element__help"
+      id="example-unique-id-19-error"
+    >
+      Complete this field.
+    </div>
+  </fieldset>
+</div>
+`;
+
+exports[`Datetime Picker renders with a required state 1`] = `
+<div
+  className="slds-form"
+>
+  <fieldset
+    className="slds-form-element slds-form-element_compound"
+  >
+    <legend
+      className="slds-form-element__label slds-form-element__legend"
+    >
+      <abbr
+        className="slds-required"
+        title="required"
+      >
+        *
+         
+      </abbr>
+      Date and Time
+    </legend>
+    <div
+      className="slds-form-element__control"
+    >
+      <div
+        className="slds-form-element__group"
+      >
+        <div
+          className="slds-form-element__row"
+        >
+          <div
+            className="slds-form-element slds-dropdown-trigger slds-dropdown-trigger_click"
+          >
+            <label
+              className="slds-form-element__label"
+              htmlFor="example-unique-id-13"
+            >
+              Date
+            </label>
+            <div
+              className="slds-form-element__control slds-input-has-icon slds-input-has-icon_right"
+            >
+              <input
+                className="slds-input"
+                id="example-unique-id-13"
+                placeholder="Select a date…"
+                type="text"
+              />
+              <button
+                className="slds-button slds-button_icon slds-input__icon slds-input__icon_right"
+                onClick={[Function]}
+                title="Select a date"
+              >
+                <svg
+                  aria-hidden={true}
+                  className="slds-button__icon"
+                >
+                  <use
+                    xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#event"
+                  />
+                </svg>
+                <span
+                  className="slds-assistive-text"
+                >
+                  Select a date
+                </span>
+              </button>
+            </div>
+            <div
+              aria-hidden="false"
+              aria-label="Date picker: June"
+              className="slds-datepicker slds-dropdown slds-dropdown_left"
+              role="dialog"
+            >
+              <div
+                className="slds-datepicker__filter slds-grid"
+              >
+                <div
+                  className="slds-datepicker__filter_month slds-grid slds-grid_align-spread slds-grow"
+                >
+                  <div
+                    className="slds-align-middle"
+                  >
+                    <button
+                      className="slds-button slds-button_icon slds-button_icon-container"
+                      onClick={[Function]}
+                      title="Previous Month"
+                    >
+                      <svg
+                        aria-hidden={true}
+                        className="slds-button__icon"
+                      >
+                        <use
+                          xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#left"
+                        />
+                      </svg>
+                      <span
+                        className="slds-assistive-text"
+                      >
+                        Previous Month
+                      </span>
+                    </button>
+                  </div>
+                  <h2
+                    aria-atomic="true"
+                    aria-live="assertive"
+                    className="slds-align-middle"
+                    id="undefined-month"
+                  >
+                    June
+                  </h2>
+                  <div
+                    className="slds-align-middle"
+                  >
+                    <button
+                      className="slds-button slds-button_icon slds-button_icon-container"
+                      onClick={[Function]}
+                      title="Next Month"
+                    >
+                      <svg
+                        aria-hidden={true}
+                        className="slds-button__icon"
+                      >
+                        <use
+                          xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#right"
+                        />
+                      </svg>
+                      <span
+                        className="slds-assistive-text"
+                      >
+                        Next Month
+                      </span>
+                    </button>
+                  </div>
+                </div>
+                <div
+                  className="slds-shrink-none"
+                >
+                  <label
+                    className="slds-assistive-text"
+                    htmlFor="undefined_select"
+                  >
+                    Pick a Year
+                  </label>
+                  <div
+                    className="slds-select_container"
+                  >
+                    <select
+                      className="slds-select"
+                      id="undefined_select"
+                    >
+                      <option>
+                        2020
+                      </option>
+                      <option>
+                        2021
+                      </option>
+                      <option>
+                        2022
+                      </option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <table
+                aria-labelledby="undefined-month"
+                aria-multiselectable="true"
+                className="slds-datepicker__month"
+                role="grid"
+              >
+                <thead>
+                  <tr
+                    id="undefined-weekdays"
+                  >
+                    <th
+                      id="undefined-Sunday"
+                      scope="col"
+                    >
+                      <abbr
+                        title="Sunday"
+                      >
+                        Sun
+                      </abbr>
+                    </th>
+                    <th
+                      id="undefined-Monday"
+                      scope="col"
+                    >
+                      <abbr
+                        title="Monday"
+                      >
+                        Mon
+                      </abbr>
+                    </th>
+                    <th
+                      id="undefined-Tuesday"
+                      scope="col"
+                    >
+                      <abbr
+                        title="Tuesday"
+                      >
+                        Tue
+                      </abbr>
+                    </th>
+                    <th
+                      id="undefined-Wednesday"
+                      scope="col"
+                    >
+                      <abbr
+                        title="Wednesday"
+                      >
+                        Wed
+                      </abbr>
+                    </th>
+                    <th
+                      id="undefined-Thursday"
+                      scope="col"
+                    >
+                      <abbr
+                        title="Thursday"
+                      >
+                        Thu
+                      </abbr>
+                    </th>
+                    <th
+                      id="undefined-Friday"
+                      scope="col"
+                    >
+                      <abbr
+                        title="Friday"
+                      >
+                        Fri
+                      </abbr>
+                    </th>
+                    <th
+                      id="undefined-Saturday"
+                      scope="col"
+                    >
+                      <abbr
+                        title="Saturday"
+                      >
+                        Sat
+                      </abbr>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td
+                      aria-selected="false"
+                      className="slds-day_adjacent-month"
+                      role="gridcell"
+                    >
+                      <span
+                        className="slds-day"
+                      >
+                        31
+                      </span>
+                    </td>
+                    <td
+                      aria-selected="false"
+                      className=""
+                      role="gridcell"
+                      tabIndex="0"
+                    >
+                      <span
+                        className="slds-day"
+                      >
+                        1
+                      </span>
+                    </td>
+                    <td
+                      aria-selected="false"
+                      className=""
+                      role="gridcell"
+                    >
+                      <span
+                        className="slds-day"
+                      >
+                        2
+                      </span>
+                    </td>
+                    <td
+                      aria-selected="false"
+                      className=""
+                      role="gridcell"
+                    >
+                      <span
+                        className="slds-day"
+                      >
+                        3
+                      </span>
+                    </td>
+                    <td
+                      aria-selected="false"
+                      className=""
+                      role="gridcell"
+                    >
+                      <span
+                        className="slds-day"
+                      >
+                        4
+                      </span>
+                    </td>
+                    <td
+                      aria-selected="false"
+                      className=""
+                      role="gridcell"
+                    >
+                      <span
+                        className="slds-day"
+                      >
+                        5
+                      </span>
+                    </td>
+                    <td
+                      aria-selected="false"
+                      className=""
+                      role="gridcell"
+                    >
+                      <span
+                        className="slds-day"
+                      >
+                        6
+                      </span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td
+                      aria-selected="false"
+                      className=""
+                      role="gridcell"
+                    >
+                      <span
+                        className="slds-day"
+                      >
+                        7
+                      </span>
+                    </td>
+                    <td
+                      aria-selected="false"
+                      className=""
+                      role="gridcell"
+                    >
+                      <span
+                        className="slds-day"
+                      >
+                        8
+                      </span>
+                    </td>
+                    <td
+                      aria-selected="false"
+                      className=""
+                      role="gridcell"
+                    >
+                      <span
+                        className="slds-day"
+                      >
+                        9
+                      </span>
+                    </td>
+                    <td
+                      aria-selected="false"
+                      className=""
+                      role="gridcell"
+                    >
+                      <span
+                        className="slds-day"
+                      >
+                        10
+                      </span>
+                    </td>
+                    <td
+                      aria-selected="false"
+                      className=""
+                      role="gridcell"
+                    >
+                      <span
+                        className="slds-day"
+                      >
+                        11
+                      </span>
+                    </td>
+                    <td
+                      aria-selected="false"
+                      className=""
+                      role="gridcell"
+                    >
+                      <span
+                        className="slds-day"
+                      >
+                        12
+                      </span>
+                    </td>
+                    <td
+                      aria-selected="false"
+                      className=""
+                      role="gridcell"
+                    >
+                      <span
+                        className="slds-day"
+                      >
+                        13
+                      </span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td
+                      aria-selected="false"
+                      className=""
+                      role="gridcell"
+                    >
+                      <span
+                        className="slds-day"
+                      >
+                        14
+                      </span>
+                    </td>
+                    <td
+                      aria-selected="false"
+                      className=""
+                      role="gridcell"
+                    >
+                      <span
+                        className="slds-day"
+                      >
+                        15
+                      </span>
+                    </td>
+                    <td
+                      aria-selected="false"
+                      className=""
+                      role="gridcell"
+                    >
+                      <span
+                        className="slds-day"
+                      >
+                        16
+                      </span>
+                    </td>
+                    <td
+                      aria-selected="false"
+                      className=""
+                      role="gridcell"
+                    >
+                      <span
+                        className="slds-day"
+                      >
+                        17
+                      </span>
+                    </td>
+                    <td
+                      aria-current="date"
+                      aria-selected="false"
+                      className="slds-is-today"
+                      role="gridcell"
+                    >
+                      <span
+                        className="slds-day"
+                      >
+                        18
+                      </span>
+                    </td>
+                    <td
+                      aria-selected="false"
+                      className=""
+                      role="gridcell"
+                    >
+                      <span
+                        className="slds-day"
+                      >
+                        19
+                      </span>
+                    </td>
+                    <td
+                      aria-selected="false"
+                      className=""
+                      role="gridcell"
+                    >
+                      <span
+                        className="slds-day"
+                      >
+                        20
+                      </span>
+                    </td>
+                  </tr>
+                  <tr
+                    className=""
+                  >
+                    <td
+                      aria-selected="false"
+                      className=""
+                      role="gridcell"
+                    >
+                      <span
+                        className="slds-day"
+                      >
+                        21
+                      </span>
+                    </td>
+                    <td
+                      aria-selected="false"
+                      className=""
+                      role="gridcell"
+                    >
+                      <span
+                        className="slds-day"
+                      >
+                        22
+                      </span>
+                    </td>
+                    <td
+                      aria-selected="false"
+                      className=""
+                      role="gridcell"
+                    >
+                      <span
+                        className="slds-day"
+                      >
+                        23
+                      </span>
+                    </td>
+                    <td
+                      aria-selected="false"
+                      className=""
+                      role="gridcell"
+                    >
+                      <span
+                        className="slds-day"
+                      >
+                        24
+                      </span>
+                    </td>
+                    <td
+                      aria-selected="false"
+                      className=""
+                      role="gridcell"
+                    >
+                      <span
+                        className="slds-day"
+                      >
+                        25
+                      </span>
+                    </td>
+                    <td
+                      aria-selected="false"
+                      className=""
+                      role="gridcell"
+                    >
+                      <span
+                        className="slds-day"
+                      >
+                        26
+                      </span>
+                    </td>
+                    <td
+                      aria-selected="false"
+                      className=""
+                      role="gridcell"
+                    >
+                      <span
+                        className="slds-day"
+                      >
+                        27
+                      </span>
+                    </td>
+                  </tr>
+                  <tr
+                    className=""
+                  >
+                    <td
+                      aria-selected="false"
+                      className=""
+                      role="gridcell"
+                    >
+                      <span
+                        className="slds-day"
+                      >
+                        28
+                      </span>
+                    </td>
+                    <td
+                      aria-selected="false"
+                      className=""
+                      role="gridcell"
+                    >
+                      <span
+                        className="slds-day"
+                      >
+                        29
+                      </span>
+                    </td>
+                    <td
+                      aria-selected="false"
+                      className=""
+                      role="gridcell"
+                    >
+                      <span
+                        className="slds-day"
+                      >
+                        30
+                      </span>
+                    </td>
+                    <td
+                      aria-selected="false"
+                      className="slds-day_adjacent-month"
+                      role="gridcell"
+                    >
+                      <span
+                        className="slds-day"
+                      >
+                        1
+                      </span>
+                    </td>
+                    <td
+                      aria-selected="false"
+                      className="slds-day_adjacent-month"
+                      role="gridcell"
+                    >
+                      <span
+                        className="slds-day"
+                      >
+                        2
+                      </span>
+                    </td>
+                    <td
+                      aria-selected="false"
+                      className="slds-day_adjacent-month"
+                      role="gridcell"
+                    >
+                      <span
+                        className="slds-day"
+                      >
+                        3
+                      </span>
+                    </td>
+                    <td
+                      aria-selected="false"
+                      className="slds-day_adjacent-month"
+                      role="gridcell"
+                    >
+                      <span
+                        className="slds-day"
+                      >
+                        4
+                      </span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <button
+                className="slds-button slds-align_absolute-center slds-text-link"
+              >
+                Today
+              </button>
+            </div>
+          </div>
+          <div
+            className="slds-form-element"
+          >
+            <label
+              className="slds-form-element__label"
+              htmlFor="example-unique-id-14"
+            >
+              Time
+            </label>
+            <div
+              className="slds-form-element__control"
+            >
+              <div
+                className="slds-combobox_container"
+              >
+                <div
+                  aria-expanded="false"
+                  aria-haspopup="listbox"
+                  className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click"
+                  role="combobox"
+                >
+                  <div
+                    className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
+                    role="none"
+                  >
+                    <input
+                      aria-activedescendant=""
+                      aria-autocomplete="list"
+                      aria-controls="example-unique-id-15"
+                      autocomplete="off"
+                      className="slds-input slds-combobox__input"
+                      defaultValue=""
+                      id="example-unique-id-14"
+                      onBlur={[Function]}
+                      onFocus={[Function]}
+                      placeholder="Select a time…"
+                      role="textbox"
+                      type="text"
+                    />
+                    <span
+                      className="slds-icon_container slds-icon-utility-clock slds-input__icon slds-input__icon_right"
+                      title={null}
+                    >
+                      <svg
+                        aria-hidden={true}
+                        className="slds-icon slds-icon slds-icon_x-small slds-icon-text-default"
+                      >
+                        <use
+                          xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#clock"
+                        />
+                      </svg>
+                    </span>
+                  </div>
+                  <div
+                    aria-orientation={null}
+                    className="slds-dropdown slds-dropdown_length-5 slds-dropdown_fluid slds-dropdown_left"
+                    id="example-unique-id-15"
+                    role="listbox"
+                  >
+                    <ul
+                      className="slds-listbox slds-listbox_vertical"
+                      role="presentation"
+                    >
+                      <li
+                        className="slds-listbox__item"
+                        role="presentation"
+                      >
+                        <div
+                          aria-checked={null}
+                          aria-disabled={null}
+                          aria-selected={null}
+                          className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
+                          id="option1"
+                          role="option"
+                        >
+                          <span
+                            className="slds-media__figure slds-listbox__option-icon"
+                          />
+                          <span
+                            className="slds-media__body"
+                          >
+                            <span
+                              className="slds-truncate"
+                              title="7:00am"
+                            >
+                              7:00am
+                            </span>
+                          </span>
+                        </div>
+                      </li>
+                      <li
+                        className="slds-listbox__item"
+                        role="presentation"
+                      >
+                        <div
+                          aria-checked={null}
+                          aria-disabled={null}
+                          aria-selected={null}
+                          className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
+                          id="option2"
+                          role="option"
+                        >
+                          <span
+                            className="slds-media__figure slds-listbox__option-icon"
+                          />
                           <span
                             className="slds-media__body"
                           >
@@ -1825,7 +3593,7 @@ exports[`Datetime Picker renders with a small width container 1`] = `
           >
             <label
               className="slds-form-element__label"
-              htmlFor="text-input-unique-id-4"
+              htmlFor="example-unique-id-4"
             >
               Date
             </label>
@@ -1834,7 +3602,7 @@ exports[`Datetime Picker renders with a small width container 1`] = `
             >
               <input
                 className="slds-input"
-                id="text-input-unique-id-4"
+                id="example-unique-id-4"
                 placeholder="Select a date…"
                 type="text"
               />
@@ -2452,7 +4220,7 @@ exports[`Datetime Picker renders with a small width container 1`] = `
           >
             <label
               className="slds-form-element__label"
-              htmlFor="example-unique-id-3"
+              htmlFor="example-unique-id-5"
             >
               Time
             </label>
@@ -2460,7 +4228,7 @@ exports[`Datetime Picker renders with a small width container 1`] = `
               className="slds-form-element__control"
             >
               <div
-                className="slds-combobox_container slds-timepicker"
+                className="slds-combobox_container"
               >
                 <div
                   aria-expanded="false"
@@ -2473,12 +4241,13 @@ exports[`Datetime Picker renders with a small width container 1`] = `
                     role="none"
                   >
                     <input
-                      aria-activedescendant="option2"
+                      aria-activedescendant=""
                       aria-autocomplete="list"
-                      aria-controls="example-unique-id-4"
+                      aria-controls="example-unique-id-6"
                       autocomplete="off"
                       className="slds-input slds-combobox__input"
-                      id="example-unique-id-3"
+                      defaultValue=""
+                      id="example-unique-id-5"
                       onBlur={[Function]}
                       onFocus={[Function]}
                       placeholder="Select a time…"
@@ -2501,8 +4270,8 @@ exports[`Datetime Picker renders with a small width container 1`] = `
                   </div>
                   <div
                     aria-orientation={null}
-                    className="slds-dropdown slds-dropdown_length-5 slds-dropdown_fluid"
-                    id="example-unique-id-4"
+                    className="slds-dropdown slds-dropdown_length-5 slds-dropdown_fluid slds-dropdown_left"
+                    id="example-unique-id-6"
                     role="listbox"
                   >
                     <ul
@@ -2541,30 +4310,16 @@ exports[`Datetime Picker renders with a small width container 1`] = `
                         role="presentation"
                       >
                         <div
-                          aria-checked="true"
+                          aria-checked={null}
                           aria-disabled={null}
-                          aria-selected="true"
-                          className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-is-selected slds-has-focus"
+                          aria-selected={null}
+                          className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
                           id="option2"
                           role="option"
                         >
                           <span
                             className="slds-media__figure slds-listbox__option-icon"
-                          >
-                            <span
-                              className="slds-icon_container slds-icon-utility-check slds-current-color"
-                              title={null}
-                            >
-                              <svg
-                                aria-hidden={true}
-                                className="slds-icon slds-icon_x-small"
-                              >
-                                <use
-                                  xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#check"
-                                />
-                              </svg>
-                            </span>
-                          </span>
+                          />
                           <span
                             className="slds-media__body"
                           >
@@ -2724,7 +4479,7 @@ exports[`Datetime Picker renders with a time selection 1`] = `
           >
             <label
               className="slds-form-element__label"
-              htmlFor="text-input-unique-id-10"
+              htmlFor="example-unique-id-10"
             >
               Date
             </label>
@@ -2734,7 +4489,7 @@ exports[`Datetime Picker renders with a time selection 1`] = `
               <input
                 className="slds-input"
                 defaultValue="06/24/2020"
-                id="text-input-unique-id-10"
+                id="example-unique-id-10"
                 placeholder="Select a date…"
                 type="text"
               />
@@ -3352,7 +5107,7 @@ exports[`Datetime Picker renders with a time selection 1`] = `
           >
             <label
               className="slds-form-element__label"
-              htmlFor="example-unique-id-7"
+              htmlFor="example-unique-id-11"
             >
               Time
             </label>
@@ -3360,7 +5115,7 @@ exports[`Datetime Picker renders with a time selection 1`] = `
               className="slds-form-element__control"
             >
               <div
-                className="slds-combobox_container slds-timepicker"
+                className="slds-combobox_container"
               >
                 <div
                   aria-expanded="true"
@@ -3373,13 +5128,13 @@ exports[`Datetime Picker renders with a time selection 1`] = `
                     role="none"
                   >
                     <input
-                      aria-activedescendant="option2"
+                      aria-activedescendant=""
                       aria-autocomplete="list"
-                      aria-controls="example-unique-id-8"
+                      aria-controls="example-unique-id-12"
                       autocomplete="off"
-                      className="slds-input slds-combobox__input slds-has-focus slds-combobox__input-value"
-                      defaultValue="8:00am"
-                      id="example-unique-id-7"
+                      className="slds-input slds-combobox__input slds-has-focus"
+                      defaultValue=""
+                      id="example-unique-id-11"
                       onBlur={[Function]}
                       onFocus={[Function]}
                       placeholder="Select a time…"
@@ -3402,8 +5157,8 @@ exports[`Datetime Picker renders with a time selection 1`] = `
                   </div>
                   <div
                     aria-orientation={null}
-                    className="slds-dropdown slds-dropdown_length-5 slds-dropdown_fluid"
-                    id="example-unique-id-8"
+                    className="slds-dropdown slds-dropdown_length-5 slds-dropdown_fluid slds-dropdown_left"
+                    id="example-unique-id-12"
                     role="listbox"
                   >
                     <ul
@@ -3594,6 +5349,900 @@ exports[`Datetime Picker renders with a time selection 1`] = `
           </div>
         </div>
       </div>
+    </div>
+  </fieldset>
+</div>
+`;
+
+exports[`Datetime Picker renders with an error state 1`] = `
+<div
+  className="slds-form"
+>
+  <fieldset
+    className="slds-form-element slds-form-element_compound slds-has-error"
+  >
+    <legend
+      className="slds-form-element__label slds-form-element__legend"
+    >
+      Date and Time
+    </legend>
+    <div
+      className="slds-form-element__control"
+    >
+      <div
+        className="slds-form-element__group"
+      >
+        <div
+          className="slds-form-element__row"
+        >
+          <div
+            className="slds-form-element slds-has-error slds-dropdown-trigger slds-dropdown-trigger_click"
+          >
+            <label
+              className="slds-form-element__label"
+              htmlFor="example-unique-id-16"
+            >
+              Date
+            </label>
+            <div
+              className="slds-form-element__control slds-input-has-icon slds-input-has-icon_right"
+            >
+              <input
+                aria-describedby="example-unique-id-16-error"
+                aria-invalid="true"
+                className="slds-input"
+                id="example-unique-id-16"
+                placeholder="Select a date…"
+                type="text"
+              />
+              <button
+                className="slds-button slds-button_icon slds-input__icon slds-input__icon_right"
+                onClick={[Function]}
+                title="Select a date"
+              >
+                <svg
+                  aria-hidden={true}
+                  className="slds-button__icon"
+                >
+                  <use
+                    xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#event"
+                  />
+                </svg>
+                <span
+                  className="slds-assistive-text"
+                >
+                  Select a date
+                </span>
+              </button>
+            </div>
+            <div
+              aria-hidden="false"
+              aria-label="Date picker: June"
+              className="slds-datepicker slds-dropdown slds-dropdown_left"
+              role="dialog"
+            >
+              <div
+                className="slds-datepicker__filter slds-grid"
+              >
+                <div
+                  className="slds-datepicker__filter_month slds-grid slds-grid_align-spread slds-grow"
+                >
+                  <div
+                    className="slds-align-middle"
+                  >
+                    <button
+                      className="slds-button slds-button_icon slds-button_icon-container"
+                      onClick={[Function]}
+                      title="Previous Month"
+                    >
+                      <svg
+                        aria-hidden={true}
+                        className="slds-button__icon"
+                      >
+                        <use
+                          xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#left"
+                        />
+                      </svg>
+                      <span
+                        className="slds-assistive-text"
+                      >
+                        Previous Month
+                      </span>
+                    </button>
+                  </div>
+                  <h2
+                    aria-atomic="true"
+                    aria-live="assertive"
+                    className="slds-align-middle"
+                    id="undefined-month"
+                  >
+                    June
+                  </h2>
+                  <div
+                    className="slds-align-middle"
+                  >
+                    <button
+                      className="slds-button slds-button_icon slds-button_icon-container"
+                      onClick={[Function]}
+                      title="Next Month"
+                    >
+                      <svg
+                        aria-hidden={true}
+                        className="slds-button__icon"
+                      >
+                        <use
+                          xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#right"
+                        />
+                      </svg>
+                      <span
+                        className="slds-assistive-text"
+                      >
+                        Next Month
+                      </span>
+                    </button>
+                  </div>
+                </div>
+                <div
+                  className="slds-shrink-none"
+                >
+                  <label
+                    className="slds-assistive-text"
+                    htmlFor="undefined_select"
+                  >
+                    Pick a Year
+                  </label>
+                  <div
+                    className="slds-select_container"
+                  >
+                    <select
+                      className="slds-select"
+                      id="undefined_select"
+                    >
+                      <option>
+                        2020
+                      </option>
+                      <option>
+                        2021
+                      </option>
+                      <option>
+                        2022
+                      </option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <table
+                aria-labelledby="undefined-month"
+                aria-multiselectable="true"
+                className="slds-datepicker__month"
+                role="grid"
+              >
+                <thead>
+                  <tr
+                    id="undefined-weekdays"
+                  >
+                    <th
+                      id="undefined-Sunday"
+                      scope="col"
+                    >
+                      <abbr
+                        title="Sunday"
+                      >
+                        Sun
+                      </abbr>
+                    </th>
+                    <th
+                      id="undefined-Monday"
+                      scope="col"
+                    >
+                      <abbr
+                        title="Monday"
+                      >
+                        Mon
+                      </abbr>
+                    </th>
+                    <th
+                      id="undefined-Tuesday"
+                      scope="col"
+                    >
+                      <abbr
+                        title="Tuesday"
+                      >
+                        Tue
+                      </abbr>
+                    </th>
+                    <th
+                      id="undefined-Wednesday"
+                      scope="col"
+                    >
+                      <abbr
+                        title="Wednesday"
+                      >
+                        Wed
+                      </abbr>
+                    </th>
+                    <th
+                      id="undefined-Thursday"
+                      scope="col"
+                    >
+                      <abbr
+                        title="Thursday"
+                      >
+                        Thu
+                      </abbr>
+                    </th>
+                    <th
+                      id="undefined-Friday"
+                      scope="col"
+                    >
+                      <abbr
+                        title="Friday"
+                      >
+                        Fri
+                      </abbr>
+                    </th>
+                    <th
+                      id="undefined-Saturday"
+                      scope="col"
+                    >
+                      <abbr
+                        title="Saturday"
+                      >
+                        Sat
+                      </abbr>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td
+                      aria-selected="false"
+                      className="slds-day_adjacent-month"
+                      role="gridcell"
+                    >
+                      <span
+                        className="slds-day"
+                      >
+                        31
+                      </span>
+                    </td>
+                    <td
+                      aria-selected="false"
+                      className=""
+                      role="gridcell"
+                      tabIndex="0"
+                    >
+                      <span
+                        className="slds-day"
+                      >
+                        1
+                      </span>
+                    </td>
+                    <td
+                      aria-selected="false"
+                      className=""
+                      role="gridcell"
+                    >
+                      <span
+                        className="slds-day"
+                      >
+                        2
+                      </span>
+                    </td>
+                    <td
+                      aria-selected="false"
+                      className=""
+                      role="gridcell"
+                    >
+                      <span
+                        className="slds-day"
+                      >
+                        3
+                      </span>
+                    </td>
+                    <td
+                      aria-selected="false"
+                      className=""
+                      role="gridcell"
+                    >
+                      <span
+                        className="slds-day"
+                      >
+                        4
+                      </span>
+                    </td>
+                    <td
+                      aria-selected="false"
+                      className=""
+                      role="gridcell"
+                    >
+                      <span
+                        className="slds-day"
+                      >
+                        5
+                      </span>
+                    </td>
+                    <td
+                      aria-selected="false"
+                      className=""
+                      role="gridcell"
+                    >
+                      <span
+                        className="slds-day"
+                      >
+                        6
+                      </span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td
+                      aria-selected="false"
+                      className=""
+                      role="gridcell"
+                    >
+                      <span
+                        className="slds-day"
+                      >
+                        7
+                      </span>
+                    </td>
+                    <td
+                      aria-selected="false"
+                      className=""
+                      role="gridcell"
+                    >
+                      <span
+                        className="slds-day"
+                      >
+                        8
+                      </span>
+                    </td>
+                    <td
+                      aria-selected="false"
+                      className=""
+                      role="gridcell"
+                    >
+                      <span
+                        className="slds-day"
+                      >
+                        9
+                      </span>
+                    </td>
+                    <td
+                      aria-selected="false"
+                      className=""
+                      role="gridcell"
+                    >
+                      <span
+                        className="slds-day"
+                      >
+                        10
+                      </span>
+                    </td>
+                    <td
+                      aria-selected="false"
+                      className=""
+                      role="gridcell"
+                    >
+                      <span
+                        className="slds-day"
+                      >
+                        11
+                      </span>
+                    </td>
+                    <td
+                      aria-selected="false"
+                      className=""
+                      role="gridcell"
+                    >
+                      <span
+                        className="slds-day"
+                      >
+                        12
+                      </span>
+                    </td>
+                    <td
+                      aria-selected="false"
+                      className=""
+                      role="gridcell"
+                    >
+                      <span
+                        className="slds-day"
+                      >
+                        13
+                      </span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td
+                      aria-selected="false"
+                      className=""
+                      role="gridcell"
+                    >
+                      <span
+                        className="slds-day"
+                      >
+                        14
+                      </span>
+                    </td>
+                    <td
+                      aria-selected="false"
+                      className=""
+                      role="gridcell"
+                    >
+                      <span
+                        className="slds-day"
+                      >
+                        15
+                      </span>
+                    </td>
+                    <td
+                      aria-selected="false"
+                      className=""
+                      role="gridcell"
+                    >
+                      <span
+                        className="slds-day"
+                      >
+                        16
+                      </span>
+                    </td>
+                    <td
+                      aria-selected="false"
+                      className=""
+                      role="gridcell"
+                    >
+                      <span
+                        className="slds-day"
+                      >
+                        17
+                      </span>
+                    </td>
+                    <td
+                      aria-current="date"
+                      aria-selected="false"
+                      className="slds-is-today"
+                      role="gridcell"
+                    >
+                      <span
+                        className="slds-day"
+                      >
+                        18
+                      </span>
+                    </td>
+                    <td
+                      aria-selected="false"
+                      className=""
+                      role="gridcell"
+                    >
+                      <span
+                        className="slds-day"
+                      >
+                        19
+                      </span>
+                    </td>
+                    <td
+                      aria-selected="false"
+                      className=""
+                      role="gridcell"
+                    >
+                      <span
+                        className="slds-day"
+                      >
+                        20
+                      </span>
+                    </td>
+                  </tr>
+                  <tr
+                    className=""
+                  >
+                    <td
+                      aria-selected="false"
+                      className=""
+                      role="gridcell"
+                    >
+                      <span
+                        className="slds-day"
+                      >
+                        21
+                      </span>
+                    </td>
+                    <td
+                      aria-selected="false"
+                      className=""
+                      role="gridcell"
+                    >
+                      <span
+                        className="slds-day"
+                      >
+                        22
+                      </span>
+                    </td>
+                    <td
+                      aria-selected="false"
+                      className=""
+                      role="gridcell"
+                    >
+                      <span
+                        className="slds-day"
+                      >
+                        23
+                      </span>
+                    </td>
+                    <td
+                      aria-selected="false"
+                      className=""
+                      role="gridcell"
+                    >
+                      <span
+                        className="slds-day"
+                      >
+                        24
+                      </span>
+                    </td>
+                    <td
+                      aria-selected="false"
+                      className=""
+                      role="gridcell"
+                    >
+                      <span
+                        className="slds-day"
+                      >
+                        25
+                      </span>
+                    </td>
+                    <td
+                      aria-selected="false"
+                      className=""
+                      role="gridcell"
+                    >
+                      <span
+                        className="slds-day"
+                      >
+                        26
+                      </span>
+                    </td>
+                    <td
+                      aria-selected="false"
+                      className=""
+                      role="gridcell"
+                    >
+                      <span
+                        className="slds-day"
+                      >
+                        27
+                      </span>
+                    </td>
+                  </tr>
+                  <tr
+                    className=""
+                  >
+                    <td
+                      aria-selected="false"
+                      className=""
+                      role="gridcell"
+                    >
+                      <span
+                        className="slds-day"
+                      >
+                        28
+                      </span>
+                    </td>
+                    <td
+                      aria-selected="false"
+                      className=""
+                      role="gridcell"
+                    >
+                      <span
+                        className="slds-day"
+                      >
+                        29
+                      </span>
+                    </td>
+                    <td
+                      aria-selected="false"
+                      className=""
+                      role="gridcell"
+                    >
+                      <span
+                        className="slds-day"
+                      >
+                        30
+                      </span>
+                    </td>
+                    <td
+                      aria-selected="false"
+                      className="slds-day_adjacent-month"
+                      role="gridcell"
+                    >
+                      <span
+                        className="slds-day"
+                      >
+                        1
+                      </span>
+                    </td>
+                    <td
+                      aria-selected="false"
+                      className="slds-day_adjacent-month"
+                      role="gridcell"
+                    >
+                      <span
+                        className="slds-day"
+                      >
+                        2
+                      </span>
+                    </td>
+                    <td
+                      aria-selected="false"
+                      className="slds-day_adjacent-month"
+                      role="gridcell"
+                    >
+                      <span
+                        className="slds-day"
+                      >
+                        3
+                      </span>
+                    </td>
+                    <td
+                      aria-selected="false"
+                      className="slds-day_adjacent-month"
+                      role="gridcell"
+                    >
+                      <span
+                        className="slds-day"
+                      >
+                        4
+                      </span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <button
+                className="slds-button slds-align_absolute-center slds-text-link"
+              >
+                Today
+              </button>
+            </div>
+          </div>
+          <div
+            className="slds-form-element"
+          >
+            <label
+              className="slds-form-element__label"
+              htmlFor="example-unique-id-17"
+            >
+              Time
+            </label>
+            <div
+              className="slds-form-element__control"
+            >
+              <div
+                className="slds-combobox_container"
+              >
+                <div
+                  aria-expanded="false"
+                  aria-haspopup="listbox"
+                  className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click"
+                  role="combobox"
+                >
+                  <div
+                    className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
+                    role="none"
+                  >
+                    <input
+                      aria-activedescendant=""
+                      aria-autocomplete="list"
+                      aria-controls="example-unique-id-18"
+                      autocomplete="off"
+                      className="slds-input slds-combobox__input"
+                      defaultValue=""
+                      id="example-unique-id-17"
+                      onBlur={[Function]}
+                      onFocus={[Function]}
+                      placeholder="Select a time…"
+                      role="textbox"
+                      type="text"
+                    />
+                    <span
+                      className="slds-icon_container slds-icon-utility-clock slds-input__icon slds-input__icon_right"
+                      title={null}
+                    >
+                      <svg
+                        aria-hidden={true}
+                        className="slds-icon slds-icon slds-icon_x-small slds-icon-text-default slds-icon-text-error"
+                      >
+                        <use
+                          xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#clock"
+                        />
+                      </svg>
+                    </span>
+                  </div>
+                  <div
+                    aria-orientation={null}
+                    className="slds-dropdown slds-dropdown_length-5 slds-dropdown_fluid slds-dropdown_left"
+                    id="example-unique-id-18"
+                    role="listbox"
+                  >
+                    <ul
+                      className="slds-listbox slds-listbox_vertical"
+                      role="presentation"
+                    >
+                      <li
+                        className="slds-listbox__item"
+                        role="presentation"
+                      >
+                        <div
+                          aria-checked={null}
+                          aria-disabled={null}
+                          aria-selected={null}
+                          className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
+                          id="option1"
+                          role="option"
+                        >
+                          <span
+                            className="slds-media__figure slds-listbox__option-icon"
+                          />
+                          <span
+                            className="slds-media__body"
+                          >
+                            <span
+                              className="slds-truncate"
+                              title="7:00am"
+                            >
+                              7:00am
+                            </span>
+                          </span>
+                        </div>
+                      </li>
+                      <li
+                        className="slds-listbox__item"
+                        role="presentation"
+                      >
+                        <div
+                          aria-checked={null}
+                          aria-disabled={null}
+                          aria-selected={null}
+                          className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
+                          id="option2"
+                          role="option"
+                        >
+                          <span
+                            className="slds-media__figure slds-listbox__option-icon"
+                          />
+                          <span
+                            className="slds-media__body"
+                          >
+                            <span
+                              className="slds-truncate"
+                              title="8:00am"
+                            >
+                              8:00am
+                            </span>
+                          </span>
+                        </div>
+                      </li>
+                      <li
+                        className="slds-listbox__item"
+                        role="presentation"
+                      >
+                        <div
+                          aria-checked={null}
+                          aria-disabled={null}
+                          aria-selected={null}
+                          className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
+                          id="option3"
+                          role="option"
+                        >
+                          <span
+                            className="slds-media__figure slds-listbox__option-icon"
+                          />
+                          <span
+                            className="slds-media__body"
+                          >
+                            <span
+                              className="slds-truncate"
+                              title="9:00am"
+                            >
+                              9:00am
+                            </span>
+                          </span>
+                        </div>
+                      </li>
+                      <li
+                        className="slds-listbox__item"
+                        role="presentation"
+                      >
+                        <div
+                          aria-checked={null}
+                          aria-disabled={null}
+                          aria-selected={null}
+                          className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
+                          id="option4"
+                          role="option"
+                        >
+                          <span
+                            className="slds-media__figure slds-listbox__option-icon"
+                          />
+                          <span
+                            className="slds-media__body"
+                          >
+                            <span
+                              className="slds-truncate"
+                              title="10:00am"
+                            >
+                              10:00am
+                            </span>
+                          </span>
+                        </div>
+                      </li>
+                      <li
+                        className="slds-listbox__item"
+                        role="presentation"
+                      >
+                        <div
+                          aria-checked={null}
+                          aria-disabled={null}
+                          aria-selected={null}
+                          className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
+                          id="option5"
+                          role="option"
+                        >
+                          <span
+                            className="slds-media__figure slds-listbox__option-icon"
+                          />
+                          <span
+                            className="slds-media__body"
+                          >
+                            <span
+                              className="slds-truncate"
+                              title="11:00am"
+                            >
+                              11:00am
+                            </span>
+                          </span>
+                        </div>
+                      </li>
+                      <li
+                        className="slds-listbox__item"
+                        role="presentation"
+                      >
+                        <div
+                          aria-checked={null}
+                          aria-disabled={null}
+                          aria-selected={null}
+                          className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
+                          id="option6"
+                          role="option"
+                        >
+                          <span
+                            className="slds-media__figure slds-listbox__option-icon"
+                          />
+                          <span
+                            className="slds-media__body"
+                          >
+                            <span
+                              className="slds-truncate"
+                              title="12:00pm"
+                            >
+                              12:00pm
+                            </span>
+                          </span>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="slds-form-element__help"
+      id="example-unique-id-16-error"
+    >
+      Complete this field.
     </div>
   </fieldset>
 </div>

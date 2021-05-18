@@ -315,7 +315,8 @@ export let examples = [
   {
     id: 'section-background-color',
     label: 'Accordion Section - Text Color',
-    demoStyles: '--sds-c-accordion-heading-text-color: green; --sds-c-accordion-heading-text-color-hover: red',
+    demoStyles:
+      '--sds-c-accordion-heading-text-color: green; --sds-c-accordion-heading-text-color-hover: red',
     storybookStyles: true,
     element: (
       <Accordion>

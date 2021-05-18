@@ -16,7 +16,7 @@ const patternName = 'Welcome Mat';
 
 const storyOptions = {
   defaultDemoStyles: 'height: 48rem;'
-}
+};
 
 generateStories(
   patternName,

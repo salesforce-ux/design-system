@@ -8,7 +8,7 @@ const patternName = 'Docked Form Footer';
 
 const storyOptions = {
   defaultDemoStyles: 'height: 14rem;'
-}
+};
 
 generateStories(
   patternName,

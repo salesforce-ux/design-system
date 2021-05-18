@@ -8,7 +8,7 @@ const patternName = 'Picklist';
 
 const storyOptions = {
   defaultDemoStyles: 'min-height: 12rem;'
-}
+};
 
 generateStories(
   patternName,

@@ -18,7 +18,7 @@ const patternName = 'Menus';
 
 const storyOptions = {
   defaultDemoStyles: 'height: 300px;'
-}
+};
 
 generateStories(
   patternName,

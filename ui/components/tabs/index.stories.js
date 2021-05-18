@@ -16,7 +16,7 @@ const patternName = 'Tabs';
 
 const storyOptions = {
   defaultDemoStyles: 'min-height: 10rem;'
-}
+};
 
 generateStories(
   patternName,

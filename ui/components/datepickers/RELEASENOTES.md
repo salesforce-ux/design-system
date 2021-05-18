@@ -4,6 +4,13 @@
 
 <!-- ## [Unreleased] -->
 
+## 2.16.0
+
+### Added
+
+- Added examples for Required, Required with Error states
+
+
 ## 2.14.1
 
 ### Fixed

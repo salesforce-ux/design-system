@@ -25,7 +25,9 @@ const ExampleDatetimePicker = ({
   dropdown,
   dropdownIsOpen,
   hasFocus,
+  hasError,
   isOpen,
+  isRequired,
   listboxData,
   dateDefaultValue
 }) => {
@@ -56,8 +58,17 @@ const ExampleDatetimePicker = ({
 
   return (
     <div className="slds-form">
-      <fieldset className="slds-form-element slds-form-element_compound">
+      <fieldset
+        className={classNames('slds-form-element slds-form-element_compound', {
+          'slds-has-error': hasError
+        })}
+      >
         <legend className="slds-form-element__label slds-form-element__legend">
+          {isRequired && (
+            <abbr className="slds-required" title="required">
+              *{' '}
+            </abbr>
+          )}
           Date and Time
         </legend>
         <div className="slds-form-element__control">
@@ -72,11 +83,13 @@ const ExampleDatetimePicker = ({
                 inputId={uniqueId}
                 hasRightIcon
                 dropdown={dropdown}
+                hasError={hasError}
               >
                 <Input
                   id={uniqueId}
                   placeholder="Select a date…"
                   defaultValue={dateDefaultValue}
+                  aria-describedby={hasError && uniqueId + '-error'}
                 />
                 <ButtonIcon
                   className="slds-input__icon slds-input__icon_right"
@@ -94,10 +107,19 @@ const ExampleDatetimePicker = ({
                 label="Time"
                 placeholder="Select a time…"
                 inputIconPosition="right"
+                hasError={hasError}
+                // TODO: Combobox and Listbox do not currently have aria-describedby
+                // aria-describedby={hasError && (uniqueId + "-error")}
+
                 rightInputIcon={
                   <UtilityIcon
                     symbol="clock"
-                    className="slds-icon slds-icon_x-small slds-icon-text-default"
+                    className={classNames(
+                      'slds-icon slds-icon_x-small slds-icon-text-default',
+                      {
+                        'slds-icon-text-error': hasError
+                      }
+                    )}
                     containerClassName="slds-input__icon slds-input__icon_right"
                     assistiveText={false}
                     title={false}
@@ -122,6 +144,11 @@ const ExampleDatetimePicker = ({
             </div>
           </div>
         </div>
+        {hasError && (
+          <div className="slds-form-element__help" id={uniqueId + '-error'}>
+            Complete this field.
+          </div>
+        )}
       </fieldset>
     </div>
   );
@@ -132,6 +159,8 @@ ExampleDatetimePicker.propTypes = {
   dropdownIsOpen: PropTypes.bool,
   hasFocus: PropTypes.bool,
   isOpen: PropTypes.bool,
+  isRequired: PropTypes.bool,
+  hasError: PropTypes.bool,
   listboxIsOpen: PropTypes.bool,
   listboxData: PropTypes.object.isRequired,
   dateDefaultValue: PropTypes.string
@@ -198,6 +227,43 @@ export let states = [
         isOpen
         hasFocus
         listboxData={PlainTimeOptionsSelected}
+      />
+    )
+  },
+  {
+    id: 'required',
+    label: 'Date and Time - required',
+    demoStyles: 'height: 20rem;',
+    element: (
+      <ExampleDatetimePicker
+        dropdownIsOpen={false}
+        isRequired
+        listboxData={PlainTimeOptions}
+      />
+    )
+  },
+  {
+    id: 'error',
+    label: 'Date and Time - error',
+    demoStyles: 'height: 20rem;',
+    element: (
+      <ExampleDatetimePicker
+        dropdownIsOpen={false}
+        hasError
+        listboxData={PlainTimeOptions}
+      />
+    )
+  },
+  {
+    id: 'required-error',
+    label: 'Date and Time - required and has error',
+    demoStyles: 'height: 20rem;',
+    element: (
+      <ExampleDatetimePicker
+        dropdownIsOpen={false}
+        isRequired
+        hasError
+        listboxData={PlainTimeOptions}
       />
     )
   }

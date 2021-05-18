@@ -8,7 +8,7 @@ const patternName = 'Docked Composer';
 
 const storyOptions = {
   defaultDemoStyles: 'height: 32rem;'
-}
+};
 
 generateStories(
   patternName,

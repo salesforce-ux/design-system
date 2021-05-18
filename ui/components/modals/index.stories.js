@@ -8,7 +8,7 @@ const patternName = 'Modals';
 
 const storyOptions = {
   defaultDemoStyles: BaseExamples.exampleDemoStyles
-}
+};
 
 generateStories(
   patternName,

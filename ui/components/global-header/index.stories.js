@@ -9,7 +9,7 @@ const patternName = 'Global Header';
 const storyOptions = {
   defaultDemoStyles: 'height: 340px;',
   isViewport: true
-}
+};
 
 generateStories(
   patternName,

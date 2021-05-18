@@ -26,4 +26,15 @@ describe('Datetime Picker', () => {
     matchesMarkup(
       getDisplayElementById(DatetimePicker.states, 'time-selection')
     ));
+
+  it('renders with a required state', () =>
+    matchesMarkup(getDisplayElementById(DatetimePicker.states, 'required')));
+
+  it('renders with an error state', () =>
+    matchesMarkup(getDisplayElementById(DatetimePicker.states, 'error')));
+
+  it('renders with a required plus error state', () =>
+    matchesMarkup(
+      getDisplayElementById(DatetimePicker.states, 'required-error')
+    ));
 });

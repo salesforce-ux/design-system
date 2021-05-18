@@ -8,8 +8,8 @@ const examples = [BaseExamples, RangeExamples];
 const patternName = 'Datepickers';
 
 const storyOptions = {
-  defaultDemoStyles: 'height: 25rem;'
-}
+  defaultDemoStyles: 'height: 28rem;'
+};
 
 generateStories(
   patternName,

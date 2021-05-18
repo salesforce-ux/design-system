@@ -8,7 +8,7 @@ const patternName = 'Timepicker';
 
 const storyOptions = {
   defaultDemoStyles: 'min-height: 18rem;'
-}
+};
 
 generateStories(
   patternName,

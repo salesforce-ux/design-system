@@ -80,7 +80,7 @@ export const getDisplayElementById = (collection, id) => {
 
   // if collection is not an array simply return it (probably a React element)
   return collection;
-}
+};
 
 // Get a component example's styles in doc block from the exported states and examples objects
 export const getDemoStylesById = (collection, id) =>
@@ -284,27 +284,29 @@ export const generateStories = (
               : el.context === context
           );
 
-          return kitchen.map(({ label, component, storybookStyles, demoStyles }) => {
-            // if storybookStyles is a boolean true then we use the same styles defined in demoStyles
-            let storyStyles;
-            if (storybookStyles === true) {
-              storyStyles = demoStyles || '';
-            } else {
-              storyStyles = storybookStyles || '';
-            }
-            storyStyles = options.defaultDemoStyles + storyStyles;
+          return kitchen.map(
+            ({ label, component, storybookStyles, demoStyles }) => {
+              // if storybookStyles is a boolean true then we use the same styles defined in demoStyles
+              let storyStyles;
+              if (storybookStyles === true) {
+                storyStyles = demoStyles || '';
+              } else {
+                storyStyles = storybookStyles || '';
+              }
+              storyStyles = options.defaultDemoStyles + storyStyles;
 
-            return (
-              <StoryFrame
-                component={component}
-                label={label}
-                key={`${context}-sink-${label}-${idx}`}
-                styles={storyStyles}
-                isFullBleed={options.isFullBleed}
-                isViewport={options.isViewport}
-              />
-            )
-          });
+              return (
+                <StoryFrame
+                  component={component}
+                  label={label}
+                  key={`${context}-sink-${label}-${idx}`}
+                  styles={storyStyles}
+                  isFullBleed={options.isFullBleed}
+                  isViewport={options.isViewport}
+                />
+              );
+            }
+          );
         }),
       {
         docs: {

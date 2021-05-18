@@ -12,6 +12,10 @@
 #### Changed
 - Updated to ARIA 1.2 compliance where these attributes are moved to the text input: `role="combobox"`, `aria-expanded`, `aria-haspopup="listbox"`.
 
+### [Datepickers](https://www.lightningdesignsystem.com/components/datepickers)
+#### Added
+- Added examples for Required, Required with Error states
+
 ### [Datetime Picker](https://www.lightningdesignsystem.com/components/datetime-picker)
 #### Changed
 - Removed the usage of the deprecated combobox. The Datetime Picker now uses the current combobox.

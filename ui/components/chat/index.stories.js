@@ -9,6 +9,12 @@ const patternName = 'Chat';
 
 const storyOptions = {
   isFullBleed: true
-}
+};
 
-generateStories(patternName, examples, ['default', 'examples', 'states'], Docs, storyOptions);
+generateStories(
+  patternName,
+  examples,
+  ['default', 'examples', 'states'],
+  Docs,
+  storyOptions
+);

@@ -8,7 +8,7 @@ const patternName = 'Split View';
 
 const storyOptions = {
   defaultDemoStyles: 'overflow: hidden;'
-}
+};
 
 generateStories(
   patternName,

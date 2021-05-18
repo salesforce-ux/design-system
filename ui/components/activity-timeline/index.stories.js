@@ -8,8 +8,14 @@ const patternName = 'Activity Timeline';
 
 const storyOptions = {
   eyes: {
-    waitBeforeScreenshot: 1500,
+    waitBeforeScreenshot: 1500
   }
-}
+};
 
-generateStories(patternName, examples, ['default', 'examples', 'states'], Docs, storyOptions);
+generateStories(
+  patternName,
+  examples,
+  ['default', 'examples', 'states'],
+  Docs,
+  storyOptions
+);

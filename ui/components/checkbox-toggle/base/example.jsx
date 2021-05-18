@@ -10,11 +10,16 @@ import _ from '../../../shared/helpers';
 /// ////////////////////////////////////////
 
 export let LabelWrapper = props => (
-  <div className={classNames('slds-form-element', props.className)}>{props.children}</div>
+  <div className={classNames('slds-form-element', props.className)}>
+    {props.children}
+  </div>
 );
 
 export let Label = props => (
-  <label className={classNames('slds-checkbox_toggle slds-grid', props.className)} htmlFor={props.id}>
+  <label
+    className={classNames('slds-checkbox_toggle slds-grid', props.className)}
+    htmlFor={props.id}
+  >
     {props.children}
   </label>
 );
@@ -47,8 +52,12 @@ export let Toggle = props => (
     aria-live="assertive"
   >
     <span className="slds-checkbox_faux" />
-    <span className={classNames('slds-checkbox_on', props.className)}>Enabled</span>
-    <span className={classNames('slds-checkbox_off', props.className)}>Disabled</span>
+    <span className={classNames('slds-checkbox_on', props.className)}>
+      {props.labelTextOn || 'Enabled'}
+    </span>
+    <span className={classNames('slds-checkbox_off', props.className)}>
+      {props.labelTextOff || 'Disabled'}
+    </span>
   </span>
 );
 
@@ -62,9 +71,19 @@ export let CheckboxToggle = props => {
   return (
     <LabelWrapper>
       <Label>
-        <FauxLabel isBare={props.isBare}>{props.title || 'Toggle Label'}</FauxLabel>
-        <Checkbox uniqueId={uniqueId} checked={props.checked} disabled={props.disabled} />
-        <Toggle uniqueId={uniqueId} />
+        <FauxLabel isBare={props.isBare}>
+          {props.title || 'Toggle Label'}
+        </FauxLabel>
+        <Checkbox
+          uniqueId={uniqueId}
+          checked={props.checked}
+          disabled={props.disabled}
+        />
+        <Toggle
+          uniqueId={uniqueId}
+          labelTextOn={props.labelTextOn}
+          labelTextOff={props.labelTextOff}
+        />
       </Label>
     </LabelWrapper>
   );

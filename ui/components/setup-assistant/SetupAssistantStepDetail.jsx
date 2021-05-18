@@ -46,7 +46,13 @@ const renderStepAction = action => {
     return <Button isOutlineBrand>{action.title}</Button>;
   else if (action.type === 'toggle')
     return (
-      <CheckboxToggle title={action.title} isBare checked={action.checked} />
+      <CheckboxToggle
+        title={action.title}
+        isBare
+        checked={action.checked}
+        labelTextOn="On"
+        labelTextOff="Off"
+      />
     );
   else
     return (

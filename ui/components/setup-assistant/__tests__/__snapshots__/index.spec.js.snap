@@ -430,12 +430,12 @@ exports[`Setup Assistant  renders a step detail 1`] = `
                   <span
                     className="slds-checkbox_on"
                   >
-                    Enabled
+                    On
                   </span>
                   <span
                     className="slds-checkbox_off"
                   >
-                    Disabled
+                    Off
                   </span>
                 </span>
               </label>

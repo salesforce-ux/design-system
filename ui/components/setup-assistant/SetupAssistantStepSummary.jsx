@@ -28,7 +28,13 @@ class SetupAssistantStepSummary extends React.Component {
       (action.type === 'button' ? (
         <Button isOutlineBrand>{action.title}</Button>
       ) : action.type === 'toggle' ? (
-        <CheckboxToggle title={action.title} isBare checked={action.checked} />
+        <CheckboxToggle
+          title={action.title}
+          isBare
+          checked={action.checked}
+          labelTextOn="On"
+          labelTextOff="Off"
+        />
       ) : (
         <a href="#" onClick={e => e.preventDefault()}>
           {action.title}

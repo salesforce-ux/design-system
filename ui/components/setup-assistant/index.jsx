@@ -44,7 +44,7 @@ const sampleBaseSteps = [
     isOpen: true
   },
   {
-    title: 'Learn How to Use Profiles to control Visibility',
+    title: 'Learn How to Use Profiles to Control Visibility',
     description: 'Lorem ipsum dolor sit amet, lorem ipsum dolor.',
     action: {
       type: 'link',
@@ -58,7 +58,7 @@ const sampleBaseSteps = [
     }
   },
   {
-    title: 'Turn on tracking for profiles',
+    title: 'Turn On Tracking for Profiles',
     description: 'Lorem ipsum dolor sit amet, lorem ipsum dolor.',
     action: {
       type: 'toggle',

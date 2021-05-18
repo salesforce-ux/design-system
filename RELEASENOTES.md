@@ -48,6 +48,7 @@ Removed the usage of the deprecated combobox. The Picklist now uses the current 
 
 ### [Setup Assistant](https://www.lightningdesignsystem.com/components/setup-assistant)
 #### Changed
+- Updated checkbox toggle examples to "Off/On" and updated header text in alignment with text standards
 - Switched the variant of the progress bar used in setup assistant from success to base.
 
 ### [Timepicker](https://www.lightningdesignsystem.com/components/timepicker)

@@ -1,23 +1,25 @@
-import * as Base from './base/example';
-import * as BorderedFilled from './bordered-filled-container/example';
-import * as BorderedInverse from './bordered-inverse/example';
-import * as BorderedTransparent from './bordered-transparent-container/example';
-import * as Brand from './brand/example';
-import * as Inverse from './inverse/example';
-import * as Stateful from './stateful/example';
-import * as TransparentContainer from './transparent-container/example';
+import * as BaseExamples from './base/example';
+import * as BorderedFilledExamples from './bordered-filled-container/example';
+import * as BorderedInverseExamples from './bordered-inverse/example';
+import * as BorderedTransparentExamples from './bordered-transparent-container/example';
+import * as BrandExamples from './brand/example';
+import * as ButtonMenuExamples from './menu/example';
+import * as InverseExamples from './inverse/example';
+import * as StatefulExamples from './stateful/example';
+import * as TransparentContainerExamples from './transparent-container/example';
 import { generateStories } from '../../shared/helpers';
 import Docs from './docs.mdx';
 
 const examples = [
-  Base,
-  BorderedFilled,
-  BorderedInverse,
-  BorderedTransparent,
-  Brand,
-  Inverse,
-  Stateful,
-  TransparentContainer
+  BaseExamples,
+  BorderedFilledExamples,
+  BorderedInverseExamples,
+  BorderedTransparentExamples,
+  BrandExamples,
+  ButtonMenuExamples,
+  InverseExamples,
+  StatefulExamples,
+  TransparentContainerExamples
 ];
 
 const patternName = 'Button Icons';

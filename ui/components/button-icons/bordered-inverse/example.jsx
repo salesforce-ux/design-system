@@ -10,20 +10,32 @@ export const Context = props => (
   </div>
 );
 
-export default (
-  <ButtonIcon
-    assistiveText="Search"
-    size="medium"
-    symbol="search"
-    theme="inverse"
-    title="Search"
-  />
-);
+const exampleDemoStyles = 'background-color: #16325C; padding: 0.5rem;';
+
+export default [
+  {
+    id: 'default',
+    label: 'Bordered Inverse – default',
+    demoStyles: exampleDemoStyles,
+    storybookStyles: true,
+    element: (
+      <ButtonIcon
+        assistiveText="Search"
+        size="medium"
+        symbol="search"
+        theme="inverse"
+        title="Search"
+      />
+    )
+  }
+];
 
 export let states = [
   {
     id: 'disabled',
-    label: 'Disabled',
+    label: 'Bordered Inverse – Disabled',
+    demoStyles: exampleDemoStyles,
+    storybookStyles: true,
     element: (
       <ButtonIcon
         assistiveText="Search"
@@ -40,7 +52,9 @@ export let states = [
 export let examples = [
   {
     id: 'with-dropdown',
-    label: 'With dropdown',
+    label: 'Bordered Inverse – With dropdown',
+    demoStyles: exampleDemoStyles,
+    storybookStyles: true,
     element: (
       <ButtonIcon
         assistiveText="More options"
@@ -52,7 +66,9 @@ export let examples = [
   },
   {
     id: 'hint-hover',
-    label: 'Hint on hover',
+    label: 'Bordered Inverse – Hint on hover',
+    demoStyles: exampleDemoStyles,
+    storybookStyles: true,
     element: (
       <HintParent>
         <ButtonIcon

@@ -302,6 +302,29 @@ jobs:
     steps:
       - checkout
 
+      - attach_workspace:
+          at: workspace
+
+      - install-gh-cli
+
+      - run:
+          name: 'Github: attach artifact to release'
+          command: |
+            export VERSION_FROM_TAG=$([[ ${CIRCLE_TAG} =~ ^v.* ]] && echo ${CIRCLE_TAG:1:20} || echo ${CIRCLE_TAG})
+            export VERSION_FROM_PACKAGE=$(cat package.json | jq -r .version)
+
+            gh release view v${VERSION_FROM_TAG} | grep v${VERSION_FROM_TAG}
+
+            if [ $? -eq 0 ]; then
+              cp workspace/dist.zip workspace/slds-v${VERSION_FROM_TAG}.zip
+              echo "=============================="
+              echo "» Attaching artifact to release v${VERSION_FROM_TAG}"
+              gh release upload v${VERSION_FROM_TAG} workspace/slds-v${VERSION_FROM_TAG}.zip#"SLDS v${VERSION_FROM_TAG}" --clobber
+            else
+              echo "=============================="
+              echo "» ERROR: release v${VERSION_FROM_TAG} not found on Github"
+            fi
+
       - run:
           name: Trigger database update via API
           command: |

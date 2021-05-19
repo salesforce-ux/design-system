@@ -3206,6 +3206,7 @@ exports[`Datetime Picker renders with a required state 1`] = `
                       </span>
                     </td>
                     <td
+                      aria-current={null}
                       aria-selected="false"
                       className=""
                       role="gridcell"
@@ -4092,6 +4093,7 @@ exports[`Datetime Picker renders with a small width container 1`] = `
                       </span>
                     </td>
                     <td
+                      aria-current={null}
                       aria-selected="false"
                       className=""
                       role="gridcell"
@@ -4979,6 +4981,7 @@ exports[`Datetime Picker renders with a time selection 1`] = `
                       </span>
                     </td>
                     <td
+                      aria-current={null}
                       aria-selected="false"
                       className=""
                       role="gridcell"
@@ -5881,6 +5884,7 @@ exports[`Datetime Picker renders with an error state 1`] = `
                       </span>
                     </td>
                     <td
+                      aria-current={null}
                       aria-selected="false"
                       className=""
                       role="gridcell"

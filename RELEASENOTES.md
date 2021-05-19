@@ -15,6 +15,8 @@
 ### [Datepickers](https://www.lightningdesignsystem.com/components/datepickers)
 #### Added
 - Added examples for Required, Required with Error states
+#### Fixed
+- Fixed missing attribute `aria-current="date"` when today's date falls inside of a selected range
 
 ### [Datetime Picker](https://www.lightningdesignsystem.com/components/datetime-picker)
 #### Changed

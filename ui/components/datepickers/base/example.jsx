@@ -230,6 +230,7 @@ export let DatePicker = props => (
                   props.dateRange === 'week-4-5'),
               'slds-is-today': props.todayActiveInRange
             })}
+            aria-current={props.todayActiveInRange ? 'date' : null}
           >
             25
           </Day>

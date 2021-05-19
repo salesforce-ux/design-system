@@ -10,6 +10,9 @@
 
 - Added examples for Required, Required with Error states
 
+### Fixed
+
+- Fixed missing attribute `aria-current="date"` when today's date falls inside of a selected range
 
 ## 2.14.1
 

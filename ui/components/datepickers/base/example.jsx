@@ -114,6 +114,7 @@ let Day = props => (
     })}
     role="gridcell"
     tabIndex={props.tabIndex}
+    aria-label={props['aria-label']}
   >
     <span className="slds-day">{props.children}</span>
   </td>
@@ -152,41 +153,78 @@ export let DatePicker = props => (
       </thead>
       <tbody>
         <Week>
-          <Day aria-selected="false" isAdjacentMonth>
+          <Day aria-selected="false" isAdjacentMonth aria-label="31 May 2020">
             31
           </Day>
-          <Day aria-selected="false" tabIndex="0">
+          <Day aria-selected="false" tabIndex="0" aria-label="1 June 2020">
             1
           </Day>
-          <Day aria-selected="false">2</Day>
-          <Day aria-selected="false">3</Day>
-          <Day aria-selected="false">4</Day>
-          <Day aria-selected="false">5</Day>
-          <Day aria-selected="false">6</Day>
+          <Day aria-selected="false" aria-label="2 June 2020">
+            2
+          </Day>
+          <Day aria-selected="false" aria-label="3 June 2020">
+            3
+          </Day>
+          <Day aria-selected="false" aria-label="4 June 2020">
+            4
+          </Day>
+          <Day aria-selected="false" aria-label="5 June 2020">
+            5
+          </Day>
+          <Day aria-selected="false" aria-label="6 June 2020">
+            6
+          </Day>
         </Week>
         <Week>
-          <Day aria-selected="false">7</Day>
-          <Day aria-selected="false">8</Day>
-          <Day aria-selected="false">9</Day>
-          <Day aria-selected="false">10</Day>
-          <Day aria-selected="false">11</Day>
-          <Day aria-selected="false">12</Day>
-          <Day aria-selected="false">13</Day>
+          <Day aria-selected="false" aria-label="7 June 2020">
+            7
+          </Day>
+          <Day aria-selected="false" aria-label="8 June 2020">
+            8
+          </Day>
+          <Day aria-selected="false" aria-label="9 June 2020">
+            9
+          </Day>
+          <Day aria-selected="false" aria-label="10 June 2020">
+            10
+          </Day>
+          <Day aria-selected="false" aria-label="11 June 2020">
+            11
+          </Day>
+          <Day aria-selected="false" aria-label="12 June 2020">
+            12
+          </Day>
+          <Day aria-selected="false" aria-label="13 June 2020">
+            13
+          </Day>
         </Week>
         <Week>
-          <Day aria-selected="false">14</Day>
-          <Day aria-selected="false">15</Day>
-          <Day aria-selected="false">16</Day>
-          <Day aria-selected="false">17</Day>
+          <Day aria-selected="false" aria-label="14 June 2020">
+            14
+          </Day>
+          <Day aria-selected="false" aria-label="15 June 2020">
+            15
+          </Day>
+          <Day aria-selected="false" aria-label="16 June 2020">
+            16
+          </Day>
+          <Day aria-selected="false" aria-label="17 June 2020">
+            17
+          </Day>
           <Day
             aria-selected="false"
             aria-current={props.todayActive ? 'date' : null}
             className={props.todayActive ? 'slds-is-today' : null}
+            aria-label="18 June 2020"
           >
             18
           </Day>
-          <Day aria-selected="false">19</Day>
-          <Day aria-selected="false">20</Day>
+          <Day aria-selected="false" aria-label="19 June 2020">
+            19
+          </Day>
+          <Day aria-selected="false" aria-label="20 June 2020">
+            20
+          </Day>
         </Week>
         <Week
           className={classNames({
@@ -194,9 +232,15 @@ export let DatePicker = props => (
             'slds-has-multi-row-selection': props.dateRangeMulti
           })}
         >
-          <Day aria-selected="false">21</Day>
-          <Day aria-selected="false">22</Day>
-          <Day aria-selected="false">23</Day>
+          <Day aria-selected="false" aria-label="21 June 2020">
+            21
+          </Day>
+          <Day aria-selected="false" aria-label="22 June 2020">
+            22
+          </Day>
+          <Day aria-selected="false" aria-label="23 June 2020">
+            23
+          </Day>
           <Day
             aria-selected={
               props.dateSelected &&
@@ -213,6 +257,7 @@ export let DatePicker = props => (
                 props.dateSelected !== 'single' &&
                 (props.dateRange === 'week-4' || props.dateRange === 'week-4-5')
             })}
+            aria-label="24 June 2020"
           >
             24
           </Day>
@@ -230,6 +275,7 @@ export let DatePicker = props => (
                   props.dateRange === 'week-4-5'),
               'slds-is-today': props.todayActiveInRange
             })}
+            aria-label="25 June 2020"
             aria-current={props.todayActiveInRange ? 'date' : null}
           >
             25
@@ -247,6 +293,7 @@ export let DatePicker = props => (
                 ? 'slds-is-selected slds-is-selected-multi'
                 : null
             }
+            aria-label="26 June 2020"
           >
             26
           </Day>
@@ -263,6 +310,7 @@ export let DatePicker = props => (
                 ? 'slds-is-selected slds-is-selected-multi'
                 : null
             }
+            aria-label="27 June 2020"
           >
             27
           </Day>
@@ -287,6 +335,7 @@ export let DatePicker = props => (
                 props.dateSelected !== 'single' &&
                 (props.dateRange === 'week-5' || props.dateRange === 'week-4-5')
             })}
+            aria-label="28 June 2020"
           >
             28
           </Day>
@@ -303,6 +352,7 @@ export let DatePicker = props => (
                 ? 'slds-is-selected slds-is-selected-multi'
                 : null
             }
+            aria-label="29 June 2020"
           >
             29
           </Day>
@@ -319,6 +369,7 @@ export let DatePicker = props => (
                 ? 'slds-is-selected slds-is-selected-multi'
                 : null
             }
+            aria-label="30 June 2020"
           >
             30
           </Day>
@@ -334,6 +385,7 @@ export let DatePicker = props => (
                 : null
             )}
             isAdjacentMonth
+            aria-label="1 July 2020"
           >
             1
           </Day>
@@ -349,6 +401,7 @@ export let DatePicker = props => (
                 : null
             )}
             isAdjacentMonth
+            aria-label="2 July 2020"
           >
             2
           </Day>
@@ -364,6 +417,7 @@ export let DatePicker = props => (
                 : null
             )}
             isAdjacentMonth
+            aria-label="3 July 2020"
           >
             3
           </Day>
@@ -379,6 +433,7 @@ export let DatePicker = props => (
                 : null
             )}
             isAdjacentMonth
+            aria-label="4 July 2020"
           >
             4
           </Day>
@@ -434,7 +489,7 @@ export const Context = props => (
 
 export default (
   <DatePickerElement
-    idPrefix="defaulPicker"
+    idPrefix="defaultPicker"
     labelContent="Date"
     dateInputId={dateInputId + '-default'}
     isOpen

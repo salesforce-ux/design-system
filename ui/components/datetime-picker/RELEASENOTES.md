@@ -5,6 +5,9 @@
 <!-- ## [Unreleased] -->
 
 ## 2.16.0
+### Added
+
+- Added `aria-label` to provide the full `DD MM YYYY` text of the date
 
 ### Changed
 

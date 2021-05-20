@@ -17,10 +17,7 @@ exports[`Timepicker renders a listbox 1`] = `
       className="slds-combobox_container"
     >
       <div
-        aria-expanded="true"
-        aria-haspopup="listbox"
         className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open slds-timepicker"
-        role="combobox"
       >
         <div
           className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
@@ -30,6 +27,8 @@ exports[`Timepicker renders a listbox 1`] = `
             aria-activedescendant=""
             aria-autocomplete="list"
             aria-controls="example-unique-id-6"
+            aria-expanded="true"
+            aria-haspopup="listbox"
             autocomplete="off"
             className="slds-input slds-combobox__input slds-has-focus"
             defaultValue=""
@@ -37,7 +36,7 @@ exports[`Timepicker renders a listbox 1`] = `
             onBlur={[Function]}
             onFocus={[Function]}
             placeholder="Select a time…"
-            role="textbox"
+            role="combobox"
             type="text"
           />
           <span
@@ -251,10 +250,7 @@ exports[`Timepicker renders a listbox with a selected item 1`] = `
       className="slds-combobox_container"
     >
       <div
-        aria-expanded="true"
-        aria-haspopup="listbox"
         className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open slds-timepicker"
-        role="combobox"
       >
         <div
           className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
@@ -264,6 +260,8 @@ exports[`Timepicker renders a listbox with a selected item 1`] = `
             aria-activedescendant=""
             aria-autocomplete="list"
             aria-controls="example-unique-id-8"
+            aria-expanded="true"
+            aria-haspopup="listbox"
             autocomplete="off"
             className="slds-input slds-combobox__input slds-has-focus"
             defaultValue=""
@@ -271,7 +269,7 @@ exports[`Timepicker renders a listbox with a selected item 1`] = `
             onBlur={[Function]}
             onFocus={[Function]}
             placeholder="Select a time…"
-            role="textbox"
+            role="combobox"
             type="text"
           />
           <span
@@ -499,10 +497,7 @@ exports[`Timepicker renders base state 1`] = `
       className="slds-combobox_container"
     >
       <div
-        aria-expanded="false"
-        aria-haspopup="listbox"
         className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click slds-timepicker"
-        role="combobox"
       >
         <div
           className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
@@ -512,6 +507,8 @@ exports[`Timepicker renders base state 1`] = `
             aria-activedescendant=""
             aria-autocomplete="list"
             aria-controls="example-unique-id-2"
+            aria-expanded="false"
+            aria-haspopup="listbox"
             autocomplete="off"
             className="slds-input slds-combobox__input"
             defaultValue=""
@@ -519,7 +516,7 @@ exports[`Timepicker renders base state 1`] = `
             onBlur={[Function]}
             onFocus={[Function]}
             placeholder="Select a time…"
-            role="textbox"
+            role="combobox"
             type="text"
           />
           <span
@@ -734,10 +731,7 @@ Array [
         className="slds-combobox_container"
       >
         <div
-          aria-expanded="false"
-          aria-haspopup="listbox"
           className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click slds-timepicker slds-has-error"
-          role="combobox"
         >
           <div
             className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
@@ -747,6 +741,8 @@ Array [
               aria-activedescendant=""
               aria-autocomplete="list"
               aria-controls="example-unique-id-12"
+              aria-expanded="false"
+              aria-haspopup="listbox"
               autocomplete="off"
               className="slds-input slds-combobox__input"
               defaultValue=""
@@ -754,7 +750,7 @@ Array [
               onBlur={[Function]}
               onFocus={[Function]}
               placeholder="Select a time…"
-              role="textbox"
+              role="combobox"
               type="text"
             />
             <span
@@ -975,10 +971,7 @@ exports[`Timepicker renders focus state 1`] = `
       className="slds-combobox_container"
     >
       <div
-        aria-expanded="true"
-        aria-haspopup="listbox"
         className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open slds-timepicker"
-        role="combobox"
       >
         <div
           className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
@@ -988,6 +981,8 @@ exports[`Timepicker renders focus state 1`] = `
             aria-activedescendant=""
             aria-autocomplete="list"
             aria-controls="example-unique-id-4"
+            aria-expanded="true"
+            aria-haspopup="listbox"
             autocomplete="off"
             className="slds-input slds-combobox__input slds-has-focus"
             defaultValue=""
@@ -995,7 +990,7 @@ exports[`Timepicker renders focus state 1`] = `
             onBlur={[Function]}
             onFocus={[Function]}
             placeholder="Select a time…"
-            role="textbox"
+            role="combobox"
             type="text"
           />
           <span
@@ -1217,10 +1212,7 @@ Array [
         className="slds-combobox_container"
       >
         <div
-          aria-expanded="false"
-          aria-haspopup="listbox"
           className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click slds-timepicker slds-has-error"
-          role="combobox"
         >
           <div
             className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
@@ -1230,6 +1222,8 @@ Array [
               aria-activedescendant=""
               aria-autocomplete="list"
               aria-controls="example-unique-id-14"
+              aria-expanded="false"
+              aria-haspopup="listbox"
               autocomplete="off"
               className="slds-input slds-combobox__input"
               defaultValue=""
@@ -1237,7 +1231,7 @@ Array [
               onBlur={[Function]}
               onFocus={[Function]}
               placeholder="Select a time…"
-              role="textbox"
+              role="combobox"
               type="text"
             />
             <span
@@ -1465,10 +1459,7 @@ exports[`Timepicker renders required state 1`] = `
       className="slds-combobox_container"
     >
       <div
-        aria-expanded="false"
-        aria-haspopup="listbox"
         className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click slds-timepicker"
-        role="combobox"
       >
         <div
           className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
@@ -1478,6 +1469,8 @@ exports[`Timepicker renders required state 1`] = `
             aria-activedescendant=""
             aria-autocomplete="list"
             aria-controls="example-unique-id-10"
+            aria-expanded="false"
+            aria-haspopup="listbox"
             autocomplete="off"
             className="slds-input slds-combobox__input"
             defaultValue=""
@@ -1485,7 +1478,7 @@ exports[`Timepicker renders required state 1`] = `
             onBlur={[Function]}
             onFocus={[Function]}
             placeholder="Select a time…"
-            role="textbox"
+            role="combobox"
             type="text"
           />
           <span

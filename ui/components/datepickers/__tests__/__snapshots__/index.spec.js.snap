@@ -548,6 +548,7 @@ exports[`Date Picker renders a Date Picker in a Data Table 1`] = `
                     </span>
                   </td>
                   <td
+                    aria-current={null}
                     aria-label="25 June 2020"
                     aria-selected="false"
                     className=""
@@ -1218,6 +1219,7 @@ exports[`Date Picker renders a Date Picker with Date selected 1`] = `
             </span>
           </td>
           <td
+            aria-current={null}
             aria-label="25 June 2020"
             aria-selected="false"
             className=""
@@ -1904,6 +1906,7 @@ exports[`Date Picker renders a Date Picker with Range - Current and adjacent mon
                       </span>
                     </td>
                     <td
+                      aria-current={null}
                       aria-label="25 June 2020"
                       aria-selected="false"
                       className=""
@@ -2567,6 +2570,7 @@ exports[`Date Picker renders a Date Picker with Range - Current and adjacent mon
                       </span>
                     </td>
                     <td
+                      aria-current={null}
                       aria-label="25 June 2020"
                       aria-selected="false"
                       className=""
@@ -3276,6 +3280,7 @@ exports[`Date Picker renders a Date Picker with Range - Current and adjacent mon
                               </span>
                             </td>
                             <td
+                              aria-current={null}
                               aria-label="25 June 2020"
                               aria-selected="false"
                               className=""
@@ -3939,6 +3944,7 @@ exports[`Date Picker renders a Date Picker with Range - Current and adjacent mon
                               </span>
                             </td>
                             <td
+                              aria-current={null}
                               aria-label="25 June 2020"
                               aria-selected="false"
                               className=""
@@ -4651,6 +4657,7 @@ exports[`Date Picker renders a Date Picker with Range - Default in a Data Table 
                               </span>
                             </td>
                             <td
+                              aria-current={null}
                               aria-label="25 June 2020"
                               aria-selected="false"
                               className=""
@@ -5313,6 +5320,7 @@ exports[`Date Picker renders a Date Picker with Range - Default in a Data Table 
                               </span>
                             </td>
                             <td
+                              aria-current={null}
                               aria-label="25 June 2020"
                               aria-selected="false"
                               className=""
@@ -6008,6 +6016,7 @@ exports[`Date Picker renders a Date Picker with Range - End date selected (Diffe
                       </span>
                     </td>
                     <td
+                      aria-current={null}
                       aria-label="25 June 2020"
                       aria-selected="false"
                       className=""
@@ -6671,6 +6680,7 @@ exports[`Date Picker renders a Date Picker with Range - End date selected (Diffe
                       </span>
                     </td>
                     <td
+                      aria-current={null}
                       aria-label="25 June 2020"
                       aria-selected="true"
                       className="slds-is-selected slds-is-selected-multi"
@@ -7380,6 +7390,7 @@ exports[`Date Picker renders a Date Picker with Range - End date selected (Diffe
                               </span>
                             </td>
                             <td
+                              aria-current={null}
                               aria-label="25 June 2020"
                               aria-selected="false"
                               className=""
@@ -8043,6 +8054,7 @@ exports[`Date Picker renders a Date Picker with Range - End date selected (Diffe
                               </span>
                             </td>
                             <td
+                              aria-current={null}
                               aria-label="25 June 2020"
                               aria-selected="true"
                               className="slds-is-selected slds-is-selected-multi"
@@ -8738,6 +8750,7 @@ exports[`Date Picker renders a Date Picker with Range - End date selected (Same 
                       </span>
                     </td>
                     <td
+                      aria-current={null}
                       aria-label="25 June 2020"
                       aria-selected="false"
                       className=""
@@ -9401,6 +9414,7 @@ exports[`Date Picker renders a Date Picker with Range - End date selected (Same 
                       </span>
                     </td>
                     <td
+                      aria-current={null}
                       aria-label="25 June 2020"
                       aria-selected="true"
                       className="slds-is-selected slds-is-selected-multi"
@@ -10110,6 +10124,7 @@ exports[`Date Picker renders a Date Picker with Range - End date selected (Same 
                               </span>
                             </td>
                             <td
+                              aria-current={null}
                               aria-label="25 June 2020"
                               aria-selected="false"
                               className=""
@@ -10773,6 +10788,7 @@ exports[`Date Picker renders a Date Picker with Range - End date selected (Same 
                               </span>
                             </td>
                             <td
+                              aria-current={null}
                               aria-label="25 June 2020"
                               aria-selected="true"
                               className="slds-is-selected slds-is-selected-multi"
@@ -11468,6 +11484,7 @@ exports[`Date Picker renders a Date Picker with Range - Start date selected 1`] 
                       </span>
                     </td>
                     <td
+                      aria-current={null}
                       aria-label="25 June 2020"
                       aria-selected="false"
                       className=""
@@ -12130,6 +12147,7 @@ exports[`Date Picker renders a Date Picker with Range - Start date selected 1`] 
                       </span>
                     </td>
                     <td
+                      aria-current={null}
                       aria-label="25 June 2020"
                       aria-selected="false"
                       className=""
@@ -12839,6 +12857,7 @@ exports[`Date Picker renders a Date Picker with Range - Start date selected in a
                               </span>
                             </td>
                             <td
+                              aria-current={null}
                               aria-label="25 June 2020"
                               aria-selected="false"
                               className=""
@@ -13501,6 +13520,7 @@ exports[`Date Picker renders a Date Picker with Range - Start date selected in a
                               </span>
                             </td>
                             <td
+                              aria-current={null}
                               aria-label="25 June 2020"
                               aria-selected="false"
                               className=""
@@ -14196,6 +14216,7 @@ exports[`Date Picker renders a Date Picker with Range - Today - In selected rang
                       </span>
                     </td>
                     <td
+                      aria-current={null}
                       aria-label="25 June 2020"
                       aria-selected="false"
                       className=""
@@ -14859,6 +14880,7 @@ exports[`Date Picker renders a Date Picker with Range - Today - In selected rang
                       </span>
                     </td>
                     <td
+                      aria-current="date"
                       aria-label="25 June 2020"
                       aria-selected="true"
                       className="slds-is-selected slds-is-selected-multi slds-is-today"
@@ -15568,6 +15590,7 @@ exports[`Date Picker renders a Date Picker with Range - Today - In selected rang
                               </span>
                             </td>
                             <td
+                              aria-current={null}
                               aria-label="25 June 2020"
                               aria-selected="false"
                               className=""
@@ -16231,6 +16254,7 @@ exports[`Date Picker renders a Date Picker with Range - Today - In selected rang
                               </span>
                             </td>
                             <td
+                              aria-current="date"
                               aria-label="25 June 2020"
                               aria-selected="true"
                               className="slds-is-selected slds-is-selected-multi slds-is-today"
@@ -16905,6 +16929,7 @@ exports[`Date Picker renders a Date Picker with error 1`] = `
             </span>
           </td>
           <td
+            aria-current={null}
             aria-label="25 June 2020"
             aria-selected="false"
             className=""
@@ -17599,6 +17624,7 @@ exports[`Date Picker renders a Date Picker with required 1`] = `
             </span>
           </td>
           <td
+            aria-current={null}
             aria-label="25 June 2020"
             aria-selected="false"
             className=""
@@ -18271,6 +18297,7 @@ exports[`Date Picker renders a Date Picker with required and error 1`] = `
             </span>
           </td>
           <td
+            aria-current={null}
             aria-label="25 June 2020"
             aria-selected="false"
             className=""
@@ -18954,6 +18981,7 @@ exports[`Date Picker renders a Date picker with an error in a Data Table 1`] = `
                     </span>
                   </td>
                   <td
+                    aria-current={null}
                     aria-label="25 June 2020"
                     aria-selected="false"
                     className=""
@@ -19642,6 +19670,7 @@ exports[`Date Picker renders a Date picker with date selected in a Data Table 1`
                     </span>
                   </td>
                   <td
+                    aria-current={null}
                     aria-label="25 June 2020"
                     aria-selected="false"
                     className=""
@@ -20311,6 +20340,7 @@ exports[`Date Picker renders a default datetime picker 1`] = `
             </span>
           </td>
           <td
+            aria-current={null}
             aria-label="25 June 2020"
             aria-selected="false"
             className=""

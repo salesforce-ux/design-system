@@ -16,7 +16,6 @@
 #### Added
 - Added examples for Required, Required with Error states
 - Added `aria-label` to provide the full `DD MM YYYY` text of the date
-
 #### Fixed
 - Fixed missing attribute `aria-current="date"` when today's date falls inside of a selected range
 

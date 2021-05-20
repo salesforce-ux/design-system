@@ -835,10 +835,7 @@ exports[`Dynamic Menu renders a dynamic menu with more than 10 items 1`] = `
                 className="slds-combobox_container"
               >
                 <div
-                  aria-expanded="true"
-                  aria-haspopup="listbox"
                   className="slds-combobox slds-is-open"
-                  role="combobox"
                 >
                   <div
                     className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right slds-m-around_small"
@@ -847,13 +844,15 @@ exports[`Dynamic Menu renders a dynamic menu with more than 10 items 1`] = `
                     <input
                       aria-autocomplete="list"
                       aria-controls="example-unique-id-4"
+                      aria-expanded="true"
+                      aria-haspopup="listbox"
                       autocomplete="off"
                       className="slds-input slds-combobox__input"
                       id="example-unique-id-3"
                       onBlur={[Function]}
                       onFocus={[Function]}
                       placeholder="Search Favorites"
-                      role="textbox"
+                      role="combobox"
                       type="text"
                     />
                     <span

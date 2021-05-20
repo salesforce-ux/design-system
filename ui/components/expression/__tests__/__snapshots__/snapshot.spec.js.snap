@@ -8076,7 +8076,7 @@ exports[`Expression Formula renders the default expression formula variant 1`] =
                             className="slds-combobox_container slds-has-icon-only"
                           >
                             <div
-                              aria-controls="primary-combobox-id-1"
+                              aria-controls="example-unique-id-3"
                               className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click"
                             >
                               <div
@@ -8316,7 +8316,7 @@ exports[`Expression Formula renders the default expression formula variant 1`] =
                     >
                       <div
                         className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click"
-                        id="primary-combobox-id-1"
+                        id="example-unique-id-3"
                       >
                         <div
                           className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
@@ -8324,7 +8324,7 @@ exports[`Expression Formula renders the default expression formula variant 1`] =
                         >
                           <input
                             aria-autocomplete="list"
-                            aria-controls="listbox-id-68"
+                            aria-controls="example-unique-id-1"
                             aria-expanded="false"
                             aria-haspopup="listbox"
                             autocomplete="off"
@@ -8353,7 +8353,7 @@ exports[`Expression Formula renders the default expression formula variant 1`] =
                         <div
                           aria-orientation={null}
                           className="slds-dropdown slds-dropdown_length-with-icon-7 slds-dropdown_fluid"
-                          id="listbox-id-68"
+                          id="example-unique-id-1"
                           role="listbox"
                         >
                           <ul
@@ -8501,7 +8501,7 @@ exports[`Expression Formula renders the default expression formula variant 1`] =
                             className="slds-combobox_container slds-has-icon-only"
                           >
                             <div
-                              aria-controls="primary-combobox-id-2"
+                              aria-controls="example-unique-id-4"
                               className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click"
                             >
                               <div
@@ -8741,7 +8741,7 @@ exports[`Expression Formula renders the default expression formula variant 1`] =
                     >
                       <div
                         className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click"
-                        id="primary-combobox-id-2"
+                        id="example-unique-id-4"
                       >
                         <div
                           className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
@@ -8749,7 +8749,7 @@ exports[`Expression Formula renders the default expression formula variant 1`] =
                         >
                           <input
                             aria-autocomplete="list"
-                            aria-controls="listbox-id-69"
+                            aria-controls="example-unique-id-2"
                             aria-expanded="false"
                             aria-haspopup="listbox"
                             autocomplete="off"
@@ -8778,7 +8778,7 @@ exports[`Expression Formula renders the default expression formula variant 1`] =
                         <div
                           aria-orientation={null}
                           className="slds-dropdown slds-dropdown_length-with-icon-7 slds-dropdown_fluid"
-                          id="listbox-id-69"
+                          id="example-unique-id-2"
                           role="listbox"
                         >
                           <ul
@@ -8897,7 +8897,7 @@ exports[`Expression Formula renders the default expression formula variant 1`] =
               >
                 <label
                   className="slds-form-element__label slds-assistive-text"
-                  htmlFor="text-input-id-25"
+                  htmlFor="example-unique-id-5"
                 >
                   Insert operator
                 </label>
@@ -8906,7 +8906,7 @@ exports[`Expression Formula renders the default expression formula variant 1`] =
                 >
                   <input
                     className="slds-input"
-                    id="text-input-id-25"
+                    id="example-unique-id-5"
                     placeholder="Insert operator"
                     type="text"
                   />
@@ -8997,7 +8997,7 @@ exports[`Expression Formula renders the default expression formula with an optio
             >
               <input
                 aria-autocomplete={null}
-                aria-controls="listbox-id-70"
+                aria-controls="listbox-id-68"
                 aria-expanded="false"
                 aria-haspopup="listbox"
                 autocomplete="off"
@@ -9028,7 +9028,7 @@ exports[`Expression Formula renders the default expression formula with an optio
             <div
               aria-orientation={null}
               className="slds-dropdown slds-dropdown_length-5 slds-dropdown_fluid"
-              id="listbox-id-70"
+              id="listbox-id-68"
               role="listbox"
             >
               <ul
@@ -9249,7 +9249,7 @@ exports[`Expression Formula renders the default expression formula with an optio
                             className="slds-combobox_container slds-has-icon-only"
                           >
                             <div
-                              aria-controls="primary-combobox-id-3"
+                              aria-controls="example-unique-id-8"
                               className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click"
                             >
                               <div
@@ -9489,7 +9489,7 @@ exports[`Expression Formula renders the default expression formula with an optio
                     >
                       <div
                         className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click"
-                        id="primary-combobox-id-3"
+                        id="example-unique-id-8"
                       >
                         <div
                           className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
@@ -9497,7 +9497,7 @@ exports[`Expression Formula renders the default expression formula with an optio
                         >
                           <input
                             aria-autocomplete="list"
-                            aria-controls="listbox-id-71"
+                            aria-controls="example-unique-id-6"
                             aria-expanded="false"
                             aria-haspopup="listbox"
                             autocomplete="off"
@@ -9526,7 +9526,7 @@ exports[`Expression Formula renders the default expression formula with an optio
                         <div
                           aria-orientation={null}
                           className="slds-dropdown slds-dropdown_length-with-icon-7 slds-dropdown_fluid"
-                          id="listbox-id-71"
+                          id="example-unique-id-6"
                           role="listbox"
                         >
                           <ul
@@ -9674,7 +9674,7 @@ exports[`Expression Formula renders the default expression formula with an optio
                             className="slds-combobox_container slds-has-icon-only"
                           >
                             <div
-                              aria-controls="primary-combobox-id-4"
+                              aria-controls="example-unique-id-9"
                               className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click"
                             >
                               <div
@@ -9914,7 +9914,7 @@ exports[`Expression Formula renders the default expression formula with an optio
                     >
                       <div
                         className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click"
-                        id="primary-combobox-id-4"
+                        id="example-unique-id-9"
                       >
                         <div
                           className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
@@ -9922,7 +9922,7 @@ exports[`Expression Formula renders the default expression formula with an optio
                         >
                           <input
                             aria-autocomplete="list"
-                            aria-controls="listbox-id-72"
+                            aria-controls="example-unique-id-7"
                             aria-expanded="false"
                             aria-haspopup="listbox"
                             autocomplete="off"
@@ -9951,7 +9951,7 @@ exports[`Expression Formula renders the default expression formula with an optio
                         <div
                           aria-orientation={null}
                           className="slds-dropdown slds-dropdown_length-with-icon-7 slds-dropdown_fluid"
-                          id="listbox-id-72"
+                          id="example-unique-id-7"
                           role="listbox"
                         >
                           <ul
@@ -10070,7 +10070,7 @@ exports[`Expression Formula renders the default expression formula with an optio
               >
                 <label
                   className="slds-form-element__label slds-assistive-text"
-                  htmlFor="text-input-id-26"
+                  htmlFor="example-unique-id-10"
                 >
                   Insert operator
                 </label>
@@ -10079,7 +10079,7 @@ exports[`Expression Formula renders the default expression formula with an optio
                 >
                   <input
                     className="slds-input"
-                    id="text-input-id-26"
+                    id="example-unique-id-10"
                     placeholder="Insert operator"
                     type="text"
                   />
@@ -13468,7 +13468,7 @@ exports[`Expression Narrow Group renders the default expression narrow group 1`]
             >
               <input
                 aria-autocomplete={null}
-                aria-controls="listbox-id-75"
+                aria-controls="listbox-id-71"
                 aria-expanded="false"
                 aria-haspopup="listbox"
                 autocomplete="off"
@@ -13498,7 +13498,7 @@ exports[`Expression Narrow Group renders the default expression narrow group 1`]
             <div
               aria-orientation={null}
               className="slds-dropdown slds-dropdown_length-5 slds-dropdown_fluid"
-              id="listbox-id-75"
+              id="listbox-id-71"
               role="listbox"
             >
               <ul
@@ -13780,7 +13780,7 @@ exports[`Expression Narrow Group renders the default expression narrow with opti
             >
               <input
                 aria-autocomplete={null}
-                aria-controls="listbox-id-76"
+                aria-controls="listbox-id-72"
                 aria-expanded="false"
                 aria-haspopup="listbox"
                 autocomplete="off"
@@ -13811,7 +13811,7 @@ exports[`Expression Narrow Group renders the default expression narrow with opti
             <div
               aria-orientation={null}
               className="slds-dropdown slds-dropdown_length-5 slds-dropdown_fluid"
-              id="listbox-id-76"
+              id="listbox-id-72"
               role="listbox"
             >
               <ul
@@ -14091,7 +14091,7 @@ exports[`Expression Narrow renders the default expression narrow variant 1`] = `
                 >
                   <input
                     aria-autocomplete={null}
-                    aria-controls="listbox-id-73"
+                    aria-controls="listbox-id-69"
                     aria-expanded="false"
                     aria-haspopup="listbox"
                     autocomplete="off"
@@ -14121,7 +14121,7 @@ exports[`Expression Narrow renders the default expression narrow variant 1`] = `
                 <div
                   aria-orientation={null}
                   className="slds-dropdown slds-dropdown_length-5 slds-dropdown_fluid"
-                  id="listbox-id-73"
+                  id="listbox-id-69"
                   role="listbox"
                 >
                   <ul
@@ -14405,7 +14405,7 @@ exports[`Expression Narrow renders the default expression narrow with option sel
                 >
                   <input
                     aria-autocomplete={null}
-                    aria-controls="listbox-id-74"
+                    aria-controls="listbox-id-70"
                     aria-expanded="false"
                     aria-haspopup="listbox"
                     autocomplete="off"
@@ -14436,7 +14436,7 @@ exports[`Expression Narrow renders the default expression narrow with option sel
                 <div
                   aria-orientation={null}
                   className="slds-dropdown slds-dropdown_length-5 slds-dropdown_fluid"
-                  id="listbox-id-74"
+                  id="listbox-id-70"
                   role="listbox"
                 >
                   <ul

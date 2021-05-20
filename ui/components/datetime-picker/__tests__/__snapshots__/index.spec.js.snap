@@ -550,6 +550,7 @@ exports[`Datetime Picker renders a default datetime picker 1`] = `
                       </span>
                     </td>
                     <td
+                      aria-current={null}
                       aria-label="25 June 2020"
                       aria-selected="false"
                       className=""
@@ -1471,6 +1472,7 @@ exports[`Datetime Picker renders with a date selection 1`] = `
                       </span>
                     </td>
                     <td
+                      aria-current={null}
                       aria-label="25 June 2020"
                       aria-selected="false"
                       className=""
@@ -2400,6 +2402,7 @@ exports[`Datetime Picker renders with a required plus error state 1`] = `
                       </span>
                     </td>
                     <td
+                      aria-current={null}
                       aria-label="25 June 2020"
                       aria-selected="false"
                       className=""
@@ -3333,8 +3336,8 @@ exports[`Datetime Picker renders with a required state 1`] = `
                       </span>
                     </td>
                     <td
-                      aria-label="25 June 2020"
                       aria-current={null}
+                      aria-label="25 June 2020"
                       aria-selected="false"
                       className=""
                       role="gridcell"
@@ -4254,8 +4257,8 @@ exports[`Datetime Picker renders with a small width container 1`] = `
                       </span>
                     </td>
                     <td
-                      aria-label="25 June 2020"
                       aria-current={null}
+                      aria-label="25 June 2020"
                       aria-selected="false"
                       className=""
                       role="gridcell"
@@ -5176,8 +5179,8 @@ exports[`Datetime Picker renders with a time selection 1`] = `
                       </span>
                     </td>
                     <td
-                      aria-label="25 June 2020"
                       aria-current={null}
+                      aria-label="25 June 2020"
                       aria-selected="false"
                       className=""
                       role="gridcell"
@@ -6113,8 +6116,8 @@ exports[`Datetime Picker renders with an error state 1`] = `
                       </span>
                     </td>
                     <td
-                      aria-label="25 June 2020"
                       aria-current={null}
+                      aria-label="25 June 2020"
                       aria-selected="false"
                       className=""
                       role="gridcell"

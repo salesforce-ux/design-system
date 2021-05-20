@@ -6,7 +6,7 @@ exports[`Input renders a default input 1`] = `
 >
   <label
     className="slds-form-element__label"
-    htmlFor="text-input-id-1"
+    htmlFor="text-input-id-0"
   >
     Input Label
   </label>
@@ -15,7 +15,7 @@ exports[`Input renders a default input 1`] = `
   >
     <input
       className="slds-input"
-      id="text-input-id-1"
+      id="text-input-id-0"
       placeholder="Placeholder text…"
       type="text"
     />
@@ -29,7 +29,7 @@ exports[`Input renders an input that has an error 1`] = `
 >
   <label
     className="slds-form-element__label"
-    htmlFor="text-input-id-1"
+    htmlFor="text-input-id-3"
   >
     <abbr
       className="slds-required"
@@ -44,10 +44,10 @@ exports[`Input renders an input that has an error 1`] = `
     className="slds-form-element__control"
   >
     <input
-      aria-describedby="error-message-unique-id"
+      aria-describedby="error-message-id-4"
       aria-invalid="true"
       className="slds-input"
-      id="text-input-id-1"
+      id="text-input-id-3"
       placeholder="Placeholder text…"
       required={true}
       type="text"
@@ -55,7 +55,7 @@ exports[`Input renders an input that has an error 1`] = `
   </div>
   <div
     className="slds-form-element__help"
-    id="error-message-unique-id"
+    id="error-message-id-4"
   >
     Enter a value.
   </div>
@@ -68,7 +68,7 @@ exports[`Input renders an input that has an error with icon 1`] = `
 >
   <label
     className="slds-form-element__label"
-    htmlFor="text-input-id-1"
+    htmlFor="text-input-id-5"
   >
     <abbr
       className="slds-required"
@@ -91,10 +91,10 @@ exports[`Input renders an input that has an error with icon 1`] = `
       />
     </svg>
     <input
-      aria-describedby="error-message-unique-id"
+      aria-describedby="error-message-id-6"
       aria-invalid="true"
       className="slds-input"
-      id="text-input-id-1"
+      id="text-input-id-5"
       placeholder="Placeholder text…"
       required={true}
       type="text"
@@ -102,7 +102,7 @@ exports[`Input renders an input that has an error with icon 1`] = `
   </div>
   <div
     className="slds-form-element__help"
-    id="error-message-unique-id"
+    id="error-message-id-6"
   >
     Enter a value.
   </div>
@@ -115,7 +115,7 @@ exports[`Input renders an input that is disabled 1`] = `
 >
   <label
     className="slds-form-element__label"
-    htmlFor="text-input-id-1"
+    htmlFor="text-input-id-2"
   >
     Input Label
   </label>
@@ -125,7 +125,7 @@ exports[`Input renders an input that is disabled 1`] = `
     <input
       className="slds-input"
       disabled={true}
-      id="text-input-id-1"
+      id="text-input-id-2"
       placeholder="Placeholder text…"
       type="text"
     />
@@ -139,7 +139,7 @@ exports[`Input renders an input that is read only 1`] = `
 >
   <label
     className="slds-form-element__label"
-    htmlFor="text-input-id-1"
+    htmlFor="text-input-id-7"
   >
     Input Label
   </label>
@@ -149,7 +149,7 @@ exports[`Input renders an input that is read only 1`] = `
     <input
       className="slds-input"
       defaultValue="Read Only"
-      id="text-input-id-1"
+      id="text-input-id-7"
       placeholder=""
       readOnly={true}
       type="text"
@@ -195,7 +195,7 @@ exports[`Input renders an input that is the date type 1`] = `
 >
   <label
     className="slds-form-element__label"
-    htmlFor="text-input-id-1"
+    htmlFor="date-input-id-13"
   >
     Input Label
   </label>
@@ -204,7 +204,7 @@ exports[`Input renders an input that is the date type 1`] = `
   >
     <input
       className="slds-input"
-      id="text-input-id-1"
+      id="date-input-id-13"
       type="date"
     />
   </div>
@@ -217,7 +217,7 @@ exports[`Input renders an input that is the email type 1`] = `
 >
   <label
     className="slds-form-element__label"
-    htmlFor="input-email"
+    htmlFor="email-input-id-12"
   >
     Email
   </label>
@@ -226,8 +226,8 @@ exports[`Input renders an input that is the email type 1`] = `
   >
     <input
       className="slds-input"
-      id="input-email"
-      placeholder="E-Mail"
+      id="email-input-id-12"
+      placeholder="Email"
       type="email"
     />
   </div>
@@ -240,7 +240,7 @@ exports[`Input renders an input that is the search type 1`] = `
 >
   <label
     className="slds-form-element__label"
-    htmlFor="text-input-id-1"
+    htmlFor="search-input-id-14"
   >
     Input Label
   </label>
@@ -249,7 +249,7 @@ exports[`Input renders an input that is the search type 1`] = `
   >
     <input
       className="slds-input"
-      id="text-input-id-1"
+      id="search-input-id-14"
       type="search"
     />
   </div>
@@ -262,7 +262,7 @@ exports[`Input renders an input that is the tel type 1`] = `
 >
   <label
     className="slds-form-element__label"
-    htmlFor="text-input-id-1"
+    htmlFor="tel-input-id-16"
   >
     Input Label
   </label>
@@ -271,7 +271,7 @@ exports[`Input renders an input that is the tel type 1`] = `
   >
     <input
       className="slds-input"
-      id="text-input-id-1"
+      id="tel-input-id-16"
       type="tel"
     />
   </div>
@@ -284,7 +284,7 @@ exports[`Input renders an input that is the url type 1`] = `
 >
   <label
     className="slds-form-element__label"
-    htmlFor="text-input-id-1"
+    htmlFor="url-input-id-15"
   >
     Input Label
   </label>
@@ -293,7 +293,7 @@ exports[`Input renders an input that is the url type 1`] = `
   >
     <input
       className="slds-input"
-      id="text-input-id-1"
+      id="url-input-id-15"
       type="url"
     />
   </div>
@@ -306,7 +306,7 @@ exports[`Input renders an input with clear button and spinner 1`] = `
 >
   <label
     className="slds-form-element__label"
-    htmlFor="text-input-id-1"
+    htmlFor="text-input-id-11"
   >
     Input Label
   </label>
@@ -323,7 +323,7 @@ exports[`Input renders an input with clear button and spinner 1`] = `
     </svg>
     <input
       className="slds-input"
-      id="text-input-id-1"
+      id="text-input-id-11"
       placeholder="Placeholder text…"
       type="text"
     />
@@ -372,74 +372,65 @@ exports[`Input renders an input with clear button and spinner 1`] = `
 
 exports[`Input renders an input with field level help 1`] = `
 <div
-  style={
-    Object {
-      "paddingTop": "3rem",
-      "position": "relative",
-    }
-  }
+  className="slds-form-element"
 >
-  <div
-    className="slds-form-element"
+  <label
+    className="slds-form-element__label"
+    htmlFor="text-input-id-20"
   >
-    <label
-      className="slds-form-element__label"
-      htmlFor="text-input-id-1"
+    Input Label
+  </label>
+  <div
+    className="slds-form-element__icon"
+  >
+    <button
+      aria-describedby="help"
+      className="slds-button slds-button_icon"
+      onClick={[Function]}
     >
-      Input Label
-    </label>
+      <svg
+        aria-hidden={true}
+        className="slds-button__icon"
+      >
+        <use
+          xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#info"
+        />
+      </svg>
+      <span
+        className="slds-assistive-text"
+      >
+        Help
+      </span>
+    </button>
     <div
-      className="slds-form-element__icon"
-    >
-      <button
-        aria-describedby="help"
-        className="slds-button slds-button_icon"
-        onClick={[Function]}
-      >
-        <svg
-          aria-hidden={true}
-          className="slds-button__icon"
-        >
-          <use
-            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#info"
-          />
-        </svg>
-        <span
-          className="slds-assistive-text"
-        >
-          Help
-        </span>
-      </button>
-      <div
-        className="slds-popover slds-popover_tooltip slds-nubbin_bottom-left"
-        id="help"
-        role="tooltip"
-        style={
-          Object {
-            "left": "-15px",
-            "position": "absolute",
-            "top": "-45px",
-            "width": "170px",
-          }
+      className="slds-popover slds-popover_tooltip slds-nubbin_bottom-left"
+      id="help"
+      role="tooltip"
+      style={
+        Object {
+          "left": "-15px",
+          "position": "absolute",
+          "top": "-45px",
+          "width": "170px",
         }
+      }
+    >
+      <div
+        className="slds-popover__body"
       >
-        <div
-          className="slds-popover__body"
-        >
-          Some helpful information.
-        </div>
+        Some helpful information.
       </div>
     </div>
-    <div
-      className="slds-form-element__control"
-    >
-      <input
-        className="slds-input"
-        id="text-input-id-1"
-        placeholder="Placeholder text…"
-        type="text"
-      />
-    </div>
+  </div>
+  <div
+    className="slds-form-element__control"
+  >
+    <input
+      className="slds-input"
+      id="text-input-id-20"
+      placeholder="Placeholder text…"
+      type="text"
+    />
   </div>
 </div>
 `;
@@ -450,7 +441,7 @@ exports[`Input renders an input with fixed text 1`] = `
 >
   <label
     className="slds-form-element__label"
-    htmlFor="text-input-id-1"
+    htmlFor="text-input-id-17"
     id="fixed-text-label"
   >
     Input Label
@@ -467,7 +458,7 @@ exports[`Input renders an input with fixed text 1`] = `
     <input
       aria-labelledby="fixed-text-label fixed-text-addon-pre fixed-text-addon-post"
       className="slds-input"
-      id="text-input-id-1"
+      id="text-input-id-17"
       placeholder="Placeholder text…"
       type="text"
     />
@@ -487,7 +478,7 @@ exports[`Input renders an input with inline help 1`] = `
 >
   <label
     className="slds-form-element__label"
-    htmlFor="text-input-id-1"
+    htmlFor="text-input-id-18"
     id="inline-text-label"
   >
     Input Label
@@ -496,17 +487,17 @@ exports[`Input renders an input with inline help 1`] = `
     className="slds-form-element__control"
   >
     <input
-      aria-describedby="error-message-unique-id"
+      aria-describedby="error-message-id-19"
       aria-invalid="true"
       className="slds-input"
-      id="text-input-id-1"
+      id="text-input-id-18"
       placeholder="Placeholder text…"
       type="text"
     />
   </div>
   <div
     className="slds-form-element__help"
-    id="error-message-unique-id"
+    id="error-message-id-19"
   >
     ex: (415)111-2222
   </div>
@@ -519,7 +510,7 @@ exports[`Input renders an input with left icon 1`] = `
 >
   <label
     className="slds-form-element__label"
-    htmlFor="text-input-id-1"
+    htmlFor="text-input-id-8"
   >
     Input Label
   </label>
@@ -536,7 +527,7 @@ exports[`Input renders an input with left icon 1`] = `
     </svg>
     <input
       className="slds-input"
-      id="text-input-id-1"
+      id="text-input-id-8"
       placeholder="Placeholder text…"
       type="text"
     />
@@ -550,7 +541,7 @@ exports[`Input renders an input with left icon and clear button 1`] = `
 >
   <label
     className="slds-form-element__label"
-    htmlFor="text-input-id-1"
+    htmlFor="text-input-id-10"
   >
     Input Label
   </label>
@@ -567,7 +558,7 @@ exports[`Input renders an input with left icon and clear button 1`] = `
     </svg>
     <input
       className="slds-input"
-      id="text-input-id-1"
+      id="text-input-id-10"
       placeholder="Placeholder text…"
       type="text"
     />
@@ -600,7 +591,7 @@ exports[`Input renders an input with right icon 1`] = `
 >
   <label
     className="slds-form-element__label"
-    htmlFor="text-input-id-1"
+    htmlFor="text-input-id-9"
   >
     Input Label
   </label>
@@ -617,7 +608,7 @@ exports[`Input renders an input with right icon 1`] = `
     </svg>
     <input
       className="slds-input"
-      id="text-input-id-1"
+      id="text-input-id-9"
       placeholder="Placeholder text…"
       type="text"
     />

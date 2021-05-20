@@ -4,6 +4,12 @@
 
 <!-- ## [Unreleased] -->
 
+## 2.15.0
+
+### Changed
+
+- For indicating the selected item in the list, `aria-selected` has been replaced with `aria-current="page"`.
+
 ## 2.8.0
 
 ### Changed

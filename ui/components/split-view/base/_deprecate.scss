@@ -1,0 +1,14 @@
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+@include deprecate('4.0.0', 'Please use [aria-current="page"] instead') {
+
+  .slds-split-view__list-item-action[aria-selected='true'] {
+    box-shadow: inset 4px 0 0 $brand-accessible;
+
+    &:focus {
+      box-shadow: inset 4px 0 0 $brand-accessible,
+        inset 0 0 0 1px $brand-accessible;
+    }
+  }
+}

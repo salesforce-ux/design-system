@@ -216,6 +216,10 @@ Removed the usage of the deprecated combobox. The Picklist now uses the current 
 #### Added
 - Enabled styling hooks for Rich Text Editor. See Rich Text Editor's styling hooks overview table for a full listing of the currently available hooks.
 
+### [Split View](https://www.lightningdesignsystem.com/components/split-view)
+#### Changed
+- For indicating the selected item in the list, `aria-selected` has been replaced with `aria-current="page"`.
+
 ### [Tabs](https://www.lightningdesignsystem.com/components/tabs)
 #### Added
 - Added additional styling hooks. See tab's styling hooks overview table for a full listing of the currently available hooks.

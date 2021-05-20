@@ -1,6 +1,8 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
+@import 'deprecate';
+
 /**
  * @summary Wrapper of split view
  *
@@ -147,7 +149,7 @@
     box-shadow: inset 0 0 0 1px $color-brand;
   }
 
-  &[aria-selected="true"] {
+  &[aria-current="page"] {
     box-shadow: inset 4px 0 0 $brand-accessible;
 
     &:focus {

@@ -9,6 +9,10 @@
 
 - Added `aria-label` to provide the full `DD MM YYYY` text of the date
 
+### Added
+
+- Added hover style for dates
+
 ### Changed
 
 - Removed the usage of the deprecated combobox. The Datetime Picker now uses the current combobox.

@@ -11,4 +11,16 @@
   .slds-disabled-text {
     color: $color-text-button-default-disabled;
   }
+
+  .slds-datepicker {
+
+    td {
+
+      &:hover:not(.slds-disabled-text) > .slds-day,
+      &:focus:not(.slds-disabled-text) > .slds-day,
+      &.slds-is-today > .slds-day {
+        cursor: pointer;
+      }
+    }
+  }
 }

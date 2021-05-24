@@ -15,6 +15,7 @@
 ### [Datepickers](https://www.lightningdesignsystem.com/components/datepickers)
 #### Added
 - Added examples for Required, Required with Error states
+- Added hover style for dates
 - Added `aria-label` to provide the full `DD MM YYYY` text of the date
 #### Fixed
 - Fixed missing attribute `aria-current="date"` when today's date falls inside of a selected range
@@ -22,6 +23,7 @@
 ### [Datetime Picker](https://www.lightningdesignsystem.com/components/datetime-picker)
 #### Added
 - Added `aria-label` to provide the full `DD MM YYYY` text of the date
+
 #### Changed
 - Removed the usage of the deprecated combobox. The Datetime Picker now uses the current combobox.
 

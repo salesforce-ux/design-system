@@ -9,6 +9,7 @@
 ### Added
 
 - Added examples for Required, Required with Error states
+- Added hover style for dates
 - Added `aria-label` to provide the full `DD MM YYYY` text of the date
 
 ### Fixed

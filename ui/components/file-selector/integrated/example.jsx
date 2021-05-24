@@ -5,6 +5,8 @@ import React from 'react';
 import SvgIcon from '../../../shared/svg-icon';
 import classNames from 'classnames';
 
+const exampleDemoStyles = 'width: 320px; height: 320px';
+
 let IntegratedFileSelector = props => (
   <div
     className={classNames(
@@ -56,79 +58,85 @@ let IntegratedFileSelector = props => (
   </div>
 );
 
-export default (
-  <div className="demo-only" style={{ width: '320px', height: '320px' }}>
-    <IntegratedFileSelector className="slds-file-selector_integrated">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-      commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-      cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-      est laborum.
-    </IntegratedFileSelector>
-  </div>
-);
+export default [
+  {
+    id: 'default',
+    label: 'Integrated File Selector - Default',
+    demoStyles: exampleDemoStyles,
+    storybookStyles: true,
+    element: (
+      <IntegratedFileSelector className="slds-file-selector_integrated">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+        cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+        est laborum.
+      </IntegratedFileSelector>
+    )
+  }
+]
 
 export let states = [
   {
     id: 'integrated-file-selector-drag',
     label: 'Drag',
+    demoStyles: exampleDemoStyles,
+    storybookStyles: true,
     element: (
-      <div className="demo-only" style={{ width: '320px', height: '320px' }}>
-        <IntegratedFileSelector className="slds-file-selector_integrated" drag>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
-        </IntegratedFileSelector>
-      </div>
+      <IntegratedFileSelector className="slds-file-selector_integrated" drag>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+        minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+        aliquip ex ea commodo consequat. Duis aute irure dolor in
+        reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+        culpa qui officia deserunt mollit anim id est laborum.
+      </IntegratedFileSelector>
     )
   },
   {
     id: 'integrated-file-selector-dragover',
     label: 'Dragover',
+    demoStyles: exampleDemoStyles,
+    storybookStyles: true,
     element: (
-      <div className="demo-only" style={{ width: '320px', height: '320px' }}>
-        <IntegratedFileSelector
-          className="slds-file-selector_integrated"
-          drag
-          dragover
-        >
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
-        </IntegratedFileSelector>
-      </div>
+      <IntegratedFileSelector
+        className="slds-file-selector_integrated"
+        drag
+        dragover
+      >
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+        minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+        aliquip ex ea commodo consequat. Duis aute irure dolor in
+        reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+        culpa qui officia deserunt mollit anim id est laborum.
+      </IntegratedFileSelector>
     )
   },
   {
     id: 'integrated-file-selector-dragover-error',
     label: 'Dragover with error',
+    demoStyles: exampleDemoStyles,
+    storybookStyles: true,
     element: (
-      <div className="demo-only" style={{ width: '320px', height: '320px' }}>
-        <IntegratedFileSelector
-          className="slds-file-selector_integrated"
-          drag
-          dragoverError
-          error
-        >
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
-        </IntegratedFileSelector>
-      </div>
+      <IntegratedFileSelector
+        className="slds-file-selector_integrated"
+        drag
+        dragoverError
+        error
+      >
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+        minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+        aliquip ex ea commodo consequat. Duis aute irure dolor in
+        reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+        culpa qui officia deserunt mollit anim id est laborum.
+      </IntegratedFileSelector>
     )
   }
 ];

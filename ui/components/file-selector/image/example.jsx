@@ -2,44 +2,48 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 import React from 'react';
-import { FileSelector } from '../base/example';
+import FileSelector from '../';
 
-export default (
-  <div className="demo-only" style={{ maxWidth: '320px' }}>
-    <FileSelector className="slds-file-selector_images" />
-  </div>
-);
+export default [
+  {
+    id: 'default',
+    label: 'Files - Default',
+    demoStyles: 'max-width: 320px',
+    storybookStyles: true,
+    element: <FileSelector images />
+  }
+];
 
 export let states = [
   {
     id: 'file-selector-images-error',
     label: 'Error',
+    demoStyles: 'max-width: 320px',
+    storybookStyles: true,
     element: (
-      <div className="demo-only" style={{ maxWidth: '320px' }}>
-        <FileSelector className="slds-file-selector_images" error />
-      </div>
+      <FileSelector images error />
     )
   },
   {
     id: 'file-selector-images-dragover',
     label: 'Dragover',
+    demoStyles: 'max-width: 320px',
+    storybookStyles: true,
     element: (
-      <div className="demo-only" style={{ maxWidth: '320px' }}>
-        <FileSelector className="slds-file-selector_images" dragover />
-      </div>
+      <FileSelector images dragover />
     )
   },
   {
     id: 'file-selector-images-dragover-error',
     label: 'Dragover with error',
+    demoStyles: 'max-width: 320px',
+    storybookStyles: true,
     element: (
-      <div className="demo-only" style={{ maxWidth: '320px' }}>
-        <FileSelector
-          className="slds-file-selector_images"
-          dragoverError
-          error
-        />
-      </div>
+      <FileSelector
+        images
+        dragoverError
+        error
+      />
     )
   }
 ];

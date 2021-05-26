@@ -9,7 +9,8 @@ import * as SplitView from '../base/example';
 const { matchesMarkup } = createHelpers(__dirname);
 
 describe('Split View', () => {
-  it('renders a default split view', () => matchesMarkup(SplitView.default));
+  it('renders a default split view', () =>
+    matchesMarkup(getDisplayElementById(SplitView.default, 'default')));
 
   it('renders split view with a selected item', () =>
     matchesMarkup(getDisplayElementById(SplitView.states, 'selected-item')));

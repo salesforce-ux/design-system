@@ -1,6 +1,10 @@
 <!-- Release notes authoring guidelines: http://keepachangelog.com/ -->
 <!-- On release, add general notes here. In time the legacy release notes will be add to this -->
 
+## 2.15.8 - May 27, 2021
+
+- Updated selected text highlight color token `COLOR_BACKGROUND_SELECTION` for better color contrast
+
 ## 2.15.7 - May 14, 2021
 
 ## 2.15.6 - May 7, 2021

@@ -3,6 +3,8 @@
 
 ## Release 2.16.0 - Upcoming
 
+- Updated selected text highlight color token `COLOR_BACKGROUND_SELECTION` for better color contrast
+
 ## Components
 ### [Accordion](https://www.lightningdesignsystem.com/components/accordion)
 ## Added
@@ -23,7 +25,8 @@
 ### [Datetime Picker](https://www.lightningdesignsystem.com/components/datetime-picker)
 #### Added
 - Added `aria-label` to provide the full `DD MM YYYY` text of the date
-
+#### Added
+- Added hover style for dates
 #### Changed
 - Removed the usage of the deprecated combobox. The Datetime Picker now uses the current combobox.
 
@@ -66,6 +69,10 @@ Removed the usage of the deprecated combobox. The Picklist now uses the current 
 #### Changed
 - Removed the usage of the deprecated combobox. The Timepicker now uses the current combobox.
 <!-- ## [VERSION] -->
+
+### [Vertical Navigation](https://www.lightningdesignsystem.com/components/vertical-navigation)
+#### Changed
+- Replaced checked radio group navigation item background token with `BRAND_BACKGROUND_PRIMARY` branding token.
 
 ### [Welcome Mat](https://www.lightningdesignsystem.com/components/welcome-mat)
 #### Added

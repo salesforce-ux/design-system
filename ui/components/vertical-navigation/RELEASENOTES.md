@@ -3,6 +3,11 @@
 # Vertical Navigation Release Notes
 
 <!-- ## [Unreleased] -->
+## 2.16.0
+
+### Changed
+
+- Replaced checked radio group navigation item background token with `BRAND_BACKGROUND_PRIMARY` branding token.
 
 ## 2.10.0
 

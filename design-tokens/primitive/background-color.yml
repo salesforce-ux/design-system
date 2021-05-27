@@ -77,7 +77,7 @@ props:
     comment: Background color for highlighting text in search results.
 
   COLOR_BACKGROUND_SELECTION:
-    value: '{!PALETTE_BLUE_95}'
+    value: '{!PALETTE_BLUE_90}'
     comment: Background color for text selected with a mouse.
 
   COLOR_BACKGROUND_STENCIL:

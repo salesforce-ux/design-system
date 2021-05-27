@@ -36,7 +36,7 @@
 
     &:checked + .slds-nav-vertical__action {
       font-weight: bold;
-      background-color: $color-background-selection;
+      background-color: $brand-background-primary;
       box-shadow: inset rem(4px) 0 0 $brand-primary;
     }
   }

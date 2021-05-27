@@ -2042,6 +2042,7 @@ exports[`render combobox render grouped combobox 1`] = `
         >
           <label
             className="slds-form-element__label slds-assistive-text"
+            htmlFor="combobox-id-01-object-switcher"
           >
             Filter Search by:
           </label>
@@ -2067,7 +2068,7 @@ exports[`render combobox render grouped combobox 1`] = `
                     autocomplete="off"
                     className="slds-input slds-combobox__input slds-combobox__input-value"
                     defaultValue="Accounts"
-                    id="text-input-unique-id-37"
+                    id="combobox-id-01-object-switcher"
                     onBlur={[Function]}
                     onFocus={[Function]}
                     placeholder=" "
@@ -2608,6 +2609,7 @@ exports[`render combobox render grouped combobox displaying options based on use
         >
           <label
             className="slds-form-element__label slds-assistive-text"
+            htmlFor="combobox-id-01-object-switcher"
           >
             Filter Search by:
           </label>
@@ -2633,7 +2635,7 @@ exports[`render combobox render grouped combobox displaying options based on use
                     autocomplete="off"
                     className="slds-input slds-combobox__input slds-combobox__input-value"
                     defaultValue="Accounts"
-                    id="text-input-unique-id-39"
+                    id="combobox-id-01-object-switcher"
                     onBlur={[Function]}
                     onFocus={[Function]}
                     placeholder=" "
@@ -3190,6 +3192,7 @@ exports[`render combobox render grouped combobox with selections made in collaps
         >
           <label
             className="slds-form-element__label slds-assistive-text"
+            htmlFor="combobox-id-01-object-switcher"
           >
             Filter Search by:
           </label>
@@ -3215,7 +3218,7 @@ exports[`render combobox render grouped combobox with selections made in collaps
                     autocomplete="off"
                     className="slds-input slds-combobox__input slds-combobox__input-value"
                     defaultValue="Accounts"
-                    id="text-input-unique-id-41"
+                    id="combobox-id-01-object-switcher"
                     onBlur={[Function]}
                     onFocus={[Function]}
                     placeholder=" "
@@ -4163,6 +4166,7 @@ exports[`render combobox render grouped combobox with selections made in expande
         >
           <label
             className="slds-form-element__label slds-assistive-text"
+            htmlFor="combobox-id-01-object-switcher"
           >
             Filter Search by:
           </label>
@@ -4188,7 +4192,7 @@ exports[`render combobox render grouped combobox with selections made in expande
                     autocomplete="off"
                     className="slds-input slds-combobox__input slds-combobox__input-value"
                     defaultValue="Accounts"
-                    id="text-input-unique-id-43"
+                    id="combobox-id-01-object-switcher"
                     onBlur={[Function]}
                     onFocus={[Function]}
                     placeholder=" "
@@ -8640,7 +8644,6 @@ exports[`render deprecated combobox renders a multi-entity combobox with options
         >
           <input
             aria-autocomplete="list"
-            aria-controls={null}
             aria-expanded="false"
             aria-haspopup="listbox"
             autoComplete="off"
@@ -8663,6 +8666,108 @@ exports[`render deprecated combobox renders a multi-entity combobox with options
               />
             </svg>
           </span>
+        </div>
+        <div
+          aria-orientation={null}
+          className="slds-dropdown slds-dropdown_fluid"
+          id="listbox-unique-id"
+          role="listbox"
+        >
+          <ul
+            className="slds-listbox slds-listbox_vertical"
+            role="presentation"
+          >
+            <li
+              className="slds-listbox__item"
+              role="presentation"
+            >
+              <div
+                className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
+                id="listbox-option-unique-id-01"
+                role="option"
+              >
+                <span
+                  className="slds-media__figure"
+                >
+                  <span
+                    className="slds-icon_container slds-icon-standard-account"
+                    title={null}
+                  >
+                    <svg
+                      aria-hidden={true}
+                      className="slds-icon slds-icon_small"
+                    >
+                      <use
+                        xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#account"
+                      />
+                    </svg>
+                  </span>
+                </span>
+                <span
+                  className="slds-media__body"
+                >
+                  <span
+                    className="slds-listbox__option-text slds-listbox__option-text_entity"
+                  >
+                    Acme
+                  </span>
+                  <span
+                    className="slds-listbox__option-meta slds-listbox__option-meta_entity"
+                  >
+                    Account
+                     •
+                     
+                     San Francisco
+                  </span>
+                </span>
+              </div>
+            </li>
+            <li
+              className="slds-listbox__item"
+              role="presentation"
+            >
+              <div
+                className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
+                id="listbox-option-unique-id-02"
+                role="option"
+              >
+                <span
+                  className="slds-media__figure"
+                >
+                  <span
+                    className="slds-icon_container slds-icon-standard-account"
+                    title={null}
+                  >
+                    <svg
+                      aria-hidden={true}
+                      className="slds-icon slds-icon_small"
+                    >
+                      <use
+                        xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#account"
+                      />
+                    </svg>
+                  </span>
+                </span>
+                <span
+                  className="slds-media__body"
+                >
+                  <span
+                    className="slds-listbox__option-text slds-listbox__option-text_entity"
+                  >
+                    Salesforce.com, Inc.
+                  </span>
+                  <span
+                    className="slds-listbox__option-meta slds-listbox__option-meta_entity"
+                  >
+                    Account
+                     •
+                     
+                     San Francisco
+                  </span>
+                </span>
+              </div>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
@@ -8851,42 +8956,31 @@ exports[`render deprecated combobox renders a readonly combobox 1`] = `
                 role="presentation"
               >
                 <div
-                  className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
+                  className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-media_center"
                   id="listbox-option-unique-id-01"
                   role="option"
                 >
                   <span
                     className="slds-media__figure"
                   >
-                    <span
-                      className="slds-icon_container slds-icon-standard-account"
-                      title={null}
+                    <svg
+                      aria-hidden={true}
+                      className="slds-icon slds-icon_x-small slds-listbox__icon-selected"
                     >
-                      <svg
-                        aria-hidden={true}
-                        className="slds-icon slds-icon_small"
-                      >
-                        <use
-                          xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#account"
-                        />
-                      </svg>
-                    </span>
+                      <use
+                        xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#check"
+                      />
+                    </svg>
                   </span>
                   <span
                     className="slds-media__body"
                   >
                     <span
-                      className="slds-listbox__option-text slds-listbox__option-text_entity"
+                      className="slds-truncate"
+                      title="Option A"
                     >
-                      Acme
-                    </span>
-                    <span
-                      className="slds-listbox__option-meta slds-listbox__option-meta_entity"
-                    >
-                      Account
-                       •
                        
-                       San Francisco
+                      Option A
                     </span>
                   </span>
                 </div>
@@ -8896,42 +8990,31 @@ exports[`render deprecated combobox renders a readonly combobox 1`] = `
                 role="presentation"
               >
                 <div
-                  className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
+                  className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-media_center"
                   id="listbox-option-unique-id-02"
                   role="option"
                 >
                   <span
                     className="slds-media__figure"
                   >
-                    <span
-                      className="slds-icon_container slds-icon-standard-account"
-                      title={null}
+                    <svg
+                      aria-hidden={true}
+                      className="slds-icon slds-icon_x-small slds-listbox__icon-selected"
                     >
-                      <svg
-                        aria-hidden={true}
-                        className="slds-icon slds-icon_small"
-                      >
-                        <use
-                          xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#account"
-                        />
-                      </svg>
-                    </span>
+                      <use
+                        xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#check"
+                      />
+                    </svg>
                   </span>
                   <span
                     className="slds-media__body"
                   >
                     <span
-                      className="slds-listbox__option-text slds-listbox__option-text_entity"
+                      className="slds-truncate"
+                      title="Option B"
                     >
-                      Salesforce.com, Inc.
-                    </span>
-                    <span
-                      className="slds-listbox__option-meta slds-listbox__option-meta_entity"
-                    >
-                      Account
-                       •
                        
-                       San Francisco
+                      Option B
                     </span>
                   </span>
                 </div>
@@ -9023,42 +9106,36 @@ exports[`render deprecated combobox renders a readonly combobox with closed opti
                 role="presentation"
               >
                 <div
-                  className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta slds-has-focus"
+                  className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-media_center slds-is-selected slds-has-focus"
                   id="listbox-option-unique-id-01"
                   role="option"
                 >
                   <span
                     className="slds-media__figure"
                   >
-                    <span
-                      className="slds-icon_container slds-icon-standard-account"
-                      title={null}
+                    <svg
+                      aria-hidden={true}
+                      className="slds-icon slds-icon_x-small slds-listbox__icon-selected"
                     >
-                      <svg
-                        aria-hidden={true}
-                        className="slds-icon slds-icon_small"
-                      >
-                        <use
-                          xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#account"
-                        />
-                      </svg>
-                    </span>
+                      <use
+                        xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#check"
+                      />
+                    </svg>
                   </span>
                   <span
                     className="slds-media__body"
                   >
                     <span
-                      className="slds-listbox__option-text slds-listbox__option-text_entity"
+                      className="slds-truncate"
+                      title="Option A"
                     >
-                      Acme
-                    </span>
-                    <span
-                      className="slds-listbox__option-meta slds-listbox__option-meta_entity"
-                    >
-                      Account
-                       •
+                      <span
+                        className="slds-assistive-text"
+                      >
+                        Current Selection:
+                      </span>
                        
-                       San Francisco
+                      Option A
                     </span>
                   </span>
                 </div>
@@ -9068,42 +9145,31 @@ exports[`render deprecated combobox renders a readonly combobox with closed opti
                 role="presentation"
               >
                 <div
-                  className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
+                  className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-media_center"
                   id="listbox-option-unique-id-02"
                   role="option"
                 >
                   <span
                     className="slds-media__figure"
                   >
-                    <span
-                      className="slds-icon_container slds-icon-standard-account"
-                      title={null}
+                    <svg
+                      aria-hidden={true}
+                      className="slds-icon slds-icon_x-small slds-listbox__icon-selected"
                     >
-                      <svg
-                        aria-hidden={true}
-                        className="slds-icon slds-icon_small"
-                      >
-                        <use
-                          xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#account"
-                        />
-                      </svg>
-                    </span>
+                      <use
+                        xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#check"
+                      />
+                    </svg>
                   </span>
                   <span
                     className="slds-media__body"
                   >
                     <span
-                      className="slds-listbox__option-text slds-listbox__option-text_entity"
+                      className="slds-truncate"
+                      title="Option B"
                     >
-                      Salesforce.com, Inc.
-                    </span>
-                    <span
-                      className="slds-listbox__option-meta slds-listbox__option-meta_entity"
-                    >
-                      Account
-                       •
                        
-                       San Francisco
+                      Option B
                     </span>
                   </span>
                 </div>
@@ -9195,42 +9261,36 @@ exports[`render deprecated combobox renders a readonly combobox with closed opti
                 role="presentation"
               >
                 <div
-                  className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
+                  className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-media_center slds-is-selected"
                   id="listbox-option-unique-id-01"
                   role="option"
                 >
                   <span
                     className="slds-media__figure"
                   >
-                    <span
-                      className="slds-icon_container slds-icon-standard-account"
-                      title={null}
+                    <svg
+                      aria-hidden={true}
+                      className="slds-icon slds-icon_x-small slds-listbox__icon-selected"
                     >
-                      <svg
-                        aria-hidden={true}
-                        className="slds-icon slds-icon_small"
-                      >
-                        <use
-                          xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#account"
-                        />
-                      </svg>
-                    </span>
+                      <use
+                        xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#check"
+                      />
+                    </svg>
                   </span>
                   <span
                     className="slds-media__body"
                   >
                     <span
-                      className="slds-listbox__option-text slds-listbox__option-text_entity"
+                      className="slds-truncate"
+                      title="Option A"
                     >
-                      Acme
-                    </span>
-                    <span
-                      className="slds-listbox__option-meta slds-listbox__option-meta_entity"
-                    >
-                      Account
-                       •
+                      <span
+                        className="slds-assistive-text"
+                      >
+                        Current Selection:
+                      </span>
                        
-                       San Francisco
+                      Option A
                     </span>
                   </span>
                 </div>
@@ -9240,42 +9300,36 @@ exports[`render deprecated combobox renders a readonly combobox with closed opti
                 role="presentation"
               >
                 <div
-                  className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
+                  className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-media_center slds-is-selected"
                   id="listbox-option-unique-id-02"
                   role="option"
                 >
                   <span
                     className="slds-media__figure"
                   >
-                    <span
-                      className="slds-icon_container slds-icon-standard-account"
-                      title={null}
+                    <svg
+                      aria-hidden={true}
+                      className="slds-icon slds-icon_x-small slds-listbox__icon-selected"
                     >
-                      <svg
-                        aria-hidden={true}
-                        className="slds-icon slds-icon_small"
-                      >
-                        <use
-                          xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#account"
-                        />
-                      </svg>
-                    </span>
+                      <use
+                        xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#check"
+                      />
+                    </svg>
                   </span>
                   <span
                     className="slds-media__body"
                   >
                     <span
-                      className="slds-listbox__option-text slds-listbox__option-text_entity"
+                      className="slds-truncate"
+                      title="Option B"
                     >
-                      Salesforce.com, Inc.
-                    </span>
-                    <span
-                      className="slds-listbox__option-meta slds-listbox__option-meta_entity"
-                    >
-                      Account
-                       •
+                      <span
+                        className="slds-assistive-text"
+                      >
+                        Current Selection:
+                      </span>
                        
-                       San Francisco
+                      Option B
                     </span>
                   </span>
                 </div>
@@ -9434,42 +9488,31 @@ exports[`render deprecated combobox renders a readonly combobox with focus 1`] =
                 role="presentation"
               >
                 <div
-                  className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
+                  className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-media_center"
                   id="listbox-option-unique-id-01"
                   role="option"
                 >
                   <span
                     className="slds-media__figure"
                   >
-                    <span
-                      className="slds-icon_container slds-icon-standard-account"
-                      title={null}
+                    <svg
+                      aria-hidden={true}
+                      className="slds-icon slds-icon_x-small slds-listbox__icon-selected"
                     >
-                      <svg
-                        aria-hidden={true}
-                        className="slds-icon slds-icon_small"
-                      >
-                        <use
-                          xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#account"
-                        />
-                      </svg>
-                    </span>
+                      <use
+                        xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#check"
+                      />
+                    </svg>
                   </span>
                   <span
                     className="slds-media__body"
                   >
                     <span
-                      className="slds-listbox__option-text slds-listbox__option-text_entity"
+                      className="slds-truncate"
+                      title="Option A"
                     >
-                      Acme
-                    </span>
-                    <span
-                      className="slds-listbox__option-meta slds-listbox__option-meta_entity"
-                    >
-                      Account
-                       •
                        
-                       San Francisco
+                      Option A
                     </span>
                   </span>
                 </div>
@@ -9479,42 +9522,31 @@ exports[`render deprecated combobox renders a readonly combobox with focus 1`] =
                 role="presentation"
               >
                 <div
-                  className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
+                  className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-media_center"
                   id="listbox-option-unique-id-02"
                   role="option"
                 >
                   <span
                     className="slds-media__figure"
                   >
-                    <span
-                      className="slds-icon_container slds-icon-standard-account"
-                      title={null}
+                    <svg
+                      aria-hidden={true}
+                      className="slds-icon slds-icon_x-small slds-listbox__icon-selected"
                     >
-                      <svg
-                        aria-hidden={true}
-                        className="slds-icon slds-icon_small"
-                      >
-                        <use
-                          xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#account"
-                        />
-                      </svg>
-                    </span>
+                      <use
+                        xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#check"
+                      />
+                    </svg>
                   </span>
                   <span
                     className="slds-media__body"
                   >
                     <span
-                      className="slds-listbox__option-text slds-listbox__option-text_entity"
+                      className="slds-truncate"
+                      title="Option B"
                     >
-                      Salesforce.com, Inc.
-                    </span>
-                    <span
-                      className="slds-listbox__option-meta slds-listbox__option-meta_entity"
-                    >
-                      Account
-                       •
                        
-                       San Francisco
+                      Option B
                     </span>
                   </span>
                 </div>
@@ -9606,42 +9638,31 @@ exports[`render deprecated combobox renders a readonly combobox with open item f
                 role="presentation"
               >
                 <div
-                  className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta slds-has-focus"
+                  className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-media_center slds-has-focus"
                   id="listbox-option-unique-id-01"
                   role="option"
                 >
                   <span
                     className="slds-media__figure"
                   >
-                    <span
-                      className="slds-icon_container slds-icon-standard-account"
-                      title={null}
+                    <svg
+                      aria-hidden={true}
+                      className="slds-icon slds-icon_x-small slds-listbox__icon-selected"
                     >
-                      <svg
-                        aria-hidden={true}
-                        className="slds-icon slds-icon_small"
-                      >
-                        <use
-                          xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#account"
-                        />
-                      </svg>
-                    </span>
+                      <use
+                        xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#check"
+                      />
+                    </svg>
                   </span>
                   <span
                     className="slds-media__body"
                   >
                     <span
-                      className="slds-listbox__option-text slds-listbox__option-text_entity"
+                      className="slds-truncate"
+                      title="Option A"
                     >
-                      Acme
-                    </span>
-                    <span
-                      className="slds-listbox__option-meta slds-listbox__option-meta_entity"
-                    >
-                      Account
-                       •
                        
-                       San Francisco
+                      Option A
                     </span>
                   </span>
                 </div>
@@ -9651,42 +9672,203 @@ exports[`render deprecated combobox renders a readonly combobox with open item f
                 role="presentation"
               >
                 <div
-                  className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
+                  className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-media_center"
                   id="listbox-option-unique-id-02"
                   role="option"
                 >
                   <span
                     className="slds-media__figure"
                   >
-                    <span
-                      className="slds-icon_container slds-icon-standard-account"
-                      title={null}
+                    <svg
+                      aria-hidden={true}
+                      className="slds-icon slds-icon_x-small slds-listbox__icon-selected"
                     >
-                      <svg
-                        aria-hidden={true}
-                        className="slds-icon slds-icon_small"
-                      >
-                        <use
-                          xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#account"
-                        />
-                      </svg>
-                    </span>
+                      <use
+                        xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#check"
+                      />
+                    </svg>
                   </span>
                   <span
                     className="slds-media__body"
                   >
                     <span
-                      className="slds-listbox__option-text slds-listbox__option-text_entity"
+                      className="slds-truncate"
+                      title="Option B"
                     >
-                      Salesforce.com, Inc.
-                    </span>
-                    <span
-                      className="slds-listbox__option-meta slds-listbox__option-meta_entity"
-                    >
-                      Account
-                       •
                        
-                       San Francisco
+                      Option B
+                    </span>
+                  </span>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`render deprecated combobox renders a readonly combobox with open option and sub-heading 1`] = `
+<div
+  className="demo-only"
+  style={
+    Object {
+      "height": "10rem",
+    }
+  }
+>
+  <div
+    className="slds-form-element"
+  >
+    <label
+      className="slds-form-element__label"
+      htmlFor="combobox-unique-id-23"
+    >
+      Search
+    </label>
+    <div
+      className="slds-form-element__control"
+    >
+      <div
+        className="slds-combobox_container"
+      >
+        <div
+          className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open"
+        >
+          <div
+            className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
+            role="none"
+          >
+            <input
+              aria-autocomplete={null}
+              aria-expanded="true"
+              aria-haspopup="listbox"
+              autoComplete="off"
+              className="slds-input slds-combobox__input slds-combobox__input-value"
+              defaultValue="Option A"
+              id="combobox-unique-id-23"
+              placeholder="Select an Option…"
+              readOnly={true}
+              role="combobox"
+              type="text"
+            />
+            <span
+              className="slds-icon_container slds-icon-utility-down slds-input__icon slds-input__icon_right"
+              title="Description of icon when needed"
+            >
+              <svg
+                aria-hidden={true}
+                className="slds-icon slds-icon slds-icon_x-small slds-icon-text-default"
+              >
+                <use
+                  xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+                />
+              </svg>
+              <span
+                className="slds-assistive-text"
+              >
+                Description of icon when needed
+              </span>
+            </span>
+          </div>
+          <div
+            aria-orientation={null}
+            className="slds-dropdown slds-dropdown_fluid"
+            id="listbox-unique-id"
+            role="listbox"
+          >
+            <ul
+              className="slds-listbox slds-listbox_vertical"
+              role="presentation"
+            >
+              <li
+                className="slds-listbox__item"
+                role="presentation"
+              >
+                <div
+                  className="slds-listbox__option slds-listbox__option_plain"
+                  role="presentation"
+                  title="Recently Viewed"
+                >
+                  <h3
+                    className="slds-listbox__option-header"
+                    role="presentation"
+                  >
+                    Recently Viewed
+                  </h3>
+                </div>
+              </li>
+              <li
+                className="slds-listbox__item"
+                role="presentation"
+              >
+                <div
+                  className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-media_center slds-is-selected"
+                  id="listbox-option-unique-id-01"
+                  role="option"
+                >
+                  <span
+                    className="slds-media__figure"
+                  >
+                    <svg
+                      aria-hidden={true}
+                      className="slds-icon slds-icon_x-small slds-listbox__icon-selected"
+                    >
+                      <use
+                        xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#check"
+                      />
+                    </svg>
+                  </span>
+                  <span
+                    className="slds-media__body"
+                  >
+                    <span
+                      className="slds-truncate"
+                      title="Option A"
+                    >
+                      <span
+                        className="slds-assistive-text"
+                      >
+                        Current Selection:
+                      </span>
+                       
+                      Option A
+                    </span>
+                  </span>
+                </div>
+              </li>
+              <li
+                className="slds-listbox__item"
+                role="presentation"
+              >
+                <div
+                  className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-media_center"
+                  id="listbox-option-unique-id-02"
+                  role="option"
+                >
+                  <span
+                    className="slds-media__figure"
+                  >
+                    <svg
+                      aria-hidden={true}
+                      className="slds-icon slds-icon_x-small slds-listbox__icon-selected"
+                    >
+                      <use
+                        xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#check"
+                      />
+                    </svg>
+                  </span>
+                  <span
+                    className="slds-media__body"
+                  >
+                    <span
+                      className="slds-truncate"
+                      title="Option B"
+                    >
+                       
+                      Option B
                     </span>
                   </span>
                 </div>
@@ -9778,42 +9960,36 @@ exports[`render deprecated combobox renders a readonly combobox with open option
                 role="presentation"
               >
                 <div
-                  className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
+                  className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-media_center slds-is-selected"
                   id="listbox-option-unique-id-01"
                   role="option"
                 >
                   <span
                     className="slds-media__figure"
                   >
-                    <span
-                      className="slds-icon_container slds-icon-standard-account"
-                      title={null}
+                    <svg
+                      aria-hidden={true}
+                      className="slds-icon slds-icon_x-small slds-listbox__icon-selected"
                     >
-                      <svg
-                        aria-hidden={true}
-                        className="slds-icon slds-icon_small"
-                      >
-                        <use
-                          xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#account"
-                        />
-                      </svg>
-                    </span>
+                      <use
+                        xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#check"
+                      />
+                    </svg>
                   </span>
                   <span
                     className="slds-media__body"
                   >
                     <span
-                      className="slds-listbox__option-text slds-listbox__option-text_entity"
+                      className="slds-truncate"
+                      title="Option A"
                     >
-                      Acme
-                    </span>
-                    <span
-                      className="slds-listbox__option-meta slds-listbox__option-meta_entity"
-                    >
-                      Account
-                       •
+                      <span
+                        className="slds-assistive-text"
+                      >
+                        Current Selection:
+                      </span>
                        
-                       San Francisco
+                      Option A
                     </span>
                   </span>
                 </div>
@@ -9823,42 +9999,31 @@ exports[`render deprecated combobox renders a readonly combobox with open option
                 role="presentation"
               >
                 <div
-                  className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
+                  className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-media_center"
                   id="listbox-option-unique-id-02"
                   role="option"
                 >
                   <span
                     className="slds-media__figure"
                   >
-                    <span
-                      className="slds-icon_container slds-icon-standard-account"
-                      title={null}
+                    <svg
+                      aria-hidden={true}
+                      className="slds-icon slds-icon_x-small slds-listbox__icon-selected"
                     >
-                      <svg
-                        aria-hidden={true}
-                        className="slds-icon slds-icon_small"
-                      >
-                        <use
-                          xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#account"
-                        />
-                      </svg>
-                    </span>
+                      <use
+                        xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#check"
+                      />
+                    </svg>
                   </span>
                   <span
                     className="slds-media__body"
                   >
                     <span
-                      className="slds-listbox__option-text slds-listbox__option-text_entity"
+                      className="slds-truncate"
+                      title="Option B"
                     >
-                      Salesforce.com, Inc.
-                    </span>
-                    <span
-                      className="slds-listbox__option-meta slds-listbox__option-meta_entity"
-                    >
-                      Account
-                       •
                        
-                       San Francisco
+                      Option B
                     </span>
                   </span>
                 </div>
@@ -9950,42 +10115,36 @@ exports[`render deprecated combobox renders a readonly combobox with open option
                 role="presentation"
               >
                 <div
-                  className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
+                  className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-media_center slds-is-selected"
                   id="listbox-option-unique-id-01"
                   role="option"
                 >
                   <span
                     className="slds-media__figure"
                   >
-                    <span
-                      className="slds-icon_container slds-icon-standard-account"
-                      title={null}
+                    <svg
+                      aria-hidden={true}
+                      className="slds-icon slds-icon_x-small slds-listbox__icon-selected"
                     >
-                      <svg
-                        aria-hidden={true}
-                        className="slds-icon slds-icon_small"
-                      >
-                        <use
-                          xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#account"
-                        />
-                      </svg>
-                    </span>
+                      <use
+                        xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#check"
+                      />
+                    </svg>
                   </span>
                   <span
                     className="slds-media__body"
                   >
                     <span
-                      className="slds-listbox__option-text slds-listbox__option-text_entity"
+                      className="slds-truncate"
+                      title="Option A"
                     >
-                      Acme
-                    </span>
-                    <span
-                      className="slds-listbox__option-meta slds-listbox__option-meta_entity"
-                    >
-                      Account
-                       •
+                      <span
+                        className="slds-assistive-text"
+                      >
+                        Current Selection:
+                      </span>
                        
-                       San Francisco
+                      Option A
                     </span>
                   </span>
                 </div>
@@ -9995,42 +10154,36 @@ exports[`render deprecated combobox renders a readonly combobox with open option
                 role="presentation"
               >
                 <div
-                  className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
+                  className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-media_center slds-is-selected"
                   id="listbox-option-unique-id-02"
                   role="option"
                 >
                   <span
                     className="slds-media__figure"
                   >
-                    <span
-                      className="slds-icon_container slds-icon-standard-account"
-                      title={null}
+                    <svg
+                      aria-hidden={true}
+                      className="slds-icon slds-icon_x-small slds-listbox__icon-selected"
                     >
-                      <svg
-                        aria-hidden={true}
-                        className="slds-icon slds-icon_small"
-                      >
-                        <use
-                          xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#account"
-                        />
-                      </svg>
-                    </span>
+                      <use
+                        xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#check"
+                      />
+                    </svg>
                   </span>
                   <span
                     className="slds-media__body"
                   >
                     <span
-                      className="slds-listbox__option-text slds-listbox__option-text_entity"
+                      className="slds-truncate"
+                      title="Option B"
                     >
-                      Salesforce.com, Inc.
-                    </span>
-                    <span
-                      className="slds-listbox__option-meta slds-listbox__option-meta_entity"
-                    >
-                      Account
-                       •
+                      <span
+                        className="slds-assistive-text"
+                      >
+                        Current Selection:
+                      </span>
                        
-                       San Francisco
+                      Option B
                     </span>
                   </span>
                 </div>
@@ -10753,7 +10906,7 @@ exports[`render deprecated combobox renders an inline listbox combobox with focu
       className="slds-form-element__control"
     >
       <div
-        className="slds-combobox_container slds-has-inline-listbox"
+        className="slds-combobox_container slds-has-inline-listbox slds-has-input-focus"
       >
         <ul
           aria-label="Selected Options:"
@@ -10860,7 +11013,7 @@ exports[`render deprecated combobox renders an inline listbox combobox with focu
           </li>
         </ul>
         <div
-          className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click"
+          className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open"
         >
           <div
             className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
@@ -10868,7 +11021,7 @@ exports[`render deprecated combobox renders an inline listbox combobox with focu
           >
             <input
               aria-autocomplete="list"
-              aria-expanded="false"
+              aria-expanded="true"
               aria-haspopup="listbox"
               autoComplete="off"
               className="slds-input slds-combobox__input"

@@ -3,7 +3,7 @@
 # Vertical Navigation Release Notes
 
 <!-- ## [Unreleased] -->
-## 2.16.0
+## 2.15.8
 
 ### Changed
 

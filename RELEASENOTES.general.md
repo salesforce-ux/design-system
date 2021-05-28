@@ -3,6 +3,8 @@
 
 ## 2.16.0 - Upcoming
 
+## 2.15.8 - May 27, 2021
+
 - Updated selected text highlight color token `COLOR_BACKGROUND_SELECTION` for better color contrast
 
 ## 2.15.7 - May 14, 2021

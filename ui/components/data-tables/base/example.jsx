@@ -303,13 +303,13 @@ export let examples = [
       <>
         <h2
           id="element-with-table-label"
-          class="slds-text-heading_medium slds-m-bottom_xx-small"
+          className="slds-text-heading_medium slds-m-bottom_xx-small"
         >
           Example data table of Opportunities
         </h2>
         <h3
           id="other-element-with-table-label"
-          class="slds-text-title slds-m-bottom_small"
+          className="slds-text-title slds-m-bottom_small"
         >
           Using <code>aria-labelledby</code>, instead of aria-label
         </h3>

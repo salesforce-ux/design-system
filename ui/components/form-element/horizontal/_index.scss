@@ -134,4 +134,9 @@
       }
     }
   }
+
+  // Position the inline help text correctly when in horizontal/compact layout
+  .slds-form-element__help {
+    margin-left: 33%;
+  }
 }

@@ -236,6 +236,10 @@ describe('Horizontal Form Element', () => {
         'deprecated-edit-horizontal'
       )
     ));
+
+  it('renders a horizontal form element with an error', () =>
+    matchesMarkup(getDisplayElementById(HorizontalExamples.states, 'form-element-horizontal-edit-error'))
+  )
 });
 
 describe('Compound Form Element', () => {

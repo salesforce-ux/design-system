@@ -891,6 +891,146 @@ export const ObjectFieldTypesHorizontal = {
   ]
 };
 
+export const ObjectFieldTypesHorizontalWithError = {
+  rows: [
+    {
+      fields: [
+        {
+          type: 'text',
+          label: 'Assigned To',
+          value: 'Jack Rogers',
+          avatar: '/assets/images/avatar1.jpg',
+          component: (
+            <FormElement
+              isHorizontal
+              inputId="horizontal-form-element-id-01"
+              labelContent="Assigned To"
+              isEditing
+            >
+              <Input
+                id="horizontal-form-element-id-01"
+                readOnly
+                defaultValue="Jack Rogers"
+              />
+            </FormElement>
+          )
+        },
+        {
+          type: 'lookup',
+          label: 'Team Name',
+          value: 'Salesforce Lightning Design System',
+          link: true,
+          component: (
+            <Combobox
+              isHorizontal
+              id="horizontal-combobox-id-01"
+              label="Team Name"
+              aria-controls="horizontal-listbox-id-01"
+              isEditing
+              autocomplete
+              inputIconPosition="right"
+              rightInputIcon={
+                <ButtonIcon
+                  className="slds-input__icon slds-input__icon_right"
+                  symbol="clear"
+                  title="Clear the text input"
+                  assistiveText="Clear the text input"
+                />
+              }
+              results={
+                <Listbox
+                  id="horizontal-listbox-id-01"
+                  snapshot={{}}
+                  type="entity"
+                  count={2}
+                />
+              }
+              resultsType="listbox"
+              value="Salesforce Lightning Design System"
+            />
+          )
+        }
+      ]
+    },
+    {
+      fields: [
+        {
+          type: 'text',
+          label: 'Account Name',
+          value: '',
+          isRequired: true,
+          component: (
+            <FormElement
+              isRequired
+              isHorizontal
+              labelContent="Account Name"
+              inputId="horizontal-form-element-id-02"
+              isEditing
+              hasError
+              errorId="horizontal-form-element-error-id-01"
+              inlineMessage="Complete this field"
+            >
+              <Input id="horizontal-form-element-id-02" defaultValue="" />
+            </FormElement>
+          )
+        },
+        {
+          type: 'date',
+          label: 'SLA Expiration Date',
+          value: '1/1/2018',
+          component: (
+            <FormElement
+              isHorizontal
+              isEditing
+              formElementClassName="slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open"
+              labelContent="Date"
+              inputId="horizontal-form-element-id-03"
+              hasRightIcon
+            >
+              <Input
+                id="horizontal-form-element-id-03"
+                defaultValue="1/1/2018"
+              />
+              <ButtonIcon
+                className="slds-input__icon slds-input__icon_right"
+                symbol="event"
+                assistiveText="Select a date"
+                title="Select a date"
+              />
+            </FormElement>
+          )
+        }
+      ]
+    },
+    {
+      fields: [
+        {
+          type: 'textarea',
+          label: 'Description',
+          value: [
+            'Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Etiam porta sem malesuada magna mollis euismod.'
+          ],
+          column: 1,
+          component: (
+            <FormElement
+              isHorizontal
+              labelContent="Description"
+              inputId="horizontal-form-element-id-14"
+              isEditing
+              column={1}
+            >
+              <Textarea
+                id="horizontal-form-element-id-14"
+                defaultValue="Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Etiam porta sem malesuada magna mollis euismod."
+              />
+            </FormElement>
+          )
+        }
+      ]
+    }
+  ]
+};
+
 export const ObjectFieldTypesSingleColumn = {
   rows: [
     {

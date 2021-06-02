@@ -1,8 +1,9 @@
-import * as Base from './base/example';
+import * as BaseExamples from './base/example';
+import * as HorizontalExamples from './horizontal/example';
 import { generateStories } from '../../shared/helpers';
 import Docs from './docs.mdx';
 
-const examples = [Base];
+const examples = [BaseExamples, HorizontalExamples];
 
 const patternName = 'Form Element';
 

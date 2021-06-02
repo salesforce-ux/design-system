@@ -71,7 +71,7 @@ export const NavBarItem = props => {
 };
 
 NavBarItem.defaultProps = {
-  lable: 'Menu Item',
+  label: 'Menu Item',
   hasMenuDropdown: true
 };
 

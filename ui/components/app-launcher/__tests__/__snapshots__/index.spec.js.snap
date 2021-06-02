@@ -198,14 +198,14 @@ exports[`renders a default app launcher 1`] = `
                       </button>
                     </p>
                     <div
-                      className="slds-popover slds-popover_tooltip slds-nubbin_top slds-hide"
+                      className="slds-popover slds-popover_tooltip slds-nubbin_top-right slds-hide"
                       id="help-0"
                       role="tooltip"
                       style={
                         Object {
-                          "left": "165px",
                           "position": "absolute",
-                          "top": "100px",
+                          "right": "30px",
+                          "top": "80px",
                         }
                       }
                     >
@@ -282,14 +282,14 @@ exports[`renders a default app launcher 1`] = `
                       </button>
                     </p>
                     <div
-                      className="slds-popover slds-popover_tooltip slds-nubbin_top slds-hide"
+                      className="slds-popover slds-popover_tooltip slds-nubbin_top-right slds-hide"
                       id="help-1"
                       role="tooltip"
                       style={
                         Object {
-                          "left": "165px",
                           "position": "absolute",
-                          "top": "100px",
+                          "right": "30px",
+                          "top": "80px",
                         }
                       }
                     >
@@ -360,14 +360,14 @@ exports[`renders a default app launcher 1`] = `
                        
                     </p>
                     <div
-                      className="slds-popover slds-popover_tooltip slds-nubbin_top slds-hide"
+                      className="slds-popover slds-popover_tooltip slds-nubbin_top-right slds-hide"
                       id="help-2"
                       role="tooltip"
                       style={
                         Object {
-                          "left": "165px",
                           "position": "absolute",
-                          "top": "100px",
+                          "right": "30px",
+                          "top": "80px",
                         }
                       }
                     >
@@ -444,14 +444,14 @@ exports[`renders a default app launcher 1`] = `
                       </button>
                     </p>
                     <div
-                      className="slds-popover slds-popover_tooltip slds-nubbin_top slds-hide"
+                      className="slds-popover slds-popover_tooltip slds-nubbin_top-right slds-hide"
                       id="help-3"
                       role="tooltip"
                       style={
                         Object {
-                          "left": "165px",
                           "position": "absolute",
-                          "top": "100px",
+                          "right": "30px",
+                          "top": "80px",
                         }
                       }
                     >
@@ -528,14 +528,14 @@ exports[`renders a default app launcher 1`] = `
                       </button>
                     </p>
                     <div
-                      className="slds-popover slds-popover_tooltip slds-nubbin_top slds-hide"
+                      className="slds-popover slds-popover_tooltip slds-nubbin_top-right slds-hide"
                       id="help-4"
                       role="tooltip"
                       style={
                         Object {
-                          "left": "165px",
                           "position": "absolute",
-                          "top": "100px",
+                          "right": "30px",
+                          "top": "80px",
                         }
                       }
                     >
@@ -612,14 +612,14 @@ exports[`renders a default app launcher 1`] = `
                       </button>
                     </p>
                     <div
-                      className="slds-popover slds-popover_tooltip slds-nubbin_top slds-hide"
+                      className="slds-popover slds-popover_tooltip slds-nubbin_top-right slds-hide"
                       id="help-5"
                       role="tooltip"
                       style={
                         Object {
-                          "left": "165px",
                           "position": "absolute",
-                          "top": "100px",
+                          "right": "30px",
+                          "top": "80px",
                         }
                       }
                     >
@@ -963,14 +963,14 @@ exports[`renders a dropped app launcher 1`] = `
                       </button>
                     </p>
                     <div
-                      className="slds-popover slds-popover_tooltip slds-nubbin_top slds-hide"
+                      className="slds-popover slds-popover_tooltip slds-nubbin_top-right slds-hide"
                       id="help-0"
                       role="tooltip"
                       style={
                         Object {
-                          "left": "165px",
                           "position": "absolute",
-                          "top": "100px",
+                          "right": "30px",
+                          "top": "80px",
                         }
                       }
                     >
@@ -1041,14 +1041,14 @@ exports[`renders a dropped app launcher 1`] = `
                        
                     </p>
                     <div
-                      className="slds-popover slds-popover_tooltip slds-nubbin_top slds-hide"
+                      className="slds-popover slds-popover_tooltip slds-nubbin_top-right slds-hide"
                       id="help-1"
                       role="tooltip"
                       style={
                         Object {
-                          "left": "165px",
                           "position": "absolute",
-                          "top": "100px",
+                          "right": "30px",
+                          "top": "80px",
                         }
                       }
                     >
@@ -1125,14 +1125,14 @@ exports[`renders a dropped app launcher 1`] = `
                       </button>
                     </p>
                     <div
-                      className="slds-popover slds-popover_tooltip slds-nubbin_top slds-hide"
+                      className="slds-popover slds-popover_tooltip slds-nubbin_top-right slds-hide"
                       id="help-2"
                       role="tooltip"
                       style={
                         Object {
-                          "left": "165px",
                           "position": "absolute",
-                          "top": "100px",
+                          "right": "30px",
+                          "top": "80px",
                         }
                       }
                     >
@@ -1209,14 +1209,14 @@ exports[`renders a dropped app launcher 1`] = `
                       </button>
                     </p>
                     <div
-                      className="slds-popover slds-popover_tooltip slds-nubbin_top slds-hide"
+                      className="slds-popover slds-popover_tooltip slds-nubbin_top-right slds-hide"
                       id="help-3"
                       role="tooltip"
                       style={
                         Object {
-                          "left": "165px",
                           "position": "absolute",
-                          "top": "100px",
+                          "right": "30px",
+                          "top": "80px",
                         }
                       }
                     >
@@ -1293,14 +1293,14 @@ exports[`renders a dropped app launcher 1`] = `
                       </button>
                     </p>
                     <div
-                      className="slds-popover slds-popover_tooltip slds-nubbin_top slds-hide"
+                      className="slds-popover slds-popover_tooltip slds-nubbin_top-right slds-hide"
                       id="help-4"
                       role="tooltip"
                       style={
                         Object {
-                          "left": "165px",
                           "position": "absolute",
-                          "top": "100px",
+                          "right": "30px",
+                          "top": "80px",
                         }
                       }
                     >
@@ -1377,14 +1377,14 @@ exports[`renders a dropped app launcher 1`] = `
                       </button>
                     </p>
                     <div
-                      className="slds-popover slds-popover_tooltip slds-nubbin_top slds-hide"
+                      className="slds-popover slds-popover_tooltip slds-nubbin_top-right slds-hide"
                       id="help-5"
                       role="tooltip"
                       style={
                         Object {
-                          "left": "165px",
                           "position": "absolute",
-                          "top": "100px",
+                          "right": "30px",
+                          "top": "80px",
                         }
                       }
                     >
@@ -1728,14 +1728,14 @@ exports[`renders a grabbed app launcher 1`] = `
                       </button>
                     </p>
                     <div
-                      className="slds-popover slds-popover_tooltip slds-nubbin_top slds-hide"
+                      className="slds-popover slds-popover_tooltip slds-nubbin_top-right slds-hide"
                       id="help-0"
                       role="tooltip"
                       style={
                         Object {
-                          "left": "165px",
                           "position": "absolute",
-                          "top": "100px",
+                          "right": "30px",
+                          "top": "80px",
                         }
                       }
                     >
@@ -1812,14 +1812,14 @@ exports[`renders a grabbed app launcher 1`] = `
                       </button>
                     </p>
                     <div
-                      className="slds-popover slds-popover_tooltip slds-nubbin_top slds-hide"
+                      className="slds-popover slds-popover_tooltip slds-nubbin_top-right slds-hide"
                       id="help-1"
                       role="tooltip"
                       style={
                         Object {
-                          "left": "165px",
                           "position": "absolute",
-                          "top": "100px",
+                          "right": "30px",
+                          "top": "80px",
                         }
                       }
                     >
@@ -1890,14 +1890,14 @@ exports[`renders a grabbed app launcher 1`] = `
                        
                     </p>
                     <div
-                      className="slds-popover slds-popover_tooltip slds-nubbin_top slds-hide"
+                      className="slds-popover slds-popover_tooltip slds-nubbin_top-right slds-hide"
                       id="help-2"
                       role="tooltip"
                       style={
                         Object {
-                          "left": "165px",
                           "position": "absolute",
-                          "top": "100px",
+                          "right": "30px",
+                          "top": "80px",
                         }
                       }
                     >
@@ -1974,14 +1974,14 @@ exports[`renders a grabbed app launcher 1`] = `
                       </button>
                     </p>
                     <div
-                      className="slds-popover slds-popover_tooltip slds-nubbin_top slds-hide"
+                      className="slds-popover slds-popover_tooltip slds-nubbin_top-right slds-hide"
                       id="help-3"
                       role="tooltip"
                       style={
                         Object {
-                          "left": "165px",
                           "position": "absolute",
-                          "top": "100px",
+                          "right": "30px",
+                          "top": "80px",
                         }
                       }
                     >
@@ -2058,14 +2058,14 @@ exports[`renders a grabbed app launcher 1`] = `
                       </button>
                     </p>
                     <div
-                      className="slds-popover slds-popover_tooltip slds-nubbin_top slds-hide"
+                      className="slds-popover slds-popover_tooltip slds-nubbin_top-right slds-hide"
                       id="help-4"
                       role="tooltip"
                       style={
                         Object {
-                          "left": "165px",
                           "position": "absolute",
-                          "top": "100px",
+                          "right": "30px",
+                          "top": "80px",
                         }
                       }
                     >
@@ -2142,14 +2142,14 @@ exports[`renders a grabbed app launcher 1`] = `
                       </button>
                     </p>
                     <div
-                      className="slds-popover slds-popover_tooltip slds-nubbin_top slds-hide"
+                      className="slds-popover slds-popover_tooltip slds-nubbin_top-right slds-hide"
                       id="help-5"
                       role="tooltip"
                       style={
                         Object {
-                          "left": "165px",
                           "position": "absolute",
-                          "top": "100px",
+                          "right": "30px",
+                          "top": "80px",
                         }
                       }
                     >
@@ -2493,14 +2493,14 @@ exports[`renders a moved app launcher 1`] = `
                       </button>
                     </p>
                     <div
-                      className="slds-popover slds-popover_tooltip slds-nubbin_top slds-hide"
+                      className="slds-popover slds-popover_tooltip slds-nubbin_top-right slds-hide"
                       id="help-0"
                       role="tooltip"
                       style={
                         Object {
-                          "left": "165px",
                           "position": "absolute",
-                          "top": "100px",
+                          "right": "30px",
+                          "top": "80px",
                         }
                       }
                     >
@@ -2571,14 +2571,14 @@ exports[`renders a moved app launcher 1`] = `
                        
                     </p>
                     <div
-                      className="slds-popover slds-popover_tooltip slds-nubbin_top slds-hide"
+                      className="slds-popover slds-popover_tooltip slds-nubbin_top-right slds-hide"
                       id="help-1"
                       role="tooltip"
                       style={
                         Object {
-                          "left": "165px",
                           "position": "absolute",
-                          "top": "100px",
+                          "right": "30px",
+                          "top": "80px",
                         }
                       }
                     >
@@ -2655,14 +2655,14 @@ exports[`renders a moved app launcher 1`] = `
                       </button>
                     </p>
                     <div
-                      className="slds-popover slds-popover_tooltip slds-nubbin_top slds-hide"
+                      className="slds-popover slds-popover_tooltip slds-nubbin_top-right slds-hide"
                       id="help-2"
                       role="tooltip"
                       style={
                         Object {
-                          "left": "165px",
                           "position": "absolute",
-                          "top": "100px",
+                          "right": "30px",
+                          "top": "80px",
                         }
                       }
                     >
@@ -2739,14 +2739,14 @@ exports[`renders a moved app launcher 1`] = `
                       </button>
                     </p>
                     <div
-                      className="slds-popover slds-popover_tooltip slds-nubbin_top slds-hide"
+                      className="slds-popover slds-popover_tooltip slds-nubbin_top-right slds-hide"
                       id="help-3"
                       role="tooltip"
                       style={
                         Object {
-                          "left": "165px",
                           "position": "absolute",
-                          "top": "100px",
+                          "right": "30px",
+                          "top": "80px",
                         }
                       }
                     >
@@ -2823,14 +2823,14 @@ exports[`renders a moved app launcher 1`] = `
                       </button>
                     </p>
                     <div
-                      className="slds-popover slds-popover_tooltip slds-nubbin_top slds-hide"
+                      className="slds-popover slds-popover_tooltip slds-nubbin_top-right slds-hide"
                       id="help-4"
                       role="tooltip"
                       style={
                         Object {
-                          "left": "165px",
                           "position": "absolute",
-                          "top": "100px",
+                          "right": "30px",
+                          "top": "80px",
                         }
                       }
                     >
@@ -2907,14 +2907,14 @@ exports[`renders a moved app launcher 1`] = `
                       </button>
                     </p>
                     <div
-                      className="slds-popover slds-popover_tooltip slds-nubbin_top slds-hide"
+                      className="slds-popover slds-popover_tooltip slds-nubbin_top-right slds-hide"
                       id="help-5"
                       role="tooltip"
                       style={
                         Object {
-                          "left": "165px",
                           "position": "absolute",
-                          "top": "100px",
+                          "right": "30px",
+                          "top": "80px",
                         }
                       }
                     >
@@ -3271,14 +3271,14 @@ exports[`renders a search app launcher 1`] = `
                       </button>
                     </p>
                     <div
-                      className="slds-popover slds-popover_tooltip slds-nubbin_top slds-hide"
+                      className="slds-popover slds-popover_tooltip slds-nubbin_top-right slds-hide"
                       id="help-0"
                       role="tooltip"
                       style={
                         Object {
-                          "left": "165px",
                           "position": "absolute",
-                          "top": "100px",
+                          "right": "30px",
+                          "top": "80px",
                         }
                       }
                     >
@@ -3452,14 +3452,14 @@ exports[`renders an app tile with a tooltip 1`] = `
       </button>
     </p>
     <div
-      className="slds-popover slds-popover_tooltip slds-nubbin_top"
+      className="slds-popover slds-popover_tooltip slds-nubbin_top-right"
       id="help-x"
       role="tooltip"
       style={
         Object {
-          "left": "165px",
           "position": "absolute",
-          "top": "100px",
+          "right": "30px",
+          "top": "80px",
         }
       }
     >

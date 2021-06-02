@@ -202,6 +202,7 @@ jobs:
       - run:
           name: Get Github pull-request number
           command: |
+            set +e
             gh pr view --json number,state,title,url > gh-pull-data.json
             echo "=== Github pull-request API results ==="
             cat gh-pull-data.json

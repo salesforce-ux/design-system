@@ -64,18 +64,20 @@ commands:
             if [[ "${CIRCLE_BRANCH}" = "${CURRENT_DEFAULT_BRANCH}" ]] ; then
               echo "Publishing to UPCOMING..."
               echo 'export HEROKU_APP_NAME=${HEROKU_APP_UPCOMING}' >> $BASH_ENV
+              echo 'export HEROKU_RELEASE_STORYBOOK_APP_NAME=storybook-upcoming' >> $BASH_ENV
             elif [[ ${CIRCLE_TAG} =~ ^v[0-9]+\.[0-9]+\.[0-9]+-.+$ ]] ; then
               echo "Publishing to CORE-MAIN..."
               echo 'export HEROKU_APP_NAME=${HEROKU_APP_CORE_MAIN}' >> $BASH_ENV
+              echo 'export HEROKU_RELEASE_STORYBOOK_APP_NAME=storybook-core-main' >> $BASH_ENV
             elif [[ ${CIRCLE_TAG} =~ ^v[0-9]+\.[0-9]+\.[0-9]+$ ]] ; then
               echo "Publishing to CORE-PATCH..."
               echo 'export HEROKU_APP_NAME=${HEROKU_APP_CORE_PATCH}' >> $BASH_ENV
+              echo 'export HEROKU_RELEASE_STORYBOOK_APP_NAME=storybook-core-patch' >> $BASH_ENV
             else
               echo "Publishing to pull-request review app..."
               echo 'export HEROKU_APP_NAME=slds-review-site-pr-${PR_NUMBER}' >> $BASH_ENV
               echo 'export HEROKU_RELEASE_STORYBOOK_APP_NAME=true' >> $BASH_ENV
             fi
-            echo 'export HEROKU_RELEASE_STORYBOOK_APP_NAME=${HEROKU_APP_NAME}' >> $BASH_ENV
             source $BASH_ENV
             echo $HEROKU_APP_NAME > workspace/heroku-app-name.txt
             echo $HEROKU_RELEASE_STORYBOOK_APP_NAME > workspace/heroku-release-storybook-app-name.txt
@@ -200,7 +202,11 @@ jobs:
       - run:
           name: Get Github pull-request number
           command: |
-            gh api /repos/salesforce-ux/design-system-internal/commits/${CIRCLE_SHA1}/pulls -H "Accept: application/vnd.github.groot-preview+json" | jq -r '.[].number' > workspace/gh-pr-num.txt && cat workspace/gh-pr-num.txt
+            gh pr view --json number,state,title,url > gh-pull-data.json
+            echo "=== Github pull-request API results ==="
+            cat gh-pull-data.json
+            echo "---------------------------------------"
+            cat gh-pull-data.json | jq -r '.number' > workspace/gh-pr-num.txt && cat workspace/gh-pr-num.txt
 
       - persist_to_workspace:
           root: workspace

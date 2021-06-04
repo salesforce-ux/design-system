@@ -211,8 +211,8 @@
   "scripts": {
     "storybook:prepare": "npm run gulp -- storybook:prepare",
     "start": "npm run storybook:prepare && start-storybook -c .storybook -p 9002",
-    "start:mobile": "STORYBOOK_STORIES_TYPE='mobile' start-storybook -c .storybook -p 9003",
-    "start:legacy": "STORYBOOK_SLDS_VERSION=legacy start-storybook -c .storybook -p 9004",
+    "start:mobile": "npm run storybook:prepare && STORYBOOK_STORIES_TYPE='mobile' start-storybook -c .storybook -p 9003",
+    "start:legacy": "npm run storybook:prepare && STORYBOOK_SLDS_VERSION=legacy start-storybook -c .storybook -p 9004",
     "build": "npm run gulp -- build",
     "dist": "npm run gulp -- dist",
     "dist:simple": "npm run gulp -- dist:simple",
@@ -233,7 +233,7 @@
     "heroku-postbuild": "npm run build && npm run dist && npm run storybook:build",
     "local:vrt": "npm run storybook:prepare && node ./applitools.prompts.js && npx @applitools/eyes-storybook --conf applitools.config.local.js",
     "local:vrt:mobile": "npm run storybook:prepare && node ./applitools.prompts.js -t mobile && STORYBOOK_STORIES_TYPE='mobile' npx @applitools/eyes-storybook --conf applitools.mobile.config.local.js",
-    "local:vrt:legacy": "npm run storybook:prepare && node ./applitools.prompts.js -t legacy && npx @applitools/eyes-storybook --conf applitools.legacy.config.local.js",
+    "local:vrt:legacy": "npm run storybook:prepare && node ./applitools.prompts.js -t legacy && STORYBOOK_SLDS_VERSION=legacy npx @applitools/eyes-storybook --conf applitools.legacy.config.local.js",
     "release:site": "./release.sh",
     "release:site:validate": "SLDS_VALIDATION_URL=https://design-system-site-stage.herokuapp.com npx ava __tests__/site/site-validation.ava.js",
     "slds:customizer": "node tools/customizer.cli.js"

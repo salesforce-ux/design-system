@@ -33,6 +33,9 @@ module.exports = {
     : undefined,
   waitBeforeScreenshot: 1000,
   fakeIE: true,
+  visualGridOptions: {
+    ieV2: true
+  },
   browser: [
     // { width: resolution.width, height: resolution.height, name: 'edgelegacy' },
     { width: resolution.width, height: resolution.height, name: 'ie11' }

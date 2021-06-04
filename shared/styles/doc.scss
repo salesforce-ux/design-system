@@ -97,7 +97,7 @@ $frame-spacing: 0.5rem;
   display: flex;
   justify-content: flex-end;
   background: $light-gray-border-color;
-  margin: -1rem -1rem 1rem -1rem;
+  margin: -1rem -1rem 1rem;
   padding: 0.25rem 0.5rem;
 }
 
@@ -145,7 +145,6 @@ $frame-spacing: 0.5rem;
       flex: 1 1 auto;
       padding-left: 5%;
     }
-
   }
 }
 
@@ -233,7 +232,7 @@ blockquote.doc {
   font-size: 1.125rem;
   font-weight: 300;
   padding: 1rem;
-  margin: 0 0 1.5rem 0;
+  margin: 0 0 1.5rem;
   border: 1px solid $light-gray-border-color;
   border-left-width: 0.125rem;
 
@@ -300,6 +299,10 @@ ol.doc {
 
 ul.doc {
   list-style: disc;
+
+  ul.doc {
+    list-style: circle;
+  }
 }
 
 ol.doc {
@@ -349,12 +352,18 @@ ul.doc-toc {
 }
 
 .doc-toc li.doc a {
-  font-size: .875rem;
+  font-size: 0.875rem;
   font-weight: 700;
 }
 
-li.doc > ul.doc, li.doc > li.doc, ul.doc > ul.doc, ul.doc > li.doc {
-  margin-left: .4rem;
+li.doc > li.doc,
+ul.doc > li.doc {
+  margin-left: 0.4rem;
+}
+
+li.doc > ul.doc,
+ul.doc > ul.doc {
+  margin-left: 1rem;
 }
 
 li.doc > ul.doc {
@@ -366,7 +375,7 @@ li.doc > ul.doc {
 }
 
 .doc-toc > li.doc > ul.doc ul.doc > li.doc a {
-  font-size: .75rem;
+  font-size: 0.75rem;
   font-weight: 400;
   color: #4872ab;
 }
@@ -374,9 +383,9 @@ li.doc > ul.doc {
 h2.doc-toc-header {
   font-size: 1rem;
   border-bottom: 1px solid #d9dbdd;
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
   text-transform: uppercase;
-  letter-spacing: .1rem;
+  letter-spacing: 0.1rem;
 }
 
 .doc-tokens-group .slds-button {
@@ -421,7 +430,7 @@ h2.doc-toc-header {
   height: 8rem;
 }
 
-.doc-padding::before{
+.doc-padding:before {
   content: '';
   display: block;
   background: #1589ee;

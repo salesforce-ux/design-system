@@ -4,20 +4,28 @@
 import React from 'react';
 import GlobalNavigation, { ContextBar, NavBarItem } from './';
 
+const demoName = 'Navigation Bar - ';
+
 /* -----------------------------------------------------------------------------
     Exports
 ----------------------------------------------------------------------------- */
 
-export const Context = props => (
-  <div style={{ height: '16rem' }}>{props.children}</div>
-);
+const defaultComponent = <GlobalNavigation />;
 
-export default <GlobalNavigation />;
+export default [
+  {
+    id: 'default',
+    label: demoName + 'Default',
+    demoStyles: 'height: 16rem;',
+    storybookStyles: false,
+    element: defaultComponent
+  }
+];
 
 export let states = [
   {
     id: 'item-active',
-    label: 'Item Active',
+    label: demoName + 'Item Active',
     element: (
       <ContextBar>
         <NavBarItem label="Menu Item" hasNavMenu />
@@ -29,7 +37,9 @@ export let states = [
   },
   {
     id: 'item-menu-open',
-    label: 'Item Menu Open',
+    label: demoName + 'Item Menu Open',
+    demoStyles: 'height: 16rem;',
+    storybookStyles: true,
     element: <GlobalNavigation hasNavMenuOpen />
   }
 ];

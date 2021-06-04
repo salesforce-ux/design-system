@@ -10,24 +10,40 @@ import { Textarea } from '../../textarea/base/example';
 import { Radio } from '../../radio-group/base/example';
 import { Checkbox } from '../../checkbox/base/example';
 
-export default (
-  <RecordDetail
-    direction="horizontal"
-    snapshot={Snapshot.ObjectFieldTypesHorizontal}
-    isViewMode
-    hasInlineEdit
-  />
-);
+export default [
+  {
+    id: 'form-element-horizontal-default',
+    label: 'Form Element - Horizontal (Default)',
+    context: 'Horizontal',
+    element: (
+      <RecordDetail
+        direction="horizontal"
+        snapshot={Snapshot.ObjectFieldTypesHorizontal}
+        isViewMode
+        hasInlineEdit
+      />
+    )
+  }
+]
 
 export let states = [
   {
     id: 'edit-horizontal',
     label: 'Horizontal form layout - Edit Mode',
+    context: 'Horizontal',
     element: (
       <RecordDetail
         direction="horizontal"
         snapshot={Snapshot.ObjectFieldTypesHorizontal}
       />
+    )
+  },
+  {
+    id: 'form-element-horizontal-edit-error',
+    label: 'Form Element - Horizontal form layout - (Edit Mode with Error)',
+    context: 'Horizontal',
+    element: (
+      <RecordDetail direction="horizontal" snapshot={Snapshot.ObjectFieldTypesHorizontalWithError} />
     )
   }
 ];
@@ -36,6 +52,7 @@ export let examples = [
   {
     id: 'horizontal-single-column',
     label: 'Horizontal form layout - 1 column - Read Only Mode',
+    context: 'Horizontal',
     element: (
       <RecordDetail
         direction="horizontal"
@@ -47,6 +64,7 @@ export let examples = [
   {
     id: 'deprecated-view-horizontal',
     label: 'Deprecated - Horizontal form layout - View Mode',
+    context: 'Horizontal',
     element: (
       <RecordDetail
         direction="horizontal"
@@ -60,6 +78,7 @@ export let examples = [
   {
     id: 'deprecated-edit-horizontal',
     label: 'Deprecated - Horizontal form layout - Edit Mode',
+    context: 'Horizontal',
     element: (
       <RecordDetail
         direction="horizontal"
@@ -71,6 +90,7 @@ export let examples = [
   {
     id: 'simple-horizontal',
     label: 'Simple - Horizontal form layout',
+    context: 'Horizontal',
     element: (
       <div className="slds-form">
         <FormElement

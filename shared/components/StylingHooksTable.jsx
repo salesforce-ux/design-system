@@ -36,7 +36,7 @@ const formatType = type => {
 class StylingHooksTable extends Component {
   render() {
     const { name, type } = this.props;
-    
+
     let vars;
     try {
       vars = require(`../../.generated/metadata/${type}s/${name}/styling-hooks.json`);
@@ -101,13 +101,13 @@ class StylingHooksTable extends Component {
                         })}
                       >
                         {ii === 0 ? (
-                          <td
+                          <th
                             className="hooks-table__col-category"
                             scope="rowgroup"
                             rowSpan={categoryVars.length}
                           >
                             {category}
-                          </td>
+                          </th>
                         ) : null}
                         <td>
                           <div className="slds-grid">

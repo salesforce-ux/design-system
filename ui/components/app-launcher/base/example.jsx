@@ -181,11 +181,11 @@ export const AppLauncherTile = props => (
         )}
       </p>
       <Tooltip
-        className={classNames('slds-nubbin_top', {
+        className={classNames('slds-nubbin_top-right', {
           'slds-hide': !props.tooltipText
         })}
         id={`help-${props.index}`}
-        style={{ position: 'absolute', top: '100px', left: '165px' }}
+        style={{ position: 'absolute', top: '80px', right: '30px' }}
       >
         {props.tooltipText}
       </Tooltip>
@@ -402,7 +402,7 @@ export let states = [
   {
     id: 'tooltip',
     label: 'Tooltip',
-    demoStyles: 'width: 360px; height: 135px;',
+    demoStyles: 'width: 360px; height: 13rem; position: relative; padding: 0;',
     storybookStyles: true,
     element: (
       <AppLauncherTile

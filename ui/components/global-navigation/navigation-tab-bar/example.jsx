@@ -28,6 +28,8 @@ const tabId01 = 'context-tab-id-1';
 const tabId02 = 'context-tab-id-2';
 const tabId03 = 'context-tab-id-3';
 
+const demoName = 'Navigation Tab Bar - ';
+
 /* -----------------------------------------------------------------------------
     Elements
 ----------------------------------------------------------------------------- */
@@ -396,11 +398,7 @@ ContextTabBarOverflow.defaultProps = {
     Exports
 ----------------------------------------------------------------------------- */
 
-export const Context = props => (
-  <div style={{ height: '16rem' }}>{props.children}</div>
-);
-
-export default (
+const defaultComponent = (
   <React.Fragment>
     <ContextTabBar>
       <ContextTab
@@ -424,10 +422,18 @@ export default (
   </React.Fragment>
 );
 
+export default [
+  {
+    id: 'default',
+    label: demoName + 'Default',
+    element: defaultComponent
+  }
+];
+
 export let states = [
   {
     id: 'tab-active',
-    label: 'Tab - Active',
+    label: demoName + 'Active',
     element: (
       <React.Fragment>
         <ContextTabBar>
@@ -463,7 +469,7 @@ export let states = [
   },
   {
     id: 'tab-active-focus',
-    label: 'Tab - Active Focus',
+    label: demoName + 'Active Focus',
     element: (
       <React.Fragment>
         <ContextTabBar>
@@ -500,7 +506,7 @@ export let states = [
   },
   {
     id: 'tab-item-action-menu-open',
-    label: 'Tab - Action Overflow',
+    label: demoName + 'Action Overflow',
     element: (
       <div className="demo-only" style={{ height: '12rem' }}>
         <ContextTabBar>
@@ -537,7 +543,7 @@ export let states = [
   },
   {
     id: 'unsaved-tab',
-    label: 'Unsaved Tab',
+    label: demoName + 'Unsaved Tab',
     element: (
       <React.Fragment>
         <ContextTabBar>
@@ -574,7 +580,7 @@ export let states = [
   },
   {
     id: 'unread-tab',
-    label: 'Unread Tab',
+    label: demoName + 'Unread Tab',
     element: (
       <React.Fragment>
         <span aria-live="polite" className="slds-assistive-text">
@@ -615,7 +621,7 @@ export let states = [
   },
   {
     id: 'unread-unsaved-tab',
-    label: 'Unread/Unsaved Tab',
+    label: demoName + 'Unread/Unsaved Tab',
     element: (
       <React.Fragment>
         <span aria-live="polite" className="slds-assistive-text">
@@ -657,7 +663,7 @@ export let states = [
   },
   {
     id: 'tab-success',
-    label: 'Tab - Success',
+    label: demoName + 'Success',
     element: (
       <React.Fragment>
         <span aria-live="polite" className="slds-assistive-text">
@@ -698,7 +704,7 @@ export let states = [
   },
   {
     id: 'tab-success-active',
-    label: 'Tab - Success Active',
+    label: demoName + 'Success Active',
     element: (
       <React.Fragment>
         <span aria-live="polite" className="slds-assistive-text">
@@ -739,7 +745,7 @@ export let states = [
   },
   {
     id: 'tab-success-focus',
-    label: 'Tab - Success Focused',
+    label: demoName + 'Success Focused',
     element: (
       <React.Fragment>
         <span aria-live="polite" className="slds-assistive-text">
@@ -781,7 +787,7 @@ export let states = [
   },
   {
     id: 'tab-success-unread',
-    label: 'Tab - Success Unread',
+    label: demoName + 'Success Unread',
     element: (
       <React.Fragment>
         <span aria-live="polite" className="slds-assistive-text">
@@ -823,7 +829,7 @@ export let states = [
   },
   {
     id: 'tab-success-unsaved',
-    label: 'Tab - Success Unsaved',
+    label: demoName + 'Success Unsaved',
     element: (
       <React.Fragment>
         <span aria-live="polite" className="slds-assistive-text">
@@ -865,7 +871,7 @@ export let states = [
   },
   {
     id: 'tab-success-unread-unsaved',
-    label: 'Tab - Success Unread and Unsaved',
+    label: demoName + 'Success Unread and Unsaved',
     element: (
       <React.Fragment>
         <span aria-live="polite" className="slds-assistive-text">
@@ -908,7 +914,7 @@ export let states = [
   },
   {
     id: 'tab-warning',
-    label: 'Tab - Warning',
+    label: demoName + 'Warning',
     element: (
       <React.Fragment>
         <span aria-live="polite" className="slds-assistive-text">
@@ -949,7 +955,7 @@ export let states = [
   },
   {
     id: 'tab-warning-active',
-    label: 'Tab - Warning Active',
+    label: demoName + 'Warning Active',
     element: (
       <React.Fragment>
         <span aria-live="polite" className="slds-assistive-text">
@@ -990,7 +996,7 @@ export let states = [
   },
   {
     id: 'tab-warning-focus',
-    label: 'Tab - Warning focused',
+    label: demoName + 'Warning focused',
     element: (
       <React.Fragment>
         <span aria-live="polite" className="slds-assistive-text">
@@ -1032,7 +1038,7 @@ export let states = [
   },
   {
     id: 'tab-warning-unread',
-    label: 'Tab - Warning Unread',
+    label: demoName + 'Warning Unread',
     element: (
       <React.Fragment>
         <span aria-live="polite" className="slds-assistive-text">
@@ -1074,7 +1080,7 @@ export let states = [
   },
   {
     id: 'tab-warning-unsaved',
-    label: 'Tab - Warning Unsaved',
+    label: demoName + 'Warning Unsaved',
     element: (
       <React.Fragment>
         <span aria-live="polite" className="slds-assistive-text">
@@ -1116,7 +1122,7 @@ export let states = [
   },
   {
     id: 'tab-warning-unread-unsaved',
-    label: 'Tab - Warning Unread and Unsaved',
+    label: demoName + 'Warning Unread and Unsaved',
     element: (
       <React.Fragment>
         <span aria-live="polite" className="slds-assistive-text">
@@ -1159,7 +1165,7 @@ export let states = [
   },
   {
     id: 'tab-error',
-    label: 'Tab - Error',
+    label: demoName + 'Error',
     element: (
       <React.Fragment>
         <span aria-live="polite" className="slds-assistive-text">
@@ -1200,7 +1206,7 @@ export let states = [
   },
   {
     id: 'tab-error-active',
-    label: 'Tab - Error Active',
+    label: demoName + 'Error Active',
     element: (
       <React.Fragment>
         <span aria-live="polite" className="slds-assistive-text">
@@ -1241,7 +1247,7 @@ export let states = [
   },
   {
     id: 'tab-error-focused',
-    label: 'Tab - Error focused',
+    label: demoName + 'Error focused',
     element: (
       <React.Fragment>
         <span aria-live="polite" className="slds-assistive-text">
@@ -1283,7 +1289,7 @@ export let states = [
   },
   {
     id: 'tab-error-unread',
-    label: 'Tab - Error Unread',
+    label: demoName + 'Error Unread',
     element: (
       <React.Fragment>
         <span aria-live="polite" className="slds-assistive-text">
@@ -1325,7 +1331,7 @@ export let states = [
   },
   {
     id: 'tab-error-unsaved',
-    label: 'Tab - Error Unsaved',
+    label: demoName + 'Error Unsaved',
     element: (
       <React.Fragment>
         <span aria-live="polite" className="slds-assistive-text">
@@ -1367,7 +1373,7 @@ export let states = [
   },
   {
     id: 'tab-error-unread-unsaved',
-    label: 'Tab - Error Unread and Unsaved',
+    label: demoName + 'Error Unread and Unsaved',
     element: (
       <React.Fragment>
         <span aria-live="polite" className="slds-assistive-text">
@@ -1410,7 +1416,7 @@ export let states = [
   },
   {
     id: 'pinned-tab',
-    label: 'Pinned Tab',
+    label: demoName + 'Pinned Tab',
     element: (
       <React.Fragment>
         <ContextTabBar>
@@ -1447,7 +1453,7 @@ export let states = [
   },
   {
     id: 'pinned-tab-active',
-    label: 'Pinned Tab - Active',
+    label: demoName + 'Pinned Tab - Active',
     element: (
       <React.Fragment>
         <ContextTabBar>
@@ -1484,7 +1490,7 @@ export let states = [
   },
   {
     id: 'pinned-tab-active-focus',
-    label: 'Pinned Tab - Active Focus',
+    label: demoName + 'Pinned Tab - Active Focus',
     element: (
       <React.Fragment>
         <ContextTabBar>
@@ -1522,7 +1528,7 @@ export let states = [
   },
   {
     id: 'unsaved-pinned-tab',
-    label: 'Unsaved Pinned Tab',
+    label: demoName + 'Unsaved Pinned Tab',
     element: (
       <React.Fragment>
         <ContextTabBar>
@@ -1560,7 +1566,7 @@ export let states = [
   },
   {
     id: 'unread-pinned-tab',
-    label: 'Unread Pinned Tab',
+    label: demoName + 'Unread Pinned Tab',
     element: (
       <React.Fragment>
         <span aria-live="polite" className="slds-assistive-text">
@@ -1601,7 +1607,7 @@ export let states = [
   },
   {
     id: 'pinned-tab-success',
-    label: 'Pinned Success Tab',
+    label: demoName + 'Pinned Success Tab',
     element: (
       <React.Fragment>
         <span aria-live="polite" className="slds-assistive-text">
@@ -1642,7 +1648,7 @@ export let states = [
   },
   {
     id: 'pinned-tab-success-active',
-    label: 'Pinned Success Tab Active',
+    label: demoName + 'Pinned Success Tab Active',
     element: (
       <div className="demo-only">
         <span aria-live="polite" className="slds-assistive-text">
@@ -1683,7 +1689,7 @@ export let states = [
   },
   {
     id: 'pinned-tab-success-focused',
-    label: 'Pinned Success Tab Focused',
+    label: demoName + 'Pinned Success Tab Focused',
     element: (
       <React.Fragment>
         <span aria-live="polite" className="slds-assistive-text">
@@ -1725,7 +1731,7 @@ export let states = [
   },
   {
     id: 'pinned-tab-success-unread',
-    label: 'Pinned Success Tab Unread',
+    label: demoName + 'Pinned Success Tab Unread',
     element: (
       <React.Fragment>
         <span aria-live="polite" className="slds-assistive-text">
@@ -1767,7 +1773,7 @@ export let states = [
   },
   {
     id: 'pinned-tab-success-unsaved',
-    label: 'Pinned Success Tab Unsaved',
+    label: demoName + 'Pinned Success Tab Unsaved',
     element: (
       <React.Fragment>
         <span aria-live="polite" className="slds-assistive-text">
@@ -1809,7 +1815,7 @@ export let states = [
   },
   {
     id: 'pinned-tab-warning',
-    label: 'Pinned Warning Tab',
+    label: demoName + 'Pinned Warning Tab',
     element: (
       <React.Fragment>
         <span aria-live="polite" className="slds-assistive-text">
@@ -1850,7 +1856,7 @@ export let states = [
   },
   {
     id: 'pinned-tab-warning-active',
-    label: 'Pinned Warning Tab Active',
+    label: demoName + 'Pinned Warning Tab Active',
     element: (
       <React.Fragment>
         <span aria-live="polite" className="slds-assistive-text">
@@ -1891,7 +1897,7 @@ export let states = [
   },
   {
     id: 'pinned-tab-warning-focused',
-    label: 'Pinned Warning Tab Focused',
+    label: demoName + 'Pinned Warning Tab Focused',
     element: (
       <React.Fragment>
         <span aria-live="polite" className="slds-assistive-text">
@@ -1933,7 +1939,7 @@ export let states = [
   },
   {
     id: 'pinned-tab-warning-unread',
-    label: 'Pinned Warning Tab Unread',
+    label: demoName + 'Pinned Warning Tab Unread',
     element: (
       <React.Fragment>
         <span aria-live="polite" className="slds-assistive-text">
@@ -1975,7 +1981,7 @@ export let states = [
   },
   {
     id: 'pinned-tab-warning-unsaved',
-    label: 'Pinned Warning Tab Unsaved',
+    label: demoName + 'Pinned Warning Tab Unsaved',
     element: (
       <React.Fragment>
         <span aria-live="polite" className="slds-assistive-text">
@@ -2017,7 +2023,7 @@ export let states = [
   },
   {
     id: 'pinned-tab-error',
-    label: 'Pinned Error Tab',
+    label: demoName + 'Pinned Error Tab',
     element: (
       <React.Fragment>
         <span aria-live="polite" className="slds-assistive-text">
@@ -2058,7 +2064,7 @@ export let states = [
   },
   {
     id: 'pinned-tab-error-active',
-    label: 'Pinned Error Tab Active',
+    label: demoName + 'Pinned Error Tab Active',
     element: (
       <React.Fragment>
         <span aria-live="polite" className="slds-assistive-text">
@@ -2099,7 +2105,7 @@ export let states = [
   },
   {
     id: 'pinned-tab-error-focused',
-    label: 'Pinned Error Tab Focused',
+    label: demoName + 'Pinned Error Tab Focused',
     element: (
       <React.Fragment>
         <span aria-live="polite" className="slds-assistive-text">
@@ -2140,7 +2146,7 @@ export let states = [
   },
   {
     id: 'pinned-tab-error-unread',
-    label: 'Pinned Error Tab Unread',
+    label: demoName + 'Pinned Error Tab Unread',
     element: (
       <React.Fragment>
         <span aria-live="polite" className="slds-assistive-text">
@@ -2182,7 +2188,7 @@ export let states = [
   },
   {
     id: 'pinned-tab-error-unsaved',
-    label: 'Pinned Error Tab Unsaved',
+    label: demoName + 'Pinned Error Tab Unsaved',
     element: (
       <React.Fragment>
         <span aria-live="polite" className="slds-assistive-text">
@@ -2224,7 +2230,7 @@ export let states = [
   },
   {
     id: 'overflow-tabs',
-    label: 'Overflow Tabs',
+    label: demoName + 'Overflow Tabs',
     element: (
       <React.Fragment>
         <ContextTabBar>
@@ -2261,7 +2267,7 @@ export let states = [
   },
   {
     id: 'overflow-tabs-open',
-    label: 'Overflow Tabs - Open',
+    label: demoName + 'Overflow Tabs - Open',
     element: (
       <div className="demo-only" style={{ height: '8rem' }}>
         <ContextTabBar>
@@ -2298,7 +2304,7 @@ export let states = [
   },
   {
     id: 'unsaved-overflow-tabs',
-    label: 'Unsaved Overflow Tabs',
+    label: demoName + 'Unsaved Overflow Tabs',
     element: (
       <React.Fragment>
         <ContextTabBar>
@@ -2335,7 +2341,7 @@ export let states = [
   },
   {
     id: 'unsaved-overflow-tabs-open',
-    label: 'Unsaved Overflow Tabs - Open',
+    label: demoName + 'Unsaved Overflow Tabs - Open',
     element: (
       <div className="demo-only" style={{ height: '8rem' }}>
         <ContextTabBar>
@@ -2372,7 +2378,7 @@ export let states = [
   },
   {
     id: 'unread-overflow-tabs',
-    label: 'Unread Overflow Tabs',
+    label: demoName + 'Unread Overflow Tabs',
     element: (
       <React.Fragment>
         <span aria-live="polite" className="slds-assistive-text">
@@ -2412,7 +2418,7 @@ export let states = [
   },
   {
     id: 'unread-overflow-tabs-open',
-    label: 'Unread Overflow Tabs - Open',
+    label: demoName + 'Unread Overflow Tabs - Open',
     element: (
       <div className="demo-only" style={{ height: '8rem' }}>
         <span aria-live="polite" className="slds-assistive-text">
@@ -2452,7 +2458,7 @@ export let states = [
   },
   {
     id: 'unread-unsaved-overflow-tabs-open',
-    label: 'Unread Unsaved Overflow Tabs - Open',
+    label: demoName + 'Unread Unsaved Overflow Tabs - Open',
     element: (
       <div className="demo-only" style={{ height: '8rem' }}>
         <span aria-live="polite" className="slds-assistive-text">
@@ -2492,7 +2498,7 @@ export let states = [
   },
   {
     id: 'unread-unsaved-overflow-tabs-without-icon-open',
-    label: 'Unread Unsaved Overflow Tabs without Icon - Open',
+    label: demoName + 'Unread Unsaved Overflow Tabs without Icon - Open',
     element: (
       <div className="demo-only" style={{ height: '8rem' }}>
         <span aria-live="polite" className="slds-assistive-text">
@@ -2540,7 +2546,7 @@ export let states = [
   },
   {
     id: 'success-overflow',
-    label: 'Success Overflow Tabs',
+    label: demoName + 'Success Overflow Tabs',
     element: (
       <div className="demo-only" style={{ height: '8rem' }}>
         <span aria-live="polite" className="slds-assistive-text">
@@ -2580,7 +2586,7 @@ export let states = [
   },
   {
     id: 'success-overflow-unread-unsaved',
-    label: 'Success Overflow Tabs Unread and Unsaved',
+    label: demoName + 'Success Overflow Tabs Unread and Unsaved',
     element: (
       <div className="demo-only" style={{ height: '8rem' }}>
         <span aria-live="polite" className="slds-assistive-text">
@@ -2625,7 +2631,7 @@ export let states = [
   },
   {
     id: 'warning-overflow',
-    label: 'Warning Overflow Tabs',
+    label: demoName + 'Warning Overflow Tabs',
     element: (
       <div className="demo-only" style={{ height: '8rem' }}>
         <span aria-live="polite" className="slds-assistive-text">
@@ -2665,7 +2671,7 @@ export let states = [
   },
   {
     id: 'warning-overflow-unread-unsaved',
-    label: 'Warning Overflow Tabs Unread and Unsaved',
+    label: demoName + 'Warning Overflow Tabs Unread and Unsaved',
     element: (
       <div className="demo-only" style={{ height: '8rem' }}>
         <span aria-live="polite" className="slds-assistive-text">
@@ -2710,7 +2716,7 @@ export let states = [
   },
   {
     id: 'error-overflow',
-    label: 'Error Overflow Tabs',
+    label: demoName + 'Error Overflow Tabs',
     element: (
       <div className="demo-only" style={{ height: '8rem' }}>
         <span aria-live="polite" className="slds-assistive-text">
@@ -2750,7 +2756,7 @@ export let states = [
   },
   {
     id: 'error-overflow-unread-unsaved',
-    label: 'Error Overflow Tabs Unread and Unsaved',
+    label: demoName + 'Error Overflow Tabs Unread and Unsaved',
     element: (
       <div className="demo-only" style={{ height: '8rem' }}>
         <span aria-live="polite" className="slds-assistive-text">
@@ -2795,7 +2801,7 @@ export let states = [
   },
   {
     id: 'object-switcher-active',
-    label: 'Object Switcher - Active',
+    label: demoName + 'Object Switcher - Active',
     element: (
       <React.Fragment>
         <ContextTabBar objectSwitchClassName="slds-is-active">
@@ -2830,7 +2836,7 @@ export let states = [
   },
   {
     id: 'object-switcher-menu-open',
-    label: 'Object Switcher - Open',
+    label: demoName + 'Object Switcher - Open',
     element: (
       <div className="demo-only" style={{ height: '11rem' }}>
         <ContextTabBar objectSwitchClassName="slds-is-open">
@@ -2865,7 +2871,7 @@ export let states = [
   },
   {
     id: 'add-tab-dialog-open',
-    label: 'Add Tab Dialog - Open',
+    label: demoName + 'Add Tab Dialog - Open',
     element: (
       <div className="demo-only" style={{ height: '8rem' }}>
         <ContextTabBar addTabActive>
@@ -2900,7 +2906,7 @@ export let states = [
   },
   {
     id: 'sub-tabs-open',
-    label: 'Subtabs - Open',
+    label: demoName + 'Subtabs - Open',
     element: (
       <div className="demo-only" style={{ height: '8rem' }}>
         <ContextTabBar>

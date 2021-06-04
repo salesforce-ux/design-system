@@ -3,6 +3,8 @@
 
 ## 2.16.0 - Upcoming
 
+- Added SLDS scope customizer tool: `npm run slds:customizer`
+
 ## 2.15.8 - May 27, 2021
 
 - Updated selected text highlight color token `COLOR_BACKGROUND_SELECTION` for better color contrast

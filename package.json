@@ -83,6 +83,7 @@
     "copy-webpack-plugin": "5.1.1",
     "css": "2.2.4",
     "css-loader": "3.5.2",
+    "cssnano": "5.0.3",
     "cssstats": "3.4.1",
     "csv-file-to-json": "4.0.3",
     "data.either": "1.5.2",
@@ -159,7 +160,7 @@
     "mini-css-extract-plugin": "0.9.0",
     "playwright": "1.9.2",
     "plugin-error": "1.0.1",
-    "postcss": "8.2.4",
+    "postcss": "8.3.0",
     "postcss-combine-media-query": "1.0.1",
     "postcss-discard-comments": "4.0.2",
     "postcss-loader": "3.0.0",
@@ -176,6 +177,7 @@
     "react-lazyload": "2.6.7",
     "react-test-renderer": "16.13.1",
     "rehype-add-classes": "1.0.0",
+    "replace-in-file": "6.2.0",
     "sass": "1.26.3",
     "sass-loader": "8.0.2",
     "semver": "5.5.1",
@@ -199,7 +201,7 @@
     "fsevents": "*"
   },
   "peerDependencies": {
-    "postcss": "^7.x"
+    "postcss": ">=7.x"
   },
   "license": "SEE LICENSE IN README.md",
   "repository": {
@@ -210,6 +212,7 @@
     "storybook:prepare": "npm run gulp -- storybook:prepare",
     "start": "npm run storybook:prepare && start-storybook -c .storybook -p 9002",
     "start:mobile": "STORYBOOK_STORIES_TYPE='mobile' start-storybook -c .storybook -p 9003",
+    "start:legacy": "STORYBOOK_SLDS_VERSION=legacy start-storybook -c .storybook -p 9004",
     "build": "npm run gulp -- build",
     "dist": "npm run gulp -- dist",
     "dist:simple": "npm run gulp -- dist:simple",
@@ -232,7 +235,8 @@
     "local:vrt:mobile": "npm run storybook:prepare && node ./applitools.prompts.js -t mobile && STORYBOOK_STORIES_TYPE='mobile' npx @applitools/eyes-storybook --conf applitools.mobile.config.local.js",
     "local:vrt:legacy": "npm run storybook:prepare && node ./applitools.prompts.js -t legacy && npx @applitools/eyes-storybook --conf applitools.legacy.config.local.js",
     "release:site": "./release.sh",
-    "release:site:validate": "SLDS_VALIDATION_URL=https://design-system-site-stage.herokuapp.com npx ava __tests__/site/site-validation.ava.js"
+    "release:site:validate": "SLDS_VALIDATION_URL=https://design-system-site-stage.herokuapp.com npx ava __tests__/site/site-validation.ava.js",
+    "slds:customizer": "node tools/customizer.cli.js"
   },
   "lint-staged": {
     "linters": {

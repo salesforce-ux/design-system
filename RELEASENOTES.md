@@ -3,8 +3,6 @@
 
 ## Release 2.16.0 - Upcoming
 
-- Updated selected text highlight color token `COLOR_BACKGROUND_SELECTION` for better color contrast
-
 ## Components
 ### [Accordion](https://www.lightningdesignsystem.com/components/accordion)
 ## Added
@@ -70,13 +68,18 @@ Removed the usage of the deprecated combobox. The Picklist now uses the current 
 - Removed the usage of the deprecated combobox. The Timepicker now uses the current combobox.
 <!-- ## [VERSION] -->
 
-### [Vertical Navigation](https://www.lightningdesignsystem.com/components/vertical-navigation)
-#### Changed
-- Replaced checked radio group navigation item background token with `BRAND_BACKGROUND_PRIMARY` branding token.
-
 ### [Welcome Mat](https://www.lightningdesignsystem.com/components/welcome-mat)
 #### Added
 - Added `aria-label` attribute to the div with role of `progressbar` to meet accessibility requirements.
+
+## Release 2.15.8 - May 27, 2021
+
+- Updated selected text highlight color token `COLOR_BACKGROUND_SELECTION` for better color contrast
+
+## Components
+### [Vertical Navigation](https://www.lightningdesignsystem.com/components/vertical-navigation)
+#### Changed
+- Replaced checked radio group navigation item background token with `BRAND_BACKGROUND_PRIMARY` branding token.
 
 ## Release 2.15.7 - May 14, 2021
 

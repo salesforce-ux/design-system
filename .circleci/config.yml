@@ -542,6 +542,9 @@ workflows:
     jobs:
       - init:
           context: ux-eng-keys
+          filters:
+            tags:
+              only: /.*/
       - prepare:
           context: ux-eng-keys
           filters:

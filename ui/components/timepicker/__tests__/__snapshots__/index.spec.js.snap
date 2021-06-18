@@ -7,6 +7,7 @@ exports[`Timepicker renders a listbox 1`] = `
   <label
     className="slds-form-element__label"
     htmlFor="example-unique-id-5"
+    id="combobox-label-id-3"
   >
     Time
   </label>
@@ -29,7 +30,7 @@ exports[`Timepicker renders a listbox 1`] = `
             aria-controls="example-unique-id-6"
             aria-expanded="true"
             aria-haspopup="listbox"
-            autocomplete="off"
+            autoComplete="off"
             className="slds-input slds-combobox__input slds-has-focus"
             defaultValue=""
             id="example-unique-id-5"
@@ -240,6 +241,7 @@ exports[`Timepicker renders a listbox with a selected item 1`] = `
   <label
     className="slds-form-element__label"
     htmlFor="example-unique-id-7"
+    id="combobox-label-id-4"
   >
     Time
   </label>
@@ -262,7 +264,7 @@ exports[`Timepicker renders a listbox with a selected item 1`] = `
             aria-controls="example-unique-id-8"
             aria-expanded="true"
             aria-haspopup="listbox"
-            autocomplete="off"
+            autoComplete="off"
             className="slds-input slds-combobox__input slds-has-focus"
             defaultValue=""
             id="example-unique-id-7"
@@ -487,6 +489,7 @@ exports[`Timepicker renders base state 1`] = `
   <label
     className="slds-form-element__label"
     htmlFor="example-unique-id-1"
+    id="combobox-label-id-1"
   >
     Time
   </label>
@@ -509,7 +512,7 @@ exports[`Timepicker renders base state 1`] = `
             aria-controls="example-unique-id-2"
             aria-expanded="false"
             aria-haspopup="listbox"
-            autocomplete="off"
+            autoComplete="off"
             className="slds-input slds-combobox__input"
             defaultValue=""
             id="example-unique-id-1"
@@ -721,6 +724,7 @@ Array [
     <label
       className="slds-form-element__label"
       htmlFor="example-unique-id-11"
+      id="combobox-label-id-6"
     >
       Time
     </label>
@@ -743,7 +747,7 @@ Array [
               aria-controls="example-unique-id-12"
               aria-expanded="false"
               aria-haspopup="listbox"
-              autocomplete="off"
+              autoComplete="off"
               className="slds-input slds-combobox__input"
               defaultValue=""
               id="example-unique-id-11"
@@ -961,6 +965,7 @@ exports[`Timepicker renders focus state 1`] = `
   <label
     className="slds-form-element__label"
     htmlFor="example-unique-id-3"
+    id="combobox-label-id-2"
   >
     Time
   </label>
@@ -983,7 +988,7 @@ exports[`Timepicker renders focus state 1`] = `
             aria-controls="example-unique-id-4"
             aria-expanded="true"
             aria-haspopup="listbox"
-            autocomplete="off"
+            autoComplete="off"
             className="slds-input slds-combobox__input slds-has-focus"
             defaultValue=""
             id="example-unique-id-3"
@@ -1195,6 +1200,7 @@ Array [
     <label
       className="slds-form-element__label"
       htmlFor="example-unique-id-13"
+      id="combobox-label-id-7"
     >
       <abbr
         className="slds-required"
@@ -1224,7 +1230,7 @@ Array [
               aria-controls="example-unique-id-14"
               aria-expanded="false"
               aria-haspopup="listbox"
-              autocomplete="off"
+              autoComplete="off"
               className="slds-input slds-combobox__input"
               defaultValue=""
               id="example-unique-id-13"
@@ -1442,6 +1448,7 @@ exports[`Timepicker renders required state 1`] = `
   <label
     className="slds-form-element__label"
     htmlFor="example-unique-id-9"
+    id="combobox-label-id-5"
   >
     <abbr
       className="slds-required"
@@ -1471,7 +1478,7 @@ exports[`Timepicker renders required state 1`] = `
             aria-controls="example-unique-id-10"
             aria-expanded="false"
             aria-haspopup="listbox"
-            autocomplete="off"
+            autoComplete="off"
             className="slds-input slds-combobox__input"
             defaultValue=""
             id="example-unique-id-9"

@@ -825,6 +825,7 @@ exports[`Dynamic Menu renders a dynamic menu with more than 10 items 1`] = `
             <label
               className="slds-form-element__label slds-assistive-text"
               htmlFor="example-unique-id-3"
+              id="combobox-label-id-1"
             >
               Search
             </label>
@@ -846,7 +847,7 @@ exports[`Dynamic Menu renders a dynamic menu with more than 10 items 1`] = `
                       aria-controls="example-unique-id-4"
                       aria-expanded="true"
                       aria-haspopup="listbox"
-                      autocomplete="off"
+                      autoComplete="off"
                       className="slds-input slds-combobox__input"
                       id="example-unique-id-3"
                       onBlur={[Function]}

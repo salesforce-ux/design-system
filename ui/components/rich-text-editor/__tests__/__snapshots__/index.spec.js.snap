@@ -532,6 +532,7 @@ exports[`renders a RTE output with font options and toolbar 1`] = `
                 <label
                   className="slds-form-element__label slds-assistive-text"
                   htmlFor="example-unique-id-1"
+                  id="combobox-label-id-1"
                 >
                   Choose a Font
                 </label>
@@ -542,28 +543,30 @@ exports[`renders a RTE output with font options and toolbar 1`] = `
                     className="slds-combobox_container"
                   >
                     <div
-                      className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click slds-rich-text-editor__select_x-small"
+                      className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click"
                     >
                       <div
-                        className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
+                        className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right slds-rich-text-editor__select_x-small"
                         role="none"
                       >
-                        <input
-                          aria-autocomplete={null}
+                        <button
                           aria-controls="example-unique-id-2"
                           aria-expanded="false"
                           aria-haspopup="listbox"
-                          autocomplete="off"
-                          className="slds-input slds-combobox__input slds-combobox__input-value"
-                          defaultValue="Font"
-                          id="example-unique-id-1"
+                          aria-labelledby="combobox-label-id-1 example-unique-id-1-selected-value"
+                          className="slds-input_faux slds-combobox__input slds-combobox__input-value"
+                          id="example-unique-id-1-selected-value"
                           onBlur={[Function]}
                           onFocus={[Function]}
-                          placeholder="Select an Option…"
-                          readOnly={true}
-                          role="combobox"
-                          type="text"
-                        />
+                          type="button"
+                        >
+                          <span
+                            className="slds-truncate"
+                            id="combobox-value-id-1"
+                          >
+                            Font
+                          </span>
+                        </button>
                         <span
                           className="slds-icon_container slds-icon-utility-down slds-input__icon slds-input__icon_right"
                           title={null}
@@ -676,6 +679,7 @@ exports[`renders a RTE output with font options and toolbar 1`] = `
                 <label
                   className="slds-form-element__label slds-assistive-text"
                   htmlFor="example-unique-id-3"
+                  id="combobox-label-id-2"
                 >
                   Choose a Font Size
                 </label>
@@ -686,29 +690,30 @@ exports[`renders a RTE output with font options and toolbar 1`] = `
                     className="slds-combobox_container"
                   >
                     <div
-                      className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click slds-rich-text-editor__select_xx-small"
+                      className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click"
                     >
                       <div
-                        className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
+                        className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right slds-rich-text-editor__select_xx-small"
                         role="none"
                       >
-                        <input
-                          aria-autocomplete={null}
+                        <button
                           aria-controls="example-unique-id-4"
                           aria-expanded="false"
                           aria-haspopup="listbox"
-                          autocomplete="off"
-                          className="slds-input slds-combobox__input slds-combobox__input-value"
-                          defaultValue="Size"
-                          id="example-unique-id-3"
+                          aria-labelledby="combobox-label-id-2 example-unique-id-3-selected-value"
+                          className="slds-input_faux slds-combobox__input slds-combobox__input-value"
+                          id="example-unique-id-3-selected-value"
                           onBlur={[Function]}
                           onFocus={[Function]}
-                          placeholder="Select an Option…"
-                          readOnly={true}
-                          role="combobox"
-                          tabIndex="-1"
-                          type="text"
-                        />
+                          type="button"
+                        >
+                          <span
+                            className="slds-truncate"
+                            id="combobox-value-id-2"
+                          >
+                            Size
+                          </span>
+                        </button>
                         <span
                           className="slds-icon_container slds-icon-utility-down slds-input__icon slds-input__icon_right"
                           title={null}
@@ -1619,6 +1624,7 @@ exports[`renders an RTE toolbar in a narrow space 1`] = `
                 <label
                   className="slds-form-element__label slds-assistive-text"
                   htmlFor="example-unique-id-5"
+                  id="combobox-label-id-3"
                 >
                   Choose a Font
                 </label>
@@ -1629,28 +1635,30 @@ exports[`renders an RTE toolbar in a narrow space 1`] = `
                     className="slds-combobox_container"
                   >
                     <div
-                      className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click slds-rich-text-editor__select_x-small"
+                      className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click"
                     >
                       <div
-                        className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
+                        className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right slds-rich-text-editor__select_x-small"
                         role="none"
                       >
-                        <input
-                          aria-autocomplete={null}
+                        <button
                           aria-controls="example-unique-id-6"
                           aria-expanded="false"
                           aria-haspopup="listbox"
-                          autocomplete="off"
-                          className="slds-input slds-combobox__input slds-combobox__input-value"
-                          defaultValue="Font"
-                          id="example-unique-id-5"
+                          aria-labelledby="combobox-label-id-3 example-unique-id-5-selected-value"
+                          className="slds-input_faux slds-combobox__input slds-combobox__input-value"
+                          id="example-unique-id-5-selected-value"
                           onBlur={[Function]}
                           onFocus={[Function]}
-                          placeholder="Select an Option…"
-                          readOnly={true}
-                          role="combobox"
-                          type="text"
-                        />
+                          type="button"
+                        >
+                          <span
+                            className="slds-truncate"
+                            id="combobox-value-id-3"
+                          >
+                            Font
+                          </span>
+                        </button>
                         <span
                           className="slds-icon_container slds-icon-utility-down slds-input__icon slds-input__icon_right"
                           title={null}
@@ -1763,6 +1771,7 @@ exports[`renders an RTE toolbar in a narrow space 1`] = `
                 <label
                   className="slds-form-element__label slds-assistive-text"
                   htmlFor="example-unique-id-7"
+                  id="combobox-label-id-4"
                 >
                   Choose a Font Size
                 </label>
@@ -1773,29 +1782,30 @@ exports[`renders an RTE toolbar in a narrow space 1`] = `
                     className="slds-combobox_container"
                   >
                     <div
-                      className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click slds-rich-text-editor__select_xx-small"
+                      className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click"
                     >
                       <div
-                        className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
+                        className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right slds-rich-text-editor__select_xx-small"
                         role="none"
                       >
-                        <input
-                          aria-autocomplete={null}
+                        <button
                           aria-controls="example-unique-id-8"
                           aria-expanded="false"
                           aria-haspopup="listbox"
-                          autocomplete="off"
-                          className="slds-input slds-combobox__input slds-combobox__input-value"
-                          defaultValue="Size"
-                          id="example-unique-id-7"
+                          aria-labelledby="combobox-label-id-4 example-unique-id-7-selected-value"
+                          className="slds-input_faux slds-combobox__input slds-combobox__input-value"
+                          id="example-unique-id-7-selected-value"
                           onBlur={[Function]}
                           onFocus={[Function]}
-                          placeholder="Select an Option…"
-                          readOnly={true}
-                          role="combobox"
-                          tabIndex="-1"
-                          type="text"
-                        />
+                          type="button"
+                        >
+                          <span
+                            className="slds-truncate"
+                            id="combobox-value-id-4"
+                          >
+                            Size
+                          </span>
+                        </button>
                         <span
                           className="slds-icon_container slds-icon-utility-down slds-input__icon slds-input__icon_right"
                           title={null}

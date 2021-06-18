@@ -746,6 +746,7 @@ exports[`List Builder renders a default list builder 1`] = `
               <label
                 className="slds-form-element__label slds-assistive-text"
                 htmlFor="example-unique-id-1"
+                id="combobox-label-id-1"
               >
                 Search
               </label>
@@ -767,7 +768,7 @@ exports[`List Builder renders a default list builder 1`] = `
                         aria-controls="example-unique-id-2"
                         aria-expanded="false"
                         aria-haspopup="listbox"
-                        autocomplete="off"
+                        autoComplete="off"
                         className="slds-input slds-combobox__input"
                         id="example-unique-id-1"
                         onBlur={[Function]}
@@ -2003,6 +2004,7 @@ exports[`List Builder renders a list builder with default items disabled 1`] = `
               <label
                 className="slds-form-element__label slds-assistive-text"
                 htmlFor="example-unique-id-44"
+                id="combobox-label-id-6"
               >
                 Search
               </label>
@@ -2024,7 +2026,7 @@ exports[`List Builder renders a list builder with default items disabled 1`] = `
                         aria-controls="example-unique-id-45"
                         aria-expanded="false"
                         aria-haspopup="listbox"
-                        autocomplete="off"
+                        autoComplete="off"
                         className="slds-input slds-combobox__input"
                         id="example-unique-id-44"
                         onBlur={[Function]}
@@ -3268,6 +3270,7 @@ exports[`List Builder renders a list builder with filtered results 1`] = `
               <label
                 className="slds-form-element__label slds-assistive-text"
                 htmlFor="example-unique-id-21"
+                id="combobox-label-id-3"
               >
                 Search
               </label>
@@ -3289,7 +3292,7 @@ exports[`List Builder renders a list builder with filtered results 1`] = `
                         aria-controls="example-unique-id-22"
                         aria-expanded="false"
                         aria-haspopup="listbox"
-                        autocomplete="off"
+                        autoComplete="off"
                         className="slds-input slds-combobox__input"
                         id="example-unique-id-21"
                         onBlur={[Function]}
@@ -3974,6 +3977,7 @@ exports[`List Builder renders a list builder with hidden header 1`] = `
               <label
                 className="slds-form-element__label slds-assistive-text"
                 htmlFor="example-unique-id-11"
+                id="combobox-label-id-2"
               >
                 Search
               </label>
@@ -3995,7 +3999,7 @@ exports[`List Builder renders a list builder with hidden header 1`] = `
                         aria-controls="example-unique-id-12"
                         aria-expanded="false"
                         aria-haspopup="listbox"
-                        autocomplete="off"
+                        autoComplete="off"
                         className="slds-input slds-combobox__input"
                         id="example-unique-id-11"
                         onBlur={[Function]}
@@ -4768,6 +4772,7 @@ exports[`List Builder renders a list builder with items disabled 1`] = `
               <label
                 className="slds-form-element__label slds-assistive-text"
                 htmlFor="example-unique-id-34"
+                id="combobox-label-id-5"
               >
                 Search
               </label>
@@ -4789,7 +4794,7 @@ exports[`List Builder renders a list builder with items disabled 1`] = `
                         aria-controls="example-unique-id-35"
                         aria-expanded="false"
                         aria-haspopup="listbox"
-                        autocomplete="off"
+                        autoComplete="off"
                         className="slds-input slds-combobox__input"
                         id="example-unique-id-34"
                         onBlur={[Function]}
@@ -6033,6 +6038,7 @@ exports[`List Builder renders a list builder with items selected 1`] = `
               <label
                 className="slds-form-element__label slds-assistive-text"
                 htmlFor="example-unique-id-24"
+                id="combobox-label-id-4"
               >
                 Search
               </label>
@@ -6054,7 +6060,7 @@ exports[`List Builder renders a list builder with items selected 1`] = `
                         aria-controls="example-unique-id-25"
                         aria-expanded="false"
                         aria-haspopup="listbox"
-                        autocomplete="off"
+                        autoComplete="off"
                         className="slds-input slds-combobox__input"
                         id="example-unique-id-24"
                         onBlur={[Function]}

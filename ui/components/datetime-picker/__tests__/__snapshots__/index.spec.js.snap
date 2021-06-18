@@ -690,6 +690,7 @@ exports[`Datetime Picker renders a default datetime picker 1`] = `
             <label
               className="slds-form-element__label"
               htmlFor="example-unique-id-2"
+              id="combobox-label-id-1"
             >
               Time
             </label>
@@ -712,7 +713,7 @@ exports[`Datetime Picker renders a default datetime picker 1`] = `
                       aria-controls="example-unique-id-3"
                       aria-expanded="false"
                       aria-haspopup="listbox"
-                      autocomplete="off"
+                      autoComplete="off"
                       className="slds-input slds-combobox__input"
                       defaultValue=""
                       id="example-unique-id-2"
@@ -1612,6 +1613,7 @@ exports[`Datetime Picker renders with a date selection 1`] = `
             <label
               className="slds-form-element__label"
               htmlFor="example-unique-id-8"
+              id="combobox-label-id-3"
             >
               Time
             </label>
@@ -1634,7 +1636,7 @@ exports[`Datetime Picker renders with a date selection 1`] = `
                       aria-controls="example-unique-id-9"
                       aria-expanded="false"
                       aria-haspopup="listbox"
-                      autocomplete="off"
+                      autoComplete="off"
                       className="slds-input slds-combobox__input"
                       defaultValue=""
                       id="example-unique-id-8"
@@ -2542,6 +2544,7 @@ exports[`Datetime Picker renders with a required plus error state 1`] = `
             <label
               className="slds-form-element__label"
               htmlFor="example-unique-id-20"
+              id="combobox-label-id-7"
             >
               Time
             </label>
@@ -2564,7 +2567,7 @@ exports[`Datetime Picker renders with a required plus error state 1`] = `
                       aria-controls="example-unique-id-21"
                       aria-expanded="false"
                       aria-haspopup="listbox"
-                      autocomplete="off"
+                      autoComplete="off"
                       className="slds-input slds-combobox__input"
                       defaultValue=""
                       id="example-unique-id-20"
@@ -3476,6 +3479,7 @@ exports[`Datetime Picker renders with a required state 1`] = `
             <label
               className="slds-form-element__label"
               htmlFor="example-unique-id-14"
+              id="combobox-label-id-5"
             >
               Time
             </label>
@@ -3498,7 +3502,7 @@ exports[`Datetime Picker renders with a required state 1`] = `
                       aria-controls="example-unique-id-15"
                       aria-expanded="false"
                       aria-haspopup="listbox"
-                      autocomplete="off"
+                      autoComplete="off"
                       className="slds-input slds-combobox__input"
                       defaultValue=""
                       id="example-unique-id-14"
@@ -4397,6 +4401,7 @@ exports[`Datetime Picker renders with a small width container 1`] = `
             <label
               className="slds-form-element__label"
               htmlFor="example-unique-id-5"
+              id="combobox-label-id-2"
             >
               Time
             </label>
@@ -4419,7 +4424,7 @@ exports[`Datetime Picker renders with a small width container 1`] = `
                       aria-controls="example-unique-id-6"
                       aria-expanded="false"
                       aria-haspopup="listbox"
-                      autocomplete="off"
+                      autoComplete="off"
                       className="slds-input slds-combobox__input"
                       defaultValue=""
                       id="example-unique-id-5"
@@ -5319,6 +5324,7 @@ exports[`Datetime Picker renders with a time selection 1`] = `
             <label
               className="slds-form-element__label"
               htmlFor="example-unique-id-11"
+              id="combobox-label-id-4"
             >
               Time
             </label>
@@ -5341,7 +5347,7 @@ exports[`Datetime Picker renders with a time selection 1`] = `
                       aria-controls="example-unique-id-12"
                       aria-expanded="true"
                       aria-haspopup="listbox"
-                      autocomplete="off"
+                      autoComplete="off"
                       className="slds-input slds-combobox__input slds-has-focus"
                       defaultValue=""
                       id="example-unique-id-11"
@@ -6256,6 +6262,7 @@ exports[`Datetime Picker renders with an error state 1`] = `
             <label
               className="slds-form-element__label"
               htmlFor="example-unique-id-17"
+              id="combobox-label-id-6"
             >
               Time
             </label>
@@ -6278,7 +6285,7 @@ exports[`Datetime Picker renders with an error state 1`] = `
                       aria-controls="example-unique-id-18"
                       aria-expanded="false"
                       aria-haspopup="listbox"
-                      autocomplete="off"
+                      autoComplete="off"
                       className="slds-input slds-combobox__input"
                       defaultValue=""
                       id="example-unique-id-17"

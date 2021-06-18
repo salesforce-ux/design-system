@@ -497,6 +497,7 @@ exports[`Lookup - Multi-Entity renders a default multi-entity lookup 1`] = `
           <label
             className="slds-form-element__label slds-assistive-text"
             htmlFor="combobox-id-1"
+            id="combobox-label-id-6"
           >
             Filter Search by:
           </label>
@@ -514,21 +515,24 @@ exports[`Lookup - Multi-Entity renders a default multi-entity lookup 1`] = `
                   className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
                   role="none"
                 >
-                  <input
-                    aria-autocomplete={null}
+                  <button
                     aria-controls="objectswitcher-listbox-id-01"
                     aria-expanded="false"
                     aria-haspopup="listbox"
-                    autocomplete="off"
-                    className="slds-input slds-combobox__input slds-combobox__input-value"
-                    defaultValue="Accounts"
-                    id="combobox-id-1"
+                    aria-labelledby="combobox-label-id-6 combobox-id-1-selected-value"
+                    className="slds-input_faux slds-combobox__input slds-combobox__input-value"
+                    id="combobox-id-1-selected-value"
                     onBlur={[Function]}
                     onFocus={[Function]}
-                    placeholder=" "
-                    role="combobox"
-                    type="text"
-                  />
+                    type="button"
+                  >
+                    <span
+                      className="slds-truncate"
+                      id="combobox-value-id-2"
+                    >
+                      Accounts
+                    </span>
+                  </button>
                   <span
                     className="slds-icon_container slds-icon-utility-down slds-input__icon slds-input__icon_right"
                     title={null}
@@ -800,7 +804,7 @@ exports[`Lookup - Multi-Entity renders a default multi-entity lookup 1`] = `
               aria-controls="listbox-id-1"
               aria-expanded="false"
               aria-haspopup="listbox"
-              autocomplete="off"
+              autoComplete="off"
               className="slds-input slds-combobox__input"
               id="combobox-id-1"
               onBlur={[Function]}
@@ -1064,6 +1068,7 @@ exports[`Lookup - Multi-Entity renders a multi-entity lookup with focus 1`] = `
           <label
             className="slds-form-element__label slds-assistive-text"
             htmlFor="combobox-id-2"
+            id="combobox-label-id-7"
           >
             Filter Search by:
           </label>
@@ -1081,21 +1086,24 @@ exports[`Lookup - Multi-Entity renders a multi-entity lookup with focus 1`] = `
                   className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
                   role="none"
                 >
-                  <input
-                    aria-autocomplete={null}
+                  <button
                     aria-controls="objectswitcher-listbox-id-01"
                     aria-expanded="false"
                     aria-haspopup="listbox"
-                    autocomplete="off"
-                    className="slds-input slds-combobox__input slds-combobox__input-value"
-                    defaultValue="Accounts"
-                    id="combobox-id-2"
+                    aria-labelledby="combobox-label-id-7 combobox-id-2-selected-value"
+                    className="slds-input_faux slds-combobox__input slds-combobox__input-value"
+                    id="combobox-id-2-selected-value"
                     onBlur={[Function]}
                     onFocus={[Function]}
-                    placeholder=" "
-                    role="combobox"
-                    type="text"
-                  />
+                    type="button"
+                  >
+                    <span
+                      className="slds-truncate"
+                      id="combobox-value-id-3"
+                    >
+                      Accounts
+                    </span>
+                  </button>
                   <span
                     className="slds-icon_container slds-icon-utility-down slds-input__icon slds-input__icon_right"
                     title={null}
@@ -1367,7 +1375,7 @@ exports[`Lookup - Multi-Entity renders a multi-entity lookup with focus 1`] = `
               aria-controls="listbox-id-1"
               aria-expanded="true"
               aria-haspopup="listbox"
-              autocomplete="off"
+              autoComplete="off"
               className="slds-input slds-combobox__input slds-has-focus"
               id="combobox-id-1"
               onBlur={[Function]}
@@ -1631,6 +1639,7 @@ exports[`Lookup - Multi-Entity renders a multi-entity lookup with focus and opti
           <label
             className="slds-form-element__label slds-assistive-text"
             htmlFor="combobox-id-5"
+            id="combobox-label-id-10"
           >
             Filter Search by:
           </label>
@@ -1648,21 +1657,24 @@ exports[`Lookup - Multi-Entity renders a multi-entity lookup with focus and opti
                   className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
                   role="none"
                 >
-                  <input
-                    aria-autocomplete={null}
+                  <button
                     aria-controls="objectswitcher-listbox-id-01"
                     aria-expanded="false"
                     aria-haspopup="listbox"
-                    autocomplete="off"
-                    className="slds-input slds-combobox__input slds-combobox__input-value"
-                    defaultValue="Accounts"
-                    id="combobox-id-5"
+                    aria-labelledby="combobox-label-id-10 combobox-id-5-selected-value"
+                    className="slds-input_faux slds-combobox__input slds-combobox__input-value"
+                    id="combobox-id-5-selected-value"
                     onBlur={[Function]}
                     onFocus={[Function]}
-                    placeholder=" "
-                    role="combobox"
-                    type="text"
-                  />
+                    type="button"
+                  >
+                    <span
+                      className="slds-truncate"
+                      id="combobox-value-id-6"
+                    >
+                      Accounts
+                    </span>
+                  </button>
                   <span
                     className="slds-icon_container slds-icon-utility-down slds-input__icon slds-input__icon_right"
                     title={null}
@@ -1934,7 +1946,7 @@ exports[`Lookup - Multi-Entity renders a multi-entity lookup with focus and opti
               aria-controls="listbox-id-4"
               aria-expanded="true"
               aria-haspopup="listbox"
-              autocomplete="off"
+              autoComplete="off"
               className="slds-input slds-combobox__input slds-has-focus"
               id="combobox-id-4"
               onBlur={[Function]}
@@ -2306,6 +2318,7 @@ exports[`Lookup - Multi-Entity renders a multi-entity lookup with options select
           <label
             className="slds-form-element__label slds-assistive-text"
             htmlFor="combobox-id-4"
+            id="combobox-label-id-9"
           >
             Filter Search by:
           </label>
@@ -2323,21 +2336,24 @@ exports[`Lookup - Multi-Entity renders a multi-entity lookup with options select
                   className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
                   role="none"
                 >
-                  <input
-                    aria-autocomplete={null}
+                  <button
                     aria-controls="objectswitcher-listbox-id-01"
                     aria-expanded="false"
                     aria-haspopup="listbox"
-                    autocomplete="off"
-                    className="slds-input slds-combobox__input slds-combobox__input-value"
-                    defaultValue="Accounts"
-                    id="combobox-id-4"
+                    aria-labelledby="combobox-label-id-9 combobox-id-4-selected-value"
+                    className="slds-input_faux slds-combobox__input slds-combobox__input-value"
+                    id="combobox-id-4-selected-value"
                     onBlur={[Function]}
                     onFocus={[Function]}
-                    placeholder=" "
-                    role="combobox"
-                    type="text"
-                  />
+                    type="button"
+                  >
+                    <span
+                      className="slds-truncate"
+                      id="combobox-value-id-5"
+                    >
+                      Accounts
+                    </span>
+                  </button>
                   <span
                     className="slds-icon_container slds-icon-utility-down slds-input__icon slds-input__icon_right"
                     title={null}
@@ -2609,7 +2625,7 @@ exports[`Lookup - Multi-Entity renders a multi-entity lookup with options select
               aria-controls="listbox-id-3"
               aria-expanded="false"
               aria-haspopup="listbox"
-              autocomplete="off"
+              autoComplete="off"
               className="slds-input slds-combobox__input slds-has-focus"
               id="combobox-id-3"
               onBlur={[Function]}
@@ -2981,6 +2997,7 @@ exports[`Lookup - Multi-Entity renders an open multi-entity lookup with focus on
           <label
             className="slds-form-element__label slds-assistive-text"
             htmlFor="combobox-id-3"
+            id="combobox-label-id-8"
           >
             Filter Search by:
           </label>
@@ -2998,21 +3015,24 @@ exports[`Lookup - Multi-Entity renders an open multi-entity lookup with focus on
                   className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
                   role="none"
                 >
-                  <input
-                    aria-autocomplete={null}
+                  <button
                     aria-controls="objectswitcher-listbox-id-01"
                     aria-expanded="false"
                     aria-haspopup="listbox"
-                    autocomplete="off"
-                    className="slds-input slds-combobox__input slds-combobox__input-value"
-                    defaultValue="Accounts"
-                    id="combobox-id-3"
+                    aria-labelledby="combobox-label-id-8 combobox-id-3-selected-value"
+                    className="slds-input_faux slds-combobox__input slds-combobox__input-value"
+                    id="combobox-id-3-selected-value"
                     onBlur={[Function]}
                     onFocus={[Function]}
-                    placeholder=" "
-                    role="combobox"
-                    type="text"
-                  />
+                    type="button"
+                  >
+                    <span
+                      className="slds-truncate"
+                      id="combobox-value-id-4"
+                    >
+                      Accounts
+                    </span>
+                  </button>
                   <span
                     className="slds-icon_container slds-icon-utility-down slds-input__icon slds-input__icon_right"
                     title={null}
@@ -3285,7 +3305,7 @@ exports[`Lookup - Multi-Entity renders an open multi-entity lookup with focus on
               aria-controls="listbox-id-2"
               aria-expanded="true"
               aria-haspopup="listbox"
-              autocomplete="off"
+              autoComplete="off"
               className="slds-input slds-combobox__input slds-has-focus"
               id="combobox-id-2"
               onBlur={[Function]}
@@ -3532,6 +3552,7 @@ exports[`Lookup renders a default lookup 1`] = `
   <label
     className="slds-form-element__label"
     htmlFor="combobox-id-1"
+    id="combobox-label-id-1"
   >
     Relate To
   </label>
@@ -3553,7 +3574,7 @@ exports[`Lookup renders a default lookup 1`] = `
             aria-controls="listbox-id-1"
             aria-expanded="false"
             aria-haspopup="listbox"
-            autocomplete="off"
+            autoComplete="off"
             className="slds-input slds-combobox__input"
             id="combobox-id-1"
             onBlur={[Function]}
@@ -3745,6 +3766,7 @@ exports[`Lookup renders a lookup displaying options based on user input 1`] = `
   <label
     className="slds-form-element__label"
     htmlFor="combobox-id-4"
+    id="combobox-label-id-4"
   >
     Relate To
   </label>
@@ -3767,7 +3789,7 @@ exports[`Lookup renders a lookup displaying options based on user input 1`] = `
             aria-controls="listbox-id-4"
             aria-expanded="true"
             aria-haspopup="listbox"
-            autocomplete="off"
+            autoComplete="off"
             className="slds-input slds-combobox__input slds-has-focus slds-combobox__input-value"
             defaultValue="salesforce"
             id="combobox-id-4"
@@ -4023,6 +4045,7 @@ exports[`Lookup renders a lookup with focus 1`] = `
   <label
     className="slds-form-element__label"
     htmlFor="combobox-id-2"
+    id="combobox-label-id-2"
   >
     Relate To
   </label>
@@ -4044,7 +4067,7 @@ exports[`Lookup renders a lookup with focus 1`] = `
             aria-controls="listbox-id-2"
             aria-expanded="true"
             aria-haspopup="listbox"
-            autocomplete="off"
+            autoComplete="off"
             className="slds-input slds-combobox__input slds-has-focus"
             id="combobox-id-2"
             onBlur={[Function]}
@@ -4236,6 +4259,7 @@ exports[`Lookup renders a lookup with option selected 1`] = `
   <label
     className="slds-form-element__label"
     htmlFor="combobox-id-5"
+    id="combobox-label-id-5"
   >
     Relate To
   </label>
@@ -4270,22 +4294,24 @@ exports[`Lookup renders a lookup with option selected 1`] = `
               Account
             </span>
           </span>
-          <input
-            aria-autocomplete={null}
+          <button
             aria-controls="listbox-id-5"
             aria-expanded="false"
             aria-haspopup="listbox"
-            autocomplete="off"
-            className="slds-input slds-combobox__input slds-combobox__input-value"
-            defaultValue="Salesforce.com, Inc."
-            id="combobox-id-5"
+            aria-labelledby="combobox-label-id-5 combobox-id-5-selected-value"
+            className="slds-input_faux slds-combobox__input slds-combobox__input-value"
+            id="combobox-id-5-selected-value"
             onBlur={[Function]}
             onFocus={[Function]}
-            placeholder="Select an Option…"
-            readOnly={true}
-            role="combobox"
-            type="text"
-          />
+            type="button"
+          >
+            <span
+              className="slds-truncate"
+              id="combobox-value-id-1"
+            >
+              Salesforce.com, Inc.
+            </span>
+          </button>
           <button
             className="slds-button slds-button_icon slds-input__icon slds-input__icon_right"
             onClick={[Function]}
@@ -4427,6 +4453,7 @@ exports[`Lookup renders an open lookup with focus on an item 1`] = `
   <label
     className="slds-form-element__label"
     htmlFor="combobox-id-3"
+    id="combobox-label-id-3"
   >
     Relate To
   </label>
@@ -4449,7 +4476,7 @@ exports[`Lookup renders an open lookup with focus on an item 1`] = `
             aria-controls="listbox-id-3"
             aria-expanded="true"
             aria-haspopup="listbox"
-            autocomplete="off"
+            autoComplete="off"
             className="slds-input slds-combobox__input slds-has-focus"
             id="combobox-id-3"
             onBlur={[Function]}

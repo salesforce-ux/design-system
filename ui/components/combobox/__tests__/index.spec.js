@@ -4,7 +4,8 @@ import * as DeprecatedBaseExamples from '../base/example';
 import * as DeprecatedInlineListboxExamples from '../deprecated-inline-listbox/example';
 import * as DeprecatedMultiEntityExamples from '../deprecated-multi-entity/example';
 import * as DeprecatedReadOnlyExamples from '../deprecated-readonly/example';
-import Combobox, { ComboboxGroup } from '../';
+import { DeprecatedComboboxInputElement } from '../deprecated/';
+import Combobox, { ComboboxGroup, ComboboxFormContext } from '../';
 import ObjectSwitcher from '../object-switcher/';
 import Listbox, { ListboxGroup, ListboxWrapper } from '../listbox/';
 import ListboxOfSelections from '../listbox-of-pills/';
@@ -15,13 +16,13 @@ import * as Snapshot from '../snapshots.data';
 import createHelpers from '../../../../jest.helpers';
 import { Popover } from '../../popovers/base/example';
 import { Button } from '../../buttons/base/example';
-import _ from '../../../shared/helpers';
-import { getDisplayElementById } from '../../../shared/helpers';
+import _, { getDisplayElementById } from '../../../shared/helpers';
 
 const { matchesMarkup } = createHelpers(__dirname);
 
 const comboboxId = 'combobox-id-01';
 const listboxId = 'listbox-id-01';
+const objectSwitcherListboxId = 'objectswitcher-listbox-id-01';
 const primaryComboboxId = 'primary-combobox-id-01';
 const popoverId = 'popover-id-01';
 
@@ -194,6 +195,68 @@ describe('render deprecated combobox', () => {
 });
 
 /**
+ * Deprecated Combobox Input
+ */
+describe('render deprecated combobox input', () => {
+  it('render input in base combobox', () =>
+    matchesMarkup(
+      <ComboboxFormContext.Provider value={{ isOpen: true }}>
+        <DeprecatedComboboxInputElement
+          id={comboboxId}
+          aria-controls={listboxId}
+          resultsType="listbox"
+          value="Accounts"
+          readonly
+          hasFocus
+          isOpen
+        />
+      </ComboboxFormContext.Provider>
+    ));
+
+  it('render input in combobox displaying options based on user input', () =>
+    matchesMarkup(
+      <ComboboxFormContext.Provider value={{ isOpen: true }}>
+        <DeprecatedComboboxInputElement
+          autocomplete
+          id={comboboxId}
+          aria-controls={listboxId}
+          resultsType="listbox"
+          value="opp"
+          hasFocus
+          aria-activedescendant="option1"
+          isOpen
+        />
+      </ComboboxFormContext.Provider>
+    ));
+
+  it('render input in object switcher of grouped combobox with selections made in expanded state', () =>
+    matchesMarkup(
+      <ComboboxFormContext.Provider value={{ isOpen: false }}>
+        <DeprecatedComboboxInputElement
+          id={`${comboboxId}-object-switcher`}
+          aria-controls={objectSwitcherListboxId}
+          resultsType="listbox"
+          value="Accounts"
+          placeholder=" "
+        />
+      </ComboboxFormContext.Provider>
+    ));
+
+  it('render input in grouped combobox with selections made in expanded state', () =>
+    matchesMarkup(
+      <ComboboxFormContext.Provider value={{ isOpen: false }}>
+        <DeprecatedComboboxInputElement
+          autocomplete
+          id={comboboxId}
+          aria-controls={listboxId}
+          resultsType="listbox"
+          hasFocus
+        />
+      </ComboboxFormContext.Provider>
+    ));
+});
+
+/**
  * New Combobox
  */
 describe('render combobox', () => {
@@ -202,7 +265,7 @@ describe('render combobox', () => {
       <Combobox
         id={comboboxId}
         aria-controls={listboxId}
-        readonly
+        selectOnly
         value="Accounts"
         inputIconPosition="right"
         rightInputIcon={
@@ -233,7 +296,7 @@ describe('render combobox', () => {
       <Combobox
         id={comboboxId}
         aria-controls={listboxId}
-        readonly
+        selectOnly
         value="Accounts"
         inputIconPosition="right"
         rightInputIcon={
@@ -265,7 +328,7 @@ describe('render combobox', () => {
       <Combobox
         id={comboboxId}
         aria-controls={listboxId}
-        readonly
+        selectOnly
         value="2 Options Selected"
         inputIconPosition="right"
         rightInputIcon={
@@ -300,7 +363,7 @@ describe('render combobox', () => {
       <Combobox
         id={comboboxId}
         aria-controls={listboxId}
-        readonly
+        selectOnly
         inputIconPosition="right"
         rightInputIcon={
           <UtilityIcon
@@ -338,7 +401,7 @@ describe('render combobox', () => {
       <Combobox
         id={comboboxId}
         aria-controls={listboxId}
-        readonly
+        selectOnly
         value="Accounts"
         inputIconPosition="right"
         rightInputIcon={
@@ -387,7 +450,7 @@ describe('render combobox', () => {
       <Combobox
         id={comboboxId}
         aria-controls={listboxId}
-        readonly
+        selectOnly
         value="Accounts"
         inputIconPosition="right"
         rightInputIcon={
@@ -625,7 +688,7 @@ describe('render combobox', () => {
         resultsType="listbox"
         hasSelection
         value="Salesforce.com, Inc."
-        readonly
+        selectOnly
         tabIndex="-1"
       />
     ));
@@ -834,7 +897,7 @@ describe('Combobox with a Dialog dropdown', () => {
         id={comboboxId}
         aria-controls={popoverId}
         label="Languages"
-        readonly
+        selectOnly
         inputIconPosition="right"
         rightInputIcon={
           <UtilityIcon
@@ -872,7 +935,7 @@ describe('Combobox with a Dialog dropdown', () => {
         id={comboboxId}
         aria-controls={popoverId}
         label="Languages"
-        readonly
+        selectOnly
         isOpen
         inputIconPosition="right"
         rightInputIcon={

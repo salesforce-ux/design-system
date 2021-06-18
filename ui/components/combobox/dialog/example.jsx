@@ -25,7 +25,7 @@ export const ComboboxWithDialog = () => {
       id={_.uniqueId('combobox-id-')}
       aria-controls={popoverId}
       label="Languages"
-      readonly
+      selectOnly
       inputIconPosition="right"
       rightInputIcon={
         <UtilityIcon
@@ -70,7 +70,7 @@ export let states = [
         id={_.uniqueId('combobox-id-')}
         aria-controls={popoverId01}
         label="Languages"
-        readonly
+        selectOnly
         isOpen
         inputIconPosition="right"
         rightInputIcon={
@@ -114,7 +114,7 @@ export let examples = [
         id={_.uniqueId('combobox-id-')}
         aria-controls={popoverId02}
         label="Languages"
-        readonly
+        selectOnly
         isOpen
         inputIconPosition="right"
         rightInputIcon={
@@ -160,7 +160,7 @@ export let examples = [
         id={_.uniqueId('combobox-id-')}
         aria-controls={popoverId03}
         label="Languages"
-        readonly
+        selectOnly
         isOpen
         inputIconPosition="right"
         rightInputIcon={
@@ -206,7 +206,7 @@ export let examples = [
         id={_.uniqueId('combobox-id-')}
         aria-controls={popoverId04}
         label="Languages"
-        readonly
+        selectOnly
         isOpen
         value="German"
         inputIconPosition="right"
@@ -253,7 +253,7 @@ export let examples = [
         id={_.uniqueId('combobox-id-')}
         aria-controls={popoverId05}
         label="Languages"
-        readonly
+        selectOnly
         value="German"
         inputIconPosition="right"
         rightInputIcon={
@@ -300,7 +300,7 @@ export let examples = [
         id={_.uniqueId('combobox-id-')}
         aria-controls={popoverId06}
         label="Languages"
-        readonly
+        selectOnly
         isOpen
         value="2 options selected"
         inputIconPosition="right"
@@ -347,7 +347,7 @@ export let examples = [
         id={_.uniqueId('combobox-id-')}
         aria-controls={popoverId07}
         label="Languages"
-        readonly
+        selectOnly
         value="2 options selected"
         inputIconPosition="right"
         rightInputIcon={

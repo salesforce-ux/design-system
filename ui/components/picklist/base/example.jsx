@@ -44,7 +44,7 @@ export default (
       />
     }
     resultsType="listbox"
-    readonly
+    selectOnly
     hasInteractions
   />
 );
@@ -78,7 +78,7 @@ export let states = [
           />
         }
         resultsType="listbox"
-        readonly
+        selectOnly
         hasFocus
         isOpen
       />
@@ -112,7 +112,7 @@ export let states = [
         }
         resultsType="listbox"
         aria-activedescendant="option1"
-        readonly
+        selectOnly
         hasFocus
         isOpen
       />
@@ -147,7 +147,7 @@ export let states = [
         }
         resultsType="listbox"
         aria-activedescendant="option1"
-        readonly
+        selectOnly
         hasFocus
         isOpen
       />
@@ -161,7 +161,7 @@ export let states = [
         id={_.uniqueId('combobox-id-')}
         containerClassName="slds-size_small"
         aria-controls="listbox-id-5"
-        readonly
+        selectOnly
         value="2 Options Selected"
         inputIconPosition="right"
         rightInputIcon={
@@ -216,7 +216,7 @@ export let states = [
         }
         resultsType="listbox"
         aria-activedescendant="option1"
-        readonly
+        selectOnly
       />
     )
   },
@@ -228,7 +228,7 @@ export let states = [
         id={_.uniqueId('combobox-id-')}
         containerClassName="slds-size_small"
         aria-controls="listbox-id-7"
-        readonly
+        selectOnly
         value="2 Options Selected"
         inputIconPosition="right"
         rightInputIcon={
@@ -266,7 +266,7 @@ export let states = [
         id={_.uniqueId('combobox-id-')}
         containerClassName="slds-size_small"
         aria-controls="listbox-id-8"
-        readonly
+        selectOnly
         inputIconPosition="right"
         rightInputIcon={
           <UtilityIcon

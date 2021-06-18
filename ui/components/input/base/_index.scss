@@ -13,50 +13,17 @@
  * @variant
  */
 .slds-input {
+  @include input;
   display: inline-block;
-  padding-top: 0;
-  padding-right: var(--sds-c-input-spacing-horizontal-end, $spacing-medium);
-  padding-bottom: 0;
-  padding-left: var(--sds-c-input-spacing-horizontal-start, $spacing-small);
-  width: 100%;
-  min-height: calc(#{$height-input} + (#{$border-width-thin} * 2)); // For IE
-  line-height: $height-input;
-  border: $border-width-thin solid var(--sds-c-input-color-border, $color-border-input);
-  border-radius: var(--sds-c-input-radius-border, $border-radius-medium);
-  background-color: var(--sds-c-input-color-background, $color-background-input);
-  color: var(--sds-c-input-text-color);
-  box-shadow: var(--sds-c-input-shadow);
-  transition: border $duration-quickly linear, background-color $duration-quickly linear;
 
   &:focus,
   &:active {
-    /*! @css-var-fallback border-color */
-    // --sds-c-input-color-border: var(--sds-c-input-color-border-focus, #{$color-border-input-active});
-    border-color: var(--sds-c-input-color-border-focus, $color-border-input-active);
-
-    /*! @css-var-fallback background-color */
-    // --sds-c-input-background-color: var(--sds-c-input-color-background-focus, #{$color-background-input-active});
-    background-color: var(--sds-c-input-color-background-focus, var(--sds-c-input-color-background, $color-background-input-active));
-    color: var(--sds-c-input-text-color-focus);
-
-    /*! @css-var-fallback box-shadow */
-    // --sds-c-input-shadow: var(--sds-c-input-shadow-focus, 0 0 3px #{$brand-accessible});
-    box-shadow: var(--sds-c-input-shadow-focus, 0 0 3px $brand-accessible);
-    outline: 0;
+    @include input-focus-active;
   }
 
   &[disabled],
   &.slds-is-disabled {
-    background-color: $color-background-input-disabled;
-    border-color: $color-border-input-disabled;
-    color: $color-text-input-disabled;
-    cursor: not-allowed;
-    user-select: none;
-
-    &:focus,
-    &:active {
-      box-shadow: none;
-    }
+    @include input-disabled;
   }
 
   /**
@@ -142,6 +109,27 @@
 }
 
 /**
+ * @summary Adds aesthetic nature of input to non-form element, such as within a select-only combobox
+ *
+ * @selector .slds-input_faux
+ * @restrict button
+ */
+.slds-input_faux {
+  @include input;
+  display: inline-flex;
+  flex: 1 1 auto;
+  text-align: left;
+
+  @include mq-small-min {
+    width: rem(146px); // estimated magic number to match input's inherent width in Chrome
+  }
+
+  &.slds-is-disabled {
+    @include input-disabled;
+  }
+}
+
+/**
  * @summary Modifier to allow a [readonly] input to have borders
  *
  * @selector .slds-input_borders
@@ -200,6 +188,7 @@
     }
 
     .slds-input,
+    .slds-input_faux,
     .slds-input_bare,
     .slds-input--bare {
       /*! @css-var-fallback padding-left */
@@ -222,6 +211,7 @@
     }
 
     .slds-input,
+    .slds-input_faux,
     .slds-input_bare,
     .slds-input--bare {
       /*! @css-var-fallback padding-right */
@@ -261,6 +251,7 @@
     }
 
     .slds-input,
+    .slds-input_faux,
     .slds-input_bare,
     .slds-input--bare {
       /*! @css-var-fallback padding-left */
@@ -276,6 +267,7 @@
   &_group-right {
 
     .slds-input,
+    .slds-input_faux,
     .slds-input_bare,
     .slds-input--bare {
       /*! @css-var-fallback padding-right */

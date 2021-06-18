@@ -176,7 +176,7 @@ export let states = [
         resultsType="listbox"
         hasSelection
         value="Salesforce.com, Inc."
-        readonly
+        selectOnly
       />
     )
   }

@@ -7,6 +7,7 @@ exports[`Combobox with a Dialog dropdown renders a closed, readonly dialog combo
   <label
     className="slds-form-element__label"
     htmlFor="combobox-id-01"
+    id="combobox-label-id-19"
   >
     Languages
   </label>
@@ -23,21 +24,24 @@ exports[`Combobox with a Dialog dropdown renders a closed, readonly dialog combo
           className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
           role="none"
         >
-          <input
-            aria-autocomplete={null}
+          <button
             aria-controls="popover-id-01"
             aria-expanded="false"
             aria-haspopup="dialog"
-            autocomplete="off"
-            className="slds-input slds-combobox__input"
-            id="combobox-id-01"
+            aria-labelledby="combobox-label-id-19 combobox-id-01-selected-value"
+            className="slds-input_faux slds-combobox__input"
+            id="combobox-id-01-selected-value"
             onBlur={[Function]}
             onFocus={[Function]}
-            placeholder="Select an Option…"
-            readOnly={true}
-            role="combobox"
-            type="text"
-          />
+            type="button"
+          >
+            <span
+              className="slds-truncate"
+              id="combobox-value-id-12"
+            >
+              Select an Option…
+            </span>
+          </button>
           <span
             className="slds-icon_container slds-icon-utility-down slds-input__icon slds-input__icon_right"
             title={null}
@@ -101,6 +105,7 @@ exports[`Combobox with a Dialog dropdown renders an open, readonly dialog combob
   <label
     className="slds-form-element__label"
     htmlFor="combobox-id-01"
+    id="combobox-label-id-20"
   >
     Languages
   </label>
@@ -117,21 +122,24 @@ exports[`Combobox with a Dialog dropdown renders an open, readonly dialog combob
           className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
           role="none"
         >
-          <input
-            aria-autocomplete={null}
+          <button
             aria-controls="popover-id-01"
             aria-expanded="true"
             aria-haspopup="dialog"
-            autocomplete="off"
-            className="slds-input slds-combobox__input"
-            id="combobox-id-01"
+            aria-labelledby="combobox-label-id-20 combobox-id-01-selected-value"
+            className="slds-input_faux slds-combobox__input"
+            id="combobox-id-01-selected-value"
             onBlur={[Function]}
             onFocus={[Function]}
-            placeholder="Select an Option…"
-            readOnly={true}
-            role="combobox"
-            type="text"
-          />
+            type="button"
+          >
+            <span
+              className="slds-truncate"
+              id="combobox-value-id-13"
+            >
+              Select an Option…
+            </span>
+          </button>
           <span
             className="slds-icon_container slds-icon-utility-down slds-input__icon slds-input__icon_right"
             title={null}
@@ -195,6 +203,7 @@ exports[`render combobox render autocomplete combobox with mutliple selections 1
   <label
     className="slds-form-element__label"
     htmlFor="combobox-id-01"
+    id="combobox-label-id-10"
   >
     Relate To
   </label>
@@ -216,7 +225,7 @@ exports[`render combobox render autocomplete combobox with mutliple selections 1
             aria-controls="listbox-id-01"
             aria-expanded="false"
             aria-haspopup="listbox"
-            autocomplete="off"
+            autoComplete="off"
             className="slds-input slds-combobox__input"
             id="combobox-id-01"
             onBlur={[Function]}
@@ -455,6 +464,7 @@ exports[`render combobox render autocomplete combobox with single selection 1`] 
   <label
     className="slds-form-element__label"
     htmlFor="combobox-id-01"
+    id="combobox-label-id-9"
   >
     Relate To
   </label>
@@ -476,7 +486,7 @@ exports[`render combobox render autocomplete combobox with single selection 1`] 
             aria-controls="listbox-id-01"
             aria-expanded="false"
             aria-haspopup="listbox"
-            autocomplete="off"
+            autoComplete="off"
             className="slds-input slds-combobox__input slds-combobox__input-value"
             defaultValue="GenePoint"
             id="combobox-id-01"
@@ -645,6 +655,7 @@ exports[`render combobox render autocomplete entity combobox 1`] = `
   <label
     className="slds-form-element__label"
     htmlFor="combobox-id-01"
+    id="combobox-label-id-11"
   >
     Relate To
   </label>
@@ -666,7 +677,7 @@ exports[`render combobox render autocomplete entity combobox 1`] = `
             aria-controls="listbox-id-01"
             aria-expanded="true"
             aria-haspopup="listbox"
-            autocomplete="off"
+            autoComplete="off"
             className="slds-input slds-combobox__input slds-has-focus"
             id="combobox-id-01"
             onBlur={[Function]}
@@ -815,6 +826,7 @@ exports[`render combobox render autocomplete entity combobox displaying options 
   <label
     className="slds-form-element__label"
     htmlFor="combobox-id-01"
+    id="combobox-label-id-12"
   >
     Relate To
   </label>
@@ -837,7 +849,7 @@ exports[`render combobox render autocomplete entity combobox displaying options 
             aria-controls="listbox-id-01"
             aria-expanded="true"
             aria-haspopup="listbox"
-            autocomplete="off"
+            autoComplete="off"
             className="slds-input slds-combobox__input slds-has-focus slds-combobox__input-value"
             defaultValue="salesforce"
             id="combobox-id-01"
@@ -1098,6 +1110,7 @@ exports[`render combobox render autocomplete entity combobox with mutliple selec
   <label
     className="slds-form-element__label"
     htmlFor="combobox-id-01"
+    id="combobox-label-id-14"
   >
     Relate To
   </label>
@@ -1119,7 +1132,7 @@ exports[`render combobox render autocomplete entity combobox with mutliple selec
             aria-controls="listbox-id-01"
             aria-expanded="false"
             aria-haspopup="listbox"
-            autocomplete="off"
+            autoComplete="off"
             className="slds-input slds-combobox__input"
             id="combobox-id-01"
             onBlur={[Function]}
@@ -1376,6 +1389,7 @@ exports[`render combobox render autocomplete entity combobox with single selecti
   <label
     className="slds-form-element__label"
     htmlFor="combobox-id-01"
+    id="combobox-label-id-13"
   >
     Relate To
   </label>
@@ -1410,23 +1424,24 @@ exports[`render combobox render autocomplete entity combobox with single selecti
               Description of icon when needed
             </span>
           </span>
-          <input
-            aria-autocomplete={null}
+          <button
             aria-controls="listbox-id-01"
             aria-expanded="false"
             aria-haspopup="listbox"
-            autocomplete="off"
-            className="slds-input slds-combobox__input slds-combobox__input-value"
-            defaultValue="Salesforce.com, Inc."
-            id="combobox-id-01"
+            aria-labelledby="combobox-label-id-13 combobox-id-01-selected-value"
+            className="slds-input_faux slds-combobox__input slds-combobox__input-value"
+            id="combobox-id-01-selected-value"
             onBlur={[Function]}
             onFocus={[Function]}
-            placeholder="Select an Option…"
-            readOnly={true}
-            role="combobox"
-            tabIndex="-1"
-            type="text"
-          />
+            type="button"
+          >
+            <span
+              className="slds-truncate"
+              id="combobox-value-id-7"
+            >
+              Salesforce.com, Inc.
+            </span>
+          </button>
           <button
             className="slds-button slds-button_icon slds-input__icon slds-input__icon_right"
             onClick={[Function]}
@@ -1568,6 +1583,7 @@ exports[`render combobox render base combobox 1`] = `
   <label
     className="slds-form-element__label"
     htmlFor="combobox-id-01"
+    id="combobox-label-id-1"
   >
     Relate To
   </label>
@@ -1584,22 +1600,24 @@ exports[`render combobox render base combobox 1`] = `
           className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
           role="none"
         >
-          <input
-            aria-autocomplete={null}
+          <button
             aria-controls="listbox-id-01"
             aria-expanded="true"
             aria-haspopup="listbox"
-            autocomplete="off"
-            className="slds-input slds-combobox__input slds-has-focus slds-combobox__input-value"
-            defaultValue="Accounts"
-            id="combobox-id-01"
+            aria-labelledby="combobox-label-id-1 combobox-id-01-selected-value"
+            className="slds-input_faux slds-combobox__input slds-has-focus slds-combobox__input-value"
+            id="combobox-id-01-selected-value"
             onBlur={[Function]}
             onFocus={[Function]}
-            placeholder="Select an Option…"
-            readOnly={true}
-            role="combobox"
-            type="text"
-          />
+            type="button"
+          >
+            <span
+              className="slds-truncate"
+              id="combobox-value-id-1"
+            >
+              Accounts
+            </span>
+          </button>
           <span
             className="slds-icon_container slds-icon-utility-down slds-input__icon slds-input__icon_right"
             title={null}
@@ -1855,6 +1873,7 @@ exports[`render combobox render combobox with displaying options based on user i
   <label
     className="slds-form-element__label"
     htmlFor="combobox-id-01"
+    id="combobox-label-id-8"
   >
     Relate To
   </label>
@@ -1877,7 +1896,7 @@ exports[`render combobox render combobox with displaying options based on user i
             aria-controls="listbox-id-01"
             aria-expanded="true"
             aria-haspopup="listbox"
-            autocomplete="off"
+            autoComplete="off"
             className="slds-input slds-combobox__input slds-has-focus slds-combobox__input-value"
             defaultValue="opp"
             id="combobox-id-01"
@@ -2043,6 +2062,7 @@ exports[`render combobox render grouped combobox 1`] = `
           <label
             className="slds-form-element__label slds-assistive-text"
             htmlFor="combobox-id-01-object-switcher"
+            id="combobox-label-id-15"
           >
             Filter Search by:
           </label>
@@ -2060,21 +2080,24 @@ exports[`render combobox render grouped combobox 1`] = `
                   className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
                   role="none"
                 >
-                  <input
-                    aria-autocomplete={null}
+                  <button
                     aria-controls="objectswitcher-listbox-id-01"
                     aria-expanded="false"
                     aria-haspopup="listbox"
-                    autocomplete="off"
-                    className="slds-input slds-combobox__input slds-combobox__input-value"
-                    defaultValue="Accounts"
-                    id="combobox-id-01-object-switcher"
+                    aria-labelledby="combobox-label-id-15 combobox-id-01-object-switcher-selected-value"
+                    className="slds-input_faux slds-combobox__input slds-combobox__input-value"
+                    id="combobox-id-01-object-switcher-selected-value"
                     onBlur={[Function]}
                     onFocus={[Function]}
-                    placeholder=" "
-                    role="combobox"
-                    type="text"
-                  />
+                    type="button"
+                  >
+                    <span
+                      className="slds-truncate"
+                      id="combobox-value-id-8"
+                    >
+                      Accounts
+                    </span>
+                  </button>
                   <span
                     className="slds-icon_container slds-icon-utility-down slds-input__icon slds-input__icon_right"
                     title={null}
@@ -2346,7 +2369,7 @@ exports[`render combobox render grouped combobox 1`] = `
               aria-controls="listbox-id-01"
               aria-expanded="true"
               aria-haspopup="listbox"
-              autocomplete="off"
+              autoComplete="off"
               className="slds-input slds-combobox__input slds-has-focus"
               id="combobox-id-01"
               onBlur={[Function]}
@@ -2610,6 +2633,7 @@ exports[`render combobox render grouped combobox displaying options based on use
           <label
             className="slds-form-element__label slds-assistive-text"
             htmlFor="combobox-id-01-object-switcher"
+            id="combobox-label-id-16"
           >
             Filter Search by:
           </label>
@@ -2627,21 +2651,24 @@ exports[`render combobox render grouped combobox displaying options based on use
                   className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
                   role="none"
                 >
-                  <input
-                    aria-autocomplete={null}
+                  <button
                     aria-controls="objectswitcher-listbox-id-01"
                     aria-expanded="false"
                     aria-haspopup="listbox"
-                    autocomplete="off"
-                    className="slds-input slds-combobox__input slds-combobox__input-value"
-                    defaultValue="Accounts"
-                    id="combobox-id-01-object-switcher"
+                    aria-labelledby="combobox-label-id-16 combobox-id-01-object-switcher-selected-value"
+                    className="slds-input_faux slds-combobox__input slds-combobox__input-value"
+                    id="combobox-id-01-object-switcher-selected-value"
                     onBlur={[Function]}
                     onFocus={[Function]}
-                    placeholder=" "
-                    role="combobox"
-                    type="text"
-                  />
+                    type="button"
+                  >
+                    <span
+                      className="slds-truncate"
+                      id="combobox-value-id-9"
+                    >
+                      Accounts
+                    </span>
+                  </button>
                   <span
                     className="slds-icon_container slds-icon-utility-down slds-input__icon slds-input__icon_right"
                     title={null}
@@ -2913,7 +2940,7 @@ exports[`render combobox render grouped combobox displaying options based on use
               aria-controls="listbox-id-01"
               aria-expanded="true"
               aria-haspopup="listbox"
-              autocomplete="off"
+              autoComplete="off"
               className="slds-input slds-combobox__input slds-has-focus slds-combobox__input-value"
               defaultValue="salesforce"
               id="combobox-id-01"
@@ -3193,6 +3220,7 @@ exports[`render combobox render grouped combobox with selections made in collaps
           <label
             className="slds-form-element__label slds-assistive-text"
             htmlFor="combobox-id-01-object-switcher"
+            id="combobox-label-id-17"
           >
             Filter Search by:
           </label>
@@ -3210,21 +3238,24 @@ exports[`render combobox render grouped combobox with selections made in collaps
                   className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
                   role="none"
                 >
-                  <input
-                    aria-autocomplete={null}
+                  <button
                     aria-controls="objectswitcher-listbox-id-01"
                     aria-expanded="false"
                     aria-haspopup="listbox"
-                    autocomplete="off"
-                    className="slds-input slds-combobox__input slds-combobox__input-value"
-                    defaultValue="Accounts"
-                    id="combobox-id-01-object-switcher"
+                    aria-labelledby="combobox-label-id-17 combobox-id-01-object-switcher-selected-value"
+                    className="slds-input_faux slds-combobox__input slds-combobox__input-value"
+                    id="combobox-id-01-object-switcher-selected-value"
                     onBlur={[Function]}
                     onFocus={[Function]}
-                    placeholder=" "
-                    role="combobox"
-                    type="text"
-                  />
+                    type="button"
+                  >
+                    <span
+                      className="slds-truncate"
+                      id="combobox-value-id-10"
+                    >
+                      Accounts
+                    </span>
+                  </button>
                   <span
                     className="slds-icon_container slds-icon-utility-down slds-input__icon slds-input__icon_right"
                     title={null}
@@ -3496,7 +3527,7 @@ exports[`render combobox render grouped combobox with selections made in collaps
               aria-controls="listbox-id-01"
               aria-expanded="false"
               aria-haspopup="listbox"
-              autocomplete="off"
+              autoComplete="off"
               className="slds-input slds-combobox__input"
               id="combobox-id-01"
               onBlur={[Function]}
@@ -4167,6 +4198,7 @@ exports[`render combobox render grouped combobox with selections made in expande
           <label
             className="slds-form-element__label slds-assistive-text"
             htmlFor="combobox-id-01-object-switcher"
+            id="combobox-label-id-18"
           >
             Filter Search by:
           </label>
@@ -4184,21 +4216,24 @@ exports[`render combobox render grouped combobox with selections made in expande
                   className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
                   role="none"
                 >
-                  <input
-                    aria-autocomplete={null}
+                  <button
                     aria-controls="objectswitcher-listbox-id-01"
                     aria-expanded="false"
                     aria-haspopup="listbox"
-                    autocomplete="off"
-                    className="slds-input slds-combobox__input slds-combobox__input-value"
-                    defaultValue="Accounts"
-                    id="combobox-id-01-object-switcher"
+                    aria-labelledby="combobox-label-id-18 combobox-id-01-object-switcher-selected-value"
+                    className="slds-input_faux slds-combobox__input slds-combobox__input-value"
+                    id="combobox-id-01-object-switcher-selected-value"
                     onBlur={[Function]}
                     onFocus={[Function]}
-                    placeholder=" "
-                    role="combobox"
-                    type="text"
-                  />
+                    type="button"
+                  >
+                    <span
+                      className="slds-truncate"
+                      id="combobox-value-id-11"
+                    >
+                      Accounts
+                    </span>
+                  </button>
                   <span
                     className="slds-icon_container slds-icon-utility-down slds-input__icon slds-input__icon_right"
                     title={null}
@@ -4470,7 +4505,7 @@ exports[`render combobox render grouped combobox with selections made in expande
               aria-controls="listbox-id-01"
               aria-expanded="false"
               aria-haspopup="listbox"
-              autocomplete="off"
+              autoComplete="off"
               className="slds-input slds-combobox__input slds-has-focus"
               id="combobox-id-01"
               onBlur={[Function]}
@@ -5112,6 +5147,7 @@ exports[`render combobox render multiple selections in a closed combobox 1`] = `
   <label
     className="slds-form-element__label"
     htmlFor="combobox-id-01"
+    id="combobox-label-id-3"
   >
     Relate To
   </label>
@@ -5128,22 +5164,24 @@ exports[`render combobox render multiple selections in a closed combobox 1`] = `
           className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
           role="none"
         >
-          <input
-            aria-autocomplete={null}
+          <button
             aria-controls="listbox-id-01"
             aria-expanded="false"
             aria-haspopup="listbox"
-            autocomplete="off"
-            className="slds-input slds-combobox__input slds-combobox__input-value"
-            defaultValue="2 Options Selected"
-            id="combobox-id-01"
+            aria-labelledby="combobox-label-id-3 combobox-id-01-selected-value"
+            className="slds-input_faux slds-combobox__input slds-combobox__input-value"
+            id="combobox-id-01-selected-value"
             onBlur={[Function]}
             onFocus={[Function]}
-            placeholder="Select an Option…"
-            readOnly={true}
-            role="combobox"
-            type="text"
-          />
+            type="button"
+          >
+            <span
+              className="slds-truncate"
+              id="combobox-value-id-3"
+            >
+              2 Options Selected
+            </span>
+          </button>
           <span
             className="slds-icon_container slds-icon-utility-down slds-input__icon slds-input__icon_right"
             title={null}
@@ -5499,6 +5537,7 @@ exports[`render combobox render single selection in an open combobox 1`] = `
   <label
     className="slds-form-element__label"
     htmlFor="combobox-id-01"
+    id="combobox-label-id-2"
   >
     Relate To
   </label>
@@ -5515,23 +5554,25 @@ exports[`render combobox render single selection in an open combobox 1`] = `
           className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
           role="none"
         >
-          <input
+          <button
             aria-activedescendant="option1"
-            aria-autocomplete={null}
             aria-controls="listbox-id-01"
             aria-expanded="true"
             aria-haspopup="listbox"
-            autocomplete="off"
-            className="slds-input slds-combobox__input slds-has-focus slds-combobox__input-value"
-            defaultValue="Accounts"
-            id="combobox-id-01"
+            aria-labelledby="combobox-label-id-2 combobox-id-01-selected-value"
+            className="slds-input_faux slds-combobox__input slds-has-focus slds-combobox__input-value"
+            id="combobox-id-01-selected-value"
             onBlur={[Function]}
             onFocus={[Function]}
-            placeholder="Select an Option…"
-            readOnly={true}
-            role="combobox"
-            type="text"
-          />
+            type="button"
+          >
+            <span
+              className="slds-truncate"
+              id="combobox-value-id-2"
+            >
+              Accounts
+            </span>
+          </button>
           <span
             className="slds-icon_container slds-icon-utility-down slds-input__icon slds-input__icon_right"
             title={null}
@@ -5801,6 +5842,7 @@ exports[`render combobox renders autocomplete combobox 1`] = `
   <label
     className="slds-form-element__label"
     htmlFor="combobox-id-01"
+    id="combobox-label-id-7"
   >
     Relate To
   </label>
@@ -5822,7 +5864,7 @@ exports[`render combobox renders autocomplete combobox 1`] = `
             aria-controls="listbox-id-01"
             aria-expanded="true"
             aria-haspopup="listbox"
-            autocomplete="off"
+            autoComplete="off"
             className="slds-input slds-combobox__input slds-has-focus"
             id="combobox-id-01"
             onBlur={[Function]}
@@ -5951,6 +5993,7 @@ exports[`render combobox renders different styles of options in the listbox 1`] 
   <label
     className="slds-form-element__label"
     htmlFor="combobox-id-01"
+    id="combobox-label-id-5"
   >
     Relate To
   </label>
@@ -5967,22 +6010,24 @@ exports[`render combobox renders different styles of options in the listbox 1`] 
           className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
           role="none"
         >
-          <input
-            aria-autocomplete={null}
+          <button
             aria-controls="listbox-id-01"
             aria-expanded="true"
             aria-haspopup="listbox"
-            autocomplete="off"
-            className="slds-input slds-combobox__input slds-has-focus slds-combobox__input-value"
-            defaultValue="Accounts"
-            id="combobox-id-01"
+            aria-labelledby="combobox-label-id-5 combobox-id-01-selected-value"
+            className="slds-input_faux slds-combobox__input slds-has-focus slds-combobox__input-value"
+            id="combobox-id-01-selected-value"
             onBlur={[Function]}
             onFocus={[Function]}
-            placeholder="Select an Option…"
-            readOnly={true}
-            role="combobox"
-            type="text"
-          />
+            type="button"
+          >
+            <span
+              className="slds-truncate"
+              id="combobox-value-id-5"
+            >
+              Accounts
+            </span>
+          </button>
           <span
             className="slds-icon_container slds-icon-utility-down slds-input__icon slds-input__icon_right"
             title={null}
@@ -6182,6 +6227,7 @@ exports[`render combobox renders different styles of options in the listbox with
   <label
     className="slds-form-element__label"
     htmlFor="combobox-id-01"
+    id="combobox-label-id-6"
   >
     Relate To
   </label>
@@ -6198,22 +6244,24 @@ exports[`render combobox renders different styles of options in the listbox with
           className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
           role="none"
         >
-          <input
-            aria-autocomplete={null}
+          <button
             aria-controls="listbox-id-01"
             aria-expanded="true"
             aria-haspopup="listbox"
-            autocomplete="off"
-            className="slds-input slds-combobox__input slds-has-focus slds-combobox__input-value"
-            defaultValue="Accounts"
-            id="combobox-id-01"
+            aria-labelledby="combobox-label-id-6 combobox-id-01-selected-value"
+            className="slds-input_faux slds-combobox__input slds-has-focus slds-combobox__input-value"
+            id="combobox-id-01-selected-value"
             onBlur={[Function]}
             onFocus={[Function]}
-            placeholder="Select an Option…"
-            readOnly={true}
-            role="combobox"
-            type="text"
-          />
+            type="button"
+          >
+            <span
+              className="slds-truncate"
+              id="combobox-value-id-6"
+            >
+              Accounts
+            </span>
+          </button>
           <span
             className="slds-icon_container slds-icon-utility-down slds-input__icon slds-input__icon_right"
             title={null}
@@ -6691,6 +6739,7 @@ exports[`render combobox renders groups in a listbox 1`] = `
   <label
     className="slds-form-element__label"
     htmlFor="combobox-id-01"
+    id="combobox-label-id-4"
   >
     Relate To
   </label>
@@ -6707,21 +6756,24 @@ exports[`render combobox renders groups in a listbox 1`] = `
           className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
           role="none"
         >
-          <input
-            aria-autocomplete={null}
+          <button
             aria-controls="listbox-id-01"
             aria-expanded="true"
             aria-haspopup="listbox"
-            autocomplete="off"
-            className="slds-input slds-combobox__input slds-has-focus"
-            id="combobox-id-01"
+            aria-labelledby="combobox-label-id-4 combobox-id-01-selected-value"
+            className="slds-input_faux slds-combobox__input slds-has-focus"
+            id="combobox-id-01-selected-value"
             onBlur={[Function]}
             onFocus={[Function]}
-            placeholder="Select an Option…"
-            readOnly={true}
-            role="combobox"
-            type="text"
-          />
+            type="button"
+          >
+            <span
+              className="slds-truncate"
+              id="combobox-value-id-4"
+            >
+              Select an Option…
+            </span>
+          </button>
           <span
             className="slds-icon_container slds-icon-utility-down slds-input__icon slds-input__icon_right"
             title={null}
@@ -6909,6 +6961,79 @@ exports[`render combobox renders groups in a listbox 1`] = `
 </div>
 `;
 
+exports[`render deprecated combobox input render input in base combobox 1`] = `
+<input
+  aria-autocomplete={null}
+  aria-controls="listbox-id-01"
+  aria-expanded="true"
+  aria-haspopup="listbox"
+  autocomplete="off"
+  className="slds-input slds-combobox__input slds-has-focus slds-combobox__input-value"
+  defaultValue="Accounts"
+  id="combobox-id-01"
+  onBlur={[Function]}
+  onFocus={[Function]}
+  placeholder="Select an Option…"
+  readOnly={true}
+  role="combobox"
+  type="text"
+/>
+`;
+
+exports[`render deprecated combobox input render input in combobox displaying options based on user input 1`] = `
+<input
+  aria-activedescendant="option1"
+  aria-autocomplete="list"
+  aria-controls="listbox-id-01"
+  aria-expanded="true"
+  aria-haspopup="listbox"
+  autocomplete="off"
+  className="slds-input slds-combobox__input slds-has-focus slds-combobox__input-value"
+  defaultValue="opp"
+  id="combobox-id-01"
+  onBlur={[Function]}
+  onFocus={[Function]}
+  placeholder="Search..."
+  role="combobox"
+  type="text"
+/>
+`;
+
+exports[`render deprecated combobox input render input in grouped combobox with selections made in expanded state 1`] = `
+<input
+  aria-autocomplete="list"
+  aria-controls="listbox-id-01"
+  aria-expanded="false"
+  aria-haspopup="listbox"
+  autocomplete="off"
+  className="slds-input slds-combobox__input slds-has-focus"
+  id="combobox-id-01"
+  onBlur={[Function]}
+  onFocus={[Function]}
+  placeholder="Search..."
+  role="combobox"
+  type="text"
+/>
+`;
+
+exports[`render deprecated combobox input render input in object switcher of grouped combobox with selections made in expanded state 1`] = `
+<input
+  aria-autocomplete={null}
+  aria-controls="objectswitcher-listbox-id-01"
+  aria-expanded="false"
+  aria-haspopup="listbox"
+  autocomplete="off"
+  className="slds-input slds-combobox__input slds-combobox__input-value"
+  defaultValue="Accounts"
+  id="combobox-id-01-object-switcher"
+  onBlur={[Function]}
+  onFocus={[Function]}
+  placeholder=" "
+  role="combobox"
+  type="text"
+/>
+`;
+
 exports[`render deprecated combobox renders a base combobox 1`] = `
 <div
   className="demo-only"
@@ -6944,10 +7069,12 @@ exports[`render deprecated combobox renders a base combobox 1`] = `
               aria-autocomplete="list"
               aria-expanded="false"
               aria-haspopup="listbox"
-              autoComplete="off"
+              autocomplete="off"
               className="slds-input slds-combobox__input"
               id="combobox-unique-id-1"
-              placeholder="Search Salesforce"
+              onBlur={[Function]}
+              onFocus={[Function]}
+              placeholder="Search..."
               role="combobox"
               type="text"
             />
@@ -7109,10 +7236,12 @@ exports[`render deprecated combobox renders a base combobox with closed options 
               aria-autocomplete="list"
               aria-expanded="false"
               aria-haspopup="listbox"
-              autoComplete="off"
+              autocomplete="off"
               className="slds-input slds-combobox__input"
               id="combobox-unique-id-4"
-              placeholder="Search Salesforce"
+              onBlur={[Function]}
+              onFocus={[Function]}
+              placeholder="Search..."
               role="combobox"
               type="text"
             />
@@ -7378,10 +7507,12 @@ exports[`render deprecated combobox renders a base combobox with focus 1`] = `
               aria-autocomplete="list"
               aria-expanded="true"
               aria-haspopup="listbox"
-              autoComplete="off"
+              autocomplete="off"
               className="slds-input slds-combobox__input"
               id="combobox-unique-id-2"
-              placeholder="Search Salesforce"
+              onBlur={[Function]}
+              onFocus={[Function]}
+              placeholder="Search..."
               role="combobox"
               type="text"
             />
@@ -7544,10 +7675,12 @@ exports[`render deprecated combobox renders a base combobox with open item focus
               aria-autocomplete="list"
               aria-expanded="true"
               aria-haspopup="listbox"
-              autoComplete="off"
+              autocomplete="off"
               className="slds-input slds-combobox__input"
               id="combobox-unique-id-3"
-              placeholder="Search Salesforce"
+              onBlur={[Function]}
+              onFocus={[Function]}
+              placeholder="Search..."
               role="combobox"
               type="text"
             />
@@ -7745,10 +7878,12 @@ exports[`render deprecated combobox renders a multi-entity combobox 1`] = `
               aria-autocomplete="list"
               aria-expanded="false"
               aria-haspopup="listbox"
-              autoComplete="off"
+              autocomplete="off"
               className="slds-input slds-combobox__input"
               id="combobox-unique-id-11"
-              placeholder="Search Salesforce"
+              onBlur={[Function]}
+              onFocus={[Function]}
+              placeholder="Search..."
               role="combobox"
               type="text"
             />
@@ -7946,10 +8081,12 @@ exports[`render deprecated combobox renders a multi-entity combobox with focus 1
               aria-autocomplete="list"
               aria-expanded="true"
               aria-haspopup="listbox"
-              autoComplete="off"
+              autocomplete="off"
               className="slds-input slds-combobox__input"
               id="combobox-unique-id-12"
-              placeholder="Search Salesforce"
+              onBlur={[Function]}
+              onFocus={[Function]}
+              placeholder="Search..."
               role="combobox"
               type="text"
             />
@@ -8147,10 +8284,12 @@ exports[`render deprecated combobox renders a multi-entity combobox with focused
               aria-autocomplete="list"
               aria-expanded="true"
               aria-haspopup="listbox"
-              autoComplete="off"
+              autocomplete="off"
               className="slds-input slds-combobox__input"
               id="combobox-unique-id-15"
-              placeholder="Search Salesforce"
+              onBlur={[Function]}
+              onFocus={[Function]}
+              placeholder="Search..."
               role="combobox"
               type="text"
             />
@@ -8453,10 +8592,12 @@ exports[`render deprecated combobox renders a multi-entity combobox with open it
               aria-autocomplete="list"
               aria-expanded="true"
               aria-haspopup="listbox"
-              autoComplete="off"
+              autocomplete="off"
               className="slds-input slds-combobox__input"
               id="combobox-unique-id-13"
-              placeholder="Search Salesforce"
+              onBlur={[Function]}
+              onFocus={[Function]}
+              placeholder="Search..."
               role="combobox"
               type="text"
             />
@@ -8646,10 +8787,12 @@ exports[`render deprecated combobox renders a multi-entity combobox with options
             aria-autocomplete="list"
             aria-expanded="false"
             aria-haspopup="listbox"
-            autoComplete="off"
+            autocomplete="off"
             className="slds-input slds-combobox__input"
             id="combobox-unique-id-14"
-            placeholder="Search Salesforce"
+            onBlur={[Function]}
+            onFocus={[Function]}
+            placeholder="Search..."
             role="combobox"
             type="text"
           />
@@ -8914,9 +9057,11 @@ exports[`render deprecated combobox renders a readonly combobox 1`] = `
               aria-autocomplete={null}
               aria-expanded="false"
               aria-haspopup="listbox"
-              autoComplete="off"
+              autocomplete="off"
               className="slds-input slds-combobox__input"
               id="combobox-unique-id-16"
+              onBlur={[Function]}
+              onFocus={[Function]}
               placeholder="Select an Option…"
               readOnly={true}
               role="combobox"
@@ -9063,10 +9208,12 @@ exports[`render deprecated combobox renders a readonly combobox with closed opti
               aria-autocomplete={null}
               aria-expanded="false"
               aria-haspopup="listbox"
-              autoComplete="off"
+              autocomplete="off"
               className="slds-input slds-combobox__input slds-combobox__input-value"
               defaultValue="Option A"
               id="combobox-unique-id-21"
+              onBlur={[Function]}
+              onFocus={[Function]}
               placeholder="Select an Option…"
               readOnly={true}
               role="combobox"
@@ -9218,10 +9365,12 @@ exports[`render deprecated combobox renders a readonly combobox with closed opti
               aria-autocomplete={null}
               aria-expanded="false"
               aria-haspopup="listbox"
-              autoComplete="off"
+              autocomplete="off"
               className="slds-input slds-combobox__input slds-combobox__input-value"
               defaultValue="2 Options Selected"
               id="combobox-unique-id-22"
+              onBlur={[Function]}
+              onFocus={[Function]}
               placeholder="Select an Option…"
               readOnly={true}
               role="combobox"
@@ -9446,9 +9595,11 @@ exports[`render deprecated combobox renders a readonly combobox with focus 1`] =
               aria-autocomplete={null}
               aria-expanded="true"
               aria-haspopup="listbox"
-              autoComplete="off"
+              autocomplete="off"
               className="slds-input slds-combobox__input"
               id="combobox-unique-id-17"
+              onBlur={[Function]}
+              onFocus={[Function]}
               placeholder="Select an Option…"
               readOnly={true}
               role="combobox"
@@ -9596,9 +9747,11 @@ exports[`render deprecated combobox renders a readonly combobox with open item f
               aria-autocomplete={null}
               aria-expanded="true"
               aria-haspopup="listbox"
-              autoComplete="off"
+              autocomplete="off"
               className="slds-input slds-combobox__input"
               id="combobox-unique-id-18"
+              onBlur={[Function]}
+              onFocus={[Function]}
               placeholder="Select an Option…"
               readOnly={true}
               role="combobox"
@@ -9745,10 +9898,12 @@ exports[`render deprecated combobox renders a readonly combobox with open option
               aria-autocomplete={null}
               aria-expanded="true"
               aria-haspopup="listbox"
-              autoComplete="off"
+              autocomplete="off"
               className="slds-input slds-combobox__input slds-combobox__input-value"
               defaultValue="Option A"
               id="combobox-unique-id-23"
+              onBlur={[Function]}
+              onFocus={[Function]}
               placeholder="Select an Option…"
               readOnly={true}
               role="combobox"
@@ -9917,10 +10072,12 @@ exports[`render deprecated combobox renders a readonly combobox with open option
               aria-autocomplete={null}
               aria-expanded="true"
               aria-haspopup="listbox"
-              autoComplete="off"
+              autocomplete="off"
               className="slds-input slds-combobox__input slds-combobox__input-value"
               defaultValue="Option A"
               id="combobox-unique-id-19"
+              onBlur={[Function]}
+              onFocus={[Function]}
               placeholder="Select an Option…"
               readOnly={true}
               role="combobox"
@@ -10072,10 +10229,12 @@ exports[`render deprecated combobox renders a readonly combobox with open option
               aria-autocomplete={null}
               aria-expanded="true"
               aria-haspopup="listbox"
-              autoComplete="off"
+              autocomplete="off"
               className="slds-input slds-combobox__input slds-combobox__input-value"
               defaultValue="2 Options Selected"
               id="combobox-unique-id-20"
+              onBlur={[Function]}
+              onFocus={[Function]}
               placeholder="Select an Option…"
               readOnly={true}
               role="combobox"
@@ -10233,10 +10392,12 @@ exports[`render deprecated combobox renders an inline combobox open item focused
               aria-autocomplete="list"
               aria-expanded="true"
               aria-haspopup="listbox"
-              autoComplete="off"
+              autocomplete="off"
               className="slds-input slds-combobox__input"
               id="combobox-unique-id-7"
-              placeholder="Search Salesforce"
+              onBlur={[Function]}
+              onFocus={[Function]}
+              placeholder="Search..."
               role="combobox"
               type="text"
             />
@@ -10398,10 +10559,12 @@ exports[`render deprecated combobox renders an inline combobox with focus 1`] = 
               aria-autocomplete="list"
               aria-expanded="true"
               aria-haspopup="listbox"
-              autoComplete="off"
+              autocomplete="off"
               className="slds-input slds-combobox__input"
               id="combobox-unique-id-6"
-              placeholder="Search Salesforce"
+              onBlur={[Function]}
+              onFocus={[Function]}
+              placeholder="Search..."
               role="combobox"
               type="text"
             />
@@ -10563,10 +10726,12 @@ exports[`render deprecated combobox renders an inline listbox combobox 1`] = `
               aria-autocomplete="list"
               aria-expanded="false"
               aria-haspopup="listbox"
-              autoComplete="off"
+              autocomplete="off"
               className="slds-input slds-combobox__input"
               id="combobox-unique-id-5"
-              placeholder="Search Salesforce"
+              onBlur={[Function]}
+              onFocus={[Function]}
+              placeholder="Search..."
               role="combobox"
               type="text"
             />
@@ -10746,11 +10911,13 @@ exports[`render deprecated combobox renders an inline listbox combobox with clos
               aria-autocomplete="list"
               aria-expanded="false"
               aria-haspopup="listbox"
-              autoComplete="off"
+              autocomplete="off"
               className="slds-input slds-combobox__input slds-combobox__input-value"
               defaultValue="Salesforce.com, Inc."
               id="combobox-unique-id-8"
-              placeholder="Search Salesforce"
+              onBlur={[Function]}
+              onFocus={[Function]}
+              placeholder="Search..."
               readOnly={true}
               role="combobox"
               type="text"
@@ -11023,10 +11190,12 @@ exports[`render deprecated combobox renders an inline listbox combobox with focu
               aria-autocomplete="list"
               aria-expanded="true"
               aria-haspopup="listbox"
-              autoComplete="off"
+              autocomplete="off"
               className="slds-input slds-combobox__input"
               id="combobox-unique-id-10"
-              placeholder="Search Salesforce"
+              onBlur={[Function]}
+              onFocus={[Function]}
+              placeholder="Search..."
               role="combobox"
               type="text"
             />
@@ -11292,10 +11461,12 @@ exports[`render deprecated combobox renders an inline listbox combobox with opti
               aria-autocomplete="list"
               aria-expanded="false"
               aria-haspopup="listbox"
-              autoComplete="off"
+              autocomplete="off"
               className="slds-input slds-combobox__input"
               id="combobox-unique-id-9"
-              placeholder="Search Salesforce"
+              onBlur={[Function]}
+              onFocus={[Function]}
+              placeholder="Search..."
               role="combobox"
               type="text"
             />

@@ -1,3 +1,8 @@
+.slds-input,
+.slds-input_faux {
+  line-height: border-box-line-height($height-tappable);
+}
+
 .slds-input {
   line-height: border-box-line-height($height-tappable);
 

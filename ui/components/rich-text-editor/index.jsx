@@ -235,11 +235,11 @@ export let RteFormatFont = props => {
     >
       <div className="slds-rich-text-editor__select">
         <Combobox
-          className="slds-rich-text-editor__select_x-small"
           id={comboboxId}
           aria-controls={listboxId}
           label="Choose a Font"
           hideLabel
+          inputContainerClassName="slds-rich-text-editor__select_x-small"
           inputIconPosition="right"
           rightInputIcon={
             <UtilityIcon
@@ -255,18 +255,18 @@ export let RteFormatFont = props => {
           }
           resultsType="listbox"
           hasInteractions
-          readonly
+          selectOnly
           value="Font"
         />
       </div>
 
       <div className="slds-rich-text-editor__select">
         <Combobox
-          className="slds-rich-text-editor__select_xx-small"
           id={comboboxId2}
           aria-controls={listboxId2}
           label="Choose a Font Size"
           hideLabel
+          inputContainerClassName="slds-rich-text-editor__select_xx-small"
           inputIconPosition="right"
           rightInputIcon={
             <UtilityIcon
@@ -285,7 +285,7 @@ export let RteFormatFont = props => {
           }
           resultsType="listbox"
           hasInteractions
-          readonly
+          selectOnly
           value="Size"
           tabIndex="-1"
         />

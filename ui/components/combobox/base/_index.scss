@@ -78,6 +78,7 @@
  * @restrict .slds-combobox > div
  */
 .slds-combobox__form-element {
+  display: flex;
   flex: 1 1 auto;
 }
 
@@ -295,13 +296,17 @@ input[readonly][role="combobox"] {
  * Class to target styling the value of a combobox input
  *
  * @selector .slds-combobox__input-value
- * @restrict .slds-combobox input
+ * @restrict .slds-combobox__input
  */
 [class*="slds-input-has-icon_left"] .slds-combobox__input[value],
 [class*="slds-input-has-icon--left"] .slds-combobox__input[value],
 [class*="slds-input-has-icon_left"] .slds-combobox__input.slds-combobox__input-value,
 [class*="slds-input-has-icon--left"] .slds-combobox__input.slds-combobox__input-value {
   padding-left: ($square-icon-small-boundary + $spacing-small);
+}
+
+.slds-input_faux:not(.slds-combobox__input-value) {
+  color: $color-text-placeholder;
 }
 
 /**
@@ -422,7 +427,7 @@ input[readonly][role="combobox"] {
  * @summary Input field within a combobox
  *
  * @selector .slds-combobox__input
- * @restrict .slds-combobox input
+ * @restrict .slds-combobox__form-element input, .slds-combobox__form-element button
  */
 .slds-combobox__input {
   /**

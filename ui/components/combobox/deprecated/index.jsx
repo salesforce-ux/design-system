@@ -53,6 +53,80 @@ const DeprecatedObjectSwitcher = props => {
 };
 
 /**
+ * Combobox input element. This is deprecated since updated a11y guidance is to
+ * have select-only comboboxes replace the input with a div
+ * @name DeprecatedComboboxInputElement
+ * @prop {boolean} aria-activedescendant
+ * @prop {string}  aria-controls
+ * @prop {boolean} autocomplete
+ * @prop {boolean} autofocus
+ * @prop {string}  className - A CSS class for the element containing the input
+ * @prop {string}  comboboxId
+ * @prop {string}  id
+ * @prop {boolean} isDisabled
+ * @prop {boolean} isOpen
+ * @prop {string}  placeholder
+ * @prop {boolean} readonly
+ * @prop {string}  resultsType
+ * @prop {string}  tabIndex
+ * @prop {function}  toggleFocus
+ * @prop {string}  value
+ */
+export const DeprecatedComboboxInputElement = ({
+  autocomplete,
+  autoFocus,
+  comboboxId,
+  id,
+  isDisabled,
+  isOpen,
+  hasFocus,
+  placeholder,
+  readonly,
+  resultsType,
+  tabIndex,
+  toggleFocus,
+  value,
+  ...props
+}) => {
+  return (
+    <Input
+      className={classNames(
+        'slds-combobox__input',
+        hasFocus && 'slds-has-focus',
+        value && 'slds-combobox__input-value'
+      )}
+      id={id || comboboxId}
+      aria-activedescendant={props['aria-activedescendant']}
+      aria-autocomplete={autocomplete ? 'list' : null}
+      aria-controls={
+        props.listbox
+          ? props['aria-controls'] || props.listboxId
+          : props['aria-controls'] || 'please-provide-listbox-id-here'
+      }
+      autocomplete="off"
+      role="combobox"
+      aria-expanded={isOpen ? 'true' : 'false'}
+      aria-haspopup={resultsType}
+      type="text"
+      placeholder={
+        !placeholder
+          ? autocomplete
+            ? 'Search...'
+            : 'Select an Option…'
+          : placeholder
+      }
+      readOnly={readonly}
+      defaultValue={value}
+      tabIndex={tabIndex}
+      onFocus={e => toggleFocus(e)}
+      onBlur={e => toggleFocus(e)}
+      autoFocus={autoFocus}
+      disabled={isDisabled}
+    />
+  );
+};
+
+/**
  * Combobox container for text input, text input icons, listbox of options,
  * listbox of pill options and object switcher.
  * @name DeprecatedCombobox
@@ -181,34 +255,10 @@ export const DeprecatedCombobox = props => {
                 />
               ) : null}
               {/* Input */}
-              <Input
-                className={classNames(
-                  'slds-combobox__input',
-                  props.value && 'slds-combobox__input-value'
-                )}
-                id={props.id || comboboxId}
-                aria-activedescendant={props['aria-activedescendant']}
-                aria-autocomplete={props.autocomplete ? 'list' : null}
-                aria-controls={
-                  props.listbox
-                    ? props['aria-controls'] || props.listboxId
-                    : null
-                }
-                aria-expanded={props.isOpen ? 'true' : 'false'}
-                aria-haspopup="listbox"
-                autoComplete="off"
-                role="combobox"
-                type="text"
-                placeholder={
-                  !props.placeholder
-                    ? props.autocomplete
-                      ? 'Search Salesforce'
-                      : 'Select an Option…'
-                    : props.placeholder
-                }
-                readOnly={props.readonly}
-                defaultValue={props.value}
-                tabIndex={props.tabIndex}
+              <DeprecatedComboboxInputElement
+                {...props}
+                {...{ comboboxId }}
+                {...props.listbox && { resultsType: 'listbox' }}
               />
               {/* If inputIcon is right, show icon here  */}
               {props.inputIcon === 'right' && props.inputButtonIcon !== true ? (

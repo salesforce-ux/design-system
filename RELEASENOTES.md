@@ -3,6 +3,19 @@
 
 ## Release 2.16.0 - Upcoming
 
+- In accordance with ARIA 1.2 guidance, the `input` was replaced with `button` within these components that contain select-only comboboxes:
+  - Datetime Picker
+  - Docked Composer
+  - Dynamic Menu
+  - Expression
+  - Global Header
+  - List builder
+  - Lookups
+  - Picklist
+  - Rich Text Editor
+  - Timepicker
+- Added SLDS scope customizer tool: `npm run slds:customizer`
+
 ## Components
 ### [Accordion](https://www.lightningdesignsystem.com/components/accordion)
 ## Added
@@ -10,7 +23,10 @@
 
 ### [Combobox](https://www.lightningdesignsystem.com/components/combobox)
 #### Changed
-- Updated to ARIA 1.2 compliance where these attributes are moved to the text input: `role="combobox"`, `aria-expanded`, `aria-haspopup="listbox"`.
+- Changed `slds-combobox__input` element from `input` to `button` per ARIA 1.2 guidance for select-only comboboxes.
+- Updated to ARIA 1.2 compliance where these attributes are moved to the input, or button in the case of select-only: `role="combobox"`, `aria-expanded`, `aria-haspopup="listbox"`.
+- Changed `@restrict` annotation of `.slds-combobox__input` from `.slds-combobox input` to `.slds-combobox__form-element input, .slds-combobox__form-element button`
+- Changed `@restrict` annotation of `.slds-combobox__input-value` from `.slds-combobox input` to `.slds-combobox__input`
 
 ### [Datepickers](https://www.lightningdesignsystem.com/components/datepickers)
 #### Added
@@ -32,6 +48,14 @@
 #### Changed
 - Removed the usage of the deprecated combobox. The Dynamic Menu now uses the current combobox.
 
+### [Form Element](https://www.lightningdesignsystem.com/components/form-element)
+#### Fixed
+- Correctly position help text under the corresponding input when in horizontal layout.
+
+### [Input](https://www.lightningdesignsystem.com/components/input)
+#### Added
+- Created new class `slds-input_faux` to style read-only "inputs" where necessary for accessibility best practices, like combobox.
+
 ### [List Builder](https://www.lightningdesignsystem.com/components/list-builder)
 #### Changed
 - Removed the usage of the deprecated combobox. The List Builder now uses the current combobox.
@@ -43,7 +67,7 @@
 
 ### [Picklist](https://www.lightningdesignsystem.com/components/picklist)
 #### Changed
-Removed the usage of the deprecated combobox. The Picklist now uses the current combobox.
+- Removed the usage of the deprecated combobox. The Picklist now uses the current combobox.
 
 ### [Progress Bar](https://www.lightningdesignsystem.com/components/progress-bar)
 #### Added

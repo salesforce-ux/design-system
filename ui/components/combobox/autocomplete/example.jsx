@@ -267,7 +267,7 @@ export let states = [
         resultsType="listbox"
         value="GenePoint"
         hasSelection
-        readonly
+        selectOnly
       />
     )
   },
@@ -307,7 +307,7 @@ export let states = [
         resultsType="listbox"
         hasSelection
         value="Salesforce.com, Inc."
-        readonly
+        selectOnly
       />
     )
   },

@@ -19,7 +19,7 @@ const examples = [
 const patternName = 'Combobox';
 
 const storyOptions = {
-  defaultDemoStyles: 'height: 17rem;'
+  defaultDemoStyles: 'height: 19rem;'
 };
 
 generateStories(

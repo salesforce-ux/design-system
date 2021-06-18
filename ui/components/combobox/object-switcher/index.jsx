@@ -39,6 +39,7 @@ class ObjectSwitcher extends Component {
           inputIconPosition="right"
           placeholder=" "
           value={value}
+          selectOnly
           rightInputIcon={
             <UtilityIcon
               symbol="down"

@@ -3,6 +3,18 @@
 
 ## 2.16.0 - Upcoming
 
+- In accordance with ARIA 1.2 guidance, the `input` was replaced with `button` within these components that contain select-only comboboxes:
+  - Datetime Picker
+  - Docked Composer
+  - Dynamic Menu
+  - Expression
+  - Global Header
+  - List builder
+  - Lookups
+  - Picklist
+  - Rich Text Editor
+  - Timepicker
+
 - Added SLDS scope customizer tool: `npm run slds:customizer`
 
 ## 2.15.8 - May 27, 2021

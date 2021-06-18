@@ -118,7 +118,7 @@
  * Container X-Small Size for Rich Text Editor Combobox
  *
  * @selector .slds-rich-text-editor__select_x-small
- * @restrict .slds-rich-text-editor__select .slds-combobox
+ * @restrict .slds-rich-text-editor__select .slds-combobox__form-element
  */
 .slds-rich-text-editor__select_x-small {
   max-width: $size-x-small;
@@ -129,7 +129,7 @@
  * Container XX-Small Size for Rich Text Editor Combobox
  *
  * @selector .slds-rich-text-editor__select_xx-small
- * @restrict .slds-rich-text-editor__select .slds-combobox
+ * @restrict .slds-rich-text-editor__select .slds-combobox__form-element
  */
 .slds-rich-text-editor__select_xx-small {
   max-width: $size-xx-small;

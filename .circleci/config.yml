@@ -187,6 +187,40 @@ jobs:
       - install-gh-cli
 
       - run:
+          name: Get Github pull-request number
+          command: |
+            set +e
+            gh pr view --json number,state,title,url > gh-pull-data.json
+            for ((x=0 ; x<5 ; x++)) ; do
+              if [ -z $(cat gh-pull-data.json | jq -r '.number') ] ; then
+                gh pr view --json number,state,title,url > gh-pull-data.json
+              else
+                echo "» Pull-request #"$(cat gh-pull-data.json | jq -r '.number')
+                break
+              fi
+            done
+            echo
+            echo "=== Github pull-request API results ==="
+            cat gh-pull-data.json
+            echo "---------------------------------------"
+            cat gh-pull-data.json | jq -r '.number' > workspace/gh-pr-num.txt && cat workspace/gh-pr-num.txt
+
+      - run:
+          name: Verify Github pull-request number
+          command: |
+            echo "» Branch: "${CIRCLE_BRANCH}
+            echo
+            if [[ ${CIRCLECI_BRANCH} =~ ^\d{3}-(summer|spring|winter)-\d{2}$ ]] ; then
+              echo "» Does not require a pull-request number"
+            else
+              if [ -z $(cat workspace/gh-pr-num.txt) ] ; then
+                echo "» No pull-request number found!"
+                echo "» Please try running this CI workflow again."
+                exit 1
+              fi
+            fi
+
+      - run:
           name: Retrieve Github deployments
           command: |
             gh api /repos/salesforce-ux/design-system-internal/deployments --field ref=${CIRCLE_SHA1} --method GET | jq "map({ status: .statuses_url, url: .payload.web_url})" > workspace/gh-deployments.json
@@ -198,16 +232,6 @@ jobs:
               export STATUS_URL=$(echo ${row} | base64 --decode | jq -r ".status" | sed 's/https:\/\/api.github.com//')
               gh api ${STATUS_URL} -f state=in_progress -H "Accept: application/vnd.github.flash-preview+json"
             done
-
-      - run:
-          name: Get Github pull-request number
-          command: |
-            set +e
-            gh pr view --json number,state,title,url > gh-pull-data.json
-            echo "=== Github pull-request API results ==="
-            cat gh-pull-data.json
-            echo "---------------------------------------"
-            cat gh-pull-data.json | jq -r '.number' > workspace/gh-pr-num.txt && cat workspace/gh-pr-num.txt
 
       - persist_to_workspace:
           root: workspace

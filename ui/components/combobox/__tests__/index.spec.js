@@ -1,6 +1,6 @@
 /* eslint-env jest */
 import React from 'react';
-import * as DeprecatedBaseExamples from '../base/example';
+import * as BaseExamples from '../base/example';
 import * as DeprecatedInlineListboxExamples from '../deprecated-inline-listbox/example';
 import * as DeprecatedMultiEntityExamples from '../deprecated-multi-entity/example';
 import * as DeprecatedReadOnlyExamples from '../deprecated-readonly/example';
@@ -32,32 +32,29 @@ const popoverId = 'popover-id-01';
 describe('render deprecated combobox', () => {
   it('renders a base combobox', () =>
     matchesMarkup(
-      getDisplayElementById(DeprecatedBaseExamples.states, 'deprecated-closed')
+      getDisplayElementById(BaseExamples.states, 'deprecated-closed')
     ));
 
   it('renders a base combobox with focus', () =>
     matchesMarkup(
-      getDisplayElementById(DeprecatedBaseExamples.states, 'deprecated-focused')
+      getDisplayElementById(BaseExamples.states, 'deprecated-focused')
     ));
 
   it('renders a base combobox with open item focused', () =>
     matchesMarkup(
-      getDisplayElementById(
-        DeprecatedBaseExamples.states,
-        'deprecated-open-item-focused'
-      )
+      getDisplayElementById(BaseExamples.states, 'deprecated-open-item-focused')
     ));
 
   it('renders a base combobox with closed options selected', () =>
     matchesMarkup(
       getDisplayElementById(
-        DeprecatedBaseExamples.states,
+        BaseExamples.states,
         'deprecated-closed-options-selected'
       )
     ));
 
   it('renders an inline listbox combobox', () =>
-    matchesMarkup(DeprecatedInlineListboxExamples.default));
+    matchesMarkup(DeprecatedInlineListboxExamples.default[0].element));
 
   it('renders an inline combobox with focus', () =>
     matchesMarkup(
@@ -100,7 +97,7 @@ describe('render deprecated combobox', () => {
     ));
 
   it('renders a multi-entity combobox', () =>
-    matchesMarkup(DeprecatedMultiEntityExamples.default));
+    matchesMarkup(DeprecatedMultiEntityExamples.default[0].element));
 
   it('renders a multi-entity combobox with focus', () =>
     matchesMarkup(
@@ -135,7 +132,7 @@ describe('render deprecated combobox', () => {
     ));
 
   it('renders a readonly combobox', () =>
-    matchesMarkup(DeprecatedReadOnlyExamples.default));
+    matchesMarkup(DeprecatedReadOnlyExamples.default[0].element));
 
   it('renders a readonly combobox with focus', () =>
     matchesMarkup(
@@ -293,71 +290,17 @@ describe('render combobox', () => {
     ));
   it('render single selection in an open combobox', () =>
     matchesMarkup(
-      <Combobox
-        id={comboboxId}
-        aria-controls={listboxId}
-        selectOnly
-        value="Accounts"
-        inputIconPosition="right"
-        rightInputIcon={
-          <UtilityIcon
-            symbol="down"
-            className="slds-icon slds-icon_x-small slds-icon-text-default"
-            containerClassName="slds-input__icon slds-input__icon_right"
-            assistiveText={false}
-            title={false}
-          />
-        }
-        results={
-          <Listbox
-            id={listboxId}
-            snapshot={Snapshot.ObjectOptionsSingleSelection}
-            type="plain"
-            count={8}
-            visualSelection
-          />
-        }
-        resultsType="listbox"
-        aria-activedescendant="option1"
-        isOpen
-        hasFocus
-      />
+      getDisplayElementById(BaseExamples.states, 'selecting-a-single-option')
     ));
+
   it('render multiple selections in a closed combobox', () =>
     matchesMarkup(
-      <Combobox
-        id={comboboxId}
-        aria-controls={listboxId}
-        selectOnly
-        value="2 Options Selected"
-        inputIconPosition="right"
-        rightInputIcon={
-          <UtilityIcon
-            symbol="down"
-            className="slds-icon slds-icon_x-small slds-icon-text-default"
-            containerClassName="slds-input__icon slds-input__icon_right"
-            assistiveText={false}
-            title={false}
-          />
-        }
-        results={
-          <Listbox
-            id={listboxId}
-            snapshot={Snapshot.ObjectOptionsMultiSelection}
-            type="plain"
-            count={8}
-            visualSelection
-          />
-        }
-        resultsType="listbox"
-        listboxOfSelections={
-          <ListboxOfSelections
-            snapshot={Snapshot.ObjectOptionsSelected}
-            count={2}
-          />
-        }
-      />
+      getDisplayElementById(
+        BaseExamples.states,
+        'selected-multiple-options-closed'
+      )
     ));
+
   it('renders groups in a listbox', () =>
     matchesMarkup(
       <Combobox
@@ -537,6 +480,7 @@ describe('render combobox', () => {
         hasFocus
       />
     ));
+
   it('render autocomplete combobox with single selection', () =>
     matchesMarkup(
       <Combobox
@@ -565,7 +509,7 @@ describe('render combobox', () => {
         value="GenePoint"
       />
     ));
-  it('render autocomplete combobox with mutliple selections', () =>
+  it('render autocomplete combobox with multiple selections', () =>
     matchesMarkup(
       <Combobox
         id={comboboxId}

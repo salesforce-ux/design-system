@@ -196,7 +196,7 @@ exports[`Combobox with a Dialog dropdown renders an open, readonly dialog combob
 </div>
 `;
 
-exports[`render combobox render autocomplete combobox with mutliple selections 1`] = `
+exports[`render combobox render autocomplete combobox with multiple selections 1`] = `
 <div
   className="slds-form-element"
 >
@@ -5146,7 +5146,7 @@ exports[`render combobox render multiple selections in a closed combobox 1`] = `
 >
   <label
     className="slds-form-element__label"
-    htmlFor="combobox-id-01"
+    htmlFor="combobox-id-8"
     id="combobox-label-id-3"
   >
     Relate To
@@ -5165,12 +5165,12 @@ exports[`render combobox render multiple selections in a closed combobox 1`] = `
           role="none"
         >
           <button
-            aria-controls="listbox-id-01"
+            aria-controls="listbox-id-8"
             aria-expanded="false"
             aria-haspopup="listbox"
-            aria-labelledby="combobox-label-id-3 combobox-id-01-selected-value"
+            aria-labelledby="combobox-label-id-3 combobox-id-8-selected-value"
             className="slds-input_faux slds-combobox__input slds-combobox__input-value"
-            id="combobox-id-01-selected-value"
+            id="combobox-id-8-selected-value"
             onBlur={[Function]}
             onFocus={[Function]}
             type="button"
@@ -5199,7 +5199,7 @@ exports[`render combobox render multiple selections in a closed combobox 1`] = `
         <div
           aria-orientation={null}
           className="slds-dropdown slds-dropdown_length-5 slds-dropdown_fluid"
-          id="listbox-id-01"
+          id="listbox-id-8"
           role="listbox"
         >
           <ul
@@ -5536,7 +5536,7 @@ exports[`render combobox render single selection in an open combobox 1`] = `
 >
   <label
     className="slds-form-element__label"
-    htmlFor="combobox-id-01"
+    htmlFor="combobox-id-5"
     id="combobox-label-id-2"
   >
     Relate To
@@ -5556,12 +5556,12 @@ exports[`render combobox render single selection in an open combobox 1`] = `
         >
           <button
             aria-activedescendant="option1"
-            aria-controls="listbox-id-01"
+            aria-controls="listbox-id-6"
             aria-expanded="true"
             aria-haspopup="listbox"
-            aria-labelledby="combobox-label-id-2 combobox-id-01-selected-value"
+            aria-labelledby="combobox-label-id-2 combobox-id-5-selected-value"
             className="slds-input_faux slds-combobox__input slds-has-focus slds-combobox__input-value"
-            id="combobox-id-01-selected-value"
+            id="combobox-id-5-selected-value"
             onBlur={[Function]}
             onFocus={[Function]}
             type="button"
@@ -5590,7 +5590,7 @@ exports[`render combobox render single selection in an open combobox 1`] = `
         <div
           aria-orientation={null}
           className="slds-dropdown slds-dropdown_length-5 slds-dropdown_fluid"
-          id="listbox-id-01"
+          id="listbox-id-6"
           role="listbox"
         >
           <ul

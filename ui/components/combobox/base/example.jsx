@@ -20,7 +20,7 @@ import * as Snapshot from '../snapshots.data';
 /* -----------------------------------------------------------------------------
     Variables
 ----------------------------------------------------------------------------- */
-
+const STORY_SINK_CONTEXT = 'Select-Only (Base)';
 const listboxOptionId01 = 'listbox-option-unique-id-01';
 const listboxOptionId02 = 'listbox-option-unique-id-02';
 
@@ -59,8 +59,9 @@ export const ListboxDropdown = props => (
 // Default
 export default [
   {
-    id: 'default',
-    label: 'Base – default (select-only)',
+    context: STORY_SINK_CONTEXT,
+    id: `${STORY_SINK_CONTEXT.toLowerCase()}-default`,
+    label: `${STORY_SINK_CONTEXT} default (select-only)`,
     element: (
       <Combobox
         id={_.uniqueId('combobox-id-')}
@@ -95,6 +96,7 @@ export default [
 // States
 export let states = [
   {
+    context: STORY_SINK_CONTEXT,
     id: 'focused',
     label: 'Focused (select-only)',
     element: (
@@ -127,6 +129,7 @@ export let states = [
     )
   },
   {
+    context: STORY_SINK_CONTEXT,
     id: 'focused-open',
     label: 'Focused - Opened (select-only)',
     element: (
@@ -160,6 +163,7 @@ export let states = [
     )
   },
   {
+    context: STORY_SINK_CONTEXT,
     id: 'highlighting-an-option',
     label: 'Highlighting an option (select-only)',
     element: (
@@ -194,6 +198,7 @@ export let states = [
     )
   },
   {
+    context: STORY_SINK_CONTEXT,
     id: 'selecting-a-single-option',
     label: 'Selecting a single option (select-only)',
     element: (
@@ -229,6 +234,7 @@ export let states = [
     )
   },
   {
+    context: STORY_SINK_CONTEXT,
     id: 'selected-an-option-closed',
     label: 'Selected an option - Closed (select-only)',
     element: (
@@ -261,6 +267,7 @@ export let states = [
     )
   },
   {
+    context: STORY_SINK_CONTEXT,
     id: 'selecting-multiple-options',
     label: 'Selecting multiple options (select-only)',
     element: (
@@ -295,6 +302,7 @@ export let states = [
     )
   },
   {
+    context: STORY_SINK_CONTEXT,
     id: 'selected-multiple-options-closed',
     label: 'Selected multiple options-closed (select-only)',
     element: (
@@ -333,6 +341,7 @@ export let states = [
     )
   },
   {
+    context: STORY_SINK_CONTEXT,
     id: 'selecting-a-single-option-truncated',
     label: 'Selecting a single option (truncated)',
     demoStyles: 'max-width: 225px;',
@@ -370,6 +379,7 @@ export let states = [
     )
   },
   {
+    context: STORY_SINK_CONTEXT,
     id: 'loading-options',
     label: 'Loading more options (select-only)',
     element: (
@@ -405,6 +415,7 @@ export let states = [
     )
   },
   {
+    context: STORY_SINK_CONTEXT,
     id: 'grouped-options',
     label: 'Grouped options (select-only)',
     element: (
@@ -446,6 +457,7 @@ export let states = [
     )
   },
   {
+    context: STORY_SINK_CONTEXT,
     id: 'deprecated-closed',
     label: 'Deprecated - Closed (select-only)',
     element: (
@@ -460,6 +472,7 @@ export let states = [
     )
   },
   {
+    context: STORY_SINK_CONTEXT,
     id: 'deprecated-focused',
     label: 'Deprecated - Focused (select-only)',
     element: (
@@ -475,6 +488,7 @@ export let states = [
     )
   },
   {
+    context: STORY_SINK_CONTEXT,
     id: 'deprecated-open-item-focused',
     label: 'Deprecated - Open - Item Focused (select-only)',
     element: (
@@ -491,6 +505,7 @@ export let states = [
     )
   },
   {
+    context: STORY_SINK_CONTEXT,
     id: 'deprecated-closed-options-selected',
     label: 'Deprecated - Option(s) Selected (select-only)',
     element: (

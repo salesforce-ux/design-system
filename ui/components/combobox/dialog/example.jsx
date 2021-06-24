@@ -18,6 +18,8 @@ const popoverId05 = 'popover-unique-id-05';
 const popoverId06 = 'popover-unique-id-06';
 const popoverId07 = 'popover-unique-id-07';
 
+const STORY_SINK_CONTEXT = 'Dialog';
+
 export const ComboboxWithDialog = () => {
   const popoverId = _.uniqueId('popover-id-');
   return (
@@ -59,10 +61,18 @@ export const ComboboxWithDialog = () => {
   );
 };
 
-export default <ComboboxWithDialog />;
+export default [
+  {
+    context: STORY_SINK_CONTEXT,
+    id: `${STORY_SINK_CONTEXT.toLowerCase()}-default`,
+    label: `${STORY_SINK_CONTEXT} default`,
+    element: <ComboboxWithDialog />
+  }
+];
 
 export let states = [
   {
+    context: STORY_SINK_CONTEXT,
     id: 'open',
     label: 'Open',
     element: (
@@ -107,6 +117,7 @@ export let states = [
 
 export let examples = [
   {
+    context: STORY_SINK_CONTEXT,
     id: 'with-checkbox-group',
     label: 'With Checkbox Group',
     element: (
@@ -153,6 +164,7 @@ export let examples = [
     )
   },
   {
+    context: STORY_SINK_CONTEXT,
     id: 'selecting-options',
     label: 'Selecting Options',
     element: (
@@ -199,6 +211,7 @@ export let examples = [
     )
   },
   {
+    context: STORY_SINK_CONTEXT,
     id: 'open-one-option-selected',
     label: 'Open - One Option Selected ',
     element: (
@@ -246,6 +259,7 @@ export let examples = [
     )
   },
   {
+    context: STORY_SINK_CONTEXT,
     id: 'closed-one-option-selected',
     label: 'Closed - One Option Selected',
     element: (
@@ -293,6 +307,7 @@ export let examples = [
     )
   },
   {
+    context: STORY_SINK_CONTEXT,
     id: 'open-two-or-more-options-selected',
     label: 'Open - Two or More Options Selected',
     element: (
@@ -340,6 +355,7 @@ export let examples = [
     )
   },
   {
+    context: STORY_SINK_CONTEXT,
     id: 'closed-two-or-more-options-selected',
     label: 'Closed - Two or More Options Selected',
     element: (

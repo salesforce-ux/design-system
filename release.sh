@@ -106,8 +106,62 @@ if [ "$build_site_only" = false ]; then
   # Publish the tarball to the Heroku app
   heroku builds:create --source-tar site-release.tar.gz -a ${HEROKU_APP_NAME}
 
+  # Clone Algolia Docsearch Scraper
+  echo "» Installing docsearch scraper..."
+  git clone https://github.com/algolia/docsearch-scraper.git
+
+  cd ./.www/
+
+  # start python server on port 80
+  python3 -m http.server 80 &
+
+  # install python3
+  brew install python
+
+  cd ../docsearch-scraper/
+
+  # crudely install pipenv
+  curl https://raw.githubusercontent.com/pypa/pipenv/master/get-pipenv.py | python
+
+  # copy Algolia environment variables into .env
+  cp ../../.docsearchenv .env
+
+  # install pipenv dependencies
+  pipenv install
+
+  # check for active python server on port 80
+  max_iterations=10
+  wait_seconds=1
+  http_endpoint="http://127.0.0.1:80/"
+  iterations=0
+
+  while true
+  do
+    ((iterations++))
+    echo "» Attempt $iterations"
+    sleep $wait_seconds
+    http_code=$(curl --verbose -s -o /tmp/result.txt -w '%{http_code}' "$http_endpoint";)
+
+    # python server is running, begin crawling
+    if [ "$http_code" -eq 200 ]; then
+      echo "» Python server active. Crawling site..."
+      pipenv run ./docsearch run ../../searchconfig.json
+      break
+    fi
+
+    # no active server, end loop
+    if [ "$iterations" -ge "$max_iterations" ]; then
+      echo "» No active python server. Skipping indexing operation..."
+      exit 1
+    fi
+  done
+
+  # kill python server
+  lsof -ti tcp:80 | xargs kill
+
   # Exit back to parent directory and clean-up after ourselves
-  cd ..
+  cd ../../
+
   echo "» Removing '__release' folder..."
   rm -rf __release/
   cp postcss.config.js.bak postcss.config.js

@@ -552,7 +552,7 @@ exports[`Setup Assistant  renders a step detail 1`] = `
           href="#"
           onClick={[Function]}
         >
-          View Duplicates.
+          View Duplicates
         </a>
       </p>
     </div>

@@ -229,15 +229,15 @@
     &.slds-has-error {
 
       .slds-context-bar__label-action {
-        color: $color-gray-1;
+        color: $palette-neutral-100;
       }
 
       .slds-indicator_unread {
-        background-color: $color-gray-1;
+        background-color: $palette-neutral-100;
       }
 
       .slds-indicator_unsaved {
-        color: $color-gray-1;
+        color: $palette-neutral-100;
       }
     }
 
@@ -269,7 +269,7 @@
 
       &:after {
         content: '';
-        background: $color-gray-11;
+        background: $palette-neutral-30;
         position: absolute;
         height: $globalnavigation-item-height-accent-active;
         opacity: 0.4;

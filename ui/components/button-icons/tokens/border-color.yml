@@ -12,4 +12,4 @@ imports:
 - "../../../../design-tokens/aliases/color-palettes.yml"
 props:
   BUTTON_ICON_COLOR_BORDER_PRIMARY:
-    value: '{!PALETTE_GRAY_1}'
+    value: '{!PALETTE_NEUTRAL_100}'

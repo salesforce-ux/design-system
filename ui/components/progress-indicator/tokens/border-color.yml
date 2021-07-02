@@ -10,10 +10,10 @@ imports:
 - "../../../../design-tokens/aliases/color-palettes.yml"
 props:
   PROGRESS_COLOR_BORDER:
-    value: '{!WHITE}'
+    value: '{!PALETTE_NEUTRAL_100}'
     comment: Borders of each indicator item within the Progress Indicator
   PROGRESS_COLOR_BORDER_SHADE:
-    value: '{!PALETTE_GRAY_2}'
+    value: '{!PALETTE_NEUTRAL_95}'
     comment: Shaded borders of each indicator item within the Progress Indicator
   PROGRESS_COLOR_BORDER_HOVER:
     value: '{!PALETTE_BLUE_50}'

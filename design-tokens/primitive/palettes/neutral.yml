@@ -1,0 +1,61 @@
+# Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+# Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+global:
+  type: color
+  category: color
+  cssProperties:
+  - background-color
+  - 'border*color'
+  - box-shadow
+  - fill
+  - color
+  scope: global
+  primitive: true
+imports:
+- ../../aliases/color-palettes.yml
+props:
+  PALETTE_NEUTRAL_10:
+    value: '{!PALETTE_NEUTRAL_10}'
+    comment: "Neutral 10"
+    release: 2.16.0
+  PALETTE_NEUTRAL_20:
+    value: '{!PALETTE_NEUTRAL_20}'
+    comment: "Neutral 20"
+    release: 2.16.0
+  PALETTE_NEUTRAL_30:
+    value: '{!PALETTE_NEUTRAL_30}'
+    comment: "Neutral 30"
+    release: 2.16.0
+  PALETTE_NEUTRAL_40:
+    value: '{!PALETTE_NEUTRAL_40}'
+    comment: "Neutral 40"
+    release: 2.16.0
+  PALETTE_NEUTRAL_50:
+    value: '{!PALETTE_NEUTRAL_50}'
+    comment: "Neutral 50"
+    release: 2.16.0
+  PALETTE_NEUTRAL_60:
+    value: '{!PALETTE_NEUTRAL_60}'
+    comment: "Neutral 60"
+    release: 2.16.0
+  PALETTE_NEUTRAL_70:
+    value: '{!PALETTE_NEUTRAL_70}'
+    comment: "Neutral 70"
+    release: 2.16.0
+  PALETTE_NEUTRAL_80:
+    value: '{!PALETTE_NEUTRAL_80}'
+    comment: "Neutral 80"
+    release: 2.16.0
+  PALETTE_NEUTRAL_90:
+    value: '{!PALETTE_NEUTRAL_90}'
+    comment: "Neutral 90"
+    release: 2.16.0
+  PALETTE_NEUTRAL_95:
+    value: '{!PALETTE_NEUTRAL_95}'
+    comment: "Neutral 95"
+    release: 2.16.0
+  PALETTE_NEUTRAL_100:
+    value: '{!PALETTE_NEUTRAL_100}'
+    comment: "Neutral 100"
+    release: 2.16.0

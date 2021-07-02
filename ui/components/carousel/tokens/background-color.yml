@@ -11,13 +11,13 @@ imports:
 - "../../../../design-tokens/aliases/color-palettes.yml"
 props:
   CAROUSEL_COLOR_BACKGROUND:
-    value: '{!PALETTE_GRAY_1}'
+    value: '{!PALETTE_NEUTRAL_100}'
     comment: Default background for carousel card
   CAROUSEL_INDICATOR_COLOR_BACKGROUND:
-    value: '{!PALETTE_GRAY_1}'
+    value: '{!PALETTE_NEUTRAL_100}'
     comment: Default background for carousel navigation indicators
   CAROUSEL_INDICATOR_COLOR_BACKGROUND_HOVER:
-    value: '{!PALETTE_GRAY_2}'
+    value: '{!PALETTE_NEUTRAL_95}'
     comment: Default hover background for carousel navigation indicators
   CAROUSEL_INDICATOR_COLOR_BACKGROUND_FOCUS:
     value: '{!PALETTE_BLUE_30}'

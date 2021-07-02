@@ -31,7 +31,7 @@
 .slds-tabs_scoped__nav,
 .slds-tabs--scoped__nav {
   @include tabs-nav;
-  background-color: $color-gray-2;
+  background-color: $palette-neutral-95;
   border: $border-width-thin solid $color-border-button-default;
   border-top-left-radius: $border-radius-medium;
   border-top-right-radius: $border-radius-medium;

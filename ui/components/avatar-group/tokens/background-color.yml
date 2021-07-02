@@ -10,8 +10,8 @@ imports:
 - "../../../../design-tokens/aliases/color-palettes.yml"
 props:
   AVATAR_GROUP_COLOR_BACKGROUND_LIGHTEST:
-    value: '{!PALETTE_GRAY_1}'
+    value: '{!PALETTE_NEUTRAL_100}'
     comment: White avatar group background color.
   AVATAR_GROUP_COLOR_BACKGROUND_INVERSE:
-    value: '{!PALETTE_GRAY_9}'
+    value: '{!PALETTE_NEUTRAL_50}'
     comment: Dark gray avatar group background color.

@@ -10,8 +10,8 @@ imports:
 - "../../../../design-tokens/aliases/color-palettes.yml"
 props:
   BADGE_COLOR_BACKGROUND_LIGHTEST:
-    value: '{!PALETTE_GRAY_1}'
+    value: '{!PALETTE_NEUTRAL_100}'
     comment: White badge background color.
   BADGE_COLOR_BACKGROUND_INVERSE:
-    value: '{!PALETTE_GRAY_9}'
+    value: '{!PALETTE_NEUTRAL_50}'
     comment: Dark gray badge background color.

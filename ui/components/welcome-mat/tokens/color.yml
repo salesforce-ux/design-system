@@ -28,7 +28,7 @@ props:
     comment: Background overflow color for the Welcome Mat Info section
 
   WELCOME_MAT_COLOR_BACKGROUND_PROGRESS_BAR:
-    value: '{!PALETTE_GRAY_1}'
+    value: '{!PALETTE_NEUTRAL_100}'
     comment: Progress Bar background is white
 
   WELCOME_MAT_COLOR_ACTION_SHADOW:
@@ -36,5 +36,5 @@ props:
     comment: Box Shadow declaration
 
   WELCOME_MAT_COLOR_ICON_COMPLETE:
-    value: '{!PALETTE_GRAY_6}'
+    value: '{!PALETTE_NEUTRAL_60}'
     comment: Completed icon color for the Welcome Mat Boxes

@@ -7,6 +7,7 @@ imports:
 - ./palettes/green.yml
 - ./palettes/hot-orange.yml
 - ./palettes/indigo.yml
+- ./palettes/neutral.yml
 - ./palettes/orange.yml
 - ./palettes/pink.yml
 - ./palettes/purple.yml

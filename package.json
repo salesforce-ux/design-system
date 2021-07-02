@@ -182,7 +182,7 @@
     "sass-loader": "8.0.2",
     "semver": "5.5.1",
     "simple-git": "2.21.0",
-    "storybook-addon-rtl": "0.2.2",
+    "storybook-addon-rtl": "0.3.0",
     "style-loader": "1.1.4",
     "styled-components": "4.2.0",
     "stylelint": "^13.13.1",

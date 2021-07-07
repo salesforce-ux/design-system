@@ -138,6 +138,7 @@
     "gulp-theo": "1.0.0-alpha.5",
     "gulp-util": "3.0.8",
     "gulp-zip": "4.0.0",
+    "handlebars": "4.7.7",
     "husky": "^6.0.0",
     "immutable": "3.8.2",
     "isomorphic-fetch": "2.2.1",

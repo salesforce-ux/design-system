@@ -40,7 +40,7 @@ export const Favorites = props => (
         assistiveText="View Favorites"
       />
     </div>
-    {props.showFavoritesPopup && <GlobalFavorites numberOfFavorites="2" />}
+    {props.showFavoritesPopup && <GlobalFavorites numberOfFavorites={2} />}
   </div>
 );
 

@@ -4119,12 +4119,13 @@ exports[`Global Actions Bar renders favorites item with dialog menu 1`] = `
         >
           <div
             aria-orientation={null}
-            id="listbox-unique-id"
+            className="slds-dropdown_length-with-icon-7 slds-dropdown_fluid"
+            id="example-unique-id-1"
             role="listbox"
           >
             <ul
               aria-label="My Favorites"
-              className="slds-listbox slds-listbox_vertical slds-dropdown_length-10"
+              className="slds-listbox slds-listbox_vertical"
               role="group"
             >
               <li
@@ -4132,7 +4133,11 @@ exports[`Global Actions Bar renders favorites item with dialog menu 1`] = `
                 role="presentation"
               >
                 <div
-                  className="slds-media slds-listbox__option slds-listbox__option_plain"
+                  aria-checked={null}
+                  aria-disabled={null}
+                  aria-selected={null}
+                  className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_center"
+                  id="option0"
                   role="presentation"
                 >
                   <h3
@@ -4148,13 +4153,16 @@ exports[`Global Actions Bar renders favorites item with dialog menu 1`] = `
                 role="presentation"
               >
                 <div
+                  aria-checked={null}
+                  aria-disabled={null}
+                  aria-selected={null}
                   className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
-                  id="listbox-option-id-1"
+                  id="option1"
                   role="option"
-                  tabIndex="0"
+                  tabIndex={0}
                 >
                   <span
-                    className="slds-media__figure"
+                    className="slds-media__figure slds-listbox__option-icon"
                   >
                     <span
                       className="slds-icon_container slds-icon-standard-account"
@@ -4176,7 +4184,7 @@ exports[`Global Actions Bar renders favorites item with dialog menu 1`] = `
                     <span
                       className="slds-listbox__option-text slds-listbox__option-text_entity"
                     >
-                      Acme
+                      Burlington Textiles Corp of America
                     </span>
                     <span
                       className="slds-listbox__option-meta slds-listbox__option-meta_entity"
@@ -4184,53 +4192,7 @@ exports[`Global Actions Bar renders favorites item with dialog menu 1`] = `
                       Account
                        •
                        
-                       San Francisco
-                    </span>
-                  </span>
-                </div>
-              </li>
-              <li
-                className="slds-listbox__item"
-                role="presentation"
-              >
-                <div
-                  className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
-                  id="listbox-option-id-2"
-                  role="option"
-                  tabIndex={null}
-                >
-                  <span
-                    className="slds-media__figure"
-                  >
-                    <span
-                      className="slds-icon_container slds-icon-standard-account"
-                      title={null}
-                    >
-                      <svg
-                        aria-hidden={true}
-                        className="slds-icon slds-icon_small"
-                      >
-                        <use
-                          xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#account"
-                        />
-                      </svg>
-                    </span>
-                  </span>
-                  <span
-                    className="slds-media__body"
-                  >
-                    <span
-                      className="slds-listbox__option-text slds-listbox__option-text_entity"
-                    >
-                      Edge SLA
-                    </span>
-                    <span
-                      className="slds-listbox__option-meta slds-listbox__option-meta_entity"
-                    >
-                      Account
-                       •
-                       
-                       San Francisco
+                      Burlington, NC
                     </span>
                   </span>
                 </div>

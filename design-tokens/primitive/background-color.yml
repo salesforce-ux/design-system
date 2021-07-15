@@ -15,21 +15,21 @@ imports:
 - ../aliases/color-palettes.yml
 props:
   COLOR_BACKGROUND:
-    value: '{!PALETTE_NEUTRAL_90}'
+    value: '{!PALETTE_GRAY_3}'
     comment: Default background color for the whole app.
     release: 1.0.0
     access: global
   COLOR_BACKGROUND_LIGHT:
-    value: '{!PALETTE_NEUTRAL_100}'
+    value: '{!PALETTE_GRAY_1}'
     comment: Light variant of COLOR_BACKGROUND.
     release: 2.8.0
   COLOR_BACKGROUND_DARK:
-    value: '{!PALETTE_NEUTRAL_80}'
+    value: '{!PALETTE_GRAY_4}'
     comment: Dark variant of COLOR_BACKGROUND.
     release: 2.8.0
 
   COLOR_BACKGROUND_ALT:
-    value: '{!PALETTE_NEUTRAL_100}'
+    value: '{!WHITE}'
     comment: Second default background color for the app.
     release: 1.0.0
     access: global
@@ -49,15 +49,15 @@ props:
     release: 2.8.0
 
   COLOR_BACKGROUND_ROW_HOVER:
-    value: '{!PALETTE_NEUTRAL_90}'
+    value: '{!PALETTE_GRAY_3}'
     comment: Used as the background color for the hover state on rows or items on list-like components.
     access: global
   COLOR_BACKGROUND_ROW_ACTIVE:
-    value: '{!PALETTE_NEUTRAL_80}'
+    value: '{!PALETTE_GRAY_4}'
     comment: Used as the background color for the active state on rows or items on list-like components.
     access: global
   COLOR_BACKGROUND_ROW_SELECTED:
-    value: '{!PALETTE_NEUTRAL_80}'
+    value: '{!PALETTE_GRAY_4}'
     comment: Used as the background color for selected rows or items on list-like components.
     access: global
   COLOR_BACKGROUND_ROW_NEW:
@@ -81,11 +81,11 @@ props:
     comment: Background color for text selected with a mouse.
 
   COLOR_BACKGROUND_STENCIL:
-    value: '{!PALETTE_NEUTRAL_90}'
+    value: '{!PALETTE_GRAY_3}'
     comment: Used as background for loading stencils on white background.
     access: global
   COLOR_BACKGROUND_STENCIL_ALT:
-    value: '{!PALETTE_NEUTRAL_80}'
+    value: '{!PALETTE_GRAY_4}'
     comment: Used as an alternate background for loading stencils on gray backgrounds.
     access: global
   COLOR_BACKGROUND_BACKDROP:
@@ -115,7 +115,7 @@ props:
     value: '{!PALETTE_RED_30}'
     comment: Active color for UI elements related to destructive actions.
   COLOR_BACKGROUND_INFO:
-    value: '{!PALETTE_NEUTRAL_50}'
+    value: '{!PALETTE_GRAY_9}'
     comment: 'Background color for UI elements related to providing neutral information (not error, success, or warning).'
   COLOR_BACKGROUND_ERROR:
     value: '{!PALETTE_RED_60}'
@@ -124,7 +124,7 @@ props:
     value: '{!PALETTE_RED_40}'
     comment: Dark color for UI elements related to errors. Accessible with white text.
   COLOR_BACKGROUND_OFFLINE:
-    value: '{!PALETTE_NEUTRAL_30}'
+    value: '{!PALETTE_GRAY_11}'
     comment: Color for UI elements related to the offline state.
   COLOR_BACKGROUND_SUCCESS:
     value: '{!PALETTE_GREEN_70}'

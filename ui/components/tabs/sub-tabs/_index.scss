@@ -78,14 +78,14 @@
 
   &.slds-has-success,
   &.slds-has-error {
-    color: $palette-neutral-100;
+    color: $color-gray-1;
 
     .slds-indicator_unread {
-      background-color: $palette-neutral-100;
+      background-color: $color-gray-1;
     }
 
     .slds-indicator_unsaved {
-      color: $palette-neutral-100;
+      color: $color-gray-1;
     }
   }
 

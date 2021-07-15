@@ -137,7 +137,7 @@
 @mixin warning-links {
 
   a {
-    color: $color-text-default;
+    color: $color-text-default; // gray-13
     text-decoration: underline;
 
     &:link,
@@ -151,16 +151,16 @@
     }
 
     &:focus {
-      box-shadow: 0 0 3px $palette-neutral-30;
-      border: $border-width-thin solid $palette-neutral-30;
+      box-shadow: 0 0 3px $color-gray-10;
+      border: $border-width-thin solid $color-gray-10;
     }
 
     &:active {
-      color: $palette-neutral-30;
+      color: $color-gray-10;
     }
 
     &[disabled] {
-      color: $palette-neutral-30;
+      color: $color-gray-10;
     }
   }
 }
@@ -172,21 +172,21 @@
 @mixin warning-buttons {
 
   button {
-    color: $palette-neutral-30;
+    color: $color-gray-10;
     text-decoration: underline;
 
     &:hover {
-      color: $palette-neutral-50;
+      color: $color-gray-9;
     }
 
     &:focus {
-      color: $palette-neutral-30;
-      box-shadow: 0 0 3px $palette-neutral-30;
-      border: $border-width-thin solid $palette-neutral-30;
+      color: $color-gray-10;
+      box-shadow: 0 0 3px $color-gray-10;
+      border: $border-width-thin solid $color-gray-10;
     }
 
     &:active {
-      color: $palette-neutral-50;
+      color: $color-gray-9;
     }
   }
 }

@@ -10,5 +10,5 @@ imports:
 - "../../../../design-tokens/aliases/color-palettes.yml"
 props:
   NOTIFICATION_COLOR_BACKGROUND_INVERSE:
-    value: '{!PALETTE_NEUTRAL_50}'
+    value: '{!PALETTE_GRAY_9}'
     comment: Dark notification component background color.

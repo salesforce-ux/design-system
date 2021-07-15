@@ -19,8 +19,8 @@
     left: 0;
     bottom: 0;
     right: 0;
-    border: $border-width-thin dotted $palette-neutral-30;
-    outline: $border-width-thin dotted $palette-neutral-100;
+    border: $border-width-thin dotted $color-gray-11;
+    outline: $border-width-thin dotted $color-gray-1;
   }
 
   /**
@@ -92,7 +92,7 @@
   * @restrict .slds-drop-zone_drag div
   */
 .slds-drop-zone_drag__slot {
-  border: $border-width-thin solid $palette-neutral-100;
+  border: $border-width-thin solid $color-gray-1;
   border-left-width: $border-width-thick;
   border-right-width: $border-width-thick;
   background: $color-background-success-dark;

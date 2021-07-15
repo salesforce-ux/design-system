@@ -16,8 +16,7 @@
   - Timepicker
 
 - Added SLDS scope customizer tool: `npm run slds:customizer`
-- Added new standard color palette for neutral colors (black/white/grays) 
-and updated multiple neutral colors to match new Salesforce color system
+- Added new standard color palette for neutral colors (black/white/grays)
 
 ## 2.15.8 - May 27, 2021
 

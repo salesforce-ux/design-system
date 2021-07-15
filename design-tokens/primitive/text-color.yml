@@ -14,19 +14,19 @@ imports:
 - ../aliases/color-palettes.yml
 props:
   COLOR_TEXT_DEFAULT:
-    value: '{!PALETTE_NEUTRAL_10}'
+    value: '{!PALETTE_GRAY_13}'
     comment: Body text color
     access: global
   COLOR_TEXT_BRAND_PRIMARY:
-    value: '{!PALETTE_NEUTRAL_100}'
+    value: '{!WHITE}'
     comment: Text color found on any primary brand color
 
   COLOR_TEXT_ACTION_LABEL:
-    value: '{!PALETTE_NEUTRAL_30}'
+    value: '{!PALETTE_GRAY_11}'
     comment: Action label text color
     access: global
   COLOR_TEXT_ACTION_LABEL_ACTIVE:
-    value: '{!PALETTE_NEUTRAL_10}'
+    value: '{!PALETTE_GRAY_13}'
     comment: Action label active text color
     access: global
   COLOR_TEXT_BRAND:
@@ -43,11 +43,11 @@ props:
     comment: Error text for inputs and error misc
     access: global
   COLOR_TEXT_INVERSE:
-    value: '{!PALETTE_NEUTRAL_100}'
+    value: '{!WHITE}'
     comment: Inverse text color for dark backgrounds
     access: global
   COLOR_TEXT_INVERSE_WEAK:
-    value: '{!PALETTE_NEUTRAL_60}'
+    value: '{!PALETTE_GRAY_7}'
     comment: Weak inverse text color for dark backgrounds
     access: global
   COLOR_TEXT_LINK:
@@ -75,7 +75,7 @@ props:
     access: global
 
   COLOR_TEXT_LINK_INVERSE:
-    value: '{!PALETTE_NEUTRAL_100}'
+    value: '{!WHITE}'
     comment: Link color on dark background
     access: global
   COLOR_TEXT_LINK_INVERSE_HOVER:
@@ -100,24 +100,24 @@ props:
     comment: Color for texts that are related to warnings on a light background.
 
   COLOR_TEXT_WEAK:
-    value: '{!PALETTE_NEUTRAL_30}'
+    value: '{!PALETTE_GRAY_11}'
     comment: Color for text that is purposefully de-emphasized to create visual hierarchy.
     access: global
 
   COLOR_TEXT_ICON_DEFAULT:
-    value: '{!PALETTE_NEUTRAL_50}'
+    value: '{!PALETTE_GRAY_9}'
     comment: Default icon color.
     access: global
   COLOR_TEXT_LABEL:
-    value: '{!PALETTE_NEUTRAL_30}'
+    value: '{!PALETTE_GRAY_11}'
     comment: Text color for field labels.
     access: global
   COLOR_TEXT_PLACEHOLDER:
-    value: '{!PALETTE_NEUTRAL_50}'
+    value: '{!PALETTE_GRAY_9}'
     comment: Input placeholder text.
     access: global
   COLOR_TEXT_PLACEHOLDER_INVERSE:
-    value: '{!PALETTE_NEUTRAL_80}'
+    value: '{!PALETTE_GRAY_4}'
     comment: Input placeholder text on dark backgrounds.
     access: global
   COLOR_TEXT_REQUIRED:

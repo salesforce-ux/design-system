@@ -1,6 +1,10 @@
 <!-- Release notes authoring guidelines: http://keepachangelog.com/ -->
 <!-- On release, add general notes here. In time the legacy release notes will be add to this -->
 
+## 2.15.9 - Upcoming
+
+- Added SLDS scope customizer tool: `npm run slds:customizer`
+
 ## 2.15.8 - May 27, 2021
 
 - Updated selected text highlight color token `COLOR_BACKGROUND_SELECTION` for better color contrast

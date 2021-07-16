@@ -1,7 +1,7 @@
 <!-- Release notes authoring guidelines: http://keepachangelog.com/ -->
 <!-- On release, add general notes here. In time the legacy release notes will be add to this -->
 
-## 2.15.9 - Upcoming
+## 2.15.9 - July 16, 2021
 
 - Added SLDS scope customizer tool: `npm run slds:customizer`
 

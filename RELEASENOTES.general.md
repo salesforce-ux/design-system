@@ -17,6 +17,7 @@
 
 - Added SLDS scope customizer tool: `npm run slds:customizer`
 - Added new standard color palette for neutral colors (black/white/grays)
+- Updated @salesforce-ux/icons to 10.1.1
 
 ## 2.15.8 - May 27, 2021
 

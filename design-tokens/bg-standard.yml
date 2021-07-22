@@ -891,3 +891,5 @@ props:
     value: '#F88962'
   PERSON_LANGUAGE:
     value: '#0EB58A'
+  BUDGET:
+    value: '#107CAD'

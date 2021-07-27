@@ -10,11 +10,13 @@ import { Textarea } from '../../textarea/base/example';
 import { Radio } from '../../radio-group/base/example';
 import { Checkbox } from '../../checkbox/base/example';
 
+const horizontalContext = 'Horizontal';
+
 export default [
   {
     id: 'form-element-horizontal-default',
-    label: 'Form Element - Horizontal (Default)',
-    context: 'Horizontal',
+    label: `${horizontalContext} - Default`,
+    context: `${horizontalContext}`,
     element: (
       <RecordDetail
         direction="horizontal"
@@ -29,8 +31,8 @@ export default [
 export let states = [
   {
     id: 'edit-horizontal',
-    label: 'Horizontal form layout - Edit Mode',
-    context: 'Horizontal',
+    label: `${horizontalContext} - Edit Mode`,
+    context: `${horizontalContext}`,
     element: (
       <RecordDetail
         direction="horizontal"
@@ -40,8 +42,8 @@ export let states = [
   },
   {
     id: 'form-element-horizontal-edit-error',
-    label: 'Form Element - Horizontal form layout - (Edit Mode with Error)',
-    context: 'Horizontal',
+    label: `${horizontalContext} - (Edit Mode with Error)`,
+    context: `${horizontalContext}`,
     element: (
       <RecordDetail direction="horizontal" snapshot={Snapshot.ObjectFieldTypesHorizontalWithError} />
     )
@@ -51,8 +53,8 @@ export let states = [
 export let examples = [
   {
     id: 'horizontal-single-column',
-    label: 'Horizontal form layout - 1 column - Read Only Mode',
-    context: 'Horizontal',
+    label: `${horizontalContext} - 1 column - Read Only Mode`,
+    context: `${horizontalContext}`,
     element: (
       <RecordDetail
         direction="horizontal"
@@ -63,8 +65,8 @@ export let examples = [
   },
   {
     id: 'deprecated-view-horizontal',
-    label: 'Deprecated - Horizontal form layout - View Mode',
-    context: 'Horizontal',
+    label: `${horizontalContext} - View Mode (Deprecated)`,
+    context: 'Deprecated',
     element: (
       <RecordDetail
         direction="horizontal"
@@ -77,8 +79,8 @@ export let examples = [
   },
   {
     id: 'deprecated-edit-horizontal',
-    label: 'Deprecated - Horizontal form layout - Edit Mode',
-    context: 'Horizontal',
+    label: `${horizontalContext} - Edit Mode (Deprecated)`,
+    context: 'Deprecated',
     element: (
       <RecordDetail
         direction="horizontal"
@@ -89,8 +91,8 @@ export let examples = [
   },
   {
     id: 'simple-horizontal',
-    label: 'Simple - Horizontal form layout',
-    context: 'Horizontal',
+    label: `${horizontalContext} - Simple form layout`,
+    context: `${horizontalContext}`,
     element: (
       <div className="slds-form">
         <FormElement
@@ -122,6 +124,30 @@ export let examples = [
           <Radio label="Education leads" name="options" />
         </Fieldset>
       </div>
+    )
+  },
+  {
+    id: 'horizontal-single-column',
+    label: `${horizontalContext} - 1 column - Read Only Mode`,
+    element: (
+      <RecordDetail
+        direction="horizontal"
+        snapshot={Snapshot.ObjectFieldTypesSingleColumn}
+        isViewMode
+      />
+    )
+  },
+
+  {
+    id: 'horizontal',
+    label: `${horizontalContext} - View Mode`,
+    element: (
+      <RecordDetail
+        direction="horizontal"
+        snapshot={Snapshot.ObjectFieldTypesHorizontal}
+        isViewMode
+        hasInlineEdit
+      />
     )
   }
 ];

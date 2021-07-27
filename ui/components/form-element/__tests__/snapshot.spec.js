@@ -244,9 +244,13 @@ describe('Horizontal Form Element', () => {
 
 describe('Compound Form Element', () => {
   it('renders simple compound form element', () =>
-    matchesMarkup(CompoundExamples.default));
+    matchesMarkup(
+      getDisplayElementById(CompoundExamples.default)
+    ));
   it('renders address compound form element', () =>
-    matchesMarkup(AddressExamples.default));
+    matchesMarkup(
+      getDisplayElementById(AddressExamples.default)
+    ));
   it('render compound form element wrapper', () =>
     matchesMarkup(<CompoundFormElement>content</CompoundFormElement>));
   it('render compound form element wrapper with legend', () =>

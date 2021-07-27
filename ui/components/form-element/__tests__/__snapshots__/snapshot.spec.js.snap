@@ -144,7 +144,7 @@ exports[`Compound Form Element render deprecated compound form element 1`] = `
         >
           <label
             className="slds-form-element__label"
-            htmlFor="location-latitude-01"
+            htmlFor="location-latitude-02"
           >
             Latitude
           </label>
@@ -154,7 +154,7 @@ exports[`Compound Form Element render deprecated compound form element 1`] = `
             <input
               className="slds-input"
               defaultValue="54.293"
-              id="location-latitude-01"
+              id="location-latitude-02"
               type="text"
             />
           </div>
@@ -188,7 +188,7 @@ exports[`Compound Form Element renders address compound form element 1`] = `
         >
           <label
             className="slds-form-element__label"
-            htmlFor="form-element-id-04"
+            htmlFor="form-element-id-01"
           >
             Billing Street
           </label>
@@ -198,7 +198,7 @@ exports[`Compound Form Element renders address compound form element 1`] = `
             <textarea
               className="slds-textarea"
               defaultValue="525 S. Lexington Ave"
-              id="form-element-id-04"
+              id="form-element-id-01"
               placeholder="Placeholder text…"
               required={true}
             />
@@ -217,7 +217,7 @@ exports[`Compound Form Element renders address compound form element 1`] = `
         >
           <label
             className="slds-form-element__label"
-            htmlFor="form-element-id-05"
+            htmlFor="form-element-id-02"
           >
             Billing City
           </label>
@@ -227,7 +227,7 @@ exports[`Compound Form Element renders address compound form element 1`] = `
             <input
               className="slds-input"
               defaultValue="Burlington"
-              id="form-element-id-05"
+              id="form-element-id-02"
               required={true}
               type="text"
             />
@@ -242,7 +242,7 @@ exports[`Compound Form Element renders address compound form element 1`] = `
         >
           <label
             className="slds-form-element__label"
-            htmlFor="form-element-id-06"
+            htmlFor="form-element-id-03"
           >
             Billing State/Province
           </label>
@@ -252,7 +252,7 @@ exports[`Compound Form Element renders address compound form element 1`] = `
             <input
               className="slds-input"
               defaultValue="NC"
-              id="form-element-id-06"
+              id="form-element-id-03"
               required={true}
               type="text"
             />
@@ -271,7 +271,7 @@ exports[`Compound Form Element renders address compound form element 1`] = `
         >
           <label
             className="slds-form-element__label"
-            htmlFor="form-element-id-07"
+            htmlFor="form-element-id-04"
           >
             Billing Zip/Postal Code
           </label>
@@ -281,7 +281,7 @@ exports[`Compound Form Element renders address compound form element 1`] = `
             <input
               className="slds-input"
               defaultValue="27215"
-              id="form-element-id-07"
+              id="form-element-id-04"
               required={true}
               type="text"
             />
@@ -296,7 +296,7 @@ exports[`Compound Form Element renders address compound form element 1`] = `
         >
           <label
             className="slds-form-element__label"
-            htmlFor="form-element-id-08"
+            htmlFor="form-element-id-05"
           >
             Billing Country
           </label>
@@ -306,7 +306,7 @@ exports[`Compound Form Element renders address compound form element 1`] = `
             <input
               className="slds-input"
               defaultValue="USA"
-              id="form-element-id-08"
+              id="form-element-id-05"
               required={true}
               type="text"
             />

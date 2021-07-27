@@ -10,19 +10,29 @@ import { Textarea } from '../../textarea/base/example';
 import { Radio } from '../../radio-group/base/example';
 import { Checkbox } from '../../checkbox/base/example';
 
-export default (
-  <RecordDetail
-    direction="stacked"
-    snapshot={Snapshot.ObjectFieldTypes}
-    isViewMode
-    hasInlineEdit
-  />
-);
+const stackedContext = 'Stacked';
+
+export default [
+  {
+    id: 'stacked-default',
+    label: `${stackedContext} - Default`,
+    context: `${stackedContext}`,
+    element: (
+      <RecordDetail
+        direction="stacked"
+        snapshot={Snapshot.ObjectFieldTypes}
+        isViewMode
+        hasInlineEdit
+      />
+    )
+  }
+];
 
 export let states = [
   {
     id: 'edit-stacked',
-    label: 'Stacked form layout - Edit Mode',
+    label: `${stackedContext} - Edit Mode`,
+    context: `${stackedContext}`,
     element: (
       <RecordDetail direction="stacked" snapshot={Snapshot.ObjectFieldTypes} />
     )
@@ -32,7 +42,8 @@ export let states = [
 export let examples = [
   {
     id: 'stacked-single-column',
-    label: 'Stacked form layout - 1 column - Read Only Mode',
+    label: `${stackedContext} - 1 column Read Only`,
+    context: `${stackedContext}`,
     element: (
       <RecordDetail
         direction="stacked"
@@ -43,7 +54,8 @@ export let examples = [
   },
   {
     id: 'deprecated-view-stacked',
-    label: 'Deprecated - Stacked form layout - View Mode',
+    label: `${stackedContext} - View Mode (Deprecated)`,
+    context: 'Deprecated',
     element: (
       <RecordDetail
         direction="stacked"
@@ -57,6 +69,7 @@ export let examples = [
   {
     id: 'deprecated-edit-stacked',
     label: 'Deprecated - Stacked form layout - Edit Mode',
+    context: 'Deprecated',
     element: (
       <RecordDetail
         direction="stacked"
@@ -67,7 +80,8 @@ export let examples = [
   },
   {
     id: 'simple-stacked',
-    label: 'Simple - Stacked form layout',
+    label: `${stackedContext} - Simple form layout`,
+    context: `${stackedContext}`,
     element: (
       <div className="slds-form">
         <FormElement
@@ -96,6 +110,31 @@ export let examples = [
           <Radio label="Education leads" name="options" />
         </Fieldset>
       </div>
+    )
+  },
+  {
+    id: 'stacked',
+    label: `${stackedContext} - View Mode`,
+    context: `${stackedContext}`,
+    element: (
+      <RecordDetail
+        direction="stacked"
+        snapshot={Snapshot.ObjectFieldTypes}
+        isViewMode
+        hasInlineEdit
+      />
+    )
+  },
+  {
+    id: 'stacked-single-column',
+    label: `${stackedContext} - 1 column Read Only`,
+    context: `${stackedContext}`,
+    element: (
+      <RecordDetail
+        direction="stacked"
+        snapshot={Snapshot.ObjectFieldTypesSingleColumn}
+        isViewMode
+      />
     )
   }
 ];

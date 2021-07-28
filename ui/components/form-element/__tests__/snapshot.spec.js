@@ -15,7 +15,7 @@ import {
   Fieldset,
   FieldsetWrapper,
   Legend,
-  FormElement
+  FormElement,
 } from '..';
 import { CompoundFormElement, CompoundFormRow } from '../compound';
 import Input from '../../input';
@@ -238,19 +238,19 @@ describe('Horizontal Form Element', () => {
     ));
 
   it('renders a horizontal form element with an error', () =>
-    matchesMarkup(getDisplayElementById(HorizontalExamples.states, 'form-element-horizontal-edit-error'))
-  )
+    matchesMarkup(
+      getDisplayElementById(
+        HorizontalExamples.states,
+        'form-element-horizontal-edit-error'
+      )
+    ));
 });
 
 describe('Compound Form Element', () => {
   it('renders simple compound form element', () =>
-    matchesMarkup(
-      getDisplayElementById(CompoundExamples.default)
-    ));
+    matchesMarkup(getDisplayElementById(CompoundExamples.default)));
   it('renders address compound form element', () =>
-    matchesMarkup(
-      getDisplayElementById(AddressExamples.default)
-    ));
+    matchesMarkup(getDisplayElementById(AddressExamples.default)));
   it('render compound form element wrapper', () =>
     matchesMarkup(<CompoundFormElement>content</CompoundFormElement>));
   it('render compound form element wrapper with legend', () =>

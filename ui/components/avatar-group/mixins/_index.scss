@@ -2,8 +2,7 @@
 ///
 /// @require $size
 /// @param $size {Integer} The desired size of font, in rems, to display in the avatar.
-
 @mixin avatar-grouped-user-initials($size) { // $size:
-  $scale-factor: strip-unit($size / $font-size-heading-small);
+  $scale-factor: strip-unit(math.div($size, $font-size-heading-small));
   transform: scale( $scale-factor );
 }

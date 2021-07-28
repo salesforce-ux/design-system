@@ -213,8 +213,8 @@
 
 .slds-welcome-mat .slds-icon-action-check {
   position: absolute;
-  bottom: -($welcome-mat-complete-icon-size / 2);
-  right: -($welcome-mat-complete-icon-size / 2);
+  bottom: -($welcome-mat-complete-icon-size * 0.5);
+  right: -($welcome-mat-complete-icon-size * 0.5);
   height: $welcome-mat-complete-icon-size;
   width: $welcome-mat-complete-icon-size;
   display: flex;

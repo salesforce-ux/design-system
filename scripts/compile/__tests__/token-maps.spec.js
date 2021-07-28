@@ -20,20 +20,20 @@ const nothingToDo = () => true;
 //
 
 describe('addTimeDateStamp', () => {
-  it('should add @-keys', done => {
+  it('should add @-keys', (done) => {
     const fixture = {
       foo: 'bar',
-      answer: 42
+      answer: 42,
     };
     const expected = [
       '@generated-at',
       '@generated-by',
       '@slds-version',
       'answer',
-      'foo'
+      'foo',
     ];
 
-    TokenMaps.addTimeDateStamp(fixture).fork(nothingToDo, result => {
+    TokenMaps.addTimeDateStamp(fixture).fork(nothingToDo, (result) => {
       const resultKeys = Object.keys(result).sort();
 
       expect(resultKeys).toEqual(expect.arrayContaining(expected));
@@ -48,18 +48,18 @@ describe('combineComponentData', () => {
   it('should combine two pieces of file data', () => {
     let result = {
       otherComponent: {
-        foo: 'bar'
-      }
+        foo: 'bar',
+      },
     };
     const newItem1 = {
       componentName: 'aComponent',
       path: '/some/path',
-      data: 'data1a\ndata1b\n'
+      data: 'data1a\ndata1b\n',
     };
     const newItem2 = {
       componentName: 'aComponent',
       path: '/some/path',
-      data: 'data2\n'
+      data: 'data2\n',
     };
 
     TokenMaps.combineComponentData(result, newItem1);
@@ -70,7 +70,7 @@ describe('combineComponentData', () => {
     expect(resultKeys).toEqual(
       expect.arrayContaining(['aComponent', 'otherComponent'])
     );
-    expect(result['aComponent'].data).toBe('data1a\ndata1b\ndata2');
+    expect(result.aComponent.data).toBe('data1a\ndata1b\ndata2');
   });
 });
 
@@ -204,23 +204,23 @@ describe('isSassToken', () => {
 // Skipping test: loadTokens
 
 describe('mapSelectorsToProps', () => {
-  it('should parse CSS and return a map of selectors to arrays of key-values', done => {
+  it('should parse CSS and return a map of selectors to arrays of key-values', (done) => {
     TokenMaps.mapSelectorsToProps(cssFixture).fork(
       nothingToDo,
-      cssSelectorsWithDeclarations => {
+      (cssSelectorsWithDeclarations) => {
         const c = cssSelectorsWithDeclarations;
 
         const foo = c['.foo'];
         expect(foo).toHaveLength(3);
-        expect(foo.find(item => item.property === 'padding-left').value).toBe(
+        expect(foo.find((item) => item.property === 'padding-left').value).toBe(
           '10px'
         );
 
         const bar = c['.bar'];
         expect(bar).toHaveLength(2);
-        expect(bar.find(item => item.property === 'margin-bottom').value).toBe(
-          '40px'
-        );
+        expect(
+          bar.find((item) => item.property === 'margin-bottom').value
+        ).toBe('40px');
 
         done();
       }
@@ -231,7 +231,7 @@ describe('mapSelectorsToProps', () => {
 // Skipping test: parseComponentsScss
 
 describe('parseScssForTokens', () => {
-  it('should parse SCSS Sass', done => {
+  it('should parse SCSS Sass', (done) => {
     const fixture = complicatedSassFixture;
     const expectedTokens = [
       'colorBackgroundPathWon',
@@ -240,7 +240,7 @@ describe('parseScssForTokens', () => {
       'colorTextInverse',
       'heightSalesPath',
       'lineHeightSalespath',
-      'varSpacingVerticalSmall'
+      'varSpacingVerticalSmall',
     ];
     const expectedTokenCssProperties = ['background-color', 'background-image'];
     const expectedCssSelector =
@@ -253,17 +253,17 @@ describe('parseScssForTokens', () => {
       colorTextInverse: { value: 'value4' },
       heightSalesPath: { value: 'value5' },
       lineHeightSalespath: { value: 'value6' },
-      varSpacingVerticalSmall: { value: 'value7' }
+      varSpacingVerticalSmall: { value: 'value7' },
     });
-    TokenMaps.parseScssForTokens(fixture).then(result => {
+    TokenMaps.parseScssForTokens(fixture).then((result) => {
       const resultKeys = Object.keys(result).sort();
 
       expect(resultKeys).toEqual(expect.arrayContaining(expectedTokens));
-      expect(result['colorBackgroundPathWon'].cssProperties).toEqual(
+      expect(result.colorBackgroundPathWon.cssProperties).toEqual(
         expect.arrayContaining(expectedTokenCssProperties)
       );
-      expect(result['colorTextInverse'].cssSelectors).toHaveLength(1);
-      expect(result['colorTextInverse'].cssSelectors[0]).toEqual(
+      expect(result.colorTextInverse.cssSelectors).toHaveLength(1);
+      expect(result.colorTextInverse.cssSelectors[0]).toEqual(
         expectedCssSelector
       );
 
@@ -278,7 +278,7 @@ describe('parseScssTokenPreserved', () => {
     './__fixtures__/simple-sass-fixture.scss'
   );
 
-  it('should preserve only Aura token names', done => {
+  it('should preserve only Aura token names', (done) => {
     const originalGetTokenNames = TokenMaps.getTokenNames;
     TokenMaps.getTokenNames = jest
       .fn()
@@ -286,7 +286,7 @@ describe('parseScssTokenPreserved', () => {
 
     TokenMaps.parseScssTokenPreserved(scssFixturePath).fork(
       nothingToDo,
-      result => {
+      (result) => {
         expect(result).toEqual(
           expect.stringContaining('font-size: $thisIsAToken;')
         );
@@ -305,37 +305,37 @@ describe('parseScssTokenPreserved', () => {
 });
 
 describe('removeDataInScss', () => {
-  it('should remove the data property nested in data structures', done => {
+  it('should remove the data property nested in data structures', (done) => {
     const fixture = {
       aToken: {
         foo: 'bar',
         data: 'still here',
-        number: 1
+        number: 1,
       },
       anotherToken: {
         foo: 'bar2',
         data: 'still here2',
-        number: 2
+        number: 2,
       },
       noDataToken: {
         foo: 'bar3',
-        number: 3
-      }
+        number: 3,
+      },
     };
     const expectedKeys = ['anotherToken', 'aToken', 'noDataToken'];
 
     const dataValues = Object.keys(fixture)
-      .map(k => fixture[k].data)
-      .filter(x => x)
+      .map((k) => fixture[k].data)
+      .filter((x) => x)
       .sort();
     const expectedDataValues = ['still here', 'still here2'];
 
-    TokenMaps.removeDataInScss(fixture).fork(nothingToDo, result => {
+    TokenMaps.removeDataInScss(fixture).fork(nothingToDo, (result) => {
       const resultKeys = Object.keys(result).sort();
 
       expect(resultKeys).toEqual(expect.arrayContaining(expectedKeys));
       expect(dataValues).toEqual(expect.arrayContaining(expectedDataValues));
-      expect(result['noDataToken'].data).toBeUndefined();
+      expect(result.noDataToken.data).toBeUndefined();
 
       done();
     });
@@ -359,7 +359,7 @@ describe('sanitizeRawToken', () => {
     cssPropertiesIsNotDefined: null,
     value: 'fakeValue',
     extraValueNotConverted: 12345,
-    deprecated: true
+    deprecated: true,
   };
 
   it('should transform the token object', () => {
@@ -454,7 +454,7 @@ describe('sanitizeRawToken', () => {
         "originalValue": "1.375",
         "name": "VAR_LINE_HEIGHT_TEXT"
       }
-    }`)['VAR_LINE_HEIGHT_TEXT'];
+    }`).VAR_LINE_HEIGHT_TEXT;
     const result = TokenMaps.sanitizeRawToken(fixture);
 
     expect(result.category).toBe('line-height');
@@ -503,7 +503,7 @@ describe('uniqConcat', () => {
       { a: 10 }, // This should also go in because objects always end up being different
       123,
       1234,
-      12345 // Only the latter two should be added
+      12345, // Only the latter two should be added
     ];
     const expected = [
       'a',
@@ -515,11 +515,13 @@ describe('uniqConcat', () => {
       { a: 10 },
       { a: 10 },
       1234,
-      12345
+      12345,
     ];
 
     let array;
-    itemsToConcat.forEach(item => (array = TokenMaps.uniqConcat(array, item)));
+    itemsToConcat.forEach(
+      (item) => (array = TokenMaps.uniqConcat(array, item))
+    );
 
     expect(array).toEqual(expect.arrayContaining(expected));
   });
@@ -618,23 +620,16 @@ describe('valueContainsSassTokens', () => {
 });
 
 describe('walkScss', () => {
-  it('should visit declarations in SCSS Sass', done => {
+  it('should visit declarations in SCSS Sass', (done) => {
     const fixture = complicatedSassFixture;
-    const precssOptions = {
-      unresolved: 'ignore'
-    };
 
     const tests = {};
-    TokenMaps.walkScss(
-      fixture,
-      precssOptions,
-      (selector, rule, declaration, root) => {
-        const { prop, value } = declaration;
-        const stringifiedPropValue = `${prop}=${value}`;
-        tests[selector] = tests[selector] || [];
-        tests[selector].push(stringifiedPropValue);
-      }
-    ).then(ignoredResult => {
+    TokenMaps.walkScss(fixture, (selector, rule, declaration, root) => {
+      const { prop, value } = declaration;
+      const stringifiedPropValue = `${prop}=${value}`;
+      tests[selector] = tests[selector] || [];
+      tests[selector].push(stringifiedPropValue);
+    }).then((ignoredResult) => {
       const selectors = Object.keys(tests).sort();
       expect(selectors.length).toBe(5);
 

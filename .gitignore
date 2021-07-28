@@ -22,6 +22,7 @@
 !/.circleci
 !/.npmrc
 !/.nvmrc
+!/.snyk
 
 # Add a .gitkeep file in an empty
 # directory to check it in the repository

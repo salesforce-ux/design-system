@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 import { FormElement, Fieldset } from '../../form-element/';
 import Input from '../../input/';
 
-export const CompoundForm = props => {
+export const CompoundForm = (props) => {
   const { hasTooltip, isRequired } = props;
 
   return (
@@ -93,5 +93,5 @@ export const CompoundForm = props => {
 
 CompoundForm.propTypes = {
   hasTooltip: PropTypes.bool,
-  isRequired: PropTypes.bool
+  isRequired: PropTypes.bool,
 };

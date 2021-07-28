@@ -27,7 +27,7 @@
       left: 50%;
       width: $size-medium;
       margin-top: -2.25rem; // This is rather hacky since it's half the height of the box with two lines of content. (Also, ($height-context-bar * -1) is the same height.)
-      margin-left: (($size-medium / 2) * -1);
+      margin-left: (($size-medium * 0.5) * -1);
       background-color: $color-background-alt;
       text-align: center;
       z-index: $z-index-default;

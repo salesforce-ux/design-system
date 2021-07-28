@@ -11,7 +11,7 @@ const examples = [
   HorizontalExamples,
   AddressExamples,
   CompoundExamples,
-  StackedExamples
+  StackedExamples,
 ];
 
 const patternName = 'Form Element';

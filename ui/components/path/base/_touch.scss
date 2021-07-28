@@ -36,7 +36,7 @@
   }
 
   &:after {
-    height: ($height-tappable / 2);
+    height: ($height-tappable * 0.5);
   }
 
   &:first-child {

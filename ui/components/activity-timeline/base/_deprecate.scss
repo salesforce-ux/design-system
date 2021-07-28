@@ -21,7 +21,7 @@
     height: 100%;
     width: $border-width-thick;
     position: absolute;
-    left: ($square-icon-small-boundary / 2);
+    left: ($square-icon-small-boundary * 0.5);
     top: $border-width-thick;
     bottom: 0;
     margin-left: $border-width-thin;

@@ -164,7 +164,7 @@
     @include square($square-icon-medium-content-alt);
     position: absolute;
     top: 50%;
-    margin-top: (($square-icon-medium-content-alt / 2) * -1);
+    margin-top: (($square-icon-medium-content-alt * 0.5) * -1);
     line-height: 1;
     border: 0; // Re-aligns icons to center
     z-index: 2;
@@ -286,7 +286,7 @@
 .slds-input__icon-group {
   position: absolute;
   height: $square-icon-medium-content;
-  margin-top: (($square-icon-medium-content / 2) * -1);
+  margin-top: (($square-icon-medium-content * 0.5) * -1);
 }
 
 /**

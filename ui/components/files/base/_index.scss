@@ -343,7 +343,7 @@
     top: 50%;
     left: 50%;
     transform: translate3d(-50%, -50%, 0);
-    margin-top: (($square-icon-large-content / 2) * -1); // Half the size of the icon
+    margin-top: (($square-icon-large-content * 0.5) * -1); // Half the size of the icon
   }
 
   /**

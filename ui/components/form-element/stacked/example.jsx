@@ -24,8 +24,8 @@ export default [
         isViewMode
         hasInlineEdit
       />
-    )
-  }
+    ),
+  },
 ];
 
 export let states = [
@@ -35,8 +35,8 @@ export let states = [
     context: `${stackedContext}`,
     element: (
       <RecordDetail direction="stacked" snapshot={Snapshot.ObjectFieldTypes} />
-    )
-  }
+    ),
+  },
 ];
 
 export let examples = [
@@ -50,7 +50,7 @@ export let examples = [
         snapshot={Snapshot.ObjectFieldTypesSingleColumn}
         isViewMode
       />
-    )
+    ),
   },
   {
     id: 'deprecated-view-stacked',
@@ -64,7 +64,7 @@ export let examples = [
         hasInlineEdit
         isDeprecated
       />
-    )
+    ),
   },
   {
     id: 'deprecated-edit-stacked',
@@ -76,7 +76,7 @@ export let examples = [
         snapshot={Snapshot.DeprecatedObjectFieldTypes}
         isDeprecated
       />
-    )
+    ),
   },
   {
     id: 'simple-stacked',
@@ -110,7 +110,7 @@ export let examples = [
           <Radio label="Education leads" name="options" />
         </Fieldset>
       </div>
-    )
+    ),
   },
   {
     id: 'stacked',
@@ -123,7 +123,7 @@ export let examples = [
         isViewMode
         hasInlineEdit
       />
-    )
+    ),
   },
   {
     id: 'stacked-single-column',
@@ -135,6 +135,6 @@ export let examples = [
         snapshot={Snapshot.ObjectFieldTypesSingleColumn}
         isViewMode
       />
-    )
-  }
+    ),
+  },
 ];

@@ -18,11 +18,11 @@ export default [
     label: `${storyContext} - Default`,
     context: `${storyContext}`,
     element: (
-      <FormElement labelContent={inputLabel} inputId='input-unique-id-01'>
-        <Input id='input-unique-id-01' />
+      <FormElement labelContent={inputLabel} inputId="input-unique-id-01">
+        <Input id="input-unique-id-01" />
       </FormElement>
-    )
-  }
+    ),
+  },
 ];
 
 export let states = [
@@ -33,12 +33,12 @@ export let states = [
     element: (
       <FormElement
         labelContent={inputLabel}
-        inputId='input-unique-id-02'
+        inputId="input-unique-id-02"
         isRequired
       >
-        <Input id='input-unique-id-02' required />
+        <Input id="input-unique-id-02" required />
       </FormElement>
-    )
+    ),
   },
   {
     id: 'error',
@@ -47,15 +47,15 @@ export let states = [
     element: (
       <FormElement
         labelContent={inputLabel}
-        inputId='input-unique-id-03'
+        inputId="input-unique-id-03"
         errorId={errorId}
         isRequired
         hasError
         inlineMessage="This field is required"
       >
-        <Input id='input-unique-id-03' required aria-describedby={errorId} />
+        <Input id="input-unique-id-03" required aria-describedby={errorId} />
       </FormElement>
-    )
+    ),
   },
   {
     id: 'checkbox-required',
@@ -65,7 +65,7 @@ export let states = [
       <FormElement>
         <Checkbox label="Checkbox Label" isRequired />
       </FormElement>
-    )
+    ),
   },
   {
     id: 'checkbox-required-help-text',
@@ -75,7 +75,7 @@ export let states = [
       <FormElement>
         <Checkbox label="Checkbox Label" isRequired hasTooltip />
       </FormElement>
-    )
+    ),
   },
   {
     id: 'checkbox-group-required',
@@ -86,7 +86,7 @@ export let states = [
         <Checkbox label="Checkbox Label" />
         <Checkbox label="Checkbox Label" />
       </Fieldset>
-    )
+    ),
   },
   {
     id: 'checkbox-group-required-help-text',
@@ -102,7 +102,7 @@ export let states = [
         <Checkbox label="Checkbox Label" />
         <Checkbox label="Checkbox Label" />
       </Fieldset>
-    )
+    ),
   },
   {
     id: 'radio-group-required',
@@ -113,7 +113,7 @@ export let states = [
         <Radio checked label="Radio Label One" />
         <Radio label="Radio Label Two" />
       </Fieldset>
-    )
+    ),
   },
   {
     id: 'radio-group-required-help-text',
@@ -129,7 +129,7 @@ export let states = [
         <Radio checked label="Radio Label One" />
         <Radio label="Radio Label Two" />
       </Fieldset>
-    )
+    ),
   },
   {
     id: 'required-tooltip-help',
@@ -140,14 +140,14 @@ export let states = [
     element: (
       <FormElement
         labelContent={inputLabel}
-        inputId='input-unique-id-04'
+        inputId="input-unique-id-04"
         hasTooltip
         showTooltip
         isRequired
       >
-        <Input id='input-unique-id-04' required />
+        <Input id="input-unique-id-04" required />
       </FormElement>
-    )
+    ),
   },
 ];
 
@@ -157,20 +157,20 @@ export let examples = [
     label: `${storyContext} - Input`,
     context: `${storyContext}`,
     element: (
-      <FormElement labelContent={inputLabel} inputId='input-unique-id-05'>
-        <Input id='input-unique-id-05' />
+      <FormElement labelContent={inputLabel} inputId="input-unique-id-05">
+        <Input id="input-unique-id-05" />
       </FormElement>
-    )
+    ),
   },
   {
     id: 'textarea',
     label: `${storyContext} - Textarea`,
     context: `${storyContext}`,
     element: (
-      <FormElement labelContent={inputLabel} inputId='input-unique-id-06'>
-        <Textarea id='input-unique-id-06' />
+      <FormElement labelContent={inputLabel} inputId="input-unique-id-06">
+        <Textarea id="input-unique-id-06" />
       </FormElement>
-    )
+    ),
   },
   {
     id: 'checkbox',
@@ -180,7 +180,7 @@ export let examples = [
       <FormElement>
         <Checkbox label="Checkbox Label" />
       </FormElement>
-    )
+    ),
   },
   {
     id: 'checkbox-group',
@@ -191,7 +191,7 @@ export let examples = [
         <Checkbox label="Checkbox Label" />
         <Checkbox label="Checkbox Label" />
       </Fieldset>
-    )
+    ),
   },
   {
     id: 'radio-group',
@@ -202,7 +202,7 @@ export let examples = [
         <Radio checked label="Radio Label One" />
         <Radio label="Radio Label Two" />
       </Fieldset>
-    )
+    ),
   },
   {
     id: 'inline-help',
@@ -211,12 +211,12 @@ export let examples = [
     element: (
       <FormElement
         labelContent={inputLabel}
-        inputId='input-unique-id-07'
+        inputId="input-unique-id-07"
         inlineMessage="ex: (415)111-2222"
       >
-        <Input id='input-unique-id-07' />
+        <Input id="input-unique-id-07" />
       </FormElement>
-    )
+    ),
   },
   {
     id: 'tooltip-help',
@@ -227,12 +227,12 @@ export let examples = [
     element: (
       <FormElement
         labelContent={inputLabel}
-        inputId='input-unique-id-08'
+        inputId="input-unique-id-08"
         hasTooltip
         showTooltip
       >
-        <Input id='input-unique-id-08' />
+        <Input id="input-unique-id-08" />
       </FormElement>
-    )
-  }
+    ),
+  },
 ];

@@ -184,7 +184,7 @@ $legacy-color-background-path-lost: #c23934;
       display: block;
       position: absolute;
       top: $border-width-thick;
-      left: (($height-sales-path / 2) * -1);
+      left: (($height-sales-path * 0.5) * -1);
       width: calc(#{$height-sales-path} - (#{$border-width-thick} * 2));
       height: calc(#{$height-sales-path} - (#{$border-width-thick} * 2));
       border: $border-width-thick solid $color-border-path-divider;
@@ -234,7 +234,7 @@ $legacy-color-background-path-lost: #c23934;
   @include deprecate('4.0.0', 'Use .slds-path__stage instead of .slds-tabs_path__stage') {
     position: absolute;
     top: 50%;
-    left: ($square-icon-medium-content / 2);
+    left: ($square-icon-medium-content * 0.5);
     width: 100%;
     margin-top: ($spacing-x-small * -1);
     transform: rotateX(-180deg);

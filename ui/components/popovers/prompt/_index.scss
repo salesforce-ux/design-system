@@ -114,7 +114,7 @@
 .slds-popover_prompt_top,
 .slds-popover_prompt_bottom {
   left: 50%;
-  margin-left: (($size-large / 2) * -1);
+  margin-left: (($size-large * 0.5) * -1);
 }
 
 .slds-popover_prompt_top-right,

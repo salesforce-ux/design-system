@@ -15,8 +15,8 @@
   - Rich Text Editor
   - Timepicker
 - Added SLDS scope customizer tool: `npm run slds:customizer`
-- Added new standard color palette for neutral colors (black/white/grays) 
-and updated multiple neutral colors to match new Salesforce color system
+- Added new standard color palette for neutral colors (black/white/grays)
+- Updated @salesforce-ux/icons to 10.1.1
 
 ## Components
 ### [Accordion](https://www.lightningdesignsystem.com/components/accordion)

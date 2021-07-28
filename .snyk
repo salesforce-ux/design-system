@@ -1,0 +1,142 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.19.0
+# ignores vulnerabilities until expiry date; change duration by modifying expiry date
+ignore:
+  SNYK-JS-IMMER-1019369:
+    - '@storybook/addon-docs > @storybook/core > react-dev-utils > immer':
+        reason: Breaking change / big project
+        expires: '2021-08-08T22:14:00.182Z'
+  SNYK-JS-REACTDEVUTILS-1083268:
+    - '@storybook/addon-docs > @storybook/core > react-dev-utils':
+        reason: Breaking change / big project
+        expires: '2021-08-08T22:14:00.182Z'
+  SNYK-JS-AUTOLINKER-564438:
+    - theo > handlebars-helpers > helper-markdown > remarkable > autolinker:
+        reason: Theo is ancient
+        expires: '2021-08-08T22:14:00.182Z'
+  SNYK-JS-AUTOLINKER-73494:
+    - theo > handlebars-helpers > helper-markdown > remarkable > autolinker:
+        reason: Theo is ancient
+        expires: '2021-08-08T22:14:00.182Z'
+  SNYK-JS-BROWSERSLIST-1090194:
+    - '@storybook/addon-docs > @storybook/core > react-dev-utils > browserslist':
+        reason: Breaking change / big project
+        expires: '2021-08-08T22:14:00.182Z'
+    - '@storybook/react > @storybook/core > react-dev-utils > browserslist':
+        reason: Breaking change / big project
+        expires: '2021-08-08T22:14:00.182Z'
+  SNYK-JS-FRONTMATTER-569103:
+    - mdxc > front-matter:
+        reason: None given
+        expires: '2021-08-08T22:14:00.182Z'
+  SNYK-JS-GLOBPARENT-1016905:
+    - gulp > glob-watcher > chokidar > glob-parent:
+        reason: None given
+        expires: '2021-08-08T22:14:00.182Z'
+    - gulp > vinyl-fs > glob-stream > glob-parent:
+        reason: None given
+        expires: '2021-08-08T22:14:00.182Z'
+    - webpack > watchpack > watchpack-chokidar2 > chokidar > glob-parent:
+        reason: None given
+        expires: '2021-08-08T22:14:00.182Z'
+    - '@storybook/addon-docs > @storybook/core > cpy > globby > fast-glob > glob-parent':
+        reason: Breaking change / big project
+        expires: '2021-08-08T22:14:00.183Z'
+    - '@storybook/react > @storybook/core > cpy > globby > fast-glob > glob-parent':
+        reason: Breaking change / big project
+        expires: '2021-08-08T22:14:00.183Z'
+    - '@storybook/addon-docs > @storybook/core > webpack > watchpack > watchpack-chokidar2 > chokidar > glob-parent':
+        reason: Breaking change / big project
+        expires: '2021-08-08T22:14:00.183Z'
+    - '@storybook/react > @storybook/core > webpack > watchpack > watchpack-chokidar2 > chokidar > glob-parent':
+        reason: Breaking change / big project
+        expires: '2021-08-08T22:14:00.183Z'
+    - '@storybook/addon-docs > @storybook/core > glob-base > glob-parent':
+        reason: Breaking change / big project
+        expires: '2021-08-08T22:14:00.183Z'
+    - '@storybook/react > @storybook/core > glob-base > glob-parent':
+        reason: Breaking change / big project
+        expires: '2021-08-08T22:14:00.183Z'
+    - gulp-htmlhint > htmlhint > parse-glob > glob-base > glob-parent:
+        reason: None given
+        expires: '2021-08-08T22:14:00.183Z'
+  SNYK-JS-HIGHLIGHTJS-1048676:
+    - theo > handlebars-helpers > helper-markdown > highlight.js:
+        reason: Theo is ancient
+        expires: '2021-08-08T22:14:00.183Z'
+  SNYK-JS-LODASHTEMPLATE-1088054:
+    - gulp-util > lodash.template:
+        reason: None given
+        expires: '2021-08-08T22:14:00.184Z'
+    - gulp-debug > gulp-util > lodash.template:
+        reason: None given
+        expires: '2021-08-08T22:14:00.185Z'
+    - gulp-filter > gulp-util > lodash.template:
+        reason: None given
+        expires: '2021-08-08T22:14:00.185Z'
+    - gulp-theo > gulp-util > lodash.template:
+        reason: Theo is ancient
+        expires: '2021-08-08T22:14:00.185Z'
+    - gulp-zip > gulp-util > lodash.template:
+        reason: None given
+        expires: '2021-08-08T22:14:00.185Z'
+    - theo > handlebars-helpers > helper-markdown > remarkable > autolinker > gulp-header > lodash.template:
+        reason: Theo is ancient
+        expires: '2021-08-08T22:14:00.185Z'
+  SNYK-JS-MARKDOWNIT-459438:
+    - mdxc > markdown-it:
+        reason: None given
+        expires: '2021-08-08T22:14:00.185Z'
+  SNYK-JS-MERGE-1040469:
+    - gulp-lintspaces > lintspaces > merge:
+        reason: None given
+        expires: '2021-08-08T22:14:00.185Z'
+  SNYK-JS-MERGE-1042987:
+    - gulp-lintspaces > lintspaces > merge:
+        reason: None given
+        expires: '2021-08-08T22:14:00.185Z'
+  SNYK-JS-MERGE-72553:
+    - gulp-lintspaces > lintspaces > merge:
+        reason: None given
+        expires: '2021-08-08T22:14:00.185Z'
+  SNYK-JS-PATHPARSE-1077067:
+    - gulp-htmlhint > htmlhint > path-parse:
+        reason: None given
+        expires: '2021-08-08T22:14:00.185Z'
+  SNYK-JS-POSTCSS-1255640:
+    - postcss-nested-props > postcss:
+        reason: None given
+        expires: '2021-08-08T22:14:00.185Z'
+  SNYK-JS-SETGETTER-1303099:
+    - theo > handlebars-helpers > create-frame > lazy-cache > set-getter:
+        reason: Theo is ancient
+        expires: '2021-08-08T22:14:00.185Z'
+  SNYK-JS-TRIM-1017038:
+    - '@mdx-js/mdx > remark-parse > trim':
+        reason: None given
+        expires: '2021-08-08T22:14:00.185Z'
+    - '@mdx-js/mdx > remark-mdx > remark-parse > trim':
+        reason: None given
+        expires: '2021-08-08T22:14:00.185Z'
+    - '@mdx-js/loader > @mdx-js/mdx > remark-parse > trim':
+        reason: None given
+        expires: '2021-08-08T22:14:00.185Z'
+    - '@mdx-js/loader > @mdx-js/mdx > remark-mdx > remark-parse > trim':
+        reason: None given
+        expires: '2021-08-08T22:14:00.185Z'
+    - '@storybook/addon-docs > @mdx-js/loader > @mdx-js/mdx > remark-mdx > remark-parse > trim':
+        reason: Breaking change / big project
+        expires: '2021-08-08T22:14:00.185Z'
+  SNYK-JS-TRIMNEWLINES-1298042:
+    - gulp-axe-webdriver > file-url > meow > trim-newlines:
+        reason: None given
+        expires: '2021-08-08T22:14:00.185Z'
+  'npm:deep-extend:20180409':
+    - gulp-lintspaces > lintspaces > rc > deep-extend:
+        reason: None given
+        expires: '2021-08-08T22:14:00.185Z'
+  SNYK-JS-CSSWHAT-1298035:
+    - '@salesforce-ux/design-system-parser > cheerio > css-select > css-what':
+        reason: None given
+        expires: '2021-08-08T22:14:00.182Z'
+patch: {}

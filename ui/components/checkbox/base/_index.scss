@@ -94,7 +94,7 @@
       &:after {
         display: block;
         content: '';
-        height: ($square-icon-x-small-content / 2);
+        height: ($square-icon-x-small-content * 0.5);
         width: $square-icon-x-small-content;
         position: absolute;
         top: 50%;

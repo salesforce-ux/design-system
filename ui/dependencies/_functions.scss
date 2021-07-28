@@ -5,14 +5,14 @@
 // Use - width: pem(600px);
 // Output - width: 37.5em;
 @function pem($pixels) {
-  @return ($pixels / 16px * 1em);
+  @return (math.div($pixels, 16px) * 1em);
 }
 
 // Calculate PX into REM
 // Use - width: rem(600px);
 // Output - width: 37.5rem;
 @function rem($pixels) {
-  @return ($pixels / 16px * 1rem);
+  @return (math.div($pixels, 16px) * 1rem);
 }
 
 // Replace `$search` with `$replace` in `$string`
@@ -56,7 +56,7 @@
 /// @return {Number} - Unitless number
 @function strip-unit($number) {
   @if type-of($number) == 'number' and not unitless($number) {
-    @return $number / ($number * 0 + 1);
+    @return math.div($number, $number * 0 + 1);
   }
 
   @return $number;

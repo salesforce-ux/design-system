@@ -24,9 +24,9 @@ export default [
         isViewMode
         hasInlineEdit
       />
-    )
-  }
-]
+    ),
+  },
+];
 
 export let states = [
   {
@@ -38,16 +38,19 @@ export let states = [
         direction="horizontal"
         snapshot={Snapshot.ObjectFieldTypesHorizontal}
       />
-    )
+    ),
   },
   {
     id: 'form-element-horizontal-edit-error',
     label: `${horizontalContext} - (Edit Mode with Error)`,
     context: `${horizontalContext}`,
     element: (
-      <RecordDetail direction="horizontal" snapshot={Snapshot.ObjectFieldTypesHorizontalWithError} />
-    )
-  }
+      <RecordDetail
+        direction="horizontal"
+        snapshot={Snapshot.ObjectFieldTypesHorizontalWithError}
+      />
+    ),
+  },
 ];
 
 export let examples = [
@@ -61,7 +64,7 @@ export let examples = [
         snapshot={Snapshot.ObjectFieldTypesSingleColumn}
         isViewMode
       />
-    )
+    ),
   },
   {
     id: 'deprecated-view-horizontal',
@@ -75,7 +78,7 @@ export let examples = [
         hasInlineEdit
         isDeprecated
       />
-    )
+    ),
   },
   {
     id: 'deprecated-edit-horizontal',
@@ -87,7 +90,7 @@ export let examples = [
         snapshot={Snapshot.DeprecatedObjectFieldTypes}
         isDeprecated
       />
-    )
+    ),
   },
   {
     id: 'simple-horizontal',
@@ -124,7 +127,7 @@ export let examples = [
           <Radio label="Education leads" name="options" />
         </Fieldset>
       </div>
-    )
+    ),
   },
   {
     id: 'horizontal-single-column',
@@ -135,7 +138,7 @@ export let examples = [
         snapshot={Snapshot.ObjectFieldTypesSingleColumn}
         isViewMode
       />
-    )
+    ),
   },
 
   {
@@ -148,6 +151,6 @@ export let examples = [
         isViewMode
         hasInlineEdit
       />
-    )
-  }
+    ),
+  },
 ];

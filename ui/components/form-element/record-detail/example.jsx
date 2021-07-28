@@ -27,7 +27,7 @@ export let examples = [
         isViewMode
         isSingleColumn
       />
-    )
+    ),
   },
   // Note: This example is the same as the Stacked 'edit-stacked' example, which is why it is not included in Storybook
   {
@@ -35,7 +35,7 @@ export let examples = [
     label: 'Stacked form layout - Edit Mode',
     element: (
       <RecordDetail direction="stacked" snapshot={Snapshot.ObjectFieldTypes} />
-    )
+    ),
   },
   // Note: This example is the same as the Horizontal 'form-element-horizontal-default' example, which is why it is not included in Storybook
   {
@@ -48,7 +48,7 @@ export let examples = [
         isViewMode
         hasInlineEdit
       />
-    )
+    ),
   },
   // Note: This example is the same as the Horizontal 'horizontal-single-column' example, which is why it is not included in Storybook
   {
@@ -61,7 +61,7 @@ export let examples = [
         isViewMode
         isSingleColumn
       />
-    )
+    ),
   },
   // Note: This example is the same as the Horizontal 'edit-horizontal' example, which is why it is not included in Storybook
   {
@@ -72,6 +72,6 @@ export let examples = [
         direction="horizontal"
         snapshot={Snapshot.ObjectFieldTypesHorizontal}
       />
-    )
-  }
+    ),
+  },
 ];

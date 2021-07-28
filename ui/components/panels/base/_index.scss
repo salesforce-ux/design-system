@@ -120,7 +120,7 @@
     right: $spacing-small;
     left: auto;
     top: 50%;
-    margin-top: (($square-icon-small-boundary / 2) * -1);
+    margin-top: (($square-icon-small-boundary * 0.5) * -1);
   }
 
   .slds-panel__back {
@@ -128,7 +128,7 @@
     left: $spacing-small;
     right: auto;
     top: 50%;
-    margin-top: (($square-icon-small-boundary / 2) * -1);
+    margin-top: (($square-icon-small-boundary * 0.5) * -1);
   }
 }
 

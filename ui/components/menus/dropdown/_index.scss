@@ -355,13 +355,13 @@
   // Adjust position of dropdown with top nubbin
   &[class*="slds-nubbin_top"],
   &[class*="slds-nubbin--top"] {
-    margin-top: ($nubbin-size-default / 2);
+    margin-top: ($nubbin-size-default * 0.5);
   }
 
   // Adjust position of dropdown with bottom nubbin
   &[class*="slds-nubbin_bottom"],
   &[class*="slds-nubbin--bottom"] {
-    margin-bottom: ($nubbin-size-default / 2);
+    margin-bottom: ($nubbin-size-default * 0.5);
   }
 
   /**

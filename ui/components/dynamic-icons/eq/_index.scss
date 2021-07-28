@@ -1,5 +1,6 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+@use "sass:math";
 
 $_eq-bar-height-min: 3px;
 $_eq-bar-height-max: 14px;
@@ -14,7 +15,7 @@ $_eq-bar-height-max: 14px;
 .slds-icon-eq {
   position: relative;
   width: fix-ie-rounding(14);
-  height: fix-ie-rounding($_eq-bar-height-max / 1px);
+  height: fix-ie-rounding(math.div($_eq-bar-height-max, 1px));
 
   /**
    * @summary Turn animation on for animated icon
@@ -71,6 +72,6 @@ $_eq-bar-height-max: 14px;
 @keyframes slds-icon-eq {
 
   to {
-    transform: scaleY(#{$_eq-bar-height-max / $_eq-bar-height-min});
+    transform: scaleY(#{math.div($_eq-bar-height-max, $_eq-bar-height-min)});
   }
 }

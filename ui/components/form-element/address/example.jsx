@@ -18,7 +18,10 @@ export default [
       <CompoundFormElement labelContent="Billing Address" isAddress>
         <CompoundFormRow>
           <div className="slds-size_1-of-1">
-            <FormElement labelContent="Billing Street" inputId="form-element-id-01">
+            <FormElement
+              labelContent="Billing Street"
+              inputId="form-element-id-01"
+            >
               <Textarea
                 id="form-element-id-01"
                 defaultValue="525 S. Lexington Ave"
@@ -29,8 +32,15 @@ export default [
         </CompoundFormRow>
         <CompoundFormRow>
           <div className="slds-size_4-of-6">
-            <FormElement labelContent="Billing City" inputId="form-element-id-02">
-              <Input id="form-element-id-02" defaultValue="Burlington" required />
+            <FormElement
+              labelContent="Billing City"
+              inputId="form-element-id-02"
+            >
+              <Input
+                id="form-element-id-02"
+                defaultValue="Burlington"
+                required
+              />
             </FormElement>
           </div>
           <div className="slds-size_2-of-6">
@@ -61,7 +71,7 @@ export default [
           </div>
         </CompoundFormRow>
       </CompoundFormElement>
-    )
+    ),
   },
   {
     id: 'help-text',
@@ -124,8 +134,8 @@ export default [
           </div>
         </CompoundFormRow>
       </CompoundFormElement>
-    )
-  }
+    ),
+  },
 ];
 
 export let states = [
@@ -190,7 +200,7 @@ export let states = [
           </div>
         </CompoundFormRow>
       </CompoundFormElement>
-    )
+    ),
   },
   {
     id: 'has-error',
@@ -260,6 +270,6 @@ export let states = [
           </div>
         </CompoundFormRow>
       </CompoundFormElement>
-    )
-  }
+    ),
+  },
 ];

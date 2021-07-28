@@ -20,7 +20,7 @@ import packageJSON from '../../package.json';
 import {
   createAuraTokensMap,
   createTokenComponentMap,
-  createUtilityPropertiesMap
+  createUtilityPropertiesMap,
 } from '../compile/token-maps';
 import { createLibrary } from '../compile/bundle';
 import paths from '../helpers/paths';
@@ -30,7 +30,7 @@ import {
   generateSanitizedScss,
   writeSanitizedCss,
   writeSanitizedComponentCss,
-  writeCommonCss
+  writeCommonCss,
 } from './generate/sanitized';
 
 const distPath = path.resolve.bind(path, paths.dist);
@@ -42,13 +42,13 @@ const MODULE_NAME_TOUCH = 'salesforce-lightning-design-system_touch';
 const MODULE_NAME_TOUCH_DEMO = 'salesforce-lightning-design-system_touch-demo';
 const MODULE_NAME_LEGACY = 'salesforce-lightning-design-system-legacy';
 
-export const cleanBefore = () => del([paths.dist]);
+export const cleanBefore = () => del([paths.dist, paths.css]);
 export const cleanAfter = () => del([distPath('README-dist.md')]);
 
 export const copyRoot = () =>
   gulp
     .src(['./package.json', './README-dist.md', './RELEASENOTES*'], {
-      base: paths.root
+      base: paths.root,
     })
     .pipe(gulp.dest(distPath()));
 
@@ -56,14 +56,14 @@ export const copySass = () =>
   gulp
     .src('**/*.scss', {
       base: paths.ui,
-      cwd: paths.ui
+      cwd: paths.ui,
     })
     .pipe(gulp.dest(distPath('scss')));
 
 export const copySassLicense = () =>
   gulp
     .src('licenses/License-for-Sass.txt', {
-      cwd: paths.assets
+      cwd: paths.assets,
     })
     .pipe(gulp.dest(distPath('scss')));
 
@@ -72,7 +72,7 @@ export const copyIcons = () =>
     .src(
       '@salesforce-ux/icons/dist/salesforce-lightning-design-system-icons/**',
       {
-        cwd: paths.node_modules
+        cwd: paths.node_modules,
       }
     )
     .pipe(gulp.dest(distPath('assets/icons')));
@@ -80,14 +80,14 @@ export const copyIcons = () =>
 export const copyIconsMeta = () =>
   gulp
     .src('@salesforce-ux/icons/dist/ui.icons.json', {
-      cwd: paths.node_modules
+      cwd: paths.node_modules,
     })
     .pipe(gulp.dest(distPath()));
 
 export const copyIconsSynonyms = () =>
   gulp
     .src('@salesforce-ux/icons/dist/*-icons-metadata.json', {
-      cwd: paths.node_modules
+      cwd: paths.node_modules,
     })
     .pipe(gulp.dest(distPath('metadata/icons')));
 
@@ -95,21 +95,21 @@ export const copyImages = () =>
   gulp
     .src('images/**/*', {
       base: 'assets/images',
-      cwd: paths.assets
+      cwd: paths.assets,
     })
     .pipe(gulp.dest(distPath('assets/images')));
 
 export const copyImagesLicense = () =>
   gulp
     .src('licenses/License-for-images.txt', {
-      cwd: paths.assets
+      cwd: paths.assets,
     })
     .pipe(gulp.dest(distPath('assets/images')));
 
 export const copySwatches = () =>
   gulp
     .src('downloads/swatches/**', {
-      cwd: paths.assets
+      cwd: paths.assets,
     })
     .pipe(gulp.dest(distPath('swatches')));
 
@@ -117,7 +117,7 @@ export const copyDesignTokens = () =>
   gulp
     .src('**/*.*', {
       base: `${paths.designTokens}`,
-      cwd: `${paths.designTokens}`
+      cwd: `${paths.designTokens}`,
     })
     .pipe(gulp.dest(distPath('design-tokens')));
 
@@ -125,7 +125,7 @@ export const copyComponentDesignTokens = () =>
   gulp
     .src('components/**/tokens/**/*.yml', {
       base: path.resolve(paths.ui),
-      cwd: path.resolve(paths.ui)
+      cwd: path.resolve(paths.ui),
     })
     .pipe(gulp.dest(distPath('ui')));
 
@@ -133,7 +133,7 @@ export const copyComponentReleaseNotes = () =>
   gulp
     .src('components/**/RELEASENOTES.md', {
       base: path.resolve(paths.ui),
-      cwd: path.resolve(paths.ui)
+      cwd: path.resolve(paths.ui),
     })
     .pipe(gulp.dest(distPath('__internal/release-notes')));
 
@@ -141,7 +141,7 @@ export const copyUtilityReleaseNotes = () =>
   gulp
     .src('utilities/**/RELEASENOTES.md', {
       base: path.resolve(paths.ui),
-      cwd: path.resolve(paths.ui)
+      cwd: path.resolve(paths.ui),
     })
     .pipe(gulp.dest(distPath('__internal/release-notes')));
 
@@ -149,7 +149,7 @@ export const copyStylingHooksMetadata = () =>
   gulp
     .src('metadata/**', {
       base: path.resolve(paths.generated),
-      cwd: path.resolve(paths.generated)
+      cwd: path.resolve(paths.generated),
     })
     .pipe(gulp.dest(distPath()));
 
@@ -165,7 +165,7 @@ export const sass = () =>
     .pipe(gulpHelpers.writeScss({ outputStyle: 'expanded' }))
     .pipe(gulpHelpers.writePostCss([discardComments()]))
     .pipe(
-      gulpRename(path => {
+      gulpRename((path) => {
         path.basename = MODULE_NAME;
         path.extname = '.css';
         return path;
@@ -179,7 +179,7 @@ export const sassTouch = () =>
     .pipe(gulpHelpers.writeScss({ outputStyle: 'expanded' }))
     .pipe(gulpHelpers.writePostCss([discardComments(), combineMediaQuery]))
     .pipe(
-      gulpRename(path => {
+      gulpRename((path) => {
         path.basename = MODULE_NAME_TOUCH;
         path.extname = '.css';
         return path;
@@ -193,7 +193,7 @@ export const sassTouchDemo = () =>
     .pipe(gulpHelpers.writeScss({ outputStyle: 'expanded' }))
     .pipe(gulpHelpers.writePostCss([discardComments()]))
     .pipe(
-      gulpRename(path => {
+      gulpRename((path) => {
         path.basename = MODULE_NAME_TOUCH_DEMO;
         path.extname = '.css';
         return path;
@@ -209,11 +209,11 @@ export const cssLegacy = () =>
       gulpHelpers.writePostCss([
         annotationsParser({ preserve: false }),
         cssVariableValue({ preserve: false }),
-        discardComments()
+        discardComments(),
       ])
     )
     .pipe(
-      gulpRename(path => {
+      gulpRename((path) => {
         path.basename = MODULE_NAME_LEGACY;
         path.extname = '.css';
         return path;
@@ -227,7 +227,7 @@ export const cssOffline = () =>
     .pipe(gulpHelpers.writeScss({ outputStyle: 'expanded' }))
     .pipe(gulpHelpers.writePostCss([discardComments(), convertDataUri()]))
     .pipe(
-      gulpRename(path => {
+      gulpRename((path) => {
         path.basename = `${MODULE_NAME}-offline`;
         path.extname = '.css';
         return path;
@@ -246,7 +246,7 @@ export const generateComponentSass = () =>
   gulp
     .src([
       distPath('scss/components/*/*/_index.scss'),
-      distPath('scss/components/*/*/_touch.scss')
+      distPath('scss/components/*/*/_touch.scss'),
     ])
     // Write message to the top of each module file
     .pipe(
@@ -261,7 +261,7 @@ export const generateComponentSass = () =>
     // Rename file with removed underscore("_") so gulp sass will compile
     // since it won't compile underscore("_") due to it being private
     .pipe(
-      gulpRename(path => {
+      gulpRename((path) => {
         // mixins aren't public files so we should not rename them to be
         if (!path.dirname.match(/\/mixins/)) {
           path.basename = path.basename.substring(1);
@@ -278,7 +278,7 @@ export const generateComponentSass = () =>
  * ==================
  */
 
-export const generateSanitized = done => generateSanitizedScss(done);
+export const generateSanitized = (done) => generateSanitizedScss(done);
 
 /*
  * ==================
@@ -286,7 +286,7 @@ export const generateSanitized = done => generateSanitizedScss(done);
  * ==================
  */
 
-export const writeSanitized = done => writeSanitizedCss(done);
+export const writeSanitized = (done) => writeSanitizedCss(done);
 
 /*
  * ==================
@@ -294,7 +294,7 @@ export const writeSanitized = done => writeSanitizedCss(done);
  * ==================
  */
 
-export const writeSanitizedComponents = done =>
+export const writeSanitizedComponents = (done) =>
   writeSanitizedComponentCss(done);
 
 /*
@@ -303,7 +303,7 @@ export const writeSanitizedComponents = done =>
  * ==================
  */
 
-export const writeCommon = done => writeCommonCss(done);
+export const writeCommon = (done) => writeCommonCss(done);
 
 /*
  * ==================
@@ -319,14 +319,14 @@ export const minifyCss = () =>
         distPath(`assets/styles/${MODULE_NAME_TOUCH}.css`),
         distPath(`__internal/styles/${MODULE_NAME_TOUCH_DEMO}.css`),
         distPath(`assets/styles/${MODULE_NAME_LEGACY}.css`),
-        distPath(`assets/styles/${MODULE_NAME}-offline.css`)
+        distPath(`assets/styles/${MODULE_NAME}-offline.css`),
       ],
       { base: distPath() }
     )
     .pipe(gulp.dest(distPath()))
     .pipe(gulpHelpers.writeMinifyCss())
     .pipe(
-      gulpRename(path => {
+      gulpRename((path) => {
         path.basename += '.min';
         return path;
       })
@@ -337,7 +337,7 @@ export const versionBlock = () =>
   gulp
     .src(['**/*.css', 'scss/index*', 'scss/touch*', 'scss/legacy*'], {
       base: distPath(),
-      cwd: distPath()
+      cwd: distPath(),
     })
     .pipe(gulpInsert.prepend(`/*! ${DISPLAY_NAME} ${SLDS_VERSION} */\n`))
     .pipe(gulp.dest(distPath()));
@@ -349,11 +349,11 @@ export const versionInline = () =>
         'scss/**/*.scss',
         '!scss/index*.scss',
         '!scss/vendor/**/*.*',
-        '!scss/touch*'
+        '!scss/touch*',
       ],
       {
         base: distPath(),
-        cwd: distPath()
+        cwd: distPath(),
       }
     )
     .pipe(gulpInsert.prepend(`// ${DISPLAY_NAME} ${SLDS_VERSION}\n`))
@@ -368,16 +368,20 @@ export const buildInfo = () =>
     )
     .pipe(gulp.dest(distPath()));
 
-export const writeUI = done => ui.writeToDist().fork(done, () => done());
+export const writeUI = (done) => ui.writeToDist().fork(done, () => done());
 
-export const writeLibrary = done =>
-  createLibrary().fork(e => done(e), stats => done(null, stats));
+export const writeLibrary = (done) =>
+  createLibrary().fork(
+    (e) => done(e),
+    (stats) => done(null, stats)
+  );
 
-export const writeAuraTokensMap = done => createAuraTokensMap();
+export const writeAuraTokensMap = (done) => createAuraTokensMap();
 
-export const writeTokenComponentMap = done => createTokenComponentMap();
+export const writeTokenComponentMap = (done) => createTokenComponentMap();
 
-export const writeUtilityDeclarationsMap = done => createUtilityPropertiesMap();
+export const writeUtilityDeclarationsMap = (done) =>
+  createUtilityPropertiesMap();
 
 export const packageJson = () => {
   const a = Immutable.fromJS(packageJSON);
@@ -394,6 +398,6 @@ export const packageJson = () => {
     .delete('engines')
     .delete('important');
   return gulpFile('package.json', JSON.stringify(b, null, 2), {
-    src: true
+    src: true,
   }).pipe(gulp.dest(distPath()));
 };

@@ -29,7 +29,7 @@
     &:checked + .slds-checkbox__label .slds-checkbox--faux {
 
       &:after {
-        height: ($square-icon-small-content / 2);
+        height: ($square-icon-small-content * 0.5);
         width: $square-icon-small-content;
         margin-top: -1px; // vertical alignment adjustment for centering
       }

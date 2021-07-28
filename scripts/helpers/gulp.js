@@ -2,22 +2,23 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 import autoprefixer from 'autoprefixer';
-import gulpSass from 'gulp-dart-sass';
 import gulpPostcss from 'gulp-postcss';
 import gulpMinifyCss from 'gulp-clean-css';
 import gulpPrettier from 'gulp-prettier';
 import paths from './paths';
+
+var gulpSass = require('gulp-sass')(require('sass'));
 
 /*
  * ==================
  * Helper to re-purpose gulp-sass rules
  * ==================
  */
-export const writeScss = options =>
+export const writeScss = (options) =>
   gulpSass({
     precision: 3,
     includePaths: [paths.ui, paths.node_modules],
-    ...options
+    ...options,
   }).on('error', gulpSass.logError);
 
 /*
@@ -25,7 +26,7 @@ export const writeScss = options =>
  * Helper to re-purpose post-css rules
  * ==================
  */
-export const writePostCss = bonusPlugins => {
+export const writePostCss = (bonusPlugins) => {
   const plugins = [autoprefixer({ remove: false })];
   Array.prototype.push.apply(plugins, bonusPlugins);
   return gulpPostcss(plugins);
@@ -37,7 +38,7 @@ export const writePostCss = bonusPlugins => {
  * ==================
  */
 
-export const writeMinifyCss = options =>
+export const writeMinifyCss = (options) =>
   gulpMinifyCss({ advanced: false, roundingPrecision: '-1', ...options });
 
 /*
@@ -46,7 +47,7 @@ export const writeMinifyCss = options =>
  * ==================
  */
 
-export const writePrettierCss = options =>
+export const writePrettierCss = (options) =>
   gulpPrettier({
     arrowParens: 'avoid',
     bracketSpacing: true,
@@ -59,7 +60,7 @@ export const writePrettierCss = options =>
     tabWidth: 2,
     trailingComma: 'none',
     useTabs: false,
-    ...options
+    ...options,
   });
 
 /*
@@ -67,7 +68,7 @@ export const writePrettierCss = options =>
  * Helper to write an auto-generation warning to a stylesheet
  * ==================
  */
-export const writeAutoGenerationWarning = content => {
+export const writeAutoGenerationWarning = (content) => {
   const removeDeprecateCss = /(@import 'deprecate';)/g;
   const removeBlameCss = /(@import 'blame';)/g;
   let message = `
@@ -76,10 +77,33 @@ export const writeAutoGenerationWarning = content => {
   Please do not edit or check in changes to this file.
   If you need changes made, please contact the Design System team.
 */
-
+`;
+  const importInit = `
 @import '.dist/scss/init';
 `;
   content = content.replace(removeDeprecateCss, '').replace(removeBlameCss, '');
-  let css = `${message}${content}`;
+  // break content into individual lines
+  const contentLines = content.matchAll(/^.*$/gim);
+  const useLines = [];
+  let formattedContent = [];
+
+  // extract any `@use` line to ensure they're first
+  for (const line of contentLines) {
+    // if line starts with `@use`, store it in the useLines array
+    if (line[0].startsWith(`@use`)) {
+      useLines.push(line[0]);
+      // if not pass it to the formattedContent array
+    } else {
+      formattedContent.push(line[0]);
+    }
+  }
+
+  // generate prefix by joining useLines and adding importInit to it
+  const prefixLines = useLines.join(`\n`) + importInit;
+
+  // generate a single string of the formattedContent array
+  formattedContent = formattedContent.join(`\n`);
+
+  let css = `${message}${prefixLines}${formattedContent}`;
   return css;
 };

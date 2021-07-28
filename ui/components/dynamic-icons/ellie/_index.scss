@@ -1,5 +1,6 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+@use "sass:math";
 
 // Improve readability of steps and animations
 // scss-lint:disable SpaceBetweenParens SingleLinePerProperty
@@ -7,7 +8,7 @@
 // Setup
 $_ellie-frames: 20;
 $_ellie-icon-width: 14;
-$_ellie-sprite-width: $_ellie-frames * $_ellie-icon-width / 16 * 1rem;
+$_ellie-sprite-width: math.div($_ellie-frames * $_ellie-icon-width, 16) * 1rem;
 
 // Widths of circles, allows full control over easing
 $_ellie-frameset: (

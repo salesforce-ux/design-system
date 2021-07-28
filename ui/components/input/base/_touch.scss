@@ -54,7 +54,7 @@
 
   .slds-input__icon {
     @include square($square-icon-medium-content);
-    margin-top: (($square-icon-medium-content / 2) * -1);
+    margin-top: (($square-icon-medium-content * 0.5) * -1);
   }
 
   &_left,

@@ -32,7 +32,7 @@
     &--nubbin-top {
       @include nubbin(top, 'before');
       @include nubbin(top);
-      margin-top: ($nubbin-size-default / 2);
+      margin-top: ($nubbin-size-default * 0.5);
 
       &:before {
         background: $color-background-alt;
@@ -105,7 +105,7 @@
         @include square($square-icon-medium-content);
         position: absolute;
         top: 50%;
-        margin-top: (($square-icon-medium-content / 2) * -1);
+        margin-top: (($square-icon-medium-content * 0.5) * -1);
         fill: $color-text-icon-default;
 
         &_left,

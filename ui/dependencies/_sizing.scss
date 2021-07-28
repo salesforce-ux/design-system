@@ -20,7 +20,7 @@
 
       .slds-#{$breakpoint-string}size_#{$i}-of-#{$denominator},
       .slds-#{$breakpoint-string}size--#{$i}-of-#{$denominator} {
-        width: ($i / $denominator) * 100%;
+        width: math.div($i, $denominator) * 100%;
       }
     }
   }

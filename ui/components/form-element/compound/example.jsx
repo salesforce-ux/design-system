@@ -29,8 +29,8 @@ export default [
           </div>
         </CompoundFormRow>
       </CompoundFormElement>
-    )
-  }
+    ),
+  },
 ];
 
 export let states = [
@@ -53,7 +53,7 @@ export let states = [
           </div>
         </CompoundFormRow>
       </CompoundFormElement>
-    )
+    ),
   },
   {
     id: 'help-text',
@@ -74,7 +74,7 @@ export let states = [
           </div>
         </CompoundFormRow>
       </CompoundFormElement>
-    )
+    ),
   },
   {
     id: 'has-error',
@@ -106,20 +106,20 @@ export let states = [
           </div>
         </CompoundFormRow>
       </CompoundFormElement>
-    )
+    ),
   },
   {
     id: 'compound-field-required',
     label: `${compoundContext} - Form Layout (Required)`,
     context: `${compoundContext}`,
-    element: <CompoundForm />
+    element: <CompoundForm />,
   },
   {
     id: 'compound-field-required-tooltip-help',
     label: `${compoundContext} - Form Layout (Required with Tooltip Help)`,
     context: `${compoundContext}`,
-    element: <CompoundForm />
-  }
+    element: <CompoundForm />,
+  },
 ];
 
 export let examples = [
@@ -148,12 +148,12 @@ export let examples = [
           </div>
         </div>
       </Fieldset>
-    )
+    ),
   },
   {
     id: 'compound-field',
     label: `${compoundContext} - Form Layout`,
     context: `${compoundContext}`,
-    element: <CompoundForm />
-  }
+    element: <CompoundForm />,
+  },
 ];

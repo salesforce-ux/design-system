@@ -7,7 +7,6 @@ version: 2.1
 orbs:
   node: circleci/node@4.3.0
   heroku: circleci/heroku@1.2.2
-  aws-s3: circleci/aws-s3@2.0.0
   browser-tools: circleci/browser-tools@1.0.1
 
 executors:
@@ -315,17 +314,13 @@ jobs:
             tar -cvf workspace/design-system-dist.tar .dist/
             cd .dist && zip -r dist . && mv dist.zip ../workspace/ && cd ..
 
-      - aws-s3/copy:
-          from: workspace/dist.zip
-          to: 's3://sldsbuilds/design-system/${CIRCLE_SHA1}/'
-
       - persist_to_workspace:
           root: workspace
           paths:
             - design-system-dist.tar
             - dist.zip
 
-  # Publish to S3 & trigger database update
+  # Publish artifact & trigger database update
   populate-database:
     executor: slds-executor
     resource_class: small

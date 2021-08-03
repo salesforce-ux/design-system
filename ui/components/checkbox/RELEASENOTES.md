@@ -3,6 +3,11 @@
 # Checkbox Release Notes
 
 <!-- ## [Unreleased] -->
+## 2.17.0
+
+### Changed
+
+- Labels will no longer wrap below the checkbox. When the label text wraps, it will now go directly under the previous line.
 
 ## 2.14.0
 

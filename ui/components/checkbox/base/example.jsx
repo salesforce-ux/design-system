@@ -203,6 +203,20 @@ export let states = [
     element: <Required />
   },
   {
+    id: 'required-optional-mix',
+    label: 'Required/Optional Combination',
+    element: (
+      <FormElement>
+        <Checkbox label={checkboxLabel}>
+          <abbr className="slds-required" title="required">
+            *
+          </abbr>
+        </Checkbox>
+        <Checkbox label={checkboxLabel} />
+      </FormElement>
+    )
+  },
+  {
     id: 'error',
     label: 'Error',
     element: <ErrorState />
@@ -225,6 +239,42 @@ export let states = [
 ];
 
 export let examples = [
+  {
+    id: 'wrapping-text',
+    label: 'Checkboxes with Wrapping Text',
+    demoStyles: `width: 210px`,
+    storybookStyles: true,
+    element: (
+      <FormElement>
+        <Checkbox label="Early Morning (12 AM - 8 AM)" checked />
+        <Checkbox label="Morning (8 AM - 12 PM)" />
+        <Checkbox label="Afternoon (12 PM - 5 PM)" />
+        <Checkbox label="Evening (5 PM - 12 AM)" />
+      </FormElement>
+    )
+  },
+  {
+    id: 'wrapping-text-required-group',
+    label: 'Required Checkboxes with Wrapping Text',
+    demoStyles: `width: 210px`,
+    storybookStyles: true,
+    element: (
+      <Fieldset>
+        <Legend>
+          <abbr className="slds-required" title="required">
+            *{' '}
+          </abbr>
+          Checkbox Group Label
+        </Legend>
+        <FormElementControl>
+          <Checkbox label="Early Morning (12 AM - 8 AM)" />
+          <Checkbox label="Morning (8 AM - 12 PM)" />
+          <Checkbox label="Afternoon (12 PM - 5 PM)" />
+          <Checkbox label="Evening (5 PM - 12 AM)" />
+        </FormElementControl>
+      </Fieldset>
+    )
+  },
   {
     id: 'group',
     label: 'Group',

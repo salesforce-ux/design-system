@@ -42,9 +42,14 @@
     transition: border $duration-quickly linear, background-color $duration-quickly linear;
   }
 
+  .slds-radio__label {
+    display: inline-flex;
+  }
+
   .slds-form-element__label {
     display: inline;
-    vertical-align: middle;
+    padding-top: 0;
+    line-height: $line-height-heading;
     font-size: $font-size-3;
   }
 

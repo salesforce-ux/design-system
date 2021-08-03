@@ -17,6 +17,11 @@
   display: inline-block;
   position: relative;
 
+  // When changing checkbox labels to inline-flex (PR #4769), the position of the required asterisk needed to be repositioned
+  > .slds-required {
+    vertical-align: super;
+  }
+
   /**
    * @summary Creates a custom styled checkbox
    * @selector .slds-checkbox_faux
@@ -47,11 +52,13 @@
    * @restrict .slds-checkbox label
    */
   .slds-checkbox__label {
+    display: inline-flex;
 
     // When slds-form-element__label is inline with slds-checkbox_faux, display as inline
     .slds-form-element__label {
       display: inline;
-      vertical-align: middle;
+      padding-top: 0;
+      line-height: $line-height-heading;
       font-size: $font-size-3;
     }
   }

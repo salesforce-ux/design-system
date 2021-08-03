@@ -39,7 +39,7 @@
  * @restrict .slds-form-element div
  */
 .slds-form-element__control {
-  // This clear:left is due to the label of the form element being set to float: left since we don't know if the help-text icon is present in the DOM. Since legend elements can only be floated to modifiy layout to accomodate the help-text icon, we need to make sure the control stacks below the label by default
+  // This clear:left is due to the label of the form element being set to float: left since we don't know if the help-text icon is present in the DOM. Since legend elements can only be floated to modify layout to accommodate the help-text icon, we need to make sure the control stacks below the label by default
   clear: left;
   position: relative;
 
@@ -47,6 +47,7 @@
   .slds-radio,
   .slds-checkbox {
     display: block;
+    margin-top: $spacing-xx-small;
   }
 }
 

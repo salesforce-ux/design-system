@@ -282,5 +282,44 @@ export const examples = [
         </div>
       </Fieldset>
     )
+  },
+  {
+    id: 'wrapping-text',
+    label: 'Radio Group with Wrapping Text',
+    demoStyles: `width: 210px`,
+    storybookStyles: true,
+    element: (
+      <Fieldset>
+        <Legend>Radio Group Label</Legend>
+        <FormElementControl>
+          <Radio checked label="Early Morning (12 AM - 8 AM)" name="wrapping-text" />
+          <Radio label="Morning (8 AM - 12 PM)" name="wrapping-text" />
+          <Radio label="Afternoon (12 PM - 5 PM)" name="wrapping-text" />
+          <Radio label="Evening (5 PM - 12 AM)" name="wrapping-text" />
+        </FormElementControl>
+      </Fieldset>
+    )
+  },
+  {
+    id: 'wrapping-text-required',
+    label: 'Required with Wrapping Text',
+    demoStyles: `width: 210px`,
+    storybookStyles: true,
+    element: (
+      <Fieldset>
+        <Legend>
+          <abbr className="slds-required" title="required">
+            *
+          </abbr>{' '}
+          Radio Group Label
+        </Legend>
+        <FormElementControl>
+          <Radio checked label="Early Morning (12 AM - 8 AM)" name="wrapping-text" />
+          <Radio label="Morning (8 AM - 12 PM)" name="wrapping-text" />
+          <Radio label="Afternoon (12 PM - 5 PM)" name="wrapping-text" />
+          <Radio label="Evening (5 PM - 12 AM)" name="wrapping-text" />
+        </FormElementControl>
+      </Fieldset>
+    )
   }
 ];

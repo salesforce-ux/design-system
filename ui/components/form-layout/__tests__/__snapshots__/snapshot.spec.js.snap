@@ -525,7 +525,7 @@ Array [
           >
             <label
               className="slds-form-element__label"
-              htmlFor="input-01"
+              htmlFor="input-10"
             >
               Latitude
             </label>
@@ -534,7 +534,7 @@ Array [
             >
               <input
                 className="slds-input"
-                id="input-01"
+                id="input-10"
                 type="text"
               />
             </div>
@@ -544,7 +544,7 @@ Array [
           >
             <label
               className="slds-form-element__label"
-              htmlFor="input-02"
+              htmlFor="input-11"
             >
               Longitude
             </label>
@@ -553,7 +553,7 @@ Array [
             >
               <input
                 className="slds-input"
-                id="input-02"
+                id="input-11"
                 type="text"
               />
             </div>
@@ -584,7 +584,7 @@ Array [
           >
             <label
               className="slds-form-element__label"
-              htmlFor="input-03"
+              htmlFor="input-12"
             >
               Shipping Street
             </label>
@@ -593,7 +593,7 @@ Array [
             >
               <input
                 className="slds-input"
-                id="input-03"
+                id="input-12"
                 type="text"
               />
             </div>
@@ -607,7 +607,7 @@ Array [
           >
             <label
               className="slds-form-element__label"
-              htmlFor="input-04"
+              htmlFor="input-13"
             >
               Shipping City
             </label>
@@ -616,7 +616,7 @@ Array [
             >
               <input
                 className="slds-input"
-                id="input-04"
+                id="input-13"
                 type="text"
               />
             </div>
@@ -626,7 +626,7 @@ Array [
           >
             <label
               className="slds-form-element__label"
-              htmlFor="input-05"
+              htmlFor="input-14"
             >
               Shipping State/Province
             </label>
@@ -636,7 +636,7 @@ Array [
               <input
                 className="slds-input"
                 defaultValue="MT"
-                id="input-05"
+                id="input-14"
                 type="text"
               />
             </div>
@@ -650,7 +650,7 @@ Array [
           >
             <label
               className="slds-form-element__label"
-              htmlFor="input-06"
+              htmlFor="input-15"
             >
               Shipping Zip/Postal Code
             </label>
@@ -659,7 +659,7 @@ Array [
             >
               <input
                 className="slds-input"
-                id="input-06"
+                id="input-15"
                 type="text"
               />
             </div>
@@ -669,7 +669,7 @@ Array [
           >
             <label
               className="slds-form-element__label"
-              htmlFor="input-07"
+              htmlFor="input-16"
             >
               Shipping Country
             </label>
@@ -679,7 +679,7 @@ Array [
               <input
                 className="slds-input"
                 defaultValue="Canada"
-                id="input-07"
+                id="input-16"
                 type="text"
               />
             </div>
@@ -715,7 +715,7 @@ Array [
           >
             <label
               className="slds-form-element__label"
-              htmlFor="input-01"
+              htmlFor="input-10"
             >
               Latitude
             </label>
@@ -724,7 +724,7 @@ Array [
             >
               <input
                 className="slds-input"
-                id="input-01"
+                id="input-10"
                 type="text"
               />
             </div>
@@ -734,7 +734,7 @@ Array [
           >
             <label
               className="slds-form-element__label"
-              htmlFor="input-02"
+              htmlFor="input-11"
             >
               Longitude
             </label>
@@ -743,7 +743,7 @@ Array [
             >
               <input
                 className="slds-input"
-                id="input-02"
+                id="input-11"
                 type="text"
               />
             </div>
@@ -774,7 +774,7 @@ Array [
           >
             <label
               className="slds-form-element__label"
-              htmlFor="input-03"
+              htmlFor="input-12"
             >
               Shipping Street
             </label>
@@ -783,7 +783,7 @@ Array [
             >
               <input
                 className="slds-input"
-                id="input-03"
+                id="input-12"
                 type="text"
               />
             </div>
@@ -797,7 +797,7 @@ Array [
           >
             <label
               className="slds-form-element__label"
-              htmlFor="input-04"
+              htmlFor="input-13"
             >
               Shipping City
             </label>
@@ -806,7 +806,7 @@ Array [
             >
               <input
                 className="slds-input"
-                id="input-04"
+                id="input-13"
                 type="text"
               />
             </div>
@@ -816,7 +816,7 @@ Array [
           >
             <label
               className="slds-form-element__label"
-              htmlFor="input-05"
+              htmlFor="input-14"
             >
               Shipping State/Province
             </label>
@@ -826,7 +826,7 @@ Array [
               <input
                 className="slds-input"
                 defaultValue="MT"
-                id="input-05"
+                id="input-14"
                 type="text"
               />
             </div>
@@ -840,7 +840,7 @@ Array [
           >
             <label
               className="slds-form-element__label"
-              htmlFor="input-06"
+              htmlFor="input-15"
             >
               Shipping Zip/Postal Code
             </label>
@@ -849,7 +849,7 @@ Array [
             >
               <input
                 className="slds-input"
-                id="input-06"
+                id="input-15"
                 type="text"
               />
             </div>
@@ -859,7 +859,7 @@ Array [
           >
             <label
               className="slds-form-element__label"
-              htmlFor="input-07"
+              htmlFor="input-16"
             >
               Shipping Country
             </label>
@@ -869,7 +869,7 @@ Array [
               <input
                 className="slds-input"
                 defaultValue="Canada"
-                id="input-07"
+                id="input-16"
                 type="text"
               />
             </div>

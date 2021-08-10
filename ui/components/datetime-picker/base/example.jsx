@@ -29,7 +29,8 @@ const ExampleDatetimePicker = ({
   isOpen,
   isRequired,
   listboxData,
-  dateDefaultValue
+  dateDefaultValue,
+  showRequiredIndicator
 }) => {
   const focusedRef = useRef();
   const [focusedId, setFocusedId] = useState('');
@@ -84,12 +85,15 @@ const ExampleDatetimePicker = ({
                 hasRightIcon
                 dropdown={dropdown}
                 hasError={hasError}
+                isRequired={isRequired}
+                showRequiredIndicator={showRequiredIndicator}
               >
                 <Input
                   id={uniqueId}
                   placeholder="Select a date…"
                   defaultValue={dateDefaultValue}
                   aria-describedby={hasError && uniqueId + '-error'}
+                  required={isRequired}
                 />
                 <ButtonIcon
                   className="slds-input__icon slds-input__icon_right"
@@ -163,12 +167,14 @@ ExampleDatetimePicker.propTypes = {
   hasError: PropTypes.bool,
   listboxIsOpen: PropTypes.bool,
   listboxData: PropTypes.object.isRequired,
-  dateDefaultValue: PropTypes.string
+  dateDefaultValue: PropTypes.string,
+  showRequiredIndicator: PropTypes.bool
 };
 
 ExampleDatetimePicker.defaultProps = {
   dropdown: <DatePicker todayActive />,
-  dropdownIsOpen: true
+  dropdownIsOpen: true,
+  showRequiredIndicator: false
 };
 
 /* -----------------------------------------------------------------------------
@@ -202,7 +208,7 @@ export let states = [
         dropdown={
           <DatePicker todayActive dateSelected="single" dateRange="week-4" />
         }
-        dateDefaultValue="06/24/2020"
+        dateDefaultValue="06/24/2021"
         listboxData={PlainTimeOptions}
       />
     )
@@ -223,7 +229,7 @@ export let states = [
           />
         }
         dropdownIsOpen={false}
-        dateDefaultValue="06/24/2020"
+        dateDefaultValue="06/24/2021"
         isOpen
         hasFocus
         listboxData={PlainTimeOptionsSelected}

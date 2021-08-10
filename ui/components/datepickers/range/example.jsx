@@ -72,7 +72,7 @@ export let states = [
           todayActive
           dateSelected="single"
           dateRange="week-4"
-          defaultValue="06/24/2020"
+          defaultValue="06/24/2021"
         />
         <DatePickerElement
           idPrefix="rangeSelected_end"
@@ -91,7 +91,7 @@ export let states = [
           idPrefix="rangeWeekSame_start"
           labelContent="Start Date"
           dateInputId={`${dateRangeInputId01}-end_selected`}
-          defaultValue="06/24/2020"
+          defaultValue="06/24/2021"
         />
         <DatePickerElement
           idPrefix="rangeWeekSame_end"
@@ -115,7 +115,7 @@ export let states = [
           idPrefix="rangeWeekDiff_start"
           labelContent="Start Date"
           dateInputId={`${dateRangeInputId01}-end_selected_diff_week`}
-          defaultValue="06/24/2020"
+          defaultValue="06/24/2021"
         />
         <DatePickerElement
           idPrefix="rangeWeekDiff_end"
@@ -140,7 +140,7 @@ export let states = [
           idPrefix="rangeToday_start"
           labelContent="Start Date"
           dateInputId={`${dateRangeInputId01}-today_in_range`}
-          defaultValue="06/24/2020"
+          defaultValue="06/24/2021"
         />
         <DatePickerElement
           idPrefix="rangeToday_end"
@@ -218,7 +218,7 @@ export let examples = [
             todayActive
             dateSelected="single"
             dateRange="week-4"
-            defaultValue="06/24/2020"
+            defaultValue="06/24/2021"
           />
           <DatePickerElement
             idPrefix="tableRangeSelected_end"
@@ -239,7 +239,7 @@ export let examples = [
             idPrefix="tableRangeWeekSame_start"
             labelContent="Start Date"
             dateInputId={`${dateRangeInputId01}-table-end_selected`}
-            defaultValue="06/24/2020"
+            defaultValue="06/24/2021"
           />
           <DatePickerElement
             idPrefix="tableRangeWeekSame_end"
@@ -265,7 +265,7 @@ export let examples = [
             idPrefix="tableRangeWeekDiff_start"
             labelContent="Start Date"
             dateInputId={`${dateRangeInputId01}-table-end_selected_diff_week`}
-            defaultValue="06/24/2020"
+            defaultValue="06/24/2021"
           />
           <DatePickerElement
             idPrefix="tableRangeWeekDiff_end"
@@ -292,7 +292,7 @@ export let examples = [
             idPrefix="tableRangeToday_start"
             labelContent="Start Date"
             dateInputId={`${dateRangeInputId01}-table-today_in_range`}
-            defaultValue="06/24/2020"
+            defaultValue="06/24/2021"
           />
           <DatePickerElement
             idPrefix="tableRangeToday_end"

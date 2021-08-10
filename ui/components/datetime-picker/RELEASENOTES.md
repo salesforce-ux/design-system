@@ -4,6 +4,11 @@
 
 <!-- ## [Unreleased] -->
 
+## 2.17.0
+### Fixed
+
+- Fixed missing attribute `required` on date input
+
 ## 2.16.0
 ### Added
 

@@ -83,7 +83,8 @@ export const FormElementLabel = props => {
     hasHiddenLabel,
     labelId,
     labelClassName,
-    inputId
+    inputId,
+    showRequiredIndicator
   } = props;
 
   return (
@@ -96,11 +97,12 @@ export const FormElementLabel = props => {
       htmlFor={inputId}
       id={labelId}
     >
-      {isRequired && (
-        <abbr className="slds-required" title="required">
-          *{' '}
-        </abbr>
-      )}
+      {(isRequired && showRequiredIndicator) &&
+        (
+          <abbr className="slds-required" title="required">
+            *{' '}
+          </abbr>
+        )}
       {labelContent}
     </label>
   );
@@ -112,19 +114,28 @@ FormElementLabel.propTypes = {
   labelContent: PropTypes.node,
   labelClassName: PropTypes.string,
   hasHiddenLabel: PropTypes.bool,
-  isRequired: PropTypes.bool
+  isRequired: PropTypes.bool,
+  showRequiredIndicator: PropTypes.bool
+};
+
+FormElementLabel.defaultProps = {
+  showRequiredIndicator: true
 };
 
 export const FormElementSpanFauxLabel = props => {
-  const { isRequired, children, labelId } = props;
+  const { isRequired, children, labelId, showRequiredIndicator } = props;
+  FormElementSpanFauxLabel.defaultProps = {
+    showRequiredIndicator: true
+  };
 
   return (
     <span id={labelId} className="slds-form-element__label">
-      {isRequired && (
-        <abbr className="slds-required" title="required">
-          *{' '}
-        </abbr>
-      )}
+      {(isRequired && showRequiredIndicator) &&
+        (
+          <abbr className="slds-required" title="required">
+            *{' '}
+          </abbr>
+        )}
       {children}
     </span>
   );
@@ -341,6 +352,7 @@ export const FormElement = props => {
     column,
     role,
     dropdown,
+    showRequiredIndicator,
     children,
     ...rest
   } = props;
@@ -391,6 +403,7 @@ export const FormElement = props => {
             labelId={labelId}
             labelClassName={labelClassName}
             inputId={inputId}
+            showRequiredIndicator={showRequiredIndicator}
           />
         ))}
       {hasTooltip && <FormElementTooltip showTooltip={showTooltip} />}

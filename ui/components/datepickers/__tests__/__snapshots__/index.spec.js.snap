@@ -141,13 +141,13 @@ exports[`Date Picker renders a Date Picker in a Data Table 1`] = `
                     id="pickerInTable_select"
                   >
                     <option>
-                      2020
-                    </option>
-                    <option>
                       2021
                     </option>
                     <option>
                       2022
+                    </option>
+                    <option>
+                      2023
                     </option>
                   </select>
                 </div>
@@ -703,7 +703,7 @@ exports[`Date Picker renders a Date Picker with Date selected 1`] = `
   >
     <input
       className="slds-input"
-      defaultValue="06/24/2020"
+      defaultValue="06/24/2021"
       id="date-input-id-day_selected"
       placeholder=" "
       type="text"
@@ -812,13 +812,13 @@ exports[`Date Picker renders a Date Picker with Date selected 1`] = `
             id="pickerDaySelected_select"
           >
             <option>
-              2020
-            </option>
-            <option>
               2021
             </option>
             <option>
               2022
+            </option>
+            <option>
+              2023
             </option>
           </select>
         </div>
@@ -1499,13 +1499,13 @@ exports[`Date Picker renders a Date Picker with Range - Current and adjacent mon
                       id="rangeSpanMonth_start_select"
                     >
                       <option>
-                        2020
-                      </option>
-                      <option>
                         2021
                       </option>
                       <option>
                         2022
+                      </option>
+                      <option>
+                        2023
                       </option>
                     </select>
                   </div>
@@ -2163,13 +2163,13 @@ exports[`Date Picker renders a Date Picker with Range - Current and adjacent mon
                       id="rangeSpanMonth_end_select"
                     >
                       <option>
-                        2020
-                      </option>
-                      <option>
                         2021
                       </option>
                       <option>
                         2022
+                      </option>
+                      <option>
+                        2023
                       </option>
                     </select>
                   </div>
@@ -2873,13 +2873,13 @@ exports[`Date Picker renders a Date Picker with Range - Current and adjacent mon
                               id="tableRangeSpanMonth_start_select"
                             >
                               <option>
-                                2020
-                              </option>
-                              <option>
                                 2021
                               </option>
                               <option>
                                 2022
+                              </option>
+                              <option>
+                                2023
                               </option>
                             </select>
                           </div>
@@ -3537,13 +3537,13 @@ exports[`Date Picker renders a Date Picker with Range - Current and adjacent mon
                               id="tableRangeSpanMonth_end_select"
                             >
                               <option>
-                                2020
-                              </option>
-                              <option>
                                 2021
                               </option>
                               <option>
                                 2022
+                              </option>
+                              <option>
+                                2023
                               </option>
                             </select>
                           </div>
@@ -4250,13 +4250,13 @@ exports[`Date Picker renders a Date Picker with Range - Default in a Data Table 
                               id="tableRangeDefault_start_select"
                             >
                               <option>
-                                2020
-                              </option>
-                              <option>
                                 2021
                               </option>
                               <option>
                                 2022
+                              </option>
+                              <option>
+                                2023
                               </option>
                             </select>
                           </div>
@@ -4913,13 +4913,13 @@ exports[`Date Picker renders a Date Picker with Range - Default in a Data Table 
                               id="tableRangeDefault_end_select"
                             >
                               <option>
-                                2020
-                              </option>
-                              <option>
                                 2021
                               </option>
                               <option>
                                 2022
+                              </option>
+                              <option>
+                                2023
                               </option>
                             </select>
                           </div>
@@ -5500,7 +5500,7 @@ exports[`Date Picker renders a Date Picker with Range - End date selected (Diffe
             >
               <input
                 className="slds-input"
-                defaultValue="06/24/2020"
+                defaultValue="06/24/2021"
                 id="date-input-id-01-end_selected_diff_week"
                 placeholder=" "
                 type="text"
@@ -5609,13 +5609,13 @@ exports[`Date Picker renders a Date Picker with Range - End date selected (Diffe
                       id="rangeWeekDiff_start_select"
                     >
                       <option>
-                        2020
-                      </option>
-                      <option>
                         2021
                       </option>
                       <option>
                         2022
+                      </option>
+                      <option>
+                        2023
                       </option>
                     </select>
                   </div>
@@ -6273,13 +6273,13 @@ exports[`Date Picker renders a Date Picker with Range - End date selected (Diffe
                       id="rangeWeekDiff_end_select"
                     >
                       <option>
-                        2020
-                      </option>
-                      <option>
                         2021
                       </option>
                       <option>
                         2022
+                      </option>
+                      <option>
+                        2023
                       </option>
                     </select>
                   </div>
@@ -6874,7 +6874,7 @@ exports[`Date Picker renders a Date Picker with Range - End date selected (Diffe
                     >
                       <input
                         className="slds-input"
-                        defaultValue="06/24/2020"
+                        defaultValue="06/24/2021"
                         id="date-input-id-01-table-end_selected_diff_week"
                         placeholder=" "
                         type="text"
@@ -6983,13 +6983,13 @@ exports[`Date Picker renders a Date Picker with Range - End date selected (Diffe
                               id="tableRangeWeekDiff_start_select"
                             >
                               <option>
-                                2020
-                              </option>
-                              <option>
                                 2021
                               </option>
                               <option>
                                 2022
+                              </option>
+                              <option>
+                                2023
                               </option>
                             </select>
                           </div>
@@ -7647,13 +7647,13 @@ exports[`Date Picker renders a Date Picker with Range - End date selected (Diffe
                               id="tableRangeWeekDiff_end_select"
                             >
                               <option>
-                                2020
-                              </option>
-                              <option>
                                 2021
                               </option>
                               <option>
                                 2022
+                              </option>
+                              <option>
+                                2023
                               </option>
                             </select>
                           </div>
@@ -8234,7 +8234,7 @@ exports[`Date Picker renders a Date Picker with Range - End date selected (Same 
             >
               <input
                 className="slds-input"
-                defaultValue="06/24/2020"
+                defaultValue="06/24/2021"
                 id="date-input-id-01-end_selected"
                 placeholder=" "
                 type="text"
@@ -8343,13 +8343,13 @@ exports[`Date Picker renders a Date Picker with Range - End date selected (Same 
                       id="rangeWeekSame_start_select"
                     >
                       <option>
-                        2020
-                      </option>
-                      <option>
                         2021
                       </option>
                       <option>
                         2022
+                      </option>
+                      <option>
+                        2023
                       </option>
                     </select>
                   </div>
@@ -9007,13 +9007,13 @@ exports[`Date Picker renders a Date Picker with Range - End date selected (Same 
                       id="rangeWeekSame_end_select"
                     >
                       <option>
-                        2020
-                      </option>
-                      <option>
                         2021
                       </option>
                       <option>
                         2022
+                      </option>
+                      <option>
+                        2023
                       </option>
                     </select>
                   </div>
@@ -9608,7 +9608,7 @@ exports[`Date Picker renders a Date Picker with Range - End date selected (Same 
                     >
                       <input
                         className="slds-input"
-                        defaultValue="06/24/2020"
+                        defaultValue="06/24/2021"
                         id="date-input-id-01-table-end_selected"
                         placeholder=" "
                         type="text"
@@ -9717,13 +9717,13 @@ exports[`Date Picker renders a Date Picker with Range - End date selected (Same 
                               id="tableRangeWeekSame_start_select"
                             >
                               <option>
-                                2020
-                              </option>
-                              <option>
                                 2021
                               </option>
                               <option>
                                 2022
+                              </option>
+                              <option>
+                                2023
                               </option>
                             </select>
                           </div>
@@ -10381,13 +10381,13 @@ exports[`Date Picker renders a Date Picker with Range - End date selected (Same 
                               id="tableRangeWeekSame_end_select"
                             >
                               <option>
-                                2020
-                              </option>
-                              <option>
                                 2021
                               </option>
                               <option>
                                 2022
+                              </option>
+                              <option>
+                                2023
                               </option>
                             </select>
                           </div>
@@ -10968,7 +10968,7 @@ exports[`Date Picker renders a Date Picker with Range - Start date selected 1`] 
             >
               <input
                 className="slds-input"
-                defaultValue="06/24/2020"
+                defaultValue="06/24/2021"
                 id="date-input-id-01-start_selected"
                 placeholder=" "
                 type="text"
@@ -11077,13 +11077,13 @@ exports[`Date Picker renders a Date Picker with Range - Start date selected 1`] 
                       id="rangeSelected_start_select"
                     >
                       <option>
-                        2020
-                      </option>
-                      <option>
                         2021
                       </option>
                       <option>
                         2022
+                      </option>
+                      <option>
+                        2023
                       </option>
                     </select>
                   </div>
@@ -11740,13 +11740,13 @@ exports[`Date Picker renders a Date Picker with Range - Start date selected 1`] 
                       id="rangeSelected_end_select"
                     >
                       <option>
-                        2020
-                      </option>
-                      <option>
                         2021
                       </option>
                       <option>
                         2022
+                      </option>
+                      <option>
+                        2023
                       </option>
                     </select>
                   </div>
@@ -12341,7 +12341,7 @@ exports[`Date Picker renders a Date Picker with Range - Start date selected in a
                     >
                       <input
                         className="slds-input"
-                        defaultValue="06/24/2020"
+                        defaultValue="06/24/2021"
                         id="date-input-id-01-table-start_selected"
                         placeholder=" "
                         type="text"
@@ -12450,13 +12450,13 @@ exports[`Date Picker renders a Date Picker with Range - Start date selected in a
                               id="tableRangeSelected_start_select"
                             >
                               <option>
-                                2020
-                              </option>
-                              <option>
                                 2021
                               </option>
                               <option>
                                 2022
+                              </option>
+                              <option>
+                                2023
                               </option>
                             </select>
                           </div>
@@ -13113,13 +13113,13 @@ exports[`Date Picker renders a Date Picker with Range - Start date selected in a
                               id="tableRangeSelected_end_select"
                             >
                               <option>
-                                2020
-                              </option>
-                              <option>
                                 2021
                               </option>
                               <option>
                                 2022
+                              </option>
+                              <option>
+                                2023
                               </option>
                             </select>
                           </div>
@@ -13700,7 +13700,7 @@ exports[`Date Picker renders a Date Picker with Range - Today - In selected rang
             >
               <input
                 className="slds-input"
-                defaultValue="06/24/2020"
+                defaultValue="06/24/2021"
                 id="date-input-id-01-today_in_range"
                 placeholder=" "
                 type="text"
@@ -13809,13 +13809,13 @@ exports[`Date Picker renders a Date Picker with Range - Today - In selected rang
                       id="rangeToday_start_select"
                     >
                       <option>
-                        2020
-                      </option>
-                      <option>
                         2021
                       </option>
                       <option>
                         2022
+                      </option>
+                      <option>
+                        2023
                       </option>
                     </select>
                   </div>
@@ -14473,13 +14473,13 @@ exports[`Date Picker renders a Date Picker with Range - Today - In selected rang
                       id="rangeToday_end_select"
                     >
                       <option>
-                        2020
-                      </option>
-                      <option>
                         2021
                       </option>
                       <option>
                         2022
+                      </option>
+                      <option>
+                        2023
                       </option>
                     </select>
                   </div>
@@ -15074,7 +15074,7 @@ exports[`Date Picker renders a Date Picker with Range - Today - In selected rang
                     >
                       <input
                         className="slds-input"
-                        defaultValue="06/24/2020"
+                        defaultValue="06/24/2021"
                         id="date-input-id-01-table-today_in_range"
                         placeholder=" "
                         type="text"
@@ -15183,13 +15183,13 @@ exports[`Date Picker renders a Date Picker with Range - Today - In selected rang
                               id="tableRangeToday_start_select"
                             >
                               <option>
-                                2020
-                              </option>
-                              <option>
                                 2021
                               </option>
                               <option>
                                 2022
+                              </option>
+                              <option>
+                                2023
                               </option>
                             </select>
                           </div>
@@ -15847,13 +15847,13 @@ exports[`Date Picker renders a Date Picker with Range - Today - In selected rang
                               id="tableRangeToday_end_select"
                             >
                               <option>
-                                2020
-                              </option>
-                              <option>
                                 2021
                               </option>
                               <option>
                                 2022
+                              </option>
+                              <option>
+                                2023
                               </option>
                             </select>
                           </div>
@@ -16522,13 +16522,13 @@ exports[`Date Picker renders a Date Picker with error 1`] = `
             id="pickerWithError_select"
           >
             <option>
-              2020
-            </option>
-            <option>
               2021
             </option>
             <option>
               2022
+            </option>
+            <option>
+              2023
             </option>
           </select>
         </div>
@@ -17111,6 +17111,7 @@ exports[`Date Picker renders a Date Picker with required 1`] = `
       className="slds-input"
       id="date-input-id-required"
       placeholder=" "
+      required={true}
       type="text"
     />
     <button
@@ -17217,13 +17218,13 @@ exports[`Date Picker renders a Date Picker with required 1`] = `
             id="pickerRequired_select"
           >
             <option>
-              2020
-            </option>
-            <option>
               2021
             </option>
             <option>
               2022
+            </option>
+            <option>
+              2023
             </option>
           </select>
         </div>
@@ -17784,6 +17785,7 @@ exports[`Date Picker renders a Date Picker with required and error 1`] = `
       className="slds-input"
       id="date-input-id-required"
       placeholder=" "
+      required={true}
       type="text"
     />
     <button
@@ -17890,13 +17892,13 @@ exports[`Date Picker renders a Date Picker with required and error 1`] = `
             id="pickerRequired_select"
           >
             <option>
-              2020
-            </option>
-            <option>
               2021
             </option>
             <option>
               2022
+            </option>
+            <option>
+              2023
             </option>
           </select>
         </div>
@@ -18574,13 +18576,13 @@ exports[`Date Picker renders a Date picker with an error in a Data Table 1`] = `
                     id="pickerInTable-error_select"
                   >
                     <option>
-                      2020
-                    </option>
-                    <option>
                       2021
                     </option>
                     <option>
                       2022
+                    </option>
+                    <option>
+                      2023
                     </option>
                   </select>
                 </div>
@@ -19154,7 +19156,7 @@ exports[`Date Picker renders a Date picker with date selected in a Data Table 1`
           >
             <input
               className="slds-input"
-              defaultValue="06/24/2020"
+              defaultValue="06/24/2021"
               id="date-input-id-table"
               placeholder=" "
               type="text"
@@ -19263,13 +19265,13 @@ exports[`Date Picker renders a Date picker with date selected in a Data Table 1`
                     id="pickerInTable-selected_select"
                   >
                     <option>
-                      2020
-                    </option>
-                    <option>
                       2021
                     </option>
                     <option>
                       2022
+                    </option>
+                    <option>
+                      2023
                     </option>
                   </select>
                 </div>
@@ -19933,13 +19935,13 @@ exports[`Date Picker renders a default datetime picker 1`] = `
             id="defaultPicker_select"
           >
             <option>
-              2020
-            </option>
-            <option>
               2021
             </option>
             <option>
               2022
+            </option>
+            <option>
+              2023
             </option>
           </select>
         </div>

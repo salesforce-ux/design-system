@@ -143,13 +143,13 @@ exports[`Datetime Picker renders a default datetime picker 1`] = `
                       id="undefined_select"
                     >
                       <option>
-                        2020
-                      </option>
-                      <option>
                         2021
                       </option>
                       <option>
                         2022
+                      </option>
+                      <option>
+                        2023
                       </option>
                     </select>
                   </div>
@@ -957,7 +957,7 @@ exports[`Datetime Picker renders with a date selection 1`] = `
             >
               <input
                 className="slds-input"
-                defaultValue="06/24/2020"
+                defaultValue="06/24/2021"
                 id="example-unique-id-7"
                 placeholder="Select a date…"
                 type="text"
@@ -1066,13 +1066,13 @@ exports[`Datetime Picker renders with a date selection 1`] = `
                       id="undefined_select"
                     >
                       <option>
-                        2020
-                      </option>
-                      <option>
                         2021
                       </option>
                       <option>
                         2022
+                      </option>
+                      <option>
+                        2023
                       </option>
                     </select>
                   </div>
@@ -1891,6 +1891,7 @@ exports[`Datetime Picker renders with a required plus error state 1`] = `
                 className="slds-input"
                 id="example-unique-id-19"
                 placeholder="Select a date…"
+                required={true}
                 type="text"
               />
               <button
@@ -1997,13 +1998,13 @@ exports[`Datetime Picker renders with a required plus error state 1`] = `
                       id="undefined_select"
                     >
                       <option>
-                        2020
-                      </option>
-                      <option>
                         2021
                       </option>
                       <option>
                         2022
+                      </option>
+                      <option>
+                        2023
                       </option>
                     </select>
                   </div>
@@ -2826,6 +2827,7 @@ exports[`Datetime Picker renders with a required state 1`] = `
                 className="slds-input"
                 id="example-unique-id-13"
                 placeholder="Select a date…"
+                required={true}
                 type="text"
               />
               <button
@@ -2932,13 +2934,13 @@ exports[`Datetime Picker renders with a required state 1`] = `
                       id="undefined_select"
                     >
                       <option>
-                        2020
-                      </option>
-                      <option>
                         2021
                       </option>
                       <option>
                         2022
+                      </option>
+                      <option>
+                        2023
                       </option>
                     </select>
                   </div>
@@ -3854,13 +3856,13 @@ exports[`Datetime Picker renders with a small width container 1`] = `
                       id="undefined_select"
                     >
                       <option>
-                        2020
-                      </option>
-                      <option>
                         2021
                       </option>
                       <option>
                         2022
+                      </option>
+                      <option>
+                        2023
                       </option>
                     </select>
                   </div>
@@ -4668,7 +4670,7 @@ exports[`Datetime Picker renders with a time selection 1`] = `
             >
               <input
                 className="slds-input"
-                defaultValue="06/24/2020"
+                defaultValue="06/24/2021"
                 id="example-unique-id-10"
                 placeholder="Select a date…"
                 type="text"
@@ -4777,13 +4779,13 @@ exports[`Datetime Picker renders with a time selection 1`] = `
                       id="undefined_select"
                     >
                       <option>
-                        2020
-                      </option>
-                      <option>
                         2021
                       </option>
                       <option>
                         2022
+                      </option>
+                      <option>
+                        2023
                       </option>
                     </select>
                   </div>
@@ -5715,13 +5717,13 @@ exports[`Datetime Picker renders with an error state 1`] = `
                       id="undefined_select"
                     >
                       <option>
-                        2020
-                      </option>
-                      <option>
                         2021
                       </option>
                       <option>
                         2022
+                      </option>
+                      <option>
+                        2023
                       </option>
                     </select>
                   </div>

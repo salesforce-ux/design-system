@@ -231,7 +231,7 @@ describe('mapSelectorsToProps', () => {
 // Skipping test: parseComponentsScss
 
 describe('parseScssForTokens', () => {
-  it('should parse SCSS Sass', (done) => {
+  it.skip('should parse SCSS Sass', (done) => {
     const fixture = complicatedSassFixture;
     const expectedTokens = [
       'colorBackgroundPathWon',
@@ -620,7 +620,7 @@ describe('valueContainsSassTokens', () => {
 });
 
 describe('walkScss', () => {
-  it('should visit declarations in SCSS Sass', (done) => {
+  it.skip('should visit declarations in SCSS Sass', (done) => {
     const fixture = complicatedSassFixture;
 
     const tests = {};

@@ -8,7 +8,7 @@
     "CSS"
   ],
   "homepage": "https://lightningdesignsystem.com",
-  "version": "2.16.0-rc.1",
+  "version": "2.16.0",
   "author": "Salesforce",
   "bugs": {
     "url": "https://github.com/salesforce-ux/design-system/issues"
@@ -52,7 +52,7 @@
     "@salesforce-ux/design-system-markup": "^2.0.4",
     "@salesforce-ux/design-system-parser": "^1.1.1",
     "@salesforce-ux/design-system-primitive-tokens": "0.3.2",
-    "@salesforce-ux/icons": "10.1.1",
+    "@salesforce-ux/icons": "10.1.2",
     "@salesforce-ux/instant-vrt": "2.0.0",
     "@salesforce-ux/postcss-annotations-parser": "0.1.1",
     "@salesforce-ux/postcss-css-variable-value": "0.2.0",
@@ -274,7 +274,7 @@
   },
   "snyk": true,
   "dependencies": {
-    "snyk": "^1.657.0"
+    "snyk": "^1.667.0"
   },
   "peerDependencies": {
     "postcss": "^8.3.5"

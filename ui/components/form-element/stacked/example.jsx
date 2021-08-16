@@ -124,17 +124,5 @@ export let examples = [
         hasInlineEdit
       />
     ),
-  },
-  {
-    id: 'stacked-single-column',
-    label: `${stackedContext} - 1 column Read Only`,
-    context: `${stackedContext}`,
-    element: (
-      <RecordDetail
-        direction="stacked"
-        snapshot={Snapshot.ObjectFieldTypesSingleColumn}
-        isViewMode
-      />
-    ),
-  },
+  }
 ];

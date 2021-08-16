@@ -130,18 +130,6 @@ export let examples = [
     ),
   },
   {
-    id: 'horizontal-single-column',
-    label: `${horizontalContext} - 1 column - Read Only Mode`,
-    element: (
-      <RecordDetail
-        direction="horizontal"
-        snapshot={Snapshot.ObjectFieldTypesSingleColumn}
-        isViewMode
-      />
-    ),
-  },
-
-  {
     id: 'horizontal',
     label: `${horizontalContext} - View Mode`,
     element: (

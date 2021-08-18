@@ -361,7 +361,6 @@ jobs:
             --header 'Content-Type: application/json' \
             --header 'Authorization: Bearer '"$DSE_API_RELEASE_TOKEN"'' \
             --data-raw '{
-                "sha": "'"$CIRCLE_SHA1"'",
                 "version":"'"$VERSION_FROM_TAG"'",
                 "salesforce_version": "'"$SALESFORCE_VERSION"'"
             }'

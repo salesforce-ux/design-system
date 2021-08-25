@@ -3,6 +3,8 @@
 
 ## 2.17.0 - Upcoming
 
+## 2.16.1 - August 25, 2021
+
 ## 2.16.0 - August 12, 2021
 
 - In accordance with ARIA 1.2 guidance, the `input` was replaced with `button` within these components that contain select-only comboboxes:

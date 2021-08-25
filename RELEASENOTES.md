@@ -20,6 +20,8 @@
 #### Changed
 - Labels will no longer wrap below the radio button. When the label text wraps, it will now go directly under the previous line.
 
+## Release 2.16.1 - August 25, 2021
+
 ## Release 2.16.0 - August 12, 2021
 
 - In accordance with ARIA 1.2 guidance, the `input` was replaced with `button` within these components that contain select-only comboboxes:

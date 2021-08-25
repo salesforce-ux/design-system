@@ -1,6 +1,8 @@
 <!-- Release notes authoring guidelines: http://keepachangelog.com/ -->
 <!-- On release, add general notes here. In time the legacy release notes will be add to this -->
 
+## 2.16.1 - August 25, 2021
+
 ## 2.16.0 - August 12, 2021
 
 - In accordance with ARIA 1.2 guidance, the `input` was replaced with `button` within these components that contain select-only comboboxes:

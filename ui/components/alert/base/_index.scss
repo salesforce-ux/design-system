@@ -62,6 +62,15 @@ $alert-gradient-size-background: 64px 64px;
 }
 
 /**
+ * @summary Initializes notification
+ * @selector .slds-notify
+ * @restrict .slds-notify_container div
+ */
+ .slds-notify {
+  /* Empty annotation for validator */
+}
+
+/**
  * @summary Sets styling for warning alert notification
  * @selector .slds-alert_warning
  * @restrict .slds-notify_alert

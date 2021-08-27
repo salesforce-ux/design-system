@@ -30,4 +30,8 @@ describe('Timepicker', () => {
 
   it('renders required plus error state', () =>
     matchesMarkup(getDisplayElementById(Timepicker.states, 'required-error')));
+
+  it('renders a disabled state', () =>
+    matchesMarkup(getDisplayElementById(Timepicker.states, 'disabled')));
+
 });

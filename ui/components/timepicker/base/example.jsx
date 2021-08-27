@@ -23,7 +23,8 @@ const ExampleTimepicker = ({
   isOpen,
   listboxData,
   hasError,
-  isRequired
+  isRequired,
+  isDisabled
 }) => {
   const focusedRef = useRef();
   const [focusedId, setFocusedId] = useState('');
@@ -64,7 +65,8 @@ const ExampleTimepicker = ({
             className={classNames(
               'slds-icon slds-icon_x-small slds-icon-text-default',
               {
-                'slds-icon-text-error': hasError
+                'slds-icon-text-error': hasError,
+                'slds-is-disabled': isDisabled
               }
             )}
             containerClassName="slds-input__icon slds-input__icon_right"
@@ -88,6 +90,7 @@ const ExampleTimepicker = ({
         isOpen={isOpen}
         hasError={hasError}
         isRequired={isRequired}
+        isDisabled={isDisabled}
         value={focusedValue}
       />
       {hasError && (
@@ -104,6 +107,7 @@ ExampleTimepicker.propTypes = {
   isOpen: PropTypes.bool,
   hasError: PropTypes.bool,
   isRequired: PropTypes.bool,
+  isDisabled: PropTypes.bool,
   listboxData: PropTypes.object
 };
 
@@ -159,6 +163,15 @@ export let states = [
     label: 'Required with Error',
     element: (
       <ExampleTimepicker listboxData={PlainTimeOptions} isRequired hasError />
+    )
+  },
+  {
+    id: 'disabled',
+    label: 'Disabled',
+    demoStyles: 'min-height: 8rem;',
+    storybookStyles: true,
+    element: (
+      <ExampleTimepicker listboxData={PlainTimeOptions} isDisabled />
     )
   }
 ];

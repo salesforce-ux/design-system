@@ -36,6 +36,14 @@ describe('Date Picker', () => {
       )
     ));
 
+  it('renders a disabled Date picker', () =>
+    matchesMarkup(
+      getDisplayElementById(
+        BaseExamples.states,
+        'datepicker-disabled'
+      )
+    ));
+
   it('renders a Date Picker with mobile layout', () =>
     matchesMarkup(getDisplayElementById(BaseExamples.examples, 'mobile')));
 

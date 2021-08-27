@@ -169,6 +169,18 @@ $bg-standard-map: map-merge($task2-monkey-patch, $bg-standard-map);
  */
 .slds-icon-text-default {
   fill: var(--sds-c-icon-color-foreground-default, $color-text-icon-default);
+
+  /**
+  * @summary Changes the icon fill color to match the disabled state
+  *
+  * @selector .slds-is-disabled
+  * @restrict .slds-icon
+  * @modifier
+  * @group color
+  */
+  &.slds-is-disabled {
+    fill: $color-text-icon-default-disabled;
+  }
 }
 
 /**

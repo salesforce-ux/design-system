@@ -211,6 +211,7 @@ const ComboboxInput = ({
           tabIndex={tabIndex}
           onFocus={e => toggleFocus(e)}
           onBlur={e => toggleFocus(e)}
+          disabled={isDisabled}
         />
       )}
       {rightInputIcon && rightInputIcon}
@@ -446,6 +447,7 @@ export class ComboboxGroup extends Component {
       id,
       inputContainerClassName,
       inputIconPosition,
+      isDisabled,
       isLoading,
       isOpen,
       label,
@@ -501,6 +503,7 @@ export class ComboboxGroup extends Component {
                 aria-activedescendant={this.props['aria-activedescendant']}
                 autoFocus={autoFocus}
                 resultsType={resultsType}
+                isDisabled={isDisabled}
               />
               {results}
             </ComboboxFormElement>

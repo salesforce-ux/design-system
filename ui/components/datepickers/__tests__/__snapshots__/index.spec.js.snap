@@ -20477,3 +20477,47 @@ exports[`Date Picker renders a default datetime picker 1`] = `
   </div>
 </div>
 `;
+
+exports[`Date Picker renders a disabled Date picker 1`] = `
+<div
+  className="slds-form-element slds-dropdown-trigger slds-dropdown-trigger_clickundefined"
+>
+  <label
+    className="slds-form-element__label"
+    htmlFor="date-input-id-table"
+  >
+    Date
+  </label>
+  <div
+    className="slds-form-element__control slds-input-has-icon slds-input-has-icon_right"
+  >
+    <input
+      className="slds-input"
+      disabled={true}
+      id="date-input-id-table"
+      placeholder=" "
+      type="text"
+    />
+    <button
+      className="slds-button slds-button_icon slds-input__icon slds-input__icon_right"
+      disabled={true}
+      onClick={[Function]}
+      title="Select a date"
+    >
+      <svg
+        aria-hidden={true}
+        className="slds-button__icon"
+      >
+        <use
+          xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#event"
+        />
+      </svg>
+      <span
+        className="slds-assistive-text"
+      >
+        Select a date
+      </span>
+    </button>
+  </div>
+</div>
+`;

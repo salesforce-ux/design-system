@@ -28,6 +28,7 @@ const ExampleDatetimePicker = ({
   hasError,
   isOpen,
   isRequired,
+  isDisabled,
   listboxData,
   dateDefaultValue,
   showRequiredIndicator
@@ -94,12 +95,14 @@ const ExampleDatetimePicker = ({
                   defaultValue={dateDefaultValue}
                   aria-describedby={hasError && uniqueId + '-error'}
                   required={isRequired}
+                  disabled={isDisabled}
                 />
                 <ButtonIcon
                   className="slds-input__icon slds-input__icon_right"
                   symbol="event"
                   assistiveText="Select a date"
                   title="Select a date"
+                  disabled={isDisabled}
                 />
               </FormElement>
 
@@ -112,6 +115,7 @@ const ExampleDatetimePicker = ({
                 placeholder="Select a time…"
                 inputIconPosition="right"
                 hasError={hasError}
+                isDisabled={isDisabled}
                 // TODO: Combobox and Listbox do not currently have aria-describedby
                 // aria-describedby={hasError && (uniqueId + "-error")}
 
@@ -121,7 +125,8 @@ const ExampleDatetimePicker = ({
                     className={classNames(
                       'slds-icon slds-icon_x-small slds-icon-text-default',
                       {
-                        'slds-icon-text-error': hasError
+                        'slds-icon-text-error': hasError,
+                        'slds-is-disabled': isDisabled
                       }
                     )}
                     containerClassName="slds-input__icon slds-input__icon_right"
@@ -168,13 +173,15 @@ ExampleDatetimePicker.propTypes = {
   listboxIsOpen: PropTypes.bool,
   listboxData: PropTypes.object.isRequired,
   dateDefaultValue: PropTypes.string,
-  showRequiredIndicator: PropTypes.bool
+  showRequiredIndicator: PropTypes.bool,
+  isDisabled: PropTypes.bool
 };
 
 ExampleDatetimePicker.defaultProps = {
   dropdown: <DatePicker todayActive />,
   dropdownIsOpen: true,
-  showRequiredIndicator: false
+  showRequiredIndicator: false,
+  isDisabled: false
 };
 
 /* -----------------------------------------------------------------------------
@@ -270,6 +277,19 @@ export let states = [
         isRequired
         hasError
         listboxData={PlainTimeOptions}
+      />
+    )
+  },
+  {
+    id: 'disabled',
+    label: 'Date and Time - disabled',
+    demoStyles: 'height: 10rem;',
+    storybookStyles: true,
+    element: (
+      <ExampleDatetimePicker
+        dropdownIsOpen={false}
+        listboxData={PlainTimeOptions}
+        isDisabled
       />
     )
   }

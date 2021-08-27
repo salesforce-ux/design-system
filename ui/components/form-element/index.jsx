@@ -309,6 +309,7 @@ Legend.propTypes = {
  * @prop {string}  formElementClassName - Classnames to be added to the overall Form Element wrapper
  * @prop {string}  formControlClassName - Classnames to be added to the Form Element Control
  * @prop {boolean} isRequired - If true, required asterisk is added to element
+ * @prop {boolean} isDisabled - If true, element receives disabled attributes
  * @prop {string}  labelId - ID of the label
  * @prop {string}  labelClassName - Classnames to be added to the Form Element Label
  * @prop {object}  labelContent - Content of the label, can be a simple string or full object
@@ -328,6 +329,7 @@ export const FormElement = props => {
     formElementClassName,
     formControlClassName,
     isRequired,
+    isDisabled,
     isEditable,
     isViewMode,
     isStacked,
@@ -434,6 +436,7 @@ FormElement.propTypes = {
   errorId: PropTypes.string,
   labelContent: PropTypes.node,
   isRequired: PropTypes.bool,
+  isDisabled: PropTypes.bool,
   isEditable: PropTypes.bool,
   isEditing: PropTypes.bool,
   isEdited: PropTypes.bool,

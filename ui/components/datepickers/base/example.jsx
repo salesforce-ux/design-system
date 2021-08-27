@@ -454,15 +454,18 @@ export let DatePickerElement = props => (
     hasRightIcon
     hasError={props.hasError}
     isRequired={props.isRequired}
+    isDisabled={props.isDisabled}
     dropdown={
-      <DatePicker
-        idPrefix={props.idPrefix}
-        todayActive={props.todayActive}
-        todayActiveInRange={props.todayActiveInRange}
-        dateSelected={props.dateSelected}
-        dateRange={props.dateRange}
-        dateRangeMulti={props.dateRangeMulti}
-      />
+      (!props.isDisabled &&
+        <DatePicker
+          idPrefix={props.idPrefix}
+          todayActive={props.todayActive}
+          todayActiveInRange={props.todayActiveInRange}
+          dateSelected={props.dateSelected}
+          dateRange={props.dateRange}
+          dateRangeMulti={props.dateRangeMulti}
+        />
+      )
     }
   >
     <Input
@@ -470,12 +473,14 @@ export let DatePickerElement = props => (
       placeholder=" "
       defaultValue={props.defaultValue}
       required={props.isRequired}
+      disabled={props.isDisabled}
     />
     <ButtonIcon
       className="slds-input__icon slds-input__icon_right"
       symbol="event"
       assistiveText="Select a date"
       title="Select a date"
+      disabled={props.isDisabled}
     />
   </FormElement>
 );
@@ -483,10 +488,6 @@ export let DatePickerElement = props => (
 /* -----------------------------------------------------------------------------
     Exports
 ----------------------------------------------------------------------------- */
-
-export const Context = props => (
-  <div style={{ height: '25rem' }}>{props.children}</div>
-);
 
 export default (
   <DatePickerElement
@@ -555,6 +556,20 @@ export let states = [
         todayActive
         isRequired
         hasError
+      />
+    )
+  },
+  {
+    id: 'datepicker-disabled',
+    label: 'Datepicker - disabled',
+    demoStyles: 'height: 8rem;',
+    storybookStyles: true,
+    element: (
+      <DatePickerElement
+        idPrefix="pickerDisabled"
+        labelContent="Date"
+        dateInputId={dateInputId + '-table'}
+        isDisabled
       />
     )
   }

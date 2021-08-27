@@ -1,5 +1,240 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Timepicker renders a disabled state 1`] = `
+<div
+  className="slds-form-element"
+>
+  <label
+    className="slds-form-element__label"
+    htmlFor="example-unique-id-15"
+    id="combobox-label-id-8"
+  >
+    Time
+  </label>
+  <div
+    className="slds-form-element__control"
+  >
+    <div
+      className="slds-combobox_container"
+    >
+      <div
+        className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click slds-timepicker"
+      >
+        <div
+          className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
+          role="none"
+        >
+          <input
+            aria-activedescendant=""
+            aria-autocomplete="list"
+            aria-controls="example-unique-id-16"
+            aria-expanded="false"
+            aria-haspopup="listbox"
+            autoComplete="off"
+            className="slds-input slds-combobox__input"
+            defaultValue=""
+            disabled={true}
+            id="example-unique-id-15"
+            onBlur={[Function]}
+            onFocus={[Function]}
+            placeholder="Select a time…"
+            role="combobox"
+            type="text"
+          />
+          <span
+            className="slds-icon_container slds-icon-utility-clock slds-input__icon slds-input__icon_right"
+            title={null}
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-icon slds-icon slds-icon_x-small slds-icon-text-default slds-is-disabled"
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#clock"
+              />
+            </svg>
+          </span>
+        </div>
+        <div
+          aria-orientation={null}
+          className="slds-dropdown slds-dropdown_length-5 slds-dropdown_fluid"
+          id="example-unique-id-16"
+          role="listbox"
+        >
+          <ul
+            className="slds-listbox slds-listbox_vertical"
+            role="presentation"
+          >
+            <li
+              className="slds-listbox__item"
+              role="presentation"
+            >
+              <div
+                aria-checked={null}
+                aria-disabled={null}
+                aria-selected={null}
+                className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
+                id="option1"
+                role="option"
+              >
+                <span
+                  className="slds-media__figure slds-listbox__option-icon"
+                />
+                <span
+                  className="slds-media__body"
+                >
+                  <span
+                    className="slds-truncate"
+                    title="7:00am"
+                  >
+                    7:00am
+                  </span>
+                </span>
+              </div>
+            </li>
+            <li
+              className="slds-listbox__item"
+              role="presentation"
+            >
+              <div
+                aria-checked={null}
+                aria-disabled={null}
+                aria-selected={null}
+                className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
+                id="option2"
+                role="option"
+              >
+                <span
+                  className="slds-media__figure slds-listbox__option-icon"
+                />
+                <span
+                  className="slds-media__body"
+                >
+                  <span
+                    className="slds-truncate"
+                    title="8:00am"
+                  >
+                    8:00am
+                  </span>
+                </span>
+              </div>
+            </li>
+            <li
+              className="slds-listbox__item"
+              role="presentation"
+            >
+              <div
+                aria-checked={null}
+                aria-disabled={null}
+                aria-selected={null}
+                className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
+                id="option3"
+                role="option"
+              >
+                <span
+                  className="slds-media__figure slds-listbox__option-icon"
+                />
+                <span
+                  className="slds-media__body"
+                >
+                  <span
+                    className="slds-truncate"
+                    title="9:00am"
+                  >
+                    9:00am
+                  </span>
+                </span>
+              </div>
+            </li>
+            <li
+              className="slds-listbox__item"
+              role="presentation"
+            >
+              <div
+                aria-checked={null}
+                aria-disabled={null}
+                aria-selected={null}
+                className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
+                id="option4"
+                role="option"
+              >
+                <span
+                  className="slds-media__figure slds-listbox__option-icon"
+                />
+                <span
+                  className="slds-media__body"
+                >
+                  <span
+                    className="slds-truncate"
+                    title="10:00am"
+                  >
+                    10:00am
+                  </span>
+                </span>
+              </div>
+            </li>
+            <li
+              className="slds-listbox__item"
+              role="presentation"
+            >
+              <div
+                aria-checked={null}
+                aria-disabled={null}
+                aria-selected={null}
+                className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
+                id="option5"
+                role="option"
+              >
+                <span
+                  className="slds-media__figure slds-listbox__option-icon"
+                />
+                <span
+                  className="slds-media__body"
+                >
+                  <span
+                    className="slds-truncate"
+                    title="11:00am"
+                  >
+                    11:00am
+                  </span>
+                </span>
+              </div>
+            </li>
+            <li
+              className="slds-listbox__item"
+              role="presentation"
+            >
+              <div
+                aria-checked={null}
+                aria-disabled={null}
+                aria-selected={null}
+                className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
+                id="option6"
+                role="option"
+              >
+                <span
+                  className="slds-media__figure slds-listbox__option-icon"
+                />
+                <span
+                  className="slds-media__body"
+                >
+                  <span
+                    className="slds-truncate"
+                    title="12:00pm"
+                  >
+                    12:00pm
+                  </span>
+                </span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Timepicker renders a listbox 1`] = `
 <div
   className="slds-form-element"

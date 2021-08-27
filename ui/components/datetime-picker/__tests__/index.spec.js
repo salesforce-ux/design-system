@@ -37,4 +37,9 @@ describe('Datetime Picker', () => {
     matchesMarkup(
       getDisplayElementById(DatetimePicker.states, 'required-error')
     ));
+
+  it('renders with a disabled state', () =>
+    matchesMarkup(
+      getDisplayElementById(DatetimePicker.states, 'disabled')
+    ));
 });

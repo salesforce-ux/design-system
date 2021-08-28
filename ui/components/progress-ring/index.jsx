@@ -25,14 +25,24 @@ class ProgressRing extends Component {
       isFilling,
       className
     } = this.props;
+
     let adjustedPercent = percent;
     if (isFilling && !isComplete) {
       adjustedPercent = 100 - percent;
     }
+
     const { x, y } = this.getCoordinatesForPercent(adjustedPercent);
     const isLong = percent > 50 ? 1 : 0;
     const isSweep = isFilling && !isComplete ? 0 : 1;
     const uniqueId = _.uniqueId('slds-progress-ring-path-');
+    const viewBoxParams = "-1 -1 2 2";
+    const progressRingRadius = 1;
+    // Since the viewBox units are set to 2, radii are doubled for shape sizes.
+    // For a 6px progress head in a 30 px, we use 0.2 units, instead of 0.1
+    const progressHeadRadius = (6 / 30);
+    // The radius of the circular path the progress head is plotted on is 21 pixels,
+    // 24 pixels from the ring, minus 3px for the radius of the progress head
+    const progressHeadPlotRadius = (21 / 30);
 
     let stateClass;
 
@@ -50,14 +60,14 @@ class ProgressRing extends Component {
           aria-valuemax="100"
           aria-valuenow={percent}
         >
-          <svg viewBox="-1 -1 2 2">
+          <svg viewBox={viewBoxParams}>
             {percent === 100 ? (
               <circle
                 className="slds-progress-ring__path"
                 id={uniqueId}
                 cx="0"
                 cy="0"
-                r="1"
+                r={progressRingRadius}
               />
             ) : (
               <path
@@ -70,6 +80,21 @@ class ProgressRing extends Component {
         </div>
 
         <div className="slds-progress-ring__content">{this.props.children}</div>
+        {![0,100].includes(percent) && (
+          <div
+            className="slds-progress-ring__progress-head"
+          >
+            <svg viewBox={viewBoxParams}>
+              <circle
+                className="slds-progress-ring__path"
+                id={uniqueId}
+                cx={Number(progressHeadPlotRadius * x)}
+                cy={Number(progressHeadPlotRadius * y)}
+                r={progressHeadRadius}
+              />
+            </svg>
+          </div>
+        )}
       </div>
     );
   }

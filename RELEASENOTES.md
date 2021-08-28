@@ -16,6 +16,10 @@
 #### Fixed
 - Fixed missing attribute `required` on date input
 
+### [Progress Ring](https://www.lightningdesignsystem.com/components/progress-ring)
+#### Added
+- Added a shape to the progress ring to better visually indicate value by more than color alone.
+
 ### [Radio Group](https://www.lightningdesignsystem.com/components/radio-group)
 #### Changed
 - Labels will no longer wrap below the radio button. When the label text wraps, it will now go directly under the previous line.

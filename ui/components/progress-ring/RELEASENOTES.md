@@ -2,6 +2,13 @@
 
 # Progress Ring Release Notes
 
+
+## 2.17.0
+
+### Added
+
+- Added a shape to the progress ring to better visually indicate value by more than color alone.
+
 ## 2.15.1
 
 ### Changed

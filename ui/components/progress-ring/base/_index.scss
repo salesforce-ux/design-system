@@ -52,6 +52,26 @@
 }
 
 /**
+ *
+ * @selector .slds-progress-ring__progress-head
+ * @restrict .slds-progress-ring__progress div
+ */
+.slds-progress-ring__progress-head {
+  position: absolute;
+  // the progress head SVG needs to be 3px outset from the ring SVG to prevent the head from being clipped
+  height: calc(100% + 0.375rem);
+  width: calc(100% + 0.375rem);
+  // and the progress head SVG origin needs to be moved in by 3px to align with the ring's origin
+  top: -0.1875rem;
+  left: -0.1875rem;
+  transform: scale(-1, 1) rotate(-90deg);
+
+  svg {
+    width: 100%;
+  }
+}
+
+/**
  * @summary Progress ring content area
  *
  * @selector .slds-progress-ring__content

@@ -83,7 +83,7 @@
     "copy-webpack-plugin": "^5.1.2",
     "css": "2.2.4",
     "css-loader": "3.5.2",
-    "cssnano": "5.0.3",
+    "cssnano": "5.0.8",
     "cssstats": "3.5.0",
     "csv-file-to-json": "4.0.3",
     "data.either": "1.5.2",

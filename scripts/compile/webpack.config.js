@@ -75,10 +75,6 @@ module.exports = I.fromJS({
   },
   plugins: [],
   resolve: {
-    extensions: ['.js', '.jsx'],
-    alias: {
-      // This is intentional. A detailed error will be thrown (see bundle.js)
-      lodash: ''
-    }
+    extensions: ['.js', '.jsx']
   }
 });

@@ -8,10 +8,6 @@ module.exports = {
   appName: 'SLDS',
   matchLevel: 'Strict',
   ignoreDisplacements: true,
-  accessibilityValidation: {
-    level: 'AA',
-    guidelinesVersion: 'WCAG_2_0'
-  },
   properties: [{ name: 'Group', value: 'desktop' }],
   batchName: process.env.CI ? undefined : '',
   branchName: process.env.CI
@@ -25,8 +21,8 @@ module.exports = {
   testConcurrency: 100,
   serverUrl: 'https://salesforceuxeyesapi.applitools.com',
   testBlueprintPattern: '.*',
-  testNamePattern: '^Kitchen Sink',
-  include: function({ name, kind, parameters }) {
+  testNamePattern: '^(?:.+|) ?Sink',
+  include: function({ kind, name }) {
     return (
       new RegExp(this.testBlueprintPattern, 'gi').test(kind) &&
       new RegExp(this.testNamePattern, 'gi').test(name)
@@ -35,7 +31,7 @@ module.exports = {
   puppeteerOptions: process.env.CIRCLECI
     ? { executablePath: '/usr/bin/google-chrome' }
     : undefined,
-  waitBeforeScreenshot: 250,
+  waitBeforeScreenshot: 1000,
   browser: [
     { width: resolution.width, height: resolution.height, name: 'firefox' },
     { width: resolution.width, height: resolution.height, name: 'chrome' },

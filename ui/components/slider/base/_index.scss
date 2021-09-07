@@ -200,7 +200,7 @@
     width: $size-x-small;
     height: $slider-handle-size;
     transform: rotate(-90deg);
-    transform-origin: ($size-x-small / 2) ($size-x-small / 2);
+    transform-origin: ($size-x-small * 0.5) ($size-x-small * 0.5);
   }
 
   .slds-slider__value {

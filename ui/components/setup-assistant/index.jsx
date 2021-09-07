@@ -44,7 +44,7 @@ const sampleBaseSteps = [
     isOpen: true
   },
   {
-    title: 'Learn How to Use Profiles to control Visibility',
+    title: 'Learn How to Use Profiles to Control Visibility',
     description: 'Lorem ipsum dolor sit amet, lorem ipsum dolor.',
     action: {
       type: 'link',
@@ -58,7 +58,7 @@ const sampleBaseSteps = [
     }
   },
   {
-    title: 'Turn on tracking for profiles',
+    title: 'Turn On Tracking for Profiles',
     description: 'Lorem ipsum dolor sit amet, lorem ipsum dolor.',
     action: {
       type: 'toggle',
@@ -135,9 +135,7 @@ const renderExpandableSteps = steps => {
 
 export const SetupAssistantStep = props => (
   <li className="slds-setup-assistant__item">
-    <article className="slds-setup-assistant__step">
-      {props.children}
-    </article>
+    <article className="slds-setup-assistant__step">{props.children}</article>
   </li>
 );
 
@@ -164,7 +162,6 @@ export const FullSetupAssistantCard = props => {
           barClassName="slds-progress-bar_circular"
           label="Complete all the steps below to finish setting up Einstein Visibility"
           value="50"
-          isSuccess
         />
       </header>
       <React.Fragment>{props.children}</React.Fragment>

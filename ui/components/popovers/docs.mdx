@@ -1,18 +1,19 @@
-import CodeView from '../../../shared/components/CodeView';
-import CodeBlock from '../../../shared/components/CodeBlock';
-import Blockquote from '../../../shared/components/Blockquote';
-import DisplayColumn from '../../../shared/components/DisplayColumn';
-import DisplayGrid from '../../../shared/components/DisplayGrid';
-import * as PopoverExamples from './base/example';
-import * as BrandExamples from './brand/example';
-import * as NubbinExamples from './nubbins/example';
-import * as ErrorExamples from './error/example';
-import * as WarningExamples from './warning/example';
-import * as WalkthroughExamples from './walkthrough/example';
-import * as FeatureExamples from './feature/example';
-import * as PreviewPanelExamples from './panels/example';
-import * as PromptExamples from './prompt/example';
-import { getDisplayElementById } from '../../shared/helpers';
+import CodeView from "../../../shared/components/CodeView";
+import CodeBlock from "../../../shared/components/CodeBlock";
+import Blockquote from "../../../shared/components/Blockquote";
+import DisplayColumn from "../../../shared/components/DisplayColumn";
+import DisplayGrid from "../../../shared/components/DisplayGrid";
+import * as PopoverExamples from "./base/example";
+import * as BrandExamples from "./brand/example";
+import * as NubbinExamples from "./nubbins/example";
+import * as ErrorExamples from "./error/example";
+import * as WarningExamples from "./warning/example";
+import * as WalkthroughExamples from "./walkthrough/example";
+import * as FeatureExamples from "./feature/example";
+import * as PreviewPanelExamples from "./panels/example";
+import * as PromptExamples from "./prompt/example";
+import { getDisplayElementById } from "../../shared/helpers";
+import StylingHooksTable from "../../../shared/components/StylingHooksTable";
 
 <div className="doc lead">
   A popover is a non-modal dialog. The component should be paired with a
@@ -20,7 +21,7 @@ import { getDisplayElementById } from '../../shared/helpers';
 </div>
 
 <CodeView exampleOnly>
-  {getDisplayElementById(NubbinExamples.states, 'bottom')}
+  {getDisplayElementById(NubbinExamples.states, "bottom")}
 </CodeView>
 
 ## About Popovers
@@ -53,24 +54,24 @@ Panel Popovers can be shown on mouse hover but for keyboard or screen reader use
 
 ## Base
 
-<CodeView>{PopoverExamples.default}</CodeView>
+<CodeView>{getDisplayElementById(PopoverExamples.default)}</CodeView>
 
 ### With Header
 
-<CodeView>{getDisplayElementById(PopoverExamples.examples, 'header')}</CodeView>
+<CodeView>{getDisplayElementById(PopoverExamples.examples, "header")}</CodeView>
 
 ### With Footer
 
-<CodeView>{getDisplayElementById(PopoverExamples.examples, 'footer')}</CodeView>
+<CodeView>{getDisplayElementById(PopoverExamples.examples, "footer")}</CodeView>
 
 ### With Badge
 
-<CodeView>{getDisplayElementById(PopoverExamples.examples, 'badge')}</CodeView>
+<CodeView>{getDisplayElementById(PopoverExamples.examples, "badge")}</CodeView>
 
 ### Scrolling region with max-height
 
 <CodeView>
-  {getDisplayElementById(PopoverExamples.examples, 'scrolling')}
+  {getDisplayElementById(PopoverExamples.examples, "scrolling")}
 </CodeView>
 
 ## Widths
@@ -78,25 +79,25 @@ Panel Popovers can be shown on mouse hover but for keyboard or screen reader use
 ### Small
 
 <CodeView>
-  {getDisplayElementById(PopoverExamples.examples, 'width-small')}
+  {getDisplayElementById(PopoverExamples.examples, "width-small")}
 </CodeView>
 
 ### Medium
 
 <CodeView>
-  {getDisplayElementById(PopoverExamples.examples, 'width-medium')}
+  {getDisplayElementById(PopoverExamples.examples, "width-medium")}
 </CodeView>
 
 ### Large
 
 <CodeView>
-  {getDisplayElementById(PopoverExamples.examples, 'width-large')}
+  {getDisplayElementById(PopoverExamples.examples, "width-large")}
 </CodeView>
 
 ### Full Width
 
 <CodeView>
-  {getDisplayElementById(PopoverExamples.examples, 'width-full-width')}
+  {getDisplayElementById(PopoverExamples.examples, "width-full-width")}
 </CodeView>
 
 ## Nubbins
@@ -106,68 +107,68 @@ Panel Popovers can be shown on mouse hover but for keyboard or screen reader use
 <DisplayGrid>
   <DisplayColumn>
     <strong>Left</strong>
-    <CodeView>{getDisplayElementById(NubbinExamples.states, 'left')}</CodeView>
+    <CodeView>{getDisplayElementById(NubbinExamples.states, "left")}</CodeView>
   </DisplayColumn>
   <DisplayColumn>
     <strong>Left Top</strong>
     <CodeView>
-      {getDisplayElementById(NubbinExamples.states, 'left-top')}
+      {getDisplayElementById(NubbinExamples.states, "left-top")}
     </CodeView>
   </DisplayColumn>
   <DisplayColumn>
     <strong>Left Bottom</strong>
     <CodeView>
-      {getDisplayElementById(NubbinExamples.states, 'left-bottom')}
+      {getDisplayElementById(NubbinExamples.states, "left-bottom")}
     </CodeView>
   </DisplayColumn>
   <DisplayColumn>
     <strong>Top</strong>
-    <CodeView>{getDisplayElementById(NubbinExamples.states, 'top')}</CodeView>
+    <CodeView>{getDisplayElementById(NubbinExamples.states, "top")}</CodeView>
   </DisplayColumn>
   <DisplayColumn>
     <strong>Top Left</strong>
     <CodeView>
-      {getDisplayElementById(NubbinExamples.states, 'top-left')}
+      {getDisplayElementById(NubbinExamples.states, "top-left")}
     </CodeView>
   </DisplayColumn>
   <DisplayColumn>
     <strong>Top Right</strong>
     <CodeView>
-      {getDisplayElementById(NubbinExamples.states, 'top-right')}
+      {getDisplayElementById(NubbinExamples.states, "top-right")}
     </CodeView>
   </DisplayColumn>
   <DisplayColumn>
     <strong>Right</strong>
-    <CodeView>{getDisplayElementById(NubbinExamples.states, 'right')}</CodeView>
+    <CodeView>{getDisplayElementById(NubbinExamples.states, "right")}</CodeView>
   </DisplayColumn>
   <DisplayColumn>
     <strong>Right Top</strong>
     <CodeView>
-      {getDisplayElementById(NubbinExamples.states, 'right-top')}
+      {getDisplayElementById(NubbinExamples.states, "right-top")}
     </CodeView>
   </DisplayColumn>
   <DisplayColumn>
     <strong>Right Bottom</strong>
     <CodeView>
-      {getDisplayElementById(NubbinExamples.states, 'right-bottom')}
+      {getDisplayElementById(NubbinExamples.states, "right-bottom")}
     </CodeView>
   </DisplayColumn>
   <DisplayColumn>
     <strong>Bottom</strong>
     <CodeView>
-      {getDisplayElementById(NubbinExamples.states, 'bottom')}
+      {getDisplayElementById(NubbinExamples.states, "bottom")}
     </CodeView>
   </DisplayColumn>
   <DisplayColumn>
     <strong>Bottom Left</strong>
     <CodeView>
-      {getDisplayElementById(NubbinExamples.states, 'bottom-left')}
+      {getDisplayElementById(NubbinExamples.states, "bottom-left")}
     </CodeView>
   </DisplayColumn>
   <DisplayColumn>
     <strong>Bottom Right</strong>
     <CodeView>
-      {getDisplayElementById(NubbinExamples.states, 'bottom-right')}
+      {getDisplayElementById(NubbinExamples.states, "bottom-right")}
     </CodeView>
   </DisplayColumn>
 </DisplayGrid>
@@ -176,46 +177,46 @@ Panel Popovers can be shown on mouse hover but for keyboard or screen reader use
 
 ### Error
 
-<CodeView>{ErrorExamples.default}</CodeView>
+<CodeView>{getDisplayElementById(ErrorExamples.default)}</CodeView>
 
 #### With Footer
 
 <CodeView>
-  {getDisplayElementById(ErrorExamples.examples, 'with-footer')}
+  {getDisplayElementById(ErrorExamples.examples, "with-footer")}
 </CodeView>
 
 ### Warning
 
-<CodeView>{WarningExamples.default}</CodeView>
+<CodeView>{getDisplayElementById(WarningExamples.default)}</CodeView>
 
 #### With Footer
 
 <CodeView>
-  {getDisplayElementById(WarningExamples.examples, 'with-footer')}
+  {getDisplayElementById(WarningExamples.examples, "with-footer")}
 </CodeView>
 
 ## Examples
 
 ### Walkthrough
 
-<CodeView>{WalkthroughExamples.default}</CodeView>
+<CodeView>{getDisplayElementById(WalkthroughExamples.default)}</CodeView>
 
 #### Micro Setup
 
 <CodeView>
-  {getDisplayElementById(WalkthroughExamples.examples, 'micro-setup')}
+  {getDisplayElementById(WalkthroughExamples.examples, "micro-setup")}
 </CodeView>
 
 #### Micro Setup - Alternate
 
 <CodeView>
-  {getDisplayElementById(WalkthroughExamples.examples, 'micro-setup-alternate')}
+  {getDisplayElementById(WalkthroughExamples.examples, "micro-setup-alternate")}
 </CodeView>
 
 #### Micro Setup - In Page
 
 <CodeView>
-  {getDisplayElementById(WalkthroughExamples.examples, 'micro-setup-in-page')}
+  {getDisplayElementById(WalkthroughExamples.examples, "micro-setup-in-page")}
 </CodeView>
 
 #### Micro Setup - Inline Form
@@ -223,14 +224,14 @@ Panel Popovers can be shown on mouse hover but for keyboard or screen reader use
 <CodeView>
   {getDisplayElementById(
     WalkthroughExamples.examples,
-    'micro-setup-inline-form'
+    "micro-setup-inline-form"
   )}
 </CodeView>
 
 #### Action
 
 <CodeView>
-  {getDisplayElementById(WalkthroughExamples.examples, 'action-popover')}
+  {getDisplayElementById(WalkthroughExamples.examples, "action-popover")}
 </CodeView>
 
 #### Action - With Heading
@@ -238,7 +239,7 @@ Panel Popovers can be shown on mouse hover but for keyboard or screen reader use
 <CodeView>
   {getDisplayElementById(
     WalkthroughExamples.examples,
-    'action-popover-heading'
+    "action-popover-heading"
   )}
 </CodeView>
 
@@ -247,92 +248,92 @@ Panel Popovers can be shown on mouse hover but for keyboard or screen reader use
 <CodeView>
   {getDisplayElementById(
     WalkthroughExamples.examples,
-    'action-popover-with-link'
+    "action-popover-with-link"
   )}
 </CodeView>
 
 ### Feature
 
-<CodeView>{FeatureExamples.default}</CodeView>
+<CodeView>{getDisplayElementById(FeatureExamples.default)}</CodeView>
 
 #### With icon and text
 
 <CodeView>
-  {getDisplayElementById(FeatureExamples.examples, 'icon-text')}
+  {getDisplayElementById(FeatureExamples.examples, "icon-text")}
 </CodeView>
 
 #### With icon, header, and text
 
 <CodeView>
-  {getDisplayElementById(FeatureExamples.examples, 'icon-header-text')}
+  {getDisplayElementById(FeatureExamples.examples, "icon-header-text")}
 </CodeView>
 
 #### With icon, header, text and link
 
 <CodeView>
-  {getDisplayElementById(FeatureExamples.examples, 'icon-header-text-link')}
+  {getDisplayElementById(FeatureExamples.examples, "icon-header-text-link")}
 </CodeView>
 
 #### With icon, header, text and footer
 
 <CodeView>
-  {getDisplayElementById(FeatureExamples.examples, 'icon-header-text-footer')}
+  {getDisplayElementById(FeatureExamples.examples, "icon-header-text-footer")}
 </CodeView>
 
 ### Record Preview Panel
 
-<CodeView>{PreviewPanelExamples.default}</CodeView>
+<CodeView>{getDisplayElementById(PreviewPanelExamples.default)}</CodeView>
 
 ### Prompt
 
-<CodeView>{PromptExamples.default}</CodeView>
+<CodeView>{getDisplayElementById(PromptExamples.default)}</CodeView>
 
 #### Positioned top left
 
 <CodeView demoStyles="height: 250px;">
-  {getDisplayElementById(PromptExamples.examples, 'top-left')}
+  {getDisplayElementById(PromptExamples.examples, "top-left")}
 </CodeView>
 
 #### Positioned top center
 
 <CodeView demoStyles="height: 250px;">
-  {getDisplayElementById(PromptExamples.examples, 'top-center')}
+  {getDisplayElementById(PromptExamples.examples, "top-center")}
 </CodeView>
 
 #### Positioned top right
 
 <CodeView demoStyles="height: 250px;">
-  {getDisplayElementById(PromptExamples.examples, 'top-right')}
+  {getDisplayElementById(PromptExamples.examples, "top-right")}
 </CodeView>
 
 #### Positioned bottom right
 
 <CodeView demoStyles="height: 250px;">
-  {getDisplayElementById(PromptExamples.examples, 'bottom-right')}
+  {getDisplayElementById(PromptExamples.examples, "bottom-right")}
 </CodeView>
 
 #### Positioned bottom center
 
 <CodeView demoStyles="height: 250px;">
-  {getDisplayElementById(PromptExamples.examples, 'bottom-center')}
+  {getDisplayElementById(PromptExamples.examples, "bottom-center")}
 </CodeView>
 
 #### Positioned bottom left
 
 <CodeView demoStyles="height: 250px;">
-  {getDisplayElementById(PromptExamples.examples, 'bottom-left')}
+  {getDisplayElementById(PromptExamples.examples, "bottom-left")}
 </CodeView>
 
 #### With brand color and footer
 
 <CodeView demoStyles="height: 250px;">
-  {getDisplayElementById(PromptExamples.examples, 'brand-with-footer')}
+  {getDisplayElementById(PromptExamples.examples, "brand-with-footer")}
 </CodeView>
 
 #### With brand color - no footer
 
 <CodeView demoStyles="height: 250px;">
-  {getDisplayElementById(PromptExamples.examples, 'brand-without-footer')}
+  {getDisplayElementById(PromptExamples.examples, "brand-without-footer")}
 </CodeView>
 
 ## Styling Hooks Overview
@@ -341,4 +342,5 @@ Panel Popovers can be shown on mouse hover but for keyboard or screen reader use
   <p>By default, Popovers use the <code>$z-index-dialog</code> (<a href="/design-tokens/#category-z-index">value of 6000</a>) token. This allows the Popover to appear above the element that triggered it, and in the vast majority of cases should work well out of the box. However, depending on where the Popover code lives when it's triggered, layout issues could arise.</p>
 
   <p>For this particular use case, the <code>--slds-c-popover-position-zindex</code> <a href="/platforms/lightning/styling-hooks/">Styling Hook</a> allows developers to change the z-index value. <strong>Please note</strong>: when this value is changed, the responsibility is on the developer to maintain the CSS stacking order.</p>
+
 </Blockquote>

@@ -62,8 +62,8 @@
     &__progress {
       position: absolute;
       left: 0;
-      top: (($square-icon-small-boundary / 2) - ($square-icon-x-small-content / 4));
-      height: ($square-icon-x-small-content / 2);
+      top: (($square-icon-small-boundary * 0.5) - ($square-icon-x-small-content * 0.25));
+      height: ($square-icon-x-small-content * 0.5);
       display: block;
       width: 100%;
       z-index: -1;

@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 import { FormElement, Fieldset } from '../../form-element/';
 import Input from '../../input/';
 
-export const CompoundForm = props => {
+export const CompoundForm = (props) => {
   const { hasTooltip, isRequired } = props;
 
   return (
@@ -23,16 +23,16 @@ export const CompoundForm = props => {
             <FormElement
               formElementClassName="slds-size_1-of-2"
               labelContent="Latitude"
-              inputId="input-01"
+              inputId="input-10"
             >
-              <Input id="input-01" />
+              <Input id="input-10" />
             </FormElement>
             <FormElement
               formElementClassName="slds-size_1-of-2"
               labelContent="Longitude"
-              inputId="input-02"
+              inputId="input-11"
             >
-              <Input id="input-02" />
+              <Input id="input-11" />
             </FormElement>
           </div>
         </div>
@@ -48,41 +48,41 @@ export const CompoundForm = props => {
             <FormElement
               formElementClassName="slds-size_1-of-1"
               labelContent="Shipping Street"
-              inputId="input-03"
+              inputId="input-12"
             >
-              <Input id="input-03" />
+              <Input id="input-12" />
             </FormElement>
           </div>
           <div className="slds-form-element__row">
             <FormElement
               formElementClassName="slds-size_4-of-6"
               labelContent="Shipping City"
-              inputId="input-04"
+              inputId="input-13"
             >
-              <Input id="input-04" />
+              <Input id="input-13" />
             </FormElement>
             <FormElement
               formElementClassName="slds-size_2-of-6"
               labelContent="Shipping State/Province"
-              inputId="input-05"
+              inputId="input-14"
             >
-              <Input id="input-05" defaultValue="MT" />
+              <Input id="input-14" defaultValue="MT" />
             </FormElement>
           </div>
           <div className="slds-form-element__row">
             <FormElement
               formElementClassName="slds-size_4-of-6"
               labelContent="Shipping Zip/Postal Code"
-              inputId="input-06"
+              inputId="input-15"
             >
-              <Input id="input-06" />
+              <Input id="input-15" />
             </FormElement>
             <FormElement
               formElementClassName="slds-size_2-of-6"
               labelContent="Shipping Country"
-              inputId="input-07"
+              inputId="input-16"
             >
-              <Input id="input-07" defaultValue="Canada" />
+              <Input id="input-16" defaultValue="Canada" />
             </FormElement>
           </div>
         </div>
@@ -93,5 +93,5 @@ export const CompoundForm = props => {
 
 CompoundForm.propTypes = {
   hasTooltip: PropTypes.bool,
-  isRequired: PropTypes.bool
+  isRequired: PropTypes.bool,
 };

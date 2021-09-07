@@ -10,6 +10,7 @@ import { UtilityIcon } from '../../icons/base/example';
 import * as Snapshot from '../snapshots.data';
 import _ from '../../../shared/helpers';
 
+const STORY_SINK_CONTEXT = 'Grouped';
 const ComboboxId = _.uniqueId('combobox-id-');
 const PrimaryComboboxId = _.uniqueId('primary-combobox-id-');
 const ListboxId = _.uniqueId('listbox-id-');
@@ -18,48 +19,56 @@ export const Context = props => (
   <div style={{ height: '240px' }}>{props.children}</div>
 );
 
-export default (
-  <ComboboxGroup
-    id={_.uniqueId('combobox-id-')}
-    aria-controls="listbox-id-20"
-    comboboxID="primary-combobox-id-1"
-    autocomplete
-    results={
-      <Listbox
-        id="listbox-id-20"
-        snapshot={Snapshot.EntityOptions}
-        type="entity"
-        count={4}
-      />
-    }
-    resultsType="listbox"
-    addon={
-      <ObjectSwitcher
+export default [
+  {
+    context: STORY_SINK_CONTEXT,
+    id: `${STORY_SINK_CONTEXT.toLowerCase()}-default`,
+    label: `${STORY_SINK_CONTEXT} default`,
+    element: (
+      <ComboboxGroup
         id={_.uniqueId('combobox-id-')}
-        value="Accounts"
+        aria-controls="listbox-id-20"
+        comboboxID="primary-combobox-id-1"
+        autocomplete
+        results={
+          <Listbox
+            id="listbox-id-20"
+            snapshot={Snapshot.EntityOptions}
+            type="entity"
+            count={4}
+          />
+        }
+        resultsType="listbox"
+        addon={
+          <ObjectSwitcher
+            id={_.uniqueId('combobox-id-')}
+            value="Accounts"
+            addonPosition="start"
+            hasInteractions
+            comboboxAriaControls="primary-combobox-id-1"
+          />
+        }
         addonPosition="start"
+        comboboxPosition="end"
+        inputIconPosition="right"
+        rightInputIcon={
+          <UtilityIcon
+            symbol="search"
+            className="slds-icon slds-icon_x-small slds-icon-text-default"
+            containerClassName="slds-input__icon slds-input__icon_right"
+            assistiveText={false}
+            title={false}
+          />
+        }
         hasInteractions
-        comboboxAriaControls="primary-combobox-id-1"
       />
-    }
-    addonPosition="start"
-    comboboxPosition="end"
-    inputIconPosition="right"
-    rightInputIcon={
-      <UtilityIcon
-        symbol="search"
-        className="slds-icon slds-icon_x-small slds-icon-text-default"
-        containerClassName="slds-input__icon slds-input__icon_right"
-        assistiveText={false}
-        title={false}
-      />
-    }
-    hasInteractions
-  />
-);
+    )
+  }
+];
 
 export let states = [
   {
+    context: STORY_SINK_CONTEXT,
     id: 'focused-open',
     label: 'Focused - Open',
     element: (
@@ -103,6 +112,7 @@ export let states = [
     )
   },
   {
+    context: STORY_SINK_CONTEXT,
     id: 'typeahead',
     label: 'Typeahead',
     element: (
@@ -149,6 +159,7 @@ export let states = [
     )
   },
   {
+    context: STORY_SINK_CONTEXT,
     id: 'typeahead-loading',
     label: 'Typeahead - Loading',
     element: (
@@ -188,6 +199,7 @@ export let states = [
     )
   },
   {
+    context: STORY_SINK_CONTEXT,
     id: 'selected-options',
     label: 'Selected Options',
     element: (
@@ -234,6 +246,7 @@ export let states = [
     )
   },
   {
+    context: STORY_SINK_CONTEXT,
     id: 'selected-options-open',
     label: 'Selected Options - Open',
     element: (
@@ -281,6 +294,7 @@ export let states = [
     )
   },
   {
+    context: STORY_SINK_CONTEXT,
     id: 'overflow-collapsed',
     label: 'Selections in container - Overflowed - Collapsed',
     element: (
@@ -326,6 +340,7 @@ export let states = [
     )
   },
   {
+    context: STORY_SINK_CONTEXT,
     id: 'overflow-expanded',
     label: 'Selections in container - Overflowed - Expanded',
     element: (
@@ -376,6 +391,7 @@ export let states = [
     )
   },
   {
+    context: STORY_SINK_CONTEXT,
     id: 'non-grouped-overflow-collapsed',
     label: 'Selections - Collapsed',
     element: (
@@ -411,6 +427,7 @@ export let states = [
     )
   },
   {
+    context: STORY_SINK_CONTEXT,
     id: 'non-grouped-overflow-expanded',
     label: 'Selections - Expanded',
     element: (
@@ -450,6 +467,7 @@ export let states = [
     )
   },
   {
+    context: STORY_SINK_CONTEXT,
     id: 'scoping-results-focused',
     label: 'Scoping results - Focused',
     element: (
@@ -493,6 +511,7 @@ export let states = [
     )
   },
   {
+    context: STORY_SINK_CONTEXT,
     id: 'scoping-results-icon',
     label: 'Scoping results - Icon variant',
     element: (
@@ -535,6 +554,7 @@ export let states = [
     )
   },
   {
+    context: STORY_SINK_CONTEXT,
     id: 'scoping-results-icon-focused',
     label: 'Scoping results - Icon variant - Focused',
     element: (

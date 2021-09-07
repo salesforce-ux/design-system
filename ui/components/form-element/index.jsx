@@ -307,7 +307,7 @@ Legend.propTypes = {
  * @prop {boolean} hasRightIcon - Adds icon placement specific classes
  * @prop {boolean} hasRightIconGroup - Adds icon placement specific class when input has two icons on the right
  * @prop {string}  errorId - ID of the error message
- * @prop {boolean} hasTooltip - If true, displays tooltop
+ * @prop {boolean} hasTooltip - If true, displays tooltip
  * @prop {string}  inlineMessage - Message placed under the input, either inline help or error message
  * @prop {string}  role - Role of the Form Element Wrapper
  * @prop {object}  dropdown - Content shown as a dropdown of the Form Element

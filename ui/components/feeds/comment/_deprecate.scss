@@ -27,10 +27,10 @@
         height: 100%;
         width: $border-width-thin;
         position: absolute;
-        left: ($square-icon-medium-boundary-alt / 2);
+        left: ($square-icon-medium-boundary-alt * 0.5);
         top: 0;
         bottom: 0;
-        margin-left: (($square-icon-medium-boundary-alt / 2) * -1);
+        margin-left: (($square-icon-medium-boundary-alt * 0.5) * -1);
         z-index: -1;
       }
     }

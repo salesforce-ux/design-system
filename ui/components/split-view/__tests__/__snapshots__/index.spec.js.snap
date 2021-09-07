@@ -1,0 +1,3395 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Split View renders a default split view 1`] = `
+<div
+  className="slds-split-view_container slds-is-open"
+>
+  <button
+    aria-controls="split-view-id"
+    aria-expanded="true"
+    className="slds-button slds-button_icon slds-button_icon slds-split-view__toggle-button slds-is-open"
+    onClick={[Function]}
+    title="Close Split View"
+  >
+    <svg
+      aria-hidden={true}
+      className="slds-button__icon slds-button__icon_x-small"
+    >
+      <use
+        xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#left"
+      />
+    </svg>
+    <span
+      className="slds-assistive-text"
+    >
+      Close Split View
+    </span>
+  </button>
+  <article
+    aria-hidden="false"
+    className="slds-split-view slds-grid slds-grid_vertical slds-grow"
+    id="split-view-id"
+  >
+    <header
+      className="slds-split-view__header"
+    >
+      <div
+        className="slds-grid slds-grid_vertical-align-center slds-m-bottom_xx-small"
+      >
+        <div
+          className="slds-has-flexi-truncate"
+        >
+          <div
+            className="slds-media slds-media_center"
+          >
+            <div
+              className="slds-media__figure"
+            >
+              <div
+                className="slds-icon_container slds-icon-standard-lead"
+              >
+                <svg
+                  aria-hidden={true}
+                  className="slds-icon"
+                >
+                  <use
+                    xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#lead"
+                  />
+                </svg>
+                <span
+                  className="slds-assistive-text"
+                >
+                  Leads
+                </span>
+              </div>
+            </div>
+            <div
+              className="slds-media__body"
+            >
+              <h1
+                className="slds-text-heading_small slds-text-color_default slds-p-right_x-small"
+              >
+                <button
+                  aria-haspopup="true"
+                  className="slds-button slds-button_reset slds-type-focus slds-truncate"
+                  title=""
+                >
+                  <span
+                    className="slds-grid slds-has-flexi-truncate slds-grid_vertical-align-center"
+                  >
+                    <span
+                      className="slds-truncate"
+                      title="My Leads"
+                    >
+                      My Leads
+                    </span>
+                    <svg
+                      aria-hidden={true}
+                      className="slds-button__icon slds-button__icon_right slds-no-flex"
+                    >
+                      <use
+                        xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+                      />
+                    </svg>
+                  </span>
+                </button>
+              </h1>
+            </div>
+          </div>
+        </div>
+        <div
+          className="slds-no-flex slds-grid"
+        >
+          <button
+            aria-haspopup="true"
+            className="slds-button slds-button_icon slds-button_icon-border-filled"
+            onClick={[Function]}
+            title="More Actions"
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-button__icon"
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+              />
+            </svg>
+            <span
+              className="slds-assistive-text"
+            >
+              More Actions
+            </span>
+          </button>
+        </div>
+      </div>
+      <div
+        className="slds-grid slds-grid_vertical-align-center"
+      >
+        <p
+          className="slds-text-body_small slds-text-color_weak"
+        >
+          42 items • Updated just now
+        </p>
+        <div
+          className="slds-no-flex slds-grid slds-col_bump-left"
+        >
+          <div
+            className="slds-button-group"
+          >
+            <button
+              aria-expanded="false"
+              aria-haspopup="true"
+              className="slds-button slds-button_icon slds-button_icon slds-button_icon-container-more"
+              onClick={[Function]}
+              title="Display As Split View"
+            >
+              <svg
+                aria-hidden={true}
+                className="slds-button__icon"
+              >
+                <use
+                  xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#side_list"
+                />
+              </svg>
+              <svg
+                aria-hidden={true}
+                className="slds-button__icon slds-button__icon_x-small"
+              >
+                <use
+                  xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+                />
+              </svg>
+              <span
+                className="slds-assistive-text"
+              >
+                Display As Split View
+              </span>
+            </button>
+          </div>
+          <div
+            className="slds-button-group"
+          >
+            <button
+              className="slds-button slds-button_icon slds-button_icon slds-button_icon-container"
+              onClick={[Function]}
+              title="Refresh List"
+            >
+              <svg
+                aria-hidden={true}
+                className="slds-button__icon"
+              >
+                <use
+                  xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#refresh"
+                />
+              </svg>
+              <span
+                className="slds-assistive-text"
+              >
+                Refresh List
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div
+      className="slds-grid slds-grid_vertical"
+    >
+      <div
+        className="slds-split-view__list-header slds-grid"
+      >
+        <span
+          className="slds-assistive-text"
+        >
+          Sorted by:
+        </span>
+        <span>
+          Lead Score
+          <svg
+            aria-hidden={true}
+            className="slds-icon slds-icon_xx-small slds-icon-text-default slds-align-top"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#arrowdown"
+            />
+          </svg>
+        </span>
+        <span
+          className="slds-assistive-text"
+        >
+          - Descending
+        </span>
+      </div>
+      <ul
+        aria-label="Select an item to open it in a new workspace tab."
+        aria-multiselectable="true"
+        className="slds-scrollable_y"
+        role="listbox"
+      >
+        <li
+          className="slds-split-view__list-item"
+          role="presentation"
+        >
+          <a
+            className="slds-split-view__list-item-action slds-grow slds-has-flexi-truncate"
+            href="#"
+            onClick={[Function]}
+            role="option"
+            tabIndex={0}
+          >
+            <div
+              className="slds-grid slds-wrap"
+            >
+              <span
+                className="slds-truncate slds-text-body_regular slds-text-color_default"
+                title="Riley Shultz"
+              >
+                Riley Shultz
+              </span>
+              <span
+                className="slds-truncate slds-col_bump-left"
+                title="99"
+              >
+                99
+              </span>
+            </div>
+            <div
+              className="slds-grid slds-wrap"
+            >
+              <span
+                className="slds-truncate"
+                title="Biotech, Inc."
+              >
+                Biotech, Inc.
+              </span>
+              <span
+                className="slds-truncate slds-col_bump-left"
+                title="Nurturing"
+              >
+                Nurturing
+              </span>
+            </div>
+          </a>
+        </li>
+        <li
+          className="slds-split-view__list-item"
+          role="presentation"
+        >
+          <a
+            className="slds-split-view__list-item-action slds-grow slds-has-flexi-truncate"
+            href="#"
+            onClick={[Function]}
+            role="option"
+            tabIndex={-1}
+          >
+            <div
+              className="slds-grid slds-wrap"
+            >
+              <span
+                className="slds-truncate slds-text-body_regular slds-text-color_default"
+                title="Jason A. - VP of Sales"
+              >
+                Jason A. - VP of Sales
+              </span>
+              <span
+                className="slds-truncate slds-col_bump-left"
+                title="92"
+              >
+                92
+              </span>
+            </div>
+            <div
+              className="slds-grid slds-wrap"
+            >
+              <span
+                className="slds-truncate"
+                title="Case Management Solutions"
+              >
+                Case Management Solutions
+              </span>
+              <span
+                className="slds-truncate slds-col_bump-left"
+                title="Contacted"
+              >
+                Contacted
+              </span>
+            </div>
+          </a>
+        </li>
+        <li
+          className="slds-split-view__list-item"
+          role="presentation"
+        >
+          <a
+            className="slds-split-view__list-item-action slds-grow slds-has-flexi-truncate"
+            href="#"
+            onClick={[Function]}
+            role="option"
+            tabIndex={-1}
+          >
+            <div
+              className="slds-grid slds-wrap"
+            >
+              <span
+                className="slds-truncate slds-text-body_regular slds-text-color_default"
+                title="Josh Smith"
+              >
+                Josh Smith
+              </span>
+              <span
+                className="slds-truncate slds-col_bump-left"
+                title="90"
+              >
+                90
+              </span>
+            </div>
+            <div
+              className="slds-grid slds-wrap"
+            >
+              <span
+                className="slds-truncate"
+                title="Acme, Inc."
+              >
+                Acme, Inc.
+              </span>
+              <span
+                className="slds-truncate slds-col_bump-left"
+                title="Contacted"
+              >
+                Contacted
+              </span>
+            </div>
+          </a>
+        </li>
+        <li
+          className="slds-split-view__list-item"
+          role="presentation"
+        >
+          <a
+            className="slds-split-view__list-item-action slds-grow slds-has-flexi-truncate"
+            href="#"
+            onClick={[Function]}
+            role="option"
+            tabIndex={-1}
+          >
+            <div
+              className="slds-grid slds-wrap"
+            >
+              <span
+                className="slds-truncate slds-text-body_regular slds-text-color_default"
+                title="Bobby Tree"
+              >
+                Bobby Tree
+              </span>
+              <span
+                className="slds-truncate slds-col_bump-left"
+                title="89"
+              >
+                89
+              </span>
+            </div>
+            <div
+              className="slds-grid slds-wrap"
+            >
+              <span
+                className="slds-truncate"
+                title="Salesforce, Inc."
+              >
+                Salesforce, Inc.
+              </span>
+              <span
+                className="slds-truncate slds-col_bump-left"
+                title="Closing"
+              >
+                Closing
+              </span>
+            </div>
+          </a>
+        </li>
+        <li
+          className="slds-split-view__list-item"
+          role="presentation"
+        >
+          <a
+            className="slds-split-view__list-item-action slds-grow slds-has-flexi-truncate"
+            href="#"
+            onClick={[Function]}
+            role="option"
+            tabIndex={-1}
+          >
+            <div
+              className="slds-grid slds-wrap"
+            >
+              <span
+                className="slds-truncate slds-text-body_regular slds-text-color_default"
+                title="Riley Shultz"
+              >
+                Riley Shultz
+              </span>
+              <span
+                className="slds-truncate slds-col_bump-left"
+                title="74"
+              >
+                74
+              </span>
+            </div>
+            <div
+              className="slds-grid slds-wrap"
+            >
+              <span
+                className="slds-truncate"
+                title="Tesla"
+              >
+                Tesla
+              </span>
+              <span
+                className="slds-truncate slds-col_bump-left"
+                title="Contacted"
+              >
+                Contacted
+              </span>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </article>
+</div>
+`;
+
+exports[`Split View renders split view with a collapsed panel 1`] = `
+<div
+  className="slds-split-view_container slds-is-closed"
+>
+  <button
+    aria-controls="split-view-id"
+    aria-expanded="false"
+    className="slds-button slds-button_icon slds-button_icon slds-split-view__toggle-button slds-is-closed"
+    onClick={[Function]}
+    title="Open Split View"
+  >
+    <svg
+      aria-hidden={true}
+      className="slds-button__icon slds-button__icon_x-small"
+    >
+      <use
+        xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#left"
+      />
+    </svg>
+    <span
+      className="slds-assistive-text"
+    >
+      Open Split View
+    </span>
+  </button>
+  <article
+    aria-hidden="true"
+    className="slds-split-view slds-grid slds-grid_vertical slds-grow"
+    id="split-view-id"
+  >
+    <header
+      className="slds-split-view__header"
+    >
+      <div
+        className="slds-grid slds-grid_vertical-align-center slds-m-bottom_xx-small"
+      >
+        <div
+          className="slds-has-flexi-truncate"
+        >
+          <div
+            className="slds-media slds-media_center"
+          >
+            <div
+              className="slds-media__figure"
+            >
+              <div
+                className="slds-icon_container slds-icon-standard-lead"
+              >
+                <svg
+                  aria-hidden={true}
+                  className="slds-icon"
+                >
+                  <use
+                    xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#lead"
+                  />
+                </svg>
+                <span
+                  className="slds-assistive-text"
+                >
+                  Leads
+                </span>
+              </div>
+            </div>
+            <div
+              className="slds-media__body"
+            >
+              <h1
+                className="slds-text-heading_small slds-text-color_default slds-p-right_x-small"
+              >
+                <button
+                  aria-haspopup="true"
+                  className="slds-button slds-button_reset slds-type-focus slds-truncate"
+                  title=""
+                >
+                  <span
+                    className="slds-grid slds-has-flexi-truncate slds-grid_vertical-align-center"
+                  >
+                    <span
+                      className="slds-truncate"
+                      title="My Leads"
+                    >
+                      My Leads
+                    </span>
+                    <svg
+                      aria-hidden={true}
+                      className="slds-button__icon slds-button__icon_right slds-no-flex"
+                    >
+                      <use
+                        xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+                      />
+                    </svg>
+                  </span>
+                </button>
+              </h1>
+            </div>
+          </div>
+        </div>
+        <div
+          className="slds-no-flex slds-grid"
+        >
+          <button
+            aria-haspopup="true"
+            className="slds-button slds-button_icon slds-button_icon-border-filled"
+            onClick={[Function]}
+            title="More Actions"
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-button__icon"
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+              />
+            </svg>
+            <span
+              className="slds-assistive-text"
+            >
+              More Actions
+            </span>
+          </button>
+        </div>
+      </div>
+      <div
+        className="slds-grid slds-grid_vertical-align-center"
+      >
+        <p
+          className="slds-text-body_small slds-text-color_weak"
+        >
+          42 items • Updated just now
+        </p>
+        <div
+          className="slds-no-flex slds-grid slds-col_bump-left"
+        >
+          <div
+            className="slds-button-group"
+          >
+            <button
+              aria-expanded="false"
+              aria-haspopup="true"
+              className="slds-button slds-button_icon slds-button_icon slds-button_icon-container-more"
+              onClick={[Function]}
+              title="Display As Split View"
+            >
+              <svg
+                aria-hidden={true}
+                className="slds-button__icon"
+              >
+                <use
+                  xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#side_list"
+                />
+              </svg>
+              <svg
+                aria-hidden={true}
+                className="slds-button__icon slds-button__icon_x-small"
+              >
+                <use
+                  xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+                />
+              </svg>
+              <span
+                className="slds-assistive-text"
+              >
+                Display As Split View
+              </span>
+            </button>
+          </div>
+          <div
+            className="slds-button-group"
+          >
+            <button
+              className="slds-button slds-button_icon slds-button_icon slds-button_icon-container"
+              onClick={[Function]}
+              title="Refresh List"
+            >
+              <svg
+                aria-hidden={true}
+                className="slds-button__icon"
+              >
+                <use
+                  xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#refresh"
+                />
+              </svg>
+              <span
+                className="slds-assistive-text"
+              >
+                Refresh List
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div
+      className="slds-grid slds-grid_vertical"
+    >
+      <div
+        className="slds-split-view__list-header slds-grid"
+      >
+        <span
+          className="slds-assistive-text"
+        >
+          Sorted by:
+        </span>
+        <span>
+          Lead Score
+          <svg
+            aria-hidden={true}
+            className="slds-icon slds-icon_xx-small slds-icon-text-default slds-align-top"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#arrowdown"
+            />
+          </svg>
+        </span>
+        <span
+          className="slds-assistive-text"
+        >
+          - Descending
+        </span>
+      </div>
+      <ul
+        aria-label="Select an item to open it in a new workspace tab."
+        aria-multiselectable="true"
+        className="slds-scrollable_y"
+        role="listbox"
+      >
+        <li
+          className="slds-split-view__list-item slds-is-unread"
+          role="presentation"
+        >
+          <a
+            className="slds-split-view__list-item-action slds-grow slds-has-flexi-truncate"
+            href="#"
+            onClick={[Function]}
+            role="option"
+            tabIndex={0}
+          >
+            <abbr
+              aria-label="Unread Item"
+              className="slds-indicator_unread"
+              title="Unread Item"
+            >
+              <span
+                className="slds-assistive-text"
+              >
+                ●
+              </span>
+            </abbr>
+            <div
+              className="slds-grid slds-wrap"
+            >
+              <span
+                className="slds-truncate slds-text-body_regular slds-text-color_default"
+                title="Riley Shultz"
+              >
+                Riley Shultz
+              </span>
+              <span
+                className="slds-truncate slds-col_bump-left"
+                title="99"
+              >
+                99
+              </span>
+            </div>
+            <div
+              className="slds-grid slds-wrap"
+            >
+              <span
+                className="slds-truncate"
+                title="Biotech, Inc."
+              >
+                Biotech, Inc.
+              </span>
+              <span
+                className="slds-truncate slds-col_bump-left"
+                title="Nurturing"
+              >
+                Nurturing
+              </span>
+            </div>
+          </a>
+        </li>
+        <li
+          className="slds-split-view__list-item slds-is-unread"
+          role="presentation"
+        >
+          <a
+            className="slds-split-view__list-item-action slds-grow slds-has-flexi-truncate"
+            href="#"
+            onClick={[Function]}
+            role="option"
+            tabIndex={-1}
+          >
+            <abbr
+              aria-label="Unread Item"
+              className="slds-indicator_unread"
+              title="Unread Item"
+            >
+              <span
+                className="slds-assistive-text"
+              >
+                ●
+              </span>
+            </abbr>
+            <div
+              className="slds-grid slds-wrap"
+            >
+              <span
+                className="slds-truncate slds-text-body_regular slds-text-color_default"
+                title="Jason A. - VP of Sales"
+              >
+                Jason A. - VP of Sales
+              </span>
+              <span
+                className="slds-truncate slds-col_bump-left"
+                title="92"
+              >
+                92
+              </span>
+            </div>
+            <div
+              className="slds-grid slds-wrap"
+            >
+              <span
+                className="slds-truncate"
+                title="Case Management Solutions"
+              >
+                Case Management Solutions
+              </span>
+              <span
+                className="slds-truncate slds-col_bump-left"
+                title="Contacted"
+              >
+                Contacted
+              </span>
+            </div>
+          </a>
+        </li>
+        <li
+          className="slds-split-view__list-item slds-is-unread"
+          role="presentation"
+        >
+          <a
+            className="slds-split-view__list-item-action slds-grow slds-has-flexi-truncate"
+            href="#"
+            onClick={[Function]}
+            role="option"
+            tabIndex={-1}
+          >
+            <abbr
+              aria-label="Unread Item"
+              className="slds-indicator_unread"
+              title="Unread Item"
+            >
+              <span
+                className="slds-assistive-text"
+              >
+                ●
+              </span>
+            </abbr>
+            <div
+              className="slds-grid slds-wrap"
+            >
+              <span
+                className="slds-truncate slds-text-body_regular slds-text-color_default"
+                title="Josh Smith"
+              >
+                Josh Smith
+              </span>
+              <span
+                className="slds-truncate slds-col_bump-left"
+                title="90"
+              >
+                90
+              </span>
+            </div>
+            <div
+              className="slds-grid slds-wrap"
+            >
+              <span
+                className="slds-truncate"
+                title="Acme, Inc."
+              >
+                Acme, Inc.
+              </span>
+              <span
+                className="slds-truncate slds-col_bump-left"
+                title="Contacted"
+              >
+                Contacted
+              </span>
+            </div>
+          </a>
+        </li>
+        <li
+          className="slds-split-view__list-item slds-is-unread"
+          role="presentation"
+        >
+          <a
+            className="slds-split-view__list-item-action slds-grow slds-has-flexi-truncate"
+            href="#"
+            onClick={[Function]}
+            role="option"
+            tabIndex={-1}
+          >
+            <abbr
+              aria-label="Unread Item"
+              className="slds-indicator_unread"
+              title="Unread Item"
+            >
+              <span
+                className="slds-assistive-text"
+              >
+                ●
+              </span>
+            </abbr>
+            <div
+              className="slds-grid slds-wrap"
+            >
+              <span
+                className="slds-truncate slds-text-body_regular slds-text-color_default"
+                title="Bobby Tree"
+              >
+                Bobby Tree
+              </span>
+              <span
+                className="slds-truncate slds-col_bump-left"
+                title="89"
+              >
+                89
+              </span>
+            </div>
+            <div
+              className="slds-grid slds-wrap"
+            >
+              <span
+                className="slds-truncate"
+                title="Salesforce, Inc."
+              >
+                Salesforce, Inc.
+              </span>
+              <span
+                className="slds-truncate slds-col_bump-left"
+                title="Closing"
+              >
+                Closing
+              </span>
+            </div>
+          </a>
+        </li>
+        <li
+          className="slds-split-view__list-item"
+          role="presentation"
+        >
+          <a
+            className="slds-split-view__list-item-action slds-grow slds-has-flexi-truncate"
+            href="#"
+            onClick={[Function]}
+            role="option"
+            tabIndex={-1}
+          >
+            <div
+              className="slds-grid slds-wrap"
+            >
+              <span
+                className="slds-truncate slds-text-body_regular slds-text-color_default"
+                title="Riley Shultz"
+              >
+                Riley Shultz
+              </span>
+              <span
+                className="slds-truncate slds-col_bump-left"
+                title="74"
+              >
+                74
+              </span>
+            </div>
+            <div
+              className="slds-grid slds-wrap"
+            >
+              <span
+                className="slds-truncate"
+                title="Tesla"
+              >
+                Tesla
+              </span>
+              <span
+                className="slds-truncate slds-col_bump-left"
+                title="Contacted"
+              >
+                Contacted
+              </span>
+            </div>
+          </a>
+        </li>
+        <li
+          className="slds-split-view__list-item slds-is-unread"
+          role="presentation"
+        >
+          <a
+            className="slds-split-view__list-item-action slds-grow slds-has-flexi-truncate"
+            href="#"
+            onClick={[Function]}
+            role="option"
+            tabIndex={-1}
+          >
+            <abbr
+              aria-label="Unread Item"
+              className="slds-indicator_unread"
+              title="Unread Item"
+            >
+              <span
+                className="slds-assistive-text"
+              >
+                ●
+              </span>
+            </abbr>
+            <div
+              className="slds-grid slds-wrap"
+            >
+              <span
+                className="slds-truncate slds-text-body_regular slds-text-color_default"
+                title="Andy Smith"
+              >
+                Andy Smith
+              </span>
+              <span
+                className="slds-truncate slds-col_bump-left"
+                title="72"
+              >
+                72
+              </span>
+            </div>
+            <div
+              className="slds-grid slds-wrap"
+            >
+              <span
+                className="slds-truncate"
+                title="Universal Technologies"
+              >
+                Universal Technologies
+              </span>
+              <span
+                className="slds-truncate slds-col_bump-left"
+                title="New"
+              >
+                New
+              </span>
+            </div>
+          </a>
+        </li>
+        <li
+          className="slds-split-view__list-item"
+          role="presentation"
+        >
+          <a
+            className="slds-split-view__list-item-action slds-grow slds-has-flexi-truncate"
+            href="#"
+            onClick={[Function]}
+            role="option"
+            tabIndex={-1}
+          >
+            <div
+              className="slds-grid slds-wrap"
+            >
+              <span
+                className="slds-truncate slds-text-body_regular slds-text-color_default"
+                title="Jim Steele"
+              >
+                Jim Steele
+              </span>
+              <span
+                className="slds-truncate slds-col_bump-left"
+                title="71"
+              >
+                71
+              </span>
+            </div>
+            <div
+              className="slds-grid slds-wrap"
+            >
+              <span
+                className="slds-truncate"
+                title="BigList, Inc."
+              >
+                BigList, Inc.
+              </span>
+              <span
+                className="slds-truncate slds-col_bump-left"
+                title="New"
+              >
+                New
+              </span>
+            </div>
+          </a>
+        </li>
+        <li
+          className="slds-split-view__list-item"
+          role="presentation"
+        >
+          <a
+            className="slds-split-view__list-item-action slds-grow slds-has-flexi-truncate"
+            href="#"
+            onClick={[Function]}
+            role="option"
+            tabIndex={-1}
+          >
+            <div
+              className="slds-grid slds-wrap"
+            >
+              <span
+                className="slds-truncate slds-text-body_regular slds-text-color_default"
+                title="John Gardner"
+              >
+                John Gardner
+              </span>
+              <span
+                className="slds-truncate slds-col_bump-left"
+                title="70"
+              >
+                70
+              </span>
+            </div>
+            <div
+              className="slds-grid slds-wrap"
+            >
+              <span
+                className="slds-truncate"
+                title="3C Systems"
+              >
+                3C Systems
+              </span>
+              <span
+                className="slds-truncate slds-col_bump-left"
+                title="Contacted"
+              >
+                Contacted
+              </span>
+            </div>
+          </a>
+        </li>
+        <li
+          className="slds-split-view__list-item"
+          role="presentation"
+        >
+          <a
+            className="slds-split-view__list-item-action slds-grow slds-has-flexi-truncate"
+            href="#"
+            onClick={[Function]}
+            role="option"
+            tabIndex={-1}
+          >
+            <div
+              className="slds-grid slds-wrap"
+            >
+              <span
+                className="slds-truncate slds-text-body_regular slds-text-color_default"
+                title="Sarah Loehr"
+              >
+                Sarah Loehr
+              </span>
+              <span
+                className="slds-truncate slds-col_bump-left"
+                title="68"
+              >
+                68
+              </span>
+            </div>
+            <div
+              className="slds-grid slds-wrap"
+            >
+              <span
+                className="slds-truncate"
+                title="MedLife, Inc."
+              >
+                MedLife, Inc.
+              </span>
+              <span
+                className="slds-truncate slds-col_bump-left"
+                title="New"
+              >
+                New
+              </span>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </article>
+</div>
+`;
+
+exports[`Split View renders split view with a deprecated selected item 1`] = `
+<div
+  className="slds-split-view_container slds-is-open"
+>
+  <button
+    aria-controls="split-view-id"
+    aria-expanded="true"
+    className="slds-button slds-button_icon slds-button_icon slds-split-view__toggle-button slds-is-open"
+    onClick={[Function]}
+    title="Close Split View"
+  >
+    <svg
+      aria-hidden={true}
+      className="slds-button__icon slds-button__icon_x-small"
+    >
+      <use
+        xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#left"
+      />
+    </svg>
+    <span
+      className="slds-assistive-text"
+    >
+      Close Split View
+    </span>
+  </button>
+  <article
+    aria-hidden="false"
+    className="slds-split-view slds-grid slds-grid_vertical slds-grow"
+    id="split-view-id"
+  >
+    <header
+      className="slds-split-view__header"
+    >
+      <div
+        className="slds-grid slds-grid_vertical-align-center slds-m-bottom_xx-small"
+      >
+        <div
+          className="slds-has-flexi-truncate"
+        >
+          <div
+            className="slds-media slds-media_center"
+          >
+            <div
+              className="slds-media__figure"
+            >
+              <div
+                className="slds-icon_container slds-icon-standard-lead"
+              >
+                <svg
+                  aria-hidden={true}
+                  className="slds-icon"
+                >
+                  <use
+                    xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#lead"
+                  />
+                </svg>
+                <span
+                  className="slds-assistive-text"
+                >
+                  Leads
+                </span>
+              </div>
+            </div>
+            <div
+              className="slds-media__body"
+            >
+              <h1
+                className="slds-text-heading_small slds-text-color_default slds-p-right_x-small"
+              >
+                <button
+                  aria-haspopup="true"
+                  className="slds-button slds-button_reset slds-type-focus slds-truncate"
+                  title=""
+                >
+                  <span
+                    className="slds-grid slds-has-flexi-truncate slds-grid_vertical-align-center"
+                  >
+                    <span
+                      className="slds-truncate"
+                      title="My Leads"
+                    >
+                      My Leads
+                    </span>
+                    <svg
+                      aria-hidden={true}
+                      className="slds-button__icon slds-button__icon_right slds-no-flex"
+                    >
+                      <use
+                        xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+                      />
+                    </svg>
+                  </span>
+                </button>
+              </h1>
+            </div>
+          </div>
+        </div>
+        <div
+          className="slds-no-flex slds-grid"
+        >
+          <button
+            aria-haspopup="true"
+            className="slds-button slds-button_icon slds-button_icon-border-filled"
+            onClick={[Function]}
+            title="More Actions"
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-button__icon"
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+              />
+            </svg>
+            <span
+              className="slds-assistive-text"
+            >
+              More Actions
+            </span>
+          </button>
+        </div>
+      </div>
+      <div
+        className="slds-grid slds-grid_vertical-align-center"
+      >
+        <p
+          className="slds-text-body_small slds-text-color_weak"
+        >
+          42 items • Updated just now
+        </p>
+        <div
+          className="slds-no-flex slds-grid slds-col_bump-left"
+        >
+          <div
+            className="slds-button-group"
+          >
+            <button
+              aria-expanded="false"
+              aria-haspopup="true"
+              className="slds-button slds-button_icon slds-button_icon slds-button_icon-container-more"
+              onClick={[Function]}
+              title="Display As Split View"
+            >
+              <svg
+                aria-hidden={true}
+                className="slds-button__icon"
+              >
+                <use
+                  xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#side_list"
+                />
+              </svg>
+              <svg
+                aria-hidden={true}
+                className="slds-button__icon slds-button__icon_x-small"
+              >
+                <use
+                  xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+                />
+              </svg>
+              <span
+                className="slds-assistive-text"
+              >
+                Display As Split View
+              </span>
+            </button>
+          </div>
+          <div
+            className="slds-button-group"
+          >
+            <button
+              className="slds-button slds-button_icon slds-button_icon slds-button_icon-container"
+              onClick={[Function]}
+              title="Refresh List"
+            >
+              <svg
+                aria-hidden={true}
+                className="slds-button__icon"
+              >
+                <use
+                  xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#refresh"
+                />
+              </svg>
+              <span
+                className="slds-assistive-text"
+              >
+                Refresh List
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div
+      className="slds-grid slds-grid_vertical"
+    >
+      <div
+        className="slds-split-view__list-header slds-grid"
+      >
+        <span
+          className="slds-assistive-text"
+        >
+          Sorted by:
+        </span>
+        <span>
+          Lead Score
+          <svg
+            aria-hidden={true}
+            className="slds-icon slds-icon_xx-small slds-icon-text-default slds-align-top"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#arrowdown"
+            />
+          </svg>
+        </span>
+        <span
+          className="slds-assistive-text"
+        >
+          - Descending
+        </span>
+      </div>
+      <ul
+        aria-label="Select an item to open it in a new workspace tab."
+        aria-multiselectable="true"
+        className="slds-scrollable_y"
+        role="listbox"
+      >
+        <li
+          className="slds-split-view__list-item"
+          role="presentation"
+        >
+          <a
+            className="slds-split-view__list-item-action slds-grow slds-has-flexi-truncate"
+            href="#"
+            onClick={[Function]}
+            role="option"
+            tabIndex={0}
+          >
+            <div
+              className="slds-grid slds-wrap"
+            >
+              <span
+                className="slds-truncate slds-text-body_regular slds-text-color_default"
+                title="Riley Shultz"
+              >
+                Riley Shultz
+              </span>
+              <span
+                className="slds-truncate slds-col_bump-left"
+                title="99"
+              >
+                99
+              </span>
+            </div>
+            <div
+              className="slds-grid slds-wrap"
+            >
+              <span
+                className="slds-truncate"
+                title="Biotech, Inc."
+              >
+                Biotech, Inc.
+              </span>
+              <span
+                className="slds-truncate slds-col_bump-left"
+                title="Nurturing"
+              >
+                Nurturing
+              </span>
+            </div>
+          </a>
+        </li>
+        <li
+          className="slds-split-view__list-item"
+          role="presentation"
+        >
+          <a
+            className="slds-split-view__list-item-action slds-grow slds-has-flexi-truncate"
+            href="#"
+            onClick={[Function]}
+            role="option"
+            tabIndex={-1}
+          >
+            <div
+              className="slds-grid slds-wrap"
+            >
+              <span
+                className="slds-truncate slds-text-body_regular slds-text-color_default"
+                title="Jason A. - VP of Sales"
+              >
+                Jason A. - VP of Sales
+              </span>
+              <span
+                className="slds-truncate slds-col_bump-left"
+                title="92"
+              >
+                92
+              </span>
+            </div>
+            <div
+              className="slds-grid slds-wrap"
+            >
+              <span
+                className="slds-truncate"
+                title="Case Management Solutions"
+              >
+                Case Management Solutions
+              </span>
+              <span
+                className="slds-truncate slds-col_bump-left"
+                title="Contacted"
+              >
+                Contacted
+              </span>
+            </div>
+          </a>
+        </li>
+        <li
+          className="slds-split-view__list-item"
+          role="presentation"
+        >
+          <a
+            className="slds-split-view__list-item-action slds-grow slds-has-flexi-truncate"
+            href="#"
+            onClick={[Function]}
+            role="option"
+            tabIndex={-1}
+          >
+            <div
+              className="slds-grid slds-wrap"
+            >
+              <span
+                className="slds-truncate slds-text-body_regular slds-text-color_default"
+                title="Josh Smith"
+              >
+                Josh Smith
+              </span>
+              <span
+                className="slds-truncate slds-col_bump-left"
+                title="90"
+              >
+                90
+              </span>
+            </div>
+            <div
+              className="slds-grid slds-wrap"
+            >
+              <span
+                className="slds-truncate"
+                title="Acme, Inc."
+              >
+                Acme, Inc.
+              </span>
+              <span
+                className="slds-truncate slds-col_bump-left"
+                title="Contacted"
+              >
+                Contacted
+              </span>
+            </div>
+          </a>
+        </li>
+        <li
+          className="slds-split-view__list-item"
+          role="presentation"
+        >
+          <a
+            className="slds-split-view__list-item-action slds-grow slds-has-flexi-truncate"
+            href="#"
+            onClick={[Function]}
+            role="option"
+            tabIndex={-1}
+          >
+            <div
+              className="slds-grid slds-wrap"
+            >
+              <span
+                className="slds-truncate slds-text-body_regular slds-text-color_default"
+                title="Bobby Tree"
+              >
+                Bobby Tree
+              </span>
+              <span
+                className="slds-truncate slds-col_bump-left"
+                title="89"
+              >
+                89
+              </span>
+            </div>
+            <div
+              className="slds-grid slds-wrap"
+            >
+              <span
+                className="slds-truncate"
+                title="Salesforce, Inc."
+              >
+                Salesforce, Inc.
+              </span>
+              <span
+                className="slds-truncate slds-col_bump-left"
+                title="Closing"
+              >
+                Closing
+              </span>
+            </div>
+          </a>
+        </li>
+        <li
+          className="slds-split-view__list-item"
+          role="presentation"
+        >
+          <a
+            aria-selected={true}
+            className="slds-split-view__list-item-action slds-grow slds-has-flexi-truncate"
+            href="#"
+            onClick={[Function]}
+            role="option"
+            tabIndex={-1}
+          >
+            <div
+              className="slds-grid slds-wrap"
+            >
+              <span
+                className="slds-truncate slds-text-body_regular slds-text-color_default"
+                title="Riley Shultz"
+              >
+                Riley Shultz
+              </span>
+              <span
+                className="slds-truncate slds-col_bump-left"
+                title="74"
+              >
+                74
+              </span>
+            </div>
+            <div
+              className="slds-grid slds-wrap"
+            >
+              <span
+                className="slds-truncate"
+                title="Tesla"
+              >
+                Tesla
+              </span>
+              <span
+                className="slds-truncate slds-col_bump-left"
+                title="Contacted"
+              >
+                Contacted
+              </span>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </article>
+</div>
+`;
+
+exports[`Split View renders split view with a selected item 1`] = `
+<div
+  className="slds-split-view_container slds-is-open"
+>
+  <button
+    aria-controls="split-view-id"
+    aria-expanded="true"
+    className="slds-button slds-button_icon slds-button_icon slds-split-view__toggle-button slds-is-open"
+    onClick={[Function]}
+    title="Close Split View"
+  >
+    <svg
+      aria-hidden={true}
+      className="slds-button__icon slds-button__icon_x-small"
+    >
+      <use
+        xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#left"
+      />
+    </svg>
+    <span
+      className="slds-assistive-text"
+    >
+      Close Split View
+    </span>
+  </button>
+  <article
+    aria-hidden="false"
+    className="slds-split-view slds-grid slds-grid_vertical slds-grow"
+    id="split-view-id"
+  >
+    <header
+      className="slds-split-view__header"
+    >
+      <div
+        className="slds-grid slds-grid_vertical-align-center slds-m-bottom_xx-small"
+      >
+        <div
+          className="slds-has-flexi-truncate"
+        >
+          <div
+            className="slds-media slds-media_center"
+          >
+            <div
+              className="slds-media__figure"
+            >
+              <div
+                className="slds-icon_container slds-icon-standard-lead"
+              >
+                <svg
+                  aria-hidden={true}
+                  className="slds-icon"
+                >
+                  <use
+                    xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#lead"
+                  />
+                </svg>
+                <span
+                  className="slds-assistive-text"
+                >
+                  Leads
+                </span>
+              </div>
+            </div>
+            <div
+              className="slds-media__body"
+            >
+              <h1
+                className="slds-text-heading_small slds-text-color_default slds-p-right_x-small"
+              >
+                <button
+                  aria-haspopup="true"
+                  className="slds-button slds-button_reset slds-type-focus slds-truncate"
+                  title=""
+                >
+                  <span
+                    className="slds-grid slds-has-flexi-truncate slds-grid_vertical-align-center"
+                  >
+                    <span
+                      className="slds-truncate"
+                      title="My Leads"
+                    >
+                      My Leads
+                    </span>
+                    <svg
+                      aria-hidden={true}
+                      className="slds-button__icon slds-button__icon_right slds-no-flex"
+                    >
+                      <use
+                        xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+                      />
+                    </svg>
+                  </span>
+                </button>
+              </h1>
+            </div>
+          </div>
+        </div>
+        <div
+          className="slds-no-flex slds-grid"
+        >
+          <button
+            aria-haspopup="true"
+            className="slds-button slds-button_icon slds-button_icon-border-filled"
+            onClick={[Function]}
+            title="More Actions"
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-button__icon"
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+              />
+            </svg>
+            <span
+              className="slds-assistive-text"
+            >
+              More Actions
+            </span>
+          </button>
+        </div>
+      </div>
+      <div
+        className="slds-grid slds-grid_vertical-align-center"
+      >
+        <p
+          className="slds-text-body_small slds-text-color_weak"
+        >
+          42 items • Updated just now
+        </p>
+        <div
+          className="slds-no-flex slds-grid slds-col_bump-left"
+        >
+          <div
+            className="slds-button-group"
+          >
+            <button
+              aria-expanded="false"
+              aria-haspopup="true"
+              className="slds-button slds-button_icon slds-button_icon slds-button_icon-container-more"
+              onClick={[Function]}
+              title="Display As Split View"
+            >
+              <svg
+                aria-hidden={true}
+                className="slds-button__icon"
+              >
+                <use
+                  xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#side_list"
+                />
+              </svg>
+              <svg
+                aria-hidden={true}
+                className="slds-button__icon slds-button__icon_x-small"
+              >
+                <use
+                  xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+                />
+              </svg>
+              <span
+                className="slds-assistive-text"
+              >
+                Display As Split View
+              </span>
+            </button>
+          </div>
+          <div
+            className="slds-button-group"
+          >
+            <button
+              className="slds-button slds-button_icon slds-button_icon slds-button_icon-container"
+              onClick={[Function]}
+              title="Refresh List"
+            >
+              <svg
+                aria-hidden={true}
+                className="slds-button__icon"
+              >
+                <use
+                  xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#refresh"
+                />
+              </svg>
+              <span
+                className="slds-assistive-text"
+              >
+                Refresh List
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div
+      className="slds-grid slds-grid_vertical"
+    >
+      <div
+        className="slds-split-view__list-header slds-grid"
+      >
+        <span
+          className="slds-assistive-text"
+        >
+          Sorted by:
+        </span>
+        <span>
+          Lead Score
+          <svg
+            aria-hidden={true}
+            className="slds-icon slds-icon_xx-small slds-icon-text-default slds-align-top"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#arrowdown"
+            />
+          </svg>
+        </span>
+        <span
+          className="slds-assistive-text"
+        >
+          - Descending
+        </span>
+      </div>
+      <ul
+        aria-label="Select an item to open it in a new workspace tab."
+        aria-multiselectable="true"
+        className="slds-scrollable_y"
+        role="listbox"
+      >
+        <li
+          className="slds-split-view__list-item"
+          role="presentation"
+        >
+          <a
+            className="slds-split-view__list-item-action slds-grow slds-has-flexi-truncate"
+            href="#"
+            onClick={[Function]}
+            role="option"
+            tabIndex={0}
+          >
+            <div
+              className="slds-grid slds-wrap"
+            >
+              <span
+                className="slds-truncate slds-text-body_regular slds-text-color_default"
+                title="Riley Shultz"
+              >
+                Riley Shultz
+              </span>
+              <span
+                className="slds-truncate slds-col_bump-left"
+                title="99"
+              >
+                99
+              </span>
+            </div>
+            <div
+              className="slds-grid slds-wrap"
+            >
+              <span
+                className="slds-truncate"
+                title="Biotech, Inc."
+              >
+                Biotech, Inc.
+              </span>
+              <span
+                className="slds-truncate slds-col_bump-left"
+                title="Nurturing"
+              >
+                Nurturing
+              </span>
+            </div>
+          </a>
+        </li>
+        <li
+          className="slds-split-view__list-item"
+          role="presentation"
+        >
+          <a
+            className="slds-split-view__list-item-action slds-grow slds-has-flexi-truncate"
+            href="#"
+            onClick={[Function]}
+            role="option"
+            tabIndex={-1}
+          >
+            <div
+              className="slds-grid slds-wrap"
+            >
+              <span
+                className="slds-truncate slds-text-body_regular slds-text-color_default"
+                title="Jason A. - VP of Sales"
+              >
+                Jason A. - VP of Sales
+              </span>
+              <span
+                className="slds-truncate slds-col_bump-left"
+                title="92"
+              >
+                92
+              </span>
+            </div>
+            <div
+              className="slds-grid slds-wrap"
+            >
+              <span
+                className="slds-truncate"
+                title="Case Management Solutions"
+              >
+                Case Management Solutions
+              </span>
+              <span
+                className="slds-truncate slds-col_bump-left"
+                title="Contacted"
+              >
+                Contacted
+              </span>
+            </div>
+          </a>
+        </li>
+        <li
+          className="slds-split-view__list-item"
+          role="presentation"
+        >
+          <a
+            className="slds-split-view__list-item-action slds-grow slds-has-flexi-truncate"
+            href="#"
+            onClick={[Function]}
+            role="option"
+            tabIndex={-1}
+          >
+            <div
+              className="slds-grid slds-wrap"
+            >
+              <span
+                className="slds-truncate slds-text-body_regular slds-text-color_default"
+                title="Josh Smith"
+              >
+                Josh Smith
+              </span>
+              <span
+                className="slds-truncate slds-col_bump-left"
+                title="90"
+              >
+                90
+              </span>
+            </div>
+            <div
+              className="slds-grid slds-wrap"
+            >
+              <span
+                className="slds-truncate"
+                title="Acme, Inc."
+              >
+                Acme, Inc.
+              </span>
+              <span
+                className="slds-truncate slds-col_bump-left"
+                title="Contacted"
+              >
+                Contacted
+              </span>
+            </div>
+          </a>
+        </li>
+        <li
+          className="slds-split-view__list-item"
+          role="presentation"
+        >
+          <a
+            className="slds-split-view__list-item-action slds-grow slds-has-flexi-truncate"
+            href="#"
+            onClick={[Function]}
+            role="option"
+            tabIndex={-1}
+          >
+            <div
+              className="slds-grid slds-wrap"
+            >
+              <span
+                className="slds-truncate slds-text-body_regular slds-text-color_default"
+                title="Bobby Tree"
+              >
+                Bobby Tree
+              </span>
+              <span
+                className="slds-truncate slds-col_bump-left"
+                title="89"
+              >
+                89
+              </span>
+            </div>
+            <div
+              className="slds-grid slds-wrap"
+            >
+              <span
+                className="slds-truncate"
+                title="Salesforce, Inc."
+              >
+                Salesforce, Inc.
+              </span>
+              <span
+                className="slds-truncate slds-col_bump-left"
+                title="Closing"
+              >
+                Closing
+              </span>
+            </div>
+          </a>
+        </li>
+        <li
+          className="slds-split-view__list-item"
+          role="presentation"
+        >
+          <a
+            aria-current="page"
+            className="slds-split-view__list-item-action slds-grow slds-has-flexi-truncate"
+            href="#"
+            onClick={[Function]}
+            role="option"
+            tabIndex={-1}
+          >
+            <div
+              className="slds-grid slds-wrap"
+            >
+              <span
+                className="slds-truncate slds-text-body_regular slds-text-color_default"
+                title="Riley Shultz"
+              >
+                Riley Shultz
+              </span>
+              <span
+                className="slds-truncate slds-col_bump-left"
+                title="74"
+              >
+                74
+              </span>
+            </div>
+            <div
+              className="slds-grid slds-wrap"
+            >
+              <span
+                className="slds-truncate"
+                title="Tesla"
+              >
+                Tesla
+              </span>
+              <span
+                className="slds-truncate slds-col_bump-left"
+                title="Contacted"
+              >
+                Contacted
+              </span>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </article>
+</div>
+`;
+
+exports[`Split View renders split view with overflow 1`] = `
+<div
+  className="slds-split-view_container slds-is-open"
+>
+  <button
+    aria-controls="split-view-id"
+    aria-expanded="true"
+    className="slds-button slds-button_icon slds-button_icon slds-split-view__toggle-button slds-is-open"
+    onClick={[Function]}
+    title="Close Split View"
+  >
+    <svg
+      aria-hidden={true}
+      className="slds-button__icon slds-button__icon_x-small"
+    >
+      <use
+        xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#left"
+      />
+    </svg>
+    <span
+      className="slds-assistive-text"
+    >
+      Close Split View
+    </span>
+  </button>
+  <article
+    aria-hidden="false"
+    className="slds-split-view slds-grid slds-grid_vertical slds-grow"
+    id="split-view-id"
+  >
+    <header
+      className="slds-split-view__header"
+    >
+      <div
+        className="slds-grid slds-grid_vertical-align-center slds-m-bottom_xx-small"
+      >
+        <div
+          className="slds-has-flexi-truncate"
+        >
+          <div
+            className="slds-media slds-media_center"
+          >
+            <div
+              className="slds-media__figure"
+            >
+              <div
+                className="slds-icon_container slds-icon-standard-lead"
+              >
+                <svg
+                  aria-hidden={true}
+                  className="slds-icon"
+                >
+                  <use
+                    xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#lead"
+                  />
+                </svg>
+                <span
+                  className="slds-assistive-text"
+                >
+                  Leads
+                </span>
+              </div>
+            </div>
+            <div
+              className="slds-media__body"
+            >
+              <h1
+                className="slds-text-heading_small slds-text-color_default slds-p-right_x-small"
+              >
+                <button
+                  aria-haspopup="true"
+                  className="slds-button slds-button_reset slds-type-focus slds-truncate"
+                  title=""
+                >
+                  <span
+                    className="slds-grid slds-has-flexi-truncate slds-grid_vertical-align-center"
+                  >
+                    <span
+                      className="slds-truncate"
+                      title="My Leads"
+                    >
+                      My Leads
+                    </span>
+                    <svg
+                      aria-hidden={true}
+                      className="slds-button__icon slds-button__icon_right slds-no-flex"
+                    >
+                      <use
+                        xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+                      />
+                    </svg>
+                  </span>
+                </button>
+              </h1>
+            </div>
+          </div>
+        </div>
+        <div
+          className="slds-no-flex slds-grid"
+        >
+          <button
+            aria-haspopup="true"
+            className="slds-button slds-button_icon slds-button_icon-border-filled"
+            onClick={[Function]}
+            title="More Actions"
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-button__icon"
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+              />
+            </svg>
+            <span
+              className="slds-assistive-text"
+            >
+              More Actions
+            </span>
+          </button>
+        </div>
+      </div>
+      <div
+        className="slds-grid slds-grid_vertical-align-center"
+      >
+        <p
+          className="slds-text-body_small slds-text-color_weak"
+        >
+          42 items • Updated just now
+        </p>
+        <div
+          className="slds-no-flex slds-grid slds-col_bump-left"
+        >
+          <div
+            className="slds-button-group"
+          >
+            <button
+              aria-expanded="false"
+              aria-haspopup="true"
+              className="slds-button slds-button_icon slds-button_icon slds-button_icon-container-more"
+              onClick={[Function]}
+              title="Display As Split View"
+            >
+              <svg
+                aria-hidden={true}
+                className="slds-button__icon"
+              >
+                <use
+                  xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#side_list"
+                />
+              </svg>
+              <svg
+                aria-hidden={true}
+                className="slds-button__icon slds-button__icon_x-small"
+              >
+                <use
+                  xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+                />
+              </svg>
+              <span
+                className="slds-assistive-text"
+              >
+                Display As Split View
+              </span>
+            </button>
+          </div>
+          <div
+            className="slds-button-group"
+          >
+            <button
+              className="slds-button slds-button_icon slds-button_icon slds-button_icon-container"
+              onClick={[Function]}
+              title="Refresh List"
+            >
+              <svg
+                aria-hidden={true}
+                className="slds-button__icon"
+              >
+                <use
+                  xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#refresh"
+                />
+              </svg>
+              <span
+                className="slds-assistive-text"
+              >
+                Refresh List
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div
+      className="slds-grid slds-grid_vertical"
+    >
+      <div
+        className="slds-split-view__list-header slds-grid"
+      >
+        <span
+          className="slds-assistive-text"
+        >
+          Sorted by:
+        </span>
+        <span>
+          Lead Score
+          <svg
+            aria-hidden={true}
+            className="slds-icon slds-icon_xx-small slds-icon-text-default slds-align-top"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#arrowdown"
+            />
+          </svg>
+        </span>
+        <span
+          className="slds-assistive-text"
+        >
+          - Descending
+        </span>
+      </div>
+      <ul
+        aria-label="Select an item to open it in a new workspace tab."
+        aria-multiselectable="true"
+        className="slds-scrollable_y"
+        role="listbox"
+      >
+        <li
+          className="slds-split-view__list-item"
+          role="presentation"
+        >
+          <a
+            className="slds-split-view__list-item-action slds-grow slds-has-flexi-truncate"
+            href="#"
+            onClick={[Function]}
+            role="option"
+            tabIndex={0}
+          >
+            <div
+              className="slds-grid slds-wrap"
+            >
+              <span
+                className="slds-truncate slds-text-body_regular slds-text-color_default"
+                title="Riley Shultz"
+              >
+                Riley Shultz
+              </span>
+              <span
+                className="slds-truncate slds-col_bump-left"
+                title="99"
+              >
+                99
+              </span>
+            </div>
+            <div
+              className="slds-grid slds-wrap"
+            >
+              <span
+                className="slds-truncate"
+                title="Biotech, Inc."
+              >
+                Biotech, Inc.
+              </span>
+              <span
+                className="slds-truncate slds-col_bump-left"
+                title="Nurturing"
+              >
+                Nurturing
+              </span>
+            </div>
+          </a>
+        </li>
+        <li
+          className="slds-split-view__list-item"
+          role="presentation"
+        >
+          <a
+            className="slds-split-view__list-item-action slds-grow slds-has-flexi-truncate"
+            href="#"
+            onClick={[Function]}
+            role="option"
+            tabIndex={-1}
+          >
+            <div
+              className="slds-grid slds-wrap"
+            >
+              <span
+                className="slds-truncate slds-text-body_regular slds-text-color_default"
+                title="Jason A. - VP of Sales"
+              >
+                Jason A. - VP of Sales
+              </span>
+              <span
+                className="slds-truncate slds-col_bump-left"
+                title="92"
+              >
+                92
+              </span>
+            </div>
+            <div
+              className="slds-grid slds-wrap"
+            >
+              <span
+                className="slds-truncate"
+                title="Case Management Solutions"
+              >
+                Case Management Solutions
+              </span>
+              <span
+                className="slds-truncate slds-col_bump-left"
+                title="Contacted"
+              >
+                Contacted
+              </span>
+            </div>
+          </a>
+        </li>
+        <li
+          className="slds-split-view__list-item"
+          role="presentation"
+        >
+          <a
+            className="slds-split-view__list-item-action slds-grow slds-has-flexi-truncate"
+            href="#"
+            onClick={[Function]}
+            role="option"
+            tabIndex={-1}
+          >
+            <div
+              className="slds-grid slds-wrap"
+            >
+              <span
+                className="slds-truncate slds-text-body_regular slds-text-color_default"
+                title="Josh Smith"
+              >
+                Josh Smith
+              </span>
+              <span
+                className="slds-truncate slds-col_bump-left"
+                title="90"
+              >
+                90
+              </span>
+            </div>
+            <div
+              className="slds-grid slds-wrap"
+            >
+              <span
+                className="slds-truncate"
+                title="Acme, Inc."
+              >
+                Acme, Inc.
+              </span>
+              <span
+                className="slds-truncate slds-col_bump-left"
+                title="Contacted"
+              >
+                Contacted
+              </span>
+            </div>
+          </a>
+        </li>
+        <li
+          className="slds-split-view__list-item"
+          role="presentation"
+        >
+          <a
+            className="slds-split-view__list-item-action slds-grow slds-has-flexi-truncate"
+            href="#"
+            onClick={[Function]}
+            role="option"
+            tabIndex={-1}
+          >
+            <div
+              className="slds-grid slds-wrap"
+            >
+              <span
+                className="slds-truncate slds-text-body_regular slds-text-color_default"
+                title="Bobby Tree"
+              >
+                Bobby Tree
+              </span>
+              <span
+                className="slds-truncate slds-col_bump-left"
+                title="89"
+              >
+                89
+              </span>
+            </div>
+            <div
+              className="slds-grid slds-wrap"
+            >
+              <span
+                className="slds-truncate"
+                title="Salesforce, Inc."
+              >
+                Salesforce, Inc.
+              </span>
+              <span
+                className="slds-truncate slds-col_bump-left"
+                title="Closing"
+              >
+                Closing
+              </span>
+            </div>
+          </a>
+        </li>
+        <li
+          className="slds-split-view__list-item"
+          role="presentation"
+        >
+          <a
+            className="slds-split-view__list-item-action slds-grow slds-has-flexi-truncate"
+            href="#"
+            onClick={[Function]}
+            role="option"
+            tabIndex={-1}
+          >
+            <div
+              className="slds-grid slds-wrap"
+            >
+              <span
+                className="slds-truncate slds-text-body_regular slds-text-color_default"
+                title="Riley Shultz"
+              >
+                Riley Shultz
+              </span>
+              <span
+                className="slds-truncate slds-col_bump-left"
+                title="74"
+              >
+                74
+              </span>
+            </div>
+            <div
+              className="slds-grid slds-wrap"
+            >
+              <span
+                className="slds-truncate"
+                title="Tesla"
+              >
+                Tesla
+              </span>
+              <span
+                className="slds-truncate slds-col_bump-left"
+                title="Contacted"
+              >
+                Contacted
+              </span>
+            </div>
+          </a>
+        </li>
+        <li
+          className="slds-split-view__list-item"
+          role="presentation"
+        >
+          <a
+            className="slds-split-view__list-item-action slds-grow slds-has-flexi-truncate"
+            href="#"
+            onClick={[Function]}
+            role="option"
+            tabIndex={-1}
+          >
+            <div
+              className="slds-grid slds-wrap"
+            >
+              <span
+                className="slds-truncate slds-text-body_regular slds-text-color_default"
+                title="Andy Smith"
+              >
+                Andy Smith
+              </span>
+              <span
+                className="slds-truncate slds-col_bump-left"
+                title="72"
+              >
+                72
+              </span>
+            </div>
+            <div
+              className="slds-grid slds-wrap"
+            >
+              <span
+                className="slds-truncate"
+                title="Universal Technologies"
+              >
+                Universal Technologies
+              </span>
+              <span
+                className="slds-truncate slds-col_bump-left"
+                title="New"
+              >
+                New
+              </span>
+            </div>
+          </a>
+        </li>
+        <li
+          className="slds-split-view__list-item"
+          role="presentation"
+        >
+          <a
+            className="slds-split-view__list-item-action slds-grow slds-has-flexi-truncate"
+            href="#"
+            onClick={[Function]}
+            role="option"
+            tabIndex={-1}
+          >
+            <div
+              className="slds-grid slds-wrap"
+            >
+              <span
+                className="slds-truncate slds-text-body_regular slds-text-color_default"
+                title="Jim Steele"
+              >
+                Jim Steele
+              </span>
+              <span
+                className="slds-truncate slds-col_bump-left"
+                title="71"
+              >
+                71
+              </span>
+            </div>
+            <div
+              className="slds-grid slds-wrap"
+            >
+              <span
+                className="slds-truncate"
+                title="BigList, Inc."
+              >
+                BigList, Inc.
+              </span>
+              <span
+                className="slds-truncate slds-col_bump-left"
+                title="New"
+              >
+                New
+              </span>
+            </div>
+          </a>
+        </li>
+        <li
+          className="slds-split-view__list-item"
+          role="presentation"
+        >
+          <a
+            className="slds-split-view__list-item-action slds-grow slds-has-flexi-truncate"
+            href="#"
+            onClick={[Function]}
+            role="option"
+            tabIndex={-1}
+          >
+            <div
+              className="slds-grid slds-wrap"
+            >
+              <span
+                className="slds-truncate slds-text-body_regular slds-text-color_default"
+                title="John Gardner"
+              >
+                John Gardner
+              </span>
+              <span
+                className="slds-truncate slds-col_bump-left"
+                title="70"
+              >
+                70
+              </span>
+            </div>
+            <div
+              className="slds-grid slds-wrap"
+            >
+              <span
+                className="slds-truncate"
+                title="3C Systems"
+              >
+                3C Systems
+              </span>
+              <span
+                className="slds-truncate slds-col_bump-left"
+                title="Contacted"
+              >
+                Contacted
+              </span>
+            </div>
+          </a>
+        </li>
+        <li
+          className="slds-split-view__list-item"
+          role="presentation"
+        >
+          <a
+            className="slds-split-view__list-item-action slds-grow slds-has-flexi-truncate"
+            href="#"
+            onClick={[Function]}
+            role="option"
+            tabIndex={-1}
+          >
+            <div
+              className="slds-grid slds-wrap"
+            >
+              <span
+                className="slds-truncate slds-text-body_regular slds-text-color_default"
+                title="Sarah Loehr"
+              >
+                Sarah Loehr
+              </span>
+              <span
+                className="slds-truncate slds-col_bump-left"
+                title="68"
+              >
+                68
+              </span>
+            </div>
+            <div
+              className="slds-grid slds-wrap"
+            >
+              <span
+                className="slds-truncate"
+                title="MedLife, Inc."
+              >
+                MedLife, Inc.
+              </span>
+              <span
+                className="slds-truncate slds-col_bump-left"
+                title="New"
+              >
+                New
+              </span>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </article>
+</div>
+`;
+
+exports[`Split View renders split view with unread items 1`] = `
+<div
+  className="slds-split-view_container slds-is-open"
+>
+  <button
+    aria-controls="split-view-id"
+    aria-expanded="true"
+    className="slds-button slds-button_icon slds-button_icon slds-split-view__toggle-button slds-is-open"
+    onClick={[Function]}
+    title="Close Split View"
+  >
+    <svg
+      aria-hidden={true}
+      className="slds-button__icon slds-button__icon_x-small"
+    >
+      <use
+        xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#left"
+      />
+    </svg>
+    <span
+      className="slds-assistive-text"
+    >
+      Close Split View
+    </span>
+  </button>
+  <article
+    aria-hidden="false"
+    className="slds-split-view slds-grid slds-grid_vertical slds-grow"
+    id="split-view-id"
+  >
+    <header
+      className="slds-split-view__header"
+    >
+      <div
+        className="slds-grid slds-grid_vertical-align-center slds-m-bottom_xx-small"
+      >
+        <div
+          className="slds-has-flexi-truncate"
+        >
+          <div
+            className="slds-media slds-media_center"
+          >
+            <div
+              className="slds-media__figure"
+            >
+              <div
+                className="slds-icon_container slds-icon-standard-lead"
+              >
+                <svg
+                  aria-hidden={true}
+                  className="slds-icon"
+                >
+                  <use
+                    xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#lead"
+                  />
+                </svg>
+                <span
+                  className="slds-assistive-text"
+                >
+                  Leads
+                </span>
+              </div>
+            </div>
+            <div
+              className="slds-media__body"
+            >
+              <h1
+                className="slds-text-heading_small slds-text-color_default slds-p-right_x-small"
+              >
+                <button
+                  aria-haspopup="true"
+                  className="slds-button slds-button_reset slds-type-focus slds-truncate"
+                  title=""
+                >
+                  <span
+                    className="slds-grid slds-has-flexi-truncate slds-grid_vertical-align-center"
+                  >
+                    <span
+                      className="slds-truncate"
+                      title="My Leads"
+                    >
+                      My Leads
+                    </span>
+                    <svg
+                      aria-hidden={true}
+                      className="slds-button__icon slds-button__icon_right slds-no-flex"
+                    >
+                      <use
+                        xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+                      />
+                    </svg>
+                  </span>
+                </button>
+              </h1>
+            </div>
+          </div>
+        </div>
+        <div
+          className="slds-no-flex slds-grid"
+        >
+          <button
+            aria-haspopup="true"
+            className="slds-button slds-button_icon slds-button_icon-border-filled"
+            onClick={[Function]}
+            title="More Actions"
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-button__icon"
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+              />
+            </svg>
+            <span
+              className="slds-assistive-text"
+            >
+              More Actions
+            </span>
+          </button>
+        </div>
+      </div>
+      <div
+        className="slds-grid slds-grid_vertical-align-center"
+      >
+        <p
+          className="slds-text-body_small slds-text-color_weak"
+        >
+          42 items • Updated just now
+        </p>
+        <div
+          className="slds-no-flex slds-grid slds-col_bump-left"
+        >
+          <div
+            className="slds-button-group"
+          >
+            <button
+              aria-expanded="false"
+              aria-haspopup="true"
+              className="slds-button slds-button_icon slds-button_icon slds-button_icon-container-more"
+              onClick={[Function]}
+              title="Display As Split View"
+            >
+              <svg
+                aria-hidden={true}
+                className="slds-button__icon"
+              >
+                <use
+                  xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#side_list"
+                />
+              </svg>
+              <svg
+                aria-hidden={true}
+                className="slds-button__icon slds-button__icon_x-small"
+              >
+                <use
+                  xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+                />
+              </svg>
+              <span
+                className="slds-assistive-text"
+              >
+                Display As Split View
+              </span>
+            </button>
+          </div>
+          <div
+            className="slds-button-group"
+          >
+            <button
+              className="slds-button slds-button_icon slds-button_icon slds-button_icon-container"
+              onClick={[Function]}
+              title="Refresh List"
+            >
+              <svg
+                aria-hidden={true}
+                className="slds-button__icon"
+              >
+                <use
+                  xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#refresh"
+                />
+              </svg>
+              <span
+                className="slds-assistive-text"
+              >
+                Refresh List
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div
+      className="slds-grid slds-grid_vertical"
+    >
+      <div
+        className="slds-split-view__list-header slds-grid"
+      >
+        <span
+          className="slds-assistive-text"
+        >
+          Sorted by:
+        </span>
+        <span>
+          Lead Score
+          <svg
+            aria-hidden={true}
+            className="slds-icon slds-icon_xx-small slds-icon-text-default slds-align-top"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#arrowdown"
+            />
+          </svg>
+        </span>
+        <span
+          className="slds-assistive-text"
+        >
+          - Descending
+        </span>
+      </div>
+      <ul
+        aria-label="Select an item to open it in a new workspace tab."
+        aria-multiselectable="true"
+        className="slds-scrollable_y"
+        role="listbox"
+      >
+        <li
+          className="slds-split-view__list-item slds-is-unread"
+          role="presentation"
+        >
+          <a
+            className="slds-split-view__list-item-action slds-grow slds-has-flexi-truncate"
+            href="#"
+            onClick={[Function]}
+            role="option"
+            tabIndex={0}
+          >
+            <abbr
+              aria-label="Unread Item"
+              className="slds-indicator_unread"
+              title="Unread Item"
+            >
+              <span
+                className="slds-assistive-text"
+              >
+                ●
+              </span>
+            </abbr>
+            <div
+              className="slds-grid slds-wrap"
+            >
+              <span
+                className="slds-truncate slds-text-body_regular slds-text-color_default"
+                title="Riley Shultz"
+              >
+                Riley Shultz
+              </span>
+              <span
+                className="slds-truncate slds-col_bump-left"
+                title="99"
+              >
+                99
+              </span>
+            </div>
+            <div
+              className="slds-grid slds-wrap"
+            >
+              <span
+                className="slds-truncate"
+                title="Biotech, Inc."
+              >
+                Biotech, Inc.
+              </span>
+              <span
+                className="slds-truncate slds-col_bump-left"
+                title="Nurturing"
+              >
+                Nurturing
+              </span>
+            </div>
+          </a>
+        </li>
+        <li
+          className="slds-split-view__list-item slds-is-unread"
+          role="presentation"
+        >
+          <a
+            className="slds-split-view__list-item-action slds-grow slds-has-flexi-truncate"
+            href="#"
+            onClick={[Function]}
+            role="option"
+            tabIndex={-1}
+          >
+            <abbr
+              aria-label="Unread Item"
+              className="slds-indicator_unread"
+              title="Unread Item"
+            >
+              <span
+                className="slds-assistive-text"
+              >
+                ●
+              </span>
+            </abbr>
+            <div
+              className="slds-grid slds-wrap"
+            >
+              <span
+                className="slds-truncate slds-text-body_regular slds-text-color_default"
+                title="Jason A. - VP of Sales"
+              >
+                Jason A. - VP of Sales
+              </span>
+              <span
+                className="slds-truncate slds-col_bump-left"
+                title="92"
+              >
+                92
+              </span>
+            </div>
+            <div
+              className="slds-grid slds-wrap"
+            >
+              <span
+                className="slds-truncate"
+                title="Case Management Solutions"
+              >
+                Case Management Solutions
+              </span>
+              <span
+                className="slds-truncate slds-col_bump-left"
+                title="Contacted"
+              >
+                Contacted
+              </span>
+            </div>
+          </a>
+        </li>
+        <li
+          className="slds-split-view__list-item slds-is-unread"
+          role="presentation"
+        >
+          <a
+            className="slds-split-view__list-item-action slds-grow slds-has-flexi-truncate"
+            href="#"
+            onClick={[Function]}
+            role="option"
+            tabIndex={-1}
+          >
+            <abbr
+              aria-label="Unread Item"
+              className="slds-indicator_unread"
+              title="Unread Item"
+            >
+              <span
+                className="slds-assistive-text"
+              >
+                ●
+              </span>
+            </abbr>
+            <div
+              className="slds-grid slds-wrap"
+            >
+              <span
+                className="slds-truncate slds-text-body_regular slds-text-color_default"
+                title="Josh Smith"
+              >
+                Josh Smith
+              </span>
+              <span
+                className="slds-truncate slds-col_bump-left"
+                title="90"
+              >
+                90
+              </span>
+            </div>
+            <div
+              className="slds-grid slds-wrap"
+            >
+              <span
+                className="slds-truncate"
+                title="Acme, Inc."
+              >
+                Acme, Inc.
+              </span>
+              <span
+                className="slds-truncate slds-col_bump-left"
+                title="Contacted"
+              >
+                Contacted
+              </span>
+            </div>
+          </a>
+        </li>
+        <li
+          className="slds-split-view__list-item slds-is-unread"
+          role="presentation"
+        >
+          <a
+            className="slds-split-view__list-item-action slds-grow slds-has-flexi-truncate"
+            href="#"
+            onClick={[Function]}
+            role="option"
+            tabIndex={-1}
+          >
+            <abbr
+              aria-label="Unread Item"
+              className="slds-indicator_unread"
+              title="Unread Item"
+            >
+              <span
+                className="slds-assistive-text"
+              >
+                ●
+              </span>
+            </abbr>
+            <div
+              className="slds-grid slds-wrap"
+            >
+              <span
+                className="slds-truncate slds-text-body_regular slds-text-color_default"
+                title="Bobby Tree"
+              >
+                Bobby Tree
+              </span>
+              <span
+                className="slds-truncate slds-col_bump-left"
+                title="89"
+              >
+                89
+              </span>
+            </div>
+            <div
+              className="slds-grid slds-wrap"
+            >
+              <span
+                className="slds-truncate"
+                title="Salesforce, Inc."
+              >
+                Salesforce, Inc.
+              </span>
+              <span
+                className="slds-truncate slds-col_bump-left"
+                title="Closing"
+              >
+                Closing
+              </span>
+            </div>
+          </a>
+        </li>
+        <li
+          className="slds-split-view__list-item"
+          role="presentation"
+        >
+          <a
+            className="slds-split-view__list-item-action slds-grow slds-has-flexi-truncate"
+            href="#"
+            onClick={[Function]}
+            role="option"
+            tabIndex={-1}
+          >
+            <div
+              className="slds-grid slds-wrap"
+            >
+              <span
+                className="slds-truncate slds-text-body_regular slds-text-color_default"
+                title="Riley Shultz"
+              >
+                Riley Shultz
+              </span>
+              <span
+                className="slds-truncate slds-col_bump-left"
+                title="74"
+              >
+                74
+              </span>
+            </div>
+            <div
+              className="slds-grid slds-wrap"
+            >
+              <span
+                className="slds-truncate"
+                title="Tesla"
+              >
+                Tesla
+              </span>
+              <span
+                className="slds-truncate slds-col_bump-left"
+                title="Contacted"
+              >
+                Contacted
+              </span>
+            </div>
+          </a>
+        </li>
+        <li
+          className="slds-split-view__list-item slds-is-unread"
+          role="presentation"
+        >
+          <a
+            className="slds-split-view__list-item-action slds-grow slds-has-flexi-truncate"
+            href="#"
+            onClick={[Function]}
+            role="option"
+            tabIndex={-1}
+          >
+            <abbr
+              aria-label="Unread Item"
+              className="slds-indicator_unread"
+              title="Unread Item"
+            >
+              <span
+                className="slds-assistive-text"
+              >
+                ●
+              </span>
+            </abbr>
+            <div
+              className="slds-grid slds-wrap"
+            >
+              <span
+                className="slds-truncate slds-text-body_regular slds-text-color_default"
+                title="Andy Smith"
+              >
+                Andy Smith
+              </span>
+              <span
+                className="slds-truncate slds-col_bump-left"
+                title="72"
+              >
+                72
+              </span>
+            </div>
+            <div
+              className="slds-grid slds-wrap"
+            >
+              <span
+                className="slds-truncate"
+                title="Universal Technologies"
+              >
+                Universal Technologies
+              </span>
+              <span
+                className="slds-truncate slds-col_bump-left"
+                title="New"
+              >
+                New
+              </span>
+            </div>
+          </a>
+        </li>
+        <li
+          className="slds-split-view__list-item"
+          role="presentation"
+        >
+          <a
+            className="slds-split-view__list-item-action slds-grow slds-has-flexi-truncate"
+            href="#"
+            onClick={[Function]}
+            role="option"
+            tabIndex={-1}
+          >
+            <div
+              className="slds-grid slds-wrap"
+            >
+              <span
+                className="slds-truncate slds-text-body_regular slds-text-color_default"
+                title="Jim Steele"
+              >
+                Jim Steele
+              </span>
+              <span
+                className="slds-truncate slds-col_bump-left"
+                title="71"
+              >
+                71
+              </span>
+            </div>
+            <div
+              className="slds-grid slds-wrap"
+            >
+              <span
+                className="slds-truncate"
+                title="BigList, Inc."
+              >
+                BigList, Inc.
+              </span>
+              <span
+                className="slds-truncate slds-col_bump-left"
+                title="New"
+              >
+                New
+              </span>
+            </div>
+          </a>
+        </li>
+        <li
+          className="slds-split-view__list-item"
+          role="presentation"
+        >
+          <a
+            className="slds-split-view__list-item-action slds-grow slds-has-flexi-truncate"
+            href="#"
+            onClick={[Function]}
+            role="option"
+            tabIndex={-1}
+          >
+            <div
+              className="slds-grid slds-wrap"
+            >
+              <span
+                className="slds-truncate slds-text-body_regular slds-text-color_default"
+                title="John Gardner"
+              >
+                John Gardner
+              </span>
+              <span
+                className="slds-truncate slds-col_bump-left"
+                title="70"
+              >
+                70
+              </span>
+            </div>
+            <div
+              className="slds-grid slds-wrap"
+            >
+              <span
+                className="slds-truncate"
+                title="3C Systems"
+              >
+                3C Systems
+              </span>
+              <span
+                className="slds-truncate slds-col_bump-left"
+                title="Contacted"
+              >
+                Contacted
+              </span>
+            </div>
+          </a>
+        </li>
+        <li
+          className="slds-split-view__list-item"
+          role="presentation"
+        >
+          <a
+            className="slds-split-view__list-item-action slds-grow slds-has-flexi-truncate"
+            href="#"
+            onClick={[Function]}
+            role="option"
+            tabIndex={-1}
+          >
+            <div
+              className="slds-grid slds-wrap"
+            >
+              <span
+                className="slds-truncate slds-text-body_regular slds-text-color_default"
+                title="Sarah Loehr"
+              >
+                Sarah Loehr
+              </span>
+              <span
+                className="slds-truncate slds-col_bump-left"
+                title="68"
+              >
+                68
+              </span>
+            </div>
+            <div
+              className="slds-grid slds-wrap"
+            >
+              <span
+                className="slds-truncate"
+                title="MedLife, Inc."
+              >
+                MedLife, Inc.
+              </span>
+              <span
+                className="slds-truncate slds-col_bump-left"
+                title="New"
+              >
+                New
+              </span>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </article>
+</div>
+`;

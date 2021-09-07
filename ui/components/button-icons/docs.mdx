@@ -14,7 +14,7 @@ import * as Brand from './brand/example';
 import * as Inverse from './inverse/example';
 import * as Stateful from './stateful/example';
 import * as TransparentContainer from './transparent-container/example';
-import _, { getDisplayElementById } from '../../shared/helpers';
+import _, { getDisplayElementById, getDemoStylesById } from '../../shared/helpers';
 import { MobileNotice, MobileBlurb } from '../../shared/doc-text';
 
 <div className="lead doc">
@@ -58,7 +58,7 @@ When using assistive text, the icon element itself should have `aria-hidden` set
 
 <MobileBlurb patternSpecificText="buttons will have an increased size to accommodate tapping with a finger instead of the more precise mouse cursor" />
 
-<CodeView frameOnly>
+<CodeView frameOnly frameTitle="Example mobile styles for button icons">
   <React.Fragment>
     <ButtonIcon
       iconClassName="slds-button__icon_large"
@@ -80,18 +80,22 @@ When using assistive text, the icon element itself should have `aria-hidden` set
 
 ## Base
 
-<CodeView toggleCode={false}>{Base.default}</CodeView>
+<CodeView toggleCode={false}>
+  {getDisplayElementById(Base.default)}
+</CodeView>
 
 ## Variations
 
 ### Brand
 
-<CodeView toggleCode={false}>{Brand.default}</CodeView>
+<CodeView toggleCode={false}>
+  {getDisplayElementById(Brand.default)}
+</CodeView>
 
 ### Inverse
 
-<CodeView toggleCode={false}>
-  <Inverse.Context>{Inverse.default}</Inverse.Context>
+<CodeView toggleCode={false} demoStyles={getDemoStylesById(Inverse.default)}>
+  {getDisplayElementById(Inverse.default)}
 </CodeView>
 
 ### Icon Containers
@@ -107,32 +111,26 @@ Use the inverse button on dark backgrounds by adding the `slds-button_inverse` c
 <DisplayGrid>
   <DisplayColumn>
     <strong>Bare - transparent container</strong>
-    <CodeView toggleCode={false}>
-      <TransparentContainer.Context>
-        {TransparentContainer.default}
-      </TransparentContainer.Context>
+    <CodeView toggleCode={false} demoStyles={getDemoStylesById(TransparentContainer.default)}>
+      {getDisplayElementById(TransparentContainer.default)}
     </CodeView>
   </DisplayColumn>
   <DisplayColumn>
     <strong>Bordered - filled container</strong>
-    <CodeView toggleCode={false}>
-      <BorderedFilled.Context>{BorderedFilled.default}</BorderedFilled.Context>
+    <CodeView toggleCode={false} demoStyles={getDemoStylesById(BorderedFilled.default)}>
+      {getDisplayElementById(BorderedFilled.default)}
     </CodeView>
   </DisplayColumn>
   <DisplayColumn>
     <strong>Bordered - transparent container</strong>
-    <CodeView toggleCode={false}>
-      <BorderedTransparent.Context>
-        {BorderedTransparent.default}
-      </BorderedTransparent.Context>
+    <CodeView toggleCode={false} demoStyles={getDemoStylesById(BorderedTransparent.default)}>
+      {getDisplayElementById(BorderedTransparent.default)}
     </CodeView>
   </DisplayColumn>
   <DisplayColumn>
     <strong>Bordered inverse - transparent container</strong>
-    <CodeView toggleCode={false}>
-      <BorderedInverse.Context>
-        {BorderedInverse.default}
-      </BorderedInverse.Context>
+    <CodeView toggleCode={false} demoStyles={getDemoStylesById(BorderedInverse.default)}>
+      {getDisplayElementById(BorderedInverse.default)}
     </CodeView>
   </DisplayColumn>
 </DisplayGrid>
@@ -142,7 +140,7 @@ Use the inverse button on dark backgrounds by adding the `slds-button_inverse` c
 The stateful button requires the `slds-button_icon-border` class in addition to the `slds-button` class.
 The stateful inverse button works just like the stateful button. It requires the `slds-button_icon-border-inverse` class in addition to the `slds-button` class.
 
-<CodeView toggleCode={false}>{Stateful.default}</CodeView>
+<CodeView toggleCode={false}>{getDisplayElementById(Stateful.default)}</CodeView>
 
 <Blockquote type="a11y" header="Accessibility Note">
   <p>
@@ -272,42 +270,32 @@ To create a disabled button, append the `disabled` attribute to the `<button>`.
   </DisplayColumn>
   <DisplayColumn>
     <strong>Transparent container</strong>
-    <CodeView>
-      <TransparentContainer.Context>
-        {getDisplayElementById(TransparentContainer.states, 'disabled')}
-      </TransparentContainer.Context>
+    <CodeView demoStyles={getDemoStylesById(TransparentContainer.states, 'disabled')}>
+      {getDisplayElementById(TransparentContainer.states, 'disabled')}
     </CodeView>
   </DisplayColumn>
   <DisplayColumn>
     <strong>Inverse</strong>
-    <CodeView>
-      <Inverse.Context>
-        {getDisplayElementById(Inverse.states, 'disabled')}
-      </Inverse.Context>
+    <CodeView demoStyles={getDemoStylesById(Inverse.states, 'disabled')}>
+      {getDisplayElementById(Inverse.states, 'disabled')}
     </CodeView>
   </DisplayColumn>
   <DisplayColumn>
     <strong>Bordered filled container</strong>
-    <CodeView>
-      <BorderedFilled.Context>
-        {getDisplayElementById(BorderedFilled.states, 'disabled')}
-      </BorderedFilled.Context>
+    <CodeView demoStyles={getDemoStylesById(BorderedFilled.states, 'disabled')}>
+      {getDisplayElementById(BorderedFilled.states, 'disabled')}
     </CodeView>
   </DisplayColumn>
   <DisplayColumn>
     <strong>Bordered transparent</strong>
-    <CodeView>
-      <BorderedTransparent.Context>
-        {getDisplayElementById(BorderedTransparent.states, 'disabled')}
-      </BorderedTransparent.Context>
+    <CodeView demoStyles={getDemoStylesById(BorderedTransparent.states, 'disabled')}>
+      {getDisplayElementById(BorderedTransparent.states, 'disabled')}
     </CodeView>
   </DisplayColumn>
   <DisplayColumn>
     <strong>Bordered inverse</strong>
-    <CodeView>
-      <BorderedInverse.Context>
-        {getDisplayElementById(BorderedInverse.states, 'disabled')}
-      </BorderedInverse.Context>
+    <CodeView demoStyles={getDemoStylesById(BorderedInverse.states, 'disabled')}>
+      {getDisplayElementById(BorderedInverse.states, 'disabled')}
     </CodeView>
   </DisplayColumn>
 </DisplayGrid>
@@ -352,26 +340,20 @@ A parent class, `slds-hint-parent`, must be put on any wrapper, and `slds-button
   </DisplayColumn>
   <DisplayColumn>
     <strong>Transparent container</strong>
-    <CodeView>
-      <TransparentContainer.Context>
-        {getDisplayElementById(TransparentContainer.examples, 'hint-hover')}
-      </TransparentContainer.Context>
+    <CodeView demoStyles={getDemoStylesById(TransparentContainer.examples, 'hint-hover')}>
+      {getDisplayElementById(TransparentContainer.examples, 'hint-hover')}
     </CodeView>
   </DisplayColumn>
   <DisplayColumn>
     <strong>Bordered filled container</strong>
-    <CodeView>
-      <BorderedFilled.Context>
-        {getDisplayElementById(BorderedFilled.examples, 'hint-hover')}
-      </BorderedFilled.Context>
+    <CodeView demoStyles={getDemoStylesById(BorderedFilled.examples, 'hint-hover')}>
+      {getDisplayElementById(BorderedFilled.examples, 'hint-hover')}
     </CodeView>
   </DisplayColumn>
   <DisplayColumn>
     <strong>Bordered transparent</strong>
-    <CodeView>
-      <BorderedTransparent.Context>
-        {getDisplayElementById(BorderedTransparent.examples, 'hint-hover')}
-      </BorderedTransparent.Context>
+    <CodeView demoStyles={getDemoStylesById(BorderedTransparent.examples, 'hint-hover')}>
+      {getDisplayElementById(BorderedTransparent.examples, 'hint-hover')}
     </CodeView>
   </DisplayColumn>
 </DisplayGrid>
@@ -394,18 +376,14 @@ In the case of inverse, use the `slds-button__icon_inverse-hint` class on the bu
 <DisplayGrid>
   <DisplayColumn>
     <strong>Inverse</strong>
-    <CodeView>
-      <Inverse.Context>
-        {getDisplayElementById(Inverse.examples, 'hint-hover')}
-      </Inverse.Context>
+    <CodeView demoStyles={getDemoStylesById(Inverse.examples, 'hint-hover')}>
+      {getDisplayElementById(Inverse.examples, 'hint-hover')}
     </CodeView>
   </DisplayColumn>
   <DisplayColumn>
     <strong>Bordered inverse</strong>
-    <CodeView>
-      <BorderedInverse.Context>
-        {getDisplayElementById(BorderedInverse.examples, 'hint-hover')}
-      </BorderedInverse.Context>
+    <CodeView demoStyles={getDemoStylesById(BorderedInverse.examples, 'hint-hover')}>
+      {getDisplayElementById(BorderedInverse.examples, 'hint-hover')}
     </CodeView>
   </DisplayColumn>
 </DisplayGrid>
@@ -427,34 +405,26 @@ If the button opens a menu, add `slds-button_icon-more` class to the `<button>` 
 <DisplayGrid>
   <DisplayColumn>
     <strong>Transparent container</strong>
-    <CodeView>
-      <TransparentContainer.Context>
-        {getDisplayElementById(TransparentContainer.examples, 'with-dropdown')}
-      </TransparentContainer.Context>
+    <CodeView demoStyles={getDemoStylesById(TransparentContainer.examples, 'with-dropdown')}>
+      {getDisplayElementById(TransparentContainer.examples, 'with-dropdown')}
     </CodeView>
   </DisplayColumn>
   <DisplayColumn>
     <strong>Inverse</strong>
-    <CodeView>
-      <Inverse.Context>
-        {getDisplayElementById(Inverse.examples, 'with-dropdown')}
-      </Inverse.Context>
+    <CodeView demoStyles={getDemoStylesById(Inverse.examples, 'with-dropdown')}>
+      {getDisplayElementById(Inverse.examples, 'with-dropdown')}
     </CodeView>
   </DisplayColumn>
   <DisplayColumn>
     <strong>Bordered filled container</strong>
-    <CodeView>
-      <BorderedFilled.Context>
-        {getDisplayElementById(BorderedFilled.examples, 'with-dropdown')}
-      </BorderedFilled.Context>
+    <CodeView demoStyles={getDemoStylesById(BorderedFilled.examples, 'with-dropdown')}>
+      {getDisplayElementById(BorderedFilled.examples, 'with-dropdown')}
     </CodeView>
   </DisplayColumn>
   <DisplayColumn>
     <strong>Bordered inverse</strong>
-    <CodeView>
-      <BorderedInverse.Context>
-        {getDisplayElementById(BorderedFilled.examples, 'with-dropdown')}
-      </BorderedInverse.Context>
+    <CodeView demoStyles={getDemoStylesById(BorderedInverse.examples, 'with-dropdown')}>
+      {getDisplayElementById(BorderedInverse.examples, 'with-dropdown')}
     </CodeView>
   </DisplayColumn>
 </DisplayGrid>

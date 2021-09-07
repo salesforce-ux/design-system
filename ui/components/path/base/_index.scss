@@ -505,7 +505,7 @@
 
   &:after {
     bottom: 0;
-    height: ($height-sales-path / 2);
+    height: ($height-sales-path * 0.5);
     transform: skew(-30deg) translate3d(0, 0, 0);
   }
 

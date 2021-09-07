@@ -72,7 +72,7 @@ Labels must have the `for` attribute applied, and its value must match the ID of
 
 <MobileBlurb patternSpecificText="form elements will have an increased size of label and info icon" />
 
-<CodeView frameOnly>
+<CodeView frameOnly frameTitle="Example mobile styles for form elements">
   <FormElement
     labelContent="Form Label"
     inputId="form-element-showcase-01"
@@ -160,7 +160,7 @@ The button icon is **_required_** to be wrapped in a `<div>` with the class `sld
   elementName="form elements with a help text icon"
 />
 
-<CodeView frameOnly>
+<CodeView frameOnly frameTitle="Example mobile styles for form elements with help text icon">
   <FormElement labelContent="Status" inputId="form-element-help-01m" hasTooltip>
     <Input id="form-element-help-01m" placeholder="Placeholder text…" />
   </FormElement>
@@ -346,6 +346,13 @@ When using `slds-form-element_horizontal`, you might find that the 33/66% distri
   </CodeView>
 </Example>
 
+#### Error state
+When in the horizontal layout, error messages will appear underneath the related input.
+
+<CodeView>
+  {getDisplayElementById(HorizontalExamples.states, 'form-element-horizontal-edit-error')}
+</CodeView>
+
 ### Compound
 
 A compound form is a grouping of several form elements described by a label/title. The compound form should be implemented as a `<fieldset>`, where the label/title is implemented as a `<legend>` element.
@@ -375,7 +382,7 @@ Each field inside of a compound row can be explicitly sized by using a sizing cl
 </CodeBlock>
 
 <Example title="Form Layout - Compound">
-  <CodeView demoStyles="max-width: 400px;">{CompoundExamples.default}</CodeView>
+  <CodeView demoStyles="max-width: 400px;">{getDisplayElementById(CompoundExamples.default)}</CodeView>
 </Example>
 
 #### Address
@@ -383,7 +390,7 @@ Each field inside of a compound row can be explicitly sized by using a sizing cl
 Though an address form is utilizing the `slds-form-element_compound` class, we need to also add the `slds-form-element_address` class to the component. We modify some of the behavior of an address form with this class.
 
 <Example title="Form Layout - Compound - Address">
-  <CodeView demoStyles="max-width: 400px;">{AddressExamples.default}</CodeView>
+  <CodeView demoStyles="max-width: 400px;">{getDisplayElementById(AddressExamples.default)}</CodeView>
 </Example>
 
 ## Usage Examples

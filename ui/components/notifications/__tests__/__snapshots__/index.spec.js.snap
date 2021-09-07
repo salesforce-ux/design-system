@@ -1,0 +1,969 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Notifications renders a single notification 1`] = `
+<div
+  className="demo-only demo-only_viewport"
+  style={
+    Object {
+      "height": "4.5rem",
+    }
+  }
+>
+  <div
+    className="slds-notification-container"
+  >
+    <div
+      aria-atomic="true"
+      aria-live="assertive"
+      className="slds-assistive-text"
+    >
+      task notification: Call: Jane Johnson
+    </div>
+    <section
+      aria-describedby="dialog-body-id-1"
+      aria-labelledby="noti-2"
+      className="slds-notification"
+      role="dialog"
+    >
+      <div
+        className="slds-notification__body"
+        id="dialog-body-id-1"
+      >
+        <a
+          className="slds-notification__target slds-media"
+          href="#"
+          onClick={[Function]}
+        >
+          <span
+            className="slds-icon_container slds-icon-standard-task slds-media__figure"
+            title="task"
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-icon slds-icon_small"
+            >
+              <use
+                xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#task"
+              />
+            </svg>
+            <span
+              className="slds-assistive-text"
+            >
+              Description of icon when needed
+            </span>
+          </span>
+          <div
+            className="slds-media__body"
+          >
+            <h2
+              className="slds-text-heading_small slds-m-bottom_xx-small"
+              id="noti-2"
+            >
+              <span
+                className="slds-assistive-text"
+              >
+                task notification:
+              </span>
+              Call: Jane Johnson
+            </h2>
+            <p>
+              Task due on Jan 8
+            </p>
+          </div>
+        </a>
+        <button
+          className="slds-button slds-button_icon slds-button_icon-container slds-notification__close"
+          onClick={[Function]}
+          title="Dismiss Call: Jane Johnson notification"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#close"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            Dismiss Call: Jane Johnson notification
+          </span>
+        </button>
+      </div>
+    </section>
+  </div>
+</div>
+`;
+
+exports[`Notifications renders six stacked notifications 1`] = `
+<div
+  className="demo-only demo-only_viewport"
+  style={
+    Object {
+      "height": "17rem",
+    }
+  }
+>
+  <div
+    className="slds-notification-container"
+  >
+    <div
+      aria-atomic="true"
+      aria-live="assertive"
+      className="slds-assistive-text"
+    >
+      task notification: Call Five: Jane Johnson
+    </div>
+    <section
+      aria-describedby="dialog-body-id-13"
+      aria-labelledby="noti-14"
+      className="slds-notification"
+      role="dialog"
+    >
+      <div
+        className="slds-notification__body"
+        id="dialog-body-id-13"
+      >
+        <a
+          className="slds-notification__target slds-media"
+          href="#"
+          onClick={[Function]}
+        >
+          <span
+            className="slds-icon_container slds-icon-standard-task slds-media__figure"
+            title="task"
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-icon slds-icon_small"
+            >
+              <use
+                xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#task"
+              />
+            </svg>
+            <span
+              className="slds-assistive-text"
+            >
+              Description of icon when needed
+            </span>
+          </span>
+          <div
+            className="slds-media__body"
+          >
+            <h2
+              className="slds-text-heading_small slds-m-bottom_xx-small"
+              id="noti-14"
+            >
+              <span
+                className="slds-assistive-text"
+              >
+                task notification:
+              </span>
+              Call Five: Jane Johnson
+            </h2>
+            <p>
+              Task due on Jan 8
+            </p>
+          </div>
+        </a>
+        <button
+          className="slds-button slds-button_icon slds-button_icon-container slds-notification__close"
+          onClick={[Function]}
+          title="Dismiss Call Five: Jane Johnson notification"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#close"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            Dismiss Call Five: Jane Johnson notification
+          </span>
+        </button>
+      </div>
+    </section>
+    <section
+      aria-describedby="dialog-body-id-15"
+      aria-labelledby="noti-16"
+      className="slds-notification"
+      role="dialog"
+    >
+      <div
+        className="slds-notification__body"
+        id="dialog-body-id-15"
+      >
+        <a
+          className="slds-notification__target slds-media"
+          href="#"
+          onClick={[Function]}
+        >
+          <span
+            className="slds-icon_container slds-icon-standard-event slds-media__figure"
+            title="event"
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-icon slds-icon_small"
+            >
+              <use
+                xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#event"
+              />
+            </svg>
+            <span
+              className="slds-assistive-text"
+            >
+              Description of icon when needed
+            </span>
+          </span>
+          <div
+            className="slds-media__body"
+          >
+            <h2
+              className="slds-text-heading_small slds-m-bottom_xx-small"
+              id="noti-16"
+            >
+              <span
+                className="slds-assistive-text"
+              >
+                event notification:
+              </span>
+              Call Six: Tesla - Renewal meeting
+            </h2>
+            <p>
+              Event at 11:00am on Jan 8
+            </p>
+          </div>
+        </a>
+        <button
+          className="slds-button slds-button_icon slds-button_icon-container slds-notification__close"
+          onClick={[Function]}
+          title="Dismiss Call Six: Tesla - Renewal meeting notification"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#close"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            Dismiss Call Six: Tesla - Renewal meeting notification
+          </span>
+        </button>
+      </div>
+    </section>
+    <section
+      aria-describedby="dialog-body-id-17"
+      aria-labelledby="noti-18"
+      className="slds-notification"
+      role="dialog"
+    >
+      <div
+        className="slds-notification__body"
+        id="dialog-body-id-17"
+      >
+        <a
+          className="slds-notification__target slds-media"
+          href="#"
+          onClick={[Function]}
+        >
+          <span
+            className="slds-icon_container slds-icon-standard-task slds-media__figure"
+            title="task"
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-icon slds-icon_small"
+            >
+              <use
+                xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#task"
+              />
+            </svg>
+            <span
+              className="slds-assistive-text"
+            >
+              Description of icon when needed
+            </span>
+          </span>
+          <div
+            className="slds-media__body"
+          >
+            <h2
+              className="slds-text-heading_small slds-m-bottom_xx-small"
+              id="noti-18"
+            >
+              <span
+                className="slds-assistive-text"
+              >
+                task notification:
+              </span>
+              Call Seven: Jim Jameson
+            </h2>
+            <p>
+              Task due on Jan 8
+            </p>
+          </div>
+        </a>
+        <button
+          className="slds-button slds-button_icon slds-button_icon-container slds-notification__close"
+          onClick={[Function]}
+          title="Dismiss Call Seven: Jim Jameson notification"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#close"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            Dismiss Call Seven: Jim Jameson notification
+          </span>
+        </button>
+      </div>
+    </section>
+    <section
+      aria-describedby="dialog-body-id-19"
+      aria-labelledby="noti-20"
+      className="slds-notification"
+      role="dialog"
+    >
+      <div
+        className="slds-notification__body"
+        id="dialog-body-id-19"
+      >
+        <a
+          className="slds-notification__target slds-media"
+          href="#"
+          onClick={[Function]}
+        >
+          <span
+            className="slds-icon_container slds-icon-standard-task slds-media__figure"
+            title="task"
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-icon slds-icon_small"
+            >
+              <use
+                xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#task"
+              />
+            </svg>
+            <span
+              className="slds-assistive-text"
+            >
+              Description of icon when needed
+            </span>
+          </span>
+          <div
+            className="slds-media__body"
+          >
+            <h2
+              className="slds-text-heading_small slds-m-bottom_xx-small"
+              id="noti-20"
+            >
+              <span
+                className="slds-assistive-text"
+              >
+                task notification:
+              </span>
+              Call Eight: Jane Johnson
+            </h2>
+            <p>
+              Task due on Jan 8
+            </p>
+          </div>
+        </a>
+        <button
+          className="slds-button slds-button_icon slds-button_icon-container slds-notification__close"
+          onClick={[Function]}
+          title="Dismiss Call Eight: Jane Johnson notification"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#close"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            Dismiss Call Eight: Jane Johnson notification
+          </span>
+        </button>
+      </div>
+    </section>
+    <section
+      aria-describedby="dialog-body-id-21"
+      aria-labelledby="noti-22"
+      className="slds-notification"
+      role="dialog"
+    >
+      <div
+        className="slds-notification__body"
+        id="dialog-body-id-21"
+      >
+        <a
+          className="slds-notification__target slds-media"
+          href="#"
+          onClick={[Function]}
+        >
+          <span
+            className="slds-icon_container slds-icon-standard-event slds-media__figure"
+            title="event"
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-icon slds-icon_small"
+            >
+              <use
+                xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#event"
+              />
+            </svg>
+            <span
+              className="slds-assistive-text"
+            >
+              Description of icon when needed
+            </span>
+          </span>
+          <div
+            className="slds-media__body"
+          >
+            <h2
+              className="slds-text-heading_small slds-m-bottom_xx-small"
+              id="noti-22"
+            >
+              <span
+                className="slds-assistive-text"
+              >
+                event notification:
+              </span>
+              Call Nine: Tesla - Renewal meeting
+            </h2>
+            <p>
+              Event at 11:00am on Jan 8
+            </p>
+          </div>
+        </a>
+        <button
+          className="slds-button slds-button_icon slds-button_icon-container slds-notification__close"
+          onClick={[Function]}
+          title="Dismiss Call Nine: Tesla - Renewal meeting notification"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#close"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            Dismiss Call Nine: Tesla - Renewal meeting notification
+          </span>
+        </button>
+      </div>
+    </section>
+    <section
+      aria-describedby="dialog-body-id-23"
+      aria-labelledby="noti-24"
+      className="slds-notification"
+      role="dialog"
+    >
+      <div
+        className="slds-notification__body"
+        id="dialog-body-id-23"
+      >
+        <a
+          className="slds-notification__target slds-media"
+          href="#"
+          onClick={[Function]}
+        >
+          <span
+            className="slds-icon_container slds-icon-standard-task slds-media__figure"
+            title="task"
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-icon slds-icon_small"
+            >
+              <use
+                xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#task"
+              />
+            </svg>
+            <span
+              className="slds-assistive-text"
+            >
+              Description of icon when needed
+            </span>
+          </span>
+          <div
+            className="slds-media__body"
+          >
+            <h2
+              className="slds-text-heading_small slds-m-bottom_xx-small"
+              id="noti-24"
+            >
+              <span
+                className="slds-assistive-text"
+              >
+                task notification:
+              </span>
+              Call Ten: Jim Jameson
+            </h2>
+            <p>
+              Task due on Jan 8
+            </p>
+          </div>
+        </a>
+        <button
+          className="slds-button slds-button_icon slds-button_icon-container slds-notification__close"
+          onClick={[Function]}
+          title="Dismiss Call Ten: Jim Jameson notification"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#close"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            Dismiss Call Ten: Jim Jameson notification
+          </span>
+        </button>
+      </div>
+    </section>
+  </div>
+</div>
+`;
+
+exports[`Notifications renders three stacked notifications 1`] = `
+<div
+  className="demo-only demo-only_viewport"
+  style={
+    Object {
+      "height": "15rem",
+    }
+  }
+>
+  <div
+    className="slds-notification-container"
+  >
+    <div
+      aria-atomic="true"
+      aria-live="assertive"
+      className="slds-assistive-text"
+    >
+      task notification: Call Two: Jane Johnson
+    </div>
+    <section
+      aria-describedby="dialog-body-id-7"
+      aria-labelledby="noti-8"
+      className="slds-notification"
+      role="dialog"
+    >
+      <div
+        className="slds-notification__body"
+        id="dialog-body-id-7"
+      >
+        <a
+          className="slds-notification__target slds-media"
+          href="#"
+          onClick={[Function]}
+        >
+          <span
+            className="slds-icon_container slds-icon-standard-task slds-media__figure"
+            title="task"
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-icon slds-icon_small"
+            >
+              <use
+                xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#task"
+              />
+            </svg>
+            <span
+              className="slds-assistive-text"
+            >
+              Description of icon when needed
+            </span>
+          </span>
+          <div
+            className="slds-media__body"
+          >
+            <h2
+              className="slds-text-heading_small slds-m-bottom_xx-small"
+              id="noti-8"
+            >
+              <span
+                className="slds-assistive-text"
+              >
+                task notification:
+              </span>
+              Call Two: Jane Johnson
+            </h2>
+            <p>
+              Task due on Jan 8
+            </p>
+          </div>
+        </a>
+        <button
+          className="slds-button slds-button_icon slds-button_icon-container slds-notification__close"
+          onClick={[Function]}
+          title="Dismiss Call Two: Jane Johnson notification"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#close"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            Dismiss Call Two: Jane Johnson notification
+          </span>
+        </button>
+      </div>
+    </section>
+    <section
+      aria-describedby="dialog-body-id-9"
+      aria-labelledby="noti-10"
+      className="slds-notification"
+      role="dialog"
+    >
+      <div
+        className="slds-notification__body"
+        id="dialog-body-id-9"
+      >
+        <a
+          className="slds-notification__target slds-media"
+          href="#"
+          onClick={[Function]}
+        >
+          <span
+            className="slds-icon_container slds-icon-standard-event slds-media__figure"
+            title="event"
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-icon slds-icon_small"
+            >
+              <use
+                xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#event"
+              />
+            </svg>
+            <span
+              className="slds-assistive-text"
+            >
+              Description of icon when needed
+            </span>
+          </span>
+          <div
+            className="slds-media__body"
+          >
+            <h2
+              className="slds-text-heading_small slds-m-bottom_xx-small"
+              id="noti-10"
+            >
+              <span
+                className="slds-assistive-text"
+              >
+                event notification:
+              </span>
+              Call Three: Tesla - Renewal meeting
+            </h2>
+            <p>
+              Event at 11:00am on Jan 8
+            </p>
+          </div>
+        </a>
+        <button
+          className="slds-button slds-button_icon slds-button_icon-container slds-notification__close"
+          onClick={[Function]}
+          title="Dismiss Call Three: Tesla - Renewal meeting notification"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#close"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            Dismiss Call Three: Tesla - Renewal meeting notification
+          </span>
+        </button>
+      </div>
+    </section>
+    <section
+      aria-describedby="dialog-body-id-11"
+      aria-labelledby="noti-12"
+      className="slds-notification"
+      role="dialog"
+    >
+      <div
+        className="slds-notification__body"
+        id="dialog-body-id-11"
+      >
+        <a
+          className="slds-notification__target slds-media"
+          href="#"
+          onClick={[Function]}
+        >
+          <span
+            className="slds-icon_container slds-icon-standard-task slds-media__figure"
+            title="task"
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-icon slds-icon_small"
+            >
+              <use
+                xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#task"
+              />
+            </svg>
+            <span
+              className="slds-assistive-text"
+            >
+              Description of icon when needed
+            </span>
+          </span>
+          <div
+            className="slds-media__body"
+          >
+            <h2
+              className="slds-text-heading_small slds-m-bottom_xx-small"
+              id="noti-12"
+            >
+              <span
+                className="slds-assistive-text"
+              >
+                task notification:
+              </span>
+              Call Four: Jim Jameson
+            </h2>
+            <p>
+              Task due on Jan 8
+            </p>
+          </div>
+        </a>
+        <button
+          className="slds-button slds-button_icon slds-button_icon-container slds-notification__close"
+          onClick={[Function]}
+          title="Dismiss Call Four: Jim Jameson notification"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#close"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            Dismiss Call Four: Jim Jameson notification
+          </span>
+        </button>
+      </div>
+    </section>
+  </div>
+</div>
+`;
+
+exports[`Notifications renders two stacked notifications 1`] = `
+<div
+  className="demo-only demo-only_viewport"
+  style={
+    Object {
+      "height": "15rem",
+    }
+  }
+>
+  <div
+    className="slds-notification-container"
+  >
+    <div
+      aria-atomic="true"
+      aria-live="assertive"
+      className="slds-assistive-text"
+    >
+      task notification: Call One: Jane Johnson
+    </div>
+    <section
+      aria-describedby="dialog-body-id-3"
+      aria-labelledby="noti-4"
+      className="slds-notification"
+      role="dialog"
+    >
+      <div
+        className="slds-notification__body"
+        id="dialog-body-id-3"
+      >
+        <a
+          className="slds-notification__target slds-media"
+          href="#"
+          onClick={[Function]}
+        >
+          <span
+            className="slds-icon_container slds-icon-standard-task slds-media__figure"
+            title="task"
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-icon slds-icon_small"
+            >
+              <use
+                xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#task"
+              />
+            </svg>
+            <span
+              className="slds-assistive-text"
+            >
+              Description of icon when needed
+            </span>
+          </span>
+          <div
+            className="slds-media__body"
+          >
+            <h2
+              className="slds-text-heading_small slds-m-bottom_xx-small"
+              id="noti-4"
+            >
+              <span
+                className="slds-assistive-text"
+              >
+                task notification:
+              </span>
+              Call One: Jane Johnson
+            </h2>
+            <p>
+              Task due on Jan 8
+            </p>
+          </div>
+        </a>
+        <button
+          className="slds-button slds-button_icon slds-button_icon-container slds-notification__close"
+          onClick={[Function]}
+          title="Dismiss Call One: Jane Johnson notification"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#close"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            Dismiss Call One: Jane Johnson notification
+          </span>
+        </button>
+      </div>
+    </section>
+    <section
+      aria-describedby="dialog-body-id-5"
+      aria-labelledby="noti-6"
+      className="slds-notification"
+      role="dialog"
+    >
+      <div
+        className="slds-notification__body"
+        id="dialog-body-id-5"
+      >
+        <a
+          className="slds-notification__target slds-media"
+          href="#"
+          onClick={[Function]}
+        >
+          <span
+            className="slds-icon_container slds-icon-standard-event slds-media__figure"
+            title="event"
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-icon slds-icon_small"
+            >
+              <use
+                xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#event"
+              />
+            </svg>
+            <span
+              className="slds-assistive-text"
+            >
+              Description of icon when needed
+            </span>
+          </span>
+          <div
+            className="slds-media__body"
+          >
+            <h2
+              className="slds-text-heading_small slds-m-bottom_xx-small"
+              id="noti-6"
+            >
+              <span
+                className="slds-assistive-text"
+              >
+                event notification:
+              </span>
+              Call Two: Tesla - Renewal meeting
+            </h2>
+            <p>
+              Event at 11:00am on Jan 8
+            </p>
+          </div>
+        </a>
+        <button
+          className="slds-button slds-button_icon slds-button_icon-container slds-notification__close"
+          onClick={[Function]}
+          title="Dismiss Call Two: Tesla - Renewal meeting notification"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#close"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            Dismiss Call Two: Tesla - Renewal meeting notification
+          </span>
+        </button>
+      </div>
+    </section>
+  </div>
+</div>
+`;

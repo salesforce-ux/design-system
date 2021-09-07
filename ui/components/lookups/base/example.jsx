@@ -9,11 +9,6 @@ import { UtilityIcon } from '../../icons/base/example';
 import { StandardIcon } from '../../icons/standard/example';
 import * as Snapshot from '../../combobox/snapshots.data';
 
-// Demo wrapper
-export const Context = props => (
-  <div style={{ height: '15rem' }}>{props.children}</div>
-);
-
 // Default
 export default (
   <Combobox
@@ -181,7 +176,7 @@ export let states = [
         resultsType="listbox"
         hasSelection
         value="Salesforce.com, Inc."
-        readonly
+        selectOnly
       />
     )
   }

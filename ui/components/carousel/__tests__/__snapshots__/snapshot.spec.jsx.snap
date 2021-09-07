@@ -41,9 +41,9 @@ exports[`renders a carousel, auto-play disabled 1`] = `
     >
       <div
         aria-hidden="false"
-        aria-labelledby="indicator-id-01"
+        aria-labelledby="indicator-id-28"
         className="slds-carousel__panel"
-        id="content-id-01"
+        id="content-id-25"
         role="tabpanel"
       >
         <a
@@ -76,9 +76,9 @@ exports[`renders a carousel, auto-play disabled 1`] = `
       </div>
       <div
         aria-hidden="true"
-        aria-labelledby="indicator-id-02"
+        aria-labelledby="indicator-id-29"
         className="slds-carousel__panel"
-        id="content-id-02"
+        id="content-id-26"
         role="tabpanel"
       >
         <a
@@ -111,9 +111,9 @@ exports[`renders a carousel, auto-play disabled 1`] = `
       </div>
       <div
         aria-hidden="true"
-        aria-labelledby="indicator-id-03"
+        aria-labelledby="indicator-id-30"
         className="slds-carousel__panel"
-        id="content-id-03"
+        id="content-id-27"
         role="tabpanel"
       >
         <a
@@ -154,11 +154,11 @@ exports[`renders a carousel, auto-play disabled 1`] = `
         role="presentation"
       >
         <a
-          aria-controls="content-id-01"
+          aria-controls="content-id-25"
           aria-selected="true"
           className="slds-carousel__indicator-action slds-is-active"
           href="#"
-          id="indicator-id-01"
+          id="indicator-id-28"
           onClick={[Function]}
           role="tab"
           tabIndex="0"
@@ -176,11 +176,11 @@ exports[`renders a carousel, auto-play disabled 1`] = `
         role="presentation"
       >
         <a
-          aria-controls="content-id-02"
+          aria-controls="content-id-26"
           aria-selected="false"
           className="slds-carousel__indicator-action"
           href="#"
-          id="indicator-id-02"
+          id="indicator-id-29"
           onClick={[Function]}
           role="tab"
           tabIndex="-1"
@@ -198,11 +198,11 @@ exports[`renders a carousel, auto-play disabled 1`] = `
         role="presentation"
       >
         <a
-          aria-controls="content-id-03"
+          aria-controls="content-id-27"
           aria-selected="false"
           className="slds-carousel__indicator-action"
           href="#"
-          id="indicator-id-03"
+          id="indicator-id-30"
           onClick={[Function]}
           role="tab"
           tabIndex="-1"
@@ -261,9 +261,9 @@ exports[`renders a carousel, auto-play enabled 1`] = `
     >
       <div
         aria-hidden="false"
-        aria-labelledby="indicator-id-01"
+        aria-labelledby="indicator-id-22"
         className="slds-carousel__panel"
-        id="content-id-01"
+        id="content-id-19"
         role="tabpanel"
       >
         <a
@@ -296,9 +296,9 @@ exports[`renders a carousel, auto-play enabled 1`] = `
       </div>
       <div
         aria-hidden="true"
-        aria-labelledby="indicator-id-02"
+        aria-labelledby="indicator-id-23"
         className="slds-carousel__panel"
-        id="content-id-02"
+        id="content-id-20"
         role="tabpanel"
       >
         <a
@@ -331,9 +331,9 @@ exports[`renders a carousel, auto-play enabled 1`] = `
       </div>
       <div
         aria-hidden="true"
-        aria-labelledby="indicator-id-03"
+        aria-labelledby="indicator-id-24"
         className="slds-carousel__panel"
-        id="content-id-03"
+        id="content-id-21"
         role="tabpanel"
       >
         <a
@@ -374,11 +374,11 @@ exports[`renders a carousel, auto-play enabled 1`] = `
         role="presentation"
       >
         <a
-          aria-controls="content-id-01"
+          aria-controls="content-id-19"
           aria-selected="true"
           className="slds-carousel__indicator-action slds-is-active"
           href="#"
-          id="indicator-id-01"
+          id="indicator-id-22"
           onClick={[Function]}
           role="tab"
           tabIndex="0"
@@ -396,11 +396,11 @@ exports[`renders a carousel, auto-play enabled 1`] = `
         role="presentation"
       >
         <a
-          aria-controls="content-id-02"
+          aria-controls="content-id-20"
           aria-selected="false"
           className="slds-carousel__indicator-action"
           href="#"
-          id="indicator-id-02"
+          id="indicator-id-23"
           onClick={[Function]}
           role="tab"
           tabIndex="-1"
@@ -418,11 +418,11 @@ exports[`renders a carousel, auto-play enabled 1`] = `
         role="presentation"
       >
         <a
-          aria-controls="content-id-03"
+          aria-controls="content-id-21"
           aria-selected="false"
           className="slds-carousel__indicator-action"
           href="#"
-          id="indicator-id-03"
+          id="indicator-id-24"
           onClick={[Function]}
           role="tab"
           tabIndex="-1"
@@ -457,9 +457,9 @@ exports[`renders a carousel, first tab active 1`] = `
     >
       <div
         aria-hidden="false"
-        aria-labelledby="indicator-id-01"
+        aria-labelledby="indicator-id-4"
         className="slds-carousel__panel"
-        id="content-id-01"
+        id="content-id-1"
         role="tabpanel"
       >
         <a
@@ -492,9 +492,9 @@ exports[`renders a carousel, first tab active 1`] = `
       </div>
       <div
         aria-hidden="true"
-        aria-labelledby="indicator-id-02"
+        aria-labelledby="indicator-id-5"
         className="slds-carousel__panel"
-        id="content-id-02"
+        id="content-id-2"
         role="tabpanel"
       >
         <a
@@ -527,9 +527,9 @@ exports[`renders a carousel, first tab active 1`] = `
       </div>
       <div
         aria-hidden="true"
-        aria-labelledby="indicator-id-03"
+        aria-labelledby="indicator-id-6"
         className="slds-carousel__panel"
-        id="content-id-03"
+        id="content-id-3"
         role="tabpanel"
       >
         <a
@@ -570,11 +570,11 @@ exports[`renders a carousel, first tab active 1`] = `
         role="presentation"
       >
         <a
-          aria-controls="content-id-01"
+          aria-controls="content-id-1"
           aria-selected="true"
           className="slds-carousel__indicator-action slds-is-active"
           href="#"
-          id="indicator-id-01"
+          id="indicator-id-4"
           onClick={[Function]}
           role="tab"
           tabIndex="0"
@@ -592,11 +592,11 @@ exports[`renders a carousel, first tab active 1`] = `
         role="presentation"
       >
         <a
-          aria-controls="content-id-02"
+          aria-controls="content-id-2"
           aria-selected="false"
           className="slds-carousel__indicator-action"
           href="#"
-          id="indicator-id-02"
+          id="indicator-id-5"
           onClick={[Function]}
           role="tab"
           tabIndex="-1"
@@ -614,11 +614,11 @@ exports[`renders a carousel, first tab active 1`] = `
         role="presentation"
       >
         <a
-          aria-controls="content-id-03"
+          aria-controls="content-id-3"
           aria-selected="false"
           className="slds-carousel__indicator-action"
           href="#"
-          id="indicator-id-03"
+          id="indicator-id-6"
           onClick={[Function]}
           role="tab"
           tabIndex="-1"
@@ -653,9 +653,9 @@ exports[`renders a carousel, second tab active 1`] = `
     >
       <div
         aria-hidden="true"
-        aria-labelledby="indicator-id-01"
+        aria-labelledby="indicator-id-10"
         className="slds-carousel__panel"
-        id="content-id-01"
+        id="content-id-7"
         role="tabpanel"
       >
         <a
@@ -688,9 +688,9 @@ exports[`renders a carousel, second tab active 1`] = `
       </div>
       <div
         aria-hidden="false"
-        aria-labelledby="indicator-id-02"
+        aria-labelledby="indicator-id-11"
         className="slds-carousel__panel"
-        id="content-id-02"
+        id="content-id-8"
         role="tabpanel"
       >
         <a
@@ -723,9 +723,9 @@ exports[`renders a carousel, second tab active 1`] = `
       </div>
       <div
         aria-hidden="true"
-        aria-labelledby="indicator-id-03"
+        aria-labelledby="indicator-id-12"
         className="slds-carousel__panel"
-        id="content-id-03"
+        id="content-id-9"
         role="tabpanel"
       >
         <a
@@ -766,11 +766,11 @@ exports[`renders a carousel, second tab active 1`] = `
         role="presentation"
       >
         <a
-          aria-controls="content-id-01"
+          aria-controls="content-id-7"
           aria-selected="false"
           className="slds-carousel__indicator-action"
           href="#"
-          id="indicator-id-01"
+          id="indicator-id-10"
           onClick={[Function]}
           role="tab"
           tabIndex="-1"
@@ -788,11 +788,11 @@ exports[`renders a carousel, second tab active 1`] = `
         role="presentation"
       >
         <a
-          aria-controls="content-id-02"
+          aria-controls="content-id-8"
           aria-selected="true"
           className="slds-carousel__indicator-action slds-is-active"
           href="#"
-          id="indicator-id-02"
+          id="indicator-id-11"
           onClick={[Function]}
           role="tab"
           tabIndex="0"
@@ -810,11 +810,11 @@ exports[`renders a carousel, second tab active 1`] = `
         role="presentation"
       >
         <a
-          aria-controls="content-id-03"
+          aria-controls="content-id-9"
           aria-selected="false"
           className="slds-carousel__indicator-action"
           href="#"
-          id="indicator-id-03"
+          id="indicator-id-12"
           onClick={[Function]}
           role="tab"
           tabIndex="-1"
@@ -849,9 +849,9 @@ exports[`renders a carousel, third tab active 1`] = `
     >
       <div
         aria-hidden="true"
-        aria-labelledby="indicator-id-01"
+        aria-labelledby="indicator-id-16"
         className="slds-carousel__panel"
-        id="content-id-01"
+        id="content-id-13"
         role="tabpanel"
       >
         <a
@@ -884,9 +884,9 @@ exports[`renders a carousel, third tab active 1`] = `
       </div>
       <div
         aria-hidden="true"
-        aria-labelledby="indicator-id-02"
+        aria-labelledby="indicator-id-17"
         className="slds-carousel__panel"
-        id="content-id-02"
+        id="content-id-14"
         role="tabpanel"
       >
         <a
@@ -919,9 +919,9 @@ exports[`renders a carousel, third tab active 1`] = `
       </div>
       <div
         aria-hidden="false"
-        aria-labelledby="indicator-id-03"
+        aria-labelledby="indicator-id-18"
         className="slds-carousel__panel"
-        id="content-id-03"
+        id="content-id-15"
         role="tabpanel"
       >
         <a
@@ -962,11 +962,11 @@ exports[`renders a carousel, third tab active 1`] = `
         role="presentation"
       >
         <a
-          aria-controls="content-id-01"
+          aria-controls="content-id-13"
           aria-selected="false"
           className="slds-carousel__indicator-action"
           href="#"
-          id="indicator-id-01"
+          id="indicator-id-16"
           onClick={[Function]}
           role="tab"
           tabIndex="-1"
@@ -984,11 +984,11 @@ exports[`renders a carousel, third tab active 1`] = `
         role="presentation"
       >
         <a
-          aria-controls="content-id-02"
+          aria-controls="content-id-14"
           aria-selected="false"
           className="slds-carousel__indicator-action"
           href="#"
-          id="indicator-id-02"
+          id="indicator-id-17"
           onClick={[Function]}
           role="tab"
           tabIndex="-1"
@@ -1006,11 +1006,11 @@ exports[`renders a carousel, third tab active 1`] = `
         role="presentation"
       >
         <a
-          aria-controls="content-id-03"
+          aria-controls="content-id-15"
           aria-selected="true"
           className="slds-carousel__indicator-action slds-is-active"
           href="#"
-          id="indicator-id-03"
+          id="indicator-id-18"
           onClick={[Function]}
           role="tab"
           tabIndex="0"

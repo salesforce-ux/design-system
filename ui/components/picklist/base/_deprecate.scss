@@ -124,7 +124,7 @@
       position: absolute;
       right: $spacing-medium;
       top: 50%;
-      margin-top: (($square-icon-small-content / 2) * -1);
+      margin-top: (($square-icon-small-content * 0.5) * -1);
       fill: $color-text-icon-default;
     }
 

@@ -144,7 +144,7 @@ exports[`Compound Form Element render deprecated compound form element 1`] = `
         >
           <label
             className="slds-form-element__label"
-            htmlFor="location-latitude-01"
+            htmlFor="location-latitude-02"
           >
             Latitude
           </label>
@@ -154,7 +154,7 @@ exports[`Compound Form Element render deprecated compound form element 1`] = `
             <input
               className="slds-input"
               defaultValue="54.293"
-              id="location-latitude-01"
+              id="location-latitude-02"
               type="text"
             />
           </div>
@@ -188,7 +188,7 @@ exports[`Compound Form Element renders address compound form element 1`] = `
         >
           <label
             className="slds-form-element__label"
-            htmlFor="form-element-id-04"
+            htmlFor="form-element-id-01"
           >
             Billing Street
           </label>
@@ -198,7 +198,7 @@ exports[`Compound Form Element renders address compound form element 1`] = `
             <textarea
               className="slds-textarea"
               defaultValue="525 S. Lexington Ave"
-              id="form-element-id-04"
+              id="form-element-id-01"
               placeholder="Placeholder text…"
               required={true}
             />
@@ -217,7 +217,7 @@ exports[`Compound Form Element renders address compound form element 1`] = `
         >
           <label
             className="slds-form-element__label"
-            htmlFor="form-element-id-05"
+            htmlFor="form-element-id-02"
           >
             Billing City
           </label>
@@ -227,7 +227,7 @@ exports[`Compound Form Element renders address compound form element 1`] = `
             <input
               className="slds-input"
               defaultValue="Burlington"
-              id="form-element-id-05"
+              id="form-element-id-02"
               required={true}
               type="text"
             />
@@ -242,7 +242,7 @@ exports[`Compound Form Element renders address compound form element 1`] = `
         >
           <label
             className="slds-form-element__label"
-            htmlFor="form-element-id-06"
+            htmlFor="form-element-id-03"
           >
             Billing State/Province
           </label>
@@ -252,7 +252,7 @@ exports[`Compound Form Element renders address compound form element 1`] = `
             <input
               className="slds-input"
               defaultValue="NC"
-              id="form-element-id-06"
+              id="form-element-id-03"
               required={true}
               type="text"
             />
@@ -271,7 +271,7 @@ exports[`Compound Form Element renders address compound form element 1`] = `
         >
           <label
             className="slds-form-element__label"
-            htmlFor="form-element-id-07"
+            htmlFor="form-element-id-04"
           >
             Billing Zip/Postal Code
           </label>
@@ -281,7 +281,7 @@ exports[`Compound Form Element renders address compound form element 1`] = `
             <input
               className="slds-input"
               defaultValue="27215"
-              id="form-element-id-07"
+              id="form-element-id-04"
               required={true}
               type="text"
             />
@@ -296,7 +296,7 @@ exports[`Compound Form Element renders address compound form element 1`] = `
         >
           <label
             className="slds-form-element__label"
-            htmlFor="form-element-id-08"
+            htmlFor="form-element-id-05"
           >
             Billing Country
           </label>
@@ -306,7 +306,7 @@ exports[`Compound Form Element renders address compound form element 1`] = `
             <input
               className="slds-input"
               defaultValue="USA"
-              id="form-element-id-08"
+              id="form-element-id-05"
               required={true}
               type="text"
             />
@@ -975,6 +975,237 @@ exports[`Form Element renders form element wrapper with view mode classname 1`] 
 </div>
 `;
 
+exports[`Horizontal Form Element renders a horizontal form element with an error 1`] = `
+<div
+  className="slds-form"
+  role="list"
+>
+  <div
+    className="slds-form__row"
+  >
+    <div
+      className="slds-form__item"
+      role="listitem"
+    >
+      <div
+        className="slds-form-element slds-form-element_horizontal slds-is-editing"
+      >
+        <label
+          className="slds-form-element__label"
+          htmlFor="horizontal-form-element-id-01"
+        >
+          Assigned To
+        </label>
+        <div
+          className="slds-form-element__control"
+        >
+          <input
+            className="slds-input"
+            defaultValue="Jack Rogers"
+            id="horizontal-form-element-id-01"
+            readOnly={true}
+            type="text"
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      className="slds-form__item"
+      role="listitem"
+    >
+      <div
+        className="slds-form-element slds-form-element_horizontal slds-is-editing"
+      >
+        <label
+          className="slds-form-element__label"
+          htmlFor="horizontal-combobox-id-01"
+          id="combobox-label-id-3"
+        >
+          Team Name
+        </label>
+        <div
+          className="slds-form-element__control"
+        >
+          <div
+            className="slds-combobox_container"
+          >
+            <div
+              className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click"
+            >
+              <div
+                className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
+                role="none"
+              >
+                <input
+                  aria-autocomplete="list"
+                  aria-controls="horizontal-listbox-id-01"
+                  aria-expanded="false"
+                  aria-haspopup="listbox"
+                  autoComplete="off"
+                  className="slds-input slds-combobox__input slds-combobox__input-value"
+                  defaultValue="Salesforce Lightning Design System"
+                  id="horizontal-combobox-id-01"
+                  onBlur={[Function]}
+                  onFocus={[Function]}
+                  placeholder="Search..."
+                  role="combobox"
+                  type="text"
+                />
+                <button
+                  className="slds-button slds-button_icon slds-input__icon slds-input__icon_right"
+                  onClick={[Function]}
+                  title="Clear the text input"
+                >
+                  <svg
+                    aria-hidden={true}
+                    className="slds-button__icon"
+                  >
+                    <use
+                      xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#clear"
+                    />
+                  </svg>
+                  <span
+                    className="slds-assistive-text"
+                  >
+                    Clear the text input
+                  </span>
+                </button>
+              </div>
+              <div
+                aria-orientation={null}
+                className="slds-dropdown slds-dropdown_length-with-icon-7 slds-dropdown_fluid"
+                id="horizontal-listbox-id-01"
+                role="listbox"
+              >
+                <ul
+                  className="slds-listbox slds-listbox_vertical"
+                  role="presentation"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="slds-form__row"
+  >
+    <div
+      className="slds-form__item"
+      role="listitem"
+    >
+      <div
+        className="slds-form-element slds-form-element_horizontal slds-has-error slds-is-editing"
+      >
+        <label
+          className="slds-form-element__label"
+          htmlFor="horizontal-form-element-id-02"
+        >
+          <abbr
+            className="slds-required"
+            title="required"
+          >
+            *
+             
+          </abbr>
+          Account Name
+        </label>
+        <div
+          className="slds-form-element__control"
+        >
+          <input
+            className="slds-input"
+            defaultValue=""
+            id="horizontal-form-element-id-02"
+            type="text"
+          />
+        </div>
+        <div
+          className="slds-form-element__help"
+          id="horizontal-form-element-error-id-01"
+        >
+          Complete this field
+        </div>
+      </div>
+    </div>
+    <div
+      className="slds-form__item"
+      role="listitem"
+    >
+      <div
+        className="slds-form-element slds-form-element_horizontal slds-is-editing slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open"
+      >
+        <label
+          className="slds-form-element__label"
+          htmlFor="horizontal-form-element-id-03"
+        >
+          Date
+        </label>
+        <div
+          className="slds-form-element__control slds-input-has-icon slds-input-has-icon_right"
+        >
+          <input
+            className="slds-input"
+            defaultValue="1/1/2018"
+            id="horizontal-form-element-id-03"
+            type="text"
+          />
+          <button
+            className="slds-button slds-button_icon slds-input__icon slds-input__icon_right"
+            onClick={[Function]}
+            title="Select a date"
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-button__icon"
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#event"
+              />
+            </svg>
+            <span
+              className="slds-assistive-text"
+            >
+              Select a date
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="slds-form__row"
+  >
+    <div
+      className="slds-form__item"
+      role="listitem"
+    >
+      <div
+        className="slds-form-element slds-form-element_horizontal slds-is-editing slds-form-element_1-col"
+      >
+        <label
+          className="slds-form-element__label"
+          htmlFor="horizontal-form-element-id-14"
+        >
+          Description
+        </label>
+        <div
+          className="slds-form-element__control"
+        >
+          <textarea
+            className="slds-textarea"
+            defaultValue="Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Etiam porta sem malesuada magna mollis euismod."
+            id="horizontal-form-element-id-14"
+            placeholder="Placeholder text…"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Horizontal Form Element renders deprecated horizontal form elements - edit mode 1`] = `
 <div
   className="slds-form slds-form_horizontal"
@@ -1027,6 +1258,7 @@ exports[`Horizontal Form Element renders deprecated horizontal form elements - e
         <label
           className="slds-form-element__label"
           htmlFor="combobox-id-01"
+          id="combobox-label-id-1"
         >
           Team Name
         </label>
@@ -1037,10 +1269,7 @@ exports[`Horizontal Form Element renders deprecated horizontal form elements - e
             className="slds-combobox_container"
           >
             <div
-              aria-expanded="false"
-              aria-haspopup="listbox"
               className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click"
-              role="combobox"
             >
               <div
                 className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
@@ -1049,14 +1278,16 @@ exports[`Horizontal Form Element renders deprecated horizontal form elements - e
                 <input
                   aria-autocomplete="list"
                   aria-controls="listbox-id-01"
-                  autocomplete="off"
+                  aria-expanded="false"
+                  aria-haspopup="listbox"
+                  autoComplete="off"
                   className="slds-input slds-combobox__input slds-combobox__input-value"
                   defaultValue="Salesforce Lightning Design System"
                   id="combobox-id-01"
                   onBlur={[Function]}
                   onFocus={[Function]}
                   placeholder="Search..."
-                  role="textbox"
+                  role="combobox"
                   type="text"
                 />
                 <button
@@ -1141,6 +1372,7 @@ exports[`Horizontal Form Element renders deprecated horizontal form elements - e
         <label
           className="slds-form-element__label"
           htmlFor="combobox-id-02"
+          id="combobox-label-id-2"
         >
           Status
         </label>
@@ -1151,10 +1383,7 @@ exports[`Horizontal Form Element renders deprecated horizontal form elements - e
             className="slds-combobox_container"
           >
             <div
-              aria-expanded="false"
-              aria-haspopup="listbox"
               className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click"
-              role="combobox"
             >
               <div
                 className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
@@ -1163,15 +1392,16 @@ exports[`Horizontal Form Element renders deprecated horizontal form elements - e
                 <input
                   aria-autocomplete={null}
                   aria-controls="listbox-id-02"
-                  autocomplete="off"
+                  aria-expanded="false"
+                  aria-haspopup="listbox"
+                  autoComplete="off"
                   className="slds-input slds-combobox__input slds-combobox__input-value"
                   defaultValue="In Progress"
                   id="combobox-id-02"
                   onBlur={[Function]}
                   onFocus={[Function]}
                   placeholder="Select an Option…"
-                  readOnly={true}
-                  role="textbox"
+                  role="combobox"
                   type="text"
                 />
                 <span

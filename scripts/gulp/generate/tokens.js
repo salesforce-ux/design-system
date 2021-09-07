@@ -20,30 +20,30 @@ let formatTransforms = _({
     'map.scss',
     'json',
     'common.js',
-    'aura.tokens'
+    'aura.tokens',
   ],
   ios: ['ios.json'],
   android: ['android.xml'],
-  raw: ['raw.json']
+  raw: ['raw.json'],
 })
   .map((formats, transform) =>
-    formats.map(name => ({
+    formats.map((name) => ({
       name: name,
-      transform: transform
+      transform: transform,
     }))
   )
   .flatten()
   .value();
 
 // Pipe through every YAML file and generate a platform specific token file
-export const packages = done => {
+export const packages = (done) => {
   const convert = ({ name, transform }, done) =>
     gulp
       .src(path.resolve(paths.designTokens, '*.yml'))
       .pipe(
-        gulpTheo.plugin({
+        gulpTheo({
           transform: { type: transform },
-          format: { type: name }
+          format: { type: name },
         })
       )
       .pipe(gulp.dest(path.resolve(paths.designTokens, 'dist')))
@@ -65,7 +65,7 @@ export const componentsImports = () =>
     .pipe(gulpUtil.buffer())
     .pipe(
       through.obj((files, enc, next) => {
-        const filepaths = files.map(file => file.path).sort();
+        const filepaths = files.map((file) => file.path).sort();
         const componentTokenImports = filepaths.reduce(
           (prev, filepath) =>
             `${prev}\n- ${path.relative(paths.designTokens, filepath)}`,
@@ -73,7 +73,7 @@ export const componentsImports = () =>
         );
         const file = new Vinyl({
           path: 'components.yml',
-          contents: Buffer.from(componentTokenImports)
+          contents: Buffer.from(componentTokenImports),
         });
         next(null, file);
       })

@@ -1,0 +1,60 @@
+{
+  "index_name": "winter-22",
+  "start_urls": [
+    {
+      "url": "http://localhost/components/overview",
+      "page_rank": 2
+    },
+    {
+      "url": "http://localhost/design-tokens/",
+      "page_rank": 1
+    },
+    {
+      "url": "http://localhost/icons/",
+      "page_rank": 1
+    },
+    {
+      "url": "http://localhost/guidelines/",
+      "page_rank": -1
+    },
+    {
+      "url": "http://localhost/faq/",
+      "page_rank": -2
+    },
+    {
+      "url": "http://localhost/platforms/",
+      "page_rank": -2
+    },
+    {
+      "url": "http://localhost/getting-started/",
+      "page_rank": -2
+    },
+    {
+      "url": "http://localhost/release-notes/",
+      "page_rank": -3
+    },
+    {
+      "url": "http://localhost/articles/",
+      "page_rank": -3
+    },
+    {
+      "url": "http://localhost/downloads/",
+      "page_rank": -3
+    },
+    {
+      "url": "http://localhost/",
+      "page_rank": 1
+    }
+  ],
+  "separatorsToIndex": ".-_",
+  "stop_urls": [],
+  "selectors_exclude": ["span.slds-badge", ".docsearch-ignore"],
+  "selectors": {
+    "lvl0": ".docsearch-category",
+    "lvl1": "h1",
+    "lvl2": ".docsearch-level-2",
+    "text": ".site-main-stage p, .docsearch-text, .slds-text-longform p, .site-content th"
+  },
+  "min_indexed_level": 1,
+  "nb_hits": 19300
+}

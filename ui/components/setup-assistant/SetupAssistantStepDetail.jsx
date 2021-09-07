@@ -46,7 +46,13 @@ const renderStepAction = action => {
     return <Button isOutlineBrand>{action.title}</Button>;
   else if (action.type === 'toggle')
     return (
-      <CheckboxToggle title={action.title} isBare checked={action.checked} />
+      <CheckboxToggle
+        title={action.title}
+        isBare
+        checked={action.checked}
+        labelTextOn="On"
+        labelTextOff="Off"
+      />
     );
   else
     return (
@@ -89,7 +95,7 @@ class SetupAssistantStepDetail extends React.Component {
           <p>
             It looks as if duplicates exist for this lead.{' '}
             <a href="#" onClick={e => e.preventDefault()}>
-              View Duplicates.
+              View Duplicates
             </a>
           </p>
         </ScopedNotificationThemed>

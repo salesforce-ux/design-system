@@ -172,7 +172,7 @@
  * @restrict .slds-color-picker__custom-range > a
  */
 .slds-color-picker__range-indicator {
-  $half-spacing: ($color-picker-range-indicator-size / 2);
+  $half-spacing: ($color-picker-range-indicator-size * 0.5);
 
   transform: translate3d((-$half-spacing), $half-spacing, 0);
   cursor: pointer;

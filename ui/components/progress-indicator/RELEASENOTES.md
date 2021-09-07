@@ -3,7 +3,11 @@
 # Progress Indicator Release Notes
 
 <!-- ## [Unreleased] -->
+## 2.16.0
 
+### Added
+
+- Added `aria-label` attribute to the div with role of `progressbar` to meet accessibility requirements.
 ## 2.13.0
 
 ## Fixed

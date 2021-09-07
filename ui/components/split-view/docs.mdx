@@ -1,12 +1,16 @@
 import CodeView from '../../../shared/components/CodeView';
 import * as Base from './base/example';
-import { getDisplayElementById } from '../../shared/helpers';
+import { getDisplayElementById, getDemoStylesById } from '../../shared/helpers';
 
 <div className="doc lead">
-  Split view is used to navigate between records in a list while staying on the same screen.
+  Split view is used to navigate between records in a list while staying on the
+  same screen.
 </div>
 
-<CodeView exampleOnly>
+<CodeView
+  exampleOnly
+  demoStyles={getDemoStylesById(Base.states, 'selected-item')}
+>
   {getDisplayElementById(Base.states, 'selected-item')}
 </CodeView>
 
@@ -22,31 +26,32 @@ The list component of the Split View consists of an ARIA Listbox, and as such mu
 
 ## Base
 
-<CodeView>
-  {Base.default}
+<CodeView demoStyles={getDemoStylesById(Base.default)}>
+  {getDisplayElementById(Base.default)}
 </CodeView>
 
 ## States
+
 ### Selected Item
 
-<CodeView>
+<CodeView demoStyles={getDemoStylesById(Base.states, 'selected-item')}>
   {getDisplayElementById(Base.states, 'selected-item')}
 </CodeView>
 
 ### Overflow
 
-<CodeView>
+<CodeView demoStyles={getDemoStylesById(Base.states, 'overflow')}>
   {getDisplayElementById(Base.states, 'overflow')}
 </CodeView>
 
 ### Unread Items
 
-<CodeView>
+<CodeView demoStyles={getDemoStylesById(Base.states, 'unread')}>
   {getDisplayElementById(Base.states, 'unread')}
 </CodeView>
 
 ### Collapsed Panel
 
-<CodeView>
+<CodeView demoStyles={getDemoStylesById(Base.states, 'panel-collapsed')}>
   {getDisplayElementById(Base.states, 'panel-collapsed')}
 </CodeView>

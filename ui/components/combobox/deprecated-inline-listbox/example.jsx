@@ -14,7 +14,7 @@ import {
 /* -----------------------------------------------------------------------------
     Variables
 ----------------------------------------------------------------------------- */
-
+const STORY_SINK_CONTEXT = 'Deprecated – Inline-Listbox';
 const listboxOptionId01 = 'listbox-option-unique-id-01';
 const listboxOptionId02 = 'listbox-option-unique-id-02';
 
@@ -51,21 +51,31 @@ const ListboxDropdown = props => (
 ----------------------------------------------------------------------------- */
 
 // Default
-export default (
-  <div className="demo-only" style={{ height: '10rem' }}>
-    <DeprecatedCombobox
-      inputIcon="right"
-      inputIconRightSymbol="search"
-      selectedOptionsInline
-      autocomplete
-      listbox={<ListboxDropdown />}
-    />
-  </div>
-);
+export default [
+  {
+    context: STORY_SINK_CONTEXT,
+    deprecated: true,
+    id: `${STORY_SINK_CONTEXT.toLowerCase()}-default`,
+    label: `${STORY_SINK_CONTEXT} default`,
+    element: (
+      <div className="demo-only" style={{ height: '10rem' }}>
+        <DeprecatedCombobox
+          inputIcon="right"
+          inputIconRightSymbol="search"
+          selectedOptionsInline
+          autocomplete
+          listbox={<ListboxDropdown />}
+        />
+      </div>
+    )
+  }
+];
 
 // States
 export let states = [
   {
+    context: STORY_SINK_CONTEXT,
+    deprecated: true,
     id: 'deprecated-focused',
     label: 'Deprecated - Focused',
     element: (
@@ -86,6 +96,8 @@ export let states = [
     `
   },
   {
+    context: STORY_SINK_CONTEXT,
+    deprecated: true,
     id: 'deprecated-open-item-focused',
     label: 'Deprecated - Open - Item Focused',
     element: (
@@ -103,6 +115,8 @@ export let states = [
     )
   },
   {
+    context: STORY_SINK_CONTEXT,
+    deprecated: true,
     id: 'deprecated-closed-option-selected',
     label: 'Deprecated - Option Selected',
     element: (
@@ -123,6 +137,8 @@ export let states = [
     )
   },
   {
+    context: STORY_SINK_CONTEXT,
+    deprecated: true,
     id: 'deprecated-options-selected',
     label: 'Deprecated - Option(s) Selected',
     element: (
@@ -159,6 +175,8 @@ export let states = [
     )
   },
   {
+    context: STORY_SINK_CONTEXT,
+    deprecated: true,
     id: 'deprecated-focused-options-selected',
     label: 'Deprecated - Focused - Option(s) Selected',
     element: (

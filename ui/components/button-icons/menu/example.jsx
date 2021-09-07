@@ -4,4 +4,10 @@
 import React from 'react';
 import { ButtonMenu } from './';
 
-export default <ButtonMenu />;
+export default [
+  {
+    id: 'default',
+    label: 'Button Menu – default',
+    element: <ButtonMenu />
+  }
+];

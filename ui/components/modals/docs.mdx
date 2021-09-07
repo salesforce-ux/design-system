@@ -11,7 +11,7 @@ import { MobileNotice, MobileBlurb } from '../../shared/doc-text';
 </div>
 
 <CodeView exampleOnly isViewport demoStyles="height: 640px;">
-  {Base.default}
+  {getDisplayElementById(Base.default)}
 </CodeView>
 
 ## About Modals
@@ -56,8 +56,8 @@ Modals, by definition, trap focus. This means that if a user presses Tab or Shif
 
 <MobileBlurb patternSpecificText="modals will have buttons of increased size to accommodate tapping with a finger instead of the more precise mouse cursor" />
 
-<CodeView frameOnly frameStyles={{ height: '640px' }}>
-  {Base.default}
+<CodeView frameOnly frameStyles={{ height: '640px' }} frameTitle="Example mobile styles for modals">
+  {getDisplayElementById(Base.default)}
 </CodeView>
 
 ## Base

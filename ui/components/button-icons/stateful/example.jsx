@@ -38,15 +38,22 @@ ButtonIconStateful.defaultProps = {
 /**
  * Default
  */
-export default (
-  <ButtonIconStateful
-    aria-pressed="false"
-    assistiveText="Like"
-    symbol="like"
-    theme="neutral"
-    title="Like"
-  />
-);
+
+export default [
+  {
+    id: 'default',
+    label: 'Stateful – default',
+    element: (
+      <ButtonIconStateful
+        aria-pressed="false"
+        assistiveText="Like"
+        symbol="like"
+        theme="neutral"
+        title="Like"
+      />
+    )
+  }
+];
 
 /**
  * States
@@ -54,7 +61,7 @@ export default (
 export const states = [
   {
     id: 'button-icon-stateful-selected',
-    label: 'Selected',
+    label: 'Stateful - Selected',
     element: (
       <ButtonIconStateful
         title="Like"
@@ -68,7 +75,7 @@ export const states = [
   },
   {
     id: 'button-icon-stateful-disabled',
-    label: 'Disabled',
+    label: 'Stateful - Disabled',
     element: (
       <ButtonIconStateful
         title="Pin"
@@ -82,7 +89,7 @@ export const states = [
   },
   {
     id: 'button-icon-stateful-selected-disabled',
-    label: 'Selected Disabled',
+    label: 'Stateful - Selected Disabled',
     element: (
       <ButtonIconStateful
         title="Pin"

@@ -181,11 +181,11 @@ export const AppLauncherTile = props => (
         )}
       </p>
       <Tooltip
-        className={classNames('slds-nubbin_top', {
+        className={classNames('slds-nubbin_top-right', {
           'slds-hide': !props.tooltipText
         })}
         id={`help-${props.index}`}
-        style={{ position: 'absolute', top: '100px', left: '165px' }}
+        style={{ position: 'absolute', top: '80px', right: '30px' }}
       >
         {props.tooltipText}
       </Tooltip>
@@ -334,12 +334,14 @@ export let states = [
     id: 'default',
     label: 'Default',
     demoStyles: exampleDemoStyles,
+    storybookStyles: true,
     element: defaultComponent
   },
   {
     id: 'grabbed',
     label: 'Tile grabbed',
     demoStyles: exampleDemoStyles,
+    storybookStyles: true,
     element: (
       <Backdrop>
         <AppLauncherModal
@@ -355,6 +357,7 @@ export let states = [
     id: 'moved',
     label: 'Tile moved in list',
     demoStyles: exampleDemoStyles,
+    storybookStyles: true,
     element: (
       <Backdrop>
         <AppLauncherModal
@@ -369,6 +372,7 @@ export let states = [
     id: 'dropped',
     label: 'Tile dropped',
     demoStyles: exampleDemoStyles,
+    storybookStyles: true,
     element: (
       <Backdrop>
         <AppLauncherModal
@@ -383,6 +387,7 @@ export let states = [
     id: 'search',
     label: 'Search',
     demoStyles: exampleDemoStyles,
+    storybookStyles: true,
     element: (
       <Backdrop>
         <AppLauncherModal
@@ -397,7 +402,8 @@ export let states = [
   {
     id: 'tooltip',
     label: 'Tooltip',
-    demoStyles: 'width: 360px; height: 135px;',
+    demoStyles: 'width: 360px; height: 13rem; position: relative; padding: 0;',
+    storybookStyles: true,
     element: (
       <AppLauncherTile
         figureClass="slds-icon-custom-27"

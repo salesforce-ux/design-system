@@ -139,17 +139,25 @@ let Header = props => (
 // Export
 /// ///////////////////////////////////////////
 
-export default (
-  <Popover className="slds-nubbin_left" closeButton title="Dialog Title">
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua.
-    </p>
-  </Popover>
-);
+export default [
+  {
+    context: 'Legacy',
+    id: 'legacy-default',
+    label: 'Legacy – default',
+    element: (
+      <Popover className="slds-nubbin_left" closeButton title="Dialog Title">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+      </Popover>
+    )
+  }
+];
 
 export let examples = [
   {
+    context: 'Legacy',
     id: 'header',
     label: 'With Header [Legacy for testing]',
     element: (
@@ -166,6 +174,7 @@ export let examples = [
     )
   },
   {
+    context: 'Legacy',
     id: 'footer',
     label: 'With Footer [Legacy for testing]',
     element: (
@@ -183,6 +192,7 @@ export let examples = [
     )
   },
   {
+    context: 'Legacy',
     id: 'scrolling',
     label: 'Body max height small [Legacy for testing]',
     element: (

@@ -80,7 +80,7 @@ export default (
     <p>
       It looks as if duplicates exist for this lead.{' '}
       <a href="#" onClick={e => e.preventDefault()}>
-        View Duplicates.
+        View Duplicates
       </a>
     </p>
   </ScopedNotificationThemed>
@@ -95,7 +95,7 @@ export let examples = [
         <p>
           It looks as if duplicates exist for this lead.{' '}
           <a href="#" onClick={e => e.preventDefault()}>
-            View Duplicates.
+            View Duplicates
           </a>
         </p>
       </ScopedNotificationThemed>
@@ -109,7 +109,7 @@ export let examples = [
         <p>
           It looks as if duplicates exist for this lead.{' '}
           <a href="#" onClick={e => e.preventDefault()}>
-            View Duplicates.
+            View Duplicates
           </a>
         </p>
       </ScopedNotificationThemed>
@@ -126,7 +126,7 @@ export let states = [
         <p>
           It looks as if duplicates exist for this lead.{' '}
           <a href="#" onClick={e => e.preventDefault()}>
-            View Duplicates.
+            View Duplicates
           </a>
         </p>
       </ScopedNotification>
@@ -140,7 +140,7 @@ export let states = [
         <p>
           Success! Your entry has been duplicated.{' '}
           <a href="#" onClick={e => e.preventDefault()}>
-            View Duplicates.
+            View Duplicates
           </a>
         </p>
       </ScopedNotification>
@@ -154,7 +154,7 @@ export let states = [
         <p>
           It looks as if duplicates exist for this lead.{' '}
           <a href="#" onClick={e => e.preventDefault()}>
-            View Duplicates.
+            View Duplicates
           </a>
         </p>
       </ScopedNotification>
@@ -168,7 +168,7 @@ export let states = [
         <p>
           It looks as if duplicates exist for this lead.{' '}
           <a href="#" onClick={e => e.preventDefault()}>
-            View Duplicates.
+            View Duplicates
           </a>
         </p>
       </ScopedNotification>

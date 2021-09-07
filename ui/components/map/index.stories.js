@@ -1,42 +1,25 @@
-import React from 'react';
-import { storiesOf } from '@storybook/react';
 import * as BaseExamples from './base/example';
-import { getAllDisplayCollectionsByType } from '../../shared/helpers';
-import StoryFrame from '../../../shared/components/StoryFrame';
-
-import DocsPage from '../../../.storybook/components/DocsPage';
+import { generateStories } from '../../shared/helpers';
 import Docs from './docs.mdx';
 
 const examples = [BaseExamples];
 
-const kitchenSink = getAllDisplayCollectionsByType(examples, [
-  'default',
-  'examples',
-  'states'
-]);
+const patternName = 'Map';
 
-storiesOf('Components/Map', module).add(
-  'Kitchen Sink',
-  () =>
-    kitchenSink.map((element, idx) =>
-      element.map(({ label, component }) => (
-        <StoryFrame
-          component={component}
-          label={label}
-          key={`kitchen-sink-${label}-${idx}`}
-          styles={{ minHeight: '500px' }}
-          isFullBleed
-        />
-      ))
-    ),
-  {
-    docs: {
-      page: () => <DocsPage title="Map" Docs={Docs} />
-    },
-    eyes: {
-      ignoreRegions: [
-        { selector: '.slds-map' }
-      ],
-    }
+const storyOptions = {
+  defaultDemoStyles: 'min-height: 500px;',
+  isFullBleed: true,
+  eyes: {
+    ignoreRegions: [
+      { selector: '.slds-map' }
+    ]
   }
+};
+
+generateStories(
+  patternName,
+  examples,
+  ['default', 'examples', 'states'],
+  Docs,
+  storyOptions
 );

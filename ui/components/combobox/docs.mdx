@@ -28,32 +28,42 @@ import { MobileNotice, MobileBlurb } from '../../shared/doc-text';
 
 ## Base Combobox
 
-A Base Combobox is a readonly text `input` that allows a user to select an option from a pre-defined list of options. It does not allow free form user input, nor does it allow the user to modify the selected value.
+A Base Combobox allows a user to select an option from a pre-defined list of options that that is functionally similar to an HTML `select` element. It is not made with an `<input>` element, does not allow free form user input, nor does it allow the user to modify the selected value.
 
-<CodeView demoStyles="height: 17rem;">{BaseExamples.default}</CodeView>
+<CodeView demoStyles="height: 17rem;">{getDisplayElementById(BaseExamples.default)}</CodeView>
+
+<Blockquote type="a11y" header="Accessibility Note">
+  <p>
+    The Base Combobox follows the ARIA practice for Collapsible Dropdown Listbox. <a href="https://www.w3.org/TR/wai-aria-practices-1.2/examples/listbox/listbox-collapsible.html" target="_blank">See here</a> for additional info and keyboard interactions.
+  </p>
+</Blockquote>
 
 ### Combobox markup
 
 - A Combobox must come with an associated `label` element, with an appropriate `for` attribute
-- `slds-combobox` acts as the root node to the composite Combobox widget. It takes the `role="combobox"` attribute as a result
-  - `aria-haspopup="listbox"` attribute is then applied to indicate the Combobox will display a popup, of type `listbox`
-  - `aria-expanded="true|false"` attribute is applied to describe whether the popup of `listbox` is currently visible or not
-- The element `slds-combobox__form-element` between the `combobox` and its `input` must have `role="none"`
+- `slds-combobox` acts as the root node to the composite Combobox widget.
+- The element `slds-combobox__form-element` between the `combobox` and its "input" must have `role="none"`
 
-### Input markup
+### "Input" markup
 
-- The `input` is an `input` with a role of `textbox`. The role is implicit on inputs, but in this case it doesn't hurt to be explicit
-- The `input` has the following attributes:
-  - `autocomplete="off"` to remove the browsers' suggestions from the `input`
+- The `input`-appearing element is a `button` in the case of select-only comboboxes, otherwise An `<input>` when user-entered input is expected, like auto-complete.
+- The `button` or `input` has the following attributes:
+  - `aria-haspopup="listbox"` to indicate the Combobox will display a popup, of type `listbox`.
+  - `aria-expanded="true|false"` to describe whether the popup of `listbox` is currently visible or not.
   - `aria-controls=""` which points to the ID of the `listbox`. It informs assistive technology what DOM node the `input` controls, in terms of visibility and / or content
+- The `input` has the additional attributes:
+  - `role="combobox"` to be explicit, although the role is implicit on inputs
+  - `autocomplete="off"` to remove the browsers' suggestions from the `input`
   - `type` attribute set to be `text` as it's not a search field
   - `readonly`
+- The `button` has the additional attributes:
+  - `aria-labelledby` with the value of the associated label element's `id` along with the button's `id`
 
 ### Mobile
 
 <MobileBlurb patternSpecificText="comboboxes and the available options will have an increased size to accommodate tapping with a finger instead of the more precise mouse cursor" />
 
-<CodeView frameStyles={{ height: '20rem' }} frameOnly>
+<CodeView frameStyles={{ height: '20rem' }} frameOnly frameTitle="Example mobile styles for comboboxes">
   {getDisplayElementById(BaseExamples.states, 'focused-open')}
 </CodeView>
 
@@ -297,7 +307,7 @@ If no option matches, the user can complete the value of the combobox by finishi
   </p>
 </Blockquote>
 
-<CodeView demoStyles="height: 12rem;">{AutocompleteExamples.default}</CodeView>
+<CodeView demoStyles="height: 12rem;">{getDisplayElementById(AutocompleteExamples.default)}</CodeView>
 
 ### Displaying options
 
@@ -462,7 +472,7 @@ Multiple selection is handled the same as the Base and Autocomplete Combobox, a 
   elementName="comboboxes with multiple selection"
 />
 
-<CodeView frameOnly>
+<CodeView frameOnly frameTitle="Example mobile styles for comboboxes with multiple selection">
   {getDisplayElementById(
     AutocompleteExamples.states,
     'lookup-multiple-options'
@@ -491,7 +501,7 @@ The containing `div` of the comboboxes should have the class `slds-combobox-grou
   </p>
 </Blockquote>
 
-<CodeView demoStyles="height: 17rem;">{GroupedExamples.default}</CodeView>
+<CodeView demoStyles="height: 17rem;">{getDisplayElementById(GroupedExamples.default)}</CodeView>
 
 <MobileNotice
   docsLink="#Mobile"
@@ -499,8 +509,8 @@ The containing `div` of the comboboxes should have the class `slds-combobox-grou
   elementName="grouped comboboxes (cross-entity / polymorphic)"
 />
 
-<CodeView frameStyles={{ height: '21rem' }} frameOnly>
-  {GroupedExamples.default}
+<CodeView frameStyles={{ height: '21rem' }} frameOnly frameTitle="Example mobile styles for grouped comboboxes">
+  {getDisplayElementById(GroupedExamples.default)}
 </CodeView>
 
 ### User input (Typeahead)
@@ -611,7 +621,7 @@ The key difference for `dialog` dropdowns lies in how they handle focus. In `lis
   </ol>
 </Blockquote>
 
-<CodeView>{Dialog.default}</CodeView>
+<CodeView>{getDisplayElementById(Dialog.default)}</CodeView>
 
 ### Open Dialog
 

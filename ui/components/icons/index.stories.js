@@ -1,14 +1,9 @@
-import React from 'react';
-import { storiesOf } from '@storybook/react';
 import * as BaseExamples from './base/example';
 import * as ActionExamples from './action/example';
 import * as CustomExamples from './custom/example';
 import * as DoctypeExamples from './doctype/example';
 import * as StandardExamples from './standard/example';
-import { getAllDisplayCollectionsByType } from '../../shared/helpers';
-import StoryFrame from '../../../shared/components/StoryFrame';
-
-import DocsPage from '../../../.storybook/components/DocsPage';
+import { generateStories } from '../../shared/helpers';
 import Docs from './docs.mdx';
 
 const examples = [
@@ -19,27 +14,6 @@ const examples = [
   StandardExamples
 ];
 
-const kitchenSink = getAllDisplayCollectionsByType(examples, [
-  'default',
-  'examples',
-  'states'
-]);
+const patternName = 'Icons';
 
-storiesOf('Components/Icons', module).add(
-  'Kitchen Sink',
-  () =>
-    kitchenSink.map((element, idx) =>
-      element.map(({ label, component }) => (
-        <StoryFrame
-          component={component}
-          label={label}
-          key={`kitchen-sink-${label}-${idx}`}
-        />
-      ))
-    ),
-  {
-    docs: {
-      page: () => <DocsPage title="Icons" Docs={Docs} />
-    }
-  }
-);
+generateStories(patternName, examples, ['default', 'examples', 'states'], Docs);

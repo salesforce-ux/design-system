@@ -73,7 +73,7 @@
  * @restrict .slds-builder-header__item a, .slds-builder-header__item button
  */
 .slds-builder-header__item-action {
-  transition: all 150ms linear; // stylelint-disable declaration-property-value-blacklist
+  transition: all 150ms linear; // stylelint-disable declaration-property-value-disallowed-list
 
   &:hover,
   &:focus {

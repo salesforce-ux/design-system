@@ -163,14 +163,20 @@ let Header = props => (
 // Export
 /// ///////////////////////////////////////////
 
-export default (
-  <Popover className="slds-nubbin_left" closeButton title="Dialog Title">
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua.
-    </p>
-  </Popover>
-);
+export default [
+  {
+    id: 'popover-default',
+    label: 'Popover – default',
+    element: (
+      <Popover className="slds-nubbin_left" closeButton title="Dialog Title">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+      </Popover>
+    )
+  }
+];
 
 export let examples = [
   {
@@ -215,8 +221,8 @@ export let examples = [
         className="slds-nubbin_left"
         closeButton
         footer={
-          <div class="slds-grid slds-grid_vertical-align-center">
-            <button class="slds-button slds-button_neutral slds-col_bump-left">
+          <div className="slds-grid slds-grid_vertical-align-center">
+            <button className="slds-button slds-button_neutral slds-col_bump-left">
               Learn More
             </button>
           </div>
@@ -241,8 +247,8 @@ export let examples = [
         iconName="favorite"
         iconAssistiveText="Assistive text here"
         footer={
-          <div class="slds-grid slds-grid_vertical-align-center">
-            <button class="slds-button slds-button_neutral slds-col_bump-left">
+          <div className="slds-grid slds-grid_vertical-align-center">
+            <button className="slds-button slds-button_neutral slds-col_bump-left">
               Learn More
             </button>
           </div>
@@ -458,8 +464,8 @@ export let examples = [
         className="slds-popover_dark slds-nubbin_left"
         closeButton
         footer={
-          <div class="slds-grid slds-grid_vertical-align-center">
-            <button class="slds-button slds-button_brand slds-col_bump-left">
+          <div className="slds-grid slds-grid_vertical-align-center">
+            <button className="slds-button slds-button_brand slds-col_bump-left">
               Learn More
             </button>
           </div>
@@ -484,8 +490,8 @@ export let examples = [
         iconName="favorite"
         iconAssistiveText="Assistive text here"
         footer={
-          <div class="slds-grid slds-grid_vertical-align-center">
-            <button class="slds-button slds-button_brand slds-col_bump-left">
+          <div className="slds-grid slds-grid_vertical-align-center">
+            <button className="slds-button slds-button_brand slds-col_bump-left">
               Learn More
             </button>
           </div>

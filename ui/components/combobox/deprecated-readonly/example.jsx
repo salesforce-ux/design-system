@@ -11,6 +11,7 @@ import {
 import { ListboxItemHeading } from '../listbox';
 import { ListboxPills, ListboxPillsItem, ListboxPill } from '../../pills';
 
+const STORY_SINK_CONTEXT = 'Deprecated – Select-Only';
 const listboxOptionId01 = 'listbox-option-unique-id-01';
 const listboxOptionId02 = 'listbox-option-unique-id-02';
 
@@ -38,19 +39,29 @@ const ListboxDropdown = props => (
   </DeprecatedListbox>
 );
 
-export default (
-  <div className="demo-only" style={{ height: '10rem' }}>
-    <DeprecatedCombobox
-      inputIcon="right"
-      inputIconRightSymbol="down"
-      listbox={<ListboxDropdown />}
-      readonly
-    />
-  </div>
-);
+export default [
+  {
+    context: STORY_SINK_CONTEXT,
+    deprecated: true,
+    id: `${STORY_SINK_CONTEXT.toLowerCase()}-default`,
+    label: `${STORY_SINK_CONTEXT} default`,
+    element: (
+      <div className="demo-only" style={{ height: '10rem' }}>
+        <DeprecatedCombobox
+          inputIcon="right"
+          inputIconRightSymbol="down"
+          listbox={<ListboxDropdown />}
+          readonly
+        />
+      </div>
+    )
+  }
+];
 
 export let states = [
   {
+    context: STORY_SINK_CONTEXT,
+    deprecated: true,
     id: 'deprecated-focused',
     label: 'Deprecated - Focused',
     element: (
@@ -69,6 +80,8 @@ export let states = [
     `
   },
   {
+    context: STORY_SINK_CONTEXT,
+    deprecated: true,
     id: 'deprecated-open-item-focused',
     label: 'Deprecated - Open - Item Focused',
     element: (
@@ -85,6 +98,8 @@ export let states = [
     )
   },
   {
+    context: STORY_SINK_CONTEXT,
+    deprecated: true,
     id: 'deprecated-open-option-selected',
     label: 'Deprecated - Open - Option Selected',
     element: (
@@ -101,6 +116,8 @@ export let states = [
     )
   },
   {
+    context: STORY_SINK_CONTEXT,
+    deprecated: true,
     id: 'deprecated-open-options-selected',
     label: 'Deprecated - Open - Option(s) Selected',
     element: (
@@ -117,6 +134,8 @@ export let states = [
     )
   },
   {
+    context: STORY_SINK_CONTEXT,
+    deprecated: true,
     id: 'deprecated-closed-option-selected',
     label: 'Deprecated - Option Selected',
     element: (
@@ -132,6 +151,8 @@ export let states = [
     )
   },
   {
+    context: STORY_SINK_CONTEXT,
+    deprecated: true,
     id: 'deprecated-closed-options-selected',
     label: 'Deprecated - Option(s) Selected',
     element: (
@@ -156,6 +177,8 @@ export let states = [
     )
   },
   {
+    context: STORY_SINK_CONTEXT,
+    deprecated: true,
     id: 'deprecated-open-option-heading',
     label: 'Deprecated - Sub-heading',
     element: (

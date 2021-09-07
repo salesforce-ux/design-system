@@ -7,69 +7,23 @@ import { FormElement } from '../';
 import Input from '../../input/';
 import { Textarea } from '../../textarea/base/example';
 
-export default (
-  <CompoundFormElement labelContent="Billing Address" isAddress>
-    <CompoundFormRow>
-      <div className="slds-size_1-of-1">
-        <FormElement labelContent="Billing Street" inputId="form-element-id-04">
-          <Textarea
-            id="form-element-id-04"
-            defaultValue="525 S. Lexington Ave"
-            required
-          />
-        </FormElement>
-      </div>
-    </CompoundFormRow>
-    <CompoundFormRow>
-      <div className="slds-size_4-of-6">
-        <FormElement labelContent="Billing City" inputId="form-element-id-05">
-          <Input id="form-element-id-05" defaultValue="Burlington" required />
-        </FormElement>
-      </div>
-      <div className="slds-size_2-of-6">
-        <FormElement
-          labelContent="Billing State/Province"
-          inputId="form-element-id-06"
-        >
-          <Input id="form-element-id-06" defaultValue="NC" required />
-        </FormElement>
-      </div>
-    </CompoundFormRow>
-    <CompoundFormRow>
-      <div className="slds-size_4-of-6">
-        <FormElement
-          labelContent="Billing Zip/Postal Code"
-          inputId="form-element-id-07"
-        >
-          <Input id="form-element-id-07" defaultValue="27215" required />
-        </FormElement>
-      </div>
-      <div className="slds-size_2-of-6">
-        <FormElement
-          labelContent="Billing Country"
-          inputId="form-element-id-08"
-        >
-          <Input id="form-element-id-08" defaultValue="USA" required />
-        </FormElement>
-      </div>
-    </CompoundFormRow>
-  </CompoundFormElement>
-);
+const addressContext = 'Address';
 
-export let states = [
+export default [
   {
-    id: 'required',
-    label: 'Required',
+    id: 'address-default',
+    label: `${addressContext} - Default`,
+    context: `${addressContext}`,
     element: (
-      <CompoundFormElement labelContent="Billing Address" isAddress isRequired>
+      <CompoundFormElement labelContent="Billing Address" isAddress>
         <CompoundFormRow>
           <div className="slds-size_1-of-1">
             <FormElement
               labelContent="Billing Street"
-              inputId="form-element-id-04"
+              inputId="form-element-id-01"
             >
               <Textarea
-                id="form-element-id-04"
+                id="form-element-id-01"
                 defaultValue="525 S. Lexington Ave"
                 required
               />
@@ -80,10 +34,10 @@ export let states = [
           <div className="slds-size_4-of-6">
             <FormElement
               labelContent="Billing City"
-              inputId="form-element-id-05"
+              inputId="form-element-id-02"
             >
               <Input
-                id="form-element-id-05"
+                id="form-element-id-02"
                 defaultValue="Burlington"
                 required
               />
@@ -92,9 +46,9 @@ export let states = [
           <div className="slds-size_2-of-6">
             <FormElement
               labelContent="Billing State/Province"
-              inputId="form-element-id-06"
+              inputId="form-element-id-03"
             >
-              <Input id="form-element-id-06" defaultValue="NC" required />
+              <Input id="form-element-id-03" defaultValue="NC" required />
             </FormElement>
           </div>
         </CompoundFormRow>
@@ -102,36 +56,37 @@ export let states = [
           <div className="slds-size_4-of-6">
             <FormElement
               labelContent="Billing Zip/Postal Code"
-              inputId="form-element-id-07"
+              inputId="form-element-id-04"
             >
-              <Input id="form-element-id-07" defaultValue="27215" required />
+              <Input id="form-element-id-04" defaultValue="27215" required />
             </FormElement>
           </div>
           <div className="slds-size_2-of-6">
             <FormElement
               labelContent="Billing Country"
-              inputId="form-element-id-08"
+              inputId="form-element-id-05"
             >
-              <Input id="form-element-id-08" defaultValue="USA" required />
+              <Input id="form-element-id-05" defaultValue="USA" required />
             </FormElement>
           </div>
         </CompoundFormRow>
       </CompoundFormElement>
-    )
+    ),
   },
   {
     id: 'help-text',
-    label: 'Has help text icon with tooltip',
+    label: `${addressContext} - Help text icon with tooltip`,
+    context: `${addressContext}`,
     element: (
       <CompoundFormElement labelContent="Billing Address" isAddress hasTooltip>
         <CompoundFormRow>
           <div className="slds-size_1-of-1">
             <FormElement
               labelContent="Billing Street"
-              inputId="form-element-id-04"
+              inputId="form-element-id-06"
             >
               <Textarea
-                id="form-element-id-04"
+                id="form-element-id-06"
                 defaultValue="525 S. Lexington Ave"
                 required
               />
@@ -142,10 +97,10 @@ export let states = [
           <div className="slds-size_4-of-6">
             <FormElement
               labelContent="Billing City"
-              inputId="form-element-id-05"
+              inputId="form-element-id-07"
             >
               <Input
-                id="form-element-id-05"
+                id="form-element-id-07"
                 defaultValue="Burlington"
                 required
               />
@@ -154,9 +109,9 @@ export let states = [
           <div className="slds-size_2-of-6">
             <FormElement
               labelContent="Billing State/Province"
-              inputId="form-element-id-06"
+              inputId="form-element-id-08"
             >
-              <Input id="form-element-id-06" defaultValue="NC" required />
+              <Input id="form-element-id-08" defaultValue="NC" required />
             </FormElement>
           </div>
         </CompoundFormRow>
@@ -164,26 +119,93 @@ export let states = [
           <div className="slds-size_4-of-6">
             <FormElement
               labelContent="Billing Zip/Postal Code"
-              inputId="form-element-id-07"
+              inputId="form-element-id-09"
             >
-              <Input id="form-element-id-07" defaultValue="27215" required />
+              <Input id="form-element-id-09" defaultValue="27215" required />
             </FormElement>
           </div>
           <div className="slds-size_2-of-6">
             <FormElement
               labelContent="Billing Country"
-              inputId="form-element-id-08"
+              inputId="form-element-id-10"
             >
-              <Input id="form-element-id-08" defaultValue="USA" required />
+              <Input id="form-element-id-10" defaultValue="USA" required />
             </FormElement>
           </div>
         </CompoundFormRow>
       </CompoundFormElement>
-    )
+    ),
+  },
+];
+
+export let states = [
+  {
+    id: 'required',
+    label: `${addressContext} - Required`,
+    context: `${addressContext}`,
+    element: (
+      <CompoundFormElement labelContent="Billing Address" isAddress isRequired>
+        <CompoundFormRow>
+          <div className="slds-size_1-of-1">
+            <FormElement
+              labelContent="Billing Street"
+              inputId="form-element-id-11"
+            >
+              <Textarea
+                id="form-element-id-11"
+                defaultValue="525 S. Lexington Ave"
+                required
+              />
+            </FormElement>
+          </div>
+        </CompoundFormRow>
+        <CompoundFormRow>
+          <div className="slds-size_4-of-6">
+            <FormElement
+              labelContent="Billing City"
+              inputId="form-element-id-12"
+            >
+              <Input
+                id="form-element-id-12"
+                defaultValue="Burlington"
+                required
+              />
+            </FormElement>
+          </div>
+          <div className="slds-size_2-of-6">
+            <FormElement
+              labelContent="Billing State/Province"
+              inputId="form-element-id-13"
+            >
+              <Input id="form-element-id-13" defaultValue="NC" required />
+            </FormElement>
+          </div>
+        </CompoundFormRow>
+        <CompoundFormRow>
+          <div className="slds-size_4-of-6">
+            <FormElement
+              labelContent="Billing Zip/Postal Code"
+              inputId="form-element-id-14"
+            >
+              <Input id="form-element-id-14" defaultValue="27215" required />
+            </FormElement>
+          </div>
+          <div className="slds-size_2-of-6">
+            <FormElement
+              labelContent="Billing Country"
+              inputId="form-element-id-15"
+            >
+              <Input id="form-element-id-15" defaultValue="USA" required />
+            </FormElement>
+          </div>
+        </CompoundFormRow>
+      </CompoundFormElement>
+    ),
   },
   {
     id: 'has-error',
-    label: 'Has error',
+    label: `${addressContext} - Error`,
+    context: `${addressContext}`,
     element: (
       <CompoundFormElement
         labelContent="Billing Address"
@@ -197,10 +219,10 @@ export let states = [
           <div className="slds-size_1-of-1">
             <FormElement
               labelContent="Billing Street"
-              inputId="form-element-id-04"
+              inputId="form-element-id-16"
             >
               <Textarea
-                id="form-element-id-04"
+                id="form-element-id-16"
                 defaultValue="525 S. Lexington Ave"
                 required
               />
@@ -211,10 +233,10 @@ export let states = [
           <div className="slds-size_4-of-6">
             <FormElement
               labelContent="Billing City"
-              inputId="form-element-id-05"
+              inputId="form-element-id-17"
             >
               <Input
-                id="form-element-id-05"
+                id="form-element-id-17"
                 defaultValue="Burlington"
                 required
               />
@@ -223,9 +245,9 @@ export let states = [
           <div className="slds-size_2-of-6">
             <FormElement
               labelContent="Billing State/Province"
-              inputId="form-element-id-06"
+              inputId="form-element-id-18"
             >
-              <Input id="form-element-id-06" defaultValue="NC" required />
+              <Input id="form-element-id-18" defaultValue="NC" required />
             </FormElement>
           </div>
         </CompoundFormRow>
@@ -233,21 +255,21 @@ export let states = [
           <div className="slds-size_4-of-6">
             <FormElement
               labelContent="Billing Zip/Postal Code"
-              inputId="form-element-id-07"
+              inputId="form-element-id-19"
             >
-              <Input id="form-element-id-07" defaultValue="27215" required />
+              <Input id="form-element-id-19" defaultValue="27215" required />
             </FormElement>
           </div>
           <div className="slds-size_2-of-6">
             <FormElement
               labelContent="Billing Country"
-              inputId="form-element-id-08"
+              inputId="form-element-id-20"
             >
-              <Input id="form-element-id-08" defaultValue="USA" required />
+              <Input id="form-element-id-20" defaultValue="USA" required />
             </FormElement>
           </div>
         </CompoundFormRow>
       </CompoundFormElement>
-    )
-  }
+    ),
+  },
 ];

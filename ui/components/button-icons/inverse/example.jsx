@@ -4,25 +4,31 @@
 import React from 'react';
 import ButtonIcon from '../';
 
-export const Context = props => (
-  <div style={{ padding: '0.5rem', backgroundColor: '#16325C' }}>
-    {props.children}
-  </div>
-);
+const exampleDemoStyles = 'background-color: #16325C; padding: 0.5rem;';
 
-export default (
-  <ButtonIcon
-    assistiveText="Search"
-    title="Search"
-    theme="inverse"
-    symbol="search"
-  />
-);
+export default [
+  {
+    id: 'default',
+    label: 'Inverse – default',
+    demoStyles: exampleDemoStyles,
+    storybookStyles: true,
+    element: (
+      <ButtonIcon
+        assistiveText="Search"
+        title="Search"
+        theme="inverse"
+        symbol="search"
+      />
+    )
+  }
+];
 
 export let states = [
   {
     id: 'disabled',
-    label: 'Disabled',
+    label: 'Inverse - Disabled',
+    demoStyles: exampleDemoStyles,
+    storybookStyles: true,
     element: (
       <ButtonIcon
         assistiveText="Search"
@@ -38,7 +44,9 @@ export let states = [
 export let examples = [
   {
     id: 'with-dropdown',
-    label: 'With dropdown',
+    label: 'Inverse - With dropdown',
+    demoStyles: exampleDemoStyles,
+    storybookStyles: true,
     element: (
       <ButtonIcon
         hasDropdown
@@ -51,7 +59,9 @@ export let examples = [
   },
   {
     id: 'hint-hover',
-    label: 'Hint on hover',
+    label: 'Inverse - Hint on hover',
+    demoStyles: exampleDemoStyles,
+    storybookStyles: true,
     element: (
       <div className="slds-hint-parent">
         <ButtonIcon

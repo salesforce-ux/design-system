@@ -15,7 +15,7 @@ import StylingHooksTable from '../../../shared/components/StylingHooksTable';
   Cards are used to apply a container around a related grouping of information.
 </div>
 
-<CodeView exampleOnly>{CardExamples.default}</CodeView>
+<CodeView exampleOnly>{getDisplayElementById(CardExamples.default)}</CodeView>
 
 ## About Cards
 
@@ -29,15 +29,15 @@ Cards should use an underlying `<article>` element to maintain usability for som
 
 <MobileBlurb patternSpecificText="cards will have bolded header title text, no top border, and no rounded corners" />
 
-<CodeView frameOnly>
-  {CardExamples.default}
+<CodeView frameOnly frameTitle="Example mobile styles for cards">
+  {getDisplayElementById(CardExamples.default)}
 </CodeView>
 
 ## Base Card Structure
 
 A card is made up of 3 sections, a header, a body, and a footer. The header and footer have limitations, but the body section can accommodate any layout of related information.
 
-<CodeView>{CardExamples.default}</CodeView>
+<CodeView>{getDisplayElementById(CardExamples.default)}</CodeView>
 
 ### Header
 
@@ -210,7 +210,7 @@ Placing contact tiles inside of an `slds-card__body` is an example of using `sld
 
 <MobileNotice docsLink="#Mobile" header="Mobile context changes" elementName="cards with tiles" />
 
-<CodeView frameOnly>{getDisplayElementById(CardExamples.examples, 'related-list-tiles')}</CodeView>
+<CodeView frameOnly frameTitle="Example mobile styles for cards with tiles">{getDisplayElementById(CardExamples.examples, 'related-list-tiles')}</CodeView>
 
 ## Layout
 
@@ -236,13 +236,13 @@ Adding `slds-card_boundary` to the `slds-card` element will give you back the ca
 
 To combine several cards into a single card look, wrap the cards using `slds-card-wrapper`. Similar to the nested cards, adding `slds-card_boundary` to the `slds-card` element will give you back the card styling.
 
-<CodeView>{CardWrapperExamples.default}</CodeView>
+<CodeView>{getDisplayElementById(CardWrapperExamples.default)}</CodeView>
 
 ## Einstein Theming
 
 For cards that contain Einstein related information, you can include an Einstein themed card header.
 
-<CodeView>{CardEinsteinExamples.default}</CodeView>
+<CodeView>{getDisplayElementById(CardEinsteinExamples.default)}</CodeView>
 
 ### With an Icon
 
@@ -261,7 +261,7 @@ For cards that contain Einstein related information, you can include an Einstein
 
 <MobileNotice docsLink="#Mobile" header="Mobile context changes" elementName="cards with Einstein theming and actions" />
 
-<CodeView frameOnly>
+<CodeView frameOnly frameTitle="Example mobile styles for Einstein themed cards">
   {getDisplayElementById(
     CardEinsteinExamples.states,
     'einstein-with-icon-and-actions'

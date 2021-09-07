@@ -18,6 +18,8 @@ const popoverId05 = 'popover-unique-id-05';
 const popoverId06 = 'popover-unique-id-06';
 const popoverId07 = 'popover-unique-id-07';
 
+const STORY_SINK_CONTEXT = 'Dialog';
+
 export const ComboboxWithDialog = () => {
   const popoverId = _.uniqueId('popover-id-');
   return (
@@ -25,7 +27,7 @@ export const ComboboxWithDialog = () => {
       id={_.uniqueId('combobox-id-')}
       aria-controls={popoverId}
       label="Languages"
-      readonly
+      selectOnly
       inputIconPosition="right"
       rightInputIcon={
         <UtilityIcon
@@ -59,10 +61,18 @@ export const ComboboxWithDialog = () => {
   );
 };
 
-export default <ComboboxWithDialog />;
+export default [
+  {
+    context: STORY_SINK_CONTEXT,
+    id: `${STORY_SINK_CONTEXT.toLowerCase()}-default`,
+    label: `${STORY_SINK_CONTEXT} default`,
+    element: <ComboboxWithDialog />
+  }
+];
 
 export let states = [
   {
+    context: STORY_SINK_CONTEXT,
     id: 'open',
     label: 'Open',
     element: (
@@ -70,7 +80,7 @@ export let states = [
         id={_.uniqueId('combobox-id-')}
         aria-controls={popoverId01}
         label="Languages"
-        readonly
+        selectOnly
         isOpen
         inputIconPosition="right"
         rightInputIcon={
@@ -107,6 +117,7 @@ export let states = [
 
 export let examples = [
   {
+    context: STORY_SINK_CONTEXT,
     id: 'with-checkbox-group',
     label: 'With Checkbox Group',
     element: (
@@ -114,7 +125,7 @@ export let examples = [
         id={_.uniqueId('combobox-id-')}
         aria-controls={popoverId02}
         label="Languages"
-        readonly
+        selectOnly
         isOpen
         inputIconPosition="right"
         rightInputIcon={
@@ -153,6 +164,7 @@ export let examples = [
     )
   },
   {
+    context: STORY_SINK_CONTEXT,
     id: 'selecting-options',
     label: 'Selecting Options',
     element: (
@@ -160,7 +172,7 @@ export let examples = [
         id={_.uniqueId('combobox-id-')}
         aria-controls={popoverId03}
         label="Languages"
-        readonly
+        selectOnly
         isOpen
         inputIconPosition="right"
         rightInputIcon={
@@ -199,6 +211,7 @@ export let examples = [
     )
   },
   {
+    context: STORY_SINK_CONTEXT,
     id: 'open-one-option-selected',
     label: 'Open - One Option Selected ',
     element: (
@@ -206,7 +219,7 @@ export let examples = [
         id={_.uniqueId('combobox-id-')}
         aria-controls={popoverId04}
         label="Languages"
-        readonly
+        selectOnly
         isOpen
         value="German"
         inputIconPosition="right"
@@ -246,6 +259,7 @@ export let examples = [
     )
   },
   {
+    context: STORY_SINK_CONTEXT,
     id: 'closed-one-option-selected',
     label: 'Closed - One Option Selected',
     element: (
@@ -253,7 +267,7 @@ export let examples = [
         id={_.uniqueId('combobox-id-')}
         aria-controls={popoverId05}
         label="Languages"
-        readonly
+        selectOnly
         value="German"
         inputIconPosition="right"
         rightInputIcon={
@@ -293,6 +307,7 @@ export let examples = [
     )
   },
   {
+    context: STORY_SINK_CONTEXT,
     id: 'open-two-or-more-options-selected',
     label: 'Open - Two or More Options Selected',
     element: (
@@ -300,7 +315,7 @@ export let examples = [
         id={_.uniqueId('combobox-id-')}
         aria-controls={popoverId06}
         label="Languages"
-        readonly
+        selectOnly
         isOpen
         value="2 options selected"
         inputIconPosition="right"
@@ -340,6 +355,7 @@ export let examples = [
     )
   },
   {
+    context: STORY_SINK_CONTEXT,
     id: 'closed-two-or-more-options-selected',
     label: 'Closed - Two or More Options Selected',
     element: (
@@ -347,7 +363,7 @@ export let examples = [
         id={_.uniqueId('combobox-id-')}
         aria-controls={popoverId07}
         label="Languages"
-        readonly
+        selectOnly
         value="2 options selected"
         inputIconPosition="right"
         rightInputIcon={

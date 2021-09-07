@@ -13,7 +13,7 @@ import * as PageHeadersExamplesRelatedList from './related-list/example';
 </div>
 
 <CodeView exampleOnly>
-  {PageHeadersExamplesObjectHome.default}
+  {getDisplayElementById(PageHeadersExamplesObjectHome.default)}
 </CodeView>
 
 ## About Page header
@@ -23,13 +23,13 @@ The Page Header uses the `.slds-page-header` class as a base and is comprised of
 ## Base
 
 <CodeView>
-  {PageHeadersExamplesBase.default}
+  {getDisplayElementById(PageHeadersExamplesBase.default)}
 </CodeView>
 
 ## Object Home
 
 <CodeView>
-  {PageHeadersExamplesObjectHome.default}
+  {getDisplayElementById(PageHeadersExamplesObjectHome.default)}
 </CodeView>
 
 The title for the Object Home page header is a filtering component. The `.slds-text-focus` class is placed on the media object that contains the title and down icon to simulate a hover and focus state of a link.
@@ -59,7 +59,7 @@ This component is created entirely of existing components like buttons, button g
 ## Record Home
 
 <CodeView>
-  {PageHeadersExamplesRecordHome.default}
+  {getDisplayElementById(PageHeadersExamplesRecordHome.default)}
 </CodeView>
 
 Page header record home contains up to four compact layout fields. They're contained in the `.slds-page-header__detail-row` div. That div contains the top and bottom spacing needed for this version of the page header.
@@ -84,7 +84,7 @@ Display addresses in two lines. Street address on first line, City, State and Po
 ## Record Home Vertical
 
 <CodeView>
-  {PageHeadersExamplesRecordHomeVertical.default}
+  {getDisplayElementById(PageHeadersExamplesRecordHomeVertical.default)}
 </CodeView>
 
 Vertical page header record home contains up to seven compact layout fields. They're contained in the `.slds-page-header__detail-row` div.
@@ -93,7 +93,7 @@ The heading does not truncate. This is typically used in more compact layouts wh
 ## Related List
 
 <CodeView>
-  {PageHeadersExamplesRelatedList.default}
+  {getDisplayElementById(PageHeadersExamplesRelatedList.default)}
 </CodeView>
 
 The Related List page header is similar to the Object Home page header. It includes a breadcrumb component at the top and the title is truncated.

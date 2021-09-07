@@ -4,6 +4,13 @@
 
 <!-- ## [Unreleased] -->
 
+## 2.16.0
+
+### Changed
+
+- Updated checkbox toggle examples to "Off/On" and updated header text in alignment with text standards
+- Switched the variant of the progress bar used in setup assistant from success to base.
+
 ## 2.11.0
 
 ### Changed

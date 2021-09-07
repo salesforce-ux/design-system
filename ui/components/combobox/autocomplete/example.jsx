@@ -11,36 +11,46 @@ import { StandardIcon } from '../../icons/standard/example';
 import _ from '../../../shared/helpers';
 import * as Snapshot from '../snapshots.data';
 
-export default (
-  <Combobox
-    id={_.uniqueId('combobox-id-')}
-    aria-controls="listbox-id-9"
-    autocomplete
-    inputIconPosition="right"
-    rightInputIcon={
-      <UtilityIcon
-        symbol="search"
-        className="slds-icon slds-icon_x-small slds-icon-text-default"
-        containerClassName="slds-input__icon slds-input__icon_right"
-        assistiveText={false}
-        title={false}
+const STORY_SINK_CONTEXT = 'Autocomplete';
+
+export default [
+  {
+    context: STORY_SINK_CONTEXT,
+    id: `${STORY_SINK_CONTEXT.toLowerCase()}-default`,
+    label: `${STORY_SINK_CONTEXT} default`,
+    element: (
+      <Combobox
+        id={_.uniqueId('combobox-id-')}
+        aria-controls="listbox-id-9"
+        autocomplete
+        inputIconPosition="right"
+        rightInputIcon={
+          <UtilityIcon
+            symbol="search"
+            className="slds-icon slds-icon_x-small slds-icon-text-default"
+            containerClassName="slds-input__icon slds-input__icon_right"
+            assistiveText={false}
+            title={false}
+          />
+        }
+        results={
+          <Listbox
+            id="listbox-id-9"
+            snapshot={Snapshot.PlainOptions}
+            type="plain"
+            count={3}
+          />
+        }
+        resultsType="listbox"
+        hasInteractions
       />
-    }
-    results={
-      <Listbox
-        id="listbox-id-9"
-        snapshot={Snapshot.PlainOptions}
-        type="plain"
-        count={3}
-      />
-    }
-    resultsType="listbox"
-    hasInteractions
-  />
-);
+    )
+  }
+];
 
 export let states = [
   {
+    context: STORY_SINK_CONTEXT,
     id: 'focused-open',
     label: 'Focused - Open',
     element: (
@@ -73,6 +83,7 @@ export let states = [
     )
   },
   {
+    context: STORY_SINK_CONTEXT,
     id: 'lookup-focused-open',
     label: 'Lookup - Focused - Open',
     element: (
@@ -105,6 +116,7 @@ export let states = [
     )
   },
   {
+    context: STORY_SINK_CONTEXT,
     id: 'typeahead',
     label: 'Typeahead',
     element: (
@@ -139,6 +151,7 @@ export let states = [
     )
   },
   {
+    context: STORY_SINK_CONTEXT,
     id: 'lookup-typeahead',
     label: 'Lookup - Typeahead',
     element: (
@@ -174,6 +187,7 @@ export let states = [
     )
   },
   {
+    context: STORY_SINK_CONTEXT,
     id: 'highlighting-an-option',
     label: 'Highlighting an option',
     element: (
@@ -207,6 +221,7 @@ export let states = [
     )
   },
   {
+    context: STORY_SINK_CONTEXT,
     id: 'lookup-highlighting-an-option',
     label: 'Lookup - Highlighting an option',
     element: (
@@ -240,6 +255,7 @@ export let states = [
     )
   },
   {
+    context: STORY_SINK_CONTEXT,
     id: 'selected-an-option',
     label: 'Selected an option',
     element: (
@@ -267,11 +283,12 @@ export let states = [
         resultsType="listbox"
         value="GenePoint"
         hasSelection
-        readonly
+        selectOnly
       />
     )
   },
   {
+    context: STORY_SINK_CONTEXT,
     id: 'lookup-selected-an-option',
     label: 'Lookup - Selected an option',
     element: (
@@ -307,11 +324,12 @@ export let states = [
         resultsType="listbox"
         hasSelection
         value="Salesforce.com, Inc."
-        readonly
+        selectOnly
       />
     )
   },
   {
+    context: STORY_SINK_CONTEXT,
     id: 'selected-multiple-options',
     label: 'Selected multiple options',
     element: (
@@ -349,6 +367,7 @@ export let states = [
     )
   },
   {
+    context: STORY_SINK_CONTEXT,
     id: 'lookup-multiple-options',
     label: 'Lookup - Selected multiple options',
     element: (
@@ -386,6 +405,7 @@ export let states = [
 
 export let examples = [
   {
+    context: STORY_SINK_CONTEXT,
     id: 'lookup',
     label: 'Lookup',
     element: (

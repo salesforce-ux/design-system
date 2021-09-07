@@ -69,6 +69,8 @@ const results = [
   }
 ];
 
+export const demoStyles = `display: flex; width: 20rem; height: 37.5rem;`;
+
 /// ////////////////////////////////////////
 // Partial(s)
 /// ////////////////////////////////////////
@@ -208,7 +210,8 @@ let Row = props => (
   >
     <a
       href="#"
-      aria-selected={!!props.selected}
+      aria-current={props.current && 'page'}
+      aria-selected={props.selected && !!props.selected} // Only for deprecation code coverage, use aria-current instead
       role="option"
       className="slds-split-view__list-item-action slds-grow slds-has-flexi-truncate"
       tabIndex={props.tabIndex}
@@ -256,120 +259,132 @@ let Row = props => (
 // Export
 /// ////////////////////////////////////////
 
-export default (
-  <div
-    className="demo-only"
-    style={{ display: 'flex', width: '20rem', height: '37.5rem' }}
-  >
-    <SplitView>
-      {results.slice(0, 5).map((result, i) => (
-        <Row
-          key={i}
-          colOne={result.colOne}
-          colTwo={result.colTwo}
-          colThree={result.colThree}
-          colFour={result.colFour}
-          tabIndex={i === 0 ? 0 : -1}
-        />
-      ))}
-    </SplitView>
-  </div>
-);
+export default [
+  {
+    id: 'default',
+    label: 'Base - Default',
+    demoStyles: demoStyles,
+    storybookStyles: true,
+    element: (
+      <SplitView>
+        {results.slice(0, 5).map((result, i) => (
+          <Row
+            key={i}
+            colOne={result.colOne}
+            colTwo={result.colTwo}
+            colThree={result.colThree}
+            colFour={result.colFour}
+            tabIndex={i === 0 ? 0 : -1}
+          />
+        ))}
+      </SplitView>
+    )
+  }
+];
 
 export let states = [
   {
     id: 'selected-item',
     label: 'Selected Item',
+    demoStyles: demoStyles,
+    storybookStyles: true,
     element: (
-      <div
-        className="demo-only"
-        style={{ display: 'flex', width: '20rem', height: '37.5rem' }}
-      >
-        <SplitView>
-          {results.slice(0, 5).map((result, i) => (
-            <Row
-              key={i}
-              selected={result.selected}
-              colOne={result.colOne}
-              colTwo={result.colTwo}
-              colThree={result.colThree}
-              colFour={result.colFour}
-              tabIndex={i === 0 ? 0 : -1}
-            />
-          ))}
-        </SplitView>
-      </div>
+      <SplitView>
+        {results.slice(0, 5).map((result, i) => (
+          <Row
+            key={i}
+            current={result.selected}
+            colOne={result.colOne}
+            colTwo={result.colTwo}
+            colThree={result.colThree}
+            colFour={result.colFour}
+            tabIndex={i === 0 ? 0 : -1}
+          />
+        ))}
+      </SplitView>
+    )
+  },
+  {
+    id: 'selected-item-deprecated',
+    label: 'Deprecated - Selected Item',
+    demoStyles: demoStyles,
+    storybookStyles: true,
+    element: (
+      <SplitView>
+        {results.slice(0, 5).map((result, i) => (
+          <Row
+            key={i}
+            selected={result.selected}
+            colOne={result.colOne}
+            colTwo={result.colTwo}
+            colThree={result.colThree}
+            colFour={result.colFour}
+            tabIndex={i === 0 ? 0 : -1}
+          />
+        ))}
+      </SplitView>
     )
   },
   {
     id: 'overflow',
     label: 'Overflow',
+    demoStyles: demoStyles,
+    storybookStyles: true,
     element: (
-      <div
-        className="demo-only"
-        style={{ display: 'flex', width: '20rem', height: '37.5rem' }}
-      >
-        <SplitView>
-          {results.map((result, i) => (
-            <Row
-              key={i}
-              colOne={result.colOne}
-              colTwo={result.colTwo}
-              colThree={result.colThree}
-              colFour={result.colFour}
-              tabIndex={i === 0 ? 0 : -1}
-            />
-          ))}
-        </SplitView>
-      </div>
+      <SplitView>
+        {results.map((result, i) => (
+          <Row
+            key={i}
+            colOne={result.colOne}
+            colTwo={result.colTwo}
+            colThree={result.colThree}
+            colFour={result.colFour}
+            tabIndex={i === 0 ? 0 : -1}
+          />
+        ))}
+      </SplitView>
     )
   },
   {
     id: 'unread',
     label: 'Unread Items',
+    demoStyles: demoStyles,
+    storybookStyles: true,
     element: (
-      <div
-        className="demo-only"
-        style={{ display: 'flex', width: '20rem', height: '37.5rem' }}
-      >
-        <SplitView>
-          {results.map((result, i) => (
-            <Row
-              key={i}
-              unread={result.unread}
-              colOne={result.colOne}
-              colTwo={result.colTwo}
-              colThree={result.colThree}
-              colFour={result.colFour}
-              tabIndex={i === 0 ? 0 : -1}
-            />
-          ))}
-        </SplitView>
-      </div>
+      <SplitView>
+        {results.map((result, i) => (
+          <Row
+            key={i}
+            unread={result.unread}
+            colOne={result.colOne}
+            colTwo={result.colTwo}
+            colThree={result.colThree}
+            colFour={result.colFour}
+            tabIndex={i === 0 ? 0 : -1}
+          />
+        ))}
+      </SplitView>
     )
   },
   {
     id: 'panel-collapsed',
     label: 'Collapsed Panel',
+    demoStyles: demoStyles,
+    storybookStyles: true,
     element: (
-      <div
-        className="demo-only"
-        style={{ display: 'flex', width: '20rem', height: '37.5rem' }}
-      >
-        <SplitView hidden>
-          {results.map((result, i) => (
-            <Row
-              key={i}
-              unread={result.unread}
-              colOne={result.colOne}
-              colTwo={result.colTwo}
-              colThree={result.colThree}
-              colFour={result.colFour}
-              tabIndex={i === 0 ? 0 : -1}
-            />
-          ))}
-        </SplitView>
-      </div>
+      <SplitView hidden>
+        {results.map((result, i) => (
+          <Row
+            key={i}
+            unread={result.unread}
+            colOne={result.colOne}
+            colTwo={result.colTwo}
+            colThree={result.colThree}
+            colFour={result.colFour}
+            tabIndex={i === 0 ? 0 : -1}
+          />
+        ))}
+      </SplitView>
     )
   }
 ];

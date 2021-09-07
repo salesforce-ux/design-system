@@ -18,6 +18,7 @@ exports[`Expression Base renders the default expression 1`] = `
       <label
         className="slds-form-element__label"
         htmlFor="combobox-id-1"
+        id="combobox-label-id-1"
       >
         Take Action When
       </label>
@@ -28,28 +29,30 @@ exports[`Expression Base renders the default expression 1`] = `
           className="slds-combobox_container"
         >
           <div
-            aria-expanded="false"
-            aria-haspopup="listbox"
             className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click"
-            role="combobox"
           >
             <div
               className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
               role="none"
             >
-              <input
-                aria-autocomplete={null}
+              <button
                 aria-controls="listbox-id-1"
-                autocomplete="off"
-                className="slds-input slds-combobox__input"
-                id="combobox-id-1"
+                aria-expanded="false"
+                aria-haspopup="listbox"
+                aria-labelledby="combobox-label-id-1 combobox-id-1-selected-value"
+                className="slds-input_faux slds-combobox__input"
+                id="combobox-id-1-selected-value"
                 onBlur={[Function]}
                 onFocus={[Function]}
-                placeholder="Select…"
-                readOnly={true}
-                role="textbox"
-                type="text"
-              />
+                type="button"
+              >
+                <span
+                  className="slds-truncate"
+                  id="combobox-value-id-1"
+                >
+                  Select…
+                </span>
+              </button>
               <span
                 className="slds-icon_container slds-icon-utility-down slds-input__icon slds-input__icon_right"
                 title={null}
@@ -242,6 +245,7 @@ exports[`Expression Base renders the default expression 1`] = `
               <label
                 className="slds-form-element__label"
                 htmlFor="combobox-id-2"
+                id="combobox-label-id-2"
               >
                 Resource
               </label>
@@ -252,28 +256,30 @@ exports[`Expression Base renders the default expression 1`] = `
                   className="slds-combobox_container"
                 >
                   <div
-                    aria-expanded="false"
-                    aria-haspopup="listbox"
                     className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click"
-                    role="combobox"
                   >
                     <div
                       className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
                       role="none"
                     >
-                      <input
-                        aria-autocomplete={null}
+                      <button
                         aria-controls="listbox-id-2"
-                        autocomplete="off"
-                        className="slds-input slds-combobox__input"
-                        id="combobox-id-2"
+                        aria-expanded="false"
+                        aria-haspopup="listbox"
+                        aria-labelledby="combobox-label-id-2 combobox-id-2-selected-value"
+                        className="slds-input_faux slds-combobox__input"
+                        id="combobox-id-2-selected-value"
                         onBlur={[Function]}
                         onFocus={[Function]}
-                        placeholder="Select…"
-                        readOnly={true}
-                        role="textbox"
-                        type="text"
-                      />
+                        type="button"
+                      >
+                        <span
+                          className="slds-truncate"
+                          id="combobox-value-id-2"
+                        >
+                          Select…
+                        </span>
+                      </button>
                       <span
                         className="slds-icon_container slds-icon-utility-down slds-input__icon slds-input__icon_right"
                         title={null}
@@ -422,6 +428,7 @@ exports[`Expression Base renders the default expression 1`] = `
               <label
                 className="slds-form-element__label"
                 htmlFor="combobox-id-3"
+                id="combobox-label-id-3"
               >
                 Operator
               </label>
@@ -432,28 +439,30 @@ exports[`Expression Base renders the default expression 1`] = `
                   className="slds-combobox_container"
                 >
                   <div
-                    aria-expanded="false"
-                    aria-haspopup="listbox"
                     className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click"
-                    role="combobox"
                   >
                     <div
                       className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
                       role="none"
                     >
-                      <input
-                        aria-autocomplete={null}
+                      <button
                         aria-controls="listbox-id-3"
-                        autocomplete="off"
-                        className="slds-input slds-combobox__input"
-                        id="combobox-id-3"
+                        aria-expanded="false"
+                        aria-haspopup="listbox"
+                        aria-labelledby="combobox-label-id-3 combobox-id-3-selected-value"
+                        className="slds-input_faux slds-combobox__input"
+                        id="combobox-id-3-selected-value"
                         onBlur={[Function]}
                         onFocus={[Function]}
-                        placeholder="Select…"
-                        readOnly={true}
-                        role="textbox"
-                        type="text"
-                      />
+                        type="button"
+                      >
+                        <span
+                          className="slds-truncate"
+                          id="combobox-value-id-3"
+                        >
+                          Select…
+                        </span>
+                      </button>
                       <span
                         className="slds-icon_container slds-icon-utility-down slds-input__icon slds-input__icon_right"
                         title={null}
@@ -709,6 +718,7 @@ exports[`Expression Base renders the disabled initial state 1`] = `
       <label
         className="slds-form-element__label"
         htmlFor="combobox-id-4"
+        id="combobox-label-id-4"
       >
         Take Action When
       </label>
@@ -719,28 +729,30 @@ exports[`Expression Base renders the disabled initial state 1`] = `
           className="slds-combobox_container"
         >
           <div
-            aria-expanded="false"
-            aria-haspopup="listbox"
             className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click"
-            role="combobox"
           >
             <div
               className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
               role="none"
             >
-              <input
-                aria-autocomplete={null}
+              <button
                 aria-controls="listbox-id-4"
-                autocomplete="off"
-                className="slds-input slds-combobox__input"
-                id="combobox-id-4"
+                aria-expanded="false"
+                aria-haspopup="listbox"
+                aria-labelledby="combobox-label-id-4 combobox-id-4-selected-value"
+                className="slds-input_faux slds-combobox__input"
+                id="combobox-id-4-selected-value"
                 onBlur={[Function]}
                 onFocus={[Function]}
-                placeholder="Select…"
-                readOnly={true}
-                role="textbox"
-                type="text"
-              />
+                type="button"
+              >
+                <span
+                  className="slds-truncate"
+                  id="combobox-value-id-4"
+                >
+                  Select…
+                </span>
+              </button>
               <span
                 className="slds-icon_container slds-icon-utility-down slds-input__icon slds-input__icon_right"
                 title={null}
@@ -933,6 +945,7 @@ exports[`Expression Base renders the disabled initial state 1`] = `
               <label
                 className="slds-form-element__label"
                 htmlFor="combobox-id-5"
+                id="combobox-label-id-5"
               >
                 Resource
               </label>
@@ -943,28 +956,30 @@ exports[`Expression Base renders the disabled initial state 1`] = `
                   className="slds-combobox_container"
                 >
                   <div
-                    aria-expanded="false"
-                    aria-haspopup="listbox"
                     className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click"
-                    role="combobox"
                   >
                     <div
                       className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
                       role="none"
                     >
-                      <input
-                        aria-autocomplete={null}
+                      <button
                         aria-controls="listbox-id-5"
-                        autocomplete="off"
-                        className="slds-input slds-combobox__input"
-                        id="combobox-id-5"
+                        aria-expanded="false"
+                        aria-haspopup="listbox"
+                        aria-labelledby="combobox-label-id-5 combobox-id-5-selected-value"
+                        className="slds-input_faux slds-combobox__input"
+                        id="combobox-id-5-selected-value"
                         onBlur={[Function]}
                         onFocus={[Function]}
-                        placeholder="Select…"
-                        readOnly={true}
-                        role="textbox"
-                        type="text"
-                      />
+                        type="button"
+                      >
+                        <span
+                          className="slds-truncate"
+                          id="combobox-value-id-5"
+                        >
+                          Select…
+                        </span>
+                      </button>
                       <span
                         className="slds-icon_container slds-icon-utility-down slds-input__icon slds-input__icon_right"
                         title={null}
@@ -1113,6 +1128,7 @@ exports[`Expression Base renders the disabled initial state 1`] = `
               <label
                 className="slds-form-element__label"
                 htmlFor="combobox-id-6"
+                id="combobox-label-id-6"
               >
                 Operator
               </label>
@@ -1123,29 +1139,31 @@ exports[`Expression Base renders the disabled initial state 1`] = `
                   className="slds-combobox_container"
                 >
                   <div
-                    aria-expanded="false"
-                    aria-haspopup="listbox"
                     className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click"
-                    role="combobox"
                   >
                     <div
                       className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
                       role="none"
                     >
-                      <input
-                        aria-autocomplete={null}
+                      <button
                         aria-controls="listbox-id-6"
-                        autocomplete="off"
-                        className="slds-input slds-combobox__input"
+                        aria-expanded="false"
+                        aria-haspopup="listbox"
+                        aria-labelledby="combobox-label-id-6 combobox-id-6-selected-value"
+                        className="slds-input_faux slds-combobox__input slds-is-disabled"
                         disabled={true}
-                        id="combobox-id-6"
+                        id="combobox-id-6-selected-value"
                         onBlur={[Function]}
                         onFocus={[Function]}
-                        placeholder="Select…"
-                        readOnly={true}
-                        role="textbox"
-                        type="text"
-                      />
+                        type="button"
+                      >
+                        <span
+                          className="slds-truncate"
+                          id="combobox-value-id-6"
+                        >
+                          Select…
+                        </span>
+                      </button>
                       <span
                         className="slds-icon_container slds-icon-utility-down slds-input__icon slds-input__icon_right"
                         title={null}
@@ -1403,6 +1421,7 @@ exports[`Expression Base renders with a custom logic value 1`] = `
       <label
         className="slds-form-element__label"
         htmlFor="combobox-id-31"
+        id="combobox-label-id-31"
       >
         Take Action When
       </label>
@@ -1413,28 +1432,30 @@ exports[`Expression Base renders with a custom logic value 1`] = `
           className="slds-combobox_container"
         >
           <div
-            aria-expanded="false"
-            aria-haspopup="listbox"
             className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click"
-            role="combobox"
           >
             <div
               className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
               role="none"
             >
-              <input
-                aria-autocomplete={null}
+              <button
                 aria-controls="listbox-id-31"
-                autocomplete="off"
-                className="slds-input slds-combobox__input"
-                id="combobox-id-31"
+                aria-expanded="false"
+                aria-haspopup="listbox"
+                aria-labelledby="combobox-label-id-31 combobox-id-31-selected-value"
+                className="slds-input_faux slds-combobox__input"
+                id="combobox-id-31-selected-value"
                 onBlur={[Function]}
                 onFocus={[Function]}
-                placeholder="Select…"
-                readOnly={true}
-                role="textbox"
-                type="text"
-              />
+                type="button"
+              >
+                <span
+                  className="slds-truncate"
+                  id="combobox-value-id-31"
+                >
+                  Select…
+                </span>
+              </button>
               <span
                 className="slds-icon_container slds-icon-utility-down slds-input__icon slds-input__icon_right"
                 title={null}
@@ -1627,6 +1648,7 @@ exports[`Expression Base renders with a custom logic value 1`] = `
               <label
                 className="slds-form-element__label"
                 htmlFor="combobox-id-32"
+                id="combobox-label-id-32"
               >
                 Resource
               </label>
@@ -1637,28 +1659,30 @@ exports[`Expression Base renders with a custom logic value 1`] = `
                   className="slds-combobox_container"
                 >
                   <div
-                    aria-expanded="false"
-                    aria-haspopup="listbox"
                     className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click"
-                    role="combobox"
                   >
                     <div
                       className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
                       role="none"
                     >
-                      <input
-                        aria-autocomplete={null}
+                      <button
                         aria-controls="listbox-id-32"
-                        autocomplete="off"
-                        className="slds-input slds-combobox__input"
-                        id="combobox-id-32"
+                        aria-expanded="false"
+                        aria-haspopup="listbox"
+                        aria-labelledby="combobox-label-id-32 combobox-id-32-selected-value"
+                        className="slds-input_faux slds-combobox__input"
+                        id="combobox-id-32-selected-value"
                         onBlur={[Function]}
                         onFocus={[Function]}
-                        placeholder="Select…"
-                        readOnly={true}
-                        role="textbox"
-                        type="text"
-                      />
+                        type="button"
+                      >
+                        <span
+                          className="slds-truncate"
+                          id="combobox-value-id-32"
+                        >
+                          Select…
+                        </span>
+                      </button>
                       <span
                         className="slds-icon_container slds-icon-utility-down slds-input__icon slds-input__icon_right"
                         title={null}
@@ -1807,6 +1831,7 @@ exports[`Expression Base renders with a custom logic value 1`] = `
               <label
                 className="slds-form-element__label"
                 htmlFor="combobox-id-33"
+                id="combobox-label-id-33"
               >
                 Operator
               </label>
@@ -1817,28 +1842,30 @@ exports[`Expression Base renders with a custom logic value 1`] = `
                   className="slds-combobox_container"
                 >
                   <div
-                    aria-expanded="false"
-                    aria-haspopup="listbox"
                     className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click"
-                    role="combobox"
                   >
                     <div
                       className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
                       role="none"
                     >
-                      <input
-                        aria-autocomplete={null}
+                      <button
                         aria-controls="listbox-id-33"
-                        autocomplete="off"
-                        className="slds-input slds-combobox__input"
-                        id="combobox-id-33"
+                        aria-expanded="false"
+                        aria-haspopup="listbox"
+                        aria-labelledby="combobox-label-id-33 combobox-id-33-selected-value"
+                        className="slds-input_faux slds-combobox__input"
+                        id="combobox-id-33-selected-value"
                         onBlur={[Function]}
                         onFocus={[Function]}
-                        placeholder="Select…"
-                        readOnly={true}
-                        role="textbox"
-                        type="text"
-                      />
+                        type="button"
+                      >
+                        <span
+                          className="slds-truncate"
+                          id="combobox-value-id-33"
+                        >
+                          Select…
+                        </span>
+                      </button>
                       <span
                         className="slds-icon_container slds-icon-utility-down slds-input__icon slds-input__icon_right"
                         title={null}
@@ -2094,6 +2121,7 @@ exports[`Expression Base renders with a resource selected 1`] = `
       <label
         className="slds-form-element__label"
         htmlFor="combobox-id-28"
+        id="combobox-label-id-28"
       >
         Take Action When
       </label>
@@ -2104,28 +2132,30 @@ exports[`Expression Base renders with a resource selected 1`] = `
           className="slds-combobox_container"
         >
           <div
-            aria-expanded="false"
-            aria-haspopup="listbox"
             className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click"
-            role="combobox"
           >
             <div
               className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
               role="none"
             >
-              <input
-                aria-autocomplete={null}
+              <button
                 aria-controls="listbox-id-28"
-                autocomplete="off"
-                className="slds-input slds-combobox__input"
-                id="combobox-id-28"
+                aria-expanded="false"
+                aria-haspopup="listbox"
+                aria-labelledby="combobox-label-id-28 combobox-id-28-selected-value"
+                className="slds-input_faux slds-combobox__input"
+                id="combobox-id-28-selected-value"
                 onBlur={[Function]}
                 onFocus={[Function]}
-                placeholder="Select…"
-                readOnly={true}
-                role="textbox"
-                type="text"
-              />
+                type="button"
+              >
+                <span
+                  className="slds-truncate"
+                  id="combobox-value-id-28"
+                >
+                  Select…
+                </span>
+              </button>
               <span
                 className="slds-icon_container slds-icon-utility-down slds-input__icon slds-input__icon_right"
                 title={null}
@@ -2318,6 +2348,7 @@ exports[`Expression Base renders with a resource selected 1`] = `
               <label
                 className="slds-form-element__label"
                 htmlFor="combobox-id-29"
+                id="combobox-label-id-29"
               >
                 Resource
               </label>
@@ -2328,29 +2359,30 @@ exports[`Expression Base renders with a resource selected 1`] = `
                   className="slds-combobox_container"
                 >
                   <div
-                    aria-expanded="false"
-                    aria-haspopup="listbox"
                     className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click"
-                    role="combobox"
                   >
                     <div
                       className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
                       role="none"
                     >
-                      <input
-                        aria-autocomplete={null}
+                      <button
                         aria-controls="listbox-id-29"
-                        autocomplete="off"
-                        className="slds-input slds-combobox__input slds-combobox__input-value"
-                        defaultValue="Resource 1"
-                        id="combobox-id-29"
+                        aria-expanded="false"
+                        aria-haspopup="listbox"
+                        aria-labelledby="combobox-label-id-29 combobox-id-29-selected-value"
+                        className="slds-input_faux slds-combobox__input slds-combobox__input-value"
+                        id="combobox-id-29-selected-value"
                         onBlur={[Function]}
                         onFocus={[Function]}
-                        placeholder="Select…"
-                        readOnly={true}
-                        role="textbox"
-                        type="text"
-                      />
+                        type="button"
+                      >
+                        <span
+                          className="slds-truncate"
+                          id="combobox-value-id-29"
+                        >
+                          Resource 1
+                        </span>
+                      </button>
                       <span
                         className="slds-icon_container slds-icon-utility-down slds-input__icon slds-input__icon_right"
                         title={null}
@@ -2513,6 +2545,7 @@ exports[`Expression Base renders with a resource selected 1`] = `
               <label
                 className="slds-form-element__label"
                 htmlFor="combobox-id-30"
+                id="combobox-label-id-30"
               >
                 Operator
               </label>
@@ -2523,28 +2556,30 @@ exports[`Expression Base renders with a resource selected 1`] = `
                   className="slds-combobox_container"
                 >
                   <div
-                    aria-expanded="false"
-                    aria-haspopup="listbox"
                     className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click"
-                    role="combobox"
                   >
                     <div
                       className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
                       role="none"
                     >
-                      <input
-                        aria-autocomplete={null}
+                      <button
                         aria-controls="listbox-id-30"
-                        autocomplete="off"
-                        className="slds-input slds-combobox__input"
-                        id="combobox-id-30"
+                        aria-expanded="false"
+                        aria-haspopup="listbox"
+                        aria-labelledby="combobox-label-id-30 combobox-id-30-selected-value"
+                        className="slds-input_faux slds-combobox__input"
+                        id="combobox-id-30-selected-value"
                         onBlur={[Function]}
                         onFocus={[Function]}
-                        placeholder="Select…"
-                        readOnly={true}
-                        role="textbox"
-                        type="text"
-                      />
+                        type="button"
+                      >
+                        <span
+                          className="slds-truncate"
+                          id="combobox-value-id-30"
+                        >
+                          Select…
+                        </span>
+                      </button>
                       <span
                         className="slds-icon_container slds-icon-utility-down slds-input__icon slds-input__icon_right"
                         title={null}
@@ -2800,6 +2835,7 @@ exports[`Expression Base renders with all option selected 1`] = `
       <label
         className="slds-form-element__label"
         htmlFor="combobox-id-16"
+        id="combobox-label-id-16"
       >
         Take Action When
       </label>
@@ -2810,29 +2846,30 @@ exports[`Expression Base renders with all option selected 1`] = `
           className="slds-combobox_container"
         >
           <div
-            aria-expanded="false"
-            aria-haspopup="listbox"
             className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click"
-            role="combobox"
           >
             <div
               className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
               role="none"
             >
-              <input
-                aria-autocomplete={null}
+              <button
                 aria-controls="listbox-id-16"
-                autocomplete="off"
-                className="slds-input slds-combobox__input slds-combobox__input-value"
-                defaultValue="All Conditions Are Met"
-                id="combobox-id-16"
+                aria-expanded="false"
+                aria-haspopup="listbox"
+                aria-labelledby="combobox-label-id-16 combobox-id-16-selected-value"
+                className="slds-input_faux slds-combobox__input slds-combobox__input-value"
+                id="combobox-id-16-selected-value"
                 onBlur={[Function]}
                 onFocus={[Function]}
-                placeholder="Select…"
-                readOnly={true}
-                role="textbox"
-                type="text"
-              />
+                type="button"
+              >
+                <span
+                  className="slds-truncate"
+                  id="combobox-value-id-16"
+                >
+                  All Conditions Are Met
+                </span>
+              </button>
               <span
                 className="slds-icon_container slds-icon-utility-down slds-input__icon slds-input__icon_right"
                 title={null}
@@ -3039,6 +3076,7 @@ exports[`Expression Base renders with all option selected 1`] = `
               <label
                 className="slds-form-element__label"
                 htmlFor="combobox-id-17"
+                id="combobox-label-id-17"
               >
                 Resource
               </label>
@@ -3049,28 +3087,30 @@ exports[`Expression Base renders with all option selected 1`] = `
                   className="slds-combobox_container"
                 >
                   <div
-                    aria-expanded="false"
-                    aria-haspopup="listbox"
                     className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click"
-                    role="combobox"
                   >
                     <div
                       className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
                       role="none"
                     >
-                      <input
-                        aria-autocomplete={null}
+                      <button
                         aria-controls="listbox-id-17"
-                        autocomplete="off"
-                        className="slds-input slds-combobox__input"
-                        id="combobox-id-17"
+                        aria-expanded="false"
+                        aria-haspopup="listbox"
+                        aria-labelledby="combobox-label-id-17 combobox-id-17-selected-value"
+                        className="slds-input_faux slds-combobox__input"
+                        id="combobox-id-17-selected-value"
                         onBlur={[Function]}
                         onFocus={[Function]}
-                        placeholder="Select…"
-                        readOnly={true}
-                        role="textbox"
-                        type="text"
-                      />
+                        type="button"
+                      >
+                        <span
+                          className="slds-truncate"
+                          id="combobox-value-id-17"
+                        >
+                          Select…
+                        </span>
+                      </button>
                       <span
                         className="slds-icon_container slds-icon-utility-down slds-input__icon slds-input__icon_right"
                         title={null}
@@ -3219,6 +3259,7 @@ exports[`Expression Base renders with all option selected 1`] = `
               <label
                 className="slds-form-element__label"
                 htmlFor="combobox-id-18"
+                id="combobox-label-id-18"
               >
                 Operator
               </label>
@@ -3229,28 +3270,30 @@ exports[`Expression Base renders with all option selected 1`] = `
                   className="slds-combobox_container"
                 >
                   <div
-                    aria-expanded="false"
-                    aria-haspopup="listbox"
                     className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click"
-                    role="combobox"
                   >
                     <div
                       className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
                       role="none"
                     >
-                      <input
-                        aria-autocomplete={null}
+                      <button
                         aria-controls="listbox-id-18"
-                        autocomplete="off"
-                        className="slds-input slds-combobox__input"
-                        id="combobox-id-18"
+                        aria-expanded="false"
+                        aria-haspopup="listbox"
+                        aria-labelledby="combobox-label-id-18 combobox-id-18-selected-value"
+                        className="slds-input_faux slds-combobox__input"
+                        id="combobox-id-18-selected-value"
                         onBlur={[Function]}
                         onFocus={[Function]}
-                        placeholder="Select…"
-                        readOnly={true}
-                        role="textbox"
-                        type="text"
-                      />
+                        type="button"
+                      >
+                        <span
+                          className="slds-truncate"
+                          id="combobox-value-id-18"
+                        >
+                          Select…
+                        </span>
+                      </button>
                       <span
                         className="slds-icon_container slds-icon-utility-down slds-input__icon slds-input__icon_right"
                         title={null}
@@ -3506,6 +3549,7 @@ exports[`Expression Base renders with always option selected 1`] = `
       <label
         className="slds-form-element__label"
         htmlFor="combobox-id-22"
+        id="combobox-label-id-22"
       >
         Take Action When
       </label>
@@ -3516,29 +3560,30 @@ exports[`Expression Base renders with always option selected 1`] = `
           className="slds-combobox_container"
         >
           <div
-            aria-expanded="false"
-            aria-haspopup="listbox"
             className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click"
-            role="combobox"
           >
             <div
               className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
               role="none"
             >
-              <input
-                aria-autocomplete={null}
+              <button
                 aria-controls="listbox-id-22"
-                autocomplete="off"
-                className="slds-input slds-combobox__input slds-combobox__input-value"
-                defaultValue="Always (No Criteria)"
-                id="combobox-id-22"
+                aria-expanded="false"
+                aria-haspopup="listbox"
+                aria-labelledby="combobox-label-id-22 combobox-id-22-selected-value"
+                className="slds-input_faux slds-combobox__input slds-combobox__input-value"
+                id="combobox-id-22-selected-value"
                 onBlur={[Function]}
                 onFocus={[Function]}
-                placeholder="Select…"
-                readOnly={true}
-                role="textbox"
-                type="text"
-              />
+                type="button"
+              >
+                <span
+                  className="slds-truncate"
+                  id="combobox-value-id-22"
+                >
+                  Always (No Criteria)
+                </span>
+              </button>
               <span
                 className="slds-icon_container slds-icon-utility-down slds-input__icon slds-input__icon_right"
                 title={null}
@@ -3745,6 +3790,7 @@ exports[`Expression Base renders with always option selected 1`] = `
               <label
                 className="slds-form-element__label"
                 htmlFor="combobox-id-23"
+                id="combobox-label-id-23"
               >
                 Resource
               </label>
@@ -3755,28 +3801,30 @@ exports[`Expression Base renders with always option selected 1`] = `
                   className="slds-combobox_container"
                 >
                   <div
-                    aria-expanded="false"
-                    aria-haspopup="listbox"
                     className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click"
-                    role="combobox"
                   >
                     <div
                       className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
                       role="none"
                     >
-                      <input
-                        aria-autocomplete={null}
+                      <button
                         aria-controls="listbox-id-23"
-                        autocomplete="off"
-                        className="slds-input slds-combobox__input"
-                        id="combobox-id-23"
+                        aria-expanded="false"
+                        aria-haspopup="listbox"
+                        aria-labelledby="combobox-label-id-23 combobox-id-23-selected-value"
+                        className="slds-input_faux slds-combobox__input"
+                        id="combobox-id-23-selected-value"
                         onBlur={[Function]}
                         onFocus={[Function]}
-                        placeholder="Select…"
-                        readOnly={true}
-                        role="textbox"
-                        type="text"
-                      />
+                        type="button"
+                      >
+                        <span
+                          className="slds-truncate"
+                          id="combobox-value-id-23"
+                        >
+                          Select…
+                        </span>
+                      </button>
                       <span
                         className="slds-icon_container slds-icon-utility-down slds-input__icon slds-input__icon_right"
                         title={null}
@@ -3925,6 +3973,7 @@ exports[`Expression Base renders with always option selected 1`] = `
               <label
                 className="slds-form-element__label"
                 htmlFor="combobox-id-24"
+                id="combobox-label-id-24"
               >
                 Operator
               </label>
@@ -3935,28 +3984,30 @@ exports[`Expression Base renders with always option selected 1`] = `
                   className="slds-combobox_container"
                 >
                   <div
-                    aria-expanded="false"
-                    aria-haspopup="listbox"
                     className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click"
-                    role="combobox"
                   >
                     <div
                       className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
                       role="none"
                     >
-                      <input
-                        aria-autocomplete={null}
+                      <button
                         aria-controls="listbox-id-24"
-                        autocomplete="off"
-                        className="slds-input slds-combobox__input"
-                        id="combobox-id-24"
+                        aria-expanded="false"
+                        aria-haspopup="listbox"
+                        aria-labelledby="combobox-label-id-24 combobox-id-24-selected-value"
+                        className="slds-input_faux slds-combobox__input"
+                        id="combobox-id-24-selected-value"
                         onBlur={[Function]}
                         onFocus={[Function]}
-                        placeholder="Select…"
-                        readOnly={true}
-                        role="textbox"
-                        type="text"
-                      />
+                        type="button"
+                      >
+                        <span
+                          className="slds-truncate"
+                          id="combobox-value-id-24"
+                        >
+                          Select…
+                        </span>
+                      </button>
                       <span
                         className="slds-icon_container slds-icon-utility-down slds-input__icon slds-input__icon_right"
                         title={null}
@@ -4212,6 +4263,7 @@ exports[`Expression Base renders with any option selected 1`] = `
       <label
         className="slds-form-element__label"
         htmlFor="combobox-id-13"
+        id="combobox-label-id-13"
       >
         Take Action When
       </label>
@@ -4222,29 +4274,30 @@ exports[`Expression Base renders with any option selected 1`] = `
           className="slds-combobox_container"
         >
           <div
-            aria-expanded="false"
-            aria-haspopup="listbox"
             className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click"
-            role="combobox"
           >
             <div
               className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
               role="none"
             >
-              <input
-                aria-autocomplete={null}
+              <button
                 aria-controls="listbox-id-13"
-                autocomplete="off"
-                className="slds-input slds-combobox__input slds-combobox__input-value"
-                defaultValue="Any Condition Is Met"
-                id="combobox-id-13"
+                aria-expanded="false"
+                aria-haspopup="listbox"
+                aria-labelledby="combobox-label-id-13 combobox-id-13-selected-value"
+                className="slds-input_faux slds-combobox__input slds-combobox__input-value"
+                id="combobox-id-13-selected-value"
                 onBlur={[Function]}
                 onFocus={[Function]}
-                placeholder="Select…"
-                readOnly={true}
-                role="textbox"
-                type="text"
-              />
+                type="button"
+              >
+                <span
+                  className="slds-truncate"
+                  id="combobox-value-id-13"
+                >
+                  Any Condition Is Met
+                </span>
+              </button>
               <span
                 className="slds-icon_container slds-icon-utility-down slds-input__icon slds-input__icon_right"
                 title={null}
@@ -4451,6 +4504,7 @@ exports[`Expression Base renders with any option selected 1`] = `
               <label
                 className="slds-form-element__label"
                 htmlFor="combobox-id-14"
+                id="combobox-label-id-14"
               >
                 Resource
               </label>
@@ -4461,28 +4515,30 @@ exports[`Expression Base renders with any option selected 1`] = `
                   className="slds-combobox_container"
                 >
                   <div
-                    aria-expanded="false"
-                    aria-haspopup="listbox"
                     className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click"
-                    role="combobox"
                   >
                     <div
                       className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
                       role="none"
                     >
-                      <input
-                        aria-autocomplete={null}
+                      <button
                         aria-controls="listbox-id-14"
-                        autocomplete="off"
-                        className="slds-input slds-combobox__input"
-                        id="combobox-id-14"
+                        aria-expanded="false"
+                        aria-haspopup="listbox"
+                        aria-labelledby="combobox-label-id-14 combobox-id-14-selected-value"
+                        className="slds-input_faux slds-combobox__input"
+                        id="combobox-id-14-selected-value"
                         onBlur={[Function]}
                         onFocus={[Function]}
-                        placeholder="Select…"
-                        readOnly={true}
-                        role="textbox"
-                        type="text"
-                      />
+                        type="button"
+                      >
+                        <span
+                          className="slds-truncate"
+                          id="combobox-value-id-14"
+                        >
+                          Select…
+                        </span>
+                      </button>
                       <span
                         className="slds-icon_container slds-icon-utility-down slds-input__icon slds-input__icon_right"
                         title={null}
@@ -4631,6 +4687,7 @@ exports[`Expression Base renders with any option selected 1`] = `
               <label
                 className="slds-form-element__label"
                 htmlFor="combobox-id-15"
+                id="combobox-label-id-15"
               >
                 Operator
               </label>
@@ -4641,28 +4698,30 @@ exports[`Expression Base renders with any option selected 1`] = `
                   className="slds-combobox_container"
                 >
                   <div
-                    aria-expanded="false"
-                    aria-haspopup="listbox"
                     className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click"
-                    role="combobox"
                   >
                     <div
                       className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
                       role="none"
                     >
-                      <input
-                        aria-autocomplete={null}
+                      <button
                         aria-controls="listbox-id-15"
-                        autocomplete="off"
-                        className="slds-input slds-combobox__input"
-                        id="combobox-id-15"
+                        aria-expanded="false"
+                        aria-haspopup="listbox"
+                        aria-labelledby="combobox-label-id-15 combobox-id-15-selected-value"
+                        className="slds-input_faux slds-combobox__input"
+                        id="combobox-id-15-selected-value"
                         onBlur={[Function]}
                         onFocus={[Function]}
-                        placeholder="Select…"
-                        readOnly={true}
-                        role="textbox"
-                        type="text"
-                      />
+                        type="button"
+                      >
+                        <span
+                          className="slds-truncate"
+                          id="combobox-value-id-15"
+                        >
+                          Select…
+                        </span>
+                      </button>
                       <span
                         className="slds-icon_container slds-icon-utility-down slds-input__icon slds-input__icon_right"
                         title={null}
@@ -4918,6 +4977,7 @@ exports[`Expression Base renders with custom logic 1`] = `
       <label
         className="slds-form-element__label"
         htmlFor="combobox-id-7"
+        id="combobox-label-id-7"
       >
         Take Action When
       </label>
@@ -4928,28 +4988,30 @@ exports[`Expression Base renders with custom logic 1`] = `
           className="slds-combobox_container"
         >
           <div
-            aria-expanded="false"
-            aria-haspopup="listbox"
             className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click"
-            role="combobox"
           >
             <div
               className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
               role="none"
             >
-              <input
-                aria-autocomplete={null}
+              <button
                 aria-controls="listbox-id-7"
-                autocomplete="off"
-                className="slds-input slds-combobox__input"
-                id="combobox-id-7"
+                aria-expanded="false"
+                aria-haspopup="listbox"
+                aria-labelledby="combobox-label-id-7 combobox-id-7-selected-value"
+                className="slds-input_faux slds-combobox__input"
+                id="combobox-id-7-selected-value"
                 onBlur={[Function]}
                 onFocus={[Function]}
-                placeholder="Select…"
-                readOnly={true}
-                role="textbox"
-                type="text"
-              />
+                type="button"
+              >
+                <span
+                  className="slds-truncate"
+                  id="combobox-value-id-7"
+                >
+                  Select…
+                </span>
+              </button>
               <span
                 className="slds-icon_container slds-icon-utility-down slds-input__icon slds-input__icon_right"
                 title={null}
@@ -5165,6 +5227,7 @@ exports[`Expression Base renders with custom logic 1`] = `
               <label
                 className="slds-form-element__label"
                 htmlFor="combobox-id-8"
+                id="combobox-label-id-8"
               >
                 Resource
               </label>
@@ -5175,28 +5238,30 @@ exports[`Expression Base renders with custom logic 1`] = `
                   className="slds-combobox_container"
                 >
                   <div
-                    aria-expanded="false"
-                    aria-haspopup="listbox"
                     className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click"
-                    role="combobox"
                   >
                     <div
                       className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
                       role="none"
                     >
-                      <input
-                        aria-autocomplete={null}
+                      <button
                         aria-controls="listbox-id-8"
-                        autocomplete="off"
-                        className="slds-input slds-combobox__input"
-                        id="combobox-id-8"
+                        aria-expanded="false"
+                        aria-haspopup="listbox"
+                        aria-labelledby="combobox-label-id-8 combobox-id-8-selected-value"
+                        className="slds-input_faux slds-combobox__input"
+                        id="combobox-id-8-selected-value"
                         onBlur={[Function]}
                         onFocus={[Function]}
-                        placeholder="Select…"
-                        readOnly={true}
-                        role="textbox"
-                        type="text"
-                      />
+                        type="button"
+                      >
+                        <span
+                          className="slds-truncate"
+                          id="combobox-value-id-8"
+                        >
+                          Select…
+                        </span>
+                      </button>
                       <span
                         className="slds-icon_container slds-icon-utility-down slds-input__icon slds-input__icon_right"
                         title={null}
@@ -5345,6 +5410,7 @@ exports[`Expression Base renders with custom logic 1`] = `
               <label
                 className="slds-form-element__label"
                 htmlFor="combobox-id-9"
+                id="combobox-label-id-9"
               >
                 Operator
               </label>
@@ -5355,28 +5421,30 @@ exports[`Expression Base renders with custom logic 1`] = `
                   className="slds-combobox_container"
                 >
                   <div
-                    aria-expanded="false"
-                    aria-haspopup="listbox"
                     className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click"
-                    role="combobox"
                   >
                     <div
                       className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
                       role="none"
                     >
-                      <input
-                        aria-autocomplete={null}
+                      <button
                         aria-controls="listbox-id-9"
-                        autocomplete="off"
-                        className="slds-input slds-combobox__input"
-                        id="combobox-id-9"
+                        aria-expanded="false"
+                        aria-haspopup="listbox"
+                        aria-labelledby="combobox-label-id-9 combobox-id-9-selected-value"
+                        className="slds-input_faux slds-combobox__input"
+                        id="combobox-id-9-selected-value"
                         onBlur={[Function]}
                         onFocus={[Function]}
-                        placeholder="Select…"
-                        readOnly={true}
-                        role="textbox"
-                        type="text"
-                      />
+                        type="button"
+                      >
+                        <span
+                          className="slds-truncate"
+                          id="combobox-value-id-9"
+                        >
+                          Select…
+                        </span>
+                      </button>
                       <span
                         className="slds-icon_container slds-icon-utility-down slds-input__icon slds-input__icon_right"
                         title={null}
@@ -5632,6 +5700,7 @@ exports[`Expression Base renders with custom option selected 1`] = `
       <label
         className="slds-form-element__label"
         htmlFor="combobox-id-19"
+        id="combobox-label-id-19"
       >
         Take Action When
       </label>
@@ -5642,29 +5711,30 @@ exports[`Expression Base renders with custom option selected 1`] = `
           className="slds-combobox_container"
         >
           <div
-            aria-expanded="false"
-            aria-haspopup="listbox"
             className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click"
-            role="combobox"
           >
             <div
               className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
               role="none"
             >
-              <input
-                aria-autocomplete={null}
+              <button
                 aria-controls="listbox-id-19"
-                autocomplete="off"
-                className="slds-input slds-combobox__input slds-combobox__input-value"
-                defaultValue="Custom Logic Is Met"
-                id="combobox-id-19"
+                aria-expanded="false"
+                aria-haspopup="listbox"
+                aria-labelledby="combobox-label-id-19 combobox-id-19-selected-value"
+                className="slds-input_faux slds-combobox__input slds-combobox__input-value"
+                id="combobox-id-19-selected-value"
                 onBlur={[Function]}
                 onFocus={[Function]}
-                placeholder="Select…"
-                readOnly={true}
-                role="textbox"
-                type="text"
-              />
+                type="button"
+              >
+                <span
+                  className="slds-truncate"
+                  id="combobox-value-id-19"
+                >
+                  Custom Logic Is Met
+                </span>
+              </button>
               <span
                 className="slds-icon_container slds-icon-utility-down slds-input__icon slds-input__icon_right"
                 title={null}
@@ -5871,6 +5941,7 @@ exports[`Expression Base renders with custom option selected 1`] = `
               <label
                 className="slds-form-element__label"
                 htmlFor="combobox-id-20"
+                id="combobox-label-id-20"
               >
                 Resource
               </label>
@@ -5881,28 +5952,30 @@ exports[`Expression Base renders with custom option selected 1`] = `
                   className="slds-combobox_container"
                 >
                   <div
-                    aria-expanded="false"
-                    aria-haspopup="listbox"
                     className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click"
-                    role="combobox"
                   >
                     <div
                       className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
                       role="none"
                     >
-                      <input
-                        aria-autocomplete={null}
+                      <button
                         aria-controls="listbox-id-20"
-                        autocomplete="off"
-                        className="slds-input slds-combobox__input"
-                        id="combobox-id-20"
+                        aria-expanded="false"
+                        aria-haspopup="listbox"
+                        aria-labelledby="combobox-label-id-20 combobox-id-20-selected-value"
+                        className="slds-input_faux slds-combobox__input"
+                        id="combobox-id-20-selected-value"
                         onBlur={[Function]}
                         onFocus={[Function]}
-                        placeholder="Select…"
-                        readOnly={true}
-                        role="textbox"
-                        type="text"
-                      />
+                        type="button"
+                      >
+                        <span
+                          className="slds-truncate"
+                          id="combobox-value-id-20"
+                        >
+                          Select…
+                        </span>
+                      </button>
                       <span
                         className="slds-icon_container slds-icon-utility-down slds-input__icon slds-input__icon_right"
                         title={null}
@@ -6051,6 +6124,7 @@ exports[`Expression Base renders with custom option selected 1`] = `
               <label
                 className="slds-form-element__label"
                 htmlFor="combobox-id-21"
+                id="combobox-label-id-21"
               >
                 Operator
               </label>
@@ -6061,28 +6135,30 @@ exports[`Expression Base renders with custom option selected 1`] = `
                   className="slds-combobox_container"
                 >
                   <div
-                    aria-expanded="false"
-                    aria-haspopup="listbox"
                     className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click"
-                    role="combobox"
                   >
                     <div
                       className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
                       role="none"
                     >
-                      <input
-                        aria-autocomplete={null}
+                      <button
                         aria-controls="listbox-id-21"
-                        autocomplete="off"
-                        className="slds-input slds-combobox__input"
-                        id="combobox-id-21"
+                        aria-expanded="false"
+                        aria-haspopup="listbox"
+                        aria-labelledby="combobox-label-id-21 combobox-id-21-selected-value"
+                        className="slds-input_faux slds-combobox__input"
+                        id="combobox-id-21-selected-value"
                         onBlur={[Function]}
                         onFocus={[Function]}
-                        placeholder="Select…"
-                        readOnly={true}
-                        role="textbox"
-                        type="text"
-                      />
+                        type="button"
+                      >
+                        <span
+                          className="slds-truncate"
+                          id="combobox-value-id-21"
+                        >
+                          Select…
+                        </span>
+                      </button>
                       <span
                         className="slds-icon_container slds-icon-utility-down slds-input__icon slds-input__icon_right"
                         title={null}
@@ -6338,6 +6414,7 @@ exports[`Expression Base renders with formula option selected 1`] = `
       <label
         className="slds-form-element__label"
         htmlFor="combobox-id-25"
+        id="combobox-label-id-25"
       >
         Take Action When
       </label>
@@ -6348,29 +6425,30 @@ exports[`Expression Base renders with formula option selected 1`] = `
           className="slds-combobox_container"
         >
           <div
-            aria-expanded="false"
-            aria-haspopup="listbox"
             className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click"
-            role="combobox"
           >
             <div
               className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
               role="none"
             >
-              <input
-                aria-autocomplete={null}
+              <button
                 aria-controls="listbox-id-25"
-                autocomplete="off"
-                className="slds-input slds-combobox__input slds-combobox__input-value"
-                defaultValue="Formula Evaluates to True"
-                id="combobox-id-25"
+                aria-expanded="false"
+                aria-haspopup="listbox"
+                aria-labelledby="combobox-label-id-25 combobox-id-25-selected-value"
+                className="slds-input_faux slds-combobox__input slds-combobox__input-value"
+                id="combobox-id-25-selected-value"
                 onBlur={[Function]}
                 onFocus={[Function]}
-                placeholder="Select…"
-                readOnly={true}
-                role="textbox"
-                type="text"
-              />
+                type="button"
+              >
+                <span
+                  className="slds-truncate"
+                  id="combobox-value-id-25"
+                >
+                  Formula Evaluates to True
+                </span>
+              </button>
               <span
                 className="slds-icon_container slds-icon-utility-down slds-input__icon slds-input__icon_right"
                 title={null}
@@ -6577,6 +6655,7 @@ exports[`Expression Base renders with formula option selected 1`] = `
               <label
                 className="slds-form-element__label"
                 htmlFor="combobox-id-26"
+                id="combobox-label-id-26"
               >
                 Resource
               </label>
@@ -6587,28 +6666,30 @@ exports[`Expression Base renders with formula option selected 1`] = `
                   className="slds-combobox_container"
                 >
                   <div
-                    aria-expanded="false"
-                    aria-haspopup="listbox"
                     className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click"
-                    role="combobox"
                   >
                     <div
                       className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
                       role="none"
                     >
-                      <input
-                        aria-autocomplete={null}
+                      <button
                         aria-controls="listbox-id-26"
-                        autocomplete="off"
-                        className="slds-input slds-combobox__input"
-                        id="combobox-id-26"
+                        aria-expanded="false"
+                        aria-haspopup="listbox"
+                        aria-labelledby="combobox-label-id-26 combobox-id-26-selected-value"
+                        className="slds-input_faux slds-combobox__input"
+                        id="combobox-id-26-selected-value"
                         onBlur={[Function]}
                         onFocus={[Function]}
-                        placeholder="Select…"
-                        readOnly={true}
-                        role="textbox"
-                        type="text"
-                      />
+                        type="button"
+                      >
+                        <span
+                          className="slds-truncate"
+                          id="combobox-value-id-26"
+                        >
+                          Select…
+                        </span>
+                      </button>
                       <span
                         className="slds-icon_container slds-icon-utility-down slds-input__icon slds-input__icon_right"
                         title={null}
@@ -6757,6 +6838,7 @@ exports[`Expression Base renders with formula option selected 1`] = `
               <label
                 className="slds-form-element__label"
                 htmlFor="combobox-id-27"
+                id="combobox-label-id-27"
               >
                 Operator
               </label>
@@ -6767,28 +6849,30 @@ exports[`Expression Base renders with formula option selected 1`] = `
                   className="slds-combobox_container"
                 >
                   <div
-                    aria-expanded="false"
-                    aria-haspopup="listbox"
                     className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click"
-                    role="combobox"
                   >
                     <div
                       className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
                       role="none"
                     >
-                      <input
-                        aria-autocomplete={null}
+                      <button
                         aria-controls="listbox-id-27"
-                        autocomplete="off"
-                        className="slds-input slds-combobox__input"
-                        id="combobox-id-27"
+                        aria-expanded="false"
+                        aria-haspopup="listbox"
+                        aria-labelledby="combobox-label-id-27 combobox-id-27-selected-value"
+                        className="slds-input_faux slds-combobox__input"
+                        id="combobox-id-27-selected-value"
                         onBlur={[Function]}
                         onFocus={[Function]}
-                        placeholder="Select…"
-                        readOnly={true}
-                        role="textbox"
-                        type="text"
-                      />
+                        type="button"
+                      >
+                        <span
+                          className="slds-truncate"
+                          id="combobox-value-id-27"
+                        >
+                          Select…
+                        </span>
+                      </button>
                       <span
                         className="slds-icon_container slds-icon-utility-down slds-input__icon slds-input__icon_right"
                         title={null}
@@ -7044,6 +7128,7 @@ exports[`Expression Base renders with legend text 1`] = `
       <label
         className="slds-form-element__label"
         htmlFor="combobox-id-10"
+        id="combobox-label-id-10"
       >
         Take Action When
       </label>
@@ -7054,28 +7139,30 @@ exports[`Expression Base renders with legend text 1`] = `
           className="slds-combobox_container"
         >
           <div
-            aria-expanded="false"
-            aria-haspopup="listbox"
             className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click"
-            role="combobox"
           >
             <div
               className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
               role="none"
             >
-              <input
-                aria-autocomplete={null}
+              <button
                 aria-controls="listbox-id-10"
-                autocomplete="off"
-                className="slds-input slds-combobox__input"
-                id="combobox-id-10"
+                aria-expanded="false"
+                aria-haspopup="listbox"
+                aria-labelledby="combobox-label-id-10 combobox-id-10-selected-value"
+                className="slds-input_faux slds-combobox__input"
+                id="combobox-id-10-selected-value"
                 onBlur={[Function]}
                 onFocus={[Function]}
-                placeholder="Select…"
-                readOnly={true}
-                role="textbox"
-                type="text"
-              />
+                type="button"
+              >
+                <span
+                  className="slds-truncate"
+                  id="combobox-value-id-10"
+                >
+                  Select…
+                </span>
+              </button>
               <span
                 className="slds-icon_container slds-icon-utility-down slds-input__icon slds-input__icon_right"
                 title={null}
@@ -7271,6 +7358,7 @@ exports[`Expression Base renders with legend text 1`] = `
               <label
                 className="slds-form-element__label"
                 htmlFor="combobox-id-11"
+                id="combobox-label-id-11"
               >
                 Resource
               </label>
@@ -7281,28 +7369,30 @@ exports[`Expression Base renders with legend text 1`] = `
                   className="slds-combobox_container"
                 >
                   <div
-                    aria-expanded="false"
-                    aria-haspopup="listbox"
                     className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click"
-                    role="combobox"
                   >
                     <div
                       className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
                       role="none"
                     >
-                      <input
-                        aria-autocomplete={null}
+                      <button
                         aria-controls="listbox-id-11"
-                        autocomplete="off"
-                        className="slds-input slds-combobox__input"
-                        id="combobox-id-11"
+                        aria-expanded="false"
+                        aria-haspopup="listbox"
+                        aria-labelledby="combobox-label-id-11 combobox-id-11-selected-value"
+                        className="slds-input_faux slds-combobox__input"
+                        id="combobox-id-11-selected-value"
                         onBlur={[Function]}
                         onFocus={[Function]}
-                        placeholder="Select…"
-                        readOnly={true}
-                        role="textbox"
-                        type="text"
-                      />
+                        type="button"
+                      >
+                        <span
+                          className="slds-truncate"
+                          id="combobox-value-id-11"
+                        >
+                          Select…
+                        </span>
+                      </button>
                       <span
                         className="slds-icon_container slds-icon-utility-down slds-input__icon slds-input__icon_right"
                         title={null}
@@ -7451,6 +7541,7 @@ exports[`Expression Base renders with legend text 1`] = `
               <label
                 className="slds-form-element__label"
                 htmlFor="combobox-id-12"
+                id="combobox-label-id-12"
               >
                 Operator
               </label>
@@ -7461,28 +7552,30 @@ exports[`Expression Base renders with legend text 1`] = `
                   className="slds-combobox_container"
                 >
                   <div
-                    aria-expanded="false"
-                    aria-haspopup="listbox"
                     className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click"
-                    role="combobox"
                   >
                     <div
                       className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
                       role="none"
                     >
-                      <input
-                        aria-autocomplete={null}
+                      <button
                         aria-controls="listbox-id-12"
-                        autocomplete="off"
-                        className="slds-input slds-combobox__input"
-                        id="combobox-id-12"
+                        aria-expanded="false"
+                        aria-haspopup="listbox"
+                        aria-labelledby="combobox-label-id-12 combobox-id-12-selected-value"
+                        className="slds-input_faux slds-combobox__input"
+                        id="combobox-id-12-selected-value"
                         onBlur={[Function]}
                         onFocus={[Function]}
-                        placeholder="Select…"
-                        readOnly={true}
-                        role="textbox"
-                        type="text"
-                      />
+                        type="button"
+                      >
+                        <span
+                          className="slds-truncate"
+                          id="combobox-value-id-12"
+                        >
+                          Select…
+                        </span>
+                      </button>
                       <span
                         className="slds-icon_container slds-icon-utility-down slds-input__icon slds-input__icon_right"
                         title={null}
@@ -7854,6 +7947,7 @@ exports[`Expression Formula renders the default expression formula variant 1`] =
       <label
         className="slds-form-element__label"
         htmlFor="combobox-id-67"
+        id="combobox-label-id-67"
       >
         Take Action When
       </label>
@@ -7864,28 +7958,30 @@ exports[`Expression Formula renders the default expression formula variant 1`] =
           className="slds-combobox_container"
         >
           <div
-            aria-expanded="false"
-            aria-haspopup="listbox"
             className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click"
-            role="combobox"
           >
             <div
               className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
               role="none"
             >
-              <input
-                aria-autocomplete={null}
+              <button
                 aria-controls="listbox-id-67"
-                autocomplete="off"
-                className="slds-input slds-combobox__input"
-                id="combobox-id-67"
+                aria-expanded="false"
+                aria-haspopup="listbox"
+                aria-labelledby="combobox-label-id-67 combobox-id-67-selected-value"
+                className="slds-input_faux slds-combobox__input"
+                id="combobox-id-67-selected-value"
                 onBlur={[Function]}
                 onFocus={[Function]}
-                placeholder="Select…"
-                readOnly={true}
-                role="textbox"
-                type="text"
-              />
+                type="button"
+              >
+                <span
+                  className="slds-truncate"
+                  id="combobox-value-id-67"
+                >
+                  Select…
+                </span>
+              </button>
               <span
                 className="slds-icon_container slds-icon-utility-down slds-input__icon slds-input__icon_right"
                 title={null}
@@ -8100,6 +8196,7 @@ exports[`Expression Formula renders the default expression formula variant 1`] =
                         <label
                           className="slds-form-element__label slds-assistive-text"
                           htmlFor="combobox-id-69"
+                          id="combobox-label-id-68"
                         >
                           Filter resources by:
                         </label>
@@ -8110,11 +8207,8 @@ exports[`Expression Formula renders the default expression formula variant 1`] =
                             className="slds-combobox_container slds-has-icon-only"
                           >
                             <div
-                              aria-controls="primary-combobox-id-1"
-                              aria-expanded="false"
-                              aria-haspopup="listbox"
+                              aria-controls="example-unique-id-3"
                               className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click"
-                              role="combobox"
                             >
                               <div
                                 className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_left-right"
@@ -8141,14 +8235,16 @@ exports[`Expression Formula renders the default expression formula variant 1`] =
                                 <input
                                   aria-autocomplete={null}
                                   aria-controls="objectswitcher-listbox-id-1"
-                                  autocomplete="off"
+                                  aria-expanded="false"
+                                  aria-haspopup="listbox"
+                                  autoComplete="off"
                                   className="slds-input slds-combobox__input slds-combobox__input-value"
                                   defaultValue="Apex"
                                   id="combobox-id-69"
                                   onBlur={[Function]}
                                   onFocus={[Function]}
                                   placeholder=" "
-                                  role="textbox"
+                                  role="combobox"
                                   type="text"
                                 />
                                 <span
@@ -8350,11 +8446,8 @@ exports[`Expression Formula renders the default expression formula variant 1`] =
                       className="slds-combobox_container slds-combobox-addon_end"
                     >
                       <div
-                        aria-expanded="false"
-                        aria-haspopup="listbox"
                         className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click"
-                        id="primary-combobox-id-1"
-                        role="combobox"
+                        id="example-unique-id-3"
                       >
                         <div
                           className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
@@ -8362,14 +8455,16 @@ exports[`Expression Formula renders the default expression formula variant 1`] =
                         >
                           <input
                             aria-autocomplete="list"
-                            aria-controls="listbox-id-68"
-                            autocomplete="off"
+                            aria-controls="example-unique-id-1"
+                            aria-expanded="false"
+                            aria-haspopup="listbox"
+                            autoComplete="off"
                             className="slds-input slds-combobox__input"
                             id="combobox-id-68"
                             onBlur={[Function]}
                             onFocus={[Function]}
                             placeholder="Insert a resource"
-                            role="textbox"
+                            role="combobox"
                             type="text"
                           />
                           <span
@@ -8389,7 +8484,7 @@ exports[`Expression Formula renders the default expression formula variant 1`] =
                         <div
                           aria-orientation={null}
                           className="slds-dropdown slds-dropdown_length-with-icon-7 slds-dropdown_fluid"
-                          id="listbox-id-68"
+                          id="example-unique-id-1"
                           role="listbox"
                         >
                           <ul
@@ -8527,6 +8622,7 @@ exports[`Expression Formula renders the default expression formula variant 1`] =
                         <label
                           className="slds-form-element__label slds-assistive-text"
                           htmlFor="combobox-id-71"
+                          id="combobox-label-id-69"
                         >
                           Filter functions by:
                         </label>
@@ -8537,11 +8633,8 @@ exports[`Expression Formula renders the default expression formula variant 1`] =
                             className="slds-combobox_container slds-has-icon-only"
                           >
                             <div
-                              aria-controls="primary-combobox-id-2"
-                              aria-expanded="false"
-                              aria-haspopup="listbox"
+                              aria-controls="example-unique-id-4"
                               className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click"
-                              role="combobox"
                             >
                               <div
                                 className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_left-right"
@@ -8568,14 +8661,16 @@ exports[`Expression Formula renders the default expression formula variant 1`] =
                                 <input
                                   aria-autocomplete={null}
                                   aria-controls="objectswitcher-listbox-id-2"
-                                  autocomplete="off"
+                                  aria-expanded="false"
+                                  aria-haspopup="listbox"
+                                  autoComplete="off"
                                   className="slds-input slds-combobox__input slds-combobox__input-value"
                                   defaultValue="Apex"
                                   id="combobox-id-71"
                                   onBlur={[Function]}
                                   onFocus={[Function]}
                                   placeholder=" "
-                                  role="textbox"
+                                  role="combobox"
                                   type="text"
                                 />
                                 <span
@@ -8777,11 +8872,8 @@ exports[`Expression Formula renders the default expression formula variant 1`] =
                       className="slds-combobox_container slds-combobox-addon_end"
                     >
                       <div
-                        aria-expanded="false"
-                        aria-haspopup="listbox"
                         className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click"
-                        id="primary-combobox-id-2"
-                        role="combobox"
+                        id="example-unique-id-4"
                       >
                         <div
                           className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
@@ -8789,14 +8881,16 @@ exports[`Expression Formula renders the default expression formula variant 1`] =
                         >
                           <input
                             aria-autocomplete="list"
-                            aria-controls="listbox-id-69"
-                            autocomplete="off"
+                            aria-controls="example-unique-id-2"
+                            aria-expanded="false"
+                            aria-haspopup="listbox"
+                            autoComplete="off"
                             className="slds-input slds-combobox__input"
                             id="combobox-id-70"
                             onBlur={[Function]}
                             onFocus={[Function]}
                             placeholder="Insert a function"
-                            role="textbox"
+                            role="combobox"
                             type="text"
                           />
                           <span
@@ -8816,7 +8910,7 @@ exports[`Expression Formula renders the default expression formula variant 1`] =
                         <div
                           aria-orientation={null}
                           className="slds-dropdown slds-dropdown_length-with-icon-7 slds-dropdown_fluid"
-                          id="listbox-id-69"
+                          id="example-unique-id-2"
                           role="listbox"
                         >
                           <ul
@@ -8935,7 +9029,7 @@ exports[`Expression Formula renders the default expression formula variant 1`] =
               >
                 <label
                   className="slds-form-element__label slds-assistive-text"
-                  htmlFor="text-input-id-25"
+                  htmlFor="example-unique-id-5"
                 >
                   Insert operator
                 </label>
@@ -8944,7 +9038,7 @@ exports[`Expression Formula renders the default expression formula variant 1`] =
                 >
                   <input
                     className="slds-input"
-                    id="text-input-id-25"
+                    id="example-unique-id-5"
                     placeholder="Insert operator"
                     type="text"
                   />
@@ -9017,6 +9111,7 @@ exports[`Expression Formula renders the default expression formula with an optio
       <label
         className="slds-form-element__label"
         htmlFor="combobox-id-72"
+        id="combobox-label-id-70"
       >
         Take Action When
       </label>
@@ -9027,29 +9122,30 @@ exports[`Expression Formula renders the default expression formula with an optio
           className="slds-combobox_container"
         >
           <div
-            aria-expanded="false"
-            aria-haspopup="listbox"
             className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click"
-            role="combobox"
           >
             <div
               className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
               role="none"
             >
-              <input
-                aria-autocomplete={null}
-                aria-controls="listbox-id-70"
-                autocomplete="off"
-                className="slds-input slds-combobox__input slds-combobox__input-value"
-                defaultValue="Formula Evaluates to True"
-                id="combobox-id-72"
+              <button
+                aria-controls="listbox-id-68"
+                aria-expanded="false"
+                aria-haspopup="listbox"
+                aria-labelledby="combobox-label-id-70 combobox-id-72-selected-value"
+                className="slds-input_faux slds-combobox__input slds-combobox__input-value"
+                id="combobox-id-72-selected-value"
                 onBlur={[Function]}
                 onFocus={[Function]}
-                placeholder="Select…"
-                readOnly={true}
-                role="textbox"
-                type="text"
-              />
+                type="button"
+              >
+                <span
+                  className="slds-truncate"
+                  id="combobox-value-id-68"
+                >
+                  Formula Evaluates to True
+                </span>
+              </button>
               <span
                 className="slds-icon_container slds-icon-utility-down slds-input__icon slds-input__icon_right"
                 title={null}
@@ -9067,7 +9163,7 @@ exports[`Expression Formula renders the default expression formula with an optio
             <div
               aria-orientation={null}
               className="slds-dropdown slds-dropdown_length-5 slds-dropdown_fluid"
-              id="listbox-id-70"
+              id="listbox-id-68"
               role="listbox"
             >
               <ul
@@ -9278,6 +9374,7 @@ exports[`Expression Formula renders the default expression formula with an optio
                         <label
                           className="slds-form-element__label slds-assistive-text"
                           htmlFor="combobox-id-74"
+                          id="combobox-label-id-71"
                         >
                           Filter resources by:
                         </label>
@@ -9288,11 +9385,8 @@ exports[`Expression Formula renders the default expression formula with an optio
                             className="slds-combobox_container slds-has-icon-only"
                           >
                             <div
-                              aria-controls="primary-combobox-id-3"
-                              aria-expanded="false"
-                              aria-haspopup="listbox"
+                              aria-controls="example-unique-id-8"
                               className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click"
-                              role="combobox"
                             >
                               <div
                                 className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_left-right"
@@ -9319,14 +9413,16 @@ exports[`Expression Formula renders the default expression formula with an optio
                                 <input
                                   aria-autocomplete={null}
                                   aria-controls="objectswitcher-listbox-id-3"
-                                  autocomplete="off"
+                                  aria-expanded="false"
+                                  aria-haspopup="listbox"
+                                  autoComplete="off"
                                   className="slds-input slds-combobox__input slds-combobox__input-value"
                                   defaultValue="Apex"
                                   id="combobox-id-74"
                                   onBlur={[Function]}
                                   onFocus={[Function]}
                                   placeholder=" "
-                                  role="textbox"
+                                  role="combobox"
                                   type="text"
                                 />
                                 <span
@@ -9528,11 +9624,8 @@ exports[`Expression Formula renders the default expression formula with an optio
                       className="slds-combobox_container slds-combobox-addon_end"
                     >
                       <div
-                        aria-expanded="false"
-                        aria-haspopup="listbox"
                         className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click"
-                        id="primary-combobox-id-3"
-                        role="combobox"
+                        id="example-unique-id-8"
                       >
                         <div
                           className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
@@ -9540,14 +9633,16 @@ exports[`Expression Formula renders the default expression formula with an optio
                         >
                           <input
                             aria-autocomplete="list"
-                            aria-controls="listbox-id-71"
-                            autocomplete="off"
+                            aria-controls="example-unique-id-6"
+                            aria-expanded="false"
+                            aria-haspopup="listbox"
+                            autoComplete="off"
                             className="slds-input slds-combobox__input"
                             id="combobox-id-73"
                             onBlur={[Function]}
                             onFocus={[Function]}
                             placeholder="Insert a resource"
-                            role="textbox"
+                            role="combobox"
                             type="text"
                           />
                           <span
@@ -9567,7 +9662,7 @@ exports[`Expression Formula renders the default expression formula with an optio
                         <div
                           aria-orientation={null}
                           className="slds-dropdown slds-dropdown_length-with-icon-7 slds-dropdown_fluid"
-                          id="listbox-id-71"
+                          id="example-unique-id-6"
                           role="listbox"
                         >
                           <ul
@@ -9705,6 +9800,7 @@ exports[`Expression Formula renders the default expression formula with an optio
                         <label
                           className="slds-form-element__label slds-assistive-text"
                           htmlFor="combobox-id-76"
+                          id="combobox-label-id-72"
                         >
                           Filter functions by:
                         </label>
@@ -9715,11 +9811,8 @@ exports[`Expression Formula renders the default expression formula with an optio
                             className="slds-combobox_container slds-has-icon-only"
                           >
                             <div
-                              aria-controls="primary-combobox-id-4"
-                              aria-expanded="false"
-                              aria-haspopup="listbox"
+                              aria-controls="example-unique-id-9"
                               className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click"
-                              role="combobox"
                             >
                               <div
                                 className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_left-right"
@@ -9746,14 +9839,16 @@ exports[`Expression Formula renders the default expression formula with an optio
                                 <input
                                   aria-autocomplete={null}
                                   aria-controls="objectswitcher-listbox-id-4"
-                                  autocomplete="off"
+                                  aria-expanded="false"
+                                  aria-haspopup="listbox"
+                                  autoComplete="off"
                                   className="slds-input slds-combobox__input slds-combobox__input-value"
                                   defaultValue="Apex"
                                   id="combobox-id-76"
                                   onBlur={[Function]}
                                   onFocus={[Function]}
                                   placeholder=" "
-                                  role="textbox"
+                                  role="combobox"
                                   type="text"
                                 />
                                 <span
@@ -9955,11 +10050,8 @@ exports[`Expression Formula renders the default expression formula with an optio
                       className="slds-combobox_container slds-combobox-addon_end"
                     >
                       <div
-                        aria-expanded="false"
-                        aria-haspopup="listbox"
                         className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click"
-                        id="primary-combobox-id-4"
-                        role="combobox"
+                        id="example-unique-id-9"
                       >
                         <div
                           className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
@@ -9967,14 +10059,16 @@ exports[`Expression Formula renders the default expression formula with an optio
                         >
                           <input
                             aria-autocomplete="list"
-                            aria-controls="listbox-id-72"
-                            autocomplete="off"
+                            aria-controls="example-unique-id-7"
+                            aria-expanded="false"
+                            aria-haspopup="listbox"
+                            autoComplete="off"
                             className="slds-input slds-combobox__input"
                             id="combobox-id-75"
                             onBlur={[Function]}
                             onFocus={[Function]}
                             placeholder="Insert a function"
-                            role="textbox"
+                            role="combobox"
                             type="text"
                           />
                           <span
@@ -9994,7 +10088,7 @@ exports[`Expression Formula renders the default expression formula with an optio
                         <div
                           aria-orientation={null}
                           className="slds-dropdown slds-dropdown_length-with-icon-7 slds-dropdown_fluid"
-                          id="listbox-id-72"
+                          id="example-unique-id-7"
                           role="listbox"
                         >
                           <ul
@@ -10113,7 +10207,7 @@ exports[`Expression Formula renders the default expression formula with an optio
               >
                 <label
                   className="slds-form-element__label slds-assistive-text"
-                  htmlFor="text-input-id-26"
+                  htmlFor="example-unique-id-10"
                 >
                   Insert operator
                 </label>
@@ -10122,7 +10216,7 @@ exports[`Expression Formula renders the default expression formula with an optio
                 >
                   <input
                     className="slds-input"
-                    id="text-input-id-26"
+                    id="example-unique-id-10"
                     placeholder="Insert operator"
                     type="text"
                   />
@@ -10205,6 +10299,7 @@ exports[`Expression Group renders the default expression group 1`] = `
         <label
           className="slds-form-element__label"
           htmlFor="combobox-id-56"
+          id="combobox-label-id-56"
         >
           Take Action When
         </label>
@@ -10215,28 +10310,30 @@ exports[`Expression Group renders the default expression group 1`] = `
             className="slds-combobox_container"
           >
             <div
-              aria-expanded="false"
-              aria-haspopup="listbox"
               className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click"
-              role="combobox"
             >
               <div
                 className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
                 role="none"
               >
-                <input
-                  aria-autocomplete={null}
+                <button
                   aria-controls="listbox-id-56"
-                  autocomplete="off"
-                  className="slds-input slds-combobox__input"
-                  id="combobox-id-56"
+                  aria-expanded="false"
+                  aria-haspopup="listbox"
+                  aria-labelledby="combobox-label-id-56 combobox-id-56-selected-value"
+                  className="slds-input_faux slds-combobox__input"
+                  id="combobox-id-56-selected-value"
                   onBlur={[Function]}
                   onFocus={[Function]}
-                  placeholder="Select…"
-                  readOnly={true}
-                  role="textbox"
-                  type="text"
-                />
+                  type="button"
+                >
+                  <span
+                    className="slds-truncate"
+                    id="combobox-value-id-56"
+                  >
+                    Select…
+                  </span>
+                </button>
                 <span
                   className="slds-icon_container slds-icon-utility-down slds-input__icon slds-input__icon_right"
                   title={null}
@@ -10449,6 +10546,7 @@ exports[`Expression Group renders the default expression group with a row 1`] = 
         <label
           className="slds-form-element__label"
           htmlFor="combobox-id-64"
+          id="combobox-label-id-64"
         >
           Take Action When
         </label>
@@ -10459,28 +10557,30 @@ exports[`Expression Group renders the default expression group with a row 1`] = 
             className="slds-combobox_container"
           >
             <div
-              aria-expanded="false"
-              aria-haspopup="listbox"
               className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click"
-              role="combobox"
             >
               <div
                 className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
                 role="none"
               >
-                <input
-                  aria-autocomplete={null}
+                <button
                   aria-controls="listbox-id-64"
-                  autocomplete="off"
-                  className="slds-input slds-combobox__input"
-                  id="combobox-id-64"
+                  aria-expanded="false"
+                  aria-haspopup="listbox"
+                  aria-labelledby="combobox-label-id-64 combobox-id-64-selected-value"
+                  className="slds-input_faux slds-combobox__input"
+                  id="combobox-id-64-selected-value"
                   onBlur={[Function]}
                   onFocus={[Function]}
-                  placeholder="Select…"
-                  readOnly={true}
-                  role="textbox"
-                  type="text"
-                />
+                  type="button"
+                >
+                  <span
+                    className="slds-truncate"
+                    id="combobox-value-id-64"
+                  >
+                    Select…
+                  </span>
+                </button>
                 <span
                   className="slds-icon_container slds-icon-utility-down slds-input__icon slds-input__icon_right"
                   title={null}
@@ -10676,6 +10776,7 @@ exports[`Expression Group renders the default expression group with a row 1`] = 
                 <label
                   className="slds-form-element__label"
                   htmlFor="combobox-id-65"
+                  id="combobox-label-id-65"
                 >
                   Resource
                 </label>
@@ -10686,28 +10787,30 @@ exports[`Expression Group renders the default expression group with a row 1`] = 
                     className="slds-combobox_container"
                   >
                     <div
-                      aria-expanded="false"
-                      aria-haspopup="listbox"
                       className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click"
-                      role="combobox"
                     >
                       <div
                         className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
                         role="none"
                       >
-                        <input
-                          aria-autocomplete={null}
+                        <button
                           aria-controls="listbox-id-65"
-                          autocomplete="off"
-                          className="slds-input slds-combobox__input"
-                          id="combobox-id-65"
+                          aria-expanded="false"
+                          aria-haspopup="listbox"
+                          aria-labelledby="combobox-label-id-65 combobox-id-65-selected-value"
+                          className="slds-input_faux slds-combobox__input"
+                          id="combobox-id-65-selected-value"
                           onBlur={[Function]}
                           onFocus={[Function]}
-                          placeholder="Select…"
-                          readOnly={true}
-                          role="textbox"
-                          type="text"
-                        />
+                          type="button"
+                        >
+                          <span
+                            className="slds-truncate"
+                            id="combobox-value-id-65"
+                          >
+                            Select…
+                          </span>
+                        </button>
                         <span
                           className="slds-icon_container slds-icon-utility-down slds-input__icon slds-input__icon_right"
                           title={null}
@@ -10856,6 +10959,7 @@ exports[`Expression Group renders the default expression group with a row 1`] = 
                 <label
                   className="slds-form-element__label"
                   htmlFor="combobox-id-66"
+                  id="combobox-label-id-66"
                 >
                   Operator
                 </label>
@@ -10866,28 +10970,30 @@ exports[`Expression Group renders the default expression group with a row 1`] = 
                     className="slds-combobox_container"
                   >
                     <div
-                      aria-expanded="false"
-                      aria-haspopup="listbox"
                       className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click"
-                      role="combobox"
                     >
                       <div
                         className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
                         role="none"
                       >
-                        <input
-                          aria-autocomplete={null}
+                        <button
                           aria-controls="listbox-id-66"
-                          autocomplete="off"
-                          className="slds-input slds-combobox__input"
-                          id="combobox-id-66"
+                          aria-expanded="false"
+                          aria-haspopup="listbox"
+                          aria-labelledby="combobox-label-id-66 combobox-id-66-selected-value"
+                          className="slds-input_faux slds-combobox__input"
+                          id="combobox-id-66-selected-value"
                           onBlur={[Function]}
                           onFocus={[Function]}
-                          placeholder="Select…"
-                          readOnly={true}
-                          role="textbox"
-                          type="text"
-                        />
+                          type="button"
+                        >
+                          <span
+                            className="slds-truncate"
+                            id="combobox-value-id-66"
+                          >
+                            Select…
+                          </span>
+                        </button>
                         <span
                           className="slds-icon_container slds-icon-utility-down slds-input__icon slds-input__icon_right"
                           title={null}
@@ -11135,6 +11241,7 @@ exports[`Expression Group renders the default expression group with all option s
         <label
           className="slds-form-element__label"
           htmlFor="combobox-id-59"
+          id="combobox-label-id-59"
         >
           Take Action When
         </label>
@@ -11145,29 +11252,30 @@ exports[`Expression Group renders the default expression group with all option s
             className="slds-combobox_container"
           >
             <div
-              aria-expanded="false"
-              aria-haspopup="listbox"
               className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click"
-              role="combobox"
             >
               <div
                 className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
                 role="none"
               >
-                <input
-                  aria-autocomplete={null}
+                <button
                   aria-controls="listbox-id-59"
-                  autocomplete="off"
-                  className="slds-input slds-combobox__input slds-combobox__input-value"
-                  defaultValue="All Conditions Are Met"
-                  id="combobox-id-59"
+                  aria-expanded="false"
+                  aria-haspopup="listbox"
+                  aria-labelledby="combobox-label-id-59 combobox-id-59-selected-value"
+                  className="slds-input_faux slds-combobox__input slds-combobox__input-value"
+                  id="combobox-id-59-selected-value"
                   onBlur={[Function]}
                   onFocus={[Function]}
-                  placeholder="Select…"
-                  readOnly={true}
-                  role="textbox"
-                  type="text"
-                />
+                  type="button"
+                >
+                  <span
+                    className="slds-truncate"
+                    id="combobox-value-id-59"
+                  >
+                    All Conditions Are Met
+                  </span>
+                </button>
                 <span
                   className="slds-icon_container slds-icon-utility-down slds-input__icon slds-input__icon_right"
                   title={null}
@@ -11394,6 +11502,7 @@ exports[`Expression Group renders the default expression group with always optio
         <label
           className="slds-form-element__label"
           htmlFor="combobox-id-60"
+          id="combobox-label-id-60"
         >
           Take Action When
         </label>
@@ -11404,29 +11513,30 @@ exports[`Expression Group renders the default expression group with always optio
             className="slds-combobox_container"
           >
             <div
-              aria-expanded="false"
-              aria-haspopup="listbox"
               className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click"
-              role="combobox"
             >
               <div
                 className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
                 role="none"
               >
-                <input
-                  aria-autocomplete={null}
+                <button
                   aria-controls="listbox-id-60"
-                  autocomplete="off"
-                  className="slds-input slds-combobox__input slds-combobox__input-value"
-                  defaultValue="Always (No Criteria)"
-                  id="combobox-id-60"
+                  aria-expanded="false"
+                  aria-haspopup="listbox"
+                  aria-labelledby="combobox-label-id-60 combobox-id-60-selected-value"
+                  className="slds-input_faux slds-combobox__input slds-combobox__input-value"
+                  id="combobox-id-60-selected-value"
                   onBlur={[Function]}
                   onFocus={[Function]}
-                  placeholder="Select…"
-                  readOnly={true}
-                  role="textbox"
-                  type="text"
-                />
+                  type="button"
+                >
+                  <span
+                    className="slds-truncate"
+                    id="combobox-value-id-60"
+                  >
+                    Always (No Criteria)
+                  </span>
+                </button>
                 <span
                   className="slds-icon_container slds-icon-utility-down slds-input__icon slds-input__icon_right"
                   title={null}
@@ -11653,6 +11763,7 @@ exports[`Expression Group renders the default expression group with any option s
         <label
           className="slds-form-element__label"
           htmlFor="combobox-id-58"
+          id="combobox-label-id-58"
         >
           Take Action When
         </label>
@@ -11663,29 +11774,30 @@ exports[`Expression Group renders the default expression group with any option s
             className="slds-combobox_container"
           >
             <div
-              aria-expanded="false"
-              aria-haspopup="listbox"
               className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click"
-              role="combobox"
             >
               <div
                 className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
                 role="none"
               >
-                <input
-                  aria-autocomplete={null}
+                <button
                   aria-controls="listbox-id-58"
-                  autocomplete="off"
-                  className="slds-input slds-combobox__input slds-combobox__input-value"
-                  defaultValue="Any Condition Is Met"
-                  id="combobox-id-58"
+                  aria-expanded="false"
+                  aria-haspopup="listbox"
+                  aria-labelledby="combobox-label-id-58 combobox-id-58-selected-value"
+                  className="slds-input_faux slds-combobox__input slds-combobox__input-value"
+                  id="combobox-id-58-selected-value"
                   onBlur={[Function]}
                   onFocus={[Function]}
-                  placeholder="Select…"
-                  readOnly={true}
-                  role="textbox"
-                  type="text"
-                />
+                  type="button"
+                >
+                  <span
+                    className="slds-truncate"
+                    id="combobox-value-id-58"
+                  >
+                    Any Condition Is Met
+                  </span>
+                </button>
                 <span
                   className="slds-icon_container slds-icon-utility-down slds-input__icon slds-input__icon_right"
                   title={null}
@@ -11912,6 +12024,7 @@ exports[`Expression Group renders the default expression group with custom optio
         <label
           className="slds-form-element__label"
           htmlFor="combobox-id-61"
+          id="combobox-label-id-61"
         >
           Take Action When
         </label>
@@ -11922,29 +12035,30 @@ exports[`Expression Group renders the default expression group with custom optio
             className="slds-combobox_container"
           >
             <div
-              aria-expanded="false"
-              aria-haspopup="listbox"
               className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click"
-              role="combobox"
             >
               <div
                 className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
                 role="none"
               >
-                <input
-                  aria-autocomplete={null}
+                <button
                   aria-controls="listbox-id-61"
-                  autocomplete="off"
-                  className="slds-input slds-combobox__input slds-combobox__input-value"
-                  defaultValue="Custom Logic Is Met"
-                  id="combobox-id-61"
+                  aria-expanded="false"
+                  aria-haspopup="listbox"
+                  aria-labelledby="combobox-label-id-61 combobox-id-61-selected-value"
+                  className="slds-input_faux slds-combobox__input slds-combobox__input-value"
+                  id="combobox-id-61-selected-value"
                   onBlur={[Function]}
                   onFocus={[Function]}
-                  placeholder="Select…"
-                  readOnly={true}
-                  role="textbox"
-                  type="text"
-                />
+                  type="button"
+                >
+                  <span
+                    className="slds-truncate"
+                    id="combobox-value-id-61"
+                  >
+                    Custom Logic Is Met
+                  </span>
+                </button>
                 <span
                   className="slds-icon_container slds-icon-utility-down slds-input__icon slds-input__icon_right"
                   title={null}
@@ -12171,6 +12285,7 @@ exports[`Expression Group renders the default expression group with formula opti
         <label
           className="slds-form-element__label"
           htmlFor="combobox-id-62"
+          id="combobox-label-id-62"
         >
           Take Action When
         </label>
@@ -12181,29 +12296,30 @@ exports[`Expression Group renders the default expression group with formula opti
             className="slds-combobox_container"
           >
             <div
-              aria-expanded="false"
-              aria-haspopup="listbox"
               className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click"
-              role="combobox"
             >
               <div
                 className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
                 role="none"
               >
-                <input
-                  aria-autocomplete={null}
+                <button
                   aria-controls="listbox-id-62"
-                  autocomplete="off"
-                  className="slds-input slds-combobox__input slds-combobox__input-value"
-                  defaultValue="Formula Evaluates to True"
-                  id="combobox-id-62"
+                  aria-expanded="false"
+                  aria-haspopup="listbox"
+                  aria-labelledby="combobox-label-id-62 combobox-id-62-selected-value"
+                  className="slds-input_faux slds-combobox__input slds-combobox__input-value"
+                  id="combobox-id-62-selected-value"
                   onBlur={[Function]}
                   onFocus={[Function]}
-                  placeholder="Select…"
-                  readOnly={true}
-                  role="textbox"
-                  type="text"
-                />
+                  type="button"
+                >
+                  <span
+                    className="slds-truncate"
+                    id="combobox-value-id-62"
+                  >
+                    Formula Evaluates to True
+                  </span>
+                </button>
                 <span
                   className="slds-icon_container slds-icon-utility-down slds-input__icon slds-input__icon_right"
                   title={null}
@@ -12430,6 +12546,7 @@ exports[`Expression Group renders the default expression group with group option
         <label
           className="slds-form-element__label"
           htmlFor="combobox-id-63"
+          id="combobox-label-id-63"
         >
           Take Action When
         </label>
@@ -12440,29 +12557,30 @@ exports[`Expression Group renders the default expression group with group option
             className="slds-combobox_container"
           >
             <div
-              aria-expanded="false"
-              aria-haspopup="listbox"
               className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click"
-              role="combobox"
             >
               <div
                 className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
                 role="none"
               >
-                <input
-                  aria-autocomplete={null}
+                <button
                   aria-controls="listbox-id-63"
-                  autocomplete="off"
-                  className="slds-input slds-combobox__input slds-combobox__input-value"
-                  defaultValue="Any Condition Is Met in This Group"
-                  id="combobox-id-63"
+                  aria-expanded="false"
+                  aria-haspopup="listbox"
+                  aria-labelledby="combobox-label-id-63 combobox-id-63-selected-value"
+                  className="slds-input_faux slds-combobox__input slds-combobox__input-value"
+                  id="combobox-id-63-selected-value"
                   onBlur={[Function]}
                   onFocus={[Function]}
-                  placeholder="Select…"
-                  readOnly={true}
-                  role="textbox"
-                  type="text"
-                />
+                  type="button"
+                >
+                  <span
+                    className="slds-truncate"
+                    id="combobox-value-id-63"
+                  >
+                    Any Condition Is Met in This Group
+                  </span>
+                </button>
                 <span
                   className="slds-icon_container slds-icon-utility-down slds-input__icon slds-input__icon_right"
                   title={null}
@@ -12692,6 +12810,7 @@ exports[`Expression Group renders the default expression group with legend text 
         <label
           className="slds-form-element__label"
           htmlFor="combobox-id-57"
+          id="combobox-label-id-57"
         >
           Take Action When
         </label>
@@ -12702,28 +12821,30 @@ exports[`Expression Group renders the default expression group with legend text 
             className="slds-combobox_container"
           >
             <div
-              aria-expanded="false"
-              aria-haspopup="listbox"
               className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click"
-              role="combobox"
             >
               <div
                 className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
                 role="none"
               >
-                <input
-                  aria-autocomplete={null}
+                <button
                   aria-controls="listbox-id-57"
-                  autocomplete="off"
-                  className="slds-input slds-combobox__input"
-                  id="combobox-id-57"
+                  aria-expanded="false"
+                  aria-haspopup="listbox"
+                  aria-labelledby="combobox-label-id-57 combobox-id-57-selected-value"
+                  className="slds-input_faux slds-combobox__input"
+                  id="combobox-id-57-selected-value"
                   onBlur={[Function]}
                   onFocus={[Function]}
-                  placeholder="Select…"
-                  readOnly={true}
-                  role="textbox"
-                  type="text"
-                />
+                  type="button"
+                >
+                  <span
+                    className="slds-truncate"
+                    id="combobox-value-id-57"
+                  >
+                    Select…
+                  </span>
+                </button>
                 <span
                   className="slds-icon_container slds-icon-utility-down slds-input__icon slds-input__icon_right"
                   title={null}
@@ -12988,6 +13109,7 @@ exports[`Expression List renders the default expression list 1`] = `
             <label
               className="slds-form-element__label"
               htmlFor="combobox-id-54"
+              id="combobox-label-id-54"
             >
               Resource
             </label>
@@ -12998,28 +13120,30 @@ exports[`Expression List renders the default expression list 1`] = `
                 className="slds-combobox_container"
               >
                 <div
-                  aria-expanded="false"
-                  aria-haspopup="listbox"
                   className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click"
-                  role="combobox"
                 >
                   <div
                     className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
                     role="none"
                   >
-                    <input
-                      aria-autocomplete={null}
+                    <button
                       aria-controls="listbox-id-54"
-                      autocomplete="off"
-                      className="slds-input slds-combobox__input"
-                      id="combobox-id-54"
+                      aria-expanded="false"
+                      aria-haspopup="listbox"
+                      aria-labelledby="combobox-label-id-54 combobox-id-54-selected-value"
+                      className="slds-input_faux slds-combobox__input"
+                      id="combobox-id-54-selected-value"
                       onBlur={[Function]}
                       onFocus={[Function]}
-                      placeholder="Select…"
-                      readOnly={true}
-                      role="textbox"
-                      type="text"
-                    />
+                      type="button"
+                    >
+                      <span
+                        className="slds-truncate"
+                        id="combobox-value-id-54"
+                      >
+                        Select…
+                      </span>
+                    </button>
                     <span
                       className="slds-icon_container slds-icon-utility-down slds-input__icon slds-input__icon_right"
                       title={null}
@@ -13168,6 +13292,7 @@ exports[`Expression List renders the default expression list 1`] = `
             <label
               className="slds-form-element__label"
               htmlFor="combobox-id-55"
+              id="combobox-label-id-55"
             >
               Operator
             </label>
@@ -13178,28 +13303,30 @@ exports[`Expression List renders the default expression list 1`] = `
                 className="slds-combobox_container"
               >
                 <div
-                  aria-expanded="false"
-                  aria-haspopup="listbox"
                   className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click"
-                  role="combobox"
                 >
                   <div
                     className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
                     role="none"
                   >
-                    <input
-                      aria-autocomplete={null}
+                    <button
                       aria-controls="listbox-id-55"
-                      autocomplete="off"
-                      className="slds-input slds-combobox__input"
-                      id="combobox-id-55"
+                      aria-expanded="false"
+                      aria-haspopup="listbox"
+                      aria-labelledby="combobox-label-id-55 combobox-id-55-selected-value"
+                      className="slds-input_faux slds-combobox__input"
+                      id="combobox-id-55-selected-value"
                       onBlur={[Function]}
                       onFocus={[Function]}
-                      placeholder="Select…"
-                      readOnly={true}
-                      role="textbox"
-                      type="text"
-                    />
+                      type="button"
+                    >
+                      <span
+                        className="slds-truncate"
+                        id="combobox-value-id-55"
+                      >
+                        Select…
+                      </span>
+                    </button>
                     <span
                       className="slds-icon_container slds-icon-utility-down slds-input__icon slds-input__icon_right"
                       title={null}
@@ -13506,6 +13633,7 @@ exports[`Expression Narrow Group renders the default expression narrow group 1`]
       <label
         className="slds-form-element__label"
         htmlFor="combobox-id-79"
+        id="combobox-label-id-75"
       >
         Take Action When
       </label>
@@ -13516,28 +13644,30 @@ exports[`Expression Narrow Group renders the default expression narrow group 1`]
           className="slds-combobox_container"
         >
           <div
-            aria-expanded="false"
-            aria-haspopup="listbox"
             className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click"
-            role="combobox"
           >
             <div
               className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
               role="none"
             >
-              <input
-                aria-autocomplete={null}
-                aria-controls="listbox-id-75"
-                autocomplete="off"
-                className="slds-input slds-combobox__input"
-                id="combobox-id-79"
+              <button
+                aria-controls="listbox-id-71"
+                aria-expanded="false"
+                aria-haspopup="listbox"
+                aria-labelledby="combobox-label-id-75 combobox-id-79-selected-value"
+                className="slds-input_faux slds-combobox__input"
+                id="combobox-id-79-selected-value"
                 onBlur={[Function]}
                 onFocus={[Function]}
-                placeholder="Select…"
-                readOnly={true}
-                role="textbox"
-                type="text"
-              />
+                type="button"
+              >
+                <span
+                  className="slds-truncate"
+                  id="combobox-value-id-71"
+                >
+                  Select…
+                </span>
+              </button>
               <span
                 className="slds-icon_container slds-icon-utility-down slds-input__icon slds-input__icon_right"
                 title={null}
@@ -13555,7 +13685,7 @@ exports[`Expression Narrow Group renders the default expression narrow group 1`]
             <div
               aria-orientation={null}
               className="slds-dropdown slds-dropdown_length-5 slds-dropdown_fluid"
-              id="listbox-id-75"
+              id="listbox-id-71"
               role="listbox"
             >
               <ul
@@ -13819,6 +13949,7 @@ exports[`Expression Narrow Group renders the default expression narrow with opti
       <label
         className="slds-form-element__label"
         htmlFor="combobox-id-80"
+        id="combobox-label-id-76"
       >
         Take Action When
       </label>
@@ -13829,29 +13960,30 @@ exports[`Expression Narrow Group renders the default expression narrow with opti
           className="slds-combobox_container"
         >
           <div
-            aria-expanded="false"
-            aria-haspopup="listbox"
             className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click"
-            role="combobox"
           >
             <div
               className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
               role="none"
             >
-              <input
-                aria-autocomplete={null}
-                aria-controls="listbox-id-76"
-                autocomplete="off"
-                className="slds-input slds-combobox__input slds-combobox__input-value"
-                defaultValue="Any Condition Is Met"
-                id="combobox-id-80"
+              <button
+                aria-controls="listbox-id-72"
+                aria-expanded="false"
+                aria-haspopup="listbox"
+                aria-labelledby="combobox-label-id-76 combobox-id-80-selected-value"
+                className="slds-input_faux slds-combobox__input slds-combobox__input-value"
+                id="combobox-id-80-selected-value"
                 onBlur={[Function]}
                 onFocus={[Function]}
-                placeholder="Select…"
-                readOnly={true}
-                role="textbox"
-                type="text"
-              />
+                type="button"
+              >
+                <span
+                  className="slds-truncate"
+                  id="combobox-value-id-72"
+                >
+                  Any Condition Is Met
+                </span>
+              </button>
               <span
                 className="slds-icon_container slds-icon-utility-down slds-input__icon slds-input__icon_right"
                 title={null}
@@ -13869,7 +14001,7 @@ exports[`Expression Narrow Group renders the default expression narrow with opti
             <div
               aria-orientation={null}
               className="slds-dropdown slds-dropdown_length-5 slds-dropdown_fluid"
-              id="listbox-id-76"
+              id="listbox-id-72"
               role="listbox"
             >
               <ul
@@ -14131,6 +14263,7 @@ exports[`Expression Narrow renders the default expression narrow variant 1`] = `
           <label
             className="slds-form-element__label"
             htmlFor="combobox-id-77"
+            id="combobox-label-id-73"
           >
             Take Action When
           </label>
@@ -14141,28 +14274,30 @@ exports[`Expression Narrow renders the default expression narrow variant 1`] = `
               className="slds-combobox_container"
             >
               <div
-                aria-expanded="false"
-                aria-haspopup="listbox"
                 className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click"
-                role="combobox"
               >
                 <div
                   className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
                   role="none"
                 >
-                  <input
-                    aria-autocomplete={null}
-                    aria-controls="listbox-id-73"
-                    autocomplete="off"
-                    className="slds-input slds-combobox__input"
-                    id="combobox-id-77"
+                  <button
+                    aria-controls="listbox-id-69"
+                    aria-expanded="false"
+                    aria-haspopup="listbox"
+                    aria-labelledby="combobox-label-id-73 combobox-id-77-selected-value"
+                    className="slds-input_faux slds-combobox__input"
+                    id="combobox-id-77-selected-value"
                     onBlur={[Function]}
                     onFocus={[Function]}
-                    placeholder="Select…"
-                    readOnly={true}
-                    role="textbox"
-                    type="text"
-                  />
+                    type="button"
+                  >
+                    <span
+                      className="slds-truncate"
+                      id="combobox-value-id-69"
+                    >
+                      Select…
+                    </span>
+                  </button>
                   <span
                     className="slds-icon_container slds-icon-utility-down slds-input__icon slds-input__icon_right"
                     title={null}
@@ -14180,7 +14315,7 @@ exports[`Expression Narrow renders the default expression narrow variant 1`] = `
                 <div
                   aria-orientation={null}
                   className="slds-dropdown slds-dropdown_length-5 slds-dropdown_fluid"
-                  id="listbox-id-73"
+                  id="listbox-id-69"
                   role="listbox"
                 >
                   <ul
@@ -14446,6 +14581,7 @@ exports[`Expression Narrow renders the default expression narrow with option sel
           <label
             className="slds-form-element__label"
             htmlFor="combobox-id-78"
+            id="combobox-label-id-74"
           >
             Take Action When
           </label>
@@ -14456,29 +14592,30 @@ exports[`Expression Narrow renders the default expression narrow with option sel
               className="slds-combobox_container"
             >
               <div
-                aria-expanded="false"
-                aria-haspopup="listbox"
                 className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click"
-                role="combobox"
               >
                 <div
                   className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
                   role="none"
                 >
-                  <input
-                    aria-autocomplete={null}
-                    aria-controls="listbox-id-74"
-                    autocomplete="off"
-                    className="slds-input slds-combobox__input slds-combobox__input-value"
-                    defaultValue="All Conditions Are Met"
-                    id="combobox-id-78"
+                  <button
+                    aria-controls="listbox-id-70"
+                    aria-expanded="false"
+                    aria-haspopup="listbox"
+                    aria-labelledby="combobox-label-id-74 combobox-id-78-selected-value"
+                    className="slds-input_faux slds-combobox__input slds-combobox__input-value"
+                    id="combobox-id-78-selected-value"
                     onBlur={[Function]}
                     onFocus={[Function]}
-                    placeholder="Select…"
-                    readOnly={true}
-                    role="textbox"
-                    type="text"
-                  />
+                    type="button"
+                  >
+                    <span
+                      className="slds-truncate"
+                      id="combobox-value-id-70"
+                    >
+                      All Conditions Are Met
+                    </span>
+                  </button>
                   <span
                     className="slds-icon_container slds-icon-utility-down slds-input__icon slds-input__icon_right"
                     title={null}
@@ -14496,7 +14633,7 @@ exports[`Expression Narrow renders the default expression narrow with option sel
                 <div
                   aria-orientation={null}
                   className="slds-dropdown slds-dropdown_length-5 slds-dropdown_fluid"
-                  id="listbox-id-74"
+                  id="listbox-id-70"
                   role="listbox"
                 >
                   <ul
@@ -14756,6 +14893,7 @@ exports[`Expression Options renders the default expression options 1`] = `
     <label
       className="slds-form-element__label"
       htmlFor="combobox-id-50"
+      id="combobox-label-id-50"
     >
       Take Action When
     </label>
@@ -14766,28 +14904,30 @@ exports[`Expression Options renders the default expression options 1`] = `
         className="slds-combobox_container"
       >
         <div
-          aria-expanded="false"
-          aria-haspopup="listbox"
           className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click"
-          role="combobox"
         >
           <div
             className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
             role="none"
           >
-            <input
-              aria-autocomplete={null}
+            <button
               aria-controls="listbox-id-50"
-              autocomplete="off"
-              className="slds-input slds-combobox__input"
-              id="combobox-id-50"
+              aria-expanded="false"
+              aria-haspopup="listbox"
+              aria-labelledby="combobox-label-id-50 combobox-id-50-selected-value"
+              className="slds-input_faux slds-combobox__input"
+              id="combobox-id-50-selected-value"
               onBlur={[Function]}
               onFocus={[Function]}
-              placeholder="Select…"
-              readOnly={true}
-              role="textbox"
-              type="text"
-            />
+              type="button"
+            >
+              <span
+                className="slds-truncate"
+                id="combobox-value-id-50"
+              >
+                Select…
+              </span>
+            </button>
             <span
               className="slds-icon_container slds-icon-utility-down slds-input__icon slds-input__icon_right"
               title={null}
@@ -14966,6 +15106,7 @@ exports[`Expression Options renders the default expression options in a filter 1
     <label
       className="slds-form-element__label"
       htmlFor="combobox-id-52"
+      id="combobox-label-id-52"
     >
       Take Action When
     </label>
@@ -14976,28 +15117,30 @@ exports[`Expression Options renders the default expression options in a filter 1
         className="slds-combobox_container"
       >
         <div
-          aria-expanded="false"
-          aria-haspopup="listbox"
           className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click"
-          role="combobox"
         >
           <div
             className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
             role="none"
           >
-            <input
-              aria-autocomplete={null}
+            <button
               aria-controls="listbox-id-52"
-              autocomplete="off"
-              className="slds-input slds-combobox__input"
-              id="combobox-id-52"
+              aria-expanded="false"
+              aria-haspopup="listbox"
+              aria-labelledby="combobox-label-id-52 combobox-id-52-selected-value"
+              className="slds-input_faux slds-combobox__input"
+              id="combobox-id-52-selected-value"
               onBlur={[Function]}
               onFocus={[Function]}
-              placeholder="Select…"
-              readOnly={true}
-              role="textbox"
-              type="text"
-            />
+              type="button"
+            >
+              <span
+                className="slds-truncate"
+                id="combobox-value-id-52"
+              >
+                Select…
+              </span>
+            </button>
             <span
               className="slds-icon_container slds-icon-utility-down slds-input__icon slds-input__icon_right"
               title={null}
@@ -15176,6 +15319,7 @@ exports[`Expression Options renders the default expression options with a label 
     <label
       className="slds-form-element__label"
       htmlFor="combobox-id-51"
+      id="combobox-label-id-51"
     >
       When
     </label>
@@ -15186,28 +15330,30 @@ exports[`Expression Options renders the default expression options with a label 
         className="slds-combobox_container"
       >
         <div
-          aria-expanded="false"
-          aria-haspopup="listbox"
           className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click"
-          role="combobox"
         >
           <div
             className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
             role="none"
           >
-            <input
-              aria-autocomplete={null}
+            <button
               aria-controls="listbox-id-51"
-              autocomplete="off"
-              className="slds-input slds-combobox__input"
-              id="combobox-id-51"
+              aria-expanded="false"
+              aria-haspopup="listbox"
+              aria-labelledby="combobox-label-id-51 combobox-id-51-selected-value"
+              className="slds-input_faux slds-combobox__input"
+              id="combobox-id-51-selected-value"
               onBlur={[Function]}
               onFocus={[Function]}
-              placeholder="Select…"
-              readOnly={true}
-              role="textbox"
-              type="text"
-            />
+              type="button"
+            >
+              <span
+                className="slds-truncate"
+                id="combobox-value-id-51"
+              >
+                Select…
+              </span>
+            </button>
             <span
               className="slds-icon_container slds-icon-utility-down slds-input__icon slds-input__icon_right"
               title={null}
@@ -15386,6 +15532,7 @@ exports[`Expression Options renders the default expression options with an optio
     <label
       className="slds-form-element__label"
       htmlFor="combobox-id-53"
+      id="combobox-label-id-53"
     >
       Take Action When
     </label>
@@ -15396,29 +15543,30 @@ exports[`Expression Options renders the default expression options with an optio
         className="slds-combobox_container"
       >
         <div
-          aria-expanded="false"
-          aria-haspopup="listbox"
           className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click"
-          role="combobox"
         >
           <div
             className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
             role="none"
           >
-            <input
-              aria-autocomplete={null}
+            <button
               aria-controls="listbox-id-53"
-              autocomplete="off"
-              className="slds-input slds-combobox__input slds-combobox__input-value"
-              defaultValue="All Conditions Are Met"
-              id="combobox-id-53"
+              aria-expanded="false"
+              aria-haspopup="listbox"
+              aria-labelledby="combobox-label-id-53 combobox-id-53-selected-value"
+              className="slds-input_faux slds-combobox__input slds-combobox__input-value"
+              id="combobox-id-53-selected-value"
               onBlur={[Function]}
               onFocus={[Function]}
-              placeholder="Select…"
-              readOnly={true}
-              role="textbox"
-              type="text"
-            />
+              type="button"
+            >
+              <span
+                className="slds-truncate"
+                id="combobox-value-id-53"
+              >
+                All Conditions Are Met
+              </span>
+            </button>
             <span
               className="slds-icon_container slds-icon-utility-down slds-input__icon slds-input__icon_right"
               title={null}
@@ -15627,6 +15775,7 @@ exports[`Expression Row renders the default row 1`] = `
           <label
             className="slds-form-element__label"
             htmlFor="combobox-id-34"
+            id="combobox-label-id-34"
           >
             Resource
           </label>
@@ -15637,28 +15786,30 @@ exports[`Expression Row renders the default row 1`] = `
               className="slds-combobox_container"
             >
               <div
-                aria-expanded="false"
-                aria-haspopup="listbox"
                 className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click"
-                role="combobox"
               >
                 <div
                   className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
                   role="none"
                 >
-                  <input
-                    aria-autocomplete={null}
+                  <button
                     aria-controls="listbox-id-34"
-                    autocomplete="off"
-                    className="slds-input slds-combobox__input"
-                    id="combobox-id-34"
+                    aria-expanded="false"
+                    aria-haspopup="listbox"
+                    aria-labelledby="combobox-label-id-34 combobox-id-34-selected-value"
+                    className="slds-input_faux slds-combobox__input"
+                    id="combobox-id-34-selected-value"
                     onBlur={[Function]}
                     onFocus={[Function]}
-                    placeholder="Select…"
-                    readOnly={true}
-                    role="textbox"
-                    type="text"
-                  />
+                    type="button"
+                  >
+                    <span
+                      className="slds-truncate"
+                      id="combobox-value-id-34"
+                    >
+                      Select…
+                    </span>
+                  </button>
                   <span
                     className="slds-icon_container slds-icon-utility-down slds-input__icon slds-input__icon_right"
                     title={null}
@@ -15807,6 +15958,7 @@ exports[`Expression Row renders the default row 1`] = `
           <label
             className="slds-form-element__label"
             htmlFor="combobox-id-35"
+            id="combobox-label-id-35"
           >
             Operator
           </label>
@@ -15817,28 +15969,30 @@ exports[`Expression Row renders the default row 1`] = `
               className="slds-combobox_container"
             >
               <div
-                aria-expanded="false"
-                aria-haspopup="listbox"
                 className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click"
-                role="combobox"
               >
                 <div
                   className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
                   role="none"
                 >
-                  <input
-                    aria-autocomplete={null}
+                  <button
                     aria-controls="listbox-id-35"
-                    autocomplete="off"
-                    className="slds-input slds-combobox__input"
-                    id="combobox-id-35"
+                    aria-expanded="false"
+                    aria-haspopup="listbox"
+                    aria-labelledby="combobox-label-id-35 combobox-id-35-selected-value"
+                    className="slds-input_faux slds-combobox__input"
+                    id="combobox-id-35-selected-value"
                     onBlur={[Function]}
                     onFocus={[Function]}
-                    placeholder="Select…"
-                    readOnly={true}
-                    role="textbox"
-                    type="text"
-                  />
+                    type="button"
+                  >
+                    <span
+                      className="slds-truncate"
+                      id="combobox-value-id-35"
+                    >
+                      Select…
+                    </span>
+                  </button>
                   <span
                     className="slds-icon_container slds-icon-utility-down slds-input__icon slds-input__icon_right"
                     title={null}
@@ -16068,6 +16222,7 @@ exports[`Expression Row renders the default row in a group 1`] = `
           <label
             className="slds-form-element__label"
             htmlFor="combobox-id-38"
+            id="combobox-label-id-38"
           >
             Resource
           </label>
@@ -16078,28 +16233,30 @@ exports[`Expression Row renders the default row in a group 1`] = `
               className="slds-combobox_container"
             >
               <div
-                aria-expanded="false"
-                aria-haspopup="listbox"
                 className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click"
-                role="combobox"
               >
                 <div
                   className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
                   role="none"
                 >
-                  <input
-                    aria-autocomplete={null}
+                  <button
                     aria-controls="listbox-id-38"
-                    autocomplete="off"
-                    className="slds-input slds-combobox__input"
-                    id="combobox-id-38"
+                    aria-expanded="false"
+                    aria-haspopup="listbox"
+                    aria-labelledby="combobox-label-id-38 combobox-id-38-selected-value"
+                    className="slds-input_faux slds-combobox__input"
+                    id="combobox-id-38-selected-value"
                     onBlur={[Function]}
                     onFocus={[Function]}
-                    placeholder="Select…"
-                    readOnly={true}
-                    role="textbox"
-                    type="text"
-                  />
+                    type="button"
+                  >
+                    <span
+                      className="slds-truncate"
+                      id="combobox-value-id-38"
+                    >
+                      Select…
+                    </span>
+                  </button>
                   <span
                     className="slds-icon_container slds-icon-utility-down slds-input__icon slds-input__icon_right"
                     title={null}
@@ -16248,6 +16405,7 @@ exports[`Expression Row renders the default row in a group 1`] = `
           <label
             className="slds-form-element__label"
             htmlFor="combobox-id-39"
+            id="combobox-label-id-39"
           >
             Operator
           </label>
@@ -16258,28 +16416,30 @@ exports[`Expression Row renders the default row in a group 1`] = `
               className="slds-combobox_container"
             >
               <div
-                aria-expanded="false"
-                aria-haspopup="listbox"
                 className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click"
-                role="combobox"
               >
                 <div
                   className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
                   role="none"
                 >
-                  <input
-                    aria-autocomplete={null}
+                  <button
                     aria-controls="listbox-id-39"
-                    autocomplete="off"
-                    className="slds-input slds-combobox__input"
-                    id="combobox-id-39"
+                    aria-expanded="false"
+                    aria-haspopup="listbox"
+                    aria-labelledby="combobox-label-id-39 combobox-id-39-selected-value"
+                    className="slds-input_faux slds-combobox__input"
+                    id="combobox-id-39-selected-value"
                     onBlur={[Function]}
                     onFocus={[Function]}
-                    placeholder="Select…"
-                    readOnly={true}
-                    role="textbox"
-                    type="text"
-                  />
+                    type="button"
+                  >
+                    <span
+                      className="slds-truncate"
+                      id="combobox-value-id-39"
+                    >
+                      Select…
+                    </span>
+                  </button>
                   <span
                     className="slds-icon_container slds-icon-utility-down slds-input__icon slds-input__icon_right"
                     title={null}
@@ -16509,6 +16669,7 @@ exports[`Expression Row renders the default row with a resource selected 1`] = `
           <label
             className="slds-form-element__label"
             htmlFor="combobox-id-46"
+            id="combobox-label-id-46"
           >
             Resource
           </label>
@@ -16519,29 +16680,30 @@ exports[`Expression Row renders the default row with a resource selected 1`] = `
               className="slds-combobox_container"
             >
               <div
-                aria-expanded="false"
-                aria-haspopup="listbox"
                 className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click"
-                role="combobox"
               >
                 <div
                   className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
                   role="none"
                 >
-                  <input
-                    aria-autocomplete={null}
+                  <button
                     aria-controls="listbox-id-46"
-                    autocomplete="off"
-                    className="slds-input slds-combobox__input slds-combobox__input-value"
-                    defaultValue="Resource 1"
-                    id="combobox-id-46"
+                    aria-expanded="false"
+                    aria-haspopup="listbox"
+                    aria-labelledby="combobox-label-id-46 combobox-id-46-selected-value"
+                    className="slds-input_faux slds-combobox__input slds-combobox__input-value"
+                    id="combobox-id-46-selected-value"
                     onBlur={[Function]}
                     onFocus={[Function]}
-                    placeholder="Select…"
-                    readOnly={true}
-                    role="textbox"
-                    type="text"
-                  />
+                    type="button"
+                  >
+                    <span
+                      className="slds-truncate"
+                      id="combobox-value-id-46"
+                    >
+                      Resource 1
+                    </span>
+                  </button>
                   <span
                     className="slds-icon_container slds-icon-utility-down slds-input__icon slds-input__icon_right"
                     title={null}
@@ -16704,6 +16866,7 @@ exports[`Expression Row renders the default row with a resource selected 1`] = `
           <label
             className="slds-form-element__label"
             htmlFor="combobox-id-47"
+            id="combobox-label-id-47"
           >
             Operator
           </label>
@@ -16714,28 +16877,30 @@ exports[`Expression Row renders the default row with a resource selected 1`] = `
               className="slds-combobox_container"
             >
               <div
-                aria-expanded="false"
-                aria-haspopup="listbox"
                 className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click"
-                role="combobox"
               >
                 <div
                   className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
                   role="none"
                 >
-                  <input
-                    aria-autocomplete={null}
+                  <button
                     aria-controls="listbox-id-47"
-                    autocomplete="off"
-                    className="slds-input slds-combobox__input"
-                    id="combobox-id-47"
+                    aria-expanded="false"
+                    aria-haspopup="listbox"
+                    aria-labelledby="combobox-label-id-47 combobox-id-47-selected-value"
+                    className="slds-input_faux slds-combobox__input"
+                    id="combobox-id-47-selected-value"
                     onBlur={[Function]}
                     onFocus={[Function]}
-                    placeholder="Select…"
-                    readOnly={true}
-                    role="textbox"
-                    type="text"
-                  />
+                    type="button"
+                  >
+                    <span
+                      className="slds-truncate"
+                      id="combobox-value-id-47"
+                    >
+                      Select…
+                    </span>
+                  </button>
                   <span
                     className="slds-icon_container slds-icon-utility-down slds-input__icon slds-input__icon_right"
                     title={null}
@@ -16965,6 +17130,7 @@ exports[`Expression Row renders the default row with an error 1`] = `
           <label
             className="slds-form-element__label"
             htmlFor="combobox-id-48"
+            id="combobox-label-id-48"
           >
             Resource
           </label>
@@ -16975,28 +17141,30 @@ exports[`Expression Row renders the default row with an error 1`] = `
               className="slds-combobox_container"
             >
               <div
-                aria-expanded="false"
-                aria-haspopup="listbox"
                 className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click"
-                role="combobox"
               >
                 <div
                   className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
                   role="none"
                 >
-                  <input
-                    aria-autocomplete={null}
+                  <button
                     aria-controls="listbox-id-48"
-                    autocomplete="off"
-                    className="slds-input slds-combobox__input"
-                    id="combobox-id-48"
+                    aria-expanded="false"
+                    aria-haspopup="listbox"
+                    aria-labelledby="combobox-label-id-48 combobox-id-48-selected-value"
+                    className="slds-input_faux slds-combobox__input"
+                    id="combobox-id-48-selected-value"
                     onBlur={[Function]}
                     onFocus={[Function]}
-                    placeholder="Select…"
-                    readOnly={true}
-                    role="textbox"
-                    type="text"
-                  />
+                    type="button"
+                  >
+                    <span
+                      className="slds-truncate"
+                      id="combobox-value-id-48"
+                    >
+                      Select…
+                    </span>
+                  </button>
                   <span
                     className="slds-icon_container slds-icon-utility-down slds-input__icon slds-input__icon_right"
                     title={null}
@@ -17145,6 +17313,7 @@ exports[`Expression Row renders the default row with an error 1`] = `
           <label
             className="slds-form-element__label"
             htmlFor="combobox-id-49"
+            id="combobox-label-id-49"
           >
             Operator
           </label>
@@ -17155,28 +17324,30 @@ exports[`Expression Row renders the default row with an error 1`] = `
               className="slds-combobox_container"
             >
               <div
-                aria-expanded="false"
-                aria-haspopup="listbox"
                 className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click"
-                role="combobox"
               >
                 <div
                   className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
                   role="none"
                 >
-                  <input
-                    aria-autocomplete={null}
+                  <button
                     aria-controls="listbox-id-49"
-                    autocomplete="off"
-                    className="slds-input slds-combobox__input"
-                    id="combobox-id-49"
+                    aria-expanded="false"
+                    aria-haspopup="listbox"
+                    aria-labelledby="combobox-label-id-49 combobox-id-49-selected-value"
+                    className="slds-input_faux slds-combobox__input"
+                    id="combobox-id-49-selected-value"
                     onBlur={[Function]}
                     onFocus={[Function]}
-                    placeholder="Select…"
-                    readOnly={true}
-                    role="textbox"
-                    type="text"
-                  />
+                    type="button"
+                  >
+                    <span
+                      className="slds-truncate"
+                      id="combobox-value-id-49"
+                    >
+                      Select…
+                    </span>
+                  </button>
                   <span
                     className="slds-icon_container slds-icon-utility-down slds-input__icon slds-input__icon_right"
                     title={null}
@@ -17414,6 +17585,7 @@ exports[`Expression Row renders the default row with button disabled 1`] = `
           <label
             className="slds-form-element__label"
             htmlFor="combobox-id-42"
+            id="combobox-label-id-42"
           >
             Resource
           </label>
@@ -17424,28 +17596,30 @@ exports[`Expression Row renders the default row with button disabled 1`] = `
               className="slds-combobox_container"
             >
               <div
-                aria-expanded="false"
-                aria-haspopup="listbox"
                 className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click"
-                role="combobox"
               >
                 <div
                   className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
                   role="none"
                 >
-                  <input
-                    aria-autocomplete={null}
+                  <button
                     aria-controls="listbox-id-42"
-                    autocomplete="off"
-                    className="slds-input slds-combobox__input"
-                    id="combobox-id-42"
+                    aria-expanded="false"
+                    aria-haspopup="listbox"
+                    aria-labelledby="combobox-label-id-42 combobox-id-42-selected-value"
+                    className="slds-input_faux slds-combobox__input"
+                    id="combobox-id-42-selected-value"
                     onBlur={[Function]}
                     onFocus={[Function]}
-                    placeholder="Select…"
-                    readOnly={true}
-                    role="textbox"
-                    type="text"
-                  />
+                    type="button"
+                  >
+                    <span
+                      className="slds-truncate"
+                      id="combobox-value-id-42"
+                    >
+                      Select…
+                    </span>
+                  </button>
                   <span
                     className="slds-icon_container slds-icon-utility-down slds-input__icon slds-input__icon_right"
                     title={null}
@@ -17594,6 +17768,7 @@ exports[`Expression Row renders the default row with button disabled 1`] = `
           <label
             className="slds-form-element__label"
             htmlFor="combobox-id-43"
+            id="combobox-label-id-43"
           >
             Operator
           </label>
@@ -17604,28 +17779,30 @@ exports[`Expression Row renders the default row with button disabled 1`] = `
               className="slds-combobox_container"
             >
               <div
-                aria-expanded="false"
-                aria-haspopup="listbox"
                 className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click"
-                role="combobox"
               >
                 <div
                   className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
                   role="none"
                 >
-                  <input
-                    aria-autocomplete={null}
+                  <button
                     aria-controls="listbox-id-43"
-                    autocomplete="off"
-                    className="slds-input slds-combobox__input"
-                    id="combobox-id-43"
+                    aria-expanded="false"
+                    aria-haspopup="listbox"
+                    aria-labelledby="combobox-label-id-43 combobox-id-43-selected-value"
+                    className="slds-input_faux slds-combobox__input"
+                    id="combobox-id-43-selected-value"
                     onBlur={[Function]}
                     onFocus={[Function]}
-                    placeholder="Select…"
-                    readOnly={true}
-                    role="textbox"
-                    type="text"
-                  />
+                    type="button"
+                  >
+                    <span
+                      className="slds-truncate"
+                      id="combobox-value-id-43"
+                    >
+                      Select…
+                    </span>
+                  </button>
                   <span
                     className="slds-icon_container slds-icon-utility-down slds-input__icon slds-input__icon_right"
                     title={null}
@@ -17856,6 +18033,7 @@ exports[`Expression Row renders the default row with input disabled 1`] = `
           <label
             className="slds-form-element__label"
             htmlFor="combobox-id-40"
+            id="combobox-label-id-40"
           >
             Resource
           </label>
@@ -17866,28 +18044,30 @@ exports[`Expression Row renders the default row with input disabled 1`] = `
               className="slds-combobox_container"
             >
               <div
-                aria-expanded="false"
-                aria-haspopup="listbox"
                 className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click"
-                role="combobox"
               >
                 <div
                   className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
                   role="none"
                 >
-                  <input
-                    aria-autocomplete={null}
+                  <button
                     aria-controls="listbox-id-40"
-                    autocomplete="off"
-                    className="slds-input slds-combobox__input"
-                    id="combobox-id-40"
+                    aria-expanded="false"
+                    aria-haspopup="listbox"
+                    aria-labelledby="combobox-label-id-40 combobox-id-40-selected-value"
+                    className="slds-input_faux slds-combobox__input"
+                    id="combobox-id-40-selected-value"
                     onBlur={[Function]}
                     onFocus={[Function]}
-                    placeholder="Select…"
-                    readOnly={true}
-                    role="textbox"
-                    type="text"
-                  />
+                    type="button"
+                  >
+                    <span
+                      className="slds-truncate"
+                      id="combobox-value-id-40"
+                    >
+                      Select…
+                    </span>
+                  </button>
                   <span
                     className="slds-icon_container slds-icon-utility-down slds-input__icon slds-input__icon_right"
                     title={null}
@@ -18036,6 +18216,7 @@ exports[`Expression Row renders the default row with input disabled 1`] = `
           <label
             className="slds-form-element__label"
             htmlFor="combobox-id-41"
+            id="combobox-label-id-41"
           >
             Operator
           </label>
@@ -18046,29 +18227,31 @@ exports[`Expression Row renders the default row with input disabled 1`] = `
               className="slds-combobox_container"
             >
               <div
-                aria-expanded="false"
-                aria-haspopup="listbox"
                 className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click"
-                role="combobox"
               >
                 <div
                   className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
                   role="none"
                 >
-                  <input
-                    aria-autocomplete={null}
+                  <button
                     aria-controls="listbox-id-41"
-                    autocomplete="off"
-                    className="slds-input slds-combobox__input"
+                    aria-expanded="false"
+                    aria-haspopup="listbox"
+                    aria-labelledby="combobox-label-id-41 combobox-id-41-selected-value"
+                    className="slds-input_faux slds-combobox__input slds-is-disabled"
                     disabled={true}
-                    id="combobox-id-41"
+                    id="combobox-id-41-selected-value"
                     onBlur={[Function]}
                     onFocus={[Function]}
-                    placeholder="Select…"
-                    readOnly={true}
-                    role="textbox"
-                    type="text"
-                  />
+                    type="button"
+                  >
+                    <span
+                      className="slds-truncate"
+                      id="combobox-value-id-41"
+                    >
+                      Select…
+                    </span>
+                  </button>
                   <span
                     className="slds-icon_container slds-icon-utility-down slds-input__icon slds-input__icon_right"
                     title={null}
@@ -18299,6 +18482,7 @@ exports[`Expression Row renders the default row with inputs and button disabled 
           <label
             className="slds-form-element__label"
             htmlFor="combobox-id-44"
+            id="combobox-label-id-44"
           >
             Resource
           </label>
@@ -18309,28 +18493,30 @@ exports[`Expression Row renders the default row with inputs and button disabled 
               className="slds-combobox_container"
             >
               <div
-                aria-expanded="false"
-                aria-haspopup="listbox"
                 className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click"
-                role="combobox"
               >
                 <div
                   className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
                   role="none"
                 >
-                  <input
-                    aria-autocomplete={null}
+                  <button
                     aria-controls="listbox-id-44"
-                    autocomplete="off"
-                    className="slds-input slds-combobox__input"
-                    id="combobox-id-44"
+                    aria-expanded="false"
+                    aria-haspopup="listbox"
+                    aria-labelledby="combobox-label-id-44 combobox-id-44-selected-value"
+                    className="slds-input_faux slds-combobox__input"
+                    id="combobox-id-44-selected-value"
                     onBlur={[Function]}
                     onFocus={[Function]}
-                    placeholder="Select…"
-                    readOnly={true}
-                    role="textbox"
-                    type="text"
-                  />
+                    type="button"
+                  >
+                    <span
+                      className="slds-truncate"
+                      id="combobox-value-id-44"
+                    >
+                      Select…
+                    </span>
+                  </button>
                   <span
                     className="slds-icon_container slds-icon-utility-down slds-input__icon slds-input__icon_right"
                     title={null}
@@ -18479,6 +18665,7 @@ exports[`Expression Row renders the default row with inputs and button disabled 
           <label
             className="slds-form-element__label"
             htmlFor="combobox-id-45"
+            id="combobox-label-id-45"
           >
             Operator
           </label>
@@ -18489,29 +18676,31 @@ exports[`Expression Row renders the default row with inputs and button disabled 
               className="slds-combobox_container"
             >
               <div
-                aria-expanded="false"
-                aria-haspopup="listbox"
                 className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click"
-                role="combobox"
               >
                 <div
                   className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
                   role="none"
                 >
-                  <input
-                    aria-autocomplete={null}
+                  <button
                     aria-controls="listbox-id-45"
-                    autocomplete="off"
-                    className="slds-input slds-combobox__input"
+                    aria-expanded="false"
+                    aria-haspopup="listbox"
+                    aria-labelledby="combobox-label-id-45 combobox-id-45-selected-value"
+                    className="slds-input_faux slds-combobox__input slds-is-disabled"
                     disabled={true}
-                    id="combobox-id-45"
+                    id="combobox-id-45-selected-value"
                     onBlur={[Function]}
                     onFocus={[Function]}
-                    placeholder="Select…"
-                    readOnly={true}
-                    role="textbox"
-                    type="text"
-                  />
+                    type="button"
+                  >
+                    <span
+                      className="slds-truncate"
+                      id="combobox-value-id-45"
+                    >
+                      Select…
+                    </span>
+                  </button>
                   <span
                     className="slds-icon_container slds-icon-utility-down slds-input__icon slds-input__icon_right"
                     title={null}
@@ -18746,6 +18935,7 @@ exports[`Expression Row renders the default row with legend text and sassistive 
           <label
             className="slds-form-element__label"
             htmlFor="combobox-id-36"
+            id="combobox-label-id-36"
           >
             Resource
           </label>
@@ -18756,28 +18946,30 @@ exports[`Expression Row renders the default row with legend text and sassistive 
               className="slds-combobox_container"
             >
               <div
-                aria-expanded="false"
-                aria-haspopup="listbox"
                 className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click"
-                role="combobox"
               >
                 <div
                   className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
                   role="none"
                 >
-                  <input
-                    aria-autocomplete={null}
+                  <button
                     aria-controls="listbox-id-36"
-                    autocomplete="off"
-                    className="slds-input slds-combobox__input"
-                    id="combobox-id-36"
+                    aria-expanded="false"
+                    aria-haspopup="listbox"
+                    aria-labelledby="combobox-label-id-36 combobox-id-36-selected-value"
+                    className="slds-input_faux slds-combobox__input"
+                    id="combobox-id-36-selected-value"
                     onBlur={[Function]}
                     onFocus={[Function]}
-                    placeholder="Select…"
-                    readOnly={true}
-                    role="textbox"
-                    type="text"
-                  />
+                    type="button"
+                  >
+                    <span
+                      className="slds-truncate"
+                      id="combobox-value-id-36"
+                    >
+                      Select…
+                    </span>
+                  </button>
                   <span
                     className="slds-icon_container slds-icon-utility-down slds-input__icon slds-input__icon_right"
                     title={null}
@@ -18926,6 +19118,7 @@ exports[`Expression Row renders the default row with legend text and sassistive 
           <label
             className="slds-form-element__label"
             htmlFor="combobox-id-37"
+            id="combobox-label-id-37"
           >
             Operator
           </label>
@@ -18936,28 +19129,30 @@ exports[`Expression Row renders the default row with legend text and sassistive 
               className="slds-combobox_container"
             >
               <div
-                aria-expanded="false"
-                aria-haspopup="listbox"
                 className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click"
-                role="combobox"
               >
                 <div
                   className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
                   role="none"
                 >
-                  <input
-                    aria-autocomplete={null}
+                  <button
                     aria-controls="listbox-id-37"
-                    autocomplete="off"
-                    className="slds-input slds-combobox__input"
-                    id="combobox-id-37"
+                    aria-expanded="false"
+                    aria-haspopup="listbox"
+                    aria-labelledby="combobox-label-id-37 combobox-id-37-selected-value"
+                    className="slds-input_faux slds-combobox__input"
+                    id="combobox-id-37-selected-value"
                     onBlur={[Function]}
                     onFocus={[Function]}
-                    placeholder="Select…"
-                    readOnly={true}
-                    role="textbox"
-                    type="text"
-                  />
+                    type="button"
+                  >
+                    <span
+                      className="slds-truncate"
+                      id="combobox-value-id-37"
+                    >
+                      Select…
+                    </span>
+                  </button>
                   <span
                     className="slds-icon_container slds-icon-utility-down slds-input__icon slds-input__icon_right"
                     title={null}

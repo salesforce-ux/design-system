@@ -19,7 +19,7 @@ import * as Vertical from './vertical/example';
 ## Base
 
 <CodeView>
-  {Base.default}
+  {getDisplayElementById(Base.default)}
 </CodeView>
 
 ### States
@@ -64,7 +64,7 @@ import * as Vertical from './vertical/example';
 ## Vertical
 
 <CodeView demoStyles="height: 200px;">
-  {Vertical.default}
+  {getDisplayElementById(Vertical.default)}
 </CodeView>
 
 ## States
@@ -100,11 +100,6 @@ import * as Vertical from './vertical/example';
 </CodeView>
 
 ## Modifiers
-
-### Color
-<CodeView>
-  {getDisplayElementById(Base.examples, 'success')}
-</CodeView>
 
 ### Radius
 <CodeView>

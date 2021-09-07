@@ -4,14 +4,14 @@ import Blockquote from '../../../shared/components/Blockquote';
 import { NavBarItem } from './navigation-bar/';
 import * as NavExamples from './navigation-bar/example';
 import * as NavTabBarExamples from './navigation-tab-bar/example';
-import { getDisplayElementById } from '../../shared/helpers';
+import { getDisplayElementById, getDemoStylesById } from '../../shared/helpers';
 
 <div className="doc lead">
   Global Navigation is the list of navigation links your users find in the Header on every page in Salesforce. Your Global Navigation includes a Navigation Bar where your users find the App Launcher, App Name, and Pages that each App includes.
 </div>
 
-<CodeView exampleOnly demoStyles="height: 15rem;">
-  {NavExamples.default}
+<CodeView exampleOnly demoStyles={getDemoStylesById(NavExamples.default, 'default')}>
+  {getDisplayElementById(NavExamples.default)}
 </CodeView>
 
 ## About Navigation Bar
@@ -23,8 +23,8 @@ The navigation bar is composed of a wrapper and 2 required regions:
 
 The markup should follow the order listed above for proper keyboard interaction set by the 508 compliance standards. Each included region inside the wrapper of `.slds-context-bar` needs the appropriate ordering class name, e.g. `.slds-context-bar__primary`.
 
-<CodeView demoStyles="height: 16rem;">
-  {NavExamples.default}
+<CodeView demoStyles={getDemoStylesById(NavExamples.default, 'default')}>
+  {getDisplayElementById(NavExamples.default)}
 </CodeView>
 
 ### Items on the Navigation Bar
@@ -108,14 +108,14 @@ Alternatively, two classes are available to add border using css. Adding the cla
 
 #### Menu Open
 
-<CodeView demoStyles="height: 16rem;">
+<CodeView demoStyles={getDemoStylesById(NavExamples.states, 'item-menu-open')}>
   {getDisplayElementById(NavExamples.states, 'item-menu-open')}
 </CodeView>
 
 ## About Navigation Tab Bar
 
 <CodeView>
-  {NavTabBarExamples.default}
+  {getDisplayElementById(NavTabBarExamples.default)}
 </CodeView>
 
 ### Accessibility

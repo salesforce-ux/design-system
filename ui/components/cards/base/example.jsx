@@ -466,6 +466,7 @@ export let examples = [
     id: 'with-long-truncated-title',
     label: 'With long truncated title',
     demoStyles: 'max-width: 360px;',
+    storybookStyles: true,
     element: (
       <Card>
         <CardHeader
@@ -507,6 +508,7 @@ export let examples = [
       --sds-c-card-footer-font-size: 0.75rem;
       --sds-c-card-footer-text-align: right;
     `,
+    storybookStyles: true,
     element: (
       <Card>
         <CardHeader

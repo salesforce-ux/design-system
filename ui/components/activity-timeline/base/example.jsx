@@ -8,11 +8,7 @@ import SvgIcon from '../../../shared/svg-icon';
 import { UtilityIcon } from '../../icons/base/example';
 import { Button } from '../../buttons/base/example';
 import classNames from 'classnames';
-
-const emailItemId = 'email-item';
-const callItemId = 'call-item';
-const eventItemId = 'event-item';
-const taskItemId = 'task-item';
+import uniqueId from 'lodash.uniqueid';
 
 const emailIcons = [
   <UtilityIcon
@@ -163,10 +159,9 @@ export const TimelineItem = props => (
   <div
     className={classNames(
       'slds-timeline__item_expandable',
-      `${
-        props.type === 'log_a_call'
-          ? 'slds-timeline__item_call'
-          : 'slds-timeline__item_' + props.type
+      `${props.type === 'log_a_call'
+        ? 'slds-timeline__item_call'
+        : 'slds-timeline__item_' + props.type
       }`,
       { 'slds-is-open': props.isExpanded },
       props.className
@@ -267,7 +262,7 @@ export let ActivityTimeline = props => {
     <ul className="slds-timeline">
       <li>
         <TimelineItem
-          id={`${taskItemId + '-' + props.id}`}
+          id={uniqueId(`task-item-${props.id}-`)}
           type="task"
           title="Review proposals for EBC deck with larger team and have marketing review this"
           date="9:00am | 3/20/17"
@@ -294,7 +289,7 @@ export let ActivityTimeline = props => {
       </li>
       <li>
         <TimelineItem
-          id={`${callItemId + '-' + props.id}`}
+          id={uniqueId(`call-item-${props.id}-`)}
           type="log_a_call"
           title="Mobile conversation on Monday"
           date="10:00am | 3/23/17"
@@ -319,7 +314,7 @@ export let ActivityTimeline = props => {
       </li>
       <li>
         <TimelineItem
-          id={`${emailItemId + '-' + props.id}`}
+          id={uniqueId(`email-item-${props.id}-`)}
           type="email"
           title="Re: Mobile conversation on Monday with the new global team"
           date="10:00am | 3/24/17"
@@ -347,7 +342,7 @@ export let ActivityTimeline = props => {
       </li>
       <li>
         <TimelineItem
-          id={`${eventItemId + '-' + props.id}`}
+          id={uniqueId(`event-item-${props.id}-`)}
           type="event"
           title="EBC Follow up call"
           date="10:30am | 3/24/17"

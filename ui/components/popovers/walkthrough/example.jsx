@@ -46,24 +46,34 @@ export let Footer = props => (
 // Export
 /// ///////////////////////////////////////////
 
-export default (
-  <Popover
-    className="slds-popover_walkthrough slds-nubbin_left"
-    headingId={headingUniqueId}
-    header={<Header title="Manage your channels" />}
-    footer={<Footer steps nextButton />}
-    closeButton
-    inverse
-  >
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua.
-    </p>
-  </Popover>
-);
+export default [
+  {
+    context: 'Walkthrough',
+    deprecated: true,
+    id: 'walkthrough-default',
+    label: 'Deprecated – Walkthrough default',
+    element: (
+      <Popover
+        className="slds-popover_walkthrough slds-nubbin_left"
+        headingId={headingUniqueId}
+        header={<Header title="Manage your channels" />}
+        footer={<Footer steps nextButton />}
+        closeButton
+        inverse
+      >
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+      </Popover>
+    )
+  }
+];
 
 export let examples = [
   {
+    context: 'Walkthrough',
+    deprecated: true,
     id: 'micro-setup',
     label: 'Deprecated – Micro Setup',
     element: (
@@ -83,6 +93,8 @@ export let examples = [
     )
   },
   {
+    context: 'Walkthrough',
+    deprecated: true,
     id: 'micro-setup-alternate',
     label: 'Deprecated – Micro Setup - Alternate',
     element: (
@@ -102,6 +114,8 @@ export let examples = [
     )
   },
   {
+    context: 'Walkthrough',
+    deprecated: true,
     id: 'micro-setup-in-page',
     label: 'Deprecated – Micro Setup - In Page',
     element: (
@@ -121,6 +135,8 @@ export let examples = [
     )
   },
   {
+    context: 'Walkthrough',
+    deprecated: true,
     id: 'micro-setup-inline-form',
     label: 'Deprecated – Micro Setup - Inline Form',
     element: (
@@ -156,6 +172,8 @@ export let examples = [
     )
   },
   {
+    context: 'Walkthrough',
+    deprecated: true,
     id: 'action-popover',
     label: 'Deprecated – Action Popover',
     element: (
@@ -190,6 +208,8 @@ export let examples = [
     )
   },
   {
+    context: 'Walkthrough',
+    deprecated: true,
     id: 'action-popover-heading',
     label: 'Deprecated – Action Popover - With Heading',
     element: (
@@ -225,6 +245,8 @@ export let examples = [
     )
   },
   {
+    context: 'Walkthrough',
+    deprecated: true,
     id: 'action-popover-with-link',
     label: 'Deprecated – Action Popover - With Link',
     element: (

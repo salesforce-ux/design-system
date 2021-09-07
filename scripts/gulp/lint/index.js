@@ -22,17 +22,17 @@ export const sass = () =>
         reporters: [
           {
             formatter: 'string',
-            console: true
-          }
+            console: true,
+          },
         ],
-        failAfterError: true
+        failAfterError: true,
       })
     );
 
 export const spaces = () =>
   gulp
     .src([
-      '*.{js,json,md,yml,txt}',
+      '!(*.local).{js,json,md,yml,txt}',
       '.*',
       '!.DS_Store',
       '!LICENSE-icons-images.txt',
@@ -40,15 +40,15 @@ export const spaces = () =>
       'ui/**/*.*',
       'site/**/*.{js,jsx,sh,scss,yml,md,xml}',
       'scripts/**/*.{js,sh,jsx}',
-      '!**/__snapshots__/*'
+      '!**/__snapshots__/*',
     ])
     .pipe(cache('lintspaces'))
     .pipe(
       lintspaces({
         editorconfig: '.editorconfig',
         ignores: [
-          /\/\*[\s\S]*?\*\//g // Ignore comments
-        ]
+          /\/\*[\s\S]*?\*\//g, // Ignore comments
+        ],
       })
     )
     .pipe(lintspaces.reporter({ breakOnWarning: true }));
@@ -56,11 +56,11 @@ export const spaces = () =>
 export const javascript = (files, options) =>
   gulp
     .src([
-      '*.js',
+      '!(*.local).js',
       'shared/**/*.{js,jsx}',
       'site/**/*.{js,jsx}',
       'ui/**/*.{js,jsx}',
-      '!**/*.spec.{js,jsx}'
+      '!**/*.spec.{js,jsx}',
     ])
     .pipe(cache('lintjs'))
     .pipe(eslint())
@@ -90,7 +90,7 @@ export const html = () =>
           'gradientTransform',
           'stdDeviation',
           'autoComplete',
-          'srcDoc'
+          'srcDoc',
         ],
         'attr-no-duplication': true,
         'attr-unsafe-chars': true,
@@ -107,12 +107,12 @@ export const html = () =>
         'title-require': true,
         // TODO: enable when https://github.com/yaniswang/HTMLHint/issues/139 is fixed
         // as <div>&lt;div></div> raises errors at the moment
-        'spec-char-escape': false
+        'spec-char-escape': false,
       })
     )
     .pipe(htmlhint.failReporter());
 
-export const markup = done =>
+export const markup = (done) =>
   validateMarkup().fork(console.error, () => done());
 
 export const tokensYml = () =>
@@ -125,7 +125,7 @@ export const tokensComponents = () =>
     .src([
       './ui/components/**/tokens/*.yml',
       '!./ui/components/**/tokens/bg-*.yml', // icons
-      '!./ui/components/**/tokens/force-font-commons.yml' // fonts
+      '!./ui/components/**/tokens/force-font-commons.yml', // fonts
     ])
     .pipe(tokenlint())
     .pipe(tokenlint.report('verbose'));

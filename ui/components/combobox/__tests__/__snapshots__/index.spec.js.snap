@@ -7,6 +7,7 @@ exports[`Combobox with a Dialog dropdown renders a closed, readonly dialog combo
   <label
     className="slds-form-element__label"
     htmlFor="combobox-id-01"
+    id="combobox-label-id-19"
   >
     Languages
   </label>
@@ -17,28 +18,30 @@ exports[`Combobox with a Dialog dropdown renders a closed, readonly dialog combo
       className="slds-combobox_container"
     >
       <div
-        aria-expanded="false"
-        aria-haspopup="dialog"
         className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click"
-        role="combobox"
       >
         <div
           className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
           role="none"
         >
-          <input
-            aria-autocomplete={null}
+          <button
             aria-controls="popover-id-01"
-            autocomplete="off"
-            className="slds-input slds-combobox__input"
-            id="combobox-id-01"
+            aria-expanded="false"
+            aria-haspopup="dialog"
+            aria-labelledby="combobox-label-id-19 combobox-id-01-selected-value"
+            className="slds-input_faux slds-combobox__input"
+            id="combobox-id-01-selected-value"
             onBlur={[Function]}
             onFocus={[Function]}
-            placeholder="Select an Option…"
-            readOnly={true}
-            role="textbox"
-            type="text"
-          />
+            type="button"
+          >
+            <span
+              className="slds-truncate"
+              id="combobox-value-id-12"
+            >
+              Select an Option…
+            </span>
+          </button>
           <span
             className="slds-icon_container slds-icon-utility-down slds-input__icon slds-input__icon_right"
             title={null}
@@ -102,6 +105,7 @@ exports[`Combobox with a Dialog dropdown renders an open, readonly dialog combob
   <label
     className="slds-form-element__label"
     htmlFor="combobox-id-01"
+    id="combobox-label-id-20"
   >
     Languages
   </label>
@@ -112,28 +116,30 @@ exports[`Combobox with a Dialog dropdown renders an open, readonly dialog combob
       className="slds-combobox_container"
     >
       <div
-        aria-expanded="true"
-        aria-haspopup="dialog"
         className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open"
-        role="combobox"
       >
         <div
           className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
           role="none"
         >
-          <input
-            aria-autocomplete={null}
+          <button
             aria-controls="popover-id-01"
-            autocomplete="off"
-            className="slds-input slds-combobox__input"
-            id="combobox-id-01"
+            aria-expanded="true"
+            aria-haspopup="dialog"
+            aria-labelledby="combobox-label-id-20 combobox-id-01-selected-value"
+            className="slds-input_faux slds-combobox__input"
+            id="combobox-id-01-selected-value"
             onBlur={[Function]}
             onFocus={[Function]}
-            placeholder="Select an Option…"
-            readOnly={true}
-            role="textbox"
-            type="text"
-          />
+            type="button"
+          >
+            <span
+              className="slds-truncate"
+              id="combobox-value-id-13"
+            >
+              Select an Option…
+            </span>
+          </button>
           <span
             className="slds-icon_container slds-icon-utility-down slds-input__icon slds-input__icon_right"
             title={null}
@@ -190,13 +196,14 @@ exports[`Combobox with a Dialog dropdown renders an open, readonly dialog combob
 </div>
 `;
 
-exports[`render combobox render autocomplete combobox with mutliple selections 1`] = `
+exports[`render combobox render autocomplete combobox with multiple selections 1`] = `
 <div
   className="slds-form-element"
 >
   <label
     className="slds-form-element__label"
     htmlFor="combobox-id-01"
+    id="combobox-label-id-10"
   >
     Relate To
   </label>
@@ -207,10 +214,7 @@ exports[`render combobox render autocomplete combobox with mutliple selections 1
       className="slds-combobox_container slds-has-selection"
     >
       <div
-        aria-expanded="false"
-        aria-haspopup="listbox"
         className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click"
-        role="combobox"
       >
         <div
           className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
@@ -219,13 +223,15 @@ exports[`render combobox render autocomplete combobox with mutliple selections 1
           <input
             aria-autocomplete="list"
             aria-controls="listbox-id-01"
-            autocomplete="off"
+            aria-expanded="false"
+            aria-haspopup="listbox"
+            autoComplete="off"
             className="slds-input slds-combobox__input"
             id="combobox-id-01"
             onBlur={[Function]}
             onFocus={[Function]}
             placeholder="Search..."
-            role="textbox"
+            role="combobox"
             type="text"
           />
           <span
@@ -458,6 +464,7 @@ exports[`render combobox render autocomplete combobox with single selection 1`] 
   <label
     className="slds-form-element__label"
     htmlFor="combobox-id-01"
+    id="combobox-label-id-9"
   >
     Relate To
   </label>
@@ -468,10 +475,7 @@ exports[`render combobox render autocomplete combobox with single selection 1`] 
       className="slds-combobox_container"
     >
       <div
-        aria-expanded="false"
-        aria-haspopup="listbox"
         className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click"
-        role="combobox"
       >
         <div
           className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
@@ -480,14 +484,16 @@ exports[`render combobox render autocomplete combobox with single selection 1`] 
           <input
             aria-autocomplete="list"
             aria-controls="listbox-id-01"
-            autocomplete="off"
+            aria-expanded="false"
+            aria-haspopup="listbox"
+            autoComplete="off"
             className="slds-input slds-combobox__input slds-combobox__input-value"
             defaultValue="GenePoint"
             id="combobox-id-01"
             onBlur={[Function]}
             onFocus={[Function]}
             placeholder="Search..."
-            role="textbox"
+            role="combobox"
             type="text"
           />
           <span
@@ -649,6 +655,7 @@ exports[`render combobox render autocomplete entity combobox 1`] = `
   <label
     className="slds-form-element__label"
     htmlFor="combobox-id-01"
+    id="combobox-label-id-11"
   >
     Relate To
   </label>
@@ -659,10 +666,7 @@ exports[`render combobox render autocomplete entity combobox 1`] = `
       className="slds-combobox_container"
     >
       <div
-        aria-expanded="true"
-        aria-haspopup="listbox"
         className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open"
-        role="combobox"
       >
         <div
           className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
@@ -671,13 +675,15 @@ exports[`render combobox render autocomplete entity combobox 1`] = `
           <input
             aria-autocomplete="list"
             aria-controls="listbox-id-01"
-            autocomplete="off"
+            aria-expanded="true"
+            aria-haspopup="listbox"
+            autoComplete="off"
             className="slds-input slds-combobox__input slds-has-focus"
             id="combobox-id-01"
             onBlur={[Function]}
             onFocus={[Function]}
             placeholder="Search..."
-            role="textbox"
+            role="combobox"
             type="text"
           />
           <span
@@ -820,6 +826,7 @@ exports[`render combobox render autocomplete entity combobox displaying options 
   <label
     className="slds-form-element__label"
     htmlFor="combobox-id-01"
+    id="combobox-label-id-12"
   >
     Relate To
   </label>
@@ -830,10 +837,7 @@ exports[`render combobox render autocomplete entity combobox displaying options 
       className="slds-combobox_container"
     >
       <div
-        aria-expanded="true"
-        aria-haspopup="listbox"
         className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open"
-        role="combobox"
       >
         <div
           className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
@@ -843,14 +847,16 @@ exports[`render combobox render autocomplete entity combobox displaying options 
             aria-activedescendant="option1"
             aria-autocomplete="list"
             aria-controls="listbox-id-01"
-            autocomplete="off"
+            aria-expanded="true"
+            aria-haspopup="listbox"
+            autoComplete="off"
             className="slds-input slds-combobox__input slds-has-focus slds-combobox__input-value"
             defaultValue="salesforce"
             id="combobox-id-01"
             onBlur={[Function]}
             onFocus={[Function]}
             placeholder="Search..."
-            role="textbox"
+            role="combobox"
             type="text"
           />
           <span
@@ -1104,6 +1110,7 @@ exports[`render combobox render autocomplete entity combobox with mutliple selec
   <label
     className="slds-form-element__label"
     htmlFor="combobox-id-01"
+    id="combobox-label-id-14"
   >
     Relate To
   </label>
@@ -1114,10 +1121,7 @@ exports[`render combobox render autocomplete entity combobox with mutliple selec
       className="slds-combobox_container slds-has-selection"
     >
       <div
-        aria-expanded="false"
-        aria-haspopup="listbox"
         className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click"
-        role="combobox"
       >
         <div
           className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
@@ -1126,13 +1130,15 @@ exports[`render combobox render autocomplete entity combobox with mutliple selec
           <input
             aria-autocomplete="list"
             aria-controls="listbox-id-01"
-            autocomplete="off"
+            aria-expanded="false"
+            aria-haspopup="listbox"
+            autoComplete="off"
             className="slds-input slds-combobox__input"
             id="combobox-id-01"
             onBlur={[Function]}
             onFocus={[Function]}
             placeholder="Search..."
-            role="textbox"
+            role="combobox"
             type="text"
           />
           <span
@@ -1383,6 +1389,7 @@ exports[`render combobox render autocomplete entity combobox with single selecti
   <label
     className="slds-form-element__label"
     htmlFor="combobox-id-01"
+    id="combobox-label-id-13"
   >
     Relate To
   </label>
@@ -1393,10 +1400,7 @@ exports[`render combobox render autocomplete entity combobox with single selecti
       className="slds-combobox_container slds-has-selection"
     >
       <div
-        aria-expanded="false"
-        aria-haspopup="listbox"
         className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click"
-        role="combobox"
       >
         <div
           className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_left-right"
@@ -1420,21 +1424,24 @@ exports[`render combobox render autocomplete entity combobox with single selecti
               Description of icon when needed
             </span>
           </span>
-          <input
-            aria-autocomplete={null}
+          <button
             aria-controls="listbox-id-01"
-            autocomplete="off"
-            className="slds-input slds-combobox__input slds-combobox__input-value"
-            defaultValue="Salesforce.com, Inc."
-            id="combobox-id-01"
+            aria-expanded="false"
+            aria-haspopup="listbox"
+            aria-labelledby="combobox-label-id-13 combobox-id-01-selected-value"
+            className="slds-input_faux slds-combobox__input slds-combobox__input-value"
+            id="combobox-id-01-selected-value"
             onBlur={[Function]}
             onFocus={[Function]}
-            placeholder="Select an Option…"
-            readOnly={true}
-            role="textbox"
-            tabIndex="-1"
-            type="text"
-          />
+            type="button"
+          >
+            <span
+              className="slds-truncate"
+              id="combobox-value-id-7"
+            >
+              Salesforce.com, Inc.
+            </span>
+          </button>
           <button
             className="slds-button slds-button_icon slds-input__icon slds-input__icon_right"
             onClick={[Function]}
@@ -1576,6 +1583,7 @@ exports[`render combobox render base combobox 1`] = `
   <label
     className="slds-form-element__label"
     htmlFor="combobox-id-01"
+    id="combobox-label-id-1"
   >
     Relate To
   </label>
@@ -1586,29 +1594,30 @@ exports[`render combobox render base combobox 1`] = `
       className="slds-combobox_container"
     >
       <div
-        aria-expanded="true"
-        aria-haspopup="listbox"
         className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open"
-        role="combobox"
       >
         <div
           className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
           role="none"
         >
-          <input
-            aria-autocomplete={null}
+          <button
             aria-controls="listbox-id-01"
-            autocomplete="off"
-            className="slds-input slds-combobox__input slds-has-focus slds-combobox__input-value"
-            defaultValue="Accounts"
-            id="combobox-id-01"
+            aria-expanded="true"
+            aria-haspopup="listbox"
+            aria-labelledby="combobox-label-id-1 combobox-id-01-selected-value"
+            className="slds-input_faux slds-combobox__input slds-has-focus slds-combobox__input-value"
+            id="combobox-id-01-selected-value"
             onBlur={[Function]}
             onFocus={[Function]}
-            placeholder="Select an Option…"
-            readOnly={true}
-            role="textbox"
-            type="text"
-          />
+            type="button"
+          >
+            <span
+              className="slds-truncate"
+              id="combobox-value-id-1"
+            >
+              Accounts
+            </span>
+          </button>
           <span
             className="slds-icon_container slds-icon-utility-down slds-input__icon slds-input__icon_right"
             title={null}
@@ -1864,6 +1873,7 @@ exports[`render combobox render combobox with displaying options based on user i
   <label
     className="slds-form-element__label"
     htmlFor="combobox-id-01"
+    id="combobox-label-id-8"
   >
     Relate To
   </label>
@@ -1874,10 +1884,7 @@ exports[`render combobox render combobox with displaying options based on user i
       className="slds-combobox_container"
     >
       <div
-        aria-expanded="true"
-        aria-haspopup="listbox"
         className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open"
-        role="combobox"
       >
         <div
           className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
@@ -1887,14 +1894,16 @@ exports[`render combobox render combobox with displaying options based on user i
             aria-activedescendant="option1"
             aria-autocomplete="list"
             aria-controls="listbox-id-01"
-            autocomplete="off"
+            aria-expanded="true"
+            aria-haspopup="listbox"
+            autoComplete="off"
             className="slds-input slds-combobox__input slds-has-focus slds-combobox__input-value"
             defaultValue="opp"
             id="combobox-id-01"
             onBlur={[Function]}
             onFocus={[Function]}
             placeholder="Search..."
-            role="textbox"
+            role="combobox"
             type="text"
           />
           <span
@@ -2052,6 +2061,8 @@ exports[`render combobox render grouped combobox 1`] = `
         >
           <label
             className="slds-form-element__label slds-assistive-text"
+            htmlFor="combobox-id-01-object-switcher"
+            id="combobox-label-id-15"
           >
             Filter Search by:
           </label>
@@ -2063,28 +2074,30 @@ exports[`render combobox render grouped combobox 1`] = `
             >
               <div
                 aria-controls="primary-combobox-id-01"
-                aria-expanded="false"
-                aria-haspopup="listbox"
                 className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click"
-                role="combobox"
               >
                 <div
                   className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
                   role="none"
                 >
-                  <input
-                    aria-autocomplete={null}
+                  <button
                     aria-controls="objectswitcher-listbox-id-01"
-                    autocomplete="off"
-                    className="slds-input slds-combobox__input slds-combobox__input-value"
-                    defaultValue="Accounts"
-                    id="text-input-unique-id-37"
+                    aria-expanded="false"
+                    aria-haspopup="listbox"
+                    aria-labelledby="combobox-label-id-15 combobox-id-01-object-switcher-selected-value"
+                    className="slds-input_faux slds-combobox__input slds-combobox__input-value"
+                    id="combobox-id-01-object-switcher-selected-value"
                     onBlur={[Function]}
                     onFocus={[Function]}
-                    placeholder=" "
-                    role="textbox"
-                    type="text"
-                  />
+                    type="button"
+                  >
+                    <span
+                      className="slds-truncate"
+                      id="combobox-value-id-8"
+                    >
+                      Accounts
+                    </span>
+                  </button>
                   <span
                     className="slds-icon_container slds-icon-utility-down slds-input__icon slds-input__icon_right"
                     title={null}
@@ -2344,11 +2357,8 @@ exports[`render combobox render grouped combobox 1`] = `
         className="slds-combobox_container slds-combobox-addon_end"
       >
         <div
-          aria-expanded="true"
-          aria-haspopup="listbox"
           className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open"
           id="primary-combobox-id-01"
-          role="combobox"
         >
           <div
             className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
@@ -2357,13 +2367,15 @@ exports[`render combobox render grouped combobox 1`] = `
             <input
               aria-autocomplete="list"
               aria-controls="listbox-id-01"
-              autocomplete="off"
+              aria-expanded="true"
+              aria-haspopup="listbox"
+              autoComplete="off"
               className="slds-input slds-combobox__input slds-has-focus"
               id="combobox-id-01"
               onBlur={[Function]}
               onFocus={[Function]}
               placeholder="Search..."
-              role="textbox"
+              role="combobox"
               type="text"
             />
             <span
@@ -2620,6 +2632,8 @@ exports[`render combobox render grouped combobox displaying options based on use
         >
           <label
             className="slds-form-element__label slds-assistive-text"
+            htmlFor="combobox-id-01-object-switcher"
+            id="combobox-label-id-16"
           >
             Filter Search by:
           </label>
@@ -2631,28 +2645,30 @@ exports[`render combobox render grouped combobox displaying options based on use
             >
               <div
                 aria-controls="primary-combobox-id-01"
-                aria-expanded="false"
-                aria-haspopup="listbox"
                 className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click"
-                role="combobox"
               >
                 <div
                   className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
                   role="none"
                 >
-                  <input
-                    aria-autocomplete={null}
+                  <button
                     aria-controls="objectswitcher-listbox-id-01"
-                    autocomplete="off"
-                    className="slds-input slds-combobox__input slds-combobox__input-value"
-                    defaultValue="Accounts"
-                    id="text-input-unique-id-39"
+                    aria-expanded="false"
+                    aria-haspopup="listbox"
+                    aria-labelledby="combobox-label-id-16 combobox-id-01-object-switcher-selected-value"
+                    className="slds-input_faux slds-combobox__input slds-combobox__input-value"
+                    id="combobox-id-01-object-switcher-selected-value"
                     onBlur={[Function]}
                     onFocus={[Function]}
-                    placeholder=" "
-                    role="textbox"
-                    type="text"
-                  />
+                    type="button"
+                  >
+                    <span
+                      className="slds-truncate"
+                      id="combobox-value-id-9"
+                    >
+                      Accounts
+                    </span>
+                  </button>
                   <span
                     className="slds-icon_container slds-icon-utility-down slds-input__icon slds-input__icon_right"
                     title={null}
@@ -2912,11 +2928,8 @@ exports[`render combobox render grouped combobox displaying options based on use
         className="slds-combobox_container slds-combobox-addon_end"
       >
         <div
-          aria-expanded="true"
-          aria-haspopup="listbox"
           className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open"
           id="primary-combobox-id-01"
-          role="combobox"
         >
           <div
             className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
@@ -2925,14 +2938,16 @@ exports[`render combobox render grouped combobox displaying options based on use
             <input
               aria-autocomplete="list"
               aria-controls="listbox-id-01"
-              autocomplete="off"
+              aria-expanded="true"
+              aria-haspopup="listbox"
+              autoComplete="off"
               className="slds-input slds-combobox__input slds-has-focus slds-combobox__input-value"
               defaultValue="salesforce"
               id="combobox-id-01"
               onBlur={[Function]}
               onFocus={[Function]}
               placeholder="Search..."
-              role="textbox"
+              role="combobox"
               type="text"
             />
             <span
@@ -3204,6 +3219,8 @@ exports[`render combobox render grouped combobox with selections made in collaps
         >
           <label
             className="slds-form-element__label slds-assistive-text"
+            htmlFor="combobox-id-01-object-switcher"
+            id="combobox-label-id-17"
           >
             Filter Search by:
           </label>
@@ -3215,28 +3232,30 @@ exports[`render combobox render grouped combobox with selections made in collaps
             >
               <div
                 aria-controls="primary-combobox-id-01"
-                aria-expanded="false"
-                aria-haspopup="listbox"
                 className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click"
-                role="combobox"
               >
                 <div
                   className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
                   role="none"
                 >
-                  <input
-                    aria-autocomplete={null}
+                  <button
                     aria-controls="objectswitcher-listbox-id-01"
-                    autocomplete="off"
-                    className="slds-input slds-combobox__input slds-combobox__input-value"
-                    defaultValue="Accounts"
-                    id="text-input-unique-id-41"
+                    aria-expanded="false"
+                    aria-haspopup="listbox"
+                    aria-labelledby="combobox-label-id-17 combobox-id-01-object-switcher-selected-value"
+                    className="slds-input_faux slds-combobox__input slds-combobox__input-value"
+                    id="combobox-id-01-object-switcher-selected-value"
                     onBlur={[Function]}
                     onFocus={[Function]}
-                    placeholder=" "
-                    role="textbox"
-                    type="text"
-                  />
+                    type="button"
+                  >
+                    <span
+                      className="slds-truncate"
+                      id="combobox-value-id-10"
+                    >
+                      Accounts
+                    </span>
+                  </button>
                   <span
                     className="slds-icon_container slds-icon-utility-down slds-input__icon slds-input__icon_right"
                     title={null}
@@ -3496,11 +3515,8 @@ exports[`render combobox render grouped combobox with selections made in collaps
         className="slds-combobox_container slds-combobox-addon_end"
       >
         <div
-          aria-expanded="false"
-          aria-haspopup="listbox"
           className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click"
           id="primary-combobox-id-01"
-          role="combobox"
         >
           <div
             className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
@@ -3509,13 +3525,15 @@ exports[`render combobox render grouped combobox with selections made in collaps
             <input
               aria-autocomplete="list"
               aria-controls="listbox-id-01"
-              autocomplete="off"
+              aria-expanded="false"
+              aria-haspopup="listbox"
+              autoComplete="off"
               className="slds-input slds-combobox__input"
               id="combobox-id-01"
               onBlur={[Function]}
               onFocus={[Function]}
               placeholder="Search..."
-              role="textbox"
+              role="combobox"
               type="text"
             />
             <span
@@ -4179,6 +4197,8 @@ exports[`render combobox render grouped combobox with selections made in expande
         >
           <label
             className="slds-form-element__label slds-assistive-text"
+            htmlFor="combobox-id-01-object-switcher"
+            id="combobox-label-id-18"
           >
             Filter Search by:
           </label>
@@ -4190,28 +4210,30 @@ exports[`render combobox render grouped combobox with selections made in expande
             >
               <div
                 aria-controls="primary-combobox-id-01"
-                aria-expanded="false"
-                aria-haspopup="listbox"
                 className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click"
-                role="combobox"
               >
                 <div
                   className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
                   role="none"
                 >
-                  <input
-                    aria-autocomplete={null}
+                  <button
                     aria-controls="objectswitcher-listbox-id-01"
-                    autocomplete="off"
-                    className="slds-input slds-combobox__input slds-combobox__input-value"
-                    defaultValue="Accounts"
-                    id="text-input-unique-id-43"
+                    aria-expanded="false"
+                    aria-haspopup="listbox"
+                    aria-labelledby="combobox-label-id-18 combobox-id-01-object-switcher-selected-value"
+                    className="slds-input_faux slds-combobox__input slds-combobox__input-value"
+                    id="combobox-id-01-object-switcher-selected-value"
                     onBlur={[Function]}
                     onFocus={[Function]}
-                    placeholder=" "
-                    role="textbox"
-                    type="text"
-                  />
+                    type="button"
+                  >
+                    <span
+                      className="slds-truncate"
+                      id="combobox-value-id-11"
+                    >
+                      Accounts
+                    </span>
+                  </button>
                   <span
                     className="slds-icon_container slds-icon-utility-down slds-input__icon slds-input__icon_right"
                     title={null}
@@ -4471,11 +4493,8 @@ exports[`render combobox render grouped combobox with selections made in expande
         className="slds-combobox_container slds-combobox-addon_end"
       >
         <div
-          aria-expanded="false"
-          aria-haspopup="listbox"
           className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click"
           id="primary-combobox-id-01"
-          role="combobox"
         >
           <div
             className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
@@ -4484,13 +4503,15 @@ exports[`render combobox render grouped combobox with selections made in expande
             <input
               aria-autocomplete="list"
               aria-controls="listbox-id-01"
-              autocomplete="off"
+              aria-expanded="false"
+              aria-haspopup="listbox"
+              autoComplete="off"
               className="slds-input slds-combobox__input slds-has-focus"
               id="combobox-id-01"
               onBlur={[Function]}
               onFocus={[Function]}
               placeholder="Search..."
-              role="textbox"
+              role="combobox"
               type="text"
             />
             <span
@@ -5125,7 +5146,8 @@ exports[`render combobox render multiple selections in a closed combobox 1`] = `
 >
   <label
     className="slds-form-element__label"
-    htmlFor="combobox-id-01"
+    htmlFor="combobox-id-8"
+    id="combobox-label-id-3"
   >
     Relate To
   </label>
@@ -5136,29 +5158,30 @@ exports[`render combobox render multiple selections in a closed combobox 1`] = `
       className="slds-combobox_container"
     >
       <div
-        aria-expanded="false"
-        aria-haspopup="listbox"
         className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click"
-        role="combobox"
       >
         <div
           className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
           role="none"
         >
-          <input
-            aria-autocomplete={null}
-            aria-controls="listbox-id-01"
-            autocomplete="off"
-            className="slds-input slds-combobox__input slds-combobox__input-value"
-            defaultValue="2 Options Selected"
-            id="combobox-id-01"
+          <button
+            aria-controls="listbox-id-8"
+            aria-expanded="false"
+            aria-haspopup="listbox"
+            aria-labelledby="combobox-label-id-3 combobox-id-8-selected-value"
+            className="slds-input_faux slds-combobox__input slds-combobox__input-value"
+            id="combobox-id-8-selected-value"
             onBlur={[Function]}
             onFocus={[Function]}
-            placeholder="Select an Option…"
-            readOnly={true}
-            role="textbox"
-            type="text"
-          />
+            type="button"
+          >
+            <span
+              className="slds-truncate"
+              id="combobox-value-id-3"
+            >
+              2 Options Selected
+            </span>
+          </button>
           <span
             className="slds-icon_container slds-icon-utility-down slds-input__icon slds-input__icon_right"
             title={null}
@@ -5176,7 +5199,7 @@ exports[`render combobox render multiple selections in a closed combobox 1`] = `
         <div
           aria-orientation={null}
           className="slds-dropdown slds-dropdown_length-5 slds-dropdown_fluid"
-          id="listbox-id-01"
+          id="listbox-id-8"
           role="listbox"
         >
           <ul
@@ -5513,7 +5536,8 @@ exports[`render combobox render single selection in an open combobox 1`] = `
 >
   <label
     className="slds-form-element__label"
-    htmlFor="combobox-id-01"
+    htmlFor="combobox-id-5"
+    id="combobox-label-id-2"
   >
     Relate To
   </label>
@@ -5524,30 +5548,31 @@ exports[`render combobox render single selection in an open combobox 1`] = `
       className="slds-combobox_container"
     >
       <div
-        aria-expanded="true"
-        aria-haspopup="listbox"
         className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open"
-        role="combobox"
       >
         <div
           className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
           role="none"
         >
-          <input
+          <button
             aria-activedescendant="option1"
-            aria-autocomplete={null}
-            aria-controls="listbox-id-01"
-            autocomplete="off"
-            className="slds-input slds-combobox__input slds-has-focus slds-combobox__input-value"
-            defaultValue="Accounts"
-            id="combobox-id-01"
+            aria-controls="listbox-id-6"
+            aria-expanded="true"
+            aria-haspopup="listbox"
+            aria-labelledby="combobox-label-id-2 combobox-id-5-selected-value"
+            className="slds-input_faux slds-combobox__input slds-has-focus slds-combobox__input-value"
+            id="combobox-id-5-selected-value"
             onBlur={[Function]}
             onFocus={[Function]}
-            placeholder="Select an Option…"
-            readOnly={true}
-            role="textbox"
-            type="text"
-          />
+            type="button"
+          >
+            <span
+              className="slds-truncate"
+              id="combobox-value-id-2"
+            >
+              Accounts
+            </span>
+          </button>
           <span
             className="slds-icon_container slds-icon-utility-down slds-input__icon slds-input__icon_right"
             title={null}
@@ -5565,7 +5590,7 @@ exports[`render combobox render single selection in an open combobox 1`] = `
         <div
           aria-orientation={null}
           className="slds-dropdown slds-dropdown_length-5 slds-dropdown_fluid"
-          id="listbox-id-01"
+          id="listbox-id-6"
           role="listbox"
         >
           <ul
@@ -5817,6 +5842,7 @@ exports[`render combobox renders autocomplete combobox 1`] = `
   <label
     className="slds-form-element__label"
     htmlFor="combobox-id-01"
+    id="combobox-label-id-7"
   >
     Relate To
   </label>
@@ -5827,10 +5853,7 @@ exports[`render combobox renders autocomplete combobox 1`] = `
       className="slds-combobox_container"
     >
       <div
-        aria-expanded="true"
-        aria-haspopup="listbox"
         className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open"
-        role="combobox"
       >
         <div
           className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
@@ -5839,13 +5862,15 @@ exports[`render combobox renders autocomplete combobox 1`] = `
           <input
             aria-autocomplete="list"
             aria-controls="listbox-id-01"
-            autocomplete="off"
+            aria-expanded="true"
+            aria-haspopup="listbox"
+            autoComplete="off"
             className="slds-input slds-combobox__input slds-has-focus"
             id="combobox-id-01"
             onBlur={[Function]}
             onFocus={[Function]}
             placeholder="Search..."
-            role="textbox"
+            role="combobox"
             type="text"
           />
           <span
@@ -5968,6 +5993,7 @@ exports[`render combobox renders different styles of options in the listbox 1`] 
   <label
     className="slds-form-element__label"
     htmlFor="combobox-id-01"
+    id="combobox-label-id-5"
   >
     Relate To
   </label>
@@ -5978,29 +6004,30 @@ exports[`render combobox renders different styles of options in the listbox 1`] 
       className="slds-combobox_container"
     >
       <div
-        aria-expanded="true"
-        aria-haspopup="listbox"
         className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open"
-        role="combobox"
       >
         <div
           className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
           role="none"
         >
-          <input
-            aria-autocomplete={null}
+          <button
             aria-controls="listbox-id-01"
-            autocomplete="off"
-            className="slds-input slds-combobox__input slds-has-focus slds-combobox__input-value"
-            defaultValue="Accounts"
-            id="combobox-id-01"
+            aria-expanded="true"
+            aria-haspopup="listbox"
+            aria-labelledby="combobox-label-id-5 combobox-id-01-selected-value"
+            className="slds-input_faux slds-combobox__input slds-has-focus slds-combobox__input-value"
+            id="combobox-id-01-selected-value"
             onBlur={[Function]}
             onFocus={[Function]}
-            placeholder="Select an Option…"
-            readOnly={true}
-            role="textbox"
-            type="text"
-          />
+            type="button"
+          >
+            <span
+              className="slds-truncate"
+              id="combobox-value-id-5"
+            >
+              Accounts
+            </span>
+          </button>
           <span
             className="slds-icon_container slds-icon-utility-down slds-input__icon slds-input__icon_right"
             title={null}
@@ -6200,6 +6227,7 @@ exports[`render combobox renders different styles of options in the listbox with
   <label
     className="slds-form-element__label"
     htmlFor="combobox-id-01"
+    id="combobox-label-id-6"
   >
     Relate To
   </label>
@@ -6210,29 +6238,30 @@ exports[`render combobox renders different styles of options in the listbox with
       className="slds-combobox_container"
     >
       <div
-        aria-expanded="true"
-        aria-haspopup="listbox"
         className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open"
-        role="combobox"
       >
         <div
           className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
           role="none"
         >
-          <input
-            aria-autocomplete={null}
+          <button
             aria-controls="listbox-id-01"
-            autocomplete="off"
-            className="slds-input slds-combobox__input slds-has-focus slds-combobox__input-value"
-            defaultValue="Accounts"
-            id="combobox-id-01"
+            aria-expanded="true"
+            aria-haspopup="listbox"
+            aria-labelledby="combobox-label-id-6 combobox-id-01-selected-value"
+            className="slds-input_faux slds-combobox__input slds-has-focus slds-combobox__input-value"
+            id="combobox-id-01-selected-value"
             onBlur={[Function]}
             onFocus={[Function]}
-            placeholder="Select an Option…"
-            readOnly={true}
-            role="textbox"
-            type="text"
-          />
+            type="button"
+          >
+            <span
+              className="slds-truncate"
+              id="combobox-value-id-6"
+            >
+              Accounts
+            </span>
+          </button>
           <span
             className="slds-icon_container slds-icon-utility-down slds-input__icon slds-input__icon_right"
             title={null}
@@ -6710,6 +6739,7 @@ exports[`render combobox renders groups in a listbox 1`] = `
   <label
     className="slds-form-element__label"
     htmlFor="combobox-id-01"
+    id="combobox-label-id-4"
   >
     Relate To
   </label>
@@ -6720,28 +6750,30 @@ exports[`render combobox renders groups in a listbox 1`] = `
       className="slds-combobox_container"
     >
       <div
-        aria-expanded="true"
-        aria-haspopup="listbox"
         className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open"
-        role="combobox"
       >
         <div
           className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
           role="none"
         >
-          <input
-            aria-autocomplete={null}
+          <button
             aria-controls="listbox-id-01"
-            autocomplete="off"
-            className="slds-input slds-combobox__input slds-has-focus"
-            id="combobox-id-01"
+            aria-expanded="true"
+            aria-haspopup="listbox"
+            aria-labelledby="combobox-label-id-4 combobox-id-01-selected-value"
+            className="slds-input_faux slds-combobox__input slds-has-focus"
+            id="combobox-id-01-selected-value"
             onBlur={[Function]}
             onFocus={[Function]}
-            placeholder="Select an Option…"
-            readOnly={true}
-            role="textbox"
-            type="text"
-          />
+            type="button"
+          >
+            <span
+              className="slds-truncate"
+              id="combobox-value-id-4"
+            >
+              Select an Option…
+            </span>
+          </button>
           <span
             className="slds-icon_container slds-icon-utility-down slds-input__icon slds-input__icon_right"
             title={null}
@@ -6929,6 +6961,79 @@ exports[`render combobox renders groups in a listbox 1`] = `
 </div>
 `;
 
+exports[`render deprecated combobox input render input in base combobox 1`] = `
+<input
+  aria-autocomplete={null}
+  aria-controls="listbox-id-01"
+  aria-expanded="true"
+  aria-haspopup="listbox"
+  autocomplete="off"
+  className="slds-input slds-combobox__input slds-has-focus slds-combobox__input-value"
+  defaultValue="Accounts"
+  id="combobox-id-01"
+  onBlur={[Function]}
+  onFocus={[Function]}
+  placeholder="Select an Option…"
+  readOnly={true}
+  role="combobox"
+  type="text"
+/>
+`;
+
+exports[`render deprecated combobox input render input in combobox displaying options based on user input 1`] = `
+<input
+  aria-activedescendant="option1"
+  aria-autocomplete="list"
+  aria-controls="listbox-id-01"
+  aria-expanded="true"
+  aria-haspopup="listbox"
+  autocomplete="off"
+  className="slds-input slds-combobox__input slds-has-focus slds-combobox__input-value"
+  defaultValue="opp"
+  id="combobox-id-01"
+  onBlur={[Function]}
+  onFocus={[Function]}
+  placeholder="Search..."
+  role="combobox"
+  type="text"
+/>
+`;
+
+exports[`render deprecated combobox input render input in grouped combobox with selections made in expanded state 1`] = `
+<input
+  aria-autocomplete="list"
+  aria-controls="listbox-id-01"
+  aria-expanded="false"
+  aria-haspopup="listbox"
+  autocomplete="off"
+  className="slds-input slds-combobox__input slds-has-focus"
+  id="combobox-id-01"
+  onBlur={[Function]}
+  onFocus={[Function]}
+  placeholder="Search..."
+  role="combobox"
+  type="text"
+/>
+`;
+
+exports[`render deprecated combobox input render input in object switcher of grouped combobox with selections made in expanded state 1`] = `
+<input
+  aria-autocomplete={null}
+  aria-controls="objectswitcher-listbox-id-01"
+  aria-expanded="false"
+  aria-haspopup="listbox"
+  autocomplete="off"
+  className="slds-input slds-combobox__input slds-combobox__input-value"
+  defaultValue="Accounts"
+  id="combobox-id-01-object-switcher"
+  onBlur={[Function]}
+  onFocus={[Function]}
+  placeholder=" "
+  role="combobox"
+  type="text"
+/>
+`;
+
 exports[`render deprecated combobox renders a base combobox 1`] = `
 <div
   className="demo-only"
@@ -6954,10 +7059,7 @@ exports[`render deprecated combobox renders a base combobox 1`] = `
         className="slds-combobox_container"
       >
         <div
-          aria-expanded="false"
-          aria-haspopup="listbox"
           className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click"
-          role="combobox"
         >
           <div
             className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
@@ -6965,11 +7067,15 @@ exports[`render deprecated combobox renders a base combobox 1`] = `
           >
             <input
               aria-autocomplete="list"
-              autoComplete="off"
+              aria-expanded="false"
+              aria-haspopup="listbox"
+              autocomplete="off"
               className="slds-input slds-combobox__input"
               id="combobox-unique-id-1"
-              placeholder="Search Salesforce"
-              role="textbox"
+              onBlur={[Function]}
+              onFocus={[Function]}
+              placeholder="Search..."
+              role="combobox"
               type="text"
             />
             <span
@@ -7120,10 +7226,7 @@ exports[`render deprecated combobox renders a base combobox with closed options 
         className="slds-combobox_container"
       >
         <div
-          aria-expanded="false"
-          aria-haspopup="listbox"
           className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click"
-          role="combobox"
         >
           <div
             className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
@@ -7131,11 +7234,15 @@ exports[`render deprecated combobox renders a base combobox with closed options 
           >
             <input
               aria-autocomplete="list"
-              autoComplete="off"
+              aria-expanded="false"
+              aria-haspopup="listbox"
+              autocomplete="off"
               className="slds-input slds-combobox__input"
               id="combobox-unique-id-4"
-              placeholder="Search Salesforce"
-              role="textbox"
+              onBlur={[Function]}
+              onFocus={[Function]}
+              placeholder="Search..."
+              role="combobox"
               type="text"
             />
             <span
@@ -7390,10 +7497,7 @@ exports[`render deprecated combobox renders a base combobox with focus 1`] = `
         className="slds-combobox_container"
       >
         <div
-          aria-expanded="true"
-          aria-haspopup="listbox"
           className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open"
-          role="combobox"
         >
           <div
             className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
@@ -7401,11 +7505,15 @@ exports[`render deprecated combobox renders a base combobox with focus 1`] = `
           >
             <input
               aria-autocomplete="list"
-              autoComplete="off"
+              aria-expanded="true"
+              aria-haspopup="listbox"
+              autocomplete="off"
               className="slds-input slds-combobox__input"
               id="combobox-unique-id-2"
-              placeholder="Search Salesforce"
-              role="textbox"
+              onBlur={[Function]}
+              onFocus={[Function]}
+              placeholder="Search..."
+              role="combobox"
               type="text"
             />
             <span
@@ -7556,10 +7664,7 @@ exports[`render deprecated combobox renders a base combobox with open item focus
         className="slds-combobox_container"
       >
         <div
-          aria-expanded="true"
-          aria-haspopup="listbox"
           className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open"
-          role="combobox"
         >
           <div
             className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
@@ -7568,11 +7673,15 @@ exports[`render deprecated combobox renders a base combobox with open item focus
             <input
               aria-activedescendant="listbox-option-unique-id-01"
               aria-autocomplete="list"
-              autoComplete="off"
+              aria-expanded="true"
+              aria-haspopup="listbox"
+              autocomplete="off"
               className="slds-input slds-combobox__input"
               id="combobox-unique-id-3"
-              placeholder="Search Salesforce"
-              role="textbox"
+              onBlur={[Function]}
+              onFocus={[Function]}
+              placeholder="Search..."
+              role="combobox"
               type="text"
             />
             <span
@@ -7759,10 +7868,7 @@ exports[`render deprecated combobox renders a multi-entity combobox 1`] = `
           </button>
         </div>
         <div
-          aria-expanded="false"
-          aria-haspopup="listbox"
           className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click"
-          role="combobox"
         >
           <div
             className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
@@ -7770,11 +7876,15 @@ exports[`render deprecated combobox renders a multi-entity combobox 1`] = `
           >
             <input
               aria-autocomplete="list"
-              autoComplete="off"
+              aria-expanded="false"
+              aria-haspopup="listbox"
+              autocomplete="off"
               className="slds-input slds-combobox__input"
               id="combobox-unique-id-11"
-              placeholder="Search Salesforce"
-              role="textbox"
+              onBlur={[Function]}
+              onFocus={[Function]}
+              placeholder="Search..."
+              role="combobox"
               type="text"
             />
             <span
@@ -7961,10 +8071,7 @@ exports[`render deprecated combobox renders a multi-entity combobox with focus 1
           </button>
         </div>
         <div
-          aria-expanded="true"
-          aria-haspopup="listbox"
           className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open"
-          role="combobox"
         >
           <div
             className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
@@ -7972,11 +8079,15 @@ exports[`render deprecated combobox renders a multi-entity combobox with focus 1
           >
             <input
               aria-autocomplete="list"
-              autoComplete="off"
+              aria-expanded="true"
+              aria-haspopup="listbox"
+              autocomplete="off"
               className="slds-input slds-combobox__input"
               id="combobox-unique-id-12"
-              placeholder="Search Salesforce"
-              role="textbox"
+              onBlur={[Function]}
+              onFocus={[Function]}
+              placeholder="Search..."
+              role="combobox"
               type="text"
             />
             <span
@@ -8163,10 +8274,7 @@ exports[`render deprecated combobox renders a multi-entity combobox with focused
           </button>
         </div>
         <div
-          aria-expanded="true"
-          aria-haspopup="listbox"
           className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open"
-          role="combobox"
         >
           <div
             className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
@@ -8174,11 +8282,15 @@ exports[`render deprecated combobox renders a multi-entity combobox with focused
           >
             <input
               aria-autocomplete="list"
-              autoComplete="off"
+              aria-expanded="true"
+              aria-haspopup="listbox"
+              autocomplete="off"
               className="slds-input slds-combobox__input"
               id="combobox-unique-id-15"
-              placeholder="Search Salesforce"
-              role="textbox"
+              onBlur={[Function]}
+              onFocus={[Function]}
+              placeholder="Search..."
+              role="combobox"
               type="text"
             />
             <span
@@ -8469,10 +8581,7 @@ exports[`render deprecated combobox renders a multi-entity combobox with open it
           </button>
         </div>
         <div
-          aria-expanded="true"
-          aria-haspopup="listbox"
           className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open"
-          role="combobox"
         >
           <div
             className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
@@ -8481,11 +8590,15 @@ exports[`render deprecated combobox renders a multi-entity combobox with open it
             <input
               aria-activedescendant="listbox-option-unique-id-01"
               aria-autocomplete="list"
-              autoComplete="off"
+              aria-expanded="true"
+              aria-haspopup="listbox"
+              autocomplete="off"
               className="slds-input slds-combobox__input"
               id="combobox-unique-id-13"
-              placeholder="Search Salesforce"
-              role="textbox"
+              onBlur={[Function]}
+              onFocus={[Function]}
+              placeholder="Search..."
+              role="combobox"
               type="text"
             />
             <span
@@ -8664,10 +8777,7 @@ exports[`render deprecated combobox renders a multi-entity combobox with options
         </button>
       </div>
       <div
-        aria-expanded="false"
-        aria-haspopup="listbox"
         className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click"
-        role="combobox"
       >
         <div
           className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
@@ -8675,12 +8785,15 @@ exports[`render deprecated combobox renders a multi-entity combobox with options
         >
           <input
             aria-autocomplete="list"
-            aria-controls={null}
-            autoComplete="off"
+            aria-expanded="false"
+            aria-haspopup="listbox"
+            autocomplete="off"
             className="slds-input slds-combobox__input"
             id="combobox-unique-id-14"
-            placeholder="Search Salesforce"
-            role="textbox"
+            onBlur={[Function]}
+            onFocus={[Function]}
+            placeholder="Search..."
+            role="combobox"
             type="text"
           />
           <span
@@ -8696,6 +8809,108 @@ exports[`render deprecated combobox renders a multi-entity combobox with options
               />
             </svg>
           </span>
+        </div>
+        <div
+          aria-orientation={null}
+          className="slds-dropdown slds-dropdown_fluid"
+          id="listbox-unique-id"
+          role="listbox"
+        >
+          <ul
+            className="slds-listbox slds-listbox_vertical"
+            role="presentation"
+          >
+            <li
+              className="slds-listbox__item"
+              role="presentation"
+            >
+              <div
+                className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
+                id="listbox-option-unique-id-01"
+                role="option"
+              >
+                <span
+                  className="slds-media__figure"
+                >
+                  <span
+                    className="slds-icon_container slds-icon-standard-account"
+                    title={null}
+                  >
+                    <svg
+                      aria-hidden={true}
+                      className="slds-icon slds-icon_small"
+                    >
+                      <use
+                        xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#account"
+                      />
+                    </svg>
+                  </span>
+                </span>
+                <span
+                  className="slds-media__body"
+                >
+                  <span
+                    className="slds-listbox__option-text slds-listbox__option-text_entity"
+                  >
+                    Acme
+                  </span>
+                  <span
+                    className="slds-listbox__option-meta slds-listbox__option-meta_entity"
+                  >
+                    Account
+                     •
+                     
+                     San Francisco
+                  </span>
+                </span>
+              </div>
+            </li>
+            <li
+              className="slds-listbox__item"
+              role="presentation"
+            >
+              <div
+                className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
+                id="listbox-option-unique-id-02"
+                role="option"
+              >
+                <span
+                  className="slds-media__figure"
+                >
+                  <span
+                    className="slds-icon_container slds-icon-standard-account"
+                    title={null}
+                  >
+                    <svg
+                      aria-hidden={true}
+                      className="slds-icon slds-icon_small"
+                    >
+                      <use
+                        xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#account"
+                      />
+                    </svg>
+                  </span>
+                </span>
+                <span
+                  className="slds-media__body"
+                >
+                  <span
+                    className="slds-listbox__option-text slds-listbox__option-text_entity"
+                  >
+                    Salesforce.com, Inc.
+                  </span>
+                  <span
+                    className="slds-listbox__option-meta slds-listbox__option-meta_entity"
+                  >
+                    Account
+                     •
+                     
+                     San Francisco
+                  </span>
+                </span>
+              </div>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
@@ -8832,10 +9047,7 @@ exports[`render deprecated combobox renders a readonly combobox 1`] = `
         className="slds-combobox_container"
       >
         <div
-          aria-expanded="false"
-          aria-haspopup="listbox"
           className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click"
-          role="combobox"
         >
           <div
             className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
@@ -8843,12 +9055,16 @@ exports[`render deprecated combobox renders a readonly combobox 1`] = `
           >
             <input
               aria-autocomplete={null}
-              autoComplete="off"
+              aria-expanded="false"
+              aria-haspopup="listbox"
+              autocomplete="off"
               className="slds-input slds-combobox__input"
               id="combobox-unique-id-16"
+              onBlur={[Function]}
+              onFocus={[Function]}
               placeholder="Select an Option…"
               readOnly={true}
-              role="textbox"
+              role="combobox"
               type="text"
             />
             <span
@@ -8885,42 +9101,31 @@ exports[`render deprecated combobox renders a readonly combobox 1`] = `
                 role="presentation"
               >
                 <div
-                  className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
+                  className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-media_center"
                   id="listbox-option-unique-id-01"
                   role="option"
                 >
                   <span
                     className="slds-media__figure"
                   >
-                    <span
-                      className="slds-icon_container slds-icon-standard-account"
-                      title={null}
+                    <svg
+                      aria-hidden={true}
+                      className="slds-icon slds-icon_x-small slds-listbox__icon-selected"
                     >
-                      <svg
-                        aria-hidden={true}
-                        className="slds-icon slds-icon_small"
-                      >
-                        <use
-                          xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#account"
-                        />
-                      </svg>
-                    </span>
+                      <use
+                        xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#check"
+                      />
+                    </svg>
                   </span>
                   <span
                     className="slds-media__body"
                   >
                     <span
-                      className="slds-listbox__option-text slds-listbox__option-text_entity"
+                      className="slds-truncate"
+                      title="Option A"
                     >
-                      Acme
-                    </span>
-                    <span
-                      className="slds-listbox__option-meta slds-listbox__option-meta_entity"
-                    >
-                      Account
-                       •
                        
-                       San Francisco
+                      Option A
                     </span>
                   </span>
                 </div>
@@ -8930,42 +9135,31 @@ exports[`render deprecated combobox renders a readonly combobox 1`] = `
                 role="presentation"
               >
                 <div
-                  className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
+                  className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-media_center"
                   id="listbox-option-unique-id-02"
                   role="option"
                 >
                   <span
                     className="slds-media__figure"
                   >
-                    <span
-                      className="slds-icon_container slds-icon-standard-account"
-                      title={null}
+                    <svg
+                      aria-hidden={true}
+                      className="slds-icon slds-icon_x-small slds-listbox__icon-selected"
                     >
-                      <svg
-                        aria-hidden={true}
-                        className="slds-icon slds-icon_small"
-                      >
-                        <use
-                          xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#account"
-                        />
-                      </svg>
-                    </span>
+                      <use
+                        xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#check"
+                      />
+                    </svg>
                   </span>
                   <span
                     className="slds-media__body"
                   >
                     <span
-                      className="slds-listbox__option-text slds-listbox__option-text_entity"
+                      className="slds-truncate"
+                      title="Option B"
                     >
-                      Salesforce.com, Inc.
-                    </span>
-                    <span
-                      className="slds-listbox__option-meta slds-listbox__option-meta_entity"
-                    >
-                      Account
-                       •
                        
-                       San Francisco
+                      Option B
                     </span>
                   </span>
                 </div>
@@ -9004,10 +9198,7 @@ exports[`render deprecated combobox renders a readonly combobox with closed opti
         className="slds-combobox_container"
       >
         <div
-          aria-expanded="false"
-          aria-haspopup="listbox"
           className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click"
-          role="combobox"
         >
           <div
             className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
@@ -9015,13 +9206,17 @@ exports[`render deprecated combobox renders a readonly combobox with closed opti
           >
             <input
               aria-autocomplete={null}
-              autoComplete="off"
+              aria-expanded="false"
+              aria-haspopup="listbox"
+              autocomplete="off"
               className="slds-input slds-combobox__input slds-combobox__input-value"
               defaultValue="Option A"
               id="combobox-unique-id-21"
+              onBlur={[Function]}
+              onFocus={[Function]}
               placeholder="Select an Option…"
               readOnly={true}
-              role="textbox"
+              role="combobox"
               type="text"
             />
             <span
@@ -9058,42 +9253,36 @@ exports[`render deprecated combobox renders a readonly combobox with closed opti
                 role="presentation"
               >
                 <div
-                  className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta slds-has-focus"
+                  className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-media_center slds-is-selected slds-has-focus"
                   id="listbox-option-unique-id-01"
                   role="option"
                 >
                   <span
                     className="slds-media__figure"
                   >
-                    <span
-                      className="slds-icon_container slds-icon-standard-account"
-                      title={null}
+                    <svg
+                      aria-hidden={true}
+                      className="slds-icon slds-icon_x-small slds-listbox__icon-selected"
                     >
-                      <svg
-                        aria-hidden={true}
-                        className="slds-icon slds-icon_small"
-                      >
-                        <use
-                          xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#account"
-                        />
-                      </svg>
-                    </span>
+                      <use
+                        xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#check"
+                      />
+                    </svg>
                   </span>
                   <span
                     className="slds-media__body"
                   >
                     <span
-                      className="slds-listbox__option-text slds-listbox__option-text_entity"
+                      className="slds-truncate"
+                      title="Option A"
                     >
-                      Acme
-                    </span>
-                    <span
-                      className="slds-listbox__option-meta slds-listbox__option-meta_entity"
-                    >
-                      Account
-                       •
+                      <span
+                        className="slds-assistive-text"
+                      >
+                        Current Selection:
+                      </span>
                        
-                       San Francisco
+                      Option A
                     </span>
                   </span>
                 </div>
@@ -9103,42 +9292,31 @@ exports[`render deprecated combobox renders a readonly combobox with closed opti
                 role="presentation"
               >
                 <div
-                  className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
+                  className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-media_center"
                   id="listbox-option-unique-id-02"
                   role="option"
                 >
                   <span
                     className="slds-media__figure"
                   >
-                    <span
-                      className="slds-icon_container slds-icon-standard-account"
-                      title={null}
+                    <svg
+                      aria-hidden={true}
+                      className="slds-icon slds-icon_x-small slds-listbox__icon-selected"
                     >
-                      <svg
-                        aria-hidden={true}
-                        className="slds-icon slds-icon_small"
-                      >
-                        <use
-                          xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#account"
-                        />
-                      </svg>
-                    </span>
+                      <use
+                        xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#check"
+                      />
+                    </svg>
                   </span>
                   <span
                     className="slds-media__body"
                   >
                     <span
-                      className="slds-listbox__option-text slds-listbox__option-text_entity"
+                      className="slds-truncate"
+                      title="Option B"
                     >
-                      Salesforce.com, Inc.
-                    </span>
-                    <span
-                      className="slds-listbox__option-meta slds-listbox__option-meta_entity"
-                    >
-                      Account
-                       •
                        
-                       San Francisco
+                      Option B
                     </span>
                   </span>
                 </div>
@@ -9177,10 +9355,7 @@ exports[`render deprecated combobox renders a readonly combobox with closed opti
         className="slds-combobox_container"
       >
         <div
-          aria-expanded="false"
-          aria-haspopup="listbox"
           className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click"
-          role="combobox"
         >
           <div
             className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
@@ -9188,13 +9363,17 @@ exports[`render deprecated combobox renders a readonly combobox with closed opti
           >
             <input
               aria-autocomplete={null}
-              autoComplete="off"
+              aria-expanded="false"
+              aria-haspopup="listbox"
+              autocomplete="off"
               className="slds-input slds-combobox__input slds-combobox__input-value"
               defaultValue="2 Options Selected"
               id="combobox-unique-id-22"
+              onBlur={[Function]}
+              onFocus={[Function]}
               placeholder="Select an Option…"
               readOnly={true}
-              role="textbox"
+              role="combobox"
               type="text"
             />
             <span
@@ -9231,42 +9410,36 @@ exports[`render deprecated combobox renders a readonly combobox with closed opti
                 role="presentation"
               >
                 <div
-                  className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
+                  className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-media_center slds-is-selected"
                   id="listbox-option-unique-id-01"
                   role="option"
                 >
                   <span
                     className="slds-media__figure"
                   >
-                    <span
-                      className="slds-icon_container slds-icon-standard-account"
-                      title={null}
+                    <svg
+                      aria-hidden={true}
+                      className="slds-icon slds-icon_x-small slds-listbox__icon-selected"
                     >
-                      <svg
-                        aria-hidden={true}
-                        className="slds-icon slds-icon_small"
-                      >
-                        <use
-                          xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#account"
-                        />
-                      </svg>
-                    </span>
+                      <use
+                        xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#check"
+                      />
+                    </svg>
                   </span>
                   <span
                     className="slds-media__body"
                   >
                     <span
-                      className="slds-listbox__option-text slds-listbox__option-text_entity"
+                      className="slds-truncate"
+                      title="Option A"
                     >
-                      Acme
-                    </span>
-                    <span
-                      className="slds-listbox__option-meta slds-listbox__option-meta_entity"
-                    >
-                      Account
-                       •
+                      <span
+                        className="slds-assistive-text"
+                      >
+                        Current Selection:
+                      </span>
                        
-                       San Francisco
+                      Option A
                     </span>
                   </span>
                 </div>
@@ -9276,42 +9449,36 @@ exports[`render deprecated combobox renders a readonly combobox with closed opti
                 role="presentation"
               >
                 <div
-                  className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
+                  className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-media_center slds-is-selected"
                   id="listbox-option-unique-id-02"
                   role="option"
                 >
                   <span
                     className="slds-media__figure"
                   >
-                    <span
-                      className="slds-icon_container slds-icon-standard-account"
-                      title={null}
+                    <svg
+                      aria-hidden={true}
+                      className="slds-icon slds-icon_x-small slds-listbox__icon-selected"
                     >
-                      <svg
-                        aria-hidden={true}
-                        className="slds-icon slds-icon_small"
-                      >
-                        <use
-                          xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#account"
-                        />
-                      </svg>
-                    </span>
+                      <use
+                        xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#check"
+                      />
+                    </svg>
                   </span>
                   <span
                     className="slds-media__body"
                   >
                     <span
-                      className="slds-listbox__option-text slds-listbox__option-text_entity"
+                      className="slds-truncate"
+                      title="Option B"
                     >
-                      Salesforce.com, Inc.
-                    </span>
-                    <span
-                      className="slds-listbox__option-meta slds-listbox__option-meta_entity"
-                    >
-                      Account
-                       •
+                      <span
+                        className="slds-assistive-text"
+                      >
+                        Current Selection:
+                      </span>
                        
-                       San Francisco
+                      Option B
                     </span>
                   </span>
                 </div>
@@ -9418,10 +9585,7 @@ exports[`render deprecated combobox renders a readonly combobox with focus 1`] =
         className="slds-combobox_container"
       >
         <div
-          aria-expanded="true"
-          aria-haspopup="listbox"
           className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open"
-          role="combobox"
         >
           <div
             className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
@@ -9429,12 +9593,16 @@ exports[`render deprecated combobox renders a readonly combobox with focus 1`] =
           >
             <input
               aria-autocomplete={null}
-              autoComplete="off"
+              aria-expanded="true"
+              aria-haspopup="listbox"
+              autocomplete="off"
               className="slds-input slds-combobox__input"
               id="combobox-unique-id-17"
+              onBlur={[Function]}
+              onFocus={[Function]}
               placeholder="Select an Option…"
               readOnly={true}
-              role="textbox"
+              role="combobox"
               type="text"
             />
             <span
@@ -9471,42 +9639,31 @@ exports[`render deprecated combobox renders a readonly combobox with focus 1`] =
                 role="presentation"
               >
                 <div
-                  className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
+                  className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-media_center"
                   id="listbox-option-unique-id-01"
                   role="option"
                 >
                   <span
                     className="slds-media__figure"
                   >
-                    <span
-                      className="slds-icon_container slds-icon-standard-account"
-                      title={null}
+                    <svg
+                      aria-hidden={true}
+                      className="slds-icon slds-icon_x-small slds-listbox__icon-selected"
                     >
-                      <svg
-                        aria-hidden={true}
-                        className="slds-icon slds-icon_small"
-                      >
-                        <use
-                          xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#account"
-                        />
-                      </svg>
-                    </span>
+                      <use
+                        xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#check"
+                      />
+                    </svg>
                   </span>
                   <span
                     className="slds-media__body"
                   >
                     <span
-                      className="slds-listbox__option-text slds-listbox__option-text_entity"
+                      className="slds-truncate"
+                      title="Option A"
                     >
-                      Acme
-                    </span>
-                    <span
-                      className="slds-listbox__option-meta slds-listbox__option-meta_entity"
-                    >
-                      Account
-                       •
                        
-                       San Francisco
+                      Option A
                     </span>
                   </span>
                 </div>
@@ -9516,42 +9673,31 @@ exports[`render deprecated combobox renders a readonly combobox with focus 1`] =
                 role="presentation"
               >
                 <div
-                  className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
+                  className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-media_center"
                   id="listbox-option-unique-id-02"
                   role="option"
                 >
                   <span
                     className="slds-media__figure"
                   >
-                    <span
-                      className="slds-icon_container slds-icon-standard-account"
-                      title={null}
+                    <svg
+                      aria-hidden={true}
+                      className="slds-icon slds-icon_x-small slds-listbox__icon-selected"
                     >
-                      <svg
-                        aria-hidden={true}
-                        className="slds-icon slds-icon_small"
-                      >
-                        <use
-                          xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#account"
-                        />
-                      </svg>
-                    </span>
+                      <use
+                        xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#check"
+                      />
+                    </svg>
                   </span>
                   <span
                     className="slds-media__body"
                   >
                     <span
-                      className="slds-listbox__option-text slds-listbox__option-text_entity"
+                      className="slds-truncate"
+                      title="Option B"
                     >
-                      Salesforce.com, Inc.
-                    </span>
-                    <span
-                      className="slds-listbox__option-meta slds-listbox__option-meta_entity"
-                    >
-                      Account
-                       •
                        
-                       San Francisco
+                      Option B
                     </span>
                   </span>
                 </div>
@@ -9590,10 +9736,7 @@ exports[`render deprecated combobox renders a readonly combobox with open item f
         className="slds-combobox_container"
       >
         <div
-          aria-expanded="true"
-          aria-haspopup="listbox"
           className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open"
-          role="combobox"
         >
           <div
             className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
@@ -9602,12 +9745,16 @@ exports[`render deprecated combobox renders a readonly combobox with open item f
             <input
               aria-activedescendant="listbox-option-unique-id-01"
               aria-autocomplete={null}
-              autoComplete="off"
+              aria-expanded="true"
+              aria-haspopup="listbox"
+              autocomplete="off"
               className="slds-input slds-combobox__input"
               id="combobox-unique-id-18"
+              onBlur={[Function]}
+              onFocus={[Function]}
               placeholder="Select an Option…"
               readOnly={true}
-              role="textbox"
+              role="combobox"
               type="text"
             />
             <span
@@ -9644,42 +9791,31 @@ exports[`render deprecated combobox renders a readonly combobox with open item f
                 role="presentation"
               >
                 <div
-                  className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta slds-has-focus"
+                  className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-media_center slds-has-focus"
                   id="listbox-option-unique-id-01"
                   role="option"
                 >
                   <span
                     className="slds-media__figure"
                   >
-                    <span
-                      className="slds-icon_container slds-icon-standard-account"
-                      title={null}
+                    <svg
+                      aria-hidden={true}
+                      className="slds-icon slds-icon_x-small slds-listbox__icon-selected"
                     >
-                      <svg
-                        aria-hidden={true}
-                        className="slds-icon slds-icon_small"
-                      >
-                        <use
-                          xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#account"
-                        />
-                      </svg>
-                    </span>
+                      <use
+                        xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#check"
+                      />
+                    </svg>
                   </span>
                   <span
                     className="slds-media__body"
                   >
                     <span
-                      className="slds-listbox__option-text slds-listbox__option-text_entity"
+                      className="slds-truncate"
+                      title="Option A"
                     >
-                      Acme
-                    </span>
-                    <span
-                      className="slds-listbox__option-meta slds-listbox__option-meta_entity"
-                    >
-                      Account
-                       •
                        
-                       San Francisco
+                      Option A
                     </span>
                   </span>
                 </div>
@@ -9689,42 +9825,205 @@ exports[`render deprecated combobox renders a readonly combobox with open item f
                 role="presentation"
               >
                 <div
-                  className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
+                  className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-media_center"
                   id="listbox-option-unique-id-02"
                   role="option"
                 >
                   <span
                     className="slds-media__figure"
                   >
-                    <span
-                      className="slds-icon_container slds-icon-standard-account"
-                      title={null}
+                    <svg
+                      aria-hidden={true}
+                      className="slds-icon slds-icon_x-small slds-listbox__icon-selected"
                     >
-                      <svg
-                        aria-hidden={true}
-                        className="slds-icon slds-icon_small"
-                      >
-                        <use
-                          xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#account"
-                        />
-                      </svg>
-                    </span>
+                      <use
+                        xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#check"
+                      />
+                    </svg>
                   </span>
                   <span
                     className="slds-media__body"
                   >
                     <span
-                      className="slds-listbox__option-text slds-listbox__option-text_entity"
+                      className="slds-truncate"
+                      title="Option B"
                     >
-                      Salesforce.com, Inc.
-                    </span>
-                    <span
-                      className="slds-listbox__option-meta slds-listbox__option-meta_entity"
-                    >
-                      Account
-                       •
                        
-                       San Francisco
+                      Option B
+                    </span>
+                  </span>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`render deprecated combobox renders a readonly combobox with open option and sub-heading 1`] = `
+<div
+  className="demo-only"
+  style={
+    Object {
+      "height": "10rem",
+    }
+  }
+>
+  <div
+    className="slds-form-element"
+  >
+    <label
+      className="slds-form-element__label"
+      htmlFor="combobox-unique-id-23"
+    >
+      Search
+    </label>
+    <div
+      className="slds-form-element__control"
+    >
+      <div
+        className="slds-combobox_container"
+      >
+        <div
+          className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open"
+        >
+          <div
+            className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
+            role="none"
+          >
+            <input
+              aria-autocomplete={null}
+              aria-expanded="true"
+              aria-haspopup="listbox"
+              autocomplete="off"
+              className="slds-input slds-combobox__input slds-combobox__input-value"
+              defaultValue="Option A"
+              id="combobox-unique-id-23"
+              onBlur={[Function]}
+              onFocus={[Function]}
+              placeholder="Select an Option…"
+              readOnly={true}
+              role="combobox"
+              type="text"
+            />
+            <span
+              className="slds-icon_container slds-icon-utility-down slds-input__icon slds-input__icon_right"
+              title="Description of icon when needed"
+            >
+              <svg
+                aria-hidden={true}
+                className="slds-icon slds-icon slds-icon_x-small slds-icon-text-default"
+              >
+                <use
+                  xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#down"
+                />
+              </svg>
+              <span
+                className="slds-assistive-text"
+              >
+                Description of icon when needed
+              </span>
+            </span>
+          </div>
+          <div
+            aria-orientation={null}
+            className="slds-dropdown slds-dropdown_fluid"
+            id="listbox-unique-id"
+            role="listbox"
+          >
+            <ul
+              className="slds-listbox slds-listbox_vertical"
+              role="presentation"
+            >
+              <li
+                className="slds-listbox__item"
+                role="presentation"
+              >
+                <div
+                  className="slds-listbox__option slds-listbox__option_plain"
+                  role="presentation"
+                  title="Recently Viewed"
+                >
+                  <h3
+                    className="slds-listbox__option-header"
+                    role="presentation"
+                  >
+                    Recently Viewed
+                  </h3>
+                </div>
+              </li>
+              <li
+                className="slds-listbox__item"
+                role="presentation"
+              >
+                <div
+                  className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-media_center slds-is-selected"
+                  id="listbox-option-unique-id-01"
+                  role="option"
+                >
+                  <span
+                    className="slds-media__figure"
+                  >
+                    <svg
+                      aria-hidden={true}
+                      className="slds-icon slds-icon_x-small slds-listbox__icon-selected"
+                    >
+                      <use
+                        xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#check"
+                      />
+                    </svg>
+                  </span>
+                  <span
+                    className="slds-media__body"
+                  >
+                    <span
+                      className="slds-truncate"
+                      title="Option A"
+                    >
+                      <span
+                        className="slds-assistive-text"
+                      >
+                        Current Selection:
+                      </span>
+                       
+                      Option A
+                    </span>
+                  </span>
+                </div>
+              </li>
+              <li
+                className="slds-listbox__item"
+                role="presentation"
+              >
+                <div
+                  className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-media_center"
+                  id="listbox-option-unique-id-02"
+                  role="option"
+                >
+                  <span
+                    className="slds-media__figure"
+                  >
+                    <svg
+                      aria-hidden={true}
+                      className="slds-icon slds-icon_x-small slds-listbox__icon-selected"
+                    >
+                      <use
+                        xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#check"
+                      />
+                    </svg>
+                  </span>
+                  <span
+                    className="slds-media__body"
+                  >
+                    <span
+                      className="slds-truncate"
+                      title="Option B"
+                    >
+                       
+                      Option B
                     </span>
                   </span>
                 </div>
@@ -9763,10 +10062,7 @@ exports[`render deprecated combobox renders a readonly combobox with open option
         className="slds-combobox_container"
       >
         <div
-          aria-expanded="true"
-          aria-haspopup="listbox"
           className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open"
-          role="combobox"
         >
           <div
             className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
@@ -9774,13 +10070,17 @@ exports[`render deprecated combobox renders a readonly combobox with open option
           >
             <input
               aria-autocomplete={null}
-              autoComplete="off"
+              aria-expanded="true"
+              aria-haspopup="listbox"
+              autocomplete="off"
               className="slds-input slds-combobox__input slds-combobox__input-value"
               defaultValue="Option A"
               id="combobox-unique-id-19"
+              onBlur={[Function]}
+              onFocus={[Function]}
               placeholder="Select an Option…"
               readOnly={true}
-              role="textbox"
+              role="combobox"
               type="text"
             />
             <span
@@ -9817,42 +10117,36 @@ exports[`render deprecated combobox renders a readonly combobox with open option
                 role="presentation"
               >
                 <div
-                  className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
+                  className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-media_center slds-is-selected"
                   id="listbox-option-unique-id-01"
                   role="option"
                 >
                   <span
                     className="slds-media__figure"
                   >
-                    <span
-                      className="slds-icon_container slds-icon-standard-account"
-                      title={null}
+                    <svg
+                      aria-hidden={true}
+                      className="slds-icon slds-icon_x-small slds-listbox__icon-selected"
                     >
-                      <svg
-                        aria-hidden={true}
-                        className="slds-icon slds-icon_small"
-                      >
-                        <use
-                          xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#account"
-                        />
-                      </svg>
-                    </span>
+                      <use
+                        xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#check"
+                      />
+                    </svg>
                   </span>
                   <span
                     className="slds-media__body"
                   >
                     <span
-                      className="slds-listbox__option-text slds-listbox__option-text_entity"
+                      className="slds-truncate"
+                      title="Option A"
                     >
-                      Acme
-                    </span>
-                    <span
-                      className="slds-listbox__option-meta slds-listbox__option-meta_entity"
-                    >
-                      Account
-                       •
+                      <span
+                        className="slds-assistive-text"
+                      >
+                        Current Selection:
+                      </span>
                        
-                       San Francisco
+                      Option A
                     </span>
                   </span>
                 </div>
@@ -9862,42 +10156,31 @@ exports[`render deprecated combobox renders a readonly combobox with open option
                 role="presentation"
               >
                 <div
-                  className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
+                  className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-media_center"
                   id="listbox-option-unique-id-02"
                   role="option"
                 >
                   <span
                     className="slds-media__figure"
                   >
-                    <span
-                      className="slds-icon_container slds-icon-standard-account"
-                      title={null}
+                    <svg
+                      aria-hidden={true}
+                      className="slds-icon slds-icon_x-small slds-listbox__icon-selected"
                     >
-                      <svg
-                        aria-hidden={true}
-                        className="slds-icon slds-icon_small"
-                      >
-                        <use
-                          xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#account"
-                        />
-                      </svg>
-                    </span>
+                      <use
+                        xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#check"
+                      />
+                    </svg>
                   </span>
                   <span
                     className="slds-media__body"
                   >
                     <span
-                      className="slds-listbox__option-text slds-listbox__option-text_entity"
+                      className="slds-truncate"
+                      title="Option B"
                     >
-                      Salesforce.com, Inc.
-                    </span>
-                    <span
-                      className="slds-listbox__option-meta slds-listbox__option-meta_entity"
-                    >
-                      Account
-                       •
                        
-                       San Francisco
+                      Option B
                     </span>
                   </span>
                 </div>
@@ -9936,10 +10219,7 @@ exports[`render deprecated combobox renders a readonly combobox with open option
         className="slds-combobox_container"
       >
         <div
-          aria-expanded="true"
-          aria-haspopup="listbox"
           className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open"
-          role="combobox"
         >
           <div
             className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
@@ -9947,13 +10227,17 @@ exports[`render deprecated combobox renders a readonly combobox with open option
           >
             <input
               aria-autocomplete={null}
-              autoComplete="off"
+              aria-expanded="true"
+              aria-haspopup="listbox"
+              autocomplete="off"
               className="slds-input slds-combobox__input slds-combobox__input-value"
               defaultValue="2 Options Selected"
               id="combobox-unique-id-20"
+              onBlur={[Function]}
+              onFocus={[Function]}
               placeholder="Select an Option…"
               readOnly={true}
-              role="textbox"
+              role="combobox"
               type="text"
             />
             <span
@@ -9990,42 +10274,36 @@ exports[`render deprecated combobox renders a readonly combobox with open option
                 role="presentation"
               >
                 <div
-                  className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
+                  className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-media_center slds-is-selected"
                   id="listbox-option-unique-id-01"
                   role="option"
                 >
                   <span
                     className="slds-media__figure"
                   >
-                    <span
-                      className="slds-icon_container slds-icon-standard-account"
-                      title={null}
+                    <svg
+                      aria-hidden={true}
+                      className="slds-icon slds-icon_x-small slds-listbox__icon-selected"
                     >
-                      <svg
-                        aria-hidden={true}
-                        className="slds-icon slds-icon_small"
-                      >
-                        <use
-                          xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#account"
-                        />
-                      </svg>
-                    </span>
+                      <use
+                        xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#check"
+                      />
+                    </svg>
                   </span>
                   <span
                     className="slds-media__body"
                   >
                     <span
-                      className="slds-listbox__option-text slds-listbox__option-text_entity"
+                      className="slds-truncate"
+                      title="Option A"
                     >
-                      Acme
-                    </span>
-                    <span
-                      className="slds-listbox__option-meta slds-listbox__option-meta_entity"
-                    >
-                      Account
-                       •
+                      <span
+                        className="slds-assistive-text"
+                      >
+                        Current Selection:
+                      </span>
                        
-                       San Francisco
+                      Option A
                     </span>
                   </span>
                 </div>
@@ -10035,42 +10313,36 @@ exports[`render deprecated combobox renders a readonly combobox with open option
                 role="presentation"
               >
                 <div
-                  className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
+                  className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-media_center slds-is-selected"
                   id="listbox-option-unique-id-02"
                   role="option"
                 >
                   <span
                     className="slds-media__figure"
                   >
-                    <span
-                      className="slds-icon_container slds-icon-standard-account"
-                      title={null}
+                    <svg
+                      aria-hidden={true}
+                      className="slds-icon slds-icon_x-small slds-listbox__icon-selected"
                     >
-                      <svg
-                        aria-hidden={true}
-                        className="slds-icon slds-icon_small"
-                      >
-                        <use
-                          xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#account"
-                        />
-                      </svg>
-                    </span>
+                      <use
+                        xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#check"
+                      />
+                    </svg>
                   </span>
                   <span
                     className="slds-media__body"
                   >
                     <span
-                      className="slds-listbox__option-text slds-listbox__option-text_entity"
+                      className="slds-truncate"
+                      title="Option B"
                     >
-                      Salesforce.com, Inc.
-                    </span>
-                    <span
-                      className="slds-listbox__option-meta slds-listbox__option-meta_entity"
-                    >
-                      Account
-                       •
+                      <span
+                        className="slds-assistive-text"
+                      >
+                        Current Selection:
+                      </span>
                        
-                       San Francisco
+                      Option B
                     </span>
                   </span>
                 </div>
@@ -10109,10 +10381,7 @@ exports[`render deprecated combobox renders an inline combobox open item focused
         className="slds-combobox_container slds-has-inline-listbox"
       >
         <div
-          aria-expanded="true"
-          aria-haspopup="listbox"
           className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open"
-          role="combobox"
         >
           <div
             className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
@@ -10121,11 +10390,15 @@ exports[`render deprecated combobox renders an inline combobox open item focused
             <input
               aria-activedescendant="listbox-option-unique-id-01"
               aria-autocomplete="list"
-              autoComplete="off"
+              aria-expanded="true"
+              aria-haspopup="listbox"
+              autocomplete="off"
               className="slds-input slds-combobox__input"
               id="combobox-unique-id-7"
-              placeholder="Search Salesforce"
-              role="textbox"
+              onBlur={[Function]}
+              onFocus={[Function]}
+              placeholder="Search..."
+              role="combobox"
               type="text"
             />
             <span
@@ -10276,10 +10549,7 @@ exports[`render deprecated combobox renders an inline combobox with focus 1`] = 
         className="slds-combobox_container slds-has-inline-listbox slds-has-input-focus"
       >
         <div
-          aria-expanded="true"
-          aria-haspopup="listbox"
           className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open"
-          role="combobox"
         >
           <div
             className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
@@ -10287,11 +10557,15 @@ exports[`render deprecated combobox renders an inline combobox with focus 1`] = 
           >
             <input
               aria-autocomplete="list"
-              autoComplete="off"
+              aria-expanded="true"
+              aria-haspopup="listbox"
+              autocomplete="off"
               className="slds-input slds-combobox__input"
               id="combobox-unique-id-6"
-              placeholder="Search Salesforce"
-              role="textbox"
+              onBlur={[Function]}
+              onFocus={[Function]}
+              placeholder="Search..."
+              role="combobox"
               type="text"
             />
             <span
@@ -10442,10 +10716,7 @@ exports[`render deprecated combobox renders an inline listbox combobox 1`] = `
         className="slds-combobox_container slds-has-inline-listbox"
       >
         <div
-          aria-expanded="false"
-          aria-haspopup="listbox"
           className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click"
-          role="combobox"
         >
           <div
             className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
@@ -10453,11 +10724,15 @@ exports[`render deprecated combobox renders an inline listbox combobox 1`] = `
           >
             <input
               aria-autocomplete="list"
-              autoComplete="off"
+              aria-expanded="false"
+              aria-haspopup="listbox"
+              autocomplete="off"
               className="slds-input slds-combobox__input"
               id="combobox-unique-id-5"
-              placeholder="Search Salesforce"
-              role="textbox"
+              onBlur={[Function]}
+              onFocus={[Function]}
+              placeholder="Search..."
+              role="combobox"
               type="text"
             />
             <span
@@ -10608,10 +10883,7 @@ exports[`render deprecated combobox renders an inline listbox combobox with clos
         className="slds-combobox_container slds-has-inline-listbox"
       >
         <div
-          aria-expanded="false"
-          aria-haspopup="listbox"
           className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click"
-          role="combobox"
         >
           <div
             className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_left-right"
@@ -10637,13 +10909,17 @@ exports[`render deprecated combobox renders an inline listbox combobox with clos
             </span>
             <input
               aria-autocomplete="list"
-              autoComplete="off"
+              aria-expanded="false"
+              aria-haspopup="listbox"
+              autocomplete="off"
               className="slds-input slds-combobox__input slds-combobox__input-value"
               defaultValue="Salesforce.com, Inc."
               id="combobox-unique-id-8"
-              placeholder="Search Salesforce"
+              onBlur={[Function]}
+              onFocus={[Function]}
+              placeholder="Search..."
               readOnly={true}
-              role="textbox"
+              role="combobox"
               type="text"
             />
             <button
@@ -10797,7 +11073,7 @@ exports[`render deprecated combobox renders an inline listbox combobox with focu
       className="slds-form-element__control"
     >
       <div
-        className="slds-combobox_container slds-has-inline-listbox"
+        className="slds-combobox_container slds-has-inline-listbox slds-has-input-focus"
       >
         <ul
           aria-label="Selected Options:"
@@ -10904,10 +11180,7 @@ exports[`render deprecated combobox renders an inline listbox combobox with focu
           </li>
         </ul>
         <div
-          aria-expanded="false"
-          aria-haspopup="listbox"
-          className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click"
-          role="combobox"
+          className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open"
         >
           <div
             className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
@@ -10915,11 +11188,15 @@ exports[`render deprecated combobox renders an inline listbox combobox with focu
           >
             <input
               aria-autocomplete="list"
-              autoComplete="off"
+              aria-expanded="true"
+              aria-haspopup="listbox"
+              autocomplete="off"
               className="slds-input slds-combobox__input"
               id="combobox-unique-id-10"
-              placeholder="Search Salesforce"
-              role="textbox"
+              onBlur={[Function]}
+              onFocus={[Function]}
+              placeholder="Search..."
+              role="combobox"
               type="text"
             />
             <span
@@ -11174,10 +11451,7 @@ exports[`render deprecated combobox renders an inline listbox combobox with opti
           </li>
         </ul>
         <div
-          aria-expanded="false"
-          aria-haspopup="listbox"
           className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click"
-          role="combobox"
         >
           <div
             className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
@@ -11185,11 +11459,15 @@ exports[`render deprecated combobox renders an inline listbox combobox with opti
           >
             <input
               aria-autocomplete="list"
-              autoComplete="off"
+              aria-expanded="false"
+              aria-haspopup="listbox"
+              autocomplete="off"
               className="slds-input slds-combobox__input"
               id="combobox-unique-id-9"
-              placeholder="Search Salesforce"
-              role="textbox"
+              onBlur={[Function]}
+              onFocus={[Function]}
+              placeholder="Search..."
+              role="combobox"
               type="text"
             />
             <span

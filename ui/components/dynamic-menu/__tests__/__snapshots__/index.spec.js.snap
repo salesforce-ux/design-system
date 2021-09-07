@@ -1,0 +1,1288 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Dynamic Menu renders a default dynamic menu 1`] = `
+<div
+  className="demo-only"
+  style={
+    Object {
+      "height": "13rem",
+      "marginLeft": "1rem",
+      "position": "relative",
+    }
+  }
+>
+  <button
+    className="slds-button slds-button_icon slds-button_icon-border-filled"
+    onClick={[Function]}
+    title="Show Favorites"
+  >
+    <svg
+      aria-hidden={true}
+      className="slds-button__icon"
+    >
+      <use
+        xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#favorite"
+      />
+    </svg>
+    <span
+      className="slds-assistive-text"
+    >
+      Show Favorites
+    </span>
+  </button>
+  <section
+    aria-describedby="dialog-body-id-1"
+    aria-label="My Favourites"
+    className="slds-popover slds-nubbin_top-left slds-dynamic-menu"
+    role="dialog"
+    style={
+      Object {
+        "left": "-0.5rem",
+        "position": "absolute",
+        "top": "48px",
+      }
+    }
+  >
+    <div
+      className="slds-popover__body slds-p-horizontal_none"
+      id="dialog-body-id-1"
+    >
+      <div
+        className="slds-media"
+      >
+        <div
+          className="slds-media__body"
+        >
+          <div
+            className="slds-p-vertical_x-small slds-p-horizontal_small"
+          >
+            <h3
+              className="slds-dynamic-menu__header slds-m-bottom_x-small"
+              role="presentation"
+            >
+              My Favorites
+            </h3>
+            <p>
+              You can favorite any page!
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer
+      className="slds-popover__footer"
+    >
+      <ul>
+        <li>
+          <button
+            className="slds-button slds-button_reset slds-p-vertical_xx-small slds-size_1-of-1"
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-button__icon slds-button__icon_left"
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#add"
+              />
+            </svg>
+            Favorite this page
+          </button>
+        </li>
+        <li>
+          <button
+            className="slds-button slds-button_reset slds-p-vertical_xx-small slds-size_1-of-1"
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-button__icon slds-button__icon_left"
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#edit"
+              />
+            </svg>
+            Edit Favorites
+          </button>
+        </li>
+      </ul>
+    </footer>
+  </section>
+</div>
+`;
+
+exports[`Dynamic Menu renders a dynamic menu with 0 items 1`] = `
+<div
+  className="demo-only"
+  style={
+    Object {
+      "height": "13rem",
+      "marginLeft": "1rem",
+      "position": "relative",
+    }
+  }
+>
+  <button
+    className="slds-button slds-button_icon slds-button_icon-border-filled"
+    onClick={[Function]}
+    title="Show Favorites"
+  >
+    <svg
+      aria-hidden={true}
+      className="slds-button__icon"
+    >
+      <use
+        xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#favorite"
+      />
+    </svg>
+    <span
+      className="slds-assistive-text"
+    >
+      Show Favorites
+    </span>
+  </button>
+  <section
+    aria-describedby="dialog-body-id-2"
+    aria-label="My Favourites"
+    className="slds-popover slds-nubbin_top-left slds-dynamic-menu"
+    role="dialog"
+    style={
+      Object {
+        "left": "-0.5rem",
+        "position": "absolute",
+        "top": "48px",
+      }
+    }
+  >
+    <div
+      className="slds-popover__body slds-p-horizontal_none"
+      id="dialog-body-id-2"
+    >
+      <div
+        className="slds-media"
+      >
+        <div
+          className="slds-media__body"
+        >
+          <div
+            className="slds-p-vertical_x-small slds-p-horizontal_small"
+          >
+            <h3
+              className="slds-dynamic-menu__header slds-m-bottom_x-small"
+              role="presentation"
+            >
+              My Favorites
+            </h3>
+            <p>
+              You can favorite any page!
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer
+      className="slds-popover__footer"
+    >
+      <ul>
+        <li>
+          <button
+            className="slds-button slds-button_reset slds-p-vertical_xx-small slds-size_1-of-1"
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-button__icon slds-button__icon_left"
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#add"
+              />
+            </svg>
+            Favorite this page
+          </button>
+        </li>
+        <li>
+          <button
+            className="slds-button slds-button_reset slds-p-vertical_xx-small slds-size_1-of-1"
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-button__icon slds-button__icon_left"
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#edit"
+              />
+            </svg>
+            Edit Favorites
+          </button>
+        </li>
+      </ul>
+    </footer>
+  </section>
+</div>
+`;
+
+exports[`Dynamic Menu renders a dynamic menu with 1 item 1`] = `
+<div
+  className="demo-only"
+  style={
+    Object {
+      "height": "14rem",
+      "marginLeft": "1rem",
+      "position": "relative",
+    }
+  }
+>
+  <button
+    className="slds-button slds-button_icon slds-button_icon-border-filled"
+    onClick={[Function]}
+    title="Show Favorites"
+  >
+    <svg
+      aria-hidden={true}
+      className="slds-button__icon"
+    >
+      <use
+        xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#favorite"
+      />
+    </svg>
+    <span
+      className="slds-assistive-text"
+    >
+      Show Favorites
+    </span>
+  </button>
+  <section
+    aria-describedby="dialog-body-id-3"
+    aria-label="My Favourites"
+    className="slds-popover slds-nubbin_top-left slds-dynamic-menu"
+    role="dialog"
+    style={
+      Object {
+        "left": "-0.5rem",
+        "position": "absolute",
+        "top": "48px",
+      }
+    }
+  >
+    <div
+      className="slds-popover__body slds-p-horizontal_none"
+      id="dialog-body-id-3"
+    >
+      <div
+        className="slds-media"
+      >
+        <div
+          className="slds-media__body"
+        >
+          <div
+            aria-orientation={null}
+            className="slds-dropdown_length-with-icon-7 slds-dropdown_fluid"
+            id="example-unique-id-1"
+            role="listbox"
+          >
+            <ul
+              aria-label="My Favorites"
+              className="slds-listbox slds-listbox_vertical"
+              role="group"
+            >
+              <li
+                className="slds-listbox__item"
+                role="presentation"
+              >
+                <div
+                  aria-checked={null}
+                  aria-disabled={null}
+                  aria-selected={null}
+                  className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_center"
+                  id="option0"
+                  role="presentation"
+                >
+                  <h3
+                    className="slds-listbox__option-header"
+                    role="presentation"
+                  >
+                    My Favorites
+                  </h3>
+                </div>
+              </li>
+              <li
+                className="slds-listbox__item"
+                role="presentation"
+              >
+                <div
+                  aria-checked={null}
+                  aria-disabled={null}
+                  aria-selected={null}
+                  className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
+                  id="option1"
+                  role="option"
+                  tabIndex={0}
+                >
+                  <span
+                    className="slds-media__figure slds-listbox__option-icon"
+                  >
+                    <span
+                      className="slds-icon_container slds-icon-standard-account"
+                      title={null}
+                    >
+                      <svg
+                        aria-hidden={true}
+                        className="slds-icon slds-icon_small"
+                      >
+                        <use
+                          xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#account"
+                        />
+                      </svg>
+                    </span>
+                  </span>
+                  <span
+                    className="slds-media__body"
+                  >
+                    <span
+                      className="slds-listbox__option-text slds-listbox__option-text_entity"
+                    >
+                      Burlington Textiles Corp of America
+                    </span>
+                    <span
+                      className="slds-listbox__option-meta slds-listbox__option-meta_entity"
+                    >
+                      Account
+                       •
+                       
+                      Burlington, NC
+                    </span>
+                  </span>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer
+      className="slds-popover__footer"
+    >
+      <ul>
+        <li>
+          <button
+            className="slds-button slds-button_reset slds-p-vertical_xx-small slds-size_1-of-1"
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-button__icon slds-button__icon_left"
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#add"
+              />
+            </svg>
+            Favorite this page
+          </button>
+        </li>
+        <li>
+          <button
+            className="slds-button slds-button_reset slds-p-vertical_xx-small slds-size_1-of-1"
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-button__icon slds-button__icon_left"
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#edit"
+              />
+            </svg>
+            Edit Favorites
+          </button>
+        </li>
+      </ul>
+    </footer>
+  </section>
+</div>
+`;
+
+exports[`Dynamic Menu renders a dynamic menu with less than 10 items 1`] = `
+<div
+  className="demo-only"
+  style={
+    Object {
+      "height": "28rem",
+      "marginLeft": "1rem",
+      "position": "relative",
+    }
+  }
+>
+  <button
+    className="slds-button slds-button_icon slds-button_icon-border-filled"
+    onClick={[Function]}
+    title="Show Favorites"
+  >
+    <svg
+      aria-hidden={true}
+      className="slds-button__icon"
+    >
+      <use
+        xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#favorite"
+      />
+    </svg>
+    <span
+      className="slds-assistive-text"
+    >
+      Show Favorites
+    </span>
+  </button>
+  <section
+    aria-describedby="dialog-body-id-4"
+    aria-label="My Favourites"
+    className="slds-popover slds-nubbin_top-left slds-dynamic-menu"
+    role="dialog"
+    style={
+      Object {
+        "left": "-0.5rem",
+        "position": "absolute",
+        "top": "48px",
+      }
+    }
+  >
+    <div
+      className="slds-popover__body slds-p-horizontal_none"
+      id="dialog-body-id-4"
+    >
+      <div
+        className="slds-media"
+      >
+        <div
+          className="slds-media__body"
+        >
+          <div
+            aria-orientation={null}
+            className="slds-dropdown_length-with-icon-7 slds-dropdown_fluid"
+            id="example-unique-id-2"
+            role="listbox"
+          >
+            <ul
+              aria-label="My Favorites"
+              className="slds-listbox slds-listbox_vertical"
+              role="group"
+            >
+              <li
+                className="slds-listbox__item"
+                role="presentation"
+              >
+                <div
+                  aria-checked={null}
+                  aria-disabled={null}
+                  aria-selected={null}
+                  className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_center"
+                  id="option0"
+                  role="presentation"
+                >
+                  <h3
+                    className="slds-listbox__option-header"
+                    role="presentation"
+                  >
+                    My Favorites
+                  </h3>
+                </div>
+              </li>
+              <li
+                className="slds-listbox__item"
+                role="presentation"
+              >
+                <div
+                  aria-checked={null}
+                  aria-disabled={null}
+                  aria-selected={null}
+                  className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
+                  id="option1"
+                  role="option"
+                  tabIndex={0}
+                >
+                  <span
+                    className="slds-media__figure slds-listbox__option-icon"
+                  >
+                    <span
+                      className="slds-icon_container slds-icon-standard-account"
+                      title={null}
+                    >
+                      <svg
+                        aria-hidden={true}
+                        className="slds-icon slds-icon_small"
+                      >
+                        <use
+                          xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#account"
+                        />
+                      </svg>
+                    </span>
+                  </span>
+                  <span
+                    className="slds-media__body"
+                  >
+                    <span
+                      className="slds-listbox__option-text slds-listbox__option-text_entity"
+                    >
+                      Burlington Textiles Corp of America
+                    </span>
+                    <span
+                      className="slds-listbox__option-meta slds-listbox__option-meta_entity"
+                    >
+                      Account
+                       •
+                       
+                      Burlington, NC
+                    </span>
+                  </span>
+                </div>
+              </li>
+              <li
+                className="slds-listbox__item"
+                role="presentation"
+              >
+                <div
+                  aria-checked={null}
+                  aria-disabled={null}
+                  aria-selected={null}
+                  className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
+                  id="option2"
+                  role="option"
+                >
+                  <span
+                    className="slds-media__figure slds-listbox__option-icon"
+                  >
+                    <span
+                      className="slds-icon_container slds-icon-standard-account"
+                      title={null}
+                    >
+                      <svg
+                        aria-hidden={true}
+                        className="slds-icon slds-icon_small"
+                      >
+                        <use
+                          xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#account"
+                        />
+                      </svg>
+                    </span>
+                  </span>
+                  <span
+                    className="slds-media__body"
+                  >
+                    <span
+                      className="slds-listbox__option-text slds-listbox__option-text_entity"
+                    >
+                      Dickenson plc
+                    </span>
+                    <span
+                      className="slds-listbox__option-meta slds-listbox__option-meta_entity"
+                    >
+                      Account
+                       •
+                       
+                      Lawrence, KS
+                    </span>
+                  </span>
+                </div>
+              </li>
+              <li
+                className="slds-listbox__item"
+                role="presentation"
+              >
+                <div
+                  aria-checked={null}
+                  aria-disabled={null}
+                  aria-selected={null}
+                  className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
+                  id="option3"
+                  role="option"
+                >
+                  <span
+                    className="slds-media__figure slds-listbox__option-icon"
+                  >
+                    <span
+                      className="slds-icon_container slds-icon-standard-account"
+                      title={null}
+                    >
+                      <svg
+                        aria-hidden={true}
+                        className="slds-icon slds-icon_small"
+                      >
+                        <use
+                          xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#account"
+                        />
+                      </svg>
+                    </span>
+                  </span>
+                  <span
+                    className="slds-media__body"
+                  >
+                    <span
+                      className="slds-listbox__option-text slds-listbox__option-text_entity"
+                    >
+                      Edge Communications
+                    </span>
+                    <span
+                      className="slds-listbox__option-meta slds-listbox__option-meta_entity"
+                    >
+                      Account
+                       •
+                       
+                      Austin, TX
+                    </span>
+                  </span>
+                </div>
+              </li>
+              <li
+                className="slds-listbox__item"
+                role="presentation"
+              >
+                <div
+                  aria-checked={null}
+                  aria-disabled={null}
+                  aria-selected={null}
+                  className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
+                  id="option4"
+                  role="option"
+                >
+                  <span
+                    className="slds-media__figure slds-listbox__option-icon"
+                  >
+                    <span
+                      className="slds-icon_container slds-icon-standard-account"
+                      title={null}
+                    >
+                      <svg
+                        aria-hidden={true}
+                        className="slds-icon slds-icon_small"
+                      >
+                        <use
+                          xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#account"
+                        />
+                      </svg>
+                    </span>
+                  </span>
+                  <span
+                    className="slds-media__body"
+                  >
+                    <span
+                      className="slds-listbox__option-text slds-listbox__option-text_entity"
+                    >
+                      Express Logistics and Transport
+                    </span>
+                    <span
+                      className="slds-listbox__option-meta slds-listbox__option-meta_entity"
+                    >
+                      Account
+                       •
+                       
+                      Portland, OR
+                    </span>
+                  </span>
+                </div>
+              </li>
+              <li
+                className="slds-listbox__item"
+                role="presentation"
+              >
+                <div
+                  aria-checked={null}
+                  aria-disabled={null}
+                  aria-selected={null}
+                  className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
+                  id="option5"
+                  role="option"
+                >
+                  <span
+                    className="slds-media__figure slds-listbox__option-icon"
+                  >
+                    <span
+                      className="slds-icon_container slds-icon-standard-account"
+                      title={null}
+                    >
+                      <svg
+                        aria-hidden={true}
+                        className="slds-icon slds-icon_small"
+                      >
+                        <use
+                          xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#account"
+                        />
+                      </svg>
+                    </span>
+                  </span>
+                  <span
+                    className="slds-media__body"
+                  >
+                    <span
+                      className="slds-listbox__option-text slds-listbox__option-text_entity"
+                    >
+                      GenePoint
+                    </span>
+                    <span
+                      className="slds-listbox__option-meta slds-listbox__option-meta_entity"
+                    >
+                      Account
+                       •
+                       
+                      Mountain View, CA
+                    </span>
+                  </span>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer
+      className="slds-popover__footer"
+    >
+      <ul>
+        <li>
+          <button
+            className="slds-button slds-button_reset slds-p-vertical_xx-small slds-size_1-of-1"
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-button__icon slds-button__icon_left"
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#add"
+              />
+            </svg>
+            Favorite this page
+          </button>
+        </li>
+        <li>
+          <button
+            className="slds-button slds-button_reset slds-p-vertical_xx-small slds-size_1-of-1"
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-button__icon slds-button__icon_left"
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#edit"
+              />
+            </svg>
+            Edit Favorites
+          </button>
+        </li>
+      </ul>
+    </footer>
+  </section>
+</div>
+`;
+
+exports[`Dynamic Menu renders a dynamic menu with more than 10 items 1`] = `
+<div
+  className="demo-only"
+  style={
+    Object {
+      "height": "38rem",
+      "marginLeft": "1rem",
+      "position": "relative",
+    }
+  }
+>
+  <button
+    className="slds-button slds-button_icon slds-button_icon-border-filled"
+    onClick={[Function]}
+    title="Show Favorites"
+  >
+    <svg
+      aria-hidden={true}
+      className="slds-button__icon"
+    >
+      <use
+        xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#favorite"
+      />
+    </svg>
+    <span
+      className="slds-assistive-text"
+    >
+      Show Favorites
+    </span>
+  </button>
+  <section
+    aria-describedby="dialog-body-id-5"
+    aria-label="My Favourites"
+    className="slds-popover slds-nubbin_top-left slds-dynamic-menu"
+    role="dialog"
+    style={
+      Object {
+        "left": "-0.5rem",
+        "position": "absolute",
+        "top": "48px",
+      }
+    }
+  >
+    <div
+      className="slds-popover__body slds-p-horizontal_none"
+      id="dialog-body-id-5"
+    >
+      <div
+        className="slds-media"
+      >
+        <div
+          className="slds-media__body"
+        >
+          <div
+            className="slds-form-element"
+          >
+            <label
+              className="slds-form-element__label slds-assistive-text"
+              htmlFor="example-unique-id-3"
+              id="combobox-label-id-1"
+            >
+              Search
+            </label>
+            <div
+              className="slds-form-element__control"
+            >
+              <div
+                className="slds-combobox_container"
+              >
+                <div
+                  className="slds-combobox slds-is-open"
+                >
+                  <div
+                    className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right slds-m-around_small"
+                    role="none"
+                  >
+                    <input
+                      aria-autocomplete="list"
+                      aria-controls="example-unique-id-4"
+                      aria-expanded="true"
+                      aria-haspopup="listbox"
+                      autoComplete="off"
+                      className="slds-input slds-combobox__input"
+                      id="example-unique-id-3"
+                      onBlur={[Function]}
+                      onFocus={[Function]}
+                      placeholder="Search Favorites"
+                      role="combobox"
+                      type="text"
+                    />
+                    <span
+                      className="slds-icon_container slds-icon-utility-search slds-input__icon slds-input__icon_right"
+                      title={null}
+                    >
+                      <svg
+                        aria-hidden={true}
+                        className="slds-icon slds-icon slds-icon_x-small slds-icon-text-default"
+                      >
+                        <use
+                          xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#search"
+                        />
+                      </svg>
+                    </span>
+                  </div>
+                  <div
+                    aria-orientation={null}
+                    className="slds-dropdown_length-with-icon-7 slds-dropdown_fluid"
+                    id="example-unique-id-4"
+                    role="listbox"
+                  >
+                    <ul
+                      aria-label="My Favorites"
+                      className="slds-listbox slds-listbox_vertical"
+                      role="group"
+                    >
+                      <li
+                        className="slds-listbox__item"
+                        role="presentation"
+                      >
+                        <div
+                          aria-checked={null}
+                          aria-disabled={null}
+                          aria-selected={null}
+                          className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_center"
+                          id="option0"
+                          role="presentation"
+                        >
+                          <h3
+                            className="slds-listbox__option-header"
+                            role="presentation"
+                          >
+                            My Favorites
+                          </h3>
+                        </div>
+                      </li>
+                      <li
+                        className="slds-listbox__item"
+                        role="presentation"
+                      >
+                        <div
+                          aria-checked={null}
+                          aria-disabled={null}
+                          aria-selected={null}
+                          className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
+                          id="option1"
+                          role="option"
+                          tabIndex={0}
+                        >
+                          <span
+                            className="slds-media__figure slds-listbox__option-icon"
+                          >
+                            <span
+                              className="slds-icon_container slds-icon-standard-account"
+                              title={null}
+                            >
+                              <svg
+                                aria-hidden={true}
+                                className="slds-icon slds-icon_small"
+                              >
+                                <use
+                                  xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#account"
+                                />
+                              </svg>
+                            </span>
+                          </span>
+                          <span
+                            className="slds-media__body"
+                          >
+                            <span
+                              className="slds-listbox__option-text slds-listbox__option-text_entity"
+                            >
+                              Burlington Textiles Corp of America
+                            </span>
+                            <span
+                              className="slds-listbox__option-meta slds-listbox__option-meta_entity"
+                            >
+                              Account
+                               •
+                               
+                              Burlington, NC
+                            </span>
+                          </span>
+                        </div>
+                      </li>
+                      <li
+                        className="slds-listbox__item"
+                        role="presentation"
+                      >
+                        <div
+                          aria-checked={null}
+                          aria-disabled={null}
+                          aria-selected={null}
+                          className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
+                          id="option2"
+                          role="option"
+                        >
+                          <span
+                            className="slds-media__figure slds-listbox__option-icon"
+                          >
+                            <span
+                              className="slds-icon_container slds-icon-standard-account"
+                              title={null}
+                            >
+                              <svg
+                                aria-hidden={true}
+                                className="slds-icon slds-icon_small"
+                              >
+                                <use
+                                  xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#account"
+                                />
+                              </svg>
+                            </span>
+                          </span>
+                          <span
+                            className="slds-media__body"
+                          >
+                            <span
+                              className="slds-listbox__option-text slds-listbox__option-text_entity"
+                            >
+                              Dickenson plc
+                            </span>
+                            <span
+                              className="slds-listbox__option-meta slds-listbox__option-meta_entity"
+                            >
+                              Account
+                               •
+                               
+                              Lawrence, KS
+                            </span>
+                          </span>
+                        </div>
+                      </li>
+                      <li
+                        className="slds-listbox__item"
+                        role="presentation"
+                      >
+                        <div
+                          aria-checked={null}
+                          aria-disabled={null}
+                          aria-selected={null}
+                          className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
+                          id="option3"
+                          role="option"
+                        >
+                          <span
+                            className="slds-media__figure slds-listbox__option-icon"
+                          >
+                            <span
+                              className="slds-icon_container slds-icon-standard-account"
+                              title={null}
+                            >
+                              <svg
+                                aria-hidden={true}
+                                className="slds-icon slds-icon_small"
+                              >
+                                <use
+                                  xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#account"
+                                />
+                              </svg>
+                            </span>
+                          </span>
+                          <span
+                            className="slds-media__body"
+                          >
+                            <span
+                              className="slds-listbox__option-text slds-listbox__option-text_entity"
+                            >
+                              Edge Communications
+                            </span>
+                            <span
+                              className="slds-listbox__option-meta slds-listbox__option-meta_entity"
+                            >
+                              Account
+                               •
+                               
+                              Austin, TX
+                            </span>
+                          </span>
+                        </div>
+                      </li>
+                      <li
+                        className="slds-listbox__item"
+                        role="presentation"
+                      >
+                        <div
+                          aria-checked={null}
+                          aria-disabled={null}
+                          aria-selected={null}
+                          className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
+                          id="option4"
+                          role="option"
+                        >
+                          <span
+                            className="slds-media__figure slds-listbox__option-icon"
+                          >
+                            <span
+                              className="slds-icon_container slds-icon-standard-account"
+                              title={null}
+                            >
+                              <svg
+                                aria-hidden={true}
+                                className="slds-icon slds-icon_small"
+                              >
+                                <use
+                                  xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#account"
+                                />
+                              </svg>
+                            </span>
+                          </span>
+                          <span
+                            className="slds-media__body"
+                          >
+                            <span
+                              className="slds-listbox__option-text slds-listbox__option-text_entity"
+                            >
+                              Express Logistics and Transport
+                            </span>
+                            <span
+                              className="slds-listbox__option-meta slds-listbox__option-meta_entity"
+                            >
+                              Account
+                               •
+                               
+                              Portland, OR
+                            </span>
+                          </span>
+                        </div>
+                      </li>
+                      <li
+                        className="slds-listbox__item"
+                        role="presentation"
+                      >
+                        <div
+                          aria-checked={null}
+                          aria-disabled={null}
+                          aria-selected={null}
+                          className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
+                          id="option5"
+                          role="option"
+                        >
+                          <span
+                            className="slds-media__figure slds-listbox__option-icon"
+                          >
+                            <span
+                              className="slds-icon_container slds-icon-standard-account"
+                              title={null}
+                            >
+                              <svg
+                                aria-hidden={true}
+                                className="slds-icon slds-icon_small"
+                              >
+                                <use
+                                  xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#account"
+                                />
+                              </svg>
+                            </span>
+                          </span>
+                          <span
+                            className="slds-media__body"
+                          >
+                            <span
+                              className="slds-listbox__option-text slds-listbox__option-text_entity"
+                            >
+                              GenePoint
+                            </span>
+                            <span
+                              className="slds-listbox__option-meta slds-listbox__option-meta_entity"
+                            >
+                              Account
+                               •
+                               
+                              Mountain View, CA
+                            </span>
+                          </span>
+                        </div>
+                      </li>
+                      <li
+                        className="slds-listbox__item"
+                        role="presentation"
+                      >
+                        <div
+                          aria-checked={null}
+                          aria-disabled={null}
+                          aria-selected={null}
+                          className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
+                          id="option6"
+                          role="option"
+                        >
+                          <span
+                            className="slds-media__figure slds-listbox__option-icon"
+                          >
+                            <span
+                              className="slds-icon_container slds-icon-standard-account"
+                              title={null}
+                            >
+                              <svg
+                                aria-hidden={true}
+                                className="slds-icon slds-icon_small"
+                              >
+                                <use
+                                  xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#account"
+                                />
+                              </svg>
+                            </span>
+                          </span>
+                          <span
+                            className="slds-media__body"
+                          >
+                            <span
+                              className="slds-listbox__option-text slds-listbox__option-text_entity"
+                            >
+                              Grand Hotels & Resorts Ltd
+                            </span>
+                            <span
+                              className="slds-listbox__option-meta slds-listbox__option-meta_entity"
+                            >
+                              Account
+                               •
+                               
+                              Chicago, IL
+                            </span>
+                          </span>
+                        </div>
+                      </li>
+                      <li
+                        className="slds-listbox__item"
+                        role="presentation"
+                      >
+                        <div
+                          aria-checked={null}
+                          aria-disabled={null}
+                          aria-selected={null}
+                          className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
+                          id="option7"
+                          role="option"
+                        >
+                          <span
+                            className="slds-media__figure slds-listbox__option-icon"
+                          >
+                            <span
+                              className="slds-icon_container slds-icon-standard-account"
+                              title={null}
+                            >
+                              <svg
+                                aria-hidden={true}
+                                className="slds-icon slds-icon_small"
+                              >
+                                <use
+                                  xlinkHref="/assets/icons/standard-sprite/svg/symbols.svg#account"
+                                />
+                              </svg>
+                            </span>
+                          </span>
+                          <span
+                            className="slds-media__body"
+                          >
+                            <span
+                              className="slds-listbox__option-text slds-listbox__option-text_entity"
+                            >
+                              Pyramid Construction Inc.
+                            </span>
+                            <span
+                              className="slds-listbox__option-meta slds-listbox__option-meta_entity"
+                            >
+                              Account
+                               •
+                               
+                              Paris
+                            </span>
+                          </span>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer
+      className="slds-popover__footer"
+    >
+      <ul>
+        <li>
+          <button
+            className="slds-button slds-button_reset slds-p-vertical_xx-small slds-size_1-of-1"
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-button__icon slds-button__icon_left"
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#add"
+              />
+            </svg>
+            Favorite this page
+          </button>
+        </li>
+        <li>
+          <button
+            className="slds-button slds-button_reset slds-p-vertical_xx-small slds-size_1-of-1"
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-button__icon slds-button__icon_left"
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#edit"
+              />
+            </svg>
+            Edit Favorites
+          </button>
+        </li>
+      </ul>
+    </footer>
+  </section>
+</div>
+`;

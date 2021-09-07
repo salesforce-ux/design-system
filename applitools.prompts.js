@@ -79,12 +79,12 @@ async function ask() {
         let kindSearch = '';
         if (pattern.toLowerCase() !== 'all') {
           // convert comma separated list into regex OR pattern
-          kindSearch = pattern.split(/,\s?/g).join('|');
+          kindSearch = `(?:` + pattern.split(/,\s?/g).join('|') + `)`;
         }
 
         // regex clarification:
         // »  [^/]*  => 0 or more of any character except forward-slash
-        return `[^/]*/[^/]*${kindSearch}.*`;
+        return `^.*?${kindSearch}[^/]*?(?:\\/[^/]*)?`;
       }
     },
     {
@@ -101,11 +101,11 @@ async function ask() {
         }
 
         // convert comma separated list into regex OR pattern
-        subSearch = pattern.split(/,\s?/g).join('|');
+        subSearch = `(?:` + pattern.split(/,\s?/g).join('|') + `)`;
 
         // regex clarification:
         // »  [^/]*  => 0 or more of any character except forward-slash
-        return `/[^/]*${subSearch}.*`;
+        return `${subSearch}.*`;
       }
     },
     {
@@ -113,7 +113,7 @@ async function ask() {
       name: 'testNamePattern',
       message: `If you'd like to test only specific tests within your defined filters above please enter the regex pattern (use ".*" for all)\n `,
       footer: `  NOTE: This is searching on the name of the test such as "Kitchen Sink"`,
-      initial: '^Kitchen Sink'
+      initial: '^(?:.+|) ?Sink'
     },
     {
       type: 'confirm',

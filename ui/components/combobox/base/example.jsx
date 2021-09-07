@@ -20,7 +20,7 @@ import * as Snapshot from '../snapshots.data';
 /* -----------------------------------------------------------------------------
     Variables
 ----------------------------------------------------------------------------- */
-
+const STORY_SINK_CONTEXT = 'Select-Only (Base)';
 const listboxOptionId01 = 'listbox-option-unique-id-01';
 const listboxOptionId02 = 'listbox-option-unique-id-02';
 
@@ -57,44 +57,53 @@ export const ListboxDropdown = props => (
 ----------------------------------------------------------------------------- */
 
 // Default
-export default (
-  <Combobox
-    id={_.uniqueId('combobox-id-')}
-    aria-controls="listbox-id-1"
-    inputIconPosition="right"
-    rightInputIcon={
-      <UtilityIcon
-        symbol="down"
-        className="slds-icon slds-icon_x-small slds-icon-text-default"
-        containerClassName="slds-input__icon slds-input__icon_right"
-        assistiveText={false}
-        title={false}
+export default [
+  {
+    context: STORY_SINK_CONTEXT,
+    id: `${STORY_SINK_CONTEXT.toLowerCase()}-default`,
+    label: `${STORY_SINK_CONTEXT} default (select-only)`,
+    element: (
+      <Combobox
+        id={_.uniqueId('combobox-id-')}
+        aria-controls="listbox-id-1"
+        inputIconPosition="right"
+        rightInputIcon={
+          <UtilityIcon
+            symbol="down"
+            className="slds-icon slds-icon_x-small slds-icon-text-default"
+            containerClassName="slds-input__icon slds-input__icon_right"
+            assistiveText={false}
+            title={false}
+          />
+        }
+        results={
+          <Listbox
+            id="listbox-id-1"
+            snapshot={Snapshot.ObjectOptions}
+            type="plain"
+            count={8}
+            visualSelection
+          />
+        }
+        resultsType="listbox"
+        hasInteractions
+        selectOnly
       />
-    }
-    results={
-      <Listbox
-        id="listbox-id-1"
-        snapshot={Snapshot.ObjectOptions}
-        type="plain"
-        count={8}
-        visualSelection
-      />
-    }
-    resultsType="listbox"
-    hasInteractions
-  />
-);
+    )
+  }
+];
 
 // States
 export let states = [
   {
+    context: STORY_SINK_CONTEXT,
     id: 'focused',
-    label: 'Focused',
+    label: 'Focused (select-only)',
     element: (
       <Combobox
         id={_.uniqueId('combobox-id-')}
         aria-controls="listbox-id-4"
-        readonly
+        selectOnly
         inputIconPosition="right"
         rightInputIcon={
           <UtilityIcon
@@ -120,13 +129,14 @@ export let states = [
     )
   },
   {
+    context: STORY_SINK_CONTEXT,
     id: 'focused-open',
-    label: 'Focused - Opened',
+    label: 'Focused - Opened (select-only)',
     element: (
       <Combobox
         id={_.uniqueId('combobox-id-')}
         aria-controls="listbox-id-4"
-        readonly
+        selectOnly
         inputIconPosition="right"
         rightInputIcon={
           <UtilityIcon
@@ -153,13 +163,14 @@ export let states = [
     )
   },
   {
+    context: STORY_SINK_CONTEXT,
     id: 'highlighting-an-option',
-    label: 'Highlighting an option',
+    label: 'Highlighting an option (select-only)',
     element: (
       <Combobox
         id={_.uniqueId('combobox-id-')}
         aria-controls="listbox-id-4"
-        readonly
+        selectOnly
         inputIconPosition="right"
         rightInputIcon={
           <UtilityIcon
@@ -187,13 +198,14 @@ export let states = [
     )
   },
   {
+    context: STORY_SINK_CONTEXT,
     id: 'selecting-a-single-option',
-    label: 'Selecting a single option',
+    label: 'Selecting a single option (select-only)',
     element: (
       <Combobox
         id={_.uniqueId('combobox-id-')}
         aria-controls="listbox-id-6"
-        readonly
+        selectOnly
         value="Accounts"
         inputIconPosition="right"
         rightInputIcon={
@@ -222,13 +234,14 @@ export let states = [
     )
   },
   {
+    context: STORY_SINK_CONTEXT,
     id: 'selected-an-option-closed',
-    label: 'Selected an option - Closed',
+    label: 'Selected an option - Closed (select-only)',
     element: (
       <Combobox
         id={_.uniqueId('combobox-id-')}
         aria-controls="listbox-id-5"
-        readonly
+        selectOnly
         value="Accounts"
         inputIconPosition="right"
         rightInputIcon={
@@ -254,13 +267,14 @@ export let states = [
     )
   },
   {
+    context: STORY_SINK_CONTEXT,
     id: 'selecting-multiple-options',
-    label: 'Selecting multiple options',
+    label: 'Selecting multiple options (select-only)',
     element: (
       <Combobox
         id={_.uniqueId('combobox-id-')}
         aria-controls="listbox-id-7"
-        readonly
+        selectOnly
         value="2 Options Selected"
         inputIconPosition="right"
         rightInputIcon={
@@ -288,13 +302,14 @@ export let states = [
     )
   },
   {
+    context: STORY_SINK_CONTEXT,
     id: 'selected-multiple-options-closed',
-    label: 'Selected multiple options-closed',
+    label: 'Selected multiple options-closed (select-only)',
     element: (
       <Combobox
         id={_.uniqueId('combobox-id-')}
         aria-controls="listbox-id-8"
-        readonly
+        selectOnly
         value="2 Options Selected"
         inputIconPosition="right"
         rightInputIcon={
@@ -326,13 +341,52 @@ export let states = [
     )
   },
   {
+    context: STORY_SINK_CONTEXT,
+    id: 'selecting-a-single-option-truncated',
+    label: 'Selecting a single option (truncated)',
+    demoStyles: 'max-width: 225px;',
+    storybookStyles: true,
+    element: (
+      <Combobox
+        id={_.uniqueId('combobox-id-')}
+        aria-controls="listbox-id-6"
+        selectOnly
+        value="Accounts (should truncate)"
+        inputIconPosition="right"
+        rightInputIcon={
+          <UtilityIcon
+            symbol="down"
+            className="slds-icon slds-icon_x-small slds-icon-text-default"
+            containerClassName="slds-input__icon slds-input__icon_right"
+            assistiveText={false}
+            title={false}
+          />
+        }
+        results={
+          <Listbox
+            id="listbox-id-6"
+            snapshot={Snapshot.ObjectOptionsSingleSelection}
+            type="plain"
+            count={8}
+            visualSelection
+          />
+        }
+        resultsType="listbox"
+        aria-activedescendant="option1"
+        isOpen
+        hasFocus
+      />
+    )
+  },
+  {
+    context: STORY_SINK_CONTEXT,
     id: 'loading-options',
-    label: 'Loading more options',
+    label: 'Loading more options (select-only)',
     element: (
       <Combobox
         id={_.uniqueId('combobox-id-')}
         aria-controls="listbox-id-222"
-        readonly
+        selectOnly
         value="Accounts"
         inputIconPosition="right"
         rightInputIcon={
@@ -361,13 +415,14 @@ export let states = [
     )
   },
   {
+    context: STORY_SINK_CONTEXT,
     id: 'grouped-options',
-    label: 'Grouped options',
+    label: 'Grouped options (select-only)',
     element: (
       <Combobox
         id={_.uniqueId('combobox-id-')}
         aria-controls="listbox-id-3"
-        readonly
+        selectOnly
         inputIconPosition="right"
         rightInputIcon={
           <UtilityIcon
@@ -402,8 +457,9 @@ export let states = [
     )
   },
   {
+    context: STORY_SINK_CONTEXT,
     id: 'deprecated-closed',
-    label: 'Deprecated - Closed',
+    label: 'Deprecated - Closed (select-only)',
     element: (
       <div className="demo-only" style={{ height: '10rem' }}>
         <DeprecatedCombobox
@@ -416,8 +472,9 @@ export let states = [
     )
   },
   {
+    context: STORY_SINK_CONTEXT,
     id: 'deprecated-focused',
-    label: 'Deprecated - Focused',
+    label: 'Deprecated - Focused (select-only)',
     element: (
       <div className="demo-only" style={{ height: '10rem' }}>
         <DeprecatedCombobox
@@ -431,8 +488,9 @@ export let states = [
     )
   },
   {
+    context: STORY_SINK_CONTEXT,
     id: 'deprecated-open-item-focused',
-    label: 'Deprecated - Open - Item Focused',
+    label: 'Deprecated - Open - Item Focused (select-only)',
     element: (
       <div className="demo-only" style={{ height: '10rem' }}>
         <DeprecatedCombobox
@@ -447,8 +505,9 @@ export let states = [
     )
   },
   {
+    context: STORY_SINK_CONTEXT,
     id: 'deprecated-closed-options-selected',
-    label: 'Deprecated - Option(s) Selected',
+    label: 'Deprecated - Option(s) Selected (select-only)',
     element: (
       <div className="demo-only" style={{ height: '10rem' }}>
         <DeprecatedCombobox

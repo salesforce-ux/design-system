@@ -14,7 +14,12 @@ devices.map((value, index) => {
 
 export default class SLDSFrame extends React.Component {
   render() {
-    const { children, hideDeviceSelector, frameStyles } = this.props;
+    const {
+      children,
+      hideDeviceSelector,
+      frameStyles,
+      frameTitle
+    } = this.props;
 
     let fixedHeight = false;
     // if frameStyles has a height value then we want to disable automatic height resizing
@@ -88,6 +93,7 @@ export default class SLDSFrame extends React.Component {
           initialContent={initialContent}
           style={frameStyles}
           onLoad={setWidth}
+          title={frameTitle}
         >
           <FrameContextConsumer>
             {frameContext => (
@@ -133,5 +139,6 @@ export default class SLDSFrame extends React.Component {
 
 SLDSFrame.propTypes = {
   hideDeviceSelector: PropTypes.bool,
-  frameStyles: PropTypes.object
+  frameStyles: PropTypes.object,
+  frameTitle: PropTypes.string
 };

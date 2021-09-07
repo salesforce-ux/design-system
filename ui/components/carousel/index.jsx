@@ -4,17 +4,7 @@
 import React, { Component } from 'react';
 import ButtonIcon from '../button-icons/';
 import classNames from 'classnames';
-
-/**
- * Vars
- */
-export const contentId01 = 'content-id-01';
-export const contentId02 = 'content-id-02';
-export const contentId03 = 'content-id-03';
-
-export const indicatorId01 = 'indicator-id-01';
-export const indicatorId02 = 'indicator-id-02';
-export const indicatorId03 = 'indicator-id-03';
+import uniqueId from 'lodash.uniqueid';
 
 /**
  * Indicator Sub Component
@@ -88,6 +78,14 @@ export const CarouselPlayToggle = props => (
 
 class Carousel extends Component {
   render() {
+    const contentId01 = uniqueId('content-id-');
+    const contentId02 = uniqueId('content-id-');
+    const contentId03 = uniqueId('content-id-');
+
+    const indicatorId01 = uniqueId('indicator-id-');
+    const indicatorId02 = uniqueId('indicator-id-');
+    const indicatorId03 = uniqueId('indicator-id-');
+
     return (
       <div className={classNames('slds-carousel', this.props.className)}>
         <div className="slds-carousel__stage">

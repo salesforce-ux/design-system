@@ -230,7 +230,7 @@ props:
   PRODUCT_CONSUMED:
     value: '#55BC9C'
   PRODUCT_TRANSFER:
-    value: '#F88962'
+    value: '#E3734F'
   PRODUCT_ITEM:
     value: '#769ED9'
   PRODUCT_ITEM_TRANSACTION:
@@ -710,7 +710,7 @@ props:
   SCHEDULE_OBJECTIVE:
     value: '#2A739E'
   ASSET_WARRANTY:
-    value: '#54698D'
+    value: '#107CAD'
   CHECKOUT:
     value: '#04844b'
   DATA_MAPPING:
@@ -758,9 +758,9 @@ props:
   PAYMENT_GATEWAY:
     value: '#0B827C'
   SERIALIZED_PRODUCT:
-    value: '#2A739E'
+    value: '#1589EE'
   SERIALIZED_PRODUCT_TRANSACTION:
-    value: '#2A739E'
+    value: '#1589EE'
   TRAVEL_MODE:
     value: '#45C173'
   ADJUST_VALUE:
@@ -849,3 +849,47 @@ props:
     value: '#F5675B'
   WORK_FORECAST:
     value: '#FCB95B'
+  PRODUCT_TRANSFER_STATE:
+    value: '#E3734F'
+  PRODUCT_CONSUMED_STATE:
+    value: '#06A59A'
+  BUDGET_ALLOCATION:
+    value: '#107CAD'
+  PROMOTION_SEGMENTS:
+    value: '#04844B'
+  QUALIFICATIONS:
+    value: '#04844B'
+  DISCOUNTS:
+    value: '#04844B'
+  COUPON_CODES:
+    value: '#04844B'
+  PROMOTIONS_WORKSPACE:
+    value: '#04844B'
+  PROBLEM:
+    value: '#FE9339'
+  CHANGE_REQUEST:
+    value: '#0B827C'
+  NETWORK_CONTRACT:
+    value: '#6EC06E'
+  INCIDENT:
+    value: '#BA0517'
+  CODE_SET:
+    value: '#0079BC'
+  CODE_SET_BUNDLE:
+    value: '#0079BC'
+  MEDICATION:
+    value: '#4AC076'
+  MEDICATION_STATEMENT:
+    value: '#1589EE'
+  PATIENT_MEDICATION_DOSAGE:
+    value: '#34BECD'
+  ACCOUNT_INFO:
+    value: '#7F8DE1'
+  PERSON_NAME:
+    value: '#7F8DE1'
+  IDENTIFIER:
+    value: '#F88962'
+  PERSON_LANGUAGE:
+    value: '#0EB58A'
+  BUDGET:
+    value: '#107CAD'

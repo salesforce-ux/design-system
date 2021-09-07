@@ -7,14 +7,14 @@ import * as MapExamples from "./base/example";
 
 ## Base
 
-<CodeView>{MapExamples.default}</CodeView>
+<CodeView>{getDisplayElementById(MapExamples.default)}</CodeView>
 
 ### Mobile
 
 <MobileBlurb patternSpecificText="maps will have increased header text size along with other small adjustments" />
 
-<CodeView frameOnly>
-  {MapExamples.default}
+<CodeView frameOnly frameTitle="Example mobile styles for maps">
+  {getDisplayElementById(MapExamples.default)}
 </CodeView>
 
 ## States

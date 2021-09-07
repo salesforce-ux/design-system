@@ -38,6 +38,7 @@ exports[`Base Progress Indicator renders a base progress indicator 1`] = `
     </li>
   </ol>
   <div
+    aria-label="{{Placeholder for description of progress bar}}"
     aria-valuemax="100"
     aria-valuemin="0"
     className="slds-progress-bar slds-progress-bar_x-small"

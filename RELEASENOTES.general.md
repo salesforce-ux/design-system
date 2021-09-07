@@ -1,6 +1,26 @@
 <!-- Release notes authoring guidelines: http://keepachangelog.com/ -->
 <!-- On release, add general notes here. In time the legacy release notes will be add to this -->
 
+## 2.16.1 - August 25, 2021
+
+## 2.16.0 - August 12, 2021
+
+- In accordance with ARIA 1.2 guidance, the `input` was replaced with `button` within these components that contain select-only comboboxes:
+  - Datetime Picker
+  - Docked Composer
+  - Dynamic Menu
+  - Expression
+  - Global Header
+  - List builder
+  - Lookups
+  - Picklist
+  - Rich Text Editor
+  - Timepicker
+
+- Added SLDS scope customizer tool: `npm run slds:customizer`
+- Added new standard color palette for neutral colors (black/white/grays)
+- Updated @salesforce-ux/icons to 10.1.1
+
 ## 2.15.8 - May 27, 2021
 
 - Updated selected text highlight color token `COLOR_BACKGROUND_SELECTION` for better color contrast

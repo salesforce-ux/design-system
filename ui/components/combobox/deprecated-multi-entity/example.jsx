@@ -11,6 +11,7 @@ import {
 } from '../deprecated';
 import { ListboxPills, ListboxPillsItem, ListboxPill } from '../../pills';
 
+const STORY_SINK_CONTEXT = 'Deprecated – Multi-Entity';
 const listboxOptionId01 = 'listbox-option-unique-id-01';
 const listboxOptionId02 = 'listbox-option-unique-id-02';
 
@@ -37,21 +38,31 @@ const ListboxDropdown = props => (
   </DeprecatedListbox>
 );
 
-export default (
-  <div className="demo-only" style={{ height: '10rem' }}>
-    <DeprecatedCombobox
-      inputIcon="right"
-      inputIconRightSymbol="search"
-      objectSwitcherInline
-      autocomplete
-      listbox={<ListboxDropdown />}
-      objectSwitcher
-    />
-  </div>
-);
+export default [
+  {
+    context: STORY_SINK_CONTEXT,
+    deprecated: true,
+    id: `${STORY_SINK_CONTEXT.toLowerCase()}-default`,
+    label: `${STORY_SINK_CONTEXT} default`,
+    element: (
+      <div className="demo-only" style={{ height: '10rem' }}>
+        <DeprecatedCombobox
+          inputIcon="right"
+          inputIconRightSymbol="search"
+          objectSwitcherInline
+          autocomplete
+          listbox={<ListboxDropdown />}
+          objectSwitcher
+        />
+      </div>
+    )
+  }
+];
 
 export let states = [
   {
+    context: STORY_SINK_CONTEXT,
+    deprecated: true,
     id: 'deprecated-focused',
     label: 'Deprecated - Focused',
     element: (
@@ -73,6 +84,8 @@ export let states = [
     `
   },
   {
+    context: STORY_SINK_CONTEXT,
+    deprecated: true,
     id: 'deprecated-open-item-focused',
     label: 'Deprecated - Open - Item Focused',
     element: (
@@ -91,6 +104,8 @@ export let states = [
     )
   },
   {
+    context: STORY_SINK_CONTEXT,
+    deprecated: true,
     id: 'deprecated-options-selected',
     label: 'Deprecated - Option(s) Selected',
     element: (
@@ -127,6 +142,8 @@ export let states = [
     )
   },
   {
+    context: STORY_SINK_CONTEXT,
+    deprecated: true,
     id: 'deprecated-focused-options-selected',
     label: 'Deprecated - Focused - Option(s) Selected',
     element: (

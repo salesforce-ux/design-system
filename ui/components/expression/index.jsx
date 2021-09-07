@@ -44,7 +44,7 @@ export const ExpressionOptions = ({
         label={label}
         value={selected && selected.value}
         placeholder={placeholderText}
-        readonly
+        selectOnly
         inputIconPosition="right"
         rightInputIcon={
           <UtilityIcon
@@ -187,7 +187,7 @@ export const ExpressionRow = ({
               aria-controls={listboxId1}
               label="Resource"
               placeholder={placeholderText}
-              readonly
+              selectOnly
               inputIconPosition="right"
               value={resourceIsSelected && 'Resource 1'}
               formClassName="slds-has-error"
@@ -225,7 +225,7 @@ export const ExpressionRow = ({
               aria-controls={listboxId2}
               label="Operator"
               placeholder={placeholderText}
-              readonly
+              selectOnly
               inputIconPosition="right"
               isDisabled={inputIsDisabled}
               rightInputIcon={

@@ -2,10 +2,18 @@
 
 # Rich Text Editor Release Notes
 
+## 2.16.0
+
+### Changed
+
+- Removed the usage of the deprecated combobox. The Rich Text Editor now uses the current combobox.
+- Updated [combobox](/components/combobox) to ARIA 1.2 compliance.
+
 ## 2.15.0
 
 ### Added
 - Enabled styling hooks for Rich Text Editor. See Rich Text Editor's styling hooks overview table for a full listing of the currently available hooks.
+
 ## 2.14.0
 
 ### Added

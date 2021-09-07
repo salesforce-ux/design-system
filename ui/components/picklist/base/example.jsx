@@ -19,16 +19,11 @@ import * as snapshot from '../snapshots.data';
     Exports
 ----------------------------------------------------------------------------- */
 
-// Demo wrapper
-export const Context = props => (
-  <div style={{ height: '11rem' }}>{props.children}</div>
-);
-
 // Default
 export default (
   <Combobox
     id={_.uniqueId('combobox-id-')}
-    className="slds-size_small"
+    containerClassName="slds-size_small"
     aria-controls="listbox-id-1"
     inputIconPosition="right"
     rightInputIcon={
@@ -46,11 +41,10 @@ export default (
         snapshot={snapshot.options}
         type="plain"
         count={8}
-        visualSelection
       />
     }
     resultsType="listbox"
-    readonly
+    selectOnly
     hasInteractions
   />
 );
@@ -63,7 +57,7 @@ export let states = [
     element: (
       <Combobox
         id={_.uniqueId('combobox-id-')}
-        className="slds-size_small"
+        containerClassName="slds-size_small"
         aria-controls="listbox-id-2"
         inputIconPosition="right"
         rightInputIcon={
@@ -81,11 +75,10 @@ export let states = [
             snapshot={snapshot.options}
             type="plain"
             count={8}
-            visualSelection
           />
         }
         resultsType="listbox"
-        readonly
+        selectOnly
         hasFocus
         isOpen
       />
@@ -97,7 +90,7 @@ export let states = [
     element: (
       <Combobox
         id={_.uniqueId('combobox-id-')}
-        className="slds-size_small"
+        containerClassName="slds-size_small"
         aria-controls="listbox-id-3"
         inputIconPosition="right"
         rightInputIcon={
@@ -115,12 +108,11 @@ export let states = [
             snapshot={snapshot.optionsFocused}
             type="plain"
             count={8}
-            visualSelection
           />
         }
         resultsType="listbox"
         aria-activedescendant="option1"
-        readonly
+        selectOnly
         hasFocus
         isOpen
       />
@@ -132,7 +124,7 @@ export let states = [
     element: (
       <Combobox
         id={_.uniqueId('combobox-id-')}
-        className="slds-size_small"
+        containerClassName="slds-size_small"
         aria-controls="listbox-id-4"
         inputIconPosition="right"
         value="Option A"
@@ -151,12 +143,11 @@ export let states = [
             snapshot={snapshot.optionSelected}
             type="plain"
             count={8}
-            visualSelection
           />
         }
         resultsType="listbox"
         aria-activedescendant="option1"
-        readonly
+        selectOnly
         hasFocus
         isOpen
       />
@@ -168,9 +159,9 @@ export let states = [
     element: (
       <Combobox
         id={_.uniqueId('combobox-id-')}
-        className="slds-size_small"
+        containerClassName="slds-size_small"
         aria-controls="listbox-id-5"
-        readonly
+        selectOnly
         value="2 Options Selected"
         inputIconPosition="right"
         rightInputIcon={
@@ -188,7 +179,6 @@ export let states = [
             snapshot={snapshot.optionsSelected}
             type="plain"
             count={8}
-            visualSelection
           />
         }
         resultsType="listbox"
@@ -203,7 +193,7 @@ export let states = [
     element: (
       <Combobox
         id={_.uniqueId('combobox-id-')}
-        className="slds-size_small"
+        containerClassName="slds-size_small"
         aria-controls="listbox-id-6"
         inputIconPosition="right"
         value="Option A"
@@ -222,12 +212,11 @@ export let states = [
             snapshot={snapshot.optionSelected}
             type="plain"
             count={8}
-            visualSelection
           />
         }
         resultsType="listbox"
         aria-activedescendant="option1"
-        readonly
+        selectOnly
       />
     )
   },
@@ -237,9 +226,9 @@ export let states = [
     element: (
       <Combobox
         id={_.uniqueId('combobox-id-')}
-        className="slds-size_small"
+        containerClassName="slds-size_small"
         aria-controls="listbox-id-7"
-        readonly
+        selectOnly
         value="2 Options Selected"
         inputIconPosition="right"
         rightInputIcon={
@@ -257,7 +246,6 @@ export let states = [
             snapshot={snapshot.optionsSelected}
             type="plain"
             count={8}
-            visualSelection
           />
         }
         resultsType="listbox"
@@ -276,9 +264,9 @@ export let states = [
     element: (
       <Combobox
         id={_.uniqueId('combobox-id-')}
-        className="slds-size_small"
+        containerClassName="slds-size_small"
         aria-controls="listbox-id-8"
-        readonly
+        selectOnly
         inputIconPosition="right"
         rightInputIcon={
           <UtilityIcon

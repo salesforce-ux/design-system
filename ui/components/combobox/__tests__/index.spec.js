@@ -1,9 +1,11 @@
 /* eslint-env jest */
 import React from 'react';
-import { DeprecatedCombobox } from '../deprecated/';
-import { ListboxDropdown } from '../base/example';
-import { ListboxPills, ListboxPillsItem, ListboxPill } from '../../pills';
-import Combobox, { ComboboxGroup } from '../';
+import * as BaseExamples from '../base/example';
+import * as DeprecatedInlineListboxExamples from '../deprecated-inline-listbox/example';
+import * as DeprecatedMultiEntityExamples from '../deprecated-multi-entity/example';
+import * as DeprecatedReadOnlyExamples from '../deprecated-readonly/example';
+import { DeprecatedComboboxInputElement } from '../deprecated/';
+import Combobox, { ComboboxGroup, ComboboxFormContext } from '../';
 import ObjectSwitcher from '../object-switcher/';
 import Listbox, { ListboxGroup, ListboxWrapper } from '../listbox/';
 import ListboxOfSelections from '../listbox-of-pills/';
@@ -14,13 +16,13 @@ import * as Snapshot from '../snapshots.data';
 import createHelpers from '../../../../jest.helpers';
 import { Popover } from '../../popovers/base/example';
 import { Button } from '../../buttons/base/example';
-import _ from '../../../shared/helpers';
+import _, { getDisplayElementById } from '../../../shared/helpers';
 
 const { matchesMarkup } = createHelpers(__dirname);
 
-const listboxOptionId01 = 'listbox-option-unique-id-01';
 const comboboxId = 'combobox-id-01';
 const listboxId = 'listbox-id-01';
+const objectSwitcherListboxId = 'objectswitcher-listbox-id-01';
 const primaryComboboxId = 'primary-combobox-id-01';
 const popoverId = 'popover-id-01';
 
@@ -30,422 +32,224 @@ const popoverId = 'popover-id-01';
 describe('render deprecated combobox', () => {
   it('renders a base combobox', () =>
     matchesMarkup(
-      <div className="demo-only" style={{ height: '10rem' }}>
-        <DeprecatedCombobox
-          autocomplete
-          inputIcon="right"
-          inputIconRightSymbol="search"
-          listbox={<ListboxDropdown />}
-        />
-      </div>
+      getDisplayElementById(BaseExamples.states, 'deprecated-closed')
     ));
 
   it('renders a base combobox with focus', () =>
     matchesMarkup(
-      <div className="demo-only" style={{ height: '10rem' }}>
-        <DeprecatedCombobox
-          isOpen
-          autocomplete
-          inputIcon="right"
-          inputIconRightSymbol="search"
-          listbox={<ListboxDropdown />}
-        />
-      </div>
+      getDisplayElementById(BaseExamples.states, 'deprecated-focused')
     ));
 
   it('renders a base combobox with open item focused', () =>
     matchesMarkup(
-      <div className="demo-only" style={{ height: '10rem' }}>
-        <DeprecatedCombobox
-          isOpen
-          autocomplete
-          inputIcon="right"
-          inputIconRightSymbol="search"
-          listbox={<ListboxDropdown focused />}
-          aria-activedescendant={listboxOptionId01}
-        />
-      </div>
+      getDisplayElementById(BaseExamples.states, 'deprecated-open-item-focused')
     ));
 
   it('renders a base combobox with closed options selected', () =>
     matchesMarkup(
-      <div className="demo-only" style={{ height: '10rem' }}>
-        <DeprecatedCombobox
-          inputIcon="right"
-          inputIconRightSymbol="search"
-          autocomplete
-          listbox={<ListboxDropdown />}
-        >
-          <ListboxPills className="slds-p-top_xxx-small">
-            <ListboxPillsItem>
-              <ListboxPill label="Acme" tabIndex="0">
-                <StandardIcon
-                  containerClassName="slds-pill__icon_container"
-                  title="Account"
-                  assistiveText="Account"
-                />
-              </ListboxPill>
-            </ListboxPillsItem>
-            <ListboxPillsItem>
-              <ListboxPill label="Salesforce.com, Inc.">
-                <StandardIcon
-                  containerClassName="slds-pill__icon_container"
-                  title="Account"
-                  assistiveText="Account"
-                />
-              </ListboxPill>
-            </ListboxPillsItem>
-          </ListboxPills>
-        </DeprecatedCombobox>
-      </div>
+      getDisplayElementById(
+        BaseExamples.states,
+        'deprecated-closed-options-selected'
+      )
     ));
 
   it('renders an inline listbox combobox', () =>
-    matchesMarkup(
-      <div className="demo-only" style={{ height: '10rem' }}>
-        <DeprecatedCombobox
-          inputIcon="right"
-          inputIconRightSymbol="search"
-          selectedOptionsInline
-          autocomplete
-          listbox={<ListboxDropdown />}
-        />
-      </div>
-    ));
+    matchesMarkup(DeprecatedInlineListboxExamples.default[0].element));
 
   it('renders an inline combobox with focus', () =>
     matchesMarkup(
-      <div className="demo-only" style={{ height: '10rem' }}>
-        <DeprecatedCombobox
-          containerClassName="slds-has-input-focus"
-          inputIcon="right"
-          inputIconRightSymbol="search"
-          selectedOptionsInline
-          autocomplete
-          isOpen
-          listbox={<ListboxDropdown />}
-        />
-      </div>
+      getDisplayElementById(
+        DeprecatedInlineListboxExamples.states,
+        'deprecated-focused'
+      )
     ));
 
   it('renders an inline combobox open item focused', () =>
     matchesMarkup(
-      <div className="demo-only" style={{ height: '10rem' }}>
-        <DeprecatedCombobox
-          inputIcon="right"
-          inputIconRightSymbol="search"
-          selectedOptionsInline
-          autocomplete
-          isOpen
-          listbox={<ListboxDropdown focused />}
-          aria-activedescendant={listboxOptionId01}
-        />
-      </div>
+      getDisplayElementById(
+        DeprecatedInlineListboxExamples.states,
+        'deprecated-open-item-focused'
+      )
     ));
 
   it('renders an inline listbox combobox with closed option selected', () =>
     matchesMarkup(
-      <div className="demo-only" style={{ height: '10rem' }}>
-        <DeprecatedCombobox
-          selectedOptionsInline
-          autocomplete
-          readonly
-          inputIcon="both"
-          inputIconLeftSprite="standard"
-          inputIconLeftSymbol="account"
-          inputButtonIcon
-          inputIconRightSymbol="close"
-          value="Salesforce.com, Inc."
-          listbox={<ListboxDropdown />}
-        />
-      </div>
+      getDisplayElementById(
+        DeprecatedInlineListboxExamples.states,
+        'deprecated-closed-option-selected'
+      )
     ));
 
   it('renders an inline listbox combobox with options selected', () =>
     matchesMarkup(
-      <div className="demo-only" style={{ height: '10rem' }}>
-        <DeprecatedCombobox
-          inputIcon="right"
-          inputIconRightSymbol="search"
-          selectedOptionsInline
-          autocomplete
-          listbox={<ListboxDropdown />}
-        >
-          <ListboxPills>
-            <ListboxPillsItem>
-              <ListboxPill label="Acme" tabIndex="0">
-                <StandardIcon
-                  containerClassName="slds-pill__icon_container"
-                  title="Account"
-                  assistiveText="Account"
-                />
-              </ListboxPill>
-            </ListboxPillsItem>
-            <ListboxPillsItem>
-              <ListboxPill label="Salesforce.com, Inc.">
-                <StandardIcon
-                  containerClassName="slds-pill__icon_container"
-                  title="Account"
-                  assistiveText="Account"
-                />
-              </ListboxPill>
-            </ListboxPillsItem>
-          </ListboxPills>
-        </DeprecatedCombobox>
-      </div>
+      getDisplayElementById(
+        DeprecatedInlineListboxExamples.states,
+        'deprecated-options-selected'
+      )
     ));
 
   it('renders an inline listbox combobox with focused options selected', () =>
     matchesMarkup(
-      <div className="demo-only" style={{ height: '10rem' }}>
-        <DeprecatedCombobox
-          inputIcon="right"
-          inputIconRightSymbol="search"
-          selectedOptionsInline
-          autocomplete
-          listbox={<ListboxDropdown />}
-        >
-          <ListboxPills>
-            <ListboxPillsItem>
-              <ListboxPill label="Acme" tabIndex="0">
-                <StandardIcon
-                  containerClassName="slds-pill__icon_container"
-                  title="Account"
-                  assistiveText="Account"
-                />
-              </ListboxPill>
-            </ListboxPillsItem>
-            <ListboxPillsItem>
-              <ListboxPill label="Salesforce.com, Inc.">
-                <StandardIcon
-                  containerClassName="slds-pill__icon_container"
-                  title="Account"
-                  assistiveText="Account"
-                />
-              </ListboxPill>
-            </ListboxPillsItem>
-          </ListboxPills>
-        </DeprecatedCombobox>
-      </div>
+      getDisplayElementById(
+        DeprecatedInlineListboxExamples.states,
+        'deprecated-focused-options-selected'
+      )
     ));
 
   it('renders a multi-entity combobox', () =>
-    matchesMarkup(
-      <div className="demo-only" style={{ height: '10rem' }}>
-        <DeprecatedCombobox
-          inputIcon="right"
-          inputIconRightSymbol="search"
-          objectSwitcherInline
-          autocomplete
-          listbox={<ListboxDropdown />}
-          objectSwitcher
-        />
-      </div>
-    ));
+    matchesMarkup(DeprecatedMultiEntityExamples.default[0].element));
 
   it('renders a multi-entity combobox with focus', () =>
     matchesMarkup(
-      <div className="demo-only" style={{ height: '10rem' }}>
-        <DeprecatedCombobox
-          containerClassName="slds-has-input-focus"
-          inputIcon="right"
-          inputIconRightSymbol="search"
-          objectSwitcherInline
-          autocomplete
-          isOpen
-          listbox={<ListboxDropdown />}
-          objectSwitcher
-        />
-      </div>
+      getDisplayElementById(
+        DeprecatedMultiEntityExamples.states,
+        'deprecated-focused'
+      )
     ));
 
   it('renders a multi-entity combobox with open item focused', () =>
     matchesMarkup(
-      <div className="demo-only" style={{ height: '10rem' }}>
-        <DeprecatedCombobox
-          inputIcon="right"
-          inputIconRightSymbol="search"
-          objectSwitcherInline
-          autocomplete
-          isOpen
-          listbox={<ListboxDropdown focused />}
-          objectSwitcher
-          aria-activedescendant={listboxOptionId01}
-        />
-      </div>
+      getDisplayElementById(
+        DeprecatedMultiEntityExamples.states,
+        'deprecated-open-item-focused'
+      )
     ));
 
   it('renders a multi-entity combobox with options selected', () =>
     matchesMarkup(
-      <DeprecatedCombobox
-        inputIcon="right"
-        inputIconRightSymbol="search"
-        objectSwitcherInline
-        autocomplete
-        objectSwitcher
-      >
-        <ListboxPills className="slds-p-top_xxx-small">
-          <ListboxPillsItem>
-            <ListboxPill label="Acme" tabIndex="0">
-              <StandardIcon
-                containerClassName="slds-pill__icon_container"
-                title="Account"
-                assistiveText="Account"
-              />
-            </ListboxPill>
-          </ListboxPillsItem>
-          <ListboxPillsItem>
-            <ListboxPill label="Salesforce.com, Inc.">
-              <StandardIcon
-                containerClassName="slds-pill__icon_container"
-                symbol="opportunity"
-                title="Opportunity"
-                assistiveText="Opportunity"
-              />
-            </ListboxPill>
-          </ListboxPillsItem>
-        </ListboxPills>
-      </DeprecatedCombobox>
+      getDisplayElementById(
+        DeprecatedMultiEntityExamples.states,
+        'deprecated-options-selected'
+      )
     ));
 
   it('renders a multi-entity combobox with focused options selected', () =>
     matchesMarkup(
-      <div className="demo-only" style={{ height: '10rem' }}>
-        <DeprecatedCombobox
-          isOpen
-          containerClassName="slds-has-input-focus"
-          inputIcon="right"
-          inputIconRightSymbol="search"
-          objectSwitcherInline
-          autocomplete
-          listbox={<ListboxDropdown />}
-          objectSwitcher
-        >
-          <ListboxPills className="slds-p-top_xxx-small">
-            <ListboxPillsItem>
-              <ListboxPill label="Acme" tabIndex="0">
-                <StandardIcon
-                  containerClassName="slds-pill__icon_container"
-                  title="Account"
-                  assistiveText="Account"
-                />
-              </ListboxPill>
-            </ListboxPillsItem>
-            <ListboxPillsItem>
-              <ListboxPill label="Salesforce.com, Inc.">
-                <StandardIcon
-                  containerClassName="slds-pill__icon_container"
-                  symbol="opportunity"
-                  title="Opportunity"
-                  assistiveText="Opportunity"
-                />
-              </ListboxPill>
-            </ListboxPillsItem>
-          </ListboxPills>
-        </DeprecatedCombobox>
-      </div>
+      getDisplayElementById(
+        DeprecatedMultiEntityExamples.states,
+        'deprecated-focused-options-selected'
+      )
     ));
 
   it('renders a readonly combobox', () =>
-    matchesMarkup(
-      <div className="demo-only" style={{ height: '10rem' }}>
-        <DeprecatedCombobox
-          inputIcon="right"
-          inputIconRightSymbol="down"
-          listbox={<ListboxDropdown />}
-          readonly
-        />
-      </div>
-    ));
+    matchesMarkup(DeprecatedReadOnlyExamples.default[0].element));
 
   it('renders a readonly combobox with focus', () =>
     matchesMarkup(
-      <div className="demo-only" style={{ height: '10rem' }}>
-        <DeprecatedCombobox
-          isOpen
-          inputIcon="right"
-          inputIconRightSymbol="down"
-          listbox={<ListboxDropdown />}
-          readonly
-        />
-      </div>
+      getDisplayElementById(
+        DeprecatedReadOnlyExamples.states,
+        'deprecated-focused'
+      )
     ));
 
   it('renders a readonly combobox with open item focused', () =>
     matchesMarkup(
-      <div className="demo-only" style={{ height: '10rem' }}>
-        <DeprecatedCombobox
-          isOpen
-          inputIcon="right"
-          inputIconRightSymbol="down"
-          listbox={<ListboxDropdown focused />}
-          aria-activedescendant={listboxOptionId01}
-          readonly
-        />
-      </div>
+      getDisplayElementById(
+        DeprecatedReadOnlyExamples.states,
+        'deprecated-open-item-focused'
+      )
     ));
 
   it('renders a readonly combobox with open option selected', () =>
     matchesMarkup(
-      <div className="demo-only" style={{ height: '10rem' }}>
-        <DeprecatedCombobox
-          isOpen
-          inputIcon="right"
-          inputIconRightSymbol="down"
-          value="Option A"
-          listbox={<ListboxDropdown optionOneSelected />}
-          readonly
-        />
-      </div>
+      getDisplayElementById(
+        DeprecatedReadOnlyExamples.states,
+        'deprecated-open-option-selected'
+      )
     ));
 
   it('renders a readonly combobox with open option(s) selected', () =>
     matchesMarkup(
-      <div className="demo-only" style={{ height: '10rem' }}>
-        <DeprecatedCombobox
-          isOpen
-          inputIcon="right"
-          inputIconRightSymbol="down"
-          value="2 Options Selected"
-          listbox={<ListboxDropdown optionOneSelected optionTwoSelected />}
-          readonly
-        />
-      </div>
+      getDisplayElementById(
+        DeprecatedReadOnlyExamples.states,
+        'deprecated-open-options-selected'
+      )
     ));
 
   it('renders a readonly combobox with closed option selected', () =>
     matchesMarkup(
-      <div className="demo-only" style={{ height: '10rem' }}>
-        <DeprecatedCombobox
-          inputIcon="right"
-          inputIconRightSymbol="down"
-          value="Option A"
-          listbox={<ListboxDropdown focused optionOneSelected />}
-          readonly
-        />
-      </div>
+      getDisplayElementById(
+        DeprecatedReadOnlyExamples.states,
+        'deprecated-closed-option-selected'
+      )
     ));
 
   it('renders a readonly combobox with closed option(s) selected', () =>
     matchesMarkup(
-      <div className="demo-only" style={{ height: '10rem' }}>
-        <DeprecatedCombobox
-          inputIcon="right"
-          inputIconRightSymbol="down"
-          value="2 Options Selected"
-          listbox={<ListboxDropdown optionOneSelected optionTwoSelected />}
+      getDisplayElementById(
+        DeprecatedReadOnlyExamples.states,
+        'deprecated-closed-options-selected'
+      )
+    ));
+
+  it('renders a readonly combobox with open option and sub-heading', () =>
+    matchesMarkup(
+      getDisplayElementById(
+        DeprecatedReadOnlyExamples.states,
+        'deprecated-open-option-heading'
+      )
+    ));
+});
+
+/**
+ * Deprecated Combobox Input
+ */
+describe('render deprecated combobox input', () => {
+  it('render input in base combobox', () =>
+    matchesMarkup(
+      <ComboboxFormContext.Provider value={{ isOpen: true }}>
+        <DeprecatedComboboxInputElement
+          id={comboboxId}
+          aria-controls={listboxId}
+          resultsType="listbox"
+          value="Accounts"
           readonly
-        >
-          <ListboxPills className="slds-p-top_xxx-small">
-            <ListboxPillsItem>
-              <ListboxPill label="Option A" tabIndex="0" />
-            </ListboxPillsItem>
-            <ListboxPillsItem>
-              <ListboxPill label="Option B" />
-            </ListboxPillsItem>
-          </ListboxPills>
-        </DeprecatedCombobox>
-      </div>
+          hasFocus
+          isOpen
+        />
+      </ComboboxFormContext.Provider>
+    ));
+
+  it('render input in combobox displaying options based on user input', () =>
+    matchesMarkup(
+      <ComboboxFormContext.Provider value={{ isOpen: true }}>
+        <DeprecatedComboboxInputElement
+          autocomplete
+          id={comboboxId}
+          aria-controls={listboxId}
+          resultsType="listbox"
+          value="opp"
+          hasFocus
+          aria-activedescendant="option1"
+          isOpen
+        />
+      </ComboboxFormContext.Provider>
+    ));
+
+  it('render input in object switcher of grouped combobox with selections made in expanded state', () =>
+    matchesMarkup(
+      <ComboboxFormContext.Provider value={{ isOpen: false }}>
+        <DeprecatedComboboxInputElement
+          id={`${comboboxId}-object-switcher`}
+          aria-controls={objectSwitcherListboxId}
+          resultsType="listbox"
+          value="Accounts"
+          placeholder=" "
+        />
+      </ComboboxFormContext.Provider>
+    ));
+
+  it('render input in grouped combobox with selections made in expanded state', () =>
+    matchesMarkup(
+      <ComboboxFormContext.Provider value={{ isOpen: false }}>
+        <DeprecatedComboboxInputElement
+          autocomplete
+          id={comboboxId}
+          aria-controls={listboxId}
+          resultsType="listbox"
+          hasFocus
+        />
+      </ComboboxFormContext.Provider>
     ));
 });
 
@@ -458,7 +262,7 @@ describe('render combobox', () => {
       <Combobox
         id={comboboxId}
         aria-controls={listboxId}
-        readonly
+        selectOnly
         value="Accounts"
         inputIconPosition="right"
         rightInputIcon={
@@ -486,77 +290,23 @@ describe('render combobox', () => {
     ));
   it('render single selection in an open combobox', () =>
     matchesMarkup(
-      <Combobox
-        id={comboboxId}
-        aria-controls={listboxId}
-        readonly
-        value="Accounts"
-        inputIconPosition="right"
-        rightInputIcon={
-          <UtilityIcon
-            symbol="down"
-            className="slds-icon slds-icon_x-small slds-icon-text-default"
-            containerClassName="slds-input__icon slds-input__icon_right"
-            assistiveText={false}
-            title={false}
-          />
-        }
-        results={
-          <Listbox
-            id={listboxId}
-            snapshot={Snapshot.ObjectOptionsSingleSelection}
-            type="plain"
-            count={8}
-            visualSelection
-          />
-        }
-        resultsType="listbox"
-        aria-activedescendant="option1"
-        isOpen
-        hasFocus
-      />
+      getDisplayElementById(BaseExamples.states, 'selecting-a-single-option')
     ));
+
   it('render multiple selections in a closed combobox', () =>
     matchesMarkup(
-      <Combobox
-        id={comboboxId}
-        aria-controls={listboxId}
-        readonly
-        value="2 Options Selected"
-        inputIconPosition="right"
-        rightInputIcon={
-          <UtilityIcon
-            symbol="down"
-            className="slds-icon slds-icon_x-small slds-icon-text-default"
-            containerClassName="slds-input__icon slds-input__icon_right"
-            assistiveText={false}
-            title={false}
-          />
-        }
-        results={
-          <Listbox
-            id={listboxId}
-            snapshot={Snapshot.ObjectOptionsMultiSelection}
-            type="plain"
-            count={8}
-            visualSelection
-          />
-        }
-        resultsType="listbox"
-        listboxOfSelections={
-          <ListboxOfSelections
-            snapshot={Snapshot.ObjectOptionsSelected}
-            count={2}
-          />
-        }
-      />
+      getDisplayElementById(
+        BaseExamples.states,
+        'selected-multiple-options-closed'
+      )
     ));
+
   it('renders groups in a listbox', () =>
     matchesMarkup(
       <Combobox
         id={comboboxId}
         aria-controls={listboxId}
-        readonly
+        selectOnly
         inputIconPosition="right"
         rightInputIcon={
           <UtilityIcon
@@ -594,7 +344,7 @@ describe('render combobox', () => {
       <Combobox
         id={comboboxId}
         aria-controls={listboxId}
-        readonly
+        selectOnly
         value="Accounts"
         inputIconPosition="right"
         rightInputIcon={
@@ -643,7 +393,7 @@ describe('render combobox', () => {
       <Combobox
         id={comboboxId}
         aria-controls={listboxId}
-        readonly
+        selectOnly
         value="Accounts"
         inputIconPosition="right"
         rightInputIcon={
@@ -730,6 +480,7 @@ describe('render combobox', () => {
         hasFocus
       />
     ));
+
   it('render autocomplete combobox with single selection', () =>
     matchesMarkup(
       <Combobox
@@ -758,7 +509,7 @@ describe('render combobox', () => {
         value="GenePoint"
       />
     ));
-  it('render autocomplete combobox with mutliple selections', () =>
+  it('render autocomplete combobox with multiple selections', () =>
     matchesMarkup(
       <Combobox
         id={comboboxId}
@@ -881,7 +632,7 @@ describe('render combobox', () => {
         resultsType="listbox"
         hasSelection
         value="Salesforce.com, Inc."
-        readonly
+        selectOnly
         tabIndex="-1"
       />
     ));
@@ -932,6 +683,7 @@ describe('render combobox', () => {
         resultsType="listbox"
         addon={
           <ObjectSwitcher
+            id={`${comboboxId}-object-switcher`}
             value="Accounts"
             addonPosition="start"
             hasInteractions
@@ -974,6 +726,7 @@ describe('render combobox', () => {
         hasFocus
         addon={
           <ObjectSwitcher
+            id={`${comboboxId}-object-switcher`}
             value="Accounts"
             addonPosition="start"
             comboboxAriaControls={primaryComboboxId}
@@ -1009,6 +762,7 @@ describe('render combobox', () => {
         resultsType="listbox"
         addon={
           <ObjectSwitcher
+            id={`${comboboxId}-object-switcher`}
             value="Accounts"
             addonPosition="start"
             comboboxAriaControls={primaryComboboxId}
@@ -1049,6 +803,7 @@ describe('render combobox', () => {
         hasFocus
         addon={
           <ObjectSwitcher
+            id={`${comboboxId}-object-switcher`}
             value="Accounts"
             addonPosition="start"
             comboboxAriaControls={primaryComboboxId}
@@ -1086,7 +841,7 @@ describe('Combobox with a Dialog dropdown', () => {
         id={comboboxId}
         aria-controls={popoverId}
         label="Languages"
-        readonly
+        selectOnly
         inputIconPosition="right"
         rightInputIcon={
           <UtilityIcon
@@ -1124,7 +879,7 @@ describe('Combobox with a Dialog dropdown', () => {
         id={comboboxId}
         aria-controls={popoverId}
         label="Languages"
-        readonly
+        selectOnly
         isOpen
         inputIconPosition="right"
         rightInputIcon={

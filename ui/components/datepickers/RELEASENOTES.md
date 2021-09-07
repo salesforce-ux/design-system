@@ -4,6 +4,18 @@
 
 <!-- ## [Unreleased] -->
 
+## 2.16.0
+
+### Added
+
+- Added examples for Required, Required with Error states
+- Added hover style for dates
+- Added `aria-label` to provide the full `DD MM YYYY` text of the date
+
+### Fixed
+
+- Fixed missing attribute `aria-current="date"` when today's date falls inside of a selected range
+
 ## 2.14.1
 
 ### Fixed

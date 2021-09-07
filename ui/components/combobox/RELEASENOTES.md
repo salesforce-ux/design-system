@@ -4,6 +4,19 @@
 
 <!-- ## [Unreleased] -->
 
+## 2.16.0
+
+### Changed
+
+- Changed `slds-combobox__input` element from `input` to `button` per ARIA 1.2 guidance for select-only comboboxes.
+
+- Updated to ARIA 1.2 compliance where these attributes are moved to the input, or button in the case of select-only: `role="combobox"`, `aria-expanded`, `aria-haspopup="listbox"`.
+
+- Changed `@restrict` annotation of `.slds-combobox__input` from `.slds-combobox input` to `.slds-combobox__form-element input, .slds-combobox__form-element button`
+
+- Changed `@restrict` annotation of `.slds-combobox__input-value` from `.slds-combobox input` to `.slds-combobox__input`
+
+
 ## 2.13.1
 
 ### Fixed

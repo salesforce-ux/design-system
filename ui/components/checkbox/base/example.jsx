@@ -268,5 +268,14 @@ export let examples = [
         </FormElement>
       </div>
     )
+  },
+  {
+    id: 'rtl-with-legend',
+    label: 'Right to Left with legend',
+    element: (
+      <div dir="rtl">
+        <Group />
+      </div>
+    )
   }
 ];

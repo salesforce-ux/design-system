@@ -1,15 +1,10 @@
-import React from 'react';
-import { storiesOf } from '@storybook/react';
 import * as BaseExamples from './base/example';
 import * as AdvancedExamples from './advanced/example';
 import * as HiddenHeaderExamples from './hidden-header/example';
 import * as InlineEditExamples from './inline-edit/example';
 import * as ResponsiveExamples from './responsive/example';
 import * as FixedHeaderExamples from './fixed-header/example';
-import { getAllDisplayCollectionsByType } from '../../shared/helpers';
-import StoryFrame from '../../../shared/components/StoryFrame';
-
-import DocsPage from '../../../.storybook/components/DocsPage';
+import { generateStories } from '../../shared/helpers';
 import Docs from './docs.mdx';
 
 const examples = [
@@ -21,27 +16,6 @@ const examples = [
   FixedHeaderExamples
 ];
 
-const kitchenSink = getAllDisplayCollectionsByType(examples, [
-  'default',
-  'examples',
-  'states'
-]);
+const patternName = 'Data Tables';
 
-storiesOf('Components/Data Tables', module).add(
-  'Kitchen Sink',
-  () =>
-    kitchenSink.map((element, idx) =>
-      element.map(({ label, component }) => (
-        <StoryFrame
-          component={component}
-          label={label}
-          key={`kitchen-sink-${label}-${idx}`}
-        />
-      ))
-    ),
-  {
-    docs: {
-      page: () => <DocsPage title="Data Tables" Docs={Docs} />
-    }
-  }
-);
+generateStories(patternName, examples, ['default', 'examples', 'states'], Docs);

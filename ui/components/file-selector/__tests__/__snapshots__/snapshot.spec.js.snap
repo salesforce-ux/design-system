@@ -1,0 +1,346 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`File Selector - Images renders a default file selector for images 1`] = `
+<div
+  className="slds-form-element"
+>
+  <span
+    className="slds-form-element__label"
+    id="file-selector-primary-label-17"
+  >
+    Attachment
+  </span>
+  <div
+    className="slds-form-element__control"
+  >
+    <div
+      className="slds-file-selector slds-file-selector_images"
+    >
+      <div
+        className="slds-file-selector__dropzone"
+      >
+        <input
+          accept="image/png"
+          aria-describedby={null}
+          aria-labelledby="file-selector-primary-label-17 file-selector-secondary-label18"
+          className="slds-file-selector__input slds-assistive-text"
+          id="file-upload-input-19"
+          type="file"
+        />
+        <label
+          className="slds-file-selector__body"
+          htmlFor="file-upload-input-19"
+          id="file-selector-secondary-label18"
+        >
+          <span
+            className="slds-file-selector__button slds-button slds-button_neutral"
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-button__icon slds-button__icon_left"
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#upload"
+              />
+            </svg>
+            Upload 
+            Image
+          </span>
+          <span
+            className="slds-file-selector__text slds-medium-show"
+          >
+            or Drop 
+            Image
+          </span>
+        </label>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`File Selector - Images renders a file selector for images with dragover 1`] = `null`;
+
+exports[`File Selector - Images renders a file selector for images with dragover error 1`] = `null`;
+
+exports[`File Selector - Images renders a file selector for images with error 1`] = `null`;
+
+exports[`File Selector renders a default file selector 1`] = `
+<div
+  className="slds-form-element"
+>
+  <span
+    className="slds-form-element__label"
+    id="file-selector-primary-label-1"
+  >
+    Attachment
+  </span>
+  <div
+    className="slds-form-element__control"
+  >
+    <div
+      className="slds-file-selector slds-file-selector_files"
+    >
+      <div
+        className="slds-file-selector__dropzone"
+      >
+        <input
+          accept="image/png"
+          aria-describedby={null}
+          aria-labelledby="file-selector-primary-label-1 file-selector-secondary-label2"
+          className="slds-file-selector__input slds-assistive-text"
+          id="file-upload-input-3"
+          type="file"
+        />
+        <label
+          className="slds-file-selector__body"
+          htmlFor="file-upload-input-3"
+          id="file-selector-secondary-label2"
+        >
+          <span
+            className="slds-file-selector__button slds-button slds-button_neutral"
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-button__icon slds-button__icon_left"
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#upload"
+              />
+            </svg>
+            Upload 
+            Files
+          </span>
+          <span
+            className="slds-file-selector__text slds-medium-show"
+          >
+            or Drop 
+            Files
+          </span>
+        </label>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`File Selector renders a file selector dragover 1`] = `
+<div
+  className="slds-form-element"
+>
+  <span
+    className="slds-form-element__label"
+    id="file-selector-primary-label-9"
+  >
+    Attachment
+  </span>
+  <div
+    className="slds-form-element__control"
+  >
+    <div
+      className="slds-file-selector slds-file-selector_files"
+    >
+      <div
+        className="slds-file-selector__dropzone"
+      >
+        <input
+          accept="image/png"
+          aria-describedby={null}
+          aria-labelledby="file-selector-primary-label-9 file-selector-secondary-label10"
+          className="slds-file-selector__input slds-assistive-text"
+          id="file-upload-input-11"
+          type="file"
+        />
+        <label
+          className="slds-file-selector__body"
+          htmlFor="file-upload-input-11"
+          id="file-selector-secondary-label10"
+        >
+          <span
+            className="slds-file-selector__button slds-button slds-button_neutral"
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-button__icon slds-button__icon_left"
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#upload"
+              />
+            </svg>
+            Upload 
+            Files
+          </span>
+          <span
+            className="slds-file-selector__text slds-medium-show"
+          >
+            or Drop 
+            Files
+          </span>
+        </label>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`File Selector renders a file selector dragover with error 1`] = `
+<div
+  className="slds-form-element"
+>
+  <span
+    className="slds-form-element__label"
+    id="file-selector-primary-label-13"
+  >
+    Attachment
+  </span>
+  <div
+    className="slds-form-element__control"
+  >
+    <div
+      className="slds-file-selector slds-file-selector_files"
+    >
+      <div
+        className="slds-file-selector__dropzone"
+      >
+        <input
+          accept="image/png"
+          aria-describedby={null}
+          aria-labelledby="file-selector-primary-label-13 file-selector-secondary-label14"
+          className="slds-file-selector__input slds-assistive-text"
+          id="file-upload-input-15"
+          type="file"
+        />
+        <label
+          className="slds-file-selector__body"
+          htmlFor="file-upload-input-15"
+          id="file-selector-secondary-label14"
+        >
+          <span
+            className="slds-file-selector__button slds-button slds-button_neutral"
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-button__icon slds-button__icon_left"
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#upload"
+              />
+            </svg>
+            Upload 
+            Files
+          </span>
+          <span
+            className="slds-file-selector__text slds-medium-show"
+          >
+            or Drop 
+            Files
+          </span>
+        </label>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`File Selector renders a file selector with error 1`] = `
+<div
+  className="slds-form-element"
+>
+  <span
+    className="slds-form-element__label"
+    id="file-selector-primary-label-5"
+  >
+    Attachment
+  </span>
+  <div
+    className="slds-form-element__control"
+  >
+    <div
+      className="slds-file-selector slds-file-selector_files"
+    >
+      <div
+        className="slds-file-selector__dropzone"
+      >
+        <input
+          accept="image/png"
+          aria-describedby={null}
+          aria-labelledby="file-selector-primary-label-5 file-selector-secondary-label6"
+          className="slds-file-selector__input slds-assistive-text"
+          id="file-upload-input-7"
+          type="file"
+        />
+        <label
+          className="slds-file-selector__body"
+          htmlFor="file-upload-input-7"
+          id="file-selector-secondary-label6"
+        >
+          <span
+            className="slds-file-selector__button slds-button slds-button_neutral"
+          >
+            <svg
+              aria-hidden={true}
+              className="slds-button__icon slds-button__icon_left"
+            >
+              <use
+                xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#upload"
+              />
+            </svg>
+            Upload 
+            Files
+          </span>
+          <span
+            className="slds-file-selector__text slds-medium-show"
+          >
+            or Drop 
+            Files
+          </span>
+        </label>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Integrated File Selector renders a default integrated file selector 1`] = `
+<div
+  className="slds-file-selector slds-file-selector_integrated slds-file-selector_integrated"
+>
+  <div
+    aria-hidden="true"
+    className="slds-file-selector__dropzone slds-file-selector__dropzone_integrated"
+  >
+    <input
+      accept="image/png"
+      className="slds-file-selector__input slds-assistive-text"
+      id="file-upload-input-01"
+      tabIndex="-1"
+      type="file"
+    />
+    <label
+      className="slds-file-selector__body slds-file-selector__body_integrated"
+      htmlFor="file-upload-input-01"
+    >
+      <svg
+        aria-hidden={true}
+        className="slds-file-selector__body-icon slds-icon slds-icon-text-default"
+      >
+        <use
+          xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#upload"
+        />
+      </svg>
+      <span
+        className="slds-file-selector__text slds-file-selector__text_integrated slds-text-heading_medium slds-text-align_center"
+      >
+        Drop Files
+      </span>
+    </label>
+  </div>
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+</div>
+`;
+
+exports[`Integrated File Selector renders an integrated file selector with drag 1`] = `null`;
+
+exports[`Integrated File Selector renders an integrated file selector with dragover 1`] = `null`;
+
+exports[`Integrated File Selector renders an integrated file selector with dragover error 1`] = `null`;

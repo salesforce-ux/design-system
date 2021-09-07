@@ -19,7 +19,11 @@ export let states = [
       <Pill className="slds-has-error">
         <span className="slds-pill__icon_container">
           <span className="slds-icon_container" title="Error">
-            <SvgIcon className="slds-icon slds-icon-text-error" sprite="utility" symbol="error" />
+            <SvgIcon
+              className="slds-icon slds-icon-text-error"
+              sprite="utility"
+              symbol="error"
+            />
             <span className="slds-assistive-text">Warning</span>
           </span>
         </span>
@@ -30,6 +34,7 @@ export let states = [
     id: 'truncated',
     label: 'Truncated',
     demoStyles: 'width: 220px;',
+    storybookStyles: true,
     element: (
       <PillContainer>
         <Pill label="Pill label that is longer than the area that contains it" />
@@ -45,7 +50,10 @@ export let examples = [
     element: (
       <Pill>
         <span className="slds-pill__icon_container">
-          <span className="slds-icon_container slds-icon-standard-account" title="Account">
+          <span
+            className="slds-icon_container slds-icon-standard-account"
+            title="Account"
+          >
             <SvgIcon className="slds-icon" sprite="standard" symbol="account" />
             <span className="slds-assistive-text">Account</span>
           </span>
@@ -60,7 +68,11 @@ export let examples = [
       <Pill>
         <span className="slds-pill__icon_container">
           <span className="slds-avatar slds-avatar_circle" title="User avatar">
-            <img alt="Person name" src="/assets/images/avatar2.jpg" title="User avatar" />
+            <img
+              alt="Person name"
+              src="/assets/images/avatar2.jpg"
+              title="User avatar"
+            />
           </span>
         </span>
       </Pill>

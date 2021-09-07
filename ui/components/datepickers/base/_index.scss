@@ -53,8 +53,8 @@
      * @selector .slds-is-today
      * @restrict .slds-datepicker td
      */
-    &:hover:not(.slds-disabled-text) > .slds-day,
-    &:focus:not(.slds-disabled-text) > .slds-day,
+    &:hover > .slds-day,
+    &:focus > .slds-day,
     &.slds-is-today > .slds-day {
       cursor: pointer;
     }
@@ -68,6 +68,13 @@
 
       > .slds-day {
         box-shadow: $brand-accessible 0 0 0 1px inset;
+      }
+    }
+
+    &:hover {
+
+      > .slds-day {
+        background-color: $color-background-row-hover;
       }
     }
 

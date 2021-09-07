@@ -2,7 +2,7 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 import React from 'react';
-import _ from '../../../shared/helpers';
+import uniqueId from 'lodash.uniqueid';
 import ButtonIcon from '../../button-icons/';
 import { StandardIcon } from '../../icons/standard/example';
 import classNames from 'classnames';
@@ -16,13 +16,14 @@ let NotificationContainer = props => (
 );
 
 let Notification = props => {
-  const bodyUniqueId = _.uniqueId('dialog-body-id-');
+  const bodyUniqueId = uniqueId('dialog-body-id-');
+  const headingId = uniqueId('noti-')
 
   return (
     <section
       className="slds-notification"
       role="dialog"
-      aria-labelledby={props.headingID}
+      aria-labelledby={headingId}
       aria-describedby={bodyUniqueId}
     >
       <div className="slds-notification__body" id={bodyUniqueId}>
@@ -34,17 +35,16 @@ let Notification = props => {
           <StandardIcon
             containerClassName="slds-media__figure"
             className="slds-icon_small"
-            assistiveText={false}
             symbol={props.type}
             title={props.type}
           />
           <div className="slds-media__body">
             <h2
               className="slds-text-heading_small slds-m-bottom_xx-small"
-              id={props.headingID}
+              id={headingId}
             >
               <span className="slds-assistive-text">
-                {props.type + ' notification:'}
+                {`${props.type} notification:`}
               </span>
               {props.title}
             </h2>
@@ -54,11 +54,11 @@ let Notification = props => {
         <ButtonIcon
           className="slds-button_icon-container slds-notification__close"
           symbol="close"
-          assistiveText={'Dismiss ' + props.title + ' notification'}
-          title={'Dismiss ' + props.title + ' notification'}
+          assistiveText={`Dismiss ${props.title} notification`}
+          title={`Dismiss ${props.title} notification`}
         />
       </div>
-      {props.footer ? (
+      {props.footer && (
         <footer
           className={classNames(
             'slds-notification__footer',
@@ -67,7 +67,7 @@ let Notification = props => {
         >
           {props.footer}
         </footer>
-      ) : null}
+      )}
     </section>
   );
 };
@@ -87,7 +87,6 @@ export default (
         event notification: Tesla - Renewal meeting
       </div>
       <Notification
-        headingID="noti52"
         type="event"
         title="Tesla - Renewal meeting"
         description="Event at 11:00am on Jan 8"
@@ -111,12 +110,11 @@ export let examples = [
             aria-atomic="true"
             className="slds-assistive-text"
           >
-            task notification: Call Two: Jane Johnson
+            task notification: Call: Jane Johnson
           </div>
           <Notification
-            headingID="noti77"
             type="task"
-            title="Call Two: Jane Johnson"
+            title="Call: Jane Johnson"
             description="Task due on Jan 8"
           />
         </NotificationContainer>
@@ -134,18 +132,16 @@ export let examples = [
             aria-atomic="true"
             className="slds-assistive-text"
           >
-            task notification: Call Two: Jane Johnson
+            task notification: Call One: Jane Johnson
           </div>
           <Notification
-            headingID="noti77"
             type="task"
-            title="Call Two: Jane Johnson"
+            title="Call One: Jane Johnson"
             description="Task due on Jan 8"
           />
           <Notification
-            headingID="noti52"
             type="event"
-            title="Tesla - Renewal meeting"
+            title="Call Two: Tesla - Renewal meeting"
             description="Event at 11:00am on Jan 8"
           />
         </NotificationContainer>
@@ -166,21 +162,18 @@ export let examples = [
             task notification: Call Two: Jane Johnson
           </div>
           <Notification
-            headingID="noti77"
             type="task"
             title="Call Two: Jane Johnson"
             description="Task due on Jan 8"
           />
           <Notification
-            headingID="noti52"
             type="event"
-            title="Tesla - Renewal meeting"
+            title="Call Three: Tesla - Renewal meeting"
             description="Event at 11:00am on Jan 8"
           />
           <Notification
-            headingID="noti66"
             type="task"
-            title="Call Three: Jim Jameson"
+            title="Call Four: Jim Jameson"
             description="Task due on Jan 8"
           />
         </NotificationContainer>
@@ -198,42 +191,36 @@ export let examples = [
             aria-atomic="true"
             className="slds-assistive-text"
           >
-            task notification: Call Two: Jane Johnson
+            task notification: Call Five: Jane Johnson
           </div>
           <Notification
-            headingID="noti77"
             type="task"
-            title="Call Two: Jane Johnson"
+            title="Call Five: Jane Johnson"
             description="Task due on Jan 8"
           />
           <Notification
-            headingID="noti52"
             type="event"
-            title="Tesla - Renewal meeting"
+            title="Call Six: Tesla - Renewal meeting"
             description="Event at 11:00am on Jan 8"
           />
           <Notification
-            headingID="noti66"
             type="task"
-            title="Call Three: Jim Jameson"
+            title="Call Seven: Jim Jameson"
             description="Task due on Jan 8"
           />
           <Notification
-            headingID="noti48"
             type="task"
-            title="Call Two: Jane Johnson"
+            title="Call Eight: Jane Johnson"
             description="Task due on Jan 8"
           />
           <Notification
-            headingID="noti59"
             type="event"
-            title="Tesla - Renewal meeting"
+            title="Call Nine: Tesla - Renewal meeting"
             description="Event at 11:00am on Jan 8"
           />
           <Notification
-            headingID="noti86"
             type="task"
-            title="Call Three: Jim Jameson"
+            title="Call Ten: Jim Jameson"
             description="Task due on Jan 8"
           />
         </NotificationContainer>

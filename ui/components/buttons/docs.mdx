@@ -16,7 +16,7 @@ import { MobileNotice, MobileBlurb } from '../../shared/doc-text';
 
 <CodeView>
   <React.Fragment>
-    {ButtonExamples.default}
+    {getDisplayElementById(ButtonExamples.default)}
     {getDisplayElementById(ButtonExamples.examples, 'neutral')}
     {getDisplayElementById(ButtonExamples.examples, 'brand')}
     {getDisplayElementById(ButtonExamples.examples, 'outline-brand')}
@@ -76,7 +76,7 @@ Use these with caution - dictation software users may not be able to properly id
 
 <MobileBlurb patternSpecificText="buttons will have an increased size to accommodate tapping with a finger instead of the more precise mouse cursor" />
 
-<CodeView frameOnly>
+<CodeView frameOnly frameTitle="Example mobile styles for buttons">
   <React.Fragment>
     {getDisplayElementById(ButtonExamples.examples, 'base-link')}
     {getDisplayElementById(ButtonExamples.examples, 'neutral-link')}
@@ -94,7 +94,7 @@ The base `slds-button` looks like a plain text link. It removes all the styling 
 
 The base and neutral buttons are used most frequently and can be used multiple times per feature. Use these buttons when the actions are of secondary importance to the content surrounding it, such as in the actions ribbon in a page header.
 
-<CodeView toggleCode={false}>{ButtonExamples.default}</CodeView>
+<CodeView toggleCode={false}>{getDisplayElementById(ButtonExamples.default)}</CodeView>
 
 ## Variations
 
@@ -184,7 +184,7 @@ The SVG, element, or icon inside the button receives the `slds-button__icon` cla
 
 ### Left Icon
 
-<CodeView>{IconExamples.default}</CodeView>
+<CodeView>{getDisplayElementById(IconExamples.default)}</CodeView>
 
 <MobileNotice
   docsLink="#Mobile"
@@ -192,7 +192,7 @@ The SVG, element, or icon inside the button receives the `slds-button__icon` cla
   elementName="button icons"
 />
 
-<CodeView frameOnly>{IconExamples.default}</CodeView>
+<CodeView frameOnly frameTitle="Example mobile styles for buttons with left icon">{getDisplayElementById(IconExamples.default)}</CodeView>
 
 ### Right Icon
 
@@ -235,7 +235,7 @@ The button contains three spans with classes that hide or show the content of th
 
 Stateful button uses the class `slds-not-selected` in its initial state.
 
-<CodeView>{StatefulExamples.default}</CodeView>
+<CodeView>{getDisplayElementById(StatefulExamples.default)}</CodeView>
 
 ### Selected and Focused
 
@@ -285,7 +285,7 @@ The button contains two spans. Each span contains display text and a correspondi
 
 ### Not Pressed
 
-<CodeView>{DualStatefulExamples.default}</CodeView>
+<CodeView>{getDisplayElementById(DualStatefulExamples.default)}</CodeView>
 
 ### Pressed
 

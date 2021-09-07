@@ -4,6 +4,11 @@
 
 <!-- ## [Unreleased] -->
 
+## 2.16.0
+
+### Changed
+
+- Removed the usage of the deprecated combobox. The Dynamic Menu now uses the current combobox.
 ## 2.8.0
 
 ### Added

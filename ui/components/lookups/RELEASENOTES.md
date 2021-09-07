@@ -6,6 +6,12 @@
 
 <!-- ## [VERSION] -->
 
+## 2.16.0
+
+### Changed
+
+- Updated [combobox](/components/combobox) to ARIA 1.2 compliance.
+
 ## 2.13.1
 
 ### Fixed

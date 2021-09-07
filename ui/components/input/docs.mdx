@@ -8,7 +8,7 @@ import StylingHooksTable from '../../../shared/components/StylingHooksTable';
 
 <div className="doc lead">Text inputs are used for freeform data entry</div>
 
-<CodeView exampleOnly>{InputExamples.default}</CodeView>
+<CodeView exampleOnly>{getDisplayElementById(InputExamples.default)}</CodeView>
 
 ## About Inputs
 
@@ -24,7 +24,7 @@ The static state is for form elements that can’t be modified by the user. It i
 
 In order to have an actionable SVG within the input, like a clear or increment/decrement button, the icon must be contained within a button, not an anchor `<a>`, in order for pointer events to work properly.
 
-You can see examples of the correct markup in the [Left Icon & Clear Button example](/components/input/?example=double-icon&variant=base) or the [Counter example](/components/input/?example=increment-decrement-counter&variant=base).
+You can see examples of the correct markup in the [Left Icon & Clear Button example](#Icon-and-clear-button) or the [Counter component](/components/counter/).
 
 ### Accessibility
 
@@ -41,7 +41,7 @@ In some cases, the read-only field state is swapped and has no `<input>`. This i
 
 <MobileBlurb patternSpecificText="inputs will have an increased size to accommodate tapping with a finger instead of the more precise mouse cursor" />
 
-<CodeView frameOnly>{InputExamples.default}</CodeView>
+<CodeView frameOnly frameTitle="Example mobile styles for inputs">{getDisplayElementById(InputExamples.default)}</CodeView>
 
 ## States
 

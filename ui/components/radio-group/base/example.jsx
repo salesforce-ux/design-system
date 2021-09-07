@@ -211,6 +211,7 @@ export const examples = [
       --sds-c-radio-color-border-focus: gray;
       --sds-c-radio-shadow-focus: 0 0 3px red;
       `,
+    storybookStyles: true,
     element: (
       <Fieldset>
         <Legend>Radio Group Label</Legend>
@@ -233,6 +234,7 @@ export const examples = [
       --sds-c-radio-color-border-checked: gold;
       --sds-c-radio-color-background-checked: red;
       `,
+    storybookStyles: true,
     element: (
       <Fieldset>
         <Legend>Radio Group Label</Legend>
@@ -253,6 +255,7 @@ export const examples = [
       --sds-c-radio-color-border-focus: gray;
       --sds-c-radio-shadow-focus: 0 0 3px red;
       `,
+    storybookStyles: true,
     element: (
       <Fieldset className="slds-has-error">
         <Legend>

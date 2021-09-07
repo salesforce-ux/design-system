@@ -4,6 +4,12 @@
 
 <!-- ## [Unreleased] -->
 
+## 2.16.0
+
+### Added
+
+- Created new class `slds-input_faux` to style read-only "inputs" where necessary for accessibility best practices, like combobox.
+
 ## 2.14.0
 
 ### Added

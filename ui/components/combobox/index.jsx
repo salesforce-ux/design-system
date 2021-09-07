@@ -1,18 +1,19 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-import React, { Component } from 'react';
+import React, { Component, useContext } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import ButtonIcon from '../button-icons/';
 import Input from '../input/';
 import { Spinner } from '../spinners/base/example';
 import { FormElement } from '../form-element/';
+import _ from '../../shared/helpers';
 
 /**
  * Combobox Container
  */
-const DeprecatedCombobox = props => (
+const ComboboxContainer = props => (
   <div
     className={classNames(
       'slds-combobox_container',
@@ -42,76 +43,180 @@ const ComboboxGroupContainer = props => (
 /**
  * Combobox
  */
-const ComboboxFormElement = props => (
-  <div
-    className={classNames(
-      'slds-combobox',
-      !props.staticListbox &&
-        'slds-dropdown-trigger slds-dropdown-trigger_click',
-      props.isOpen && 'slds-is-open'
-    )}
-    aria-controls={props['aria-controls']}
-    aria-expanded={props.isOpen ? 'true' : 'false'}
-    aria-haspopup={props.resultsType}
-    id={props.id}
-    role="combobox"
-  >
-    {props.children}
-  </div>
+
+export const ComboboxFormContext = React.createContext({
+  isOpen: false
+});
+
+const ComboboxFormElement = ({
+  children,
+  className,
+  id,
+  isOpen,
+  staticListbox,
+  ...props
+}) => (
+  <ComboboxFormContext.Provider value={{ isOpen }}>
+    <div
+      className={classNames(
+        'slds-combobox',
+        !staticListbox && 'slds-dropdown-trigger slds-dropdown-trigger_click',
+        isOpen && 'slds-is-open',
+        className
+      )}
+      aria-controls={props['aria-controls']}
+      id={id}
+    >
+      {children}
+    </div>
+  </ComboboxFormContext.Provider>
 );
 
 /**
  * Combobox Input
  */
-const ComboboxInput = props => {
-  const hasInputIcon =
-    props.leftInputIcon || props.rightInputIcon || props.showCloseButton;
+const ComboboxInputFaux = ({
+  aria,
+  children,
+  hasFocus,
+  id,
+  isDisabled,
+  labelId,
+  onBlur,
+  onFocus,
+  role,
+  value
+}) => {
+  return (
+    <button
+      type="button"
+      className={classNames(
+        'slds-input_faux',
+        'slds-combobox__input',
+        hasFocus && 'slds-has-focus',
+        isDisabled && 'slds-is-disabled',
+        value && 'slds-combobox__input-value'
+      )}
+      disabled={isDisabled}
+      {...labelId && id && { [`aria-labelledby`]: `${labelId} ${id}` }}
+      {...{ id, role, onBlur, onFocus }}
+      {...aria}
+    >
+      <span className="slds-truncate" id={_.uniqueId('combobox-value-id-')}>
+        {children}
+      </span>
+    </button>
+  );
+};
+
+ComboboxInputFaux.propTypes = {
+  aria: PropTypes.object,
+  children: PropTypes.node,
+  hasFocus: PropTypes.bool,
+  id: PropTypes.string,
+  isDisabled: PropTypes.bool,
+  labelId: PropTypes.string,
+  onBlur: PropTypes.func,
+  onFocus: PropTypes.func,
+  role: PropTypes.string,
+  value: PropTypes.string
+};
+
+/**
+ * Combobox Input
+ */
+const ComboboxInput = ({
+  autocomplete,
+  className,
+  id,
+  inputIconPosition,
+  isDisabled,
+  isLoading,
+  labelId,
+  leftInputIcon,
+  listbox,
+  listboxId,
+  hasFocus,
+  placeholder,
+  selectOnly,
+  resultsType,
+  rightInputIcon,
+  showCloseButton,
+  tabIndex,
+  toggleFocus,
+  value,
+  ...props
+}) => {
+  const hasInputIcon = leftInputIcon || rightInputIcon || showCloseButton;
+  const { isOpen } = useContext(ComboboxFormContext);
+  const placeholderValue = !placeholder
+    ? autocomplete
+      ? 'Search...'
+      : 'Select an Option…'
+    : placeholder;
 
   return (
     <div
       className={classNames(
         'slds-combobox__form-element',
         hasInputIcon && 'slds-input-has-icon',
-        `slds-input-has-icon_${props.inputIconPosition}`,
-        props.className
+        `slds-input-has-icon_${inputIconPosition}`,
+        className
       )}
       role="none"
     >
-      {props.leftInputIcon && props.leftInputIcon}
-      <Input
-        className={classNames(
-          'slds-combobox__input',
-          props.onFocus && 'slds-has-focus',
-          props.value && 'slds-combobox__input-value'
-        )}
-        id={props.id}
-        aria-activedescendant={props['aria-activedescendant']}
-        aria-autocomplete={props.autocomplete ? 'list' : null}
-        aria-controls={
-          props['aria-controls'] || 'please-provide-listbox-id-here'
-        }
-        autocomplete="off"
-        role="textbox"
-        type="text"
-        placeholder={
-          !props.placeholder
-            ? props.autocomplete
-              ? 'Search...'
-              : 'Select an Option…'
-            : props.placeholder
-        }
-        readOnly={props.readonly}
-        defaultValue={props.value}
-        tabIndex={props.tabIndex}
-        onFocus={e => props.toggleFocus(e)}
-        onBlur={e => props.toggleFocus(e)}
-        autoFocus={props.autoFocus}
-        disabled={props.isDisabled}
-      />
-      {props.rightInputIcon && props.rightInputIcon}
-      {props.showCloseButton && (
+      {leftInputIcon && leftInputIcon}
+      {selectOnly ? (
+        <ComboboxInputFaux
+          id={`${id}-selected-value`}
+          {...{
+            hasFocus,
+            isDisabled,
+            labelId,
+            value,
+            aria: {
+              [`aria-controls`]:
+                props['aria-controls'] || 'please-provide-listbox-id-here',
+              [`aria-expanded`]: isOpen ? 'true' : 'false',
+              [`aria-haspopup`]: resultsType,
+              [`aria-activedescendant`]: props['aria-activedescendant']
+            },
+            onFocus: e => toggleFocus(e),
+            onBlur: e => toggleFocus(e)
+          }}
+        >
+          {value || placeholderValue}
+        </ComboboxInputFaux>
+      ) : (
+        <Input
+          className={classNames(
+            'slds-combobox__input',
+            hasFocus && 'slds-has-focus',
+            value && 'slds-combobox__input-value'
+          )}
+          id={id}
+          aria-activedescendant={props['aria-activedescendant']}
+          aria-autocomplete={autocomplete ? 'list' : null}
+          aria-controls={
+            props['aria-controls'] || 'please-provide-listbox-id-here'
+          }
+          aria-expanded={isOpen ? 'true' : 'false'}
+          aria-haspopup={resultsType}
+          autoComplete="off"
+          role="combobox"
+          type="text"
+          placeholder={placeholderValue}
+          readOnly={selectOnly}
+          defaultValue={value}
+          tabIndex={tabIndex}
+          onFocus={e => toggleFocus(e)}
+          onBlur={e => toggleFocus(e)}
+        />
+      )}
+      {rightInputIcon && rightInputIcon}
+      {showCloseButton && (
         <div className="slds-input__icon-group slds-input__icon-group_right">
-          {props.isLoading && (
+          {isLoading && (
             <Spinner className="slds-spinner_brand slds-spinner_x-small slds-input__spinner" />
           )}
           <ButtonIcon
@@ -126,6 +231,33 @@ const ComboboxInput = props => {
   );
 };
 
+ComboboxInput.propTypes = {
+  autocomplete: PropTypes.bool,
+  className: PropTypes.string,
+  id: PropTypes.string,
+  inputIconPosition: PropTypes.oneOf([
+    'left',
+    'right',
+    'left-right',
+    'group-right'
+  ]),
+  isDisabled: PropTypes.bool,
+  isLoading: PropTypes.bool,
+  labelId: PropTypes.string,
+  leftInputIcon: PropTypes.element,
+  listbox: PropTypes.element,
+  listboxId: PropTypes.string,
+  hasFocus: PropTypes.bool,
+  placeholder: PropTypes.string,
+  tabIndex: PropTypes.string,
+  selectOnly: PropTypes.bool,
+  resultsType: PropTypes.oneOf(['listbox', 'dialog']).isRequired,
+  rightInputIcon: PropTypes.element,
+  showCloseButton: PropTypes.bool,
+  toggleFocus: PropTypes.func,
+  value: PropTypes.string
+};
+
 export default class Combobox extends Component {
   constructor() {
     super();
@@ -133,6 +265,7 @@ export default class Combobox extends Component {
     this.state = {
       focused: false
     };
+    this.labelId = _.uniqueId('combobox-label-id-');
   }
 
   toggleFocus(event) {
@@ -151,6 +284,7 @@ export default class Combobox extends Component {
       autoFocus,
       className,
       comboboxAriaControls,
+      containerClassName,
       results,
       resultsType,
       formClassName,
@@ -183,6 +317,7 @@ export default class Combobox extends Component {
       <FormElement
         inputId={id}
         labelContent={label}
+        labelId={this.labelId}
         hasHiddenLabel={hideLabel}
         isRequired={isRequired}
         isEditing={isEditing}
@@ -191,19 +326,23 @@ export default class Combobox extends Component {
         isStacked={isStacked}
         column={column}
       >
-        <DeprecatedCombobox className={className} hasSelection={hasSelection}>
+        <ComboboxContainer
+          className={containerClassName}
+          hasSelection={hasSelection}
+        >
           <ComboboxFormElement
             aria-controls={comboboxAriaControls}
             staticListbox={staticListbox}
             isOpen={isOpen || this.state.focused}
-            resultsType={resultsType}
+            className={className}
           >
             <ComboboxInput
               id={id}
+              labelId={this.labelId}
               className={inputContainerClassName}
               toggleFocus={this.toggleFocus}
               placeholder={placeholder}
-              onFocus={hasFocus}
+              hasFocus={hasFocus}
               value={value}
               autocomplete={autocomplete}
               showCloseButton={showCloseButton}
@@ -212,15 +351,16 @@ export default class Combobox extends Component {
               leftInputIcon={leftInputIcon}
               rightInputIcon={rightInputIcon}
               tabIndex={tabIndex}
-              readonly={this.props.readonly}
+              selectOnly={this.props.selectOnly}
               autoFocus={autoFocus}
               aria-controls={this.props['aria-controls']}
               aria-activedescendant={this.props['aria-activedescendant']}
               isDisabled={isDisabled}
+              resultsType={resultsType}
             />
             {results}
           </ComboboxFormElement>
-        </DeprecatedCombobox>
+        </ComboboxContainer>
         {listboxOfSelections}
       </FormElement>
     );
@@ -234,6 +374,8 @@ Combobox.defaultProps = {
 Combobox.propTypes = {
   autocomplete: PropTypes.bool,
   autoFocus: PropTypes.bool,
+  className: PropTypes.string,
+  containerClassName: PropTypes.string,
   results: PropTypes.element.isRequired,
   resultsType: PropTypes.oneOf(['listbox', 'dialog']).isRequired,
   formClassName: PropTypes.string,
@@ -335,17 +477,16 @@ export class ComboboxGroup extends Component {
       >
         <ComboboxGroupContainer hasSelection={hasSelection}>
           {addonPosition === 'start' && addon}
-          <DeprecatedCombobox comboboxPosition={comboboxPosition}>
+          <ComboboxContainer comboboxPosition={comboboxPosition}>
             <ComboboxFormElement
               isOpen={isOpen || this.state.focused}
               id={comboboxID}
-              resultsType={resultsType}
             >
               <ComboboxInput
                 id={id}
                 className={inputContainerClassName}
                 toggleFocus={this.toggleFocus}
-                onFocus={hasFocus}
+                hasFocus={hasFocus}
                 placeholder={placeholder}
                 value={value}
                 autocomplete={autocomplete}
@@ -355,14 +496,15 @@ export class ComboboxGroup extends Component {
                 leftInputIcon={leftInputIcon}
                 rightInputIcon={rightInputIcon}
                 tabIndex={tabIndex}
-                readonly={this.props.readonly}
+                selectOnly={this.props.selectOnly}
                 aria-controls={this.props['aria-controls']}
                 aria-activedescendant={this.props['aria-activedescendant']}
                 autoFocus={autoFocus}
+                resultsType={resultsType}
               />
               {results}
             </ComboboxFormElement>
-          </DeprecatedCombobox>
+          </ComboboxContainer>
           {addonPosition === 'end' && addon}
         </ComboboxGroupContainer>
         {hasSelection && listboxOfSelections}

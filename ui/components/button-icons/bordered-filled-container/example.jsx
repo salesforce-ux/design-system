@@ -4,25 +4,31 @@
 import React from 'react';
 import ButtonIcon, { HintParent } from '../';
 
-export const Context = props => (
-  <div style={{ padding: '0.5rem', backgroundColor: '#f4f6f9' }}>
-    {props.children}
-  </div>
-);
+const exampleDemoStyles = 'background-color: #f4f6f9; padding: 0.5rem;';
 
-export default (
-  <ButtonIcon
-    assistiveText="Search"
-    symbol="search"
-    theme="neutral"
-    title="Search"
-  />
-);
+export default [
+  {
+    id: 'default',
+    label: 'Bordered Filled – default',
+    demoStyles: exampleDemoStyles,
+    storybookStyles: true,
+    element: (
+      <ButtonIcon
+        assistiveText="Search"
+        symbol="search"
+        theme="neutral"
+        title="Search"
+      />
+    )
+  }
+];
 
 export let states = [
   {
     id: 'disabled',
-    label: 'Disabled',
+    label: 'Bordered Filled - Disabled',
+    demoStyles: exampleDemoStyles,
+    storybookStyles: true,
     element: (
       <ButtonIcon
         assistiveText="Search"
@@ -38,7 +44,9 @@ export let states = [
 export let examples = [
   {
     id: 'with-dropdown',
-    label: 'With dropdown',
+    label: 'Bordered Filled - With dropdown',
+    demoStyles: exampleDemoStyles,
+    storybookStyles: true,
     element: (
       <ButtonIcon
         assistiveText="More options"
@@ -50,7 +58,9 @@ export let examples = [
   },
   {
     id: 'hint-hover',
-    label: 'Hint on hover',
+    label: 'Bordered Filled - Hint on hover',
+    demoStyles: exampleDemoStyles,
+    storybookStyles: true,
     element: (
       <HintParent>
         <ButtonIcon

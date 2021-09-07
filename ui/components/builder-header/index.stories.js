@@ -1,38 +1,21 @@
-import React from 'react';
-import { storiesOf } from '@storybook/react';
 import * as BaseExamples from './base/example';
 import * as ToolbarExamples from './toolbar/example';
 import { DEMO_STYLES } from './base/example';
-import { getAllDisplayCollectionsByType } from '../../shared/helpers';
-import StoryFrame from '../../../shared/components/StoryFrame';
-
-import DocsPage from '../../../.storybook/components/DocsPage';
+import { generateStories } from '../../shared/helpers';
 import Docs from './docs.mdx';
 
 const examples = [BaseExamples, ToolbarExamples];
 
-const kitchenSink = getAllDisplayCollectionsByType(examples, [
-  'default',
-  'examples',
-  'states'
-]);
+const patternName = 'Builder Header';
 
-storiesOf('Components/Builder Header', module).add(
-  'Kitchen Sink',
-  () =>
-    kitchenSink.map((element, idx) =>
-      element.map(({ demoStyles, label, component }) => (
-        <StoryFrame
-          component={component}
-          label={label}
-          styles={demoStyles || DEMO_STYLES}
-          key={`kitchen-sink-${label}-${idx}`}
-        />
-      ))
-    ),
-  {
-    docs: {
-      page: () => <DocsPage title="Builder Header" Docs={Docs} />
-    }
-  }
+const storyOptions = {
+  defaultDemoStyles: DEMO_STYLES
+};
+
+generateStories(
+  patternName,
+  examples,
+  ['default', 'examples', 'states'],
+  Docs,
+  storyOptions
 );

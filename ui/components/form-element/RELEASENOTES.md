@@ -3,6 +3,11 @@
 # Form Element Release Notes
 
 <!-- ## [Unreleased] -->
+## 2.16.0
+
+### Fixed
+
+- Correctly position help text under the corresponding input when in horizontal layout.
 ## 2.14.0
 
 ### Fixed

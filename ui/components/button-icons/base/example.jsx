@@ -4,12 +4,18 @@
 import React from 'react';
 import ButtonIcon, { HintParent } from '../';
 
-export default <ButtonIcon assistiveText="Settings" title="Settings" />;
+export default [
+  {
+    id: 'default',
+    label: 'Base – default',
+    element: <ButtonIcon assistiveText="Settings" title="Settings" />
+  }
+];
 
 export let states = [
   {
     id: 'error',
-    label: 'Error',
+    label: 'Base - Error',
     element: (
       <ButtonIcon
         feedback="error"
@@ -21,7 +27,7 @@ export let states = [
   },
   {
     id: 'warning',
-    label: 'Warning',
+    label: 'Base - Warning',
     element: (
       <ButtonIcon
         feedback="warning"
@@ -33,7 +39,7 @@ export let states = [
   },
   {
     id: 'bare-disabled',
-    label: 'Disabled',
+    label: 'Base - Disabled',
     element: <ButtonIcon assistiveText="Settings" disabled title="Settings" />
   }
 ];
@@ -41,7 +47,7 @@ export let states = [
 export let examples = [
   {
     id: 'hint-hover',
-    label: 'Hint on hover',
+    label: 'Base - Hint on hover',
     element: (
       <HintParent>
         <ButtonIcon

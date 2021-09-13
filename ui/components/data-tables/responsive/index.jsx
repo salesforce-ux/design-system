@@ -16,7 +16,8 @@ import {
   TBodyTr,
   RowTh,
   Td,
-  ReadOnlyCell
+  ReadOnlyCell,
+  DataTableContext
 } from '../';
 
 /// ////////////////////////////////////////
@@ -99,7 +100,9 @@ const RowData = props => (
       <ReadOnlyCell cellText="$25k" />
     </Td>
     <Td data-label="Contact" type="base">
-      <ReadOnlyCell actionableMode cellLink cellText="jrogers@cloudhub.com" />
+      <DataTableContext.Provider value={{ isActionableMode: true }}>
+        <ReadOnlyCell cellLink cellText="jrogers@cloudhub.com" />
+      </DataTableContext.Provider>
     </Td>
     <Td data-label="Actions" isShrunken type="base">
       <ButtonIcon

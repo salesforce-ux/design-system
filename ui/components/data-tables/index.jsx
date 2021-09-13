@@ -1,7 +1,7 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-import React from 'react';
+import React, { useContext } from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import _, { IsDependentOn } from '../../shared/helpers';
@@ -11,6 +11,10 @@ import { Popover } from '../popovers/base/example';
 import { Checkbox } from '../checkbox/base/example';
 import { Radio } from '../radio-group/base/example';
 import { UtilityIcon } from '../icons/base/example';
+
+export const DataTableContext = React.createContext({
+  isActionableMode: false
+});
 
 export const cellContentTextLong =
   'Cell content that is very long.\nIt also has a line break.\nIt has more than one line break';
@@ -173,6 +177,7 @@ THeadTr.propTypes = {
  * @name ColumnTh - th element for all advanced data table column headers
  */
 export const ColumnTh = props => {
+  const { isActionableMode } = useContext(DataTableContext);
   const getAriaSort = () => {
     let ariaSort = null;
     if (props.isSortable) {
@@ -192,7 +197,8 @@ export const ColumnTh = props => {
       props.sortDirection === 'descending',
     'slds-is-sorted_asc': props.sortDirection === 'ascending',
     'slds-is-sorted_desc': props.sortDirection === 'descending',
-    'slds-cell-wrap': props.hasWrap
+    'slds-cell-wrap': props.hasWrap,
+    'slds-cell_action-mode': isActionableMode
   });
 
   return (
@@ -280,7 +286,8 @@ ResizeControl.propTypes = {
  * @name InteractiveColumnHeader - Common th cell for use in advanced data grids that have sorting or interaction
  */
 export let InteractiveColumnHeader = props => {
-  const tabIndex = props.actionableMode ? '0' : '-1';
+  const { isActionableMode } = useContext(DataTableContext);
+  const tabIndex = isActionableMode ? '0' : '-1';
 
   const getHeaderIcon = () => {
     const matchingIcon = props.columnHeaderIcons.filter(
@@ -342,7 +349,7 @@ export let InteractiveColumnHeader = props => {
           className="slds-th__action-button slds-button_icon-x-small"
           iconClassName="slds-button__icon_hint slds-button__icon_small"
           symbol="chevrondown"
-          tabIndex={props.actionableMode ? '0' : '-1'}
+          tabIndex={isActionableMode ? '0' : '-1'}
           title={`Show ${props.columnName} column actions`}
         />
       )}
@@ -360,7 +367,6 @@ export let InteractiveColumnHeader = props => {
 };
 InteractiveColumnHeader.displayName = 'InteractiveColumnHeader';
 InteractiveColumnHeader.propTypes = {
-  actionableMode: PropTypes.bool,
   columnName: PropTypes.string.isRequired,
   columnHeaderIcons: PropTypes.array,
   hasMenu: PropTypes.bool,
@@ -376,26 +382,29 @@ InteractiveColumnHeader.defaultProps = {
 /**
  * @name SelectAllColumnHeader - Common "Select All" column header for all grids
  */
-export const SelectAllColumnHeader = props => (
-  <React.Fragment>
-    <span id="column-group-header" className="slds-assistive-text">
-      Choose a row
-    </span>
-    <div className="slds-th__action slds-th__action_form">
-      <Checkbox
-        tabIndex={props.actionableMode ? '0' : '-1'}
-        labelId="check-select-all-label"
-        label="Select All"
-        hideLabel
-        checked={props.checked ? true : null}
-        groupId="column-group-header"
-      />
-    </div>
-  </React.Fragment>
-);
+export const SelectAllColumnHeader = props => {
+  const { isActionableMode } = useContext(DataTableContext);
+
+  return (
+    <React.Fragment>
+      <span id="column-group-header" className="slds-assistive-text">
+        Choose a row
+      </span>
+      <div className="slds-th__action slds-th__action_form">
+        <Checkbox
+          tabIndex={isActionableMode ? '0' : '-1'}
+          labelId="check-select-all-label"
+          label="Select All"
+          hideLabel
+          checked={props.checked ? true : null}
+          groupId="column-group-header"
+        />
+      </div>
+    </React.Fragment>
+  );
+};
 SelectAllColumnHeader.displayName = 'SelectAllColumnHeader';
 SelectAllColumnHeader.propTypes = {
-  actionableMode: PropTypes.bool,
   checked: PropTypes.bool
 };
 
@@ -403,6 +412,7 @@ SelectAllColumnHeader.propTypes = {
  * @name AdvancedDataTableHead - Entire data driven Advanced data table head, thead, tr and all headers
  */
 export const AdvancedDataTableHead = props => {
+  const { isActionableMode } = useContext(DataTableContext);
   const selectAllColumnWidth = props.hasErrorColumn ? '2rem' : '3.25rem';
   const mainColumnWidth = props.mainColumnWidth || null;
 
@@ -427,10 +437,7 @@ export const AdvancedDataTableHead = props => {
                 isAssistiveText
               />
             ) : (
-              <SelectAllColumnHeader
-                actionableMode={props.actionableMode}
-                checked={props.selectAll}
-              />
+              <SelectAllColumnHeader checked={props.selectAll} />
             )}
           </ColumnTh>
         )}
@@ -452,7 +459,6 @@ export const AdvancedDataTableHead = props => {
             }}
           >
             <InteractiveColumnHeader
-              actionableMode={props.actionableMode}
               columnName={column}
               columnHeaderIcons={props.columnHeaderIcons}
               hasMenu={props.hasMenus}
@@ -474,7 +480,6 @@ export const AdvancedDataTableHead = props => {
 };
 AdvancedDataTableHead.displayName = 'AdvancedDataTableHead';
 AdvancedDataTableHead.propTypes = {
-  actionableMode: PropTypes.bool,
   columnHeaderIcons: PropTypes.array,
   columns: PropTypes.array.isRequired,
   hasErrorColumn: PropTypes.bool,
@@ -541,6 +546,7 @@ TBodyTr.propTypes = {
  * @name Td
  */
 export const Td = props => {
+  const { isActionableMode } = useContext(DataTableContext);
   const computedClasses = classNames({
     'slds-has-focus': props.hasFocus,
     'slds-cell-edit': props.isEditable,
@@ -549,7 +555,8 @@ export const Td = props => {
     'slds-text-align_right': props.isRightAligned,
     'slds-cell-shrink': props.isShrunken,
     'slds-has-error': props.hasError,
-    'slds-cell-wrap': props.hasWrap
+    'slds-cell-wrap': props.hasWrap,
+    'slds-cell_action-mode': isActionableMode
   });
 
   const getComputedRole = () => {
@@ -600,12 +607,14 @@ Td.propTypes = {
  * @name RowTh
  */
 export const RowTh = props => {
+  const { isActionableMode } = useContext(DataTableContext);
   const computedClasses = classNames({
     'slds-cell-edit': props.isEditable,
     'slds-has-focus': props.hasFocus,
     'slds-tree__item': props.type === 'treegrid',
     'slds-is-hovered': props.isItemHovered,
-    'slds-cell-wrap': props.hasWrap
+    'slds-cell-wrap': props.hasWrap,
+    'slds-cell_action-mode': isActionableMode
   });
 
   return (
@@ -670,48 +679,54 @@ SelectRowCell.propTypes = {
 /**
  * @name RowActionsCell - Common cell for holding Row Level Actions in a Grid
  */
-export const RowActionsCell = props => (
-  <ButtonIcon
-    assistiveText={`More actions for ${props.rowName}`}
-    aria-haspopup="true"
-    className="slds-button_icon-border-filled slds-button_icon-x-small"
-    iconClassName="slds-button__icon_hint slds-button__icon_small"
-    symbol="down"
-    tabIndex={props.actionableMode ? '0' : '-1'}
-    title={`More actions for ${props.rowName}`}
-  />
-);
+export const RowActionsCell = ({ rowName }) => {
+  const { isActionableMode } = useContext(DataTableContext);
+
+  return (
+    <ButtonIcon
+      assistiveText={`More actions for ${rowName}`}
+      aria-haspopup="true"
+      className="slds-button_icon-border-filled slds-button_icon-x-small"
+      iconClassName="slds-button__icon_hint slds-button__icon_small"
+      symbol="down"
+      tabIndex={isActionableMode ? '0' : '-1'}
+      title={`More actions for ${rowName}`}
+    />
+  );
+};
 RowActionsCell.displayName = 'RowActionsCell';
 RowActionsCell.propTypes = {
-  actionableMode: PropTypes.bool,
   rowName: PropTypes.string.isRequired
 };
 
 /**
  * @name ErrorCell - Common table cell to be used for a row errors
  */
-export const ErrorCell = props => (
-  <React.Fragment>
-    <ButtonIcon
-      aria-hidden={props.hasError ? null : 'true'}
-      assistiveText={`Item ${props.index} has errors`}
-      className={classNames(
-        'slds-button_icon-error slds-m-horizontal_xxx-small',
-        {
-          'slds-hidden': !props.hasError
-        }
-      )}
-      id={'error-0' + props.index}
-      symbol="error"
-      tabIndex={props.actionableMode ? '0' : '-1'}
-      title={`Item ${props.index} has errors`}
-    />
-    <span className="slds-row-number slds-text-body_small slds-text-color_weak" />
-  </React.Fragment>
-);
+export const ErrorCell = props => {
+  const { isActionableMode } = useContext(DataTableContext);
+
+  return (
+    <React.Fragment>
+      <ButtonIcon
+        aria-hidden={props.hasError ? null : 'true'}
+        assistiveText={`Item ${props.index} has errors`}
+        className={classNames(
+          'slds-button_icon-error slds-m-horizontal_xxx-small',
+          {
+            'slds-hidden': !props.hasError
+          }
+        )}
+        id={'error-0' + props.index}
+        symbol="error"
+        tabIndex={isActionableMode ? '0' : '-1'}
+        title={`Item ${props.index} has errors`}
+      />
+      <span className="slds-row-number slds-text-body_small slds-text-color_weak" />
+    </React.Fragment>
+  );
+};
 ErrorCell.displayName = 'ErrorCell';
 ErrorCell.propTypes = {
-  actionableMode: PropTypes.bool,
   hasError: PropTypes.bool,
   index: PropTypes.number.isRequired
 };
@@ -719,34 +734,32 @@ ErrorCell.propTypes = {
 /**
  * @name ReadOnlyCell - Cell content common to all readonly data grid cell
  */
-export const ReadOnlyCell = ({
-  hasWrap,
-  cellText,
-  cellLink,
-  actionableMode
-}) => (
-  <div
-    className={classNames(hasWrap ? 'slds-line-clamp' : 'slds-truncate')}
-    title={cellText}
-  >
-    {cellLink ? (
-      <a
-        href="#"
-        tabIndex={actionableMode ? '0' : '-1'}
-        onClick={e => {
-          e.preventDefault();
-        }}
-      >
-        {cellText}
-      </a>
-    ) : (
-      cellText
-    )}
-  </div>
-);
+export const ReadOnlyCell = ({ hasWrap, cellText, cellLink }) => {
+  const { isActionableMode } = useContext(DataTableContext);
+
+  return (
+    <div
+      className={classNames(hasWrap ? 'slds-line-clamp' : 'slds-truncate')}
+      title={cellText}
+    >
+      {cellLink ? (
+        <a
+          href="#"
+          tabIndex={isActionableMode ? '0' : '-1'}
+          onClick={e => {
+            e.preventDefault();
+          }}
+        >
+          {cellText}
+        </a>
+      ) : (
+        cellText
+      )}
+    </div>
+  );
+};
 ReadOnlyCell.displayName = 'ReadOnlyCell';
 ReadOnlyCell.propTypes = {
-  actionableMode: IsDependentOn('cellLink', PropTypes.bool),
   cellLink: PropTypes.bool,
   cellText: PropTypes.string.isRequired,
   hasWrap: PropTypes.bool
@@ -755,46 +768,48 @@ ReadOnlyCell.propTypes = {
 /**
  * @name EditableCell - Common cell content for inline edit grids
  */
-export const EditableCell = props => (
-  <React.Fragment>
-    <span className="slds-grid slds-grid_align-spread">
-      {props.cellLink ? (
-        <a
-          className="slds-truncate"
-          href="#"
-          id={`link-0${props.index}`}
-          tabIndex={props.actionableMode ? '0' : '-1'}
-          title={props.cellText}
-          onClick={e => e.preventDefault()}
-        >
-          {props.cellText}
-        </a>
-      ) : (
-        <span className="slds-truncate" title={props.cellText}>
-          {props.cellText}
-        </span>
+export const EditableCell = props => {
+  const { isActionableMode } = useContext(DataTableContext);
+  return (
+    <React.Fragment>
+      <span className="slds-grid slds-grid_align-spread">
+        {props.cellLink ? (
+          <a
+            className="slds-truncate"
+            href="#"
+            id={`link-0${props.index}`}
+            tabIndex={isActionableMode ? '0' : '-1'}
+            title={props.cellText}
+            onClick={e => e.preventDefault()}
+          >
+            {props.cellText}
+          </a>
+        ) : (
+          <span className="slds-truncate" title={props.cellText}>
+            {props.cellText}
+          </span>
+        )}
+        <ButtonIcon
+          assistiveText={props.buttonText}
+          className="slds-cell-edit__button slds-m-left_x-small"
+          disabled={props.isLocked}
+          iconClassName={classNames('slds-button__icon_hint', {
+            'slds-button__icon_edit': !props.isLocked,
+            'slds-button__icon_lock slds-button__icon_small': props.isLocked
+          })}
+          symbol={props.isLocked ? 'lock' : 'edit'}
+          tabIndex={isActionableMode ? '0' : '-1'}
+          title={props.buttonText}
+        />
+      </span>
+      {props.showEdit && (
+        <EditPopover isRequired={props.isRequired} hasError={props.hasError} />
       )}
-      <ButtonIcon
-        assistiveText={props.buttonText}
-        className="slds-cell-edit__button slds-m-left_x-small"
-        disabled={props.isLocked}
-        iconClassName={classNames('slds-button__icon_hint', {
-          'slds-button__icon_edit': !props.isLocked,
-          'slds-button__icon_lock slds-button__icon_small': props.isLocked
-        })}
-        symbol={props.isLocked ? 'lock' : 'edit'}
-        tabIndex={props.actionableMode ? '0' : '-1'}
-        title={props.buttonText}
-      />
-    </span>
-    {props.showEdit && (
-      <EditPopover isRequired={props.isRequired} hasError={props.hasError} />
-    )}
-  </React.Fragment>
-);
+    </React.Fragment>
+  );
+};
 EditableCell.displayName = 'EditableCell';
 EditableCell.propTypes = {
-  actionableMode: PropTypes.bool,
   buttonText: PropTypes.string.isRequired,
   cellLink: PropTypes.bool,
   cellText: PropTypes.string.isRequired,

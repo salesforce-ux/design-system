@@ -7,7 +7,7 @@ exports[`Advanced data table row should make every focusable element focusable w
   className="slds-hint-parent"
 >
   <td
-    className="slds-text-align_right"
+    className="slds-text-align_right slds-cell_action-mode"
     role="gridcell"
   >
     <div
@@ -38,7 +38,7 @@ exports[`Advanced data table row should make every focusable element focusable w
     </div>
   </td>
   <th
-    className={null}
+    className="slds-cell_action-mode"
     scope="row"
     tabIndex={null}
   >
@@ -56,7 +56,7 @@ exports[`Advanced data table row should make every focusable element focusable w
     </div>
   </th>
   <td
-    className={null}
+    className="slds-cell_action-mode"
     role="gridcell"
   >
     <div
@@ -67,7 +67,7 @@ exports[`Advanced data table row should make every focusable element focusable w
     </div>
   </td>
   <td
-    className={null}
+    className="slds-cell_action-mode"
     role="gridcell"
   >
     <div
@@ -78,7 +78,7 @@ exports[`Advanced data table row should make every focusable element focusable w
     </div>
   </td>
   <td
-    className={null}
+    className="slds-cell_action-mode"
     role="gridcell"
   >
     <div
@@ -89,7 +89,7 @@ exports[`Advanced data table row should make every focusable element focusable w
     </div>
   </td>
   <td
-    className={null}
+    className="slds-cell_action-mode"
     role="gridcell"
   >
     <div
@@ -100,7 +100,7 @@ exports[`Advanced data table row should make every focusable element focusable w
     </div>
   </td>
   <td
-    className={null}
+    className="slds-cell_action-mode"
     role="gridcell"
   >
     <div
@@ -111,7 +111,7 @@ exports[`Advanced data table row should make every focusable element focusable w
     </div>
   </td>
   <td
-    className={null}
+    className="slds-cell_action-mode"
     role="gridcell"
   >
     <div
@@ -128,7 +128,7 @@ exports[`Advanced data table row should make every focusable element focusable w
     </div>
   </td>
   <td
-    className={null}
+    className="slds-cell_action-mode"
     role="gridcell"
   >
     <button
@@ -293,7 +293,7 @@ exports[`Advanced data table row should render a table header row 1`] = `
   >
     <th
       aria-sort={null}
-      className="slds-text-align_right"
+      className="slds-text-align_right slds-cell_action-mode"
       scope="col"
       style={
         Object {
@@ -342,7 +342,7 @@ exports[`Advanced data table row should render a table header row 1`] = `
     <th
       aria-label="Name"
       aria-sort="none"
-      className="slds-is-resizable slds-is-sortable"
+      className="slds-is-resizable slds-is-sortable slds-cell_action-mode"
       scope="col"
       style={
         Object {
@@ -410,7 +410,7 @@ exports[`Advanced data table row should render a table header row 1`] = `
     <th
       aria-label="Account Name"
       aria-sort="none"
-      className="slds-is-resizable slds-is-sortable"
+      className="slds-is-resizable slds-is-sortable slds-cell_action-mode"
       scope="col"
       style={
         Object {
@@ -478,7 +478,7 @@ exports[`Advanced data table row should render a table header row 1`] = `
     <th
       aria-label="Close Date"
       aria-sort="none"
-      className="slds-is-resizable slds-is-sortable"
+      className="slds-is-resizable slds-is-sortable slds-cell_action-mode"
       scope="col"
       style={
         Object {
@@ -546,7 +546,7 @@ exports[`Advanced data table row should render a table header row 1`] = `
     <th
       aria-label="Stage"
       aria-sort="none"
-      className="slds-is-resizable slds-is-sortable"
+      className="slds-is-resizable slds-is-sortable slds-cell_action-mode"
       scope="col"
       style={
         Object {
@@ -614,7 +614,7 @@ exports[`Advanced data table row should render a table header row 1`] = `
     <th
       aria-label="Confidence"
       aria-sort="none"
-      className="slds-is-resizable slds-is-sortable"
+      className="slds-is-resizable slds-is-sortable slds-cell_action-mode"
       scope="col"
       style={
         Object {
@@ -682,7 +682,7 @@ exports[`Advanced data table row should render a table header row 1`] = `
     <th
       aria-label="Amount"
       aria-sort="none"
-      className="slds-is-resizable slds-is-sortable"
+      className="slds-is-resizable slds-is-sortable slds-cell_action-mode"
       scope="col"
       style={
         Object {
@@ -750,7 +750,7 @@ exports[`Advanced data table row should render a table header row 1`] = `
     <th
       aria-label="Contact"
       aria-sort="none"
-      className="slds-is-resizable slds-is-sortable"
+      className="slds-is-resizable slds-is-sortable slds-cell_action-mode"
       scope="col"
       style={
         Object {
@@ -817,7 +817,7 @@ exports[`Advanced data table row should render a table header row 1`] = `
     </th>
     <th
       aria-sort={null}
-      className=""
+      className="slds-cell_action-mode"
       scope="col"
       style={
         Object {
@@ -845,7 +845,7 @@ exports[`Advanced data table row should render a table header row with ascending
   >
     <th
       aria-sort={null}
-      className="slds-text-align_right"
+      className="slds-text-align_right slds-cell_action-mode"
       scope="col"
       style={
         Object {
@@ -894,7 +894,7 @@ exports[`Advanced data table row should render a table header row with ascending
     <th
       aria-label="Name"
       aria-sort="ascending"
-      className="slds-is-resizable slds-is-sortable slds-is-sorted slds-is-sorted_asc"
+      className="slds-is-resizable slds-is-sortable slds-is-sorted slds-is-sorted_asc slds-cell_action-mode"
       scope="col"
       style={
         Object {
@@ -970,7 +970,7 @@ exports[`Advanced data table row should render a table header row with ascending
     <th
       aria-label="Account Name"
       aria-sort="none"
-      className="slds-is-resizable slds-is-sortable"
+      className="slds-is-resizable slds-is-sortable slds-cell_action-mode"
       scope="col"
       style={
         Object {
@@ -1038,7 +1038,7 @@ exports[`Advanced data table row should render a table header row with ascending
     <th
       aria-label="Close Date"
       aria-sort="none"
-      className="slds-is-resizable slds-is-sortable"
+      className="slds-is-resizable slds-is-sortable slds-cell_action-mode"
       scope="col"
       style={
         Object {
@@ -1106,7 +1106,7 @@ exports[`Advanced data table row should render a table header row with ascending
     <th
       aria-label="Stage"
       aria-sort="none"
-      className="slds-is-resizable slds-is-sortable"
+      className="slds-is-resizable slds-is-sortable slds-cell_action-mode"
       scope="col"
       style={
         Object {
@@ -1174,7 +1174,7 @@ exports[`Advanced data table row should render a table header row with ascending
     <th
       aria-label="Confidence"
       aria-sort="none"
-      className="slds-is-resizable slds-is-sortable"
+      className="slds-is-resizable slds-is-sortable slds-cell_action-mode"
       scope="col"
       style={
         Object {
@@ -1242,7 +1242,7 @@ exports[`Advanced data table row should render a table header row with ascending
     <th
       aria-label="Amount"
       aria-sort="none"
-      className="slds-is-resizable slds-is-sortable"
+      className="slds-is-resizable slds-is-sortable slds-cell_action-mode"
       scope="col"
       style={
         Object {
@@ -1310,7 +1310,7 @@ exports[`Advanced data table row should render a table header row with ascending
     <th
       aria-label="Contact"
       aria-sort="none"
-      className="slds-is-resizable slds-is-sortable"
+      className="slds-is-resizable slds-is-sortable slds-cell_action-mode"
       scope="col"
       style={
         Object {
@@ -1377,7 +1377,7 @@ exports[`Advanced data table row should render a table header row with ascending
     </th>
     <th
       aria-sort={null}
-      className=""
+      className="slds-cell_action-mode"
       scope="col"
       style={
         Object {
@@ -2620,7 +2620,7 @@ exports[`Product data table row should make focusable elements focusable in acti
   className="slds-hint-parent slds-align-top"
 >
   <th
-    className={null}
+    className="slds-cell_action-mode"
     scope="row"
   >
     <div
@@ -2695,7 +2695,7 @@ exports[`Product data table row should make focusable elements focusable in acti
     </div>
   </th>
   <td
-    className={null}
+    className="slds-cell_action-mode"
     role="gridcell"
   >
     <div
@@ -2722,7 +2722,7 @@ exports[`Product data table row should make focusable elements focusable in acti
     </div>
   </td>
   <td
-    className={null}
+    className="slds-cell_action-mode"
     role="gridcell"
   >
     <div
@@ -2733,7 +2733,7 @@ exports[`Product data table row should make focusable elements focusable in acti
     </div>
   </td>
   <td
-    className={null}
+    className="slds-cell_action-mode"
     role="gridcell"
   >
     <p>
@@ -2746,7 +2746,7 @@ exports[`Product data table row should make focusable elements focusable in acti
     </p>
   </td>
   <td
-    className={null}
+    className="slds-cell_action-mode"
     role="gridcell"
   >
     <button

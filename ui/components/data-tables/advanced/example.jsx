@@ -5,7 +5,12 @@ import React from 'react';
 
 import Ellie from '../../dynamic-icons/ellie';
 import { StandardIcon } from '../../icons/standard/example';
-import { Table, TBody, AdvancedDataTableHead as Thead } from '../';
+import {
+  Table,
+  TBody,
+  DataTableContext,
+  AdvancedDataTableHead as Thead
+} from '../';
 import { AdvancedDataTableTr, ProductDataTableTr } from '../advanced/';
 
 /// ////////////////////////////////////////
@@ -202,18 +207,19 @@ export let states = [
         type="advanced"
         ariaLabel="Example advanced table of Opportunities in actionable mode"
       >
-        <Thead actionableMode columns={columns} />
-        <TBody>
-          {rows.map((row, i) => (
-            <AdvancedDataTableTr
-              actionableMode
-              index={i + 1}
-              isSelected={false}
-              key={i}
-              {...row}
-            />
-          ))}
-        </TBody>
+        <DataTableContext.Provider value={{ isActionableMode: true }}>
+          <Thead columns={columns} />
+          <TBody>
+            {rows.map((row, i) => (
+              <AdvancedDataTableTr
+                index={i + 1}
+                isSelected={false}
+                key={i}
+                {...row}
+              />
+            ))}
+          </TBody>
+        </DataTableContext.Provider>
       </Table>
     )
   },
@@ -229,18 +235,19 @@ export let states = [
         type="advanced"
         ariaLabel="Example advanced table of Opportunities in actionable mode with row selected"
       >
-        <Thead actionableMode columns={columns} />
-        <TBody>
-          {rows.map((row, i) => (
-            <AdvancedDataTableTr
-              actionableMode
-              index={i + 1}
-              isSelected={i === 1}
-              key={i}
-              {...row}
-            />
-          ))}
-        </TBody>
+        <DataTableContext.Provider value={{ isActionableMode: true }}>
+          <Thead columns={columns} />
+          <TBody>
+            {rows.map((row, i) => (
+              <AdvancedDataTableTr
+                index={i + 1}
+                isSelected={i === 1}
+                key={i}
+                {...row}
+              />
+            ))}
+          </TBody>
+        </DataTableContext.Provider>
       </Table>
     )
   },
@@ -256,18 +263,14 @@ export let states = [
         type="advanced"
         ariaLabel="Example advanced table of Opportunities in actionable mode with all rows selected"
       >
-        <Thead actionableMode columns={columns} selectAll />
-        <TBody>
-          {rows.map((row, i) => (
-            <AdvancedDataTableTr
-              actionableMode
-              index={i + 1}
-              isSelected
-              key={i}
-              {...row}
-            />
-          ))}
-        </TBody>
+        <DataTableContext.Provider value={{ isActionableMode: true }}>
+          <Thead columns={columns} selectAll />
+          <TBody>
+            {rows.map((row, i) => (
+              <AdvancedDataTableTr index={i + 1} isSelected key={i} {...row} />
+            ))}
+          </TBody>
+        </DataTableContext.Provider>
       </Table>
     )
   },
@@ -283,18 +286,19 @@ export let states = [
         type="advanced"
         ariaLabel="Example advanced table of Opportunities in actionable mode with ascending column sorting"
       >
-        <Thead columns={columns} actionableMode sortDirection="ascending" />
-        <TBody>
-          {rows.map((row, i) => (
-            <AdvancedDataTableTr
-              actionableMode
-              index={i + 1}
-              isSelected={false}
-              key={i}
-              {...row}
-            />
-          ))}
-        </TBody>
+        <DataTableContext.Provider value={{ isActionableMode: true }}>
+          <Thead columns={columns} sortDirection="ascending" />
+          <TBody>
+            {rows.map((row, i) => (
+              <AdvancedDataTableTr
+                index={i + 1}
+                isSelected={false}
+                key={i}
+                {...row}
+              />
+            ))}
+          </TBody>
+        </DataTableContext.Provider>
       </Table>
     )
   },
@@ -310,18 +314,19 @@ export let states = [
         type="advanced"
         ariaLabel="Example advanced table of Opportunities in actionable mode with descending column sorting"
       >
-        <Thead columns={columns} actionableMode sortDirection="descending" />
-        <TBody>
-          {reversedRows.map((row, i) => (
-            <AdvancedDataTableTr
-              actionableMode
-              index={i + 1}
-              isSelected={false}
-              key={i}
-              {...row}
-            />
-          ))}
-        </TBody>
+        <DataTableContext.Provider value={{ isActionableMode: true }}>
+          <Thead columns={columns} sortDirection="descending" />
+          <TBody>
+            {reversedRows.map((row, i) => (
+              <AdvancedDataTableTr
+                index={i + 1}
+                isSelected={false}
+                key={i}
+                {...row}
+              />
+            ))}
+          </TBody>
+        </DataTableContext.Provider>
       </Table>
     )
   },
@@ -337,18 +342,19 @@ export let states = [
         type="advanced"
         ariaLabel="Example advanced table of Opportunities in actionable mode with resized column"
       >
-        <Thead columns={columns} actionableMode singleColumnWidth="300px" />
-        <TBody>
-          {rows.map((row, i) => (
-            <AdvancedDataTableTr
-              actionableMode
-              index={i + 1}
-              isSelected={false}
-              key={i}
-              {...row}
-            />
-          ))}
-        </TBody>
+        <DataTableContext.Provider value={{ isActionableMode: true }}>
+          <Thead columns={columns} singleColumnWidth="300px" />
+          <TBody>
+            {rows.map((row, i) => (
+              <AdvancedDataTableTr
+                index={i + 1}
+                isSelected={false}
+                key={i}
+                {...row}
+              />
+            ))}
+          </TBody>
+        </DataTableContext.Provider>
       </Table>
     )
   }
@@ -450,18 +456,19 @@ export let examples = [
         type="advanced"
         ariaLabel="Example advanced table as product listing"
       >
-        <Thead columns={productColumns} actionableMode hasNoRowSelection />
-        <TBody>
-          {productRows.map((row, i) => (
-            <ProductDataTableTr
-              isSelected={false}
-              key={i}
-              index={i + 1}
-              {...row}
-              actionableMode
-            />
-          ))}
-        </TBody>
+        <DataTableContext.Provider value={{ isActionableMode: true }}>
+          <Thead columns={productColumns} hasNoRowSelection />
+          <TBody>
+            {productRows.map((row, i) => (
+              <ProductDataTableTr
+                isSelected={false}
+                key={i}
+                index={i + 1}
+                {...row}
+              />
+            ))}
+          </TBody>
+        </DataTableContext.Provider>
       </Table>
     )
   },

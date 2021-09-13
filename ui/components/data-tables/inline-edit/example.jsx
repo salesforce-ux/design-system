@@ -8,7 +8,8 @@ import {
   InlineEditTableContainer as Container,
   Table,
   AdvancedDataTableHead as Thead,
-  TBody
+  TBody,
+  DataTableContext
 } from '../';
 import { Demo, InlineEditTr } from './';
 
@@ -70,24 +71,20 @@ export const InlineEditTableFocusedCell = () => (
       type="advanced"
       ariaLabel="Example inline edit table"
     >
-      <Thead
-        actionableMode
-        columns={columns}
-        hasErrorColumn
-        mainColumnWidth="8.75rem"
-      />
-      <TBody>
-        {rows.map((row, i) => (
-          <InlineEditTr
-            actionableMode
-            focusedCell={i === 0 ? 'recordName' : null}
-            index={i + 1}
-            isSelected={false}
-            key={i}
-            {...row}
-          />
-        ))}
-      </TBody>
+      <DataTableContext.Provider value={{ isActionableMode: true }}>
+        <Thead columns={columns} hasErrorColumn mainColumnWidth="8.75rem" />
+        <TBody>
+          {rows.map((row, i) => (
+            <InlineEditTr
+              focusedCell={i === 0 ? 'recordName' : null}
+              index={i + 1}
+              isSelected={false}
+              key={i}
+              {...row}
+            />
+          ))}
+        </TBody>
+      </DataTableContext.Provider>
     </Table>
   </Container>
 );
@@ -149,24 +146,20 @@ export let states = [
           type="advanced"
           ariaLabel="Example inline edit table in actionable mode with checkbox cell focused"
         >
-          <Thead
-            actionableMode
-            columns={columns}
-            hasErrorColumn
-            mainColumnWidth="8.75rem"
-          />
-          <TBody>
-            {rows.map((row, i) => (
-              <InlineEditTr
-                actionableMode
-                focusedCell={i === 0 ? 'selectRow' : null}
-                index={i + 1}
-                isSelected={false}
-                key={i}
-                {...row}
-              />
-            ))}
-          </TBody>
+          <DataTableContext.Provider value={{ isActionableMode: true }}>
+            <Thead columns={columns} hasErrorColumn mainColumnWidth="8.75rem" />
+            <TBody>
+              {rows.map((row, i) => (
+                <InlineEditTr
+                  focusedCell={i === 0 ? 'selectRow' : null}
+                  index={i + 1}
+                  isSelected={false}
+                  key={i}
+                  {...row}
+                />
+              ))}
+            </TBody>
+          </DataTableContext.Provider>
         </Table>
       </Container>
     ),
@@ -221,24 +214,20 @@ export let states = [
           type="advanced"
           ariaLabel="Example inline edit table in actionable mode with cell edit"
         >
-          <Thead
-            actionableMode
-            columns={columns}
-            hasErrorColumn
-            mainColumnWidth="8.75rem"
-          />
-          <TBody>
-            {rows.map((row, i) => (
-              <InlineEditTr
-                actionableMode
-                index={i + 1}
-                isSelected={false}
-                key={i}
-                showEdit={i === 0}
-                {...row}
-              />
-            ))}
-          </TBody>
+          <DataTableContext.Provider value={{ isActionableMode: true }}>
+            <Thead columns={columns} hasErrorColumn mainColumnWidth="8.75rem" />
+            <TBody>
+              {rows.map((row, i) => (
+                <InlineEditTr
+                  index={i + 1}
+                  isSelected={false}
+                  key={i}
+                  showEdit={i === 0}
+                  {...row}
+                />
+              ))}
+            </TBody>
+          </DataTableContext.Provider>
         </Table>
       </Container>
     ),
@@ -262,25 +251,21 @@ export let states = [
           type="advanced"
           ariaLabel="Example inline edit table in actionable mode with required cell edit"
         >
-          <Thead
-            actionableMode
-            columns={columns}
-            hasErrorColumn
-            mainColumnWidth="8.75rem"
-          />
-          <TBody>
-            {rows.map((row, i) => (
-              <InlineEditTr
-                actionableMode
-                index={i + 1}
-                isSelected={false}
-                key={i}
-                showEdit={i === 0}
-                showEditRequired
-                {...row}
-              />
-            ))}
-          </TBody>
+          <DataTableContext.Provider value={{ isActionableMode: true }}>
+            <Thead columns={columns} hasErrorColumn mainColumnWidth="8.75rem" />
+            <TBody>
+              {rows.map((row, i) => (
+                <InlineEditTr
+                  index={i + 1}
+                  isSelected={false}
+                  key={i}
+                  showEdit={i === 0}
+                  showEditRequired
+                  {...row}
+                />
+              ))}
+            </TBody>
+          </DataTableContext.Provider>
         </Table>
       </Container>
     ),
@@ -304,26 +289,22 @@ export let states = [
           type="advanced"
           ariaLabel="Example inline edit table in actionable mode with cell error"
         >
-          <Thead
-            actionableMode
-            columns={columns}
-            hasErrorColumn
-            mainColumnWidth="8.75rem"
-          />
-          <TBody>
-            {rows.map((row, i) => (
-              <InlineEditTr
-                actionableMode
-                index={i + 1}
-                isSelected={false}
-                key={i}
-                showEdit={i === 0}
-                showEditError
-                showEditRequired
-                {...row}
-              />
-            ))}
-          </TBody>
+          <DataTableContext.Provider value={{ isActionableMode: true }}>
+            <Thead columns={columns} hasErrorColumn mainColumnWidth="8.75rem" />
+            <TBody>
+              {rows.map((row, i) => (
+                <InlineEditTr
+                  index={i + 1}
+                  isSelected={false}
+                  key={i}
+                  showEdit={i === 0}
+                  showEditError
+                  showEditRequired
+                  {...row}
+                />
+              ))}
+            </TBody>
+          </DataTableContext.Provider>
         </Table>
       </Container>
     ),
@@ -347,24 +328,20 @@ export let states = [
           type="advanced"
           ariaLabel="Example inline edit table in actionable mode with cell edited"
         >
-          <Thead
-            actionableMode
-            columns={columns}
-            hasErrorColumn
-            mainColumnWidth="8.75rem"
-          />
-          <TBody>
-            {rows.map((row, i) => (
-              <InlineEditTr
-                actionableMode
-                index={i + 1}
-                isSelected={false}
-                key={i}
-                showEditedCell={i === 0}
-                {...row}
-              />
-            ))}
-          </TBody>
+          <DataTableContext.Provider value={{ isActionableMode: true }}>
+            <Thead columns={columns} hasErrorColumn mainColumnWidth="8.75rem" />
+            <TBody>
+              {rows.map((row, i) => (
+                <InlineEditTr
+                  index={i + 1}
+                  isSelected={false}
+                  key={i}
+                  showEditedCell={i === 0}
+                  {...row}
+                />
+              ))}
+            </TBody>
+          </DataTableContext.Provider>
         </Table>
       </Container>
     )
@@ -384,25 +361,21 @@ export let states = [
           type="advanced"
           ariaLabel="Example inline edit table in actionable mode with cell edited in selected row"
         >
-          <Thead
-            actionableMode
-            columns={columns}
-            hasErrorColumn
-            mainColumnWidth="8.75rem"
-          />
-          <TBody>
-            {rows.map((row, i) => (
-              <InlineEditTr
-                actionableMode
-                className={i === 0 ? 'slds-is-selected' : null}
-                index={i + 1}
-                isSelected={i === 0}
-                key={i}
-                showEditedCell={i === 0}
-                {...row}
-              />
-            ))}
-          </TBody>
+          <DataTableContext.Provider value={{ isActionableMode: true }}>
+            <Thead columns={columns} hasErrorColumn mainColumnWidth="8.75rem" />
+            <TBody>
+              {rows.map((row, i) => (
+                <InlineEditTr
+                  className={i === 0 ? 'slds-is-selected' : null}
+                  index={i + 1}
+                  isSelected={i === 0}
+                  key={i}
+                  showEditedCell={i === 0}
+                  {...row}
+                />
+              ))}
+            </TBody>
+          </DataTableContext.Provider>
         </Table>
       </Container>
     )
@@ -422,26 +395,22 @@ export let states = [
           type="advanced"
           ariaLabel="Example inline edit table in actionable mode with cell error on save"
         >
-          <Thead
-            actionableMode
-            columns={columns}
-            hasErrorColumn
-            mainColumnWidth="8.75rem"
-          />
-          <TBody>
-            {rows.map((row, i) => (
-              <InlineEditTr
-                actionableMode
-                focusedCell={i === 0 ? 'accountName' : null}
-                index={i + 1}
-                isSelected={false}
-                key={i}
-                showCellError={i === 0}
-                showRowError={i === 0}
-                {...row}
-              />
-            ))}
-          </TBody>
+          <DataTableContext.Provider value={{ isActionableMode: true }}>
+            <Thead columns={columns} hasErrorColumn mainColumnWidth="8.75rem" />
+            <TBody>
+              {rows.map((row, i) => (
+                <InlineEditTr
+                  focusedCell={i === 0 ? 'accountName' : null}
+                  index={i + 1}
+                  isSelected={false}
+                  key={i}
+                  showCellError={i === 0}
+                  showRowError={i === 0}
+                  {...row}
+                />
+              ))}
+            </TBody>
+          </DataTableContext.Provider>
         </Table>
       </Container>
     ),
@@ -465,26 +434,22 @@ export let states = [
           type="advanced"
           ariaLabel="Example inline edit table in actionable mode with cell error on save in selected row"
         >
-          <Thead
-            actionableMode
-            columns={columns}
-            hasErrorColumn
-            mainColumnWidth="8.75rem"
-          />
-          <TBody>
-            {rows.map((row, i) => (
-              <InlineEditTr
-                actionableMode
-                className={i === 0 ? 'slds-is-selected' : null}
-                index={i + 1}
-                isSelected={i === 0}
-                key={i}
-                showCellError={i === 0}
-                showRowError={i === 0}
-                {...row}
-              />
-            ))}
-          </TBody>
+          <DataTableContext.Provider value={{ isActionableMode: true }}>
+            <Thead columns={columns} hasErrorColumn mainColumnWidth="8.75rem" />
+            <TBody>
+              {rows.map((row, i) => (
+                <InlineEditTr
+                  className={i === 0 ? 'slds-is-selected' : null}
+                  index={i + 1}
+                  isSelected={i === 0}
+                  key={i}
+                  showCellError={i === 0}
+                  showRowError={i === 0}
+                  {...row}
+                />
+              ))}
+            </TBody>
+          </DataTableContext.Provider>
         </Table>
       </Container>
     )
@@ -505,26 +470,26 @@ export let states = [
             type="advanced"
             ariaLabel="Example inline edit table in actionable mode with error indicator focused"
           >
-            <Thead
-              actionableMode
-              columns={columns}
-              hasErrorColumn
-              mainColumnWidth="8.75rem"
-            />
-            <TBody>
-              {rows.map((row, i) => (
-                <InlineEditTr
-                  actionableMode
-                  focusedCell={i === 0 ? 'error' : null}
-                  index={i + 1}
-                  isSelected={false}
-                  key={i}
-                  showCellError={i === 0}
-                  showRowError={i === 0}
-                  {...row}
-                />
-              ))}
-            </TBody>
+            <DataTableContext.Provider value={{ isActionableMode: true }}>
+              <Thead
+                columns={columns}
+                hasErrorColumn
+                mainColumnWidth="8.75rem"
+              />
+              <TBody>
+                {rows.map((row, i) => (
+                  <InlineEditTr
+                    focusedCell={i === 0 ? 'error' : null}
+                    index={i + 1}
+                    isSelected={false}
+                    key={i}
+                    showCellError={i === 0}
+                    showRowError={i === 0}
+                    {...row}
+                  />
+                ))}
+              </TBody>
+            </DataTableContext.Provider>
           </Table>
           <Popover
             className="slds-popover_error slds-nubbin_bottom-left"

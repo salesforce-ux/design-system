@@ -5,7 +5,7 @@ exports[`Inline edit data table row should enable focusing on focusable elements
   className="slds-hint-parent"
 >
   <td
-    className="slds-cell-edit slds-cell-error"
+    className="slds-cell-edit slds-cell-error slds-cell_action-mode"
     role="gridcell"
   >
     <button
@@ -35,7 +35,7 @@ exports[`Inline edit data table row should enable focusing on focusable elements
     />
   </td>
   <td
-    className="slds-cell-edit"
+    className="slds-cell-edit slds-cell_action-mode"
     role="gridcell"
     tabIndex={null}
   >
@@ -67,7 +67,7 @@ exports[`Inline edit data table row should enable focusing on focusable elements
     </div>
   </td>
   <th
-    className="slds-cell-edit"
+    className="slds-cell-edit slds-cell_action-mode"
     scope="row"
     tabIndex={null}
   >
@@ -107,7 +107,7 @@ exports[`Inline edit data table row should enable focusing on focusable elements
     </span>
   </th>
   <td
-    className="slds-cell-edit"
+    className="slds-cell-edit slds-cell_action-mode"
     role="gridcell"
     tabIndex={null}
   >
@@ -143,7 +143,7 @@ exports[`Inline edit data table row should enable focusing on focusable elements
     </span>
   </td>
   <td
-    className="slds-cell-edit"
+    className="slds-cell-edit slds-cell_action-mode"
     role="gridcell"
   >
     <span
@@ -178,7 +178,7 @@ exports[`Inline edit data table row should enable focusing on focusable elements
     </span>
   </td>
   <td
-    className="slds-cell-edit"
+    className="slds-cell-edit slds-cell_action-mode"
     role="gridcell"
   >
     <span
@@ -214,7 +214,7 @@ exports[`Inline edit data table row should enable focusing on focusable elements
   </td>
   <td
     aria-readonly={true}
-    className="slds-cell-edit"
+    className="slds-cell-edit slds-cell_action-mode"
     role="gridcell"
   >
     <span
@@ -250,7 +250,7 @@ exports[`Inline edit data table row should enable focusing on focusable elements
     </span>
   </td>
   <td
-    className="slds-cell-edit"
+    className="slds-cell-edit slds-cell_action-mode"
     role="gridcell"
   >
     <span
@@ -285,7 +285,7 @@ exports[`Inline edit data table row should enable focusing on focusable elements
     </span>
   </td>
   <td
-    className="slds-cell-edit"
+    className="slds-cell-edit slds-cell_action-mode"
     role="gridcell"
   >
     <span
@@ -320,7 +320,7 @@ exports[`Inline edit data table row should enable focusing on focusable elements
     </span>
   </td>
   <td
-    className="slds-cell-edit"
+    className="slds-cell-edit slds-cell_action-mode"
     role="gridcell"
   >
     <button

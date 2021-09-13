@@ -25,7 +25,8 @@ import {
   ReadOnlyCell,
   EditableCell,
   EditPopover,
-  cellContentTextLong
+  cellContentTextLong,
+  DataTableContext
 } from '../';
 import { StandardIcon } from '../../icons/standard/example';
 
@@ -202,7 +203,9 @@ describe('InteractiveColumnHeader component', () => {
 
   it('should set tabindex to 0 on focusable elements when actionableMode', () =>
     matchesMarkup(
-      <InteractiveColumnHeader actionableMode columnName="Column Name" />
+      <DataTableContext.Provider value={{ isActionableMode: true }}>
+        <InteractiveColumnHeader columnName="Column Name" />
+      </DataTableContext.Provider>
     ));
 
   it('should show a action menu when hasMenu is applied', () =>
@@ -259,7 +262,11 @@ describe('SelectAllColumnHeader component', () => {
     matchesMarkup(<SelectAllColumnHeader />));
 
   it('should make the input have tabindex 0 when actionableMode', () =>
-    matchesMarkup(<SelectAllColumnHeader actionableMode />));
+    matchesMarkup(
+      <DataTableContext.Provider value={{ isActionableMode: true }}>
+        <SelectAllColumnHeader />
+      </DataTableContext.Provider>
+    ));
 
   it('should check the checkbox', () =>
     matchesMarkup(<SelectAllColumnHeader checked />));
@@ -272,7 +279,11 @@ describe('AdvancedDataTableHead component', () => {
     matchesMarkup(<AdvancedDataTableHead columns={columns} />));
 
   it('should render enable actionable mode', () =>
-    matchesMarkup(<AdvancedDataTableHead actionableMode columns={columns} />));
+    matchesMarkup(
+      <DataTableContext.Provider value={{ isActionableMode: true }}>
+        <AdvancedDataTableHead columns={columns} />
+      </DataTableContext.Provider>
+    ));
 
   it('should render error column header and set select column width', () =>
     matchesMarkup(<AdvancedDataTableHead columns={columns} hasErrorColumn />));
@@ -612,7 +623,11 @@ describe('RowActionsCell component', () => {
     matchesMarkup(<RowActionsCell rowName="row name" />));
 
   it('should set tabindex to 0 when in actionable mode', () =>
-    matchesMarkup(<RowActionsCell actionableMode rowName="row name" />));
+    matchesMarkup(
+      <DataTableContext.Provider value={{ isActionableMode: true }}>
+        <RowActionsCell rowName="row name" />
+      </DataTableContext.Provider>
+    ));
 });
 
 describe('ErrorCell component', () => {
@@ -622,7 +637,11 @@ describe('ErrorCell component', () => {
     matchesMarkup(<ErrorCell hasError index={1} />));
 
   it('should set tabindex on the button to 0 in actionable mode', () =>
-    matchesMarkup(<ErrorCell actionableMode hasError index={1} />));
+    matchesMarkup(
+      <DataTableContext.Provider value={{ isActionableMode: true }}>
+        <ErrorCell hasError index={1} />
+      </DataTableContext.Provider>
+    ));
 });
 
 describe('ReadOnlyCell component', () => {
@@ -634,7 +653,9 @@ describe('ReadOnlyCell component', () => {
 
   it('should set tabindex to 0 on links in actionableMode', () =>
     matchesMarkup(
-      <ReadOnlyCell actionableMode cellLink cellText="cell text" />
+      <DataTableContext.Provider value={{ isActionableMode: true }}>
+        <ReadOnlyCell cellLink cellText="cell text" />
+      </DataTableContext.Provider>
     ));
 });
 
@@ -655,12 +676,13 @@ describe('EditableCell component', () => {
 
   it('should set tabindex to 0 on focusable elements when in actionableMode', () =>
     matchesMarkup(
-      <EditableCell
-        actionableMode
-        buttonText="Edit field of cell text"
-        cellLink
-        cellText="cell text"
-      />
+      <DataTableContext.Provider value={{ isActionableMode: true }}>
+        <EditableCell
+          buttonText="Edit field of cell text"
+          cellLink
+          cellText="cell text"
+        />
+      </DataTableContext.Provider>
     ));
 
   it('should lock the cell', () =>

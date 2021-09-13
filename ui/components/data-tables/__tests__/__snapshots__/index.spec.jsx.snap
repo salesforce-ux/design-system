@@ -910,7 +910,7 @@ exports[`AdvancedDataTableHead component should render enable actionable mode 1`
   >
     <th
       aria-sort={null}
-      className="slds-text-align_right"
+      className="slds-text-align_right slds-cell_action-mode"
       scope="col"
       style={
         Object {
@@ -959,7 +959,7 @@ exports[`AdvancedDataTableHead component should render enable actionable mode 1`
     <th
       aria-label="Name"
       aria-sort="none"
-      className="slds-is-resizable slds-is-sortable"
+      className="slds-is-resizable slds-is-sortable slds-cell_action-mode"
       scope="col"
       style={
         Object {
@@ -1026,7 +1026,7 @@ exports[`AdvancedDataTableHead component should render enable actionable mode 1`
     </th>
     <th
       aria-sort={null}
-      className=""
+      className="slds-cell_action-mode"
       scope="col"
       style={
         Object {

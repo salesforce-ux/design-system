@@ -6,7 +6,12 @@ import React from 'react';
 
 import { mount } from 'enzyme';
 
-import { Table, AdvancedDataTableHead as Thead, TBody } from '..';
+import {
+  Table,
+  AdvancedDataTableHead as Thead,
+  TBody,
+  DataTableContext
+} from '..';
 
 import {
   AdvancedDataTableTr,
@@ -27,11 +32,17 @@ const product = productRows[0];
 
 describe('Advanced data table row', () => {
   it('should render a table header row', () =>
-    matchesMarkup(<Thead columns={columns} actionableMode />));
+    matchesMarkup(
+      <DataTableContext.Provider value={{ isActionableMode: true }}>
+        <Thead columns={columns} />
+      </DataTableContext.Provider>
+    ));
 
   it('should render a table header row with ascending sort', () =>
     matchesMarkup(
-      <Thead columns={columns} actionableMode sortDirection="ascending" />
+      <DataTableContext.Provider value={{ isActionableMode: true }}>
+        <Thead columns={columns} sortDirection="ascending" />
+      </DataTableContext.Provider>
     ));
 
   it('should render a table row', () =>
@@ -50,17 +61,18 @@ describe('Advanced data table row', () => {
 
   it('should make every focusable element focusable when in actionableMode', () =>
     matchesMarkup(
-      <AdvancedDataTableTr
-        accountName="salesforce"
-        actionableMode
-        amount="10000"
-        closeDate="8/20/2018"
-        confidence="low"
-        contact="Art V"
-        index={1}
-        recordName="Acme"
-        stage="closed"
-      />
+      <DataTableContext.Provider value={{ isActionableMode: true }}>
+        <AdvancedDataTableTr
+          accountName="salesforce"
+          amount="10000"
+          closeDate="8/20/2018"
+          confidence="low"
+          contact="Art V"
+          index={1}
+          recordName="Acme"
+          stage="closed"
+        />
+      </DataTableContext.Provider>
     ));
 
   it('should show amount scores', () =>
@@ -204,7 +216,11 @@ describe('Product data table', () => {
       matchesMarkup(<ProductItemDetailsCell {...product} />));
 
     it('should make focusable elements focusable in actionableMode', () =>
-      matchesMarkup(<ProductItemDetailsCell {...product} actionableMode />));
+      matchesMarkup(
+        <DataTableContext.Provider value={{ isActionableMode: true }}>
+          <ProductItemDetailsCell {...product} />
+        </DataTableContext.Provider>
+      ));
   });
 
   describe('product quantity cell', () => {
@@ -227,11 +243,12 @@ describe('Product data table', () => {
 
     it('should set the input focusable in actionableMode', () =>
       matchesMarkup(
-        <ProductQuantityCell
-          actionableMode
-          inputId="product-quantity-text-input-id-0"
-          labelText={`${product.productName} quantity`}
-        />
+        <DataTableContext.Provider value={{ isActionableMode: true }}>
+          <ProductQuantityCell
+            inputId="product-quantity-text-input-id-0"
+            labelText={`${product.productName} quantity`}
+          />
+        </DataTableContext.Provider>
       ));
   });
 
@@ -241,7 +258,9 @@ describe('Product data table', () => {
 
     it('should make focusable elements focusable in actionableMode', () =>
       matchesMarkup(
-        <ProductDataTableTr key={0} index={1} {...product} actionableMode />
+        <DataTableContext.Provider value={{ isActionableMode: true }}>
+          <ProductDataTableTr key={0} index={1} {...product} />
+        </DataTableContext.Provider>
       ));
   });
 });

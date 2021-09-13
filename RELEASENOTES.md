@@ -8,6 +8,10 @@
 #### Changed
 - Labels will no longer wrap below the checkbox. When the label text wraps, it will now go directly under the previous line.
 
+### [Data Tables](https://www.lightningdesignsystem.com/components/data-tables)
+#### Added
+- Added `slds-cell_action-mode` to blueprints of actionable data tables
+
 ### [Datepickers](https://www.lightningdesignsystem.com/components/datepickers)
 #### Fixed
 - Fixed missing attribute `required` on date input

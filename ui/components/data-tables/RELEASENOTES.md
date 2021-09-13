@@ -4,6 +4,12 @@
 
 <!-- ## [Unreleased] -->
 
+## 2.17.0
+
+### Added
+
+- Added `slds-cell_action-mode` to blueprints of actionable data tables
+
 ## 2.15.2
 
 ### Added

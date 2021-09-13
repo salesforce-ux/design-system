@@ -4,6 +4,7 @@
 /* eslint-env jest */
 import React from 'react';
 
+import { DataTableContext } from '../';
 import { InlineEditTr } from '../inline-edit/';
 
 import createHelpers from '../../../../jest.helpers';
@@ -27,17 +28,18 @@ describe('Inline edit data table row', () => {
 
   it('should enable focusing on focusable elements in actionableMode', () =>
     matchesMarkup(
-      <InlineEditTr
-        accountName="Salesforce"
-        actionableMode
-        amount="$1000"
-        closeDate="08/20/2028"
-        confidence="low"
-        contact="Art V"
-        index={0}
-        recordName="Acme"
-        stage="Open"
-      />
+      <DataTableContext.Provider value={{ isActionableMode: true }}>
+        <InlineEditTr
+          accountName="Salesforce"
+          amount="$1000"
+          closeDate="08/20/2028"
+          confidence="low"
+          contact="Art V"
+          index={0}
+          recordName="Acme"
+          stage="Open"
+        />
+      </DataTableContext.Provider>
     ));
 
   it('should set a focusable cell', () =>

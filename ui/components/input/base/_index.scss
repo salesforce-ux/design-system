@@ -120,10 +120,6 @@
   flex: 1 1 auto;
   text-align: left;
 
-  @include mq-small-min {
-    width: rem(146px); // estimated magic number to match input's inherent width in Chrome
-  }
-
   &.slds-is-disabled {
     @include input-disabled;
   }

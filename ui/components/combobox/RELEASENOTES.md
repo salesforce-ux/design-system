@@ -4,6 +4,12 @@
 
 <!-- ## [Unreleased] -->
 
+## 2.16.2
+
+## Removed
+
+- Removed `display: flex` property from `.slds-combobox__form-element` which was added recently for ARIA 1.2 guidance.
+
 ## 2.16.0
 
 ### Changed

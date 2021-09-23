@@ -124,9 +124,6 @@ FormElementLabel.defaultProps = {
 
 export const FormElementSpanFauxLabel = props => {
   const { isRequired, children, labelId, showRequiredIndicator } = props;
-  FormElementSpanFauxLabel.defaultProps = {
-    showRequiredIndicator: true
-  };
 
   return (
     <span id={labelId} className="slds-form-element__label">
@@ -145,6 +142,10 @@ FormElementSpanFauxLabel.propTypes = {
   children: PropTypes.node,
   isRequired: PropTypes.bool,
   labelId: PropTypes.string
+};
+
+FormElementSpanFauxLabel.defaultProps = {
+  showRequiredIndicator: true
 };
 
 export const FormElementTooltip = props => {

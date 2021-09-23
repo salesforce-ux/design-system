@@ -115,28 +115,16 @@ Panel Popovers can be shown on mouse hover but for keyboard or screen reader use
       {getDisplayElementById(NubbinExamples.states, "left-top")}
     </CodeView>
   </DisplayColumn>
-  <DisplayColumn>
+  <DisplayColumn columnCount="1">
     <strong>Left Bottom</strong>
     <CodeView>
       {getDisplayElementById(NubbinExamples.states, "left-bottom")}
     </CodeView>
   </DisplayColumn>
-  <DisplayColumn>
-    <strong>Top</strong>
-    <CodeView>{getDisplayElementById(NubbinExamples.states, "top")}</CodeView>
-  </DisplayColumn>
-  <DisplayColumn>
-    <strong>Top Left</strong>
-    <CodeView>
-      {getDisplayElementById(NubbinExamples.states, "top-left")}
-    </CodeView>
-  </DisplayColumn>
-  <DisplayColumn>
-    <strong>Top Right</strong>
-    <CodeView>
-      {getDisplayElementById(NubbinExamples.states, "top-right")}
-    </CodeView>
-  </DisplayColumn>
+</DisplayGrid>
+
+### Right
+<DisplayGrid>
   <DisplayColumn>
     <strong>Right</strong>
     <CodeView>{getDisplayElementById(NubbinExamples.states, "right")}</CodeView>
@@ -147,12 +135,36 @@ Panel Popovers can be shown on mouse hover but for keyboard or screen reader use
       {getDisplayElementById(NubbinExamples.states, "right-top")}
     </CodeView>
   </DisplayColumn>
-  <DisplayColumn>
+  <DisplayColumn columnCount="1">
     <strong>Right Bottom</strong>
     <CodeView>
       {getDisplayElementById(NubbinExamples.states, "right-bottom")}
     </CodeView>
   </DisplayColumn>
+</DisplayGrid>
+
+### Top
+<DisplayGrid>
+  <DisplayColumn>
+    <strong>Top</strong>
+    <CodeView>{getDisplayElementById(NubbinExamples.states, "top")}</CodeView>
+  </DisplayColumn>
+  <DisplayColumn>
+    <strong>Top Left</strong>
+    <CodeView>
+      {getDisplayElementById(NubbinExamples.states, "top-left")}
+    </CodeView>
+  </DisplayColumn>
+  <DisplayColumn columnCount="1">
+    <strong>Top Right</strong>
+    <CodeView>
+      {getDisplayElementById(NubbinExamples.states, "top-right")}
+    </CodeView>
+  </DisplayColumn>
+</DisplayGrid>
+
+### Bottom
+<DisplayGrid>
   <DisplayColumn>
     <strong>Bottom</strong>
     <CodeView>
@@ -165,7 +177,7 @@ Panel Popovers can be shown on mouse hover but for keyboard or screen reader use
       {getDisplayElementById(NubbinExamples.states, "bottom-left")}
     </CodeView>
   </DisplayColumn>
-  <DisplayColumn>
+  <DisplayColumn columnCount="1">
     <strong>Bottom Right</strong>
     <CodeView>
       {getDisplayElementById(NubbinExamples.states, "bottom-right")}

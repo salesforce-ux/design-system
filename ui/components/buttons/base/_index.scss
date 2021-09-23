@@ -15,21 +15,21 @@
   position: relative;
   display: inline-flex;
   align-items: center;
-  padding-top: var(--sds-c-button-spacing-block-start, 0);
-  padding-right: var(--sds-c-button-spacing-inline-end, 0);
-  padding-bottom: var(--sds-c-button-spacing-block-end, 0);
-  padding-left: var(--sds-c-button-spacing-inline-start, 0);
+  padding-top: var(--slds-c-button-spacing-block-start, var(--sds-c-button-spacing-block-start, 0));
+  padding-right: var(--slds-c-button-spacing-inline-end, var(--sds-c-button-spacing-inline-end, 0));
+  padding-bottom: var(--slds-c-button-spacing-block-end, var(--sds-c-button-spacing-block-end, 0));
+  padding-left: var(--slds-c-button-spacing-inline-start, var(--sds-c-button-spacing-inline-start, 0));
   background: none; // Reset underlying styles like VF
-  background-color: var(--sds-c-button-color-background, transparent);
+  background-color: var(--slds-c-button-color-background, var(--sds-c-button-color-background, transparent));
   background-clip: border-box;
-  border-color: var(--sds-c-button-color-border, transparent);
+  border-color: var(--slds-c-button-color-border, var(--sds-c-button-color-border, transparent));
   border-style: solid;
-  border-width: var(--sds-c-button-sizing-border, $border-width-thin);
-  border-radius: var(--sds-c-button-radius-border, $button-border-radius);
-  box-shadow: var(--sds-c-button-shadow);
-  line-height: var(--sds-c-button-line-height, $line-height-button);
+  border-width: var(--slds-c-button-sizing-border, var(--sds-c-button-sizing-border, $border-width-thin));
+  border-radius: var(--slds-c-button-radius-border, var(--sds-c-button-radius-border, $button-border-radius));
+  box-shadow: var(--slds-c-button-shadow, var(--sds-c-button-shadow));
+  line-height: var(--slds-c-button-line-height, var(--sds-c-button-line-height, $line-height-button));
   text-decoration: none;
-  color: var(--sds-c-button-text-color, $brand-accessible);
+  color: var(--slds-c-button-text-color, var(--sds-c-button-text-color, $brand-accessible));
   // stylelint-disable property-no-vendor-prefix
   -webkit-appearance: none;
   // stylelint-enable property-no-vendor-prefix
@@ -43,20 +43,22 @@
     text-decoration: none;
   }
 
-  // @todo re-evaluate Styling Hooks reassignment
   &:hover,
   &:focus {
-    color: var(--sds-c-button-text-color-hover, $brand-accessible-active);
+    color: var(--slds-c-button-text-color-hover, var(--sds-c-button-text-color-hover, #{$brand-accessible-active}));
+    background-color: var(--slds-c-button-color-background-hover);
+    border-color: var(--slds-c-button-color-border-hover, transparent);
   }
 
   &:focus {
+    box-shadow: var(--slds-c-button-shadow-focus, var(--sds-c-button-shadow-focus, #{$shadow-button-focus}));
     outline: 0;
-    box-shadow: var(--sds-c-button-shadow-focus, $shadow-button-focus);
   }
 
-  // @todo re-evaluate Styling Hooks reassignment
   &:active {
-    color: var(--sds-c-button-text-color-active, $brand-accessible-active);
+    color: var(--slds-c-button-text-color-active, var(--sds-c-button-text-color-active, #{$brand-accessible-active}));
+    background-color: var(--slds-c-button-color-background-active);
+    border-color: var(--slds-c-button-color-border-active);
   }
 
   &[disabled],
@@ -73,7 +75,8 @@
   }
 
   a {
-    color: currentColor;
+    /*! @css-var-fallback color */
+    --slds-c-button-text-color: currentColor;
   }
 
   &:hover,
@@ -87,6 +90,7 @@
       pointer-events: none;
     }
   }
+
   // Add spacing when button-group is adjacent to a button
   + .slds-button-group,
   + .slds-button-group-list {
@@ -103,16 +107,20 @@ a.slds-button {
   text-align: center;
 
   &:focus {
+    /*! @css-var-fallback box-shadow */
+    --slds-c-button-shadow-focus: var(--sds-c-button-shadow-focus, #{$shadow-button-focus});
     outline: 0;
-    box-shadow: var(--sds-c-button-shadow-focus, $shadow-button-focus);
   }
 }
 
 a.slds-button_inverse:focus,
 a.slds-button--inverse:focus {
+  /*! @css-var-fallback border-color */
+  --slds-c-button-color-border: var(--sds-c-button-inverse-color-border-focus, var(--sds-c-button-inverse-color-border-focus, #{$color-border-button-focus-inverse}));
+
+  /*! @css-var-fallback box-shadow */
+  --slds-c-button-shadow: var(--slds-c-button-inverse-shadow-focus, var(--sds-c-button-inverse-shadow-focus, #{$shadow-button-focus-inverse}));
   outline: none;
-  box-shadow: var(--sds-c-button-inverse-shadow-focus, $shadow-button-focus-inverse);
-  border: $border-width-thin solid var(--sds-c-button-inverse-color-border-focus, $color-border-button-focus-inverse);
 }
 
 /**
@@ -144,25 +152,29 @@ a.slds-button--inverse:focus {
  */
 .slds-button_neutral,
 .slds-button--neutral {
-  @include button-shape(neutral);
+  @include button-shape(neutral, true);
 
-  // @todo re-evaluate Styling Hooks reassignment
-  background-color: var(--sds-c-button-neutral-color-background, $button-color-background-primary);
+  /*! @css-var-fallback background-color */
+  --slds-c-button-color-background: var(--slds-c-button-neutral-color-background, var(--sds-c-button-neutral-color-background, #{$button-color-background-primary}));
 
-  // @todo re-evaluate Styling Hooks reassignment
-  border-color: var(--sds-c-button-neutral-color-border, $button-color-border-primary);
+  /*! @css-var-fallback border-color */
+  --slds-c-button-color-border: var(--sds-c-button-neutral-color-border, #{$button-color-border-primary});
 
-  // @todo re-evaluate Styling Hooks reassignment
   &:hover,
   &:focus {
-    background-color: var(--sds-c-button-neutral-color-background-hover, $color-background-button-default-hover);
-    border-color: var(--sds-c-button-neutral-color-border-hover, $button-color-border-primary);
+    /*! @css-var-fallback background-color */
+    --slds-c-button-color-background-hover: var(--slds-c-button-neutral-color-background-hover, var(--sds-c-button-neutral-color-background-hover, #{$color-background-button-default-hover}));
+
+    /*! @css-var-fallback border-color */
+    --slds-c-button-color-border-hover: var(--slds-c-button-neutral-color-border-hover, var(--sds-c-button-neutral-color-border-hover, #{$button-color-border-primary}));
   }
 
-  // @todo re-evaluate Styling Hooks reassignment
   &:active {
-    background-color: var(--sds-c-button-neutral-color-background-active, $color-background-button-default-active);
-    border-color: var(--sds-c-button-neutral-color-border-active, $button-color-border-primary);
+    /*! @css-var-fallback background-color */
+    --slds-c-button-color-background-active: var(--slds-c-button-neutral-color-background-active, var(--sds-c-button-neutral-color-background-active, #{$color-background-button-default-active}));
+
+    /*! @css-var-fallback border-color */
+    --slds-c-button-color-border-active: var(--slds-c-button-neutral-color-border-active, var(--sds-c-button-neutral-color-border-active, #{$button-color-border-primary}));
   }
 
   &[disabled],
@@ -183,30 +195,38 @@ a.slds-button--inverse:focus {
  */
 .slds-button_brand,
 .slds-button--brand {
-  @include button-shape(brand);
+  @include button-shape(brand, true);
 
-  // @todo re-evaluate Styling Hooks reassignment
-  background-color: var(--sds-c-button-brand-color-background, $brand-accessible);
+  /*! @css-var-fallback background-color */
+  --slds-c-button-color-background: var(--slds-c-button-brand-color-background, var(--sds-c-button-brand-color-background, #{$brand-accessible}));
 
-  // @todo re-evaluate Styling Hooks reassignment
-  border-color: var(--sds-c-button-brand-color-border, $brand-accessible);
+  /*! @css-var-fallback border-color */
+  --slds-c-button-color-border: var(--slds-c-button-brand-color-border, var(--sds-c-button-brand-color-border, #{$brand-accessible}));
 
-  // @todo re-evaluate Styling Hooks reassignment
-  color: var(--sds-c-button-brand-text-color, $color-text-brand-primary);
+  /*! @css-var-fallback color */
+  --slds-c-button-text-color: var(--slds-c-button-brand-text-color, var(--sds-c-button-brand-text-color, #{$color-text-brand-primary}));
 
-  // @todo re-evaluate Styling Hooks reassignment
   &:hover,
   &:focus {
-    background-color: var(--sds-c-button-brand-color-background-hover, $brand-accessible-active);
-    border-color: var(--sds-c-button-brand-color-border-hover, $brand-accessible-active);
-    color: var(--sds-c-button-brand-text-color-hover, $color-text-brand-primary);
+    /*! @css-var-fallback background-color */
+    --slds-c-button-color-background-hover: var(--slds-c-button-brand-color-background-hover, var(--sds-c-button-brand-color-background-hover, #{$brand-accessible-active}));
+
+    /*! @css-var-fallback border-color */
+    --slds-c-button-color-border-hover: var(--slds-c-button-brand-color-border-hover, var(--sds-c-button-brand-color-border-hover, #{$brand-accessible-active}));
+
+    /*! @css-var-fallback color */
+    --slds-c-button-text-color-hover: var(--slds-c-button-brand-text-color-hover, var(--sds-c-button-brand-text-color-hover, var(--slds-g-link-text-color-hover, #{$color-text-brand-primary})));
   }
 
-  // @todo re-evaluate Styling Hooks reassignment
   &:active {
-    background-color: var(--sds-c-button-brand-color-background-active, $brand-accessible-active);
-    border-color: var(--sds-c-button-brand-color-border-active, $brand-accessible-active);
-    color: var(--sds-c-button-brand-text-color-active, $color-text-brand-primary);
+    /*! @css-var-fallback background-color */
+    --slds-c-button-color-background-active: var(--slds-c-button-brand-color-background-active, var(--sds-c-button-brand-color-background-active, #{$brand-accessible-active}));
+
+    /*! @css-var-fallback border-color */
+    --slds-c-button-color-border-active: var(--sds-c-button-brand-color-border-active, var(--sds-c-button-brand-color-border-active, #{$brand-accessible-active}));
+
+    /*! @css-var-fallback color */
+    --slds-c-button-text-color-active: var(--slds-c-button-brand-text-color-active, var(--sds-c-button-brand-text-color-active, #{$color-text-brand-primary}));
   }
 
   &[disabled],
@@ -227,25 +247,29 @@ a.slds-button--inverse:focus {
  * @group theme
  */
 .slds-button_outline-brand {
-  @include button-shape(outline-brand);
+  @include button-shape(outline-brand, true);
 
-  // @todo re-evaluate Styling Hooks reassignment
-  background-color: var(--sds-c-button-outline-brand-color-background, $button-color-background-primary);
+  /*! @css-var-fallback background-color */
+  --slds-c-button-color-background: var(--slds-c-button-outline-brand-color-background, var(--sds-c-button-outline-brand-color-background, #{$button-color-background-primary}));
 
-  // @todo re-evaluate Styling Hooks reassignment
-  border-color: var(--sds-c-button-outline-brand-color-border, $brand-accessible);
+  /*! @css-var-fallback border-color */
+  --slds-c-button-color-border: var(--slds-c-button-outline-brand-color-border, var(--sds-c-button-outline-brand-color-border, #{$brand-accessible}));
 
-  // @todo re-evaluate Styling Hooks reassignment
   &:hover,
   &:focus {
-    background-color: var(--sds-c-button-outline-brand-color-background-hover, $color-background-button-default-hover);
-    border-color: var(--sds-c-button-outline-brand-color-border-hover, $brand-accessible);
+    /*! @css-var-fallback background-color */
+    --slds-c-button-color-background-hover: var(--slds-c-button-outline-brand-color-background-hover, var(--sds-c-button-outline-brand-color-background-hover, #{$color-background-button-default-hover}));
+
+    /*! @css-var-fallback border-color */
+    --slds-c-button-color-border-hover: var(--slds-c-button-outline-brand-color-border-hover, var(--sds-c-button-outline-brand-color-border-hover, #{$brand-accessible}));
   }
 
-  // @todo re-evaluate Styling Hooks reassignment
   &:active {
-    background-color: var(--sds-c-button-outline-brand-color-background-active, $color-background-button-default-active);
-    border-color: var(--sds-c-button-outline-brand-color-border-active, $brand-accessible);
+    /*! @css-var-fallback background-color */
+    --slds-c-button-color-background-active: var(--slds-c-button-outline-brand-color-background-active, var(--sds-c-button-outline-brand-color-background-active, #{$color-background-button-default-active}));
+
+    /*! @css-var-fallback border-color */
+    --slds-c-button-color-border-active: var(--sds-c-button-outline-brand-color-border-active, var(--sds-c-button-outline-brand-color-border-active, #{$brand-accessible}));
   }
 
   &[disabled],
@@ -266,25 +290,29 @@ a.slds-button--inverse:focus {
  */
 .slds-button_inverse,
 .slds-button--inverse {
-  @include button-shape(inverse);
+  @include button-shape(inverse, true);
 
-  // @todo re-evaluate Styling Hooks reassignment
-  background-color: var(--sds-c-button-inverse-color-background, $color-background-button-inverse);
+  /*! @css-var-fallback background-color */
+  --slds-c-button-color-background: var(--slds-c-button-inverse-color-background, var(--sds-c-button-inverse-color-background, #{$color-background-button-inverse}));
 
-  // @todo re-evaluate Styling Hooks reassignment
-  border-color: var(--sds-c-button-inverse-color-border, $button-color-border-primary);
+  /*! @css-var-fallback border-color */
+  --slds-c-button-color-border: var(--slds-c-button-inverse-color-border, var(--sds-c-button-inverse-color-border, #{$button-color-border-primary}));
 
-  // @todo re-evaluate Styling Hooks reassignment
   &:hover,
   &:focus {
-    background-color: var(--sds-c-button-inverse-color-background-hover, $color-background-button-default-hover);
-    border-color: var(--sds-c-button-inverse-color-border-hover, $button-color-border-primary);
+    /*! @css-var-fallback border-color */
+    --slds-c-button-color-background-hover: var(--slds-c-button-inverse-color-background-hover, var(--sds-c-button-inverse-color-background-hover, #{$color-background-button-default-hover}));
+
+    /*! @css-var-fallback border-color */
+    --slds-c-button-color-border-hover: var(--slds-c-button-inverse-color-border-hover, var(--sds-c-button-inverse-color-border-hover, #{$button-color-border-primary}));
   }
 
-  // @todo re-evaluate Styling Hooks reassignment
   &:active {
-    background-color: var(--sds-c-button-inverse-color-background-active, $color-background-button-default-hover);
-    border-color: var(--sds-c-button-inverse-color-border-active, $button-color-border-primary);
+    /*! @css-var-fallback background-color */
+    --slds-c-button-color-background-active: var(--slds-c-button-inverse-color-background-active, var(--sds-c-button-inverse-color-background-active, #{$color-background-button-default-hover}));
+
+    /*! @css-var-fallback border-color */
+    --slds-c-button-color-border-active: var(--slds-c-button-inverse-color-border-active, var(--sds-c-button-inverse-color-border-active, #{$button-color-border-primary}));
   }
 
   &[disabled],
@@ -303,19 +331,28 @@ a.slds-button--inverse:focus {
   &,
   &:link,
   &:visited {
-    color: var(--sds-c-button-inverse-text-color, $color-text-button-inverse);
+    /*! @css-var-fallback color */
+    --slds-c-button-text-color: var(--slds-c-button-inverse-text-color, var(--sds-c-button-inverse-text-color, #{$color-text-button-inverse}));
   }
 
   &:hover,
-  &:focus,
-  &:active {
-    color: var(--sds-c-button-inverse-text-color-active, $color-text-button-default);
+  &:focus {
+    /*! @css-var-fallback color */
+    --slds-c-button-text-color-hover: var(--slds-c-button-inverse-text-color-hover, var(--sds-c-button-inverse-text-color-hover, #{$color-text-button-default}));
   }
 
   &:focus {
+    /*! @css-var-fallback box-shadow */
+    --slds-c-button-shadow: var(--sds-c-button-inverse-shadow-focus, var(--sds-c-button-inverse-shadow-focus, #{$shadow-button-focus-inverse}));
+
+    /*! @css-var-fallback border-color */
+    --slds-c-button-color-border: #{$color-border-button-focus-inverse};
     outline: none;
-    box-shadow: var(--sds-c-button-inverse-shadow-focus, $shadow-button-focus-inverse);
-    border: $border-width-thin solid $color-border-button-focus-inverse;
+  }
+
+  &:active {
+    /*! @css-var-fallback color */
+    --slds-c-button-text-color-active: var(--slds-c-button-inverse-text-color-active, var(--sds-c-button-inverse-text-color-active, #{$color-text-button-default}));
   }
 
   &[disabled],
@@ -335,30 +372,38 @@ a.slds-button--inverse:focus {
  */
 .slds-button_destructive,
 .slds-button--destructive {
-  @include button-shape(destructive);
+  @include button-shape(destructive, true);
 
-  // @todo re-evaluate Styling Hooks reassignment
-  background-color: var(--sds-c-button-destructive-color-background, $color-background-destructive);
+  /*! @css-var-fallback background-color */
+  --slds-c-button-color-background: var(--slds-c-button-destructive-color-background, var(--sds-c-button-destructive-color-background, #{$color-background-destructive}));
 
-  // @todo re-evaluate Styling Hooks reassignment
-  border-color: var(--sds-c-button-destructive-color-border, $color-background-destructive);
+  /*! @css-var-fallback border-color */
+  --slds-c-button-color-border: var(--slds-c-button-destructive-color-border, var(--sds-c-button-destructive-color-border, #{$color-background-destructive}));
 
-  // @todo re-evaluate Styling Hooks reassignment
-  color: var(--sds-c-button-destructive-text-color, $color-text-inverse);
+  /*! @css-var-fallback color */
+  --slds-c-button-text-color: var(--slds-c-button-destructive-text-color, var(--sds-c-button-destructive-text-color, #{$color-text-inverse}));
 
-  // @todo re-evaluate Styling Hooks reassignment
   &:hover,
   &:focus {
-    background-color: var(--sds-c-button-destructive-color-background-hover, $color-background-destructive-hover);
-    border-color: var(--sds-c-button-destructive-color-border-hover, $color-background-destructive);
-    color: var(--sds-c-button-destructive-text-color-hover, $color-text-inverse);
+    /*! @css-var-fallback background-color */
+    --slds-c-button-color-background-hover: var(--slds-c-button-destructive-color-background-hover, var(--sds-c-button-destructive-color-background-hover, #{$color-background-destructive-hover}));
+
+    /*! @css-var-fallback border-color */
+    --slds-c-button-color-border-hover: var(--sds-c-button-destructive-color-border-hover, var(--sds-c-button-destructive-color-border-hover, #{$color-background-destructive}));
+
+    /*! @css-var-fallback color */
+    --slds-c-button-text-color-hover: var(--sds-c-button-destructive-text-color-hover, var(--sds-c-button-destructive-text-color-hover, #{$color-text-inverse}));
   }
 
-  // @todo re-evaluate Styling Hooks reassignment
   &:active {
-    background-color: var(--sds-c-button-destructive-color-background-active, $color-background-destructive-active);
-    border-color: var(--sds-c-button-destructive-color-border-active, $color-border-destructive-active);
-    color: var(--sds-c-button-destructive-text-color-active, $color-text-inverse);
+    /*! @css-var-fallback background-color */
+    --slds-c-button-color-background-active: var(--slds-c-button-destructive-color-background-active, var(--sds-c-button-destructive-color-background-active, #{$color-background-destructive-active}));
+
+    /*! @css-var-fallback border-color */
+    --slds-c-button-color-border-active: var(--slds-c-button-destructive-color-border-active, var(--sds-c-button-destructive-color-border-active, #{$color-border-destructive-active}));
+
+    /*! @css-var-fallback color */
+    --slds-c-button-text-color-active: var(--slds-c-button-destructive-text-color-active, var(--sds-c-button-destructive-text-color-active, #{$color-text-inverse}));
   }
 
   &[disabled],
@@ -379,30 +424,38 @@ a.slds-button--inverse:focus {
  * @group theme
  */
 .slds-button_text-destructive {
-  @include button-shape(text-destructive);
+  @include button-shape(text-destructive, true);
 
-  // @todo re-evaluate Styling Hooks reassignment
-  background-color: var(--sds-c-button-text-destructive-color-background, $button-color-background-primary);
+  /*! @css-var-fallback background-color */
+  --slds-c-button-color-background: var(--slds-c-button-text-destructive-color-background, var(--sds-c-button-text-destructive-color-background, #{$button-color-background-primary}));
 
-  // @todo re-evaluate Styling Hooks reassignment
-  border-color: var(--sds-c-button-text-destructive-color-border, $button-color-border-primary);
+  /*! @css-var-fallback border-color */
+  --slds-c-button-color-border: var(--slds-c-button-text-destructive-color-border, var(--sds-c-button-text-destructive-color-border, #{$button-color-border-primary}));
 
-  // @todo re-evaluate Styling Hooks reassignment
-  color: var(--sds-c-button-text-destructive-text-color, $color-text-destructive);
+  /*! @css-var-fallback color */
+  --slds-c-button-text-color: var(--slds-c-button-text-destructive-text-color, var(--sds-c-button-text-destructive-text-color, #{$color-text-destructive}));
 
-  // @todo re-evaluate Styling Hooks reassignment
   &:hover,
   &:focus {
-    background-color: var(--sds-c-button-text-destructive-color-background-hover, $color-background-button-default-hover);
-    border-color: var(--sds-c-button-text-destructive-color-border-hover, $button-color-border-primary);
-    color: var(--sds-c-button-text-destructive-text-color-hover, $color-text-destructive-hover);
+    /*! @css-var-fallback background-color */
+    --slds-c-button-color-background-hover: var(--slds-c-button-text-destructive-color-background-hover, var(--sds-c-button-text-destructive-color-background-hover, #{$color-background-button-default-hover}));
+
+    /*! @css-var-fallback border-color */
+    --slds-c-button-color-border-hover: var(--slds-c-button-text-destructive-color-border-hover, var(--sds-c-button-text-destructive-color-border-hover, #{$button-color-border-primary}));
+
+    /*! @css-var-fallback color */
+    --slds-c-button-text-color-hover: var(--sds-c-button-text-destructive-text-color-hover, var(--sds-c-button-text-destructive-text-color-hover, #{$color-text-destructive-hover}));
   }
 
-  // @todo re-evaluate Styling Hooks reassignment
   &:active {
-    background-color: var(--sds-c-button-text-destructive-color-background-active, $color-background-button-default-active);
-    border-color: var(--sds-c-button-text-destructive-color-border-active, $button-color-border-primary);
-    color: var(--sds-c-button-text-destructive-text-color-active, $color-text-destructive-hover);
+    /*! @css-var-fallback background-color */
+    --slds-c-button-color-background-active: var(--slds-c-button-text-destructive-color-background-active, var(--sds-c-button-text-destructive-color-background-active, #{$color-background-button-default-active}));
+
+    /*! @css-var-fallback border-color */
+    --slds-c-button-color-border-active: var(--sds-c-button-text-destructive-color-border-active, var(--sds-c-button-text-destructive-color-border-active, #{$button-color-border-primary}));
+
+    /*! @css-var-fallback color */
+    --slds-c-button-text-color-active: var(--slds-c-button-text-destructive-text-color-active, var(--sds-c-button-text-destructive-text-color-active, #{$color-text-destructive-hover}));
   }
 
   &[disabled],
@@ -424,30 +477,39 @@ a.slds-button--inverse:focus {
  */
 .slds-button_success,
 .slds-button--success {
-  @include button-shape(success);
+  @include button-shape(success, true);
 
-  // @todo re-evaluate Styling Hooks reassignment
-  background-color: var(--sds-c-button-success-color-background, $color-background-button-success);
+  /*! @css-var-fallback background-color */
+  --slds-c-button-color-background: var(--slds-c-button-success-color-background, var(--sds-c-button-success-color-background, #{$color-background-button-success}));
 
-  // @todo re-evaluate Styling Hooks reassignment
-  border-color: var(--sds-c-button-success-color-border, $color-border-success);
+  /*! @css-var-fallback border-color */
+  --slds-c-button-color-border: var(--slds-c-button-success-color-border, var(--sds-c-button-success-color-border, #{$color-border-success}));
 
-  // @todo re-evaluate Styling Hooks reassignment
-  color: var(--sds-c-button-success-text-color, $color-text-default);
+  /*! @css-var-fallback color */
+  --slds-c-button-text-color: var(--slds-c-button-success-text-color, var(--sds-c-button-success-text-color, #{$color-text-default}));
 
-  // @todo re-evaluate Styling Hooks reassignment
+
   &:hover,
   &:focus {
-    background-color: var(--sds-c-button-success-color-background-hover, $color-background-button-success-hover);
-    border-color: var(--sds-c-button-success-color-border-hover, $color-border-success-dark);
-    color: var(--sds-c-button-success-text-color-hover, $color-text-inverse);
+    /*! @css-var-fallback background-color */
+    --slds-c-button-color-background-hover: var(--slds-c-button-success-color-background-hover, var(--sds-c-button-success-color-background-hover, #{$color-background-button-success-hover}));
+
+    /*! @css-var-fallback border-color */
+    --slds-c-button-color-border-hover: var(--slds-c-button-success-color-border-hover, var(--sds-c-button-success-color-border-hover, #{$color-border-success-dark}));
+
+    /*! @css-var-fallback color */
+    --slds-c-button-text-color-hover: var(--slds-c-button-success-text-color-hover, var(--sds-c-button-success-text-color-hover, #{$color-text-inverse}));
   }
 
-  // @todo re-evaluate Styling Hooks reassignment
   &:active {
-    background-color: var(--sds-c-button-success-color-background-active, $color-background-button-success-active);
-    border-color: var(--sds-c-button-success-color-border-active, $color-border-success-dark);
-    color: var(--sds-c-button-success-text-color-active, $color-text-inverse);
+    /*! @css-var-fallback background-color */
+    --slds-c-button-color-background-active: var(--slds-c-button-success-color-background-active, var(--sds-c-button-success-color-background-active, #{$color-background-button-success-active}));
+
+    /*! @css-var-fallback border-color */
+    --slds-c-button-color-border-active: var(--slds-c-button-success-color-border-active, var(--sds-c-button-success-color-border-active, #{$color-border-success-dark}));
+
+    /*! @css-var-fallback color */
+    --slds-c-button-text-color-active: var(--slds-c-button-success-text-color-active, var(--sds-c-button-success-text-color-active, #{$color-text-inverse}));
   }
 
   &[disabled],
@@ -547,7 +609,8 @@ a.slds-button--inverse:focus {
   justify-content: space-between;
 
   &:focus {
-    box-shadow: none;
+    /*! @css-var-fallback box-shadow */
+    --slds-c-button-shadow: none;
   }
 }
 

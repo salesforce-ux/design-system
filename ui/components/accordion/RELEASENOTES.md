@@ -4,20 +4,26 @@
 
 <!-- ## [Unreleased] -->
 
+## 2.17.0
+
+### Added
+
+- Added `slds` as the default namespace with `sds` fallbacks for Styling Hooks
+
 ## 2.16.0
 
-## Added
+### Added
 
 - Added link to accessibility keyboard interaction guidelines.
 
 ## 2.14.0
 
-## Added
+### Added
 
 - Added Styling Hook for the background color of Accordion headings.
 - Added Styling Hooks for default text color, as well as hover/focus states, of Accordion headings.
 
-## Changed
+### Changed
 
 - The Accordion heading button will now take up all available space, allowing for a larger hit target to toggle the Accordion functionality.
 

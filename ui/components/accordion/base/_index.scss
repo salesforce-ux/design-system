@@ -20,9 +20,9 @@
  * @restrict .slds-accordion li
  */
 .slds-accordion__list-item {
-  border-top-width: var(--sds-c-accordion-sizing-border, $border-width-thin);
+  border-top-width: var(--slds-c-accordion-sizing-border, var(--sds-c-accordion-sizing-border, $border-width-thin));
   border-top-style: solid;
-  border-top-color: var(--sds-c-accordion-color-border, $color-border);
+  border-top-color: var(--slds-c-accordion-color-border, var(--sds-c-accordion-color-border, $color-border));
 
   &:first-child {
     border-top: 0;
@@ -36,15 +36,27 @@
  */
 .slds-accordion__summary {
   display: flex;
-  margin-top: calc(var(--sds-c-accordion-section-spacing-block-start, #{$spacing-small}) * -1);
-  margin-right: calc(var(--sds-c-accordion-section-spacing-inline-end, #{$spacing-small}) * -1);
-  margin-bottom: calc(var(--sds-c-accordion-section-spacing-block-end, #{$spacing-small}) * -1);
-  margin-left: calc(var(--sds-c-accordion-section-spacing-inline-start, #{$spacing-small}) * -1);
-  padding-top: var(--sds-c-accordion-section-spacing-block-start, $spacing-small);
-  padding-right: var(--sds-c-accordion-section-spacing-inline-end, $spacing-small);
-  padding-bottom: var(--sds-c-accordion-section-spacing-block-end, $spacing-small);
-  padding-left: var(--sds-c-accordion-section-spacing-inline-start, $spacing-small);
-  background-color: var(--sds-c-accordion-summary-color-background, transparent);
+  margin-top: calc(
+    var(--slds-c-accordion-section-spacing-block-start,
+    var(--sds-c-accordion-section-spacing-block-start,
+    #{$spacing-small} * -1)));
+  margin-right: calc(
+    var(--slds-c-accordion-section-spacing-inline-end,
+    var(--sds-c-accordion-section-spacing-inline-end,
+    #{$spacing-small} * -1)));
+  margin-bottom: calc(
+    var(--slds-c-accordion-section-spacing-block-end,
+    var(--sds-c-accordion-section-spacing-block-end,
+    #{$spacing-small} * -1)));
+  margin-left: calc(
+    var(--slds-c-accordion-section-spacing-inline-start,
+    var(--sds-c-accordion-section-spacing-inline-start,
+    #{$spacing-small} * -1)));
+  padding-top: var(--slds-c-accordion-section-spacing-block-start, var(--sds-c-accordion-section-spacing-block-start, #{$spacing-small}));
+  padding-right: var(--slds-c-accordion-section-spacing-inline-end, var(--sds-c-accordion-section-spacing-inline-end, #{$spacing-small}));
+  padding-bottom: var(--slds-c-accordion-section-spacing-block-end, var(--sds-c-accordion-section-spacing-block-end, #{$spacing-small}));
+  padding-left: var(--slds-c-accordion-section-spacing-inline-start, var(--sds-c-accordion-section-spacing-inline-start, #{$spacing-small}));
+  background-color: var(--slds-c-accordion-summary-color-background, var(--sds-c-accordion-summary-color-background, transparent));
 }
 
 /**
@@ -56,9 +68,9 @@
   display: flex;
   flex-grow: 1;
   min-width: 0;
-  color: var(--sds-c-accordion-heading-text-color, $color-text-default);
-  font-size: var(--sds-c-accordion-heading-font-size, $var-font-size-5);
-  line-height: var(--sds-c-accordion-heading-line-height, $line-height-heading);
+  color: var(--slds-c-accordion-heading-text-color, var(--sds-c-accordion-heading-text-color, $color-text-default));
+  font-size: var(--slds-c-accordion-heading-font-size, var(--sds-c-accordion-heading-font-size, $var-font-size-5));
+  line-height: var(--slds-c-accordion-heading-line-height, var(--sds-c-accordion-heading-line-height, $line-height-heading));
 
   .slds-button:focus {
     text-decoration: underline;
@@ -76,18 +88,30 @@
   flex-grow: 1;
   align-items: center;
   min-width: 0;
-  margin-top: calc(var(--sds-c-accordion-section-spacing-block-start, #{$spacing-small}) * -1);
-  margin-right: calc(var(--sds-c-accordion-section-spacing-inline-end, #{$spacing-small}) * -1);
-  margin-bottom: calc(var(--sds-c-accordion-section-spacing-block-end, #{$spacing-small}) * -1);
-  margin-left: calc(var(--sds-c-accordion-section-spacing-inline-start, #{$spacing-small}) * -1);
-  padding-top: var(--sds-c-accordion-section-spacing-block-start, $spacing-small);
-  padding-right: var(--sds-c-accordion-section-spacing-inline-end, $spacing-small);
-  padding-bottom: var(--sds-c-accordion-section-spacing-block-end, $spacing-small);
-  padding-left: var(--sds-c-accordion-section-spacing-inline-start, $spacing-small);
+  margin-top: calc(
+    var(--slds-c-accordion-section-spacing-block-start,
+    var(--sds-c-accordion-section-spacing-block-start,
+    #{$spacing-small} * -1)));
+  margin-right: calc(
+    var(--slds-c-accordion-section-spacing-inline-end,
+    var(--sds-c-accordion-section-spacing-inline-end,
+    #{$spacing-small} * -1)));
+  margin-bottom: calc(
+    var(--slds-c-accordion-section-spacing-block-end,
+    var(--sds-c-accordion-section-spacing-block-end,
+    #{$spacing-small} * -1)));
+  margin-left: calc(
+    var(--slds-c-accordion-section-spacing-inline-start,
+    var(--sds-c-accordion-section-spacing-inline-start,
+    #{$spacing-small} * -1)));
+  padding-top: var(--slds-c-accordion-section-spacing-block-start, var(--sds-c-accordion-section-spacing-block-start, $spacing-small));
+  padding-right: var(--slds-c-accordion-section-spacing-inline-end, var(--sds-c-accordion-section-spacing-inline-end, $spacing-small));
+  padding-bottom: var(--slds-c-accordion-section-spacing-block-end, var(--sds-c-accordion-section-spacing-block-end, $spacing-small));
+  padding-left: var(--slds-c-accordion-section-spacing-inline-start, var(--sds-c-accordion-section-spacing-inline-start, $spacing-small));
 
   &:hover,
   &:focus {
-    color: var(--sds-c-accordion-heading-text-color-hover, $brand-accessible-active);
+    color: var(--sds-c-accordion-heading-text-color-hover, var(--sds-c-accordion-heading-text-color-hover, $brand-accessible-active));
   }
 }
 
@@ -122,10 +146,10 @@
  * @restrict .slds-accordion section
  */
 .slds-accordion__section {
-  padding-top: var(--sds-c-accordion-section-spacing-block-start, $spacing-small);
-  padding-right: var(--sds-c-accordion-section-spacing-inline-end, $spacing-small);
-  padding-bottom: var(--sds-c-accordion-section-spacing-block-end, $spacing-small);
-  padding-left: var(--sds-c-accordion-section-spacing-inline-start, $spacing-small);
+  padding-top: var(--slds-c-accordion-section-spacing-block-start, var(--sds-c-accordion-section-spacing-block-start, $spacing-small));
+  padding-right: var(--slds-c-accordion-section-spacing-inline-end, var(--sds-c-accordion-section-spacing-inline-end, $spacing-small));
+  padding-bottom: var(--slds-c-accordion-section-spacing-block-end, var(--sds-c-accordion-section-spacing-block-end, $spacing-small));
+  padding-left: var(--slds-c-accordion-section-spacing-inline-start, var(--sds-c-accordion-section-spacing-inline-start, $spacing-small));
 }
 
 /**

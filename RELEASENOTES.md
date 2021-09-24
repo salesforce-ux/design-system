@@ -4,6 +4,30 @@
 ## Release 2.17.0 - Upcoming
 
 ## Components
+### [Accordion](https://www.lightningdesignsystem.com/components/accordion)
+#### Added
+- Added `slds` as the default namespace with `sds` fallbacks for Styling Hooks
+
+### [Alert](https://www.lightningdesignsystem.com/components/alert)
+#### Added
+- Added `slds` as the default namespace with `sds` fallbacks for Styling Hooks.
+- Added reassignment of Styling Hooks for component states.
+
+### [Avatar](https://www.lightningdesignsystem.com/components/avatar)
+#### Added
+- Added `slds` as the default namespace with `sds` fallbacks for Styling Hooks
+- Added CSS Custom Property reassignments for variants
+<!-- ## [Unreleased] -->
+
+### [Badges](https://www.lightningdesignsystem.com/components/badges)
+#### Added
+- Added `slds` as the default namespace with `sds` fallbacks for Styling Hooks.
+- Added CSS Custom Property reassignments for variants and states (e.g., focus, active, hover).
+
+### [Breadcrumbs](https://www.lightningdesignsystem.com/components/breadcrumbs)
+#### Added
+- Added `slds` as the default namespace with `sds` fallbacks for Styling Hooks.
+
 ### [Checkbox](https://www.lightningdesignsystem.com/components/checkbox)
 #### Changed
 - Labels will no longer wrap below the checkbox. When the label text wraps, it will now go directly under the previous line.
@@ -28,6 +52,17 @@
 #### Changed
 - Labels will no longer wrap below the radio button. When the label text wraps, it will now go directly under the previous line.
 
+## Release 2.16.2 - September 22, 2021
+
+## Components
+### [Combobox](https://www.lightningdesignsystem.com/components/combobox)
+## Removed
+- Removed `display: flex` property from `.slds-combobox__form-element` which was added recently for ARIA 1.2 guidance.
+
+### [Input](https://www.lightningdesignsystem.com/components/input)
+## Removed
+- Removed `width` property from `.slds-input_faux` which was added recently for ARIA 1.2 guidance.
+
 ## Release 2.16.1 - August 25, 2021
 
 ## Release 2.16.0 - August 12, 2021
@@ -49,8 +84,13 @@
 
 ## Components
 ### [Accordion](https://www.lightningdesignsystem.com/components/accordion)
-## Added
+#### Added
 - Added link to accessibility keyboard interaction guidelines.
+
+### [Buttons](https://www.lightningdesignsystem.com/components/buttons)
+#### Added
+- Added `slds` as the default namespace with `sds` fallbacks for Styling Hooks
+- Added CSS Custom Property reassignments for variants and states (e.g., focus, active, hover)
 
 ### [Combobox](https://www.lightningdesignsystem.com/components/combobox)
 #### Changed
@@ -312,10 +352,10 @@
 
 ## Components
 ### [Accordion](https://www.lightningdesignsystem.com/components/accordion)
-## Added
+#### Added
 - Added Styling Hook for the background color of Accordion headings.
 - Added Styling Hooks for default text color, as well as hover/focus states, of Accordion headings.
-## Changed
+#### Changed
 - The Accordion heading button will now take up all available space, allowing for a larger hit target to toggle the Accordion functionality.
 
 ### [Alert](https://www.lightningdesignsystem.com/components/alert)

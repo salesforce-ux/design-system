@@ -29,9 +29,9 @@
     > a {
       display: block;
       padding-top: 0;
-      padding-right: var(--sds-c-breadcrumbs-spacing-inline-end, $spacing-x-small);
+      padding-right: var(--slds-c-breadcrumbs-spacing-inline-end, var(--sds-c-breadcrumbs-spacing-inline-end, $spacing-x-small));
       padding-bottom: 0;
-      padding-left: var(--sds-c-breadcrumbs-spacing-inline-start, $spacing-x-small);
+      padding-left: var(--slds-c-breadcrumbs-spacing-inline-start, var(--sds-c-breadcrumbs-spacing-inline-start, $spacing-x-small));
 
       &:hover {
         text-decoration: none;
@@ -41,8 +41,8 @@
     &:first-child {
 
       > a {
-        // @todo re-evaluate Styling Hooks reassignment
-        padding-left: 0;
+        /*! @css-var-fallback padding-left */
+        --slds-c-breadcrumbs-spacing-inline-start: 0;
       }
 
       &:before {
@@ -52,6 +52,6 @@
   }
 
   .slds-dropdown-trigger {
-    margin-right: var(--sds-c-breadcrumbs-spacing-inline-end, $spacing-x-small);
+    margin-right: var(--slds-c-breadcrumbs-spacing-inline-end, var(--sds-c-breadcrumbs-spacing-inline-end, $spacing-x-small));
   }
 }

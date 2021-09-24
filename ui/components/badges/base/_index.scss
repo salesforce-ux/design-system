@@ -11,19 +11,19 @@
  * @variant
  */
 .slds-badge {
-  background-color: var(--sds-c-badge-color-background, $color-background-dark);
-  padding: $spacing-xx-small $spacing-x-small;
-  border-width: var(--sds-c-badge-sizing-border, $border-width-thin);
-  border-style: solid;
-  border-color: var(--sds-c-badge-color-border, transparent);
-  border-radius: var(--sds-c-badge-radius-border, $border-radius-pill);
-  font-size: var(--sds-c-badge-font-size, $font-size-2);
-  font-weight: $font-weight-bold;
-  line-height: var(--sds-c-badge-line-height, normal);
-  color: var(--sds-c-badge-text-color, $color-text-default);
-  white-space: nowrap;
   display: inline-flex;
   align-items: center;
+  padding: $spacing-xx-small $spacing-x-small;
+  color: var(--slds-c-badge-text-color, var(--sds-c-badge-text-color, $color-text-default));
+  font-size: var(--slds-c-badge-font-size, var(--sds-c-badge-font-size, $font-size-2));
+  font-weight: $font-weight-bold;
+  line-height: var(--slds-c-badge-line-height, var(--sds-c-badge-line-height, normal));
+  white-space: nowrap;
+  border-width: var(--slds-c-badge-sizing-border, var(--sds-c-badge-sizing-border, $border-width-thin));
+  border-style: solid;
+  border-color: var(--slds-c-badge-color-border, var(--sds-c-badge-color-border, transparent));
+  border-radius: var(--slds-c-badge-radius-border, var(--sds-c-badge-radius-border, $border-radius-pill));
+  background-color: var(--slds-c-badge-color-background, var(--sds-c-badge-color-background, $color-background-dark));
 
   + .slds-badge {
     margin-left: $spacing-x-small;
@@ -43,11 +43,11 @@
  * @group color
  */
 .slds-badge_inverse {
-  // @todo re-evaluate Styling Hooks reassignment
-  background-color: var(--sds-c-badge-inverse-color-background, $badge-color-background-inverse);
+  /*! @css-var-fallback background-color */
+  --slds-c-badge-color-background: var(--slds-c-badge-inverse-color-background, var(--sds-c-badge-inverse-color-background, #{$badge-color-background-inverse}));
 
-  // @todo re-evaluate Styling Hooks reassignment
-  color: var(--sds-c-badge-inverse-text-color, $color-text-inverse);
+  /*! @css-var-fallback color */
+  --slds-c-badge-text-color: var(--slds-c-badge-inverse-text-color, var(--sds-c-badge-inverse-text-color, #{$color-text-inverse}));
 }
 
 /**
@@ -59,11 +59,11 @@
  * @group color
  */
 .slds-badge_lightest {
-  // @todo re-evaluate Styling Hooks reassignment
-  background-color: var(--sds-c-badge-lightest-color-background, $badge-color-background-lightest);
+  /*! @css-var-fallback background-color */
+  --slds-c-badge-color-background: var(--slds-c-badge-lightest-color-background, var(--sds-c-badge-lightest-color-background, #{$badge-color-background-lightest}));
 
-  // @todo re-evaluate Styling Hooks reassignment
-  border-color: var(--sds-c-badge-lightest-color-border, $color-border);
+  /*! @css-var-fallback border-color */
+  --slds-c-badge-color-border: var(--slds-c-badge-lightest-color-border, var(--sds-c-badge-lightest-color-border, #{$color-border}));
 }
 
 /**
@@ -74,11 +74,11 @@
  * @modifier
  */
 .slds-badge__icon {
-  color: var(--sds-c-badge-icon-color-foreground, $color-text-icon-default);
-  vertical-align: middle;
   display: inline-flex;
   align-items: center;
+  color: var(--slds-c-badge-icon-color-foreground, var(--sds-c-badge-icon-color-foreground, $color-text-icon-default));
   line-height: 1;
+  vertical-align: middle;
 
   /**
    * @summary Change badge icon fill color to inverse
@@ -89,7 +89,8 @@
    * @group color
    */
   &.slds-badge__icon_inverse {
-    color: currentColor;
+    /*! @css-var-fallback color */
+    --slds-c-badge-icon-color-foreground: var(--slds-c-badge-icon-inverse-color-foreground, currentColor);
   }
 }
 

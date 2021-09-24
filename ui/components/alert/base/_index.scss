@@ -20,16 +20,16 @@ $alert-gradient-size-background: 64px 64px;
   align-items: center;
   justify-content: center;
   width: 100%;
-  padding-top: var(--sds-c-alert-spacing-block-start, $spacing-x-small);
-  padding-right: var(--sds-c-alert-spacing-inline-end, $spacing-x-large);
-  padding-bottom: var(--sds-c-alert-spacing-block-end, $spacing-x-small);
-  padding-left: var(--sds-c-alert-spacing-inline-start, $spacing-x-small);
-  color: var(--sds-c-alert-text-color, $color-text-inverse);
-  font-weight: var(--sds-c-alert-font-weight);
+  padding-top: var(--slds-c-alert-spacing-block-start, var(--sds-c-alert-spacing-block-start, $spacing-x-small));
+  padding-right: var(--slds-c-alert-spacing-inline-end, var(--sds-c-alert-spacing-inline-end, $spacing-x-large));
+  padding-bottom: var(--slds-c-alert-spacing-block-end, var(--sds-c-alert-spacing-block-end, $spacing-x-small));
+  padding-left: var(--slds-c-alert-spacing-inline-start, var(--sds-c-alert-spacing-inline-start, $spacing-x-small));
+  color: var(--slds-c-alert-text-color, var(--sds-c-alert-text-color, $color-text-inverse));
+  font-weight: var(--slds-c-alert-font-weight, var(--sds-c-alert-font-weight));
   text-align: center;
-  background-color: var(--sds-c-alert-color-background, $color-background-toast);
-  background-image: var(--sds-c-alert-image-background, $alert-gradient);
-  background-size: var(--sds-c-alert-size-background, $alert-gradient-size-background);
+  background-color: var(--slds-c-alert-color-background, var(--sds-c-alert-color-background, $color-background-toast));
+  background-image: var(--slds-c-alert-image-background, var(--sds-c-alert-image-background, $alert-gradient));
+  background-size: var(--slds-c-alert-size-background, var(--sds-c-alert-size-background, $alert-gradient-size-background));
 
   // Text links within an Alert
   a {
@@ -45,13 +45,14 @@ $alert-gradient-size-background: 64px 64px;
     }
 
     &:focus {
-      box-shadow: 0 0 3px $color-border-link-focus-inverse;
-      border: $border-width-thin solid $color-border-link-focus-inverse;
+      box-shadow: var(--slds-c-alert-shadow, 0 0 3px $color-border-link-focus-inverse);
+      border-width: var(--slds-c-alert-sizing-border, $border-width-thin);
+      border-style: solid;
+      border-color: var(--slds-c-alert-color-border, $color-border-link-focus-inverse);
     }
 
     &:active {
-      // @todo re-evaluate Styling Hooks reassignment
-      color: var(--sds-c-alert-text-color-active, $color-text-link-inverse-active);
+      color: var(--slds-c-alert-text-color-active, var(--sds-c-alert-text-color-active, $color-text-link-inverse-active));
     }
 
     &[disabled] {
@@ -66,7 +67,7 @@ $alert-gradient-size-background: 64px 64px;
  * @selector .slds-notify
  * @restrict .slds-notify_container div
  */
- .slds-notify {
+.slds-notify {
   /* Empty annotation for validator */
 }
 
@@ -76,16 +77,12 @@ $alert-gradient-size-background: 64px 64px;
  * @restrict .slds-notify_alert
  */
 .slds-alert_warning {
-  // @TODO: declare at sub-system level (SLDS)
-  background-color: $color-background-warning;
-
-  // @TODO: declare at sub-system level (SLDS)
+  /*! @css-var-fallback background-color */
+  --slds-c-alert-color-background: #{$color-background-warning};
   color: $color-text-default;
-  // --sds-c-alert-color-text: var(--sds-c-alert-color-text-warning, #{$color-text-default});
 
   .slds-icon,
   .slds-button__icon {
-    // @TODO: declare at sub-system level (SLDS)
     fill: $color-gray-10;
   }
 }
@@ -96,8 +93,8 @@ $alert-gradient-size-background: 64px 64px;
  * @restrict .slds-notify_alert
  */
 .slds-alert_error {
-  // @TODO: declare at sub-system level (SLDS)
-  background-color: $color-background-toast-error;
+  /*! @css-var-fallback background-color */
+  --slds-c-alert-color-background: #{$color-background-toast-error};
 }
 
 /**
@@ -106,8 +103,8 @@ $alert-gradient-size-background: 64px 64px;
  * @restrict .slds-notify_alert
  */
 .slds-alert_offline {
-  // @TODO: declare at sub-system level (SLDS)
-  background-color: #444;
+  /*! @css-var-fallback background-color */
+  --slds-c-alert-color-background: #{$palette-neutral-30};
 }
 
 /**

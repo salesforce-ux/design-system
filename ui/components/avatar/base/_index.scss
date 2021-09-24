@@ -16,14 +16,14 @@
   overflow: hidden;
   display: inline-block;
   vertical-align: middle;
-  border-radius: var(--sds-c-avatar-radius-border, $border-radius-medium);
+  border-radius: var(--slds-c-avatar-radius-border, var(--sds-c-avatar-radius-border, $border-radius-medium));
   line-height: $line-height-reset;
   font-size: $font-size-heading-small;
-  color: var(--sds-c-avatar-text-color, $color-text-inverse);
+  color: var(--slds-c-avatar-text-color, var(--sds-c-avatar-text-color, $color-text-inverse));
 
   &:hover,
   &:focus:hover {
-    color: currentColor;
+    color: var(--slds-c-avatar-text-color-hover, currentColor);
   }
 
   /**
@@ -197,7 +197,7 @@
  */
 .slds-avatar__initials {
   @include absolute-center;
-  color: var(--sds-c-avatar-initials-text-color);
+  color: var(--slds-c-avatar-initials-text-color, var(--sds-c-avatar-initials-text-color));
   height: 100%;
   text-shadow: 0 0 1px rgba(0, 0, 0, 0.8);
 
@@ -207,7 +207,7 @@
   }
 
   &:hover {
-    color: var(--sds-c-avatar-initials-text-color-hover, $color-text-inverse);
+    color: var(--slds-c-avatar-initials-text-color-hover, var(--sds-c-avatar-initials-text-color-hover, $color-text-inverse));
     cursor: default;
   }
 }
@@ -221,12 +221,14 @@
  * @group color
  */
 .slds-avatar__initials_inverse {
+  /*! @css-var-fallback color */
+  --slds-c-avatar-initials-text-color: var(--slds-c-avatar-initials-inverse-text-color, #{$color-text-weak});
   background-color: $color-background;
-  color: $color-text-weak;
   text-shadow: none;
 
   // combat abbr override styling in avatar
   &:hover {
-    color: $color-text-weak;
+    /*! @css-var-fallback color */
+    --slds-c-avatar-initials-text-color-hover: var(--slds-c-avatar-initials-inverse-text-color-hover, #{$color-text-weak});
   }
 }

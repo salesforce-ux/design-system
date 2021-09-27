@@ -1,7 +1,7 @@
 /* eslint-env jest */
 import React from 'react';
 import createHelpers from '../../../../jest.helpers';
-import { Toast } from '../base/example';
+import Toast from '../index';
 import { UtilityIcon } from '../../icons/base/example';
 
 const { matchesMarkup } = createHelpers(__dirname);

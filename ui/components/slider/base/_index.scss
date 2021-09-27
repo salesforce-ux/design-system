@@ -5,17 +5,17 @@
   @include appearance(none);
   width: $slider-handle-size;
   height: $slider-handle-size;
-  border-radius: var(--sds-c-slider-thumb-radius-border, $border-radius-circle);
+  border-radius: var(--slds-c-slider-thumb-radius-border, var(--sds-c-slider-thumb-radius-border, $border-radius-circle));
   background: none; // Reset underlying styles
-  background-color: var(--sds-c-slider-thumb-color-foreground, $brand-accessible);
+  background-color: var(--slds-c-slider-thumb-color-foreground, var(--sds-c-slider-thumb-color-foreground, $brand-accessible));
   border: 0;
-  box-shadow: var(--sds-c-slider-thumb-shadow, $slider-handle-shadow);
+  box-shadow: var(--slds-c-slider-thumb-shadow, var(--sds-c-slider-thumb-shadow, $slider-handle-shadow));
   cursor: pointer;
   transition: background 0.15s ease-in-out;
 
   &:hover {
     // @todo re-evaluate Styling Hooks reassignment
-    background-color: var(--sds-c-slider-thumb-color-foreground-hover, $brand-accessible-active);
+    background-color: var(--slds-c-slider-thumb-color-foreground-hover, var(--sds-c-slider-thumb-color-foreground-hover, $brand-accessible-active));
   }
 }
 
@@ -24,8 +24,8 @@
   height: $slider-track-height;
   cursor: pointer;
   background: none; // Reset underlying styles
-  background-color: var(--sds-c-slider-track-color-background, $slider-track-color-background);
-  border-radius: var(--sds-c-slider-track-radius-border, $border-radius-small);
+  background-color: var(--slds-c-slider-track-color-background, var(--sds-c-slider-track-color-background, $slider-track-color-background));
+  border-radius: var(--slds-c-slider-track-radius-border, var(--sds-c-slider-track-radius-border, $border-radius-small));
 }
 
 /**
@@ -92,25 +92,21 @@
   }
 
   &:focus::-webkit-slider-thumb {
-    // @todo re-evaluate Styling Hooks reassignment
-    background-color: var(--sds-c-slider-thumb-color-foreground-focus, $brand-accessible-active);
-    box-shadow: var(--sds-c-slider-thumb-shadow-focus, $shadow-button-focus);
+    background-color: var(--slds-c-slider-thumb-color-foreground-focus, var(--sds-c-slider-thumb-color-foreground-focus, $brand-accessible-active));
+    box-shadow: var(--slds-c-slider-thumb-shadow-focus, var(--sds-c-slider-thumb-shadow-focus, $shadow-button-focus));
   }
 
   &:active::-webkit-slider-thumb {
-    // @todo re-evaluate Styling Hooks reassignment
-    background-color: var(--sds-c-slider-thumb-color-foreground-active, $brand-accessible-active);
+    background-color: var(--slds-c-slider-thumb-color-foreground-active, var(--sds-c-slider-thumb-color-foreground-active, $brand-accessible-active));
   }
 
   &:focus::-moz-range-thumb {
-    // @todo re-evaluate Styling Hooks reassignment
-    background-color: var(--sds-c-slider-thumb-color-foreground-focus, $brand-accessible-active);
-    box-shadow: var(--sds-c-slider-thumb-shadow-focus, $shadow-button-focus);
+    background-color: var(--slds-c-slider-thumb-color-foreground-focus, var(--sds-c-slider-thumb-color-foreground-focus, $brand-accessible-active));
+    box-shadow: var(--slds-c-slider-thumb-shadow-focus, var(--sds-c-slider-thumb-shadow-focus, $shadow-button-focus));
   }
 
   &:active::-moz-range-thumb {
-    // @todo re-evaluate Styling Hooks reassignment
-    background-color: var(--sds-c-slider-thumb-color-foreground-active, $brand-accessible-active);
+    background-color: var(--slds-c-slider-thumb-color-foreground-active, var(--sds-c-slider-thumb-color-foreground-active, $brand-accessible-active));
   }
 
   &[disabled] {

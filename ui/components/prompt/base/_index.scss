@@ -16,6 +16,12 @@
 .slds-modal--prompt {
 
   .slds-modal__header {
+    /*! @css-var-fallback background-color */
+    --slds-c-modal-header-color-background: #{$color-background-toast-error};
+
+    /*! @css-var-fallback color */
+    --slds-c-modal-header-text-color: #{$color-background-alt};
+
     border-bottom: 0;
   }
 
@@ -25,7 +31,9 @@
   }
 
   .slds-modal__footer {
+    /*! @css-var-fallback background-color */
+    --slds-c-modal-footer-color-background: #{$color-background-alt};
     border-top: 0;
-    text-align: center;
+    justify-content: center;
   }
 }

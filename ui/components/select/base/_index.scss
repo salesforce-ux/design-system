@@ -13,11 +13,11 @@
 .slds-select {
   height: calc(#{$height-input} + (#{$border-width-thin} * 2));
   width: 100%;
-  border: $border-width-thin solid var(--sds-c-select-color-border, $color-border-input);
-  border-radius: var(--sds-c-select-radius-border, $border-radius-medium);
-  background-color: var(--sds-c-select-color-background, $color-background-input);
-  color: var(--sds-c-select-text-color);
-  box-shadow: var(--sds-c-select-shadow);
+  border: $border-width-thin solid var(--slds-c-select-color-border, var(--sds-c-select-color-border, $color-border-input));
+  border-radius: var(--slds-c-select-radius-border, var(--sds-c-select-radius-border, $border-radius-medium));
+  background-color: var(--slds-c-select-color-background, var(--sds-c-select-color-background, $color-background-input));
+  color: var(--slds-c-select-text-color, var(--sds-c-select-text-color));
+  box-shadow: var(--slds-c-select-shadow, var(--sds-c-select-shadow));
   transition: border $duration-quickly linear, background-color $duration-quickly linear;
 
   &:required {
@@ -27,14 +27,10 @@
   &:focus,
   &:active {
     outline: 0;
-    // @todo re-evaluate Styling Hooks reassignment
-    border-color: var(--sds-c-select-color-border-focus, $color-border-input-active);
-    // @todo re-evaluate Styling Hooks reassignment
-    background-color: var(--sds-c-select-color-background-focus, $color-background-input-active);
-    // @todo re-evaluate Styling Hooks reassignment
-    color: var(--sds-c-select-text-color-focus);
-    // @todo re-evaluate Styling Hooks reassignment
-    box-shadow: var(--sds-c-select-shadow-focus, $shadow-button-focus);
+    border-color: var(--slds-c-select-color-border-focus, var(--sds-c-select-color-border-focus, $color-border-input-active));
+    background-color: var(--slds-c-select-color-background-focus, var(--sds-c-select-color-background-focus, $color-background-input-active));
+    color: var(--slds-c-select-text-color-focus, var(--sds-c-select-text-color-focus));
+    box-shadow: var(--slds-c-select-shadow-focus, var(--sds-c-select-shadow-focus, $shadow-button-focus));
   }
 
   &[disabled],

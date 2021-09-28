@@ -205,11 +205,11 @@ export const examples = [
     id: 'styling-hooks',
     label: 'Styling Hooks Test',
     demoStyles: `
-      --sds-c-radio-color-border: black;
-      --sds-c-radio-color-background: orange;
-      --sds-c-radio-mark-color-foreground: black;
-      --sds-c-radio-color-border-focus: gray;
-      --sds-c-radio-shadow-focus: 0 0 3px red;
+      --slds-c-radio-color-border: black;
+      --slds-c-radio-color-background: orange;
+      --slds-c-radio-mark-color-foreground: black;
+      --slds-c-radio-color-border-focus: gray;
+      --slds-c-radio-shadow-focus: 0 0 3px red;
       `,
     storybookStyles: true,
     element: (
@@ -226,13 +226,13 @@ export const examples = [
     id: 'styling-hooks-checked',
     label: 'Styling Hooks Test - Checked',
     demoStyles: `
-      --sds-c-radio-color-border: red;
-      --sds-c-radio-color-background: gold;
-      --sds-c-radio-mark-color-foreground: gold;
-      --sds-c-radio-color-border-focus: gray;
-      --sds-c-radio-shadow-focus: 0 0 3px red;
-      --sds-c-radio-color-border-checked: gold;
-      --sds-c-radio-color-background-checked: red;
+      --slds-c-radio-color-border: red;
+      --slds-c-radio-color-background: gold;
+      --slds-c-radio-mark-color-foreground: gold;
+      --slds-c-radio-color-border-focus: gray;
+      --slds-c-radio-shadow-focus: 0 0 3px red;
+      --slds-c-radio-color-border-checked: gold;
+      --slds-c-radio-color-background-checked: red;
       `,
     storybookStyles: true,
     element: (
@@ -249,11 +249,11 @@ export const examples = [
     id: 'styling-hooks-error',
     label: 'Styling Hooks Test - Error',
     demoStyles: `
-      --sds-c-radio-color-border: black;
-      --sds-c-radio-color-background: orange;
-      --sds-c-radio-mark-color-foreground: black;
-      --sds-c-radio-color-border-focus: gray;
-      --sds-c-radio-shadow-focus: 0 0 3px red;
+      --slds-c-radio-color-border: black;
+      --slds-c-radio-color-background: orange;
+      --slds-c-radio-mark-color-foreground: black;
+      --slds-c-radio-color-border-focus: gray;
+      --slds-c-radio-shadow-focus: 0 0 3px red;
       `,
     storybookStyles: true,
     element: (

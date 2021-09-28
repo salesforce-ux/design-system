@@ -6,6 +6,11 @@
 
 ## 2.17.0
 
+### Added
+
+- Added `slds` as the default namespace with `sds` fallbacks for Styling Hooks.
+- Added CSS Custom Property reassignments for variants and states
+
 ### Changed
 
 - Labels will no longer wrap below the radio button. When the label text wraps, it will now go directly under the previous line.

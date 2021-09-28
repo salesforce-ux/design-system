@@ -4,6 +4,13 @@
 
 <!-- ## [Unreleased] -->
 
+## 2.17.0
+
+### Added
+
+- Added `slds` as the default namespace with `sds` fallbacks for Styling Hooks.
+- Added CSS Custom Property reassignments for variants and states
+
 ## 2.14.0
 
 ### Added

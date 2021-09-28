@@ -14,32 +14,32 @@
   // stylelint-disable property-no-vendor-prefix
   -webkit-appearance: none; // // Scope to WebKit UA styling to remove unwanted inner-shadow
   // stylelint-enable property-no-vendor-prefix
-  min-height: var(--sds-c-textarea-sizing-min-height);
+  min-height: var(--slds-c-textarea-sizing-min-height, var(--sds-c-textarea-sizing-min-height));
   width: 100%;
-  padding-top: var(--sds-c-textarea-spacing-block-start, $spacing-x-small);
-  padding-right: var(--sds-c-textarea-spacing-inline-end, $spacing-small);
-  padding-bottom: var(--sds-c-textarea-spacing-block-end, $spacing-x-small);
-  padding-left: var(--sds-c-textarea-spacing-inline-start, $spacing-small);
-  background-color: var(--sds-c-textarea-color-background, $color-background-input);
-  color: var(--sds-c-textarea-text-color);
-  border: $border-width-thin solid var(--sds-c-textarea-color-border, $color-border-input);
-  border-radius: var(--sds-c-textarea-radius-border, $border-radius-medium);
-  box-shadow: var(--sds-c-textarea-shadow);
+  padding-top: var(--slds-c-textarea-spacing-block-start, var(--sds-c-textarea-spacing-block-start, $spacing-x-small));
+  padding-right: var(--slds-c-textarea-spacing-inline-end, var(--sds-c-textarea-spacing-inline-end, $spacing-small));
+  padding-bottom: var(--slds-c-textarea-spacing-block-end, var(--sds-c-textarea-spacing-block-end, $spacing-x-small));
+  padding-left: var(--slds-c-textarea-spacing-inline-start, var(--sds-c-textarea-spacing-inline-start, $spacing-small));
+  background-color: var(--slds-c-textarea-color-background, var(--sds-c-textarea-color-background, $color-background-input));
+  color: var(--slds-c-textarea-text-color, var(--sds-c-textarea-text-color));
+  border: $border-width-thin solid var(--slds-c-textarea-color-border, var(--sds-c-textarea-color-border, $color-border-input));
+  border-radius: var(--slds-c-textarea-radius-border, var(--sds-c-textarea-radius-border, $border-radius-medium));
+  box-shadow: var(--slds-c-textarea-shadow, var(--sds-c-textarea-shadow));
   resize: vertical;
-  transition: border $duration-quickly linear,
-    background-color $duration-quickly linear;
+  transition: border $duration-quickly linear, background-color $duration-quickly linear;
 
   &:required {
-    box-shadow: none;
+    /*! @css-var-fallback box-shadow */
+    --slds-c-textarea-shadow: none;
   }
 
   &:focus,
   &:active {
     outline: 0;
-    color: var(--sds-c-textarea-text-color-focus);
-    background-color: var(--sds-c-textarea-color-background-focus, $color-background-input-active);
-    border-color: var(--sds-c-textarea-color-border-focus, $color-border-input-active);
-    box-shadow: var(--sds-c-textarea-shadow-focus, $shadow-button-focus);
+    color: var(--slds-c-textarea-text-color-focus, var(--sds-c-textarea-text-color-focus));
+    background-color: var(--slds-c-textarea-color-background-focus, var(--sds-c-textarea-color-background-focus, $color-background-input-active));
+    border-color: var(--slds-c-textarea-color-border-focus, var(--sds-c-textarea-color-border-focus, $color-border-input-active));
+    box-shadow: var(--slds-c-textarea-shadow-focus, var(--sds-c-textarea-shadow-focus, $shadow-button-focus));
   }
 
   &[disabled],
@@ -58,18 +58,25 @@
 }
 
 .slds-has-error .slds-textarea {
-  background-color: var(--sds-c-textarea-color-background, $color-background-input);
-  border-color: $color-border-error;
-  color: var(--sds-c-textarea-text-color);
-  box-shadow: $color-border-error 0 0 0 $border-width-thin inset;
+  /*! @css-var-fallback background-color */
+  --slds-c-textarea-color-background: #{$color-background-input};
+
+  /*! @css-var-fallback border-color */
+  --slds-c-textarea-color-border: #{$color-border-error};
+
+  /*! @css-var-fallback box-shadow */
+  --slds-c-textarea-shadow: #{$color-border-error} 0 0 0 #{$border-width-thin} inset;
   background-clip: padding-box;
 
   &:focus,
   &:active {
-    // Due to specificity brought on by error class, we have to redeclare color and background-color
-    color: var(--sds-c-textarea-text-color-focus);
-    background-color: var(--sds-c-textarea-color-background-focus, $color-background-input-active);
-    box-shadow: $color-border-error 0 0 0 $border-width-thin inset,
-      $shadow-button-focus;
+    /*! @css-var-fallback color */
+    --slds-c-textarea-text-color-focus: var(--slds-c-textarea-text-color-error-focus);
+
+    /*! @css-var-fallback background-color */
+    --slds-c-textarea-color-background-focus: var(--slds-c-textarea-color-background-error-focus, #{$color-background-input-active});
+
+    /*! @css-var-fallback box-shadow */
+    --slds-c-textarea-shadow-focus: #{$color-border-error} 0 0 0 #{$border-width-thin} inset, #{$shadow-button-focus};
   }
 }

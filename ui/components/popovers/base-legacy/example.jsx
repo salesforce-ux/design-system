@@ -164,7 +164,7 @@ export let examples = [
       <Popover
         className="slds-nubbin_left"
         closeButton
-        headerTitle="Header Title"
+        headerTitle="Header title"
       >
         <p>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
@@ -200,7 +200,7 @@ export let examples = [
         className="slds-nubbin_left"
         closeButton
         footer={<p>Footer Item</p>}
-        headerTitle="Header Title"
+        headerTitle="Header title"
         size="small"
         title="Dialog Title"
       >

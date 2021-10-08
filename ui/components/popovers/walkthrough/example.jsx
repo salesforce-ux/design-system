@@ -56,7 +56,7 @@ export default [
       <Popover
         className="slds-popover_walkthrough slds-nubbin_left"
         headingId={headingUniqueId}
-        header={<Header title="Manage your channels" />}
+        header={<Header title="Walkthrough title" />}
         footer={<Footer steps nextButton />}
         closeButton
         inverse
@@ -80,7 +80,7 @@ export let examples = [
       <Popover
         className="slds-popover_walkthrough slds-nubbin_left"
         headingId={headingUniqueId}
-        header={<Header title="Manage your channels" />}
+        header={<Header title="Walkthrough title" />}
         footer={<Footer steps setupButton nextButton />}
         closeButton
         inverse
@@ -101,7 +101,7 @@ export let examples = [
       <Popover
         className="slds-popover_walkthrough slds-nubbin_left"
         headingId={headingUniqueId}
-        header={<Header title="Manage your channels" />}
+        header={<Header title="Walkthrough title" />}
         footer={<Footer steps skipButton setupButton />}
         closeButton
         inverse
@@ -122,7 +122,7 @@ export let examples = [
       <Popover
         className="slds-popover_walkthrough slds-nubbin_bottom"
         headingId={headingUniqueId}
-        header={<Header title="Manage your channels" />}
+        header={<Header title="Walkthrough title" />}
         footer={<Footer steps skipButton />}
         closeButton
         inverse
@@ -143,7 +143,7 @@ export let examples = [
       <Popover
         className="slds-popover_walkthrough slds-nubbin_left"
         headingId={headingUniqueId}
-        header={<Header title="Manage your channels" />}
+        header={<Header title="Walkthrough title" />}
         footer={<Footer steps skipButton nextButton />}
         closeButton
         inverse
@@ -235,7 +235,7 @@ export let examples = [
           </div>
           <div className="slds-media__body">
             <h2 id={headingUniqueId} className="slds-text-heading_small">
-              Title
+              Action title
             </h2>
             <p>Text that describes the action</p>
             <p className="slds-m-top_medium slds-text-title">Step 3 of 4</p>
@@ -272,7 +272,7 @@ export let examples = [
           </div>
           <div className="slds-media__body">
             <h2 id={headingUniqueId} className="slds-text-heading_small">
-              Title
+              Action title
             </h2>
             <p>Text that describes the action</p>
             <a href="#" onClick={e => e.preventDefault()}>

@@ -77,7 +77,7 @@ export let Prompt = props => {
         props.showFooter && (
           <Footer
             dismissButtonLabel="Dismiss"
-            actionLinkText="Learn more"
+            actionLinkText="Learn More"
             brandButtonLabel="Save"
           />
         )
@@ -102,7 +102,7 @@ export let Prompt = props => {
         )}
         <div className="slds-media__body">
           <h2 id={headingUniqueId} className="slds-popover_prompt__heading">
-            Title
+            Prompt title
           </h2>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do

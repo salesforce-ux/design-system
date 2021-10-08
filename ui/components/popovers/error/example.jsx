@@ -59,7 +59,7 @@ export default [
         header={
           <FeedbackHeader
             headingId={headingUniqueId}
-            title="Resolve error"
+            title="We hit a snag."
             symbol="error"
           />
         }
@@ -90,7 +90,7 @@ export let examples = [
         header={
           <FeedbackHeader
             headingId={headingUniqueId}
-            title="Resolve error"
+            title="We hit a snag."
             symbol="error"
           />
         }
@@ -118,7 +118,7 @@ export let examples = [
         header={
           <FeedbackHeader
             headingId={headingUniqueId}
-            title="Resolve error"
+            title="We hit a snag."
             symbol="error"
           />
         }
@@ -133,6 +133,33 @@ export let examples = [
             Learn More
           </a>
         </p>
+      </Popover>
+    )
+  },
+  {
+    context: 'Error',
+    id: 'with-bullet-list',
+    label: 'Error With Bullet List',
+    element: (
+      <Popover
+        className="slds-popover_error slds-nubbin_bottom-left"
+        headingId={headingUniqueId}
+        header={
+          <FeedbackHeader
+            headingId={headingUniqueId}
+            title="We hit a snag."
+            symbol="error"
+          />
+        }
+        footer={<FeedbackFooter />}
+        closeButton
+        inverse
+      >
+        <ul className="slds-list_dotted">
+          <li>Details about error #1</li>
+          <li>Details about error #2</li>
+          <li>Details about error #3</li>
+        </ul>
       </Popover>
     )
   }

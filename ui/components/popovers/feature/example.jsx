@@ -104,13 +104,13 @@ export let examples = [
           </div>
           <div className="slds-media__body">
             <h2 id={headingUniqueId} className="slds-text-heading_small">
-              Title
+              Feature title
             </h2>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua.{' '}
               <a href="#" onClick={e => e.preventDefault()}>
-                Learn more
+                Learn More
               </a>
             </p>
           </div>
@@ -146,7 +146,7 @@ export let examples = [
           </div>
           <div className="slds-media__body">
             <h2 id={headingUniqueId} className="slds-text-heading_small">
-              Title
+              Feature title
             </h2>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
@@ -186,7 +186,7 @@ export let examples = [
           </div>
           <div className="slds-media__body">
             <h2 id={headingUniqueId} className="slds-text-heading_small">
-              Title
+              Feature title
             </h2>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do

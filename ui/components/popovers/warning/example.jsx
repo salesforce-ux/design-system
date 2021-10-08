@@ -25,7 +25,7 @@ export default [
         header={
           <FeedbackHeader
             headingId={headingUniqueId}
-            title="Review warning"
+            title="Just a heads up&hellip;"
             symbol="warning"
             iconDefault
           />
@@ -57,7 +57,7 @@ export let examples = [
         header={
           <FeedbackHeader
             headingId={headingUniqueId}
-            title="Review warning"
+            title="Just a heads up&hellip;"
             symbol="warning"
             iconDefault
           />
@@ -86,7 +86,7 @@ export let examples = [
         header={
           <FeedbackHeader
             headingId={headingUniqueId}
-            title="Review warning"
+            title="Just a heads up&hellip;"
             symbol="warning"
             iconDefault
           />

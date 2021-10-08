@@ -12,23 +12,23 @@ import {
   SelectRowCell,
   EditableCell,
   RowActionsCell,
-  DataTableContext
+  DataTableContext,
 } from '../';
-import { CannotBeSetWith, IsDependentOn } from '../../../shared/helpers';
+import { IsDependentOn } from '../../../shared/helpers';
 
-export const Demo = props => (
+export const Demo = (props) => (
   <div className="demo-only" {...props}>
     {props.children}
   </div>
 );
 Demo.propTypes = {
-  children: PropTypes.node
+  children: PropTypes.node,
 };
 
 /**
  * @name InlineEditTr - Common table row for inline edit data grids
  */
-export const InlineEditTr = props => {
+export const InlineEditTr = (props) => {
   const { isActionableMode } = useContext(DataTableContext);
 
   return (
@@ -154,5 +154,5 @@ InlineEditTr.propTypes = {
   showEditRequired: PropTypes.bool,
   showEditedCell: PropTypes.bool,
   showRowError: PropTypes.bool,
-  stage: PropTypes.string.isRequired
+  stage: PropTypes.string.isRequired,
 };

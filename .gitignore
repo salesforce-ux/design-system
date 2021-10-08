@@ -67,5 +67,6 @@ install-postcss.sh
 applitools.*.local.js
 
 __release
+__crypt
 
 *.bak

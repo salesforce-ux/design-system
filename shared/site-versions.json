@@ -1,0 +1,42 @@
+{
+  "2.16": {
+    "site_version": "v1.2.31",
+    "nvm_version": 14
+  },
+  "2.15": {
+    "site_version": "v1.2.30",
+    "nvm_version": 14
+  },
+  "2.14": {
+    "site_version": "v1.2.28",
+    "nvm_version": 10
+  },
+  "2.13": {
+    "site_version": "v1.2.24",
+    "nvm_version": 10
+  },
+  "2.12": {
+    "site_version": "v1.2.21",
+    "nvm_version": 10
+  },
+  "2.11": {
+    "site_version": "v1.2.21",
+    "nvm_version": 10
+  },
+  "2.10": {
+    "site_version": "v1.2.11",
+    "nvm_version": 10
+  },
+  "2.9": {
+    "site_version": "v1.2.6",
+    "nvm_version": 8
+  },
+  "2.8": {
+    "site_version": "v1.2.3",
+    "nvm_version": 8
+  },
+  "2.7": {
+    "site_version": "v1.0.0",
+    "nvm_version": 8
+  }
+}

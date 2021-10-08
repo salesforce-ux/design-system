@@ -236,7 +236,8 @@
     "release:site:validate": "SLDS_VALIDATION_URL=https://design-system-site-stage.herokuapp.com npx ava __tests__/site/site-validation.ava.js",
     "slds:customizer": "node tools/customizer.cli.js",
     "prepare": "npm run snyk-protect && husky install",
-    "snyk-protect": "snyk protect"
+    "snyk-protect": "snyk protect",
+    "crypt": "./_internal/crypt.sh"
   },
   "lint-staged": {
     "!(*.local).{js,jsx,json}": [
@@ -258,7 +259,10 @@
     },
     "testPathIgnorePatterns": [
       "<rootDir>/node_modules/",
-      "<rootDir>/shared/vendor/prism/"
+      "<rootDir>/shared/vendor/prism/",
+      "<rootDir>/__crypt/",
+      "<rootDir>/.dist/",
+      "<rootDir>/.generated/"
     ]
   },
   "lwc": {

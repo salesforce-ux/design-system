@@ -13,13 +13,13 @@ import { Radio } from '../radio-group/base/example';
 import { UtilityIcon } from '../icons/base/example';
 
 export const DataTableContext = React.createContext({
-  isActionableMode: false
+  isActionableMode: false,
 });
 
 export const cellContentTextLong =
   'Cell content that is very long.\nIt also has a line break.\nIt has more than one line break';
 
-export const HeadRowData = props => (
+export const HeadRowData = (props) => (
   <THeadTr>
     <ColumnTh>
       <ColumnHeader columnName="Opportunity Name" />
@@ -45,7 +45,7 @@ export const HeadRowData = props => (
   </THeadTr>
 );
 
-export const RowData = props => (
+export const RowData = (props) => (
   <TBodyTr>
     <RowTh data-label="Opportunity Name">
       <ReadOnlyCell cellText={props.title} cellLink />
@@ -71,19 +71,19 @@ export const RowData = props => (
   </TBodyTr>
 );
 RowData.propTypes = {
-  title: PropTypes.string
+  title: PropTypes.string,
 };
 
-export const InlineEditTableContainer = props => (
+export const InlineEditTableContainer = (props) => (
   <div className="slds-table_edit_container slds-is-relative">
     {props.children}
   </div>
 );
 InlineEditTableContainer.propTypes = {
-  children: PropTypes.node
+  children: PropTypes.node,
 };
 
-export const Table = props => {
+export const Table = (props) => {
   const computedStyles = classNames('slds-table', {
     'slds-table_cell-buffer': props.hasCellBuffer,
     'slds-table_header-hidden': props.hasHiddenHeader,
@@ -98,7 +98,7 @@ export const Table = props => {
     'slds-table_resizable-cols': props.isResizable,
     'slds-table_striped': props.isStriped,
     'slds-tree slds-table_tree': props.type === 'treegrid',
-    'slds-table_header-fixed': props.hasFixedHeader
+    'slds-table_header-fixed': props.hasFixedHeader,
   });
 
   const getComputedRole = () => {
@@ -120,8 +120,10 @@ export const Table = props => {
       className={computedStyles}
       role={getComputedRole()}
       style={props.style}
-      {...props.ariaLabelledBy && { [`aria-labelledby`]: props.ariaLabelledBy }}
-      {...props.ariaLabel && { [`aria-label`]: props.ariaLabel }}
+      {...(props.ariaLabelledBy && {
+        [`aria-labelledby`]: props.ariaLabelledBy,
+      })}
+      {...(props.ariaLabel && { [`aria-label`]: props.ariaLabel })}
     >
       {props.children}
     </table>
@@ -147,10 +149,10 @@ Table.propTypes = {
   selectionType: PropTypes.oneOf(['multiple', 'single']),
   style: PropTypes.object,
   type: PropTypes.oneOf(['advanced', 'base', 'treegrid']).isRequired,
-  hasFixedHeader: PropTypes.bool
+  hasFixedHeader: PropTypes.bool,
 };
 
-export const THead = props => {
+export const THead = (props) => {
   const getComputedClasses = () =>
     props.isHidden ? 'slds-assistive-text' : null;
 
@@ -159,24 +161,24 @@ export const THead = props => {
 THead.displayName = 'THead';
 THead.propTypes = {
   children: PropTypes.node,
-  isHidden: PropTypes.bool
+  isHidden: PropTypes.bool,
 };
 
 /**
  * @name THeadTr - tr element for advanced data table header
  */
-export const THeadTr = props => (
+export const THeadTr = (props) => (
   <tr className="slds-line-height_reset">{props.children}</tr>
 );
 THeadTr.displayName = 'THeadTr';
 THeadTr.propTypes = {
-  children: PropTypes.node
+  children: PropTypes.node,
 };
 
 /**
  * @name ColumnTh - th element for all advanced data table column headers
  */
-export const ColumnTh = props => {
+export const ColumnTh = (props) => {
   const { isActionableMode } = useContext(DataTableContext);
   const getAriaSort = () => {
     let ariaSort = null;
@@ -198,7 +200,7 @@ export const ColumnTh = props => {
     'slds-is-sorted_asc': props.sortDirection === 'ascending',
     'slds-is-sorted_desc': props.sortDirection === 'descending',
     'slds-cell-wrap': props.hasWrap,
-    'slds-cell_action-mode': isActionableMode
+    'slds-cell_action-mode': isActionableMode,
   });
 
   return (
@@ -224,17 +226,17 @@ ColumnTh.propTypes = {
   isSortable: PropTypes.bool,
   sortDirection: PropTypes.oneOf(['ascending', 'descending', 'none']),
   style: PropTypes.object, // used for setting column width when columns are resizable,
-  hasWrap: PropTypes.bool
+  hasWrap: PropTypes.bool,
 };
 
 /**
  * @name ColumnHeader - Plain column header for advanced data tables
  */
-export const ColumnHeader = props => (
+export const ColumnHeader = (props) => (
   <div
     className={classNames('slds-truncate', {
       'slds-assistive-text': props.isAssistiveText,
-      'slds-cell-fixed': props.isFixedCell
+      'slds-cell-fixed': props.isFixedCell,
     })}
     id={props.id}
     title={props.columnName}
@@ -247,16 +249,16 @@ ColumnHeader.propTypes = {
   columnName: PropTypes.string.isRequired,
   id: PropTypes.string,
   isAssistiveText: PropTypes.bool,
-  isFixedCell: PropTypes.bool
+  isFixedCell: PropTypes.bool,
 };
 ColumnHeader.defaultProps = {
-  columnName: 'Column Name'
+  columnName: 'Column Name',
 };
 
 /**
  * @name ResizeControl - Grab handle used in the resizable column headers
  */
-export const ResizeControl = props => {
+export const ResizeControl = (props) => {
   const uniqueId = _.uniqueId('cell-resize-handle-');
 
   return (
@@ -279,19 +281,19 @@ export const ResizeControl = props => {
 ResizeControl.displayName = 'ResizeControl';
 ResizeControl.propTypes = {
   label: PropTypes.string.isRequired,
-  tabIndex: PropTypes.oneOf(['0', '-1'])
+  tabIndex: PropTypes.oneOf(['0', '-1']),
 };
 
 /**
  * @name InteractiveColumnHeader - Common th cell for use in advanced data grids that have sorting or interaction
  */
-export let InteractiveColumnHeader = props => {
+export let InteractiveColumnHeader = (props) => {
   const { isActionableMode } = useContext(DataTableContext);
   const tabIndex = isActionableMode ? '0' : '-1';
 
   const getHeaderIcon = () => {
     const matchingIcon = props.columnHeaderIcons.filter(
-      icon => icon.column === props.columnName.toLowerCase()
+      (icon) => icon.column === props.columnName.toLowerCase()
     );
     if (matchingIcon.length) {
       return matchingIcon[0].icon;
@@ -323,7 +325,7 @@ export let InteractiveColumnHeader = props => {
           href="#"
           role="button"
           tabIndex={tabIndex}
-          onClick={e => e.preventDefault()}
+          onClick={(e) => e.preventDefault()}
         >
           <span className="slds-assistive-text">Sort by: </span>
           {renderHeaderText()}
@@ -372,17 +374,17 @@ InteractiveColumnHeader.propTypes = {
   hasMenu: PropTypes.bool,
   isResizable: PropTypes.bool,
   isSortable: PropTypes.bool,
-  sortDirection: PropTypes.oneOf(['ascending', 'descending'])
+  sortDirection: PropTypes.oneOf(['ascending', 'descending']),
 };
 InteractiveColumnHeader.defaultProps = {
   isResizable: true,
-  isSortable: true
+  isSortable: true,
 };
 
 /**
  * @name SelectAllColumnHeader - Common "Select All" column header for all grids
  */
-export const SelectAllColumnHeader = props => {
+export const SelectAllColumnHeader = (props) => {
   const { isActionableMode } = useContext(DataTableContext);
 
   return (
@@ -405,14 +407,13 @@ export const SelectAllColumnHeader = props => {
 };
 SelectAllColumnHeader.displayName = 'SelectAllColumnHeader';
 SelectAllColumnHeader.propTypes = {
-  checked: PropTypes.bool
+  checked: PropTypes.bool,
 };
 
 /**
  * @name AdvancedDataTableHead - Entire data driven Advanced data table head, thead, tr and all headers
  */
-export const AdvancedDataTableHead = props => {
-  const { isActionableMode } = useContext(DataTableContext);
+export const AdvancedDataTableHead = (props) => {
   const selectAllColumnWidth = props.hasErrorColumn ? '2rem' : '3.25rem';
   const mainColumnWidth = props.mainColumnWidth || null;
 
@@ -455,7 +456,7 @@ export const AdvancedDataTableHead = props => {
               width:
                 index === 0 && props.singleColumnWidth
                   ? props.singleColumnWidth
-                  : mainColumnWidth
+                  : mainColumnWidth,
             }}
           >
             <InteractiveColumnHeader
@@ -494,27 +495,27 @@ AdvancedDataTableHead.propTypes = {
   mainColumnWidth: PropTypes.string,
   selectAll: PropTypes.bool,
   singleColumnWidth: PropTypes.string,
-  sortDirection: PropTypes.oneOf(['ascending', 'descending', 'none'])
+  sortDirection: PropTypes.oneOf(['ascending', 'descending', 'none']),
 };
 AdvancedDataTableHead.defaultProps = {
   hasRowLevelActions: true,
   isResizable: true,
-  isSortable: true
+  isSortable: true,
 };
 
 /**
  * @name TBody - tbody element to wrap all table content
  */
-export const TBody = props => <tbody>{props.children}</tbody>;
+export const TBody = (props) => <tbody>{props.children}</tbody>;
 TBody.displayName = 'TBody';
 TBody.propTypes = {
-  children: PropTypes.node
+  children: PropTypes.node,
 };
 
 /**
  * @name TBodyTr - A common row container for advanced data table types: base, inline-edit, and product
  */
-export const TBodyTr = props => (
+export const TBodyTr = (props) => (
   <tr
     aria-expanded={props.isExpanded}
     aria-level={props.level}
@@ -523,7 +524,7 @@ export const TBodyTr = props => (
     aria-setsize={props.numberOfItemsAtLevel}
     className={classNames('slds-hint-parent', {
       'slds-align-top': props.isTopAligned,
-      'slds-is-selected': props.isSelected
+      'slds-is-selected': props.isSelected,
     })}
     tabIndex={props.tabIndex}
   >
@@ -539,13 +540,13 @@ TBodyTr.propTypes = {
   level: PropTypes.string,
   positionWithinLevel: PropTypes.string,
   numberOfItemsAtLevel: PropTypes.string,
-  tabIndex: PropTypes.oneOf(['0', '-1'])
+  tabIndex: PropTypes.oneOf(['0', '-1']),
 };
 
 /**
  * @name Td
  */
-export const Td = props => {
+export const Td = (props) => {
   const { isActionableMode } = useContext(DataTableContext);
   const computedClasses = classNames({
     'slds-has-focus': props.hasFocus,
@@ -556,7 +557,7 @@ export const Td = props => {
     'slds-cell-shrink': props.isShrunken,
     'slds-has-error': props.hasError,
     'slds-cell-wrap': props.hasWrap,
-    'slds-cell_action-mode': isActionableMode
+    'slds-cell_action-mode': isActionableMode,
   });
 
   const getComputedRole = () => {
@@ -600,13 +601,13 @@ Td.propTypes = {
   style: PropTypes.object,
   tabIndex: PropTypes.oneOf(['0', '-1']),
   type: PropTypes.oneOf(['advanced', 'base', 'treegrid']).isRequired,
-  hasWrap: PropTypes.bool
+  hasWrap: PropTypes.bool,
 };
 
 /**
  * @name RowTh
  */
-export const RowTh = props => {
+export const RowTh = (props) => {
   const { isActionableMode } = useContext(DataTableContext);
   const computedClasses = classNames({
     'slds-cell-edit': props.isEditable,
@@ -614,7 +615,7 @@ export const RowTh = props => {
     'slds-tree__item': props.type === 'treegrid',
     'slds-is-hovered': props.isItemHovered,
     'slds-cell-wrap': props.hasWrap,
-    'slds-cell_action-mode': isActionableMode
+    'slds-cell_action-mode': isActionableMode,
   });
 
   return (
@@ -637,13 +638,13 @@ RowTh.propTypes = {
   tabIndex: PropTypes.oneOf(['0', '-1']),
   type: PropTypes.oneOf(['base', 'advanced', 'treegrid']),
   isItemHovered: PropTypes.bool,
-  hasWrap: PropTypes.bool
+  hasWrap: PropTypes.bool,
 };
 
 /**
  * @name SelectRowCell - Common table cell for selecting a row in a grid
  */
-export const SelectRowCell = props => (
+export const SelectRowCell = (props) => (
   <React.Fragment>
     {props.hasSingleRowSelect ? (
       <Radio
@@ -673,7 +674,7 @@ SelectRowCell.propTypes = {
   checked: PropTypes.bool,
   hasSingleRowSelect: PropTypes.bool,
   index: PropTypes.number.isRequired,
-  inputTabIndex: PropTypes.oneOf(['0', '-1'])
+  inputTabIndex: PropTypes.oneOf(['0', '-1']),
 };
 
 /**
@@ -696,13 +697,13 @@ export const RowActionsCell = ({ rowName }) => {
 };
 RowActionsCell.displayName = 'RowActionsCell';
 RowActionsCell.propTypes = {
-  rowName: PropTypes.string.isRequired
+  rowName: PropTypes.string.isRequired,
 };
 
 /**
  * @name ErrorCell - Common table cell to be used for a row errors
  */
-export const ErrorCell = props => {
+export const ErrorCell = (props) => {
   const { isActionableMode } = useContext(DataTableContext);
 
   return (
@@ -713,7 +714,7 @@ export const ErrorCell = props => {
         className={classNames(
           'slds-button_icon-error slds-m-horizontal_xxx-small',
           {
-            'slds-hidden': !props.hasError
+            'slds-hidden': !props.hasError,
           }
         )}
         id={'error-0' + props.index}
@@ -728,7 +729,7 @@ export const ErrorCell = props => {
 ErrorCell.displayName = 'ErrorCell';
 ErrorCell.propTypes = {
   hasError: PropTypes.bool,
-  index: PropTypes.number.isRequired
+  index: PropTypes.number.isRequired,
 };
 
 /**
@@ -746,7 +747,7 @@ export const ReadOnlyCell = ({ hasWrap, cellText, cellLink }) => {
         <a
           href="#"
           tabIndex={isActionableMode ? '0' : '-1'}
-          onClick={e => {
+          onClick={(e) => {
             e.preventDefault();
           }}
         >
@@ -762,13 +763,13 @@ ReadOnlyCell.displayName = 'ReadOnlyCell';
 ReadOnlyCell.propTypes = {
   cellLink: PropTypes.bool,
   cellText: PropTypes.string.isRequired,
-  hasWrap: PropTypes.bool
+  hasWrap: PropTypes.bool,
 };
 
 /**
  * @name EditableCell - Common cell content for inline edit grids
  */
-export const EditableCell = props => {
+export const EditableCell = (props) => {
   const { isActionableMode } = useContext(DataTableContext);
   return (
     <React.Fragment>
@@ -780,7 +781,7 @@ export const EditableCell = props => {
             id={`link-0${props.index}`}
             tabIndex={isActionableMode ? '0' : '-1'}
             title={props.cellText}
-            onClick={e => e.preventDefault()}
+            onClick={(e) => e.preventDefault()}
           >
             {props.cellText}
           </a>
@@ -795,7 +796,7 @@ export const EditableCell = props => {
           disabled={props.isLocked}
           iconClassName={classNames('slds-button__icon_hint', {
             'slds-button__icon_edit': !props.isLocked,
-            'slds-button__icon_lock slds-button__icon_small': props.isLocked
+            'slds-button__icon_lock slds-button__icon_small': props.isLocked,
           })}
           symbol={props.isLocked ? 'lock' : 'edit'}
           tabIndex={isActionableMode ? '0' : '-1'}
@@ -817,21 +818,21 @@ EditableCell.propTypes = {
   index: PropTypes.number,
   isLocked: PropTypes.bool,
   isRequired: IsDependentOn('showEdit', PropTypes.bool),
-  showEdit: PropTypes.bool
+  showEdit: PropTypes.bool,
 };
 
 /**
  * @name EditPopover - Popover used to edit a cell in inline edit grids
  * @todo Replace form elements with react components and update those to show required but hidden label
  */
-export const EditPopover = props => (
+export const EditPopover = (props) => (
   <Popover
     className="slds-popover slds-popover_edit"
     style={{ position: 'absolute', top: '0', left: '0.0625rem' }}
   >
     <div
       className={classNames('slds-form-element slds-grid slds-wrap', {
-        'slds-has-error': props.hasError
+        'slds-has-error': props.hasError,
       })}
     >
       <label
@@ -866,5 +867,5 @@ export const EditPopover = props => (
 EditPopover.displayName = 'EditPopover';
 EditPopover.propTypes = {
   hasError: PropTypes.bool,
-  isRequired: PropTypes.bool
+  isRequired: PropTypes.bool,
 };

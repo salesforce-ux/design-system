@@ -3,6 +3,12 @@
 # Color Picker Release Notes
 
 <!-- ## [Unreleased] -->
+## 2.17.0
+
+### Changed
+
+- Added `aria-label` attribute to listbox
+
 ## 2.10.0
 
 ### Changed

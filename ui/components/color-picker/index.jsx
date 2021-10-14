@@ -117,7 +117,7 @@ export const ColorPickerSwatches = props => {
   const linkRole = isMenuRole ? 'menuitem' : 'option';
 
   return (
-    <ul className="slds-color-picker__swatches" role={swatchesRole}>
+    <ul className="slds-color-picker__swatches" role={swatchesRole} aria-label="Preset colors">
       {swatchColors.map((swatch, index) => (
         <li
           key={_.uniqueId('color-picker-swatch-')}

@@ -129,6 +129,7 @@ exports[`renders a base color picker with custom tab selected 1`] = `
               role="tabpanel"
             >
               <ul
+                aria-label="Preset colors"
                 className="slds-color-picker__swatches"
                 role="listbox"
               >
@@ -1194,6 +1195,7 @@ exports[`renders a base color picker with custom tab selected in error state 1`]
               role="tabpanel"
             >
               <ul
+                aria-label="Preset colors"
                 className="slds-color-picker__swatches"
                 role="listbox"
               >
@@ -2273,6 +2275,7 @@ exports[`renders a base color picker with summary error 1`] = `
               role="tabpanel"
             >
               <ul
+                aria-label="Preset colors"
                 className="slds-color-picker__swatches"
                 role="listbox"
               >
@@ -3611,6 +3614,7 @@ exports[`renders a default base color picker 1`] = `
               role="tabpanel"
             >
               <ul
+                aria-label="Preset colors"
                 className="slds-color-picker__swatches"
                 role="listbox"
               >
@@ -4626,6 +4630,7 @@ exports[`renders a predefined only color picker 1`] = `
           className="slds-media__body"
         >
           <ul
+            aria-label="Preset colors"
             className="slds-color-picker__swatches"
             role="listbox"
           >
@@ -5420,6 +5425,7 @@ exports[`renders a swatches only color picker 1`] = `
         className="slds-color-picker__selector"
       >
         <ul
+          aria-label="Preset colors"
           className="slds-color-picker__swatches"
           role="menu"
         >
@@ -6790,6 +6796,7 @@ exports[`renders an opened predefined only color picker 1`] = `
           className="slds-media__body"
         >
           <ul
+            aria-label="Preset colors"
             className="slds-color-picker__swatches"
             role="listbox"
           >
@@ -7591,6 +7598,7 @@ exports[`renders an opened swatches only color picker 1`] = `
           className="slds-color-picker__selector"
         >
           <ul
+            aria-label="Preset colors"
             className="slds-color-picker__swatches"
             role="menu"
           >

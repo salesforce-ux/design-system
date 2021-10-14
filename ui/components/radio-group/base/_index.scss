@@ -136,7 +136,6 @@
   &:checked ~ .slds-radio--faux,
   &:checked + .slds-radio__label .slds-radio_faux,
   &:checked + .slds-radio__label .slds-radio--faux {
-    /*! @css-var-fallback background-color */
     --slds-c-radio-color-background:
       var(--slds-c-radio-color-background-checked,
       var(--sds-c-radio-color-background-checked,

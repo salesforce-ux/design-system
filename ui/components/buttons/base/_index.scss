@@ -45,10 +45,7 @@
 
   &:hover,
   &:focus {
-    /*! @css-var-fallback border-color */
     --slds-c-button-color-border: var(--slds-c-button-color-border-hover);
-
-    /*! @css-var-fallback background-color */
     --slds-c-button-color-background: var(--slds-c-button-color-background-hover);
     color: var(--slds-c-button-text-color-hover, var(--sds-c-button-text-color-hover, #{$brand-accessible-active}));
   }

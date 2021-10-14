@@ -80,10 +80,7 @@
     &:checked + .slds-checkbox__label .slds-checkbox_faux,
     &:checked + .slds-checkbox__label .slds-checkbox--faux {
       // @todo consider shared hooks
-      /*! @css-var-fallback border-color */
       --slds-c-checkbox-color-border: var(--slds-c-checkbox-color-border-checked, var(--sds-c-checkbox-color-border-checked));
-
-      /*! @css-var-fallback background-color */
       --slds-c-checkbox-color-background: var(--slds-c-checkbox-color-background-checked, var(--sds-c-checkbox-color-background-checked));
 
       &:after {
@@ -139,10 +136,7 @@
     &:indeterminate ~ .slds-checkbox--faux,
     &:indeterminate + .slds-checkbox__label .slds-checkbox_faux,
     &:indeterminate + .slds-checkbox__label .slds-checkbox--faux {
-      /*! @css-var-fallback border-color */
       --slds-c-checkbox-color-border: var(--slds-c-checkbox-color-border-checked, var(--sds-c-checkbox-color-border-checked));
-
-      /*! @css-var-fallback background-color */
       --slds-c-checkbox-color-background: var(--slds-c-checkbox-color-background-checked, var(--sds-c-checkbox-color-background-checked));
     }
 

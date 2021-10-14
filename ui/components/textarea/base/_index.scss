@@ -70,7 +70,6 @@
 
   &:focus,
   &:active {
-    /*! @css-var-fallback color */
     --slds-c-textarea-text-color-focus: var(--slds-c-textarea-text-color-error-focus);
 
     /*! @css-var-fallback background-color */

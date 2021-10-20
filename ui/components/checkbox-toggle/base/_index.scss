@@ -28,21 +28,23 @@
     border-width: $border-width-thin;
     border-style: solid;
     // @todo consider shared hooks for inputs
-    border-color: var(--sds-c-checkbox-toggle-color-border, $color-background-toggle);
+    border-color: var(--slds-c-checkbox-toggle-color-border, var(--sds-c-checkbox-toggle-color-border, $color-background-toggle));
     padding: $spacing-xxx-small;
     // @todo consider shared hooks for inputs
-    background-color: var(--sds-c-checkbox-toggle-color-background, $color-background-toggle);
+    background-color: var(--slds-c-checkbox-toggle-color-background, var(--sds-c-checkbox-toggle-color-background, $color-background-toggle));
     // @todo consider global hook
-    border-radius: var(--sds-c-checkbox-toggle-radius-border, $border-radius-pill);
-    box-shadow: var(--sds-c-checkbox-toggle-shadow);
+    border-radius: var(--slds-c-checkbox-toggle-radius-border, var(--sds-c-checkbox-toggle-radius-border, $border-radius-pill));
+    box-shadow: var(--slds-c-checkbox-toggle-shadow, var(--sds-c-checkbox-toggle-shadow));
     transition: background-color 0.2s cubic-bezier(0.75, 0, 0.08, 1);
 
     &:hover,
     &:focus {
-      cursor: pointer;
-      // @todo re-evaluate Styling Hooks reassignment
       // @todo consider shared hooks for inputs
-      background-color: var(--sds-c-checkbox-toggle-color-background-hover, $color-background-toggle-hover);
+      /*! @css-var-fallback background-color */
+      --slds-c-checkbox-toggle-color-background: var(--slds-c-checkbox-toggle-color-background-hover, var(--sds-c-checkbox-toggle-color-background-hover, #{$color-background-toggle-hover}));
+
+      --slds-c-checkbox-toggle-color-border: var(--slds-c-checkbox-toggle-color-border-hover);
+      cursor: pointer;
     }
 
     &:after {
@@ -52,9 +54,9 @@
       left: 1px;
       width: $square-toggle-slider;
       height: $square-toggle-slider;
-      background-color: var(--sds-c-checkbox-toggle-switch-color-background, $color-background-alt);
+      background-color: var(--slds-c-checkbox-toggle-switch-color-background, var(--sds-c-checkbox-toggle-switch-color-background, $color-background-alt));
       // @todo consider global hook
-      border-radius: var(--sds-c-checkbox-toggle-radius-border, $border-radius-pill);
+      border-radius: var(--slds-c-checkbox-toggle-radius-border, var(--sds-c-checkbox-toggle-radius-border, $border-radius-pill));
     }
   }
 
@@ -108,15 +110,17 @@
       ~ .slds-checkbox--faux,
       + .slds-checkbox_faux_container .slds-checkbox_faux,
       + .slds-checkbox--faux_container .slds-checkbox--faux {
-        // @todo re-evaluate Styling Hooks reassignment
         // @todo consider shared hooks for inputs
-        background-color: var(--sds-c-checkbox-toggle-color-background-focus, $color-background-toggle-hover);
-        // @todo re-evaluate Styling Hooks reassignment
+        /*! @css-var-fallback background-color */
+        --slds-c-checkbox-toggle-color-background: var(--sds-c-checkbox-toggle-color-background-focus, #{$color-background-toggle-hover});
+
         // @todo consider shared hooks for inputs
-        border-color: var(--sds-c-checkbox-toggle-color-border-focus, $color-border-input-active);
-        // @todo re-evaluate Styling Hooks reassignment
+        /*! @css-var-fallback border-color */
+        --slds-c-checkbox-toggle-color-border: var(--sds-c-checkbox-toggle-color-border-focus, #{$color-border-input-active});
+
         // @todo consider shared hooks for inputs
-        box-shadow: var(--sds-c-checkbox-toggle-shadow-focus, $shadow-button-focus);
+        /*! @css-var-fallback box-shadow */
+        --slds-c-checkbox-toggle-shadow: var(--sds-c-checkbox-toggle-shadow-focus, #{$shadow-button-focus});
       }
     }
 
@@ -139,18 +143,18 @@
       ~ .slds-checkbox--faux,
       + .slds-checkbox_faux_container .slds-checkbox_faux,
       + .slds-checkbox--faux_container .slds-checkbox--faux {
-        // @todo re-evaluate Styling Hooks reassignment
         // @todo consider shared hooks for inputs
-        border-color: var(--sds-c-checkbox-toggle-color-border-checked, $brand-accessible);
-        // @todo re-evaluate Styling Hooks reassignment
+        /*! @css-var-fallback border-color */
+        --slds-c-checkbox-toggle-color-border: var(--sds-c-checkbox-toggle-color-border-checked, #{$brand-accessible});
         // @todo consider shared hooks for inputs
-        background-color: var(--sds-c-checkbox-toggle-color-background-checked, $brand-accessible);
+        /*! @css-var-fallback background-color */
+        --slds-c-checkbox-toggle-color-background: var(--sds-c-checkbox-toggle-color-background-checked, #{$brand-accessible});
 
         &:hover,
         &:focus {
-          // @todo re-evaluate Styling Hooks reassignment
           // @todo consider shared hooks for inputs
-          background-color: var(--sds-c-checkbox-toggle-color-background-checked-hover, $brand-accessible-active);
+          /*! @css-var-fallback background-color */
+          --slds-c-checkbox-toggle-color-background: var(--sds-c-checkbox-toggle-color-background-checked-hover, #{$brand-accessible-active});
         }
 
         &:before {
@@ -161,12 +165,21 @@
           width: $square-toggle-slider;
           height: $square-toggle-slider;
           // @todo JB revisit
-          background-color: var(--sds-c-checkbox-toggle-switch-color-background-checked, var(--sds-c-checkbox-toggle-switch-color-background, $color-background-alt));
-          border-radius: var(--sds-c-checkbox-toggle-radius-border, $border-radius-pill);
+          background-color:
+            var(--slds-c-checkbox-toggle-switch-color-background-checked,
+            var(--sds-c-checkbox-toggle-switch-color-background-checked,
+            var(--slds-c-checkbox-toggle-switch-color-background,
+            var(--sds-c-checkbox-toggle-switch-color-background, $color-background-alt))));
+          border-radius: var(--slds-c-checkbox-toggle-radius-border, var(--sds-c-checkbox-toggle-radius-border, $border-radius-pill));
           transition: transform 0.2s cubic-bezier(0.75, 0, 0.08, 1);
         }
 
         &:after {
+          /*! @css-var-fallback background-color */
+          --slds-c-checkbox-toggle-switch-color-background: transparent;
+
+          /*! @css-var-fallback border-radius */
+          --slds-c-checkbox-toggle-radius-border: 0;
           content: ' ';
           position: absolute;
           top: 0.25rem; // These are arbitrary to create the checkbox
@@ -175,14 +188,12 @@
           width: 0.45rem;
           border-bottom-width: $border-width-thick;
           border-bottom-style: solid;
-          border-bottom-color: var(--sds-c-checkbox-toggle-mark-color-foreground, $color-border-toggle-checked);
+          border-bottom-color: var(--slds-c-checkbox-toggle-mark-color-foreground, var(--sds-c-checkbox-toggle-mark-color-foreground, $color-border-toggle-checked));
           /* stylelint-disable comment-empty-line-before */
           /*! @noflip */
           border-right-width: $border-width-thick;
           border-right-style: solid;
-          border-right-color: var(--sds-c-checkbox-toggle-mark-color-foreground, $color-border-toggle-checked);
-          border-radius: 0;
-          background-color: transparent;
+          border-right-color: var(--slds-c-checkbox-toggle-mark-color-foreground, var(--sds-c-checkbox-toggle-mark-color-foreground, $color-border-toggle-checked));
           transform: rotate(45deg);
         }
       }
@@ -195,9 +206,9 @@
         ~ .slds-checkbox--faux,
         + .slds-checkbox_faux_container .slds-checkbox_faux,
         + .slds-checkbox--faux_container .slds-checkbox--faux {
-          // @todo re-evaluate Styling Hooks reassignment
           // @todo consider shared hooks for inputs
-          background-color: var(--sds-c-checkbox-toggle-color-background-checked-focus, $brand-accessible-active);
+          /*! @css-var-fallback background-color */
+          --slds-c-checkbox-toggle-color-background: var(--slds-c-checkbox-toggle-color-background-checked-focus, var(--sds-c-checkbox-toggle-color-background-checked-focus, #{$brand-accessible-active}));
         }
       }
     }

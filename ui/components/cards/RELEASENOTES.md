@@ -3,7 +3,11 @@
 # Cards Release Notes
 
 <!-- ## [Unreleased] -->
+## 2.17.0
 
+### Added
+
+- Added clarification about card header icon assistive text.
 ## 2.15.1
 
 ### Added

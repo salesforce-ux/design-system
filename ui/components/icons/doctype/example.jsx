@@ -31,4 +31,10 @@ export let DoctypeIcon = props => {
 // Export
 /// ///////////////////////////////////////////
 
-export default <DoctypeIcon />;
+export default [
+  {
+    id: 'doctype-default',
+    label: 'Doctype - Default',
+    element: <DoctypeIcon />
+  }
+]

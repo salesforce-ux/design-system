@@ -52,4 +52,10 @@ StandardIcon.propTypes = {
 // Export
 /// ///////////////////////////////////////////
 
-export default <StandardIcon />;
+export default [
+  {
+    id: 'standard-default',
+    label: 'Standard - Default',
+    element: <StandardIcon />
+  }
+]

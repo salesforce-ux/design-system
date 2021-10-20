@@ -4,11 +4,19 @@
 
 <!-- ## [Unreleased] -->
 
+## 2.17.0
+
+### Added
+
+- Added `slds` as the default namespace with `sds` fallbacks for Styling Hooks.
+- Added CSS Custom Property reassignments for variants and states
+
 ## 2.15.0
 
 ### Changed
 
 - Changed `product_quantity_rules` icon's color from light blue to salem green (#04844B)
+
 ## 2.14.0
 
 ### Removed

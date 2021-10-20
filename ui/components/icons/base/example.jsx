@@ -57,7 +57,13 @@ UtilityIcon.propTypes = {
 // Export
 /// ///////////////////////////////////////////
 
-export default <UtilityIcon className="slds-icon-text-default" />;
+export default [
+  {
+    id: 'default',
+    label: 'Base - Default',
+    element: <UtilityIcon className="slds-icon-text-default" />
+  }
+]
 
 export let examples = [
   {

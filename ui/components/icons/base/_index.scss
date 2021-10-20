@@ -15,20 +15,23 @@
 .slds-icon__container {
   @include deprecate('4.0.0', 'slds-icon__container is deprecated. Use slds-icon_container instead.');
   display: inline-block;
-  border-radius: var(--sds-c-icon-radius-border, $border-radius-medium);
+  border-radius: var(--slds-c-icon-radius-border, var(--sds-c-icon-radius-border, $border-radius-medium));
   line-height: $line-height-reset;
-  background-color: var(--sds-c-icon-color-background);
+  background-color: var(--slds-c-icon-color-background, var(--sds-c-icon-color-background, transparent));
+}
 
-  /**
-   * @summary Circle container for icons
-   * @selector .slds-icon_container_circle
-   * @restrict .slds-icon_container
-   */
-  &_circle,
-  &--circle {
-    padding: $spacing-x-small;
-    border-radius: $border-radius-circle;
-  }
+/**
+ * @summary Circle container for icons
+ * @selector .slds-icon_container_circle
+ * @restrict .slds-icon_container
+ */
+.slds-icon_container_circle,
+.slds-icon__container_circle,
+.slds-icon_container--circle,
+.slds-icon__container--circle {
+  /*! @css-var-fallback border-radius */
+  --slds-c-icon-radius-border: #{$border-radius-circle};
+  padding: $spacing-x-small;
 }
 
 /**
@@ -50,7 +53,7 @@
 @each $name, $color in $bg-actions-map {
 
   .slds-icon-#{$name} {
-    background-color: var(--sds-c-icon-color-background, $color);
+    background-color: var(--slds-c-icon-color-background, var(--sds-c-icon-color-background, $color));
   }
 }
 
@@ -69,7 +72,7 @@
 
   .slds-icon-custom-custom#{$id},
   .slds-icon-#{$name} {
-    background-color: var(--sds-c-icon-color-background, $color);
+    background-color: var(--slds-c-icon-color-background, var(--sds-c-icon-color-background, $color));
     color: $color-text-inverse; // This is for text based icon created with just the first letters of the words
   }
 }
@@ -87,7 +90,7 @@ $bg-standard-map: map-merge($task2-monkey-patch, $bg-standard-map);
 @each $name, $color in $bg-standard-map {
 
   .slds-icon-standard-#{$name} {
-    background-color: var(--sds-c-icon-color-background, $color);
+    background-color: var(--slds-c-icon-color-background, var(--sds-c-icon-color-background, $color));
   }
 }
 
@@ -97,19 +100,20 @@ $bg-standard-map: map-merge($task2-monkey-patch, $bg-standard-map);
  */
 .slds-icon {
   @include square($square-icon-medium-boundary);
-  fill: var(--sds-c-icon-color-foreground, $color-text-icon-inverse);
+  fill: var(--slds-c-icon-color-foreground, var(--sds-c-icon-color-foreground, $color-text-icon-inverse));
 }
 
 // Crispy
-[class*='slds-icon-standard-'],
-[class*='slds-icon-action-'],
-[class*='slds-icon-custom-'] {
+// NOTE: It's unclear what this is for, or what "Crispy" means, but with Styling Hooks in place it seems to round the *icon glyph* instead of just the container
+// [class*='slds-icon-standard-'],
+// [class*='slds-icon-action-'],
+// [class*='slds-icon-custom-'] {
 
-  .slds-icon,
-  &.slds-icon {
-    border-radius: var(--sds-c-icon-radius-border, $border-radius-medium);
-  }
-}
+//   .slds-icon,
+//   &.slds-icon {
+//     border-radius: var(--slds-c-icon-radius-border, var(--sds-c-icon-radius-border, $border-radius-medium));
+//   }
+// }
 
 /**
  * @selector .slds-icon_xx-small
@@ -168,7 +172,8 @@ $bg-standard-map: map-merge($task2-monkey-patch, $bg-standard-map);
  * @group color
  */
 .slds-icon-text-default {
-  fill: var(--sds-c-icon-color-foreground-default, $color-text-icon-default);
+  /*! @css-var-fallback fill */
+  --slds-c-icon-color-foreground: var(--slds-c-icon-color-foreground-default, var(--sds-c-icon-color-foreground-default, #{$color-text-icon-default}));
 
   /**
   * @summary Changes the icon fill color to match the disabled state
@@ -192,7 +197,8 @@ $bg-standard-map: map-merge($task2-monkey-patch, $bg-standard-map);
 * @group color
 */
 .slds-icon-text-warning {
-  fill: $color-text-warning;
+  /*! @css-var-fallback fill */
+  --slds-c-icon-color-foreground: #{$color-text-warning};
 }
 
 /**
@@ -204,7 +210,8 @@ $bg-standard-map: map-merge($task2-monkey-patch, $bg-standard-map);
 * @group color
 */
 .slds-icon-text-success {
-  fill: $color-text-success;
+  /*! @css-var-fallback fill */
+  --slds-c-icon-color-foreground: #{$color-text-success};
 }
 
 /**
@@ -216,7 +223,8 @@ $bg-standard-map: map-merge($task2-monkey-patch, $bg-standard-map);
 * @group color
 */
 .slds-icon-text-error {
-  fill: $color-text-error;
+  /*! @css-var-fallback fill */
+  --slds-c-icon-color-foreground: #{$color-text-error};
 }
 
 /**
@@ -226,7 +234,8 @@ $bg-standard-map: map-merge($task2-monkey-patch, $bg-standard-map);
 * @group color
 */
 .slds-icon-text-light {
-  fill: $color-text-input-icon;
+  /*! @css-var-fallback fill */
+  --slds-c-icon-color-foreground: #{$color-text-input-icon};
 }
 
 /**
@@ -238,7 +247,8 @@ $bg-standard-map: map-merge($task2-monkey-patch, $bg-standard-map);
 .slds-current-color {
 
   .slds-icon {
-    fill: currentColor;
+    /*! @css-var-fallback fill */
+    --slds-c-icon-color-foreground: currentColor;
   }
 }
 

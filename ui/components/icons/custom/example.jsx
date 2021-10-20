@@ -28,4 +28,10 @@ export let CustomIcon = props => {
 // Export
 /// ///////////////////////////////////////////
 
-export default <CustomIcon />;
+export default [
+  {
+    id: 'custom-default',
+    label: 'Custom - Default',
+    element: <CustomIcon />
+  }
+]

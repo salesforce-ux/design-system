@@ -31,4 +31,10 @@ export let ActionIcon = props => {
 // Export
 /// ///////////////////////////////////////////
 
-export default <ActionIcon />;
+export default [
+  {
+    id: 'action-default',
+    label: 'Action - Default',
+    element: <ActionIcon />
+  }
+]

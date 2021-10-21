@@ -105,24 +105,24 @@ export let examples = [
     id: 'styling-hooks',
     label: 'Styling Hooks',
     demoStyles: `
-      --sds-c-card-color-background: #f3f3f3;
-      --sds-c-card-radius-border: 8px;
-      --sds-c-card-shadow: rgba(0,0,0,.15) 0 4px 8px, rgba(0,0,0,.05) 0 2px 4px;
-      --sds-c-card-spacing-block-start: 1.5rem;
-      --sds-c-card-spacing-block-end: 0.5rem;
-      --sds-c-card-title-font-size: 1.5rem;
-      --sds-c-card-header-spacing-block-start: 0;
-      --sds-c-card-header-spacing-inline-start: 1.5rem;
-      --sds-c-card-header-spacing-inline-end: 1.5rem;
-      --sds-c-card-body-spacing-inline-start: 1.5rem;
-      --sds-c-card-body-spacing-inline-end: 1.5rem;
-      --sds-c-card-body-spacing-block-end: 1rem;
-      --sds-c-card-footer-spacing-block-start: 0.5rem;
-      --sds-c-card-footer-spacing-block-end: 0;
-      --sds-c-card-footer-spacing-inline-start: 1.5rem;
-      --sds-c-card-footer-spacing-inline-end: 1.5rem;
-      --sds-c-card-footer-font-size: 0.75rem;
-      --sds-c-card-footer-text-align: right;
+      --slds-c-card-color-background: #f3f3f3;
+      --slds-c-card-radius-border: 8px;
+      --slds-c-card-shadow: rgba(0,0,0,.15) 0 4px 8px, rgba(0,0,0,.05) 0 2px 4px;
+      --slds-c-card-spacing-block-start: 1.5rem;
+      --slds-c-card-spacing-block-end: 0.5rem;
+      --slds-c-card-title-font-size: 1.5rem;
+      --slds-c-card-header-spacing-block-start: 0;
+      --slds-c-card-header-spacing-inline-start: 1.5rem;
+      --slds-c-card-header-spacing-inline-end: 1.5rem;
+      --slds-c-card-body-spacing-inline-start: 1.5rem;
+      --slds-c-card-body-spacing-inline-end: 1.5rem;
+      --slds-c-card-body-spacing-block-end: 1rem;
+      --slds-c-card-footer-spacing-block-start: 0.5rem;
+      --slds-c-card-footer-spacing-block-end: 0;
+      --slds-c-card-footer-spacing-inline-start: 1.5rem;
+      --slds-c-card-footer-spacing-inline-end: 1.5rem;
+      --slds-c-card-footer-font-size: 0.75rem;
+      --slds-c-card-footer-text-align: right;
     `,
     storybookStyles: true,
     element: (

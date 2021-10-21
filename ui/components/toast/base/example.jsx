@@ -32,7 +32,7 @@ export default [
 
 export let states = [
   {
-    id: 'success-theme',
+    id: 'success',
     label: 'Success (Theme Class)',
     element: (
       <Toast type="success" containerClassName="slds-is-relative">

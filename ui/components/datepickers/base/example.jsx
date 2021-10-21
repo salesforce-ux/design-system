@@ -489,15 +489,21 @@ export let DatePickerElement = props => (
     Exports
 ----------------------------------------------------------------------------- */
 
-export default (
-  <DatePickerElement
-    idPrefix="defaultPicker"
-    labelContent="Date"
-    dateInputId={dateInputId + '-default'}
-    isOpen
-    todayActive
-  />
-);
+export default [
+  {
+    id: 'default',
+    label: 'Base – default',
+    element: (
+      <DatePickerElement
+        idPrefix="defaultPicker"
+        labelContent="Date"
+        dateInputId={dateInputId + '-default'}
+        isOpen
+        todayActive
+      />
+    )
+  }
+];
 
 export let states = [
   {

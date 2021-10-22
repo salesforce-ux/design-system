@@ -364,30 +364,30 @@
     outline: 0;
     background-color: $table-color-background-header-hover;
   }
+}
 
-  /**
-   * Allows for alignment of form element, such as a checkbox
-   *
-   * @selector .slds-th__action_form
-   * @restrict .slds-th__action
-   */
-  &_form,
-  &--form {
-    display: inline-flex; // Allows for alignment of form element, such as a checkbox
-  }
+/**
+  * Allows for alignment of form element, such as a checkbox
+  *
+  * @selector .slds-th__action_form
+  * @restrict .slds-th__action
+  */
+.slds-th__action_form,
+.slds-th__action--form {
+  display: inline-flex; // Allows for alignment of form element, such as a checkbox
+}
 
-  /**
-   * Allows for alignment of button, such as a menu
-   *
-   * @selector .slds-th__action-button
-   * @restrict .slds-has-button-menu .slds-button_icon
-   */
-  &-button {
-    position: absolute;
-    transform: translateY(-50%);
-    top: 50%;
-    right: $spacing-xx-small;
-  }
+/**
+  * Allows for alignment of button, such as a menu
+  *
+  * @selector .slds-th__action-button
+  * @restrict .slds-has-button-menu .slds-button_icon
+  */
+.slds-th__action-button {
+  position: absolute;
+  transform: translateY(-50%);
+  top: 50%;
+  right: $spacing-xx-small;
 }
 
 /**
@@ -431,19 +431,19 @@
   .slds-is-sortable__icon {
     display: inline-block;
   }
+}
 
-  /**
-   * Change direction of arrow
-   *
-   * @name sorted-ascending
-   * @selector .slds-is-sorted_asc
-   * @restrict .slds-is-sorted
-   * @modifier
-   */
-  &_asc .slds-is-sortable__icon,
-  &--asc .slds-is-sortable__icon {
-    transform: rotate(180deg);
-  }
+/**
+  * Change direction of arrow
+  *
+  * @name sorted-ascending
+  * @selector .slds-is-sorted_asc
+  * @restrict .slds-is-sorted
+  * @modifier
+  */
+.slds-is-sorted_asc .slds-is-sortable__icon,
+.slds-is-sorted--asc .slds-is-sortable__icon {
+  transform: rotate(180deg);
 }
 
 $max-column-support: 15;
@@ -519,77 +519,64 @@ $max-column-support: 15;
  */
 .slds-resizable {
   max-width: 100%;
+}
 
-  /**
-   * Grab handle to resize column
-   *
-   * @selector .slds-resizable__handle
-   * @restrict .slds-resizable span
-   */
-  &__handle {
-    width: $spacing-large;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    right: ($spacing-small * -1);
-  }
+/**
+  * Grab handle to resize column
+  *
+  * @selector .slds-resizable__handle
+  * @restrict .slds-resizable span
+  */
+.slds-resizable__handle {
+  width: $spacing-large;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: ($spacing-small * -1);
+}
 
-  /**
-   * Grab handle divider indicator when resizing column
-   *
-   * @selector .slds-resizable__divider
-   * @restrict .slds-resizable__handle span
-   */
-  &__divider {
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 100%;
+/**
+  * Grab handle divider indicator when resizing column
+  *
+  * @selector .slds-resizable__divider
+  * @restrict .slds-resizable__handle span
+  */
+.slds-resizable__divider {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  cursor: col-resize;
+  z-index: $z-index-popup;
+
+  &:before,
+  &:after {
     height: 100%;
+    content: ' ';
     display: block;
-    cursor: col-resize;
-    z-index: $z-index-popup;
-
-    &:before,
-    &:after {
-      height: 100%;
-      content: ' ';
-      display: block;
-      position: absolute;
-      top: 0;
-      right: $spacing-small;
-    }
-
-    &:before {
-      background-color: $table-color-background-header-resizable-handle;
-      height: 100%;
-      width: $border-width-thin;
-    }
-
-    &:after {
-      background-color: $color-background-button-brand;
-      width: $border-width-thin;
-      height: 100vh;
-      opacity: 0;
-    }
-
-    &:hover,
-    &:focus,
-    &:active {
-
-      &:before {
-        background-color: $color-background-button-brand;
-        width: $spacing-xx-small;
-      }
-
-      &:after {
-        opacity: 1;
-      }
-    }
+    position: absolute;
+    top: 0;
+    right: $spacing-small;
   }
 
-  // Handles making the handle + divider visible during keyboard navigation
-  &__input:focus ~ &__handle &__divider {
+  &:before {
+    background-color: $table-color-background-header-resizable-handle;
+    height: 100%;
+    width: $border-width-thin;
+  }
+
+  &:after {
+    background-color: $color-background-button-brand;
+    width: $border-width-thin;
+    height: 100vh;
+    opacity: 0;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
 
     &:before {
       background-color: $color-background-button-brand;
@@ -599,6 +586,19 @@ $max-column-support: 15;
     &:after {
       opacity: 1;
     }
+  }
+}
+
+// Handles making the handle + divider visible during keyboard navigation
+.slds-resizable__input:focus ~ .slds-resizable__handle .slds-resizable__divider {
+
+  &:before {
+    background-color: $color-background-button-brand;
+    width: $spacing-xx-small;
+  }
+
+  &:after {
+    opacity: 1;
   }
 }
 

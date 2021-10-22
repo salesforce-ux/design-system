@@ -95,37 +95,37 @@
       color: $color-text-brand-primary;
     }
   }
+}
 
-  /**
-   * @summary Aligns filter items horizontally
-   *
-   * @selector .slds-datepicker__filter
-   * @restrict .slds-datepicker div
-   */
-  &__filter {
-    padding: $spacing-xx-small;
-  }
+/**
+  * @summary Aligns filter items horizontally
+  *
+  * @selector .slds-datepicker__filter
+  * @restrict .slds-datepicker div
+  */
+.slds-datepicker__filter {
+  padding: $spacing-xx-small;
+}
 
-  /**
-   * @summary Spaces out month filter
-   *
-   * @selector .slds-datepicker__filter_month
-   * @restrict .slds-datepicker div
-   */
-  &__filter_month,
-  &__filter--month {
-    padding: 0 $spacing-xx-small 0 0;
-  }
+/**
+  * @summary Spaces out month filter
+  *
+  * @selector .slds-datepicker__filter_month
+  * @restrict .slds-datepicker div
+  */
+.slds-datepicker__filter_month,
+.slds-datepicker__filter--month {
+  padding: 0 $spacing-xx-small 0 0;
+}
 
-  /**
-   * @summary Container of the month table
-   *
-   * @selector .slds-datepicker__month
-   * @restrict .slds-datepicker table
-   */
-  &__month {
-    font-size: $font-size-2;
-  }
+/**
+  * @summary Container of the month table
+  *
+  * @selector .slds-datepicker__month
+  * @restrict .slds-datepicker table
+  */
+.slds-datepicker__month {
+  font-size: $font-size-2;
 }
 
 .slds-has-error .slds-datepicker__filter .slds-select {

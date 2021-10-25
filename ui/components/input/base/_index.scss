@@ -31,9 +31,15 @@
    * @restrict .slds-input
    */
   &[readonly] {
-    padding-left: 0;
-    border-color: transparent;
-    background-color: transparent;
+    /*! @css-var-fallback padding-left */
+    --slds-c-input-spacing-horizontal-start: 0;
+
+    /*! @css-var-fallback border-color */
+    --slds-c-input-color-border: transparent;
+
+    /*! @css-var-fallback background-color */
+    --slds-c-input-color-background: transparent;
+
     font-size: $input-static-font-size;
     // TODO: This is a plain readonly input. It should not have the text treatment that static has.
     font-weight: $input-readonly-font-weight;
@@ -74,24 +80,22 @@
   &_bare,
   &--bare {
     /*! @css-var-fallback background-color */
-    // --sds-c-input-color-background: transparent;
-    background-color: transparent;
+    --slds-c-input-color-background: transparent;
 
     /*! @css-var-fallback padding-right */
-    // --sds-c-input-spacing-horizontal-end: 0;
-    padding-right: 0;
+    --slds-c-input-spacing-horizontal-end: 0;
 
     /*! @css-var-fallback padding-left */
-    // --sds-c-input-spacing-horizontal-start: #{$spacing-small};
-    padding-left: $spacing-small;
+    --slds-c-input-spacing-horizontal-start: #{$spacing-small};
+
+    /*! @css-var-fallback color */
+    --slds-c-input-text-color: #{$color-text-default};
     border: 0;
-    color: $color-text-default;
 
     &:focus,
     &:active {
       /*! @css-var-fallback box-shadow */
-      // --sds-c-input-shadow: none;
-      box-shadow: none;
+      --slds-c-input-shadow-focus: none;
     }
   }
 
@@ -131,14 +135,12 @@
  * @selector .slds-input_borders
  * @restrict .slds-input
  */
-.slds-input_borders {
+.slds-input_borders[readonly] {
   /*! @css-var-fallback padding-right */
-  // --sds-c-input-spacing-horizontal-start: #{$spacing-small};
-  padding-right: $spacing-small;
+  --slds-c-input-spacing-horizontal-start: #{$spacing-small};
 
   /*! @css-var-fallback border-color */
-  // --sds-c-input-color-border: #{$color-border-input};
-  border-color: $color-border-input;
+  --slds-c-input-color-border: #{$color-border-input};
 }
 
 /**
@@ -188,8 +190,7 @@
     .slds-input_bare,
     .slds-input--bare {
       /*! @css-var-fallback padding-left */
-      // --sds-c-input-spacing-horizontal-start: #{$spacing-x-large};
-      padding-left: $spacing-x-large;
+      --slds-c-input-spacing-horizontal-start: #{$spacing-x-large};
     }
   }
 
@@ -211,8 +212,7 @@
     .slds-input_bare,
     .slds-input--bare {
       /*! @css-var-fallback padding-right */
-      // --sds-c-input-spacing-horizontal-end: #{$spacing-x-large};
-      padding-right: $spacing-x-large;
+      --slds-c-input-spacing-horizontal-end: #{$spacing-x-large};
     }
   }
 
@@ -251,12 +251,10 @@
     .slds-input_bare,
     .slds-input--bare {
       /*! @css-var-fallback padding-left */
-      // --sds-c-input-spacing-horizontal-start: #{$spacing-x-large};
-      padding-left: $spacing-x-large;
+      --slds-c-input-spacing-horizontal-start: #{$spacing-x-large};
 
       /*! @css-var-fallback padding-right */
-      // --sds-c-input-spacing-horizontal-end: #{$spacing-x-large};
-      padding-right: $spacing-x-large;
+      --slds-c-input-spacing-horizontal-end: #{$spacing-x-large};
     }
   }
 
@@ -267,8 +265,7 @@
     .slds-input_bare,
     .slds-input--bare {
       /*! @css-var-fallback padding-right */
-      // --sds-c-input-spacing-horizontal-end: (#{$spacing-xx-large} + #{$spacing-x-small});
-      padding-right: ($spacing-xx-large + $spacing-x-small);
+      --slds-c-input-spacing-horizontal-end: (#{$spacing-xx-large} + #{$spacing-x-small});
     }
   }
 }
@@ -317,16 +314,26 @@
 }
 
 .slds-has-error .slds-input {
-  border-color: $color-border-error;
-  box-shadow: $color-border-error 0 0 0 $border-width-thin inset;
-  background-color: var(--sds-c-input-color-background, $color-background-input);
-  color: var(--sds-c-input-text-color);
+  /*! @css-var-fallback border-color */
+  --slds-c-input-color-border: #{$color-border-error};
+
+  /*! @css-var-fallback box-shadow */
+  --slds-c-input-shadow: #{$color-border-error} 0 0 0 #{$border-width-thin} inset;
+
+  /*! @css-var-fallback background-color */
+  --slds-c-input-color-background: var(--sds-c-input-color-background, var(--sds-c-input-color-background, #{$color-background-input}));
+
+  /*! @css-var-fallback color */
+  --slds-c-input-text-color: var(--slds-c-input-text-color, var(--sds-c-input-text-color));
   background-clip: padding-box;
 
   &:focus,
   &:active {
-    border-color: $color-border-error;
-    box-shadow: $color-border-error 0 0 0 $border-width-thin inset, $shadow-button-focus;
+    /*! @css-var-fallback border-color */
+    --slds-c-input-color-border-focus: #{$color-border-error};
+
+    /*! @css-var-fallback box-shadow */
+    --slds-c-input-shadow: #{$color-border-error} 0 0 0 #{$border-width-thin} inset, #{$shadow-button-focus};
   }
 }
 

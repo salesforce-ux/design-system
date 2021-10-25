@@ -65,33 +65,32 @@
 
 @mixin input {
   padding-top: 0;
-  padding-right: var(--sds-c-input-spacing-horizontal-end, $spacing-medium);
+  padding-right: var(--slds-c-input-spacing-horizontal-end, var(--sds-c-input-spacing-horizontal-end, $spacing-medium));
   padding-bottom: 0;
-  padding-left: var(--sds-c-input-spacing-horizontal-start, $spacing-small);
+  padding-left: var(--slds-c-input-spacing-horizontal-start, var(--sds-c-input-spacing-horizontal-start, $spacing-small));
   width: 100%;
   min-height: calc(#{$height-input} + (#{$border-width-thin} * 2)); // For IE
   line-height: $height-input;
-  border: $border-width-thin solid var(--sds-c-input-color-border, $color-border-input);
-  border-radius: var(--sds-c-input-radius-border, $border-radius-medium);
-  background-color: var(--sds-c-input-color-background, $color-background-input);
-  color: var(--sds-c-input-text-color);
-  box-shadow: var(--sds-c-input-shadow);
+  border: $border-width-thin solid var(--slds-c-input-color-border, var(--sds-c-input-color-border, $color-border-input));
+  border-radius: var(--slds-c-input-radius-border, var(--sds-c-input-radius-border, $border-radius-medium));
+  background-color: var(--slds-c-input-color-background, var(--sds-c-input-color-background, $color-background-input));
+  color: var(--slds-c-input-text-color, var(--sds-c-input-text-color));
+  box-shadow: var(--slds-c-input-shadow, var(--sds-c-input-shadow));
   transition: border $duration-quickly linear, background-color $duration-quickly linear;
 }
 
 @mixin input-focus-active {
   /*! @css-var-fallback border-color */
-  // --sds-c-input-color-border: var(--sds-c-input-color-border-focus, #{$color-border-input-active});
-  border-color: var(--sds-c-input-color-border-focus, $color-border-input-active);
+  --slds-c-input-color-border: var(--slds-c-input-color-border-focus, var(--sds-c-input-color-border-focus, #{$color-border-input-active}));
 
   /*! @css-var-fallback background-color */
-  // --sds-c-input-background-color: var(--sds-c-input-color-background-focus, #{$color-background-input-active});
-  background-color: var(--sds-c-input-color-background-focus, var(--sds-c-input-color-background, $color-background-input-active));
-  color: var(--sds-c-input-text-color-focus);
+  --slds-c-input-background-color: var(--slds-c-input-color-background-focus, var(--sds-c-input-color-background-focus, #{$color-background-input-active}));
+
+  /*! @css-var-fallback color */
+  --slds-c-input-text-color: var(--slds-c-input-text-color-focus, var(--sds-c-input-text-color-focus));
 
   /*! @css-var-fallback box-shadow */
-  // --sds-c-input-shadow: var(--sds-c-input-shadow-focus, 0 0 3px #{$brand-accessible});
-  box-shadow: var(--sds-c-input-shadow-focus, 0 0 3px $brand-accessible);
+  --slds-c-input-shadow: var(--slds-c-input-shadow-focus, var(--sds-c-input-shadow-focus, 0 0 3px #{$brand-accessible}));
   outline: 0;
 }
 

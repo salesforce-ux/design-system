@@ -51,9 +51,9 @@
     line-height: $line-height-button;
     padding: 0 $spacing-medium;
     resize: none;
-    min-height: calc(#{$line-height-button} + 2px);
     max-height: calc(#{$line-height-button} + 2px);
     width: 100%;
+    border-radius: $border-radius-medium;
   }
 
   /**

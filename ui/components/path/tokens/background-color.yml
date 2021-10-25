@@ -31,16 +31,16 @@ props:
     value: '{!PALETTE_BLUE_30}'
     comment: The background color for the step action arrow that are the current stage
   COLOR_BACKGROUND_PATH_CURRENT:
-    value: '{!PALETTE_GRAY_1}'
+    value: '{!PALETTE_NEUTRAL_100}'
     comment: The background color for Salespath stages that are the current stage.
   COLOR_BACKGROUND_PATH_CURRENT_HOVER:
-    value: '{!PALETTE_GRAY_1}'
+    value: '{!PALETTE_NEUTRAL_100}'
     comment: The hover background color for Salespath stages that are the current stage.
   COLOR_BACKGROUND_PATH_INCOMPLETE:
-    value: '{!PALETTE_GRAY_4}'
+    value: '{!PALETTE_NEUTRAL_95}'
     comment: The background color for Salespath stages that have not been completed.
   COLOR_BACKGROUND_PATH_INCOMPLETE_HOVER:
-    value: '{!PALETTE_GRAY_5}'
+    value: '{!PALETTE_NEUTRAL_80}'
     comment: The hover background color for Salespath stages that have not been completed.
   COLOR_BACKGROUND_PATH_LOST:
     value: '{!PALETTE_RED_50}'
@@ -49,8 +49,8 @@ props:
     value: '{!PALETTE_GREEN_50}'
     comment: The background color for the final stage of a Salespath when it has been lost.
   COLOR_BACKGROUND_GUIDANCE:
-    value: '{!PALETTE_GRAY_1}'
+    value: '{!PALETTE_NEUTRAL_100}'
     comment: The background color for Salespath guidance coaching section.
   COLOR_BACKGROUND_PATH_EXPANDED:
-    value: '{!PALETTE_GRAY_1}'
+    value: '{!PALETTE_NEUTRAL_100}'
     comment: The background color for the overall Salespath coaching section.

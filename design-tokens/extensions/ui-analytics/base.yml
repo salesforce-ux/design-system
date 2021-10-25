@@ -286,7 +286,7 @@ props:
     - animation-duration
     comment: ''
   COLOR_WHITE:
-    value: '{!WHITE}'
+    value: '{!PALETTE_NEUTRAL_100}'
     type: color
     category: background-color
     cssProperties:

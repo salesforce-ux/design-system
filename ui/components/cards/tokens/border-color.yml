@@ -12,6 +12,6 @@ imports:
 - "../../../../design-tokens/aliases/color-palettes.yml"
 props:
   CARD_COLOR_BORDER:
-    value: '{!PALETTE_GRAY_5}'
+    value: '{!PALETTE_NEUTRAL_80}'
   CARD_FOOTER_COLOR_BORDER:
     value: 'transparent'

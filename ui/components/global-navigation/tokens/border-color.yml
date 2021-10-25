@@ -24,11 +24,11 @@ props:
     value: '{!PALETTE_CLOUD_BLUE_60}'
     comment: Border color in context bar for default theme
   COLOR_BORDER_CONTEXT_BAR_THEME_DEFAULT_ALT:
-    value: '{!PALETTE_GRAY_3}'
+    value: '{!PALETTE_NEUTRAL_95}'
     comment: Alternate border color in context bar for default theme
   COLOR_BORDER_CONTEXT_BAR_THEME_DEFAULT_HOVER:
     value: '{!PALETTE_INDIGO_20}'
     comment: Hovered border color in context bar for default theme
   COLOR_BORDER_CONTEXT_BAR_THEME_DEFAULT_ACTIVE:
-    value: '{!PALETTE_GRAY_3}'
+    value: '{!PALETTE_NEUTRAL_95}'
     comment: Active border color in context bar for default theme

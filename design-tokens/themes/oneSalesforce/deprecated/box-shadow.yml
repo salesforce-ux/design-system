@@ -22,8 +22,8 @@ props:
   SHADOW_SOFT_PRIMARY_ACTIVE:
     value: '{!BLACK_TRANSPARENT_20} 0 1px 1px'
   SHADOW_BUTTON_FOCUS_INVERSE:
-    value: '{!OFFSET_NONE} {!OFFSET_NONE} {!OFFSET_SMALL}px {!PALETTE_GRAY_4}'
+    value: '{!OFFSET_NONE} {!OFFSET_NONE} {!OFFSET_SMALL}px {!PALETTE_NEUTRAL_95}'
     comment: Custom glow for focus states on UI elements with explicit containers on dark or vibrantly colored backgrounds.
   SHADOW_LINK_FOCUS_INVERSE:
-    value: '{!OFFSET_NONE} {!OFFSET_NONE} {!OFFSET_SMALL}px {!PALETTE_GRAY_4}'
+    value: '{!OFFSET_NONE} {!OFFSET_NONE} {!OFFSET_SMALL}px {!PALETTE_NEUTRAL_95}'
     comment: Custom glow for focus states on UI link elements with explicit containers on dark or vibrantly colored backgrounds.

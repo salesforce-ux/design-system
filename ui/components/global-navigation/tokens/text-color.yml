@@ -10,10 +10,10 @@ imports:
 - "../../../../design-tokens/aliases/color-palettes.yml"
 props:
   COLOR_TEXT_CONTEXT_BAR:
-    value: '{!PALETTE_GRAY_11}'
+    value: '{!PALETTE_NEUTRAL_30}'
     comment: Context bar text color
   COLOR_TEXT_CONTEXT_BAR_INVERSE:
-    value: '{!WHITE}'
+    value: '{!PALETTE_NEUTRAL_100}'
     comment: Context bar text color on a dark background
     deprecated: true
   COLOR_TEXT_CONTEXT_BAR_ACTION_TRIGGER:

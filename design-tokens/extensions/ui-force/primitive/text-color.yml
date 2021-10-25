@@ -17,27 +17,27 @@ props:
     comment: Body text color
     access: global
   COLOR_TEXT_ICON_DEFAULT:
-    value: '{!PALETTE_COOL_GRAY_9}'
+    value: '{!PALETTE_NEUTRAL_50}'
     comment: Default icon color.
     access: global
   COLOR_TEXT_WEAK:
-    value: '{!PALETTE_COOL_GRAY_9}'
+    value: '{!PALETTE_NEUTRAL_50}'
     comment: Color for text that is purposefully de-emphasized to create visual hierarchy.
     access: global
   COLOR_TEXT_INVERSE:
-    value: '{!PALETTE_COOL_GRAY_1}'
+    value: '{!PALETTE_NEUTRAL_100}'
     comment: Inverse text color for dark backgrounds
     access: global
   COLOR_TEXT_INVERSE_WEAK:
-    value: '{!PALETTE_COOL_GRAY_7}'
+    value: '{!PALETTE_NEUTRAL_70}'
     comment: Weak inverse text color for dark backgrounds
     access: global
   COLOR_TEXT_LABEL:
-    value: '{!PALETTE_COOL_GRAY_9}'
+    value: '{!PALETTE_NEUTRAL_50}'
     comment: Text color for field labels.
     access: global
   COLOR_TEXT_ACTION_LABEL:
-    value: '{!PALETTE_COOL_GRAY_9}'
+    value: '{!PALETTE_NEUTRAL_50}'
     comment: Action label text color
     access: global
   COLOR_TEXT_ACTION_LABEL_ACTIVE:
@@ -49,10 +49,10 @@ props:
     comment: Link text (508)
     access: global
   COLOR_TEXT_PLACEHOLDER:
-    value: '{!PALETTE_COOL_GRAY_9}'
+    value: '{!PALETTE_NEUTRAL_50}'
     comment: Input placeholder text.
     access: global
   COLOR_TEXT_PLACEHOLDER_INVERSE:
-    value: '{!PALETTE_COOL_GRAY_4}'
+    value: '{!PALETTE_NEUTRAL_95}'
     comment: Input placeholder text on dark backgrounds.
     access: global

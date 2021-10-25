@@ -13,49 +13,49 @@ imports:
 props:
   ## ICONS
   COLOR_TEXT_ICON_DEFAULT:
-    value: '{!PALETTE_GRAY_9}'
+    value: '{!PALETTE_NEUTRAL_50}'
     comment: Default icon color.
   COLOR_TEXT_ICON_DEFAULT_HINT:
-    value: '{!PALETTE_GRAY_7}'
+    value: '{!PALETTE_NEUTRAL_70}'
     comment: Icon color for a button that has a parent element that has a hover state. This is the default text/icon color for that button before its parent has been hovered over.
   COLOR_TEXT_ICON_DEFAULT_DISABLED:
-    value: '{!PALETTE_GRAY_5}'
+    value: '{!PALETTE_NEUTRAL_80}'
     comment: Default icon color - disabled state
   COLOR_TEXT_ICON_INVERSE:
-    value: '{!PALETTE_GRAY_1}'
+    value: '{!PALETTE_NEUTRAL_100}'
     comment: Icon color on dark background
   COLOR_TEXT_ICON_INVERSE_HOVER:
-    value: '{!PALETTE_GRAY_1}'
+    value: '{!PALETTE_NEUTRAL_100}'
     comment: Icon color on dark background - hover state
   COLOR_TEXT_ICON_INVERSE_ACTIVE:
-    value: '{!PALETTE_GRAY_1}'
+    value: '{!PALETTE_NEUTRAL_100}'
     comment: Icon color on dark background - active state
   ## INPUT
   COLOR_TEXT_INPUT_DISABLED:
-    value: '{!PALETTE_GRAY_11}'
+    value: '{!PALETTE_NEUTRAL_30}'
     comment: Input disabled text
   COLOR_TEXT_INPUT_ICON:
-    value: '{!PALETTE_GRAY_7}'
+    value: '{!PALETTE_NEUTRAL_70}'
     comment: Input icon
   ## TABS
   COLOR_TEXT_TAB_LABEL_DISABLED:
-    value: '{!PALETTE_GRAY_4}'
+    value: '{!PALETTE_NEUTRAL_95}'
     comment: Color for disabled text in a tab group.
   ## TOGGLES
   COLOR_TEXT_TOGGLE_DISABLED:
-    value: '{!PALETTE_GRAY_5}'
+    value: '{!PALETTE_NEUTRAL_80}'
     comment: Color for disabled toggles
   ## BUTTONS
   COLOR_TEXT_BUTTON_DEFAULT_DISABLED:
-    value: '{!PALETTE_GRAY_5}'
+    value: '{!PALETTE_NEUTRAL_80}'
     comment: Text color for default secondary button - disabled state
   COLOR_TEXT_BUTTON_DEFAULT_HINT:
-    value: '{!PALETTE_GRAY_7}'
+    value: '{!PALETTE_NEUTRAL_70}'
     comment: Text color for a button that has a parent element that has a hover state. This is the default text/icon color for that button before its parent has been hovered over.
   COLOR_TEXT_BUTTON_INVERSE:
-    value: '{!PALETTE_GRAY_4}'
+    value: '{!PALETTE_NEUTRAL_95}'
     comment: Text color for a button that has a parent element that has a hover state. This is the default text/icon color for that button before its parent has been hovered over.
   ## TABS
   COLOR_TEXT_TAB_LABEL:
-    value: '{!PALETTE_GRAY_12}'
+    value: '{!PALETTE_NEUTRAL_10}'
     comment: Color for default text in a tab group.

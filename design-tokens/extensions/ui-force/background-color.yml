@@ -13,7 +13,7 @@ imports:
 - ../../aliases/color-palettes.yml
 props:
   COLOR_BACKGROUND_SPINNER_DOT:
-    value: '{!PALETTE_COOL_GRAY_7}'
+    value: '{!PALETTE_NEUTRAL_70}'
     comment: Color of the spinner dot.
 
   COLOR_BACKGROUND_NOTIFICATION_BADGE:
@@ -21,56 +21,56 @@ props:
     comment: Notifications badge background color.
     access: global
   COLOR_BACKGROUND_NOTIFICATION_NEW:
-    value: '{!PALETTE_COOL_GRAY_2}'
+    value: '{!PALETTE_NEUTRAL_95}'
     comment: Background color for a new notification list item.
     access: global
   COLOR_BACKGROUND_REMINDER:
-    value: '{!PALETTE_GRAY_2}'
+    value: '{!PALETTE_NEUTRAL_95}'
     comment: Background color for reminder notification
     release: 2.5.0
   COLOR_BACKGROUND_REMINDER_HOVER:
-    value: '{!WHITE}'
+    value: '{!PALETTE_NEUTRAL_100}'
     comment: Background color for reminder notification on hover
   COLOR_BACKGROUND_POST:
-    value: '{!PALETTE_COOL_GRAY_2}'
+    value: '{!PALETTE_NEUTRAL_95}'
     comment: Background color of comment posts in the feed.
 
   COLOR_BACKGROUND_BACKDROP_TINT:
-    value: '{!PALETTE_COOL_GRAY_2}'
+    value: '{!PALETTE_NEUTRAL_95}'
     comment: The color of the mask overlay that provides user feedback on interaction.
 
   COLOR_BACKGROUND_SCROLLBAR:
-    value: '{!PALETTE_COOL_GRAY_4}'
+    value: '{!PALETTE_NEUTRAL_95}'
     comment: The background color of an internal scrollbar.
     access: global
   COLOR_BACKGROUND_SCROLLBAR_TRACK:
-    value: '{!PALETTE_COOL_GRAY_6}'
+    value: '{!PALETTE_NEUTRAL_80}'
     comment: The background color of an internal scrollbar track.
     access: global
   COLOR_BACKGROUND_TOGGLE:
-    value: '{!PALETTE_COOL_GRAY_7}'
+    value: '{!PALETTE_NEUTRAL_70}'
     comment: Toggle background color.
   COLOR_BACKGROUND_TOGGLE_DISABLED:
-    value: '{!PALETTE_COOL_GRAY_7}'
+    value: '{!PALETTE_NEUTRAL_70}'
     comment: Disabled toggle background color.
   COLOR_BACKGROUND_TOGGLE_HOVER:
-    value: '{!PALETTE_COOL_GRAY_8}'
+    value: '{!PALETTE_NEUTRAL_60}'
     comment: Hovered toggle background color.
 
   COLOR_BACKGROUND_INPUT:
-    value: '{!WHITE}'
+    value: '{!PALETTE_NEUTRAL_100}'
     comment: Default input field
     access: global
   COLOR_BACKGROUND_INPUT_ACTIVE:
-    value: '{!WHITE}'
+    value: '{!PALETTE_NEUTRAL_100}'
     comment: Selected input field (when user has clicked or tabbed into field)
     access: global
   COLOR_BACKGROUND_INPUT_CHECKBOX_DISABLED:
-    value: '{!PALETTE_COOL_GRAY_5}'
+    value: '{!PALETTE_NEUTRAL_80}'
     comment: Disabled checkboxes
     access: global
   COLOR_BACKGROUND_INPUT_DISABLED:
-    value: '{!PALETTE_COOL_GRAY_4}'
+    value: '{!PALETTE_NEUTRAL_95}'
     comment: Disabled input
     access: global
   COLOR_BACKGROUND_INPUT_ERROR:
@@ -78,7 +78,7 @@ props:
     comment: Background color for input field that has encountered an error.
     access: global
   COLOR_BACKGROUND_PILL:
-    value: '{!WHITE}'
+    value: '{!PALETTE_NEUTRAL_100}'
     comment: Background color for pills.
     access: global
   COLOR_BACKGROUND_IMAGE_OVERLAY:
@@ -95,7 +95,7 @@ props:
     value: '{!PALETTE_GREEN_50}'
     comment: Active background color for success buttons
   COLOR_BACKGROUND_TOAST:
-    value: '{!PALETTE_COOL_GRAY_9}'
+    value: '{!PALETTE_NEUTRAL_50}'
     comment: Background color for toast messaging.
     access: global
   COLOR_BACKGROUND_TOAST_SUCCESS:
@@ -107,7 +107,7 @@ props:
     comment: Background color for error toast messaging.
     access: global
   FILL_HEADER_BUTTON:
-    value: '{!PALETTE_GRAY_7}'
+    value: '{!PALETTE_NEUTRAL_70}'
     comment: 'Header button icon color'
     cssProperties:
     - fill

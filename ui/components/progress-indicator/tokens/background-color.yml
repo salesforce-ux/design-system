@@ -11,13 +11,13 @@ imports:
 - "../../../../design-tokens/aliases/color-palettes.yml"
 props:
   PROGRESS_COLOR_BACKGROUND:
-    value: '{!WHITE}'
+    value: '{!PALETTE_NEUTRAL_100}'
     comment: The default background color for Progress Indicator
   PROGRESS_COLOR_BACKGROUND_SHADE:
-    value: '{!PALETTE_GRAY_2}'
+    value: '{!PALETTE_NEUTRAL_95}'
     comment: The shaded background color for Progress Indicator
   PROGRESS_BAR_COLOR_BACKGROUND:
-    value: '{!PALETTE_GRAY_5}'
+    value: '{!PALETTE_NEUTRAL_80}'
     comment: The background color for the Progress Bar
   PROGRESS_BAR_COLOR_BACKGROUND_FILL:
     value: '{!PALETTE_CLOUD_BLUE_70}'

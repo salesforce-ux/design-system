@@ -13,7 +13,7 @@ imports:
 - "../../../../design-tokens/aliases/colors.yml"
 props:
   BUTTON_COLOR_BORDER_PRIMARY:
-    value: '{!PALETTE_GRAY_3}'
+    value: '{!PALETTE_NEUTRAL_95}'
   BUTTON_COLOR_BORDER_BRAND_PRIMARY:
     value: '{!PALETTE_BLUE_50}'
     deprecated: true

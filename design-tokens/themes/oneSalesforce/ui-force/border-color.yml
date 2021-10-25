@@ -12,33 +12,33 @@ imports:
 props:
   ## INPUT
   COLOR_BORDER_INPUT:
-    value: '{!PALETTE_GRAY_5}'
+    value: '{!PALETTE_NEUTRAL_80}'
     comment: Border color on form elements.
   COLOR_BORDER_INPUT_DISABLED:
-    value: '{!PALETTE_GRAY_6}'
+    value: '{!PALETTE_NEUTRAL_80}'
     comment: Border color on disabled form elements.
   ## NOTIFICATION
   COLOR_BORDER_REMINDER:
-    value: '{!PALETTE_GRAY_4}'
+    value: '{!PALETTE_NEUTRAL_95}'
     comment: Border color on notification reminders.
   ## BUTTON
   BUTTON_COLOR_BORDER_PRIMARY:
-    value: '{!PALETTE_GRAY_5}'
+    value: '{!PALETTE_NEUTRAL_80}'
   COLOR_BORDER_BUTTON_DEFAULT:
-    value: '{!PALETTE_GRAY_5}'
+    value: '{!PALETTE_NEUTRAL_80}'
     comment: Border color for default secondary button
   COLOR_BORDER_BUTTON_FOCUS_INVERSE:
-    value: '{!PALETTE_GRAY_4}'
+    value: '{!PALETTE_NEUTRAL_95}'
   ## LINK
   COLOR_BORDER_LINK_FOCUS_INVERSE:
-    value: '{!PALETTE_GRAY_4}'
+    value: '{!PALETTE_NEUTRAL_95}'
   ## PAGE HEADERS
   PAGE_HEADER_COLOR_BORDER:
-    value: '{!PALETTE_GRAY_5}'
+    value: '{!PALETTE_NEUTRAL_80}'
   PAGE_HEADER_JOINED_COLOR_BORDER:
-    value: '{!PALETTE_GRAY_5}'
+    value: '{!PALETTE_NEUTRAL_80}'
   ## CARDS
   CARD_COLOR_BORDER:
-    value: '{!PALETTE_GRAY_5}'
+    value: '{!PALETTE_NEUTRAL_80}'
   CARD_FOOTER_COLOR_BORDER:
-    value: '{!PALETTE_GRAY_5}'
+    value: '{!PALETTE_NEUTRAL_80}'

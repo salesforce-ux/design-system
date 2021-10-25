@@ -15,7 +15,7 @@ imports:
 props:
   ## DEFAULT
   COLOR_BORDER_PRIMARY:
-    value: '{!PALETTE_GRAY_5}'
+    value: '{!PALETTE_NEUTRAL_80}'
   ## STROKES
   COLOR_STROKE_BRAND:
     value: '{!PALETTE_BLUE_50}'
@@ -27,8 +27,8 @@ props:
     value: '{!PALETTE_BLUE_20}'
     comment: Active stroke color for our product brand blue.
   COLOR_STROKE_DISABLED:
-    value: '{!PALETTE_GRAY_4}'
+    value: '{!PALETTE_NEUTRAL_95}'
     comment: Disabled stroke color.
   COLOR_STROKE_HEADER_BUTTON:
-    value: '{!PALETTE_GRAY_7}'
+    value: '{!PALETTE_NEUTRAL_70}'
     comment: Stroke color for our global header buttons.

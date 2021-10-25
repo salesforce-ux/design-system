@@ -8,5 +8,5 @@ imports:
 - "../../../../design-tokens/aliases/color-palettes.yml"
 props:
   POPOVER_COLOR_TEXT:
-    value: '{!PALETTE_COOL_GRAY_5}'
+    value: '{!PALETTE_NEUTRAL_80}'
     comment: Text color for step counter in walkthrough variant of popovers

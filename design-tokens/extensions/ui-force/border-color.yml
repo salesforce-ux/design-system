@@ -16,7 +16,7 @@ props:
     comment: Border color for a selected tab in a tab group.
     access: global
   COLOR_BORDER_TAB_ACTIVE:
-    value: '{!WHITE}'
+    value: '{!PALETTE_NEUTRAL_100}'
     comment: Border color for an active tab.
 
   COLOR_BORDER_ICON_INVERSE_HINT:
@@ -31,7 +31,7 @@ props:
     comment: Border color for brandable primary button - disabled state
     access: global
   COLOR_BORDER_BUTTON_DEFAULT:
-    value: '{!PALETTE_COOL_GRAY_5}'
+    value: '{!PALETTE_NEUTRAL_80}'
     comment: Border color for default secondary button
     access: global
   COLOR_BORDER_BUTTON_INVERSE_DISABLED:
@@ -39,7 +39,7 @@ props:
     comment: Border color for disabled inverse button.
     access: global
   COLOR_BORDER_INPUT:
-    value: '{!PALETTE_COOL_GRAY_5}'
+    value: '{!PALETTE_NEUTRAL_80}'
     comment: Border color on form elements.
     access: global
   COLOR_BORDER_INPUT_ACTIVE:
@@ -47,13 +47,13 @@ props:
     comment: Border color on active form elements.
     access: global
   COLOR_BORDER_INPUT_DISABLED:
-    value: '{!PALETTE_COOL_GRAY_6}'
+    value: '{!PALETTE_NEUTRAL_80}'
     comment: Border color on disabled form elements.
     access: global
   COLOR_BORDER_TOGGLE_CHECKED:
-    value: '{!WHITE}'
+    value: '{!PALETTE_NEUTRAL_100}'
     comment: These borders create the faux checkmark when the checkbox toggle is in the checked state.
 
   COLOR_BORDER_REMINDER:
-    value: '{!PALETTE_GRAY_4}'
+    value: '{!PALETTE_NEUTRAL_95}'
     comment: Border color on notification reminders.

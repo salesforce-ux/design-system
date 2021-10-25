@@ -30,51 +30,51 @@ props:
     comment: 'Winter 18 token, this has been deprecated. Please use BRAND_BACKGROUND_DARK_TRANSPARENT instead. These RGBA values need to be updated if BRAND_BAND_COLOR_BACKGROUND_PRIMARY changes, solves webkit bug'
   ## BACKGROUNDS
   COLOR_BACKGROUND_PRIMARY:
-    value: '{!PALETTE_GRAY_3}'
+    value: '{!PALETTE_NEUTRAL_95}'
   COLOR_BACKGROUND_SECONDARY:
-    value: '{!PALETTE_GRAY_1}'
+    value: '{!PALETTE_NEUTRAL_100}'
   COLOR_CONTRAST_PRIMARY:
-    value: '{!PALETTE_GRAY_3}'
+    value: '{!PALETTE_NEUTRAL_95}'
   COLOR_CONTRAST_SECONDARY:
-    value: '{!PALETTE_GRAY_3}'
+    value: '{!PALETTE_NEUTRAL_95}'
   COLOR_BACKGROUND_ALT_2:
-    value: '{!PALETTE_GRAY_3}'
+    value: '{!PALETTE_NEUTRAL_95}'
     comment: Used when further differentiation is needed because colorBackground and colorBackgroundAlt are both being used in close proximity.
   COLOR_BACKGROUND_SHADE:
-    value: '{!PALETTE_GRAY_4}'
+    value: '{!PALETTE_NEUTRAL_95}'
     specificity: builders
     comment: Used as gray background when more contrast is desired.
   COLOR_BACKGROUND_SHADE_DARK:
-    value: '{!PALETTE_GRAY_5}'
+    value: '{!PALETTE_NEUTRAL_80}'
     specificity: builders
     comment: Used as gray background in conjunction with Shade when more contrast is desired.
   COLOR_BACKGROUND_BROWSER:
-    value: '{!PALETTE_GRAY_9}'
+    value: '{!PALETTE_NEUTRAL_50}'
     comment: 'Secondary top bar background color (child browser, file preview, etc.)'
   ## MODAL BACKDROPS
   COLOR_BACKGROUND_TEMP_MODAL:
-    value: '{!PALETTE_GRAY_8}'
+    value: '{!PALETTE_NEUTRAL_60}'
     comment: 'Used as the default background color for temporary dialog elements, such as the progress spinner background.'
   COLOR_BACKGROUND_TEMP_MODAL_TINT:
     value: '{!PALETTE_DARK_GRAY_TRANSPARENT_60}'
     comment: The color of the mask overlay that appears when you enter a modal state.
   ## FEEDBACK
   COLOR_BACKGROUND_OFFLINE:
-    value: '{!PALETTE_GRAY_11}'
+    value: '{!PALETTE_NEUTRAL_30}'
     comment: Color for UI elements related to the offline state.
   ## FEED
   COLOR_BACKGROUND_PAYLOAD:
-    value: '{!PALETTE_GRAY_2}'
+    value: '{!PALETTE_NEUTRAL_95}'
     comment: Background color for payloads in the feed.
   ## UTILITY BAR
   COLOR_BACKGROUND_UTILITY_BAR_HOVER:
-    value: '{!PALETTE_GRAY_4}'
+    value: '{!PALETTE_NEUTRAL_95}'
     comment: Hover color for utility bar item.
   ## ACTION BAR
   COLOR_BACKGROUND_ACTIONBAR_ICON_UTILITY:
-    value: '{!PALETTE_GRAY_9}'
+    value: '{!PALETTE_NEUTRAL_50}'
     comment: Background for utility icons that live in the action bar on mobile.
   ## PAGE HEADERS
   COLOR_BACKGROUND_ANCHOR:
-    value: '{!PALETTE_GRAY_3}'
+    value: '{!PALETTE_NEUTRAL_95}'
     comment: Use COLOR_BACKGROUND_PAGE_HEADER instead.

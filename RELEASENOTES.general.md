@@ -3,6 +3,7 @@
 
 ## 2.17.0 - Upcoming
 
+- Added new standard color palette for neutral colors (black/white/grays)
 ## 2.16.2 - September 22, 2021
 
 ## 2.16.1 - August 25, 2021

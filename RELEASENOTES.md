@@ -3,6 +3,8 @@
 
 ## Release 2.17.0 - Upcoming
 
+- Added new standard color palette for neutral colors (black/white/grays)
+
 ## Components
 ### [Accordion](https://www.lightningdesignsystem.com/components/accordion)
 #### Added

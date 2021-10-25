@@ -13,7 +13,7 @@ imports:
 - ../../../aliases/color-palettes.yml
 props:
   COLOR_BORDER_PRIMARY:
-    value: '{!PALETTE_COOL_GRAY_5}'
+    value: '{!PALETTE_NEUTRAL_80}'
   COLOR_BORDER_BRAND_PRIMARY:
     value: '{!PALETTE_BLUE_60}'
   COLOR_BORDER_BRAND_PRIMARY_HOVER:
@@ -27,12 +27,12 @@ props:
     specificity: builders
     comment: Used to delineate the boundary of a specific region. Specific to builders.
   COLOR_STROKE_DISABLED:
-    value: '{!PALETTE_COOL_GRAY_4}'
+    value: '{!PALETTE_NEUTRAL_95}'
     cssProperties:
     - stroke
     comment: Disabled stroke color.
   COLOR_STROKE_HEADER_BUTTON:
-    value: '{!PALETTE_COOL_GRAY_7}'
+    value: '{!PALETTE_NEUTRAL_70}'
     cssProperties:
     - stroke
     comment: Stroke color for our global header buttons.
@@ -64,10 +64,10 @@ props:
     comment: Border color for brandable primary button
     access: global
   COLOR_BORDER_BUTTON_FOCUS_INVERSE:
-    value: '{!PALETTE_COOL_GRAY_4}'
+    value: '{!PALETTE_NEUTRAL_95}'
   COLOR_BORDER_LINK_FOCUS_INVERSE:
-    value: '{!PALETTE_COOL_GRAY_4}'
+    value: '{!PALETTE_NEUTRAL_95}'
   COLOR_BORDER_INPUT_CHECKBOX_SELECTED_CHECKMARK:
-    value: '{!WHITE}'
+    value: '{!PALETTE_NEUTRAL_100}'
     comment: The borders to create the checkmark
     access: global

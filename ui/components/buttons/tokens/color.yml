@@ -11,7 +11,7 @@ imports:
 - "../../../../design-tokens/aliases/color-palettes.yml"
 props:
   BUTTON_COLOR_BACKGROUND_PRIMARY:
-    value: '{!WHITE}'
+    value: '{!PALETTE_NEUTRAL_100}'
   BUTTON_COLOR_BACKGROUND_BRAND_PRIMARY:
     value: '{!PALETTE_BLUE_50}'
     deprecated: true
@@ -32,27 +32,27 @@ props:
     comment: Brandable primary button - hover state
     access: global
   COLOR_BACKGROUND_BUTTON_BRAND_DISABLED:
-    value: '{!PALETTE_GRAY_3}'
+    value: '{!PALETTE_NEUTRAL_95}'
     comment: Brandable primary button - disabled state
     access: global
   COLOR_BACKGROUND_BUTTON_DEFAULT:
-    value: '{!WHITE}'
+    value: '{!PALETTE_NEUTRAL_100}'
     comment: Default secondary button
     access: global
   COLOR_BACKGROUND_BUTTON_DEFAULT_HOVER:
-    value: '{!PALETTE_GRAY_2}'
+    value: '{!PALETTE_NEUTRAL_95}'
     comment: Default secondary button - hover state
     access: global
   COLOR_BACKGROUND_BUTTON_DEFAULT_FOCUS:
-    value: '{!PALETTE_GRAY_2}'
+    value: '{!PALETTE_NEUTRAL_95}'
     comment: Default secondary button - focus state
     access: global
   COLOR_BACKGROUND_BUTTON_DEFAULT_ACTIVE:
-    value: '{!PALETTE_GRAY_3}'
+    value: '{!PALETTE_NEUTRAL_95}'
     comment: Default secondary button - active state
     access: global
   COLOR_BACKGROUND_BUTTON_DEFAULT_DISABLED:
-    value: '{!WHITE}'
+    value: '{!PALETTE_NEUTRAL_100}'
     comment: Default secondary button - disabled state
     access: global
   COLOR_BACKGROUND_BUTTON_ICON:
@@ -60,19 +60,19 @@ props:
     comment: Background color for icon-only button
     access: global
   COLOR_BACKGROUND_BUTTON_ICON_HOVER:
-    value: '{!PALETTE_GRAY_3}'
+    value: '{!PALETTE_NEUTRAL_95}'
     comment: Background color for icon-only button - hover state
     access: global
   COLOR_BACKGROUND_BUTTON_ICON_FOCUS:
-    value: '{!PALETTE_GRAY_3}'
+    value: '{!PALETTE_NEUTRAL_95}'
     comment: Background color for icon-only button - focus state
     access: global
   COLOR_BACKGROUND_BUTTON_ICON_ACTIVE:
-    value: '{!PALETTE_GRAY_3}'
+    value: '{!PALETTE_NEUTRAL_95}'
     comment: Background color for icon-only button - active state
     access: global
   COLOR_BACKGROUND_BUTTON_ICON_DISABLED:
-    value: '{!WHITE}'
+    value: '{!PALETTE_NEUTRAL_100}'
     comment: Background color for icon-only button - disabled state
     access: global
   COLOR_BACKGROUND_BUTTON_INVERSE:

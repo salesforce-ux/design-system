@@ -11,14 +11,14 @@ imports:
 - "../../../../design-tokens/aliases/color-palettes.yml"
 props:
   CHAT_MESSAGE_COLOR_BACKGROUND_INBOUND:
-    value: '{!PALETTE_COOL_GRAY_3}'
+    value: '{!PALETTE_NEUTRAL_95}'
     comment: Inbound chat message background color.
   CHAT_MESSAGE_COLOR_BACKGROUND_OUTBOUND:
     value: '{!PALETTE_BLUE_30}'
     comment: Outbound chat message background color.
   CHAT_MESSAGE_COLOR_BACKGROUND_OUTBOUND_AGENT:
-    value: '{!PALETTE_COOL_GRAY_9}'
+    value: '{!PALETTE_NEUTRAL_50}'
     comment: Outbound agent chat message background color.
   CHAT_MESSAGE_COLOR_BACKGROUND_STATUS:
-    value: '{!PALETTE_COOL_GRAY_1}'
+    value: '{!PALETTE_NEUTRAL_100}'
     comment: Status chat message background color.

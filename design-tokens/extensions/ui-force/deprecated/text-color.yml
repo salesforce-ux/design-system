@@ -16,25 +16,25 @@ props:
     value: '{!PALETTE_BLUE_20}'
     comment: Primary body text color
   COLOR_TEXT_SECONDARY:
-    value: '{!PALETTE_COOL_GRAY_9}'
+    value: '{!PALETTE_NEUTRAL_50}'
     comment: Secondary body text color
   COLOR_TEXT_TERTIARY:
-    value: '{!PALETTE_COOL_GRAY_9}'
+    value: '{!PALETTE_NEUTRAL_50}'
     comment: Tertiary body text color
   COLOR_TEXT_MODAL:
-    value: '{!WHITE}'
+    value: '{!PALETTE_NEUTRAL_100}'
     comment: Modal header title
     access: global
   COLOR_TEXT_MODAL_BUTTON:
-    value: '{!PALETTE_COOL_GRAY_9}'
+    value: '{!PALETTE_NEUTRAL_50}'
     comment: Modal header button text color
     access: global
   COLOR_TEXT_STAGE_LEFT:
-    value: '{!PALETTE_COOL_GRAY_4}'
+    value: '{!PALETTE_NEUTRAL_95}'
     comment: Text in stage left navigation.
     access: global
   COLOR_TEXT_TOAST:
-    value: '{!PALETTE_COOL_GRAY_4}'
+    value: '{!PALETTE_NEUTRAL_95}'
     comment: Color for text on toast messages.
     access: global
   COLOR_TEXT_PILL:
@@ -42,7 +42,7 @@ props:
     comment: Text color for pills.
     access: global
   COLOR_TEXT_BROWSER:
-    value: '{!WHITE}'
+    value: '{!PALETTE_NEUTRAL_100}'
     comment: Top bar icon color
     access: global
   COLOR_TEXT_BROWSER_ACTIVE:
@@ -62,7 +62,7 @@ props:
     comment: Active state on a standalone link on a dark background.
     access: global
   COLOR_TEXT_INVERSE_HOVER:
-    value: '{!PALETTE_COOL_GRAY_7}'
+    value: '{!PALETTE_NEUTRAL_70}'
     comment: Hover state on a standalone link on a dark background.
     access: global
   COLOR_TEXT_TAB_LABEL_SELECTED:
@@ -82,7 +82,7 @@ props:
     comment: Color for text in active state in a tab group.
     access: global
   COLOR_TEXT_TAB_LABEL_DISABLED:
-    value: '{!PALETTE_COOL_GRAY_4}'
+    value: '{!PALETTE_NEUTRAL_95}'
     comment: Color for disabled text in a tab group.
     access: global
   COLOR_TEXT_ICON_BRAND:
@@ -90,10 +90,10 @@ props:
     comment: Color for non-interactive icons that represent a selected item in a list
     access: global
   COLOR_TEXT_ICON_UTILITY:
-    value: '{!PALETTE_COOL_GRAY_7}'
+    value: '{!PALETTE_NEUTRAL_70}'
     comment: Color for interactive utility icons
   COLOR_TEXT_TOGGLE_DISABLED:
-    value: '{!PALETTE_COOL_GRAY_5}'
+    value: '{!PALETTE_NEUTRAL_80}'
     comment: Color for disabled toggles
   COLOR_TEXT_ICON_INVERSE_HINT:
     value: '{!WHITE_TRANSPARENT_50}'
@@ -102,5 +102,5 @@ props:
     value: '{!WHITE_TRANSPARENT_75}'
     comment: Hovered icon color for a button that has a parent element that has a hover state
   COLOR_TEXT_ICON_DEFAULT_HINT_BORDERLESS:
-    value: '{!PALETTE_COOL_GRAY_4}'
+    value: '{!PALETTE_NEUTRAL_95}'
     comment: Icon color for a button that has a parent element that has a hover state. This is the default text/icon color for that button before its parent has been hovered over.

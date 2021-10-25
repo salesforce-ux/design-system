@@ -11,21 +11,21 @@ imports:
 - "../../../../design-tokens/aliases/color-palettes.yml"
 props:
   COLOR_BACKGROUND_CONTEXT_BAR:
-    value: '{!WHITE}'
+    value: '{!PALETTE_NEUTRAL_100}'
     comment: Default context bar background color.
   COLOR_BACKGROUND_CONTEXT_BAR_BRAND_ACCENT:
     value: '{!PALETTE_CLOUD_BLUE_60}'
     comment: Brand color in context bar for default theme
   COLOR_BACKGROUND_CONTEXT_TAB_BAR_ITEM:
-    value: '{!WHITE}'
+    value: '{!PALETTE_NEUTRAL_100}'
     comment: Context TAB bar item background color.
   ## Deprecated
   COLOR_BACKGROUND_CONTEXT_BAR_ITEM_HOVER:
-    value: '{!PALETTE_GRAY_1}'
+    value: '{!PALETTE_NEUTRAL_100}'
     comment: Hovered context bar item background color.
     deprecated: true
   COLOR_BACKGROUND_CONTEXT_BAR_ITEM_ACTIVE:
-    value: '{!PALETTE_GRAY_1}'
+    value: '{!PALETTE_NEUTRAL_100}'
     comment: Active context bar item background color.
     deprecated: true
   COLOR_BACKGROUND_CONTEXT_BAR_INVERSE_ITEM_HOVER:

@@ -14,31 +14,31 @@ imports:
 props:
   ## TOASTS
   COLOR_TEXT_TOAST:
-    value: '{!PALETTE_GRAY_4}'
+    value: '{!PALETTE_NEUTRAL_95}'
     comment: Color for text on toast messages.
   ## MODALS
   COLOR_TEXT_MODAL_BUTTON:
-    value: '{!PALETTE_GRAY_11}'
+    value: '{!PALETTE_NEUTRAL_30}'
     comment: Modal header button text color
   ## STAGE LEFT
   COLOR_TEXT_STAGE_LEFT:
-    value: '{!PALETTE_GRAY_4}'
+    value: '{!PALETTE_NEUTRAL_95}'
     comment: Text in stage left navigation.
   COLOR_TEXT_SECONDARY:
-    value: '{!PALETTE_GRAY_11}'
+    value: '{!PALETTE_NEUTRAL_30}'
     comment: Secondary body text color
   COLOR_TEXT_TERTIARY:
-    value: '{!PALETTE_GRAY_8}'
+    value: '{!PALETTE_NEUTRAL_60}'
     comment: Tertiary body text color
   COLOR_TEXT_INVERSE_ACTIVE:
     value: '{!PALETTE_BLUE_60}'
     comment: Active state on a standalone link on a dark background.
   COLOR_TEXT_INVERSE_HOVER:
-    value: '{!PALETTE_GRAY_7}'
+    value: '{!PALETTE_NEUTRAL_70}'
     comment: Hover state on a standalone link on a dark background.
   COLOR_TEXT_ICON_UTILITY:
-    value: '{!PALETTE_GRAY_7}'
+    value: '{!PALETTE_NEUTRAL_70}'
     comment: Color for interactive utility icons
   COLOR_TEXT_ICON_DEFAULT_HINT_BORDERLESS:
-    value: '{!PALETTE_GRAY_4}'
+    value: '{!PALETTE_NEUTRAL_95}'
     comment: Icon color for a button that has a parent element that has a hover state. This is the default text/icon color for that button before its parent has been hovered over.

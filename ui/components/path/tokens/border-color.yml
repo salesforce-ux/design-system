@@ -12,7 +12,7 @@ imports:
 
 props:
   COLOR_BORDER_PATH_DIVIDER:
-    value: '{!PALETTE_GRAY_1}'
+    value: '{!PALETTE_NEUTRAL_100}'
     comment: Used as a separator between dark colors like the stages of salespath.
   COLOR_BORDER_PATH_CURRENT:
     value: '{!PALETTE_BLUE_30}'

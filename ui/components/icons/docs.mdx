@@ -1,6 +1,5 @@
 import CodeView from '../../../shared/components/CodeView';
 import CodeBlock from '../../../shared/components/CodeBlock';
-import Example from '../../../shared/components/Example';
 import Blockquote from '../../../shared/components/Blockquote';
 import StylingHooksTable from '../../../shared/components/StylingHooksTable';
 import { UtilityIcon } from './base/example';
@@ -24,7 +23,7 @@ import { getDisplayElementById } from '../../shared/helpers';
 </div>
 
 <CodeView exampleOnly>
-  <UtilityIcon className="slds-icon-text-default" />
+  {getDisplayElementById(UtilityIconExamples.default, 'default')}
 </CodeView>
 
 ## About Icons
@@ -44,11 +43,9 @@ The containing element must have the `slds-icon_container` class.
 
 ## Default
 
-<Example title="Base Default">
-  <CodeView>
-    <UtilityIcon className="slds-icon-text-default" />
-  </CodeView>
-</Example>
+<CodeView>
+  {getDisplayElementById(UtilityIconExamples.default, 'default')}
+</CodeView>
 
 ### Structure and Implementation
 
@@ -77,11 +74,9 @@ All available SVG sprites fall into one of these five main categories: action, c
 
 To view all available action icons, see [action icons](/icons/#action).
 
-<Example title="Action">
-  <CodeView>
-    <ActionIcon />
-  </CodeView>
-</Example>
+<CodeView>
+  <ActionIcon />
+</CodeView>
 
 ### Custom
 
@@ -89,21 +84,17 @@ Custom icons have a rounded square shape and use a class on the container for th
 
 To view all available custom icons, see [custom icons](/icons/#custom).
 
-<Example title="Custom">
-  <CodeView>
-    <CustomIcon />
-  </CodeView>
-</Example>
+<CodeView>
+  <CustomIcon />
+</CodeView>
 
 ### Doctype
 
 To view all available doctype icons, see [doctype icons](/icons/#doctype).
 
-<Example title="Doctype">
-  <CodeView>
-    <DoctypeIcon />
-  </CodeView>
-</Example>
+<CodeView>
+  <DoctypeIcon />
+</CodeView>
 
 ### Standard
 
@@ -111,11 +102,9 @@ Standard icons have a rounded square shape and use a class on the container for 
 
 To view all available standard icons, see [standard icons](/icons/#standard).
 
-<Example title="Standard">
-  <CodeView>
-    <StandardIcon />
-  </CodeView>
-</Example>
+<CodeView>
+  <StandardIcon />
+</CodeView>
 
 ## Color
 
@@ -123,79 +112,49 @@ To view all available standard icons, see [standard icons](/icons/#standard).
 
 To change the fill of an icon to the default text color, add the `slds-icon-text-default` class to the icon.
 
-<Example title="Utility Default">
-  <CodeView>
-    <UtilityIcon className="slds-icon-text-default" />
-  </CodeView>
-</Example>
+<CodeView>
+  {getDisplayElementById(UtilityIconExamples.default, 'default')}
+</CodeView>
 
 ### Current Color
 
 To change the fill of an icon to match the current color of its parent, add the `slds-current-color` class to the icon's container. This class utilizes the CSS `currentColor` value.
 
-<Example title="Current Color">
-  <CodeView>
-    <UtilityIcon containerClassName="slds-current-color" />
-  </CodeView>
-</Example>
+<CodeView>
+  {getDisplayElementById(UtilityIconExamples.examples, 'currentColor')}
+</CodeView>
 
 ### Success
 
 To change the fill of an icon to the success text color, add the `slds-icon-text-success` class to the icon.
 
-<Example title="Utility Warning">
-  <CodeView>
-    <UtilityIcon className="slds-icon-text-success" />
-  </CodeView>
-</Example>
+<CodeView>
+  {getDisplayElementById(UtilityIconExamples.examples, 'text-warning')}
+</CodeView>
 
 ### Warning
 
 To change the fill of an icon to the warning text color, add the `slds-icon-text-warning` class to the icon.
 
-<Example title="Utility Warning">
-  <CodeView>
-    <UtilityIcon className="slds-icon-text-warning" />
-  </CodeView>
-</Example>
+<CodeView>
+  {getDisplayElementById(UtilityIconExamples.examples, 'text-warning')}
+</CodeView>
 
 ### Error
 
 To change the fill of an icon to the error text color, add the `slds-icon-text-error` class to the icon.
 
-<Example title="Utility Error">
-  <CodeView>
-    <UtilityIcon className="slds-icon-text-error" />
-  </CodeView>
-</Example>
+<CodeView>
+  {getDisplayElementById(UtilityIconExamples.examples, 'text-error')}
+</CodeView>
 
 ### Light
 
 To change the fill of an icon to the light text color, add the `slds-icon-text-light` class to the icon.
 
-<Example title="Utility Light">
-  <CodeView>
-    <UtilityIcon className="slds-icon-text-light" />
-  </CodeView>
-</Example>
-
-### Background Color
-
-To change a background color for action, custom, or standard icons, use composed class names:
-
-<code className="docs">.slds-icon-[sprite name]-[icon name]</code>
-Place the class on the `.slds-icon_container`.
-
-<CodeBlock toggleCode={false}>
-  <div className="slds-icon_container slds-icon-standard-account" />
-</CodeBlock>
-
-Some icon names have more than one word, separated by `_` underscores. Replace underscores with dashes when composing the class name. So `log_a_call` in the standard icon set becomes `.slds-icon-action-log-a-call`.
-
-- For [action](/components/icons/#Action) icons, add the `.slds-icon_container_circle` class to the container (`.slds-icon_container`), which changes the background shape to a circle.
-- [Doctype](/components/icons/#Doctype) icons have no background color.
-- [Standard](/components/icons/#Standard) and [Custom](/components/icons/#Custom) icons have a rounded square shape and use a class on the container for the background color.
-- [Utility](/components/icons/#Base) icons have no background color.
+<CodeView>
+  {getDisplayElementById(UtilityIconExamples.examples, 'light')}
+</CodeView>
 
 ## Size
 
@@ -205,41 +164,33 @@ Size modifiers can be added to the `slds-icon` element on all types of icons.
 
 To change the size of an icon to xx-small, add the `slds-icon_xx-small` class to the icon.
 
-<Example title="Utility XX-Small">
-  <CodeView>
-    <UtilityIcon className="slds-icon-text-default slds-icon_xx-small" />
-  </CodeView>
-</Example>
+<CodeView>
+  {getDisplayElementById(UtilityIconExamples.examples, 'size-xxsmall')}
+</CodeView>
 
 ### X-Small
 
 To change the size of an icon to x-small, add the `slds-icon_x-small` class to the icon.
 
-<Example title="Utility X-Small">
-  <CodeView>
-    <UtilityIcon className="slds-icon-text-default slds-icon_x-small" />
-  </CodeView>
-</Example>
+<CodeView>
+  {getDisplayElementById(UtilityIconExamples.examples, 'size-xsmall')}
+</CodeView>
 
 ### Small
 
 To change the size of an icon to small, add the `slds-icon_small` class to the icon.
 
-<Example title="Utility Small">
-  <CodeView>
-    <UtilityIcon className="slds-icon-text-default slds-icon_small" />
-  </CodeView>
-</Example>
+<CodeView>
+  {getDisplayElementById(UtilityIconExamples.examples, 'size-small')}
+</CodeView>
 
 ### Large
 
 To change the size of an icon to large, add the `slds-icon_large` class to the icon.
 
-<Example title="Utility Large">
-  <CodeView>
-    <UtilityIcon className="slds-icon-text-default slds-icon_large" />
-  </CodeView>
-</Example>
+<CodeView>
+  {getDisplayElementById(UtilityIconExamples.examples, 'size-large')}
+</CodeView>
 
 ## Right-to-Left Support
 

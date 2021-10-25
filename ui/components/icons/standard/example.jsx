@@ -59,3 +59,11 @@ export default [
     element: <StandardIcon />
   }
 ]
+
+export let examples = [
+  {
+    id: 'disabled',
+    label: 'Standard - Disabled',
+    element: <StandardIcon isDisabled />
+  }
+]

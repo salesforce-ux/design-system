@@ -7,17 +7,29 @@ import SvgIcon from '../../../shared/svg-icon';
 import classNames from 'classnames';
 
 export let UtilityIcon = props => {
+  const {
+    assistiveText,
+    className,
+    containerClassName,
+    isDisabled,
+    size,
+    title,
+    useCurrentColor
+  } = props;
   const symbol = props.symbol || 'announcement';
   return (
     <span
       className={classNames(
         'slds-icon_container slds-icon-utility-' + symbol,
-        { 'slds-current-color': props.useCurrentColor },
-        props.containerClassName
+        {
+          'slds-current-color': useCurrentColor,
+          'slds-icon_disabled': isDisabled
+        },
+        containerClassName
       )}
       title={
-        props.title !== false
-          ? props.title || 'Description of icon when needed'
+        title !== false
+          ? title || 'Description of icon when needed'
           : null
       }
     >
@@ -25,19 +37,19 @@ export let UtilityIcon = props => {
         className={classNames(
           'slds-icon',
           {
-            'slds-icon_xx-small': props.size === 'xx-small',
-            'slds-icon_x-small': props.size === 'x-small',
-            'slds-icon_small': props.size === 'small',
-            'slds-icon_large': props.size === 'large'
+            'slds-icon_xx-small': size === 'xx-small',
+            'slds-icon_x-small': size === 'x-small',
+            'slds-icon_small': size === 'small',
+            'slds-icon_large': size === 'large'
           },
-          props.className
+          className
         )}
         sprite="utility"
         symbol={symbol}
       />
-      {props.assistiveText !== false ? (
+      {assistiveText !== false ? (
         <span className="slds-assistive-text">
-          {props.assistiveText || 'Description of icon when needed'}
+          {assistiveText || 'Description of icon when needed'}
         </span>
       ) : null}
     </span>
@@ -68,14 +80,18 @@ export default [
 export let examples = [
   {
     id: 'currentColor',
-    label: 'Current Color',
-    element: <UtilityIcon useCurrentColor />
+    label: 'Base - Current Color',
+    element: (
+      <span style={{ color: 'purple' }}>
+        <UtilityIcon useCurrentColor />
+      </span >
+    )
   },
   {
     id: 'rtl-flipped',
-    label: 'Horizontally flipped icon',
+    label: 'Base - Horizontally flipped icon (RTL)',
     element: (
-      <div dir="rtl" style={{ width: '32px' }}>
+      <span dir="rtl">
         <UtilityIcon
           containerClassName="slds-icon_flip"
           className="slds-icon-text-default"
@@ -83,7 +99,52 @@ export let examples = [
           title="List icon"
           assistiveText="List icon"
         />
-      </div>
+      </span>
     )
+  },
+  {
+    id: 'size-xxsmall',
+    label: 'Base - size xxsmall',
+    element: <UtilityIcon useCurrentColor className="slds-icon_xx-small" />
+  },
+  {
+    id: 'size-xsmall',
+    label: 'Base - size xsmall',
+    element: <UtilityIcon useCurrentColor className="slds-icon_x-small" />
+  },
+  {
+    id: 'size-small',
+    label: 'Base - size small',
+    element: <UtilityIcon useCurrentColor className="slds-icon_small" />
+  },
+  {
+    id: 'size-large',
+    label: 'Base - size large',
+    element: <UtilityIcon useCurrentColor className="slds-icon_large" />
+  },
+  {
+    id: 'disabled',
+    label: 'Base - disabled',
+    element: <UtilityIcon isDisabled />
+  },
+  {
+    id: 'light',
+    label: 'Base - light',
+    element: <UtilityIcon className="slds-icon-text-light" />
+  },
+  {
+    id: 'text-success',
+    label: 'Base - text success',
+    element: <UtilityIcon className="slds-icon-text-success" />
+  },
+  {
+    id: 'text-warning',
+    label: 'Base - text warning',
+    element: <UtilityIcon className="slds-icon-text-warning" />
+  },
+  {
+    id: 'text-error',
+    label: 'Base - text error',
+    element: <UtilityIcon className="slds-icon-text-error" />
   }
 ];

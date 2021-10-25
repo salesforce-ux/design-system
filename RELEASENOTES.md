@@ -28,9 +28,27 @@
 #### Added
 - Added `slds` as the default namespace with `sds` fallbacks for Styling Hooks.
 
+### [Cards](https://www.lightningdesignsystem.com/components/cards)
+#### Added
+- Added `slds` as the default namespace with `sds` fallbacks for Styling Hooks.
+- Added reassignment of Styling Hooks for component states.
+- Added clarification about card header icon assistive text.
+
 ### [Checkbox](https://www.lightningdesignsystem.com/components/checkbox)
+#### Added
+- Added `slds` as the default namespace with `sds` fallbacks for Styling Hooks.
+- Added CSS Custom Property reassignments for variants and states
 #### Changed
 - Labels will no longer wrap below the checkbox. When the label text wraps, it will now go directly under the previous line.
+
+### [Checkbox Toggle](https://www.lightningdesignsystem.com/components/checkbox-toggle)
+## Added
+- Added `slds` as the default namespace with `sds` fallbacks for Styling Hooks.
+- Added reassignment of Styling Hooks for component states.
+
+### [Color Picker](https://www.lightningdesignsystem.com/components/color-picker)
+#### Changed
+- Added `aria-label` attribute to listbox
 
 ### [Data Tables](https://www.lightningdesignsystem.com/components/data-tables)
 #### Added
@@ -44,13 +62,57 @@
 #### Fixed
 - Fixed missing attribute `required` on date input
 
+### [Icons](https://www.lightningdesignsystem.com/components/icons)
+#### Added
+- Added `slds` as the default namespace with `sds` fallbacks for Styling Hooks.
+- Added CSS Custom Property reassignments for variants and states
+
+### [Modals](https://www.lightningdesignsystem.com/components/modals)
+#### Added
+- Added `slds` as the default namespace with `sds` fallbacks for Styling Hooks.
+- Added CSS Custom Property reassignments for variants and states.
+
+### [Pills](https://www.lightningdesignsystem.com/components/pills)
+## Added
+- Added `slds` as the default namespace with `sds` fallbacks for Styling Hooks.
+- Added reassignment of Styling Hooks for component states.
+
 ### [Progress Ring](https://www.lightningdesignsystem.com/components/progress-ring)
 #### Added
 - Added a shape to the progress ring to better visually indicate value by more than color alone.
 
+### [Prompt](https://www.lightningdesignsystem.com/components/prompt)
+#### Added
+- Added CSS Custom Property reassignments for variants and states (e.g., focus, active, hover).
+
 ### [Radio Group](https://www.lightningdesignsystem.com/components/radio-group)
+#### Added
+- Added `slds` as the default namespace with `sds` fallbacks for Styling Hooks.
+- Added CSS Custom Property reassignments for variants and states
 #### Changed
 - Labels will no longer wrap below the radio button. When the label text wraps, it will now go directly under the previous line.
+
+### [Select](https://www.lightningdesignsystem.com/components/select)
+#### Added
+- Added `slds` as the default namespace with `sds` fallbacks for Styling Hooks.
+
+### [Slider](https://www.lightningdesignsystem.com/components/slider)
+#### Added
+- Added `slds` as the default namespace with `sds` fallbacks for Styling Hooks.
+- Added CSS Custom Property reassignments for variants and states (e.g., focus, active, hover).
+
+### [Textarea](https://www.lightningdesignsystem.com/components/textarea)
+#### Added
+- Added `slds` as the default namespace with `sds` fallbacks for Styling Hooks.
+- Added CSS Custom Property reassignments for variants and states
+
+### [Toast](https://www.lightningdesignsystem.com/components/toast)
+#### Added
+- Added `slds` as the default namespace with `sds` fallbacks for Styling Hooks.
+
+### [Tooltips](https://www.lightningdesignsystem.com/components/tooltips)
+#### Added
+- Added `slds` as the default namespace with `sds` fallbacks for Styling Hooks.
 
 ## Release 2.16.2 - September 22, 2021
 

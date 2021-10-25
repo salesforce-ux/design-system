@@ -3,6 +3,7 @@
 # Cards Release Notes
 
 <!-- ## [Unreleased] -->
+
 ## 2.17.0
 
 ### Added
@@ -16,6 +17,7 @@
 ### Added
 
 - Added annotations for Einstein themed cards
+
 ## 2.14.0
 
 ### Added

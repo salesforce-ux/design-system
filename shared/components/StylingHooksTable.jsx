@@ -8,7 +8,7 @@ import Copy from '../../shared/components/Copy';
 import { propTypes } from '../../scripts/var-metadata';
 
 const getPropTypeData = (name, varName) => {
-  const trimmedVar = varName.replace(`--sds-c-${name}-`, '');
+  const trimmedVar = varName.replace(`--slds-c-${name}-`, '');
   let propType = null;
   let valueTypes = null;
 

@@ -4,6 +4,8 @@
 ## 2.17.0 - Upcoming
 
 - Added new standard color palette for neutral colors (black/white/grays)
+- Updated Styling Hooks table on component pages to display `slds`-namespaced Hooks
+
 ## 2.16.2 - September 22, 2021
 
 ## 2.16.1 - August 25, 2021

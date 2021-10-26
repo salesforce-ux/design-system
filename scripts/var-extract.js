@@ -13,7 +13,7 @@ const { propTypes } = require('./var-metadata');
 const extractVarsFromSLDS = (props = {}) => {
   const { callback, suppressOutput } = props;
   const cssFolderExists = fs.existsSync('./.generated/css');
-  const varsAllowPattern = /^--sds-c/;
+  const varsAllowPattern = /^--slds-c/;
 
   // if there's no css folder yet, generate it!
   if (!cssFolderExists) {
@@ -93,7 +93,7 @@ const extractVarsFromCSS = (cssContent, options = {}) => {
       const vars = rule.declarations
         .filter(dec => (dec.value ? dec.value.match(/var\(/) : false))
         .map(dec => {
-          const cssVar = dec.value.match(/(--.*?)[,|\)]/)[1];
+          const cssVar = dec.value.match(/(--.*?)[,|)]/)[1];
           const fallbackMatch = dec.value.match(/,\s(.*)\)/);
           const fallback = fallbackMatch ? fallbackMatch[1] : '';
 

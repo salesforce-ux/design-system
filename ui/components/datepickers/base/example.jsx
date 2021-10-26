@@ -13,6 +13,7 @@ import Input from '../../input/';
 ----------------------------------------------------------------------------- */
 
 const dateInputId = 'date-input-id';
+const demoStyles = 'height: 25rem;';
 
 /* -----------------------------------------------------------------------------
     Private
@@ -493,6 +494,7 @@ export default [
   {
     id: 'default',
     label: 'Base – default',
+    demoStyles: demoStyles,
     element: (
       <DatePickerElement
         idPrefix="defaultPicker"
@@ -509,6 +511,7 @@ export let states = [
   {
     id: 'datepicker-day-selected',
     label: 'Date selected',
+    demoStyles: demoStyles,
     element: (
       <DatePickerElement
         idPrefix="pickerDaySelected"
@@ -525,6 +528,7 @@ export let states = [
   {
     id: 'datepicker-with-error',
     label: 'Date Picker has Error',
+    demoStyles: demoStyles,
     element: (
       <DatePickerElement
         idPrefix="pickerWithError"
@@ -539,6 +543,7 @@ export let states = [
   {
     id: 'datepicker-required',
     label: 'Date Picker - required',
+    demoStyles: demoStyles,
     element: (
       <DatePickerElement
         idPrefix="pickerRequired"
@@ -553,6 +558,7 @@ export let states = [
   {
     id: 'datepicker-required-with-error',
     label: 'Date Picker - required with error',
+    demoStyles: demoStyles,
     element: (
       <DatePickerElement
         idPrefix="pickerRequired"
@@ -585,6 +591,7 @@ export let examples = [
   {
     id: 'mobile',
     label: 'Mobile',
+    demoStyles: demoStyles,
     element: (
       <FormElement labelContent="Date" inputId={dateInputId + '-mobile'}>
         <Input id={dateInputId + '-mobile'} type="datetime-local" />
@@ -594,6 +601,7 @@ export let examples = [
   {
     id: 'datepicker-in-datatable',
     label: 'Datepicker in a Data Table',
+    demoStyles: demoStyles,
     element: (
       <SimpleTable>
         <DatePickerElement
@@ -609,6 +617,7 @@ export let examples = [
   {
     id: 'datepicker-in-datatable_date-selected',
     label: 'Datepicker with date selected in a Data Table',
+    demoStyles: demoStyles,
     element: (
       <SimpleTable>
         <DatePickerElement
@@ -627,6 +636,7 @@ export let examples = [
   {
     id: 'datepicker-in-datatable_with-error',
     label: 'Datepicker with an error in a Data Table',
+    demoStyles: demoStyles,
     element: (
       <SimpleTable>
         <DatePickerElement

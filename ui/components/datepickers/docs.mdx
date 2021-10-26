@@ -2,7 +2,7 @@ import CodeView from '../../../shared/components/CodeView';
 import DisplayColumn from '../../../shared/components/DisplayColumn';
 import DisplayGrid from '../../../shared/components/DisplayGrid';
 import Blockquote from '../../../shared/components/Blockquote';
-import { getDisplayElementById } from '../../shared/helpers';
+import { getDisplayElementById, getDemoStylesById } from '../../shared/helpers';
 import * as Base from './base/example';
 import * as Range from './range/example';
 
@@ -10,7 +10,7 @@ import * as Range from './range/example';
   A datepicker is a text input to capture a date. You can select a single date, date range or date and time.
 </div>
 
-<CodeView exampleOnly>
+<CodeView exampleOnly demoStyles={getDemoStylesById(Base.default)}>
   {getDisplayElementById(Base.default)}
 </CodeView>
 
@@ -82,61 +82,61 @@ The datepicker has the following markup requirements:
   - `esc` to close datepicker without choosing a date
 
 ## Base
-<CodeView>
+<CodeView demoStyles={getDemoStylesById(Base.default)}>
   {getDisplayElementById(Base.default)}
 </CodeView>
 
 ### States
 
 #### Date Selected
-<CodeView>
+<CodeView demoStyles={getDemoStylesById(Base.states, 'datepicker-day-selected')}>
   {getDisplayElementById(Base.states, 'datepicker-day-selected')}
 </CodeView>
 
 #### Date Picker Has Error
-<CodeView>
+<CodeView demoStyles={getDemoStylesById(Base.states, 'datepicker-with-error')}>
   {getDisplayElementById(Base.states, 'datepicker-with-error')}
 </CodeView>
 
 #### Date Required
-<CodeView>
+<CodeView demoStyles={getDemoStylesById(Base.states, 'datepicker-required')}>
   {getDisplayElementById(Base.states, 'datepicker-required')}
 </CodeView>
 
 #### Date Required, Date Picker Has Error
-<CodeView>
+<CodeView demoStyles={getDemoStylesById(Base.states, 'datepicker-required-with-error')}>
   {getDisplayElementById(Base.states, 'datepicker-required-with-error')}
 </CodeView>
 
 
 ## Range
-<CodeView>
+<CodeView demoStyles={getDemoStylesById(Range.default)}>
   {getDisplayElementById(Range.default)}
 </CodeView>
 
 ### States
 
 #### Start Date Selected
-<CodeView>
+<CodeView demoStyles={getDemoStylesById(Range.states, 'start-date')}>
   {getDisplayElementById(Range.states, 'start-date')}
 </CodeView>
 
 #### End date selected (Same week)
-<CodeView>
+<CodeView demoStyles={getDemoStylesById(Range.states, 'end-date-week')}>
   {getDisplayElementById(Range.states, 'end-date-week')}
 </CodeView>
 
 #### End date selected (Different week)
-<CodeView>
-  {getDisplayElementById(Range.states, 'end-date-weeks')}
+<CodeView demoStyles={getDemoStylesById(Range.default)}>
+  {getDisplayElementById(Range.default)}
 </CodeView>
 
 #### Today - In selected range
-<CodeView>
-  {getDisplayElementById(Range.states, 'today-in-range')}
+<CodeView demoStyles={getDemoStylesById(Range.default)}>
+  {getDisplayElementById(Range.default)}
 </CodeView>
 
 #### Current And Adjacent Month In Selected Range
-<CodeView>
-  {getDisplayElementById(Range.states, 'span-across-month-in-range')}
+<CodeView demoStyles={getDemoStylesById(Range.default)}>
+  {getDisplayElementById(Range.default)}
 </CodeView>

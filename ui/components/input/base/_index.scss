@@ -265,7 +265,7 @@
     .slds-input_bare,
     .slds-input--bare {
       /*! @css-var-fallback padding-right */
-      --slds-c-input-spacing-horizontal-end: (#{$spacing-xx-large} + #{$spacing-x-small});
+      --slds-c-input-spacing-horizontal-end: calc(#{$spacing-xx-large} + #{$spacing-x-small});
     }
   }
 }

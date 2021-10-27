@@ -4,12 +4,6 @@
 
 <!-- ## [Unreleased] -->
 
-## 2.17.0
-
-### Added
-
-- Added CSS Custom Property reassignments for variants and states (e.g., focus, active, hover).
-
 ## 2.13.1
 
 ### Fixed

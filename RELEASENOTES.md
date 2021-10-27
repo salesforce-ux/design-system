@@ -4,6 +4,8 @@
 ## Release 2.17.0 - Upcoming
 
 - Added new standard color palette for neutral colors (black/white/grays)
+- Updated Styling Hooks table on component pages to display `slds`-namespaced Hooks
+- Updated icons to v10.2.1
 
 ## Components
 ### [Accordion](https://www.lightningdesignsystem.com/components/accordion)
@@ -65,9 +67,18 @@
 - Fixed missing attribute `required` on date input
 
 ### [Icons](https://www.lightningdesignsystem.com/components/icons)
+#### Removed
+- Removed outdated documentation about changing background color, as this contradicts current Design System guidelines.
 #### Added
 - Added `slds` as the default namespace with `sds` fallbacks for Styling Hooks.
 - Added CSS Custom Property reassignments for variants and states
+
+### [Input](https://www.lightningdesignsystem.com/components/input)
+## Added
+- Added `slds` as the default namespace with `sds` fallbacks for Styling Hooks.
+- Added reassignment of Styling Hooks for component states.
+## Changed
+- `.slds-input_borders` now follows the prescribed usage guidelines and is only allowed on `readonly` Inputs.
 
 ### [Modals](https://www.lightningdesignsystem.com/components/modals)
 #### Added
@@ -102,6 +113,11 @@
 #### Added
 - Added `slds` as the default namespace with `sds` fallbacks for Styling Hooks.
 - Added CSS Custom Property reassignments for variants and states (e.g., focus, active, hover).
+
+### [Tabs](https://www.lightningdesignsystem.com/components/tabs)
+#### Added
+- Added `slds` as the default namespace with `sds` fallbacks for Styling Hooks.
+- Added reassignment of Styling Hooks for component states.
 
 ### [Textarea](https://www.lightningdesignsystem.com/components/textarea)
 #### Added

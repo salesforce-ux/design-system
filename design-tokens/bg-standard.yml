@@ -893,3 +893,31 @@ props:
     value: '#0EB58A'
   BUDGET:
     value: '#107CAD'
+  ASSET_AUDIT:
+    value: '#9050E9'
+  ATTACH:
+    value: '#9050E9'
+  CONTRACT_PAYMENT:
+    value: '#9050E9'
+  FIELD_SALES:
+    value: '#9050E9'
+  HISTORICAL_ADHERENCE:
+    value: '#03V4A7'
+  MEDICATION_DISPENSE:
+    value: '#5696D7'
+  MEDICATION_RECONCILIATION:
+    value: '#3F719A'
+  MED_REC_RECOMMENDATION:
+    value: '#61BBCA'
+  MED_REC_STATEMENT_RECOMMENDATION:
+    value: '#808CDE'
+  REPORT_TYPE:
+    value: '#45C65A'
+  TOUR:
+    value: '#9050E9'
+  TOUR_CHECK:
+    value: '#9050E9'
+  UNIFIED_HEALTH_SCORE:
+    value: '#7E8BE4'
+  WORKFORCE_ENGAGEMENT:
+    value: '#9D3856'

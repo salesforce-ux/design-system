@@ -14,7 +14,7 @@ import ButtonIcon from '../../button-icons/';
 
 export const exampleDemoStyles = 'height: 640px;';
 
-export let Backdrop = props => {
+export let Backdrop = (props) => {
   return (
     <Fragment>
       {props.children}
@@ -23,7 +23,7 @@ export let Backdrop = props => {
   );
 };
 
-export let Modal = props => (
+export let Modal = (props) => (
   <section
     role="dialog"
     tabIndex={props.tabIndex}
@@ -37,14 +37,14 @@ export let Modal = props => (
 );
 
 Modal.propTypes = {
-  tabIndex: PropTypes.oneOf(['-1', '0'])
+  tabIndex: PropTypes.oneOf(['-1', '0']),
 };
 
 Modal.defaultProps = {
-  tabIndex: '-1'
+  tabIndex: '-1',
 };
 
-export let ModalHeader = props => (
+export let ModalHeader = (props) => (
   <div className={classNames('slds-modal__header', props.className)}>
     {props.closeButton !== 'false' ? (
       <ButtonIcon
@@ -59,7 +59,7 @@ export let ModalHeader = props => (
   </div>
 );
 
-export let ModalContent = props => (
+export let ModalContent = (props) => (
   <div
     className={classNames('slds-modal__content', props.className)}
     id={props.id ? props.id : props['aria-describedby'] || 'modal-content-id-1'}
@@ -76,10 +76,10 @@ export let ModalMenu = ({ id, children }) => (
 
 ModalMenu.propTypes = {
   id: PropTypes.string.isRequired,
-  children: PropTypes.node
+  children: PropTypes.node,
 };
 
-export let ModalFooter = props => (
+export let ModalFooter = (props) => (
   <div className={classNames('slds-modal__footer', props.className)}>
     {props.children}
   </div>
@@ -89,7 +89,7 @@ export let ModalFooter = props => (
 // State Constructor(s)
 /// ///////////////////////////////////////////
 
-export let Taglines = props => (
+export let Taglines = (props) => (
   <Backdrop>
     <Modal aria-labelledby="modal-heading-01">
       <ModalHeader>
@@ -100,7 +100,7 @@ export let Taglines = props => (
           Here&rsquo;s a tagline if you need it. It is allowed to extend across
           mulitple lines, so I&rsquo;m making up content to show that to you. It
           is allowed to{' '}
-          <a href="#" onClick={e => e.preventDefault()}>
+          <a href="#" onClick={(e) => e.preventDefault()}>
             contain links or be a link
           </a>
           .
@@ -132,7 +132,7 @@ export let Taglines = props => (
   </Backdrop>
 );
 
-export let ModalSizes = props => (
+export let ModalSizes = (props) => (
   <Backdrop>
     <Modal
       className={classNames(
@@ -174,10 +174,10 @@ export let ModalSizes = props => (
 );
 
 ModalSizes.propTypes = {
-  size: PropTypes.oneOf(['small', 'medium', 'large'])
+  size: PropTypes.oneOf(['small', 'medium', 'large']),
 };
 
-export let Directional = props => (
+export let Directional = (props) => (
   <Backdrop>
     <Modal aria-labelledby="modal-heading-01">
       <ModalHeader>
@@ -215,7 +215,7 @@ export let Directional = props => (
   </Backdrop>
 );
 
-export let Headless = props => (
+export let Headless = (props) => (
   <Backdrop>
     <Modal aria-label="Meaningful description of the modal content">
       <ModalHeader className="slds-modal__header_empty" />
@@ -245,7 +245,7 @@ export let Headless = props => (
   </Backdrop>
 );
 
-export let Footless = props => (
+export let Footless = (props) => (
   <Backdrop>
     <Modal aria-labelledby="modal-heading-01">
       <ModalHeader>
@@ -275,7 +275,7 @@ export let Footless = props => (
   </Backdrop>
 );
 
-export let HiddenFooter = props => (
+export let HiddenFooter = (props) => (
   <Backdrop>
     <Modal aria-labelledby="modal-heading-01">
       <ModalHeader>
@@ -392,8 +392,8 @@ export default [
     label: 'Default',
     demoStyles: exampleDemoStyles,
     storybookStyles: true,
-    element: defaultComponent
-  }
+    element: defaultComponent,
+  },
 ];
 
 export const examples = [
@@ -401,54 +401,54 @@ export const examples = [
     id: 'taglines',
     label: 'Taglines',
     demoStyles: exampleDemoStyles,
-    element: <Taglines />
+    element: <Taglines />,
   },
   {
     id: 'headless',
     label: 'Header empty',
     demoStyles: exampleDemoStyles,
-    element: <Headless />
+    element: <Headless />,
   },
   {
     id: 'footless',
     label: 'Footer removed',
     demoStyles: exampleDemoStyles,
-    element: <Footless />
+    element: <Footless />,
   },
   {
     id: 'hidden-footer',
     label: 'Footer hidden but not removed (not public)',
     demoStyles: exampleDemoStyles,
-    element: <HiddenFooter />
+    element: <HiddenFooter />,
   },
   {
     id: 'large',
     label: 'Large',
     demoStyles: exampleDemoStyles,
-    element: <ModalSizes size="large" />
+    element: <ModalSizes size="large" />,
   },
   {
     id: 'medium',
     label: 'Medium',
     demoStyles: exampleDemoStyles,
-    element: <ModalSizes size="medium" />
+    element: <ModalSizes size="medium" />,
   },
   {
     id: 'small',
     label: 'Small',
     demoStyles: exampleDemoStyles,
-    element: <ModalSizes size="small" />
+    element: <ModalSizes size="small" />,
   },
   {
     id: 'directional',
     label: 'Directional',
     demoStyles: exampleDemoStyles,
-    element: <Directional />
+    element: <Directional />,
   },
   {
     id: 'menu',
-    label: 'Menu',
+    label: 'Deprecated - Menu',
     demoStyles: exampleDemoStyles,
-    element: <Menu />
-  }
+    element: <Menu />,
+  },
 ];

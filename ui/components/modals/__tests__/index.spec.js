@@ -17,6 +17,8 @@ import {
 const { matchesMarkup } = createHelpers(__dirname);
 
 describe('Modal', () => {
+  it('renders a default modal', () => matchesMarkup(<defaultComponent />));
+
   it('renders a modal with a tagline', () => matchesMarkup(<Taglines />));
 
   it('renders a model that is small', () =>

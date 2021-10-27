@@ -14,10 +14,6 @@ import ButtonIcon from '../../button-icons/';
 
 export const exampleDemoStyles = 'height: 640px;';
 
-export const Context = props => (
-  <div style={{ height: '640px' }}>{props.children}</div>
-);
-
 export let Backdrop = props => {
   return (
     <Fragment>
@@ -49,7 +45,7 @@ Modal.defaultProps = {
 };
 
 export let ModalHeader = props => (
-  <header className={classNames('slds-modal__header', props.className)}>
+  <div className={classNames('slds-modal__header', props.className)}>
     {props.closeButton !== 'false' ? (
       <ButtonIcon
         className="slds-modal__close slds-button_icon-inverse"
@@ -60,7 +56,7 @@ export let ModalHeader = props => (
       />
     ) : null}
     {props.children}
-  </header>
+  </div>
 );
 
 export let ModalContent = props => (
@@ -84,9 +80,9 @@ ModalMenu.propTypes = {
 };
 
 export let ModalFooter = props => (
-  <footer className={classNames('slds-modal__footer', props.className)}>
+  <div className={classNames('slds-modal__footer', props.className)}>
     {props.children}
-  </footer>
+  </div>
 );
 
 /// ///////////////////////////////////////////
@@ -390,15 +386,17 @@ const defaultComponent = (
   </Backdrop>
 );
 
-export default defaultComponent;
-
-export const examples = [
+export default [
   {
     id: 'default',
     label: 'Default',
     demoStyles: exampleDemoStyles,
-    element: <Taglines />
-  },
+    storybookStyles: true,
+    element: defaultComponent
+  }
+];
+
+export const examples = [
   {
     id: 'taglines',
     label: 'Taglines',
@@ -454,5 +452,3 @@ export const examples = [
     element: <Menu />
   }
 ];
-
-export const states = [];

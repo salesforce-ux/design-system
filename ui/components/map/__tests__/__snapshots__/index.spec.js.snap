@@ -537,7 +537,7 @@ exports[`renders a map component modal 1`] = `
     <div
       className="slds-modal__container"
     >
-      <header
+      <div
         className="slds-modal__header"
       >
         <button
@@ -565,7 +565,7 @@ exports[`renders a map component modal 1`] = `
         >
           Address: 1 Market St, San Francisco, CA 94105
         </h2>
-      </header>
+      </div>
       <div
         className="slds-modal__content"
         id="modal-content-id-01"
@@ -609,7 +609,7 @@ exports[`renders a map component modal with coordinates panel 1`] = `
     <div
       className="slds-modal__container"
     >
-      <header
+      <div
         className="slds-modal__header"
       >
         <button
@@ -637,7 +637,7 @@ exports[`renders a map component modal with coordinates panel 1`] = `
         >
           Favorite Solar Companies (2)
         </h2>
-      </header>
+      </div>
       <div
         className="slds-modal__content"
         id="modal-content-id-01"
@@ -1094,7 +1094,7 @@ exports[`renders a map component modal with coordinates panel 1`] = `
           </div>
         </div>
       </div>
-      <footer
+      <div
         className="slds-modal__footer"
       >
         <button
@@ -1102,7 +1102,7 @@ exports[`renders a map component modal with coordinates panel 1`] = `
         >
           Open in Google Maps
         </button>
-      </footer>
+      </div>
     </div>
   </section>
   <div
@@ -1130,7 +1130,7 @@ exports[`renders a map component modal with first coordinate selected 1`] = `
     <div
       className="slds-modal__container"
     >
-      <header
+      <div
         className="slds-modal__header"
       >
         <button
@@ -1158,7 +1158,7 @@ exports[`renders a map component modal with first coordinate selected 1`] = `
         >
           Favorite Solar Companies (2)
         </h2>
-      </header>
+      </div>
       <div
         className="slds-modal__content"
         id="modal-content-id-01"
@@ -1617,7 +1617,7 @@ exports[`renders a map component modal with first coordinate selected 1`] = `
           </div>
         </div>
       </div>
-      <footer
+      <div
         className="slds-modal__footer"
       >
         <button
@@ -1625,7 +1625,7 @@ exports[`renders a map component modal with first coordinate selected 1`] = `
         >
           Open in Google Maps
         </button>
-      </footer>
+      </div>
     </div>
   </section>
   <div
@@ -1653,7 +1653,7 @@ exports[`renders a map component modal with footer 1`] = `
     <div
       className="slds-modal__container"
     >
-      <header
+      <div
         className="slds-modal__header"
       >
         <button
@@ -1681,7 +1681,7 @@ exports[`renders a map component modal with footer 1`] = `
         >
           Geo Code: 37°48'08.3"N 122°15'55.2W
         </h2>
-      </header>
+      </div>
       <div
         className="slds-modal__content"
         id="modal-content-id-01"
@@ -1698,7 +1698,7 @@ exports[`renders a map component modal with footer 1`] = `
           </div>
         </div>
       </div>
-      <footer
+      <div
         className="slds-modal__footer"
       >
         <button
@@ -1706,7 +1706,7 @@ exports[`renders a map component modal with footer 1`] = `
         >
           Open in Google Maps
         </button>
-      </footer>
+      </div>
     </div>
   </section>
   <div
@@ -1734,7 +1734,7 @@ exports[`renders a map component modal with second coordinate selected 1`] = `
     <div
       className="slds-modal__container"
     >
-      <header
+      <div
         className="slds-modal__header"
       >
         <button
@@ -1762,7 +1762,7 @@ exports[`renders a map component modal with second coordinate selected 1`] = `
         >
           Favorite Solar Companies (2)
         </h2>
-      </header>
+      </div>
       <div
         className="slds-modal__content"
         id="modal-content-id-01"
@@ -2221,7 +2221,7 @@ exports[`renders a map component modal with second coordinate selected 1`] = `
           </div>
         </div>
       </div>
-      <footer
+      <div
         className="slds-modal__footer"
       >
         <button
@@ -2229,7 +2229,7 @@ exports[`renders a map component modal with second coordinate selected 1`] = `
         >
           Open in Google Maps
         </button>
-      </footer>
+      </div>
     </div>
   </section>
   <div

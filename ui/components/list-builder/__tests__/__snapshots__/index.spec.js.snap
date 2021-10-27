@@ -19,7 +19,7 @@ exports[`List Builder Inline Edit renders a default list builder with inline edi
     <div
       className="slds-modal__container"
     >
-      <header
+      <div
         className="slds-modal__header"
       >
         <button
@@ -51,7 +51,7 @@ exports[`List Builder Inline Edit renders a default list builder with inline edi
         >
           Edit the details of the products associated with your opportunity
         </p>
-      </header>
+      </div>
       <div
         className="slds-modal__content slds-grid slds-nowrap"
         id="modal-content-id-1"
@@ -654,7 +654,7 @@ exports[`List Builder Inline Edit renders a default list builder with inline edi
           </div>
         </div>
       </div>
-      <footer
+      <div
         className="slds-modal__footer slds-modal__footer_directional"
       >
         <button
@@ -667,7 +667,7 @@ exports[`List Builder Inline Edit renders a default list builder with inline edi
         >
           Save
         </button>
-      </footer>
+      </div>
     </div>
   </section>
   <div
@@ -696,7 +696,7 @@ exports[`List Builder renders a default list builder 1`] = `
     <div
       className="slds-modal__container"
     >
-      <header
+      <div
         className="slds-modal__header"
       >
         <button
@@ -729,7 +729,7 @@ exports[`List Builder renders a default list builder 1`] = `
         >
           Pricebook: Salesforce Products
         </p>
-      </header>
+      </div>
       <div
         className="slds-modal__content slds-grid slds-grow"
         id="modal-content-id-1"
@@ -1912,7 +1912,7 @@ exports[`List Builder renders a default list builder 1`] = `
           </div>
         </div>
       </div>
-      <footer
+      <div
         className="slds-modal__footer"
       >
         <button
@@ -1925,7 +1925,7 @@ exports[`List Builder renders a default list builder 1`] = `
         >
           Next
         </button>
-      </footer>
+      </div>
     </div>
   </section>
   <div
@@ -1954,7 +1954,7 @@ exports[`List Builder renders a list builder with default items disabled 1`] = `
     <div
       className="slds-modal__container"
     >
-      <header
+      <div
         className="slds-modal__header"
       >
         <button
@@ -1987,7 +1987,7 @@ exports[`List Builder renders a list builder with default items disabled 1`] = `
         >
           Pricebook: Salesforce Products
         </p>
-      </header>
+      </div>
       <div
         className="slds-modal__content slds-grid slds-nowrap"
         id="modal-content-id-1"
@@ -3178,7 +3178,7 @@ exports[`List Builder renders a list builder with default items disabled 1`] = `
           </div>
         </div>
       </div>
-      <footer
+      <div
         className="slds-modal__footer"
       >
         <button
@@ -3191,7 +3191,7 @@ exports[`List Builder renders a list builder with default items disabled 1`] = `
         >
           Next
         </button>
-      </footer>
+      </div>
     </div>
   </section>
   <div
@@ -3220,7 +3220,7 @@ exports[`List Builder renders a list builder with filtered results 1`] = `
     <div
       className="slds-modal__container"
     >
-      <header
+      <div
         className="slds-modal__header"
       >
         <button
@@ -3253,7 +3253,7 @@ exports[`List Builder renders a list builder with filtered results 1`] = `
         >
           Pricebook: Salesforce Products
         </p>
-      </header>
+      </div>
       <div
         className="slds-modal__content slds-grid slds-grow"
         id="modal-content-id-1"
@@ -3885,7 +3885,7 @@ exports[`List Builder renders a list builder with filtered results 1`] = `
           </div>
         </div>
       </div>
-      <footer
+      <div
         className="slds-modal__footer"
       >
         <button
@@ -3898,7 +3898,7 @@ exports[`List Builder renders a list builder with filtered results 1`] = `
         >
           Next
         </button>
-      </footer>
+      </div>
     </div>
   </section>
   <div
@@ -3927,7 +3927,7 @@ exports[`List Builder renders a list builder with hidden header 1`] = `
     <div
       className="slds-modal__container"
     >
-      <header
+      <div
         className="slds-modal__header"
       >
         <button
@@ -3960,7 +3960,7 @@ exports[`List Builder renders a list builder with hidden header 1`] = `
         >
           Pricebook: Salesforce Products
         </p>
-      </header>
+      </div>
       <div
         className="slds-modal__content slds-grid slds-nowrap"
         id="modal-content-id-1"
@@ -4680,7 +4680,7 @@ exports[`List Builder renders a list builder with hidden header 1`] = `
           </div>
         </div>
       </div>
-      <footer
+      <div
         className="slds-modal__footer"
       >
         <button
@@ -4693,7 +4693,7 @@ exports[`List Builder renders a list builder with hidden header 1`] = `
         >
           Next
         </button>
-      </footer>
+      </div>
     </div>
   </section>
   <div
@@ -4722,7 +4722,7 @@ exports[`List Builder renders a list builder with items disabled 1`] = `
     <div
       className="slds-modal__container"
     >
-      <header
+      <div
         className="slds-modal__header"
       >
         <button
@@ -4755,7 +4755,7 @@ exports[`List Builder renders a list builder with items disabled 1`] = `
         >
           Pricebook: Salesforce Products
         </p>
-      </header>
+      </div>
       <div
         className="slds-modal__content slds-grid slds-nowrap"
         id="modal-content-id-1"
@@ -5946,7 +5946,7 @@ exports[`List Builder renders a list builder with items disabled 1`] = `
           </div>
         </div>
       </div>
-      <footer
+      <div
         className="slds-modal__footer"
       >
         <button
@@ -5959,7 +5959,7 @@ exports[`List Builder renders a list builder with items disabled 1`] = `
         >
           Next
         </button>
-      </footer>
+      </div>
     </div>
   </section>
   <div
@@ -5988,7 +5988,7 @@ exports[`List Builder renders a list builder with items selected 1`] = `
     <div
       className="slds-modal__container"
     >
-      <header
+      <div
         className="slds-modal__header"
       >
         <button
@@ -6021,7 +6021,7 @@ exports[`List Builder renders a list builder with items selected 1`] = `
         >
           Pricebook: Salesforce Products
         </p>
-      </header>
+      </div>
       <div
         className="slds-modal__content slds-grid slds-nowrap"
         id="modal-content-id-1"
@@ -7246,7 +7246,7 @@ exports[`List Builder renders a list builder with items selected 1`] = `
           </div>
         </div>
       </div>
-      <footer
+      <div
         className="slds-modal__footer"
       >
         <button
@@ -7259,7 +7259,7 @@ exports[`List Builder renders a list builder with items selected 1`] = `
         >
           Next
         </button>
-      </footer>
+      </div>
     </div>
   </section>
   <div

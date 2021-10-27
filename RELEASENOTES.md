@@ -84,6 +84,8 @@
 #### Added
 - Added `slds` as the default namespace with `sds` fallbacks for Styling Hooks.
 - Added CSS Custom Property reassignments for variants and states.
+#### Changed
+- Changed `header` and `footer` to generic `div` tags for better accessibility semantics
 
 ### [Pills](https://www.lightningdesignsystem.com/components/pills)
 ## Added

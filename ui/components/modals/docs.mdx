@@ -10,7 +10,7 @@ import { MobileNotice, MobileBlurb } from '../../shared/doc-text';
   types of messaging and wizards.
 </div>
 
-<CodeView exampleOnly isViewport demoStyles="height: 640px;">
+<CodeView exampleOnly isViewport demoStyles={getDemoStylesById(Base.default)}>
   {getDisplayElementById(Base.default)}
 </CodeView>
 
@@ -62,8 +62,8 @@ Modals, by definition, trap focus. This means that if a user presses Tab or Shif
 
 ## Base
 
-<CodeView isViewport demoStyles={getDemoStylesById(Base.examples, 'default')}>
-  {getDisplayElementById(Base.examples, 'default')}
+<CodeView isViewport demoStyles={getDemoStylesById(Base.default)}>
+  {getDisplayElementById(Base.default)}
 </CodeView>
 
 ## Examples

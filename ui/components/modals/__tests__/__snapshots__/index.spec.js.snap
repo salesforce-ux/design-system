@@ -1,5 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Modal renders a default modal 1`] = `<defaultComponent />`;
+
 exports[`Modal renders a modal with a tagline 1`] = `
 Array [
   <section
@@ -13,7 +15,7 @@ Array [
     <div
       className="slds-modal__container"
     >
-      <header
+      <div
         className="slds-modal__header"
       >
         <button
@@ -54,7 +56,7 @@ Array [
           </a>
           .
         </p>
-      </header>
+      </div>
       <div
         className="slds-modal__content slds-p-around_medium"
         id="modal-content-id-1"
@@ -66,7 +68,7 @@ Array [
           Dolor eiusmod sunt ex incididunt cillum quis nostrud velit duis sit officia. Lorem aliqua enim laboris do dolor eiusmod officia. Mollit incididunt nisi consectetur esse laborum eiusmod pariatur proident. Eiusmod et adipisicing culpa deserunt nostrud ad veniam nulla aute est. Labore esse esse cupidatat amet velit id elit consequat minim ullamco mollit enim excepteur ea.
         </p>
       </div>
-      <footer
+      <div
         className="slds-modal__footer"
       >
         <button
@@ -79,7 +81,7 @@ Array [
         >
           Save
         </button>
-      </footer>
+      </div>
     </div>
   </section>,
   <div
@@ -101,7 +103,7 @@ Array [
     <div
       className="slds-modal__container"
     >
-      <header
+      <div
         className="slds-modal__header"
       >
         <button
@@ -129,7 +131,7 @@ Array [
         >
           Modal header
         </h2>
-      </header>
+      </div>
       <div
         className="slds-modal__content slds-p-around_medium"
         id="modal-content-id-1"
@@ -162,7 +164,7 @@ Array [
     <div
       className="slds-modal__container"
     >
-      <header
+      <div
         className="slds-modal__header"
       >
         <button
@@ -190,7 +192,7 @@ Array [
         >
           Modal header
         </h2>
-      </header>
+      </div>
       <div
         className="slds-modal__menu"
         id="modal-content-unique-id-2"
@@ -202,7 +204,7 @@ Array [
           Dolor eiusmod sunt ex incididunt cillum quis nostrud velit duis sit officia. Lorem aliqua enim laboris do dolor eiusmod officia. Mollit incididunt nisi consectetur esse laborum eiusmod pariatur proident. Eiusmod et adipisicing culpa deserunt nostrud ad veniam nulla aute est. Labore esse esse cupidatat amet velit id elit consequat minim ullamco mollit enim excepteur ea.
         </p>
       </div>
-      <footer
+      <div
         className="slds-modal__footer slds-hide"
       />
     </div>
@@ -226,7 +228,7 @@ Array [
     <div
       className="slds-modal__container"
     >
-      <header
+      <div
         className="slds-modal__header"
       >
         <button
@@ -254,7 +256,7 @@ Array [
         >
           Modal header
         </h2>
-      </header>
+      </div>
       <div
         className="slds-modal__content slds-p-around_medium"
         id="modal-content-id-1"
@@ -266,7 +268,7 @@ Array [
           Dolor eiusmod sunt ex incididunt cillum quis nostrud velit duis sit officia. Lorem aliqua enim laboris do dolor eiusmod officia. Mollit incididunt nisi consectetur esse laborum eiusmod pariatur proident. Eiusmod et adipisicing culpa deserunt nostrud ad veniam nulla aute est. Labore esse esse cupidatat amet velit id elit consequat minim ullamco mollit enim excepteur ea.
         </p>
       </div>
-      <footer
+      <div
         className="slds-modal__footer slds-modal__footer_directional"
       >
         <button
@@ -279,7 +281,7 @@ Array [
         >
           Save & Next
         </button>
-      </footer>
+      </div>
     </div>
   </section>,
   <div
@@ -301,7 +303,7 @@ Array [
     <div
       className="slds-modal__container"
     >
-      <header
+      <div
         className="slds-modal__header"
       >
         <button
@@ -329,7 +331,7 @@ Array [
         >
           Modal header
         </h2>
-      </header>
+      </div>
       <div
         className="slds-modal__content slds-modal__content_has-hidden-footer slds-p-around_medium"
         id="modal-content-id-1"
@@ -341,7 +343,7 @@ Array [
           Dolor eiusmod sunt ex incididunt cillum quis nostrud velit duis sit officia. Lorem aliqua enim laboris do dolor eiusmod officia. Mollit incididunt nisi consectetur esse laborum eiusmod pariatur proident. Eiusmod et adipisicing culpa deserunt nostrud ad veniam nulla aute est. Labore esse esse cupidatat amet velit id elit consequat minim ullamco mollit enim excepteur ea.
         </p>
       </div>
-      <footer
+      <div
         className="slds-modal__footer slds-hide"
       />
     </div>
@@ -365,7 +367,7 @@ Array [
     <div
       className="slds-modal__container"
     >
-      <header
+      <div
         className="slds-modal__header slds-modal__header_empty"
       >
         <button
@@ -387,7 +389,7 @@ Array [
             Close
           </span>
         </button>
-      </header>
+      </div>
       <div
         className="slds-modal__content slds-p-around_medium"
         id="modal-content-id-1"
@@ -399,7 +401,7 @@ Array [
           Dolor eiusmod sunt ex incididunt cillum quis nostrud velit duis sit officia. Lorem aliqua enim laboris do dolor eiusmod officia. Mollit incididunt nisi consectetur esse laborum eiusmod pariatur proident. Eiusmod et adipisicing culpa deserunt nostrud ad veniam nulla aute est. Labore esse esse cupidatat amet velit id elit consequat minim ullamco mollit enim excepteur ea.
         </p>
       </div>
-      <footer
+      <div
         className="slds-modal__footer"
       >
         <button
@@ -412,7 +414,7 @@ Array [
         >
           Save
         </button>
-      </footer>
+      </div>
     </div>
   </section>,
   <div
@@ -434,7 +436,7 @@ Array [
     <div
       className="slds-modal__container"
     >
-      <header
+      <div
         className="slds-modal__header"
       >
         <button
@@ -462,7 +464,7 @@ Array [
         >
           Modal header
         </h2>
-      </header>
+      </div>
       <div
         className="slds-modal__content slds-p-around_medium"
         id="modal-content-id-1"
@@ -474,7 +476,7 @@ Array [
           Dolor eiusmod sunt ex incididunt cillum quis nostrud velit duis sit officia. Lorem aliqua enim laboris do dolor eiusmod officia. Mollit incididunt nisi consectetur esse laborum eiusmod pariatur proident. Eiusmod et adipisicing culpa deserunt nostrud ad veniam nulla aute est. Labore esse esse cupidatat amet velit id elit consequat minim ullamco mollit enim excepteur ea.
         </p>
       </div>
-      <footer
+      <div
         className="slds-modal__footer"
       >
         <button
@@ -487,7 +489,7 @@ Array [
         >
           Save
         </button>
-      </footer>
+      </div>
     </div>
   </section>,
   <div
@@ -509,7 +511,7 @@ Array [
     <div
       className="slds-modal__container"
     >
-      <header
+      <div
         className="slds-modal__header"
       >
         <button
@@ -537,7 +539,7 @@ Array [
         >
           Modal header
         </h2>
-      </header>
+      </div>
       <div
         className="slds-modal__content slds-p-around_medium"
         id="modal-content-id-1"
@@ -549,7 +551,7 @@ Array [
           Dolor eiusmod sunt ex incididunt cillum quis nostrud velit duis sit officia. Lorem aliqua enim laboris do dolor eiusmod officia. Mollit incididunt nisi consectetur esse laborum eiusmod pariatur proident. Eiusmod et adipisicing culpa deserunt nostrud ad veniam nulla aute est. Labore esse esse cupidatat amet velit id elit consequat minim ullamco mollit enim excepteur ea.
         </p>
       </div>
-      <footer
+      <div
         className="slds-modal__footer"
       >
         <button
@@ -562,7 +564,7 @@ Array [
         >
           Save
         </button>
-      </footer>
+      </div>
     </div>
   </section>,
   <div
@@ -584,7 +586,7 @@ Array [
     <div
       className="slds-modal__container"
     >
-      <header
+      <div
         className="slds-modal__header"
       >
         <button
@@ -612,7 +614,7 @@ Array [
         >
           Modal header
         </h2>
-      </header>
+      </div>
       <div
         className="slds-modal__content slds-p-around_medium"
         id="modal-content-id-1"
@@ -624,7 +626,7 @@ Array [
           Dolor eiusmod sunt ex incididunt cillum quis nostrud velit duis sit officia. Lorem aliqua enim laboris do dolor eiusmod officia. Mollit incididunt nisi consectetur esse laborum eiusmod pariatur proident. Eiusmod et adipisicing culpa deserunt nostrud ad veniam nulla aute est. Labore esse esse cupidatat amet velit id elit consequat minim ullamco mollit enim excepteur ea.
         </p>
       </div>
-      <footer
+      <div
         className="slds-modal__footer"
       >
         <button
@@ -637,7 +639,7 @@ Array [
         >
           Save
         </button>
-      </footer>
+      </div>
     </div>
   </section>,
   <div

@@ -19,7 +19,7 @@ exports[`Lookup - Advanced Modal renders a lookup with modal 1`] = `
     <div
       className="slds-modal__container"
     >
-      <header
+      <div
         className="slds-modal__header"
       >
         <button
@@ -46,7 +46,7 @@ exports[`Lookup - Advanced Modal renders a lookup with modal 1`] = `
         >
           Account name
         </h2>
-      </header>
+      </div>
       <div
         className="slds-modal__content"
         id="modal-content-id-1"
@@ -450,7 +450,7 @@ exports[`Lookup - Advanced Modal renders a lookup with modal 1`] = `
           </table>
         </div>
       </div>
-      <footer
+      <div
         className="slds-modal__footer slds-modal__footer_directional"
       >
         <button
@@ -463,7 +463,7 @@ exports[`Lookup - Advanced Modal renders a lookup with modal 1`] = `
         >
           New Account
         </button>
-      </footer>
+      </div>
     </div>
   </section>
   <div

@@ -20,7 +20,7 @@ exports[`renders a default app launcher 1`] = `
     <div
       className="slds-modal__container"
     >
-      <header
+      <div
         className="slds-modal__header slds-grid slds-grid_align-spread slds-grid_vertical-align-center"
       >
         <button
@@ -85,7 +85,7 @@ exports[`renders a default app launcher 1`] = `
         >
           App Exchange
         </button>
-      </header>
+      </div>
       <div
         className="slds-modal__content slds-app-launcher__content slds-p-around_medium"
         id="modal-content-id-1"
@@ -785,7 +785,7 @@ exports[`renders a dropped app launcher 1`] = `
     <div
       className="slds-modal__container"
     >
-      <header
+      <div
         className="slds-modal__header slds-grid slds-grid_align-spread slds-grid_vertical-align-center"
       >
         <button
@@ -850,7 +850,7 @@ exports[`renders a dropped app launcher 1`] = `
         >
           App Exchange
         </button>
-      </header>
+      </div>
       <div
         className="slds-modal__content slds-app-launcher__content slds-p-around_medium"
         id="modal-content-id-1"
@@ -1550,7 +1550,7 @@ exports[`renders a grabbed app launcher 1`] = `
     <div
       className="slds-modal__container"
     >
-      <header
+      <div
         className="slds-modal__header slds-grid slds-grid_align-spread slds-grid_vertical-align-center"
       >
         <button
@@ -1615,7 +1615,7 @@ exports[`renders a grabbed app launcher 1`] = `
         >
           App Exchange
         </button>
-      </header>
+      </div>
       <div
         className="slds-modal__content slds-app-launcher__content slds-p-around_medium"
         id="modal-content-id-1"
@@ -2315,7 +2315,7 @@ exports[`renders a moved app launcher 1`] = `
     <div
       className="slds-modal__container"
     >
-      <header
+      <div
         className="slds-modal__header slds-grid slds-grid_align-spread slds-grid_vertical-align-center"
       >
         <button
@@ -2380,7 +2380,7 @@ exports[`renders a moved app launcher 1`] = `
         >
           App Exchange
         </button>
-      </header>
+      </div>
       <div
         className="slds-modal__content slds-app-launcher__content slds-p-around_medium"
         id="modal-content-id-1"
@@ -3080,7 +3080,7 @@ exports[`renders a search app launcher 1`] = `
     <div
       className="slds-modal__container"
     >
-      <header
+      <div
         className="slds-modal__header slds-grid slds-grid_align-spread slds-grid_vertical-align-center"
       >
         <button
@@ -3146,7 +3146,7 @@ exports[`renders a search app launcher 1`] = `
         >
           App Exchange
         </button>
-      </header>
+      </div>
       <div
         className="slds-modal__content slds-app-launcher__content slds-p-around_medium"
         id="modal-content-id-1"

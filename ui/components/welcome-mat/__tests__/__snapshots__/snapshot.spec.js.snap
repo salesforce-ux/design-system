@@ -12,7 +12,7 @@ exports[`Composed Welcome Mat Snapshots renders a deprecated welcome mat 1`] = `
   <div
     className="slds-modal__container"
   >
-    <header
+    <div
       className="slds-modal__header slds-modal__header_empty"
     >
       <button
@@ -34,7 +34,7 @@ exports[`Composed Welcome Mat Snapshots renders a deprecated welcome mat 1`] = `
           Close
         </span>
       </button>
-    </header>
+    </div>
     <div
       className="slds-modal__content slds-welcome-mat__content slds-grid"
       id="welcome-mat-20-content"
@@ -432,7 +432,7 @@ exports[`Composed Welcome Mat Snapshots renders a splash welcome mat 1`] = `
   <div
     className="slds-modal__container"
   >
-    <header
+    <div
       className="slds-modal__header slds-modal__header_empty"
     >
       <button
@@ -454,7 +454,7 @@ exports[`Composed Welcome Mat Snapshots renders a splash welcome mat 1`] = `
           Close
         </span>
       </button>
-    </header>
+    </div>
     <div
       className="slds-modal__content"
       id="welcome-mat-13-content"
@@ -551,7 +551,7 @@ exports[`Composed Welcome Mat Snapshots renders a trailhead welcome mat 1`] = `
   <div
     className="slds-modal__container"
   >
-    <header
+    <div
       className="slds-modal__header slds-modal__header_empty"
     >
       <button
@@ -573,7 +573,7 @@ exports[`Composed Welcome Mat Snapshots renders a trailhead welcome mat 1`] = `
           Close
         </span>
       </button>
-    </header>
+    </div>
     <div
       className="slds-modal__content"
       id="welcome-mat-7-content"
@@ -1049,7 +1049,7 @@ exports[`Composed Welcome Mat Snapshots renders a welcome mat 1`] = `
   <div
     className="slds-modal__container"
   >
-    <header
+    <div
       className="slds-modal__header slds-modal__header_empty"
     >
       <button
@@ -1071,7 +1071,7 @@ exports[`Composed Welcome Mat Snapshots renders a welcome mat 1`] = `
           Close
         </span>
       </button>
-    </header>
+    </div>
     <div
       className="slds-modal__content"
       id="welcome-mat-1-content"
@@ -1517,7 +1517,7 @@ exports[`Composed Welcome Mat Snapshots renders an info-only welcome mat 1`] = `
   <div
     className="slds-modal__container"
   >
-    <header
+    <div
       className="slds-modal__header slds-modal__header_empty"
     >
       <button
@@ -1539,7 +1539,7 @@ exports[`Composed Welcome Mat Snapshots renders an info-only welcome mat 1`] = `
           Close
         </span>
       </button>
-    </header>
+    </div>
     <div
       className="slds-modal__content"
       id="welcome-mat-14-content"

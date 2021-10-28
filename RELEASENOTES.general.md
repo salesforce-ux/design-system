@@ -3,6 +3,8 @@
 
 ## 2.17.0 - Upcoming
 
+- Removed `&_` shorthand from numerous selectors in SCSS files
+
 - Added new standard color palette for neutral colors (black/white/grays)
 - Updated Styling Hooks table on component pages to display `slds`-namespaced Hooks
 - Updated icons to v10.2.1

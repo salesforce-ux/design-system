@@ -2,7 +2,7 @@
 
 exports[`Modal renders a default modal 1`] = `<defaultComponent />`;
 
-exports[`Modal renders a modal with a tagline 1`] = `
+exports[`Modal renders a modal that is Footless 1`] = `
 Array [
   <section
     aria-describedby="modal-content-id-1"
@@ -37,100 +37,12 @@ Array [
             Close
           </span>
         </button>
-        <h2
+        <h1
           className="slds-modal__title slds-hyphenate"
           id="modal-heading-01"
         >
           Modal header
-        </h2>
-        <p
-          className="slds-m-top_x-small"
-        >
-          Here’s a tagline if you need it. It is allowed to extend across mulitple lines, so I’m making up content to show that to you. It is allowed to
-           
-          <a
-            href="#"
-            onClick={[Function]}
-          >
-            contain links or be a link
-          </a>
-          .
-        </p>
-      </div>
-      <div
-        className="slds-modal__content slds-p-around_medium"
-        id="modal-content-id-1"
-      >
-        <p>
-          Sit nulla est ex deserunt exercitation anim occaecat. Nostrud ullamco deserunt aute id consequat veniam incididunt duis in sint irure nisi. Mollit officia cillum Lorem ullamco minim nostrud elit officia tempor esse quis. Cillum sunt ad dolore quis aute consequat ipsum magna exercitation reprehenderit magna. Tempor cupidatat consequat elit dolor adipisicing.
-        </p>
-        <p>
-          Dolor eiusmod sunt ex incididunt cillum quis nostrud velit duis sit officia. Lorem aliqua enim laboris do dolor eiusmod officia. Mollit incididunt nisi consectetur esse laborum eiusmod pariatur proident. Eiusmod et adipisicing culpa deserunt nostrud ad veniam nulla aute est. Labore esse esse cupidatat amet velit id elit consequat minim ullamco mollit enim excepteur ea.
-        </p>
-      </div>
-      <div
-        className="slds-modal__footer"
-      >
-        <button
-          className="slds-button slds-button_neutral"
-        >
-          Cancel
-        </button>
-        <button
-          className="slds-button slds-button_brand"
-        >
-          Save
-        </button>
-      </div>
-    </div>
-  </section>,
-  <div
-    className="slds-backdrop slds-backdrop_open"
-  />,
-]
-`;
-
-exports[`Modal renders a model that is Footless 1`] = `
-Array [
-  <section
-    aria-describedby="modal-content-id-1"
-    aria-labelledby="modal-heading-01"
-    aria-modal="true"
-    className="slds-modal slds-fade-in-open"
-    role="dialog"
-    tabIndex="-1"
-  >
-    <div
-      className="slds-modal__container"
-    >
-      <div
-        className="slds-modal__header"
-      >
-        <button
-          className="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse"
-          onClick={[Function]}
-          title="Close"
-        >
-          <svg
-            aria-hidden={true}
-            className="slds-button__icon slds-button__icon_large"
-          >
-            <use
-              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#close"
-            />
-          </svg>
-          <span
-            className="slds-assistive-text"
-          >
-            Close
-          </span>
-        </button>
-        <h2
-          className="slds-modal__title slds-hyphenate"
-          id="modal-heading-01"
-        >
-          Modal header
-        </h2>
+        </h1>
       </div>
       <div
         className="slds-modal__content slds-p-around_medium"
@@ -151,7 +63,7 @@ Array [
 ]
 `;
 
-exports[`Modal renders a model that is contains a menu 1`] = `
+exports[`Modal renders a modal that is contains a menu 1`] = `
 Array [
   <section
     aria-describedby="modal-content-unique-id-2"
@@ -215,7 +127,7 @@ Array [
 ]
 `;
 
-exports[`Modal renders a model that is directional 1`] = `
+exports[`Modal renders a modal that is directional 1`] = `
 Array [
   <section
     aria-describedby="modal-content-id-1"
@@ -250,12 +162,12 @@ Array [
             Close
           </span>
         </button>
-        <h2
+        <h1
           className="slds-modal__title slds-hyphenate"
           id="modal-heading-01"
         >
           Modal header
-        </h2>
+        </h1>
       </div>
       <div
         className="slds-modal__content slds-p-around_medium"
@@ -290,7 +202,7 @@ Array [
 ]
 `;
 
-exports[`Modal renders a model that is has a hidden footer 1`] = `
+exports[`Modal renders a modal that is has a hidden footer 1`] = `
 Array [
   <section
     aria-describedby="modal-content-id-1"
@@ -325,12 +237,12 @@ Array [
             Close
           </span>
         </button>
-        <h2
+        <h1
           className="slds-modal__title slds-hyphenate"
           id="modal-heading-01"
         >
           Modal header
-        </h2>
+        </h1>
       </div>
       <div
         className="slds-modal__content slds-modal__content_has-hidden-footer slds-p-around_medium"
@@ -354,7 +266,7 @@ Array [
 ]
 `;
 
-exports[`Modal renders a model that is headless 1`] = `
+exports[`Modal renders a modal that is headless 1`] = `
 Array [
   <section
     aria-describedby="modal-content-id-1"
@@ -423,7 +335,7 @@ Array [
 ]
 `;
 
-exports[`Modal renders a model that is large 1`] = `
+exports[`Modal renders a modal that is large 1`] = `
 Array [
   <section
     aria-describedby="modal-content-id-1"
@@ -458,12 +370,12 @@ Array [
             Close
           </span>
         </button>
-        <h2
+        <h1
           className="slds-modal__title slds-hyphenate"
           id="modal-heading-01"
         >
           Modal header
-        </h2>
+        </h1>
       </div>
       <div
         className="slds-modal__content slds-p-around_medium"
@@ -498,7 +410,7 @@ Array [
 ]
 `;
 
-exports[`Modal renders a model that is medium 1`] = `
+exports[`Modal renders a modal that is medium 1`] = `
 Array [
   <section
     aria-describedby="modal-content-id-1"
@@ -533,12 +445,12 @@ Array [
             Close
           </span>
         </button>
-        <h2
+        <h1
           className="slds-modal__title slds-hyphenate"
           id="modal-heading-01"
         >
           Modal header
-        </h2>
+        </h1>
       </div>
       <div
         className="slds-modal__content slds-p-around_medium"
@@ -573,7 +485,7 @@ Array [
 ]
 `;
 
-exports[`Modal renders a model that is small 1`] = `
+exports[`Modal renders a modal that is small 1`] = `
 Array [
   <section
     aria-describedby="modal-content-id-1"
@@ -608,12 +520,100 @@ Array [
             Close
           </span>
         </button>
-        <h2
+        <h1
           className="slds-modal__title slds-hyphenate"
           id="modal-heading-01"
         >
           Modal header
-        </h2>
+        </h1>
+      </div>
+      <div
+        className="slds-modal__content slds-p-around_medium"
+        id="modal-content-id-1"
+      >
+        <p>
+          Sit nulla est ex deserunt exercitation anim occaecat. Nostrud ullamco deserunt aute id consequat veniam incididunt duis in sint irure nisi. Mollit officia cillum Lorem ullamco minim nostrud elit officia tempor esse quis. Cillum sunt ad dolore quis aute consequat ipsum magna exercitation reprehenderit magna. Tempor cupidatat consequat elit dolor adipisicing.
+        </p>
+        <p>
+          Dolor eiusmod sunt ex incididunt cillum quis nostrud velit duis sit officia. Lorem aliqua enim laboris do dolor eiusmod officia. Mollit incididunt nisi consectetur esse laborum eiusmod pariatur proident. Eiusmod et adipisicing culpa deserunt nostrud ad veniam nulla aute est. Labore esse esse cupidatat amet velit id elit consequat minim ullamco mollit enim excepteur ea.
+        </p>
+      </div>
+      <div
+        className="slds-modal__footer"
+      >
+        <button
+          className="slds-button slds-button_neutral"
+        >
+          Cancel
+        </button>
+        <button
+          className="slds-button slds-button_brand"
+        >
+          Save
+        </button>
+      </div>
+    </div>
+  </section>,
+  <div
+    className="slds-backdrop slds-backdrop_open"
+  />,
+]
+`;
+
+exports[`Modal renders a modal with a tagline 1`] = `
+Array [
+  <section
+    aria-describedby="modal-content-id-1"
+    aria-labelledby="modal-heading-01"
+    aria-modal="true"
+    className="slds-modal slds-fade-in-open"
+    role="dialog"
+    tabIndex="-1"
+  >
+    <div
+      className="slds-modal__container"
+    >
+      <div
+        className="slds-modal__header"
+      >
+        <button
+          className="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse"
+          onClick={[Function]}
+          title="Close"
+        >
+          <svg
+            aria-hidden={true}
+            className="slds-button__icon slds-button__icon_large"
+          >
+            <use
+              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#close"
+            />
+          </svg>
+          <span
+            className="slds-assistive-text"
+          >
+            Close
+          </span>
+        </button>
+        <h1
+          className="slds-modal__title slds-hyphenate"
+          id="modal-heading-01"
+        >
+          Modal header
+        </h1>
+        <p
+          className="slds-m-top_x-small"
+        >
+          Here’s a tagline if you need it. It is allowed to extend across mulitple lines, so I’m making up content to show that to you. It is allowed to
+           
+          <a
+            href="#"
+            onClick={[Function]}
+          >
+            contain links or be a link
+          </a>
+          .
+        </p>
       </div>
       <div
         className="slds-modal__content slds-p-around_medium"

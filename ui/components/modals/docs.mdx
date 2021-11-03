@@ -42,7 +42,7 @@ Modals, by definition, trap focus. This means that if a user presses Tab or Shif
 
 - Modal has `role="dialog"`
 - When the modal is open, everything behind it has HTML attribute `aria-hidden="true"`, so assistive technology won't read out the underlying page. The best way to do this is to give the modal and the page separate wrapper elements and toggle `aria-hidden="true"`/`aria-hidden="false"` on the main page's wrapper depending on whether or not the modal is open.
-- Modal contains an HTML heading
+- Modal contains an HTML heading. This is an `h1` tag by default but should update according to the surrounding DOM structure. While a semantic heading tag is preferable, if necessary applying `role=”heading”` and `aria-level` to a more generic element is acceptable.
 - Modal has an `aria-labelledby` attribute whose value is the id of the modal’s heading
 
 #### Expected keyboard interactions

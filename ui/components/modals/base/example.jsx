@@ -93,9 +93,9 @@ export let Taglines = (props) => (
   <Backdrop>
     <Modal aria-labelledby="modal-heading-01">
       <ModalHeader>
-        <h2 id="modal-heading-01" className="slds-modal__title slds-hyphenate">
+        <h1 id="modal-heading-01" className="slds-modal__title slds-hyphenate">
           Modal header
-        </h2>
+        </h1>
         <p className="slds-m-top_x-small">
           Here&rsquo;s a tagline if you need it. It is allowed to extend across
           mulitple lines, so I&rsquo;m making up content to show that to you. It
@@ -143,9 +143,9 @@ export let ModalSizes = (props) => (
       aria-labelledby="modal-heading-01"
     >
       <ModalHeader>
-        <h2 id="modal-heading-01" className="slds-modal__title slds-hyphenate">
+        <h1 id="modal-heading-01" className="slds-modal__title slds-hyphenate">
           Modal header
-        </h2>
+        </h1>
       </ModalHeader>
       <ModalContent className="slds-p-around_medium">
         <p>
@@ -181,9 +181,9 @@ export let Directional = (props) => (
   <Backdrop>
     <Modal aria-labelledby="modal-heading-01">
       <ModalHeader>
-        <h2 id="modal-heading-01" className="slds-modal__title slds-hyphenate">
+        <h1 id="modal-heading-01" className="slds-modal__title slds-hyphenate">
           Modal header
-        </h2>
+        </h1>
       </ModalHeader>
       <ModalContent className="slds-p-around_medium">
         <p>
@@ -249,9 +249,9 @@ export let Footless = (props) => (
   <Backdrop>
     <Modal aria-labelledby="modal-heading-01">
       <ModalHeader>
-        <h2 id="modal-heading-01" className="slds-modal__title slds-hyphenate">
+        <h1 id="modal-heading-01" className="slds-modal__title slds-hyphenate">
           Modal header
-        </h2>
+        </h1>
       </ModalHeader>
       <ModalContent className="slds-p-around_medium">
         <p>
@@ -279,9 +279,9 @@ export let HiddenFooter = (props) => (
   <Backdrop>
     <Modal aria-labelledby="modal-heading-01">
       <ModalHeader>
-        <h2 id="modal-heading-01" className="slds-modal__title slds-hyphenate">
+        <h1 id="modal-heading-01" className="slds-modal__title slds-hyphenate">
           Modal header
-        </h2>
+        </h1>
       </ModalHeader>
       <ModalContent className="slds-modal__content_has-hidden-footer slds-p-around_medium">
         <p>
@@ -356,9 +356,9 @@ const defaultComponent = (
   <Backdrop>
     <Modal aria-labelledby="modal-heading-01">
       <ModalHeader>
-        <h2 id="modal-heading-01" className="slds-modal__title slds-hyphenate">
+        <h1 id="modal-heading-01" className="slds-modal__title slds-hyphenate">
           Modal header
-        </h2>
+        </h1>
       </ModalHeader>
       <ModalContent className="slds-p-around_medium">
         <p>

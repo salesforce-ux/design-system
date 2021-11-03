@@ -21,24 +21,24 @@ describe('Modal', () => {
 
   it('renders a modal with a tagline', () => matchesMarkup(<Taglines />));
 
-  it('renders a model that is small', () =>
+  it('renders a modal that is small', () =>
     matchesMarkup(<ModalSizes size="small" />));
 
-  it('renders a model that is medium', () =>
+  it('renders a modal that is medium', () =>
     matchesMarkup(<ModalSizes size="medium" />));
 
-  it('renders a model that is large', () =>
+  it('renders a modal that is large', () =>
     matchesMarkup(<ModalSizes size="large" />));
 
-  it('renders a model that is directional', () =>
+  it('renders a modal that is directional', () =>
     matchesMarkup(<Directional />));
 
-  it('renders a model that is headless', () => matchesMarkup(<Headless />));
+  it('renders a modal that is headless', () => matchesMarkup(<Headless />));
 
-  it('renders a model that is Footless', () => matchesMarkup(<Footless />));
+  it('renders a modal that is Footless', () => matchesMarkup(<Footless />));
 
-  it('renders a model that is has a hidden footer', () =>
+  it('renders a modal that is has a hidden footer', () =>
     matchesMarkup(<HiddenFooter />));
 
-  it('renders a model that is contains a menu', () => matchesMarkup(<Menu />));
+  it('renders a modal that is contains a menu', () => matchesMarkup(<Menu />));
 });

@@ -3,6 +3,7 @@
 
 ## Release 2.17.0 - Upcoming
 
+- Removed `&_` shorthand from numerous selectors in SCSS files
 - Added new standard color palette for neutral colors (black/white/grays)
 - Updated Styling Hooks table on component pages to display `slds`-namespaced Hooks
 - Updated icons to v10.2.1
@@ -31,6 +32,11 @@
 ### [Breadcrumbs](https://www.lightningdesignsystem.com/components/breadcrumbs)
 #### Added
 - Added `slds` as the default namespace with `sds` fallbacks for Styling Hooks.
+
+### [Buttons](https://www.lightningdesignsystem.com/components/buttons)
+#### Added
+- Added Styling Hooks for Stateful Button and Dual Stateful Button.
+- Added missing `slds`-namespaced Styling Hooks (originally added in 2.16.0)
 
 ### [Cards](https://www.lightningdesignsystem.com/components/cards)
 #### Added
@@ -86,6 +92,7 @@
 - Added CSS Custom Property reassignments for variants and states.
 #### Changed
 - Changed `header` and `footer` to generic `div` tags for better accessibility semantics
+- Changed default header level from `h2` to `h1` for semantics and added more description around using headers in the Accessibility section.
 
 ### [Pills](https://www.lightningdesignsystem.com/components/pills)
 ## Added
@@ -95,10 +102,6 @@
 ### [Progress Ring](https://www.lightningdesignsystem.com/components/progress-ring)
 #### Added
 - Added a shape to the progress ring to better visually indicate value by more than color alone.
-
-### [Prompt](https://www.lightningdesignsystem.com/components/prompt)
-#### Added
-- Added CSS Custom Property reassignments for variants and states (e.g., focus, active, hover).
 
 ### [Radio Group](https://www.lightningdesignsystem.com/components/radio-group)
 #### Added

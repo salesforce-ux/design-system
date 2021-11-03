@@ -47,26 +47,44 @@
    */
   @include button-shape(brand);
 
-  // @todo re-evaluate Styling Hooks reassignment
-  background-color: var(--sds-c-button-brand-color-background, $brand-accessible);
+  /*! @css-var-fallback background-color */
+  --slds-c-button-color-background:
+    var(--slds-c-button-dual-stateful-color-background-selected,
+    var(--slds-c-button-brand-color-background,
+    var(--sds-c-button-brand-color-background, #{$brand-accessible})));
 
-  // @todo re-evaluate Styling Hooks reassignment
-  border-color: var(--sds-c-button-brand-color-border, $brand-accessible);
+  /*! @css-var-fallback border-color */
+  --slds-c-button-color-border:
+    var(--slds-c-button-dual-stateful-color-border-selected,
+    var(--slds-c-button-brand-color-border,
+    var(--sds-c-button-brand-color-border, #{$brand-accessible})));
 
-  // @todo re-evaluate Styling Hooks reassignment
-  color: var(--sds-c-button-brand-text-color, $color-text-brand-primary);
+  /*! @css-var-fallback color */
+  --slds-c-button-text-color:
+    var(--slds-c-button-dual-stateful-text-color-selected,
+    var(--slds-c-button-brand-text-color,
+    var(--sds-c-button-brand-text-color, #{$color-text-brand-primary})));
 
   // Since dual-stateful has a high specificity, we have to be explicit with pseudo-class
   &:focus,
   &:hover {
-    // @todo re-evaluate Styling Hooks reassignment
-    background-color: var(--sds-c-button-brand-color-background-hover, $brand-accessible-active);
+    /*! @css-var-fallback background-color */
+    --slds-c-button-dual-stateful-color-background-selected:
+      var(--slds-c-button-dual-stateful-color-background-selected-hover,
+      var(--slds-c-button-brand-color-background-hover,
+      var(--sds-c-button-brand-color-background-hover, #{$brand-accessible-active})));
 
-    // @todo re-evaluate Styling Hooks reassignment
-    border-color: var(--sds-c-button-brand-color-border-hover, $brand-accessible-active);
+    /*! @css-var-fallback border-color */
+    --slds-c-button-dual-stateful-color-border-selected:
+      var(--slds-c-button-dual-stateful-color-border-selected-hover,
+      var(--slds-c-button-brand-color-border-hover,
+      var(--sds-c-button-brand-color-border-hover, #{$brand-accessible-active})));
 
-    // @todo re-evaluate Styling Hooks reassignment
-    color: var(--sds-c-button-brand-text-color-hover, $color-text-brand-primary);
+    /*! @css-var-fallback color */
+    --slds-c-button-dual-stateful-text-color-selected:
+      var(--slds-c-button-dual-stateful-text-color-selected-hover,
+      var(--slds-c-button-brand-text-color-hover,
+      var(--sds-c-button-brand-text-color-hover, #{$color-text-brand-primary})));
   }
 
   .slds-text-not-pressed {

@@ -47,7 +47,7 @@
   &:focus {
     --slds-c-button-color-border: var(--slds-c-button-color-border-hover);
     --slds-c-button-color-background: var(--slds-c-button-color-background-hover);
-    color: var(--slds-c-button-text-color-hover, var(--sds-c-button-text-color-hover, #{$brand-accessible-active}));
+    --slds-c-button-text-color: var(--slds-c-button-text-color-hover, var(--sds-c-button-text-color-hover, #{$brand-accessible-active}));
   }
 
   &:focus {
@@ -158,7 +158,7 @@ a.slds-button--inverse:focus {
   --slds-c-button-color-background: var(--slds-c-button-neutral-color-background, var(--sds-c-button-neutral-color-background, #{$button-color-background-primary}));
 
   /*! @css-var-fallback border-color */
-  --slds-c-button-color-border: var(--sds-c-button-neutral-color-border, #{$button-color-border-primary});
+  --slds-c-button-color-border: var(--slds-c-button-neutral-color-border, var(--sds-c-button-neutral-color-border, #{$button-color-border-primary}));
 
   &:hover,
   &:focus {

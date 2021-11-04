@@ -42,7 +42,7 @@
    * @notes Class should be applied via Javascript
    * @deprecated
    */
-  @include deprecate('4.0.0', '.slds-is-selected is deprecated in .slds-tree, rely on aria-selected attrbiute') {
+  @include deprecate('4.0.0', '.slds-is-selected is deprecated in .slds-tree, rely on aria-selected attribute') {
 
     .slds-is-selected {
       background: $color-background-row-selected;
@@ -57,7 +57,7 @@
    * @restrict .slds-tree__item
    * @deprecated
    */
-  @include deprecate('4.0.0', '.slds-is-focused is deprecated in .slds-tree, rely on the :focus psuedo class on the role="treeitem" element') {
+  @include deprecate('4.0.0', '.slds-is-focused is deprecated in .slds-tree, rely on the :focus pseudo class on the role="treeitem" element') {
 
     .slds-is-focused {
       text-decoration: underline;

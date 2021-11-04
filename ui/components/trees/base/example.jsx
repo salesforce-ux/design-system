@@ -269,7 +269,7 @@ export const examples = [
                 <TreeListItem
                   ariaLevel={2}
                   itemLabel="lightning-toggle"
-                  metaTextLabel="vaiant a checkbox button"
+                  metaTextLabel="variant a checkbox button"
                 >
                   <TreeItem
                     itemLabel="lightning-toggle"

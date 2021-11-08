@@ -19,7 +19,7 @@ exports[`Progress Ring renders a complete ring 1`] = `
         cx="0"
         cy="0"
         id="slds-progress-ring-path-5"
-        r="1"
+        r={1}
       />
     </svg>
   </div>
@@ -53,6 +53,21 @@ exports[`Progress Ring renders a filling active step ring 1`] = `
   <div
     className="slds-progress-ring__content"
   />
+  <div
+    className="slds-progress-ring__progress-head"
+  >
+    <svg
+      viewBox="-1 -1 2 2"
+    >
+      <circle
+        className="slds-progress-ring__path"
+        cx={0.217}
+        cy={-0.6649999999999999}
+        id="slds-progress-ring-path-7"
+        r={0.2}
+      />
+    </svg>
+  </div>
 </div>
 `;
 
@@ -80,6 +95,21 @@ exports[`Progress Ring renders a partially draiend ring with error 1`] = `
   <div
     className="slds-progress-ring__content"
   />
+  <div
+    className="slds-progress-ring__progress-head"
+  >
+    <svg
+      viewBox="-1 -1 2 2"
+    >
+      <circle
+        className="slds-progress-ring__path"
+        cx={0.217}
+        cy={0.6649999999999999}
+        id="slds-progress-ring-path-4"
+        r={0.2}
+      />
+    </svg>
+  </div>
 </div>
 `;
 
@@ -107,6 +137,21 @@ exports[`Progress Ring renders a partially drained ring 1`] = `
   <div
     className="slds-progress-ring__content"
   />
+  <div
+    className="slds-progress-ring__progress-head"
+  >
+    <svg
+      viewBox="-1 -1 2 2"
+    >
+      <circle
+        className="slds-progress-ring__path"
+        cx={0.217}
+        cy={0.6649999999999999}
+        id="slds-progress-ring-path-1"
+        r={0.2}
+      />
+    </svg>
+  </div>
 </div>
 `;
 
@@ -134,6 +179,21 @@ exports[`Progress Ring renders a partially filled ring 1`] = `
   <div
     className="slds-progress-ring__content"
   />
+  <div
+    className="slds-progress-ring__progress-head"
+  >
+    <svg
+      viewBox="-1 -1 2 2"
+    >
+      <circle
+        className="slds-progress-ring__path"
+        cx={0.217}
+        cy={-0.6649999999999999}
+        id="slds-progress-ring-path-2"
+        r={0.2}
+      />
+    </svg>
+  </div>
 </div>
 `;
 
@@ -161,6 +221,21 @@ exports[`Progress Ring renders a partially filled ring with warning 1`] = `
   <div
     className="slds-progress-ring__content"
   />
+  <div
+    className="slds-progress-ring__progress-head"
+  >
+    <svg
+      viewBox="-1 -1 2 2"
+    >
+      <circle
+        className="slds-progress-ring__path"
+        cx={0.217}
+        cy={-0.6649999999999999}
+        id="slds-progress-ring-path-3"
+        r={0.2}
+      />
+    </svg>
+  </div>
 </div>
 `;
 

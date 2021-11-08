@@ -24,7 +24,7 @@ export default (
       </ModalHeader>
       <ModalContent className="slds-grow slds-p-around_medium" />
       <ModalFooter className="slds-grid slds-grid_align-spread">
-        <button className="slds-button slds-button_neutral">Cancel</button>
+        <button className="slds-button slds-button_neutral" aria-label="Cancel and close">Cancel</button>
         <Progress className="slds-progress_shade" value="25">
           <Step done>Step 1</Step>
           <Step active>Step 2</Step>

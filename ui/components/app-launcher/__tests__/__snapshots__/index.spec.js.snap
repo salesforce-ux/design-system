@@ -39,7 +39,7 @@ exports[`renders a default app launcher 1`] = `
           <span
             className="slds-assistive-text"
           >
-            Close
+            Cancel and close
           </span>
         </button>
         <h2
@@ -804,7 +804,7 @@ exports[`renders a dropped app launcher 1`] = `
           <span
             className="slds-assistive-text"
           >
-            Close
+            Cancel and close
           </span>
         </button>
         <h2
@@ -1569,7 +1569,7 @@ exports[`renders a grabbed app launcher 1`] = `
           <span
             className="slds-assistive-text"
           >
-            Close
+            Cancel and close
           </span>
         </button>
         <h2
@@ -2334,7 +2334,7 @@ exports[`renders a moved app launcher 1`] = `
           <span
             className="slds-assistive-text"
           >
-            Close
+            Cancel and close
           </span>
         </button>
         <h2
@@ -3099,7 +3099,7 @@ exports[`renders a search app launcher 1`] = `
           <span
             className="slds-assistive-text"
           >
-            Close
+            Cancel and close
           </span>
         </button>
         <h2

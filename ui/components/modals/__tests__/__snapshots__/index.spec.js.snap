@@ -34,7 +34,7 @@ Array [
           <span
             className="slds-assistive-text"
           >
-            Close
+            Cancel and close
           </span>
         </button>
         <h1
@@ -95,7 +95,7 @@ Array [
           <span
             className="slds-assistive-text"
           >
-            Close
+            Cancel and close
           </span>
         </button>
         <h2
@@ -159,7 +159,7 @@ Array [
           <span
             className="slds-assistive-text"
           >
-            Close
+            Cancel and close
           </span>
         </button>
         <h1
@@ -234,7 +234,7 @@ Array [
           <span
             className="slds-assistive-text"
           >
-            Close
+            Cancel and close
           </span>
         </button>
         <h1
@@ -298,7 +298,7 @@ Array [
           <span
             className="slds-assistive-text"
           >
-            Close
+            Cancel and close
           </span>
         </button>
       </div>
@@ -317,6 +317,7 @@ Array [
         className="slds-modal__footer"
       >
         <button
+          aria-label="Cancel and close"
           className="slds-button slds-button_neutral"
         >
           Cancel
@@ -367,7 +368,7 @@ Array [
           <span
             className="slds-assistive-text"
           >
-            Close
+            Cancel and close
           </span>
         </button>
         <h1
@@ -392,6 +393,7 @@ Array [
         className="slds-modal__footer"
       >
         <button
+          aria-label="Cancel and close"
           className="slds-button slds-button_neutral"
         >
           Cancel
@@ -442,7 +444,7 @@ Array [
           <span
             className="slds-assistive-text"
           >
-            Close
+            Cancel and close
           </span>
         </button>
         <h1
@@ -467,6 +469,7 @@ Array [
         className="slds-modal__footer"
       >
         <button
+          aria-label="Cancel and close"
           className="slds-button slds-button_neutral"
         >
           Cancel
@@ -517,7 +520,7 @@ Array [
           <span
             className="slds-assistive-text"
           >
-            Close
+            Cancel and close
           </span>
         </button>
         <h1
@@ -542,6 +545,7 @@ Array [
         className="slds-modal__footer"
       >
         <button
+          aria-label="Cancel and close"
           className="slds-button slds-button_neutral"
         >
           Cancel
@@ -592,7 +596,7 @@ Array [
           <span
             className="slds-assistive-text"
           >
-            Close
+            Cancel and close
           </span>
         </button>
         <h1
@@ -630,6 +634,7 @@ Array [
         className="slds-modal__footer"
       >
         <button
+          aria-label="Cancel and close"
           className="slds-button slds-button_neutral"
         >
           Cancel

@@ -556,7 +556,7 @@ exports[`renders a map component modal 1`] = `
           <span
             className="slds-assistive-text"
           >
-            Close
+            Cancel and close
           </span>
         </button>
         <h2
@@ -628,7 +628,7 @@ exports[`renders a map component modal with coordinates panel 1`] = `
           <span
             className="slds-assistive-text"
           >
-            Close
+            Cancel and close
           </span>
         </button>
         <h2
@@ -1149,7 +1149,7 @@ exports[`renders a map component modal with first coordinate selected 1`] = `
           <span
             className="slds-assistive-text"
           >
-            Close
+            Cancel and close
           </span>
         </button>
         <h2
@@ -1672,7 +1672,7 @@ exports[`renders a map component modal with footer 1`] = `
           <span
             className="slds-assistive-text"
           >
-            Close
+            Cancel and close
           </span>
         </button>
         <h2
@@ -1753,7 +1753,7 @@ exports[`renders a map component modal with second coordinate selected 1`] = `
           <span
             className="slds-assistive-text"
           >
-            Close
+            Cancel and close
           </span>
         </button>
         <h2

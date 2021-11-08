@@ -38,7 +38,7 @@ exports[`Lookup - Advanced Modal renders a lookup with modal 1`] = `
           <span
             className="slds-assistive-text"
           >
-            Close
+            Cancel and close
           </span>
         </button>
         <h2
@@ -454,6 +454,7 @@ exports[`Lookup - Advanced Modal renders a lookup with modal 1`] = `
         className="slds-modal__footer slds-modal__footer_directional"
       >
         <button
+          aria-label="Cancel and close"
           className="slds-button slds-button_neutral"
         >
           Cancel

@@ -242,7 +242,7 @@ export default (
         </div>
       </ModalContent>
       <ModalFooter className="slds-modal__footer_directional">
-        <button className="slds-button slds-button_neutral">Cancel</button>
+        <button className="slds-button slds-button_neutral" aria-label="Cancel and close">Cancel</button>
         <button className="slds-button slds-button_brand">Save</button>
       </ModalFooter>
     </Modal>

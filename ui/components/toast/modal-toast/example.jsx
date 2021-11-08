@@ -14,7 +14,7 @@ import SvgIcon from '../../../shared/svg-icon';
 export default [
   {
     id: 'modal-toast-default',
-    label: 'Modal Toast - default',
+    label: 'Modal Toast - default (deprecated)',
     demoStyles: 'height: 24rem',
     storybookStyles: true,
     element: (
@@ -72,7 +72,7 @@ export default [
           </ModalContent>
 
           <ModalFooter>
-            <button className="slds-button slds-button_neutral">Cancel</button>
+            <button className="slds-button slds-button_neutral" aria-label="Cancel and close">Cancel</button>
             <button className="slds-button slds-button_brand">Save</button>
           </ModalFooter>
         </Modal>

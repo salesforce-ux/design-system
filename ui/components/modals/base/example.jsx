@@ -52,7 +52,7 @@ export let ModalHeader = (props) => (
         iconClassName="slds-button__icon_large"
         symbol="close"
         title="Close"
-        assistiveText="Close"
+        assistiveText="Cancel and close"
       />
     ) : null}
     {props.children}
@@ -125,7 +125,7 @@ export let Taglines = (props) => (
         </p>
       </ModalContent>
       <ModalFooter>
-        <button className="slds-button slds-button_neutral">Cancel</button>
+        <button className="slds-button slds-button_neutral" aria-label="Cancel and close">Cancel</button>
         <button className="slds-button slds-button_brand">Save</button>
       </ModalFooter>
     </Modal>
@@ -166,7 +166,7 @@ export let ModalSizes = (props) => (
         </p>
       </ModalContent>
       <ModalFooter>
-        <button className="slds-button slds-button_neutral">Cancel</button>
+        <button className="slds-button slds-button_neutral" aria-label="Cancel and close">Cancel</button>
         <button className="slds-button slds-button_brand">Save</button>
       </ModalFooter>
     </Modal>
@@ -238,7 +238,7 @@ export let Headless = (props) => (
         </p>
       </ModalContent>
       <ModalFooter>
-        <button className="slds-button slds-button_neutral">Cancel</button>
+        <button className="slds-button slds-button_neutral" aria-label="Cancel and close">Cancel</button>
         <button className="slds-button slds-button_brand">Save</button>
       </ModalFooter>
     </Modal>
@@ -379,7 +379,7 @@ const defaultComponent = (
         </p>
       </ModalContent>
       <ModalFooter>
-        <button className="slds-button slds-button_neutral">Cancel</button>
+        <button className="slds-button slds-button_neutral" aria-label="Cancel and close">Cancel</button>
         <button className="slds-button slds-button_brand">Save</button>
       </ModalFooter>
     </Modal>

@@ -334,7 +334,7 @@ export default (
         </div>
       </ModalContent>
       <ModalFooter>
-        <button className="slds-button slds-button_neutral">Cancel</button>
+        <button className="slds-button slds-button_neutral" aria-label="Cancel and close">Cancel</button>
         <button className="slds-button slds-button_brand">Next</button>
       </ModalFooter>
     </Modal>
@@ -380,7 +380,7 @@ export let states = [
             </div>
           </ModalContent>
           <ModalFooter>
-            <button className="slds-button slds-button_neutral">Cancel</button>
+            <button className="slds-button slds-button_neutral" aria-label="Cancel and close">Cancel</button>
             <button className="slds-button slds-button_brand">Next</button>
           </ModalFooter>
         </Modal>
@@ -423,7 +423,7 @@ export let states = [
             </div>
           </ModalContent>
           <ModalFooter>
-            <button className="slds-button slds-button_neutral">Cancel</button>
+            <button className="slds-button slds-button_neutral" aria-label="Cancel and close">Cancel</button>
             <button className="slds-button slds-button_brand">Next</button>
           </ModalFooter>
         </Modal>
@@ -466,7 +466,7 @@ export let states = [
             </div>
           </ModalContent>
           <ModalFooter>
-            <button className="slds-button slds-button_neutral">Cancel</button>
+            <button className="slds-button slds-button_neutral" aria-label="Cancel and close">Cancel</button>
             <button className="slds-button slds-button_brand">Next</button>
           </ModalFooter>
         </Modal>
@@ -507,7 +507,7 @@ export let examples = [
             </div>
           </ModalContent>
           <ModalFooter>
-            <button className="slds-button slds-button_neutral">Cancel</button>
+            <button className="slds-button slds-button_neutral" aria-label="Cancel and close">Cancel</button>
             <button className="slds-button slds-button_brand">Next</button>
           </ModalFooter>
         </Modal>
@@ -549,7 +549,7 @@ export let examples = [
             </div>
           </ModalContent>
           <ModalFooter>
-            <button className="slds-button slds-button_neutral">Cancel</button>
+            <button className="slds-button slds-button_neutral" aria-label="Cancel and close">Cancel</button>
             <button className="slds-button slds-button_brand">Next</button>
           </ModalFooter>
         </Modal>

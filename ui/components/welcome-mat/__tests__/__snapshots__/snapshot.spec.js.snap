@@ -31,7 +31,7 @@ exports[`Composed Welcome Mat Snapshots renders a deprecated welcome mat 1`] = `
         <span
           className="slds-assistive-text"
         >
-          Close
+          Cancel and close
         </span>
       </button>
     </div>
@@ -451,7 +451,7 @@ exports[`Composed Welcome Mat Snapshots renders a splash welcome mat 1`] = `
         <span
           className="slds-assistive-text"
         >
-          Close
+          Cancel and close
         </span>
       </button>
     </div>
@@ -570,7 +570,7 @@ exports[`Composed Welcome Mat Snapshots renders a trailhead welcome mat 1`] = `
         <span
           className="slds-assistive-text"
         >
-          Close
+          Cancel and close
         </span>
       </button>
     </div>
@@ -1068,7 +1068,7 @@ exports[`Composed Welcome Mat Snapshots renders a welcome mat 1`] = `
         <span
           className="slds-assistive-text"
         >
-          Close
+          Cancel and close
         </span>
       </button>
     </div>
@@ -1536,7 +1536,7 @@ exports[`Composed Welcome Mat Snapshots renders an info-only welcome mat 1`] = `
         <span
           className="slds-assistive-text"
         >
-          Close
+          Cancel and close
         </span>
       </button>
     </div>

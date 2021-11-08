@@ -39,7 +39,7 @@ exports[`Prompt renders a default prompt 1`] = `
           <span
             className="slds-assistive-text"
           >
-            Close
+            Cancel and close
           </span>
         </button>
         <h2

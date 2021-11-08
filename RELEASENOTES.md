@@ -91,7 +91,8 @@
 - Added `slds` as the default namespace with `sds` fallbacks for Styling Hooks.
 - Added CSS Custom Property reassignments for variants and states.
 #### Changed
-- Changed `header` and `footer` to generic `div` tags for better accessibility semantics
+- Changed `header` and `footer` to generic `div` tags for better accessibility semantics.
+- Changed assistive text for close buttons in modals, and added notes to accessibility documentation.
 - Changed default header level from `h2` to `h1` for semantics and added more description around using headers in the Accessibility section.
 
 ### [Pills](https://www.lightningdesignsystem.com/components/pills)
@@ -135,6 +136,10 @@
 
 ### [Tooltips](https://www.lightningdesignsystem.com/components/tooltips)
 #### Added
+- Added `slds` as the default namespace with `sds` fallbacks for Styling Hooks.
+
+### [Trees](https://www.lightningdesignsystem.com/components/trees)
+## Added
 - Added `slds` as the default namespace with `sds` fallbacks for Styling Hooks.
 
 ## Release 2.16.2 - September 22, 2021

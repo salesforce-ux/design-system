@@ -24,100 +24,6 @@
   z-index: ($z-index-modal + 1);
 
   /**
-   * Centers and sizes the modal horizontally and confines modal within viewport height
-   *
-   * @selector .slds-modal__container
-   * @restrict .slds-modal div
-   * @notes This should be nested immediately inside `.slds-modal` with nothing else nested on the same level.
-   * @required
-   */
-  &__container {
-    position: relative;
-    transform: translate(0, 0);
-    transition:
-      transform $duration-quickly linear,
-      opacity $duration-quickly linear;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: 0 $spacing-x-large;
-    height: 100%;
-    padding: $square-icon-large-boundary 0;
-    border-radius: $border-radius-medium;
-
-    @include mq-medium-min {
-      margin: 0 auto;
-      width: 50%;
-      max-width: 40rem; // TODO: Tokenize
-      min-width: 20rem; // TODO: Tokenize
-    }
-  }
-
-  &__header,
-  &__footer {
-    flex-shrink: 0;
-  }
-
-  /**
-   * Creates the Modal Header container.
-   *
-   * @selector .slds-modal__header
-   * @restrict .slds-modal header
-   * @notes This should be nested immediately inside `.slds-modal__container` as the first element.
-   * @required
-   */
-  &__header {
-    position: relative;
-    border-top-right-radius: var(--slds-c-modal-radius-border, var(--sds-c-modal-radius-border, $border-radius-medium));
-    border-top-left-radius: var(--slds-c-modal-radius-border, var(--sds-c-modal-radius-border, $border-radius-medium));
-    border-bottom-width: var(--slds-c-modal-sizing-border, var(--sds-c-modal-sizing-border, $border-width-thick));
-    border-bottom-style: solid;
-    border-bottom-color: var(--slds-c-modal-color-border, var(--sds-c-modal-color-border, $color-border));
-    background-color: var(--slds-c-modal-header-color-background, var(--sds-c-modal-header-color-background, var(--slds-c-modal-color-background, var(--sds-c-modal-color-background, $color-background-alt))));
-    color: var(--slds-c-modal-header-text-color, var(--sds-c-modal-header-text-color, var(--sds-c-modal-text-color)));
-    padding-top: var(--slds-c-modal-header-spacing-block-start, var(--sds-c-modal-header-spacing-block-start, $spacing-medium));
-    padding-right: var(--slds-c-modal-header-spacing-inline-end, var(--sds-c-modal-header-spacing-inline-end, $spacing-medium));
-    padding-bottom: var(--slds-c-modal-header-spacing-block-end, var(--sds-c-modal-header-spacing-block-end, $spacing-medium));
-    padding-left: var(--slds-c-modal-header-spacing-inline-start, var(--sds-c-modal-header-spacing-inline-start, $spacing-medium));
-    text-align: center;
-
-    + .slds-modal__menu {
-      border-top-right-radius: 0;
-      border-top-left-radius: 0;
-    }
-  }
-
-  /**
-   * Use when modal header has no content
-   *
-   * @selector .slds-modal__header_empty
-   * @restrict .slds-modal__header
-   */
-  &__header_empty,
-  &__header--empty {
-    /*! @css-var-fallback padding-top */
-    --sds-c-modal-header-spacing-block-start: 0;
-
-    /*! @css-var-fallback padding-bottom */
-    --sds-c-modal-header-spacing-block-end: 0;
-
-    /*! @css-var-fallback padding-left */
-    --sds-c-modal-header-spacing-inline-start: 0;
-
-    /*! @css-var-fallback padding-right */
-    --sds-c-modal-header-spacing-inline-end: 0;
-
-    /*! @css-var-fallback border-bottom */
-    --slds-c-modal-sizing-border: 0;
-  }
-
-  &__header_empty + .slds-modal__content,
-  &__header--empty + .slds-modal__content {
-    border-top-right-radius: var(--slds-c-modal-radius-border, var(--sds-c-modal-radius-border, $border-radius-medium));
-    border-top-left-radius: var(--slds-c-modal-radius-border, var(--sds-c-modal-radius-border, $border-radius-medium));
-  }
-
-  /**
     * Modal title (optional)
     *
     * @selector .slds-modal__title
@@ -128,86 +34,177 @@
     font-size: var(--slds-c-modal-heading-font-size, var(--sds-c-modal-heading-font-size, $font-size-7));
     line-height: var(--slds-c-modal-heading-line-height, var(--sds-c-modal-heading-line-height, $line-height-heading));
   }
+}
 
-  /**
-   * Creates the scrollable content area for the modal.
-   *
-   * @selector .slds-modal__content
-   * @restrict .slds-modal div
-   * @required
-   */
-  &__content {
-    background-color: var(--slds-c-modal-content-color-background, var(--sds-c-modal-content-color-background, var(--slds-c-modal-color-background, var(--sds-c-modal-color-background, $color-background-alt))));
-    color: var(--slds-c-modal-content-text-color, var(--sds-c-modal-content-text-color, var(--slds-c-modal-text-color, var(--sds-c-modal-text-color))));
-    overflow: hidden;
-    overflow-y: auto;
+/**
+  * Centers and sizes the modal horizontally and confines modal within viewport height
+  *
+  * @selector .slds-modal__container
+  * @restrict .slds-modal div
+  * @notes This should be nested immediately inside `.slds-modal` with nothing else nested on the same level.
+  * @required
+  */
+.slds-modal__container {
+  position: relative;
+  transform: translate(0, 0);
+  transition:
+    transform $duration-quickly linear,
+    opacity $duration-quickly linear;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 $spacing-x-large;
+  height: 100%;
+  padding: $square-icon-large-boundary 0;
+  border-radius: $border-radius-medium;
 
-    &:last-child,
-    &_has-hidden-footer {
-      border-bottom-right-radius: var(--slds-c-modal-radius-border, var(--sds-c-modal-radius-border, $border-radius-medium));
-      border-bottom-left-radius: var(--slds-c-modal-radius-border, var(--sds-c-modal-radius-border, $border-radius-medium));
-      box-shadow: var(--slds-c-modal-shadow, var(--sds-c-modal-shadow, $shadow-drop-down));
-    }
+  @include mq-medium-min {
+    margin: 0 auto;
+    width: 50%;
+    max-width: 40rem; // TODO: Tokenize
+    min-width: 20rem; // TODO: Tokenize
   }
+}
 
+/**
+  * Creates the Modal Header container.
+  *
+  * @selector .slds-modal__header
+  * @restrict .slds-modal header
+  * @notes This should be nested immediately inside `.slds-modal__container` as the first element.
+  * @required
+  */
+.slds-modal__header {
+  position: relative;
+  border-top-right-radius: var(--slds-c-modal-radius-border, var(--sds-c-modal-radius-border, $border-radius-medium));
+  border-top-left-radius: var(--slds-c-modal-radius-border, var(--sds-c-modal-radius-border, $border-radius-medium));
+  border-bottom-width: var(--slds-c-modal-sizing-border, var(--sds-c-modal-sizing-border, $border-width-thick));
+  border-bottom-style: solid;
+  border-bottom-color: var(--slds-c-modal-color-border, var(--sds-c-modal-color-border, $color-border));
+  background-color: var(--slds-c-modal-header-color-background, var(--sds-c-modal-header-color-background, var(--slds-c-modal-color-background, var(--sds-c-modal-color-background, $color-background-alt))));
+  color: var(--slds-c-modal-header-text-color, var(--sds-c-modal-header-text-color, var(--sds-c-modal-text-color)));
+  flex-shrink: 0;
+  padding-top: var(--slds-c-modal-header-spacing-block-start, var(--sds-c-modal-header-spacing-block-start, $spacing-medium));
+  padding-right: var(--slds-c-modal-header-spacing-inline-end, var(--sds-c-modal-header-spacing-inline-end, $spacing-medium));
+  padding-bottom: var(--slds-c-modal-header-spacing-block-end, var(--sds-c-modal-header-spacing-block-end, $spacing-medium));
+  padding-left: var(--slds-c-modal-header-spacing-inline-start, var(--sds-c-modal-header-spacing-inline-start, $spacing-medium));
+  text-align: center;
 
-
-  /**
-   * Creates the Modal Footer container.
-   *
-   * @selector .slds-modal__footer
-   * @restrict .slds-modal footer
-   * @notes This should be nested immediately inside `.slds-modal_container` and immediately after `.slds-modal__container`. Nothing should follow it. Note that by default, elements will be aligned to the right.
-   * @required
-   */
-  &__footer {
-    border-bottom-right-radius: var(--slds-c-modal-radius-border, var(--sds-c-modal-radius-border, $border-radius-medium));
-    border-bottom-left-radius: var(--slds-c-modal-radius-border, var(--sds-c-modal-radius-border, $border-radius-medium));
-    border-top-width: var(--slds-c-modal-sizing-border, var(--sds-c-modal-sizing-border, $border-width-thick));
-    border-top-style: solid;
-    border-top-color: var(--slds-c-modal-color-border, var(--sds-c-modal-color-border, $color-border));
-    background-color: var(--slds-c-modal-footer-color-background, var(--sds-c-modal-footer-color-background, var(--slds-c-modal-color-background, var(--sds-c-modal-color-background, $color-background))));
-    color: var(--slds-c-modal-footer-text-color, var(--sds-c-modal-footer-text-color, var(--slds-c-modal-text-color, var(--sds-c-modal-text-color))));
-    padding-top: var(--slds-c-modal-footer-spacing-block-start, var(--sds-c-modal-footer-spacing-block-start, $spacing-small));
-    padding-right: var(--slds-c-modal-footer-spacing-inline-end, var(--sds-c-modal-footer-spacing-inline-end, $spacing-medium));
-    padding-bottom: var(--slds-c-modal-footer-spacing-block-end, var(--sds-c-modal-footer-spacing-block-end, $spacing-small));
-    padding-left: var(--slds-c-modal-footer-spacing-inline-start, var(--sds-c-modal-footer-spacing-inline-start, $spacing-medium));
-    text-align: right;
-    box-shadow: var(--slds-c-modal-shadow, var(--sds-c-modal-shadow, $shadow-drop-down));
-
-    /**
-     * Makes buttons inside the footer spread to both left and right.
-     *
-     * @selector .slds-modal__footer_directional
-     * @restrict .slds-modal__footer
-     * @notes This is only needed when you have two buttons that indicate a back and forward navigation.
-     * @modifier
-     * @group direction
-     */
-    &_directional .slds-button:first-child,
-    &--directional .slds-button:first-child {
-      float: left;
-    }
-
-    .slds-button + .slds-button {
-      margin-left: $spacing-x-small;
-    }
+  + .slds-modal__menu {
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
   }
+}
 
-  /**
-   * Positions the close button to the top right outside of the modal.
-   *
-   * @selector .slds-modal__close
-   * @restrict .slds-modal button
-   * @notes Either `.slds-modal__content` or `.slds-modal__menu` must be used. If you’re using this class, you do not need the other. This should be nested immediately inside `.slds-modal_container` and immediately after `.slds-modal__header`.
-   * @required
-   */
-  &__close {
-    @include square($square-icon-medium-boundary);
-    position: absolute;
-    top: ($square-icon-medium-boundary * -1.25);
-    right: ((($square-icon-medium-boundary - $square-icon-medium-content) * 0.5) * -1);
+/**
+  * Use when modal header has no content
+  *
+  * @selector .slds-modal__header_empty
+  * @restrict .slds-modal__header
+  */
+.slds-modal__header_empty,
+.slds-modal__header--empty {
+  /*! @css-var-fallback padding-top */
+  --sds-c-modal-header-spacing-block-start: 0;
+
+  /*! @css-var-fallback padding-bottom */
+  --sds-c-modal-header-spacing-block-end: 0;
+
+  /*! @css-var-fallback padding-left */
+  --sds-c-modal-header-spacing-inline-start: 0;
+
+  /*! @css-var-fallback padding-right */
+  --sds-c-modal-header-spacing-inline-end: 0;
+
+  /*! @css-var-fallback border-bottom */
+  --slds-c-modal-sizing-border: 0;
+}
+
+.slds-modal__header_empty + .slds-modal__content,
+.slds-modal__header--empty + .slds-modal__content {
+  border-top-right-radius: var(--slds-c-modal-radius-border, var(--sds-c-modal-radius-border, $border-radius-medium));
+  border-top-left-radius: var(--slds-c-modal-radius-border, var(--sds-c-modal-radius-border, $border-radius-medium));
+}
+
+
+
+/**
+  * Creates the scrollable content area for the modal.
+  *
+  * @selector .slds-modal__content
+  * @restrict .slds-modal div
+  * @required
+  */
+.slds-modal__content {
+  background-color: var(--slds-c-modal-content-color-background, var(--sds-c-modal-content-color-background, var(--slds-c-modal-color-background, var(--sds-c-modal-color-background, $color-background-alt))));
+  color: var(--slds-c-modal-content-text-color, var(--sds-c-modal-content-text-color, var(--slds-c-modal-text-color, var(--sds-c-modal-text-color))));
+  overflow: hidden;
+  overflow-y: auto;
+}
+
+.slds-modal__content:last-child,
+.slds-modal__content_has-hidden-footer {
+  border-bottom-right-radius: var(--slds-c-modal-radius-border, var(--sds-c-modal-radius-border, $border-radius-medium));
+  border-bottom-left-radius: var(--slds-c-modal-radius-border, var(--sds-c-modal-radius-border, $border-radius-medium));
+  box-shadow: var(--slds-c-modal-shadow, var(--sds-c-modal-shadow, $shadow-drop-down));
+}
+
+/**
+  * Creates the Modal Footer container.
+  *
+  * @selector .slds-modal__footer
+  * @restrict .slds-modal footer
+  * @notes This should be nested immediately inside `.slds-modal_container` and immediately after `.slds-modal__container`. Nothing should follow it. Note that by default, elements will be aligned to the right.
+  * @required
+  */
+.slds-modal__footer {
+  border-bottom-right-radius: var(--slds-c-modal-radius-border, var(--sds-c-modal-radius-border, $border-radius-medium));
+  border-bottom-left-radius: var(--slds-c-modal-radius-border, var(--sds-c-modal-radius-border, $border-radius-medium));
+  border-top-width: var(--slds-c-modal-sizing-border, var(--sds-c-modal-sizing-border, $border-width-thick));
+  border-top-style: solid;
+  border-top-color: var(--slds-c-modal-color-border, var(--sds-c-modal-color-border, $color-border));
+  background-color: var(--slds-c-modal-footer-color-background, var(--sds-c-modal-footer-color-background, var(--slds-c-modal-color-background, var(--sds-c-modal-color-background, $color-background))));
+  color: var(--slds-c-modal-footer-text-color, var(--sds-c-modal-footer-text-color, var(--slds-c-modal-text-color, var(--sds-c-modal-text-color))));
+  flex-shrink: 0;
+  padding-top: var(--slds-c-modal-footer-spacing-block-start, var(--sds-c-modal-footer-spacing-block-start, $spacing-small));
+  padding-right: var(--slds-c-modal-footer-spacing-inline-end, var(--sds-c-modal-footer-spacing-inline-end, $spacing-medium));
+  padding-bottom: var(--slds-c-modal-footer-spacing-block-end, var(--sds-c-modal-footer-spacing-block-end, $spacing-small));
+  padding-left: var(--slds-c-modal-footer-spacing-inline-start, var(--sds-c-modal-footer-spacing-inline-start, $spacing-medium));
+  text-align: right;
+  box-shadow: var(--slds-c-modal-shadow, var(--sds-c-modal-shadow, $shadow-drop-down));
+
+  .slds-button + .slds-button {
+    margin-left: $spacing-x-small;
   }
+}
+
+/**
+  * Makes buttons inside the footer spread to both left and right.
+  *
+  * @selector .slds-modal__footer_directional
+  * @restrict .slds-modal__footer
+  * @notes This is only needed when you have two buttons that indicate a back and forward navigation.
+  * @modifier
+  * @group direction
+  */
+.slds-modal__footer_directional .slds-button:first-child,
+.slds-modal__footer--directional .slds-button:first-child {
+  float: left;
+}
+
+/**
+  * Positions the close button to the top right outside of the modal.
+  *
+  * @selector .slds-modal__close
+  * @restrict .slds-modal button
+  * @notes Either `.slds-modal__content` or `.slds-modal__menu` must be used. If you’re using this class, you do not need the other. This should be nested immediately inside `.slds-modal_container` and immediately after `.slds-modal__header`.
+  * @required
+  */
+.slds-modal__close {
+  @include square($square-icon-medium-boundary);
+  position: absolute;
+  top: ($square-icon-medium-boundary * -1.25);
+  right: ((($square-icon-medium-boundary - $square-icon-medium-content) * 0.5) * -1);
 }
 
 @mixin backdrop {

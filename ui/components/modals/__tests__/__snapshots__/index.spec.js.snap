@@ -21,7 +21,6 @@ Array [
         <button
           className="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse"
           onClick={[Function]}
-          title="Close"
         >
           <svg
             aria-hidden={true}
@@ -82,7 +81,6 @@ Array [
         <button
           className="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse"
           onClick={[Function]}
-          title="Close"
         >
           <svg
             aria-hidden={true}
@@ -146,7 +144,6 @@ Array [
         <button
           className="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse"
           onClick={[Function]}
-          title="Close"
         >
           <svg
             aria-hidden={true}
@@ -221,7 +218,6 @@ Array [
         <button
           className="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse"
           onClick={[Function]}
-          title="Close"
         >
           <svg
             aria-hidden={true}
@@ -285,7 +281,6 @@ Array [
         <button
           className="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse"
           onClick={[Function]}
-          title="Close"
         >
           <svg
             aria-hidden={true}
@@ -355,7 +350,6 @@ Array [
         <button
           className="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse"
           onClick={[Function]}
-          title="Close"
         >
           <svg
             aria-hidden={true}
@@ -431,7 +425,6 @@ Array [
         <button
           className="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse"
           onClick={[Function]}
-          title="Close"
         >
           <svg
             aria-hidden={true}
@@ -507,7 +500,6 @@ Array [
         <button
           className="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse"
           onClick={[Function]}
-          title="Close"
         >
           <svg
             aria-hidden={true}
@@ -583,7 +575,6 @@ Array [
         <button
           className="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse"
           onClick={[Function]}
-          title="Close"
         >
           <svg
             aria-hidden={true}

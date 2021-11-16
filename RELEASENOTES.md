@@ -95,6 +95,7 @@
 - Changed `header` and `footer` to generic `div` tags for better accessibility semantics.
 - Changed assistive text for close buttons in modals, and added notes to accessibility documentation.
 - Changed default header level from `h2` to `h1` for semantics and added more description around using headers in the Accessibility section.
+- Removed redundant `title` attribute from modal close button.
 
 ### [Pills](https://www.lightningdesignsystem.com/components/pills)
 ## Added

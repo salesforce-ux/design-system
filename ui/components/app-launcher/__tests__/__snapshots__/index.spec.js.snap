@@ -26,7 +26,6 @@ exports[`renders a default app launcher 1`] = `
         <button
           className="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse"
           onClick={[Function]}
-          title="Close"
         >
           <svg
             aria-hidden={true}
@@ -791,7 +790,6 @@ exports[`renders a dropped app launcher 1`] = `
         <button
           className="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse"
           onClick={[Function]}
-          title="Close"
         >
           <svg
             aria-hidden={true}
@@ -1556,7 +1554,6 @@ exports[`renders a grabbed app launcher 1`] = `
         <button
           className="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse"
           onClick={[Function]}
-          title="Close"
         >
           <svg
             aria-hidden={true}
@@ -2321,7 +2318,6 @@ exports[`renders a moved app launcher 1`] = `
         <button
           className="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse"
           onClick={[Function]}
-          title="Close"
         >
           <svg
             aria-hidden={true}
@@ -3086,7 +3082,6 @@ exports[`renders a search app launcher 1`] = `
         <button
           className="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse"
           onClick={[Function]}
-          title="Close"
         >
           <svg
             aria-hidden={true}

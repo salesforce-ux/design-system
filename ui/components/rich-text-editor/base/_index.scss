@@ -186,8 +186,8 @@
  */
 .slds-rich-text-area__content {
   overflow-y: auto;
-  min-height: var(--sds-c-textarea-sizing-min-height, $size-xx-small);
-  max-height: var(--sds-c-textarea-sizing-max-height, $size-small);
+  min-height: var(--slds-c-textarea-sizing-min-height, var(--sds-c-textarea-sizing-min-height, $size-xx-small));
+  max-height: var(--slds-c-textarea-sizing-max-height, var(--sds-c-textarea-sizing-max-height, $size-small));
   padding: $spacing-medium;
   background-color: $color-background-input;
 }

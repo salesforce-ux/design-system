@@ -26,6 +26,17 @@ describe('extractVarsFromCSS', () => {
     expect(actual[styleHookName].fallbackValue).toEqual('');
   });
 
+  it('extracts vars from malformed var function value with no fallback', () => {
+    const actual = extractVarsFromCSS(
+      '.foo { background-color: var(--sds-c-icon-color-background,); }'
+    );
+
+    const styleHookName = Object.keys(actual)[0];
+
+    expect(styleHookName).toEqual('--sds-c-icon-color-background');
+    expect(actual[styleHookName].fallbackValue).toEqual('');
+  });
+
   it('extracts vars only from allow pattern', () => {
     const actual = extractVarsFromCSS(
       `.foo {
@@ -62,5 +73,31 @@ describe('extractVarsFromCSS', () => {
     expect(Object.keys(actual).length).toEqual(2);
     expect(actual[styleHookName1].fallbackValue).toEqual('1rem');
     expect(actual[styleHookName2].category).toEqual('Color');
+  });
+
+  it('extracts vars from nested var functions value with fallback', () => {
+    const actual = extractVarsFromCSS(
+      '.foo { background-color: var(--slds-c-icon-color-background, var(--sds-c-icon-color-background, transparent)); }'
+    );
+
+    const styleHookName = Object.keys(actual)[0];
+
+    expect(styleHookName).toEqual('--slds-c-icon-color-background');
+    expect(actual[styleHookName].fallbackValue).toEqual('transparent');
+    expect(actual[styleHookName].category).toEqual('Color');
+    expect(actual[styleHookName].valueType).toEqual('Color');
+  });
+
+  it('extracts vars from deeply nested var functions value with fallback', () => {
+    const actual = extractVarsFromCSS(
+      '.foo { background-color: var(--slds-c-icon-color-background, var(--sds-c-icon-color-background, var(--sds-g-icon-color, transparent))); }'
+    );
+
+    const styleHookName = Object.keys(actual)[0];
+
+    expect(styleHookName).toEqual('--slds-c-icon-color-background');
+    expect(actual[styleHookName].fallbackValue).toEqual('transparent');
+    expect(actual[styleHookName].category).toEqual('Color');
+    expect(actual[styleHookName].valueType).toEqual('Color');
   });
 });

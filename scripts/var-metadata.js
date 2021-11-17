@@ -50,5 +50,25 @@ export const propTypes = {
   shadow: {
     type: 'Box Shadow',
     valueTypes: ['String']
+  },
+  'text-color': {
+    type: 'Color',
+    valueTypes: ['Color']
+  },
+  'text-align': {
+    type: 'Text',
+    valueTypes: ['String']
+  },
+  'image-background': {
+    type: 'Image',
+    valueTypes: ['Image']
+  },
+  'size-background': {
+    type: 'Image',
+    valueTypes: ['String', 'Dimension']
+  },
+  'position-zindex': {
+    type: 'Position',
+    valueTypes: ['Integer']
   }
 };

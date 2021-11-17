@@ -100,7 +100,7 @@ class StylingHooksTable extends Component {
                             ii === categoryVars.length - 1
                         })}
                       >
-                        {ii === 0 ? (
+                        {ii === 0 && (
                           <th
                             className="hooks-table__col-category"
                             scope="rowgroup"
@@ -108,7 +108,7 @@ class StylingHooksTable extends Component {
                           >
                             {category}
                           </th>
-                        ) : null}
+                        )}
                         <td>
                           <div className="slds-grid">
                             <Copy
@@ -124,15 +124,19 @@ class StylingHooksTable extends Component {
                           </div>
                         </td>
                         <td>
-                          {varData.types.map((type, x) => {
+                          {varData.types.map((type, x, arr) => {
                             const formattedType = formatType(type);
                             return (
-                              <a
-                                key={`${category}-${i}-${ii}-${x}`}
-                                href={`https://developer.mozilla.org/en-US/docs/Web/CSS/${formattedType}`}
-                              >
-                                {type}
-                              </a>
+                              <>
+                                <a
+                                  key={`${category}-${i}-${ii}-${x}`}
+                                  href={`https://developer.mozilla.org/en-US/docs/Web/CSS/${formattedType}`}
+                                >
+                                  {type}
+                                </a>
+                                {/* Proper comma separation when there is more than 1 valueType */}
+                                {(arr.length > 1 && x <= 0) && (', ')}
+                              </>
                             );
                           })}
                         </td>

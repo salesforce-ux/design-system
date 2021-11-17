@@ -41,10 +41,10 @@ export default [
                     symbol="warning"
                   />
                   <div className="slds-col slds-align-middle">
-                    <h2 className="slds-text-heading_small">
+                    <h1 className="slds-text-heading_small">
                       You've encountered some errors when trying to save edits to
                       Samuel Smith.
-                    </h2>
+                    </h1>
                   </div>
                 </div>
               </div>

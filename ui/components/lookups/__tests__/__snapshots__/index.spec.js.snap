@@ -10,7 +10,6 @@ exports[`Lookup - Advanced Modal renders a lookup with modal 1`] = `
   }
 >
   <section
-    aria-describedby="modal-content-id-1"
     aria-modal="true"
     className="slds-modal slds-fade-in-open slds-modal_large"
     role="dialog"
@@ -40,11 +39,11 @@ exports[`Lookup - Advanced Modal renders a lookup with modal 1`] = `
             Cancel and close
           </span>
         </button>
-        <h2
+        <h1
           className="slds-text-heading_medium"
         >
           Account name
-        </h2>
+        </h1>
       </div>
       <div
         className="slds-modal__content"

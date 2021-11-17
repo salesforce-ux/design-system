@@ -29,7 +29,8 @@ export let Modal = (props) => (
     tabIndex={props.tabIndex}
     {...props}
     aria-modal="true"
-    aria-describedby={props['aria-describedby'] || 'modal-content-id-1'}
+    aria-labelledby={props['aria-labelledby']}
+    aria-describedby={props['aria-describedby']}
     className={classNames('slds-modal slds-fade-in-open', props.className)}
   >
     <div className="slds-modal__container">{props.children}</div>
@@ -313,7 +314,6 @@ export const Menu = () => {
     <Backdrop>
       <Modal
         aria-labelledby={uniqueIDHeading}
-        aria-describedby={uniqueIDContent}
       >
         <ModalHeader>
           <Heading

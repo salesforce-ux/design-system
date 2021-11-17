@@ -527,7 +527,6 @@ exports[`renders a map component modal 1`] = `
   }
 >
   <section
-    aria-describedby="modal-content-id-01"
     aria-labelledby="modal-heading-id-01"
     aria-modal="true"
     className="slds-modal slds-fade-in-open slds-modal_medium"
@@ -558,12 +557,12 @@ exports[`renders a map component modal 1`] = `
             Cancel and close
           </span>
         </button>
-        <h2
+        <h1
           className="slds-text-heading_medium slds-hyphenate"
           id="modal-heading-id-01"
         >
           Address: 1 Market St, San Francisco, CA 94105
-        </h2>
+        </h1>
       </div>
       <div
         className="slds-modal__content"
@@ -598,7 +597,6 @@ exports[`renders a map component modal with coordinates panel 1`] = `
   }
 >
   <section
-    aria-describedby="modal-content-id-01"
     aria-labelledby="modal-heading-id-01"
     aria-modal="true"
     className="slds-modal slds-fade-in-open slds-modal_medium"
@@ -629,12 +627,12 @@ exports[`renders a map component modal with coordinates panel 1`] = `
             Cancel and close
           </span>
         </button>
-        <h2
+        <h1
           className="slds-text-heading_medium slds-hyphenate"
           id="modal-heading-id-01"
         >
           Favorite Solar Companies (2)
-        </h2>
+        </h1>
       </div>
       <div
         className="slds-modal__content"
@@ -1118,7 +1116,6 @@ exports[`renders a map component modal with first coordinate selected 1`] = `
   }
 >
   <section
-    aria-describedby="modal-content-id-01"
     aria-labelledby="modal-heading-id-01"
     aria-modal="true"
     className="slds-modal slds-fade-in-open slds-modal_medium"
@@ -1149,12 +1146,12 @@ exports[`renders a map component modal with first coordinate selected 1`] = `
             Cancel and close
           </span>
         </button>
-        <h2
+        <h1
           className="slds-text-heading_medium slds-hyphenate"
           id="modal-heading-id-01"
         >
           Favorite Solar Companies (2)
-        </h2>
+        </h1>
       </div>
       <div
         className="slds-modal__content"
@@ -1640,7 +1637,6 @@ exports[`renders a map component modal with footer 1`] = `
   }
 >
   <section
-    aria-describedby="modal-content-id-01"
     aria-labelledby="modal-heading-id-01"
     aria-modal="true"
     className="slds-modal slds-fade-in-open slds-modal_medium"
@@ -1671,12 +1667,12 @@ exports[`renders a map component modal with footer 1`] = `
             Cancel and close
           </span>
         </button>
-        <h2
+        <h1
           className="slds-text-heading_medium slds-hyphenate"
           id="modal-heading-id-01"
         >
           Geo Code: 37°48'08.3"N 122°15'55.2W
-        </h2>
+        </h1>
       </div>
       <div
         className="slds-modal__content"
@@ -1720,7 +1716,6 @@ exports[`renders a map component modal with second coordinate selected 1`] = `
   }
 >
   <section
-    aria-describedby="modal-content-id-01"
     aria-labelledby="modal-heading-id-01"
     aria-modal="true"
     className="slds-modal slds-fade-in-open slds-modal_medium"
@@ -1751,12 +1746,12 @@ exports[`renders a map component modal with second coordinate selected 1`] = `
             Cancel and close
           </span>
         </button>
-        <h2
+        <h1
           className="slds-text-heading_medium slds-hyphenate"
           id="modal-heading-id-01"
         >
           Favorite Solar Companies (2)
-        </h2>
+        </h1>
       </div>
       <div
         className="slds-modal__content"

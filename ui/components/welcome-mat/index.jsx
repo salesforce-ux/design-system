@@ -63,7 +63,6 @@ class WelcomeMat extends Component {
       <Modal
         className="slds-modal_small"
         aria-labelledby={welcomeMatLabelId}
-        aria-describedby={welcomeMatDescripId}
       >
         <ModalHeader className="slds-modal__header_empty" />
         <ModalContent id={welcomeMatDescripId}>

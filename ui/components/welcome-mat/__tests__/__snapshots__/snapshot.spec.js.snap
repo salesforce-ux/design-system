@@ -421,7 +421,6 @@ exports[`Composed Welcome Mat Snapshots renders a deprecated welcome mat 1`] = `
 
 exports[`Composed Welcome Mat Snapshots renders a splash welcome mat 1`] = `
 <section
-  aria-describedby="welcome-mat-13-content"
   aria-labelledby="welcome-mat-13-label"
   aria-modal="true"
   className="slds-modal slds-fade-in-open slds-modal_small"
@@ -539,7 +538,6 @@ exports[`Composed Welcome Mat Snapshots renders a splash welcome mat 1`] = `
 
 exports[`Composed Welcome Mat Snapshots renders a trailhead welcome mat 1`] = `
 <section
-  aria-describedby="welcome-mat-7-content"
   aria-labelledby="welcome-mat-7-label"
   aria-modal="true"
   className="slds-modal slds-fade-in-open slds-modal_small"
@@ -1036,7 +1034,6 @@ exports[`Composed Welcome Mat Snapshots renders a trailhead welcome mat 1`] = `
 
 exports[`Composed Welcome Mat Snapshots renders a welcome mat 1`] = `
 <section
-  aria-describedby="welcome-mat-1-content"
   aria-labelledby="welcome-mat-1-label"
   aria-modal="true"
   className="slds-modal slds-fade-in-open slds-modal_small"
@@ -1503,7 +1500,6 @@ exports[`Composed Welcome Mat Snapshots renders a welcome mat 1`] = `
 
 exports[`Composed Welcome Mat Snapshots renders an info-only welcome mat 1`] = `
 <section
-  aria-describedby="welcome-mat-14-content"
   aria-labelledby="welcome-mat-14-label"
   aria-modal="true"
   className="slds-modal slds-fade-in-open slds-modal_small"

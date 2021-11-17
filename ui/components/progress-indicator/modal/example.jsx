@@ -18,9 +18,9 @@ export default (
   <div className="demo-only" style={{ height: '640px' }}>
     <Modal className="slds-modal_large" aria-labelledby="header43">
       <ModalHeader>
-        <h2 id="header43" className="slds-text-heading_medium">
+        <h1 id="header43" className="slds-text-heading_medium">
           Modal header
-        </h2>
+        </h1>
       </ModalHeader>
       <ModalContent className="slds-grow slds-p-around_medium" />
       <ModalFooter className="slds-grid slds-grid_align-spread">

@@ -41,9 +41,9 @@ export let states = [
       <div className="demo-only" style={{ height: '640px' }}>
         <Modal>
           <ModalHeader closeButton="false">
-            <h2 className="slds-text-heading_medium">
+            <h1 className="slds-text-heading_medium">
               Select a New Record Type
-            </h2>
+            </h1>
           </ModalHeader>
           <ModalContent className="slds-modal__menu">
             <button className="slds-button slds-button_neutral">Simple</button>
@@ -68,7 +68,7 @@ export let states = [
       <div className="demo-only" style={{ height: '640px' }}>
         <Modal>
           <ModalHeader closeButton="false">
-            <h2 className="slds-text-heading_medium">Delete Account</h2>
+            <h1 className="slds-text-heading_medium">Delete Account</h1>
             <p className="slds-m-top_x-small">
               Are you sure you want to delete this account?
             </p>
@@ -99,9 +99,9 @@ export let states = [
               />
               <span className="slds-assistive-text">Share Thanks</span>
             </span>
-            <h2 className="slds-text-heading_medium">
+            <h1 className="slds-text-heading_medium">
               Your Feedback is Valuable
-            </h2>
+            </h1>
             <p className="slds-m-top_x-small">
               We&rsquo;re glad to hear you&rsquo;re enjoying the app! Your input
               helps drive our products. Would you mind taking a moment to give

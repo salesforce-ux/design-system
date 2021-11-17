@@ -22,9 +22,9 @@ export default (
         className="slds-theme_error slds-theme_alert-texture"
         closeButton={false}
       >
-        <h2 className="slds-text-heading_medium" id="prompt-heading-id">
+        <h1 className="slds-text-heading_medium" id="prompt-heading-id">
           Service unavailable
-        </h2>
+        </h1>
       </ModalHeader>
 
       <ModalContent

@@ -10,7 +10,6 @@ exports[`List Builder Inline Edit renders a default list builder with inline edi
   }
 >
   <section
-    aria-describedby="modal-content-id-1"
     aria-modal="true"
     className="slds-modal slds-fade-in-open slds-modal_large"
     role="dialog"
@@ -40,11 +39,11 @@ exports[`List Builder Inline Edit renders a default list builder with inline edi
             Cancel and close
           </span>
         </button>
-        <h2
+        <h1
           className="slds-text-heading_medium"
         >
           Edit all products
-        </h2>
+        </h1>
         <p
           className="slds-m-top_x-small"
         >
@@ -686,8 +685,7 @@ exports[`List Builder renders a default list builder 1`] = `
   }
 >
   <section
-    aria-describedby="modal-content-id-1"
-    aria-labelledby="id-of-modalheader-h2"
+    aria-labelledby="id-of-modalheader-h1"
     aria-modal="true"
     className="slds-modal slds-fade-in-open slds-modal_large slds-list-builder"
     role="dialog"
@@ -717,12 +715,12 @@ exports[`List Builder renders a default list builder 1`] = `
             Cancel and close
           </span>
         </button>
-        <h2
+        <h1
           className="slds-text-heading_medium"
-          id="id-of-modalheader-h2"
+          id="id-of-modalheader-h1"
         >
           Add products
-        </h2>
+        </h1>
         <p
           className="slds-m-top_x-small"
         >
@@ -1944,8 +1942,7 @@ exports[`List Builder renders a list builder with default items disabled 1`] = `
   }
 >
   <section
-    aria-describedby="modal-content-id-1"
-    aria-labelledby="id-of-modalheader-h2"
+    aria-labelledby="id-of-modalheader-h1"
     aria-modal="true"
     className="slds-modal slds-fade-in-open slds-modal_large"
     role="dialog"
@@ -1975,12 +1972,12 @@ exports[`List Builder renders a list builder with default items disabled 1`] = `
             Cancel and close
           </span>
         </button>
-        <h2
+        <h1
           className="slds-text-heading_medium"
-          id="id-of-modalheader-h2"
+          id="id-of-modalheader-h1"
         >
           Add products
-        </h2>
+        </h1>
         <p
           className="slds-m-top_x-small"
         >
@@ -3210,8 +3207,7 @@ exports[`List Builder renders a list builder with filtered results 1`] = `
   }
 >
   <section
-    aria-describedby="modal-content-id-1"
-    aria-labelledby="id-of-modalheader-h2"
+    aria-labelledby="id-of-modalheader-h1"
     aria-modal="true"
     className="slds-modal slds-fade-in-open slds-modal_large"
     role="dialog"
@@ -3241,12 +3237,12 @@ exports[`List Builder renders a list builder with filtered results 1`] = `
             Cancel and close
           </span>
         </button>
-        <h2
+        <h1
           className="slds-text-heading_medium"
-          id="id-of-modalheader-h2"
+          id="id-of-modalheader-h1"
         >
           Add products
-        </h2>
+        </h1>
         <p
           className="slds-m-top_x-small"
         >
@@ -3917,8 +3913,7 @@ exports[`List Builder renders a list builder with hidden header 1`] = `
   }
 >
   <section
-    aria-describedby="modal-content-id-1"
-    aria-labelledby="id-of-modalheader-h2"
+    aria-labelledby="id-of-modalheader-h1"
     aria-modal="true"
     className="slds-modal slds-fade-in-open slds-modal_large"
     role="dialog"
@@ -3948,12 +3943,12 @@ exports[`List Builder renders a list builder with hidden header 1`] = `
             Cancel and close
           </span>
         </button>
-        <h2
+        <h1
           className="slds-text-heading_medium"
-          id="id-of-modalheader-h2"
+          id="id-of-modalheader-h1"
         >
           Add products
-        </h2>
+        </h1>
         <p
           className="slds-m-top_x-small"
         >
@@ -4712,8 +4707,7 @@ exports[`List Builder renders a list builder with items disabled 1`] = `
   }
 >
   <section
-    aria-describedby="modal-content-id-1"
-    aria-labelledby="id-of-modalheader-h2"
+    aria-labelledby="id-of-modalheader-h1"
     aria-modal="true"
     className="slds-modal slds-fade-in-open slds-modal_large"
     role="dialog"
@@ -4743,12 +4737,12 @@ exports[`List Builder renders a list builder with items disabled 1`] = `
             Cancel and close
           </span>
         </button>
-        <h2
+        <h1
           className="slds-text-heading_medium"
-          id="id-of-modalheader-h2"
+          id="id-of-modalheader-h1"
         >
           Add products
-        </h2>
+        </h1>
         <p
           className="slds-m-top_x-small"
         >
@@ -5978,8 +5972,7 @@ exports[`List Builder renders a list builder with items selected 1`] = `
   }
 >
   <section
-    aria-describedby="modal-content-id-1"
-    aria-labelledby="id-of-modalheader-h2"
+    aria-labelledby="id-of-modalheader-h1"
     aria-modal="true"
     className="slds-modal slds-fade-in-open slds-modal_large"
     role="dialog"
@@ -6009,12 +6002,12 @@ exports[`List Builder renders a list builder with items selected 1`] = `
             Cancel and close
           </span>
         </button>
-        <h2
+        <h1
           className="slds-text-heading_medium"
-          id="id-of-modalheader-h2"
+          id="id-of-modalheader-h1"
         >
           Add products
-        </h2>
+        </h1>
         <p
           className="slds-m-top_x-small"
         >

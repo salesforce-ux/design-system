@@ -5,7 +5,6 @@ exports[`Modal renders a default modal 1`] = `<defaultComponent />`;
 exports[`Modal renders a modal that is Footless 1`] = `
 Array [
   <section
-    aria-describedby="modal-content-id-1"
     aria-labelledby="modal-heading-01"
     aria-modal="true"
     className="slds-modal slds-fade-in-open"
@@ -65,7 +64,6 @@ Array [
 exports[`Modal renders a modal that is contains a menu 1`] = `
 Array [
   <section
-    aria-describedby="modal-content-unique-id-2"
     aria-labelledby="modal-heading-unique-id-1"
     aria-modal="true"
     className="slds-modal slds-fade-in-open"
@@ -128,7 +126,6 @@ Array [
 exports[`Modal renders a modal that is directional 1`] = `
 Array [
   <section
-    aria-describedby="modal-content-id-1"
     aria-labelledby="modal-heading-01"
     aria-modal="true"
     className="slds-modal slds-fade-in-open"
@@ -202,7 +199,6 @@ Array [
 exports[`Modal renders a modal that is has a hidden footer 1`] = `
 Array [
   <section
-    aria-describedby="modal-content-id-1"
     aria-labelledby="modal-heading-01"
     aria-modal="true"
     className="slds-modal slds-fade-in-open"
@@ -265,7 +261,6 @@ Array [
 exports[`Modal renders a modal that is headless 1`] = `
 Array [
   <section
-    aria-describedby="modal-content-id-1"
     aria-label="Meaningful description of the modal content"
     aria-modal="true"
     className="slds-modal slds-fade-in-open"
@@ -334,7 +329,6 @@ Array [
 exports[`Modal renders a modal that is large 1`] = `
 Array [
   <section
-    aria-describedby="modal-content-id-1"
     aria-labelledby="modal-heading-01"
     aria-modal="true"
     className="slds-modal slds-fade-in-open slds-modal_large"
@@ -409,7 +403,6 @@ Array [
 exports[`Modal renders a modal that is medium 1`] = `
 Array [
   <section
-    aria-describedby="modal-content-id-1"
     aria-labelledby="modal-heading-01"
     aria-modal="true"
     className="slds-modal slds-fade-in-open slds-modal_medium"
@@ -484,7 +477,6 @@ Array [
 exports[`Modal renders a modal that is small 1`] = `
 Array [
   <section
-    aria-describedby="modal-content-id-1"
     aria-labelledby="modal-heading-01"
     aria-modal="true"
     className="slds-modal slds-fade-in-open slds-modal_small"
@@ -559,7 +551,6 @@ Array [
 exports[`Modal renders a modal with a tagline 1`] = `
 Array [
   <section
-    aria-describedby="modal-content-id-1"
     aria-labelledby="modal-heading-01"
     aria-modal="true"
     className="slds-modal slds-fade-in-open"

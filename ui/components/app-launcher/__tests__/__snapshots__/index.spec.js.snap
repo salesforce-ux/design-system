@@ -10,7 +10,6 @@ exports[`renders a default app launcher 1`] = `
   }
 >
   <section
-    aria-describedby="modal-content-id-1"
     aria-labelledby="header43"
     aria-modal="true"
     className="slds-modal slds-fade-in-open slds-modal_large slds-app-launcher"
@@ -774,7 +773,6 @@ exports[`renders a dropped app launcher 1`] = `
   }
 >
   <section
-    aria-describedby="modal-content-id-1"
     aria-labelledby="header43"
     aria-modal="true"
     className="slds-modal slds-fade-in-open slds-modal_large slds-app-launcher"
@@ -1538,7 +1536,6 @@ exports[`renders a grabbed app launcher 1`] = `
   }
 >
   <section
-    aria-describedby="modal-content-id-1"
     aria-labelledby="header43"
     aria-modal="true"
     className="slds-modal slds-fade-in-open slds-modal_large slds-app-launcher"
@@ -2302,7 +2299,6 @@ exports[`renders a moved app launcher 1`] = `
   }
 >
   <section
-    aria-describedby="modal-content-id-1"
     aria-labelledby="header43"
     aria-modal="true"
     className="slds-modal slds-fade-in-open slds-modal_large slds-app-launcher"
@@ -3066,7 +3062,6 @@ exports[`renders a search app launcher 1`] = `
   }
 >
   <section
-    aria-describedby="modal-content-id-1"
     aria-labelledby="header43"
     aria-modal="true"
     className="slds-modal slds-fade-in-open slds-modal_large slds-app-launcher"

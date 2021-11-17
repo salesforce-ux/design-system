@@ -41,12 +41,12 @@ exports[`Prompt renders a default prompt 1`] = `
             Cancel and close
           </span>
         </button>
-        <h2
+        <h1
           className="slds-text-heading_medium"
           id="prompt-heading-id"
         >
           Service unavailable
-        </h2>
+        </h1>
       </div>
       <div
         className="slds-modal__content slds-p-around_medium"

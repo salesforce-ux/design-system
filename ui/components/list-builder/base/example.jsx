@@ -307,12 +307,12 @@ export default (
   <div className="demo-only demo-only_viewport" style={{ height: '640px' }}>
     <Modal
       className="slds-modal_large slds-list-builder"
-      aria-labelledby="id-of-modalheader-h2"
+      aria-labelledby="id-of-modalheader-h1"
     >
       <ModalHeader>
-        <h2 id="id-of-modalheader-h2" className="slds-text-heading_medium">
+        <h1 id="id-of-modalheader-h1" className="slds-text-heading_medium">
           Add products
-        </h2>
+        </h1>
         <p className="slds-m-top_x-small">Pricebook: Salesforce Products</p>
       </ModalHeader>
       <ModalContent className="slds-grid slds-grow">
@@ -350,12 +350,12 @@ export let states = [
       <div className="demo-only demo-only_viewport" style={{ height: '640px' }}>
         <Modal
           className="slds-modal_large"
-          aria-labelledby="id-of-modalheader-h2"
+          aria-labelledby="id-of-modalheader-h1"
         >
           <ModalHeader>
-            <h2 id="id-of-modalheader-h2" className="slds-text-heading_medium">
+            <h1 id="id-of-modalheader-h1" className="slds-text-heading_medium">
               Add products
-            </h2>
+            </h1>
             <p className="slds-m-top_x-small">Pricebook: Salesforce Products</p>
           </ModalHeader>
           <ModalContent className="slds-grid slds-nowrap">
@@ -395,12 +395,12 @@ export let states = [
       <div className="demo-only demo-only_viewport" style={{ height: '640px' }}>
         <Modal
           className="slds-modal_large"
-          aria-labelledby="id-of-modalheader-h2"
+          aria-labelledby="id-of-modalheader-h1"
         >
           <ModalHeader>
-            <h2 id="id-of-modalheader-h2" className="slds-text-heading_medium">
+            <h1 id="id-of-modalheader-h1" className="slds-text-heading_medium">
               Add products
-            </h2>
+            </h1>
             <p className="slds-m-top_x-small">Pricebook: Salesforce Products</p>
           </ModalHeader>
           <ModalContent className="slds-grid slds-nowrap">
@@ -438,12 +438,12 @@ export let states = [
       <div className="demo-only demo-only_viewport" style={{ height: '640px' }}>
         <Modal
           className="slds-modal_large"
-          aria-labelledby="id-of-modalheader-h2"
+          aria-labelledby="id-of-modalheader-h1"
         >
           <ModalHeader>
-            <h2 id="id-of-modalheader-h2" className="slds-text-heading_medium">
+            <h1 id="id-of-modalheader-h1" className="slds-text-heading_medium">
               Add products
-            </h2>
+            </h1>
             <p className="slds-m-top_x-small">Pricebook: Salesforce Products</p>
           </ModalHeader>
           <ModalContent className="slds-grid slds-nowrap">
@@ -483,12 +483,12 @@ export let examples = [
       <div className="demo-only demo-only_viewport" style={{ height: '640px' }}>
         <Modal
           className="slds-modal_large"
-          aria-labelledby="id-of-modalheader-h2"
+          aria-labelledby="id-of-modalheader-h1"
         >
           <ModalHeader>
-            <h2 id="id-of-modalheader-h2" className="slds-text-heading_medium">
+            <h1 id="id-of-modalheader-h1" className="slds-text-heading_medium">
               Add products
-            </h2>
+            </h1>
             <p className="slds-m-top_x-small">Pricebook: Salesforce Products</p>
           </ModalHeader>
           <ModalContent className="slds-grid slds-nowrap">
@@ -522,12 +522,12 @@ export let examples = [
       <div className="demo-only demo-only_viewport" style={{ height: '640px' }}>
         <Modal
           className="slds-modal_large"
-          aria-labelledby="id-of-modalheader-h2"
+          aria-labelledby="id-of-modalheader-h1"
         >
           <ModalHeader>
-            <h2 id="id-of-modalheader-h2" className="slds-text-heading_medium">
+            <h1 id="id-of-modalheader-h1" className="slds-text-heading_medium">
               Add products
-            </h2>
+            </h1>
             <p className="slds-m-top_x-small">Pricebook: Salesforce Products</p>
           </ModalHeader>
           <ModalContent className="slds-grid slds-grow">

@@ -127,15 +127,14 @@ class Map extends Component {
       <Modal
         className="slds-modal_medium"
         aria-labelledby={modalHeadingId}
-        aria-describedby={modalContentId}
       >
         <ModalHeader>
-          <h2
+          <h1
             id={modalHeadingId}
             className="slds-text-heading_medium slds-hyphenate"
           >
             {heading}
-          </h2>
+          </h1>
         </ModalHeader>
         <ModalContent id={modalContentId}>
           <MapContainer

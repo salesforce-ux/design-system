@@ -296,6 +296,6 @@ export default (
         </footer>
       </div>
     </section>
-    <div className="slds-backdrop slds-backdrop_open" />
+    <div className="slds-backdrop slds-backdrop_open" role="presentation" />
   </div>
 );

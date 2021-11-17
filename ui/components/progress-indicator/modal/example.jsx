@@ -7,7 +7,8 @@ import {
   Modal,
   ModalHeader,
   ModalContent,
-  ModalFooter
+  ModalFooter,
+  Backdrop
 } from '../../modals/base/example';
 
 /// ///////////////////////////////////////////
@@ -16,25 +17,26 @@ import {
 
 export default (
   <div className="demo-only" style={{ height: '640px' }}>
-    <Modal className="slds-modal_large" aria-labelledby="header43">
-      <ModalHeader>
-        <h1 id="header43" className="slds-text-heading_medium">
-          Modal header
-        </h1>
-      </ModalHeader>
-      <ModalContent className="slds-grow slds-p-around_medium" />
-      <ModalFooter className="slds-grid slds-grid_align-spread">
-        <button className="slds-button slds-button_neutral" aria-label="Cancel and close">Cancel</button>
-        <Progress className="slds-progress_shade" value="25">
-          <Step done>Step 1</Step>
-          <Step active>Step 2</Step>
-          <Step>Step 3</Step>
-          <Step>Step 4</Step>
-          <Step>Step 5</Step>
-        </Progress>
-        <button className="slds-button slds-button_brand">Save</button>
-      </ModalFooter>
-    </Modal>
-    <div className="slds-backdrop slds-backdrop_open" />
+    <Backdrop>
+      <Modal className="slds-modal_large" aria-labelledby="header43">
+        <ModalHeader>
+          <h1 id="header43" className="slds-text-heading_medium">
+            Modal header
+          </h1>
+        </ModalHeader>
+        <ModalContent className="slds-grow slds-p-around_medium" />
+        <ModalFooter className="slds-grid slds-grid_align-spread">
+          <button className="slds-button slds-button_neutral" aria-label="Cancel and close">Cancel</button>
+          <Progress className="slds-progress_shade" value="25">
+            <Step done>Step 1</Step>
+            <Step active>Step 2</Step>
+            <Step>Step 3</Step>
+            <Step>Step 4</Step>
+            <Step>Step 5</Step>
+          </Progress>
+          <button className="slds-button slds-button_brand">Save</button>
+        </ModalFooter>
+      </Modal>
+    </Backdrop>
   </div>
 );

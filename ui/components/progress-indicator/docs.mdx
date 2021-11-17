@@ -5,7 +5,7 @@ import Blockquote from '../../../shared/components/Blockquote';
 import { Step as BaseStep, Progress as BaseProgress } from './base/example';
 import { Step as VerticalStep, Progress as VerticalProgress } from './vertical/example';
 import { Tooltip } from '../tooltips/base/example';
-import { Modal, ModalHeader, ModalContent, ModalFooter } from '../modals/base/example';
+import { Modal, ModalHeader, ModalContent, ModalFooter, Backdrop } from '../modals/base/example';
 import { MobileNotice, MobileBlurb } from '../../shared/doc-text';
 
 <div className="doc lead">
@@ -189,26 +189,27 @@ When an error has occurred on a step, the `<div>` with class `.slds-progress__it
 <Example title="Progress Indicator Horizontal in Modal">
   <CodeView isViewport demoStyles="height: 640px;">
     <div>
-      <Modal className="slds-modal_large" aria-labelledby="header43">
-        <ModalHeader>
-          <h1 id="header43" className="slds-text-heading_medium">
-            Modal header
-          </h1>
-        </ModalHeader>
-        <ModalContent className="slds-grow slds-p-around_medium" />
-        <ModalFooter className="slds-grid slds-grid_align-spread">
-          <button className="slds-button slds-button_neutral" aria-label="Cancel and close">Cancel</button>
-          <BaseProgress className="slds-progress_shade" value="25">
-            <BaseStep done>Step 1</BaseStep>
-            <BaseStep active>Step 2</BaseStep>
-            <BaseStep>Step 3</BaseStep>
-            <BaseStep>Step 4</BaseStep>
-            <BaseStep>Step 5</BaseStep>
-          </BaseProgress>
-          <button className="slds-button slds-button_brand">Save</button>
-        </ModalFooter>
-      </Modal>
-      <div className="slds-backdrop slds-backdrop_open" />
+      <Backdrop>
+        <Modal className="slds-modal_large" aria-labelledby="header43">
+          <ModalHeader>
+            <h1 id="header43" className="slds-text-heading_medium">
+              Modal header
+            </h1>
+          </ModalHeader>
+          <ModalContent className="slds-grow slds-p-around_medium" />
+          <ModalFooter className="slds-grid slds-grid_align-spread">
+            <button className="slds-button slds-button_neutral" aria-label="Cancel and close">Cancel</button>
+            <BaseProgress className="slds-progress_shade" value="25">
+              <BaseStep done>Step 1</BaseStep>
+              <BaseStep active>Step 2</BaseStep>
+              <BaseStep>Step 3</BaseStep>
+              <BaseStep>Step 4</BaseStep>
+              <BaseStep>Step 5</BaseStep>
+            </BaseProgress>
+            <button className="slds-button slds-button_brand">Save</button>
+          </ModalFooter>
+        </Modal>
+      </Backdrop>
     </div>
   </CodeView>
 </Example>

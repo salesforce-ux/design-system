@@ -18,7 +18,7 @@ export let Backdrop = (props) => {
   return (
     <Fragment>
       {props.children}
-      <div className="slds-backdrop slds-backdrop_open" />
+      <div className="slds-backdrop slds-backdrop_open" role="presentation" />
     </Fragment>
   );
 };

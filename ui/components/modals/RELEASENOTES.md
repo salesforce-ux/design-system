@@ -19,6 +19,7 @@
 - Changed default header level from `h2` to `h1` for semantics and added more description around using headers in the Accessibility section.
 - Removed redundant `title` attribute from modal close button.
 - Updated use of `aria-describedby` attribute for modal content, and clarified in accessibility documentation section.
+- Added the `role="presentation"` attribute to the modal backdrop.
 
 ## 2.14.0
 

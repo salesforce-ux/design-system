@@ -49,7 +49,7 @@ export let examples = [
     element: (
       <React.Fragment>
         <Map heading={"Geo Code: 37°48'08.3\"N 122°15'55.2W"} footer />
-        <div className="slds-backdrop slds-backdrop_open" />
+        <div className="slds-backdrop slds-backdrop_open" role="presentation" />
       </React.Fragment>
     )
   },
@@ -63,7 +63,7 @@ export let examples = [
           multipleCoordinates
           footer
         />
-        <div className="slds-backdrop slds-backdrop_open" />
+        <div className="slds-backdrop slds-backdrop_open" role="presentation" />
       </React.Fragment>
     )
   }

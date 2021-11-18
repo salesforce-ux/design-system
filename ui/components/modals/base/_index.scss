@@ -27,7 +27,7 @@
     * Modal title (optional)
     *
     * @selector .slds-modal__title
-    * @restrict .slds-modal__header h2
+    * @restrict .slds-modal__header h1, .slds-modal__header h2, .slds-modal__header h3, .slds-modal__header h4, .slds-modal__header h5
     */
   .slds-modal__title {
     font-weight: var(--slds-c-modal-heading-font-weight, var(--sds-c-modal-heading-font-weight));

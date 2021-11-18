@@ -41,6 +41,7 @@ export let Modal = (props) => (
             iconClassName="slds-button__icon_large"
             symbol="close"
             assistiveText="Cancel and close"
+            disabled={props.closeButtonDisabled}
           />
         ) : null
       }
@@ -51,10 +52,12 @@ export let Modal = (props) => (
 Modal.propTypes = {
   tabIndex: PropTypes.oneOf(['-1', '0']),
   closeButton: PropTypes.bool,
+  closeButtonDisabled: PropTypes.bool,
 };
 
 Modal.defaultProps = {
   tabIndex: '-1',
+  closeButtonDisabled: false,
 };
 
 export let ModalHeader = (props) => (
@@ -364,6 +367,36 @@ export const Menu = () => {
   );
 };
 
+export let DisabledClose = (props) => (
+  <Backdrop>
+    <Modal aria-labelledby="modal-heading-01" closeButtonDisabled="true">
+      <ModalHeader>
+        <h1 id="modal-heading-01" className="slds-modal__title slds-hyphenate">
+          Modal header
+        </h1>
+      </ModalHeader>
+      <ModalContent className="slds-p-around_medium">
+        <p>
+          Sit nulla est ex deserunt exercitation anim occaecat. Nostrud ullamco
+          deserunt aute id consequat veniam incididunt duis in sint irure nisi.
+          Mollit officia cillum Lorem ullamco minim nostrud elit officia tempor
+          esse quis. Cillum sunt ad dolore quis aute consequat ipsum magna
+          exercitation reprehenderit magna. Tempor cupidatat consequat elit
+          dolor adipisicing.
+        </p>
+        <p>
+          Dolor eiusmod sunt ex incididunt cillum quis nostrud velit duis sit
+          officia. Lorem aliqua enim laboris do dolor eiusmod officia. Mollit
+          incididunt nisi consectetur esse laborum eiusmod pariatur proident.
+          Eiusmod et adipisicing culpa deserunt nostrud ad veniam nulla aute
+          est. Labore esse esse cupidatat amet velit id elit consequat minim
+          ullamco mollit enim excepteur ea.
+        </p>
+      </ModalContent>
+    </Modal>
+  </Backdrop>
+);
+
 export let DeprecatedClose = (props) => (
   <Backdrop>
     <Modal aria-labelledby="modal-heading-01">
@@ -496,6 +529,12 @@ export const examples = [
     label: 'Deprecated - Menu',
     demoStyles: exampleDemoStyles,
     element: <Menu />,
+  },
+  {
+    id: 'disabled-close',
+    label: 'Disabled Close Button (internal only)',
+    demoStyles: exampleDemoStyles,
+    element: <DisabledClose />,
   },
   {
     id: 'deprecated-close',

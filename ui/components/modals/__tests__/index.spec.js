@@ -12,6 +12,7 @@ import {
   Footless,
   HiddenFooter,
   Menu,
+  DisabledClose,
   DeprecatedClose
 } from '../base/example';
 
@@ -42,6 +43,8 @@ describe('Modal', () => {
     matchesMarkup(<HiddenFooter />));
 
   it('renders a modal that contains a menu', () => matchesMarkup(<Menu />));
+
+  it('renders a modal that has a disabled close button', () => matchesMarkup(<DisabledClose />));
 
   it('renders a modal that is using deprecated markup for the close button', () => matchesMarkup(<DeprecatedClose />));
 });

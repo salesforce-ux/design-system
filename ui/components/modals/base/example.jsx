@@ -33,12 +33,24 @@ export let Modal = (props) => (
     aria-describedby={props['aria-describedby']}
     className={classNames('slds-modal slds-fade-in-open', props.className)}
   >
-    <div className="slds-modal__container">{props.children}</div>
+    <div className="slds-modal__container">
+      {
+        props.closeButton !== 'false' ? (
+          <ButtonIcon
+            className="slds-modal__close slds-button_icon-inverse"
+            iconClassName="slds-button__icon_large"
+            symbol="close"
+            assistiveText="Cancel and close"
+          />
+        ) : null
+      }
+      {props.children}</div>
   </section>
 );
 
 Modal.propTypes = {
   tabIndex: PropTypes.oneOf(['-1', '0']),
+  closeButton: PropTypes.bool,
 };
 
 Modal.defaultProps = {
@@ -46,6 +58,12 @@ Modal.defaultProps = {
 };
 
 export let ModalHeader = (props) => (
+  <div className={classNames('slds-modal__header', props.className)}>
+    {props.children}
+  </div>
+);
+
+export let ModalHeaderDeprecated = (props) => (
   <div className={classNames('slds-modal__header', props.className)}>
     {props.closeButton !== 'false' ? (
       <ButtonIcon
@@ -218,7 +236,6 @@ export let Directional = (props) => (
 export let Headless = (props) => (
   <Backdrop>
     <Modal aria-label="Meaningful description of the modal content">
-      <ModalHeader className="slds-modal__header_empty" />
       <ModalContent className="slds-p-around_medium">
         <p>
           Sit nulla est ex deserunt exercitation anim occaecat. Nostrud ullamco
@@ -347,6 +364,36 @@ export const Menu = () => {
   );
 };
 
+export let DeprecatedClose = (props) => (
+  <Backdrop>
+    <Modal aria-labelledby="modal-heading-01">
+      <ModalHeaderDeprecated>
+        <h1 id="modal-heading-01" className="slds-modal__title slds-hyphenate">
+          Modal header
+        </h1>
+      </ModalHeaderDeprecated>
+      <ModalContent className="slds-p-around_medium">
+        <p>
+          Sit nulla est ex deserunt exercitation anim occaecat. Nostrud ullamco
+          deserunt aute id consequat veniam incididunt duis in sint irure nisi.
+          Mollit officia cillum Lorem ullamco minim nostrud elit officia tempor
+          esse quis. Cillum sunt ad dolore quis aute consequat ipsum magna
+          exercitation reprehenderit magna. Tempor cupidatat consequat elit
+          dolor adipisicing.
+        </p>
+        <p>
+          Dolor eiusmod sunt ex incididunt cillum quis nostrud velit duis sit
+          officia. Lorem aliqua enim laboris do dolor eiusmod officia. Mollit
+          incididunt nisi consectetur esse laborum eiusmod pariatur proident.
+          Eiusmod et adipisicing culpa deserunt nostrud ad veniam nulla aute
+          est. Labore esse esse cupidatat amet velit id elit consequat minim
+          ullamco mollit enim excepteur ea.
+        </p>
+      </ModalContent>
+    </Modal>
+  </Backdrop>
+);
+
 /// ///////////////////////////////////////////
 // Export
 /// ///////////////////////////////////////////
@@ -449,5 +496,11 @@ export const examples = [
     label: 'Deprecated - Menu',
     demoStyles: exampleDemoStyles,
     element: <Menu />,
+  },
+  {
+    id: 'deprecated-close',
+    label: 'Deprecated - Old Close Button',
+    demoStyles: exampleDemoStyles,
+    element: <DeprecatedClose />,
   },
 ];

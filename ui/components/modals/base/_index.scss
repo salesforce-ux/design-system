@@ -55,7 +55,7 @@
   justify-content: center;
   margin: 0 $spacing-x-large;
   height: 100%;
-  padding: $square-icon-large-boundary 0;
+  padding: $square-icon-large-boundary 0 $square-icon-large-boundary-alt 0;
   border-radius: $border-radius-medium;
 
   @include mq-medium-min {
@@ -197,14 +197,15 @@
   *
   * @selector .slds-modal__close
   * @restrict .slds-modal button
-  * @notes Either `.slds-modal__content` or `.slds-modal__menu` must be used. If you’re using this class, you do not need the other. This should be nested immediately inside `.slds-modal_container` and immediately after `.slds-modal__header`.
+  * @notes Either `.slds-modal__content` or `.slds-modal__menu` must be used. If you’re using this class, you do not need the other. This should be nested immediately inside `.slds-modal_container`.
   * @required
   */
 .slds-modal__close {
   @include square($square-icon-medium-boundary);
-  position: absolute;
-  top: ($square-icon-medium-boundary * -1.25);
-  right: ((($square-icon-medium-boundary - $square-icon-medium-content) * 0.5) * -1);
+  margin-left: auto;
+  position: relative;
+  bottom: $spacing-x-small;
+  right: ($spacing-x-small * -1);
 }
 
 @mixin backdrop {

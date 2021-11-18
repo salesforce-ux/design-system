@@ -98,6 +98,10 @@
 - Removed redundant `title` attribute from modal close button.
 - Updated use of `aria-describedby` attribute for modal content, and clarified in accessibility documentation section.
 - Added the `role="presentation"` attribute to the modal backdrop.
+- Moved `slds-modal__close` out of the modal header container and adjusted styles and annotations accordingly.
+- Headless modal variant no longer requires `slds-modal__header` in the markup.
+#### Deprecated
+- Deprecated older styles for previous markup of the `slds-modal__close` button.
 
 ### [Pills](https://www.lightningdesignsystem.com/components/pills)
 ## Added
@@ -114,6 +118,10 @@
 - Added CSS Custom Property reassignments for variants and states
 #### Changed
 - Labels will no longer wrap below the radio button. When the label text wraps, it will now go directly under the previous line.
+
+### [Rich Text Editor](https://www.lightningdesignsystem.com/components/rich-text-editor)
+#### Added
+- Added `slds` as the default namespace with `sds` fallbacks for Styling Hooks.
 
 ### [Select](https://www.lightningdesignsystem.com/components/select)
 #### Added

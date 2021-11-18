@@ -42,8 +42,8 @@ export let states = [
     element: (
       <div className="demo-only" style={{ height: '640px' }}>
         <Backdrop>
-          <Modal>
-            <ModalHeader closeButton="false">
+          <Modal closeButton="false">
+            <ModalHeader>
               <h1 className="slds-text-heading_medium">
                 Select a New Record Type
               </h1>
@@ -70,8 +70,8 @@ export let states = [
     element: (
       <div className="demo-only" style={{ height: '640px' }}>
         <Backdrop>
-          <Modal>
-            <ModalHeader closeButton="false">
+          <Modal closeButton="false">
+            <ModalHeader>
               <h1 className="slds-text-heading_medium">Delete Account</h1>
               <p className="slds-m-top_x-small">
                 Are you sure you want to delete this account?
@@ -94,8 +94,8 @@ export let states = [
     element: (
       <div className="demo-only" style={{ height: '640px' }}>
         <Backdrop>
-          <Modal>
-            <ModalHeader closeButton="false">
+          <Modal closeButton="false">
+            <ModalHeader>
               <span className="slds-icon_container slds-icon-action-share-thanks slds-m-bottom_x-small">
                 <SvgIcon
                   className="slds-icon slds-icon_medium"

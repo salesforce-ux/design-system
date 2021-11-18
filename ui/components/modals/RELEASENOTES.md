@@ -20,6 +20,12 @@
 - Removed redundant `title` attribute from modal close button.
 - Updated use of `aria-describedby` attribute for modal content, and clarified in accessibility documentation section.
 - Added the `role="presentation"` attribute to the modal backdrop.
+- Moved `slds-modal__close` out of the modal header container and adjusted styles and annotations accordingly.
+- Headless modal variant no longer requires `slds-modal__header` in the markup.
+
+### Deprecated
+
+- Deprecated older styles for previous markup of the `slds-modal__close` button.
 
 ## 2.14.0
 

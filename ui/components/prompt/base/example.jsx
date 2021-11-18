@@ -19,10 +19,10 @@ export default (
         aria-labelledby="prompt-heading-id"
         aria-describedby="prompt-message-wrapper"
         className="slds-modal_prompt"
+        closeButton="false"
       >
         <ModalHeader
           className="slds-theme_error slds-theme_alert-texture"
-          closeButton={false}
         >
           <h1 className="slds-text-heading_medium" id="prompt-heading-id">
             Service unavailable

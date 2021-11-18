@@ -14,6 +14,7 @@ exports[`Prompt renders a default prompt 1`] = `
     aria-labelledby="prompt-heading-id"
     aria-modal="true"
     className="slds-modal slds-fade-in-open slds-modal_prompt"
+    closeButton="false"
     role="alertdialog"
     tabIndex="0"
   >
@@ -23,24 +24,6 @@ exports[`Prompt renders a default prompt 1`] = `
       <div
         className="slds-modal__header slds-theme_error slds-theme_alert-texture"
       >
-        <button
-          className="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse"
-          onClick={[Function]}
-        >
-          <svg
-            aria-hidden={true}
-            className="slds-button__icon slds-button__icon_large"
-          >
-            <use
-              xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#close"
-            />
-          </svg>
-          <span
-            className="slds-assistive-text"
-          >
-            Cancel and close
-          </span>
-        </button>
         <h1
           className="slds-text-heading_medium"
           id="prompt-heading-id"
@@ -69,6 +52,7 @@ exports[`Prompt renders a default prompt 1`] = `
   </section>
   <div
     className="slds-backdrop slds-backdrop_open"
+    role="presentation"
   />
 </div>
 `;

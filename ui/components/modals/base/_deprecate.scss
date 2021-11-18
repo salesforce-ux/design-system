@@ -21,6 +21,7 @@
    * @restrict .slds-modal div
    * @notes Either `.slds-modal__menu` or `.slds-modal__content` must be used. If you’re using this class, you do not need the other. This should be nested immediately inside `.slds-modal_container` and immediately after `.slds-modal__header`.
    * @required
+   * @deprecated
    */
   .slds-modal__menu {
     position: relative;
@@ -35,5 +36,15 @@
         margin: $spacing-xxx-small 0;
       }
     }
+  }
+}
+
+@include deprecate('4.0.0', 'Please move slds-modal__close outside modal header') {
+  .slds-modal__header .slds-modal__close {
+    position: absolute;
+    top: ($square-icon-medium-boundary * -1.25);
+    right: ((($square-icon-medium-boundary - $square-icon-medium-content) * 0.5) * -1);
+    margin-left: 0;
+    bottom: 0;
   }
 }

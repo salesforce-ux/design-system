@@ -11,7 +11,8 @@ import {
   Headless,
   Footless,
   HiddenFooter,
-  Menu
+  Menu,
+  DeprecatedClose
 } from '../base/example';
 
 const { matchesMarkup } = createHelpers(__dirname);
@@ -37,8 +38,10 @@ describe('Modal', () => {
 
   it('renders a modal that is Footless', () => matchesMarkup(<Footless />));
 
-  it('renders a modal that is has a hidden footer', () =>
+  it('renders a modal that has a hidden footer', () =>
     matchesMarkup(<HiddenFooter />));
 
-  it('renders a modal that is contains a menu', () => matchesMarkup(<Menu />));
+  it('renders a modal that contains a menu', () => matchesMarkup(<Menu />));
+
+  it('renders a modal that is using deprecated markup for the close button', () => matchesMarkup(<DeprecatedClose />));
 });

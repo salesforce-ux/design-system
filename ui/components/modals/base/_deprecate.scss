@@ -40,6 +40,7 @@
 }
 
 @include deprecate('4.0.0', 'Please move slds-modal__close outside modal header') {
+
   .slds-modal__header .slds-modal__close {
     position: absolute;
     top: ($square-icon-medium-boundary * -1.25);

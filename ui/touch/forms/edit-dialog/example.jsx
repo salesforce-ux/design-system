@@ -24,7 +24,7 @@ const inputId09 = 'input-id-09';
 export default (
   <div className="demo-only" style={{ height: '640px' }}>
     <Modal className="slds-modal_form">
-      <ModalHeader closeButton="false">
+      <ModalHeader closeButton={false}>
         <button className="slds-button slds-button_neutral">Cancel</button>
         <button className="slds-button slds-button_neutral">Save</button>
         <h1

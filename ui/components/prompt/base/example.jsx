@@ -19,7 +19,7 @@ export default (
         aria-labelledby="prompt-heading-id"
         aria-describedby="prompt-message-wrapper"
         className="slds-modal_prompt"
-        closeButton="false"
+        closeButton={false}
       >
         <ModalHeader
           className="slds-theme_error slds-theme_alert-texture"

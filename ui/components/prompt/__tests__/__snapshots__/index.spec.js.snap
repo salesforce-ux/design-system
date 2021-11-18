@@ -14,7 +14,6 @@ exports[`Prompt renders a default prompt 1`] = `
     aria-labelledby="prompt-heading-id"
     aria-modal="true"
     className="slds-modal slds-fade-in-open slds-modal_prompt"
-    closeButton="false"
     role="alertdialog"
     tabIndex="0"
   >

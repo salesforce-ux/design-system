@@ -84,7 +84,7 @@ it('renders a docked composer with popout', () =>
         className="slds-docked-composer-modal"
         aria-labelledby={dialogHeadingId}
         aria-describedby={dialogBodyId}
-        closeButton="false"
+        closeButton={false}
       >
         <ModalContent id="modal-content-id">
           <DockedComposerPanel footer={<Footer />} nestedDialog>

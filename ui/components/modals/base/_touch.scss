@@ -7,6 +7,9 @@
 
 .slds-modal__close {
   @include square($height-tappable);
+}
+
+.slds-modal__header .slds-modal__close {
   top: -$height-tappable;
   right: 0;
 }

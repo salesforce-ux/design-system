@@ -8,6 +8,7 @@ Array [
     aria-labelledby="modal-heading-unique-id-1"
     aria-modal="true"
     className="slds-modal slds-fade-in-open"
+    closeButtonDisabled={false}
     role="dialog"
     tabIndex="-1"
   >
@@ -16,6 +17,7 @@ Array [
     >
       <button
         className="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse"
+        disabled={false}
         onClick={[Function]}
       >
         <svg
@@ -65,12 +67,13 @@ Array [
 ]
 `;
 
-exports[`Modal renders a modal that has a hidden footer 1`] = `
+exports[`Modal renders a modal that has a disabled close button 1`] = `
 Array [
   <section
     aria-labelledby="modal-heading-01"
     aria-modal="true"
     className="slds-modal slds-fade-in-open"
+    closeButtonDisabled={true}
     role="dialog"
     tabIndex="-1"
   >
@@ -79,69 +82,7 @@ Array [
     >
       <button
         className="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse"
-        onClick={[Function]}
-      >
-        <svg
-          aria-hidden={true}
-          className="slds-button__icon slds-button__icon_large"
-        >
-          <use
-            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#close"
-          />
-        </svg>
-        <span
-          className="slds-assistive-text"
-        >
-          Cancel and close
-        </span>
-      </button>
-      <div
-        className="slds-modal__header"
-      >
-        <h1
-          className="slds-modal__title slds-hyphenate"
-          id="modal-heading-01"
-        >
-          Modal header
-        </h1>
-      </div>
-      <div
-        className="slds-modal__content slds-modal__content_has-hidden-footer slds-p-around_medium"
-        id="modal-content-id-1"
-      >
-        <p>
-          Sit nulla est ex deserunt exercitation anim occaecat. Nostrud ullamco deserunt aute id consequat veniam incididunt duis in sint irure nisi. Mollit officia cillum Lorem ullamco minim nostrud elit officia tempor esse quis. Cillum sunt ad dolore quis aute consequat ipsum magna exercitation reprehenderit magna. Tempor cupidatat consequat elit dolor adipisicing.
-        </p>
-        <p>
-          Dolor eiusmod sunt ex incididunt cillum quis nostrud velit duis sit officia. Lorem aliqua enim laboris do dolor eiusmod officia. Mollit incididunt nisi consectetur esse laborum eiusmod pariatur proident. Eiusmod et adipisicing culpa deserunt nostrud ad veniam nulla aute est. Labore esse esse cupidatat amet velit id elit consequat minim ullamco mollit enim excepteur ea.
-        </p>
-      </div>
-      <div
-        className="slds-modal__footer slds-hide"
-      />
-    </div>
-  </section>,
-  <div
-    className="slds-backdrop slds-backdrop_open"
-    role="presentation"
-  />,
-]
-`;
-
-exports[`Modal renders a modal that is Footless 1`] = `
-Array [
-  <section
-    aria-labelledby="modal-heading-01"
-    aria-modal="true"
-    className="slds-modal slds-fade-in-open"
-    role="dialog"
-    tabIndex="-1"
-  >
-    <div
-      className="slds-modal__container"
-    >
-      <button
-        className="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse"
+        disabled={true}
         onClick={[Function]}
       >
         <svg
@@ -188,12 +129,13 @@ Array [
 ]
 `;
 
-exports[`Modal renders a modal that is directional 1`] = `
+exports[`Modal renders a modal that has a hidden footer 1`] = `
 Array [
   <section
     aria-labelledby="modal-heading-01"
     aria-modal="true"
     className="slds-modal slds-fade-in-open"
+    closeButtonDisabled={false}
     role="dialog"
     tabIndex="-1"
   >
@@ -202,6 +144,305 @@ Array [
     >
       <button
         className="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse"
+        disabled={false}
+        onClick={[Function]}
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_large"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#close"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          Cancel and close
+        </span>
+      </button>
+      <div
+        className="slds-modal__header"
+      >
+        <h1
+          className="slds-modal__title slds-hyphenate"
+          id="modal-heading-01"
+        >
+          Modal header
+        </h1>
+      </div>
+      <div
+        className="slds-modal__content slds-modal__content_has-hidden-footer slds-p-around_medium"
+        id="modal-content-id-1"
+      >
+        <p>
+          Sit nulla est ex deserunt exercitation anim occaecat. Nostrud ullamco deserunt aute id consequat veniam incididunt duis in sint irure nisi. Mollit officia cillum Lorem ullamco minim nostrud elit officia tempor esse quis. Cillum sunt ad dolore quis aute consequat ipsum magna exercitation reprehenderit magna. Tempor cupidatat consequat elit dolor adipisicing.
+        </p>
+        <p>
+          Dolor eiusmod sunt ex incididunt cillum quis nostrud velit duis sit officia. Lorem aliqua enim laboris do dolor eiusmod officia. Mollit incididunt nisi consectetur esse laborum eiusmod pariatur proident. Eiusmod et adipisicing culpa deserunt nostrud ad veniam nulla aute est. Labore esse esse cupidatat amet velit id elit consequat minim ullamco mollit enim excepteur ea.
+        </p>
+      </div>
+    </div>
+  </section>,
+  <div
+    className="slds-backdrop slds-backdrop_open"
+    role="presentation"
+  />,
+]
+`;
+
+exports[`Modal renders a modal that is Footless 1`] = `
+Array [
+  <section
+    aria-labelledby="modal-heading-01"
+    aria-modal="true"
+    className="slds-modal slds-fade-in-open"
+    closeButtonDisabled={false}
+    role="dialog"
+    tabIndex="-1"
+  >
+    <div
+      className="slds-modal__container"
+    >
+      <button
+        className="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse"
+        disabled={false}
+        onClick={[Function]}
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_large"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#close"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          Cancel and close
+        </span>
+      </button>
+      <div
+        className="slds-modal__header"
+      >
+        <h1
+          className="slds-modal__title slds-hyphenate"
+          id="modal-heading-01"
+        >
+          Modal header
+        </h1>
+      </div>
+      <div
+        className="slds-modal__content slds-p-around_medium"
+        id="modal-content-id-1"
+      >
+        <p>
+          Sit nulla est ex deserunt exercitation anim occaecat. Nostrud ullamco deserunt aute id consequat veniam incididunt duis in sint irure nisi. Mollit officia cillum Lorem ullamco minim nostrud elit officia tempor esse quis. Cillum sunt ad dolore quis aute consequat ipsum magna exercitation reprehenderit magna. Tempor cupidatat consequat elit dolor adipisicing.
+        </p>
+        <p>
+          Dolor eiusmod sunt ex incididunt cillum quis nostrud velit duis sit officia. Lorem aliqua enim laboris do dolor eiusmod officia. Mollit incididunt nisi consectetur esse laborum eiusmod pariatur proident. Eiusmod et adipisicing culpa deserunt nostrud ad veniam nulla aute est. Labore esse esse cupidatat amet velit id elit consequat minim ullamco mollit enim excepteur ea.
+        </p>
+      </div>
+    </div>
+  </section>,
+  <div
+    className="slds-backdrop slds-backdrop_open"
+    role="presentation"
+  />,
+]
+`;
+
+exports[`Modal renders a modal that is Headless 1`] = `
+Array [
+  <section
+    aria-label="Meaningful description of the modal content"
+    aria-modal="true"
+    className="slds-modal slds-fade-in-open"
+    closeButtonDisabled={false}
+    role="dialog"
+    tabIndex="-1"
+  >
+    <div
+      className="slds-modal__container"
+    >
+      <button
+        className="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse"
+        disabled={false}
+        onClick={[Function]}
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_large"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#close"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          Cancel and close
+        </span>
+      </button>
+      <div
+        className="slds-modal__content slds-p-around_medium slds-modal__content_headless"
+        id="modal-content-id-1"
+      >
+        <p>
+          Sit nulla est ex deserunt exercitation anim occaecat. Nostrud ullamco deserunt aute id consequat veniam incididunt duis in sint irure nisi. Mollit officia cillum Lorem ullamco minim nostrud elit officia tempor esse quis. Cillum sunt ad dolore quis aute consequat ipsum magna exercitation reprehenderit magna. Tempor cupidatat consequat elit dolor adipisicing.
+        </p>
+        <p>
+          Dolor eiusmod sunt ex incididunt cillum quis nostrud velit duis sit officia. Lorem aliqua enim laboris do dolor eiusmod officia. Mollit incididunt nisi consectetur esse laborum eiusmod pariatur proident. Eiusmod et adipisicing culpa deserunt nostrud ad veniam nulla aute est. Labore esse esse cupidatat amet velit id elit consequat minim ullamco mollit enim excepteur ea.
+        </p>
+      </div>
+      <div
+        className="slds-modal__footer"
+      >
+        <button
+          aria-label="Cancel and close"
+          className="slds-button slds-button_neutral"
+        >
+          Cancel
+        </button>
+        <button
+          className="slds-button slds-button_brand"
+        >
+          Save
+        </button>
+      </div>
+    </div>
+  </section>,
+  <div
+    className="slds-backdrop slds-backdrop_open"
+    role="presentation"
+  />,
+]
+`;
+
+exports[`Modal renders a modal that is Headless and Footless - deprecated 1`] = `
+Array [
+  <section
+    aria-labelledby="modal-heading-01"
+    aria-modal="true"
+    className="slds-modal slds-fade-in-open"
+    closeButtonDisabled={false}
+    role="dialog"
+    tabIndex="-1"
+  >
+    <div
+      className="slds-modal__container"
+    >
+      <button
+        className="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse"
+        disabled={false}
+        onClick={[Function]}
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_large"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#close"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          Cancel and close
+        </span>
+      </button>
+      <div
+        className="slds-modal__header slds-modal__header_empty"
+      />
+      <div
+        className="slds-modal__content slds-p-around_medium"
+        id="modal-content-id-1"
+      >
+        <p>
+          Sit nulla est ex deserunt exercitation anim occaecat. Nostrud ullamco deserunt aute id consequat veniam incididunt duis in sint irure nisi. Mollit officia cillum Lorem ullamco minim nostrud elit officia tempor esse quis. Cillum sunt ad dolore quis aute consequat ipsum magna exercitation reprehenderit magna. Tempor cupidatat consequat elit dolor adipisicing.
+        </p>
+        <p>
+          Dolor eiusmod sunt ex incididunt cillum quis nostrud velit duis sit officia. Lorem aliqua enim laboris do dolor eiusmod officia. Mollit incididunt nisi consectetur esse laborum eiusmod pariatur proident. Eiusmod et adipisicing culpa deserunt nostrud ad veniam nulla aute est. Labore esse esse cupidatat amet velit id elit consequat minim ullamco mollit enim excepteur ea.
+        </p>
+      </div>
+    </div>
+  </section>,
+  <div
+    className="slds-backdrop slds-backdrop_open"
+    role="presentation"
+  />,
+]
+`;
+
+exports[`Modal renders a modal that is Headless and Footless 1`] = `
+Array [
+  <section
+    aria-labelledby="modal-heading-01"
+    aria-modal="true"
+    className="slds-modal slds-fade-in-open"
+    closeButtonDisabled={false}
+    role="dialog"
+    tabIndex="-1"
+  >
+    <div
+      className="slds-modal__container"
+    >
+      <button
+        className="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse"
+        disabled={false}
+        onClick={[Function]}
+      >
+        <svg
+          aria-hidden={true}
+          className="slds-button__icon slds-button__icon_large"
+        >
+          <use
+            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#close"
+          />
+        </svg>
+        <span
+          className="slds-assistive-text"
+        >
+          Cancel and close
+        </span>
+      </button>
+      <div
+        className="slds-modal__content slds-modal__content_headless slds-modal__content_footless slds-p-around_medium"
+        id="modal-content-id-1"
+      >
+        <p>
+          Sit nulla est ex deserunt exercitation anim occaecat. Nostrud ullamco deserunt aute id consequat veniam incididunt duis in sint irure nisi. Mollit officia cillum Lorem ullamco minim nostrud elit officia tempor esse quis. Cillum sunt ad dolore quis aute consequat ipsum magna exercitation reprehenderit magna. Tempor cupidatat consequat elit dolor adipisicing.
+        </p>
+        <p>
+          Dolor eiusmod sunt ex incididunt cillum quis nostrud velit duis sit officia. Lorem aliqua enim laboris do dolor eiusmod officia. Mollit incididunt nisi consectetur esse laborum eiusmod pariatur proident. Eiusmod et adipisicing culpa deserunt nostrud ad veniam nulla aute est. Labore esse esse cupidatat amet velit id elit consequat minim ullamco mollit enim excepteur ea.
+        </p>
+      </div>
+    </div>
+  </section>,
+  <div
+    className="slds-backdrop slds-backdrop_open"
+    role="presentation"
+  />,
+]
+`;
+
+exports[`Modal renders a modal that is directional 1`] = `
+Array [
+  <section
+    aria-labelledby="modal-heading-01"
+    aria-modal="true"
+    className="slds-modal slds-fade-in-open"
+    closeButtonDisabled={false}
+    role="dialog"
+    tabIndex="-1"
+  >
+    <div
+      className="slds-modal__container"
+    >
+      <button
+        className="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse"
+        disabled={false}
         onClick={[Function]}
       >
         <svg
@@ -262,77 +503,13 @@ Array [
 ]
 `;
 
-exports[`Modal renders a modal that is headless 1`] = `
-Array [
-  <section
-    aria-label="Meaningful description of the modal content"
-    aria-modal="true"
-    className="slds-modal slds-fade-in-open"
-    role="dialog"
-    tabIndex="-1"
-  >
-    <div
-      className="slds-modal__container"
-    >
-      <button
-        className="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse"
-        onClick={[Function]}
-      >
-        <svg
-          aria-hidden={true}
-          className="slds-button__icon slds-button__icon_large"
-        >
-          <use
-            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#close"
-          />
-        </svg>
-        <span
-          className="slds-assistive-text"
-        >
-          Cancel and close
-        </span>
-      </button>
-      <div
-        className="slds-modal__content slds-p-around_medium"
-        id="modal-content-id-1"
-      >
-        <p>
-          Sit nulla est ex deserunt exercitation anim occaecat. Nostrud ullamco deserunt aute id consequat veniam incididunt duis in sint irure nisi. Mollit officia cillum Lorem ullamco minim nostrud elit officia tempor esse quis. Cillum sunt ad dolore quis aute consequat ipsum magna exercitation reprehenderit magna. Tempor cupidatat consequat elit dolor adipisicing.
-        </p>
-        <p>
-          Dolor eiusmod sunt ex incididunt cillum quis nostrud velit duis sit officia. Lorem aliqua enim laboris do dolor eiusmod officia. Mollit incididunt nisi consectetur esse laborum eiusmod pariatur proident. Eiusmod et adipisicing culpa deserunt nostrud ad veniam nulla aute est. Labore esse esse cupidatat amet velit id elit consequat minim ullamco mollit enim excepteur ea.
-        </p>
-      </div>
-      <div
-        className="slds-modal__footer"
-      >
-        <button
-          aria-label="Cancel and close"
-          className="slds-button slds-button_neutral"
-        >
-          Cancel
-        </button>
-        <button
-          className="slds-button slds-button_brand"
-        >
-          Save
-        </button>
-      </div>
-    </div>
-  </section>,
-  <div
-    className="slds-backdrop slds-backdrop_open"
-    role="presentation"
-  />,
-]
-`;
-
 exports[`Modal renders a modal that is large 1`] = `
 Array [
   <section
     aria-labelledby="modal-heading-01"
     aria-modal="true"
     className="slds-modal slds-fade-in-open slds-modal_large"
+    closeButtonDisabled={false}
     role="dialog"
     tabIndex="-1"
   >
@@ -341,6 +518,7 @@ Array [
     >
       <button
         className="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse"
+        disabled={false}
         onClick={[Function]}
       >
         <svg
@@ -408,6 +586,7 @@ Array [
     aria-labelledby="modal-heading-01"
     aria-modal="true"
     className="slds-modal slds-fade-in-open slds-modal_medium"
+    closeButtonDisabled={false}
     role="dialog"
     tabIndex="-1"
   >
@@ -416,6 +595,7 @@ Array [
     >
       <button
         className="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse"
+        disabled={false}
         onClick={[Function]}
       >
         <svg
@@ -483,6 +663,7 @@ Array [
     aria-labelledby="modal-heading-01"
     aria-modal="true"
     className="slds-modal slds-fade-in-open slds-modal_small"
+    closeButtonDisabled={false}
     role="dialog"
     tabIndex="-1"
   >
@@ -491,6 +672,7 @@ Array [
     >
       <button
         className="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse"
+        disabled={false}
         onClick={[Function]}
       >
         <svg
@@ -558,6 +740,7 @@ Array [
     aria-labelledby="modal-heading-01"
     aria-modal="true"
     className="slds-modal slds-fade-in-open"
+    closeButtonDisabled={true}
     role="dialog"
     tabIndex="-1"
   >
@@ -566,6 +749,7 @@ Array [
     >
       <button
         className="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse"
+        disabled={true}
         onClick={[Function]}
       >
         <svg
@@ -636,6 +820,7 @@ Array [
     aria-labelledby="modal-heading-01"
     aria-modal="true"
     className="slds-modal slds-fade-in-open"
+    closeButtonDisabled={false}
     role="dialog"
     tabIndex="-1"
   >
@@ -644,6 +829,7 @@ Array [
     >
       <button
         className="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse"
+        disabled={false}
         onClick={[Function]}
       >
         <svg

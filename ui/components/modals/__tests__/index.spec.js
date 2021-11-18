@@ -11,6 +11,8 @@ import {
   Headless,
   Footless,
   HiddenFooter,
+  HeadlessAndFootless,
+  HeadlessAndFootlessDeprecated,
   Menu,
   DisabledClose,
   DeprecatedClose
@@ -35,12 +37,16 @@ describe('Modal', () => {
   it('renders a modal that is directional', () =>
     matchesMarkup(<Directional />));
 
-  it('renders a modal that is headless', () => matchesMarkup(<Headless />));
+  it('renders a modal that is Headless', () => matchesMarkup(<Headless />));
 
   it('renders a modal that is Footless', () => matchesMarkup(<Footless />));
 
   it('renders a modal that has a hidden footer', () =>
     matchesMarkup(<HiddenFooter />));
+
+  it('renders a modal that is Headless and Footless', () => matchesMarkup(<HeadlessAndFootless />));
+
+  it('renders a modal that is Headless and Footless - deprecated', () => matchesMarkup(<HeadlessAndFootlessDeprecated />));
 
   it('renders a modal that contains a menu', () => matchesMarkup(<Menu />));
 

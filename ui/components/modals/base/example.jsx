@@ -51,7 +51,6 @@ export let Modal = (props) => (
 
 Modal.propTypes = {
   tabIndex: PropTypes.oneOf(['-1', '0']),
-  closeButton: PropTypes.bool,
   closeButtonDisabled: PropTypes.bool,
 };
 
@@ -239,7 +238,7 @@ export let Directional = (props) => (
 export let Headless = (props) => (
   <Backdrop>
     <Modal aria-label="Meaningful description of the modal content">
-      <ModalContent className="slds-p-around_medium">
+      <ModalContent className="slds-p-around_medium slds-modal__content_headless">
         <p>
           Sit nulla est ex deserunt exercitation anim occaecat. Nostrud ullamco
           deserunt aute id consequat veniam incididunt duis in sint irure nisi.
@@ -321,7 +320,57 @@ export let HiddenFooter = (props) => (
           ullamco mollit enim excepteur ea.
         </p>
       </ModalContent>
-      <ModalFooter className="slds-hide" />
+    </Modal>
+  </Backdrop>
+);
+
+export let HeadlessAndFootless = (props) => (
+  <Backdrop>
+    <Modal aria-labelledby="modal-heading-01">
+      <ModalContent className="slds-modal__content_headless slds-modal__content_footless slds-p-around_medium">
+        <p>
+          Sit nulla est ex deserunt exercitation anim occaecat. Nostrud ullamco
+          deserunt aute id consequat veniam incididunt duis in sint irure nisi.
+          Mollit officia cillum Lorem ullamco minim nostrud elit officia tempor
+          esse quis. Cillum sunt ad dolore quis aute consequat ipsum magna
+          exercitation reprehenderit magna. Tempor cupidatat consequat elit
+          dolor adipisicing.
+        </p>
+        <p>
+          Dolor eiusmod sunt ex incididunt cillum quis nostrud velit duis sit
+          officia. Lorem aliqua enim laboris do dolor eiusmod officia. Mollit
+          incididunt nisi consectetur esse laborum eiusmod pariatur proident.
+          Eiusmod et adipisicing culpa deserunt nostrud ad veniam nulla aute
+          est. Labore esse esse cupidatat amet velit id elit consequat minim
+          ullamco mollit enim excepteur ea.
+        </p>
+      </ModalContent>
+    </Modal>
+  </Backdrop>
+);
+
+export let HeadlessAndFootlessDeprecated = (props) => (
+  <Backdrop>
+    <Modal aria-labelledby="modal-heading-01">
+      <ModalHeader className="slds-modal__header_empty" />
+      <ModalContent className="slds-p-around_medium">
+        <p>
+          Sit nulla est ex deserunt exercitation anim occaecat. Nostrud ullamco
+          deserunt aute id consequat veniam incididunt duis in sint irure nisi.
+          Mollit officia cillum Lorem ullamco minim nostrud elit officia tempor
+          esse quis. Cillum sunt ad dolore quis aute consequat ipsum magna
+          exercitation reprehenderit magna. Tempor cupidatat consequat elit
+          dolor adipisicing.
+        </p>
+        <p>
+          Dolor eiusmod sunt ex incididunt cillum quis nostrud velit duis sit
+          officia. Lorem aliqua enim laboris do dolor eiusmod officia. Mollit
+          incididunt nisi consectetur esse laborum eiusmod pariatur proident.
+          Eiusmod et adipisicing culpa deserunt nostrud ad veniam nulla aute
+          est. Labore esse esse cupidatat amet velit id elit consequat minim
+          ullamco mollit enim excepteur ea.
+        </p>
+      </ModalContent>
     </Modal>
   </Backdrop>
 );
@@ -369,7 +418,7 @@ export const Menu = () => {
 
 export let DisabledClose = (props) => (
   <Backdrop>
-    <Modal aria-labelledby="modal-heading-01" closeButtonDisabled="true">
+    <Modal aria-labelledby="modal-heading-01" closeButtonDisabled>
       <ModalHeader>
         <h1 id="modal-heading-01" className="slds-modal__title slds-hyphenate">
           Modal header
@@ -399,7 +448,7 @@ export let DisabledClose = (props) => (
 
 export let DeprecatedClose = (props) => (
   <Backdrop>
-    <Modal aria-labelledby="modal-heading-01">
+    <Modal aria-labelledby="modal-heading-01" closeButtonDisabled>
       <ModalHeaderDeprecated>
         <h1 id="modal-heading-01" className="slds-modal__title slds-hyphenate">
           Modal header
@@ -484,13 +533,13 @@ export const examples = [
   },
   {
     id: 'headless',
-    label: 'Header empty',
+    label: 'Header empty (Headless)',
     demoStyles: exampleDemoStyles,
     element: <Headless />,
   },
   {
     id: 'footless',
-    label: 'Footer removed',
+    label: 'Footer removed (Footless)',
     demoStyles: exampleDemoStyles,
     element: <Footless />,
   },
@@ -499,6 +548,18 @@ export const examples = [
     label: 'Footer hidden but not removed (not public)',
     demoStyles: exampleDemoStyles,
     element: <HiddenFooter />,
+  },
+  {
+    id: 'headless-and-footless',
+    label: 'Headless and Footless',
+    demoStyles: exampleDemoStyles,
+    element: <HeadlessAndFootless />,
+  },
+  {
+    id: 'headless-and-footless-deprecated',
+    label: 'Headless and Footless - deprecated',
+    demoStyles: exampleDemoStyles,
+    element: <HeadlessAndFootlessDeprecated />,
   },
   {
     id: 'large',

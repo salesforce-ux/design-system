@@ -49,3 +49,30 @@
     bottom: 0;
   }
 }
+
+@include deprecate('4.0.0', 'Empty modal header no longer necessary') {
+  /**
+  * Use when modal header has no content
+  *
+  * @selector .slds-modal__header_empty
+  * @restrict .slds-modal__header
+  * @deprecated
+  */
+  .slds-modal__header_empty,
+  .slds-modal__header--empty {
+    /*! @css-var-fallback padding-top */
+    --sds-c-modal-header-spacing-block-start: 0;
+
+    /*! @css-var-fallback padding-bottom */
+    --sds-c-modal-header-spacing-block-end: 0;
+
+    /*! @css-var-fallback padding-left */
+    --sds-c-modal-header-spacing-inline-start: 0;
+
+    /*! @css-var-fallback padding-right */
+    --sds-c-modal-header-spacing-inline-end: 0;
+
+    /*! @css-var-fallback border-bottom */
+    --slds-c-modal-sizing-border: 0;
+  }
+}

@@ -91,6 +91,7 @@
 - Added `slds` as the default namespace with `sds` fallbacks for Styling Hooks.
 - Added CSS Custom Property reassignments for variants and states.
 - Added clarifying notes around modal focus for accessibility.
+- Added `.slds-modal__content_headless` and `slds-modal__content_footless` classes for styling modal content.
 #### Changed
 - Changed `header` and `footer` to generic `div` tags for better accessibility semantics.
 - Changed assistive text for close buttons in modals, and added notes to accessibility documentation.

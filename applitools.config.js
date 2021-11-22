@@ -3,6 +3,23 @@ const resolution = { width: 1024, height: 768 };
 
 const currentBranch = branch.sync();
 
+const vrtMode = process.env.VRT_MODE;
+const VRT_MODE_CHROME = "chrome";
+const VRT_MODE_FULL = "full";
+
+const browsersToTest = () => {
+  const browserTests = [
+    { width: resolution.width, height: resolution.height, name: 'chrome' },
+    { width: resolution.width, height: resolution.height, name: 'firefox' },
+    { width: resolution.width, height: resolution.height, name: 'safari' },
+    { width: resolution.width, height: resolution.height, name: 'edgechromium' }
+  ]
+
+  return browserTests.filter(test => {
+    return vrtMode === VRT_MODE_FULL || (vrtMode === VRT_MODE_CHROME && test.name === VRT_MODE_CHROME)
+  })
+}
+
 module.exports = {
   apiKey: process.env.APPLITOOLS_API_KEY,
   appName: 'SLDS',
@@ -32,10 +49,5 @@ module.exports = {
     ? { executablePath: '/usr/bin/google-chrome' }
     : undefined,
   waitBeforeScreenshot: 1000,
-  browser: [
-    { width: resolution.width, height: resolution.height, name: 'firefox' },
-    { width: resolution.width, height: resolution.height, name: 'chrome' },
-    { width: resolution.width, height: resolution.height, name: 'safari' },
-    { width: resolution.width, height: resolution.height, name: 'edgechromium' }
-  ]
+  browser: browsersToTest()
 };

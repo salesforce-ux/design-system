@@ -4,6 +4,17 @@
 #
 version: 2.1
 
+parameters:
+  run_labeled_workflow:
+    type: boolean
+    default: false
+  triggering_label:
+    type: string
+    default: ""
+  vrt_mode:
+    type: string
+    default: ""
+
 orbs:
   node: circleci/node@4.3.0
   heroku: circleci/heroku@1.2.2
@@ -146,6 +157,43 @@ commands:
           name: Add Applitools eyes-storybook module
           command: 'npm i @applitools/eyes-storybook@latest --save-dev --package-lock-only'
 
+  get-pr-number:
+    description: 'Get Github pull-request number'
+    steps:
+      - run:
+          name: Get Github pull-request number
+          command: |
+            set +e
+            gh pr view --json number,state,title,url > gh-pull-data.json
+            for ((x=0 ; x<5 ; x++)) ; do
+              if [ -z $(cat gh-pull-data.json | jq -r '.number') ] ; then
+                gh pr view --json number,state,title,url > gh-pull-data.json
+              else
+                echo "» Pull-request #"$(cat gh-pull-data.json | jq -r '.number')
+                break
+              fi
+            done
+            echo
+            echo "=== Github pull-request API results ==="
+            cat gh-pull-data.json
+            echo "---------------------------------------"
+            cat gh-pull-data.json | jq -r '.number' > workspace/gh-pr-num.txt && cat workspace/gh-pr-num.txt
+
+      - run:
+          name: Verify Github pull-request number
+          command: |
+            echo "» Branch: "${CIRCLE_BRANCH}
+            echo
+            if [[ ${CIRCLE_BRANCH} =~ ^[0-9]{3}-(summer|spring|winter)-[0-9]{2}$ || -n ${CIRCLE_TAG} ]] ; then
+              echo "» Does not require a pull-request number"
+            else
+              if [ -z $(cat workspace/gh-pr-num.txt) ] ; then
+                echo "» No pull-request number found!"
+                echo "» Please try running this CI workflow again."
+                exit 1
+              fi
+            fi
+
   install-gh-cli:
     description: 'Install Github CLI'
     steps:
@@ -184,40 +232,7 @@ jobs:
       - checkout
       - run: mkdir -p workspace
       - install-gh-cli
-
-      - run:
-          name: Get Github pull-request number
-          command: |
-            set +e
-            gh pr view --json number,state,title,url > gh-pull-data.json
-            for ((x=0 ; x<5 ; x++)) ; do
-              if [ -z $(cat gh-pull-data.json | jq -r '.number') ] ; then
-                gh pr view --json number,state,title,url > gh-pull-data.json
-              else
-                echo "» Pull-request #"$(cat gh-pull-data.json | jq -r '.number')
-                break
-              fi
-            done
-            echo
-            echo "=== Github pull-request API results ==="
-            cat gh-pull-data.json
-            echo "---------------------------------------"
-            cat gh-pull-data.json | jq -r '.number' > workspace/gh-pr-num.txt && cat workspace/gh-pr-num.txt
-
-      - run:
-          name: Verify Github pull-request number
-          command: |
-            echo "» Branch: "${CIRCLE_BRANCH}
-            echo
-            if [[ ${CIRCLE_BRANCH} =~ ^[0-9]{3}-(summer|spring|winter)-[0-9]{2}$ || -n ${CIRCLE_TAG} ]] ; then
-              echo "» Does not require a pull-request number"
-            else
-              if [ -z $(cat workspace/gh-pr-num.txt) ] ; then
-                echo "» No pull-request number found!"
-                echo "» Please try running this CI workflow again."
-                exit 1
-              fi
-            fi
+      - get-pr-number
 
       - run:
           name: Retrieve Github deployments
@@ -507,7 +522,21 @@ jobs:
               gh api ${STATUS_URL} -f state=success -f environment_url=${SITE_URL} -H "Accept: application/vnd.github.ant-man-preview+json"
             done
 
-  #
+  vrt-init:
+    executor: slds-executor
+    resource_class: small
+
+    steps:
+      - checkout
+      - run: mkdir -p workspace
+      - install-gh-cli
+      - get-pr-number
+
+      - persist_to_workspace:
+          root: workspace
+          paths:
+            - gh-pr-num.txt
+
   vrt-desktop:
     executor: slds-executor
     resource_class: large
@@ -518,7 +547,7 @@ jobs:
       # run Applitools tests!
       - run:
           name: Applitools
-          command: 'npx eyes-storybook' # -u https://${REVIEW_APP_NAME}.herokuapp.com
+          command: 'VRT_MODE=<< pipeline.parameters.vrt_mode >> npx eyes-storybook' # -u https://${REVIEW_APP_NAME}.herokuapp.com
           no_output_timeout: 20m
 
   vrt-mobile:
@@ -606,6 +635,21 @@ workflows:
               only: /^v\d+\.\d+\.\d+.*/
             branches:
               ignore: /.*/
+  CI_scheduled:
+    triggers:
+      - schedule:
+          cron: "0 0 * * *"
+          filters:
+            branches:
+              only:
+                # filtering only for this integration branch, for now
+                - 236-spring-22
+    jobs:
+      - vrt-init:
+          context: ux-eng-keys
+          filters:
+            tags:
+              only: /.*/
       - vrt-desktop:
           context: ux-eng-keys
           # do not run for main version branches
@@ -613,7 +657,7 @@ workflows:
             branches:
               ignore: /^\d{3}-(summer|spring|winter)-\d{2}$/
           requires:
-            - init
+            - vrt-init
       - vrt-mobile:
           context: ux-eng-keys
           # do not run for main version branches
@@ -621,7 +665,7 @@ workflows:
             branches:
               ignore: /^\d{3}-(summer|spring|winter)-\d{2}$/
           requires:
-            - init
+            - vrt-init
       - vrt-legacy:
           context: ux-eng-keys
           # do not run for main version branches
@@ -629,7 +673,75 @@ workflows:
             branches:
               ignore: /^\d{3}-(summer|spring|winter)-\d{2}$/
           requires:
-            - init
+            - vrt-init
+      - vrt-close:
+          context: ux-eng-keys
+          requires:
+            - vrt-desktop
+            - vrt-mobile
+            - vrt-legacy
+
+  # This runs when a PR is labeled: vrt:chrome-ready
+  CI_VRT_chrome:
+    when:
+      and:
+        - << pipeline.parameters.run_labeled_workflow >>
+        - equal: [ chrome, << pipeline.parameters.vrt_mode >>]
+    jobs:
+      - vrt-init:
+          context: ux-eng-keys
+          filters:
+            tags:
+              only: /.*/
+      - vrt-desktop:
+          context: ux-eng-keys
+          # do not run for main version branches
+          filters:
+            branches:
+              ignore: /^\d{3}-(summer|spring|winter)-\d{2}$/
+          requires:
+            - vrt-init
+      - vrt-close:
+          context: ux-eng-keys
+          requires:
+            - vrt-desktop
+
+  # This runs when a PR is labeled: vrt:full-ready
+  CI_VRT_full:
+    when:
+      and:
+        - << pipeline.parameters.run_labeled_workflow >>
+        - equal: [ full, << pipeline.parameters.vrt_mode >>]
+    jobs:
+      - vrt-init:
+          context: ux-eng-keys
+          filters:
+            tags:
+              only: /.*/
+      - vrt-desktop:
+          context: ux-eng-keys
+          # do not run for main version branches
+          filters:
+            branches:
+              ignore: /^\d{3}-(summer|spring|winter)-\d{2}$/
+          requires:
+            - vrt-init
+      - vrt-mobile:
+          context: ux-eng-keys
+          # do not run for main version branches
+          filters:
+            branches:
+              ignore: /^\d{3}-(summer|spring|winter)-\d{2}$/
+          requires:
+            - vrt-init
+      - vrt-legacy:
+          context: ux-eng-keys
+          # do not run for main version branches
+          filters:
+            branches:
+              ignore: /^\d{3}-(summer|spring|winter)-\d{2}$/
+          requires:
+            - vrt-init
       - vrt-close:
           context: ux-eng-keys
           requires:

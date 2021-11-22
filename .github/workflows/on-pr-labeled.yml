@@ -1,0 +1,26 @@
+name: Trigger CircleCI from Label
+
+on:
+  pull_request:
+    types: [labeled]
+
+jobs:
+  execute:
+    if: ${{ github.event.label.name == 'vrt:chrome-ready' || github.event.label.name == 'vrt:full-ready'}}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set VRT Mode parameter
+        run: |
+          echo "VRT_MODE=$(echo ${{ github.event.label.name }} | sed 's/\(.*\):\(.*\)-\(.*\)/\2/')" >> $GITHUB_ENV
+      - name: Print context
+        env:
+          GITHUB_CONTEXT: ${{ toJson(github) }}
+        run: |
+          echo "$GITHUB_CONTEXT"
+      - name: Trigger CircleCI VRT workflow.
+        uses: promiseofcake/circleci-trigger-action@v1
+        with:
+          user-token: ${{ secrets.CIRCLECI_TOKEN }}
+          project-slug: salesforce-ux/design-system-internal
+          branch: ${{ github.head_ref }}
+          payload: '{"run_labeled_workflow": true, "vrt_mode": "${{ env.VRT_MODE }}","triggering_label": "${{ github.event.label.name }}"}'

@@ -9,7 +9,15 @@ import Strength from './';
 ----------------------------------------------------------------------------- */
 
 // Default
-export default <Strength data-slds-strength="0" />;
+export default [
+  {
+    id: 'default',
+    label: 'Strength – default',
+    element: (
+      <Strength data-slds-strength="0" />
+    )
+  }
+];
 
 // States
 export let states = [
@@ -45,17 +53,17 @@ export let states = [
   },
   {
     id: 'animated',
-    label: 'Animated on load',
+    label: 'Strength – Animated on load',
     element: <Strength className="slds-is-animated" data-slds-strength="3" />
   },
   {
     id: 'animated-negative',
-    label: 'Animated on load (negative)',
+    label: 'Strength – Animated on load (negative)',
     element: <Strength className="slds-is-animated" data-slds-strength="-3" />
   },
   {
     id: 'paused',
-    label: 'Paused',
+    label: 'Strength – Paused',
     element: (
       <Strength
         className="slds-is-animated slds-is-paused"

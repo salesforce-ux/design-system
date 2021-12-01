@@ -72,6 +72,10 @@
 #### Fixed
 - Fixed missing attribute `required` on date input
 
+### [Dynamic Icons](https://www.lightningdesignsystem.com/components/dynamic-icons)
+#### Changed
+- Updated dynamic icon colors to match new Salesforce color palettes.
+
 ### [Icons](https://www.lightningdesignsystem.com/components/icons)
 #### Removed
 - Removed outdated documentation about changing background color, as this contradicts current Design System guidelines.

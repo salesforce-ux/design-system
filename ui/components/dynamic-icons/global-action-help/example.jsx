@@ -8,4 +8,12 @@ import GlobalActionHelp from './';
     Exports
 ----------------------------------------------------------------------------- */
 
-export default <GlobalActionHelp />;
+export default [
+    {
+        id: 'default',
+        label: 'Global Action Help - Default',
+        element: (
+            <GlobalActionHelp />
+        )
+    }
+];

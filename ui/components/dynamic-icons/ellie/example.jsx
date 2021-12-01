@@ -8,18 +8,24 @@ import Ellie from './';
     Exports
 ----------------------------------------------------------------------------- */
 
-export default (
-  <Ellie
-    className="slds-is-animated"
-    title="Description of the icon"
-    assistiveText="Text alternative"
-  />
-);
+export default [
+  {
+    id: 'default',
+    label: 'Ellie – default',
+    element: (
+      <Ellie
+        className="slds-is-animated"
+        title="Description of the icon"
+        assistiveText="Text alternative"
+      />
+    )
+  }
+];
 
 export let states = [
   {
     id: 'paused',
-    label: 'Paused',
+    label: 'Ellie – Paused',
     element: (
       <Ellie
         className="slds-is-animated slds-is-paused"
@@ -30,7 +36,7 @@ export let states = [
   },
   {
     id: 'static',
-    label: 'Static (no animation)',
+    label: 'Ellie – Static (no animation)',
     element: (
       <Ellie title="Description of the icon" assistiveText="Text alternative" />
     )

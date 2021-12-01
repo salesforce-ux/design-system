@@ -9,20 +9,26 @@ import Trend from './';
 ----------------------------------------------------------------------------- */
 
 // Default
-export default (
-  <Trend
-    data-slds-trend="neutral"
-    className="slds-is-animated"
-    title="Description of the icon"
-    assistiveText="Text alternative"
-  />
-);
+export default [
+  {
+    id: 'default',
+    label: 'Trend – default',
+    element: (
+      <Trend
+        data-slds-trend="neutral"
+        className="slds-is-animated"
+        title="Description of the icon"
+        assistiveText="Text alternative"
+      />
+    )
+  }
+];
 
 // States
 export let states = [
   {
     id: 'down',
-    label: 'Down',
+    label: 'Trend - Down',
     element: (
       <Trend
         data-slds-trend="down"
@@ -34,7 +40,7 @@ export let states = [
   },
   {
     id: 'up',
-    label: 'Up',
+    label: 'Trend - Up',
     element: (
       <Trend
         data-slds-trend="up"
@@ -46,7 +52,7 @@ export let states = [
   },
   {
     id: 'static',
-    label: 'Static (no animation)',
+    label: 'Trend - Static (no animation)',
     element: (
       <Trend
         data-slds-trend="up"
@@ -57,7 +63,7 @@ export let states = [
   },
   {
     id: 'paused',
-    label: 'Paused',
+    label: 'Trend - Paused',
     element: (
       <Trend
         data-slds-trend="up"

@@ -52,9 +52,11 @@
 - Labels will no longer wrap below the checkbox. When the label text wraps, it will now go directly under the previous line.
 
 ### [Checkbox Toggle](https://www.lightningdesignsystem.com/components/checkbox-toggle)
-## Added
+#### Added
 - Added `slds` as the default namespace with `sds` fallbacks for Styling Hooks.
 - Added reassignment of Styling Hooks for component states.
+#### Fixed
+- Fixed spacing between checkbox toggle label and input on mobile.
 
 ### [Color Picker](https://www.lightningdesignsystem.com/components/color-picker)
 #### Changed

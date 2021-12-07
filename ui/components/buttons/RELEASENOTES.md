@@ -4,6 +4,12 @@
 
 <!-- ## [Unreleased] -->
 
+## 2.18.0
+
+### Changed
+
+- Removed `vertical-align` from button non-base variants to create vertical alignment consistency among all the buttons.
+
 ## 2.17.0
 
 ### Added

@@ -47,7 +47,7 @@
   &:focus {
     --slds-c-button-color-border: var(--slds-c-button-color-border-hover);
     --slds-c-button-color-background: var(--slds-c-button-color-background-hover);
-    --slds-c-button-text-color: var(--slds-c-button-text-color-hover, var(--sds-c-button-text-color-hover, #{$brand-accessible-active}));
+    color: var(--slds-c-button-text-color-hover, var(--sds-c-button-text-color-hover, #{$brand-accessible-active}));
   }
 
   &:focus {
@@ -113,10 +113,48 @@ a.slds-button {
   }
 }
 
+// NOTE: You may notice that these link-specific Button styles are *not* using CSS Custom Property reassignment. This is due to the fact that the global `a:hover` text styles are leaking into the component (which is expected, as `property: value;` declarations override reassignment by design). This shouldn't be necessary in the vast majority of components, but due to the global inheritance at play here this is our best option.
+a.slds-button_brand:hover,
+a.slds-button--brand:hover,
+a.slds-button_brand:focus,
+a.slds-button--brand:focus {
+  color:
+    var(--slds-c-button-brand-text-color-hover,
+    var(--sds-c-button-brand-text-color-hover,
+    var(--slds-g-link-text-color-hover, $color-text-brand-primary)));
+}
+
+a.slds-button_destructive:hover,
+a.slds-button--destructive:hover,
+a.slds-button_destructive:focus,
+a.slds-button--destructive:focus {
+  color:
+    var(--slds-c-button-destructive-text-color,
+    var(--sds-c-button-destructive-text-color, $color-text-inverse));
+}
+
+a.slds-button_text-destructive:hover,
+a.slds-button_text-destructive:focus {
+  color:
+    var(--slds-c-button-text-destructive-text-color-hover,
+    var(--sds-c-button-text-destructive-text-color-hover, $color-text-destructive-hover));
+}
+
+a.slds-button_success:hover,
+a.slds-button--success:hover,
+a.slds-button_success:focus,
+a.slds-button--success:focus {
+  color:
+    var(--slds-c-button-success-text-color-hover,
+    var(--sds-c-button-success-text-color-hover, $color-text-inverse));
+}
+
+// end NOTE
+
 a.slds-button_inverse:focus,
 a.slds-button--inverse:focus {
   /*! @css-var-fallback border-color */
-  --slds-c-button-color-border: var(--sds-c-button-inverse-color-border-focus, var(--sds-c-button-inverse-color-border-focus, #{$color-border-button-focus-inverse}));
+  --slds-c-button-color-border: var(--slds-c-button-inverse-color-border-focus, var(--sds-c-button-inverse-color-border-focus, #{$color-border-button-focus-inverse}));
 
   /*! @css-var-fallback box-shadow */
   --slds-c-button-shadow: var(--slds-c-button-inverse-shadow-focus, var(--sds-c-button-inverse-shadow-focus, #{$shadow-button-focus-inverse}));

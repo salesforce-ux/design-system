@@ -5,3 +5,8 @@
 <!-- ## [Unreleased] -->
 
 <!-- ## [VERSION] -->
+
+## 2.17.0
+
+### Changed
+- Updated dynamic icon colors to match new Salesforce color palettes.

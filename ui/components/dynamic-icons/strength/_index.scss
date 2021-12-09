@@ -27,7 +27,7 @@
   circle { // 1
     stroke-width: 0.95px;
     fill: transparent;
-    stroke: #ccc;
+    stroke: $palette-neutral-60;
     transition: // 2
       fill 0.4s ease-in-out,
       stroke 0.4s ease-in-out;
@@ -51,8 +51,8 @@
   &[data-slds-strength="3"] circle:nth-child(1),
   &[data-slds-strength="3"] circle:nth-child(2),
   &[data-slds-strength="3"] circle:nth-child(3) {
-    fill: #04844b;
-    stroke: #04844b;
+    fill: $color-text-success;
+    stroke: $color-text-success;
   }
 
   &[data-slds-strength="-1"] circle:nth-child(1),
@@ -61,8 +61,8 @@
   &[data-slds-strength="-3"] circle:nth-child(1),
   &[data-slds-strength="-3"] circle:nth-child(2),
   &[data-slds-strength="-3"] circle:nth-child(3) {
-    fill: #ffdde1;
-    stroke: #c23934;
+    fill: $palette-pink-90;
+    stroke: $color-background-error-dark;
   }
 
   /**
@@ -126,11 +126,11 @@
 // Improve readability of animations
 // stylelint-disable
 @keyframes slds-icon-strength-positive-load {
-  0%   { fill: transparent; stroke: #ccc; }
-  100% { fill: #04844b; stroke: #04844b; }
+  0%   { fill: transparent; stroke: $palette-neutral-60; }
+  100% { fill: $color-text-success; stroke: $color-text-success; }
 }
 
 @keyframes slds-icon-strength-negative-load {
-  0%   { fill: transparent; stroke: #ccc; }
-  100% { fill: #ffdde1; stroke: #c23934; }
+  0%   { fill: transparent; stroke: $palette-neutral-60; }
+  100% { fill: $palette-pink-90; stroke: $color-background-destructive; }
 }

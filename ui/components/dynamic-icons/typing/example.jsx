@@ -8,18 +8,24 @@ import TypingIcon from './';
     Exports
 ----------------------------------------------------------------------------- */
 
-export default (
-  <TypingIcon
-    title="User is typing"
-    assistiveText="User is typing"
-    isAnimated
-  />
-);
+export default [
+  {
+    id: 'default',
+    label: 'Typing – default',
+    element: (
+      <TypingIcon
+        title="User is typing"
+        assistiveText="User is typing"
+        isAnimated
+      />
+    )
+  }
+];
 
 export let states = [
   {
     id: 'paused',
-    label: 'Paused',
+    label: 'Typing – Paused',
     element: (
       <TypingIcon
         title="User is typing"
@@ -31,7 +37,7 @@ export let states = [
   },
   {
     id: 'static',
-    label: 'Static',
+    label: 'Typing – Static',
     element: (
       <TypingIcon title="User is typing" assistiveText="User is typing" />
     )

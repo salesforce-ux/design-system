@@ -8,19 +8,26 @@ import Score from './';
     Exports
 ----------------------------------------------------------------------------- */
 
-// Default
-export default <Score data-slds-state="positive" />;
+export default [
+  {
+    id: 'default',
+    label: 'Score – default',
+    element: (
+      <Score data-slds-state="positive" />
+    )
+  }
+];
 
 // States
 export let states = [
   {
     id: 'positive',
-    label: 'Positive',
+    label: 'Score – Positive',
     element: <Score data-slds-state="positive" />
   },
   {
     id: 'negative',
-    label: 'Negative',
+    label: 'Score – Negative',
     element: <Score data-slds-state="negative" />
   }
 ];

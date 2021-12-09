@@ -9,4 +9,12 @@ import WaffleIcon from './';
 ----------------------------------------------------------------------------- */
 
 // Default
-export default <WaffleIcon />;
+export default [
+    {
+        id: 'default',
+        label: 'Waffle',
+        element: (
+            <WaffleIcon />
+        )
+    }
+];

@@ -77,12 +77,16 @@ const extractVarsFromCSS = (cssContent, options = {}) => {
   const { allowPattern } = options;
   let list = {};
 
+  // retrieve the category names from the JSON config
+  const categories = Object.keys(propTypes);
+
   rules.map((rule) => {
+    // Filter rule declarations to only those that contain at least one `var(...)` function
     const filtered = rule.declarations.filter((dec) => {
       if (!dec.value) return false;
 
-      // match on var values that are not custom props
-      if (dec.value.match(/var\(/) && !dec.property.match(/^--/)) {
+      // match on property values that contain at least one `var(...)` function
+      if (dec.value.match(/var\(/)) {
         return true;
       }
 
@@ -111,23 +115,102 @@ const extractVarsFromCSS = (cssContent, options = {}) => {
     //    \)                    -> a closing parenthesis
     const varRegex = /var\((?=\S*['-]*)([a-zA-Z'-]+)\s*[,]?\s*(.*)\)/;
 
+    // Sanitize a CSS property value
+    // - currently only removes extra content at the end of the value when closing parentheses aren't balanced
+    function sanitizeValue(value) {
+      let sanitizedValue = value;
+      let parens = 0;
+      let startParens = 0;
+      let endParens = 0;
+
+      // check each character of the value string to count opening & closing parentheses
+      for (let pos = 0; pos <= value.length; pos++) {
+        let char = value.charAt(pos);
+        switch (char) {
+          // increment parenthesis counter and startParens counter
+          case '(':
+            parens++;
+            startParens++;
+            break;
+          // decrement parenthesis counter and increment endParens counter
+          case ')':
+            parens--;
+            endParens++;
+            break;
+        }
+
+        // if we have unbalanced parentheses then sanitize
+        if (parens !== 0) {
+          // if we have too many closing parentheses then sanitize things at the end
+          if (endParens > startParens) {
+            // find the index of the last closing balanced parenthesis
+            const closingParens = value.matchAll(/\)/g);
+
+            // convert iterator object to an array
+            const closingParensArray = [];
+            for (const match of closingParens) {
+              closingParensArray.push(match);
+            }
+
+            // sort the array by ascending match index/position
+            closingParensArray.sort((a, b) => {
+              if (a.index < b.index) {
+                return -1;
+              }
+              if (a.index > b.index) {
+                return 1;
+              }
+              return 0;
+            });
+
+            // get the index of the balanced closing parenthesis we want to keep
+            const indexOfBalancedParen =
+              closingParensArray.length - (endParens - startParens) - 1; // -1 to make it a zero based index
+            const balancedClosingParenIndex =
+              closingParensArray[indexOfBalancedParen].index;
+
+            // remove the extra content at the end that has no opening parentheses to match
+            sanitizedValue = value.slice(0, balancedClosingParenIndex + 1); // +1 to avoid losing the parenthesis we want to keep
+          }
+        }
+      }
+
+      return sanitizedValue;
+    }
+
     /**
      * Recursively drill into a CSS value to find the fallback value
      *
      * @param {string} - CSS property's value
      * @returns {object} - hookName, name of the hook; fallback, value of the fallback
      */
-    function findFallbackRecursively(value) {
+    function findFallbackRecursively(value, recursionIndex = 0) {
       // get the fallback value from the CSS variable clause
       let regex = varRegex;
-      let matches = value.match(regex);
 
+      // do an initial match check
+      const initialMatches = value.match(regex);
+      let matches;
+
+      // we have a match
+      if (initialMatches) {
+        // sanitize the returned match value found to ensure we're digging into a properly formatted var(...) value
+        const sanitizedValue = sanitizeValue(initialMatches[0]);
+        matches = sanitizedValue.match(regex);
+      }
+
+      // if we found a match then begin the recursion
       if (matches) {
         let fallbackValue = matches[2];
 
+        // if we're not on the first iteration then add the valid hook to the list
+        if (recursionIndex > 0) {
+          addHookToList(matches[1], null);
+        }
+
         // if we have another CSS variable clause then keep drilling in
         if (isCssVarClause(fallbackValue)) {
-          return findFallbackRecursively(fallbackValue);
+          return findFallbackRecursively(fallbackValue, recursionIndex++);
         } else {
           return matches[2].trim();
         }
@@ -142,6 +225,26 @@ const extractVarsFromCSS = (cssContent, options = {}) => {
     }
     ///
 
+    // Add hook to the list to be shown
+    function addHookToList(hookName, fallbackValue) {
+      // do we have a category match? If so return it
+      const matchedCategory = categories.find((option) => {
+        if (hookName.includes(option)) {
+          return option;
+        }
+      });
+
+      // add the fallback value to the hook's object in the list of results
+      list[hookName] = { fallbackValue: fallbackValue };
+
+      // if a category was found add the metadata to the hook's object in the list of results
+      if (matchedCategory) {
+        list[hookName].category = propTypes[matchedCategory].type;
+        list[hookName].valueType =
+          propTypes[matchedCategory].valueTypes.join(', ');
+      }
+    }
+
     if (filtered.length > 0) {
       filtered.forEach((decl) => {
         if (decl.value) {
@@ -154,25 +257,7 @@ const extractVarsFromCSS = (cssContent, options = {}) => {
 
           // if we have a hook then generate an object to add to the list of results
           if (hookName) {
-            // retrieve the category names from the JSON config
-            const categories = Object.keys(propTypes);
-
-            // do we have a category match? If so return it
-            const matchedCategory = categories.find((option) => {
-              if (hookName.includes(option)) {
-                return option;
-              }
-            });
-
-            // add the fallback value to the hook's object in the list of results
-            list[hookName] = { fallbackValue: fallback };
-
-            // if a category was found add the metadata to the hook's object in the list of results
-            if (matchedCategory) {
-              list[hookName].category = propTypes[matchedCategory].type;
-              list[hookName].valueType =
-                propTypes[matchedCategory].valueTypes.join(', ');
-            }
+            addHookToList(hookName, fallback);
           }
         }
       });

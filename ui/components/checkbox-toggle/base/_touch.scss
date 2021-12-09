@@ -5,6 +5,7 @@
   .slds-form-element__label {
     align-items: flex-start;
     font-size: $font-size-5;
+    padding-right: $spacing-x-small;
   }
 
   [type="checkbox"] {

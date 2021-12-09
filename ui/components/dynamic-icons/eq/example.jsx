@@ -8,4 +8,12 @@ import EqIcon from './';
     Exports
 ----------------------------------------------------------------------------- */
 
-export default <EqIcon />;
+export default [
+    {
+        id: 'default',
+        label: 'EQ – default',
+        element: (
+            <EqIcon />
+        )
+    }
+];

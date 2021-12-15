@@ -4,6 +4,12 @@
 
 <!-- ## [Unreleased] -->
 
+## 2.18.0
+
+### Changed
+
+- Removed `@noflip` annotation from nubbins to make RTL behavior consistent
+
 ## 2.15.0
 
 ### Changed

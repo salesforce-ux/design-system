@@ -70,3 +70,6 @@ __release
 __crypt
 
 *.bak
+/__tests__/a11y/results
+/__tests__/a11y/axe-results.xml
+/__tests__/a11y/__testfiles__

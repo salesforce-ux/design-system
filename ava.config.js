@@ -1,7 +1,8 @@
 export default {
-  // concurrency: 10,
+  // concurrency: 6,
   // "failFast": true,
-  verbose: true,
-  timeout: '450s'
-  // tap: true
+  // failWithoutAssertions: false,
+  verbose: false,
+  timeout: '10m',
+  // tap: true,
 };

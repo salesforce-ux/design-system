@@ -1,7 +1,7 @@
 <!-- Release notes authoring guidelines: http://keepachangelog.com/ -->
 <!-- On release, add general notes here. In time the legacy release notes will be add to this -->
 
-## 2.17.0 - Upcoming
+## 2.17.0 - December 16, 2021
 
 - Removed `&_` shorthand from numerous selectors in SCSS files
 

@@ -594,7 +594,9 @@ jobs:
 
     steps:
       - checkout
-      - node/install-packages
+      - node/install-packages:
+          # version cache here to remove conflict between this job and other concurrent jobs (init, prepare, etc).
+          cache-version: a11y
 
       - run:
           name: 'Build task'

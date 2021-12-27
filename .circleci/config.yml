@@ -266,7 +266,9 @@ jobs:
       - set-heroku-app-name
 
       - node/install-npm
-      - node/install-packages
+      - node/install-packages:
+          # version cache here to remove conflict between this job and other concurrent jobs (init, prepare, etc).
+          cache-version: standard
 
       # Gulp tasks (need to clean-up and not run through `npm run`)
       - build-tokens
@@ -316,7 +318,9 @@ jobs:
           command: 'tar -xvf workspace/metadata.tar'
 
       - node/install-npm
-      - node/install-packages
+      - node/install-packages:
+          # version cache here to remove conflict between this job and other concurrent jobs (init, prepare, etc).
+          cache-version: standard
 
       - run:
           name: 'Do build-dist'
@@ -391,7 +395,9 @@ jobs:
           at: workspace
       - copy-tokens-from-workspace
       - node/install-npm
-      - node/install-packages
+      - node/install-packages:
+          # version cache here to remove conflict between this job and other concurrent jobs (init, prepare, etc).
+          cache-version: standard
 
       - run:
           name: Build static Storybook
@@ -483,7 +489,9 @@ jobs:
             tar -xvf workspace/design-system-dist.tar --directory .slds
 
       - node/install-npm
-      - node/install-packages
+      - node/install-packages:
+          # version cache here to remove conflict between this job and other concurrent jobs (init, prepare, etc).
+          cache-version: standard
 
       - run:
           name: 'Build static site'
@@ -688,6 +696,10 @@ workflows:
               ignore: /.*/
       - a11y-testing:
           context: ux-eng-keys
+          requires:
+            # this requirement is to prevent race conditions, but doesn't depend on 'prepare'
+            - prepare
+
 
   CI_scheduled:
     triggers:

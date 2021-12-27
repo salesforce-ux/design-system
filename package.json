@@ -8,14 +8,14 @@
     "CSS"
   ],
   "homepage": "https://lightningdesignsystem.com",
-  "version": "2.17.0",
+  "version": "2.18.0-dev",
   "author": "Salesforce",
   "bugs": {
     "url": "https://github.com/salesforce-ux/design-system/issues"
   },
   "slds": {
-    "name": "Spring ’22",
-    "id": "236"
+    "name": "Summer ’22",
+    "id": "238"
   },
   "important": [
     "'private' and 'config.slds.internal' should have the same value",
@@ -29,7 +29,7 @@
     "search": {
       "appId": "B2KKG101RI",
       "apiKey": "f289c1dd954797a3e57158c04a897d46",
-      "indexName": "summer-21"
+      "indexName": "summer-22"
     }
   },
   "devDependencies": {

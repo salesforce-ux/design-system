@@ -12,6 +12,10 @@
 - Added reassignment of Styling Hooks for component states.
 - Added clarification about card header icon assistive text.
 
+### Changed
+
+- Fixed annotation for Einstein themed cards (`.slds-einstein-header__figure`)
+
 ## 2.15.1
 
 ### Added

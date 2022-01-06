@@ -342,7 +342,6 @@ gulp.task('dist:versionBlock', dist.versionBlock);
 gulp.task('dist:versionInline', dist.versionInline);
 gulp.task('dist:buildInfo', dist.buildInfo);
 gulp.task('dist:packageJson', dist.packageJson);
-gulp.task('dist:searchConfig', dist.searchConfig);
 
 gulp.task('dist:minifyCss', dist.minifyCss);
 
@@ -385,8 +384,7 @@ gulp.task(
       'dist:versionBlock',
       'dist:versionInline',
       'dist:buildInfo',
-      'dist:packageJson',
-      'dist:searchConfig'
+      'dist:packageJson'
     ),
     'dist:minifyCss',
     'dist:writeUI',
@@ -432,8 +430,7 @@ gulp.task(
       withName('dist:versionBlock')(dist.versionBlock),
       withName('dist:versionInline')(dist.versionInline),
       withName('dist:buildInfo')(dist.buildInfo),
-      withName('dist:packageJson')(dist.packageJson),
-      withName('dist:searchConfig')(dist.searchConfig)
+      withName('dist:packageJson')(dist.packageJson)
     ),
     withName('dist:minifyCss')(dist.minifyCss),
     withName('dist:writeTokenComponentMap')(done =>

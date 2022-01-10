@@ -123,7 +123,7 @@
     "gulp-file": "0.4.0",
     "gulp-filter": "5.0.0",
     "gulp-htmlhint": "3.0.0",
-    "gulp-if": "2.0.2",
+    "gulp-if": "3.0.0",
     "gulp-ignore": "2.0.2",
     "gulp-insert": "0.5.0",
     "gulp-lintspaces": "1.0.0",

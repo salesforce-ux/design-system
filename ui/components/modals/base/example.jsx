@@ -268,11 +268,11 @@ export let Footless = (props) => (
   <Backdrop>
     <Modal aria-labelledby="modal-heading-01">
       <ModalHeader>
-        <h1 id="modal-heading-01" className="slds-modal__title slds-hyphenate">
+        <h1 id="modal-heading-01" className="slds-modal__title slds-hyphenate" tabindex="-1">
           Modal header
         </h1>
       </ModalHeader>
-      <ModalContent className="slds-p-around_medium">
+      <ModalContent className="slds-p-around_medium slds-modal__content_footless">
         <p>
           Sit nulla est ex deserunt exercitation anim occaecat. Nostrud ullamco
           deserunt aute id consequat veniam incididunt duis in sint irure nisi.

@@ -57,6 +57,7 @@ Modals, by definition, trap focus. This means that if a user presses Tab or Shif
 #### Focus guidelines
 
 - Focus for modals must follow the guidelines described in the [Accessibility Guidelines for Dialogs](/accessibility/guidelines/global-focus/#dialogs). Pay special attention to where focus is set when the modal opens.
+- If no interactive element exists to set focus when the modal opens, add the appropriate `tabindex` attribute to the header to allow for programmatic focus (see "Footless" example, below).
 
 ### Mobile
 

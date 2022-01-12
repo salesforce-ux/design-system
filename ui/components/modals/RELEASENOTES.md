@@ -4,6 +4,12 @@
 
 <!-- ## [Unreleased] -->
 
+## 2.18.0
+### Changed
+
+- Added `slds-modal__content_footless` class to example for clarity.
+- Added clarifying notes around modal focus and header for accessibility, and modified Footless example to show tabindex.
+
 ## 2.17.0
 
 ### Added

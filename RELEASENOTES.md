@@ -3,6 +3,11 @@
 
 ## Release 2.17.1 - January 6, 2021
 
+## Components
+### [Cards](https://www.lightningdesignsystem.com/components/cards)
+#### Changed
+- Fixed annotation for Einstein themed cards (`.slds-einstein-header__figure`)
+
 ## Release 2.17.0 - December 16, 2021
 
 - Removed `&_` shorthand from numerous selectors in SCSS files
@@ -45,8 +50,6 @@
 - Added `slds` as the default namespace with `sds` fallbacks for Styling Hooks.
 - Added reassignment of Styling Hooks for component states.
 - Added clarification about card header icon assistive text.
-#### Changed
-- Fixed annotation for Einstein themed cards (`.slds-einstein-header__figure`)
 
 ### [Checkbox](https://www.lightningdesignsystem.com/components/checkbox)
 #### Added

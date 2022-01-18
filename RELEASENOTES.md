@@ -17,6 +17,13 @@
 #### Changed
 - Removed `@noflip` annotation from nubbins to make RTL behavior consistent
 
+## Release 2.17.1 - January 6, 2021
+
+## Components
+### [Cards](https://www.lightningdesignsystem.com/components/cards)
+#### Changed
+- Fixed annotation for Einstein themed cards (`.slds-einstein-header__figure`)
+
 ## Release 2.17.0 - December 16, 2021
 
 - Removed `&_` shorthand from numerous selectors in SCSS files

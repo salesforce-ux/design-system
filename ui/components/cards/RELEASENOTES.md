@@ -4,6 +4,12 @@
 
 <!-- ## [Unreleased] -->
 
+## 2.17.1
+
+### Changed
+
+- Fixed annotation for Einstein themed cards (`.slds-einstein-header__figure`)
+
 ## 2.17.0
 
 ### Added

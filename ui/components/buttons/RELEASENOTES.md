@@ -4,11 +4,17 @@
 
 <!-- ## [Unreleased] -->
 
+## 2.17.2
+
+### Added
+- Added `--slds-c-icon-color-foreground` Styling Hook to Button with Icon variant to accurately apply icon color updates
+  - Due to how the Lightning Base Component is configured, this is required to allow CSS Custom Property reassignment to function within Button Icons
 ## 2.17.0
 
 ### Added
 - Added Styling Hooks for Stateful Button and Dual Stateful Button.
 - Added missing `slds`-namespaced Styling Hooks (originally added in 2.16.0)
+
 ## 2.16.0
 
 ### Added

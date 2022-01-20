@@ -28,30 +28,30 @@
     box-shadow: $shadow-docked;
     transform: translateY(0);
   }
+}
 
-  /**
-   * Header that contains an icon, title and panel actions such as minimizing the panel
-   *
-   * @selector .slds-utility-panel__header
-   * @restrict .slds-utility-panel div
-   */
-  &__header {
-    background: $color-background-docked-panel-header;
-    border-bottom: $border-width-thick solid $brand-primary;
-    border-radius: $border-radius-medium $border-radius-medium 0 0;
-    padding: $spacing-x-small $spacing-small;
-  }
+/**
+  * Header that contains an icon, title and panel actions such as minimizing the panel
+  *
+  * @selector .slds-utility-panel__header
+  * @restrict .slds-utility-panel div
+  */
+.slds-utility-panel__header {
+  background: $color-background-docked-panel-header;
+  border-bottom: $border-width-thick solid $brand-primary;
+  border-radius: $border-radius-medium $border-radius-medium 0 0;
+  padding: $spacing-x-small $spacing-small;
+}
 
-  /**
-   * Area that contains the utility panel feature
-   *
-   * @selector .slds-utility-panel__body
-   * @restrict .slds-utility-panel div
-   */
-  &__body {
-    display: flex;
-    flex: 1 1 0%;
-    flex-direction: column;
-    overflow: auto;
-  }
+/**
+  * Area that contains the utility panel feature
+  *
+  * @selector .slds-utility-panel__body
+  * @restrict .slds-utility-panel div
+  */
+.slds-utility-panel__body {
+  display: flex;
+  flex: 1 1 0%;
+  flex-direction: column;
+  overflow: auto;
 }

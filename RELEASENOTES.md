@@ -3,6 +3,8 @@
 
 ## Release 2.18.0 - Upcoming
 
+- Removed `&_` shorthand from numerous selectors in SCSS files
+
 ## Components
 ### [Buttons](https://www.lightningdesignsystem.com/components/buttons)
 #### Changed

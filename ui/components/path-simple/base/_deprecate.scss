@@ -31,10 +31,6 @@ $legacy-color-background-path-lost: #c23934;
   @include deprecate('4.0.0', 'Use .sslds-path__scroller with internal scrolling DOM nodes instead of .slds-tabs_path') {
     @include tabs;
 
-    &__nav {
-      @include tabs-nav;
-    }
-
     .slds-is-complete {
       background-color: $legacy-color-background-path-complete;
 
@@ -155,6 +151,11 @@ $legacy-color-background-path-lost: #c23934;
       }
     }
   }
+}
+
+.slds-tabs_path__nav,
+.slds-tabs--path__nav {
+  @include tabs-nav;
 }
 
 .slds-tabs_path__item,

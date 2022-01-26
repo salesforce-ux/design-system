@@ -43,21 +43,21 @@
   // Comment entity tags
   .slds-tags {
     display: flex;
+  }
 
-    &__list {
-      display: flex;
+  .slds-tags__list {
+    display: flex;
+  }
+
+  .slds-tags__item {
+    margin-left: $spacing-xx-small;
+
+    &:after {
+      content: ', ';
     }
 
-    &__item {
-      margin-left: $spacing-xx-small;
-
-      &:after {
-        content: ', ';
-      }
-
-      &:last-child:after {
-        content: none;
-      }
+    &:last-child:after {
+      content: none;
     }
   }
 

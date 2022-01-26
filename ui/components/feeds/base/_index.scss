@@ -14,27 +14,27 @@
   position: relative;
   max-width: rem(784px);
   margin: auto;
+}
 
-  /**
-   * @selector .slds-feed__list
-   * @restrict .slds-feed ul
-   * @required
-   */
-  &__list {
-    margin: 0;
-    padding: 0;
-  }
+/**
+  * @selector .slds-feed__list
+  * @restrict .slds-feed ul
+  * @required
+  */
+.slds-feed__list {
+  margin: 0;
+  padding: 0;
+}
 
-  /**
-   * @selector .slds-feed__item
-   * @restrict .slds-feed__list li
-   * @required
-   */
-  &__item {
-    padding: $var-spacing-vertical-x-small 0;
+/**
+  * @selector .slds-feed__item
+  * @restrict .slds-feed__list li
+  * @required
+  */
+.slds-feed__item {
+  padding: $var-spacing-vertical-x-small 0;
 
-    @include mq-medium-min {
-      padding: $var-spacing-vertical-small 0;
-    }
+  @include mq-medium-min {
+    padding: $var-spacing-vertical-small 0;
   }
 }

@@ -36,45 +36,45 @@
   @include mq-large-min {
     padding: 0 $spacing-medium $spacing-x-small;
   }
+}
 
-  /**
-   * Header region of a feed post
-   *
-   * @selector .slds-post__header
-   * @restrict .slds-post header
-   */
-  &__header {
-    margin-bottom: $var-spacing-vertical-small;
+/**
+  * Header region of a feed post
+  *
+  * @selector .slds-post__header
+  * @restrict .slds-post header
+  */
+.slds-post__header {
+  margin-bottom: $var-spacing-vertical-small;
+}
+
+/**
+  * Content region of a feed post
+  *
+  * @selector .slds-post__content
+  * @restrict .slds-post div
+  */
+.slds-post__content {
+  margin-bottom: $spacing-small;
+
+  @include mq-medium-min {
+    margin-bottom: $spacing-large;
   }
+}
 
-  /**
-   * Content region of a feed post
-   *
-   * @selector .slds-post__content
-   * @restrict .slds-post div
-   */
-  &__content {
-    margin-bottom: $spacing-small;
+/**
+  * Footer region of a feed post
+  *
+  * @selector .slds-post__footer
+  * @restrict .slds-post footer
+  */
+.slds-post__footer {
+  display: flex;
+  font-size: $font-size-2;
+  flex-direction: column;
 
-    @include mq-medium-min {
-      margin-bottom: $spacing-large;
-    }
-  }
-
-  /**
-   * Footer region of a feed post
-   *
-   * @selector .slds-post__footer
-   * @restrict .slds-post footer
-   */
-  &__footer {
-    display: flex;
-    font-size: $font-size-2;
-    flex-direction: column;
-
-    @include mq-medium-min {
-      flex-direction: row;
-    }
+  @include mq-medium-min {
+    flex-direction: row;
   }
 }
 

@@ -3,9 +3,10 @@
 
 @import 'deprecate';
 
-.slds-comment {
-
-  &__content {
-    padding: $var-spacing-vertical-xx-small 0;
-  }
+/**
+  * @selector .slds-comment__content
+  * @restrict .slds-comment div
+  */
+.slds-comment__content {
+  padding: $var-spacing-vertical-xx-small 0;
 }

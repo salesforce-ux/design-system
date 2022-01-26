@@ -121,88 +121,9 @@
     box-shadow: $elevation-shadow-4;
   }
 
-  /**
-   * Set crop boundaries to a file component, set to 16:9 by default
-   *
-   * @selector .slds-file__crop
-   * @restrict .slds-file a, .slds-file figure
-   */
-  &__crop {
-    display: block;
-    position: relative;
-    overflow: hidden;
-    padding-top: 56.25%;
-
-    img {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate3d(-50%, -50%, 0);
-      max-width: 200%; // This value helps with the positioning of large elements
-    }
-
-    &:after {
-      content: '';
-      display: block;
-    }
-
-    /**
-     * Crops file to a ratio of 1:1
-     *
-     * @selector .slds-file__crop_1-by-1
-     * @restrict .slds-file__crop
-     * @modifier
-     * @group ratio
-     */
-    &_1-by-1,
-    &--1-by-1 {
-      padding-top: 100%;
-    }
-
-    /**
-     * Crops file to a ratio of 16:9
-     *
-     * @selector .slds-file__crop_16-by-9
-     * @restrict .slds-file__crop
-     * @modifier
-     * @group ratio
-     */
-    &_16-by-9,
-    &--16-by-9 {
-      padding-top: 56.25%;
-    }
-
-    /**
-     * Crops file to a ratio of 4:3
-     *
-     * @selector .slds-file__crop_4-by-3
-     * @restrict .slds-file__crop
-     * @modifier
-     * @group ratio
-     */
-    &_4-by-3,
-    &--4-by-3 {
-      padding-top: 75%;
-    }
-  }
-
   // When a spinner is used with .slds-file__title_card, this attempts to visually center the spinner
   :not(:only-child) .slds-spinner {
     top: 45%; // magic number
-  }
-
-  /**
-   * Figure element that contains the image of a File
-   *
-   * @selector .slds-file__figure
-   * @restrict .slds-file a, .slds-file figure
-   */
-  &__figure {
-    display: block;
-    min-width: $size-x-small;
-    max-width: $size-small;
-    min-height: $size-xx-small;
-    max-height: $size-small;
   }
 
   /**
@@ -218,184 +139,284 @@
     max-height: $size-small;
     height: auto;
   }
+}
 
-  /**
-   * Image caption associated to a file
-   *
-   * @selector .slds-file__title
-   * @restrict .slds-file figcaption, .slds-file div
-   */
-  &__title {
-    display: flex;
-    z-index: $files-z-index-hover;
-    align-items: center;
-    padding: $spacing-x-small;
-    overflow: hidden;
+/**
+  * Set crop boundaries to a file component, set to 16:9 by default
+  *
+  * @selector .slds-file__crop
+  * @restrict .slds-file a, .slds-file figure
+  */
+.slds-image__crop,
+.slds-file__crop {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  padding-top: 56.25%;
 
-    .slds-media {
-      overflow: hidden;
-    }
-
-    /**
-     * Adds overlay to file
-     *
-     * @selector .slds-file__title_overlay
-     * @restrict .slds-file__title
-     */
-
-    &_overlay,
-    &--overlay {
-      color: $color-text-inverse;
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-
-      .slds-media__body {
-        z-index: 1;
-      }
-    }
-
-    /**
-     * Creates card title bar on file
-     *
-     * @selector .slds-file__title_card
-     * @restrict .slds-file__title
-     */
-
-    &_card,
-    &--card {
-      background: $color-background;
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-    }
-
-    /**
-     * Creates gradient scrim bar on file
-     *
-     * @selector .slds-file__title_scrim
-     * @restrict .slds-file__title
-     */
-
-    &_scrim {
-      background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      padding: $spacing-medium;
-    }
-  }
-
-  /**
-   * Hack to accomodate for text truncation next to actions menu buttons
-   *
-   * @selector .slds-file-has-actions
-   * @restrict .slds-file__title
-   */
-
-  &-has-actions {
-    padding-right: $spacing-xx-large;
-  }
-
-  /**
-   * If text sits on top of image, apply an overlay with this class
-   *
-   * @selector .slds-file_overlay
-   * @restrict .slds-file div
-   */
-  &_overlay,
-  &--overlay {
-    content: '';
-    background: $color-background-image-overlay;
-    color: $color-text-inverse;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 1;
-  }
-
-  /**
-   * Change style of image to a card look
-   *
-   * @selector .slds-file_card
-   * @restrict .slds-file
-   */
-  &_card,
-  &--card {
-    background: $color-background-alt;
-    border: $border-width-thin solid rgba(0, 0, 0, 0.16);
-  }
-
-  /**
-   * When only image type is available, this class help position the file type icon
-   *
-   * @selector .slds-file__icon
-   * @restrict .slds-file div, .slds-file span
-   */
-  &__icon {
+  img {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate3d(-50%, -50%, 0);
-    margin-top: (($square-icon-large-content * 0.5) * -1); // Half the size of the icon
+    max-width: 200%; // This value helps with the positioning of large elements
   }
 
-  /**
-   * This positions the action menu on the title bar
-   *
-   * @selector .slds-file__actions-menu
-   * @restrict .slds-file div
-   */
-  &__actions-menu {
-    position: absolute;
-    z-index: $files-z-index-hover;
-    bottom: $spacing-x-small;
-    right: $spacing-xx-small;
+  &:after {
+    content: '';
+    display: block;
   }
+}
 
-  /**
-   * This adds an external icon to the top left side of the card
-   *
-   * @selector .slds-file__external-icon
-   * @restrict .slds-file div
-   * @required
-   */
+/**
+  * Crops file to a ratio of 1:1
+  *
+  * @selector .slds-file__crop_1-by-1
+  * @restrict .slds-file__crop
+  * @modifier
+  * @group ratio
+  */
+.slds-image__crop_1-by-1,
+.slds-image__crop--1-by-1,
+.slds-file__crop_1-by-1,
+.slds-file__crop--1-by-1 {
+  padding-top: 100%;
+}
 
-  &__external-icon {
-    position: absolute;
-    top: ($spacing-x-large + $spacing-x-small);
-    left: $spacing-large;
+/**
+  * Crops file to a ratio of 16:9
+  *
+  * @selector .slds-file__crop_16-by-9
+  * @restrict .slds-file__crop
+  * @modifier
+  * @group ratio
+  */
+.slds-image__crop_16-by-9,
+.slds-image__crop--16-by-9,
+.slds-file__crop_16-by-9,
+.slds-file__crop--16-by-9 {
+  padding-top: 56.25%;
+}
+
+/**
+  * Crops file to a ratio of 4:3
+  *
+  * @selector .slds-file__crop_4-by-3
+  * @restrict .slds-file__crop
+  * @modifier
+  * @group ratio
+  */
+.slds-image__crop_4-by-3,
+.slds-image__crop--4-by-3,
+.slds-file__crop_4-by-3,
+.slds-file__crop--4-by-3 {
+  padding-top: 75%;
+}
+
+/**
+  * Figure element that contains the image of a File
+  *
+  * @selector .slds-file__figure
+  * @restrict .slds-file a, .slds-file figure
+  */
+.slds-image__figure,
+.slds-file__figure {
+  display: block;
+  min-width: $size-x-small;
+  max-width: $size-small;
+  min-height: $size-xx-small;
+  max-height: $size-small;
+}
+
+/**
+  * Image caption associated to a file
+  *
+  * @selector .slds-file__title
+  * @restrict .slds-file figcaption, .slds-file div
+  */
+.slds-image__title,
+.slds-file__title {
+  display: flex;
+  z-index: $files-z-index-hover;
+  align-items: center;
+  padding: $spacing-x-small;
+  overflow: hidden;
+
+  .slds-media {
+    overflow: hidden;
   }
+}
 
-  /**
-   * This changes the color of the loading icon
-   *
-   * @selector .slds-file__loading-icon
-   * @restrict .slds-file svg
-   * @required
-   */
+/**
+  * Hack to accomodate for text truncation next to actions menu buttons
+  *
+  * @selector .slds-file-has-actions
+  * @restrict .slds-file__title
+  */
+.slds-image-has-actions,
+.slds-file-has-actions {
+  padding-right: $spacing-xx-large;
+}
 
-  &__loading-icon {
-    fill: $color-text-icon-default-disabled;
+/**
+  * If text sits on top of image, apply an overlay with this class
+  *
+  * @selector .slds-file_overlay
+  * @restrict .slds-file div
+  */
+.slds-image_overlay,
+.slds-image--overlay,
+.slds-file_overlay,
+.slds-file--overlay {
+  content: '';
+  background: $color-background-image-overlay;
+  color: $color-text-inverse;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+/**
+  * Change style of image to a card look
+  *
+  * @selector .slds-file_card
+  * @restrict .slds-file
+  */
+.slds-image_card,
+.slds-image--card,
+.slds-file_card,
+.slds-file--card {
+  background: $color-background-alt;
+  border: $border-width-thin solid rgba(0, 0, 0, 0.16);
+}
+
+/**
+  * When only image type is available, this class help position the file type icon
+  *
+  * @selector .slds-file__icon
+  * @restrict .slds-file div, .slds-file span
+  */
+.slds-image__icon,
+.slds-file__icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
+  margin-top: (($square-icon-large-content * 0.5) * -1); // Half the size of the icon
+}
+
+/**
+  * This positions the action menu on the title bar
+  *
+  * @selector .slds-file__actions-menu
+  * @restrict .slds-file div
+  */
+.slds-image__actions-menu,
+.slds-file__actions-menu {
+  position: absolute;
+  z-index: $files-z-index-hover;
+  bottom: $spacing-x-small;
+  right: $spacing-xx-small;
+}
+
+/**
+  * This adds an external icon to the top left side of the card
+  *
+  * @selector .slds-file__external-icon
+  * @restrict .slds-file div
+  * @required
+  */
+
+.slds-image__external-icon,
+.slds-file__external-icon {
+  position: absolute;
+  top: ($spacing-x-large + $spacing-x-small);
+  left: $spacing-large;
+}
+
+/**
+  * This changes the color of the loading icon
+  *
+  * @selector .slds-file__loading-icon
+  * @restrict .slds-file svg
+  * @required
+  */
+
+.slds-image__loading-icon,
+.slds-file__loading-icon {
+  fill: $color-text-icon-default-disabled;
+}
+
+/**
+  * This vertically centers the icon when there is no title bar
+  *
+  * @selector .slds-file_center-icon
+  * @restrict .slds-file
+  */
+
+.slds-image_center-icon,
+.slds-file_center-icon {
+
+  .slds-file__icon {
+    margin-top: 0;
   }
+}
 
-  /**
-   * This vertically centers the icon when there is no title bar
-   *
-   * @selector .slds-file_center-icon
-   * @restrict .slds-file
-   */
+/**
+  * Adds overlay to file
+  *
+  * @selector .slds-file__title_overlay
+  * @restrict .slds-file__title
+  */
 
-  &_center-icon {
+.slds-image__title_overlay,
+.slds-image__title--overlay,
+.slds-file__title_overlay,
+.slds-file__title--overlay {
+  color: $color-text-inverse;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 
-    .slds-file__icon {
-      margin-top: 0;
-    }
+  .slds-media__body {
+    z-index: 1;
   }
+}
+
+/**
+  * Creates card title bar on file
+  *
+  * @selector .slds-file__title_card
+  * @restrict .slds-file__title
+  */
+.slds-image__title_card,
+.slds-image__title--card,
+.slds-file__title_card,
+.slds-file__title--card {
+  background: $color-background;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+/**
+  * Creates gradient scrim bar on file
+  *
+  * @selector .slds-file__title_scrim
+  * @restrict .slds-file__title
+  */
+.slds-image__title_scrim,
+.slds-file__title_scrim {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: $spacing-medium;
 }

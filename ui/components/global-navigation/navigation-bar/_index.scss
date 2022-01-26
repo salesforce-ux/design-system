@@ -21,390 +21,6 @@
   position: relative;
   padding: 0 0 0 $spacing-large;
 
-  /**
-   * Primary zone
-   *
-   * @selector .slds-context-bar__primary
-   * @restrict .slds-context-bar div
-   */
-  &__primary,
-  &__secondary,
-  &__tertiary {
-    display: flex;
-    flex-shrink: 0;
-  }
-
-
-  /**
-   * Secondary zone
-   *
-   * @selector .slds-context-bar__secondary
-   * @restrict .slds-context-bar nav, .slds-context-bar div
-   */
-  // Context nav items go in the secondary region
-  // and secondary region needs to respect the width
-  // of the context bar parent for JavaScript to work
-  // This is how to do that in CSS
-  &__secondary {
-    flex: 1 1 0%;
-    min-width: 0;
-  }
-
-  /**
-   * Manually add a vertical divider between elements
-   *
-   * @selector .slds-context-bar__vertical-divider
-   * @restrict .slds-context-bar div
-   */
-  &__vertical-divider {
-    width: 0;
-    overflow: hidden;
-    border-left: $border-width-thin solid $color-border;
-  }
-
-  /** Any item on the horizontal axis of the context nav bar
-   *
-   * Interactions such as hovers + active are defaults, bottom of the
-   * file deals with light / dark theme thresholds
-   *
-   * @selector .slds-context-bar__item
-   * @restrict .slds-context-bar div, .slds-context-bar li
-   */
-  &__item {
-    display: flex;
-    align-content: center;
-    align-items: stretch;
-    white-space: nowrap;
-    position: relative;
-    max-width: $size-small;
-    transition: background-color 0.25s cubic-bezier(0.39, 0.575, 0.565, 1);
-
-    /**
-     * Active state of an item
-     *
-     * @selector .slds-is-active
-     * @restrict .slds-context-bar__item:not(.slds-no-hover)
-     * @modifier
-     */
-    &:not(.slds-no-hover):hover,
-    &.slds-is-active {
-      outline: 0;
-      border-radius: 0;
-      background-color: $brand-primary-transparent-10;
-      text-decoration: none;
-      cursor: pointer;
-    }
-
-    &:not(.slds-no-hover):hover:after {
-      content: '';
-      width: 100%;
-      height: 3px;
-      display: block;
-      background: rgba(0, 0, 0, 0.25);
-      position: absolute;
-      bottom: -3px;
-      left: 0;
-      right: 0;
-
-      @supports (mix-blend-mode: soft-light) {
-        background: rgba(0, 0, 0, 0.75);
-        mix-blend-mode: soft-light;
-      }
-    }
-
-    &:before {
-      bottom: 0;
-      content: '';
-      height: auto;
-      left: 0;
-      position: absolute;
-      right: 0;
-      top: 0;
-      transition-property: top, background-color;
-    }
-
-    &.slds-is-active {
-      animation: bkAnim 0.135s cubic-bezier(0.39, 0.575, 0.565, 1) both;
-
-      @keyframes bkAnim {
-
-        50% {
-          background-color: $color-background-context-bar;
-        }
-
-        100% {
-          background-color: $brand-primary-transparent-10;
-        }
-      }
-
-      &:before {
-        content: '';
-        height: $globalnavigation-item-height-accent-active;
-        display: block;
-        background: $brand-primary;
-        position: absolute;
-        top: 0;
-        left: -1px;
-        right: -1px;
-        animation: navBounceIn 0.15s cubic-bezier(0.39, 0.575, 0.565, 1) both;
-      }
-
-      @keyframes navBounceIn {
-
-        0% {
-          transform: translate3d(0, 20px, 0);
-          opacity: 0;
-        }
-
-        20% {
-          opacity: 0;
-        }
-
-        90% {
-          transform: translate3d(0, 1px, 0);
-        }
-
-        100% {
-          transform: translate3d(0, 0, 0);
-        }
-      }
-
-      &:hover {
-        border-bottom-color: $brand-primary-transparent-10;
-      }
-    }
-
-    /**
-     * Toggled focused class applied via JavaScript
-     *
-     * @selector .slds-has-focus
-     * @restrict .slds-context-bar__item
-     * @modifier
-     */
-    &.slds-has-focus,
-    &.slds-has-focus:hover {
-
-      &:before,
-      &:after {
-        height: $globalnavigation-item-height-accent-focus;
-      }
-    }
-
-    // Enforce background on items that have a notification
-    &.slds-has-notification {
-      background: $brand-primary-transparent-10;
-    }
-
-    @include tab-notification-pulsing-animation;
-
-    /**
-     * @summary Success notification on a tab
-     *
-     * @selector .slds-has-success
-     * @restrict .slds-context-bar__item
-     */
-    &.slds-has-success {
-      @include tab-notification-before($color-background-success-dark, $color-background-success-darker);
-
-      &:before {
-        animation-name: success-pulse;
-      }
-    }
-
-    /**
-     * @summary Error notification on a tab
-     *
-     * @selector .slds-has-error
-     * @restrict .slds-context-bar__item
-     */
-    &.slds-has-error {
-      @include tab-notification-before($color-background-destructive, $color-background-destructive-active);
-
-      &:before {
-        animation-name: error-pulse;
-      }
-    }
-
-    &.slds-has-success,
-    &.slds-has-error {
-
-      .slds-context-bar__label-action {
-        color: $color-gray-1;
-      }
-
-      .slds-indicator_unread {
-        background-color: $color-gray-1;
-      }
-
-      .slds-indicator_unsaved {
-        color: $color-gray-1;
-      }
-    }
-
-    /**
-     * @summary Warning notification on a tab
-     *
-     * @selector .slds-has-warning
-     * @restrict .slds-context-bar__item
-     */
-    &.slds-has-warning {
-      @include tab-notification-before($color-background-warning, $color-background-warning-dark);
-
-      &:before {
-        animation-name: warning-pulse;
-      }
-
-      .slds-indicator_unread {
-        background-color: currentColor;
-      }
-
-      .slds-indicator_unsaved {
-        color: currentColor;
-      }
-    }
-
-    &.slds-has-success.slds-is-active,
-    &.slds-has-warning.slds-is-active,
-    &.slds-has-error.slds-is-active {
-
-      &:after {
-        content: '';
-        background: $color-gray-11;
-        position: absolute;
-        height: $globalnavigation-item-height-accent-active;
-        opacity: 0.4;
-        top: 0;
-        right: 0;
-        left: 0;
-      }
-    }
-
-    &.slds-has-success.slds-has-focus,
-    &.slds-has-warning.slds-has-focus,
-    &.slds-has-error.slds-has-focus {
-
-      &:after {
-        height: $globalnavigation-item-height-accent-focus;
-      }
-    }
-
-
-
-    /**
-     * Add a left border to a context bar item
-     *
-     * @selector .slds-context-bar__item_divider-left
-     * @restrict .slds-context-bar div, .slds-context-bar li
-     */
-    &_divider-left,
-    &--divider-left {
-      border-left: $border-width-thin solid $color-border;
-    }
-
-    /**
-     * Add a right border to a context bar item
-     *
-     * @selector .slds-context-bar__item_divider-right
-     * @restrict .slds-context-bar div, .slds-context-bar li
-     */
-    &_divider-right,
-    &--divider-right {
-      border-right: $border-width-thin solid $color-border;
-    }
-  }
-
-  /**
-   * Actionable Text Links
-   *
-   * @selector .slds-context-bar__label-action
-   * @restrict .slds-context-bar__item a, .slds-context-bar__item span, .slds-context-bar__item button
-   */
-  &__label-action {
-    display: flex;
-    align-content: center;
-    align-items: center;
-    flex-grow: 1;
-    padding: 0 $spacing-small;
-    border-radius: 0;
-    min-width: 0%;
-    color: inherit;
-    font-size: $font-size-3;
-    z-index: 1;
-
-    &:focus,
-    &:focus:hover {
-      outline: 0;
-      text-decoration: underline;
-    }
-
-    &:hover {
-      text-decoration: none;
-    }
-
-    &:hover,
-    &:focus {
-      color: inherit;
-    }
-
-    &:active {
-      color: inherit;
-      text-decoration: none;
-    }
-  }
-
-  /**
-   * Actionable Icons
-   *
-   * @selector .slds-context-bar__icon-action
-   * @restrict .slds-context-bar div
-   */
-  &__icon-action {
-    display: flex;
-    align-items: center;
-    align-content: center;
-    margin-left: ($spacing-xx-small * -1);
-    padding: 0 $spacing-x-small;
-    color: $color-text-context-bar;
-    border-radius: 0;
-    flex-shrink: 0;
-
-    &:focus {
-      outline: 0;
-
-      .slds-context-bar__button {
-        @include focus-button;
-      }
-
-      ~ .slds-dropdown {
-        visibility: visible;
-        opacity: 1;
-      }
-    }
-
-    &:hover,
-    &:focus {
-      color: $color-text-context-bar;
-    }
-
-    &:active {
-      color: $color-text-context-bar;
-    }
-
-    .slds-icon-waffle_container {
-      @include square($square-icon-large-content);
-      margin: {
-        right: $spacing-xx-small;
-        left: ($spacing-x-small * -1);
-      }
-    }
-
-    .slds-icon-waffle {
-      margin: {
-        right: auto;
-        left: auto;
-      }
-    }
-  }
 
   // Button inside of actionable container
   .slds-context-bar__button {
@@ -414,56 +30,6 @@
   // Need to reset styles from default
   .slds-context-bar__icon-action {
     margin-left: auto;
-  }
-
-
-  /**
-   * @summary Tab modifier when using a tabset
-   *
-   * @name navigation-tab-bar
-   * @selector .slds-context-bar_tabs
-   * @restrict .slds-context-bar
-   * @support dev-ready
-   * @variant
-   */
-  &_tabs,
-  &--tabs {
-    border-top: $border-width-thin solid $color-border;
-  }
-
-  /**
-   * @summary Context bar tab items
-   *
-   * @selector .slds-context-bar__item_tab
-   * @restrict .slds-context-bar_tabs .slds-context-bar__item
-   * @notes Only use on tabset version
-   * @required
-   *
-   */
-  &__item_tab,
-  &__item--tab {
-    width: $size-x-small;
-    border-right: $border-width-thin solid $color-border;
-
-    .slds-context-bar__label-action {
-      padding: 0 $spacing-x-small;
-    }
-
-    /**
-     * @summary Pinned state - toggles visibility of elements inside of tab
-     *
-     * @selector .slds-is-pinned
-     * @restrict .slds-context-bar__item_tab
-     * @modifier
-     */
-    &.slds-is-pinned {
-      width: auto;
-      padding-right: $spacing-x-small;
-
-      .slds-context-bar__label-action {
-        padding: 0 $spacing-x-small;
-      }
-    }
   }
 
   /**
@@ -485,16 +51,16 @@
   }
 
   /**
-   * @summary Notifications style - Styling a tab or overflow item to indicate the tab has unread activity
-   * @selector .slds-has-notification
-   * @restrict .slds-context-bar__item, .slds-context-bar__item .slds-dropdown__item
-   */
+  * @summary Notifications style - Styling a tab or overflow item to indicate the tab has unread activity
+  * @selector .slds-has-notification
+  * @restrict .slds-context-bar__item, .slds-context-bar__item .slds-dropdown__item
+  */
   .slds-has-notification {
     /**
-     * @summary Unread notification icon
-     * @selector .slds-indicator_unread
-     * @restrict .slds-has-notification span
-     */
+      * @summary Unread notification icon
+      * @selector .slds-indicator_unread
+      * @restrict .slds-has-notification span
+      */
     .slds-indicator_unread {
       display: inline-block;
       flex-shrink: 0;
@@ -508,6 +74,437 @@
     .slds-indicator_unsaved,
     .slds-indicator--unsaved {
       top: rem(-4px);
+    }
+  }
+}
+
+/**
+  * Primary zone
+  *
+  * @selector .slds-context-bar__primary
+  * @restrict .slds-context-bar div
+  */
+.slds-context-bar__primary,
+.slds-context-bar__secondary,
+.slds-context-bar__tertiary {
+  display: flex;
+  flex-shrink: 0;
+}
+
+/**
+  * Secondary zone
+  *
+  * @selector .slds-context-bar__secondary
+  * @restrict .slds-context-bar nav, .slds-context-bar div
+  */
+// Context nav items go in the secondary region
+// and secondary region needs to respect the width
+// of the context bar parent for JavaScript to work
+// This is how to do that in CSS
+.slds-context-bar__secondary {
+  flex: 1 1 0%;
+  min-width: 0;
+}
+
+/**
+  * Manually add a vertical divider between elements
+  *
+  * @selector .slds-context-bar__vertical-divider
+  * @restrict .slds-context-bar div
+  */
+.slds-context-bar__vertical-divider {
+  width: 0;
+  overflow: hidden;
+  border-left: $border-width-thin solid $color-border;
+}
+
+/** Any item on the horizontal axis of the context nav bar
+  *
+  * Interactions such as hovers + active are defaults, bottom of the
+  * file deals with light / dark theme thresholds
+  *
+  * @selector .slds-context-bar__item
+  * @restrict .slds-context-bar div, .slds-context-bar li
+  */
+.slds-context-bar__item {
+  display: flex;
+  align-content: center;
+  align-items: stretch;
+  white-space: nowrap;
+  position: relative;
+  max-width: $size-small;
+  transition: background-color 0.25s cubic-bezier(0.39, 0.575, 0.565, 1);
+
+  /**
+    * Active state of an item
+    *
+    * @selector .slds-is-active
+    * @restrict .slds-context-bar__item:not(.slds-no-hover)
+    * @modifier
+    */
+  &:not(.slds-no-hover):hover,
+  &.slds-is-active {
+    outline: 0;
+    border-radius: 0;
+    background-color: $brand-primary-transparent-10;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  &:not(.slds-no-hover):hover:after {
+    content: '';
+    width: 100%;
+    height: 3px;
+    display: block;
+    background: rgba(0, 0, 0, 0.25);
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    right: 0;
+
+    @supports (mix-blend-mode: soft-light) {
+      background: rgba(0, 0, 0, 0.75);
+      mix-blend-mode: soft-light;
+    }
+  }
+
+  &:before {
+    bottom: 0;
+    content: '';
+    height: auto;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition-property: top, background-color;
+  }
+
+  &.slds-is-active {
+    animation: bkAnim 0.135s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+
+    @keyframes bkAnim {
+
+      50% {
+        background-color: $color-background-context-bar;
+      }
+
+      100% {
+        background-color: $brand-primary-transparent-10;
+      }
+    }
+
+    &:before {
+      content: '';
+      height: $globalnavigation-item-height-accent-active;
+      display: block;
+      background: $brand-primary;
+      position: absolute;
+      top: 0;
+      left: -1px;
+      right: -1px;
+      animation: navBounceIn 0.15s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+    }
+
+    @keyframes navBounceIn {
+
+      0% {
+        transform: translate3d(0, 20px, 0);
+        opacity: 0;
+      }
+
+      20% {
+        opacity: 0;
+      }
+
+      90% {
+        transform: translate3d(0, 1px, 0);
+      }
+
+      100% {
+        transform: translate3d(0, 0, 0);
+      }
+    }
+
+    &:hover {
+      border-bottom-color: $brand-primary-transparent-10;
+    }
+  }
+
+  /**
+    * Toggled focused class applied via JavaScript
+    *
+    * @selector .slds-has-focus
+    * @restrict .slds-context-bar__item
+    * @modifier
+    */
+  &.slds-has-focus,
+  &.slds-has-focus:hover {
+
+    &:before,
+    &:after {
+      height: $globalnavigation-item-height-accent-focus;
+    }
+  }
+
+  // Enforce background on items that have a notification
+  &.slds-has-notification {
+    background: $brand-primary-transparent-10;
+  }
+
+  @include tab-notification-pulsing-animation;
+
+  /**
+    * @summary Success notification on a tab
+    *
+    * @selector .slds-has-success
+    * @restrict .slds-context-bar__item
+    */
+  &.slds-has-success {
+    @include tab-notification-before($color-background-success-dark, $color-background-success-darker);
+
+    &:before {
+      animation-name: success-pulse;
+    }
+  }
+
+  /**
+    * @summary Error notification on a tab
+    *
+    * @selector .slds-has-error
+    * @restrict .slds-context-bar__item
+    */
+  &.slds-has-error {
+    @include tab-notification-before($color-background-destructive, $color-background-destructive-active);
+
+    &:before {
+      animation-name: error-pulse;
+    }
+  }
+
+  &.slds-has-success,
+  &.slds-has-error {
+
+    .slds-context-bar__label-action {
+      color: $color-gray-1;
+    }
+
+    .slds-indicator_unread {
+      background-color: $color-gray-1;
+    }
+
+    .slds-indicator_unsaved {
+      color: $color-gray-1;
+    }
+  }
+
+  /**
+    * @summary Warning notification on a tab
+    *
+    * @selector .slds-has-warning
+    * @restrict .slds-context-bar__item
+    */
+  &.slds-has-warning {
+    @include tab-notification-before($color-background-warning, $color-background-warning-dark);
+
+    &:before {
+      animation-name: warning-pulse;
+    }
+
+    .slds-indicator_unread {
+      background-color: currentColor;
+    }
+
+    .slds-indicator_unsaved {
+      color: currentColor;
+    }
+  }
+
+  &.slds-has-success.slds-is-active,
+  &.slds-has-warning.slds-is-active,
+  &.slds-has-error.slds-is-active {
+
+    &:after {
+      content: '';
+      background: $color-gray-11;
+      position: absolute;
+      height: $globalnavigation-item-height-accent-active;
+      opacity: 0.4;
+      top: 0;
+      right: 0;
+      left: 0;
+    }
+  }
+
+  &.slds-has-success.slds-has-focus,
+  &.slds-has-warning.slds-has-focus,
+  &.slds-has-error.slds-has-focus {
+
+    &:after {
+      height: $globalnavigation-item-height-accent-focus;
+    }
+  }
+}
+
+/**
+  * Add a left border to a context bar item
+  *
+  * @selector .slds-context-bar__item_divider-left
+  * @restrict .slds-context-bar div, .slds-context-bar li
+  */
+.slds-context-bar__item_divider-left,
+.slds-context-bar__item--divider-left {
+  border-left: $border-width-thin solid $color-border;
+}
+
+/**
+  * Add a right border to a context bar item
+  *
+  * @selector .slds-context-bar__item_divider-right
+  * @restrict .slds-context-bar div, .slds-context-bar li
+  */
+.slds-context-bar__item_divider-right,
+.slds-context-bar__item--divider-right {
+  border-right: $border-width-thin solid $color-border;
+}
+
+/**
+  * Actionable Text Links
+  *
+  * @selector .slds-context-bar__label-action
+  * @restrict .slds-context-bar__item a, .slds-context-bar__item span, .slds-context-bar__item button
+  */
+.slds-context-bar__label-action {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  flex-grow: 1;
+  padding: 0 $spacing-small;
+  border-radius: 0;
+  min-width: 0%;
+  color: inherit;
+  font-size: $font-size-3;
+  z-index: 1;
+
+  &:focus,
+  &:focus:hover {
+    outline: 0;
+    text-decoration: underline;
+  }
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  &:hover,
+  &:focus {
+    color: inherit;
+  }
+
+  &:active {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+
+/**
+  * Actionable Icons
+  *
+  * @selector .slds-context-bar__icon-action
+  * @restrict .slds-context-bar div
+  */
+.slds-context-bar__icon-action {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  margin-left: ($spacing-xx-small * -1);
+  padding: 0 $spacing-x-small;
+  color: $color-text-context-bar;
+  border-radius: 0;
+  flex-shrink: 0;
+
+  &:focus {
+    outline: 0;
+
+    .slds-context-bar__button {
+      @include focus-button;
+    }
+
+    ~ .slds-dropdown {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    color: $color-text-context-bar;
+  }
+
+  &:active {
+    color: $color-text-context-bar;
+  }
+
+  .slds-icon-waffle_container {
+    @include square($square-icon-large-content);
+    margin: {
+      right: $spacing-xx-small;
+      left: ($spacing-x-small * -1);
+    }
+  }
+
+  .slds-icon-waffle {
+    margin: {
+      right: auto;
+      left: auto;
+    }
+  }
+}
+
+/**
+  * @summary Tab modifier when using a tabset
+  *
+  * @name navigation-tab-bar
+  * @selector .slds-context-bar_tabs
+  * @restrict .slds-context-bar
+  * @support dev-ready
+  * @variant
+  */
+.slds-context-bar_tabs,
+.slds-context-bar--tabs {
+  border-top: $border-width-thin solid $color-border;
+}
+
+/**
+  * @summary Context bar tab items
+  *
+  * @selector .slds-context-bar__item_tab
+  * @restrict .slds-context-bar_tabs .slds-context-bar__item
+  * @notes Only use on tabset version
+  * @required
+  *
+  */
+.slds-context-bar__item_tab,
+.slds-context-bar__item--tab {
+  width: $size-x-small;
+  border-right: $border-width-thin solid $color-border;
+
+  .slds-context-bar__label-action {
+    padding: 0 $spacing-x-small;
+  }
+
+  /**
+  * @summary Pinned state - toggles visibility of elements inside of tab
+  *
+  * @selector .slds-is-pinned
+  * @restrict .slds-context-bar__item_tab
+  * @modifier
+  */
+  &.slds-is-pinned {
+    width: auto;
+    padding-right: $spacing-x-small;
+
+    .slds-context-bar__label-action {
+      padding: 0 $spacing-x-small;
     }
   }
 }

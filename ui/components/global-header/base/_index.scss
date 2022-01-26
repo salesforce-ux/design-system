@@ -41,29 +41,6 @@
   align-items: center;
 
   /**
-   * A region within the global header
-   *
-   * @selector .slds-global-header__item
-   * @restrict .slds-global-header div, .slds-global-header ul
-   */
-  &__item {
-    padding: 0 $spacing-medium;
-  }
-
-  /**
-   * Region that contains the search input, handles sizing
-   *
-   * @selector .slds-global-header__item_search
-   * @restrict .slds-global-header__item:nth-child(2)
-   */
-  &__item_search,
-  &__item--search {
-    flex: 0 1 rem(536px);
-    min-width: rem(440px);
-    padding: 0;
-  }
-
-  /**
    * Primary combobox that contains the search input, handles sizing
    *
    * @selector .slds-global-search__form-element div
@@ -84,20 +61,43 @@
       fill: $color-text-input-icon;
     }
   }
+}
 
-  /**
-   * Container of the global header logo
-   *
-   * @selector .slds-global-header__logo
-   * @restrict .slds-global-header__item div
-   * @required
-   */
-  &__logo {
-    width: rem(200px);
-    height: rem(40px);
-    background-image: url($brand-logo-image);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: left center;
-  }
+/**
+  * A region within the global header
+  *
+  * @selector .slds-global-header__item
+  * @restrict .slds-global-header div, .slds-global-header ul
+  */
+.slds-global-header__item {
+  padding: 0 $spacing-medium;
+}
+
+/**
+  * Region that contains the search input, handles sizing
+  *
+  * @selector .slds-global-header__item_search
+  * @restrict .slds-global-header__item:nth-child(2)
+  */
+.slds-global-header__item_search,
+.slds-global-header__item--search {
+  flex: 0 1 rem(536px);
+  min-width: rem(440px);
+  padding: 0;
+}
+
+/**
+  * Container of the global header logo
+  *
+  * @selector .slds-global-header__logo
+  * @restrict .slds-global-header__item div
+  * @required
+  */
+.slds-global-header__logo {
+  width: rem(200px);
+  height: rem(40px);
+  background-image: url($brand-logo-image);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: left center;
 }

@@ -8,11 +8,6 @@
   border-bottom: 1px solid $color-border;
   padding: $spacing-xx-small;
 
-  &_unread,
-  &--unread {
-    background-color: $color-background-row-selected;
-  }
-
   &:hover {
     background-color: $color-background-row-hover;
   }
@@ -20,4 +15,9 @@
   &:last-child {
     border-bottom: 0;
   }
+}
+
+.slds-global-header__notification_unread,
+.slds-global-header__notification--unread {
+  background-color: $color-background-row-selected;
 }

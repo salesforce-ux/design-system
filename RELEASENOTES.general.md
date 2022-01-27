@@ -5,7 +5,9 @@
 
 - Removed `&_` shorthand from numerous selectors in SCSS files
 
-## 2.17.1 - January 6, 2021
+## 2.17.2 - January 20, 2022
+
+## 2.17.1 - January 6, 2022
 
 ## 2.17.0 - December 16, 2021
 

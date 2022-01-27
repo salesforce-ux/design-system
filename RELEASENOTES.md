@@ -19,7 +19,15 @@
 #### Changed
 - Removed `@noflip` annotation from nubbins to make RTL behavior consistent
 
-## Release 2.17.1 - January 6, 2021
+## Release 2.17.2 - January 20, 2022
+
+## Components
+### [Buttons](https://www.lightningdesignsystem.com/components/buttons)
+#### Added
+- Added `--slds-c-icon-color-foreground` Styling Hook to Button with Icon variant to accurately apply icon color updates
+  - Due to how the Lightning Base Component is configured, this is required to allow CSS Custom Property reassignment to function within Button Icons
+
+## Release 2.17.1 - January 6, 2022
 
 ## Components
 ### [Cards](https://www.lightningdesignsystem.com/components/cards)

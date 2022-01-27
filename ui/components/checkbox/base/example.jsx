@@ -276,6 +276,28 @@ export let examples = [
     )
   },
   {
+    id: 'long-wrapping-text-required-group',
+    label: 'Required Checkboxes with Abnormally-long Wrapping Text',
+    demoStyles: `width: 210px`,
+    storybookStyles: true,
+    element: (
+      <Fieldset>
+        <Legend>
+          <abbr className="slds-required" title="required">
+            *{' '}
+          </abbr>
+          Checkbox Group Label
+        </Legend>
+        <FormElementControl>
+          <Checkbox label="When you wake up in the morning, it's a quarter to one, And you want to have a little fun. You brush your teeth, ch ch ch ch, ch ch ch ch. You brush your teeth, ch ch ch ch, ch ch ch ch" />
+          <Checkbox label="When you wake up in the morning, it's a quarter to two, And you want to find, something to do. You brush your teeth, ch ch ch ch, ch ch ch ch. You brush your teeth, ch ch ch ch, ch ch ch ch" />
+          <Checkbox label="And when you wake up in the morning, it's a quarter to three, And your mind starts hummin', twiddle dee dee. You brush your teeth, ch ch ch ch, ch ch ch ch. You brush your teeth, ch ch ch ch, ch ch ch ch" />
+          <Checkbox label="When you wake up in the morning, it's a quarter to four, And you think you hear a knock on the door. You brush your teeth, ch ch ch ch, ch ch ch ch. You brush your teeth, ch ch ch ch, ch ch ch ch" />
+        </FormElementControl>
+      </Fieldset>
+    )
+  },
+  {
     id: 'group',
     label: 'Group',
     element: <Group />

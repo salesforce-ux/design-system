@@ -19,6 +19,17 @@
 #### Changed
 - Removed `@noflip` annotation from nubbins to make RTL behavior consistent
 
+## Release 2.17.3 - January 27, 2022
+
+## Components
+### [Checkbox](https://www.lightningdesignsystem.com/components/checkbox)
+#### Fixed
+- Checkbox inputs will no longer collapse horizontally when a label with a large amount of text is used.
+
+### [Combobox](https://www.lightningdesignsystem.com/components/combobox)
+## Fixed
+- Fixed spacing/alignment issue in `.slds-input_faux > span` for select-only combobox without a placeholder.
+
 ## Release 2.17.2 - January 20, 2022
 
 ## Components

@@ -4,6 +4,12 @@
 
 <!-- ## [Unreleased] -->
 
+## 2.17.3
+
+## Fixed
+
+- Fixed spacing/alignment issue in `.slds-input_faux > span` for select-only combobox without a placeholder.
+
 ## 2.16.2
 
 ## Removed

@@ -32,6 +32,7 @@
     @include square($square-icon-medium-content);
     display: inline-block;
     position: relative;
+    flex-shrink: 0;
     vertical-align: middle;
     // @todo consider shared hooks for inputs
     border-radius: var(--slds-c-checkbox-radius-border, var(--sds-c-checkbox-radius-border, $border-radius-small));

@@ -127,6 +127,11 @@
   &.slds-is-disabled {
     @include input-disabled;
   }
+
+  > span:before {
+    content: '';
+    display: inline-block;
+  }
 }
 
 /**

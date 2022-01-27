@@ -485,17 +485,17 @@ jobs:
       - node/install-npm
       - node/install-packages
 
-      - run:
-          name: 'Build static site'
-          command: 'npm run build'
-          environment:
-            SLDS__FRAMEWORK__PATH: .slds/.dist/
-
       # Heroku
       - heroku/install
       - run:
           name: 'Install Heroku Build CLI plugin'
           command: 'heroku plugins:install heroku-builds'
+
+      - run:
+          name: 'Build static site'
+          command: 'npm run build'
+          environment:
+            SLDS__FRAMEWORK__PATH: .slds/.dist/
 
       - run:
           name: 'Generate site tarball'

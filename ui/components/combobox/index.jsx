@@ -149,7 +149,7 @@ const ComboboxInput = ({
 }) => {
   const hasInputIcon = leftInputIcon || rightInputIcon || showCloseButton;
   const { isOpen } = useContext(ComboboxFormContext);
-  const placeholderValue = !placeholder
+  const placeholderValue = !placeholder && placeholder !== ""
     ? autocomplete
       ? 'Search...'
       : 'Select an Option…'

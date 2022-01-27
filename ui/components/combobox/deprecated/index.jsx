@@ -54,7 +54,7 @@ const DeprecatedObjectSwitcher = props => {
 
 /**
  * Combobox input element. This is deprecated since updated a11y guidance is to
- * have select-only comboboxes replace the input with a div
+ * have select-only comboboxes replace the input with a button
  * @name DeprecatedComboboxInputElement
  * @prop {boolean} aria-activedescendant
  * @prop {string}  aria-controls

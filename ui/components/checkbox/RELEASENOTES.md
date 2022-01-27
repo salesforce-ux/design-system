@@ -4,6 +4,11 @@
 
 <!-- ## [Unreleased] -->
 
+## 2.17.3
+
+### Fixed
+- Checkbox inputs will no longer collapse horizontally when a label with a large amount of text is used.
+
 ## 2.17.0
 
 ### Added

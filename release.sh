@@ -124,7 +124,10 @@ if [ "$build_site_only" = false ]; then
   curl https://raw.githubusercontent.com/pypa/pipenv/master/get-pipenv.py | python
 
   # copy Algolia environment variables into .env
-  cp ../../.docsearchenv .env
+  # relies on design-system-site/environment.js being run first
+  echo APPLICATION_ID=$(cat ../.algoliakeys.json | jq -r .SLDS__SEARCH__APP_ID) > .env
+  echo API_KEY=$(cat ../.algoliakeys.json | jq -r .SLDS__SEARCH__API_KEY) >> .env
+
 
   # install pipenv dependencies
   pipenv install

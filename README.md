@@ -110,6 +110,12 @@ Delete temporary build and local files.
 
 `npm test`: run all tests
 
+### Release
+
+`npm release:site`: build and release the framework and site
+
+Requires heroku access to build and release the site.
+
 ## Troubleshooting
 
 See the [troubleshooting guide](guidelines/TROUBLESHOOTING.md).

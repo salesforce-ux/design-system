@@ -401,3 +401,6 @@ export const packageJson = () => {
     src: true,
   }).pipe(gulp.dest(distPath()));
 };
+
+export const searchConfig = () =>
+  gulp.src('searchconfig.json').pipe(gulp.dest(distPath()));

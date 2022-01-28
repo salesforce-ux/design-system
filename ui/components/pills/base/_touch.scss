@@ -6,18 +6,18 @@
     margin-left: $spacing-xx-small;
   }
 
-  &__container,
-  &-container,
-  &_container {
+  .slds-pill__container,
+  .slds-pill-container,
+  .slds-pill_container {
     padding: $spacing-xx-small;
   }
 
-  &__label {
+  .slds-pill__label {
     font-size: $font-size-4;
   }
 
-  &__icon,
-  &__icon_container {
+  .slds-pill__icon,
+  .slds-pill__icon_container {
 
     ~ .slds-pill__action {
       padding-left: calc(#{$square-icon-x-small-boundary} + #{$spacing-x-small});
@@ -42,8 +42,8 @@
     border: 0;
   }
 
-  &__icon,
-  &__icon_container {
+  .slds-pill__icon,
+  .slds-pill__icon_container {
 
     ~ .slds-pill__action {
       padding-left: calc(#{$square-icon-x-small-boundary} + #{$spacing-x-small});

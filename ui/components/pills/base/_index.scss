@@ -51,111 +51,111 @@
   a {
     text-decoration: none;
   }
+}
 
-  /**
-   * Modifier that removes border and background from a pill
-   *
-   * @selector .slds-pill_bare
-   * @restrict .slds-pill
-   * @modifier
-   */
-  &_bare,
-  &--bare {
+/**
+  * Modifier that removes border and background from a pill
+  *
+  * @selector .slds-pill_bare
+  * @restrict .slds-pill
+  * @modifier
+  */
+.slds-pill_bare,
+.slds-pill--bare {
+  /*! @css-var-fallback background-color */
+  --slds-c-pill-color-background: transparent;
+
+  /*! @css-var-fallback border-width */
+  --slds-c-pill-sizing-border: 0;
+
+  &:hover {
     /*! @css-var-fallback background-color */
-    --slds-c-pill-color-background: transparent;
-
-    /*! @css-var-fallback border-width */
-    --slds-c-pill-sizing-border: 0;
-
-    &:hover {
-      /*! @css-var-fallback background-color */
-      --sds-c-pill-color-background-hover: transparent;
-    }
+    --sds-c-pill-color-background-hover: transparent;
   }
+}
 
-  /**
-   * Container to hold pill(s) with borders
-   *
-   * @selector .slds-pill_container
-   * @restrict div
-   */
-  &_container {
-    display: flex;
-    min-height: calc(#{$height-input} + 2px);
-    padding-top: var(--slds-c-pill-container-spacing-block-start, var(--sds-c-pill-container-spacing-block-start, $spacing-xxx-small));
-    padding-right: var(--slds-c-pill-container-spacing-inline-end, var(--sds-c-pill-container-spacing-inline-end, $spacing-xxx-small));
-    padding-bottom: var(--slds-c-pill-container-spacing-block-end, var(--sds-c-pill-container-spacing-block-end, $spacing-xxx-small));
-    padding-left: var(--slds-c-pill-container-spacing-inline-start, var(--sds-c-pill-container-spacing-inline-start, $spacing-xxx-small));
-    border-width: var(--slds-c-pill-sizing-border, var(--sds-c-pill-sizing-border, $border-width-thin));
-    border-style: solid;
-    border-color: var(--slds-c-pill-color-border, var(--sds-c-pill-color-border, $color-border));
-    border-radius: var(--slds-c-pill-radius-border, var(--sds-c-pill-radius-border, $border-radius-medium));
-    background-color: var(--slds-c-pill-container-color-background, var(--sds-c-pill-container-color-background, $color-background-input));
+/**
+  * Container to hold pill(s) with borders
+  *
+  * @selector .slds-pill_container
+  * @restrict div
+  */
+.slds-pill_container {
+  display: flex;
+  min-height: calc(#{$height-input} + 2px);
+  padding-top: var(--slds-c-pill-container-spacing-block-start, var(--sds-c-pill-container-spacing-block-start, $spacing-xxx-small));
+  padding-right: var(--slds-c-pill-container-spacing-inline-end, var(--sds-c-pill-container-spacing-inline-end, $spacing-xxx-small));
+  padding-bottom: var(--slds-c-pill-container-spacing-block-end, var(--sds-c-pill-container-spacing-block-end, $spacing-xxx-small));
+  padding-left: var(--slds-c-pill-container-spacing-inline-start, var(--sds-c-pill-container-spacing-inline-start, $spacing-xxx-small));
+  border-width: var(--slds-c-pill-sizing-border, var(--sds-c-pill-sizing-border, $border-width-thin));
+  border-style: solid;
+  border-color: var(--slds-c-pill-color-border, var(--sds-c-pill-color-border, $color-border));
+  border-radius: var(--slds-c-pill-radius-border, var(--sds-c-pill-radius-border, $border-radius-medium));
+  background-color: var(--slds-c-pill-container-color-background, var(--sds-c-pill-container-color-background, $color-background-input));
 
-    .slds-listbox_inline {
-      margin-left: 0;
-      margin-right: 0;
-    }
+  .slds-listbox_inline {
+    margin-left: 0;
+    margin-right: 0;
   }
+}
 
-  /**
-   * Line of text inside a pill
-   *
-   * @selector .slds-pill__label
-   * @restrict .slds-pill a, .slds-pill span
-   */
-  &__label {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+/**
+  * Line of text inside a pill
+  *
+  * @selector .slds-pill__label
+  * @restrict .slds-pill a, .slds-pill span
+  */
+.slds-pill__label {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 
-    &:focus {
-      outline: 0;
-      border-radius: $border-radius-medium;
-      box-shadow: var(--slds-c-pill-label-shadow-focus, var(--sds-c-pill-label-shadow-focus, $shadow-button-focus));
-    }
+  &:focus {
+    outline: 0;
+    border-radius: $border-radius-medium;
+    box-shadow: var(--slds-c-pill-label-shadow-focus, var(--sds-c-pill-label-shadow-focus, $shadow-button-focus));
   }
+}
 
-  /**
-   * Initializes pill icon or avatar that sits to the left of the label
-   *
-   * @selector .slds-pill__icon_container
-   * @restrict .slds-pill span
-   */
-  &__icon,
-  &__icon_container {
+/**
+  * Initializes pill icon or avatar that sits to the left of the label
+  *
+  * @selector .slds-pill__icon_container
+  * @restrict .slds-pill span
+  */
+.slds-pill__icon,
+.slds-pill__icon_container {
+  @include square($square-icon-x-small-boundary);
+  margin-right: $spacing-xx-small;
+
+  .slds-icon,
+  .slds-avatar {
     @include square($square-icon-x-small-boundary);
-    margin-right: $spacing-xx-small;
-
-    .slds-icon,
-    .slds-avatar {
-      @include square($square-icon-x-small-boundary);
-      display: block;
-      font-size: $font-size-1;
-    }
-
-    ~ .slds-pill__action {
-      padding-left: calc(#{$square-icon-x-small-boundary} + #{$spacing-xx-small} + 2px);
-    }
+    display: block;
+    font-size: $font-size-1;
   }
 
-  /**
-   * Initializes remove icon in pill that sits to the right of the label
-   *
-   * @selector .slds-pill__remove
-   * @restrict .slds-pill button, .slds-pill span
-   */
-  &__remove {
-    @include square($square-icon-xx-small-boundary);
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    margin-left: $spacing-xx-small;
-    border-radius: $border-radius-small;
+  ~ .slds-pill__action {
+    padding-left: calc(#{$square-icon-x-small-boundary} + #{$spacing-xx-small} + 2px);
+  }
+}
 
-    svg {
-      @include square($square-icon-xx-small-content);
-    }
+/**
+  * Initializes remove icon in pill that sits to the right of the label
+  *
+  * @selector .slds-pill__remove
+  * @restrict .slds-pill button, .slds-pill span
+  */
+.slds-pill__remove {
+  @include square($square-icon-xx-small-boundary);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: $spacing-xx-small;
+  border-radius: $border-radius-small;
+
+  svg {
+    @include square($square-icon-xx-small-content);
   }
 }
 

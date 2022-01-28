@@ -4,10 +4,11 @@
 
 <!-- ## [Unreleased] -->
 
-## 2.17.3
+## 2.17.4
 
 ### Fixed
 - Checkbox inputs will no longer collapse horizontally when a label with a large amount of text is used.
+- All elements of an individual required checkbox (asterisk, input, and label) are now properly horizontally aligned.
 
 ## 2.17.0
 

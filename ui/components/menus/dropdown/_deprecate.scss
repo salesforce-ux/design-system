@@ -26,45 +26,42 @@
 
 @include deprecate('4.0.0', 'Please use slds-nubbin-{position} instead') {
 
-  .slds-dropdown {
+  .slds-dropdown_nubbin-top,
+  .slds-dropdown--nubbin-top {
+    @include nubbin(top, 'before');
+    @include nubbin(top);
+    margin-top: ($nubbin-size-default * 0.5);
 
-    &_nubbin-top,
-    &--nubbin-top {
-      @include nubbin(top, 'before');
-      @include nubbin(top);
-      margin-top: ($nubbin-size-default * 0.5);
+    &:before {
+      background: $color-background-alt;
+    }
 
-      &:before {
-        background: $color-background-alt;
-      }
+    &:after {
+      background: $color-background-alt;
+      box-shadow: -1px -1px 0 0 rgba(0, 0, 0, 0.16);
+      z-index: -1;
+    }
 
+    &.slds-dropdown_left,
+    &.slds-dropdown--left {
+      left: ($spacing-medium * -1);
+
+      &:before,
       &:after {
-        background: $color-background-alt;
-        box-shadow: -1px -1px 0 0 rgba(0, 0, 0, 0.16);
-        z-index: -1;
+        left: $spacing-large;
+        margin-left: 0;
       }
+    }
 
-      &.slds-dropdown_left,
-      &.slds-dropdown--left {
-        left: ($spacing-medium * -1);
+    &.slds-dropdown_right,
+    &.slds-dropdown--right {
+      right: ($spacing-medium * -1);
 
-        &:before,
-        &:after {
-          left: $spacing-large;
-          margin-left: 0;
-        }
-      }
-
-      &.slds-dropdown_right,
-      &.slds-dropdown--right {
-        right: ($spacing-medium * -1);
-
-        &:before,
-        &:after {
-          left: auto;
-          right: $spacing-large;
-          margin-left: 0;
-        }
+      &:before,
+      &:after {
+        left: auto;
+        right: $spacing-large;
+        margin-left: 0;
       }
     }
   }
@@ -77,46 +74,46 @@
     .slds-has-icon {
       position: relative;
 
-      &_left > a,
-      &--left > a,
-      &_left > span,
-      &--left > span {
-        padding-left: $spacing-x-large;
-      }
-
-      &_right > a,
-      &--right > a,
-      &_right > span,
-      &--right > span {
-        padding-right: $spacing-x-large;
-      }
-
-      &_left-right > a,
-      &--left-right > a,
-      &_left-right > span,
-      &--left-right > span {
-        padding: {
-          left: $spacing-x-large;
-          right: $spacing-x-large;
-        }
-      }
-
       .slds-icon {
         @include square($square-icon-medium-content);
         position: absolute;
         top: 50%;
         margin-top: (($square-icon-medium-content * 0.5) * -1);
         fill: $color-text-icon-default;
+      }
 
-        &_left,
-        &--left {
-          left: $spacing-small;
-        }
+      .slds-icon_left,
+      .slds-icon--left {
+        left: $spacing-small;
+      }
 
-        &_right,
-        &--right {
-          right: $spacing-small;
-        }
+      .slds-icon_right,
+      .slds-icon--right {
+        right: $spacing-small;
+      }
+    }
+
+    .slds-has-icon_left > a,
+    .slds-has-icon--left > a,
+    .slds-has-icon_left > span,
+    .slds-has-icon--left > span {
+      padding-left: $spacing-x-large;
+    }
+
+    .slds-has-icon_right > a,
+    .slds-has-icon--right > a,
+    .slds-has-icon_right > span,
+    .slds-has-icon--right > span {
+      padding-right: $spacing-x-large;
+    }
+
+    .slds-has-icon_left-right > a,
+    .slds-has-icon--left-right > a,
+    .slds-has-icon_left-right > span,
+    .slds-has-icon--left-right > span {
+      padding: {
+        left: $spacing-x-large;
+        right: $spacing-x-large;
       }
     }
   }

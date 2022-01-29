@@ -68,48 +68,48 @@
     direction: ltr;
     text-align: left;
   }
+}
 
-  /**
-   * Removes aesthetic nature from an input
-   *
-   * @selector .slds-input_bare
-   * @restrict .slds-input, input, textarea
-   * @modifier
-   */
+/**
+  * Removes aesthetic nature from an input
+  *
+  * @selector .slds-input_bare
+  * @restrict .slds-input, input, textarea
+  * @modifier
+  */
 
-  &_bare,
-  &--bare {
-    /*! @css-var-fallback background-color */
-    --slds-c-input-color-background: transparent;
+.slds-input_bare,
+.slds-input--bare {
+  /*! @css-var-fallback background-color */
+  --slds-c-input-color-background: transparent;
 
-    /*! @css-var-fallback padding-right */
-    --slds-c-input-spacing-horizontal-end: 0;
+  /*! @css-var-fallback padding-right */
+  --slds-c-input-spacing-horizontal-end: 0;
 
-    /*! @css-var-fallback padding-left */
-    --slds-c-input-spacing-horizontal-start: #{$spacing-small};
+  /*! @css-var-fallback padding-left */
+  --slds-c-input-spacing-horizontal-start: #{$spacing-small};
 
-    /*! @css-var-fallback color */
-    --slds-c-input-text-color: #{$color-text-default};
-    border: 0;
+  /*! @css-var-fallback color */
+  --slds-c-input-text-color: #{$color-text-default};
+  border: 0;
 
-    &:focus,
-    &:active {
-      /*! @css-var-fallback box-shadow */
-      --slds-c-input-shadow-focus: none;
-    }
+  &:focus,
+  &:active {
+    /*! @css-var-fallback box-shadow */
+    --slds-c-input-shadow-focus: none;
   }
+}
 
-  /**
-   * Used to apply an input size to another element thats a non input
-   * Because sometimes I need elements the same height as inputs
-   *
-   * @selector .slds-input_height
-   * @restrict .slds-input
-   */
-  &_height,
-  &--height {
-    min-height: calc(#{$height-input} + (#{$border-width-thin} * 2)); // For IE
-  }
+/**
+  * Used to apply an input size to another element thats a non input
+  * Because sometimes I need elements the same height as inputs
+  *
+  * @selector .slds-input_height
+  * @restrict .slds-input
+  */
+.slds-input_height,
+.slds-input--height {
+  min-height: calc(#{$height-input} + (#{$border-width-thin} * 2)); // For IE
 }
 
 /**
@@ -176,102 +176,106 @@
   .slds-input__icon:not(button) {
     pointer-events: none;
   }
+}
 
+/**
+  * @summary Positions .slds-input__icon to the left of the text input
+  *
+  * @selector .slds-input-has-icon_left
+  * @restrict .slds-input-has-icon
+  */
+.slds-input-has-icon_left,
+.slds-input-has-icon--left {
+
+  .slds-input__icon {
+    left: $spacing-small;
+  }
+
+  .slds-input,
+  .slds-input_faux,
+  .slds-input_bare,
+  .slds-input--bare {
+    /*! @css-var-fallback padding-left */
+    --slds-c-input-spacing-horizontal-start: #{$spacing-x-large};
+  }
+}
+
+/**
+  * @summary Positions .slds-input__icon to the right of the text input
+  *
+  * @selector .slds-input-has-icon_right
+  * @restrict .slds-input-has-icon
+  */
+.slds-input-has-icon_right,
+.slds-input-has-icon--right {
+
+  .slds-input__icon {
+    right: $spacing-small;
+  }
+
+  .slds-input,
+  .slds-input_faux,
+  .slds-input_bare,
+  .slds-input--bare {
+    /*! @css-var-fallback padding-right */
+    --slds-c-input-spacing-horizontal-end: #{$spacing-x-large};
+  }
+}
+
+/**
+  * @summary Positions .slds-input__icon_left to the left of the text input and .slds-input__icon_right to the right of the text input
+  *
+  * @selector .slds-input-has-icon_left-right
+  * @restrict .slds-input-has-icon
+  */
+.slds-input-has-icon_left-right,
+.slds-input-has-icon--left-right {
   /**
-   * @summary Positions .slds-input__icon to the left of the text input
-   *
-   * @selector .slds-input-has-icon_left
-   * @restrict .slds-input-has-icon
-   */
-  &_left,
-  &--left {
-
-    .slds-input__icon {
-      left: $spacing-small;
-    }
-
-    .slds-input,
-    .slds-input_faux,
-    .slds-input_bare,
-    .slds-input--bare {
-      /*! @css-var-fallback padding-left */
-      --slds-c-input-spacing-horizontal-start: #{$spacing-x-large};
-    }
+    * @summary Hook for .slds-input-has-icon--left-right
+    *
+    * @selector .slds-input__icon_left
+    * @restrict .slds-input__icon
+    */
+  .slds-input__icon_left,
+  .slds-input__icon--left {
+    left: $spacing-small;
   }
 
   /**
-   * @summary Positions .slds-input__icon to the right of the text input
-   *
-   * @selector .slds-input-has-icon_right
-   * @restrict .slds-input-has-icon
-   */
-  &_right,
-  &--right {
-
-    .slds-input__icon {
-      right: $spacing-small;
-    }
-
-    .slds-input,
-    .slds-input_faux,
-    .slds-input_bare,
-    .slds-input--bare {
-      /*! @css-var-fallback padding-right */
-      --slds-c-input-spacing-horizontal-end: #{$spacing-x-large};
-    }
+    * @summary Hook for .slds-input-has-icon_left-right
+    *
+    * @selector .slds-input__icon_right
+    * @restrict .slds-input__icon
+    */
+  .slds-input__icon_right,
+  .slds-input__icon--right {
+    right: $spacing-small;
   }
 
-  /**
-   * @summary Positions .slds-input__icon_left to the left of the text input and .slds-input__icon_right to the right of the text input
-   *
-   * @selector .slds-input-has-icon_left-right
-   * @restrict .slds-input-has-icon
-   */
-  &_left-right,
-  &--left-right {
-    /**
-     * @summary Hook for .slds-input-has-icon--left-right
-     *
-     * @selector .slds-input__icon_left
-     * @restrict .slds-input__icon
-     */
-    .slds-input__icon_left,
-    .slds-input__icon--left {
-      left: $spacing-small;
-    }
+  .slds-input,
+  .slds-input_faux,
+  .slds-input_bare,
+  .slds-input--bare {
+    /*! @css-var-fallback padding-left */
+    --slds-c-input-spacing-horizontal-start: #{$spacing-x-large};
 
-    /**
-     * @summary Hook for .slds-input-has-icon_left-right
-     *
-     * @selector .slds-input__icon_right
-     * @restrict .slds-input__icon
-     */
-    .slds-input__icon_right,
-    .slds-input__icon--right {
-      right: $spacing-small;
-    }
-
-    .slds-input,
-    .slds-input_faux,
-    .slds-input_bare,
-    .slds-input--bare {
-      /*! @css-var-fallback padding-left */
-      --slds-c-input-spacing-horizontal-start: #{$spacing-x-large};
-
-      /*! @css-var-fallback padding-right */
-      --slds-c-input-spacing-horizontal-end: #{$spacing-x-large};
-    }
+    /*! @css-var-fallback padding-right */
+    --slds-c-input-spacing-horizontal-end: #{$spacing-x-large};
   }
+}
 
-  &_group-right {
+/**
+* @selector .slds-input-has-icon_group-right
+* @restrict .slds-input-has-icon
+*/
+.slds-input-has-icon_group-right {
 
-    .slds-input,
-    .slds-input_faux,
-    .slds-input_bare,
-    .slds-input--bare {
-      /*! @css-var-fallback padding-right */
-      --slds-c-input-spacing-horizontal-end: calc(#{$spacing-xx-large} + #{$spacing-x-small});
-    }
+  .slds-input,
+  .slds-input_faux,
+  .slds-input_bare,
+  .slds-input--bare {
+    /*! @css-var-fallback padding-right */
+    --slds-c-input-spacing-horizontal-end: calc(#{$spacing-xx-large} + #{$spacing-x-small});
   }
 }
 

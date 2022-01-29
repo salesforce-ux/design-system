@@ -56,35 +56,35 @@
     @include square($square-icon-medium-content);
     margin-top: (($square-icon-medium-content * 0.5) * -1);
   }
+}
 
-  &_left,
-  &--left {
+.slds-input__icon_left,
+.slds-input__icon--left {
 
-    .slds-input__icon {
-      left: $spacing-x-small;
-    }
+  .slds-input__icon {
+    left: $spacing-x-small;
+  }
+}
+
+.slds-input__icon_right,
+.slds-input__icon--right {
+
+  .slds-input__icon {
+    right: $spacing-x-small;
+  }
+}
+
+.slds-input__icon_left-right,
+.slds-input__icon--left-right {
+
+  .slds-input__icon_left,
+  .slds-input__icon--left {
+    left: $spacing-x-small;
   }
 
-  &_right,
-  &--right {
-
-    .slds-input__icon {
-      right: $spacing-x-small;
-    }
-  }
-
-  &_left-right,
-  &--left-right {
-
-    .slds-input__icon_left,
-    .slds-input__icon--left {
-      left: $spacing-x-small;
-    }
-
-    .slds-input__icon_right,
-    .slds-input__icon--right {
-      right: $spacing-x-small;
-    }
+  .slds-input__icon_right,
+  .slds-input__icon--right {
+    right: $spacing-x-small;
   }
 }
 

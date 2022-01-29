@@ -73,25 +73,25 @@
         border-color: $color-border-input-disabled;
       }
     }
+  }
 
-    /**
-     * Resets explicit width on picklist to be fluid to its parent element
-     *
-     * @selector .slds-picklist_fluid
-     * @restrict .slds-picklist
-     * @modifier
-     */
-    &_fluid,
-    &--fluid {
+  /**
+    * Resets explicit width on picklist to be fluid to its parent element
+    *
+    * @selector .slds-picklist_fluid
+    * @restrict .slds-picklist
+    * @modifier
+    */
+  .slds-picklist_fluid,
+  .slds-picklist--fluid {
 
-      .slds-picklist__input,
-      .slds-picklist__label,
-      .slds-dropdown,
-      .slds-lookup {
-        width: auto;
-        min-width: 0;
-        max-width: $size-small;
-      }
+    .slds-picklist__input,
+    .slds-picklist__label,
+    .slds-dropdown,
+    .slds-lookup {
+      width: auto;
+      min-width: 0;
+      max-width: $size-small;
     }
   }
 

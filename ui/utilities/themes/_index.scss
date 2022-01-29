@@ -1,134 +1,141 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
+/**
+  * @summary Sets the theme
+  *
+  * @selector .slds-theme
+  */
 .slds-theme {
-  /**
-   * @summary Sets the background color to white
-   *
-   * @selector .slds-theme_default
-   * @modifier
-   */
-  &_default,
-  &--default {
-    @include theme(default);
-  }
+  /* Empty annotation for validator */
+}
 
-  /**
-   * @summary Sets the background color to gray
-   *
-   * @selector .slds-theme_shade
-   * @modifier
-   */
-  &_shade,
-  &--shade {
-    @include theme(shade);
-  }
+/**
+  * @summary Sets the background color to white
+  *
+  * @selector .slds-theme_default
+  * @modifier
+  */
+.slds-theme_default,
+.slds-theme--default {
+  @include theme(default);
+}
 
-  /**
-   * @summary Sets the background color to dark blue
-   *
-   * @selector .slds-theme_inverse
-   * @modifier
-   */
-  &_inverse,
-  &--inverse {
-    @include theme(inverse);
-    border-color: $color-background-inverse;
-  }
+/**
+  * @summary Sets the background color to gray
+  *
+  * @selector .slds-theme_shade
+  * @modifier
+  */
+.slds-theme_shade,
+.slds-theme--shade {
+  @include theme(shade);
+}
 
-  /**
-   * @summary Sets the background color to darker blue
-   *
-   * @selector .slds-theme_alt-inverse
-   * @modifier
-   */
-  &_alt-inverse,
-  &--alt-inverse {
-    @include theme(alt-inverse);
-    border-color: $color-background-alt-inverse;
-  }
+/**
+  * @summary Sets the background color to dark blue
+  *
+  * @selector .slds-theme_inverse
+  * @modifier
+  */
+.slds-theme_inverse,
+.slds-theme--inverse {
+  @include theme(inverse);
+  border-color: $color-background-inverse;
+}
 
-  /**
-   * @summary Sets the background color to green
-   *
-   * @selector .slds-theme_success
-   * @modifier
-   */
-  &_success,
-  &--success {
-    @include inverse-links;
-    background-color: $color-background-toast-success;
-  }
+/**
+  * @summary Sets the background color to darker blue
+  *
+  * @selector .slds-theme_alt-inverse
+  * @modifier
+  */
+.slds-theme_alt-inverse,
+.slds-theme--alt-inverse {
+  @include theme(alt-inverse);
+  border-color: $color-background-alt-inverse;
+}
 
-  /**
-   * @summary Sets the background color to gray-ish blue
-   *
-   * @selector .slds-theme_info
-   * @modifier
-   */
-  &_info,
-  &--info {
-    @include inverse-links;
-    background-color: $color-background-toast;
-  }
+/**
+  * @summary Sets the background color to green
+  *
+  * @selector .slds-theme_success
+  * @modifier
+  */
+.slds-theme_success,
+.slds-theme--success {
+  @include inverse-links;
+  background-color: $color-background-toast-success;
+}
 
-  /**
-   * @summary Sets the background color to yellow
-   *
-   * @selector .slds-theme_warning
-   * @modifier
-   */
-  &_warning,
-  &--warning {
-    @include warning-links;
-    @include warning-buttons;
-    background-color: $color-background-warning;
-    color: $color-text-default;
+/**
+  * @summary Sets the background color to gray-ish blue
+  *
+  * @selector .slds-theme_info
+  * @modifier
+  */
+.slds-theme_info,
+.slds-theme--info {
+  @include inverse-links;
+  background-color: $color-background-toast;
+}
 
-    .slds-icon,
-    .slds-button__icon {
-      fill: $color-gray-10;
-    }
-  }
+/**
+  * @summary Sets the background color to yellow
+  *
+  * @selector .slds-theme_warning
+  * @modifier
+  */
+.slds-theme_warning,
+.slds-theme--warning {
+  @include warning-links;
+  @include warning-buttons;
+  background-color: $color-background-warning;
+  color: $color-text-default;
 
-  /**
-   * @summary Sets the background color to red
-   *
-   * @selector .slds-theme_error
-   * @modifier
-   */
-  &_error,
-  &--error {
-    @include inverse-links;
-    background-color: $color-background-toast-error;
+  .slds-icon,
+  .slds-button__icon {
+    fill: $color-gray-10;
   }
+}
 
-  /**
-   * @summary Sets the background color to black
-   *
-   * @selector .slds-theme_offline
-   * @modifier
-   */
-  &_offline,
-  &--offline {
-    @include inverse-links;
-    background-color: #444;
-  }
+/**
+  * @summary Sets the background color to red
+  *
+  * @selector .slds-theme_error
+  * @modifier
+  */
+.slds-theme_error,
+.slds-theme--error {
+  @include inverse-links;
+  background-color: $color-background-toast-error;
+}
 
-  /**
-   * @summary Adds striped background
-   *
-   * @selector .slds-theme_alert-texture
-   * @modifier
-   */
-  &_alert-texture,
-  &--alert-texture {
-    @include gradient-striped;
-  }
+/**
+  * @summary Sets the background color to black
+  *
+  * @selector .slds-theme_offline
+  * @modifier
+  */
+.slds-theme_offline,
+.slds-theme--offline {
+  @include inverse-links;
+  background-color: #444;
+}
 
-  // Is this being used?
-  &_inverse-text,
-  &--inverse-text {
-    @include inverse-links;
-  }
+/**
+  * @summary Adds striped background
+  *
+  * @selector .slds-theme_alert-texture
+  * @modifier
+  */
+.slds-theme_alert-texture,
+.slds-theme--alert-texture {
+  @include gradient-striped;
+}
+
+// Is this being used?
+.slds-theme_inverse-text,
+.slds-theme--inverse-text {
+  @include inverse-links;
 }

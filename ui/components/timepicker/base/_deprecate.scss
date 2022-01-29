@@ -7,26 +7,26 @@
   .slds-datepicker--time {
     max-width: $size-x-small;
     max-height: (($line-height-text + ($spacing-x-small * 2)) * 6) - ($spacing-small * 2);
-    overflow: hidden {
-      y: auto;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+}
+
+.slds-datepicker_time__list,
+.slds-datepicker--time__list {
+
+  > li {
+    white-space: nowrap;
+    padding: $spacing-x-small {
+      left: $spacing-x-large;
+      right: $spacing-x-large;
     }
 
-    &__list {
-
-      > li {
-        white-space: nowrap;
-        padding: $spacing-x-small {
-          left: $spacing-x-large;
-          right: $spacing-x-large;
-        }
-
-        &:hover,
-        &:focus {
-          background: $color-background-row-hover;
-          text-decoration: none;
-          cursor: pointer;
-        }
-      }
+    &:hover,
+    &:focus {
+      background: $color-background-row-hover;
+      text-decoration: none;
+      cursor: pointer;
     }
   }
 }

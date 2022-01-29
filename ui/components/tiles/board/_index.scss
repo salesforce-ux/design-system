@@ -1,18 +1,34 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
+/**
+ * @summary Initializes tile board
+ *
+ * @name tile-board
+ * @selector .slds-tile_board
+ * @restrict article
+ * @support dev-ready
+ * @variant
+*/
+
 .slds-tile_board,
 .slds-tile--board {
   position: relative;
 
-  &__icon {
-    @include square($square-icon-medium-content);
-    position: absolute;
-    bottom: $spacing-xx-small;
-    right: $spacing-xx-small;
-  }
-
   .slds-has-alert {
     padding-right: $spacing-large;
   }
+}
+
+/**
+  * @summary Tile board icon
+  * @selector .slds-tile_board__icon
+  * @restrict .slds-tile_board span
+*/
+.slds-tile_board__icon,
+.slds-tile--board__icon {
+  @include square($square-icon-medium-content);
+  position: absolute;
+  bottom: $spacing-xx-small;
+  right: $spacing-xx-small;
 }

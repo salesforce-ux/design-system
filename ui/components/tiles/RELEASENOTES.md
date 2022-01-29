@@ -4,4 +4,8 @@
 
 <!-- ## [Unreleased] -->
 
-<!-- ## [VERSION] -->
+## 2.18.0
+
+### Added
+
+- Added annotations for tile board CSS classes.

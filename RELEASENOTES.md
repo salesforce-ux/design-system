@@ -19,6 +19,10 @@
 #### Changed
 - Removed `@noflip` annotation from nubbins to make RTL behavior consistent
 
+### [Tiles](https://www.lightningdesignsystem.com/components/tiles)
+#### Added
+- Added annotations for tile board CSS classes.
+
 ## Release 2.17.3 - January 27, 2022
 
 ## Components

@@ -1,32 +1,13 @@
 .slds-tree {
-
-  &__item {
-    @include deprecate('4.0.0', 'Use of anchor tags is deprecated in slds-tree') {
-
-      a {
-        color: $color-text-default;
-
-        &:hover {
-          text-decoration: none;
-        }
-
-        &:focus {
-          outline: 0;
-          text-decoration: underline;
-        }
-      }
-    }
-  }
-
   /**
-  * @name item-disabled
-  * @summary When a branch doesn't have children, apply slds-is-disabled to the button icon
-  * @selector .slds-is-disabled
-  * @restrict .slds-tree__item button
-  * @modifier
-  * @group interactions
-  * @deprecated
-  */
+    * @name item-disabled
+    * @summary When a branch doesn't have children, apply slds-is-disabled to the button icon
+    * @selector .slds-is-disabled
+    * @restrict .slds-tree__item button
+    * @modifier
+    * @group interactions
+    * @deprecated
+    */
   @include deprecate('4.0.0', '.slds-is-disabled is deprecated in .slds-tree__item, use .slds-is-hidden instead') {
 
     .slds-tree__item .slds-is-disabled {
@@ -35,13 +16,13 @@
   }
 
   /**
-   * @name item-selected
-   * @summary Selected state for a tree item
-   * @selector .slds-is-selected
-   * @restrict .slds-tree__item
-   * @notes Class should be applied via Javascript
-   * @deprecated
-   */
+    * @name item-selected
+    * @summary Selected state for a tree item
+    * @selector .slds-is-selected
+    * @restrict .slds-tree__item
+    * @notes Class should be applied via Javascript
+    * @deprecated
+    */
   @include deprecate('4.0.0', '.slds-is-selected is deprecated in .slds-tree, rely on aria-selected attribute') {
 
     .slds-is-selected {
@@ -51,12 +32,12 @@
   }
 
   /**
-   * @name item-focused
-   * @summary Focus state for a tree item
-   * @selector .slds-is-focused
-   * @restrict .slds-tree__item
-   * @deprecated
-   */
+    * @name item-focused
+    * @summary Focus state for a tree item
+    * @selector .slds-is-focused
+    * @restrict .slds-tree__item
+    * @deprecated
+    */
   @include deprecate('4.0.0', '.slds-is-focused is deprecated in .slds-tree, rely on the :focus pseudo class on the role="treeitem" element') {
 
     .slds-is-focused {
@@ -76,6 +57,24 @@
     [aria-expanded="true"] > .slds-tree__item > .slds-button[aria-controls] > span > .slds-button__icon {
       transition: $duration-promptly transform ease-in-out;
       transform: rotate(90deg);
+    }
+  }
+}
+
+.slds-tree__item {
+  @include deprecate('4.0.0', 'Use of anchor tags is deprecated in slds-tree') {
+
+    a {
+      color: $color-text-default;
+
+      &:hover {
+        text-decoration: none;
+      }
+
+      &:focus {
+        outline: 0;
+        text-decoration: underline;
+      }
     }
   }
 }

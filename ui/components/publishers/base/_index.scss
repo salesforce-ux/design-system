@@ -41,33 +41,6 @@
   }
 
   /**
-   * Abstraction of the text input styles
-   *
-   * @selector .slds-publisher__input
-   * @restrict .slds-publisher textarea
-   * @required
-   */
-  &__input {
-    line-height: $line-height-button;
-    padding: 0 $spacing-medium;
-    resize: none;
-    max-height: calc(#{$line-height-button} + 2px);
-    width: 100%;
-    border-radius: $border-radius-medium;
-  }
-
-  /**
-   * Bottom row of actionable items
-   *
-   * @selector .slds-publisher__actions
-   * @restrict .slds-publisher div
-   * @required
-   */
-  &__actions > .slds-button {
-    margin-left: $spacing-small;
-  }
-
-  /**
    *
    *
    * @selector .slds-publisher__toggle-visibility
@@ -80,4 +53,31 @@
     overflow: hidden;
     width: 0;
   }
+}
+
+/**
+  * Abstraction of the text input styles
+  *
+  * @selector .slds-publisher__input
+  * @restrict .slds-publisher textarea
+  * @required
+  */
+.slds-publisher__input {
+  line-height: $line-height-button;
+  padding: 0 $spacing-medium;
+  resize: none;
+  max-height: calc(#{$line-height-button} + 2px);
+  width: 100%;
+  border-radius: $border-radius-medium;
+}
+
+/**
+  * Bottom row of actionable items
+  *
+  * @selector .slds-publisher__actions
+  * @restrict .slds-publisher div
+  * @required
+  */
+.slds-publisher__actions > .slds-button {
+  margin-left: $spacing-small;
 }

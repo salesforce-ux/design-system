@@ -2,11 +2,11 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 /**
- * @name base
- * @selector .slds-progress-bar
- * @restrict div
- * @support dev-ready
- * @variant
+  * @name base
+  * @selector .slds-progress-bar
+  * @restrict div
+  * @support dev-ready
+  * @variant
  */
 .slds-progress-bar {
   @include appearance(none);
@@ -16,83 +16,83 @@
   background: $progress-bar-color-background;
   border: 0;
   position: relative;
+}
 
-  /**
-   * @summary Creates a progress bar height at the smaller .125rem (2px) size
-   *
-   * @selector .slds-progress-bar_x-small
-   * @restrict .slds-progress-bar
-   * @modifier
-   * @group thickness
-   */
-  &_x-small,
-  &--x-small {
-    height: $progress-bar-height;
-  }
+/**
+  * @summary Creates a progress bar height at the smaller .125rem (2px) size
+  *
+  * @selector .slds-progress-bar_x-small
+  * @restrict .slds-progress-bar
+  * @modifier
+  * @group thickness
+*/
+.slds-progress-bar_x-small,
+.slds-progress-bar--x-small {
+  height: $progress-bar-height;
+}
 
-  /**
-   * @summary Creates a progress bar height at the smaller .25rem (4px) size
-   *
-   * @selector .slds-progress-bar_small
-   * @restrict .slds-progress-bar
-   * @modifier
-   * @group thickness
-   */
-  &_small,
-  &--small {
-    height: ($progress-bar-height * 2);
-  }
+/**
+  * @summary Creates a progress bar height at the smaller .25rem (4px) size
+  *
+  * @selector .slds-progress-bar_small
+  * @restrict .slds-progress-bar
+  * @modifier
+  * @group thickness
+*/
+.slds-progress-bar_small,
+.slds-progress-bar--small {
+  height: ($progress-bar-height * 2);
+}
 
-  /**
-   * @summary Creates a progress bar height at the smaller .5rem (8px) size
-   *
-   * @selector .slds-progress-bar_medium
-   * @restrict .slds-progress-bar
-   * @modifier
-   * @group thickness
-   */
-  &_medium,
-  &--medium {
-    height: ($progress-bar-height * 4);
-  }
+/**
+  * @summary Creates a progress bar height at the smaller .5rem (8px) size
+  *
+  * @selector .slds-progress-bar_medium
+  * @restrict .slds-progress-bar
+  * @modifier
+  * @group thickness
+*/
+.slds-progress-bar_medium,
+.slds-progress-bar--medium {
+  height: ($progress-bar-height * 4);
+}
 
-  /**
-   * @summary Creates a progress bar height at the smaller .75rem (12px) size
-   *
-   * @selector .slds-progress-bar_large
-   * @restrict .slds-progress-bar
-   * @modifier
-   * @group thickness
-   */
-  &_large,
-  &--large {
-    height: ($progress-bar-height * 6);
-  }
+/**
+  * @summary Creates a progress bar height at the smaller .75rem (12px) size
+  *
+  * @selector .slds-progress-bar_large
+  * @restrict .slds-progress-bar
+  * @modifier
+  * @group thickness
+*/
+.slds-progress-bar_large,
+.slds-progress-bar--large {
+  height: ($progress-bar-height * 6);
+}
 
-  /**
-   * @summary Adds a border radius to the progress bar to give it a circular look
-   *
-   * @selector .slds-progress-bar_circular
-   * @restrict .slds-progress-bar
-   * @modifier
-   * @group radius
-   */
-  &_circular,
-  &--circular {
+/**
+  * @summary Adds a border radius to the progress bar to give it a circular look
+  *
+  * @selector .slds-progress-bar_circular
+  * @restrict .slds-progress-bar
+  * @modifier
+  * @group radius
+*/
+.slds-progress-bar_circular,
+.slds-progress-bar--circular {
+  border-radius: $border-radius-large;
+
+  .slds-progress-bar__value {
     border-radius: $border-radius-large;
-
-    .slds-progress-bar__value {
-      border-radius: $border-radius-large;
-    }
   }
 }
 
 /**
- * @summary Fill up blue bar inside of the progress bar
- *
- * @selector .slds-progress-bar__value
- * @restrict .slds-progress-bar span
- */
+  * @summary Fill up blue bar inside of the progress bar
+  *
+  * @selector .slds-progress-bar__value
+  * @restrict .slds-progress-bar span
+*/
 .slds-progress-bar__value {
   display: block;
   background: $progress-bar-color-background-fill;
@@ -100,13 +100,13 @@
 }
 
 /**
- * @summary Create a green progress bar
- *
- * @selector .slds-progress-bar__value_success
- * @restrict .slds-progress-bar__value
- * @modifier
- * @group color
- */
+  * @summary Create a green progress bar
+  *
+  * @selector .slds-progress-bar__value_success
+  * @restrict .slds-progress-bar__value
+  * @modifier
+  * @group color
+*/
 .slds-progress-bar__value_success {
   background: $progress-bar-color-background-fill-success;
 }

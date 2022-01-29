@@ -15,31 +15,31 @@
   border-radius: $border-radius-medium;
   overflow-y: auto;
 
-  /**
-   * Contains sub sections of a panel
-   *
-   * @selector .slds-panel__section
-   * @restrict .slds-panel div
-   * @required
-   */
-  &__section {
-    padding: $spacing-medium;
-  }
-
-  /**
-   * Contains form actions at the bottom of a panel
-   *
-   * @selector .slds-panel__actions
-   * @restrict .slds-panel div
-   * @required
-   */
-  &__actions {
-    padding: $spacing-small;
-  }
-
   &.slds-is-editing {
     box-shadow: $shadow-drop-down;
   }
+}
+
+/**
+  * Contains sub sections of a panel
+  *
+  * @selector .slds-panel__section
+  * @restrict .slds-panel div
+  * @required
+  */
+.slds-panel__section {
+  padding: $spacing-medium;
+}
+
+/**
+  * Contains form actions at the bottom of a panel
+  *
+  * @selector .slds-panel__actions
+  * @restrict .slds-panel div
+  * @required
+  */
+.slds-panel__actions {
+  padding: $spacing-small;
 }
 
 /**

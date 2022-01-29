@@ -12,36 +12,36 @@
 .slds-media {
   display: flex;
   align-items: flex-start;
+}
 
-  /**
-   * Defines the figure area
-   *
-   * @selector .slds-media__figure
-   */
-  &__figure {
-    flex-shrink: 0;
-    margin-right: $spacing-small;
+/**
+  * Defines the figure area
+  *
+  * @selector .slds-media__figure
+  */
+.slds-media__figure {
+  flex-shrink: 0;
+  margin-right: $spacing-small;
+}
 
-    &_fixed-width {
-      min-width: $square-icon-large-boundary; // accommodate largest icon size
-    }
-  }
+.slds-media__figure_fixed-width {
+  min-width: $square-icon-large-boundary; // accommodate largest icon size
+}
 
-  /**
-   * Defines the body area
-   *
-   * @selector .slds-media__body
-   * @modifier
-   */
-  &__body {
-    flex: 1;
-    min-width: 0; // This fixes an issue with truncation inside flexbox due to the changes in flex basis (already in FFOX, coming to Chrome)
-  }
+/**
+  * Defines the body area
+  *
+  * @selector .slds-media__body
+  * @modifier
+  */
+.slds-media__body {
+  flex: 1;
+  min-width: 0; // This fixes an issue with truncation inside flexbox due to the changes in flex basis (already in FFOX, coming to Chrome)
+}
 
-  &__body,
-  &__body > :last-child { // @TODO: Watch this - overreaching?
-    margin-bottom: 0;
-  }
+.slds-media__body,
+.slds-media__body > :last-child { // @TODO: Watch this - overreaching?
+  margin-bottom: 0;
 }
 
 .slds-media-body-iefix {

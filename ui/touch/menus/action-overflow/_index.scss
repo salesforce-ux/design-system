@@ -9,36 +9,40 @@
   bottom: 0;
   left: 0;
   z-index: ($z-index-modal + 1);
+}
 
-  &__container {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    height: 100%;
-  }
+.slds-action-overflow_touch__container,
+.slds-action-overflow--touch__container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 100%;
+}
 
-  &__content {
-    padding-top: 33.333%;
-    overflow: hidden;
-    overflow-y: auto;
-  }
+.slds-action-overflow_touch__content,
+.slds-action-overflow--touch__content {
+  padding-top: 33.333%;
+  overflow: hidden;
+  overflow-y: auto;
+}
 
-  &__body {
-    // make sure the content is cut-off mid-text, per spec, so overflow is more apparent
-    position: relative;
-    top: $spacing-x-large;
-    // box-styling
-    background: $color-background-alt;
-    box-shadow: $shadow-overlay;
-  }
+.slds-action-overflow_touch__body,
+.slds-action-overflow--touch__body {
+  // make sure the content is cut-off mid-text, per spec, so overflow is more apparent
+  position: relative;
+  top: $spacing-x-large;
+  // box-styling
+  background: $color-background-alt;
+  box-shadow: $shadow-overlay;
+}
 
-  &__footer {
-    position: relative;
-    flex-shrink: 0;
-    border-top: $border-width-thin solid $color-border;
-    padding: $spacing-small $spacing-medium;
-    background-color: $color-background;
-    box-shadow: $shadow-action-overflow-footer;
-  }
+.slds-action-overflow_touch__footer,
+.slds-action-overflow--touch__footer {
+  position: relative;
+  flex-shrink: 0;
+  border-top: $border-width-thin solid $color-border;
+  padding: $spacing-small $spacing-medium;
+  background-color: $color-background;
+  box-shadow: $shadow-action-overflow-footer;
 }

@@ -13,23 +13,23 @@
   .slds-is-nested {
     margin-left: $spacing-medium;
   }
+}
 
-  &_space,
-  &--space {
+.slds-has-block-links_space,
+.slds-has-block-links--space {
 
-    .slds-list__item,
-    .slds-item {
-      padding: 0; // Reset padding if used in conjunction with .slds-has-dividers--{position}-space
-    }
+  .slds-list__item,
+  .slds-item {
+    padding: 0; // Reset padding if used in conjunction with .slds-has-dividers--{position}-space
+  }
 
-    a {
-      display: block;
-      text-decoration: none;
-      padding: $spacing-small;
+  a {
+    display: block;
+    text-decoration: none;
+    padding: $spacing-small;
 
-      @include mq-medium-min {
-        padding: $spacing-x-small; // Re-apply that padding to the link
-      }
+    @include mq-medium-min {
+      padding: $spacing-x-small; // Re-apply that padding to the link
     }
   }
 }
@@ -40,16 +40,16 @@
     display: inline-block;
     text-decoration: none;
   }
+}
 
-  &_space a,
-  &--space a {
-    display: inline-block;
-    text-decoration: none;
-    padding: $spacing-small;
+.slds-has-inline-block-links_space a,
+.slds-has-inline-block-links--space a {
+  display: inline-block;
+  text-decoration: none;
+  padding: $spacing-small;
 
-    @include mq-medium-min {
-      padding: $spacing-x-small;
-    }
+  @include mq-medium-min {
+    padding: $spacing-x-small;
   }
 }
 
@@ -228,64 +228,62 @@
   }
 }
 
-.slds-has-divider {
-  /**
-   * @summary Adds 1px border divider above an HTML element
-   *
-   * @selector .slds-has-divider_top
-   * @restrict li
-   * @modifier
-   */
-  &_top,
-  &--top {
+/**
+  * @summary Adds 1px border divider above an HTML element
+  *
+  * @selector .slds-has-divider_top
+  * @restrict li
+  * @modifier
+  */
+.slds-has-divider_top,
+.slds-has-divider--top {
+  @include border(top);
+
+  &-space {
     @include border(top);
-
-    &-space {
-      @include border(top);
-      margin-top: $spacing-x-small;
-      padding-top: $spacing-x-small;
-    }
+    margin-top: $spacing-x-small;
+    padding-top: $spacing-x-small;
   }
+}
 
-  /**
-   * @summary Adds dot separator to the right of an HTML element
-   *
-   * @selector .slds-has-divider_right
-   * @restrict li
-   * @modifier
-   */
-  &_right,
-  &--right {
-    @include dot-separator(right);
-  }
+/**
+  * @summary Adds dot separator to the right of an HTML element
+  *
+  * @selector .slds-has-divider_right
+  * @restrict li
+  * @modifier
+  */
+.slds-has-divider_right,
+.slds-has-divider--right {
+  @include dot-separator(right);
+}
 
-  /**
-   * @summary Adds 1px border divider below an HTML element
-   *
-   * @selector .slds-has-divider_bottom
-   * @restrict li
-   * @modifier
-   */
-  &_bottom,
-  &--bottom {
+/**
+  * @summary Adds 1px border divider below an HTML element
+  *
+  * @selector .slds-has-divider_bottom
+  * @restrict li
+  * @modifier
+  */
+.slds-has-divider_bottom,
+.slds-has-divider--bottom {
+  @include border(bottom);
+
+  &-space {
     @include border(bottom);
-
-    &-space {
-      @include border(bottom);
-      margin-bottom: $spacing-x-small;
-      padding-bottom: $spacing-x-small;
-    }
+    margin-bottom: $spacing-x-small;
+    padding-bottom: $spacing-x-small;
   }
+}
 
-  /**
-   * @summary Adds dot separator to the left of an HTML element
-   *
-   * @selector .slds-has-divider_left
-   * @restrict li
-   * @modifier
-   */
-  &_left,
-  &--left {
-    @include dot-separator(left);
-  }
+/**
+  * @summary Adds dot separator to the left of an HTML element
+  *
+  * @selector .slds-has-divider_left
+  * @restrict li
+  * @modifier
+  */
+.slds-has-divider_left,
+.slds-has-divider--left {
+  @include dot-separator(left);
 }

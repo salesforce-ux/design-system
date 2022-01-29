@@ -22,21 +22,21 @@
         margin-top: $spacing-x-small;
       }
     }
+  }
 
-    &_space,
-    &--space {
+  .slds-has-cards_space,
+  .slds-has-cards--space {
 
-      > .slds-list__item {
-        @include border(around, $border-radius-medium);
-        padding: $spacing-small;
+    > .slds-list__item {
+      @include border(around, $border-radius-medium);
+      padding: $spacing-small;
 
-        @include mq-small-min {
-          padding: $spacing-x-small;
-        }
+      @include mq-small-min {
+        padding: $spacing-x-small;
+      }
 
-        + .slds-list__item {
-          margin-top: $spacing-x-small;
-        }
+      + .slds-list__item {
+        margin-top: $spacing-x-small;
       }
     }
   }

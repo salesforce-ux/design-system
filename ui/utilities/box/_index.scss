@@ -9,48 +9,48 @@
  */
 .slds-box {
   @include box($borders: around);
+}
 
-  /**
-   * @summary Changes padding to .25rem
-   *
-   * @selector .slds-box_xx-small
-   * @restrict .slds-box
-   * @modifier
-   */
-  &_xx-small,
-  &--xx-small {
-    padding: $spacing-xx-small;
-  }
+/**
+  * @summary Changes padding to .25rem
+  *
+  * @selector .slds-box_xx-small
+  * @restrict .slds-box
+  * @modifier
+  */
+.slds-box_xx-small,
+.slds-box--xx-small {
+  padding: $spacing-xx-small;
+}
 
-  /**
-   * @summary Changes padding to .5rem
-   *
-   * @selector .slds-box_x-small
-   * @restrict .slds-box
-   * @modifier
-   */
-  &_x-small,
-  &--x-small {
-    padding: $spacing-x-small;
-  }
+/**
+  * @summary Changes padding to .5rem
+  *
+  * @selector .slds-box_x-small
+  * @restrict .slds-box
+  * @modifier
+  */
+.slds-box_x-small,
+.slds-box--x-small {
+  padding: $spacing-x-small;
+}
 
-  /**
-   * @summary Changes padding to .75rem
-   *
-   * @selector .slds-box_small
-   * @restrict .slds-box
-   * @modifier
-   */
-  &_small,
-  &--small {
-    padding: $spacing-small;
-  }
+/**
+  * @summary Changes padding to .75rem
+  *
+  * @selector .slds-box_small
+  * @restrict .slds-box
+  * @modifier
+  */
+.slds-box_small,
+.slds-box--small {
+  padding: $spacing-small;
+}
 
-  // Deprecate for slds-border--around
-  &_border,
-  &--border {
-    @include box($padding: 0, $borders: around);
-  }
+// Deprecate for slds-border--around
+.slds-box_border,
+.slds-box--border {
+  @include box($padding: 0, $borders: around);
 }
 
 /**

@@ -2,80 +2,9 @@ const fs = require('fs').promises;
 const del = require('del');
 const playwright = require('playwright');
 
-//
 const portNum = process.env.a11yPort || 9002;
 
-/* eslint-disable no-template-curly-in-string */
-// base content for tests file
-let tests = `const sa11yPresetRules = require('@sa11y/preset-rules');
-const axeReporter = require('axe-html-reporter').createHtmlReport;
-const AxeBuilder = require('@axe-core/playwright').default;
-const playwright = require('playwright');
-const test = require('ava').default;
-const browserPromise = playwright.chromium.launch();
-
-// required macro to allow Playwright tests to run efficiently when using the AVA test runner
-async function pageMacro(t, callback) {
-  const browser = await browserPromise;
-  const context = await browser.newContext();
-  const page = await context.newPage();
-  try {
-    await callback(t, page);
-  } finally {
-    await page.close();
-  }
-}
-
-// repeatable function to run accessibility(a11y) tests for a story
-async function axeTest(t, page, story) {
-  try {
-    const results = await new AxeBuilder({ page })
-      .options(sa11yPresetRules.recommended)
-      .include('#root')
-      .analyze();
-
-    const numViolations = results.violations.length;
-
-    if (numViolations > 0) {
-      axeReporter({
-        results: {
-          violations: results.violations,
-        },
-        options: {
-          projectKey: 'SLDS a11y',
-          outputDir: '__tests__/a11y/results',
-          reportFileName: \`${'${story.id}.html'}\`,
-        },
-      });
-
-      // conditionally generate legible wording for the test failure message
-      const plural = numViolations !== 1 ? 'rules have' : 'rule has';
-      t.fail(\`${'» ${numViolations} ${plural} violations'}\`);
-    }
-
-    t.pass('» No accessibility violations. YAY!');
-
-  } catch (e) {
-    // do something with any other error
-    t.fail('!! Error occurred: ' + e);
-  }
-}
-`;
-
-// repeatable template for each test
-function testTemplate(story) {
-  return `
-test('» a11y: ${story.kind}/${story.name}', pageMacro, async (t, page) => {
-  const story = {
-    id: '${story.id}',
-    kind: '${story.kind}',
-    name: '${story.name}'
-  };
-  await page.goto('http://localhost:${portNum}/iframe.html?id=${story.id}&args=&viewMode=story', { timeout: 0 });
-  await axeTest(t, page, story);
-});
-  `;
-}
+const templatePath = './__tests__/a11y/ava.test-template.js';
 
 // asynchronously build the accessibility(a11y) test files using Storybook as the source of truth
 (async () => {
@@ -110,17 +39,18 @@ test('» a11y: ${story.kind}/${story.name}', pageMacro, async (t, page) => {
 
   // create test files with `numTests` tests per file
   for (let fileNum = 0; fileNum < numTestFiles; fileNum++) {
-    let fileTests = tests;
     // create a test for each story
-    stories.splice(0, numTests).forEach((story) => {
-      const storyTest = testTemplate(story);
-      fileTests += storyTest;
-    });
+    const s = stories.splice(0, numTests)
+
+    let template = await fs.readFile(templatePath, 'utf-8');
+
+    template = template.replace(/(?<=const stories = ).+(?=;)/,JSON.stringify(s.map(({name,id,kind})=>({name,id,kind})),null,2));
+    template = template.replace(/(?<=a11yPort \|\| ).+(?=;)/,portNum);
 
     // write tests to file
     await fs.writeFile(
       `./__tests__/a11y/__testfiles__/ava.a11y.${fileNum}.spec.js`,
-      fileTests
+      template
     );
   }
 })();

@@ -108,7 +108,10 @@ Delete temporary build and local files.
 
 ### Tests
 
-`npm test`: run all tests
+`npm test`: run all tests, except axe/a11y tests
+
+`npm run test:a11y`: run axe tests for accessibility violations
+Results are saved into `./__tests__/a11y/results`.
 
 ### Release
 

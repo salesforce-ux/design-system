@@ -1,6 +1,8 @@
 <!-- Release notes authoring guidelines: http://keepachangelog.com/ -->
 <!-- On release, add general notes here. In time the legacy release notes will be add to this -->
 
+## 2.17.4 - February 4, 2022
+
 ## 2.17.3 - January 27, 2022
 
 ## 2.17.2 - January 20, 2022

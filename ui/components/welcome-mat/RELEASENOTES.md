@@ -3,6 +3,11 @@
 # Welcome Mat Release Notes
 
 <!-- ## [Unreleased] -->
+## 2.17.4
+
+### Fixed
+- Centered checkboxes using the new Flexbox layout.
+
 ## 2.16.0
 
 ### Added

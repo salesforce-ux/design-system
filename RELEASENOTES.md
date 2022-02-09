@@ -23,13 +23,21 @@
 #### Added
 - Added annotations for tile board CSS classes.
 
-## Release 2.17.3 - January 27, 2022
+## Release 2.17.4 - February 4, 2022
 
 ## Components
 ### [Checkbox](https://www.lightningdesignsystem.com/components/checkbox)
 #### Fixed
 - Checkbox inputs will no longer collapse horizontally when a label with a large amount of text is used.
+- All elements of an individual required checkbox (asterisk, input, and label) are now properly horizontally aligned.
 
+### [Welcome Mat](https://www.lightningdesignsystem.com/components/welcome-mat)
+#### Fixed
+- Centered checkboxes using the new Flexbox layout.
+
+## Release 2.17.3 - January 27, 2022
+
+## Components
 ### [Combobox](https://www.lightningdesignsystem.com/components/combobox)
 ## Fixed
 - Fixed spacing/alignment issue in `.slds-input_faux > span` for select-only combobox without a placeholder.

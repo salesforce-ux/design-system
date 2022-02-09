@@ -14,12 +14,12 @@
  * @variant
  */
 .slds-checkbox {
-  display: inline-block;
+  display: inline-flex;
   position: relative;
 
   // When changing checkbox labels to inline-flex (PR #4769), the position of the required asterisk needed to be repositioned
   > .slds-required {
-    vertical-align: super;
+    line-height: 1; // because the required symbol is text, it needs its line-height reset
   }
 
   /**

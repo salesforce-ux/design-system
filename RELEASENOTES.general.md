@@ -1,7 +1,7 @@
 <!-- Release notes authoring guidelines: http://keepachangelog.com/ -->
 <!-- On release, add general notes here. In time the legacy release notes will be add to this -->
 
-## 2.17.5 - February 7, 2022
+## 2.17.5 - February 10, 2022
 
 - Updated design token `COLOR_BACKGROUND_DESTRUCTIVE_HOVER` so that it is a different color from `COLOR_BACKGROUND_DESTRUCTIVE`
 

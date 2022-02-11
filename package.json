@@ -61,7 +61,7 @@
     "@storybook/addon-backgrounds": "^5.3.21",
     "@storybook/addon-docs": "^5.3.21",
     "@storybook/addon-options": "^5.3.21",
-    "@storybook/addon-viewport": "^5.3.21",
+    "@storybook/addon-viewport": "^6.4.10",
     "@storybook/addons": "^5.3.21",
     "@storybook/react": "^5.3.21",
     "@storybook/theming": "^5.3.21",

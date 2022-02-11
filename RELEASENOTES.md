@@ -18,7 +18,7 @@
 #### Fixed
 - Reverted changes to checkbox layout introduced in 2.17.4
 
-## Release 2.17.4 - February 10, 2022
+## Release 2.17.4 - February 3, 2022
 
 ## Components
 ### [Checkbox](https://www.lightningdesignsystem.com/components/checkbox)

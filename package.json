@@ -159,6 +159,7 @@
     "mini-css-extract-plugin": "0.9.0",
     "playwright": "^1.17.1",
     "plugin-error": "1.0.1",
+    "pm2": "^5.1.2",
     "postcss": "^8.3.5",
     "postcss-combine-media-query": "1.0.1",
     "postcss-discard-comments": "4.0.2",
@@ -192,6 +193,7 @@
     "touch": "3.1.0",
     "vinyl": "2.2.0",
     "vnu-jar": "17.11.1",
+    "wait-on": "^6.0.1",
     "webpack": "4.42.1",
     "webpack-cli": "3.3.11",
     "yargs": "15.3.1"

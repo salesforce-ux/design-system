@@ -64,7 +64,6 @@
       float: left;
       max-width: calc(33% - #{$square-icon-utility-medium}); // Removing the width of the icon for when the help-text icon is present
       flex-basis: calc(33% - #{$square-icon-utility-medium}); // Some form element controls are set to display:flex
-      flex-grow: 1; // For IE and Safari which didn't auto expand to the available space
       margin-bottom: 0;
       position: relative;
       z-index: 1;
@@ -100,7 +99,6 @@
         float: none;
         max-width: 100%;
         width: auto;
-        flex-basis: auto; // For IE not taking up the available space
       }
     }
 
@@ -111,7 +109,6 @@
       width: auto;
       max-width: 100%;
       flex-basis: auto;
-      flex-grow: 1;
       float: none;
       position: relative;
       padding-left: 0;

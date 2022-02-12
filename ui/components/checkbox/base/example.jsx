@@ -203,6 +203,34 @@ export let states = [
     element: <Required />
   },
   {
+    id: 'required-with-long-label',
+    label: 'Required with long label',
+    demoStyles: 'width: 200px',
+    storybookStyles: true,
+    element: (
+      <FormElement>
+        <Checkbox label="When you wake up in the morning, it's a quarter to one, And you want to have a little fun. You brush your teeth, ch ch ch ch, ch ch ch ch. You brush your teeth, ch ch ch ch, ch ch ch ch">
+          <abbr className="slds-required" title="required">
+            *
+          </abbr>
+        </Checkbox>
+      </FormElement>
+    )
+  },
+  {
+    id: 'required-not-form-element-long-label',
+    label: 'Required (Not Form Element) with long label',
+    demoStyles: 'width: 200px',
+    storybookStyles: true,
+    element: (
+      <Checkbox label="When you wake up in the morning, it's a quarter to one, And you want to have a little fun. You brush your teeth, ch ch ch ch, ch ch ch ch. You brush your teeth, ch ch ch ch, ch ch ch ch">
+        <abbr className="slds-required" title="required">
+            *
+        </abbr>
+      </Checkbox>
+    )
+  },
+  {
     id: 'required-optional-mix',
     label: 'Required/Optional Combination',
     element: (

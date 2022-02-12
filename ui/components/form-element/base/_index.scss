@@ -46,7 +46,7 @@
   // Force radios and checkboxes to be on own line when there are multiples in a group
   .slds-radio,
   .slds-checkbox {
-    display: block;
+    display: flex;
     margin-top: $spacing-xx-small;
   }
 }

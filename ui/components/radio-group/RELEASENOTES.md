@@ -4,6 +4,11 @@
 
 <!-- ## [Unreleased] -->
 
+## 2.17.5
+
+### Fixed
+- Reverted label layout changes introduced in 2.17.0
+
 ## 2.17.0
 
 ### Added

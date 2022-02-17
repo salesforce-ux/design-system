@@ -109,7 +109,7 @@ props:
     value: '{!PALETTE_RED_40}'
     comment: Color for UI elements related to destructive actions.
   COLOR_BACKGROUND_DESTRUCTIVE_HOVER:
-    value: '{!PALETTE_RED_40}'
+    value: '{!PALETTE_RED_30}'
     comment: Hover color for UI elements related to destructive actions.
   COLOR_BACKGROUND_DESTRUCTIVE_ACTIVE:
     value: '{!PALETTE_RED_30}'

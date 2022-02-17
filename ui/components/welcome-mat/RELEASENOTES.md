@@ -3,6 +3,12 @@
 # Welcome Mat Release Notes
 
 <!-- ## [Unreleased] -->
+
+## 2.17.5
+
+### Fixed
+- Reverted changes to checkbox layout introduced in 2.17.4
+
 ## 2.17.4
 
 ### Fixed

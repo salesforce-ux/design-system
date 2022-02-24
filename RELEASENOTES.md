@@ -23,6 +23,13 @@
 #### Changed
 - Removed `@noflip` annotation from nubbins to make RTL behavior consistent
 
+### [Radio Group](https://www.lightningdesignsystem.com/components/radio-group)
+#### Added
+- Added styling changes to support radio group with help text icon.
+- Added examples: Required with help text icon and Right to left required with help text icon to documentation
+#### Fixed
+- Right to left legend to be right aligned and match the alignment of content.
+
 ### [Tiles](https://www.lightningdesignsystem.com/components/tiles)
 #### Added
 - Added annotations for tile board CSS classes.

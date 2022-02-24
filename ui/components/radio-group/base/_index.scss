@@ -151,4 +151,17 @@
 .slds-radio [type='radio'] + .slds-radio__label .slds-radio_faux,
 .slds-radio [type='radio'] + .slds-radio__label .slds-radio--faux {
   margin-right: $spacing-x-small;
+
+  @include rtl() {
+    /*! @noflip */
+    margin-right: 0;
+    margin-left: $spacing-x-small;
+  }
+}
+
+.slds-radio .slds-form-element__label {
+  @include rtl() {
+    /*! @noflip */
+    padding-right: 0;
+  }
 }

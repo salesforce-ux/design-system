@@ -28,6 +28,11 @@
   padding-top: $spacing-xx-small;
   margin-bottom: $spacing-xxx-small;
 
+  @include rtl() {
+    /*! @noflip */
+    padding-left: $spacing-x-small;
+  }
+
   &:empty {
     margin: 0;
   }
@@ -42,6 +47,11 @@
   // This clear:left is due to the label of the form element being set to float: left since we don't know if the help-text icon is present in the DOM. Since legend elements can only be floated to modify layout to accommodate the help-text icon, we need to make sure the control stacks below the label by default
   clear: left;
   position: relative;
+
+  @include rtl() {
+    /*! @noflip */
+    clear: right;
+  }
 
   // Force radios and checkboxes to be on own line when there are multiples in a group
   .slds-radio,
@@ -123,6 +133,14 @@
 .slds-form-element__legend {
   font-weight: $font-weight-bold;
   float: left; // Required to be float: left to accommodate for help-text icon
+
+  @include rtl() {
+    /*! @noflip */
+    float: right;
+
+    /*! @noflip */
+    padding-right: 0;
+  }
 }
 
 /**

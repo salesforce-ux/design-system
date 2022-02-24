@@ -6,6 +6,8 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import _ from '../../../shared/helpers';
 import { FormElementControl } from '../../form-element/';
+import ButtonIcon from '../../button-icons/';
+
 
 /// ////////////////////////////////////////
 // Partial(s)
@@ -184,6 +186,30 @@ export let states = [
     )
   },
   {
+    id: 'required-help-text-icon',
+    label: 'Required with Help Text Icon',
+    element: (
+      <Fieldset>
+        <Legend>
+          <abbr className="slds-required" title="required">
+            *
+          </abbr>{' '}
+          Radio Group Label
+        </Legend>
+        <div className="slds-form-element__icon">
+          <ButtonIcon
+            symbol="info"
+            assistiveText="Help"
+          />
+        </div>
+        <FormElementControl>
+          <Radio checked label="Radio Label One" />
+          <Radio label="Radio Label Two" />
+        </FormElementControl>
+      </Fieldset>
+    )
+  },
+  {
     id: 'rtl',
     label: 'Right to Left',
     element: (
@@ -193,6 +219,32 @@ export let states = [
           <FormElementControl>
             <Radio checked label="Radio Label One" name="rtl" />
             <Radio label="Radio Label Two" name="rtl" />
+          </FormElementControl>
+        </Fieldset>
+      </div>
+    )
+  },
+  {
+    id: 'rtl-required-help-text-icon',
+    label: 'Right to Left Required with Help Text Icon',
+    element: (
+      <div dir="rtl">
+        <Fieldset>
+          <Legend>
+            <abbr className="slds-required" title="required">
+              *
+            </abbr>{' '}
+            Radio Group Label
+          </Legend>
+          <div className="slds-form-element__icon">
+            <ButtonIcon
+              symbol="info"
+              assistiveText="Help"
+            />
+          </div>
+          <FormElementControl>
+            <Radio checked label="Radio Label One" name="rtl-required" />
+            <Radio label="Radio Label Two" name="rtl-required" />
           </FormElementControl>
         </Fieldset>
       </div>

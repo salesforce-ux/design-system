@@ -4,6 +4,17 @@
 
 <!-- ## [Unreleased] -->
 
+## 2.18.0
+
+### Added
+
+- Added styling changes to support radio group with help text icon.
+- Added examples: Required with help text icon and Right to left required with help text icon to documentation
+
+### Fixed
+
+- Right to left legend to be right aligned and match the alignment of content.
+
 ## 2.17.5
 
 ### Fixed

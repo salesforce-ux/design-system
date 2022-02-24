@@ -467,6 +467,37 @@ export default (
 
 export let examples = [
   {
+    id: 'dropdown-menu-icon-large',
+    label: 'Base - Size large',
+    element: (
+      <div style={{ width: '10rem' }}>
+        <Trigger isOpen
+          triggerIcon={
+            <ButtonIcon
+              className="slds-button_icon-border-filled"
+              symbol="down"
+              assistiveText="Show More"
+              aria-haspopup="true"
+              aria-expanded="true"
+              title="Show More"
+              size="large"
+            />
+          }
+        >
+          <Menu className="slds-dropdown_left">
+            <MenuList ariaLabel="Show More">
+              <MenuItem tabIndex="0">Menu Item One</MenuItem>
+              <MenuItem>Menu Item Two</MenuItem>
+              <MenuItem>Menu Item Three</MenuItem>
+              <li className="slds-has-divider_top-space" role="separator" />
+              <MenuItem>Menu Item Four</MenuItem>
+            </MenuList>
+          </Menu>
+        </Trigger>
+      </div>
+    )
+  },
+  {
     id: 'dropdown-menu-header',
     label: 'Sub Heading',
     element: <SubHeader />

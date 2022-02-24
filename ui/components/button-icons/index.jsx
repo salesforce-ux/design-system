@@ -96,6 +96,7 @@ class ButtonIcon extends Component {
           },
           {
             'slds-button_icon-container': size === 'medium',
+            'slds-button_icon-large': size === 'large',
             'slds-button_icon-small': size === 'small',
             'slds-button_icon-x-small': size === 'x-small',
             'slds-button_icon-xx-small': size === 'xx-small'

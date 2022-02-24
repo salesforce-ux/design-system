@@ -194,6 +194,22 @@
 }
 
 /**
+ * @summary Changes a button icon container to be 48x48px
+ * @name large
+ * @selector .slds-button_icon-large
+ * @restrict .slds-button_icon
+ * @group size
+ */
+.slds-button_icon-large,
+.slds-button--icon-large {
+  @include square($square-icon-large-boundary);
+
+  .slds-button__icon {
+    @include square($square-icon-utility-large);
+  }
+}
+
+/**
  * @summary Changes a button icon container to be 24x24px
  * @name small
  * @selector .slds-button_icon-small

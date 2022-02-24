@@ -44,9 +44,10 @@ import { MobileNotice, MobileBlurb } from '../../shared/doc-text';
 
 ## About Button Icons
 
-Button icons are button elements that represent their behavior with an [icon](/components/icons) instead of text. The button itself should have the classes `slds-button` and `slds-button_icon`, while the svg icon has `slds-button__icon` on it.
+Button icons are button elements that represent their behavior with an [icon](/components/icons) instead of text. The button itself should have the classes `slds-button` and `slds-button_icon`, while the svg icon has `slds-button__icon` on it. Size modifiers can be added, the default sizing represents a medium variant.
 
 Some styling variations require the button to receive additional 'container' classes that remove the button styling and/or add borders. See below for more detail.
+
 
 ### Accessibility
 
@@ -213,7 +214,7 @@ The bare variant can be displayed in three other sizes—`large`, `small`, `x-sm
 
 ### Icon Container
 
-Contained variants can be displayed in three smaller sizes—`small`, `x-small`, `xx-small`—by adding a sizing class on the `<button>`.
+Contained variants can be displayed in four other sizes—`large`, `small`, `x-small`, `xx-small`—by adding a sizing class on the `<button>`.
 
 <CodeBlock toggleCode={false}>
   <button className="... slds-button_icon-{size}">...</button>
@@ -222,6 +223,11 @@ Contained variants can be displayed in three smaller sizes—`small`, `x-small`,
 <Example title="Sizes">
   <CodeView>
     <Fragment>
+      <ButtonIcon
+        className="slds-button_icon-border slds-button_icon-large"
+        assistiveText="More options"
+        title="More Options"
+      />
       <ButtonIcon
         className="slds-button_icon-border slds-button_icon-small"
         assistiveText="More options"

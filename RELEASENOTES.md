@@ -6,6 +6,10 @@
 - Removed `&_` shorthand from numerous selectors in SCSS files
 
 ## Components
+### [Button Icons](https://www.lightningdesignsystem.com/components/button-icons)
+#### Added
+- Added `slds-button_icon-large` to support a Large variant for contained button icons
+
 ### [Buttons](https://www.lightningdesignsystem.com/components/buttons)
 #### Changed
 - Removed `vertical-align` from button non-base variants to create vertical alignment consistency among all the buttons.

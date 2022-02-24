@@ -4,6 +4,12 @@
 
 <!-- ## [Unreleased] -->
 
+## 2.18.0
+
+### Added
+
+- Added `slds-button_icon-large` to support a Large variant for contained button icons
+
 ## 2.15.0
 
 ### Added

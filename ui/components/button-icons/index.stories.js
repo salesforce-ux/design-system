@@ -6,6 +6,7 @@ import * as BrandExamples from './brand/example';
 import * as ButtonMenuExamples from './menu/example';
 import * as InverseExamples from './inverse/example';
 import * as StatefulExamples from './stateful/example';
+import * as SizingExamples from './sizing/example';
 import * as TransparentContainerExamples from './transparent-container/example';
 import { generateStories } from '../../shared/helpers';
 import Docs from './docs.mdx';
@@ -18,6 +19,7 @@ const examples = [
   BrandExamples,
   ButtonMenuExamples,
   InverseExamples,
+  SizingExamples,
   StatefulExamples,
   TransparentContainerExamples
 ];

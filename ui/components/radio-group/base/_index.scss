@@ -158,10 +158,3 @@
     margin-left: $spacing-x-small;
   }
 }
-
-.slds-radio .slds-form-element__label {
-  @include rtl() {
-    /*! @noflip */
-    padding-right: 0;
-  }
-}

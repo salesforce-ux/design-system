@@ -30,6 +30,9 @@
 
   @include rtl() {
     /*! @noflip */
+    padding-right: 0;
+
+    /*! @noflip */
     padding-left: $spacing-x-small;
   }
 

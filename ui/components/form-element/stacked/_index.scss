@@ -52,6 +52,11 @@
     width: 100%;
     flex-basis: 100%;
     clear: left;
+
+    @include rtl() {
+      /*! @noflip */
+      clear: right;
+    }
   }
 
   .slds-form-element__icon {

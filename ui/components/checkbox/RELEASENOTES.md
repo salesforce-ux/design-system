@@ -4,6 +4,12 @@
 
 <!-- ## [Unreleased] -->
 
+## 2.18.0
+
+### Fixed
+- Right to left legend to be right aligned and match the alignment of content.
+- Checkbox margin to properly support RTL.
+
 ## 2.17.5
 
 ### Fixed

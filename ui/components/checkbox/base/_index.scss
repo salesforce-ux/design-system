@@ -209,4 +209,12 @@
 .slds-form-element .slds-checkbox [type="checkbox"] + .slds-checkbox__label .slds-checkbox_faux,
 .slds-form-element .slds-checkbox [type="checkbox"] + .slds-checkbox__label .slds-checkbox--faux {
   margin-right: $spacing-x-small;
+
+  @include rtl() {
+    /*! @noflip */
+    margin-right: 0;
+
+    /*! @noflip */
+    margin-left: $spacing-x-small;
+  }
 }

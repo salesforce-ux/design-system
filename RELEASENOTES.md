@@ -14,6 +14,15 @@
 #### Changed
 - Removed `vertical-align` from button non-base variants to create vertical alignment consistency among all the buttons.
 
+### [Checkbox](https://www.lightningdesignsystem.com/components/checkbox)
+#### Fixed
+- Right to left legend to be right aligned and match the alignment of content.
+- Checkbox margin to properly support RTL.
+
+### [Form Element](https://www.lightningdesignsystem.com/components/form-element)
+#### Fixed
+- Fixed form element label to support RTL layout by removing left aligned spacing and placing it back on the opposite side. 
+
 ### [Modals](https://www.lightningdesignsystem.com/components/modals)
 #### Changed
 - Added `slds-modal__content_footless` class to example for clarity.

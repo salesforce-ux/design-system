@@ -3,6 +3,12 @@
 # Form Element Release Notes
 
 <!-- ## [Unreleased] -->
+
+## 2.18.0
+
+### Fixed
+- Fixed form element label to support RTL layout by removing left aligned spacing and placing it back on the opposite side. 
+
 ## 2.16.0
 
 ### Fixed

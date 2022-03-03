@@ -6,7 +6,6 @@ exports[`Composed Welcome Mat Snapshots renders a deprecated welcome mat 1`] = `
   aria-labelledby="welcome-mat-20-label"
   aria-modal="true"
   className="slds-modal slds-fade-in-open slds-welcome-mat"
-  closeButtonDisabled={false}
   role="dialog"
   tabIndex="-1"
 >
@@ -425,7 +424,6 @@ exports[`Composed Welcome Mat Snapshots renders a splash welcome mat 1`] = `
   aria-labelledby="welcome-mat-13-label"
   aria-modal="true"
   className="slds-modal slds-fade-in-open slds-modal_small"
-  closeButtonDisabled={false}
   role="dialog"
   tabIndex="-1"
 >
@@ -543,7 +541,6 @@ exports[`Composed Welcome Mat Snapshots renders a trailhead welcome mat 1`] = `
   aria-labelledby="welcome-mat-7-label"
   aria-modal="true"
   className="slds-modal slds-fade-in-open slds-modal_small"
-  closeButtonDisabled={false}
   role="dialog"
   tabIndex="-1"
 >
@@ -1040,7 +1037,6 @@ exports[`Composed Welcome Mat Snapshots renders a welcome mat 1`] = `
   aria-labelledby="welcome-mat-1-label"
   aria-modal="true"
   className="slds-modal slds-fade-in-open slds-modal_small"
-  closeButtonDisabled={false}
   role="dialog"
   tabIndex="-1"
 >
@@ -1507,7 +1503,6 @@ exports[`Composed Welcome Mat Snapshots renders an info-only welcome mat 1`] = `
   aria-labelledby="welcome-mat-14-label"
   aria-modal="true"
   className="slds-modal slds-fade-in-open slds-modal_small"
-  closeButtonDisabled={false}
   role="dialog"
   tabIndex="-1"
 >

@@ -12,7 +12,6 @@ exports[`List Builder Inline Edit renders a default list builder with inline edi
   <section
     aria-modal="true"
     className="slds-modal slds-fade-in-open slds-modal_large"
-    closeButtonDisabled={false}
     role="dialog"
     tabIndex="-1"
   >
@@ -691,7 +690,6 @@ exports[`List Builder renders a default list builder 1`] = `
     aria-labelledby="id-of-modalheader-h1"
     aria-modal="true"
     className="slds-modal slds-fade-in-open slds-modal_large slds-list-builder"
-    closeButtonDisabled={false}
     role="dialog"
     tabIndex="-1"
   >
@@ -1951,7 +1949,6 @@ exports[`List Builder renders a list builder with default items disabled 1`] = `
     aria-labelledby="id-of-modalheader-h1"
     aria-modal="true"
     className="slds-modal slds-fade-in-open slds-modal_large"
-    closeButtonDisabled={false}
     role="dialog"
     tabIndex="-1"
   >
@@ -3219,7 +3216,6 @@ exports[`List Builder renders a list builder with filtered results 1`] = `
     aria-labelledby="id-of-modalheader-h1"
     aria-modal="true"
     className="slds-modal slds-fade-in-open slds-modal_large"
-    closeButtonDisabled={false}
     role="dialog"
     tabIndex="-1"
   >
@@ -3928,7 +3924,6 @@ exports[`List Builder renders a list builder with hidden header 1`] = `
     aria-labelledby="id-of-modalheader-h1"
     aria-modal="true"
     className="slds-modal slds-fade-in-open slds-modal_large"
-    closeButtonDisabled={false}
     role="dialog"
     tabIndex="-1"
   >
@@ -4725,7 +4720,6 @@ exports[`List Builder renders a list builder with items disabled 1`] = `
     aria-labelledby="id-of-modalheader-h1"
     aria-modal="true"
     className="slds-modal slds-fade-in-open slds-modal_large"
-    closeButtonDisabled={false}
     role="dialog"
     tabIndex="-1"
   >
@@ -5993,7 +5987,6 @@ exports[`List Builder renders a list builder with items selected 1`] = `
     aria-labelledby="id-of-modalheader-h1"
     aria-modal="true"
     className="slds-modal slds-fade-in-open slds-modal_large"
-    closeButtonDisabled={false}
     role="dialog"
     tabIndex="-1"
   >

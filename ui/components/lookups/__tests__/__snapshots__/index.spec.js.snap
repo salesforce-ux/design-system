@@ -12,7 +12,6 @@ exports[`Lookup - Advanced Modal renders a lookup with modal 1`] = `
   <section
     aria-modal="true"
     className="slds-modal slds-fade-in-open slds-modal_large"
-    closeButtonDisabled={false}
     role="dialog"
     tabIndex="-1"
   >

@@ -8,7 +8,6 @@ Array [
     aria-labelledby="modal-heading-unique-id-1"
     aria-modal="true"
     className="slds-modal slds-fade-in-open"
-    closeButtonDisabled={false}
     role="dialog"
     tabIndex="-1"
   >
@@ -73,7 +72,6 @@ Array [
     aria-labelledby="modal-heading-01"
     aria-modal="true"
     className="slds-modal slds-fade-in-open"
-    closeButtonDisabled={true}
     role="dialog"
     tabIndex="-1"
   >
@@ -135,7 +133,6 @@ Array [
     aria-labelledby="modal-heading-01"
     aria-modal="true"
     className="slds-modal slds-fade-in-open"
-    closeButtonDisabled={false}
     role="dialog"
     tabIndex="-1"
   >
@@ -197,7 +194,6 @@ Array [
     aria-labelledby="modal-heading-01"
     aria-modal="true"
     className="slds-modal slds-fade-in-open"
-    closeButtonDisabled={false}
     role="dialog"
     tabIndex="-1"
   >
@@ -259,7 +255,6 @@ Array [
     aria-label="Meaningful description of the modal content"
     aria-modal="true"
     className="slds-modal slds-fade-in-open"
-    closeButtonDisabled={false}
     role="dialog"
     tabIndex="-1"
   >
@@ -326,7 +321,6 @@ Array [
     aria-labelledby="modal-heading-01"
     aria-modal="true"
     className="slds-modal slds-fade-in-open"
-    closeButtonDisabled={false}
     role="dialog"
     tabIndex="-1"
   >
@@ -381,7 +375,6 @@ Array [
     aria-labelledby="modal-heading-01"
     aria-modal="true"
     className="slds-modal slds-fade-in-open"
-    closeButtonDisabled={false}
     role="dialog"
     tabIndex="-1"
   >
@@ -433,7 +426,6 @@ Array [
     aria-labelledby="modal-heading-01"
     aria-modal="true"
     className="slds-modal slds-fade-in-open"
-    closeButtonDisabled={false}
     role="dialog"
     tabIndex="-1"
   >
@@ -509,7 +501,6 @@ Array [
     aria-labelledby="modal-heading-01"
     aria-modal="true"
     className="slds-modal slds-fade-in-open slds-modal_large"
-    closeButtonDisabled={false}
     role="dialog"
     tabIndex="-1"
   >
@@ -586,7 +577,6 @@ Array [
     aria-labelledby="modal-heading-01"
     aria-modal="true"
     className="slds-modal slds-fade-in-open slds-modal_medium"
-    closeButtonDisabled={false}
     role="dialog"
     tabIndex="-1"
   >
@@ -663,7 +653,6 @@ Array [
     aria-labelledby="modal-heading-01"
     aria-modal="true"
     className="slds-modal slds-fade-in-open slds-modal_small"
-    closeButtonDisabled={false}
     role="dialog"
     tabIndex="-1"
   >
@@ -740,32 +729,12 @@ Array [
     aria-labelledby="modal-heading-01"
     aria-modal="true"
     className="slds-modal slds-fade-in-open"
-    closeButtonDisabled={true}
     role="dialog"
     tabIndex="-1"
   >
     <div
       className="slds-modal__container"
     >
-      <button
-        className="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse"
-        disabled={true}
-        onClick={[Function]}
-      >
-        <svg
-          aria-hidden={true}
-          className="slds-button__icon slds-button__icon_large"
-        >
-          <use
-            xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#close"
-          />
-        </svg>
-        <span
-          className="slds-assistive-text"
-        >
-          Cancel and close
-        </span>
-      </button>
       <div
         className="slds-modal__header"
       >
@@ -820,7 +789,6 @@ Array [
     aria-labelledby="modal-heading-01"
     aria-modal="true"
     className="slds-modal slds-fade-in-open"
-    closeButtonDisabled={false}
     role="dialog"
     tabIndex="-1"
   >

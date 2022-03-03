@@ -13,7 +13,6 @@ exports[`renders a default app launcher 1`] = `
     aria-labelledby="header43"
     aria-modal="true"
     className="slds-modal slds-fade-in-open slds-modal_large slds-app-launcher"
-    closeButtonDisabled={false}
     role="dialog"
     tabIndex="-1"
   >
@@ -778,7 +777,6 @@ exports[`renders a dropped app launcher 1`] = `
     aria-labelledby="header43"
     aria-modal="true"
     className="slds-modal slds-fade-in-open slds-modal_large slds-app-launcher"
-    closeButtonDisabled={false}
     role="dialog"
     tabIndex="-1"
   >
@@ -1543,7 +1541,6 @@ exports[`renders a grabbed app launcher 1`] = `
     aria-labelledby="header43"
     aria-modal="true"
     className="slds-modal slds-fade-in-open slds-modal_large slds-app-launcher"
-    closeButtonDisabled={false}
     role="dialog"
     tabIndex="-1"
   >
@@ -2308,7 +2305,6 @@ exports[`renders a moved app launcher 1`] = `
     aria-labelledby="header43"
     aria-modal="true"
     className="slds-modal slds-fade-in-open slds-modal_large slds-app-launcher"
-    closeButtonDisabled={false}
     role="dialog"
     tabIndex="-1"
   >
@@ -3073,7 +3069,6 @@ exports[`renders a search app launcher 1`] = `
     aria-labelledby="header43"
     aria-modal="true"
     className="slds-modal slds-fade-in-open slds-modal_large slds-app-launcher"
-    closeButtonDisabled={false}
     role="dialog"
     tabIndex="-1"
   >

@@ -27,15 +27,15 @@ export let Modal = (props) => (
   <section
     role="dialog"
     tabIndex={props.tabIndex}
-    {...props}
     aria-modal="true"
+    aria-label={props['aria-label']}
     aria-labelledby={props['aria-labelledby']}
     aria-describedby={props['aria-describedby']}
     className={classNames('slds-modal slds-fade-in-open', props.className)}
   >
     <div className="slds-modal__container">
       {
-        props.closeButton !== 'false' ? (
+        props.closeButton !== false ? (
           <ButtonIcon
             className="slds-modal__close slds-button_icon-inverse"
             iconClassName="slds-button__icon_large"
@@ -67,7 +67,7 @@ export let ModalHeader = (props) => (
 
 export let ModalHeaderDeprecated = (props) => (
   <div className={classNames('slds-modal__header', props.className)}>
-    {props.closeButton !== 'false' ? (
+    {props.closeButton !== false ? (
       <ButtonIcon
         className="slds-modal__close slds-button_icon-inverse"
         iconClassName="slds-button__icon_large"
@@ -268,11 +268,11 @@ export let Footless = (props) => (
   <Backdrop>
     <Modal aria-labelledby="modal-heading-01">
       <ModalHeader>
-        <h1 id="modal-heading-01" className="slds-modal__title slds-hyphenate" tabindex="-1">
+        <h1 id="modal-heading-01" className="slds-modal__title slds-hyphenate">
           Modal header
         </h1>
       </ModalHeader>
-      <ModalContent className="slds-p-around_medium slds-modal__content_footless">
+      <ModalContent className="slds-p-around_medium">
         <p>
           Sit nulla est ex deserunt exercitation anim occaecat. Nostrud ullamco
           deserunt aute id consequat veniam incididunt duis in sint irure nisi.
@@ -448,7 +448,7 @@ export let DisabledClose = (props) => (
 
 export let DeprecatedClose = (props) => (
   <Backdrop>
-    <Modal aria-labelledby="modal-heading-01" closeButtonDisabled>
+    <Modal aria-labelledby="modal-heading-01" closeButton={false}>
       <ModalHeaderDeprecated>
         <h1 id="modal-heading-01" className="slds-modal__title slds-hyphenate">
           Modal header

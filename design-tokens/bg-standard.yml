@@ -921,3 +921,9 @@ props:
     value: '#7E8BE4'
   WORKFORCE_ENGAGEMENT:
     value: '#9D3856'
+  SLACK:
+    value: '#4A154B'
+  TABLEAU:
+    value: '#0F1E3C'
+  DASHBOARD_COMPONENT:
+    value: '#7E8BE4'

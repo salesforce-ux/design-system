@@ -4,6 +4,18 @@
 ## Release 2.18.0 - Upcoming
 
 - Removed `&_` shorthand from numerous selectors in SCSS files
+- Updated icons to v10.3.0
+  - Standard Set:
+    - Added `slack`
+    - Added `tableau`
+    - Added `dashboard_component`
+  - Utility Set:
+    - Updated `serialized_product_transaction`
+    - Updated `serialized_product`
+    - Added `data_model`
+    - Added `slack`
+    - Added `tableau`
+    - Added `video_off`
 
 ## Components
 ### [Button Icons](https://www.lightningdesignsystem.com/components/button-icons)

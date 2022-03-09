@@ -192,10 +192,10 @@
 - Added CSS Custom Property reassignments for variants and states
 
 ### [Input](https://www.lightningdesignsystem.com/components/input)
-## Added
+#### Added
 - Added `slds` as the default namespace with `sds` fallbacks for Styling Hooks.
 - Added reassignment of Styling Hooks for component states.
-## Changed
+#### Changed
 - `.slds-input_borders` now follows the prescribed usage guidelines and is only allowed on `readonly` Inputs.
 
 ### [Modals](https://www.lightningdesignsystem.com/components/modals)
@@ -217,7 +217,7 @@
 - Deprecated older styles for previous markup of the `slds-modal__close` button.
 
 ### [Pills](https://www.lightningdesignsystem.com/components/pills)
-## Added
+#### Added
 - Added `slds` as the default namespace with `sds` fallbacks for Styling Hooks.
 - Added reassignment of Styling Hooks for component states.
 
@@ -264,7 +264,7 @@
 - Added `slds` as the default namespace with `sds` fallbacks for Styling Hooks.
 
 ### [Trees](https://www.lightningdesignsystem.com/components/trees)
-## Added
+#### Added
 - Added `slds` as the default namespace with `sds` fallbacks for Styling Hooks.
 
 ## Release 2.16.2 - September 22, 2021
@@ -275,7 +275,7 @@
 - Removed `display: flex` property from `.slds-combobox__form-element` which was added recently for ARIA 1.2 guidance.
 
 ### [Input](https://www.lightningdesignsystem.com/components/input)
-## Removed
+#### Removed
 - Removed `width` property from `.slds-input_faux` which was added recently for ARIA 1.2 guidance.
 
 ## Release 2.16.1 - August 25, 2021
@@ -484,7 +484,7 @@
 - Changed `flex-basis` to `auto` for the drop zone label to fix a layout issue in IE11
 
 ### [Dueling Picklist](https://www.lightningdesignsystem.com/components/dueling-picklist)
-## Added
+#### Added
 - Responsive variant now grows to use up the available horizontal space.
 
 ### [Expandable Section](https://www.lightningdesignsystem.com/components/expandable-section)

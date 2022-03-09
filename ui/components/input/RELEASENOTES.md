@@ -6,18 +6,18 @@
 
 ## 2.17.0
 
-## Added
+### Added
 
 - Added `slds` as the default namespace with `sds` fallbacks for Styling Hooks.
 - Added reassignment of Styling Hooks for component states.
 
-## Changed
+### Changed
 
 - `.slds-input_borders` now follows the prescribed usage guidelines and is only allowed on `readonly` Inputs.
 
 ## 2.16.2
 
-## Removed
+### Removed
 
 - Removed `width` property from `.slds-input_faux` which was added recently for ARIA 1.2 guidance.
 

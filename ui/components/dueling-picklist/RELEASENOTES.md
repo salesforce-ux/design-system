@@ -6,7 +6,7 @@
 
 ## 2.15.0
 
-## Added
+### Added
 
 - Responsive variant now grows to use up the available horizontal space.
 

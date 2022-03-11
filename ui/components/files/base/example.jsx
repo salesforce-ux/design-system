@@ -4,18 +4,24 @@
 import React from 'react';
 import { File, AttachmentLink } from '../';
 
-export default (
-  <div style={{ width: '20rem' }}>
-    <File
-      isCard
-      hasCrop
-      hasTitleCard
-      symbol="pdf"
-      title="Proposal.pdf"
-      hasImage
-    />
-  </div>
-);
+export default [
+  {
+    id: 'default',
+    label: 'Default',
+    element: (
+      <div style={{ width: '20rem' }}>
+        <File
+          isCard
+          hasCrop
+          hasTitleCard
+          symbol="pdf"
+          title="Proposal.pdf"
+          hasImage
+        />
+      </div>
+    )
+  }
+];
 
 export let examples = [
   {

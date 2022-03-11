@@ -54,11 +54,17 @@ export let Spinner = props => (
 // Export
 /// ///////////////////////////////////////////
 
-export default (
-  <Demo className="demo-only_viewport">
-    <Spinner className="slds-spinner_medium" />
-  </Demo>
-);
+export default [
+  {
+    id: 'default',
+    label: 'Default',
+    element: (
+      <Demo className="demo-only_viewport">
+        <Spinner className="slds-spinner_medium" />
+      </Demo>
+    )
+  }
+];
 
 export let examples = [
   {

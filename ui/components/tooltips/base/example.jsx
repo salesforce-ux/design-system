@@ -53,22 +53,28 @@ Tooltip.propTypes = {
   style: PropTypes.object
 };
 
-export default (
-  <div
-    style={{ paddingLeft: '2rem', paddingTop: '5rem', position: 'relative' }}
-  >
-    <Button aria-describedby="help" aria-disabled="true">
-      Help Text
-    </Button>
-    <Tooltip
-      className="slds-nubbin_bottom-left"
-      id="help"
-      style={{ position: 'absolute', top: '-4px', left: '35px' }}
-    >
-      {tooltipContent}
-    </Tooltip>
-  </div>
-);
+export default [
+  {
+    id: 'default',
+    label: 'Default',
+    element: (
+      <div
+        style={{ paddingLeft: '2rem', paddingTop: '5rem', position: 'relative' }}
+      >
+        <Button aria-describedby="help" aria-disabled="true">
+          Help Text
+        </Button>
+        <Tooltip
+          className="slds-nubbin_bottom-left"
+          id="help"
+          style={{ position: 'absolute', top: '-4px', left: '35px' }}
+        >
+          {tooltipContent}
+        </Tooltip>
+      </div>
+    )
+  }
+];
 
 export let examples = [
   {

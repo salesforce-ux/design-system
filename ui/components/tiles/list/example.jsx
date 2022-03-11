@@ -11,31 +11,37 @@ const icon = (
   </span>
 );
 
-export default (
-  <ul className="slds-has-dividers_bottom-space">
-    <li className="slds-item">
-      <TileMedia title="SLDS_038.zip" media={icon}>
-        <ul className="slds-list_horizontal slds-has-dividers_right">
-          <li className="slds-item">May 9th, 2015</li>
-          <li className="slds-item">3.6mb</li>
-        </ul>
-      </TileMedia>
-    </li>
-    <li className="slds-item">
-      <TileMedia title="SLDS_038.zip" media={icon}>
-        <ul className="slds-list_horizontal slds-has-dividers_right">
-          <li className="slds-item">May 9th, 2015</li>
-          <li className="slds-item">3.6mb</li>
-        </ul>
-      </TileMedia>
-    </li>
-    <li className="slds-item">
-      <TileMedia title="SLDS_038.zip" media={icon}>
-        <ul className="slds-list_horizontal slds-has-dividers_right">
-          <li className="slds-item">May 9th, 2015</li>
-          <li className="slds-item">3.6mb</li>
-        </ul>
-      </TileMedia>
-    </li>
-  </ul>
-);
+export default [
+  {
+    id: 'default',
+    label: 'Default',
+    element: (
+      <ul className="slds-has-dividers_bottom-space">
+        <li className="slds-item">
+          <TileMedia title="SLDS_038.zip" media={icon}>
+            <ul className="slds-list_horizontal slds-has-dividers_right">
+              <li className="slds-item">May 9th, 2015</li>
+              <li className="slds-item">3.6mb</li>
+            </ul>
+          </TileMedia>
+        </li>
+        <li className="slds-item">
+          <TileMedia title="SLDS_038.zip" media={icon}>
+            <ul className="slds-list_horizontal slds-has-dividers_right">
+              <li className="slds-item">May 9th, 2015</li>
+              <li className="slds-item">3.6mb</li>
+            </ul>
+          </TileMedia>
+        </li>
+        <li className="slds-item">
+          <TileMedia title="SLDS_038.zip" media={icon}>
+            <ul className="slds-list_horizontal slds-has-dividers_right">
+              <li className="slds-item">May 9th, 2015</li>
+              <li className="slds-item">3.6mb</li>
+            </ul>
+          </TileMedia>
+        </li>
+      </ul>
+    )
+  }
+];

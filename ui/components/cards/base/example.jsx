@@ -264,20 +264,26 @@ export const WrappedCards = props => (
   </div>
 );
 
-export default (
-  <Card>
-    <CardHeader
-      title="Accounts"
-      href
-      symbol="account"
-      action={<button className="slds-button slds-button_neutral">New</button>}
-    />
-    <CardBody hasPadding>Anything can go into the card body</CardBody>
-    <CardFooter>
-      View All <span className="slds-assistive-text">Accounts</span>
-    </CardFooter>
-  </Card>
-);
+export default [
+  {
+    id: 'default',
+    label: 'Default',
+    element: (
+      <Card>
+        <CardHeader
+          title="Accounts"
+          href
+          symbol="account"
+          action={<button className="slds-button slds-button_neutral">New</button>}
+        />
+        <CardBody hasPadding>Anything can go into the card body</CardBody>
+        <CardFooter>
+          View All <span className="slds-assistive-text">Accounts</span>
+        </CardFooter>
+      </Card>
+    )
+  }
+];
 
 export let states = [
   {

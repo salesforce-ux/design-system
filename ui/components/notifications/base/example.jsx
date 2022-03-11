@@ -76,24 +76,30 @@ let Notification = props => {
 // Export
 /// ///////////////////////////////////////////
 
-export default (
-  <div className="demo-only demo-only_viewport" style={{ height: '4.5rem' }}>
-    <NotificationContainer>
-      <div
-        aria-live="assertive"
-        aria-atomic="true"
-        className="slds-assistive-text"
-      >
-        event notification: Tesla - Renewal meeting
+export default [
+  {
+    id: 'default',
+    label: 'Default',
+    element: (
+      <div className="demo-only demo-only_viewport" style={{ height: '4.5rem' }}>
+        <NotificationContainer>
+          <div
+            aria-live="assertive"
+            aria-atomic="true"
+            className="slds-assistive-text"
+          >
+            event notification: Tesla - Renewal meeting
+          </div>
+          <Notification
+            type="event"
+            title="Tesla - Renewal meeting"
+            description="Event at 11:00am on Jan 8"
+          />
+        </NotificationContainer>
       </div>
-      <Notification
-        type="event"
-        title="Tesla - Renewal meeting"
-        description="Event at 11:00am on Jan 8"
-      />
-    </NotificationContainer>
-  </div>
-);
+    )
+  }
+];
 
 export let examples = [
   {

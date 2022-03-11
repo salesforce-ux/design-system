@@ -5,17 +5,23 @@ import React from 'react';
 import { ColorPickerSwatches } from '../';
 import { Trigger } from '../../menus/dropdown/example';
 
-export default (
-  <Trigger>
-    <div className="slds-dropdown slds-dropdown_left">
-      <div className="slds-color-picker slds-color-picker_swatches-only">
-        <div className="slds-color-picker__selector">
-          <ColorPickerSwatches isMenuRole />
+export default [
+  {
+    id: 'default',
+    label: 'Default',
+    element: (
+      <Trigger>
+        <div className="slds-dropdown slds-dropdown_left">
+          <div className="slds-color-picker slds-color-picker_swatches-only">
+            <div className="slds-color-picker__selector">
+              <ColorPickerSwatches isMenuRole />
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-  </Trigger>
-);
+      </Trigger>
+    )
+  }
+];
 
 export const states = [
   {

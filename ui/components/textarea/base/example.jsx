@@ -40,11 +40,17 @@ Textarea.defaultProps = {
 // Export
 /// ///////////////////////////////////////////
 
-export default (
-  <FormElement labelContent={textareaLabel} inputId={textareaId}>
-    <Textarea id={textareaId} />
-  </FormElement>
-);
+export default [
+  {
+    id: 'default',
+    label: 'Default',
+    element: (
+      <FormElement labelContent={textareaLabel} inputId={textareaId}>
+        <Textarea id={textareaId} />
+      </FormElement>
+    )
+  }
+];
 
 export let states = [
   {

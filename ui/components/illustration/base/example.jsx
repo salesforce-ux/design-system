@@ -90,15 +90,21 @@ export const IllustrationCTA = props => (
   </article>
 );
 
-export default (
-  <Illustration>
-    <FishingDeals />
-    <IllustrationText
-      heading="Lorem ipsum dolor"
-      message="Lorem ipsum dolor sit amet, consectetur"
-    />
-  </Illustration>
-);
+export default [
+  {
+    id: 'default',
+    label: 'Default',
+    element: (
+      <Illustration>
+        <FishingDeals />
+        <IllustrationText
+          heading="Lorem ipsum dolor"
+          message="Lorem ipsum dolor sit amet, consectetur"
+        />
+      </Illustration>
+    )
+  }
+];
 
 export let states = [
   {

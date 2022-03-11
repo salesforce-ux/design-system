@@ -20,11 +20,17 @@ export const ContextInversed = props => (
   </div>
 );
 
-export default (
-  <AvatarGroup>
-    <AvatarGroupContent type="image" />
-  </AvatarGroup>
-);
+export default [
+  {
+    id: 'default',
+    label: 'Default',
+    element: (
+      <AvatarGroup>
+        <AvatarGroupContent type="image" />
+      </AvatarGroup>
+    )
+  }
+];
 
 export const examples = [
   {

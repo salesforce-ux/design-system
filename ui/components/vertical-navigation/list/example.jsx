@@ -163,24 +163,30 @@ NavVerticalSection.propTypes = {
 // Export
 /// ////////////////////////////////////////
 
-export default (
-  <div className="demo-only" style={{ width: '320px' }}>
-    <NavVertical>
-      <NavVerticalSection headerId={sectionId01} title="Reports">
-        <NavVerticalItem active>Recent</NavVerticalItem>
-        <NavVerticalItem>Created by Me</NavVerticalItem>
-        <NavVerticalItem>Private Reports</NavVerticalItem>
-        <NavVerticalItem>Public Reports</NavVerticalItem>
-        <NavVerticalItem>All Reports</NavVerticalItem>
-      </NavVerticalSection>
-      <NavVerticalSection headerId={sectionId02} title="Folders">
-        <NavVerticalItem>Created by Me</NavVerticalItem>
-        <NavVerticalItem>Shared with Me</NavVerticalItem>
-        <NavVerticalItem>All Reports</NavVerticalItem>
-      </NavVerticalSection>
-    </NavVertical>
-  </div>
-);
+export default [
+  {
+    id: 'default',
+    label: 'Default',
+    element: (
+      <div className="demo-only" style={{ width: '320px' }}>
+        <NavVertical>
+          <NavVerticalSection headerId={sectionId01} title="Reports">
+            <NavVerticalItem active>Recent</NavVerticalItem>
+            <NavVerticalItem>Created by Me</NavVerticalItem>
+            <NavVerticalItem>Private Reports</NavVerticalItem>
+            <NavVerticalItem>Public Reports</NavVerticalItem>
+            <NavVerticalItem>All Reports</NavVerticalItem>
+          </NavVerticalSection>
+          <NavVerticalSection headerId={sectionId02} title="Folders">
+            <NavVerticalItem>Created by Me</NavVerticalItem>
+            <NavVerticalItem>Shared with Me</NavVerticalItem>
+            <NavVerticalItem>All Reports</NavVerticalItem>
+          </NavVerticalSection>
+        </NavVertical>
+      </div>
+    )
+  }
+];
 
 export let states = [
   {

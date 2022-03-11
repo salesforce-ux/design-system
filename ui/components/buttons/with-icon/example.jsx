@@ -5,16 +5,22 @@ import React from 'react';
 import SvgIcon from '../../../shared/svg-icon';
 import { Button } from '../base/example';
 
-export default (
-  <Button isNeutral>
-    <SvgIcon
-      className="slds-button__icon slds-button__icon_left"
-      sprite="utility"
-      symbol="download"
-    />
-    Button Neutral
-  </Button>
-);
+export default [
+  {
+    id: 'default',
+    label: 'Default',
+    element: (
+      <Button isNeutral>
+        <SvgIcon
+          className="slds-button__icon slds-button__icon_left"
+          sprite="utility"
+          symbol="download"
+        />
+        Button Neutral
+      </Button>
+    )
+  }
+];
 
 export let states = [
   {

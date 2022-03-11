@@ -59,9 +59,15 @@ Let's prep our HTML for output.
 
 import React from 'react';
 
-export default (
-    // HTML goes here...
-);
+export default [
+  {
+    id: 'default',
+    label: 'Default',
+    element: (
+      // HTML goes here...
+    )
+  }
+];
 ```
 
 ### Step 4:

@@ -133,11 +133,17 @@ DropZoneLabel.propTypes = {
   headerText: PropTypes.string
 };
 
-export default (
-  <DropZone>
-    <DemoComponent />
-  </DropZone>
-);
+export default [
+  {
+    id: 'default',
+    label: 'Default',
+    element: (
+      <DropZone>
+        <DemoComponent />
+      </DropZone>
+    )
+  }
+];
 
 export let examples = [
   {

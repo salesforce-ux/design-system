@@ -77,10 +77,10 @@ export const VisualPicker = ({
                 <SvgIcon
                   className={classNames(
                     'slds-icon slds-icon-' +
-                      sprite +
-                      '-' +
-                      symbol +
-                      ' slds-icon_large',
+                    sprite +
+                    '-' +
+                    symbol +
+                    ' slds-icon_large',
                     { 'slds-icon-text-default': sprite === 'utility' }
                   )}
                   sprite={sprite || 'action'}
@@ -162,25 +162,31 @@ VisualPickerContainer.defaultProps = {
 // Export
 /// ////////////////////////////////////////
 
-export default (
-  <Fieldset>
-    <Legend>Select an app</Legend>
-    <FormElementControl>
-      <VisualPickerContainer>
-        <VisualPicker
-          symbol="connected_apps"
-          label={<Option label="Connected App" />}
-          size="medium"
-        />
-        <VisualPicker
-          symbol="custom_apps"
-          label={<Option label="Custom App" />}
-          size="medium"
-        />
-      </VisualPickerContainer>
-    </FormElementControl>
-  </Fieldset>
-);
+export default [
+  {
+    id: 'default',
+    label: 'Default',
+    element: (
+      <Fieldset>
+        <Legend>Select an app</Legend>
+        <FormElementControl>
+          <VisualPickerContainer>
+            <VisualPicker
+              symbol="connected_apps"
+              label={<Option label="Connected App" />}
+              size="medium"
+            />
+            <VisualPicker
+              symbol="custom_apps"
+              label={<Option label="Custom App" />}
+              size="medium"
+            />
+          </VisualPickerContainer>
+        </FormElementControl>
+      </Fieldset>
+    )
+  }
+];
 
 export let states = [
   {

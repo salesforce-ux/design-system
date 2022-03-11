@@ -48,11 +48,18 @@ export const Slider = props => (
 ----------------------------------------------------------------------------- */
 
 // Default
-export default (
-  <FormElement labelContent={<SliderLabel />} inputId={sliderId}>
-    <Slider value="50" />
-  </FormElement>
-);
+
+export default [
+  {
+    id: 'default',
+    label: 'Default',
+    element: (
+      <FormElement labelContent={<SliderLabel />} inputId={sliderId}>
+        <Slider value="50" />
+      </FormElement>
+    )
+  }
+];
 
 // States
 export let states = [

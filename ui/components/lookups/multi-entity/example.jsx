@@ -20,43 +20,50 @@ export const Context = props => (
 );
 
 // Default
-export default (
-  <ComboboxGroup
-    id="combobox-id-1"
-    aria-controls="listbox-id-1"
-    comboboxID="primary-combobox-id-1"
-    autocomplete
-    results={
-      <Listbox
-        id="listbox-id-1"
-        snapshot={Snapshot.EntityOptions}
-        type="entity"
-        count={4}
-      />
-    }
-    resultsType="listbox"
-    addon={
-      <ObjectSwitcher
-        id={_.uniqueId('combobox-id-')}
-        value="Accounts"
+
+export default [
+  {
+    id: 'default',
+    label: 'Default',
+    element: (
+      <ComboboxGroup
+        id="combobox-id-1"
+        aria-controls="listbox-id-1"
+        comboboxID="primary-combobox-id-1"
+        autocomplete
+        results={
+          <Listbox
+            id="listbox-id-1"
+            snapshot={Snapshot.EntityOptions}
+            type="entity"
+            count={4}
+          />
+        }
+        resultsType="listbox"
+        addon={
+          <ObjectSwitcher
+            id={_.uniqueId('combobox-id-')}
+            value="Accounts"
+            addonPosition="start"
+            hasInteractions
+            comboboxAriaControls="primary-combobox-id-1"
+          />
+        }
         addonPosition="start"
+        comboboxPosition="end"
+        inputIconPosition="right"
+        rightInputIcon={
+          <UtilityIcon
+            symbol="search"
+            className="slds-icon slds-icon_x-small slds-icon-text-default"
+            containerClassName="slds-input__icon slds-input__icon_right"
+          />
+        }
         hasInteractions
-        comboboxAriaControls="primary-combobox-id-1"
       />
-    }
-    addonPosition="start"
-    comboboxPosition="end"
-    inputIconPosition="right"
-    rightInputIcon={
-      <UtilityIcon
-        symbol="search"
-        className="slds-icon slds-icon_x-small slds-icon-text-default"
-        containerClassName="slds-input__icon slds-input__icon_right"
-      />
-    }
-    hasInteractions
-  />
-);
+    )
+  }
+];
 
 // States
 export let states = [

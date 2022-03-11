@@ -34,19 +34,25 @@ ButtonGroupListItem.propTypes = {
 // Export
 /// ////////////////////////////////////////
 
-export default (
-  <ButtonGroupList>
-    <ButtonGroupListItem>
-      <Button isNeutral>Refresh</Button>
-    </ButtonGroupListItem>
-    <ButtonGroupListItem>
-      <Button isNeutral>Edit</Button>
-    </ButtonGroupListItem>
-    <ButtonGroupListItem>
-      <Button isNeutral>Save</Button>
-    </ButtonGroupListItem>
-  </ButtonGroupList>
-);
+export default [
+  {
+    id: 'default',
+    label: 'Default',
+    element: (
+      <ButtonGroupList>
+        <ButtonGroupListItem>
+          <Button isNeutral>Refresh</Button>
+        </ButtonGroupListItem>
+        <ButtonGroupListItem>
+          <Button isNeutral>Edit</Button>
+        </ButtonGroupListItem>
+        <ButtonGroupListItem>
+          <Button isNeutral>Save</Button>
+        </ButtonGroupListItem>
+      </ButtonGroupList>
+    )
+  }
+];
 
 export let states = [
   {

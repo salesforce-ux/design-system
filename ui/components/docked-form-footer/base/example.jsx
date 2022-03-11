@@ -15,16 +15,22 @@ export const Context = props => (
   </div>
 );
 
-export default (
-  <div className="slds-docked-form-footer">
-    <button type="button" className="slds-button slds-button_neutral">
-      Cancel
-    </button>
-    <button type="button" className="slds-button slds-button_brand">
-      Save
-    </button>
-  </div>
-);
+export default [
+  {
+    id: 'default',
+    label: 'Default',
+    element: (
+      <div className="slds-docked-form-footer">
+        <button type="button" className="slds-button slds-button_neutral">
+          Cancel
+        </button>
+        <button type="button" className="slds-button slds-button_brand">
+          Save
+        </button>
+      </div>
+    )
+  }
+];
 
 export let states = [
   {

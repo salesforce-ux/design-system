@@ -4,8 +4,14 @@
 import React from 'react';
 import { Expression, ExpressionRow } from '../';
 
-export default (
-  <Expression hasCustomLogic customLogicValue="1 OR 2" legendText="1">
-    <ExpressionRow legendText="2" conditionName="Condition 2" />
-  </Expression>
-);
+export default [
+  {
+    id: 'default',
+    label: 'Default',
+    element: (
+      <Expression hasCustomLogic customLogicValue="1 OR 2" legendText="1">
+        <ExpressionRow legendText="2" conditionName="Condition 2" />
+      </Expression>
+    )
+  }
+];

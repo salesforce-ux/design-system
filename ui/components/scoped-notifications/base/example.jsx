@@ -75,16 +75,22 @@ ScopedNotificationThemed.propTypes = {
 // Export
 /// ///////////////////////////////////////////
 
-export default (
-  <ScopedNotificationThemed theme="light">
-    <p>
-      It looks as if duplicates exist for this lead.{' '}
-      <a href="#" onClick={e => e.preventDefault()}>
-        View Duplicates
-      </a>
-    </p>
-  </ScopedNotificationThemed>
-);
+export default [
+  {
+    id: 'default',
+    label: 'Default',
+    element: (
+      <ScopedNotificationThemed theme="light">
+        <p>
+          It looks as if duplicates exist for this lead.{' '}
+          <a href="#" onClick={e => e.preventDefault()}>
+            View Duplicates
+          </a>
+        </p>
+      </ScopedNotificationThemed>
+    )
+  }
+];
 
 export let examples = [
   {

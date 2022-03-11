@@ -16,55 +16,61 @@ export const Context = props => (
   </div>
 );
 
-export default (
-  <GlobalHeader
-    globalSearch={
-      <ComboboxGroup
-        id={_.uniqueId('combobox-id-')}
-        aria-controls="search-listbox-id-1"
-        comboboxID="primary-search-combobox-id-1"
-        autocomplete
-        inputContainerClassName="slds-global-search__form-element"
-        label="Search Salesforce"
-        hideLabel
-        placeholder="Search Salesforce"
-        results={
-          <Listbox
-            id="search-listbox-id-1"
-            aria-label="Recent Items"
-            snapshot={Snapshot.SearchResults}
-            type="entity"
-            count={6}
-          />
-        }
-        resultsType="listbox"
-        addon={
-          <ObjectSwitcher
-            id={_.uniqueId('objectswitcher-combobox-id-')}
-            value="Accounts"
+export default [
+  {
+    id: 'default',
+    label: 'Default',
+    element: (
+      <GlobalHeader
+        globalSearch={
+          <ComboboxGroup
+            id={_.uniqueId('combobox-id-')}
+            aria-controls="search-listbox-id-1"
+            comboboxID="primary-search-combobox-id-1"
+            autocomplete
+            inputContainerClassName="slds-global-search__form-element"
+            label="Search Salesforce"
+            hideLabel
+            placeholder="Search Salesforce"
+            results={
+              <Listbox
+                id="search-listbox-id-1"
+                aria-label="Recent Items"
+                snapshot={Snapshot.SearchResults}
+                type="entity"
+                count={6}
+              />
+            }
+            resultsType="listbox"
+            addon={
+              <ObjectSwitcher
+                id={_.uniqueId('objectswitcher-combobox-id-')}
+                value="Accounts"
+                addonPosition="start"
+                hasInteractions
+                comboboxAriaControls="primary-search-combobox-id-1"
+                listboxId={_.uniqueId('objectswitcher-listbox-id-')}
+              />
+            }
             addonPosition="start"
+            comboboxPosition="end"
+            inputIconPosition="left"
+            leftInputIcon={
+              <UtilityIcon
+                symbol="search"
+                className="slds-icon slds-icon_xx-small slds-icon-text-default"
+                containerClassName="slds-input__icon slds-input__icon_left"
+                title={false}
+                assistiveText={false}
+              />
+            }
             hasInteractions
-            comboboxAriaControls="primary-search-combobox-id-1"
-            listboxId={_.uniqueId('objectswitcher-listbox-id-')}
           />
         }
-        addonPosition="start"
-        comboboxPosition="end"
-        inputIconPosition="left"
-        leftInputIcon={
-          <UtilityIcon
-            symbol="search"
-            className="slds-icon slds-icon_xx-small slds-icon-text-default"
-            containerClassName="slds-input__icon slds-input__icon_left"
-            title={false}
-            assistiveText={false}
-          />
-        }
-        hasInteractions
       />
-    }
-  />
-);
+    )
+  }
+];
 
 export let states = [
   {

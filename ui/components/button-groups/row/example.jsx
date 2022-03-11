@@ -23,19 +23,25 @@ ButtonGroupItem.propTypes = {
   children: PropTypes.node
 };
 
-export default (
-  <ButtonGroupRow>
-    <ButtonGroupItem>
-      <Button isNeutral>Refresh</Button>
-    </ButtonGroupItem>
-    <ButtonGroupItem>
-      <Button isNeutral>Edit</Button>
-    </ButtonGroupItem>
-    <ButtonGroupItem>
-      <Button isBrand>Save</Button>
-    </ButtonGroupItem>
-  </ButtonGroupRow>
-);
+export default [
+  {
+    id: 'default',
+    label: 'Default',
+    element: (
+      <ButtonGroupRow>
+        <ButtonGroupItem>
+          <Button isNeutral>Refresh</Button>
+        </ButtonGroupItem>
+        <ButtonGroupItem>
+          <Button isNeutral>Edit</Button>
+        </ButtonGroupItem>
+        <ButtonGroupItem>
+          <Button isBrand>Save</Button>
+        </ButtonGroupItem>
+      </ButtonGroupRow>
+    )
+  }
+];
 
 export let examples = [
   {

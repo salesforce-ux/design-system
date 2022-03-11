@@ -10,12 +10,18 @@ export const Context = props => (
   </div>
 );
 
-export default (
-  <MapContainer
-    heading="Salesforce locations in United States (9)"
-    multipleCoordinates
-  />
-);
+export default [
+  {
+    id: 'default',
+    label: 'Default',
+    element: (
+      <MapContainer
+        heading="Salesforce locations in United States (9)"
+        multipleCoordinates
+      />
+    )
+  }
+];
 
 export let states = [
   {

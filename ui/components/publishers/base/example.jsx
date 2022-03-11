@@ -55,11 +55,17 @@ let PublisherActions = props => (
 // Export
 /// ////////////////////////////////////////
 
-export default (
-  <Publisher>
-    <PublisherActions />
-  </Publisher>
-);
+export default [
+  {
+    id: 'default',
+    label: 'Default',
+    element: (
+      <Publisher>
+        <PublisherActions />
+      </Publisher>
+    )
+  }
+];
 
 export const examples = [
   {

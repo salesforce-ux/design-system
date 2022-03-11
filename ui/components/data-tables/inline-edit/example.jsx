@@ -93,34 +93,40 @@ export const InlineEditTableFocusedCell = () => (
 // Export
 /// ///////////////////////////////////////////
 
-export default (
-  <Container>
-    <Table
-      hasNoCellFocus
-      isBordered
-      isEditable
-      isFixedLayout
-      isResizable
-      selectionType="multiple"
-      style={{ width: '66.75rem' }}
-      type="advanced"
-      ariaLabel="Example default inline edit table with cell focused"
-    >
-      <Thead columns={columns} hasErrorColumn mainColumnWidth="8.75rem" />
-      <TBody>
-        {rows.map((row, i) => (
-          <InlineEditTr
-            focusableCell="recordName"
-            index={i + 1}
-            isSelected={false}
-            key={i}
-            {...row}
-          />
-        ))}
-      </TBody>
-    </Table>
-  </Container>
-);
+export default [
+  {
+    id: 'default',
+    label: 'Default',
+    element: (
+      <Container>
+        <Table
+          hasNoCellFocus
+          isBordered
+          isEditable
+          isFixedLayout
+          isResizable
+          selectionType="multiple"
+          style={{ width: '66.75rem' }}
+          type="advanced"
+          ariaLabel="Example default inline edit table with cell focused"
+        >
+          <Thead columns={columns} hasErrorColumn mainColumnWidth="8.75rem" />
+          <TBody>
+            {rows.map((row, i) => (
+              <InlineEditTr
+                focusableCell="recordName"
+                index={i + 1}
+                isSelected={false}
+                key={i}
+                {...row}
+              />
+            ))}
+          </TBody>
+        </Table>
+      </Container>
+    )
+  }
+];
 
 export let states = [
   {

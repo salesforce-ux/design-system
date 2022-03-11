@@ -86,17 +86,23 @@ export let Step = props => {
 // Export
 /// ///////////////////////////////////////////
 
-export default (
-  <div className="demo-only" style={{ padding: '1rem', height: '350px' }}>
-    <Progress>
-      <Step active>Step 1</Step>
-      <Step>Step 2</Step>
-      <Step>Step 3</Step>
-      <Step>Step 4</Step>
-      <Step>Step 5</Step>
-    </Progress>
-  </div>
-);
+export default [
+  {
+    id: 'default',
+    label: 'Default',
+    element: (
+      <div className="demo-only" style={{ padding: '1rem', height: '350px' }}>
+        <Progress>
+          <Step active>Step 1</Step>
+          <Step>Step 2</Step>
+          <Step>Step 3</Step>
+          <Step>Step 4</Step>
+          <Step>Step 5</Step>
+        </Progress>
+      </div>
+    )
+  }
+];
 
 export let states = [
   {

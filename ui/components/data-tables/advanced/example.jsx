@@ -144,28 +144,34 @@ const columnHeaderIcons = [
 // Export
 /// ///////////////////////////////////////////
 
-export default (
-  <Table
-    isBordered
-    isFixedLayout
-    isResizable
-    selectionType="multiple"
-    type="advanced"
-    ariaLabel="Example default advanced table of Opportunities"
-  >
-    <Thead columns={columns} />
-    <TBody>
-      {rows.map((row, i) => (
-        <AdvancedDataTableTr
-          isSelected={false}
-          key={i}
-          index={i + 1}
-          {...row}
-        />
-      ))}
-    </TBody>
-  </Table>
-);
+export default [
+  {
+    id: 'default',
+    label: 'Default',
+    element: (
+      <Table
+        isBordered
+        isFixedLayout
+        isResizable
+        selectionType="multiple"
+        type="advanced"
+        ariaLabel="Example default advanced table of Opportunities"
+      >
+        <Thead columns={columns} />
+        <TBody>
+          {rows.map((row, i) => (
+            <AdvancedDataTableTr
+              isSelected={false}
+              key={i}
+              index={i + 1}
+              {...row}
+            />
+          ))}
+        </TBody>
+      </Table>
+    )
+  }
+];
 
 export let states = [
   {

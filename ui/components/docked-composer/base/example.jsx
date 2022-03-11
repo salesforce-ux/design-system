@@ -254,15 +254,21 @@ export const Context = props => (
   </div>
 );
 
-export default (
-  <div className="slds-docked_container">
-    <DockedComposerPanel className="slds-is-open" footer={<Footer />}>
-      <div className="slds-align_absolute-center">
-        Docked Composer Panel Body <br /> This area consumes the feature
+export default [
+  {
+    id: 'default',
+    label: 'Default',
+    element: (
+      <div className="slds-docked_container">
+        <DockedComposerPanel className="slds-is-open" footer={<Footer />}>
+          <div className="slds-align_absolute-center">
+            Docked Composer Panel Body <br /> This area consumes the feature
+          </div>
+        </DockedComposerPanel>
       </div>
-    </DockedComposerPanel>
-  </div>
-);
+    )
+  }
+];
 
 export let states = [
   {

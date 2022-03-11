@@ -220,18 +220,24 @@ let TextInputExample = props => (
 // Export
 /// ////////////////////////////////////////
 
-export default (
-  <Demo>
-    <RichTextEditor>
-      <RteToolbar>
-        <RteFormatText tabIndexSetting="0" />
-        <RteFormatBody />
-        <RteClearFormatting />
-      </RteToolbar>
-      <RteTextarea placeholder="Compose text..." />
-    </RichTextEditor>
-  </Demo>
-);
+export default [
+  {
+    id: 'default',
+    label: 'Default',
+    element: (
+      <Demo>
+        <RichTextEditor>
+          <RteToolbar>
+            <RteFormatText tabIndexSetting="0" />
+            <RteFormatBody />
+            <RteClearFormatting />
+          </RteToolbar>
+          <RteTextarea placeholder="Compose text..." />
+        </RichTextEditor>
+      </Demo>
+    )
+  }
+];
 
 export let states = [
   {

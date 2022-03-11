@@ -190,11 +190,17 @@ export let GroupDisabled = props => (
 // Export
 /// ///////////////////////////////////////////
 
-export default (
-  <FormElement>
-    <Checkbox label={checkboxLabel} checked />
-  </FormElement>
-);
+export default [
+  {
+    id: 'default',
+    label: 'Default',
+    element: (
+      <FormElement>
+        <Checkbox label={checkboxLabel} checked />
+      </FormElement>
+    )
+  }
+];
 
 export let states = [
   {
@@ -225,7 +231,7 @@ export let states = [
     element: (
       <Checkbox label="When you wake up in the morning, it's a quarter to one, And you want to have a little fun. You brush your teeth, ch ch ch ch, ch ch ch ch. You brush your teeth, ch ch ch ch, ch ch ch ch">
         <abbr className="slds-required" title="required">
-            *
+          *
         </abbr>
       </Checkbox>
     )

@@ -459,18 +459,24 @@ HeadlessRows.propTypes = {
 // Export
 /// ///////////////////////////////////////////
 
-export default (
-  <TreeGrid
-    isBordered
-    isFixedLayout
-    isResizable
-    selectionType="multiple"
-    ariaLabel="Example default tree grid"
-  >
-    <AdvancedDataTableHead columns={columns} hasMenus />
-    <DefaultRows isExpanded={false} />
-  </TreeGrid>
-);
+export default [
+  {
+    id: 'default',
+    label: 'Default',
+    element: (
+      <TreeGrid
+        isBordered
+        isFixedLayout
+        isResizable
+        selectionType="multiple"
+        ariaLabel="Example default tree grid"
+      >
+        <AdvancedDataTableHead columns={columns} hasMenus />
+        <DefaultRows isExpanded={false} />
+      </TreeGrid>
+    )
+  }
+];
 
 export let states = [
   {

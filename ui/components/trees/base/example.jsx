@@ -29,14 +29,20 @@ import { UtilityIcon } from '../../icons/base/example';
 // Export
 /// ///////////////////////////////////////////
 
-export default (
-  <TreeContainer>
-    <TreeHeader id="treeheading">Tree Group Header</TreeHeader>
-    <TreeList headerId="treeheading">
-      <DefaultTree />
-    </TreeList>
-  </TreeContainer>
-);
+export default [
+  {
+    id: 'default',
+    label: 'Default',
+    element: (
+      <TreeContainer>
+        <TreeHeader id="treeheading">Tree Group Header</TreeHeader>
+        <TreeList headerId="treeheading">
+          <DefaultTree />
+        </TreeList>
+      </TreeContainer>
+    )
+  }
+];
 
 export let states = [
   {

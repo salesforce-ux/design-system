@@ -265,30 +265,36 @@ SubtabOverflow.defaultProps = {
     Exports
 ----------------------------------------------------------------------------- */
 
-export default (
-  <SubtabsContainer>
-    <SubtabList>
-      <Subtab
-        active
-        tabItemId="subtab-tabitem-01"
-        tabPanelId="subtab-tabpanel-01"
-        title="00071938"
-      />
-      <Subtab
-        symbol="live_chat"
-        tabItemId="subtab-tabitem-02"
-        tabPanelId="subtab-tabpanel-02"
-        title="Chat - Customer"
-      />
-    </SubtabList>
-    <SubtabPanel id="subtab-tabpanel-01" isVisible tabId="subtab-tabitem-01">
-      Item One Content
-    </SubtabPanel>
-    <SubtabPanel id="subtab-tabpanel-02" tabId="subtab-tabitem-02">
-      Item Two Content
-    </SubtabPanel>
-  </SubtabsContainer>
-);
+export default [
+  {
+    id: 'default',
+    label: 'Default',
+    element: (
+      <SubtabsContainer>
+        <SubtabList>
+          <Subtab
+            active
+            tabItemId="subtab-tabitem-01"
+            tabPanelId="subtab-tabpanel-01"
+            title="00071938"
+          />
+          <Subtab
+            symbol="live_chat"
+            tabItemId="subtab-tabitem-02"
+            tabPanelId="subtab-tabpanel-02"
+            title="Chat - Customer"
+          />
+        </SubtabList>
+        <SubtabPanel id="subtab-tabpanel-01" isVisible tabId="subtab-tabitem-01">
+          Item One Content
+        </SubtabPanel>
+        <SubtabPanel id="subtab-tabpanel-02" tabId="subtab-tabitem-02">
+          Item Two Content
+        </SubtabPanel>
+      </SubtabsContainer>
+    )
+  }
+];
 
 export let states = [
   {

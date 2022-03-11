@@ -304,45 +304,51 @@ let FilteredItems = props => (
     Exports
 ----------------------------------------------------------------------------- */
 
-export default (
-  <div className="demo-only demo-only_viewport" style={{ height: '640px' }}>
-    <Backdrop>
-      <Modal
-        className="slds-modal_large slds-list-builder"
-        aria-labelledby="id-of-modalheader-h1"
-      >
-        <ModalHeader>
-          <h1 id="id-of-modalheader-h1" className="slds-text-heading_medium">
-            Add products
-          </h1>
-          <p className="slds-m-top_x-small">Pricebook: Salesforce Products</p>
-        </ModalHeader>
-        <ModalContent className="slds-grid slds-grow">
-          <div className="slds-grid slds-grid_vertical">
-            <ProductListHeader />
-            <ProductList>
-              {rows.map((row, i) => (
-                <RowData
-                  checked={false}
-                  key={i}
-                  index={i + 1}
-                  name={row.name}
-                  productCode={row.productCode}
-                  listPrice={row.listPrice}
-                  productFamily={row.productFamily}
-                />
-              ))}
-            </ProductList>
-          </div>
-        </ModalContent>
-        <ModalFooter>
-          <button className="slds-button slds-button_neutral" aria-label="Cancel and close">Cancel</button>
-          <button className="slds-button slds-button_brand">Next</button>
-        </ModalFooter>
-      </Modal>
-    </Backdrop>
-  </div>
-);
+export default [
+  {
+    id: 'default',
+    label: 'Default',
+    element: (
+      <div className="demo-only demo-only_viewport" style={{ height: '640px' }}>
+        <Backdrop>
+          <Modal
+            className="slds-modal_large slds-list-builder"
+            aria-labelledby="id-of-modalheader-h1"
+          >
+            <ModalHeader>
+              <h1 id="id-of-modalheader-h1" className="slds-text-heading_medium">
+                Add products
+              </h1>
+              <p className="slds-m-top_x-small">Pricebook: Salesforce Products</p>
+            </ModalHeader>
+            <ModalContent className="slds-grid slds-grow">
+              <div className="slds-grid slds-grid_vertical">
+                <ProductListHeader />
+                <ProductList>
+                  {rows.map((row, i) => (
+                    <RowData
+                      checked={false}
+                      key={i}
+                      index={i + 1}
+                      name={row.name}
+                      productCode={row.productCode}
+                      listPrice={row.listPrice}
+                      productFamily={row.productFamily}
+                    />
+                  ))}
+                </ProductList>
+              </div>
+            </ModalContent>
+            <ModalFooter>
+              <button className="slds-button slds-button_neutral" aria-label="Cancel and close">Cancel</button>
+              <button className="slds-button slds-button_brand">Next</button>
+            </ModalFooter>
+          </Modal>
+        </Backdrop>
+      </div>
+    )
+  }
+];
 
 export let states = [
   {

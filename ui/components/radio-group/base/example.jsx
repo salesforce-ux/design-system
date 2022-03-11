@@ -99,15 +99,21 @@ Radio.propTypes = {
 // Export
 /// ///////////////////////////////////////////
 
-export default (
-  <Fieldset>
-    <Legend>Radio Group Label</Legend>
-    <FormElementControl>
-      <Radio checked label="Radio Label One" name="default" />
-      <Radio label="Radio Label Two" name="default" />
-    </FormElementControl>
-  </Fieldset>
-);
+export default [
+  {
+    id: 'default',
+    label: 'Default',
+    element: (
+      <Fieldset>
+        <Legend>Radio Group Label</Legend>
+        <FormElementControl>
+          <Radio checked label="Radio Label One" name="default" />
+          <Radio label="Radio Label Two" name="default" />
+        </FormElementControl>
+      </Fieldset>
+    )
+  }
+];
 
 export let states = [
   {

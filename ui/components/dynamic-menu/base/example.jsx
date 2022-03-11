@@ -120,30 +120,37 @@ export const DynamicMenu = props => (
 );
 
 // Default
-export default (
-  <div
-    className="demo-only"
-    style={{ height: '13rem', position: 'relative', marginLeft: '1rem' }}
-  >
-    <ButtonIcon
-      className="slds-button_icon-border-filled"
-      symbol="favorite"
-      assistiveText="Show Favorites"
-      title="Show Favorites"
-    />
-    <DynamicMenu>
-      <div className="slds-p-vertical_x-small slds-p-horizontal_small">
-        <h3
-          className="slds-dynamic-menu__header slds-m-bottom_x-small"
-          role="presentation"
-        >
-          My Favorites
-        </h3>
-        <p>You can favorite any page!</p>
+
+export default [
+  {
+    id: 'default',
+    label: 'Default',
+    element: (
+      <div
+        className="demo-only"
+        style={{ height: '13rem', position: 'relative', marginLeft: '1rem' }}
+      >
+        <ButtonIcon
+          className="slds-button_icon-border-filled"
+          symbol="favorite"
+          assistiveText="Show Favorites"
+          title="Show Favorites"
+        />
+        <DynamicMenu>
+          <div className="slds-p-vertical_x-small slds-p-horizontal_small">
+            <h3
+              className="slds-dynamic-menu__header slds-m-bottom_x-small"
+              role="presentation"
+            >
+              My Favorites
+            </h3>
+            <p>You can favorite any page!</p>
+          </div>
+        </DynamicMenu>
       </div>
-    </DynamicMenu>
-  </div>
-);
+    )
+  }
+];
 
 // Examples
 export let states = [

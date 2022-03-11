@@ -104,16 +104,22 @@ let MultipleNarrow = props => (
 // Export
 /// ///////////////////////////////////////////
 
-export default (
-  <FormElement labelContent={selectLabel} inputId={defaultSelectId}>
-    <Select id={defaultSelectId}>
-      <option value="">Select…</option>
-      <option>Option One</option>
-      <option>Option Two</option>
-      <option>Option Three</option>
-    </Select>
-  </FormElement>
-);
+export default [
+  {
+    id: 'default',
+    label: 'Default',
+    element: (
+      <FormElement labelContent={selectLabel} inputId={defaultSelectId}>
+        <Select id={defaultSelectId}>
+          <option value="">Select…</option>
+          <option>Option One</option>
+          <option>Option Two</option>
+          <option>Option Three</option>
+        </Select>
+      </FormElement>
+    )
+  }
+];
 
 export let states = [
   {

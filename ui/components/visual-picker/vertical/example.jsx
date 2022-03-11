@@ -13,48 +13,54 @@ import {
 // Export
 /// ////////////////////////////////////////
 
-export default (
-  <Fieldset>
-    <Legend>Select an option</Legend>
-    <FormElementControl>
-      <VisualPickerContainer hasIcon={false}>
-        <VisualPicker className="slds-visual-picker_vertical">
-          <span>
-            <span className="slds-text-heading_medium slds-m-bottom_x-small">
-              Item Text
-            </span>
-            <span className="slds-text-title">
-              Some optional item description to help the user better understand
-              what this option is about.
-            </span>
-          </span>
-        </VisualPicker>
-        <VisualPicker className="slds-visual-picker_vertical">
-          <span>
-            <span className="slds-text-heading_medium slds-m-bottom_x-small">
-              Item Text
-            </span>
-            <span className="slds-text-title">
-              Some optional item description to help the user better understand
-              what this option is about.
-            </span>
-          </span>
-        </VisualPicker>
-        <VisualPicker className="slds-visual-picker_vertical">
-          <span>
-            <span className="slds-text-heading_medium slds-m-bottom_x-small">
-              Item Text
-            </span>
-            <span className="slds-text-title">
-              Some optional item description to help the user better understand
-              what this option is about.
-            </span>
-          </span>
-        </VisualPicker>
-      </VisualPickerContainer>
-    </FormElementControl>
-  </Fieldset>
-);
+export default [
+  {
+    id: 'default',
+    label: 'Default',
+    element: (
+      <Fieldset>
+        <Legend>Select an option</Legend>
+        <FormElementControl>
+          <VisualPickerContainer hasIcon={false}>
+            <VisualPicker className="slds-visual-picker_vertical">
+              <span>
+                <span className="slds-text-heading_medium slds-m-bottom_x-small">
+                  Item Text
+                </span>
+                <span className="slds-text-title">
+                  Some optional item description to help the user better understand
+                  what this option is about.
+                </span>
+              </span>
+            </VisualPicker>
+            <VisualPicker className="slds-visual-picker_vertical">
+              <span>
+                <span className="slds-text-heading_medium slds-m-bottom_x-small">
+                  Item Text
+                </span>
+                <span className="slds-text-title">
+                  Some optional item description to help the user better understand
+                  what this option is about.
+                </span>
+              </span>
+            </VisualPicker>
+            <VisualPicker className="slds-visual-picker_vertical">
+              <span>
+                <span className="slds-text-heading_medium slds-m-bottom_x-small">
+                  Item Text
+                </span>
+                <span className="slds-text-title">
+                  Some optional item description to help the user better understand
+                  what this option is about.
+                </span>
+              </span>
+            </VisualPicker>
+          </VisualPickerContainer>
+        </FormElementControl>
+      </Fieldset>
+    )
+  }
+];
 
 export let states = [
   {

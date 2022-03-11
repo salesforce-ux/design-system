@@ -19,23 +19,29 @@ import { DoctypeIcon } from '../../icons/doctype/example';
 const exampleMultiLineText =
   'So sorry to hear that. Let me transfer you to a more technical support member. Thank you for your patients. \n \n Have you tried visiting our help site?';
 
-export default (
-  <Chat>
-    <ChatList>
-      <ChatListItem type="inbound">
-        <ChatMessage>
-          <ChatMessageBody
-            type="inbound"
-            name="Taylor Watson-Rice"
-            timeStamp="4:59 PM"
-          >
-            Hi, my CloudWidget only speaks French
-          </ChatMessageBody>
-        </ChatMessage>
-      </ChatListItem>
-    </ChatList>
-  </Chat>
-);
+export default [
+  {
+    id: 'default',
+    label: 'Default',
+    element: (
+      <Chat>
+        <ChatList>
+          <ChatListItem type="inbound">
+            <ChatMessage>
+              <ChatMessageBody
+                type="inbound"
+                name="Taylor Watson-Rice"
+                timeStamp="4:59 PM"
+              >
+                Hi, my CloudWidget only speaks French
+              </ChatMessageBody>
+            </ChatMessage>
+          </ChatListItem>
+        </ChatList>
+      </Chat>
+    )
+  }
+];
 
 export const states = [
   {

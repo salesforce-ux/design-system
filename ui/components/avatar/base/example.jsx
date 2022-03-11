@@ -10,15 +10,21 @@ import { Avatar, AvatarIcon, AvatarInitials } from '../';
 
 export { Avatar };
 
-export default (
-  <Avatar>
-    <img
-      alt="Person name"
-      src="/assets/images/avatar2.jpg"
-      title="Person name"
-    />
-  </Avatar>
-);
+export default [
+  {
+    id: 'default',
+    label: 'Default',
+    element: (
+      <Avatar>
+        <img
+          alt="Person name"
+          src="/assets/images/avatar2.jpg"
+          title="Person name"
+        />
+      </Avatar>
+    )
+  }
+];
 
 export let examples = [
   {

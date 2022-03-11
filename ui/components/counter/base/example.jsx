@@ -8,27 +8,33 @@ import ButtonIcon from '../../button-icons';
 
 const inputLabel = 'Counter Label';
 
-export default (
-  <FormElement
-    labelContent={inputLabel}
-    inputId="default1"
-    labelClassName="slds-m-right_none"
-  >
-    <ButtonIcon
-      className="slds-button_icon-small slds-input__button_decrement"
-      symbol="ban"
-      assistiveText="Decrement counter"
-      title="Decrement counter"
-    />
-    <Input id="default1" type="number" placeholder="1" />
-    <ButtonIcon
-      className="slds-button_icon-small slds-input__button_increment"
-      symbol="new"
-      assistiveText="Increment counter"
-      title="Increment counter"
-    />
-  </FormElement>
-);
+export default [
+  {
+    id: 'default',
+    label: 'Default',
+    element: (
+      <FormElement
+        labelContent={inputLabel}
+        inputId="default1"
+        labelClassName="slds-m-right_none"
+      >
+        <ButtonIcon
+          className="slds-button_icon-small slds-input__button_decrement"
+          symbol="ban"
+          assistiveText="Decrement counter"
+          title="Decrement counter"
+        />
+        <Input id="default1" type="number" placeholder="1" />
+        <ButtonIcon
+          className="slds-button_icon-small slds-input__button_increment"
+          symbol="new"
+          assistiveText="Increment counter"
+          title="Increment counter"
+        />
+      </FormElement>
+    )
+  }
+];
 
 export let states = [
   {

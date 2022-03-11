@@ -15,15 +15,21 @@ const Image = (
 
 const Button = <button className="slds-button slds-button_neutral">New</button>;
 
-export default (
-  <div className="slds-page-header" role="banner">
-    <MediaObject flavor="center" figureLeft={Image} figureRight={Button}>
-      <p
-        className="slds-page-header__title slds-truncate"
-        title="Rohde Corp - 80,000 Widgets"
-      >
-        Opportunities
-      </p>
-    </MediaObject>
-  </div>
-);
+export default [
+  {
+    id: 'default',
+    label: 'Default',
+    element: (
+      <div className="slds-page-header" role="banner">
+        <MediaObject flavor="center" figureLeft={Image} figureRight={Button}>
+          <p
+            className="slds-page-header__title slds-truncate"
+            title="Rohde Corp - 80,000 Widgets"
+          >
+            Opportunities
+          </p>
+        </MediaObject>
+      </div>
+    )
+  }
+];

@@ -5,15 +5,21 @@ import React from 'react';
 import { Avatar } from '../base/example';
 import { AvatarInitials } from '../';
 
-export default (
-  <Avatar>
-    <AvatarInitials
-      iconClassName="slds-icon-standard-account"
-      title="company name"
-      initials="Ac"
-    />
-  </Avatar>
-);
+export default [
+  {
+    id: 'default',
+    label: 'Default',
+    element: (
+      <Avatar>
+        <AvatarInitials
+          iconClassName="slds-icon-standard-account"
+          title="company name"
+          initials="Ac"
+        />
+      </Avatar>
+    )
+  }
+];
 
 export let examples = [
   {

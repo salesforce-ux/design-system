@@ -284,11 +284,17 @@ const Bare = () => {
 // Export
 /// ///////////////////////////////////////////
 
-export default (
-  <FormElement labelContent={inputLabel} inputId="text-input-id-0">
-    <Input id="text-input-id-0" placeholder={placeholderText} />
-  </FormElement>
-);
+export default [
+  {
+    id: 'default',
+    label: 'Default',
+    element: (
+      <FormElement labelContent={inputLabel} inputId="text-input-id-0">
+        <Input id="text-input-id-0" placeholder={placeholderText} />
+      </FormElement>
+    )
+  }
+];
 
 export let states = [
   {

@@ -15,18 +15,24 @@ import { StandardIcon } from '../../icons/standard/example';
 // Export
 /// ////////////////////////////////////////
 
-export default (
-  <PillContainer type="listbox" id="listbox-pill-default">
-    <ListboxPills id="listbox-pill-default">
-      <ListboxPillsItem>
-        <ListboxPill tabIndex="0" />
-      </ListboxPillsItem>
-      <ListboxPillsItem>
-        <ListboxPill />
-      </ListboxPillsItem>
-    </ListboxPills>
-  </PillContainer>
-);
+export default [
+  {
+    id: 'default',
+    label: 'Default',
+    element: (
+      <PillContainer type="listbox" id="listbox-pill-default">
+        <ListboxPills id="listbox-pill-default">
+          <ListboxPillsItem>
+            <ListboxPill tabIndex="0" />
+          </ListboxPillsItem>
+          <ListboxPillsItem>
+            <ListboxPill />
+          </ListboxPillsItem>
+        </ListboxPills>
+      </PillContainer>
+    )
+  }
+];
 
 export let examples = [
   {

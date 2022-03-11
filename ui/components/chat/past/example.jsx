@@ -13,19 +13,25 @@ import {
   ChatBookend
 } from '../.';
 
-export default (
-  <Chat isPast>
-    <ChatList>
-      <ChatListItem>
-        <ChatMessage>
-          <ChatMessageBody isPast name="Taylor Watson-Rice" timeStamp="4:59 PM">
-            Hi, my CloudWidget only speaks French
-          </ChatMessageBody>
-        </ChatMessage>
-      </ChatListItem>
-    </ChatList>
-  </Chat>
-);
+export default [
+  {
+    id: 'default',
+    label: 'Default',
+    element: (
+      <Chat isPast>
+        <ChatList>
+          <ChatListItem>
+            <ChatMessage>
+              <ChatMessageBody isPast name="Taylor Watson-Rice" timeStamp="4:59 PM">
+                Hi, my CloudWidget only speaks French
+              </ChatMessageBody>
+            </ChatMessage>
+          </ChatListItem>
+        </ChatList>
+      </Chat>
+    )
+  }
+];
 
 export const states = [
   {

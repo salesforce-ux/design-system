@@ -23,22 +23,28 @@ import {
 // Export
 /// ///////////////////////////////////////////
 
-export default (
-  <Table
-    isBordered
-    hasCellBuffer
-    type="base"
-    ariaLabel="Example default base table of Opportunities"
-  >
-    <THead>
-      <HeadRowData />
-    </THead>
-    <TBody>
-      <RowData title="Cloudhub" />
-      <RowData title="Cloudhub + Anypoint Connectors" />
-    </TBody>
-  </Table>
-);
+export default [
+  {
+    id: 'default',
+    label: 'Default',
+    element: (
+      <Table
+        isBordered
+        hasCellBuffer
+        type="base"
+        ariaLabel="Example default base table of Opportunities"
+      >
+        <THead>
+          <HeadRowData />
+        </THead>
+        <TBody>
+          <RowData title="Cloudhub" />
+          <RowData title="Cloudhub + Anypoint Connectors" />
+        </TBody>
+      </Table>
+    )
+  }
+];
 
 export let examples = [
   {

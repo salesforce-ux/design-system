@@ -159,11 +159,17 @@ const avatar = (
 // Export
 /// ////////////////////////////////////////
 
-export default (
-  <div className="demo-only" style={{ width: '30rem' }}>
-    <Tile title="Salesforce UX" />
-  </div>
-);
+export default [
+  {
+    id: 'default',
+    label: 'Default',
+    element: (
+      <div className="demo-only" style={{ width: '30rem' }}>
+        <Tile title="Salesforce UX" />
+      </div>
+    )
+  }
+];
 
 export let examples = [
   {

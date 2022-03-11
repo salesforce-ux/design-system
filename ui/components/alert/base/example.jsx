@@ -7,20 +7,26 @@ import { UtilityIcon } from '../../icons/base/example';
 import EmptyLink from '../../../shared/empty-link/';
 import Heading from '../../../shared/heading/';
 
-export default (
-  <Alert>
-    <UtilityIcon
-      containerClassName="slds-m-right_x-small"
-      className="slds-icon_x-small"
-      assistiveText={false}
-      symbol="user"
-    />
-    <Heading level="2">
-      Logged in as John Smith (johnsmith@acme.com).{' '}
-      <EmptyLink>Log out</EmptyLink>
-    </Heading>
-  </Alert>
-);
+export default [
+  {
+    id: 'default',
+    label: 'Default',
+    element: (
+      <Alert>
+        <UtilityIcon
+          containerClassName="slds-m-right_x-small"
+          className="slds-icon_x-small"
+          assistiveText={false}
+          symbol="user"
+        />
+        <Heading level="2">
+          Logged in as John Smith (johnsmith@acme.com).{' '}
+          <EmptyLink>Log out</EmptyLink>
+        </Heading>
+      </Alert>
+    )
+  }
+];
 
 export let states = [
   {

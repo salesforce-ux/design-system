@@ -49,13 +49,19 @@ const HubStep = props => {
   );
 };
 
-export default (
-  <SetupAssistantList>
-    <SetupAssistantStep>
-      <SetupAssistantStepSummary />
-    </SetupAssistantStep>
-  </SetupAssistantList>
-);
+export default [
+  {
+    id: 'default',
+    label: 'Default',
+    element: (
+      <SetupAssistantList>
+        <SetupAssistantStep>
+          <SetupAssistantStepSummary />
+        </SetupAssistantStep>
+      </SetupAssistantList>
+    )
+  }
+];
 
 export let states = [
   {

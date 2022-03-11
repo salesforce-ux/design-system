@@ -54,17 +54,23 @@ export let Checkbox = props => {
 // Export
 /// ////////////////////////////////////////
 
-export default (
-  <Fieldset>
-    <CheckboxGroup>
-      <Checkbox id="monday">Mon</Checkbox>
-      <Checkbox id="tuesday">Tue</Checkbox>
-      <Checkbox id="wednesday">Wed</Checkbox>
-      <Checkbox id="thursday">Thu</Checkbox>
-      <Checkbox id="friday">Fri</Checkbox>
-    </CheckboxGroup>
-  </Fieldset>
-);
+export default [
+  {
+    id: 'default',
+    label: 'Default',
+    element: (
+      <Fieldset>
+        <CheckboxGroup>
+          <Checkbox id="monday">Mon</Checkbox>
+          <Checkbox id="tuesday">Tue</Checkbox>
+          <Checkbox id="wednesday">Wed</Checkbox>
+          <Checkbox id="thursday">Thu</Checkbox>
+          <Checkbox id="friday">Fri</Checkbox>
+        </CheckboxGroup>
+      </Fieldset>
+    )
+  }
+];
 
 export let states = [
   {

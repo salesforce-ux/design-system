@@ -73,12 +73,18 @@ export { DualStatefulButton, DefaultText, PressedText };
 // Export
 /// ////////////////////////////////////////
 
-export default (
-  <DualStatefulButton>
-    <DefaultText>Follow</DefaultText>
-    <PressedText>Following</PressedText>
-  </DualStatefulButton>
-);
+export default [
+  {
+    id: 'default',
+    label: 'Default',
+    element: (
+      <DualStatefulButton>
+        <DefaultText>Follow</DefaultText>
+        <PressedText>Following</PressedText>
+      </DualStatefulButton>
+    )
+  }
+];
 
 export const states = [
   {

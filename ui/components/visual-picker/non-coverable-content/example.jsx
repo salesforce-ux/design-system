@@ -61,33 +61,39 @@ export let VisualPickerMediaObject = props => (
 // Export
 /// ////////////////////////////////////////
 
-export default (
-  <Fieldset>
-    <Legend>Select a plan</Legend>
-    <FormElementControl>
-      <VisualPickerContainer hasIcon={false}>
-        <VisualPicker size="medium" label={PackageOne}>
-          <span>
-            <span className="slds-text-heading_large">$30</span>
-            <span className="slds-text-title">USD/user/month *</span>
-          </span>
-        </VisualPicker>
-        <VisualPicker size="medium" label={PackageTwo}>
-          <span>
-            <span className="slds-text-heading_large">$150</span>
-            <span className="slds-text-title">USD/user/month *</span>
-          </span>
-        </VisualPicker>
-        <VisualPicker size="medium" label={PackageThree}>
-          <span>
-            <span className="slds-text-heading_large">$300</span>
-            <span className="slds-text-title">USD/user/month *</span>
-          </span>
-        </VisualPicker>
-      </VisualPickerContainer>
-    </FormElementControl>
-  </Fieldset>
-);
+export default [
+  {
+    id: 'default',
+    label: 'Default',
+    element: (
+      <Fieldset>
+        <Legend>Select a plan</Legend>
+        <FormElementControl>
+          <VisualPickerContainer hasIcon={false}>
+            <VisualPicker size="medium" label={PackageOne}>
+              <span>
+                <span className="slds-text-heading_large">$30</span>
+                <span className="slds-text-title">USD/user/month *</span>
+              </span>
+            </VisualPicker>
+            <VisualPicker size="medium" label={PackageTwo}>
+              <span>
+                <span className="slds-text-heading_large">$150</span>
+                <span className="slds-text-title">USD/user/month *</span>
+              </span>
+            </VisualPicker>
+            <VisualPicker size="medium" label={PackageThree}>
+              <span>
+                <span className="slds-text-heading_large">$300</span>
+                <span className="slds-text-title">USD/user/month *</span>
+              </span>
+            </VisualPicker>
+          </VisualPickerContainer>
+        </FormElementControl>
+      </Fieldset>
+    )
+  }
+];
 
 export let states = [
   {

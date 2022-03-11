@@ -451,19 +451,25 @@ export const Context = props => (
   </div>
 );
 
-export default (
-  <Trigger isOpen>
-    <Menu className="slds-dropdown_left">
-      <MenuList ariaLabel="Show More">
-        <MenuItem tabIndex="0">Menu Item One</MenuItem>
-        <MenuItem>Menu Item Two</MenuItem>
-        <MenuItem>Menu Item Three</MenuItem>
-        <li className="slds-has-divider_top-space" role="separator" />
-        <MenuItem>Menu Item Four</MenuItem>
-      </MenuList>
-    </Menu>
-  </Trigger>
-);
+export default [
+  {
+    id: 'default',
+    label: 'Default',
+    element: (
+      <Trigger isOpen>
+        <Menu className="slds-dropdown_left">
+          <MenuList ariaLabel="Show More">
+            <MenuItem tabIndex="0">Menu Item One</MenuItem>
+            <MenuItem>Menu Item Two</MenuItem>
+            <MenuItem>Menu Item Three</MenuItem>
+            <li className="slds-has-divider_top-space" role="separator" />
+            <MenuItem>Menu Item Four</MenuItem>
+          </MenuList>
+        </Menu>
+      </Trigger>
+    )
+  }
+];
 
 export let examples = [
   {

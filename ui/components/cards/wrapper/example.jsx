@@ -5,44 +5,50 @@ import React from 'react';
 import Card, { CardHeader, CardBody, CardFooter } from '../';
 import Tabs from '../../tabs/index.react';
 
-export default (
-  <div className="slds-card-wrapper">
-    <Card>
-      <CardHeader
-        title="Contacts"
-        href
-        symbol="contact"
-        action={
-          <button className="slds-button slds-button_neutral">New</button>
-        }
-      />
-      <CardBody>
-        This is a card inside an `slds-card-wrapper` to show how styling is
-        removed when cards are nested inside.
-      </CardBody>
-      <CardFooter>
-        View All <span className="slds-assistive-text">Contacts</span>
-      </CardFooter>
-    </Card>
-    <Card hasCardBoundary>
-      <CardHeader
-        title="Contacts"
-        href
-        symbol="contact"
-        action={
-          <button className="slds-button slds-button_neutral">New</button>
-        }
-      />
-      <CardBody hasPadding>
-        This is a card inside an `slds-card-wrapper` to illustrate how
-        `slds-card_boundary` adds a rounded border when desired.
-      </CardBody>
-      <CardFooter>
-        View All <span className="slds-assistive-text">Contacts</span>
-      </CardFooter>
-    </Card>
-  </div>
-);
+export default [
+  {
+    id: 'default',
+    label: 'Default',
+    element: (
+      <div className="slds-card-wrapper">
+        <Card>
+          <CardHeader
+            title="Contacts"
+            href
+            symbol="contact"
+            action={
+              <button className="slds-button slds-button_neutral">New</button>
+            }
+          />
+          <CardBody>
+            This is a card inside an `slds-card-wrapper` to show how styling is
+            removed when cards are nested inside.
+          </CardBody>
+          <CardFooter>
+            View All <span className="slds-assistive-text">Contacts</span>
+          </CardFooter>
+        </Card>
+        <Card hasCardBoundary>
+          <CardHeader
+            title="Contacts"
+            href
+            symbol="contact"
+            action={
+              <button className="slds-button slds-button_neutral">New</button>
+            }
+          />
+          <CardBody hasPadding>
+            This is a card inside an `slds-card-wrapper` to illustrate how
+            `slds-card_boundary` adds a rounded border when desired.
+          </CardBody>
+          <CardFooter>
+            View All <span className="slds-assistive-text">Contacts</span>
+          </CardFooter>
+        </Card>
+      </div>
+    )
+  }
+];
 
 export let examples = [
   {

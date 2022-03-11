@@ -6,14 +6,21 @@ import RecordDetail from './';
 import * as Snapshot from './snapshots.data';
 
 // Note: Record Detail - Default is the exact same as Stacked - Default, which is why it is not included in Storybook
-export default (
-  <RecordDetail
-    direction="stacked"
-    snapshot={Snapshot.ObjectFieldTypes}
-    isViewMode
-    hasInlineEdit
-  />
-);
+
+export default [
+  {
+    id: 'default',
+    label: 'Default',
+    element: (
+      <RecordDetail
+        direction="stacked"
+        snapshot={Snapshot.ObjectFieldTypes}
+        isViewMode
+        hasInlineEdit
+      />
+    )
+  }
+];
 
 export let examples = [
   // Note: This example is the same as the Stacked 'stacked-single-column' example, which is why it is not included in Storybook

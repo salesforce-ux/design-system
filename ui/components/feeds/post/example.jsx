@@ -169,31 +169,37 @@ const CommentList = props => (
 // Export
 /// ////////////////////////////////////////
 
-export default (
-  <div className="slds-feed">
-    <ul className="slds-feed__list">
-      <li className="slds-feed__item">
-        <Post>
-          <PostHeader />
-          <PostContent>
-            <p>
-              Hey there! Here's the latest demo presentation{' '}
-              <a href="#" title="Jenna Davis" onClick={e => e.preventDefault()}>
-                @Jenna Davis
-              </a>
-              , let me know if there are any changes. I've updated slides 3-8
-              and slides 16-18 slides with new product shots.
-            </p>
-          </PostContent>
-          <PostFooter>
-            <PostFooterActions />
-            <PostFooterMeta />
-          </PostFooter>
-        </Post>
-      </li>
-    </ul>
-  </div>
-);
+export default [
+  {
+    id: 'default',
+    label: 'Default',
+    element: (
+      <div className="slds-feed">
+        <ul className="slds-feed__list">
+          <li className="slds-feed__item">
+            <Post>
+              <PostHeader />
+              <PostContent>
+                <p>
+                  Hey there! Here's the latest demo presentation{' '}
+                  <a href="#" title="Jenna Davis" onClick={e => e.preventDefault()}>
+                    @Jenna Davis
+                  </a>
+                  , let me know if there are any changes. I've updated slides 3-8
+                  and slides 16-18 slides with new product shots.
+                </p>
+              </PostContent>
+              <PostFooter>
+                <PostFooterActions />
+                <PostFooterMeta />
+              </PostFooter>
+            </Post>
+          </li>
+        </ul>
+      </div>
+    )
+  }
+];
 
 export let states = [
   {

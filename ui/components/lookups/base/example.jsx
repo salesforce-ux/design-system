@@ -10,33 +10,40 @@ import { StandardIcon } from '../../icons/standard/example';
 import * as Snapshot from '../../combobox/snapshots.data';
 
 // Default
-export default (
-  <Combobox
-    id="combobox-id-1"
-    aria-controls="listbox-id-1"
-    autocomplete
-    inputIconPosition="right"
-    rightInputIcon={
-      <UtilityIcon
-        symbol="search"
-        className="slds-icon slds-icon_x-small slds-icon-text-default"
-        containerClassName="slds-input__icon slds-input__icon_right"
-        assistiveText={false}
-        title={false}
+
+export default [
+  {
+    id: 'default',
+    label: 'Default',
+    element: (
+      <Combobox
+        id="combobox-id-1"
+        aria-controls="listbox-id-1"
+        autocomplete
+        inputIconPosition="right"
+        rightInputIcon={
+          <UtilityIcon
+            symbol="search"
+            className="slds-icon slds-icon_x-small slds-icon-text-default"
+            containerClassName="slds-input__icon slds-input__icon_right"
+            assistiveText={false}
+            title={false}
+          />
+        }
+        results={
+          <Listbox
+            id="listbox-id-1"
+            snapshot={Snapshot.EntityOptions}
+            type="entity"
+            count={3}
+          />
+        }
+        resultsType="listbox"
+        hasInteractions
       />
-    }
-    results={
-      <Listbox
-        id="listbox-id-1"
-        snapshot={Snapshot.EntityOptions}
-        type="entity"
-        count={3}
-      />
-    }
-    resultsType="listbox"
-    hasInteractions
-  />
-);
+    )
+  }
+];
 
 // States
 export let states = [

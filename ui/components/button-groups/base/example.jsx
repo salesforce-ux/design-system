@@ -35,13 +35,19 @@ export let ButtonGroupList = props => (
 // Export
 /// ////////////////////////////////////////
 
-export default (
-  <ButtonGroup>
-    <Button isNeutral>Refresh</Button>
-    <Button isNeutral>Edit</Button>
-    <Button isNeutral>Save</Button>
-  </ButtonGroup>
-);
+export default [
+  {
+    id: 'default',
+    label: 'Default',
+    element: (
+      <ButtonGroup>
+        <Button isNeutral>Refresh</Button>
+        <Button isNeutral>Edit</Button>
+        <Button isNeutral>Save</Button>
+      </ButtonGroup>
+    )
+  }
+];
 
 export let states = [
   {

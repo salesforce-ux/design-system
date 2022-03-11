@@ -13,18 +13,24 @@ const image = (
   />
 );
 
-export default (
-  <div className="slds-page-header" role="banner">
-    <MediaObject figureLeft={image}>
-      <p
-        className="slds-page-header__title slds-truncate"
-        title="Rohde Corp - 80,000 Widgets"
-      >
-        Rohde Corp - 80,000 Widgets
-      </p>
-      <p className="slds-text-body_small">
-        Mark Jaeckal &bull; Unlimited Customer &bull; 11/13/15
-      </p>
-    </MediaObject>
-  </div>
-);
+export default [
+  {
+    id: 'default',
+    label: 'Default',
+    element: (
+      <div className="slds-page-header" role="banner">
+        <MediaObject figureLeft={image}>
+          <p
+            className="slds-page-header__title slds-truncate"
+            title="Rohde Corp - 80,000 Widgets"
+          >
+            Rohde Corp - 80,000 Widgets
+          </p>
+          <p className="slds-text-body_small">
+            Mark Jaeckal &bull; Unlimited Customer &bull; 11/13/15
+          </p>
+        </MediaObject>
+      </div>
+    )
+  }
+];

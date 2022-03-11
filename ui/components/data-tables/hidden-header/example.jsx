@@ -18,32 +18,38 @@ import {
 // Export
 /// ///////////////////////////////////////////
 
-export default (
-  <Table
-    isBordered
-    hasCellBuffer
-    hasHiddenHeader
-    type="base"
-    ariaLabel="Example table of Opportunities with hidden header"
-  >
-    <THead isHidden>
-      <THeadTr>
-        <ColumnTh>
-          <ColumnHeader columnName="Opportunity Name" />
-        </ColumnTh>
-      </THeadTr>
-    </THead>
-    <TBody>
-      <TBodyTr>
-        <Td data-label="Opportunity Name" type="base">
-          <ReadOnlyCell cellText="Cloudhub" cellLink />
-        </Td>
-      </TBodyTr>
-      <TBodyTr>
-        <Td data-label="Opportunity Name" type="base">
-          <ReadOnlyCell cellText="Cloudhub + Anypoint Connectors" cellLink />
-        </Td>
-      </TBodyTr>
-    </TBody>
-  </Table>
-);
+export default [
+  {
+    id: 'default',
+    label: 'Default',
+    element: (
+      <Table
+        isBordered
+        hasCellBuffer
+        hasHiddenHeader
+        type="base"
+        ariaLabel="Example table of Opportunities with hidden header"
+      >
+        <THead isHidden>
+          <THeadTr>
+            <ColumnTh>
+              <ColumnHeader columnName="Opportunity Name" />
+            </ColumnTh>
+          </THeadTr>
+        </THead>
+        <TBody>
+          <TBodyTr>
+            <Td data-label="Opportunity Name" type="base">
+              <ReadOnlyCell cellText="Cloudhub" cellLink />
+            </Td>
+          </TBodyTr>
+          <TBodyTr>
+            <Td data-label="Opportunity Name" type="base">
+              <ReadOnlyCell cellText="Cloudhub + Anypoint Connectors" cellLink />
+            </Td>
+          </TBodyTr>
+        </TBody>
+      </Table>
+    )
+  }
+];

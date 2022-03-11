@@ -20,34 +20,41 @@ import * as snapshot from '../snapshots.data';
 ----------------------------------------------------------------------------- */
 
 // Default
-export default (
-  <Combobox
-    id={_.uniqueId('combobox-id-')}
-    containerClassName="slds-size_small"
-    aria-controls="listbox-id-1"
-    inputIconPosition="right"
-    rightInputIcon={
-      <UtilityIcon
-        symbol="down"
-        className="slds-icon slds-icon_x-small slds-icon-text-default"
-        containerClassName="slds-input__icon slds-input__icon_right"
-        assistiveText={false}
-        title={false}
+
+export default [
+  {
+    id: 'default',
+    label: 'Default',
+    element: (
+      <Combobox
+        id={_.uniqueId('combobox-id-')}
+        containerClassName="slds-size_small"
+        aria-controls="listbox-id-1"
+        inputIconPosition="right"
+        rightInputIcon={
+          <UtilityIcon
+            symbol="down"
+            className="slds-icon slds-icon_x-small slds-icon-text-default"
+            containerClassName="slds-input__icon slds-input__icon_right"
+            assistiveText={false}
+            title={false}
+          />
+        }
+        results={
+          <Listbox
+            id="listbox-id-1"
+            snapshot={snapshot.options}
+            type="plain"
+            count={8}
+          />
+        }
+        resultsType="listbox"
+        selectOnly
+        hasInteractions
       />
-    }
-    results={
-      <Listbox
-        id="listbox-id-1"
-        snapshot={snapshot.options}
-        type="plain"
-        count={8}
-      />
-    }
-    resultsType="listbox"
-    selectOnly
-    hasInteractions
-  />
-);
+    )
+  }
+];
 
 // States
 export let states = [

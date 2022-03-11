@@ -5,9 +5,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import _ from '../../../shared/helpers';
-import { FormElementControl } from '../../form-element/';
+import { FormElementControl, FormElementTooltip } from '../../form-element/';
 import ButtonIcon from '../../button-icons/';
-
 
 /// ////////////////////////////////////////
 // Partial(s)
@@ -208,6 +207,27 @@ export let states = [
             assistiveText="Help"
           />
         </div>
+        <FormElementControl>
+          <Radio checked label="Radio Label One" />
+          <Radio label="Radio Label Two" />
+        </FormElementControl>
+      </Fieldset>
+    )
+  },
+  {
+    id: 'required-help-text-icon-tooltip',
+    label: 'Required with Help Text Icon with Tooltip',
+    demoStyles: 'padding-top: 4rem',
+    storybookStyles: true,
+    element: (
+      <Fieldset>
+        <Legend>
+          <abbr className="slds-required" title="required">
+            *
+          </abbr>{' '}
+          Radio Group Label
+        </Legend>
+        <FormElementTooltip showTooltip="true" />
         <FormElementControl>
           <Radio checked label="Radio Label One" />
           <Radio label="Radio Label Two" />

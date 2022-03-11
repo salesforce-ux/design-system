@@ -48,6 +48,7 @@
 #### Added
 - Added styling changes to support radio group with help text icon.
 - Added examples: Required with help text icon and Right to left required with help text icon to documentation
+- Added required with help text icon and tooltip example
 #### Fixed
 - Right to left legend to be right aligned and match the alignment of content.
 

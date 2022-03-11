@@ -2,7 +2,7 @@ import CodeView from '../../../shared/components/CodeView';
 import DisplayColumn from '../../../shared/components/DisplayColumn';
 import DisplayGrid from '../../../shared/components/DisplayGrid';
 import Blockquote from '../../../shared/components/Blockquote';
-import { getDisplayElementById } from '../../shared/helpers';
+import { getDisplayElementById, getDemoStylesById } from '../../shared/helpers';
 import { MobileNotice, MobileBlurb } from '../../shared/doc-text';
 import * as Base from './base/example';
 import StylingHooksTable from '../../../shared/components/StylingHooksTable';
@@ -62,6 +62,12 @@ When disabling a radio button, either the entire group must be disabled or if on
 ### Required with Help Text Icon
 
 <CodeView>{getDisplayElementById(Base.states, 'required-help-text-icon')}</CodeView>
+
+### Required with Help Text Icon and Tooltip
+
+<CodeView demoStyles={getDemoStylesById(Base.states, 'required-help-text-icon-tooltip')}>
+  {getDisplayElementById(Base.states, 'required-help-text-icon-tooltip')}
+</CodeView>
 
 ### Right to Left
 

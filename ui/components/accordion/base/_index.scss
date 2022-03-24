@@ -39,19 +39,19 @@
   margin-top: calc(
     var(--slds-c-accordion-section-spacing-block-start,
     var(--sds-c-accordion-section-spacing-block-start,
-    #{$spacing-small} * -1)));
+    -#{$spacing-small})));
   margin-right: calc(
     var(--slds-c-accordion-section-spacing-inline-end,
     var(--sds-c-accordion-section-spacing-inline-end,
-    #{$spacing-small} * -1)));
+    -#{$spacing-small})));
   margin-bottom: calc(
     var(--slds-c-accordion-section-spacing-block-end,
     var(--sds-c-accordion-section-spacing-block-end,
-    #{$spacing-small} * -1)));
+    -#{$spacing-small})));
   margin-left: calc(
     var(--slds-c-accordion-section-spacing-inline-start,
     var(--sds-c-accordion-section-spacing-inline-start,
-    #{$spacing-small} * -1)));
+    -#{$spacing-small})));
   padding-top: var(--slds-c-accordion-section-spacing-block-start, var(--sds-c-accordion-section-spacing-block-start, #{$spacing-small}));
   padding-right: var(--slds-c-accordion-section-spacing-inline-end, var(--sds-c-accordion-section-spacing-inline-end, #{$spacing-small}));
   padding-bottom: var(--slds-c-accordion-section-spacing-block-end, var(--sds-c-accordion-section-spacing-block-end, #{$spacing-small}));
@@ -91,19 +91,19 @@
   margin-top: calc(
     var(--slds-c-accordion-section-spacing-block-start,
     var(--sds-c-accordion-section-spacing-block-start,
-    #{$spacing-small} * -1)));
+    -#{$spacing-small})));
   margin-right: calc(
     var(--slds-c-accordion-section-spacing-inline-end,
     var(--sds-c-accordion-section-spacing-inline-end,
-    #{$spacing-small} * -1)));
+    -#{$spacing-small})));
   margin-bottom: calc(
     var(--slds-c-accordion-section-spacing-block-end,
     var(--sds-c-accordion-section-spacing-block-end,
-    #{$spacing-small} * -1)));
+    -#{$spacing-small})));
   margin-left: calc(
     var(--slds-c-accordion-section-spacing-inline-start,
     var(--sds-c-accordion-section-spacing-inline-start,
-    #{$spacing-small} * -1)));
+    -#{$spacing-small})));
   padding-top: var(--slds-c-accordion-section-spacing-block-start, var(--sds-c-accordion-section-spacing-block-start, $spacing-small));
   padding-right: var(--slds-c-accordion-section-spacing-inline-end, var(--sds-c-accordion-section-spacing-inline-end, $spacing-small));
   padding-bottom: var(--slds-c-accordion-section-spacing-block-end, var(--sds-c-accordion-section-spacing-block-end, $spacing-small));

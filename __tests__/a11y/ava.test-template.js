@@ -7,7 +7,7 @@ const browserPromise = playwright.chromium.launch();
 
 // Will be replaced by ava.generate-tests.js
 const portNum = process.env.a11yPort || 9002;
-const stories = []; //[{name,id,type},...]
+const stories = []; // [{name,id,type},...]
 
 // required macro to allow Playwright tests to run efficiently when using the AVA test runner
 async function pageMacro(t, callback) {
@@ -21,23 +21,23 @@ async function pageMacro(t, callback) {
   }
 }
 
-const prettyPrintObject = (obj) => 
-  Object.keys(obj).map(key=>`${key}: ${obj[key]}`);
+const prettyPrintObject = (obj) =>
+  Object.keys(obj).map(key => `${key}: ${obj[key]}`);
 
-const generateNodeDescription = ({html, target, failureSummary}) => 
-  prettyPrintObject({html,target,failureSummary});
+const generateNodeDescription = ({ html, target, failureSummary }) =>
+  prettyPrintObject({ html, target, failureSummary });
 
-const generateDescription = ({id,impact,nodes}, i) => 
+const generateDescription = ({ id, impact, nodes }, i) =>
   [
-    `\nRULE ${i+1}:`,
-    prettyPrintObject({id,impact}).join('\n'), 
-    '\nViolation:', 
-    nodes.map(generateNodeDescription).map(x=>x.join('\n')).flat().join('\n\n'),
+    `\nRULE ${i + 1}:`,
+    prettyPrintObject({ id, impact }).join('\n'),
+    '\nViolation:',
+    nodes.map(generateNodeDescription).map(x => x.join('\n')).flat().join('\n\n'),
     '\nFor more info run these tests locally with `npm run test:a11y`\n'
   ];
 
 const generateLink = (address) =>
-`To view this error, run \`npm start\` and then click this link ${address}`
+  `To view this error, run \`npm start\` and then click this link ${address}`
 
 // repeatable function to run accessibility(a11y) tests for a story
 async function axeTest(t, page, story, address) {
@@ -45,6 +45,7 @@ async function axeTest(t, page, story, address) {
     const results = await new AxeBuilder({ page })
       .options(sa11yPresetRules.recommended)
       .include('#root')
+      .exclude('#GoogleMapID')
       .analyze();
 
     const numViolations = results.violations.length;
@@ -73,7 +74,7 @@ async function axeTest(t, page, story, address) {
     t.fail('!! Error occurred: ' + e);
   }
 }
-  
+
 const runTest = (story) => test(`» a11y: ${story.kind}/${story.name}`, pageMacro, async (t, page) => {
   const address = `http://localhost:${portNum}/iframe.html?id=${story.id}&args=&viewMode=story`;
   await page.goto(address, { timeout: 0 });
@@ -81,6 +82,6 @@ const runTest = (story) => test(`» a11y: ${story.kind}/${story.name}`, pageMacr
 });
 
 // init
-(()=>{
-    stories.forEach(runTest)
+(() => {
+  stories.forEach(runTest)
 })()

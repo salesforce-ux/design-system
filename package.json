@@ -201,7 +201,7 @@
   "optionalDependencies": {
     "fsevents": "*"
   },
-  "license": "SEE LICENSE IN README.md",
+  "license": "BSD-3-Clause",
   "repository": {
     "type": "git",
     "url": "git@github.com:salesforce-ux/design-system.git"

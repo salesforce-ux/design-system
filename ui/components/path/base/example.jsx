@@ -429,7 +429,7 @@ export const states = [
     id: 'mobile-default',
     label: 'Mobile: default',
     element: (
-      <SLDSFrame hideDeviceSelector>
+      <SLDSFrame hideDeviceSelector frameTitle="Example mobile styles for path">
         <PathBase />
       </SLDSFrame>
     )

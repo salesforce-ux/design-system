@@ -4,6 +4,11 @@
 ## Release 2.19.0 - April 12, 2022
 
 ## Components
+
+### [Dynamic Icons](https://www.lightningdesignsystem.com/components/dynamic-icons)
+#### Changed
+- Updated Global Action Help icon's `role` attribute from `presentation` to `img` for better accessibility compliance
+
 ### [Global Navigation](https://www.lightningdesignsystem.com/components/global-navigation)
 #### Added
 - Added `role="img"` to unread indicator dot to comply with accessibility usage rules for `aria-label`

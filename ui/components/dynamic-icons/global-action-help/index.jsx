@@ -7,7 +7,7 @@ let GlobalActionHelp = () => (
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 -12 78.5 110"
       aria-labelledby="title"
-      role="presentation"
+      role="img"
     >
       <defs>
         <mask id="questionMark" x="0" y="0" width="78.5" height="110">

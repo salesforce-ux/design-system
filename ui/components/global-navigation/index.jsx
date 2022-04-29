@@ -27,6 +27,7 @@ export const IndicatorUnread = props => (
     aria-label="New Activity"
     className="slds-indicator_unread"
     title="New Activity"
+    role="img"
   />
 );
 

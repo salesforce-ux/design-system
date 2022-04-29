@@ -18,6 +18,13 @@
     - Added `video_off`
 
 ## Components
+
+### [Accordion](https://www.lightningdesignsystem.com/components/accordion)
+#### Fixed
+
+- Fix for sass undefined operation compile error.
+- Fix wrong computed css margin rules.
+
 ### [Button Icons](https://www.lightningdesignsystem.com/components/button-icons)
 #### Added
 - Added `slds-button_icon-large` to support a Large variant for contained button icons

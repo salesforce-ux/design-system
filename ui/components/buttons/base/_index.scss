@@ -13,7 +13,7 @@
  */
 .slds-button {
   position: relative;
-  display: inline-flex;
+  display: inline-grid;
   align-items: center;
   padding-top: var(--slds-c-button-spacing-block-start, var(--sds-c-button-spacing-block-start, 0));
   padding-right: var(--slds-c-button-spacing-inline-end, var(--sds-c-button-spacing-inline-end, 0));

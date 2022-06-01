@@ -4,6 +4,13 @@
 
 <!-- ## [Unreleased] -->
 
+## 2.18.0
+
+### Fixed
+
+- Fix for sass undefined operation compile error.
+- Fix wrong computed css margin rules.
+
 ## 2.17.0
 
 ### Added

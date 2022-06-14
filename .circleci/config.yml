@@ -475,7 +475,7 @@ jobs:
   # Build & publish SLDS site (review app or upcoming/core-main/core-patch)
   publish-site:
     executor: slds-executor
-    resource_class: small
+    resource_class: medium
 
     steps:
       - add_ssh_keys:

@@ -8,14 +8,14 @@
     "CSS"
   ],
   "homepage": "https://lightningdesignsystem.com",
-  "version": "2.18.1",
+  "version": "2.19.0-dev",
   "author": "Salesforce",
   "bugs": {
     "url": "https://github.com/salesforce-ux/design-system/issues"
   },
   "slds": {
-    "name": "Summer ’22",
-    "id": "238"
+    "name": "Winter ’23",
+    "id": "240"
   },
   "important": [
     "'private' and 'config.slds.internal' should have the same value",

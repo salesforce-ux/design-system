@@ -30,7 +30,7 @@ export default [
             hasHiddenLabel
           >
             <SvgIcon
-              className="slds-icon slds-input__icon slds-input__icon_right slds-icon-text-default"
+              className="slds-icon slds-input__icon slds-input__icon_left slds-icon-text-default"
               sprite="utility"
               symbol="search"
             />

@@ -1,6 +1,8 @@
 <!-- Release notes authoring guidelines: http://keepachangelog.com/ -->
 <!-- On release, add general notes here. In time the legacy release notes will be add to this -->
 
+## 2.19.0 - Upcoming
+
 ## 2.18.1 - June 22, 2022
 
 - Corrected typos in blueprints:

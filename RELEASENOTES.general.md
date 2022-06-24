@@ -1,6 +1,12 @@
 <!-- Release notes authoring guidelines: http://keepachangelog.com/ -->
 <!-- On release, add general notes here. In time the legacy release notes will be add to this -->
 
+## 2.18.1 - June 22, 2022
+
+- Corrected typos in blueprints:
+  - components/checkbox
+  - components/vertical-navigation
+
 ## 2.18.0 - May 6, 2022
 
 - Removed `&_` shorthand from numerous selectors in SCSS files

@@ -17,7 +17,13 @@ const errorId = 'error_01';
 /// ////////////////////////////////////////
 
 let Fieldset = props => (
-  <fieldset className={classNames('slds-form-element', props.className)}>
+  <fieldset
+    className={classNames(
+      'slds-form-element',
+      { 'slds-is-required': props.required },
+      props.className
+    )}
+  >
     {props.children}
   </fieldset>
 );
@@ -144,7 +150,7 @@ export let Group = props => (
 );
 
 export let GroupRequired = props => (
-  <Fieldset>
+  <Fieldset required>
     <Legend>
       <abbr className="slds-required" title="required">
         *
@@ -159,7 +165,7 @@ export let GroupRequired = props => (
 );
 
 export let GroupError = props => (
-  <Fieldset className="slds-has-error">
+  <Fieldset required className="slds-has-error">
     <Legend>
       <abbr className="slds-required" title="required">
         *

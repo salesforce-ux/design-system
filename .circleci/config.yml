@@ -445,11 +445,6 @@ jobs:
             export PUBLISH_STORYBOOK_TO=${HEROKU_RELEASE_STORYBOOK_APP_NAME}
             else
             export PUBLISH_STORYBOOK_TO=${REVIEW_APP_NAME}
-            export EXISTING_REVIEW_APP=$(heroku apps:info -a ${REVIEW_APP_NAME} --json | jq -r ".app.name")
-            if [[ ${EXISTING_REVIEW_APP} == "" ]]; then
-              heroku apps:create ${REVIEW_APP_NAME} -t sfdc-uxe-slds
-              heroku pipelines:add slds -a ${REVIEW_APP_NAME} -s development
-            fi
             fi
             echo "=============================="
             echo ${PUBLISH_STORYBOOK_TO}
@@ -466,11 +461,6 @@ jobs:
               export SITE_URL=$(echo ${row} | base64 --decode | jq -r ".url")
               gh api ${STATUS_URL} -f state=success -f environment_url=${SITE_URL} -H "Accept: application/vnd.github.ant-man-preview+json"
             done
-
-      - run:
-          name: Create comment with link to review app
-          command: |
-            gh api --method POST -H "Accept: application/vnd.github.v3+json" /repos/salesforce-ux/design-system-internal/issues/${PR_NUMBER}/comments -f body="[Storybook Review app](https://${REVIEW_APP_NAME}.herokuapp.com) is ready for [${CIRCLE_SHA1}](https://github.com/salesforce-ux/design-system-internal/commit/${CIRCLE_SHA1})"
 
   # Build & publish SLDS site (review app or upcoming/core-main/core-patch)
   publish-site:
@@ -527,11 +517,6 @@ jobs:
             echo "=============================="
             echo ${HEROKU_APP_NAME}
             echo "=============================="
-            export EXISTING_REVIEW_APP=$(heroku apps:info -a ${HEROKU_APP_NAME} --json | jq -r ".app.name")
-            if [[ ${EXISTING_REVIEW_APP} == "" ]]; then
-              heroku apps:create ${HEROKU_APP_NAME} -t sfdc-uxe-slds
-              heroku pipelines:add slds-site-previews -a ${HEROKU_APP_NAME} -s development
-            fi
             heroku buildpacks -a ${HEROKU_APP_NAME} | grep "https://github.com/salesforce-ux/heroku-buildpack-nginx.git#dse" || heroku buildpacks:set https://github.com/salesforce-ux/heroku-buildpack-nginx.git#dse -a ${HEROKU_APP_NAME}
             heroku builds:create --source-tar site-next.tar.gz -a ${HEROKU_APP_NAME}
 
@@ -544,14 +529,6 @@ jobs:
               export SITE_URL=$(echo ${row} | base64 --decode | jq -r ".url")
               gh api ${STATUS_URL} -f state=success -f environment_url=${SITE_URL} -H "Accept: application/vnd.github.ant-man-preview+json"
             done
-
-      - set-github-pr-number
-      - run:
-          name: Create comment with link to review app
-          command: |
-            export HEROKU_APP_NAME=$(cat workspace/heroku-app-name.txt)
-
-            gh api --method POST -H "Accept: application/vnd.github.v3+json" /repos/salesforce-ux/design-system-internal/issues/${PR_NUMBER}/comments -f body="[SLDS Site Review app](https://${HEROKU_APP_NAME}.herokuapp.com) is ready for [${CIRCLE_SHA1}](https://github.com/salesforce-ux/design-system-internal/commit/${CIRCLE_SHA1})"
 
   vrt-init:
     executor: slds-executor

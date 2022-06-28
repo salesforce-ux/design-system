@@ -11,5 +11,5 @@ props:
     value: '{!PALETTE_NEUTRAL_100}'
     comment: Global Header background color
   BRAND_LOGO_IMAGE:
-    value: '/logo-noname.svg'
+    value: '/assets/images/logo-noname.svg'
     type: string

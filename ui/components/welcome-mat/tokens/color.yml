@@ -20,7 +20,7 @@ props:
 
   WELCOME_MAT_BACKGROUND_IMAGE_INFO:
     type: string
-    value: '/welcome-mat/bg-info@2x.png'
+    value: '/assets/images/welcome-mat/bg-info@2x.png'
     comment: Background Image Path for the Welcome Mat Info section
 
   WELCOME_MAT_BACKGROUND_COLOR_INFO:

@@ -5,7 +5,7 @@
 .slds-einstein-header {
   position: relative;
   background-color: $einstein-header-background-color;
-  background-image: url($static-image-path + $einstein-header-background);
+  background-image: url($einstein-header-background);
   background-repeat: no-repeat;
   background-position: left top;
   background-size: cover;
@@ -28,7 +28,7 @@
   .slds-einstein-header__figure:last-child {
     margin-bottom: calc((#{$spacing-small} + 5px) * -1);
     height: rem(76px);
-    background-image: url($static-image-path + $einstein-header-figure);
+    background-image: url($einstein-header-figure);
     background-position: right bottom;
     background-repeat: no-repeat;
   }

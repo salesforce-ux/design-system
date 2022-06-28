@@ -33,7 +33,7 @@
 
     .slds-popover__header {
       background-color: $popover-walkthrough-header-color-background;
-      background-image: url($static-image-path + $popover-walkthrough-header-image);
+      background-image: url($popover-walkthrough-header-image);
       background-repeat: no-repeat;
       background-position: bottom;
       background-size: contain;
@@ -94,7 +94,7 @@
   .slds-popover_feature {
     border-color: $popover-walkthrough-color-background-alt;
     background-color: $popover-walkthrough-color-background-alt;
-    background-image: url($static-image-path + $popover-walkthrough-alt-image);
+    background-image: url($popover-walkthrough-alt-image);
     background-repeat: no-repeat;
     background-size: 100% rem(36px);
     background-position: bottom;

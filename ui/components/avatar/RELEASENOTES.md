@@ -2,12 +2,6 @@
 
 # Avatar Release Notes
 
-## 2.19
-
-### Fixed
-
-- Fixed base group image, group image medium and group image small hardcoded image paths
-
 ## 2.17.0
 
 ### Added

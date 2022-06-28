@@ -2,12 +2,6 @@
 
 # Global Header Release Notes
 
-## 2.19
-
-### Fixed
-
-- Fixed hardcoded base global header logo image path
-
 <!-- ## [Unreleased] -->
 ## 2.12.3
 

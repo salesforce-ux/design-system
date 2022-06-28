@@ -26,10 +26,10 @@ props:
   POPOVER_WALKTHROUGH_COLOR_BACKGROUND_ALT:
     value: '{!PALETTE_BLUE_50}'
   POPOVER_WALKTHROUGH_HEADER_IMAGE:
-    value: '/popovers/popover-header.png'
+    value: '/assets/images/popovers/popover-header.png'
     type: string
   POPOVER_WALKTHROUGH_ALT_IMAGE:
-    value: '/popovers/popover-action.png'
+    value: '/assets/images/popovers/popover-action.png'
     type: string
   POPOVER_WALKTHROUGH_ALT_NUBBIN_COLOR_BACKGROUND:
     value: '{!PALETTE_BLUE_50}'

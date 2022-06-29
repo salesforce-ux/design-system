@@ -927,3 +927,53 @@ props:
     value: '#0F1E3C'
   DASHBOARD_COMPONENT:
     value: '#7E8BE4'
+  AI_ACCELERATOR_CARD:
+    value: '#0176d3'
+  CONNECT_WALLET:
+    value: '#BA0517'
+  CONTRACT_LINE_OUTCOME:
+    value: '#2E844A'
+  CONTRACT_LINE_OUTCOME_DATA:
+    value: '#2E844A'
+  CRYPTO_CATEGORY_WALLET_GROUP:
+    value: '#BA0517'
+  CRYPTO_PRODUCT:
+    value: '#8C5EC6'
+  CRYPTO_PRODUCT_CATEGORY_WALLET_ROLE:
+    value: '#0B827C'
+  CRYPTO_TRANSACTION:
+    value: '#C0532E'
+  CRYPTO_TRANSACTION_ENVELOPE:
+    value: '#0B827C'
+  CRYPTO_TRANSACTION_ENVELOPE_ITEM:
+    value: '#107CAD'
+  CRYPTO_WALLET:
+    value: '#2E844A'
+  CRYPTO_WALLET_GROUP:
+    value: '#0176D3'
+  CRYPTO_WALLET_GROUP_ITEM:
+    value: '#8C5EC6'
+  CUSTOMER:
+    value: '#04844B'
+  CUSTOMER_WORKSPACE:
+    value: '#04844B'
+  LEARNER_PROGRAM:
+    value: '#CA8501'
+  NFT_SETTINGS:
+    value: '#C5486D'
+  NFT_STUDIO:
+    value: '#5867E8'
+  PROMPT:
+    value: '#06A59A'
+  SETUP_MODAL:
+    value: '#0079BC'
+  SNIPPET_ALT:
+    value: '#0079BC'
+  TAX_POLICY:
+    value: '#04844B'
+  TAX_RATE:
+    value: '#04844B'
+  TAX_TREATMENT:
+    value: '#04844B'
+  WATER:
+    value: '#1B96FF'

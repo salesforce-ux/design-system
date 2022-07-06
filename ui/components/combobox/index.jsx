@@ -168,7 +168,7 @@ const ComboboxInput = ({
       {leftInputIcon && leftInputIcon}
       {selectOnly ? (
         <ComboboxInputFaux
-          id={`${id}-selected-value`}
+          id={id}
           {...{
             hasFocus,
             isDisabled,

@@ -79,7 +79,7 @@ export let examples = [
   {
     id: 'success',
     label: 'Success',
-    element: <ProgressBar isSuccess value="75" />
+    element: <ProgressBar isSuccess value="100" />
   },
   {
     id: 'circular',

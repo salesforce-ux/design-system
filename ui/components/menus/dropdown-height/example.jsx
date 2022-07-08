@@ -12,7 +12,7 @@ import { Trigger, Menu, MenuList, MenuItem } from '../dropdown/example';
 let Length5 = props => (
   <div className="demo-only" style={{ height: '260px' }}>
     <Trigger isOpen>
-      <Menu className="slds-dropdown_left slds-dropdown_small">
+      <Menu className="slds-dropdown_left slds-dropdown_small slds-dropdown_length-5">
         <MenuList className="slds-dropdown_length-5">
           <MenuItem tabIndex="0">Menu Item One</MenuItem>
           <MenuItem>Menu Item Two</MenuItem>
@@ -33,7 +33,7 @@ let Length5 = props => (
 let Length7 = props => (
   <div className="demo-only" style={{ height: '300px' }}>
     <Trigger isOpen>
-      <Menu className="slds-dropdown_left slds-dropdown_small">
+      <Menu className="slds-dropdown_left slds-dropdown_small slds-dropdown_length-7">
         <MenuList className="slds-dropdown_length-7">
           <MenuItem tabIndex="0">Menu Item One</MenuItem>
           <MenuItem>Menu Item Two</MenuItem>
@@ -54,7 +54,7 @@ let Length7 = props => (
 let Length10 = props => (
   <div className="demo-only" style={{ height: '430px' }}>
     <Trigger isOpen>
-      <Menu className="slds-dropdown_left slds-dropdown_small">
+      <Menu className="slds-dropdown_left slds-dropdown_small slds-dropdown_length-10">
         <MenuList className="slds-dropdown_length-10">
           <MenuItem tabIndex="0">Menu Item One</MenuItem>
           <MenuItem>Menu Item Two</MenuItem>
@@ -75,7 +75,7 @@ let Length10 = props => (
 let IconLength5 = props => (
   <div className="demo-only" style={{ height: '260px' }}>
     <Trigger isOpen>
-      <Menu className="slds-dropdown_left slds-dropdown_small">
+      <Menu className="slds-dropdown_left slds-dropdown_small slds-dropdown_length-with-icon-5">
         <MenuList className="slds-dropdown_length-with-icon-5">
           <MenuItem tabIndex="0">
             <SvgIcon
@@ -166,7 +166,7 @@ let IconLength5 = props => (
 let IconLength7 = props => (
   <div className="demo-only" style={{ height: '320px' }}>
     <Trigger isOpen>
-      <Menu className="slds-dropdown_left slds-dropdown_small">
+      <Menu className="slds-dropdown_left slds-dropdown_small slds-dropdown_length-with-icon-7">
         <MenuList className="slds-dropdown_length-with-icon-7">
           <MenuItem tabIndex="0">
             <SvgIcon
@@ -257,7 +257,7 @@ let IconLength7 = props => (
 let IconLength10 = props => (
   <div className="demo-only" style={{ height: '450px' }}>
     <Trigger isOpen>
-      <Menu className="slds-dropdown_left slds-dropdown_small">
+      <Menu className="slds-dropdown_left slds-dropdown_small slds-dropdown_length-with-icon-10">
         <MenuList className="slds-dropdown_length-with-icon-10">
           <MenuItem tabIndex="0">
             <SvgIcon

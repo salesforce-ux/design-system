@@ -4,6 +4,10 @@
 
 <!-- ## [Unreleased] -->
 
+## 2.19.0
+### Changed
+- Added tabindex to Footless example for programmatic focus use case.
+
 ## 2.18.0
 ### Changed
 

@@ -2,6 +2,7 @@
 <!-- On release, add general notes here. In time the legacy release notes will be add to this -->
 
 ## 2.19.0 - Upcoming
+
 - Updated icons to `v10.4.0`
   - Standard Set:
     - Added `ai_accelerator_card`

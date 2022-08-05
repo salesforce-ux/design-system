@@ -69,6 +69,10 @@
 #### Changed
 - Added tabindex to Footless example for programmatic focus use case.
 
+### [Progress Bar](https://www.lightningdesignsystem.com/components/progress-bar)
+#### Added
+- Added example for Success under States
+
 ### [Tabs](https://www.lightningdesignsystem.com/components/tabs)
 #### Added
 - Added `role="img"` to unread indicator dot to comply with accessibility usage rules for `aria-label`

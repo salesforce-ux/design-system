@@ -2,6 +2,12 @@
 
 # Welcome Mat Release Notes
 
+## 2.19
+
+### Fixed
+
+- Fixed hardcoded base info background image path
+
 <!-- ## [Unreleased] -->
 
 ## 2.17.5

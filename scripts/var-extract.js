@@ -36,7 +36,7 @@ const extractVarsFromSLDS = (props = {}) => {
 
   // parse through all variants of each component / util
   componentList.concat(utilityList).map((fileGlob) => {
-    const cssFiles = glob.sync(fileGlob);
+    const cssFiles = glob.sync(fileGlob);.
     let varsData = {};
 
     cssFiles.map((filename) => {
@@ -44,12 +44,10 @@ const extractVarsFromSLDS = (props = {}) => {
       const fileVars = extractVarsFromCSS(cssContent, {
         allowPattern: varsAllowPattern,
       });
-
       if (Object.keys(fileVars).length > 0) {
         varsData = Object.assign(fileVars, varsData);
       }
     });
-
     if (Object.keys(varsData).length > 0) {
       const fileParts = fileGlob.match(/generated\/css\/(.*?)\/(.*?)\//);
       const itemType = fileParts[1];

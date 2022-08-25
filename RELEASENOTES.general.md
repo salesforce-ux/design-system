@@ -1,7 +1,7 @@
 <!-- Release notes authoring guidelines: http://keepachangelog.com/ -->
 <!-- On release, add general notes here. In time the legacy release notes will be add to this -->
 
-## 2.19.0 - Upcoming
+## 2.19.0 - August 11, 2022
 
 - Updated icons to `v10.4.0`
   - Standard Set:

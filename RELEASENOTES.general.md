@@ -55,6 +55,14 @@
     - Added `transport_walking`
     - Added `utility`
     - Added `water`
+  
+- BRAND updates to below colors of the palette
+  - `PALETTE_GREEN_20`: `#1C3326`
+  - `PALETTE_GREEN_40`: `#396547`
+  - `PALETTE_HOT_ORANGE_20`: `#4A2413`
+  - `PALETTE_INDIGO_20`: `#321D71`
+  - `PALETTE_PURPLE_80`: `#D7BFF2`
+  - `PALETTE_VIOLET_20`: `#481A54`
 
 ## 2.18.1 - June 22, 2022
 

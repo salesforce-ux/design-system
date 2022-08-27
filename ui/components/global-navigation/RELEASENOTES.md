@@ -4,6 +4,13 @@
 
 <!-- ## [Unreleased] -->
 
+## 2.19.0
+
+### Added
+
+- Added `role="img"` to unread indicator dot to comply with accessibility usage rules for `aria-label`
+
+
 ## 2.13.0
 
 ### Changed

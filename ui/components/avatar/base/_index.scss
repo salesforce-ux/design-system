@@ -33,7 +33,7 @@
    * @restrict .slds-avatar
    */
   &.slds-avatar_group-image-small {
-    background: url($group-default-avatar-small) top left / cover no-repeat;
+    background: url($static-image-path + $group-default-avatar-small) top left / cover no-repeat;
   }
 
   /**
@@ -43,7 +43,7 @@
    * @restrict .slds-avatar
    */
   &.slds-avatar_group-image-medium {
-    background: url($group-default-avatar-medium) top left / cover no-repeat;
+    background: url($static-image-path + $group-default-avatar-medium) top left / cover no-repeat;
   }
 
   /**
@@ -53,7 +53,7 @@
    * @restrict .slds-avatar
    */
   &.slds-avatar_group-image-large {
-    background: url($group-default-avatar) top left / cover no-repeat;
+    background: url($static-image-path + $group-default-avatar) top left / cover no-repeat;
   }
 
   /**
@@ -63,7 +63,7 @@
    * @restrict .slds-avatar
    */
   &.slds-avatar_profile-image-small {
-    background: url($user-default-avatar-small) top left / cover no-repeat;
+    background: url($static-image-path + $user-default-avatar-small) top left / cover no-repeat;
   }
 
   /**
@@ -73,7 +73,7 @@
    * @restrict .slds-avatar
    */
   &.slds-avatar_profile-image-medium {
-    background: url($user-default-avatar-medium) top left / cover no-repeat;
+    background: url($static-image-path + $user-default-avatar-medium) top left / cover no-repeat;
   }
 
   /**
@@ -83,7 +83,7 @@
    * @restrict .slds-avatar
    */
   &.slds-avatar_profile-image-large {
-    background: url($user-default-avatar) top left / cover no-repeat;
+    background: url($static-image-path + $user-default-avatar) top left / cover no-repeat;
   }
 }
 

@@ -1,6 +1,61 @@
 <!-- Release notes authoring guidelines: http://keepachangelog.com/ -->
 <!-- On release, add general notes here. In time the legacy release notes will be add to this -->
 
+## 2.19.0 - August 11, 2022
+
+- Updated icons to `v10.4.0`
+  - Standard Set:
+    - Added `ai_accelerator_card`
+    - Added `connect_wallet`
+    - Added `contract_line_outcome`
+    - Added `contract_line_outcome_data`
+    - Added `crypto_category_wallet_group`
+    - Added `crypto_product`
+    - Added `crypto_product_category_wallet_role`
+    - Added `crypto_transaction`
+    - Added `crypto_transaction_envelope`
+    - Added `crypto_transaction_envelope_item`
+    - Added `crypto_wallet`
+    - Added `crypto_wallet_group`
+    - Added `crypto_wallet_group_item`
+    - Added `customer`
+    - Added `customer_workspace`
+    - Added `learner_program`
+    - Added `nft_settings`
+    - Added `nft_studio`
+    - Added `prompt`
+    - Added `setup_modal`
+    - Added `snippet_alt`
+    - Added `tax_policy`
+    - Added `tax_rate`
+    - Added `tax_treatment`
+    - Added `water`
+  - Action Set:
+    - Added `action_scan_enabled`
+    - Added `action_scan_disabled`
+  - Utility Set:
+    - Added `captions`
+    - Added `contract_line_outcome`
+    - Added `contract_line_outcome_data`
+    - Added `customer`
+    - Added `customer_workspace`
+    - Added `detach`
+    - Added `hazmat_equipment`
+    - Added `label`
+    - Added `labels`
+    - Added `record_alt`
+    - Added `segments`
+    - Added `tax_policy`
+    - Added `tax_rate`
+    - Added `tax_treatment`
+    - Added `tollways`
+    - Added `transport_bicycle`
+    - Added `transport_heavy_truck`
+    - Added `transport_light_truck`
+    - Added `transport_walking`
+    - Added `utility`
+    - Added `water`
+
 ## 2.18.1 - June 22, 2022
 
 - Corrected typos in blueprints:

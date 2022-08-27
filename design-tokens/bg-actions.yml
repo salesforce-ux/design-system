@@ -408,3 +408,7 @@ props:
     value: '#EF6E5D'
   ACTION_ADJUST_VALUE:
     value: '#47B46C'
+  ACTION_SCAN_ENABLED:
+    value: '#1B96FF'
+  ACTION_SCAN_DISABLED:
+    value: '#939393'

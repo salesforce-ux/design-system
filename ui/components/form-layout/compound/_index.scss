@@ -15,9 +15,35 @@
 .slds-form--compound {
   width: 100%;
 
+  > .slds-form-element {
+    margin-top:
+      var(--slds-c-form-compound-spacing-block-start,
+      var(--slds-c-form-compound-spacing-block, 0));
+    margin-bottom:
+      var(--slds-c-form-compound-spacing-block-end,
+      var(--slds-c-form-compound-spacing-block, 0));
+    margin-left:
+      var(--slds-c-form-compound-spacing-inline-start,
+      var(--slds-c-form-compound-spacing-inline, 0));
+    margin-right:
+      var(--slds-c-form-compound-spacing-inline-end,
+      var(--slds-c-form-compound-spacing-inline, 0));
+  }
+
   .slds-form-element__row {
     display: flex;
-    margin-bottom: $spacing-xx-small;
+    margin-top:
+      var(--slds-c-form-row-spacing-block-start,
+      var(--slds-c-form-row-spacing-block, 0));
+    margin-bottom:
+      var(--slds-c-form-row-spacing-block-end,
+      var(--slds-c-form-row-spacing-block, #{$spacing-xx-small}));
+    margin-left:
+      var(--slds-c-form-row-spacing-inline-start,
+      var(--slds-c-form-row-spacing-inline, 0));
+    margin-right:
+      var(--slds-c-form-row-spacing-inline-end,
+      var(--slds-c-form-row-spacing-inline, 0));
 
     + .slds-form-element__row {
       clear: both;

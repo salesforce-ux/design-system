@@ -19,6 +19,7 @@ orbs:
   node: circleci/node@4.7.0
   heroku: circleci/heroku@1.2.2
   browser-tools: circleci/browser-tools@1.1.3
+  gh: circleci/github-cli@2.1.0
 
 executors:
   slds-executor:
@@ -194,17 +195,6 @@ commands:
               fi
             fi
 
-  install-gh-cli:
-    description: 'Install Github CLI'
-    steps:
-      - run:
-          name: Install Github CLI
-          command: |
-            sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-key C99B11DEB97541F0
-            sudo apt-add-repository https://cli.github.com/packages
-            sudo apt update
-            sudo apt install gh
-
   launch-static-storybook:
     description: 'Launch local static Storybook server'
     steps:
@@ -231,7 +221,7 @@ jobs:
     steps:
       - checkout
       - run: mkdir -p workspace
-      - install-gh-cli
+      - gh/install
       - get-pr-number
 
       - run:
@@ -350,7 +340,7 @@ jobs:
       - attach_workspace:
           at: workspace
 
-      - install-gh-cli
+      - gh/install
 
       - run:
           name: 'Github: attach artifact to release'
@@ -452,7 +442,7 @@ jobs:
             heroku buildpacks -a ${PUBLISH_STORYBOOK_TO} | grep "https://github.com/salesforce-ux/heroku-buildpack-nginx.git#dse" || heroku buildpacks:set https://github.com/salesforce-ux/heroku-buildpack-nginx.git#dse -a ${PUBLISH_STORYBOOK_TO}
             heroku builds:create --source-tar workspace/storybook.tar.gz -a ${PUBLISH_STORYBOOK_TO}
 
-      - install-gh-cli
+      - gh/install
       - run:
           name: Set Github deployments to "success"
           command: |
@@ -520,7 +510,7 @@ jobs:
             heroku buildpacks -a ${HEROKU_APP_NAME} | grep "https://github.com/salesforce-ux/heroku-buildpack-nginx.git#dse" || heroku buildpacks:set https://github.com/salesforce-ux/heroku-buildpack-nginx.git#dse -a ${HEROKU_APP_NAME}
             heroku builds:create --source-tar site-next.tar.gz -a ${HEROKU_APP_NAME}
 
-      - install-gh-cli
+      - gh/install
       - run:
           name: Set Github deployments to "success"
           command: |
@@ -537,7 +527,7 @@ jobs:
     steps:
       - checkout
       - run: mkdir -p workspace
-      - install-gh-cli
+      - gh/install
       - get-pr-number
 
       - persist_to_workspace:

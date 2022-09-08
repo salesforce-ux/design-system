@@ -1,7 +1,9 @@
 <!-- Release notes authoring guidelines: http://keepachangelog.com/ -->
 <!-- On release, add general notes here. In time the legacy release notes will be add to this -->
 
-## 2.19.0 - Upcoming
+## 2.20.0 - Upcoming
+
+## 2.19.0 - August 11, 2022
 
 - Updated icons to `v10.4.0`
   - Standard Set:
@@ -55,7 +57,7 @@
     - Added `transport_walking`
     - Added `utility`
     - Added `water`
-  
+
 - BRAND updates to below colors of the palette
   - `PALETTE_GREEN_20`: `#1C3326`
   - `PALETTE_GREEN_40`: `#396547`

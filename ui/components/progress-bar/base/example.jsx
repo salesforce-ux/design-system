@@ -65,6 +65,11 @@ export let states = [
     id: '100',
     label: '100% complete',
     element: <ProgressBar value="100" />
+  },
+  {
+    id: 'success',
+    label: 'Success Color',
+    element: <ProgressBar isSuccess value="100" />
   }
 ];
 
@@ -75,11 +80,6 @@ export let examples = [
     element: (
       <ProgressBarDescriptive label="Einstein Setup Assistant" value="25" />
     )
-  },
-  {
-    id: 'success',
-    label: 'Success',
-    element: <ProgressBar isSuccess value="75" />
   },
   {
     id: 'circular',

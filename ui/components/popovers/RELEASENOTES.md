@@ -2,6 +2,12 @@
 
 # Popovers Release Notes
 
+## 2.19
+
+### Fixed
+
+- Fixed hardcoded walk through header and alt image paths
+
 <!-- ## [Unreleased] -->
 
 ## 2.18.0

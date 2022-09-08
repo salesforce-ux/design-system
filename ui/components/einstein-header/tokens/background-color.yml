@@ -8,10 +8,10 @@ imports:
 - "../../../../design-tokens/aliases/color-palettes.yml"
 props:
   EINSTEIN_HEADER_BACKGROUND:
-    value: '/assets/images/einstein-headers/einstein-header-background.svg'
+    value: '/einstein-headers/einstein-header-background.svg'
     type: string
   EINSTEIN_HEADER_FIGURE:
-    value: '/assets/images/einstein-headers/einstein-figure.svg'
+    value: '/einstein-headers/einstein-figure.svg'
     type: string
   EINSTEIN_HEADER_BACKGROUND_COLOR:
     value: '{!PALETTE_CLOUD_BLUE_80}'

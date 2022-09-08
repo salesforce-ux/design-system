@@ -52,7 +52,7 @@
   overflow: auto;
   padding: $spacing-medium $spacing-xx-large $welcome-mat-spacing-info;
   color: $welcome-mat-text-color-info;
-  background-image: url($welcome-mat-background-image-info);
+  background-image: url($static-image-path + $welcome-mat-background-image-info);
   background-position: bottom center;
   background-repeat: no-repeat;
   background-size: contain;

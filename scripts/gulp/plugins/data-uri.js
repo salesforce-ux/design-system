@@ -2,7 +2,7 @@ const fs = require('fs');
 const mime = require('mime');
 const path = require('path');
 
-const root = path.resolve(__dirname, '../../../');
+const root = path.resolve(__dirname, '../../../assets/images');
 
 module.exports = (opts = {}) => {
   return {

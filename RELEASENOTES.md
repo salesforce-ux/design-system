@@ -3,6 +3,8 @@
 
 ## Release 2.20.0 - Upcoming
 
+- Updated background colors for Standard and Actions icons
+
 ## Release 2.19.0 - August 11, 2022
 
 - Updated icons to `v10.4.0`

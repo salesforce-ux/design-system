@@ -9,888 +9,888 @@ global:
   - background-color
 props:
   LOG_A_CALL:
-    value: '#48C3CC'
+    value: '#06A59A'
   DOCUMENT:
-    value: '#BAAC93'
+    value: '#939393'
   ENVIRONMENT_HUB:
-    value: '#54698d'
+    value: '#107CAD'
   FLOW:
-    value: '#0079BC'
+    value: '#107CAD'
   SOSSESSION:
-    value: '#54698d'
+    value: '#107CAD'
   PROCESS:
-    value: '#0079BC'
+    value: '#107CAD'
   NEWS:
-    value: '#7F8DE1'
+    value: '#5867E8'
   HOME:
-    value: '#EF7EAD'
+    value: '#FF538A'
   ACCOUNT:
-    value: '#7F8DE1'
+    value: '#5867E8'
   APPS_ADMIN:
-    value: '#9895EE'
+    value: '#5867E8'
   ANNOUNCEMENT:
-    value: '#62B7ED'
+    value: '#1B96FF'
   PERSON_ACCOUNT:
-    value: '#7F8DE1'
+    value: '#5867E8'
   SOCIAL:
-    value: '#EA74A2'
+    value: '#FF538A'
   CAMPAIGN_MEMBERS:
-    value: '#F49756'
+    value: '#FF5D2D'
   ARTICLE:
-    value: '#F2CF5B'
+    value: '#FF5D2D'
   ANSWER_PUBLIC:
-    value: '#F2CF5B'
+    value: '#FF5D2D'
   ANSWER_PRIVATE:
-    value: '#F2CF5B'
+    value: '#FF5D2D'
   ANSWER_BEST:
-    value: '#F2CF5B'
+    value: '#FF5D2D'
   AVATAR_LOADING:
-    value: '#B8C3CE'
+    value: '#939393'
   CAMPAIGN:
-    value: '#F49756'
+    value: '#FF5D2D'
   CALIBRATION:
-    value: '#47CFD2'
+    value: '#06A59A'
   AVATAR:
-    value: '#62B7ED'
+    value: '#1B96FF'
   APPROVAL:
-    value: '#50CC7A'
+    value: '#3BA755'
   APPS:
-    value: '#3C97DD'
+    value: '#1B96FF'
   USER:
-    value: '#34BECD'
+    value: '#06A59A'
   EVERNOTE:
-    value: '#86C86F'
+    value: '#3BA755'
   COACHING:
-    value: '#F67594'
+    value: '#FF538A'
   CONNECTED_APPS:
-    value: '#9895EE'
+    value: '#5867E8'
   DRAFTS:
-    value: '#6CA1E9'
+    value: '#1B96FF'
   EMAIL:
-    value: '#95AEC5'
+    value: '#939393'
   EMAIL_IQ:
-    value: '#a094ed'
+    value: '#5867E8'
     deprecated: true
   ENDORSEMENT:
-    value: '#8B9AE3'
+    value: '#5867E8'
   EVENT:
-    value: '#EB7092'
+    value: '#FF538A'
   DROPBOX:
-    value: '#52AEF9'
+    value: '#1B96FF'
   CONCUR:
-    value: '#4CC3C7'
+    value: '#06A59A'
   EMAIL_CHATTER:
-    value: '#F2CF5B'
+    value: '#FF5D2D'
   CASE_TRANSCRIPT:
-    value: '#F2CF5B'
+    value: '#FF5D2D'
   CASE_EMAIL:
-    value: '#F2CF5B'
+    value: '#FF5D2D'
   CASE_LOG_A_CALL:
-    value: '#F2CF5B'
+    value: '#FF5D2D'
   CASE_COMMENT:
-    value: '#F2CF5B'
+    value: '#FF5D2D'
   CASE_CHANGE_STATUS:
-    value: '#F2CF5B'
+    value: '#FF5D2D'
   WORK_ORDER:
-    value: '#50E3C2'
+    value: '#06A59A'
   WORK_ORDER_ITEM:
-    value: '#33A8DC'
+    value: '#1B96FF'
   CLIENT:
-    value: '#00D2BE'
+    value: '#06A59A'
   CONTRACT:
-    value: '#6EC06E'
+    value: '#3BA755'
   DASHBOARD:
-    value: '#EF6E64'
+    value: '#FF538A'
   CASE:
-    value: '#F2CF5B'
+    value: '#FF5D2D'
   EMPTY:
-    value: '#8199AF'
+    value: '#939393'
   DEFAULT:
-    value: '#8199AF'
+    value: '#939393'
   CUSTOM:
-    value: '#8199AF'
+    value: '#939393'
   CANVAS:
-    value: '#8199AF'
+    value: '#939393'
   CONTACT:
-    value: '#A094ED'
+    value: '#5867E8'
   PORTAL:
-    value: '#AEC770'
+    value: '#3BA755'
   PRODUCT:
-    value: '#B781D3'
+    value: '#9050E9'
   PRICEBOOK:
-    value: '#B781D3'
+    value: '#9050E9'
   FEED:
-    value: '#62B7ED'
+    value: '#1B96FF'
   FEEDBACK:
-    value: '#6DA1EA'
+    value: '#1B96FF'
   FILE:
-    value: '#BAAC93'
+    value: '#939393'
   GOALS:
-    value: '#56AADF'
+    value: '#1B96FF'
   GROUPS:
-    value: '#779EF2'
+    value: '#1B96FF'
   HOUSEHOLD:
-    value: '#00AFA0'
+    value: '#06A59A'
   HIERARCHY:
-    value: '#34becd'
+    value: '#06A59A'
   INSIGHTS:
-    value: '#EC94ED'
+    value: '#CB65FF'
   INVESTMENT_ACCOUNT:
-    value: '#4BC076'
+    value: '#3BA755'
   PERFORMANCE:
-    value: '#F8B156'
+    value: '#FF5D2D'
   LINK:
-    value: '#7A9AE6'
+    value: '#1B96FF'
   METRICS:
-    value: '#56AADF'
+    value: '#1B96FF'
   NOTE:
-    value: '#E6D478'
+    value: '#FF5D2D'
   LEAD:
-    value: '#F88962'
+    value: '#FF5D2D'
   OPPORTUNITY:
-    value: '#FCB95B'
+    value: '#FF5D2D'
   CALL:
-    value: '#F2CF5B'
+    value: '#FF5D2D'
   CALL_HISTORY:
-    value: '#F2CF5B'
+    value: '#FF5D2D'
   ORDERS:
-    value: '#769ED9'
+    value: '#1B96FF'
   POST:
-    value: '#65CAE4'
+    value: '#1B96FF'
   POLL:
-    value: '#699BE1'
+    value: '#1B96FF'
   PHOTO:
-    value: '#D7D1D1'
+    value: '#939393'
   PEOPLE:
-    value: '#34BECD'
+    value: '#06A59A'
   GENERIC_LOADING:
-    value: '#B8C3CE'
+    value: '#939393'
   GROUP_LOADING:
-    value: '#B8C3CE'
+    value: '#939393'
   RECENT:
-    value: '#6CA1E9'
+    value: '#1B96FF'
   SOLUTION:
-    value: '#8FC972'
+    value: '#3BA755'
   RECORD:
-    value: '#7DC37D'
+    value: '#3BA755'
   QUESTION_BEST:
-    value: '#F2CF5B'
+    value: '#FF5D2D'
   QUESTION_FEED:
-    value: '#F2CF5B'
+    value: '#FF5D2D'
   RELATED_LIST:
-    value: '#59BCAB'
+    value: '#06A59A'
   SKILL_ENTITY:
-    value: '#8B9AE3'
+    value: '#5867E8'
   SCAN_CARD:
-    value: '#F39E58'
+    value: '#FF5D2D'
   REPORT:
-    value: '#2ECBBE'
+    value: '#06A59A'
   QUOTES:
-    value: '#88C651'
+    value: '#3BA755'
   TASK:
-    value: '#4BC076'
+    value: '#3BA755'
   TASK2:
-    value: '#4BC076'
+    value: '#3BA755'
   TEAM_MEMBER:
-    value: '#F2CF5B'
+    value: '#FF5D2D'
   THANKS:
-    value: '#E9696E'
+    value: '#FF538A'
   REWARD:
-    value: '#E9696E'
+    value: '#FF538A'
   THANKS_LOADING:
-    value: '#B8C3CE'
+    value: '#939393'
   TODAY:
-    value: '#EF7EAD'
+    value: '#FF538A'
   TOPIC:
-    value: '#56AADF'
+    value: '#1B96FF'
   UNMATCHED:
-    value: '#62B7ED'
+    value: '#1B96FF'
   MARKETING_ACTIONS:
-    value: '#6bbd6e'
+    value: '#3BA755'
   RELATIONSHIP:
-    value: '#3c97dd'
+    value: '#1B96FF'
   FOLDER:
-    value: '#8B9AE3'
+    value: '#5867E8'
   SERVICE_CONTRACT:
-    value: '#8A76F0'
+    value: '#5867E8'
   MERGE:
-    value: '#F2CF5B'
+    value: '#FF5D2D'
   FORECASTS:
-    value: '#6BBD6E'
+    value: '#3BA755'
   ENTITLEMENTS:
-    value: '#B781D3'
+    value: '#9050E9'
   SALES_PATH:
-    value: '#2A739E'
+    value: '#107CAD'
   CUSTOM_NOTIFICATION:
-    value: '#6BB7E4'
+    value: '#1B96FF'
   DATADOTCOM:
-    value: '#1589EE'
+    value: '#1B96FF'
   RTC_PRESENCE:
-    value: '#47CFD2'
+    value: '#06A59A'
   PRODUCT_CONSUMED:
-    value: '#55BC9C'
+    value: '#06A59A'
   PRODUCT_TRANSFER:
-    value: '#E3734F'
+    value: '#FF5D2D'
   PRODUCT_ITEM:
-    value: '#769ED9'
+    value: '#1B96FF'
   PRODUCT_ITEM_TRANSACTION:
-    value: '#F88962'
+    value: '#FF5D2D'
   LOCATION:
-    value: '#4BC076'
+    value: '#3BA755'
   ADDRESS:
-    value: '#4BC076'
+    value: '#3BA755'
   CAROUSEL:
-    value: '#6bbd6e'
+    value: '#3BA755'
   ASSIGNED_RESOURCE:
-    value: '#45C173'
+    value: '#3BA755'
   OPERATING_HOURS:
-    value: '#6B9EE2'
+    value: '#1B96FF'
   PRODUCT_REQUIRED:
-    value: '#EF6E64'
+    value: '#FF538A'
   RESOURCE_ABSENCE:
-    value: '#45C173'
+    value: '#3BA755'
   RESOURCE_CAPACITY:
-    value: '#45C173'
+    value: '#3BA755'
   RESOURCE_PREFERENCE:
-    value: '#45C173'
+    value: '#3BA755'
   RESOURCE_SKILL:
-    value: '#45C173'
+    value: '#3BA755'
   SERVICE_TERRITORY_MEMBER:
-    value: '#7E8BE4'
+    value: '#5867E8'
   SERVICE_APPOINTMENT:
-    value: '#7E8BE4'
+    value: '#5867E8'
   SERVICE_REPORT:
-    value: '#7E8BE4'
+    value: '#5867E8'
   SERVICE_RESOURCE:
-    value: '#7E8BE4'
+    value: '#5867E8'
   SERVICE_TERRITORY:
-    value: '#7E8BE4'
+    value: '#5867E8'
   SKILL:
-    value: '#FA975C'
+    value: '#FF5D2D'
   SKILL_REQUIREMENT:
-    value: '#FA975C'
+    value: '#FF5D2D'
   TIMESLOT:
-    value: '#FAB24C'
+    value: '#FF5D2D'
   WORK_TYPE:
-    value: '#54698D'
+    value: '#107CAD'
   ENTITLEMENT:
-    value: '#7E8BE4'
+    value: '#5867E8'
   LIVE_CHAT:
-    value: '#F88960'
+    value: '#FF5D2D'
   SHIPMENT:
-    value: '#7E8BE4'
+    value: '#5867E8'
   MAINTENANCE_PLAN:
-    value: '#2A739E'
+    value: '#107CAD'
   MAINTENANCE_ASSET:
-    value: '#2A739E'
+    value: '#107CAD'
   SERVICE_TERRITORY_LOCATION:
-    value: '#7E8BE4'
+    value: '#5867E8'
   PRODUCT_REQUEST:
-    value: '#88C651'
+    value: '#3BA755'
   PRODUCT_REQUEST_LINE_ITEM:
-    value: '#88C651'
+    value: '#3BA755'
   ENTITY_MILESTONE:
-    value: '#F49756'
+    value: '#FF5D2D'
   CASE_MILESTONE:
-    value: '#F2CF5B'
+    value: '#FF5D2D'
   ENTITLEMENT_PROCESS:
-    value: '#7E8BE4'
+    value: '#5867E8'
   ENTITLEMENT_TEMPLATE:
-    value: '#7E8BE4'
+    value: '#5867E8'
   BUSINESS_HOURS:
-    value: '#7DC37D'
+    value: '#3BA755'
   TIMESHEET:
-    value: '#7E8BE4'
+    value: '#5867E8'
   TIMESHEET_ENTRY:
-    value: '#7DC37D'
+    value: '#3BA755'
   ASSET_RELATIONSHIP:
-    value: '#FA975C'
+    value: '#FF5D2D'
   CMS:
-    value: '#88C651'
+    value: '#3BA755'
   LEAD_INSIGHTS:
-    value: '#22B0E6'
+    value: '#1B96FF'
   TOPIC2:
-    value: '#56AAD0'
+    value: '#1B96FF'
   MACROS:
-    value: '#47CFD2'
+    value: '#06A59A'
   SERVICE_CREW_MEMBER:
-    value: '#7E8BE4'
+    value: '#5867E8'
   SERVICE_CREW:
-    value: '#FA975C'
+    value: '#FF5D2D'
   CONTRACT_LINE_ITEM:
-    value: '#6EC06E'
+    value: '#3BA755'
   QUIP_SHEET:
-    value: '#30C85A'
+    value: '#3BA755'
   OMNI_SUPERVISOR:
-    value: '#8A76F0'
+    value: '#5867E8'
   QUICK_TEXT:
-    value: '#62B7E5'
+    value: '#1B96FF'
   TEMPLATE:
-    value: '#3C97DD'
+    value: '#1B96FF'
   LEAD_LIST:
-    value: '#F88962'
+    value: '#FF5D2D'
   CONTACT_LIST:
-    value: '#A094ED'
+    value: '#5867E8'
   LIST_EMAIL:
-    value: '#8BAEB5'
+    value: '#939393'
   OPPORTUNITY_SPLITS:
-    value: '#FCB95B'
+    value: '#FF5D2D'
   ENTITY:
-    value: '#F88962'
+    value: '#FF5D2D'
   BOT:
-    value: '#54698F'
+    value: '#107CAD'
   MESSAGING_USER:
-    value: '#34BECD'
+    value: '#06A59A'
   MESSAGING_CONVERSATION:
-    value: '#34BECD'
+    value: '#06A59A'
   MESSAGING_SESSION:
-    value: '#34BECD'
+    value: '#06A59A'
   IOT_ORCHESTRATIONS:
-    value: '#2A739E'
+    value: '#107CAD'
   RETURN_ORDER:
-    value: '#009688'
+    value: '#06A59A'
   RETURN_ORDER_LINE_ITEM:
-    value: '#009688'
+    value: '#06A59A'
   CHANNEL_PROGRAM_HISTORY:
-    value: '#0EB58A'
+    value: '#06A59A'
   CHANNEL_PROGRAM_LEVELS:
-    value: '#0EB58A'
+    value: '#06A59A'
   CHANNEL_PROGRAM_MEMBERS:
-    value: '#0EB58A'
+    value: '#06A59A'
   CHANNEL_PROGRAMS:
-    value: '#0EB58A'
+    value: '#06A59A'
   CUSTOMERS:
-    value: '#0EB58A'
+    value: '#06A59A'
   PARTNER_FUND_ALLOCATION:
-    value: '#0EB58A'
+    value: '#06A59A'
   PARTNER_FUND_CLAIM:
-    value: '#0EB58A'
+    value: '#06A59A'
   PARTNER_FUND_REQUEST:
-    value: '#0EB58A'
+    value: '#06A59A'
   PARTNER_MARKETING_BUDGET:
-    value: '#0EB58A'
+    value: '#06A59A'
   PARTNERS:
-    value: '#0EB58A'
+    value: '#06A59A'
   PAST_CHAT:
-    value: '#F88960'
+    value: '#FF5D2D'
   SEARCH:
-    value: '#62B7ED'
+    value: '#1B96FF'
   SURVEY:
-    value: '#319FD6'
+    value: '#107CAD'
   DATA_INTEGRATION_HUB:
-    value: '#2A739E'
+    value: '#107CAD'
   ACTION_LIST_COMPONENT:
-    value: '#5876A3'
+    value: '#107CAD'
   STAGE:
-    value: '#FF9A3C'
+    value: '#FF5D2D'
   STAGE_COLLECTION:
-    value: '#FF9A3C'
+    value: '#FF5D2D'
   KNOWLEDGE:
-    value: '#EC94ED'
+    value: '#CB65FF'
   LIVE_CHAT_VISITOR:
-    value: '#F68960'
+    value: '#FF5D2D'
   READ_RECEIPTS:
-    value: '#4BC076'
+    value: '#3BA755'
   RETAIL_BANKING:
-    value: '#00D2BE'
+    value: '#06A59A'
   WEALTH_MANAGEMENT:
-    value: '#00D2BE'
+    value: '#06A59A'
   INSURANCE:
-    value: '#00D2BE'
+    value: '#06A59A'
   RETAIL_BANKING_CONSOLE:
-    value: '#00AFA0'
+    value: '#06A59A'
   WEALTH_MANAGEMENT_CONSOLE:
-    value: '#00AFA0'
+    value: '#06A59A'
   INSURANCE_CONSOLE:
-    value: '#00AFA0'
+    value: '#06A59A'
   INDIVIDUAL:
-    value: '#3C97DD'
+    value: '#1B96FF'
   LOGGING:
-    value: '#00A1DF'
+    value: '#107CAD'
   CONTACT_REQUEST:
-    value: '#FB8954'
+    value: '#FF5D2D'
   PROPOSITION:
-    value: '#3C97DD'
+    value: '#1B96FF'
   STRATEGY:
-    value: '#4BC071'
+    value: '#3BA755'
   SNIPPET:
-    value: '#A094ED'
+    value: '#5867E8'
   BRAND:
-    value: '#7E8BE4'
+    value: '#5867E8'
   KANBAN:
-    value: '#3C97DD'
+    value: '#1B96FF'
   SMS:
-    value: '#88C651'
+    value: '#3BA755'
   TRAILHEAD:
-    value: '#032e61'
+    value: '#032D60'
   IOT_CONTEXT:
-    value: '#2A739E'
+    value: '#107CAD'
   WORK_QUEUE:
-    value: '#54698D'
+    value: '#107CAD'
   QUEUE:
-    value: '#54698D'
+    value: '#107CAD'
   PORTAL_ROLES:
-    value: '#FB8950'
+    value: '#FF5D2D'
   PORTAL_ROLES_AND_SUBORDINATES:
-    value: '#7A9AE6'
+    value: '#1B96FF'
   CUSTOMER_PORTAL_USERS:
-    value: '#3C97DB'
+    value: '#1B96FF'
   SYSTEM_AND_GLOBAL_VARIABLE:
-    value: '#54698D'
+    value: '#107CAD'
   RECORD_LOOKUP:
-    value: '#EB7092'
+    value: '#FF538A'
   CHOICE:
-    value: '#54698D'
+    value: '#107CAD'
   SCREEN:
-    value: '#1589EE'
+    value: '#1B96FF'
   APEX_PLUGIN:
-    value: '#54698D'
+    value: '#107CAD'
   RECORD_UPDATE:
-    value: '#EB7092'
+    value: '#FF538A'
   COLLECTION_VARIABLE:
-    value: '#54698D'
+    value: '#107CAD'
   OUTCOME:
-    value: '#FF9A3C'
+    value: '#FF5D2D'
   RECORD_CREATE:
-    value: '#EB7092'
+    value: '#FF538A'
   DYNAMIC_RECORD_CHOICE:
-    value: '#54698D'
+    value: '#107CAD'
   LOOP:
-    value: '#FF9A3C'
+    value: '#FF5D2D'
   TEXT_TEMPLATE:
-    value: '#54698D'
+    value: '#107CAD'
   ASSIGNMENT:
-    value: '#FF9A3C'
+    value: '#FF5D2D'
   APEX:
-    value: '#54698D'
+    value: '#107CAD'
   CONSTANT:
-    value: '#54698D'
+    value: '#107CAD'
   RECORD_DELETE:
-    value: '#EB7092'
+    value: '#FF538A'
   DECISION:
-    value: '#FF9A3C'
+    value: '#FF5D2D'
   WAITS:
-    value: '#FF9A3C'
+    value: '#FF5D2D'
   VARIABLE:
-    value: '#54698D'
+    value: '#107CAD'
   STEPS:
-    value: '#54698D'
+    value: '#107CAD'
   ALL:
-    value: '#54698D'
+    value: '#107CAD'
   FORMULA:
-    value: '#54698D'
+    value: '#107CAD'
   SOBJECT_COLLECTION:
-    value: '#54698D'
+    value: '#107CAD'
   PICKLIST_CHOICE:
-    value: '#54698D'
+    value: '#107CAD'
   GLOBAL_CONSTANT:
-    value: '#54698D'
+    value: '#107CAD'
   MULTI_PICKLIST:
-    value: '#969492'
+    value: '#939393'
   CURRENCY:
-    value: '#969492'
+    value: '#939393'
   TEXT:
-    value: '#969492'
+    value: '#939393'
   DATE_TIME:
-    value: '#969492'
+    value: '#939393'
   SOBJECT:
-    value: '#969492'
+    value: '#939393'
   PASSWORD:
-    value: '#969492'
+    value: '#939393'
   DATE_INPUT:
-    value: '#969492'
+    value: '#939393'
   CURRENCY_INPUT:
-    value: '#969492'
+    value: '#939393'
   TEXTAREA:
-    value: '#969492'
+    value: '#939393'
   TEXTBOX:
-    value: '#969492'
+    value: '#939393'
   DISPLAY_RICH_TEXT:
-    value: '#969492'
+    value: '#939393'
   DISPLAY_TEXT:
-    value: '#969492'
+    value: '#939393'
   MULTI_SELECT_CHECKBOX:
-    value: '#969492'
+    value: '#939393'
   LIGHTNING_COMPONENT:
-    value: '#969492'
+    value: '#939393'
   NUMBER_INPUT:
-    value: '#969492'
+    value: '#939393'
   RADIO_BUTTON:
-    value: '#969492'
+    value: '#939393'
   PICKLIST_TYPE:
-    value: '#969492'
+    value: '#939393'
   WORK_TYPE_GROUP:
-    value: '#0079BC'
+    value: '#107CAD'
   WORK_CAPACITY_USAGE:
-    value: '#0079BC'
+    value: '#107CAD'
   WORK_CAPACITY_LIMIT:
-    value: '#0079BC'
+    value: '#107CAD'
   SERVICE_APPOINTMENT_CAPACITY_USAGE:
-    value: '#0079BC'
+    value: '#107CAD'
   LIGHTNING_USAGE:
-    value: '#7E8BE4'
+    value: '#5867E8'
   BOT_TRAINING:
-    value: '#5876A3'
+    value: '#107CAD'
   AGENT_SESSION:
-    value: '#F88960'
+    value: '#FF5D2D'
   USER_ROLE:
-    value: '#8FC96E'
+    value: '#3BA755'
   BRANCH_MERGE:
-    value: '#E9696E'
+    value: '#FF538A'
   FILTER:
-    value: '#1539EE'
+    value: '#2F2CB7'
   FIRST_NON_EMPTY:
-    value: '#E9696E'
+    value: '#FF538A'
   OUTPUT:
-    value: '#439CBA'
+    value: '#107CAD'
   SORT:
-    value: '#1539EE'
+    value: '#2F2CB7'
   QUIP:
-    value: '#D3451D'
+    value: '#FF5D2D'
   SALES_CADENCE:
-    value: '#54698D'
+    value: '#107CAD'
   CODE_PLAYGROUND:
-    value: '#54698D'
+    value: '#107CAD'
   PLANOGRAM:
-    value: '#3C97DD'
+    value: '#1B96FF'
   VISITS:
-    value: '#3C97DD'
+    value: '#1B96FF'
   ACTIONS_AND_BUTTONS:
-    value: '#fcb95b'
+    value: '#FF5D2D'
   LETTERHEAD:
-    value: '#3c97dd'
+    value: '#1B96FF'
   INVOCABLE_ACTION:
-    value: '#54698d'
+    value: '#107CAD'
   SHIFT_TYPE:
-    value: '#eb7092'
+    value: '#FF538A'
   SHIFT:
-    value: '#eb7092'
+    value: '#FF538A'
   CATEGORY:
-    value: '#027E46'
+    value: '#22683E'
   CATALOG:
-    value: '#027E46'
+    value: '#22683E'
   VISIT_TEMPLATES:
-    value: '#3c97dd'
+    value: '#1B96FF'
   INSTORE_LOCATIONS:
-    value: '#54698d'
+    value: '#107CAD'
   STORE_GROUP:
-    value: '#3c97dd'
+    value: '#1B96FF'
   VISUALFORCE_PAGE:
-    value: '#fcb95b'
+    value: '#FF5D2D'
   JAVASCRIPT_BUTTON:
-    value: '#fcb95b'
+    value: '#FF5D2D'
   SALES_CADENCE_TARGET:
-    value: '#54698d'
+    value: '#107CAD'
   EVENTS:
-    value: '#3C97DB'
+    value: '#1B96FF'
   HIGH_VELOCITY_SALES:
-    value: '#47CFC9'
+    value: '#06A59A'
   RECYCLE_BIN:
-    value: '#1589E4'
+    value: '#1B96FF'
   SNIPPETS:
-    value: '#0EB58A'
+    value: '#06A59A'
   ORDER_ITEM:
-    value: '#769ED3'
+    value: '#1B96FF'
   SALES_CHANNEL:
-    value: '#2a739e'
+    value: '#107CAD'
   FULFILLMENT_ORDER:
-    value: '#b9ac91'
+    value: '#939393'
   OPPORTUNITY_CONTACT ROLE:
-    value: '#7e8be4'
+    value: '#5867E8'
   JOB_PROFILE:
-    value: '#eb7092'
+    value: '#FF538A'
   EDUCATION:
-    value: '#3c97dd'
+    value: '#1B96FF'
   CUSTOMER_360:
-    value: '#032e61'
+    value: '#032D60'
   STORE:
-    value: '#04844b'
+    value: '#22683E'
   BUYER_ACCOUNT:
-    value: '#04844b'
+    value: '#22683E'
   BUYER_GROUP:
-    value: '#04844b'
+    value: '#22683E'
   DELEGATED_ACCOUNT:
-    value: '#04844b'
+    value: '#22683E'
   ENTITLEMENT_POLICY:
-    value: '#04844b'
+    value: '#22683E'
   APP:
-    value: '#fcb95b'
+    value: '#FF5D2D'
   CHART:
-    value: '#1fcaa0'
+    value: '#06A59A'
   DASHBOARD_EA:
-    value: '#7e8be4'
+    value: '#5867E8'
   DATASET:
-    value: '#b070e6'
+    value: '#9050E9'
   STORY:
-    value: '#54698d'
+    value: '#107CAD'
   VOICE_CALL:
-    value: '#30c85a'
+    value: '#3BA755'
   SALESFORCE_CMS:
-    value: '#00a1df'
+    value: '#107CAD'
   SALES_VALUE:
-    value: '#3c97dd'
+    value: '#1B96FF'
   SETTINGS:
-    value: '#04844b'
+    value: '#22683E'
   ASSET_ACTION_SOURCE:
-    value: '#317A92'
+    value: '#107CAD'
   ASSET_ACTION:
-    value: '#317A92'
+    value: '#107CAD'
   ASSET_DOWNTIME_PERIOD:
-    value: '#317A92'
+    value: '#107CAD'
   ASSET_OBJECT:
-    value: '#317A92'
+    value: '#107CAD'
   ASSET_STATE_PERIOD:
-    value: '#317A92'
+    value: '#107CAD'
   SEGMENTS:
-    value: '#F28B00'
+    value: '#FF5D2D'
   DATA_MODEL:
-    value: '#EB7092'
+    value: '#FF538A'
   DATA_STREAMS:
-    value: '#EF6E64'
+    value: '#FF538A'
   ACTIVATIONS:
-    value: '#B070E6'
+    value: '#9050E9'
   EXPENSE_REPORT_ENTRY:
-    value: '#3A3180'
+    value: '#2F2CB7'
   EXPENSE_REPORT:
-    value: '#3A3180'
+    value: '#2F2CB7'
   EXPENSE:
-    value: '#3A3180'
+    value: '#2F2CB7'
   WORK_PLAN_RULE:
-    value: '#449488'
+    value: '#06A59A'
   WORK_PLAN:
-    value: '#449488'
+    value: '#06A59A'
   WORK_PLAN_TEMPLATE_ENTRY:
-    value: '#449488'
+    value: '#06A59A'
   WORK_PLAN_TEMPLATE:
-    value: '#449488'
+    value: '#06A59A'
   WORK_STEP:
-    value: '#449488'
+    value: '#06A59A'
   WORK_STEP_TEMPLATE:
-    value: '#449488'
+    value: '#06A59A'
   CALL_COACHING:
-    value: '#3C97DD'
+    value: '#1B96FF'
   CANCEL_CHECKOUT:
-    value: '#969492'
+    value: '#939393'
   CUSTOMER_LIFECYCLE_ANALYTICS:
-    value: '#9274DF'
+    value: '#5867E8'
   EINSTEIN_REPLIES:
-    value: '#F88965'
+    value: '#FF538A'
   CASE_WRAP_UP:
-    value: '#F2CF5B'
+    value: '#FF5D2D'
   WEBCART:
-    value: '#04844B'
+    value: '#22683E'
   SCHEDULING_CONSTRAINT:
-    value: '#EB7092'
+    value: '#FF538A'
   SCHEDULING_POLICY:
-    value: '#EB7092'
+    value: '#FF538A'
   SHIFT_PREFERENCE:
-    value: '#EB7092'
+    value: '#FF538A'
   SHIFT_TEMPLATE:
-    value: '#EB7092'
+    value: '#FF538A'
   REPLY_TEXT:
-    value: '#F88965'
+    value: '#FF538A'
   EMPLOYEE:
-    value: '#00A1E0'
+    value: '#1B96FF'
   EMPLOYEE_ASSET:
-    value: '#00A1E0'
+    value: '#1B96FF'
   EMPLOYEE_CONTACT:
-    value: '#00A1E0'
+    value: '#1B96FF'
   EMPLOYEE_JOB:
-    value: '#00A1E0'
+    value: '#1B96FF'
   EMPLOYEE_JOB_POSITION:
-    value: '#00A1E0'
+    value: '#1B96FF'
   EMPLOYEE_ORGANIZATION:
-    value: '#00A1E0'
+    value: '#1B96FF'
   JOB_FAMILY:
-    value: '#00A1E0'
+    value: '#1B96FF'
   JOB_POSITION:
-    value: '#00A1E0'
+    value: '#1B96FF'
   WORK_CONTRACT:
-    value: '#00A1E0'
+    value: '#1B96FF'
   SCHEDULE_OBJECTIVE:
-    value: '#2A739E'
+    value: '#107CAD'
   ASSET_WARRANTY:
     value: '#107CAD'
   CHECKOUT:
-    value: '#04844b'
+    value: '#22683E'
   DATA_MAPPING:
-    value: '#061C3F'
+    value: '#032D60'
   FILTER_CRITERIA_RULE:
-    value: '#2a739e'
+    value: '#107CAD'
   FILTER_CRITERIA:
-    value: '#2a739e'
+    value: '#107CAD'
   LOCATION_PERMIT:
-    value: '#34B59D'
+    value: '#06A59A'
   MAINTENANCE_WORK_RULE:
-    value: '#2A739E'
+    value: '#107CAD'
   PRICE_BOOK_ENTRIES:
-    value: '#04844b'
+    value: '#22683E'
   PRICE_BOOKS:
-    value: '#04844b'
+    value: '#22683E'
   PRICING_WORKSPACE:
-    value: '#04844B'
+    value: '#22683E'
   PROCESS_EXCEPTION:
-    value: '#F5A623'
+    value: '#FF5D2D'
   PRODUCT_WARRANTY_TERM:
-    value: '#B781D3'
+    value: '#9050E9'
   PRODUCT_WORKSPACE:
-    value: '#04844B'
+    value: '#22683E'
   PRODUCTS:
-    value: '#04844b'
+    value: '#22683E'
   SECTION:
-    value: '#969492'
+    value: '#939393'
   SHIFT_PATTERN_ENTRY:
-    value: '#eb7092'
+    value: '#FF538A'
   SHIFT_PATTERN:
-    value: '#eb7092'
+    value: '#FF538A'
   SLIDER:
-    value: '#969492'
+    value: '#939393'
   TOGGLE:
-    value: '#969492'
+    value: '#939393'
   TRAILHEAD_ALT:
-    value: '#00396B'
+    value: '#032D60'
   VARIATION_ATTRIBUTE_SETUP:
-    value: '#04844B'
+    value: '#22683E'
   VARIATION_PRODUCTS:
-    value: '#04844b'
+    value: '#22683E'
   WARRANTY_TERM:
-    value: '#0079BC'
+    value: '#107CAD'
   PAYMENT_GATEWAY:
-    value: '#0B827C'
+    value: '#056764'
   SERIALIZED_PRODUCT:
-    value: '#1589EE'
+    value: '#1B96FF'
   SERIALIZED_PRODUCT_TRANSACTION:
-    value: '#1589EE'
+    value: '#1B96FF'
   TRAVEL_MODE:
-    value: '#45C173'
+    value: '#3BA755'
   ADJUST_VALUE:
-    value: '#47B46C'
+    value: '#3BA755'
   SWARM_REQUEST:
-    value: '#E26E8C'
+    value: '#FF538A'
   HOLIDAY_OPERATING_HOURS:
-    value: '#6B9EE2'
+    value: '#1B96FF'
   KEY_DATES:
-    value: '#6B9EE2'
+    value: '#1B96FF'
   PRODUCT_SERVICE_CAMPAIGN:
-    value: '#2A739E'
+    value: '#107CAD'
   PRODUCT_SERVICE_CAMPAIGN_ITEM:
-    value: '#2A739E'
+    value: '#107CAD'
   RECIPE:
-    value: '#0176d3'
+    value: '#107CAD'
   COLLECTION:
-    value: '#F2CF5B'
+    value: '#FF5D2D'
   IMMUNIZATION:
-    value: '#EB7092'
+    value: '#FF538A'
   OBSERVATION_COMPONENT:
-    value: '#7F8DE1'
+    value: '#5867E8'
   SERVICE_REQUEST:
-    value: '#1589E4'
+    value: '#1B96FF'
   SERVICE_REQUEST_DETAIL:
-    value: '#34BECD'
+    value: '#06A59A'
   PRACTITIONER_ROLE:
-    value: '#EB7092'
+    value: '#FF538A'
   DEVICE:
-    value: '#7F8DE1'
+    value: '#5867E8'
   ACTIVATION_TARGET:
-    value: '#dc71d1'
+    value: '#CB65FF'
   VIDEO:
-    value: '#B070E6'
+    value: '#9050E9'
   FORM:
-    value: '#6EC06E'
+    value: '#3BA755'
   GUIDANCE_CENTER:
-    value: '#7F8DE1'
+    value: '#5867E8'
   RECORD_SIGNATURE_TASK:
-    value: '#EB7092'
+    value: '#FF538A'
   CUSTOM_COMPONENT_TASK:
-    value: '#8A76F0'
+    value: '#5867E8'
   PROCEDURE:
-    value: '#1589E4'
+    value: '#1B96FF'
   PROCEDURE_DETAIL:
-    value: '#34BECD'
+    value: '#06A59A'
   AGENT_HOME:
-    value: '#00396B'
+    value: '#032D60'
   AGGREGATION_POLICY:
-    value: '#1589ee'
+    value: '#1B96FF'
   BUNDLE_CONFIG:
-    value: '#1589ee'
+    value: '#1B96FF'
   BUNDLE_POLICY:
-    value: '#1589ee'
+    value: '#1B96FF'
   CALCULATED_INSIGHTS:
-    value: '#54a7f8'
+    value: '#1B96FF'
   CAPACITY_PLAN:
-    value: '#EB7092'
+    value: '#FF538A'
   CARE_REQUEST_REVIEWER:
-    value: '#4bc076'
+    value: '#3BA755'
   DOCUMENT_REFERENCE:
-    value: '#2a739e'
+    value: '#107CAD'
   DURATION_DOWNSCALE:
-    value: '#1589ee'
+    value: '#1B96FF'
   MEDICATION_INGREDIENT:
-    value: '#34becd'
+    value: '#06A59A'
   ORCHESTRATOR:
-    value: '#006EB3'
+    value: '#107CAD'
   PRODUCT_QUANTITY_RULES:
-    value: '#04844B'
+    value: '#22683E'
   PROMOTIONS:
-    value: '#04844B'
+    value: '#22683E'
   PROPAGATION_POLICY:
-    value: '#1589ee'
+    value: '#1B96FF'
   RESTRICTION_POLICY:
-    value: '#1589ee'
+    value: '#1B96FF'
   SELLING_MODEL:
-    value: '#ad7bee'
+    value: '#9050E9'
   SERVICE_TERRITORY_POLICY:
-    value: '#1589ee'
+    value: '#1B96FF'
   SHIFT_SCHEDULING_OPERATION:
-    value: '#EB7092'
+    value: '#FF538A'
   SORT_POLICY:
-    value: '#1589ee'
+    value: '#1B96FF'
   SWARM_SESSION:
-    value: '#F5675B'
+    value: '#FF538A'
   WORK_FORECAST:
-    value: '#FCB95B'
+    value: '#FF5D2D'
   PRODUCT_TRANSFER_STATE:
-    value: '#E3734F'
+    value: '#FF5D2D'
   PRODUCT_CONSUMED_STATE:
     value: '#06A59A'
   BUDGET_ALLOCATION:
     value: '#107CAD'
   PROMOTION_SEGMENTS:
-    value: '#04844B'
+    value: '#22683E'
   QUALIFICATIONS:
-    value: '#04844B'
+    value: '#22683E'
   DISCOUNTS:
-    value: '#04844B'
+    value: '#22683E'
   COUPON_CODES:
-    value: '#04844B'
+    value: '#22683E'
   PROMOTIONS_WORKSPACE:
-    value: '#04844B'
+    value: '#22683E'
   PROBLEM:
-    value: '#FE9339'
+    value: '#FF5D2D'
   CHANGE_REQUEST:
-    value: '#0B827C'
+    value: '#056764'
   NETWORK_CONTRACT:
-    value: '#6EC06E'
+    value: '#3BA755'
   INCIDENT:
-    value: '#BA0517'
+    value: '#B60554'
   CODE_SET:
-    value: '#0079BC'
+    value: '#107CAD'
   CODE_SET_BUNDLE:
-    value: '#0079BC'
+    value: '#107CAD'
   MEDICATION:
-    value: '#4AC076'
+    value: '#3BA755'
   MEDICATION_STATEMENT:
-    value: '#1589EE'
+    value: '#1B96FF'
   PATIENT_MEDICATION_DOSAGE:
-    value: '#34BECD'
+    value: '#06A59A'
   ACCOUNT_INFO:
-    value: '#7F8DE1'
+    value: '#5867E8'
   PERSON_NAME:
-    value: '#7F8DE1'
+    value: '#5867E8'
   IDENTIFIER:
-    value: '#F88962'
+    value: '#FF5D2D'
   PERSON_LANGUAGE:
-    value: '#0EB58A'
+    value: '#06A59A'
   BUDGET:
     value: '#107CAD'
   ASSET_AUDIT:
@@ -902,78 +902,78 @@ props:
   FIELD_SALES:
     value: '#9050E9'
   HISTORICAL_ADHERENCE:
-    value: '#03B4A7'
+    value: '#06A59A'
   MEDICATION_DISPENSE:
-    value: '#5696D7'
+    value: '#1B96FF'
   MEDICATION_RECONCILIATION:
-    value: '#3F719A'
+    value: '#107CAD'
   MED_REC_RECOMMENDATION:
-    value: '#61BBCA'
+    value: '#06A59A'
   MED_REC_STATEMENT_RECOMMENDATION:
-    value: '#808CDE'
+    value: '#5867E8'
   REPORT_TYPE:
-    value: '#45C65A'
+    value: '#3BA755'
   TOUR:
     value: '#9050E9'
   TOUR_CHECK:
     value: '#9050E9'
   UNIFIED_HEALTH_SCORE:
-    value: '#7E8BE4'
+    value: '#5867E8'
   WORKFORCE_ENGAGEMENT:
-    value: '#9D3856'
+    value: '#B60554'
   SLACK:
     value: '#4A154B'
   TABLEAU:
     value: '#0F1E3C'
   DASHBOARD_COMPONENT:
-    value: '#7E8BE4'
+    value: '#5867E8'
   AI_ACCELERATOR_CARD:
-    value: '#0176d3'
+    value: '#107CAD'
   CONNECT_WALLET:
-    value: '#BA0517'
+    value: '#B60554'
   CONTRACT_LINE_OUTCOME:
-    value: '#2E844A'
+    value: '#22683E'
   CONTRACT_LINE_OUTCOME_DATA:
-    value: '#2E844A'
+    value: '#22683E'
   CRYPTO_CATEGORY_WALLET_GROUP:
-    value: '#BA0517'
+    value: '#B60554'
   CRYPTO_PRODUCT:
-    value: '#8C5EC6'
+    value: '#9050E9'
   CRYPTO_PRODUCT_CATEGORY_WALLET_ROLE:
-    value: '#0B827C'
+    value: '#056764'
   CRYPTO_TRANSACTION:
-    value: '#C0532E'
+    value: '#FF5D2D'
   CRYPTO_TRANSACTION_ENVELOPE:
-    value: '#0B827C'
+    value: '#056764'
   CRYPTO_TRANSACTION_ENVELOPE_ITEM:
     value: '#107CAD'
   CRYPTO_WALLET:
-    value: '#2E844A'
+    value: '#22683E'
   CRYPTO_WALLET_GROUP:
-    value: '#0176D3'
+    value: '#107CAD'
   CRYPTO_WALLET_GROUP_ITEM:
-    value: '#8C5EC6'
+    value: '#9050E9'
   CUSTOMER:
-    value: '#04844B'
+    value: '#22683E'
   CUSTOMER_WORKSPACE:
-    value: '#04844B'
+    value: '#22683E'
   LEARNER_PROGRAM:
-    value: '#CA8501'
+    value: '#FF5D2D'
   NFT_SETTINGS:
-    value: '#C5486D'
+    value: '#FF538A'
   NFT_STUDIO:
     value: '#5867E8'
   PROMPT:
     value: '#06A59A'
   SETUP_MODAL:
-    value: '#0079BC'
+    value: '#107CAD'
   SNIPPET_ALT:
-    value: '#0079BC'
+    value: '#107CAD'
   TAX_POLICY:
-    value: '#04844B'
+    value: '#22683E'
   TAX_RATE:
-    value: '#04844B'
+    value: '#22683E'
   TAX_TREATMENT:
-    value: '#04844B'
+    value: '#22683E'
   WATER:
-    value: '#1B96FF'
+    value: '#5867E8'

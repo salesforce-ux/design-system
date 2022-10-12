@@ -13,10 +13,10 @@
   width: rem(340px);
   height: rem(480px);
   border-radius: $border-radius-medium $border-radius-medium 0 0;
-  border: $border-width-thin solid $color-border {
+  border: $border-width-thin solid var(--slds-g-color-border-base-1, #{$color-border}) {
     bottom: none;
   }
-  background: $color-background-docked-panel;
+  background: var(--slds-g-color-neutral-base-100, #{$color-background-docked-panel});
   transform: translateY(100%);
 
   /**
@@ -37,7 +37,7 @@
   * @restrict .slds-utility-panel div
   */
 .slds-utility-panel__header {
-  background: $color-background-docked-panel-header;
+  background: var(--slds-g-color-neutral-base-100, #{$color-background-docked-panel-header});
   border-bottom: $border-width-thick solid $brand-primary;
   border-radius: $border-radius-medium $border-radius-medium 0 0;
   padding: $spacing-x-small $spacing-small;

@@ -42,15 +42,15 @@
 
 // Inverse Links
 @mixin inverse-links {
-  color: $color-text-inverse;
+  color: var(--slds-g-color-neutral-base-100, #{$color-text-inverse});
 
   a:not(.slds-button--neutral) {
-    color: $color-text-link-inverse;
+    color: var(--slds-g-color-neutral-base-100, #{$color-text-link-inverse});
     text-decoration: underline;
 
     &:link,
     &:visited {
-      color: $color-text-link-inverse;
+      color: var(--slds-g-color-neutral-base-100, #{$color-text-link-inverse});
     }
 
     &:hover,
@@ -59,11 +59,11 @@
     }
 
     &:active {
-      color: $color-text-link-inverse-active;
+      color: var(--slds-g-color-neutral-base-100, #{$color-text-link-inverse-active});
     }
 
     &[disabled] {
-      color: $color-text-link-inverse-disabled;
+      color: var(--slds-g-color-neutral-base-100, #{$color-text-link-inverse-disabled});
     }
   }
 }
@@ -82,7 +82,7 @@
       .slds-text-title,
       .slds-text-title_caps,
       .slds-text-title--caps {
-        color: $color-text-inverse-weak;
+        color: var(--slds-g-color-neutral-base-70, #{$color-text-inverse-weak});
       }
     }
 
@@ -91,7 +91,7 @@
     }
 
     @else if nth($support, $i) == 'borders' {
-      border-color: $color-border-inverse;
+      border-color: var(--slds-g-color-brand-base-10, #{$color-border-inverse});
     }
 
     @else if nth($support, $i) == 'icons' {
@@ -102,7 +102,7 @@
     }
   }
 
-  color: $color-text-inverse;
+  color: var(--slds-g-color-neutral-base-100, #{$color-text-inverse});
 
   #{$link-selector} {
     color: currentColor;
@@ -117,15 +117,15 @@
 
     &:focus {
       box-shadow: $shadow-link-focus-inverse;
-      border: $border-width-thin solid $color-border-link-focus-inverse;
+      border: $border-width-thin solid var(--slds-g-color-neutral-base-100, #{$color-border-link-focus-inverse});
     }
 
     &:active {
-      color: $color-text-link-inverse-active;
+      color: var(--slds-g-color-neutral-base-100, #{$color-text-link-inverse-active});
     }
 
     &[disabled] {
-      color: $color-text-link-inverse-disabled;
+      color: var(--slds-g-color-neutral-base-100, #{$color-text-link-inverse-disabled});
     }
   }
 }
@@ -137,12 +137,12 @@
 @mixin warning-links {
 
   a {
-    color: $color-text-default; // gray-13
+    color: var(--slds-g-color-neutral-base-10, #{$color-text-default}); // gray-13
     text-decoration: underline;
 
     &:link,
     &:visited {
-      color: $color-text-default;
+      color: var(--slds-g-color-neutral-base-10, #{$color-text-default});
     }
 
     &:hover,
@@ -151,16 +151,16 @@
     }
 
     &:focus {
-      box-shadow: 0 0 3px $color-gray-10;
-      border: $border-width-thin solid $color-gray-10;
+      box-shadow: 0 0 3px var(--slds-g-color-neutral-base-30, #{$color-gray-10});
+      border: $border-width-thin solid var(--slds-g-color-neutral-base-30, #{$color-gray-10});
     }
 
     &:active {
-      color: $color-gray-10;
+      color: var(--slds-g-color-neutral-base-30, #{$color-gray-10});
     }
 
     &[disabled] {
-      color: $color-gray-10;
+      color: var(--slds-g-color-neutral-base-30, #{$color-gray-10});
     }
   }
 }
@@ -172,21 +172,21 @@
 @mixin warning-buttons {
 
   button {
-    color: $color-gray-10;
+    color: var(--slds-g-color-neutral-base-30, #{$color-gray-10});
     text-decoration: underline;
 
     &:hover {
-      color: $color-gray-9;
+      color: var(--slds-g-color-neutral-base-50, #{$color-gray-9});
     }
 
     &:focus {
-      color: $color-gray-10;
-      box-shadow: 0 0 3px $color-gray-10;
-      border: $border-width-thin solid $color-gray-10;
+      color: var(--slds-g-color-neutral-base-30, #{$color-gray-10});
+      box-shadow: 0 0 3px var(--slds-g-color-neutral-base-30, #{$color-gray-10});
+      border: $border-width-thin solid var(--slds-g-color-neutral-base-30, #{$color-gray-10});
     }
 
     &:active {
-      color: $color-gray-9;
+      color: var(--slds-g-color-neutral-base-50, #{$color-gray-9});
     }
   }
 }
@@ -195,13 +195,13 @@
 @mixin border($borders: null, $radius: null) {
   @if $borders != null {
     @if $borders == around {
-      border: $border-width-thin solid $color-border;
+      border: $border-width-thin solid var(--slds-g-color-border-base-1, #{$color-border});
     }
 
     @else {
       @each $positions in $borders {
         @each $position in $positions {
-          border-#{$position}: $border-width-thin solid $color-border;
+          border-#{$position}: $border-width-thin solid var(--slds-g-color-border-base-1, #{$color-border});
         }
       }
     }
@@ -218,27 +218,27 @@
 // Theme Helper
 @mixin theme($theme, $borders: null) {
   @if $theme == shade {
-    background-color: $color-background;
+    background-color: var(--slds-g-color-neutral-base-95, #{$color-background});
   }
 
   @else if $theme == inverse {
     @include inverse-links;
-    background-color: $color-background-inverse;
+    background-color: var(--slds-g-color-brand-base-10, #{$color-background-inverse});
   }
 
   @else if $theme == alt-inverse {
     @include inverse-links;
-    background-color: $color-background-alt-inverse;
+    background-color: var(--slds-g-color-brand-base-20, #{$color-background-alt-inverse});
   }
 
   @else if $theme == brand {
     @include inverse-links;
-    background-color: $color-background-modal-brand;
+    background-color: var(--slds-g-color-brand-base-30, #{$color-background-modal-brand});
   }
 
   @else {
-    background-color: $color-background-alt;
-    color: $color-text-default;
+    background-color: var(--slds-g-color-neutral-base-100, #{$color-background-alt});
+    color: var(--slds-g-color-neutral-base-10, #{$color-text-default});
   }
 
   @include border($borders);

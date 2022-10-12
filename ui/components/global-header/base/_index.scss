@@ -58,7 +58,7 @@
     }
 
     .slds-icon {
-      fill: $color-text-input-icon;
+      fill: var(--slds-g-color-neutral-base-50, #{$color-text-input-icon});
     }
   }
 }

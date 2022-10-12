@@ -22,7 +22,7 @@
 .slds-accordion__list-item {
   border-top-width: var(--slds-c-accordion-sizing-border, var(--sds-c-accordion-sizing-border, $border-width-thin));
   border-top-style: solid;
-  border-top-color: var(--slds-c-accordion-color-border, var(--sds-c-accordion-color-border, $color-border));
+  border-top-color: var(--slds-c-accordion-color-border, var(--sds-c-accordion-color-border, var(--slds-g-color-border-base-1, #{$color-border})));
 
   &:first-child {
     border-top: 0;
@@ -68,7 +68,8 @@
   display: flex;
   flex-grow: 1;
   min-width: 0;
-  color: var(--slds-c-accordion-heading-text-color, var(--sds-c-accordion-heading-text-color, $color-text-default));
+  color: var(--slds-c-accordion-heading-text-color, var(--sds-c-accordion-heading-text-color,
+    var(--slds-g-color-neutral-base-10, #{$color-text-default})));
   font-size: var(--slds-c-accordion-heading-font-size, var(--sds-c-accordion-heading-font-size, $var-font-size-5));
   line-height: var(--slds-c-accordion-heading-line-height, var(--sds-c-accordion-heading-line-height, $line-height-heading));
 

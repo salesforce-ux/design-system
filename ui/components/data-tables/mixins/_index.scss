@@ -25,7 +25,7 @@
 
     tr {
       display: block;
-      border-top: $border-width-thick solid $color-border;
+      border-top: $border-width-thick solid var(--slds-g-color-border-base-1, #{$color-border});
     }
 
     th,

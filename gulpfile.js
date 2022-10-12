@@ -93,6 +93,9 @@ gulp.task('generate:tokens:components:imports', tokens.componentsImports);
 // Generate package specific tokens
 gulp.task('generate:tokens:package', tokens.packages);
 
+// Generate SLDS Styling Hooks
+gulp.task('generate:stylingHooks', tokens.stylingHooks);
+
 // Generate all tokens - [Primitive, Component Specific, Package]
 gulp.task(
   'generate:tokens:all',
@@ -102,7 +105,8 @@ gulp.task(
     ),
     withName('generate:tokens:primitive')(tokens.copyDesignPrimitiveTokens),
     withName('generate:tokens:components:imports')(tokens.componentsImports),
-    withName('generate:tokens:package')(tokens.packages)
+    withName('generate:tokens:package')(tokens.packages),
+    withName('generate:stylingHooks')(tokens.stylingHooks)
   )
 );
 

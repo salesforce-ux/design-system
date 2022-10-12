@@ -15,9 +15,9 @@
 .slds-context-bar {
   display: flex;
   height: $height-context-bar;
-  background-color: $color-background-context-bar;
+  background-color: var(--slds-g-color-neutral-base-100, #{$color-background-context-bar});
   border-bottom: 3px solid $brand-primary;
-  color: $color-text-default;
+  color: var(--slds-g-color-neutral-base-10, #{$color-text-default});
   position: relative;
   padding: 0 0 0 $spacing-large;
 
@@ -115,7 +115,7 @@
 .slds-context-bar__vertical-divider {
   width: 0;
   overflow: hidden;
-  border-left: $border-width-thin solid $color-border;
+  border-left: $border-width-thin solid var(--slds-g-color-border-base-1, #{$color-border});
 }
 
 /** Any item on the horizontal axis of the context nav bar
@@ -185,7 +185,7 @@
     @keyframes bkAnim {
 
       50% {
-        background-color: $color-background-context-bar;
+        background-color: var(--slds-g-color-neutral-base-100, #{$color-background-context-bar});
       }
 
       100% {
@@ -260,7 +260,8 @@
     * @restrict .slds-context-bar__item
     */
   &.slds-has-success {
-    @include tab-notification-before($color-background-success-dark, $color-background-success-darker);
+    @include tab-notification-before(var(--slds-g-color-success-base-50, #{$color-background-success-dark}),
+      var(--slds-g-color-success-base-40, #{$color-background-success-darker}));
 
     &:before {
       animation-name: success-pulse;
@@ -274,7 +275,8 @@
     * @restrict .slds-context-bar__item
     */
   &.slds-has-error {
-    @include tab-notification-before($color-background-destructive, $color-background-destructive-active);
+    @include tab-notification-before(var(--slds-g-color-error-base-40, #{$color-background-destructive}),
+      var(--slds-g-color-error-base-30, #{$color-background-destructive-active}));
 
     &:before {
       animation-name: error-pulse;
@@ -285,15 +287,15 @@
   &.slds-has-error {
 
     .slds-context-bar__label-action {
-      color: $color-gray-1;
+      color: var(--slds-g-color-neutral-base-100, #{$color-gray-1});
     }
 
     .slds-indicator_unread {
-      background-color: $color-gray-1;
+      background-color: var(--slds-g-color-neutral-base-100, #{$color-gray-1});
     }
 
     .slds-indicator_unsaved {
-      color: $color-gray-1;
+      color: var(--slds-g-color-neutral-base-100, #{$color-gray-1});
     }
   }
 
@@ -304,7 +306,8 @@
     * @restrict .slds-context-bar__item
     */
   &.slds-has-warning {
-    @include tab-notification-before($color-background-warning, $color-background-warning-dark);
+    @include tab-notification-before(var(--slds-g-color-warning-base-60, #{$color-background-warning}),
+      var(--slds-g-color-warning-base-60, #{$color-background-warning-dark}));
 
     &:before {
       animation-name: warning-pulse;
@@ -325,7 +328,7 @@
 
     &:after {
       content: '';
-      background: $color-gray-11;
+      background: var(--slds-g-color-neutral-base-30, #{$color-gray-11});
       position: absolute;
       height: $globalnavigation-item-height-accent-active;
       opacity: 0.4;
@@ -353,7 +356,7 @@
   */
 .slds-context-bar__item_divider-left,
 .slds-context-bar__item--divider-left {
-  border-left: $border-width-thin solid $color-border;
+  border-left: $border-width-thin solid var(--slds-g-color-border-base-1, #{$color-border});
 }
 
 /**
@@ -364,7 +367,7 @@
   */
 .slds-context-bar__item_divider-right,
 .slds-context-bar__item--divider-right {
-  border-right: $border-width-thin solid $color-border;
+  border-right: $border-width-thin solid var(--slds-g-color-border-base-1, #{$color-border});
 }
 
 /**
@@ -418,7 +421,7 @@
   align-content: center;
   margin-left: ($spacing-xx-small * -1);
   padding: 0 $spacing-x-small;
-  color: $color-text-context-bar;
+  color: var(--slds-g-color-neutral-base-30, #{$color-text-context-bar});
   border-radius: 0;
   flex-shrink: 0;
 
@@ -437,11 +440,11 @@
 
   &:hover,
   &:focus {
-    color: $color-text-context-bar;
+    color: var(--slds-g-color-neutral-base-30, #{$color-text-context-bar});
   }
 
   &:active {
-    color: $color-text-context-bar;
+    color: var(--slds-g-color-neutral-base-30, #{$color-text-context-bar});
   }
 
   .slds-icon-waffle_container {
@@ -471,7 +474,7 @@
   */
 .slds-context-bar_tabs,
 .slds-context-bar--tabs {
-  border-top: $border-width-thin solid $color-border;
+  border-top: $border-width-thin solid var(--slds-g-color-border-base-1, #{$color-border});
 }
 
 /**
@@ -486,7 +489,7 @@
 .slds-context-bar__item_tab,
 .slds-context-bar__item--tab {
   width: $size-x-small;
-  border-right: $border-width-thin solid $color-border;
+  border-right: $border-width-thin solid var(--slds-g-color-border-base-1, #{$color-border});
 
   .slds-context-bar__label-action {
     padding: 0 $spacing-x-small;
@@ -527,7 +530,7 @@
     bottom: -3px;
     height: 3px;
     width: 100%;
-    background-color: $color-background-context-bar;
+    background-color: var(--slds-g-color-neutral-base-100, #{$color-background-context-bar});
     border: 0;
     mix-blend-mode: unset;
   }
@@ -586,8 +589,8 @@
 .slds-context-bar__object-switcher {
   min-width: rem(144px); // @todo tokenize
   max-width: $size-x-small;
-  border-left: $border-width-thin solid $color-border;
-  border-right: $border-width-thin solid $color-border;
+  border-left: $border-width-thin solid var(--slds-g-color-border-base-1, #{$color-border});
+  border-right: $border-width-thin solid var(--slds-g-color-border-base-1, #{$color-border});
 }
 
 // Themes - Pre-defined themes
@@ -596,16 +599,16 @@
 // Marketing - temp
 .slds-context-bar_theme-marketing,
 .slds-context-bar--theme-marketing {
-  border-bottom-color: #f59331;
+  border-bottom-color: var(--slds-g-color-warning-base-60, #f59331);
 
   .slds-context-bar__item:not(.slds-no-hover):hover {
-    border-bottom-color: #f59331;
+    border-bottom-color: var(--slds-g-color-warning-base-60, #f59331);
   }
 
   .slds-context-bar__item.slds-is-active {
 
     &:before {
-      background: #f59331;
+      background: var(--slds-g-color-warning-base-60, #f59331);
     }
   }
 }

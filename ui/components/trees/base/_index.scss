@@ -53,7 +53,7 @@
  */
 .slds-tree__item.slds-is-hovered,
 .slds-tree__item:hover {
-  background: $color-background-row-hover;
+  background: var(--slds-g-color-neutral-base-95, #{$color-background-row-hover});
   cursor: pointer;
 }
 
@@ -66,7 +66,7 @@
   outline: 0;
 
   > .slds-tree__item {
-    background: $color-background-row-hover;
+    background: var(--slds-g-color-neutral-base-95, #{$color-background-row-hover});
     cursor: pointer;
     text-decoration: underline;
   }
@@ -82,7 +82,7 @@
 }
 
 .slds-tree [aria-disabled="true"] {
-  color: $color-text-button-default-disabled;
+  color: var(--slds-g-color-neutral-base-80, #{$color-text-button-default-disabled});
 
   .slds-tree__item.slds-is-hovered,
   .slds-tree__item:hover {
@@ -145,7 +145,7 @@ $max-nesting-depth: 20 !default;
 */
 .slds-tree__item-meta {
   display: block;
-  color: $color-text-weak;
+  color: var(--slds-g-color-neutral-base-30, #{$color-text-weak});
 }
 
 .slds-tree__item .slds-button {

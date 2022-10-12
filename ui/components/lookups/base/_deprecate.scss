@@ -77,8 +77,8 @@
     * @required
     */
   .slds-lookup__menu {
-    background: $color-background-alt;
-    border: $border-width-thin solid $color-border;
+    background: var(--slds-g-color-neutral-base-100, #{$color-background-alt});
+    border: $border-width-thin solid var(--slds-g-color-border-base-4, #{$color-border});
     border-radius: $border-radius-medium;
     z-index: $z-index-dropdown;
     position: absolute;
@@ -94,7 +94,7 @@
     > button {
       display: block;
       padding: $spacing-x-small;
-      color: $color-text-default;
+      color: var(--slds-g-color-neutral-base-10, #{$color-text-default});
       text-align: left;
       width: 100%;
       line-height: $line-height-text;
@@ -103,8 +103,8 @@
       &:hover,
       &:focus {
         outline: 0;
-        background-color: $color-background-row-hover;
-        color: $color-text-default;
+        background-color: var(--slds-g-color-neutral-base-95, #{$color-background-row-hover});
+        color: var(--slds-g-color-neutral-base-10, #{$color-text-default});
         text-decoration: none;
       }
 
@@ -139,7 +139,7 @@
     display: flex;
     align-items: center;
     padding: $spacing-xx-small $spacing-medium;
-    color: $color-text-default;
+    color: var(--slds-g-color-neutral-base-10, #{$color-text-default});
     text-align: left;
     width: 100%;
     line-height: $line-height-text;
@@ -157,8 +157,8 @@
     &.slds-has-focus {
       outline: 0;
       cursor: pointer;
-      background-color: $color-background-row-hover;
-      color: $color-text-default;
+      background-color: var(--slds-g-color-neutral-base-95, #{$color-background-row-hover});
+      color: var(--slds-g-color-neutral-base-10, #{$color-text-default});
       text-decoration: none;
     }
 
@@ -216,7 +216,7 @@
   .slds-lookup__result-meta {
     display: block;
     margin-top: ($spacing-xx-small * -1); // Offset $line-height-text from result-text
-    color: $color-text-label;
+    color: var(--slds-g-color-neutral-base-30, #{$color-text-label});
   }
 
   .slds-lookup__pill-container {

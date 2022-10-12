@@ -50,27 +50,27 @@
        */
       &.slds-is-selected .slds-icon_selected,
       &.slds-is-selected .slds-icon--selected {
-        fill: $color-text-icon-default-hover;
+        fill: var(--slds-g-color-brand-base-50, #{$color-text-icon-default-hover});
         opacity: 1;
       }
     }
 
     input[readonly] {
       padding-left: $spacing-small;
-      border-color: $color-border-input;
-      background-color: $color-background-input;
+      border-color: var(--slds-g-color-border-base-4, #{$color-border-input});
+      background-color: var(--slds-g-color-neutral-base-100, #{$color-background-input});
       font-size: inherit;
       font-weight: $font-weight-regular;
 
       &:focus,
       &.slds-has-focus {
-        border-color: $color-border-brand-primary;
+        border-color: var(--slds-g-color-brand-base-60, #{$color-border-brand-primary});
         box-shadow: $shadow-button-focus;
       }
 
       &[disabled] {
-        background-color: $color-background-input-disabled;
-        border-color: $color-border-input-disabled;
+        background-color: var(--slds-g-color-neutral-base-80, #{$color-background-input-disabled});
+        border-color: var(--slds-g-color-border-base-1, #{$color-border-input-disabled});
       }
     }
   }
@@ -116,7 +116,7 @@
   .slds-picklist__label {
     padding-right: $spacing-x-large;
     width: $size-small;
-    color: $color-text-default;
+    color: var(--slds-g-color-neutral-base-10, #{$color-text-default});
     text-align: left;
 
     .slds-icon {
@@ -125,7 +125,7 @@
       right: $spacing-medium;
       top: 50%;
       margin-top: (($square-icon-small-content * 0.5) * -1);
-      fill: $color-text-icon-default;
+      fill: var(--slds-g-color-neutral-base-50, #{$color-text-icon-default});
     }
 
     .slds-truncate {

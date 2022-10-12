@@ -19,7 +19,8 @@
   border-radius: var(--slds-c-avatar-radius-border, var(--sds-c-avatar-radius-border, $border-radius-medium));
   line-height: $line-height-reset;
   font-size: $font-size-heading-small;
-  color: var(--slds-c-avatar-text-color, var(--sds-c-avatar-text-color, $color-text-inverse));
+  color: var(--slds-c-avatar-text-color, var(--sds-c-avatar-text-color,
+    var(--slds-g-color-neutral-base-100, #{$color-text-inverse})));
 
   &:hover,
   &:focus:hover {
@@ -176,7 +177,7 @@
 // This isn't a thing so lets not document it
 .slds-avatar_empty,
 .slds-avatar--empty {
-  border: $border-width-thin dashed $color-border;
+  border: $border-width-thin dashed var(--slds-g-color-border-base-1, #{$color-border});
 }
 
 /**
@@ -207,7 +208,7 @@
   }
 
   &:hover {
-    color: var(--slds-c-avatar-initials-text-color-hover, var(--sds-c-avatar-initials-text-color-hover, $color-text-inverse));
+    color: var(--slds-c-avatar-initials-text-color-hover, var(--sds-c-avatar-initials-text-color-hover, var(--slds-g-color-neutral-base-100, #{$color-text-inverse})));
     cursor: default;
   }
 }
@@ -222,13 +223,13 @@
  */
 .slds-avatar__initials_inverse {
   /*! @css-var-fallback color */
-  --slds-c-avatar-initials-text-color: var(--slds-c-avatar-initials-inverse-text-color, #{$color-text-weak});
-  background-color: $color-background;
+  --slds-c-avatar-initials-text-color: var(--slds-c-avatar-initials-inverse-text-color, var(--slds-g-color-neutral-base-30, #{$color-text-weak}));
+  background-color: var(--slds-g-color-neutral-base-95, #{$color-background});
   text-shadow: none;
 
   // combat abbr override styling in avatar
   &:hover {
     /*! @css-var-fallback color */
-    --slds-c-avatar-initials-text-color-hover: var(--slds-c-avatar-initials-inverse-text-color-hover, #{$color-text-weak});
+    --slds-c-avatar-initials-text-color-hover: var(--slds-c-avatar-initials-inverse-text-color-hover, var(--slds-g-color-neutral-base-30, #{$color-text-weak}));
   }
 }

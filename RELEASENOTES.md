@@ -4,6 +4,11 @@
 ## Release 2.20.0 - Upcoming
 
 - Updated background colors for Standard and Actions icons
+- Added two new dependencies for SLDS global styling hooks generation,
+  - `@salesforce-ux/sds-styling-aliases`
+  - `@salesforce-ux/sds-styling-hooks`
+- Updated `gulpfile` to include SLDS global hooks generation as part of build and dist jobs
+- Updated design tokens in every component and utility with SLDS global styling hooks (except Brand related tokens)
 
 ## Release 2.19.0 - August 11, 2022
 

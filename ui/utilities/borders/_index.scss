@@ -10,7 +10,7 @@
  */
 .slds-border_bottom,
 .slds-border--bottom {
-  border-bottom: $border-width-thin solid $color-border;
+  border-bottom: $border-width-thin solid var(--slds-g-color-border-base-1, #{$color-border});
 }
 
 /**
@@ -22,7 +22,7 @@
  */
 .slds-border_left,
 .slds-border--left {
-  border-left: $border-width-thin solid $color-border;
+  border-left: $border-width-thin solid var(--slds-g-color-border-base-1, #{$color-border});
 }
 
 /**
@@ -34,7 +34,7 @@
  */
 .slds-border_right,
 .slds-border--right {
-  border-right: $border-width-thin solid $color-border;
+  border-right: $border-width-thin solid var(--slds-g-color-border-base-1, #{$color-border});
 }
 
 /**
@@ -46,5 +46,5 @@
  */
 .slds-border_top,
 .slds-border--top {
-  border-top: $border-width-thin solid $color-border;
+  border-top: $border-width-thin solid var(--slds-g-color-border-base-1, #{$color-border});
 }

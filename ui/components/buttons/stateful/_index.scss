@@ -28,15 +28,15 @@
   &:hover:not([disabled]),
   &:focus:not([disabled]) {
     /*! @css-var-fallback background-color */
-    --slds-c-button-neutral-color-background-hover: var(--slds-c-button-stateful-color-background-selected-hover, #{$color-background-button-default-hover});
+    --slds-c-button-neutral-color-background-hover: var(--slds-c-button-stateful-color-background-selected-hover, var(--slds-g-color-neutral-base-95, #{$color-background-button-default-hover}));
 
     /*! @css-var-fallback border-color */
-    --slds-c-button-neutral-color-border-hover: var(--slds-c-button-stateful-color-border-selected-hover, #{$color-border-primary});
+    --slds-c-button-neutral-color-border-hover: var(--slds-c-button-stateful-color-border-selected-hover, var(--slds-g-color-border-base-1, #{$color-border-primary}));
   }
 
   &:active:not([disabled]) {
     /*! @css-var-fallback background-color */
-    --slds-c-button-neutral-color-background-active: var(--slds-c-button-stateful-color-background-selected-active, #{$color-background-button-default-active});
+    --slds-c-button-neutral-color-background-active: var(--slds-c-button-stateful-color-background-selected-active, var(--slds-g-color-neutral-base-95, #{$color-background-button-default-active}));
   }
 }
 

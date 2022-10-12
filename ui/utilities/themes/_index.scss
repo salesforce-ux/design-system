@@ -41,7 +41,7 @@
 .slds-theme_inverse,
 .slds-theme--inverse {
   @include theme(inverse);
-  border-color: $color-background-inverse;
+  border-color: var(--slds-g-color-brand-base-10, #{$color-background-inverse});
 }
 
 /**
@@ -53,7 +53,7 @@
 .slds-theme_alt-inverse,
 .slds-theme--alt-inverse {
   @include theme(alt-inverse);
-  border-color: $color-background-alt-inverse;
+  border-color: var(--slds-g-color-brand-base-20, #{$color-background-alt-inverse});
 }
 
 /**
@@ -65,7 +65,7 @@
 .slds-theme_success,
 .slds-theme--success {
   @include inverse-links;
-  background-color: $color-background-toast-success;
+  background-color: var(--slds-g-color-success-base-50, #{$color-background-toast-success});
 }
 
 /**
@@ -77,7 +77,7 @@
 .slds-theme_info,
 .slds-theme--info {
   @include inverse-links;
-  background-color: $color-background-toast;
+  background-color: var(--slds-g-color-neutral-base-50, #{$color-background-toast});
 }
 
 /**
@@ -90,12 +90,12 @@
 .slds-theme--warning {
   @include warning-links;
   @include warning-buttons;
-  background-color: $color-background-warning;
-  color: $color-text-default;
+  background-color: var(--slds-g-color-warning-base-60, #{$color-background-warning});
+  color: var(--slds-g-color-neutral-base-10, #{$color-text-default});
 
   .slds-icon,
   .slds-button__icon {
-    fill: $color-gray-10;
+    fill: var(--slds-g-color-neutral-base-30, #{$color-gray-10});
   }
 }
 
@@ -108,7 +108,7 @@
 .slds-theme_error,
 .slds-theme--error {
   @include inverse-links;
-  background-color: $color-background-toast-error;
+  background-color: var(--slds-g-color-error-base-50, #{$color-background-toast-error});
 }
 
 /**

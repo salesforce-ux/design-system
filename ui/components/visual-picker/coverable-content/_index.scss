@@ -24,8 +24,8 @@
   }
 
   &:active .slds-visual-picker__figure {
-    border: $border-width-thin solid $color-border-selection-hover;
-    box-shadow: 0 0 0 1px $color-border-selection-hover inset;
+    border: $border-width-thin solid var(--slds-g-color-border-brand-2, #{$color-border-selection-hover});
+    box-shadow: 0 0 0 1px var(--slds-g-color-border-brand-2, #{$color-border-selection-hover}) inset;
   }
 
   &:hover .slds-visual-picker__figure {
@@ -35,8 +35,8 @@
   input:not(:disabled) ~ label:hover .slds-visual-picker__figure {
     cursor: pointer;
     outline: 0;
-    border: $border-width-thin solid $color-border-selection-hover;
-    box-shadow: 0 0 0 1px $color-border-selection-hover inset;
+    border: $border-width-thin solid var(--slds-g-color-border-brand-2, #{$color-border-selection-hover});
+    box-shadow: 0 0 0 1px var(--slds-g-color-border-brand-2, #{$color-border-selection-hover}) inset;
   }
 
   // Hide input
@@ -50,8 +50,8 @@
     position: absolute;
 
     &:focus ~ label .slds-visual-picker__figure {
-      border: $border-width-thin solid $color-border-selection-hover;
-      box-shadow: 0 0 0 1px $color-border-selection-hover inset;
+      border: $border-width-thin solid var(--slds-g-color-border-brand-2, #{$color-border-selection-hover});
+      box-shadow: 0 0 0 1px var(--slds-g-color-border-brand-2, #{$color-border-selection-hover}) inset;
     }
 
     &:checked ~ label .slds-visual-picker__figure {
@@ -92,8 +92,8 @@
      * @restrict .slds-visual-picker__figure
      */
     &:checked ~ label .slds-visual-picker__icon {
-      background-color: $color-brand;
-      border: $border-width-thin solid $color-border-selection-hover;
+      background-color: var(--slds-g-color-brand-base-60, #{$color-brand});
+      border: $border-width-thin solid var(--slds-g-color-border-brand-2, #{$color-border-selection-hover});
     }
 
     /**
@@ -103,8 +103,8 @@
      */
     /* stylelint-disable max-nesting-depth */
     &:checked ~ label .slds-visual-picker__text {
-      border: $border-width-thin solid $color-border-selection-hover;
-      box-shadow: 0 0 0 1px $color-border-selection-hover inset;
+      border: $border-width-thin solid var(--slds-g-color-border-brand-2, #{$color-border-selection-hover});
+      box-shadow: 0 0 0 1px var(--slds-g-color-border-brand-2, #{$color-border-selection-hover}) inset;
 
       &:after {
         content: '';
@@ -115,8 +115,8 @@
         border-style: solid;
         border-radius: 0 $border-radius-medium 0 0;
         border-width: 1rem;
-        border-right-color: $color-brand;
-        border-top-color: $color-brand;
+        border-right-color: var(--slds-g-color-brand-base-60, #{$color-brand});
+        border-top-color: var(--slds-g-color-brand-base-60, #{$color-brand});
       }
     }
 
@@ -126,12 +126,12 @@
 
       ~ label .slds-visual-picker__body,
       ~ label .slds-visual-picker__text {
-        color: $color-text-input-disabled;
+        color: var(--slds-g-color-neutral-base-50, #{$color-text-input-disabled});
       }
 
       ~ label .slds-visual-picker__figure {
-        border-color: $color-border-input-disabled;
-        background-color: $color-background-input-disabled;
+        border-color: var(--slds-g-color-border-base-1, #{$color-border-input-disabled});
+        background-color: var(--slds-g-color-neutral-base-80, #{$color-background-input-disabled});
         box-shadow: none;
 
         &:hover {
@@ -151,14 +151,14 @@
  */
 .slds-visual-picker__figure {
   display: block;
-  background: $color-background-alt;
+  background: var(--slds-g-color-neutral-base-100, #{$color-background-alt});
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.05);
-  border: $border-width-thin solid $color-border;
+  border: $border-width-thin solid var(--slds-g-color-border-base-1, #{$color-border});
   border-radius: $border-radius-medium;
   text-align: center;
 
   .slds-icon-action-check {
-    background-color: $color-brand;
+    background-color: var(--slds-g-color-brand-base-60, #{$color-brand});
   }
 
   span {

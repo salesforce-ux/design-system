@@ -1,7 +1,7 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-@mixin scrollbar($size: 10px, $thumb: $color-background-scrollbar, $track: $color-background-scrollbar-track) {
+@mixin scrollbar($size: 10px, $thumb: var(--slds-g-color-neutral-base-95, #{$color-background-scrollbar}), $track: var(--slds-g-color-neutral-base-80, #{$color-background-scrollbar-track})) {
 
   &::-webkit-scrollbar {
     width: $size;

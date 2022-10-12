@@ -24,10 +24,10 @@ $alert-gradient-size-background: 64px 64px;
   padding-right: var(--slds-c-alert-spacing-inline-end, var(--sds-c-alert-spacing-inline-end, $spacing-x-large));
   padding-bottom: var(--slds-c-alert-spacing-block-end, var(--sds-c-alert-spacing-block-end, $spacing-x-small));
   padding-left: var(--slds-c-alert-spacing-inline-start, var(--sds-c-alert-spacing-inline-start, $spacing-x-small));
-  color: var(--slds-c-alert-text-color, var(--sds-c-alert-text-color, $color-text-inverse));
+  color: var(--slds-c-alert-text-color, var(--sds-c-alert-text-color, var(--slds-g-color-neutral-base-100, #{$color-text-inverse})));
   font-weight: var(--slds-c-alert-font-weight, var(--sds-c-alert-font-weight));
   text-align: center;
-  background-color: var(--slds-c-alert-color-background, var(--sds-c-alert-color-background, $color-background-toast));
+  background-color: var(--slds-c-alert-color-background, var(--sds-c-alert-color-background, var(--slds-g-color-neutral-base-50, #{$color-background-toast})));
   background-image: var(--slds-c-alert-image-background, var(--sds-c-alert-image-background, $alert-gradient));
   background-size: var(--slds-c-alert-size-background, var(--sds-c-alert-size-background, $alert-gradient-size-background));
 
@@ -45,19 +45,21 @@ $alert-gradient-size-background: 64px 64px;
     }
 
     &:focus {
-      box-shadow: var(--slds-c-alert-shadow, 0 0 3px $color-border-link-focus-inverse);
+      box-shadow: var(--slds-c-alert-shadow,
+        0 0 3px var(--slds-g-color-neutral-base-100, #{$color-border-link-focus-inverse}));
       border-width: var(--slds-c-alert-sizing-border, $border-width-thin);
       border-style: solid;
-      border-color: var(--slds-c-alert-color-border, $color-border-link-focus-inverse);
+      border-color: var(--slds-c-alert-color-border,
+        var(--slds-g-color-neutral-base-100, #{$color-border-link-focus-inverse}));
     }
 
     &:active {
-      color: var(--slds-c-alert-text-color-active, var(--sds-c-alert-text-color-active, $color-text-link-inverse-active));
+      color: var(--slds-c-alert-text-color-active, var(--sds-c-alert-text-color-active, var(--slds-g-color-neutral-base-100, #{$color-text-link-inverse-active})));
     }
 
     &[disabled] {
       // @TODO: declare at shared/global level
-      color: $color-text-link-inverse-disabled;
+      color: var(--slds-g-color-neutral-base-100, #{$color-text-link-inverse-disabled});
     }
   }
 }
@@ -78,12 +80,12 @@ $alert-gradient-size-background: 64px 64px;
  */
 .slds-alert_warning {
   /*! @css-var-fallback background-color */
-  --slds-c-alert-color-background: #{$color-background-warning};
-  color: $color-text-default;
+  --slds-c-alert-color-background: var(--slds-g-color-warning-base-60, #{$color-background-warning});
+  color: var(--slds-g-color-neutral-base-10, #{$color-text-default});
 
   .slds-icon,
   .slds-button__icon {
-    fill: $color-gray-10;
+    fill: var(--slds-g-color-neutral-base-30, #{$color-gray-10});
   }
 }
 
@@ -94,7 +96,7 @@ $alert-gradient-size-background: 64px 64px;
  */
 .slds-alert_error {
   /*! @css-var-fallback background-color */
-  --slds-c-alert-color-background: #{$color-background-toast-error};
+  --slds-c-alert-color-background: var(--slds-g-color-error-base-50, #{$color-background-toast-error});
 }
 
 /**

@@ -9,7 +9,7 @@
 @include deprecate('4.0.0', 'Use new .slds-day_adjacent-month class instead for days that are in adjacent months') {
 
   .slds-disabled-text {
-    color: $color-text-button-default-disabled;
+    color: var(--slds-g-color-neutral-base-80, #{$color-text-button-default-disabled});
   }
 
   .slds-datepicker {

@@ -10,15 +10,15 @@
   }
 
   ::placeholder {
-    color: $color-text-placeholder;
+    color: var(--slds-g-color-neutral-base-50, #{$color-text-placeholder});
     font-weight: $font-weight-regular;
     opacity: 1;
   }
 
   ::selection {
-    background: $color-background-selection;
+    background: var(--slds-g-color-brand-base-95, #{$color-background-selection});
     text-shadow: none;
-    color: $color-text-default;
+    color: var(--slds-g-color-neutral-base-10, #{$color-text-default});
   }
 
   @if $globals {
@@ -109,8 +109,8 @@
   }
 
   mark {
-    background-color: $color-background-highlight-search;
-    color: $color-text-default;
+    background-color: var(--slds-g-color-palette-yellow-90, #{$color-background-highlight-search});
+    color: var(--slds-g-color-neutral-base-10, #{$color-text-default});
   }
 
   abbr[title] {
@@ -140,7 +140,7 @@
   hr {
     display: block;
     margin: $spacing-x-large 0;
-    border-top: 1px solid $color-border;
+    border-top: 1px solid var(--slds-g-color-border-base-1, #{$color-border});
     height: 1px;
     clear: both;
   }

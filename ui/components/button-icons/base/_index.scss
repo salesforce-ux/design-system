@@ -34,7 +34,7 @@
   line-height: $line-height-reset;
   vertical-align: middle;
   justify-content: center;
-  color: $color-text-icon-default;
+  color: var(--slds-g-color-neutral-base-50, #{$color-text-icon-default});
   flex-shrink: 0;
 }
 
@@ -69,7 +69,7 @@
 .slds-button_icon-border,
 .slds-button--icon-border {
   @include button-icon;
-  border-color: $button-color-border-primary;
+  border-color: var(--slds-g-color-border-base-4, #{$button-color-border-primary});
 }
 
 /**
@@ -80,12 +80,12 @@
 .slds-button_icon-border-inverse,
 .slds-button--icon-border-inverse {
   background-color: $color-background-button-inverse;
-  border-color: $button-color-border-primary;
+  border-color: var(--slds-g-color-border-base-4, #{$button-color-border-primary});
 
   &[disabled],
   &:disabled {
     background-color: $color-background-button-inverse-disabled;
-    border-color: $color-border-button-inverse-disabled;
+    border-color: var(--slds-g-color-neutral-base-100, #{$color-border-button-inverse-disabled});
   }
 }
 
@@ -99,9 +99,9 @@
 
   &[disabled],
   &:disabled {
-    background: $brand-disabled;
-    border-color: $brand-disabled;
-    color: $color-text-button-brand-disabled;
+    background: var(--slds-g-color-neutral-base-80, #{$brand-disabled});
+    border-color: var(--slds-g-color-neutral-base-80, #{$brand-disabled});
+    color: var(--slds-g-color-neutral-base-100, #{$color-text-button-brand-disabled});
   }
 }
 
@@ -113,12 +113,12 @@
  */
 .slds-button_icon-border-filled,
 .slds-button--icon-border-filled {
-  background-color: $button-color-background-primary;
+  background-color: var(--slds-g-color-neutral-base-100, #{$button-color-background-primary});
 
   &[disabled],
   &:disabled {
-    border-color: $button-color-border-primary;
-    background-color: $color-background-button-default-disabled;
+    border-color: var(--slds-g-color-border-base-4, #{$button-color-border-primary});
+    background-color: var(--slds-g-color-neutral-base-100, #{$color-background-button-default-disabled});
   }
 }
 
@@ -131,11 +131,11 @@
 .slds-button--icon-inverse,
 .slds-button_icon-border-inverse,
 .slds-button--icon-border-inverse {
-  color: $color-text-link-inverse;
+  color: var(--slds-g-color-neutral-base-100, #{$color-text-link-inverse});
 
   &:hover,
   &:focus {
-    color: $color-text-link-inverse-hover;
+    color: var(--slds-g-color-neutral-base-100, #{$color-text-link-inverse-hover});
   }
 
   &:focus {
@@ -143,12 +143,12 @@
   }
 
   &:active {
-    color: $color-text-link-inverse-active;
+    color: var(--slds-g-color-neutral-base-100, #{$color-text-link-inverse-active});
   }
 
   &[disabled],
   &:disabled {
-    color: $color-text-link-inverse-disabled;
+    color: var(--slds-g-color-neutral-base-100, #{$color-text-link-inverse-disabled});
   }
 }
 
@@ -164,7 +164,7 @@
   &:hover,
   &:active,
   &:focus {
-    color: $color-text-error;
+    color: var(--slds-g-color-error-base-40, #{$color-text-error});
   }
 }
 
@@ -180,7 +180,7 @@
   &:hover,
   &:active,
   &:focus {
-    color: $color-text-warning;
+    color: var(--slds-g-color-warning-base-50, #{$color-text-warning});
   }
 }
 
@@ -265,9 +265,9 @@
   width: auto;
   line-height: $line-height-button;
   padding: 0 $spacing-x-small;
-  background-color: $button-color-background-primary;
-  border-color: $button-color-border-primary;
-  color: $color-text-icon-default;
+  background-color: var(--slds-g-color-neutral-base-100, #{$button-color-background-primary});
+  border-color: var(--slds-g-color-border-base-4, #{$button-color-border-primary});
+  color: var(--slds-g-color-neutral-base-50, #{$color-text-icon-default});
 
   &:hover,
   &:focus {
@@ -286,7 +286,7 @@
     cursor: default;
 
     .slds-button__icon {
-      fill: $color-text-icon-default-disabled;
+      fill: var(--slds-g-color-neutral-base-80, #{$color-text-icon-default-disabled});
     }
   }
 }
@@ -311,7 +311,7 @@
  */
 .slds-button__icon_hint,
 .slds-button__icon--hint {
-  fill: $color-text-icon-default-hint;
+  fill: var(--slds-g-color-neutral-base-70, #{$color-text-icon-default-hint});
 }
 
 /**
@@ -321,7 +321,7 @@
  */
 .slds-button__icon_inverse-hint,
 .slds-button__icon--inverse-hint {
-  fill: $color-text-icon-inverse-hint;
+  fill: var(--slds-g-color-neutral-base-100, #{$color-text-icon-inverse-hint});
 }
 
 // Handles hint on hover behavior of an inverse button icon, both bordered and non-bordered
@@ -329,10 +329,10 @@
 
   .slds-button_icon-border-inverse,
   .slds-button--icon-border-inverse {
-    border-color: $color-border-icon-inverse-hint;
+    border-color: var(--slds-g-color-neutral-base-100, #{$color-border-icon-inverse-hint});
 
     &:focus {
-      border-color: $color-border-icon-inverse-hint-hover;
+      border-color: var(--slds-g-color-neutral-base-100, #{$color-border-icon-inverse-hint-hover});
     }
   }
 
@@ -341,17 +341,17 @@
 
     .slds-button_icon-border-inverse,
     .slds-button--icon-border-inverse {
-      border-color: $color-border-icon-inverse-hint-hover;
+      border-color: var(--slds-g-color-neutral-base-100, #{$color-border-icon-inverse-hint-hover});
     }
 
     .slds-button__icon_hint,
     .slds-button__icon--hint {
-      fill: $color-text-icon-default;
+      fill: var(--slds-g-color-neutral-base-50, #{$color-text-icon-default});
     }
 
     .slds-button__icon_inverse-hint,
     .slds-button__icon--inverse-hint {
-      fill: $color-text-icon-inverse-hint-hover;
+      fill: var(--slds-g-color-neutral-base-100, #{$color-text-icon-inverse-hint-hover});
     }
 
     .slds-button:disabled {

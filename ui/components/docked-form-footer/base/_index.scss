@@ -19,7 +19,7 @@
   bottom: 0;
   left: 0;
   width: 100%;
-  background: $color-background;
+  background: var(--slds-g-color-neutral-base-95, #{$color-background});
   box-shadow: $shadow-docked;
   z-index: $z-index-overlay; // Better token - more specific to docked stuff
 }

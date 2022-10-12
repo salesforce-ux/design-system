@@ -63,7 +63,7 @@
   --slds-c-button-text-color:
     var(--slds-c-button-dual-stateful-text-color-selected,
     var(--slds-c-button-brand-text-color,
-    var(--sds-c-button-brand-text-color, #{$color-text-brand-primary})));
+    var(--sds-c-button-brand-text-color, var(--slds-g-color-neutral-base-100, #{$color-text-brand-primary}))));
 
   // Since dual-stateful has a high specificity, we have to be explicit with pseudo-class
   &:focus,
@@ -84,7 +84,7 @@
     --slds-c-button-dual-stateful-text-color-selected:
       var(--slds-c-button-dual-stateful-text-color-selected-hover,
       var(--slds-c-button-brand-text-color-hover,
-      var(--sds-c-button-brand-text-color-hover, #{$color-text-brand-primary})));
+      var(--sds-c-button-brand-text-color-hover, var(--slds-g-color-neutral-base-100, #{$color-text-brand-primary}))));
   }
 
   .slds-text-not-pressed {

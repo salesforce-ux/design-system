@@ -13,12 +13,12 @@
      * @modifier
      */
     .slds-is-active {
-      color: $color-text-default;
+      color: var(--slds-g-color-neutral-base-10, #{$color-text-default});
 
       .slds-navigation-list-vertical__action,
       .slds-navigation-list--vertical__action {
         background-color: $brand-primary-transparent-10;
-        border-color: $color-border;
+        border-color: var(--slds-g-color-border-base-1, #{$color-border});
         border-left-color: $brand-primary;
 
         &:focus {
@@ -43,7 +43,7 @@
 
     .slds-is-active .slds-navigation-list-vertical__action,
     .slds-is-active .slds-navigation-list--vertical__action {
-      background-color: $color-background-alt;
+      background-color: var(--slds-g-color-neutral-base-100, #{$color-background-alt});
     }
   }
 
@@ -67,11 +67,11 @@
     &:hover,
     &:focus {
       outline: 0;
-      background-color: $color-background-row-hover;
+      background-color: var(--slds-g-color-neutral-base-95, #{$color-background-row-hover});
     }
 
     &:active {
-      background-color: $color-background-row-active;
+      background-color: var(--slds-g-color-neutral-base-95, #{$color-background-row-active});
     }
   }
 }

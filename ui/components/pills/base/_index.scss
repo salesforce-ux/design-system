@@ -22,9 +22,9 @@
   padding-left: var(--slds-c-pill-spacing-inline-start, var(--sds-c-pill-spacing-inline-start, $spacing-xxx-small));
   border-width: var(--slds-c-pill-sizing-border, var(--sds-c-pill-sizing-border, $border-width-thin));
   border-style: solid;
-  border-color: var(--slds-c-pill-color-border, var(--sds-c-pill-color-border, $color-border));
+  border-color: var(--slds-c-pill-color-border, var(--sds-c-pill-color-border, var(--slds-g-color-border-base-1, #{$color-border})));
   border-radius: var(--slds-c-pill-radius-border, var(--sds-c-pill-radius-border, $border-radius-medium));
-  background-color: var(--slds-c-pill-color-background, var(--sds-c-pill-color-background, $color-background-pill));
+  background-color: var(--slds-c-pill-color-background, var(--sds-c-pill-color-background, var(--slds-g-color-neutral-base-100, #{$color-background-pill})));
   box-shadow: var(--slds-c-pill-shadow);
   position: relative;
   min-height: $height-pill;
@@ -35,12 +35,12 @@
 
   &:hover {
     /*! @css-var-fallback background-color */
-    --slds-c-pill-color-background: var(--sds-c-pill-color-background-hover, #{$color-background-button-default-hover});
+    --slds-c-pill-color-background: var(--sds-c-pill-color-background-hover, var(--slds-g-color-neutral-base-95, #{$color-background-button-default-hover}));
   }
 
   &:focus {
     /*! @css-var-fallback border-color */
-    --slds-c-pill-color-border: var(--sds-c-pill-color-border-focus, #{$color-border-input-active});
+    --slds-c-pill-color-border: var(--sds-c-pill-color-border-focus, var(--slds-g-color-brand-base-60, #{$color-border-input-active}));
 
     /*! @css-var-fallback box-shadow */
     --slds-c-pill-shadow: var(--sds-c-pill-shadow-focus, #{$shadow-button-focus});
@@ -89,9 +89,9 @@
   padding-left: var(--slds-c-pill-container-spacing-inline-start, var(--sds-c-pill-container-spacing-inline-start, $spacing-xxx-small));
   border-width: var(--slds-c-pill-sizing-border, var(--sds-c-pill-sizing-border, $border-width-thin));
   border-style: solid;
-  border-color: var(--slds-c-pill-color-border, var(--sds-c-pill-color-border, $color-border));
+  border-color: var(--slds-c-pill-color-border, var(--sds-c-pill-color-border, var(--slds-g-color-border-base-1, #{$color-border})));
   border-radius: var(--slds-c-pill-radius-border, var(--sds-c-pill-radius-border, $border-radius-medium));
-  background-color: var(--slds-c-pill-container-color-background, var(--sds-c-pill-container-color-background, $color-background-input));
+  background-color: var(--slds-c-pill-container-color-background, var(--sds-c-pill-container-color-background, var(--slds-g-color-neutral-base-100, #{$color-background-input})));
 
   .slds-listbox_inline {
     margin-left: 0;
@@ -199,7 +199,7 @@
   padding-left: var(--slds-c-pill-spacing-inline-start, var(--sds-c-pill-spacing-inline-start, $spacing-xxx-small));
   border-width: var(--slds-c-pill-sizing-border, var(--sds-c-pill-sizing-border, $border-width-thin));
   border-style: solid;
-  border-color: var(--slds-c-pill-color-border, var(--sds-c-pill-color-border, $color-border));
+  border-color: var(--slds-c-pill-color-border, var(--sds-c-pill-color-border, var(--slds-g-color-border-base-1, #{$color-border})));
   border-radius: var(--slds-c-pill-radius-border, var(--sds-c-pill-radius-border, $border-radius-medium));
   white-space: nowrap;
   overflow: hidden;
@@ -208,7 +208,7 @@
 
   &:focus {
     outline: 0;
-    border-color: var(--slds-c-pill-action-color-border, var(--sds-c-pill-action-color-border, $color-border-input-active));
+    border-color: var(--slds-c-pill-action-color-border, var(--sds-c-pill-action-color-border, var(--slds-g-color-brand-base-60, #{$color-border-input-active})));
     box-shadow: var(--slds-c-pill-action-shadow, var(--sds-c-pill-action-shadow, $shadow-button-focus));
   }
 }
@@ -221,14 +221,15 @@
  * @modifier
  */
 .slds-has-error {
-  border-color: var(--slds-c-pill-error-color-border, var(--sds-c-pill-error-color-border, $color-border-error));
+  border-color: var(--slds-c-pill-error-color-border, var(--sds-c-pill-error-color-border, var(--slds-g-color-error-base-40, #{$color-border-error})));
 
   &:active {
-    border-color: var(--slds-c-pill-error-color-border-active, var(--sds-c-pill-error-color-border-active, $color-border-error));
+    border-color: var(--slds-c-pill-error-color-border-active, var(--sds-c-pill-error-color-border-active, var(--slds-g-color-error-base-40, #{$color-border-error})));
   }
 
   .slds-pill__label {
     font-weight: $font-weight-bold;
-    color: var(--slds-c-pill-error-text-color, var(--sds-c-pill-error-text-color, $color-text-error));
+    color: var(--slds-c-pill-error-text-color, var(--sds-c-pill-error-text-color,
+      var(--slds-g-color-error-base-40, #{$color-text-error})));
   }
 }

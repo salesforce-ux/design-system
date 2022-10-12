@@ -16,7 +16,7 @@
   height: $square-icon-utility-large;
   width: $square-icon-utility-large;
   border-radius: $square-icon-utility-large;
-  background: $color-border;
+  background: var(--slds-g-color-border-base-1, #{$color-border});
 
   .slds-icon_container {
     line-height: 0;
@@ -48,7 +48,7 @@
  * @restrict .slds-progress-ring__progress path, .slds-progress-ring__progress circle
  */
 .slds-progress-ring__path {
-  fill: $color-background-success-dark;
+  fill: var(--slds-g-color-success-base-50, #{$color-background-success-dark});
 }
 
 /**
@@ -87,7 +87,7 @@
   align-items: center;
   justify-content: center;
   border-radius: $square-icon-utility-large;
-  background: $color-background-progress-ring-content;
+  background: var(--slds-g-color-neutral-base-100, #{$color-background-progress-ring-content});
 
   .slds-icon {
     width: $square-icon-small-content;
@@ -105,12 +105,12 @@
 .slds-progress-ring_warning {
 
   .slds-progress-ring__content {
-    background: $color-background-progress-ring-content;
+    background: var(--slds-g-color-neutral-base-100, #{$color-background-progress-ring-content});
   }
 
   .slds-icon,
   .slds-progress-ring__path {
-    fill: $color-background-warning;
+    fill: var(--slds-g-color-warning-base-60, #{$color-background-warning});
   }
 }
 
@@ -125,12 +125,12 @@
 .slds-progress-ring_expired {
 
   .slds-progress-ring__content {
-    background: $color-background-progress-ring-content;
+    background: var(--slds-g-color-neutral-base-100, #{$color-background-progress-ring-content});
   }
 
   .slds-icon,
   .slds-progress-ring__path {
-    fill: $color-background-error;
+    fill: var(--slds-g-color-error-base-40, #{$color-background-error});
   }
 }
 
@@ -145,15 +145,15 @@
 .slds-progress-ring_complete {
 
   .slds-icon {
-    fill: $color-background-progress-ring-content;
+    fill: var(--slds-g-color-neutral-base-100, #{$color-background-progress-ring-content});
   }
 
   .slds-progress-ring__path {
-    fill: $color-background-success-dark;
+    fill: var(--slds-g-color-success-base-50, #{$color-background-success-dark});
   }
 
   .slds-progress-ring__content {
-    background: $color-background-success-dark;
+    background: var(--slds-g-color-success-base-50, #{$color-background-success-dark});
   }
 }
 
@@ -185,6 +185,6 @@
 .slds-progress-ring_active-step {
 
   .slds-progress-ring__path {
-    fill: $progress-color-border-active;
+    fill: var(--slds-g-color-brand-base-60, #{$progress-color-border-active});
   }
 }

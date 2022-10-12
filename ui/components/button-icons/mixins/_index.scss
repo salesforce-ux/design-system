@@ -4,13 +4,13 @@
 @mixin button-icon {
   line-height: $line-height-reset;
   vertical-align: middle;
-  color: $color-text-icon-default;
-  border: $border-width-thin solid $color-border-primary;
+  color: var(--slds-g-color-neutral-base-50, #{$color-text-icon-default});
+  border: $border-width-thin solid var(--slds-g-color-border-base-1, #{$color-border-primary});
   transition: border 0.15s linear;
 
   &[disabled],
   &:disabled {
-    color: $color-text-button-default-disabled;
+    color: var(--slds-g-color-neutral-base-80, #{$color-text-button-default-disabled});
 
     /**
      * Since slds-button_icon crosses paths with slds-button,
@@ -20,26 +20,26 @@
      * its associated component-level styling hooks from overriding
      * the disabled values.
      */
-    border-color: $button-color-border-primary;
+    border-color: var(--slds-g-color-border-base-4, #{$button-color-border-primary});
   }
 }
 
 @mixin button-icon-brand {
   background-color: $brand-accessible;
   border-color: $brand-accessible;
-  color: $color-text-brand-primary;
+  color: var(--slds-g-color-neutral-base-100, #{$color-text-brand-primary});
 
   &:link,
   &:visited,
   &:active {
-    color: $color-text-brand-primary;
+    color: var(--slds-g-color-neutral-base-100, #{$color-text-brand-primary});
   }
 
   &:hover,
   &:focus {
     background-color: $brand-accessible-active;
     border-color: $brand-accessible-active;
-    color: $color-text-brand-primary;
+    color: var(--slds-g-color-neutral-base-100, #{$color-text-brand-primary});
   }
 
   &:active {

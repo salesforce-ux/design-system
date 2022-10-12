@@ -11,7 +11,7 @@
  * @variant
  */
 .slds-panel {
-  background: $color-background-alt;
+  background: var(--slds-g-color-neutral-base-100, #{$color-background-alt});
   border-radius: $border-radius-medium;
   overflow-y: auto;
 
@@ -52,7 +52,7 @@
   position: relative;
   align-items: center;
   padding: $spacing-small;
-  border-bottom: $border-width-thin solid $color-border;
+  border-bottom: $border-width-thin solid var(--slds-g-color-border-base-1, #{$color-border});
 }
 
 /**

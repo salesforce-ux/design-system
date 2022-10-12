@@ -20,8 +20,8 @@
 .slds-popover_error {
 
   .slds-popover__header {
-    background-color: $color-background-error-dark;
-    color: $color-text-inverse;
+    background-color: var(--slds-g-color-error-base-30, #{$color-background-error-dark});
+    color: var(--slds-g-color-neutral-base-100, #{$color-text-inverse});
     padding-left: $spacing-small;
   }
 
@@ -49,7 +49,7 @@
   &.slds-nubbin--right-top {
 
     &:before {
-      background-color: $color-background-error-dark;
+      background-color: var(--slds-g-color-error-base-30, #{$color-background-error-dark});
     }
   }
 
@@ -74,7 +74,7 @@
 
     max-height: 150px;
     overflow-y: auto;
-    border-bottom: $border-width-thin solid $color-border;
+    border-bottom: $border-width-thin solid var(--slds-g-color-border-base-1, #{$color-border});
 
     + .slds-popover__footer {
       border-top: 0;

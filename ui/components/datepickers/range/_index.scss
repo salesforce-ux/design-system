@@ -71,7 +71,7 @@
     }
 
     &.slds-is-today > .slds-day {
-      box-shadow: $color-background-alt 0 0 0 1px inset;
+      box-shadow: var(--slds-g-color-neutral-base-100, #{$color-background-alt}) 0 0 0 1px inset;
     }
 
     + .slds-is-selected-multi > .slds-day:before {

@@ -11,7 +11,7 @@
   .slds-tabs_mobile__title {
     width: 100%;
     height: 100%;
-    color: $color-text-tab-label;
+    color: var(--slds-g-color-neutral-base-10, #{$color-text-tab-label});
     font-size: $font-size-5;
     padding: 0 $spacing-medium;
 
@@ -61,16 +61,16 @@
   */
   .slds-tabs_mobile__item {
     display: flex;
-    border-top: $border-width-thin solid $color-border;
+    border-top: $border-width-thin solid var(--slds-g-color-border-base-1, #{$color-border});
     height: $square-tappable;
     align-items: center;
 
     &:active {
-      background-color: $color-background-row-hover;
+      background-color: var(--slds-g-color-neutral-base-95, #{$color-background-row-hover});
     }
 
     &:last-child {
-      border-bottom: $border-width-thin solid $color-border;
+      border-bottom: $border-width-thin solid var(--slds-g-color-border-base-1, #{$color-border});
     }
   }
 }

@@ -37,7 +37,10 @@ module.exports = {
     node_modules,
     '@salesforce-ux/design-system-primitive-tokens'
   ),
-
+  sdsStylingHooksProps: path.resolve(
+    node_modules,
+    '@salesforce-ux/sds-styling-hooks/src/props'
+  ),
   icons: path.resolve(
     node_modules,
     '@salesforce-ux/icons/dist/salesforce-lightning-design-system-icons'

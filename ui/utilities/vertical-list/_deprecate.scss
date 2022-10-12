@@ -47,6 +47,6 @@
   .slds-has-divider {
     margin-top: $spacing-x-small;
     padding-top: $spacing-x-small;
-    border-top: $border-width-thin solid $color-border;
+    border-top: $border-width-thin solid var(--slds-g-color-border-base-1, #{$color-border});
   }
 }

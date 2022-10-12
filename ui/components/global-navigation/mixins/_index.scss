@@ -33,48 +33,48 @@
   @keyframes error-pulse {
 
     0% {
-      background-color: $color-background-destructive;
+      background-color: var(--slds-g-color-error-base-40, #{$color-background-destructive});
     }
 
 
     40% {
-      background-color: $color-background-destructive-active;
+      background-color: var(--slds-g-color-error-base-30, #{$color-background-destructive-active});
     }
 
     100% {
-      background-color: $color-background-destructive;
+      background-color: var(--slds-g-color-error-base-40, #{$color-background-destructive});
     }
   }
 
   @keyframes success-pulse {
 
     0% {
-      background-color: $color-background-success-dark;
+      background-color: var(--slds-g-color-success-base-50, #{$color-background-success-dark});
     }
 
 
     40% {
-      background-color: $color-background-success-darker;
+      background-color: var(--slds-g-color-success-base-40, #{$color-background-success-darker});
     }
 
     100% {
-      background-color: $color-background-success-dark;
+      background-color: var(--slds-g-color-success-base-50, #{$color-background-success-dark});
     }
   }
 
   @keyframes warning-pulse {
 
     0% {
-      background-color: $color-background-warning;
+      background-color: var(--slds-g-color-warning-base-60, #{$color-background-warning});
     }
 
 
     40% {
-      background-color: $color-background-warning-dark;
+      background-color: var(--slds-g-color-warning-base-60, #{$color-background-warning-dark});
     }
 
     100% {
-      background-color: $color-background-warning;
+      background-color: var(--slds-g-color-warning-base-60, #{$color-background-warning});
     }
   }
 }

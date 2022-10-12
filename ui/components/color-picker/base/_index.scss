@@ -20,7 +20,7 @@
 
   .slds-form-error {
     padding-top: $spacing-x-small;
-    color: $color-text-error;
+    color: var(--slds-g-color-error-base-40, #{$color-text-error});
     font-size: $font-size-2;
   }
 }
@@ -53,7 +53,7 @@
   vertical-align: top;
   padding: 0.3rem $spacing-x-small;
   line-height: 1;
-  background: $color-background-alt;
+  background: var(--slds-g-color-neutral-base-100, #{$color-background-alt});
   margin-right: $spacing-xx-small;
 }
 
@@ -85,7 +85,7 @@
   }
 
   .slds-popover__footer {
-    background: $color-background;
+    background: var(--slds-g-color-neutral-base-95, #{$color-background});
   }
 
   .slds-tabs_default__content {
@@ -149,7 +149,7 @@
   position: relative;
   margin-bottom: $spacing-xx-small;
   height: $color-picker-range-height;
-  border: $border-width-thin solid $color-border;
+  border: $border-width-thin solid var(--slds-g-color-border-base-1, #{$color-border});
   border-radius: $border-radius-medium;
   overflow: hidden;
 
@@ -203,7 +203,7 @@
     margin-left: $spacing-xx-small;
     height: $spacing-large;
     width: $spacing-large;
-    border: $border-width-thin solid $color-border;
+    border: $border-width-thin solid var(--slds-g-color-border-base-1, #{$color-border});
     border-radius: $border-radius-medium;
   }
 }
@@ -230,7 +230,7 @@
   padding: 0;
   height: $color-picker-slider-height;
   width: 100%;
-  border: $border-width-thin solid $color-border;
+  border: $border-width-thin solid var(--slds-g-color-border-base-1, #{$color-border});
   border-radius: $border-radius-medium;
   background: linear-gradient(
     to right,
@@ -242,13 +242,13 @@
     cursor: pointer;
     height: calc(#{$color-picker-slider-height} - (#{$border-width-thin} * 2));
     width: $color-picker-thumb-width;
-    border: $border-width-thin solid $color-picker-slider-thumb-border-color;
+    border: $border-width-thin solid var(--slds-g-color-neutral-base-30, #{$color-picker-slider-thumb-border-color});
     border-radius: $border-radius-small;
-    background: $color-picker-slider-thumb-color-background;
+    background: var(--slds-g-color-neutral-base-95, #{$color-picker-slider-thumb-color-background});
   }
 
   @mixin thumb-styles-focus {
-    border-color: $color-border-input-active;
+    border-color: var(--slds-g-color-brand-base-60, #{$color-border-input-active});
     box-shadow: $shadow-button-focus;
   }
 
@@ -356,5 +356,5 @@
   height: $color-picker-swatch-size;
   width: $color-picker-swatch-size;
   border-radius: $border-radius-small;
-  box-shadow: $color-picker-swatch-shadow;
+  box-shadow: var(--slds-g-color-neutral-base-10, #{$color-picker-swatch-shadow});
 }

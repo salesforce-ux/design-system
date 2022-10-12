@@ -58,7 +58,7 @@
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: $color-background-image-overlay;
+    background-color: var(--slds-g-color-neutral-base-10, #{$color-background-image-overlay});
   }
 
   // Adds and vertically centers "preview" icon via base64
@@ -117,7 +117,7 @@
 
 
   &:focus {
-    border: $border-width-thin solid $color-border-brand-dark;
+    border: $border-width-thin solid var(--slds-g-color-brand-base-50, #{$color-border-brand-dark});
     box-shadow: $elevation-shadow-4;
   }
 
@@ -269,8 +269,8 @@
 .slds-file_overlay,
 .slds-file--overlay {
   content: '';
-  background: $color-background-image-overlay;
-  color: $color-text-inverse;
+  background: var(--slds-g-color-neutral-base-10, #{$color-background-image-overlay});
+  color: var(--slds-g-color-neutral-base-100, #{$color-text-inverse});
   position: absolute;
   top: 0;
   left: 0;
@@ -289,7 +289,7 @@
 .slds-image--card,
 .slds-file_card,
 .slds-file--card {
-  background: $color-background-alt;
+  background: var(--slds-g-color-neutral-base-100, #{$color-background-alt});
   border: $border-width-thin solid rgba(0, 0, 0, 0.16);
 }
 
@@ -347,7 +347,7 @@
 
 .slds-image__loading-icon,
 .slds-file__loading-icon {
-  fill: $color-text-icon-default-disabled;
+  fill: var(--slds-g-color-neutral-base-80, #{$color-text-icon-default-disabled});
 }
 
 /**
@@ -376,7 +376,7 @@
 .slds-image__title--overlay,
 .slds-file__title_overlay,
 .slds-file__title--overlay {
-  color: $color-text-inverse;
+  color: var(--slds-g-color-neutral-base-100, #{$color-text-inverse});
   position: absolute;
   top: 0;
   left: 0;
@@ -398,7 +398,7 @@
 .slds-image__title--card,
 .slds-file__title_card,
 .slds-file__title--card {
-  background: $color-background;
+  background: var(--slds-g-color-neutral-base-95, #{$color-background});
   position: absolute;
   bottom: 0;
   left: 0;

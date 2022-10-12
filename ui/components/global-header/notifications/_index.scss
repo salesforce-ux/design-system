@@ -5,11 +5,11 @@
  * @summary Handles styling for notification item interactions
  */
 .slds-global-header__notification {
-  border-bottom: 1px solid $color-border;
+  border-bottom: 1px solid var(--slds-g-color-border-base-1, #{$color-border});
   padding: $spacing-xx-small;
 
   &:hover {
-    background-color: $color-background-row-hover;
+    background-color: var(--slds-g-color-neutral-base-95, #{$color-background-row-hover});
   }
 
   &:last-child {
@@ -19,5 +19,5 @@
 
 .slds-global-header__notification_unread,
 .slds-global-header__notification--unread {
-  background-color: $color-background-row-selected;
+  background-color: var(--slds-g-color-neutral-base-95, #{$color-background-row-selected});
 }

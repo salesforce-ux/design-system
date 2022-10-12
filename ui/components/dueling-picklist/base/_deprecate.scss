@@ -26,17 +26,17 @@
       padding: $spacing-x-small $spacing-small;
 
       &:hover {
-        background-color: $color-background-row-hover;
+        background-color: var(--slds-g-color-neutral-base-95, #{$color-background-row-hover});
         cursor: pointer;
       }
 
       &:active {
-        background-color: $color-background-row-active;
+        background-color: var(--slds-g-color-neutral-base-95, #{$color-background-row-active});
       }
     }
 
     &[aria-selected="true"] {
-      background-color: $color-background-row-active;
+      background-color: var(--slds-g-color-neutral-base-95, #{$color-background-row-active});
     }
   }
 }

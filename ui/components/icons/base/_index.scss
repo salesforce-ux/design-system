@@ -73,7 +73,7 @@
   .slds-icon-custom-custom#{$id},
   .slds-icon-#{$name} {
     background-color: var(--slds-c-icon-color-background, var(--sds-c-icon-color-background, $color));
-    color: $color-text-inverse; // This is for text based icon created with just the first letters of the words
+    color: var(--slds-g-color-neutral-base-100, #{$color-text-inverse}); // This is for text based icon created with just the first letters of the words
   }
 }
 
@@ -100,7 +100,8 @@ $bg-standard-map: map-merge($task2-monkey-patch, $bg-standard-map);
  */
 .slds-icon {
   @include square($square-icon-medium-boundary);
-  fill: var(--slds-c-icon-color-foreground, var(--sds-c-icon-color-foreground, $color-text-icon-inverse));
+  fill: var(--slds-c-icon-color-foreground,
+    var(--sds-c-icon-color-foreground, var(--slds-g-color-neutral-base-100, #{$color-text-icon-inverse})));
 }
 
 // Crispy
@@ -173,7 +174,7 @@ $bg-standard-map: map-merge($task2-monkey-patch, $bg-standard-map);
  */
 .slds-icon-text-default {
   /*! @css-var-fallback fill */
-  --slds-c-icon-color-foreground: var(--slds-c-icon-color-foreground-default, var(--sds-c-icon-color-foreground-default, #{$color-text-icon-default}));
+  --slds-c-icon-color-foreground: var(--slds-c-icon-color-foreground-default, var(--sds-c-icon-color-foreground-default, var(--slds-g-color-neutral-base-50, #{$color-text-icon-default})));
 
   /**
   * @summary Changes the icon fill color to match the disabled state
@@ -184,7 +185,7 @@ $bg-standard-map: map-merge($task2-monkey-patch, $bg-standard-map);
   * @group color
   */
   &.slds-is-disabled {
-    fill: $color-text-icon-default-disabled;
+    fill: var(--slds-g-color-neutral-base-80, #{$color-text-icon-default-disabled});
   }
 }
 
@@ -198,7 +199,7 @@ $bg-standard-map: map-merge($task2-monkey-patch, $bg-standard-map);
 */
 .slds-icon-text-warning {
   /*! @css-var-fallback fill */
-  --slds-c-icon-color-foreground: #{$color-text-warning};
+  --slds-c-icon-color-foreground: var(--slds-g-color-warning-base-50, #{$color-text-warning});
 }
 
 /**
@@ -211,7 +212,7 @@ $bg-standard-map: map-merge($task2-monkey-patch, $bg-standard-map);
 */
 .slds-icon-text-success {
   /*! @css-var-fallback fill */
-  --slds-c-icon-color-foreground: #{$color-text-success};
+  --slds-c-icon-color-foreground: var(--slds-g-color-success-base-50, #{$color-text-success});
 }
 
 /**
@@ -224,7 +225,7 @@ $bg-standard-map: map-merge($task2-monkey-patch, $bg-standard-map);
 */
 .slds-icon-text-error {
   /*! @css-var-fallback fill */
-  --slds-c-icon-color-foreground: #{$color-text-error};
+  --slds-c-icon-color-foreground: var(--slds-g-color-error-base-40, #{$color-text-error});
 }
 
 /**
@@ -235,7 +236,7 @@ $bg-standard-map: map-merge($task2-monkey-patch, $bg-standard-map);
 */
 .slds-icon-text-light {
   /*! @css-var-fallback fill */
-  --slds-c-icon-color-foreground: #{$color-text-input-icon};
+  --slds-c-icon-color-foreground: var(--slds-g-color-neutral-base-50, #{$color-text-input-icon});
 }
 
 /**

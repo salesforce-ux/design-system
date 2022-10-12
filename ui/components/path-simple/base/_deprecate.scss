@@ -15,14 +15,14 @@ $legacy-color-background-path-lost: #c23934;
     border-top: 0;
 
     &.slds-is-expanded {
-      border-color: $color-border;
+      border-color: var(--slds-g-color-border-base-1, #{$color-border});
       padding-bottom: $spacing-medium;
     }
   }
 
   .slds-path__mark-current {
-    background-color: $color-background-inverse;
-    border-color: $color-background-inverse;
+    background-color: var(--slds-g-color-brand-base-10, #{$color-background-inverse});
+    border-color: var(--slds-g-color-brand-base-10, #{$color-background-inverse});
   }
 }
 
@@ -46,7 +46,7 @@ $legacy-color-background-path-lost: #c23934;
 
       .slds-tabs_path__link,
       .slds-tabs--path__link {
-        color: $color-text-action-label-active;
+        color: var(--slds-g-color-neutral-base-10, #{$color-text-action-label-active});
       }
 
       &:hover {
@@ -64,7 +64,7 @@ $legacy-color-background-path-lost: #c23934;
 
         .slds-tabs_path__link,
         .slds-tabs--path__link {
-          color: $color-text-inverse;
+          color: var(--slds-g-color-neutral-base-100, #{$color-text-inverse});
         }
       }
     }
@@ -86,15 +86,15 @@ $legacy-color-background-path-lost: #c23934;
     }
 
     .slds-is-incomplete {
-      background-color: $legacy-color-background-path-incomplete;
+      background-color: var(--slds-g-color-neutral-base-95, #{$legacy-color-background-path-incomplete});
 
       &:hover {
-        background-color: $legacy-color-background-path-incomplete-hover;
+        background-color: var(--slds-g-color-neutral-base-90, #{$legacy-color-background-path-incomplete-hover});
       }
 
       .slds-tabs_path__link,
       .slds-tabs--path__link {
-        color: $color-text-default;
+        color: var(--slds-g-color-neutral-base-10, #{$color-text-default});
       }
     }
 
@@ -109,30 +109,30 @@ $legacy-color-background-path-lost: #c23934;
 
       .slds-tabs_path__link,
       .slds-tabs--path__link {
-        color: $color-text-inverse;
+        color: var(--slds-g-color-neutral-base-100, #{$color-text-inverse});
       }
     }
 
     .slds-is-active {
-      background-color: $color-background-inverse;
+      background-color: var(--slds-g-color-brand-base-10, #{$color-background-inverse});
 
       .slds-tabs_path__link,
       .slds-tabs--path__link {
-        color: $color-text-inverse;
+        color: var(--slds-g-color-neutral-base-100, #{$color-text-inverse});
       }
 
       &:hover {
-        background-color: $color-background-alt-inverse;
+        background-color: var(--slds-g-color-brand-base-20, #{$color-background-alt-inverse});
 
         + .slds-tabs_path__item:before,
         + .slds-tabs--path__item:before {
-          background-color: $color-background-alt-inverse;
+          background-color: var(--slds-g-color-brand-base-20, #{$color-background-alt-inverse});
         }
       }
 
       + .slds-tabs_path__item:before,
       + .slds-tabs--path__item:before {
-        background-color: $color-background-inverse;
+        background-color: var(--slds-g-color-brand-base-10, #{$color-background-inverse});
       }
     }
 
@@ -141,7 +141,7 @@ $legacy-color-background-path-lost: #c23934;
 
       .slds-tabs_path__title,
       .slds-tabs--path__title {
-        color: $color-gray-1;
+        color: var(--slds-g-color-neutral-base-100, #{$color-gray-1});
         transform: rotateX(0deg);
       }
 
@@ -188,7 +188,7 @@ $legacy-color-background-path-lost: #c23934;
       left: (($height-sales-path * 0.5) * -1);
       width: calc(#{$height-sales-path} - (#{$border-width-thick} * 2));
       height: calc(#{$height-sales-path} - (#{$border-width-thick} * 2));
-      border: $border-width-thick solid $color-border-path-divider;
+      border: $border-width-thick solid var(--slds-g-color-neutral-base-100, #{$color-border-path-divider});
       border-left: 0;
       border-bottom: 0;
       background-clip: padding-box;
@@ -213,12 +213,12 @@ $legacy-color-background-path-lost: #c23934;
 
     + .slds-is-incomplete:before,
     + .slds-is-lost:before {
-      background-color: $legacy-color-background-path-incomplete;
+      background-color: var(--slds-g-color-neutral-base-95, #{$legacy-color-background-path-incomplete});
     }
 
     &:hover + .slds-is-incomplete:before,
     &:hover + .slds-is-lost:before {
-      background-color: $legacy-color-background-path-incomplete-hover;
+      background-color: var(--slds-g-color-neutral-base-90, #{$legacy-color-background-path-incomplete-hover});
     }
   }
 }
@@ -296,7 +296,7 @@ $legacy-color-background-path-lost: #c23934;
   @include deprecate('4.0.0', 'Use .slds-path__guidance instead of .slds-coach__guidance') {
     padding-left: $spacing-large;
     padding-bottom: $spacing-xx-small;
-    background-color: $color-background-guidance;
+    background-color: var(--slds-g-color-neutral-base-100, #{$color-background-guidance});
   }
 }
 
@@ -310,16 +310,16 @@ $legacy-color-background-path-lost: #c23934;
 
 .slds-coach__item {
   @include deprecate('4.0.0', 'Remove dt .slds-coach__item in favor of the new form markup, .slds-form-element__label') {
-    border-top: $color-border $border-width-thin solid;
+    border-top: var(--slds-g-color-border-base-1, #{$color-border}) $border-width-thin solid;
     padding: $spacing-medium 0;
-    color: $color-text-weak;
+    color: var(--slds-g-color-neutral-base-30, #{$color-text-weak});
   }
 }
 
 .slds-coach__value {
   @include deprecate('4.0.0', 'Remove dd .slds-coach__value in favor of the new form markup, .slds-form-element__static') {
-    border-top: $color-border $border-width-thin solid;
+    border-top: var(--slds-g-color-border-base-1, #{$color-border}) $border-width-thin solid;
     padding-top: $spacing-medium;
-    color: $color-text-default;
+    color: var(--slds-g-color-neutral-base-10, #{$color-text-default});
   }
 }

@@ -51,8 +51,8 @@
   &[data-slds-strength="3"] circle:nth-child(1),
   &[data-slds-strength="3"] circle:nth-child(2),
   &[data-slds-strength="3"] circle:nth-child(3) {
-    fill: $color-text-success;
-    stroke: $color-text-success;
+    fill: var(--slds-g-color-success-base-50, #{$color-text-success});
+    stroke: var(--slds-g-color-success-base-50, #{$color-text-success});
   }
 
   &[data-slds-strength="-1"] circle:nth-child(1),
@@ -62,7 +62,7 @@
   &[data-slds-strength="-3"] circle:nth-child(2),
   &[data-slds-strength="-3"] circle:nth-child(3) {
     fill: $palette-pink-90;
-    stroke: $color-background-error-dark;
+    stroke: var(--slds-g-color-error-base-30, #{$color-background-error-dark});
   }
 
   /**
@@ -127,10 +127,11 @@
 // stylelint-disable
 @keyframes slds-icon-strength-positive-load {
   0%   { fill: transparent; stroke: $palette-neutral-60; }
-  100% { fill: $color-text-success; stroke: $color-text-success; }
+  100% { fill: var(--slds-g-color-success-base-50, #{$color-text-success});
+    stroke: var(--slds-g-color-success-base-50, #{$color-text-success}); }
 }
 
 @keyframes slds-icon-strength-negative-load {
   0%   { fill: transparent; stroke: $palette-neutral-60; }
-  100% { fill: $palette-pink-90; stroke: $color-background-destructive; }
+  100% { fill: $palette-pink-90; stroke: var(--slds-g-color-error-base-40, #{$color-background-destructive}); }
 }

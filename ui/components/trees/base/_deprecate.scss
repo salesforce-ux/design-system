@@ -26,8 +26,8 @@
   @include deprecate('4.0.0', '.slds-is-selected is deprecated in .slds-tree, rely on aria-selected attribute') {
 
     .slds-is-selected {
-      background: $color-background-row-selected;
-      box-shadow: $color-background-button-brand 4px 0 0 inset;
+      background: var(--slds-g-color-neutral-base-95, #{$color-background-row-selected});
+      box-shadow: var(--slds-g-color-brand-base-50, #{$color-background-button-brand}) 4px 0 0 inset;
     }
   }
 
@@ -65,7 +65,7 @@
   @include deprecate('4.0.0', 'Use of anchor tags is deprecated in slds-tree') {
 
     a {
-      color: $color-text-default;
+      color: var(--slds-g-color-neutral-base-10, #{$color-text-default});
 
       &:hover {
         text-decoration: none;

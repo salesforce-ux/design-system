@@ -27,7 +27,7 @@
     left: 0%;
     height: rem(1px);
     width: 100%;
-    background: $color-brand-dark;
+    background: var(--slds-g-color-brand-base-30, #{$color-brand-dark});
     background-position: left top;
     transform: scaleX(0);
     transform-origin: var(--slds-kx-breadcrumbs-pointer-position-x, 50%) 0;

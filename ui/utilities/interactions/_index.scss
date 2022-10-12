@@ -103,7 +103,7 @@
  */
 .slds-has-input-focus {
   outline: 0;
-  border-color: $color-border-input-active;
-  background-color: $color-background-input-active;
+  border-color: var(--slds-g-color-brand-base-60, #{$color-border-input-active});
+  background-color: var(--slds-g-color-neutral-base-100, #{$color-background-input-active});
   box-shadow: $shadow-button-focus;
 }

@@ -30,7 +30,7 @@
   * @restrict .slds-tile div
   */
 .slds-tile__meta {
-  color: $color-text-default;
+  color: var(--slds-g-color-neutral-base-10, #{$color-text-default});
 }
 
 .slds-tile_board,

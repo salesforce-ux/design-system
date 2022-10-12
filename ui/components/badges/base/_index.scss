@@ -14,7 +14,7 @@
   display: inline-flex;
   align-items: center;
   padding: $spacing-xx-small $spacing-x-small;
-  color: var(--slds-c-badge-text-color, var(--sds-c-badge-text-color, $color-text-default));
+  color: var(--slds-c-badge-text-color, var(--sds-c-badge-text-color, var(--slds-g-color-neutral-base-10, #{$color-text-default})));
   font-size: var(--slds-c-badge-font-size, var(--sds-c-badge-font-size, $font-size-2));
   font-weight: $font-weight-bold;
   line-height: var(--slds-c-badge-line-height, var(--sds-c-badge-line-height, normal));
@@ -23,7 +23,7 @@
   border-style: solid;
   border-color: var(--slds-c-badge-color-border, var(--sds-c-badge-color-border, transparent));
   border-radius: var(--slds-c-badge-radius-border, var(--sds-c-badge-radius-border, $border-radius-pill));
-  background-color: var(--slds-c-badge-color-background, var(--sds-c-badge-color-background, $color-background-dark));
+  background-color: var(--slds-c-badge-color-background, var(--sds-c-badge-color-background, var(--slds-g-color-neutral-base-95, #{$color-background-dark})));
 
   + .slds-badge {
     margin-left: $spacing-x-small;
@@ -44,10 +44,10 @@
  */
 .slds-badge_inverse {
   /*! @css-var-fallback background-color */
-  --slds-c-badge-color-background: var(--slds-c-badge-inverse-color-background, var(--sds-c-badge-inverse-color-background, #{$badge-color-background-inverse}));
+  --slds-c-badge-color-background: var(--slds-c-badge-inverse-color-background, var(--sds-c-badge-inverse-color-background, var(--slds-g-color-neutral-base-50, #{$badge-color-background-inverse})));
 
   /*! @css-var-fallback color */
-  --slds-c-badge-text-color: var(--slds-c-badge-inverse-text-color, var(--sds-c-badge-inverse-text-color, #{$color-text-inverse}));
+  --slds-c-badge-text-color: var(--slds-c-badge-inverse-text-color, var(--sds-c-badge-inverse-text-color, var(--slds-g-color-neutral-base-100, #{$color-text-inverse})));
 }
 
 /**
@@ -60,10 +60,10 @@
  */
 .slds-badge_lightest {
   /*! @css-var-fallback background-color */
-  --slds-c-badge-color-background: var(--slds-c-badge-lightest-color-background, var(--sds-c-badge-lightest-color-background, #{$badge-color-background-lightest}));
+  --slds-c-badge-color-background: var(--slds-c-badge-lightest-color-background, var(--sds-c-badge-lightest-color-background, var(--slds-g-color-neutral-base-100, #{$badge-color-background-lightest})));
 
   /*! @css-var-fallback border-color */
-  --slds-c-badge-color-border: var(--slds-c-badge-lightest-color-border, var(--sds-c-badge-lightest-color-border, #{$color-border}));
+  --slds-c-badge-color-border: var(--slds-c-badge-lightest-color-border, var(--sds-c-badge-lightest-color-border, var(--slds-g-color-border-base-1, #{$color-border})));
 }
 
 /**
@@ -76,7 +76,7 @@
 .slds-badge__icon {
   display: inline-flex;
   align-items: center;
-  color: var(--slds-c-badge-icon-color-foreground, var(--sds-c-badge-icon-color-foreground, $color-text-icon-default));
+  color: var(--slds-c-badge-icon-color-foreground, var(--sds-c-badge-icon-color-foreground, var(--slds-g-color-neutral-base-50, #{$color-text-icon-default})));
   line-height: 1;
   vertical-align: middle;
 

@@ -34,21 +34,21 @@
   @include button-icon-brand;
 
   .slds-button__icon {
-    fill: $color-text-button-brand;
+    fill: var(--slds-g-color-neutral-base-100, #{$color-text-button-brand});
   }
 
   &:hover,
   &:focus {
 
     .slds-button__icon {
-      fill: $color-text-button-brand;
+      fill: var(--slds-g-color-neutral-base-100, #{$color-text-button-brand});
     }
   }
 
   &[disabled],
   &:disabled {
-    background: $brand-disabled;
-    border-color: $brand-disabled;
-    color: $color-text-button-brand-disabled;
+    background: var(--slds-g-color-neutral-base-80, #{$brand-disabled});
+    border-color: var(--slds-g-color-neutral-base-80, #{$brand-disabled});
+    color: var(--slds-g-color-neutral-base-100, #{$color-text-button-brand-disabled});
   }
 }

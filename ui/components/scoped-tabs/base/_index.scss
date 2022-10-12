@@ -31,8 +31,8 @@
 .slds-tabs_scoped__nav,
 .slds-tabs--scoped__nav {
   @include tabs-nav;
-  background-color: $color-gray-2;
-  border: $border-width-thin solid $color-border-button-default;
+  background-color: var(--slds-g-color-neutral-base-95, #{$color-gray-2});
+  border: $border-width-thin solid var(--slds-g-color-border-base-4, #{$color-border-button-default});
   border-top-left-radius: $border-radius-medium;
   border-top-right-radius: $border-radius-medium;
   border-bottom-right-radius: 0;
@@ -68,8 +68,8 @@
  */
 .slds-tabs_scoped__content,
 .slds-tabs--scoped__content {
-  background-color: $color-background-alt;
-  border: $border-width-thin solid $color-border-button-default;
+  background-color: var(--slds-g-color-neutral-base-100, #{$color-background-alt});
+  border: $border-width-thin solid var(--slds-g-color-border-base-4, #{$color-border-button-default});
   border-top: 0;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
@@ -89,7 +89,7 @@
   height: $line-height-tab;
   line-height: $line-height-tab;
   padding: 0 $spacing-medium;
-  color: $color-text-action-label;
+  color: var(--slds-g-color-neutral-base-30, #{$color-text-action-label});
   background-clip: padding-box;
   border: 0;
   border-left: $border-width-thin solid transparent;
@@ -100,7 +100,7 @@
   &:focus {
     text-decoration: none;
     color: currentColor;
-    border-color: $color-border;
+    border-color: var(--slds-g-color-border-base-4, #{$color-border});
   }
 }
 
@@ -116,7 +116,7 @@
 
   .slds-button {
     line-height: inherit;
-    color: $color-text-action-label;
+    color: var(--slds-g-color-neutral-base-30, #{$color-text-action-label});
     padding: 0 $spacing-medium;
   }
 }
@@ -134,10 +134,10 @@
 .slds-active .slds-tabs--scoped__link,
 .slds-is-active .slds-tabs_scoped__link,
 .slds-is-active .slds-tabs--scoped__link {
-  background-color: $color-background-alt;
-  border-color: $color-border;
+  background-color: var(--slds-g-color-neutral-base-100, #{$color-background-alt});
+  border-color: var(--slds-g-color-border-base-4, #{$color-border});
   font-weight: $tabs-font-weight;
-  color: $color-text-action-label-active;
+  color: var(--slds-g-color-neutral-base-10, #{$color-text-action-label-active});
 
   &:focus {
     text-decoration: underline;

@@ -64,7 +64,7 @@ $_icon-trend-one: 1.125px;
 }
 
 .slds-icon-trend[data-slds-trend="down"] {
-  color: $color-background-error-dark;
+  color: var(--slds-g-color-error-base-30, #{$color-background-error-dark});
   transform: rotate(45deg);
 }
 
@@ -73,7 +73,7 @@ $_icon-trend-one: 1.125px;
 }
 
 .slds-icon-trend[data-slds-trend="up"] {
-  color: $color-background-success-dark;
+  color: var(--slds-g-color-success-base-50, #{$color-background-success-dark});
   transform: rotate(-45deg);
 }
 

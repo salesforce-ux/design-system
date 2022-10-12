@@ -31,14 +31,14 @@
   .slds-progress-bar {
     display: inline-block;
     width: $welcome-mat-width-progress-bar;
-    background: $welcome-mat-color-background-progress-bar;
+    background: var(--slds-g-color-neutral-base-100, #{$welcome-mat-color-background-progress-bar});
   }
 
   /**
    * @summary Progress bar value inside Welcome Mat
    */
   .slds-progress-bar__value {
-    background: $progress-bar-color-background-fill-success;
+    background: var(--slds-g-color-success-base-50, #{$progress-bar-color-background-fill-success});
   }
 }
 
@@ -51,12 +51,12 @@
   display: flex;
   overflow: auto;
   padding: $spacing-medium $spacing-xx-large $welcome-mat-spacing-info;
-  color: $welcome-mat-text-color-info;
+  color: var(--slds-g-color-brand-base-20, #{$welcome-mat-text-color-info});
   background-image: url($static-image-path + $welcome-mat-background-image-info);
   background-position: bottom center;
   background-repeat: no-repeat;
   background-size: contain;
-  background-color: $welcome-mat-background-color-info;
+  background-color: var(--sds-g-color-palette-cloud-blue-90, #{$welcome-mat-background-color-info});
   align-items: center;
 }
 
@@ -106,7 +106,7 @@
  * @restrict .slds-welcome-mat__content ul
  */
 .slds-welcome-mat__tiles {
-  background: $color-background;
+  background: var(--slds-g-color-neutral-base-95, #{$color-background});
   overflow: auto;
   padding: $spacing-medium;
 }
@@ -124,13 +124,13 @@
   }
 
   &:not(.slds-welcome-mat__tile_complete):not(.slds-welcome-mat__tile_info-only) {
-    box-shadow: 0 2px 2px $welcome-mat-color-action-shadow;
+    box-shadow: 0 2px 2px var(--slds-g-color-neutral-base-10, #{$welcome-mat-color-action-shadow});
     border-radius: $border-radius-medium;
-    background: $color-background-alt;
+    background: var(--slds-g-color-neutral-base-100, #{$color-background-alt});
 
     &:hover {
-      box-shadow: 0 0 0 1px $color-border-selection-hover inset,
-        0 2px 2px $welcome-mat-color-action-shadow;
+      box-shadow: 0 0 0 1px var(--slds-g-color-border-brand-2, #{$color-border-selection-hover}) inset,
+        0 2px 2px var(--slds-g-color-neutral-base-10, #{$welcome-mat-color-action-shadow});
     }
   }
 
@@ -172,7 +172,7 @@
  */
 .slds-welcome-mat__tile-body {
   padding: $spacing-small;
-  border-left: $border-width-thin solid $color-border;
+  border-left: $border-width-thin solid var(--slds-g-color-border-base-1, #{$color-border});
 }
 
 /**
@@ -181,7 +181,7 @@
  * @restrict .slds-welcome-mat__tile p
  */
 .slds-welcome-mat__tile-description {
-  color: $color-text-weak;
+  color: var(--slds-g-color-neutral-base-30, #{$color-text-weak});
   font-size: $font-size-2;
   line-height: $line-height-text;
 }
@@ -207,7 +207,7 @@
   background: transparent;
 
   .slds-icon {
-    fill: $welcome-mat-color-icon-complete;
+    fill: var(--slds-g-color-neutral-base-80, #{$welcome-mat-color-icon-complete});
   }
 }
 
@@ -221,12 +221,12 @@
   align-items: center;
   justify-content: center;
   padding: 0.25rem;
-  border: $border-width-thick solid $color-background;
+  border: $border-width-thick solid var(--slds-g-color-neutral-base-95, #{$color-background});
   border-radius: $welcome-mat-complete-icon-size;
   line-height: 0;
   background: $palette-green-60;
 
   .slds-icon {
-    fill: $color-text-inverse;
+    fill: var(--slds-g-color-neutral-base-100, #{$color-text-inverse});
   }
 }

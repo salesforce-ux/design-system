@@ -24,22 +24,22 @@
         'icons'
       )
     );
-    background: $popover-walkthrough-color-background;
-    border-color: $popover-walkthrough-color-background;
+    background: var(--slds-g-color-brand-base-10, #{$popover-walkthrough-color-background});
+    border-color: var(--slds-g-color-brand-base-10, #{$popover-walkthrough-color-background});
 
     a {
       text-decoration: underline;
     }
 
     .slds-popover__header {
-      background-color: $popover-walkthrough-header-color-background;
+      background-color: var(--slds-g-color-brand-base-20, #{$popover-walkthrough-header-color-background});
       background-image: url($static-image-path + $popover-walkthrough-header-image);
       background-repeat: no-repeat;
       background-position: bottom;
       background-size: contain;
       border-color: inherit;
       padding: $spacing-small $spacing-medium;
-      text-shadow: 0 0 4px $popover-walkthrough-color-background;
+      text-shadow: 0 0 4px var(--slds-g-color-brand-base-10, #{$popover-walkthrough-color-background});
     }
 
     .slds-popover__body,
@@ -53,13 +53,13 @@
     }
 
     .slds-text-title {
-      color: $popover-color-text;
+      color: var(--slds-g-color-neutral-base-80, #{$popover-color-text});
     }
 
     .slds-input,
     .slds-select,
     .slds-textarea {
-      color: $color-text-default;
+      color: var(--slds-g-color-neutral-base-10, #{$color-text-default});
     }
 
     &.slds-nubbin_top,
@@ -74,7 +74,7 @@
     &.slds-nubbin--right-top {
 
       &:before {
-        background-color: $popover-walkthrough-header-color-background;
+        background-color: var(--slds-g-color-brand-base-20, #{$popover-walkthrough-header-color-background});
       }
     }
   }
@@ -92,14 +92,14 @@
 
   .slds-popover_walkthrough-alt,
   .slds-popover_feature {
-    border-color: $popover-walkthrough-color-background-alt;
-    background-color: $popover-walkthrough-color-background-alt;
+    border-color: var(--slds-g-color-brand-base-50, #{$popover-walkthrough-color-background-alt});
+    background-color: var(--slds-g-color-brand-base-50, #{$popover-walkthrough-color-background-alt});
     background-image: url($static-image-path + $popover-walkthrough-alt-image);
     background-repeat: no-repeat;
     background-size: 100% rem(36px);
     background-position: bottom;
     padding-bottom: $spacing-large;
-    color: $color-text-inverse;
+    color: var(--slds-g-color-neutral-base-100, #{$color-text-inverse});
 
     .slds-text-heading_small {
       margin-bottom: $spacing-x-small;
@@ -113,7 +113,7 @@
     &.slds-nubbin--bottom-right {
 
       &:before {
-        background-color: $popover-walkthrough-alt-nubbin-color-background;
+        background-color: var(--slds-g-color-brand-base-50, #{$popover-walkthrough-alt-nubbin-color-background});
       }
     }
   }

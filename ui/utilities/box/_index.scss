@@ -75,7 +75,7 @@
   &:focus {
     cursor: pointer;
     outline: 0;
-    border: $border-width-thin solid $color-border-selection-hover;
-    box-shadow: 0 0 0 1px $color-border-selection-hover inset;
+    border: $border-width-thin solid var(--slds-g-color-border-brand-2, #{$color-border-selection-hover});
+    box-shadow: 0 0 0 1px var(--slds-g-color-border-brand-2, #{$color-border-selection-hover}) inset;
   }
 }

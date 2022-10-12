@@ -33,7 +33,7 @@
   align-items: center;
   position: relative;
   background: none; // reset
-  background-color: var(--slds-c-toast-color-background, var(--sds-c-toast-color-background, $color-background-toast));
+  background-color: var(--slds-c-toast-color-background, var(--sds-c-toast-color-background, var(--slds-g-color-neutral-base-50, #{$color-background-toast})));
   color: var(--slds-c-toast-text-color, var(--sds-c-toast-text-color));
   border-radius: var(--slds-c-toast-radius-border, var(--sds-c-toast-radius-border, $border-radius-medium));
   margin: $spacing-x-small;

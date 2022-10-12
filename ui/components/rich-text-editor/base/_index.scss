@@ -11,7 +11,7 @@
  * @variant
  */
 .slds-rich-text-editor {
-  border: $border-width-thin solid $color-border;
+  border: $border-width-thin solid var(--slds-g-color-border-base-1, #{$color-border});
   border-radius: $border-radius-medium;
 }
 
@@ -41,8 +41,8 @@
   padding: $spacing-x-small $spacing-x-small $spacing-xx-small $spacing-x-small;
   border-top-left-radius: $border-radius-medium;
   border-top-right-radius: $border-radius-medium;
-  border-bottom: $border-width-thin solid $color-border;
-  background-color: $color-background;
+  border-bottom: $border-width-thin solid var(--slds-g-color-border-base-1, #{$color-border});
+  background-color: var(--slds-g-color-neutral-base-95, #{$color-background});
 }
 
 /**
@@ -75,7 +75,7 @@
  */
 .slds-rich-text-editor__toolbar_bottom {
   border-radius: 0 0 $border-radius-medium $border-radius-medium;
-  border-top: $border-width-thin solid $color-border;
+  border-top: $border-width-thin solid var(--slds-g-color-border-base-1, #{$color-border});
   border-bottom: 0;
 }
 
@@ -152,7 +152,7 @@
  * @modifier
  */
 .slds-rich-text-editor.slds-has-focus {
-  border-color: $color-border-input-active;
+  border-color: var(--slds-g-color-brand-base-60, #{$color-border-input-active});
   box-shadow: $shadow-button-focus;
 }
 
@@ -164,15 +164,15 @@
  * @modifier
  */
 .slds-rich-text-editor.slds-has-error {
-  border: $border-width-thick solid $color-border-error;
+  border: $border-width-thick solid var(--slds-g-color-error-base-40, #{$color-border-error});
 
   .slds-input {
-    border-color: $color-border-input;
+    border-color: var(--slds-g-color-border-base-4, #{$color-border-input});
     box-shadow: none;
   }
 
   .slds-form-element__help {
-    background: $color-background-alt;
+    background: var(--slds-g-color-neutral-base-100, #{$color-background-alt});
     margin-top: 0;
     border-radius: 0 0 $border-radius-small $border-radius-small;
   }
@@ -189,11 +189,11 @@
   min-height: var(--slds-c-textarea-sizing-min-height, var(--sds-c-textarea-sizing-min-height, $size-xx-small));
   max-height: var(--slds-c-textarea-sizing-max-height, var(--sds-c-textarea-sizing-max-height, $size-small));
   padding: $spacing-medium;
-  background-color: $color-background-input;
+  background-color: var(--slds-g-color-neutral-base-100, #{$color-background-input});
 }
 
 .slds-picklist__label[disabled] .slds-icon {
-  fill: $color-text-button-default-disabled;
+  fill: var(--slds-g-color-neutral-base-80, #{$color-text-button-default-disabled});
 }
 
 [contenteditable]:focus {
@@ -244,7 +244,7 @@
   }
 
   .ql-active {
-    background-color: rgb(238, 241, 246);
+    background-color: var(--slds-g-color-neutral-base-95, rgb(238, 241, 246));
   }
 
   // stylelint-disable declaration-no-important
@@ -308,7 +308,7 @@
       > li {
 
         &:before {
-          color: #777;
+          color: var(--slds-g-color-neutral-base-50, #777777);
           cursor: pointer;
           pointer-events: all;
         }
@@ -320,7 +320,7 @@
       > li {
 
         &:before {
-          color: #777;
+          color: var(--slds-g-color-neutral-base-50, #777777);
           cursor: pointer;
           pointer-events: all;
         }
@@ -610,12 +610,12 @@
   }
 
   ins {
-    color: $color-text-success;
+    color: var(--slds-g-color-success-base-50, #{$color-text-success});
     text-decoration: underline;
   }
 
   del {
-    color: $color-text-destructive;
+    color: var(--slds-g-color-error-base-30, #{$color-text-destructive});
     text-decoration: line-through;
   }
 

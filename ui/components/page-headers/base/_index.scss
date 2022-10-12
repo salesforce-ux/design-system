@@ -13,12 +13,12 @@
 
 .slds-page-header {
   padding: $var-spacing-vertical-medium $var-spacing-horizontal-medium;
-  border-bottom: $border-width-thin solid $page-header-color-border;
+  border-bottom: $border-width-thin solid var(--slds-g-color-border-base-1, #{$page-header-color-border});
   border-radius: $page-header-border-radius;
-  background: $page-header-color-background;
+  background: var(--slds-g-color-neutral-base-95, #{$page-header-color-background});
   background-clip: padding-box;
   box-shadow: $page-header-shadow;
-  border: $border-width-thin solid $page-header-color-border;
+  border: $border-width-thin solid var(--slds-g-color-border-base-1, #{$page-header-color-border});
 }
 
 /**
@@ -147,7 +147,7 @@
   margin: 0 0 $spacing-xxx-small $spacing-xxx-small;
 
   .slds-button__icon {
-    fill: $color-text-default;
+    fill: var(--slds-g-color-neutral-base-10, #{$color-text-default});
   }
 }
 

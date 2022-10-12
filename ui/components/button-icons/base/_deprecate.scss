@@ -7,6 +7,6 @@
   .slds-button--icon-bare {
     line-height: $line-height-reset;
     vertical-align: middle;
-    color: $color-text-icon-default;
+    color: var(--slds-g-color-neutral-base-50, #{$color-text-icon-default});
   }
 }

@@ -31,7 +31,7 @@
   left: 0;
   width: 100%;
   height: $height-docked-bar;
-  background: $color-background-docked-panel;
+  background: var(--slds-g-color-neutral-base-100, #{$color-background-docked-panel});
   box-shadow: $shadow-docked;
   z-index: $z-index-docked;
 
@@ -43,7 +43,7 @@
    */
   .slds-indicator_unread,
   .slds-indicator--unread {
-    background: $utility-bar-color-background-notification-badge;
+    background: var(--slds-g-color-neutral-base-100, #{$utility-bar-color-background-notification-badge});
     top: $spacing-x-small;
   }
 }
@@ -77,8 +77,8 @@
     right: 4px;
     height: 4px;
     width: 4px;
-    border-top: $border-width-thin solid $color-text-default;
-    border-right: $border-width-thin solid $color-text-default;
+    border-top: $border-width-thin solid var(--slds-g-color-neutral-base-10, #{$color-text-default});
+    border-right: $border-width-thin solid var(--slds-g-color-neutral-base-10, #{$color-text-default});
 
     // Lots of 'noflip' going on here so we handle RTL within SLDS only, not Omakase
     //   - Omakase doesn't pick up on 'transform' which creates a visual regression in this scenario
@@ -94,7 +94,7 @@
       border-right-width: 0;
 
       /*! @noflip */
-      border-left: $border-width-thin solid $color-text-default;
+      border-left: $border-width-thin solid var(--slds-g-color-neutral-base-10, #{$color-text-default});
     }
   }
 
@@ -105,7 +105,7 @@
     right: 6px;
     height: 7px;
     width: 7px;
-    border-right: $border-width-thin solid $color-text-default;
+    border-right: $border-width-thin solid var(--slds-g-color-neutral-base-10, #{$color-text-default});
     transform: rotate(45deg);
 
     @include rtl() {
@@ -119,7 +119,7 @@
       border-right-width: 0;
 
       /*! @noflip */
-      border-left: $border-width-thin solid $color-text-default;
+      border-left: $border-width-thin solid var(--slds-g-color-neutral-base-10, #{$color-text-default});
       transform: rotate(-45deg);
     }
   }
@@ -138,7 +138,7 @@
   padding: 0 $spacing-small;
   border-radius: 0;
   border: 0;
-  color: $color-text-default;
+  color: var(--slds-g-color-neutral-base-10, #{$color-text-default});
 
   &:after {
     content: '';
@@ -203,16 +203,16 @@
 .slds-has-notification {
 
   .slds-utility-bar__action {
-    background: $color-background-info;
-    color: $color-text-inverse;
+    background: var(--slds-g-color-neutral-base-50, #{$color-background-info});
+    color: var(--slds-g-color-neutral-base-100, #{$color-text-inverse});
 
     &:hover,
     &:focus {
-      background: $color-background-alt-inverse;
+      background: var(--slds-g-color-brand-base-20, #{$color-background-alt-inverse});
     }
 
     &:focus:after {
-      background: $utility-bar-color-background-notification-focus;
+      background: var(--slds-g-color-neutral-base-80, #{$utility-bar-color-background-notification-focus});
     }
   }
 }

@@ -15,8 +15,8 @@
       bottom: 0;
       left: 0;
       z-index: $z-index-default;
-      background-color: $color-background-backdrop-tint;
-      box-shadow: 0 0 0 4px $color-border-brand inset;
+      background-color: var(--slds-g-color-neutral-base-95, #{$color-background-backdrop-tint});
+      box-shadow: 0 0 0 4px var(--slds-g-color-border-brand-2, #{$color-border-brand}) inset;
     }
 
     .slds-table_edit_container-message,
@@ -28,7 +28,7 @@
       width: $size-medium;
       margin-top: -2.25rem; // This is rather hacky since it's half the height of the box with two lines of content. (Also, ($height-context-bar * -1) is the same height.)
       margin-left: (($size-medium * 0.5) * -1);
-      background-color: $color-background-alt;
+      background-color: var(--slds-g-color-neutral-base-100, #{$color-background-alt});
       text-align: center;
       z-index: $z-index-default;
     }
@@ -102,7 +102,7 @@
   &:not(.slds-no-cell-focus) tbody tr:hover > .slds-cell-edit {
 
     &.slds-has-focus { // This is the focused state
-      background-color: $color-background-alt;
+      background-color: var(--slds-g-color-neutral-base-100, #{$color-background-alt});
       box-shadow: $brand-accessible 0 0 0 1px inset;
     }
   }
@@ -111,22 +111,22 @@
   &.slds-table tbody tr:hover > .slds-cell-edit {
 
     &:hover {
-      background-color: $color-background-alt;
+      background-color: var(--slds-g-color-neutral-base-100, #{$color-background-alt});
     }
 
     &.slds-is-edited {
-      background-color: $color-background-highlight;
+      background-color: var(--slds-g-color-palette-yellow-90, #{$color-background-highlight});
     }
 
     &.slds-has-error {
-      background-color: $color-background-highlight;
-      box-shadow: $color-border-error 0 0 0 ($border-width-thick) inset;
+      background-color: var(--slds-g-color-palette-yellow-90, #{$color-background-highlight});
+      box-shadow: var(--slds-g-color-error-base-40, #{$color-border-error}) 0 0 0 ($border-width-thick) inset;
     }
   }
 
   .slds-button__icon_edit:focus,
   .slds-button__icon--edit:focus {
-    fill: $color-text-brand;
+    fill: var(--slds-g-color-brand-base-50, #{$color-text-brand});
   }
 }
 
@@ -134,7 +134,7 @@
 //
 // Requires .slds-th__action inside the <th>
 .slds-has-focus .slds-th__action {
-  background-color: $color-background-alt;
+  background-color: var(--slds-g-color-neutral-base-100, #{$color-background-alt});
   box-shadow: $brand-accessible-active 0 0 0 1px inset;
 }
 
@@ -145,7 +145,7 @@
 .slds-has-focus.slds-is-resizable .slds-th__action:focus:hover,
 .slds-is-resizable .slds-th__action:focus,
 .slds-is-resizable .slds-th__action:focus:hover {
-  background-color: $table-color-background-header-hover;
+  background-color: var(--slds-g-color-neutral-base-95, #{$table-color-background-header-hover});
   box-shadow: $brand-accessible-active 0 0 0 1px inset, $brand-accessible-active -0.25rem 0 0 inset;
 }
 
@@ -161,7 +161,7 @@
   outline: 0; // @TODO: This came from `has-focus` (watch for overreaching)
 
   &.slds-has-focus { // This is the focused state
-    background-color: $color-background-alt;
+    background-color: var(--slds-g-color-neutral-base-100, #{$color-background-alt});
     box-shadow: $brand-accessible-active 0 0 0 1px inset;
 
     .slds-button__icon_edit,
@@ -192,7 +192,7 @@
 
     &,
     &:hover {
-      background-color: $color-background-highlight;
+      background-color: var(--slds-g-color-palette-yellow-90, #{$color-background-highlight});
     }
   }
 
@@ -207,8 +207,8 @@
 
     &,
     &:hover {
-      background-color: $color-background-highlight;
-      box-shadow: $color-border-error 0 0 0 ($border-width-thick) inset;
+      background-color: var(--slds-g-color-palette-yellow-90, #{$color-background-highlight});
+      box-shadow: var(--slds-g-color-error-base-40, #{$color-border-error}) 0 0 0 ($border-width-thick) inset;
     }
   }
 }
@@ -239,7 +239,7 @@
   // If no cell focus is applied but were dynamically adding slds-has-focus, handle
   // it here
   .slds-has-focus {
-    background: $color-background-row-hover;
+    background: var(--slds-g-color-neutral-base-95, #{$color-background-row-hover});
     box-shadow: none;
 
     .slds-th__action,
@@ -247,7 +247,7 @@
     .slds-th__action:focus,
     .slds-th__action:focus:hover {
       color: inherit;
-      background-color: $table-color-background-header-hover;
+      background-color: var(--slds-g-color-neutral-base-95, #{$table-color-background-header-hover});
       box-shadow: none;
     }
 
@@ -258,8 +258,8 @@
 
     // Handle the difference on resizeable columns
     &.slds-is-resizable:hover .slds-th__action {
-      background-color: $table-color-background-header-hover;
-      box-shadow: $color-border -0.25rem 0 0 inset;
+      background-color: var(--slds-g-color-neutral-base-95, #{$table-color-background-header-hover});
+      box-shadow: var(--slds-g-color-border-base-1, #{$color-border}) -0.25rem 0 0 inset;
     }
   }
 
@@ -277,7 +277,7 @@
 
     .slds-is-sortable__icon {
       display: inline-block;
-      fill: $color-text-icon-default;
+      fill: var(--slds-g-color-neutral-base-50, #{$color-text-icon-default});
     }
   }
 
@@ -286,7 +286,7 @@
 
     &,
     &:hover {
-      background-color: $color-background-highlight;
+      background-color: var(--slds-g-color-palette-yellow-90, #{$color-background-highlight});
     }
   }
 
@@ -295,19 +295,19 @@
 
     &,
     &:hover {
-      background-color: $color-background-highlight;
-      box-shadow: $color-border-error 0 0 0 ($border-width-thick) inset;
+      background-color: var(--slds-g-color-palette-yellow-90, #{$color-background-highlight});
+      box-shadow: var(--slds-g-color-error-base-40, #{$color-border-error}) 0 0 0 ($border-width-thick) inset;
     }
   }
 
   // Lets make sure hover behavior acts as the default when in a no focus state
   // scss-lint:disable SelectorDepth
   thead .slds-has-focus:hover {
-    color: $color-text-link;
+    color: var(--slds-g-link-color, #{$color-text-link});
 
     .slds-is-sortable__icon {
       display: inline-block;
-      fill: $color-text-link;
+      fill: var(--slds-g-link-color, #{$color-text-link});
     }
   }
 }
@@ -330,7 +330,7 @@
 
       &:hover,
       &:focus {
-        fill: $color-text-brand;
+        fill: var(--slds-g-color-brand-base-50, #{$color-text-brand});
         opacity: 1;
       }
     }
@@ -343,7 +343,7 @@
 
   &.slds-has-focus .slds-button__icon_edit,
   &.slds-has-focus .slds-button__icon--edit {
-    fill: $color-text-icon-default;
+    fill: var(--slds-g-color-neutral-base-50, #{$color-text-icon-default});
     opacity: 1;
   }
 }

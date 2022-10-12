@@ -22,7 +22,7 @@
     margin: $spacing-xx-small 0 0;
 
     b {
-      color: $color-text-default;
+      color: var(--slds-g-color-neutral-base-10, #{$color-text-default});
     }
   }
 }

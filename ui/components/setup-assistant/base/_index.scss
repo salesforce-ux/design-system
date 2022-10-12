@@ -21,7 +21,7 @@
  * @restrict .slds-setup-assistant li
  */
 .slds-setup-assistant__item {
-  border-bottom: 1px $color-border-separator-alt solid;
+  border-bottom: 1px var(--slds-g-color-border-base-1, #{$color-border-separator-alt}) solid;
   padding: $spacing-x-large 0;
 
   &:first-child {

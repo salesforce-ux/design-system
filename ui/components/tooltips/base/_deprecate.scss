@@ -4,12 +4,12 @@
 @include deprecate('4.0.0', 'Please use slds-popover_tooltip instead') {
 
   .slds-tooltip {
-    @include popover($color: $color-background-inverse);
+    @include popover($color: var(--slds-g-color-brand-base-10, #{$color-background-inverse}));
   }
 
   .slds-tooltip__body {
     padding: $spacing-x-small $spacing-small;
     font-size: $font-size-2;
-    color: $color-text-inverse;
+    color: var(--slds-g-color-neutral-base-100, #{$color-text-inverse});
   }
 }

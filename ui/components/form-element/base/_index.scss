@@ -22,7 +22,7 @@
 .slds-form-element__label {
   @include hyphenate;
   display: inline-block;
-  color: $color-text-label;
+  color: var(--slds-g-color-neutral-base-30, #{$color-text-label});
   font-size: $form-label-font-size;
   padding-right: $spacing-x-small;
   padding-top: $spacing-xx-small;
@@ -113,7 +113,7 @@
  */
 .slds-form-element_readonly {
   flex-basis: 0%;
-  border-bottom: $border-width-thin solid $color-border;
+  border-bottom: $border-width-thin solid var(--slds-g-color-border-base-1, #{$color-border});
   margin-bottom: 0;
 
   .slds-form-element__control {
@@ -168,7 +168,7 @@
   display: inline-block;
   font-size: $input-static-font-size;
   font-weight: $input-static-font-weight;
-  color: $input-static-color;
+  color: var(--slds-g-color-neutral-base-10, #{$input-static-color});
   width: 100%;
 
   &.slds-text-longform *:last-child {
@@ -197,7 +197,7 @@
  * @restrict .slds-form-element abbr, abbr
  */
 .slds-required {
-  color: $color-text-error;
+  color: var(--slds-g-color-error-base-40, #{$color-text-error});
   margin: 0 $spacing-xxx-small;
 }
 
@@ -211,6 +211,6 @@
 .slds-has-error {
 
   .slds-form-element__help {
-    color: $color-text-error;
+    color: var(--slds-g-color-error-base-40, #{$color-text-error});
   }
 }

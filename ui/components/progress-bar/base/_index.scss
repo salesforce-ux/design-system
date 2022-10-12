@@ -13,7 +13,7 @@
   display: block;
   width: 100%;
   height: ($progress-bar-height * 4);
-  background: $progress-bar-color-background;
+  background: var(--slds-g-color-neutral-base-80, #{$progress-bar-color-background});
   border: 0;
   position: relative;
 }
@@ -95,7 +95,7 @@
 */
 .slds-progress-bar__value {
   display: block;
-  background: $progress-bar-color-background-fill;
+  background: var(--slds-g-color-brand-base-60, #{$progress-bar-color-background-fill});
   height: 100%;
 }
 
@@ -108,5 +108,5 @@
   * @group color
 */
 .slds-progress-bar__value_success {
-  background: $progress-bar-color-background-fill-success;
+  background: var(--slds-g-color-success-base-50, #{$progress-bar-color-background-fill-success});
 }

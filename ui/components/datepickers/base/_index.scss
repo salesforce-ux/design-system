@@ -24,7 +24,7 @@
   thead > tr > th {
     padding: $spacing-x-small;
     font-weight: $font-weight-regular;
-    color: $color-text-label;
+    color: var(--slds-g-color-neutral-base-30, #{$color-text-label});
   }
 
   tbody > tr > td {
@@ -60,7 +60,7 @@
     }
 
     &.slds-is-today > .slds-day {
-      background-color: $color-background-row-selected;
+      background-color: var(--slds-g-color-neutral-base-95, #{$color-background-row-selected});
     }
 
     &:focus {
@@ -74,7 +74,7 @@
     &:hover {
 
       > .slds-day {
-        background-color: $color-background-row-hover;
+        background-color: var(--slds-g-color-neutral-base-95, #{$color-background-row-hover});
       }
     }
 
@@ -86,13 +86,13 @@
      */
     &.slds-is-selected > .slds-day {
       background: $brand-accessible;
-      color: $color-text-brand-primary;
+      color: var(--slds-g-color-neutral-base-100, #{$color-text-brand-primary});
     }
 
     &.slds-is-selected:focus > .slds-day {
       background: $brand-accessible-active;
       box-shadow: $brand-accessible-active 0 0 3px;
-      color: $color-text-brand-primary;
+      color: var(--slds-g-color-neutral-base-100, #{$color-text-brand-primary});
     }
   }
 }
@@ -129,7 +129,7 @@
 }
 
 .slds-has-error .slds-datepicker__filter .slds-select {
-  border: $border-width-thin solid $color-border-input;
+  border: $border-width-thin solid var(--slds-g-color-border-base-4, #{$color-border-input});
   box-shadow: none;
 }
 
@@ -140,7 +140,7 @@
  * @restrict .slds-datepicker__month td
  */
 .slds-day_adjacent-month {
-  color: $datepicker-color-text-day-adjacent-month;
+  color: var(--slds-g-color-neutral-base-50, #{$datepicker-color-text-day-adjacent-month});
 }
 
 .slds-table {

@@ -8,11 +8,11 @@
 
     > a {
       display: inline-block;
-      color: $color-text-default;
+      color:var(--slds-g-color-neutral-base-10, #{$color-text-default});
 
       &:hover,
       &:focus {
-        color: $color-text-link-hover;
+        color: var(--slds-g-link-color-hover, #{$color-text-link-hover});
       }
 
       &:focus {
@@ -20,7 +20,7 @@
       }
 
       &:active {
-        color: $color-text-default;
+        color: var(--slds-g-color-neutral-base-10, #{$color-text-default});
       }
     }
 

@@ -581,57 +581,6 @@ jobs:
     steps:
       - vrt-close-batch
 
-  a11y-testing:
-    docker:
-      - image: mcr.microsoft.com/playwright:focal
-    environment:
-      NODE_ENV: development
-      A11Y_SERVER: 'http://localhost:9002'
-    parallelism: 8
-    resource_class: medium+
-
-    steps:
-      - checkout
-      - node/install-packages:
-          # version cache here to remove conflict between this job and other concurrent jobs (init, prepare, etc).
-          cache-version: a11y
-
-      - run:
-          name: 'Build task'
-          command: |
-            npm run build
-            npm run storybook:build
-
-      - run:
-          name: 'Start web server'
-          command: 'npm run server:bg:start'
-
-      - run:
-          name: Generate test files
-          command: 'npx wait-on $A11Y_SERVER && npm run test:a11y:generate-tests'
-
-      - run:
-          name: 'Run a11y tests'
-          command: |
-            npx wait-on $A11Y_SERVER && curl -sL -w "======================\\nWait-on return code: %{http_code}\\n======================\\n\\n" "$A11Y_SERVER" -o /dev/null
-            mkdir -p ./__tests__/a11y/xml/
-            npx ava --tap ./__tests__/a11y/__testfiles__/ava.a11y.*.spec.js | npx tap-xunit --package="SLDS.a11y" > ./__tests__/a11y/xml/axe-results-$CIRCLE_NODE_INDEX.xml
-          no_output_timeout: 20m
-
-      - run:
-          name: Stop server
-          command: 'npm run server:bg:delete'
-
-      - store_test_results:
-            path: __tests__/a11y/xml/
-      - store_artifacts:
-          path: __tests__/a11y/xml/
-          destination: a11y/xml
-      - store_artifacts:
-          path: __tests__/a11y/results/
-          destination: a11y
-
-
 workflows:
   version: 2
   CI:
@@ -684,12 +633,6 @@ workflows:
               only: /^v\d+\.\d+\.\d+.*/
             branches:
               ignore: /.*/
-      - a11y-testing:
-          context: ux-eng-keys
-          requires:
-            # this requirement is to prevent race conditions, but doesn't depend on 'prepare'
-            - prepare
-
 
   CI_scheduled:
     triggers:

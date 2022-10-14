@@ -28,8 +28,8 @@
 
   .slds-dropdown_nubbin-top,
   .slds-dropdown--nubbin-top {
-    @include nubbin(top, 'before');
-    @include nubbin(top);
+    @include nubbin(top, 'before', $color: var(--slds-g-color-neutral-base-100, #{$color-background-alt}));
+    @include nubbin(top, $color: var(--slds-g-color-neutral-base-100, #{$color-background-alt}));
     margin-top: ($nubbin-size-default * 0.5);
 
     &:before {

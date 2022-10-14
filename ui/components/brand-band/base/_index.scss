@@ -28,7 +28,7 @@
     bottom: 0;
     left: 0;
     background-image:
-      url($brand-band-default-image),
+      url($static-image-path + $brand-band-default-image),
       linear-gradient(to top, $brand-background-dark-transparent 0, $brand-background-dark);
     background-repeat: repeat-x;
     background-position: top left;

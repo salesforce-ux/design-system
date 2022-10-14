@@ -14,7 +14,7 @@
  * @variant
  */
 .slds-popover {
-  @include popover($shadow: $shadow-drop-down);
+  @include popover($color: var(--slds-g-color-neutral-base-100, #{$color-background-alt}), $shadow: $shadow-drop-down);
   border: $border-width-thin solid var(--slds-g-color-border-base-1, #{$color-border});
 }
 

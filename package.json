@@ -14,8 +14,8 @@
     "url": "https://github.com/salesforce-ux/design-system/issues"
   },
   "slds": {
-    "name": "Winter ’23",
-    "id": "240"
+    "name": "Spring ’23",
+    "id": "242"
   },
   "important": [
     "'private' and 'config.slds.internal' should have the same value",

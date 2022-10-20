@@ -228,7 +228,7 @@
     user-select: text;
 
     &.ql-blank:before {
-      color: #54698d;
+      color: var(--slds-g-color-neutral-base-10, #54698d);
       content: attr(data-placeholder);
       pointer-events: none;
       position: absolute;

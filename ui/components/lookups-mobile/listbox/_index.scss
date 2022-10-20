@@ -14,7 +14,7 @@
   padding: $spacing-x-small $spacing-large $spacing-x-small 0;
   min-height: $height-tappable;
   line-height: 1.375;
-  border-bottom: $border-width-thin solid #f1f2f3;
+  border-bottom: $border-width-thin solid var(--slds-g-color-neutral-base-95, #f1f2f3);
 
   mark {
     font-weight: $font-weight-bold;

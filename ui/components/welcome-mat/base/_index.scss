@@ -224,7 +224,7 @@
   border: $border-width-thick solid var(--slds-g-color-neutral-base-95, #{$color-background});
   border-radius: $welcome-mat-complete-icon-size;
   line-height: 0;
-  background: $palette-green-60;
+  background: var(--slds-g-color-success-base-60, #{$palette-green-60});
 
   .slds-icon {
     fill: var(--slds-g-color-neutral-base-100, #{$color-text-inverse});

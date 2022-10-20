@@ -96,7 +96,7 @@ $alert-gradient-size-background: 64px 64px;
  */
 .slds-alert_error {
   /*! @css-var-fallback background-color */
-  --slds-c-alert-color-background: var(--slds-g-color-error-base-50, #{$color-background-toast-error});
+  --slds-c-alert-color-background: var(--slds-g-color-error-base-40, #{$color-background-toast-error});
 }
 
 /**
@@ -106,7 +106,7 @@ $alert-gradient-size-background: 64px 64px;
  */
 .slds-alert_offline {
   /*! @css-var-fallback background-color */
-  --slds-c-alert-color-background: #{$palette-neutral-30};
+  --slds-c-alert-color-background: var(--slds-g-color-neutral-base-30, #{$palette-neutral-30});
 }
 
 /**

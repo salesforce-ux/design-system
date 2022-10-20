@@ -346,7 +346,7 @@
  */
 .slds-chat-message__text_delivery-failure {
   background-color: var(--slds-g-color-neutral-base-100, #{$chat-message-color-background-status});
-  border: var(--slds-g-color-error-base-50, #{$color-border-destructive}) $border-width-thin solid;
+  border: var(--slds-g-color-error-base-40, #{$color-border-destructive}) $border-width-thin solid;
   color: var(--slds-g-color-neutral-base-10, #{$color-text-default});
   margin-left: auto;
 
@@ -360,7 +360,7 @@
     padding: $spacing-x-small $spacing-x-small 0;
     margin: $spacing-x-small #{-$spacing-x-small} 0;
     color: var(--slds-g-color-error-base-40, #{$color-text-error});
-    border-top: var(--slds-g-color-error-base-50, #{$color-border-destructive}) $border-width-thin solid;
+    border-top: var(--slds-g-color-error-base-40, #{$color-border-destructive}) $border-width-thin solid;
   }
 
   @include deprecate('4.0', 'Please use slds-icon-text-error modifier for slds-icon') {

@@ -108,7 +108,7 @@
 .slds-theme_error,
 .slds-theme--error {
   @include inverse-links;
-  background-color: var(--slds-g-color-error-base-50, #{$color-background-toast-error});
+  background-color: var(--slds-g-color-error-base-40, #{$color-background-toast-error});
 }
 
 /**
@@ -120,7 +120,7 @@
 .slds-theme_offline,
 .slds-theme--offline {
   @include inverse-links;
-  background-color: #444;
+  background-color: var(--slds-g-color-neutral-base-30, #444);
 }
 
 /**

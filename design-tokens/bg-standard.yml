@@ -930,29 +930,27 @@ props:
   AI_ACCELERATOR_CARD:
     value: '#107CAD'
   CONNECT_WALLET:
-    value: '#B60554'
+    value: '#1B96FF'
   CONTRACT_LINE_OUTCOME:
     value: '#22683E'
   CONTRACT_LINE_OUTCOME_DATA:
     value: '#22683E'
   CRYPTO_CATEGORY_WALLET_GROUP:
-    value: '#B60554'
+    value: '#032D60'
   CRYPTO_PRODUCT:
     value: '#9050E9'
-  CRYPTO_PRODUCT_CATEGORY_WALLET_ROLE:
-    value: '#056764'
   CRYPTO_TRANSACTION:
-    value: '#FF5D2D'
+    value: '#7E2600'
   CRYPTO_TRANSACTION_ENVELOPE:
-    value: '#056764'
+    value: '#06A59A'
   CRYPTO_TRANSACTION_ENVELOPE_ITEM:
     value: '#107CAD'
   CRYPTO_WALLET:
-    value: '#22683E'
+    value: '#396547'
   CRYPTO_WALLET_GROUP:
     value: '#107CAD'
   CRYPTO_WALLET_GROUP_ITEM:
-    value: '#9050E9'
+    value: '#5A1BA9'
   CUSTOMER:
     value: '#22683E'
   CUSTOMER_WORKSPACE:
@@ -960,7 +958,7 @@ props:
   LEARNER_PROGRAM:
     value: '#FF5D2D'
   NFT_SETTINGS:
-    value: '#FF538A'
+    value: '#B60554'
   NFT_STUDIO:
     value: '#5867E8'
   PROMPT:
@@ -977,3 +975,27 @@ props:
     value: '#22683E'
   WATER:
     value: '#5867E8'
+  ASSET_HIERARCHY:
+    value: '#107CAD'
+  SLACK_CONVERSATIONS:
+    value: '#481A54'
+  DATA_TRANSFORMS:
+    value: '#5867E8'
+  CRYPTO_PRODUCT_CATEGORY_WALLET_ROLE:
+    value: '#FF5D2D'
+  CRYPTO_TRANSACTION_ENVELOPE_CHANGE_LOG:
+    value: '#084968'
+  CRYPTO_TRANSACTION_ENVELOPE_CHANGE_SNAPSHOT:
+    value: '#CB65FF'
+  PROMOTION_TIERS:
+    value: '#396547'
+  BUDGET_PERIOD:
+    value: '#9602C7'
+  BUDGET_CATEGORY_VALUE:
+    value: '#1B96FF'
+  FUNDING_AWARD_ADJUSTMENT:
+    value: '#1B96FF'
+  FUNDING_REQUIREMENT:
+    value: '#396547'
+  YOUR_ACCOUNT:
+    value: '#1B96FF'

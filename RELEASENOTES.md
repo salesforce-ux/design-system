@@ -10,6 +10,54 @@
   - `@salesforce-ux/sds-styling-hooks` with version `1.1.0-alpha.2`
 - Updated `gulpfile` to include SLDS global hooks generation as part of build and dist jobs
 - Updated design tokens in every component and utility with SLDS global styling hooks (except Brand related tokens)
+- Updated icons to `v10.5.1`
+  - Standard Set:
+      - Added `asset_hierarchy`
+      - Added `budget_category_value`
+      - Added `budget_period`
+      - Updated `crypto_category_wallet_group`
+      - Added `crypto_transaction_envelope_change_snapshot`
+      - Added `data_transforms`
+      - Added `funding_award_adjustment`
+      - Added `funding_requirement`
+      - Added `promotion_tiers`
+      - Added `slack_conversations`
+      - Added `your_account`
+    
+  - Utility Set:
+    - Added `asset_object`
+    - Added `budget_category_value`
+    - Added `budget_period`
+    - Added `contact`
+    - Added `funding_award_adjustment`
+    - Added `funding_requirement`
+    - Added `http`
+    - Added `knowledge_smart_link`
+    - Added `lead`
+    - Added `maintenance_plan`
+    - Added `no_return`
+    - Added `opportunity`
+    - Added `orders`
+    - Added `product`
+    - Added `proposition`
+    - Added `queue`
+    - Added `send_log`
+    - Added `service_contract`
+    - Added `slack_conversations`
+- Updated BG color to below Standard Icons
+  
+  - `connect_wallet`
+  - `crypto_product_category_wallet_role`
+  - `crypto_product`
+  - `crypto_transaction_envelope_change_log`
+  - `crypto_transaction_envelope`
+  - `crypto_transaction`
+  - `crypto_wallet_group_item`
+  - `crypto_wallet_group`
+  - `crypto_wallet`
+  - `nft_settings`
+  - `nft_studio`
+  
 
 ## Release 2.19.0 - August 11, 2022
 

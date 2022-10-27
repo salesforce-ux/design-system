@@ -315,7 +315,8 @@ jobs:
       - run:
           name: 'Do build-dist'
           command: 'npm run build-dist'
-
+          environment:
+            NODE_OPTIONS: --openssl-legacy-provider
       ####
       - run:
           name: Compress .dist
@@ -390,6 +391,8 @@ jobs:
       - run:
           name: Build static Storybook
           command: 'npm run storybook:build'
+          environment:
+            NODE_OPTIONS: --openssl-legacy-provider
 
       - run:
           name: Archive static Storybook
@@ -492,6 +495,7 @@ jobs:
           command: 'npm run build'
           environment:
             SLDS__FRAMEWORK__PATH: .slds/.dist/
+            NODE_OPTIONS: --openssl-legacy-provider
 
       - run:
           name: 'Generate site tarball'

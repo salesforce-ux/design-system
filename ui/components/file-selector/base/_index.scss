@@ -193,7 +193,7 @@
    * @modifier
    */
   &.slds-has-drag {
-    background: var(--slds-g-color-neutral-base-100, #{$color-background-backdrop});
+    background: $color-background-backdrop;
     opacity: 1;
     z-index: $z-index-overlay;
   }

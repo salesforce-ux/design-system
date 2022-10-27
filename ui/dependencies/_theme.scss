@@ -59,11 +59,11 @@
     }
 
     &:active {
-      color: var(--slds-g-color-neutral-base-100, #{$color-text-link-inverse-active});
+      color: $color-text-link-inverse-active;
     }
 
     &[disabled] {
-      color: var(--slds-g-color-neutral-base-100, #{$color-text-link-inverse-disabled});
+      color: $color-text-link-inverse-disabled;
     }
   }
 }
@@ -121,11 +121,11 @@
     }
 
     &:active {
-      color: var(--slds-g-color-neutral-base-100, #{$color-text-link-inverse-active});
+      color: $color-text-link-inverse-active;
     }
 
     &[disabled] {
-      color: var(--slds-g-color-neutral-base-100, #{$color-text-link-inverse-disabled});
+      color: $color-text-link-inverse-disabled;
     }
   }
 }

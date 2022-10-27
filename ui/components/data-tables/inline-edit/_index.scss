@@ -145,7 +145,7 @@
 .slds-has-focus.slds-is-resizable .slds-th__action:focus:hover,
 .slds-is-resizable .slds-th__action:focus,
 .slds-is-resizable .slds-th__action:focus:hover {
-  background-color: var(--slds-g-color-neutral-base-95, #{$table-color-background-header-hover});
+  background-color: var(--slds-g-color-neutral-base-100, #{$table-color-background-header-hover});
   box-shadow: $brand-accessible-active 0 0 0 1px inset, $brand-accessible-active -0.25rem 0 0 inset;
 }
 
@@ -247,7 +247,7 @@
     .slds-th__action:focus,
     .slds-th__action:focus:hover {
       color: inherit;
-      background-color: var(--slds-g-color-neutral-base-95, #{$table-color-background-header-hover});
+      background-color: var(--slds-g-color-neutral-base-100, #{$table-color-background-header-hover});
       box-shadow: none;
     }
 
@@ -258,7 +258,7 @@
 
     // Handle the difference on resizeable columns
     &.slds-is-resizable:hover .slds-th__action {
-      background-color: var(--slds-g-color-neutral-base-95, #{$table-color-background-header-hover});
+      background-color: var(--slds-g-color-neutral-base-100, #{$table-color-background-header-hover});
       box-shadow: var(--slds-g-color-border-base-1, #{$color-border}) -0.25rem 0 0 inset;
     }
   }

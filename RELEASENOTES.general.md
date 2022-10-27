@@ -61,7 +61,9 @@
   - `crypto_wallet`
   - `nft_settings`
   - `nft_studio`
-  
+
+- Updated `@salesforce-ux/icons` dependency version to `10.5.3`
+
 ## 2.19.0 - August 11, 2022
 
 - Updated icons to `v10.4.0`

@@ -358,7 +358,7 @@ a.slds-button--inverse:focus {
   &:disabled {
     // @todo: global shared disabled button hooks
     background-color: $color-background-button-inverse-disabled;
-    border-color: var(--slds-g-color-neutral-base-100, #{$color-border-button-inverse-disabled});
+    border-color: $color-border-button-inverse-disabled;
   }
 }
 
@@ -397,7 +397,7 @@ a.slds-button--inverse:focus {
   &[disabled],
   &:disabled {
     // Make sure disabled buttons don't inherit hover states
-    color: var(--slds-g-color-neutral-base-100, #{$color-text-button-inverse-disabled});
+    color: $color-text-button-inverse-disabled;
   }
 }
 

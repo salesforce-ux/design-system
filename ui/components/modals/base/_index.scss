@@ -208,8 +208,7 @@
   right: 0;
   bottom: 0;
   left: 0;
-  background: var(--slds-c-backdrop-color-background, var(--sds-c-backdrop-color-background,
-    var(--slds-g-color-neutral-base-60, #{$color-background-temp-modal-tint})));
+  background: var(--slds-c-backdrop-color-background, var(--sds-c-backdrop-color-background, $color-background-temp-modal-tint));
   z-index: $z-index-modal;
 
   /**

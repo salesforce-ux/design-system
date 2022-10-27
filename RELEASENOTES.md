@@ -3,14 +3,14 @@
 
 ## Release 2.20.0 - Upcoming
 
-- Updated constanst colors codes with global slds hooks
+- Updated constant colors codes with global slds hooks
 - Updated background colors for Standard and Actions icons
 - Added two new dependencies for SLDS global styling hooks generation,
   - `@salesforce-ux/sds-styling-aliases` with version `0.2.4`
   - `@salesforce-ux/sds-styling-hooks` with version `1.1.0-alpha.2`
-- Updated `gulpfile` to include SLDS global hooks generation as part of build and dist jobs
-- Updated design tokens in every component and utility with SLDS global styling hooks (except Brand related tokens)
-- Updated icons to `v10.5.1`
+- Updated `gulp` file to include SLDS global hooks generation as part of build and dist jobs
+- Updated design tokens in every component and utility with SLDS global styling hooks (except Brand-related tokens)
+- Updated icons to `v10.5.3`
   - Standard Set:
       - Added `asset_hierarchy`
       - Added `budget_category_value`
@@ -23,7 +23,6 @@
       - Added `promotion_tiers`
       - Added `slack_conversations`
       - Added `your_account`
-    
   - Utility Set:
     - Added `asset_object`
     - Added `budget_category_value`
@@ -45,7 +44,6 @@
     - Added `service_contract`
     - Added `slack_conversations`
 - Updated BG color to below Standard Icons
-  
   - `connect_wallet`
   - `crypto_product_category_wallet_role`
   - `crypto_product`
@@ -57,8 +55,6 @@
   - `crypto_wallet`
   - `nft_settings`
   - `nft_studio`
-
-- Updated `@salesforce-ux/icons` dependency version to `10.5.3`
 
 ## Release 2.19.0 - August 11, 2022
 

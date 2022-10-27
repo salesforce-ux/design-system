@@ -1,13 +1,13 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-$legacy-color-background-path-incomplete: #e0e5ee;
-$legacy-color-background-path-incomplete-hover: #d8dde6;
-$legacy-color-background-path-complete: #51c983;
-$legacy-color-background-path-complete-hover: #1f8956;
-$legacy-color-background-path-current: #1172cf;
-$legacy-color-background-path-current-hover: #0d61af;
-$legacy-color-background-path-lost: #c23934;
+$legacy-color-background-path-incomplete: #f3f3f3;
+$legacy-color-background-path-incomplete-hover: #c9c9c9;
+$legacy-color-background-path-complete: #3ba755;
+$legacy-color-background-path-complete-hover: #2e844a;
+$legacy-color-background-path-current: #014486;
+$legacy-color-background-path-current-hover: #032d60;
+$legacy-color-background-path-lost: #ea001e;
 
 .slds-path-coach {
   @include deprecate('4.0.0', 'Use .slds-path instead of .slds-path-coach') {
@@ -32,7 +32,7 @@ $legacy-color-background-path-lost: #c23934;
     @include tabs;
 
     .slds-is-complete {
-      background-color: $legacy-color-background-path-complete;
+      background-color: var(--slds-g-color-success-base-60, #{$legacy-color-background-path-complete});
 
       .slds-tabs_path__stage,
       .slds-tabs--path__stage {
@@ -50,7 +50,7 @@ $legacy-color-background-path-lost: #c23934;
       }
 
       &:hover {
-        background-color: $legacy-color-background-path-complete-hover;
+        background-color: var(--slds-g-color-success-base-50, #{$legacy-color-background-path-complete-hover});
 
         .slds-tabs_path__stage,
         .slds-tabs--path__stage {
@@ -70,18 +70,18 @@ $legacy-color-background-path-lost: #c23934;
     }
 
     .slds-is-current {
-      background-color: $legacy-color-background-path-current;
+      background-color: var(--slds-g-color-palette-blue-30, #{$legacy-color-background-path-current});
 
       &:hover {
-        background-color: $legacy-color-background-path-current-hover;
+        background-color: var(--slds-g-color-palette-blue-20, #{$legacy-color-background-path-current-hover});
       }
 
       + .slds-is-incomplete:before {
-        background-color: $legacy-color-background-path-current;
+        background-color: var(--slds-g-color-palette-blue-30, #{$legacy-color-background-path-current});
       }
 
       &:hover + .slds-is-incomplete:before {
-        background-color: $legacy-color-background-path-current-hover;
+        background-color: var(--slds-g-color-palette-blue-20, #{$legacy-color-background-path-current-hover});
       }
     }
 
@@ -89,7 +89,7 @@ $legacy-color-background-path-lost: #c23934;
       background-color: var(--slds-g-color-neutral-base-95, #{$legacy-color-background-path-incomplete});
 
       &:hover {
-        background-color: var(--slds-g-color-neutral-base-90, #{$legacy-color-background-path-incomplete-hover});
+        background-color: var(--slds-g-color-neutral-base-80, #{$legacy-color-background-path-incomplete-hover});
       }
 
       .slds-tabs_path__link,
@@ -100,7 +100,7 @@ $legacy-color-background-path-lost: #c23934;
 
     .slds-is-lost,
     .slds-is-lost:hover {
-      background-color: $legacy-color-background-path-lost;
+      background-color: var(--slds-g-color-error-base-50, #{$legacy-color-background-path-lost});
     }
 
     // Lets make sure we have the right color when these steps are activated
@@ -203,12 +203,12 @@ $legacy-color-background-path-lost: #c23934;
     // The below logic makes the :before (which is actually a part of the previous section) the proper color based on tabs--path__item order
     + .slds-is-complete:before,
     + .slds-is-current:before {
-      background-color: $legacy-color-background-path-complete;
+      background-color: var(--slds-g-color-success-base-60, #{$legacy-color-background-path-complete});
     }
 
     &:hover + .slds-is-complete:before,
     &:hover + .slds-is-current:before {
-      background-color: $legacy-color-background-path-complete-hover;
+      background-color: var(--slds-g-color-success-base-50, #{$legacy-color-background-path-complete-hover});
     }
 
     + .slds-is-incomplete:before,
@@ -218,7 +218,7 @@ $legacy-color-background-path-lost: #c23934;
 
     &:hover + .slds-is-incomplete:before,
     &:hover + .slds-is-lost:before {
-      background-color: var(--slds-g-color-neutral-base-90, #{$legacy-color-background-path-incomplete-hover});
+      background-color: var(--slds-g-color-neutral-base-80, #{$legacy-color-background-path-incomplete-hover});
     }
   }
 }

@@ -13,7 +13,7 @@ imports:
 
 props:
   COLOR_BACKGROUND_PATH_COMPLETE:
-    value: '{!PALETTE_GREEN_70}'
+    value: '{!PALETTE_GREEN_60}'
     comment: The background color for Salespath stages that are complete.
   COLOR_BACKGROUND_PATH_COMPLETE_HOVER:
     value: '{!PALETTE_GREEN_50}'

@@ -183,26 +183,26 @@
 // these mixins exist in order to alias selector assignment in the case
 // where state cannot be applied to the individual path step
 @mixin is-won() {
-  background: $color-background-path-won;
+  background: var(--slds-g-color-success-base-50, #{$color-background-path-won});
 
   &:before,
   &:after,
   &:hover,
   &:hover:before,
   &:hover:after {
-    background: $color-background-path-won;
+    background: var(--slds-g-color-success-base-50, #{$color-background-path-won});
   }
 }
 
 @mixin is-lost() {
-  background: $color-background-path-lost;
+  background: var(--slds-g-color-error-base-50, #{$color-background-path-lost});
 
   &:before,
   &:after,
   &:hover,
   &:hover:before,
   &:hover:after {
-    background: $color-background-path-lost;
+    background: var(--slds-g-color-error-base-50, #{$color-background-path-lost});
   }
 }
 
@@ -252,11 +252,11 @@
    * @restrict .slds-path__item
    */
   .slds-is-complete {
-    background: $color-background-path-complete;
+    background: var(--slds-g-color-success-base-60, #{$color-background-path-complete});
 
     &:before,
     &:after {
-      background: $color-background-path-complete;
+      background: var(--slds-g-color-success-base-60, #{$color-background-path-complete});
     }
 
     .slds-path__stage {
@@ -272,11 +272,11 @@
     }
 
     &:hover {
-      background: $color-background-path-complete-hover;
+      background: var(--slds-g-color-success-base-50, #{$color-background-path-complete-hover});
 
       &:before,
       &:after {
-        background: $color-background-path-complete-hover;
+        background: var(--slds-g-color-success-base-50, #{$color-background-path-complete-hover});
       }
 
       .slds-path__stage {

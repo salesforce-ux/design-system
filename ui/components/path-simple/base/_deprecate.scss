@@ -50,7 +50,7 @@ $legacy-color-background-path-lost: #ea001e;
       }
 
       &:hover {
-        background-color: var(--slds-g-color-success-base-50, #{$legacy-color-background-path-complete-hover});
+        background-color: var(--slds-g-color-success-base-50 ,#{$legacy-color-background-path-complete-hover});
 
         .slds-tabs_path__stage,
         .slds-tabs--path__stage {

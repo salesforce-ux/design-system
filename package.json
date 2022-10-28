@@ -8,7 +8,7 @@
     "CSS"
   ],
   "homepage": "https://lightningdesignsystem.com",
-  "version": "2.20.0-alpha.2",
+  "version": "2.20.0-beta.1",
   "author": "Salesforce",
   "bugs": {
     "url": "https://github.com/salesforce-ux/design-system/issues"
@@ -49,7 +49,7 @@
     "@salesforce-ux/design-system-markup": "^2.0.4",
     "@salesforce-ux/design-system-parser": "^1.1.1",
     "@salesforce-ux/design-system-primitive-tokens": "0.3.6",
-    "@salesforce-ux/icons": "10.4.0",
+    "@salesforce-ux/icons": "10.5.3",
     "@salesforce-ux/instant-vrt": "2.0.0",
     "@salesforce-ux/postcss-annotations-parser": "0.1.1",
     "@salesforce-ux/postcss-css-variable-value": "0.2.0",

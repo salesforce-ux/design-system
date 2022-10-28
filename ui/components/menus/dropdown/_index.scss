@@ -158,17 +158,17 @@
 
     &:hover,
     &:focus {
-      color: var(--slds-g-color-neutral-base-100, #{$color-text-link-inverse-hover});
+      color: $color-text-link-inverse-hover;
       background-color: transparent;
     }
 
     &:active {
-      color: var(--slds-g-color-neutral-base-100, #{$color-text-link-inverse-active});
+      color: $color-text-link-inverse-active;
       background-color: transparent;
     }
 
     &[aria-disabled="true"] {
-      color: var(--slds-g-color-neutral-base-100, #{$color-text-link-inverse-disabled});
+      color: $color-text-link-inverse-disabled;
       cursor: default;
 
       &:hover {

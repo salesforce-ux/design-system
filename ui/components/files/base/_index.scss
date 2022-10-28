@@ -58,7 +58,7 @@
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: var(--slds-g-color-neutral-base-10, #{$color-background-image-overlay});
+    background-color: $color-background-image-overlay;
   }
 
   // Adds and vertically centers "preview" icon via base64
@@ -269,7 +269,7 @@
 .slds-file_overlay,
 .slds-file--overlay {
   content: '';
-  background: var(--slds-g-color-neutral-base-10, #{$color-background-image-overlay});
+  background: $color-background-image-overlay;
   color: var(--slds-g-color-neutral-base-100, #{$color-text-inverse});
   position: absolute;
   top: 0;

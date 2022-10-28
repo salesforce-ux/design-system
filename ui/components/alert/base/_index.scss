@@ -54,12 +54,12 @@ $alert-gradient-size-background: 64px 64px;
     }
 
     &:active {
-      color: var(--slds-c-alert-text-color-active, var(--sds-c-alert-text-color-active, var(--slds-g-color-neutral-base-100, #{$color-text-link-inverse-active})));
+      color: var(--slds-c-alert-text-color-active, var(--sds-c-alert-text-color-active, $color-text-link-inverse-active));
     }
 
     &[disabled] {
       // @TODO: declare at shared/global level
-      color: var(--slds-g-color-neutral-base-100, #{$color-text-link-inverse-disabled});
+      color: $color-text-link-inverse-disabled;
     }
   }
 }

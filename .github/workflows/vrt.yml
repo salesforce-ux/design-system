@@ -1,0 +1,179 @@
+name: Trigger VRT from Label
+
+on:
+  pull_request:
+    types: [labeled]
+
+env:
+  APPLITOOLS_API_KEY: ${{ secrets.APPLITOOLS_API_KEY }}
+  APPLITOOLS_BATCH_ID: ${{ github.sha }}
+  APPLITOOLS_BATCH_NAME: PR ${{ github.event.pull_request.number }} (${{ github.actor }})
+  APPLITOOLS_DONT_CLOSE_BATCHES: true
+  APPLITOOLS_BATCH_NOTIFY: true
+  APPLITOOLS_REPO_DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
+  REVIEW_APP_NAME: slds-storybook-pr-${{ github.event.pull_request.number }}
+
+jobs:
+  vrt-init:
+    if: ${{ github.event.label.name == 'vrt:chrome-ready' || github.event.label.name == 'vrt:full-ready'}}
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Set VRT Mode parameter
+        run: |
+          echo "VRT_MODE=$(echo ${{ github.event.label.name }} | sed 's/\(.*\):\(.*\)-\(.*\)/\2/')" >> $GITHUB_ENV
+
+      - name: Print context
+        env:
+          GITHUB_CONTEXT: ${{ toJson(github) }}
+        run: |
+          echo "$GITHUB_CONTEXT"
+      - run: printenv | sort
+
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v3
+        with:
+          cache: 'npm'
+
+  vrt-desktop:
+    needs: vrt-init
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v3
+        with:
+          cache: 'npm'
+
+      - name: Add Applitools eyes-storybook module
+        run: npm i @applitools/eyes-storybook@latest --save-dev --package-lock-only
+      - run: npm ci
+      - name: Prepare Storybook
+        run: npm run storybook:prepare
+        # Hack to create TTY for GitHub Actions runners
+        # https://github.com/gfx/example-github-actions-with-tty#hack-to-create-tty-for-github-actions-runners
+        shell: 'script -q -e -c "bash {0}"'
+
+      - run: printenv | sort
+
+      - name: Set VRT Mode parameter
+        run: |
+          echo "VRT_MODE=$(echo ${{ github.event.label.name }} | sed 's/\(.*\):\(.*\)-\(.*\)/\2/')" >> $GITHUB_ENV
+
+      - name: Applitools
+        run: 'VRT_MODE=${{ env.VRT_MODE }} npx eyes-storybook'
+        timeout-minutes: 20
+
+  vrt-legacy:
+    if: ${{ github.event.label.name == 'vrt:full-ready'}}
+    needs: vrt-init
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v3
+        with:
+          cache: 'npm'
+
+      - name: Add Applitools eyes-storybook module
+        run: npm i @applitools/eyes-storybook@latest --save-dev --package-lock-only
+      - run: npm ci
+
+      - name: Prepare Storybook
+        run: npm run storybook:prepare
+        # Hack to create TTY for GitHub Actions runners
+        # https://github.com/gfx/example-github-actions-with-tty#hack-to-create-tty-for-github-actions-runners
+        shell: 'script -q -e -c "bash {0}"'
+
+      - run: printenv | sort
+
+      - name: Set VRT Mode parameter
+        run: |
+          echo "VRT_MODE=$(echo ${{ github.event.label.name }} | sed 's/\(.*\):\(.*\)-\(.*\)/\2/')" >> $GITHUB_ENV
+
+      - name: Applitools
+        run: 'STORYBOOK_SLDS_VERSION=legacy npx eyes-storybook --conf applitools.legacy.config.js' # -u https://${REVIEW_APP_NAME}.herokuapp.com
+        timeout-minutes: 20
+
+  vrt-mobile:
+    if: ${{ github.event.label.name == 'vrt:full-ready'}}
+    needs: vrt-init
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v3
+        with:
+          cache: 'npm'
+
+      - name: Add Applitools eyes-storybook module
+        run: npm i @applitools/eyes-storybook@latest --save-dev --package-lock-only
+      - run: npm ci
+
+      - name: Prepare Storybook
+        run: npm run storybook:prepare
+        # Hack to create TTY for GitHub Actions runners
+        # https://github.com/gfx/example-github-actions-with-tty#hack-to-create-tty-for-github-actions-runners
+        shell: 'script -q -e -c "bash {0}"'
+
+      - run: printenv | sort
+
+      - name: Set VRT Mode parameter
+        run: |
+          echo "VRT_MODE=$(echo ${{ github.event.label.name }} | sed 's/\(.*\):\(.*\)-\(.*\)/\2/')" >> $GITHUB_ENV
+
+      - name: Applitools
+        run: 'STORYBOOK_SLDS_VERSION=mobile npx eyes-storybook --conf applitools.mobile.config.js' # -u https://${REVIEW_APP_NAME}.herokuapp.com
+        timeout-minutes: 20
+
+  vrt-wrap:
+    needs: [vrt-desktop, vrt-legacy, vrt-mobile]
+    if: always() && !cancelled() && !contains(needs.*.result, 'failure')
+    runs-on: ubuntu-latest
+    env:
+      APPLITOOLS_API_KEY: ${{ secrets.APPLITOOLS_API_KEY }}
+
+    steps:
+      - name: Get Applitools Latest Batch
+        id: applitools_batch
+        run: echo "batches=$(curl -H "X-Eyes-Api-Key:${{ secrets.APPLITOOLS_API_KEY }}" -X GET "https://salesforceuxeyesapi.applitools.com/api/v1/batches" | jq -rc '.batches[0]')" >> $GITHUB_OUTPUT
+
+      - name: Show Applitools Latest Batch
+        # single quotes are needed around the JSON string here to preserve the double quotes around the props and values
+        run: echo '${{ steps.applitools_batch.outputs.batches }}'
+
+      - uses: tibdex/github-app-token@v1
+        id: get_installation_token
+        with:
+          app_id: 244972
+          private_key: ${{ secrets.DSE_CI_APP_KEY }}
+
+      - name: Dump GitHub context event
+        id: github_context_event_step
+        run: echo '${{ toJSON(github.event) }}'
+
+      - name: Show GitHub context
+        env:
+          GITHUB_CONTEXT: ${{ toJson(github) }}
+        run: echo "$GITHUB_CONTEXT"
+
+      - uses: actions/checkout@v2
+
+      - uses: actions/setup-node@v3
+        with:
+          cache: 'npm'
+
+      - name: Install OctoKit
+        run: npm i @octokit/core @octokit/auth-app @octokit/rest
+
+      - name: Do the check
+        env:
+          THE_SHA: ${{ github.event.pull_request.head.sha }}
+          OCTOKIT_PAT: ${{ steps.get_installation_token.outputs.token }}
+          GH_APP_ID: 244972
+          GH_APP_INSTALLATION_ID: 29956208
+          GH_APP_PRIVATE_KEY: ${{ secrets.DSE_CI_APP_KEY }}
+          GH_APP_CLIENT_ID: Iv1.6aaf118377862b49
+          GH_APP_CLIENT_SECRET: ${{ secrets.DSE_CI_CLIENT_SECRET }}
+        # single quotes are needed around the JSON string here so that is can be parsed by the node script
+        run: batchesData='${{ steps.applitools_batch.outputs.batches }}' node scripts/ci/pr-checks

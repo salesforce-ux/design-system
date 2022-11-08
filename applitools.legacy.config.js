@@ -5,39 +5,41 @@ const currentBranch = branch.sync();
 
 module.exports = {
   apiKey: process.env.APPLITOOLS_API_KEY,
-  appName: 'SLDS',
-  matchLevel: 'Strict',
+  appName: "SLDS",
+  matchLevel: "Strict",
   ignoreDisplacements: true,
-  properties: [{ name: 'Group', value: 'legacy' }],
-  batchName: process.env.CI ? undefined : '',
+  properties: [{ name: "Group", value: "legacy" }],
+  batchName: process.env.CI ? undefined : "",
   branchName: process.env.CI
-    ? undefined
+    ? `${process.env.GITHUB_REPOSITORY}/${process.env.GITHUB_HEAD_REF}`
     : `localRun/${process.env.LOGNAME}/${currentBranch}`,
-  parentBranchName: process.env.CI ? undefined : `localRun/${currentBranch}`,
+  parentBranchName: process.env.CI
+    ? `${process.env.GITHUB_REPOSITORY}/${process.env.APPLITOOLS_REPO_DEFAULT_BRANCH}`
+    : `localRun/${currentBranch}`,
   showLogs: process.env.CI || false,
   showStorybookOutput: process.env.CI || false,
   // saveDebugData: false,
   exitcode: false,
   testConcurrency: 100,
-  serverUrl: 'https://salesforceuxeyesapi.applitools.com',
-  testBlueprintPattern: '.*',
-  testNamePattern: '^(?:.+|) ?Sink',
-  include: function({ name, kind }) {
+  serverUrl: "https://salesforceuxeyesapi.applitools.com",
+  testBlueprintPattern: ".*",
+  testNamePattern: "^(?:.+|) ?Sink",
+  include: function ({ name, kind }) {
     return (
-      new RegExp(this.testBlueprintPattern, 'gi').test(kind) &&
-      new RegExp(this.testNamePattern, 'gi').test(name)
+      new RegExp(this.testBlueprintPattern, "gi").test(kind) &&
+      new RegExp(this.testNamePattern, "gi").test(name)
     );
   },
-  puppeteerOptions: process.env.CIRCLECI
-    ? { executablePath: '/usr/bin/google-chrome' }
+  puppeteerOptions: process.env.CI
+    ? { executablePath: "/usr/bin/google-chrome" }
     : undefined,
   waitBeforeScreenshot: 1000,
   fakeIE: true,
   visualGridOptions: {
-    ieV2: true
+    ieV2: true,
   },
   browser: [
     // { width: resolution.width, height: resolution.height, name: 'edgelegacy' },
-    { width: resolution.width, height: resolution.height, name: 'ie11' }
-  ]
+    { width: resolution.width, height: resolution.height, name: "ie11" },
+  ],
 };

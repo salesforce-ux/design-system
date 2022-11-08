@@ -10,6 +10,7 @@
   - `@salesforce-ux/sds-styling-hooks` with version `1.1.0-alpha.2`
 - Updated `gulp` file to include SLDS global hooks generation as part of build and dist jobs
 - Updated design tokens in every component and utility with SLDS global styling hooks (except Brand-related tokens)
+- Updated CI workflows migrating from CircleCI to GitHub Actions
 - Updated icons to `v10.5.3`
   - Standard Set:
       - Added `asset_hierarchy`

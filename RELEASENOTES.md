@@ -11,19 +11,19 @@
 - Updated `gulp` file to include SLDS global hooks generation as part of build and dist jobs
 - Updated design tokens in every component and utility with SLDS global styling hooks (except Brand-related tokens)
 - Updated CI workflows migrating from CircleCI to GitHub Actions
-- Updated icons to `v10.5.3`
+- Updated icons to `v10.5.4`
   - Standard Set:
-      - Added `asset_hierarchy`
-      - Added `budget_category_value`
-      - Added `budget_period`
-      - Updated `crypto_category_wallet_group`
-      - Added `crypto_transaction_envelope_change_snapshot`
-      - Added `data_transforms`
-      - Added `funding_award_adjustment`
-      - Added `funding_requirement`
-      - Added `promotion_tiers`
-      - Added `slack_conversations`
-      - Added `your_account`
+    - Added `asset_hierarchy`
+    - Added `budget_category_value`
+    - Added `budget_period`
+    - Updated `crypto_category_wallet_group`
+    - Added `crypto_transaction_envelope_change_snapshot`
+    - Added `data_transforms`
+    - Added `funding_award_adjustment`
+    - Added `funding_requirement`
+    - Added `promotion_tiers`
+    - Added `slack_conversations`
+    - Added `your_account`
   - Utility Set:
     - Added `asset_object`
     - Added `budget_category_value`
@@ -44,6 +44,12 @@
     - Added `send_log`
     - Added `service_contract`
     - Added `slack_conversations`
+    - Added `your_account`
+  
+  - DocType Set:
+    - Updated `rtf`
+    - Updated `folder`
+    - Updated `library_folder`
 - Updated BG color to below Standard Icons
   - `connect_wallet`
   - `crypto_product_category_wallet_role`

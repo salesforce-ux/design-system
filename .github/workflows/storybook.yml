@@ -16,9 +16,6 @@ jobs:
   init:
     runs-on: ubuntu-latest
 
-    outputs:
-      GITHUB_TOKEN: ${{ steps.get_installation_token.outputs.token }}
-
     steps:
     - uses: tibdex/github-app-token@v1
       id: get_installation_token
@@ -152,7 +149,6 @@ jobs:
   publish-storybook:
     if: ${{ needs.prepare.outputs.HEROKU_RELEASE_STORYBOOK_APP_NAME == 'true' }}
     runs-on: ubuntu-latest
-
     needs:
       - init
       - prepare
@@ -199,9 +195,15 @@ jobs:
         heroku buildpacks -a ${PUBLISH_STORYBOOK_TO} | grep "https://github.com/salesforce-ux/heroku-buildpack-nginx.git#dse" || heroku buildpacks:set https://github.com/salesforce-ux/heroku-buildpack-nginx.git#dse -a ${PUBLISH_STORYBOOK_TO}
         heroku builds:create --source-tar workspace/artifact/storybook.tar.gz -a ${PUBLISH_STORYBOOK_TO}
 
+    - uses: tibdex/github-app-token@v1
+      id: get_installation_token
+      with:
+        app_id: 244972
+        private_key: ${{ secrets.DSE_CI_APP_KEY }}
+
     - name: Set Github deployments to "success"
       env:
-        GITHUB_TOKEN: ${{ needs.init.outputs.GITHUB_TOKEN }}
+        GITHUB_TOKEN: ${{ steps.get_installation_token.outputs.token }}
       run: |-
         for row in $(jq -r '.[] | select(.url | contains("storybook")) | @base64' workspace/artifact/gh-deployments.json); do
           export STATUS_URL=$(echo ${row} | base64 --decode | jq -r ".status" | sed 's/https:\/\/api.github.com//')

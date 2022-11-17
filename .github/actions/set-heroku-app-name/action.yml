@@ -1,0 +1,65 @@
+name: set-heroku-app-name
+outputs:
+  HEROKU_APP_NAME:
+    value: ${{ steps.which-app.outputs.HEROKU_APP_NAME }}
+  HEROKU_RELEASE_STORYBOOK_APP_NAME:
+    value: ${{ steps.which-app.outputs.HEROKU_RELEASE_STORYBOOK_APP_NAME }}
+runs:
+  using: composite
+  steps:
+  - name: Set which app to deploy to on Heroku
+    id: which-app
+    # if on default branch without a tag
+    #   then publish to UPCOMING
+    #
+    # if on default branch and tag of X.X.X-*
+    #   then publish to CORE-MAIN
+    #
+    # if on any branch and tag of X.X.X
+    #   then publish to CORE-PATCH
+    #
+    # All other cases publish to the review app
+    run: |-
+      export CURRENT_DEFAULT_BRANCH=`git remote show origin | grep "HEAD branch" | cut -d ":" -f 2 | xargs`
+      echo 'HEROKU_RELEASE_STORYBOOK_APP_NAME=false' >> $GITHUB_OUTPUT
+      if [[ "${{ github.ref }}" = "${CURRENT_DEFAULT_BRANCH}" ]] ; then
+        echo "Publishing to UPCOMING..."
+        echo 'HEROKU_APP_NAME=${HEROKU_APP_UPCOMING}' >> $GITHUB_OUTPUT
+        echo 'HEROKU_RELEASE_STORYBOOK_APP_NAME=storybook-upcoming' >> $GITHUB_OUTPUT
+      elif [[ ${{ github.ref }} =~ ^v[0-9]+\.[0-9]+\.[0-9]+-.+$ ]] ; then
+        echo "Publishing to CORE-MAIN..."
+        echo 'HEROKU_APP_NAME=${HEROKU_APP_CORE_MAIN}' >> $GITHUB_OUTPUT
+        echo 'HEROKU_RELEASE_STORYBOOK_APP_NAME=storybook-core-main' >> $GITHUB_OUTPUT
+      elif [[ ${{ github.ref }} =~ ^v[0-9]+\.[0-9]+\.[0-9]+$ ]] ; then
+        echo "Publishing to CORE-PATCH..."
+        echo 'HEROKU_APP_NAME=${HEROKU_APP_CORE_PATCH}' >> $GITHUB_OUTPUT
+        echo 'HEROKU_RELEASE_STORYBOOK_APP_NAME=storybook-core-patch' >> $GITHUB_OUTPUT
+      else
+        echo "Publishing to pull-request review app..."
+        echo 'HEROKU_APP_NAME=slds-review-site-pr-${{ github.event.pull_request.number }}' >> $GITHUB_OUTPUT
+        echo 'HEROKU_RELEASE_STORYBOOK_APP_NAME=true' >> $GITHUB_OUTPUT
+      fi
+    shell: bash
+  - run: printenv | sort
+    shell: bash
+  - run: |-
+      HEROKU_APP_NAME=${{ steps.which-app.outputs.HEROKU_APP_NAME }}
+      HEROKU_RELEASE_STORYBOOK_APP_NAME=${{ steps.which-app.outputs.HEROKU_RELEASE_STORYBOOK_APP_NAME }}
+      echo $HEROKU_APP_NAME > workspace/heroku-app-name.txt
+      echo $HEROKU_RELEASE_STORYBOOK_APP_NAME > workspace/heroku-release-storybook-app-name.txt
+    shell: bash
+  - name: Show HEROKU_APP_NAME value
+    run: |-
+      echo
+      echo "PR_NUMBER = ${{ github.event.pull_request.number }}"
+      echo
+      echo "HEROKU_APP_NAME=============================="
+      cat workspace/heroku-app-name.txt
+      echo "============================================="
+      echo
+      echo
+      echo "HEROKU_RELEASE_STORYBOOK_APP_NAME============"
+      cat workspace/heroku-release-storybook-app-name.txt
+      echo "============================================="
+      echo
+    shell: bash

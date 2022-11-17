@@ -1,0 +1,7 @@
+name: build-tokens
+runs:
+  using: composite
+  steps:
+  - name: Build Tokens
+    run: npm run gulp -- generate:tokens:all
+    shell: bash

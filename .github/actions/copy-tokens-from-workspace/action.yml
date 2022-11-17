@@ -1,0 +1,7 @@
+name: copy-tokens-from-workspace
+runs:
+  using: composite
+  steps:
+  - name: Decompress design-tokens
+    run: tar -xvf workspace/artifact/design-tokens.tar
+    shell: bash

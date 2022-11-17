@@ -1,0 +1,7 @@
+name: copy-tokens-to-workspace
+runs:
+  using: composite
+  steps:
+  - name: Compress design-tokens
+    run: tar -cvf workspace/design-tokens.tar design-tokens/
+    shell: bash

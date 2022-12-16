@@ -27,7 +27,7 @@ Whenever you add, remove, or alter a component's css annotation metadata, you'll
 
 ### Configuring Node and NVM
 
-Node v12 is recommended for use with the Design System repository, and [NVM](http://nvm.sh/) is the recommended choice for managing multiple versions of Node on your computer.
+Node v14 is recommended for use with the Design System repository, and [NVM](http://nvm.sh/) is the recommended choice for managing multiple versions of Node on your computer.
 
 A .nvmrc file is included in this project to aid in local development. To utilize it for setting your project's node version, run `nvm use` in the root of the directory.
 Additionally, you can set up a deeper shell integration for automatically invoking the nvmrc file when you change into the project directory by

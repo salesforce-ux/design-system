@@ -1,7 +1,7 @@
 <!-- Release notes authoring guidelines: http://keepachangelog.com/ -->
 <!-- On release, add general notes here. In time the legacy release notes will be add to this -->
 
-## 2.20.0 - Upcoming
+## 2.20.0 - December 15, 2022
 
 - Updated constant colors codes with global slds hooks
 - Added two new dependencies for SLDS global styling hooks generation,
@@ -45,7 +45,7 @@
     - Added `service_contract`
     - Added `slack_conversations`
     - Added `your_account`
-  
+
   - DocType Set:
     - Updated `rtf`
     - Updated `folder`

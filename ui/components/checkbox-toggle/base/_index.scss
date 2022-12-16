@@ -224,7 +224,7 @@
         // @todo consider shared hooks for inputs
         background-color: var(--slds-g-color-neutral-base-80, #{$color-background-toggle-disabled});
         // @todo consider shared hooks for inputs
-        border-color: var(--slds-g-color-neutral-base-80, #{$color-background-toggle}); // Prevents checked styles from bleeding through
+        border-color: var(--slds-g-color-neutral-base-60, #{$color-background-toggle}); // Prevents checked styles from bleeding through
         pointer-events: none;
 
         &:after {
@@ -247,7 +247,7 @@
 
           &:before {
             // @todo consider shared hooks for inputs
-            background-color: var(--slds-g-color-neutral-base-90, #{$color-background-input-checkbox-disabled});
+            background-color: var(--slds-g-color-neutral-base-80, #{$color-background-input-checkbox-disabled});
           }
 
           &:after {

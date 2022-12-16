@@ -311,7 +311,7 @@
  */
 .slds-button__icon_hint,
 .slds-button__icon--hint {
-  fill: var(--slds-g-color-neutral-base-50, #{$color-text-icon-default-hint});
+  fill: var(--slds-g-color-neutral-base-70, #{$color-text-icon-default-hint});
 }
 
 /**
@@ -346,7 +346,7 @@
 
     .slds-button__icon_hint,
     .slds-button__icon--hint {
-      fill: var(--slds-g-color-neutral-base-40, #{$color-text-icon-default});
+      fill: var(--slds-g-color-neutral-base-50, #{$color-text-icon-default});
     }
 
     .slds-button__icon_inverse-hint,

@@ -225,11 +225,6 @@
   &:focus .slds-button__icon--edit {
     opacity: 1;
   }
-
-  &[disabled],
-  &:disabled {
-   color: var(--slds-g-color-neutral-base-50, #{$color-text-icon-default});
-  }
 }
 
 /**

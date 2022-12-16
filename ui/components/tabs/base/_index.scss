@@ -223,7 +223,7 @@
     line-height: inherit;
     color: var(--slds-c-tabs-item-text-color, var(--sds-c-tabs-item-text-color, var(--slds-g-color-neutral-base-30, #{$color-text-action-label})));
     box-shadow: none;
-
+    --slds-c-button-color-border-active: transparent;
     &:focus {
       text-decoration: underline;
     }

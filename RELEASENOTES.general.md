@@ -1,6 +1,29 @@
 <!-- Release notes authoring guidelines: http://keepachangelog.com/ -->
 <!-- On release, add general notes here. In time the legacy release notes will be add to this -->
 
+
+## 2.20.1 - December 16, 2022
+
+- Updated colors for verious components:
+  - Button Icons
+  - Carousel
+  - Checkbox Button
+  - Checkbox Toggle
+  - Checkbox
+  - Combobox
+  - Data Tables
+  - Dynamic Icons
+  - File Selector
+  - Pills
+  - Popovers
+  - Progress Indicator
+  - Radio Group
+  - Select
+  - Spinners
+  - Split View
+  - Tabs
+  - Visual Picker
+
 ## 2.20.0 - December 15, 2022
 
 - Updated constant colors codes with global slds hooks

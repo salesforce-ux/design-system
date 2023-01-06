@@ -3,7 +3,7 @@
 
 ## Release 2.20.1 - December 16, 2022
 
-- Updated colors for verious components:
+- Updated colors for various components:
   - Button Icons
   - Carousel
   - Checkbox Button

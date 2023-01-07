@@ -48,7 +48,7 @@
     */
   .slds-global-header__button_icon-favorites,
   .slds-global-header__button--icon-favorites {
-    color: $color-text-icon-inverse;
+    color: var(--slds-g-color-neutral-base-100, #{$color-text-icon-inverse});
 
     .slds-icon,
     .slds-button__icon {

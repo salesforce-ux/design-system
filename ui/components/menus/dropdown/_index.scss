@@ -111,14 +111,14 @@
   max-width: $size-medium;
   margin-top: $spacing-xxx-small;
   margin-bottom: $spacing-xxx-small;
-  border: $border-width-thin solid $color-border;
+  border: $border-width-thin solid var(--slds-g-color-border-base-1, #{$color-border});
   border-radius: $border-radius-medium;
   padding: $spacing-xx-small 0;
   font-size: $font-size-2;
-  background: $color-background-alt;
+  background: var(--slds-g-color-neutral-base-100, #{$color-background-alt});
   box-shadow: $shadow-drop-down;
   transform: translateX(-50%);
-  color: $color-text-default;
+  color: var(--slds-g-color-neutral-base-10, #{$color-text-default});
 
   // Typeahead stuff
   mark {
@@ -149,12 +149,12 @@
   */
 .slds-dropdown_inverse,
 .slds-dropdown--inverse {
-  background: $color-background-inverse;
-  border-color: $color-border-inverse;
-  color: $color-text-inverse;
+  background: var(--slds-g-color-brand-base-10, #{$color-background-inverse});
+  border-color: var(--slds-g-color-brand-base-10, #{$color-border-inverse});
+  color: var(--slds-g-color-neutral-base-100, #{$color-text-inverse});
 
   .slds-dropdown__item > a {
-    color: $color-text-inverse;
+    color: var(--slds-g-color-neutral-base-100, #{$color-text-inverse});
 
     &:hover,
     &:focus {
@@ -204,7 +204,7 @@
     justify-content: space-between;
     align-items: center;
     padding: $spacing-x-small $spacing-small;
-    color: $color-text-default;
+    color: var(--slds-g-color-neutral-base-10, #{$color-text-default});
     white-space: nowrap;
     cursor: pointer;
 
@@ -212,16 +212,16 @@
     &:focus {
       outline: 0;
       text-decoration: none;
-      background-color: $color-background-row-hover;
+      background-color: var(--slds-g-color-neutral-base-95, #{$color-background-row-hover});
     }
 
     &:active {
       text-decoration: none;
-      background-color: $color-background-row-active;
+      background-color: var(--slds-g-color-neutral-base-95, #{$color-background-row-active});
     }
 
     &[aria-disabled="true"] {
-      color: $color-text-button-default-disabled;
+      color: var(--slds-g-color-neutral-base-80, #{$color-text-button-default-disabled});
       cursor: default;
 
       &:hover {
@@ -229,7 +229,7 @@
       }
 
       .slds-icon {
-        fill: $color-text-button-default-disabled;
+        fill: var(--slds-g-color-neutral-base-80, #{$color-text-button-default-disabled});
       }
     }
 
@@ -242,7 +242,7 @@
       * @group notification
       */
     &.slds-has-error {
-      background: $color-background-destructive;
+      background: var(--slds-g-color-error-base-40, #{$color-background-destructive});
     }
 
     /**
@@ -254,12 +254,12 @@
       * @group notification
       */
     &.slds-has-success {
-      background: $color-background-success-dark;
+      background: var(--slds-g-color-success-base-50, #{$color-background-success-dark});
     }
 
     &.slds-has-error,
     &.slds-has-success {
-      color: $color-gray-1;
+      color: var(--slds-g-color-neutral-base-100, #{$color-gray-1});
     }
 
     /**
@@ -271,7 +271,7 @@
       * @group notification
       */
     &.slds-has-warning {
-      background: $color-background-warning;
+      background: var(--slds-g-color-warning-base-60, #{$color-background-warning});
 
       .slds-indicator_unread {
         background-color: currentColor;

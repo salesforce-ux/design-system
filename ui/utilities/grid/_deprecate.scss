@@ -81,22 +81,22 @@
 
       &_top,
       &--top {
-        border-top: 1px solid $color-border-separator;
+        border-top: 1px solid var(--slds-g-color-neutral-base-95, #{$color-border-separator});
       }
 
       &_right,
       &--right {
-        border-right: 1px solid $color-border-separator;
+        border-right: 1px solid var(--slds-g-color-neutral-base-95, #{$color-border-separator});
       }
 
       &_bottom,
       &--bottom {
-        border-bottom: 1px solid $color-border-separator;
+        border-bottom: 1px solid var(--slds-g-color-neutral-base-95, #{$color-border-separator});
       }
 
       &_left,
       &--left {
-        border-left: 1px solid $color-border-separator;
+        border-left: 1px solid var(--slds-g-color-neutral-base-95, #{$color-border-separator});
       }
     }
   }

@@ -19,7 +19,7 @@
    */
   &.slds-is-expanded {
     padding-bottom: $var-spacing-vertical-small;
-    border-color: $color-border;
+    border-color: var(--slds-g-color-border-base-1, #{$color-border});
   }
 }
 
@@ -224,23 +224,23 @@
   * @restrict .slds-path__item
   */
   .slds-is-incomplete {
-    background: $color-background-path-incomplete;
+    background: var(--slds-g-color-neutral-base-95, #{$color-background-path-incomplete});
 
     &:before,
     &:after {
-      background: $color-background-path-incomplete;
+      background: var(--slds-g-color-neutral-base-95, #{$color-background-path-incomplete});
     }
 
     .slds-path__link {
-      color: $color-text-default;
+      color: var(--slds-g-color-neutral-base-10, #{$color-text-default});
     }
 
     &:hover {
-      background: $color-background-path-incomplete-hover;
+      background: var(--slds-g-color-neutral-base-80, #{$color-background-path-incomplete-hover});
 
       &:before,
       &:after {
-        background: $color-background-path-incomplete-hover;
+        background: var(--slds-g-color-neutral-base-80, #{$color-background-path-incomplete-hover});
       }
     }
   }
@@ -268,7 +268,7 @@
     }
 
     .slds-path__link {
-      color: $color-text-inverse;
+      color: var(--slds-g-color-neutral-base-100, #{$color-text-inverse});
     }
 
     &:hover {
@@ -296,11 +296,11 @@
    * @restrict .slds-path__item
    */
   .slds-is-current {
-    background-color: $color-background-path-current;
+    background-color: var(--slds-g-color-neutral-base-100, #{$color-background-path-current});
 
     &:before,
     &:after {
-      background-color: $color-background-path-current;
+      background-color: var(--slds-g-color-neutral-base-100, #{$color-background-path-current});
       background-image:
         linear-gradient(90deg, $color-border-path-current, $color-border-path-current 0.125rem, transparent 0.125rem),
         linear-gradient(90deg, $color-border-path-current, $color-border-path-current 0.125rem, transparent 0.125rem),
@@ -423,7 +423,7 @@
     }
 
     .slds-path__link {
-      color: $color-text-inverse;
+      color: var(--slds-g-color-neutral-base-100, #{$color-text-inverse});
     }
 
     &:hover {
@@ -435,7 +435,7 @@
       }
 
       .slds-path__link {
-        color: $color-text-inverse;
+        color: var(--slds-g-color-neutral-base-100, #{$color-text-inverse});
       }
     }
   }
@@ -706,7 +706,7 @@ $mark-complete-width-medium: auto;
 .slds-path__guidance {
   margin-right: $spacing-x-small;
   padding-bottom: $spacing-xx-small;
-  background-color: $color-background-guidance;
+  background-color: var(--slds-g-color-neutral-base-100, #{$color-background-guidance});
 
   @include mq-medium-min {
     margin-top: 0;

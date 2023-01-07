@@ -31,7 +31,7 @@
   .slds-card_boundary {
     border-width: var(--slds-c-card-sizing-border, var(--sds-c-card-sizing-border, $border-width-thin));
     border-style: solid;
-    border-color: var(--slds-c-card-color-border, var(--sds-c-card-color-border, $card-color-border));
+    border-color: var(--slds-c-card-color-border, var(--sds-c-card-color-border, var(--slds-g-color-border-base-1, #{$card-color-border})));
     border-radius: var(--slds-c-card-radius-border, var(--sds-c-card-radius-border, $border-radius-medium));
   }
 }
@@ -45,10 +45,11 @@
 .slds-tabs_card,
 .slds-tabs_card.slds-tabs_card {
   padding: $var-spacing-vertical-small $var-spacing-horizontal-medium; // Use card tokens to keep this tab style looking like a card
-  background: var(--slds-c-card-color-background, var(--sds-c-card-color-background, $card-color-background));
+  background: var(--slds-c-card-color-background, var(--sds-c-card-color-background,
+    var(--slds-g-color-neutral-base-100, #{$card-color-background})));
   border-width: var(--slds-c-card-sizing-border, var(--sds-c-card-sizing-border, $border-width-thin));
   border-style: solid;
-  border-color: var(--slds-c-card-color-border, var(--sds-c-card-color-border, $card-color-border));
+  border-color: var(--slds-c-card-color-border, var(--sds-c-card-color-border, var(--slds-g-color-border-base-1, #{$card-color-border})));
   border-radius: var(--slds-c-card-radius-border, var(--sds-c-card-radius-border, $border-radius-medium));
   box-shadow: var(--slds-c-card-shadow, var(--sds-c-card-shadow, $card-shadow));
 
@@ -82,7 +83,8 @@
   .slds-card_boundary {
     border-width: var(--slds-c-card-sizing-border, var(--sds-c-card-sizing-border, $border-width-thin));
     border-style: solid;
-    border-color: var(--slds-c-card-color-border, var(--sds-c-card-color-border, $card-color-border));
+    border-color: var(--slds-c-card-color-border, var(--sds-c-card-color-border,
+      var(--slds-g-color-border-base-1, #{$card-color-border})));
     border-radius: var(--slds-c-card-radius-border, var(--sds-c-card-radius-border, $border-radius-medium));
 
     .slds-card__header {

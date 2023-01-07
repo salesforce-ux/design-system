@@ -15,7 +15,7 @@
   display: flex;
   align-items: stretch;
   margin: $spacing-x-small 0;
-  border: $border-width-thin solid $color-border;
+  border: $border-width-thin solid var(--slds-g-color-border-base-1, #{$color-border});
   border-radius: $border-radius-medium;
   cursor: move;
 
@@ -62,7 +62,7 @@
   flex-direction: column;
   flex-shrink: 0;
   padding: $spacing-small;
-  color: $color-text-inverse;
+  color: var(--slds-g-color-neutral-base-100, #{$color-text-inverse});
   border-radius: $border-radius-medium 0 0 $border-radius-medium;
   text-align: center;
 }
@@ -74,7 +74,7 @@
  */
 .slds-app-launcher__tile-body {
   flex: 1 1 auto;
-  background: $color-background;
+  background: var(--slds-g-color-neutral-base-95, #{$color-background});
   padding: $spacing-x-small $spacing-small;
   border-radius: 0 $border-radius-medium $border-radius-medium 0;
 }

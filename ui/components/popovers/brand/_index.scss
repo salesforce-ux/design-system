@@ -27,7 +27,7 @@
   &.slds-popover_brand-dark {
 
     .slds-popover__icon {
-      fill: $color-border-inverse;
+      fill: var(--slds-g-color-brand-base-10, #{$color-border-inverse});
     }
   }
 }
@@ -84,7 +84,7 @@
   }
 
   &.slds-popover_brand-dark {
-    border-top-color: $color-border-inverse;
+    border-top-color: var(--slds-g-color-brand-base-10, #{$color-border-inverse});
 
     &.slds-nubbin_top:before,
     &.slds-nubbin_top-left:before,
@@ -122,7 +122,7 @@
   }
 
   &.slds-popover_brand-dark {
-    border-left-color: $color-border-inverse;
+    border-left-color: var(--slds-g-color-brand-base-10, #{$color-border-inverse});
 
     &.slds-nubbin_left:before,
     &.slds-nubbin_left-top:before,
@@ -160,7 +160,7 @@
   }
 
   &.slds-popover_brand-dark {
-    border-bottom-color: $color-border-inverse;
+    border-bottom-color: var(--slds-g-color-brand-base-10, #{$color-border-inverse});
 
     &.slds-nubbin_bottom:before,
     &.slds-nubbin_bottom-left:before,
@@ -198,7 +198,7 @@
   }
 
   &.slds-popover_brand-dark {
-    border-right-color: $color-border-inverse;
+    border-right-color: var(--slds-g-color-brand-base-10, #{$color-border-inverse});
 
     &.slds-nubbin_right:before,
     &.slds-nubbin_right-top:before,

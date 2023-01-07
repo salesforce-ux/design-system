@@ -185,16 +185,16 @@ $kx-button-gradient-size: 140px;
   &[kx-type="ripple"] {
 
     &:after {
-      background-color: $color-background-light;
+      background-color: var(--slds-g-color-neutral-base-100, #{$color-background-light});
     }
   }
 
   &[disabled],
   &:disabled {
     // @todo: global shared disabled button hooks
-    background-color: $brand-disabled;
-    border-color: $brand-disabled;
-    color: $color-text-button-brand-disabled;
+    background-color: var(--slds-g-color-neutral-base-80, #{$brand-disabled});
+    border-color: var(--slds-g-color-neutral-base-80, #{$brand-disabled});
+    color: var(--slds-g-color-neutral-base-100, #{$color-text-button-brand-disabled});
   }
 }
 
@@ -205,7 +205,7 @@ $kx-button-gradient-size: 140px;
   &:hover,
   &:active {
     // These purposefully overrides the interaction states to facilitate the Kinetics effect
-    background-color: var(--sds-c-button-neutral-color-background-hover, $button-color-background-primary);
+    background-color: var(--sds-c-button-neutral-color-background-hover, var(--slds-g-color-neutral-base-100, #{$button-color-background-primary}));
     border-color: var(--sds-c-button-brand-color-border-hover, $brand-accessible);
   }
 }
@@ -216,7 +216,7 @@ $kx-button-gradient-size: 140px;
   &:hover,
   &:active {
     // This purposefully overrides the interaction states to facilitate the Kinetics effect
-    background-color: var(--sds-c-button-outline-brand-color-background, $button-color-background-primary);
+    background-color: var(--sds-c-button-outline-brand-color-background, var(--slds-g-color-neutral-base-100, #{$button-color-background-primary}));
   }
 }
 
@@ -233,8 +233,8 @@ $kx-button-gradient-size: 140px;
   &[disabled],
   &:disabled {
     // @todo: global shared disabled button hooks
-    background-color: $color-background-button-default-disabled;
-    border-color: $button-color-border-primary;
+    background-color: var(--slds-g-color-neutral-base-100, #{$color-background-button-default-disabled});
+    border-color: var(--slds-g-color-border-base-4, #{$button-color-border-primary});
   }
 }
 

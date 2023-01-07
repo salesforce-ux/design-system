@@ -13,7 +13,7 @@
 
   .slds-rich-text-editor {
     border: 0;
-    border-top: $border-width-thin solid $color-border;
+    border-top: $border-width-thin solid var(--slds-g-color-border-base-1, #{$color-border});
     border-radius: 0;
   }
 }
@@ -27,7 +27,7 @@
 .slds-email-composer__combobox {
   padding-left: $spacing-xx-large;
   border: 0;
-  border-bottom: $border-width-thin solid $color-border;
+  border-bottom: $border-width-thin solid var(--slds-g-color-border-base-1, #{$color-border});
   border-radius: 0;
 
   .slds-form-element__label {

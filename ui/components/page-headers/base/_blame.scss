@@ -3,7 +3,7 @@
 
 .slds-page-header_joined,
 .slds-page-header.slds-has-bottom-magnet {
-  border-bottom: $border-width-thin solid $page-header-joined-color-border;
+  border-bottom: $border-width-thin solid var(--slds-g-color-border-base-1, #{$page-header-joined-color-border});
   border-radius: $page-header-border-radius $page-header-border-radius 0 0;
   box-shadow: none;
 }

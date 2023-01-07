@@ -52,7 +52,7 @@
   flex-wrap: wrap;
   overflow: auto;
   max-height: rem(660px);
-  background: $color-background-alt;
+  background: var(--slds-g-color-neutral-base-100, #{$color-background-alt});
 
   .slds-map:before {
     padding-top: 75%;
@@ -103,7 +103,7 @@
 
   &:hover,
   &:focus {
-    background-color: $color-background-row-hover;
+    background-color: var(--slds-g-color-neutral-base-95, #{$color-background-row-hover});
     outline: 0;
 
     .slds-text-link {
@@ -112,14 +112,14 @@
   }
 
   &:active {
-    background-color: $color-background-row-active;
+    background-color: var(--slds-g-color-neutral-base-95, #{$color-background-row-active});
   }
 
   &[aria-pressed="true"] {
-    background-color: $color-background-row-selected;
+    background-color: var(--slds-g-color-neutral-base-95, #{$color-background-row-selected});
 
     .slds-text-link {
-      color: $color-text-link-active;
+      color: var(--slds-g-link-color-focus, #{$color-text-link-active});
     }
   }
 }

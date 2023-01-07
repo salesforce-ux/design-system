@@ -20,7 +20,7 @@
     line-height: ($line-height-text * 1rem);
 
     a {
-      color: $color-text-link;
+      color: var(--slds-g-link-color, #{$color-text-link});
 
       &:hover {
         text-decoration: underline;

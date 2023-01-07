@@ -9,9 +9,9 @@
  * @notes Contains comment replies and publisher
  */
 .slds-feed__item-comments {
-  background: $color-background-post;
-  border-top: $border-width-thin solid $color-border;
-  border-bottom: $border-width-thin solid $color-border;
+  background: var(--slds-g-color-neutral-base-95, #{$color-background-post});
+  border-top: $border-width-thin solid var(--slds-g-color-border-base-1, #{$color-border});
+  border-bottom: $border-width-thin solid var(--slds-g-color-border-base-1, #{$color-border});
 
   .slds-comment {
     padding: $var-spacing-vertical-x-small $spacing-medium;
@@ -26,11 +26,11 @@
  * @variant
  */
 .slds-post {
-  background: $color-background-alt;
+  background: var(--slds-g-color-neutral-base-100, #{$color-background-alt});
   padding: $spacing-small $spacing-medium;
 
   @include mq-medium-max {
-    border-top: $border-width-thin solid $color-border;
+    border-top: $border-width-thin solid var(--slds-g-color-border-base-1, #{$color-border});
   }
 
   @include mq-large-min {
@@ -90,7 +90,7 @@
   order: 1;
 
   @include mq-small-max {
-    border-top: $border-width-thin solid $color-border;
+    border-top: $border-width-thin solid var(--slds-g-color-border-base-1, #{$color-border});
     margin: 0 ($spacing-small * -1) ($spacing-small * -1);
     padding: 0 $spacing-medium;
   }
@@ -110,7 +110,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: $color-text-default;
+  color: var(--slds-g-color-neutral-base-10, #{$color-text-default});
   padding: $spacing-small 0;
   line-height: 1;
 
@@ -133,7 +133,7 @@
   &:hover,
   &:focus,
   &.slds-is-active {
-    color: $color-text-link-hover;
+    color: var(--slds-g-link-color-hover, #{$color-text-link-hover});
     text-decoration: none;
 
     .slds-icon {
@@ -197,7 +197,7 @@
   // class .slds-region--narrow
   .slds-post__footer-actions-list {
     order: 1;
-    border-top: $border-width-thin solid $color-border;
+    border-top: $border-width-thin solid var(--slds-g-color-border-base-1, #{$color-border});
     margin: 0 ($spacing-small * -1) ($spacing-small * -1);
     padding: 0 $spacing-medium;
   }

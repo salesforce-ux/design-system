@@ -27,7 +27,7 @@
     position: relative;
     border-radius: $border-radius-medium;
     padding: $spacing-medium;
-    background-color: $color-background;
+    background-color: var(--slds-g-color-neutral-base-95, #{$color-background});
 
     @include mq-medium-max {
 

@@ -21,7 +21,7 @@
  * @modifier
  */
 .slds-scoped-notification_light {
-  background-color: $color-background;
+  background-color: var(--slds-g-color-neutral-base-95, #{$color-background});
 }
 
 /**
@@ -32,11 +32,11 @@
  * @modifier
  */
 .slds-scoped-notification_dark {
-  background-color: $notification-color-background-inverse;
-  color: $color-text-inverse;
+  background-color: var(--slds-g-color-neutral-base-50, #{$notification-color-background-inverse});
+  color: var(--slds-g-color-neutral-base-100, #{$color-text-inverse});
 
   a {
-    color: $color-text-link-inverse;
+    color: var(--slds-g-color-neutral-base-100, #{$color-text-link-inverse});
     text-decoration: underline;
 
     &:hover,

@@ -24,7 +24,7 @@
 
     &:hover,
     &:focus {
-      background: $color-background-row-hover;
+      background: var(--slds-g-color-neutral-base-95, #{$color-background-row-hover});
       text-decoration: none;
       cursor: pointer;
     }

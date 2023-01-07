@@ -14,8 +14,8 @@
  * @variant
  */
 .slds-popover {
-  @include popover($shadow: $shadow-drop-down);
-  border: $border-width-thin solid $color-border;
+  @include popover($color: var(--slds-g-color-neutral-base-100, #{$color-background-alt}), $shadow: $shadow-drop-down);
+  border: $border-width-thin solid var(--slds-g-color-border-base-1, #{$color-border});
 }
 
 /**
@@ -64,8 +64,8 @@
  * @restrict .slds-popover footer
  */
 .slds-popover__footer {
-  border-top: $border-width-thin solid $color-border;
-  background-color: $color-background;
+  border-top: $border-width-thin solid var(--slds-g-color-border-base-1, #{$color-border});
+  background-color: var(--slds-g-color-neutral-base-95, #{$color-background});
   border-bottom-left-radius: inherit;
   border-bottom-right-radius: inherit;
   padding: $spacing-x-small $spacing-small;
@@ -78,7 +78,7 @@
  */
 .slds-popover__footer_form {
   text-align: center;
-  background: $color-background;
+  background: var(--slds-g-color-neutral-base-95, #{$color-background});
   border-radius: 0 0 $border-radius-medium $border-radius-medium;
 }
 
@@ -182,22 +182,22 @@
 */
 .slds-popover_dark {
   background-color: $brand-background-dark;
-  color: $color-text-brand-primary;
+  color: var(--slds-g-color-neutral-base-100, #{$color-text-brand-primary});
 
   .slds-badge {
-    background-color: $color-background-alt;
+    background-color: var(--slds-g-color-neutral-base-100, #{$color-background-alt});
   }
 
   .slds-popover__close {
-    color: $color-text-brand-primary;
+    color: var(--slds-g-color-neutral-base-100, #{$color-text-brand-primary});
   }
 
   .slds-icon-text-default {
-    fill: $color-background-alt;
+    fill: var(--slds-g-color-neutral-base-100, #{$color-background-alt});
   }
 
   .slds-popover__footer {
-    border-top-color: $color-border-inverse;
-    background-color: $color-background-alt-inverse;
+    border-top-color: var(--slds-g-color-brand-base-10, #{$color-border-inverse});
+    background-color: var(--slds-g-color-brand-base-20, #{$color-background-alt-inverse});
   }
 }

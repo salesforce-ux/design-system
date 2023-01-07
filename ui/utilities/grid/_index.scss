@@ -503,7 +503,7 @@
 .slds-col_rule-top,
 .slds-col--rule-top {
   @include mq-large-min {
-    border-top: 1px solid $color-border-separator;
+    border-top: 1px solid var(--slds-g-color-neutral-base-95, #{$color-border-separator});
   }
 }
 
@@ -517,7 +517,7 @@
 .slds-col_rule-right,
 .slds-col--rule-right {
   @include mq-large-min {
-    border-right: 1px solid $color-border-separator;
+    border-right: 1px solid var(--slds-g-color-neutral-base-95, #{$color-border-separator});
   }
 }
 
@@ -531,7 +531,7 @@
 .slds-col_rule-bottom,
 .slds-col--rule-bottom {
   @include mq-large-min {
-    border-bottom: 1px solid $color-border-separator;
+    border-bottom: 1px solid var(--slds-g-color-neutral-base-95, #{$color-border-separator});
   }
 }
 
@@ -545,7 +545,7 @@
 .slds-col_rule-left,
 .slds-col--rule-left {
   @include mq-large-min {
-    border-left: 1px solid $color-border-separator;
+    border-left: 1px solid var(--slds-g-color-neutral-base-95, #{$color-border-separator});
   }
 }
 

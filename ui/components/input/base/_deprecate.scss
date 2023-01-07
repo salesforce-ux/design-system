@@ -6,7 +6,7 @@
   .slds-input__icon {
     /* @Todo - we need to be sure this is deprecated since the color sems to be the correct gray I see in specs */
     @include deprecate('4.0.0', 'Use .slds-icon-text-default on the SVG icon instead') {
-      fill: $color-text-input-icon;
+      fill: var(--slds-g-color-neutral-base-50, #{$color-text-input-icon});
     }
   }
 }

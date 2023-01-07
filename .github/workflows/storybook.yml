@@ -1,0 +1,326 @@
+name: Make Review Apps
+
+on: pull_request
+
+env:
+  # APPLITOOLS_API_KEY:
+  # AWS_ACCESS_KEY_ID:
+  # AWS_REGION:
+  # AWS_SECRET_ACCESS_KEY:
+  # DSE_API_RELEASE_TOKEN:
+  # GITHUB_PACKAGES_TOKEN:
+  # GITHUB_TOKEN: ${{ github.token }}
+  HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
+
+jobs:
+  init:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: tibdex/github-app-token@v1
+      id: get_installation_token
+      with:
+        app_id: 244972
+        private_key: ${{ secrets.DSE_CI_APP_KEY }}
+
+    - uses: actions/checkout@v2
+
+    - run: printenv | sort
+
+    - name: Show GitHub context
+      env:
+        GITHUB_CONTEXT: ${{ toJson(github) }}
+      run: echo "$GITHUB_CONTEXT"
+
+    - run: mkdir -p workspace
+
+    - name: Retrieve Github deployments
+      env:
+        GITHUB_TOKEN: ${{ steps.get_installation_token.outputs.token }}
+
+      run: 'gh api /repos/salesforce-ux/design-system-internal/deployments --field ref=${{ github.event.pull_request.head.sha }} --method GET | jq "map({ status: .statuses_url, url: .payload.web_url})" > workspace/gh-deployments.json'
+
+    - name: View deployments
+      run: cat workspace/gh-deployments.json
+
+    - name: Set Github deployments to "in progress"
+      env:
+        GITHUB_TOKEN: ${{ steps.get_installation_token.outputs.token }}
+      run: |-
+        for row in $(jq -r '.[] | @base64' workspace/gh-deployments.json); do
+          export STATUS_URL=$(echo ${row} | base64 --decode | jq -r ".status" | sed 's/https:\/\/api.github.com//')
+          gh api ${STATUS_URL} -f state=in_progress -H "Accept: application/vnd.github.flash-preview+json"
+        done
+
+    - uses: actions/upload-artifact@v2
+      with:
+        path: |-
+          workspace/gh-deployments.json
+
+  prepare:
+    runs-on: ubuntu-latest
+    outputs:
+      HEROKU_APP_NAME: ${{ steps.which-heroku-app.outputs.HEROKU_APP_NAME }}
+      HEROKU_RELEASE_STORYBOOK_APP_NAME: ${{ steps.which-heroku-app.outputs.HEROKU_RELEASE_STORYBOOK_APP_NAME }}
+
+    needs:
+      - init
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - uses: actions/setup-node@v3
+      with:
+        cache: 'npm'
+
+    - uses: actions/download-artifact@v2
+      with:
+        path: workspace
+
+    - name: Determine Heroku App
+      uses: "./.github/actions/set-heroku-app-name"
+      id: which-heroku-app
+
+    - run: npm ci
+
+    - uses: "./.github/actions/build-tokens"
+
+    - uses: "./.github/actions/copy-tokens-to-workspace"
+
+    # - run: |-HEROKU_RELEASE_STORYBOOK_APP_NAME
+    #     HEROKU_APP_NAME=${{ steps.which-heroku-app.outputs.HEROKU_APP_NAME }}
+    #     HEROKU_RELEASE_STORYBOOK_APP_NAME=${{ steps.which-heroku-app.outputs.HEROKU_RELEASE_STORYBOOK_APP_NAME }}
+    #     echo $HEROKU_APP_NAME
+    #     echo $HEROKU_RELEASE_STORYBOOK_APP_NAME
+
+    - name: Compile styles
+      run: npm run gulp -- styles
+    - name: Compress styles
+      run: tar -cvf workspace/styles.tar assets/styles/
+    - name: Compress generated metadata
+      run: tar -cvf workspace/metadata.tar .generated/metadata/
+    - uses: actions/upload-artifact@v2
+      with:
+        path: |-
+          workspace/design-tokens.tar
+          workspace/styles.tar
+          workspace/metadata.tar
+          workspace/heroku-app-name.txt
+          workspace/heroku-release-storybook-app-name.txt
+
+  build-storybook:
+    if: ${{ !contains('refs/heads//^v\d+\.\d+\.\d+-.+$/', github.ref) }}
+    runs-on: ubuntu-latest
+    needs:
+      - prepare
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - uses: actions/setup-node@v3
+      with:
+        cache: 'npm'
+
+    - uses: actions/download-artifact@v2
+      with:
+        path: workspace
+
+    - name: Display structure of downloaded files
+      run: ls -R
+      working-directory: workspace
+
+    - uses: "./.github/actions/copy-tokens-from-workspace"
+
+    - name: Install and Build task
+      run: |
+        npm ci
+        npm run build
+
+    - name: Build static Storybook
+      run: npm run storybook:build
+
+    - name: Archive static Storybook
+      run: tar -czvf workspace/storybook.tar.gz .www/ Procfile config/nginx.conf.erb heroku-start.sh app.json
+
+    - uses: actions/upload-artifact@v2
+      with:
+        path: workspace/storybook.tar.gz
+
+  publish-storybook:
+    if: ${{ needs.prepare.outputs.HEROKU_RELEASE_STORYBOOK_APP_NAME == 'true' }}
+    runs-on: ubuntu-latest
+    needs:
+      - init
+      - prepare
+      - build-storybook
+
+    steps:
+    - uses: actions/download-artifact@v2
+      with:
+        path: workspace
+
+    - name: Display structure of downloaded files
+      run: ls -R
+      working-directory: workspace
+
+    - name: Install Heroku CLI
+      run: |-
+        if [[ $(command -v heroku) == "" ]]; then
+          curl https://cli-assets.heroku.com/install.sh | sh
+        else
+          echo "Heroku is already installed. No operation was performed."
+        fi
+
+    - name: Install Heroku Build CLI plugin
+      run: heroku plugins:install heroku-builds
+
+    - name: Deploy to Heroku
+      run: |-
+        HEROKU_APP_NAME=${{ needs.prepare.outputs.HEROKU_APP_NAME }}
+        HEROKU_RELEASE_STORYBOOK_APP_NAME=${{ needs.prepare.outputs.HEROKU_RELEASE_STORYBOOK_APP_NAME }}
+        export PR_NUMBER=${{ github.event.pull_request.number }}
+        export REVIEW_APP_NAME=slds-storybook-pr-${PR_NUMBER}
+        echo $HEROKU_APP_NAME
+        echo $HEROKU_RELEASE_STORYBOOK_APP_NAME
+        echo $PR_NUMBER
+        echo REVIEW_APP_NAME
+        if [[ ${HEROKU_RELEASE_STORYBOOK_APP_NAME} != "false" && ${PR_NUMBER} == "" ]]; then
+        export PUBLISH_STORYBOOK_TO=${HEROKU_RELEASE_STORYBOOK_APP_NAME}
+        else
+        export PUBLISH_STORYBOOK_TO=${REVIEW_APP_NAME}
+        fi
+        echo "=============================="
+        echo ${PUBLISH_STORYBOOK_TO}
+        echo "=============================="
+        heroku buildpacks -a ${PUBLISH_STORYBOOK_TO} | grep "https://github.com/salesforce-ux/heroku-buildpack-nginx.git#dse" || heroku buildpacks:set https://github.com/salesforce-ux/heroku-buildpack-nginx.git#dse -a ${PUBLISH_STORYBOOK_TO}
+        heroku builds:create --source-tar workspace/artifact/storybook.tar.gz -a ${PUBLISH_STORYBOOK_TO}
+
+    - uses: tibdex/github-app-token@v1
+      id: get_installation_token
+      with:
+        app_id: 244972
+        private_key: ${{ secrets.DSE_CI_APP_KEY }}
+
+    - name: Set Github deployments to "success"
+      env:
+        GITHUB_TOKEN: ${{ steps.get_installation_token.outputs.token }}
+      run: |-
+        for row in $(jq -r '.[] | select(.url | contains("storybook")) | @base64' workspace/artifact/gh-deployments.json); do
+          export STATUS_URL=$(echo ${row} | base64 --decode | jq -r ".status" | sed 's/https:\/\/api.github.com//')
+          export SITE_URL=$(echo ${row} | base64 --decode | jq -r ".url")
+          gh api ${STATUS_URL} -f state=success -f environment_url=${SITE_URL} -H "Accept: application/vnd.github.ant-man-preview+json"
+        done
+
+  framework-build:
+    # if: ${{ (1 < 0) }}
+    runs-on: ubuntu-latest
+    needs:
+      - prepare
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - uses: actions/setup-node@v3
+        with:
+          cache: 'npm'
+
+      - uses: actions/download-artifact@v2
+        with:
+          path: workspace
+
+      - name: Display structure of downloaded files
+        run: ls -R
+        working-directory: workspace
+
+      - uses: "./.github/actions/copy-tokens-from-workspace"
+      - name: Decompress styles
+        run: tar -xvf workspace/artifact/styles.tar
+      - name: Decompress metadata
+        run: tar -xvf workspace/artifact/metadata.tar
+
+      - run: npm ci
+      - name: Do build-dist
+        run: npm run build-dist
+      - name: Compress .dist
+        run: |-
+          tar -cvf workspace/design-system-dist.tar .dist/
+          cd .dist && zip -r dist . && mv dist.zip ../workspace/ && cd ..
+      - uses: actions/upload-artifact@v2
+        with:
+          path: |-
+            workspace/design-system-dist.tar
+            workspace/dist.zip
+
+  publish-site:
+    runs-on: ubuntu-latest
+    needs:
+      - framework-build
+
+    steps:
+      - uses: tibdex/github-app-token@v1
+        id: get_installation_token
+        with:
+          app_id: 244972
+          private_key: ${{ secrets.DSE_CI_APP_KEY }}
+
+      - name: Checkout design-system-site
+        uses: actions/checkout@v2
+        with:
+          repository: salesforce-ux/design-system-site
+          ref: main
+          token: ${{ steps.get_installation_token.outputs.token }}
+
+      - name: Display structure of downloaded files
+        run: ls -la
+
+      - uses: actions/download-artifact@v2
+        with:
+          path: workspace
+
+      - name: Display structure of downloaded files
+        run: ls -R
+        working-directory: workspace
+
+      - name: Decompress SLDS .dist
+        run: |-
+          mkdir -p .slds
+          tar -xvf workspace/artifact/design-system-dist.tar --directory .slds
+
+      - uses: actions/setup-node@v3
+        with:
+          cache: 'npm'
+      - run: npm ci
+      - shell: bash
+        run: |-
+          if [[ $(command -v heroku) == "" ]]; then
+            curl https://cli-assets.heroku.com/install.sh | sh
+          else
+            echo "Heroku is already installed. No operation was performed."
+          fi
+      - name: Install Heroku Build CLI plugin
+        run: heroku plugins:install heroku-builds
+      - name: Build static site
+        run: npm run build
+        env:
+          SLDS__FRAMEWORK__PATH: ".slds/.dist/"
+      - name: Display structure of downloaded files
+        run: ls -la
+      - name: Generate site tarball
+        run: tar -czvf site-next.tar.gz .www/ Procfile config/nginx.conf.erb heroku-start.sh app.json
+      - name: Deploy to Heroku app
+        run: |-
+          export HEROKU_APP_NAME=$(cat workspace/artifact/heroku-app-name.txt)
+          echo "=============================="
+          echo ${HEROKU_APP_NAME}
+          echo "=============================="
+          heroku buildpacks -a ${HEROKU_APP_NAME} | grep "https://github.com/salesforce-ux/heroku-buildpack-nginx.git#dse" || heroku buildpacks:set https://github.com/salesforce-ux/heroku-buildpack-nginx.git#dse -a ${HEROKU_APP_NAME}
+          heroku builds:create --source-tar site-next.tar.gz -a ${HEROKU_APP_NAME}
+      - name: Set Github deployments to "success"
+        env:
+          GITHUB_TOKEN: ${{ steps.get_installation_token.outputs.token }}
+        run: |-
+          for row in $(jq -r '.[] | select(.url | contains("review-site")) | @base64' workspace/gh-deployments.json); do
+            export STATUS_URL=$(echo ${row} | base64 --decode | jq -r ".status" | sed 's/https:\/\/api.github.com//')
+            export SITE_URL=$(echo ${row} | base64 --decode | jq -r ".url")
+            gh api ${STATUS_URL} -f state=success -f environment_url=${SITE_URL} -H "Accept: application/vnd.github.ant-man-preview+json"
+          done

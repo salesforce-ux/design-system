@@ -36,19 +36,20 @@
 
     &.slds-is-completed .slds-progress__marker,
     &.slds-is-active .slds-progress__marker {
-      background: $progress-color-background-shade;
+      background: var(--slds-g-color-neutral-base-95, #{$progress-color-background-shade});
     }
 
     &.slds-is-completed .slds-progress__marker_icon,
     &.slds-is-completed .slds-progress__marker--icon {
-      border-color: $progress-color-background-shade;
+      border-color: var(--slds-g-color-neutral-base-95, #{$progress-color-background-shade});
     }
 
     &.slds-is-active .slds-progress__marker {
-      box-shadow: $progress-color-background-shade 0 0 0 4px; // Adds whitespace around indicator
+      box-shadow: var(--slds-g-color-neutral-base-95, #{$progress-color-background-shade}) 0 0 0 4px; // Adds whitespace around indicator
 
       &:focus {
-        box-shadow: $progress-color-background-shade 0 0 0 4px, 0 0 3px 4px $color-border-brand-dark; // Keeps white space and add blue focus ring
+        box-shadow: var(--slds-g-color-neutral-base-95, #{$progress-color-background-shade}) 0 0 0 4px, 0 0 3px 4px
+          var(--slds-g-color-brand-base-50, #{$color-border-brand-dark}); // Keeps white space and add blue focus ring
       }
     }
 
@@ -57,12 +58,12 @@
       &,
       &:hover,
       &:focus {
-        background: $progress-color-background-shade;
+        background: var(--slds-g-color-neutral-base-95, #{$progress-color-background-shade});
       }
     }
 
     .slds-progress__marker {
-      border-color: $progress-color-border-shade;
+      border-color: var(--slds-g-color-neutral-base-95, #{$progress-color-border-shade});
     }
   }
 }
@@ -97,8 +98,8 @@
 
   &.slds-is-completed .slds-progress__marker,
   &.slds-is-active .slds-progress__marker {
-    background: $progress-color-background;
-    border-color: $progress-color-border-active;
+    background: var(--slds-g-color-neutral-base-100, #{$progress-color-background});
+    border-color: var(--slds-g-color-brand-base-50, #{$progress-color-border-active});
   }
 
   /**
@@ -113,8 +114,8 @@
    */
   &.slds-is-completed .slds-progress__marker_icon,
   &.slds-is-completed .slds-progress__marker--icon {
-    border-color: $progress-color-background;
-    color: $progress-bar-color-background-fill;
+    border-color: var(--slds-g-color-neutral-base-100, #{$progress-color-background});
+    color: var(--slds-g-color-brand-base-60, #{$progress-bar-color-background-fill});
   }
 
   /**
@@ -128,15 +129,15 @@
    * @group state
    */
   &.slds-is-active .slds-progress__marker {
-    box-shadow: $progress-color-background 0 0 0 4px; // Adds whitespace around indicator
+    box-shadow: var(--slds-g-color-neutral-base-100, #{$progress-color-background}) 0 0 0 4px; // Adds whitespace around indicator
 
     &:hover,
     &:focus {
-      border-color: $progress-color-border-hover;
+      border-color: var(--slds-g-color-brand-base-50, #{$progress-color-border-hover});
     }
 
     &:focus {
-      box-shadow: $progress-color-background 0 0 0 4px, 0 0 3px 4px $color-border-brand-dark;
+      box-shadow: var(--slds-g-color-neutral-base-100, #{$progress-color-background}) 0 0 0 4px, 0 0 3px 4px var(--slds-g-color-brand-base-50, #{$color-border-brand-dark});
     }
   }
 
@@ -153,14 +154,14 @@
     &,
     &:hover,
     &:focus {
-      color: $color-text-error;
-      background: $progress-color-background;
+      color: var(--slds-g-color-error-base-40, #{$color-text-error});
+      background: var(--slds-g-color-neutral-base-100, #{$progress-color-background});
       border-color: transparent;
       box-shadow: none;
     }
 
     &:focus {
-      box-shadow: 0 0 3px 0 $color-border-error;
+      box-shadow: 0 0 3px 0 var(--slds-g-color-error-base-40, #{$color-border-error});
     }
   }
 }
@@ -176,8 +177,8 @@
   @include square($square-icon-utility-small);
   position: relative;
   border-radius: $border-radius-circle;
-  background: $progress-bar-color-background;
-  border: 4px solid $progress-color-border;
+  background: var(--slds-g-color-neutral-base-80, #{$progress-bar-color-background});
+  border: 4px solid var(--slds-g-color-neutral-base-100, #{$progress-color-border});
   vertical-align: middle;
 }
 

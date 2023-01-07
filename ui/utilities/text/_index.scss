@@ -131,7 +131,7 @@
  */
 .slds-text-color_default,
 .slds-text-color--default {
-  color: $color-text-default;
+  color: var(--slds-g-color-neutral-base-10, #{$color-text-default});
 }
 
 /**
@@ -142,7 +142,7 @@
  */
 .slds-text-color_weak,
 .slds-text-color--weak {
-  color: $color-text-weak;
+  color: var(--slds-g-color-neutral-base-30, #{$color-text-weak});
 }
 
 /**
@@ -153,7 +153,7 @@
  */
 .slds-text-color_error,
 .slds-text-color--error {
-  color: $color-text-error;
+  color: var(--slds-g-color-error-base-40, #{$color-text-error});
 }
 
 /**
@@ -163,7 +163,7 @@
  * @modifier
  */
 .slds-text-color_destructive {
-  color: $color-text-destructive;
+  color: var(--slds-g-color-error-base-30, #{$color-text-destructive});
 }
 
 /**
@@ -173,7 +173,7 @@
  * @modifier
  */
 .slds-text-color_success {
-  color: $color-text-success;
+  color: var(--slds-g-color-success-base-50, #{$color-text-success});
 }
 
 /**
@@ -184,7 +184,7 @@
  */
 .slds-text-color_inverse,
 .slds-text-color--inverse {
-  color: $color-text-inverse;
+  color: var(--slds-g-color-neutral-base-100, #{$color-text-inverse});
 }
 
 /**
@@ -195,7 +195,7 @@
  */
 .slds-text-color_inverse-weak,
 .slds-text-color--inverse-weak {
-  color: $color-text-inverse-weak;
+  color: var(--slds-g-color-neutral-base-70, #{$color-text-inverse-weak});
 }
 
 /**

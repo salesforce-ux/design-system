@@ -19,8 +19,8 @@
     left: 0;
     bottom: 0;
     right: 0;
-    border: $border-width-thin dotted $color-gray-11;
-    outline: $border-width-thin dotted $color-gray-1;
+    border: $border-width-thin dotted var(--slds-g-color-neutral-base-30, #{$color-gray-11});
+    outline: $border-width-thin dotted var(--slds-g-color-neutral-base-100, #{$color-gray-1});
   }
 
   /**
@@ -34,7 +34,7 @@
   &.slds-drop-zone_drag {
 
     &:after {
-      border: $border-width-thin solid $color-background-success-dark;
+      border: $border-width-thin solid var(--slds-g-color-success-base-50, #{$color-background-success-dark});
       outline: 0;
     }
   }
@@ -46,8 +46,8 @@
   * @restrict .slds-drop-zone div
   */
 .slds-drop-zone__label {
-  color: $color-text-inverse;
-  background: $color-background-success-dark;
+  color: var(--slds-g-color-neutral-base-100, #{$color-text-inverse});
+  background: var(--slds-g-color-success-base-50, #{$color-background-success-dark});
   border-radius: $border-radius-medium $border-radius-medium 0 0;
   padding: $spacing-xx-small $spacing-x-small;
   position: absolute;
@@ -62,7 +62,7 @@
   */
   &.slds-drop-zone__label_container {
     opacity: 0;
-    background: $color-background-brand-primary;
+    background: var(--slds-g-color-brand-base-50, #{$color-background-brand-primary});
   }
 
   .slds-media__body {
@@ -92,10 +92,10 @@
   * @restrict .slds-drop-zone_drag div
   */
 .slds-drop-zone_drag__slot {
-  border: $border-width-thin solid $color-gray-1;
+  border: $border-width-thin solid var(--slds-g-color-neutral-base-100, #{$color-gray-1});
   border-left-width: $border-width-thick;
   border-right-width: $border-width-thick;
-  background: $color-background-success-dark;
+  background: var(--slds-g-color-success-base-50, #{$color-background-success-dark});
   width: 100%;
   height: $drop-zone-slot-height;
 }
@@ -138,18 +138,18 @@
     }
 
     &:after {
-      border: $border-width-thin solid $color-border-brand-primary;
+      border: $border-width-thin solid var(--slds-g-color-brand-base-60, #{$color-border-brand-primary});
     }
   }
 
   &:active {
 
     &:after {
-      border: $border-width-thick solid $color-border-brand-primary-active;
+      border: $border-width-thick solid var(--slds-g-color-brand-base-20, #{$color-border-brand-primary-active});
     }
 
     .slds-drop-zone__label {
-      background-color: $color-background-brand-primary-active;
+      background-color: var(--slds-g-color-brand-base-20, #{$color-background-brand-primary-active});
     }
   }
 
@@ -164,11 +164,11 @@
     outline: none;
 
     &:after {
-      border: $border-width-thick solid $color-border-brand-primary-focus;
+      border: $border-width-thick solid var(--slds-g-color-brand-base-50, #{$color-border-brand-primary-focus});
     }
 
     .slds-drop-zone__label {
-      background-color: $color-background-brand-primary-focus;
+      background-color: var(--slds-g-color-brand-base-30, #{$color-background-brand-primary-focus});
     }
   }
 }
@@ -180,7 +180,7 @@
   */
 .slds-drop-zone__actions {
   opacity: 0;
-  background: $color-background-brand-primary;
+  background: var(--slds-g-color-brand-base-50, #{$color-background-brand-primary});
   position: absolute;
   right: 0;
   top: 0;

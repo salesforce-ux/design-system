@@ -24,9 +24,9 @@
       @include square($square-icon-medium-boundary);
       position: relative;
       display: inline-block;
-      border: $border-width-thin solid $color-border-button-default;
+      border: $border-width-thin solid var(--slds-g-color-border-base-4, #{$color-border-button-default});
       border-radius: $border-radius-medium;
-      background-color: $color-background-input;
+      background-color: var(--slds-g-color-neutral-base-100, #{$color-background-input});
       cursor: pointer;
 
       &:before,
@@ -50,12 +50,12 @@
 
       &:hover:not([disabled]),
       &:focus:not([disabled]) {
-        border: $border-width-thin solid $color-border-button-default;
-        background-color: $color-background-button-default-hover;
+        border: $border-width-thin solid var(--slds-g-color-border-base-4, #{$color-border-button-default});
+        background-color: var(--slds-g-color-neutral-base-95, #{$color-background-button-default-hover});
       }
 
       &:active {
-        background-color: $color-background-button-default-active;
+        background-color: var(--slds-g-color-neutral-base-95, #{$color-background-button-default-active});
       }
     }
 
@@ -66,11 +66,11 @@
       + .slds-checkbox_faux,
       + .slds-checkbox--faux {
         border-color: transparent;
-        background: $color-brand-darker;
+        background: var(--slds-g-color-brand-base-30, #{$color-brand-darker});
 
         &:before,
         &:after {
-          background: $color-background-alt;
+          background: var(--slds-g-color-neutral-base-100, #{$color-background-alt});
         }
 
         &:before {
@@ -97,7 +97,7 @@
       + .slds-checkbox_faux,
       + .slds-checkbox--faux {
         @include focus-button;
-        border-color: $color-border-input-active;
+        border-color: var(--slds-g-color-brand-base-60, #{$color-border-input-active});
       }
     }
 
@@ -107,14 +107,14 @@
       ~ .slds-checkbox--faux,
       + .slds-checkbox_faux,
       + .slds-checkbox--faux {
-        background-color: $color-background-button-brand-disabled;
-        border-color: $color-border-button-brand-disabled;
-        color: $color-text-button-brand-disabled;
+        background-color: var(--slds-g-color-neutral-base-95, #{$color-background-button-brand-disabled});
+        border-color: var(--slds-g-color-neutral-base-80, #{$color-border-button-brand-disabled});
+        color: var(--slds-g-color-neutral-base-100, #{$color-text-button-brand-disabled});
         cursor: default;
 
         &:before,
         &:after {
-          background: $color-gray-8;
+          background: var(--slds-g-color-neutral-base-60, #{$color-gray-8});
         }
       }
     }
@@ -123,7 +123,7 @@
 
       ~ .slds-checkbox_faux,
       + .slds-checkbox_faux {
-        background-color: $color-background-alt;
+        background-color: var(--slds-g-color-neutral-base-100, #{$color-background-alt});
       }
     }
   }

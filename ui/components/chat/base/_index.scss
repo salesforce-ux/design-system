@@ -138,12 +138,12 @@
 @include deprecate('4.0.0', 'Use slds-avatar__initials_inverse instead') {
 
   .slds-chat-avatar__intials {
-    background-color: $chat-message-color-background-inbound;
-    color: $color-text-weak;
+    background-color: var(--slds-g-color-neutral-base-95, #{$chat-message-color-background-inbound});
+    color: var(--slds-g-color-neutral-base-30, #{$color-text-weak});
 
     // combat abbr override styling in avatar
     &.slds-chat-avatar__intials:hover {
-      color: $color-text-weak;
+      color: var(--slds-g-color-neutral-base-30, #{$color-text-weak});
     }
   }
 }
@@ -182,7 +182,7 @@
   white-space: pre-line;
 
   a {
-    color: $color-brand-darker;
+    color: var(--slds-g-link-color-focus, #{$color-brand-darker});
     text-decoration: underline;
 
     &:hover {
@@ -222,7 +222,7 @@
 .slds-chat-message__text_unsupported-type,
 .slds-chat-message__text_delivery-failure {
   border-radius: $border-radius-large $border-radius-large 0;
-  color: $color-text-inverse;
+  color: var(--slds-g-color-neutral-base-100, #{$color-text-inverse});
   min-height: 2rem;
 }
 
@@ -239,14 +239,14 @@
 .slds-chat-message__file_outbound,
 .slds-chat-message__image_outbound {
   padding: 0;
-  border: $border-width-thin solid $color-border;
+  border: $border-width-thin solid var(--slds-g-color-border-base-1, #{$color-border});
 }
 
 .slds-chat-message__file_inbound,
 .slds-chat-message__image_inbound,
 .slds-chat-message__file_outbound,
 .slds-chat-message__image_outbound {
-  color: $color-text-default;
+  color: var(--slds-g-color-neutral-base-10, #{$color-text-default});
 }
 
 /**
@@ -256,9 +256,9 @@
  */
 .slds-chat-message__text_inbound {
   margin-right: auto;
-  background-color: $chat-message-color-background-inbound;
+  background-color: var(--slds-g-color-neutral-base-95, #{$chat-message-color-background-inbound});
   border-radius: $border-radius-large $border-radius-large $border-radius-large 0;
-  color: $color-text-default;
+  color: var(--slds-g-color-neutral-base-10, #{$color-text-default});
 }
 
 /**
@@ -267,7 +267,7 @@
  * @restrict .slds-chat-message__image
  */
 .slds-chat-message__image_inbound {
-  background-color: $chat-message-color-background-inbound;
+  background-color: var(--slds-g-color-neutral-base-95, #{$chat-message-color-background-inbound});
   border-radius: $border-radius-large $border-radius-large $border-radius-large 0;
 }
 
@@ -278,7 +278,7 @@
  */
 .slds-chat-message__file_inbound {
   border-radius: $border-radius-large $border-radius-large $border-radius-large 0;
-  background-color: $color-background-alt;
+  background-color: var(--slds-g-color-neutral-base-100, #{$color-background-alt});
 }
 
 /**
@@ -288,7 +288,7 @@
  */
 .slds-chat-message__text_outbound {
   margin-left: auto;
-  background-color: $chat-message-color-background-outbound;
+  background-color: var(--slds-g-color-brand-base-30, #{$chat-message-color-background-outbound});
 }
 
 /**
@@ -297,7 +297,7 @@
  * @restrict .slds-chat-message__text
  */
 .slds-chat-message__text_outbound-agent {
-  background-color: $chat-message-color-background-outbound-agent;
+  background-color: var(--slds-g-color-neutral-base-50, #{$chat-message-color-background-outbound-agent});
   margin-left: auto;
 }
 
@@ -305,7 +305,7 @@
 .slds-chat-message__text_outbound-agent {
 
   a {
-    color: $color-text-inverse;
+    color: var(--slds-g-color-neutral-base-100, #{$color-text-inverse});
     text-decoration: underline;
   }
 }
@@ -319,10 +319,10 @@
  * @group feedback
  */
 .slds-chat-message__text_unsupported-type {
-  background-color: $chat-message-color-background-status;
+  background-color: var(--slds-g-color-neutral-base-100, #{$chat-message-color-background-status});
   border-radius: $border-radius-large $border-radius-large $border-radius-large 0;
-  border: $color-border-warning $border-width-thin solid;
-  color: $color-text-default;
+  border: var(--slds-g-color-warning-base-60, #{$color-border-warning}) $border-width-thin solid;
+  color: var(--slds-g-color-neutral-base-10, #{$color-text-default});
   margin-right: auto;
 
   @include deprecate('4.0', 'Please use slds-icon-text-warning modifier for slds-icon') {
@@ -330,7 +330,7 @@
     .slds-chat-icon.slds-icon-utility-warning {
 
       .slds-icon {
-        fill: $color-text-warning;
+        fill: var(--slds-g-color-warning-base-50, #{$color-text-warning});
       }
     }
   }
@@ -345,9 +345,9 @@
  * @group feedback
  */
 .slds-chat-message__text_delivery-failure {
-  background-color: $chat-message-color-background-status;
-  border: $color-border-destructive $border-width-thin solid;
-  color: $color-text-default;
+  background-color: var(--slds-g-color-neutral-base-100, #{$chat-message-color-background-status});
+  border: var(--slds-g-color-error-base-40, #{$color-border-destructive}) $border-width-thin solid;
+  color: var(--slds-g-color-neutral-base-10, #{$color-text-default});
   margin-left: auto;
 
   /**
@@ -359,8 +359,8 @@
     display: flex;
     padding: $spacing-x-small $spacing-x-small 0;
     margin: $spacing-x-small #{-$spacing-x-small} 0;
-    color: $color-text-error;
-    border-top: $color-border-destructive $border-width-thin solid;
+    color: var(--slds-g-color-error-base-40, #{$color-text-error});
+    border-top: var(--slds-g-color-error-base-40, #{$color-border-destructive}) $border-width-thin solid;
   }
 
   @include deprecate('4.0', 'Please use slds-icon-text-error modifier for slds-icon') {
@@ -368,7 +368,7 @@
     .slds-chat-icon.slds-icon-utility-error {
 
       .slds-icon {
-        fill: $color-text-error;
+        fill: var(--slds-g-color-error-base-40, #{$color-text-error});
       }
     }
   }
@@ -395,7 +395,7 @@
  * @restrict .slds-chat-message div
  */
 .slds-chat-message__meta {
-  color: $color-text-weak;
+  color: var(--slds-g-color-neutral-base-30, #{$color-text-weak});
   font-size: $font-size-1;
   margin: $spacing-xxx-small 0 0 $spacing-x-small;
 }
@@ -414,7 +414,7 @@
 
     .slds-icon {
       @include square($square-icon-small-content);
-      fill: $color-text-link;
+      fill: var(--slds-g-link-color, #{$color-text-link});
     }
   }
 }
@@ -428,7 +428,7 @@
 .slds-chat-event {
 
   align-items: center;
-  color: $color-text-weak;
+  color: var(--slds-g-color-neutral-base-30, #{$color-text-weak});
   display: inline-flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -445,10 +445,10 @@
     * @group feedback
     */
   &.slds-has-error {
-    color: $color-text-error;
+    color: var(--slds-g-color-error-base-40, #{$color-text-error});
 
     svg {
-      fill: $color-text-error;
+      fill: var(--slds-g-color-error-base-40, #{$color-text-error});
     }
   }
 }
@@ -462,7 +462,7 @@
 @include deprecate('4.0', 'Horizontal rules are no longer used on events') {
 
   .slds-chat-event__rule {
-    border-top: $border-width-thin $color-border solid;
+    border-top: $border-width-thin var(--slds-g-color-border-base-1, #{$color-border}) solid;
     height: rem(1px);
     flex-grow: 1;
   }
@@ -502,9 +502,9 @@
  */
 .slds-chat-bookend {
   align-items: center;
-  border: $color-border 0 solid;
+  border: var(--slds-g-color-border-base-1, #{$color-border}) 0 solid;
   border-bottom-width: $border-width-thin;
-  color: $color-text-weak;
+  color: var(--slds-g-color-neutral-base-30, #{$color-text-weak});
   display: flex;
   font-size: $font-size-3;
   justify-content: center;

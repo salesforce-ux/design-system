@@ -27,7 +27,7 @@
 * @variant
 */
 .slds-avatar-grouped {
-  border: $border-width-thin solid $color-gray-1;
+  border: $border-width-thin solid var(--slds-g-color-neutral-base-100, #{$color-gray-1});
   line-height: 0; // NOTE: If this isn't set to zero, images in those avatars that are smaller than the default line height will stop filling the container
   border-radius: $border-radius-circle;
   background: $user;
@@ -41,7 +41,7 @@
 * @modifier
 */
 .slds-avatar-grouped_inverse {
-  background-color: $color-background;
+  background-color: var(--slds-g-color-neutral-base-95, #{$color-background});
 }
 
 /**

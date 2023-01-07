@@ -61,8 +61,8 @@
  * @restrict .slds-split-view_container article
  */
 .slds-split-view {
-  background: $split-view-color-background;
-  color: $color-text-weak;
+  background: var(--slds-g-color-neutral-base-95, #{$split-view-color-background});
+  color: var(--slds-g-color-neutral-base-30, #{$color-text-weak});
 }
 
 /**
@@ -84,8 +84,8 @@
   @include text-title;
   line-height: $line-height-heading;
   border: {
-    top: $border-width-thin solid $split-view-color-border;
-    bottom: $border-width-thin solid $split-view-color-border;
+    top: $border-width-thin solid var(--slds-g-color-border-base-1, #{$split-view-color-border});
+    bottom: $border-width-thin solid var(--slds-g-color-border-base-1, #{$split-view-color-border});
   }
   padding: $spacing-x-small $spacing-medium $spacing-x-small $spacing-large;
 }
@@ -98,17 +98,17 @@
 .slds-split-view__list-item {
   display: flex;
   position: relative;
-  border-bottom: $border-width-thin solid $split-view-color-border;
+  border-bottom: $border-width-thin solid var(--slds-g-color-border-base-1, #{$split-view-color-border});
   font-size: $font-size-2;
 
   &:hover,
   &:focus {
-    background: $split-view-color-background-row-hover;
+    background: var(--slds-g-color-neutral-base-100, #{$split-view-color-background-row-hover});
   }
 
   .slds-indicator_unread,
   .slds-indicator--unread {
-    background: $color-brand;
+    background: var(--slds-g-color-brand-base-50, #{$color-brand});
   }
 }
 
@@ -125,7 +125,7 @@
   left: $spacing-x-small;
   display: block;
   border-radius: $border-radius-circle;
-  background: $color-background-notification-badge;
+  background: var(--slds-g-color-error-base-40, #{$color-background-notification-badge});
 }
 
 /**
@@ -140,13 +140,13 @@
   &:hover,
   &:focus {
     outline: none;
-    background: $split-view-color-background-row-hover;
+    background: var(--slds-g-color-neutral-base-100, #{$split-view-color-background-row-hover});
     color: currentColor;
     text-decoration: none;
   }
 
   &:focus {
-    box-shadow: inset 0 0 0 1px $color-brand;
+    box-shadow: inset 0 0 0 1px var(--slds-g-color-brand-base-60, #{$color-brand});
   }
 
   &[aria-current="page"] {
@@ -168,13 +168,13 @@
   right: (0.75rem * -1);
   height: 100%;
   width: 0.75rem;
-  background: $color-background-alt;
+  background: var(--slds-g-color-neutral-base-100, #{$color-background-alt});
   border-radius: 0;
-  border: $border-width-thin solid $color-border;
+  border: $border-width-thin solid var(--slds-g-color-neutral-base-50, #{$color-border});
 
   &:hover,
   &:focus {
-    background: $split-view-color-background-row-hover;
+    background: var(--slds-g-color-neutral-base-100, #{$split-view-color-background-row-hover});
   }
 
   &.slds-is-closed .slds-button__icon {

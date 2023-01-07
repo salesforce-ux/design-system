@@ -21,7 +21,7 @@
  */
 .slds-file-selector__dropzone {
   padding: $spacing-xxx-small;
-  border: $border-width-thin dashed $color-border;
+  border: $border-width-thin dashed var(--slds-g-color-border-base-4, #{$color-border});
   border-radius: $border-radius-medium;
 
   /**
@@ -31,7 +31,7 @@
    */
   &.slds-has-drag-over {
     outline: 0;
-    border-color: $color-border-input-active;
+    border-color: var(--slds-g-color-brand-base-60, #{$color-border-input-active});
     box-shadow: $shadow-button-focus;
     border-style: solid;
   }
@@ -51,12 +51,12 @@
   }
 
   &[disabled] ~ .slds-file-selector__body {
-    color: $color-text-button-default-disabled;
+    color: var(--slds-g-color-neutral-base-10, #{$color-text-button-default-disabled});
 
     > .slds-file-selector__button {
-      background: $color-background-button-brand-disabled;
-      border-color: $color-border-button-brand-disabled;
-      color: $color-text-button-brand-disabled;
+      background: var(--slds-g-color-neutral-base-95, #{$color-background-button-brand-disabled});
+      border-color: var(--slds-g-color-neutral-base-80, #{$color-border-button-brand-disabled});
+      color: var(--slds-g-color-neutral-base-30, #{$color-text-button-brand-disabled});
     }
 
     > .slds-file-selector__body-icon {
@@ -208,8 +208,8 @@
    * @modifier
    */
   &.slds-has-drag-over {
-    background: $color-background-backdrop-tint;
-    box-shadow: 0 0 0 4px $color-border-brand inset;
+    background: var(--slds-g-color-neutral-base-95, #{$color-background-backdrop-tint});
+    box-shadow: 0 0 0 4px var(--slds-g-color-border-brand-2, #{$color-border-brand}) inset;
   }
 }
 
@@ -225,9 +225,9 @@
 .slds-file-selector__body--integrated {
   @include square($size-x-small);
   @include absolute-center;
-  background: $color-background-alt;
+  background: var(--slds-g-color-neutral-base-100, #{$color-background-alt});
   box-shadow: $shadow-drop-down;
-  border: $border-width-thin solid $color-border;
+  border: $border-width-thin solid var(--slds-g-color-border-base-1, #{$color-border});
   border-radius: $border-radius-medium;
   flex-direction: column;
 }

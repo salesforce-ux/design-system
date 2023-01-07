@@ -53,7 +53,7 @@
  */
 .slds-carousel__panel-action {
   display: block;
-  border: $border-width-thin solid $color-border;
+  border: $border-width-thin solid var(--slds-g-color-border-base-1, #{$color-border});
   border-radius: $border-radius-medium;
 
   &:focus {
@@ -84,7 +84,7 @@
  * @restrict .slds-carousel__panel-action div
  */
 .slds-carousel__content {
-  background: $carousel-color-background;
+  background: var(--slds-g-color-neutral-base-100, #{$carousel-color-background});
   padding: $spacing-small;
   border-bottom-left-radius: $border-radius-medium;
   border-bottom-right-radius: $border-radius-medium;
@@ -132,8 +132,8 @@
 .slds-carousel__indicator-action {
   width: $carousel-indicator-width;
   height: $carousel-indicator-width;
-  background: $carousel-indicator-color-background;
-  border: $border-width-thin solid $color-border;
+  background: var(--slds-g-color-neutral-base-100, #{$carousel-indicator-color-background});
+  border: $border-width-thin solid var(--slds-g-color-border-base-4, #{$color-border});
   border-radius: 50%;
 
   /**
@@ -143,18 +143,18 @@
    */
   &.slds-is-active,
   &.slds-is-active:hover {
-    background: $carousel-indicator-color-background-active;
-    border-color: $carousel-indicator-color-background-active;
+    background: var(--slds-g-color-brand-base-50, #{$carousel-indicator-color-background-active});
+    border-color: var(--slds-g-color-brand-base-50, #{$carousel-indicator-color-background-active});
   }
 
   &:hover {
-    background-color: $carousel-indicator-color-background-hover;
+    background-color: var(--slds-g-color-neutral-base-95, #{$carousel-indicator-color-background-hover});
   }
 
   &:focus {
     @include focus-button;
-    background-color: $carousel-indicator-color-background-focus;
-    border-color: $carousel-indicator-color-background-focus;
+    background-color: var(--slds-g-color-brand-base-30, #{$carousel-indicator-color-background-focus});
+    border-color: var(--slds-g-color-brand-base-30, #{$carousel-indicator-color-background-focus});
     outline: 0;
   }
 }

@@ -90,7 +90,7 @@
   --slds-c-input-spacing-horizontal-start: #{$spacing-small};
 
   /*! @css-var-fallback color */
-  --slds-c-input-text-color: #{$color-text-default};
+  --slds-c-input-text-color: var(--slds-g-color-neutral-base-10, #{$color-text-default});
   border: 0;
 
   &:focus,
@@ -145,7 +145,7 @@
   --slds-c-input-spacing-horizontal-start: #{$spacing-small};
 
   /*! @css-var-fallback border-color */
-  --slds-c-input-color-border: #{$color-border-input};
+  --slds-c-input-color-border: var(--slds-g-color-border-base-4, #{$color-border-input});
 }
 
 /**
@@ -324,13 +324,13 @@
 
 .slds-has-error .slds-input {
   /*! @css-var-fallback border-color */
-  --slds-c-input-color-border: #{$color-border-error};
+  --slds-c-input-color-border: var(--slds-g-color-error-base-40, #{$color-border-error});
 
   /*! @css-var-fallback box-shadow */
-  --slds-c-input-shadow: #{$color-border-error} 0 0 0 #{$border-width-thin} inset;
+  --slds-c-input-shadow: var(--slds-g-color-error-base-40, #{$color-border-error}) 0 0 0 #{$border-width-thin} inset;
 
   /*! @css-var-fallback background-color */
-  --slds-c-input-color-background: var(--sds-c-input-color-background, var(--sds-c-input-color-background, #{$color-background-input}));
+  --slds-c-input-color-background: var(--sds-c-input-color-background, var(--sds-c-input-color-background, var(--slds-g-color-neutral-base-100, #{$color-background-input})));
 
   /*! @css-var-fallback color */
   --slds-c-input-text-color: var(--slds-c-input-text-color, var(--sds-c-input-text-color));
@@ -339,14 +339,14 @@
   &:focus,
   &:active {
     /*! @css-var-fallback border-color */
-    --slds-c-input-color-border-focus: #{$color-border-error};
+    --slds-c-input-color-border-focus: var(--slds-g-color-error-base-40, #{$color-border-error});
 
     /*! @css-var-fallback box-shadow */
-    --slds-c-input-shadow: #{$color-border-error} 0 0 0 #{$border-width-thin} inset, #{$shadow-button-focus};
+    --slds-c-input-shadow: var(--slds-g-color-error-base-40, #{$color-border-error}) 0 0 0 #{$border-width-thin} inset, #{$shadow-button-focus};
   }
 }
 
 .slds-has-error .slds-input__icon {
-  fill: $color-text-error;
-  color: $color-text-error;
+  fill: var(--slds-g-color-error-base-40, #{$color-text-error});
+  color: var(--slds-g-color-error-base-40, #{$color-text-error});
 }

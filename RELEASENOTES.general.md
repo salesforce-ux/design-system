@@ -1,6 +1,91 @@
 <!-- Release notes authoring guidelines: http://keepachangelog.com/ -->
 <!-- On release, add general notes here. In time the legacy release notes will be add to this -->
 
+
+## 2.20.1 - December 16, 2022
+
+- Updated colors for verious components:
+  - Button Icons
+  - Carousel
+  - Checkbox Button
+  - Checkbox Toggle
+  - Checkbox
+  - Combobox
+  - Data Tables
+  - Dynamic Icons
+  - File Selector
+  - Pills
+  - Popovers
+  - Progress Indicator
+  - Radio Group
+  - Select
+  - Spinners
+  - Split View
+  - Tabs
+  - Visual Picker
+
+## 2.20.0 - December 15, 2022
+
+- Updated constant colors codes with global slds hooks
+- Added two new dependencies for SLDS global styling hooks generation,
+  - `@salesforce-ux/sds-styling-aliases` with version `0.2.4`
+  - `@salesforce-ux/sds-styling-hooks` with version `1.1.0-alpha.2`
+- Updated `gulp` file to include SLDS global hooks generation as part of build and dist jobs
+- Updated design tokens in every component and utility with SLDS global styling hooks (except Brand-related tokens)
+- Updated CI workflows migrating from CircleCI to GitHub Actions
+- Updated icons to `v10.5.5`
+  - Standard Set:
+    - Added `asset_hierarchy`
+    - Added `budget_category_value`
+    - Added `budget_period`
+    - Updated `crypto_category_wallet_group`
+    - Added `crypto_transaction_envelope_change_snapshot`
+    - Added `data_transforms`
+    - Added `funding_award_adjustment`
+    - Added `funding_requirement`
+    - Added `promotion_tiers`
+    - Added `slack_conversations`
+    - Added `your_account`
+
+  - Utility Set:
+    - Added `asset_object`
+    - Added `budget_category_value`
+    - Added `budget_period`
+    - Added `contact`
+    - Added `funding_award_adjustment`
+    - Added `funding_requirement`
+    - Added `http`
+    - Added `knowledge_smart_link`
+    - Added `lead`
+    - Added `maintenance_plan`
+    - Added `no_return`
+    - Added `opportunity`
+    - Added `orders`
+    - Added `product`
+    - Added `proposition`
+    - Added `queue`
+    - Added `send_log`
+    - Added `service_contract`
+    - Added `slack_conversations`
+    - Added `your_account`
+
+  - DocType Set:
+    - Updated `rtf`
+    - Updated `folder`
+    - Updated `library_folder`
+
+- Updated BG color to below Standard Icons
+  - `connect_wallet`
+  - `crypto_product_category_wallet_role`
+  - `crypto_product`
+  - `crypto_transaction_envelope_change_log`
+  - `crypto_transaction_envelope`
+  - `crypto_transaction`
+  - `crypto_wallet_group_item`
+  - `crypto_wallet_group`
+  - `crypto_wallet`
+  - `nft_settings`
+  - `nft_studio`
 ## 2.19.0 - August 11, 2022
 
 - Updated icons to `v10.4.0`
@@ -30,9 +115,11 @@
     - Added `tax_rate`
     - Added `tax_treatment`
     - Added `water`
+
   - Action Set:
     - Added `action_scan_enabled`
     - Added `action_scan_disabled`
+
   - Utility Set:
     - Added `captions`
     - Added `contract_line_outcome`
@@ -55,6 +142,14 @@
     - Added `transport_walking`
     - Added `utility`
     - Added `water`
+
+- BRAND updates to below colors of the palette
+  - `PALETTE_GREEN_20`: `#1C3326`
+  - `PALETTE_GREEN_40`: `#396547`
+  - `PALETTE_HOT_ORANGE_20`: `#4A2413`
+  - `PALETTE_INDIGO_20`: `#321D71`
+  - `PALETTE_PURPLE_80`: `#D7BFF2`
+  - `PALETTE_VIOLET_20`: `#481A54`
 
 ## 2.18.1 - June 22, 2022
 

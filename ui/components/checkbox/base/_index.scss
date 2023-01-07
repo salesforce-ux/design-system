@@ -35,9 +35,10 @@
     border-width: $border-width-thin;
     border-style: solid;
     // @todo consider shared hooks for inputs
-    border-color: var(--slds-c-checkbox-color-border, var(--sds-c-checkbox-color-border, $color-border-input));
+    border-color: var(--slds-c-checkbox-color-border,
+      var(--sds-c-checkbox-color-border, var(--slds-g-color-border-base-4, #{$color-border-input})));
     // @todo consider shared hooks for inputs
-    background-color: var(--slds-c-checkbox-color-background, var(--sds-c-checkbox-color-background, $color-background-input));
+    background-color: var(--slds-c-checkbox-color-background, var(--sds-c-checkbox-color-background, var(--slds-g-color-neutral-base-100, #{$color-background-input})));
     box-shadow: var(--slds-c-checkbox-shadow, var(--sds-c-checkbox-shadow));
     transition: border $duration-quickly linear, background-color $duration-quickly linear;
   }
@@ -106,7 +107,7 @@
         // @todo consider shared hooks for inputs
 
         /*! @css-var-fallback border-color */
-        --slds-c-checkbox-color-border: var(--slds-c-checkbox-color-border-focus, var(--sds-c-checkbox-color-border-focus, #{$color-border-input-active}));
+        --slds-c-checkbox-color-border: var(--slds-c-checkbox-color-border-focus, var(--sds-c-checkbox-color-border-focus, var(--slds-g-color-brand-base-60, #{$color-border-input-active})));
 
         /*! @css-var-fallback box-shadow */
         --slds-c-checkbox-shadow: var(--slds-c-checkbox-shadow-focus, var(--sds-c-checkbox-shadow-focus, 0 0 3px #{$brand-accessible}));
@@ -120,7 +121,7 @@
       &:checked + .slds-checkbox__label .slds-checkbox--faux {
         // @todo consider shared hooks for inputs
         /*! @css-var-fallback border-color */
-        --slds-c-checkbox-color-border: var(--slds-c-checkbox-color-border-focus, var(--sds-c-checkbox-color-border-focus, #{$color-border-input-active}));
+        --slds-c-checkbox-color-border: var(--slds-c-checkbox-color-border-focus, var(--sds-c-checkbox-color-border-focus, var(--slds-g-color-brand-base-60, #{$color-border-input-active})));
       }
     }
 
@@ -163,13 +164,13 @@
       + .slds-checkbox__label .slds-checkbox_faux,
       + .slds-checkbox__label .slds-checkbox--faux {
         // @todo consider shared hooks for inputs
-        border-color: $color-border-input-disabled;
+        border-color: var(--slds-g-color-border-base-1, #{$color-border-input-disabled});
         // @todo consider shared hooks for inputs
-        background-color: $color-background-input-disabled;
+        background-color: var(--slds-g-color-neutral-base-95, #{$color-background-input-disabled});
 
         &:after {
           // @todo consider shared hooks for inputs
-          border-color: $color-gray-8;
+          border-color: var(--slds-g-color-neutral-base-60, #{$color-gray-8});
         }
       }
     }
@@ -184,7 +185,7 @@
   ~ .slds-checkbox--faux,
   + .slds-checkbox__label .slds-checkbox_faux,
   + .slds-checkbox__label .slds-checkbox--faux {
-    border-color: $color-border-error;
+    border-color: var(--slds-g-color-error-base-40, #{$color-border-error});
     border-width: $border-width-thick;
   }
 
@@ -194,10 +195,10 @@
   &:checked ~ .slds-checkbox--faux,
   &:checked + .slds-checkbox__label .slds-checkbox_faux,
   &:checked + .slds-checkbox__label .slds-checkbox--faux {
-    border-color: $color-border-error;
+    border-color: var(--slds-g-color-error-base-40, #{$color-border-error});
 
     &:after {
-      border-color: $color-background-error;
+      border-color: var(--slds-g-color-error-base-40, #{$color-background-error});
     }
   }
 }

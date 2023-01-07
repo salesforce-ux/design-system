@@ -34,8 +34,8 @@
  * @restrict .slds-icon-score svg
  */
 .slds-icon-score__positive {
-  fill: $color-background-success-dark;
-  stroke: $color-background-success-dark;
+  fill: var(--slds-g-color-success-base-50, #{$color-background-success-dark});
+  stroke: var(--slds-g-color-success-base-50, #{$color-background-success-dark});
 }
 
 /**
@@ -46,7 +46,7 @@
  */
 .slds-icon-score__negative {
   fill: transparent;
-  stroke: $color-background-destructive;
+  stroke: var(--slds-g-color-error-base-40, #{$color-background-destructive});
 }
 
 [data-slds-state="positive"] .slds-icon-score__positive,

@@ -14,11 +14,11 @@
   // This code creates the fixed header (faux header) used in the inline-edit data-table. I don't think we'll surface this for customers as it's very complex when scrolling horizontally and requires some other code for containers, etc
   position: relative;
   padding-top: 2rem; // This matches the height of the hover state w/border
-  background-color: $table-color-background-header; // This has to exist due to pixel paint diffs between the headers
+  background-color: var(--slds-g-color-neutral-base-95, #{$table-color-background-header}); // This has to exist due to pixel paint diffs between the headers
   overflow: hidden;
 
   &:before {
-    border-bottom: $border-width-thin solid $color-border;
+    border-bottom: $border-width-thin solid var(--slds-g-color-border-base-1, #{$color-border});
     content: '';
     display: block;
     position: relative;
@@ -27,7 +27,7 @@
 }
 
 .slds-cell-fixed {
-  background-color: $table-color-background-header;
+  background-color: var(--slds-g-color-neutral-base-95, #{$table-color-background-header});
   position: absolute;
   top: 0;
   min-height: 2rem;

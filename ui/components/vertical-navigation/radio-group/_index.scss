@@ -37,7 +37,7 @@
     &:checked + .slds-nav-vertical__action {
       font-weight: bold;
       background-color: $brand-background-primary;
-      box-shadow: inset rem(4px) 0 0 $brand-primary;
+      box-shadow: inset 4px 0 0 $brand-primary;
     }
   }
 }
@@ -45,7 +45,7 @@
 .slds-nav-vertical_shade {
 
   .slds-nav-vertical__item [type="radio"]:checked + .slds-nav-vertical__action {
-    border-color: $color-border;
-    background-color: $color-background-alt;
+    border-color: var(--slds-g-color-border-base-1, #{$color-border});
+    background-color: var(--slds-g-color-neutral-base-100, #{$color-background-alt});
   }
 }

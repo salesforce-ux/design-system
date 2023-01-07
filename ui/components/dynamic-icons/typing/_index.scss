@@ -63,7 +63,7 @@
  * @restrict .slds-icon-typing span
  */
 .slds-icon-typing__dot {
-  background-color: $typing-icon-dot-color-background-gray;
+  background-color: var(--slds-g-color-neutral-base-80, #{$typing-icon-dot-color-background-gray});
   border-radius: $border-radius-circle;
   display: inline-block;
   height: $typing-icon-dot-size;
@@ -74,16 +74,16 @@
 @keyframes slds-icon-typing__dot-first {
 
   0% {
-    background-color: $typing-icon-dot-color-background-gray;
+    background-color: var(--slds-g-color-neutral-base-80, #{$typing-icon-dot-color-background-gray});
   }
 
   16% {
-    background-color: $typing-icon-dot-color-background-gray-dark;
+    background-color: var(--slds-g-color-neutral-base-60, #{$typing-icon-dot-color-background-gray-dark});
   }
 
   33%,
   100% {
-    background-color: $typing-icon-dot-color-background-gray;
+    background-color: var(--slds-g-color-neutral-base-80, #{$typing-icon-dot-color-background-gray});
   }
 }
 
@@ -91,16 +91,16 @@
 
   0%,
   33% {
-    background-color: $typing-icon-dot-color-background-gray;
+    background-color: var(--slds-g-color-neutral-base-80, #{$typing-icon-dot-color-background-gray});
   }
 
   50% {
-    background-color: $typing-icon-dot-color-background-gray-dark;
+    background-color: var(--slds-g-color-neutral-base-60, #{$typing-icon-dot-color-background-gray-dark});
   }
 
   67%,
   100% {
-    background-color: $typing-icon-dot-color-background-gray;
+    background-color: var(--slds-g-color-neutral-base-80, #{$typing-icon-dot-color-background-gray});
   }
 }
 
@@ -108,14 +108,14 @@
 
   0%,
   67% {
-    background-color: $typing-icon-dot-color-background-gray;
+    background-color: var(--slds-g-color-neutral-base-80, #{$typing-icon-dot-color-background-gray});
   }
 
   83% {
-    background-color: $typing-icon-dot-color-background-gray-dark;
+    background-color: var(--slds-g-color-neutral-base-60, #{$typing-icon-dot-color-background-gray-dark});
   }
 
   100% {
-    background-color: $typing-icon-dot-color-background-gray;
+    background-color: var(--slds-g-color-neutral-base-80, #{$typing-icon-dot-color-background-gray});
   }
 }

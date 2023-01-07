@@ -22,7 +22,7 @@
   margin: $var-spacing-vertical-small ($var-spacing-horizontal-medium * -1) ($var-spacing-vertical-medium * -1);
   padding: $var-spacing-horizontal-medium;
   border-radius: 0 0 $page-header-border-radius $page-header-border-radius;
-  background-color: $page-header-color-background-alt;
+  background-color: var(--slds-g-color-neutral-base-100, #{$page-header-color-background-alt});
   position: relative;
   z-index: 2;
 }

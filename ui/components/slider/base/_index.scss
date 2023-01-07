@@ -9,7 +9,7 @@
   background: none; // Reset underlying styles
   background-color: var(--slds-c-slider-thumb-color-foreground, var(--sds-c-slider-thumb-color-foreground, $brand-accessible));
   border: 0;
-  box-shadow: var(--slds-c-slider-thumb-shadow, var(--sds-c-slider-thumb-shadow, $slider-handle-shadow));
+  box-shadow: var(--slds-c-slider-thumb-shadow, var(--sds-c-slider-thumb-shadow, var(--slds-g-color-neutral-base-10, #{$slider-handle-shadow})));
   cursor: pointer;
   transition: background 0.15s ease-in-out;
 
@@ -24,7 +24,7 @@
   height: $slider-track-height;
   cursor: pointer;
   background: none; // Reset underlying styles
-  background-color: var(--slds-c-slider-track-color-background, var(--sds-c-slider-track-color-background, $slider-track-color-background));
+  background-color: var(--slds-c-slider-track-color-background, var(--sds-c-slider-track-color-background, var(--slds-g-color-neutral-base-95, #{$slider-track-color-background})));
   border-radius: var(--slds-c-slider-track-radius-border, var(--sds-c-slider-track-radius-border, $border-radius-small));
 }
 
@@ -112,31 +112,31 @@
   &[disabled] {
 
     &::-webkit-slider-thumb {
-      background-color: $slider-color-background-disabled;
+      background-color: var(--slds-g-color-neutral-base-95, #{$slider-color-background-disabled});
       cursor: default;
     }
 
     &::-webkit-slider-runnable-track {
-      background-color: $slider-color-background-disabled;
+      background-color: var(--slds-g-color-neutral-base-95, #{$slider-color-background-disabled});
       cursor: default;
     }
 
     &::-moz-range-thumb {
-      background-color: $slider-color-background-disabled;
+      background-color: var(--slds-g-color-neutral-base-95, #{$slider-color-background-disabled});
       cursor: default;
     }
 
     &::-moz-range-track {
-      background-color: $slider-color-background-disabled;
+      background-color: var(--slds-g-color-neutral-base-95, #{$slider-color-background-disabled});
     }
 
     &::-ms-thumb {
-      background-color: $slider-color-background-disabled;
+      background-color: var(--slds-g-color-neutral-base-95, #{$slider-color-background-disabled});
       cursor: default;
     }
 
     &::-ms-track {
-      background-color: $slider-color-background-disabled;
+      background-color: var(--slds-g-color-neutral-base-95, #{$slider-color-background-disabled});
       cursor: default;
     }
   }

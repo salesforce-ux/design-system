@@ -50,8 +50,8 @@
  */
 .slds-filters__item {
   padding: $spacing-small;
-  background: $color-background-button-default;
-  border: $border-width-thin solid $color-border-button-default;
+  background: var(--slds-g-color-neutral-base-100, #{$color-background-button-default});
+  border: $border-width-thin solid var(--slds-g-color-border-base-4, #{$color-border-button-default});
   border-radius: $border-radius-medium;
 
   /**
@@ -61,8 +61,8 @@
    * @modifier
    */
   &.slds-is-new {
-    background: $color-background-highlight;
-    color: $color-text-default;
+    background: var(--slds-g-color-palette-yellow-90, #{$color-background-highlight});
+    color: var(--slds-g-color-neutral-base-10, #{$color-text-default});
   }
 
   /**
@@ -72,7 +72,7 @@
    * @modifier
    */
   &.slds-has-error {
-    border-color: $color-border-error;
+    border-color: var(--slds-g-color-error-base-40, #{$color-border-error});
   }
 
   /**
@@ -82,7 +82,7 @@
    * @modifier
    */
   &.slds-is-locked {
-    background: $color-background;
+    background: var(--slds-g-color-neutral-base-95, #{$color-background});
   }
 
   + .slds-filters__item {
@@ -90,7 +90,7 @@
   }
 
   &:hover {
-    background: $color-background-button-default-hover;
+    background: var(--slds-g-color-neutral-base-95, #{$color-background-button-default-hover});
   }
 }
 
@@ -100,8 +100,8 @@
  * @restrict .slds-filters div
  */
 .slds-filters__group {
-  background: $color-background;
-  border: $border-width-thin solid $color-border;
+  background: var(--slds-g-color-neutral-base-95, #{$color-background});
+  border: $border-width-thin solid var(--slds-g-color-border-base-1, #{$color-border});
   border-radius: $border-radius-medium;
   padding: $spacing-small;
 }

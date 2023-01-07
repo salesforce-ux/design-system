@@ -33,7 +33,7 @@
 .slds-has-dividers--left > .slds-list__item,
 .slds-has-dividers_left > .slds-item,
 .slds-has-dividers--left > .slds-item {
-  @include dot-separator(left);
+  @include dot-separator($direction: left, $color: var(--slds-g-color-brand-base-20, #{$color-background-indicator-dot}));
 }
 
 /**
@@ -46,5 +46,5 @@
 .slds-has-dividers--right > .slds-list__item,
 .slds-has-dividers_right > .slds-item,
 .slds-has-dividers--right > .slds-item {
-  @include dot-separator(right);
+  @include dot-separator($direction: right, $color: var(--slds-g-color-brand-base-20, #{$color-background-indicator-dot}));
 }

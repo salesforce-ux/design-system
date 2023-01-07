@@ -28,16 +28,16 @@
 
   .slds-dropdown_nubbin-top,
   .slds-dropdown--nubbin-top {
-    @include nubbin(top, 'before');
-    @include nubbin(top);
+    @include nubbin(top, 'before', $color: var(--slds-g-color-neutral-base-100, #{$color-background-alt}));
+    @include nubbin(top, $color: var(--slds-g-color-neutral-base-100, #{$color-background-alt}));
     margin-top: ($nubbin-size-default * 0.5);
 
     &:before {
-      background: $color-background-alt;
+      background: var(--slds-g-color-neutral-base-100, #{$color-background-alt});
     }
 
     &:after {
-      background: $color-background-alt;
+      background: var(--slds-g-color-neutral-base-100, #{$color-background-alt});
       box-shadow: -1px -1px 0 0 rgba(0, 0, 0, 0.16);
       z-index: -1;
     }
@@ -79,7 +79,7 @@
         position: absolute;
         top: 50%;
         margin-top: (($square-icon-medium-content * 0.5) * -1);
-        fill: $color-text-icon-default;
+        fill: var(--slds-g-color-neutral-base-50, #{$color-text-icon-default});
       }
 
       .slds-icon_left,

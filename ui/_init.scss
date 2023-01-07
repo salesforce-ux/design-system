@@ -8,6 +8,7 @@
 // Reserved for mixins, functions, variables
 // Importing this file MUST NOT output any CSS
 @use "sass:math";
+@import 'styling-hooks';
 @import 'design-tokens';
 @import 'config';
 @import 'vendor/deprecate';

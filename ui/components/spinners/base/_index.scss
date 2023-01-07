@@ -101,7 +101,7 @@
 .slds-spinner__dot-b:after {
   content: '';
   position: absolute;
-  background: $color-background-spinner-dot;
+  background: var(--slds-g-color-neutral-base-50, #{$color-background-spinner-dot});
   border-radius: $border-radius-circle;
   animation-duration: 1000ms;
   animation-iteration-count: infinite;
@@ -214,7 +214,7 @@
   .slds-spinner__dot-b:before,
   .slds-spinner__dot-a:after,
   .slds-spinner__dot-b:after {
-    background-color: $color-background-alt;
+    background-color: var(--slds-g-color-neutral-base-100, #{$color-background-alt});
   }
 }
 

@@ -21,8 +21,8 @@
   @include warning-buttons;
 
   .slds-popover__header {
-    background-color: $color-background-warning;
-    color: $color-gray-12;
+    background-color: var(--slds-g-color-warning-base-60, #{$color-background-warning});
+    color: var(--slds-g-color-neutral-base-10, #{$color-gray-12});
 
     .slds-icon {
       fill: currentColor;
@@ -45,7 +45,7 @@
   &.slds-nubbin--right-top {
 
     &:before {
-      background-color: $color-background-warning;
+      background-color: var(--slds-g-color-warning-base-60, #{$color-background-warning});
     }
   }
 

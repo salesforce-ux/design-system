@@ -14,13 +14,13 @@
 .slds-page-header_vertical,
 .slds-page-header--vertical {
   padding: $spacing-small;
-  background: $page-header-color-background-alt;
+  background: var(--slds-g-color-neutral-base-100, #{$page-header-color-background-alt});
   border-bottom: 0;
 
   .slds-page-header__controls {
     padding-top: $spacing-x-small;
     margin-top: $spacing-x-small;
-    border-top: $border-width-thin solid $color-border;
+    border-top: $border-width-thin solid var(--slds-g-color-border-base-1, #{$color-border});
   }
 
   .slds-page-header__name-title {

@@ -24,7 +24,7 @@
         height: $line-height-tab;
         line-height: $line-height-tab;
         padding: 0 $spacing-large;
-        color: $color-text-weak;
+        color: var(--slds-g-color-neutral-base-30, #{$color-text-weak});
         background-clip: padding-box;
         border-left: $border-width-thin solid transparent;
         border-right: $border-width-thin solid transparent;
@@ -32,15 +32,15 @@
         &:hover,
         &:focus {
           text-decoration: none;
-          color: $color-text-link-hover;
-          border-color: $color-border;
+          color: var(--slds-g-link-color-hover, #{$color-text-link-hover});
+          border-color: var(--slds-g-color-border-base-4, #{$color-border});
         }
       }
       // scss-lint:disable SelectorDepth
       .slds-active > a {
-        background-color: $color-background-alt;
-        color: $color-text-link;
-        border-color: $color-border;
+        background-color: var(--slds-g-color-neutral-base-100, #{$color-background-alt});
+        color: var(--slds-g-link-color, #{$color-text-link});
+        border-color: var(--slds-g-color-border-base-4, #{$color-border});
 
         &:focus {
           text-decoration: underline;
@@ -49,8 +49,8 @@
     }
 
     > .slds-tabs__content {
-      background-color: $color-background-alt;
-      border: $border-width-thin solid $color-border-button-default;
+      background-color: var(--slds-g-color-neutral-base-100, #{$color-background-alt});
+      border: $border-width-thin solid var(--slds-g-color-border-base-4, #{$color-border-button-default});
       border-top: 0;
       border-radius: 0 0 $border-radius-medium $border-radius-medium;
       padding: $spacing-medium;

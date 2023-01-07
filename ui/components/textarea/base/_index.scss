@@ -20,9 +20,10 @@
   padding-right: var(--slds-c-textarea-spacing-inline-end, var(--sds-c-textarea-spacing-inline-end, $spacing-small));
   padding-bottom: var(--slds-c-textarea-spacing-block-end, var(--sds-c-textarea-spacing-block-end, $spacing-x-small));
   padding-left: var(--slds-c-textarea-spacing-inline-start, var(--sds-c-textarea-spacing-inline-start, $spacing-small));
-  background-color: var(--slds-c-textarea-color-background, var(--sds-c-textarea-color-background, $color-background-input));
+  background-color: var(--slds-c-textarea-color-background, var(--sds-c-textarea-color-background, var(--slds-g-color-neutral-base-100, #{$color-background-input})));
   color: var(--slds-c-textarea-text-color, var(--sds-c-textarea-text-color));
-  border: $border-width-thin solid var(--slds-c-textarea-color-border, var(--sds-c-textarea-color-border, $color-border-input));
+  border: $border-width-thin solid var(--slds-c-textarea-color-border,
+    var(--sds-c-textarea-color-border, var(--slds-g-color-border-base-4, #{$color-border-input})));
   border-radius: var(--slds-c-textarea-radius-border, var(--sds-c-textarea-radius-border, $border-radius-medium));
   box-shadow: var(--slds-c-textarea-shadow, var(--sds-c-textarea-shadow));
   resize: vertical;
@@ -37,15 +38,15 @@
   &:active {
     outline: 0;
     color: var(--slds-c-textarea-text-color-focus, var(--sds-c-textarea-text-color-focus));
-    background-color: var(--slds-c-textarea-color-background-focus, var(--sds-c-textarea-color-background-focus, $color-background-input-active));
-    border-color: var(--slds-c-textarea-color-border-focus, var(--sds-c-textarea-color-border-focus, $color-border-input-active));
+    background-color: var(--slds-c-textarea-color-background-focus, var(--sds-c-textarea-color-background-focus, var(--slds-g-color-neutral-base-100, #{$color-background-input-active})));
+    border-color: var(--slds-c-textarea-color-border-focus, var(--sds-c-textarea-color-border-focus, var(--slds-g-color-brand-base-60, #{$color-border-input-active})));
     box-shadow: var(--slds-c-textarea-shadow-focus, var(--sds-c-textarea-shadow-focus, $shadow-button-focus));
   }
 
   &[disabled],
   &.slds-is-disabled {
-    background-color: $color-background-input-disabled;
-    border-color: $color-border-input-disabled;
+    background-color: var(--slds-g-color-neutral-base-80, #{$color-background-input-disabled});
+    border-color: var(--slds-g-color-border-base-1, #{$color-border-input-disabled});
     color: inherit;
     cursor: not-allowed;
     user-select: none;
@@ -59,13 +60,13 @@
 
 .slds-has-error .slds-textarea {
   /*! @css-var-fallback background-color */
-  --slds-c-textarea-color-background: #{$color-background-input};
+  --slds-c-textarea-color-background: var(--slds-g-color-neutral-base-100, #{$color-background-input});
 
   /*! @css-var-fallback border-color */
-  --slds-c-textarea-color-border: #{$color-border-error};
+  --slds-c-textarea-color-border: var(--slds-g-color-error-base-40, #{$color-border-error});
 
   /*! @css-var-fallback box-shadow */
-  --slds-c-textarea-shadow: #{$color-border-error} 0 0 0 #{$border-width-thin} inset;
+  --slds-c-textarea-shadow: var(--slds-g-color-error-base-40, #{$color-border-error}) 0 0 0 #{$border-width-thin} inset;
   background-clip: padding-box;
 
   &:focus,
@@ -73,9 +74,9 @@
     --slds-c-textarea-text-color-focus: var(--slds-c-textarea-text-color-error-focus);
 
     /*! @css-var-fallback background-color */
-    --slds-c-textarea-color-background-focus: var(--slds-c-textarea-color-background-error-focus, #{$color-background-input-active});
+    --slds-c-textarea-color-background-focus: var(--slds-c-textarea-color-background-error-focus, var(--slds-g-color-neutral-base-100, #{$color-background-input-active}));
 
     /*! @css-var-fallback box-shadow */
-    --slds-c-textarea-shadow-focus: #{$color-border-error} 0 0 0 #{$border-width-thin} inset, #{$shadow-button-focus};
+    --slds-c-textarea-shadow-focus: var(--slds-g-color-error-base-40, #{$color-border-error}) 0 0 0 #{$border-width-thin} inset, #{$shadow-button-focus};
   }
 }

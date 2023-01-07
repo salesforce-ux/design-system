@@ -13,8 +13,8 @@
 .slds-checkbox_button-group,
 .slds-checkbox--button-group {
   display: inline-flex;
-  background-color: $button-color-background-primary;
-  border: $border-width-thin solid $color-border;
+  background-color: var(--slds-g-color-neutral-base-100, #{$button-color-background-primary});
+  border: $border-width-thin solid var(--slds-g-color-border-base-4, #{$color-border});
   border-radius: $border-radius-medium;
 }
 
@@ -42,13 +42,13 @@
     text-align: center;
     vertical-align: middle;
     position: relative;
-    background-color: $color-background-button-default;
+    background-color: var(--slds-g-color-neutral-base-100, #{$color-background-button-default});
     transition: border $duration-quickly linear, background-color $duration-quickly linear;
 
     &:hover,
     &:focus {
       cursor: pointer;
-      background-color: $color-background-button-default-hover;
+      background-color: var(--slds-g-color-neutral-base-95, #{$color-background-button-default-hover});
     }
   }
 
@@ -67,7 +67,7 @@
   // after the first button
   + .slds-checkbox_button,
   + .slds-checkbox--button {
-    border-left: $border-width-thin solid $color-border;
+    border-left: $border-width-thin solid var(--slds-g-color-border-base-4, #{$color-border});
     border-radius: 0;
     margin: 0;
   }
@@ -107,7 +107,7 @@
     &:checked + .slds-checkbox_button__label,
     &:checked + .slds-checkbox--button__label {
       background-color: $brand-accessible;
-      color: $color-text-button-brand;
+      color: var(--slds-g-color-neutral-base-100, #{$color-text-button-brand});
 
       // Need something stronger when the input is checked
       &:hover,
@@ -134,8 +134,8 @@
     &[disabled] ~ .slds-checkbox--faux,
     &[disabled] + .slds-checkbox_button__label,
     &[disabled] + .slds-checkbox--button__label {
-      background-color: $color-background-button-default-disabled;
-      color: $color-text-button-default-disabled;
+      background-color: var(--slds-g-color-neutral-base-100, #{$color-background-button-default-disabled});
+      color: var(--slds-g-color-neutral-base-80, #{$color-text-button-default-disabled});
       cursor: default;
     }
 
@@ -145,8 +145,8 @@
     &[disabled]:checked ~ .slds-checkbox--faux,
     &[disabled]:checked + .slds-checkbox_button__label,
     &[disabled]:checked + .slds-checkbox--button__label {
-      background-color: $brand-disabled;
-      color: $color-text-button-brand-disabled;
+      background-color: var(--slds-g-color-neutral-base-80, #{$brand-disabled});
+      color: var(--slds-g-color-neutral-base-100, #{$color-text-button-brand-disabled});
       cursor: default;
     }
   }

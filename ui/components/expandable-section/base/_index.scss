@@ -67,7 +67,7 @@
 .slds-section__title-action {
   display: flex;
   align-items: center;
-  background: $color-background;
+  background: var(--slds-g-color-neutral-base-95, #{$color-background});
   cursor: pointer;
   width: 100%;
   text-align: left;
@@ -78,7 +78,7 @@
   &:hover,
   &:focus,
   &:active {
-    background: $color-background-button-default-active;
+    background: var(--slds-g-color-neutral-base-95, #{$color-background-button-default-active});
     color: inherit;
   }
 }
@@ -116,5 +116,5 @@
 .slds-section-title--divider {
   @include text-heading--label;
   padding: $spacing-x-small $spacing-medium;
-  background: $color-background;
+  background: var(--slds-g-color-neutral-base-95, #{$color-background});
 }

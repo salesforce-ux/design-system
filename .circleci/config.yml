@@ -4,21 +4,11 @@
 #
 version: 2.1
 
-parameters:
-  run_labeled_workflow:
-    type: boolean
-    default: false
-  triggering_label:
-    type: string
-    default: ""
-  vrt_mode:
-    type: string
-    default: ""
-
 orbs:
   node: circleci/node@4.7.0
   heroku: circleci/heroku@1.2.2
   browser-tools: circleci/browser-tools@1.1.3
+  gh: circleci/github-cli@2.1.0
 
 executors:
   slds-executor:
@@ -91,7 +81,6 @@ commands:
             source $BASH_ENV
             echo $HEROKU_APP_NAME > workspace/heroku-app-name.txt
             echo $HEROKU_RELEASE_STORYBOOK_APP_NAME > workspace/heroku-release-storybook-app-name.txt
-
       - run: printenv | sort
 
       - run:
@@ -105,58 +94,6 @@ commands:
             cat workspace/heroku-app-name.txt
             echo "=============================="
             echo
-
-  prepare-vrt:
-    description: 'Prepare VRT environment'
-    steps:
-      - checkout
-
-      - attach_workspace:
-          at: workspace
-
-      - node/install-npm
-      - vrt-set-env-vars
-      - add-applitools
-      - node/install-packages
-      - browser-tools/install-chrome
-      - browser-tools/install-chromedriver
-
-      - run:
-          name: 'Prepare Storybook'
-          command: 'npm run storybook:prepare'
-
-  vrt-set-env-vars:
-    description: 'Set VRT environment variables'
-    steps:
-      - set-github-pr-number
-      - run: printenv | sort
-
-      - run:
-          name: 'Set environment variables'
-          command: |
-            echo 'export APPLITOOLS_BATCH_ID=${CIRCLE_SHA1}' >> $BASH_ENV
-            echo 'export APPLITOOLS_BATCH_NAME="PR #${PR_NUMBER} (${CIRCLE_USERNAME})"' >> $BASH_ENV
-            echo 'export APPLITOOLS_DONT_CLOSE_BATCHES="true"' >> $BASH_ENV
-            echo 'export APPLITOOLS_BATCH_NOTIFY="true"' >> $BASH_ENV
-            echo 'export REVIEW_APP_NAME=slds-storybook-pr-${PR_NUMBER}' >> $BASH_ENV
-
-  vrt-close-batch:
-    description: 'Notify Applitools that tests have completed'
-    steps:
-      - run:
-          name: 'Applitools: close batch'
-          command: |
-            export GITHUB_SERVER=github.com
-            url="https://salesforceuxeyesapi.applitools.com/api/externals/github/servers/${GITHUB_SERVER}/commit/${CIRCLE_SHA1}/complete?apiKey=${APPLITOOLS_API_KEY}"
-            curl -X POST $url -H "Content-Type: application/json" --data "{'serverId': '${GITHUB_SERVER}', 'commitSha': '${CIRCLE_SHA1}'}" -v -L
-
-  add-applitools:
-    description: 'Add Applitools eyes-storybook module'
-    steps:
-      - run:
-          name: Add Applitools eyes-storybook module
-          command: 'npm i @applitools/eyes-storybook@latest --save-dev --package-lock-only'
-
   get-pr-number:
     description: 'Get Github pull-request number'
     steps:
@@ -178,7 +115,6 @@ commands:
             cat gh-pull-data.json
             echo "---------------------------------------"
             cat gh-pull-data.json | jq -r '.number' > workspace/gh-pr-num.txt && cat workspace/gh-pr-num.txt
-
       - run:
           name: Verify Github pull-request number
           command: |
@@ -193,35 +129,6 @@ commands:
                 exit 1
               fi
             fi
-
-  install-gh-cli:
-    description: 'Install Github CLI'
-    steps:
-      - run:
-          name: Install Github CLI
-          command: |
-            sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-key C99B11DEB97541F0
-            sudo apt-add-repository https://cli.github.com/packages
-            sudo apt update
-            sudo apt install gh
-
-  launch-static-storybook:
-    description: 'Launch local static Storybook server'
-    steps:
-      - attach_workspace:
-          at: workspace
-      - run:
-          name: Decompress Storybook archive
-          command: 'tar -xvf workspace/storybook.tar.gz'
-      - run:
-          name: Start server
-          command: 'npx http-server .www'
-          background: true
-      - run:
-          name: Poll until server is up
-          shell: /bin/sh
-          command: 'curl --connect-timeout 2 --max-time 2 --retry 50 --retry-delay 0 --retry-max-time 300 --retry-connrefused --ipv4 -q "http://localhost:8080"'
-
 jobs:
   # Init bits & bobs subsequent jobs require
   init:
@@ -231,14 +138,14 @@ jobs:
     steps:
       - checkout
       - run: mkdir -p workspace
-      - install-gh-cli
+      - gh/install
       - get-pr-number
 
       - run:
           name: Retrieve Github deployments
           command: |
             gh api /repos/salesforce-ux/design-system-internal/deployments --field ref=${CIRCLE_SHA1} --method GET | jq "map({ status: .statuses_url, url: .payload.web_url})" > workspace/gh-deployments.json
-
+            cat workspace/gh-deployments.json
       - run:
           name: Set Github deployments to "in progress"
           command: |
@@ -246,7 +153,6 @@ jobs:
               export STATUS_URL=$(echo ${row} | base64 --decode | jq -r ".status" | sed 's/https:\/\/api.github.com//')
               gh api ${STATUS_URL} -f state=in_progress -H "Accept: application/vnd.github.flash-preview+json"
             done
-
       - persist_to_workspace:
           root: workspace
           paths:
@@ -325,14 +231,14 @@ jobs:
       - run:
           name: 'Do build-dist'
           command: 'npm run build-dist'
-
+          environment:
+            NODE_OPTIONS: --openssl-legacy-provider
       ####
       - run:
           name: Compress .dist
           command: |
             tar -cvf workspace/design-system-dist.tar .dist/
             cd .dist && zip -r dist . && mv dist.zip ../workspace/ && cd ..
-
       - persist_to_workspace:
           root: workspace
           paths:
@@ -350,16 +256,14 @@ jobs:
       - attach_workspace:
           at: workspace
 
-      - install-gh-cli
+      - gh/install
 
       - run:
           name: 'Github: attach artifact to release'
           command: |
             export VERSION_FROM_TAG=$([[ ${CIRCLE_TAG} =~ ^v.* ]] && echo ${CIRCLE_TAG:1:20} || echo ${CIRCLE_TAG})
             export VERSION_FROM_PACKAGE=$(cat package.json | jq -r .version)
-
             gh release view v${VERSION_FROM_TAG} | grep v${VERSION_FROM_TAG}
-
             if [ $? -eq 0 ]; then
               cp workspace/dist.zip workspace/slds-v${VERSION_FROM_TAG}.zip
               echo "=============================="
@@ -369,278 +273,17 @@ jobs:
               echo "=============================="
               echo "» ERROR: release v${VERSION_FROM_TAG} not found on Github"
             fi
-
       - run:
           name: Trigger database update via API
           command: |
-            export VERSION_FROM_TAG=$([[ ${CIRCLE_TAG} =~ ^v.* ]] && echo ${CIRCLE_TAG:1:20} || echo ${CIRCLE_TAG})
             export SALESFORCE_VERSION=$(cat package.json | jq -r .slds.id)
-            export VERSION_FROM_PACKAGE=$(cat package.json | jq -r .version)
             curl --location --request PATCH 'https://api.lightningdesignsystem.com/v1/release' \
             --header 'Content-Type: application/json' \
             --header 'Authorization: Bearer '"$DSE_API_RELEASE_TOKEN"'' \
             --data-raw '{
-                "version":"'"$VERSION_FROM_TAG"'",
+                "version":"'"$CIRCLE_TAG"'",
                 "salesforce_version": "'"$SALESFORCE_VERSION"'"
             }'
-
-  # Build static Storybook
-  build-storybook:
-    executor: slds-executor
-    resource_class: medium+
-
-    steps:
-      - checkout
-      - attach_workspace:
-          at: workspace
-      - copy-tokens-from-workspace
-      - node/install-npm
-      - node/install-packages:
-          # version cache here to remove conflict between this job and other concurrent jobs (init, prepare, etc).
-          cache-version: standard
-
-      - run:
-          name: Build static Storybook
-          command: 'npm run storybook:build'
-
-      - run:
-          name: Archive static Storybook
-          command: 'tar -czvf workspace/storybook.tar.gz .www/ Procfile config/nginx.conf.erb heroku-start.sh app.json'
-
-      - persist_to_workspace:
-          root: workspace
-          paths:
-            - storybook.tar.gz
-
-  # Publish Storybook to Heroku review app
-  publish-storybook:
-    executor: slds-executor
-    resource_class: small
-
-    steps:
-      - attach_workspace:
-          at: workspace
-
-      - run:
-          name: 'Only proceed if we have a Storybook app to update'
-          command: |
-            export HEROKU_RELEASE_STORYBOOK_APP_NAME=$(cat workspace/heroku-release-storybook-app-name.txt)
-            if [[ ${HEROKU_RELEASE_STORYBOOK_APP_NAME} == "false" ]]; then
-            circleci step halt
-            fi
-
-      - vrt-set-env-vars
-
-      # Heroku
-      - heroku/install
-      - run:
-          name: 'Install Heroku Build CLI plugin'
-          command: 'heroku plugins:install heroku-builds'
-
-      - run:
-          name: 'Deploy to Heroku'
-          command: |
-            export HEROKU_RELEASE_STORYBOOK_APP_NAME=$(cat workspace/heroku-release-storybook-app-name.txt)
-            if [[ ${HEROKU_RELEASE_STORYBOOK_APP_NAME} != "false" &&  ${PR_NUMBER} == "" ]]; then
-            export PUBLISH_STORYBOOK_TO=${HEROKU_RELEASE_STORYBOOK_APP_NAME}
-            else
-            export PUBLISH_STORYBOOK_TO=${REVIEW_APP_NAME}
-            fi
-            echo "=============================="
-            echo ${PUBLISH_STORYBOOK_TO}
-            echo "=============================="
-            heroku buildpacks -a ${PUBLISH_STORYBOOK_TO} | grep "https://github.com/salesforce-ux/heroku-buildpack-nginx.git#dse" || heroku buildpacks:set https://github.com/salesforce-ux/heroku-buildpack-nginx.git#dse -a ${PUBLISH_STORYBOOK_TO}
-            heroku builds:create --source-tar workspace/storybook.tar.gz -a ${PUBLISH_STORYBOOK_TO}
-
-      - install-gh-cli
-      - run:
-          name: Set Github deployments to "success"
-          command: |
-            for row in $(jq -r '.[] | select(.url | contains("storybook")) | @base64' workspace/gh-deployments.json); do
-              export STATUS_URL=$(echo ${row} | base64 --decode | jq -r ".status" | sed 's/https:\/\/api.github.com//')
-              export SITE_URL=$(echo ${row} | base64 --decode | jq -r ".url")
-              gh api ${STATUS_URL} -f state=success -f environment_url=${SITE_URL} -H "Accept: application/vnd.github.ant-man-preview+json"
-            done
-
-  # Build & publish SLDS site (review app or upcoming/core-main/core-patch)
-  publish-site:
-    executor: slds-executor
-    resource_class: medium
-
-    steps:
-      - add_ssh_keys:
-          fingerprints:
-            - "20:aa:56:b6:f4:c9:f7:b9:9e:04:24:61:0c:b0:80:65"
-
-      - run:
-          name: Checkout design-system-site
-          command: |
-            mkdir -p ~/.ssh
-            ssh-keyscan github.com >> ~/.ssh/known_hosts
-            git clone git@github.com:salesforce-ux/design-system-site.git .
-
-      - attach_workspace:
-          at: workspace
-
-      - run:
-          name: 'Decompress SLDS .dist'
-          command: |
-            mkdir -p .slds
-            tar -xvf workspace/design-system-dist.tar --directory .slds
-
-      - node/install-npm
-      - node/install-packages:
-          # version cache here to remove conflict between this job and other concurrent jobs (init, prepare, etc).
-          cache-version: standard
-
-      # Heroku
-      - heroku/install
-      - run:
-          name: 'Install Heroku Build CLI plugin'
-          command: 'heroku plugins:install heroku-builds'
-
-      - run:
-          name: 'Build static site'
-          command: 'npm run build'
-          environment:
-            SLDS__FRAMEWORK__PATH: .slds/.dist/
-
-      - run:
-          name: 'Generate site tarball'
-          command: |
-            tar -czvf site-next.tar.gz .www/ Procfile config/nginx.conf.erb heroku-start.sh app.json
-
-      - run:
-          name: 'Deploy to Heroku app'
-          command: |
-            export HEROKU_APP_NAME=$(cat workspace/heroku-app-name.txt)
-            echo "=============================="
-            echo ${HEROKU_APP_NAME}
-            echo "=============================="
-            heroku buildpacks -a ${HEROKU_APP_NAME} | grep "https://github.com/salesforce-ux/heroku-buildpack-nginx.git#dse" || heroku buildpacks:set https://github.com/salesforce-ux/heroku-buildpack-nginx.git#dse -a ${HEROKU_APP_NAME}
-            heroku builds:create --source-tar site-next.tar.gz -a ${HEROKU_APP_NAME}
-
-      - install-gh-cli
-      - run:
-          name: Set Github deployments to "success"
-          command: |
-            for row in $(jq -r '.[] | select(.url | contains("review-site")) | @base64' workspace/gh-deployments.json); do
-              export STATUS_URL=$(echo ${row} | base64 --decode | jq -r ".status" | sed 's/https:\/\/api.github.com//')
-              export SITE_URL=$(echo ${row} | base64 --decode | jq -r ".url")
-              gh api ${STATUS_URL} -f state=success -f environment_url=${SITE_URL} -H "Accept: application/vnd.github.ant-man-preview+json"
-            done
-
-  vrt-init:
-    executor: slds-executor
-    resource_class: small
-
-    steps:
-      - checkout
-      - run: mkdir -p workspace
-      - install-gh-cli
-      - get-pr-number
-
-      - persist_to_workspace:
-          root: workspace
-          paths:
-            - gh-pr-num.txt
-
-  vrt-desktop:
-    executor: slds-executor
-    resource_class: large
-
-    steps:
-      - prepare-vrt
-
-      # run Applitools tests!
-      - run:
-          name: Applitools
-          command: 'VRT_MODE=<< pipeline.parameters.vrt_mode >> npx eyes-storybook' # -u https://${REVIEW_APP_NAME}.herokuapp.com
-          no_output_timeout: 20m
-
-  vrt-mobile:
-    executor: slds-executor
-    resource_class: large
-
-    steps:
-      - prepare-vrt
-
-      # run Applitools tests!
-      - run:
-          name: Applitools (mobile)
-          command: 'STORYBOOK_STORIES_TYPE=mobile npx eyes-storybook --conf applitools.mobile.config.js' #  -u https://${REVIEW_APP_NAME}.herokuapp.com
-          no_output_timeout: 20m
-
-  vrt-legacy:
-    executor: slds-executor
-    resource_class: large
-
-    steps:
-      - prepare-vrt
-
-      # run Applitools tests!
-      - run:
-          name: Applitools (legacy)
-          command: 'STORYBOOK_SLDS_VERSION=legacy npx eyes-storybook --conf applitools.legacy.config.js' # -u https://${REVIEW_APP_NAME}.herokuapp.com
-          no_output_timeout: 20m
-
-  vrt-close:
-    executor: slds-executor
-    resource_class: small
-
-    steps:
-      - vrt-close-batch
-
-  a11y-testing:
-    docker:
-      - image: mcr.microsoft.com/playwright:focal
-    environment:
-      NODE_ENV: development
-      A11Y_SERVER: 'http://localhost:9002'
-    parallelism: 8
-    resource_class: medium+
-
-    steps:
-      - checkout
-      - node/install-packages:
-          # version cache here to remove conflict between this job and other concurrent jobs (init, prepare, etc).
-          cache-version: a11y
-
-      - run:
-          name: 'Build task'
-          command: |
-            npm run build
-            npm run storybook:build
-
-      - run:
-          name: 'Start web server'
-          command: 'npm run server:bg:start'
-
-      - run:
-          name: Generate test files
-          command: 'npx wait-on $A11Y_SERVER && npm run test:a11y:generate-tests'
-
-      - run:
-          name: 'Run a11y tests'
-          command: |
-            npx wait-on $A11Y_SERVER && curl -sL -w "======================\\nWait-on return code: %{http_code}\\n======================\\n\\n" "$A11Y_SERVER" -o /dev/null
-            mkdir -p ./__tests__/a11y/xml/
-            npx ava --tap ./__tests__/a11y/__testfiles__/ava.a11y.*.spec.js | npx tap-xunit --package="SLDS.a11y" > ./__tests__/a11y/xml/axe-results-$CIRCLE_NODE_INDEX.xml
-          no_output_timeout: 20m
-
-      - run:
-          name: Stop server
-          command: 'npm run server:bg:delete'
-
-      - store_test_results:
-            path: __tests__/a11y/xml/
-      - store_artifacts:
-          path: __tests__/a11y/xml/
-          destination: a11y/xml
-      - store_artifacts:
-          path: __tests__/a11y/results/
-          destination: a11y
-
 
 workflows:
   version: 2
@@ -658,29 +301,10 @@ workflows:
               only: /.*/
           requires:
             - init
-      - build-storybook:
-          context: ux-eng-keys
-          # do not run for future version tags (X.X.X-*)
-          filters:
-            tags:
-              ignore: /^v\d+\.\d+\.\d+-.+$/
-          requires:
-            - prepare
-      - publish-storybook:
-          context: ux-eng-keys
-          requires:
-            - build-storybook
       - framework-build:
           context: ux-eng-keys
           requires:
             - prepare
-          filters:
-            tags:
-              only: /.*/
-      - publish-site:
-          context: ux-eng-keys
-          requires:
-            - framework-build
           filters:
             tags:
               only: /.*/
@@ -694,123 +318,3 @@ workflows:
               only: /^v\d+\.\d+\.\d+.*/
             branches:
               ignore: /.*/
-      - a11y-testing:
-          context: ux-eng-keys
-          requires:
-            # this requirement is to prevent race conditions, but doesn't depend on 'prepare'
-            - prepare
-
-
-  CI_scheduled:
-    triggers:
-      - schedule:
-          cron: "0 0 * * *"
-          filters:
-            branches:
-              only:
-                # filtering only for this integration branch, for now
-                - 236-spring-22
-    jobs:
-      - vrt-init:
-          context: ux-eng-keys
-          filters:
-            tags:
-              only: /.*/
-      - vrt-desktop:
-          context: ux-eng-keys
-          # do not run for main version branches
-          filters:
-            branches:
-              ignore: /^\d{3}-(summer|spring|winter)-\d{2}$/
-          requires:
-            - vrt-init
-      - vrt-mobile:
-          context: ux-eng-keys
-          # do not run for main version branches
-          filters:
-            branches:
-              ignore: /^\d{3}-(summer|spring|winter)-\d{2}$/
-          requires:
-            - vrt-init
-      - vrt-legacy:
-          context: ux-eng-keys
-          # do not run for main version branches
-          filters:
-            branches:
-              ignore: /^\d{3}-(summer|spring|winter)-\d{2}$/
-          requires:
-            - vrt-init
-      - vrt-close:
-          context: ux-eng-keys
-          requires:
-            - vrt-desktop
-            - vrt-mobile
-            - vrt-legacy
-
-  # This runs when a PR is labeled: vrt:chrome-ready
-  CI_VRT_chrome:
-    when:
-      and:
-        - << pipeline.parameters.run_labeled_workflow >>
-        - equal: [ chrome, << pipeline.parameters.vrt_mode >>]
-    jobs:
-      - vrt-init:
-          context: ux-eng-keys
-          filters:
-            tags:
-              only: /.*/
-      - vrt-desktop:
-          context: ux-eng-keys
-          # do not run for main version branches
-          filters:
-            branches:
-              ignore: /^\d{3}-(summer|spring|winter)-\d{2}$/
-          requires:
-            - vrt-init
-      - vrt-close:
-          context: ux-eng-keys
-          requires:
-            - vrt-desktop
-
-  # This runs when a PR is labeled: vrt:full-ready
-  CI_VRT_full:
-    when:
-      and:
-        - << pipeline.parameters.run_labeled_workflow >>
-        - equal: [ full, << pipeline.parameters.vrt_mode >>]
-    jobs:
-      - vrt-init:
-          context: ux-eng-keys
-          filters:
-            tags:
-              only: /.*/
-      - vrt-desktop:
-          context: ux-eng-keys
-          # do not run for main version branches
-          filters:
-            branches:
-              ignore: /^\d{3}-(summer|spring|winter)-\d{2}$/
-          requires:
-            - vrt-init
-      - vrt-mobile:
-          context: ux-eng-keys
-          # do not run for main version branches
-          filters:
-            branches:
-              ignore: /^\d{3}-(summer|spring|winter)-\d{2}$/
-          requires:
-            - vrt-init
-      - vrt-legacy:
-          context: ux-eng-keys
-          # do not run for main version branches
-          filters:
-            branches:
-              ignore: /^\d{3}-(summer|spring|winter)-\d{2}$/
-          requires:
-            - vrt-init
-      - vrt-close:
-          context: ux-eng-keys
-          requires:
-            - vrt-desktop
-            - vrt-mobile
-            - vrt-legacy

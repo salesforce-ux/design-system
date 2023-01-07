@@ -27,19 +27,19 @@
     .slds-r1,
     .slds-r2,
     .slds-r3 {
-      background-color: #418fde;
+      background-color: var(--slds-g-color-brand-base-50,#418fde);
     }
 
     .slds-r4,
     .slds-r5,
     .slds-r7 {
-      background-color: #ed8b00;
+      background-color: var(--slds-g-color-warning-base-70,#ed8b00);
     }
 
     .slds-r6,
     .slds-r8,
     .slds-r9 {
-      background-color: #ffb60f;
+      background-color: var(--slds-g-color-palette-yellow-80,#ffb60f);
     }
 
     .slds-r2,
@@ -82,7 +82,7 @@
 
   [class*="slds-r"] {
     @include square(rem(5px));
-    background-color: $color-background-icon-waffle;
+    background-color: var(--slds-g-color-neutral-base-50, #{$color-background-icon-waffle});
     display: inline-block;
     position: absolute;
     border-radius: $border-radius-circle;

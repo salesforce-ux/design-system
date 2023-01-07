@@ -9,7 +9,7 @@
  * @restrict .slds-nav-vertical__action
  */
 .slds-nav-vertical__action_overflow {
-  color: $color-text-icon-default;
+  color: var(--slds-g-color-neutral-base-50, #{$color-text-icon-default});
 
   &[aria-expanded="true"] .slds-button__icon {
     transform: rotate(90deg);
@@ -27,5 +27,5 @@
  * @restrict .slds-nav-vertical__action_overflow span
  */
 .slds-nav-vertical__action-text {
-  color: $color-text-link;
+  color: var(--slds-g-link-color, #{$color-text-link});
 }

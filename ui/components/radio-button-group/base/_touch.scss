@@ -10,7 +10,7 @@
   .slds-radio_button + .slds-radio_button,
   .slds-radio--button + .slds-radio--button {
     border-left: 0;
-    border-top: $border-width-thin solid $color-border;
+    border-top: $border-width-thin solid var(--slds-g-color-border-base-4, #{$color-border});
   }
 
   .slds-radio_button:first-child > .slds-radio_button__label,

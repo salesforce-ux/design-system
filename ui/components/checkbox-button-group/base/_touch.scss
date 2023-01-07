@@ -10,7 +10,7 @@
   .slds-checkbox_button + .slds-checkbox_button,
   .slds-checkbox--button + .slds-checkbox--button {
     border-left: 0;
-    border-top: $border-width-thin solid $color-border;
+    border-top: $border-width-thin solid var(--slds-g-color-border-base-4, #{$color-border});
   }
 
   .slds-checkbox_button:first-child > .slds-checkbox_button__label,

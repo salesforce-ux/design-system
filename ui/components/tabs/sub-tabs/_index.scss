@@ -55,7 +55,8 @@
    * @restrict .slds-sub-tabs__item
    */
   &.slds-has-success {
-    @include sub-tab-notification-before($color-background-success-dark, $color-background-success-darker);
+    @include sub-tab-notification-before(var(--slds-g-color-success-base-50, #{$color-background-success-dark}),
+      var(--slds-g-color-success-base-40, #{$color-background-success-darker}));
 
     &:before {
       animation-name: success-pulse;
@@ -69,7 +70,8 @@
    * @restrict .slds-sub-tabs__item
    */
   &.slds-has-error {
-    @include sub-tab-notification-before($color-background-destructive, $color-background-destructive-active);
+    @include sub-tab-notification-before(var(--slds-g-color-error-base-40, #{$color-background-destructive}),
+      var(--slds-g-color-error-base-30, #{$color-background-destructive-active}));
 
     &:before {
       animation-name: error-pulse;
@@ -78,14 +80,14 @@
 
   &.slds-has-success,
   &.slds-has-error {
-    color: $color-gray-1;
+    color: var(--slds-g-color-neutral-base-100, #{$color-gray-1});
 
     .slds-indicator_unread {
-      background-color: $color-gray-1;
+      background-color: var(--slds-g-color-neutral-base-100, #{$color-gray-1});
     }
 
     .slds-indicator_unsaved {
-      color: $color-gray-1;
+      color: var(--slds-g-color-neutral-base-100, #{$color-gray-1});
     }
   }
 
@@ -96,7 +98,7 @@
    * @restrict .slds-sub-tabs__item
    */
   &.slds-has-warning {
-    @include sub-tab-notification-before($color-background-warning, $color-background-warning-dark);
+    @include sub-tab-notification-before(var(--slds-g-color-warning-base-60, #{$color-background-warning}), var(--slds-g-color-warning-base-60, #{$color-background-warning-dark}));
 
     &:before {
       animation-name: warning-pulse;

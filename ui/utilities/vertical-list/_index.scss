@@ -255,7 +255,7 @@
   */
 .slds-has-divider_right,
 .slds-has-divider--right {
-  @include dot-separator(right);
+  @include dot-separator($direction: right, $color: var(--slds-g-color-brand-base-20, #{$color-background-indicator-dot}));
 }
 
 /**
@@ -285,5 +285,5 @@
   */
 .slds-has-divider_left,
 .slds-has-divider--left {
-  @include dot-separator(left);
+  @include dot-separator($direction: left, $color: var(--slds-g-color-brand-base-20, #{$color-background-indicator-dot}));
 }

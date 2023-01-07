@@ -63,7 +63,7 @@
   .slds-wizard__marker {
     @include square($square-icon-small-boundary);
     border-radius: $border-radius-circle;
-    background: $color-background-dark;
+    background: var(--slds-g-color-neutral-base-95, #{$color-background-dark});
     display: inline-block;
     vertical-align: middle;
     z-index: 1;
@@ -83,7 +83,7 @@
     display: block;
     width: 100%;
     z-index: -1;
-    background: $color-background-dark;
+    background: var(--slds-g-color-neutral-base-95, #{$color-background-dark});
   }
 
   .slds-wizard__progress-bar {

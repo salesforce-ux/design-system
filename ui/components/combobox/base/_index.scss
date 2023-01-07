@@ -33,7 +33,7 @@
 
     .slds-combobox__input-value,
     .slds-combobox__input-value:focus {
-      box-shadow: 0 0 0 2px $color-gray-1 inset, 0 0 0 3px $color-border inset;
+      box-shadow: 0 0 0 2px var(--slds-g-color-neutral-base-100, #{$color-gray-1}) inset, 0 0 0 3px var(--slds-g-color-border-base-1, #{$color-border}) inset;
     }
   }
 
@@ -84,20 +84,20 @@
 [role="combobox"] input[readonly],
 input[readonly][role="combobox"] {
   padding-left: $spacing-small;
-  border-color: $color-border-input;
-  background-color: $color-background-input;
+  border-color: var(--slds-g-color-border-base-4, #{$color-border-input});
+  background-color: var(--slds-g-color-neutral-base-100, #{$color-background-input});
   font-size: inherit;
   font-weight: $font-weight-regular;
 
   &:focus,
   &.slds-has-focus {
-    border-color: $color-border-brand-primary;
+    border-color: var(--slds-g-color-brand-base-60, #{$color-border-brand-primary});
     box-shadow: $shadow-button-focus;
   }
 
   &[disabled] {
-    background-color: $color-background-input-disabled;
-    border-color: $color-border-input-disabled;
+    background-color: var(--slds-g-color-neutral-base-80, #{$color-background-input-disabled});
+    border-color: var(--slds-g-color-border-base-1, #{$color-border-input-disabled});
   }
 }
 
@@ -186,7 +186,7 @@ input[readonly][role="combobox"] {
   }
 
   &[aria-disabled="true"] {
-    color: $color-text-button-default-disabled;
+    color: var(--slds-g-color-neutral-base-50, #{$color-text-button-default-disabled});
   }
 }
 
@@ -210,7 +210,7 @@ input[readonly][role="combobox"] {
   align-content: center;
   align-items: center;
   justify-content: center;
-  color: $color-text-icon-default;
+  color: var(--slds-g-color-neutral-base-50, #{$color-text-icon-default});
 }
 
 .slds-listbox__option[aria-disabled="true"] .slds-listbox__option-icon {
@@ -236,7 +236,7 @@ input[readonly][role="combobox"] {
   .slds-listbox__option:focus,
   .slds-listbox__option:hover,
   .slds-listbox__option.slds-has-focus {
-    background-color: $color-background-row-hover;
+    background-color: var(--slds-g-color-neutral-base-95, #{$color-background-row-hover});
     text-decoration: none;
   }
 
@@ -305,7 +305,7 @@ input[readonly][role="combobox"] {
 }
 
 .slds-input_faux:not(.slds-combobox__input-value) {
-  color: $color-text-placeholder;
+  color: var(--slds-g-color-neutral-base-50, #{$color-text-placeholder});
 }
 
 /**
@@ -334,7 +334,7 @@ input[readonly][role="combobox"] {
  * @restrict .slds-combobox_container svg
  */
 .slds-combobox_container__icon {
-  color: $color-text-input-icon;
+  color: var(--slds-g-color-neutral-base-50, #{$color-text-input-icon});
 }
 
 /**
@@ -388,7 +388,7 @@ input[readonly][role="combobox"] {
 .slds-listbox__option-meta {
   display: block;
   margin-top: ($spacing-xx-small * -1); // Offset $line-height-text from result-text
-  color: $color-text-label;
+  color: var(--slds-g-color-neutral-base-30, #{$color-text-label});
 }
 
 .slds-listbox__option[aria-disabled="true"] .slds-listbox__option-meta {
@@ -413,7 +413,7 @@ input[readonly][role="combobox"] {
     width: rem(120px);
     transition: width 80ms linear;
     font-size: $font-size-2;
-    color: $color-text-placeholder;
+    color: var(--slds-g-color-neutral-base-50, #{$color-text-placeholder});
 
     &:focus,
     &.slds-has-focus {
@@ -437,7 +437,7 @@ input[readonly][role="combobox"] {
    */
   &:focus,
   &.slds-has-focus {
-    border-color: $color-border-input-active;
+    border-color: var(--slds-g-color-brand-base-60, #{$color-border-input-active});
     box-shadow: $shadow-button-focus;
   }
 }
@@ -492,8 +492,8 @@ input[readonly][role="combobox"] {
     ~ .slds-listbox_selection-group {
       display: flex;
       position: relative;
-      background: $color-background-alt;
-      border: 1px solid $color-border;
+      background: var(--slds-g-color-neutral-base-100, #{$color-background-alt});
+      border: 1px solid var(--slds-g-color-border-base-1, #{$color-border});
       border-top: 0;
       border-bottom-left-radius: $border-radius-medium;
       border-bottom-right-radius: $border-radius-medium;
@@ -585,8 +585,8 @@ input[readonly][role="combobox"] {
 .slds-has-inline-listbox,
 .slds-has-object-switcher {
   flex-direction: row;
-  background: $color-background-input;
-  border: $border-width-thin solid $color-border;
+  background: var(--slds-g-color-neutral-base-100, #{$color-background-input});
+  border: $border-width-thin solid var(--slds-g-color-border-base-1, #{$color-border});
   border-radius: $border-radius-medium;
 
   .slds-combobox {
@@ -648,6 +648,6 @@ input[readonly][role="combobox"] {
   }
 
   .slds-combobox__input-value {
-    box-shadow: 0 0 0 2px $color-gray-1 inset, 0 0 0 3px $color-border inset;
+    box-shadow: 0 0 0 2px var(--slds-g-color-neutral-base-100, #{$color-gray-1}) inset, 0 0 0 3px var(--slds-g-color-border-base-1, #{$color-border}) inset;
   }
 }

@@ -13,14 +13,14 @@
   color: $brand-accessible;
   background: $color-background-input;
   appearance: none;
-  border: $border-width-thin solid $color-border-input;
+  border: $border-width-thin solid var(--slds-g-color-border-base-4, #{$color-border-input});
   transition: border 0.15s linear;
 
   // Focus mimics slds-input
   &:focus {
     outline: 0;
-    border-color: $color-border-input-active;
-    background-color: $color-background-input-active;
+    border-color: var(--slds-g-color-brand-base-60, #{$color-border-input-active});
+    background-color: var(--slds-g-color-neutral-base-100, #{$color-background-input-active});
     box-shadow: $shadow-button-focus;
   }
 }
@@ -32,7 +32,7 @@
   padding-top: $spacing-xx-small;
   margin-bottom: $spacing-xxx-small;
   font-size: $form-label-font-size;
-  color: $color-text-label;
+  color: var(--slds-g-color-neutral-base-30, #{$color-text-label});
   overflow-wrap: break-word;
   word-wrap: break-word;
   hyphens: auto;

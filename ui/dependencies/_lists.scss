@@ -15,14 +15,14 @@
 @mixin list-has-hovers {
 
   &:hover {
-    background-color: $color-background-row-hover;
-    border-color: $color-border;
+    background-color: var(--slds-g-color-neutral-base-95, #{$color-background-row-hover});
+    border-color: var(--slds-g-color-border-base-1, #{$color-border});
     cursor: pointer;
   }
 
   &:active {
-    background-color: $color-background-row-active;
-    box-shadow: $color-border 0 ($border-width-thin * -1) 0 inset;
+    background-color: var(--slds-g-color-neutral-base-95, #{$color-background-row-active});
+    box-shadow: var(--slds-g-color-border-base-1, #{$color-border}) 0 ($border-width-thin * -1) 0 inset;
   }
 }
 
@@ -30,12 +30,12 @@
 @mixin list-has-selections {
 
   &.slds-is-selected {
-    box-shadow: $color-border-selection 0 0 0 $border-width-thin inset;
-    background-color: $color-background-row-selected;
+    box-shadow: var(--slds-g-color-brand-base-50, #{$color-border-selection}) 0 0 0 $border-width-thin inset;
+    background-color: var(--slds-g-color-neutral-base-95, #{$color-background-row-selected});
 
     &:hover,
     &:focus {
-      box-shadow: $color-border-selection-hover 0 ($border-width-thick * -1) 0 inset, $color-border-selection-hover 0 0 0 $border-width-thin inset;
+      box-shadow: var(--slds-g-color-border-brand-2, #{$color-border-selection-hover}) 0 ($border-width-thick * -1) 0 inset, var(--slds-g-color-border-brand-2, #{$color-border-selection-hover}) 0 0 0 $border-width-thin inset;
     }
   }
 }

@@ -1,0 +1,118 @@
+name: A11y Testing
+
+on: pull_request
+
+jobs:
+  prepare-a11y-testing:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - uses: actions/setup-node@v3
+      # I wanted to use an action, but the action recommends not using itself because
+      # Since v1.8.0 Playwright includes CLI that installs all required browser dependencies.
+      - name: Install Playwright dependencies
+        run: npx playwright install-deps
+
+      - name: Show GitHub context
+        env:
+          GITHUB_CONTEXT: ${{ toJson(github) }}
+        run: echo "$GITHUB_CONTEXT"
+
+      - name: Install and Build task
+        run: |
+          npm ci
+          npm run build
+
+      - name: Build Storybook
+        run: npm run storybook:build
+
+      - name: Cache establish
+        uses: actions/cache@v2
+        id: cache
+        with:
+          path: ./.www
+          key: www-cache-${{ github.event.pull_request.head.sha }}
+
+      - name: List .www folder
+        run: ls -la .www
+
+  a11y-testing:
+    needs: prepare-a11y-testing
+    continue-on-error: ${{ matrix.ignore-error }}
+    strategy:
+      fail-fast: false
+      matrix:
+        test-file-bunch: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+        ignore-error: [true]
+    runs-on: ubuntu-latest
+    env:
+      NODE_ENV: development
+      A11Y_SERVER: http://localhost:9002
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - uses: actions/setup-node@v3
+
+      - name: Install deps
+        run: npm ci
+
+      - name: Restore cache
+        uses: actions/cache@v2
+        id: cache
+        with:
+          path: ./.www
+          key: www-cache-${{ github.event.pull_request.head.sha }}
+
+      - name: List the workspace
+        run: echo "Workspace:" && ls -la .
+
+      - name: List the state of cache
+        run: echo "Cache:" && ls -la .www
+
+      - name: Start web server
+        run: npm run server:bg:start
+
+      - name: Generate test files
+        run: |
+          npx wait-on --verbose --timeout 10000 ${{ env.A11Y_SERVER }}
+          npm run test:a11y:generate-tests
+
+      - name: Run a11y tests
+        run: |
+            npx wait-on --verbose --timeout 10000 ${{ env.A11Y_SERVER }} && curl -sL -w "======================\\nWait-on return code: %{http_code}\\n======================\\n\\n" "${{ env.A11Y_SERVER }}" -o /dev/null
+            mkdir -p ./__tests__/a11y/xml/
+            npx ava --tap ./__tests__/a11y/__testfiles__/ava.a11y.${{ matrix.test-file-bunch }}*.spec.js | npx tap-xunit --package="SLDS.a11y" > ./__tests__/a11y/xml/axe-results-${{ matrix.test-file-bunch }}.xml
+        timeout-minutes: 20
+
+      - name: List the test files
+        if: success() || failure()
+        run: if test -d __tests__/a11y/results; then echo 'Test Results files:' && ls -la ./__tests__/a11y/results; else echo 'No Test Results'; fi
+
+      - name: Stop server
+        if: always()
+        run: npm run server:bg:delete
+
+      - name: Archive test results
+        if: success() || failure()
+        uses: actions/upload-artifact@v3
+        with:
+          name: a11y
+          path: __tests__/a11y/results/
+
+      - name: Archive test xml
+        if: success() || failure()
+        uses: actions/upload-artifact@v3
+        with:
+          name: a11y-xml
+          path: __tests__/a11y/xml/
+
+      # TODO: get it to work from artifacts
+      - name: Publish Test Results (publish-unit-test-result-action)
+        uses: EnricoMi/publish-unit-test-result-action@v2
+        if: success() || failure()
+        with:
+          check_name: publish-unit-test-result-action Results
+          junit_files: "__tests__/a11y/xml/**/*.xml"

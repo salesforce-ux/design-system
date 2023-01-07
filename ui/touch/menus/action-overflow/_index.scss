@@ -33,7 +33,7 @@
   position: relative;
   top: $spacing-x-large;
   // box-styling
-  background: $color-background-alt;
+  background: var(--slds-g-color-neutral-base-100, #{$color-background-alt});
   box-shadow: $shadow-overlay;
 }
 
@@ -41,8 +41,8 @@
 .slds-action-overflow--touch__footer {
   position: relative;
   flex-shrink: 0;
-  border-top: $border-width-thin solid $color-border;
+  border-top: $border-width-thin solid var(--slds-g-color-border-base-1, #{$color-border});
   padding: $spacing-small $spacing-medium;
-  background-color: $color-background;
+  background-color: var(--slds-g-color-neutral-base-95, #{$color-background});
   box-shadow: $shadow-action-overflow-footer;
 }

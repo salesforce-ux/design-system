@@ -80,8 +80,8 @@
   border-top-left-radius: var(--slds-c-modal-radius-border, var(--sds-c-modal-radius-border, $border-radius-medium));
   border-bottom-width: var(--slds-c-modal-sizing-border, var(--sds-c-modal-sizing-border, $border-width-thick));
   border-bottom-style: solid;
-  border-bottom-color: var(--slds-c-modal-color-border, var(--sds-c-modal-color-border, $color-border));
-  background-color: var(--slds-c-modal-header-color-background, var(--sds-c-modal-header-color-background, var(--slds-c-modal-color-background, var(--sds-c-modal-color-background, $color-background-alt))));
+  border-bottom-color: var(--slds-c-modal-color-border, var(--sds-c-modal-color-border, var(--slds-g-color-border-base-1, #{$color-border})));
+  background-color: var(--slds-c-modal-header-color-background, var(--sds-c-modal-header-color-background, var(--slds-c-modal-color-background, var(--sds-c-modal-color-background, var(--slds-g-color-neutral-base-100, #{$color-background-alt})))));
   color: var(--slds-c-modal-header-text-color, var(--sds-c-modal-header-text-color, var(--sds-c-modal-text-color)));
   flex-shrink: 0;
   padding-top: var(--slds-c-modal-header-spacing-block-start, var(--sds-c-modal-header-spacing-block-start, $spacing-medium));
@@ -118,7 +118,7 @@
   * @required
   */
 .slds-modal__content {
-  background-color: var(--slds-c-modal-content-color-background, var(--sds-c-modal-content-color-background, var(--slds-c-modal-color-background, var(--sds-c-modal-color-background, $color-background-alt))));
+  background-color: var(--slds-c-modal-content-color-background, var(--sds-c-modal-content-color-background, var(--slds-c-modal-color-background, var(--sds-c-modal-color-background, var(--slds-g-color-neutral-base-100, #{$color-background-alt})))));
   color: var(--slds-c-modal-content-text-color, var(--sds-c-modal-content-text-color, var(--slds-c-modal-text-color, var(--sds-c-modal-text-color))));
   overflow: hidden;
   overflow-y: auto;
@@ -151,8 +151,8 @@
   border-bottom-left-radius: var(--slds-c-modal-radius-border, var(--sds-c-modal-radius-border, $border-radius-medium));
   border-top-width: var(--slds-c-modal-sizing-border, var(--sds-c-modal-sizing-border, $border-width-thick));
   border-top-style: solid;
-  border-top-color: var(--slds-c-modal-color-border, var(--sds-c-modal-color-border, $color-border));
-  background-color: var(--slds-c-modal-footer-color-background, var(--sds-c-modal-footer-color-background, var(--slds-c-modal-color-background, var(--sds-c-modal-color-background, $color-background))));
+  border-top-color: var(--slds-c-modal-color-border, var(--sds-c-modal-color-border, var(--slds-g-color-border-base-1, #{$color-border})));
+  background-color: var(--slds-c-modal-footer-color-background, var(--sds-c-modal-footer-color-background, var(--slds-c-modal-color-background, var(--sds-c-modal-color-background, var(--slds-g-color-neutral-base-95, #{$color-background})))));
   color: var(--slds-c-modal-footer-text-color, var(--sds-c-modal-footer-text-color, var(--slds-c-modal-text-color, var(--sds-c-modal-text-color))));
   flex-shrink: 0;
   padding-top: var(--slds-c-modal-footer-spacing-block-start, var(--sds-c-modal-footer-spacing-block-start, $spacing-small));

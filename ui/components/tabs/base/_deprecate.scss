@@ -20,7 +20,7 @@
         line-height: $line-height-tab;
         border-bottom: $border-width-thick solid transparent;
         padding: 0 $spacing-x-small;
-        color: $color-text-action-label;
+        color: var(--slds-g-color-neutral-base-30, #{$color-text-action-label});
 
         @include mq-medium-min {
           padding: 0 $spacing-medium;
@@ -29,17 +29,17 @@
         &:hover,
         &:focus {
           text-decoration: none;
-          border-color: $color-border-tab-selected;
-          color: $color-text-action-label-active;
+          border-color: var(--slds-g-color-brand-base-50, #{$color-border-tab-selected});
+          color: var(--slds-g-color-neutral-base-10, #{$color-text-action-label-active});
         }
       }
 
       &.slds-active a {
         border-color: $brand-primary;
-        color: $color-text-action-label-active;
+        color: var(--slds-g-color-neutral-base-10, #{$color-text-action-label-active});
 
         &:focus {
-          color: $color-text-tab-label-selected;
+          color: var(--slds-g-color-brand-base-50, #{$color-text-tab-label-selected});
         }
       }
     }

@@ -171,7 +171,7 @@
 
   // White page for iframes
   .slds-brand-band_blank {
-    background: $color-background-alt;
+    background: var(--slds-g-color-neutral-base-100, #{$color-background-alt});
 
     &:before,
     &:after {
@@ -224,5 +224,5 @@
   width: calc(100% + (#{$template-gutters} * 2));
   height: calc(100% + (#{$template-gutters} * 2));
   margin: ($template-gutters * -1);
-  background-color: $card-color-background;
+  background-color: var(--slds-g-color-neutral-base-100, #{$card-color-background});
 }

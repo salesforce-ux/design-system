@@ -71,7 +71,7 @@ $_ellie-frameset: (
   svg {
     width: $_ellie-sprite-width;
     vertical-align: top;
-    color: $palette-cloud-blue-60;
+    color: var(--slds-g-color-palette-cloud-blue-60, #{$palette-cloud-blue-60});
   }
 
   circle:nth-child(2n + 1) {
@@ -81,8 +81,8 @@ $_ellie-frameset: (
   }
 
   circle:nth-child(2n) {
-    fill: $palette-neutral-100;
-    stroke: $palette-neutral-100;
+    fill: var(--slds-g-color-neutral-base-100, #{$palette-neutral-100});
+    stroke: var(--slds-g-color-neutral-base-100, #{$palette-neutral-100});
     stroke-width: 1px;
   }
 }

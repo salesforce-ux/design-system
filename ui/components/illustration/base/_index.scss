@@ -58,18 +58,18 @@
   }
 
   .slds-illustration__stroke-primary {
-    stroke: $illustration-color-primary;
+    stroke: var(--slds-g-color-palette-cloud-blue-80, #{$illustration-color-primary});
   }
 
   .slds-illustration__stroke-secondary {
-    stroke: $illustration-color-secondary;
+    stroke: var(--slds-g-color-palette-cloud-blue-90, #{$illustration-color-secondary});
   }
 
   .slds-illustration__fill-primary {
-    fill: $illustration-color-primary;
+    fill: var(--slds-g-color-palette-cloud-blue-80, #{$illustration-color-primary});
   }
 
   .slds-illustration__fill-secondary {
-    fill: $illustration-color-secondary;
+    fill: var(--slds-g-color-palette-cloud-blue-90, #{$illustration-color-secondary});
   }
 }

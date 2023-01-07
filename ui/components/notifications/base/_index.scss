@@ -26,7 +26,7 @@
 .slds-notification {
   position: relative;
   width: $size-medium; // this is 320, not 300px
-  border: 1px solid $color-border-reminder;
+  border: 1px solid var(--slds-g-color-border-base-1, #{$color-border-reminder});
   border-radius: $border-radius-medium;
   box-shadow: $shadow-reminder;
   transition-duration: $duration-slowly;
@@ -90,12 +90,12 @@
 .slds-notification__target {
   padding: $spacing-small;
   border-radius: $border-radius-medium;
-  background-color: $color-background-reminder;
-  color: $color-text-default;
+  background-color: var(--slds-g-color-neutral-base-95, #{$color-background-reminder});
+  color: var(--slds-g-color-neutral-base-10, #{$color-text-default});
 
   &:hover,
   &:focus {
-    background-color: $color-background-reminder-hover;
+    background-color: var(--slds-g-color-neutral-base-100, #{$color-background-reminder-hover});
     text-decoration: none;
   }
 }

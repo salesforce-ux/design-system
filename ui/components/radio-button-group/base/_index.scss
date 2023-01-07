@@ -13,7 +13,7 @@
 .slds-radio_button-group,
 .slds-radio--button-group {
   display: inline-flex;
-  border: $border-width-thin solid $color-border;
+  border: $border-width-thin solid var(--slds-g-color-border-base-4, #{$color-border});
   border-radius: $border-radius-medium;
 }
 
@@ -45,7 +45,7 @@
   // Apply left borders to anything radio button after the first button
   + .slds-radio_button,
   + .slds-radio--button {
-    border-left: $border-width-thin solid $color-border;
+    border-left: $border-width-thin solid var(--slds-g-color-border-base-4, #{$color-border});
     margin: 0;
   }
 
@@ -87,7 +87,7 @@
     &:checked + .slds-radio_button__label,
     &:checked + .slds-radio--button__label {
       background-color: $brand-accessible;
-      color: $color-text-button-brand;
+      color: var(--slds-g-color-neutral-base-100, #{$color-text-button-brand});
 
       // Need something stronger when the input is checked
       &:hover,
@@ -116,8 +116,8 @@
     &[disabled] ~ .slds-radio--faux,
     &[disabled] + .slds-radio_button__label,
     &[disabled] + .slds-radio--button__label {
-      background-color: $color-background-button-default-disabled;
-      color: $color-text-button-default-disabled;
+      background-color: var(--slds-g-color-neutral-base-100, #{$color-background-button-default-disabled});
+      color: var(--slds-g-color-neutral-base-80, #{$color-text-button-default-disabled});
 
       &:hover,
       &:focus {
@@ -131,8 +131,8 @@
     &[disabled]:checked ~ .slds-radio--faux,
     &[disabled]:checked + .slds-radio_button__label,
     &[disabled]:checked + .slds-radio--button__label {
-      background-color: $brand-disabled;
-      color: $color-text-button-brand-disabled;
+      background-color: var(--slds-g-color-neutral-base-80, #{$brand-disabled});
+      color: var(--slds-g-color-neutral-base-100, #{$color-text-button-brand-disabled});
 
       &:hover,
       &:focus {
@@ -150,7 +150,7 @@
  */
 .slds-radio_button__label,
 .slds-radio--button__label {
-  background-color: $color-background-button-default;
+  background-color: var(--slds-g-color-neutral-base-100, #{$color-background-button-default});
 
   &:hover,
   &:focus {

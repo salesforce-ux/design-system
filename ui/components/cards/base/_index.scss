@@ -17,10 +17,12 @@
   padding-right: var(--slds-c-card-spacing-inline-end, var(--sds-c-card-spacing-inline-end, var(--sds-c-card-spacing-inline, 0)));
   padding-bottom: var(--slds-c-card-spacing-block-end, var(--sds-c-card-spacing-block-end, var(--sds-c-card-spacing-block, 0)));
   padding-left: var(--slds-c-card-spacing-inline-start, var(--sds-c-card-spacing-inline-start, var(--sds-c-card-spacing-inline, 0)));
-  background: var(--slds-c-card-color-background, var(--sds-c-card-color-background, $card-color-background));
+  background: var(--slds-c-card-color-background, var(--sds-c-card-color-background,
+    var(--slds-g-color-neutral-base-100, #{$card-color-background})));
   border-width: var(--slds-c-card-sizing-border, var(--sds-c-card-sizing-border, $border-width-thin));
   border-style: solid;
-  border-color: var(--slds-c-card-color-border, var(--sds-c-card-color-border, $card-color-border));
+  border-color: var(--slds-c-card-color-border, var(--sds-c-card-color-border,
+    var(--slds-g-color-border-base-1, #{$card-color-border})));
   border-radius: var(--slds-c-card-radius-border, var(--sds-c-card-radius-border, $border-radius-medium));
   background-clip: padding-box;
   box-shadow: var(--slds-c-card-shadow, var(--sds-c-card-shadow, $card-shadow));
@@ -163,7 +165,8 @@
   font-size: var(--slds-c-card-footer-font-size, var(--sds-c-card-footer-font-size, $font-size-3));
   border-top-width: var(--slds-c-card-footer-sizing-border, var(--sds-c-card-footer-sizing-border, $border-width-thin));
   border-top-style: solid;
-  border-top-color: var(--slds-c-card-footer-color-border, var(--sds-c-card-footer-color-border, $card-footer-color-border));
+  border-top-color: var(--slds-c-card-footer-color-border,
+    var(--sds-c-card-footer-color-border, var(--slds-g-color-border-base-1, #{$card-footer-color-border})));
 }
 
 /**
@@ -194,7 +197,7 @@
   .slds-tabs_card {
     border-radius: 0;
     border: 0;
-    border-bottom: $border-width-thin solid $color-border;
+    border-bottom: $border-width-thin solid var(--slds-g-color-border-base-1, #{$color-border});
     box-shadow: none;
 
     &:last-child {
@@ -218,10 +221,12 @@
  */
 .slds-card-wrapper {
   padding: $var-spacing-medium;
-  background: var(--slds-c-card-color-background, var(--sds-c-card-color-background, $card-color-background));
+  background: var(--slds-c-card-color-background, var(--sds-c-card-color-background,
+    var(--slds-g-color-neutral-base-100, #{$card-color-background})));
   border-width: var(--slds-c-card-sizing-border, var(--sds-c-card-sizing-border, $border-width-thin));
   border-style: solid;
-  border-color: var(--slds-c-card-color-border, var(--sds-c-card-color-border, $card-color-border));
+  border-color: var(--slds-c-card-color-border, var(--sds-c-card-color-border,
+    var(--slds-g-color-border-base-1, #{$card-color-border})));
   border-radius: var(--slds-c-card-radius-border, var(--sds-c-card-radius-border, $border-radius-medium));
   background-clip: padding-box;
   box-shadow: var(--slds-c-card-shadow, var(--sds-c-card-shadow, $card-shadow));

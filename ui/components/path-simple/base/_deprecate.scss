@@ -1,13 +1,13 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-$legacy-color-background-path-incomplete: #e0e5ee;
-$legacy-color-background-path-incomplete-hover: #d8dde6;
-$legacy-color-background-path-complete: #51c983;
-$legacy-color-background-path-complete-hover: #1f8956;
-$legacy-color-background-path-current: #1172cf;
-$legacy-color-background-path-current-hover: #0d61af;
-$legacy-color-background-path-lost: #c23934;
+$legacy-color-background-path-incomplete: #f3f3f3;
+$legacy-color-background-path-incomplete-hover: #c9c9c9;
+$legacy-color-background-path-complete: #3ba755;
+$legacy-color-background-path-complete-hover: #2e844a;
+$legacy-color-background-path-current: #014486;
+$legacy-color-background-path-current-hover: #032d60;
+$legacy-color-background-path-lost: #ea001e;
 
 .slds-path-coach {
   @include deprecate('4.0.0', 'Use .slds-path instead of .slds-path-coach') {
@@ -15,14 +15,14 @@ $legacy-color-background-path-lost: #c23934;
     border-top: 0;
 
     &.slds-is-expanded {
-      border-color: $color-border;
+      border-color: var(--slds-g-color-border-base-1, #{$color-border});
       padding-bottom: $spacing-medium;
     }
   }
 
   .slds-path__mark-current {
-    background-color: $color-background-inverse;
-    border-color: $color-background-inverse;
+    background-color: var(--slds-g-color-brand-base-10, #{$color-background-inverse});
+    border-color: var(--slds-g-color-brand-base-10, #{$color-background-inverse});
   }
 }
 
@@ -32,7 +32,7 @@ $legacy-color-background-path-lost: #c23934;
     @include tabs;
 
     .slds-is-complete {
-      background-color: $legacy-color-background-path-complete;
+      background-color: var(--slds-g-color-success-base-60, #{$legacy-color-background-path-complete});
 
       .slds-tabs_path__stage,
       .slds-tabs--path__stage {
@@ -46,11 +46,11 @@ $legacy-color-background-path-lost: #c23934;
 
       .slds-tabs_path__link,
       .slds-tabs--path__link {
-        color: $color-text-action-label-active;
+        color: var(--slds-g-color-neutral-base-10, #{$color-text-action-label-active});
       }
 
       &:hover {
-        background-color: $legacy-color-background-path-complete-hover;
+        background-color: var(--slds-g-color-success-base-50 ,#{$legacy-color-background-path-complete-hover});
 
         .slds-tabs_path__stage,
         .slds-tabs--path__stage {
@@ -64,43 +64,43 @@ $legacy-color-background-path-lost: #c23934;
 
         .slds-tabs_path__link,
         .slds-tabs--path__link {
-          color: $color-text-inverse;
+          color: var(--slds-g-color-neutral-base-100, #{$color-text-inverse});
         }
       }
     }
 
     .slds-is-current {
-      background-color: $legacy-color-background-path-current;
+      background-color: var(--slds-g-color-palette-blue-30, #{$legacy-color-background-path-current});
 
       &:hover {
-        background-color: $legacy-color-background-path-current-hover;
+        background-color: var(--slds-g-color-palette-blue-20, #{$legacy-color-background-path-current-hover});
       }
 
       + .slds-is-incomplete:before {
-        background-color: $legacy-color-background-path-current;
+        background-color: var(--slds-g-color-palette-blue-30, #{$legacy-color-background-path-current});
       }
 
       &:hover + .slds-is-incomplete:before {
-        background-color: $legacy-color-background-path-current-hover;
+        background-color: var(--slds-g-color-palette-blue-20, #{$legacy-color-background-path-current-hover});
       }
     }
 
     .slds-is-incomplete {
-      background-color: $legacy-color-background-path-incomplete;
+      background-color: var(--slds-g-color-neutral-base-95, #{$legacy-color-background-path-incomplete});
 
       &:hover {
-        background-color: $legacy-color-background-path-incomplete-hover;
+        background-color: var(--slds-g-color-neutral-base-80, #{$legacy-color-background-path-incomplete-hover});
       }
 
       .slds-tabs_path__link,
       .slds-tabs--path__link {
-        color: $color-text-default;
+        color: var(--slds-g-color-neutral-base-10, #{$color-text-default});
       }
     }
 
     .slds-is-lost,
     .slds-is-lost:hover {
-      background-color: $legacy-color-background-path-lost;
+      background-color: var(--slds-g-color-error-base-50, #{$legacy-color-background-path-lost});
     }
 
     // Lets make sure we have the right color when these steps are activated
@@ -109,30 +109,30 @@ $legacy-color-background-path-lost: #c23934;
 
       .slds-tabs_path__link,
       .slds-tabs--path__link {
-        color: $color-text-inverse;
+        color: var(--slds-g-color-neutral-base-100, #{$color-text-inverse});
       }
     }
 
     .slds-is-active {
-      background-color: $color-background-inverse;
+      background-color: var(--slds-g-color-brand-base-10, #{$color-background-inverse});
 
       .slds-tabs_path__link,
       .slds-tabs--path__link {
-        color: $color-text-inverse;
+        color: var(--slds-g-color-neutral-base-100, #{$color-text-inverse});
       }
 
       &:hover {
-        background-color: $color-background-alt-inverse;
+        background-color: var(--slds-g-color-brand-base-20, #{$color-background-alt-inverse});
 
         + .slds-tabs_path__item:before,
         + .slds-tabs--path__item:before {
-          background-color: $color-background-alt-inverse;
+          background-color: var(--slds-g-color-brand-base-20, #{$color-background-alt-inverse});
         }
       }
 
       + .slds-tabs_path__item:before,
       + .slds-tabs--path__item:before {
-        background-color: $color-background-inverse;
+        background-color: var(--slds-g-color-brand-base-10, #{$color-background-inverse});
       }
     }
 
@@ -141,7 +141,7 @@ $legacy-color-background-path-lost: #c23934;
 
       .slds-tabs_path__title,
       .slds-tabs--path__title {
-        color: $color-gray-1;
+        color: var(--slds-g-color-neutral-base-100, #{$color-gray-1});
         transform: rotateX(0deg);
       }
 
@@ -188,7 +188,7 @@ $legacy-color-background-path-lost: #c23934;
       left: (($height-sales-path * 0.5) * -1);
       width: calc(#{$height-sales-path} - (#{$border-width-thick} * 2));
       height: calc(#{$height-sales-path} - (#{$border-width-thick} * 2));
-      border: $border-width-thick solid $color-border-path-divider;
+      border: $border-width-thick solid var(--slds-g-color-neutral-base-100, #{$color-border-path-divider});
       border-left: 0;
       border-bottom: 0;
       background-clip: padding-box;
@@ -203,22 +203,22 @@ $legacy-color-background-path-lost: #c23934;
     // The below logic makes the :before (which is actually a part of the previous section) the proper color based on tabs--path__item order
     + .slds-is-complete:before,
     + .slds-is-current:before {
-      background-color: $legacy-color-background-path-complete;
+      background-color: var(--slds-g-color-success-base-60, #{$legacy-color-background-path-complete});
     }
 
     &:hover + .slds-is-complete:before,
     &:hover + .slds-is-current:before {
-      background-color: $legacy-color-background-path-complete-hover;
+      background-color: var(--slds-g-color-success-base-50, #{$legacy-color-background-path-complete-hover});
     }
 
     + .slds-is-incomplete:before,
     + .slds-is-lost:before {
-      background-color: $legacy-color-background-path-incomplete;
+      background-color: var(--slds-g-color-neutral-base-95, #{$legacy-color-background-path-incomplete});
     }
 
     &:hover + .slds-is-incomplete:before,
     &:hover + .slds-is-lost:before {
-      background-color: $legacy-color-background-path-incomplete-hover;
+      background-color: var(--slds-g-color-neutral-base-80, #{$legacy-color-background-path-incomplete-hover});
     }
   }
 }
@@ -296,7 +296,7 @@ $legacy-color-background-path-lost: #c23934;
   @include deprecate('4.0.0', 'Use .slds-path__guidance instead of .slds-coach__guidance') {
     padding-left: $spacing-large;
     padding-bottom: $spacing-xx-small;
-    background-color: $color-background-guidance;
+    background-color: var(--slds-g-color-neutral-base-100, #{$color-background-guidance});
   }
 }
 
@@ -310,16 +310,16 @@ $legacy-color-background-path-lost: #c23934;
 
 .slds-coach__item {
   @include deprecate('4.0.0', 'Remove dt .slds-coach__item in favor of the new form markup, .slds-form-element__label') {
-    border-top: $color-border $border-width-thin solid;
+    border-top: var(--slds-g-color-border-base-1, #{$color-border}) $border-width-thin solid;
     padding: $spacing-medium 0;
-    color: $color-text-weak;
+    color: var(--slds-g-color-neutral-base-30, #{$color-text-weak});
   }
 }
 
 .slds-coach__value {
   @include deprecate('4.0.0', 'Remove dd .slds-coach__value in favor of the new form markup, .slds-form-element__static') {
-    border-top: $color-border $border-width-thin solid;
+    border-top: var(--slds-g-color-border-base-1, #{$color-border}) $border-width-thin solid;
     padding-top: $spacing-medium;
-    color: $color-text-default;
+    color: var(--slds-g-color-neutral-base-10, #{$color-text-default});
   }
 }

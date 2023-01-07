@@ -42,7 +42,7 @@
  * @restrict .slds-form div
  */
 .slds-is-edited {
-  background: $color-background-highlight;
+  background: var(--slds-g-color-palette-yellow-90, #{$color-background-highlight});
 
   // Move undo button icon to align with form elements
   .slds-form-element__undo {

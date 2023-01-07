@@ -26,8 +26,8 @@
   position: relative;
   display: flex;
   height: $height-header;
-  background: $color-background-alt-inverse;
-  color: $color-text-inverse;
+  background: var(--slds-g-color-brand-base-20, #{$color-background-alt-inverse});
+  color: var(--slds-g-color-neutral-base-100, #{$color-text-inverse});
 }
 
 /**
@@ -42,7 +42,7 @@
   white-space: nowrap;
 
   + .slds-builder-header__item {
-    border-left: $border-width-thin solid $color-background-inverse;
+    border-left: $border-width-thin solid var(--slds-g-color-brand-base-10, #{$color-background-inverse});
   }
 }
 
@@ -77,8 +77,8 @@
 
   &:hover,
   &:focus {
-    background-color: $color-background-inverse;
-    color: $color-gray-1;
+    background-color: var(--slds-g-color-brand-base-10, #{$color-background-inverse});
+    color: var(--slds-g-color-neutral-base-100, #{$color-gray-1});
     text-decoration: none;
   }
 
@@ -130,7 +130,7 @@
 
   + .slds-builder-header__nav-item,
   + .slds-builder-header__utilities-item {
-    border-left: $border-width-thin solid $color-background-inverse;
+    border-left: $border-width-thin solid var(--slds-g-color-brand-base-10, #{$color-background-inverse});
   }
 }
 
@@ -145,8 +145,8 @@
 .slds-builder-toolbar {
   display: flex;
   padding: $spacing-x-small $spacing-medium;
-  background: $color-background-alt;
-  border-bottom: $border-width-thin solid $color-border;
+  background: var(--slds-g-color-neutral-base-100, #{$color-background-alt});
+  border-bottom: $border-width-thin solid var(--slds-g-color-border-base-1, #{$color-border});
 }
 
 /**

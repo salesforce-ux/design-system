@@ -20,12 +20,12 @@
 .slds-popover--tooltip {
   width: auto;
   max-width: var(--slds-c-tooltip-sizing-max-width, var(--sds-c-tooltip-sizing-max-width, $size-medium));
-  background-color: var(--slds-c-tooltip-color-background, var(--sds-c-tooltip-color-background, $color-background-alt-inverse));
+  background-color: var(--slds-c-tooltip-color-background, var(--sds-c-tooltip-color-background, var(--slds-g-color-brand-base-20, #{$color-background-alt-inverse})));
   border: 0;
 
   .slds-popover__body {
     font-size: var(--slds-c-tooltip-font-size, var(--sds-c-tooltip-font-size, $font-size-2));
-    color: var(--slds-c-tooltip-text-color, var(--sds-c-tooltip-text-color, $color-text-inverse));
+    color: var(--slds-c-tooltip-text-color, var(--sds-c-tooltip-text-color, var(--slds-g-color-neutral-base-100, #{$color-text-inverse})));
   }
 }
 

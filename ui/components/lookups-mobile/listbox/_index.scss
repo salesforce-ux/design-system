@@ -4,7 +4,7 @@
 .slds-mobile-lookup__listbox_container {
   width: 100%;
   margin: $spacing-xx-small 0;
-  background: $color-background-alt;
+  background: var(--slds-g-color-neutral-base-100, #{$color-background-alt});
 }
 
 .slds-mobile-lookup__listbox-option {
@@ -14,7 +14,7 @@
   padding: $spacing-x-small $spacing-large $spacing-x-small 0;
   min-height: $height-tappable;
   line-height: 1.375;
-  border-bottom: $border-width-thin solid #f1f2f3;
+  border-bottom: $border-width-thin solid var(--slds-g-color-neutral-base-95, #f1f2f3);
 
   mark {
     font-weight: $font-weight-bold;
@@ -31,19 +31,19 @@
 
 .slds-mobile-lookup__listbox_text {
   display: block;
-  color: $color-gray-13;
+  color: var(--slds-g-color-neutral-base-10, #{$color-gray-13});
   font-size: $font-size-5;
 }
 
 .slds-mobile-lookup__listbox_meta {
   display: block;
-  color: $color-gray-9;
+  color: var(--slds-g-color-neutral-base-50, #{$color-gray-9});
   font-size: $font-size-4;
 }
 
 .slds-mobile-lookup__listbox_icon_container {
   margin-left: auto;
-  color: $color-brand-dark;
+  color: var(--slds-g-color-brand-base-30, #{$color-brand-dark});
 }
 
 .slds-mobile-lookup__listbox_trigger {

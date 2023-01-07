@@ -39,7 +39,7 @@
   align-items: flex-start;
   border-bottom-width: var(--slds-c-tabs-list-sizing-border, var(--sds-c-tabs-list-sizing-border, $border-width-thin));
   border-bottom-style: solid;
-  border-bottom-color: var(--slds-c-tabs-list-color-border, var(--sds-c-tabs-list-color-border, $color-border));
+  border-bottom-color: var(--slds-c-tabs-list-color-border, var(--sds-c-tabs-list-color-border, var(--slds-g-color-border-base-4, #{$color-border})));
 }
 
 /**
@@ -49,7 +49,7 @@
  */
 .slds-tabs_default__item,
 .slds-tabs--default__item {
-  color: var(--slds-c-tabs-item-text-color, var(--sds-c-tabs-item-text-color, $color-text-action-label));
+  color: var(--slds-c-tabs-item-text-color, var(--sds-c-tabs-item-text-color, var(--slds-g-color-neutral-base-30, #{$color-text-action-label})));
   position: relative;
   padding-top: var(--slds-c-tabs-item-spacing-block-start, var(--sds-c-tabs-item-spacing-block-start, var(--sds-c-tabs-item-spacing-block, 0)));
   padding-right: var(--slds-c-tabs-item-spacing-inline-end, var(--sds-c-tabs-item-spacing-inline-end, var(--sds-c-tabs-item-spacing-inline, $spacing-small)));
@@ -77,7 +77,8 @@
   &.slds-active,
   &.slds-is-active {
     /*! @css-var-fallback color */
-    --slds-c-tabs-item-text-color: var(--slds-c-tabs-item-text-color-active, var(--sds-c-tabs-item-text-color-active, #{$color-text-action-label-active}));
+    --slds-c-tabs-item-text-color: var(--slds-c-tabs-item-text-color-active,
+      var(--sds-c-tabs-item-text-color-active, var(--slds-g-color-neutral-base-10, #{$color-text-action-label-active})));
 
     &:after {
       background-color: var(--slds-c-tabs-item-color-border-active, var(--sds-c-tabs-item-color-border-active, $brand-primary));
@@ -127,16 +128,16 @@
   * @restrict .slds-tabs_default__item, .slds-dropdown__item
   */
   &.slds-has-notification {
-    background: $color-background-notification-new;
+    background: var(--slds-g-color-neutral-base-95, #{$color-background-notification-new});
 
     &:after {
-      background-color: $color-border;
+      background-color: var(--slds-g-color-border-base-4, #{$color-border});
     }
 
     &:hover {
 
       &:after {
-        background-color: $color-brand-dark;
+        background-color: var(--slds-g-color-brand-base-30, #{$color-brand-dark});
       }
     }
 
@@ -220,9 +221,9 @@
 
   .slds-button {
     line-height: inherit;
-    color: var(--slds-c-tabs-item-text-color, var(--sds-c-tabs-item-text-color, $color-text-action-label));
+    color: var(--slds-c-tabs-item-text-color, var(--sds-c-tabs-item-text-color, var(--slds-g-color-neutral-base-30, #{$color-text-action-label})));
     box-shadow: none;
-
+    --slds-c-button-color-border-active: transparent;
     &:focus {
       text-decoration: underline;
     }
@@ -232,7 +233,7 @@
   &.slds-has-success {
 
     .slds-button {
-      color: $color-gray-1;
+      color: var(--slds-g-color-neutral-base-100, #{$color-gray-1});
     }
   }
 }

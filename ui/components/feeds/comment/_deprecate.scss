@@ -23,7 +23,7 @@
 
       &:before {
         content: '';
-        background: $color-border;
+        background: var(--slds-g-color-border-base-1, #{$color-border});
         height: 100%;
         width: $border-width-thin;
         position: absolute;
@@ -36,7 +36,7 @@
     }
 
     .slds-avatar {
-      border: $border-width-thick solid $color-background-alt;
+      border: $border-width-thick solid var(--slds-g-color-neutral-base-100, #{$color-background-alt});
     }
   }
 

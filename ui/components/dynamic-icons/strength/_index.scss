@@ -27,7 +27,7 @@
   circle { // 1
     stroke-width: 0.95px;
     fill: transparent;
-    stroke: $palette-neutral-60;
+    stroke: var(--slds-g-color-neutral-base-60, #{$palette-neutral-60});
     transition: // 2
       fill 0.4s ease-in-out,
       stroke 0.4s ease-in-out;
@@ -51,8 +51,8 @@
   &[data-slds-strength="3"] circle:nth-child(1),
   &[data-slds-strength="3"] circle:nth-child(2),
   &[data-slds-strength="3"] circle:nth-child(3) {
-    fill: $color-text-success;
-    stroke: $color-text-success;
+    fill: var(--slds-g-color-success-base-50, #{$color-text-success});
+    stroke: var(--slds-g-color-success-base-50, #{$color-text-success});
   }
 
   &[data-slds-strength="-1"] circle:nth-child(1),
@@ -61,8 +61,8 @@
   &[data-slds-strength="-3"] circle:nth-child(1),
   &[data-slds-strength="-3"] circle:nth-child(2),
   &[data-slds-strength="-3"] circle:nth-child(3) {
-    fill: $palette-pink-90;
-    stroke: $color-background-error-dark;
+    fill: var(--slds-g-color-palette-pink-90, #{$palette-pink-90});
+    stroke: var(--slds-g-color-error-base-30, #{$color-background-error-dark});
   }
 
   /**
@@ -126,11 +126,12 @@
 // Improve readability of animations
 // stylelint-disable
 @keyframes slds-icon-strength-positive-load {
-  0%   { fill: transparent; stroke: $palette-neutral-60; }
-  100% { fill: $color-text-success; stroke: $color-text-success; }
+  0%   { fill: transparent; stroke: var(--slds-g-color-neutral-base-60, #{$palette-neutral-60}); }
+  100% { fill: var(--slds-g-color-success-base-50, #{$color-text-success});
+    stroke: var(--slds-g-color-success-base-50, #{$color-text-success}); }
 }
 
 @keyframes slds-icon-strength-negative-load {
-  0%   { fill: transparent; stroke: $palette-neutral-60; }
-  100% { fill: $palette-pink-90; stroke: $color-background-destructive; }
+  0%   { fill: transparent; stroke: var(--slds-g-color-neutral-base-60, #{$palette-neutral-60}); }
+  100% { fill: var(--slds-g-color-palette-pink-90, #{$palette-pink-90}); stroke: var(--slds-g-color-error-base-40, #{$color-background-destructive}); }
 }

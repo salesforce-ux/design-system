@@ -4,16 +4,16 @@
 // Annotation in cards/einstein/index.scss
 .slds-einstein-header {
   position: relative;
-  background-color: $einstein-header-background-color;
+  background-color: var(--slds-g-color-palette-cloud-blue-80, #{$einstein-header-background-color});
   background-image: url($static-image-path + $einstein-header-background);
   background-repeat: no-repeat;
   background-position: left top;
   background-size: cover;
   border-radius: calc(#{$border-radius-medium} - 1px) calc(#{$border-radius-medium} - 1px) 0 0;
-  border-bottom: $border-width-thin solid $color-border;
+  border-bottom: $border-width-thin solid var(--slds-g-color-border-base-1, #{$color-border});
   padding-top: $spacing-small;
   padding-bottom: $spacing-small;
-  text-shadow: 0 0 4px $einstein-header-text-shadow;
+  text-shadow: 0 0 4px var(--slds-g-color-palette-cloud-blue-90, #{$einstein-header-text-shadow});
 
   .slds-popover__close {
     color: currentColor;
@@ -66,7 +66,7 @@
   &.slds-nubbin--right-top {
 
     &:before {
-      background-color: $einstein-header-background-color;
+      background-color: var(--slds-g-color-palette-cloud-blue-80, #{$einstein-header-background-color});
     }
   }
 }

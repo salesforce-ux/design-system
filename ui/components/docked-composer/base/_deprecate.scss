@@ -14,13 +14,13 @@
 
     &:hover,
     &:focus {
-      color: $color-text-inverse;
+      color: var(--slds-g-color-neutral-base-100, #{$color-text-inverse});
       text-decoration: none;
     }
 
     .slds-text-body_small,
     .slds-text-body--small {
-      color: $color-text-inverse;
+      color: var(--slds-g-color-neutral-base-100, #{$color-text-inverse});
       margin-left: $spacing-x-small;
     }
   }

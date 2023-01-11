@@ -108,7 +108,7 @@
 
   .slds-indicator_unread,
   .slds-indicator--unread {
-    background: var(--slds-g-color-brand-base-60, #{$color-brand});
+    background: var(--slds-g-color-brand-base-50, #{$color-brand});
   }
 }
 
@@ -170,7 +170,7 @@
   width: 0.75rem;
   background: var(--slds-g-color-neutral-base-100, #{$color-background-alt});
   border-radius: 0;
-  border: $border-width-thin solid var(--slds-g-color-neutral-base-80, #{$color-border});
+  border: $border-width-thin solid var(--slds-g-color-neutral-base-50, #{$color-border});
 
   &:hover,
   &:focus {

@@ -63,7 +63,7 @@
     "@storybook/addon-options": "^5.3.21",
     "@storybook/addon-viewport": "^5.3.21",
     "@storybook/addons": "^5.3.21",
-    "@storybook/react": "^5.3.21",
+    "@storybook/react": "^6.0.0",
     "@storybook/theming": "^5.3.21",
     "async": "2.3.0",
     "autoprefixer": "9.7.6",

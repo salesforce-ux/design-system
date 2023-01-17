@@ -3,6 +3,9 @@
 # Modals Release Notes
 
 <!-- ## [Unreleased] -->
+## 2.21.0
+### Changed
+- Added full size option for modal. This will allow the modal to reach full screen for both mobile and desktop screen width. 
 
 ## 2.19.0
 ### Changed

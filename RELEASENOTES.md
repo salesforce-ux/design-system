@@ -3,6 +3,11 @@
 
 ## Release 2.21.0 - Upcoming
 
+## Components
+### [Modals](https://www.lightningdesignsystem.com/components/modals)
+#### Changed
+- Added full size option for modal. This will allow the modal to reach full screen for both mobile and desktop screen width. 
+
 ## Release 2.20.1 - December 16, 2022
 
 - Updated colors for various components:

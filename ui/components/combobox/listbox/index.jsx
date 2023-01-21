@@ -18,7 +18,7 @@ export const ListboxWrapper = props => (
     className={props.className}
     role="listbox"
     aria-orientation={props.horizontal || props.inline ? 'horizontal' : null}
-    aria-label={props.ariaLabel}
+    aria-label={props.ariaLabel || 'please provide ARIA-label'}
   >
     {props.children}
   </div>

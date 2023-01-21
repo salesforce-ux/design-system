@@ -82,6 +82,7 @@ export const PathTrack = props => {
               className="slds-path__nav"
               role="listbox"
               aria-orientation="horizontal"
+              aria-label="Path Navigation"
             >
               {props.children}
             </ul>

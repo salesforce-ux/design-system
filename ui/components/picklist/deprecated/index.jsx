@@ -24,7 +24,7 @@ import {
 import _ from '../../../shared/helpers';
 
 export const ListboxDeprecated = props => (
-  <div className={classNames('slds-dropdown', props.className)} role="listbox">
+  <div className={classNames('slds-dropdown', props.className)} role="listbox" aria-label="Dropdown Menu Options">
     {props.children}
   </div>
 );

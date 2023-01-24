@@ -414,7 +414,7 @@ export let examples = [
     id: 'dark-base',
     label: 'Base [dark]',
     element: (
-      <Popover className="slds-popover_dark slds-nubbin_left" closeButton>
+      <Popover className="slds-popover_dark slds-nubbin_left" title="Dialog Title" closeButton>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua.

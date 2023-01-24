@@ -40,7 +40,7 @@ export let Popover = props => {
   return (
     <section
       aria-describedby={bodyUniqueId}
-      aria-label={!props.header && !props.headerTitle ? props.title : null}
+      aria-label={!props.header && !props.headerTitle ? props.title || "Please enter ARIA-label": null  }
       aria-labelledby={
         !props.header && props.headerTitle ? headingUniqueId : props.headingId
       }

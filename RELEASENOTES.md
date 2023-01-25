@@ -6,7 +6,7 @@
 ## Components
 ### [Modals](https://www.lightningdesignsystem.com/components/modals)
 #### Changed
-- Added full size option for modal. This will allow the modal to reach full screen for both mobile and desktop screen width. 
+- Added full size option for modal. This will allow the modal to reach full screen for mobile screen size and devices. When screen is bigger than mobile screen width (from 768px), full size modal will take on large size modal behaviour. 
 
 ## Release 2.20.1 - December 16, 2022
 

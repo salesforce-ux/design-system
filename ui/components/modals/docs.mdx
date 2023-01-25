@@ -1,8 +1,10 @@
 import * as Base from './base/example.jsx';
 import CodeView from '../../../shared/components/CodeView';
+import CodeBlock from '../../../shared/components/CodeBlock';
 import StylingHooksTable from '../../../shared/components/StylingHooksTable';
 import { getDisplayElementById, getDemoStylesById } from '../../shared/helpers';
 import { MobileNotice, MobileBlurb } from '../../shared/doc-text';
+import { ModalSizes, FullTaglines, FullHeadless, FullFootless } from './base/example';
 
 <div className="doc lead">
   Modals are used to display content in a layer above the app. This paradigm is
@@ -73,7 +75,7 @@ Modals, by definition, trap focus. This means that if a user presses Tab or Shif
   {getDisplayElementById(Base.default)}
 </CodeView>
 
-## Examples
+## Layout
 
 ### Taglines
 
@@ -102,43 +104,36 @@ Modals, by definition, trap focus. This means that if a user presses Tab or Shif
   {getDisplayElementById(Base.examples, 'directional')}
 </CodeView>
 
-### Small Modal
+## Sizes
+
+### Small
 
 <CodeView isViewport demoStyles={getDemoStylesById(Base.examples, 'small')}>
   {getDisplayElementById(Base.examples, 'small')}
 </CodeView>
 
-### Medium Modal
+### Medium
 
 <CodeView isViewport demoStyles={getDemoStylesById(Base.examples, 'medium')}>
   {getDisplayElementById(Base.examples, 'medium')}
 </CodeView>
 
-### Large Modal
+### Large
 
 <CodeView isViewport demoStyles={getDemoStylesById(Base.examples, 'large')}>
   {getDisplayElementById(Base.examples, 'large')}
 </CodeView>
 
-### Full Modal
-<CodeView isViewport demoStyles={getDemoStylesById(Base.examples, 'full')}>
+### Full
+
+Use the `slds-modal_full` class to give the modal a full screen appearance in mobile device screens, or small form factors. The modal will take on the same appearance as the large size modal when on a medium form factor or larger (from 768px and larger).
+
+<CodeView frameOnly frameStyles={{ height: '640px' }} frameTitle="Example mobile styles for full example">
   {getDisplayElementById(Base.examples, 'full')}
 </CodeView>
-
-### Full Tagline Modal
-<CodeView isViewport demoStyles={getDemoStylesById(Base.examples, 'full-tagline')}>
-  {getDisplayElementById(Base.examples, 'full-tagline')}
-</CodeView>
-
-### Full Headless Modal
-<CodeView isViewport demoStyles={getDemoStylesById(Base.examples, 'full-headless')}>
-  {getDisplayElementById(Base.examples, 'full-headless')}
-</CodeView>
-
-### Full Footless Modal
-<CodeView isViewport demoStyles={getDemoStylesById(Base.examples, 'full-footless')}>
-  {getDisplayElementById(Base.examples, 'full-footless')}
-</CodeView>
+<CodeBlock toggleCode={false}>
+  <ModalSizes size="full" />
+</CodeBlock>
 
 ## Styling Hooks Overview
 

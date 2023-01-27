@@ -5,7 +5,7 @@
 /// @type map
 /// @private
 $_sizes: (
-  'xxx-small,': $size-xxx-small,
+  'xxx-small': $size-xxx-small,
   'xx-small': $size-xx-small,
   'x-small': $size-x-small,
   'small': $size-small,
@@ -14,6 +14,44 @@ $_sizes: (
   'x-large': $size-x-large,
   'xx-large': $size-xx-large
 );
+
+// All SLDS size classes like `slds-size--medium` and `slds-size--medium-1-of-12` in one string.
+// This is faster for style calculation than `[class*="slds-size_"]`.
+/// @private
+@function all-sizes () {
+  $prefixes: 'slds-size_', 'slds-size--';
+  $columnSizes: 2, 3, 4, 5, 6, 7, 8, 12;
+
+  $result: '';
+  @each $prefix in $prefixes {
+    @each $size in map-keys($_sizes) {
+      $result: "#{$result}, .#{$prefix}#{$size}";
+    }
+    @each $columnSize in $columnSizes {
+      @for $i from 1 through $columnSize {
+        $result: "#{$result}, .#{$prefix}#{$i}-of-#{$columnSize}";
+      }
+    }
+  }
+
+  @return str-slice($result, 3); // Remove initial ", "
+}
+
+// All SLDS classes like `slds-small-size_medium` in one string.
+// Note that the first size is only a breakpoint size, and the second is all possible sizes.
+// This is faster for style calculation than `[class*="slds-#{$breakpointSize}-size_"]`
+/// @private
+@function all-responsive-sizes ($breakpointSize, $prefix) {
+  $infixes: '-size_', '-size--';
+
+  $result: '';
+  @each $infix in $infixes {
+    @each $size in map-keys($_sizes) {
+      $result: "#{$result}, .#{$prefix}#{$breakpointSize}#{$infix}#{$size}";
+    }
+  }
+  @return str-slice($result, 3); // Remove initial ", "
+}
 
 /**
  * @selector .slds-size_small
@@ -63,8 +101,7 @@ $_sizes: (
   @media (min-width: #{pem($breakpoint)}) {
 
     // Fixes issue when sizing is used with slds-col
-    [class*="slds-#{$size}-size_"],
-    [class*="slds-#{$size}-size--"] {
+    #{all-responsive-sizes($size, 'slds-')} {
       flex: none;
     }
 
@@ -96,8 +133,7 @@ $_sizes: (
   @media (max-width: #{pem($breakpoint)}) {
 
     // Fixes issue when sizing is used with slds-col
-    [class*="slds-max-#{$size}-size_"],
-    [class*="slds-max-#{$size}-size--"] {
+    #{all-responsive-sizes($size, 'slds-max-')} {
       flex: none;
     }
 
@@ -128,7 +164,6 @@ $_sizes: (
 }
 
 // Fixes issue when sizing is used with slds-col
-[class*="slds-size_"],
-[class*="slds-size--"] {
+#{all-sizes()} {
   flex: none;
 }

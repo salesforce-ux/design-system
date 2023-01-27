@@ -3,6 +3,17 @@
 
 // I need to associate slds-icon-animated with something since there isn't a base variant
 
+// All SLDS size classes like `slds-r1` and `slds-r9` in one string.
+// This is faster for style calculation than `[class*="slds-r"]`.
+/// @private
+@function all-sds-r () {
+  $result: '';
+  @for $i from 1 through 9 {
+    $result: "#{$result}, .slds-r#{$i}";
+  }
+
+  @return str-slice($result, 3); // Remove initial ", "
+}
 
 /**
  * @summary Containing actionable element that holds the waffle icon
@@ -20,7 +31,7 @@
   &:hover,
   &:focus {
 
-    [class*="slds-r"] {
+    #{all-sds-r()} {
       animation: slds-icon-waffle-throb 2 200ms alternate;
     }
 
@@ -80,7 +91,7 @@
   display: block;
   cursor: pointer;
 
-  [class*="slds-r"] {
+  #{all-sds-r()} {
     @include square(rem(5px));
     background-color: var(--slds-g-color-neutral-base-50, #{$color-background-icon-waffle});
     display: inline-block;

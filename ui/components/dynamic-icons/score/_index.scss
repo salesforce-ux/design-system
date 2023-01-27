@@ -19,7 +19,7 @@
 
 // We are variying opacity (instead of stroke & fill)
 // because it is a more performant way of achieving this effect
-[class*="slds-icon-score__"] {
+.slds-icon-score__positive, .slds-icon-score__negative {
   position: absolute;
   opacity: 0;
   transition: opacity 0.4s ease-in-out;

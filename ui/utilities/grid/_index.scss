@@ -481,15 +481,31 @@
   margin-left: ($spacing-xx-large * -1);
 }
 
+// All slds-col_padded classes in one string. This is faster for style calculation than `[class*='slds-icon-action-']`.
+/// @private
+@function col-padded() {
+  $prefixes: 'slds-col_padded', 'slds-col--padded';
+  $types: '-around', '';
+  $sizes: '-medium', '-large', '';
+
+  $result: '';
+  @each $size in $sizes {
+    @each $type in $types {
+      @each $prefix in $prefixes {
+        $result: "#{$result}, .#{$prefix}#{$type}#{$size}";
+      }
+    }
+  }
+  @return str-slice($result, 3); // Remove initial ", "
+}
+
 /**
  * @summary Initializes a grid column
  *
  * @selector .slds-col
  * @modifier
  */
-.slds-col,
-[class*="slds-col_padded"],
-[class*="slds-col--padded"] {
+.slds-col, #{col-padded()} {
   flex: 1 1 auto;
 }
 
@@ -636,9 +652,7 @@
 .slds-grid--align-center {
   justify-content: center;
 
-  .slds-col,
-  [class*="slds-col_padded"],
-  [class*="slds-col--padded"] {
+  .slds-col, #{col-padded()} {
     flex-grow: 0;
   }
 }
@@ -653,9 +667,7 @@
 .slds-grid--align-space {
   justify-content: space-around;
 
-  .slds-col,
-  [class*="slds-col_padded"],
-  [class*="slds-col--padded"] {
+  .slds-col, #{col-padded()} {
     flex-grow: 0;
   }
 }
@@ -671,9 +683,7 @@
 .slds-grid--align-spread {
   justify-content: space-between;
 
-  .slds-col,
-  [class*="slds-col_padded"],
-  [class*="slds-col--padded"] {
+  .slds-col, #{col-padded()} {
     flex-grow: 0;
   }
 }
@@ -688,9 +698,7 @@
 .slds-grid--align-end {
   justify-content: flex-end;
 
-  .slds-col,
-  [class*="slds-col_padded"],
-  [class*="slds-col--padded"] {
+  .slds-col, #{col-padded()} {
     flex-grow: 0;
   }
 }

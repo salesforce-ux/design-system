@@ -1,6 +1,9 @@
 name: Make Review Apps
 
-on: pull_request
+on:
+  pull_request:
+  release:
+    types: [published]
 
 env:
   # APPLITOOLS_API_KEY:

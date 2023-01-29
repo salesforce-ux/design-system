@@ -7,6 +7,12 @@ outputs:
 runs:
   using: composite
   steps:
+  - name: Print context
+    env:
+      GITHUB_CONTEXT: ${{ toJson(github) }}
+    run: |
+      echo "$GITHUB_CONTEXT"
+    shell: bash
   - name: Set which app to deploy to on Heroku
     id: which-app
     # if on default branch without a tag

@@ -3,7 +3,6 @@ name: Make Review Apps
 on:
   release:
     types: [released, prereleased]
-  tags:
   pull_request:
 
 

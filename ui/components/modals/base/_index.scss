@@ -284,6 +284,16 @@
 }
 
 .slds-modal_full {
+
+  .slds-modal__header {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+
+    @include mq-medium-min {
+      border-top-right-radius: var(--slds-c-modal-radius-border, var(--sds-c-modal-radius-border, $border-radius-medium));
+      border-top-left-radius: var(--slds-c-modal-radius-border, var(--sds-c-modal-radius-border, $border-radius-medium));
+    }
+  }
   /**
   * Headless modal styling
   */
@@ -298,11 +308,11 @@
   .slds-modal__container {
     width: 100%;
     max-width: none;
-    min-width: none;
+    min-width: 0;
     margin: 0;
     padding: $spacing-medium 0 0 0;
     justify-content: flex-start;
-    background-color: $color-background-alt;
+    background-color: var(--slds-c-modal-header-color-background, var(--slds-c-modal-color-background, var(--slds-g-color-neutral-base-100, #{$color-background-alt})));
     border-radius: 0;
 
     @include mq-medium-min {

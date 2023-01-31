@@ -95,6 +95,10 @@
     &:active {
       color: $brand-text-link-active;
     }
+
+    &:focus-visible{
+      outline-color: var(--slds-g-color-palette-blue-50);
+    }
   }
 
   a,

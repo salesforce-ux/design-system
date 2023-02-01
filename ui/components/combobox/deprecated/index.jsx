@@ -328,6 +328,7 @@ export let DeprecatedListbox = props => (
     role="listbox"
     aria-orientation={props.horizontal || props.inline ? 'horizontal' : null}
     className={props.listboxClassName}
+    aria-label={props.id || 'Add ARIA label'}
   >
     <ul
       className={classNames(

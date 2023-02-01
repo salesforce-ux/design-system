@@ -828,7 +828,6 @@ EditableCell.propTypes = {
 export const EditPopover = (props) => (
   <Popover
     className="slds-popover slds-popover_edit"
-    aria-label="Please enter ARIA-label"
     style={{ position: 'absolute', top: '0', left: '0.0625rem' }}
   >
     <div

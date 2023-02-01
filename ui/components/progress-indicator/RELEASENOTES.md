@@ -2,6 +2,9 @@
 
 # Progress Indicator Release Notes
 
+## 2.17.0
+
+- Added id to aria-labelledby to meet accessibility requirements.
 <!-- ## [Unreleased] -->
 ## 2.16.0
 

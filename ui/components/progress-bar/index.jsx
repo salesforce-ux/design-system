@@ -31,7 +31,7 @@ export const ProgressBar = props => {
         })}
         style={progressBarStyle}
       >
-        <span className="slds-assistive-text">
+        <span className="slds-assistive-text" id={props['aria-labelledby']}>
           Progress: {`${props.value}%`}
         </span>
       </span>

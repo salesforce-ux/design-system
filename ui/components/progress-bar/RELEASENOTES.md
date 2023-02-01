@@ -2,6 +2,10 @@
 
 # Progress Bar Release Notes
 
+## 2.19.1
+
+- Added id to aria-labelledby to meet accessibility requirements.
+
 <!-- ## [Unreleased] -->
 ## 2.19.0
 

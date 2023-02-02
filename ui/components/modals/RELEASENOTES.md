@@ -4,6 +4,11 @@
 
 <!-- ## [Unreleased] -->
 
+## 2.20.0
+
+### Added
+- Added aria-label attribute to modal to meet accessibility requirements.
+
 ## 2.19.0
 ### Changed
 - Added tabindex to Footless example for programmatic focus use case.

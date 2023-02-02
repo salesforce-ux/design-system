@@ -186,7 +186,7 @@ input[readonly][role="combobox"] {
   }
 
   &[aria-disabled="true"] {
-    color: var(--slds-g-color-neutral-base-80, #{$color-text-button-default-disabled});
+    color: var(--slds-g-color-neutral-base-50, #{$color-text-button-default-disabled});
   }
 }
 

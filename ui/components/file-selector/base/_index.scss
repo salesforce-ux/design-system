@@ -21,7 +21,7 @@
  */
 .slds-file-selector__dropzone {
   padding: $spacing-xxx-small;
-  border: $border-width-thin dashed var(--slds-g-color-border-base-1, #{$color-border});
+  border: $border-width-thin dashed var(--slds-g-color-border-base-4, #{$color-border});
   border-radius: $border-radius-medium;
 
   /**
@@ -51,12 +51,12 @@
   }
 
   &[disabled] ~ .slds-file-selector__body {
-    color: var(--slds-g-color-neutral-base-80, #{$color-text-button-default-disabled});
+    color: var(--slds-g-color-neutral-base-10, #{$color-text-button-default-disabled});
 
     > .slds-file-selector__button {
       background: var(--slds-g-color-neutral-base-95, #{$color-background-button-brand-disabled});
       border-color: var(--slds-g-color-neutral-base-80, #{$color-border-button-brand-disabled});
-      color: var(--slds-g-color-neutral-base-100, #{$color-text-button-brand-disabled});
+      color: var(--slds-g-color-neutral-base-30, #{$color-text-button-brand-disabled});
     }
 
     > .slds-file-selector__body-icon {

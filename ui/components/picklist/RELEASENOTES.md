@@ -4,6 +4,14 @@
 
 <!-- ## [Unreleased] -->
 
+
+## 2.17.0
+
+### Added
+
+- Added `Aria-label` to meet accessibility requirements.
+
+
 ## 2.16.0
 
 ### Changed

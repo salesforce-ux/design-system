@@ -328,7 +328,6 @@ export let DeprecatedListbox = props => (
     role="listbox"
     aria-orientation={props.horizontal || props.inline ? 'horizontal' : null}
     className={props.listboxClassName}
-    aria-label='Dropdown Menu Items'
   >
     <ul
       className={classNames(

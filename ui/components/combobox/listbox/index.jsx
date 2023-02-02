@@ -373,7 +373,7 @@ export class Listbox extends Component {
     return (
       <ListboxWrapper
         id={id}
-        ariaLabel={id}
+        ariaLabel='Menu Items'
         className={classNames(
           { 'slds-dropdown': !staticListbox },
           type === 'entity'

@@ -326,7 +326,7 @@ export let HiddenFooter = (props) => (
 
 export let HeadlessAndFootless = (props) => (
   <Backdrop>
-    <Modal aria-labelledby="modal-heading-01">
+    <Modal aria-labelledby="modal-content-id-1">
       <ModalContent className="slds-modal__content_headless slds-modal__content_footless slds-p-around_medium">
         <p>
           Sit nulla est ex deserunt exercitation anim occaecat. Nostrud ullamco
@@ -351,7 +351,7 @@ export let HeadlessAndFootless = (props) => (
 
 export let HeadlessAndFootlessDeprecated = (props) => (
   <Backdrop>
-    <Modal aria-labelledby="modal-heading-01">
+    <Modal aria-labelledby="modal-content-id-1">
       <ModalHeader className="slds-modal__header_empty" />
       <ModalContent className="slds-p-around_medium">
         <p>

@@ -3,6 +3,9 @@
 # Modals Release Notes
 
 <!-- ## [Unreleased] -->
+## 2.21.0
+### Changed
+- Added full size option for modal. This will allow the modal to reach full screen for mobile screen size and devices. When screen is bigger than mobile screen width (from 768px), full size modal will take on large size modal behaviour. 
 
 ## 2.20.0
 

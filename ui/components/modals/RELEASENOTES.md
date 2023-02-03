@@ -4,7 +4,7 @@
 
 <!-- ## [Unreleased] -->
 
-## 2.20.0
+## 2.21.0
 
 ### Added
 - Added aria-label attribute to modal to meet accessibility requirements.

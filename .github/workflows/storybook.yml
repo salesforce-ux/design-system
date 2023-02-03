@@ -1,6 +1,10 @@
-name: Make Storybook
+name: Make Review Apps
 
-on: pull_request
+on:
+  release:
+    types: [released, prereleased]
+  pull_request:
+
 
 env:
   # APPLITOOLS_API_KEY:
@@ -210,3 +214,117 @@ jobs:
           export SITE_URL=$(echo ${row} | base64 --decode | jq -r ".url")
           gh api ${STATUS_URL} -f state=success -f environment_url=${SITE_URL} -H "Accept: application/vnd.github.ant-man-preview+json"
         done
+
+  framework-build:
+    # if: ${{ (1 < 0) }}
+    runs-on: ubuntu-latest
+    needs:
+      - prepare
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - uses: actions/setup-node@v3
+        with:
+          cache: 'npm'
+
+      - uses: actions/download-artifact@v2
+        with:
+          path: workspace
+
+      - name: Display structure of downloaded files
+        run: ls -R
+        working-directory: workspace
+
+      - uses: "./.github/actions/copy-tokens-from-workspace"
+      - name: Decompress styles
+        run: tar -xvf workspace/artifact/styles.tar
+      - name: Decompress metadata
+        run: tar -xvf workspace/artifact/metadata.tar
+
+      - run: npm ci
+      - name: Do build-dist
+        run: npm run build-dist
+      - name: Compress .dist
+        run: |-
+          tar -cvf workspace/design-system-dist.tar .dist/
+          cd .dist && zip -r dist . && mv dist.zip ../workspace/ && cd ..
+      - uses: actions/upload-artifact@v2
+        with:
+          path: |-
+            workspace/design-system-dist.tar
+            workspace/dist.zip
+
+  publish-site:
+    runs-on: ubuntu-latest
+    needs:
+      - framework-build
+
+    steps:
+      - uses: tibdex/github-app-token@v1
+        id: get_installation_token
+        with:
+          app_id: 244972
+          private_key: ${{ secrets.DSE_CI_APP_KEY }}
+
+      - name: Checkout design-system-site
+        uses: actions/checkout@v2
+        with:
+          repository: salesforce-ux/design-system-site
+          ref: main
+          token: ${{ steps.get_installation_token.outputs.token }}
+
+      - name: Display structure of downloaded files
+        run: ls -la
+
+      - uses: actions/download-artifact@v2
+        with:
+          path: workspace
+
+      - name: Display structure of downloaded files
+        run: ls -R
+        working-directory: workspace
+
+      - name: Decompress SLDS .dist
+        run: |-
+          mkdir -p .slds
+          tar -xvf workspace/artifact/design-system-dist.tar --directory .slds
+
+      - uses: actions/setup-node@v3
+        with:
+          cache: 'npm'
+      - run: npm ci
+      - shell: bash
+        run: |-
+          if [[ $(command -v heroku) == "" ]]; then
+            curl https://cli-assets.heroku.com/install.sh | sh
+          else
+            echo "Heroku is already installed. No operation was performed."
+          fi
+      - name: Install Heroku Build CLI plugin
+        run: heroku plugins:install heroku-builds
+      - name: Build static site
+        run: npm run build
+        env:
+          SLDS__FRAMEWORK__PATH: ".slds/.dist/"
+      - name: Display structure of downloaded files
+        run: ls -la
+      - name: Generate site tarball
+        run: tar -czvf site-next.tar.gz .www/ Procfile config/nginx.conf.erb heroku-start.sh app.json
+      - name: Deploy to Heroku app
+        run: |-
+          export HEROKU_APP_NAME=$(cat workspace/artifact/heroku-app-name.txt)
+          echo "=============================="
+          echo ${HEROKU_APP_NAME}
+          echo "=============================="
+          heroku buildpacks -a ${HEROKU_APP_NAME} | grep "https://github.com/salesforce-ux/heroku-buildpack-nginx.git#dse" || heroku buildpacks:set https://github.com/salesforce-ux/heroku-buildpack-nginx.git#dse -a ${HEROKU_APP_NAME}
+          heroku builds:create --source-tar site-next.tar.gz -a ${HEROKU_APP_NAME}
+      - name: Set Github deployments to "success"
+        env:
+          GITHUB_TOKEN: ${{ steps.get_installation_token.outputs.token }}
+        run: |-
+          for row in $(jq -r '.[] | select(.url | contains("review-site")) | @base64' workspace/gh-deployments.json); do
+            export STATUS_URL=$(echo ${row} | base64 --decode | jq -r ".status" | sed 's/https:\/\/api.github.com//')
+            export SITE_URL=$(echo ${row} | base64 --decode | jq -r ".url")
+            gh api ${STATUS_URL} -f state=success -f environment_url=${SITE_URL} -H "Accept: application/vnd.github.ant-man-preview+json"
+          done

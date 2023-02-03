@@ -15,7 +15,7 @@ env:
 
 jobs:
   vrt-init:
-    if: ${{ github.event.label.name == 'vrt:chrome-ready' || github.event.label.name == 'vrt:full-ready'}}
+    if: ${{ github.event.label.name == 'vrt:chrome-ready' || github.event.label.name == 'vrt:mobile-ready' || github.event.label.name == 'vrt:full-ready'}}
     runs-on: ubuntu-latest
 
     steps:
@@ -36,6 +36,7 @@ jobs:
           cache: 'npm'
 
   vrt-desktop:
+    if: ${{ github.event.label.name == 'vrt:full-ready' || github.event.label.name == 'vrt:chrome-ready'}}
     needs: vrt-init
     runs-on: ubuntu-latest
 
@@ -96,7 +97,7 @@ jobs:
         timeout-minutes: 20
 
   vrt-mobile:
-    if: ${{ github.event.label.name == 'vrt:full-ready'}}
+    if: ${{ github.event.label.name == 'vrt:full-ready' || github.event.label.name == 'vrt:mobile-ready'}}
     needs: vrt-init
     runs-on: ubuntu-latest
 

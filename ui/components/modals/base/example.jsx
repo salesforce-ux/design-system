@@ -14,6 +14,27 @@ import ButtonIcon from '../../button-icons/';
 
 export const exampleDemoStyles = 'height: 640px;';
 
+const PlaceholderParagraphs = () => {
+  return [
+    <p key="first-p">
+      Sit nulla est ex deserunt exercitation anim occaecat. Nostrud ullamco
+      deserunt aute id consequat veniam incididunt duis in sint irure nisi.
+      Mollit officia cillum Lorem ullamco minim nostrud elit officia tempor
+      esse quis. Cillum sunt ad dolore quis aute consequat ipsum magna
+      exercitation reprehenderit magna. Tempor cupidatat consequat elit
+      dolor adipisicing.
+    </p>,
+    <p key="second-p">
+      Dolor eiusmod sunt ex incididunt cillum quis nostrud velit duis sit
+      officia. Lorem aliqua enim laboris do dolor eiusmod officia. Mollit
+      incididunt nisi consectetur esse laborum eiusmod pariatur proident.
+      Eiusmod et adipisicing culpa deserunt nostrud ad veniam nulla aute
+      est. Labore esse esse cupidatat amet velit id elit consequat minim
+      ullamco mollit enim excepteur ea.
+    </p>
+  ];
+};
+
 export let Backdrop = (props) => {
   return (
     <Fragment>
@@ -37,7 +58,9 @@ export let Modal = (props) => (
       {
         props.closeButton !== false ? (
           <ButtonIcon
-            className="slds-modal__close slds-button_icon-inverse"
+            className={classNames('slds-modal__close',
+            {'slds-button_icon-inverse': props.closeButtonInverse }
+            )}
             iconClassName="slds-button__icon_large"
             symbol="close"
             assistiveText="Cancel and close"
@@ -52,11 +75,13 @@ export let Modal = (props) => (
 Modal.propTypes = {
   tabIndex: PropTypes.oneOf(['-1', '0']),
   closeButtonDisabled: PropTypes.bool,
+  closeButtonInverse: PropTypes.bool,
 };
 
 Modal.defaultProps = {
   tabIndex: '-1',
   closeButtonDisabled: false,
+  closeButtonInverse: true,
 };
 
 export let ModalHeader = (props) => (
@@ -158,8 +183,11 @@ export let ModalSizes = (props) => (
       className={classNames(
         props.size === 'small' && 'slds-modal_small',
         props.size === 'medium' && 'slds-modal_medium',
-        props.size === 'large' && 'slds-modal_large'
+        props.size === 'large' && 'slds-modal_large',
+        props.size === 'full' &&
+        'slds-modal_full'
       )}
+      closeButtonInverse={props.size !== 'full'}
       aria-labelledby="modal-heading-01"
     >
       <ModalHeader>
@@ -167,23 +195,15 @@ export let ModalSizes = (props) => (
           Modal header
         </h1>
       </ModalHeader>
-      <ModalContent className="slds-p-around_medium">
-        <p>
-          Sit nulla est ex deserunt exercitation anim occaecat. Nostrud ullamco
-          deserunt aute id consequat veniam incididunt duis in sint irure nisi.
-          Mollit officia cillum Lorem ullamco minim nostrud elit officia tempor
-          esse quis. Cillum sunt ad dolore quis aute consequat ipsum magna
-          exercitation reprehenderit magna. Tempor cupidatat consequat elit
-          dolor adipisicing.
-        </p>
-        <p>
-          Dolor eiusmod sunt ex incididunt cillum quis nostrud velit duis sit
-          officia. Lorem aliqua enim laboris do dolor eiusmod officia. Mollit
-          incididunt nisi consectetur esse laborum eiusmod pariatur proident.
-          Eiusmod et adipisicing culpa deserunt nostrud ad veniam nulla aute
-          est. Labore esse esse cupidatat amet velit id elit consequat minim
-          ullamco mollit enim excepteur ea.
-        </p>
+      <ModalContent className={classNames(
+        props.size === 'full' && 'slds-modal_full-content slds-p-around_medium'
+      )}
+      >
+        <PlaceholderParagraphs />
+        <br />
+        <PlaceholderParagraphs />
+        <br />
+        <PlaceholderParagraphs />
       </ModalContent>
       <ModalFooter>
         <button className="slds-button slds-button_neutral" aria-label="Cancel and close">Cancel</button>
@@ -194,7 +214,111 @@ export let ModalSizes = (props) => (
 );
 
 ModalSizes.propTypes = {
-  size: PropTypes.oneOf(['small', 'medium', 'large']),
+  size: PropTypes.oneOf(['small', 'medium', 'large', 'full']),
+};
+
+export let FullTaglines = (props) => (
+  <Backdrop>
+    <Modal
+      aria-labelledby="modal-heading-01"
+      className={classNames(
+        props.size === 'full' &&
+        'slds-modal_full'
+      )}
+      closeButtonInverse={props.size !== 'full'}>
+      <ModalHeader>
+        <h1 id="modal-heading-01" className="slds-modal__title slds-hyphenate">
+          Modal header
+        </h1>
+        <p className="slds-m-top_x-small">
+          Here&rsquo;s a tagline if you need it. It is allowed to extend across
+          mulitple lines, so I&rsquo;m making up content to show that to you. It
+          is allowed to{' '}
+          <a href="#" onClick={(e) => e.preventDefault()}>
+            contain links or be a link
+          </a>
+          .
+        </p>
+      </ModalHeader>
+      <ModalContent className={classNames(
+        props.size === 'full' && 'slds-modal_full-content slds-p-around_medium'
+      )}>
+        <PlaceholderParagraphs />
+      </ModalContent>
+      <ModalFooter>
+        <button className="slds-button slds-button_neutral" aria-label="Cancel and close">Cancel</button>
+        <button className="slds-button slds-button_brand">Save</button>
+      </ModalFooter>
+    </Modal>
+  </Backdrop>
+);
+
+FullTaglines.propTypes = {
+  size: PropTypes.oneOf(['small', 'medium', 'large', 'full']),
+};
+
+export let FullHeadless = (props) => (
+  <Backdrop>
+    <Modal
+      className={classNames(
+        props.size === 'full' &&
+        'slds-modal_full'
+      )}
+      aria-labelledby="modal-heading-01"
+      closeButtonInverse={props.size !== 'full'}
+    >
+      <ModalContent className={classNames(
+        props.size === 'full' && 'slds-modal_full-content slds-p-around_medium slds-modal__content_headless'
+      )}
+      >
+        <PlaceholderParagraphs />
+        <br />
+        <PlaceholderParagraphs />
+        <br />
+        <PlaceholderParagraphs />
+      </ModalContent>
+      <ModalFooter>
+        <button className="slds-button slds-button_neutral" aria-label="Cancel and close">Cancel</button>
+        <button className="slds-button slds-button_brand">Save</button>
+      </ModalFooter>
+    </Modal>
+  </Backdrop>
+);
+
+FullHeadless.propTypes = {
+  size: PropTypes.oneOf(['small', 'medium', 'large', 'full']),
+};
+
+export let FullFootless = (props) => (
+  <Backdrop>
+    <Modal
+      className={classNames(
+        props.size === 'full' &&
+        'slds-modal_full'
+      )}
+      aria-labelledby="modal-heading-01"
+      closeButtonInverse={props.size !== 'full'}
+    >
+      <ModalHeader>
+        <h1 id="modal-heading-01" className="slds-modal__title slds-hyphenate" tabindex="-1">
+          Modal header
+        </h1>
+      </ModalHeader>
+      <ModalContent className={classNames(
+        props.size === 'full' && 'slds-modal_full-content slds-p-around_medium'
+      )}>
+        <PlaceholderParagraphs />
+        <br />
+        <PlaceholderParagraphs />
+        <br />
+        <PlaceholderParagraphs />
+      </ModalContent>
+    </Modal>
+  </Backdrop>
+);
+
+FullFootless.propTypes = {
+  size: PropTypes.oneOf(['small', 'medium', 'large', 'full']),
 };
 
 export let Directional = (props) => (
@@ -525,6 +649,30 @@ export default [
 ];
 
 export const examples = [
+  {
+    id: 'full',
+    label: 'Full',
+    demoStyles: exampleDemoStyles,
+    element: <ModalSizes size="full" />,
+  },
+  {
+    id: 'full-tagline',
+    label: 'Full Tagline',
+    demoStyles: exampleDemoStyles,
+    element: <FullTaglines size="full" />,
+  },
+  {
+    id: 'full-headless',
+    label: 'Full Headless',
+    demoStyles: exampleDemoStyles,
+    element: <FullHeadless size="full" />,
+  },
+  {
+    id: 'full-footless',
+    label: 'Full Footless',
+    demoStyles: exampleDemoStyles,
+    element: <FullFootless size="full" />,
+  },
   {
     id: 'taglines',
     label: 'Taglines',

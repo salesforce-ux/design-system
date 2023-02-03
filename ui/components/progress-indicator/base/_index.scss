@@ -99,7 +99,7 @@
   &.slds-is-completed .slds-progress__marker,
   &.slds-is-active .slds-progress__marker {
     background: var(--slds-g-color-neutral-base-100, #{$progress-color-background});
-    border-color: var(--slds-g-color-brand-base-60, #{$progress-color-border-active});
+    border-color: var(--slds-g-color-brand-base-50, #{$progress-color-border-active});
   }
 
   /**

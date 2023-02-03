@@ -11,4 +11,5 @@ jobs:
         with:
           labels: |
             vrt:chrome-ready
+            vrt:mobile-ready
             vrt:full-ready

@@ -36,7 +36,7 @@ module.exports = {
   browser: [
     {
       iosDeviceInfo: {
-        deviceName: "iPhone XR",
+        deviceName: "iPhone 13",
         screenOrientation: "portrait",
       },
     },

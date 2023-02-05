@@ -9,7 +9,7 @@
 
 ### Added
 
-- Added `Aria-label` to meet accessibility requirements.
+- Added `aria-label` to meet accessibility requirements specifically for screen readers.
 
 ## 2.16.0
 

@@ -5,8 +5,8 @@
 <!-- ## [Unreleased] -->
 
 ## 2.21.0
-### Added 
--Added `aria-label` to meet accessibility requirements specifically for screen readers.
+### Fixed  
+-fixed `aria-labelledby` to meet accessibility requirements specifically for screen readers.
 
 ## 2.21.0
 ### Changed

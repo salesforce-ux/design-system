@@ -9,7 +9,7 @@
 
 ### Added
 
-- Added `aria-label` to meet accessibility requirements specifically for screen readers.
+- Added `aria-label` for deprecated picklist examples to meet accessibility requirements.
 
 ## 2.16.0
 

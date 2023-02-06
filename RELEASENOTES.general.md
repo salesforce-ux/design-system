@@ -3,7 +3,8 @@
 
 
 ## 2.21.0 - Upcoming
-
+#### Fixed
+- changed anchor link ouline border black color to blue-50
 ## 2.20.1 - December 16, 2022
 
 - Updated colors for various components:

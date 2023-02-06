@@ -2,7 +2,7 @@
 
 # Progress Bar Release Notes
 
-## 2.20.0
+## 2.21.0
 
 ### Added
 

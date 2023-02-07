@@ -6,7 +6,7 @@
 
 ## 2.21.0
 ### Fixed  
--fixed `aria-labelledby` to meet accessibility requirements specifically for screen readers.
+- Fixed `aria-labelledby` to meet accessibility requirements specifically for screen readers.
 
 ## 2.21.0
 ### Changed

@@ -3,8 +3,9 @@
 
 ## Release 2.21.0 - Upcoming
 
-#### Fixed
-- changed anchor link ouline border black color to blue-50
+## Fixed
+- Changed anchor link ouline border black color to blue-50
+
 ## Components
 ### [Modals](https://www.lightningdesignsystem.com/components/modals)
 #### Changed

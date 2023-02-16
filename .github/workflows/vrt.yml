@@ -1,4 +1,4 @@
-name: Trigger VRT from Label
+name: VRT Triggered from Label
 
 on:
   pull_request:
@@ -63,7 +63,7 @@ jobs:
 
       - name: Applitools
         run: 'VRT_MODE=${{ env.VRT_MODE }} npx eyes-storybook'
-        timeout-minutes: 20
+        timeout-minutes: 30
 
   vrt-legacy:
     if: ${{ github.event.label.name == 'vrt:full-ready'}}
@@ -94,7 +94,7 @@ jobs:
 
       - name: Applitools
         run: 'STORYBOOK_SLDS_VERSION=legacy npx eyes-storybook --conf applitools.legacy.config.js' # -u https://${REVIEW_APP_NAME}.herokuapp.com
-        timeout-minutes: 20
+        timeout-minutes: 30
 
   vrt-mobile:
     if: ${{ github.event.label.name == 'vrt:full-ready' || github.event.label.name == 'vrt:mobile-ready'}}
@@ -125,7 +125,7 @@ jobs:
 
       - name: Applitools
         run: 'STORYBOOK_SLDS_VERSION=mobile npx eyes-storybook --conf applitools.mobile.config.js' # -u https://${REVIEW_APP_NAME}.herokuapp.com
-        timeout-minutes: 20
+        timeout-minutes: 30
 
   vrt-wrap:
     needs: [vrt-desktop, vrt-legacy, vrt-mobile]

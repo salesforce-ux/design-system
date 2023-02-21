@@ -18,6 +18,7 @@ export const ListboxWrapper = props => (
     className={props.className}
     role="listbox"
     aria-orientation={props.horizontal || props.inline ? 'horizontal' : null}
+    aria-label = {props.ariaLabel}
   >
     {props.children}
   </div>
@@ -372,6 +373,7 @@ export class Listbox extends Component {
     return (
       <ListboxWrapper
         id={id}
+        ariaLabel='Menu Items'
         className={classNames(
           { 'slds-dropdown': !staticListbox },
           type === 'entity'

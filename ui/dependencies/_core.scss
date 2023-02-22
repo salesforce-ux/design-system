@@ -97,7 +97,7 @@
     }
 
     &:focus-visible {
-      outline-color: var(--slds-g-color-palette-blue-50,#0176d3);
+      outline-color: var(--slds-g-color-palette-blue-50, #{$palette-blue-50});
     }
   }
 

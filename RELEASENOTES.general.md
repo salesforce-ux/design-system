@@ -4,6 +4,8 @@
 
 ## 2.21.0 - Upcoming
 
+- Updated background colors for Standard and Actions icons
+
 ## 2.20.1 - December 16, 2022
 
 - Updated colors for various components:

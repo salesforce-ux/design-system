@@ -999,3 +999,21 @@ props:
     value: '#22683E'
   YOUR_ACCOUNT:
     value: '#1B96FF'
+  BILL_OF_MATERIALS:
+    value: '#FF5D2D'
+  BUYER_GROUP_QUALIFIER:
+    value: '#22683E'
+  DATASHARE_TARGET:
+    value: '#FF538A'
+  DATASHARES:
+    value: '#9602C7'
+  DISCLOSURE_AND_COMPLIANCE:
+    value: '#06A59A'
+  DOCUMENT_PREVIEW:
+    value: '#B60554'
+  FACILITY_BED:
+    value: '#FF538A'
+  MARKET:
+    value: '#22683E'
+  PRICE_SHEET:
+    value: '#3BA755'

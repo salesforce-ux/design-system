@@ -4,6 +4,42 @@
 
 ## 2.21.0 - Upcoming
 
+- Updated background colors for Standard and Actions icons
+- Updated icons to `v10.5.6`
+  - Standard Set:
+    - Added `bill_of_materials`
+    - Added `buyer_group_qualifier`
+    - Added `datashare_target`
+    - Added `datashares`
+    - Added `disclosure_and_compliance`
+    - Added `document_preview`
+    - Added `facility_bed`
+    - Added `market`
+    - Added `price_sheet`
+
+  - Utility Set:
+    - Added `add_source`
+    - Added `app_web_messaging`
+    - Added `bookmark_stroke`
+    - Added `buyer_group_qualifier`
+    - Added `document_preview`
+    - Added `expired`
+    - Added `favorite_alt`
+    - Added `heart`
+    - Added `hourglass`
+    - Added `integration`
+    - Added `market`
+    - Added `more`
+    - Added `notification_off`
+    - Added `notification_snoozed`
+    - Added `profile_alt`
+    - Added `promotion_tiers`
+    - Added `sender_email`
+    - Added `service_appointment`
+    - Added `service_report`
+    - Added `toggle_off`
+    - Added `toggle_on`
+
 ## 2.20.1 - December 16, 2022
 
 - Updated colors for various components:

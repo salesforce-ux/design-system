@@ -4,12 +4,13 @@
 import React from 'react';
 import classNames from 'classnames';
 import { FormElement } from '../../form-element';
-
+import uniqueId from 'lodash.uniqueid';
 /* -----------------------------------------------------------------------------
     Variables
 ----------------------------------------------------------------------------- */
 
-const sliderId = 'slider-id-01';
+
+const errorMessageId = uniqueId('error-message-id-');
 
 /* -----------------------------------------------------------------------------
     Private
@@ -24,51 +25,60 @@ const SliderLabel = props => (
   </span>
 );
 
-export const Slider = props => (
-  <div className={classNames('slds-slider', props.className)}>
-    <input
-      aria-describedby={props['aria-describedby']}
-      id={props.id || sliderId}
-      className="slds-slider__range"
-      type="range"
-      defaultValue={props.value}
-      min={props.min}
-      max={props.max}
-      step={props.step}
-      disabled={props.disabled}
-    />
-    <span className="slds-slider__value" aria-hidden="true">
-      {props.value}
-    </span>
-  </div>
-);
+export const Slider = (props) => {
+  return (
+    <div className={classNames('slds-slider', props.className)}>
+      <input
+        aria-describedby={props['aria-describedby']}
+        id={props.id || uniqueId('slider-id-')}
+        className="slds-slider__range"
+        type="range"
+        defaultValue={props.value}
+        min={props.min}
+        max={props.max}
+        step={props.step}
+        disabled={props.disabled}
+      />
+      <span className="slds-slider__value" aria-hidden="true">
+        {props.value}
+      </span>
+    </div>
+  );
+};
 
 /* -----------------------------------------------------------------------------
     Exports
 ----------------------------------------------------------------------------- */
 
 // Default
-
+let newDefaultid = uniqueId('slider-id-');
 export default [
   {
     id: 'default',
     label: 'Default',
     element: (
-      <FormElement labelContent={<SliderLabel />} inputId={sliderId}>
-        <Slider value="50" />
+      <FormElement
+        labelContent={<SliderLabel id={newDefaultid} />}
+        inputId={newDefaultid}
+      >
+        <Slider value="50" id={newDefaultid} />
       </FormElement>
     )
   }
 ];
 
 // States
+let newStateId = uniqueId('slider-id-');
 export let states = [
   {
     id: 'disabled',
     label: 'Disabled',
     element: (
-      <FormElement labelContent={<SliderLabel />} inputId={sliderId}>
-        <Slider value="50" disabled />
+      <FormElement
+        labelContent={<SliderLabel id={newStateId} />}
+        inputId={newStateId}
+      >
+        <Slider value="50" disabled id={newStateId} />
       </FormElement>
     )
   },
@@ -77,10 +87,10 @@ export let states = [
     label: 'Value: 0',
     element: (
       <FormElement
-        labelContent={<SliderLabel min="0" max="100" />}
-        inputId={sliderId}
+        labelContent={<SliderLabel id={newStateId} min="0" max="100" />}
+        inputId={newStateId}
       >
-        <Slider value="0" />
+        <Slider value="0" id={newStateId} />
       </FormElement>
     )
   },
@@ -89,10 +99,10 @@ export let states = [
     label: 'Value: 25',
     element: (
       <FormElement
-        labelContent={<SliderLabel min="0" max="100" />}
-        inputId={sliderId}
+        labelContent={<SliderLabel id={newStateId} min="0" max="100" />}
+        inputId={newStateId}
       >
-        <Slider value="25" />
+        <Slider value="25" id={newStateId} />
       </FormElement>
     )
   },
@@ -101,10 +111,10 @@ export let states = [
     label: 'Value: 50',
     element: (
       <FormElement
-        labelContent={<SliderLabel min="0" max="100" />}
-        inputId={sliderId}
+        labelContent={<SliderLabel id={newStateId} min="0" max="100" />}
+        inputId={newStateId}
       >
-        <Slider value="50" />
+        <Slider value="50" id={newStateId} />
       </FormElement>
     )
   },
@@ -113,10 +123,10 @@ export let states = [
     label: 'Value: 75',
     element: (
       <FormElement
-        labelContent={<SliderLabel min="0" max="100" />}
-        inputId={sliderId}
+        labelContent={<SliderLabel id={newStateId} min="0" max="100" />}
+        inputId={newStateId}
       >
-        <Slider value="75" />
+        <Slider value="75" id={newStateId} />
       </FormElement>
     )
   },
@@ -125,26 +135,27 @@ export let states = [
     label: 'Value: 100',
     element: (
       <FormElement
-        labelContent={<SliderLabel min="0" max="100" />}
-        inputId={sliderId}
+        labelContent={<SliderLabel id={newStateId} min="0" max="100" />}
+        inputId={newStateId}
       >
-        <Slider value="100" />
+        <Slider value="100" id={newStateId} />
       </FormElement>
     )
   }
 ];
 
 // Examples
+let newExampleId = uniqueId('slider-id-');
 export let examples = [
   {
     id: 'min-max',
     label: 'Min/Max Range',
     element: (
       <FormElement
-        labelContent={<SliderLabel min="0" max="400" />}
-        inputId={sliderId}
+        labelContent={<SliderLabel id={newExampleId} min="0" max="400" />}
+        inputId={newExampleId}
       >
-        <Slider value="200" min="0" max="400" />
+        <Slider value="200" min="0" max="400" id={newExampleId} />
       </FormElement>
     )
   },
@@ -153,10 +164,10 @@ export let examples = [
     label: 'Min/Max Range with Steps',
     element: (
       <FormElement
-        labelContent={<SliderLabel min="0" max="400" />}
-        inputId={sliderId}
+        labelContent={<SliderLabel id={newExampleId} min="0" max="400" />}
+        inputId={newExampleId}
       >
-        <Slider value="200" min="0" max="400" step="100" />
+        <Slider value="200" min="0" max="400" step="100" id={newExampleId} />
       </FormElement>
     )
   },
@@ -164,8 +175,11 @@ export let examples = [
     id: 'width-x-small',
     label: 'Width: x-small',
     element: (
-      <FormElement labelContent={<SliderLabel />} inputId={sliderId}>
-        <Slider className="slds-size_x-small" value="50" />
+      <FormElement
+        labelContent={<SliderLabel id={newExampleId} />}
+        inputId={newExampleId}
+      >
+        <Slider className="slds-size_x-small" value="50" id={newExampleId} />
       </FormElement>
     )
   },
@@ -173,8 +187,11 @@ export let examples = [
     id: 'width-small',
     label: 'Width: small',
     element: (
-      <FormElement labelContent={<SliderLabel />} inputId={sliderId}>
-        <Slider className="slds-size_small" value="50" />
+      <FormElement
+        labelContent={<SliderLabel id={newExampleId} />}
+        inputId={newExampleId}
+      >
+        <Slider className="slds-size_small" value="50" id={newExampleId} />
       </FormElement>
     )
   },
@@ -182,8 +199,11 @@ export let examples = [
     id: 'width-medium',
     label: 'Width: medium',
     element: (
-      <FormElement labelContent={<SliderLabel />} inputId={sliderId}>
-        <Slider className="slds-size_medium" value="50" />
+      <FormElement
+        labelContent={<SliderLabel id={newExampleId} />}
+        inputId={newExampleId}
+      >
+        <Slider className="slds-size_medium" value="50" id={newExampleId} />
       </FormElement>
     )
   },
@@ -191,8 +211,11 @@ export let examples = [
     id: 'width-large',
     label: 'Width: large',
     element: (
-      <FormElement labelContent={<SliderLabel />} inputId={sliderId}>
-        <Slider className="slds-size_large" value="50" />
+      <FormElement
+        labelContent={<SliderLabel id={newExampleId} />}
+        inputId={newExampleId}
+      >
+        <Slider className="slds-size_large" value="50" id={newExampleId} />
       </FormElement>
     )
   },
@@ -200,13 +223,18 @@ export let examples = [
     id: 'error',
     label: 'Error',
     element: (
-      <FormElement hasError labelContent={<SliderLabel />} inputId={sliderId}>
+      <FormElement
+        hasError
+        labelContent={<SliderLabel id={newExampleId} />}
+        inputId={newExampleId}
+      >
         <Slider
-          aria-describedby="error-message"
+          aria-describedby={errorMessageId}
           className="slds-size_large"
           value="50"
+          id={newExampleId}
         />
-        <div id="error-message" className="slds-form-element__help">
+        <div id={errorMessageId} className="slds-form-element__help">
           There is a problem with this field
         </div>
       </FormElement>
@@ -216,8 +244,11 @@ export let examples = [
     id: 'vertical',
     label: 'Vertical',
     element: (
-      <FormElement labelContent={<SliderLabel />} inputId={sliderId}>
-        <Slider value="50" className="slds-slider_vertical" />
+      <FormElement
+        labelContent={<SliderLabel id={newExampleId} />}
+        inputId={newExampleId}
+      >
+        <Slider value="50" className="slds-slider_vertical" id={newExampleId} />
       </FormElement>
     )
   }

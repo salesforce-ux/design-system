@@ -4,6 +4,12 @@
 
 <!-- ## [Unreleased] -->
 
+## 2.21.0
+
+### Added
+
+- Added `role="presentation"` for overflow tab item.
+
 ## 2.19.0
 
 ### Added

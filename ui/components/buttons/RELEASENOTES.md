@@ -4,6 +4,12 @@
 
 <!-- ## [Unreleased] -->
 
+## 2.21.0
+
+### Added
+
+- Configured `--slds-c-button-text-color-hover` Styling hook in Button with dual-stateful to accurately apply the text color on-hover 
+
 ## 2.18.0
 
 ### Changed

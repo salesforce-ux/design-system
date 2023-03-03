@@ -11,6 +11,7 @@ export let examples = [
       <div
         className="slds-scrollable"
         style={{ height: '5rem', width: '24rem' }}
+        tabIndex="0"
       >
         <p>Scrollable Content Here</p>
         <div className="slds-text-longform" style={{ width: '150%' }}>
@@ -75,6 +76,7 @@ export let examples = [
       <div
         className="slds-scrollable_x"
         style={{ height: '5rem', width: '24rem' }}
+        tabIndex="0"
       >
         <p>Scrollable Content Here</p>
         <div className="slds-text-longform" style={{ width: '150%' }}>
@@ -107,6 +109,7 @@ export let examples = [
       <div
         className="slds-scrollable_y"
         style={{ height: '5rem', width: '24rem' }}
+        tabIndex="0"
       >
         <p>Scrollable Content Here</p>
         <div className="slds-text-longform">

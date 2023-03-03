@@ -196,6 +196,7 @@ export const SubtabOverflow = props => {
           'slds-is-unsaved': props.itemUnsaved
         }
       )}
+      role="presentation"
     >
       <div
         className={classNames(

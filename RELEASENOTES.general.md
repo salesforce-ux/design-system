@@ -3,7 +3,9 @@
 
 
 ## 2.21.0 - Upcoming
+## Fixed
 
+- Changed anchor link ouline border black color to blue-50
 - Updated background colors for Standard and Actions icons
 - Updated icons to `v10.5.6`
   - Standard Set:

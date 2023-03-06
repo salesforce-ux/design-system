@@ -2,6 +2,12 @@
 
 # Slider Release Notes
 
+## 2.21.0
+
+### Added
+
+- Added unique id to fix duplicate-id-aria wcag issue
+
 <!-- ## [Unreleased] -->
 
 ## 2.17.0

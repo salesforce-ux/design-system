@@ -12,7 +12,7 @@
       "originalValue": "{!PALETTE_NEUTRAL_10}",
       "syntax": "<color>",
       "name": "color-neutral-10-opacity-10",
-      "value": "#1818181A",
+      "value": "rgba(24, 24, 24, 0.1)",
       "scope": "global",
       "cssProperties": [
         "background-color",
@@ -31,7 +31,7 @@
       "originalValue": "{!PALETTE_NEUTRAL_10}",
       "syntax": "<color>",
       "name": "color-neutral-10-opacity-25",
-      "value": "#18181840",
+      "value": "rgba(24, 24, 24, 0.25)",
       "scope": "global",
       "cssProperties": [
         "background-color",
@@ -50,7 +50,7 @@
       "originalValue": "{!PALETTE_NEUTRAL_10}",
       "syntax": "<color>",
       "name": "color-neutral-10-opacity-50",
-      "value": "#18181880",
+      "value": "rgba(24, 24, 24, 0.5)",
       "scope": "global",
       "cssProperties": [
         "background-color",
@@ -69,7 +69,7 @@
       "originalValue": "{!PALETTE_NEUTRAL_10}",
       "syntax": "<color>",
       "name": "color-neutral-10-opacity-75",
-      "value": "#181818BF",
+      "value": "rgba(24, 24, 24, 0.75)",
       "scope": "global",
       "cssProperties": [
         "background-color",
@@ -88,7 +88,7 @@
       "originalValue": "{!PALETTE_NEUTRAL_100}",
       "syntax": "<color>",
       "name": "color-neutral-100-opacity-10",
-      "value": "#FFFFFF1A",
+      "value": "rgba(255, 255, 255, 0.1)",
       "scope": "global",
       "cssProperties": [
         "background-color",
@@ -107,7 +107,7 @@
       "originalValue": "{!PALETTE_NEUTRAL_100}",
       "syntax": "<color>",
       "name": "color-neutral-100-opacity-25",
-      "value": "#FFFFFF40",
+      "value": "rgba(255, 255, 255, 0.25)",
       "scope": "global",
       "cssProperties": [
         "background-color",
@@ -126,7 +126,7 @@
       "originalValue": "{!PALETTE_NEUTRAL_100}",
       "syntax": "<color>",
       "name": "color-neutral-100-opacity-50",
-      "value": "#FFFFFF80",
+      "value": "rgba(255, 255, 255, 0.5)",
       "scope": "global",
       "cssProperties": [
         "background-color",
@@ -145,7 +145,7 @@
       "originalValue": "{!PALETTE_NEUTRAL_100}",
       "syntax": "<color>",
       "name": "color-neutral-100-opacity-75",
-      "value": "#FFFFFFBF",
+      "value": "rgba(255, 255, 255, 0.75)",
       "scope": "global",
       "cssProperties": [
         "background-color",

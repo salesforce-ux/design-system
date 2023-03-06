@@ -58,7 +58,7 @@
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: $color-background-image-overlay;
+    background-color: var(--slds-g-color-neutral-10-opacity-50, #{$color-background-image-overlay});
   }
 
   // Adds and vertically centers "preview" icon via base64
@@ -269,7 +269,7 @@
 .slds-file_overlay,
 .slds-file--overlay {
   content: '';
-  background: $color-background-image-overlay;
+  background: var(--slds-g-color-neutral-10-opacity-50, #{$color-background-image-overlay});
   color: var(--slds-g-color-neutral-base-100, #{$color-text-inverse});
   position: absolute;
   top: 0;
@@ -290,7 +290,7 @@
 .slds-file_card,
 .slds-file--card {
   background: var(--slds-g-color-neutral-base-100, #{$color-background-alt});
-  border: $border-width-thin solid rgba(0, 0, 0, 0.16);
+  border: $border-width-thin solid var(--slds-g-color-neutral-10-opacity-10, rgba(0, 0, 0, 0.16));
 }
 
 /**
@@ -413,7 +413,7 @@
   */
 .slds-image__title_scrim,
 .slds-file__title_scrim {
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
+  background: linear-gradient(to bottom, transparent, var(--slds-g-color-neutral-10-opacity-50, rgba(0, 0, 0, 0.5)));
   position: absolute;
   bottom: 0;
   left: 0;

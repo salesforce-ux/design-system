@@ -332,7 +332,7 @@ a.slds-button--inverse:focus {
   @include button-shape(inverse, true);
 
   /*! @css-var-fallback background-color */
-  --slds-c-button-color-background: var(--slds-c-button-inverse-color-background, var(--sds-c-button-inverse-color-background, #{$color-background-button-inverse}));
+  --slds-c-button-color-background: var(--slds-c-button-inverse-color-background, var(--sds-c-button-inverse-color-background, transparent));
 
   /*! @css-var-fallback border-color */
   --slds-c-button-color-border: var(--slds-c-button-inverse-color-border, var(--sds-c-button-inverse-color-border, var(--slds-g-color-border-base-4, #{$button-color-border-primary})));
@@ -357,8 +357,8 @@ a.slds-button--inverse:focus {
   &[disabled],
   &:disabled {
     // @todo: global shared disabled button hooks
-    background-color: $color-background-button-inverse-disabled;
-    border-color: $color-border-button-inverse-disabled;
+    background-color: transparent;
+    border-color: var(--slds-g-color-neutral-100-opacity-10, #{$color-border-button-inverse-disabled});
   }
 }
 
@@ -397,7 +397,7 @@ a.slds-button--inverse:focus {
   &[disabled],
   &:disabled {
     // Make sure disabled buttons don't inherit hover states
-    color: $color-text-button-inverse-disabled;
+    color: var(--slds-g-color-neutral-100-opacity-50, #{$color-text-button-inverse-disabled});
   }
 }
 

@@ -5,6 +5,7 @@
 ## 2.21.0 - Upcoming
 ## Fixed
 
+- Update transparency values (rgba and design tokens) with transparent SLDS global styling hooks
 - Changed anchor link ouline border black color to blue-50
 - Updated background colors for Standard and Actions icons
 - Updated icons to `v10.5.6`

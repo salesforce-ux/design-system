@@ -208,7 +208,8 @@
   right: 0;
   bottom: 0;
   left: 0;
-  background: var(--slds-c-backdrop-color-background, var(--sds-c-backdrop-color-background, $color-background-temp-modal-tint));
+  background: var(--slds-c-backdrop-color-background, var(--sds-c-backdrop-color-background,
+    var(--slds-g-color-neutral-10-opacity-50, #{$color-background-temp-modal-tint})));
   z-index: $z-index-modal;
 
   /**
@@ -353,13 +354,13 @@
 
       &[disabled],
       &:disabled {
-        background-color: $color-background-button-inverse-disabled;
-        border-color: $color-border-button-inverse-disabled;
+        background-color: transparent;
+        border-color: var(--slds-g-color-neutral-100-opacity-10, #{$color-border-button-inverse-disabled});
       }
 
       &:hover,
       &:focus {
-        color: $color-text-link-inverse-hover;
+        color: var(--slds-g-color-neutral-100-opacity-75, #{$color-text-link-inverse-hover});
       }
 
       &:focus {
@@ -367,12 +368,12 @@
       }
 
       &:active {
-        color: $color-text-link-inverse-active;
+        color: var(--slds-g-color-neutral-100-opacity-50, #{$color-text-link-inverse-active});
       }
 
       &[disabled],
       &:disabled {
-        color: $color-text-link-inverse-disabled;
+        color: var(--slds-g-color-neutral-100-opacity-10, #{$color-text-link-inverse-disabled});
       }
     }
   }

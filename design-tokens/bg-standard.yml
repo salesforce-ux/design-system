@@ -1017,3 +1017,5 @@ props:
     value: '#22683E'
   PRICE_SHEET:
     value: '#3BA755'
+  MULESOFT:
+    value: '#1B96FF'

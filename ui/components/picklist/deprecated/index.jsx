@@ -27,7 +27,7 @@ export const ListboxDeprecated = props => (
   <div
     className={classNames('slds-dropdown', props.className)}
     role="listbox"
-    aria-label="{{Dropdown Menu Options}}"
+    aria-label="{{Placeholder for Dropdown Menu Options}}"
     tabIndex="0"
   >
     {props.children}

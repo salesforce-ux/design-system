@@ -1,0 +1,164 @@
+{
+  "aliases": {
+    "PALETTE_NEUTRAL_10": {
+      "value": "#181818"
+    },
+    "PALETTE_NEUTRAL_100": {
+      "value": "#FFFFFF"
+    }
+  },
+  "props": {
+    "color-neutral-10-opacity-10": {
+      "originalValue": "{!PALETTE_NEUTRAL_10}",
+      "syntax": "<color>",
+      "name": "color-neutral-10-opacity-10",
+      "value": "rgba(24, 24, 24, 0.1)",
+      "scope": "global",
+      "cssProperties": [
+        "background-color",
+        "color",
+        "border-color",
+        "fill"
+      ],
+      "inherits": true,
+      "type": "color",
+      "namespace": "slds",
+      "category": "transparent",
+      "comment": "Neutral Base 10 with 10% opacity.",
+      "group": "theme"
+    },
+    "color-neutral-10-opacity-25": {
+      "originalValue": "{!PALETTE_NEUTRAL_10}",
+      "syntax": "<color>",
+      "name": "color-neutral-10-opacity-25",
+      "value": "rgba(24, 24, 24, 0.25)",
+      "scope": "global",
+      "cssProperties": [
+        "background-color",
+        "color",
+        "border-color",
+        "fill"
+      ],
+      "inherits": true,
+      "type": "color",
+      "namespace": "slds",
+      "category": "transparent",
+      "comment": "Neutral Base 10 with 25% opacity.",
+      "group": "theme"
+    },
+    "color-neutral-10-opacity-50": {
+      "originalValue": "{!PALETTE_NEUTRAL_10}",
+      "syntax": "<color>",
+      "name": "color-neutral-10-opacity-50",
+      "value": "rgba(24, 24, 24, 0.5)",
+      "scope": "global",
+      "cssProperties": [
+        "background-color",
+        "color",
+        "border-color",
+        "fill"
+      ],
+      "inherits": true,
+      "type": "color",
+      "namespace": "slds",
+      "category": "transparent",
+      "comment": "Neutral Base 10 with 50% opacity.",
+      "group": "theme"
+    },
+    "color-neutral-10-opacity-75": {
+      "originalValue": "{!PALETTE_NEUTRAL_10}",
+      "syntax": "<color>",
+      "name": "color-neutral-10-opacity-75",
+      "value": "rgba(24, 24, 24, 0.75)",
+      "scope": "global",
+      "cssProperties": [
+        "background-color",
+        "color",
+        "border-color",
+        "fill"
+      ],
+      "inherits": true,
+      "type": "color",
+      "namespace": "slds",
+      "category": "transparent",
+      "comment": "Neutral Base 10 with 75% opacity.",
+      "group": "theme"
+    },
+    "color-neutral-100-opacity-10": {
+      "originalValue": "{!PALETTE_NEUTRAL_100}",
+      "syntax": "<color>",
+      "name": "color-neutral-100-opacity-10",
+      "value": "rgba(255, 255, 255, 0.1)",
+      "scope": "global",
+      "cssProperties": [
+        "background-color",
+        "color",
+        "border-color",
+        "fill"
+      ],
+      "inherits": true,
+      "type": "color",
+      "namespace": "slds",
+      "category": "transparent",
+      "comment": "Neutral Base 100 with 10% opacity.",
+      "group": "theme"
+    },
+    "color-neutral-100-opacity-25": {
+      "originalValue": "{!PALETTE_NEUTRAL_100}",
+      "syntax": "<color>",
+      "name": "color-neutral-100-opacity-25",
+      "value": "rgba(255, 255, 255, 0.25)",
+      "scope": "global",
+      "cssProperties": [
+        "background-color",
+        "color",
+        "border-color",
+        "fill"
+      ],
+      "inherits": true,
+      "type": "color",
+      "namespace": "slds",
+      "category": "transparent",
+      "comment": "Neutral Base 100 with 25% opacity.",
+      "group": "theme"
+    },
+    "color-neutral-100-opacity-50": {
+      "originalValue": "{!PALETTE_NEUTRAL_100}",
+      "syntax": "<color>",
+      "name": "color-neutral-100-opacity-50",
+      "value": "rgba(255, 255, 255, 0.5)",
+      "scope": "global",
+      "cssProperties": [
+        "background-color",
+        "color",
+        "border-color",
+        "fill"
+      ],
+      "inherits": true,
+      "type": "color",
+      "namespace": "slds",
+      "category": "transparent",
+      "comment": "Neutral Base 100 with 50% opacity.",
+      "group": "theme"
+    },
+    "color-neutral-100-opacity-75": {
+      "originalValue": "{!PALETTE_NEUTRAL_100}",
+      "syntax": "<color>",
+      "name": "color-neutral-100-opacity-75",
+      "value": "rgba(255, 255, 255, 0.75)",
+      "scope": "global",
+      "cssProperties": [
+        "background-color",
+        "color",
+        "border-color",
+        "fill"
+      ],
+      "inherits": true,
+      "type": "color",
+      "namespace": "slds",
+      "category": "transparent",
+      "comment": "Neutral Base 100 with 75% opacity.",
+      "group": "theme"
+    }
+  }
+}

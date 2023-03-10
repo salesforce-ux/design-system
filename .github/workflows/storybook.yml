@@ -14,7 +14,7 @@ env:
   # DSE_API_RELEASE_TOKEN:
   # GITHUB_PACKAGES_TOKEN:
   # GITHUB_TOKEN: ${{ github.token }}
-  HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
+  HEROKU_API_KEY: ${{ secrets.DSE_INFRA_HEROKU_API_KEY }}
 
 jobs:
   init:
@@ -142,6 +142,8 @@ jobs:
 
     - name: Build static Storybook
       run: npm run storybook:build
+      env:
+        NODE_OPTIONS: --openssl-legacy-provider # per https://candid.technology/error-error-0308010c-digital-envelope-routines-unsupported/
 
     - name: Archive static Storybook
       run: tar -czvf workspace/storybook.tar.gz .www/ Procfile config/nginx.conf.erb heroku-start.sh app.json
@@ -245,6 +247,9 @@ jobs:
       - run: npm ci
       - name: Do build-dist
         run: npm run build-dist
+        env:
+          NODE_OPTIONS: --openssl-legacy-provider # per https://candid.technology/error-error-0308010c-digital-envelope-routines-unsupported/
+
       - name: Compress .dist
         run: |-
           tar -cvf workspace/design-system-dist.tar .dist/
@@ -307,6 +312,8 @@ jobs:
         run: npm run build
         env:
           SLDS__FRAMEWORK__PATH: ".slds/.dist/"
+          NODE_OPTIONS: --openssl-legacy-provider # per https://candid.technology/error-error-0308010c-digital-envelope-routines-unsupported/
+
       - name: Display structure of downloaded files
         run: ls -la
       - name: Generate site tarball

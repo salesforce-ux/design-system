@@ -207,7 +207,7 @@ export const SubHeader = props => (
         <li
           className="slds-dropdown__header slds-truncate"
           title="Menu Sub Heading"
-          role="separator"
+          role="presentation"
         >
           <span>Menu Sub Heading</span>
         </li>
@@ -216,7 +216,7 @@ export const SubHeader = props => (
         <li
           className="slds-dropdown__header slds-truncate"
           title="Menu Sub Heading"
-          role="separator"
+          role="presentation"
         >
           <span>Menu Sub Heading</span>
         </li>

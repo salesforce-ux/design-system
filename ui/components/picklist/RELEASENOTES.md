@@ -13,7 +13,7 @@
 
 ### Added
 
-- Added `aria-label` for deprecated picklist examples to meet accessibility requirements.
+- Added `aria-label` for picklist examples to meet accessibility requirements.
 
 ## 2.16.0
 

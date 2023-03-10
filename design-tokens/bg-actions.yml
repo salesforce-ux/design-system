@@ -9,405 +9,405 @@ global:
   - background-color
 props:
   ACTION_CHANGE_OWNER:
-    value: '#54698d'
+    value: '#107CAD'
   ACTION_SHARE:
-    value: '#54698d'
+    value: '#107CAD'
   ACTION_INFO:
-    value: '#54698d'
+    value: '#107CAD'
   ACTION_UPLOAD:
-    value: '#54698d'
+    value: '#107CAD'
   ACTION_CHANGE_RECORD_TYPE:
-    value: '#54698d'
+    value: '#107CAD'
   ACTION_CHECK:
-    value: '#54698d'
+    value: '#107CAD'
   ACTION_DOWNLOAD:
-    value: '#54698d'
+    value: '#107CAD'
   ACTION_EDIT_RELATIONSHIP:
-    value: '#1dccbf'
+    value: '#06A59A'
   ACTION_FREEZE_USER:
-    value: '#54698d'
+    value: '#107CAD'
   ACTION_MANAGE_PERM_SETS:
-    value: '#54698d'
+    value: '#107CAD'
   ACTION_PASSWORD_UNLOCK:
-    value: '#54698d'
+    value: '#107CAD'
   ACTION_REFRESH:
-    value: '#54698d'
+    value: '#107CAD'
   ACTION_REMOVE:
-    value: '#54698d'
+    value: '#107CAD'
   ACTION_RESET_PASSWORD:
-    value: '#54698d'
+    value: '#107CAD'
   ACTION_USER_ACTIVATION:
-    value: '#54698d'
+    value: '#107CAD'
   ACTION_ADD_CONTACT:
-    value: '#A094ED'
+    value: '#9050E9'
   ACTION_APPROVAL:
-    value: '#00C6B7'
+    value: '#06A59A'
   ACTION_CANVAS:
-    value: '#8199AF'
+    value: '#107CAD'
   ACTION_GOAL:
-    value: '#56AADF'
+    value: '#1B96FF'
   ACTION_OPPORTUNITY_COMPETITOR:
-    value: '#FCB95B'
+    value: '#FF5D2D'
   ACTION_OPPORTUNITY_LINE_ITEM:
-    value: '#FCB95B'
+    value: '#FF5D2D'
   ACTION_OPPORTUNITY_TEAM_MEMBER:
-    value: '#FCB95B'
+    value: '#FF5D2D'
   ACTION_QUESTION_POST_ACTION:
-    value: '#32AF5C'
+    value: '#3BA755'
   ACTION_QUOTE:
-    value: '#88C651'
+    value: '#3BA755'
   ACTION_REJECT:
-    value: '#00C6B7'
+    value: '#06A59A'
   ACTION_SOCIAL_POST:
-    value: '#EA74A2'
+    value: '#FF538A'
   ACTION_FALLBACK:
-    value: '#9895EE'
+    value: '#5867E8'
   ACTION_EDIT:
-    value: '#1DCCBF'
+    value: '#06A59A'
   ACTION_DELETE:
-    value: '#E6717C'
+    value: '#FF538A'
   ACTION_CLONE:
-    value: '#6CA1E9'
+    value: '#1B96FF'
   ACTION_FOLLOW:
-    value: '#31B9F8'
+    value: '#1B96FF'
   ACTION_FOLLOWING:
-    value: '#7DCF64'
+    value: '#3BA755'
   ACTION_JOIN_GROUP:
-    value: '#779EF2'
+    value: '#5867E8'
   ACTION_LEAVE_GROUP:
-    value: '#F39E58'
+    value: '#FF5D2D'
   ACTION_EDIT_GROUPS:
-    value: '#34BECD'
+    value: '#06A59A'
   ACTION_SHARE_POST:
-    value: '#65CAE4'
+    value: '#1B96FF'
   ACTION_USER:
-    value: '#65CAE4'
+    value: '#1B96FF'
   ACTION_SHARE_FILE:
-    value: '#BAAC93'
+    value: '#939393'
   ACTION_NEW_TASK:
-    value: '#4BC076'
+    value: '#3BA755'
   ACTION_NEW_CONTACT:
-    value: '#A094ED'
+    value: '#9050E9'
   ACTION_NEW_OPPORTUNITY:
-    value: '#FCB95B'
+    value: '#FF5D2D'
   ACTION_NEW_CASE:
-    value: '#F2CF5B'
+    value: '#FF5D2D'
   ACTION_NEW_LEAD:
-    value: '#F88962'
+    value: '#FF5D2D'
   ACTION_SHARE_THANKS:
-    value: '#E9696E'
+    value: '#FF538A'
   ACTION_SHARE_LINK:
-    value: '#7A9AE6'
+    value: '#5867E8'
   ACTION_SHARE_POLL:
-    value: '#699BE1'
+    value: '#1B96FF'
   ACTION_NEW_EVENT:
-    value: '#EB7092'
+    value: '#FF538A'
   ACTION_NEW_CHILD_CASE:
-    value: '#FA975C'
+    value: '#FF5D2D'
   ACTION_LOG_A_CALL:
-    value: '#48C3CC'
+    value: '#06A59A'
   ACTION_NEW_NOTE:
-    value: '#E6D478'
+    value: '#FF5D2D'
   ACTION_NEW:
-    value: '#33BCE7'
+    value: '#1B96FF'
   ACTION_FILTER:
-    value: '#FD90B5'
+    value: '#FF538A'
   ACTION_SORT:
-    value: '#FAB9A5'
+    value: '#3BA755'
   ACTION_DESCRIPTION:
-    value: '#7DC37D'
+    value: '#3BA755'
   ACTION_DEFER:
-    value: '#EF7EAD'
+    value: '#FF538A'
   ACTION_UPDATE:
-    value: '#81B4D6'
+    value: '#107CAD'
   ACTION_LOG_THIS_EVENT:
-    value: '#EB7092'
+    value: '#FF538A'
   ACTION_EMAIL:
-    value: '#95AEC5'
+    value: '#107CAD'
   ACTION_DIAL_IN:
-    value: '#8B9AE3'
+    value: '#5867E8'
   ACTION_MAP:
-    value: '#76C6EE'
+    value: '#1B96FF'
   ACTION_CALL:
-    value: '#1FCAA0'
+    value: '#06A59A'
   ACTION_GOOGLE_NEWS:
-    value: '#F5675B'
+    value: '#FF538A'
   ACTION_WEB_LINK:
-    value: '#56AADF'
+    value: '#1B96FF'
   ACTION_SUBMIT_FOR_APPROVAL:
-    value: '#50CC7A'
+    value: '#3BA755'
   ACTION_SEARCH:
-    value: '#48ADEB'
+    value: '#1B96FF'
   ACTION_CLOSE:
-    value: '#EF6E64'
+    value: '#FF538A'
   ACTION_BACK:
-    value: '#0DC2D9'
+    value: '#06A59A'
   ACTION_OFFICE_365:
-    value: '#FF8041'
+    value: '#FF5D2D'
   ACTION_CONCUR:
-    value: '#4CC3C7'
+    value: '#06A59A'
   ACTION_DROPBOX:
-    value: '#52AEF9'
+    value: '#1B96FF'
   ACTION_EVERNOTE:
-    value: '#86C86F'
+    value: '#3BA755'
   ACTION_DOCUSIGN:
-    value: '#5080DB'
+    value: '#1B96FF'
   ACTION_MORE:
-    value: '#62B7ED'
+    value: '#1B96FF'
   ACTION_NOTEBOOK:
-    value: '#E6D478'
+    value: '#FF5D2D'
     deprecated: true
     comment: Use ACTION_NEW_NOTEBOOK instead.
   ACTION_NEW_NOTEBOOK:
-    value: '#E6D478'
+    value: '#FF5D2D'
   ACTION_PREVIEW:
-    value: '#7F8DE1'
+    value: '#5867E8'
   ACTION_PRIORITY:
-    value: '#FBB439'
+    value: '#FF5D2D'
   ACTION_DEFAULT_CUSTOM_OBJECT:
-    value: '#8199af'
+    value: '#107CAD'
   ACTION_NEW_CUSTOM_OBJECT:
-    value: '#a7d44d'
+    value: '#3BA755'
   ACTION_LEAD_CONVERT:
-    value: '#f88962'
+    value: '#FF5D2D'
   ACTION_NEW_ACCOUNT:
-    value: '#7f8de1'
+    value: '#5867E8'
   ACTION_NEW_PERSON_ACCOUNT:
-    value: '#7f8de1'
+    value: '#5867E8'
   ACTION_NEW_CAMPAIGN:
-    value: '#f49756'
+    value: '#FF5D2D'
   ACTION_NEW_GROUP:
-    value: '#83b6ff'
+    value: '#1B96FF'
   ACTION_UPDATE_STATUS:
-    value: '#1ec7be'
+    value: '#06A59A'
   ACTION_NEW_CUSTOM1:
-    value: '#ff7b84'
+    value: '#FF538A'
   ACTION_NEW_CUSTOM2:
-    value: '#cfd05c'
+    value: '#3BA755'
   ACTION_NEW_CUSTOM3:
-    value: '#ecb46c'
+    value: '#FF5D2D'
   ACTION_NEW_CUSTOM4:
-    value: '#e1d951'
+    value: '#FF5D2D'
   ACTION_NEW_CUSTOM5:
-    value: '#9fdb66'
+    value: '#3BA755'
   ACTION_NEW_CUSTOM6:
-    value: '#54c473'
+    value: '#3BA755'
   ACTION_NEW_CUSTOM7:
-    value: '#6a89e5'
+    value: '#5867E8'
   ACTION_NEW_CUSTOM8:
-    value: '#50ceb9'
+    value: '#06A59A'
   ACTION_NEW_CUSTOM9:
-    value: '#6b9ee2'
+    value: '#1B96FF'
   ACTION_NEW_CUSTOM10:
-    value: '#6488e3'
+    value: '#5867E8'
   ACTION_NEW_CUSTOM11:
-    value: '#8784ea'
+    value: '#5867E8'
   ACTION_NEW_CUSTOM12:
-    value: '#dc71d1'
+    value: '#CB65FF'
   ACTION_NEW_CUSTOM13:
-    value: '#df6184'
+    value: '#FF538A'
   ACTION_NEW_CUSTOM14:
-    value: '#3cc2b3'
+    value: '#06A59A'
   ACTION_NEW_CUSTOM15:
-    value: '#f77e75'
+    value: '#FF538A'
   ACTION_NEW_CUSTOM16:
-    value: '#e9af67'
+    value: '#FF5D2D'
   ACTION_NEW_CUSTOM17:
-    value: '#acd360'
+    value: '#3BA755'
   ACTION_NEW_CUSTOM18:
-    value: '#4dca76'
+    value: '#3BA755'
   ACTION_NEW_CUSTOM19:
-    value: '#3abeb1'
+    value: '#06A59A'
   ACTION_NEW_CUSTOM20:
-    value: '#48c7c8'
+    value: '#06A59A'
   ACTION_NEW_CUSTOM21:
-    value: '#8a7aed'
+    value: '#5867E8'
   ACTION_NEW_CUSTOM22:
-    value: '#8b85f9'
+    value: '#5867E8'
   ACTION_NEW_CUSTOM23:
-    value: '#b070e6'
+    value: '#CB65FF'
   ACTION_NEW_CUSTOM24:
-    value: '#e56798'
+    value: '#FF538A'
   ACTION_NEW_CUSTOM25:
-    value: '#e46fbe'
+    value: '#FF538A'
   ACTION_NEW_CUSTOM26:
-    value: '#7698f0'
+    value: '#5867E8'
   ACTION_NEW_CUSTOM27:
-    value: '#5ab0d2'
+    value: '#1B96FF'
   ACTION_NEW_CUSTOM28:
-    value: '#89c059'
+    value: '#3BA755'
   ACTION_NEW_CUSTOM29:
-    value: '#bdd25f'
+    value: '#3BA755'
   ACTION_NEW_CUSTOM30:
-    value: '#f59f71'
+    value: '#FF5D2D'
   ACTION_NEW_CUSTOM31:
-    value: '#eb687f'
+    value: '#FF538A'
   ACTION_NEW_CUSTOM32:
-    value: '#38c393'
+    value: '#06A59A'
   ACTION_NEW_CUSTOM33:
-    value: '#97cf5d'
+    value: '#3BA755'
   ACTION_NEW_CUSTOM34:
-    value: '#d58a6a'
+    value: '#FF5D2D'
   ACTION_NEW_CUSTOM35:
-    value: '#e9637e'
+    value: '#FF538A'
   ACTION_NEW_CUSTOM36:
-    value: '#d472d4'
+    value: '#CB65FF'
   ACTION_NEW_CUSTOM37:
-    value: '#8c89f2'
+    value: '#5867E8'
   ACTION_NEW_CUSTOM38:
-    value: '#53b6d7'
+    value: '#1B96FF'
   ACTION_NEW_CUSTOM39:
-    value: '#4fbe75'
+    value: '#3BA755'
   ACTION_NEW_CUSTOM40:
-    value: '#83c75e'
+    value: '#3BA755'
   ACTION_NEW_CUSTOM41:
-    value: '#43b5b5'
+    value: '#06A59A'
   ACTION_NEW_CUSTOM42:
-    value: '#cfd05b'
+    value: '#3BA755'
   ACTION_NEW_CUSTOM43:
-    value: '#7f93f9'
+    value: '#5867E8'
   ACTION_NEW_CUSTOM44:
-    value: '#c8ca58'
+    value: '#3BA755'
   ACTION_NEW_CUSTOM45:
-    value: '#d95879'
+    value: '#FF538A'
   ACTION_NEW_CUSTOM46:
-    value: '#67a5e7'
+    value: '#1B96FF'
   ACTION_NEW_CUSTOM47:
-    value: '#5fcc64'
+    value: '#3BA755'
   ACTION_NEW_CUSTOM48:
-    value: '#ef697f'
+    value: '#FF538A'
   ACTION_NEW_CUSTOM49:
-    value: '#e25c80'
+    value: '#FF538A'
   ACTION_NEW_CUSTOM50:
-    value: '#49bcd3'
+    value: '#1B96FF'
   ACTION_NEW_CUSTOM51:
-    value: '#d8c760'
+    value: '#FF5D2D'
   ACTION_NEW_CUSTOM52:
-    value: '#ee8e6f'
+    value: '#FF538A'
   ACTION_NEW_CUSTOM53:
-    value: '#f36e83'
+    value: '#FF538A'
   ACTION_NEW_CUSTOM54:
-    value: '#ea70b1'
+    value: '#FF538A'
   ACTION_NEW_CUSTOM55:
-    value: '#d66ee0'
+    value: '#CB65FF'
   ACTION_NEW_CUSTOM56:
-    value: '#718deb'
+    value: '#5867E8'
   ACTION_NEW_CUSTOM57:
-    value: '#5a9cdd'
+    value: '#1B96FF'
   ACTION_NEW_CUSTOM58:
-    value: '#34b59d'
+    value: '#06A59A'
   ACTION_NEW_CUSTOM59:
-    value: '#e3d067'
+    value: '#FF5D2D'
   ACTION_NEW_CUSTOM60:
-    value: '#bf5a88'
+    value: '#FF538A'
   ACTION_NEW_CUSTOM61:
-    value: '#f57376'
+    value: '#FF538A'
   ACTION_NEW_CUSTOM62:
-    value: '#6b92dc'
+    value: '#5867E8'
   ACTION_NEW_CUSTOM63:
-    value: '#7ccf60'
+    value: '#3BA755'
   ACTION_NEW_CUSTOM64:
-    value: '#618fd8'
+    value: '#5867E8'
   ACTION_NEW_CUSTOM65:
-    value: '#f279ab'
+    value: '#FF538A'
   ACTION_NEW_CUSTOM66:
-    value: '#d8be5f'
+    value: '#FF5D2D'
   ACTION_NEW_CUSTOM67:
-    value: '#f87d76'
+    value: '#FF538A'
   ACTION_NEW_CUSTOM68:
-    value: '#f26979'
+    value: '#FF538A'
   ACTION_NEW_CUSTOM69:
-    value: '#ed6387'
+    value: '#FF538A'
   ACTION_NEW_CUSTOM70:
-    value: '#e769b4'
+    value: '#FF538A'
   ACTION_NEW_CUSTOM71:
-    value: '#e36ee3'
+    value: '#CB65FF'
   ACTION_NEW_CUSTOM72:
-    value: '#8d9bfb'
+    value: '#5867E8'
   ACTION_NEW_CUSTOM73:
-    value: '#679ef0'
+    value: '#1B96FF'
   ACTION_NEW_CUSTOM74:
-    value: '#41c8a0'
+    value: '#06A59A'
   ACTION_NEW_CUSTOM75:
-    value: '#cd9f65'
+    value: '#939393'
   ACTION_NEW_CUSTOM76:
-    value: '#db6d7a'
+    value: '#FF538A'
   ACTION_NEW_CUSTOM77:
-    value: '#b55d5b'
+    value: '#FF538A'
   ACTION_NEW_CUSTOM78:
-    value: '#5a95dd'
+    value: '#1B96FF'
   ACTION_NEW_CUSTOM79:
-    value: '#8ed363'
+    value: '#3BA755'
   ACTION_NEW_CUSTOM80:
-    value: '#659ad5'
+    value: '#1B96FF'
   ACTION_NEW_CUSTOM81:
-    value: '#da627f'
+    value: '#FF538A'
   ACTION_NEW_CUSTOM82:
-    value: '#d15b97'
+    value: '#FF538A'
   ACTION_NEW_CUSTOM83:
-    value: '#e7806f'
+    value: '#FF538A'
   ACTION_NEW_CUSTOM84:
-    value: '#f6707b'
+    value: '#FF538A'
   ACTION_NEW_CUSTOM85:
-    value: '#f26891'
+    value: '#FF538A'
   ACTION_NEW_CUSTOM86:
-    value: '#e260ab'
+    value: '#FF538A'
   ACTION_NEW_CUSTOM87:
-    value: '#d876e5'
+    value: '#CB65FF'
   ACTION_NEW_CUSTOM88:
-    value: '#996fe6'
+    value: '#9050E9'
   ACTION_NEW_CUSTOM89:
-    value: '#3e99be'
+    value: '#107CAD'
   ACTION_NEW_CUSTOM90:
-    value: '#22a48a'
+    value: '#06A59A'
   ACTION_NEW_CUSTOM91:
-    value: '#bf7b66'
+    value: '#939393'
   ACTION_NEW_CUSTOM92:
-    value: '#517e82'
+    value: '#056764'
   ACTION_NEW_CUSTOM93:
-    value: '#904d4c'
+    value: '#5C5C5C'
   ACTION_NEW_CUSTOM94:
-    value: '#439cba'
+    value: '#06A59A'
   ACTION_NEW_CUSTOM95:
-    value: '#8bcf6a'
+    value: '#3BA755'
   ACTION_NEW_CUSTOM96:
-    value: '#6d9de3'
+    value: '#1B96FF'
   ACTION_NEW_CUSTOM97:
-    value: '#dd6085'
+    value: '#FF538A'
   ACTION_NEW_CUSTOM98:
-    value: '#e1be5c'
+    value: '#FF5D2D'
   ACTION_NEW_CUSTOM99:
-    value: '#f0856e'
+    value: '#FF538A'
   ACTION_NEW_CUSTOM100:
-    value: '#e15d76'
+    value: '#FF538A'
   ACTION_APEX:
-    value: '#696E71'
+    value: '#5C5C5C'
   ACTION_FLOW:
-    value: '#0079BC'
+    value: '#107CAD'
   ACTION_ANNOUNCEMENT:
-    value: '#fe8f60'
+    value: '#FF5D2D'
   ACTION_RECORD:
-    value: '#7dc37d'
+    value: '#3BA755'
   ACTION_LOG_EVENT:
-    value: '#6ca1e9'
+    value: '#1B96FF'
   ACTION_ADD_RELATIONSHIP:
-    value: '#62b7ed'
+    value: '#1B96FF'
   ACTION_REMOVE_RELATIONSHIP:
-    value: '#ef6e64'
+    value: '#FF538A'
   ACTION_VIEW_RELATIONSHIP:
-    value: '#3c97dd'
+    value: '#1B96FF'
   ACTION_ADD_FILE:
-    value: '#7e8be4'
+    value: '#5867E8'
   ACTION_ADD_PHOTO_VIDEO:
-    value: '#00cdc0'
+    value: '#06A59A'
   ACTION_RECALL:
-    value: '#4A698D'
+    value: '#084968'
   ACTION_SCRIPT:
-    value: '#0070d2'
+    value: '#107CAD'
   ACTION_BUG:
-    value: '#EF6E5D'
+    value: '#FF538A'
   ACTION_ADJUST_VALUE:
-    value: '#47B46C'
+    value: '#3BA755'
   ACTION_SCAN_ENABLED:
     value: '#1B96FF'
   ACTION_SCAN_DISABLED:

@@ -74,6 +74,7 @@ export let Popover = props => {
       )}
       <div className={computedBodyClassnames} id={bodyUniqueId}>
         {props.children}
+        <button type="button">Click here</button>
       </div>
       {props.footer ? (
         <footer

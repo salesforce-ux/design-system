@@ -59,6 +59,7 @@ class ProgressRing extends Component {
           aria-valuemin="0"
           aria-valuemax="100"
           aria-valuenow={percent}
+          aria-label={this.props['aria-label'] || "{{Placeholder for description of progress ring}}"}
         >
           <svg viewBox={viewBoxParams}>
             {percent === 100 ? (
@@ -80,10 +81,8 @@ class ProgressRing extends Component {
         </div>
 
         <div className="slds-progress-ring__content">{this.props.children}</div>
-        {![0,100].includes(percent) && (
-          <div
-            className="slds-progress-ring__progress-head"
-          >
+        {![0, 100].includes(percent) && (
+          <div className="slds-progress-ring__progress-head">
             <svg viewBox={viewBoxParams}>
               <circle
                 className="slds-progress-ring__path"

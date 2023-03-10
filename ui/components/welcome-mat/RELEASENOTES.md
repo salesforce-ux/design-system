@@ -2,6 +2,10 @@
 
 # Welcome Mat Release Notes
 
+## 2.21.0
+### Fixed
+- Fixed by adding tabindex="0" and role="region" for Scrollable region must have keyboard access wcag issue
+
 ## 2.19
 
 ### Fixed

@@ -333,6 +333,7 @@ export const ContextTabBarOverflow = props => (
         'slds-has-error': props.statusLevel === 'error'
       }
     )}
+    role="presentation"
   >
     <button
       className="slds-button slds-context-bar__label-action"

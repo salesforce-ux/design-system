@@ -160,8 +160,8 @@
     right: 0;
     bottom: 0;
     left: 0;
-    background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.9) 1%, rgba(0, 0, 0, 0) 99%),
-      linear-gradient(to right, rgba(255, 255, 255, 1) 1%, rgba(255, 255, 255, 0));
+    background: linear-gradient(to top, var(--slds-g-color-neutral-base-10, rgba(0, 0, 0, 1)), var(--slds-g-color-neutral-10-opacity-75, rgba(0, 0, 0, 0.9)) 1%, transparent 99%),
+      linear-gradient(to right, var(--slds-g-color-neutral-base-100, rgba(255, 255, 255, 1)) 1%, transparent);
   }
 }
 

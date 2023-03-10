@@ -3,6 +3,13 @@
 # Vertical Navigation Release Notes
 
 <!-- ## [Unreleased] -->
+
+## 2.21.0
+
+### Added
+
+- Configured `slds-nav-vertical__item` to add keyboard visual focus cue indicator
+
 ## 2.15.8
 
 ### Changed

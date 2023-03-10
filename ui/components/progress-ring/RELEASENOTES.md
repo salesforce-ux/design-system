@@ -2,6 +2,11 @@
 
 # Progress Ring Release Notes
 
+## 2.21.0
+
+### Added
+
+- Added aria-label attribute to the progress ring to meet accessibility requirements.
 
 ## 2.17.0
 

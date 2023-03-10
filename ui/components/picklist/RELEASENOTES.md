@@ -8,6 +8,13 @@
 
 <!-- ## [Unreleased] -->
 
+
+## 2.21.0
+
+### Added
+
+- Added `aria-label` for picklist examples to meet accessibility requirements.
+
 ## 2.16.0
 
 ### Changed

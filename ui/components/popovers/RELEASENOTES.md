@@ -1,6 +1,9 @@
 <!-- Release notes authoring guidelines: http://keepachangelog.com/ -->
 
 # Popovers Release Notes
+## 2.21.0
+
+### Added button to the story `body-max-height-small` to fix scrollable-region-focusable wcag issue.
 
 ## 2.19
 

@@ -46,7 +46,7 @@ class WelcomeMatDeprecated extends Component {
           className="slds-welcome-mat__content slds-grid"
           aria-describedby={welcomeMatDescipId}
         >
-          <div className="slds-welcome-mat__info slds-size_1-of-2">
+          <div className="slds-welcome-mat__info slds-size_1-of-2" tabindex="0" role="region">
             <div className="slds-welcome-mat__info-content">
               {content({
                 complete: this.completeTileCount(),

@@ -79,13 +79,13 @@
  */
 .slds-button_icon-border-inverse,
 .slds-button--icon-border-inverse {
-  background-color: $color-background-button-inverse;
-  border-color: var(--slds-g-color-border-base-4, #{$button-color-border-primary});
+  background-color: transparent;
+  border-color: $button-color-border-primary;
 
   &[disabled],
   &:disabled {
-    background-color: $color-background-button-inverse-disabled;
-    border-color: $color-border-button-inverse-disabled;
+    background-color: transparent;
+    border-color: var(--slds-g-color-neutral-100-opacity-10, #{$color-border-button-inverse-disabled});
   }
 }
 
@@ -135,7 +135,7 @@
 
   &:hover,
   &:focus {
-    color: $color-text-link-inverse-hover;
+    color: var(--slds-g-color-neutral-100-opacity-75, #{$color-text-link-inverse-hover});
   }
 
   &:focus {
@@ -143,12 +143,12 @@
   }
 
   &:active {
-    color: $color-text-link-inverse-active;
+    color: var(--slds-g-color-neutral-100-opacity-50, #{$color-text-link-inverse-active});
   }
 
   &[disabled],
   &:disabled {
-    color: $color-text-link-inverse-disabled;
+    color: var(--slds-g-color-neutral-100-opacity-10, #{$color-text-link-inverse-disabled});
   }
 }
 
@@ -321,7 +321,7 @@
  */
 .slds-button__icon_inverse-hint,
 .slds-button__icon--inverse-hint {
-  fill: $color-text-icon-inverse-hint;
+  fill: var(--slds-g-color-neutral-100-opacity-50, #{$color-text-icon-inverse-hint});
 }
 
 // Handles hint on hover behavior of an inverse button icon, both bordered and non-bordered
@@ -329,10 +329,10 @@
 
   .slds-button_icon-border-inverse,
   .slds-button--icon-border-inverse {
-    border-color: $color-border-icon-inverse-hint;
+    border-color: var(--slds-g-color-neutral-100-opacity-50, #{$color-border-icon-inverse-hint});
 
     &:focus {
-      border-color: $color-border-icon-inverse-hint-hover;
+      border-color: var(--slds-g-color-neutral-100-opacity-75, #{$color-border-icon-inverse-hint-hover});
     }
   }
 
@@ -341,7 +341,7 @@
 
     .slds-button_icon-border-inverse,
     .slds-button--icon-border-inverse {
-      border-color: $color-border-icon-inverse-hint-hover;
+      border-color: var(--slds-g-color-neutral-100-opacity-75, #{$color-border-icon-inverse-hint-hover});
     }
 
     .slds-button__icon_hint,
@@ -351,7 +351,7 @@
 
     .slds-button__icon_inverse-hint,
     .slds-button__icon--inverse-hint {
-      fill: $color-text-icon-inverse-hint-hover;
+      fill: var(--slds-g-color-neutral-100-opacity-75, #{$color-text-icon-inverse-hint-hover});
     }
 
     .slds-button:disabled {

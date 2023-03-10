@@ -106,6 +106,7 @@ export let Popover = props => {
             )}
 
             {props.children}
+            <button type="button">Click here</button>
           </div>
         </div>
       </div>

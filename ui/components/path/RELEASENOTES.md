@@ -4,6 +4,13 @@
 
 <!-- ## [Unreleased] -->
 
+
+## 2.21.0
+
+### Added
+
+- Added `aria-labelledby` to meet accessibility requirements specifically for screen readers.
+
 ## 2.13.0
 
 ### Changed

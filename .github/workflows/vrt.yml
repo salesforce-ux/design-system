@@ -157,7 +157,9 @@ jobs:
 
       - name: Dump GitHub context event
         id: github_context_event_step
-        run: echo '${{ toJSON(github.event) }}'
+        env:
+          GITHUB_EVENT_CONTEXT: ${{ toJson(github.event) }}
+        run: echo "$GITHUB_EVENT_CONTEXT"
 
       - name: Show GitHub context
         env:

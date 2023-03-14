@@ -5,6 +5,10 @@
 
 ### Added button to the story `body-max-height-small` to fix scrollable-region-focusable wcag issue.
 
+### Added
+
+- Added `title` attribute to meet accessibility requirements.
+
 ## 2.19
 
 ### Fixed

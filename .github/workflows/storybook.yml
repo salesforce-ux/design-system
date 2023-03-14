@@ -4,7 +4,9 @@ on:
   release:
     types: [released, prereleased]
   pull_request:
-
+    branches: [ '**' ]
+  push:
+    branches: [ '[0-9]{3}-(summer|spring|winter)-[0-9]{2}' ]
 
 env:
   # APPLITOOLS_API_KEY:
@@ -91,11 +93,15 @@ jobs:
 
     - uses: "./.github/actions/copy-tokens-to-workspace"
 
-    # - run: |-HEROKU_RELEASE_STORYBOOK_APP_NAME
-    #     HEROKU_APP_NAME=${{ steps.which-heroku-app.outputs.HEROKU_APP_NAME }}
-    #     HEROKU_RELEASE_STORYBOOK_APP_NAME=${{ steps.which-heroku-app.outputs.HEROKU_RELEASE_STORYBOOK_APP_NAME }}
-    #     echo $HEROKU_APP_NAME
-    #     echo $HEROKU_RELEASE_STORYBOOK_APP_NAME
+    - name: Print destination app names
+      run: |
+        HEROKU_APP_NAME=${{ steps.which-heroku-app.outputs.HEROKU_APP_NAME }}
+        HEROKU_RELEASE_STORYBOOK_APP_NAME=${{ steps.which-heroku-app.outputs.HEROKU_RELEASE_STORYBOOK_APP_NAME }}
+        echo "=============================="
+        echo $HEROKU_APP_NAME
+        echo $HEROKU_RELEASE_STORYBOOK_APP_NAME
+        # if HEROKU_RELEASE_STORYBOOK_APP_NAME is "true", then we are in a PR
+        echo "=============================="
 
     - name: Compile styles
       run: npm run gulp -- styles

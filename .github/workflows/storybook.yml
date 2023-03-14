@@ -6,7 +6,7 @@ on:
   pull_request:
     branches: [ '**' ]
   push:
-    branches: [ '[0-9]{3}-(summer|spring|winter)-[0-9]{2}' ]
+    branches: [ '2[0-9][02468]-*-2[0-9]' ]
 
 env:
   # APPLITOOLS_API_KEY:

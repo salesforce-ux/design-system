@@ -17,6 +17,8 @@ runs:
     id: which-app
     env:
       HEROKU_APP_UPCOMING: upcoming-doc-site
+      HEROKU_APP_CORE_MAIN: core-main-doc-site
+      HEROKU_APP_CORE_PATCH: core-patch-doc-site
     # if on default branch without a tag
     #   then publish to UPCOMING
     #
@@ -31,15 +33,15 @@ runs:
       echo 'HEROKU_RELEASE_STORYBOOK_APP_NAME=false' >> $GITHUB_OUTPUT
       if [[ "${{ github.ref_name }}" = "${{ github.event.repository.default_branch }}" ]] ; then
         echo "Publishing to UPCOMING..."
-        echo 'HEROKU_APP_NAME=${HEROKU_APP_UPCOMING}' >> $GITHUB_OUTPUT
+        echo 'HEROKU_APP_NAME=${{ env.HEROKU_APP_UPCOMING }}' >> $GITHUB_OUTPUT
         echo 'HEROKU_RELEASE_STORYBOOK_APP_NAME=storybook-upcoming' >> $GITHUB_OUTPUT
       elif [[ ${{ github.ref }} =~ ^v[0-9]+\.[0-9]+\.[0-9]+-.+$ ]] ; then
         echo "Publishing to CORE-MAIN..."
-        echo 'HEROKU_APP_NAME=${HEROKU_APP_CORE_MAIN}' >> $GITHUB_OUTPUT
+        echo 'HEROKU_APP_NAME=${{ env.HEROKU_APP_CORE_MAIN }}' >> $GITHUB_OUTPUT
         echo 'HEROKU_RELEASE_STORYBOOK_APP_NAME=storybook-core-main' >> $GITHUB_OUTPUT
       elif [[ ${{ github.ref }} =~ ^v[0-9]+\.[0-9]+\.[0-9]+$ ]] ; then
         echo "Publishing to CORE-PATCH..."
-        echo 'HEROKU_APP_NAME=${HEROKU_APP_CORE_PATCH}' >> $GITHUB_OUTPUT
+        echo 'HEROKU_APP_NAME=${{ env.HEROKU_APP_CORE_PATCH }}' >> $GITHUB_OUTPUT
         echo 'HEROKU_RELEASE_STORYBOOK_APP_NAME=storybook-core-patch' >> $GITHUB_OUTPUT
       else
         echo "Publishing to pull-request review app..."

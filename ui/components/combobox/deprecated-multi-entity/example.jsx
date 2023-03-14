@@ -12,8 +12,8 @@ import {
 import { ListboxPills, ListboxPillsItem, ListboxPill } from '../../pills';
 
 const STORY_SINK_CONTEXT = 'Deprecated – Multi-Entity';
-const listboxOptionId01 = 'listbox-option-unique-id-01';
-const listboxOptionId02 = 'listbox-option-unique-id-02';
+const listboxOptionId01 = 'option1';
+const listboxOptionId02 = 'option2';
 
 const ListboxDropdown = props => (
   <DeprecatedListbox

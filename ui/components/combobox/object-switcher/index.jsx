@@ -7,9 +7,10 @@ import Listbox from '../listbox/';
 import { UtilityIcon } from '../../icons/base/example';
 import * as Snapshot from './data';
 import Combobox from '../';
+import uniqueId from 'lodash.uniqueid';
 
-const listboxId01 = 'objectswitcher-listbox-id-01';
-const listboxId02 = 'objectswitcher-listbox-id-02';
+const listboxId01 = uniqueId('objectswitcher-listbox-id-');
+const listboxId02 = uniqueId('objectswitcher-listbox-id-');
 
 class ObjectSwitcher extends Component {
   render() {
@@ -52,7 +53,7 @@ class ObjectSwitcher extends Component {
           results={
             <Listbox
               className="slds-dropdown_x-small slds-dropdown_left"
-              aria-label="Suggested for you"
+              aria-label="{{Placeholder for Dropdown Options}}"
               id={listboxId || listboxId01}
               snapshot={Snapshot.Options}
               type="plain"
@@ -123,6 +124,7 @@ export class IconObjectSwitcher extends Component {
             <Listbox
               className="slds-dropdown_x-small slds-dropdown_left"
               id={listboxId || listboxId02}
+              aria-label="{{Placeholder for Dropdown Options}}"
               hasUniqueId
               snapshot={Snapshot.BuilderOptions}
               type="plain"

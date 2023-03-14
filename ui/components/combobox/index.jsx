@@ -88,8 +88,9 @@ const ComboboxInputFaux = ({
   value
 }) => {
   return (
-    <button
-      type="button"
+    <div
+      role="combobox"
+      tabindex="0"
       className={classNames(
         'slds-input_faux',
         'slds-combobox__input',
@@ -99,13 +100,13 @@ const ComboboxInputFaux = ({
       )}
       disabled={isDisabled}
       {...labelId && id && { [`aria-labelledby`]: `${labelId} ${id}` }}
-      {...{ id, role, onBlur, onFocus }}
+      {...{ id, onBlur, onFocus }}
       {...aria}
     >
       <span className="slds-truncate" id={_.uniqueId('combobox-value-id-')}>
         {children}
       </span>
-    </button>
+    </div>
   );
 };
 

@@ -47,7 +47,7 @@ export default [
     )
   }
 ];
-
+const newStateID  =_.uniqueId('listbox-id-');
 export let states = [
   {
     context: STORY_SINK_CONTEXT,
@@ -88,7 +88,7 @@ export let states = [
     label: 'Lookup - Focused - Open',
     element: (
       <Combobox
-        id={_.uniqueId('combobox-id-')}
+        id={newStateID}
         aria-controls="listbox-id-15"
         autocomplete
         inputIconPosition="right"
@@ -107,6 +107,8 @@ export let states = [
             snapshot={Snapshot.EntityOptions}
             type="entity"
             count={2}
+            aria-labelledby={newStateID}
+            aria-label="{{Placeholder for Menu Items}}"
           />
         }
         resultsType="listbox"
@@ -261,7 +263,7 @@ export let states = [
     element: (
       <Combobox
         id={_.uniqueId('combobox-id-')}
-        aria-controls="listbox-unique-id-03"
+        aria-controls="listbox-id-20"
         autocomplete
         inputIconPosition="right"
         rightInputIcon={
@@ -274,7 +276,7 @@ export let states = [
         }
         results={
           <Listbox
-            id="listbox-unique-id-03"
+            id="listbox-id-20"
             snapshot={Snapshot.PlainOptions}
             type="entity"
             count={3}

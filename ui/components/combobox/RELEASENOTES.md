@@ -3,6 +3,11 @@
 # Combobox Release Notes
 
 <!-- ## [Unreleased] -->
+## 2.21.0
+### Fixed
+- Fixed by adding tabindex for `scrollable region must have keyboard access` wcag issue
+- Fixed by adding dynamic Ids for duplicate-id-aria issue
+- Fixed by adding unique Ids,aria-label for `aria-allowed-attr` wcag issue
 
 ## 2.17.3
 

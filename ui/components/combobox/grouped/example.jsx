@@ -10,10 +10,14 @@ import { UtilityIcon } from '../../icons/base/example';
 import * as Snapshot from '../snapshots.data';
 import _ from '../../../shared/helpers';
 
+
 const STORY_SINK_CONTEXT = 'Grouped';
 const ComboboxId = _.uniqueId('combobox-id-');
 const PrimaryComboboxId = _.uniqueId('primary-combobox-id-');
-const ListboxId = _.uniqueId('listbox-id-');
+let allVariableIds = [];
+for (let i = 0; i < 5; i++){
+  allVariableIds.push(_.uniqueId('listbox-id-'));
+}
 
 export const Context = props => (
   <div style={{ height: '240px' }}>{props.children}</div>
@@ -27,12 +31,12 @@ export default [
     element: (
       <ComboboxGroup
         id={_.uniqueId('combobox-id-')}
-        aria-controls="listbox-id-20"
+        aria-controls={allVariableIds[0]}
         comboboxID="primary-combobox-id-1"
         autocomplete
         results={
           <Listbox
-            id="listbox-id-20"
+            id={allVariableIds[0]}
             snapshot={Snapshot.EntityOptions}
             type="entity"
             count={4}
@@ -74,12 +78,12 @@ export let states = [
     element: (
       <ComboboxGroup
         id={_.uniqueId('combobox-id-')}
-        aria-controls="listbox-id-21"
+        aria-controls={allVariableIds[1]}
         comboboxID="primary-combobox-id-2"
         autocomplete
         results={
           <Listbox
-            id="listbox-id-21"
+            id={allVariableIds[1]}
             snapshot={Snapshot.EntityOptions}
             type="entity"
             count={4}
@@ -119,12 +123,13 @@ export let states = [
       <ComboboxGroup
         id={_.uniqueId('combobox-id-')}
         aria-activedescendant="option0"
-        aria-controls="listbox-id-22"
+        aria-label="{{Placeholder for Dropdown Options}}"
+        aria-controls={allVariableIds[2]}
         comboboxID="primary-combobox-id-2"
         autocomplete
         results={
           <Listbox
-            id="listbox-id-22"
+            id={allVariableIds[2]}
             snapshot={Snapshot.EntityOptionsTypeahead}
             term="salesforce"
             type="entity"
@@ -166,12 +171,12 @@ export let states = [
       <ComboboxGroup
         id={_.uniqueId('combobox-id-')}
         aria-activedescendant="option0"
-        aria-controls="listbox-id-23"
+        aria-controls={allVariableIds[3]}
         comboboxID="primary-combobox-id-2"
         autocomplete
         results={
           <Listbox
-            id="listbox-id-23"
+            id={allVariableIds[3]}
             snapshot={Snapshot.EntityOptionsTypeahead}
             term="salesforce"
             type="entity"
@@ -205,12 +210,12 @@ export let states = [
     element: (
       <ComboboxGroup
         id={_.uniqueId('combobox-id-')}
-        aria-controls="listbox-id-24"
+        aria-controls={allVariableIds[4]}
         comboboxID="primary-combobox-id-3"
         autocomplete
         results={
           <Listbox
-            id="listbox-id-24"
+            id={allVariableIds[4]}
             snapshot={Snapshot.EntityOptions}
             type="entity"
             count={4}
@@ -252,12 +257,12 @@ export let states = [
     element: (
       <ComboboxGroup
         id={_.uniqueId('combobox-id-')}
-        aria-controls="listbox-id-25"
+        aria-controls={allVariableIds[5]}
         comboboxID="primary-combobox-id-4"
         autocomplete
         results={
           <Listbox
-            id="listbox-id-25"
+            id={allVariableIds[5]}
             snapshot={Snapshot.EntityOptions}
             type="entity"
             count={4}
@@ -300,12 +305,12 @@ export let states = [
     element: (
       <ComboboxGroup
         id={_.uniqueId('combobox-id-')}
-        aria-controls="listbox-id-26"
+        aria-controls={allVariableIds[6]}
         comboboxID="primary-combobox-id-5"
         autocomplete
         results={
           <Listbox
-            id="listbox-id-26"
+            id={allVariableIds[6]}
             snapshot={Snapshot.EntityOptions}
             type="entity"
             count={4}
@@ -346,12 +351,12 @@ export let states = [
     element: (
       <ComboboxGroup
         id={_.uniqueId('combobox-id-')}
-        aria-controls="listbox-id-27"
+        aria-controls={allVariableIds[7]}
         comboboxID="primary-combobox-id-6"
         autocomplete
         results={
           <Listbox
-            id="listbox-id-27"
+            id={allVariableIds[7]}
             snapshot={Snapshot.EntityOptions}
             type="entity"
             count={4}
@@ -397,12 +402,12 @@ export let states = [
     element: (
       <Combobox
         id={ComboboxId}
-        aria-controls={ListboxId}
+        aria-controls={allVariableIds[8]}
         comboboxID={PrimaryComboboxId}
         autocomplete
         results={
           <Listbox
-            id={ListboxId}
+            id={allVariableIds[8]}
             snapshot={Snapshot.EntityOptions}
             type="entity"
             count={4}
@@ -433,12 +438,12 @@ export let states = [
     element: (
       <Combobox
         id={ComboboxId}
-        aria-controls={ListboxId}
+        aria-controls={allVariableIds[9]}
         comboboxID={PrimaryComboboxId}
         autocomplete
         results={
           <Listbox
-            id={ListboxId}
+            id={allVariableIds[9]}
             snapshot={Snapshot.EntityOptions}
             type="entity"
             count={4}
@@ -473,12 +478,12 @@ export let states = [
     element: (
       <ComboboxGroup
         id={_.uniqueId('combobox-id-')}
-        aria-controls="listbox-id-28"
+        aria-controls={allVariableIds[10]}
         comboboxID="primary-combobox-id-7"
         autocomplete
         results={
           <Listbox
-            id="listbox-id-28"
+            id={allVariableIds[10]}
             snapshot={Snapshot.EntityOptions}
             type="entity"
             count={2}
@@ -517,12 +522,12 @@ export let states = [
     element: (
       <ComboboxGroup
         id={_.uniqueId('combobox-id-')}
-        aria-controls="listbox-id-29"
+        aria-controls={allVariableIds[11]}
         comboboxID="primary-combobox-id-9"
         autocomplete
         results={
           <Listbox
-            id="listbox-id-29"
+            id={allVariableIds[11]}
             snapshot={Snapshot.EntityOptions}
             type="entity"
             count={2}
@@ -560,12 +565,12 @@ export let states = [
     element: (
       <ComboboxGroup
         id={_.uniqueId('combobox-id-')}
-        aria-controls="listbox-id-30"
+        aria-controls={allVariableIds[12]}
         comboboxID="primary-combobox-id-8"
         autocomplete
         results={
           <Listbox
-            id="listbox-id-30"
+            id={allVariableIds[12]}
             snapshot={Snapshot.EntityOptions}
             type="entity"
             count={2}

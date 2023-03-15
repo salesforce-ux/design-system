@@ -345,6 +345,17 @@
     }
   }
 
+  /* Close button style for modal size="full" in mobile */
+  .slds-modal_full-close-button {
+      border: none;
+
+      @include mq-medium-min {
+        /* Revert back to non-mobile sizing style.
+        All variants' closing button should look the same once out of mobile sizing. */
+        background-color: transparent;
+      }
+  }
+
   .slds-modal__close {
     right: $spacing-medium;
 

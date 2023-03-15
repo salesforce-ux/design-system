@@ -4,12 +4,127 @@
 ## Release 2.21.0 - Upcoming
 
 ## Fixed
+- Update transparency values (rgba and design tokens) with transparent SLDS global styling hooks
 - Changed anchor link ouline border black color to blue-50
+- Updated background colors for Standard and Actions icons
+- Updated icons to `v10.6.0`
+  - Standard Set:
+    - Added `bill_of_materials`
+    - Added `buyer_group_qualifier`
+    - Added `datashare_target`
+    - Added `datashares`
+    - Added `disclosure_and_compliance`
+    - Added `document_preview`
+    - Added `facility_bed`
+    - Added `market`
+    - Added `price_sheet`
+    - Added `mulesoft`
+  - Utility Set:
+    - Added `add_source`
+    - Added `app_web_messaging`
+    - Added `bookmark_stroke`
+    - Added `buyer_group_qualifier`
+    - Added `document_preview`
+    - Added `expired`
+    - Added `favorite_alt`
+    - Added `heart`
+    - Added `hourglass`
+    - Added `integration`
+    - Added `market`
+    - Added `more`
+    - Added `notification_off`
+    - Added `notification_snoozed`
+    - Added `profile_alt`
+    - Added `promotion_tiers`
+    - Added `sender_email`
+    - Added `service_appointment`
+    - Added `service_report`
+    - Added `toggle_off`
+    - Added `toggle_on`
+    - Added `mulesoft`
 
 ## Components
+### [Buttons](https://www.lightningdesignsystem.com/components/buttons)
+#### Added
+- Configured `--slds-c-button-text-color-hover` Styling hook in Button with dual-stateful to accurately apply the text color on-hover 
+
+### [Global Navigation](https://www.lightningdesignsystem.com/components/global-navigation)
+#### Added
+- Added `role="presentation"` for globlal navigation's overflow tab item 
+
+### [Menus](https://www.lightningdesignsystem.com/components/menus)
+## Fixed
+- Fixed invalid aria roles issue in subheadings with `role=presentation`
+<!-- ## [Unreleased] -->
+
+### [Modals](https://www.lightningdesignsystem.com/components/modals)
+#### Fixed  
+- Fixed `aria-labelledby` to meet accessibility requirements specifically for screen readers.
+
 ### [Modals](https://www.lightningdesignsystem.com/components/modals)
 #### Changed
 - Added full size option for modal. This will allow the modal to reach full screen for mobile screen size and devices. When screen is bigger than mobile screen width (from 768px), full size modal will take on large size modal behaviour. 
+- Changed close button to meet accessibility requirement when in full size and in mobile width.
+
+### [Path](https://www.lightningdesignsystem.com/components/path)
+#### Added
+- Added `aria-labelledby` to meet accessibility requirements specifically for screen readers.
+
+### [Picklist](https://www.lightningdesignsystem.com/components/picklist)
+#### Added
+- Added aria-label and tabindex to fix aria-allowed-attr and aria-label sa11y issue.
+<!-- ## [Unreleased] -->
+
+### [Picklist](https://www.lightningdesignsystem.com/components/picklist)
+#### Added
+- Added `aria-label` for picklist examples to meet accessibility requirements.
+
+### [Popovers](https://www.lightningdesignsystem.com/components/popovers)
+#### Added button to the story `body-max-height-small` to fix scrollable-region-focusable wcag issue.
+## 2.19
+#### Fixed
+- Fixed hardcoded walk through header and alt image paths
+<!-- ## [Unreleased] -->
+
+### [Progress Bar](https://www.lightningdesignsystem.com/components/progress-bar)
+#### Added
+- Added id to aria-labelledby to meet accessibility requirements.
+<!-- ## [Unreleased] -->
+
+### [Progress Indicator](https://www.lightningdesignsystem.com/components/progress-indicator)
+#### Added
+- Added id to aria-labelledby to meet accessibility requirements.
+<!-- ## [Unreleased] -->
+
+### [Progress Ring](https://www.lightningdesignsystem.com/components/progress-ring)
+#### Added
+- Added aria-label attribute to the progress ring to meet accessibility requirements.
+
+### [Slider](https://www.lightningdesignsystem.com/components/slider)
+#### Added
+- Added unique id to fix duplicate-id-aria wcag issue
+<!-- ## [Unreleased] -->
+
+### [Tabs](https://www.lightningdesignsystem.com/components/tabs)
+#### Added
+- Added `role="presentation"` for overflow tab item.
+
+### [Vertical Navigation](https://www.lightningdesignsystem.com/components/vertical-navigation)
+#### Added
+- Configured `slds-nav-vertical__item` to add keyboard visual focus cue indicator
+
+### [Welcome Mat](https://www.lightningdesignsystem.com/components/welcome-mat)
+#### Fixed
+- Fixed by adding tabindex="0" and role="region" for Scrollable region must have keyboard access wcag issue
+## 2.19
+#### Fixed
+- Fixed hardcoded base info background image path
+<!-- ## [Unreleased] -->
+
+## Utilities
+### [Scrollable Utility](https://www.lightningdesignsystem.com/utilities/scrollable)
+#### Added
+- Added tabindex to fix Scrollable region must have keyboard access wcag issue
 
 ## Release 2.20.1 - December 16, 2022
 

@@ -3,6 +3,7 @@
 
 
 ## 2.21.0 - Upcoming
+
 ## Fixed
 
 - Update transparency values (rgba and design tokens) with transparent SLDS global styling hooks

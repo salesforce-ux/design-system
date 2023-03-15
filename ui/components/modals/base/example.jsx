@@ -59,7 +59,8 @@ export let Modal = (props) => (
         props.closeButton !== false ? (
           <ButtonIcon
             className={classNames('slds-modal__close',
-            {'slds-button_icon-inverse': props.closeButtonInverse }
+            {'slds-button_icon-inverse': !props.isFullSize,
+            'slds-button_icon-border-filled slds-modal_full-close-button': props.isFullSize }
             )}
             iconClassName="slds-button__icon_large"
             symbol="close"
@@ -75,13 +76,13 @@ export let Modal = (props) => (
 Modal.propTypes = {
   tabIndex: PropTypes.oneOf(['-1', '0']),
   closeButtonDisabled: PropTypes.bool,
-  closeButtonInverse: PropTypes.bool,
+  isFullSize: PropTypes.bool,
 };
 
 Modal.defaultProps = {
   tabIndex: '-1',
   closeButtonDisabled: false,
-  closeButtonInverse: true,
+  isFullSize: false,
 };
 
 export let ModalHeader = (props) => (
@@ -184,10 +185,9 @@ export let ModalSizes = (props) => (
         props.size === 'small' && 'slds-modal_small',
         props.size === 'medium' && 'slds-modal_medium',
         props.size === 'large' && 'slds-modal_large',
-        props.size === 'full' &&
-        'slds-modal_full'
+        props.size === 'full' && 'slds-modal_full'
       )}
-      closeButtonInverse={props.size !== 'full'}
+      isFullSize={props.size === 'full'}
       aria-labelledby="modal-heading-01"
     >
       <ModalHeader>
@@ -225,7 +225,7 @@ export let FullTaglines = (props) => (
         props.size === 'full' &&
         'slds-modal_full'
       )}
-      closeButtonInverse={props.size !== 'full'}>
+      isFullSize={props.size === 'full'}>
       <ModalHeader>
         <h1 id="modal-heading-01" className="slds-modal__title slds-hyphenate">
           Modal header
@@ -265,7 +265,7 @@ export let FullHeadless = (props) => (
         'slds-modal_full'
       )}
       aria-labelledby="modal-heading-01"
-      closeButtonInverse={props.size !== 'full'}
+      isFullSize={props.size === 'full'}
     >
       <ModalContent className={classNames(
         props.size === 'full' && 'slds-modal_full-content slds-p-around_medium slds-modal__content_headless'
@@ -297,7 +297,7 @@ export let FullFootless = (props) => (
         'slds-modal_full'
       )}
       aria-labelledby="modal-heading-01"
-      closeButtonInverse={props.size !== 'full'}
+      isFullSize={props.size === 'full'}
     >
       <ModalHeader>
         <h1 id="modal-heading-01" className="slds-modal__title slds-hyphenate" tabindex="-1">

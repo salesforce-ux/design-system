@@ -447,6 +447,7 @@ export let states = [
           <ListboxWrapper
             id="listbox-id-3"
             className="slds-dropdown slds-dropdown_fluid"
+            ariaLabel="{{Placeholder for Dropdown Options}}"
           >
             <ListboxGroup
               aria-label="Group One"

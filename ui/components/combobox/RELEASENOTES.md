@@ -9,6 +9,12 @@
 - Fixed by adding dynamic Ids for duplicate-id-aria issue
 - Fixed by adding unique Ids,aria-label for `aria-allowed-attr` wcag issue
 
+## 2.21.0
+
+## Added
+
+Added `aria-label` to meet accessibility requirements specifically for screen readers.
+
 ## 2.17.3
 
 ## Fixed

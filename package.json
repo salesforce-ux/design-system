@@ -237,7 +237,7 @@
     "release:site:validate": "SLDS_VALIDATION_URL=https://design-system-site-stage.herokuapp.com npx ava __tests__/site/site-validation.ava.js",
     "slds:customizer": "node tools/customizer.cli.js",
     "prepare": "npm run snyk-protect && husky install",
-    "snyk-protect": "snyk protect",
+    "snyk-protect": "snyk-protect",
     "crypt": "./_internal/crypt.sh",
     "server:bg:start": "npx pm2 start 'npx http-server -p 9002 .www/' --name 'storybook:slds'",
     "server:bg:delete": "npx pm2 delete 'storybook:slds'",
@@ -287,7 +287,7 @@
   },
   "snyk": true,
   "dependencies": {
-    "snyk": "^1.667.0"
+    "@snyk/protect": "^1.657.0"
   },
   "peerDependencies": {
     "postcss": "^8.3.5"

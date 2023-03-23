@@ -63,7 +63,13 @@ export let Popover = props => {
         />
       ) : null}
 
-      <div className={computedBodyClassnames} id={bodyUniqueId}>
+      <div className={computedBodyClassnames}
+        id={bodyUniqueId}
+        {...props.size === "small" && {
+          tabindex: "0",
+          role: "region",
+        }}
+      >
         {props.badgeTitle ? (
           <div className="slds-popover__meta">
             {props.badgeVariant && props.badgeVariant === 'light' ? (
@@ -106,7 +112,6 @@ export let Popover = props => {
             )}
 
             {props.children}
-            <button type="button">Click here</button>
           </div>
         </div>
       </div>

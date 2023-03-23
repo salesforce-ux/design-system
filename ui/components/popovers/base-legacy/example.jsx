@@ -72,9 +72,14 @@ export let Popover = props => {
       ) : (
         props.header
       )}
-      <div className={computedBodyClassnames} id={bodyUniqueId}>
+      <div className={computedBodyClassnames}
+        id={bodyUniqueId}
+        {...props.size === "small" && {
+          tabindex: "0",
+          role: "region",
+        }}
+      >
         {props.children}
-        <button type="button">Click here</button>
       </div>
       {props.footer ? (
         <footer

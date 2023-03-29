@@ -1,20 +1,10 @@
-import { storiesOf } from '@storybook/react';
 import * as ListExamples from './example';
-import { getDisplayElementById } from '../../../shared/helpers';
+import { generateStories } from "../../../shared/helpers";
+import Docs from "../docs.mdx";
 
-const stories = storiesOf('Components/Vertical Navigation/List', module).add(
-  'Base',
-  () => ListExamples.default
-);
+const examples = [ListExamples];
 
-ListExamples.examples.map(example => {
-  stories.add(example.label, () =>
-    getDisplayElementById(ListExamples.examples, example.id)
-  );
-});
+const patternName = "Vertical Navigation";
 
-ListExamples.states.map(example => {
-  stories.add(example.label, () =>
-    getDisplayElementById(ListExamples.states, example.id)
-  );
-});
+generateStories(patternName, examples, ["default", "examples", "states"], Docs);
+

@@ -49,7 +49,6 @@ export let Toggle = props => (
   <span
     id={props.uniqueId}
     className={classNames('slds-checkbox_faux_container', props.className)}
-    aria-live="assertive"
   >
     <span className="slds-checkbox_faux" />
     <span className={classNames('slds-checkbox_on', props.className)}>

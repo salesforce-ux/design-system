@@ -8,6 +8,12 @@
 
 - Added aria-label attribute to the progress ring to meet accessibility requirements.
 
+## 2.22.0
+
+### Fixed
+
+- Fixed duplicate IDs by adding helper method 
+
 ## 2.17.0
 
 ### Added

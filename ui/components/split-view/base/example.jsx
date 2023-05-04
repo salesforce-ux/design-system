@@ -95,7 +95,7 @@ let SplitView = props => (
       title={props.hidden ? 'Open Split View' : 'Close Split View'}
     />
     <article
-      aria-hidden={props.hidden ? 'true' : 'false'}
+      hidden={props.hidden ? 'true' : 'false'}
       id="split-view-id"
       className={classNames(
         'slds-split-view slds-grid slds-grid_vertical slds-grow',

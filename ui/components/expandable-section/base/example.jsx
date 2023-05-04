@@ -22,7 +22,7 @@ export let Section = props => (
 
 export let SectionContent = props => (
   <div
-    aria-hidden={props.isOpen ? 'false' : 'true'}
+    hidden={props.isOpen ? 'false' : 'true'}
     className={classNames('slds-section__content', props.className)}
     id={props.referenceId}
   >

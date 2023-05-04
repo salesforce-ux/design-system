@@ -39,7 +39,7 @@ const CarouselPanel = props => (
     id={props.id}
     className={classNames('slds-carousel__panel', props.className)}
     role="tabpanel"
-    aria-hidden={props.isActive ? 'false' : 'true'}
+    hidden={!props.isActive}
     aria-labelledby={props.indicatorId}
   >
     <a
@@ -96,7 +96,7 @@ class Carousel extends Component {
           <div
             className="slds-carousel__panels"
             style={{
-              transform: `translateX(-${(this.props.panelActive - 1) * 100}%)`
+              transform: `translateX(-${(this.props.panelActive - 3) * 100}%)`
             }}
           >
             <CarouselPanel

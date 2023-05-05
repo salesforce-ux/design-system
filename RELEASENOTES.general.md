@@ -2,7 +2,7 @@
 <!-- On release, add general notes here. In time the legacy release notes will be add to this -->
 
 
-## 2.21.0 - Upcoming
+## 2.21.0 - April 20, 2023
 
 ## Fixed
 

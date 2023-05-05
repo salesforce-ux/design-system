@@ -2,6 +2,12 @@
 
 # Menus Release Notes
 
+## 2.21.0
+
+## Fixed
+
+- Fixed invalid aria roles issue in subheadings with `role=presentation`
+
 <!-- ## [Unreleased] -->
 
 ## 2.15.1

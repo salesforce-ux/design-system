@@ -63,7 +63,13 @@ export let Popover = props => {
         />
       ) : null}
 
-      <div className={computedBodyClassnames} id={bodyUniqueId}>
+      <div className={computedBodyClassnames}
+        id={bodyUniqueId}
+        {...props.size === "small" && {
+          tabindex: "0",
+          role: "region",
+        }}
+      >
         {props.badgeTitle ? (
           <div className="slds-popover__meta">
             {props.badgeVariant && props.badgeVariant === 'light' ? (
@@ -414,7 +420,7 @@ export let examples = [
     id: 'dark-base',
     label: 'Base [dark]',
     element: (
-      <Popover className="slds-popover_dark slds-nubbin_left" closeButton>
+      <Popover className="slds-popover_dark slds-nubbin_left" title="Popover Title" closeButton>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua.

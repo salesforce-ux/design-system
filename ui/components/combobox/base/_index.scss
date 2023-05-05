@@ -297,11 +297,14 @@ input[readonly][role="combobox"] {
  * @selector .slds-combobox__input-value
  * @restrict .slds-combobox__input
  */
-[class*="slds-input-has-icon_left"] .slds-combobox__input[value],
-[class*="slds-input-has-icon--left"] .slds-combobox__input[value],
-[class*="slds-input-has-icon_left"] .slds-combobox__input.slds-combobox__input-value,
-[class*="slds-input-has-icon--left"] .slds-combobox__input.slds-combobox__input-value {
-  padding-left: ($square-icon-small-boundary + $spacing-small);
+.slds-input-has-icon_left,
+.slds-input-has-icon_left-right,
+.slds-input-has-icon--left,
+.slds-input-has-icon--left-right {
+  & .slds-combobox__input[value],
+  & .slds-combobox__input.slds-combobox__input-value {
+    padding-left: ($square-icon-small-boundary + $spacing-small);
+  }
 }
 
 .slds-input_faux:not(.slds-combobox__input-value) {

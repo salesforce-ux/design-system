@@ -1,4 +1,4 @@
-name: Trigger VRT from Label
+name: VRT Triggered from Label
 
 on:
   pull_request:
@@ -15,7 +15,7 @@ env:
 
 jobs:
   vrt-init:
-    if: ${{ github.event.label.name == 'vrt:chrome-ready' || github.event.label.name == 'vrt:full-ready'}}
+    if: startsWith(github.event.label.name, 'vrt:')
     runs-on: ubuntu-latest
 
     steps:
@@ -36,6 +36,7 @@ jobs:
           cache: 'npm'
 
   vrt-desktop:
+    if: contains(fromJSON('["vrt:full-ready", "vrt:chrome-ready"]'), github.event.label.name)
     needs: vrt-init
     runs-on: ubuntu-latest
 
@@ -62,10 +63,12 @@ jobs:
 
       - name: Applitools
         run: 'VRT_MODE=${{ env.VRT_MODE }} npx eyes-storybook'
-        timeout-minutes: 20
+        timeout-minutes: 60
+        env:
+          NODE_OPTIONS: --openssl-legacy-provider # per https://candid.technology/error-error-0308010c-digital-envelope-routines-unsupported/
 
   vrt-legacy:
-    if: ${{ github.event.label.name == 'vrt:full-ready'}}
+    if: contains(fromJSON('["vrt:full-ready"]'), github.event.label.name)
     needs: vrt-init
     runs-on: ubuntu-latest
 
@@ -93,10 +96,12 @@ jobs:
 
       - name: Applitools
         run: 'STORYBOOK_SLDS_VERSION=legacy npx eyes-storybook --conf applitools.legacy.config.js' # -u https://${REVIEW_APP_NAME}.herokuapp.com
-        timeout-minutes: 20
+        timeout-minutes: 60
+        env:
+          NODE_OPTIONS: --openssl-legacy-provider # per https://candid.technology/error-error-0308010c-digital-envelope-routines-unsupported/
 
   vrt-mobile:
-    if: ${{ github.event.label.name == 'vrt:full-ready'}}
+    if: contains(fromJSON('["vrt:full-ready", "vrt:mobile-ready"]'), github.event.label.name)
     needs: vrt-init
     runs-on: ubuntu-latest
 
@@ -124,11 +129,13 @@ jobs:
 
       - name: Applitools
         run: 'STORYBOOK_SLDS_VERSION=mobile npx eyes-storybook --conf applitools.mobile.config.js' # -u https://${REVIEW_APP_NAME}.herokuapp.com
-        timeout-minutes: 20
+        timeout-minutes: 60
+        env:
+          NODE_OPTIONS: --openssl-legacy-provider # per https://candid.technology/error-error-0308010c-digital-envelope-routines-unsupported/
 
   vrt-wrap:
     needs: [vrt-desktop, vrt-legacy, vrt-mobile]
-    if: always() && !cancelled() && !contains(needs.*.result, 'failure')
+    if: startsWith(github.event.label.name, 'vrt:') && always() && !cancelled() && !contains(needs.*.result, 'failure')
     runs-on: ubuntu-latest
     env:
       APPLITOOLS_API_KEY: ${{ secrets.APPLITOOLS_API_KEY }}
@@ -150,7 +157,9 @@ jobs:
 
       - name: Dump GitHub context event
         id: github_context_event_step
-        run: echo '${{ toJSON(github.event) }}'
+        env:
+          GITHUB_EVENT_CONTEXT: ${{ toJson(github.event) }}
+        run: echo "$GITHUB_EVENT_CONTEXT"
 
       - name: Show GitHub context
         env:

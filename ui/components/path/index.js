@@ -82,6 +82,7 @@ export const PathTrack = props => {
               className="slds-path__nav"
               role="listbox"
               aria-orientation="horizontal"
+              aria-labelledby="slds-path__stage-name"
             >
               {props.children}
             </ul>
@@ -110,7 +111,7 @@ export const PathTrack = props => {
       </div>
 
       <div className="slds-grid slds-path__action">
-        <span className="slds-path__stage-name">Stage: {stageName}</span>
+        <span id="slds-path__stage-name" className="slds-path__stage-name">Stage: {stageName}</span>
         <Button isBrand className="slds-path__mark-complete">
           {actionButtonLabel}
         </Button>

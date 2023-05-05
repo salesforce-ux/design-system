@@ -4,6 +4,15 @@
 
 <!-- ## [Unreleased] -->
 
+## 2.21.0
+### Fixed  
+- Fixed `aria-labelledby` to meet accessibility requirements specifically for screen readers.
+
+## 2.21.0
+### Changed
+- Added full size option for modal. This will allow the modal to reach full screen for mobile screen size and devices. When screen is bigger than mobile screen width (from 768px), full size modal will take on large size modal behaviour. 
+- Changed close button to meet accessibility requirement when in full size and in mobile width.
+
 ## 2.19.0
 ### Changed
 - Added tabindex to Footless example for programmatic focus use case.

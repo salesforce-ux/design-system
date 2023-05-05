@@ -1,8 +1,19 @@
 <!-- Release notes authoring guidelines: http://keepachangelog.com/ -->
 
 # Picklist Release Notes
+## 2.21.0
+
+### Added
+- Added aria-label and tabindex to fix aria-allowed-attr and aria-label sa11y issue.
 
 <!-- ## [Unreleased] -->
+
+
+## 2.21.0
+
+### Added
+
+- Added `aria-label` for picklist examples to meet accessibility requirements.
 
 ## 2.16.0
 

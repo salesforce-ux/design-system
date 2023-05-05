@@ -35,7 +35,9 @@ export let Progress = props => {
         aria-labelledby={props['aria-labelledby']}
         role="progressbar"
       >
-        <span className="slds-assistive-text">Progress: {`${value}%`}</span>
+        <span className="slds-assistive-text" id={props['aria-labelledby']}>
+          Progress: {`${value}%`}
+        </span>
       </div>
     </div>
   );

@@ -68,7 +68,7 @@ class WelcomeMat extends Component {
         <ModalContent id={welcomeMatDescripId}>
           <div className={welcomeMatClass}>
             <div className="slds-welcome-mat__content slds-grid">
-              <div className={welcomeMatInfoClass}>
+              <div className={welcomeMatInfoClass} tabindex="0" role="region">
                 <div className="slds-welcome-mat__info-content">
                   {content({
                     complete: this.completeTileCount(),

@@ -10,7 +10,6 @@ import { UtilityIcon } from '../../icons/base/example';
 import { Spinner } from '../../spinners/base/example';
 import classNames from 'classnames';
 import _ from '../../../shared/helpers';
-
 /**
  * Object switcher is a popup menu button, its visually displayed inlined with
  * its adjacent objects. A "polymorphic" combobox example uses this.
@@ -98,11 +97,7 @@ export const DeprecatedComboboxInputElement = ({
       id={id || comboboxId}
       aria-activedescendant={props['aria-activedescendant']}
       aria-autocomplete={autocomplete ? 'list' : null}
-      aria-controls={
-        props.listbox
-          ? props['aria-controls'] || props.listboxId
-          : props['aria-controls'] || 'please-provide-listbox-id-here'
-      }
+      aria-controls="listbox-unique-id-03"
       autocomplete="off"
       role="combobox"
       aria-expanded={isOpen ? 'true' : 'false'}
@@ -324,10 +319,11 @@ export const DeprecatedCombobox = props => {
  */
 export let DeprecatedListbox = props => (
   <div
-    id={props.id || 'listbox-unique-id'}
+    id={props.id || 'listbox-unique-id-03'}
     role="listbox"
     aria-orientation={props.horizontal || props.inline ? 'horizontal' : null}
     className={props.listboxClassName}
+    aria-label="{{Placeholder for Dropdown Options}}"
   >
     <ul
       className={classNames(
@@ -367,11 +363,11 @@ export let DeprecatedListboxItem = props => (
  * @prop {string}  className - A CSS class for the outer element
  */
 export let DeprecatedListboxOption = props => {
-  const uniqueId = _.uniqueId('listbox-option-unique-id-');
+
 
   return (
     <div
-      id={props.id || uniqueId}
+      id={props.id || _.uniqueId('listbox-option-unique-id-')}
       className={classNames(
         'slds-media slds-listbox__option',
         {

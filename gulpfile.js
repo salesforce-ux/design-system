@@ -12,6 +12,7 @@ import * as accessibility from './scripts/gulp/accessibility';
 import * as dist from './scripts/gulp/dist';
 import * as examples from './scripts/gulp/generate/examples';
 import * as tokens from './scripts/gulp/generate/tokens';
+import * as stylingHooks from './scripts/gulp/generate/styling-hooks';
 import * as lint from './scripts/gulp/lint';
 import * as styles from './scripts/gulp/styles';
 import * as sanitized from './scripts/gulp/generate/sanitized';
@@ -94,9 +95,9 @@ gulp.task('generate:tokens:components:imports', tokens.componentsImports);
 gulp.task('generate:tokens:package', tokens.packages);
 
 // Generate SLDS Styling Hooks
-gulp.task('generate:stylingHooks', tokens.stylingHooks);
+gulp.task('generate:stylingHooks', stylingHooks.createStylingHooks);
 
-// Generate all tokens - [Primitive, Component Specific, Package]
+// Generate all tokens - [Primitive, Component Specific, Package, Styling Hooks]
 gulp.task(
   'generate:tokens:all',
   gulp.series(
@@ -106,7 +107,7 @@ gulp.task(
     withName('generate:tokens:primitive')(tokens.copyDesignPrimitiveTokens),
     withName('generate:tokens:components:imports')(tokens.componentsImports),
     withName('generate:tokens:package')(tokens.packages),
-    withName('generate:stylingHooks')(tokens.stylingHooks)
+    withName('generate:stylingHooks')(stylingHooks.createStylingHooks)
   )
 );
 

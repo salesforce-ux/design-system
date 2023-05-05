@@ -10,13 +10,14 @@ import {
   DeprecatedListboxItem,
   DeprecatedEntityOption
 } from '../deprecated';
+import uniqueId from 'lodash.uniqueid';
 
 /* -----------------------------------------------------------------------------
     Variables
 ----------------------------------------------------------------------------- */
 const STORY_SINK_CONTEXT = 'Deprecated – Inline-Listbox';
-const listboxOptionId01 = 'listbox-option-unique-id-01';
-const listboxOptionId02 = 'listbox-option-unique-id-02';
+const listboxOptionId01 = uniqueId('listbox-option-unique-id-');
+const listboxOptionId02 = uniqueId('listbox-option-unique-id-');
 
 /* -----------------------------------------------------------------------------
     Private
@@ -26,7 +27,7 @@ const ListboxDropdown = props => (
   <DeprecatedListbox
     listboxClassName="slds-dropdown slds-dropdown_fluid"
     vertical
-    id="listbox-unique-id"
+    id="listbox-unique-id-03"
   >
     <DeprecatedListboxItem>
       <DeprecatedEntityOption

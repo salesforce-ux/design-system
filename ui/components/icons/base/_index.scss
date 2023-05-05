@@ -45,7 +45,17 @@
   }
 }
 
-[class*='slds-icon-action-'] {
+// All action icon classes in one string. This is faster for style calculation than `[class*='slds-icon-action-']`.
+/// @private
+@function action-icons() {
+  $result: '';
+  @each $name in map-keys($bg-actions-map) {
+    $result: "#{$result}, .slds-icon-#{$name}";
+  }
+  @return str-slice($result, 3); // Remove initial ", "
+}
+
+#{action-icons()} {
   padding: $spacing-x-small;
   border-radius: $border-radius-circle;
 }

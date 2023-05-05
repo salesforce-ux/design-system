@@ -2,7 +2,7 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 // Internal variables
-$alert-gradient: linear-gradient(45deg, rgba(#000, 0.025) 25%, transparent 25%, transparent 50%, rgba(#000, 0.025) 50%, rgba(#000, 0.025) 75%, transparent 75%, transparent);
+$alert-gradient: linear-gradient(45deg, var(--slds-g-color-neutral-10-opacity-10, rgba(#000, 0.025)) 25%, transparent 25%, transparent 50%, var(--slds-g-color-neutral-10-opacity-10, rgba(#000, 0.025)) 50%, var(--slds-g-color-neutral-10-opacity-10, rgba(#000, 0.025)) 75%, transparent 75%, transparent);
 $alert-gradient-size-background: 64px 64px;
 
 /**
@@ -54,12 +54,12 @@ $alert-gradient-size-background: 64px 64px;
     }
 
     &:active {
-      color: var(--slds-c-alert-text-color-active, var(--sds-c-alert-text-color-active, $color-text-link-inverse-active));
+      color: var(--slds-c-alert-text-color-active, var(--sds-c-alert-text-color-active, var(--slds-g-color-neutral-100-opacity-50, #{$color-text-link-inverse-active})));
     }
 
     &[disabled] {
       // @TODO: declare at shared/global level
-      color: $color-text-link-inverse-disabled;
+      color: var(--slds-g-color-neutral-100-opacity-10, #{$color-text-link-inverse-disabled});
     }
   }
 }

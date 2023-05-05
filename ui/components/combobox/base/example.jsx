@@ -17,13 +17,14 @@ import { StandardIcon } from '../../icons/standard/example';
 import Grid, { Column } from '../../../utilities/grid/docs/Grid';
 import _ from '../../../shared/helpers';
 import * as Snapshot from '../snapshots.data';
+import uniqueId from 'lodash.uniqueid';
 
 /* -----------------------------------------------------------------------------
     Variables
 ----------------------------------------------------------------------------- */
 const STORY_SINK_CONTEXT = 'Select-Only (Base)';
-const listboxOptionId01 = 'listbox-option-unique-id-01';
-const listboxOptionId02 = 'listbox-option-unique-id-02';
+const listboxOptionId01 = uniqueId('option');
+const listboxOptionId02 = uniqueId('option');
 
 /* -----------------------------------------------------------------------------
     Private
@@ -33,7 +34,7 @@ export const ListboxDropdown = props => (
   <DeprecatedListbox
     listboxClassName="slds-dropdown slds-dropdown_fluid"
     vertical
-    id="listbox-unique-id"
+    id="listbox-unique-id-03"
   >
     <DeprecatedListboxItem>
       <DeprecatedEntityOption
@@ -53,35 +54,38 @@ export const ListboxDropdown = props => (
   </DeprecatedListbox>
 );
 
-const ComboBoxDefault = props => (
-  <Combobox
-    id={_.uniqueId('combobox-id-')}
-    aria-controls="listbox-id-1"
-    inputIconPosition="right"
-    rightInputIcon={
-      <UtilityIcon
-        symbol="down"
-        className="slds-icon slds-icon_x-small slds-icon-text-default"
-        containerClassName="slds-input__icon slds-input__icon_right"
-        assistiveText={false}
-        title={false}
-      />
-    }
-    results={
-      <Listbox
-      id="listbox-id-1"
-      snapshot={Snapshot.ObjectOptions}
-      type="plain"
-      count={8}
-      visualSelection
-      />
-    }
-    resultsType="listbox"
-    hasInteractions
-    selectOnly
-    {...props}
-  />
-)
+const ComboBoxDefault = props => {
+  const comboboxDefaultID = uniqueId('listbox-id-');
+  return (
+    <Combobox
+      id={_.uniqueId('combobox-id-')}
+      aria-controls={comboboxDefaultID}
+      inputIconPosition="right"
+      rightInputIcon={
+        <UtilityIcon
+          symbol="down"
+          className="slds-icon slds-icon_x-small slds-icon-text-default"
+          containerClassName="slds-input__icon slds-input__icon_right"
+          assistiveText={false}
+          title={false}
+        />
+      }
+      results={
+        <Listbox
+          id={comboboxDefaultID}
+          snapshot={Snapshot.ObjectOptions}
+          type="plain"
+          count={8}
+          visualSelection
+        />
+      }
+      resultsType="listbox"
+      hasInteractions
+      selectOnly
+      {...props}
+    />
+  );
+};
 
 /* -----------------------------------------------------------------------------
     Exports
@@ -443,6 +447,7 @@ export let states = [
           <ListboxWrapper
             id="listbox-id-3"
             className="slds-dropdown slds-dropdown_fluid"
+            ariaLabel="{{Placeholder for Dropdown Options}}"
           >
             <ListboxGroup
               aria-label="Group One"

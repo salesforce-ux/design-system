@@ -1,6 +1,12 @@
 name: Make Review Apps
 
-on: pull_request
+on:
+  release:
+    types: [released, prereleased]
+  pull_request:
+    branches: [ '**' ]
+  push:
+    branches: [ '2[0-9][02468]-*-2[0-9]' ]
 
 env:
   # APPLITOOLS_API_KEY:
@@ -10,7 +16,7 @@ env:
   # DSE_API_RELEASE_TOKEN:
   # GITHUB_PACKAGES_TOKEN:
   # GITHUB_TOKEN: ${{ github.token }}
-  HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
+  HEROKU_API_KEY: ${{ secrets.DSE_INFRA_HEROKU_API_KEY }}
 
 jobs:
   init:
@@ -87,11 +93,15 @@ jobs:
 
     - uses: "./.github/actions/copy-tokens-to-workspace"
 
-    # - run: |-HEROKU_RELEASE_STORYBOOK_APP_NAME
-    #     HEROKU_APP_NAME=${{ steps.which-heroku-app.outputs.HEROKU_APP_NAME }}
-    #     HEROKU_RELEASE_STORYBOOK_APP_NAME=${{ steps.which-heroku-app.outputs.HEROKU_RELEASE_STORYBOOK_APP_NAME }}
-    #     echo $HEROKU_APP_NAME
-    #     echo $HEROKU_RELEASE_STORYBOOK_APP_NAME
+    - name: Print destination app names
+      run: |
+        HEROKU_APP_NAME=${{ steps.which-heroku-app.outputs.HEROKU_APP_NAME }}
+        HEROKU_RELEASE_STORYBOOK_APP_NAME=${{ steps.which-heroku-app.outputs.HEROKU_RELEASE_STORYBOOK_APP_NAME }}
+        echo "=============================="
+        echo $HEROKU_APP_NAME
+        echo $HEROKU_RELEASE_STORYBOOK_APP_NAME
+        # if HEROKU_RELEASE_STORYBOOK_APP_NAME is "true", then we are in a PR
+        echo "=============================="
 
     - name: Compile styles
       run: npm run gulp -- styles
@@ -138,6 +148,8 @@ jobs:
 
     - name: Build static Storybook
       run: npm run storybook:build
+      env:
+        NODE_OPTIONS: --openssl-legacy-provider # per https://candid.technology/error-error-0308010c-digital-envelope-routines-unsupported/
 
     - name: Archive static Storybook
       run: tar -czvf workspace/storybook.tar.gz .www/ Procfile config/nginx.conf.erb heroku-start.sh app.json
@@ -147,7 +159,7 @@ jobs:
         path: workspace/storybook.tar.gz
 
   publish-storybook:
-    if: ${{ needs.prepare.outputs.HEROKU_RELEASE_STORYBOOK_APP_NAME == 'true' }}
+    if: ${{ needs.prepare.outputs.HEROKU_RELEASE_STORYBOOK_APP_NAME != 'false' }}
     runs-on: ubuntu-latest
     needs:
       - init
@@ -241,6 +253,9 @@ jobs:
       - run: npm ci
       - name: Do build-dist
         run: npm run build-dist
+        env:
+          NODE_OPTIONS: --openssl-legacy-provider # per https://candid.technology/error-error-0308010c-digital-envelope-routines-unsupported/
+
       - name: Compress .dist
         run: |-
           tar -cvf workspace/design-system-dist.tar .dist/
@@ -303,6 +318,8 @@ jobs:
         run: npm run build
         env:
           SLDS__FRAMEWORK__PATH: ".slds/.dist/"
+          NODE_OPTIONS: --openssl-legacy-provider # per https://candid.technology/error-error-0308010c-digital-envelope-routines-unsupported/
+
       - name: Display structure of downloaded files
         run: ls -la
       - name: Generate site tarball

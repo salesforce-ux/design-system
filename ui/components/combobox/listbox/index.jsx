@@ -8,16 +8,20 @@ import { StandardIcon } from '../../icons/standard/example';
 import { UtilityIcon } from '../../icons/base/example';
 import { Spinner } from '../../spinners/base/example';
 import _ from '../../../shared/helpers';
+import uniqueId from 'lodash.uniqueid';
 
 /**
  * Listbox
  */
 export const ListboxWrapper = props => (
   <div
-    id={props.id || 'please-provide-a-unique-id'}
+    id={props.id || uniqueId('listbox-id')}
     className={props.className}
     role="listbox"
     aria-orientation={props.horizontal || props.inline ? 'horizontal' : null}
+    aria-label = {props.ariaLabel}
+    tabindex="0"
+    aria-busy={props.ariaBusy ?props.ariaBusy:null}
   >
     {props.children}
   </div>
@@ -79,7 +83,7 @@ export const ListboxOption = props => {
       aria-selected={props.focused ? 'true' : null}
       aria-disabled={props.isDisabled ? 'true' : null}
       aria-checked={props.selected ? 'true' : null}
-      id={props.id || 'please-provide-a-unique-id'}
+      id={props.id || uniqueId('listbox-option-id-')}
       className={classNames(
         'slds-media slds-listbox__option',
         {
@@ -301,13 +305,13 @@ export class Listbox extends Component {
 
   renderEntityOptions(key) {
     const uniqueId = this.props.hasUniqueId
-      ? _.uniqueId('listbox-option-id-')
+      ? _.uniqueId('option')
       : null;
     const option = this.props.snapshot[key];
     return (
       <ListboxItem key={key}>
         <EntityOption
-          id={uniqueId || key}
+          id={_.uniqueId('option') || key}
           tabIndex={option.tabIndex}
           selected={option.selected}
           focused={option.focused}
@@ -331,13 +335,13 @@ export class Listbox extends Component {
 
   renderPlainOptions(key) {
     const uniqueId = this.props.hasUniqueId
-      ? _.uniqueId('listbox-option-id-')
+      ? _.uniqueId('option')
       : null;
     const option = this.props.snapshot[key];
     return (
       <ListboxItem key={key}>
         <Option
-          id={uniqueId || key}
+          id={_.uniqueId('option') || key}
           name={option.name}
           selected={option.selected}
           focused={option.focused}
@@ -372,6 +376,7 @@ export class Listbox extends Component {
     return (
       <ListboxWrapper
         id={id}
+        ariaLabel='{{Placeholder for Dropdown Items}}'
         className={classNames(
           { 'slds-dropdown': !staticListbox },
           type === 'entity'
@@ -379,6 +384,7 @@ export class Listbox extends Component {
             : 'slds-dropdown_length-5',
           className
         )}
+        ariaBusy={loading ? "true":"false"}
       >
         <ListboxList vertical aria-label={this.props['aria-label']}>
           {term && type === 'entity' ? (
@@ -431,7 +437,7 @@ export class ListboxGroup extends Component {
     return (
       <ListboxItem key={key}>
         <EntityOption
-          id={key}
+          id={_.uniqueId('option')}
           tabIndex={option.tabIndex}
           selected={option.selected}
           focused={option.focused}

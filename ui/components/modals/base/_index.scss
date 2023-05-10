@@ -284,129 +284,123 @@
   }
 }
 
+/**
+ * @summary Makes the modal full screen in small viewports
+ * @name full
+ * @selector .slds-modal_full
+ * @restrict .slds-modal
+ * @modifier
+ * @group size
+ */
 .slds-modal_full {
 
-  .slds-modal__header {
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
-
-    @include mq-medium-min {
-      border-top-right-radius: var(--slds-c-modal-radius-border, var(--sds-c-modal-radius-border, $border-radius-medium));
-      border-top-left-radius: var(--slds-c-modal-radius-border, var(--sds-c-modal-radius-border, $border-radius-medium));
-    }
-  }
-  /**
-  * Headless modal styling
-  */
-  .slds-modal__content_headless,
-  .slds-modal__header_empty + .slds-modal__content {
-    @include mq-medium-min {
-      border-top-right-radius: var(--slds-c-modal-radius-border, var(--sds-c-modal-radius-border, $border-radius-medium));
-      border-top-left-radius: var(--slds-c-modal-radius-border, var(--sds-c-modal-radius-border, $border-radius-medium));
-    }
-  }
-
+  // Behaves like large size when not in a small viewport
   .slds-modal__container {
-    width: 100%;
+    width: 90%;
     max-width: none;
-    min-width: 0;
-    margin: 0;
-    padding: $spacing-medium 0 0 0;
-    justify-content: flex-start;
-    background-color: var(--slds-c-modal-header-color-background, var(--slds-c-modal-color-background, var(--slds-g-color-neutral-base-100, #{$color-background-alt})));
-    border-radius: 0;
+    min-width: 40rem;
+  }
 
-    @include mq-medium-min {
-      width: 90%;
+  // We use mq-medium-max since modal was originally designed as desktop first;
+  // This saves us from having to duplicate code for the full modifier.
+  @include mq-medium-max {
+    // Account for iOS safe areas so our modal doesn't load underneath iOS elements.
+    top: env(safe-area-inset-top, 0);
+    // Override slds-modal's bottom: 0 so we can make the height dynamic.
+    bottom: auto;
+    // Viewport may be dynamic, e.g., iOS Safari toolbar hiding behavior, so we use dvh. Safe areas may not be required here.
+    height: calc(100dvh - env(safe-area-inset-top) - env(safe-area-inset-bottom));
+
+    .slds-modal__header {
+      grid-area: header;
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+    }
+
+    .slds-modal__container {
+      width: 100%;
       max-width: none;
-      min-width: 40rem; // TODO: Tokenize
-      justify-content: center;
-      border-radius: $border-radius-medium;
-      margin: 0 auto;
-      padding: $square-icon-large-boundary 0 $square-icon-large-boundary-alt 0;
-      background: transparent;
+      min-width: 0;
+      margin: 0;
+      padding: $spacing-medium 0 0 0;
+      // Only __content used to get background color, we want entire modal to get it since we're fullscreen
+      background-color: var(--slds-c-modal-header-color-background, var(--slds-c-modal-color-background, var(--slds-g-color-neutral-base-100, #{$color-background-alt})));
+      border-radius: 0;
+      /* Establishes the main layout of the modal. Grid is defined by grid-template-areas
+      which explicitly defines the grid and allows optional elements to be omitted like
+      the header or footer. */
+      display: grid;
+      height: 100dvh;
+      grid-template-rows: min-content min-content 1fr min-content;
+      grid-template-areas:
+        "close"
+        "header"
+        "content"
+        "footer";
+    }
+
+    /**
+    * Footless modal styling
+    */
+    .slds-modal__content_footless,
+    .slds-modal__container > .slds-modal__content:last-child,
+    .slds-modal__content_has-hidden-footer {
+      border-bottom-right-radius: 0;
+      border-bottom-left-radius: 0;
+      box-shadow: none;
+    }
+
+    .slds-modal__close {
+      grid-area: close;
+      right: $spacing-medium;
+
+      // A few things going on here:
+      // - We want to avoid a markup change for a single modifier so we reassign/override.
+      // - Button icon doesn't have component level hooks (yet), so we don't include them here
+      //   and we have to override the CSS property instead of reassign.
+      // - States on button have a bug, they override instead of reassign hooks
+      //   so the values of empty hooks default to initial values. In the case
+      //   of background colors, the background will disappear (initial = transparent).
+      --slds-c-button-color-background: var(--slds-g-color-neutral-base-100, #{$button-color-background-primary});
+      --slds-c-button-color-background-active: var(--slds-g-color-neutral-base-100, #{$button-color-background-primary});
+      color: var(--slds-g-color-neutral-base-50, #{$color-text-icon-default});
+    }
+
+    .slds-modal__close:hover,
+    .slds-modal__:focus {
+      color: $brand-accessible-active;
+    }
+
+    .slds-modal__content {
+      grid-area: content;
+    }
+
+    .slds-modal__footer {
+      grid-area: footer;
+      border-bottom-right-radius: 0;
+      border-bottom-left-radius: 0;
+      box-shadow: none;
     }
   }
 
   /**
-  * Footless modal styling
-  */
-  .slds-modal__content_footless,
-  .slds-modal__container > .slds-modal__content:last-child,
-  .slds-modal__content_has-hidden-footer {
-    border-bottom-right-radius: unset;
-    border-bottom-left-radius: unset;
-    box-shadow: unset;
-
-    @include mq-medium-min {
-      border-bottom-right-radius: var(--slds-c-modal-radius-border, var(--sds-c-modal-radius-border, $border-radius-medium));
-      border-bottom-left-radius: var(--slds-c-modal-radius-border, var(--sds-c-modal-radius-border, $border-radius-medium));
-      box-shadow: var(--slds-c-modal-shadow, var(--sds-c-modal-shadow, $shadow-drop-down));
-    }
-  }
-
-  /* Close button style for modal size="full" in mobile */
-  .slds-modal_full-close-button {
-      border: none;
-
-      @include mq-medium-min {
-        /* Revert back to non-mobile sizing style.
-        All variants' closing button should look the same once out of mobile sizing. */
-        background-color: transparent;
-      }
-  }
-
-  .slds-modal__close {
-    right: $spacing-medium;
-
-    @include mq-medium-min {
-      right: ($spacing-x-small * -1);
-      color: var(--slds-g-color-neutral-base-100, #{$color-text-link-inverse});
-
-      &[disabled],
-      &:disabled {
-        background-color: transparent;
-        border-color: var(--slds-g-color-neutral-100-opacity-10, #{$color-border-button-inverse-disabled});
-      }
-
-      &:hover,
-      &:focus {
-        color: var(--slds-g-color-neutral-100-opacity-75, #{$color-text-link-inverse-hover});
-      }
-
-      &:focus {
-        @include focus-inverse;
-      }
-
-      &:active {
-        color: var(--slds-g-color-neutral-100-opacity-50, #{$color-text-link-inverse-active});
-      }
-
-      &[disabled],
-      &:disabled {
-        color: var(--slds-g-color-neutral-100-opacity-10, #{$color-text-link-inverse-disabled});
-      }
-    }
-  }
-
-  .slds-modal__footer {
-    border-bottom-right-radius: unset;
-    border-bottom-left-radius: unset;
-    box-shadow: unset;
-
-    @include mq-medium-min {
-      border-bottom-right-radius: var(--slds-c-modal-radius-border, var(--sds-c-modal-radius-border, $border-radius-medium));
-      border-bottom-left-radius: var(--slds-c-modal-radius-border, var(--sds-c-modal-radius-border, $border-radius-medium));
-      box-shadow: var(--slds-c-modal-shadow, var(--sds-c-modal-shadow, $shadow-drop-down));
-    }
-  }
-}
-
-.slds-modal_full-content {
-  flex: 1;
-
-  @include mq-medium-min {
-    flex: unset;
+   * INTERNAL USE ONLY - SUBJECT TO CHANGE AND REMOVAL 
+   *
+   * SLDS Blueprint <> LBC Parity Patch
+   *
+   * SLDS blueprints and LBC implementation are not 1:1. This patch is needed to
+   * account for the differences introduced in the LBC implementation. Location
+   * of this code would ideally live within the LBC component CSS module but
+   * synthetic shadow and how LBC deconstructs the modal into individual components
+   * makes this not feasible. Not ideal, but this is the best solution for now.
+   * Selectors are scoped to lightning-* to avoid any potential outside conflicts.
+   */
+  lightning-button-icon + div,
+  lightning-modal,
+  lightning-modal-header,
+  lightning-modal-body,
+  lightning-modal-footer {
+      display: contents;
   }
 }
 

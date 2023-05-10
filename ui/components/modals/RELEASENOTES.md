@@ -4,6 +4,10 @@
 
 <!-- ## [Unreleased] -->
 
+## 2.22.0
+### Changed
+- Optimized full size option and refactored to use CSS grid.
+
 ## 2.21.0
 ### Fixed  
 - Fixed `aria-labelledby` to meet accessibility requirements specifically for screen readers.

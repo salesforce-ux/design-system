@@ -1,6 +1,11 @@
 <!-- Release notes authoring guidelines: http://keepachangelog.com/ -->
 <!-- On release, add general notes here. In time the legacy release notes will be add to this -->
 
+## 2.21.1 - May 18, 2023
+
+## Fixed
+
+- Fixed grid column size classes where the `slds-col-` class now applies 'flex: 1 1 auto,' which breaks grid layouts when combined with `slds-small|medium|large-size_*` classes. This results in incomplete rows and layout issues.
 
 ## 2.21.0 - April 20, 2023
 

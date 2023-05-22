@@ -2,12 +2,41 @@
 
 build_site_only=false
 
+dist_path="./.dist"
+
+# Specify the path to the package.json file
+package_json="$dist_path/package.json"
+
+use_exising_dist=false
+
+if [ -e "$package_json" ]; then
+  # Use jq to extract the version property
+  version=$(jq -r '.version' "$package_json")
+
+  # Prompt the user to continue
+  read -p "The version v$version exists in the .dist folder. Do you want to continue? (y/n): " choice
+
+  # Check the user's choice
+  if [[ "$choice" == "y" || "$choice" == "Y" ]]; then
+      echo "==============================================================="
+      echo "Continuing with the existing version $version"
+      echo "==============================================================="
+      use_exising_dist=true
+  fi
+fi
+
+if [ "$use_exising_dist" = false ]; then
+  echo "==============================================================="
+  echo "Continuing to build and dist anew from v$(jq -r '.version' "./package.json")"
+  echo "==============================================================="
+fi
+
 incorrect_selection() {
   echo "Incorrect selection! Try again."
 }
 
 until [ "$selection" = "0" ]; do
-  clear
+  # clear
   echo "» Where would you like to publish?"
   echo ""
   echo "    	1  -  Upcoming"
@@ -36,8 +65,6 @@ done
 #
 # Do some cleanup & prep
 #
-echo "» Removing '.dist' folder..."
-rm -rf .dist/
 echo "» Removing '__release' folder..."
 rm -rf __release/
 echo "» Creating fresh '__release' folder..."
@@ -48,10 +75,14 @@ mkdir -p __release/
 #
 npx browserslist@latest --update-db
 
-#
-# Build framework
-#
-npm run build-dist
+if [ "$use_exising_dist" = false ]; then
+  echo "» Removing '.dist' folder..."
+  rm -rf $dist_path
+  #
+  # Build framework
+  #
+  npm run build-dist
+fi
 
 # # tar -cvf design-system-dist.tar .dist/
 # cd .dist && zip -r dist . && mv dist.zip ../ && cd ..

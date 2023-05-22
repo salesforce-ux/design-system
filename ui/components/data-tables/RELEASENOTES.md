@@ -4,6 +4,11 @@
 
 <!-- ## [Unreleased] -->
 
+## 2.22.0
+
+### Changed
+
+- Removed `aria-label` from table header to prevent from reading twice headers.
 ## 2.17.0
 
 ### Added

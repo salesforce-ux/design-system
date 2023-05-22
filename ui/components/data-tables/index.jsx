@@ -205,7 +205,6 @@ export const ColumnTh = (props) => {
 
   return (
     <th
-      aria-label={props['aria-label']}
       aria-sort={getAriaSort()}
       className={computedClasses}
       scope="col"

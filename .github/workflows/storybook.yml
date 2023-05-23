@@ -383,6 +383,7 @@ jobs:
     needs:
       - attach-artifact
     steps:
+    - uses: actions/checkout@v2
     - name: Trigger database update via API
       env:
         DSE_API_RELEASE_TOKEN: ${{ secrets.DSE_API_RELEASE_TOKEN }}

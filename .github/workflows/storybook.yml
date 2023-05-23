@@ -344,7 +344,7 @@ jobs:
 
   attach-artifact:
     runs-on: ubuntu-latest
-    if: ${{ contains(['released', 'prereleased'], github.event_name) }}
+    if: ${{ github.event_name == 'released' || github.event_name == 'prereleased' }}
     needs:
       - framework-build
     steps:
@@ -373,7 +373,7 @@ jobs:
 
   update-database:
     runs-on: ubuntu-latest
-    if: ${{ contains(['released', 'prereleased'], github.event_name) }}
+    if: ${{ github.event_name == 'released' || github.event_name == 'prereleased' }}
     needs:
       - attach-artifact
     steps:

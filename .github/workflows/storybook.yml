@@ -368,7 +368,7 @@ jobs:
         gh release view ${VERSION_FROM_TAG} | grep ${VERSION_FROM_TAG}
 
         if [ $? -eq 0 ]; then
-          cp workspace/dist.zip workspace/slds-${VERSION_FROM_TAG}.zip
+          cp workspace/artifact/dist.zip workspace/slds-${VERSION_FROM_TAG}.zip
           echo "=============================="
           echo "» Attaching artifact to release ${VERSION_FROM_TAG}"
           gh release upload ${VERSION_FROM_TAG} workspace/slds-${VERSION_FROM_TAG}.zip#"SLDS ${VERSION_FROM_TAG}" --clobber

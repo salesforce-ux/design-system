@@ -341,3 +341,52 @@ jobs:
             export SITE_URL=$(echo ${row} | base64 --decode | jq -r ".url")
             gh api ${STATUS_URL} -f state=success -f environment_url=${SITE_URL} -H "Accept: application/vnd.github.ant-man-preview+json"
           done
+
+  attach-artifact:
+    runs-on: ubuntu-latest
+    if: ${{ contains(['released', 'prereleased'], github.event_name) }}
+    needs:
+      - framework-build
+    steps:
+    - uses: actions/checkout@v2
+
+    - uses: actions/download-artifact@v2
+      with:
+        path: workspace
+
+    - name: 'Github: attach artifact to release'
+      env:
+        DSE_API_RELEASE_TOKEN: ${{ secrets.DSE_API_RELEASE_TOKEN }}
+        VERSION_FROM_TAG: ${{ github.event.release.tag_name }}
+      run: |-
+        gh release view ${VERSION_FROM_TAG} | grep ${VERSION_FROM_TAG}
+
+        if [ $? -eq 0 ]; then
+          cp workspace/dist.zip workspace/slds-${VERSION_FROM_TAG}.zip
+          echo "=============================="
+          echo "» Attaching artifact to release ${VERSION_FROM_TAG}"
+          gh release upload ${VERSION_FROM_TAG} workspace/slds-${VERSION_FROM_TAG}.zip#"SLDS ${VERSION_FROM_TAG}" --clobber
+        else
+          echo "=============================="
+          echo "» ERROR: release ${VERSION_FROM_TAG} not found on Github"
+        fi
+
+  update-database:
+    runs-on: ubuntu-latest
+    if: ${{ contains(['released', 'prereleased'], github.event_name) }}
+    needs:
+      - attach-artifact
+    steps:
+    - name: Trigger database update via API
+      env:
+        DSE_API_RELEASE_TOKEN: ${{ secrets.DSE_API_RELEASE_TOKEN }}
+        VERSION_FROM_TAG: ${{ github.event.release.tag_name }}
+      run: |-
+        export SALESFORCE_VERSION=$(cat package.json | jq -r .slds.id)
+        curl --location --request PATCH 'https://api.lightningdesignsystem.com/v1/release' \
+        --header 'Content-Type: application/json' \
+        --header 'Authorization: Bearer '"$DSE_API_RELEASE_TOKEN"'' \
+        --data-raw '{
+            "version":"'"${VERSION_FROM_TAG:1:20}"'",
+            "salesforce_version": "'"$SALESFORCE_VERSION"'"
+        }'

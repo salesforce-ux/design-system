@@ -358,6 +358,7 @@ jobs:
       env:
         DSE_API_RELEASE_TOKEN: ${{ secrets.DSE_API_RELEASE_TOKEN }}
         VERSION_FROM_TAG: ${{ github.event.release.tag_name }}
+        GITHUB_TOKEN: ${{ steps.get_installation_token.outputs.token }}
       run: |-
         gh release view ${VERSION_FROM_TAG} | grep ${VERSION_FROM_TAG}
 

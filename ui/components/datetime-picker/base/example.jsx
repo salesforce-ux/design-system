@@ -31,7 +31,11 @@ const ExampleDatetimePicker = ({
   isDisabled,
   listboxData,
   dateDefaultValue,
-  showRequiredIndicator
+  showRequiredIndicator,
+  hasTooltip,
+  showTooltip,
+  fieldLevelDateMessage,
+  fieldLevelTimeMessage
 }) => {
   const focusedRef = useRef();
   const [focusedId, setFocusedId] = useState('');
@@ -62,7 +66,8 @@ const ExampleDatetimePicker = ({
     <div className="slds-form">
       <fieldset
         className={classNames('slds-form-element slds-form-element_compound', {
-          'slds-has-error': hasError
+          'slds-has-error': hasError,
+          'slds-datetimepicker_has-tooltip': showTooltip
         })}
       >
         <legend className="slds-form-element__label slds-form-element__legend">
@@ -88,6 +93,9 @@ const ExampleDatetimePicker = ({
                 hasError={hasError}
                 isRequired={isRequired}
                 showRequiredIndicator={showRequiredIndicator}
+                hasTooltip={hasTooltip && fieldLevelDateMessage ? hasTooltip : false}
+                showTooltip={showTooltip && fieldLevelDateMessage ? showTooltip: false}
+                fieldLevelMessage={fieldLevelDateMessage}
               >
                 <Input
                   id={uniqueId}
@@ -116,6 +124,10 @@ const ExampleDatetimePicker = ({
                 inputIconPosition="right"
                 hasError={hasError}
                 isDisabled={isDisabled}
+                hasTooltip={hasTooltip && fieldLevelTimeMessage ? hasTooltip:null}
+                showTooltip={showTooltip && fieldLevelTimeMessage? showTooltip:null}
+                fieldLevelMessage={fieldLevelTimeMessage}
+                isOpen={isOpen}
                 // TODO: Combobox and Listbox do not currently have aria-describedby
                 // aria-describedby={hasError && (uniqueId + "-error")}
 
@@ -147,7 +159,6 @@ const ExampleDatetimePicker = ({
                 resultsType="listbox"
                 hasInteractions
                 hasFocus={hasFocus}
-                isOpen={isOpen}
                 value={focusedValue}
               />
             </div>
@@ -277,6 +288,47 @@ export let states = [
         isRequired
         hasError
         listboxData={PlainTimeOptions}
+      />
+    )
+  },
+  {
+    id: 'datetimepicker-with-tooltip-for-datepicker',
+    label: 'Datetime Picker With Tooptip for datepicker',
+    demoStyles: 'height: 20rem;',
+    element: (
+      <ExampleDatetimePicker
+        dropdownIsOpen
+        listboxData={PlainTimeOptions}
+        isRequired
+        dateDefaultValue="Jan 1 2023"
+        hasTooltip
+        showTooltip
+        fieldLevelDateMessage="Format: mmm d yyyy | ex: Jan 1 2023"
+      />
+    )
+  },
+  {
+    id: 'datetimepicker-with-tooltip-for-timepicker',
+    label: 'Datetime Picker With Tooptip for timepicker',
+    demoStyles: 'height: 20rem;',
+    element: (
+      <ExampleDatetimePicker
+        dropdown={
+          <DatePicker
+            todayActive
+            dateSelected="single"
+            dateRange="week-4"
+            value="8:00 am"
+          />
+        }
+        dropdownIsOpen={false}
+        dateDefaultValue="Jan 1 2023"
+        isOpen
+        hasFocus
+        hasTooltip
+        showTooltip
+        listboxData={PlainTimeOptionsSelected}
+        fieldLevelTimeMessage="Format: hh:mm a | ex: 12:00 AM"
       />
     )
   },

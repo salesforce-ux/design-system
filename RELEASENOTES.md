@@ -17,13 +17,31 @@
 #### Fixed
 - Fixed `NVDA` checkbox toggle is announced twice removed aria-live="assertive"
 
+### [Combobox](https://www.lightningdesignsystem.com/components/combobox)
+#### Added 
+- Tooltip option provided for Date/DateTime pickers.
+- Updated from tabindex to tabIndex.
+
 ### [Data Tables](https://www.lightningdesignsystem.com/components/data-tables)
 #### Changed
 - Removed `aria-label` from table header to prevent from reading twice headers.
 
+### [Datepickers](https://www.lightningdesignsystem.com/components/datepickers)
+#### Added 
+- Added datepicker example with field level tooltip  
+
+### [Datetime Picker](https://www.lightningdesignsystem.com/components/datetime-picker)
+#### Added 
+- Tooltip option provided for Date/DateTime pickers.
+- Added `slds-datetimepicker_has-tooltip` class to fix the icon misalignment issue. 
+
 ### [Expandable Section](https://www.lightningdesignsystem.com/components/expandable-section)
 #### Changed
 - Replaced aria-hidden with hidden attribute for components that show/hide content
+
+### [Form Element](https://www.lightningdesignsystem.com/components/form-element)
+#### Changed
+- Added field level custom message option for tooltip 
 
 ### [Modals](https://www.lightningdesignsystem.com/components/modals)
 #### Changed

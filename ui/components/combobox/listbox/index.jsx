@@ -20,7 +20,7 @@ export const ListboxWrapper = props => (
     role="listbox"
     aria-orientation={props.horizontal || props.inline ? 'horizontal' : null}
     aria-label = {props.ariaLabel}
-    tabindex="0"
+    tabIndex="0"
     aria-busy={props.ariaBusy ?props.ariaBusy:null}
   >
     {props.children}
@@ -304,9 +304,6 @@ export class Listbox extends Component {
   }
 
   renderEntityOptions(key) {
-    const uniqueId = this.props.hasUniqueId
-      ? _.uniqueId('option')
-      : null;
     const option = this.props.snapshot[key];
     return (
       <ListboxItem key={key}>
@@ -334,9 +331,6 @@ export class Listbox extends Component {
   }
 
   renderPlainOptions(key) {
-    const uniqueId = this.props.hasUniqueId
-      ? _.uniqueId('option')
-      : null;
     const option = this.props.snapshot[key];
     return (
       <ListboxItem key={key}>

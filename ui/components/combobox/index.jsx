@@ -312,7 +312,10 @@ export default class Combobox extends Component {
       isEditing,
       column,
       tabIndex,
-      value
+      value,
+      hasTooltip,
+      showTooltip,
+      fieldLevelMessage
     } = this.props;
 
     return (
@@ -327,6 +330,9 @@ export default class Combobox extends Component {
         isHorizontal={isHorizontal}
         isStacked={isStacked}
         column={column}
+        hasTooltip={hasTooltip}
+        showTooltip={showTooltip}
+        fieldLevelMessage={fieldLevelMessage}
       >
         <ComboboxContainer
           className={containerClassName}

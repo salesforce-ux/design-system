@@ -456,6 +456,9 @@ export let DatePickerElement = props => (
     hasError={props.hasError}
     isRequired={props.isRequired}
     isDisabled={props.isDisabled}
+    hasTooltip={props.hasTooltip}
+    showTooltip={props.showTooltip}
+    fieldLevelMessage={props.fieldLevelMessage}
     dropdown={
       (!props.isDisabled &&
         <DatePicker
@@ -568,6 +571,25 @@ export let states = [
         todayActive
         isRequired
         hasError
+      />
+    )
+  },
+  {
+    id: 'datepicker-with-tooltip',
+    label: 'Date Picker - With tooltip',
+    demoStyles: demoStyles,
+    element: (
+      <DatePickerElement
+        idPrefix="pickerRequired"
+        labelContent="Date"
+        dateInputId={dateInputId + '-required'}
+        todayActive
+        isRequired
+        isOpen
+        defaultValue="Jan 1 2023"
+        fieldLevelMessage="Format: mmm d yyyy | ex: Jan 1 2023"
+        hasTooltip
+        showTooltip
       />
     )
   },

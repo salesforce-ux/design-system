@@ -149,7 +149,7 @@ FormElementSpanFauxLabel.defaultProps = {
 };
 
 export const FormElementTooltip = props => {
-  const { showTooltip } = props;
+  const { showTooltip,fieldLevelMessage } = props;
 
   return (
     <div className="slds-form-element__icon">
@@ -166,10 +166,11 @@ export const FormElementTooltip = props => {
             position: 'absolute',
             top: '-45px',
             left: '-15px',
-            width: '170px'
+            width: fieldLevelMessage ? '220px':'170px'
           }}
         >
-          Some helpful information.
+          {fieldLevelMessage  || "Some helpful information."}
+
         </Tooltip>
       )}
     </div>
@@ -177,7 +178,8 @@ export const FormElementTooltip = props => {
 };
 
 FormElementTooltip.propTypes = {
-  showTooltip: PropTypes.bool
+  showTooltip: PropTypes.bool,
+  fieldLevelMessage: PropTypes.string
 };
 
 export const FormElementHelpMessage = props => {
@@ -352,6 +354,7 @@ export const FormElement = props => {
     hasTooltip,
     showTooltip,
     inlineMessage,
+    fieldLevelMessage,
     column,
     role,
     dropdown,
@@ -409,7 +412,7 @@ export const FormElement = props => {
             showRequiredIndicator={showRequiredIndicator}
           />
         ))}
-      {hasTooltip && <FormElementTooltip showTooltip={showTooltip} />}
+      {hasTooltip && <FormElementTooltip showTooltip={showTooltip} {...(fieldLevelMessage && { fieldLevelMessage })}/>}
       <FormElementControl
         className={classNames(inputIconPositionClasses, formControlClassName)}
       >
@@ -455,6 +458,7 @@ FormElement.propTypes = {
   inlineMessage: PropTypes.string,
   formElementClassName: PropTypes.string,
   formControlClassName: PropTypes.string,
+  fieldLevelMessage: PropTypes.string,
   column: PropTypes.number
 };
 

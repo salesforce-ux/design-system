@@ -42,6 +42,10 @@ module.exports = {
     node_modules,
     '@salesforce-ux/sds-styling-hooks/src/props'
   ),
+  sdsStylingAliases: path.resolve(
+    node_modules,
+    '@salesforce-ux/sds-styling-aliases/dist'
+  ),
   icons: path.resolve(
     node_modules,
     '@salesforce-ux/icons/dist/salesforce-lightning-design-system-icons'

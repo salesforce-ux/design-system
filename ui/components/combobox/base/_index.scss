@@ -496,7 +496,7 @@ input[readonly][role="combobox"] {
       display: flex;
       position: relative;
       background: var(--slds-g-color-neutral-base-100, #{$color-background-alt});
-      border: 1px solid var(--slds-g-color-border-base-1, #{$color-border});
+      border: 1px solid var(--slds-g-color-border-base-4, #{$color-border});
       border-top: 0;
       border-bottom-left-radius: $border-radius-medium;
       border-bottom-right-radius: $border-radius-medium;
@@ -589,7 +589,7 @@ input[readonly][role="combobox"] {
 .slds-has-object-switcher {
   flex-direction: row;
   background: var(--slds-g-color-neutral-base-100, #{$color-background-input});
-  border: $border-width-thin solid var(--slds-g-color-border-base-1, #{$color-border});
+  border: $border-width-thin solid var(--slds-g-color-border-base-4, #{$color-border});
   border-radius: $border-radius-medium;
 
   .slds-combobox {

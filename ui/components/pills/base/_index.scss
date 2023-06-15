@@ -22,7 +22,7 @@
   padding-left: var(--slds-c-pill-spacing-inline-start, var(--sds-c-pill-spacing-inline-start, $spacing-xxx-small));
   border-width: var(--slds-c-pill-sizing-border, var(--sds-c-pill-sizing-border, $border-width-thin));
   border-style: solid;
-  border-color: var(--slds-c-pill-color-border, var(--sds-c-pill-color-border, var(--slds-g-color-border-base-1, #{$color-border})));
+  border-color: var(--slds-c-pill-color-border, var(--sds-c-pill-color-border, var(--slds-g-color-border-base-4, #{$color-border})));
   border-radius: var(--slds-c-pill-radius-border, var(--sds-c-pill-radius-border, $border-radius-medium));
   background-color: var(--slds-c-pill-color-background, var(--sds-c-pill-color-background, var(--slds-g-color-neutral-base-100, #{$color-background-pill})));
   box-shadow: var(--slds-c-pill-shadow);
@@ -89,7 +89,7 @@
   padding-left: var(--slds-c-pill-container-spacing-inline-start, var(--sds-c-pill-container-spacing-inline-start, $spacing-xxx-small));
   border-width: var(--slds-c-pill-sizing-border, var(--sds-c-pill-sizing-border, $border-width-thin));
   border-style: solid;
-  border-color: var(--slds-c-pill-color-border, var(--sds-c-pill-color-border, var(--slds-g-color-border-base-1, #{$color-border})));
+  border-color: var(--slds-c-pill-color-border, var(--sds-c-pill-color-border, var(--slds-g-color-border-base-4, #{$color-border})));
   border-radius: var(--slds-c-pill-radius-border, var(--sds-c-pill-radius-border, $border-radius-medium));
   background-color: var(--slds-c-pill-container-color-background, var(--sds-c-pill-container-color-background, var(--slds-g-color-neutral-base-100, #{$color-background-input})));
 
@@ -199,7 +199,7 @@
   padding-left: var(--slds-c-pill-spacing-inline-start, var(--sds-c-pill-spacing-inline-start, $spacing-xxx-small));
   border-width: var(--slds-c-pill-sizing-border, var(--sds-c-pill-sizing-border, $border-width-thin));
   border-style: solid;
-  border-color: var(--slds-c-pill-color-border, var(--sds-c-pill-color-border, var(--slds-g-color-border-base-1, #{$color-border})));
+  border-color: var(--slds-c-pill-color-border, var(--sds-c-pill-color-border, var(--slds-g-color-border-base-4, #{$color-border})));
   border-radius: var(--slds-c-pill-radius-border, var(--sds-c-pill-radius-border, $border-radius-medium));
   white-space: nowrap;
   overflow: hidden;

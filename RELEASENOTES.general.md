@@ -3,6 +3,50 @@
 
 ## 2.22.0 - Upcoming
 
+- Updated icons to `v10.7.0`
+  - Standard Set:
+    - Added `attribute_based_pricing`
+    - Added `bundles_pricing`
+    - Added `data_cloud`
+    - Added `data_graph`
+    - Added `dynamic_highlights_panel`
+    - Added `header_discounts`
+    - Added `impact_outcome`
+    - Added `impact_strategy_assignment`
+    - Added `impact_strategy`
+    - Added `indicator_assignment`
+    - Added `indicator_definition`
+    - Added `indicator_performance_period`
+    - Added `indicator_result`
+    - Added `manual_discounts`
+    - Added `no_code_model`
+    - Added `outcome_activity`
+    - Added `panel_detail`
+    - Added `price_adjustment_matrix`
+    - Added `registered_model`
+    - Added `repeaters`
+    - Added `scheduling_workspace`
+    - Updated `story`
+    - Added `time_period`
+    - Added `uploaded_model`
+    - Added `volume_discounts`
+    - Added `walkthroughs`
+
+  - Utility Set:
+    - Added `apex_alt`
+    - Added `data_cloud`
+    - Added `data_graph`
+    - Added `data_transforms`
+    - Added `edit_gpt`
+    - Updated `einstein`
+    - Added `guidance`
+    - Added `indicator_performance_period`
+    - Added `mixed_sources_mapping`
+    - Added `page_structure`
+    - Added `sparkles`
+    - Added `visibility_rule_assigned`
+    - Added `walkthroughs`
+
 ## 2.21.1 - May 18, 2023
 
 ## Fixed

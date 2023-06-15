@@ -1,6 +1,12 @@
 <!-- Release notes authoring guidelines: http://keepachangelog.com/ -->
 <!-- On release, add general notes here. In time the legacy release notes will be add to this -->
 
+## 2.21.2 - June 15, 2023
+
+## Fixed
+- Fixed text-selection color issues which was introduced by WCAG 2.1 updates.
+- Fixed border colors for components.
+
 ## 2.21.1 - May 18, 2023
 
 ## Fixed

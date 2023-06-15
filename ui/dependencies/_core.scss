@@ -16,7 +16,7 @@
   }
 
   ::selection {
-    background: var(--slds-g-color-brand-base-95, #{$color-background-selection});
+    background: var(--slds-g-color-brand-base-90, #{$color-background-selection});
     text-shadow: none;
     color: var(--slds-g-color-neutral-base-10, #{$color-text-default});
   }

@@ -23,7 +23,7 @@
 
       &:before {
         content: '';
-        background: var(--slds-g-color-border-base-1, #{$color-border});
+        background: var(--slds-g-color-border-base-4, #{$color-border});
         height: 100%;
         width: $border-width-thin;
         position: absolute;

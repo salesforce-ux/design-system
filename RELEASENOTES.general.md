@@ -47,6 +47,12 @@
     - Added `visibility_rule_assigned`
     - Added `walkthroughs`
 
+## 2.21.2 - June 15, 2023
+
+## Fixed
+- Fixed text-selection color issues which was introduced by WCAG 2.1 updates.
+- Fixed border colors for components.
+
 ## 2.21.1 - May 18, 2023
 
 ## Fixed

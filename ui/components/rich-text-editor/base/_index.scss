@@ -11,7 +11,7 @@
  * @variant
  */
 .slds-rich-text-editor {
-  border: $border-width-thin solid var(--slds-g-color-border-base-1, #{$color-border});
+  border: $border-width-thin solid var(--slds-g-color-border-base-4, #{$color-border});
   border-radius: $border-radius-medium;
 }
 
@@ -41,7 +41,7 @@
   padding: $spacing-x-small $spacing-x-small $spacing-xx-small $spacing-x-small;
   border-top-left-radius: $border-radius-medium;
   border-top-right-radius: $border-radius-medium;
-  border-bottom: $border-width-thin solid var(--slds-g-color-border-base-1, #{$color-border});
+  border-bottom: $border-width-thin solid var(--slds-g-color-border-base-4, #{$color-border});
   background-color: var(--slds-g-color-neutral-base-95, #{$color-background});
 }
 
@@ -75,7 +75,7 @@
  */
 .slds-rich-text-editor__toolbar_bottom {
   border-radius: 0 0 $border-radius-medium $border-radius-medium;
-  border-top: $border-width-thin solid var(--slds-g-color-border-base-1, #{$color-border});
+  border-top: $border-width-thin solid var(--slds-g-color-border-base-4, #{$color-border});
   border-bottom: 0;
 }
 

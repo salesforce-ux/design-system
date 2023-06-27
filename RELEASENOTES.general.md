@@ -5,6 +5,7 @@
 
 ## Fixed
 - Correction in icons package version.
+
 ## 2.21.2 - June 15, 2023
 
 ## Fixed

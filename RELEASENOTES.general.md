@@ -6,6 +6,7 @@
 ## Fixed
 - Correction in icons package version.
 - Updated placeholder text color for Rich Text Editor
+- Updated docked utility component's unread notification state icon color
 - Updated border colors for Feeds component
 
 ## 2.21.2 - June 15, 2023

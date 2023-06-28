@@ -47,6 +47,26 @@
     - Added `visibility_rule_assigned`
     - Added `walkthroughs`
 
+## Fixed
+- Standard Icons Set
+  - Updated `event`
+  - Updated `dashboard`
+  - Updated `case`
+  - Updated `note`
+  - Updated `contact`
+  - Updated `lead`
+  - Updated `campaign`
+  - Updated `products`
+  - Updated `user`
+  - Updated `contract`
+  - Updated `category`
+  - Updated `catalog`
+  - Updated `store`
+  - Updated `buyer_account`
+  - Updated `buyer_group`
+  - Updated `delegated_account`
+  - Updated `entitlement_policy`
+
 ## 2.21.2 - June 15, 2023
 
 ## Fixed

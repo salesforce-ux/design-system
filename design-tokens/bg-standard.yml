@@ -47,7 +47,7 @@ props:
   AVATAR_LOADING:
     value: '#939393'
   CAMPAIGN:
-    value: '#FF5D2D'
+    value: '#9050E9'
   CALIBRATION:
     value: '#06A59A'
   AVATAR:
@@ -57,7 +57,7 @@ props:
   APPS:
     value: '#1B96FF'
   USER:
-    value: '#06A59A'
+    value: '#107CAD'
   EVERNOTE:
     value: '#3BA755'
   COACHING:
@@ -74,7 +74,7 @@ props:
   ENDORSEMENT:
     value: '#5867E8'
   EVENT:
-    value: '#FF538A'
+    value: '#CB65FF'
   DROPBOX:
     value: '#1B96FF'
   CONCUR:
@@ -98,11 +98,11 @@ props:
   CLIENT:
     value: '#06A59A'
   CONTRACT:
-    value: '#3BA755'
+    value: '#396547'
   DASHBOARD:
-    value: '#FF538A'
+    value: '#2F2CB7'
   CASE:
-    value: '#FF5D2D'
+    value: '#FF538A'
   EMPTY:
     value: '#939393'
   DEFAULT:
@@ -112,7 +112,7 @@ props:
   CANVAS:
     value: '#939393'
   CONTACT:
-    value: '#5867E8'
+    value: '#9602C7'
   PORTAL:
     value: '#3BA755'
   PRODUCT:
@@ -144,9 +144,9 @@ props:
   METRICS:
     value: '#1B96FF'
   NOTE:
-    value: '#FF5D2D'
+    value: '#B60554'
   LEAD:
-    value: '#FF5D2D'
+    value: '#1B96FF'
   OPPORTUNITY:
     value: '#FF5D2D'
   CALL:
@@ -566,9 +566,9 @@ props:
   SHIFT:
     value: '#FF538A'
   CATEGORY:
-    value: '#22683E'
+    value: '#396547'
   CATALOG:
-    value: '#22683E'
+    value: '#396547'
   VISIT_TEMPLATES:
     value: '#1B96FF'
   INSTORE_LOCATIONS:
@@ -604,15 +604,15 @@ props:
   CUSTOMER_360:
     value: '#032D60'
   STORE:
-    value: '#22683E'
+    value: '#396547'
   BUYER_ACCOUNT:
-    value: '#22683E'
+    value: '#396547'
   BUYER_GROUP:
-    value: '#22683E'
+    value: '#396547'
   DELEGATED_ACCOUNT:
-    value: '#22683E'
+    value: '#396547'
   ENTITLEMENT_POLICY:
-    value: '#22683E'
+    value: '#396547'
   APP:
     value: '#FF5D2D'
   CHART:
@@ -630,7 +630,7 @@ props:
   SALES_VALUE:
     value: '#1B96FF'
   SETTINGS:
-    value: '#22683E'
+    value: '#396547'
   ASSET_ACTION_SOURCE:
     value: '#107CAD'
   ASSET_ACTION:
@@ -678,7 +678,7 @@ props:
   CASE_WRAP_UP:
     value: '#FF5D2D'
   WEBCART:
-    value: '#22683E'
+    value: '#396547'
   SCHEDULING_CONSTRAINT:
     value: '#FF538A'
   SCHEDULING_POLICY:
@@ -712,7 +712,7 @@ props:
   ASSET_WARRANTY:
     value: '#107CAD'
   CHECKOUT:
-    value: '#22683E'
+    value: '#396547'
   DATA_MAPPING:
     value: '#032D60'
   FILTER_CRITERIA_RULE:
@@ -724,19 +724,19 @@ props:
   MAINTENANCE_WORK_RULE:
     value: '#107CAD'
   PRICE_BOOK_ENTRIES:
-    value: '#22683E'
+    value: '#396547'
   PRICE_BOOKS:
-    value: '#22683E'
+    value: '#396547'
   PRICING_WORKSPACE:
-    value: '#22683E'
+    value: '#396547'
   PROCESS_EXCEPTION:
     value: '#FF5D2D'
   PRODUCT_WARRANTY_TERM:
     value: '#9050E9'
   PRODUCT_WORKSPACE:
-    value: '#22683E'
+    value: '#396547'
   PRODUCTS:
-    value: '#22683E'
+    value: '#5A1BA9'
   SECTION:
     value: '#939393'
   SHIFT_PATTERN_ENTRY:
@@ -750,9 +750,9 @@ props:
   TRAILHEAD_ALT:
     value: '#032D60'
   VARIATION_ATTRIBUTE_SETUP:
-    value: '#22683E'
+    value: '#396547'
   VARIATION_PRODUCTS:
-    value: '#22683E'
+    value: '#396547'
   WARRANTY_TERM:
     value: '#107CAD'
   PAYMENT_GATEWAY:
@@ -830,9 +830,9 @@ props:
   ORCHESTRATOR:
     value: '#107CAD'
   PRODUCT_QUANTITY_RULES:
-    value: '#22683E'
+    value: '#396547'
   PROMOTIONS:
-    value: '#22683E'
+    value: '#396547'
   PROPAGATION_POLICY:
     value: '#1B96FF'
   RESTRICTION_POLICY:
@@ -856,15 +856,15 @@ props:
   BUDGET_ALLOCATION:
     value: '#107CAD'
   PROMOTION_SEGMENTS:
-    value: '#22683E'
+    value: '#396547'
   QUALIFICATIONS:
-    value: '#22683E'
+    value: '#396547'
   DISCOUNTS:
-    value: '#22683E'
+    value: '#396547'
   COUPON_CODES:
-    value: '#22683E'
+    value: '#396547'
   PROMOTIONS_WORKSPACE:
-    value: '#22683E'
+    value: '#396547'
   PROBLEM:
     value: '#FF5D2D'
   CHANGE_REQUEST:
@@ -932,9 +932,9 @@ props:
   CONNECT_WALLET:
     value: '#B60554'
   CONTRACT_LINE_OUTCOME:
-    value: '#22683E'
+    value: '#396547'
   CONTRACT_LINE_OUTCOME_DATA:
-    value: '#22683E'
+    value: '#396547'
   CRYPTO_CATEGORY_WALLET_GROUP:
     value: '#B60554'
   CRYPTO_PRODUCT:
@@ -948,15 +948,15 @@ props:
   CRYPTO_TRANSACTION_ENVELOPE_ITEM:
     value: '#107CAD'
   CRYPTO_WALLET:
-    value: '#22683E'
+    value: '#396547'
   CRYPTO_WALLET_GROUP:
     value: '#107CAD'
   CRYPTO_WALLET_GROUP_ITEM:
     value: '#9050E9'
   CUSTOMER:
-    value: '#22683E'
+    value: '#396547'
   CUSTOMER_WORKSPACE:
-    value: '#22683E'
+    value: '#396547'
   LEARNER_PROGRAM:
     value: '#FF5D2D'
   NFT_SETTINGS:
@@ -970,11 +970,11 @@ props:
   SNIPPET_ALT:
     value: '#107CAD'
   TAX_POLICY:
-    value: '#22683E'
+    value: '#396547'
   TAX_RATE:
-    value: '#22683E'
+    value: '#396547'
   TAX_TREATMENT:
-    value: '#22683E'
+    value: '#396547'
   WATER:
     value: '#5867E8'
   ASSET_HIERARCHY:
@@ -988,7 +988,7 @@ props:
   CRYPTO_TRANSACTION_ENVELOPE_CHANGE_SNAPSHOT:
     value: '#CB65FF'
   PROMOTION_TIERS:
-    value: '#22683E'
+    value: '#396547'
   BUDGET_PERIOD:
     value: '#9602C7'
   BUDGET_CATEGORY_VALUE:
@@ -996,13 +996,13 @@ props:
   FUNDING_AWARD_ADJUSTMENT:
     value: '#1B96FF'
   FUNDING_REQUIREMENT:
-    value: '#22683E'
+    value: '#396547'
   YOUR_ACCOUNT:
     value: '#1B96FF'
   BILL_OF_MATERIALS:
     value: '#FF5D2D'
   BUYER_GROUP_QUALIFIER:
-    value: '#22683E'
+    value: '#396547'
   DATASHARE_TARGET:
     value: '#FF538A'
   DATASHARES:
@@ -1014,7 +1014,7 @@ props:
   FACILITY_BED:
     value: '#FF538A'
   MARKET:
-    value: '#22683E'
+    value: '#396547'
   PRICE_SHEET:
     value: '#3BA755'
   MULESOFT:

@@ -5,6 +5,7 @@
 
 ## Fixed
 - Correction in icons package version.
+- Updated placeholder text color for Rich Text Editor
 
 ## 2.21.2 - June 15, 2023
 

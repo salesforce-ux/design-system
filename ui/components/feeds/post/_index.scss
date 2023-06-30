@@ -10,8 +10,8 @@
  */
 .slds-feed__item-comments {
   background: var(--slds-g-color-neutral-base-95, #{$color-background-post});
-  border-top: $border-width-thin solid var(--slds-g-color-border-base-4, #{$color-border});
-  border-bottom: $border-width-thin solid var(--slds-g-color-border-base-4, #{$color-border});
+  border-top: $border-width-thin solid var(--slds-g-color-border-base-1, #{$color-border});
+  border-bottom: $border-width-thin solid var(--slds-g-color-border-base-1, #{$color-border});
 
   .slds-comment {
     padding: $var-spacing-vertical-x-small $spacing-medium;
@@ -30,7 +30,7 @@
   padding: $spacing-small $spacing-medium;
 
   @include mq-medium-max {
-    border-top: $border-width-thin solid var(--slds-g-color-border-base-4, #{$color-border});
+    border-top: $border-width-thin solid var(--slds-g-color-border-base-1, #{$color-border});
   }
 
   @include mq-large-min {
@@ -90,7 +90,7 @@
   order: 1;
 
   @include mq-small-max {
-    border-top: $border-width-thin solid var(--slds-g-color-border-base-4, #{$color-border});
+    border-top: $border-width-thin solid var(--slds-g-color-border-base-1, #{$color-border});
     margin: 0 ($spacing-small * -1) ($spacing-small * -1);
     padding: 0 $spacing-medium;
   }
@@ -197,7 +197,7 @@
   // class .slds-region--narrow
   .slds-post__footer-actions-list {
     order: 1;
-    border-top: $border-width-thin solid var(--slds-g-color-border-base-4, #{$color-border});
+    border-top: $border-width-thin solid var(--slds-g-color-border-base-1, #{$color-border});
     margin: 0 ($spacing-small * -1) ($spacing-small * -1);
     padding: 0 $spacing-medium;
   }

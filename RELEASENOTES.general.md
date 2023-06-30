@@ -1,6 +1,14 @@
 <!-- Release notes authoring guidelines: http://keepachangelog.com/ -->
 <!-- On release, add general notes here. In time the legacy release notes will be add to this -->
 
+## 2.21.3 - June 29, 2023
+
+## Fixed
+- Correction in icons package version.
+- Updated placeholder text color for Rich Text Editor
+- Updated docked utility component's unread notification state icon color
+- Updated border colors for Feeds component
+
 ## 2.21.2 - June 15, 2023
 
 ## Fixed

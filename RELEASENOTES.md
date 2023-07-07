@@ -131,6 +131,14 @@
 - Replaced aria-hidden with hidden attribute for components that show/hide content
 <!-- ## [VERSION] -->
 
+## Release 2.21.3 - June 29, 2023
+
+## Fixed
+- Correction in icons package version.
+- Updated placeholder text color for Rich Text Editor
+- Updated docked utility component's unread notification state icon color
+- Updated border colors for Feeds component
+
 ## Release 2.21.2 - June 15, 2023
 
 ## Fixed

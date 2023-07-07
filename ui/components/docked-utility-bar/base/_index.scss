@@ -43,8 +43,9 @@
    */
   .slds-indicator_unread,
   .slds-indicator--unread {
-    background: var(--slds-g-color-neutral-base-100, #{$utility-bar-color-background-notification-badge});
+    background: var(--slds-g-color-error-base-40, #{$utility-bar-color-background-notification-badge});
     top: $spacing-x-small;
+    border: $border-width-thin solid var(--slds-g-color-neutral-base-95);
   }
 }
 

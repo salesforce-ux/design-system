@@ -1,7 +1,7 @@
 const theo = require('theo');
 
 const SLDS = 'slds';
-const SCOPED_NAMESPACE = process.env.WCAG_MODE ? ':root' : '.slds-wcag';
+const SCOPED_NAMESPACE = (process.env.WCAG_MODE === 'true') ? ':root' : '.slds-wcag';
 
 theo.registerFormat(
   'custom-props.scss',

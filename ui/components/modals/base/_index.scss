@@ -301,9 +301,9 @@
     min-width: 40rem;
   }
 
-  // We use mq-medium-max since modal was originally designed as desktop first;
+  // We use mq-small-max since modal was originally designed as desktop first;
   // This saves us from having to duplicate code for the full modifier.
-  @include mq-medium-max {
+  @include mq-small-max {
     // Account for iOS safe areas so our modal doesn't load underneath iOS elements.
     top: env(safe-area-inset-top, 0);
     // Override slds-modal's bottom: 0 so we can make the height dynamic.

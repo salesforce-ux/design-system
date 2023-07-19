@@ -37,17 +37,16 @@
     - Added `data_cloud`
     - Added `data_graph`
     - Added `data_transforms`
-    - Added `edit_gpt`
-    - Updated `einstein`
     - Added `guidance`
     - Added `indicator_performance_period`
     - Added `mixed_sources_mapping`
     - Added `page_structure`
-    - Added `sparkles`
     - Added `visibility_rule_assigned`
     - Added `walkthroughs`
 
 ## Fixed
+
+- Updated background colors for Standard and Actions icons
 - Standard Icons Set
   - Updated `event`
   - Updated `dashboard`
@@ -67,9 +66,18 @@
   - Updated `delegated_account`
   - Updated `entitlement_policy`
 
+## 2.21.4 - July 17, 2023
+
+- Updated icons to `v10.6.1`
+  - Utility Set:
+    - Added `edit_gpt`
+    - Updated `einstein`
+    - Added `sparkles`
+
 ## 2.21.3 - June 29, 2023
 
 ## Fixed
+
 - Correction in icons package version.
 - Updated placeholder text color for Rich Text Editor
 - Updated docked utility component's unread notification state icon color
@@ -78,6 +86,7 @@
 ## 2.21.2 - June 15, 2023
 
 ## Fixed
+
 - Fixed text-selection color issues which was introduced by WCAG 2.1 updates.
 - Fixed border colors for components.
 

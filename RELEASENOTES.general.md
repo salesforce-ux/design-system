@@ -1,6 +1,11 @@
 <!-- Release notes authoring guidelines: http://keepachangelog.com/ -->
 <!-- On release, add general notes here. In time the legacy release notes will be add to this -->
 
+## 2.21.4 - Upcoming
+
+## Fixed
+- Updated disabled checkbox-toggle color.
+
 ## 2.21.3 - June 29, 2023
 
 ## Fixed

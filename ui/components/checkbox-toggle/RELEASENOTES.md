@@ -3,6 +3,10 @@
 # Checkbox Toggle Release Notes
 
 <!-- ## [Unreleased] -->
+## 2.21.5
+
+### Changed
+- Updated disabled checkbox toggle button color.
 
 ## 2.17.0
 

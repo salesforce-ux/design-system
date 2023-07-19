@@ -36,16 +36,14 @@
     - Added `data_cloud`
     - Added `data_graph`
     - Added `data_transforms`
-    - Added `edit_gpt`
-    - Updated `einstein`
     - Added `guidance`
     - Added `indicator_performance_period`
     - Added `mixed_sources_mapping`
     - Added `page_structure`
-    - Added `sparkles`
     - Added `visibility_rule_assigned`
     - Added `walkthroughs`
 ## Fixed
+- Updated background colors for Standard and Actions icons
 - Standard Icons Set
   - Updated `event`
   - Updated `dashboard`
@@ -130,6 +128,14 @@
 #### Changed
 - Replaced aria-hidden with hidden attribute for components that show/hide content
 <!-- ## [VERSION] -->
+
+## Release 2.21.4 - July 17, 2023
+
+- Updated icons to `v10.6.1`
+  - Utility Set:
+    - Added `edit_gpt`
+    - Updated `einstein`
+    - Added `sparkles`
 
 ## Release 2.21.3 - June 29, 2023
 

@@ -129,6 +129,13 @@
 - Replaced aria-hidden with hidden attribute for components that show/hide content
 <!-- ## [VERSION] -->
 
+## Release 2.21.5 - July 19, 2023
+
+## Components
+### [Checkbox Toggle](https://www.lightningdesignsystem.com/components/checkbox-toggle)
+#### Changed
+- Updated disabled checkbox toggle button color.
+
 ## Release 2.21.4 - July 17, 2023
 
 - Updated icons to `v10.6.1`

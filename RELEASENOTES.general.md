@@ -66,6 +66,8 @@
   - Updated `delegated_account`
   - Updated `entitlement_policy`
 
+## 2.21.5 - July 19, 2023
+
 ## 2.21.4 - July 17, 2023
 
 - Updated icons to `v10.6.1`

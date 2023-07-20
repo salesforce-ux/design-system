@@ -68,7 +68,7 @@ jobs:
           NODE_OPTIONS: --openssl-legacy-provider # per https://candid.technology/error-error-0308010c-digital-envelope-routines-unsupported/
 
   vrt-legacy:
-    if: contains(fromJSON('["vrt:full-ready"]'), github.event.label.name)
+    if: contains(fromJSON('["vrt:legacy-ready"]'), github.event.label.name)
     needs: vrt-init
     runs-on: ubuntu-latest
 

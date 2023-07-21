@@ -1,6 +1,17 @@
 <!-- Release notes authoring guidelines: http://keepachangelog.com/ -->
 <!-- On release, add general notes here. In time the legacy release notes will be add to this -->
 
+## 2.21.5 - July 19, 2023
+
+
+## 2.21.4 - July 17, 2023
+
+- Updated icons to `v10.6.1`
+  - Utility Set:
+    - Added `edit_gpt`
+    - Updated `einstein`
+    - Added `sparkles`
+
 ## 2.21.3 - June 29, 2023
 
 ## Fixed

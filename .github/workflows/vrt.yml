@@ -182,7 +182,7 @@ jobs:
           GH_APP_ID: 244972
           GH_APP_INSTALLATION_ID: 29956208
           GH_APP_PRIVATE_KEY: ${{ secrets.DSE_CI_APP_KEY }}
-          GH_APP_CLIENT_ID: Iv1.6aaf118377862b49
+          GH_APP_CLIENT_ID: ${{ secrets.DSE_CI_APP_ID }}
           GH_APP_CLIENT_SECRET: ${{ secrets.DSE_CI_CLIENT_SECRET }}
         # single quotes are needed around the JSON string here so that is can be parsed by the node script
         run: batchesData='${{ steps.applitools_batch.outputs.batches }}' node scripts/ci/pr-checks

@@ -126,7 +126,7 @@ Modals, by definition, trap focus. This means that if a user presses Tab or Shif
 
 ### Full
 
-Use the `slds-modal_full` class to give the modal a full screen appearance in mobile device screens, or small form factors. The modal will take on the same appearance as the large size modal when on a medium form factor or larger (from 768px and larger).
+Use the `slds-modal_full` class to give a full screen appearance in small form factors that fall within the `$mq-small` token value. Form factors outside of `$mq-small` will take on the appearance of the large modal.
 
 <CodeView frameOnly frameStyles={{ height: '640px' }} frameTitle="Example mobile styles for full example">
   {getDisplayElementById(Base.examples, 'full')}

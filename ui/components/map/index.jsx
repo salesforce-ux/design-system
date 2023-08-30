@@ -89,7 +89,7 @@ export const GoogleMap = props => {
         <iframe
           id="GoogleMapID"
           title="Google Maps iframe"
-          src="https://www.google.com/maps/embed/v1/place?q=1%20market%2C%20san%20francisco&key=AIzaSyDliLquGXGts9S8YtkWVolSQEJdBL1ZuWc"
+          src="https://sfdc-map.surge.sh/"
         />
       )}
     </div>

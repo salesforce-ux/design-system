@@ -1,6 +1,8 @@
 <!-- Release notes authoring guidelines: http://keepachangelog.com/ -->
 <!-- On release, add general notes here. In time the legacy release notes will be add to this -->
 
+## 2.23.0 - Upcoming
+
 ## 2.22.0 - August 16, 2023
 
 - Updated icons to `v10.7.0`

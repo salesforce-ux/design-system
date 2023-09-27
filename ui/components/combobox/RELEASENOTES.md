@@ -3,6 +3,10 @@
 # Combobox Release Notes
 
 <!-- ## [Unreleased] -->
+## 2.22.0
+### Added 
+- Tooltip option provided for Date/DateTime pickers.
+- Updated from tabindex to tabIndex.
 ## 2.21.0
 ### Fixed
 - Fixed by adding tabindex for `scrollable region must have keyboard access` wcag issue

@@ -58,10 +58,7 @@ export let Modal = (props) => (
       {
         props.closeButton !== false ? (
           <ButtonIcon
-            className={classNames('slds-modal__close',
-            {'slds-button_icon-inverse': !props.isFullSize,
-            'slds-button_icon-border-filled slds-modal_full-close-button': props.isFullSize }
-            )}
+            className="slds-modal__close slds-button_icon-inverse"
             iconClassName="slds-button__icon_large"
             symbol="close"
             assistiveText="Cancel and close"
@@ -195,10 +192,7 @@ export let ModalSizes = (props) => (
           Modal header
         </h1>
       </ModalHeader>
-      <ModalContent className={classNames(
-        props.size === 'full' && 'slds-modal_full-content slds-p-around_medium'
-      )}
-      >
+      <ModalContent className='slds-p-around_medium'>
         <PlaceholderParagraphs />
         <br />
         <PlaceholderParagraphs />

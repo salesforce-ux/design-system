@@ -21,7 +21,7 @@ export const Container = props => {
         props.drawer && 'slds-panel_drawer',
         props.isVisible ? 'slds-is-open' : 'slds-hidden'
       )}
-      aria-hidden={!props.isVisible}
+      hidden={!props.isVisible}
       id={props.id}
     >
       {props.children}

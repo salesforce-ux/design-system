@@ -12,7 +12,7 @@ exports[`Map Container renders map container 1`] = `
     >
       <iframe
         id="GoogleMapID"
-        src="https://www.google.com/maps/embed/v1/place?q=1%20market%2C%20san%20francisco&key=AIzaSyDliLquGXGts9S8YtkWVolSQEJdBL1ZuWc"
+        src="https://sfdc-map.surge.sh/"
         title="Google Maps iframe"
       />
     </div>
@@ -32,7 +32,7 @@ exports[`Map Container renders map container with coordinates 1`] = `
     >
       <iframe
         id="GoogleMapID"
-        src="https://www.google.com/maps/embed/v1/place?q=1%20market%2C%20san%20francisco&key=AIzaSyDliLquGXGts9S8YtkWVolSQEJdBL1ZuWc"
+        src="https://sfdc-map.surge.sh/"
         title="Google Maps iframe"
       />
     </div>
@@ -490,7 +490,7 @@ exports[`Map Container renders map container with heading text 1`] = `
     >
       <iframe
         id="GoogleMapID"
-        src="https://www.google.com/maps/embed/v1/place?q=1%20market%2C%20san%20francisco&key=AIzaSyDliLquGXGts9S8YtkWVolSQEJdBL1ZuWc"
+        src="https://sfdc-map.surge.sh/"
         title="Google Maps iframe"
       />
     </div>
@@ -510,7 +510,7 @@ exports[`Map Container renders map container with selected coordinate 1`] = `
     >
       <iframe
         id="GoogleMapID"
-        src="https://www.google.com/maps/embed/v1/place?q=1%20market%2C%20san%20francisco&key=AIzaSyDliLquGXGts9S8YtkWVolSQEJdBL1ZuWc"
+        src="https://sfdc-map.surge.sh/"
         title="Google Maps iframe"
       />
     </div>

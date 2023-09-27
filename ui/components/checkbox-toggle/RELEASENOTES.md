@@ -3,6 +3,10 @@
 # Checkbox Toggle Release Notes
 
 <!-- ## [Unreleased] -->
+## 2.22.0
+
+### Fixed
+- Fixed `NVDA` checkbox toggle is announced twice removed aria-live="assertive"
 ## 2.21.5
 
 ### Changed

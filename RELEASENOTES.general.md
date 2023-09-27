@@ -1,8 +1,72 @@
 <!-- Release notes authoring guidelines: http://keepachangelog.com/ -->
 <!-- On release, add general notes here. In time the legacy release notes will be add to this -->
 
-## 2.21.5 - July 19, 2023
+## 2.22.0 - August 16, 2023
 
+- Updated icons to `v10.7.0`
+  - Standard Set:
+    - Added `attribute_based_pricing`
+    - Added `bundles_pricing`
+    - Added `data_cloud`
+    - Added `data_graph`
+    - Added `dynamic_highlights_panel`
+    - Added `header_discounts`
+    - Added `impact_outcome`
+    - Added `impact_strategy_assignment`
+    - Added `impact_strategy`
+    - Added `indicator_assignment`
+    - Added `indicator_definition`
+    - Added `indicator_performance_period`
+    - Added `indicator_result`
+    - Added `manual_discounts`
+    - Added `no_code_model`
+    - Added `outcome_activity`
+    - Added `panel_detail`
+    - Added `price_adjustment_matrix`
+    - Added `registered_model`
+    - Added `repeaters`
+    - Added `scheduling_workspace`
+    - Updated `story`
+    - Added `time_period`
+    - Added `uploaded_model`
+    - Added `volume_discounts`
+    - Added `walkthroughs`
+
+  - Utility Set:
+    - Added `apex_alt`
+    - Added `data_cloud`
+    - Added `data_graph`
+    - Added `data_transforms`
+    - Added `guidance`
+    - Added `indicator_performance_period`
+    - Added `mixed_sources_mapping`
+    - Added `page_structure`
+    - Added `visibility_rule_assigned`
+    - Added `walkthroughs`
+
+## Fixed
+
+- Updated background colors for Standard and Actions icons
+- Standard Icons Set
+  - Updated `event`
+  - Updated `dashboard`
+  - Updated `case`
+  - Updated `note`
+  - Updated `contact`
+  - Updated `lead`
+  - Updated `campaign`
+  - Updated `products`
+  - Updated `user`
+  - Updated `contract`
+  - Updated `category`
+  - Updated `catalog`
+  - Updated `store`
+  - Updated `buyer_account`
+  - Updated `buyer_group`
+  - Updated `delegated_account`
+  - Updated `entitlement_policy`
+
+## 2.21.5 - July 19, 2023
 
 ## 2.21.4 - July 17, 2023
 
@@ -15,6 +79,7 @@
 ## 2.21.3 - June 29, 2023
 
 ## Fixed
+
 - Correction in icons package version.
 - Updated placeholder text color for Rich Text Editor
 - Updated docked utility component's unread notification state icon color
@@ -23,6 +88,7 @@
 ## 2.21.2 - June 15, 2023
 
 ## Fixed
+
 - Fixed text-selection color issues which was introduced by WCAG 2.1 updates.
 - Fixed border colors for components.
 

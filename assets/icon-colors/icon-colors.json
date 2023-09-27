@@ -1,0 +1,32 @@
+{
+  "description": "Recommended Colors for Standard and Action Icons. These colors will be used by icon-linter to verify bg-standard.yml and bg-actions.yml files",
+  "source": "https://docs.google.com/presentation/d/1sZfkUjVIgdvCFac8O3FbLimkUSw9QeVJ8AgZ4fg4QlU/edit#slide=id.g13a86adcae5_0_0",
+  "recommendedColors": [
+    "green-60",
+    "green-40",
+    "indigo-50",
+    "indigo-30",
+    "hot-orange-60",
+    "hot-orange-30",
+    "teal-60",
+    "teal-40",
+    "purple-50",
+    "purple-30",
+    "neutral-60",
+    "neutral-40",
+    "cloud-blue-50",
+    "cloud-blue-30",
+    "violet-60",
+    "violet-40",
+    "blue-60",
+    "blue-20",
+    "pink-60",
+    "pink-40"
+  ],
+  "specialColors": [
+    "#4A154B",
+    "#481A54",
+    "#0F1E3C",
+    "#22683E"
+  ]
+}

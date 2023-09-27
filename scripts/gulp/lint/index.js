@@ -8,7 +8,7 @@ import eslint from 'gulp-eslint';
 import stylelint from 'gulp-stylelint';
 import htmlhint from 'gulp-htmlhint';
 import yamlValidate from './validate-yaml.js';
-
+import iconlint from '../plugins/lint-icons';
 import tokenlint from '../plugins/lint-tokens';
 
 import validateMarkup from './validate-markup';
@@ -135,3 +135,12 @@ export const tokensAliases = () =>
     .src(['./design-tokens/aliases/*.yml'])
     .pipe(tokenlint({ prefix: false }))
     .pipe(tokenlint.report('verbose'));
+
+/**
+ * To ensure that only the recommended colors are used for standard and action icons, a linter is being used to evaluate them
+ */
+export const iconsYml = () =>
+  gulp
+    .src(['./design-tokens/bg-standard.yml', './design-tokens/bg-actions.yml'])
+    .pipe(iconlint())
+    .pipe(iconlint.report());

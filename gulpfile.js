@@ -159,6 +159,7 @@ gulp.task('lint:javascript:test', lint.javascriptTest);
 gulp.task('lint:html', lint.html);
 gulp.task('lint:markup', lint.markup);
 gulp.task('lint:tokens:yml', lint.tokensYml);
+gulp.task('lint:icons:yml', lint.iconsYml);
 gulp.task('lint:tokens:components', lint.tokensComponents);
 gulp.task('lint:tokens:aliases', lint.tokensAliases);
 
@@ -168,6 +169,13 @@ gulp.task(
     withName('lint:tokens:yml')(lint.tokensYml),
     withName('lint:tokens:components')(lint.tokensComponents),
     withName('lint:tokens:aliases')(lint.tokensAliases)
+  )
+);
+
+gulp.task(
+  'lint:icons',
+  gulp.parallel(
+    withName('lint:icons:yml')(lint.iconsYml)
   )
 );
 
@@ -196,7 +204,8 @@ gulp.task(
     withName('lint:spaces')(lint.spaces),
     withName('lint:javascript')(lint.javascript),
     withName('lint:javascript:test')(lint.javascriptTest),
-    'lint:tokens'
+    'lint:tokens',
+    'lint:icons'
   )
 );
 

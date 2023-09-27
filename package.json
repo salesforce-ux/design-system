@@ -8,14 +8,14 @@
     "CSS"
   ],
   "homepage": "https://lightningdesignsystem.com",
-  "version": "2.21.5",
+  "version": "2.22.0",
   "author": "Salesforce",
   "bugs": {
     "url": "https://github.com/salesforce-ux/design-system/issues"
   },
   "slds": {
-    "name": "Summer ’23",
-    "id": "244"
+    "name": "Winter ’24",
+    "id": "246"
   },
   "important": [
     "'private' and 'config.slds.internal' should have the same value",
@@ -49,7 +49,7 @@
     "@salesforce-ux/design-system-markup": "^2.0.4",
     "@salesforce-ux/design-system-parser": "^1.1.1",
     "@salesforce-ux/design-system-primitive-tokens": "0.3.6",
-    "@salesforce-ux/icons": "10.6.1",
+    "@salesforce-ux/icons": "10.7.0",
     "@salesforce-ux/instant-vrt": "2.0.0",
     "@salesforce-ux/postcss-annotations-parser": "0.1.1",
     "@salesforce-ux/postcss-css-variable-value": "0.2.0",

@@ -192,6 +192,7 @@
 
     &,
     &:hover {
+      font-weight: 700;
       background-color: var(--slds-g-color-palette-yellow-90, #{$color-background-highlight});
     }
   }
@@ -207,6 +208,7 @@
 
     &,
     &:hover {
+      font-weight: 700;
       background-color: var(--slds-g-color-palette-yellow-90, #{$color-background-highlight});
       box-shadow: var(--slds-g-color-error-base-40, #{$color-border-error}) 0 0 0 ($border-width-thick) inset;
     }
@@ -228,7 +230,7 @@
 
   &[disabled],
   &:disabled {
-   color: var(--slds-g-color-neutral-base-50, #{$color-text-icon-default});
+    color: var(--slds-g-color-neutral-base-50, #{$color-text-icon-default});
   }
 }
 

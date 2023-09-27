@@ -223,7 +223,7 @@ export const DescriptionCard = props => (
       props.className
     )}
     id={props.id}
-    aria-hidden={!props.isExpanded}
+    hidden={!props.isExpanded}
   >
     {props.fields && <FieldInfoList {...props} />}
     {props.children && (

@@ -25,7 +25,7 @@ export const SummaryDetail = props => (
 
 export const SummaryDetailContent = props => (
   <div
-    aria-hidden={props.isOpen ? 'false' : 'true'}
+    hidden={!props.isOpen}
     className={classNames('slds-summary-detail__content', props.className)}
     id={props.referenceId}
   >

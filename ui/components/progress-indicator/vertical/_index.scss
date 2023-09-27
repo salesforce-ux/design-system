@@ -50,7 +50,7 @@
     &.slds-is-completed:after,
     &.slds-is-active:before,
     &.slds-has-error:before {
-      background-color: var(--slds-g-color-brand-base-60, #{$progress-bar-color-background-fill});
+      background-color: var(--slds-g-color-brand-base-50, #{$progress-bar-color-background-fill});
     }
   }
 

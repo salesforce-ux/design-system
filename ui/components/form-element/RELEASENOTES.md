@@ -3,6 +3,9 @@
 # Form Element Release Notes
 
 <!-- ## [Unreleased] -->
+## 2.22.0
+### Changed
+- Added field level custom message option for tooltip 
 
 ## 2.18.0
 

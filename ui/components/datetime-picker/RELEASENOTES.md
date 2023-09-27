@@ -3,6 +3,10 @@
 # Datetime Picker Release Notes
 
 <!-- ## [Unreleased] -->
+## 2.22.0
+### Added 
+- Tooltip option provided for Date/DateTime pickers.
+- Added `slds-datetimepicker_has-tooltip` class to fix the icon misalignment issue. 
 
 ## 2.17.0
 ### Fixed

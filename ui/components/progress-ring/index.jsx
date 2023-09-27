@@ -86,7 +86,7 @@ class ProgressRing extends Component {
             <svg viewBox={viewBoxParams}>
               <circle
                 className="slds-progress-ring__path"
-                id={uniqueId}
+                id={_.uniqueId('slds-progress-ring-path-')}
                 cx={Number(progressHeadPlotRadius * x)}
                 cy={Number(progressHeadPlotRadius * y)}
                 r={progressHeadRadius}

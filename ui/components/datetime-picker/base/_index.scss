@@ -10,3 +10,10 @@
  * @support dev-ready
  * @variant
  */
+
+.slds-datetimepicker_has-tooltip {
+
+  .slds-form-element__icon {
+    padding-top: 0;
+  }
+}

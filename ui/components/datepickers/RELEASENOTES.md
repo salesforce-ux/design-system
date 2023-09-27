@@ -3,7 +3,9 @@
 # Datepickers Release Notes
 
 <!-- ## [Unreleased] -->
-
+## 2.22.0
+### Added 
+- Added datepicker example with field level tooltip  
 ## 2.17.0
 
 ### Fixed

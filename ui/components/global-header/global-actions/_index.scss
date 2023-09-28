@@ -135,8 +135,8 @@
    */
   &:disabled,
   &.slds-is-disabled {
-    color: $brand-header-contrast-weak-disabled;
-    border-color: $brand-header-contrast-weak-disabled;
+    color: var(--slds-g-color-neutral-base-80, #{$brand-header-contrast-weak-disabled});
+    border-color: var(--slds-g-color-border-base-1, #{$brand-header-contrast-weak-disabled});
   }
 }
 

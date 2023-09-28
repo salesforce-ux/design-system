@@ -98,7 +98,9 @@
    * @restrict .slds-sub-tabs__item
    */
   &.slds-has-warning {
-    @include sub-tab-notification-before(var(--slds-g-color-warning-base-60, #{$color-background-warning}), var(--slds-g-color-warning-base-60, #{$color-background-warning-dark}));
+    @include sub-tab-notification-before(var(--slds-g-color-warning-base-60, #{$color-background-warning}), var(--slds-g-color-warning-base-70, #{$color-background-warning-dark}));
+    --slds-c-icon-color-foreground: var(--slds-g-color-neutral-base-10, #{$color-text-icon-default});
+    color: var(--slds-g-color-neutral-base-10, currentColor);
 
     &:before {
       animation-name: warning-pulse;

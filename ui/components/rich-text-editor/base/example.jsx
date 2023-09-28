@@ -301,7 +301,7 @@ export let states = [
     label: 'Disabled',
     element: (
       <Demo>
-        <RichTextEditor>
+        <RichTextEditor disabledLabel="disabled">
           <RteToolbar disabledButtons disabledLabel="disabled">
             <RteFormatText tabIndexSetting="0" disabledButtons />
             <RteFormatBody disabledButtons />

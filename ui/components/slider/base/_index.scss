@@ -112,7 +112,7 @@
   &[disabled] {
 
     &::-webkit-slider-thumb {
-      background-color: var(--slds-g-color-neutral-base-95, #{$slider-color-background-disabled});
+      background-color: var(--slds-g-color-neutral-base-80, #{$slider-color-background-disabled});
       cursor: default;
     }
 
@@ -122,7 +122,7 @@
     }
 
     &::-moz-range-thumb {
-      background-color: var(--slds-g-color-neutral-base-95, #{$slider-color-background-disabled});
+      background-color: var(--slds-g-color-neutral-base-80, #{$slider-color-background-disabled});
       cursor: default;
     }
 
@@ -131,7 +131,7 @@
     }
 
     &::-ms-thumb {
-      background-color: var(--slds-g-color-neutral-base-95, #{$slider-color-background-disabled});
+      background-color: var(--slds-g-color-neutral-base-80, #{$slider-color-background-disabled});
       cursor: default;
     }
 

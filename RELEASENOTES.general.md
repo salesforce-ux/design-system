@@ -3,6 +3,9 @@
 
 ## 2.23.0 - Upcoming
 
+- Updated `disabled` state colors for all components.
+- Added `aria-label="disabled"` to `RichTextEditor` component which is similar to `RteToolbar`.
+
 ## 2.22.0 - August 16, 2023
 
 - Updated icons to `v10.7.0`

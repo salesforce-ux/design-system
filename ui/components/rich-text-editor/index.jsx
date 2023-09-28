@@ -39,7 +39,8 @@ export let RichTextEditor = props => (
         'slds-rich-text-editor slds-grid slds-grid_vertical slds-nowrap',
         props.isToolbarOnly && 'slds-rich-text-editor_toolbar-only',
         props.className
-      )}
+        )}
+      aria-label={props.disabledLabel}
     >
       {props.children}
     </div>

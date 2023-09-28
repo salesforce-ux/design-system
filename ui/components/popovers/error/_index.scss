@@ -20,7 +20,7 @@
 .slds-popover_error {
 
   .slds-popover__header {
-    background-color: var(--slds-g-color-error-base-30, #{$color-background-error-dark});
+    background-color: var(--slds-g-color-error-base-40, #{$color-background-error-dark});
     color: var(--slds-g-color-neutral-base-100, #{$color-text-inverse});
     padding-left: $spacing-small;
   }
@@ -49,7 +49,7 @@
   &.slds-nubbin--right-top {
 
     &:before {
-      background-color: var(--slds-g-color-error-base-30, #{$color-background-error-dark});
+      background-color: var(--slds-g-color-error-base-40, #{$color-background-error-dark});
     }
   }
 

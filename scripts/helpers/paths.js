@@ -38,10 +38,6 @@ module.exports = {
     '@salesforce-ux/design-system-primitive-tokens'
   ),
   sldsStylingHooksProps: rootPath('styling-hooks'),
-  sdsStylingHooksProps: path.resolve(
-    node_modules,
-    '@salesforce-ux/sds-styling-hooks/src/props'
-  ),
   sdsStylingAliases: path.resolve(
     node_modules,
     '@salesforce-ux/sds-styling-aliases/dist'

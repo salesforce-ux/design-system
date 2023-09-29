@@ -29,7 +29,8 @@ const sldsStylingHooksFormats = [
 ];
 
 const sourcePaths = [
-  `${path.resolve(paths.sldsStylingHooksProps, 'slds-hooks.json')}`
+  `${path.resolve(paths.sdsStylingHooksProps, '*.json')}`,
+  `${path.resolve(paths.sldsStylingHooksProps, '*.json')}`
 ];
 
 export const createStylingHooks = (done) => {

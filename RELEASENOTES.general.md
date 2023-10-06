@@ -5,6 +5,9 @@
 
 - Updated `disabled` state colors for all components.
 - Added `aria-label="disabled"` to `RichTextEditor` component which is similar to `RteToolbar`.
+- Added Button element for `Pill` remove feature. Now remove button is focusable and can be clickable.
+- Updated close button position in the `Modal`
+- Added tabindex to the heading element in `Modal` to make it focussable
 
 ## 2.22.0 - August 16, 2023
 

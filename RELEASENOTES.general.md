@@ -3,6 +3,37 @@
 
 ## 2.23.0 - Upcoming
 
+- Updated icons to `v10.8.2`
+  - Standard Set:
+    - Added custody_chain_entry
+    - Added custody_entry_verification
+    - Added custody_override
+    - Updated data_cloud
+    - Added digital_verification_config_group
+    - Added digital_verification_config
+    - Added linked
+    - Added prompt_builder
+    - Added real_time
+    - Added scheduling_workspace_territory
+    - Updated story
+    - Added title_party
+    - Added work_summary
+
+  - Utility Set:
+    - Added add_above
+    - Added add_below
+    - Updated apex_alt
+    - Added asset_repossessed
+    - Updated data_cloud
+    - Updated einstein_alt
+    - Added locked_with_additions
+    - Added payment_deferred
+    - Added plane
+    - Added prompt_builder
+    - Added real_time
+    - Added record_collection
+    - Added sparkle
+
 - Updated `disabled` state colors for all components.
 - Added `aria-label="disabled"` to `RichTextEditor` component which is similar to `RteToolbar`.
 - Added Button element for `Pill` remove feature. Now remove button is focusable and can be clickable.

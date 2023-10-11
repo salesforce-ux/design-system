@@ -622,7 +622,7 @@ props:
   DATASET:
     value: '#9050E9'
   STORY:
-    value: '#1B96FF'
+    value: '#107CAD'
   VOICE_CALL:
     value: '#3BA755'
   SALESFORCE_CMS:
@@ -1069,3 +1069,25 @@ props:
     value: '#FF5D2D'
   WALKTHROUGHS:
     value: '#06A59A'
+  CUSTODY_CHAIN_ENTRY:
+    value: '#06A59A'
+  CUSTODY_ENTRY_VERIFICATION:
+    value: '#06A59A'
+  CUSTODY_OVERRIDE:
+    value: '#06A59A'
+  DIGITAL_VERIFICATION_CONFIG:
+    value: '#2F2CB7'
+  DIGITAL_VERIFICATION_CONFIG_GROUP:
+    value: '#2F2CB7'
+  LINKED:
+    value: '#06A59A'
+  REAL_TIME:
+    value: '#FF5D2D'
+  SCHEDULING_WORKSPACE_TERRITORY:
+    value: '#FF538A'
+  TITLE_PARTY:
+    value: '#056764'
+  WORK_SUMMARY:
+    value: '#B60554'
+  PROMPT_BUILDER:
+    value: '#2F2CB7'

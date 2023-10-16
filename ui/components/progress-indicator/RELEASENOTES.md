@@ -1,7 +1,10 @@
 <!-- Release notes authoring guidelines: http://keepachangelog.com/ -->
 
 # Progress Indicator Release Notes
+## 2.23.0
+### Fixed
 
+- Matching styles for [dir=rtl] added.
 ## 2.21.0
 
 ### Added

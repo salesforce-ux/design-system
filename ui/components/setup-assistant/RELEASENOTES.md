@@ -3,6 +3,11 @@
 # Setup Assistant Release Notes
 
 <!-- ## [Unreleased] -->
+## 2.23.0
+
+### Added
+
+- Matching styles for [dir=rtl] added.
 
 ## 2.16.0
 

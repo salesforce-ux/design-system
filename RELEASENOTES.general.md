@@ -39,6 +39,7 @@
 - Added Button element for `Pill` remove feature. Now remove button is focusable and can be clickable.
 - Updated close button position in the `Modal`
 - Added tabindex to the heading element in `Modal` to make it focussable
+- Updated RTL stylings for `setup-assistant` component
 
 ## 2.22.0 - August 16, 2023
 

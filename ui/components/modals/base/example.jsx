@@ -55,17 +55,6 @@ export let Modal = (props) => (
     className={classNames('slds-modal slds-fade-in-open', props.className)}
   >
     <div className="slds-modal__container">
-      {
-        props.closeButton !== false ? (
-          <ButtonIcon
-            className="slds-modal__close"
-            iconClassName="slds-button__icon_large"
-            symbol="close"
-            assistiveText="Cancel and close"
-            disabled={props.closeButtonDisabled}
-          />
-        ) : null
-      }
       {props.children}</div>
   </section>
 );
@@ -84,9 +73,25 @@ Modal.defaultProps = {
 
 export let ModalHeader = (props) => (
   <div className={classNames('slds-modal__header slds-text-align_left', props.className)}>
-    {props.children}
+    {props.headless ? null : props.children }
+    {props.closeButton !== false ? (
+      <ButtonIcon
+        className="slds-modal__close"
+        iconClassName="slds-button__icon_large"
+        symbol="close"
+        assistiveText="Cancel and close"
+      />
+    ) : null}
   </div>
 );
+
+ModalHeader.propTypes = {
+  headless: PropTypes.bool
+};
+
+ModalHeader.defaultProps = {
+  headless: false
+};
 
 export let ModalHeaderDeprecated = (props) => (
   <div className={classNames('slds-modal__header slds-text-align_left', props.className)}>
@@ -261,6 +266,7 @@ export let FullHeadless = (props) => (
       aria-labelledby="modal-heading-01"
       isFullSize={props.size === 'full'}
     >
+      <ModalHeader headless className="slds-modal__header_empty" />
       <ModalContent className={classNames(
         props.size === 'full' && 'slds-modal_full-content slds-p-around_medium slds-modal__content_headless'
       )}
@@ -356,6 +362,7 @@ export let Directional = (props) => (
 export let Headless = (props) => (
   <Backdrop>
     <Modal aria-label="Meaningful description of the modal content">
+      <ModalHeader headless className="slds-modal__header_empty" />
       <ModalContent className="slds-p-around_medium slds-modal__content_headless">
         <p>
           Sit nulla est ex deserunt exercitation anim occaecat. Nostrud ullamco
@@ -445,6 +452,7 @@ export let HiddenFooter = (props) => (
 export let HeadlessAndFootless = (props) => (
   <Backdrop>
     <Modal aria-labelledby="modal-content-id-1">
+      <ModalHeader className="slds-modal__header_empty" />
       <ModalContent className="slds-modal__content_headless slds-modal__content_footless slds-p-around_medium">
         <p>
           Sit nulla est ex deserunt exercitation anim occaecat. Nostrud ullamco
@@ -470,7 +478,6 @@ export let HeadlessAndFootless = (props) => (
 export let HeadlessAndFootlessDeprecated = (props) => (
   <Backdrop>
     <Modal aria-labelledby="modal-content-id-1">
-      <ModalHeader className="slds-modal__header_empty" />
       <ModalContent className="slds-p-around_medium">
         <p>
           Sit nulla est ex deserunt exercitation anim occaecat. Nostrud ullamco

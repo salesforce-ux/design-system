@@ -85,7 +85,7 @@
   color: var(--slds-c-modal-header-text-color, var(--sds-c-modal-header-text-color, var(--sds-c-modal-text-color)));
   flex-shrink: 0;
   padding-top: var(--slds-c-modal-header-spacing-block-start, var(--sds-c-modal-header-spacing-block-start, $spacing-medium));
-  padding-right: var(--slds-c-modal-header-spacing-inline-end, var(--sds-c-modal-header-spacing-inline-end, ($spacing-x-large * 2)));
+  padding-right: var(--slds-c-modal-header-spacing-inline-end, var(--sds-c-modal-header-spacing-inline-end, ($spacing-medium)));
   padding-bottom: var(--slds-c-modal-header-spacing-block-end, var(--sds-c-modal-header-spacing-block-end, $spacing-medium));
   padding-left: var(--slds-c-modal-header-spacing-inline-start, var(--sds-c-modal-header-spacing-inline-start, $spacing-medium));
   text-align: center;
@@ -106,7 +106,6 @@
 .slds-modal__content_headless,
 .slds-modal__header_empty + .slds-modal__content,
 .slds-modal__header--empty + .slds-modal__content {
-  padding-top: ($spacing-xx-large + $spacing-x-small) !important;
   border-top-right-radius: var(--slds-c-modal-radius-border, var(--sds-c-modal-radius-border, $border-radius-medium));
   border-top-left-radius: var(--slds-c-modal-radius-border, var(--sds-c-modal-radius-border, $border-radius-medium));
 }
@@ -194,9 +193,8 @@
   @include square($square-icon-medium-boundary);
   margin-left: auto;
   position: relative;
-  top: $spacing-xx-large;
-  right: ($spacing-medium);
-  z-index: ($z-index-modal + 2);
+  bottom: $spacing-x-small;
+  right: ($spacing-x-small * -1);
 }
 
 @mixin backdrop {

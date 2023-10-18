@@ -35,20 +35,13 @@
     - Added sparkle
 - Updated `disabled` state colors for all components.
 - Added `aria-label="disabled"` to `RichTextEditor` component which is similar to `RteToolbar`.
-- Added Button element for `Pill` remove feature. Now remove button is focusable and can be clickable.
-- Updated close button position in the `Modal`
-- Added tabindex to the heading element in `Modal` to make it focussable
+git - Added Button element for `Pill` remove feature. Now remove button is focusable and can be clickable.
 - Updated RTL stylings for `setup-assistant` component
 
 ## Components
 ### [Input](https://www.lightningdesignsystem.com/components/input)
 #### Fixed
 - Removed wrapping for date input type, which was causing some dates to be cut off.
-
-### [Modals](https://www.lightningdesignsystem.com/components/modals)
-## Changed
-- Updated close button position in the Modal
-- Added tabindex to the heading element to make it focussable
 
 ### [Progress Indicator](https://www.lightningdesignsystem.com/components/progress-indicator)
 #### Fixed

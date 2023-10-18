@@ -4,6 +4,12 @@
 
 <!-- ## [Unreleased] -->
 
+## 2.23.0
+
+## Added
+
+- Inbuilt Header introduced for tabs. The header scales as per the size modifiers.
+
 ## 2.21.0
 
 ### Added

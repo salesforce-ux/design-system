@@ -3,6 +3,7 @@
 
 ## Release 2.23.0 - Upcoming
 
+- Inbuilt Header introduced for tabs. The header scales as per the size modifiers.
 - Updated icons to `v10.8.2`
   - Standard Set:
     - Added custody_chain_entry
@@ -37,6 +38,7 @@
 - Added Button element for `Pill` remove feature. Now remove button is focusable and can be clickable.
 - Updated close button position in the `Modal`
 - Added tabindex to the heading element in `Modal` to make it focussable
+- Updated RTL stylings for `setup-assistant` component
 
 ## Components
 ### [Input](https://www.lightningdesignsystem.com/components/input)
@@ -47,6 +49,22 @@
 ## Changed
 - Updated close button position in the Modal
 - Added tabindex to the heading element to make it focussable
+
+### [Progress Indicator](https://www.lightningdesignsystem.com/components/progress-indicator)
+#### Fixed
+- Matching styles for [dir=rtl] added.
+
+### [Setup Assistant](https://www.lightningdesignsystem.com/components/setup-assistant)
+#### Added
+- Matching styles for [dir=rtl] added.
+
+### [Summary Detail](https://www.lightningdesignsystem.com/components/summary-detail)
+#### Fixed
+- Matching styles for [dir=rtl] added.
+
+### [Tabs](https://www.lightningdesignsystem.com/components/tabs)
+## Added
+- Inbuilt Header introduced for tabs. The header scales as per the size modifiers.
 
 ## Release 2.22.0 - August 16, 2023
 

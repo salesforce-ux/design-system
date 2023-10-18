@@ -4,7 +4,7 @@ import Example from '../../../shared/components/Example';
 import Blockquote from '../../../shared/components/Blockquote';
 import StylingHooksTable from '../../../shared/components/StylingHooksTable';
 import MobileTabs, { MobileTabGroup, NestedMobileStacked } from './mobile-stack/';
-import { TabsDefault, TabsOverflow, TabsOverflowIcons, TabsWithNestedScopedTabs, TabsWithCards, TabsMedium, TabsLarge, TabsWithError } from '../tabs/base/example';
+import { TabsDefault, TabsOverflow, TabsOverflowIcons, TabsWithNestedScopedTabs, TabsWithCards, TabsMedium, TabsLarge, TabsWithError, TabsWithHeading } from '../tabs/base/example';
 import { SubTabSet, TabWithFocus, TabsWithBorders, TabActionOverflow, StatusTab, OverflowSubtabs } from '../tabs/sub-tabs/example';
 import * as SubTabs from '../tabs/sub-tabs/example';
 import VerticalTabs from '../vertical-tabs/base/example';
@@ -134,6 +134,42 @@ Tabs come with three size modifiers: default, medium, and large. Each size step 
 <Example title="Tabs with Large sizing modifier">
   <CodeView>
     <TabsLarge />
+  </CodeView>
+</Example>
+
+## With Header
+
+Tabs come with an option of having an inbuilt header based on the size modifiers: default, medium, and large.
+
+### Default
+
+<Example title="Tabs with Header">
+  <CodeView demoStyles="height: 200px;">
+    <TabsWithHeading/>
+  </CodeView>
+</Example>
+
+### Medium
+
+<Example title="Tabs with Header">
+  <CodeView demoStyles="height: 200px;">
+    <TabsMedium withHeader showHeader/>
+  </CodeView>
+</Example>
+
+### Large
+
+<Example title="Tabs with Header">
+  <CodeView demoStyles="height: 200px;">
+    <TabsLarge withHeader showHeader/>
+  </CodeView>
+</Example>
+
+### Invisible Accessible Header
+
+<Example title="Tabs with Invisible Heading">
+  <CodeView demoStyles="height: 200px;">
+    <TabsWithHeading showHeader={false}/>
   </CodeView>
 </Example>
 

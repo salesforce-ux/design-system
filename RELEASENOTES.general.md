@@ -3,6 +3,7 @@
 
 ## 2.23.0 - Upcoming
 
+- Inbuilt Header introduced for tabs. The header scales as per the size modifiers.
 - Updated icons to `v10.8.2`
   - Standard Set:
     - Added custody_chain_entry

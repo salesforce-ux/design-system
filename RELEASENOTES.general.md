@@ -3,6 +3,7 @@
 
 ## 2.22.0 - August 16, 2023
 
+- Fixed the checkbox to high contrast when the focus is placed on it.
 - Updated icons to `v10.7.0`
   - Standard Set:
     - Added `attribute_based_pricing`

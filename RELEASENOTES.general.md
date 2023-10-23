@@ -1,8 +1,8 @@
 <!-- Release notes authoring guidelines: http://keepachangelog.com/ -->
 <!-- On release, add general notes here. In time the legacy release notes will be add to this -->
 
-## 2.22.0 - August 16, 2023
-
+## 2.22.1 - August 16, 2023
+- Fixed the app launcher button is invisible When windows high contrast is enabled.
 - Fixed the checkbox to high contrast when the focus is placed on it.
 - Updated icons to `v10.7.0`
   - Standard Set:

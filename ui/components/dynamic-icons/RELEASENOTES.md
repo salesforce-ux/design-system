@@ -6,6 +6,11 @@
 
 <!-- ## [VERSION] -->
 
+## 2.22.1
+
+### Fixed
+- Fixed the app launcher button is invisible When windows high contrast is enabled.
+
 ## 2.19.0
 
 ### Changed

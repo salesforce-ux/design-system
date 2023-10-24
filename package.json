@@ -140,7 +140,7 @@
     "gulp-zip": "4.0.0",
     "handlebars": "4.7.7",
     "husky": "^6.0.0",
-    "immutable": "3.8.2",
+    "immutable": "4.3.4",
     "isomorphic-fetch": "3.0.0",
     "jest": "26.6.0",
     "js-beautify": "1.11.0",

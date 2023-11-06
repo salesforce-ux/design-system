@@ -106,6 +106,8 @@
       + .slds-checkbox__label .slds-checkbox--faux {
         // @todo consider shared hooks for inputs
 
+        outline: 1px solid var(--slds-g-color-brand-base-80, #{$palette-blue-80});
+        outline-offset: 0px;
         /*! @css-var-fallback border-color */
         --slds-c-checkbox-color-border: var(--slds-c-checkbox-color-border-focus, var(--sds-c-checkbox-color-border-focus, var(--slds-g-color-brand-base-60, #{$color-border-input-active})));
 
@@ -122,6 +124,20 @@
         // @todo consider shared hooks for inputs
         /*! @css-var-fallback border-color */
         --slds-c-checkbox-color-border: var(--slds-c-checkbox-color-border-focus, var(--sds-c-checkbox-color-border-focus, var(--slds-g-color-brand-base-60, #{$color-border-input-active})));
+      }
+    }
+
+    &:focus-visible {
+
+      + .slds-checkbox_faux,
+      + .slds-checkbox--faux,
+      ~ .slds-checkbox_faux,
+      ~ .slds-checkbox--faux,
+      + .slds-checkbox__label .slds-checkbox_faux,
+      + .slds-checkbox__label .slds-checkbox--faux {
+        // @todo consider shared hooks for inputs
+        outline: 1px solid var(--slds-g-color-brand-base-80, #{$palette-blue-80});
+        outline-offset: 0px;
       }
     }
 

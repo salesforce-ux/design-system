@@ -100,6 +100,7 @@
     transition: background-color 100ms;
     transform-origin: 50% 50%;
     will-change: scale, background-color;
+    border: 2px solid transparent;
   }
 
   // Positioning

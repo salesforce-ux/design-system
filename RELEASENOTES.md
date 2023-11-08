@@ -43,6 +43,25 @@
 #### Fixed
 - Removed wrapping for date input type, which was causing some dates to be cut off.
 
+### [Tabs](https://www.lightningdesignsystem.com/components/tabs)
+## Added
+- Inbuilt Header introduced for tabs. The header scales as per the size modifiers.
+
+## Release 2.22.1 - November 3, 2023
+
+## Components
+### [App Launcher](https://www.lightningdesignsystem.com/components/app-launcher)
+  ### Fixed
+  - App Launcher button is visibility when Windows high-contrast mode is enabled.
+
+### [Checkbox](https://www.lightningdesignsystem.com/components/checkbox)
+#### Fixed
+- High contrast when the focus is placed on it.
+
+### [Dynamic Icons](https://www.lightningdesignsystem.com/components/dynamic-icons)
+#### Fixed
+- Fixed the app launcher button is invisible When windows high contrast is enabled.
+
 ### [Progress Indicator](https://www.lightningdesignsystem.com/components/progress-indicator)
 #### Fixed
 - Matching styles for [dir=rtl] added.
@@ -54,10 +73,6 @@
 ### [Summary Detail](https://www.lightningdesignsystem.com/components/summary-detail)
 #### Fixed
 - Matching styles for [dir=rtl] added.
-
-### [Tabs](https://www.lightningdesignsystem.com/components/tabs)
-## Added
-- Inbuilt Header introduced for tabs. The header scales as per the size modifiers.
 
 ## Release 2.22.0 - August 16, 2023
 

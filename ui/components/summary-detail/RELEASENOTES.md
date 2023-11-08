@@ -3,7 +3,7 @@
 # Summary Detail Release Notes
 
 <!-- ## [Unreleased] -->
-## 2.23.0
+## 2.22.1
 ### Fixed
 
 - Matching styles for [dir=rtl] added.

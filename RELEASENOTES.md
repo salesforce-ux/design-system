@@ -3,16 +3,10 @@
 
 ## Release 2.22.2 - November 9, 2023
 
-## Components
-### [Setup Assistant](https://www.lightningdesignsystem.com/components/setup-assistant)
-#### Changed
-- Moved unscoped .slds-media__figure to setup-assistant rtl styles
-
-## Release 2.22.1 - November 2, 2023
-
-## 2.22.0 - August 16, 2023
+## 2.22.1 - November 2, 2023
 - Fixed the app launcher button is invisible When windows high contrast is enabled.
 - Fixed the checkbox to high contrast when the focus is placed on it.
+## 2.22.0 - August 16, 2023
 - Updated icons to `v10.7.0`
   - Standard Set:
     - Added `attribute_based_pricing`
@@ -72,6 +66,13 @@
   - Updated `buyer_group`
   - Updated `delegated_account`
   - Updated `entitlement_policy`
+
+## Components
+### [Setup Assistant](https://www.lightningdesignsystem.com/components/setup-assistant)
+#### Changed
+- Moved unscoped .slds-media__figure to setup-assistant rtl styles
+
+## Release 2.22.1 - November 9, 2023
 
 ## Components
 ### [Checkbox](https://www.lightningdesignsystem.com/components/checkbox)

@@ -23,6 +23,11 @@
    */
   .slds-summary-detail__action-icon {
     transform: rotate(-90deg);
+
+    @include rtl() {
+      -webkit-transform: rotate(90deg);
+      transform: rotate(90deg);
+    }
   }
 
   /**

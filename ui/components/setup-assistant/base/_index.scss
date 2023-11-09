@@ -63,6 +63,9 @@
  */
 .slds-setup-assistant__step-summary-content {
   margin-right: $spacing-xx-large;
+  @include rtl() {
+    margin-right:$spacing-none;
+  }
 }
 
 /**
@@ -84,4 +87,16 @@
  */
 .slds-setup-assistant__step-detail {
   padding-left: ($square-icon-large-content + $spacing-small);
+  @include rtl() {
+    padding-right: $spacing-large;
+    padding-left: $spacing-medium;
+  }
+  .slds-media_center{
+    @include rtl() {
+      margin-right: $spacing-medium;
+    }
+  }
+}
+.slds-media__figure{
+  margin-left: $spacing-small;
 }

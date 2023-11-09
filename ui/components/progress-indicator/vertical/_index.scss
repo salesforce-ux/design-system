@@ -34,11 +34,17 @@
     &:before {
       top: 0;
       bottom: 50%;
+      @include rtl() {
+        right: $spacing-large;
+      }
     }
 
     &:after {
       top: 50%;
       bottom: 0;
+      @include rtl() {
+        right: $spacing-large;
+      }
     }
 
     &:first-child:before,
@@ -83,6 +89,9 @@
     margin-right: $spacing-medium;
     min-width: $square-icon-utility-small;
     z-index: 5;
+    @include rtl() {
+      margin-left: $spacing-medium;
+    }
   }
 
   .slds-progress__marker_icon {

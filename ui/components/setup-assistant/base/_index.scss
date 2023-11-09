@@ -52,6 +52,12 @@
   .slds-progress-ring_large {
     top: 1px;
   }
+
+  .slds-media__figure {
+    @include rtl() {
+      margin-left: $spacing-small;
+    }
+  }
 }
 
 
@@ -91,12 +97,16 @@
     padding-right: $spacing-large;
     padding-left: $spacing-medium;
   }
+
   .slds-media_center{
     @include rtl() {
       margin-right: $spacing-medium;
     }
   }
-}
-.slds-media__figure{
-  margin-left: $spacing-small;
+
+  .slds-media__figure {
+    @include rtl() {
+      margin-left: $spacing-small;
+    }
+  }
 }

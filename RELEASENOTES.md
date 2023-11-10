@@ -47,7 +47,14 @@
 ## Added
 - Inbuilt Header introduced for tabs. The header scales as per the size modifiers.
 
-## Release 2.22.1 - November 3, 2023
+## Release 2.22.2 - November 9, 2023
+
+## Components
+### [Setup Assistant](https://www.lightningdesignsystem.com/components/setup-assistant)
+#### Changed
+- Moved unscoped .slds-media__figure to setup-assistant rtl styles
+
+## Release 2.22.1 - November 2, 2023
 
 ## Components
 ### [App Launcher](https://www.lightningdesignsystem.com/components/app-launcher)

@@ -40,7 +40,11 @@
 - Added Button element for `Pill` remove feature. Now remove button is focusable and can be clickable.
 - Updated RTL stylings for `setup-assistant` component
 
-## 2.22.1 - November 3, 2023
+## 2.22.2 - November 9, 2023
+
+
+## 2.22.1 - November 2, 2023
+
 
 ## 2.22.0 - August 16, 2023
 

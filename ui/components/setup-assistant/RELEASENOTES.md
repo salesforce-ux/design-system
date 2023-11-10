@@ -3,6 +3,13 @@
 # Setup Assistant Release Notes
 
 <!-- ## [Unreleased] -->
+
+## 2.22.2
+
+### Changed
+
+- Moved unscoped .slds-media__figure to setup-assistant rtl styles
+
 ## 2.22.1
 
 ### Added

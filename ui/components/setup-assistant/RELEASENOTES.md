@@ -3,6 +3,7 @@
 # Setup Assistant Release Notes
 
 <!-- ## [Unreleased] -->
+
 ## 2.22.2
 
 ### Changed

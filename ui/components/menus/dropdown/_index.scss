@@ -168,7 +168,7 @@
     }
 
     &[aria-disabled="true"] {
-      color: var(--slds-g-color-neutral-100-opacity-10, #{$color-text-link-inverse-disabled});
+      color: var(--slds-g-color-neutral-100-opacity-25, #{$color-text-link-inverse-disabled});
       cursor: default;
 
       &:hover {

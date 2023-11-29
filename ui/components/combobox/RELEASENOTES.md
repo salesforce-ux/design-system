@@ -3,6 +3,13 @@
 # Combobox Release Notes
 
 <!-- ## [Unreleased] -->
+
+## 2.23.0
+
+### Changed
+
+- Updated Combobox disabled color
+
 ## 2.22.0
 ### Added 
 - Tooltip option provided for Date/DateTime pickers.

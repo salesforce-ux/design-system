@@ -1,6 +1,8 @@
 <!-- Release notes authoring guidelines: http://keepachangelog.com/ -->
 <!-- On release, add general notes here. In time the legacy release notes will be add to this -->
 
+## 2.24.0 - Upcoming
+
 ## 2.23.0 - Upcoming
 
 - Inbuilt Header introduced for tabs. The header scales as per the size modifiers.

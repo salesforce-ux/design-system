@@ -3,8 +3,8 @@
 
 import React from 'react';
 import classNames from 'classnames';
-import ButtonIcon from '../../button-icons/';
 import { Tooltip } from '../../tooltips/base/example';
+import SvgIcon from '../../../shared/svg-icon';
 import {
   Modal,
   ModalHeader,
@@ -36,30 +36,42 @@ export let Step = props => (
     )}
   >
     {props.done && !props.error ? (
-      <ButtonIcon
+      <div
         className="slds-progress__marker slds-progress__marker_icon"
-        symbol="success"
-        aria-describedby={props['aria-describedby']}
-        assistiveText={props.done ? props.children + ' - Completed' : null}
-        title={props.done ? props.children + ' - Completed' : null}
-      />
+        tabIndex="0"
+      >
+        <SvgIcon
+          className="slds-icon slds-icon_xx-small"
+          sprite="utility"
+          symbol="success"
+        />
+        <span className="slds-assistive-text">
+          {props.done ? props.children + ' - Completed' : null}
+        </span>
+      </div>
     ) : props.error ? (
-      <ButtonIcon
+      <div
         className="slds-progress__marker slds-progress__marker_icon"
-        symbol="error"
-        aria-describedby={props['aria-describedby']}
-        assistiveText={props.error ? props.children + ' - Error' : null}
-        title={props.error ? props.children + ' - Error' : null}
-      />
+        tabIndex="0"
+      >
+        <SvgIcon
+          className="slds-icon slds-icon_xx-small"
+          sprite="utility"
+          symbol="error"
+        />
+        <span className="slds-assistive-text">
+          {props.error ? props.children + ' - Error' : null}
+        </span>
+      </div>
     ) : (
-      <button
-        className="slds-button slds-progress__marker"
-        aria-describedby={props['aria-describedby']}
+      <div
+        className="slds-progress__marker"
+        tabIndex="0"
       >
         <span className="slds-assistive-text">
           {props.children} {props.active ? '- Active' : null}
         </span>
-      </button>
+      </div>
     )}
   </li>
 );

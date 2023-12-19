@@ -1,6 +1,15 @@
 <!-- Release notes authoring guidelines: http://keepachangelog.com/ -->
 
 # Progress Indicator Release Notes
+
+## 2.23.0
+
+### Changed
+
+- Updated Progress Step `button` to `div`
+- Added tabindex="0" to above `div` to make it focusable
+- Removed `aria-describedby` and `title` attributes
+
 ## 2.22.1
 
 ### Fixed

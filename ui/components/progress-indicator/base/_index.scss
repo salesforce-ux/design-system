@@ -175,6 +175,7 @@
  */
 .slds-progress__marker {
   @include square($square-icon-utility-small);
+  display: flex;
   position: relative;
   border-radius: $border-radius-circle;
   background: var(--slds-g-color-neutral-base-80, #{$progress-bar-color-background});
@@ -192,4 +193,8 @@
 .slds-progress__marker_icon,
 .slds-progress__marker--icon {
   @include square(auto);
+
+  .slds-icon {
+    fill: currentColor;
+  }
 }

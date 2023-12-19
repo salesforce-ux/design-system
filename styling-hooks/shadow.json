@@ -1,0 +1,27 @@
+{
+  "aliases": {
+    "PALETTE_NEUTRAL_100": {
+      "value": "#FFFFFF"
+    },
+    "PALETTE_BLUE_40": {
+      "value": "#0B5CAB"
+    }
+  },
+  "props": {
+    "shadow-5": {
+      "originalValue": "0 0 0 2px {!PALETTE_NEUTRAL_100}, 0 0 0 3px {!PALETTE_BLUE_40}",
+      "syntax": "<length>",
+      "name": "shadow-5",
+      "value": "0 0 0 2px {!PALETTE_NEUTRAL_100}, 0 0 0 3px {!PALETTE_BLUE_40}",
+      "scope": "global",
+      "cssProperties": [
+        "box-shadow"
+      ],
+      "inherits": false,
+      "type": "raw",
+      "namespace": "sds",
+      "category": "shadow",
+      "comment": "Shadow depth 5"
+    }
+  }
+}

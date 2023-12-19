@@ -41,6 +41,7 @@
 - Added `aria-label="disabled"` to `RichTextEditor` component which is similar to `RteToolbar`.
 - Added Button element for `Pill` remove feature. Now remove button is focusable and can be clickable.
 - Updated RTL stylings for `setup-assistant` component
+- Added new shadow styling hook to implement new focus style.
 
 ## 2.22.2 - November 9, 2023
 

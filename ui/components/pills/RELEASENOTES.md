@@ -3,6 +3,12 @@
 # Pills Release Notes
 
 <!-- ## [Unreleased] -->
+## 2.24.0 - Upcoming
+
+## Added
+
+- Added new truncated state for Pill as a tooltip.
+
 ## 2.17.0
 
 ### Added

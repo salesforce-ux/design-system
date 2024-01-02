@@ -48,8 +48,7 @@
       box-shadow: var(--slds-g-color-neutral-base-95, #{$progress-color-background-shade}) 0 0 0 4px; // Adds whitespace around indicator
 
       &:focus {
-        box-shadow: var(--slds-g-color-neutral-base-95, #{$progress-color-background-shade}) 0 0 0 4px, 0 0 3px 4px
-          var(--slds-g-color-brand-base-50, #{$color-border-brand-dark}); // Keeps white space and add blue focus ring
+        box-shadow: var(--slds-g-shadow-5, #{$shadow-button-focus});
       }
     }
 
@@ -137,7 +136,7 @@
     }
 
     &:focus {
-      box-shadow: var(--slds-g-color-neutral-base-100, #{$progress-color-background}) 0 0 0 4px, 0 0 3px 4px var(--slds-g-color-brand-base-50, #{$color-border-brand-dark});
+      box-shadow: var(--slds-g-shadow-5, #{$shadow-button-focus});
     }
   }
 
@@ -161,7 +160,7 @@
     }
 
     &:focus {
-      box-shadow: 0 0 3px 0 var(--slds-g-color-error-base-40, #{$color-border-error});
+      box-shadow: var(--slds-g-shadow-5, #{$shadow-button-focus});
     }
   }
 }
@@ -181,6 +180,14 @@
   background: var(--slds-g-color-neutral-base-80, #{$progress-bar-color-background});
   border: 4px solid var(--slds-g-color-neutral-base-100, #{$progress-color-border});
   vertical-align: middle;
+
+  &:focus-visible {
+    outline: none;
+  }
+
+  &:focus {
+    box-shadow: var(--slds-g-shadow-5, #{$shadow-button-focus});
+  }
 }
 
 /**

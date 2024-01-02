@@ -8,10 +8,10 @@
 
 ### Changed
 
-- Updated Progress Step `button` to `div`
-- Added tabindex="0" to above `div` to make it focusable
-- Removed `aria-describedby` and `title` attributes
-- Updated focus style
+- Updated Progress Step `button` to `div`.
+- Added tabindex="0" to above `div` to make it focusable.
+- Removed `aria-describedby` and `title` attributes.
+- Updated focus style for Web and Mobile.
 
 ## 2.22.1
 

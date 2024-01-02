@@ -40,10 +40,10 @@
 
   &:focus {
     /*! @css-var-fallback border-color */
-    --slds-c-pill-color-border: var(--sds-c-pill-color-border-focus, var(--slds-g-color-brand-base-60, #{$color-border-input-active}));
+    --slds-c-pill-color-border: var(--sds-c-pill-color-border-focus, var(--slds-g-color-border-base-4, #{$color-border}));
 
     /*! @css-var-fallback box-shadow */
-    --slds-c-pill-shadow: var(--sds-c-pill-shadow-focus, #{$shadow-button-focus});
+    --slds-c-pill-shadow: var(--sds-c-pill-shadow-focus, var(--slds-g-shadow-5, #{$shadow-button-focus}));
 
     outline: 0;
   }
@@ -117,7 +117,7 @@
   &:focus {
     outline: 0;
     border-radius: $border-radius-medium;
-    box-shadow: var(--slds-c-pill-label-shadow-focus, var(--sds-c-pill-label-shadow-focus, $shadow-button-focus));
+    box-shadow: var(--slds-c-pill-label-shadow-focus, var(--sds-c-pill-label-shadow-focus, var(--slds-g-shadow-5, #{$shadow-button-focus})));
   }
 }
 
@@ -212,8 +212,8 @@
 
   &:focus {
     outline: 0;
-    border-color: var(--slds-c-pill-action-color-border, var(--sds-c-pill-action-color-border, var(--slds-g-color-brand-base-60, #{$color-border-input-active})));
-    box-shadow: var(--slds-c-pill-action-shadow, var(--sds-c-pill-action-shadow, $shadow-button-focus));
+    border-color: var(--slds-c-pill-action-color-border, var(--sds-c-pill-action-color-border, var(--slds-g-color-border-base-4, #{$color-border})));
+    box-shadow: var(--slds-c-pill-action-shadow, var(--sds-c-pill-action-shadow, var(--slds-g-shadow-5, #{$shadow-button-focus})));
   }
 }
 

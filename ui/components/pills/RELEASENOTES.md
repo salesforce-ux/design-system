@@ -8,6 +8,7 @@
 ## Added
 
 - Added new truncated state for Pill as a tooltip.
+- Updated focus style.
 
 ## 2.17.0
 

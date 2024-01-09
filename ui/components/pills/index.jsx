@@ -39,8 +39,6 @@ export let PillContainer = props => {
 export let ListboxPill = props => (
   <span
     className={classNames('slds-pill', props.className)}
-    tabIndex={props.tabIndex}
-    aria-selected="true"
   >
     {props.children}
     <span
@@ -76,7 +74,6 @@ export let ListboxPills = props => (
 export let ListboxPillsItem = props => (
   <li
     className={classNames('slds-listbox-item', props.className)}
-    role="presentation"
     aria-hidden={props['aria-hidden']}
   >
     {props.children}

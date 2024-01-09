@@ -235,7 +235,6 @@
 
   &:hover {
     --slds-c-pill-error-text-color: var(--slds-g-color-error-base-30, #{$color-text-error});
-  
     .slds-pill__icon_container .slds-icon-text-error {
       --slds-c-icon-color-foreground: var(--slds-g-color-error-base-30, #{$color-text-error});
     }

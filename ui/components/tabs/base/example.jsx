@@ -300,8 +300,8 @@ export const TabsWithError = () => (
   </div>
 );
 
-export const TabsMedium = () => (
-  <Tabs size="medium">
+export const TabsMedium = props => (
+  <Tabs size="medium" withHeader={props.withHeader} showHeader={props.showHeader}>
     <Tabs.Item title="Item One" id="tab-default-1">
       Item One Content
     </Tabs.Item>
@@ -314,8 +314,18 @@ export const TabsMedium = () => (
   </Tabs>
 );
 
-export const TabsLarge = () => (
-  <Tabs size="large">
+TabsMedium.propTypes = {
+  showHeader: PropTypes.bool,
+  withHeader: PropTypes.bool
+};
+
+TabsMedium.defaultProps = {
+  showHeader: false,
+  withHeader: false
+};
+
+export const TabsLarge = props => (
+  <Tabs size="large" withHeader={props.withHeader} showHeader={props.showHeader}>
     <Tabs.Item title="Item One" id="tab-default-1">
       Item One Content
     </Tabs.Item>
@@ -327,6 +337,42 @@ export const TabsLarge = () => (
     </Tabs.Item>
   </Tabs>
 );
+
+TabsLarge.propTypes = {
+  showHeader: PropTypes.bool,
+  withHeader: PropTypes.bool
+};
+
+TabsLarge.defaultProps = {
+  showHeader: false,
+  withHeader: false
+};
+
+export const TabsWithHeading = props => (
+  <div className="demo-only" style={{ height: '12rem' }}>
+    <Tabs withHeader={props.withHeader} showHeader={props.showHeader}>
+      <Tabs.Item title="Item One" id="tab-default-1">
+        <h2>Item One Content</h2>
+      </Tabs.Item>
+      <Tabs.Item title="Item Two" id="tab-default-2">
+        <h2>Item Two Content</h2>
+      </Tabs.Item>
+      <Tabs.Item title="Item Three" id="tab-default-3">
+        <h2>Item Three Content</h2>
+      </Tabs.Item>
+    </Tabs>
+  </div>
+);
+
+TabsWithHeading.propTypes = {
+  showHeader: PropTypes.bool,
+  withHeader: PropTypes.bool
+};
+
+TabsWithHeading.defaultProps = {
+  showHeader: true,
+  withHeader: true
+};
 
 /// ///////////////////////////////////////////
 // Export
@@ -348,9 +394,20 @@ export let examples = [
     element: <TabsMedium />
   },
   {
+    id: 'size-medium-with-header',
+    label: 'Size - Medium - With Header',
+    element: <TabsMedium withHeader showHeader/>
+  },
+
+  {
     id: 'size-large',
     label: 'Size - Large',
     element: <TabsLarge />
+  },
+  {
+    id: 'size-large-with-header',
+    label: 'Size - Large - With Header',
+    element: <TabsLarge withHeader showHeader/>
   },
   {
     id: 'overflow',
@@ -371,6 +428,16 @@ export let examples = [
     id: 'nested',
     label: 'With Nested Scoped Tabs',
     element: <TabsWithNestedScopedTabs />
+  },
+  {
+    id: 'with-header',
+    label: 'With Header',
+    element: <TabsWithHeading/>
+  },
+  {
+    id: 'with-invisible-header',
+    label: 'With Invisible Header',
+    element: <TabsWithHeading showHeader={false}/>
   },
   {
     id: 'card-look',

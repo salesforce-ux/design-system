@@ -140,6 +140,11 @@
           box-shadow: none;
         }
       }
+
+      ~label .slds-visual-picker__figure .slds-icon {
+        fill: var(--slds-g-color-neutral-base-80, #{$color-text-icon-default-disabled});
+      }
+
     }
   }
 }

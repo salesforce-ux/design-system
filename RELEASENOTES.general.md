@@ -1,13 +1,53 @@
 <!-- Release notes authoring guidelines: http://keepachangelog.com/ -->
 <!-- On release, add general notes here. In time the legacy release notes will be add to this -->
 
+## 2.23.0 - December 14, 2023
+
+- Inbuilt Header introduced for tabs. The header scales as per the size modifiers.
+- Updated icons to `v10.8.2`
+  - Standard Set:
+    - Added custody_chain_entry
+    - Added custody_entry_verification
+    - Added custody_override
+    - Updated data_cloud
+    - Added digital_verification_config_group
+    - Added digital_verification_config
+    - Added linked
+    - Added prompt_builder
+    - Added real_time
+    - Added scheduling_workspace_territory
+    - Updated story
+    - Added title_party
+    - Added work_summary
+
+  - Utility Set:
+    - Added add_above
+    - Added add_below
+    - Updated apex_alt
+    - Added asset_repossessed
+    - Updated data_cloud
+    - Updated einstein_alt
+    - Added locked_with_additions
+    - Added payment_deferred
+    - Added plane
+    - Added prompt_builder
+    - Added real_time
+    - Added record_collection
+    - Added sparkle
+
+- Updated `disabled` state colors for all components.
+- Added `aria-label="disabled"` to `RichTextEditor` component which is similar to `RteToolbar`.
+- Added Button element for `Pill` remove feature. Now remove button is focusable and can be clickable.
+- Updated RTL stylings for `setup-assistant` component
+
 ## 2.22.2 - November 9, 2023
+
 
 ## 2.22.1 - November 2, 2023
 
+
 ## 2.22.0 - August 16, 2023
-- Fixed the app launcher button is invisible When windows high contrast is enabled.
-- Fixed the checkbox to high contrast when the focus is placed on it.
+
 - Updated icons to `v10.7.0`
   - Standard Set:
     - Added `attribute_based_pricing`

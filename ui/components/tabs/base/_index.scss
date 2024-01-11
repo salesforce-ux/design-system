@@ -269,6 +269,40 @@
 }
 
 /**
+ * @summary Applies bold font weight to header
+ * @selector .slds-tabs_default__header
+ * @restrict .slds-tabs_default div
+  */
+.slds-tabs_default {
+
+  .slds-tabs_default__header {
+    font-weight: bold;
+  }
+}
+
+/**
+ * @name default
+ * @summary Default sized tabs
+ * @selector .slds-tabs_default
+ * @modifier
+ * @group size
+ */
+ .slds-tabs_default {
+
+  .slds-tabs_default__header:not(.slds-assistive-text) {
+    font-size: $var-font-size-3;
+
+    + .slds-tabs_default__nav .slds-tabs_default__item {
+      font-size: $var-font-size-2;
+    }
+  }
+
+  .slds-tabs_default__item {
+    font-size: $var-font-size-3;
+  }
+}
+
+/**
  * @name medium
  * @summary Medium sized tabs
  * @selector .slds-tabs_medium
@@ -276,7 +310,15 @@
  * @modifier
  * @group size
  */
-.slds-tabs_medium {
+.slds-tabs_default.slds-tabs_medium {
+
+  .slds-tabs_default__header {
+    font-size: $var-font-size-5;
+
+    + .slds-tabs_default__nav .slds-tabs_default__item {
+      font-size: $var-font-size-4;
+    }
+  }
 
   .slds-tabs_default__item {
     font-size: $var-font-size-5;
@@ -291,7 +333,15 @@
  * @modifier
  * @group size
  */
-.slds-tabs_large {
+ .slds-tabs_default.slds-tabs_large {
+
+  .slds-tabs_default__header {
+    font-size: $var-font-size-7;
+
+    + .slds-tabs_default__nav .slds-tabs_default__item {
+      font-size: $var-font-size-6;
+    }
+  }
 
   .slds-tabs_default__item {
     font-size: $var-font-size-7;

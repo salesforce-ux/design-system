@@ -2,6 +2,12 @@
 
 # Menus Release Notes
 
+## 2.23.0
+
+### Changed
+
+- Updated Dropdown Inverse item disabled color
+
 ## 2.21.0
 
 ## Fixed

@@ -13,6 +13,10 @@
 .slds-rich-text-editor {
   border: $border-width-thin solid var(--slds-g-color-border-base-4, #{$color-border});
   border-radius: $border-radius-medium;
+
+  &[aria-label="disabled"] {
+    border: $border-width-thin solid var(--slds-g-color-border-base-1, #{$color-border});
+  }
 }
 
 /**
@@ -43,6 +47,10 @@
   border-top-right-radius: $border-radius-medium;
   border-bottom: $border-width-thin solid var(--slds-g-color-border-base-4, #{$color-border});
   background-color: var(--slds-g-color-neutral-base-95, #{$color-background});
+
+  &[aria-label="disabled"] {
+    border-bottom: $border-width-thin solid var(--slds-g-color-border-base-1, #{$color-border});
+  }
 }
 
 /**

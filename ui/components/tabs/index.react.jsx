@@ -166,7 +166,7 @@ class Tabs extends React.Component {
   }
 
   render() {
-    const { flavor, panel, size, isCard, selectedIndex, ...rest } = this.props;
+    const { flavor, panel, size, isCard, selectedIndex, withHeader, showHeader, ...rest } = this.props;
     const composedClassName = classNames(`slds-tabs_${flavor}`, {
       'slds-tabs_medium': size === 'medium',
       'slds-tabs_large': size === 'large',
@@ -174,6 +174,11 @@ class Tabs extends React.Component {
     });
     return (
       <div {...rest} className={composedClassName}>
+        {withHeader ? (showHeader ? (
+          <div role="heading" aria-level="2" className='slds-tabs_default__header'>This is a sample header for tabs</div>
+        ) : (
+          <div role="heading" aria-level="2" className='slds-tabs_default__header slds-assistive-text'>This is a sample invisible header for tabs</div>
+        )) : null}
         <ul className={`slds-tabs_${flavor}__nav`} role="tablist">
           {this.tabs()}
         </ul>
@@ -187,12 +192,16 @@ Tabs.propTypes = {
   selectedIndex: PT.number,
   flavor: PT.oneOf(['scoped', 'default', 'path']),
   size: PT.oneOf(['medium', 'large']),
-  isCard: PT.bool
+  isCard: PT.bool,
+  showHeader: PT.bool,
+  withHeader: PT.bool
 };
 
 Tabs.defaultProps = {
   selectedIndex: 0,
-  flavor: 'default'
+  flavor: 'default',
+  withHeader: false,
+  showHeader: false
 };
 
 Tabs.Item = TabItem;

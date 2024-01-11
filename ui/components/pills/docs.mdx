@@ -88,16 +88,14 @@ Note that a linked pill should not be used as a pill option inside of a listbox
 **Interaction requirements**
 
 - Only 1 focused Pill per set of Pills
-- The remove button must not be a focusable element, but can be clickable
+- The remove button is a focusable element and can be clickable.
 - Delete with a keyboard is performed with the `Backspace` or `Delete` key when focused on a pill
+- Delete with a keyboard can also be performed with the `Space` key when focused on a pill remove button
 
 **Notable attributes**
 
-- `role="listbox"` is placed on the `ul`
 - `aria-label` is applied to `listbox` to describe what the list of options are to the user
-- `aria-orientation="horizontal"` is applied to the `listbox` to describe the left to right direction of the pills
 - `role="presentation"` is placed on the `li` elements
-- `role="option"` is placed on the `slds-pill` elements
 - `aria-selected="true"` is applied to all `option` elements, this is because they have all be selected
 - `tabindex="0"` is applied to the `option` that is in focus last. By default it is placed on the first `option`
 

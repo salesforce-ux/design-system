@@ -194,7 +194,7 @@ let InputWithType = props => {
 
   return (
     <FormElement labelContent={props.label} inputId={inputId}>
-      <Input id={inputId} type={props.type} placeholder={props.placeholder} />
+      <Input id={inputId} type={props.type} placeholder={props.placeholder} value={props.value}/>
     </FormElement>
   );
 };
@@ -370,7 +370,12 @@ export let examples = [
   {
     id: 'date-input',
     label: 'Date Input',
-    element: <InputWithType type="date" />
+    element: <InputWithType type="date"/>
+  },
+  {
+    id: 'date-input-default',
+    label: 'Date Input w/ Date Selected by Default',
+    element: <InputWithType type="date" value="2023-09-25"/>
   },
   {
     id: 'search-input',

@@ -235,6 +235,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           cache: 'npm'
+          node-version: '<=18.17.1'
 
       - uses: actions/download-artifact@v2
         with:
@@ -253,8 +254,6 @@ jobs:
       - run: npm ci
       - name: Do build-dist
         run: npm run build-dist
-        env:
-          NODE_OPTIONS: --openssl-legacy-provider # per https://candid.technology/error-error-0308010c-digital-envelope-routines-unsupported/
 
       - name: Compress .dist
         run: |-

@@ -1,5 +1,5 @@
 // Kinetics vars
-$kx-button-ripple-size: 20px;
+$kx-button-ripple-size: 1.25rem;
 $kx-button-pointer-position: 50%;
 $kx-button-gradient-size: 140px;
 
@@ -22,10 +22,10 @@ $kx-button-gradient-size: 140px;
     content: "";
     position: absolute;
     // zero united value needed for calc to use the value in calculation
-    top: calc(var(--sds-c-button-spacing-block-start, 0rem) + var(--sds-c-button-line-height, #{$line-height-button}) * 0.8); // stylelint-disable length-zero-no-unit
+    top: calc(var(--slds-c-button-spacing-block-start, var(--sds-c-button-spacing-block-start, 0rem)) + var(--slds-c-button-line-height, var(--sds-c-button-line-height, #{$line-height-button})) * 0.8); // stylelint-disable length-zero-no-unit
     height: rem(1px);
-    width: 100%;
-    background: var(--sds-c-button-text-color-hover, $brand-accessible-active);
+    width: calc(100% - var(--slds-c-button-spacing-inline-start, 0rem) - var(--slds-c-button-spacing-inline-end, 0rem));
+    background: var(--slds-c-button-text-color-hover, var(--sds-c-button-text-color-hover, #{$brand-accessible-active}));
     background-position: left top;
     transform: scaleX(0);
     transform-origin: var(--slds-kx-button-pointer-position-x, #{$kx-button-pointer-position}) 0;
@@ -106,7 +106,7 @@ $kx-button-gradient-size: 140px;
   &:focus,
   &:hover,
   &:active {
-    background-color: var(--sds-c-button-brand-color-background, $brand-accessible);
+    background-color: var(--slds-c-button-brand-color-background, var(--sds-c-button-brand-color-background, #{$brand-accessible}));
     border-color: transparent;
   }
 
@@ -202,21 +202,38 @@ $kx-button-gradient-size: 140px;
 [kx-scope="button-neutral"] {
 
   &:focus,
-  &:hover,
+  &:hover {
+    // These purposefully overrides the interaction states to facilitate the Kinetics effect
+    /*! @css-var-fallback background-color */
+    --slds-c-button-color-background-hover: var(--slds-c-button-neutral-color-background-hover, var(--sds-c-button-neutral-color-background-hover, var(--slds-g-color-neutral-base-100, #{$button-color-background-primary})));
+
+    /*! @css-var-fallback border-color */
+    --slds-c-button-color-border-hover: var(--slds-c-button-neutral-color-border-hover, var(--sds-c-button-brand-color-border-hover, #{$brand-accessible}));
+  }
+
   &:active {
     // These purposefully overrides the interaction states to facilitate the Kinetics effect
-    background-color: var(--sds-c-button-neutral-color-background-hover, var(--slds-g-color-neutral-base-100, #{$button-color-background-primary}));
-    border-color: var(--sds-c-button-brand-color-border-hover, $brand-accessible);
+    /*! @css-var-fallback background-color */
+    --slds-c-button-color-background-active: var(--slds-c-button-neutral-color-background-active, var(--sds-c-button-neutral-color-background-hover, var(--slds-g-color-neutral-base-100, #{$button-color-background-primary})));
+
+    /*! @css-var-fallback border-color */
+    --slds-c-button-color-border-active: var(--slds-c-button-neutral-color-border-active, var(--sds-c-button-brand-color-border-hover, #{$brand-accessible}));
   }
 }
 
 [kx-scope="button-outline"] {
 
-  &:focus,
   &:hover,
+  &:focus {
+    // This purposefully overrides the interaction states to facilitate the Kinetics effect
+    /*! @css-var-fallback background-color */
+    --slds-c-button-color-background-hover: var(--slds-c-button-outline-brand-color-background-hover, var(--sds-c-button-outline-brand-color-background-hover, var(--slds-g-color-neutral-base-100, #{$button-color-background-primary})));
+  }
+
   &:active {
     // This purposefully overrides the interaction states to facilitate the Kinetics effect
-    background-color: var(--sds-c-button-outline-brand-color-background, var(--slds-g-color-neutral-base-100, #{$button-color-background-primary}));
+    /*! @css-var-fallback background-color */
+    --slds-c-button-color-background-active: var(--slds-c-button-outline-brand-color-background-active, var(--sds-c-button-outline-brand-color-background-active, var(--slds-g-color-neutral-base-100, #{$button-color-background-primary})));
   }
 }
 
@@ -226,7 +243,7 @@ $kx-button-gradient-size: 140px;
   &[kx-type="ripple"] {
 
     &:after {
-      background-color: var(--sds-c-button-brand-color-background, $brand-accessible);
+      background-color: var(--slds-c-button-brand-color-background, var(--sds-c-button-brand-color-background, #{$brand-accessible}));
     }
   }
 

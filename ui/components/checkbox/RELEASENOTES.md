@@ -6,7 +6,7 @@
 ## 2.22.1
 
 ### Fixed
-- Fixed the checkbox to high contrast when the focus is placed on it.
+- High contrast when the focus is placed on it.
 
 ## 2.18.0
 

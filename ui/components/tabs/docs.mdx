@@ -4,7 +4,7 @@ import Example from '../../../shared/components/Example';
 import Blockquote from '../../../shared/components/Blockquote';
 import StylingHooksTable from '../../../shared/components/StylingHooksTable';
 import MobileTabs, { MobileTabGroup, NestedMobileStacked } from './mobile-stack/';
-import { TabsDefault, TabsOverflow, TabsOverflowIcons, TabsWithNestedScopedTabs, TabsWithCards, TabsMedium, TabsLarge, TabsWithError } from '../tabs/base/example';
+import { TabsDefault, TabsOverflow, TabsOverflowIcons, TabsWithNestedScopedTabs, TabsWithCards, TabsMedium, TabsLarge, TabsWithError, TabsWithHeading } from '../tabs/base/example';
 import { SubTabSet, TabWithFocus, TabsWithBorders, TabActionOverflow, StatusTab, OverflowSubtabs } from '../tabs/sub-tabs/example';
 import * as SubTabs from '../tabs/sub-tabs/example';
 import VerticalTabs from '../vertical-tabs/base/example';
@@ -69,6 +69,56 @@ Tabbed UIs have three parts with specific **ARIA** role requirements:
   </CodeView>
 </Example>
 
+## Size Modifiers
+
+Tabs come with three size modifiers: default, medium, and large. Each size step will gradually increase the typography. Add the modifier class `slds-tabs_medium` or `slds-tabs_large` to the `slds-tabs_default` element.
+
+### Medium
+
+<Example title="Tabs with Medium sizing modifier">
+  <CodeView>
+    <TabsMedium />
+  </CodeView>
+</Example>
+
+### Large
+
+<Example title="Tabs with Large sizing modifier">
+  <CodeView>
+    <TabsLarge />
+  </CodeView>
+</Example>
+
+## With Header
+
+<Example title="Tabs with Header">
+  <CodeView demoStyles="height: 200px;">
+    <TabsWithHeading/>
+  </CodeView>
+</Example>
+
+<Blockquote type="a11y" header="Accessibility Note">
+  <p>
+    The header can be visually hidden but still accessible to screen readers by applying <code>slds-assistive-text</code> to the <code>slds-tabs_default__header</code> element.
+  </p>
+</Blockquote>
+
+### Medium
+
+<Example title="Tabs with Medium Size Header">
+  <CodeView demoStyles="height: 200px;">
+    <TabsMedium withHeader showHeader/>
+  </CodeView>
+</Example>
+
+### Large
+
+<Example title="Tabs with Large Size Header">
+  <CodeView demoStyles="height: 200px;">
+    <TabsLarge withHeader showHeader/>
+  </CodeView>
+</Example>
+
 ## With Overflow
 
 The overflow tab style is provided as a tab item type that acts as a menu component and appears as a tab item. It could contain those tab items that don't all fit in a horizontal orientation.
@@ -114,26 +164,6 @@ If nesting tabs within tabs, the second set should be rendered as [Scoped Tabs](
 <Example title="Tabs with Nested Scoped Tabs">
   <CodeView demoStyles="height: 200px;">
     <TabsWithNestedScopedTabs />
-  </CodeView>
-</Example>
-
-## Size Modifiers
-
-Tabs come with three size modifiers: default, medium, and large. Each size step will gradually increase the typography. Add the modifier class `slds-tabs_medium` or `slds-tabs_large` to the `slds-tabs_default` element.
-
-### Medium
-
-<Example title="Tabs with Medium sizing modifier">
-  <CodeView>
-    <TabsMedium />
-  </CodeView>
-</Example>
-
-### Large
-
-<Example title="Tabs with Large sizing modifier">
-  <CodeView>
-    <TabsLarge />
   </CodeView>
 </Example>
 

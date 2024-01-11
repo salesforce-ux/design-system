@@ -48,6 +48,10 @@
   &[type='time'] {
     height: $height-tappable;
   }
+
+  &[type='date'] {
+    white-space: nowrap;
+  }
 }
 
 .slds-input-has-icon {

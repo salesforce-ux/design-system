@@ -3,6 +3,11 @@
 # Input Release Notes
 
 <!-- ## [Unreleased] -->
+## 2.23.0
+
+### Fixed
+
+- Removed wrapping for date input type, which was causing some dates to be cut off.
 
 ## 2.17.0
 

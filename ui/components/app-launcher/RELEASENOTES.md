@@ -4,6 +4,12 @@
 
 <!-- ## [Unreleased] -->
 
+## 2.22.1
+
+  ### Fixed
+
+  - App Launcher button is visibility when Windows high-contrast mode is enabled.
+
 ## 2.10.0
 
   ### Fixed

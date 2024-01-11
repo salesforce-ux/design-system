@@ -294,7 +294,7 @@ export let FullFootless = (props) => (
       isFullSize={props.size === 'full'}
     >
       <ModalHeader>
-        <h1 id="modal-heading-01" className="slds-modal__title slds-hyphenate" tabindex="-1">
+        <h1 id="modal-heading-01" className="slds-modal__title slds-hyphenate">
           Modal header
         </h1>
       </ModalHeader>

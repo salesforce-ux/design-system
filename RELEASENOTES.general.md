@@ -1,6 +1,8 @@
 <!-- Release notes authoring guidelines: http://keepachangelog.com/ -->
 <!-- On release, add general notes here. In time the legacy release notes will be add to this -->
 
+## 2.23.1 - January 16, 2024
+
 ## 2.23.0 - December 14, 2023
 
 - Inbuilt Header introduced for tabs. The header scales as per the size modifiers.

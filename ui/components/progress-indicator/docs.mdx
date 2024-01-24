@@ -83,7 +83,7 @@ When a step becomes active, the `<div>` with class `.slds-progress__item` should
 
 <Blockquote type="a11y" header="Accessibility Requirements">
   <p>
-    When a step is active, be sure to append "- Active" to the hidden button text
+    When a step is active, be sure to append "- Active" to the hidden text
     in the <code>&lt;span&gt;</code> with class <code>slds-assistive-text</code>, such as <code>Step 1 - Active</code>.
   </p>
 </Blockquote>
@@ -106,7 +106,7 @@ When the step is completed, the `.slds-is-active` class should be replaced with 
 
 <Blockquote type="a11y" header="Accessibility Requirements">
   <p>
-    When a step is completed, be sure to append "- Completed" to the hidden button
+    When a step is completed, be sure to append "- Completed" to the hidden
     text in the <code>&lt;span&gt;</code> with class <code>slds-assistive-text</code>, such as <code>Step 2 - Completed</code>.
   </p>
 </Blockquote>
@@ -129,7 +129,7 @@ When an error has occurred on a step, the `<div>` with class `.slds-progress__it
 
 <Blockquote type="a11y" header="Accessibility Requirements">
   <p>
-    When a step has an error, be sure to append "- Error" to the hidden button
+    When a step has an error, be sure to append "- Error" to the hidden
     text in the <code>&lt;span&gt;</code> with class <code>slds-assistive-text</code>, such as <code>Step 3 - Error</code>.
   </p>
 </Blockquote>
@@ -150,9 +150,8 @@ When an error has occurred on a step, the `<div>` with class `.slds-progress__it
 
 <Blockquote type="a11y" header="Accessibility Requirements">
   <p>
-    When a step's tooltip is visible, the step's button needs the{' '}
-    <code>aria-describedby</code> attribute, whose value should be
-    the <code>id</code> of the associated tooltip.
+    The name of the step should be included with the <code>slds-assistive-text</code> class
+    as the inner text of the step's <code>div</code> so that it is available to screen readers.
   </p>
 </Blockquote>
 

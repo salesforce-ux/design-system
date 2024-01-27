@@ -39,7 +39,7 @@ module.exports = {
     ? `${process.env.GITHUB_REPOSITORY}/${process.env.GITHUB_HEAD_REF}`
     : `localRun/${process.env.LOGNAME}/${currentBranch}`,
   parentBranchName: process.env.CI
-    ? `${process.env.GITHUB_REPOSITORY}/${process.env.APPLITOOLS_REPO_DEFAULT_BRANCH}`
+    ? `${process.env.GITHUB_REPOSITORY}/${process.env.APPLITOOLS_TEST_PARENT_BRANCH}`
     : `localRun/${currentBranch}`,
   baselineBranchName: process.env.CI
     ? `${process.env.GITHUB_REPOSITORY}/${process.env.GITHUB_BASE_REF}`

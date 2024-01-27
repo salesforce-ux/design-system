@@ -3,7 +3,9 @@
 
 ## 2.24.0 - Upcoming
 
-## 2.23.0 - Upcoming
+## 2.23.1 - January 16, 2024
+
+## 2.23.0 - December 14, 2023
 
 - Inbuilt Header introduced for tabs. The header scales as per the size modifiers.
 - Updated icons to `v10.8.2`

@@ -55,17 +55,6 @@ export let Modal = (props) => (
     className={classNames('slds-modal slds-fade-in-open', props.className)}
   >
     <div className="slds-modal__container">
-      {
-        props.closeButton !== false ? (
-          <ButtonIcon
-            className="slds-modal__close slds-button_icon-inverse"
-            iconClassName="slds-button__icon_large"
-            symbol="close"
-            assistiveText="Cancel and close"
-            disabled={props.closeButtonDisabled}
-          />
-        ) : null
-      }
       {props.children}</div>
   </section>
 );
@@ -82,11 +71,40 @@ Modal.defaultProps = {
   isFullSize: false,
 };
 
-export let ModalHeader = (props) => (
-  <div className={classNames('slds-modal__header', props.className)}>
-    {props.children}
-  </div>
-);
+export let ModalHeader = (props) => {
+  const closeIcon = (
+    <ButtonIcon
+      className="slds-modal__close"
+      iconClassName="slds-button__icon_large"
+      symbol="close"
+      assistiveText="Cancel and close"
+      disabled={props.closeButtonDisabled}
+    />
+  );
+  let header = [];
+  if(props.headless) {
+    header.push(closeIcon);
+  }
+  else {
+    React.Children.forEach(props.children, (child, index) => {
+      header.push(child);
+      if(index === 0) {
+        (props.closeButton !== false) && header.push(closeIcon);
+      }
+    });
+  }
+  return (<div className={classNames('slds-modal__header slds-text-align_left', props.className)}>
+    {header}
+  </div>);
+  };
+
+ModalHeader.propTypes = {
+  headless: PropTypes.bool
+};
+
+ModalHeader.defaultProps = {
+  headless: false
+};
 
 export let ModalHeaderDeprecated = (props) => (
   <div className={classNames('slds-modal__header', props.className)}>
@@ -136,7 +154,7 @@ export let Taglines = (props) => (
   <Backdrop>
     <Modal aria-labelledby="modal-heading-01">
       <ModalHeader>
-        <h1 id="modal-heading-01" className="slds-modal__title slds-hyphenate">
+        <h1 id="modal-heading-01" className="slds-modal__title slds-hyphenate" tabindex="-1">
           Modal header
         </h1>
         <p className="slds-m-top_x-small">
@@ -188,7 +206,7 @@ export let ModalSizes = (props) => (
       aria-labelledby="modal-heading-01"
     >
       <ModalHeader>
-        <h1 id="modal-heading-01" className="slds-modal__title slds-hyphenate">
+        <h1 id="modal-heading-01" className="slds-modal__title slds-hyphenate" tabindex="-1">
           Modal header
         </h1>
       </ModalHeader>
@@ -221,7 +239,7 @@ export let FullTaglines = (props) => (
       )}
       isFullSize={props.size === 'full'}>
       <ModalHeader>
-        <h1 id="modal-heading-01" className="slds-modal__title slds-hyphenate">
+        <h1 id="modal-heading-01" className="slds-modal__title slds-hyphenate" tabindex="-1">
           Modal header
         </h1>
         <p className="slds-m-top_x-small">
@@ -261,6 +279,7 @@ export let FullHeadless = (props) => (
       aria-labelledby="modal-heading-01"
       isFullSize={props.size === 'full'}
     >
+      <ModalHeader headless className="slds-modal__header_empty" />
       <ModalContent className={classNames(
         props.size === 'full' && 'slds-modal_full-content slds-p-around_medium slds-modal__content_headless'
       )}
@@ -294,7 +313,7 @@ export let FullFootless = (props) => (
       isFullSize={props.size === 'full'}
     >
       <ModalHeader>
-        <h1 id="modal-heading-01" className="slds-modal__title slds-hyphenate">
+        <h1 id="modal-heading-01" className="slds-modal__title slds-hyphenate" tabindex="-1">
           Modal header
         </h1>
       </ModalHeader>
@@ -319,7 +338,7 @@ export let Directional = (props) => (
   <Backdrop>
     <Modal aria-labelledby="modal-heading-01">
       <ModalHeader>
-        <h1 id="modal-heading-01" className="slds-modal__title slds-hyphenate">
+        <h1 id="modal-heading-01" className="slds-modal__title slds-hyphenate" tabindex="-1">
           Modal header
         </h1>
       </ModalHeader>
@@ -356,6 +375,7 @@ export let Directional = (props) => (
 export let Headless = (props) => (
   <Backdrop>
     <Modal aria-label="Meaningful description of the modal content">
+      <ModalHeader headless className="slds-modal__header_empty" />
       <ModalContent className="slds-p-around_medium slds-modal__content_headless">
         <p>
           Sit nulla est ex deserunt exercitation anim occaecat. Nostrud ullamco
@@ -416,7 +436,7 @@ export let HiddenFooter = (props) => (
   <Backdrop>
     <Modal aria-labelledby="modal-heading-01">
       <ModalHeader>
-        <h1 id="modal-heading-01" className="slds-modal__title slds-hyphenate">
+        <h1 id="modal-heading-01" className="slds-modal__title slds-hyphenate" tabindex="-1">
           Modal header
         </h1>
       </ModalHeader>
@@ -445,6 +465,7 @@ export let HiddenFooter = (props) => (
 export let HeadlessAndFootless = (props) => (
   <Backdrop>
     <Modal aria-labelledby="modal-content-id-1">
+      <ModalHeader headless className="slds-modal__header_empty" />
       <ModalContent className="slds-modal__content_headless slds-modal__content_footless slds-p-around_medium">
         <p>
           Sit nulla est ex deserunt exercitation anim occaecat. Nostrud ullamco
@@ -470,7 +491,7 @@ export let HeadlessAndFootless = (props) => (
 export let HeadlessAndFootlessDeprecated = (props) => (
   <Backdrop>
     <Modal aria-labelledby="modal-content-id-1">
-      <ModalHeader className="slds-modal__header_empty" />
+      <ModalHeader headless className="slds-modal__header_empty" />
       <ModalContent className="slds-p-around_medium">
         <p>
           Sit nulla est ex deserunt exercitation anim occaecat. Nostrud ullamco
@@ -536,9 +557,9 @@ export const Menu = () => {
 
 export let DisabledClose = (props) => (
   <Backdrop>
-    <Modal aria-labelledby="modal-heading-01" closeButtonDisabled>
-      <ModalHeader>
-        <h1 id="modal-heading-01" className="slds-modal__title slds-hyphenate">
+    <Modal aria-labelledby="modal-heading-01">
+      <ModalHeader closeButtonDisabled>
+        <h1 id="modal-heading-01" className="slds-modal__title slds-hyphenate" tabindex="-1">
           Modal header
         </h1>
       </ModalHeader>
@@ -568,7 +589,7 @@ export let DeprecatedClose = (props) => (
   <Backdrop>
     <Modal aria-labelledby="modal-heading-01" closeButton={false}>
       <ModalHeaderDeprecated>
-        <h1 id="modal-heading-01" className="slds-modal__title slds-hyphenate">
+        <h1 id="modal-heading-01" className="slds-modal__title slds-hyphenate" tabindex="-1">
           Modal header
         </h1>
       </ModalHeaderDeprecated>
@@ -602,7 +623,7 @@ const defaultComponent = (
   <Backdrop>
     <Modal aria-labelledby="modal-heading-01">
       <ModalHeader>
-        <h1 id="modal-heading-01" className="slds-modal__title slds-hyphenate">
+        <h1 id="modal-heading-01" className="slds-modal__title slds-hyphenate" tabindex="-1">
           Modal header
         </h1>
       </ModalHeader>

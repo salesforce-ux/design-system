@@ -3,6 +3,12 @@
 # Modals Release Notes
 
 <!-- ## [Unreleased] -->
+## 2.24.0 - Upcoming
+
+## Changed
+
+- Updated close button position in the Modal
+- Added tabindex to the heading element to make it programmatically focussable
 
 ## 2.22.0
 

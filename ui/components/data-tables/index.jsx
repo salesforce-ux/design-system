@@ -559,6 +559,12 @@ export const Td = (props) => {
     'slds-cell_action-mode': isActionableMode,
   });
 
+  const computeAriaDescribedBy = () => {
+    if(props.isEdited) {
+      return "unsaved-cell-notification";
+    }
+  }
+
   const getComputedRole = () => {
     let computedRole = null;
     switch (props.type) {
@@ -574,6 +580,7 @@ export const Td = (props) => {
     <td
       aria-readonly={props.isLocked}
       aria-selected={props.isEditing}
+      aria-describedby={computeAriaDescribedBy() || null}
       className={computedClasses || null}
       data-label={props['data-label']}
       role={getComputedRole()}
@@ -804,6 +811,9 @@ export const EditableCell = (props) => {
       </span>
       {props.showEdit && (
         <EditPopover isRequired={props.isRequired} hasError={props.hasError} />
+      )}
+      {props.isEdited && (
+        <span id="unsaved-cell-notification" class="slds-hide">Unsaved</span>
       )}
     </React.Fragment>
   );

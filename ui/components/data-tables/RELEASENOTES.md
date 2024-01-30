@@ -4,6 +4,12 @@
 
 <!-- ## [Unreleased] -->
 
+# 2.24.0 - Upcoming
+
+ ## Changed
+
+ - Introduced a new hidden element which helps screen reader announce its state when a cell content has been updated
+
 ## 2.22.0
 
 ### Added

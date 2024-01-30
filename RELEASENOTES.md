@@ -3,6 +3,8 @@
 
 ## Release 2.24.0 - Upcoming
 
+- Moving slds global styling hooks from slds-wcag class selector to root selector scope.
+
 ## Components
 ### [Progress Indicator](https://www.lightningdesignsystem.com/components/progress-indicator)
 #### Changed

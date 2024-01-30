@@ -3,6 +3,8 @@
 
 ## 2.24.0 - Upcoming
 
+- Moving slds global styling hooks from slds-wcag class selector to root selector scope.
+
 ## 2.23.1 - January 16, 2024
 
 ## 2.23.0 - December 14, 2023

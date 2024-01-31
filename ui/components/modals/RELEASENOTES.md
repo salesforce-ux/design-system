@@ -4,6 +4,12 @@
 
 <!-- ## [Unreleased] -->
 
+## 2.23.2
+
+### Changed
+
+- Fixed token notation in header padding-right property
+
 ## 2.22.0
 
 ### Changed

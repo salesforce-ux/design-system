@@ -85,7 +85,7 @@
   color: var(--slds-c-modal-header-text-color, var(--sds-c-modal-header-text-color, var(--sds-c-modal-text-color)));
   flex-shrink: 0;
   padding-top: var(--slds-c-modal-header-spacing-block-start, var(--sds-c-modal-header-spacing-block-start, $spacing-medium));
-  padding-right: var(--slds-c-modal-header-spacing-inline-end, var(--sds-c-modal-header-spacing-inline-end, ($spacing-medium)));
+  padding-right: var(--slds-c-modal-header-spacing-inline-end, var(--sds-c-modal-header-spacing-inline-end, $spacing-medium));
   padding-bottom: var(--slds-c-modal-header-spacing-block-end, var(--sds-c-modal-header-spacing-block-end, $spacing-medium));
   padding-left: var(--slds-c-modal-header-spacing-inline-start, var(--sds-c-modal-header-spacing-inline-start, $spacing-medium));
   text-align: center;

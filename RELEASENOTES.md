@@ -3,9 +3,11 @@
 
 ## Release 2.24.0 - Upcoming
 
-- Moving slds global styling hooks from slds-wcag class selector to root selector scope.
-
 ## Components
+### [Combobox](https://www.lightningdesignsystem.com/components/combobox)
+#### Changed
+- Updated Combobox blueprint to use `role="option"` on div wrapping loading spinner
+
 ### [Progress Indicator](https://www.lightningdesignsystem.com/components/progress-indicator)
 #### Changed
 - Updated Progress Step `button` to `div`.
@@ -16,6 +18,15 @@
 ### [Tooltips](https://www.lightningdesignsystem.com/components/tooltips)
 #### Changed
 - Updated Tooltip component description.
+
+## Release 2.23.2 - February 1, 2024
+
+- Moved global styling hooks from slds-wcag class selector to root selector scope.
+
+## Components
+### [Modals](https://www.lightningdesignsystem.com/components/modals)
+#### Changed
+- Fixed token notation in header padding-right property
 
 ## Release 2.23.1 - January 16, 2024
 

@@ -1,7 +1,11 @@
 <!-- Release notes authoring guidelines: http://keepachangelog.com/ -->
 <!-- On release, add general notes here. In time the legacy release notes will be add to this -->
 
-## 2.23.0 - Upcoming
+## 2.23.2 - February 1, 2024
+
+## 2.23.1 - January 16, 2024
+
+## 2.23.0 - December 14, 2023
 
 - Inbuilt Header introduced for tabs. The header scales as per the size modifiers.
 - Updated icons to `v10.8.2`
@@ -40,7 +44,11 @@
 - Added Button element for `Pill` remove feature. Now remove button is focusable and can be clickable.
 - Updated RTL stylings for `setup-assistant` component
 
-## 2.22.1 - November 3, 2023
+## 2.22.2 - November 9, 2023
+
+
+## 2.22.1 - November 2, 2023
+
 
 ## 2.22.0 - August 16, 2023
 

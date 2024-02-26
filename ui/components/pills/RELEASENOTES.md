@@ -3,6 +3,13 @@
 # Pills Release Notes
 
 <!-- ## [Unreleased] -->
+## 2.23.1
+
+## Changed
+
+- Added Button element for `Pill` remove feature. Now remove button is focusable and can be clickable.
+- Removed non applicable ARIA attributes after markup updates.
+
 ## 2.17.0
 
 ### Added

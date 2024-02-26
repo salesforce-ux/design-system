@@ -11,6 +11,7 @@ env:
   APPLITOOLS_DONT_CLOSE_BATCHES: true
   APPLITOOLS_BATCH_NOTIFY: true
   APPLITOOLS_REPO_DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
+  APPLITOOLS_TEST_PARENT_BRANCH: ${{ github.base_ref }}
   REVIEW_APP_NAME: slds-storybook-pr-${{ github.event.pull_request.number }}
 
 jobs:

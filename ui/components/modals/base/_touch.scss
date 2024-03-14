@@ -10,5 +10,6 @@
 }
 
 .slds-modal__header .slds-modal__close {
-  top: $spacing-small;
+  top: -$height-tappable;
+  right: 0;
 }

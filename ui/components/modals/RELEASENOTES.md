@@ -7,8 +7,7 @@
 
 ## Changed
 
-- Updated close button position in the Modal
-- Added tabindex to the heading element to make it programmatically focussable
+- Added tabindex to the heading element to make it programmatically focussable.
 
 ## 2.23.2
 

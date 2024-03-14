@@ -85,7 +85,7 @@
   color: var(--slds-c-modal-header-text-color, var(--sds-c-modal-header-text-color, var(--sds-c-modal-text-color)));
   flex-shrink: 0;
   padding-top: var(--slds-c-modal-header-spacing-block-start, var(--sds-c-modal-header-spacing-block-start, $spacing-medium));
-  padding-right: var(--slds-c-modal-header-spacing-inline-end, var(--sds-c-modal-header-spacing-inline-end, $spacing-x-large * 2));
+  padding-right: var(--slds-c-modal-header-spacing-inline-end, var(--sds-c-modal-header-spacing-inline-end, $spacing-medium));
   padding-bottom: var(--slds-c-modal-header-spacing-block-end, var(--sds-c-modal-header-spacing-block-end, $spacing-medium));
   padding-left: var(--slds-c-modal-header-spacing-inline-start, var(--sds-c-modal-header-spacing-inline-start, $spacing-medium));
   text-align: center;
@@ -93,13 +93,6 @@
   + .slds-modal__menu {
     border-top-right-radius: 0;
     border-top-left-radius: 0;
-  }
-
-  .slds-modal__close {
-    @include square($square-icon-medium-boundary);
-    position: absolute;
-    top: $spacing-small;
-    right: $spacing-medium;
   }
 }
 
@@ -113,8 +106,8 @@
 .slds-modal__content_headless,
 .slds-modal__header_empty + .slds-modal__content,
 .slds-modal__header--empty + .slds-modal__content {
-  border-top-right-radius: 0;
-  border-top-left-radius: 0;
+  border-top-right-radius: var(--slds-c-modal-radius-border, var(--sds-c-modal-radius-border, $border-radius-medium));
+  border-top-left-radius: var(--slds-c-modal-radius-border, var(--sds-c-modal-radius-border, $border-radius-medium));
 }
 
 /**
@@ -186,6 +179,22 @@
 .slds-modal__footer_directional .slds-button:first-child,
 .slds-modal__footer--directional .slds-button:first-child {
   float: left;
+}
+
+/**
+  * Positions the close button to the top right outside of the modal.
+  *
+  * @selector .slds-modal__close
+  * @restrict .slds-modal button
+  * @notes Either `.slds-modal__content` or `.slds-modal__menu` must be used. If you’re using this class, you do not need the other. This should be nested immediately inside `.slds-modal_container`.
+  * @required
+  */
+.slds-modal__close {
+  @include square($square-icon-medium-boundary);
+  margin-left: auto;
+  position: relative;
+  bottom: $spacing-x-small;
+  right: ($spacing-x-small * -1);
 }
 
 @mixin backdrop {
@@ -485,28 +494,3 @@
   visibility: visible;
   transform: translate(0, $spacing-medium);
 }
-
-/**
-  * Use when modal header has no content and
-  * only close icon to show
-  *
-  * @selector .slds-modal__header_empty
-  * @restrict .slds-modal__header
-  */
-  .slds-modal__header_empty,
-  .slds-modal__header--empty {
-    /*! @css-var-fallback padding-top */
-    --sds-c-modal-header-spacing-block-start: 0;
-
-    /*! @css-var-fallback padding-bottom */
-    --sds-c-modal-header-spacing-block-end: calc(#{$spacing-xx-large} + #{$spacing-x-small});
-
-    /*! @css-var-fallback padding-left */
-    --sds-c-modal-header-spacing-inline-start: 0;
-
-    /*! @css-var-fallback padding-right */
-    --sds-c-modal-header-spacing-inline-end: 0;
-
-    /*! @css-var-fallback border-bottom */
-    --slds-c-modal-sizing-border: 0;
-  }

@@ -5,6 +5,10 @@
 <!-- ## [Unreleased] -->
 ## 2.24.0 - Upcoming
 
+## Changed
+
+- Fixed tap target size of close icon in Pill to meet 24x24.
+
 ## Added
 
 - Added new truncated state for Pill as a tooltip.

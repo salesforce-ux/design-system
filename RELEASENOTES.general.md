@@ -3,6 +3,10 @@
 
 ## 2.24.0 - Upcoming
 
+## Added
+
+- New focus styles incorporated to all components.
+
 ## 2.23.2 - February 1, 2024
 
 - Moved global styling hooks from slds-wcag class selector to root selector scope.

@@ -16,9 +16,9 @@
   justify-content: space-between;
   line-height: var(--slds-c-pill-line-height, var(--sds-c-pill-line-height, $line-height-text));
   max-width: 100%; // Required to make the container shrink when truncated
-  padding-top: var(--slds-c-pill-spacing-block-start, var(--sds-c-pill-spacing-block-start, $spacing-xxx-small));
-  padding-right: var(--slds-c-pill-spacing-inline-end, var(--sds-c-pill-spacing-inline-end, $spacing-xxx-small));
-  padding-bottom: var(--slds-c-pill-spacing-block-end, var(--sds-c-pill-spacing-block-end, $spacing-xxx-small));
+  padding-top: var(--slds-c-pill-spacing-block-start, var(--sds-c-pill-spacing-block-start, 0));
+  padding-right: var(--slds-c-pill-spacing-inline-end, var(--sds-c-pill-spacing-inline-end, 0));
+  padding-bottom: var(--slds-c-pill-spacing-block-end, var(--sds-c-pill-spacing-block-end, 0));
   padding-left: var(--slds-c-pill-spacing-inline-start, var(--sds-c-pill-spacing-inline-start, $spacing-xxx-small));
   border-width: var(--slds-c-pill-sizing-border, var(--sds-c-pill-sizing-border, $border-width-thin));
   border-style: solid;
@@ -175,8 +175,10 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  margin-left: $spacing-xx-small;
   border-radius: $border-radius-small;
+  padding: $spacing-xx-small;
+  box-sizing:content-box;
+  right: 0;
 
   svg {
     @include square($square-icon-xx-small-content);
@@ -205,7 +207,6 @@
   .slds-pill__remove {
     position: absolute;
     top: 50%;
-    right: $spacing-xxx-small;
     transform: translateY(-50%);
   }
 }
@@ -218,7 +219,7 @@
  */
 .slds-pill__action {
   padding-top: var(--slds-c-pill-spacing-block-start, var(--sds-c-pill-spacing-block-start, $spacing-xxx-small));
-  padding-right: calc(#{$square-icon-xx-small-boundary} + var(--slds-c-pill-spacing-inline-end, var(--sds-c-pill-spacing-inline-end, #{$spacing-xxx-small})) + 2px);
+  padding-right: calc(#{$square-icon-xx-small-boundary} + var(--slds-c-pill-spacing-inline-end, var(--sds-c-pill-spacing-inline-end, #{$spacing-xxx-small})) + 6px);
   padding-bottom: var(--slds-c-pill-spacing-block-end, var(--sds-c-pill-spacing-block-end, $spacing-xxx-small));
   padding-left: var(--slds-c-pill-spacing-inline-start, var(--sds-c-pill-spacing-inline-start, $spacing-xxx-small));
   border-width: var(--slds-c-pill-sizing-border, var(--sds-c-pill-sizing-border, $border-width-thin));

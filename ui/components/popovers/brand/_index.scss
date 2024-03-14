@@ -30,6 +30,12 @@
       fill: var(--slds-g-color-brand-base-10, #{$color-border-inverse});
     }
   }
+
+  &:not(.slds-popover_brand-dark) {
+    .slds-button:focus {
+      box-shadow: none;
+    }
+  }
 }
 
 @mixin brand-nubbin($position, $location: "after", $color: transparent) {

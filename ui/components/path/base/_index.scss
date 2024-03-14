@@ -67,6 +67,13 @@
       @media (pointer: coarse) and (hover: none) {
         display: none;
       }
+
+      .slds-button {
+        &:focus {
+          box-shadow: var(--slds-g-shadow-6, #{$shadow-button-focus});
+          outline: none;
+        }
+      }
     }
   }
 }
@@ -128,6 +135,13 @@
 
   @include mq-large-min {
     flex-basis: auto;
+  }
+
+  .slds-button {
+    &:focus {
+      box-shadow: var(--slds-g-shadow-6, #{$shadow-button-focus});
+      outline: none;
+    }
   }
 }
 
@@ -599,7 +613,9 @@
   }
 
   &:focus {
+    box-shadow: var(--slds-g-shadow-7);
     outline: 0;
+    text-decoration: none;
   }
 }
 

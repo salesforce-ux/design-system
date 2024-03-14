@@ -49,6 +49,7 @@
 
       &:focus {
         box-shadow: var(--slds-g-shadow-5, #{$shadow-button-focus});
+        outline: 0;
       }
     }
 
@@ -137,6 +138,7 @@
 
     &:focus {
       box-shadow: var(--slds-g-shadow-5, #{$shadow-button-focus});
+      outline: 0;
     }
   }
 
@@ -161,6 +163,7 @@
 
     &:focus {
       box-shadow: var(--slds-g-shadow-5, #{$shadow-button-focus});
+      outline: 0;
     }
   }
 }

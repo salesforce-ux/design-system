@@ -58,6 +58,11 @@
     margin-left: $spacing-xx-small;
     transform: translateY($spacing-xxx-small * -1);
   }
+
+  .slds-notify__content a:focus {
+    box-shadow: var(--slds-g-shadow-5, #{$shadow-button-focus});
+    border-color: transparent;
+  }
 }
 
 // Modify toasts when in a narrow column

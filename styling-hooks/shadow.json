@@ -22,6 +22,36 @@
       "namespace": "sds",
       "category": "shadow",
       "comment": "Shadow depth 5"
+    },
+    "shadow-6": {
+      "originalValue": "0 0 0 2px {!PALETTE_NEUTRAL_100} inset, 0 0 0 3px {!PALETTE_BLUE_40} inset",
+      "syntax": "<length>",
+      "name": "shadow-6",
+      "value": "0 0 0 2px {!PALETTE_NEUTRAL_100} inset, 0 0 0 3px {!PALETTE_BLUE_40} inset",
+      "scope": "global",
+      "cssProperties": [
+        "box-shadow"
+      ],
+      "inherits": false,
+      "type": "raw",
+      "namespace": "sds",
+      "category": "shadow",
+      "comment": "Shadow depth 6"
+    },
+    "shadow-7": {
+      "originalValue": "0 0 0 1px {!PALETTE_BLUE_40} inset, 0 0 0 2px {!PALETTE_NEUTRAL_100} inset",
+      "syntax": "<length>",
+      "name": "shadow-7",
+      "value": "0 0 0 1px {!PALETTE_BLUE_40} inset, 0 0 0 2px {!PALETTE_NEUTRAL_100} inset",
+      "scope": "global",
+      "cssProperties": [
+        "box-shadow"
+      ],
+      "inherits": false,
+      "type": "raw",
+      "namespace": "sds",
+      "category": "shadow",
+      "comment": "Shadow depth 7"
     }
   }
 }

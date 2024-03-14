@@ -124,8 +124,8 @@
   &:focus,
   &:active {
     outline: none;
-    box-shadow: $shadow-button-focus;
-    border-radius: $border-radius-medium;
+    box-shadow: var(--slds-g-shadow-5, #{$shadow-button-focus});
+    border-radius: $border-radius-small;
   }
 }
 
@@ -181,12 +181,10 @@
   width: $color-picker-range-indicator-size;
   border: $border-width-thick solid $color-background-alt;
   border-radius: $border-radius-circle;
-  box-shadow: $shadow-inline-edit,
-    inset $shadow-inline-edit;
 
   &:focus {
-    outline: none;
-    box-shadow: $shadow-button-focus;
+    outline: 1px solid var(--slds-g-color-brand-base-40, #0b5cab);
+    outline-offset: 0;
   }
 }
 
@@ -249,7 +247,7 @@
 
   @mixin thumb-styles-focus {
     border-color: var(--slds-g-color-brand-base-60, #{$color-border-input-active});
-    box-shadow: $shadow-button-focus;
+    box-shadow: var(--slds-g-shadow-5, #{$shadow-button-focus});
   }
 
   &::-webkit-slider-thumb {

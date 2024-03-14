@@ -179,6 +179,41 @@
     transition-property: top, background-color;
   }
 
+  .slds-context-bar__label-action {
+    &:focus::before {
+      content: '';
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      box-shadow: var(--slds-g-shadow-7);
+    }
+  }
+
+  &.slds-has-warning,
+  &.slds-has-success,
+  &.slds-has-error {
+    .slds-context-bar__label-action {
+      &:focus::before {
+        content: '';
+        box-shadow: var(--slds-g-shadow-7)
+      }
+    }
+  }
+
+  .slds-button .slds-context-bar__label-action {
+    &:focus::before {
+      content: '';
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      box-shadow: var(--slds-g-shadow-7);
+    }
+  }
+
   &.slds-is-active {
     animation: bkAnim 0.135s cubic-bezier(0.39, 0.575, 0.565, 1) both;
 
@@ -227,6 +262,32 @@
 
     &:hover {
       border-bottom-color: $brand-primary-transparent-10;
+    }
+
+    .slds-context-bar__label-action {    
+      &:focus::before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 5px;
+        left: 0;
+        width: 100%;
+        height: 80%;
+        box-shadow: var(--slds-g-shadow-7);
+      }
+    }
+
+    &.slds-has-warning,
+    &.slds-has-success,
+    &.slds-has-error {
+      .slds-context-bar__label-action {
+        &:focus::before {
+          content: '';
+          top: 4px;
+          height: 87%;
+          box-shadow: var(--slds-g-shadow-7);
+        }
+      }
     }
   }
 
@@ -391,7 +452,7 @@
   &:focus,
   &:focus:hover {
     outline: 0;
-    text-decoration: underline;
+    text-decoration: none;
   }
 
   &:hover {
@@ -406,6 +467,10 @@
   &:active {
     color: inherit;
     text-decoration: none;
+  }
+
+  &.slds-button:focus {
+    box-shadow: none;
   }
 }
 

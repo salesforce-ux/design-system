@@ -50,12 +50,17 @@
     position: absolute;
 
     &:focus ~ label .slds-visual-picker__figure {
-      border: $border-width-thin solid var(--slds-g-color-border-brand-2, #{$color-border-selection-hover});
-      box-shadow: 0 0 0 1px var(--slds-g-color-border-brand-2, #{$color-border-selection-hover}) inset;
+      border: $border-width-thin solid var(--slds-g-color-border-base-1, #{$color-border});
+      box-shadow: var(--slds-g-shadow-5, #{$shadow-button-focus});
+      outline: 0;
     }
 
     &:checked ~ label .slds-visual-picker__figure {
       box-shadow: $elevation-shadow-4;
+    }
+
+    &:checked:focus ~ label .slds-visual-picker__figure {
+      box-shadow: var(--slds-g-shadow-5, #{$shadow-button-focus});
     }
 
     &:focus ~ label .slds-visual-picker__body > *:first-child {

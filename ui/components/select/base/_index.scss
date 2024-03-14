@@ -34,6 +34,12 @@
     box-shadow: var(--slds-c-select-shadow-focus, var(--sds-c-select-shadow-focus, $shadow-button-focus));
   }
 
+  &:focus {
+    border-color: var(--slds-g-color-border-base-4, #{$color-border-input});
+    box-shadow: var(--slds-c-select-shadow-focus, var(--sds-c-select-shadow-focus,
+      var(--slds-g-shadow-5, #{$shadow-button-focus})));
+  }
+
   &[disabled],
   &.slds-is-disabled {
     background-color: var(--slds-g-color-neutral-base-95, #{$color-background-input-disabled});
@@ -118,9 +124,13 @@
     box-shadow: var(--slds-g-color-error-base-40, #{$color-border-error}) 0 0 0 $border-width-thin inset;
     background-clip: padding-box;
 
-    &:focus,
     &:active {
       box-shadow: var(--slds-g-color-error-base-40, #{$color-border-error}) 0 0 0 $border-width-thin inset, $shadow-button-focus;
+    }
+
+    &:focus {
+      box-shadow: var(--slds-g-color-error-base-40, #{$color-border-error}) 0 0 0 $border-width-thin inset,
+        var(--slds-g-shadow-5, #{$shadow-button-focus});
     }
   }
 }

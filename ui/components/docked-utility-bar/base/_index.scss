@@ -58,6 +58,7 @@
 .slds-utility-bar__item {
   display: flex;
   margin-right: $border-width-thin;
+  position: relative;
 }
 
 /**
@@ -154,6 +155,7 @@
   &:focus,
   &:hover {
     box-shadow: none;
+    outline: none;
   }
 
   &:focus:after {
@@ -165,6 +167,18 @@
   &:focus {
     background: $brand-primary-transparent-10;
     color: inherit;
+  }
+
+  &:focus::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 90%;
+    border-radius: 0;
+    box-shadow: var(--slds-g-shadow-7);
   }
 
   /**

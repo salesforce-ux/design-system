@@ -39,9 +39,6 @@
   }
 
   &:focus {
-    /*! @css-var-fallback border-color */
-    --slds-c-pill-color-border: var(--sds-c-pill-color-border-focus, var(--slds-g-color-border-base-4, #{$color-border}));
-
     /*! @css-var-fallback box-shadow */
     --slds-c-pill-shadow: var(--sds-c-pill-shadow-focus, var(--slds-g-shadow-5, #{$shadow-button-focus}));
 
@@ -54,6 +51,11 @@
 
   .slds-popover_tooltip, .slds-popover--tooltip {
     width: max-content;
+  }
+
+  .slds-pill__remove:focus {
+    box-shadow: var(--slds-g-shadow-7);
+    outline: 0;
   }
 }
 
@@ -101,6 +103,24 @@
     margin-left: 0;
     margin-right: 0;
   }
+
+  .slds-pill_link,
+  .slds-pill--link,
+  .slds-listbox-item {
+
+    .slds-pill__action:focus,
+    .slds-pill:focus {
+      box-shadow: var(--slds-g-shadow-6);
+    }
+
+    .slds-pill.slds-pill_bare:focus {
+      outline-offset: -2px;
+    }
+  }
+}
+
+.slds-listbox_selection-group .slds-listbox-item .slds-pill:focus {
+  box-shadow: var(--slds-g-shadow-6);
 }
 
 /**
@@ -211,9 +231,8 @@
   flex-grow: 1;
 
   &:focus {
-    outline: 0;
-    border-color: var(--slds-c-pill-action-color-border, var(--sds-c-pill-action-color-border, var(--slds-g-color-border-base-4, #{$color-border})));
     box-shadow: var(--slds-c-pill-action-shadow, var(--sds-c-pill-action-shadow, var(--slds-g-shadow-5, #{$shadow-button-focus})));
+    outline: 0;
   }
 }
 

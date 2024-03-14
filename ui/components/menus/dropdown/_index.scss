@@ -162,6 +162,11 @@
       background-color: transparent;
     }
 
+    &:focus {
+      box-shadow: var(--slds-g-shadow-6, #{$shadow-button-focus});
+      outline: 0;
+    }
+
     &:active {
       color: var(--slds-g-color-neutral-100-opacity-50, #{$color-text-link-inverse-active});
       background-color: transparent;
@@ -213,6 +218,18 @@
       outline: 0;
       text-decoration: none;
       background-color: var(--slds-g-color-neutral-base-95, #{$color-background-row-hover});
+    }
+
+    &:focus {
+      box-shadow: var(--slds-g-shadow-6, #{$shadow-button-focus});
+    }
+
+    &.slds-has-success,
+    &.slds-has-warning,
+    &.slds-has-error {
+      &:focus {
+        box-shadow: var(--slds-g-shadow-7);
+      }
     }
 
     &:active {

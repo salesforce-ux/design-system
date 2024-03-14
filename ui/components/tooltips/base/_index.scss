@@ -29,6 +29,12 @@
   }
 }
 
+a:has(+ .slds-popover.slds-popover_tooltip):focus {
+  outline: 1px solid var(--slds-g-color-palette-blue-40, #0b5cab);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
 /**
  * @name rise
  * @summary Toggles on tooltip

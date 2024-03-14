@@ -210,6 +210,10 @@
     box-shadow: none;
     transition: none;
   }
+
+  &:focus-within {
+    box-shadow: var(--slds-g-shadow-5, #{$shadow-button-focus});
+  }
 }
 
 .slds-chat-message__text_inbound,
@@ -416,6 +420,12 @@
       @include square($square-icon-small-content);
       fill: var(--slds-g-link-color, #{$color-text-link});
     }
+  }
+
+  &:focus {
+    outline: 1px solid var(--slds-g-color-brand-base-40);
+    outline-offset: 0;
+    box-shadow: 0 0 0 2px var(--slds-g-color-neutral-base-100);
   }
 }
 

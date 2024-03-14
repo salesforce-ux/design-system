@@ -13,6 +13,10 @@
  */
 .slds-truncate {
   @include truncate;
+
+  a:focus-visible {
+    outline-offset: 0;
+  }
 }
 
 

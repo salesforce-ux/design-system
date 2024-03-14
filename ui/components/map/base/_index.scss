@@ -111,6 +111,11 @@
     }
   }
 
+  &:focus {
+    box-shadow: var(--slds-g-shadow-6, #{$shadow-button-focus});
+    border-radius: $border-radius-medium;
+  }
+
   &:active {
     background-color: var(--slds-g-color-neutral-base-95, #{$color-background-row-active});
   }

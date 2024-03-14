@@ -58,6 +58,10 @@
     }
   }
 
+  &:not(.slds-no-row-hover) tbody tr:focus {
+    box-shadow: var(--slds-g-shadow-5, #{$shadow-button-focus});
+  }
+
   /**
    * Selected Table Row + Hover
    *
@@ -150,7 +154,7 @@
   th.slds-has-focus,
   [role="gridcell"]:focus,
   [role="gridcell"].slds-has-focus {
-    box-shadow: $brand-accessible 0 0 0 1px inset;
+    box-shadow: var(--slds-g-shadow-6, #{$shadow-button-focus});
 
     /**
     * Use when cells are in action mode
@@ -162,6 +166,11 @@
     &.slds-cell_action-mode {
       border-bottom: 3px solid var(--slds-g-color-brand-base-50, #{$color-border-brand-dark});
     }
+  }
+
+  th:focus,
+  th.slds-has-focus {
+    box-shadow: var(--slds-g-shadow-6, #{$shadow-button-focus});
   }
 
   th:active,
@@ -363,6 +372,10 @@
   &:hover {
     outline: 0;
     background-color: var(--slds-g-color-neutral-base-100, #{$table-color-background-header-hover});
+  }
+
+  &:focus {
+    box-shadow: var(--slds-g-shadow-5, #{$shadow-button-focus});
   }
 }
 

@@ -91,8 +91,9 @@
     &:focus ~ .slds-radio--faux,
     &:focus + .slds-radio__label .slds-radio_faux,
     &:focus + .slds-radio__label .slds-radio--faux {
-      border-color: var(--slds-c-radio-color-border-focus, var(--sds-c-radio-color-border-focus, var(--slds-g-color-brand-base-60, #{$color-border-input-active})));
-      box-shadow: var(--slds-c-radio-shadow-focus, var(--sds-c-radio-shadow-focus, $shadow-button-focus));
+      border-color: var(--slds-c-radio-color-border-focus, var(--slds-c-radio-color-border-focus, var(--slds-g-color-border-base-4, #{$color-border-input})));
+      box-shadow: var(--slds-c-radio-shadow-focus, var(--sds-c-radio-shadow-focus, var(--slds-g-shadow-5, #{$shadow-button-focus})));
+      outline: 0;
     }
 
     &[disabled] {

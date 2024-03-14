@@ -146,14 +146,14 @@
   }
 
   &:focus {
-    box-shadow: inset 0 0 0 1px var(--slds-g-color-brand-base-60, #{$color-brand});
+    box-shadow: var(--slds-g-shadow-6, #{$shadow-button-focus}); 
   }
 
   &[aria-current="page"] {
     box-shadow: inset 4px 0 0 $brand-accessible;
 
     &:focus {
-      box-shadow: inset 4px 0 0 $brand-accessible, inset 0 0 0 1px $brand-accessible;
+      box-shadow: inset 4px 0 0 $brand-accessible, 0 0 0 1px var(--slds-g-color-brand-base-40, #0b5cab) inset, 0 0 0 2px var(--slds-g-color-neutral-base-100, #FFFFFF) inset;
     }
   }
 }
@@ -179,5 +179,9 @@
 
   &.slds-is-closed .slds-button__icon {
     transform: rotate(180deg);
+  }
+
+  &:focus {
+    z-index: 1;
   }
 }

@@ -74,6 +74,10 @@
   &:focus {
     box-shadow: $brand-header-contrast-weak-active 0 0 0 2px;
   }
+
+  &:focus {
+    box-shadow: none;
+  }
 }
 
 /**

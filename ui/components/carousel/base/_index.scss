@@ -55,11 +55,27 @@
   display: block;
   border: $border-width-thin solid var(--slds-g-color-border-base-1, #{$color-border});
   border-radius: $border-radius-medium;
+  position: relative;
 
-  &:focus {
-    @include focus-button;
-    border-color: $brand-accessible-active;
+  &:focus,
+  &:focus-visible {
+    border: none;
     outline: 0;
+  }
+
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+  }
+    
+  &:focus::before {
+    box-shadow: var(--slds-g-shadow-7);
   }
 }
 
@@ -151,11 +167,14 @@
     background-color: var(--slds-g-color-neutral-base-95, #{$carousel-indicator-color-background-hover});
   }
 
-  &:focus {
-    @include focus-button;
-    background-color: var(--slds-g-color-brand-base-30, #{$carousel-indicator-color-background-focus});
-    border-color: var(--slds-g-color-brand-base-30, #{$carousel-indicator-color-background-focus});
+  &:focus,
+  &:focus-visible {
     outline: 0;
+  }
+
+  &:focus {
+    box-shadow: var(--slds-g-shadow-5);
+    border-radius: $border-radius-circle;
   }
 }
 
@@ -168,4 +187,9 @@
   position: absolute;
   left: 0;
   bottom: $spacing-xx-small;
+
+  .slds-button:focus {
+    box-shadow: var(--slds-g-shadow-6, #{$shadow-button-focus});
+    outline: 0;
+  }
 }

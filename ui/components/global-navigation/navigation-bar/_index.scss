@@ -198,7 +198,7 @@
     .slds-context-bar__label-action {
       &:focus::before {
         content: '';
-        box-shadow: var(--slds-g-shadow-7)
+        box-shadow: var(--slds-g-shadow-7);
       }
     }
   }

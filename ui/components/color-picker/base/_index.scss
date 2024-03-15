@@ -183,7 +183,7 @@
   border-radius: $border-radius-circle;
 
   &:focus {
-    outline: 1px solid var(--slds-g-color-brand-base-40, #0b5cab);
+    outline: 1px solid var(--slds-g-color-brand-base-40, #{$palette-blue-40});
     outline-offset: 0;
   }
 }

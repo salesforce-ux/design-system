@@ -30,9 +30,9 @@
 }
 
 a:has(+ .slds-popover.slds-popover_tooltip):focus {
-  outline: 1px solid var(--slds-g-color-palette-blue-40, #0b5cab);
+  outline: 1px solid var(--slds-g-color-palette-blue-40, #{$palette-blue-40});
   outline-offset: 2px;
-  border-radius: 4px;
+  border-radius: $border-radius-medium;
 }
 
 /**

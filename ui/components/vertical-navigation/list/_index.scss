@@ -136,8 +136,9 @@
     box-shadow: var(--slds-g-shadow-7);
 
     &:hover {
-      box-shadow: inset 2px 0 0 $brand-primary, 0 0 0 1px var(--slds-g-color-palette-blue-40, #0B5CAB) inset,
-        0 0 0 2px var(--slds-g-color-neutral-base-100, #FFFFFF) inset;
+      box-shadow: inset 2px 0 0 $brand-primary,
+        0 0 0 1px var(--slds-g-color-palette-blue-40, #{$palette-blue-40}) inset,
+        0 0 0 2px var(--slds-g-color-neutral-base-100, #{$palette-neutral-100}) inset;
     }
   }
 }
@@ -158,7 +159,9 @@
 
     &:focus {
       text-decoration: none;
-      box-shadow: inset 4px 0 0 $brand-primary, 0 0 0 1px var(--slds-g-color-palette-blue-40, #0B5CAB) inset, 0 0 0 2px var(--slds-g-color-neutral-base-100, #FFFFFF) inset;
+      box-shadow: inset 4px 0 0 $brand-primary,
+        0 0 0 1px var(--slds-g-color-palette-blue-40, #{$palette-blue-40}) inset,
+        0 0 0 2px var(--slds-g-color-neutral-base-100, #{$palette-neutral-100}) inset;
     }
 
     @include rtl() {

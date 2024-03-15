@@ -118,7 +118,7 @@
   }
 
   &:focus {
-    outline: 1px solid var(--slds-g-color-palette-blue-40, #0B5CAB);
+    outline: 1px solid var(--slds-g-color-palette-blue-40, #{$palette-blue-40});
     outline-offset: -3px;
   }
 }

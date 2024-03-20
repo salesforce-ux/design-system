@@ -3,6 +3,52 @@
 
 ## Release 2.24.0 - Upcoming
 
+## Added
+- New focus styles incorporated to all components.
+- Updated icons to `v10.8.3`
+  - Standard Set:
+    - Added account_score
+    - Added aggregate
+    - Added app_form_participant
+    - Added app_form_product_participant
+    - Added cost_model
+    - Added labels
+    - Added list_fee
+    - Added list_rate
+    - Added party_profile
+    - Added path_experiment
+    - Added people_score
+    - Added price_adjustment_schedule
+    - Added price_adjustment_tier
+    - Added program_cohort
+    - Added program_cohort_member
+    - Added rate_adjustment
+    - Added record_consent
+    - Added whatsapp
+  
+  - Utility Set:
+    - Added aggregate
+    - Added array
+    - Added bottom_group_alignment
+    - Added cant_sync
+    - Added center_group_alignment
+    - Added columns
+    - Added fully_synced
+    - Added inner_join
+    - Added join
+    - Added left_join
+    - Added not_in_sync
+    - Added not_saved
+    - Added outer_join
+    - Added path_experiment
+    - Added program_cohort
+    - Added program_cohort_member
+    - Added record_consent
+    - Added right_join
+    - Added skill
+    - Added sync_in_progress
+    - Added top_group_alignment
+
 ## Components
 ### [Combobox](https://www.lightningdesignsystem.com/components/combobox)
 #### Changed

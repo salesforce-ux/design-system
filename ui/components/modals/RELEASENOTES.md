@@ -9,6 +9,10 @@
 
 - Added tabindex to the heading element to make it programmatically focussable.
 
+### Fixed
+
+- Fixed modal by removing code explicitly scoped to patching internal, private implementations. Appropriate styles will be displayed again.
+
 ## 2.23.2
 
 ### Changed

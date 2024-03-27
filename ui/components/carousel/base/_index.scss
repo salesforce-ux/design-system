@@ -55,27 +55,15 @@
   display: block;
   border: $border-width-thin solid var(--slds-g-color-border-base-1, #{$color-border});
   border-radius: $border-radius-medium;
-  position: relative;
+  margin: $spacing-xx-small;
 
   &:focus,
   &:focus-visible {
-    border: none;
     outline: 0;
   }
-
-  &:before {
-    content: '';
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border-radius: 4px;
-  }
-    
-  &:focus::before {
-    box-shadow: var(--slds-g-shadow-7);
+  
+  &:focus {
+    box-shadow: var(--slds-g-shadow-5);
   }
 }
 
@@ -187,9 +175,10 @@
   position: absolute;
   left: 0;
   bottom: $spacing-xx-small;
+  margin-left: $spacing-xx-small;
 
   .slds-button:focus {
-    box-shadow: var(--slds-g-shadow-6, #{$shadow-button-focus});
+    box-shadow: var(--slds-g-shadow-5, #{$shadow-button-focus});
     outline: 0;
   }
 }

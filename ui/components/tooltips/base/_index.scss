@@ -30,9 +30,8 @@
 }
 
 a:has(+ .slds-popover.slds-popover_tooltip):focus {
-  outline: 1px solid var(--slds-g-color-palette-blue-40, #{$palette-blue-40});
-  outline-offset: 2px;
-  border-radius: $border-radius-medium;
+  box-shadow: var(--slds-g-shadow-5);
+  outline: 0;
 }
 
 /**

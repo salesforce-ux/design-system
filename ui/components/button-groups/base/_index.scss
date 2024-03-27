@@ -38,9 +38,7 @@
   box-shadow: inset 1px 0 0 var(--slds-g-color-neutral-base-100, #{$button-icon-color-border-primary});
 
   &:focus {
-    outline: 1px solid var(--slds-g-color-brand-base-40, #{$palette-blue-40});
-    outline-offset: 2px;
-    box-shadow: 0 0 0 2px var(--slds-g-color-neutral-base-100, #{$palette-neutral-100});
+    box-shadow: var(--slds-g-shadow-5);
   }
 }
 
@@ -83,10 +81,6 @@
 .slds-button.slds-button_first.slds-button_first {
   border-right: 0;
   border-radius: $button-border-radius 0 0 $button-border-radius;
-
-  &:focus {
-    border-right: $border-width-thin solid var(--slds-g-color-border-base-4, #{$button-color-border-primary});
-  }
 }
 
 /**

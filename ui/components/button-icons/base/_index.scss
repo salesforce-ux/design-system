@@ -143,7 +143,7 @@
   }
 
   &:focus {
-    box-shadow: var(--slds-g-shadow-5, #{$shadow-button-focus});
+    box-shadow: var(--slds-g-shadow-6, #{$shadow-button-focus});
     border-color: transparent;
     outline: 0;
   }

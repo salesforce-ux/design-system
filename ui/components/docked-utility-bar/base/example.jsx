@@ -9,6 +9,7 @@ import classNames from 'classnames';
 const exampleDemoStyles = `
   height: 540px;
   overflow: hidden;
+  padding-top: 50px;
 
   .slds-utility-bar_container {
     top: 0;

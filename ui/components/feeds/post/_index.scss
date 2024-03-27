@@ -142,9 +142,10 @@
   }
 
   &:focus {
-    box-shadow: var(--slds-g-shadow-5, #{$shadow-button-focus});
+    outline: 2px solid var(--slds-g-color-brand-base-40);
+    box-shadow: 0 0 0 4px var(--slds-g-color-neutral-base-100);
+    outline-offset: 2px;
     border-radius: $border-radius-small;
-    outline: 0;
   }
 }
 

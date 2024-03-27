@@ -59,7 +59,6 @@
   color: var(--slds-g-color-neutral-base-10, #{$color-text-tab-label});
   font-size: $font-size-5;
   padding: 0 $spacing-small;
-  position: relative;
 
   &:active {
     background-color: var(--slds-g-color-neutral-base-95, #{$color-background-row-active});
@@ -69,19 +68,9 @@
     border-bottom: $border-width-thin solid var(--slds-g-color-border-base-1, #{$color-border});
   }
 
-  &:focus-within::before {
-    content: '';
-    display: block;
-    position: absolute;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    box-shadow: var(--slds-g-shadow-6, #{$shadow-button-focus});
-  }
-
-  .slds-button {
+  .slds-button:focus {
+    outline-offset: rem(-1px);
     box-shadow: none;
-    outline: none;
   }
 }
 

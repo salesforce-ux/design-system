@@ -84,7 +84,7 @@
 
   &:focus {
     text-decoration: underline;
-    box-shadow: var(--slds-g-shadow-6, #{$shadow-button-focus});
+    box-shadow: var(--slds-g-shadow-7, #{$shadow-button-focus});
     outline: none;
     border-radius: 0;
   }

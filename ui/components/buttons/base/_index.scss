@@ -53,7 +53,7 @@
   &:focus {
     box-shadow: var(--slds-c-button-shadow-focus, var(--sds-c-button-shadow-focus,
       0 0 0 2px var(--slds-g-color-neutral-base-100, #{$palette-neutral-100})));
-    outline: 1px solid var(--slds-g-color-brand-base-40, #{$palette-blue-40});
+    outline: 2px solid var(--slds-g-color-brand-base-40, #{$palette-blue-40});
     outline-offset: 2px;
   }
 
@@ -112,7 +112,7 @@ a.slds-button {
     /*! @css-var-fallback box-shadow */
     --slds-c-button-shadow-focus: var(--sds-c-button-shadow-focus,
       0 0 0 2px var(--slds-g-color-neutral-base-100, #{$palette-neutral-100}));
-    outline: 1px solid var(--slds-g-color-brand-base-40, #{$palette-blue-40});
+    outline: 2px solid var(--slds-g-color-brand-base-40, #{$palette-blue-40});
     outline-offset: 2px;
   }
 }

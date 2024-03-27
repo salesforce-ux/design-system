@@ -634,7 +634,8 @@ input[readonly][role="combobox"] {
     }
 
     &:focus {
-      box-shadow: var(--slds-g-shadow-6, #{$shadow-button-focus});
+      outline: 2px solid var(--slds-g-color-brand-base-40);
+      outline-offset: rem(-4px);
     }
   }
 

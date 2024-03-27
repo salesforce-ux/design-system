@@ -21,7 +21,6 @@
   }
 
   button:not([class*=slds-button_]):not([class*=slds-button--]):focus {
-    border: 0;
     box-shadow: var(--slds-g-shadow-5, #{$shadow-button-focus});
   }
 }

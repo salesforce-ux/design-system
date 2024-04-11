@@ -122,6 +122,17 @@ export let states = [
 
 export let examples = [
   {
+    id: 'base-with-kinetic-buttons',
+    label: 'Base - With Kinetic Buttons',
+    element: (
+      <ButtonGroup>
+        <Button isNeutral kxScope="button-neutral" kxType="ripple">Refresh</Button>
+        <Button isNeutral kxScope="button-neutral" kxType="ripple">Edit</Button>
+        <Button isNeutral kxScope="button-neutral" kxType="ripple">Save</Button>
+      </ButtonGroup>
+    )
+  },
+  {
     id: 'inverse',
     label: 'Inverse',
     element: (

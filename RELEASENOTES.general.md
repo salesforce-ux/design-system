@@ -1,7 +1,7 @@
 <!-- Release notes authoring guidelines: http://keepachangelog.com/ -->
 <!-- On release, add general notes here. In time the legacy release notes will be add to this -->
 
-## 2.24.0 - Upcoming
+## 2.24.0 - April 18, 2024
 
 ## Added
 
@@ -26,7 +26,7 @@
     - Added rate_adjustment
     - Added record_consent
     - Added whatsapp
-  
+
   - Utility Set:
     - Added aggregate
     - Added array

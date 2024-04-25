@@ -96,7 +96,7 @@
       ~ .slds-checkbox--faux,
       + .slds-checkbox_faux,
       + .slds-checkbox--faux {
-        box-shadow: var(--slds-g-shadow-5, #{$shadow-button-focus});
+        box-shadow: var(--_slds-g-shadow-outset-focus, #{$shadow-button-focus});
         border: none;
       }
     }

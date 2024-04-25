@@ -99,7 +99,7 @@ input[readonly][role="combobox"] {
 
   &:focus,
   &.slds-has-focus {
-    box-shadow: var(--slds-g-shadow-8, #{$shadow-button-focus}); 
+    box-shadow: var(--_slds-g-shadow-outline-focus, #{$shadow-button-focus}); 
   }
 
   &[disabled] {
@@ -249,7 +249,7 @@ input[readonly][role="combobox"] {
 
   .slds-listbox__option:focus,
   .slds-listbox__option.slds-has-focus {
-    box-shadow: var(--slds-g-shadow-6, #{$shadow-button-focus});
+    box-shadow: var(--_slds-g-shadow-inset-focus, #{$shadow-button-focus});
     outline: 0;
   }
 
@@ -309,7 +309,7 @@ input[readonly][role="combobox"] {
   .slds-listbox--vertical {
     .slds-listbox__option.slds-is-selected:focus,
     .slds-listbox__option.slds-is-selected.slds-has-focus {
-      box-shadow: var(--slds-g-shadow-7);
+      box-shadow: var(--_slds-g-shadow-inset-inverse-focus);
     }
   }
 }
@@ -463,7 +463,7 @@ input[readonly][role="combobox"] {
    */
   &:focus,
   &.slds-has-focus {
-    box-shadow: var(--slds-g-shadow-8, #{$shadow-button-focus});
+    box-shadow: var(--_slds-g-shadow-outline-focus, #{$shadow-button-focus});
     outline: 0;
   }
 }

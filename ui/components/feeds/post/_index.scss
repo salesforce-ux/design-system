@@ -142,7 +142,7 @@
   }
 
   &:focus {
-    box-shadow: var(--slds-g-shadow-5);
+    box-shadow: var(--_slds-g-shadow-outset-focus);
     outline: 0;
     border-radius: $border-radius-small;
   }

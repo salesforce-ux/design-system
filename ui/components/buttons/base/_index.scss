@@ -51,7 +51,7 @@
   }
 
   &:focus {
-    box-shadow: var(--slds-c-button-shadow-focus, var(--sds-c-button-shadow-focus, var(--slds-g-shadow-8)));
+    box-shadow: var(--slds-c-button-shadow-focus, var(--sds-c-button-shadow-focus, var(--_slds-g-shadow-outline-focus)));
     outline: 0;
   }
 
@@ -108,7 +108,7 @@ a.slds-button {
 
   &:focus {
     /*! @css-var-fallback box-shadow */
-    --slds-c-button-shadow-focus: var(--sds-c-button-shadow-focus, var(--slds-g-shadow-8));
+    --slds-c-button-shadow-focus: var(--sds-c-button-shadow-focus, var(--_slds-g-shadow-outline-focus));
   }
 }
 
@@ -346,7 +346,7 @@ a.slds-button--inverse:focus {
   }
 
   &:focus {
-    box-shadow: var(--slds-g-shadow-6, #{$shadow-button-focus});
+    box-shadow: var(--_slds-g-shadow-inset-focus, #{$shadow-button-focus});
   }
 
   &:active {
@@ -571,7 +571,7 @@ a.slds-button--inverse:focus {
 .slds-button_destructive,
 .slds-button--destructive {
   &:focus {
-    box-shadow: var(--slds-g-shadow-5);
+    box-shadow: var(--_slds-g-shadow-outset-focus);
     outline: 0;
   }
 }

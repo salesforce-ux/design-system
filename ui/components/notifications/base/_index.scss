@@ -100,7 +100,7 @@
   }
 
   &:focus {
-    box-shadow: inset var(--slds-g-shadow-8);
+    box-shadow: inset var(--_slds-g-shadow-outline-focus);
     outline: 0;
   }
 }
@@ -127,7 +127,7 @@
   right: 0;
 
   &:focus {
-    box-shadow: var(--slds-g-shadow-7, #{$shadow-button-focus});
+    box-shadow: var(--_slds-g-shadow-inset-inverse-focus, #{$shadow-button-focus});
     outline: 0;
   }
 }

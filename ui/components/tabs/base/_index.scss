@@ -250,7 +250,7 @@
   &.slds-has-success,
   &.slds-has-warning {
     .slds-button:focus {
-      box-shadow: var(--slds-g-shadow-5);
+      box-shadow: var(--_slds-g-shadow-outset-focus);
     }
   }
 }
@@ -394,14 +394,14 @@
   .slds-has-success {
     .slds-tabs_default__link {
       &:focus-visible {
-        box-shadow: var(--slds-g-shadow-6);
+        box-shadow: var(--_slds-g-shadow-inset-focus);
         outline: 0;
         text-decoration: none;
       }
     }
 
     .slds-button:focus {
-      box-shadow: var(--slds-g-shadow-6);
+      box-shadow: var(--_slds-g-shadow-inset-focus);
     }
   }
 }

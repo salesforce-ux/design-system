@@ -322,7 +322,7 @@
     }
 
     .slds-button_icon:focus {
-      box-shadow: var(--slds-g-shadow-6);
+      box-shadow: var(--_slds-g-shadow-inset-focus);
     }
   }
 
@@ -416,7 +416,7 @@
   }
 
   &.slds-button:focus {
-    box-shadow: var(--slds-g-shadow-6);
+    box-shadow: var(--_slds-g-shadow-inset-focus);
   }
 }
 

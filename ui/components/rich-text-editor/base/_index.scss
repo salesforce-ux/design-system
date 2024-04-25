@@ -161,7 +161,7 @@
  */
 .slds-rich-text-editor.slds-has-focus {
   border: $border-width-thin solid var(--slds-g-color-border-base-4, #{$color-border});
-  box-shadow: var(--slds-g-shadow-5, #{$shadow-button-focus});
+  box-shadow: var(--_slds-g-shadow-outset-focus, #{$shadow-button-focus});
 }
 
 /**

@@ -116,7 +116,7 @@
 
         // @todo consider shared hooks for inputs
         /*! @css-var-fallback box-shadow */
-        --slds-c-checkbox-toggle-shadow: var(--sds-c-checkbox-toggle-shadow-focus, var(--slds-g-shadow-5, #{$shadow-button-focus}));
+        --slds-c-checkbox-toggle-shadow: var(--sds-c-checkbox-toggle-shadow-focus, var(--_slds-g-shadow-outset-focus, #{$shadow-button-focus}));
       }
     }
 

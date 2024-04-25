@@ -142,9 +142,8 @@
   }
 
   &:focus {
-    outline: 2px solid var(--slds-g-color-brand-base-40);
-    box-shadow: 0 0 0 4px var(--slds-g-color-neutral-base-100);
-    outline-offset: 2px;
+    box-shadow: var(--slds-g-shadow-5);
+    outline: 0;
     border-radius: $border-radius-small;
   }
 }

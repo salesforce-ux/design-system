@@ -85,6 +85,10 @@ $alert-gradient-size-background: 64px 64px;
   .slds-button__icon {
     fill: var(--slds-g-color-neutral-base-30, #{$color-gray-10});
   }
+
+  .slds-button:focus {
+    box-shadow: var(--slds-g-shadow-6);
+  }
 }
 
 /**

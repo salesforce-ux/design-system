@@ -47,11 +47,3 @@
   @include vertical-center;
   right: 0.75rem;
 }
-
-.slds-input__button_decrement,
-.slds-input__button_increment {
-  &:focus {
-    outline-offset: rem(-2px);
-    box-shadow: none;
-  }
-}

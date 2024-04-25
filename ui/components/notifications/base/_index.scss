@@ -100,8 +100,8 @@
   }
 
   &:focus {
-    outline: 2px solid var(--slds-g-color-brand-base-40);
-    outline-offset: rem(-4px);
+    box-shadow: inset var(--slds-g-shadow-8);
+    outline: 0;
   }
 }
 

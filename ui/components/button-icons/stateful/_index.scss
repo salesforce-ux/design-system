@@ -45,6 +45,11 @@
     }
   }
 
+  &:focus {
+    box-shadow: var(--slds-g-shadow-5);
+    outline: 0;
+  }
+
   &[disabled],
   &:disabled {
     background: var(--slds-g-color-neutral-base-80, #{$brand-disabled});

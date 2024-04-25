@@ -117,7 +117,6 @@
 
     &:focus {
       box-shadow: var(--slds-g-shadow-6, #{$shadow-button-focus});
-      border: $border-width-thin solid var(--slds-g-color-neutral-base-100, #{$color-border-link-focus-inverse});
     }
 
     &:active {
@@ -181,7 +180,7 @@
 
     &:focus {
       color: var(--slds-g-color-neutral-base-30, #{$color-gray-10});
-      box-shadow: var(--slds-g-shadow-5, #{$shadow-button-focus});
+      box-shadow: var(--slds-g-shadow-6, #{$shadow-button-focus});
     }
 
     &:active {

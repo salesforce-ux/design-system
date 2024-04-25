@@ -198,10 +198,6 @@
   max-height: var(--slds-c-textarea-sizing-max-height, var(--sds-c-textarea-sizing-max-height, $size-small));
   padding: $spacing-medium;
   background-color: var(--slds-g-color-neutral-base-100, #{$color-background-input});
-
-  &:focus {
-    box-shadow: var(--slds-g-shadow-6, #{$shadow-button-focus});
-  }
 }
 
 .slds-picklist__label[disabled] .slds-icon {

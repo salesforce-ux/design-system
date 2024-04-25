@@ -21,7 +21,7 @@
       "type": "raw",
       "namespace": "sds",
       "category": "shadow",
-      "comment": "Shadow depth 5"
+      "comment": "Shadow with double border style outset"
     },
     "shadow-6": {
       "originalValue": "0 0 0 2px {!PALETTE_NEUTRAL_100} inset, 0 0 0 4px {!PALETTE_BLUE_40} inset",
@@ -36,7 +36,7 @@
       "type": "raw",
       "namespace": "sds",
       "category": "shadow",
-      "comment": "Shadow depth 6"
+      "comment": "Shadow with double border style inset"
     },
     "shadow-7": {
       "originalValue": "0 0 0 2px {!PALETTE_BLUE_40} inset, 0 0 0 4px {!PALETTE_NEUTRAL_100} inset",
@@ -51,7 +51,22 @@
       "type": "raw",
       "namespace": "sds",
       "category": "shadow",
-      "comment": "Shadow depth 7"
+      "comment": "Shadow with double border style inset inverse"
+    },
+    "shadow-8": {
+      "originalValue": "0 0 0 2px {!PALETTE_BLUE_40}",
+      "syntax": "<length>",
+      "name": "shadow-8",
+      "value": "0 0 0 2px {!PALETTE_BLUE_40}",
+      "scope": "global",
+      "cssProperties": [
+        "box-shadow"
+      ],
+      "inherits": false,
+      "type": "raw",
+      "namespace": "sds",
+      "category": "shadow",
+      "comment": "Shadow around the border"
     }
   }
 }

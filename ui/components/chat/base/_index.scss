@@ -421,10 +421,6 @@
       fill: var(--slds-g-link-color, #{$color-text-link});
     }
   }
-
-  &:focus {
-    outline-offset: rem(-1px);
-  }
 }
 
 

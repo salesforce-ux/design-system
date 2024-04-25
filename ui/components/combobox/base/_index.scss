@@ -99,7 +99,7 @@ input[readonly][role="combobox"] {
 
   &:focus,
   &.slds-has-focus {
-    box-shadow: var(--slds-g-shadow-5, #{$shadow-button-focus}); 
+    box-shadow: var(--slds-g-shadow-8, #{$shadow-button-focus}); 
   }
 
   &[disabled] {
@@ -463,7 +463,7 @@ input[readonly][role="combobox"] {
    */
   &:focus,
   &.slds-has-focus {
-    box-shadow: var(--slds-g-shadow-5, #{$shadow-button-focus});
+    box-shadow: var(--slds-g-shadow-8, #{$shadow-button-focus});
     outline: 0;
   }
 }

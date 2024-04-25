@@ -74,8 +74,7 @@
   line-height: var(--slds-c-accordion-heading-line-height, var(--sds-c-accordion-heading-line-height, $line-height-heading));
 
   .slds-button:focus {
-    outline-offset: rem(-4px);
-    box-shadow: none;
+    box-shadow: inset var(--slds-g-shadow-8);
   }
 }
 

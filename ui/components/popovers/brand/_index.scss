@@ -31,8 +31,8 @@
     }
   }
 
-  // Historically Close button is not visible hence removed the focus
-  &:not(.slds-popover_brand-dark) {
+  // Historically close button is not visible for Brand variant
+  &:not(.slds-popover_brand-dark):not(.slds-popover_prompt) {
     .slds-button:focus {
       box-shadow: none;
     }

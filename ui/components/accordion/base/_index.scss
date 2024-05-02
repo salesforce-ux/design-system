@@ -57,6 +57,11 @@
   padding-bottom: var(--slds-c-accordion-section-spacing-block-end, var(--sds-c-accordion-section-spacing-block-end, #{$spacing-small}));
   padding-left: var(--slds-c-accordion-section-spacing-inline-start, var(--sds-c-accordion-section-spacing-inline-start, #{$spacing-small}));
   background-color: var(--slds-c-accordion-summary-color-background, var(--sds-c-accordion-summary-color-background, transparent));
+
+  // For Action Overflow Menu variant
+  .slds-dropdown-trigger .slds-button {
+    margin-left: $spacing-small;
+  }
 }
 
 /**
@@ -74,8 +79,7 @@
   line-height: var(--slds-c-accordion-heading-line-height, var(--sds-c-accordion-heading-line-height, $line-height-heading));
 
   .slds-button:focus {
-    outline-offset: rem(-4px);
-    box-shadow: none;
+    box-shadow: inset var(--_slds-g-shadow-outline-focus);
   }
 }
 
@@ -113,7 +117,6 @@
   &:hover,
   &:focus {
     color: var(--sds-c-accordion-heading-text-color-hover, var(--sds-c-accordion-heading-text-color-hover, $brand-accessible-active));
-    max-width: max-content;
   }
 }
 

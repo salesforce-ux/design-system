@@ -245,6 +245,14 @@
       color: var(--slds-g-color-neutral-base-100, #{$color-gray-1});
     }
   }
+
+  &.slds-has-error,
+  &.slds-has-success,
+  &.slds-has-warning {
+    .slds-button:focus {
+      box-shadow: var(--_slds-g-shadow-outset-focus);
+    }
+  }
 }
 
 /**
@@ -385,11 +393,15 @@
   .slds-has-warning,
   .slds-has-success {
     .slds-tabs_default__link {
-      &:focus {
-        box-shadow: var(--slds-g-shadow-6);
+      &:focus-visible {
+        box-shadow: var(--_slds-g-shadow-inset-focus);
         outline: 0;
         text-decoration: none;
       }
+    }
+
+    .slds-button:focus {
+      box-shadow: var(--_slds-g-shadow-inset-focus);
     }
   }
 }

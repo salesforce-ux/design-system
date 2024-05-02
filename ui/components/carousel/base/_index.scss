@@ -63,7 +63,7 @@
   }
   
   &:focus {
-    box-shadow: var(--slds-g-shadow-5);
+    box-shadow: var(--_slds-g-shadow-outset-focus);
   }
 }
 
@@ -161,7 +161,7 @@
   }
 
   &:focus {
-    box-shadow: var(--slds-g-shadow-5);
+    box-shadow: var(--_slds-g-shadow-outset-focus);
     border-radius: $border-radius-circle;
   }
 }
@@ -178,7 +178,7 @@
   margin-left: $spacing-xx-small;
 
   .slds-button:focus {
-    box-shadow: var(--slds-g-shadow-5, #{$shadow-button-focus});
+    box-shadow: var(--_slds-g-shadow-outset-focus, #{$shadow-button-focus});
     outline: 0;
   }
 }

@@ -70,7 +70,7 @@
 
       .slds-button {
         &:focus {
-          box-shadow: var(--slds-g-shadow-6, #{$shadow-button-focus});
+          box-shadow: var(--_slds-g-shadow-inset-focus, #{$shadow-button-focus});
           outline: none;
         }
       }
@@ -139,7 +139,7 @@
 
   .slds-button {
     &:focus {
-      box-shadow: var(--slds-g-shadow-6, #{$shadow-button-focus});
+      box-shadow: var(--_slds-g-shadow-inset-focus, #{$shadow-button-focus});
       outline: none;
     }
   }
@@ -613,7 +613,7 @@
   }
 
   &:focus {
-    box-shadow: var(--slds-g-shadow-7);
+    box-shadow: var(--_slds-g-shadow-inset-inverse-focus);
     outline: 0;
     text-decoration: none;
   }

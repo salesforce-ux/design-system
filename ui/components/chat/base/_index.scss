@@ -212,7 +212,7 @@
   }
 
   &:focus-within {
-    box-shadow: var(--slds-g-shadow-5, #{$shadow-button-focus});
+    box-shadow: var(--_slds-g-shadow-outset-focus, #{$shadow-button-focus});
   }
 }
 
@@ -420,10 +420,6 @@
       @include square($square-icon-small-content);
       fill: var(--slds-g-link-color, #{$color-text-link});
     }
-  }
-
-  &:focus {
-    outline-offset: rem(-1px);
   }
 }
 

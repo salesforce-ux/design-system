@@ -94,7 +94,7 @@
   &:focus::-webkit-slider-thumb {
     background-color: var(--slds-c-slider-thumb-color-foreground-focus, var(--sds-c-slider-thumb-color-foreground-focus, $brand-accessible-active));
     box-shadow: var(--slds-c-slider-thumb-shadow-focus,
-      var(--sds-c-slider-thumb-shadow-focus, var(--slds-g-shadow-5, #{$shadow-button-focus})));
+      var(--sds-c-slider-thumb-shadow-focus, var(--_slds-g-shadow-outset-focus, #{$shadow-button-focus})));
   }
 
   &:active::-webkit-slider-thumb {

@@ -4,6 +4,12 @@
 
 <!-- ## [Unreleased] -->
 
+## 2.24.2
+
+## Removed
+
+- Remove max-width prop from accordion on focus/hover
+
 ## 2.18.0
 
 ### Fixed

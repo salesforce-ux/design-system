@@ -9,6 +9,7 @@
 ### Removed
 
 - Removed outdated documentation about changing background color, as this contradicts current Design System guidelines.
+
 ### Added
 
 - Added `slds` as the default namespace with `sds` fallbacks for Styling Hooks.

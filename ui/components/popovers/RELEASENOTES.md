@@ -1,12 +1,20 @@
 <!-- Release notes authoring guidelines: http://keepachangelog.com/ -->
 
 # Popovers Release Notes
+
+## 2.24.2
+
+## Updated
+
+- Update Menu Overflow variant margin-left
+
+
 ## 2.21.0
 
-### Added button to the story `body-max-height-small` to fix scrollable-region-focusable wcag issue.
 
 ### Added
 
+- Added button to the story `body-max-height-small` to fix scrollable-region-focusable wcag issue.
 - Added `title` attribute to meet accessibility requirements.
 
 ## 2.19

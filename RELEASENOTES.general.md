@@ -1,7 +1,11 @@
 <!-- Release notes authoring guidelines: http://keepachangelog.com/ -->
 <!-- On release, add general notes here. In time the legacy release notes will be add to this -->
 
+## 2.24.2 - May 2, 2024
+
 ## 2.24.1 - April 25, 2024
+
+## Updated
 
 - Updated focus styles for buttons and input elements
 - Updated account icon bg to blue-30

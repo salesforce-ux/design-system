@@ -1,6 +1,6 @@
 // https://docs.github.com/en/rest/reference/commits#create-a-commit-status
-const { Octokit } = require("@octokit/rest");
-const { createAppAuth } = require("@octokit/auth-app");
+import { Octokit } from "@octokit/rest";
+import { createAppAuth } from "@octokit/auth-app";
 
 const batchesDataArg = process.env.batchesData || `{ "dev": null }`;
 console.log(batchesDataArg);
